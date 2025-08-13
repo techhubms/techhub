@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/github/.rss",
+  "Link": "https://www.reddit.com/r/github/comments/1mkxclj/is_this_email_dangerous/",
+  "Tags": [
+    "github"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit GitHub",
+  "ProcessedDate": "2025-08-08 16:18:52",
+  "Title": "Is this email dangerous?",
+  "FeedLevelAuthor": "Github: social coding",
+  "EnhancedContent": "I recently received two emails from [mention@noreply.github.com](mailto:mention@noreply.github.com) to my email address, which is not linked to my GitHub account. I don't know if this is a valid email address, because usually the sender is the domain \"github.com\" without the \"noreply\" after the \"@\" sign. Has anyone encountered anything like this?\n\nScam\n\nLooks like someone made an issue designed to look like a security alert email, and then tagged you in that issue. Note at the bottom how it says \"You are receiving this because you were mentioned\". The 'view now' link in the issue body probably points to a malicious website. It seems that the user has already been deleted: [https://github.com/gitdeveloper147-cloud](https://github.com/gitdeveloper147-cloud)\n\nChange your password, don’t click on these links, contact GitHub official support if you are worried.\n\nYou might just have subscribed to a repo.\n\nDon't be that guy",
+  "Author": "Speediffi",
+  "PubDate": "2025-08-08T14:53:16+00:00",
+  "Description": "| [!\\[Is this email dangerous?\\](https://preview.redd.it/optsyd1b7thf1.png?width=640&crop=smart&auto=webp&s=6d68466901f9c2760d892367645308711db7c7ec \"Is this email dangerous?\")](https://www.reddit.com/r/github/comments/1mkxclj/is_this_email_dangerous/) | I recently received two emails from [mention@noreply.github.com](mailto:mention@noreply.github.com) to my email address, which is not linked to my GitHub account. I don't know if this is a valid email address, because usually the sender is the domain \"github.com\" without the \"noreply\" after the \"@\" sign. Has anyone encountered anything like this?<br>"
+}

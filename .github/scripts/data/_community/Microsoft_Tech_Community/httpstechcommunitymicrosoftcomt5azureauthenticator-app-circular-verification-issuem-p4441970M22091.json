@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-08-11 17:16:24",
+  "Title": "Authenticator App - Circular Verification Issue",
+  "FeedName": "Microsoft Tech Community",
+  "OutputDir": "_community",
+  "Tags": [],
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Author": "ConnorMcFadyen",
+  "EnhancedContent": "I have an issue where when I try to log in to/set-up Microsoft Authenticator it asks me to authenticate myself using Microsoft Authenticator to sign-in/set-up Authenticator using a code sent to Microsoft Authenticator, which I can't do because I'm obviously not able to sign-in/set-up Microsoft Authenticator. I have tried: Re-installing Microsoft Authenticator\n\nUsed different networks.\n\nUsed a different phone.\n\nAll to no avail. Any help would be MUCH appreciated.",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "PubDate": "2025-08-11T04:34:13+00:00",
+  "Description": "I have an issue where when I try to log in to/set-up Microsoft Authenticator it asks me to authenticate myself using Microsoft Authenticator to sign-in/set-up Authenticator using a code sent to Microsoft Authenticator, which I can't do because I'm obviously not able to sign-in/set-up Microsoft Authenticator. I have tried: Re-installing Microsoft Authenticator\n\nUsed different networks.\n\nUsed a different phone.\n\nAll to no avail. Any help would be MUCH appreciated.",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/authenticator-app-circular-verification-issue/m-p/4441970#M22091"
+}

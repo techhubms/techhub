@@ -1,0 +1,14 @@
+{
+  "PubDate": "2025-07-22T13:00:00+00:00",
+  "EnhancedContent": "You can’t protect what you can’t see. Security operations teams have long been faced with the challenge of managing massive, fast-growing datasets, and the cost of scaling traditional data management tools to handle these data volumes has become unsustainable. We’re evolving our industry-leading Security Incidents and Event Management solution (SIEM), [Microsoft Sentinel](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-sentinel/), to include a modern, cost-effective data lake. By unifying all your security data, **Microsoft Sentinel data lake, now in public preview**, accelerates agentic AI adoption and drives unparalleled visibility, empowering teams to detect and respond faster. With Sentinel data lake, you’re no longer forced to choose between retaining critical data and staying within budget.\n\n[Get started with Microsoft Sentinel data lake today](https://aka.ms/sentineldatalakedocs)",
+  "FeedUrl": "https://www.microsoft.com/en-us/security/blog/feed/",
+  "Title": "Microsoft Sentinel data lake: Unify signals, cut costs, and power agentic AI",
+  "FeedLevelAuthor": "Microsoft Security Blog",
+  "Link": "https://www.microsoft.com/en-us/security/blog/2025/07/22/microsoft-sentinel-data-lake-unify-signals-cut-costs-and-power-agentic-ai/",
+  "Tags": [],
+  "OutputDir": "_news",
+  "Author": "Scott Woodgate and Krishna Kumar Parthasarathy",
+  "ProcessedDate": "2025-08-05 11:13:57",
+  "Description": "We’re evolving our industry-leading Security Incidents and Event Management solution (SIEM), Microsoft Sentinel, to include a modern, cost-effective data lake. By unifying all your security data, Microsoft Sentinel data lake, in public preview, accelerates AI adoption and drives unparalleled visibility, empowering teams to detect and respond faster. With Sentinel data lake, you’re no longer forced to choose between retaining critical data and staying within budget. ​\n\nThe post [Microsoft Sentinel data lake: Unify signals, cut costs, and power agentic AI](https://www.microsoft.com/en-us/security/blog/2025/07/22/microsoft-sentinel-data-lake-unify-signals-cut-costs-and-power-agentic-ai/) appeared first on [Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog).",
+  "FeedName": "Microsoft Security Blog"
+}

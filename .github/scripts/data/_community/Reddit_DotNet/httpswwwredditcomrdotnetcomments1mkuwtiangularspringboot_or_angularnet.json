@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/dotnet/.rss",
+  "Link": "https://www.reddit.com/r/dotnet/comments/1mkuwti/angularspringboot_or_angularnet/",
+  "Tags": [
+    "dotnet"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit DotNet",
+  "ProcessedDate": "2025-08-08 16:23:54",
+  "Title": "Angular/SpringBoot or Angular/.NET",
+  "FeedLevelAuthor": ".NET",
+  "EnhancedContent": "I am actually a frontend developer specialized in Angular but i was exploring backend also and i want some suggestions what is the best combo and what would be the backend to go for, java spring boot or c# .net. Regarding to what industry also needs more which combo is the most wanted for getting a job\n\nWebAPI and Spring Boot are VERY similar, so if you understand how one works, you'll understand the other. I would primarly go with the tech that's most in demand in your area.\n\n.Net has a few advantages imho. The application server (Kestrel) is included in the framework. You'll have to download and setup one yourself if you go the Java route (not that this is very difficult). The C# language is (imho) nicer than Java in some areas but you have the option of Kotlin as well. I'm not too familiar with Kotlin myself though.\n\nI live in balkan but there are jobs with springboot and also with .net i cant make the difference thats why i am a little bit confused what way to follow\n\nThanks for your post Profflaries27. Please note that we don't allow spam, and we ask that you follow the rules available in the sidebar. We have a lot of commonly asked questions so if this post gets removed, please do a search and see if it's already been asked.\n\n*I am a bot, and this action was performed automatically. Please* [*contact the moderators of this subreddit*](/message/compose/?to=/r/dotnet) *if you have any questions or concerns.*\n\nI think you can guess the response from here, obviously .NET is great\n\nBut SpringBoot isn't too bad either. You can also look into Kotlin with ktor that's quite interessting.\n\nThank you for the response , where can i learn more about .net do you have any resources , udemy courses ?",
+  "Author": "Profflaries27",
+  "PubDate": "2025-08-08T13:15:11+00:00",
+  "Description": ""
+}

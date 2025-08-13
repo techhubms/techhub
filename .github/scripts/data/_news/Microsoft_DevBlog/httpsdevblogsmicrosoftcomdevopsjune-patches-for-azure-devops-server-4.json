@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "Azure DevOps Server",
+    "Patches"
+  ],
+  "OutputDir": "_news",
+  "FeedLevelAuthor": "Azure DevOps Blog",
+  "ProcessedDate": "2025-08-05 14:15:44",
+  "FeedUrl": "https://devblogs.microsoft.com/devops/feed/",
+  "Title": "June Patches for Azure DevOps Server",
+  "Description": "Update July 25: We are currently investigating an issue with Patch 6 for Azure DevOps Server 2022.2. Our team is actively working to identify the root cause and implement a resolution as quickly as possible. We will continue to provide updates and details in this blog as they become available. Thank you for your patience […]\n\nThe post [June Patches for Azure DevOps Server](https://devblogs.microsoft.com/devops/june-patches-for-azure-devops-server-4/) appeared first on [Azure DevOps Blog](https://devblogs.microsoft.com/devops).",
+  "Link": "https://devblogs.microsoft.com/devops/june-patches-for-azure-devops-server-4/",
+  "FeedName": "Microsoft DevBlog",
+  "Author": "Gloridel Morales",
+  "EnhancedContent": "**Update July 25:** We are currently investigating an issue with Patch 6 for Azure DevOps Server 2022.2. Our team is actively working to identify the root cause and implement a resolution as quickly as possible. We will continue to provide updates and details in this blog as they become available. Thank you for your patience and understanding.\n\nToday we are releasing patches that impact the latest version of our self-hosted product, [Azure DevOps Server](https://azure.microsoft.com/services/devops/server/).\n\nWe strongly encourage and recommend that all customers use the latest, most secure release of Azure DevOps Server. You can download the latest version of the product, Azure DevOps Server 2022.2 from the [Azure DevOps Server download page](https://learn.microsoft.com/azure/devops/server/download/azuredevopsserver?view=azure-devops).\n\n> >\n> **Note:** Azure DevOps Server 2022.2 is the latest version of Azure DevOps Server. If you have installed Azure DevOps Server 2022 or Azure DevOps Server 2022.1, you should first upgrade to Azure DevOps Server 2022.2 and then install Azure DevOps Server 2022.2 Patch 6.\n> >\n\n### Azure DevOps Server 2022.2 Patch 6\n\nIf you have Azure DevOps Server 2022.2, you should install Azure DevOps Server 2022.2 [Patch 6](https://aka.ms/devops2022.2patch6) to have the most secure product experience.\n\n**[Release notes](https://learn.microsoft.com/azure/devops/server/release-notes/azuredevops2022u2?view=azure-devops#azure-devops-server-2022-update-2-patch-6-release-datejune-10-2025)**\n\nWith this patch we are including the following Test Plans enhancements:\n\n- Export test cases with custom columns in XLSX\n\nWith this patch, Test Plans supports exporting test cases with custom columns, giving you greater flexibility and control over the data you share and analyze. This enhancement helps you tailor exports to your needs, ensuring the information you export is relevant and actionable.\n\n- Import suites and copy test cases with Plan Id and Suite Id in search only.\n\n**Verifying Installation**\n\nRun `devops2022.2patch6.exe CheckInstall` , `devops2022.2patch6.exe` is the file that is downloaded from the link above. The output of the command will either say that the patch has been installed, or that it is not installed.",
+  "PubDate": "2025-06-10T19:13:51+00:00"
+}

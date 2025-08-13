@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/azure/.rss",
+  "Link": "https://www.reddit.com/r/AZURE/comments/1mjtuqw/best_resources_to_learn_azure/",
+  "Tags": [
+    "AZURE"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Azure",
+  "ProcessedDate": "2025-08-08 16:14:03",
+  "Title": "Best resources to learn Azure?",
+  "FeedLevelAuthor": "Microsoft Azure",
+  "EnhancedContent": "Hello everyone, I am a .net developer and now days everyother company is using Azure with .net so I want to learn Azure, It will be really helpful for me if someone can suggest some best youtube channel.\n\nI think you need to be a little more specific. Deployments, networking, security, product use cases or implementation, testing, debugging, logging, monitoring, etc. Azure isn't a language that you can just learn like a programming language. There are Microsoft tutorials on just about everything so narrow down the scope and dig into it.\n\n[portal.azure.com](http://portal.azure.com)\n\nBut in seriousness, just get stuck into it. Work through the Microsoft Learn material and follow along with labs. Identify typical use cases and replicate/build them in your own environment. Very few things beat hands-on (and ideally guided) practice when it comes to wrapping your head around something.\n\nI have done some Azure certs and have summed them up at my website: [https://justinverstijnen.nl/how-to-learn-azure-learning-resources/](https://justinverstijnen.nl/how-to-learn-azure-learning-resources/)\n\nBut this question is frequently asked with great replies from redditors so you can also lookup the older posts in this subreddit.\n\nMicrosoft.com\n\nI do a bit of everything, but is not a good approach. If you can specialize on something go with Azure apps, frontdoor, etc. Youtube is your friend and copilot. Go through az900 for fundamentals and should be enough to start…\n\nJames Lee has a free course on getting started with Azure",
+  "Author": "MyVirtualWord",
+  "PubDate": "2025-08-07T07:45:07+00:00",
+  "Description": "Hello everyone, I am a .net developer and now days everyother company is using Azure with .net so I want to learn Azure, It will be really helpful for me if someone can suggest some best youtube channel."
+}

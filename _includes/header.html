@@ -1,0 +1,137 @@
+{%- comment -%}
+Determine current section and page from URL
+Example: /ai/magazines/ -> section: "ai", page: "magazines"
+Also handle URL parameters: ?section=ai
+{%- endcomment -%}
+
+{%- assign current_section = "" -%}
+{%- assign url_parts = page.url | split: '/' | where_exp: 'part', 'part != ""' -%}
+{%- if url_parts.size >= 1 -%}
+  {%- assign possible_section = url_parts[0] -%}
+  {%- assign is_valid_section = possible_section | is_letters_and_hyphen_only -%}
+  {%- if is_valid_section -%}
+    {%- assign current_section = possible_section -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign current_collection = "" -%}
+{%- if page.collection -%}
+  {%- assign current_collection = page.collection -%}
+{%- elsif url_parts.size >= 2 -%}
+  {%- assign possible_collection = url_parts[1] | split: '.' | first -%}
+  {%- assign is_valid_collection = possible_collection | is_letters_and_hyphen_only -%}
+  {%- if is_valid_collection -%}
+    {%- assign current_collection = possible_collection -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign isHomepage = false -%}
+{%- if page.url == "/" -%}
+  {%- assign isHomepage = true -%}
+{%- endif -%}
+
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-title-container">
+      <a class="site-title" rel="author" href="{{ "/" | relative_url }}" id="xebia-logo" style="display: none">
+        <svg class="xebia-logo" viewBox="0 0 85 29" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" aria-label="Xebia Logo">
+          <path fill="currentColor" fill-rule="evenodd"
+            d="M44.695 15.768H33.012c.167 2.07 1.715 3.394 4.099 3.31 1.478 0 2.774-.62 3.471-1.817h3.667c-1.227 3.21-3.792 5.028-7.027 5.028-2.175 0-3.973-.747-5.479-2.268-1.366-1.45-2.175-3.465-2.175-5.408 0-2.057.697-3.874 2.05-5.324 1.478-1.564 3.402-2.437 5.395-2.437 2.482 0 4.782 1.268 6.33 3.338.906 1.324 1.352 2.887 1.352 4.831zm-11.64-2.761h7.96c-.544-1.944-1.966-3.014-4.113-3.014-1.729 0-3.36 1.197-3.848 3.014M49.838 2.57V8.47c1.31-1.07 2.747-1.493 4.517-1.45 1.924 0 3.68.62 5.033 1.943 1.631 1.45 2.496 3.592 2.496 5.733 0 2.323-.976 4.507-2.733 6.028-1.31 1.07-2.914 1.69-4.782 1.69-1.715 0-3.178-.493-4.53-1.563v1.197h-3.347V2.569zm4.293 7.774c-2.37 0-4.168 1.888-4.168 4.409 0 2.394 1.882 4.281 3.987 4.267 2.621 0 4.42-1.901 4.42-4.338 0-2.324-1.869-4.338-4.239-4.338M67.447 2.57h-3.234v3.267h3.234zm0 4.789h-3.234v14.69h3.234zM85 22.05h-3.2479999999999998v-1.817c-.808 1.52-2.286 2.14-4.53 2.14-4.28 0-7.515-3.31-7.515-7.718 0-2.07.697-3.958 2.05-5.408 1.477-1.564 3.22-2.268 5.395-2.268 2.119 0 3.625.69 4.614 2.14V7.36h3.235zm-7.709-11.762c-2.3 0-4.168 1.817-4.168 4.211 0 2.592 1.924 4.409 4.224 4.409 2.12 0 4.043-1.944 4.043-4.211 0-2.521-1.98-4.409-4.099-4.409"
+            clip-rule="evenodd" />
+          <path fill="currentColor"
+            d="M.125 28.333h8.827L18.5 18.73l9.521 9.603h8.938l-13.99-14.11L37.085 0h-8.938L18.5 9.743 8.91 0H0l14.032 14.223z" />
+        </svg>
+      </a>
+      <a class="site-title" href="{{ "/" | relative_url }}" id="github-copilot-logo" style="display: none">
+        <svg class="github-copilot-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" aria-label="GitHub Copilot Logo">
+          <path fill="currentColor" fill-rule="evenodd"
+            d="M23.922 16.992c-.861 1.495-5.859 5.023-11.922 5.023-6.063 0-11.061-3.528-11.922-5.023A.641.641 0 0 1 0 16.736v-2.869a.841.841 0 0 1 .053-.22c.372-.935 1.347-2.292 2.605-2.656.167-.429.414-1.055.644-1.517a10.195 10.195 0 0 1-.052-1.086c0-1.331.282-2.499 1.132-3.368.397-.406.89-.717 1.474-.952 1.399-1.136 3.392-2.093 6.122-2.093 2.731 0 4.767.957 6.166 2.093.584.235 1.077.546 1.474.952.85.869 1.132 2.037 1.132 3.368 0 .368-.014.733-.052 1.086.23.462.477 1.088.644 1.517 1.258.364 2.233 1.721 2.605 2.656a.832.832 0 0 1 .053.22v2.869a.641.641 0 0 1-.078.256ZM12.172 11h-.344a4.323 4.323 0 0 1-.355.508C10.703 12.455 9.555 13 7.965 13c-1.725 0-2.989-.359-3.782-1.259a2.005 2.005 0 0 1-.085-.104L4 11.741v6.585c1.435.779 4.514 2.179 8 2.179 3.486 0 6.565-1.4 8-2.179v-6.585l-.098-.104s-.033.045-.085.104c-.793.9-2.057 1.259-3.782 1.259-1.59 0-2.738-.545-3.508-1.492a4.323 4.323 0 0 1-.355-.508h-.016.016Zm.641-2.935c.136 1.057.403 1.913.878 2.497.442.544 1.134.938 2.344.938 1.573 0 2.292-.337 2.657-.751.384-.435.558-1.15.558-2.361 0-1.14-.243-1.847-.705-2.319-.477-.488-1.319-.862-2.824-1.025-1.487-.161-2.192.138-2.533.529-.269.307-.437.808-.438 1.578v.021c0 .265.021.562.063.893Zm-1.626 0c.042-.331.063-.628.063-.894v-.02c-.001-.77-.169-1.271-.438-1.578-.341-.391-1.046-.69-2.533-.529-1.505.163-2.347.537-2.824 1.025-.462.472-.705 1.179-.705 2.319 0 1.211.175 1.926.558 2.361.365.414 1.084.751 2.657.751 1.21 0 1.902-.394 2.344-.938.475-.584.742-1.44.878-2.497Z" />
+          <path fill="currentColor" fill-rule="evenodd"
+            d="M14.5 14.25a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1Zm-5 0a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1Z" />
+        </svg>
+      </a>
+      <a class="site-title" href="{{ "/" | relative_url }}" id="localhost-logo" style="display: none">
+          Localhost
+      </a>
+      <a class="site-title" href="{{ "/" | relative_url }}" id="techhub-logo" style="display: none">
+          Tech Hub
+      </a>            
+    </div>
+    
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg class="hamburger-menu" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" aria-label="Menu">
+            <path
+              d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        {%- for section_data in site.data.sections -%}
+          <a id="section-nav-{{ section_data[1].section }}"
+            class="page-link regular{% if current_section == section_data[1].section %} active{% endif %}"
+            href="{{ section_data[1].url | relative_url }}">{{ section_data[1].title }}</a>
+        {%- endfor -%}
+        <a id="xebia-contact" style="display: none" class="page-link contact" href="https://xebia.com/about-us/contact/" target="_blank">Contact</a>
+        <a id="techhub-about" style="display: none" class="page-link contact" href="{{ '/about' | relative_url }}">About</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="site-subheader">
+  <div id="section-collections-home" class="section-collections {% unless isHomepage %} hidden{% endunless %}"></div>
+
+    {%- comment -%} Default fallback collections: show section links when no specific section is determined {%- endcomment -%}
+    <div id="section-collections-default" class="section-collections hidden">
+    </div>
+
+    {%- for section_data in site.data.sections -%}
+      {%- assign section_hidden_class = '' -%}
+      {%- if current_section == '' or current_section != section_data[1].section -%}
+       {%- assign section_hidden_class = ' hidden' -%}
+      {%- endif -%}
+      <div id="section-collections-{{ section_data[1].section }}" class="section-collections {{ section_hidden_class }}">
+        {%- for collection_data in section_data[1].collections -%}
+          {%- assign is_active = false -%}
+          {%- if collection_data.collection and current_collection == collection_data.collection -%}
+            {%- assign is_active = true -%}
+          {%- elsif collection_data.collection == null or collection_data.collection == '' -%}
+            {%- assign collection_url_path = collection_data.url | relative_url -%}
+            {%- if page.url == collection_url_path -%}
+              {%- assign is_active = true -%}
+            {%- endif -%}
+          {%- endif -%}
+          <a class="collection-link{% if is_active %} active{% endif %}" href="{{ collection_data.url | relative_url }}">{{ collection_data.title | escape }}</a>
+        {%- endfor -%}
+      </div>
+    {%- endfor -%}
+</div>
+
+<script src="{{ '/assets/js/logo-manager.js' | relative_url }}"></script>
+<script>
+  if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setLogoVisibility);
+  } else {
+      setLogoVisibility();
+  }
+</script>
+
+{%- if current_section == '' and isHomepage == false -%}
+<script src="{{ '/assets/js/sections.js' | relative_url }}"></script>
+<script>
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      showSectionCollections();
+    });
+  } else {
+    showSectionCollections();
+  }
+</script>
+{%- endif -%}

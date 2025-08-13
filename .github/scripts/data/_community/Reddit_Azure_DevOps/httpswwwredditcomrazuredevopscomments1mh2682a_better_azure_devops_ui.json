@@ -1,0 +1,16 @@
+{
+  "Title": "A better Azure DevOps UI?",
+  "FeedName": "Reddit Azure DevOps",
+  "OutputDir": "_community",
+  "Tags": [
+    "azuredevops"
+  ],
+  "ProcessedDate": "2025-08-05 17:37:33",
+  "Description": "Do you guys enjoy using Azure DevOps UI specifically the DevOps boards? I find it could sometimes be overwhelming and I bit outdated looking? what do you guys think? I am considering creating a modern client for DevOps boards: [https://www.ops-zen.com](https://www.ops-zen.com)",
+  "Author": "Historical_Kick3793",
+  "Link": "https://www.reddit.com/r/azuredevops/comments/1mh2682/a_better_azure_devops_ui/",
+  "PubDate": "2025-08-04T02:52:41+00:00",
+  "EnhancedContent": "Do you guys enjoy using Azure DevOps UI specifically the DevOps boards? I find it could sometimes be overwhelming and I bit outdated looking? what do you guys think? I am considering creating a modern client for DevOps boards: [https://www.ops-zen.com](https://www.ops-zen.com)\n\nI think it’s fine UI wise. Much better than the equivalent in GitHub, Atlassian, Jenkins.\n\nI think it's horrible, you can't come up with a worse UI and ux than this!\n\nThat stupid mouse capture thing makes it an instant no. What the fuck are you thinking?\n\nnoted\n\nThe Boards UI was just rebuild\n\nI try to use the api. The UI is just for other teams. I use the boards though.\n\nThe cli seems to not be properly maintained or very limited.\n\nFor work item creation I tried to simplify it by creating [https://getalmo.com](https://getalmo.com)\n\nYou may want to try that out and see if that helps?\n\nNow working on its next version which supports Mac, Web and New Outlook.\n\nNo UI. Only YAML.\n\nPlease explain how you use YAML to interact with Boards.",
+  "FeedLevelAuthor": "Azure DevOps",
+  "FeedUrl": "https://www.reddit.com/r/azuredevops/.rss"
+}

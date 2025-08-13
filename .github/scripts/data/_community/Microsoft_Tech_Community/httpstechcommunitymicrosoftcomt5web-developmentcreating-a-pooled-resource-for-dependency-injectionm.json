@@ -1,0 +1,14 @@
+{
+  "PubDate": "2025-08-08T16:58:55+00:00",
+  "OutputDir": "_community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Tags": [],
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet",
+  "Link": "https://techcommunity.microsoft.com/t5/web-development/creating-a-pooled-resource-for-dependency-injection/m-p/4441617#M670",
+  "Description": "Currently, we have AddSingleton(), AddScoped(), and AddTransient() to generate resources in DI.\n\nIs there a way to request a new feature for an AddPooled() which will allow us to create and reuse unused instances from a pool?\n\nI have a class that has an expensive creation (a little over 5 seconds) that cannot be instantiated as a singleton. I don't need it to maintain any state, so it would be an ideal candidate for a pooled resource in DI.",
+  "Author": "WhiteEagle5150",
+  "ProcessedDate": "2025-08-08 20:41:57",
+  "Title": "Creating a pooled resource for Dependency Injection",
+  "FeedName": "Microsoft Tech Community",
+  "EnhancedContent": "Currently, we have AddSingleton(), AddScoped(), and AddTransient() to generate resources in DI.\n\nIs there a way to request a new feature for an AddPooled() which will allow us to create and reuse unused instances from a pool?\n\nI have a class that has an expensive creation (a little over 5 seconds) that cannot be instantiated as a singleton. I don't need it to maintain any state, so it would be an ideal candidate for a pooled resource in DI."
+}

@@ -1,0 +1,14 @@
+{
+  "OutputDir": "_community",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/mcp-ai-unlocking-agentic-intelligence-with-a-usb-c-connector-for/m-p/4441721#M22083",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "EnhancedContent": "**MCP**, or **Model Context Protocol**, is an open-source standard introduced by Anthropic in November 2024. It’s designed to create a unified bridge between AI models—especially large language models (LLMs)—and external systems like tools, databases, file repositories, and APIs.\n\nThink of MCP as the **USB-C port for AI**—just plug in, and the AI can access or drive external services without building unique integrations for each connection.\n\nRather than coding separate connections for each model and tool, MCP uses a consistent, structured way for AI agents (MCP clients) to communicate with “MCP servers” that interface with external systems.\n\n[https://dellenny.com/mcp-ai-unlocking-agentic-intelligence-with-a-usb-c-connector-for-ai/](https://dellenny.com/mcp-ai-unlocking-agentic-intelligence-with-a-usb-c-connector-for-ai/)",
+  "Description": "**MCP**, or **Model Context Protocol**, is an open-source standard introduced by Anthropic in November 2024. It’s designed to create a unified bridge between AI models—especially large language models (LLMs)—and external systems like tools, databases, file repositories, and APIs.\n\nThink of MCP as the **USB-C port for AI**—just plug in, and the AI can access or drive external services without building unique integrations for each connection.\n\nRather than coding separate connections for each model and tool, MCP uses a consistent, structured way for AI agents (MCP clients) to communicate with “MCP servers” that interface with external systems.\n\n[https://dellenny.com/mcp-ai-unlocking-agentic-intelligence-with-a-usb-c-connector-for-ai/](https://dellenny.com/mcp-ai-unlocking-agentic-intelligence-with-a-usb-c-connector-for-ai/)",
+  "Title": "MCP & AI Unlocking Agentic Intelligence with a “USB-C Connector” for AI",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "PubDate": "2025-08-09T07:01:29+00:00",
+  "Author": "JohnNaguib",
+  "ProcessedDate": "2025-08-09 20:24:53",
+  "Tags": [],
+  "FeedName": "Microsoft Tech Community"
+}

@@ -1,0 +1,25 @@
+{
+  "Description": "Join Daniel Roth and Maddy Montaquila for a deep dive into why Aspire is a game-changer for ASP.NET Core developers. We’ll explore how Aspire makes building, testing, and deploying cloud-native apps with ASP.NET Core easy without disrupting your current workflow or infrastructure. We'll clear up common misconceptions and provide practical guidance for integrating Aspire into existing apps drawing from the Aspire team's real-world experience on AspiriFridays. We’ll share tips, lessons learned, and answer your questions live!\n\n🔗 Community Links: https://www.theurlist.com/aspnet-standup-20250819\n\n🎙️ Featuring: Daniel Roth, Maddy Montaquila\n\n#dotnet #aspnetcore",
+  "PubDate": "2025-08-08T23:12:24+00:00",
+  "Tags": [
+    "aspnet",
+    "aspnetcore",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetaspire",
+    "microsoft",
+    "softwaredeveloper"
+  ],
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-08-09 00:25:05",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "FeedName": "DotNet YouTube",
+  "Author": "dotnet",
+  "Link": "https://www.youtube.com/watch?v=aHqw6mPpJSc",
+  "Title": "ASP.NET Community Standup - Why ASP.NET Core developers will love Aspire!",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "dotnet"
+}

@@ -1,0 +1,18 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:13",
+  "Title": "Custom Chat Mode Will Change How You Code",
+  "Author": "Visual Studio Code",
+  "FeedName": "Visual Studio Code YouTube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "PubDate": "2025-08-02T06:32:44+00:00",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "FeedLevelAuthor": "Visual Studio Code",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=rE6svXzyhg0",
+  "Description": "In this video, I’ll show you how to customize chat in VS Code by creating your own Custom Chat Mode—using tools like codebase, search, fetch, and githubRepo etc. This setup gives you a smarter, more personalized AI coding assistant that actually understands your project and helps you get real work done.\n\n🔎 Chapters: 00:00 Intro 00:25 The Docs 02:08 Research Mode 05:30 SQL Optimizer Mode 07:20 Blog Mode 09:38 Wrap\n\n🎙️ Featuring: Reynald Adolphe"
+}

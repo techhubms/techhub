@@ -1,0 +1,16 @@
+{
+  "FeedName": "Reddit Visual Studio",
+  "Author": "Fresh-Weakness-3769",
+  "EnhancedContent": "I'm struggling a lot with circular dependencies with #include in C++ and it is hell to fix it because VS Intellisense has become extremely slow. There are some errors that I should have but wont get (like referencing a class the I having included nor declared) and when I start the project, it doesn't run, says it had one failure, and wont tell me what it is. Whenever I make in error I have to click off the click and then wait a few seconds for it to update, sometimes I have to make a new error (like removing a ;) to force it to update. It has been an awful experience since I created my project and its only getting worse. Its not like my project is big either. I have SFML 3, 2 jsons, 7 scripts , and 8 pngs in it. And yet my compile times to start the project are so damn slow. I'm already on the latest version of VS Community (17.14.11) so I'm really not sure what to do.",
+  "Description": "I'm struggling a lot with circular dependencies with #include in C++ and it is hell to fix it because VS Intellisense has become extremely slow. There are some errors that I should have but wont get (like referencing a class the I having included nor declared) and when I start the project, it doesn't run, says it had one failure, and wont tell me what it is. Whenever I make in error I have to click off the click and then wait a few seconds for it to update, sometimes I have to make a new error (like removing a ;) to force it to update. It has been an awful experience since I created my project and its only getting worse. Its not like my project is big either. I have SFML 3, 2 jsons, 7 scripts , and 8 pngs in it. And yet my compile times to start the project are so damn slow. I'm already on the latest version of VS Community (17.14.11) so I'm really not sure what to do.",
+  "FeedUrl": "https://www.reddit.com/r/VisualStudio/.rss",
+  "Link": "https://www.reddit.com/r/VisualStudio/comments/1mipbu2/vs_community_and_intellisense_are_very_slow_for_me/",
+  "OutputDir": "_community",
+  "Tags": [
+    "VisualStudio"
+  ],
+  "Title": "VS Community and Intellisense are very slow for me",
+  "PubDate": "2025-08-05T23:47:15+00:00",
+  "FeedLevelAuthor": "VisualStudio",
+  "ProcessedDate": "2025-08-06 07:15:06"
+}

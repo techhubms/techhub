@@ -1,0 +1,16 @@
+{
+  "Title": "Azure ML - CLI created pipelines",
+  "FeedName": "Reddit Azure DevOps",
+  "OutputDir": "_community",
+  "Tags": [
+    "azuredevops"
+  ],
+  "ProcessedDate": "2025-08-05 17:37:33",
+  "Description": "Hi all\n\nI’m creating a pipeline in Azure ML using the Azure CLI v2 and the ml extension.\n\nMy first component runs successfully (trains an R model and outputs) but in my second component I want to use the CLI to register the model (R doesn’t allow you do to this, so I either have to register manually in GUI, use Python SDK, or the CLI).\n\nAs I only want to run a small bash script - the az ml command required to register models - I was going to use the curated MS environments available in Azure ML. However, these don’t seem to have the CLI installed. I’m pretty sure the documents say that they do though.\n\nHas anyone used pipelines made with the CLI and executed bash script inside a component? If so, how’d you do it etc.\n\nThanks",
+  "Author": "Icy-Western-3314",
+  "Link": "https://www.reddit.com/r/azuredevops/comments/1mb8fvw/azure_ml_cli_created_pipelines/",
+  "PubDate": "2025-07-28T06:03:53+00:00",
+  "EnhancedContent": "Hi all\n\nI’m creating a pipeline in Azure ML using the Azure CLI v2 and the ml extension.\n\nMy first component runs successfully (trains an R model and outputs) but in my second component I want to use the CLI to register the model (R doesn’t allow you do to this, so I either have to register manually in GUI, use Python SDK, or the CLI).\n\nAs I only want to run a small bash script - the az ml command required to register models - I was going to use the curated MS environments available in Azure ML. However, these don’t seem to have the CLI installed. I’m pretty sure the documents say that they do though.\n\nHas anyone used pipelines made with the CLI and executed bash script inside a component? If so, how’d you do it etc.\n\nThanks",
+  "FeedLevelAuthor": "Azure DevOps",
+  "FeedUrl": "https://www.reddit.com/r/azuredevops/.rss"
+}

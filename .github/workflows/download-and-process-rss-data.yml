@@ -1,0 +1,507 @@
+name: Download and process RSS feeds into new content
+
+on:
+  schedule:
+    - cron: '*/60 * * * *'
+  workflow_dispatch:
+
+# Prevent multiple instances from running simultaneously
+concurrency:
+  group: rss-processing
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write
+  models: read
+  pull-requests: write
+
+jobs:
+  download-and-process-rss-data:
+    runs-on: ubuntu-latest
+    env:
+      GIT_USER_EMAIL: "action@github.com"
+      GIT_USER_NAME: "GitHub Action"
+      RSS_BRANCH: "rss-updates"
+    steps:
+      - name: Check workflow status
+        run: |
+          echo "🚀 Starting RSS processing workflow..."
+          echo "Run ID: ${{ github.run_id }}"
+          echo "Event: ${{ github.event_name }}"
+          echo "Repository: ${{ github.repository }}"
+          
+      - name: Checkout RSS branch
+        uses: actions/checkout@v4
+        with:
+          ref: rss-updates
+          fetch-depth: 0
+
+      - name: Configure Git user
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+
+      - name: Sync with main branch using selective backup/recreate strategy
+        run: |
+          echo "Syncing RSS branch with latest main using selective backup/recreate strategy..."
+          git fetch origin main
+          
+          # Step 1: Identify files that have changed between main and rss-updates
+          echo "🔍 Identifying changed files between main and rss-updates branches..."
+          
+          # Get all files that are different between main and current rss-updates branch
+          CHANGED_FILES=$(git diff --name-only origin/main...HEAD || true)
+          
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No differences found between main and rss-updates branches"
+          else
+            echo "Found changed files:"
+            echo "$CHANGED_FILES"
+          fi
+          
+          # Step 2: Selectively backup only the changed files
+          echo "📦 Backing up only changed RSS-managed files from rss-updates branch..."
+          
+          # Create temp directory to store RSS versions
+          mkdir -p /tmp/rss-backup
+          
+          # Define RSS-managed file patterns to filter changed files
+          # Note: rss-feeds.json is excluded - production version should always be leading
+          RSS_PATTERNS=(
+            ".github/scripts/rate-limit-enddate.json"
+            ".github/scripts/processed-entries.json" 
+            ".github/scripts/skipped-entries.json"
+            ".github/scripts/data/*/*/*.json"
+            ".github/scripts/airesults/*.json"
+            "_*/*.md"
+          )
+          
+          # Filter changed files to only include RSS-managed files
+          CHANGED_RSS_FILES=""
+          if [ -n "$CHANGED_FILES" ]; then
+            for file in $CHANGED_FILES; do
+              for pattern in "${RSS_PATTERNS[@]}"; do
+                # Use shell pattern matching to check if file matches RSS pattern
+                if [[ "$file" == $pattern ]]; then
+                  if [ -f "$file" ]; then
+                    CHANGED_RSS_FILES="$CHANGED_RSS_FILES $file"
+                    echo "  Will backup changed RSS file: $file"
+                  fi
+                  break
+                fi
+              done
+            done
+          fi
+          
+          # Backup the identified changed RSS files
+          if [ -n "$CHANGED_RSS_FILES" ]; then
+            echo "Backing up changed RSS-managed files..."
+            for file in $CHANGED_RSS_FILES; do
+              if [ -f "$file" ]; then
+                mkdir -p "/tmp/rss-backup/$(dirname "$file")"
+                cp "$file" "/tmp/rss-backup/$file"
+                echo "  Backed up: $file"
+              fi
+            done
+          else
+            echo "No changed RSS-managed files to backup"
+          fi
+          
+          # Step 3: Recreate rss-updates branch based on latest main
+          echo "🔄 Recreating rss-updates branch based on latest main..."
+          
+          # Reset rss-updates branch to match main exactly
+          git reset --hard origin/main
+          echo "✅ RSS branch now matches main exactly"
+          echo "📊 RSS Branch Reset: Yes (clean slate from main during sync step)"
+          
+          # Step 4: Restore backed up changed files (including new files from RSS processing)
+          echo "📁 Restoring backed up changed files (including new files from RSS processing)..."
+          
+          if [ -n "$CHANGED_RSS_FILES" ]; then
+            for file in $CHANGED_RSS_FILES; do
+              if [ -f "/tmp/rss-backup/$file" ]; then
+                # Check if file still exists on main
+                if git cat-file -e origin/main:"$file" 2>/dev/null; then
+                  echo "Restoring existing file: $file (exists on main)"
+                  mkdir -p "$(dirname "$file")"
+                  cp "/tmp/rss-backup/$file" "$file"
+                else
+                  # File doesn't exist on main branch - check if it was deleted
+                  if git log --oneline origin/main -- "$file" | head -1 > /dev/null 2>&1; then
+                    echo "Skipping deleted file: $file (was removed from main)"
+                  else
+                    # File never existed on main - check if it's RSS-managed
+                    if [[ "$file" == _*/*.md ]]; then
+                      # NEW markdown file from RSS processing - always restore
+                      echo "Restoring NEW markdown file: $file (from RSS processing)"
+                      mkdir -p "$(dirname "$file")"
+                      cp "/tmp/rss-backup/$file" "$file"
+                    elif [[ "$file" == *.json ]] && [[ "$file" == *"rss"* || "$file" == *"processed"* || "$file" == *"skipped"* || "$file" == *"airesults"* || "$file" == *"rate-limit"* ]]; then
+                      # RSS JSON tracking files - always restore
+                      echo "Restoring RSS tracking file: $file (RSS-specific, not on main)"
+                      mkdir -p "$(dirname "$file")"
+                      cp "/tmp/rss-backup/$file" "$file"
+                    else
+                      echo "Skipping non-RSS file: $file (not on main and not RSS-managed)"
+                    fi
+                  fi
+                fi
+              fi
+            done
+          fi
+          
+          echo "ℹ️  Note: Any NEW files created during RSS processing will be preserved automatically"
+          
+          # Clean up temporary files
+          rm -rf /tmp/rss-backup
+          
+          # Commit restored files if there are changes
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "Restored changed RSS tracking data and content files on clean main base"
+          fi
+          
+          echo "✅ RSS branch sync completed using selective backup/recreate strategy"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: |
+            spec/javascript/package-lock.json
+            spec/e2e/package-lock.json
+
+      - name: Install JavaScript dependencies
+        run: |
+          echo "Installing E2E test dependencies for content fetching..."
+          cd spec/e2e
+          npm ci
+
+      - name: Install Playwright browsers
+        run: |
+          cd spec/e2e
+          npx playwright install-deps
+          npx playwright install
+
+      - name: Download RSS feeds
+        id: download-rss
+        shell: pwsh
+        working-directory: ${{ github.workspace }}
+        run: |
+          Write-Host "🔄 Starting RSS feed download..."
+
+          Install-Module HtmlToMarkdown -AcceptLicense -Force
+          
+          try {
+            & "${{ github.workspace }}/.github/scripts/download-rss-feeds.ps1" -WorkspaceDirectory "${{ github.workspace }}"
+            Write-Host "✅ RSS feed download completed"
+          } catch {
+            Write-Host "❌ RSS feed download failed"
+            exit 1
+          }
+
+      - name: Commit RSS data changes
+        if: always() && !cancelled()
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Changes detected after RSS download, committing..."
+            git add .
+            git commit -m "Updated RSS data from feeds"
+            git push --force-with-lease origin ${{ env.RSS_BRANCH }}
+            echo "RSS_DATA_CHANGED=true" >> $GITHUB_ENV
+          else
+            echo "No changes after RSS download"
+            echo "RSS_DATA_CHANGED=false" >> $GITHUB_ENV
+          fi
+
+      - name: Process RSS data into markdown
+        if: always() && !cancelled()
+        id: process-rss
+        shell: pwsh
+        env:
+          TOKEN: ${{ secrets.AZURE_AI_KEY }}
+        working-directory: ${{ github.workspace }}
+        run: |
+          Write-Host "🔄 Starting RSS data processing..."
+          
+          try {
+            & "${{ github.workspace }}/.github/scripts/process-rss-to-markdown.ps1" `
+              "${{ github.repository }}" `
+              "$env:TOKEN" `
+              -WorkspaceDirectory "${{ github.workspace }}" `
+              -Endpoint "https://oai-techhub.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview" `
+              -Model "gpt-4.1" `
+              -RateLimitPreventionDelay 10
+            Write-Host "✅ RSS data processing completed"
+          } catch {
+            Write-Host "❌ RSS data processing failed"
+            exit 1
+          }
+
+      - name: Commit markdown content changes
+        if: always() && !cancelled()
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Changes detected after RSS processing, committing..."
+            git add .
+            git commit -m "Added new content from RSS processing"
+            git push --force-with-lease origin ${{ env.RSS_BRANCH }}
+            echo "CONTENT_CHANGED=true" >> $GITHUB_ENV
+          else
+            echo "No new content after RSS processing"
+            echo "CONTENT_CHANGED=false" >> $GITHUB_ENV
+          fi
+
+      - name: Fix markdown files
+        if: always() && !cancelled()
+        id: fix-markdown
+        shell: pwsh
+        working-directory: ${{ github.workspace }}
+        run: |
+          Write-Host "🔄 Starting markdown file fixes..."
+          
+          try {
+            & "${{ github.workspace }}/.github/scripts/fix-markdown-files.ps1" -WorkspaceDirectory "${{ github.workspace }}"
+            Write-Host "✅ Markdown file fixes completed"
+          } catch {
+            Write-Host "❌ Markdown file fixes failed"
+            exit 1
+          }
+
+      - name: Commit markdown fixes
+        if: always() && !cancelled()
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Changes detected after markdown fixes, committing..."
+            git add .
+            git commit -m "Fixed markdown file formatting and structure"
+            git push --force-with-lease origin ${{ env.RSS_BRANCH }}
+            echo "FIXES_CHANGED=true" >> $GITHUB_ENV
+          else
+            echo "No changes after markdown fixes"
+            echo "FIXES_CHANGED=false" >> $GITHUB_ENV
+          fi
+
+      - name: Check for changes to copy to main
+        if: always() && !cancelled()
+        run: |
+          echo "Checking for changes to copy to main..."
+          
+          # Find all changed files since main (additions, modifications, deletions)
+          ALL_DIFF_FILES=$(git diff --name-only origin/main...HEAD || true)
+          
+          # Find files that were actually deleted from RSS branch (exist on main but not on RSS branch)
+          # Use --diff-filter=D to only get deleted files
+          DELETED_FILES=$(git diff --name-only --diff-filter=D origin/main...HEAD || true)
+          
+          # Check markdown files in _* directories (this determines whether to copy to main)
+          CHANGED_MD_FILES=$(echo "$ALL_DIFF_FILES" | grep -E '^_[^/]+/.*\.(md|markdown)$' || true)
+          DELETED_MD_FILES=$(echo "$DELETED_FILES" | grep -E '^_[^/]+/.*\.(md|markdown)$' || true)
+          
+          if [ -n "$CHANGED_MD_FILES" ]; then
+            echo "Found markdown changes to copy:"
+            echo "$CHANGED_MD_FILES"
+          fi
+          
+          if [ -n "$DELETED_MD_FILES" ]; then
+            echo "Found markdown files to delete:"
+            echo "$DELETED_MD_FILES"
+          fi
+          
+          # Copy to main if there are markdown file changes OR deletions
+          if [ -n "$CHANGED_MD_FILES" ] || [ -n "$DELETED_MD_FILES" ]; then
+            echo "Markdown files changed or deleted, will sync changes to main"
+            echo "SHOULD_COPY=true" >> $GITHUB_ENV
+            
+            # Define RSS-managed file patterns (same as backup step)
+            # Note: rss-feeds.json is excluded - production version should always be leading
+            RSS_PATTERNS=(
+              ".github/scripts/rate-limit-enddate.json"
+              ".github/scripts/processed-entries.json" 
+              ".github/scripts/skipped-entries.json"
+              ".github/scripts/data/*.json"
+              ".github/scripts/airesults/*.json"
+              "_*/*.md"
+            )
+            
+            # Collect files to copy (additions and modifications)
+            FILES_TO_COPY=""
+            while IFS= read -r file; do
+              if [ -n "$file" ] && [ -f "$file" ]; then
+                # Check if file matches any RSS pattern
+                for pattern in "${RSS_PATTERNS[@]}"; do
+                  if [[ "$file" == $pattern ]]; then
+                    FILES_TO_COPY="$FILES_TO_COPY$file"$'\n'
+                    echo "  Will copy RSS-managed file: $file"
+                    break
+                  fi
+                done
+              fi
+            done <<< "$ALL_DIFF_FILES"
+            
+            # Collect files to delete (only RSS-managed files that were actually deleted)
+            FILES_TO_DELETE=""
+            while IFS= read -r file; do
+              if [ -n "$file" ]; then
+                # Check if deleted file matches any RSS pattern
+                for pattern in "${RSS_PATTERNS[@]}"; do
+                  if [[ "$file" == $pattern ]]; then
+                    FILES_TO_DELETE="$FILES_TO_DELETE$file"$'\n'
+                    echo "  Will delete RSS-managed file: $file"
+                    break
+                  fi
+                done
+              fi
+            done <<< "$DELETED_FILES"
+            
+            # Save files to copy and delete for the copy step
+            echo "$FILES_TO_COPY" > /tmp/files_to_copy.txt
+            echo "$FILES_TO_DELETE" > /tmp/files_to_delete.txt
+            
+            # Count files by lines instead of words to handle filenames with spaces
+            # Handle empty strings properly for file counting
+            if [ -n "$FILES_TO_COPY" ]; then
+              FILE_COUNT=$(echo "$FILES_TO_COPY" | grep -c .)
+            else
+              FILE_COUNT=0
+            fi
+            
+            if [ -n "$FILES_TO_DELETE" ]; then
+              DELETE_COUNT=$(echo "$FILES_TO_DELETE" | grep -c .)
+            else
+              DELETE_COUNT=0
+            fi
+            
+            echo "FILE_COUNT=$FILE_COUNT" >> $GITHUB_ENV
+            echo "DELETE_COUNT=$DELETE_COUNT" >> $GITHUB_ENV
+            
+            # Save markdown files list for commit message
+            echo "$CHANGED_MD_FILES" > /tmp/changed_md_files.txt
+            echo "$DELETED_MD_FILES" > /tmp/deleted_md_files.txt
+            
+            echo "Will copy $FILE_COUNT files and delete $DELETE_COUNT files on main"
+          else
+            echo "No markdown file changes or deletions detected - keeping changes on rss-updates branch only"
+            echo "SHOULD_COPY=false" >> $GITHUB_ENV
+          fi
+
+      - name: Checkout main branch
+        if: env.SHOULD_COPY == 'true' && always() && !cancelled()
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-workspace
+
+      - name: Copy selected changes to main branch
+        if: env.SHOULD_COPY == 'true' && always() && !cancelled()
+        run: |
+          echo "Syncing selected changes to main branch..."
+          
+          # Navigate to main workspace
+          cd main-workspace
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          
+          # First, handle file deletions (must be done before copies to avoid conflicts)
+          if [ -f "/tmp/files_to_delete.txt" ] && [ -s "/tmp/files_to_delete.txt" ]; then
+            echo "Deleting files that were removed from RSS branch..."
+            
+            while IFS= read -r file; do
+              if [ -n "$file" ] && [ -f "$file" ]; then
+                echo "  Deleting: $file (removed from RSS branch)"
+                rm "$file"
+                
+                # Remove empty directories after file deletion
+                dir=$(dirname "$file")
+                while [ "$dir" != "." ] && [ "$dir" != "/" ]; do
+                  if [ -d "$dir" ] && [ -z "$(ls -A "$dir" 2>/dev/null)" ]; then
+                    echo "  Removing empty directory: $dir"
+                    rmdir "$dir"
+                    dir=$(dirname "$dir")
+                  else
+                    break
+                  fi
+                done
+              else
+                echo "  File already deleted or not found: $file"
+              fi
+            done < /tmp/files_to_delete.txt
+          else
+            echo "No files to delete from main branch"
+          fi
+          
+          # Then, handle file copies (additions and modifications)
+          if [ -f "/tmp/files_to_copy.txt" ] && [ -s "/tmp/files_to_copy.txt" ]; then
+            echo "Copying files from RSS branch to main branch..."
+            
+            while IFS= read -r file; do
+              if [ -n "$file" ] && [ -f "../$file" ]; then
+                echo "  Copying: $file"
+                mkdir -p "$(dirname "$file")"
+                cp "../$file" "$file"
+              else
+                echo "  Warning: File not found to copy: $file"
+              fi
+            done < /tmp/files_to_copy.txt
+          else
+            echo "No files to copy to main branch"
+          fi
+          
+          # Create comprehensive commit message
+          echo "RSS processing changes:" > /tmp/commit_msg.txt
+          echo "" >> /tmp/commit_msg.txt
+          
+          # Add new/changed markdown files to commit message
+          if [ -f "/tmp/changed_md_files.txt" ] && [ -s "/tmp/changed_md_files.txt" ]; then
+            echo "New/changed content:" >> /tmp/commit_msg.txt
+            while IFS= read -r file; do
+              if [ -n "$file" ]; then
+                echo "- $file" >> /tmp/commit_msg.txt
+              fi
+            done < /tmp/changed_md_files.txt
+            echo "" >> /tmp/commit_msg.txt
+          fi
+          
+          # Add deleted markdown files to commit message
+          if [ -f "/tmp/deleted_md_files.txt" ] && [ -s "/tmp/deleted_md_files.txt" ]; then
+            echo "Removed content:" >> /tmp/commit_msg.txt
+            while IFS= read -r file; do
+              if [ -n "$file" ]; then
+                echo "- $file" >> /tmp/commit_msg.txt
+              fi
+            done < /tmp/deleted_md_files.txt
+          fi
+          
+          # Commit the changes (both additions and deletions)
+          git add -A  # Use -A to include deletions
+          git commit -F /tmp/commit_msg.txt
+          
+          # Push to main
+          git push origin main
+          
+          echo "✅ Successfully synced all changes to main branch"
+
+          # Reset RSS branch so next starts clean
+          cd ..
+          git fetch origin main
+          git reset --hard origin/main
+          git push --force-with-lease origin ${{ env.RSS_BRANCH }}
+
+          echo "✅ Successfully reset RSS branch"
+
+      - name: Workflow summary
+        if: always() && !cancelled()
+        run: |
+          echo "📊 RSS Workflow Summary:"
+          echo "  RSS Data Changed: ${{ env.RSS_DATA_CHANGED }}"
+          echo "  Content Changed: ${{ env.CONTENT_CHANGED }}"
+          echo "  Fixes Applied: ${{ env.FIXES_CHANGED }}"
+          echo "  Synced to Main: ${{ env.SHOULD_COPY }}"
+          if [ "${{ env.SHOULD_COPY }}" = "true" ]; then
+            echo "  Files Copied: ${{ env.FILE_COUNT }} files"
+            echo "  Files Deleted: ${{ env.DELETE_COUNT }} files"
+            echo "  Note: Only RSS-managed files are synced; manual files on main are preserved"
+          fi

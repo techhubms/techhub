@@ -1,0 +1,26 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:46",
+  "Title": "On .NET Live | Distributed applications made with Microsoft Orleans and Event Sourcing using Sekiban",
+  "Author": "dotnet",
+  "FeedName": "DotNet YouTube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "PubDate": "2025-08-04T23:30:19+00:00",
+  "Tags": [
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetdeveloper",
+    "microsoftorleans",
+    "orleans",
+    "productivity",
+    "sekiban",
+    "softwaredeveloper"
+  ],
+  "FeedLevelAuthor": "dotnet",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=n5ie6XBdlL8",
+  "Description": "Let's learn about distributed application made with Microsoft Orleans and Event Sourcing. This week, we'll talk to Tomohisa Takaoka. He and other contributors built an event sourcing and CQRS Framework with C# called Sekiban. It is open source, improves developer productivity, and easily integrates with LLM agents with VS Code.\n\n🎙️ Featuring: Tomohisa Takaoka"
+}

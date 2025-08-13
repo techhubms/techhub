@@ -1,0 +1,23 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:58",
+  "Title": "Step-by-Step:Orchestrating Agents in Blazor with Semantic Kernel #Blazor #SemanticKernel #Agent #ai",
+  "Author": "Learn Microsoft AI",
+  "FeedName": "Learn Microsoft AI Youtube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA",
+  "PubDate": "2025-06-30T03:47:16+00:00",
+  "Tags": [
+    "AgentOrchestration",
+    "AIinBlazor",
+    "Blazor",
+    "ConcurrentOrchestration",
+    "DotNetAI",
+    "MicrosoftAI",
+    "MultiAgent",
+    "SemanticKernel"
+  ],
+  "FeedLevelAuthor": "Learn Microsoft AI",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=Cf-bZUnlBHc",
+  "Description": "Join this channel to get access to perks: https://www.youtube.com/channel/UCQf\\_yRJpsfyEiWWpt1MZ6vA/join\n\nLinkedin : https://www.linkedin.com/in/rvinothrajendran/ github : https://github.com/rvinothrajendran Buy me a Coffee: https://buymeacoffee.com/vinothrajendran\n\n00:00 – 🔍 Overview of the implementation plan 02:04 – ⚙️ Adding Kernel to Dependency Injection (DI) 03:04 – 🤖 Registering ChatCompletionAgents in DI 05:49 – 🔗 Setting up Orchestration Service in DI 07:45 – 🧩 Creating the Agent Resolver 09:15 – 🔄 Implementing the Transformer Handler 13:00 – 🚀 Registering ProcessRuntime & Invoking Agents 15:11 – 💉 Injecting Orchestration into a Blazor Page 15:44 – 🎬 Orchestration Demo 16:39 – 📄 Page-Based Orchestration Explained 17:24 – 🧑‍🤝‍🧑 Grouping Agents Based on Pages 18:50 – 🧵 Concurrent Orchestration at Runtime 20:48 – 🧭 Page-wise ProcessRuntime & Agent Invocation 22:00 – 🌐 Injecting Orchestration Across All Pages 23:14 – ✅ Page-Based Orchestration Full Demo 24:10 – 🛠️ Areas for Code Improvement & Optimization\n\nIn this video, we’ll dive deep into how to implement Concurrent Orchestration of AI agents in a Blazor application using the powerful Semantic Kernel Agent Framework from Microsoft. You'll learn how to: ✅ Set up Semantic Kernel in your Blazor app ✅ Create and register multiple intelligent agents ✅ Use ConcurrentOrchestrationService to coordinate multiple agents in parallel ✅ Inject agents dynamically using Dependency Injection (DI) ✅ Build a responsive, interactive AI experience in your Blazor frontend Whether you're building a smart chatbot, a recommendation system, or a multi-agent Copilot, this tutorial will give you a hands-on walkthrough with code and clear explanations. 🧠 Powered by Microsoft Semantic Kernel 🧪 Demo with agents like Movies Agents, Food Agents 🧵 Clean orchestration logic with parallel agent execution 📌 Perfect for .NET developers, AI enthusiasts, and Blazor fans looking to take their apps to the next level with intelligent orchestration! 👉 Don’t forget to Like, Share, and Subscribe for more AI-powered .NET content! 🔔 Hit the bell icon to get notified when new videos drop! #Blazor #SemanticKernel #DotNetAI #AgentOrchestration #MicrosoftAI #ConcurrentOrchestration #MultiAgent #AIinBlazor"
+}

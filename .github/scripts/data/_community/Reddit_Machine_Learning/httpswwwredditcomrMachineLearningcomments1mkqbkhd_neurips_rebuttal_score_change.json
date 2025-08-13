@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/MachineLearning/.rss",
+  "Link": "https://www.reddit.com/r/MachineLearning/comments/1mkqbkh/d_neurips_rebuttal_score_change/",
+  "Tags": [
+    "MachineLearning"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Machine Learning",
+  "ProcessedDate": "2025-08-08 16:08:38",
+  "Title": "[D] Neurips rebuttal score change",
+  "FeedLevelAuthor": "Machine Learning",
+  "EnhancedContent": "It's just my feeling, but from what I see, the post rebuttal score this year maybe higher than previous year. Can everyone share how the score change so far for the paper that you review?\n\nIn my case, I know 9 paper reviewed by me and my friend, 4 get their score increase (1 increases by 1, the rest a lot more), 1 withdraw, 1 likely to decrease by 1, the rest didn't change\n\nI’m reviewing 5 papers. The score changes are: 3222-&gt;3322, 432-&gt;432, 5533-&gt;5544, 55442-&gt;55443, 432-&gt;554 (phenomenal increase).\n\nMy submission unfortunately got ghosted by the reviewers, so my score stays 5433-&gt;5433\n\nWow. I guess the acceptance threshold will be much higher this year.\n\n[https://www.linkedin.com/posts/abeirami_now-out-of-120-neurips-papers-in-my-batch-activity-7359559948583739395-E9IH?utm_source=share&utm_medium=member_ios&rcm=ACoAACuLU8MB2tzudaolqm48AinbB8pc8Q-3YAU](https://www.linkedin.com/posts/abeirami_now-out-of-120-neurips-papers-in-my-batch-activity-7359559948583739395-E9IH?utm_source=share&amp;utm_medium=member_ios&amp;rcm=ACoAACuLU8MB2tzudaolqm48AinbB8pc8Q-3YAU)\n\nRebuttal is not worth it for score change. There already have been studies to this: [https://cacm.acm.org/opinion/rebutting-rebuttals/](https://cacm.acm.org/opinion/rebutting-rebuttals/)\n\nIf you do not have initially high scores or are on borderline scores it will not help and you will be faster resubmitting somewhere else.\n\nEDIT: It is somewhat funny that you get downvotes when you present empirical evidence that something is a bad practice.\n\nThis year the reviewers were forced to engage in the discussion, which increased a lot the engagement and the points given So a paper which may have been borderline/safe may actually become borderline/unsafe if you didn't get quite a few points after rebuttal\n\n@op Can you please list the final scores for all nine papers?\n\n4433=&gt; 4333, 4433=&gt;4443, 2345 =&gt; withdraw, that are 3 paper I review. My friend review 6 paper, 3 other paper increase he said they come from borderline score to a mixed of 4 and 5. The other 3 paper that doesn't change are also borderline, I only know one which is 3345\n\nIn my batch: 5432-&gt;5433, 4333-&gt;5444, 3333-&gt;withdraw, 55433-&gt;55433\n\nIt is not the case for my batch. 4 withdrawals. 3325-&gt;3325, 3344-&gt;3344, 4532-&gt;4533, 4425-&gt;4446, 2224-&gt;2224 So only moderate change.",
+  "Author": "Careless-Top-2411",
+  "PubDate": "2025-08-08T09:08:32+00:00",
+  "Description": "It's just my feeling, but from what I see, the post rebuttal score this year maybe higher than previous year. Can everyone share how the score change so far for the paper that you review?\n\nIn my case, I know 9 paper reviewed by me and my friend, 4 get their score increase (1 increases by 1, the rest a lot more), 1 withdraw, 1 likely to decrease by 1, the rest didn't change"
+}

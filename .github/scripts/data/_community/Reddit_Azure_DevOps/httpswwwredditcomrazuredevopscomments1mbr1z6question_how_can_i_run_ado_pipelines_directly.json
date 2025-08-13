@@ -1,0 +1,16 @@
+{
+  "Title": "Question: How can I run ADO pipelines directly from VS Code ? Mainly to execute Terraform Plan and validate my changes without committing changes in the ADO repo. If I use dev.azure.com, I have to commit code before running the pipeline.",
+  "FeedName": "Reddit Azure DevOps",
+  "OutputDir": "_community",
+  "Tags": [
+    "azuredevops"
+  ],
+  "ProcessedDate": "2025-08-05 17:37:33",
+  "Description": "",
+  "Author": "SecretOstrich2002",
+  "Link": "https://www.reddit.com/r/azuredevops/comments/1mbr1z6/question_how_can_i_run_ado_pipelines_directly/",
+  "PubDate": "2025-07-28T20:15:38+00:00",
+  "EnhancedContent": "You can’t.\n\nYou can still execute the terraform plan command locally, assuming you have the necessary permissions.\n\nIf you mean on your local box, that's not possible. We don't have a stand-alone runner. The solution is to push your local branch.\n\nSorta you can from vscode by doing a git push. You can set a trigger in your pipeline yaml to run on a push to a branch\n\nI mean you won't be able to run your local code in the pipeline. You have to check it into a repo and pull it into your pipeline, I have my terraform pipeline set up where when you create a pull request any commit you do automatically runs a pipeline that runs the code changes through verify and plan, This is how we let our developers submit. Self-service PRs to build infrastructure, without actually giving them direct permission to resources like the storage account that contains remote state. For local debugging, I have a bash alias that runs the python script we use that runs, init, verify and plan so I can reproduce the same method our pipeline uses to verify PRs\n\nIf you have something where the code isn't updating, you could use the Azure Devops REST API, to trigger a pre-configured pipeline, by doing something like running a script that calls the API method to run your pipeline\n\n[https://learn.microsoft.com/en-us/rest/api/azure/devops/pipelines/runs/run-pipeline?view=azure-devops-rest-7.1](https://learn.microsoft.com/en-us/rest/api/azure/devops/pipelines/runs/run-pipeline?view=azure-devops-rest-7.1)\n\nI'm assuming this is due to lack of permissions on the subscription you are running the plan against. Probably should re-evaluate what access you have in a dev.",
+  "FeedLevelAuthor": "Azure DevOps",
+  "FeedUrl": "https://www.reddit.com/r/azuredevops/.rss"
+}

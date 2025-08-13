@@ -1,0 +1,16 @@
+{
+  "Title": "What is the intended way to specify CMake build options when installing a 3rd party library with vcpkg?",
+  "FeedName": "Reddit Visual Studio",
+  "OutputDir": "_community",
+  "Tags": [
+    "VisualStudio"
+  ],
+  "ProcessedDate": "2025-08-05 17:42:46",
+  "Description": "Hey, I'm returning to C/C++ after 25 years and getting my head wrapped around modern toolchains. I have what seems like it should be a simple need but is proving to be weirdly difficult to figure out how to do.\n\nLet's say there's an open source library called zippylib which can be compiled to use another open source library speedylib as a backend instead of its default. To compile zippylib for that, you just add -DSPEED to the cmake command line.\n\nSo if I want vcpkg to do that for me, what I WANT to be able to do is something like \"vcpkg install zippylib --cmakearg -DSPEED\" Or something equally straightforwand in the manifest json file, but neither of those appear to be a thing.\n\nWhat is the intended way to do this?",
+  "Author": "Zippy_McSpeed",
+  "Link": "https://www.reddit.com/r/VisualStudio/comments/1mgpfk1/what_is_the_intended_way_to_specify_cmake_build/",
+  "PubDate": "2025-08-03T17:43:25+00:00",
+  "EnhancedContent": "Hey, I'm returning to C/C++ after 25 years and getting my head wrapped around modern toolchains. I have what seems like it should be a simple need but is proving to be weirdly difficult to figure out how to do.\n\nLet's say there's an open source library called zippylib which can be compiled to use another open source library speedylib as a backend instead of its default. To compile zippylib for that, you just add -DSPEED to the cmake command line.\n\nSo if I want vcpkg to do that for me, what I WANT to be able to do is something like \"vcpkg install zippylib --cmakearg -DSPEED\" Or something equally straightforwand in the manifest json file, but neither of those appear to be a thing.\n\nWhat is the intended way to do this?",
+  "FeedLevelAuthor": "VisualStudio",
+  "FeedUrl": "https://www.reddit.com/r/VisualStudio/.rss"
+}

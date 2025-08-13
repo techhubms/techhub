@@ -1,0 +1,23 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:33",
+  "Title": "Introducing Microsoft Discovery",
+  "Author": "Microsoft Cloud",
+  "FeedName": "Microsoft Cloud YouTube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw",
+  "PubDate": "2025-05-19T15:45:06+00:00",
+  "Tags": [
+    "agentic R&D",
+    "AI",
+    "AI agents",
+    "AI science",
+    "Microsoft",
+    "Microsoft Cloud",
+    "scientific computing",
+    "scientific discovery"
+  ],
+  "FeedLevelAuthor": "Microsoft Cloud",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=k3S4lPbUWng",
+  "Description": "Accelerate research and development with a new enterprise agentic platform built on Azure that brings AI to scientists and engineers. The new platform enables more continuous, iterative R&D cycles where researchers can guide and orchestrate a team of specialized AI agents that learn and adapt over time — not just for reasoning, but for conducting research itself.\n\nGet started today by using: Azure HPC - https://msft.it/6054Sj5IK Azure AI Foundry infrastructure - https://msft.it/6055Sj5Iz\n\nSign up for updates: https://msft.it/6056Sj5IM\n\n#Microsoft #MicrosoftCloud"
+}

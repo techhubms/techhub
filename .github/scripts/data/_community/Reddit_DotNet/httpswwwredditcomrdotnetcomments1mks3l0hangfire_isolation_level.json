@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/dotnet/.rss",
+  "Link": "https://www.reddit.com/r/dotnet/comments/1mks3l0/hangfire_isolation_level/",
+  "Tags": [
+    "dotnet"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit DotNet",
+  "ProcessedDate": "2025-08-08 16:23:54",
+  "Title": "hangfire isolation level",
+  "FeedLevelAuthor": ".NET",
+  "EnhancedContent": "Hi, i am getting errors in my project. after updating hangfire to 1.8.20, it does not make me do transactions with isolation level serializable. i saw that the default now is read commited but i added UseRecommendedIsolationLevel in config, still not working. can somebody guide me better? thanks.\n\nThanks for your post mukkkki. Please note that we don't allow spam, and we ask that you follow the rules available in the sidebar. We have a lot of commonly asked questions so if this post gets removed, please do a search and see if it's already been asked.\n\n*I am a bot, and this action was performed automatically. Please* [*contact the moderators of this subreddit*](/message/compose/?to=/r/dotnet) *if you have any questions or concerns.*",
+  "Author": "mukkkki",
+  "PubDate": "2025-08-08T10:59:06+00:00",
+  "Description": "Hi, i am getting errors in my project. after updating hangfire to 1.8.20, it does not make me do transactions with isolation level serializable. i saw that the default now is read commited but i added UseRecommendedIsolationLevel in config, still not working. can somebody guide me better? thanks."
+}

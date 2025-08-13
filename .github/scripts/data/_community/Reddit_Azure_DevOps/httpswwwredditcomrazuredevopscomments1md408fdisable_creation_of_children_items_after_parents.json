@@ -1,0 +1,16 @@
+{
+  "Title": "Disable creation of children items after parents is closed?",
+  "FeedName": "Reddit Azure DevOps",
+  "OutputDir": "_community",
+  "Tags": [
+    "azuredevops"
+  ],
+  "ProcessedDate": "2025-08-05 17:37:33",
+  "Description": "Hi all,\n\nWe have a few members in the company that create tasks under (as a child) a closed story, even against company guidelines.\n\nIs it possible to restrict in a way, so that when a story's (or epics/features) \"state = closed\", we restrict opening any work items under (as a child) that story?\n\nI've checked the custom rules, but they only seem to apply to the work item itself, not under potential linked items.\n\nThis really messes up our readings on profitability of our projects since the \"completed work\" might be different from the day we close the project vs 2 months later for example (since in those 2 months, some users will be adding extra hours to that project).\n\nThanks!",
+  "Author": "Gooldx",
+  "Link": "https://www.reddit.com/r/azuredevops/comments/1md408f/disable_creation_of_children_items_after_parents/",
+  "PubDate": "2025-07-30T11:25:23+00:00",
+  "EnhancedContent": "Hi all,\n\nWe have a few members in the company that create tasks under (as a child) a closed story, even against company guidelines.\n\nIs it possible to restrict in a way, so that when a story's (or epics/features) \"state = closed\", we restrict opening any work items under (as a child) that story?\n\nI've checked the custom rules, but they only seem to apply to the work item itself, not under potential linked items.\n\nThis really messes up our readings on profitability of our projects since the \"completed work\" might be different from the day we close the project vs 2 months later for example (since in those 2 months, some users will be adding extra hours to that project).\n\nThanks!\n\nEducate those few members",
+  "FeedLevelAuthor": "Azure DevOps",
+  "FeedUrl": "https://www.reddit.com/r/azuredevops/.rss"
+}

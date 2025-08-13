@@ -1,0 +1,18 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:52",
+  "Title": "How to use AI models in your GitHub Actions workflows",
+  "Author": "GitHub",
+  "FeedName": "GitHub YouTube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "PubDate": "2025-08-04T14:01:12+00:00",
+  "Tags": [
+    "AI",
+    "GitHubActions",
+    "GitHubModels"
+  ],
+  "FeedLevelAuthor": "GitHub",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=m293_EsOs7I",
+  "Description": "Ready to let AI handle some of your tedious repo management? By adding a simple permission to your workflow files, you can now call powerful AI models from GitHub Actions. See how this enables AI-powered branching, automated documentation with Project Bloom, and other practical use cases that can save your team hours of time.\n\n#AI #GitHubModels #GitHubActions\n\n— CHAPTERS —\n\n00:00 - Introduction 00:13 - Bug Reproduction Checker 01:32 - Changelog Generator 02:20 - Weekly Issue Summaries 03:00 - Project Bloom 03:48 - Get Started\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 100 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com"
+}

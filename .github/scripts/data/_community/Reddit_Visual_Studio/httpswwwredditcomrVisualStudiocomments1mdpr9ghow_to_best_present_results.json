@@ -1,0 +1,16 @@
+{
+  "Title": "How to best present results",
+  "FeedName": "Reddit Visual Studio",
+  "OutputDir": "_community",
+  "Tags": [
+    "VisualStudio"
+  ],
+  "ProcessedDate": "2025-08-05 17:42:46",
+  "Description": "Question 1: *How would developers best read search results from searches withing source code?* Question 2: *Finding \\**kanban\\*\\* information, how to best read that, the terminal is no the best?\\*\n\nSome suggestions are: - webpage, medium hard - in terminal, easy - UI interface, a bit harder and takes time to implement. waste of time if not needed - text page that opens up within editor, easy\n\nWorking one a search tool that are able to find information within source code\n\nFor example information like this to work with a kanban board, finding TODO items and present them in a kanban board ```cpp /\\* \\*\\*\\* SAMPLE TODO\n\n@TODO #user.per [id: T1234] [name: help] [description: \"The current help output is hard to read. It needs line wrapping, consistent indentation, and a configurable line width for better readability in terminals. \"] [idea: \"\"\" ## Tasklist - Implement a text wrapping utility function. - Add a callback mechanism for custom formatting of output blocks. - Allow configuration via a `cli_options.json` file. \"\"\" ] [priority: high] [state: open] [assigned\\_to: per] \\*/ ```\n\nLink to tool: [https://github.com/perghosh/Data-oriented-design/releases/tag/cleaner.1.0.1](https://github.com/perghosh/Data-oriented-design/releases/tag/cleaner.1.0.1)",
+  "Author": "gosh",
+  "Link": "https://www.reddit.com/r/VisualStudio/comments/1mdpr9g/how_to_best_present_results/",
+  "PubDate": "2025-07-31T02:26:17+00:00",
+  "EnhancedContent": "Question 1: *How would developers best read search results from searches withing source code?* Question 2: *Finding* ***kanban*** *information, how to best read that, the terminal is no the best?*\n\nSome suggestions are:\n\n- webpage, medium hard\n- in terminal, easy\n- UI interface, a bit harder and takes time to implement. waste of time if not needed\n- text page that opens up within editor, easy\n\nWorking one a search tool that are able to find information within source code\n\nFor example information like this to work with a kanban board, finding TODO items and present them in a kanban board\n\n``` /* *** SAMPLE TODO\n\n@TODO #user.per [id: T1234] [name: help] [description: \"The current help output is hard to read. It needs line wrapping, consistent indentation, and a configurable line width for better readability in terminals. \"] [idea: \"\"\" ## Tasklist\n- Implement a text wrapping utility function.\n- Add a callback mechanism for custom formatting of output blocks.\n- Allow configuration via a `cli_options.json` file.\n\"\"\" ] [priority: high] [state: open] [assigned_to: per] */ ```\n\nLink to tool: [https://github.com/perghosh/Data-oriented-design/releases/tag/cleaner.1.0.1](https://github.com/perghosh/Data-oriented-design/releases/tag/cleaner.1.0.1)",
+  "FeedLevelAuthor": "VisualStudio",
+  "FeedUrl": "https://www.reddit.com/r/VisualStudio/.rss"
+}

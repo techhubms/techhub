@@ -1,0 +1,14 @@
+{
+  "Title": "React 19 Released - Time to Upgrade?",
+  "FeedName": "Harald Binkle's blog",
+  "OutputDir": "_posts",
+  "Tags": [],
+  "ProcessedDate": "2025-08-05 17:17:08",
+  "Description": "React 19 has been released for over a month now. Many third-party libraries and components support it, so it's time to consider using it for your projects.",
+  "Author": "Harald Binkle",
+  "Link": "https://harrybin.de/posts/react19released/",
+  "PubDate": "2025-01-21T17:22:00+00:00",
+  "EnhancedContent": "# React 19 Released - Time to Upgrade?\n\nPosted on:January 21, 2025 |  at 05:22 PM\n\n## ![React-icon](data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' height='12' viewBox='-11.5 -10.232 23 20.463'%3e%3ccircle r='2.05' fill='%2361dafb'/%3e%3cg fill='none' stroke='%2361dafb'%3e%3cellipse rx='11' ry='4.2'/%3e%3cellipse rx='11' ry='4.2' transform='rotate(60)'/%3e%3cellipse rx='11' ry='4.2' transform='rotate(120)'/%3e%3c/g%3e%3c/svg%3e) React 19 is now officially released!\n\nReact **19** has been out for more than a month and many third-party libraries and components have started supporting it. It’s time to think about upgrading your projects to React **19**.\n\nSurprisingly, the hype around the official release is much smaller compared to the preview release in April. But nevertheless, it is released and you may think of doing the upgrade. If so, have a look at the migration/upgrade guide: [React 19 Upgrade Guide](https://react.dev/blog/2024/04/25/react-19-upgrade-guide).\n\n## Key Changes in React 19\n\nWhile it doesn’t make sense to [repeat](https://react.dev/blog/2024/12/05/react-19) all the changes here, let’s summarize the three most important ones for me:\n\n- **Actions** have been introduced, providing a new way to handle side effects in a more declarative manner.\n- New hooks like **useTransition** and **useDeferredValue** have been added to improve state management and performance by deferring updates.\n- The **Suspense** API has been extended to support more use cases and improve data fetching.\n\nUnfortunately, the big advantage promoted together with React **19**, the [react compiler](https://react.dev/blog/2024/10/21/react-compiler-beta-release), is still only in beta and shouldn’t be used in production. So, you still need to take care of memoization yourself. For instance, have a look at my post from last year: [Memoization in React](https://harrybin.de/posts/ifcomponent/).\n\n> >\n> Please don’t forget to keep on following the [rules of React](https://react.dev/reference/rules).\n> >\n\nHappy coding!\n\n- [react](/tags/react)\n- [upgrade](/tags/upgrade)\n- [migration](/tags/migration)\n- [react-compiler](/tags/react-compiler)\n\nThis site uses cookies for analytics (Microsoft Clarity). By clicking Accept, you consent to the use of cookies for analytics purposes. See our [privacy policy](/privacy).",
+  "FeedLevelAuthor": "Harald Binkle",
+  "FeedUrl": "https://harrybin.de/rss.xml"
+}

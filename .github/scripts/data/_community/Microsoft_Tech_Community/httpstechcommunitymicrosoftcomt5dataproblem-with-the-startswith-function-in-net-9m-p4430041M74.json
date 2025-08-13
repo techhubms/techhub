@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet",
+  "Link": "https://techcommunity.microsoft.com/t5/data/problem-with-the-startswith-function-in-net-9/m-p/4430041#M74",
+  "Tags": [],
+  "OutputDir": "_community",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2025-08-08 15:42:09",
+  "Title": "Problem with the startswith function in NET 9",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "EnhancedContent": "Hi everyone, I have this request with Odata:\n\nhttp://localhost:5194/NationalStates?$filter=startswith(state, 'NE')\n\nThis works correctly up to version 8.0.14 for the following packages:\n\nMySql.EntityFrameworkCore Microsoft.Extensions.DependencyInjection.Abstractions Microsoft.EntityFrameworkCore among others...\n\nWhen I update these packages to version 9.0.0 or later, they stop working and give an internal mapping error.\n\nAny clues about this?",
+  "Author": "gusartadv",
+  "PubDate": "2025-07-03T21:55:58+00:00",
+  "Description": "Hi everyone, I have this request with Odata:\n\nhttp://localhost:5194/NationalStates?$filter=startswith(state, 'NE')\n\nThis works correctly up to version 8.0.14 for the following packages:\n\nMySql.EntityFrameworkCore Microsoft.Extensions.DependencyInjection.Abstractions Microsoft.EntityFrameworkCore among others...\n\nWhen I update these packages to version 9.0.0 or later, they stop working and give an internal mapping error.\n\nAny clues about this?"
+}

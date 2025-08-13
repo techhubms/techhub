@@ -1,0 +1,25 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:58",
+  "Title": "How to Build an MCP Server and Connect It to Semantic Kernel — Full Tutorial!\"🚀",
+  "Author": "Learn Microsoft AI",
+  "FeedName": "Learn Microsoft AI Youtube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA",
+  "PubDate": "2025-04-28T06:47:49+00:00",
+  "Tags": [
+    "AI",
+    "aidevelopment",
+    "MCP",
+    "MCPServer",
+    "microsoft",
+    "OpenAI",
+    "programming",
+    "SemanticKernel",
+    "SemanticKernelClient",
+    "tutorial"
+  ],
+  "FeedLevelAuthor": "Learn Microsoft AI",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=i3UfPHg8hM8",
+  "Description": "Join this channel to get access to perks: https://www.youtube.com/channel/UCQf\\_yRJpsfyEiWWpt1MZ6vA/join\n\nLinkedin : https://www.linkedin.com/in/rvinothrajendran/ github : https://github.com/rvinothrajendran Buy me a Coffee : https://buymeacoffee.com/vinothrajendran\n\nIn this video, we’ll walk you through how to build an MCP (Model Context Protocol) Server step-by-step and seamlessly connect it with a Semantic Kernel Client. Whether you're just starting out or looking to level up your skills, this guide will help you understand how MCP enables models to work with real-time context and how Semantic Kernel uses this to build smarter, more dynamic applications.\n\n✅ What you’ll learn:\n\nWhat is MCP (Model Context Protocol) and why it matters\n\nHow to set up your own MCP Server from scratch\n\nHow to connect a Semantic Kernel Client to the MCP Server\n\n💡 MCP (Model Context Protocol) is a powerful protocol designed to allow AI models to dynamically interact with context providers, making your AI applications more powerful, flexible, and aware of their environment!\n\n👉 Don't forget to like, comment, and subscribe for more hands-on AI development tutorials!\n\n#MCP #SemanticKernel #AI #OpenAI #MCPServer #SemanticKernelClient #aidevelopment #microsoft #programming #tutorial"
+}

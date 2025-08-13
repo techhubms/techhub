@@ -1,0 +1,22 @@
+{
+  "Author": "Microsoft Developer",
+  "Description": "On this Episode of Open at Microsoft, we are showing the new Dapr Durable AI Agent Workflow Framework. As developers push the boundaries of AI-driven automation, the challenge of orchestrating and managing autonomous agents at scale becomes increasingly complex. Dapr Agents is an open-source framework that dramatically lowers the creation of production ready agentic systems, powered by the CNCF Dapr's distributed application runtime, used by thousands of enterprises today in mission critical services. By combining LLM-driven reasoning with Dapr’s virtual actor model, pub/sub messaging, and stateful workflows, Dapr Agents enables developers to build intelligent, scalable, and fault-tolerant multi-agent systems.\n\nIf you're interested in building intelligent, scalable, and resilient agentic systems, this episode equips you with the knowledge to easily build these.\n\nResources: Find the latest info about the open-source Dapr Agents project at: https://github.com/dapr/dapr-agents and https://dapr.github.io/dapr-agents/\n\nDapr at Open at Microsoft: Introduction to Dapr | Microsoft Learn How to get involved with the Dapr community | Microsoft Learn Building invincible microservices with Dapr Resiliency | Microsoft Learn Create truly portable applications with Dapr and Radius | Microsoft Learn MS Build Conference: https://youtu.be/4aE1oIf\\_-vM\n\nDapr Project: https://github.com/dapr/dapr Dapr Website: https://dapr.io/ Dapr Docs: https://docs.dapr.io\n\nDiagrid Website: https://www.diagrid.io (Thank you for maintaining Dapr project) Dapr / Dapr Agents Webinar: https://youtu.be/vjgVzp\\_0B0c Dapr at Linux Foundation: https://youtu.be/XygVmrby\\_mk\n\n📌 Let's connect: Jorge Arteiro | https://www.linkedin.com/in/jorgearteiro Yaron Schneider | https://www.linkedin.com/in/yaron-schneider-2130b7a3/\n\nThank's Roberto Rodriguez for this amazing contribution to the Dapr project, follow Roberto here https://github.com/Cyb3rWard0g\n\nSubscribe to the Open at Microsoft: https://aka.ms/OpenAtMicrosoft\n\nOpen at Microsoft Playlist: https://aka.ms/OpenAtMicrosoftPlaylist\n\n#shorts #shortsfeed #shortsvideo #shortsyoutube #shortsviral\n\n📝Submit Your OSS Project for Open at Microsoft https://aka.ms/OpenAtMsCFP\n\nNew episode on Tuesdays!",
+  "Link": "https://www.youtube.com/shorts/iOUVNjUqxjQ",
+  "FeedName": "Microsoft Developer YouTube",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "EnhancedContent": null,
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "PubDate": "2025-08-05T21:25:13+00:00",
+  "Title": "Building Durable Multi-Agent AI Workflows with Dapr Agents",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-08-06 06:55:44"
+}

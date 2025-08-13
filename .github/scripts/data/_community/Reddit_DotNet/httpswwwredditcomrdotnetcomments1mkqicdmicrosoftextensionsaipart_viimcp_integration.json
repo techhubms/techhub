@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/dotnet/.rss",
+  "Link": "https://www.reddit.com/r/dotnet/comments/1mkqicd/microsoftextensionsaipart_viimcp_integration/",
+  "Tags": [
+    "dotnet"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit DotNet",
+  "ProcessedDate": "2025-08-08 16:23:54",
+  "Title": "Microsoft.Extensions.AI–Part VII–MCP integration",
+  "FeedLevelAuthor": ".NET",
+  "EnhancedContent": "Thanks for your post Xadartt. Please note that we don't allow spam, and we ask that you follow the rules available in the sidebar. We have a lot of commonly asked questions so if this post gets removed, please do a search and see if it's already been asked.\n\n*I am a bot, and this action was performed automatically. Please* [*contact the moderators of this subreddit*](/message/compose/?to=/r/dotnet) *if you have any questions or concerns.*",
+  "Author": "Xadartt",
+  "PubDate": "2025-08-08T09:20:55+00:00",
+  "Description": ""
+}

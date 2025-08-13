@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/dotnet/.rss",
+  "Link": "https://www.reddit.com/r/dotnet/comments/1mjtvuv/rxnet_packaging_plan_2025/",
+  "Tags": [
+    "dotnet"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit DotNet",
+  "ProcessedDate": "2025-08-08 16:23:55",
+  "Title": "Rx.NET Packaging Plan 2025",
+  "FeedLevelAuthor": ".NET",
+  "EnhancedContent": "Ian Griffiths has shared an update on Rx.NET's progress since June, primarily tackling the \"package bloat\" issue that's been affecting the library. He's introduced the new \"Rx Gauntlet\" test suite—which uses automated testing and Power BI reports to validate packaging solutions—whilst comparing two design approaches for the upcoming v7 release, and is actively seeking community feedback to help shape the final stable version.\n\nCan we please just have System.Reactive moved into the BCL? It's ridiculous that IObservable is part of .net but everything that makes it useful isn't. Linq is part of .net for IEnumerable; Rx should be too.\n\nWell, we have managed to move `System.Linq.Async` to the BCL as `System.Linq.AsyncEnumerable` in .NET 10:\n\n[https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/10.0/asyncenumerable](https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/10.0/asyncenumerable)\n\nMS has already abandoned Rx - at least as an external package there is *some* hope that it can be maintained. It being part of the BCL but with no resource would be even worse.\n\nThanks for your post hm\\_vr. Please note that we don't allow spam, and we ask that you follow the rules available in the sidebar. We have a lot of commonly asked questions so if this post gets removed, please do a search and see if it's already been asked.\n\n*I am a bot, and this action was performed automatically. Please* [*contact the moderators of this subreddit*](/message/compose/?to=/r/dotnet) *if you have any questions or concerns.*",
+  "Author": "hm_vr",
+  "PubDate": "2025-08-07T07:47:10+00:00",
+  "Description": "Ian Griffiths has shared an update on Rx.NET's progress since June, primarily tackling the \"package bloat\" issue that's been affecting the library. He's introduced the new \"Rx Gauntlet\" test suite—which uses automated testing and Power BI reports to validate packaging solutions—whilst comparing two design approaches for the upcoming v7 release, and is actively seeking community feedback to help shape the final stable version."
+}

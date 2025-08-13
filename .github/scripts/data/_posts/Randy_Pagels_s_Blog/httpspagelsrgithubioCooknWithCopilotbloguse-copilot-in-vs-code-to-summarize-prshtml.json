@@ -1,0 +1,14 @@
+{
+  "Title": "Use Copilot in VS Code to Summarize PRs",
+  "FeedName": "Randy Pagels's Blog",
+  "OutputDir": "_posts",
+  "Tags": [],
+  "ProcessedDate": "2025-08-05 17:11:46",
+  "Description": "Create meaningful pull request descriptions that help reviewers understand your changes quickly.",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "Link": "https://pagelsr.github.io/CooknWithCopilot/blog/use-copilot-in-vs-code-to-summarize-prs.html",
+  "PubDate": "2025-05-23T00:00:00+00:00",
+  "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Use Copilot in VS Code to Summarize PRs\n\n*Posted on Jun 13, 2025*\n\nInstead of manually sifting through every change, let GitHub Copilot Chat give you a high-level summary, making code reviews faster and easier. Let’s break it down!\n\nProTip\n\nLet Copilot generate quick, clear summaries for pull requests using Copilot Chat—so you can review smarter, not harder!\n\n1️⃣ In Copilot Chat (Best for Quick Overviews)\n\n• Open the pull request in VS Code.\n\n• Open Copilot Chat (Ctrl + I on Windows/Linux, Cmd + I on Mac).\n\n• Ask Copilot:\n\n# Summarize the changes in this pull request\n\n• Copy & paste the generated summary into your PR description or review notes.\n\n2️⃣ In an Inline Comment (Best for Specific Changes)\n\n• When reviewing a PR, add an inline comment in GitHub or VS Code.\n\n• Type:\n\n# What does this change do?\n\n• Copilot will summarize that specific section of code.\n\n• Copy & paste the response into your review comment if needed.\n\n3️⃣ In the PR Description (Best for Full Summaries)\n\n• When opening a new PR, type:\n\n# Summarize the changes in this pull request\n\n• Trigger Copilot Chat to generate a high-level overview.\n\n• Copy & paste the summary into the PR description before submitting.\n\n4️⃣ In the File Editor (Best for Understanding Large Code Changes)\n\n• Open a modified file in VS Code.\n\n• Use Copilot Chat and ask:\n\n# Summarize the changes in this file\n\n• Copy & paste the response into comments or documentation as needed.\n\n**Quick Takeaway**\n\nCode reviews don’t have to slow you down. Let GitHub Copilot assist with summarizing PRs, generating feedback, and ensuring best practices so you can focus on improving code quality faster!",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "FeedUrl": "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+}

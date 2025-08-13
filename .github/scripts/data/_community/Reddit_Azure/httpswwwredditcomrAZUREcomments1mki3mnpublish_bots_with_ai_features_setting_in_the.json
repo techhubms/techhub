@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/azure/.rss",
+  "Link": "https://www.reddit.com/r/AZURE/comments/1mki3mn/publish_bots_with_ai_features_setting_in_the/",
+  "Tags": [
+    "AZURE"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Azure",
+  "ProcessedDate": "2025-08-08 16:14:03",
+  "Title": "Publish bots with AI features setting in the Power Platform admin",
+  "FeedLevelAuthor": "Microsoft Azure",
+  "EnhancedContent": "Hello\n\nfrom what I'm reading this will also effect power pages and not just copilot. Is this correct? Is there a way to block this? can i restrict it by group like just developers?",
+  "Author": "tippet5x",
+  "PubDate": "2025-08-08T01:27:14+00:00",
+  "Description": ""
+}

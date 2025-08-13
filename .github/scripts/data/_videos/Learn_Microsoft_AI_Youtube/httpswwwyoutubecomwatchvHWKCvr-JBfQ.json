@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:58",
+  "Title": "How to Connect Copilot Studio Agents with Semantic Kernel for Smarter AI",
+  "Author": "Learn Microsoft AI",
+  "FeedName": "Learn Microsoft AI Youtube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA",
+  "PubDate": "2025-06-23T12:02:12+00:00",
+  "Tags": [],
+  "FeedLevelAuthor": "Learn Microsoft AI",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=HWKCvr-JBfQ",
+  "Description": "Join this channel to get access to perks: https://www.youtube.com/channel/UCQf\\_yRJpsfyEiWWpt1MZ6vA/join\n\nLinkedin : https://www.linkedin.com/in/rvinothrajendran/ github : https://github.com/rvinothrajendran Buy me a Coffee : https://buymeacoffee.com/vinothrajendran 🚀 In this video, you'll learn how to connect Microsoft Copilot Studio agents with Semantic Kernel to build smarter, more dynamic, and tool-integrated AI workflows. 👉 Whether you’ve already created a Copilot Studio agent or have no idea where to start — don’t worry! 📺 Check out my previous video where I walk you through creating your first Copilot Studio agent step by step. Using a sample Safe Travels Agent and show you how to connect it with Semantic Kernel to unlock external integrations and enhance your AI’s real-world capabilities. 00:00 – Introduction 00:48 – Azure App Registration 02:07 – Setting App Permissions 02:59 – Using PowerShell to Enable App Permissions 04:31 – Coding in Visual Studio 10:21 – Fixing Common Issues 12:01 – Final Result"
+}

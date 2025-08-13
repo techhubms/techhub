@@ -1,0 +1,17 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:27",
+  "Title": "Customer Chats: Jason Tayler from Coles Supermarket at Microsoft Ignite 2024",
+  "Author": "Microsoft Events",
+  "FeedName": "Microsoft Events YouTube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "PubDate": "2025-03-05T22:00:38+00:00",
+  "Tags": [
+    "Microsoft",
+    "Microsoft Ignite"
+  ],
+  "FeedLevelAuthor": "Microsoft Events",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=nPe4_ef8zFg",
+  "Description": "Join Rick Claus at Microsoft Ignite as he sits down with Jason from Coles Supermarket to discuss their implementation of Azure Local (formerly Azure Stack HCI). Discover how one of Australia's largest retailers leverages this cutting-edge technology across their extensive network of stores.\n\nHere’s what you’ll learn: 00:31 - Coles Supermarket's extensive deployment of Azure Local 01:00 - The scale of their operation with thousands of nodes 01:16 - Running workloads on Azure Local, including AI inferencing 01:49 - Jason's experience transitioning from Azure Stack to Azure Local 02:09 - Key recommendations for deploying Azure Local in your environment\n\nJason offers valuable insights into the benefits of Azure Local and provides practical advice for those considering its implementation. His experience with large-scale deployments and upgrades delivers a unique perspective on how to maximize the potential of this innovative technology.\n\nSpeakers: Jason Tayler https://ignite.microsoft.com/en-US/speakers/2a319bff-92bf-4432-bf9a-0df93abe83f2 Rick Claus https://www.linkedin.com/in/rickclaus\n\nCheck Out More: Be sure to watch Jason's breakout session from Microsoft Ignite, where he delves even deeper into the deployment strategies and real-world applications of Azure Local. https://ignite.microsoft.com/en-US/sessions/BRK214\n\nThanks for watching! If you enjoyed this session, please like, subscribe, and share your thoughts on Azure Local and its impact on retail technology. Let's continue the conversation and explore the future of IT together."
+}

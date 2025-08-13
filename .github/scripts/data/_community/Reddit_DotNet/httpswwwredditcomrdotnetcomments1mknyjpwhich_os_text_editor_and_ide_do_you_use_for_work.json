@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/dotnet/.rss",
+  "Link": "https://www.reddit.com/r/dotnet/comments/1mknyjp/which_os_text_editor_and_ide_do_you_use_for_work/",
+  "Tags": [
+    "dotnet"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit DotNet",
+  "ProcessedDate": "2025-08-08 16:23:54",
+  "Title": "Which OS, text editor and IDE do you use for work with .NET? Why?",
+  "FeedLevelAuthor": ".NET",
+  "EnhancedContent": "Windows OS. Visual Studio 2022.\n\nWindows, Visual Studio 2022, and occasionally VS Code\n\nWindows and rider everywhere. Jetbrains tools anywhere really.\n\nMacOS, Rider\n\nAt home, I tend to use Linux and either VS Code and the dotnet CLI or Rider. At work, Windows 11 and VS 2022.\n\nNeovim♥️\n\nmacOS, Rider. A bit of Cursor when needed\n\nWhy? Cause it just works. The front end to my .NET stuff is a native iOS and native Android app, so easier to be on one platform\n\nI also edit video and photos - which macOS is just nicer\n\nVS and VS Code on Windows.\n\nVS Code on Mac.\n\nRider on all OSes\n\nWork : Linux(cachyos) Rider(c#) and VS-code(web/ts) Home : Linux(nixos) then the same tools.\n\nBefore when we had really old code we needed to maintain I was forced to use windows and visual studio, now when that's gone I'm really happy to get the performance and productivity from Rider.\n\nLinux is a welcome bonus, especially the way windows is moving.",
+  "Author": "balazs-dombi",
+  "PubDate": "2025-08-08T06:36:07+00:00",
+  "Description": ""
+}

@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:58",
+  "Title": "Semantic Kernel Group Orchestration: How to Coordinate Multiple AI Agents",
+  "Author": "Learn Microsoft AI",
+  "FeedName": "Learn Microsoft AI Youtube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA",
+  "PubDate": "2025-05-29T13:30:25+00:00",
+  "Tags": [],
+  "FeedLevelAuthor": "Learn Microsoft AI",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=JLGj9CMXDsk",
+  "Description": "Join this channel to get access to perks: https://www.youtube.com/channel/UCQf\\_yRJpsfyEiWWpt1MZ6vA/join\n\nLinkedin : https://www.linkedin.com/in/rvinothrajendran/ github : https://github.com/rvinothrajendran Buy me a Coffee : https://buymeacoffee.com/vinothrajendran\n\nDiscover how multi-agent orchestration in Semantic Kernel takes AI collaboration to the next level! 🔁🤖 Instead of relying on one agent to do everything, you can bring together multiple specialized agents to solve complex, real-world problems — just like a smart team working together. In this video, you’ll learn: ✅ How Semantic Kernel supports multi-agent coordination ✅ What “group chat orchestration” really means ✅ How a group chat manager controls who responds and when ✅ Real-world use cases like meetings, debates & team-based problem solving Whether you're simulating a team discussion or building a collaborative AI system, this concept unlocks a powerful new way to think about intelligent automation. 💡 Perfect for developers, AI enthusiasts, and anyone exploring next-gen copilots! 00:34 – Introduction to Group Orchestration 01:18 – Sequential Orchestration vs Group Orchestration 02:27 – Overview of the Visual Studio Demo Setup 03:18 – How to Implement Group Orchestration 08:09 – Demo: Basic Group Interaction 10:04 – Understanding Interactive Callback 11:45 – Demo-Interactive Callback 12:00 – Creating a Custom Round-Robin Manager 17:00 – Demo-Custom Round-Robinin Action"
+}

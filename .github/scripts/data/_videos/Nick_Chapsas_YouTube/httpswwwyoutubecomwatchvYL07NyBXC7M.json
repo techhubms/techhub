@@ -1,0 +1,17 @@
+{
+  "Title": "Getting Started with GraphQL in .NET",
+  "OutputDir": "_videos",
+  "FeedName": "Nick Chapsas YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg",
+  "Description": "Get 30% off everything on Dometrain: https://dometrain.com/courses/?ref=nick-chapsas&promo=youtube&coupon\\_code=SUMMER30 Subscribe to my weekly newsletter: https://nickchapsas.com\n\nHello, everybody. I'm Nick, and in this video, Michael Staib will show you how to get started with GraphQL using HotChocolate. HotChocolate is the best way to create GraphQL APIs in .NET, and Michael Staib is its creator, so there is no better way to learn how to build GraphQL APIs.\n\nWorkshops: https://bit.ly/nickworkshops\n\nDon't forget to comment, like and subscribe :)\n\nSocial Media: Follow me on GitHub: https://github.com/Elfocrash Follow me on Twitter: https://twitter.com/nickchapsas Connect on LinkedIn: https://www.linkedin.com/in/nick-chapsas\n\n#csharp #dotnet",
+  "Tags": [
+    "csharp",
+    "dotnet"
+  ],
+  "Author": "Nick Chapsas",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=YL07NyBXC7M",
+  "FeedLevelAuthor": "Nick Chapsas",
+  "PubDate": "2025-08-06T11:00:58+00:00",
+  "ProcessedDate": "2025-08-06 14:47:29"
+}

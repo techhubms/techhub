@@ -1,0 +1,16 @@
+{
+  "FeedName": "Reddit CSharp",
+  "Author": "DazzlingStorage6371",
+  "EnhancedContent": "Hi everyone! I'm a teen developer from the UK. As a long-time fan of Habbo, I set out to recreate the server experience from scratch.\n\nOver the past few years, I've been working on a project called **SadieEmulator**, and today I'm excited to officially make it open source for everyone to explore: 🔗 [GitHub – SadieEmulator](https://github.com/project-sadie/SadieEmulator)\n\nI'm fully self-taught and I know there are always better ways to do things — so I'm looking for **constructive feedback** from the community. To show my appreciation, I’ll be awarding **gold** to some of the most helpful comments!\n\nThanks so much to all that can help.\n\nIf you really made all of this alone without any AI, we will watch your career with great interest.\n\nI mean, I was committing to this repo before LLM's were even a thing. I've definitely asked AI its advice on architectural decisions and things like that but never for code generation.\n\nCongrats on this work. If it is really not AI generated it looks impressive for a beginning developer.\n\nKinda refreshing to see something allegedly not vibe-coded. Keep up your work!\n\nCheck the commit log, no AI. Thanks for the kind words :)",
+  "Description": "Hi everyone! I'm a teen developer from the UK. As a long-time fan of Habbo, I set out to recreate the server experience from scratch.\n\nOver the past few years, I've been working on a project called **SadieEmulator**, and today I'm excited to officially make it open source for everyone to explore: 🔗 [GitHub – SadieEmulator](https://github.com/project-sadie/SadieEmulator)\n\nI'm fully self-taught and I know there are always better ways to do things — so I'm looking for **constructive feedback** from the community. To show my appreciation, I’ll be awarding **gold** to some of the most helpful comments!\n\nThanks so much to all that can help.",
+  "FeedUrl": "https://www.reddit.com/r/csharp/.rss",
+  "Link": "https://www.reddit.com/r/csharp/comments/1miwec9/first_large_scale_open_source_project_how_can_i/",
+  "OutputDir": "_community",
+  "Tags": [
+    "csharp"
+  ],
+  "Title": "First large scale open source project, how can I do better?",
+  "PubDate": "2025-08-06T05:37:26+00:00",
+  "FeedLevelAuthor": "C#",
+  "ProcessedDate": "2025-08-06 07:11:11"
+}

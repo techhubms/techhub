@@ -1,0 +1,16 @@
+{
+  "Title": "Action Items for a new app",
+  "FeedName": "Reddit Azure DevOps",
+  "OutputDir": "_community",
+  "Tags": [
+    "azuredevops"
+  ],
+  "ProcessedDate": "2025-08-05 17:37:33",
+  "Description": "Hi All,\n\nHope you are doing well.\n\nWe are going to develop a new application and host in on On-premise servers and going to use Azure DevOps Server.\n\nWhat are the actions items/checklist that I need to be aware of in terms of Infrastructure, DB, IIS, pipelines, and security ?\n\nAppreciate you all !\n\nThanks",
+  "Author": "FlashboyUD",
+  "Link": "https://www.reddit.com/r/azuredevops/comments/1md7wfw/action_items_for_a_new_app/",
+  "PubDate": "2025-07-30T14:21:43+00:00",
+  "EnhancedContent": "Hi All,\n\nHope you are doing well.\n\nWe are going to develop a new application and host in on On-premise servers and going to use Azure DevOps Server.\n\nWhat are the actions items/checklist that I need to be aware of in terms of Infrastructure, DB, IIS, pipelines, and security ?\n\nAppreciate you all !\n\nThanks",
+  "FeedLevelAuthor": "Azure DevOps",
+  "FeedUrl": "https://www.reddit.com/r/azuredevops/.rss"
+}

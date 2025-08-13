@@ -1,0 +1,73 @@
+// Sections grid (Root index - AI, GitHub Copilot sections)
+.sections-grid {
+    @extend .nav-grid-base;
+
+    @media (min-width: $navigation-breakpoint) {
+        grid-template-columns: repeat($sections-grid-desktop, 1fr);
+    }
+
+    @media (max-width: #{$navigation-breakpoint - 1px}) {
+        grid-template-columns: repeat($sections-grid-mobile, 1fr);
+    }
+}
+
+.section-square {
+    @extend .nav-square-base;
+
+    // Section-specific structural overrides
+    padding: 0px;
+    aspect-ratio: 1400 / 840; // Match the actual image dimensions (5:3 ratio)
+    height: auto; // Let aspect-ratio control the height
+    
+    // Background image support
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    // Visual styling for overlay
+    &::before {
+        background: rgba($dark-navy, 0.4);
+        transition: background 0.2s ease;
+        will-change: background;
+    }
+
+    // Visual styling for content
+    .section-content {
+        @extend .nav-content;
+        margin: 15px 45px 15px 45px;
+        background: rgba($dark-navy, 0.7);
+        border-radius: 12px;
+        border: 1px solid rgba($bright-purple, 0.3);
+        
+        // On mobile/tablet, use the same dark background as hover state
+        @media (max-width: $on-mobile) {
+            background: rgba($dark-navy, 0.95);
+            border-color: rgba($bright-purple, 0.6);
+        }
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            // Visual styling on hover - don't override background for images
+            box-shadow: 0 8px 25px rgba($medium-blue, 0.18);
+            
+            &::before {
+                background: rgba($dark-navy, 0.2);
+            }
+
+            .section-content {
+                background: rgba($dark-navy, 0.95);
+                border-color: rgba($bright-purple, 0.6);
+            }
+        }
+    }
+
+}
+
+.section-title {
+    @extend .nav-title-base;
+}
+
+.section-desc {
+    @extend .nav-desc-base;
+}

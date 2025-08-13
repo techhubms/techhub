@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/github/.rss",
+  "Link": "https://www.reddit.com/r/github/comments/1mjt0qh/how_to_remove_others_in_the_languages_ui_on/",
+  "Tags": [
+    "github"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit GitHub",
+  "ProcessedDate": "2025-08-08 16:18:53",
+  "Title": "How to remove \"others\" in the languages ui, on github repo",
+  "FeedLevelAuthor": "Github: social coding",
+  "EnhancedContent": "is it possible to remove this \"others\" and just show whatever language is there?\n\n[!\\[r/github - How to remove &quot;others&quot; in the languages ui, on github repo\\](https://preview.redd.it/how-to-remove-others-in-the-languages-ui-on-github-repo-v0-n4qj5g4fojhf1.png?width=520&amp;format=png&amp;auto=webp&amp;s=b57c26b6d86255fe3e42a98d786a8c6ab256b714)](https://preview.redd.it/how-to-remove-others-in-the-languages-ui-on-github-repo-v0-n4qj5g4fojhf1.png?width=520&amp;format=png&amp;auto=webp&amp;s=b57c26b6d86255fe3e42a98d786a8c6ab256b714)\n\nYou can override the automatic detection:\n\n[https://github.com/github-linguist/linguist/blob/main/docs/overrides.md](https://github.com/github-linguist/linguist/blob/main/docs/overrides.md)\n\nwhy override tho? for example i have .sh files and if i increase loc in them then the github linguist would show that. I want to know if i can remove the \"others\" fully and show what is missing even if its under 1%",
+  "Author": "siduck13",
+  "PubDate": "2025-08-07T06:51:49+00:00",
+  "Description": "| [!\\[How to remove \\](https://b.thumbs.redditmedia.com/p6CMzlC4ySqWSN93gT287LOO7S_7im-m9W6CaaHzVVc.jpg \"How to remove \")](https://www.reddit.com/r/github/comments/1mjt0qh/how_to_remove_others_in_the_languages_ui_on/) | is it possible to remove this \"others\" and just show whatever language is there? <br><br> <br>[https://preview.redd.it/n4qj5g4fojhf1.png?width=520&format=png&auto=webp&s=07db29c06b8ac4892708f453e928689b6e6198a1](https://preview.redd.it/n4qj5g4fojhf1.png?width=520&format=png&auto=webp&s=07db29c06b8ac4892708f453e928689b6e6198a1)<br>"
+}

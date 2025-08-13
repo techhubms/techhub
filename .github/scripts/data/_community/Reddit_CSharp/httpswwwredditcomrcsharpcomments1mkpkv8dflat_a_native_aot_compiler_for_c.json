@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/csharp/.rss",
+  "Link": "https://www.reddit.com/r/csharp/comments/1mkpkv8/dflat_a_native_aot_compiler_for_c/",
+  "Tags": [
+    "csharp"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit CSharp",
+  "ProcessedDate": "2025-08-08 15:50:33",
+  "Title": "dflat, a native aot compiler for c#",
+  "FeedLevelAuthor": "C#",
+  "EnhancedContent": "I liked the idea of having portable compilers such as in C/C++, Go etc where you can compile source files directly without projects or solutions like in [bflat](https://github.com/bflattened/bflat). So I built a wrapper to call different c# compilers and then the linker to build native executables on windows and linux and native dlls on windows. Hope you guys find it useful.\n\nGithub: [dflat](https://github.com/TheAjaykrishnanR/dflat)",
+  "Author": "ajpy",
+  "PubDate": "2025-08-08T08:19:36+00:00",
+  "Description": "I liked the idea of having portable compilers such as in C/C++, Go etc where you can compile source files directly without projects or solutions like in [bflat](https://github.com/bflattened/bflat). So I built a wrapper to call different c# compilers and then the linker to build native executables on windows and linux and native dlls on windows. Hope you guys find it useful.\n\nGithub: [dflat](https://github.com/TheAjaykrishnanR/dflat)"
+}

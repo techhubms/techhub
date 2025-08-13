@@ -1,0 +1,14 @@
+{
+  "Title": "Use GitHub Copilot Chat to Plan Before You Code",
+  "FeedName": "Randy Pagels's Blog",
+  "OutputDir": "_posts",
+  "Tags": [],
+  "ProcessedDate": "2025-08-05 17:11:46",
+  "Description": "Stop jumping straight into code - let Copilot Chat help you think through architecture and design first.",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "Link": "https://pagelsr.github.io/CooknWithCopilot/blog/use-github-copilot-chat-to-plan-before-you-code.html",
+  "PubDate": "2025-07-18T00:00:00+00:00",
+  "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Use GitHub Copilot Chat to Plan Before You Code\n\n*Posted on Jul 18, 2025*\n\nUsage\n\nWe’ve all hit that moment when we’re staring at a blank screen, trying to figure out how to structure a new feature. GitHub Copilot isn’t just for finishing code, it’s great at *starting conversations* too.\n\nLet’s break it down!\n\nProTip\n\n**Start with a conversation.** Let GitHub Copilot help you map out your logic, edge cases, and structure, before you ever write a function.\n\n**Try This in GitHub Copilot Chat:**\n\n` Help me outline the steps to build a login flow that checks credentials, tracks failed attempts, and redirects users based on roles. `\n\n*What happens next?* GitHub Copilot responds with a logical breakdown—almost like pair programming—with edge cases, key checks, and a clean outline to work from.\n\n**Follow-Up Prompt:**\n\n` Now turn that into a JavaScript function with placeholders for the missing logic. `\n\nAnd just like that—you’re rolling.\n\nBefore you dive into implementation, getting GitHub Copilot to walk you through the problem helps:\n\n- - Clarify your thinking\n- - Avoid rework\n- - Expose assumptions\n- - Generate better structure\n\nIt’s like having a planning buddy that never gets tired.\n\n**Quick Takeaway**\n\nGitHub Copilot isn’t just a code generator, it’s a thought partner.\n\nTalk through your logic first, then let it build around your plan.\n\nWhat’s the most surprising thing GitHub Copilot helped you figure out before you started coding?\n\nGot a go-to “planning prompt”? Drop it in the chat and share with the crew!",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "FeedUrl": "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+}

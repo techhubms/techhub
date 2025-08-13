@@ -1,0 +1,26 @@
+{
+  "name": "tech-hub-javascript-tests",
+  "version": "1.0.0",
+  "description": "JavaScript unit tests for Tech Hub filtering system",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5",
+    "@jest/globals": "^30.0.5"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/test-setup.js"],
+    "collectCoverageFrom": [
+      "../../assets/js/**/*.js",
+      "!../../assets/js/**/*.min.js"
+    ],
+    "testMatch": [
+      "**/*.test.js"
+    ]
+  }
+}

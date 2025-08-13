@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet",
+  "Link": "https://techcommunity.microsoft.com/t5/web-development/when-should-i-use-sql-server-mysql-or-postgresql/m-p/4440172#M668",
+  "Tags": [],
+  "OutputDir": "_community",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2025-08-08 15:42:09",
+  "Title": "When should I use SQL Server, MySQL, or PostgreSQL?",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "EnhancedContent": "I'm working on a web application (using C#/.NET backend), and I need to choose a relational database. I'm considering three options:\n\n- Microsoft SQL Server\n- MySQL\n- PostgreSQL\n\nI want to understand:\n\n1. What are the strengths and weaknesses of each?\n2. Which database is better suited for:\n\n1. Transactional performance\n2. Advanced querying / analytics\n3. Ease of use with .NET\n4. Cross-platform support\n3. Are there any licensing or hosting concerns I should consider?\n\nMy use case involves:\n\n- Moderate traffic\n- Complex queries with joins\n- APIs and background jobs\n- Deployment to cloud (Azure)\n\nI’d appreciate any recommendations or real-world experience comparing these databases.",
+  "Author": "UdhayarajanJ",
+  "PubDate": "2025-08-05T10:28:41+00:00",
+  "Description": "I'm working on a web application (using C#/.NET backend), and I need to choose a relational database. I'm considering three options:\n\n- Microsoft SQL Server\n- MySQL\n- PostgreSQL\n\nI want to understand:\n\n1. What are the strengths and weaknesses of each?\n2. Which database is better suited for:\n\n1. Transactional performance\n2. Advanced querying / analytics\n3. Ease of use with .NET\n4. Cross-platform support\n3. Are there any licensing or hosting concerns I should consider?\n\nMy use case involves:\n\n- Moderate traffic\n- Complex queries with joins\n- APIs and background jobs\n- Deployment to cloud (Azure)\n\nI’d appreciate any recommendations or real-world experience comparing these databases."
+}

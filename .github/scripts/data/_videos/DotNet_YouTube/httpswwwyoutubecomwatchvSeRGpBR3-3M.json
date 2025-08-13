@@ -1,0 +1,28 @@
+{
+  "EnhancedContent": null,
+  "FeedName": "DotNet YouTube",
+  "FeedLevelAuthor": "dotnet",
+  "Description": "Join us to talk with Frank Krueger about his new library CrossIntelligence which enables .NET and .NET MAUI applications to access Apple Intelligence and other LLMs.\n\n🔗 Links: https://www.theurlist.com/maui-standup-aug25\n\n🎙️ Featuring: David Ortinau (@davidortinau), Gerald Versluis (@jfversluis), and Frank Krueger (@praeclarum)\n\n#dotnet #dotnetmaui #llms",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Link": "https://www.youtube.com/watch?v=SeRGpBR3-3M",
+  "PubDate": "2025-08-08T06:08:01+00:00",
+  "Author": "dotnet",
+  "Title": ".NET MAUI Community Standup: Apple Intelligence with .NET",
+  "ProcessedDate": "2025-08-08 15:37:48",
+  "OutputDir": "_videos",
+  "Tags": [
+    "Apple",
+    "AppleIntelligence",
+    "code",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetdeveloper",
+    "dotnetmaui",
+    "largelanguagemodel",
+    "llm",
+    "softwaredeveloper"
+  ]
+}

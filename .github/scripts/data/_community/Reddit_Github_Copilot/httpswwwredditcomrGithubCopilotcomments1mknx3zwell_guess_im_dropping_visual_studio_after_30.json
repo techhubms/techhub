@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/GithubCopilot.rss",
+  "Link": "https://www.reddit.com/r/GithubCopilot/comments/1mknx3z/well_guess_im_dropping_visual_studio_after_30/",
+  "Tags": [
+    "GithubCopilot"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Github Copilot",
+  "ProcessedDate": "2025-08-08 16:34:45",
+  "Title": "Well, guess I'm dropping Visual Studio after 30 years...",
+  "FeedLevelAuthor": "GitHubCopilot",
+  "EnhancedContent": "Let's fly with Copilot\n\nUntil tomorrow when it's updated\n\nCitation? :)\n\nPeople are slowly migrating away from VS. MS knows this and are treating it like a stepchild.\n\nDefinitely feels that way.\n\nWhat's the alternative if you want a free IDE for C# ? Rider is free but not for commercial apps\n\nI prompt in VS Code, and use Visual Studio when I actually write code. I have 2 IDEs up at all times now.\n\nTook ya long enough\n\nVisual Studio copilot is not very usable. I still use VS code for c# code and then do debugger in visual studio if needed\n\nI only use visual studio for debugging. Visual code for anything else.\n\nLet's fly with Copilot",
+  "Author": "QING-CHARLES",
+  "PubDate": "2025-08-08T06:33:42+00:00",
+  "Description": "| [!\\[Well, guess I'm dropping Visual Studio after 30 years...\\](https://preview.redd.it/cxxtrb31qqhf1.png?width=640&crop=smart&auto=webp&s=f3f7c0f2dc812a363cded38c2c7e96e713c846b5 \"Well, guess I'm dropping Visual Studio after 30 years...\")](https://www.reddit.com/r/GithubCopilot/comments/1mknx3z/well_guess_im_dropping_visual_studio_after_30/)"
+}

@@ -1,0 +1,16 @@
+{
+  "Title": "Pipeline parameters.",
+  "FeedName": "Reddit Azure DevOps",
+  "OutputDir": "_community",
+  "Tags": [
+    "azuredevops"
+  ],
+  "ProcessedDate": "2025-08-05 17:37:33",
+  "Description": "Hi there, I created a web activity fetch my secret from my keyvault. Now the url has the dev keyvault. The exported arm template does not show this so how do I put this in my main.yaml file so when GitHub actions runs, the prod picks up the prod keyvault?\n\nFor a change, I created a pipeline parameters with the dev keyvault url. At least I would like to know how can we put pipeline parameters in main.yml or any other way we can do this?\n\n[\\[link\\]](https://www.reddit.com/r/azuredevops/comments/1m886qz/pipeline_parameters/) [\\[comments\\]](https://www.reddit.com/r/azuredevops/comments/1m886qz/pipeline_parameters/)",
+  "Author": "Azure DevOps",
+  "Link": "https://www.reddit.com/r/azuredevops/comments/1m886qz/pipeline_parameters/",
+  "PubDate": "2025-07-24T15:56:04+00:00",
+  "EnhancedContent": "Hi there, I created a web activity fetch my secret from my keyvault. Now the url has the dev keyvault. The exported arm template does not show this so how do I put this in my main.yaml file so when GitHub actions runs, the prod picks up the prod keyvault?\n\nFor a change, I created a pipeline parameters with the dev keyvault url. At least I would like to know how can we put pipeline parameters in main.yml or any other way we can do this?\n\nYou create 2 environments. One for dev and one for prod Youll need a service principle and saving the clientid, client secret and rest as secrets.\n\nThe spns need to have proper permission in the subscriptions and proper access policy to read keys/secrets.\n\nYou can create variable groups to go directly to the keyvault or have that as the first step in the pipeline to fetch and details (so nothing is saved in ado)\n\nSo there are a few ways to achieve it. Can even completely remove the need for client passwords if you use oidc, deoends on your understanding of azure and azuredevops.\n\nSuggest a few blog reads about azure devops service principle and then oidc. Also how to authenticate an azure pipeline to get a key vault secret.\n\nYou can add parameters to your templates by referring to this section of the documentation\n\n[https://learn.microsoft.com/en-us/azure/devops/pipelines/process/templates?view=azure-devops&pivots=templates-includes#add-parameters-to-job-stage-and-step-templates](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/templates?view=azure-devops&amp;pivots=templates-includes#add-parameters-to-job-stage-and-step-templates)\n\nCheers!\n\nI am using github and this is for devops. Is there a resource for GitHub?",
+  "FeedLevelAuthor": "Azure DevOps",
+  "FeedUrl": "https://www.reddit.com/r/azuredevops/.rss"
+}

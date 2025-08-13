@@ -1,0 +1,16 @@
+{
+  "Title": "What dependencies does MASM/ml64.exe/ml.exe have from the C++ Desktop workflow?",
+  "FeedName": "Reddit Visual Studio",
+  "OutputDir": "_community",
+  "Tags": [
+    "VisualStudio"
+  ],
+  "ProcessedDate": "2025-08-05 17:42:46",
+  "Description": "Visual Studio has no syntax highlighting for MASM despite you needing to install the build tools just to get it.I tried using procmon to see its dependencies but I must've done it wrong, and as a beginner, I wouldn't know how to write a program to find everything it accesses to spare them.\n\nI'm wondering if anyone knows its dependencies so I can hide them and uninstall everything else in favor of a more appropriate IDE for learning assembly on windows. Thanks.",
+  "Author": "NoSubject8453",
+  "Link": "https://www.reddit.com/r/VisualStudio/comments/1mf5dct/what_dependencies_does_masmml64exemlexe_have_from/",
+  "PubDate": "2025-08-01T19:10:27+00:00",
+  "EnhancedContent": "Visual Studio has no syntax highlighting for MASM despite you needing to install the build tools just to get it.I tried using procmon to see its dependencies but I must've done it wrong, and as a beginner, I wouldn't know how to write a program to find everything it accesses to spare them.\n\nI'm wondering if anyone knows its dependencies so I can hide them and uninstall everything else in favor of a more appropriate IDE for learning assembly on windows. Thanks.",
+  "FeedLevelAuthor": "VisualStudio",
+  "FeedUrl": "https://www.reddit.com/r/VisualStudio/.rss"
+}

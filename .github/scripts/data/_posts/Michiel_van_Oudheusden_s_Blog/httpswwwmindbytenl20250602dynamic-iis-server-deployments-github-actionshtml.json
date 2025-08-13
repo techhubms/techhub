@@ -1,0 +1,21 @@
+{
+  "EnhancedContent": null,
+  "Description": "When we began migrating our application infrastructure to the cloud, we relied on AWS and traditional Windows servers running IIS. Although containers and Kubernetes dominate today’s conversations, there are organizations that still depend on familiar, “old-school” architectures. In one recent project, we found ourselves needing to deploy a web application across multiple IIS servers behind an AWS load balancer. Our challenge was simple in statement but complex in execution: how do you run the same GitHub Actions deployment workflow on every server in a scalable, maintainable way?",
+  "FeedUrl": "https://mindbyte.nl/feed.xml",
+  "Title": "Dynamic IIS Server Deployments with GitHub Actions",
+  "Tags": [
+    "aws",
+    "devops",
+    "github-actions",
+    "iis",
+    "self-hosted-runners",
+    "windows"
+  ],
+  "Link": "https://www.mindbyte.nl/2025/06/02/dynamic-iis-server-deployments-github-actions.html",
+  "OutputDir": "_posts",
+  "PubDate": "2025-06-01T22:00:00+00:00",
+  "FeedName": "Michiel van Oudheusden's Blog",
+  "FeedLevelAuthor": "Michiel van Oudheusden",
+  "ProcessedDate": "2025-08-05 14:31:01",
+  "Author": "Michiel van Oudheusden"
+}

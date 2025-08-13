@@ -1,0 +1,17 @@
+{
+  "ProcessedDate": "2025-08-05 17:21:04",
+  "Title": "Getting Started with MCP (Model Context Protocol)",
+  "Author": "Nick Chapsas",
+  "FeedName": "Nick Chapsas YouTube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg",
+  "PubDate": "2025-07-23T12:30:14+00:00",
+  "Tags": [
+    "csharp",
+    "dotnet"
+  ],
+  "FeedLevelAuthor": "Nick Chapsas",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=DpyjAKmNwpI",
+  "Description": "Get 30% off everything on Dometrain: https://dometrain.com/courses/?ref=nick-chapsas&promo=youtube&coupon\\_code=SUMMER30 Subscribe to my weekly newsletter: https://nickchapsas.com\n\nHello, everybody. I'm Nick, and in this video, Dan Clarke will introduce you to the brand new concept of Model Context Protocol or MCPs. With the meteoric rise of AI and LLMs, MCPs aim to fulfil the promise of having a consistent way of interfacing with data through different LLMs.\n\nGet the code: https://gist.github.com/dracan/40bc8e4c227e66baae350db57ac617ba\n\nWorkshops: https://bit.ly/nickworkshops\n\nDon't forget to comment, like and subscribe :)\n\nSocial Media: Follow me on GitHub: https://github.com/Elfocrash Follow me on Twitter: https://twitter.com/nickchapsas Connect on LinkedIn: https://www.linkedin.com/in/nick-chapsas\n\n#csharp #dotnet"
+}

@@ -1,0 +1,16 @@
+{
+  "Title": "Release pipeline for creating serviceconnections",
+  "FeedName": "Reddit Azure DevOps",
+  "OutputDir": "_community",
+  "Tags": [
+    "azuredevops"
+  ],
+  "ProcessedDate": "2025-08-05 17:37:33",
+  "Description": "Hi,\n\nI have an powershell script that creates serviceconnections from json files. So now I do an az login and run the scripts. But I am wondering if I could create a release pipeline, that just runs through all these json files and runs them all over all environments to create all service connections from azure devops to azure.\n\nBut the first issue I see now is. How do I authenticate in an release pipeline to run these service connections installs? (pat/serviceconnection/ unsure what the right way is here)\n\nThanks a lot!",
+  "Author": "Odd-Good-6514",
+  "Link": "https://www.reddit.com/r/azuredevops/comments/1mgg9wy/release_pipeline_for_creating_serviceconnections/",
+  "PubDate": "2025-08-03T10:49:12+00:00",
+  "EnhancedContent": "Hi,\n\nI have an powershell script that creates serviceconnections from json files. So now I do an az login and run the scripts. But I am wondering if I could create a release pipeline, that just runs through all these json files and runs them all over all environments to create all service connections from azure devops to azure.\n\nBut the first issue I see now is. How do I authenticate in an release pipeline to run these service connections installs? (pat/serviceconnection/ unsure what the right way is here)\n\nThanks a lot!\n\nYou use an existing service connection to auth. The issue is thet in order to use the new ones, you have to manually specify them in their pipelines anyway, as service connection can't be set via variable. You can update pipeline definitions with api calls of course, but I'm unsure what you will benefit from this in the end?\n\nYes. Use github instead, no point starting with ado, especially if code is in github already.\n\nIn both cases, the idea idea is to create a service principle in entra with permissions to do whats needed and nothing more or the better approach use oidc and don't have to think about passwords exploration.",
+  "FeedLevelAuthor": "Azure DevOps",
+  "FeedUrl": "https://www.reddit.com/r/azuredevops/.rss"
+}

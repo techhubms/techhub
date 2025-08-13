@@ -1,0 +1,18 @@
+{
+  "FeedName": "Microsoft Developer YouTube",
+  "PubDate": "2025-08-08T15:57:06+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Author": "Microsoft Developer",
+  "Description": "What’s the #1 piece of advice Michael Howard gives developers about security? In this #OneDevQuestion, he explains why every input should be questioned.\n\nLearn more: https://msft.it/6057sOuYH\n\n#AppSec #SecureCoding",
+  "ProcessedDate": "2025-08-08 20:37:36",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "EnhancedContent": null,
+  "Title": "What's the number one piece of advice you can give developers about security?",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/shorts/Q3jg25wNX10",
+  "Tags": [
+    "AppSec",
+    "OneDevQuestion",
+    "SecureCoding"
+  ]
+}

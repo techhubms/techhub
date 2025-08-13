@@ -1,0 +1,51 @@
+{%- assign date_format = "%Y-%m-%d" -%}
+
+{%- comment -%} Reverse the items once outside the loop for proper date ordering {%- endcomment -%}
+{%- assign reversed_items = include.items | sort: 'date' | reverse -%}
+
+<ul class="post-list">
+    {%- for item in reversed_items -%}
+        {%- comment -%} Create filter data variables for each item {%- endcomment -%}
+        {%- if item.tags_normalized -%}
+            {%- assign tags_string = item.tags_normalized | join: ',' -%}
+        {%- else -%}
+            {%- assign tags_string = '' -%}
+        {%- endif -%}
+        {%- assign item_epoch = item.date | date_to_epoch -%}
+        
+        {%- comment -%} Determine the appropriate link based on viewing mode {%- endcomment -%}
+        {%- if item.viewing_mode == 'external' and item.canonical_url -%}
+            {%- assign item_link = item.canonical_url -%}
+            {%- assign link_attrs = 'target="_blank" rel="noopener"' -%}
+        {%- else -%}
+            {%- assign item_link = item.url | relative_url | append: '?section=' | append: include.section -%}
+            {%- assign link_attrs = '' -%}
+        {%- endif -%}
+
+        <li class="post-item" data-tags="{{ tags_string }}" data-epoch="{{ item_epoch }}">
+            <a href="{{ item_link }}" {{ link_attrs }} class="post-item-link" aria-label="{{ item.title | escape }}">
+                <span class="post-title">{{ item.title | escape }}</span>
+
+                {%- if site.show_excerpts -%}
+                    {%- assign desc_key = "magazine-description-" | append: include.section -%}
+                    {%- if item[desc_key] -%}
+                        <p>{{ item[desc_key] }}</p>
+                    {%- else -%}
+                        {{ item.excerpt }}
+                    {%- endif -%}
+                {%- endif -%}
+
+                <div class="post-meta-info">
+                    <span class="post-meta-value left">
+                      {%- if item.feed_name and item.feed_name != '' -%}
+                        {{ item.feed_name | escape }}
+                      {%- else -%}
+                        {{ item.author | escape }}
+                      {%- endif -%}
+                    </span>
+                    <span class="post-meta-value right">{{ item.date | date: date_format }}</span>
+                </div>
+            </a>
+        </li>
+    {%- endfor -%}
+</ul>

@@ -1,0 +1,21 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:58",
+  "Title": "Semantic Kernel Plugin in Action on MCP Server - Step-by-Step Guide #SemanticKernel #MCP #aiagents",
+  "Author": "Learn Microsoft AI",
+  "FeedName": "Learn Microsoft AI Youtube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA",
+  "PubDate": "2025-05-30T07:07:03+00:00",
+  "Tags": [
+    "AIagents",
+    "CopilotStudio",
+    "DotNet",
+    "MCP",
+    "OpenAI",
+    "SemanticKernel"
+  ],
+  "FeedLevelAuthor": "Learn Microsoft AI",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=r2Wg6xIwIvo",
+  "Description": "Join this channel to get access to perks: https://www.youtube.com/channel/UCQf\\_yRJpsfyEiWWpt1MZ6vA/join\n\nLinkedin : https://www.linkedin.com/in/rvinothrajendran/ github : https://github.com/rvinothrajendran Buy me a Coffee : https://buymeacoffee.com/vinothrajendran\n\nIn this tutorial, we walk you through the full process of connecting intelligent plugins with your MCP-powered AI agents using Semantic Kernel. Perfect for developers building smart, AI-driven applications. 🔧 What you'll learn: Setting up MCP Server Creating and registering a Semantic Kernel plugin Invoking the plugin via MCP Real-time demo of the integration #SemanticKernel #MCP #AIagents #DotNet #OpenAI #CopilotStudio"
+}

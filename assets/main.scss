@@ -1,0 +1,18 @@
+--- 
+# Only the main Sass file needs front matter (the dashes are enough)
+--- 
+
+@import "sizes";
+@import "colors";
+
+@import "minima";
+
+@import "base";
+@import "header";
+@import "subheader";
+@import "navigation";
+@import "filters";
+@import "sections";
+@import "collections";
+@import "posts";
+@import "footer";

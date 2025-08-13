@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet",
+  "Link": "https://techcommunity.microsoft.com/t5/microservices/just-built-my-first-microservice-api-and-it-s-hacky-any-examples/m-p/4435963#M33",
+  "Tags": [],
+  "OutputDir": "_community",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2025-08-08 15:42:09",
+  "Title": "Just built my first microservice API, and it's hacky.  Any examples to follow?",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "EnhancedContent": "I just finished building my first microservices-based API, and it's ugly.  Are there any online source examples that include two (or more) API microservices communicating with each other over a message bus, that also include authentication using both a local authentication database and/or OpenID Connect?",
+  "Author": "johnson_earls",
+  "PubDate": "2025-07-23T22:54:35+00:00",
+  "Description": "I just finished building my first microservices-based API, and it's ugly. Are there any online source examples that include two (or more) API microservices communicating with each other over a message bus, that also include authentication using both a local authentication database and/or OpenID Connect?"
+}

@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/csharp/.rss",
+  "Link": "https://www.reddit.com/r/csharp/comments/1mkade7/any_good_booksarticles_on_csproj_files/",
+  "Tags": [
+    "csharp"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit CSharp",
+  "ProcessedDate": "2025-08-08 15:50:34",
+  "Title": "Any good books\\articles on csproj files?",
+  "FeedLevelAuthor": "C#",
+  "EnhancedContent": "It always was a bit magic to me - people writing custom targets and build steps in csproj files. Are there any good books\\articles on understanding this kind of power?\n\nHave you considered looking at the documentation?\n\n[https://learn.microsoft.com/en-us/aspnet/web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-project-file](https://learn.microsoft.com/en-us/aspnet/web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-project-file)\n\n[this answer](https://www.reddit.com/r/dotnet/comments/af44rm/comment/ee1xu41/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button)\n\nAlso, csprojx is a new format. You're talking about dotnet build nowadays which is documented\n\nwhat the heck is a `csprojx` ? any links for research? google doesn't bring up anything",
+  "Author": "sashag90",
+  "PubDate": "2025-08-07T20:00:51+00:00",
+  "Description": "It always was a bit magic to me - people writing custom targets and build steps in csproj files. Are there any good books\\articles on understanding this kind of power?"
+}

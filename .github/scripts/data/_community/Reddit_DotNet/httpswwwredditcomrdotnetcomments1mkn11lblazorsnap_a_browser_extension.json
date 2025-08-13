@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/dotnet/.rss",
+  "Link": "https://www.reddit.com/r/dotnet/comments/1mkn11l/blazorsnap_a_browser_extension/",
+  "Tags": [
+    "dotnet"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit DotNet",
+  "ProcessedDate": "2025-08-08 16:23:54",
+  "Title": "BlazorSnap - a browser extension",
+  "FeedLevelAuthor": ".NET",
+  "EnhancedContent": "I've been working on a little browser extension (chromium based). Right click in an web app and convert any HTML element into a reusable Blazor component stub.\n\n[Tim-Maes/BlazorSnap](https://github.com/Tim-Maes/BlazorSnap) on GitHub\n\nThanks for your post Voiden0. Please note that we don't allow spam, and we ask that you follow the rules available in the sidebar. We have a lot of commonly asked questions so if this post gets removed, please do a search and see if it's already been asked.\n\n*I am a bot, and this action was performed automatically. Please* [*contact the moderators of this subreddit*](/message/compose/?to=/r/dotnet) *if you have any questions or concerns.*",
+  "Author": "Voiden0",
+  "PubDate": "2025-08-08T05:41:03+00:00",
+  "Description": ""
+}
