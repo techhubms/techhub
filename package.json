@@ -1,6 +1,15 @@
 {
   "type": "module",
+  "scripts": {
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve",
+    "clean": "bundle exec jekyll clean",
+    "install": "bundle install"
+  },
   "dependencies": {
     "js-yaml": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

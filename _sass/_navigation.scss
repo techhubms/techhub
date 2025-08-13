@@ -1,3 +1,6 @@
+@use "colors";
+@use "sizes";
+
 // Base grid class for all navigation types
 .nav-grid-base {
     display: grid;
@@ -22,9 +25,9 @@
     position: relative;
     overflow: hidden;
     contain: layout style;
-    border: 1px solid rgba($bright-purple, 0.6);
+    border: 1px solid rgba(colors.$bright-purple, 0.6);
     border-radius: 12px;
-    color: $light-gray;
+    color: colors.$light-gray;
 
     // Structural overlay element (styling in specific implementations)
     &::before {
@@ -60,7 +63,7 @@
 
     @media (hover: hover) {
         &:hover {
-            border-color: $bright-purple;
+            border-color: colors.$bright-purple;
             transform: scale(1.05);
         }
     }
@@ -79,7 +82,7 @@
         }
     }
 
-    @media (max-width: $on-mobile) {
+    @media (max-width: sizes.$on-mobile) {
         @media (hover: hover) {
             &:hover {
                 transform: none; // Disable transform effects completely on small mobile
@@ -92,13 +95,13 @@
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 8px;
-    color: $light-gray;
+    color: colors.$light-gray;
     contain: layout style;
 }
 
 .nav-desc-base {
     font-size: 14px;
     line-height: 1.4;
-    color: $light-gray;
+    color: colors.$light-gray;
     contain: layout style;
 }

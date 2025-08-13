@@ -1,7 +1,10 @@
+@use "colors";
+@use "sizes";
+
 .site-header {
     padding: 10px 0;
-    color: $light-gray;
-    border-bottom: 1px solid $light-gray;
+    color: colors.$light-gray;
+    border-bottom: 1px solid colors.$light-gray;
     background-color: transparent;
     border-top: none;
     border-left: none;
@@ -28,7 +31,7 @@
     }
 
     .site-title {
-        color: $light-gray;
+        color: colors.$light-gray;
         text-decoration: none !important;
         align-items: center;
         gap: 0;
@@ -39,7 +42,7 @@
         flex-shrink: 0;
 
         .page-link {
-            color: $light-gray;
+            color: colors.$light-gray;
             transition: color 0.2s ease, transform 0.2s ease;
             will-change: color, transform;
             text-decoration: none !important;
@@ -54,17 +57,17 @@
         height: auto;
         margin-top: 5px;
         margin-right: 5px;
-        fill: $light-gray;
+        fill: colors.$light-gray;
         transition: fill 0.2s ease;
     }
 
     .site-nav label[for="nav-trigger"]:hover .menu-icon .hamburger-menu {
-        fill: $bright-purple;
+        fill: colors.$bright-purple;
     }
 
     // Overwrite any default SVG fill for hamburger menu in nav
     .site-nav .menu-icon > svg {
-        fill: $light-gray !important;
+        fill: colors.$light-gray !important;
         transition: fill 0.2s ease;
     }
 
@@ -72,7 +75,7 @@
     svg.github-copilot-logo {
         will-change: transform;
         transform: translateZ(0);
-        fill: $light-gray;
+        fill: colors.$light-gray;
         transition: fill 0.2s ease;
         margin: 0;
         padding: 0;
@@ -94,20 +97,20 @@
 
     a.site-title:hover .xebia-logo,
     a.site-title:hover .github-copilot-logo {
-        fill: $bright-purple;
+        fill: colors.$bright-purple;
     }
 
     a {
-        color: $light-gray;
+        color: colors.$light-gray;
         transition: color 0.2s ease;
 
         &:visited {
-            color: $light-gray;
+            color: colors.$light-gray;
         }
 
         @media (hover: hover) {
             &:hover {
-                color: $bright-purple;
+                color: colors.$bright-purple;
             }
         }
     }
@@ -118,10 +121,10 @@ a.page-link.contact {
     position: relative;
     font-weight: 600;
     text-decoration: none !important;
-    color: $light-gray;
+    color: colors.$light-gray;
 }
 
-@media only screen and (min-width: $on-mobile) {
+@media only screen and (min-width: sizes.$on-mobile) {
     a.page-link.regular {
         &::after {
             content: '';
@@ -130,7 +133,7 @@ a.page-link.contact {
             left: 0;
             width: 0;
             height: 2px;
-            background-color: $bright-purple;
+            background-color: colors.$bright-purple;
             transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
             will-change: width, transform;
             transform: translateZ(0);
@@ -147,42 +150,42 @@ a.page-link.contact {
     .site-header .page-link.contact {
         font-size: 14px;
         font-weight: 600;
-        background-color: rgba($light-gray, 0.1);
-        color: $light-gray;
+        background-color: rgba(colors.$light-gray, 0.1);
+        color: colors.$light-gray;
         text-decoration: none !important;
         padding: 8px 16px 10px 16px;
         border-radius: 15px;
-        border: 2px solid $bright-purple;
-        color: $light-gray;
-        box-shadow: 0 2px 8px rgba($bright-purple, 0.3);
+        border: 2px solid colors.$bright-purple;
+        color: colors.$light-gray;
+        box-shadow: 0 2px 8px rgba(colors.$bright-purple, 0.3);
         transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
         will-change: background-color, box-shadow;
 
         @media (hover: hover) {
             &:hover,
             &:visited:hover {
-                background-color: $bright-purple;
-                color: $light-gray;
-                border-color: $bright-purple;
-                box-shadow: 0 4px 12px rgba($bright-purple, 0.4);
+                background-color: colors.$bright-purple;
+                color: colors.$light-gray;
+                border-color: colors.$bright-purple;
+                box-shadow: 0 4px 12px rgba(colors.$bright-purple, 0.4);
                 text-decoration: none !important;
             }
         }
 
-        color: $light-gray;
+        color: colors.$light-gray;
 
         &:visited {
-            color: $light-gray;
+            color: colors.$light-gray;
         }
     }
 }
 
-@media only screen and (max-width: $on-mobile) {
+@media only screen and (max-width: sizes.$on-mobile) {
     .site-nav {
-        background-color: rgba($dark-navy, 0.9);
-        border: 1px solid rgba($bright-purple, 0.2);
+        background-color: rgba(colors.$dark-navy, 0.9);
+        border: 1px solid rgba(colors.$bright-purple, 0.2);
         border-radius: 8px;
-        fill: $light-gray;
+        fill: colors.$light-gray;
         position: absolute;
         margin-top: 5px;
         font-size: larger;
