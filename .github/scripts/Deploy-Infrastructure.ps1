@@ -29,6 +29,9 @@
 .PARAMETER SkipLogin
     Skip Azure login (assumes already logged in - use in GitHub Actions)
 
+.PARAMETER SkipConfirmation
+    Skip deployment confirmation prompt (use in automated environments like GitHub Actions)
+
 .EXAMPLE
     # Local usage - Validate the infrastructure template
     ./.github/scripts/Deploy-Infrastructure.ps1 -Mode validate
@@ -43,7 +46,7 @@
 
 .EXAMPLE
     # GitHub Actions usage - Deploy with environment variables
-    pwsh ./.github/scripts/Deploy-Infrastructure.ps1 -Mode deploy -SkipLogin -VerboseOutput
+    pwsh ./.github/scripts/Deploy-Infrastructure.ps1 -Mode deploy -SkipLogin -SkipConfirmation -VerboseOutput
 
 .EXAMPLE
     # Validate with custom parameters file
@@ -71,7 +74,10 @@ param(
     [switch]$SkipLogin,
     
     [Parameter(Mandatory = $false)]
-    [switch]$VerboseOutput
+    [switch]$VerboseOutput,
+    
+    [Parameter(Mandatory = $false)]
+    [switch]$SkipConfirmation
 )
 
 # Set error action preference
@@ -461,10 +467,14 @@ function Deploy-Infrastructure {
     Write-Host "⚠️  This may incur costs in your Azure subscription!" -ForegroundColor Red
     Write-Host ""
     
-    $confirmation = Read-Host "Are you sure you want to proceed? (yes/no)"
-    if ($confirmation -ne "yes") {
-        Write-Host "Deployment cancelled by user." -ForegroundColor Yellow
-        exit 0
+    if (-not $SkipConfirmation) {
+        $confirmation = Read-Host "Are you sure you want to proceed? (yes/no)"
+        if ($confirmation -ne "yes") {
+            Write-Host "Deployment cancelled by user." -ForegroundColor Yellow
+            exit 0
+        }
+    } else {
+        Write-Host "Confirmation skipped (automated deployment)" -ForegroundColor Yellow
     }
     
     try {

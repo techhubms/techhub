@@ -31,7 +31,8 @@ jobs:
       run: |
         pwsh ./.github/scripts/Deploy-Infrastructure.ps1 `
           -Mode "${{ github.event.inputs.mode }}" `
-          -SkipLogin
+          -SkipLogin `
+          -SkipConfirmation
       env:
         AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
