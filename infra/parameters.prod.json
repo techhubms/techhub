@@ -3,10 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "subscriptionId": {
-      "value": "YOUR_SUBSCRIPTION_ID_HERE"
+      "value": "bc8ab567-c645-4e51-9317-992203eb369a"
     },
     "baseName": {
-      "value": "tech-hub-ms"
+      "value": "techhub-ms"
     },
     "location": {
       "value": "westeurope"
