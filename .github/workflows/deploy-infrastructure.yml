@@ -1,39 +1,7 @@
 name: Deploy Infrastructure
 
 on:
-  workflow_dispatch:
-    inputs:
-      resourceGroupName:
-        description: 'Resource Group Name'
-        required: true
-        default: 'rg-tech-hub-ms'
-      location:
-        description: 'Azure Region'
-        required: true
-        default: 'westeurope'
-        type: choice
-        options:
-        - westeurope
-        - eastus
-        - centralus
-        - northeurope
-      sqlAdminLogin:
-        description: 'SQL Admin Username'
-        required: true
-        default: 'sqladmin'
-      enableStaticWebApp:
-        description: 'Deploy Static Web App'
-        required: true
-        default: true
-        type: boolean
-      repositoryUrl:
-        description: 'GitHub Repository URL'
-        required: false
-        default: 'https://github.com/${{ github.repository }}'
-      repositoryBranch:
-        description: 'Repository Branch'
-        required: false
-        default: 'main'
+  workflow_dispatch
 
 jobs:
   deploy-infrastructure:
@@ -55,12 +23,8 @@ jobs:
         resourceGroupName: ${{ github.event.inputs.resourceGroupName }}
         template: ./infra/main.bicep
         parameters: >
-          location=${{ github.event.inputs.location }}
-          sqlAdminLogin=${{ github.event.inputs.sqlAdminLogin }}
-          sqlAdminPassword=${{ secrets.SQL_ADMIN_PASSWORD }}
-          enableStaticWebApp=${{ github.event.inputs.enableStaticWebApp }}
-          repositoryUrl=${{ github.event.inputs.repositoryUrl || format('https://github.com/{0}', github.repository) }}
-          repositoryBranch=${{ github.event.inputs.repositoryBranch }}
+          repositoryUrl=https://github.com/techhubms
+          repositoryBranch=main
           githubToken=${{ secrets.GITHUB_TOKEN }}
         failOnStdErr: false
 
