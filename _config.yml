@@ -1,12 +1,12 @@
 title: Tech Hub
-email: reinier.vanmaanen@xebia.com
 description: >-
   Use our resources to learn! Find the right tools, and get help with your projects or stay updated on the latest trends.
 show_excerpts: true
-author: techhub.ms
 timezone: Europe/Brussels
 google_analytics: G-95LLB67KJV
 port: 4000
+baseurl: ""
+url: ""
 
 markdown: kramdown
 theme: minima
@@ -82,8 +82,12 @@ exclude:
   - "**/*.ps1" 
   - "**/*.py"
   - "**/*.sh"
-  - "**/*.json"
   - "**/*.yml"
+  - ".github/**/*.json"
+  - "package*.json"
+  - "tsconfig*.json"
+  - ".vscode/*.json"
+  - "spec/**/*.json"
   - .gitignore
   - .jekyll-metadata
   - CODEOWNERS

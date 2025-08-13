@@ -1,13 +1,17 @@
+@use "colors";
+@use "sizes";
+@use "navigation";
+
 // Posts grid (Individual posts/articles) - renamed from content-grid
 .posts-grid {
     @extend .nav-grid-base;
     
-    @media (min-width: $navigation-breakpoint) {
-        grid-template-columns: repeat($content-grid-desktop, 1fr);
+    @media (min-width: sizes.$navigation-breakpoint) {
+        grid-template-columns: repeat(sizes.$content-grid-desktop, 1fr);
     }
     
-    @media (max-width: #{$navigation-breakpoint - 1px}) {
-        grid-template-columns: repeat($content-grid-mobile, 1fr);
+    @media (max-width: #{sizes.$navigation-breakpoint - 1px}) {
+        grid-template-columns: repeat(sizes.$content-grid-mobile, 1fr);
     }
 }
 
@@ -45,23 +49,23 @@
         align-items: center;
         min-height: 40px;
         padding: 0;
-        background: rgba($medium-blue, 0.10);
-        border: 1px solid $bright-purple;
+        background: rgba(colors.$medium-blue, 0.10);
+        border: 1px solid colors.$bright-purple;
         border-radius: 12px;
         text-decoration: none;
-        color: $light-gray;
+        color: colors.$light-gray;
         transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
         text-align: center;
         margin: 0;
-        box-shadow: 0 2px 8px rgba($bright-purple, 0.08);
+        box-shadow: 0 2px 8px rgba(colors.$bright-purple, 0.08);
         will-change: background, box-shadow;
         contain: layout style;
 
         @media (hover: hover) {
             &:hover {
                 transform: scale(1.05);
-                background: rgba($medium-blue, 0.18);
-                box-shadow: 0 8px 25px rgba($medium-blue, 0.18);
+                background: rgba(colors.$medium-blue, 0.18);
+                box-shadow: 0 8px 25px rgba(colors.$medium-blue, 0.18);
                 color: inherit;
             }
         }
@@ -94,7 +98,7 @@
         }
 
         .post-title {
-            color: $bright-blue;
+            color: colors.$bright-blue;
             font-size: 16px;
             font-weight: normal;
             text-align: center;
@@ -104,7 +108,7 @@
         }
 
         &:visited .post-title {
-            color: $bright-purple;
+            color: colors.$bright-purple;
         }
 
         p {
@@ -115,7 +119,7 @@
     }
 }
 
-@media (max-width: #{$content-width}) {
+@media (max-width: #{sizes.$content-width}) {
     .post-list {        
         .post-item {
             will-change: auto;
@@ -179,8 +183,8 @@
             height: 1px;
             background: linear-gradient(
                 90deg, 
-                rgba($bright-purple, 0.3) 0%, 
-                rgba($bright-purple, 0.1) 70%, 
+                rgba(colors.$bright-purple, 0.3) 0%, 
+                rgba(colors.$bright-purple, 0.1) 70%, 
                 transparent 100%
             );
             margin-top: 0px;
@@ -193,8 +197,8 @@
         &::after {
             background: linear-gradient(
                 90deg, 
-                rgba($bright-purple, 0.2) 0%, 
-                rgba($bright-purple, 0.05) 40%, 
+                rgba(colors.$bright-purple, 0.2) 0%, 
+                rgba(colors.$bright-purple, 0.05) 40%, 
                 transparent 50%
             );
             margin-top: 0px;

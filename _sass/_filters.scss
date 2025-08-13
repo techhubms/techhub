@@ -1,3 +1,5 @@
+@use "colors";
+
 .filter-count {
     display: inline-block;
     box-sizing: border-box;
@@ -19,9 +21,9 @@
 .tag-filter-btn {
     margin: 2px;
     padding: 0px 10px;
-    border: 1px solid rgba($bright-purple, 0.3);
-    background: rgba($light-gray, 0.1);
-    color: $light-gray;
+    border: 1px solid rgba(colors.$bright-purple, 0.3);
+    background: rgba(colors.$light-gray, 0.1);
+    color: colors.$light-gray;
     cursor: pointer;
     border-radius: 3px;
     transition: background-color 0.2s ease, border-color 0.2s ease;
@@ -37,54 +39,54 @@
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            background: rgba($bright-purple, 0.2);
-            border-color: rgba($bright-purple, 0.5);
+            background: rgba(colors.$bright-purple, 0.2);
+            border-color: rgba(colors.$bright-purple, 0.5);
             transform: translateZ(0); // Force hardware acceleration
         }
     }
 
     &.active {
-        background: $medium-purple;
-        color: $light-gray;
-        border-color: $medium-purple;
+        background: colors.$medium-purple;
+        color: colors.$light-gray;
+        border-color: colors.$medium-purple;
     }
 
     &.disabled {
         opacity: 0.3;
         cursor: not-allowed;
-        background: rgba($darker-gray, 0.2);
-        border-color: rgba($darker-gray, 0.6);
+        background: rgba(colors.$darker-gray, 0.2);
+        border-color: rgba(colors.$darker-gray, 0.6);
         will-change: auto;
     }
 
     &.clear-btn {
-        background: $bright-red;
-        color: $light-gray;
-        border-color: $dark-red;
+        background: colors.$bright-red;
+        color: colors.$light-gray;
+        border-color: colors.$dark-red;
 
         @media (hover: hover) {
             &:hover {
-                background: $dark-red;
+                background: colors.$dark-red;
             }
         }
     }
 
     &.toggle-btn {
-        background: $bright-green;
-        color: $light-gray;
-        border-color: $bright-green;
+        background: colors.$bright-green;
+        color: colors.$light-gray;
+        border-color: colors.$bright-green;
 
         @media (hover: hover) {
             &:hover {
-                background: $dark-green;
-                border-color: $dark-green;
+                background: colors.$dark-green;
+                border-color: colors.$dark-green;
             }
         }
 
         &.active {
-            background: $dark-gray;
-            color: $light-gray;
-            border-color: $dark-gray;
+            background: colors.$dark-gray;
+            color: colors.$light-gray;
+            border-color: colors.$dark-gray;
         }
     }
 
@@ -100,30 +102,30 @@
 .date-filter-btn {
     @extend .tag-filter-btn;
     // Darker purple inactive state for visual distinction from tag filters
-    background: rgba($medium-purple, 0.3);
-    border-color: rgba($medium-purple, 0.5);
-    color: $light-gray;
+    background: rgba(colors.$medium-purple, 0.3);
+    border-color: rgba(colors.$medium-purple, 0.5);
+    color: colors.$light-gray;
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
             // Lighter purple on hover - brighter than inactive but not as bright as active
-            background: rgba($medium-purple, 0.6);
-            border-color: rgba($medium-purple, 0.8);
-            color: $light-gray;
+            background: rgba(colors.$medium-purple, 0.6);
+            border-color: rgba(colors.$medium-purple, 0.8);
+            color: colors.$light-gray;
         }
     }
 
     // Active state remains the same as current for consistency
     &.active {
-        background: $medium-purple;
-        color: $light-gray;
-        border-color: $medium-purple;
+        background: colors.$medium-purple;
+        color: colors.$light-gray;
+        border-color: colors.$medium-purple;
     }
 
     // Disabled state - darker purple with reduced opacity
     &.disabled {
-        background: rgba($medium-purple, 0.15);
-        border-color: rgba($medium-purple, 0.3);
+        background: rgba(colors.$medium-purple, 0.15);
+        border-color: rgba(colors.$medium-purple, 0.3);
         opacity: 0.4;
     }
 }
@@ -131,9 +133,9 @@
 @media (pointer: coarse) {
     .tag-filter-btn.active,
     .date-filter-btn.active {
-        background: $medium-purple !important;
-        color: $light-gray !important;
-        border-color: $medium-purple !important;
+        background: colors.$medium-purple !important;
+        color: colors.$light-gray !important;
+        border-color: colors.$medium-purple !important;
     }
 }
 
