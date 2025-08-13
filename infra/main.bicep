@@ -57,9 +57,6 @@ param repositoryBranch string = 'main'
 @secure()
 param githubToken string = ''
 
-@description('Enable Static Web Apps deployment')
-param enableStaticWebApp bool = true
-
 // Variables for consistent naming
 var sqlServerName = '${baseName}-sqlserver-${environment}'
 var sqlDatabaseName = '${baseName}-sqldb-${environment}'
@@ -203,7 +200,7 @@ resource auditingSettings 'Microsoft.Sql/servers/auditingSettings@2023-05-01-pre
 }
 
 // Static Web Apps resource for Jekyll site
-resource staticWebApp 'Microsoft.Web/staticSites@2023-01-01' = if (enableStaticWebApp) {
+resource staticWebApp 'Microsoft.Web/staticSites@2023-01-01' = {
   name: staticWebAppName
   location: location
   sku: {
@@ -242,9 +239,9 @@ output connectionStringSecretName string = connectionStringSecret.name
 output keyVaultName string = keyVault.name
 output sqlServerResourceId string = sqlServer.id
 output sqlDatabaseResourceId string = sqlDatabase.id
-output staticWebAppName string = enableStaticWebApp ? staticWebApp.?name ?? '' : ''
-output staticWebAppUrl string = enableStaticWebApp ? staticWebApp.?properties.?defaultHostname ?? '' : ''
-output staticWebAppId string = enableStaticWebApp ? staticWebApp.?id ?? '' : ''
+output staticWebAppName string = staticWebApp.name
+output staticWebAppUrl string = staticWebApp.properties.defaultHostname
+output staticWebAppId string = staticWebApp.id
 
 // Output sample table creation script
 output sampleTableScript string = '''
