@@ -40,6 +40,15 @@
     },
     "auditStorageAccountName": {
       "value": ""
+    },
+    "repositoryUrl": {
+      "value": "https://github.com/techhubms/techhub"
+    },
+    "repositoryBranch": {
+      "value": "main"
+    },
+    "githubToken": {
+      "value": ""
     }
   }
 }

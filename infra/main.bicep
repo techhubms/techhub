@@ -14,13 +14,13 @@ param location string
   'GeneralPurpose'
   'BusinessCritical'
 ])
-param sqlDatabaseTier string = 'Standard'
+param sqlDatabaseTier string
 
 @description('SQL Database performance level/SKU name')
-param sqlDatabaseSku string = 'S2'
+param sqlDatabaseSku string
 
-@description('Maximum size of the database in bytes (default: 250GB)')
-param maxSizeBytes int = 268435456000
+@description('Maximum size of the database in bytes')
+param maxSizeBytes int
 
 @description('Admin username for SQL Server')
 param sqlAdminUsername string
@@ -35,29 +35,29 @@ param sqlAdminPassword string
   'test'
   'prod'
 ])
-param environment string = 'dev'
+param environment string
 
 @description('Enable Advanced Threat Protection')
-param enableAdvancedThreatProtection bool = false
+param enableAdvancedThreatProtection bool
 
 @description('Configure backup retention in days (1-35 for Basic/Standard, 1-35 for Premium/Business Critical)')
-param backupRetentionDays int = 7
+param backupRetentionDays int
 
 @description('Enable audit logging')
-param enableAuditLogging bool = false
+param enableAuditLogging bool
 
 @description('Storage account name for audit logs (required if enableAuditLogging is true)')
-param auditStorageAccountName string = ''
+param auditStorageAccountName string
 
 @description('GitHub repository URL for Static Web Apps deployment')
-param repositoryUrl string = 'https://github.com/techhubms/techhub'
+param repositoryUrl string
 
 @description('GitHub branch for Static Web Apps deployment')
-param repositoryBranch string = 'main'
+param repositoryBranch string
 
 @description('GitHub personal access token for Static Web Apps (leave empty for manual configuration)')
 @secure()
-param githubToken string = ''
+param githubToken string
 
 // Variables for consistent naming
 var resourceGroupName = '${baseName}-rg-${environment}'
