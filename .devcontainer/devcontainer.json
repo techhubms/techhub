@@ -4,13 +4,15 @@
   "features": {
     "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/devcontainers/features/powershell:1": {},
-    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+      "version": "2.72.0"
+    },
     "ghcr.io/devcontainers/features/dotnet:2": {
       "version": "9.0",
       "aspNetCoreRuntimeVersions": "9.0",
       "dotnetRuntimeVersions": "9.0",
       "installUsingApt": true
-    },    
+    }
   },
   "forwardPorts": [
     4000
@@ -29,7 +31,7 @@
         "ms-dotnettools.csdevkit",
         "ms-vscode.vscode-nuget-package-manager",
         "ms-vscode.powershell",
-        "ms-vscode.azure-account",        
+        "msazurermtools.azurerm-vscode-tools",        
         "ms-azuretools.vscode-bicep",
         "ms-azuretools.vscode-azureresourcegroups",
         "ms-azuretools.vscode-azurestorage",

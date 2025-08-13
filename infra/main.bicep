@@ -43,12 +43,6 @@ param enableAdvancedThreatProtection bool
 @description('Configure backup retention in days (1-35 for Basic/Standard, 1-35 for Premium/Business Critical)')
 param backupRetentionDays int
 
-@description('Enable audit logging')
-param enableAuditLogging bool
-
-@description('Storage account name for audit logs (required if enableAuditLogging is true)')
-param auditStorageAccountName string
-
 @description('GitHub repository URL for Static Web Apps deployment')
 param repositoryUrl string
 
@@ -60,7 +54,7 @@ param repositoryBranch string
 param githubToken string
 
 // Variables for consistent naming
-var resourceGroupName = '${baseName}-rg-${environment}'
+var resourceGroupName = 'rg-${baseName}-${environment}'
 
 // Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2023-07-01' = {
@@ -89,11 +83,8 @@ module resources 'modules/resources.bicep' = {
     environment: environment
     enableAdvancedThreatProtection: enableAdvancedThreatProtection
     backupRetentionDays: backupRetentionDays
-    enableAuditLogging: enableAuditLogging
-    auditStorageAccountName: auditStorageAccountName
     repositoryUrl: repositoryUrl
     repositoryBranch: repositoryBranch
-    githubToken: githubToken
   }
 }
 

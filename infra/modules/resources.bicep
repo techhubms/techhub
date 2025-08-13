@@ -41,32 +41,22 @@ param enableAdvancedThreatProtection bool
 @description('Configure backup retention in days (1-35 for Basic/Standard, 1-35 for Premium/Business Critical)')
 param backupRetentionDays int
 
-@description('Enable audit logging')
-param enableAuditLogging bool
-
-@description('Storage account name for audit logs (required if enableAuditLogging is true)')
-param auditStorageAccountName string
-
 @description('GitHub repository URL for Static Web Apps deployment')
 param repositoryUrl string
 
 @description('GitHub branch for Static Web Apps deployment')
 param repositoryBranch string
 
-@description('GitHub personal access token for Static Web Apps (leave empty for manual configuration)')
-@secure()
-param githubToken string
-
-// Variables for consistent naming
-var sqlServerName = '${baseName}-sqlserver-${environment}'
-var sqlDatabaseName = '${baseName}-sqldb-${environment}'
-var keyVaultName = '${baseName}-kv-${environment}'
-var staticWebAppName = '${baseName}-staticapp-${environment}'
+// Variables for consistent naming following "abbreviation-name-environment" pattern
+var sqlServerName = 'sql-${baseName}-${environment}'
+var sqlDatabaseName = 'sqldb-${baseName}-${environment}'
+var keyVaultName = 'kv-${baseName}-${environment}'
+var staticWebAppName = 'stapp-${baseName}-${environment}'
 
 // SQL Server resource
 resource sqlServer 'Microsoft.Sql/servers@2023-05-01-preview' = {
   name: sqlServerName
-  location: location
+  location: 'northeurope'
   properties: {
     administratorLogin: sqlAdminUsername
     administratorLoginPassword: sqlAdminPassword
@@ -91,7 +81,7 @@ resource sqlServer 'Microsoft.Sql/servers@2023-05-01-preview' = {
 resource sqlDatabase 'Microsoft.Sql/servers/databases@2023-05-01-preview' = {
   parent: sqlServer
   name: sqlDatabaseName
-  location: location
+  location: 'northeurope'
   sku: {
     name: sqlDatabaseSku
     tier: sqlDatabaseTier
@@ -181,43 +171,22 @@ resource connectionStringSecret 'Microsoft.KeyVault/vaults/secrets@2023-07-01' =
   }
 }
 
-// Audit logging configuration (optional)
-resource auditingSettings 'Microsoft.Sql/servers/auditingSettings@2023-05-01-preview' = if (enableAuditLogging && !empty(auditStorageAccountName)) {
-  parent: sqlServer
-  name: 'default'
-  properties: {
-    state: 'Enabled'
-    storageEndpoint: 'https://${auditStorageAccountName}.blob.${az.environment().suffixes.storage}/'
-    retentionDays: 90
-    auditActionsAndGroups: [
-      'SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP'
-      'FAILED_DATABASE_AUTHENTICATION_GROUP'
-      'BATCH_COMPLETED_GROUP'
-    ]
-    isStorageSecondaryKeyInUse: false
-    isAzureMonitorTargetEnabled: false
-  }
-}
-
 // Static Web Apps resource for Jekyll site
 resource staticWebApp 'Microsoft.Web/staticSites@2023-01-01' = {
   name: staticWebAppName
   location: location
   sku: {
-    name: 'Free'
-    tier: 'Free'
+    name: 'Standard'
+    tier: 'Standard'
   }
   properties: {
     repositoryUrl: repositoryUrl
     branch: repositoryBranch
-    repositoryToken: !empty(githubToken) ? githubToken : null
+    repositoryToken: null
     buildProperties: {
       appLocation: '/'
       apiLocation: ''
-      outputLocation: '_site'
-      appBuildCommand: 'bundle exec jekyll build --destination _site'
-      apiBuildCommand: ''
-      skipGithubActionWorkflowGeneration: false
+      appArtifactLocation: '_site'
     }
     stagingEnvironmentPolicy: 'Enabled'
     allowConfigFileUpdates: true
