@@ -61,10 +61,6 @@ param githubToken string = ''
 
 // Variables for consistent naming
 var resourceGroupName = '${baseName}-rg-${environment}'
-var sqlServerName = '${baseName}-sqlserver-${environment}'
-var sqlDatabaseName = '${baseName}-sqldb-${environment}'
-var keyVaultName = '${baseName}-kv-${environment}'
-var staticWebAppName = '${baseName}-staticapp-${environment}'
 
 // Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2023-07-01' = {
@@ -113,6 +109,3 @@ output sqlDatabaseResourceId string = resources.outputs.sqlDatabaseResourceId
 output staticWebAppName string = resources.outputs.staticWebAppName
 output staticWebAppUrl string = resources.outputs.staticWebAppUrl
 output staticWebAppId string = resources.outputs.staticWebAppId
-
-// Output sample table creation script
-output sampleTableScript string = resources.outputs.sampleTableScript

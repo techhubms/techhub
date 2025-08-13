@@ -3,7 +3,14 @@
   "image": "mcr.microsoft.com/devcontainers/jekyll",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {},
-    "ghcr.io/devcontainers/features/powershell:1": {}
+    "ghcr.io/devcontainers/features/powershell:1": {},
+    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    "ghcr.io/devcontainers/features/dotnet:2": {
+      "version": "9.0",
+      "aspNetCoreRuntimeVersions": "9.0",
+      "dotnetRuntimeVersions": "9.0",
+      "installUsingApt": true
+    },    
   },
   "forwardPorts": [
     4000
@@ -16,51 +23,94 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "DavidAnson.vscode-markdownlint",
+        "ms-python.python",
+        "ms-playwright.playwright",
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+        "ms-vscode.vscode-nuget-package-manager",
         "ms-vscode.powershell",
+        "ms-vscode.azure-account",        
+        "ms-azuretools.vscode-bicep",
+        "ms-azuretools.vscode-azureresourcegroups",
+        "ms-azuretools.vscode-azurestorage",
+        "ms-azuretools.vscode-azurefunctions",
+        "ms-azuretools.vscode-azureappservice",
+        "ms-azuretools.vscode-azurecontainerapps",
+        "ms-azuretools.vscode-azurestaticwebapps",
+        "Shopify.theme-check-vscode",
+        "DavidAnson.vscode-markdownlint",
         "Jekyll.vscode-jekyll-syntax",
         "Jekyll.vscode-jekyll-snippets",
-        "ms-python.python",
-        "Shopify.theme-check-vscode",
-        "ms-playwright.playwright",
         "orta.vscode-jest",
         "Shopify.ruby-lsp",
         "kaiwood.endwise"
       ],
       "settings": {
-        "chat.agent.enabled": true,
-        "chat.mcp.enabled": true,
-        "chat.mcp.autostart": "newAndOutdated",
-        "chat.checkpoints.enabled": true,
-        "chat.editRequests": "inline",
+        // AI and Copilot Settings (Latest v1.99-1.103 Features)
         "chat.math.enabled": true,
-        "chat.notifyWindowOnConfirmation": true,
         "chat.todoListTool.enabled": true,
-        "chat.agentSessionsViewLocation": "view",
-        "powershell.debugging.createTemporaryIntegratedConsole": true,
-        "terminal.integrated.defaultProfile.linux": "pwsh",
-        "remote.autoForwardPorts": false,
-        "remote.autoForwardPortsSource": "hybrid",
-        "jest.jestCommandLine": "npm test --prefix spec/javascript",
-        "jest.rootPath": "spec/javascript",
-        "playwright.reuseBrowser": true,
-        "playwright.showTrace": true,
-        "powershell.integratedConsole.showOnStartup": false,
-        "github.copilot.chat.virtualTools.threshold": 128,
-        "github.copilot.chat.newWorkspace.useContext7": true,
-        "githubPullRequests.codingAgent.uiIntegration": true,
-        "workbench.secondarySideBar.defaultVisibility": "visibleInWorkspace",
+        "chat.checkpoints.enabled": true,
+        "chat.notifyWindowOnConfirmation": true,
+        "chat.editRequests": "inline",
         "editor.aiStats.enabled": true,
         "inlineChat.notebookAgent": true,
         "inlineChat.enableV2": true,
+        "chat.agentSessionsViewLocation": "view",
+        "github.copilot.chat.newWorkspace.useContext7": true,
+        "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+        "github.copilot.chat.virtualTools.threshold": 128,
+        "githubPullRequests.codingAgent.uiIntegration": true,
+        
+        // MCP (Model Context Protocol) Settings
+        "chat.mcp.discovery.enabled": true,
+        "chat.mcp.autostart": "newAndOutdated",
+        "chat.promptFiles": true,
+        
+        // PowerShell Settings
+        "powershell.scriptAnalysis.enable": true,
+        "powershell.codeFormatting.useCorrectCasing": true,
+        "powershell.integratedConsole.showOnStartup": false,
+        "powershell.debugging.createTemporaryIntegratedConsole": true,
+        
+        // Source Control Settings (v1.103 Git Worktrees)
         "git.detectWorktrees": true,
-        "python.terminal.shellIntegration.enabled": true,
-        "python.analysis.supportAllPythonDocuments": true,
+        
+        // Accessibility Settings (Enhanced v1.103)
         "accessibility.openChatEditedFiles": false,
+        
+        // Chat and UI Settings (v1.102-1.103)
+        "workbench.secondarySideBar.defaultVisibility": "maximized",
+        
+        // Terminal Settings
+        "terminal.integrated.defaultProfile.linux": "pwsh",
+        
+        // Testing Framework Settings
+        "jest.jestCommandLine": "npm test --prefix spec/javascript",
+        "jest.rootPath": "spec/javascript",
+        "playwright.showTrace": true,
+        "playwright.reuseBrowser": true,
+        
+        // C# and .NET Settings
+        "dotnet.defaultSolution": "*.sln",
+        "csharp.semanticHighlighting.enabled": true,
+        "csharp.format.enable": true,
+        "editor.codeLens": true,
+        
         "files.associations": {
           "*.ps1": "powershell",
           "*.spec.js": "javascript",
-          "*.test.js": "javascript"
+          "*.test.js": "javascript",
+          "*.bicep": "bicep",
+          "*.json": "jsonc",
+          "*.cs": "csharp",
+          "*.csx": "csharp",
+          "*.csproj": "xml",
+          "*.sln": "plaintext",
+          "*.props": "xml",
+          "*.targets": "xml",
+          "*.config": "xml",
+          "*.razor": "razor",
+          "*.cshtml": "razor"
         },
         "chat.tools.terminal.autoApprove": {
           "/\\becho\\b/i": { "approve": true, "matchCommandLine": true },
@@ -154,7 +204,10 @@
           "/\\byarn\\b/i": { "approve": true, "matchCommandLine": true },
           "/\\bgem\\b/i": { "approve": true, "matchCommandLine": true },
 
-          "/\\.ps1\\b/i": { "approve": true, "matchCommandLine": true },
+          "/\\baz\\b/i": { "approve": true, "matchCommandLine": true },
+          "/\\bbicep\\b/i": { "approve": true, "matchCommandLine": true },
+          "/\\bdotnet\\b/i": { "approve": true, "matchCommandLine": true },
+          "/\\bnuget\\b/i": { "approve": true, "matchCommandLine": true },
 
           "/\\brm\\b/i": { "approve": false, "matchCommandLine": true },
           "/\\brmdir\\b/i": { "approve": false, "matchCommandLine": true },
@@ -165,8 +218,19 @@
           "/\\bchown\\b/i": { "approve": false, "matchCommandLine": true },
           "/\\bRemove-Item\\b/i": { "approve": false, "matchCommandLine": true }
         }
+      },
+      "mcp": {
+        "servers": {
+          "github": {
+            "url": "https://api.githubcopilot.com/mcp/"
+          },
+          "playwright": {
+            "command": "npx",
+            "args": ["-y", "@microsoft/mcp-server-playwright"]
+          }
+        }
       }
     }
   },
-  "postCreateCommand": "/bin/bash .devcontainer/post-create-jekyll.sh"
+  "postCreateCommand": "/bin/bash .devcontainer/post-create.sh"
 }

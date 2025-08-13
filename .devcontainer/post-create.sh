@@ -58,11 +58,11 @@ sudo npx playwright install-deps
 # Install latest Playwright browsers using the global installation
 # This ensures we always get the latest browser versions
 echo "Installing latest Playwright browsers..."
-npx playwright@latest install
+npx playwright@latest install --force
 
 # Install Chrome browser for Playwright MCP compatibility
 echo "Installing Chrome browser for Playwright MCP..."
-npx playwright@latest install chrome
+npx playwright@latest install --force chrome
 
 echo "Latest Playwright browsers and dependencies installed successfully"
 echo "Playwright version: $(npx playwright@latest --version)"
@@ -103,3 +103,50 @@ echo "Playwright browsers:"
 ls -la /home/vscode/.cache/ms-playwright/ 2>/dev/null || echo "  No Playwright browsers found"
 echo "System browsers:"
 which chromium-browser chromium google-chrome google-chrome-stable firefox 2>/dev/null || echo "  Limited system browsers available"
+
+# Install Entity Framework Core tools
+dotnet tool install --global dotnet-ef
+
+# Update PATH to include .NET tools
+echo 'export PATH="$PATH:/home/vscode/.dotnet/tools"' >> /home/vscode/.bashrc
+
+# Install Bicep CLI
+echo "Installing Bicep CLI..."
+# Download and install the latest Bicep CLI
+curl -Lo bicep https://github.com/Azure/bicep/releases/latest/download/bicep-linux-x64
+chmod +x ./bicep
+sudo mv ./bicep /usr/local/bin/bicep
+
+# Try to install Bicep via Azure CLI, but handle failures gracefully
+echo "Attempting to install Bicep via Azure CLI..."
+if az bicep install 2>/dev/null; then
+    echo "Azure CLI Bicep installation succeeded"
+    
+    # Check if the Azure CLI Bicep installation is valid
+    if [ -f "/home/vscode/.azure/bin/bicep" ]; then
+        # Check if the file is not empty and has the right format
+        if [ -s "/home/vscode/.azure/bin/bicep" ] && file "/home/vscode/.azure/bin/bicep" | grep -q "ELF.*executable"; then
+            echo "Azure CLI Bicep installation is valid"
+            chmod +x /home/vscode/.azure/bin/bicep
+        else
+            echo "Azure CLI Bicep installation is corrupted, removing it..."
+            rm -f /home/vscode/.azure/bin/bicep
+            echo "Will use system Bicep instead"
+        fi
+    fi
+else
+    echo "Azure CLI Bicep installation failed (this is normal if not logged in)"
+    echo "Will use system Bicep installation"
+fi
+
+# Verify Bicep installation
+echo "System Bicep version: $(bicep --version)"
+echo "Azure CLI Bicep check: $(az bicep version 2>/dev/null || echo 'Using system Bicep (recommended)')"
+
+# Install Azure Developer CLI (azd)
+echo "Installing Azure Developer CLI (azd)..."
+curl -fsSL https://aka.ms/install-azd.sh | bash
+
+# Set up Azure CLI completion
+echo "Setting up Azure CLI completion..."
+echo 'source /etc/bash_completion.d/azure-cli' >> /home/vscode/.bashrc
