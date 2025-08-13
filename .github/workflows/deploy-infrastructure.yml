@@ -20,15 +20,14 @@ jobs:
       uses: azure/arm-deploy@v1
       with:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-        resourceGroupName: ${{ github.event.inputs.resourceGroupName }}
+        scope: subscription
+        region: westeurope
         template: ./infra/main.bicep
-        parameters: >
-          repositoryUrl=https://github.com/techhubms
-          repositoryBranch=main
-          githubToken=${{ secrets.GITHUB_TOKEN }}
+        parameters: ./infra/parameters.prod.json repositoryUrl=https://github.com/techhubms/techhub repositoryBranch=main githubToken=${{ secrets.GITHUB_TOKEN }}
         failOnStdErr: false
 
     - name: Output deployment results
       run: |
         echo "Deployment completed!"
-        echo "Check the Azure portal for deployed resources in resource group: ${{ github.event.inputs.resourceGroupName }}"
+        echo "Check the Azure portal for the deployed resource group and resources."
+        echo "Resource group name will be based on the baseName and environment in parameters.prod.json"
