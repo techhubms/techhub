@@ -1,0 +1,134 @@
+body {
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background: linear-gradient(135deg, $dark-navy 0%, $darker-navy 50%, $darkest-navy 100%);
+    background-attachment: fixed;
+    color: $light-gray;
+    min-height: 100vh;
+    will-change: scroll-position;
+    contain: layout style;
+}
+
+html {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+h3 {
+    font-size: 1.4em !important;
+}
+
+h4 {
+    font-size: 1.2em !important;
+}
+
+h5 {
+    font-size: 1.1em !important;
+}
+
+h6 {
+    font-size: 1em !important;
+    font-weight: 600 !important;
+}
+
+a {
+    color: $bright-blue;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+    text-decoration: none !important;
+    will-change: color;
+
+    &:visited {
+        color: $bright-purple;
+    }
+
+    &:active,
+    &:focus {
+        color: $light-blue;
+    }
+
+    &:link {
+        color: $bright-blue;
+    }
+
+    @media (hover: hover) {
+        &:hover,
+        &:focus {
+            color: $light-blue;
+            text-decoration: underline !important;
+        }
+    }
+}
+
+iframe.youtube {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 100%;
+    max-width: 852px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    max-height: 479px;
+    box-sizing: border-box;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.highlight {
+    background: transparent !important;
+    contain: layout style;
+}
+
+pre.highlight,
+code {
+    background-color: rgba($bright-purple, 0.1) !important;
+    border: 1px solid rgba($bright-purple, 0.2);
+    border-radius: 8px;
+    color: $light-gray;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    will-change: scroll-position;
+    contain: layout style;
+}
+
+pre.highlight code {
+    background: none !important;
+    border: none !important;
+    border-radius: 0;
+    color: inherit;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    will-change: auto;
+}
+
+.wrapper {
+    max-width: -webkit-calc(#{$content-width} - 30px) !important;
+    max-width: calc(#{$content-width} - 30px) !important;
+}
+
+@media screen and (max-width: $on-mobile) {
+    .wrapper {
+        max-width: -webkit-calc(#{$content-width} - 30px) !important;
+        max-width: calc(#{$content-width} - 30px) !important;
+    }
+}   
+
+.page-content {
+    padding: 25px 0;
+    contain: layout;
+    position: relative;
+    z-index: 1;
+
+    .wrapper {
+        background-color: rgba($dark-navy, 0.8);
+        border: 1px solid rgba($darker-purple, 0.2);
+        border-radius: 15px;
+        padding: 10px 15px 20px 15px !important;
+        contain: layout style;
+        line-height: 1.6;
+    }
+}
+

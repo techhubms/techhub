@@ -1,0 +1,14 @@
+{
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2025-08-07-gpt-5-is-now-generally-available-in-github-models",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "EnhancedContent": "The latest AI model from OpenAI, GPT-5, is now available on GitHub Models.\n\nGPT-5 is OpenAI’s most advanced model, offering major improvements in reasoning, code quality, and user experience. It handles complex coding tasks with minimal prompting, provides clear explanations, and introduces enhanced agentic capabilities, making it a powerful coding collaborator and intelligent assistant for all users.\n\nThe following model variants of GPT-5 are available:\n\n- **gpt-5**: Designed for logic and multi-step tasks.\n- **gpt-5-mini**: A lightweight version for cost-sensitive applications.\n- **gpt-5-nano**: Optimized for speed and ideal for applications requiring low latency.\n- **gpt-5-chat**: Designed for advanced, natural, multimodal, and context-aware conversations for enterprise applications.\n\nYou can access the GPT-5 in the **[Models tab](https://docs.github.com/github-models/about-github-models#enabling-github-models)** and try it out in the [GitHub Models playground](https://github.com/marketplace/models), or through the [GitHub API](https://docs.github.com/github-models/prototyping-with-ai-models#experimenting-with-ai-models-using-the-api). Experiment with sample prompts, refine your ideas, and iterate as you build. You can also try them alongside other models, including those from Cohere, DeepSeek, Meta, and Microsoft.\n\nTo learn more about GitHub Models, check out the [GitHub Models documentation](https://docs.github.com/github-models) and join the [community discussions](https://github.com/orgs/community/discussions/categories/models?discussions_q=is%3Aopen+category%3AModels+) to share feedback and connect with other developers.",
+  "Description": "The latest AI model from OpenAI, GPT-5, is now available on GitHub Models. GPT-5 is OpenAI’s most advanced model, offering major improvements in reasoning, code quality, and user experience. It…\n\nThe post [GPT-5 is now generally available in GitHub Models](https://github.blog/changelog/2025-08-07-gpt-5-is-now-generally-available-in-github-models) appeared first on [The GitHub Blog](https://github.blog).",
+  "Title": "GPT-5 is now generally available in GitHub Models",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2025-08-08T00:00:05+00:00",
+  "Author": "Allison",
+  "ProcessedDate": "2025-08-09 20:21:45",
+  "Tags": [],
+  "FeedName": "The GitHub Blog"
+}

@@ -1,0 +1,16 @@
+{
+  "Title": "Your CI/CD setup along with UI / Regression Tests?",
+  "FeedName": "Reddit Azure DevOps",
+  "OutputDir": "_community",
+  "Tags": [
+    "azuredevops"
+  ],
+  "ProcessedDate": "2025-08-05 17:37:33",
+  "Description": "At my company we use automated testing to do regression tests via our application UI. We mostly use Selenium / Playwright. We use pipelines to deploy our code to the servers across different environments (QA, Stage, Prod etc).\n\nI have to integrate regression tests in the mix via pipelines. I was wondering if you guys do something like this at your company? Would you mind sharing your setup? Classic or YAML pipelines both would be great.",
+  "Author": "DrippinInSuccess",
+  "Link": "https://www.reddit.com/r/azuredevops/comments/1mbgmkd/your_cicd_setup_along_with_ui_regression_tests/",
+  "PubDate": "2025-07-28T13:47:01+00:00",
+  "EnhancedContent": "At my company we use automated testing to do regression tests via our application UI. We mostly use Selenium / Playwright. We use pipelines to deploy our code to the servers across different environments (QA, Stage, Prod etc).\n\nI have to integrate regression tests in the mix via pipelines. I was wondering if you guys do something like this at your company? Would you mind sharing your setup? Classic or YAML pipelines both would be great.\n\nI’m interested in solutions as well. We’re using Playwright for our end-to-end testing. We are trying to set up smoke tests to start with. Regression testing can come later.\n\nWe also want to show some kind of dashboard to indicate the results of the tests for each environment. It seems like the pipelines are the only way to do this. We looked at the releases as potentially a way to run the tests immediately after deployment. But then we wouldn’t be able to easily see the test results.\n\nYeah pipelines are the way to go. I don't know if there are industry standard ways to do a setup for these purposes, that's why I've made this post.\n\nPossible solutions I've thought of, based on my knowledge of pipelines:\n\n- Tests can be run as Stages in the Release Pipelines, after deployment to a stage is complete. For example if tests fail on PreProd, deployment to Prod is blocked.\n- Alternatively, tests can be run as a separate pipeline which is triggered by another pipeline, which would be the pipeline that deploys the application. Azure DevOps REST API would then need to be used to implement a quality gate for the deployment to other environments, such as Prod.\n\nI've thought of these two ways so far since I've got no suggestions on this post and I've speedrun Azure Pipelines courses on YouTube.",
+  "FeedLevelAuthor": "Azure DevOps",
+  "FeedUrl": "https://www.reddit.com/r/azuredevops/.rss"
+}

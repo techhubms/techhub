@@ -1,0 +1,105 @@
+.site-subheader {
+    width: 100%;
+    margin: 0px auto !important;
+    padding: 10px;
+    background: rgba($dark-navy, 0.9);
+    border-bottom: 1px solid rgba($bright-purple, 0.2);
+    contain: layout style;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    min-height: 40px; // Ensure consistent height even when empty
+    box-sizing: border-box;
+}
+
+.collection-link {
+    position: relative;
+    font-weight: 500;
+    text-decoration: none;
+    color: $light-gray !important;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin: 0px 2px 0px 2px;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    font-size: 14px;
+    will-change: background, color;
+    flex-shrink: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    @media (hover: hover) {
+        &:hover {
+            background: rgba($bright-purple, 0.1);
+            color: $bright-purple;
+            transform: translateY(-1px);
+        }
+    }
+
+    &.active {
+        background: rgba($bright-purple, 0.2);
+        color: $bright-purple;
+        font-weight: 600;
+    }
+
+    &:visited {
+        color: $light-gray;
+
+        @media (hover: hover) {
+            &:hover {
+                color: $bright-purple;
+                transform: translateY(-1px);
+            }
+        }
+
+        &.active {
+            color: $bright-purple;
+        }
+    }
+}
+
+.section-collections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+    row-gap: 10px;
+    column-gap: 8px;
+    contain: layout;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section-collections.hidden {
+    display: none !important;
+}
+
+@media (max-width: #{$on-mobile}) {
+    .site-subheader {
+        padding: 8px 15px;
+        gap: 10px;
+    }
+
+    .collection-link {
+        padding: 6px 12px;
+        font-size: 13px;
+        will-change: auto;
+        transform: none;
+
+        @media (hover: hover) {
+            &:hover {
+                transform: none;
+            }
+        }
+
+        &:visited {
+            @media (hover: hover) {
+                &:hover {
+                    transform: none;
+                }
+            }
+        }
+    }
+}

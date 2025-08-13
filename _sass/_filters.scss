@@ -1,0 +1,143 @@
+.filter-count {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: 5px;
+}
+
+.filter-count.filter-width-1-digit {
+    width: 16px;
+}
+
+.filter-count.filter-width-2-digits {
+    width: 24px;
+}
+
+.filter-count.filter-width-3-digits {
+    width: 32px;
+}
+
+.tag-filter-btn {
+    margin: 2px;
+    padding: 0px 10px;
+    border: 1px solid rgba($bright-purple, 0.3);
+    background: rgba($light-gray, 0.1);
+    color: $light-gray;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    height: 32px; // Mobile touch target requirement (minimum 32px)
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+    will-change: background-color, border-color;
+    contain: layout style;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background: rgba($bright-purple, 0.2);
+            border-color: rgba($bright-purple, 0.5);
+            transform: translateZ(0); // Force hardware acceleration
+        }
+    }
+
+    &.active {
+        background: $medium-purple;
+        color: $light-gray;
+        border-color: $medium-purple;
+    }
+
+    &.disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        background: rgba($darker-gray, 0.2);
+        border-color: rgba($darker-gray, 0.6);
+        will-change: auto;
+    }
+
+    &.clear-btn {
+        background: $bright-red;
+        color: $light-gray;
+        border-color: $dark-red;
+
+        @media (hover: hover) {
+            &:hover {
+                background: $dark-red;
+            }
+        }
+    }
+
+    &.toggle-btn {
+        background: $bright-green;
+        color: $light-gray;
+        border-color: $bright-green;
+
+        @media (hover: hover) {
+            &:hover {
+                background: $dark-green;
+                border-color: $dark-green;
+            }
+        }
+
+        &.active {
+            background: $dark-gray;
+            color: $light-gray;
+            border-color: $dark-gray;
+        }
+    }
+
+    &.hidden-tag-btn {
+        display: none;
+
+        &.show {
+            display: inline-flex; 
+        }
+    }
+}
+
+.date-filter-btn {
+    @extend .tag-filter-btn;
+    // Darker purple inactive state for visual distinction from tag filters
+    background: rgba($medium-purple, 0.3);
+    border-color: rgba($medium-purple, 0.5);
+    color: $light-gray;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            // Lighter purple on hover - brighter than inactive but not as bright as active
+            background: rgba($medium-purple, 0.6);
+            border-color: rgba($medium-purple, 0.8);
+            color: $light-gray;
+        }
+    }
+
+    // Active state remains the same as current for consistency
+    &.active {
+        background: $medium-purple;
+        color: $light-gray;
+        border-color: $medium-purple;
+    }
+
+    // Disabled state - darker purple with reduced opacity
+    &.disabled {
+        background: rgba($medium-purple, 0.15);
+        border-color: rgba($medium-purple, 0.3);
+        opacity: 0.4;
+    }
+}
+
+@media (pointer: coarse) {
+    .tag-filter-btn.active,
+    .date-filter-btn.active {
+        background: $medium-purple !important;
+        color: $light-gray !important;
+        border-color: $medium-purple !important;
+    }
+}
+
+#tag-filters {
+    margin-bottom: 15px;
+    contain: layout style;
+}

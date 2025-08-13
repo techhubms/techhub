@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/github/.rss",
+  "Link": "https://www.reddit.com/r/github/comments/1mjd5ai/file_access_with_aiinference_action/",
+  "Tags": [
+    "github"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit GitHub",
+  "ProcessedDate": "2025-08-08 16:18:53",
+  "Title": "File access with ai-inference action?",
+  "FeedLevelAuthor": "Github: social coding",
+  "EnhancedContent": "I was trying out `actions/ai-inference@v1.2.8` with different models to do some file analysis on my repository, but I noticed it often responses with: \"I don't have direct access to the files...\" even after a `checkout` step\n\nI have in my Action workflow `contents: read` & `models: read`\n\nNot sure if there's a different permission or if `ai-inference` can even read repository files after checkout. Is that possible?\n\nSounds like it doesn't have access to the filesystem or to the CLI. You can enable the GitHub MCP to give it permissions to read stuff in the repo, but I'm not sure if it'll be able to search files.\n\nYou would have to somehow put the relevant files in the context before being able to use them.\n\nAlternatively, you could *make* your own GitHub Action that has better integration with the filesystem and provides some CLI as tools that it can run. It sounds like an interesting project.",
+  "Author": "AaronMT",
+  "PubDate": "2025-08-06T18:50:07+00:00",
+  "Description": "I was trying out `actions/ai-inference@v1.2.8` with different models to do some file analysis on my repository, but I noticed it often responses with: \"I don't have direct access to the files...\" even after a `checkout` step\n\nI have in my Action workflow `contents: read` & `models: read`\n\nNot sure if there's a different permission or if `ai-inference` can even read repository files after checkout. Is that possible?"
+}

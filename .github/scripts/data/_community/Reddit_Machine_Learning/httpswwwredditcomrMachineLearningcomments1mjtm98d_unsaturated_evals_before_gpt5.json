@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/MachineLearning/.rss",
+  "Link": "https://www.reddit.com/r/MachineLearning/comments/1mjtm98/d_unsaturated_evals_before_gpt5/",
+  "Tags": [
+    "MachineLearning"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Machine Learning",
+  "ProcessedDate": "2025-08-08 16:08:38",
+  "Title": "[D] Unsaturated Evals before GPT5",
+  "FeedLevelAuthor": "Machine Learning",
+  "EnhancedContent": "Ahead of today’s GPT-5 launch, I compiled a list of unsaturated LLM evals. Let's see if GPT-5 can crack them.\n\nlink: [https://rolandgao.github.io/blog/unsaturated_evals_before_gpt5](https://rolandgao.github.io/blog/unsaturated_evals_before_gpt5) x post: [https://x.com/Roland65821498/status/1953355362045681843](https://x.com/Roland65821498/status/1953355362045681843)\n\n[!\\[r/MachineLearning - \\\\[D\\\\] Unsaturated Evals before GPT5\\](https://preview.redd.it/d-unsaturated-evals-before-gpt5-v0-t3cwiitotjhf1.png?width=1302&amp;format=png&amp;auto=webp&amp;s=c480eced41526ffe3dd8a4fdb006464e9a10b7c3)](https://preview.redd.it/d-unsaturated-evals-before-gpt5-v0-t3cwiitotjhf1.png?width=1302&amp;format=png&amp;auto=webp&amp;s=c480eced41526ffe3dd8a4fdb006464e9a10b7c3)\n\nWhy? It's either going to be a very small step in a very long hill climb or a big step because of data leakage. Keep track of unsaturated benchmarks, sure, but don't hold your breath for GPT-5 to change the list much.\n\nPokeagent challenge is still very much unsaturated.\n\nWhere can i find this benchmark?\n\nThanks for compiling it!\n\nWhat about crowdsource benchmarks where humans are evaluators like Artificial Analysis, LM Arena, Design Arena, and Yupp?",
+  "Author": "Roland31415",
+  "PubDate": "2025-08-07T07:29:35+00:00",
+  "Description": "Ahead of today’s GPT-5 launch, I compiled a list of unsaturated LLM evals. Let's see if GPT-5 can crack them.\n\nlink: [https://rolandgao.github.io/blog/unsaturated_evals_before_gpt5](https://rolandgao.github.io/blog/unsaturated_evals_before_gpt5) x post: [https://x.com/Roland65821498/status/1953355362045681843](https://x.com/Roland65821498/status/1953355362045681843)\n\n[https://preview.redd.it/t3cwiitotjhf1.png?width=1302&format=png&auto=webp&s=098a7f2092afdf436a2699104accc49d01909f19](https://preview.redd.it/t3cwiitotjhf1.png?width=1302&format=png&auto=webp&s=098a7f2092afdf436a2699104accc49d01909f19)"
+}

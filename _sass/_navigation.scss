@@ -1,0 +1,104 @@
+// Base grid class for all navigation types
+.nav-grid-base {
+    display: grid;
+    gap: 20px;
+    margin: 0 auto 10px auto;
+    justify-content: center;
+    contain: layout;
+}
+
+// Base class for all square navigation elements - STRUCTURAL ONLY
+.nav-square-base {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    contain: layout style;
+    border: 1px solid rgba($bright-purple, 0.6);
+    border-radius: 12px;
+    color: $light-gray;
+
+    // Structural overlay element (styling in specific implementations)
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    // Structural content container (styling in specific implementations)
+    .nav-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        contain: layout style;
+        
+        // Base structural styling only
+        padding: 15px;
+        border-radius: 12px;
+        transition: border-color 0.2s ease;
+        will-change: border-color;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            border-color: $bright-purple;
+            transform: scale(1.05);
+        }
+    }
+
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+        text-decoration: none !important;
+
+        * {
+            text-decoration: none !important;
+        }
+    }
+
+    @media (max-width: $on-mobile) {
+        @media (hover: hover) {
+            &:hover {
+                transform: none; // Disable transform effects completely on small mobile
+            }
+        }
+    }
+}
+
+.nav-title-base {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: $light-gray;
+    contain: layout style;
+}
+
+.nav-desc-base {
+    font-size: 14px;
+    line-height: 1.4;
+    color: $light-gray;
+    contain: layout style;
+}

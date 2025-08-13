@@ -1,0 +1,14 @@
+{
+  "PubDate": "2025-07-31T17:00:00+00:00",
+  "EnhancedContent": "In today’s fast-evolving landscape, where businesses balance on-premises systems and cloud resources, identity-based cyberthreats are growing more frequent and sophisticated. The question isn’t whether an identity attack will occur—but when. The numbers are staggering: In 2024 Microsoft saw an average of more than 7,000 password attacks happen per second and a 146% increase in adversary-in-the-middle (AiTM) phishing attacks alone.1\n\nA unified approach to [identity threat detection and response](https://www.microsoft.com/en-us/security/business/solutions/identity-threat-detection-response) (ITDR) is no longer a luxury; it’s a necessity. Whether you are an identity admin or a security operations center (SOC) analyst, minimizing your risk starts with eliminating gaps in protection.\n\n[Get started with Microsoft Identity Threat Detection and Response](https://www.microsoft.com/en-us/security/business/solutions/identity-threat-detection-response)",
+  "FeedUrl": "https://www.microsoft.com/en-us/security/blog/feed/",
+  "Title": "Modernize your identity defense with Microsoft Identity Threat Detection and Response",
+  "FeedLevelAuthor": "Microsoft Security Blog",
+  "Link": "https://www.microsoft.com/en-us/security/blog/2025/07/31/modernize-your-identity-defense-with-microsoft-identity-threat-detection-and-response/",
+  "Tags": [],
+  "OutputDir": "_news",
+  "Author": "Eric Sachs and Yaron Paryanty",
+  "ProcessedDate": "2025-08-05 11:13:57",
+  "Description": "Microsoft's Identity Threat Detection and Response solution integrates identity and security operations to provide proactive, real-time protection against sophisticated identity-based cyberthreats.\n\nThe post [Modernize your identity defense with Microsoft Identity Threat Detection and Response](https://www.microsoft.com/en-us/security/blog/2025/07/31/modernize-your-identity-defense-with-microsoft-identity-threat-detection-and-response/) appeared first on [Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog).",
+  "FeedName": "Microsoft Security Blog"
+}

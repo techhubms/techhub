@@ -1,0 +1,18 @@
+{
+  "ProcessedDate": "2025-08-05 09:49:22",
+  "FeedUrl": "https://jessehouwing.net/rss/",
+  "EnhancedContent": "For any GitHub Actions' authors, this guidance could help you protect your GitHub Action from a similar fate, or at least makes it harder for an attacker to leverage a leaked token.\n\n[Protect the repository hosting your GitHub Action It comes as no surprise that the tags and branches solution to version GitHub Actions is weak at best. There have been rumors of Actions moving to a different model (GitHub Container Registry), but that is yet to see the light. !\\[\\](https://jessehouwing.net/content/images/icon/scrumbug-icon.png)Scrum BugJesse Houwing !\\[\\](https://jessehouwing.net/content/images/thumbnail/504886535_b8f8dad05e.jpg)](https://jessehouwing.net/protect-the-repository-hosting-your-github-action/)",
+  "FeedLevelAuthor": "Scrum Bug",
+  "OutputDir": "_posts",
+  "Tags": [
+    "GitHub",
+    "GitHub Actions",
+    "Security"
+  ],
+  "Author": "Jesse Houwing",
+  "FeedName": "Jesse Houwing's Blog",
+  "Link": "https://jessehouwing.net/repost-protect-the-repository-hosting-your-github-action/",
+  "Description": "This post, now 2 years old, is still very valid, especially in light of the changed-files hack recently.",
+  "Title": "(repost) Protect the repository hosting your GitHub Action",
+  "PubDate": "2025-03-25T18:17:02+00:00"
+}

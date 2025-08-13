@@ -1,0 +1,18 @@
+{
+  "OutputDir": "_news",
+  "Title": "Claude 3.7 Now Available in GitHub Copilot for Visual Studio",
+  "FeedUrl": "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/",
+  "Link": "https://devblogs.microsoft.com/visualstudio/claude-3-7-now-available-in-github-copilot-for-visual-studio/",
+  "Author": "Rhea Patel",
+  "ProcessedDate": "2025-08-05 07:55:44",
+  "EnhancedContent": "The world of AI is evolving at a breathtaking pace, and today brings an exciting milestone for developers and tech enthusiasts alike. Anthropic’s newest release, [**Claude 3.7**](https://www.anthropic.com/), is now available directly within GitHub Copilot for Visual Studio 2022 17.13, heralding a new era of seamlessly integrated, advanced AI coding assistance. This new Sonnet model supports the non-thinking modes in Copilot.\n\n[![Image image](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAaUAAADwAQMAAACaKOkdAAAAA1BMVEXW1taWrGEgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAI0lEQVRoge3BMQEAAADCoPVPbQdvoAAAAAAAAAAAAAAAAOA3MqAAAX7skIYAAAAASUVORK5CYII=)](https://devblogs.microsoft.com/visualstudio/wp-content/uploads/sites/4/2025/02/image.jpg)\n\n### How to Access Claude 3.7\n\nGetting started is easy:\n\n- **Open the Chat Window:** Click the Copilot badge at the top right of your Visual Studio interface.\n- **Launch Copilot Edit:** Open the chat window to initiate an editing session.\n- **Select Your Model:** In the prompt box, open the model picker. By default, ChatGPT 4 is selected, but you can easily switch to Claude 3.7 Sonnet to harness its advanced features.\n\nIf you don’t see Claude 3.7 as an option, there could be two reasons:\n\n1. **It’s not available for Copilot Free users.** Only paid Copilot users have access to this model.\n2. **You need to enable the policy for 3.7 Sonnet in your GitHub profile.** Make sure to enable Claude access in your [setting](https://github.com/settings/copilot).\n\n#### Learn More\n\nFor further details, check out the [Using Claude Sonnet in Copilot Chat – GitHub Docs.](https://docs.github.com/en/copilot/using-github-copilot/ai-models/using-claude-sonnet-in-github-copilot#about-claude-sonnet-in-github-copilot-chat)\n\nWe’re super excited about this enhancement to our development environment and can’t wait to hear your feedback. Let us know what you think!",
+  "Tags": [
+    "Anthropic",
+    "Copilot",
+    "GitHub Copilot"
+  ],
+  "PubDate": "2025-02-25T01:45:58+00:00",
+  "Description": "The world of AI is evolving at a breathtaking pace, and today brings an exciting milestone for developers and tech enthusiasts alike. Anthropic’s newest release, Claude 3.7, is now available directly within GitHub Copilot for Visual Studio 2022 17.13, heralding a new era of seamlessly integrated, advanced AI coding assistance. This new Sonnet model supports […]\n\nThe post [Claude 3.7 Now Available in GitHub Copilot for Visual Studio](https://devblogs.microsoft.com/visualstudio/claude-3-7-now-available-in-github-copilot-for-visual-studio/) appeared first on [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio).",
+  "FeedLevelAuthor": "Copilot - Visual Studio Blog",
+  "FeedName": "Microsoft DevBlog"
+}

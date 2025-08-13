@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/csharp/.rss",
+  "Link": "https://www.reddit.com/r/csharp/comments/1mkiokh/c_script_best_practices/",
+  "Tags": [
+    "csharp"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit CSharp",
+  "ProcessedDate": "2025-08-08 15:50:34",
+  "Title": "C# Script - Best Practices",
+  "FeedLevelAuthor": "C#",
+  "EnhancedContent": "Hi everyone,\n\nI’m working with a SCADA framework that lets each graphic form (screen) run its own C# script, and I’m looking for advice on best practices for writing and organizing these scripts.\n\nRight now, most logic is written directly in each form’s script editor, but I’d like to improve the structure for maintainability, reusability, and performance. Ideally, I’d like to follow cleaner coding patterns and possibly separate common code into shared libraries or DLLs.\n\nI’d like to know:\n\nHow do you structure your code when scripting directly in a SCADA framework?\n\nDo you use shared classes or DLLs for reusable functions?\n\nAny pitfalls to avoid when running C# in this kind of environment?\n\nGood resources or examples for learning how to design maintainable C# code for frameworks like this?\n\nAny recommendations, tips, or links would be really appreciated!\n\nThanks in advance!\n\nWithout more details it's hard to design that ... But look up SOLID and DRY design theory\n\nI don’t know anything about SCADA, but what comes to mind for me is keeping algorithmic complexity as simple as possible. The framework you are in is already giving every object an opportunity to perform calculations at some regular interval, so geometric slowdowns can happen if you don’t keep that in mind. You can do as many simple calculations as you want, as long as they aren’t being repeated by some factor that isn’t constant. Any time you are performing an operation against a variable sized group, you are introducing O(n\\*m) complexity\n\nAre you using ft optix?\n\nI dont have any recommendations, but I know Space Engineers devs used C# for their in game scripting. Maybe you could research (or ask them) to see what they did?",
+  "Author": "DouglasRoldan",
+  "PubDate": "2025-08-08T01:55:00+00:00",
+  "Description": "Hi everyone,\n\nI’m working with a SCADA framework that lets each graphic form (screen) run its own C# script, and I’m looking for advice on best practices for writing and organizing these scripts.\n\nRight now, most logic is written directly in each form’s script editor, but I’d like to improve the structure for maintainability, reusability, and performance. Ideally, I’d like to follow cleaner coding patterns and possibly separate common code into shared libraries or DLLs.\n\nI’d like to know:\n\nHow do you structure your code when scripting directly in a SCADA framework?\n\nDo you use shared classes or DLLs for reusable functions?\n\nAny pitfalls to avoid when running C# in this kind of environment?\n\nGood resources or examples for learning how to design maintainable C# code for frameworks like this?\n\nAny recommendations, tips, or links would be really appreciated!\n\nThanks in advance!"
+}

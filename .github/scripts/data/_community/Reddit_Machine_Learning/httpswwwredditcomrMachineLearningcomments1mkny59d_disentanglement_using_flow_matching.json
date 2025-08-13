@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/MachineLearning/.rss",
+  "Link": "https://www.reddit.com/r/MachineLearning/comments/1mkny59/d_disentanglement_using_flow_matching/",
+  "Tags": [
+    "MachineLearning"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Machine Learning",
+  "ProcessedDate": "2025-08-08 16:08:38",
+  "Title": "[D] Disentanglement using Flow matching",
+  "FeedLevelAuthor": "Machine Learning",
+  "EnhancedContent": "Hi,\n\nI’ve been considering flow matching models to disentangle attributes from an embedding. The idea stems from the fact that flow matching models learn smooth and invertible mappings.\n\nConsider a pre-trained embedding E, and disentangled features T1 and T2. Is it possible to learn a flow matching model to learn this mapping from E to T1 and T2 (and vice versa)?\n\nMy main concerns are -\n\n1. Distribution of E is known since its source distribution. But T1 and T2 are unknown. How will the model learn when it has a moving or unknown target?\n2. I was also wondering if some clustering losses can enable this learning?\n3. Another thought was to use some priors, but I am unsure as to what would be a good prior.\n\nPlease suggest ideas if this wouldnt work. Or advancements on this if it does.\n\nPrior work: A paper from ICCV 25 (“SCFlow”) does disentanglement using flow matching. But, they know the disentangled representations (Ground truth is available). So they provide T1 or T2 distributions to the model alternatively and ask it to learn the other.\n\nI've ran some experiments on this. While it was not difficult to do with traditional normalising flows (e.g. learn a flow from data to a mixture of moving Gaussians instead of N(0,1), or impose a contrastive loss on the latent), it becomes extremely unstable when you try the same trick with flow matching to learn a moving target distribution. One idea is to reparameterise the model entirely in terms of target values instead of velocity, and find an appropriate weighting between flow matching loss and your extra loss term to enforce disentanglement. Might need some very delicate balance between the losses to avoid divergence.",
+  "Author": "southern_brownie",
+  "PubDate": "2025-08-08T06:35:29+00:00",
+  "Description": "Hi,\n\nI’ve been considering flow matching models to disentangle attributes from an embedding. The idea stems from the fact that flow matching models learn smooth and invertible mappings.\n\nConsider a pre-trained embedding E, and disentangled features T1 and T2. Is it possible to learn a flow matching model to learn this mapping from E to T1 and T2 (and vice versa)?\n\nMy main concerns are - 1. Distribution of E is known since its source distribution. But T1 and T2 are unknown. How will the model learn when it has a moving or unknown target? 2. I was also wondering if some clustering losses can enable this learning? 3. Another thought was to use some priors, but I am unsure as to what would be a good prior.\n\nPlease suggest ideas if this wouldnt work. Or advancements on this if it does.\n\nPrior work: A paper from ICCV 25 (“SCFlow”) does disentanglement using flow matching. But, they know the disentangled representations (Ground truth is available). So they provide T1 or T2 distributions to the model alternatively and ask it to learn the other."
+}

@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/github/.rss",
+  "Link": "https://www.reddit.com/r/github/comments/1mj2de2/trying_to_push_in_the_powershell_but_stuck_in_the/",
+  "Tags": [
+    "github"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit GitHub",
+  "ProcessedDate": "2025-08-08 16:18:54",
+  "Title": "Trying to push in the Powershell but stuck in the Authentication",
+  "FeedLevelAuthor": "Github: social coding",
+  "EnhancedContent": "Trying to publish my work on github and doing this in the powershell via git. I enter the commands \"git push -u origin main\" but its just wants me to enter my username and pass. Even though I put my credentials right and use tokens it just giving me errors. Anybody know why?\n\nThanks.\n\nTry ssh or `gh auth` with the GitHub cli\n\njust reset the credential manager and it works now",
+  "Author": "ballssytetrapod",
+  "PubDate": "2025-08-06T11:43:35+00:00",
+  "Description": "Trying to publish my work on github and doing this in the powershell via git. I enter the commands \"git push -u origin main\" but its just wants me to enter my username and pass. Even though I put my credentials right and use tokens it just giving me errors. Anybody know why?\n\nThanks."
+}

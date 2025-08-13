@@ -1,0 +1,14 @@
+{
+  "Title": "Join me at DDC Cologne 2024",
+  "FeedName": "Harald Binkle's blog",
+  "OutputDir": "_posts",
+  "Tags": [],
+  "ProcessedDate": "2025-08-05 17:17:08",
+  "Description": "Join me at DDC Cologne 2024 for a workshop about test automation for web apps with Playwright.",
+  "Author": "Harald Binkle",
+  "Link": "https://harrybin.de/posts/joinmeatddccologne2024/",
+  "PubDate": "2024-11-10T09:00:00+00:00",
+  "EnhancedContent": "# Join me at DDC Cologne 2024\n\nPosted on:November 10, 2024 |  at 09:00 AM\n\nThe workshop will be held in German, so let’s switch to German for the rest of this post:\n\nAm **28. November 2024** findet die `DDC Cologne 2024` statt.\n\n![ddccologne](/_astro/ddccologne.BO7aU1Vb_ZRRzEL.webp)\n\nZusammen mit meinem Kollegen `Nico Orschel` , werde ich am Workshop-Tag (Samstag) einen [Workshop](https://www.dotnet-developer-conference.de/programm/) halten.\n\n## Workshop: Testautomatisierung für WebApps mit Playwright![Playwright-icon](../../../public/assets/playwright-logo.svg)\n\nBegleitet uns auf eine Entdeckungsreise durch die Erstellung von automatisierten Tests für Webanwendungen mit Playwright. Dieser Workshop bietet praktische Einblicke in die Entwicklung und Implementierung von Testautomatisierungslösungen, die die Zuverlässigkeit und Wartbarkeit von Webanwendungen verbessern. Eine ideale Lerngelegenheit für Entwickler, die ihre Testfähigkeiten erweitern möchten.\n\nMehr Infos zum Workshop gibt es auch in meinem [Sessionize Profil](https://sessionize.com/s/harald-binkle/testautomatisierung-fur-webapps-mit-playwright/85731).\n\n- [playwright](/tags/playwright)\n- [workshop](/tags/workshop)\n- [conference](/tags/conference)\n- [ddc-cologne](/tags/ddc-cologne)\n- [nico-orschel](/tags/nico-orschel)\n\nThis site uses cookies for analytics (Microsoft Clarity). By clicking Accept, you consent to the use of cookies for analytics purposes. See our [privacy policy](/privacy).",
+  "FeedLevelAuthor": "Harald Binkle",
+  "FeedUrl": "https://harrybin.de/rss.xml"
+}

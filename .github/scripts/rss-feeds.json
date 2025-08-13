@@ -1,0 +1,352 @@
+[
+  {
+    "name": "The GitHub Blog",
+    "outputDir": "_news",
+    "url": "https://github.blog/feed/"
+  },
+  {
+    "name": "The GitHub Blog",
+    "outputDir": "_news",
+    "url": "https://github.blog/changelog/feed/"
+  },
+  {
+    "name": "Microsoft DevBlog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
+  },
+  {
+    "name": "Microsoft DevBlog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/"
+  },
+  {
+    "name": "Microsoft DevBlog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/foundry/feed/"
+  },
+  {
+    "name": "Microsoft DevBlog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/semantic-kernel/feed/"
+  },
+  {
+    "name": "Microsoft DevBlog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/autogen/feed/"
+  },
+  {
+    "name": "Microsoft News",
+    "outputDir": "_news",
+    "url": "https://news.microsoft.com/source/feed/"
+  },
+  {
+    "name": "Rob Bos' Blog",
+    "outputDir": "_posts",
+    "url": "https://devopsjournal.io/blog/atom.xml"
+  },
+  {
+    "name": "Hidde de Smet's Blog",
+    "outputDir": "_posts",
+    "url": "https://hiddedesmet.com/feed.xml"
+  },
+  {
+    "name": "Jesse Houwing's Blog",
+    "outputDir": "_posts",
+    "url": "https://jessehouwing.net/rss/"
+  },
+  {
+    "name": "Jesse Swart's Blog",
+    "outputDir": "_posts",
+    "url": "https://blog.jesseswart.nl/index.xml"
+  },
+  {
+    "name": "Reddit Github Copilot",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/GithubCopilot.rss"
+  },
+  {
+    "name": "Reddit CSharp",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/csharp/.rss"
+  },
+  {
+    "name": "Reddit DotNet",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/dotnet/.rss"
+  },
+  {
+    "name": "Reddit AI Agents",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/AI_Agents/.rss"
+  },
+  {
+    "name": "Reddit Artificial Inteligence",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/ArtificialInteligence/.rss"
+  },
+  {
+    "name": "John Savill's Technical Training",
+    "outputDir": "_videos",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+  },
+  {
+    "name": "DotNet YouTube",
+    "outputDir": "_videos",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+  },
+  {
+    "name": "GitHub YouTube",
+    "outputDir": "_videos",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+  },  
+  {
+    "name": "Learn Microsoft AI Youtube",
+    "outputDir": "_videos",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
+  },
+  {
+    "name": "Harald Binkle's blog",
+    "outputDir": "_posts",
+    "url": "https://harrybin.de/rss.xml"
+  },
+  {
+    "name": "Reinier van Maanen's blog",
+    "outputDir": "_posts",
+    "url": "https://r-vm.com/feed.xml"
+  },
+  {
+    "name": "Zure Data & AI Blog",
+    "outputDir": "_posts",
+    "url": "https://zure.com/category/blog/feed/?tag=dataai"
+  },
+  {
+    "name": "DevOps Blog",
+    "outputDir": "_posts",
+    "url": "https://devops.com/feed/"
+  },
+  {
+    "name": "Reddit DevOps",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/devops/.rss"
+  },
+  {
+    "name": "Arrested DevOps",
+    "outputDir": "_posts",
+    "url": "https://www.arresteddevops.com/episode/index.xml"
+  },
+  {
+    "name": "Microsoft DevBlog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/devops/feed/"
+  },
+  {
+    "name": "Microsoft Tech Community",
+    "outputDir": "_community",
+    "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+  },
+  {
+    "name": "Microsoft Tech Community",
+    "outputDir": "_community",
+    "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet"
+  },
+  {
+    "name": "Microsoft Tech Community",
+    "outputDir": "_community",
+    "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI"
+  },
+  {
+    "name": "Randy Pagels's Blog",
+    "outputDir": "_posts",
+    "url": "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+  },
+  {
+    "name": "The Azure Blog",
+    "outputDir": "_news",
+    "url": "https://azure.microsoft.com/en-us/blog/feed/"
+  },
+  {
+    "name": "Microsoft DevBlog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/feed"
+  },
+  {
+    "name": "Microsoft DevBlog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/engineering-at-microsoft/feed/"
+  },
+  {
+    "name": "Microsoft DevBlog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/azure-notification-hubs/feed/"
+  },
+  {
+    "name": "Microsoft DevBlog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/all-things-azure/feed/"
+  },
+  {
+    "name": "Microsoft DevBlog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/openapi/feed/"
+  },
+  {
+    "name": "Microsoft DevBlog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/azure-sdk/feed/"
+  },
+  {
+    "name": "Reddit Azure",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/azure/.rss"
+  },
+  {
+    "name": "Reddit GitHub",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/github/.rss"
+  },
+  {
+    "name": "Microsoft Cloud YouTube",
+    "outputDir": "_videos",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
+  },
+  {
+    "name": "Scott Hanselman's Blog",
+    "outputDir": "_posts",
+    "url": "https://www.hanselman.com/blog/SyndicationService.asmx/GetRss"
+  },
+  {
+    "name": "Andrew Lock's Blog",
+    "outputDir": "_posts",
+    "url": "https://andrewlock.net/rss.xml"
+  },
+  {
+    "name": "Nick Chapsas YouTube",
+    "outputDir": "_videos",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
+  },
+  {
+    "name": "Microsoft Tech Community",
+    "outputDir": "_community",
+    "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+  },
+  {
+    "name": "David Fowler's Blog",
+    "outputDir": "_posts",
+    "url": "https://medium.com/feed/@davidfowl"
+  },
+  {
+    "name": "Steve Gordon's Blog",
+    "outputDir": "_posts",
+    "url": "https://www.stevejgordon.co.uk/feed"
+  },
+  {
+    "name": "Rick Strahl's Blog",
+    "outputDir": "_posts",
+    "url": "https://feeds.feedburner.com/rickstrahl"
+  },
+  {
+    "name": "Khalid Abuhakmeh's Blog",
+    "outputDir": "_posts",
+    "url": "https://khalidabuhakmeh.com/feed.xml"
+  },
+  {
+    "name": "Code Maze Blog",
+    "outputDir": "_posts",
+    "url": "https://code-maze.com/feed/"
+  },
+  {
+    "name": "Microsoft PowerShell Blog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/powershell/feed/"
+  },
+  {
+    "name": "Microsoft TypeScript Blog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/typescript/feed/"
+  },
+  {
+    "name": "Microsoft .NET Blog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/dotnet/feed/"
+  },
+  {
+    "name": "GitHub Engineering Blog",
+    "outputDir": "_news",
+    "url": "https://github.blog/engineering/feed/"
+  },
+  {
+    "name": "Thomas Maurer's Blog",
+    "outputDir": "_posts",
+    "url": "https://www.thomasmaurer.ch/feed/"
+  },
+  {
+    "name": "Microsoft Security Blog",
+    "outputDir": "_news",
+    "url": "https://www.microsoft.com/en-us/security/blog/feed/"
+  },
+  {
+    "name": "Microsoft Fabric Blog",
+    "outputDir": "_news",
+    "url": "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+  },
+  {
+    "name": "Reddit Microsoft",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/microsoft/.rss"
+  },
+  {
+    "name": "Reddit Visual Studio",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/VisualStudio/.rss"
+  },
+  {
+    "name": "Reddit Azure DevOps",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/azuredevops/.rss"
+  },
+  {
+    "name": "Reddit Machine Learning",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/MachineLearning/.rss"
+  },
+  {
+    "name": "Visual Studio Code YouTube",
+    "outputDir": "_videos",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+  },
+  {
+    "name": "Microsoft Developer YouTube",
+    "outputDir": "_videos",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+  },
+  {
+    "name": "Microsoft Events YouTube",
+    "outputDir": "_videos",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+  },
+  {
+    "name": ".NET Foundation's Blog",
+    "outputDir": "_posts",
+    "url": "https://dotnetfoundation.org/feeds/blog"
+  },
+  {
+    "name": "René van Osnabrugge's Blog",
+    "outputDir": "_posts",
+    "url": "https://roadtoalm.com/feed/"
+  },
+  {
+    "name": "Michiel van Oudheusden's Blog",
+    "outputDir": "_posts",
+    "url": "https://mindbyte.nl/feed.xml"
+  },
+  {
+    "name": "Dellenny's Blog",
+    "outputDir": "_posts",
+    "url": "https://dellenny.com/feed/"
+  },
+  {
+    "name": "DevClass",
+    "outputDir": "_posts",
+    "url": "https://devclass.com/feed/"
+  }
+]

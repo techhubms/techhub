@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/MachineLearning/.rss",
+  "Link": "https://www.reddit.com/r/MachineLearning/comments/1mkdw6f/r_crinn_free_fast_framework_for_approximate/",
+  "Tags": [
+    "MachineLearning"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Machine Learning",
+  "ProcessedDate": "2025-08-08 16:08:38",
+  "Title": "[R] CRINN: Free & Fast Framework for Approximate Nearest Neighbors Search",
+  "FeedLevelAuthor": "Machine Learning",
+  "EnhancedContent": "Approximate nearest-neighbor search (ANNS) algorithms have become increasingly critical for recent AI applications, particularly in retrieval-augmented generation (RAG) and agent-based LLM applications. In this paper, we present CRINN, a new paradigm for ANNS algorithms. CRINN treats ANNS optimization as a reinforcement learning problem where execution speed serves as the reward signal. This approach enables the automatic generation of progressively faster ANNS implementations while maintaining accuracy constraints. Our experimental evaluation demonstrates CRINN’s effectiveness across six widely-used NNS benchmark datasets. When compared against state-of-the-art open-source ANNS algorithms, CRINN achieves best performance on three of them (GIST-960-Euclidean, MNIST-784-Euclidean, and GloVe-25-angular), and tied for first place on two of them (SIFT-128-Euclidean and GloVe-25-angular). The implications of CRINN’s success reach well beyond ANNS optimization: It validates that LLMs augmented with reinforcement learning can function as an effective tool for automating sophisticated algorithmic optimizations that demand specialized knowledge and labor-intensive manual refinement.\n\n[https://github.com/deepreinforce-ai/CRINN](https://github.com/deepreinforce-ai/CRINN)",
+  "Author": "Optimal-Outcome-7458",
+  "PubDate": "2025-08-07T22:18:59+00:00",
+  "Description": "Approximate nearest-neighbor search (ANNS) algorithms have become increasingly critical for recent AI applications, particularly in retrieval-augmented generation (RAG) and agent-based LLM applications. In this paper, we present CRINN, a new paradigm for ANNS algorithms. CRINN treats ANNS optimization as a reinforcement learning problem where execution speed serves as the reward signal. This approach enables the automatic generation of progressively faster ANNS implementations while maintaining accuracy constraints. Our experimental evaluation demonstrates CRINN’s effectiveness across six widely-used NNS benchmark datasets. When compared against state-of-the-art open-source ANNS algorithms, CRINN achieves best performance on three of them (GIST-960-Euclidean, MNIST-784-Euclidean, and GloVe-25-angular), and tied for first place on two of them (SIFT-128-Euclidean and GloVe-25-angular). The implications of CRINN’s success reach well beyond ANNS optimization: It validates that LLMs augmented with reinforcement learning can function as an effective tool for automating sophisticated algorithmic optimizations that demand specialized knowledge and labor-intensive manual refinement.\n\n[https://github.com/deepreinforce-ai/CRINN](https://github.com/deepreinforce-ai/CRINN)"
+}

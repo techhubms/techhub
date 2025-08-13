@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:58",
+  "Title": "MCP in Microsoft Extensions.AI – Connect to Local MCP Server Easily",
+  "Author": "Learn Microsoft AI",
+  "FeedName": "Learn Microsoft AI Youtube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA",
+  "PubDate": "2025-04-30T02:30:13+00:00",
+  "Tags": [],
+  "FeedLevelAuthor": "Learn Microsoft AI",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=iYHh5n-6ez4",
+  "Description": "Join this channel to get access to perks: https://www.youtube.com/channel/UCQf\\_yRJpsfyEiWWpt1MZ6vA/join\n\nLinkedin : https://www.linkedin.com/in/rvinothrajendran/ github : https://github.com/rvinothrajendran Buy me a Coffee : https://buymeacoffee.com/vinothrajendran\n\nIn this video, we’ll walk you through how to connect to an MCP (Model Context Protocol) Server using Microsoft.Extensions.AI with a local setup. You’ll learn how to configure the MCP client, integrate it with your existing application, and enable real-time model context processing.\n\nSemantic Kernel link : https://www.youtube.com/watch?v=i3UfPHg8hM8"
+}

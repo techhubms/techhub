@@ -1,0 +1,16 @@
+{
+  "Title": "Best way to use Power Automate blocks and vNet?",
+  "FeedName": "Reddit Azure DevOps",
+  "OutputDir": "_community",
+  "Tags": [
+    "azuredevops"
+  ],
+  "ProcessedDate": "2025-08-05 17:37:33",
+  "Description": "",
+  "Author": "Unhappy_Positive5741",
+  "Link": "https://www.reddit.com/r/azuredevops/comments/1m8a0o6/best_way_to_use_power_automate_blocks_and_vnet/",
+  "PubDate": "2025-07-24T17:04:29+00:00",
+  "EnhancedContent": "Hey all,\n\nWould love to run a scenario by you and get some advice. I'm an AWS person without much Azure experience, but a project has come up and I started researching, if anyone sees anything wrong or stupid in what I found that would be very useful to know.\n\nEssentially we have a piece of logic that runs on files and returns some analysis of them, for simplicity of this example let's say it takes a file a returns the filesize.\n\nWe have customers who use Azure and they want to pay for this functionality, however they have two requirements and I'm wondering how to best fulfil both of them:\n\n1. Document must not leave their vNet\n2. Solution must be a no-code tool like Power Automate, so the users can create workflows like \"Every time a new document arrives in location X, send it to this block to get the filesize\" without writing any code.\n\nMy research suggested that we could do:\n\n1. Containerise functions for our document operation in Azure Container Registry (ACR) (or Azure Function on Premium)\n2. Update our function to accept locations of files within a customers vNet\n3. Create an Azure Managed Application (AMA) which contains our containerised service\n4. Add a gateway using Azure API Management (APIM), which is exposed to Power Automate via a custom connector through either an on‑prem data gateway or Power Platform VNet/Private Endpoint integration. As per #1, we need to receive links here, because Power Automate is still in the public cloud, so we can’t pass the file through. (Right?)\n5. Emit usage-only telemetry (Assumption that customers will be ok with this, if they want to block all egress we will have to rely on self-reporting.)\n6. We can push updates to our functions via the Managed App publisher pipeline\n\nThis seems... quite messy. So if the first comment is \"You're an idiot, you can do this much more simply by just...\" I'll be happy to be that idiot 🙂",
+  "FeedLevelAuthor": "Azure DevOps",
+  "FeedUrl": "https://www.reddit.com/r/azuredevops/.rss"
+}

@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet",
+  "Link": "https://techcommunity.microsoft.com/t5/app-development/is-it-normal-for-collectionview-to-lag-on-larger-lists-or-am-i/m-p/4441074#M1264",
+  "Tags": [],
+  "OutputDir": "_community",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2025-08-08 15:42:09",
+  "Title": "Is it normal for CollectionView to lag on larger lists, or am I missing an optimizaiton ?",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "EnhancedContent": "I've been working with .NET MAUI recently and have run into some performance concerns when using CollectionView. Specifically, when binding a large dataset  ( let's say 500+ items), the scrolling becomes noticeably sluggish, especially on Android\n\nI've tried a few basic optimizations, like setting **CachingStrategy  = \"RecycleElement\"**and minimizing the complexity of the **DataTemplate,** but the lag persists . I'm not using images or heavy UI elements either, it's just a simple text-based item template.\n\nis this kind of lag expected with MAUI's  **CollectionView** or is there a known workaround ? Are there additional performance tuning steps I should try ( virtualization tricks, async loading, grouping) ?",
+  "Author": "Bonilla",
+  "PubDate": "2025-08-07T12:12:29+00:00",
+  "Description": "I've been working with .NET MAUI recently and have run into some performance concerns when using CollectionView. Specifically, when binding a large dataset ( let's say 500+ items), the scrolling becomes noticeably sluggish, especially on Android\n\nI've tried a few basic optimizations, like setting **CachingStrategy = \"RecycleElement\"** and minimizing the complexity of the **DataTemplate,** but the lag persists . I'm not using images or heavy UI elements either, it's just a simple text-based item template.\n\nis this kind of lag expected with MAUI's **CollectionView** or is there a known workaround ? Are there additional performance tuning steps I should try ( virtualization tricks, async loading, grouping) ?"
+}

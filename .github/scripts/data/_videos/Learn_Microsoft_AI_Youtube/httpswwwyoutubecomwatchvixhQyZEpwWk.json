@@ -1,0 +1,24 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:58",
+  "Title": "Agent : Concurrent Orchestration in Semantic Kernel",
+  "Author": "Learn Microsoft AI",
+  "FeedName": "Learn Microsoft AI Youtube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA",
+  "PubDate": "2025-06-02T06:45:23+00:00",
+  "Tags": [
+    "AIAgents",
+    "AIDemo",
+    "AIinTamil",
+    "AIOrchestration",
+    "BrainstormingAI",
+    "ConcurrentPattern",
+    "DotNetAI",
+    "OpenAI",
+    "OpenAISolutions"
+  ],
+  "FeedLevelAuthor": "Learn Microsoft AI",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=ixhQyZEpwWk",
+  "Description": "Join this channel to get access to perks: https://www.youtube.com/channel/UCQf\\_yRJpsfyEiWWpt1MZ6vA/join\n\nLinkedin : https://www.linkedin.com/in/rvinothrajendran/ github : https://github.com/rvinothrajendran Buy me a Coffee : https://buymeacoffee.com/vinothrajendran In this video, I explain the Concurrent Pattern in AI agent orchestration and show you a working demo in action. 🔍 What’s Covered: What is the Concurrent Pattern? How it allows multiple agents to work on the same task in parallel Real-world use cases like brainstorming, ensemble reasoning & voting systems Hands-on coding demo with multiple agents running concurrently 📌 Each agent processes the input independently, and all results are collected and aggregated — perfect for scenarios where diverse perspectives are needed! 👉 Watch the full video and see how concurrent agents can bring more intelligence and flexibility to your AI apps! #AIAgents #ConcurrentPattern #OpenAI #AIDemo #BrainstormingAI #OpenAISolutions #AIinTamil #AIOrchestration #DotNetAI"
+}

@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/VisualStudio/.rss",
+  "Link": "https://www.reddit.com/r/VisualStudio/comments/1mkw756/copilot_does_not_remove_old_code/",
+  "Tags": [
+    "VisualStudio"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Visual Studio",
+  "ProcessedDate": "2025-08-08 16:03:39",
+  "Title": "Copilot does not remove old code",
+  "FeedLevelAuthor": "VisualStudio",
+  "EnhancedContent": "I'm using GitHub Copilot to modify existing code inside VS. In 75% cases when I ask to change something, after \"accept\" it inserts new code in the middle of existing one or before/after it, without removing old code. Is this everyone's experience and is there anything that can be done to avoid it?\n\nLLMs do not \"understand\" what you are asking it to do. It isn't intelligent in any way. All it does is predict the next most likely characters in a sequence of events. You're going to struggle massively if you intend to rely so heavily on it that you think it can just replace/delete old code without being asked to do so.\n\nPasting entire classes into it and saying \"fix this\" and expecting good results is a recipe for failure.\n\nIf you're going to use it, you need to ask for smaller blocks of code that you can describe accurately with clearly defined goals. It has no context for the \"bigger picture\" in which your code is running.\n\nThe bigger the block of code you paste into it, the more likely it is to fuck up.",
+  "Author": "BusyCode",
+  "PubDate": "2025-08-08T14:07:47+00:00",
+  "Description": "I'm using GitHub Copilot to modify existing code inside VS. In 75% cases when I ask to change something, after \"accept\" it inserts new code in the middle of existing one or before/after it, without removing old code. Is this everyone's experience and is there anything that can be done to avoid it?"
+}

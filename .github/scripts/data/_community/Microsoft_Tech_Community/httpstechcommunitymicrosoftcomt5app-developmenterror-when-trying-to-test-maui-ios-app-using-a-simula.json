@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet",
+  "Link": "https://techcommunity.microsoft.com/t5/app-development/error-when-trying-to-test-maui-ios-app-using-a-simulator-from-a/m-p/4425119#M1256",
+  "Tags": [],
+  "OutputDir": "_community",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2025-08-08 15:42:09",
+  "Title": "Error when trying to test Maui iOS app using a simulator from a Mac",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "EnhancedContent": "I am using VS2022 on a PC and have a Maui app that i want to test the iOS version on a simulator (Mac is running Sequoia).  However every time i try to run it it gives me the following error:\n\nMessagingRemoteException: An error occurred on client Build1808319 while executing a reply for topic xvs/build/18.0.8319/execute-task/App.iOS/cebe602002fUnpackLibraryResources NotImplementedException: The method or operation is not implemented.\n\nBoth PC and Mac are running .NET 8.0.411 and are running Maui 18.0.8319/8.0.100 from the SDK 8.0.400\n\nIs anyone having similar issues, is it a bug in the maui-iOS component or, does anyone know the answer to this?",
+  "Author": "birneyr",
+  "PubDate": "2025-06-18T11:55:42+00:00",
+  "Description": "I am using VS2022 on a PC and have a Maui app that i want to test the iOS version on a simulator (Mac is running Sequoia). However every time i try to run it it gives me the following error:\n\nMessagingRemoteException: An error occurred on client Build1808319 while executing a reply for topic xvs/build/18.0.8319/execute-task/App.iOS/cebe602002fUnpackLibraryResources NotImplementedException: The method or operation is not implemented.\n\nBoth PC and Mac are running .NET 8.0.411 and are running Maui 18.0.8319/8.0.100 from the SDK 8.0.400\n\nIs anyone having similar issues, is it a bug in the maui-iOS component or, does anyone know the answer to this?"
+}

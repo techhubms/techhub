@@ -1,0 +1,14 @@
+{
+  "Title": "Avoid These Common Prompts",
+  "FeedName": "Randy Pagels's Blog",
+  "OutputDir": "_posts",
+  "Tags": [],
+  "ProcessedDate": "2025-08-05 17:11:46",
+  "Description": "Learn why \"write a function\" gets you nowhere and what to ask for instead to get better results.",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "Link": "https://pagelsr.github.io/CooknWithCopilot/blog/avoid-these-common-prompts.html",
+  "PubDate": "2025-07-04T00:00:00+00:00",
+  "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Avoid These Common Prompts\n\n*Posted on Jul 4, 2025*\n\nUsage\n\nNot all Copilot prompts are created equal. Some generic, overused prompts actually limit Copilot’s potential and may get you bland, off-the-mark, or even flat-out wrong suggestions.\n\n**Prompts to avoid:**\n\n- “Write a function” (with no details)\n- “Fix this code” (with no context)\n- “Make this better”\n- “Generate unit tests” (with no requirements or examples)\n- “Explain this code” (with no file, method, or details provided)\n\nThese work, but they miss the power of Copilot. Copilot thrives on context and details!\n\nProTip\n\n**Be specific!**\n\n- Include the language and framework (“Write a Python function to…”)\n- Add constraints (“…using recursion”, “that handles errors”, “for all edge cases”)\n- Give Copilot code samples, expected input/output, or describe your intent (“Given an array of user records, filter…”)\n- For bug fixes, copy in the error message, stack trace, and code block\n\n**Better prompt examples:**\n- “In Python, write a function to find all unique values in a list, ignoring case.”\n- “Fix the following code to handle division by zero errors.”\n- “Generate unit tests for my ‘parseInvoice’ function to cover edge cases.”\n\nThe more context you give, the smarter Copilot becomes!",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "FeedUrl": "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+}

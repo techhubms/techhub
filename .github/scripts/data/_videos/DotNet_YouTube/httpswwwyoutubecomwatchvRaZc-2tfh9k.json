@@ -1,0 +1,26 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:46",
+  "Title": "ASP.NET Community Standup - Blazing-fast AI chat with ASP.NET Core & SignalR",
+  "Author": "dotnet",
+  "FeedName": "DotNet YouTube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "PubDate": "2025-07-29T18:12:29+00:00",
+  "Tags": [
+    "ai",
+    "aichat",
+    "aspnetcore",
+    "demo",
+    "developer",
+    "developercommunity",
+    "dotnet",
+    "dotnetdeveloper",
+    "microsoft",
+    "signalr",
+    "softwaredeveloper"
+  ],
+  "FeedLevelAuthor": "dotnet",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=RaZc-2tfh9k",
+  "Description": "Join us to hear from guest Shaltiel Shmidman, Deep Learning Developer at DICTA, about his experience building a performant, real-time AI chat application from the ground up using C#, ASP.NET Core, and SignalR as part of the recent T3 Chat Cloneathon. Highlights include safe streaming, automatic connection resumption after refresh, and smooth synchronization across browser tabs. See how C# and ASP.NET Core provide a surprisingly straightforward path to robust real-time AI applications.\n\n⌚ Chapters: 00:00 Countdown 02:30 Welcome 04:42 Intro Shaltiel 08:27 T3 Chat Cloneathon 12:28 Demo - NotT3Chat 42:48 Demo - Create a .NET AI app 56:36 How to get started with .NET and AI 57:07 Q&A 01:03:52 Wrap\n\n🔗 Community Links: https://www.theurlist.com/aspnet-standup-20250729\n\n🎙️ Featuring: Daniel Roth, Jon Galloway, Luis Quintanilla, Mike Kistler and Shaltiel Shmidman\n\n#dotnet #aspnetcore"
+}

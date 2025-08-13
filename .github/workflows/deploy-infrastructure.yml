@@ -1,0 +1,70 @@
+name: Deploy Infrastructure
+
+on:
+  workflow_dispatch:
+    inputs:
+      resourceGroupName:
+        description: 'Resource Group Name'
+        required: true
+        default: 'rg-tech-hub-ms'
+      location:
+        description: 'Azure Region'
+        required: true
+        default: 'westeurope'
+        type: choice
+        options:
+        - westeurope
+        - eastus
+        - centralus
+        - northeurope
+      sqlAdminLogin:
+        description: 'SQL Admin Username'
+        required: true
+        default: 'sqladmin'
+      enableStaticWebApp:
+        description: 'Deploy Static Web App'
+        required: true
+        default: true
+        type: boolean
+      repositoryUrl:
+        description: 'GitHub Repository URL'
+        required: false
+        default: 'https://github.com/${{ github.repository }}'
+      repositoryBranch:
+        description: 'Repository Branch'
+        required: false
+        default: 'main'
+
+jobs:
+  deploy-infrastructure:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Deploy Bicep template
+      uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        resourceGroupName: ${{ github.event.inputs.resourceGroupName }}
+        template: ./infra/main.bicep
+        parameters: >
+          location=${{ github.event.inputs.location }}
+          sqlAdminLogin=${{ github.event.inputs.sqlAdminLogin }}
+          sqlAdminPassword=${{ secrets.SQL_ADMIN_PASSWORD }}
+          enableStaticWebApp=${{ github.event.inputs.enableStaticWebApp }}
+          repositoryUrl=${{ github.event.inputs.repositoryUrl || format('https://github.com/{0}', github.repository) }}
+          repositoryBranch=${{ github.event.inputs.repositoryBranch }}
+          githubToken=${{ secrets.GITHUB_TOKEN }}
+        failOnStdErr: false
+
+    - name: Output deployment results
+      run: |
+        echo "Deployment completed!"
+        echo "Check the Azure portal for deployed resources in resource group: ${{ github.event.inputs.resourceGroupName }}"

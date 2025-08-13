@@ -1,0 +1,16 @@
+{
+  "Title": "VS Standard Collector Service 150 still running when updating",
+  "FeedName": "Reddit Visual Studio",
+  "OutputDir": "_community",
+  "Tags": [
+    "VisualStudio"
+  ],
+  "ProcessedDate": "2025-08-05 17:42:46",
+  "Description": "For this week's update of Community Edition, I selected \"update on close\", close VS, and the Installer tells me that this Collector Service is still running. I've never seen that before. Should I be worried?",
+  "Author": "SpareSimian",
+  "Link": "https://www.reddit.com/r/VisualStudio/comments/1mdb4vl/vs_standard_collector_service_150_still_running/",
+  "PubDate": "2025-07-30T16:25:48+00:00",
+  "EnhancedContent": "For this week's update of Community Edition, I selected \"update on close\", close VS, and the Installer tells me that this Collector Service is still running. I've never seen that before. Should I be worried?\n\nYou should not be worried. Sounds like you are actively programming now!\n\nNo, just end the process in task manager and re-try.\n\nI let the installer kill and restart it.\n\nMy concern is that I've done dozens of VS updates over the years and never seen this warning. Is it a new service that hasn't yet been properly integrated into the update process?",
+  "FeedLevelAuthor": "VisualStudio",
+  "FeedUrl": "https://www.reddit.com/r/VisualStudio/.rss"
+}

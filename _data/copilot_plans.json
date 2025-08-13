@@ -1,0 +1,333 @@
+[
+    {
+        "width": "100%",
+        "plans": [
+            {
+                "name": "Free",
+                "description": "A fast way to get started with GitHub Copilot",
+                "benefits": [
+                    "50 agent mode or chat requests per month",
+                    "2,000 completions per month",
+                    "Access to Claude 3.5 Sonnet, GPT-4.1, and more"
+                ]
+            }
+        ],
+        "features": [
+            {
+                "title": "Code Completion",
+                "videoUrl": "/2025-01-02-Code-Completion.html",
+                "ghes_support": true,
+                "description": "AI-powered code suggestions as you type in your editor"
+            },
+            {
+                "title": "Chat in IDE",
+                "videoUrl": "/2025-01-02-Chat-in-IDE.html",
+                "ghes_support": true,
+                "description": "Ask Copilot questions directly in your IDE for instant help"
+            },
+            {
+                "title": "Chat on Mobile",
+                "videoUrl": "/2024-12-23-Chat-on-Mobile.html",
+                "ghes_support": true,
+                "description": "Get coding assistance on-the-go with mobile chat"
+            },
+            {
+                "title": "CLI Assistance",
+                "videoUrl": "/2024-08-14-CLI-Assistance.html",
+                "ghes_support": true,
+                "description": "Streamline command line tasks with AI assistance"
+            },
+            {
+                "title": "Code Referencing",
+                "videoUrl": "",
+                "ghes_support": true,
+                "description": "See reference info when code matches public repositories"
+            },
+            {
+                "title": "Unit Tests",
+                "videoUrl": "/2025-01-02-Unit-Tests.html",
+                "ghes_support": true,
+                "description": "Automatically generate unit tests for your code"
+            },
+            {
+                "title": "Code Translation",
+                "videoUrl": "/2024-12-24-Code-Translation.html",
+                "ghes_support": true,
+                "description": "Convert code between different programming languages"
+            },
+            {
+                "title": "Code Documenting",
+                "videoUrl": "/2024-12-24-Code-Documenting.html",
+                "ghes_support": true,
+                "description": "Generate comprehensive documentation for your codebase"
+            },
+            {
+                "title": "Code Explanation",
+                "videoUrl": "/2024-08-14-Code-Explanation.html",
+                "ghes_support": true,
+                "description": "Get detailed explanations for complex code snippets"
+            },
+            {
+                "title": "Code Fixing",
+                "videoUrl": "",
+                "ghes_support": true,
+                "description": "Quickly fix coding errors with '/fix' command"
+            },
+            {
+                "title": "Code Debugging",
+                "videoUrl": "",
+                "ghes_support": true,
+                "description": "Debug with AI using call stack and variable insights"
+            },
+            {
+                "title": "Slash Commands",
+                "videoUrl": "",
+                "ghes_support": true,
+                "description": "Enhance workflow with powerful slash commands"
+            },
+            {
+                "title": "User Instructions",
+                "videoUrl": "/2024-08-15-User-Instructions.html",
+                "ghes_support": true,
+                "description": "Guide Copilot with custom instructions for your codebase"
+            },
+            {
+                "title": "Integration in Web UI",
+                "videoUrl": "",
+                "ghes_support": false,
+                "description": "Seamlessly use Copilot in your web browser"
+            },
+            {
+                "title": "PR Body Generation in WebUI",
+                "videoUrl": "/2024-12-17-PR-Body-Generation-in-WebUI.html",
+                "ghes_support": false,
+                "description": "Auto-generate detailed PR descriptions in GitHub web UI"
+            },
+            {
+                "title": "PR Body Generation in VS Code",
+                "videoUrl": "/2024-09-26-PR-Body-Generation-in-VS-Code.html",
+                "ghes_support": true,
+                "description": "Generate detailed PR descriptions directly in VS Code"
+            },
+            {
+                "title": "Ice Breakers",
+                "videoUrl": "/2025-01-02-Ice-Breakers.html",
+                "ghes_support": false,
+                "description": "Jump-start development with starter templates"
+            },
+            {
+                "title": "Local In-Editor Code Reviews",
+                "videoUrl": "/2024-12-16-Local-In-Editor-Code-Reviews.html",
+                "ghes_support": false,
+                "description": "Review and highlight code changes directly in VS Code"
+            },
+            {
+                "title": "Playwright Test Generation",
+                "videoUrl": "",
+                "ghes_support": false,
+                "description": "Generate UI tests with Playwright from existing code"
+            },
+            {
+                "title": "Commit Message Suggestions",
+                "videoUrl": "/2024-12-22-Commit-Message-Suggestions.html",
+                "ghes_support": false,
+                "description": "AI-generated commit messages based on your changes"
+            },
+            {
+                "title": "Commit Message Custom Instructions",
+                "videoUrl": "/2025-01-02-Commit-Message-Custom-Instructions.html",
+                "ghes_support": false,
+                "description": "Customize commit message style with tailored instructions"
+            },
+            {
+                "title": "Web Search with Bing",
+                "videoUrl": "",
+                "ghes_support": false,
+                "description": "Search the web directly from your coding environment"
+            },
+            {
+                "title": "Explain Failed Action Jobs",
+                "videoUrl": "",
+                "ghes_support": false,
+                "description": "Get help understanding and fixing failed GitHub Actions"
+            },
+            {
+                "title": "Fetch Webpage",
+                "videoUrl": "/2025-04-04-Fetch-Webpage.html",
+                "ghes_support": true,
+                "description": "Retrieve web pages as context for your prompts"
+            },
+            {
+                "title": "GPT-4o Copilot Suggestions Model",
+                "videoUrl": "/2025-04-09-GPT-4o-Copilot-Suggestions-Model.html",
+                "ghes_support": true,
+                "description": "Upgraded to GPT-4o for better code suggestions"
+            },
+            {
+                "title": "Next Edit Suggestions",
+                "videoUrl": "/2025-04-09-Next-Edit-Suggestions.html",
+                "ghes_support": true,
+                "description": "AI predicts and suggests your next code edits"
+            },
+            {
+                "title": "Premium Requests",
+                "videoUrl": "/2025-04-10-Premium-Requests.html",
+                "ghes_support": true,
+                "description": "Understand premium request limits and usage"
+            },
+            {
+                "title": "Agent Mode",
+                "videoUrl": "/2025-04-15-Agent-Mode.html",
+                "ghes_support": true,
+                "description": "AI agent iterates and improves your prompts automatically"
+            },
+            {
+                "title": "MCP with Azure and GitHub",
+                "videoUrl": "/2025-04-26-MCP-with-Azure-and-GitHub.html",
+                "ghes_support": true,
+                "description": "Supercharge Agent Mode with Azure and GitHub context"
+            },
+            {
+                "title": "Bring Your Own LLM",
+                "videoUrl": "/2025-05-02-Bring-Your-Own-LLM.html",
+                "ghes_support": true,
+                "description": "Use your own AI model in VS Code chat conversations"
+            },
+            {
+                "title": "Chat with your Pull Request",
+                "videoUrl": "",
+                "ghes_support": false,
+                "description": "Get AI insights and improvements on your pull requests"
+            },
+            {
+                "title": "@github Chat Participant",
+                "videoUrl": "/2024-12-24-atgithub-Chat-Participant.html",
+                "ghes_support": false,
+                "description": "Use Copilot as a participant in GitHub discussions"
+            },
+            {
+                "title": "Multi-Models",
+                "videoUrl": "/2024-12-16-Multi-Models.html",
+                "ghes_support": true,
+                "description": "Access multiple AI models for different coding tasks"
+            },
+            {
+                "title": "Multi-file Edits",
+                "videoUrl": "/2024-12-18-Multi-file-Edits.html",
+                "ghes_support": true,
+                "description": "Make changes across multiple files simultaneously"
+            },
+            {
+                "title": "Model selection",
+                "videoUrl": "/2025-07-16-GitHub-Copilot-Features-Model-selection.html",
+                "ghes_support": true,
+                "description": "Want to know which model to use? Here is an explainer for it!"
+            }
+        ]
+    },
+    {
+        "width": "50%",
+        "plans": [
+            {
+                "name": "Pro",
+                "description": "Unlimited completions and chats with access to more models",
+                "benefits": [
+                    "Everything in Free",
+                    "Unlimited agent mode and chats with GPT-4.1",
+                    "Unlimited code completions",
+                    "Access to code review, Claude 3.7/4 Sonnet, Gemini 2.5 Pro, and more",
+                    "6x more premium requests than Copilot Free",
+                    "Coding agent (preview)"
+                ]
+            },
+            {
+                "name": "Business",
+                "description": "For teams and organizations",
+                "benefits": [
+                    "Usage metrics",
+                    "Data excluded from training by default",
+                    "User management",
+                    "Content exclusions",
+                    "Policy management",
+                    "Access management",
+                    "Audit logs"
+                ]
+            }
+        ],
+        "features": [
+            {
+                "title": "Usage Metrics",
+                "videoUrl": "/2025-01-02-Usage-Metrics.html",
+                "ghes_support": false,
+                "description": "Track and analyze Copilot usage across your team"
+            },
+            {
+                "title": "Data Excluded From Training by Default",
+                "videoUrl": "",
+                "ghes_support": false,
+                "description": "Your code stays private and won't train AI models"
+            },
+            {
+                "title": "User Management",
+                "videoUrl": "",
+                "ghes_support": false,
+                "description": "Assign licenses per user, team, or organization"
+            },
+            {
+                "title": "Content Exclusions",
+                "videoUrl": "/2025-01-02-Content-Exclusions.html",
+                "ghes_support": false,
+                "description": "Exclude sensitive files from being sent to Copilot"
+            }
+        ]
+    },
+    {
+        "width": "50%",
+        "plans": [
+            {
+                "name": "Pro+",
+                "description": "Maximum flexibility and model choice",
+                "benefits": [
+                    "Everything in Pro",
+                    "Access to all models, including Claude Opus 4, o3, and GPT-4.5",
+                    "30x more premium requests than Copilot Free to use the latest models, with the option to buy more"
+                ]
+            },
+            {
+                "name": "Enterprise",
+                "description": "Enterprise-grade features for large organizations",
+                "benefits": [
+                    "Everything in Business",
+                    "Access to all models, including Claude Opus 4, o3, and GPT-4.5",
+                    "3.33x more premium requests than Business to use the latest models, with the option to buy more"
+                ]
+            }
+        ],
+        "features": [
+            {
+                "title": "Chat with Knowledge Bases",
+                "videoUrl": "",
+                "ghes_support": false,
+                "description": "Leverage organizational knowledge in your AI conversations"
+            },
+            {
+                "title": "Fine Tuned Models",
+                "videoUrl": "",
+                "ghes_support": false,
+                "description": "AI models customized specifically for your organization"
+            },
+            {
+                "title": "Set Coding Guidelines for Code Review",
+                "videoUrl": "",
+                "ghes_support": false,
+                "description": "Define custom coding standards for AI code reviews"
+            },
+            {
+                "title": "Preview for Copilot Workspace",
+                "videoUrl": "/2024-05-09-Preview-for-Copilot-Workspace.html",
+                "ghes_support": false,
+                "description": "Preview the collaborative Copilot Workspace environment"
+            }
+        ]
+    }
+]

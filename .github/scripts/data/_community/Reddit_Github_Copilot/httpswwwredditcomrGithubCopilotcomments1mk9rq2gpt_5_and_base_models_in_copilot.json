@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/GithubCopilot.rss",
+  "Link": "https://www.reddit.com/r/GithubCopilot/comments/1mk9rq2/gpt_5_and_base_models_in_copilot/",
+  "Tags": [
+    "GithubCopilot"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Github Copilot",
+  "ProcessedDate": "2025-08-08 16:34:45",
+  "Title": "GPT 5 and Base Models in Copilot",
+  "FeedLevelAuthor": "GitHubCopilot",
+  "EnhancedContent": "Let's fly with Copilot\n\nSeeing as GPT-5 is completely replacing ALL models in ChatGPT, even for free users, and since its roughly the same cost as 4.1 (cheaper in input and cached!), and also because 4.1 and 4o suck as base models, I request GPT 5 be the new base model across all plans, and Pro+ get GPT-5 Pro model as an option!.\n\nThat would be logical.\n\nBut they've set GPT-5 as a premium request (x1).\n\nBut it's strange, because then most people will end up using GPT-4.1, getting lower quality at the same computational cost. So they shouldn't gain anything from this.\n\nIn fact, it makes no sense for them to charge the same price as they do for third parties like Claude (where they are the ones getting paid).\n\nIt should be at most 0.5x, ideally 0x or 0.33x.\n\nI think it was mentioned its not a cost issue, but a capacity issue. Once they have the capacity, they will make it the base model\n\nI feel like after couple of weeks, GPT-5 might be the base model.\n\n> > >\n> ideally 0x\n> > > >\n\nThis is the way.\n\nI've been using gpt-5 this morning and tbh it's not much better than 4.1. outside of single file changes it seems to just give up partway. Hopefully they'll improve it over the next few weeks though\n\nGPT-5 should be a free foundational model, and version 4.1 should be taken offline.\n\nIt's a no brainier since it's not a higher cost model, but you'll have to wait for the server capacity as usual.\n\nAGREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE\n\nAbsolutely logical!\n\n4.1 and 4o mostly generate new bugs, therefore I never use them in any cases. Then there is no usable base model in GitHub Copilot right now forme\n\nWe can only hope wouldn’t be surprised if they kept it as paid in search of profit but would be really nice\n\nLet's fly with Copilot",
+  "Author": "WawWawington",
+  "PubDate": "2025-08-07T19:37:34+00:00",
+  "Description": "Seeing as GPT-5 is completely replacing ALL models in ChatGPT, even for free users, and since its roughly the same cost as 4.1 (cheaper in input and cached!), and also because 4.1 and 4o suck as base models, I request GPT 5 be the new base model across all plans, and Pro+ get GPT-5 Pro model as an option!."
+}

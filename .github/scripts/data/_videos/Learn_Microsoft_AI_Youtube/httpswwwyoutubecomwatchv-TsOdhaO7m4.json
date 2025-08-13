@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:58",
+  "Title": "Agent Orchestration : Transforming Inputs and Results in Semantic Kernel",
+  "Author": "Learn Microsoft AI",
+  "FeedName": "Learn Microsoft AI Youtube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA",
+  "PubDate": "2025-06-06T08:34:23+00:00",
+  "Tags": [],
+  "FeedLevelAuthor": "Learn Microsoft AI",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=-TsOdhaO7m4",
+  "Description": "Join this channel to get access to perks: https://www.youtube.com/channel/UCQf\\_yRJpsfyEiWWpt1MZ6vA/join\n\nLinkedin : https://www.linkedin.com/in/rvinothrajendran/ github : https://github.com/rvinothrajendran Buy me a Coffee : https://buymeacoffee.com/vinothrajendran we explore how developers can work with strongly-typed input and output models in AI agent workflows. By defining structured input classes, you can pass complex data into orchestrations in a type-safe manner, making your code more robust and easier to maintain. Similarly, agents and orchestrations can return structured outputs using custom classes, allowing your application to process rich, meaningful results—not just plain text. You'll learn: How to define and use strongly-typed input and output classes Where to apply InputTransform and ResultTransform for custom handling This approach unlocks a more modular, scalable, and reliable way to build AI agent systems."
+}

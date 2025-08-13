@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/VisualStudio/.rss",
+  "Link": "https://www.reddit.com/r/VisualStudio/comments/1mjk2n7/analyze_code_cleanup_broken_cc/",
+  "Tags": [
+    "VisualStudio"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Visual Studio",
+  "ProcessedDate": "2025-08-08 16:03:39",
+  "Title": "Analyze > Code Cleanup broken (C/C++)",
+  "FeedLevelAuthor": "VisualStudio",
+  "EnhancedContent": "Has anyone else had this issue? Trying to do Code Cleanup on the whole solution from the Analyze dropdown on the menu bar just does not work at all. I found a bug report about it from 2024, which Microsoft helpfully turned into a \"feature request\" and then never looked at again. Doing Code Cleanup on a single file from the little icon at the bottom works, and Code Cleanup on save also works. Just not from the Analyze menu or from right clicking and selecting Code Cleanup in the Solution Explorer.\n\nit's not supported in C++ indeed yet, please upvote [SuggestionTicket 2284151 Code Cleanup for entire C++ project/solution does not do anything](https://devdiv.visualstudio.com/DevDiv/_workitems/edit/2284151)\n\nBut the documentation says it works for C++? And it works fine from the file health bar thing and on save. I don't get why they would make it not work only for the whole solution but leave the button there and say it works. [https://learn.microsoft.com/en-us/visualstudio/ide/code-styles-and-code-cleanup?view=vs-2022&pivots=programming-language-cpp](https://learn.microsoft.com/en-us/visualstudio/ide/code-styles-and-code-cleanup?view=vs-2022&amp;pivots=programming-language-cpp)",
+  "Author": "kohuept",
+  "PubDate": "2025-08-06T23:21:36+00:00",
+  "Description": "Has anyone else had this issue? Trying to do Code Cleanup on the whole solution from the Analyze dropdown on the menu bar just does not work at all. I found a bug report about it from 2024, which Microsoft helpfully turned into a \"feature request\" and then never looked at again. Doing Code Cleanup on a single file from the little icon at the bottom works, and Code Cleanup on save also works. Just not from the Analyze menu or from right clicking and selecting Code Cleanup in the Solution Explorer."
+}

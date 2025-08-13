@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/github/.rss",
+  "Link": "https://www.reddit.com/r/github/comments/1mk1er6/its_better_to_stop_at_the_instruction_manual/",
+  "Tags": [
+    "github"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit GitHub",
+  "ProcessedDate": "2025-08-08 16:18:53",
+  "Title": "It's better to stop at the instruction manual",
+  "FeedLevelAuthor": "Github: social coding",
+  "EnhancedContent": "I don’t know anything about coding. I don’t know if anyone else feels this, but a lot of those GitHub install guides written by devs are just so hard to follow. Like, when am I supposed to type a command? Where do I type it? When should I click something? What even is the first step? It feels like it takes *forever* just to get one thing installed.\n\n> > >\n> I don’t know anything about coding.\n> > > >\n\ntldr;\n\nMost such install guides on GitHub are intended for tech-savvy people who already know a lot about computers, command line/terminal commands, etc. If a program on GitHub doesn’t offer an installer, then the question is why are you installing it? Most of those tools without installers that require such installation instructions aren’t meant for people who don’t understand those instructions.\n\nIf you want to build a house, you better know how to use the tools.\n\n> > >\n> I don’t know anything about coding\n> > > >\n\nThen, I'm afraid the projects on GitHub really aren't aimed at you. It's not an app store. It's a place for developers to share code with other developers.\n\nIf the developers cared about non-technical end-users, they would set up a website aimed at those people.\n\nThat's not, of course, to say that you can't download and use the software you find on GitHub, but you're in our world now and you need to do a bit of research in order to fit in.\n\nOh, and never run random code from GitHub without understanding it.",
+  "Author": "hzfounder",
+  "PubDate": "2025-08-07T14:21:37+00:00",
+  "Description": "I don’t know anything about coding. I don’t know if anyone else feels this, but a lot of those GitHub install guides written by devs are just so hard to follow. Like, when am I supposed to type a command? Where do I type it? When should I click something? What even is the first step? It feels like it takes *forever* just to get one thing installed."
+}

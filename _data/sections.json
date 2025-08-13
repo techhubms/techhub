@@ -1,0 +1,325 @@
+{
+    "all": {
+        "title": "Everything",
+        "description": "Browse all content across every section and collection. Your comprehensive hub for Microsoft technology resources, from AI and coding to security and DevOps.",
+        "url": "/all",
+        "section": "all",
+        "image": "/assets/section-backgrounds/all.jpg",
+        "category": "All",
+        "collections": [
+            {
+                "title": "News",
+                "url": "/all/news.html",
+                "collection": "news",
+                "description": "All news articles from official product sources across every section."
+            },
+            {
+                "title": "Blogs",
+                "url": "/all/posts.html",
+                "collection": "posts",
+                "description": "All blog posts and articles across every section."
+            },
+            {
+                "title": "Videos",
+                "url": "/all/videos.html",
+                "collection": "videos",
+                "description": "All educational videos and tutorials across every section."
+            },
+            {
+                "title": "Community",
+                "url": "/all/community.html",
+                "collection": "community",
+                "description": "All community discussions from Reddit and other platforms across every section."
+            },
+            {
+                "title": "Magazines",
+                "url": "/all/magazines.html",
+                "collection": "magazines",
+                "description": "All technical magazines and publications across every section."
+            },
+            {
+                "title": "Events",
+                "url": "/all/events.html",
+                "collection": "events",
+                "description": "All events and presentations across every section."
+            }
+        ]
+    },
+    "github-copilot": {
+        "title": "GitHub Copilot",
+        "description": "Master GitHub Copilot, your AI coding companion. Discover features, tips, and real-world insights to supercharge your development workflow.",
+        "url": "/github-copilot",
+        "section": "github-copilot",
+        "image": "/assets/section-backgrounds/github-copilot.jpg",
+        "category": "GitHub Copilot",
+        "collections": [
+            {
+                "title": "News",
+                "url": "/github-copilot/news.html",
+                "collection":"news",
+                "description": "GitHub Copilot news from their official product updates"
+            },
+            {
+                "title": "Blogs",
+                "url": "/github-copilot/posts.html",
+                "collection":"posts",
+                "description": "A collection of blogs that are worth your while"
+            },          
+            {
+                "title": "Community",
+                "url": "/github-copilot/community.html",
+                "collection":"community",
+                "description": "Reddit and other community resources related to GitHub Copilot."
+            },            
+            {
+                "title": "Magazines",
+                "url": "/github-copilot/magazines.html",
+                "collection":"magazines",
+                "description": "Magazines about GitHub Copilot and other technical topics."
+            },            
+            {
+                "title": "Features",
+                "url": "/github-copilot/features.html",
+                "description": "GitHub Copilot features and capabilities overview."
+            },
+            {
+                "title": "Levels of Enlightenment",
+                "url": "/github-copilot/levels-of-enlightenment.html",
+                "description": "Rob Bos's comprehensive guide to mastering GitHub Copilot through progressive learning stages."
+            }            
+        ]
+    },
+    "ai": {
+        "title": "AI",
+        "description": "Your gateway to the AI revolution. From breakthrough announcements to practical tutorials, explore how artificial intelligence is reshaping the way we work and create.",
+        "url": "/ai",
+        "section": "ai",
+        "image": "/assets/section-backgrounds/ai.jpg",
+        "category": "AI",
+        "collections": [
+            {
+                "title": "A(i) to Z",
+                "url": "/ai/ai-to-z.html",
+                "description": "A starting point for learning about AI."
+            },
+            {
+                "title": "News",
+                "url": "/ai/news.html",
+                "collection":"news",
+                "description": "News articles from official product sources."
+            },
+            {
+                "title": "Blogs",
+                "url": "/ai/posts.html",
+                "collection":"posts",
+                "description": "Blogs that are a must-read to keep up-to-date."
+            },
+            {
+                "title": "Videos",
+                "url": "/ai/videos.html",
+                "collection":"videos",
+                "description": "Videos we think are helpful for understanding and using AI."
+            },
+            {
+                "title": "Community",
+                "url": "/ai/community.html",
+                "collection":"community",
+                "description": "Reddit and other community resources related to AI."
+            },
+            {
+                "title": "Magazines",
+                "url": "/ai/magazines.html",
+                "collection":"magazines",
+                "description": "Magazines about AI and other technical topics."
+            },
+            {
+                "title": "Events",
+                "url": "/ai/events.html",
+                "collection":"events",
+                "description": "Events about AI"
+            }
+        ]
+    },
+    "ml": {
+        "title": "ML",
+        "description": "Master machine learning and data science with Microsoft's platform ecosystem. From custom model development to MLOps pipelines, explore the tools and techniques that power intelligent applications.",
+        "url": "/ml",
+        "section": "ml",
+        "image": "/assets/section-backgrounds/ml.jpg",
+        "category": "ML",
+        "collections": [
+            {
+                "title": "News",
+                "url": "/ml/news.html",
+                "collection": "news",
+                "description": "Latest machine learning and data science news from Microsoft AI platforms and research."
+            },
+            {
+                "title": "Blogs",
+                "url": "/ml/posts.html",
+                "collection": "posts",
+                "description": "In-depth articles about ML model development, data science workflows, and advanced analytics techniques."
+            },
+            {
+                "title": "Videos",
+                "url": "/ml/videos.html",
+                "collection": "videos",
+                "description": "Educational videos covering machine learning engineering, data science practices, and MLOps tutorials."
+            },
+            {
+                "title": "Community",
+                "url": "/ml/community.html",
+                "collection": "community",
+                "description": "Community discussions about machine learning development and data science from Reddit and other platforms."
+            }
+        ]
+    },    
+    "azure": {
+        "title": "Azure",
+        "description": "Navigate Microsoft's cloud universe. From infrastructure essentials to advanced deployment strategies, find the resources you need to build and scale on Azure.",
+        "url": "/azure",
+        "section": "azure",
+        "image": "/assets/section-backgrounds/azure.jpg",
+        "category": "Azure",
+        "collections": [
+            {
+                "title": "News",
+                "url": "/azure/news.html",
+                "collection": "news",
+                "description": "Latest Azure news and product updates from Microsoft."
+            },
+            {
+                "title": "Blogs",
+                "url": "/azure/posts.html",
+                "collection": "posts",
+                "description": "Curated blog posts about Azure development and best practices."
+            },
+            {
+                "title": "Videos",
+                "url": "/azure/videos.html",
+                "collection": "videos",
+                "description": "Educational videos covering Azure services and tutorials."
+            },
+            {
+                "title": "Community",
+                "url": "/azure/community.html",
+                "collection": "community",
+                "description": "Community discussions and insights about Azure from Reddit and other platforms."
+            },
+            {
+                "title": "Magazines",
+                "url": "/azure/magazines.html",
+                "collection": "magazines",
+                "description": "Technical magazines featuring Azure content and cloud architecture."
+            }
+        ]
+    },
+    "coding": {
+        "title": ".NET",
+        "description": "Dive into the .NET ecosystem with curated content that actually matters. From framework updates to battle-tested patterns, find what you need to build better software.",
+        "url": "/coding",
+        "section": "coding",
+        "image": "/assets/section-backgrounds/coding.jpg",
+        "category": "Coding",
+        "collections": [
+            {
+                "title": "News",
+                "url": "/coding/news.html",
+                "collection": "news",
+                "description": "Latest .NET and coding news from Microsoft and the developer community."
+            },
+            {
+                "title": "Blogs",
+                "url": "/coding/posts.html",
+                "collection": "posts",
+                "description": "Curated blog posts about .NET development, best practices, and coding techniques."
+            },
+            {
+                "title": "Videos",
+                "url": "/coding/videos.html",
+                "collection": "videos",
+                "description": "Educational videos covering .NET development, programming tutorials, and coding practices."
+            },
+            {
+                "title": "Community",
+                "url": "/coding/community.html",
+                "collection": "community",
+                "description": "Community discussions about .NET development and coding from Reddit and other platforms."
+            },
+            {
+                "title": "Magazines",
+                "url": "/coding/magazines.html",
+                "collection": "magazines",
+                "description": "Technical magazines featuring .NET development and programming content."
+            }
+        ]
+    },    
+    "devops": {
+        "title": "DevOps",
+        "description": "Transform your development lifecycle with proven DevOps methodologies. Explore automation, collaboration tools, CI/CD pipelines, and agile practices that streamline software delivery.",
+        "url": "/devops",
+        "section": "devops",
+        "image": "/assets/section-backgrounds/devops.jpg",
+        "category": "DevOps",
+        "collections": [
+            {
+                "title": "News",
+                "url": "/devops/news.html",
+                "collection": "news",
+                "description": "Latest DevOps news and updates from Microsoft and the community."
+            },
+            {
+                "title": "Blogs",
+                "url": "/devops/posts.html",
+                "collection": "posts",
+                "description": "Curated blog posts about DevOps practices, tools, and methodologies."
+            },
+            {
+                "title": "Videos",
+                "url": "/devops/videos.html",
+                "collection": "videos",
+                "description": "Educational videos covering DevOps tools, practices, and case studies."
+            },
+            {
+                "title": "Community",
+                "url": "/devops/community.html",
+                "collection": "community",
+                "description": "Community discussions about DevOps from Reddit and other platforms."
+            }
+        ]
+    },
+    "security": {
+        "title": "Security",
+        "description": "Navigate Microsoft's comprehensive security landscape. From identity management to threat protection, discover the tools and practices that keep your organization secure.",
+        "url": "/security",
+        "section": "security",
+        "image": "/assets/section-backgrounds/security.jpg",
+        "category": "Security",
+        "collections": [
+            {
+                "title": "News",
+                "url": "/security/news.html",
+                "collection": "news",
+                "description": "Latest Microsoft security news and product updates."
+            },
+            {
+                "title": "Blogs",
+                "url": "/security/posts.html",
+                "collection": "posts",
+                "description": "Curated blog posts about Microsoft security solutions and best practices."
+            },
+            {
+                "title": "Videos",
+                "url": "/security/videos.html",
+                "collection": "videos",
+                "description": "Educational videos covering Microsoft security services and tutorials."
+            },
+            {
+                "title": "Community",
+                "url": "/security/community.html",
+                "collection": "community",
+                "description": "Community discussions about Microsoft security from Reddit and other platforms."
+            }
+        ]
+    }
+}

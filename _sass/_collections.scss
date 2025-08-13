@@ -1,0 +1,43 @@
+// Collections grid (Section index - News, Videos, Community, etc.)
+.collections-grid {
+    @extend .nav-grid-base;
+    
+    @media (min-width: $navigation-breakpoint) {
+        grid-template-columns: repeat($collections-grid-desktop, 1fr);
+    }
+    
+    @media (max-width: #{$navigation-breakpoint - 1px}) {
+        grid-template-columns: repeat($collections-grid-mobile, 1fr);
+    }
+}
+
+.collection-square {
+    @extend .nav-square-base;
+
+    // Visual styling (moved from base class)
+    background: rgba($medium-blue, 0.10);
+
+    // Visual styling for content
+    .collection-content {
+        @extend .nav-content;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            // Visual styling on hover (moved from base class)
+            background: rgba($medium-blue, 0.18);
+        }
+    }
+
+    @media (max-width: $on-mobile) {
+        will-change: auto;
+    }
+}
+
+.collection-title {
+    @extend .nav-title-base;
+}
+
+.collection-desc {
+    @extend .nav-desc-base;
+}

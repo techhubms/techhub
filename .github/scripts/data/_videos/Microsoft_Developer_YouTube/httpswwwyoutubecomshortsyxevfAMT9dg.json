@@ -1,0 +1,22 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:20",
+  "Title": "Do you copy and paste random code snippets into your apps?",
+  "Author": "Microsoft Developer",
+  "FeedName": "Microsoft Developer YouTube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "PubDate": "2025-07-31T16:01:40+00:00",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/shorts/yxevfAMT9dg",
+  "Description": "At Microsoft Build 2025, we asked attendees and some special guests about developer security. Learn more about developer security and the Secure Future Initiative at http://aka.ms/SFIwebsite"
+}

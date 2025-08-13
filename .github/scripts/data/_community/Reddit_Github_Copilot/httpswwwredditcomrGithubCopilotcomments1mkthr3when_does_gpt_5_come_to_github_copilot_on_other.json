@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/GithubCopilot.rss",
+  "Link": "https://www.reddit.com/r/GithubCopilot/comments/1mkthr3/when_does_gpt_5_come_to_github_copilot_on_other/",
+  "Tags": [
+    "GithubCopilot"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Github Copilot",
+  "ProcessedDate": "2025-08-08 16:34:45",
+  "Title": "When does Gpt 5 come to Github Copilot on other ides like Eclipse and Intellij ?",
+  "FeedLevelAuthor": "GitHubCopilot",
+  "EnhancedContent": "Let's fly with Copilot\n\nI am a paid user for Github Copilot plugin and I have enable Gpt 5 in Github Copilot setting on Github. I do see it on Vscode as an option on chat as Gpt 5 (Preview) but I do not see it as an option on the Intellij Github Copilot chat and not on the Eclipse Github Copilot chat ? When will it be an option on those other ides especially Eclipse ???\n\nHello [u/Least-Ad5986](/user/Least-Ad5986/). Looks like you have posted a query. Once your query is resolved, please comment \"!solved\" to mark the post as solved.\n\n*I am a bot, and this action was performed automatically. Please* [*contact the moderators of this subreddit*](/message/compose/?to=/r/GithubCopilot) *if you have any questions or concerns.*\n\nIt's already available on my vsc, I have the pro plan.\n\nHowever it is horrendously slow, I suspect it's being hammered by millions of devs etc right now.\n\nLet's fly with Copilot",
+  "Author": "Least-Ad5986",
+  "PubDate": "2025-08-08T12:11:06+00:00",
+  "Description": "I am a paid user for Github Copilot plugin and I have enable Gpt 5 in Github Copilot setting on Github. I do see it on Vscode as an option on chat as Gpt 5 (Preview) but I do not see it as an option on the Intellij Github Copilot chat and not on the Eclipse Github Copilot chat ? When will it be an option on those other ides especially Eclipse ???"
+}

@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://github.blog/changelog/label/copilot/feed/",
+  "Link": "https://github.blog/changelog/2025-08-08-defense-of-third-party-claims-added-for-volume-licensing-customers",
+  "Tags": [],
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2025-08-08 19:12:31",
+  "Title": "Defense of third-party claims added for volume licensing customers",
+  "FeedLevelAuthor": "Use Case: copilot - GitHub Changelog",
+  "EnhancedContent": "We’ve updated our Pre-release License Terms to make it easier for our enterprise customers to try out GitHub preview features.\n\n- **Indemnity now included**: Volume licensing customers are now covered by indemnity protections when using pre-release software and its outputs.\n- **No more blanket exclusion**: We’ve removed the previous “no indemnity” language from our pre-release terms.\n- **Liability cap removed**: The usual liability cap does not apply to these new indemnity protections.\n\n### Who’s covered?\n\nCustomers using GitHub under a GitHub Customer Agreement or Microsoft volume licensing agreement.\n\n> >\n> ***Note:** Individual users and other plan types are not affected by this change.*\n> >\n\nEffective date: July 9, 2025\n\n**Read the terms:**\n\n[Pre-Release License Terms (see Sections 10 & 12)](https://docs.github.com/site-policy/github-terms/github-pre-release-license-terms)\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "Author": "Allison",
+  "PubDate": "2025-08-08T16:05:36+00:00",
+  "Description": "We’ve updated our Pre-release License Terms to make it easier for our enterprise customers to try out GitHub preview features. Indemnity now included: Volume licensing customers are now covered by…\n\nThe post [Defense of third-party claims added for volume licensing customers](https://github.blog/changelog/2025-08-08-defense-of-third-party-claims-added-for-volume-licensing-customers) appeared first on [The GitHub Blog](https://github.blog)."
+}

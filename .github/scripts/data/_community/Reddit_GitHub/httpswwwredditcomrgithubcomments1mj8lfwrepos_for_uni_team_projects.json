@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/github/.rss",
+  "Link": "https://www.reddit.com/r/github/comments/1mj8lfw/repos_for_uni_team_projects/",
+  "Tags": [
+    "github"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit GitHub",
+  "ProcessedDate": "2025-08-08 16:18:53",
+  "Title": "Repos for uni team projects?",
+  "FeedLevelAuthor": "Github: social coding",
+  "EnhancedContent": "Hey all, I'm not sure how teams that are working on something like a uni project organize the repositories.\n\nDoes someone make the repository and add everyone else as a contributor? I thought of doing that but the problem is that the number of contributors per repo is limited, also i don't think having all the projects' repos under my account is fair.\n\nI thought about making a GitHub organization only for these kind of projects (same team) but I'm not sure if it's overkill or unnecessary for something like this.\n\nAny opinions?\n\nI think an organization makes sense, too. Besides being a more neutral way to organize (lol) the code, it’s also an opportunity to learn more about the management services GitHub offers.\n\nI agree, I will keep that in mind.\n\nThank you :)\n\nI'd do an organization, if only to add a second owner if people work in a team.\n\nAlso, seriously, genuinely: If it's part of your course, your professor should be able to give you recommendations. Or they should rethink their course.\n\nCan't start running without crawling.\n\nEven a college or university professor must be (somewhat) attached to reality. You can't tell people to solve a problem without providing the fundamentals for it.\n\nIf they ask you to use GitHub, they should provide you with an account and a setup, and they should have it in the curriculum.\n\nIf you do it out of your own desire to learn, start with a repo that you share. Find out if it's hard or not and then reread the first paragraph. Then think about what that gives you and whether it's worth doing it :)\n\nWe are doing it to learn on our own. We would collaborate on a project that is usually under my account, then turn it in.\n\nI thought of doing an organization so that when they want to reference that project or something they wouldn't need to link to my account I thought it was very unfair, not necessarily to add a second owner.\n\nDo you think this would be a good use of orgs or will it be overkill?",
+  "Author": "newbie12345431",
+  "PubDate": "2025-08-06T16:00:09+00:00",
+  "Description": "Hey all, I'm not sure how teams that are working on something like a uni project organize the repositories.\n\nDoes someone make the repository and add everyone else as a contributor? I thought of doing that but the problem is that the number of contributors per repo is limited, also i don't think having all the projects' repos under my account is fair.\n\nI thought about making a GitHub organization only for these kind of projects (same team) but I'm not sure if it's overkill or unnecessary for something like this.\n\nAny opinions?"
+}

@@ -1,0 +1,20 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:58",
+  "Title": "C# 14 New Feature: Null-Conditional Assignment in .NET 10 #CSharp14 #.Net10  #CleanCode #VS",
+  "Author": "Learn Microsoft AI",
+  "FeedName": "Learn Microsoft AI Youtube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA",
+  "PubDate": "2025-05-06T05:27:38+00:00",
+  "Tags": [
+    "CleanCode",
+    "CSharp14",
+    "CSharpFeatures",
+    "DotNet10",
+    "NullConditional"
+  ],
+  "FeedLevelAuthor": "Learn Microsoft AI",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=q0xyeA1xPng",
+  "Description": "Join this channel to get access to perks: https://www.youtube.com/channel/UCQf\\_yRJpsfyEiWWpt1MZ6vA/join\n\nLinkedin : https://www.linkedin.com/in/rvinothrajendran/ github : https://github.com/rvinothrajendran Buy me a Coffee : https://buymeacoffee.com/vinothrajendran\n\nLearn about a new feature in C# 14 introduced with .NET 10 — null-conditional assignment using ?. and ?[] on the left-hand side of assignments. This powerful update ensures the right-hand side is only evaluated when the target isn't null, helping you write cleaner and safer code!\n\n#CSharp14 #DotNet10 #NullConditional #CSharpFeatures #CleanCode"
+}

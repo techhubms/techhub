@@ -1,0 +1,25 @@
+{
+  "EnhancedContent": null,
+  "FeedName": "DotNet YouTube",
+  "FeedLevelAuthor": "dotnet",
+  "Description": "What if you could process over 20,000 sentences per second without breaking the bank?\n\nIn this session, we’ll explore how to take AI workloads traditionally built in Python and turbocharge them using .NET. We’ll cover the journey from Hugging Face models and leveraging ONNX Runtime, to the latest .NET 9 & 10 APIs, and the design of a flexible, high-performance AI library with no hard dependency on any single inference engine or hardware.\n\nExpect real demos, GPU utilization comparisons, and practical tips for moving from ML research to production-ready AI—while keeping costs low and performance high.\n\n🔗 Community Links: https://learn.microsoft.com/en-us/collections/yjwzhet31ez28w\n\n🎙️ Featuring: Bruno Capuano (https://www.linkedin.com/in/elbruno/) Tal Wald (https://www.linkedin.com/in/tal-wald/)\n\n#dotnet #AI #ONNX #MachineLearning",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Link": "https://www.youtube.com/watch?v=ptdNWGj8CN8",
+  "PubDate": "2025-08-06T20:46:02+00:00",
+  "Author": "dotnet",
+  "Title": ".NET AI Community Standup - ⚡Blazing-Fast AI Inference on a Budget",
+  "ProcessedDate": "2025-08-08 15:37:48",
+  "OutputDir": "_videos",
+  "Tags": [
+    "AIML",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetdeveloper",
+    "MachineLearning",
+    "onnx",
+    "softwaredeveloper"
+  ]
+}

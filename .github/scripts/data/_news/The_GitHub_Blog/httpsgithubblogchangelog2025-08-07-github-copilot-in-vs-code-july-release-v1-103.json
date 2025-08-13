@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://github.blog/changelog/label/copilot/feed/",
+  "Link": "https://github.blog/changelog/2025-08-07-github-copilot-in-vs-code-july-release-v1-103",
+  "Tags": [],
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2025-08-08 15:36:08",
+  "Title": "GitHub Copilot in VS Code July release (v1.103)",
+  "FeedLevelAuthor": "Use Case: copilot - GitHub Changelog",
+  "EnhancedContent": "The July 2025 update to GitHub Copilot in Visual Studio Code (v1.103) focuses on making chat and agent workflows more reliable and easier to manage. Below are select highlights from this release.\n\n### Highlights\n\n- **Chat checkpoints and edit workflow**: Restore workspace state and chat history to previous points with chat checkpoints or edit prior requests inline for fine-tuning.\n- **UI improvements to enhance focus**: Try the revamped tool picker (Quick Tree) to easily enable agent tools and personalize the model picker with only the models you want to appear in the UI.\n- **More reliable terminal and task interactions**: Built-in run-in-terminal and task tools moved into core VS Code to reduce hanging terminals and enable richer integrations. Shell-integration warnings, consolidated terminal auto-approve settings, and output polling for long-running tasks improve safety and observability.\n\n### Experimental & preview features\n\n- **Task lists in agent mode (experimental)**: Agents can maintain visible to-do lists in chat to track multi-step plans.\n- **Tool grouping for large toolsets (experimental)**: When available tools exceed the per-request threshold, Copilot can group tools so a single request can work across many tools.\n- **Dedicated coding agent sessions & Chat Sessions view (experimental)**: Manage Copilot coding agent sessions in dedicated chat editors or a Chat Sessions view to follow progress, provide follow-ups, and interact with long-running coding agent workflows.\n\nExplore all new features and fixes in the [full release notes](https://code.visualstudio.com/updates/v1_103). Happy coding!",
+  "Author": "Allison",
+  "PubDate": "2025-08-07T23:01:07+00:00",
+  "Description": "The July 2025 update to GitHub Copilot in Visual Studio Code (v1.103) focuses on making chat and agent workflows more reliable and easier to manage. Below are select highlights from…\n\nThe post [GitHub Copilot in VS Code July release (v1.103)](https://github.blog/changelog/2025-08-07-github-copilot-in-vs-code-july-release-v1-103) appeared first on [The GitHub Blog](https://github.blog)."
+}

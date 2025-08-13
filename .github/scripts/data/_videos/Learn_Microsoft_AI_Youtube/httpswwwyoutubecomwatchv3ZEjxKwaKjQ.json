@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:58",
+  "Title": "Semantic Kernel Agent Orchestration",
+  "Author": "Learn Microsoft AI",
+  "FeedName": "Learn Microsoft AI Youtube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA",
+  "PubDate": "2025-05-26T10:48:05+00:00",
+  "Tags": [],
+  "FeedLevelAuthor": "Learn Microsoft AI",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=3ZEjxKwaKjQ",
+  "Description": "Join this channel to get access to perks: https://www.youtube.com/channel/UCQf\\_yRJpsfyEiWWpt1MZ6vA/join\n\nLinkedin : https://www.linkedin.com/in/rvinothrajendran/ github : https://github.com/rvinothrajendran Buy me a Coffee : https://buymeacoffee.com/vinothrajendran\n\nTraditional single-agent systems often fall short when it comes to tackling complex, real-world problems. That’s where multi-agent orchestration comes in. With Semantic Kernel, you can coordinate multiple intelligent agents—each with its own specialized skills—to work together smoothly and efficiently. This approach allows for smarter, more adaptive solutions that scale with your needs. In this video, we’ll explore how Semantic Kernel enables powerful agent collaboration and flexible coordination patterns to build next-level AI systems.\n\nHow to Build Multi-Agent Systems Using Semantic Kernel https://www.youtube.com/watch?v=JTok1pXORC0&t=1s"
+}

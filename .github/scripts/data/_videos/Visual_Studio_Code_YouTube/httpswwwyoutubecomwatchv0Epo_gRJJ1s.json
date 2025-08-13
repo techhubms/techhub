@@ -1,0 +1,26 @@
+{
+  "EnhancedContent": null,
+  "FeedName": "Visual Studio Code YouTube",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Description": "Pierce and James are showing off the latest models inside of Visual Studio Code including the newly released GPT-5! We'll also show off some new features to customize your workflow with Copilot.\n\n🔗 Community Links: https://github.blog/changelog/2025-08-07-openai-gpt-5-is-now-in-public-preview-for-github-copilot/\n\n🎙️ Featuring: Burke Holland, Pierce Boggan, James Montemagno\n\n#vscode #githubcopilot #gpt5",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Link": "https://www.youtube.com/watch?v=0Epo_gRJJ1s",
+  "PubDate": "2025-08-07T23:16:05+00:00",
+  "Author": "Visual Studio Code",
+  "Title": "🔴 Let it Cook with GPT-5 - Episode 11",
+  "ProcessedDate": "2025-08-08 15:37:12",
+  "OutputDir": "_videos",
+  "Tags": [
+    "AI",
+    "code",
+    "demo",
+    "developer",
+    "developertools",
+    "GPT5",
+    "microsoft",
+    "softwaredeveloper",
+    "vibecoding",
+    "visualstudiocode",
+    "vscode"
+  ]
+}

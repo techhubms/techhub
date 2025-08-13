@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet",
+  "Link": "https://techcommunity.microsoft.com/t5/app-development/error-on-publishing-ios-app-pc-gt-imac/m-p/4421183#M1250",
+  "Tags": [],
+  "OutputDir": "_community",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2025-08-08 15:42:10",
+  "Title": "Error on  Publishing ios app (pc->imac)",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "EnhancedContent": "Hi there, i have my PC connected to my imac. The imac builds and runs and supplies the simulator correctly so it's great from that point of view.\n\nWhen i try and have the imac build the IPA file from the PC - i get the above error. has anyone any thoughts on the solution might be?",
+  "Author": "BryceBurrows",
+  "PubDate": "2025-06-05T22:31:40+00:00",
+  "Description": "![]() Hi there, i have my PC connected to my imac. The imac builds and runs and supplies the simulator correctly so it's great from that point of view.\n\nWhen i try and have the imac build the IPA file from the PC - i get the above error. has anyone any thoughts on the solution might be?"
+}

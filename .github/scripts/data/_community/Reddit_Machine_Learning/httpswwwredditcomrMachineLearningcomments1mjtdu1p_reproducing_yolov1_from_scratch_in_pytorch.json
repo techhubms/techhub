@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/MachineLearning/.rss",
+  "Link": "https://www.reddit.com/r/MachineLearning/comments/1mjtdu1/p_reproducing_yolov1_from_scratch_in_pytorch/",
+  "Tags": [
+    "MachineLearning"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Machine Learning",
+  "ProcessedDate": "2025-08-08 16:08:38",
+  "Title": "[P] Reproducing YOLOv1 From Scratch in PyTorch - Learning to Implement Object Detection from the Original Paper",
+  "FeedLevelAuthor": "Machine Learning",
+  "EnhancedContent": "Hey everyone,\n\nI have recently reproduced **YOLOv1** entirely from scratch using **PyTorch**, as a self-driven project to dive deeper into object detection and research implementation\n\n**What I implemented**\n\nYOLOv1 CNN architecture (paper-faithful)\n\nCustom loss function (localization, confidence, classification)\n\nIoU calculations and grid transformations\n\nForward pass and inference pipeline (with visualization)\n\nModular structure and utilities\n\n**Training hasn’t been done yet** although I have a GPU it is taking a long time, but the pipeline is fully written, ready for VOC or a custom dataset.\n\n**GitHub repo:**\n\n[https://github.com/aayan873/YOLOv1-from-Scratch-My-First-Paper-to-Code-Project/](https://github.com/aayan873/YOLOv1-from-Scratch-My-First-Paper-to-Code-Project/)",
+  "Author": "No-Economist146",
+  "PubDate": "2025-08-07T07:14:49+00:00",
+  "Description": "Hey everyone,\n\nI have recently reproduced **YOLOv1** entirely from scratch using **PyTorch**, as a self-driven project to dive deeper into object detection and research implementation\n\n**What I implemented**\n\nYOLOv1 CNN architecture (paper-faithful)\n\nCustom loss function (localization, confidence, classification)\n\nIoU calculations and grid transformations\n\nForward pass and inference pipeline (with visualization)\n\nModular structure and utilities\n\n**Training hasn’t been done yet** although I have a GPU it is taking a long time, but the pipeline is fully written, ready for VOC or a custom dataset.\n\n**GitHub repo:**\n\n[https://github.com/aayan873/YOLOv1-from-Scratch-My-First-Paper-to-Code-Project/](https://github.com/aayan873/YOLOv1-from-Scratch-My-First-Paper-to-Code-Project/)"
+}

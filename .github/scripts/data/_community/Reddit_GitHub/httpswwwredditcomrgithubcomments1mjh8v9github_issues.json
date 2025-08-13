@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/github/.rss",
+  "Link": "https://www.reddit.com/r/github/comments/1mjh8v9/github_issues/",
+  "Tags": [
+    "github"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit GitHub",
+  "ProcessedDate": "2025-08-08 16:18:53",
+  "Title": "Github Issues?",
+  "FeedLevelAuthor": "Github: social coding",
+  "EnhancedContent": "Is anyone else having issues with github? Currently my webhooks are failing (timing out) and the repository seems to load fairly slow / sometimes sending me a unicorn back. Took a look at status page and everything seems fine, so i'm trying to identify if its a me issue. Tickets open but figured id double check",
+  "Author": "AstronomerTop247",
+  "PubDate": "2025-08-06T21:27:00+00:00",
+  "Description": "Is anyone else having issues with github? Currently my webhooks are failing (timing out) and the repository seems to load fairly slow / sometimes sending me a unicorn back. Took a look at status page and everything seems fine, so i'm trying to identify if its a me issue. Tickets open but figured id double check"
+}

@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/GithubCopilot.rss",
+  "Link": "https://www.reddit.com/r/GithubCopilot/comments/1mk7d03/vs_code_1103_released_with_gpt5_tool_limit/",
+  "Tags": [
+    "GithubCopilot"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Github Copilot",
+  "ProcessedDate": "2025-08-08 16:34:45",
+  "Title": "VS Code 1.103 released with GPT-5, tool limit increase, checkpoints, Git worktrees",
+  "FeedLevelAuthor": "GitHubCopilot",
+  "EnhancedContent": "Let's fly with Copilot\n\nIf you have any questions about the release do let me know\n\n(vscode pm here)\n\nare you releasing it for the non-enterprise business plan today, or at a later date?\n\ncan we expect 5 mini 0x ?\n\nNot seeing it as an option yet\n\nSame, got the update that says its available but its not actually available.\n\nIt is slowly rolling out to more plans, starting with Enterprise / Pro+.\n\nIs this available to pro subscription and up?\n\nIt's available to me (Pro subscription even).\n\nworktree is the most interesting thing to me. Wonder if it was prioritised because of coding agents.\n\n[!\\[Comment Image\\](https://preview.redd.it/vs-code-1-103-released-with-gpt-5-tool-limit-increase-v0-znp686fz6nhf1.png?width=1169&amp;format=png&amp;auto=webp&amp;s=7c3a068a409061d8005f8a42939139aa8f4c741c)](https://preview.redd.it/vs-code-1-103-released-with-gpt-5-tool-limit-increase-v0-znp686fz6nhf1.png?width=1169&amp;format=png&amp;auto=webp&amp;s=7c3a068a409061d8005f8a42939139aa8f4c741c)\n\nCursor 👌\n\nLet's fly with Copilot",
+  "Author": "connor4312",
+  "PubDate": "2025-08-07T18:06:13+00:00",
+  "Description": "| [!\\[VS Code 1.103 released with GPT-5, tool limit increase, checkpoints, Git worktrees\\](https://external-preview.redd.it/nIGPp8geMHEmWaoyl6CeXia4fuvQ2914YmeLID4cHkU.png?width=640&crop=smart&auto=webp&s=b76697692b63963453258c8a79dbf28f83c8d71f \"VS Code 1.103 released with GPT-5, tool limit increase, checkpoints, Git worktrees\")](https://www.reddit.com/r/GithubCopilot/comments/1mk7d03/vs_code_1103_released_with_gpt5_tool_limit/)"
+}

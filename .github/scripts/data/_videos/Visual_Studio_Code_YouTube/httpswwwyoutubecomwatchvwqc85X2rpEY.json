@@ -1,0 +1,18 @@
+{
+  "EnhancedContent": null,
+  "FeedName": "Visual Studio Code YouTube",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Description": "This is a raw Day 1 hands‑on with GPT‑5. I gave it a vague product requirements doc, walked away for dinner, and this is what I came back to.\n\nProduct Requirements Doc: https://gist.github.com/burkeholland/24802296b5bfaaf7fb775c81cd626512\n\nSetting to turn on todo list in Insiders: \"chat.todoListTool.enabled\": true\n\nCHAPTERS 00:00 Intro 00:18 Hello and Tool Calling 02:50 What GPT-5 will be building for us 04:30 DINNER TIME 04:57 Let's see what we've got 05:48 Can GPT-5 do design? 07:20 Can GPT-5 do drag and drop? 08:42 What I like most about it 09:30 Dark mode and WOW\n\n#gpt5 #copilot #ai",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Link": "https://www.youtube.com/watch?v=wqc85X2rpEY",
+  "PubDate": "2025-08-07T17:03:45+00:00",
+  "Author": "Visual Studio Code",
+  "Title": "GPT‑5 IS HERE and.....WOW",
+  "ProcessedDate": "2025-08-08 15:37:12",
+  "OutputDir": "_videos",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ]
+}

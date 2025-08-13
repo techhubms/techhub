@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-08-13 07:06:41",
+  "Tags": [],
+  "Link": "https://techcommunity.microsoft.com/t5/teams-developer/get-all-auto-attendants-or-call-queues/m-p/4442755#M12817",
+  "Title": "Get all Auto Attendants or Call Queues",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "OutputDir": "_community",
+  "Author": "JFM_12",
+  "EnhancedContent": "Hello\n\nHope you are all doing great\n\nThe commands:\n\nGet-CsAutoAttendant or Get-CsCallQueue limits the output since some time to 100 rows.\n\nEarlier there was a setting \"-limit all\". This is not available anymore.\n\nIs there a possibility for a workaround\n\nRegards JFM\\_12",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "FeedName": "Microsoft Tech Community",
+  "Description": "Hello\n\nHope you are all doing great\n\nThe commands:\n\nGet-CsAutoAttendant or Get-CsCallQueue limits the output since some time to 100 rows.\n\nEarlier there was a setting \"-limit all\". This is not available anymore.\n\nIs there a possibility for a workaround\n\nRegards JFM\\_12",
+  "PubDate": "2025-08-13T06:57:56+00:00"
+}

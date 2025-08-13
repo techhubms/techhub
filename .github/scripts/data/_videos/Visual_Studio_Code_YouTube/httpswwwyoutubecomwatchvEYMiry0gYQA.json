@@ -1,0 +1,26 @@
+{
+  "EnhancedContent": null,
+  "FeedName": "Visual Studio Code YouTube",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Description": "🎉 Live event and Q&A with the VS Code team to discuss and demo highlights and new features from the July, v1.103 release.\n\n🔗 https://aka.ms/VSCodeRelease\n\n🎙️ Featuring: Olivia McVicker (@OliviaGuzzardo), Daniel Imms (@Tyriarand), Tyler Leonhardt (@TylerLeonhardt), Connor Peet (@ConnorPeet), Burke Holland (@BurkeHolland), and more!\n\n#vscode #code",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Link": "https://www.youtube.com/watch?v=EYMiry0gYQA",
+  "PubDate": "2025-08-07T17:44:15+00:00",
+  "Author": "Visual Studio Code",
+  "Title": "🔴 VS Code - VS Code Live - v1.103 Release 🎉",
+  "ProcessedDate": "2025-08-08 15:37:12",
+  "OutputDir": "_videos",
+  "Tags": [
+    "code",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "microsoft",
+    "newfeatures",
+    "softwaredeveloper",
+    "visualstudiocode",
+    "vscode",
+    "vscoderelease"
+  ]
+}

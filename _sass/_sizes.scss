@@ -1,0 +1,32 @@
+// Sizes and Responsive Breakpoints
+// =================================
+
+// Content Width
+$content-width: 800px !default;
+
+// Header widths
+$header-max-width: 920px !default;
+$subnav-max-width: 920px !default;
+
+// When to collapse header into hamburger menu
+$on-mobile: 900px !default; 
+$on-palm: 900px !default;
+$on-laptop: 900px !default;
+
+// Navigation Box Layout Control
+// =============================
+
+$navigation-breakpoint: 750px;
+
+// Root index - section boxes (AI, GitHub Copilot)
+$sections-grid-desktop: 2 !default;  // 2 sections side by side on desktop
+$sections-grid-mobile: 1 !default;   // 1 section per row on mobile
+
+// Section index - collection boxes (News, Videos, Community, etc.)
+$collections-grid-desktop: 3 !default;  // 3 collections side by side on desktop
+$collections-grid-mobile: 2 !default;   // 2 collections per row on mobile
+
+// Content boxes - individual posts/articles
+$content-grid-desktop: 2 !default;   // 2 content items side by side on desktop
+$content-grid-mobile: 1 !default;    // 1 content item per row on mobile
+

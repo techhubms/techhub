@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/azure/.rss",
+  "Link": "https://www.reddit.com/r/AZURE/comments/1mkdkwf/esv6_generally_available_in_us_west2_and/",
+  "Tags": [
+    "AZURE"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Azure",
+  "ProcessedDate": "2025-08-08 16:14:03",
+  "Title": "Esv6 Generally available in US West2 and availability zone, but only available in AZ2",
+  "FeedLevelAuthor": "Microsoft Azure",
+  "EnhancedContent": "Just a rant.\n\nIf a product is generally available in a region with availability zones, it should be available in at minimum 2 availability zones or otherwise be listed as preview availability. People need to know this during project planning phases.\n\nUseful tool - [https://github.com/PieterbasNagengast/Azure-AzMappingWorkbook/tree/main](https://github.com/PieterbasNagengast/Azure-AzMappingWorkbook/tree/main)\n\nWorkbook that maps your subscription zones to az1/az2/az3.",
+  "Author": "Lost_Term_8080",
+  "PubDate": "2025-08-07T22:05:57+00:00",
+  "Description": "Just a rant.\n\nIf a product is generally available in a region with availability zones, it should be available in at minimum 2 availability zones or otherwise be listed as preview availability. People need to know this during project planning phases."
+}

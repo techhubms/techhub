@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/GithubCopilot.rss",
+  "Link": "https://www.reddit.com/r/GithubCopilot/comments/1mkjxt0/tasks_update_is_looking_good/",
+  "Tags": [
+    "GithubCopilot"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Github Copilot",
+  "ProcessedDate": "2025-08-08 16:34:45",
+  "Title": "Tasks update is looking good 👌🏾",
+  "FeedLevelAuthor": "GitHubCopilot",
+  "EnhancedContent": "Let's fly with Copilot\n\nThis is really interesting to see how it will improve the workflow as I’m already breaking all docs into tasks for the agent to work through.\n\nGood stuff guys 👏🏾\n\nIs this in preview or ga?\n\nIt’s an experimental setting available in the latest VS Code 1.103 stable release\n\nHow can I see that list in Insiders? 🤔\n\n`chat.todoListTool.enabled` in settings\n\nThis actually helps a lot when trying to gauge where the model is at in agent modem. Way better than it dumping markdown based check marks. I have noticed it might sometimes halfway through one task, decide to first complete the next one and then come back to a previous task. This is when I end up stopping it since it inevitably starts with iteratively fixing mistakes because it skipped a crucial step\n\nLet's fly with Copilot",
+  "Author": "MikeeBuilds",
+  "PubDate": "2025-08-08T02:55:48+00:00",
+  "Description": "| [!\\[Tasks update is looking good 👌🏾\\](https://preview.redd.it/wfi8jx0bnphf1.jpeg?width=640&crop=smart&auto=webp&s=4b387b2a02b442f0d32824854b587f427108e596 \"Tasks update is looking good 👌🏾\")](https://www.reddit.com/r/GithubCopilot/comments/1mkjxt0/tasks_update_is_looking_good/) | This is really interesting to see how it will improve the workflow as I’m already breaking all docs into tasks for the agent to work through. <br><br> <br>Good stuff guys 👏🏾<br>"
+}

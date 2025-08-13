@@ -1,0 +1,26 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:46",
+  "Title": "ASP.NET Community Standup - Building a better PerfView with Blazor",
+  "Author": "dotnet",
+  "FeedName": "DotNet YouTube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "PubDate": "2025-08-01T21:55:53+00:00",
+  "Tags": [
+    "aspdotnet",
+    "aspnet",
+    "aspnetcore",
+    "blazor",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "microsoft",
+    "perfview",
+    "softwaredeveloper"
+  ],
+  "FeedLevelAuthor": "dotnet",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=H_gOSliozjM",
+  "Description": "Discover how a real-world thread pool issue sparked the creation of the .NET Events Viewer, a Blazor-based diagnostics tool built by the community. Join tool creator Grégoire Verdier and .NET diagnostics engineer Noah Falk as they demo the tool, share lessons from contributing to .NET, and explore how open-source collaboration drives innovation.\n\nCommunity Links: https://www.theurlist.com/aspnet-standup-20250805\n\nFeaturing: Daniel Roth, Noah Falk, Grégoire Verdier\n\n#dotnet #aspnetcore #blazor"
+}

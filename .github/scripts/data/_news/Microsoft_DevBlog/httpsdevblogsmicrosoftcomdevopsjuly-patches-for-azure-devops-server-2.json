@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "Azure DevOps Server",
+    "Patches"
+  ],
+  "OutputDir": "_news",
+  "FeedLevelAuthor": "Azure DevOps Blog",
+  "ProcessedDate": "2025-08-05 14:15:44",
+  "FeedUrl": "https://devblogs.microsoft.com/devops/feed/",
+  "Title": "July Patches for Azure DevOps Server",
+  "Description": "Today we are releasing patches that impact the latest version of our self-hosted product, Azure DevOps Server. We strongly encourage and recommend that all customers use the latest, most secure release of Azure DevOps Server. You can download the latest version of the product, Azure DevOps Server 2022.2 from the Azure DevOps Server download page. […]\n\nThe post [July Patches for Azure DevOps Server](https://devblogs.microsoft.com/devops/july-patches-for-azure-devops-server-2/) appeared first on [Azure DevOps Blog](https://devblogs.microsoft.com/devops).",
+  "Link": "https://devblogs.microsoft.com/devops/july-patches-for-azure-devops-server-2/",
+  "FeedName": "Microsoft DevBlog",
+  "Author": "Gloridel Morales",
+  "EnhancedContent": "Today we are releasing patches that impact the latest version of our self-hosted product, [Azure DevOps Server](https://azure.microsoft.com/services/devops/server/).\n\nWe strongly encourage and recommend that all customers use the latest, most secure release of Azure DevOps Server. You can download the latest version of the product, Azure DevOps Server 2022.2 from the [Azure DevOps Server download page](https://learn.microsoft.com/azure/devops/server/download/azuredevopsserver?view=azure-devops).\n\n### Azure DevOps Server 2020.1.2 Patch 17\n\n**[Release notes](https://learn.microsoft.com/azure/devops/server/release-notes/azuredevops2020u1?view=azure-devops#azure-devops-server-2020-update-12-patch-17-release-date-july-9-2025)**\n\nIf you have Azure DevOps Server 2020.1.2, you should install Azure DevOps Server 2020.1.2 [Patch 17](https://aka.ms/devops2020.1.2patch17) to have the most secure and updated product experience.\n\nWith this patch we are fixing a null reference exception in the multi-repo trigger functionality when there are no resource repositories defined in the YAML pipeline.\n\n**Verifying Installation**\n\nRun `devops2020.1.2patch17.exe CheckInstall` , `devops2020.1.2patch17.exe` is the file that is downloaded from the link above. The output of the command will either say that the patch has been installed, or that it is not installed.",
+  "PubDate": "2025-07-09T15:37:13+00:00"
+}

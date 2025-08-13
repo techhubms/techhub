@@ -1,0 +1,19 @@
+{
+  "OutputDir": "_news",
+  "Title": "Catch issues before you commit to Git",
+  "FeedUrl": "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/",
+  "Link": "https://devblogs.microsoft.com/visualstudio/catch-issues-before-you-commit-to-git/",
+  "Author": "Jessie Houghton",
+  "ProcessedDate": "2025-08-05 07:55:34",
+  "EnhancedContent": "Discovering issues with code changes after committing changes can be frustrating. Fortunately, Visual Studio offers a new feature that helps you catch potential problems early, improving your code quality.\n\nVisual Studio now includes a feature powered by GitHub Copilot that lets you review your local code changes before committing them, before they are part of your pull request. This can help identify performance and security issues early, ensuring you maintain a higher quality codebase.\n\n## How to Get Started\n\nTo use this feature, ensure your GitHub Copilot subscription is active and enabled within Visual Studio. If you don’t already have GitHub Copilot, you can sign up for free [here](https://github.com/settings/copilot).\n\nYou’ll need to enable the necessary feature flags:\n\n- Tools &gt; Options &gt; Preview Features &gt; Pull Request Comments\n- Tools &gt; Options &gt; GitHub &gt; Copilot &gt; Source Control Integration &gt; Enable Git preview features.\n\nThen, you’ll see a new sparkle comment button in the Git Changes window. Clicking this button allows GitHub Copilot to review your local code changes and provide inline suggestions.\n\n![Copilot reviews changes and suggests commit improvements](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAEQAQMAAAB8zRRdAAAAA1BMVEXW1taWrGEgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAKElEQVR4nO3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAACAlwFEAAAByxQ4yQAAAABJRU5ErkJggg==)\n\nAs always with AI powered features, you’ll want to review Copilot’s suggestions for accuracy, which you can do directly in your working file. You can navigate between comments or collapse them using the up arrow icon in the top right corner of the comment box. Please share your scenarios with us [in the survey](https://aka.ms/LocalCodeReview) to help us make the comments as useful as possible.\n\n## Share your feedback\n\nWe rely on your [user feedback](https://developercommunity.visualstudio.com/t/Use-Copilot-to-review-commit/10575248) to guide our roadmaps in Visual Studio. Please share your thoughts on this feature in [this survey.](https://aka.ms/LocalCodeReview) Also, we’re already tracking a suggestion to improve this feature with customization, so share your thoughts [here](https://developercommunity.visualstudio.com/t/Customize-Copilot-code-review/10844722).\n\nWe value your continued support and insights to make your experiences in Visual Studio the best they can be, especially now with AI!",
+  "Tags": [
+    "Copilot",
+    "Git",
+    "GitHub Copilot",
+    "Visual Studio"
+  ],
+  "PubDate": "2025-02-27T17:06:24+00:00",
+  "Description": "Discovering issues with code changes after committing changes can be frustrating. Fortunately, Visual Studio offers a new feature that helps you catch potential problems early, improving your code quality. Visual Studio now includes a feature powered by GitHub Copilot that lets you review your local code changes before committing them, before they are part […]\n\nThe post [Catch issues before you commit to Git](https://devblogs.microsoft.com/visualstudio/catch-issues-before-you-commit-to-git/) appeared first on [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio).",
+  "FeedLevelAuthor": "Copilot - Visual Studio Blog",
+  "FeedName": "Microsoft DevBlog"
+}

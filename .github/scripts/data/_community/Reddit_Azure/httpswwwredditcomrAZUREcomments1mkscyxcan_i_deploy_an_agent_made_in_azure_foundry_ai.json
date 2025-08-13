@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/azure/.rss",
+  "Link": "https://www.reddit.com/r/AZURE/comments/1mkscyx/can_i_deploy_an_agent_made_in_azure_foundry_ai/",
+  "Tags": [
+    "AZURE"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Azure",
+  "ProcessedDate": "2025-08-08 16:14:03",
+  "Title": "Can I deploy an agent made in Azure Foundry AI?",
+  "FeedLevelAuthor": "Microsoft Azure",
+  "EnhancedContent": "Hi there!\n\nI have made an Azure Foundry AI Agent connected to a Fabric Data Agent so that we can build a conversational agent for our clients. We have a Laravel webpage for them and our goal is to integrate the agent via API on the webpage.\n\nMy question is, do Foundry agents support API deployments? Can I do it via Foundry agent playground or webpage? Or do I need to build a backend service to allow the laravel webpage send user queries to the agent?\n\nThanks in advance!\n\nI’ve been working in Azure Foundry for a while. We can connect to Fabric agent (preview) without any issues.\n\nCurrently we deploy a custom app via terraform but sure you can tap into the API and create your own app. We ‘talk’ via the azure ai foundry agent specified by the agent id rather then tapping into then llm inference point.\n\nOne gotcha we came across, both ai foundry and data agent got to be in the same tenant due to access requirements.\n\nHave you asked CoPilot?\n\nYou can by communicating with the Foundry APIs of the instance and sending the agent configuration as a .json payload\n\nNot ideal, here is a blog talking through the process. I imagine you will have some tweaks given the Fabric piece of it. Iirc the tweak will be populating the \"tools\" section with the appropriate connector information. If implementing via IaC then will need to create the connector.\n\nEdit: forgot blog [https://blog.johnfolberth.com/azure-foundry-agent-ci-cd/](https://blog.johnfolberth.com/azure-foundry-agent-ci-cd/)",
+  "Author": "Luisio93",
+  "PubDate": "2025-08-08T11:12:45+00:00",
+  "Description": "Hi there!\n\nI have made an Azure Foundry AI Agent connected to a Fabric Data Agent so that we can build a conversational agent for our clients. We have a Laravel webpage for them and our goal is to integrate the agent via API on the webpage.\n\nMy question is, do Foundry agents support API deployments? Can I do it via Foundry agent playground or webpage? Or do I need to build a backend service to allow the laravel webpage send user queries to the agent?\n\nThanks in advance!"
+}

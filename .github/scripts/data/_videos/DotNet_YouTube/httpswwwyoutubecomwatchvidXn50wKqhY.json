@@ -1,0 +1,16 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:46",
+  "Title": ".NET Aspire - Adding Custom Commands to the Dashboard",
+  "Author": "dotnet",
+  "FeedName": "DotNet YouTube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "PubDate": "2025-07-30T17:19:49+00:00",
+  "Tags": [
+    ".NET"
+  ],
+  "FeedLevelAuthor": "dotnet",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=idXn50wKqhY",
+  "Description": "Do you have scripts and tools that you use to configure your development environment? Do you re-run them and share them with your project teammates? In this video, Fritz will show you how you can write .NET Aspire custom commands that allow you to perform those tasks directly from the .NET Aspire dashboard Connect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet"
+}

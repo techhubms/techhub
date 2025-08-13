@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/csharp/.rss",
+  "Link": "https://www.reddit.com/r/csharp/comments/1mknyso/which_os_text_editor_and_ide_do_you_use_for_work/",
+  "Tags": [
+    "csharp"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit CSharp",
+  "ProcessedDate": "2025-08-08 15:50:33",
+  "Title": "Which OS, text editor and IDE do you use for work with C#? Why?",
+  "FeedLevelAuthor": "C#",
+  "EnhancedContent": "Visual Studio. The real one. Always.\n\nVS on Windows\n\nWindows, Visual Studio Code and Visual Studio. They work good for me.\n\nRider on Windows.\n\nVS and VS Code on Windows.\n\nVS Code on Mac.\n\nVS Code on Windows. It is enough for me. The built-in git GUI is my fav. Also the global search is so much easier than the complex one in big VS.\n\nCtrl+Shift+t is where it’s at.\n\nWindows, Rider.\n\nWhy? Because I couldn't get the Visual Studio installer to work on Linux (inside Wine, of course) and I need MSBuild for legacy managed C++ projects\n\nLinux Mint, VSCode.\n\nMacOS, VSCode, Rider",
+  "Author": "balazs-dombi",
+  "PubDate": "2025-08-08T06:36:34+00:00",
+  "Description": ""
+}

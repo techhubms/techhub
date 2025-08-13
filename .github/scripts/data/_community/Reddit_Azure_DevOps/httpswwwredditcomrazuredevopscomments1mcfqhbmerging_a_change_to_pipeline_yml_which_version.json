@@ -1,0 +1,16 @@
+{
+  "Title": "Merging a change to pipeline yml - which version runs?",
+  "FeedName": "Reddit Azure DevOps",
+  "OutputDir": "_community",
+  "Tags": [
+    "azuredevops"
+  ],
+  "ProcessedDate": "2025-08-05 17:37:33",
+  "Description": "I'm sure there is a documented answer to this, but struggling to find the right search terms.\n\nSay I have pipeline.yml which defines a Devops pipeline. I make a change in my dev branch, and then create a merge request into main.\n\nIf I have a policy to execute the pipeline on creation of the MR, does the newer pipeline code in `dev` get executed, or the original version in `main` ?",
+  "Author": "Any_Tap_6666",
+  "Link": "https://www.reddit.com/r/azuredevops/comments/1mcfqhb/merging_a_change_to_pipeline_yml_which_version/",
+  "PubDate": "2025-07-29T16:15:13+00:00",
+  "EnhancedContent": "I'm sure there is a documented answer to this, but struggling to find the right search terms.\n\nSay I have pipeline.yml which defines a Devops pipeline. I make a change in my dev branch, and then create a merge request into main.\n\nIf I have a policy to execute the pipeline on creation of the MR, does the newer pipeline code in `dev` get executed, or the original version in `main` ?\n\nThe new version. Technically, the version that represents the merge between the two branches.\n\nYou can test this easily yourself by having a script task that prints \"foo\" in main and changing it to print \"bar\" in a PR and looking at the output.\n\nThe first poster is correct. Bigger question I'm thinking of whether a pipeline YAML file change should trigger a pipeline to fire. Typically, I exclude the `.azuredevops` folder from triggers so this doesn't happen.",
+  "FeedLevelAuthor": "Azure DevOps",
+  "FeedUrl": "https://www.reddit.com/r/azuredevops/.rss"
+}

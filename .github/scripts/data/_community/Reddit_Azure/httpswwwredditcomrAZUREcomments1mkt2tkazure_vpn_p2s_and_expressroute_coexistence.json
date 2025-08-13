@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.reddit.com/r/azure/.rss",
+  "Link": "https://www.reddit.com/r/AZURE/comments/1mkt2tk/azure_vpn_p2s_and_expressroute_coexistence/",
+  "Tags": [
+    "AZURE"
+  ],
+  "OutputDir": "_community",
+  "FeedName": "Reddit Azure",
+  "ProcessedDate": "2025-08-08 16:14:03",
+  "Title": "Azure VPN P2S and ExpressRoute coexistence",
+  "FeedLevelAuthor": "Microsoft Azure",
+  "EnhancedContent": "Hi all, Been working on a project that needs to use a remote workforce VPN (based on Azure VPN) to access on-prem resources via ExpressRoute.\n\nIt's a simple hub&spoke architecture (1 hub and 3 spokes) with the express route gateway inside the hub on the gatewaySubnet. Inside the hub VNet there is also a Azure Firewall inspecting the traffic between Spoke VNets and from/to on-prem.\n\nWhat is the best way of archiving this topology?\n\nI wasn't able to find any meaningful information about P2S and ExpressRoute (only S2S).\n\nIf you want to move some traffic to the VPN and not to the ER, you need in onpremise side don’t publish that address spaces and setup as phase 2 in the VPN.\n\nAll missed routes in the ER should be in the VPN to work.\n\nAnother solution is have a route server, but is expensive.\n\nIt will be only for remote users to be able to access some resources hosted on-prem (mostly RDP to some local machines), and I'm trying to avoid the need for a route server (as you stated, due to the high increase of the cost).\n\nAs today I've two virtual network gateways deployed on the hub (on for express route and the other for the p2s VPN clients). I'm able to reach Azure hosts on the spokes but I cannot see any traffic reaching the on-prem hosts.\n\nHad a similar set up for a customer but we needed to deploy an azure route server to handle the traffic.\n\nI'm on my phone but can't find the article for reference.\n\nIf you have the opportunity, please share it. Thank you\n\nvwan would be an option, the easiest imo. that or an azure route server...both options you enable branch to branch to enable transitive routing.",
+  "Author": "tampasmix",
+  "PubDate": "2025-08-08T11:50:57+00:00",
+  "Description": "Hi all, Been working on a project that needs to use a remote workforce VPN (based on Azure VPN) to access on-prem resources via ExpressRoute.\n\nIt's a simple hub&spoke architecture (1 hub and 3 spokes) with the express route gateway inside the hub on the gatewaySubnet. Inside the hub VNet there is also a Azure Firewall inspecting the traffic between Spoke VNets and from/to on-prem.\n\nWhat is the best way of archiving this topology?\n\nI wasn't able to find any meaningful information about P2S and ExpressRoute (only S2S)."
+}

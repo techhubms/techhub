@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "subscriptionId": {
+      "value": "YOUR_SUBSCRIPTION_ID_HERE"
+    },
+    "baseName": {
+      "value": "tech-hub-ms"
+    },
+    "location": {
+      "value": "westeurope"
+    },
+    "sqlDatabaseTier": {
+      "value": "Standard"
+    },
+    "sqlDatabaseSku": {
+      "value": "S2"
+    },
+    "maxSizeBytes": {
+      "value": 268435456000
+    },
+    "sqlAdminUsername": {
+      "value": "sqladmin"
+    },
+    "sqlAdminPassword": {
+      "value": "CHANGE_THIS_PASSWORD_123!"
+    },
+    "environment": {
+      "value": "dev"
+    },
+    "enableAdvancedThreatProtection": {
+      "value": false
+    },
+    "backupRetentionDays": {
+      "value": 7
+    },
+    "enableAuditLogging": {
+      "value": false
+    },
+    "auditStorageAccountName": {
+      "value": ""
+    }
+  }
+}

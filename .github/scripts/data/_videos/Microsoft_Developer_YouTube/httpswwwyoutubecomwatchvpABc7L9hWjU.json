@@ -1,0 +1,22 @@
+{
+  "ProcessedDate": "2025-08-05 17:20:20",
+  "Title": "Get Data into Fabric Eventhouse | Data Exposed",
+  "Author": "Microsoft Developer",
+  "FeedName": "Microsoft Developer YouTube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "PubDate": "2025-07-31T18:16:15+00:00",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=pABc7L9hWjU",
+  "Description": "The Get Data in Fabric Eventhouse is a no-code wizard which offers a comprehensive suite of capabilities to streamline the data ingestion process. Users can ingest data from various sources, including Azure Storage, Amazon S3, EventHub, local files, OneLake and Eventstreams, ensuring flexibility and efficiency. The feature supports continuous ingestion, keeping data consistently updated for real-time analysis. The wizard provides a data preview option, allowing users to verify the structure and content of the data before full ingestion. Schema inference capability automatically detects and suggests the destination table schema, reducing manual effort and maintaining consistency. Users can also leverage schema edit features to modify the schema and content during ingestion, such as renaming columns, changing data types, and applying transformations. These combined features ensure that the ingested data is clean, well-structured, and ready for analysis, enhancing overall data management and processing workflows. Learn more in this episode of Data Exposed.\n\n0:00 Introduction 1:22 What is Fabric Eventhouses? 2:38 What is Get Data in Fabric Eventhouse? 3:26 Demo 7:20 Continuous Ingestion from Azure Storage to Eventhouse 8:36 Demo 10:40 Getting started\n\n✅ Resources: Supporting docs: https://learn.microsoft.com/en-us/fabric/real-time-intelligence/get-data-overview\n\n📌 Let's connect: Twitter - Anna Hoffman, https://twitter.com/AnalyticAnna Twitter - AzureSQL, https://aka.ms/azuresqltw\n\n🔴 Watch even more Data Exposed episodes: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt\n\n#AzureSQL #SQL #LearnSQL"
+}
