@@ -2,9 +2,6 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "subscriptionId": {
-      "value": "YOUR_SUBSCRIPTION_ID_HERE"
-    },
     "baseName": {
       "value": "techhub-ms"
     },
@@ -35,20 +32,11 @@
     "backupRetentionDays": {
       "value": 7
     },
-    "enableAuditLogging": {
-      "value": false
-    },
-    "auditStorageAccountName": {
-      "value": ""
-    },
     "repositoryUrl": {
       "value": "https://github.com/techhubms/techhub"
     },
     "repositoryBranch": {
       "value": "main"
-    },
-    "githubToken": {
-      "value": ""
     }
   }
 }
