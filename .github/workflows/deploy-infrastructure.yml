@@ -1,7 +1,17 @@
 name: Deploy Infrastructure
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Deployment mode'
+        required: true
+        default: 'whatif'
+        type: choice
+        options:
+        - validate
+        - whatif
+        - deploy
 
 jobs:
   deploy-infrastructure:
@@ -16,18 +26,19 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Deploy Bicep template
-      uses: azure/arm-deploy@v1
-      with:
-        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-        scope: subscription
-        region: westeurope
-        template: ./infra/main.bicep
-        parameters: ./infra/parameters.prod.json repositoryUrl=https://github.com/techhubms/techhub repositoryBranch=main githubToken=${{ secrets.GITHUB_TOKEN }}
-        failOnStdErr: false
+    - name: Deploy Infrastructure
+      shell: pwsh
+      run: |
+        pwsh ./.github/scripts/Deploy-Infrastructure.ps1 \
+          -Mode "${{ github.event.inputs.mode }}" \
+          -SkipLogin \
+          -VerboseOutput
+      env:
+        AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Output deployment results
       run: |
-        echo "Deployment completed!"
-        echo "Check the Azure portal for the deployed resource group and resources."
-        echo "Resource group name will be based on the baseName and environment in parameters.prod.json"
+        echo "Infrastructure deployment workflow completed!"
+        echo "Mode: ${{ github.event.inputs.mode }}"
+        echo "Check the step above for detailed results."

@@ -1,10 +1,11 @@
 #!/usr/bin/env pwsh
 <#
 .SYNOPSIS
-    Test script for Azure infrastructure deployment (similar to deploy-infrastructure.yml workflow)
+    Azure infrastructure deployment script for Tech Hub
 
 .DESCRIPTION
-    This script simulates the GitHub Actions workflow for deploying Azure infrastructure.
+    This script handles Azure infrastructure deployment for the Tech Hub project.
+    It can be used both locally for testing and in GitHub Actions for production deployments.
     It validates prerequisites, tests Bicep templates, and optionally performs actual deployment.
 
 .PARAMETER Mode
@@ -17,7 +18,7 @@
     Path to environment parameters file (default: ./infra/parameters.prod.json)
 
 .PARAMETER SubscriptionId
-    Azure subscription ID (overrides value in parameters file)
+    Azure subscription ID (overrides value in parameters file and environment variable)
 
 .PARAMETER ResourceGroupName
     Target resource group name (optional - will be generated if not specified)
@@ -26,23 +27,27 @@
     Azure region for deployment (default: westeurope)
 
 .PARAMETER SkipLogin
-    Skip Azure login (assumes already logged in)
+    Skip Azure login (assumes already logged in - use in GitHub Actions)
 
 .EXAMPLE
-    # Validate the infrastructure template
-    ./test-infrastructure-deployment.ps1 -Mode validate
+    # Local usage - Validate the infrastructure template
+    ./.github/scripts/Deploy-Infrastructure.ps1 -Mode validate
 
 .EXAMPLE
-    # See what would be deployed
-    ./test-infrastructure-deployment.ps1 -Mode whatif
+    # Local usage - See what would be deployed
+    ./.github/scripts/Deploy-Infrastructure.ps1 -Mode whatif
 
 .EXAMPLE
-    # Deploy to a specific subscription
-    ./test-infrastructure-deployment.ps1 -Mode deploy -SubscriptionId "your-sub-id"
+    # Local usage - Deploy to a specific subscription
+    ./.github/scripts/Deploy-Infrastructure.ps1 -Mode deploy -SubscriptionId "your-sub-id"
+
+.EXAMPLE
+    # GitHub Actions usage - Deploy with environment variables
+    pwsh ./.github/scripts/Deploy-Infrastructure.ps1 -Mode deploy -SkipLogin -VerboseOutput
 
 .EXAMPLE
     # Validate with custom parameters file
-    ./test-infrastructure-deployment.ps1 -Mode validate -EnvironmentFile "./infra/parameters.test.json"
+    ./.github/scripts/Deploy-Infrastructure.ps1 -Mode validate -EnvironmentFile "./infra/parameters.test.json"
 #>
 
 param(
@@ -357,7 +362,14 @@ function Build-DeploymentParameters {
     # Add additional parameters that come from GitHub secrets/environment
     $tempParameters.parameters['repositoryUrl'] = @{ 'value' = $RepoUrl }
     $tempParameters.parameters['repositoryBranch'] = @{ 'value' = $RepoBranch }
-    $tempParameters.parameters['githubToken'] = @{ 'value' = 'placeholder-token' }
+    
+    # Handle GitHub token - use environment variable if available, otherwise use placeholder
+    $githubToken = if ($env:GITHUB_TOKEN) { 
+        $env:GITHUB_TOKEN 
+    } else { 
+        'placeholder-token-for-local-testing' 
+    }
+    $tempParameters.parameters['githubToken'] = @{ 'value' = $githubToken }
     
     # Create temporary parameters file
     $tempDir = if ($env:TEMP) { $env:TEMP } elseif ($env:TMPDIR) { $env:TMPDIR } else { "/tmp" }
@@ -529,8 +541,20 @@ try {
     # Step 2: Load parameters
     $parameters = Get-ParametersFromFile -FilePath $EnvironmentFile
     
-    # Step 3: Handle subscription ID
-    $targetSubscriptionId = if ($SubscriptionId) { $SubscriptionId } else { $parameters['subscriptionId'] }
+    # Step 3: Handle subscription ID with priority: Parameter > Environment Variable > Parameters File
+    $targetSubscriptionId = $null
+    if ($SubscriptionId) {
+        $targetSubscriptionId = $SubscriptionId
+        Write-Host "Using subscription ID from parameter: $targetSubscriptionId" -ForegroundColor Gray
+    } elseif ($env:AZURE_SUBSCRIPTION_ID) {
+        $targetSubscriptionId = $env:AZURE_SUBSCRIPTION_ID
+        Write-Host "Using subscription ID from environment variable: $targetSubscriptionId" -ForegroundColor Gray
+    } elseif ($parameters['subscriptionId']) {
+        $targetSubscriptionId = $parameters['subscriptionId']
+        Write-Host "Using subscription ID from parameters file: $targetSubscriptionId" -ForegroundColor Gray
+    } else {
+        Write-Warning-Custom "No subscription ID specified. Will use current Azure CLI default subscription."
+    }
     
     # Step 4: Azure login and subscription setup
     Test-AzureLogin
