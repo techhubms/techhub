@@ -1,4 +1,5 @@
 @use "colors";
+@use "sizes";
 
 h1, h2, h3, h4, h5, h6 {
     line-height: unset !important;
@@ -117,6 +118,57 @@ pre.highlight code {
                     transparent 50%);
             margin-top: 0px;
             margin-bottom: 0px;
+        }
+    }
+}
+
+// About page profile styling
+.about-profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+
+    img {
+        width: 250px;
+        flex-shrink: 0;
+        border-radius: 8px;
+    }
+
+    .profile-content {
+        flex: 1;
+
+        p {
+            margin-bottom: 1em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            color: colors.$bright-purple;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // Mobile responsive: stack image and content vertically
+    @media (max-width: sizes.$on-mobile) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .profile-content {
+            text-align: left;
         }
     }
 }
