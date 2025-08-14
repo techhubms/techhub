@@ -16,3 +16,81 @@ spec/e2e/screenshots/
 spec/e2e/videos/
 spec/e2e/traces/trivy-test.sarif
 coverage.xml
+
+# .NET Core / .NET 5+ ignores
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+*.log
+*.vspscc
+*.vssscc
+.builds/
+*.pidb
+*.svclog
+*.scc
+
+# Visual Studio / VS Code
+.vs/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+*.code-workspace
+
+# MSBuild
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+**/packages.lock.json
+!packages/build/
+
+# Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+
+# ASP.NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/Properties/launchSettings.json
+
+# Entity Framework
+*.edmx.diagram
+*.edmx.sql
+
+# Rider
+.idea/
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows/Mac OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.dmg
+*.app
+*.DS_Store

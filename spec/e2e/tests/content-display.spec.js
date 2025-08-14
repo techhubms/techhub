@@ -18,7 +18,7 @@ test.describe('Latest Content Display', () => {
     });
 
     // Check that there are section cards (the main navigation sections)
-    const sectionCards = page.locator('.section-square');
+    const sectionCards = page.locator('.navigation-section-square');
     const sectionCardCount = await sectionCards.count();
     expect(sectionCardCount).toBeGreaterThan(0);
 
@@ -40,7 +40,7 @@ test.describe('Latest Content Display', () => {
         shouldHaveTitle: true,
         shouldHaveLink: true,
         shouldBeVisible: true,
-        titleSelector: '.section-title'
+        titleSelector: '.navigation-section-title'
       });
     }
 
@@ -78,7 +78,7 @@ test.describe('Latest Content Display', () => {
     console.log(`📍 Navigated to ${collectionUrl}`);
 
     // Should have items
-    const items = page.locator('.post-item');
+    const items = page.locator('.navigation-post-square');
     const itemCount = await items.count();
     console.log(`📋 Found ${itemCount} ${collectionTitle.toLowerCase()} items on page`);
     expect(itemCount).toBeGreaterThan(0);
@@ -88,13 +88,14 @@ test.describe('Latest Content Display', () => {
     await verifyContentItem(page, firstItem, {
       shouldHaveTitle: true,
       shouldHaveLink: true,
-      shouldBeVisible: true
+      shouldBeVisible: true,
+      titleSelector: '.navigation-post-title'
     });
 
     console.log(`✅ First ${collectionTitle.toLowerCase()} item is visible`);
 
     // Get the title of the first item on the page using the proper selector
-    const titleElement = firstItem.locator('.post-title');
+    const titleElement = firstItem.locator('.navigation-post-title');
     await expect(titleElement).toBeVisible();
     const displayedTitle = await titleElement.textContent();
     console.log(`🔍 Displayed title: "${displayedTitle?.trim()}"`);

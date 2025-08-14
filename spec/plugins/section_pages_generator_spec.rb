@@ -93,7 +93,7 @@ RSpec.describe Jekyll::SectionPagesGenerator do
       content = generator.send(:generate_section_index_content, section_data)
       
       expect(content).to include('Dynamic section index')
-      expect(content).to include('collections-grid')
+      expect(content).to include('navigation-collections-grid')
       expect(content).to include('index-latest')
     end
   end

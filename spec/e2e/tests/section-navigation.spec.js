@@ -120,7 +120,7 @@ test.describe('Section Navigation', () => {
         // If this is a collection page, verify it has collection-specific content
         if (url.includes('/news.html') || url.includes('/posts.html') || url.includes('/community.html')) {
           // Should have posts or articles
-          const articles = page.locator('article, .post-item, .news-item, .community-item');
+          const articles = page.locator('article, .navigation-post-square, .news-item, .community-item');
           const articleCount = await articles.count();
           // May be 0 if no content exists yet, but structure should be there
           const contentContainer = page.locator('.posts-container, .news-container, .community-container, main');
@@ -165,7 +165,7 @@ test.describe('Section Navigation', () => {
         // If this is a collection page, verify it has collection-specific content
         if (url.includes('/news.html') || url.includes('/posts.html') || url.includes('/community.html')) {
           // Should have posts or articles structure
-          const articles = page.locator('article, .post-item, .news-item, .community-item');
+          const articles = page.locator('article, .navigation-post-square, .news-item, .community-item');
           const articleCount = await articles.count();
           // May be 0 if no content exists yet, but structure should be there
           const contentContainer = page.locator('.posts-container, .news-container, .community-container, main');

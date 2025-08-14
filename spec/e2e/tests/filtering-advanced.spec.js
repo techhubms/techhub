@@ -441,7 +441,7 @@ test.describe('Advanced Filtering Scenarios', () => {
 
         // Check which posts are visible and verify their tags contain subset matches
         const visiblePosts = await page.evaluate((testFilter) => {
-          const posts = document.querySelectorAll('.post-item:not([style*="display: none"])');
+          const posts = document.querySelectorAll('.navigation-post-square:not([style*="display: none"])');
           const results = [];
 
           for (const post of posts) {
@@ -453,7 +453,7 @@ test.describe('Advanced Filtering Scenarios', () => {
             const hasMatch = tags.some(tag => regex.test(tag));
 
             results.push({
-              title: post.querySelector('.post-title')?.textContent || 'No title',
+              title: post.querySelector('.navigation-post-title')?.textContent || 'No title',
               tags: tags,
               hasExpectedMatch: hasMatch
             });

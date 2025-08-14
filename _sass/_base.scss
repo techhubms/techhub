@@ -17,23 +17,6 @@ html {
     scroll-behavior: smooth;
 }
 
-h3 {
-    font-size: 1.4em !important;
-}
-
-h4 {
-    font-size: 1.2em !important;
-}
-
-h5 {
-    font-size: 1.1em !important;
-}
-
-h6 {
-    font-size: 1em !important;
-    font-weight: 600 !important;
-}
-
 a {
     color: colors.$bright-blue;
     transition: color 0.2s ease, text-decoration 0.2s ease;
@@ -62,51 +45,6 @@ a {
     }
 }
 
-iframe.youtube {
-    display: block;
-    margin: 0 auto 10px auto;
-    width: 100%;
-    max-width: 852px;
-    aspect-ratio: 16 / 9;
-    height: auto;
-    max-height: 479px;
-    box-sizing: border-box;
-    will-change: transform;
-    transform: translateZ(0);
-}
-
-.highlight {
-    background: transparent !important;
-    contain: layout style;
-}
-
-pre.highlight,
-code {
-    background-color: rgba(colors.$bright-purple, 0.1) !important;
-    border: 1px solid rgba(colors.$bright-purple, 0.2);
-    border-radius: 8px;
-    color: colors.$light-gray;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
-    overflow-x: auto;
-    max-width: 100%;
-    box-sizing: border-box;
-    will-change: scroll-position;
-    contain: layout style;
-}
-
-pre.highlight code {
-    background: none !important;
-    border: none !important;
-    border-radius: 0;
-    color: inherit;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
-    will-change: auto;
-}
-
 .wrapper {
     max-width: -webkit-calc(#{sizes.$content-width} - 30px) !important;
     max-width: calc(#{sizes.$content-width} - 30px) !important;
@@ -117,7 +55,7 @@ pre.highlight code {
         max-width: -webkit-calc(#{sizes.$content-width} - 30px) !important;
         max-width: calc(#{sizes.$content-width} - 30px) !important;
     }
-}   
+}
 
 .page-content {
     padding: 25px 0;
@@ -131,7 +69,7 @@ pre.highlight code {
         border-radius: 15px;
         padding: 10px 15px 20px 15px !important;
         contain: layout style;
-        line-height: 1.6;
+        line-height: 1.6 !important;
+        letter-spacing: unset !important;
     }
 }
-

@@ -112,7 +112,7 @@ async function getLatestFileFromCollectionByCategory(collectionPath, category) {
       const content = fs.readFileSync(filePath, 'utf8');
 
       // Parse front matter
-      const frontMatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
+      const frontMatterMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
       const frontMatter = {};
 
       if (frontMatterMatch) {
@@ -358,7 +358,7 @@ async function getFilterCounts(page) {
 
 async function getVisiblePostCount(page) {
   return await page.evaluate(() => {
-    const posts = document.querySelectorAll('.post-item');
+    const posts = document.querySelectorAll('.navigation-post-square');
     let visibleCount = 0;
     posts.forEach(post => {
       const style = window.getComputedStyle(post);

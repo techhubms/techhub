@@ -3,7 +3,7 @@
 @use "navigation";
 
 // Collections grid (Section index - News, Videos, Community, etc.)
-.collections-grid {
+.navigation-collections-grid {
     @extend .nav-grid-base;
     
     @media (min-width: sizes.$navigation-breakpoint) {
@@ -15,15 +15,16 @@
     }
 }
 
-.collection-square {
+.navigation-collection-square {
     @extend .nav-square-base;
 
-    // Visual styling (moved from base class)
     background: rgba(colors.$medium-blue, 0.10);
 
     // Visual styling for content
-    .collection-content {
+    .navigation-collection-content {
         @extend .nav-content;
+
+        padding: 10px;
     }
 
     @media (hover: hover) {
@@ -38,10 +39,14 @@
     }
 }
 
-.collection-title {
+.navigation-collection-title {
     @extend .nav-title-base;
+
+    font-size: 22px;
 }
 
-.collection-desc {
+.navigation-collection-desc {
     @extend .nav-desc-base;
+
+    line-height: 1.4;
 }

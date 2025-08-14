@@ -23,14 +23,14 @@ Welcome! Because we know it's hard to stay up-to-date with the fast changing wor
 </div>
 
 <h2>Content per category</h2>
-<div class="sections-grid">
+<div class="navigation-sections-grid">
     {% for section in site.data.sections %}
       {% assign section_key = section[0] %}
       {% assign section_data = section[1] %}
-      <a href="{{ section_data.url | relative_url }}" class="section-square" style="background-image: url('{{ section_data.image | relative_url }}');">
-        <div class="section-content">
-          <span class="section-title">{{ section_data.title }}</span>
-          <span class="section-desc">{{ section_data.description }}</span>
+      <a href="{{ section_data.url | relative_url }}" class="navigation-section-square" style="background-image: url('{{ section_data.image | relative_url }}');">
+        <div class="navigation-section-content">
+          <span class="navigation-section-title">{{ section_data.title }}</span>
+          <span class="navigation-section-desc">{{ section_data.description }}</span>
         </div>
       </a>
     {% endfor %}

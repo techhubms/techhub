@@ -129,8 +129,8 @@ test.describe('Server-Side Requirements - Critical Foundation Tests', () => {
 
       // Get content analysis
       const contentAnalysis = await page.evaluate(() => {
-        const allItems = document.querySelectorAll('.post-item');
-        const visibleItems = document.querySelectorAll('.post-item:not([style*="display: none"])');
+        const allItems = document.querySelectorAll('.navigation-post-square');
+        const visibleItems = document.querySelectorAll('.navigation-post-square:not([style*="display: none"])');
 
         // Analyze dates of visible items
         const visibleDates = Array.from(visibleItems).map(item => {

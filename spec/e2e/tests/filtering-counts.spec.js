@@ -126,7 +126,7 @@ test.describe('Filter Count Accuracy Tests', () => {
 
       // Get total content vs visible content to understand limiting
       const totalContentItems = await page.evaluate(() => {
-        return document.querySelectorAll('.post-item').length;
+        return document.querySelectorAll('.navigation-post-square').length;
       });
 
       const visibleContentItems = await getVisiblePostCount(page);

@@ -55,7 +55,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
 
       // Verify only content from this section is visible
       const visiblePosts = await page.evaluate((section) => {
-        const posts = document.querySelectorAll('.post-item:not([style*="display: none"])');
+        const posts = document.querySelectorAll('.navigation-post-square:not([style*="display: none"])');
         const results = [];
 
         for (const post of posts) {
@@ -63,7 +63,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
           const hasSection = tags.includes(section.toLowerCase());
 
           results.push({
-            title: post.querySelector('.post-title')?.textContent || 'No title',
+            title: post.querySelector('.navigation-post-title')?.textContent || 'No title',
             tags: tags.slice(0, 5), // Show first 5 tags for debugging
             hasExpectedSection: hasSection
           });
@@ -182,7 +182,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
 
         // Verify only content from this collection is visible
         const visiblePosts = await page.evaluate((collection) => {
-          const posts = document.querySelectorAll('.post-item:not([style*="display: none"])');
+          const posts = document.querySelectorAll('.navigation-post-square:not([style*="display: none"])');
           const results = [];
 
           for (const post of posts) {
@@ -191,7 +191,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
             const hasCollectionTag = tags.includes(expectedCollection);
 
             results.push({
-              title: post.querySelector('.post-title')?.textContent || 'No title',
+              title: post.querySelector('.navigation-post-title')?.textContent || 'No title',
               tags: tags.slice(0, 5), // Show first 5 tags for debugging
               expectedCollection: expectedCollection,
               isCorrect: hasCollectionTag
@@ -356,7 +356,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
 
         // Verify only content with this tag is visible (using subset matching)
         const visiblePosts = await page.evaluate((tag) => {
-          const posts = document.querySelectorAll('.post-item:not([style*="display: none"])');
+          const posts = document.querySelectorAll('.navigation-post-square:not([style*="display: none"])');
           const results = [];
 
           for (const post of posts) {
@@ -367,7 +367,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
             const hasMatch = tags.some(postTag => postTag.toLowerCase().includes(tag.toLowerCase()));
 
             results.push({
-              title: post.querySelector('.post-title')?.textContent || 'No title',
+              title: post.querySelector('.navigation-post-title')?.textContent || 'No title',
               tags: tags,
               hasExpectedTag: hasMatch,
               matchingTags: tags.filter(postTag => postTag.toLowerCase().includes(tag.toLowerCase()))
