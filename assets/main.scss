@@ -10,7 +10,8 @@
 @use "../_sass/header";
 @use "../_sass/subheader";
 @use "../_sass/filters";
-@use "../_sass/sections";
-@use "../_sass/collections";
-@use "../_sass/posts";
+@use "../_sass/navigation-sections";
+@use "../_sass/navigation-collections";
+@use "../_sass/navigation-posts";
+@use "../_sass/content";
 @use "../_sass/footer";

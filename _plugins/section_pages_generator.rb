@@ -103,12 +103,12 @@ module Jekyll
 
         {{ section_data.description }}
 
-        <div class="collections-grid">
+        <div class="navigation-collections-grid">
         {%- for collection_info in section_data.collections -%}
-          <a href="{{ collection_info.url | relative_url }}" class="collection-square">
-            <div class="collection-content">
-              <span class="collection-title">{{ collection_info.title | escape }}</span>
-              <span class="collection-desc">{{ collection_info.description | escape }}</span>
+          <a href="{{ collection_info.url | relative_url }}" class="navigation-collection-square">
+            <div class="navigation-collection-content">
+              <span class="navigation-collection-title">{{ collection_info.title | escape }}</span>
+              <span class="navigation-collection-desc">{{ collection_info.description | escape }}</span>
             </div>
           </a>
         {%- endfor -%}

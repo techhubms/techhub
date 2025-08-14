@@ -175,9 +175,9 @@ test.describe('Performance and Accessibility', () => {
     await navigateAndVerify(page, '/ai/news.html');
 
     // Wait for content to load
-    await page.waitForSelector('.post-item', { timeout: 1000 });
+    await page.waitForSelector('.navigation-post-square', { timeout: 1000 });
 
-    const items = page.locator('.post-item');
+    const items = page.locator('.navigation-post-square');
     const itemCount = await items.count();
 
     console.log(`Found ${itemCount} content items`);
@@ -247,7 +247,7 @@ test.describe('Performance and Accessibility', () => {
 
       // Page should still be functional
       await expect(page.locator('main')).toBeVisible();
-      const items = page.locator('.post-item');
+      const items = page.locator('.navigation-post-square');
       const itemCount = await items.count();
       expect(itemCount).toBeGreaterThan(0);
     }

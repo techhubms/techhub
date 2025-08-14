@@ -94,7 +94,7 @@ function initializeDOM() {
 // Initialize DOM cache
 function initDOMCache() {
     if (!cachedPosts) {
-        const postElements = document.querySelectorAll('.post-item');
+        const postElements = document.querySelectorAll('.navigation-post-square');
         cachedPosts = Array.from(postElements).map((el, index) => ({
             el: el,
             index: index  // Add index for tag relationship lookups

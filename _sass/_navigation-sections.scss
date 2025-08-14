@@ -3,7 +3,7 @@
 @use "navigation";
 
 // Sections grid (Root index - AI, GitHub Copilot sections)
-.sections-grid {
+.navigation-sections-grid {
     @extend .nav-grid-base;
 
     @media (min-width: sizes.$navigation-breakpoint) {
@@ -15,7 +15,7 @@
     }
 }
 
-.section-square {
+.navigation-section-square {
     @extend .nav-square-base;
 
     // Section-specific structural overrides
@@ -36,7 +36,7 @@
     }
 
     // Visual styling for content
-    .section-content {
+    .navigation-section-content {
         @extend .nav-content;
         margin: 15px 45px 15px 45px;
         background: rgba(colors.$dark-navy, 0.7);
@@ -59,7 +59,7 @@
                 background: rgba(colors.$dark-navy, 0.2);
             }
 
-            .section-content {
+            .navigation-section-content {
                 background: rgba(colors.$dark-navy, 0.95);
                 border-color: rgba(colors.$bright-purple, 0.6);
             }
@@ -68,10 +68,10 @@
 
 }
 
-.section-title {
+.navigation-section-title {
     @extend .nav-title-base;
 }
 
-.section-desc {
+.navigation-section-desc {
     @extend .nav-desc-base;
 }

@@ -19,7 +19,7 @@
     justify-content: center;
     align-items: center;
     height: auto;
-    text-decoration: none;
+    text-decoration: none !important;
     text-align: center;
     cursor: pointer;
     position: relative;
@@ -58,7 +58,7 @@
     }
 
     &:hover {
-        text-decoration: none;
+        text-decoration: none !important;
     }
 
     @media (hover: hover) {
@@ -101,7 +101,6 @@
 
 .nav-desc-base {
     font-size: 14px;
-    line-height: 1.4;
     color: colors.$light-gray;
     contain: layout style;
 }

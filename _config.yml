@@ -56,44 +56,51 @@ compress_html:
   ignore:
     envs: []
 
-# Exclude unnecessary files from build
+# Exclude unwanted files and directories (Jekyll includes everything else by default)
 exclude:
-  - .devcontainer/
-  - .git/
-  - .github/
-  - .jekyll-cache/
-  - .logs/
-  - .magazines/
-  - .ruby-lsp/
-  - .sass-cache/
-  - .tmp/
-  - .vscode/
-  - _site/
-  - docs/
-  - gemfiles/
-  - infra/
-  - node_modules/
-  - spec/
-  - test-results/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - "**/*.ps1" 
-  - "**/*.py"
-  - "**/*.sh"
-  - "**/*.yml"
-  - ".github/**/*.json"
-  - "package*.json"
-  - "tsconfig*.json"
-  - ".vscode/*.json"
-  - "spec/**/*.json"
-  - .gitignore
-  - .jekyll-metadata
-  - CODEOWNERS
-  - Gemfile
-  - Gemfile.lock
-  - README.md
+  # All dotfiles and dot directories (covers .git, .github, .vscode, .devcontainer, etc.)
+  - ".*"
+  
+  # Development and build artifacts
+  - "node_modules/"
+  - "vendor/"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "package.json"
+  - "package-lock.json"
+  - "_site/"  # Generated site output
+  
+  # .NET build artifacts and source
+  - "src/"
+  - "infra/"
+  - "bin/"
+  - "obj/"
+  - "*.dll"
+  - "*.pdb"
+  - "*.exe"
+  - "*.csproj"
+  - "*.sln"
+  - "*.cs"
+  
+  # Documentation and development files
+  - "docs/"
+  - "spec/"
+  - "test-results/"
+
+  # Exclude specific markdown files that aren't part of the site
+  - "README.md"
+  - "CHANGELOG.md"
+  - "CONTRIBUTING.md"
+  - "SECURITY.md"
+  - "LICENSE*"
+  
+  # Scripts and configuration
+  - "*.ps1"
+  - "*.config.js"
+  - "eslint.config.js"
+  
+  # Other unwanted files
+  - "*.log"
 
 # Performance-oriented defaults
 defaults:
