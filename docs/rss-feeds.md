@@ -141,21 +141,22 @@ The RSS processing workflow uses a two-branch strategy to ensure main branch sta
 
 ### Automatic Deployment Integration
 
-When the RSS workflow successfully processes new content and commits markdown files to the main branch, the Azure Static Web App deployment is automatically triggered through a `workflow_run` trigger. This ensures that new content is immediately available on the live site without manual intervention.
+When the RSS workflow successfully processes new content and commits markdown files to the main branch, the Azure Static Web App deployment is automatically triggered through an explicit workflow dispatch call. This ensures that new content is immediately available on the live site without manual intervention.
 
 **Deployment Workflow Integration**:
 
-- **Trigger**: Azure Static Web App workflow listens for successful completion of RSS workflow
-- **Condition**: Only triggers when RSS workflow completes successfully and creates new content
-- **Timing**: Deployment begins immediately after RSS workflow commits to main branch
+- **Trigger**: RSS workflow explicitly triggers Azure Static Web App deployment via workflow_dispatch
+- **Condition**: Only triggers when RSS workflow actually creates or modifies content files and syncs them to main
+- **Timing**: Deployment is triggered immediately after RSS workflow commits new content to main branch
 - **Automation**: No manual action required - fully automated content-to-production pipeline
 
 **Key Benefits**:
 
 - **Immediate Availability**: New RSS content appears on the live site within minutes
 - **Zero Manual Intervention**: Fully automated from RSS processing to deployment
-- **Reliability**: Only successful RSS workflow runs trigger deployment
-- **Efficiency**: Deployment only occurs when there's actually new content to publish
+- **Optimal Efficiency**: Deployment only occurs when content is actually created or modified, eliminating unnecessary deployments
+- **Resource Conservation**: No hourly deployments when RSS processing finds no new content
+- **Reliable Triggering**: Explicit workflow dispatch bypasses GitHub's safety restrictions on automated workflow triggering
 
 ## Content Fetching Architecture
 
