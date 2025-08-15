@@ -5373,5 +5373,65 @@
     "collection": "community",
     "timestamp": "2025-08-15 15:45:19 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/unable-to-connect-to-a-specific-network-after-upgrade-to-windows/m-p/4444120#M37296"
+  },
+  {
+    "timestamp": "2025-08-15 17:14:33 +00:00",
+    "reason": "No categories found: No categories were assigned because PowerToys is an open-source Windows utility suite designed to enhance end-user productivity and system customization, not a core Microsoft developer platform or technology according to the predefined categories. The content and description only discuss PowerToys features (Command Palette improvements, ZoomIt tool), which are tweaks and utilities for Windows, rather than coding, Azure, AI, ML, DevOps, or Security topics. None of the relevant inclusion rules (AI, GitHub Copilot, Coding, DevOps, Azure, ML, Security) are triggered. This content is also not about PowerToys development, customization with code, or developer-facing APIs—it is user-focused feature information. Thus, per rules, no categories apply.",
+    "canonical_url": "https://www.youtube.com/shorts/uox2WDGc0jM",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-08-15 17:14:46 +00:00",
+    "reason": "No categories found: No categories assigned because the content is primarily about PowerToys, which is a set of user-level utilities and productivity enhancements for Windows. The update focuses on new features in the Command Palette and open-source tools. There are no substantial references to Microsoft developer frameworks, coding practices, DevOps, Azure services, AI, ML, or Security as required for inclusion in the predefined categories. Additionally, the content is an announcement of new features for a utility tool, not a developer-targeted technical implementation or tutorial.",
+    "canonical_url": "https://www.youtube.com/watch?v=coELvJ0be0c",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-08-15 17:16:07 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/discussions/edge-profiles-not-fully-isolated-accounts-from-one-profile/m-p/4444167#M64733",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-08-15 17:16:07 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/education/distribution-groups-management-by-owner-what-tools-your-school/m-p/4444250#M884",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-08-15 17:17:11 +00:00",
+    "reason": "No categories found: No categories assigned due to generic exclusion rules. This is a 'community' type post with a primary focus on seeking help with a specific Excel formula—i.e., it is a 'question-only content' per the 'Question-Only Content' exclusion rule (Chapter 3). The post is primarily asking for assistance, without providing substantive technical insights or educational content about Microsoft technologies; it consists of the user describing an issue and asking for help adjusting a formula. Additionally, it does not present a technical solution, insight, tutorial, or knowledge that would benefit the knowledge base—it is a help-seeking post, not a solution or guide.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/excel/additional-help-needed-with-existing-formula-using-lamda-excel/m-p/4444247#M254093",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-08-15 17:17:11 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/excel/power-query-a%C3%A7%C4%B1l%C4%B1rken-beklenmeyen-bir-sorunla-kar%C5%9F%C4%B1la%C5%9F%C4%B1ld%C4%B1/m-p/4444160#M254090",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-08-15 17:17:54 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-teams/microsoft-teams-app-in-task-bar-shows-up-as-white-square-after/m-p/4444253#M144077",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-08-15 17:17:54 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/net-runtime/wont-install-framework-ect-automaticly/m-p/4444195#M759",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-08-15 17:17:54 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/save-the-date-windows-office-hours-august-21-2025/m-p/4444252#M29435",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-08-15 17:17:54 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/keep-getting-error-when-installing-w11/m-p/4444188#M37303",
+    "collection": "community"
   }
 ]

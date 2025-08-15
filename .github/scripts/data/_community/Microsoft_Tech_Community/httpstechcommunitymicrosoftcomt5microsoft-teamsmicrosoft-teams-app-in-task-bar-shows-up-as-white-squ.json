@@ -1,0 +1,14 @@
+{
+  "OutputDir": "_community",
+  "Link": "https://techcommunity.microsoft.com/t5/microsoft-teams/microsoft-teams-app-in-task-bar-shows-up-as-white-square-after/m-p/4444253#M144077",
+  "Title": "Microsoft Teams App in Task Bar shows up as white square after opening app",
+  "ProcessedDate": "2025-08-15 17:13:29",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "PubDate": "2025-08-15T16:25:58+00:00",
+  "Description": "Using Windows 11 Pro 24H2 (installed on 8/4/2025) with Microsoft Teams:\n\nYou have Microsoft Teams version 25198.1112.3855.2900. You've got the latest version. It was last checked on 8/15/2025.\n\nWhen I launch the Microsoft Teams App it shows up as a white square icon in the task bar?\n\n![]()\n\nWhat can be done to get this icon back to what it was originally. I've used the Microsoft Store to remove this app and install it back again, but does not work. I've also removed the iconchache files stored in: C:\\Users\\%userprofile%\\AppData\\Local\\IconCache.db.old C:\\Users\\%userprofile%\\AppData\\Local\\Microsoft\\Windows\\Explorer\\",
+  "FeedName": "Microsoft Tech Community",
+  "Author": "krisdev24",
+  "Tags": [],
+  "EnhancedContent": "Using Windows 11 Pro 24H2 (installed on 8/4/2025) with Microsoft Teams:\n\nYou have Microsoft Teams version 25198.1112.3855.2900. You've got the latest version. It was last checked on 8/15/2025.\n\nWhen I launch the Microsoft Teams App it shows up as a white square icon in the task bar?\n\nWhat can be done to get this icon back to what it was originally.  I've used the Microsoft Store to remove this app and install it back again, but does not work.  I've also removed the iconchache files stored in: C:\\Users\\%userprofile%\\AppData\\Local\\IconCache.db.old C:\\Users\\%userprofile%\\AppData\\Local\\Microsoft\\Windows\\Explorer\\"
+}
