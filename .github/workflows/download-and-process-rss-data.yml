@@ -492,6 +492,25 @@ jobs:
 
           echo "✅ Successfully reset RSS branch"
 
+      - name: Trigger Azure Static Web App deployment
+        if: env.SHOULD_COPY == 'true' && always() && !cancelled()
+        run: |
+          echo "🚀 Triggering Azure Static Web App deployment for new content..."
+          
+          # Trigger the Azure Static Web App workflow via workflow_dispatch
+          gh workflow run "deploy-static-web-app.yml" \
+            --repo ${{ github.repository }} \
+            --ref main
+          
+          if [ $? -eq 0 ]; then
+            echo "✅ Successfully triggered Azure Static Web App deployment"
+          else
+            echo "❌ Failed to trigger Azure Static Web App deployment"
+            echo "Note: This is not critical - content is still available on main branch"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Workflow summary
         if: always() && !cancelled()
         run: |
