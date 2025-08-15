@@ -1,0 +1,17 @@
+{
+  "Title": "What are you most excited about at Build 2025?",
+  "Author": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "Tags": [
+    "MSBuild",
+    "OneDevQuestion"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "EnhancedContent": null,
+  "PubDate": "2025-08-14T19:05:59+00:00",
+  "FeedName": "Microsoft Developer YouTube",
+  "Description": "Craig Loewen’s highlight from #MSBuild 2025? The Windows Subsystem for Linux is now fully open source. In this #OneDevQuestion, he shares what that means for developers, plus why he’s excited about Windows AI Foundry for running local AI models in your apps.\n\nLearn more: https://msft.it/6054sruG0",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "ProcessedDate": "2025-08-15 14:32:14",
+  "Link": "https://www.youtube.com/watch?v=PUHypVSs1JE"
+}

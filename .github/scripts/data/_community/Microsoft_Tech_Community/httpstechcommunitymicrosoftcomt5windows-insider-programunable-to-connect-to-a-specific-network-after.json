@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-08-15 14:36:07",
+  "PubDate": "2025-08-15T10:30:14+00:00",
+  "Link": "https://techcommunity.microsoft.com/t5/windows-insider-program/unable-to-connect-to-a-specific-network-after-upgrade-to-windows/m-p/4444120#M37296",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "Author": "Yeungkkaopem",
+  "FeedName": "Microsoft Tech Community",
+  "EnhancedContent": "I am carrying out a windows 10 to 11 upgrade of devices in my domain and observed users are unable to connect to a specific network. We are using GPO to force the machines to connect to the networks SSID when in range using PEAP on Certification authentication. The Network shows \"Action Needed\" and does not connect when you connect to the network manually. error thrown when checking status of the connectivity from CISCO ISE: 12937 Supplicant stopped responding to ISE after sending it the first inner EAP-MSCHAPv2",
+  "Title": "Unable to Connect to a Specific Network after upgrade to windows 11",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "OutputDir": "_community",
+  "Description": "![]() I am carrying out a windows 10 to 11 upgrade of devices in my domain and observed users are unable to connect to a specific network. We are using GPO to force the machines to connect to the networks SSID when in range using PEAP on Certification authentication. The Network shows \"Action Needed\" and does not connect when you connect to the network manually. error thrown when checking status of the connectivity from CISCO ISE: 12937 Supplicant stopped responding to ISE after sending it the first inner EAP-MSCHAPv2",
+  "Tags": []
+}

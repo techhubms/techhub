@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-08-15 14:36:07",
+  "PubDate": "2025-08-15T13:50:30+00:00",
+  "Link": "https://techcommunity.microsoft.com/t5/sharepoint/carousel-suddenly-stretching-images/m-p/4444202#M87457",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "Author": "homolworks",
+  "FeedName": "Microsoft Tech Community",
+  "EnhancedContent": "Has anyone seen that the carousel layout for news is suddenly stretching or distorting image instead of smartly orienting them, like it used to? This seems to have started this past week, so I'm guessing an update has changed something. Is there a specific dimension that images need to be now if you plan to display them in a carousel layout?",
+  "Title": "Carousel suddenly stretching images",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "OutputDir": "_community",
+  "Description": "Has anyone seen that the carousel layout for news is suddenly stretching or distorting image instead of smartly orienting them, like it used to? This seems to have started this past week, so I'm guessing an update has changed something. Is there a specific dimension that images need to be now if you plan to display them in a carousel layout?",
+  "Tags": []
+}

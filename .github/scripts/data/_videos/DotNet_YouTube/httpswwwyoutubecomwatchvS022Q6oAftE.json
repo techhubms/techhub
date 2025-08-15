@@ -1,0 +1,16 @@
+{
+  "Title": "Building Confident Application Systems with .NET Aspire: From Dev to Deployment",
+  "Author": "dotnet",
+  "OutputDir": "_videos",
+  "Tags": [
+    ".NET"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "EnhancedContent": null,
+  "PubDate": "2025-08-14T14:24:36+00:00",
+  "FeedName": "DotNet YouTube",
+  "Description": ".NET Aspire makes developing robust application systems simpler and more approachable—even for small teams and solo developers. In this introductory-to-intermediate session, we’ll walk through how Aspire’s opinionated stack helps you architect distributed .NET applications while maintaining flexibility and observability.\n\nYou'll learn how to: Scaffold and structure your app using Aspire’s development model Deploy systems to Azure or containerized environments with ease Integrate CI/CD pipelines using GitHub Actions Instrument your app with custom metrics to gain meaningful insights\n\nVisual Studio: http://visualstudio.com VS Live on-demand sessions: https://aka.ms/vslivehq25 Missed the fun at MS HQ?! Join one of these upcoming events, we’ll see you there! VSLive events: https://aka.ms/VSS/VSLive Subscriptions portal: https://my.visualstudio.com\n\nConnect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet",
+  "FeedLevelAuthor": "dotnet",
+  "ProcessedDate": "2025-08-15 14:32:06",
+  "Link": "https://www.youtube.com/watch?v=S022Q6oAftE"
+}
