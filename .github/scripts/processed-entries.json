@@ -6710,5 +6710,11 @@
     "collection": "community",
     "timestamp": "2025-08-15 22:15:06 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-security-exposure/microsoft-security-exposure-management-ninja-training/ba-p/4444285"
+  },
+  {
+    "timestamp": "2025-08-15 23:12:42 +00:00",
+    "reason": "Succesfully added: Assigned the AI and GitHub Copilot categories because the content is specifically about a developer feature (Copilot) integrated into GitHub's workflow for writing pull request descriptions (AI rules 1 and 2, and GitHub Copilot rule 1). The feature uses AI to generate text, which fits both categories. No other categories apply, as the post is not about coding, DevOps, Azure, ML, or Security. There are no generic exclusion rules triggered, as the post is a technical news announcement for developers/users of Copilot.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-08-15-deprecating-copilot-text-completion-for-pull-request-descriptions"
   }
 ]
