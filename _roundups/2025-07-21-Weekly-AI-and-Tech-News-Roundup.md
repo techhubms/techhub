@@ -248,4 +248,4 @@ Microsoft Defender for Endpoint, reaffirmed as a leader by Gartner and demonstra
 
 - [Microsoft Named a Leader in Gartner's 2025 Magic Quadrant for Endpoint Protection](https://www.microsoft.com/en-us/security/blog/2025/07/16/microsoft-is-named-a-leader-in-the-2025-gartner-magic-quadrant-for-endpoint-protection-platforms/)
 - [Microsoft at Black Hat USA 2025: A Unified Approach to Modern Cyber Defense](https://techcommunity.microsoft.com/blog/microsoft-security-blog/%E2%80%8B%E2%80%8Bmicrosoft-at-black-hat-usa-2025-a-unified-approach-to-modern-cyber-defense%E2%80%8B%E2%80%8B/4434292)
-- [Microsoft at Black Hat USA 2025: A unified approach to modern cyber defense](https://techcommunity.microsoft.com/blog/microsoft-security-blog/%E2%80%8B%E2%80%8Bmicrosoft-at-black-hat-usa-2025-a-unified-approach-to-modern-cyber-defense%E2%80%8B%E2%80%8B/4434292)
+- [Microsoft at Black Hat USA 2025: A unified approach to modern cyber defense](https://techcommunity.microsoft.com/blog/microsoft-security-blog/%E2%80%8B%E2%80%8Bmicrosoft-at-black-hat-usa-2025-a-unified-approach-to-modern-cyber-defense%E2%80%8B%E2%80%8B/4434292)
