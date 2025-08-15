@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "ProcessedDate": "2025-08-15 14:40:33",
   "PubDate": "2025-08-13T12:05:29+00:00",
@@ -12,3 +13,19 @@
   "Description": "I have a user that was assigned Visual Studio Subscriber a few years ago. We have an on-prem AD to assign the user to a Visual Studio licensing group that gets replicated to Entra ID so the system recognized that a license had been assigned and Azure DevOps shows the correct Visual Studio license (Visual Studio Enterprise subscription). After a few years the user no longer needs the Visual Studio license so the person was removed from the on-prem AD group which replicated the change to Entra ID. However, Azure DevOps still shows the user's access level as Visual Studio Enterprise subscription. I double-checked the Visual Studio license page and confirmed the user no longer has an assigned license. I changed the user's access level to Stakeholder manually but when the user logs back into Azure DevOps it changes back to Visual Studio Enterprise subscription. I completely removed the user from Azure DevOps (Remove from organization) and re-added them along with adding back all the original project permissions and assigning Stakeholder. Once the user logged in the access level changed to Visual Studio Enterprise subscription again (skipping the initial default Visual Studio Subscriber that a \"new to DevOps\" user would get). Is there something I am missing that will not allow me to set this person's access level back to Stakeholder?",
   "Tags": []
 }
+=======
+{
+  "OutputDir": "_community",
+  "ProcessedDate": "2025-08-13 22:06:58",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Tags": [],
+  "Description": "I have a user that was assigned Visual Studio Subscriber a few years ago. We have an on-prem AD to assign the user to a Visual Studio licensing group that gets replicated to Entra ID so the system recognized that a license had been assigned and Azure DevOps shows the correct Visual Studio license (Visual Studio Enterprise subscription). After a few years the user no longer needs the Visual Studio license so the person was removed from the on-prem AD group which replicated the change to Entra ID. However, Azure DevOps still shows the user's access level as Visual Studio Enterprise subscription. I double-checked the Visual Studio license page and confirmed the user no longer has an assigned license. I changed the user's access level to Stakeholder manually but when the user logs back into Azure DevOps it changes back to Visual Studio Enterprise subscription. I completely removed the user from Azure DevOps (Remove from organization) and re-added them along with adding back all the original project permissions and assigning Stakeholder. Once the user logged in the access level changed to Visual Studio Enterprise subscription again (skipping the initial default Visual Studio Subscriber that a \"new to DevOps\" user would get). Is there something I am missing that will not allow me to set this person's access level back to Stakeholder?",
+  "PubDate": "2025-08-13T12:05:29+00:00",
+  "EnhancedContent": "I have a user that was assigned Visual Studio Subscriber a few years ago. We have an on-prem AD to assign the user to a Visual Studio licensing group that gets replicated to Entra ID so the system recognized that a license had been assigned and Azure DevOps shows the correct Visual Studio license (Visual Studio Enterprise subscription). After a few years the user no longer needs the Visual Studio license so the person was removed from the on-prem AD group which replicated the change to Entra ID. However, Azure DevOps still shows the user's access level as Visual Studio Enterprise subscription. I double-checked the Visual Studio license page and confirmed the user no longer has an assigned license. I changed the user's access level to Stakeholder manually but when the user logs back into Azure DevOps it changes back to Visual Studio Enterprise subscription. I completely removed the user from Azure DevOps (Remove from organization) and re-added them along with adding back all the original project permissions and assigning Stakeholder. Once the user logged in the access level changed to Visual Studio Enterprise subscription again (skipping the initial default Visual Studio Subscriber that a \"new to DevOps\" user would get). Is there something I am missing that will not allow me to set this person's access level back to Stakeholder?",
+  "FeedName": "Microsoft Tech Community",
+  "Title": "Unable to revert Azure DevOps user access level",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/unable-to-revert-azure-devops-user-access-level/m-p/4442871#M22102",
+  "Author": "dbenson"
+}
+>>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

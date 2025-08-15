@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "ProcessedDate": "2025-08-15 14:40:33",
   "PubDate": "2025-08-14T07:04:16+00:00",
@@ -12,3 +13,19 @@
   "Description": "I have tried to deploy the Azure Local cluster based on Stack HCI, but are currently stuck on the Creating Cluster portion.\n\nHowever the fault it gives is very unclear and says there is a network configuration error however All previous steps where succesfull including setting up networking where I assume it would have failed if it was a networking issue. The name of the cluster would be something else if I where to configure it manually but this name comes from Azure and was validated there.\n\nError:\n\nType 'ConfigCluster' of Role 'Cluster' raised an exception: Check the spelling of the cluster name. Otherwise, there might be a problem with your network. Make sure the cluster nodes are turned on and connected to the network or contact your network administrator. at SetClusterLiveDumpPolicy, C:\\NugetStore\\Microsoft.AzureStack.Fabric.Storage.SCPSModule.10.2507.1001.1000\\content\\CloudDeployment\\Classes\\Cluster\\Cluster.psm1: line 898 at ConfigCluster, C:\\NugetStore\\Microsoft.AzureStack.Fabric.Storage.SCPSModule.10.2507.1001.1000\\content\\CloudDeployment\\Classes\\Cluster\\Cluster.psm1: line 322 at , C:\\CloudDeployment\\ECEngine\\InvokeInterfaceInternal.psm1: line 163 at Invoke-EceInterfaceInternal, C:\\CloudDeployment\\ECEngine\\InvokeInterfaceInternal.psm1: line 158 at , : line 50",
   "Tags": []
 }
+=======
+{
+  "PubDate": "2025-08-14T07:04:16+00:00",
+  "ProcessedDate": "2025-08-14 15:08:39",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "OutputDir": "_community",
+  "Tags": [],
+  "EnhancedContent": "I have tried to deploy the Azure Local cluster based on Stack HCI, but are currently stuck on the Creating Cluster portion.\n\nHowever the fault it gives is very unclear and says there is a network configuration error however All previous steps where succesfull including setting up networking where I assume it would have failed if it was a networking issue. The name of the cluster would be something else if I where to configure it manually but this name comes from Azure and was validated there.\n\nError:\n\nType 'ConfigCluster' of Role 'Cluster' raised an exception: Check the spelling of the cluster name. Otherwise, there might be a problem with your network. Make sure the cluster nodes are turned on and connected to the network or contact your network administrator. at SetClusterLiveDumpPolicy, C:\\NugetStore\\Microsoft.AzureStack.Fabric.Storage.SCPSModule.10.2507.1001.1000\\content\\CloudDeployment\\Classes\\Cluster\\Cluster.psm1: line 898 at ConfigCluster, C:\\NugetStore\\Microsoft.AzureStack.Fabric.Storage.SCPSModule.10.2507.1001.1000\\content\\CloudDeployment\\Classes\\Cluster\\Cluster.psm1: line 322 at &lt;ScriptBlock&gt;, C:\\CloudDeployment\\ECEngine\\InvokeInterfaceInternal.psm1: line 163 at Invoke-EceInterfaceInternal, C:\\CloudDeployment\\ECEngine\\InvokeInterfaceInternal.psm1: line 158 at &lt;ScriptBlock&gt;, &lt;No file&gt;: line 50",
+  "Description": "I have tried to deploy the Azure Local cluster based on Stack HCI, but are currently stuck on the Creating Cluster portion.\n\nHowever the fault it gives is very unclear and says there is a network configuration error however All previous steps where succesfull including setting up networking where I assume it would have failed if it was a networking issue. The name of the cluster would be something else if I where to configure it manually but this name comes from Azure and was validated there.\n\nError:\n\nType 'ConfigCluster' of Role 'Cluster' raised an exception: Check the spelling of the cluster name. Otherwise, there might be a problem with your network. Make sure the cluster nodes are turned on and connected to the network or contact your network administrator. at SetClusterLiveDumpPolicy, C:\\NugetStore\\Microsoft.AzureStack.Fabric.Storage.SCPSModule.10.2507.1001.1000\\content\\CloudDeployment\\Classes\\Cluster\\Cluster.psm1: line 898 at ConfigCluster, C:\\NugetStore\\Microsoft.AzureStack.Fabric.Storage.SCPSModule.10.2507.1001.1000\\content\\CloudDeployment\\Classes\\Cluster\\Cluster.psm1: line 322 at , C:\\CloudDeployment\\ECEngine\\InvokeInterfaceInternal.psm1: line 163 at Invoke-EceInterfaceInternal, C:\\CloudDeployment\\ECEngine\\InvokeInterfaceInternal.psm1: line 158 at , : line 50",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-stack/error-no-file/m-p/4443115#M277",
+  "Title": "Error No File",
+  "FeedName": "Microsoft Tech Community",
+  "Author": "JensI"
+}
+>>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

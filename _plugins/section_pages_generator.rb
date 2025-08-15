@@ -99,7 +99,7 @@ module Jekyll
         {%- if page.category != "All" -%}
           {%- assign items = items | where_exp: "item", "item.categories contains page.category" -%}
         {%- endif -%}
-        {%- assign items = items | limit_with_same_day -%}
+        {%- assign items = items | limit_with_same_day: 50 -%}
 
         {{ section_data.description }}
 

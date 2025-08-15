@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "Title": "What's your worst security related coding mistake?",
   "Author": "Microsoft Developer",
@@ -20,3 +21,27 @@
   "ProcessedDate": "2025-08-15 14:32:14",
   "Link": "https://www.youtube.com/shorts/51Y-pOLcMHI"
 }
+=======
+{
+  "FeedLevelAuthor": "Microsoft Developer",
+  "ProcessedDate": "2025-08-13 16:04:51",
+  "Author": "Microsoft Developer",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/shorts/51Y-pOLcMHI",
+  "PubDate": "2025-08-13T15:30:28+00:00",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "OutputDir": "_videos",
+  "Description": "At Microsoft Build 2025, we asked attendees and some special guests about developer security. Learn more about developer security and the Secure Future Initiative at http://aka.ms/SFIwebsite",
+  "Title": "What's your worst security related coding mistake?",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedName": "Microsoft Developer YouTube"
+}
+>>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

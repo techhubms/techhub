@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "ProcessedDate": "2025-08-15 14:28:02",
   "PubDate": "2025-08-14T18:35:18+00:00",
@@ -15,3 +16,22 @@
     "Gaming"
   ]
 }
+=======
+{
+  "PubDate": "2025-08-14T18:35:18+00:00",
+  "Author": "stclarke",
+  "FeedUrl": "https://news.microsoft.com/source/feed/",
+  "Title": "Xbox PC app experience expanding on Arm-based Windows 11 PCs",
+  "ProcessedDate": "2025-08-14 19:04:30",
+  "Tags": [
+    "Company News",
+    "Gaming"
+  ],
+  "FeedName": "Microsoft News",
+  "EnhancedContent": "Skip to main content\n\nSkip to main content\n\n[!\\[Site Icon\\](https://winblogs.thesourcemediaassets.com/sites/44/2021/06/Windows11Icon.png)](https://windows.com/) / Windows Insider Blog\n\n# Xbox PC App Experience Expanding on Arm®-based Windows 11 PCs\n\nWritten By\n\n- [Brynnan Fink](https://blogs.windows.com/windows-insider/author/brynnan-fink/)\n- [Peter Dawoud](https://blogs.windows.com/windows-insider/author/peter-dawoud/)\n- [Brandon LeBlanc](https://blogs.windows.com/windows-insider/author/brandonleblanc/)\n- [Nicole Allen](https://blogs.windows.com/windows-insider/author/nicole-allen/)\n\npublished\n\nAugust 13, 2025\n\nToday, we’re beginning to roll out an update for Arm®-based Windows 11 PCs, which introduces changes and improvements to the **Xbox PC app experience.**\n\n**Game Downloads: The Xbox PC app experience is expanding to support game downloads and local play on Arm®-based Windows 11 PCs.** Insiders can download titles from the Xbox PC app catalog unlocking more games to play locally on Arm®-based Windows 11 PCs – including titles offered through your PC Game Pass or Game Pass Ultimate subscription.\n\nWindows and Xbox are working closely together to ensure compatibility across the catalog, and we’re developing new features that will enable more games to be played on Arm®-based Windows 11 PCs in the coming months. We’re excited to team up with Insiders to continue testing and helping us enable full access to your library of games.\n\n[![PC Gaming Preview.](https://winblogs.thesourcemediaassets.com/sites/44/2025/08/2960f872-68fd-414a-82d6-6cc39bf507c0.jpg)](https://support.xbox.com/help/account-profile/manage-account/guide-to-insider-program)Join the PC Gaming Preview on your Arm®-based Windows 11 PC!\n\nThis update (version 2508.1001.27.0 and higher) is available to Windows Insiders who are also [Xbox Insiders](https://support.xbox.com/help/account-profile/manage-account/guide-to-insider-program) enrolled in the PC Gaming Preview on their Arm®-based Windows 11 PCs, located in the Xbox Insider Hub.\n\nIf you’re not enrolled in the PC Gaming Preview, here’s how to get started:\n\n- Download the Xbox Insider Hub from the Microsoft Store.\n- Launch the Xbox Insider Hub and sign-in with your Microsoft account you use for gaming.\n- Under “Previews”, navigate to “PC Gaming” and click join.\n- Once the Xbox Insider Hub shows you as “joined” for the PC Gaming Preview – go to the Microsoft Store and check for updates and you should see an Xbox PC app update for version 1001.27.0 or higher).\n\nThese features will roll out gradually over time, so some Insiders may see the update before others.\n\n**FEEDBACK: To provide feedback or report a problem, click on the “Feedback” item in the “Profile & Settings” menu.**\n\nThanks,\n\nBrynnan Fink – Principal Program Manager, Windows Silicon and System Integration\n\nPeter Dawoud – Principal Product Manager, Windows Silicon and System Integration\n\nBrandon LeBlanc – Principal Product Manager, Windows Insider Program\n\nNicole Allen – Senior Director, Xbox Next Generation",
+  "OutputDir": "_news",
+  "FeedLevelAuthor": "Source",
+  "Link": "https://blogs.windows.com/windows-insider/2025/08/13/xbox-pc-app-experience-expanding-on-arm-based-windows-11-pcs/",
+  "Description": "The post [Xbox PC app experience expanding on Arm-based Windows 11 PCs](https://blogs.windows.com/windows-insider/2025/08/13/xbox-pc-app-experience-expanding-on-arm-based-windows-11-pcs/) appeared first on [Source](https://news.microsoft.com/source)."
+}
+>>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

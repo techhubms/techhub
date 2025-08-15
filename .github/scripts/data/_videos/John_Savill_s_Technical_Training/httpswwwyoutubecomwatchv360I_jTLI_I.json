@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "Title": "Using GPT-5 on Microsoft",
   "Author": "John Savill's Technical Training",
@@ -20,3 +21,27 @@
   "ProcessedDate": "2025-08-15 14:32:02",
   "Link": "https://www.youtube.com/watch?v=360I_jTLI_I"
 }
+=======
+{
+  "EnhancedContent": null,
+  "Tags": [
+    "agents",
+    "AI",
+    "azure ai foundry",
+    "copilot studio",
+    "generative AI",
+    "GPT-5",
+    "LLM"
+  ],
+  "Description": "A look at GPT-5 and using on the Microsoft ecosystem.\n\n▬▬▬▬▬▬ C H A P T E R S ⏰ ▬▬▬▬▬▬ 00:00 - Introduction 00:10 - GPT-5 benefits 05:55 - How to use on Microsoft 06:03 - Azure AI Foundry 10:50 - GitHub Copilot 12:30 - Copilot Studio 14:10 - Microsoft Copilot 15:19 - Copilot Chat and M365 Copilot 16:16 - Close ❔ Questions? Maybe I answered it in my FAQ 🔗 https://savilltech.com/faq 👕 Cure Childhood Cancer Charity T-Shirt Channel Store 🔗 https://johns-t-shirts-store.creator-spring.com/\n\n▬▬▬▬▬▬ Want to learn more? 🚀 ▬▬▬▬▬▬ 📖 Recommended Learning Path for Azure 🔗 https://learn.onboardtoazure.com 🥇 Certification Content Repository 🔗 https://github.com/johnthebrit/CertificationMaterials 📅 Weekly Azure Update 🔗 https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks ☁ Azure Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY ⚙ DevOps Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq 💻 PowerShell Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFq\\_hR7FcMYg32xsSAObuq8 🎓 Certification Cram Videos 🔗 https://youtube.com/playlist?list=PLlVtbbG169nHz2qfLvPsAz9CnnXofhmcA 🧠 Mentoring Content 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGHxNkSWB0PjzZHwZ0BkXZZ\n\n👂 Enable the subtitles and from there you can translate to your native language via the auto-translate feature in settings! https://youtu.be/v5b53-PgEmI for a demo of using this feature.\n\nSUBSCRIBE ✅ https://www.youtube.com/channel/UCpIn7ox7j7bH\\_OFj7tYouOQ?sub\\_confirmation=1",
+  "OutputDir": "_videos",
+  "PubDate": "2025-08-13T17:48:44+00:00",
+  "Author": "John Savill's Technical Training",
+  "FeedName": "John Savill's Technical Training",
+  "ProcessedDate": "2025-08-13 18:06:41",
+  "Title": "Using GPT-5 on Microsoft",
+  "FeedLevelAuthor": "John Savill's Technical Training",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ",
+  "Link": "https://www.youtube.com/watch?v=360I_jTLI_I"
+}
+>>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

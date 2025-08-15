@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "2025-07-14 - From Copilot Agents to AI-Driven Security: Key Platform and Productivity Advances"
+title: "From Copilot Agents to AI-Driven Security: Key Platform and Productivity Advances"
 description: "This week saw GitHub Copilot deepen its role in developer workflows with agentic integrations, streamlined billing, and robust customization, while the broader AI landscape achieved leaps in scalable reasoning models, mainframe modernization, and education. Azure unified its cloud transformation offerings, and DevOps and Security witnessed improvements in documentation, platform extensibility, and comprehensive Zero Trust frameworks—driving future-proof productivity and governance for teams building at scale."
 author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->

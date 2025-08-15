@@ -1,0 +1,14 @@
+{
+  "Description": "System: Windows 11 24h2. I have always used WPS, but one day, when I moved the cursor over the table content, the content suddenly moved to the left automatically. The cursor did not move automatically in the function area. Uninstalling and reinstalling did not solve the problem, and I tried Kingsoft Docs, but the problem remained. When I click on “File,” the menu appears, but it disappears when I release the left mouse button. I also noticed that in “Settings > System,” the menu doesn't drop down no matter how many times I try. I thought it might be a system issue, so I reinstalled both the latest versions of 24H2 and 23H2. I even formatted all other drives, but the issue persists!! Changing the keyboard and mouse didn't make a difference either.",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "PubDate": "2025-08-15T10:14:32+00:00",
+  "Title": "I don't know if it's a problem with WPS or the system.",
+  "EnhancedContent": "System: Windows 11 24h2. I have always used WPS, but one day, when I moved the cursor over the table content, the content suddenly moved to the left automatically. The cursor did not move automatically in the function area. Uninstalling and reinstalling did not solve the problem, and I tried Kingsoft Docs, but the problem remained. When I click on “File,” the menu appears, but it disappears when I release the left mouse button. I also noticed that in “Settings &gt; System,” the menu doesn't drop down no matter how many times I try. I thought it might be a system issue, so I reinstalled both the latest versions of 24H2 and 23H2. I even formatted all other drives, but the issue persists!! Changing the keyboard and mouse didn't make a difference either.",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2025-08-15 11:08:45",
+  "Tags": [],
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "Author": "FinneasHayes",
+  "OutputDir": "_community",
+  "Link": "https://techcommunity.microsoft.com/t5/windows-11/i-don-t-know-if-it-s-a-problem-with-wps-or-the-system/m-p/4444104#M29403"
+}

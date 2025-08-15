@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "ProcessedDate": "2025-08-15 14:29:23",
   "PubDate": "2025-08-13T17:49:12+00:00",
@@ -12,3 +13,19 @@
   "Description": "GPT-5 mini, OpenAI’s faster, more cost-efficient variant of GPT-5, is now rolling out in public preview in GitHub Copilot. It’s designed to provide quick and accurate responses for a variety…\n\nThe post [GPT-5 mini now available in GitHub Copilot in public preview](https://github.blog/changelog/2025-08-13-gpt-5-mini-now-available-in-github-copilot-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).",
   "Tags": []
 }
+=======
+{
+  "EnhancedContent": "GPT-5 mini, OpenAI’s faster, more cost-efficient variant of GPT-5, is now rolling out in public preview in GitHub Copilot.\n\nIt’s designed to provide quick and accurate responses for a variety of coding tasks. It’s optimized for precise prompts and well-defined tasks, and it delivers lower latency and lower cost while maintaining strong performance on focused coding and editing tasks. For more details about the model’s capabilities and recommended usage patterns, see [OpenAI’s model documentation](https://platform.openai.com/docs/models/gpt-5-mini).\n\n### Availability in GitHub Copilot\n\nGPT-5 mini is rolling out to all Copilot plans, including Copilot Free. You’ll be able to access the model in GitHub Copilot Chat on github.com, in Visual Studio Code through the chat model picker, and in GitHub Mobile on iOS and Android. Support for other IDEs is coming soon.\n\nGPT-5 mini will be offered as an included model and will not consume premium requests on paid plans. For more details, see [our documentation on model multipliers](https://docs.github.com/copilot/concepts/billing/copilot-requests).\n\n### Enabling access\n\nCopilot Enterprise and Business administrators must opt in by enabling the new GPT-5 mini policy in Copilot settings. Once enabled, users in that organization will see **GPT-5 mini (Preview)** in the model picker in VS Code, on github.com, and in GitHub Mobile.\n\nTo learn more about the models available in Copilot, see [our documentation on models](https://docs.github.com/copilot/using-github-copilot/ai-models/choosing-the-right-ai-model-for-your-task) and [get started with Copilot today](https://docs.github.com/copilot/quickstart).\n\n### Share your feedback\n\nHave feedback or questions? Join the [community discussion](https://github.com/orgs/community/discussions/169565) to share feedback and tips.",
+  "PubDate": "2025-08-13T17:49:12+00:00",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2025-08-13-gpt-5-mini-now-available-in-github-copilot-in-public-preview",
+  "FeedName": "The GitHub Blog",
+  "Author": "Allison",
+  "Tags": [],
+  "Description": "GPT-5 mini, OpenAI’s faster, more cost-efficient variant of GPT-5, is now rolling out in public preview in GitHub Copilot. It’s designed to provide quick and accurate responses for a variety…\n\nThe post [GPT-5 mini now available in GitHub Copilot in public preview](https://github.blog/changelog/2025-08-13-gpt-5-mini-now-available-in-github-copilot-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2025-08-13 19:03:46",
+  "Title": "GPT-5 mini now available in GitHub Copilot in public preview"
+}
+>>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

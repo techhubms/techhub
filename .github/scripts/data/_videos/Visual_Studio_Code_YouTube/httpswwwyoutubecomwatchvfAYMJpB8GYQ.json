@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "Title": "🔴 VS Code Live - Telerik & KendoUI AI Coding Assistants - Contextual AI in VS Code",
   "Author": "Visual Studio Code",
@@ -16,3 +17,23 @@
   "ProcessedDate": "2025-08-15 14:32:17",
   "Link": "https://www.youtube.com/watch?v=fAYMJpB8GYQ"
 }
+=======
+{
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Link": "https://www.youtube.com/watch?v=fAYMJpB8GYQ",
+  "Title": "🔴 VS Code Live - Telerik & KendoUI AI Coding Assistants - Contextual AI in VS Code",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Description": "While modern AI Models/Agents have gotten very good with code generation, specialized context helps - developers can be more productive when AI experiences are powered by latest Docs, APIs & lots of sample code. Telerik & KendoUI AI Coding Assistants surface expertise through GitHub Copilot Extensions & MCP Servers with Tools, towards more streamlined VS Code development experiences.\n\n🔗 Community Links: https://www.telerik.com/ai-coding-assistants; https://www.telerik.com/blogs/announcing-telerik-kendo-ui-coding-assistants\n\n🎙️ Featuring: Reynald Adolphe (@ReynaldAdolphe), Sam Basu (@samidip), Kristian Mariyanov (@kris\\_mariyanov)\n\n#vscode #code #telerik",
+  "Author": "Visual Studio Code",
+  "PubDate": "2025-08-14T21:54:51+00:00",
+  "EnhancedContent": null,
+  "Tags": [
+    "code",
+    "telerik",
+    "vscode"
+  ],
+  "FeedName": "Visual Studio Code YouTube",
+  "ProcessedDate": "2025-08-14 22:04:21",
+  "OutputDir": "_videos"
+}
+>>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

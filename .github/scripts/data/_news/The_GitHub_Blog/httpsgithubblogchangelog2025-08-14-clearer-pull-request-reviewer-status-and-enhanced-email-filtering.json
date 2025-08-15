@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "ProcessedDate": "2025-08-15 14:29:23",
   "PubDate": "2025-08-14T20:27:11+00:00",
@@ -12,3 +13,19 @@
   "Description": "We’re shipping two improvements today to help users better manage pull requests and stay on top of important conversations. Clearer distinctions for pull request reviewer status and approvals We’ve enhanced…\n\nThe post [Clearer pull request reviewer status and enhanced email filtering](https://github.blog/changelog/2025-08-14-clearer-pull-request-reviewer-status-and-enhanced-email-filtering) appeared first on [The GitHub Blog](https://github.blog).",
   "Tags": []
 }
+=======
+{
+  "Title": "Clearer pull request reviewer status and enhanced email filtering",
+  "ProcessedDate": "2025-08-14 22:03:48",
+  "Description": "We’re shipping two improvements today to help users better manage pull requests and stay on top of important conversations. Clearer distinctions for pull request reviewer status and approvals We’ve enhanced…\n\nThe post [Clearer pull request reviewer status and enhanced email filtering](https://github.blog/changelog/2025-08-14-clearer-pull-request-reviewer-status-and-enhanced-email-filtering) appeared first on [The GitHub Blog](https://github.blog).",
+  "Tags": [],
+  "Link": "https://github.blog/changelog/2025-08-14-clearer-pull-request-reviewer-status-and-enhanced-email-filtering",
+  "Author": "Allison",
+  "EnhancedContent": "We’re shipping two improvements today to help users better manage pull requests and stay on top of important conversations.\n\n## Clearer distinctions for pull request reviewer status and approvals\n\nWe’ve enhanced accessibility in the pull request (PR) review process by making it easier for everyone to understand reviewer status without relying solely on color.\n\n### What’s changed\n\nPreviously, green and gray checkmarks were used to indicate whether a reviewer had write access or read-only/no access, but these colors were hard to distinguish and didn’t meet accessibility standards. The following updates are being released:\n\n- Reviewers whose approval affects merge requirements (shown with green checkmarks) and GitHub Copilot are shown at the top of the “Reviewers” section of the sidebar along with pending reviews and requests for changes.\n- Other reviewers, whose approval may not affect merge requirements (shown with gray checkmarks), are grouped in a collapsible section labeled “+X more reviewers.”\n- A tooltip appears when hovering over this collapsible section, providing extra context.\n- We’ve added visual cues and descriptive labels aligned with inclusive best practices to ensure status is always clear, regardless of how you experience GitHub.\n\n## Additional headers added to email notifications for better filtering\n\nWe’re now including labels, assignees, milestones, and issue types directly in the email headers for issue and pull request notifications.\n\n### What’s changed\n\nLabels and issue types are essential for organization, but until now, there wasn’t a way to use them to filter notifications. As a result, many users have resorted to complex email filters to keep up with the most important conversations. This update enables better auto-filtering and the ability to search by metadata, letting you set up more effective email filters based on your team, project, or workflow.\n\nThese headers will be populated based on the fields that are set in your issue or pull request, but can include the following:\n\n- `X-Github-Labels`\n- `X-Github-Assignees`\n- `X-Github-Milestone`\n- `X-Github-Issuetype`\n\nIf these fields are not populated in the issue or pull request, they will be empty or hidden in the email.\n\n### Feedback\n\nWe’re always looking to improve and your feedback helps us get there!\n\n- For PR reviewer status improvements, share your thoughts in our [Community discussion](https://github.com/orgs/community/discussions/169699).\n- For email filtering feedback, join the conversation in our [Community discussion](https://github.com/orgs/community/discussions/169627).",
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2025-08-14T20:27:11+00:00",
+  "OutputDir": "_news"
+}
+>>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "Title": "VS Code For Non-Developers",
   "Author": "Visual Studio Code",
@@ -23,3 +24,30 @@
   "ProcessedDate": "2025-08-15 14:32:17",
   "Link": "https://www.youtube.com/watch?v=uQV8uEzgxHo"
 }
+=======
+{
+  "EnhancedContent": null,
+  "Tags": [
+    "beginners",
+    "demo",
+    "developer",
+    "juniordeveloper",
+    "microsoft",
+    "nocode",
+    "softwaredeveloper",
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "Description": "You don’t need to be a developer to use VS Code. This video shows you how to get started with Visual Studio Code—even if you’ve never written a single line of code.\n\n🔎 Chapters: 00:00 Intro 00:18 Getting Started 03:10 Demo - Writing 12:40 Demo - Creative 16:14 Demo - Tracking in Source Control 19:54 Demo - Copilot Vision Domain 23:37 Demo - Attachments 24:45 Demo - Extensions 26:00 Thank you!\n\n▶️ Additional Resources: 5 Tips for Note Taking with VS Code and Git: https://www.youtube.com/watch?v=Hgucu1ch3mo Using Git with Visual Studio Code: https://youtu.be/i\\_23KUAEtUM MCP Servers in VS Code: https://youtu.be/Coot4TFTkN4\n\n🎙️ Reynald Adolphe (@ReynaldAdolphe)\n\n#vscode #beginners #nocode",
+  "OutputDir": "_videos",
+  "Title": "VS Code For Non-Developers",
+  "Link": "https://www.youtube.com/watch?v=uQV8uEzgxHo",
+  "PubDate": "2025-08-13T21:01:03+00:00",
+  "ProcessedDate": "2025-08-13 21:04:55",
+  "Author": "Visual Studio Code",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "FeedName": "Visual Studio Code YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+}
+>>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

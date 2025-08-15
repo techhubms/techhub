@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "Title": "Modernizing and Upgrading your .NET Apps with Visual Studio",
   "Author": "dotnet",
@@ -14,3 +15,21 @@
   "ProcessedDate": "2025-08-15 14:32:06",
   "Link": "https://www.youtube.com/watch?v=c5RGwxxUYGE"
 }
+=======
+{
+  "Tags": [
+    ".NET"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Link": "https://www.youtube.com/watch?v=c5RGwxxUYGE",
+  "Description": "You will learn: Upgrade .NET apps faster with Copilot-powered plans. Use natural language to guide and automate migrations. Save time with AI-driven code fixes and suggestions\n\nVisual Studio: http://visualstudio.com VS Live on-demand sessions: https://aka.ms/vslivehq25 Missed the fun at MS HQ?! Join one of these upcoming events, we’ll see you there! VSLive events: https://aka.ms/VSS/VSLive Subscriptions portal: https://my.visualstudio.com\n\nConnect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet",
+  "OutputDir": "_videos",
+  "FeedName": "DotNet YouTube",
+  "PubDate": "2025-08-14T14:32:40+00:00",
+  "Author": "dotnet",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-08-14 15:06:03",
+  "Title": "Modernizing and Upgrading your .NET Apps with Visual Studio"
+}
+>>>>>>> f38d706 (Articles from old repo, styling and some other fixes)
