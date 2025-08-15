@@ -556,4 +556,4 @@ Security checks for AI model code are increasingly critical; practical sessions 
 
 Fabric Warehouse now features a visual audit log configuration UI, moving compliance tasks away from code to a simple, unified administrative pane—reducing risks and making regulatory requirements easier to satisfy.
 
-- [Experience the New Visual SQL Audit Logs Configuration in Fabric Warehouse](https://blog.fabric.microsoft.com/en-US/blog/experience-the-new-visual-sql-audit-logs-configuration-in-fabric-warehouse/)
+- [Experience the New Visual SQL Audit Logs Configuration in Fabric Warehouse](https://blog.fabric.microsoft.com/en-US/blog/experience-the-new-visual-sql-audit-logs-configuration-in-fabric-warehouse/)

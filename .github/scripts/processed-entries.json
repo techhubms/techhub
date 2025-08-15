@@ -6475,5 +6475,150 @@
     "collection": "community",
     "timestamp": "2025-08-15 15:45:18 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/expanding-global-reach-and-enhancing-observability-with-oracle/ba-p/4443650"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365-insider-blog/analyze-images-with-python-in-excel/ba-p/4440388",
+    "timestamp": "2025-08-15 15:47:39 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-security-community/bitunlocker-leveraging-windows-recovery-to-extract-bitlocker/ba-p/4442806",
+    "timestamp": "2025-08-15 15:47:39 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-teams-blog/encryption-in-microsoft-teams-june-2025/ba-p/4442913",
+    "timestamp": "2025-08-15 15:47:39 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-database-for-mysql-blog/announcing-extended-support-for-azure-database-for-mysql/ba-p/4442924",
+    "timestamp": "2025-08-15 15:47:39 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-powershell/how-to-finding-large-directories-recovering-lost-space/m-p/4442877#M9117",
+    "timestamp": "2025-08-15 15:47:39 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-security-community/from-traditional-security-to-ai-driven-cyber-resilience/ba-p/4442652",
+    "timestamp": "2025-08-15 15:47:39 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/kumppanifoorumi/microsoft-finland-software-developing-companies-monthly/ba-p/4442900",
+    "timestamp": "2025-08-15 15:47:39 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-learn-for-educators/msle-newsletter-august-2025/ba-p/4443034",
+    "timestamp": "2025-08-15 15:47:39 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/marketplace-blog/apptividad-and-coreview-offer-transactable-partner-solutions-in/ba-p/4431278",
+    "timestamp": "2025-08-15 15:47:39 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-server-insiders/windows-server-datacenter-azure-edition-preview-build-26461-now/m-p/4442961#M4197",
+    "timestamp": "2025-08-15 15:47:39 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/modernization-best-practices-and/sap-sybase-ase-to-azure-sql-migration-using-ssma-and-bcp/ba-p/4436624",
+    "timestamp": "2025-08-15 15:47:39 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-ai-foundry-blog/unveiling-the-next-generation-of-table-structure-recognition/ba-p/4443684",
+    "timestamp": "2025-08-15 15:47:39 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/arc-enabled-sql-server-is-now-generally-available-in-the-us/ba-p/4443077",
+    "timestamp": "2025-08-15 15:47:39 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/events/data-intelligence-at-your-fingertips-fabric-s-ai-functions-data/ec-p/4443431#M10",
+    "timestamp": "2025-08-15 15:47:39 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/excel/excel-at-40-week-1-days-1-3/m-p/4443674#M254078",
+    "timestamp": "2025-08-15 15:47:40 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-security-experts-blog/how-microsoft-defender-experts-uses-ai-to-cut-through-the-noise/ba-p/4443601",
+    "timestamp": "2025-08-15 15:47:40 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/leaving-the-key-under-the-doormat-how-microsoft-defender-uses-ai/ba-p/4439870",
+    "timestamp": "2025-08-15 15:47:40 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-security-community/investigating-m365-copilot-activity-with-sentinel-defender-xdr/ba-p/4442641",
+    "timestamp": "2025-08-15 15:47:40 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/partner-news/data-ai-and-opportunity-why-microsoft-partners-should-attend-the/ba-p/4443061",
+    "timestamp": "2025-08-15 15:47:40 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-learn/microsoft-learning-rooms-weekly-round-up-8-14/m-p/4443660#M17172",
+    "timestamp": "2025-08-15 15:47:40 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/educator-developer-blog/model-mondays-s2e9-models-for-ai-agents/ba-p/4443162",
+    "timestamp": "2025-08-15 15:47:40 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-data-factory/help-with-partial-mongodb-update-via-azure-data-factory-data/m-p/4443596#M937",
+    "timestamp": "2025-08-15 15:47:40 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-data-factory/getting-an-oauth2-api-access-token-using-client-id-and-client/m-p/4443568#M936",
+    "timestamp": "2025-08-15 15:47:40 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/exchange/smime-not-working-in-owa/m-p/4443230#M16650",
+    "timestamp": "2025-08-15 15:47:40 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/itops-talk-blog/unlocking-flexibility-with-azure-files-provisioned-v2/ba-p/4443628",
+    "timestamp": "2025-08-15 15:47:40 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-ai-foundry-blog/announcing-the-text-pii-august-preview-model-release-in-azure-ai/ba-p/4441705",
+    "timestamp": "2025-08-15 15:47:40 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/gpresult-like-tool-for-intune/ba-p/4437008",
+    "timestamp": "2025-08-15 15:47:40 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/send-metrics-traces-logs-from-micronaut-native-image/ba-p/4443735",
+    "timestamp": "2025-08-15 15:47:40 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/sonarsource-surfaces-multiple-caveats-when-relying-on-llms-to-write-code/?utm_source=rss&utm_medium=rss&utm_campaign=sonarsource-surfaces-multiple-caveats-when-relying-on-llms-to-write-code",
+    "timestamp": "2025-08-15 15:47:48 +00:00"
   }
 ]

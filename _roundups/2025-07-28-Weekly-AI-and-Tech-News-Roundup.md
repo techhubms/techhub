@@ -323,4 +323,4 @@ Microsoft Sentinel moved into public preview as a unified security signals data 
 
 New guidelines emphasize secure, scalable MCP server designs for AI-driven workflows: adopt OAuth2.1, robust JWT validation, and cloud-native secrets management for multi-tenant, auditable security at scale. These patterns extend last week’s platform security and compliance priorities.
 
-- [How to Build Secure and Scalable Remote MCP Servers](https://github.blog/ai-and-ml/generative-ai/how-to-build-secure-and-scalable-remote-mcp-servers/)
+- [How to Build Secure and Scalable Remote MCP Servers](https://github.blog/ai-and-ml/generative-ai/how-to-build-secure-and-scalable-remote-mcp-servers/)

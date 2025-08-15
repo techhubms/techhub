@@ -449,4 +449,4 @@ Passwordless sign-in and strong MFA further bridge traditional and cloud-first i
 
 - [Passwordless Sign-On and MFA in Microsoft Hybrid Environments](https://www.reddit.com/r/microsoft/comments/1mjyjre/passwordless_signons_mfa_app_hybrid_mode/)
 
-This week further cements the evolution of security as AI-powered, automation-focused, and deeply developer- and operations-integrated, shaping the future of resilient, compliant cloud and application ecosystems.
+This week further cements the evolution of security as AI-powered, automation-focused, and deeply developer- and operations-integrated, shaping the future of resilient, compliant cloud and application ecosystems.
