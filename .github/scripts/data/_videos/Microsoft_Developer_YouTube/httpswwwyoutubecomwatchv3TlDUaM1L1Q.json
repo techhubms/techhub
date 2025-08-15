@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-{
-  "Title": "Fast Focus - Introduction to Model Context Protocol (MCP) Servers",
-  "Author": "Microsoft Developer",
-  "OutputDir": "_videos",
-  "Tags": [
-    "Azure",
-    "Cloud Computing",
-    "Dev",
-    "Development",
-    "Microsoft",
-    "Tech",
-    "Technology"
-  ],
-  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
-  "EnhancedContent": null,
-  "PubDate": "2025-08-14T17:00:05+00:00",
-  "FeedName": "Microsoft Developer YouTube",
-  "Description": "Model Context Protocol (MCP) is transforming how AI assistants connect to external data and tools. In this hands-on introduction, you'll learn the fundamentals of building MCP servers that expose your APIs, databases, and services to any MCP-compatible AI system.\n\nWe'll cover the core concepts of resources, tools, and prompts, walk through the server lifecycle, and build a simple MCP server together. By the end of this session, you'll understand how to create integrations that work across AI platforms, opening new possibilities for AI-powered workflows in your applications. This session is perfect for developers new to MCP who want to quickly get started.\n\nVisual Studio: http://visualstudio.com VS Live on-demand sessions: https://aka.ms/vslivehq25 Missed the fun at MS HQ?! Join one of these upcoming events, we’ll see you there! VSLive events: https://aka.ms/VSS/VSLive Subscriptions portal: https://my.visualstudio.com",
-  "FeedLevelAuthor": "Microsoft Developer",
-  "ProcessedDate": "2025-08-15 14:32:14",
-  "Link": "https://www.youtube.com/watch?v=3TlDUaM1L1Q"
-}
-=======
 {
   "Description": "Model Context Protocol (MCP) is transforming how AI assistants connect to external data and tools. In this hands-on introduction, you'll learn the fundamentals of building MCP servers that expose your APIs, databases, and services to any MCP-compatible AI system.\n\nWe'll cover the core concepts of resources, tools, and prompts, walk through the server lifecycle, and build a simple MCP server together. By the end of this session, you'll understand how to create integrations that work across AI platforms, opening new possibilities for AI-powered workflows in your applications. This session is perfect for developers new to MCP who want to quickly get started.\n\nVisual Studio: http://visualstudio.com VS Live on-demand sessions: https://aka.ms/vslivehq25 Missed the fun at MS HQ?! Join one of these upcoming events, we’ll see you there! VSLive events: https://aka.ms/VSS/VSLive Subscriptions portal: https://my.visualstudio.com",
   "FeedLevelAuthor": "Microsoft Developer",
@@ -44,4 +20,3 @@
   "Link": "https://www.youtube.com/watch?v=3TlDUaM1L1Q",
   "PubDate": "2025-08-14T17:00:05+00:00"
 }
->>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-{
-  "Title": "Stop Mapping in .NET Use Facets Instead",
-  "Author": "Nick Chapsas",
-  "OutputDir": "_videos",
-  "Tags": [
-    "csharp",
-    "dotnet"
-  ],
-  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg",
-  "EnhancedContent": null,
-  "PubDate": "2025-08-13T11:30:45+00:00",
-  "FeedName": "Nick Chapsas YouTube",
-  "Description": "Get 30% off everything on Dometrain: https://dometrain.com/courses/?ref=nick-chapsas&promo=youtube&coupon\\_code=SUMMER30 Subscribe to my weekly newsletter: https://nickchapsas.com\n\nHello, everybody. I'm Nick, and in this video, I will introduce you to Facet, a library that aims to replace traditional mappers with a more complete approach that includes typed LINQ projections without overhead.\n\nGive Facet a star on GitHub: https://github.com/Tim-Maes/Facet\n\nWorkshops: https://bit.ly/nickworkshops\n\nDon't forget to comment, like and subscribe :)\n\nSocial Media: Follow me on GitHub: https://github.com/Elfocrash Follow me on Twitter: https://twitter.com/nickchapsas Connect on LinkedIn: https://www.linkedin.com/in/nick-chapsas\n\n#csharp #dotnet",
-  "FeedLevelAuthor": "Nick Chapsas",
-  "ProcessedDate": "2025-08-15 14:31:58",
-  "Link": "https://www.youtube.com/watch?v=kiGG4fUe4RI"
-}
-=======
 {
   "ProcessedDate": "2025-08-13 12:05:36",
   "Tags": [
@@ -34,4 +15,3 @@
   "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg",
   "Author": "Nick Chapsas"
 }
->>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

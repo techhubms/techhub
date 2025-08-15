@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-{
-  "ProcessedDate": "2025-08-15 14:36:07",
-  "PubDate": "2025-08-15T10:54:09+00:00",
-  "Link": "https://techcommunity.microsoft.com/t5/windows-11/what-should-i-do-if-windows-11-system-activation-fails/m-p/4444141#M29417",
-  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
-  "Author": "HoltSawye",
-  "FeedName": "Microsoft Tech Community",
-  "EnhancedContent": "I recently installed a computer but never activated the system. I installed Windows 11 Home Edition. Today, on a whim, I found a code online to activate it, but after activation, I discovered that it was the Enterprise Edition. I have now uninstalled the key and everything else, but the system information still shows Enterprise Edition. Can I restore the system to Home Edition by installing the Home Edition key?",
-  "Title": "What should I do if Windows 11 system activation fails?",
-  "FeedLevelAuthor": "rss.livelink.threads-in-node",
-  "OutputDir": "_community",
-  "Description": "I recently installed a computer but never activated the system. I installed Windows 11 Home Edition. Today, on a whim, I found a code online to activate it, but after activation, I discovered that it was the Enterprise Edition. I have now uninstalled the key and everything else, but the system information still shows Enterprise Edition. Can I restore the system to Home Edition by installing the Home Edition key?",
-  "Tags": []
-}
-=======
 {
   "Description": "I recently installed a computer but never activated the system. I installed Windows 11 Home Edition. Today, on a whim, I found a code online to activate it, but after activation, I discovered that it was the Enterprise Edition. I have now uninstalled the key and everything else, but the system information still shows Enterprise Edition. Can I restore the system to Home Edition by installing the Home Edition key?",
   "FeedLevelAuthor": "rss.livelink.threads-in-node",
@@ -28,4 +12,3 @@
   "OutputDir": "_community",
   "Link": "https://techcommunity.microsoft.com/t5/windows-11/what-should-i-do-if-windows-11-system-activation-fails/m-p/4444141#M29417"
 }
->>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

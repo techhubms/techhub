@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-{
-  "ProcessedDate": "2025-08-15 14:36:07",
-  "PubDate": "2025-08-15T10:32:18+00:00",
-  "Link": "https://techcommunity.microsoft.com/t5/windows-insider-program/how-to-restart-windows-on-a-schedule/m-p/4444122#M37297",
-  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
-  "Author": "helsaxbim",
-  "FeedName": "Microsoft Tech Community",
-  "EnhancedContent": "I have a remote Windows computer for an engineering project. Since it's remote, I thought it would be a good idea to restart it once a day at midnight, just in case something goes wrong and I won't be there to press the power button. I accomplished this by using the Task Scheduler to run the \"shutdown.exe\" program with the arguments \"-r -f -t\". However, I have lost remote access to my Windows computer. It's offline. I suspect that it forced shutdown during a Windows update. So, my question is this: Is there a proper way to schedule regular reboots for a Windows computer? In the Windows update settings, I saw an option to reboot the computer after an update outside of active hours. This could work if the updates are regularly periodic. Any ideas?",
-  "Title": "How to restart Windows on a schedule?",
-  "FeedLevelAuthor": "rss.livelink.threads-in-node",
-  "OutputDir": "_community",
-  "Description": "![]() I have a remote Windows computer for an engineering project. Since it's remote, I thought it would be a good idea to restart it once a day at midnight, just in case something goes wrong and I won't be there to press the power button. I accomplished this by using the Task Scheduler to run the \"shutdown.exe\" program with the arguments \"-r -f -t\". However, I have lost remote access to my Windows computer. It's offline. I suspect that it forced shutdown during a Windows update. So, my question is this: Is there a proper way to schedule regular reboots for a Windows computer? In the Windows update settings, I saw an option to reboot the computer after an update outside of active hours. This could work if the updates are regularly periodic. Any ideas?",
-  "Tags": []
-}
-=======
 {
   "Description": "![]() I have a remote Windows computer for an engineering project. Since it's remote, I thought it would be a good idea to restart it once a day at midnight, just in case something goes wrong and I won't be there to press the power button. I accomplished this by using the Task Scheduler to run the \"shutdown.exe\" program with the arguments \"-r -f -t\". However, I have lost remote access to my Windows computer. It's offline. I suspect that it forced shutdown during a Windows update. So, my question is this: Is there a proper way to schedule regular reboots for a Windows computer? In the Windows update settings, I saw an option to reboot the computer after an update outside of active hours. This could work if the updates are regularly periodic. Any ideas?",
   "FeedLevelAuthor": "rss.livelink.threads-in-node",
@@ -28,4 +12,3 @@
   "OutputDir": "_community",
   "Link": "https://techcommunity.microsoft.com/t5/windows-insider-program/how-to-restart-windows-on-a-schedule/m-p/4444122#M37297"
 }
->>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

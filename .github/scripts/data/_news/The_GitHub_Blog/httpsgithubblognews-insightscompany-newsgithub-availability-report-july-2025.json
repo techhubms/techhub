@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-{
-  "ProcessedDate": "2025-08-15 14:26:42",
-  "PubDate": "2025-08-13T21:00:00+00:00",
-  "Link": "https://github.blog/news-insights/company-news/github-availability-report-july-2025/",
-  "FeedUrl": "https://github.blog/feed/",
-  "Author": "Jakub Oleksy",
-  "FeedName": "The GitHub Blog",
-  "EnhancedContent": "In July, we experienced one incident that resulted in degraded performance across GitHub services.\n\n**July 28 21:41 UTC (lasting 5 hours and 34 minutes)**\n\nBetween approximately 21:41 UTC on July 28, 2025, and 03:15 UTC on July 29, 2025, GitHub Enterprise Importer (GEI) operated in a degraded state where migrations could not be processed. Our investigation found that a component of the GEI infrastructure had been improperly taken out of service during implementation of routine internal improvements, and it could not be restored to its previous configuration. This necessitated the provisioning of new resources to resolve the incident. We have identified and implemented improvements around enabling the recovery of infrastructure, unit testing, and better validation using test data.\n\nAs a result, customers will need to add our new IP range to the following IP allow lists, if enabled:\n\n- The IP allow list on your destination github.com organization or enterprise\n- If you’re running migrations from github.com, the IP allow list on your source github.com organization or enterprise\n- If you’re running migrations from a GitHub Enterprise Server, Bitbucket Server or Bitbucket Data Center instance, the allow list on your configured Azure Blob Storage or Amazon S3 storage account\n- If you’re running migrations from Azure DevOps, the allow list on your Azure DevOps organization\n\nThe new GEI IP ranges for inclusion in applicable IP allow lists are:\n\n- 20.99.172.64/28\n- 135.234.59.224/28\n\nThe following IP ranges are no longer used by GEI and can be removed from all applicable IP allow lists:\n\n- 40.71.233.224/28\n- 20.125.12.8/29\n\nUsers who have run migrations using GitHub Enterprise Importer in the past 90 days have received email alerts about this change. Please contact Customer Support for any migration related issues.\n\nPlease follow our [status page](https://www.githubstatus.com/) for real-time updates on status changes and post-incident recaps. To learn more about what we’re working on, check out the [GitHub Engineering Blog](https://github.blog/category/engineering/).",
-  "Title": "GitHub Availability Report: July 2025",
-  "FeedLevelAuthor": "The GitHub Blog",
-  "OutputDir": "_news",
-  "Description": "In July, we experienced one incident that resulted in degraded performance across GitHub services.\n\nThe post [GitHub Availability Report: July 2025](https://github.blog/news-insights/company-news/github-availability-report-july-2025/) appeared first on [The GitHub Blog](https://github.blog).",
-  "Tags": [
-    "Company news",
-    "GitHub Availability Report",
-    "News & insights"
-  ]
-}
-=======
 {
   "FeedUrl": "https://github.blog/feed/",
   "Title": "GitHub Availability Report: July 2025",
@@ -36,4 +16,3 @@
   ],
   "FeedLevelAuthor": "The GitHub Blog"
 }
->>>>>>> f38d706 (Articles from old repo, styling and some other fixes)
