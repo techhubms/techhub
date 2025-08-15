@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-{
-  "Title": "Building Mobile and Desktop Apps with VS and .NET MAUI",
-  "Author": "dotnet",
-  "OutputDir": "_videos",
-  "Tags": [
-    ".NET"
-  ],
-  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
-  "EnhancedContent": null,
-  "PubDate": "2025-08-14T14:22:56+00:00",
-  "FeedName": "DotNet YouTube",
-  "Description": "Visual Studio is the most productive place to build mobile and desktop applications with .NET MAUI. In this session we'll show you how to quickly create and modify your UI at design time, at run time, and optimizing for production to find your ideal blend of speed and app size.\n\nYou will learn: What Live tools can do for you at design time and run time How to structure your solutions and projects to optimize for targeting multiple platforms What is new in .NET MAUI for .NET 9 and coming next in .NET 10\n\nVisual Studio: http://visualstudio.com VS Live on-demand sessions: https://aka.ms/vslivehq25 Missed the fun at MS HQ?! Join one of these upcoming events, we’ll see you there! VSLive events: https://aka.ms/VSS/VSLive Subscriptions portal: https://my.visualstudio.com\n\nConnect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet",
-  "FeedLevelAuthor": "dotnet",
-  "ProcessedDate": "2025-08-15 14:32:06",
-  "Link": "https://www.youtube.com/watch?v=MB0I5Hy6Wc8"
-}
-=======
 {
   "Tags": [
     ".NET"
@@ -32,4 +14,3 @@
   "ProcessedDate": "2025-08-14 15:06:03",
   "Title": "Building Mobile and Desktop Apps with VS and .NET MAUI"
 }
->>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-{
-  "ProcessedDate": "2025-08-15 14:29:23",
-  "PubDate": "2025-08-14T10:35:58+00:00",
-  "Link": "https://github.blog/changelog/2025-08-13-model-context-protocol-mcp-support-for-jetbrains-eclipse-and-xcode-is-now-generally-available",
-  "FeedUrl": "https://github.blog/changelog/feed/",
-  "Author": "Allison",
-  "FeedName": "The GitHub Blog",
-  "EnhancedContent": "Model Context Protocol (MCP) support with GitHub Copilot is now generally available for JetBrains, Eclipse, and Xcode! MCP empowers GitHub Copilot to integrate with external tools and data sources, enhancing deeper contextual awareness and coding intelligence.\n\nWith MCP support in JetBrains, Eclipse, and Xcode, you can connect Copilot to both local and remote MCP servers that follow the MCP specification. Once connected, agent mode can leverage tools exposed by these servers to assist with broader tasks. For example, you can set up a remote GitHub MCP server using PAT or OAuth authentication as well as enable actions like creating issues, checking repo history, and searching GitHub.\n\nFor organization and enterprise administrators, access to MCP is regulated by the MCP servers in Copilot policy. The MCP policy is **disabled by default** and must be [enabled by an organization or enterprise administrator](https://docs.github.com/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies).\n\n## Try it out\n\nTo use MCP, install the latest [GitHub Copilot plugin for JetBrains](https://plugins.jetbrains.com/plugin/17718-github-copilot), [Eclipse](https://marketplace.eclipse.org/content/github-copilot), or [Xcode](https://github.com/github/CopilotForXcode). You will also need to have a valid [Copilot license](https://github.com/features/copilot). Follow the guides to get started:\n\n- Configure MCP servers in [JetBrains IDEs](https://aka.ms/copilot-jb-mcp)\n- Configure MCP servers in [Eclipse](https://aka.ms/copilot-ecl-mcp)\n- Configure MCP servers in [Xcode](https://aka.ms/copilot-xd-mcp)\n\n## Share your feedback\n\nWe value your feedback! Share your experience through the following channels:\n\n- [GitHub Copilot for JetBrains IDEs](https://github.com/microsoft/copilot-intellij-feedback/issues)\n- [GitHub Copilot for Eclipse Feedback](https://github.com/orgs/community/discussions/151288)\n- [GitHub Copilot for Xcode Feedback](https://github.com/github/CopilotForXcode/issues)",
-  "Title": "Model Context Protocol (MCP) support for JetBrains, Eclipse, and Xcode is now generally available",
-  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
-  "OutputDir": "_news",
-  "Description": "Model Context Protocol (MCP) support with GitHub Copilot is now generally available for JetBrains, Eclipse, and Xcode! MCP empowers GitHub Copilot to integrate with external tools and data sources, enhancing…\n\nThe post [Model Context Protocol (MCP) support for JetBrains, Eclipse, and Xcode is now generally available](https://github.blog/changelog/2025-08-13-model-context-protocol-mcp-support-for-jetbrains-eclipse-and-xcode-is-now-generally-available) appeared first on [The GitHub Blog](https://github.blog).",
-  "Tags": []
-}
-=======
 {
   "Description": "Model Context Protocol (MCP) support with GitHub Copilot is now generally available for JetBrains, Eclipse, and Xcode! MCP empowers GitHub Copilot to integrate with external tools and data sources, enhancing…\n\nThe post [Model Context Protocol (MCP) support for JetBrains, Eclipse, and Xcode is now generally available](https://github.blog/changelog/2025-08-13-model-context-protocol-mcp-support-for-jetbrains-eclipse-and-xcode-is-now-generally-available) appeared first on [The GitHub Blog](https://github.blog).",
   "ProcessedDate": "2025-08-14 21:05:25",
@@ -28,4 +12,3 @@
   "Tags": [],
   "Link": "https://github.blog/changelog/2025-08-13-model-context-protocol-mcp-support-for-jetbrains-eclipse-and-xcode-is-now-generally-available"
 }
->>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

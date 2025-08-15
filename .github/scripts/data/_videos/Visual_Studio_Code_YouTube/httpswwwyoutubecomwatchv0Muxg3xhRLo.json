@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-{
-  "Title": "🔴 VS Code - Let it cook - Ep 12 - Beast mode is here!",
-  "Author": "Visual Studio Code",
-  "OutputDir": "_videos",
-  "Tags": [
-    "beastmode",
-    "code",
-    "demo",
-    "developer",
-    "developercommunity",
-    "developertools",
-    "microsoft",
-    "softwaredeveloper",
-    "vibecoding",
-    "visualstudiocode",
-    "vscode"
-  ],
-  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
-  "EnhancedContent": null,
-  "PubDate": "2025-08-14T20:17:42+00:00",
-  "FeedName": "Visual Studio Code YouTube",
-  "Description": "Beast mode has officially made its way to VS Code! How to turn it on? How to use it? Burke and James break it all down!\n\n🔗 Beast mode Blog: https://burkeholland.github.io/posts/beast-mode-3-1/\n\n🎙️ Featuring: Burke Holland (@burkeholland), James Montemagno (@jamesmontemagno)\n\n#vscode #beastmode #githubcopilot",
-  "FeedLevelAuthor": "Visual Studio Code",
-  "ProcessedDate": "2025-08-15 14:32:17",
-  "Link": "https://www.youtube.com/watch?v=0Muxg3xhRLo"
-}
-=======
 {
   "Description": "Beast mode has officially made it's way to VS Code! How to turn it on? How to use it? Burke and James break it all down!\n\n🔗 Beast mode Blog: https://burkeholland.github.io/posts/beast-mode-3-1/\n\n🎙️ Featuring: Burke Holland (@burkeholland), James Montemagno (@jamesmontemagno)\n\n#vscode #beastmode #githubcopilot",
   "FeedName": "Visual Studio Code YouTube",
@@ -52,4 +24,3 @@
   "ProcessedDate": "2025-08-14 21:06:07",
   "Author": "Visual Studio Code"
 }
->>>>>>> f38d706 (Articles from old repo, styling and some other fixes)
