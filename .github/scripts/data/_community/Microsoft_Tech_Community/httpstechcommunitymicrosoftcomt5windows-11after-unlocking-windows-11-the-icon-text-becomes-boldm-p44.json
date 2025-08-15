@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-08-15 14:36:07",
+  "PubDate": "2025-08-15T11:33:21+00:00",
+  "Link": "https://techcommunity.microsoft.com/t5/windows-11/after-unlocking-windows-11-the-icon-text-becomes-bold/m-p/4444165#M29425",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "Author": "OakleyCruz",
+  "FeedName": "Microsoft Tech Community",
+  "EnhancedContent": "Every time I unlock the desktop icon, the text becomes bold. Although it does not affect usage, it is unpleasant to look at. If I disable the animation effect, it returns to normal. Is there any other way to make it work properly?",
+  "Title": "After unlocking Windows 11, the icon text becomes bold.",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "OutputDir": "_community",
+  "Description": "Every time I unlock the desktop icon, the text becomes bold. Although it does not affect usage, it is unpleasant to look at. If I disable the animation effect, it returns to normal. Is there any other way to make it work properly?",
+  "Tags": []
+}

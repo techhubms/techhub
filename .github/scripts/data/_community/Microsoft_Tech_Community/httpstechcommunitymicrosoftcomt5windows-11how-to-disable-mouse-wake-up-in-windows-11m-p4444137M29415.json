@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-08-15 14:36:07",
+  "PubDate": "2025-08-15T10:47:06+00:00",
+  "Link": "https://techcommunity.microsoft.com/t5/windows-11/how-to-disable-mouse-wake-up-in-windows-11/m-p/4444137#M29415",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "Author": "BreckenFoster",
+  "FeedName": "Microsoft Tech Community",
+  "EnhancedContent": "win11 22h2, after sleep mode, the screen lights up when I move the mouse, which is not very convenient. I have tried removing the mouse from the device manager, but it did not work.",
+  "Title": "How to disable mouse wake-up in Windows 11",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "OutputDir": "_community",
+  "Description": "win11 22h2, after sleep mode, the screen lights up when I move the mouse, which is not very convenient. I have tried removing the mouse from the device manager, but it did not work.",
+  "Tags": []
+}

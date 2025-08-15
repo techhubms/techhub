@@ -1,0 +1,22 @@
+{
+  "Title": "Model Router + GPT-5 Models in Azure AI Foundry",
+  "Author": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "EnhancedContent": null,
+  "PubDate": "2025-08-14T15:59:58+00:00",
+  "FeedName": "Microsoft Developer YouTube",
+  "Description": "The Model Router just leveled up with the latest GPT-5 models — and it’s ready to take your AI projects further. In this episode, April pulls back the curtain on how it works, then walks you through using it to pick the right model for any task. From building intelligent agents to optimizing performance and costs, you’ll see the full process in action.\n\nTry it yourself in Azure AI Foundry and start routing your requests smarter: ai.azure.com\n\nLearn more about Model Router: https://aka.ms/insideAIF/model-router\n\nJoin the Discord: https://aka.ms/insideAIF/discord Hop on Forum: https://aka.ms/insideAIF/forum\n\nChapters: 0:00 - 1:12 Intro 1:13 - 2:40 Deploy the model 2:41 - 4:02 Access the sample code 4:03 - 9:06 Run the basic sample code in VS Code 9:07 - 13:15 Run the multi-turn sample code in VS Code 13:16 - 13:46 Outro",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "ProcessedDate": "2025-08-15 14:32:14",
+  "Link": "https://www.youtube.com/watch?v=2NL2XpigH0A"
+}
