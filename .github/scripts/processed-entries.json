@@ -6680,5 +6680,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/deepening-our-partnership-with-mistral-ai-on-azure-ai-foundry/ba-p/4434656",
     "reason": "Succesfully added: Categories assigned are 'AI' and 'Azure'. The central theme is the launch and use of Mistral Document AI within Azure AI Foundry, which is an Azure-hosted AI service (AI rule 1; Azure rule 1). The content covers AI deployment, multimodal document parsing, responsible AI, cloud security, and serverless setup, all strictly within Microsoft's Azure ecosystem (well above the 40% centrality threshold). Coding and ML categories were considered but not assigned, as there is no code-level tutorial or detailed analytics/data science engineering involved; the article focuses on platform usage and integration. The text easily exceeds the 200-word minimum for community content and is written in clear, technical English. No generic exclusions apply."
+  },
+  {
+    "timestamp": "2025-08-15 19:10:57 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-security-experts-blog/welcome-to-the-microsoft-defender-experts-ninja-hub/ba-p/4442210",
+    "reason": "Succesfully added: Assigned Security category because the entire content focuses on Microsoft Defender Experts (for XDR and Threat Hunting), which are managed security solutions in the Microsoft ecosystem (Security rule 1). Azure and other categories are not warranted as there is no deep technical implementation about coding, DevOps, ML, or Azure management; the resources and documentation are purely centered on security operations, security monitoring, and SOC best practices. There are no generic exclusion criteria present: content is English, technical, and not biographical, business, or negative in focus."
   }
 ]
