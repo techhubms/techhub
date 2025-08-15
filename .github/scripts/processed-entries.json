@@ -6674,5 +6674,11 @@
     "reason": "Succesfully added: Assigned the Azure category because MCC (Microsoft Connected Cache) is a Microsoft cloud edge technology, closely integrated with Azure and Azure Container Registry (Azure rule 1 and 6). Included DevOps because the content covers setup, configuration, container orchestration, and infrastructure automation using WSL, scheduled tasks, and detailed system validation steps (DevOps rules 5, 6, and 9). The post is technical, focused on Linux integration, containers, and system troubleshooting, and includes in-depth technical logs, meeting quality standards. Not assigned Coding, AI, ML, Security, or GitHub Copilot categories, as there is no code development, no AI/ML functionality, no direct security implementation or concepts, and no mention of Copilot. The content is well within the development/DevOps system integration and operational troubleshooting area, matching inclusion rules.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-connected-cache-for/mcc-phantom-install/m-p/4444201#M108",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-08-15 18:18:54 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/deepening-our-partnership-with-mistral-ai-on-azure-ai-foundry/ba-p/4434656",
+    "reason": "Succesfully added: Categories assigned are 'AI' and 'Azure'. The central theme is the launch and use of Mistral Document AI within Azure AI Foundry, which is an Azure-hosted AI service (AI rule 1; Azure rule 1). The content covers AI deployment, multimodal document parsing, responsible AI, cloud security, and serverless setup, all strictly within Microsoft's Azure ecosystem (well above the 40% centrality threshold). Coding and ML categories were considered but not assigned, as there is no code-level tutorial or detailed analytics/data science engineering involved; the article focuses on platform usage and integration. The text easily exceeds the 200-word minimum for community content and is written in clear, technical English. No generic exclusions apply."
   }
 ]
