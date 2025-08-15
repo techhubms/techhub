@@ -5451,5 +5451,47 @@
     "canonical_url": "https://www.youtube.com/shorts/SSGVEx8IEd4",
     "timestamp": "2025-08-15 21:12:45 +00:00",
     "reason": "No categories found: No categories assigned because the content field is null, which means there is no substantive technical content to evaluate according to the processing rules. Additionally, with just a URL in the description, there is insufficient context to determine the relevance to any Microsoft technology category. Generic exclusion rule (content quality exclusion) applies when content is missing or empty."
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-08-15 22:13:57 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/excel/compund-xlookup-returns-value-error/m-p/4444272#M254099"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-08-15 22:13:57 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/excel/help-creating-weighted-average-ranking/m-p/4444256#M254094"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-08-15 22:13:58 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/excel/vlookup-not-working-with-time-values/m-p/4444266#M254097"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-08-15 22:14:26 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-identity/alert-not-found/m-p/4444283#M4263"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-08-15 22:14:26 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-learn/function-error/m-p/4444282#M17175"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-08-15 22:15:06 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/outlook/unable-to-activate-my-aol-in-outlook-app/m-p/4444268#M26920"
+  },
+  {
+    "reason": "No categories found: This content does not qualify for any categories. It is a community-type post that is asking a troubleshooting question and seeking help with a Windows desktop issue regarding wallpaper disappearance, rather than providing technical implementation details, solutions, or substantive contribution. According to the 'Question-Only Content' rule in the Generic Exclusion Rules (Chapter 3), content primarily asking questions or seeking information without substantive answers or solutions is excluded. There are no categories assigned.",
+    "collection": "community",
+    "timestamp": "2025-08-15 22:15:18 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/desktop-wallpaper-disappears-after-login/m-p/4444265#M29437"
   }
 ]

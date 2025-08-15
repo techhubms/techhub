@@ -6698,5 +6698,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=Mz5iSGA6L4g",
     "timestamp": "2025-08-15 21:12:32 +00:00",
     "reason": "Succesfully added: Assigned AI category because MCP is described as a protocol for agent-ready APIs relevant to AI development and supported by Azure AI Foundry (AI rule 1, 3, 4, and 6). Assigned Azure category due to explicit Azure AI Foundry and Foundry Agent Service integrations (Azure rule 1). Assigned Coding because the tooling is integrated into developer IDEs (Visual Studio and VS Code), intended for code development (Coding rule 5). The content is technical, English, and focused on development—not productivity or business end-user features—meeting all inclusion requirements and not triggering any generic exclusion rule."
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category because the post discusses technical limitations and behavior of Copilot, which is a Microsoft AI assistant integrated into Excel. Content is focused on developer/user experience, not business productivity with Microsoft 365 Copilot, and there is substantive discussion of Copilot's direct role in spreadsheet automation, which qualifies under 'AI rule 1' and general AI tools use in development/service contexts. No other categories (such as Coding, Azure, DevOps, ML, Security) apply, as the content does not involve coding, cloud platforms, data science, operations, or security; it is strictly about AI-driven automation features. This is not biographical, not a sales pitch, not a purely negative rant, not job or business-strategy focused, and qualifies as technical content about Microsoft technology.",
+    "collection": "community",
+    "timestamp": "2025-08-15 22:14:26 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot/copilot-in-excel-performs-data-manipulation-once-and-then/m-p/4444281#M5471"
+  },
+  {
+    "reason": "Succesfully added: The content is an extensive, curated learning path focused entirely on Microsoft Security Exposure Management and related tools. It covers security exposure management concepts, Microsoft Defender for Cloud, attack surface management, integration with other Microsoft security products, and regulatory compliance on Microsoft platforms. Following Security category rule 1, the resource list, module breakdown, and practical focus on security posture and mitigation using Microsoft technologies fully qualifies for the 'Security' category. No other categories apply because the content is not about coding, DevOps, AI/ML, or Azure generically; it is specifically about Microsoft-focused security management and architecture. The source is entirely technical with actionable, implementable advice, and does not trigger any generic exclusion rule.",
+    "collection": "community",
+    "timestamp": "2025-08-15 22:15:06 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-security-exposure/microsoft-security-exposure-management-ninja-training/ba-p/4444285"
   }
 ]

@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "We are receiving the following the follow alert from Defender; 2025-08-15T09:26:42-07:00 {*SERVERNAME*} CEF[6208]0|Microsoft|Azure ATP|##########|AccountEnumerationSecurityAlert|Account enumeration reconnaissance|5|start=2025-08-15T16:23:14.5550516Z app=Ntlm shost=NULL shostfqdn= msg=An actor on NULL performed suspicious account enumeration, exposing 6 existing account names. externalId=2003 cs1Label=url cs1=https://security.microsoft.com/alerts/xx###xxxx-#xx#-####-#x##-##x##x#x#x#x cs2Label=trigger cs2=update But when we go to the URL listed, we get an error that it can't be found. We are able to see other alerts that come in. How do I go about finding the details on this error?",
+  "PubDate": "2025-08-15T21:03:39+00:00",
+  "Link": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-identity/alert-not-found/m-p/4444283#M4263",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "FeedName": "Microsoft Tech Community",
+  "Description": "We are receiving the following the follow alert from Defender; 2025-08-15T09:26:42-07:00 {*SERVERNAME*} CEF[6208]0|Microsoft|Azure ATP|##########|AccountEnumerationSecurityAlert|Account enumeration reconnaissance|5|start=2025-08-15T16:23:14.5550516Z app=Ntlm shost=NULL shostfqdn= msg=An actor on NULL performed suspicious account enumeration, exposing 6 existing account names. externalId=2003 cs1Label=url cs1=https://security.microsoft.com/alerts/xx###xxxx-#xx#-####-#x##-##x##x#x#x#x cs2Label=trigger cs2=update But when we go to the URL listed, we get an error that it can't be found. We are able to see other alerts that come in. How do I go about finding the details on this error?",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "Title": "Alert Not Found",
+  "OutputDir": "_community",
+  "Author": "edhealea",
+  "ProcessedDate": "2025-08-15 22:13:38",
+  "Tags": []
+}
