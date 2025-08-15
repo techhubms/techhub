@@ -1,92 +1,69 @@
 ---
 layout: "post"
 title: "Expanding Global Reach and Enhanced Observability with Oracle Database@Azure"
-description: "This blog post provides an overview of the expanded regional availability of Oracle Database@Azure, now including Germany North, and introduces enhanced observability features for Oracle Exadata VM Clusters and Infrastructure managed through Azure Monitor and Microsoft Sentinel. It details how organizations can centralize log monitoring for Oracle and Azure services, utilize advanced analytics, and strengthen security and compliance within hybrid cloud environments."
+description: "This article details the expanded regional availability of Oracle Database@Azure, now accessible in 23 regions including Germany North. It also introduces enhanced observability features for Oracle Exadata VM Clusters and Infrastructure, enabling organizations to leverage Azure Monitor and Microsoft Sentinel for unified monitoring, security, compliance, and streamlined operations in hybrid cloud environments."
 author: "bhbandam"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/expanding-global-reach-and-enhancing-observability-with-oracle/ba-p/4443650"
 viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
-date: 2025-08-14 19:40:40 +00:00
+feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+date: 2025-08-14 22:42:37 +00:00
 permalink: "/2025-08-14-Expanding-Global-Reach-and-Enhanced-Observability-with-Oracle-DatabaseAzure.html"
 categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Monitor", "Azure Security Center", "Centralized Monitoring", "Community", "Compliance Monitoring", "Exadata Infrastructure", "Exadata VM Clusters", "Germany North", "Hybrid Cloud", "Kusto Query Language", "Log Analytics", "Microsoft Sentinel", "Operational Visibility", "Oracle Database@Azure", "Regional Availability", "Security", "SEIM", "SOAR", "Threat Detection"]
-tags_normalized: ["azure", "azure monitor", "azure security center", "centralized monitoring", "community", "compliance monitoring", "exadata infrastructure", "exadata vm clusters", "germany north", "hybrid cloud", "kusto query language", "log analytics", "microsoft sentinel", "operational visibility", "oracle database at azure", "regional availability", "security", "seim", "soar", "threat detection"]
+tags: ["Azure", "Azure Monitor", "Azure Regions", "Azure Security Center", "Cloud Scalability", "Community", "Compliance", "Exadata", "Germany North", "Hybrid Cloud", "Kusto Query Language", "Log Analytics", "Microsoft Sentinel", "Observability", "Operational Monitoring", "Oracle Database@Azure", "Security", "Security Information And Event Management"]
+tags_normalized: ["azure", "azure monitor", "azure regions", "azure security center", "cloud scalability", "community", "compliance", "exadata", "germany north", "hybrid cloud", "kusto query language", "log analytics", "microsoft sentinel", "observability", "operational monitoring", "oracle database at azure", "security", "security information and event management"]
 ---
 
-bhbandam, together with Jeni Mattson, shares details about the new regional expansion of Oracle Database@Azure to Germany North and highlights how organizations can leverage enhanced observability features with Azure Monitor and Microsoft Sentinel for streamlined monitoring and improved security.<!--excerpt_end-->
+bhbandam, co-authoring with Jeni Mattson, outlines new global regions and advanced monitoring capabilities for Oracle Database@Azure, showcasing how Azure Monitor and Microsoft Sentinel enhance operational visibility and security for enterprise deployments.<!--excerpt_end-->
 
 # Expanding Global Reach and Enhanced Observability with Oracle Database@Azure
 
-**Authors:** bhbandam (Microsoft) and Jeni Mattson, Principal Product Manager, Exadata and Database Cloud Product Management
+**Authors:** bhbandam, Jeni Mattson (Principal Product Manager, Exadata and Database Cloud Product Management)
 
-## Overview
+## Introduction
 
-Microsoft and Oracle have announced the expansion of Oracle Database@Azure to the Germany North region, increasing global availability to 23 Azure regions. This expansion supports customer needs for data residency, reduces latency, and increases availability. Oracle Database@Azure users can now deploy workloads closer to their operations across a growing list of regions, with plans to expand to 10 more regions by the end of 2025.
+Microsoft and Oracle have announced expanded regional availability and new observability features for Oracle Database@Azure. The platform is now available in 23 Azure regions worldwide, with Germany North as the latest addition. This helps customers meet their data residency needs, improve latency, and strengthen application resiliency across diverse geographies.
 
-### Current Regions Supported
+## Regional Expansion
 
-- Australia East
-- Australia Southeast
-- Brazil South
-- Canada Central
-- Central India
-- Central US
-- East US
-- East US 2
-- France Central
-- Germany North
-- Germany West Central
-- Italy North
-- Japan East
-- Japan West
-- North Europe
-- Southeast Asia
-- South Central US
-- Sweden Central
-- UK South
-- UK West
-- West US
-- West US 2
-- West US 3
+- **Oracle Database@Azure** now operates in 23 Azure regions, the widest reach among hyperscalers.
+- Recent expansion includes Germany North.
+- Supported regions: Australia East, Australia Southeast, Brazil South, Canada Central, Central India, Central US, East US, East US 2, France Central, Germany North, Germany West Central, Italy North, Japan East, Japan West, North Europe, Southeast Asia, South Central US, Sweden Central, UK South, UK West, West US, West US2, and West US3.
+- Plans for expansion to 10 more regions by end of 2025 enhance global scalability and business continuity.
 
-## Enhanced Observability for Exadata Environments
+## Enhanced Observability and Security
 
-Oracle Exadata customers using Oracle Database@Azure have new observability capabilities via Azure Monitor and Microsoft Sentinel. Users can now:
+Expanded capabilities include:
 
-- Centralize real-time monitoring of logs from both Azure services and Oracle databases.
-- Correlate logs across these services for proactive troubleshooting and streamlined root cause analysis.
-- Query logs using Azure Monitor and Log Analytics, set up proactive alerts for critical system events, and automate incident response.
-- Customize dashboards and advanced reports using Kusto Query Language.
-- Seamlessly integrate monitoring with Azure Security Center for threat detection and use Microsoft Sentinel for Security Information and Event Management (SEIM) and Security Orchestration, Automation, and Response (SOAR).
-- Support compliance and auditing by retaining logs and tracking changes and access using Azure policy.
+- **Integration with Azure Monitor and Microsoft Sentinel:** Organizations can now send Oracle Exadata VM Cluster, Infrastructure, and Data Guard logs directly to Azure native monitoring and security platforms.
+- **Consolidated Log Management:** Centralized operational and database logs for improved visibility into health, performance, and user activities.
+- **Advanced Security Features:** Enhanced threat detection and compliance monitoring are enabled via Microsoft Sentinel and Azure Security Center, providing a robust SIEM and SOAR solution.
+- **Dashboards and Querying:** Deep analysis and custom dashboards are supported through Log Analytics and Kusto Query Language.
+- **Compliance and Auditing Support:** Log retention and change/access tracking help organizations sustain compliance using Azure policy frameworks.
 
 ### Supported Log Types
 
-- Exadata VM cluster Life Cycle Management Logs
-- Exadata Database logs
+- Exadata VM Cluster Life Cycle Management Logs
+- Exadata Database Logs
 - Exadata Infrastructure Logs
-- Exadata Data Guard logs
+- Exadata Data Guard Logs
 
 ## Getting Started
 
-To enable enhanced observability:
+- Enable the observability feature in the Azure Portal.
+- Configure settings and integrate with relevant partner solutions.
+- Onboard logs to Microsoft Sentinel and customize analysis using Log Analytics workspaces.
 
-1. Enable the observability feature in Azure Portal.
-2. Configure relevant settings, including integration with partner solutions.
-3. Set up monitoring and alerting, and onboard data to Microsoft Sentinel for advanced analysis.
-4. Refer to the [detailed setup guide](https://review.learn.microsoft.com/en-us/azure/oracle/oracle-db/oracle-exadata-database-on-dedicated-infrastructure-logs?branch=pr-en-us-304189#step-1-create-and-configure-a-diagnostic-setting) for step-by-step instructions.
+**Resources:**
 
-## Learn More
+- [Detailed setup guide](https://learn.microsoft.com/en-us/azure/oracle/oracle-db/oracle-exadata-database-dedicated-infrastructure-logs?branch=main&branchFallbackFrom=pr-en-us-304189)
+- [Azure Monitor Logs Documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-platform-logs)
+- [Log Analytics Workspace Overview](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-workspace-overview)
+- [Onboard to Microsoft Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard?tabs=defender-portal)
 
-- [Azure Monitor Logs - Azure Monitor | Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-platform-logs)
-- [Log Analytics workspace overview - Azure Monitor | Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-workspace-overview)
-- [Onboard to Microsoft Sentinel | Microsoft Learn](https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard?tabs=defender-portal)
+## Conclusion
 
----
-*Updated: August 14, 2025*
-
-For additional resources and to follow further updates, visit the [Oracle on Azure Blog](https://techcommunity.microsoft.com/t5/azure/ct-p/Azure).
+The expanded reach and enhanced observability in Oracle Database@Azure allow enterprises to unify monitoring, strengthen security postures, and simplify compliance. By leveraging Azure-native services, organizations gain deeper insight into their cloud environments and can proactively manage operations across complex hybrid architectures.
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/expanding-global-reach-and-enhancing-observability-with-oracle/ba-p/4443650)

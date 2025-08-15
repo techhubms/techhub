@@ -2694,7 +2694,7 @@
   },
   {
     "timestamp": "2025-08-08 16:55:30 +00:00",
-    "reason": "No categories found: Content excluded because it violates the Generic Exclusion Rules. The video focuses on Google's 'Big Sleep' AI and its impact on cybersecurity, with no mention or evidence of Microsoft technologies or platforms. None of the content, tags, or description reference Microsoft, GitHub, Azure, or any related development/deployment scenarios. According to the multi-platform inclusion threshold and core exclusion rules, content about non-Microsoft AI and cybersecurity innovations (such as Google's AI) does not qualify for categorization on XMS Tech Hub.",
+    "reason": "No categories found: Content excluded because it violates the Generic Exclusion Rules. The video focuses on Google's 'Big Sleep' AI and its impact on cybersecurity, with no mention or evidence of Microsoft technologies or platforms. None of the content, tags, or description reference Microsoft, GitHub, Azure, or any related development/deployment scenarios. According to the multi-platform inclusion threshold and core exclusion rules, content about non-Microsoft AI and cybersecurity innovations (such as Google's AI) does not qualify for categorization on Tech Hub.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/nBZkBneI5Vk"
   },
@@ -3162,7 +3162,7 @@
   },
   {
     "timestamp": "2025-08-08 17:28:11 +00:00",
-    "reason": "No categories found: No categories assigned due to generic exclusion rule violations. This is community content primarily centered on OpenAI (not Microsoft) technology requirements and biometric data policies, without substantial Microsoft technical detail anywhere in the post. Microsoft is not mentioned or implied as central to the technical solution or context (fails multi-platform threshold). Additionally, the content is largely an opinion and reaction to a policy change, rather than an informative technical tutorial, code walkthrough, or development resource fitting any XMS Tech Hub category inclusion rules.",
+    "reason": "No categories found: No categories assigned due to generic exclusion rule violations. This is community content primarily centered on OpenAI (not Microsoft) technology requirements and biometric data policies, without substantial Microsoft technical detail anywhere in the post. Microsoft is not mentioned or implied as central to the technical solution or context (fails multi-platform threshold). Additionally, the content is largely an opinion and reaction to a policy change, rather than an informative technical tutorial, code walkthrough, or development resource fitting any Tech Hub category inclusion rules.",
     "collection": "community",
     "canonical_url": "https://www.reddit.com/r/ArtificialInteligence/comments/1mkwowy/gpt5_streaming_requires_submission_of_biometric/"
   },
@@ -3666,7 +3666,7 @@
   },
   {
     "timestamp": "2025-08-08 18:17:07 +00:00",
-    "reason": "No categories found: Content excluded based on generic exclusion rules. This community post is primarily a commentary expressing frustration and confusion about technical install guides on GitHub, written from a non-coder perspective. It does not present substantive technical guidance, does not cover any Microsoft-specific technology, and does not contain actionable technical depth relevant to XMS Tech Hub categories. Furthermore, the post includes repeated statements expressing lack of coding knowledge and critiques of developer behavior, with limited constructive feedback (negativity without actionable alternatives). The content is also under 200 words of meaningful explanatory text, with most of its length devoted to reiterating the user's confusion and highlighting barriers rather than providing technical information, insights, or solutions.",
+    "reason": "No categories found: Content excluded based on generic exclusion rules. This community post is primarily a commentary expressing frustration and confusion about technical install guides on GitHub, written from a non-coder perspective. It does not present substantive technical guidance, does not cover any Microsoft-specific technology, and does not contain actionable technical depth relevant to Tech Hub categories. Furthermore, the post includes repeated statements expressing lack of coding knowledge and critiques of developer behavior, with limited constructive feedback (negativity without actionable alternatives). The content is also under 200 words of meaningful explanatory text, with most of its length devoted to reiterating the user's confusion and highlighting barriers rather than providing technical information, insights, or solutions.",
     "collection": "community",
     "canonical_url": "https://www.reddit.com/r/github/comments/1mk1er6/its_better_to_stop_at_the_instruction_manual/"
   },
@@ -4404,7 +4404,7 @@
   },
   {
     "canonical_url": "https://dellenny.com/secret-store-pattern-in-aws-using-secure-vaults-for-credentials-and-secrets/",
-    "reason": "No categories found: No categories assigned. The content focuses entirely on AWS-specific secret management (AWS Secrets Manager, AWS Systems Manager Parameter Store), not Microsoft technologies. Although a related post about Azure is linked at the end, the main body does not discuss Azure or Microsoft products, services, or development. Since the Microsoft technology threshold (≥40% content or central solution role) is not met, per Chapter 2 ('Microsoft Content Must Be Central'), and all technical discussion centers on AWS tools and best practices, this post is out of scope for XMS Tech Hub.",
+    "reason": "No categories found: No categories assigned. The content focuses entirely on AWS-specific secret management (AWS Secrets Manager, AWS Systems Manager Parameter Store), not Microsoft technologies. Although a related post about Azure is linked at the end, the main body does not discuss Azure or Microsoft products, services, or development. Since the Microsoft technology threshold (≥40% content or central solution role) is not met, per Chapter 2 ('Microsoft Content Must Be Central'), and all technical discussion centers on AWS tools and best practices, this post is out of scope for Tech Hub.",
     "collection": "posts",
     "timestamp": "2025-08-09 02:39:05 +00:00"
   },
@@ -4471,7 +4471,7 @@
   {
     "collection": "posts",
     "canonical_url": "https://devclass.com/2025/07/18/google-vp-of-development-explains-how-citizen-developers-must-be-tempered-by-the-pros/",
-    "reason": "No categories found: The content focuses exclusively on Google's developer tools (Firebase Studio, Gemini CLI), AI development approaches by Google, and 'citizen development' practices for the Google platform. There is no discussion or mention of Microsoft technologies, products, frameworks, or engineering strategies relevant to the XMS Tech Hub taxonomy. According to the multi-platform content threshold, only content with Microsoft technologies as a central or substantial focus (≥40%) qualifies. The only Microsoft references are in link lists and tangential mentions of Visual Studio Code's open-source component (Code OSS), which does not meet inclusion requirements. Therefore, no categories apply.",
+    "reason": "No categories found: The content focuses exclusively on Google's developer tools (Firebase Studio, Gemini CLI), AI development approaches by Google, and 'citizen development' practices for the Google platform. There is no discussion or mention of Microsoft technologies, products, frameworks, or engineering strategies relevant to the Tech Hub taxonomy. According to the multi-platform content threshold, only content with Microsoft technologies as a central or substantial focus (≥40%) qualifies. The only Microsoft references are in link lists and tangential mentions of Visual Studio Code's open-source component (Code OSS), which does not meet inclusion requirements. Therefore, no categories apply.",
     "timestamp": "2025-08-09 20:30:48 +00:00"
   },
   {
@@ -5201,1443 +5201,177 @@
     "reason": "Insufficient content length"
   },
   {
-    "timestamp": "2025-08-13 09:09:34 +00:00",
-    "reason": "No categories found: No categories assigned. The content is focused on configuring and managing data retention policies using Microsoft 365, specifically from the perspective of compliance and end-user data lifecycle management. According to the Generic Exclusion Rules, 'Non-Development Microsoft Products' content is excluded unless it is focused on development aspects. The article describes administrative and compliance setup using Microsoft Purview in Microsoft 365, with no significant coverage of development, coding, DevOps, AI, ML, or security architecture/engineering implementation. The mention of Microsoft Purview is limited to its compliance and data lifecycle management UI, not development or integration scenarios. Therefore, per exclusion rules, this end-user/business productivity/administrative content does not qualify for any categories.",
-    "canonical_url": "https://dellenny.com/managing-data-retention-policies-without-overcomplicating-things-in-microsoft-365/",
-    "collection": "posts"
+    "reason": "No categories found: No categories assigned because the content is an official news announcement about the Xbox PC app expanding support for ARM-based Windows 11 PCs, specifically focusing on gaming experience improvements and not involving any developer, coding, AI, ML, DevOps, Azure, or security aspects according to the inclusion rules in Chapter 4. It does not discuss development, technical implementation, or programming, and is focused on end-user gaming functionality. This is in line with the exclusion for non-development Microsoft products and consumer-focused content.",
+    "collection": "news",
+    "timestamp": "2025-08-15 15:02:08 +00:00",
+    "canonical_url": "https://blogs.windows.com/windows-insider/2025/08/13/xbox-pc-app-experience-expanding-on-arm-based-windows-11-pcs/"
   },
   {
-    "timestamp": "2025-08-13 09:12:43 +00:00",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/purview-priority-cleanup-expands-to-sharepoint-and-onedrive/m-p/4442798#M57865",
-    "collection": "community"
+    "reason": "No categories found: No categories have been assigned because the content is focused entirely on AWS technologies. The content describes the API Gateway pattern as implemented using Amazon API Gateway and microservices on AWS, with no mention of Microsoft products or platforms (e.g., Azure API Management, Azure Functions, or other Azure-specific microservices tooling). According to the Multi-Platform Content Threshold in Chapter 2, Microsoft technologies must be at least 40% of the content or central to the solution, which is not the case here. There are passing mentions of other platforms only in related links, not in the main content. Therefore, per processing rules, this content is excluded from categorization.",
+    "collection": "posts",
+    "timestamp": "2025-08-15 15:13:29 +00:00",
+    "canonical_url": "https://dellenny.com/api-gateway-pattern-in-aws-managing-apis-and-routing-requests-to-microservices/"
   },
   {
-    "timestamp": "2025-08-13 09:12:44 +00:00",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/installing-a-language-in-windows-computer/m-p/4442793#M29030",
-    "collection": "community"
+    "reason": "No categories found: Content is excluded because it is primarily focused on configuring and managing data retention policies for compliance and operational efficiency within Microsoft 365—an end-user/business productivity platform. According to the generic exclusion rules in Chapter 3, Microsoft 365 administrative/management content (unless it pertains to development, coding, DevOps practices, or technical architecture) should not be categorized. This post provides practical guidance for compliance officers and IT admins, not technical guidance for developers, architects, or security engineers. There is no substantive coding, development, or DevOps content, nor deep technical configuration related to Microsoft security or compliance infrastructure—it is purely administrative use of a business productivity product.",
+    "collection": "posts",
+    "timestamp": "2025-08-15 15:14:59 +00:00",
+    "canonical_url": "https://dellenny.com/managing-data-retention-policies-without-overcomplicating-things-in-microsoft-365/"
   },
   {
-    "timestamp": "2025-08-13 09:12:44 +00:00",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/unable-to-connect-windows-11-in-safe-mode/m-p/4442796#M29032",
-    "collection": "community"
+    "reason": "No categories found: All categories are excluded due to generic exclusion rules regarding Non-Development Microsoft Products. The content is focused entirely on business productivity and organizational change management for Microsoft 365 Copilot, which is explicitly singled out in the prompt as a non-developer tool. The blog describes adoption, training, governance, and cultural readiness for Microsoft 365 Copilot in end-user scenarios (Word, Excel, Outlook, Teams), not technical/developer implementation or code-related details. According to the workflow, content about Microsoft 365 Copilot, Copilot for Microsoft 365, or other business/consumer productivity Copilot products must be excluded from all technical categories.",
+    "collection": "posts",
+    "timestamp": "2025-08-15 15:15:12 +00:00",
+    "canonical_url": "https://dellenny.com/preparing-your-team-for-microsoft-365-copilot-a-change-management-guide/"
   },
   {
-    "timestamp": "2025-08-13 09:12:44 +00:00",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/the-best-mp3-downloader-works-on-windows-and-mac-for-music-fans/m-p/4442800#M37132",
-    "collection": "community"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-13 10:04:57 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/batch-file-needed-for-usb-write-and-read-only/m-p/4442826#M37146"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-13 10:04:57 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/how-can-i-cut-and-trim-mp3-files-downloaded-from-youtube/m-p/4442827#M37147"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-13 10:04:57 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/pc-cleaners/m-p/4442825#M37145"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/how-to-integrate-m365-with-third-party-saas-tools/m-p/4442856#M57868",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-13 11:07:03 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/managing-data-retention-policies-without-overcomplicating-things/m-p/4442854#M57866",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-13 11:07:03 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/protecting-your-business-data-sensitivity-labels-dlp-and/m-p/4442855#M57867",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-13 11:07:03 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/memory-crash-dump/m-p/4442851#M37159",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-13 11:07:03 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/outlook-issue/m-p/4442850#M37158",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-13 11:07:03 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/yahoo-email/m-p/4442852#M37160",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-13 11:07:03 +00:00",
-    "collection": "community"
-  },
-  {
-    "timestamp": "2025-08-13 12:08:21 +00:00",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/why-is-excel-macros-sometimes-missing/m-p/4442867#M57870"
-  },
-  {
-    "reason": "No categories found: All categories are excluded due to generic exclusion rules. The content is a user-generated proposal to the Microsoft Copilot product team suggesting a new feature for Microsoft 365 Copilot to enable persistent storage and recall in OneDrive. According to the CRITICAL Copilot Product Distinction rule (Chapter 2), proposals or discussions about Microsoft 365 Copilot, Copilot for Microsoft 365, or general productivity Copilot features (as opposed to GitHub Copilot or Copilot Studio as development tools) must be excluded. The content focuses on business productivity, document management, and general office workflows, not code development, developer tools, or technical architecture. Therefore, no categories are assigned.",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-copilot-for-service/copilot-onedrive-ki-produktivit%C3%A4t-beta-vorschlag/idi-p/4442915",
-    "collection": "community",
-    "timestamp": "2025-08-13 14:37:53 +00:00"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-13 15:07:04 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365-developer-platform/word-add-in-would-like-to-be-able-to-list-available-fonts-from/idi-p/4442926"
-  },
-  {
-    "timestamp": "2025-08-13 16:07:59 +00:00",
-    "reason": "No categories found: No categories assigned. The input is a prompt for a video where attendees and guests are asked about their 'worst security related coding mistake,' without providing any substantive technical content, implementations, or educational material. According to the generic exclusion rules, question-only content that primarily solicits opinions, experiences, or anecdotes—without presenting detailed answers, technical guidance, or actionable insights—must be excluded. Furthermore, the absence of a 'content' field (null) means there is no substantive technical detail to evaluate against category inclusion rules.",
+    "reason": "No categories found: Content excluded due to generic exclusion rule. The video appears to be event-focused, collecting anecdotes and opinions about 'worst security related coding mistakes' from attendees and guests at Microsoft Build 2025. There is no substantive technical content, tutorial, or implementation detail about Microsoft technologies. The description and title indicate the content is anecdotal and exploratory in nature, not an in-depth technical resource. Generic exclusion rule for content lacking technical depth and substantive detail applies.",
     "collection": "videos",
+    "timestamp": "2025-08-15 15:25:25 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/51Y-pOLcMHI"
   },
   {
-    "timestamp": "2025-08-13 16:08:59 +00:00",
-    "reason": "No categories found: Content excluded due to generic exclusion rules. This is an event announcement primarily focused on partner updates, incentives, and community engagement rather than substantive technical implementation, development, or architectural details relating to Microsoft technologies. Its main purpose is to invite Microsoft partners to informational calls and promote the Fabric Partner Community. While Microsoft Fabric is mentioned, there are no technical guides, tutorials, or engineering content provided. Additionally, there are no details about development, coding, data engineering practices, AI/ML implementation, or security/deployment technicalities. These factors trigger the exclusion under 'Sales Pitches', 'Corporate announcements and strategic initiatives without technical depth', and 'Business strategy and executive content' (Chapter 3: Generic Exclusion Rules).",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/fabric-partner-community/join-us-for-the-fy26-fabric-engineering-connection-kick-off/m-p/4442932#M134"
-  },
-  {
-    "timestamp": "2025-08-13 16:10:30 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/creating-dynamic-microsoft-365-groups-without-entra-p1-licenses/m-p/4442940#M57873"
-  },
-  {
-    "timestamp": "2025-08-13 16:10:44 +00:00",
-    "reason": "No categories found: Content excluded due to generic exclusion rules: This post is an event announcement for the FY26 Americas & EMEA Fabric Engineering Connection Kick Off call and primarily serves as a promotional notification for a webinar and partner program updates. It lacks substantive technical content and does not provide educational value or technical implementation details about Microsoft technologies, per the Sales Pitches and Announcement exclusion rule. The content is focused on logistical details (dates/times, how to join), community channel improvements, partner program incentives, and upcoming events rather than knowledge sharing, in-depth technical discussion, or guidance relevant to the predefined categories.",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/partner-events-calendar/join-us-for-the-fy26-americas-emea-fabric-engineering-connection/ec-p/4442934#M328"
-  },
-  {
-    "timestamp": "2025-08-13 16:10:58 +00:00",
-    "reason": "No categories found: Content excluded due to generic exclusion rules. The post is an event announcement and call invitation for a Microsoft partner community webinar, with a primary focus on community updates, program incentives, and event logistics. There is no substantive technical content, implementation guidance, or in-depth discussion of Microsoft technologies or development practices. According to the sales pitch, corporate announcement, and business/community event exclusion rules in Chapter 3, such content is not eligible for categorization.",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/partner-events-calendar/join-us-for-the-fy26-apac-fabric-engineering-connection-kick-off/ec-p/4442936#M329"
-  },
-  {
-    "timestamp": "2025-08-13 17:08:37 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-learn/applied-skills-assessment-status-page/m-p/4442964#M17163",
-    "reason": "Insufficient content length"
-  },
-  {
-    "timestamp": "2025-08-13 17:09:49 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/outlook/can-t-start-outlook-after-reinstalling-windows-10-and-msoffice/m-p/4442965#M26899",
-    "reason": "Insufficient content length"
-  },
-  {
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/discussions/edge-canary-141-0-3495-0-fails-to-render-pinned-tab-properly/m-p/4442973#M64729",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-13 18:10:21 +00:00"
-  },
-  {
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-onedrive-blog/onedrive-office-hours-august-2025/ba-p/4442970",
-    "reason": "No categories found: No categories assigned. Content is an announcement and invitation to the OneDrive Customer Office Hours, focusing on the event schedule, participation instructions, and links to community resources. There is no educational, technical, development, coding, AI, ML, Security, or DevOps content. OneDrive itself is a Microsoft 365 end-user product, and the session and post do not cover development, coding, API, integration, or customization topics. All details pertain to feature updates and live Q&A for general users. Therefore, per 'Non-Development Microsoft Products' and 'Business/Workplace Focus' generic exclusion rules, this content is excluded from categorization.",
-    "timestamp": "2025-08-13 18:10:35 +00:00"
-  },
-  {
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/partner-news/partner-blog-driving-business-impact-through-skilling/ba-p/4442670",
-    "reason": "No categories found: No categories assigned. The content is focused on partner enablement, business skilling, and AI-powered professional development in the context of Microsoft's partner ecosystem. It discusses business impact, readiness programs, and learning platforms (like the Microsoft Partner Skilling Hub), but does not provide technical implementation, developer guidance, code, or architectural detail related to Microsoft technologies. It is primarily high-level business strategy, organizational learning, and career-skilling content, which is specifically excluded by the 'Business Strategy and Executive Content', 'Workplace and Business Focus', and 'Job-Related Content' exclusion rules. There is no substantive discussion of AI/ML technical details, coding, Azure services, DevOps, or security implementation. The reference to 'AI' is about business enablement, not technical implementation.",
-    "timestamp": "2025-08-13 18:10:51 +00:00"
-  },
-  {
-    "timestamp": "2025-08-13 19:06:59 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/get-mpperformancereport-empty-processpath/m-p/4442997#M6434"
-  },
-  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule—this is an event/personal highlight video focusing primarily on what an individual (Craig Loewen) is most excited about at MSBuild 2025, rather than providing substantial technical depth or actionable implementation guidance. The content (as indicated by the title and description) revolves around personal impressions and excitement, meeting the 'Biographical Focus' exclusion rule in Chapter 3. Additionally, the content body is null, so there is no substantive technical analysis or tutorial to assess for category inclusion.",
     "collection": "videos",
-    "canonical_url": "https://www.youtube.com/watch?v=uQV8uEzgxHo",
-    "timestamp": "2025-08-13 21:06:08 +00:00",
-    "reason": "No categories found: No categories assigned because the content falls under the generic exclusion rule for Non-Development Microsoft Products. The description and title explicitly state that the video is focused on using Visual Studio Code for non-developers and highlights usage by people who have 'never written a single line of code'. It presents VS Code as a general-purpose tool rather than a software development environment. There is no substantive focus on development, coding with Microsoft languages/frameworks, or technical implementation relevant to practitioners. The video is introductory and targets a non-technical audience, which is outside the scope for inclusion per the workflow's core exclusion and inclusion rules."
+    "timestamp": "2025-08-15 15:25:38 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/rGpvDE0Zu9o"
   },
   {
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365-developer-platform/subject-disabled-gpt-5-button-and-missing-copilot-in-word-excel/idi-p/4443030",
-    "timestamp": "2025-08-13 21:06:09 +00:00",
-    "reason": "Insufficient content length"
+    "reason": "No categories found: Content excluded because there is no substantive content provided ('content' and 'description' fields are empty/null). Without the actual content, it's impossible to determine if Microsoft technologies are central, if the tone meets quality standards, or if category inclusion rules apply. Titles alone are not sufficient for evaluation as required by the workflow.",
+    "collection": "videos",
+    "timestamp": "2025-08-15 15:28:07 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/-7tsG3U-HqI"
   },
   {
-    "timestamp": "2025-08-13 22:07:24 +00:00",
-    "collection": "news",
-    "reason": "No categories found: No Microsoft technologies are mentioned or central to the content. Spark appears to be an independent open-source project hosted on GitHub. There is no reference to Azure, Microsoft-specific AI/ML services, .NET tooling, or any category-specific inclusion rules. As a result, no categories were applied.",
-    "canonical_url": "https://github.blog/changelog/2025-08-13-spark-resilience-improvements"
+    "reason": "No categories found: Content cannot be processed because the 'content' field is null and both 'description' and 'tags' fields are empty. The generic exclusion rules state to focus only on the actual content; without any content, description, or tags to analyze, no category inclusion can be justified. There is no technical detail or substance to assess for inclusion rules.",
+    "collection": "videos",
+    "timestamp": "2025-08-15 15:28:22 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/dlW-27mNVw8"
   },
   {
-    "timestamp": "2025-08-13 22:07:33 +00:00",
-    "collection": "community",
+    "reason": "No categories found: No categories assigned because the content is aimed at non-developers and focuses on using Visual Studio Code for general, no-code activities and creative workflows, not software development or technical implementation. The description and chapters emphasize introductory use, writing, creativity, and basic source control, with an explicit message of 'You don’t need to be a developer to use VS Code.' Copilot 'Vision Domain' is mentioned only as a short demo, and context suggests it's showcased for non-coding purposes. As per generic exclusion rule for non-development Microsoft products and content not aimed at practitioners, all categories are excluded.",
+    "collection": "videos",
+    "timestamp": "2025-08-15 15:29:41 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=uQV8uEzgxHo"
+  },
+  {
     "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage/sentinel-to-detect-storage-account-created/m-p/4442994#M570"
-  },
-  {
-    "timestamp": "2025-08-13 22:07:34 +00:00",
     "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/frontline-cloud-pc-dedicated-mode-session-time-out-settings/m-p/4442838#M13886"
-  },
-  {
-    "timestamp": "2025-08-13 22:07:56 +00:00",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/connect-and-ask-questions/august-2025-msle-newsletter-available-now/m-p/4443038#M132"
-  },
-  {
-    "timestamp": "2025-08-13 22:07:56 +00:00",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/discussions/windows-11/m-p/4443008#M64730"
-  },
-  {
-    "timestamp": "2025-08-13 22:07:56 +00:00",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/outlook-email-preview-won-t-display/m-p/4443025#M57874"
-  },
-  {
-    "timestamp": "2025-08-13 22:08:33 +00:00",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/sharepoint/where-to-access-my-created-agent/m-p/4443013#M87444"
-  },
-  {
-    "timestamp": "2025-08-13 22:08:46 +00:00",
-    "collection": "community",
-    "reason": "No categories found: Content excluded due to generic exclusion rules. This is an end-user troubleshooting report about personal Microsoft ID/account errors, login/logout problem resolution, and Office 365 subscription management on Windows 11. It does not provide technical development, coding, DevOps, AI, ML, security, or Azure implementation guidance, nor does it address development-focused aspects of Microsoft 365. The content is aimed at general user support, not developers or technical practitioners, and therefore falls under the 'Non-Development Microsoft Products' and 'Workplace and Business Focus' exclusions outlined in Chapter 3.",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/error-traceid-6-6-6-when-logged-in-windows-11-with-microsoft-id/m-p/4443036#M29050"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/access-blog/access-announces-removal-of-salesforce-odbc-driver-in-october/ba-p/4408815",
-    "reason": "No categories found: No categories were assigned because the content primarily provides a support/product update for end users regarding Microsoft Access's bundling of the Salesforce ODBC driver. There is no substantive coverage of coding, development, DevOps, Azure, AI, ML, or security implementation. While it addresses connecting Access to Salesforce, the workflow described is strictly end-user guidance (installing drivers, using menus) rather than developer- or architecture-focused technical content as required for the Coding, DevOps, or Azure categories. The core technical activity—setting up an ODBC connection—is standard configuration and does not meet the bar for Coding or DevOps without deeper technical or architectural guidance.",
-    "timestamp": "2025-08-13 23:06:37 +00:00",
-    "collection": "community"
-  },
-  {
-    "timestamp": "2025-08-14 00:12:46 +00:00",
-    "collection": "community",
-    "reason": "Insufficient content length",
+    "timestamp": "2025-08-15 15:30:35 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/ai-azure-ai-services/image-dataset-in-azure-ai-asking-for-tabular-format-during/m-p/4442717#M1280"
   },
   {
-    "timestamp": "2025-08-14 00:12:59 +00:00",
-    "collection": "community",
-    "reason": "No categories found: No categories assigned because the content focuses entirely on Exchange Online retention policies and archiving within the context of Microsoft 365 administration, which is not development-focused. According to the Generic Exclusion Rules, Microsoft 365 and Exchange content is only included if it relates to development, APIs, or extensibility, rather than IT administration and compliance configuration. This post discusses administrative policy limitations and proposed improvements for Exchange Online's compliance functions, with no reference to development, coding, automation, scripting, APIs, or technical implementation beyond configuration options. Therefore, it does not qualify for any included categories.",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/exchange/allow-messageclass-filtering-in-default-folder-retention-tags-in/m-p/4443006#M16646"
-  },
-  {
-    "timestamp": "2025-08-14 00:13:13 +00:00",
-    "collection": "community",
-    "reason": "No categories found: No categories assigned. This content is entirely focused on product usability, user experience, compliance workflows, and client feature gaps in Outlook and Microsoft To Do. It does not cover development, coding, DevOps, custom solution architecture, development-focused configuration, or implementation aspects of Exchange Online or other Microsoft technologies. Instead, it advocates for UI changes and feature parity to reduce user confusion and improve compliance experience. Per generic exclusion rules (Non-Development Microsoft Products; Business/Productivity Apps not related to development; Workplace/Business Focus) and the non-development focus of Microsoft 365 (Exchange/Outlook/To Do) in this content, all categories are excluded.",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/exchange/enable-outlook-and-to-do-clients-to-surface-archived-items/m-p/4443005#M16645"
-  },
-  {
-    "timestamp": "2025-08-14 00:13:13 +00:00",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/marketplace-community/office-hours-for-partners-certified-software-designations-and/m-p/4443045#M1399"
-  },
-  {
-    "timestamp": "2025-08-14 00:13:13 +00:00",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-entra/entra-app-gallery-required-for-excel-addin/m-p/4443049#M9991"
-  },
-  {
-    "timestamp": "2025-08-14 00:13:13 +00:00",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/outlook/outlook-calendar-not-showing-all-information/m-p/4443027#M26903"
-  },
-  {
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 01:35:03 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/sharepoint-developer/sharepoint-online-public-cdn-css-file-not-updating/m-p/4443071#M13924",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/tech-community-discussion/link-no-longer-clickable-even-for-microsoft-website/m-p/4443085#M9665",
-    "timestamp": "2025-08-14 03:30:28 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "timestamp": "2025-08-14 06:08:08 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/tech-community-discussion/how-to-download-the-courseware/m-p/4443096#M9667"
-  },
-  {
-    "reason": "No categories found: Content does not qualify for any categories due to the Generic Exclusion Rules. This is a community post about book formatting in Microsoft Word (or another word processor), not about Microsoft development technologies, programming, code, or development-related tooling. The issue discussed is desktop publishing and document layout, not technical implementation in coding, Azure, AI, security, DevOps, or ML areas. There is no substantive Microsoft technology content, professional coding, or technical implementation detail—therefore, per the processing rules, no categories apply.",
-    "timestamp": "2025-08-14 07:09:18 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/word/formatting-a-split-heading/m-p/4443105#M11176",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365-insider/insider-status-membership-icon-disappear/m-p/4443121#M2726",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 08:08:15 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/action-advised-back-up-your-pc/m-p/4443123#M29058",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 08:08:15 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/sensitivity-labels-with-user-defined-permissions-gain-sharepoint/m-p/4443135#M57881",
-    "timestamp": "2025-08-14 09:08:29 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/microsoft-surface-pro-9-not-charging-via-a-usb-c-65w-pd-charger/m-p/4443159#M29065",
-    "timestamp": "2025-08-14 09:08:29 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/should-i-take-the-leap-to-windows-11/m-p/4443160#M29066",
-    "timestamp": "2025-08-14 09:08:29 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/discussions/display-driver-nvidia-crashes-on-video/m-p/4443167#M64731",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 10:07:44 +00:00"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/undo-pause-updates-and-oops-something-went-wrong/m-p/4443237#M17802",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 10:09:27 +00:00"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/any-gpedit-for-win-11-home/m-p/4443214#M29093",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 10:09:27 +00:00"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/any-way-to-delete-restore-devices-from-system-restore/m-p/4443212#M29091",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 10:09:27 +00:00"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/how-am-i-best-sorting-my-windows-11-laptop-ready-to-sell/m-p/4443202#M29084",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 10:09:27 +00:00"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-for-hardware-requirement/m-p/4443173#M29068",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 10:09:27 +00:00"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-right-click/m-p/4443177#M29070",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 10:09:28 +00:00"
-  },
-  {
-    "canonical_url": "https://dellenny.com/api-gateway-pattern-in-aws-managing-apis-and-routing-requests-to-microservices/",
-    "reason": "No categories found: No Microsoft technologies are discussed as central or substantial to the solution in the content. The entire article is focused on AWS (Amazon Web Services), specifically the Amazon API Gateway and related AWS services like Lambda, ECS, EKS, EC2, CloudWatch, Cognito, and IAM. The only mention of Azure or Microsoft is in a related post link preview, not in the substantive content. Per the workflow, Microsoft technology must comprise at least 40% of the substantive content or be central to the solution. Since this post is specific to AWS API Gateway, no Microsoft-related categories (Azure, Coding, DevOps, AI, ML, Security, GitHub Copilot) are applicable, and therefore no categories are assigned.",
-    "timestamp": "2025-08-14 11:06:16 +00:00",
-    "collection": "posts"
-  },
-  {
-    "canonical_url": "https://dellenny.com/preparing-your-team-for-microsoft-365-copilot-a-change-management-guide/",
-    "reason": "No categories found: No categories were assigned because the content is centered on Microsoft 365 Copilot as a business productivity tool (business user guidance for Word, Excel, Outlook, Teams, etc.), not a developer tool or AI development/developer integration (per Copilot Product Distinction rules in Chapter 2 and repeated exclusion rules in Chapter 3 for non-development Microsoft products). The article provides change management advice for adopting the productivity features of Microsoft 365 Copilot, which is specifically called out as excluded content.",
-    "timestamp": "2025-08-14 11:07:08 +00:00",
-    "collection": "posts"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/image-health-app-no-longer-working-on-my-windows-10-systems/m-p/4443247#M17808",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 11:07:15 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/win10-pro-startup-issue/m-p/4443266#M17814",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 11:07:15 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/windows-10-corrupted-and-unable-to-boot-windows/m-p/4443241#M17804",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 11:07:15 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-server-insiders/vnvme-on-hyper-v-to-unlock-pcie-5-0-nvme-performance/m-p/4443252#M4198",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 11:07:15 +00:00",
-    "collection": "community"
-  },
-  {
-    "timestamp": "2025-08-14 12:09:30 +00:00",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/cannot-turn-on-windows-firewall/m-p/4443273#M17817"
-  },
-  {
-    "timestamp": "2025-08-14 12:09:43 +00:00",
-    "collection": "community",
-    "reason": "No categories found: Content excluded under the 'Generic Exclusion Rules' for community posts: it is a help-seeking/question-only post without substantive technical answers or solutions provided (see 'Question-Only Content' exclusion). The post details personal troubleshooting efforts for a technical issue (flashing screen and missing taskbar), but does not offer guidance, a root-cause analysis, reproducible steps for others, nor technical depth beyond user-level diagnostic commands. Therefore, no categories are assigned.",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/flashing-screen-taskbar-has-disappeared/m-p/4443269#M17816"
-  },
-  {
-    "timestamp": "2025-08-14 12:09:43 +00:00",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/high-dpc-latency-on-windows-10/m-p/4443328#M17841"
-  },
-  {
-    "timestamp": "2025-08-14 12:09:43 +00:00",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/i-am-unable-to-update-windows-10-22h2-november-patch-kb5032189/m-p/4443334#M17847"
-  },
-  {
-    "timestamp": "2025-08-14 12:09:43 +00:00",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/l-key-causes-screen-to-blank-and-windows-log-in-screen-to-come/m-p/4443296#M37181"
-  },
-  {
-    "timestamp": "2025-08-14 12:09:43 +00:00",
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/since-updating-to-os-build-26100-4946-computer-takes-a-long-time/m-p/4443293#M37179"
-  },
-  {
-    "timestamp": "2025-08-14 12:09:56 +00:00",
-    "collection": "community",
-    "reason": "No categories found: No categories assigned because this content is a community Q&A seeking troubleshooting help with a Windows OS issue and does not meet the inclusion rules. It is primarily help-seeking, asking for advice on repairing or resetting Windows after a hard reset and file corruption, which falls under the 'Question-Only Content' generic exclusion rule. There is no substantive technical walkthrough, Microsoft developer tool usage, coding, or architecture explanation. The main focus is end-user Windows troubleshooting, not development, engineering, or Microsoft technology solution architecture.",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/windows-features-not-working-properly/m-p/4443294#M37180"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/excel/bluetooth/m-p/4443383#M254051",
-    "collection": "community",
-    "timestamp": "2025-08-14 13:20:53 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/excel/excel-s-quot-very-hidden-quot-sheets-even-the-unhide-menu-can-t/m-p/4443394#M254058",
-    "collection": "community",
-    "timestamp": "2025-08-14 13:20:53 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/excel/just-learned-if-datedif-and-vlookup-today/m-p/4443393#M254057",
-    "collection": "community",
-    "timestamp": "2025-08-14 13:20:54 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/excel/what-was-the-moment-you-realized-excel-was-more-powerful-than/m-p/4443389#M254054",
-    "collection": "community",
-    "timestamp": "2025-08-14 13:20:54 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/exchange/rbac-building-role-command-without-parameters/m-p/4443379#M16654",
-    "collection": "community",
-    "timestamp": "2025-08-14 13:20:54 +00:00"
-  },
-  {
-    "reason": "No categories found: Content excluded due to generic exclusion rule: The submission is a community post where the author is primarily asking for help and seeking troubleshooting advice without providing substantive technical solutions or answering their own question. By the generic exclusion rule under 'Question-Only Content' (Chapter 3), help-seeking posts without substantive technical answers or solutions are excluded from categorization. The main content describes the troubleshooting process and issues faced, but does not deliver a solution, actionable technical insight, or original guidance for Microsoft development technologies.",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/plagued-by-windows-10-problems/m-p/4443329#M17842",
-    "collection": "community",
-    "timestamp": "2025-08-14 13:21:11 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/biso/m-p/4443373#M29134",
-    "collection": "community",
-    "timestamp": "2025-08-14 13:21:11 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/start11-in-win11/m-p/4443376#M29136",
-    "collection": "community",
-    "timestamp": "2025-08-14 13:21:12 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/issues-with-handling-and-performance-after-re-enabling-igpu/m-p/4443414#M37196",
-    "collection": "community",
-    "timestamp": "2025-08-14 13:21:12 +00:00"
-  },
-  {
-    "reason": "No categories found: No categories assigned because the content is a community post primarily asking for help with a personal technical issue (random black screen crashes while running games on Windows, no solutions or in-depth troubleshooting provided). According to the Generic Exclusion Rules, 'question-only content'—content mainly asking questions or seeking information without substantive answers or solutions—must be excluded. The post does not offer an analysis, solution, or technical insight but is a request for troubleshooting help (question-only). There is also no direct focus on any Microsoft developer, Azure, AI, coding, ML, DevOps, or security technology. Therefore, no categories are assigned.",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/random-crashes-to-a-black-screen-no-errors/m-p/4443366#M37195",
-    "collection": "community",
-    "timestamp": "2025-08-14 13:21:29 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/system-restore-fails-due-to-intel-iclclient-file/m-p/4443361#M37192",
-    "collection": "community",
-    "timestamp": "2025-08-14 13:21:29 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/wmic-path-win32-videocontroller-description-unspecified-error/m-p/4443360#M37191",
-    "collection": "community",
-    "timestamp": "2025-08-14 13:21:29 +00:00"
-  },
-  {
-    "collection": "community",
-    "reason": "No categories found: No categories assigned because, per the exclusion rules in Chapter 3, this content is about new features and updates in OneNote for EDU (education product) and Microsoft 365 for classroom/educational use. The article only covers end-user, productivity, and teaching workflow improvements, not development or coding aspects. There is no mention of coding, APIs, developer extensibility, integrations aimed at software developers, scripting, or customization beyond end-user settings. Microsoft 365 LTI, Teams Assignments, and OneNote Class Notebook are all discussed in the context of education workflow, not for application development or technical implementation. Microsoft 365 Copilot is referenced as a business productivity tool elsewhere, and by the rules, OneNote/Office 365 content is only categorized if it covers development topics (e.g., add-in development, Teams bot creation, SharePoint framework development), which is not the case here. This content is pure feature/update information for educators and IT admins around deployment and use—not development or architecture. Therefore, no categories apply.",
-    "timestamp": "2025-08-14 14:07:26 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/education-blog/what-s-new-in-onenote-for-edu-back-to-school-2025/ba-p/4443047"
-  },
-  {
-    "collection": "community",
-    "reason": "No categories found: No categories assigned because the content is primarily a question-only community post seeking troubleshooting help for issues with business productivity tools (Microsoft 365 Copilot, Word, Excel, PowerPoint, Power Automate). According to the Generic Exclusion Rules, question-only content that lacks substantive technical answers or detailed implementation walkthroughs is excluded. Additionally, Copilot for Microsoft 365, Word, Excel, and PowerPoint are business productivity tools, which are explicitly excluded unless the content focuses on development aspects (and not general product usage or troubleshooting). There are no eligible categories based on the content provided.",
-    "timestamp": "2025-08-14 14:07:40 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365-developer-platform/subject-disabled-gpt-5-button-and-missing-copilot-in-word-excel/idi-p/4443480"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 14:07:41 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/outlook/attachment-issue-in-new-outlook/m-p/4443453#M26909"
-  },
-  {
-    "collection": "community",
-    "reason": "No categories found: Content excluded due to generic exclusion rules (Chapter 3): This is a community post under 200 words of substantial explanatory text (excluding code and links), focusing primarily on user experience frustrations, feedback, and questions about Planner/Teams notification architecture and permissions. The post is mainly help-seeking and critical, lacking technical implementation detail or substantial architecture/development discussion around Microsoft technologies. It does not qualify for any categories per the workflow.",
-    "timestamp": "2025-08-14 14:07:58 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/planner/can-t-remove-plan-i-created-attached-to-team/m-p/4443443#M8975"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 14:07:58 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/device-sleep-modes-are-automatically-set-to-quot-never-quot/m-p/4443468#M29160"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 14:07:58 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/c-drive-running-out-of-space/m-p/4443461#M37207"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 14:07:58 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/unable-to-get-my-pc-to-boot-from-a-usb-drive/m-p/4443460#M37206"
-  },
-  {
-    "timestamp": "2025-08-14 15:12:56 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-stack/error-no-file/m-p/4443115#M277",
-    "collection": "community",
-    "reason": "No categories found: No categories were assigned because this is a community post that serves exclusively as a troubleshooting help request without substantive technical explanation or an answer/solution. The content describes an error encountered during Azure Stack HCI deployment, but it only seeks help and does not offer analysis, step-by-step diagnostic procedures, technical insights, or guidance that would make it valuable for knowledge aggregation. This fits the 'Question-Only Content' generic exclusion rule in Chapter 3, which states to exclude content mainly asking questions or seeking information without substantive answers or solutions."
-  },
-  {
-    "timestamp": "2025-08-14 15:13:51 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/sharepoint/create-spo-list-from-csv-with-schema-with-calculated-columns/m-p/4443529#M87449",
-    "collection": "community",
-    "reason": "No categories found"
-  },
-  {
-    "timestamp": "2025-08-14 15:14:05 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/viva-engage-blog/viva-engage-public-content-is-now-available-in-microsoft-365/ba-p/4443512",
-    "collection": "community",
-    "reason": "No categories found: Content excluded due to generic exclusion rule: The article is primarily about Microsoft 365 Copilot's new integration with Viva Engage, explicitly positioned as a business productivity tool rather than a developer tool. According to the CRITICAL Copilot Product Distinction rule, Microsoft 365 Copilot, Copilot for Microsoft 365, and all productivity-focused Copilots are excluded because they are not developer tools. The content focuses on improving user discovery of discussions and Q&A in a business communication platform (Viva Engage) within the productivity Copilot. There is no technical development, DevOps, coding, AI implementation, or security focus relevant to practitioners or developers; this is strictly an end-user/business productivity announcement."
-  },
-  {
-    "timestamp": "2025-08-14 15:14:18 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-freezing-gradually-after-wake-up/m-p/4443540#M29197",
-    "collection": "community",
-    "reason": "No categories found: This content is excluded based on the 'Question-Only Content' generic exclusion rule from Chapter 3. The post is a help-seeking query from a community member experiencing issues with Windows freezing after sleep, but it does not provide substantive technical solutions, answers, or knowledge sharing. There are no technical implementation details, solutions, or developer-focused insights. Additionally, the content is focused on end-user troubleshooting, which does not meet the technical knowledge requirements for inclusion."
-  },
-  {
-    "timestamp": "2025-08-14 16:09:55 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365-insider-blog/improved-margins-in-onenote-for-android-and-ios/ba-p/4441604",
-    "reason": "No categories found: No categories are assigned because this content is focused on end-user feature improvements for OneNote as part of Microsoft 365. It describes a new margin consistency feature for mobile users, targeted at note-taking and document formatting for consumers. According to the generic exclusion rules, non-development Microsoft products, especially Microsoft 365 and OneNote features that do not involve development, coding, or extensibility, are excluded. There is no coverage of APIs, extensibility, custom development, or developer tools, nor any mention of technical implementation or architecture. Therefore, per Non-Development Microsoft Products exclusion and Workplace and Business Focus exclusions, no categories are applied.",
-    "collection": "community"
-  },
-  {
-    "timestamp": "2025-08-14 16:10:12 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/public-sector-blog/new-ai-capabilities-available-for-government-environments/ba-p/4442669",
-    "reason": "No categories found: Content is excluded under generic exclusion rules: The main subject is the general availability and features of Microsoft 365 Copilot and Copilot Studio in government cloud environments (Office 365 DoD IL5, GCC). According to the critical workflow in Chapter 2 and the 'CRITICAL: Copilot Product Distinction' rule, all content about Microsoft 365 Copilot, Copilot for Microsoft 365, and related business productivity tools is strictly excluded. This is confirmed in multiple places by references to the Microsoft 365 Copilot App, Copilot in Word/PowerPoint/Excel, and productivity-focused use cases. The only development-adjacent topic mentioned is Copilot Studio agent builder, but its description targets no-code, non-developer users building lightweight agents, and is still presented as an end-user extension tool primarily for productivity, not as a developer or maker platform. Therefore, per generic exclusion, no categories are assigned.",
-    "collection": "community"
-  },
-  {
-    "timestamp": "2025-08-14 16:10:12 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/automate-some-tasks-or-scripts-after-windows-update/m-p/4443576#M29224",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "timestamp": "2025-08-14 16:10:12 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/quot-microsoft-print-to-pdf-quot-not-installed/m-p/4443577#M29225",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "timestamp": "2025-08-14 16:10:12 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/some-folder-icons-in-explorer-smaller-than-others/m-p/4443579#M29226",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/access/no-longer-able-to-edit-enter-into-access-query/m-p/4443515#M10540",
-    "collection": "community",
-    "timestamp": "2025-08-14 17:18:37 +00:00",
-    "reason": "Insufficient content length"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/seeking-urgent-escalation-microsoft-365-case-2508130040008018/m-p/4443550#M57883",
-    "collection": "community",
-    "timestamp": "2025-08-14 17:19:34 +00:00",
-    "reason": "Insufficient content length"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-teams/opening-a-chat-notification-should-default-to-a-popped-out/m-p/4443481#M144068",
-    "collection": "community",
-    "timestamp": "2025-08-14 17:19:34 +00:00",
-    "reason": "Insufficient content length"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-teams/settings-layout-in-teams-channels-for-posts-threads/m-p/4443592#M144069",
-    "collection": "community",
-    "timestamp": "2025-08-14 17:19:46 +00:00",
-    "reason": "No categories found: This content is a help-seeking post mainly asking questions about Teams channel chat layouts and contains no substantive technical solutions or educational content. It fits under the 'Question-Only Content' generic exclusion rule (Chapter 3), as it seeks information but does not provide implementation guidance, architectural discussion, or technical deep-dive. Therefore, no categories are assigned."
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/teams-developer/failed-delete-message-initiator-8-orgid-is-not-allowed-to-delete/m-p/4443609#M12823",
-    "collection": "community",
-    "timestamp": "2025-08-14 17:19:46 +00:00",
-    "reason": "Insufficient content length"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-powershell/problem-with-copy-item/m-p/4443530#M9118",
-    "collection": "community",
-    "timestamp": "2025-08-14 17:19:46 +00:00",
-    "reason": "Insufficient content length"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/word/styles-set-but-with-direct-formatting/m-p/4443492#M11178",
-    "collection": "community",
-    "timestamp": "2025-08-14 17:19:46 +00:00",
-    "reason": "Insufficient content length"
-  },
-  {
-    "timestamp": "2025-08-14 18:08:02 +00:00",
-    "reason": "No categories found: No categories assigned. The input lacks substantive content, description, and tags—only a title is provided ('Dapper vs EF Core in .NET is tricky'). According to the workflow, when there is insufficient actual content to evaluate (see Generic Exclusion Rules and 'Focus on actual content'), categorization cannot proceed. No technical information, explanations, or context about Microsoft technologies, coding practices, or comparisons are present in the input.",
-    "canonical_url": "https://www.youtube.com/shorts/-7tsG3U-HqI",
-    "collection": "videos"
-  },
-  {
-    "timestamp": "2025-08-14 18:08:51 +00:00",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365-admin-center/remove-domain-and-recover-licence/m-p/4443604#M4619",
-    "collection": "community"
-  },
-  {
-    "timestamp": "2025-08-14 18:09:05 +00:00",
-    "reason": "No categories found: This content is primarily announcing a new end-user feature in Microsoft Teams—a microphone volume indicator for meetings. It does not focus on Teams development, bot development, or provide any code, API, extensibility, or platform implementation guidance. Instead, it discusses how users can utilize the new feature, its availability through different preview channels, and how to provide feedback. According to the 'Non-Development Microsoft Products' and 'Business Productivity Tools' generic exclusion rules in Chapter 3, end-user feature announcements and general usage instructions for Microsoft 365/Teams (including new UI elements or settings not related to development) are excluded from categorization. No development, coding, DevOps, security, Azure, AI, or ML topics are present. Therefore, no categories apply.",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365-insider-blog/new-microphone-volume-indicator-in-teams/ba-p/4442879",
-    "collection": "community"
-  },
-  {
-    "timestamp": "2025-08-14 18:09:20 +00:00",
-    "reason": "No categories found: No categories assigned. This community post primarily promotes a digital event focused on new features in Microsoft 365 Copilot and OneDrive for general productivity, document management, and collaboration. According to the generic exclusion rules (Chapter 3), content that is about business productivity tools such as Microsoft 365 Copilot, OneDrive for end-user document management, or general Microsoft 365 features without a developer or development/technical implementation focus is excluded. Additionally, Copilot in this context refers to Microsoft 365 Copilot, which is explicitly marked as non-development (see CRITICAL: Copilot Product Distinction in Chapter 2 and Non-Development Microsoft Products in Chapter 3). There are no details on developer APIs, extensibility, technical implementation, or coding, and no substantive technical depth relating to development or architecture. Therefore, all categories are excluded.",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-onedrive-blog/join-us-october-8th-for-the-3rd-annual-onedrive-digital-event/ba-p/4443593",
-    "collection": "community"
-  },
-  {
-    "timestamp": "2025-08-14 18:09:47 +00:00",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-teams/microsoft-teams-timer-for-recurring-meetings/m-p/4443613#M144071",
-    "collection": "community"
-  },
-  {
-    "timestamp": "2025-08-14 18:09:47 +00:00",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-teams/performance-review-add-in-for-microsoft-teams/m-p/4443606#M144070",
-    "collection": "community"
-  },
-  {
-    "timestamp": "2025-08-14 18:09:47 +00:00",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/onedrive-events/copilot-onedrive-intelligence-in-every-click-inspiration-in/ec-p/4443617#M161",
-    "collection": "community"
-  },
-  {
-    "timestamp": "2025-08-14 18:10:06 +00:00",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/unable-to-print/m-p/4443619#M29235",
-    "collection": "community"
-  },
-  {
-    "reason": "No categories found: All generic exclusion rules were assessed first. This content is a Microsoft news announcement about the expansion of the Xbox PC app experience on Arm-based Windows 11 PCs. It primarily focuses on improved compatibility for gaming (Xbox app and PC Game Pass) on Arm-based Windows devices and provides instructions for joining the PC Gaming Preview program. It does not discuss software development, coding, Azure services, AI, ML, security, or DevOps aspects related to Microsoft technologies. The focus is on gaming user experience features, not technical implementation or developer-oriented details. Per Non-Development Microsoft Products and Business/Productivity Focus exclusions, gaming and consumer end-user topics are out of scope unless discussing actual development tooling or APIs, which is not the case here. Therefore, no categories apply.",
-    "canonical_url": "https://blogs.windows.com/windows-insider/2025/08/13/xbox-pc-app-experience-expanding-on-arm-based-windows-11-pcs/",
-    "collection": "news",
-    "timestamp": "2025-08-14 19:06:03 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/access/odbc-connection-with-mfa/m-p/4443627#M10542",
-    "collection": "community",
-    "timestamp": "2025-08-14 19:06:16 +00:00"
-  },
-  {
-    "reason": "No categories found: Content excluded due to generic exclusion rule—there is no actual content text provided (content is null), making it impossible to assess substance, technical depth, or category fit. Videos or posts containing only event excitement or short highlights without technical or implementation details are excluded per quality standards. Additionally, with only a brief description highlighting personal excitement (rather than hands-on technical content), this does not meet the threshold for inclusion.",
-    "canonical_url": "https://www.youtube.com/shorts/rGpvDE0Zu9o",
-    "timestamp": "2025-08-14 20:06:09 +00:00",
-    "collection": "videos"
-  },
-  {
-    "reason": "No categories found: No categories assigned because the core content is a short developer interview about conference highlights (MSBuild 2025) rather than a technical deep-dive, tutorial, or substantive resource. The description indicates it's a #OneDevQuestion segment focusing on personal excitement and quick takes, lacking technical implementation detail or actionable information. While it briefly mentions Windows Subsystem for Linux becoming open source and Windows AI Foundry, there's insufficient technical depth or coverage of Microsoft technologies to satisfy inclusion rules—this is confirmed by the absence of content in the 'content' field. According to the workflow, only substantive technical content (demos, tutorials, architecture guides) qualifies; general opinions or quick reaction/interview videos do not.",
-    "canonical_url": "https://www.youtube.com/watch?v=PUHypVSs1JE",
-    "timestamp": "2025-08-14 20:06:22 +00:00",
-    "collection": "videos"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/sharepoint/how-to-setup-sharepoint/m-p/4443646#M87451",
-    "timestamp": "2025-08-14 20:07:53 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/planner-blog/the-new-planner-for-the-web-is-now-available-to-customers-in-gcc/ba-p/4443618",
-    "collection": "community",
-    "timestamp": "2025-08-14 21:08:09 +00:00",
-    "reason": "No categories found: No categories assigned. The content is focused on an end-user productivity tool (Microsoft Planner for the web), specifically highlighting its rollout, features, and availability for GCC High customers. There is no content about Planner or Microsoft 365 development, APIs, extensibility, or technical implementation that would qualify it for Coding, Azure, DevOps, AI, ML, Security, or GitHub Copilot categories. The news is for end-users and IT admins, not for developers or technical architects. According to the exclusion rules under 'Non-Development Microsoft Products' and business/workplace focus, content about Planner (unless development-related) is explicitly excluded."
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/excel/excel-formula-help/m-p/4443667#M254077",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 22:08:24 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot/graph-custom-connector-data-not-available-in-agent/m-p/4443670#M5468",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 22:08:24 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/embedded-excel-files-require-sign-in/m-p/4443644#M57884",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 22:08:25 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/i-have-lost-my-document-folder-after-terminating-onedrive/m-p/4443638#M29236",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 22:08:25 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/word/text-boxes-have-been-acting-weird-recently/m-p/4443649#M11183",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 22:08:25 +00:00",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/word/using-ms-365-word-online-where-is-style-inspector/m-p/4443630#M11180",
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-14 22:08:25 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/project/creating-a-project-through-graph-api-quot-msdyn-createprojectv1/m-p/4443720#M10633",
-    "timestamp": "2025-08-15 01:33:05 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/disable-the-windows-11-lock-screen-and-password/m-p/4443729#M17884",
-    "timestamp": "2025-08-15 01:33:05 +00:00",
-    "collection": "community"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/is-it-possible-to-split-a-pst-file-without-using-outlook/m-p/4443765#M29268",
-    "timestamp": "2025-08-15 02:40:10 +00:00"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/need-help-to-add-extend-the-timeout-on-login-screen/m-p/4443744#M29251",
-    "timestamp": "2025-08-15 02:40:11 +00:00"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/what-should-i-do-if-the-windows-11-system-update-interface-is/m-p/4443768#M29271",
-    "timestamp": "2025-08-15 02:40:11 +00:00"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/win-11-setting-up-for-work-or-school/m-p/4443760#M29264",
-    "timestamp": "2025-08-15 02:40:11 +00:00"
-  },
-  {
-    "collection": "community",
-    "reason": "No categories found: All categories are excluded based on generic exclusion rules. The content is primarily a help-seeking community post describing a personal troubleshooting issue with Windows 10/11 freezing after sleep/wake. There are no substantive answers, solutions, or technical explanations provided, only a description of the problem and a request for help. Per 'Question-Only Content' exclusion and the lack of technical depth or development focus, no categories are assigned.",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-freezing-gradually-after-wake-up/m-p/4443747#M29254",
-    "timestamp": "2025-08-15 02:40:23 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/kb-4103721-problems-here-is-a-solution/m-p/4443816#M17901",
-    "collection": "community",
-    "timestamp": "2025-08-15 03:31:46 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/windows-11-pc-will-not-start-up-even-form-flash-drive/m-p/4443808#M17898",
-    "collection": "community",
-    "timestamp": "2025-08-15 03:31:46 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/determining-the-pc-wattage-consumption/m-p/4443778#M29277",
-    "collection": "community",
-    "timestamp": "2025-08-15 03:31:46 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/question-about-restoring-windows-11/m-p/4443775#M29274",
-    "collection": "community",
-    "timestamp": "2025-08-15 03:31:46 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/ssd-partitioning-in-windows-11/m-p/4443795#M29293",
-    "collection": "community",
-    "timestamp": "2025-08-15 03:31:46 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/win11-driver-update-problem/m-p/4443782#M29281",
-    "collection": "community",
-    "timestamp": "2025-08-15 03:31:46 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-explorer-quot-blocks-quot-the-system/m-p/4443798#M29294",
-    "collection": "community",
-    "timestamp": "2025-08-15 03:31:46 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-15 04:14:42 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/enlarging-the-efi-partition-doesn-t-work-what-now/m-p/4443826#M17903"
-  },
-  {
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-15 04:14:42 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/photo-cutouts-with-windows-10/m-p/4443822#M17902"
-  },
-  {
-    "reason": "No categories found: Content excluded due to generic exclusion rules. This is a negative product review focusing on hardware reliability and customer support experience, not on technical Microsoft content. The post meets more than three criteria on the negativity assessment checklist: (1) No constructive alternatives offered beyond a general complaint, (2) Vague complaints about support, (3) Absolute negative claims without evidence (e.g., 'this has not lived up to expectations'), and (4) the majority of content is negative in tone without technical depth or solution orientation. No Microsoft development or platform technologies are referenced. Per exclusion rules, no categories are assigned.",
-    "timestamp": "2025-08-15 04:14:54 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/disappointing-experience-unstable-system-and-inconsistent/m-p/4443839#M29314"
-  },
-  {
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-15 04:14:54 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/gaming-laptop-rtx-5070ti-12gb/m-p/4443841#M29316"
-  },
-  {
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-15 04:14:55 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/laptop-upgrade-defiance-ii-to-recoil-series-16-quot/m-p/4443837#M29312"
-  },
-  {
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-15 04:14:55 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/pcspecialist-quot-share-your-setup-quot-image-submissions/m-p/4443833#M29310"
-  },
-  {
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-15 04:14:55 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/reinstalling-windows-11-without-losing-games/m-p/4443852#M29322"
-  },
-  {
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-15 04:14:55 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/when-you-re-seeking-help-with-a-bsod/m-p/4443858#M29324"
-  },
-  {
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-15 04:14:55 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/win11-24h2-encountered-a-problem/m-p/4443842#M29317"
-  },
-  {
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-15 04:14:55 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-24h2-hardware-virtualization-being-blocked-by-vbs/m-p/4443848#M29319"
-  },
-  {
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-15 04:14:55 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-and-enabling-tpm-2-0/m-p/4443860#M29325"
-  },
-  {
-    "reason": "No categories found: Content excluded due to generic exclusion rules: (1) The primary focus is a user troubleshooting a Windows 11 sleep issue with their PC, and the post is a request for advice/help rather than a substantive discussion or solution (covered by the 'Question-Only Content' exclusion). (2) The community post is under 200 words excluding greetings and context, and does not provide actionable technical insights, troubleshooting steps, or Microsoft development practices. No Microsoft technology relevant to development, coding, AI, DevOps, Azure, ML, or Security is discussed beyond basic user settings, so no inclusion rules apply.",
-    "timestamp": "2025-08-15 04:15:07 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-and-sleep/m-p/4443849#M29320"
-  },
-  {
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-15 04:15:08 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-automatic-repair-failed-log-is-lcuox14c-error-code/m-p/4443838#M29313"
-  },
-  {
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-15 04:15:08 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-upgrade/m-p/4443856#M29323"
-  },
-  {
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-15 04:15:08 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/after-restarting-the-computer-the-newuser-account-cannot-be/m-p/4443859#M37221"
-  },
-  {
-    "reason": "Insufficient content length",
-    "timestamp": "2025-08-15 04:15:08 +00:00",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/inconsistent-taskbar-tray-menu-styles/m-p/4443857#M37220"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/stop-windows-media-player-adding-external-drive-automatically/m-p/4443866#M17906",
-    "timestamp": "2025-08-15 05:12:11 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/there-is-a-problem-with-the-windows-10-photo-viewer-application/m-p/4443886#M17907",
-    "timestamp": "2025-08-15 05:12:12 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/windows-10-build-19045-6276-available-to-the-release-preview/m-p/4443865#M17905",
-    "timestamp": "2025-08-15 05:12:12 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/about-windows-bluetooth-headset-audio-encoding-solution/m-p/4443872#M29331",
-    "timestamp": "2025-08-15 05:12:12 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/files-will-not-open-new-icon/m-p/4443874#M29333",
-    "timestamp": "2025-08-15 05:12:12 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/i-can-not-remove-my-old-administrator-account-solved/m-p/4443878#M29337",
-    "timestamp": "2025-08-15 05:12:12 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/w11-pro-but-do-i-need-it/m-p/4443880#M29339",
-    "timestamp": "2025-08-15 05:12:12 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-apps-focus-lost-upon-mouse-click/m-p/4443876#M29335",
-    "timestamp": "2025-08-15 05:12:25 +00:00",
-    "reason": "No categories found: Content excluded due to generic exclusion rule: this is a community help-seeking post that primarily asks a question about an end-user issue with Windows desktop behavior on new hardware (see 'Question-Only Content' and 'Non-Development Microsoft Products' exclusion rules). The post does not provide a solution, technical depth related to development, or any implementation/engineering guidance about Microsoft technologies. It focuses on an end-user problem with UI behavior, which is out of scope for the categorization workflow.",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/winforandroid-virtualization-issues/m-p/4443871#M29330",
-    "timestamp": "2025-08-15 05:12:25 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/does-anyone-know-what-windows-11-enhanced-audio-is/m-p/4443864#M37223",
-    "timestamp": "2025-08-15 05:12:25 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/no-problems-with-normal-use-but-performance-drops-after-a-few/m-p/4443861#M37222",
-    "timestamp": "2025-08-15 05:12:25 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community"
-  },
-  {
-    "timestamp": "2025-08-15 06:06:03 +00:00",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/computer-disconnected-from-the-network-restarted-and-blue-screen/m-p/4443888#M17908",
-    "collection": "community"
-  },
-  {
-    "reason": "No categories found: No categories assigned. This content is a community help-seeking post about a personal PC boot failure, with the author mainly describing troubleshooting steps and asking for help rather than providing substantive technical guidance or solutions. It does not meet the minimum requirement of 200 words of explanatory text (the content primarily lists one user's troubleshooting experience and device symptoms rather than providing generalizable technical information, best practices, or solutions). Additionally, the post is not focused on Microsoft development, coding, or technical implementation in the sense required for XMS Tech Hub categorization—it is an end-user support issue. It is thus excluded under the generic exclusion rules for question-only content and insufficient substantive explanatory content in community submissions.",
-    "collection": "community",
-    "timestamp": "2025-08-15 07:09:09 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/failure-to-boot-no-media-present/m-p/4443912#M17914"
-  },
-  {
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "timestamp": "2025-08-15 07:09:09 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/file-explorer-tab-freezes-with-quot-right-click-shift-quot/m-p/4443901#M17911"
-  },
-  {
-    "reason": "No categories found: Content excluded due to generic exclusion rules. This community post is primarily a user venting frustration about instability in Windows 11 for gaming, with mostly negative statements and little to no substantive technical content, constructive alternatives, or technical implementation discussion. It is a help-seeking/venting post without detailed solution attempts or technical depth (see 'Negative/Unconstructive Content' and 'Question-Only Content' exclusion criteria in Chapter 3).",
-    "collection": "community",
-    "timestamp": "2025-08-15 07:09:24 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/gaming-and-general-bsod-freeze-unresponsive-instability-with/m-p/4443903#M17912"
-  },
-  {
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "timestamp": "2025-08-15 07:09:24 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/monitor-isn-t-detected-by-new-pc-windows-10/m-p/4443909#M17913"
-  },
-  {
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "timestamp": "2025-08-15 07:09:24 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/pc-bricked-following-bios-update/m-p/4443913#M17915"
-  },
-  {
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "timestamp": "2025-08-15 07:09:24 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/black-screen/m-p/4443952#M29355"
-  },
-  {
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "timestamp": "2025-08-15 07:09:24 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/cleaning-the-windowed-side-panel-of-my-pc/m-p/4443946#M29349"
-  },
-  {
-    "reason": "No categories found: This content is excluded due to the Generic Exclusion Rules for community content. It is a help-seeking post mainly asking for assistance with a Windows PC error after a graphics driver update, without providing substantive solutions or technical guidance. The post does not contain enough technical depth or educational value and consists primarily of a problem description and troubleshooting steps attempted by the user. According to the 'Question-Only Content' exclusion rule, content that is help-seeking without substantive answers or implementation details is not eligible for categorization.",
-    "collection": "community",
-    "timestamp": "2025-08-15 07:09:38 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/unable-to-reset-pc/m-p/4443949#M29352"
-  },
-  {
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "timestamp": "2025-08-15 07:09:38 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/how-to-delete-temporary-files/m-p/4443926#M37238"
-  },
-  {
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "timestamp": "2025-08-15 07:09:38 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/my-pc-wont-work-i-just-bought-it/m-p/4443935#M37243"
-  },
-  {
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "timestamp": "2025-08-15 07:09:39 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/pc-shutting-down/m-p/4443936#M37244"
-  },
-  {
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "timestamp": "2025-08-15 07:09:39 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/update-errors-often-fail/m-p/4443908#M37230"
-  },
-  {
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "timestamp": "2025-08-15 07:09:39 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/wifi-battery-icon-cannot-be-separated/m-p/4443910#M37231"
-  },
-  {
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "timestamp": "2025-08-15 07:09:39 +00:00",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/windows-11-update-keeps-spinning/m-p/4443923#M37236"
-  },
-  {
-    "timestamp": "2025-08-15 08:12:29 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/can-t-connect-to-the-network/m-p/4443957#M17929"
-  },
-  {
-    "timestamp": "2025-08-15 08:12:29 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/computer-won-t-wake-from-sleep/m-p/4443964#M17935"
-  },
-  {
-    "timestamp": "2025-08-15 08:12:51 +00:00",
-    "reason": "No categories found: Excluded due to generic exclusion rule: the content is a help-seeking community post that primarily consists of a troubleshooting request, asking the community for ideas to diagnose a hardware issue. As per Chapter 3 ('Question-Only Content' exclusion), posts that mainly ask questions without providing substantive technical guidance or solutions are excluded. Additionally, the content is not Microsoft technology-specific, nor does it cover Microsoft development, deployment, or architecture topics. Therefore, no categories apply.",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/help-with-diagnosing-dead-pc/m-p/4443971#M17940"
-  },
-  {
-    "timestamp": "2025-08-15 08:12:51 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/roll-back-windows-10-system/m-p/4443958#M17930"
-  },
-  {
-    "timestamp": "2025-08-15 08:12:51 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/i-can-not-remove-my-old-administrator-account/m-p/4443959#M29356"
-  },
-  {
-    "timestamp": "2025-08-15 08:12:51 +00:00",
-    "reason": "Insufficient content length",
-    "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/the-newly-installed-computer-cannot-use-bluetooth/m-p/4443985#M29363"
-  },
-  {
-    "timestamp": "2025-08-15 08:12:52 +00:00",
     "reason": "Insufficient content length",
     "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/the-wifi-button-sometimes-changes-to-something-else/m-p/4443984#M29362"
+    "timestamp": "2025-08-15 15:40:30 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage/sentinel-to-detect-storage-account-created/m-p/4442994#M570"
   },
   {
-    "timestamp": "2025-08-15 08:12:52 +00:00",
     "reason": "Insufficient content length",
     "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/is-it-worth-it-clearing-standby-list/m-p/4443974#M37247"
+    "timestamp": "2025-08-15 15:45:18 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/sharepoint/carousel-suddenly-stretching-images/m-p/4444202#M87457"
   },
   {
-    "timestamp": "2025-08-15 08:12:52 +00:00",
     "reason": "Insufficient content length",
     "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/new-hard-drive-installation-of-windows-11-prompts/m-p/4443992#M37256"
+    "timestamp": "2025-08-15 15:45:18 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/about-the-extendedcoputility-process/m-p/4444150#M17960"
   },
   {
-    "timestamp": "2025-08-15 08:12:52 +00:00",
     "reason": "Insufficient content length",
     "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/the-system-update-removed-my-account-s-disk-permissions/m-p/4443990#M37255"
+    "timestamp": "2025-08-15 15:45:18 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/how-to-revert-from-windows-11-pro-to-home-edition-after/m-p/4444145#M17959"
   },
   {
-    "timestamp": "2025-08-15 08:12:52 +00:00",
     "reason": "Insufficient content length",
     "collection": "community",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/windows-explorer-showing-a-double-thumbnail/m-p/4443973#M37246"
+    "timestamp": "2025-08-15 15:45:18 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/text-and-icons-are-missing-in-windows-10-system/m-p/4444144#M17958"
   },
   {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/mobile-device-management-options-disappear-from-owa-and-the-new/m-p/4444036#M57888",
     "reason": "Insufficient content length",
     "collection": "community",
-    "timestamp": "2025-08-15 09:07:22 +00:00"
+    "timestamp": "2025-08-15 15:45:18 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/the-start-menu-in-windows-11-cannot-be-clicked/m-p/4444153#M17961"
   },
   {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/sound-card-issues/m-p/4444023#M17951",
     "reason": "Insufficient content length",
     "collection": "community",
-    "timestamp": "2025-08-15 09:07:22 +00:00"
+    "timestamp": "2025-08-15 15:45:18 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/after-reinstalling-the-system-the-blue-screen-displays-that-the/m-p/4444162#M29423"
   },
   {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/the-computer-was-working-fine-in-the-afternoon-but-the-taskbar/m-p/4444031#M17954",
     "reason": "Insufficient content length",
     "collection": "community",
-    "timestamp": "2025-08-15 09:07:22 +00:00"
+    "timestamp": "2025-08-15 15:45:18 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/after-unlocking-windows-11-the-icon-text-becomes-bold/m-p/4444165#M29425"
   },
   {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/unable-to-connect-to-microsoft-software-store-but-can-update-the/m-p/4444028#M17952",
     "reason": "Insufficient content length",
     "collection": "community",
-    "timestamp": "2025-08-15 09:07:22 +00:00"
+    "timestamp": "2025-08-15 15:45:19 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/how-to-disable-mouse-wake-up-in-windows-11/m-p/4444137#M29415"
   },
   {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/what-should-i-do-if-the-bluetooth-mouse-paired-with-windows-11/m-p/4444030#M17953",
     "reason": "Insufficient content length",
     "collection": "community",
-    "timestamp": "2025-08-15 09:07:22 +00:00"
+    "timestamp": "2025-08-15 15:45:19 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/i-encountered-a-problem-that-greatly-affected-the-experience/m-p/4444123#M29412"
   },
   {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/can-t-avoid-windows-snapping-to-top-of-screen/m-p/4444026#M29379",
     "reason": "Insufficient content length",
     "collection": "community",
-    "timestamp": "2025-08-15 09:07:22 +00:00"
+    "timestamp": "2025-08-15 15:45:19 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/i-upgraded-my-10th-generation-i5-to-the-official-version-of/m-p/4444131#M29414"
   },
   {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/can-t-open-txt-files-using-windows-search-win-11/m-p/4444025#M29378",
     "reason": "Insufficient content length",
     "collection": "community",
-    "timestamp": "2025-08-15 09:07:22 +00:00"
+    "timestamp": "2025-08-15 15:45:19 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/the-computer-activation-page-is-stuck-on-the-update-interface/m-p/4444159#M29421"
   },
   {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/the-computer-desktop-displays-images-but-cannot-be-moved/m-p/4443998#M29368",
     "reason": "Insufficient content length",
     "collection": "community",
-    "timestamp": "2025-08-15 09:07:23 +00:00"
+    "timestamp": "2025-08-15 15:45:19 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/the-lock-screen-interface-of-the-windows-11-system-cannot-be/m-p/4444163#M29424"
   },
   {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/unable-to-unpin-app-from-taskbar-after-inplace-upgrade/m-p/4444027#M29380",
     "reason": "Insufficient content length",
     "collection": "community",
-    "timestamp": "2025-08-15 09:07:23 +00:00"
+    "timestamp": "2025-08-15 15:45:19 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/the-windows-11-download-page-cannot-be-opened-i-need-help/m-p/4444138#M29416"
   },
   {
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-beta-version-updated-to-22h2-cannot-be-updated/m-p/4444003#M29369",
     "reason": "Insufficient content length",
     "collection": "community",
-    "timestamp": "2025-08-15 09:07:23 +00:00"
+    "timestamp": "2025-08-15 15:45:19 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/what-should-i-do-if-windows-11-system-activation-fails/m-p/4444141#M29417"
   },
   {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/my-neighbor-s-windows-11-computer-cannot-connect-to-the-network/m-p/4444039#M29385",
-    "timestamp": "2025-08-15 10:08:33 +00:00"
-  },
-  {
-    "collection": "community",
-    "reason": "No categories found: All generic exclusion rules were applied before category inclusion. This community post is a support question about PC hardware (black screen on first boot, troubleshooting VGA/DRAM issues) and does not reference any Microsoft development technology, service, or product, nor does it discuss development tools, frameworks, architecture, or coding topics. It is clearly a help-seeking post focusing on consumer-level PC troubleshooting, not technical content relevant to Microsoft technology categories. According to the exclusion rule for 'Question-Only Content' and also 'Focus on actual content (ignore posts mainly asking questions or seeking information without substantive answers or solutions)', this post must be excluded and assigned no categories.",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/new-pc-black-screen-on-first-boot-5080-issue/m-p/4444058#M29388",
-    "timestamp": "2025-08-15 10:08:48 +00:00"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/pc-randomly-freezing-up-forcing-hard-restart/m-p/4444082#M29397",
-    "timestamp": "2025-08-15 10:08:48 +00:00"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/reinstalled-windows-11-then-encountered-problems/m-p/4444079#M29396",
-    "timestamp": "2025-08-15 10:08:48 +00:00"
-  },
-  {
-    "collection": "community",
     "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/the-camera-on-my-lenovo-laptop-won-t-turn-on-but-my-friend-s/m-p/4444042#M29386",
-    "timestamp": "2025-08-15 10:08:48 +00:00"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/win-r-error-command-prompt-enter-dialog-box-crashes-is-there-a/m-p/4444084#M29398",
-    "timestamp": "2025-08-15 10:08:48 +00:00"
-  },
-  {
-    "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/black-pop-up-window-appears-when-logging-in-to-windows-account/m-p/4444047#M37264",
-    "timestamp": "2025-08-15 10:08:48 +00:00"
-  },
-  {
     "collection": "community",
-    "reason": "No categories found: Content excluded by generic exclusion rules. Although the post discusses a technical issue with a Windows update (KB5032190) affecting folder refresh behavior, it does not focus on Microsoft developer or IT pro technologies related to coding, DevOps, Azure, AI, ML, or Security. The topic is user experience with Windows Explorer thumbnails—a standard end-user OS issue, not development or administrator-focused. No qualifying category applies.",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/folders-not-automatically-refreshing-after-kb5032190-update/m-p/4444038#M37258",
-    "timestamp": "2025-08-15 10:09:01 +00:00"
+    "timestamp": "2025-08-15 15:45:19 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/deleted-a-folder/m-p/4444130#M37299"
   },
   {
-    "collection": "community",
     "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/how-do-i-roll-back-the-windows-11-system-my-current-system-is/m-p/4444051#M37268",
-    "timestamp": "2025-08-15 10:09:01 +00:00"
-  },
-  {
     "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/how-many-devices-can-be-activated-with-a-retail-windows-key/m-p/4444057#M37273",
-    "timestamp": "2025-08-15 10:09:01 +00:00"
+    "timestamp": "2025-08-15 15:45:19 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/how-to-restart-windows-on-a-schedule/m-p/4444122#M37297"
   },
   {
-    "collection": "community",
     "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/installed-windows-update-issue/m-p/4444086#M37283",
-    "timestamp": "2025-08-15 10:09:01 +00:00"
-  },
-  {
-    "collection": "community",
-    "reason": "No categories found: Content excluded due to generic exclusion rules. This community post primarily consists of a question about abnormal Windows filesystem behavior, with the author seeking troubleshooting advice and possible causes. It lacks substantive technical solution content, tutorials, or detailed answers. According to the 'Question-Only Content' rule in Chapter 3, content mainly asking questions without providing technical solutions or implementation details should be excluded. There's also no clear, actionable content regarding Microsoft development, DevOps, Azure, coding, or other specified technical categories.",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/numerous-layers-of-quot-application-data-quot-in-users-all-users/m-p/4444061#M37275",
-    "timestamp": "2025-08-15 10:09:15 +00:00"
-  },
-  {
     "collection": "community",
-    "reason": "No categories found: Content excluded due to generic exclusion rule. This community post focuses on an end-user problem and solution for Windows 11 File Explorer (removing a broken pinned shortcut) and does not include technical development, coding, engineering architecture, or Microsoft technology categories as defined by the workflow. There is no coverage of development frameworks, programming, deployment, or technical architecture topics relevant to the defined categories, falling under 'Non-Development Microsoft Products' exclusion.",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/solution-for-being-unable-to-delete-a-broken-pinned-item-from/m-p/4444083#M37281",
-    "timestamp": "2025-08-15 10:09:27 +00:00"
+    "timestamp": "2025-08-15 15:45:19 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/is-ctt-debloat-damaging-windows/m-p/4444129#M37298"
   },
   {
-    "collection": "community",
     "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/the-windows-11-taskbar-flickers-and-freezes-every-half-hour-but/m-p/4444060#M37274",
-    "timestamp": "2025-08-15 10:09:28 +00:00"
-  },
-  {
     "collection": "community",
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/windows-11-input-stalls-or-runs-riot/m-p/4444040#M37259",
-    "timestamp": "2025-08-15 10:09:28 +00:00"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/how-to-revert-from-windows-11-pro-to-home-edition-after/m-p/4444145#M17959",
-    "timestamp": "2025-08-15 11:09:44 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/text-and-icons-are-missing-in-windows-10-system/m-p/4444144#M17958",
-    "timestamp": "2025-08-15 11:09:44 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/after-updating-to-windows-11-24h2-the-screen-started-having/m-p/4444119#M29411",
-    "timestamp": "2025-08-15 11:09:44 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/dear-windows-friends-how-can-i-resolve-the-issue-of-the-windows/m-p/4444112#M29407",
-    "timestamp": "2025-08-15 11:09:44 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/how-to-disable-mouse-wake-up-in-windows-11/m-p/4444137#M29415",
-    "timestamp": "2025-08-15 11:09:45 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/i-don-t-know-if-it-s-a-problem-with-wps-or-the-system/m-p/4444104#M29403",
-    "timestamp": "2025-08-15 11:09:45 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/i-encountered-a-problem-that-greatly-affected-the-experience/m-p/4444123#M29412",
-    "timestamp": "2025-08-15 11:09:45 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/i-upgraded-my-10th-generation-i5-to-the-official-version-of/m-p/4444131#M29414",
-    "timestamp": "2025-08-15 11:09:45 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/the-windows-11-download-page-cannot-be-opened-i-need-help/m-p/4444138#M29416",
-    "timestamp": "2025-08-15 11:09:45 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/what-should-i-do-if-windows-11-system-activation-fails/m-p/4444141#M29417",
-    "timestamp": "2025-08-15 11:09:45 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/yesterday-i-updated-windows-11-and-discovered-two-issues/m-p/4444115#M29410",
-    "timestamp": "2025-08-15 11:09:45 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/added-sign-in-pin-code/m-p/4444118#M37295",
-    "timestamp": "2025-08-15 11:09:46 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/deleted-a-folder/m-p/4444130#M37299",
-    "timestamp": "2025-08-15 11:09:46 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/how-to-restart-windows-on-a-schedule/m-p/4444122#M37297",
-    "timestamp": "2025-08-15 11:09:46 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/how-to-suppress-a-flood-of-windows-events/m-p/4444109#M37293",
-    "timestamp": "2025-08-15 11:09:46 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/how-to-view-windows-version-on-a-new-computer/m-p/4444108#M37292",
-    "timestamp": "2025-08-15 11:09:46 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/is-ctt-debloat-damaging-windows/m-p/4444129#M37298",
-    "timestamp": "2025-08-15 11:09:46 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/unable-to-connect-to-a-specific-network-after-upgrade-to-windows/m-p/4444120#M37296",
-    "timestamp": "2025-08-15 11:09:46 +00:00",
-    "collection": "community"
-  },
-  {
-    "reason": "Insufficient content length",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/windows-recovery-media/m-p/4444102#M37290",
-    "timestamp": "2025-08-15 11:09:46 +00:00",
-    "collection": "community"
+    "timestamp": "2025-08-15 15:45:19 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/unable-to-connect-to-a-specific-network-after-upgrade-to-windows/m-p/4444120#M37296"
   }
 ]

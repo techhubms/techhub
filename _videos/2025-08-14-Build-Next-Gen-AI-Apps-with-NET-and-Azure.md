@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Build Next-Gen AI Apps with .NET and Azure"
-description: "This session introduces developers to creating next-generation AI applications with .NET and Azure. It covers the latest tools and frameworks, guides you through the development-to-production journey, and demonstrates how to leverage cloud capabilities for scalable AI workloads. Attendees will learn about recent advancements in AI development, practical samples and templates, and receive insights into the future of AI and .NET, enhancing their skills for upcoming industry changes."
+description: "This session explores how to develop next-generation AI applications using .NET and Azure. Attendees will learn about the latest advancements in AI with .NET, the process of integrating AI workloads into their applications, and how to leverage cloud-based tools and frameworks to scale and deploy intelligent solutions. The talk includes practical samples, templates, and insights into future trends for AI development with Microsoft's ecosystem."
 author: "dotnet"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://www.youtube.com/watch?v=WdJd9fnFlGU"
@@ -11,48 +11,58 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwf
 date: 2025-08-14 14:18:49 +00:00
 permalink: "/2025-08-14-Build-Next-Gen-AI-Apps-with-NET-and-Azure.html"
 categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "AI", "AI Development", "AI Workloads", "Application Development", "Azure", "Azure AI", "Cloud AI", "Coding", "Developer Tools", "Intelligent Applications", "Microsoft Cloud", "Production Deployment", "Sample Projects", "Scalable AI", "Templates", "Videos", "Visual Studio"]
-tags_normalized: ["net", "ai", "ai development", "ai workloads", "application development", "azure", "azure ai", "cloud ai", "coding", "developer tools", "intelligent applications", "microsoft cloud", "production deployment", "sample projects", "scalable ai", "templates", "videos", "visual studio"]
+tags: [".NET", "AI", "AI Applications", "AI Development", "Azure", "C#", "Cloud Development", "Coding", "End To End Development", "Frameworks", "Microsoft AI", "Production Deployment", "Samples And Templates", "Scalability", "Videos", "Visual Studio"]
+tags_normalized: ["net", "ai", "ai applications", "ai development", "azure", "c", "cloud development", "coding", "end to end development", "frameworks", "microsoft ai", "production deployment", "samples and templates", "scalability", "videos", "visual studio"]
 ---
 
-dotnet delivers a session on building next-generation AI applications using .NET and Azure, guiding developers through the latest tools, frameworks, and workflows in AI development.<!--excerpt_end-->
+In this video session, dotnet demonstrates how to build next-generation AI applications with .NET and Azure, offering practical development guidance and showcasing the latest tools in the Microsoft ecosystem.<!--excerpt_end-->
 
 {% youtube WdJd9fnFlGU %}
 
 # Build Next-Gen AI Apps with .NET and Azure
 
-Explore how to create advanced, next-generation AI applications by combining the power of .NET and Azure in this in-depth session presented by dotnet.
+**Presenter:** dotnet
 
-## What You'll Learn
+Explore how to create cutting-edge, next-generation AI applications using .NET and Azure. This session guides you through the end-to-end process, from initial development to production deployment, highlighting powerful tools, frameworks, and practical samples for building intelligent cloud-based applications.
 
-- The latest advancements in AI development with .NET
-- How to use Azure and Visual Studio to build, deploy, and scale intelligent applications
-- End-to-end workflows, including development to production deployment
-- Practical samples and templates to accelerate your projects
-- Insights into upcoming features and the future of AI and .NET
+## Key Topics Covered
 
-## Key Takeaways
+- Latest advancements in AI and .NET development
+- Integrating AI workloads into new or existing .NET applications
+- Leveraging cloud capabilities (Azure) to scale and manage AI workloads
+- End-to-end workflows: development, deployment, and production
+- Practical code samples and templates to jumpstart your projects
+- Insights and previews of upcoming AI and .NET features
 
-- Understand the powerful tools and frameworks available for .NET AI development
-- Learn to leverage Azure's cloud infrastructure to run scalable AI workloads
-- Integrate AI capabilities into existing applications seamlessly
-- Access a curated set of samples and templates to streamline your next project
-- Stay prepared for upcoming changes in the rapidly evolving AI landscape
+## Tools & Frameworks Mentioned
 
-## Resources
+- **.NET (C# and related frameworks)**
+- **Visual Studio**: [Visual Studio](http://visualstudio.com)
+- **Azure**: For cloud-hosted AI solutions
 
-- [Visual Studio](http://visualstudio.com)
-- [VS Live On-Demand](https://aka.ms/vslivehq25)
-- [VSLive Events](https://aka.ms/VSS/VSLive)
-- [Subscriptions Portal](https://my.visualstudio.com)
+## Learning Resources
 
-### Stay Connected with .NET
+- [Visual Studio Live on-demand sessions](https://aka.ms/vslivehq25)
+- [VSLive events schedule](https://aka.ms/VSS/VSLive)
+- [Microsoft Learn for .NET](https://aka.ms/learndotnet)
 
-- [Official Blog](https://aka.ms/dotnet/blog)
-- [Microsoft Learn](https://aka.ms/learndotnet)
-- [Docs](https://learn.microsoft.com/dotnet)
+## Connect with .NET
+
+- [Blog](https://aka.ms/dotnet/blog)
 - [Forums](https://aka.ms/dotnet/forums)
-- Social: [Twitter](https://aka.ms/dotnet/twitter), [TikTok](https://aka.ms/dotnet/tiktok), [Mastodon](https://aka.ms/dotnet/mastodon), [LinkedIn](https://aka.ms/dotnet/linkedin), [Facebook](https://aka.ms/dotnet/facebook)
+- [Docs](https://learn.microsoft.com/dotnet)
+- [Twitter](https://aka.ms/dotnet/twitter)
+- [TikTok](https://aka.ms/dotnet/tiktok)
+- [Mastodon](https://aka.ms/dotnet/mastodon)
+- [LinkedIn](https://aka.ms/dotnet/linkedin)
+- [Facebook](https://aka.ms/dotnet/facebook)
 - [Q&A](https://aka.ms/dotnet-qa)
 
-Upgrade your development toolkit and stay ahead by mastering the intersection of .NET, Azure, and AI.
+## Takeaways
+
+- Learn about the latest AI features tailored for .NET and Azure
+- Understand the process of deploying scalable AI solutions to the cloud
+- Access useful templates, code samples, and educational resources
+- Get a preview of future developments in AI and .NET
+
+*Elevate your AI development skills with practical guidance and up-to-date knowledge from the Microsoft .NET team.*
