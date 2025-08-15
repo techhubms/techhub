@@ -1,6 +1,3 @@
-// Sizes and Responsive Breakpoints
-// =================================
-
 // Content Width
 $content-width: 800px !default;
 
@@ -13,9 +10,7 @@ $on-mobile: 900px !default;
 $on-palm: 900px !default;
 $on-laptop: 900px !default;
 
-// Navigation Box Layout Control
-// =============================
-
+// When to switch to mobile view for sections/collections/posts
 $navigation-breakpoint: 750px;
 
 // Root index - section boxes (AI, GitHub Copilot)

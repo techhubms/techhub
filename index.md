@@ -16,7 +16,7 @@ Because we know it's hard to stay up-to-date with the fast changing world of IT,
     {%- assign sorted_roundups = site.roundups | sort: 'date' | reverse -%}
     {% for roundup in sorted_roundups limit:4 %}
       <li>
-        {{ roundup.date | date: "%Y-%m-%d" }}<a class="roundup-title" href="{{ roundup.url | relative_url }}">{{ roundup.title | escape }}</a>
+        <a class="roundup-title" href="{{ roundup.url | relative_url }}">{{ roundup.date | date: "%Y-%m-%d" }} - {{ roundup.title | escape }}</a>
       </li>
     {% endfor %}
   </ul>

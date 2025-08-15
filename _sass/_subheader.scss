@@ -1,12 +1,9 @@
-@use "colors";
-@use "sizes";
-
 .site-subheader {
     width: 100%;
     margin: 0px auto !important;
     padding: 10px;
-    background: rgba(colors.$dark-navy, 0.9);
-    border-bottom: 1px solid rgba(colors.$bright-purple, 0.2);
+    background: rgba($dark-navy, 0.9);
+    border-bottom: 1px solid rgba($bright-purple, 0.2);
     contain: layout style;
     display: flex;
     justify-content: center;
@@ -21,7 +18,7 @@
     position: relative;
     font-weight: 500;
     text-decoration: none;
-    color: colors.$light-gray !important;
+    color: $light-gray !important;
     padding: 8px 16px;
     border-radius: 8px;
     margin: 0px 2px 0px 2px;
@@ -34,30 +31,30 @@
 
     @media (hover: hover) {
         &:hover {
-            background: rgba(colors.$bright-purple, 0.1);
-            color: colors.$bright-purple;
+            background: rgba($bright-purple, 0.1);
+            color: $bright-purple;
             transform: translateY(-1px);
         }
     }
 
     &.active {
-        background: rgba(colors.$bright-purple, 0.2);
-        color: colors.$bright-purple;
+        background: rgba($bright-purple, 0.2);
+        color: $bright-purple;
         font-weight: 600;
     }
 
     &:visited {
-        color: colors.$light-gray;
+        color: $light-gray;
 
         @media (hover: hover) {
             &:hover {
-                color: colors.$bright-purple;
+                color: $bright-purple;
                 transform: translateY(-1px);
             }
         }
 
         &.active {
-            color: colors.$bright-purple;
+            color: $bright-purple;
         }
     }
 }
@@ -79,7 +76,7 @@
     display: none !important;
 }
 
-@media (max-width: #{sizes.$on-mobile}) {
+@media (max-width: #{$on-mobile}) {
     .site-subheader {
         padding: 8px 15px;
         gap: 10px;

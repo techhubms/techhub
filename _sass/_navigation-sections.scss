@@ -1,17 +1,13 @@
-@use "colors";
-@use "sizes";
-@use "navigation";
-
 // Sections grid (Root index - AI, GitHub Copilot sections)
 .navigation-sections-grid {
     @extend .nav-grid-base;
 
-    @media (min-width: sizes.$navigation-breakpoint) {
-        grid-template-columns: repeat(sizes.$sections-grid-desktop, 1fr);
+    @media (min-width: $navigation-breakpoint) {
+        grid-template-columns: repeat($sections-grid-desktop, 1fr);
     }
 
-    @media (max-width: #{sizes.$navigation-breakpoint - 1px}) {
-        grid-template-columns: repeat(sizes.$sections-grid-mobile, 1fr);
+    @media (max-width: #{$navigation-breakpoint - 1px}) {
+        grid-template-columns: repeat($sections-grid-mobile, 1fr);
     }
 }
 
@@ -30,7 +26,7 @@
 
     // Visual styling for overlay
     &::before {
-        background: rgba(colors.$dark-navy, 0.4);
+        background: rgba($dark-navy, 0.4);
         transition: background 0.2s ease;
         will-change: background;
     }
@@ -39,29 +35,29 @@
     .navigation-section-content {
         @extend .nav-content;
         margin: 15px 45px 15px 45px;
-        background: rgba(colors.$dark-navy, 0.7);
+        background: rgba($dark-navy, 0.7);
         border-radius: 12px;
-        border: 1px solid rgba(colors.$bright-purple, 0.3);
+        border: 1px solid rgba($bright-purple, 0.3);
         
         // On mobile/tablet, use the same dark background as hover state
-        @media (max-width: sizes.$on-mobile) {
-            background: rgba(colors.$dark-navy, 0.95);
-            border-color: rgba(colors.$bright-purple, 0.6);
+        @media (max-width: $on-mobile) {
+            background: rgba($dark-navy, 0.95);
+            border-color: rgba($bright-purple, 0.6);
         }
     }
 
     @media (hover: hover) {
         &:hover {
             // Visual styling on hover - don't override background for images
-            box-shadow: 0 8px 25px rgba(colors.$medium-blue, 0.18);
+            box-shadow: 0 8px 25px rgba($medium-blue, 0.18);
             
             &::before {
-                background: rgba(colors.$dark-navy, 0.2);
+                background: rgba($dark-navy, 0.2);
             }
 
             .navigation-section-content {
-                background: rgba(colors.$dark-navy, 0.95);
-                border-color: rgba(colors.$bright-purple, 0.6);
+                background: rgba($dark-navy, 0.95);
+                border-color: rgba($bright-purple, 0.6);
             }
         }
     }

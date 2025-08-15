@@ -1,11 +1,8 @@
-@use "colors";
-@use "sizes";
-
 body {
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    background: linear-gradient(135deg, colors.$dark-navy 0%, colors.$darker-navy 50%, colors.$darkest-navy 100%);
+    background: linear-gradient(135deg, $dark-navy 0%, $darker-navy 50%, $darkest-navy 100%);
     background-attachment: fixed;
-    color: colors.$light-gray;
+    color: $light-gray;
     min-height: 100vh;
     will-change: scroll-position;
     contain: layout style;
@@ -18,42 +15,42 @@ html {
 }
 
 a {
-    color: colors.$bright-blue;
+    color: $bright-blue;
     transition: color 0.2s ease, text-decoration 0.2s ease;
     text-decoration: none !important;
     will-change: color;
 
     &:visited {
-        color: colors.$bright-purple;
+        color: $bright-purple;
     }
 
     &:active,
     &:focus {
-        color: colors.$light-blue;
+        color: $light-blue;
     }
 
     &:link {
-        color: colors.$bright-blue;
+        color: $bright-blue;
     }
 
     @media (hover: hover) {
         &:hover,
         &:focus {
-            color: colors.$light-blue;
+            color: $light-blue;
             text-decoration: underline !important;
         }
     }
 }
 
 .wrapper {
-    max-width: -webkit-calc(#{sizes.$content-width} - 30px) !important;
-    max-width: calc(#{sizes.$content-width} - 30px) !important;
+    max-width: -webkit-calc(#{$content-width} - 30px) !important;
+    max-width: calc(#{$content-width} - 30px) !important;
 }
 
-@media screen and (max-width: sizes.$on-mobile) {
+@media screen and (max-width: $on-mobile) {
     .wrapper {
-        max-width: -webkit-calc(#{sizes.$content-width} - 30px) !important;
-        max-width: calc(#{sizes.$content-width} - 30px) !important;
+        max-width: -webkit-calc(#{$content-width} - 30px) !important;
+        max-width: calc(#{$content-width} - 30px) !important;
     }
 }
 
@@ -64,8 +61,8 @@ a {
     z-index: 1;
 
     .wrapper {
-        background-color: rgba(colors.$dark-navy, 0.8);
-        border: 1px solid rgba(colors.$darker-purple, 0.2);
+        background-color: rgba($dark-navy, 0.8);
+        border: 1px solid rgba($darker-purple, 0.2);
         border-radius: 15px;
         padding: 10px 15px 20px 15px !important;
         contain: layout style;

@@ -1,10 +1,7 @@
-@use "colors";
-@use "sizes";
-
 .site-footer {
     padding: 10px 0 10px 0;
-    color: colors.$medium-gray;
-    border-top: 1px solid colors.$light-gray;
+    color: $medium-gray;
+    border-top: 1px solid $light-gray;
     background-color: transparent;
     border-bottom: none;
     border-left: none;
@@ -23,7 +20,7 @@
     .author {
         margin: 0;
 
-        @media (max-width: #{sizes.$on-mobile}) {
+        @media (max-width: #{$on-mobile}) {
             margin-left: 10px;
         }
     }
@@ -34,24 +31,24 @@
         right: 0;
         contain: layout;
 
-        @media (max-width: #{sizes.$on-mobile}) {
+        @media (max-width: #{$on-mobile}) {
             margin-right: 10px;
         }
     }
 
     a {
-        color: colors.$medium-gray;
+        color: $medium-gray;
         transition: color 0.2s ease;
         will-change: color;
 
         @media (hover: hover) {
             &:hover {
-                color: colors.$lighter-gray;
+                color: $lighter-gray;
             }
         }
 
         &:visited {
-            color: colors.$medium-gray;
+            color: $medium-gray;
         }
     }
 }
