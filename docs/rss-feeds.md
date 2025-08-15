@@ -139,6 +139,24 @@ The RSS processing workflow uses a two-branch strategy to ensure main branch sta
 
 **Branch Reset**: The rss-updates branch is automatically recreated from the latest main branch state at the start of every RSS processing run. This ensures each run starts with a clean slate, eliminating accumulated state and simplifying the sync process. The branch reset uses a selective backup/recreate/restore strategy that only handles files that have actually changed between branches, making the process more efficient than complex merge operations.
 
+### Automatic Deployment Integration
+
+When the RSS workflow successfully processes new content and commits markdown files to the main branch, the Azure Static Web App deployment is automatically triggered through a `workflow_run` trigger. This ensures that new content is immediately available on the live site without manual intervention.
+
+**Deployment Workflow Integration**:
+
+- **Trigger**: Azure Static Web App workflow listens for successful completion of RSS workflow
+- **Condition**: Only triggers when RSS workflow completes successfully and creates new content
+- **Timing**: Deployment begins immediately after RSS workflow commits to main branch
+- **Automation**: No manual action required - fully automated content-to-production pipeline
+
+**Key Benefits**:
+
+- **Immediate Availability**: New RSS content appears on the live site within minutes
+- **Zero Manual Intervention**: Fully automated from RSS processing to deployment
+- **Reliability**: Only successful RSS workflow runs trigger deployment
+- **Efficiency**: Deployment only occurs when there's actually new content to publish
+
 ## Content Fetching Architecture
 
 ### Three-Phase Processing
