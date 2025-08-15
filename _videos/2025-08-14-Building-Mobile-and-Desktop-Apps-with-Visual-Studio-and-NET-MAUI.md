@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Building Mobile and Desktop Apps with Visual Studio and .NET MAUI"
-description: "This session explores building cross-platform mobile and desktop applications using Visual Studio and .NET MAUI. It covers leveraging Live tools during both design and run time, structuring solutions for targeting multiple platforms efficiently, and highlights new features in .NET MAUI for .NET 9 as well as what's coming in .NET 10. Attendees will gain practical tips on optimizing app speed and size for production environments."
+description: "This video session explores how developers can use Visual Studio and .NET MAUI to create cross-platform mobile and desktop applications. It highlights live tools for UI development, approaches to structuring solutions to target multiple platforms, and provides insights into new features available in .NET MAUI for .NET 9 with previews of what's coming in .NET 10."
 author: "dotnet"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://www.youtube.com/watch?v=MB0I5Hy6Wc8"
@@ -11,41 +11,50 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwf
 date: 2025-08-14 14:22:56 +00:00
 permalink: "/2025-08-14-Building-Mobile-and-Desktop-Apps-with-Visual-Studio-and-NET-MAUI.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET 9", ".NET MAUI", "App Optimization", "C#", "Coding", "Cross Platform Apps", "Desktop Development", "Live Tools", "Microsoft", "Mobile Development", "Solution Structure", "UI Design", "Videos", "Visual Studio", "XAML"]
-tags_normalized: ["net", "net 10", "net 9", "net maui", "app optimization", "c", "coding", "cross platform apps", "desktop development", "live tools", "microsoft", "mobile development", "solution structure", "ui design", "videos", "visual studio", "xaml"]
+tags: [".NET", ".NET 10", ".NET 9", ".NET MAUI", "App Size Optimization", "C#", "Coding", "Cross Platform", "Design Tools", "Desktop Apps", "Live Tools", "Mobile Development", "Multi Platform Development", "Performance Optimization", "Project Structure", "UI Development", "Videos", "Visual Studio", "XAML"]
+tags_normalized: ["net", "net 10", "net 9", "net maui", "app size optimization", "c", "coding", "cross platform", "design tools", "desktop apps", "live tools", "mobile development", "multi platform development", "performance optimization", "project structure", "ui development", "videos", "visual studio", "xaml"]
 ---
 
-dotnet presents a session on building efficient mobile and desktop applications with Visual Studio and .NET MAUI, focusing on Live tools for development and what's new in recent .NET versions.<!--excerpt_end-->
+dotnet discusses how to efficiently build mobile and desktop applications using Visual Studio and .NET MAUI, focusing on solution structure, live UI tools, and upcoming framework updates.<!--excerpt_end-->
 
 {% youtube MB0I5Hy6Wc8 %}
 
 # Building Mobile and Desktop Apps with Visual Studio and .NET MAUI
 
-Learn how to leverage the productivity features of Visual Studio alongside .NET MAUI to build high-quality, cross-platform mobile and desktop applications.
+Visual Studio provides developers with a rich environment for building cross-platform mobile and desktop applications using .NET MAUI. In this session, you'll learn how to utilize live tools for UI development at both design and run time, enabling you to iterate quickly and preview changes instantly.
 
-## What You'll Learn
+## Key Topics Covered
 
-- **Using Live Tools:** Harness Live tools in Visual Studio during design and run time to rapidly create and modify user interfaces.
-- **Structuring Solutions:** Organize your projects to efficiently target multiple platforms (iOS, Android, macOS, Windows) from a single codebase.
-- **Optimizing for Production:** Strategies to balance application speed and size for optimal performance in production deployments.
-- **What's New in .NET MAUI:** Discover new features in .NET MAUI for .NET 9 and get a preview of upcoming enhancements in .NET 10.
+- **Live Tools in Visual Studio:**
+  - Use design-time and run-time tools for immediate UI feedback.
+  - Modify and preview your app's interface on the fly.
 
-## Useful Resources
+- **Structuring Multi-Platform Solutions:**
+  - Organize your code and resources efficiently to support iOS, Android, Windows, and macOS targets.
+  - Optimize your project for both speed and minimal app size.
 
-- [Visual Studio](http://visualstudio.com)
+- **What’s New and Upcoming in .NET MAUI:**
+  - Discover new features in .NET MAUI for .NET 9.
+  - Get early insights into improvements and additions planned for .NET 10.
+
+## Additional Resources
+
+- [Visual Studio Downloads](http://visualstudio.com)
 - [VS Live On-Demand Sessions](https://aka.ms/vslivehq25)
-- [VSLive Events Schedule](https://aka.ms/VSS/VSLive)
-- [Subscriptions Portal](https://my.visualstudio.com)
+- [VSLive Events](https://aka.ms/VSS/VSLive)
+- [Visual Studio Subscriptions](https://my.visualstudio.com)
+- [.NET Blog](https://aka.ms/dotnet/blog)
+- [.NET Docs](https://learn.microsoft.com/dotnet)
 
-## Connect with .NET
+## Community and Support
 
-- [Official Blog](https://aka.ms/dotnet/blog)
-- [Docs](https://learn.microsoft.com/dotnet)
+- [Twitter](https://aka.ms/dotnet/twitter)
+- [TikTok](https://aka.ms/dotnet/tiktok)
+- [Mastodon](https://aka.ms/dotnet/mastodon)
+- [LinkedIn](https://aka.ms/dotnet/linkedin)
+- [Facebook](https://aka.ms/dotnet/facebook)
 - [Forums](https://aka.ms/dotnet/forums)
-- [Community Q&A](https://aka.ms/dotnet-qa)
-- [Microsoft Learn for .NET](https://aka.ms/learndotnet)
-- Social: [Twitter](https://aka.ms/dotnet/twitter), [TikTok](https://aka.ms/dotnet/tiktok), [Mastodon](https://aka.ms/dotnet/mastodon), [LinkedIn](https://aka.ms/dotnet/linkedin), [Facebook](https://aka.ms/dotnet/facebook)
+- [Q&A](https://aka.ms/dotnet-qa)
+- [Microsoft Learn](https://aka.ms/learndotnet)
 
-## Summary
-
-Enhance your productivity and app quality by mastering the latest in .NET MAUI and Visual Studio. Stay up to date with new features and best practices for modern multi-platform development.
+Stay up-to-date with the latest .NET development practices and leverage powerful Visual Studio features to accelerate your mobile and desktop app projects.

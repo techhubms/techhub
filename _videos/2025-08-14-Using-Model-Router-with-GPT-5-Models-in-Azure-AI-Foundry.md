@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Using Model Router with GPT-5 Models in Azure AI Foundry"
-description: "This episode by Microsoft Developer showcases how to leverage the Model Router in Azure AI Foundry, now enhanced with GPT-5 model support. The walkthrough covers deploying models, accessing and running sample code in Visual Studio Code, and demonstrates how to optimize both performance and costs by choosing the right model for diverse AI tasks. Practical strategies for building intelligent agents, integrating sample projects, and using Azure AI Foundry for smarter request routing are provided."
+description: "This video, presented by Microsoft Developer, demonstrates how to leverage the new Model Router with GPT-5 models in Azure AI Foundry. It covers deploying GPT-5 models, selecting the best model for different AI tasks, integrating with VS Code, and optimizing both performance and costs for intelligent agent development. The episode includes step-by-step walkthroughs, code samples, and practical demonstrations."
 author: "Microsoft Developer"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://www.youtube.com/watch?v=2NL2XpigH0A"
@@ -11,48 +11,41 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-08-14 15:59:58 +00:00
 permalink: "/2025-08-14-Using-Model-Router-with-GPT-5-Models-in-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "AI Development", "AI Optimization", "AI Routing", "Azure", "Azure AI Foundry", "Cloud AI", "Cloud Computing", "Cost Optimization", "Dev", "Development", "GPT 5", "Intelligent Agents", "Microsoft", "Microsoft Azure", "Model Deployment", "Model Router", "Performance Optimization", "Sample Code", "Tech", "Technology", "Videos", "Visual Studio Code"]
-tags_normalized: ["ai", "ai agents", "ai development", "ai optimization", "ai routing", "azure", "azure ai foundry", "cloud ai", "cloud computing", "cost optimization", "dev", "development", "gpt 5", "intelligent agents", "microsoft", "microsoft azure", "model deployment", "model router", "performance optimization", "sample code", "tech", "technology", "videos", "visual studio code"]
+tags: ["AI", "AI Models", "Azure", "Azure AI Foundry", "Cloud AI", "Cloud Computing", "Cost Optimization", "Deployment", "Dev", "Development", "Development Workflow", "GPT 5", "Intelligent Agents", "Microsoft", "Microsoft AI", "Model Router", "Model Selection", "Performance Optimization", "Sample Code", "Tech", "Technology", "Videos", "Visual Studio Code"]
+tags_normalized: ["ai", "ai models", "azure", "azure ai foundry", "cloud ai", "cloud computing", "cost optimization", "deployment", "dev", "development", "development workflow", "gpt 5", "intelligent agents", "microsoft", "microsoft ai", "model router", "model selection", "performance optimization", "sample code", "tech", "technology", "videos", "visual studio code"]
 ---
 
-Microsoft Developer presents an in-depth guide, led by April, on utilizing Azure AI Foundry's Model Router with GPT-5 models, highlighting deployment, sample code execution, and optimizing intelligent agent projects.<!--excerpt_end-->
+Microsoft Developer showcases the Model Router’s integration with GPT-5 models in Azure AI Foundry, providing a hands-on guide to deploying, selecting, and optimizing AI models within developer workflows.<!--excerpt_end-->
 
 {% youtube 2NL2XpigH0A %}
 
-# Model Router + GPT-5 Models in Azure AI Foundry
+# Using Model Router with GPT-5 Models in Azure AI Foundry
 
-Microsoft Developer's latest episode, hosted by April, dives into the enhanced capabilities of the Model Router now supporting GPT-5 models within Azure AI Foundry. This upgrade enables developers to streamline their AI projects through intelligent model selection, improved performance, and cost optimization.
+In this episode, Microsoft Developer's April walks you through the latest advancements in Azure AI Foundry’s Model Router, now supporting GPT-5 models. The session highlights how to leverage the Model Router to select the right foundation model for various AI tasks, demonstrating both the underlying process and practical usage for developers.
 
-## What You'll Learn
+## Key Topics Covered
 
-- **Overview of Model Router:** Introduction and the new capabilities brought by GPT-5 model integration.
-- **How Model Routing Works:** Explanation of routing requests to the most suitable AI model for a given task, maximizing both performance and efficiency.
-- **Step-by-Step Demo:**
-  - **Model Deployment:** How to deploy the latest AI models within Azure AI Foundry.
-  - **Sample Code Access:** Finding and understanding example projects provided by Microsoft.
-  - **VS Code Integration:** Demonstrations of running both basic and multi-turn sample code in Visual Studio Code.
-- **Practical Use Cases:**
-  - Building intelligent agents with optimized model selection
-  - Fine-tuning cost and resource usage
-  - Real-world application integration
+- **Overview of Model Router**: Introduction to its new capabilities with GPT-5 models and its centrality in orchestrating requests among available models within Azure AI Foundry.
+- **Deploying Models**: Step-by-step demo of deploying GPT-5 models in the Azure AI Foundry environment.
+- **Sample Code Walkthrough**: Accessing and running example code inside Visual Studio Code, including both basic and multi-turn conversation scenarios.
+- **Model Selection Strategy**: Discusses criteria for choosing the optimal model per task, optimizing for both performance and cost.
+- **Developer Integration**: Demonstrates how developers can integrate these workflows into their projects for building intelligent agents and other AI-driven solutions.
 
-## Try It Yourself
+## Practical Steps
 
-- Get started at [ai.azure.com](https://ai.azure.com)
-- Learn more about Model Router: [https://aka.ms/insideAIF/model-router](https://aka.ms/insideAIF/model-router)
-- Join the community:
-  - Discord: [https://aka.ms/insideAIF/discord](https://aka.ms/insideAIF/discord)
-  - Forum: [https://aka.ms/insideAIF/forum](https://aka.ms/insideAIF/forum)
+1. **Deploy GPT-5 models** within Azure AI Foundry through the platform interface.
+2. **Access sample code** provided by Microsoft Developer to see real-world integration.
+3. **Run and modify code** in Visual Studio Code to experiment with basic and advanced conversational AI scenarios.
+4. **Utilize the Model Router** to efficiently route incoming requests to the most appropriate model automatically based on task requirements.
+5. **Monitor and optimize** for both performance and operational cost, taking advantage of insights generated during the process.
 
-## Chapters
+## Resources
 
-- **0:00 - 1:12** Intro
-- **1:13 - 2:40** Deploy the model
-- **2:41 - 4:02** Access the sample code
-- **4:03 - 9:06** Run the basic sample code in VS Code
-- **9:07 - 13:15** Run the multi-turn sample code in VS Code
-- **13:16 - 13:46** Outro
+- [Model Router documentation](https://aka.ms/insideAIF/model-router)
+- [Azure AI Foundry portal](https://ai.azure.com)
+- Discord community: https://aka.ms/insideAIF/discord
+- Community forum: https://aka.ms/insideAIF/forum
 
----
+## Conclusion
 
-April's walkthrough provides a practical foundation for developers looking to harness the capabilities of Azure AI Foundry's Model Router and the new GPT-5 models, offering actionable insights for AI-driven solution development.
+This walkthrough equips developers with actionable techniques to deploy, test, and optimize AI solutions using Azure AI Foundry’s latest capabilities, enhancing the process of intelligent agent development.
