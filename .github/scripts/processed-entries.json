@@ -6620,5 +6620,29 @@
     "collection": "posts",
     "canonical_url": "https://devops.com/sonarsource-surfaces-multiple-caveats-when-relying-on-llms-to-write-code/?utm_source=rss&utm_medium=rss&utm_campaign=sonarsource-surfaces-multiple-caveats-when-relying-on-llms-to-write-code",
     "timestamp": "2025-08-15 15:47:48 +00:00"
+  },
+  {
+    "timestamp": "2025-08-15 16:16:54 +00:00",
+    "reason": "Succesfully added: Assigned the DevOps category because the news centers on GitHub Actions, CI/CD workflow security, and policy management (DevOps rules 2, 5, 6). Assigned Security because the update targets supply chain vulnerability mitigation, dependency integrity, and enforcement of security policies (Security rules 1, 4, 5, 6). Did not assign AI or ML as there is no content related to AI tooling or machine learning. Did not assign Coding because the content is administrative and security policy focused rather than about writing code or using programming frameworks. Azure is not directly discussed or implied. Content is detailed, technical, and meets all inclusion requirements.",
+    "canonical_url": "https://github.blog/changelog/2025-08-15-github-actions-policy-now-supports-blocking-and-sha-pinning-actions",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-15 16:17:21 +00:00",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the article focuses on monitoring, observability, and instrumentation practices tailored for DevOps teams, matching the inclusion rules for DevOps (category: 'Team Collaboration/Organization', 'CI/CD and Deployment', 'Monitoring and Operations'). There is no substantive mention or focus on Microsoft technologies, nor does the content address Microsoft-specific AI, Azure, Security, or ML tooling. Hence, only 'DevOps' assigned. No generic exclusion rules applied, as the article is well above minimum length, technical, and in English.",
+    "canonical_url": "https://devops.com/appsignal-adds-opentelemetry-support-to-monitoring-platform/?utm_source=rss&utm_medium=rss&utm_campaign=appsignal-adds-opentelemetry-support-to-monitoring-platform",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-08-15 16:18:02 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content centers on the integration of AI models (OpenAI's GPT-5 and Anthropic's Claude 4.1) into GitHub Copilot (AI rules 1, 2; GitHub Copilot rules 1, 2). Assigned 'Coding' category as multiple sections discuss programming language/tool updates (TypeScript 5.9, Python 3.14), developer tooling (VS Code, MCP), and new releases for developers. Did not include other categories (DevOps, Azure, ML, Security) because the content does not focus primarily on those domains but rather news and updates for developer-centric AI tooling and languages.",
+    "canonical_url": "https://www.youtube.com/watch?v=lhpQBp9I80w",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-08-15 16:18:49 +00:00",
+    "reason": "Succesfully added: Content qualifies for the AI category. It covers Copilot agent development using Microsoft Copilot Studio (a developer/maker tool—AI category rule 1 and rule 3), discusses Azure AI Foundry (AI platform), addresses AI integration in meeting rooms, and explores AI’s role in accessibility and enterprise technology. Copilot Studio is included in the AI category per workflow. While there are significant sections on business productivity, device hardware, and podcasts, no other category inclusion rules are directly satisfied: there is no code, DevOps, ML, Security, or Azure service configuration/deployment content with technical implementation details. Mentions of M365 Copilot are about business productivity, which are explicitly excluded. Community content is well above length threshold and is clearly technical rather than help-seeking or biographical.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-teams-community-blog/empowering-cloud-community-update-september-2025/ba-p/4444233",
+    "collection": "community"
   }
 ]
