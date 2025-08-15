@@ -6644,5 +6644,35 @@
     "reason": "Succesfully added: Content qualifies for the AI category. It covers Copilot agent development using Microsoft Copilot Studio (a developer/maker tool—AI category rule 1 and rule 3), discusses Azure AI Foundry (AI platform), addresses AI integration in meeting rooms, and explores AI’s role in accessibility and enterprise technology. Copilot Studio is included in the AI category per workflow. While there are significant sections on business productivity, device hardware, and podcasts, no other category inclusion rules are directly satisfied: there is no code, DevOps, ML, Security, or Azure service configuration/deployment content with technical implementation details. Mentions of M365 Copilot are about business productivity, which are explicitly excluded. Community content is well above length threshold and is clearly technical rather than help-seeking or biographical.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-teams-community-blog/empowering-cloud-community-update-september-2025/ba-p/4444233",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-08-15 17:14:19 +00:00",
+    "reason": "Succesfully added: Assigned AI category due to extensive focus on Semantic Kernel, Azure AI Foundry, and building AI agents, which matches AI inclusion rules 1, 3, and 4. Assigned Azure category because Azure AI Foundry is discussed and demonstrated (Azure rules 1 and 3). Assigned Coding because agent creation involves hands-on Python development and code samples (Coding rules 1, 4, and 5). No other categories qualified based on the provided material and rules.",
+    "canonical_url": "https://www.youtube.com/shorts/jKViNM42u9M",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-08-15 17:15:11 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the episode focuses on Semantic Kernel, Azure AI Foundry, MCP (Model Context Protocol), and building intelligent agents—all Microsoft AI technologies (AI rule 1, 3, 4). Added 'Azure' because Azure AI Foundry integration is a central component (Azure rule 1 and 3). Included 'Coding' because the content covers Python code and practical plugin development with Semantic Kernel, emphasizing hands-on agent building (Coding rule 1, 2, and 4). No other categories applied as there's no content focused on DevOps, ML (no data science or custom ML engineering), GitHub Copilot, or Security. The decision is based on the description's emphasis on developer tooling, AI platform usage, and Microsoft ecosystem integration.",
+    "canonical_url": "https://www.youtube.com/watch?v=yDy6Y4h-RxI",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-08-15 17:16:07 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the tutorial covers deploying a large language model (GPT-OSS-20B) for inference, using AI inference tools like vLLM and KAITO (AI rules 1 and 4). Assigned Azure because all orchestration (AKS, GPU setup, public endpoint exposure) happens on Microsoft Azure (Azure rules 1, 4, 5). Assigned ML because the content involves running and benchmarking an open-source LLM, with ML engineering and applied data science workflows (ML rules 1, 10, 11). Coding and DevOps categories were not included because the focus is on deployment, inference configuration, ML benchmarking, and cloud AI infrastructure, rather than on application coding or DevOps process specifics.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/deploying-openai-s-first-open-source-model-on-azure-aks-with/ba-p/4444234",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-08-15 17:16:58 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the article extensively covers building AI agents using LLMs and function calling, focusing on Microsoft's AI Toolkit (AI rule 1, 3, and 4). Assigned Azure category because the toolkit integrates with Azure AI Inference SDK and examples feature Azure endpoints and credentials (Azure rule 1 and 4). Assigned Coding because the content includes hands-on code samples, Python code for agent execution, and technical details for tool schema and agent configuration (Coding rule 1 and 2). Did not assign ML as there is no machine learning engineering or data science workflow being implemented. Did not assign Security or DevOps, as those topics are not relevant to this post.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/educator-developer-blog/building-ai-agents-with-ease-function-calling-in-vs-code-ai/ba-p/4442637",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-08-15 17:17:54 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because MCC (Microsoft Connected Cache) is a Microsoft cloud edge technology, closely integrated with Azure and Azure Container Registry (Azure rule 1 and 6). Included DevOps because the content covers setup, configuration, container orchestration, and infrastructure automation using WSL, scheduled tasks, and detailed system validation steps (DevOps rules 5, 6, and 9). The post is technical, focused on Linux integration, containers, and system troubleshooting, and includes in-depth technical logs, meeting quality standards. Not assigned Coding, AI, ML, Security, or GitHub Copilot categories, as there is no code development, no AI/ML functionality, no direct security implementation or concepts, and no mention of Copilot. The content is well within the development/DevOps system integration and operational troubleshooting area, matching inclusion rules.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-connected-cache-for/mcc-phantom-install/m-p/4444201#M108",
+    "collection": "community"
   }
 ]
