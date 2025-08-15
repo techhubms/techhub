@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "2025-07-07 - GitHub Copilot Agent Preview, Azure AI Foundry GA, and Smarter .NET Workflows"
+title: "GitHub Copilot Agent Preview, Azure AI Foundry GA, and Smarter .NET Workflows"
 description: "This week’s tech news spotlights the GitHub Copilot agent’s new automation capabilities, Azure AI Foundry’s public GA and expanded agent support, and major improvements to .NET 10 workflows. Developers gain more control over production AI, smarter automation, and streamlined cloud-native deployments."
 author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->

@@ -18,12 +18,10 @@ function setLogoVisibility() {
     // Check for testing overrides in query string
     const urlParams = new URLSearchParams(window.location.search);
     const xebiaOverride = urlParams.get('xebia') === 'true';
-    const techhubOverride = urlParams.get('techhub') === 'true';
 
     const xebiaLogo = document.getElementById('xebia-logo');
     const xebiaContact = document.getElementById('xebia-contact');
     const githubCopilotLogo = document.getElementById('github-copilot-logo');
-    const localhostLogo = document.getElementById('localhost-logo');
     const techhubLogo = document.getElementById('techhub-logo');
     const techHubAbout = document.getElementById('techhub-about');
 
@@ -32,12 +30,6 @@ function setLogoVisibility() {
         xebiaLogo.style.display = 'inline-block';
         githubCopilotLogo.style.display = 'inline-block';
         xebiaContact.style.display = 'inline-block';
-    } else if (techhubOverride) {
-        techhubLogo.style.display = 'inline-block';
-        techHubAbout.style.display = 'inline-block';
-    } else if (hostname === 'localhost' || hostname === '127.0.0.1') {
-        localhostLogo.style.display = 'inline-block';
-        techHubAbout.style.display = 'inline-block';
     } else {
         techhubLogo.style.display = 'inline-block';
         techHubAbout.style.display = 'inline-block';

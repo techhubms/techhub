@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "ProcessedDate": "2025-08-15 14:29:23",
   "PubDate": "2025-08-13T17:26:04+00:00",
@@ -12,3 +13,19 @@
   "Description": "What’s New You can now add entire repositories to your spaces. Get up and running faster when you’re exploring unfamiliar codebases or need comprehensive context across your project. Key benefits…\n\nThe post [Copilot Spaces supports adding entire repositories](https://github.blog/changelog/2025-08-13-add-repositories-to-spaces) appeared first on [The GitHub Blog](https://github.blog).",
   "Tags": []
 }
+=======
+{
+  "EnhancedContent": "### What’s New\n\nYou can now add entire repositories to your spaces. Get up and running faster when you’re exploring unfamiliar codebases or need comprehensive context across your project.\n\n### Key benefits\n\n- **Quick exploration**: Perfect for when you don’t know which specific files to include.\n- **Cross-cutting features**: Ideal for work that spans multiple files and directories.\n- **One-click setup**: Add everything at once instead of hunting for individual files.\n\n### How to use\n\n- Open your space and click **Add Sources**.\n- Select **Add files and repositories**.\n- Select the repository you want to add.\n- On file selection, click **Add repository**.\n\n### 💡 Pro tip\n\nWhen you add a repository to your space, Copilot will search within it to find relevant content. Therefore, we always recommend adding specific files you know are critical to your work. This helps Copilot prioritize the most relevant context for your conversations.\n\n### Additional Improvements\n\nWe’ve also made it much easier to navigate and manage your Copilot Spaces. Check out the new look and feel today:\n\n- Jump into your spaces faster from the github.com/copilot with fewer clicks.\n- Your spaces now appear as an easy to browse list. Can’t find what you are looking for? Try out the new search.\n- Edit key details like title and description directly from your space.\n- Spaces resources and conversations now live together in the same view with a simple tab switch.\n- Updated icons to improves clarity across the spaces feature set.",
+  "PubDate": "2025-08-13T17:26:04+00:00",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2025-08-13-add-repositories-to-spaces",
+  "FeedName": "The GitHub Blog",
+  "Author": "Allison",
+  "Tags": [],
+  "Description": "What’s New You can now add entire repositories to your spaces. Get up and running faster when you’re exploring unfamiliar codebases or need comprehensive context across your project. Key benefits…\n\nThe post [Copilot Spaces supports adding entire repositories](https://github.blog/changelog/2025-08-13-add-repositories-to-spaces) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2025-08-13 19:03:46",
+  "Title": "Copilot Spaces supports adding entire repositories"
+}
+>>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

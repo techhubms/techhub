@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "ProcessedDate": "2025-08-15 14:36:07",
   "PubDate": "2025-08-15T10:42:19+00:00",
@@ -12,3 +13,19 @@
   "Description": "After upgrading to the official version of Windows 11, both gaming and system performance are significantly smoother than on Windows 10. Especially when loading the story mode of GTA 5, I feel it’s more than twice as fast as on Windows 10. Even website loading speeds have improved significantly, and various software and browsers are now faster, both in terms of opening and running speeds! This system is very visually appealing, and the centered Start menu aligns well with user habits. In the accessibility settings, you can adjust the text size for both the system and software, rather than scaling the entire interface, making it much more comfortable to read.",
   "Tags": []
 }
+=======
+{
+  "Description": "After upgrading to the official version of Windows 11, both gaming and system performance are significantly smoother than on Windows 10. Especially when loading the story mode of GTA 5, I feel it’s more than twice as fast as on Windows 10. Even website loading speeds have improved significantly, and various software and browsers are now faster, both in terms of opening and running speeds! This system is very visually appealing, and the centered Start menu aligns well with user habits. In the accessibility settings, you can adjust the text size for both the system and software, rather than scaling the entire interface, making it much more comfortable to read.",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "PubDate": "2025-08-15T10:42:19+00:00",
+  "Title": "I upgraded my 10th generation i5 to the official version of Windows 11, and it's perfect.",
+  "EnhancedContent": "After upgrading to the official version of Windows 11, both gaming and system performance are significantly smoother than on Windows 10. Especially when loading the story mode of GTA 5, I feel it’s more than twice as fast as on Windows 10. Even website loading speeds have improved significantly, and various software and browsers are now faster, both in terms of opening and running speeds! This system is very visually appealing, and the centered Start menu aligns well with user habits. In the accessibility settings, you can adjust the text size for both the system and software, rather than scaling the entire interface, making it much more comfortable to read.",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2025-08-15 11:08:45",
+  "Tags": [],
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "Author": "YatesGriffin",
+  "OutputDir": "_community",
+  "Link": "https://techcommunity.microsoft.com/t5/windows-11/i-upgraded-my-10th-generation-i5-to-the-official-version-of/m-p/4444131#M29414"
+}
+>>>>>>> f38d706 (Articles from old repo, styling and some other fixes)

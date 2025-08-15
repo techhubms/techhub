@@ -6,9 +6,9 @@
 layout: "home"
 ---
 
-# Tech Hub
+# Welcome
 
-Welcome! Because we know it's hard to stay up-to-date with the fast changing world of IT, here is a website where you'll find blogs, news, videos and more content about technology in the Microsoft space. Constantly updated and pre-screened to only provide useful content.
+Because we know it's hard to stay up-to-date with the fast changing world of IT, here is a website where you'll find blogs, news, videos and more content about technology in the Microsoft space. Constantly updated and pre-screened to only provide useful content.
 
 <h2>Last 4 Roundups</h2>
 <div class="site-roundups">
@@ -16,7 +16,7 @@ Welcome! Because we know it's hard to stay up-to-date with the fast changing wor
     {%- assign sorted_roundups = site.roundups | sort: 'date' | reverse -%}
     {% for roundup in sorted_roundups limit:4 %}
       <li>
-        <a class="roundup-title" href="{{ roundup.url | relative_url }}">{{ roundup.title | escape }}</a>
+        {{ roundup.date | date: "%Y-%m-%d" }}<a class="roundup-title" href="{{ roundup.url | relative_url }}">{{ roundup.title | escape }}</a>
       </li>
     {% endfor %}
   </ul>

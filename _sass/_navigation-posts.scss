@@ -7,11 +7,11 @@
     @extend .nav-grid-base;
 
     @media (min-width: sizes.$navigation-breakpoint) {
-        grid-template-columns: repeat(sizes.$content-grid-desktop, 1fr);
+        grid-template-columns: repeat(sizes.$posts-grid-desktop, 1fr);
     }
 
     @media (max-width: #{sizes.$navigation-breakpoint - 1px}) {
-        grid-template-columns: repeat(sizes.$content-grid-mobile, 1fr);
+        grid-template-columns: repeat(sizes.$posts-grid-mobile, 1fr);
     }
 }
 
