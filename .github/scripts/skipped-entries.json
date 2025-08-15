@@ -5439,5 +5439,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-security/want-to-earn-an-exclusive-security-tech-community-badge-take-our/m-p/4444267#M9770",
     "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: Excluded all categories due to generic exclusion rules. While the post is informative for Teams Phone users, it does not contain technical guidance, development focus, or technical implementation details. The content is primarily a customer advisory about recent usability changes, expressing strong negative sentiment about Microsoft's decision. Additionally, the main focus is on end-user experience and customer service, not developer-oriented solutions. According to Chapter 3 ('Non-Development Microsoft Products', 'Business Strategy and Executive Content', and 'Workplace and Business Focus'), Teams voice product changes that affect user/customer experience but do not center on development or technical configuration are excluded. Further, the negativity in the post is significant and not sufficiently constructive: it labels the change a 'customer service disaster', describes the decision as 'not aligned with industry conventions or customer service best practice', and overall consists mainly of complaint without actionable or constructive guidance for developers, meeting the negativity checklist for exclusion.",
+    "timestamp": "2025-08-15 20:14:33 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-teams/microsoft-is-removing-the-ability-to-dial-0-during-a-personal/m-p/4444271#M144078"
   }
 ]
