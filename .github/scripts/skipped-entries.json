@@ -5445,5 +5445,11 @@
     "timestamp": "2025-08-15 20:14:33 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-teams/microsoft-is-removing-the-ability-to-dial-0-during-a-personal/m-p/4444271#M144078"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/SSGVEx8IEd4",
+    "timestamp": "2025-08-15 21:12:45 +00:00",
+    "reason": "No categories found: No categories assigned because the content field is null, which means there is no substantive technical content to evaluate according to the processing rules. Additionally, with just a URL in the description, there is insufficient context to determine the relevance to any Microsoft technology category. Generic exclusion rule (content quality exclusion) applies when content is missing or empty."
   }
 ]

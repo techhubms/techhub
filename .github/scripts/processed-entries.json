@@ -6692,5 +6692,11 @@
     "timestamp": "2025-08-15 20:14:16 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=tw8bnpQs0lY"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=Mz5iSGA6L4g",
+    "timestamp": "2025-08-15 21:12:32 +00:00",
+    "reason": "Succesfully added: Assigned AI category because MCP is described as a protocol for agent-ready APIs relevant to AI development and supported by Azure AI Foundry (AI rule 1, 3, 4, and 6). Assigned Azure category due to explicit Azure AI Foundry and Foundry Agent Service integrations (Azure rule 1). Assigned Coding because the tooling is integrated into developer IDEs (Visual Studio and VS Code), intended for code development (Coding rule 5). The content is technical, English, and focused on development—not productivity or business end-user features—meeting all inclusion requirements and not triggering any generic exclusion rule."
   }
 ]
