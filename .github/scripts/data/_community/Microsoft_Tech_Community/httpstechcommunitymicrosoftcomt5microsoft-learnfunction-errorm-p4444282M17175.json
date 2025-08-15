@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "=SEARCH(\".\",\"a…a\")   gives me an error whereas the correct answer should be 2\n\nIts in one excel cell",
+  "PubDate": "2025-08-15T20:45:11+00:00",
+  "Link": "https://techcommunity.microsoft.com/t5/microsoft-learn/function-error/m-p/4444282#M17175",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "FeedName": "Microsoft Tech Community",
+  "Description": "=SEARCH(\".\",\"a…a\") gives me an error whereas the correct answer should be 2\n\nIts in one excel cell",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "Title": "Function Error",
+  "OutputDir": "_community",
+  "Author": "hbeer444",
+  "ProcessedDate": "2025-08-15 22:13:38",
+  "Tags": []
+}

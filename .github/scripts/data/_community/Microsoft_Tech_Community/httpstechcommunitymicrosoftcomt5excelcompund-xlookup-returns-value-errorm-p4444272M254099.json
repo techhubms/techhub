@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "=XLOOKUP(I$7,'[Sales Data by Month.xlsx]Sheet1'!$1:$1,'[Sales Data by Month.xlsx]Sheet1'!$2:$2)\n\n=XLOOKUP($A8,'[Sales Data by Month.xlsx]Sheet1'!$A:$A,'[Sales Data by Month.xlsx]Sheet1'!$U:$U)\n\nBoth of the above work so why doesn't a compound XLOOKUP like below work? I get a #VALUE error on the second XLOOKUP.\n\n=XLOOKUP($A8,'[Sales Data by Month.xlsx]Sheet1'!$A:$A,XLOOKUP(I$7,'[Sales Data by Month.xlsx]Sheet1'!$1:$1,'[Sales Data by Month.xlsx]Sheet1'!$R$2:$AF$64))",
+  "PubDate": "2025-08-15T19:26:18+00:00",
+  "Link": "https://techcommunity.microsoft.com/t5/excel/compund-xlookup-returns-value-error/m-p/4444272#M254099",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "FeedName": "Microsoft Tech Community",
+  "Description": "=XLOOKUP(I$7,'[Sales Data by Month.xlsx]Sheet1'!$1:$1,'[Sales Data by Month.xlsx]Sheet1'!$2:$2)\n\n=XLOOKUP($A8,'[Sales Data by Month.xlsx]Sheet1'!$A:$A,'[Sales Data by Month.xlsx]Sheet1'!$U:$U)\n\nBoth of the above work so why doesn't a compound XLOOKUP like below work? I get a #VALUE error on the second XLOOKUP.\n\n=XLOOKUP($A8,'[Sales Data by Month.xlsx]Sheet1'!$A:$A,XLOOKUP(I$7,'[Sales Data by Month.xlsx]Sheet1'!$1:$1,'[Sales Data by Month.xlsx]Sheet1'!$R$2:$AF$64))",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "Title": "Compund XLOOKUP returns #VALUE error",
+  "OutputDir": "_community",
+  "Author": "bracurrie",
+  "ProcessedDate": "2025-08-15 22:13:38",
+  "Tags": []
+}
