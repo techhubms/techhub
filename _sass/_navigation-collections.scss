@@ -1,24 +1,20 @@
-@use "colors";
-@use "sizes";
-@use "navigation";
-
 // Collections grid (Section index - News, Videos, Community, etc.)
 .navigation-collections-grid {
     @extend .nav-grid-base;
     
-    @media (min-width: sizes.$navigation-breakpoint) {
-        grid-template-columns: repeat(sizes.$collections-grid-desktop, 1fr);
+    @media (min-width: $navigation-breakpoint) {
+        grid-template-columns: repeat($collections-grid-desktop, 1fr);
     }
     
-    @media (max-width: #{sizes.$navigation-breakpoint - 1px}) {
-        grid-template-columns: repeat(sizes.$collections-grid-mobile, 1fr);
+    @media (max-width: #{$navigation-breakpoint - 1px}) {
+        grid-template-columns: repeat($collections-grid-mobile, 1fr);
     }
 }
 
 .navigation-collection-square {
     @extend .nav-square-base;
 
-    background: rgba(colors.$medium-blue, 0.10);
+    background: rgba($medium-blue, 0.10);
 
     // Visual styling for content
     .navigation-collection-content {
@@ -30,11 +26,11 @@
     @media (hover: hover) {
         &:hover {
             // Visual styling on hover (moved from base class)
-            background: rgba(colors.$medium-blue, 0.18);
+            background: rgba($medium-blue, 0.18);
         }
     }
 
-    @media (max-width: sizes.$on-mobile) {
+    @media (max-width: $on-mobile) {
         will-change: auto;
     }
 }

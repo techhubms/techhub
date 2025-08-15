@@ -1,17 +1,13 @@
-@use "colors";
-@use "sizes";
-@use "navigation";
-
 // Posts grid (Individual posts/articles for navigation)
 .navigation-posts-grid {
     @extend .nav-grid-base;
 
-    @media (min-width: sizes.$navigation-breakpoint) {
-        grid-template-columns: repeat(sizes.$posts-grid-desktop, 1fr);
+    @media (min-width: $navigation-breakpoint) {
+        grid-template-columns: repeat($posts-grid-desktop, 1fr);
     }
 
-    @media (max-width: #{sizes.$navigation-breakpoint - 1px}) {
-        grid-template-columns: repeat(sizes.$posts-grid-mobile, 1fr);
+    @media (max-width: #{$navigation-breakpoint - 1px}) {
+        grid-template-columns: repeat($posts-grid-mobile, 1fr);
     }
 }
 
@@ -19,18 +15,18 @@
     @extend .nav-square-base;
 
     // Visual styling (using base navigation pattern)
-    background: rgba(colors.$medium-blue, 0.10);
+    background: rgba($medium-blue, 0.10);
 
     .navigation-post-title {
         @extend .nav-title-base;
         // Post-specific title styling
-        color: colors.$bright-blue;
+        color: $bright-blue;
         font-size: 16px;
         font-weight: normal;        
 
         // Visited state for posts
         .navigation-post-square:visited & {
-            color: colors.$bright-purple;
+            color: $bright-purple;
         }
     }
 
@@ -76,12 +72,12 @@
     @media (hover: hover) {
         &:hover {
             // Visual styling on hover (consistent with collections)
-            background: rgba(colors.$medium-blue, 0.18);
-            box-shadow: 0 8px 25px rgba(colors.$medium-blue, 0.18);
+            background: rgba($medium-blue, 0.18);
+            box-shadow: 0 8px 25px rgba($medium-blue, 0.18);
         }
     }
 
-    @media (max-width: sizes.$on-mobile) {
+    @media (max-width: $on-mobile) {
         will-change: auto;
     }
 }

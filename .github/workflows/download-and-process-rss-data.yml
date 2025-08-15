@@ -165,26 +165,26 @@ jobs:
           
           echo "✅ RSS branch sync completed using selective backup/recreate strategy"
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: |
-            spec/javascript/package-lock.json
-            spec/e2e/package-lock.json
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '20'
+      #     cache: 'npm'
+      #     cache-dependency-path: |
+      #       spec/javascript/package-lock.json
+      #       spec/e2e/package-lock.json
 
-      - name: Install JavaScript dependencies
-        run: |
-          echo "Installing E2E test dependencies for content fetching..."
-          cd spec/e2e
-          npm ci
+      # - name: Install JavaScript dependencies
+      #   run: |
+      #     echo "Installing E2E test dependencies for content fetching..."
+      #     cd spec/e2e
+      #     npm ci
 
-      - name: Install Playwright browsers
-        run: |
-          cd spec/e2e
-          npx playwright install-deps
-          npx playwright install
+      # - name: Install Playwright browsers
+      #   run: |
+      #     cd spec/e2e
+      #     npx playwright install-deps
+      #     npx playwright install
 
       - name: Download RSS feeds
         id: download-rss

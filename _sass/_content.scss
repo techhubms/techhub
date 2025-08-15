@@ -1,6 +1,3 @@
-@use "colors";
-@use "sizes";
-
 h1, h2, h3, h4, h5, h6 {
     line-height: unset !important;
 }
@@ -50,10 +47,10 @@ iframe.youtube {
 
 pre.highlight,
 code {
-    background-color: rgba(colors.$bright-purple, 0.1) !important;
-    border: 1px solid rgba(colors.$bright-purple, 0.2);
+    background-color: rgba($bright-purple, 0.1) !important;
+    border: 1px solid rgba($bright-purple, 0.2);
     border-radius: 8px;
-    color: colors.$light-gray;
+    color: $light-gray;
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: pre-wrap;
@@ -98,8 +95,8 @@ pre.highlight code {
             width: 100%;
             height: 1px;
             background: linear-gradient(90deg,
-                    rgba(colors.$bright-purple, 0.3) 0%,
-                    rgba(colors.$bright-purple, 0.1) 70%,
+                    rgba($bright-purple, 0.3) 0%,
+                    rgba($bright-purple, 0.1) 70%,
                     transparent 100%);
             margin-top: 0px;
             margin-bottom: 0px;
@@ -113,8 +110,8 @@ pre.highlight code {
     h6 {
         &::after {
             background: linear-gradient(90deg,
-                    rgba(colors.$bright-purple, 0.2) 0%,
-                    rgba(colors.$bright-purple, 0.05) 40%,
+                    rgba($bright-purple, 0.2) 0%,
+                    rgba($bright-purple, 0.05) 40%,
                     transparent 50%);
             margin-top: 0px;
             margin-bottom: 0px;
@@ -147,7 +144,7 @@ pre.highlight code {
         }
 
         a {
-            color: colors.$bright-purple;
+            color: $bright-purple;
             text-decoration: none;
 
             &:hover {
@@ -157,7 +154,7 @@ pre.highlight code {
     }
 
     // Mobile responsive: stack image and content vertically
-    @media (max-width: sizes.$on-mobile) {
+    @media (max-width: $on-mobile) {
         flex-direction: column;
         align-items: center;
         text-align: center;

@@ -2,17 +2,19 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
  
-@use "../_sass/sizes";
+@import "sizes";
+@import "colors";
 
-@use "minima";
+@import "minima";
 
-@use "../_sass/base";
-@use "../_sass/header";
-@use "../_sass/subheader";
-@use "../_sass/filters";
-@use "../_sass/navigation-sections";
-@use "../_sass/navigation-collections";
-@use "../_sass/navigation-posts";
-@use "../_sass/content";
-@use "../_sass/features";
-@use "../_sass/footer";
+@import "base";
+@import "header";
+@import "subheader";
+@import "filters";
+@import "navigation";
+@import "navigation-sections";
+@import "navigation-collections";
+@import "navigation-posts";
+@import "content";
+@import "features";
+@import "footer";
