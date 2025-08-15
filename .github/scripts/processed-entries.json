@@ -6686,5 +6686,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-security-experts-blog/welcome-to-the-microsoft-defender-experts-ninja-hub/ba-p/4442210",
     "reason": "Succesfully added: Assigned Security category because the entire content focuses on Microsoft Defender Experts (for XDR and Threat Hunting), which are managed security solutions in the Microsoft ecosystem (Security rule 1). Azure and other categories are not warranted as there is no deep technical implementation about coding, DevOps, ML, or Azure management; the resources and documentation are purely centered on security operations, security monitoring, and SOC best practices. There are no generic exclusion criteria present: content is English, technical, and not biographical, business, or negative in focus."
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content centers on GPT-5 integration, a Microsoft-supported AI technology, demonstrated within Microsoft developer tools (AI rules 1, 4, and 5). Assigned the Coding category because the session covers practical code samples and demos across languages like Python, .NET, and JavaScript (Coding rules 1 and 4). There is no evidence of operations warranting additional categories such as Azure, DevOps, ML, Security, or GitHub Copilot. The content description provided sufficient information for this assessment despite the absence of full content text.",
+    "timestamp": "2025-08-15 20:14:16 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=tw8bnpQs0lY"
   }
 ]
