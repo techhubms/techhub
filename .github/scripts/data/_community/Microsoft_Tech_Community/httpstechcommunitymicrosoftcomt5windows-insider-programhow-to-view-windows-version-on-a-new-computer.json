@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-08-16 09:16:12",
+  "PubDate": "2025-08-16T09:00:19+00:00",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Link": "https://techcommunity.microsoft.com/t5/windows-insider-program/how-to-view-windows-version-on-a-new-computer/m-p/4444531#M37364",
+  "EnhancedContent": "This is an unusual one for me. I bought my daughter a new HP laptop and after purchase I was looking at the specs and it said \"Windows 11 Pro S\". There's no Windows 11 Pro S, so I believe there was a typo in the description on Amazon. So here's my question. How can my daughter verify the version of Windows before creating an account and logging in? The reason I ask is because if it turns out the computer is Windows 11 Home S then she will not be able to use it for work and she has to return it. That's the reason I don't want her to log in and activate the system before verifying the version. At the start of the activation and before logging into a Microsoft account can you press Windows R and run winver? If you need more information, please ask. The laptop will be delivered to tomorrow (July 26) so a quick reply would be appreciated. Thanks!",
+  "FeedName": "Microsoft Tech Community",
+  "Tags": [],
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "OutputDir": "_community",
+  "Author": "Wokhiosk",
+  "Title": "How to view Windows version on a new computer",
+  "Description": "This is an unusual one for me. I bought my daughter a new HP laptop and after purchase I was looking at the specs and it said \"Windows 11 Pro S\". There's no Windows 11 Pro S, so I believe there was a typo in the description on Amazon. So here's my question. How can my daughter verify the version of Windows before creating an account and logging in? The reason I ask is because if it turns out the computer is Windows 11 Home S then she will not be able to use it for work and she has to return it. That's the reason I don't want her to log in and activate the system before verifying the version. At the start of the activation and before logging into a Microsoft account can you press Windows R and run winver? If you need more information, please ask. The laptop will be delivered to tomorrow (July 26) so a quick reply would be appreciated. Thanks!"
+}
