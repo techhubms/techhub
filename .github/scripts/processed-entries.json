@@ -6722,5 +6722,23 @@
     "timestamp": "2025-08-16 02:42:16 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Assigned AI category because the entire content centers around building applications powered by Azure AI Foundry agents and Model Context Protocol integration, matching AI inclusion rules 1 and 4. Assigned Azure because Azure App Service, Azure AI Foundry, and related deployment tools (Azure Developer CLI) are fundamental to the solution, meeting Azure inclusion rules 1 and 4. Did NOT assign Coding because the focus is on integration, deployment, and configuration, with no programming language or code structure details outside of DevOps/deployment scripts. Did NOT assign DevOps as the content is not focused on CI/CD, pipelines, or methodology, but on cloud deployment and AI agent integration. Did NOT assign ML as the content is about AI agent deployment/usage, not data science or custom ML engineering. Security and GitHub Copilot are not relevant to the main content."
+  },
+  {
+    "canonical_url": "https://dellenny.com/copilot-studio-vs-power-virtual-agents-whats-changed/",
+    "timestamp": "2025-08-16 09:16:51 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the AI category because the article centrally discusses Microsoft Copilot Studio—a developer/maker-focused conversational AI tool built on generative AI, now succeeding Power Virtual Agents (see AI Rule 1 and 4). The content describes platform features, integration, NLU improvements, and agent automation in technical depth, targeting makers and solution builders. No Coding, DevOps, Azure, ML, or Security categories apply as the article is platform-focused, not discussing coding practices, deployment pipelines, data science workflows, or security implementation. The article does not fit any generic exclusion criteria—it's technical, in English, not biographical or sales-oriented, and does not feature non-development Copilot products."
+  },
+  {
+    "canonical_url": "https://dellenny.com/no-code-ai-how-non-developers-can-build-smart-chatbots-with-copilot-studio/",
+    "timestamp": "2025-08-16 09:17:12 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the AI category because Copilot Studio is a Microsoft-branded, no-code AI development platform (AI inclusion rule 1). The content is focused on enabling chatbot creation using Microsoft AI services, clearly matching the AI category. Copilot Studio is a developer/maker tool and not a business productivity Copilot; therefore, it qualifies per rules for Copilot Studio. No other categories were assigned since the content is centered on AI tool usage by non-developers rather than coding, DevOps, or ML engineering."
+  },
+  {
+    "canonical_url": "https://dellenny.com/top-5-use-cases-for-copilot-studio-in-your-business/",
+    "timestamp": "2025-08-16 09:17:33 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the AI category because the content centers on Microsoft Copilot Studio—a Microsoft AI-powered platform for building custom copilots (AI category rule 1 and 4). No Coding, DevOps, Azure, ML, Security, or GitHub Copilot categories apply: the content does not cover software development, infrastructure, security, ML platform topics, or GitHub Copilot specifically. The main focus is on using Microsoft's AI maker tool (Copilot Studio) to automate and enhance business processes, aligning directly with the AI category inclusion rules and specifically developer/maker tools use cases."
   }
 ]
