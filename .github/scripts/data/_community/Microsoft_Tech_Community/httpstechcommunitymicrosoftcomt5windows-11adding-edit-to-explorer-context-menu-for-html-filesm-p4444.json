@@ -1,0 +1,14 @@
+{
+  "Title": "Adding Edit to explorer context menu for html files?",
+  "Author": "Cornelius",
+  "FeedName": "Microsoft Tech Community",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "Link": "https://techcommunity.microsoft.com/t5/windows-11/adding-edit-to-explorer-context-menu-for-html-files/m-p/4444330#M29461",
+  "Tags": [],
+  "OutputDir": "_community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "ProcessedDate": "2025-08-16 02:41:27",
+  "EnhancedContent": "I have a new Win11 laptop and after installing my go-to html editor, the option to edit a html file with that editor was not added into the context menu - all that is offered is notepad. In previous versions of windows I could use 'Default Programs Editor' to add the ability to 'Edit\" in the context menu for html files and set it to my preferred html editor, however it no longer seems to work with Win11. Can anyone suggest an alternative way to change the \"Edit\" in the context menu for html files from notepad to something else?\n\nI've already set the context menu to display as it would with Win10 and not the abbreviated Win11 version. I'm running the latest version of Win11 Pro.",
+  "PubDate": "2025-08-16T01:55:29+00:00",
+  "Description": "I have a new Win11 laptop and after installing my go-to html editor, the option to edit a html file with that editor was not added into the context menu - all that is offered is notepad. In previous versions of windows I could use 'Default Programs Editor' to add the ability to 'Edit\" in the context menu for html files and set it to my preferred html editor, however it no longer seems to work with Win11. Can anyone suggest an alternative way to change the \"Edit\" in the context menu for html files from notepad to something else?\n\nI've already set the context menu to display as it would with Win10 and not the abbreviated Win11 version. I'm running the latest version of Win11 Pro."
+}

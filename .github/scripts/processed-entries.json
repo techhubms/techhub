@@ -6716,5 +6716,11 @@
     "reason": "Succesfully added: Assigned the AI and GitHub Copilot categories because the content is specifically about a developer feature (Copilot) integrated into GitHub's workflow for writing pull request descriptions (AI rules 1 and 2, and GitHub Copilot rule 1). The feature uses AI to generate text, which fits both categories. No other categories apply, as the post is not about coding, DevOps, Azure, ML, or Security. There are no generic exclusion rules triggered, as the post is a technical news announcement for developers/users of Copilot.",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-08-15-deprecating-copilot-text-completion-for-pull-request-descriptions"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/supercharge-your-app-service-apps-with-ai-foundry-agents/ba-p/4444310",
+    "timestamp": "2025-08-16 02:42:16 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because the entire content centers around building applications powered by Azure AI Foundry agents and Model Context Protocol integration, matching AI inclusion rules 1 and 4. Assigned Azure because Azure App Service, Azure AI Foundry, and related deployment tools (Azure Developer CLI) are fundamental to the solution, meeting Azure inclusion rules 1 and 4. Did NOT assign Coding because the focus is on integration, deployment, and configuration, with no programming language or code structure details outside of DevOps/deployment scripts. Did NOT assign DevOps as the content is not focused on CI/CD, pipelines, or methodology, but on cloud deployment and AI agent integration. Did NOT assign ML as the content is about AI agent deployment/usage, not data science or custom ML engineering. Security and GitHub Copilot are not relevant to the main content."
   }
 ]
