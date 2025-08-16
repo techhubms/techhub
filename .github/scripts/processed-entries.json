@@ -6758,5 +6758,11 @@
     "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories. The content specifically discusses the introduction of OpenAI's GPT-5 model within GitHub Copilot, a developer tool (AI rule 1, GitHub Copilot rules 1 and 2). The description includes information on new coding abilities and how to enable GPT-5 for Copilot users, clearly framing this as a technical update for developers. No generic exclusion rules apply; the video is not about business productivity tools like Microsoft 365 Copilot or Bing Chat but developer-focused AI tooling.",
     "timestamp": "2025-08-16 14:11:38 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/unlocking-the-power-of-ai-with-azure-cognitive-services/",
+    "timestamp": "2025-08-16 19:10:12 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the primary topic is Microsoft's Azure Cognitive Services, which consists of pre-built AI services (AI Inclusion Rule 1 and 5). Assigned the 'Azure' category as these services are exclusive to Microsoft's Azure platform and integration with other Azure tools is discussed (Azure Inclusion Rule 1 and 4). Did not assign Coding, ML, DevOps, Security, or GitHub Copilot because the content does not cover custom programming/development details, machine learning concepts, DevOps processes, security implementation, or GitHub Copilot features. The focus is on high-level product usage and capabilities for integrating AI, aligning with both 'AI' and 'Azure' categories."
   }
 ]
