@@ -6752,5 +6752,11 @@
     "canonical_url": "https://pagelsr.github.io/CooknWithCopilot/blog/speed-up-api-integration.html",
     "timestamp": "2025-08-16 13:22:34 +00:00",
     "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the content centers on using Copilot—a developer-focused AI tool—for coding tasks related to API integration (AI rules 2, 4; GitHub Copilot rules 1-4). Coding is included because the main focus is on generating and refining code for API calls using JavaScript, involving hands-on programming practices (Coding rules 1, 4, 5). Content is technical throughout, targeting code-writing for developers using Copilot. No other categories apply as there is no DevOps, Azure, ML, or Security focused content."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/5nffupc2peM",
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories. The content specifically discusses the introduction of OpenAI's GPT-5 model within GitHub Copilot, a developer tool (AI rule 1, GitHub Copilot rules 1 and 2). The description includes information on new coding abilities and how to enable GPT-5 for Copilot users, clearly framing this as a technical update for developers. No generic exclusion rules apply; the video is not about business productivity tools like Microsoft 365 Copilot or Bing Chat but developer-focused AI tooling.",
+    "timestamp": "2025-08-16 14:11:38 +00:00",
+    "collection": "videos"
   }
 ]
