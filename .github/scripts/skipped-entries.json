@@ -5985,5 +5985,23 @@
     "collection": "community",
     "timestamp": "2025-08-16 12:26:11 +00:00",
     "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-08-16 16:13:59 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/persian-font-rendering-issue-in-word-for-macos-b-nazanin-not/m-p/4444636#M57907",
+    "reason": "No categories found: No categories were assigned because the content is a community help-seeking post mainly asking about a persistent Persian font rendering issue in Microsoft Word for macOS. According to the generic exclusion rules, 'Question-Only Content'—community content that primarily seeks help or asks for a solution without providing substantive technical guidance or implementation details—must be excluded regardless of how technical the subject is. The post does not go into technical implementation, development, or solution-building with Microsoft technologies; it only describes the problem and asks for Microsoft's assistance or guidance, fitting the question-only exclusion criteria."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/mastering-snap-layouts-and-snap-groups-in-windows-11/",
+    "timestamp": "2025-08-16 19:09:50 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is focused on end-user productivity features of Windows 11 (Snap Layouts and Snap Groups) rather than software development, engineering, or technical implementation. This is excluded under the 'Non-Development Microsoft Products' generic exclusion rule. The post explains how to use a Windows operating system feature for general business or productivity purposes, not for coding, DevOps, security, AI, or other technical development topics per the inclusion rules."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/windows-11-setting-up-virtual-desktops-for-better-multitasking/",
+    "timestamp": "2025-08-16 19:10:25 +00:00",
+    "reason": "No categories found: No categories assigned. The content is a user-oriented tutorial focused on Windows 11's Virtual Desktops feature for better multitasking and organization. It describes how to configure and use virtual desktops, customize workspace, and boost productivity, but does not reference any Microsoft developer tool, programming, coding, DevOps, Azure/cloud, AI/ML technology, or security/identity service. Per 'Generic Exclusion Rules', content centered on general end-user features or productivity workflows in Microsoft products (such as Windows or Office UI features) is excluded unless the focus is on development, technical implementation, or advanced configuration (which is not the case here)."
   }
 ]
