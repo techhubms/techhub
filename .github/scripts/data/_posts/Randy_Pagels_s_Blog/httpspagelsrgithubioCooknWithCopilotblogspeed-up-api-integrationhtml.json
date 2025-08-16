@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "# Speed Up API Integration with GitHub Copilot\n\n**Usage:** Connecting your application to an API often means jumping between docs, writing boilerplate, and testing requests until they work. With GitHub Copilot, you can skip a lot of the overhead and focus on the part that matters — making your app actually do something useful.\n\n**ProTip:** Pair Copilot’s suggestions with your own knowledge of the API docs. You’ll catch edge cases while Copilot speeds through the setup.\n\n## Try This Approach\n\nInstead of manually setting up every call, you can prompt Copilot like this:\n\n``` Write a function in JavaScript that calls the OpenWeatherMap API, fetches the current temperature for a given city, and returns it in Celsius. ```\n\nCopilot will generate the fetch logic, handle query parameters, and return structured results. From there, you can refine the code with follow-up prompts:\n\n- ```\n“Add error handling if the city is not found.” ```\n- ```\n“Update the function to use async/await instead of promises.” ```\n- ```\n“Return the response as a formatted string, not just JSON.” ```\n\n## Quick Takeaway\n\nBy iterating this way, you get working API code much faster while still keeping full control over the details.",
+  "Tags": [],
+  "OutputDir": "_posts",
+  "FeedName": "Randy Pagels's Blog",
+  "Link": "https://pagelsr.github.io/CooknWithCopilot/blog/speed-up-api-integration.html",
+  "Description": "Skip boilerplate and get working API calls faster with Copilot, while keeping full control over the details.",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "FeedUrl": "https://pagelsr.github.io/CooknWithCopilot/rss.xml",
+  "ProcessedDate": "2025-08-16 13:21:43",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "PubDate": "2025-08-15T00:00:00+00:00",
+  "Title": "Speed Up API Integration with GitHub Copilot"
+}

@@ -6746,5 +6746,11 @@
     "collection": "community",
     "timestamp": "2025-08-16 12:26:10 +00:00",
     "reason": "Succesfully added: Assigned 'AI' category due to featured sessions on Agentic AI with Semantic Kernel, Azure AI, and Power Platform AI Builder—each focusing on Microsoft AI services and frameworks (AI rules 1, 3, 4). Assigned 'Azure' because several sessions (Azure networking, Azure AI) focus on Azure services (Azure rule 1). Assigned 'Security' for sessions on networking protection, Sentinel triage automation, and data security with M365 Copilot—security tooling and implementation using Microsoft technologies (Security rules 1, 2, 7). Did not assign 'GitHub Copilot' as none of the sessions specify GitHub Copilot (despite general mention of 'Copilot', which appears to refer to security/business products). 'Coding', 'DevOps', and 'ML' categories were not assigned as the core session topics emphasize Azure, AI, and security solutions over explicit code-centric, DevOps, or ML engineering detail."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://pagelsr.github.io/CooknWithCopilot/blog/speed-up-api-integration.html",
+    "timestamp": "2025-08-16 13:22:34 +00:00",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the content centers on using Copilot—a developer-focused AI tool—for coding tasks related to API integration (AI rules 2, 4; GitHub Copilot rules 1-4). Coding is included because the main focus is on generating and refining code for API calls using JavaScript, involving hands-on programming practices (Coding rules 1, 4, 5). Content is technical throughout, targeting code-writing for developers using Copilot. No other categories apply as there is no DevOps, Azure, ML, or Security focused content."
   }
 ]
