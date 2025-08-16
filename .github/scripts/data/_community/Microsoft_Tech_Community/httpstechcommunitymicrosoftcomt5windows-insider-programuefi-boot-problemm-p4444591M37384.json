@@ -1,0 +1,14 @@
+{
+  "Tags": [],
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "OutputDir": "_community",
+  "EnhancedContent": "I'm not sure where to go for help. Microsoft points at ASUS (motherboard/BIOS) and ASUS points at MS. I am running win 11 with all updates applied and have the latest BIOS (Z490 chipset). If I am running and then restart, everything works fine. If I shutdown and immediately start, it also works (fast boot is on). If I shutdown and then kill the power for a few seconds before starting or if I do something to force a full shutdown, it will give a blue screen saying the BCD is screwed up. I can insert a win 11 USB and choose to repair my computer using automatic repair, it says nothing changed, but a restart will then boot. If I then do a full shutdown again, it is busted again.",
+  "Link": "https://techcommunity.microsoft.com/t5/windows-insider-program/uefi-boot-problem/m-p/4444591#M37384",
+  "PubDate": "2025-08-16T10:13:22+00:00",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2025-08-16 12:25:15",
+  "Title": "UEFI boot problem",
+  "Description": "![]() I'm not sure where to go for help. Microsoft points at ASUS (motherboard/BIOS) and ASUS points at MS. I am running win 11 with all updates applied and have the latest BIOS (Z490 chipset). If I am running and then restart, everything works fine. If I shutdown and immediately start, it also works (fast boot is on). If I shutdown and then kill the power for a few seconds before starting or if I do something to force a full shutdown, it will give a blue screen saying the BCD is screwed up. I can insert a win 11 USB and choose to repair my computer using automatic repair, it says nothing changed, but a restart will then boot. If I then do a full shutdown again, it is busted again.",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "Author": "Felixsyu"
+}

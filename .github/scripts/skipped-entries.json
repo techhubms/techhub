@@ -5793,5 +5793,197 @@
     "timestamp": "2025-08-16 09:17:44 +00:00",
     "collection": "community",
     "reason": "Insufficient content length"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/recording-videos-using-microsoft-stream/m-p/4444547#M57906",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:21 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/how-to-delete-the-update-history-in-windows-11/m-p/4444589#M29566",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:21 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/no-sound-from-the-microphone-on-a-windows-computer/m-p/4444557#M29551",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:21 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/the-newly-installed-computer-cannot-use-bluetooth/m-p/4444558#M29552",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:21 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/the-startup-pop-up-window-cannot-log-in-to-your-account/m-p/4444586#M29565",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:21 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/unable-to-download-windows-system-language-pack/m-p/4444582#M29563",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:21 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/upgraded-to-windows-11-and-cannot-revert-back-to-windows-10/m-p/4444585#M29564",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:21 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-bluetooth-headphones-are-connected-but-there-is-no/m-p/4444559#M29553",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:22 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/a-volute-extension/m-p/4444588#M37382",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:22 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/a-way-to-get-rid-of-desktop-ini-from-desktop-folder-in-win11/m-p/4444583#M37379",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:22 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/cant-install-new-windows-os-keeps-reverting-after-restart/m-p/4444569#M37375",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:22 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/is-windows-11-a-gaming-application/m-p/4444571#M37377",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:22 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/pc-is-crashing-unexpectedly-and-the-bios-load-time/m-p/4444584#M37380",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:22 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/reverting-of-windows-background-to-previous-picture/m-p/4444587#M37381",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:22 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/stop-searchhost-exe-from-running/m-p/4444561#M37368",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:22 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/useless-quot-search-quot-in-windows-computer/m-p/4444566#M37372",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:22 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/what-do-you-do-with-the-cookie-banner/m-p/4444568#M37374",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:22 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/windows-storage-pool-killed-my-hdd/m-p/4444570#M37376",
+    "reason": "No categories found: Content excluded due to the generic exclusion rule for community content length. The main explanatory text (after excluding code blocks, images, and link lists) is under 200 words. According to Chapter 3, community content requires a minimum of 200 words of meaningful, explanatory text. Additionally, the content does not demonstrate technical depth, educational value, or specific Microsoft technology implementation that would qualify under the category inclusion rules. As such, no categories were assigned.",
+    "timestamp": "2025-08-16 10:15:35 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-management/microsoft-lens-the-ultimate-pdf-scanner-mobile-app/m-p/4444549#M857",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:35 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-management/unlocking-productivity-with-the-microsoft-remote-desktop-mobile/m-p/4444548#M856",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 10:15:36 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 11:13:34 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/faster-or-slower/m-p/4444598#M37390"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 11:13:34 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/how-to-add-trusted-devices-to-add-apps/m-p/4444596#M37388"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 11:13:34 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/one-off-word-or-office-software/m-p/4444595#M37387"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 11:13:34 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/screen-shot-modification/m-p/4444593#M37386"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 11:13:34 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/start-button-on-left-and-incons-in-center/m-p/4444597#M37389"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-16 11:13:34 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/uefi-boot-problem/m-p/4444591#M37384"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/A-W2IKWBXsE",
+    "collection": "videos",
+    "timestamp": "2025-08-16 12:25:46 +00:00",
+    "reason": "No categories found: Content excluded because the 'content' field is null and the 'description' field is empty. There is no substantive text to analyze for category inclusion according to the workflow. Without any content or description, it is impossible to determine if the post meets any inclusion criteria or to accurately assign categories based on the rules. Per the workflow, if there is insufficient content to analyze, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/deleting-bookmarks-in-windows-11/m-p/4444604#M29569",
+    "collection": "community",
+    "timestamp": "2025-08-16 12:26:11 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/downloading-gmails-via-office-outlook/m-p/4444606#M29571",
+    "collection": "community",
+    "timestamp": "2025-08-16 12:26:11 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/microsoft-account-one-drive-question/m-p/4444608#M29573",
+    "collection": "community",
+    "timestamp": "2025-08-16 12:26:11 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/problem-in-windows-explorer/m-p/4444607#M29572",
+    "collection": "community",
+    "timestamp": "2025-08-16 12:26:11 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/when-a-user-installs-windows-11-is-it-windows-11-22h2/m-p/4444605#M29570",
+    "collection": "community",
+    "timestamp": "2025-08-16 12:26:11 +00:00",
+    "reason": "Insufficient content length"
   }
 ]
