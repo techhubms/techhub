@@ -1,0 +1,14 @@
+{
+  "Title": "How to disable login on startup screen",
+  "Author": "TitanJaxon",
+  "FeedName": "Microsoft Tech Community",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "Link": "https://techcommunity.microsoft.com/t5/windows-11/how-to-disable-login-on-startup-screen/m-p/4444337#M29468",
+  "Tags": [],
+  "OutputDir": "_community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "ProcessedDate": "2025-08-16 02:41:27",
+  "EnhancedContent": "New install of Win 11 Pro 24H2 yesterday. The option box to bypass sign in on startup seems to no longer exist. On the Accounts&gt;Sign-in Options page, there are just a list of ways to sign in. I'm using a PIN right now. If I click Remove on it, does that eliminate it generally or only on computer startup. The page is confusing.",
+  "PubDate": "2025-08-16T01:59:52+00:00",
+  "Description": "New install of Win 11 Pro 24H2 yesterday. The option box to bypass sign in on startup seems to no longer exist. On the Accounts>Sign-in Options page, there are just a list of ways to sign in. I'm using a PIN right now. If I click Remove on it, does that eliminate it generally or only on computer startup. The page is confusing."
+}
