@@ -1,0 +1,14 @@
+{
+  "Tags": [],
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "OutputDir": "_community",
+  "EnhancedContent": "I tried to disable it on msconfig & i even tried this: bcdedit /set {bootmgr} displaybootmenu yes\n\nBut it still returns at startup ... .",
+  "Link": "https://techcommunity.microsoft.com/t5/windows-insider-program/a-way-to-get-rid-of-desktop-ini-from-desktop-folder-in-win11/m-p/4444583#M37379",
+  "PubDate": "2025-08-16T10:03:59+00:00",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2025-08-16 12:25:15",
+  "Title": "A way to get rid of Desktop.ini from Desktop folder in win11.",
+  "Description": "I tried to disable it on msconfig & i even tried this: bcdedit /set {bootmgr} displaybootmenu yes\n\nBut it still returns at startup ... .\n\n![]()",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "Author": "RasBaraka"
+}

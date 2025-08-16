@@ -6740,5 +6740,11 @@
     "timestamp": "2025-08-16 09:17:33 +00:00",
     "collection": "posts",
     "reason": "Succesfully added: Assigned the AI category because the content centers on Microsoft Copilot Studio—a Microsoft AI-powered platform for building custom copilots (AI category rule 1 and 4). No Coding, DevOps, Azure, ML, Security, or GitHub Copilot categories apply: the content does not cover software development, infrastructure, security, ML platform topics, or GitHub Copilot specifically. The main focus is on using Microsoft's AI maker tool (Copilot Studio) to automate and enhance business processes, aligning directly with the AI category inclusion rules and specifically developer/maker tools use cases."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/blog/september-calendar-is-here/ba-p/4444610",
+    "collection": "community",
+    "timestamp": "2025-08-16 12:26:10 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category due to featured sessions on Agentic AI with Semantic Kernel, Azure AI, and Power Platform AI Builder—each focusing on Microsoft AI services and frameworks (AI rules 1, 3, 4). Assigned 'Azure' because several sessions (Azure networking, Azure AI) focus on Azure services (Azure rule 1). Assigned 'Security' for sessions on networking protection, Sentinel triage automation, and data security with M365 Copilot—security tooling and implementation using Microsoft technologies (Security rules 1, 2, 7). Did not assign 'GitHub Copilot' as none of the sessions specify GitHub Copilot (despite general mention of 'Copilot', which appears to refer to security/business products). 'Coding', 'DevOps', and 'ML' categories were not assigned as the core session topics emphasize Azure, AI, and security solutions over explicit code-centric, DevOps, or ML engineering detail."
   }
 ]
