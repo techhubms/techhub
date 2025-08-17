@@ -6770,5 +6770,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/tech-community-discussion/migrate-2012-r2-to-server-2022/m-p/4444704#M9677",
     "timestamp": "2025-08-17 07:11:58 +00:00",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the content centers on Azure Face API (AI rule 1 and rule 4—Microsoft AI service and AI application development). Assigned 'Azure' because it covers the use of Azure Cognitive Services and requires an Azure account and Face API resource (Azure rule 1 and 4). Coding is not included because while code is provided, the article emphasizes using a cloud AI API rather than development techniques for core frameworks or Microsoft languages (per Coding rule guidance). The content does not meet ML category requirements, as it describes using pre-built AI APIs rather than custom ML workflows. No exclusion rules apply; the post is technical, not promotional, in English, not business/executive-focused, and Microsoft technologies are central.",
+    "timestamp": "2025-08-17 10:13:50 +00:00",
+    "canonical_url": "https://dellenny.com/detect-human-faces-and-compare-similar-ones-with-face-api-in-azure/",
+    "collection": "posts"
   }
 ]

@@ -6003,5 +6003,35 @@
     "canonical_url": "https://dellenny.com/windows-11-setting-up-virtual-desktops-for-better-multitasking/",
     "timestamp": "2025-08-16 19:10:25 +00:00",
     "reason": "No categories found: No categories assigned. The content is a user-oriented tutorial focused on Windows 11's Virtual Desktops feature for better multitasking and organization. It describes how to configure and use virtual desktops, customize workspace, and boost productivity, but does not reference any Microsoft developer tool, programming, coding, DevOps, Azure/cloud, AI/ML technology, or security/identity service. Per 'Generic Exclusion Rules', content centered on general end-user features or productivity workflows in Microsoft products (such as Windows or Office UI features) is excluded unless the focus is on development, technical implementation, or advanced configuration (which is not the case here)."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/set-the-navigation-bar-to-automatically-hide-and-the-mouse/m-p/4444746#M18015",
+    "collection": "community",
+    "timestamp": "2025-08-17 08:16:34 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/windows-security-center-keeps-deleting-files-by-mistake/m-p/4444748#M18017",
+    "collection": "community",
+    "timestamp": "2025-08-17 08:16:34 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/windows-system-hdr-brightness-auto-adjustment-issue/m-p/4444747#M18016",
+    "collection": "community",
+    "timestamp": "2025-08-17 08:16:34 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: All category arrays are left empty because the content focuses on Windows 11 end-user keyboard shortcuts and productivity tips, not software development, coding, DevOps, security, AI, ML, or any central Microsoft technical service. As per 'Generic Exclusion Rules' (Non-Development Microsoft Products; Business Productivity Tools), coverage of Windows 11 usage, shortcuts, accessibility features, and user experience is explicitly outside the platform’s scope unless focused on development, scripting, or system administration APIs—none of which are present here. The article provides helpful information for general users but does not provide technical implementation knowledge or development guidance.",
+    "timestamp": "2025-08-17 10:14:04 +00:00",
+    "canonical_url": "https://dellenny.com/mastering-windows-11-keyboard-shortcuts-you-didnt-know-existed/",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is a productivity-focused tutorial aimed at end users of Windows 11, covering how to customize the Widgets panel for personal task management and information at a glance. It centers around using built-in Windows 11 features (Widgets, To Do, Outlook) for improved individual workflow, not on developer tools, coding, technical implementation, or development/customization of Microsoft technologies. This falls under the 'Non-Development Microsoft Products' generic exclusion rule: 'Content primarily about workplace culture, office politics, or management issues,' 'General business advice or organizational behavior content,' and, specifically, 'Office 365/Microsoft 365 (unless development-focused)'—here, To Do and Outlook usage is described from an end-user perspective, not as a development guide. Additionally, there is no mention of developer APIs, scripting, customization beyond built-in user interface options, or integration with developer-focused platforms. Therefore, all categories are excluded.",
+    "timestamp": "2025-08-17 10:14:19 +00:00",
+    "canonical_url": "https://dellenny.com/turning-widgets-into-a-personal-productivity-dashboard-in-windows-11/",
+    "collection": "posts"
   }
 ]
