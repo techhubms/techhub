@@ -6776,5 +6776,11 @@
     "timestamp": "2025-08-17 10:13:50 +00:00",
     "canonical_url": "https://dellenny.com/detect-human-faces-and-compare-similar-ones-with-face-api-in-azure/",
     "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category because the video focuses on secret protection, safeguarding credentials, and secure development on GitHub (Security rule 2, 5, and 7). Assigned DevOps because it details security automation integrated into the development pipeline, CI/CD, and secure collaboration (DevOps rules 2, 5, 6, and 7). GitHub Copilot assigned because Copilot is cited as assisting with secret detection (GitHub Copilot inclusion rule 2; CRITICAL: always add AI when assigning GitHub Copilot). AI category added per Copilot's involvement in security scanning (AI rule 2).",
+    "collection": "videos",
+    "timestamp": "2025-08-17 15:11:54 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=UfOY9RXHFiw"
   }
 ]
