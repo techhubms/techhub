@@ -6033,5 +6033,17 @@
     "timestamp": "2025-08-17 10:14:19 +00:00",
     "canonical_url": "https://dellenny.com/turning-widgets-into-a-personal-productivity-dashboard-in-windows-11/",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/exporting-confluence-content-with-the-rest-api-and-api-tokens/",
+    "reason": "No categories found: No categories assigned because the content is fully focused on Confluence and Atlassian APIs. There is no substantive mention, usage, or integration of any Microsoft technology, tool, or platform (such as Azure, GitHub, .NET, Power Platform, or any other relevant Microsoft developer technology). The sample code, API endpoints, and all technical steps are exclusively about Atlassian/Confluence. According to the Core Processing Rules and Multi-Platform Content Threshold in Chapter 2 and Chapter 6, Microsoft technologies must be central to the solution or comprise at least 40% of substantive content. This article does not meet either criterion.",
+    "collection": "posts",
+    "timestamp": "2025-08-17 12:22:01 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/surface-it-pro-blog/from-mission-to-impact-why-surface-is-the-trusted-choice-for/ba-p/4441220",
+    "reason": "No categories found: Content is excluded under generic exclusion rules: The article is primarily focused on nonprofit organizational impact using Surface devices and Microsoft 365 products in practical, business productivity scenarios. The technical details pertain to hardware deployment, organizational mobility, and end-user empowerment, with references to features like AI-generated summaries in Copilot+ PCs, but not development, coding, infrastructure, or advanced implementation. There are no technical implementation, coding, DevOps, AI/ML engineering, or security architecture details related to Microsoft developer, IT pro, or cloud platforms. The use of Microsoft 365, Surface, and Copilot+ PCs is described in an end-user, business productivity context, not from a developer or IT implementation perspective, triggering the 'Non-Development Microsoft Products' exclusion. Therefore, according to exclusion rules for business productivity (non-development) content, no categories are assigned.",
+    "collection": "community",
+    "timestamp": "2025-08-17 12:22:24 +00:00"
   }
 ]
