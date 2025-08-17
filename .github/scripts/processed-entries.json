@@ -6764,5 +6764,11 @@
     "canonical_url": "https://dellenny.com/unlocking-the-power-of-ai-with-azure-cognitive-services/",
     "timestamp": "2025-08-16 19:10:12 +00:00",
     "reason": "Succesfully added: Assigned the 'AI' category because the primary topic is Microsoft's Azure Cognitive Services, which consists of pre-built AI services (AI Inclusion Rule 1 and 5). Assigned the 'Azure' category as these services are exclusive to Microsoft's Azure platform and integration with other Azure tools is discussed (Azure Inclusion Rule 1 and 4). Did not assign Coding, ML, DevOps, Security, or GitHub Copilot because the content does not cover custom programming/development details, machine learning concepts, DevOps processes, security implementation, or GitHub Copilot features. The focus is on high-level product usage and capabilities for integrating AI, aligning with both 'AI' and 'Azure' categories."
+  },
+  {
+    "reason": "Succesfully added: Included the Security category because Active Directory migration, CA movement, and FSMO transfer are all core infrastructure and security-related topics (Security rule 1 and 2). Did not assign Azure or other categories because Azure is only referenced as a DR site being decommissioned, with no Azure technical focus. Did not assign DevOps, Coding, AI, ML, or GitHub Copilot as the content does not pertain to those topics. No generic exclusion rules apply: the post is in English, has sufficient explanatory detail (well over 200 words), is not a sales pitch, question-only, or negative, and focuses on technical migration steps.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tech-community-discussion/migrate-2012-r2-to-server-2022/m-p/4444704#M9677",
+    "timestamp": "2025-08-17 07:11:58 +00:00",
+    "collection": "community"
   }
 ]
