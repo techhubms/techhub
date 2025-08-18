@@ -6399,5 +6399,29 @@
     "timestamp": "2025-08-18 10:17:29 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-file-manager/m-p/4445029#M29641"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because, after applying the rules, this content does not centrally involve Microsoft technologies, products, or developer services. The focus is on the Reanimated 4 library for React Native, which is open-source and not Microsoft-specific. Even though GitHub is owned by Microsoft, this video does not discuss GitHub features, tooling, or integrations relevant to the AI, Coding, Azure, DevOps, Security, or ML categories. Instead, it is about animation techniques in React Native using the Reanimated library. There is no mention of Azure, .NET, Visual Studio, GitHub Copilot, or other qualifying Microsoft developer technologies. According to processing rules, when Microsoft technology is not central (≥40% or architectural focus), content is excluded.",
+    "canonical_url": "https://www.youtube.com/shorts/e18KEe3ALms",
+    "timestamp": "2025-08-18 14:14:52 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to the Non-English Content exclusion rule. The description is primarily in Portuguese (less than 80% English in main text), which directly triggers the generic exclusion rule for non-English content. There is no indication of an English version provided. All other rules are secondary after a generic exclusion applies.",
+    "timestamp": "2025-08-18 15:14:36 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Dl3KidBv390",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded due to the Non-English Content generic exclusion rule. The description is primarily in Portuguese, as indicated by both the language in the text (e.g., 'Nesta semana vamos soltar a criatividade e construir um tema personalizado para o VS Code do zero!') and the '[pt-BR 🇧🇷]' marker, meeting the rule of less than 80% English in the main text. Therefore, no categories are assigned.",
+    "timestamp": "2025-08-18 15:14:48 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=oWoAP5UUGNw",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded based on generic exclusion rules. The description indicates this video consists of interviews and opinions about developer security (e.g., 'we asked attendees and some special guests about developer security'), but does not provide technical implementation details, best practices, or concrete guidance. It is focused on advice and broad perspectives rather than actionable technical content (business/industry discussion rather than technical walkthrough). The content field is null, so there is no substantive material to evaluate for category inclusion. Per exclusion rule for business strategy/executive content and lack of technical depth, no categories are assigned.",
+    "timestamp": "2025-08-18 15:15:38 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/SU8uVGY8154",
+    "collection": "videos"
   }
 ]

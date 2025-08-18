@@ -6800,5 +6800,17 @@
     "reason": "Succesfully added: Content qualifies for the AI category due to extensive discussion of agentic AI services and their role in democratizing development (AI rules 1, 4, and 5). DevOps is included because fusion teams and continuous integration/deployment are central, with direct references to DevOps culture and engineering practices (DevOps rules 3-5, 10). Coding also applies as the article details app creation, code structuring, and Power Platform's support for code-based and low/no-code development (Coding rules 1, 2, 4). Azure does not qualify as the content focuses on Power Platform rather than Azure services. ML is not assigned because the primary focus is AI-driven application development, not custom ML engineering or data science. Security is not included as the content mentions guardrails and safeguards in a general engineering context, not specific Microsoft security technologies or practices.",
     "timestamp": "2025-08-18 12:26:17 +00:00",
     "canonical_url": "https://devops.com/microsoft-morphs-fusion-developers-to-full-stack-builders/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-morphs-fusion-developers-to-full-stack-builders"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is a central Azure-based platform for data and analytics, as outlined both in the title and the chapter points (Azure rule 1, 4, 5, 7). Assigned ML category because the focus is on using SQL databases for analytics and data warehousing workloads in Microsoft Fabric—thus, it targets data engineering, analytics development, and database architecture for analytics, all core to the ML category (ML rules 1, 2, 4). Did not assign AI because while AI integrations and Copilot are briefly mentioned, the majority of content focuses on data warehousing, analytics, and managing SQL workloads, not AI-centric practices. Did not assign Security, Coding, DevOps, or GitHub Copilot as the video does not deal with those implementation areas.",
+    "timestamp": "2025-08-18 15:15:23 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=ycq7r-ngOBI",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content discusses integration of new GPT-5 AI models within Visual Studio Code, which fits AI inclusion rules 1 and 4. Included GitHub Copilot category since the description and tags reference Copilot and the context is developer-focused (GitHub Copilot rule 1 and 6). Assigned Coding category because the primary audience is developers using VS Code, and the new features are directly related to coding workflows and productivity (Coding rule 1, 4, and 5). Exclusion rules do not apply: the content is in English, focuses on technical tools for development, and is not about business productivity or general end-user features.",
+    "timestamp": "2025-08-18 15:16:05 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=6CjwS4V2AkU",
+    "collection": "videos"
   }
 ]
