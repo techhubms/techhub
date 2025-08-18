@@ -1,0 +1,14 @@
+{
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Tags": [],
+  "OutputDir": "_community",
+  "ProcessedDate": "2025-08-18 07:20:44",
+  "FeedName": "Microsoft Tech Community",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community",
+  "Link": "https://techcommunity.microsoft.com/t5/windows-11/missing-vhd-after-windows-11-upgrade/m-p/4444893#M29621",
+  "Title": "Missing VHD after Windows 11 upgrade",
+  "Description": "![]() I am perplexed. 2 days ago, I made a VHD on an HDD on my desktop PC. Now, this HDD is a 2T drive that has 3 partitions on it (drives E: F: G). I took the F: drive, which had 224 GB free space and allocated 100 GB for the VHD. After initializing and formatting it, it was given a drive letter of J:\\. I pasted a copy of Windows 11 ISO onto this drive. My intention was to install Windows 11 onto the VHD so that I could test it out. My next step was to install Windows 11, so I double clicked on the ISO. Windows Install began. It had been a long time since I had installed a new OS, so I just let it do it's thing. About half way through, I realized that I may have installed the OS onto my C:\\ drive instead of the VHD. After the install was completed, I went to check where it was installed. It was then that I found that the VHD had disappeared, including the Windows 11 ISO that I had copied into the VHD. I cannot explain why this happened. I am okay with Windows 11 being my only OS, but still baffled by what had occurred.",
+  "EnhancedContent": "I am perplexed. 2 days ago, I made a VHD on an HDD on my desktop PC. Now, this HDD is a 2T drive that has 3 partitions on it (drives E: F: G). I took the F: drive, which had 224 GB free space and allocated 100 GB for the VHD. After initializing and formatting it, it was given a drive letter of J:\\. I pasted a copy of Windows 11 ISO onto this drive. My intention was to install Windows 11 onto the VHD so that I could test it out. My next step was to install Windows 11, so I double clicked on the ISO. Windows Install began. It had been a long time since I had installed a new OS, so I just let it do it's thing. About half way through, I realized that I may have installed the OS onto my C:\\ drive instead of the VHD. After the install was completed, I went to check where it was installed. It was then that I found that the VHD had disappeared, including the Windows 11 ISO that I had copied into the VHD. I cannot explain why this happened. I am okay with Windows 11 being my only OS, but still baffled by what had occurred.",
+  "PubDate": "2025-08-18T03:40:43+00:00",
+  "Author": "PercivalGrove"
+}

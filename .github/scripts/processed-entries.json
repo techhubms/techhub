@@ -6782,5 +6782,11 @@
     "collection": "videos",
     "timestamp": "2025-08-17 15:11:54 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=UfOY9RXHFiw"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the AI category because the content is an in-depth technical tutorial focusing on running, converting, and optimizing AI language models (specifically Qwen3-0.6B, Phi, DeepSeek) on local hardware. The guide covers the use of Microsoft Olive, ONNX model conversion, and local inference best practices, all of which fall under 'AI Development with Microsoft Technologies' (AI inclusion rule 4). The Azure, DevOps, Coding, ML, Security, and GitHub Copilot categories were not assigned: it does not cover Azure platform/services, DevOps workflows, code-focused programming, direct ML engineering/model training from code, security/identity, or Copilot features. Community content length is well above 200 words of meaningful content, so no generic exclusions apply.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/educator-developer-blog/how-to-use-custom-models-with-foundry-local-a-beginner-s-guide/ba-p/4428857",
+    "timestamp": "2025-08-18 07:22:41 +00:00"
   }
 ]
