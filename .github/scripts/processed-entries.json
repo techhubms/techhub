@@ -6794,5 +6794,11 @@
     "collection": "posts",
     "timestamp": "2025-08-18 08:20:36 +00:00",
     "canonical_url": "https://devops.com/keeping-humans-in-the-loop-why-human-oversight-still-matters-in-an-ai-driven-devops-future/?utm_source=rss&utm_medium=rss&utm_campaign=keeping-humans-in-the-loop-why-human-oversight-still-matters-in-an-ai-driven-devops-future"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: Content qualifies for the AI category due to extensive discussion of agentic AI services and their role in democratizing development (AI rules 1, 4, and 5). DevOps is included because fusion teams and continuous integration/deployment are central, with direct references to DevOps culture and engineering practices (DevOps rules 3-5, 10). Coding also applies as the article details app creation, code structuring, and Power Platform's support for code-based and low/no-code development (Coding rules 1, 2, 4). Azure does not qualify as the content focuses on Power Platform rather than Azure services. ML is not assigned because the primary focus is AI-driven application development, not custom ML engineering or data science. Security is not included as the content mentions guardrails and safeguards in a general engineering context, not specific Microsoft security technologies or practices.",
+    "timestamp": "2025-08-18 12:26:17 +00:00",
+    "canonical_url": "https://devops.com/microsoft-morphs-fusion-developers-to-full-stack-builders/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-morphs-fusion-developers-to-full-stack-builders"
   }
 ]
