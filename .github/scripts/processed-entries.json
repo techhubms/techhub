@@ -6836,5 +6836,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/enhance-your-data-protection-strategy-with-azure-elastic-san-s/ba-p/4443607",
     "timestamp": "2025-08-18 16:18:24 +00:00",
     "reason": "Succesfully added: Assigned the Azure category because the entire content revolves around Azure Elastic SAN, Azure Backup integration, and associated platform capabilities (Azure category rule 1 and 4). Assigned Security because the focus is on data protection, backup management, safeguarding against data loss (Security rule 1: Microsoft Security Services, rule 2: Application Security in Microsoft Ecosystem). Did not assign DevOps (no focus on CI/CD, pipelines, or software delivery), ML, AI, or Coding, as the article’s main content is about storage, infrastructure backup integration, and data security rather than code, AI, or data science practices."
+  },
+  {
+    "timestamp": "2025-08-18 17:14:56 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/open-source/git/highlights-from-git-2-51/",
+    "reason": "Succesfully added: Assigned 'DevOps' because the article covers core version control management, repository optimizations, and CI/CD-adjacent topics per DevOps inclusion rule 11 (GitHub/Git as a DevOps tool), and content discussing Git command improvements, packing, stash portability, and scripting is directly relevant to source control in development and DevOps workflows. Assigned 'Coding' because it details command-line behaviors, C99 codebase changes, and low-level tool use that are significant for developers (Coding rule 4, 5). No Microsoft-specific technology is foregrounded, so other categories do not apply. Exclusion rules do not trigger as content is technical, constructive, English, and intended for practitioners."
   }
 ]
