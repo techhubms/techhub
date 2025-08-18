@@ -6860,5 +6860,11 @@
     "reason": "Succesfully added: Assigned AI category because the content provides deep technical guidance on selecting AI models for agents, with substantial focus on model capabilities, architecture, and integration (AI rule 1 and 4). Azure category applies due to the explicit, in-depth discussion and recommendation of Azure AI Foundry, its model router, and catalog for model selection and deployment (Azure rule 1 and 4). Coding and DevOps categories were considered but not included, as the content is about architectural choices, not direct coding, software engineering, or CI/CD processes. ML does not apply, as the focus is on using and integrating models rather than building or engineering them from scratch.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-do-i-choose-the-right-model-for-my-agent/ba-p/4445267"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: I assigned AI because the post centers on training and benchmarking a large language model (Llama3) using AI/ML infrastructure on Azure, leveraging NVIDIA NeMo and advanced parallelism strategies (AI rule 1 & 4). Azure was included since Azure ND GB200 v6 virtual machines are fundamental to the methodology (Azure rules 1, 2 & 4). ML was added because the work involves custom pretraining job configuration, telemetry, and architecture optimization for machine learning model training (ML rules 1, 2, 5, 10). The post is technical, specific, and does not trigger any generic exclusion rules.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimizing-large-scale-ai-performance-with-pretraining/ba-p/4445273",
+    "timestamp": "2025-08-18 23:12:33 +00:00"
   }
 ]

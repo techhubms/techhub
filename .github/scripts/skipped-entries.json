@@ -6447,5 +6447,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/hello-from-a-future-azure-mvp/m-p/4444910#M22113",
     "collection": "community",
     "reason": "Insufficient content length"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: Content is excluded according to the generic exclusion rules for Non-Development Microsoft Products in Chapter 3. The entire article is about the Copilot function in Excel for Windows and Mac, which is a feature of Microsoft 365 Copilot focused on business productivity and document creation within Excel. It does not involve developer tools, code development, technical implementation, or developer APIs. The content describes how end-users can use natural language prompts to analyze and manage data in spreadsheets—not how developers can build or extend Copilot or Excel. Per the critical Copilot product distinction rule, Microsoft 365 Copilot and Office Copilot are explicitly excluded as non-development products, and content about those features must not be assigned any categories, regardless of AI references.",
+    "canonical_url": "https://techcommunity.microsoft.com/blog/microsoft365insiderblog/bring-ai-to-your-formulas-with-the-copilot-function-in-excel/4443487",
+    "timestamp": "2025-08-18 23:11:45 +00:00"
   }
 ]
