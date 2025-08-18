@@ -6812,5 +6812,29 @@
     "timestamp": "2025-08-18 15:16:05 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=6CjwS4V2AkU",
     "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/08/18/dissecting-pipemagic-inside-the-architecture-of-a-modular-backdoor-framework/",
+    "timestamp": "2025-08-18 16:16:46 +00:00",
+    "reason": "Succesfully added: Assigned Security category because the entire content is a technical deep dive on malware analysis, C2 techniques, payload mechanisms, and Microsoft Defender mitigation guidance, matching Security inclusion rules (application security, cloud security, threat response using Microsoft tools). Azure is included because the C2 infrastructure leverages Azure's cloud services (cloudapp.azure.com), and the mitigation steps are directly tied to Azure-based security tools (Defender for Endpoint, Defender XDR). The content does not cover AI, DevOps, Coding, ML, or GitHub Copilot and focuses solely on technical security analysis and response. The source is Microsoft Threat Intelligence, confirming its relevance to these categories."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-08-14-introducing-metered-github-enterprise-billing-for-visual-studio-subscriptions-with-github-enterprise",
+    "timestamp": "2025-08-18 16:17:12 +00:00",
+    "reason": "Succesfully added: The DevOps category was assigned because the content is centered on administrative tooling, license management, automation APIs, and usage flexibility for GitHub Enterprise in enterprise scenarios—core concerns of DevOps teams (DevOps rules 2, 5, 9, and 11). Coding, AI, Azure, ML, GitHub Copilot, and Security categories were not added because there is no substantive content about programming, AI/ML, Azure services, security architectures, or GitHub Copilot features. The focus is on operational and administrative improvements for enterprise-scale source control and collaboration (DevOps processes)."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-08-18-customers-can-now-add-users-to-a-cost-center-from-both-the-ui-and-api-2",
+    "timestamp": "2025-08-18 16:17:34 +00:00",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because this content focuses on administrative and organizational management features for GitHub Enterprise Cloud, particularly around billing and user attribution workflows (DevOps rule 3 and 11). No other categories applied because the content does not involve coding, AI, ML, Azure, security, or GitHub Copilot features. Generic exclusion rules do not apply."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/enhance-your-data-protection-strategy-with-azure-elastic-san-s/ba-p/4443607",
+    "timestamp": "2025-08-18 16:18:24 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the entire content revolves around Azure Elastic SAN, Azure Backup integration, and associated platform capabilities (Azure category rule 1 and 4). Assigned Security because the focus is on data protection, backup management, safeguarding against data loss (Security rule 1: Microsoft Security Services, rule 2: Application Security in Microsoft Ecosystem). Did not assign DevOps (no focus on CI/CD, pipelines, or software delivery), ML, AI, or Coding, as the article’s main content is about storage, infrastructure backup integration, and data security rather than code, AI, or data science practices."
   }
 ]
