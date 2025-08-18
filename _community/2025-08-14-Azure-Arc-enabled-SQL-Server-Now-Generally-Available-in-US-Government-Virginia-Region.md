@@ -1,71 +1,62 @@
 ---
 layout: "post"
-title: "Azure Arc-enabled SQL Server Now Generally Available in US Government Virginia Region"
-description: "This announcement covers the general availability of Azure Arc-enabled SQL Server on Windows in the US Government Virginia region. It explains new management capabilities for SQL Server instances outside Azure, accessible through the Azure Government portal. The article breaks down onboarding steps, available features, and current limitations, as well as future improvement plans for the service."
+title: "Azure Arc-Enabled SQL Server Now Generally Available in US Government Virginia Region"
+description: "This announcement details the general availability of Azure Arc-enabled SQL Server in the US Government Virginia region. It outlines core features such as onboarding, inventory management, compliance, and licensing for SQL Server instances managed outside of Azure, as well as current limitations and links to technical resources. The post targets agencies and organizations leveraging hybrid data management capabilities via Azure Arc."
 author: "AbdullahMSFT"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/arc-enabled-sql-server-is-now-generally-available-in-the-us/ba-p/4443077"
+canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/sql-server-enabled-by-azure-arc-is-now-generally-available-in/ba-p/4443077"
 viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
-date: 2025-08-14 19:50:41 +00:00
-permalink: "/2025-08-14-Azure-Arc-enabled-SQL-Server-Now-Generally-Available-in-US-Government-Virginia-Region.html"
+feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+date: 2025-08-14 21:43:34 +00:00
+permalink: "/2025-08-14-Azure-Arc-Enabled-SQL-Server-Now-Generally-Available-in-US-Government-Virginia-Region.html"
 categories: ["Azure"]
-tags: ["Azure", "Azure Arc", "Azure Government", "Cloud Management", "Community", "Compliance", "Data Estate", "Feature Limitations", "Hybrid Cloud", "Hybrid Data Management", "Licensing", "Security Updates", "SQL Server", "SQL Server Inventory", "US Government Cloud", "Windows Server"]
-tags_normalized: ["azure", "azure arc", "azure government", "cloud management", "community", "compliance", "data estate", "feature limitations", "hybrid cloud", "hybrid data management", "licensing", "security updates", "sql server", "sql server inventory", "us government cloud", "windows server"]
+tags: ["Azure", "Azure Arc", "Azure Arc Onboarding", "Azure Government", "Azure Portal", "Cloud Compliance", "Cloud Security", "Community", "Data Estate Management", "Extended Security Updates", "Government Cloud", "Hybrid Data Management", "Licensing", "Public Sector", "Resource Monitoring", "SQL Server", "SQL Server Inventory"]
+tags_normalized: ["azure", "azure arc", "azure arc onboarding", "azure government", "azure portal", "cloud compliance", "cloud security", "community", "data estate management", "extended security updates", "government cloud", "hybrid data management", "licensing", "public sector", "resource monitoring", "sql server", "sql server inventory"]
 ---
 
-AbdullahMSFT announces the general availability of Azure Arc-enabled SQL Server for the US Government Virginia region, explaining how government users can securely manage their SQL Server instances through the Azure Government portal.<!--excerpt_end-->
+AbdullahMSFT introduces the general availability of Azure Arc-enabled SQL Server in the US Government Virginia region, highlighting streamlined hybrid management and new capabilities for government organizations.<!--excerpt_end-->
 
-# Azure Arc-enabled SQL Server Now Generally Available in US Government Virginia Region
+# Azure Arc-Enabled SQL Server Now Generally Available in US Government Virginia Region
 
 **Author:** AbdullahMSFT
 
-Azure Arc-enabled SQL Server on Windows is now generally available in the US Government Virginia region. With this expansion, U.S. government agencies and organizations can centrally manage their SQL Server instances outside Azure directly from the Azure Government portal, supporting security and compliance needs unique to government workloads.
+Azure Arc-enabled SQL Server on Windows is now generally available for the US Government Virginia region, providing government agencies and organizations with a secure and compliant way to manage SQL Server instances running outside of Azure directly from the Azure Government portal.
 
-## Key Features Available
+## Key Features
 
-- **Onboard SQL Server Instances:** Easily connect your SQL Server to Azure Arc ([onboarding steps](https://review.learn.microsoft.com/en-us/sql/sql-server/azure-arc/connect?view=sql-server-ver17)), making your SQL Servers manageable as Azure resources.
-- **SQL Server Inventory:** View SQL Server and database resources, access instance properties like version and edition, and monitor your entire SQL Server estate from a single interface.
-- **Extended Security Updates:** Subscribe to Extended Security Updates for production environments to maintain security compliance.
-- **License and Billing Management:** Manage licensing (virtual cores) and review billing directly via the Azure Government portal. ([See licensing limitations](https://review.learn.microsoft.com/en-us/sql/sql-server/azure-arc/us-government-region?view=sql-server-ver17&branch=main#limitations)).
+- **Onboarding:** Seamlessly connect your SQL Server instances to Azure Arc ([documentation](https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/connect?view=sql-server-ver17)), making them visible as resources within the Azure Government portal.
+- **Inventory Management:** Leverage the Azure portal to view all SQL Server instances and their properties (version, edition, databases) centrally, aiding large-scale cloud estate management.
+- **Security and Compliance:** Subscribe to [Extended Security Updates](https://review.learn.microsoft.com/en-us/sql/sql-server/azure-arc/extended-security-updates?view=sql-server-ver17#subscribe-to-extended-security-updates-in-a-production-environment) for production workloads and manage licensing/billing ([details](https://review.learn.microsoft.com/en-us/sql/sql-server/azure-arc/manage-license-billing?view=sql-server-ver17)).
+- **Licensing Options:** Manage virtual core licenses (review [limitations](https://review.learn.microsoft.com/en-us/sql/sql-server/azure-arc/us-government-region?view=sql-server-ver17&branch=main#limitations)), monitor consumption, and track compliance for SQL Server deployments in the Government cloud.
 
-*Note: [Other features](https://review.learn.microsoft.com/en-us/sql/sql-server/azure-arc/overview?view=sql-server-ver17#feature-differentiation) may not yet be available in this region.*
+## How to Get Started
 
-## Onboarding Process
-
-To onboard your SQL Server to Azure Arc in US Gov Virginia:
-
-1. [Connect your hybrid machines with Azure Arc-enabled servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
-2. [Connect your SQL Server to Azure Arc on a server already enabled by Azure Arc](https://learn.microsoft.com/sql/sql-server/azure-arc/connect-already-enabled).
+1. [Connect hybrid machines](https://learn.microsoft.com/en-us/azure/azure-arc/servers/learn/quick-enable-hybrid-vm) to Azure Arc-enabled servers.
+2. [Onboard SQL Server instances](https://learn.microsoft.com/sql/sql-server/azure-arc/connect-already-enabled) to Azure Arc on the hybrid-enabled server.
 
 ## Limitations
 
-Some features are not currently available in US Government regions:
+Certain SQL Server features are not yet available in US Government regions, including:
 
-- Failover cluster instance (FCI)
-- Availability groups (AG)
-- Licensing for physical cores (p-cores) / unlimited virtualization
-- License for p-cores without VMs
-- Associated services:
-  - [SQL Server Analysis Services](https://review.learn.microsoft.com/en-us/azure/analysis-services/)
-  - [SQL Server Integration Services](https://review.learn.microsoft.com/en-us/sql/integration-services/sql-server-integration-services?view=sql-server-ver17)
-  - [SQL Server Reporting Services](https://review.learn.microsoft.com/en-us/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver17)
-  - [Power BI Report Server](https://review.learn.microsoft.com/en-us/power-bi/report-server/get-started)
+- Failover cluster instances (FCI) and Availability Groups (AG)
+- Licensing physical cores (p-cores) with unlimited virtualization or without VMs
+- Associated services: [SQL Server Analysis Services](https://review.learn.microsoft.com/en-us/azure/analysis-services/), [Integration Services](https://review.learn.microsoft.com/en-us/sql/integration-services/sql-server-integration-services?view=sql-server-ver17), [Reporting Services](https://review.learn.microsoft.com/en-us/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver17), [Power BI Report Server](https://review.learn.microsoft.com/en-us/power-bi/report-server/get-started)
 
-Review the [feature differentiation documentation](https://review.learn.microsoft.com/en-us/sql/sql-server/azure-arc/overview?view=sql-server-ver17#feature-differentiation) for the most current availability.
+For all feature differentiation and up-to-date limitations, consult the [official documentation](https://review.learn.microsoft.com/en-us/sql/sql-server/azure-arc/overview?view=sql-server-ver17#feature-differentiation).
 
-## Looking Ahead
+## Roadmap
 
-This release is a foundational step for hybrid data management on Azure Government. Microsoft plans to roll out further enhancements to bring the service to parity with other regions.
+This milestone introduces hybrid data management within Azure Government; future iterations will continue to close feature gaps and achieve service parity with commercial regions.
+
+## Get Involved
+
+- Try Arc-enabled SQL Server through the [Azure Government portal](https://learn.microsoft.com/sql/sql-server/azure-arc/us-government-region?).
+- Share feedback through the [community forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0) or your Microsoft representatives.
 
 ## Learn More
 
-- [SQL Server enabled by Azure Arc in US Government](https://learn.microsoft.com/sql/sql-server/azure-arc/us-government-region?)
-- [SQL Server enabled by Azure Arc - Overview](https://learn.microsoft.com/sql/sql-server/azure-arc/overview?view=sql-server-ver17)
+- [Azure Arc-enabled SQL Server overview](https://learn.microsoft.com/sql/sql-server/azure-arc/overview?view=sql-server-ver17)
+- [How to onboard and manage SQL Server resources in Azure Arc](https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/connect?view=sql-server-ver17)
 
-For feedback and discussion, visit the [community forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0) or connect with your Microsoft representative.
-
-_Last updated: Aug 14, 2025. Version 1.0_
-
-This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/azure-arc-blog/arc-enabled-sql-server-is-now-generally-available-in-the-us/ba-p/4443077)
+This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/azure-arc-blog/sql-server-enabled-by-azure-arc-is-now-generally-available-in/ba-p/4443077)
