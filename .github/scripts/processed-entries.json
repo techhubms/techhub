@@ -6854,5 +6854,11 @@
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-08-18-migrate-repositories-with-github-owned-blob-storage",
     "reason": "Succesfully added: Assigned the DevOps category because the content is focused on repository migration processes, tooling (gh gei, gh bbs2gh), and enterprise platform administration, all covered under the DevOps category (DevOps inclusion rule 2 and 11; GitHub DevOps Tools and content about GitHub that isn't Copilot-specific). No other categories were assigned because there is no coverage of coding, AI, Azure, ML, or specific security implementation. The content aligns with technical best practices for DevOps and automation workflows."
+  },
+  {
+    "timestamp": "2025-08-18 22:12:21 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content provides deep technical guidance on selecting AI models for agents, with substantial focus on model capabilities, architecture, and integration (AI rule 1 and 4). Azure category applies due to the explicit, in-depth discussion and recommendation of Azure AI Foundry, its model router, and catalog for model selection and deployment (Azure rule 1 and 4). Coding and DevOps categories were considered but not included, as the content is about architectural choices, not direct coding, software engineering, or CI/CD processes. ML does not apply, as the focus is on using and integrating models rather than building or engineering them from scratch.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-do-i-choose-the-right-model-for-my-agent/ba-p/4445267"
   }
 ]
