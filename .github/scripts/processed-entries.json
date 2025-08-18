@@ -6848,5 +6848,11 @@
     "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-august-2025/",
     "collection": "news",
     "reason": "Succesfully added: Assigned Azure category because the post centers on Azure Developer CLI's features, bug fixes, and templates for Azure deployment (Azure rule 1, 4, 5). Included Coding because azd is a development tool supporting programming languages (.NET, Python, Java, JavaScript, TypeScript) and project types (Coding rule 1, 2, 4). DevOps is included as azd supports CI/CD automation, integration with Azure DevOps, and infrastructure-as-code practices (DevOps rules 1, 5, 6). ML is included due to templates using AI with PostgreSQL and analytics/data workflow scenarios (ML rule 1, 2, 9). AI is included because several templates demonstrate Azure AI integration, Purview for prompt security, and AI-based chat use cases (AI rule 1, 4, 5, 6). Security is included for templates demonstrating Microsoft Sentinel (threat detection/response), API Management with OAuth and Entra ID, and Purview API audit/security for AI prompts (Security rule 1, 3, 5, 9). The inclusive approach follows Rule Hierarchy Clarification since technical depth across categories is present and no generic exclusion rules apply."
+  },
+  {
+    "timestamp": "2025-08-18 21:11:48 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-08-18-migrate-repositories-with-github-owned-blob-storage",
+    "reason": "Succesfully added: Assigned the DevOps category because the content is focused on repository migration processes, tooling (gh gei, gh bbs2gh), and enterprise platform administration, all covered under the DevOps category (DevOps inclusion rule 2 and 11; GitHub DevOps Tools and content about GitHub that isn't Copilot-specific). No other categories were assigned because there is no coverage of coding, AI, Azure, ML, or specific security implementation. The content aligns with technical best practices for DevOps and automation workflows."
   }
 ]
