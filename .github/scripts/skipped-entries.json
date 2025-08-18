@@ -6435,5 +6435,17 @@
     "collection": "news",
     "canonical_url": "https://www.linkedin.com/posts/satyanadella_researchers-have-developed-a-deep-learning-activity-7363212136824659969-sD1B",
     "reason": "No categories found: This content does not qualify for any categories based on the generic exclusion rules. Although a Microsoft executive is mentioned and the post highlights research involving a deep learning system called BioEmu for protein conformation generation, the content provided is essentially an announcement with no technical details, implementation insights, or substantive discussion of Microsoft technology or engineering practices. It is a high-level news post without technical depth or actionable details relevant to practitioners, developers, or Microsoft technology users. According to the Generic Exclusion Rule for business strategy and executive content (Chapter 3: Business Strategy and Executive Content), corporate announcements and strategic initiatives without technical depth are excluded. Additionally, the primary focus is not on AI implementation details, coding, Azure, DevOps, Security, or ML practices as required by the inclusion rules."
+  },
+  {
+    "timestamp": "2025-08-18 19:12:47 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_i-just-love-this-the-new-copilot-function-activity-7363257256714387459-3tYQ",
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: Non-Development Microsoft Products. The post focuses on the new =COPILOT() function in Excel, which is part of Microsoft 365 Copilot—a business productivity feature, not a developer tool. According to exclusion rules for Copilot products, features for business productivity, document creation, and general office work (such as Excel formulas enhanced for end-users) must be excluded and assigned no categories, even though these use AI. There is no developer, coding, or technical implementation detail relevant to practitioner Microsoft technologies. The content is also short and promotional in nature, fitting the exclusion for non-development Microsoft 365 Copilot features."
+  },
+  {
+    "timestamp": "2025-08-18 19:12:59 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/hello-from-a-future-azure-mvp/m-p/4444910#M22113",
+    "collection": "community",
+    "reason": "Insufficient content length"
   }
 ]
