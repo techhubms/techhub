@@ -6045,5 +6045,263 @@
     "reason": "No categories found: Content is excluded under generic exclusion rules: The article is primarily focused on nonprofit organizational impact using Surface devices and Microsoft 365 products in practical, business productivity scenarios. The technical details pertain to hardware deployment, organizational mobility, and end-user empowerment, with references to features like AI-generated summaries in Copilot+ PCs, but not development, coding, infrastructure, or advanced implementation. There are no technical implementation, coding, DevOps, AI/ML engineering, or security architecture details related to Microsoft developer, IT pro, or cloud platforms. The use of Microsoft 365, Surface, and Copilot+ PCs is described in an end-user, business productivity context, not from a developer or IT implementation perspective, triggering the 'Non-Development Microsoft Products' exclusion. Therefore, according to exclusion rules for business productivity (non-development) content, no categories are assigned.",
     "collection": "community",
     "timestamp": "2025-08-17 12:22:24 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/detect-human-faces-and-compare-similar-ones-with-face-api-in/m-p/4444792#M22111",
+    "timestamp": "2025-08-17 16:16:36 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/unlocking-the-power-of-ai-with-azure-cognitive-services/m-p/4444797#M22112",
+    "timestamp": "2025-08-17 16:16:36 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot/no-code-ai-how-non-developers-can-build-smart-chatbots-with/m-p/4444798#M5484",
+    "timestamp": "2025-08-17 16:16:36 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/blog-mastering-windows-11-keyboard-shortcuts-you-didn-t-know/m-p/4444793#M29590",
+    "timestamp": "2025-08-17 16:16:37 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/blog-turning-widgets-into-a-personal-productivity-dashboard-in/m-p/4444794#M29591",
+    "timestamp": "2025-08-17 16:16:37 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/blog-windows-11-setting-up-virtual-desktops-for-better/m-p/4444795#M29592",
+    "timestamp": "2025-08-17 16:16:37 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/how-to-resolve-offline-login-issues-on-windows-11-systems/m-p/4444805#M29600",
+    "timestamp": "2025-08-17 16:16:37 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/mastering-snap-layouts-and-snap-groups-in-windows-11/m-p/4444796#M29593",
+    "timestamp": "2025-08-17 16:16:37 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/the-virtual-disk-image-of-the-windows-system-is-corrupted-and/m-p/4444808#M29603",
+    "timestamp": "2025-08-17 16:16:37 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/why-does-the-search-bar-in-windows-11-sometimes-fail-to-open/m-p/4444809#M29604",
+    "timestamp": "2025-08-17 16:16:37 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-system-has-minimal-sound-distortion/m-p/4444804#M29599",
+    "timestamp": "2025-08-17 16:16:37 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-system-update-24h2-failed/m-p/4444807#M29602",
+    "timestamp": "2025-08-17 16:16:37 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/what-should-i-do-if-windows-explorer-uses-high-cpu/m-p/4444815#M37408",
+    "timestamp": "2025-08-17 16:16:38 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-17 17:13:47 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/i-bought-my-computer-half-a-month-ago-and-it-randomly-restarts/m-p/4444817#M37410",
+    "collection": "community"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-17 17:13:47 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/the-memory-on-the-c-drive-of-the-windows-system-is-full-and/m-p/4444816#M37409",
+    "collection": "community"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-17 17:13:47 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/video-saved-by-windows-built-in-screen-recording-tool/m-p/4444819#M37411",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/discussions/where-did-the-edge-browser-workspaces-icon-go/m-p/4444823#M64738",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-17 18:19:38 +00:00",
+    "collection": "community"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/best-practice-for-configuring-pim/m-p/4444835#M57909",
+    "timestamp": "2025-08-17 20:17:11 +00:00"
+  },
+  {
+    "timestamp": "2025-08-18 03:29:00 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/windows-10-pc-upgrading-to-windows-11-without-permission/m-p/4444864#M18020"
+  },
+  {
+    "timestamp": "2025-08-18 03:29:00 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-update/m-p/4444862#M29614"
+  },
+  {
+    "timestamp": "2025-08-18 03:29:00 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/how-to-disable-updates-on-windows-systems/m-p/4444869#M37420"
+  },
+  {
+    "timestamp": "2025-08-18 03:29:00 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/just-upgraded-another-notebook-pc-to-11-and-it-took-a-long-time/m-p/4444866#M37417"
+  },
+  {
+    "timestamp": "2025-08-18 03:29:00 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/monitor-disconnected-from-pc-all-of-sudden/m-p/4444884#M37425"
+  },
+  {
+    "timestamp": "2025-08-18 03:29:00 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/the-windows-11-installation-wizard-has-started-enforcing-updates/m-p/4444867#M37418"
+  },
+  {
+    "timestamp": "2025-08-18 03:29:00 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/windows-system-click-search-settings-problem/m-p/4444870#M37421"
+  },
+  {
+    "timestamp": "2025-08-18 03:29:00 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/windows-updates-cause-audio-drivers-to-drop-out/m-p/4444868#M37419"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/access-legacy-internet-explorer-in-windows-11/m-p/4444889#M29619",
+    "collection": "community",
+    "timestamp": "2025-08-18 04:36:17 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/advertising/m-p/4444888#M29618",
+    "collection": "community",
+    "timestamp": "2025-08-18 04:36:17 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/compressed-zipped-folders-error/m-p/4444891#M29620",
+    "collection": "community",
+    "timestamp": "2025-08-18 04:36:17 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/missing-vhd-after-windows-11-upgrade/m-p/4444893#M29621",
+    "collection": "community",
+    "timestamp": "2025-08-18 04:36:32 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The post is primarily seeking help and describing personal troubleshooting regarding a missing VHD after a Windows 11 upgrade, without providing substantive answers, technical analysis, or educational value (Generic Exclusion - Question-Only Content). The text is mainly a personal account expressing confusion and does not include any implementation details, solutions, or technical walkthroughs regarding Microsoft development tools or platforms."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/blank-space-in-front-of-file-names-list-view/m-p/4444904#M37438",
+    "collection": "community",
+    "timestamp": "2025-08-18 04:36:32 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/missing-features-in-version-22h2/m-p/4444903#M37437",
+    "collection": "community",
+    "timestamp": "2025-08-18 04:36:32 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/the-new-fan-in-pc-is-very-noisy-all-the-time/m-p/4444900#M37435",
+    "collection": "community",
+    "timestamp": "2025-08-18 04:36:32 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/the-windows-system-encountered-some-minor-issues/m-p/4444885#M37426",
+    "collection": "community",
+    "timestamp": "2025-08-18 04:36:32 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/windows-11-windows-10-windows-to-go-external-ssd-wrong-time/m-p/4444902#M37436",
+    "collection": "community",
+    "timestamp": "2025-08-18 04:36:32 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/windows-preview-version-green-screen-i-m-a-little-worried/m-p/4444886#M37427",
+    "collection": "community",
+    "timestamp": "2025-08-18 04:36:32 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-insider-program/windows-system-update-system-encountered-problems/m-p/4444890#M37429",
+    "collection": "community",
+    "timestamp": "2025-08-18 04:36:32 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-08-18 05:21:50 +00:00",
+    "reason": "No categories found: All categories are excluded due to the generic exclusion rule for job-related content. The main focus of this post is advertising specific job opportunities for DevOps professionals, including salary details and company names. Chapter 3 explicitly excludes career advice, job openings, hiring announcements, and salary discussions. There is no substantive technical or architectural implementation detail about Microsoft technologies, DevOps processes, or technical practices. Therefore, no categories have been assigned.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/five-great-devops-job-opportunities-152/?utm_source=rss&utm_medium=rss&utm_campaign=five-great-devops-job-opportunities-152"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-08-18 06:24:42 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/teams-developer/my-sharepoint-page-is-loading-in-teams-from-the-browser-but-not/m-p/4444914#M12825"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content is a community help-seeking post focused on troubleshooting PC hardware installation issues and does not provide substantive answers or solutions. According to the generic exclusion rules in Chapter 3, 'Question-Only Content' is excluded if the post is primarily seeking information rather than offering technical guidance regarding Microsoft technologies. This post is specifically requesting help rather than providing implementation, integration, or development steps with Microsoft platforms, so it does not qualify for categorization.",
+    "collection": "community",
+    "timestamp": "2025-08-18 06:24:57 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/hp-15s-fq2811nc-72h94ea-win-11-install-ssd-not-found-missing/m-p/4444913#M29623"
+  },
+  {
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/project/opening-project-plan-error/m-p/4444934#M10635",
+    "timestamp": "2025-08-18 07:22:42 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/how-can-i-force-to-install-windows-11-on-unsupported-pc/m-p/4444935#M18022",
+    "timestamp": "2025-08-18 07:22:42 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "No categories found: This content was excluded based on the generic exclusion rules for community posts: it primarily consists of a help-seeking question regarding the Windows 11 sign-in screen and lock screen feature not displaying certain information. As per the 'Question-Only Content' exclusion rule, posts that are mainly about asking for help or information, without providing substantive technical answers, guides, or solutions, are not categorized. Additionally, the post focuses on end-user functionality and troubleshooting rather than technical implementation or development with Microsoft technologies.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-sign-in-screen-not-showing-status-or-picture/m-p/4444941#M29630",
+    "timestamp": "2025-08-18 07:22:55 +00:00"
   }
 ]
