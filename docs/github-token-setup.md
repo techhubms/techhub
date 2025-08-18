@@ -9,6 +9,7 @@ The Azure infrastructure deployment includes a Static Web Apps resource that req
 ### STATIC_WEB_APP_TOKEN (Recommended)
 
 Create a Personal Access Token (PAT) with the following permissions:
+
 - **repo** (Full control of private repositories)
   - This includes: repo:status, repo_deployment, public_repo, repo:invite, security_events
 
@@ -42,6 +43,7 @@ The following parameter files have been updated to include the GitHub repository
 - `infra/parameters.prod.json` - Production environment parameters
 
 New parameters added:
+
 - `repositoryUrl`: GitHub repository URL (https://github.com/techhubms/techhub)
 - `repositoryBranch`: Deployment branch (main)
 - `githubToken`: GitHub token (passed from workflow environment)
@@ -60,9 +62,11 @@ You can test the infrastructure deployment using:
 
 ```powershell
 # Validate template
+
 ./test-infrastructure-deployment.ps1 -Mode validate
 
 # See what would be deployed
+
 ./test-infrastructure-deployment.ps1 -Mode whatif
 ```
 
