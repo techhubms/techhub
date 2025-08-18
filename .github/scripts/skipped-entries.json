@@ -6321,5 +6321,83 @@
     "collection": "community",
     "timestamp": "2025-08-18 08:20:45 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/windows-10-a-success/m-p/4444969#M18041"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/best-practices-for-running-effective-microsoft-teams-meetings/",
+    "timestamp": "2025-08-18 09:19:34 +00:00",
+    "reason": "No categories found: The content is excluded under the 'Non-Development Microsoft Products' generic exclusion rule in Chapter 3. The article is focused on usage tips, meeting organization, collaboration strategies, and technical setup for Microsoft Teams end-users, not on Teams development (e.g., building bots or integrations). There is no substantive focus on coding, customization, APIs, or developer scenarios. It does not fit Coding, Azure, AI, DevOps, ML, or Security categories under the inclusion criteria. Therefore, no categories are assigned."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-co-author-documents-in-real-time-in-microsoft-365/",
+    "timestamp": "2025-08-18 09:19:49 +00:00",
+    "reason": "No categories found: No categories assigned because the content is focused on end-user business productivity features of Microsoft 365 (co-authoring Word, Excel, PowerPoint documents, OneDrive/SharePoint basics, Teams integration), not on development, technical implementation, coding, DevOps, AI, ML, or security. Per the \"Non-Development Microsoft Products\" generic exclusion rule, content about general Microsoft 365 usage, Office features, and end-user collaboration (without developer aspect) is excluded. There are no sections about application development, API usage, Teams bot/framework development, or technical architecture. Therefore, none of the category inclusion rules apply."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-speed-up-boot-time-in-windows-11/",
+    "timestamp": "2025-08-18 09:20:05 +00:00",
+    "reason": "No categories found: All generic exclusion rules were checked before considering any categories. The content is an end-user focused tutorial on improving boot times in Windows 11. It covers system settings, startup programs, driver updates, and hardware upgrades, but does not address any Microsoft development, programming, coding, AI/ML, DevOps, security, or Azure-specific technologies. There is no focus on scripting, Windows API, enterprise endpoint management, or development tools—just step-by-step instructions aimed at standard users to optimize their personal Windows setup. As per generic exclusion rules for 'Non-Development Microsoft Products' and the lack of technical depth relevant to Microsoft developer/engineering workflows, no categories apply."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/microsoft-defender-for-office-365-shared-mailboxes-and-microsoft/m-p/4444989#M57911",
+    "timestamp": "2025-08-18 09:20:13 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/how-to-stop-beeping-when-i-copy-and-paste/m-p/4445008#M29636",
+    "timestamp": "2025-08-18 09:20:14 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/win11-login/m-p/4445007#M29635",
+    "timestamp": "2025-08-18 09:20:14 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-screen-flickering-and-then-suddenly-turning-black/m-p/4445011#M29638",
+    "timestamp": "2025-08-18 09:20:14 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-compatibility-11/m-p/4445009#M29637",
+    "timestamp": "2025-08-18 09:20:14 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: No categories assigned. Although the content is about SharePoint, it discusses new visual and user experience enhancements for SharePoint site headers and footers (branding, navigation, layout, font customization) aimed at site owners and viewers. There is no coverage of SharePoint development, coding, APIs, extensibility, or architectural implementation. The update is focused on user-facing site design and configuration, which falls under end-user features of Microsoft 365/SharePoint rather than development. According to the 'Non-Development Microsoft Products' and 'Business vs Technical Content' exclusion rules, such end-user-focused SharePoint or Microsoft 365 content is excluded unless it has a clear development or technical implementation focus. No technical architecture, coding, or development patterns are present.",
+    "timestamp": "2025-08-18 10:17:16 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/introducing-new-sharepoint-site-header-footer-enhancements/ba-p/4444261"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-18 10:17:16 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/a-square-in-windows-11-inside-which-no-click-can-take-effect/m-p/4445030#M29642"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-18 10:17:17 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/no-boot-manager-on-reboot/m-p/4445044#M29652"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: this is a community post that is primarily a feature request and discussion about Windows 11 end-user interface functionality (the movable taskbar). It does not provide substantive technical details, development guidance, or insights relevant to Microsoft developer, DevOps, AI, coding, Azure, ML, or security topics. The content is focused on end-user customization and usability, not development or technical implementation.",
+    "timestamp": "2025-08-18 10:17:29 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/when-can-we-have-a-movable-taskbar/m-p/4445043#M29651"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-18 10:17:29 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-file-manager/m-p/4445029#M29641"
   }
 ]
