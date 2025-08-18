@@ -225,11 +225,6 @@
     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
   },
   {
-    "name": "Microsoft Tech Community",
-    "outputDir": "_community",
-    "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
-  },
-  {
     "name": "David Fowler's Blog",
     "outputDir": "_posts",
     "url": "https://medium.com/feed/@davidfowl"

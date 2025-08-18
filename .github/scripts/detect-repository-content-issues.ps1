@@ -35,19 +35,19 @@ foreach ($dir in $contentDirs) {
         # Add markdown files to main collection
         $allFiles += $mdFiles | ForEach-Object { 
             @{
-                Path = $_.FullName.Replace((Get-Location).Path + "\", "").Replace("\", "/")
+                Path      = $_.FullName.Replace((Get-Location).Path + "\", "").Replace("\", "/")
                 Directory = $dir
-                Name = $_.Name
-                FullPath = $_.FullName
+                Name      = $_.Name
+                FullPath  = $_.FullName
             }
         }
         
         # Track non-markdown files
         $nonMarkdownFiles += $nonMdFiles | ForEach-Object {
             @{
-                Path = $_.FullName.Replace((Get-Location).Path + "\", "").Replace("\", "/")
+                Path      = $_.FullName.Replace((Get-Location).Path + "\", "").Replace("\", "/")
                 Directory = $dir
-                Name = $_.Name
+                Name      = $_.Name
                 Extension = $_.Extension
             }
         }
@@ -151,10 +151,10 @@ function Get-DateFromUrl {
                     # Month name formats
                     elseif ($part1 -match '^(january|february|march|april|may|june|july|august|september|october|november|december|januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november)$') {
                         $monthNames = @{
-                            'january'=1; 'february'=2; 'march'=3; 'april'=4; 'may'=5; 'june'=6;
-                            'july'=7; 'august'=8; 'september'=9; 'october'=10; 'november'=11; 'december'=12;
-                            'januari'=1; 'februari'=2; 'maart'=3; 'mei'=5; 'juni'=6; 'juli'=7; 
-                            'augustus'=8; 'oktober'=10
+                            'january' = 1; 'february' = 2; 'march' = 3; 'april' = 4; 'may' = 5; 'june' = 6;
+                            'july' = 7; 'august' = 8; 'september' = 9; 'october' = 10; 'november' = 11; 'december' = 12;
+                            'januari' = 1; 'februari' = 2; 'maart' = 3; 'mei' = 5; 'juni' = 6; 'juli' = 7; 
+                            'augustus' = 8; 'oktober' = 10
                         }
                         $monthNum = $monthNames[$part1.ToLower()]
                         if ($monthNum -and $part2 -match '^\d{1,2}$') {
@@ -165,10 +165,10 @@ function Get-DateFromUrl {
                     }
                     elseif ($part2 -match '^(january|february|march|april|may|june|july|august|september|october|november|december|januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november)$') {
                         $monthNames = @{
-                            'january'=1; 'february'=2; 'march'=3; 'april'=4; 'may'=5; 'june'=6;
-                            'july'=7; 'august'=8; 'september'=9; 'october'=10; 'november'=11; 'december'=12;
-                            'januari'=1; 'februari'=2; 'maart'=3; 'mei'=5; 'juni'=6; 'juli'=7; 
-                            'augustus'=8; 'oktober'=10
+                            'january' = 1; 'february' = 2; 'march' = 3; 'april' = 4; 'may' = 5; 'june' = 6;
+                            'july' = 7; 'august' = 8; 'september' = 9; 'october' = 10; 'november' = 11; 'december' = 12;
+                            'januari' = 1; 'februari' = 2; 'maart' = 3; 'mei' = 5; 'juni' = 6; 'juli' = 7; 
+                            'augustus' = 8; 'oktober' = 10
                         }
                         $monthNum = $monthNames[$part2.ToLower()]
                         if ($monthNum -and $part1 -match '^\d{1,2}$') {
@@ -197,8 +197,8 @@ function Get-DateFromUrl {
                     # Handle month name formats (more restrictive)
                     if ($part1 -match '^(january|february|march|april|may|june|july|august|september|october|november|december)$') {
                         $monthNames = @{
-                            'january'=1; 'february'=2; 'march'=3; 'april'=4; 'may'=5; 'june'=6;
-                            'july'=7; 'august'=8; 'september'=9; 'october'=10; 'november'=11; 'december'=12
+                            'january' = 1; 'february' = 2; 'march' = 3; 'april' = 4; 'may' = 5; 'june' = 6;
+                            'july' = 7; 'august' = 8; 'september' = 9; 'october' = 10; 'november' = 11; 'december' = 12
                         }
                         $monthNum = $monthNames[$part1.ToLower()]
                         if ($monthNum -and $part2 -match '^\d{1,2}$') {
@@ -211,8 +211,8 @@ function Get-DateFromUrl {
                     }
                     elseif ($part2 -match '^(january|february|march|april|may|june|july|august|september|october|november|december)$') {
                         $monthNames = @{
-                            'january'=1; 'february'=2; 'march'=3; 'april'=4; 'may'=5; 'june'=6;
-                            'july'=7; 'august'=8; 'september'=9; 'october'=10; 'november'=11; 'december'=12
+                            'january' = 1; 'february' = 2; 'march' = 3; 'april' = 4; 'may' = 5; 'june' = 6;
+                            'july' = 7; 'august' = 8; 'september' = 9; 'october' = 10; 'november' = 11; 'december' = 12
                         }
                         $monthNum = $monthNames[$part2.ToLower()]
                         if ($monthNum -and $part1 -match '^\d{1,2}$') {
@@ -318,10 +318,10 @@ function Get-DateFromHtml {
                 # Try alternative parsing for month names
                 try {
                     $monthNames = @{
-                        'january'=1; 'february'=2; 'march'=3; 'april'=4; 'may'=5; 'june'=6;
-                        'july'=7; 'august'=8; 'september'=9; 'october'=10; 'november'=11; 'december'=12;
-                        'jan'=1; 'feb'=2; 'mar'=3; 'apr'=4; 'jun'=6;
-                        'jul'=7; 'aug'=8; 'sep'=9; 'oct'=10; 'nov'=11; 'dec'=12
+                        'january' = 1; 'february' = 2; 'march' = 3; 'april' = 4; 'may' = 5; 'june' = 6;
+                        'july' = 7; 'august' = 8; 'september' = 9; 'october' = 10; 'november' = 11; 'december' = 12;
+                        'jan' = 1; 'feb' = 2; 'mar' = 3; 'apr' = 4; 'jun' = 6;
+                        'jul' = 7; 'aug' = 8; 'sep' = 9; 'oct' = 10; 'nov' = 11; 'dec' = 12
                     }
                     
                     if ($dateStr -match '(\w+)\s+(\d{1,2}),?\s+(\d{4})') {
@@ -457,11 +457,11 @@ foreach ($file in $allFiles) {
             
             if ($issues.Count -gt 0) {
                 $dateMismatches += @{
-                    File = $file.Path
-                    FilenameDate = $filenameDate
+                    File            = $file.Path
+                    FilenameDate    = $filenameDate
                     FrontmatterDate = $frontmatterDate
-                    PermalinkDate = $permalinkDate
-                    Issues = $issues
+                    PermalinkDate   = $permalinkDate
+                    Issues          = $issues
                 }
             }
         }
@@ -480,7 +480,8 @@ if ($dateMismatches.Count -gt 0) {
             Write-Host "      Issue: $issue" -ForegroundColor Red
         }
     }
-} else {
+}
+else {
     Write-Host "✅ All dates are consistent!" -ForegroundColor Green
 }
 Write-Host ""
@@ -503,9 +504,9 @@ foreach ($file in $allFiles) {
                 
                 if ($expectedPermalink -ne $actualPermalink) {
                     $permalinkMismatches += @{
-                        File = $file.Path
+                        File     = $file.Path
                         Expected = $expectedPermalink
-                        Actual = $actualPermalink
+                        Actual   = $actualPermalink
                     }
                 }
             }
@@ -523,7 +524,8 @@ if ($permalinkMismatches.Count -gt 0) {
         Write-Host "      Expected: $($mismatch.Expected)" -ForegroundColor White
         Write-Host "      Actual:   $($mismatch.Actual)" -ForegroundColor Gray
     }
-} else {
+}
+else {
     Write-Host "✅ All permalinks are consistent!" -ForegroundColor Green
 }
 Write-Host ""
@@ -539,14 +541,14 @@ $urlTestScriptBlock = {
     param($file, $canonicalUrl, $content)
     
     $result = @{
-        File = $file.Path
-        Url = $canonicalUrl
-        Success = $false
-        Error = $null
-        HtmlDate = $null
-        UrlDate = $null
+        File            = $file.Path
+        Url             = $canonicalUrl
+        Success         = $false
+        Error           = $null
+        HtmlDate        = $null
+        UrlDate         = $null
         FrontmatterDate = $null
-        IsRemoved = $false
+        IsRemoved       = $false
     }
     
     try {
@@ -654,7 +656,8 @@ $urlTestScriptBlock = {
                 if ($contextSegments.Count -eq 0) {
                     $contextSegments += $response.Content
                 }
-            } else {
+            }
+            else {
                 # For multi-line HTML, find lines containing date keywords and surrounding lines
                 for ($i = 0; $i -lt $htmlLines.Count; $i++) {
                     $line = $htmlLines[$i]
@@ -715,10 +718,10 @@ $urlTestScriptBlock = {
                             # Try alternative parsing for month names
                             try {
                                 $monthNames = @{
-                                    'january'=1; 'february'=2; 'march'=3; 'april'=4; 'may'=5; 'june'=6;
-                                    'july'=7; 'august'=8; 'september'=9; 'october'=10; 'november'=11; 'december'=12;
-                                    'jan'=1; 'feb'=2; 'mar'=3; 'apr'=4; 'jun'=6;
-                                    'jul'=7; 'aug'=8; 'sep'=9; 'oct'=10; 'nov'=11; 'dec'=12
+                                    'january' = 1; 'february' = 2; 'march' = 3; 'april' = 4; 'may' = 5; 'june' = 6;
+                                    'july' = 7; 'august' = 8; 'september' = 9; 'october' = 10; 'november' = 11; 'december' = 12;
+                                    'jan' = 1; 'feb' = 2; 'mar' = 3; 'apr' = 4; 'jun' = 6;
+                                    'jul' = 7; 'aug' = 8; 'sep' = 9; 'oct' = 10; 'nov' = 11; 'dec' = 12
                                 }
                                 
                                 if ($dateStr -match '(\w+)\s+(\d{1,2}),?\s+(\d{4})') {
@@ -750,7 +753,7 @@ $urlTestScriptBlock = {
         # Extract date from URL itself
         # Pre-filter to avoid false positives with version numbers
         if (-not ($canonicalUrl -match '(claude|version|v\d|gpt|model)\s*[\d\.]+' -or 
-                  ($canonicalUrl -match '\d+\.\d+' -and $canonicalUrl -notmatch '\d{4}'))) {
+                ($canonicalUrl -match '\d+\.\d+' -and $canonicalUrl -notmatch '\d{4}'))) {
             
             $datePatterns = @(
                 '(\d{4})[/-](\d{1,2})[/-](\d{1,2})',
@@ -781,8 +784,8 @@ $urlTestScriptBlock = {
                             }
                             elseif ($part1 -match '^(january|february|march|april|may|june|july|august|september|october|november|december)$') {
                                 $monthNames = @{
-                                    'january'=1; 'february'=2; 'march'=3; 'april'=4; 'may'=5; 'june'=6;
-                                    'july'=7; 'august'=8; 'september'=9; 'october'=10; 'november'=11; 'december'=12
+                                    'january' = 1; 'february' = 2; 'march' = 3; 'april' = 4; 'may' = 5; 'june' = 6;
+                                    'july' = 7; 'august' = 8; 'september' = 9; 'october' = 10; 'november' = 11; 'december' = 12
                                 }
                                 $monthNum = $monthNames[$part1.ToLower()]
                                 if ($monthNum -and $part2 -match '^\d{1,2}$') {
@@ -793,8 +796,8 @@ $urlTestScriptBlock = {
                             }
                             elseif ($part2 -match '^(january|february|march|april|may|june|july|august|september|october|november|december)$') {
                                 $monthNames = @{
-                                    'january'=1; 'february'=2; 'march'=3; 'april'=4; 'may'=5; 'june'=6;
-                                    'july'=7; 'august'=8; 'september'=9; 'october'=10; 'november'=11; 'december'=12
+                                    'january' = 1; 'february' = 2; 'march' = 3; 'april' = 4; 'may' = 5; 'june' = 6;
+                                    'july' = 7; 'august' = 8; 'september' = 9; 'october' = 10; 'november' = 11; 'december' = 12
                                 }
                                 $monthNum = $monthNames[$part2.ToLower()]
                                 if ($monthNum -and $part1 -match '^\d{1,2}$') {
@@ -810,8 +813,8 @@ $urlTestScriptBlock = {
                             
                             if ($part1 -match '^(january|february|march|april|may|june|july|august|september|october|november|december)$') {
                                 $monthNames = @{
-                                    'january'=1; 'february'=2; 'march'=3; 'april'=4; 'may'=5; 'june'=6;
-                                    'july'=7; 'august'=8; 'september'=9; 'october'=10; 'november'=11; 'december'=12
+                                    'january' = 1; 'february' = 2; 'march' = 3; 'april' = 4; 'may' = 5; 'june' = 6;
+                                    'july' = 7; 'august' = 8; 'september' = 9; 'october' = 10; 'november' = 11; 'december' = 12
                                 }
                                 $monthNum = $monthNames[$part1.ToLower()]
                                 if ($monthNum -and $part2 -match '^\d{1,2}$') {
@@ -821,8 +824,8 @@ $urlTestScriptBlock = {
                             }
                             elseif ($part2 -match '^(january|february|march|april|may|june|july|august|september|october|november|december)$') {
                                 $monthNames = @{
-                                    'january'=1; 'february'=2; 'march'=3; 'april'=4; 'may'=5; 'june'=6;
-                                    'july'=7; 'august'=8; 'september'=9; 'october'=10; 'november'=11; 'december'=12
+                                    'january' = 1; 'february' = 2; 'march' = 3; 'april' = 4; 'may' = 5; 'june' = 6;
+                                    'july' = 7; 'august' = 8; 'september' = 9; 'october' = 10; 'november' = 11; 'december' = 12
                                 }
                                 $monthNum = $monthNames[$part2.ToLower()]
                                 if ($monthNum -and $part1 -match '^\d{1,2}$') {
@@ -869,8 +872,8 @@ foreach ($file in $allFiles) {
         
         if ($canonicalUrl) {
             $filesWithUrls += @{
-                File = $file
-                Url = $canonicalUrl
+                File    = $file
+                Url     = $canonicalUrl
                 Content = $content
             }
         }
@@ -887,128 +890,135 @@ $batchSize = 10
 $completedCount = 0
 $results = @()
 
-for ($i = 0; $i -lt $filesWithUrls.Count; $i += $batchSize) {
-    $batch = $filesWithUrls[$i..([Math]::Min($i + $batchSize - 1, $filesWithUrls.Count - 1))]
+# for ($i = 0; $i -lt $filesWithUrls.Count; $i += $batchSize) {
+#     $batch = $filesWithUrls[$i..([Math]::Min($i + $batchSize - 1, $filesWithUrls.Count - 1))]
     
-    # Start parallel jobs for this batch
-    $jobs = @()
-    foreach ($item in $batch) {
-        $job = Start-Job -ScriptBlock $urlTestScriptBlock -ArgumentList $item.File, $item.Url, $item.Content
-        $jobs += $job
-    }
+#     # Start parallel jobs for this batch
+#     $jobs = @()
+#     foreach ($item in $batch) {
+#         $job = Start-Job -ScriptBlock $urlTestScriptBlock -ArgumentList $item.File, $item.Url, $item.Content
+#         $jobs += $job
+#     }
     
-    # Wait for all jobs in this batch to complete
-    $batchResults = Receive-Job -Job $jobs -Wait
-    $results += $batchResults
+#     # Wait for all jobs in this batch to complete
+#     $batchResults = Receive-Job -Job $jobs -Wait
+#     $results += $batchResults
     
-    # Clean up jobs
-    Remove-Job -Job $jobs -Force
+#     # Clean up jobs
+#     Remove-Job -Job $jobs -Force
     
-    $completedCount += $batch.Count
-    Write-Host "   Progress: $completedCount/$($filesWithUrls.Count) URLs tested..." -ForegroundColor Gray
-}
+#     $completedCount += $batch.Count
+#     Write-Host "   Progress: $completedCount/$($filesWithUrls.Count) URLs tested..." -ForegroundColor Gray
+# }
 
 # Process results
-foreach ($result in $results) {
-    if (-not $result.Success) {
-        $urlIssues += @{
-            File = $result.File
-            Url = $result.Url
-            Error = $result.Error
-        }
-    }
+# foreach ($result in $results) {
+#     if (-not $result.Success) {
+#         $urlIssues += @{
+#             File  = $result.File
+#             Url   = $result.Url
+#             Error = $result.Error
+#         }
+#     }
     
-    if ($result.IsRemoved) {
-        $removedPosts += @{
-            File = $result.File
-            Url = $result.Url
-            Status = 'Post removed'
-        }
-    }
+#     if ($result.IsRemoved) {
+#         $removedPosts += @{
+#             File   = $result.File
+#             Url    = $result.Url
+#             Status = 'Post removed'
+#         }
+#     }
     
-    # Check date mismatches with timezone tolerance
-    if ($result.HtmlDate -and $result.FrontmatterDate) {
-        if (Test-DateSignificantlyDifferent $result.HtmlDate $result.FrontmatterDate) {
-            $urlDateMismatches += @{
-                File = $result.File
-                Url = $result.Url
-                HtmlDate = $result.HtmlDate
-                FrontmatterDate = $result.FrontmatterDate
-                Source = 'HTML'
-            }
-        }
-    }
+#     # Check date mismatches with timezone tolerance
+#     if ($result.HtmlDate -and $result.FrontmatterDate) {
+#         if (Test-DateSignificantlyDifferent $result.HtmlDate $result.FrontmatterDate) {
+#             $urlDateMismatches += @{
+#                 File            = $result.File
+#                 Url             = $result.Url
+#                 HtmlDate        = $result.HtmlDate
+#                 FrontmatterDate = $result.FrontmatterDate
+#                 Source          = 'HTML'
+#             }
+#         }
+#     }
     
-    if ($result.UrlDate -and $result.FrontmatterDate) {
-        if (Test-DateSignificantlyDifferent $result.UrlDate $result.FrontmatterDate) {
-            $urlDateMismatches += @{
-                File = $result.File
-                Url = $result.Url
-                UrlDate = $result.UrlDate
-                FrontmatterDate = $result.FrontmatterDate
-                Source = 'URL'
-            }
-        }
-    }
+#     if ($result.UrlDate -and $result.FrontmatterDate) {
+#         if (Test-DateSignificantlyDifferent $result.UrlDate $result.FrontmatterDate) {
+#             $urlDateMismatches += @{
+#                 File            = $result.File
+#                 Url             = $result.Url
+#                 UrlDate         = $result.UrlDate
+#                 FrontmatterDate = $result.FrontmatterDate
+#                 Source          = 'URL'
+#             }
+#         }
+#     }
     
-    # Also compare URL date with filename date
-    if ($result.UrlDate -and $result.File.Path -match "(\d{4}-\d{2}-\d{2})") {
-        $filenameDate = $matches[1]
-        if (Test-DateSignificantlyDifferent $result.UrlDate $filenameDate) {
-            $urlDateMismatches += @{
-                File = $result.File
-                Url = $result.Url
-                UrlDate = $result.UrlDate
-                FilenameDate = $filenameDate
-                Source = 'URL vs Filename'
-            }
-        }
-    }
-}
+#     # Also compare URL date with filename date
+#     if ($result.UrlDate -and $result.File.Path -match "(\d{4}-\d{2}-\d{2})") {
+#         $filenameDate = $matches[1]
+#         if (Test-DateSignificantlyDifferent $result.UrlDate $filenameDate) {
+#             $urlDateMismatches += @{
+#                 File         = $result.File
+#                 Url          = $result.Url
+#                 UrlDate      = $result.UrlDate
+#                 FilenameDate = $filenameDate
+#                 Source       = 'URL vs Filename'
+#             }
+#         }
+#     }
+# }
 
-if ($urlIssues.Count -gt 0) {
-    Write-Host "❌ Found $($urlIssues.Count) URL accessibility issues:" -ForegroundColor Red
-    foreach ($issue in $urlIssues) {
-        Write-Host "   📁 $($issue.File)" -ForegroundColor Yellow
-        Write-Host "      URL: $($issue.Url)" -ForegroundColor White
-        Write-Host "      Error: $($issue.Error)" -ForegroundColor Gray
-    }
-} else {
-    Write-Host "✅ All canonical URLs are accessible!" -ForegroundColor Green
-}
+# if ($urlIssues.Count -gt 0) {
+#     Write-Host "❌ Found $($urlIssues.Count) URL accessibility issues:" -ForegroundColor Red
+#     foreach ($issue in $urlIssues) {
+#         Write-Host "   📁 $($issue.File)" -ForegroundColor Yellow
+#         Write-Host "      URL: $($issue.Url)" -ForegroundColor White
+#         Write-Host "      Error: $($issue.Error)" -ForegroundColor Gray
+#     }
+# }
+# else {
+#     Write-Host "✅ All canonical URLs are accessible!" -ForegroundColor Green
+# }
 
-if ($removedPosts.Count -gt 0) {
-    Write-Host "❌ Found $($removedPosts.Count) removed posts in community content:" -ForegroundColor Red
-    foreach ($removed in $removedPosts) {
-        Write-Host "   📁 $($removed.File)" -ForegroundColor Yellow
-        Write-Host "      URL: $($removed.Url)" -ForegroundColor White
-        Write-Host "      Status: $($removed.Status)" -ForegroundColor Gray
-    }
-}
+# if ($removedPosts.Count -gt 0) {
+#     Write-Host "❌ Found $($removedPosts.Count) removed posts in community content:" -ForegroundColor Red
+#     foreach ($removed in $removedPosts) {
+#         Write-Host "   📁 $($removed.File)" -ForegroundColor Yellow
+#         Write-Host "      URL: $($removed.Url)" -ForegroundColor White
+#         Write-Host "      Status: $($removed.Status)" -ForegroundColor Gray
+#     }
+# }
 
-if ($urlDateMismatches.Count -gt 0) {
-    # Remove duplicates by creating a unique key for each mismatch
-    $uniqueMismatches = @{}
-    foreach ($mismatch in $urlDateMismatches) {
-        $key = "$($mismatch.File)|$($mismatch.Source)"
-        if (-not $uniqueMismatches.ContainsKey($key)) {
-            $uniqueMismatches[$key] = $mismatch
-        }
-    }
-    $urlDateMismatches = $uniqueMismatches.Values
+# if ($urlDateMismatches.Count -gt 0) {
+#     # Remove duplicates by creating a unique key for each mismatch
+#     $uniqueMismatches = @{}
+#     foreach ($mismatch in $urlDateMismatches) {
+#         $key = "$($mismatch.File)|$($mismatch.Source)"
+#         if (-not $uniqueMismatches.ContainsKey($key)) {
+#             $uniqueMismatches[$key] = $mismatch
+#         }
+#     }
+#     $urlDateMismatches = $uniqueMismatches.Values
     
-    Write-Host "❌ Found $($urlDateMismatches.Count) significant date mismatches from URLs/HTML (ignoring 7-day publishing differences):" -ForegroundColor Red
-    foreach ($mismatch in $urlDateMismatches) {
-        Write-Host "   📁 $($mismatch.File)" -ForegroundColor Yellow
-        Write-Host "      URL: $($mismatch.Url)" -ForegroundColor White
-        if ($mismatch.HtmlDate) {
-            Write-Host "      HTML Date: $($mismatch.HtmlDate) | Frontmatter: $($mismatch.FrontmatterDate)" -ForegroundColor Gray
-        }
-        if ($mismatch.UrlDate) {
-            $comparison = if ($mismatch.Source -eq 'URL vs Filename') { "Filename: $($mismatch.FilenameDate)" } else { "Frontmatter: $($mismatch.FrontmatterDate)" }
-            Write-Host "      URL Date: $($mismatch.UrlDate) | $comparison" -ForegroundColor Gray
-        }
-    }
+#     Write-Host "❌ Found $($urlDateMismatches.Count) significant date mismatches from URLs/HTML (ignoring 7-day publishing differences):" -ForegroundColor Red
+#     foreach ($mismatch in $urlDateMismatches) {
+#         Write-Host "   📁 $($mismatch.File)" -ForegroundColor Yellow
+#         Write-Host "      URL: $($mismatch.Url)" -ForegroundColor White
+#         if ($mismatch.HtmlDate) {
+#             Write-Host "      HTML Date: $($mismatch.HtmlDate) | Frontmatter: $($mismatch.FrontmatterDate)" -ForegroundColor Gray
+#         }
+#         if ($mismatch.UrlDate) {
+#             $comparison = if ($mismatch.Source -eq 'URL vs Filename') { "Filename: $($mismatch.FilenameDate)" } else { "Frontmatter: $($mismatch.FrontmatterDate)" }
+#             Write-Host "      URL Date: $($mismatch.UrlDate) | $comparison" -ForegroundColor Gray
+#         }
+#     }
+# }
+# else {
+#     Write-Host "✅ All URL/HTML dates match frontmatter dates (within 1-day tolerance)!" -ForegroundColor Green
+# }
+# Write-Host ""
+
 # 4. CANONICAL URL DUPLICATION CHECK
 Write-Host "🔴 CHECKING CANONICAL URL DUPLICATES..." -ForegroundColor Red
 $canonicalUrlGroups = @{}
@@ -1045,13 +1055,9 @@ if ($duplicateCanonicalUrls.Count -gt 0) {
         }
         Write-Host ""
     }
-} else {
-    Write-Host "✅ All canonical URLs are unique!" -ForegroundColor Green
 }
-Write-Host ""
-
-} else {
-    Write-Host "✅ All URL/HTML dates match frontmatter dates (within 1-day tolerance)!" -ForegroundColor Green
+else {
+    Write-Host "✅ All canonical URLs are unique!" -ForegroundColor Green
 }
 Write-Host ""
 
@@ -1100,15 +1106,15 @@ if (-not $QuickCheck) {
             $contentHashString = [System.BitConverter]::ToString($contentHash) -replace '-', ''
             
             $fileProfile = @{
-                Index = $fileIndex
-                File = $file
-                Title = $title
-                ContentWords = $contentWords
-                UniqueWords = $uniqueWords
-                WordCount = $contentWords.Count
+                Index           = $fileIndex
+                File            = $file
+                Title           = $title
+                ContentWords    = $contentWords
+                UniqueWords     = $uniqueWords
+                WordCount       = $contentWords.Count
                 UniqueWordCount = $uniqueWords.Count
-                ContentHash = $contentHashString
-                ContentBody = $contentBody.Substring(0, [Math]::Min(100, $contentBody.Length))
+                ContentHash     = $contentHashString
+                ContentBody     = $contentBody.Substring(0, [Math]::Min(100, $contentBody.Length))
             }
             
             $fileProfiles += $fileProfile
@@ -1145,12 +1151,12 @@ if (-not $QuickCheck) {
         for ($i = 0; $i -lt $files.Count; $i++) {
             for ($j = $i + 1; $j -lt $files.Count; $j++) {
                 $exactDuplicates += @{
-                    File1 = $files[$i].File.Path
-                    File2 = $files[$j].File.Path
-                    Similarity = 100.0
-                    Type = "Exact Content Match"
-                    Directory1 = $files[$i].File.Directory
-                    Directory2 = $files[$j].File.Directory
+                    File1          = $files[$i].File.Path
+                    File2          = $files[$j].File.Path
+                    Similarity     = 100.0
+                    Type           = "Exact Content Match"
+                    Directory1     = $files[$i].File.Directory
+                    Directory2     = $files[$j].File.Directory
                     ContentSample1 = $files[$i].ContentBody
                     ContentSample2 = $files[$j].ContentBody
                 }
@@ -1184,7 +1190,8 @@ if (-not $QuickCheck) {
         foreach ($word in $profile1.UniqueWords) {
             if ($wordIndex.ContainsKey($word)) {
                 foreach ($matchIndex in $wordIndex[$word]) {
-                    if ($matchIndex -gt $i) {  # Only compare each pair once
+                    if ($matchIndex -gt $i) {
+                        # Only compare each pair once
                         if (-not $potentialMatches.ContainsKey($matchIndex)) {
                             $potentialMatches[$matchIndex] = 0
                         }
@@ -1231,9 +1238,9 @@ if (-not $QuickCheck) {
             
             # This pair passes all mathematical pre-filters, add to candidates
             $candidatePairs += @{
-                Profile1 = $profile1
-                Profile2 = $profile2
-                SharedWords = $sharedWords
+                Profile1            = $profile1
+                Profile2            = $profile2
+                SharedWords         = $sharedWords
                 EstimatedSimilarity = $maxPossibleJaccard
             }
         }
@@ -1274,12 +1281,12 @@ if (-not $QuickCheck) {
         
         if ($jaccardSimilarity -ge $SimilarityThreshold) {
             $similarDuplicates += @{
-                File1 = $profile1.File.Path
-                File2 = $profile2.File.Path
-                Similarity = $jaccardSimilarity
-                Type = "Content Similarity"
-                Directory1 = $profile1.File.Directory
-                Directory2 = $profile2.File.Directory
+                File1          = $profile1.File.Path
+                File2          = $profile2.File.Path
+                Similarity     = $jaccardSimilarity
+                Type           = "Content Similarity"
+                Directory1     = $profile1.File.Directory
+                Directory2     = $profile2.File.Directory
                 ContentSample1 = $profile1.ContentBody
                 ContentSample2 = $profile2.ContentBody
             }
@@ -1331,14 +1338,14 @@ if (-not $QuickCheck) {
             # Add both files as potential candidates
             if (-not $fileGroups.ContainsKey($file1)) {
                 $fileGroups[$file1] = @{
-                    FilePath = $file1
+                    FilePath  = $file1
                     Directory = $duplicate.Directory1
                     SimilarTo = @()
                 }
             }
             if (-not $fileGroups.ContainsKey($file2)) {
                 $fileGroups[$file2] = @{
-                    FilePath = $file2
+                    FilePath  = $file2
                     Directory = $duplicate.Directory2
                     SimilarTo = @()
                 }
@@ -1346,16 +1353,16 @@ if (-not $QuickCheck) {
             
             # Add the similarity relationships
             $fileGroups[$file1].SimilarTo += @{
-                File = $file2
+                File       = $file2
                 Similarity = $duplicate.Similarity
-                Type = $duplicate.Type
-                Directory = $duplicate.Directory2
+                Type       = $duplicate.Type
+                Directory  = $duplicate.Directory2
             }
             $fileGroups[$file2].SimilarTo += @{
-                File = $file1
+                File       = $file1
                 Similarity = $duplicate.Similarity
-                Type = $duplicate.Type
-                Directory = $duplicate.Directory1
+                Type       = $duplicate.Type
+                Directory  = $duplicate.Directory1
             }
         }
         
@@ -1389,10 +1396,12 @@ if (-not $QuickCheck) {
         }
         
         Write-Host "💡 These files are candidates for review. Check if they contain duplicate content." -ForegroundColor Cyan
-    } else {
+    }
+    else {
         Write-Host "✅ No concerning duplicates found at $SimilarityThreshold% threshold!" -ForegroundColor Green
     }
-} else {
+}
+else {
     Write-Host "⚡ Skipping duplicate check (use without -QuickCheck for full analysis)" -ForegroundColor Yellow
 }
 
@@ -1425,7 +1434,8 @@ $allIssuesCount = $dateMismatches.Count + $permalinkMismatches.Count + $urlIssue
 if ($allIssuesCount -eq 0 -and $nonMarkdownFiles.Count -eq 0) {
     Write-Host ""
     Write-Host "🎉 ALL VALIDATION CHECKS PASSED!" -ForegroundColor Green
-} else {
+}
+else {
     Write-Host ""
     Write-Host "⚠️  Issues found - see details above" -ForegroundColor Yellow
 }

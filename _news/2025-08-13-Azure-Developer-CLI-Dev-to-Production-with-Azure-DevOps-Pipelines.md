@@ -71,36 +71,36 @@ stages:
 1. **Initialize Your Project**
 
    ```
-azd init -t https://github.com/puicchan/azd-dev-prod-appservice-storage
+   azd init -t https://github.com/puicchan/azd-dev-prod-appservice-storage
    ```
 
    Use a dev-focused environment name, e.g., `projazdo-dev`.
 
-1. **Edit `azure.yaml`**
+2. **Edit `azure.yaml`**
    - Set Azure DevOps as your pipeline provider.
    - Add required production variables: `AZURE_PROD_ENV_NAME`, `AZURE_PROD_ENV_TYPE`, `AZURE_PROD_LOCATION`, `AZURE_PROD_SUBSCRIPTION_ID`.
 
-2. **Set Up Development Environment**
+3. **Set Up Development Environment**
 
    ```
-azd up
+   azd up
    ```
 
-1. **Set Up Production Environment**
+4. **Set Up Production Environment**
 
    ```
-azd env new projazdo-prod
-azd env set AZURE_ENV_TYPE prod
-azd provision
+   azd env new projazdo-prod
+   azd env set AZURE_ENV_TYPE prod
+   azd provision
    ```
 
-1. **Test End-to-End Flow**
+5. **Test End-to-End Flow**
    - Switch between dev and prod, set pipeline-required environment variables, and validate deployments.
 
-2. **Configure the CI/CD Pipeline**
+6. **Configure the CI/CD Pipeline**
 
    ```
-azd pipeline config
+   azd pipeline config
    ```
 
    - Monitor pipeline runs in Azure Pipelines.
