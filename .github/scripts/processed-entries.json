@@ -6788,5 +6788,11 @@
     "reason": "Succesfully added: Assigned the AI category because the content is an in-depth technical tutorial focusing on running, converting, and optimizing AI language models (specifically Qwen3-0.6B, Phi, DeepSeek) on local hardware. The guide covers the use of Microsoft Olive, ONNX model conversion, and local inference best practices, all of which fall under 'AI Development with Microsoft Technologies' (AI inclusion rule 4). The Azure, DevOps, Coding, ML, Security, and GitHub Copilot categories were not assigned: it does not cover Azure platform/services, DevOps workflows, code-focused programming, direct ML engineering/model training from code, security/identity, or Copilot features. Community content length is well above 200 words of meaningful content, so no generic exclusions apply.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/educator-developer-blog/how-to-use-custom-models-with-foundry-local-a-beginner-s-guide/ba-p/4428857",
     "timestamp": "2025-08-18 07:22:41 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned based on the following rules: 'AI' because the content is focused on agentic AI, GitHub Copilot, and autonomous AI tools in DevOps (AI category rules 1, 2, 4, 5). 'DevOps' because the central theme is how AI is transforming DevOps practices and pipelines, including models of human-AI collaboration and pipeline automation (DevOps rules 2, 3, 4, 5, 9). 'Security' due to emphasis on compliance, risk management, oversight, and security blind spots introduced by automation (Security rules 4, 5, 6, 9, 10; black-box decisions, regulatory risk, security vulnerabilities are discussed). Other generic exclusion rules do not apply - the article is technical, in English, not biographical, not a sales pitch, nor primarily business strategy or workplace culture.",
+    "collection": "posts",
+    "timestamp": "2025-08-18 08:20:36 +00:00",
+    "canonical_url": "https://devops.com/keeping-humans-in-the-loop-why-human-oversight-still-matters-in-an-ai-driven-devops-future/?utm_source=rss&utm_medium=rss&utm_campaign=keeping-humans-in-the-loop-why-human-oversight-still-matters-in-an-ai-driven-devops-future"
   }
 ]
