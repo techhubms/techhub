@@ -6980,5 +6980,11 @@
     "timestamp": "2025-08-19 20:14:35 +00:00",
     "canonical_url": "https://github.blog/news-insights/product-news/agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github/",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-19 22:12:36 +00:00",
+    "reason": "Succesfully added: Content qualifies for the DevOps category because it relates to configuration management, protection of code repositories, and GitHub security workflows (DevOps inclusion rules 2, 3, 5, 7). Security is assigned because the post is directly focused on preventing secret exposure, enforcing security policies, and protecting sensitive information within the software development lifecycle (Security inclusion rules 2, 4, 5, 8). AI, ML, Coding, Azure, and GitHub Copilot categories do not apply, as there is no discussion of AI/ML, application coding, Microsoft cloud services, or coding assistant features. There are no generic exclusion rule triggers in this content.",
+    "canonical_url": "https://github.blog/changelog/2025-08-19-secret-scanning-configuring-patterns-in-push-protection-is-now-generally-available",
+    "collection": "news"
   }
 ]
