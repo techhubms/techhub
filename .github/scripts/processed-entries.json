@@ -6872,5 +6872,17 @@
     "collection": "community",
     "reason": "Succesfully added: The content qualifies for the Azure category because it focuses entirely on deploying servers to Microsoft Azure Functions (Azure rule 1 and 4). The Coding category applies since developers are required to work directly with Python, Node.js, and .NET code, use SDKs, and perform deployment tasks (Coding rules 1, 2, and 4). The content does not specifically discuss AI/ML workloads, so AI and ML categories do not fit, and there is no focus on pipeline automation or security practices, so DevOps and Security categories do not apply.",
     "timestamp": "2025-08-19 03:38:50 +00:00"
+  },
+  {
+    "timestamp": "2025-08-19 08:18:04 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the article's central theme is how organizations are using and scaling AI with Microsoft Azure (AI Inclusion Rule 1 and 4). Assigned 'Azure' since Azure's modernization services are presented as foundational for AI adoption and digital transformation (Azure Rule 1 and 4). Did not include 'ML', 'Coding', 'DevOps', 'Security', or 'GitHub Copilot' as the content is high-level business/development strategy focused on AI and cloud modernization with no substantial technical detail, code, or security practices. No generic exclusion rules triggered, as the article is a technical thought leadership piece about cloud and AI transformation for practitioners and leaders.",
+    "collection": "news",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/building-the-frontier-firm-with-microsoft-azure-the-business-case-for-cloud-and-ai-modernization/"
+  },
+  {
+    "timestamp": "2025-08-19 08:18:57 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content is exclusively about Azure Hybrid Benefit (Azure inclusion rules 1 and 4), focusing on Azure licensing, cost optimization, and workload migration. No other categories qualify: there is no substantive AI, machine learning, security, coding, GitHub Copilot, or DevOps coverage per the description. The episode is about cost management and licensing for Azure, and the associated resources and chapters confirm this focus.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=1LgV-kfnUAA"
   }
 ]
