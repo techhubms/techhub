@@ -6890,5 +6890,23 @@
     "reason": "Succesfully added: Assigned the AI category since the post focuses on building custom copilots using Microsoft's Copilot Studio, which is a developer/maker AI platform (AI inclusion rule 1 and 2). Although Power Automate is also discussed, it's used to extend AI-driven copilots rather than for coding or DevOps purposes, and the post does not cover code-level customization or developer-focused extensibility, so Coding and DevOps categories were not included. Microsoft 365 Copilot and other end-user productivity tools are not involved, and Copilot Studio is explicitly a developer/maker tool per the Copilot Product Distinction rule.",
     "canonical_url": "https://dellenny.com/integrating-copilot-studio-with-power-automate-for-end-to-end-workflows/",
     "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Coding' category because the content is centered on testing frameworks (TUnit vs. xUnit), discusses .NET-focused development practices, and walks through step-by-step code and build process changes—all fitting Coding Rule 1 (Microsoft Programming Languages), Rule 2 (Development Frameworks/Tools), and Rule 4 (Coding Practices with Microsoft Technologies). Azure, AI, ML, DevOps, and Security are not substantively present, as this post focuses on C#/.NET unit testing rather than additional cloud/services integration or operational practices.",
+    "timestamp": "2025-08-19 11:11:50 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://andrewlock.net/converting-an-xunit-project-to-tunit/"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category based on content focus on AI agents, context engineering for AI tools, and detailed coverage of AI integration in development workflows (AI rules 1, 4, and 5). Assigned DevOps category because the entire article centers on DevOps lifecycle integration, pipeline automation, team workflows, infrastructure, and operational visibility (DevOps rules 1, 3, 5, and 9). Coding and Azure categories were not added; the content is conceptually technical but does not involve specific programming languages, frameworks, or direct Microsoft Azure tool/application usage. Exclusion rules do not apply as the content is technical, detailed, covers automation and engineering workflows, and is not business management, sales, or biographical in nature.",
+    "timestamp": "2025-08-19 11:12:31 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/context-engineering-is-the-key-to-unlocking-ai-agents-in-devops/?utm_source=rss&utm_medium=rss&utm_campaign=context-engineering-is-the-key-to-unlocking-ai-agents-in-devops"
+  },
+  {
+    "reason": "Succesfully added: Content qualifies for the DevOps category under inclusion rule 4 (Development Methodologies), rule 5 (CI/CD and deployment), and rule 6 (Infrastructure and automation). The main focus is technical strategies for optimizing cloud cost using code and DevOps automation. Azure or other Microsoft-specific technologies are referenced in process (e.g., Infrastructure as Code) but are not central enough to warrant the Azure or AI categories. No Coding category because direct programming language or framework implementation details are not covered. No ML/AI/Security category as those topics are not substantively addressed in this content. The content meets quality standards and is not excluded by generic exclusion rules (not biographical, not a sales pitch, not negative, not a short community post, and not non-English or job-related).",
+    "timestamp": "2025-08-19 11:13:03 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/finops-as-code-unlocking-cloud-cost-optimization/?utm_source=rss&utm_medium=rss&utm_campaign=finops-as-code-unlocking-cloud-cost-optimization"
   }
 ]
