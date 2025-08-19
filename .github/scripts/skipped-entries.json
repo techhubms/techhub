@@ -6459,5 +6459,11 @@
     "reason": "No categories found: Content excluded based on generic exclusion rule regarding business productivity, non-development Microsoft 365 Copilot products, and business strategy focus. The post discusses Microsoft Copilot in the context of productivity tools for enterprises (Microsoft 365, Dynamics 365, Power Platform), focusing on innovation, productivity, business insights, collaboration, and compliance at a high level. There is only a brief mention of GitHub Copilot in one section and not enough technical depth related to developer tooling or coding practices. The main body centers on business outcomes, adoption strategies, workplace transformation, and how Copilot enhances productivity in knowledge work, not code development or technical implementation. According to Chapter 3 Non-Development Microsoft Products and Business Strategy Exclusion rules, this content does not qualify for any categories.",
     "collection": "posts",
     "canonical_url": "https://dellenny.com/how-enterprises-are-leveraging-microsoft-copilot-to-drive-innovation/"
+  },
+  {
+    "timestamp": "2025-08-19 10:15:44 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is focused on general mobile app frameworks (Flutter, React Native, .NET MAUI) and architectural patterns, not specific to Microsoft technologies or ecosystems. While .NET MAUI is mentioned, it is not the main subject nor central to the advice, and Microsoft-specific development comprises much less than 40% of the content (per Multi-Platform Content Threshold rule). There is no substantive focus on Azure, AI, DevOps, Security, or coding practices in the Microsoft ecosystem. Thus, all inclusion conditions are not met. Generic exclusions do not apply.",
+    "canonical_url": "https://devops.com/what-really-matters-when-picking-a-cross-platform-stack-today/?utm_source=rss&utm_medium=rss&utm_campaign=what-really-matters-when-picking-a-cross-platform-stack-today",
+    "collection": "posts"
   }
 ]
