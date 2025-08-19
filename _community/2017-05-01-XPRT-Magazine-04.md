@@ -8,8 +8,8 @@ author: "Xebia"
 viewing_mode: "external"
 permalink: "/2017-05-01-XPRT-Magazine-04.html"
 excerpt_separator: <!--excerpt_end-->
-tags: [".NET", "App Delivery", "Auth0", "Azure", "Azure Functions", "Backup", "Change Management", "Cloud Computing", "Cloud Native", "Coding", "Containers", "DevOps", "IT Transformation", "Magazines", "Security", "Serverless", "Service Fabric", "Technical Introduction", "Windows Containers", "Xamarin"]
-tags_normalized: ["net", "app delivery", "auth0", "azure", "azure functions", "backup", "change management", "cloud computing", "cloud native", "coding", "containers", "devops", "it transformation", "magazines", "security", "serverless", "service fabric", "technical introduction", "windows containers", "xamarin"]
+tags: [".NET", "App Delivery", "Auth0", "Azure", "Azure Functions", "Backup", "Change Management", "Cloud Computing", "Cloud Native", "Coding", "Community", "Containers", "DevOps", "IT Transformation", "Magazines", "Security", "Serverless", "Service Fabric", "Technical Introduction", "Windows Containers", "Xamarin"]
+tags_normalized: ["net", "app delivery", "auth0", "azure", "azure functions", "backup", "change management", "cloud computing", "cloud native", "coding", "community", "containers", "devops", "it transformation", "magazines", "security", "serverless", "service fabric", "technical introduction", "windows containers", "xamarin"]
 ---
 
 XPRT Magazine 04 explores serverless computing, Azure Functions, modern IT containerization, cloud-native Xamarin apps, Auth0 authentication, backup and restore in Azure Service Fabric, and more. This issue provides practical guidance for building scalable, resilient, and modern cloud solutions.

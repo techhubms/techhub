@@ -8,8 +8,8 @@ author: "Xebia"
 viewing_mode: "external"
 permalink: "/2023-05-01-XPRT-Magazine-14.html"
 excerpt_separator: <!--excerpt_end-->
-tags: ["AI", "Automation", "Azure", "Bicep", "Blazor", "ChatGPT", "CI/CD", "Cloud Security", "Coding", "DevOps", "Digital Transformation", "Entity Framework", "Identity", "Load Testing", "Magazines", "Mutation Testing", "OAuth2", "Pulumi", "Security", "Terraform", "Zero Trust"]
-tags_normalized: ["ai", "automation", "azure", "bicep", "blazor", "chatgpt", "ci slash cd", "cloud security", "coding", "devops", "digital transformation", "entity framework", "identity", "load testing", "magazines", "mutation testing", "oauth2", "pulumi", "security", "terraform", "zero trust"]
+tags: ["AI", "Automation", "Azure", "Bicep", "Blazor", "ChatGPT", "CI/CD", "Cloud Security", "Coding", "Community", "DevOps", "Digital Transformation", "Entity Framework", "Identity", "Load Testing", "Magazines", "Mutation Testing", "OAuth2", "Pulumi", "Security", "Terraform", "Zero Trust"]
+tags_normalized: ["ai", "automation", "azure", "bicep", "blazor", "chatgpt", "ci slash cd", "cloud security", "coding", "community", "devops", "digital transformation", "entity framework", "identity", "load testing", "magazines", "mutation testing", "oauth2", "pulumi", "security", "terraform", "zero trust"]
 ---
 
 XPRT Magazine 14 explores digital transformation, the rise of AI and ChatGPT, cloud security, Blazor migrations, CI/CD workflows, load testing, identity management, and more. This issue provides practical strategies and technical insights for navigating modern software engineering and security challenges.

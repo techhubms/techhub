@@ -14,7 +14,7 @@
     6. Condense content to 200-300 lines while maintaining narrative quality
     7. Generate metadata (title, tags, description, introduction)
     8. Create final markdown file with table of contents
-    9. Validate content against writing style guidelines
+    9. Rewrite content against writing style guidelines
 
 .PARAMETER StartDate
     Start date for the roundup range (format: yyyy-MM-dd)
@@ -213,7 +213,7 @@ try {
         Write-Host "✅ Backup content loaded, starting from step $StartFromStep" -ForegroundColor Green
         
         # If starting from step 3 or later, parse the JSON backup to reconstruct articleSummaries
-        if ($StartFromStep -ge 3) {
+        if ($StartFromStep -eq 3) {
             try {
                 $backupData = $resumeContent | ConvertFrom-Json
                 Write-Host "📊 Reconstructing article summaries from backup..."
@@ -248,7 +248,7 @@ try {
     }
 
     if ($ResumeFromBackup -and $StartFromStep -eq 1) {
-        Write-Error "Cannot resume from backup and start from step 1. Use StartFromStep 2-7 when resuming."
+        Write-Error "Cannot resume from backup and start from step 1. Use StartFromStep 2-9 when resuming."
         exit 1
     }
 
@@ -318,6 +318,8 @@ RESPONSE FORMAT: Return ONLY a JSON object with this exact structure:
   "relevance_score": 1-10
 }
 
+CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full detailed analysis requested.
+
 SECTION CATEGORIZATION:
 - "GitHub Copilot": Anything specifically about GitHub Copilot, VS Code extensions, chat modes, features
 - "AI": General AI tools, models, platforms (excluding GitHub Copilot)
@@ -380,9 +382,9 @@ $articleContent
                 -RateLimitPreventionDelay $RateLimitPreventionDelay
 
             # Check for errors with robust error handling
-            $validationResult = Test-AiResponseFormat -Response $response -StepName "Step 2 (AI analysis for $articleName)"
-            if (-not $validationResult.IsValid) {
-                throw $validationResult.ErrorMessage
+            $rewriteResult = Test-AiResponseFormat -Response $response -StepName "Step 2 (AI analysis for $articleName)"
+            if (-not $rewriteResult.IsValid) {
+                throw $rewriteResult.ErrorMessage
             }
 
             # Parse AI response
@@ -451,6 +453,8 @@ Return the complete content for the SINGLE section provided with:
 - Clear, professional narrative flow throughout
 - Authentic language focused on practical developer benefits
 - Never use horizontal separators `---`, always use proper headings. The seperators will be added automatically with CSS.
+
+CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full detailed content requested.
 
 The section should follow this pattern:
 
@@ -587,9 +591,9 @@ $sectionInput
                     -RateLimitPreventionDelay $RateLimitPreventionDelay
 
                 # Check for errors with robust error handling
-                $validationResult = Test-AiResponseFormat -Response $sectionResponse -StepName "Step 3 - $($sectionName)"
-                if (-not $validationResult.IsValid) {
-                    Write-Error "Step 3 failed for section $($sectionName): $($validationResult.ErrorMessage)"
+                $rewriteResult = Test-AiResponseFormat -Response $sectionResponse -StepName "Step 3 - $($sectionName)"
+                if (-not $rewriteResult.IsValid) {
+                    Write-Error "Step 3 failed for section $($sectionName): $($rewriteResult.ErrorMessage)"
                     Write-Host ""
                     Write-Host "💡 To resume from this section, use: -StartFromStep 3 -ResumeFromSection `"$($sectionName)`"" -ForegroundColor Cyan
                     exit 1
@@ -668,6 +672,8 @@ You are an expert content editor creating ongoing narrative connections between 
 
 RESPONSE FORMAT:
 Return the enhanced content for the SINGLE section provided with the EXACT same structure as provided (all topics and links preserved), but with added narrative connections where relevant.
+
+CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full enhanced content requested.
 
 ONGOING NARRATIVE ENHANCEMENT STRATEGY:
 1. Identify products, features, or themes mentioned in BOTH the previous and current roundup for this section
@@ -799,8 +805,8 @@ $sectionContent
                         -RateLimitPreventionDelay $RateLimitPreventionDelay
 
                     # Check for errors with robust error handling  
-                    $validationResult = Test-AiResponseFormat -Response $sectionResponse -StepName "Step 4 - $sectionName"
-                    if (-not $validationResult.IsValid) {
+                    $rewriteResult = Test-AiResponseFormat -Response $sectionResponse -StepName "Step 4 - $sectionName"
+                    if (-not $rewriteResult.IsValid) {
                         Write-Host "⚠️ Warning: Step 4 ongoing narrative failed for $sectionName" -ForegroundColor Yellow
                         Write-Host "Using original content for this section..." -ForegroundColor Yellow
                         $sectionResponse = $sectionContent
@@ -864,8 +870,35 @@ $sectionContent
     }
     else {
         Write-Host "⏭️ Skipping Step 5 (merging) - resuming from backup"
-        if ($ResumeFromBackup -and $StartFromStep -eq 6) {
-            $step5Input = $resumeContent
+        # Only load Step 5 backup if we're actually going to execute Steps 6, 7, or 8
+        if ($StartFromStep -le 8) {
+            if ($ResumeFromBackup -and $StartFromStep -eq 6) {
+                $step5Input = $resumeContent
+            }
+            else {
+                # Load Step 5 backup if starting from later step
+                $step5BackupPattern = "*Step5-MergedInput*$StartDate*$EndDate*"
+                $step5BackupFile = Get-ChildItem ".tmp/roundup-debug" -Filter $step5BackupPattern -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+                
+                if ($step5BackupFile) {
+                    Write-Host "📂 Loading Step 5 backup from: $($step5BackupFile.Name)" -ForegroundColor Cyan
+                    $step5Input = Get-Content $step5BackupFile.FullName -Raw
+                }
+                else {
+                    # Fallback to Step 4 backup
+                    $step4BackupPattern = "*Step4-Combined*$StartDate*$EndDate*"
+                    $step4BackupFile = Get-ChildItem ".tmp/roundup-debug" -Filter $step4BackupPattern -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+                    
+                    if ($step4BackupFile) {
+                        Write-Host "📂 Loading Step 4 backup as fallback: $($step4BackupFile.Name)" -ForegroundColor Cyan
+                        $step5Input = Get-Content $step4BackupFile.FullName -Raw
+                    }
+                    else {
+                        Write-Error "No Step 4 or 5 backup found and required for continuation"
+                        exit 1
+                    }
+                }
+            }
         }
     }
 
@@ -875,15 +908,17 @@ $sectionContent
         Write-Host "📝 Step 6: Condensing content to target ~250 lines while preserving narrative quality..."
 
         $step6SystemMessage = @"
-You are an expert content editor focused on condensing well-organized content to an optimal length. You will receive complete, well-structured roundup content that needs to be condensed to approximately 250-400 lines while maintaining narrative quality and completeness.
+You are an expert content editor focused on condensing well-organized content to an optimal length. You will receive complete, well-structured roundup content that needs to be condensed while maintaining narrative quality and completeness.
 
 CONDENSATION TASK:
 - Receive well-organized content with proper sections, topics, and narrative flow
 - Condense to approximately 200-300 lines total
-- Preserve ALL article links - never remove source citations
-- Maintain the existing structure and organization
-- Keep all section headers (##) and topic headers (###) exactly as provided
-- Preserve narrative flow and professional tone
+- CRITICAL: Preserve ALL article links
+- CRITICAL: Maintain the existing structure and organization
+- CRITICAL: Keep all section headers (##) and topic headers (###) exactly as provided
+- CRITICAL: Preserve narrative flow and professional tone
+
+CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full condensed content requested.
 
 CONDENSATION STRATEGY:
 1. Trim verbose passages while keeping essential information
@@ -920,6 +955,7 @@ Return the condensed content maintaining the exact same structure as provided, w
 
         $step6UserMessage = @"
 WELL-ORGANIZED ROUNDUP CONTENT TO CONDENSE:
+
 $step5Input
 "@
 
@@ -933,8 +969,8 @@ $step5Input
             -RateLimitPreventionDelay $RateLimitPreventionDelay
 
         # Check for errors with robust error handling
-        $validationResult = Test-AiResponseFormat -Response $step6Response -StepName "Step 6"
-        if (-not $validationResult.IsValid) {
+        $rewriteResult = Test-AiResponseFormat -Response $step6Response -StepName "Step 6"
+        if (-not $rewriteResult.IsValid) {
             Write-Host "⚠️ Warning: Step 6 content condensation failed" -ForegroundColor Yellow
             Write-Host "Using Step 5 content..." -ForegroundColor Yellow
             $step6Response = $step5Input
@@ -946,8 +982,25 @@ $step5Input
     }
     else {
         Write-Host "⏭️ Skipping Step 6 (content condensation) - resuming from backup"
-        if ($ResumeFromBackup -and $StartFromStep -eq 7) {
-            $step6Response = $resumeContent
+        # Only load backup if we're actually going to need Step 6 output for Step 7
+        if ($StartFromStep -le 7) {
+            if ($ResumeFromBackup -and $StartFromStep -eq 7) {
+                $step6Response = $resumeContent
+            }
+            else {
+                # Load Step 6 backup if starting from later step
+                $step6BackupPattern = "*Step6-Condensed*$StartDate*$EndDate*"
+                $step6BackupFile = Get-ChildItem ".tmp/roundup-debug" -Filter $step6BackupPattern -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+                
+                if ($step6BackupFile) {
+                    Write-Host "📂 Loading Step 6 backup from: $($step6BackupFile.Name)" -ForegroundColor Cyan
+                    $step6Response = Get-Content $step6BackupFile.FullName -Raw
+                }
+                else {
+                    Write-Host "⚠️ No Step 6 backup found, using Step 5 content" -ForegroundColor Yellow
+                    $step6Response = $step5Input
+                }
+            }
         }
     }
 
@@ -970,6 +1023,8 @@ CRITICAL REQUIREMENTS:
   * Provides context for the stories that follow
   * Sets up the narrative flow
 
+CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the complete metadata requested.
+
 Do NOT include the full content or table of contents - only the metadata fields listed above.
 "@
 
@@ -991,9 +1046,9 @@ Return only JSON with fields: title, tags, description, introduction
             -RateLimitPreventionDelay $RateLimitPreventionDelay
 
         # Check for errors with robust error handling
-        $validationResult = Test-AiResponseFormat -Response $step7Response -StepName "Step 7"
-        if (-not $validationResult.IsValid) {
-            Write-Error $validationResult.ErrorMessage
+        $rewriteResult = Test-AiResponseFormat -Response $step7Response -StepName "Step 7"
+        if (-not $rewriteResult.IsValid) {
+            Write-Error $rewriteResult.ErrorMessage
             exit 1
         }
 
@@ -1019,8 +1074,25 @@ Return only JSON with fields: title, tags, description, introduction
     }
     else {
         Write-Host "⏭️ Skipping Step 7 (metadata generation) - resuming from backup"
-        if ($ResumeFromBackup -and $StartFromStep -eq 8) {
-            $step7Response = $resumeContent
+        # Only load backup if we're actually going to need Step 7 output for Step 8
+        if ($StartFromStep -le 8) {
+            if ($ResumeFromBackup -and $StartFromStep -eq 8) {
+                $step7Response = $resumeContent
+            }
+            else {
+                # Load Step 7 backup if starting from later step
+                $step7BackupPattern = "*Step7-Metadata*$StartDate*$EndDate*"
+                $step7BackupFile = Get-ChildItem ".tmp/roundup-debug" -Filter $step7BackupPattern -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+                
+                if ($step7BackupFile) {
+                    Write-Host "📂 Loading Step 7 backup from: $($step7BackupFile.Name)" -ForegroundColor Cyan
+                    $step7Response = Get-Content $step7BackupFile.FullName -Raw
+                }
+                else {
+                    Write-Error "Step 7 backup not found and required for continuation"
+                    exit 1
+                }
+            }
         }
     }
 
@@ -1091,116 +1163,88 @@ $tableOfContents
 $step6Response
 "@
             
-            Save-StepBackup -StepName "Step8-Final" -Content $finalContent -StartDate $StartDate -EndDate $EndDate
-            Write-Host "✅ Step 8 complete - Final markdown file created"
+            Save-StepBackup -StepName "Step8-IncludingFrontmatter" -Content $finalContent -StartDate $StartDate -EndDate $EndDate
+            Write-Host "✅ Step 8 complete - Markdown file including frontmatter created"
         }
     }
     else {
-        Write-Host "⏭️ Skipping Step 8 (final file creation) - not needed for this run"
-        $finalContent = $step7Response  # Use metadata as final content if we're not running step 8
+        Write-Host "⏭️ Skipping Step 8 (markdown + frontmatter file creation) - resuming from backup"
+        # If a backup file is explicitly provided, always use that
+        if ($ResumeFromBackup) {
+            $finalContent = $resumeContent
+            Write-Host "📂 Using provided backup file" -ForegroundColor Cyan
+        }
+        else {
+            Write-Error "Step 8 requires a backup file to continue. Please provide -ResumeFromBackup parameter."
+            exit 1
+        }
     }
 
-    # Step 9: Validate Content Against Writing Style Guidelines
-    Write-Host "📖 Step 9: Validating content against writing style guidelines..."
+    # Step 9: Rewrite Content Against Writing Style Guidelines
+    # If we're resuming from step 9 backup, the backup content should be the final content
+    if ($ResumeFromBackup -and $StartFromStep -eq 9) {
+        $finalContent = $resumeContent
+        Write-Host "� Step 9: Rewriting content against writing style guidelines... - resuming from backup"
+    }
+    else {    
+        Write-Host "� Step 9: Rewriting content against writing style guidelines..."
+    }
     
     # Read the writing style guidelines
     $guidelinesPath = "/workspaces/techhub/docs/writing-style-guidelines.md"
     if (-not (Test-Path $guidelinesPath)) {
-        Write-Host "⚠️ Warning: Writing style guidelines not found at $guidelinesPath" -ForegroundColor Yellow
-        Write-Host "Skipping validation step..." -ForegroundColor Yellow
+        throw "⚠️ Writing style guidelines not found at $guidelinesPath"
     }
-    else {
-        try {
-            $guidelines = Get-Content $guidelinesPath -Raw -Encoding UTF8
-            
-            $validationSystemMessage = @"
-You are a content editor tasked with validating content against specific writing style guidelines. 
 
-Review the provided content and check it against these writing style guidelines:
+    try {
+        $guidelines = Get-Content $guidelinesPath -Raw -Encoding UTF8
+            
+        $rewriteSystemMessage = @"
+You are a content editor tasked with rewriting content to ensure it adheres to specific writing style guidelines. 
+
+CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the complete rewritten content.
+
+CRITICAL: Do NOT remove any headers, links or other content. ONLY rewrite text to ensure compliance with the guidelines while preserving all structural elements.
+
+CRITICAL: Return ALL of the content, without the 'CONTENT TO REWRITE IF NEEDED' header or any other new headers.
+
+The guidelines are these:
 
 $guidelines
-
-Provide a brief analysis in JSON format with these fields:
-- "isValid": boolean (true if content meets guidelines, false if significant issues found)
-- "issues": array of specific issues found (empty array if no issues)
-- "suggestions": array of improvement suggestions (empty array if no suggestions)
-- "overall": string summary of the content quality
-
-Focus on:
-- Tone and voice alignment with guidelines
-- Language clarity and professionalism
-- Avoidance of buzzwords and marketing speak
-- Content structure and readability
-- Authenticity and directness
-
-Be constructive and specific in your feedback.
 "@
 
-            $validationUserMessage = @"
-Please validate this weekly tech roundup content against the writing style guidelines:
+        $rewriteUserMessage = @"
+CONTENT TO REWRITE IF NEEDED:
 
 $finalContent
-
-Return JSON with fields: isValid, issues, suggestions, overall
 "@
 
-            Write-Host "🤖 Calling AI model to validate writing style..."
-            $validationResponse = Invoke-AiApiCall `
-                -Token $Token `
-                -Model $Model `
-                -SystemMessage $validationSystemMessage `
-                -UserMessage $validationUserMessage `
-                -Endpoint $Endpoint `
-                -RateLimitPreventionDelay $RateLimitPreventionDelay
+        Write-Host "🤖 Calling AI model to rewrite content for writing style compliance..."
+        $finalContent = Invoke-AiApiCall `
+            -Token $Token `
+            -Model $Model `
+            -SystemMessage $rewriteSystemMessage `
+            -UserMessage $rewriteUserMessage `
+            -Endpoint $Endpoint `
+            -RateLimitPreventionDelay $RateLimitPreventionDelay
 
-            # Parse validation results
-            try {
-                $validation = $validationResponse | ConvertFrom-Json
-                
-                Write-Host "📋 Writing Style Validation Results:" -ForegroundColor Cyan
-                Write-Host "Overall: $($validation.overall)" -ForegroundColor White
-                
-                if ($validation.isValid) {
-                    Write-Host "✅ Content meets writing style guidelines" -ForegroundColor Green
-                }
-                else {
-                    Write-Host "⚠️ Content has style issues that should be addressed:" -ForegroundColor Yellow
-                }
-                
-                if ($validation.issues -and $validation.issues.Count -gt 0) {
-                    Write-Host "Issues found:" -ForegroundColor Yellow
-                    foreach ($issue in $validation.issues) {
-                        Write-Host "  • $issue" -ForegroundColor Yellow
-                    }
-                }
-                
-                if ($validation.suggestions -and $validation.suggestions.Count -gt 0) {
-                    Write-Host "Suggestions for improvement:" -ForegroundColor Cyan
-                    foreach ($suggestion in $validation.suggestions) {
-                        Write-Host "  • $suggestion" -ForegroundColor Cyan
-                    }
-                }
-                
-                # Save validation results for reference
-                $validationResults = @{
-                    timestamp      = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-                    validation     = $validation
-                    content_length = $finalContent.Length
-                } | ConvertTo-Json -Depth 10
-                
-                Save-StepBackup -StepName "Step9-Validation" -Content $validationResults -StartDate $StartDate -EndDate $EndDate
-                Write-Host "✅ Step 9 complete - Writing style validation finished"
-            }
-            catch {
-                Write-Host "⚠️ Warning: Could not parse validation response" -ForegroundColor Yellow
-                Write-Host "Response: $validationResponse" -ForegroundColor Gray
-                Write-Host "Continuing with file creation..." -ForegroundColor Yellow
-            }
+        # Check for errors with robust error handling
+        $rewriteResult = Test-AiResponseFormat -Response $finalContent -StepName "Step 9 (Content Rewriting)"
+        if (-not $rewriteResult.IsValid) {
+            Write-Host "⚠️ Warning: Step 9 content rewriting failed: $($rewriteResult.ErrorMessage)" -ForegroundColor Yellow
+            Write-Host "Using original content..." -ForegroundColor Yellow
+            # finalContent already contains the original content, so no change needed
         }
-        catch {
-            Write-Host "⚠️ Warning: Error during writing style validation: $($_.Exception.Message)" -ForegroundColor Yellow
-            Write-Host "Continuing with file creation..." -ForegroundColor Yellow
+        else {
+            # Save successful rewrite results
+            Save-StepBackup -StepName "Step9-RewriteResult" -Content $finalContent -StartDate $StartDate -EndDate $EndDate
+            Write-Host "✅ Step 9 complete - Content rewritten for writing style compliance"
         }
+       
+    }
+    catch {
+        Write-Host "⚠️ Warning: Error during writing style rewriting: $($_.Exception.Message)" -ForegroundColor Yellow
+        Write-Host "Continuing with file creation using original content..." -ForegroundColor Yellow
     }
 
     # Generate the OutputFile (filename already set at script start)

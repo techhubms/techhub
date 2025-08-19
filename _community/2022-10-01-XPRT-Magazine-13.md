@@ -8,8 +8,8 @@ author: "Xebia"
 viewing_mode: "external"
 permalink: "/2022-10-01-XPRT-Magazine-13.html"
 excerpt_separator: <!--excerpt_end-->
-tags: ["Accessibility", "AI", "Automation", "Azure", "Azure Managed Grafana", "Azure Virtual Desktop", "Bitrot", "Blazor", "Cloud Adoption", "Coding", "Compliance", "DevOps", "Digital Twins", "Engineering Culture", "GitHub Actions", "Knowledge Sharing", "Magazines", "Mocking", "Nullable Reference Types", "Observability", "Platform Engineering", "Security", "Team Learning", "WireMock", "Xpirit USA"]
-tags_normalized: ["accessibility", "ai", "automation", "azure", "azure managed grafana", "azure virtual desktop", "bitrot", "blazor", "cloud adoption", "coding", "compliance", "devops", "digital twins", "engineering culture", "github actions", "knowledge sharing", "magazines", "mocking", "nullable reference types", "observability", "platform engineering", "security", "team learning", "wiremock", "xpirit usa"]
+tags: ["Accessibility", "AI", "Automation", "Azure", "Azure Managed Grafana", "Azure Virtual Desktop", "Bitrot", "Blazor", "Cloud Adoption", "Coding", "Community", "Compliance", "DevOps", "Digital Twins", "Engineering Culture", "GitHub Actions", "Knowledge Sharing", "Magazines", "Mocking", "Nullable Reference Types", "Observability", "Platform Engineering", "Security", "Team Learning", "WireMock", "Xpirit USA"]
+tags_normalized: ["accessibility", "ai", "automation", "azure", "azure managed grafana", "azure virtual desktop", "bitrot", "blazor", "cloud adoption", "coding", "community", "compliance", "devops", "digital twins", "engineering culture", "github actions", "knowledge sharing", "magazines", "mocking", "nullable reference types", "observability", "platform engineering", "security", "team learning", "wiremock", "xpirit usa"]
 ---
 
 This edition of XPRT Magazine is packed with knowledge sharing on engineering culture, accessibility, observability, cloud adoption, security, and modern .NET development. Explore practical guides, case studies, and innovation stories from Xpirit’s experts, with a focus on building inclusive, secure, and high-performing software.

@@ -8,8 +8,8 @@ author: "Xebia"
 viewing_mode: "external"
 permalink: "/2024-05-01-XPRT-Magazine-16.html"
 excerpt_separator: <!--excerpt_end-->
-tags: ["Agents", "AI", "Art", "Azure", "Blazor", "Carbon Measurement", "Coding", "Container Apps", "DDoS", "DevOps", "Entity Framework", "Environmental Impact", "GitHub Copilot", "LLM", "Magazines", "OAuth", "OpenID Connect", "PKCE", "Prompt Engineering", "Security", "SQL Merge"]
-tags_normalized: ["agents", "ai", "art", "azure", "blazor", "carbon measurement", "coding", "container apps", "ddos", "devops", "entity framework", "environmental impact", "github copilot", "llm", "magazines", "oauth", "openid connect", "pkce", "prompt engineering", "security", "sql merge"]
+tags: ["Agents", "AI", "Art", "Azure", "Blazor", "Carbon Measurement", "Coding", "Community", "Container Apps", "DDoS", "DevOps", "Entity Framework", "Environmental Impact", "GitHub Copilot", "LLM", "Magazines", "OAuth", "OpenID Connect", "PKCE", "Prompt Engineering", "Security", "SQL Merge"]
+tags_normalized: ["agents", "ai", "art", "azure", "blazor", "carbon measurement", "coding", "community", "container apps", "ddos", "devops", "entity framework", "environmental impact", "github copilot", "llm", "magazines", "oauth", "openid connect", "pkce", "prompt engineering", "security", "sql merge"]
 ---
 
 Xpirit Magazine 16 explores the rapid evolution of AI, security, and cloud innovation. This issue features practical guides on prompt engineering, Blazor, OAuth PKCE, sustainable software, DDoS protection, Copilot adoption, and more—offering actionable insights for developers and technology leaders.
