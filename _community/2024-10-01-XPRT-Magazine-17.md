@@ -8,8 +8,8 @@ author: "Xebia"
 viewing_mode: "external"
 permalink: "/2024-10-01-XPRT-Magazine-17.html"
 excerpt_separator: <!--excerpt_end-->
-tags: ["AI", "Automation", "Azure", "Cloud Native", "Coding", "Cost Allocation", "DevOps", "Documentation", "GitHub Copilot", "GitHub Models", "Kubernetes", "LLM", "Magazines", "Managed DevOps Pools", "Network Policy", "Platform Engineering", "Prompty", "Radius", "Security", "Terraform"]
-tags_normalized: ["ai", "automation", "azure", "cloud native", "coding", "cost allocation", "devops", "documentation", "github copilot", "github models", "kubernetes", "llm", "magazines", "managed devops pools", "network policy", "platform engineering", "prompty", "radius", "security", "terraform"]
+tags: ["AI", "Automation", "Azure", "Cloud Native", "Coding", "Community", "Cost Allocation", "DevOps", "Documentation", "GitHub Copilot", "GitHub Models", "Kubernetes", "LLM", "Magazines", "Managed DevOps Pools", "Network Policy", "Platform Engineering", "Prompty", "Radius", "Security", "Terraform"]
+tags_normalized: ["ai", "automation", "azure", "cloud native", "coding", "community", "cost allocation", "devops", "documentation", "github copilot", "github models", "kubernetes", "llm", "magazines", "managed devops pools", "network policy", "platform engineering", "prompty", "radius", "security", "terraform"]
 ---
 
 XPRT Magazine 17 explores the evolution of platform engineering, democratization of AI, cloud-native development, and automation. This edition highlights practical solutions for cost management, DevOps, and documentation, with a strong focus on integrating AI and Copilot into modern workflows. The magazine brings together insights on security, productivity, and the future of development in the Microsoft ecosystem.

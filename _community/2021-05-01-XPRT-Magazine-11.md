@@ -8,8 +8,8 @@ author: "Xebia"
 viewing_mode: "external"
 permalink: "/2021-05-01-XPRT-Magazine-11.html"
 excerpt_separator: <!--excerpt_end-->
-tags: ["AI", "Automation", "Azure", "Cloud Native", "Coding", "Compliance", "Developer Productivity", "DevOps", "Digital Transformation", "GitHub Actions", "GitHub Copilot", "Innovation", "Magazines", "Managed Services", "Maritime Education", "Open Source", "Platform Engineering", "Remote Work", "Resilience", "Security", "SPACE Framework", "Team Learning", "UI Modernization", "Xpirit"]
-tags_normalized: ["ai", "automation", "azure", "cloud native", "coding", "compliance", "developer productivity", "devops", "digital transformation", "github actions", "github copilot", "innovation", "magazines", "managed services", "maritime education", "open source", "platform engineering", "remote work", "resilience", "security", "space framework", "team learning", "ui modernization", "xpirit"]
+tags: ["AI", "Automation", "Azure", "Cloud Native", "Coding", "Community", "Compliance", "Developer Productivity", "DevOps", "Digital Transformation", "GitHub Actions", "GitHub Copilot", "Innovation", "Magazines", "Managed Services", "Maritime Education", "Open Source", "Platform Engineering", "Remote Work", "Resilience", "Security", "SPACE Framework", "Team Learning", "UI Modernization", "Xpirit"]
+tags_normalized: ["ai", "automation", "azure", "cloud native", "coding", "community", "compliance", "developer productivity", "devops", "digital transformation", "github actions", "github copilot", "innovation", "magazines", "managed services", "maritime education", "open source", "platform engineering", "remote work", "resilience", "security", "space framework", "team learning", "ui modernization", "xpirit"]
 ---
 
 This edition of XPRT Magazine delivers hands-on guidance for secure DevOps, cloud-native transformation, and developer productivity. Explore real-world stories on security, compliance, automation, and innovation, with practical advice for building resilient, modern software in the Microsoft ecosystem.

@@ -8,8 +8,8 @@ author: "Xebia"
 viewing_mode: "external"
 permalink: "/2023-10-01-XPRT-Magazine-15.html"
 excerpt_separator: <!--excerpt_end-->
-tags: ["AI", "Azure", "Azure Policy", "CKAD", "Cloud Security", "Coding", "DevOps", "Escape Room", "Fuzzing", "GreenOps", "InnerSource", "Kubernetes", "Magazines", "Meditation", "Platform Engineering", "Playwright", "Security", "Sustainable Software Engineering", "Value Stream Mapping"]
-tags_normalized: ["ai", "azure", "azure policy", "ckad", "cloud security", "coding", "devops", "escape room", "fuzzing", "greenops", "innersource", "kubernetes", "magazines", "meditation", "platform engineering", "playwright", "security", "sustainable software engineering", "value stream mapping"]
+tags: ["AI", "Azure", "Azure Policy", "CKAD", "Cloud Security", "Coding", "Community", "DevOps", "Escape Room", "Fuzzing", "GreenOps", "InnerSource", "Kubernetes", "Magazines", "Meditation", "Platform Engineering", "Playwright", "Security", "Sustainable Software Engineering", "Value Stream Mapping"]
+tags_normalized: ["ai", "azure", "azure policy", "ckad", "cloud security", "coding", "community", "devops", "escape room", "fuzzing", "greenops", "innersource", "kubernetes", "magazines", "meditation", "platform engineering", "playwright", "security", "sustainable software engineering", "value stream mapping"]
 ---
 
 Xpirit Magazine 15 brings together international voices to share knowledge on AI-driven content creation, sustainable software engineering, DevOps journeys, cloud security, value stream mapping, and more. This issue features hands-on guides, real-world stories, and technical deep-dives for modern software professionals.

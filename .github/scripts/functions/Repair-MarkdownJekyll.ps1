@@ -63,7 +63,7 @@ function Repair-MarkdownJekyll {
     $fixedFilesCount = 0
     
     foreach ($file in $markdownFiles) {
-        Write-Host "Processing file: $($file.Name)"
+        #Write-Host "Processing file: $($file.Name)"
 
         # Check file size first to catch truly empty files
         $fileInfo = Get-Item $file.FullName
