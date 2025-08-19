@@ -6914,5 +6914,17 @@
     "reason": "Succesfully added: Assigned Security category based on detailed coverage of developer-focused security tools (CodeQL, Copilot Autofix, dependency review) that address code vulnerabilities (Security rules 1, 2, and 5). Assigned DevOps because these tools integrate within development workflows and CI/CD pipelines to enable secure coding practices and vulnerability management as part of the software lifecycle (DevOps rules 3, 5, 6, and 9). Did not assign 'AI' or 'GitHub Copilot' categories because Copilot Autofix is only briefly referenced and the focus is not on Copilot as a coding assistant; most tools discussed are security and workflow integrations.",
     "timestamp": "2025-08-19 14:13:31 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=pZ2Nu8LqJvE"
+  },
+  {
+    "timestamp": "2025-08-19 15:14:24 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/latam/features/ai/galicia-naranja-x-github-copilot/?lang=en",
+    "reason": "Succesfully added: Assigned 'AI' category because the article focuses on the adoption and impact of AI developer tools (GitHub Copilot) in Argentina’s financial sector (AI rule 1 and 4). Assigned 'GitHub Copilot' category because it is a central subject, detailing how developers use Copilot, its features, and impact (GitHub Copilot rules 1 and 2). Assigned 'Coding' category as the content describes practical improvements in software development, code generation, productivity, and secure software builds with Microsoft technology (Coding rules 2, 4, and 5). No other exclusion or inclusion rules applied.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-19 15:14:59 +00:00",
+    "canonical_url": "https://dellenny.com/creating-custom-plugins-and-connectors-in-copilot-studio/",
+    "reason": "Succesfully added: Assigned the AI category because the entire article focuses on building custom plugins and connectors in Microsoft Copilot Studio, which is a platform specifically intended for developers and makers to extend AI copilots (AI rule 1). While Copilot Studio is not GitHub Copilot and is not a business productivity tool like Microsoft 365 Copilot, it is explicitly included as a developer/maker AI platform according to the Copilot product distinction section and the AI category inclusion rules. No Coding or DevOps categories were assigned since content is focused more on high-level integration and plugin/connector architecture rather than specific code implementations or software engineering details. Azure, ML, and Security are not primary focuses per the description and details.",
+    "collection": "posts"
   }
 ]
