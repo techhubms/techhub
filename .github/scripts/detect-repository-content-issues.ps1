@@ -1394,6 +1394,44 @@ if (-not $QuickCheck) {
             
             Write-Host ""
         }
+
+        # Only show each duplicate group once
+        $reportedGroups = @{}
+
+        # Improved: Only report each unique duplicate group once
+
+        # Only show each unique group of duplicate files once
+        $uniqueGroups = @{}
+        for ($i = 0; $i -lt $candidateFiles.Count; $i++) {
+            $candidate = $candidateFiles[$i]
+            $group = @($candidate.FilePath) + ($candidate.SimilarTo | ForEach-Object { $_.File })
+            $groupSorted = $group | Sort-Object -Unique
+            if ($groupSorted.Count -gt 1) {
+                $groupKey = $groupSorted -join '|'
+                if (-not $uniqueGroups.ContainsKey($groupKey)) {
+                    # Store representative candidate and all similar files
+                    $uniqueGroups[$groupKey] = @{ Representative = $candidate; Files = $groupSorted }
+                }
+            }
+        }
+
+        foreach ($group in $uniqueGroups.Values) {
+            $candidate = $group.Representative
+            $fileName = Split-Path $candidate.FilePath -Leaf
+            Write-Host "   📁 $fileName" -ForegroundColor Yellow
+            Write-Host "      Path: $($candidate.FilePath)" -ForegroundColor Gray
+            Write-Host "      Directory: $($candidate.Directory)" -ForegroundColor Gray
+            Write-Host "      Similar to $($candidate.SimilarTo.Count) other file(s):" -ForegroundColor White
+
+            $sortedSimilarities = $candidate.SimilarTo | Sort-Object Similarity -Descending
+            foreach ($similar in $sortedSimilarities) {
+                $similarName = Split-Path $similar.File -Leaf
+                $sameDir = if ($similar.Directory -eq $candidate.Directory) { " (same directory)" } else { "" }
+                $typeMarker = if ($similar.Type -eq "Exact Content Match") { "🔄" } else { "≈" }
+                Write-Host "         $typeMarker $($similar.Similarity)% - $similarName$sameDir" -ForegroundColor White
+            }
+            Write-Host ""
+        }
         
         Write-Host "💡 These files are candidates for review. Check if they contain duplicate content." -ForegroundColor Cyan
     }
