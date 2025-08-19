@@ -6866,5 +6866,11 @@
     "reason": "Succesfully added: I assigned AI because the post centers on training and benchmarking a large language model (Llama3) using AI/ML infrastructure on Azure, leveraging NVIDIA NeMo and advanced parallelism strategies (AI rule 1 & 4). Azure was included since Azure ND GB200 v6 virtual machines are fundamental to the methodology (Azure rules 1, 2 & 4). ML was added because the work involves custom pretraining job configuration, telemetry, and architecture optimization for machine learning model training (ML rules 1, 2, 5, 10). The post is technical, specific, and does not trigger any generic exclusion rules.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimizing-large-scale-ai-performance-with-pretraining/ba-p/4445273",
     "timestamp": "2025-08-18 23:12:33 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-early-preview-byo-remote-mcp-server-on-azure/ba-p/4445317",
+    "collection": "community",
+    "reason": "Succesfully added: The content qualifies for the Azure category because it focuses entirely on deploying servers to Microsoft Azure Functions (Azure rule 1 and 4). The Coding category applies since developers are required to work directly with Python, Node.js, and .NET code, use SDKs, and perform deployment tasks (Coding rules 1, 2, and 4). The content does not specifically discuss AI/ML workloads, so AI and ML categories do not fit, and there is no focus on pipeline automation or security practices, so DevOps and Security categories do not apply.",
+    "timestamp": "2025-08-19 03:38:50 +00:00"
   }
 ]
