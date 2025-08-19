@@ -6465,5 +6465,11 @@
     "reason": "No categories found: No categories were assigned because the content is focused on general mobile app frameworks (Flutter, React Native, .NET MAUI) and architectural patterns, not specific to Microsoft technologies or ecosystems. While .NET MAUI is mentioned, it is not the main subject nor central to the advice, and Microsoft-specific development comprises much less than 40% of the content (per Multi-Platform Content Threshold rule). There is no substantive focus on Azure, AI, DevOps, Security, or coding practices in the Microsoft ecosystem. Thus, all inclusion conditions are not met. Generic exclusions do not apply.",
     "canonical_url": "https://devops.com/what-really-matters-when-picking-a-cross-platform-stack-today/?utm_source=rss&utm_medium=rss&utm_campaign=what-really-matters-when-picking-a-cross-platform-stack-today",
     "collection": "posts"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The input is primarily a high-level business strategy overview and does not contain substantive technical content or implementation details. The description refers to Microsoft AI use cases by industry, role, and business priority, but does not provide actionable technical depth, code, architectures, or development-oriented information. Per 'Business Strategy and Executive Content' and 'Business vs Technical Content Examples' in Chapter 3, purely strategic, industry-focused, or business-priority content is excluded unless it contains significant technical implementation details. No categories assigned.",
+    "canonical_url": "https://www.youtube.com/watch?v=j9jGYAY9uig",
+    "timestamp": "2025-08-19 12:23:32 +00:00"
   }
 ]
