@@ -24,8 +24,6 @@ collections:
     output: true       
   events:
     output: true 
-  magazines:
-    output: true    
   roundups: # Special one that isn't shown in a specific section but rather on the homepage
     output: true
 
@@ -60,6 +58,7 @@ compress_html:
 exclude:
   # All dotfiles and dot directories (covers .git, .github, .vscode, .devcontainer, etc.)
   - ".*"
+  - ".*/"
   
   # Development and build artifacts
   - "node_modules/"

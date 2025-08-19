@@ -5,7 +5,7 @@ description: "This issue covers serverless computing, Azure Functions, container
 categories: ["Azure", "Coding", "DevOps", "Security"]
 date: 2017-05-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2017-05-01-XPRT-Magazine-04.html"
 excerpt_separator: <!--excerpt_end-->
 tags: [".NET", "App Delivery", "Auth0", "Azure", "Azure Functions", "Backup", "Change Management", "Cloud Computing", "Cloud Native", "Coding", "Containers", "DevOps", "IT Transformation", "Magazines", "Security", "Serverless", "Service Fabric", "Technical Introduction", "Windows Containers", "Xamarin"]
@@ -39,4 +39,4 @@ XPRT Magazine 04 explores serverless computing, Azure Functions, modern IT conta
 
 - **Willing, Able, and Ready to Change**: Managing organizational change and IT transformation for cloud adoption.
 
-[Download the full magazine here]({{ "/assets/magazines/04.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/XPRT.-4.pdf)

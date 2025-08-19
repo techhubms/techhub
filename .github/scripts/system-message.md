@@ -32,8 +32,7 @@ You'll process content from:
 - **News**: Official Microsoft announcements and updates
 - **Blogs**: Technical articles and tutorials
 - **Videos**: YouTube content and presentations
-- **Community**: Reddit discussions and Q&A posts
-- **Magazines**: Technical publications
+- **Community**: Discussions, announcements, magazines, Q&A posts
 
 ### Quality Standards
 
@@ -556,7 +555,7 @@ You will receive a JSON object with these 6 fields:
 - `content`: The full original content text
 - `author`: The author's name or names
 - `tags`: The tags the author assigned to the content
-- `type`: Content type (news, blog, community, videos, magazines, etc.)
+- `type`: Content type (news, blog, community, videos, etc.)
 
 ### Input Example
 

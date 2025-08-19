@@ -5,7 +5,7 @@ description: "This issue covers Azure Event Grid, ARM templates, cloud transitio
 categories: ["Azure", "DevOps"]
 date: 2017-05-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2017-05-01-XPRT-Magazine-05.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["ARM Templates", "Automation", "Azure", "Best Practices", "Cloud", "Cloud Transition", "Communities", "Containers", "Deployment Pipelines", "DevOps", "Event Grid", "Magazines", "Scaling", "Scrum", "Testing", "Web Applications"]
@@ -40,4 +40,4 @@ XPRT Magazine 05 explores Azure Event Grid, best practices for ARM templates, cl
 - **Scaling Scrum to the Limit**: Techniques and lessons for scaling Scrum in large organizations.
 - **8 Years of CPU in a Day**: Insights into high-performance computing and DevOps at scale.
 
-[Download the full magazine here]({{ "/assets/magazines/05.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/XPRT.-5.pdf)

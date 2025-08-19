@@ -5,7 +5,7 @@ description: "A practical edition focused on secure DevOps, cloud-native transfo
 categories: ["AI", "Azure", "Coding", "DevOps", "Security", "GitHub Copilot"]
 date: 2021-05-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2021-05-01-XPRT-Magazine-11.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["AI", "Automation", "Azure", "Cloud Native", "Coding", "Compliance", "Developer Productivity", "DevOps", "Digital Transformation", "GitHub Actions", "GitHub Copilot", "Innovation", "Magazines", "Managed Services", "Maritime Education", "Open Source", "Platform Engineering", "Remote Work", "Resilience", "Security", "SPACE Framework", "Team Learning", "UI Modernization", "Xpirit"]
@@ -37,4 +37,4 @@ This edition of XPRT Magazine delivers hands-on guidance for secure DevOps, clou
 - *Upgrading user interfaces for the future*: Modernizing legacy desktop systems for the cloud and rethinking UI design for maritime simulation.
 - *Xpirit embraces SPACE framework to measure developer productivity*: Applying the SPACE framework to gain insight into developer productivity and its impact on business outcomes.
 
-[Download the full magazine here]({{ "/assets/magazines/11.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/Xpirit_XPRT_magazine_11-final.pdf)

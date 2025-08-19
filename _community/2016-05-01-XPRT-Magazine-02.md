@@ -5,7 +5,7 @@ description: "This issue covers IoT with Raspberry Pi, DevOps for mobile, Power 
 categories: ["Azure", "DevOps", "Coding"]
 date: 2016-05-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2016-05-01-XPRT-Magazine-02.html"
 excerpt_separator: <!--excerpt_end-->
 tags: [".NET Core", "Agile", "Akka.NET", "Azure", "Big Data", "Cloudera", "Coding", "DevOps", "Distributed Systems", "Docker", "IoT", "Magazines", "Mobile Apps", "Nexus", "Power BI", "Raspberry Pi", "Scrum", "UI Testing", "UWP", "Visual Studio", "Windows 10 IoT Core"]
@@ -45,4 +45,4 @@ XPRT Magazine 02 explores IoT with Raspberry Pi and Windows 10 IoT Core, DevOps 
 
 - **Scaling Professional Scrum Using Nexus and Visual Studio Team Services**: Applying the Nexus framework and VSTS to scale Scrum for large teams and complex products.
 
-[Download the full magazine here]({{ "/assets/magazines/02.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/Xpirit-magazine-2-final.pdf)

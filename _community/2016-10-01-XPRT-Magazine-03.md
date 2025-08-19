@@ -2,11 +2,10 @@
 layout: "post"
 title: "XPRT Magazine 03"
 description: "This issue covers Azure Machine Learning, Microsoft Bot Framework, containers, DevOps, mobile innovation, testing, and more."
-magazine-description-ai: "Features Azure Machine Learning and Microsoft Bot Framework, exploring intelligent automation, bots, and practical ML use cases."
 categories: ["AI", "Azure", "DevOps"]
 date: 2016-10-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2016-10-01-XPRT-Magazine-03.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["Agile", "AI", "Automation", "Azure", "Azure Machine Learning", "Bot Framework", "Cloud", "Containers", "Continuous Delivery", "DevOps", "IaC", "Machine Learning", "Magazines", "Microsoft", "Mobile Apps", "Technical Debt", "Testing"]
@@ -39,4 +38,4 @@ XPRT Magazine 03 explores Azure Machine Learning, the Microsoft Bot Framework, c
 - **How to Accelerate Your Choices Using Data**: Data-driven decision making in software projects.
 - **Scaling Agile with Continuous Delivery**: Applying agile and continuous delivery principles at scale.
 
-[Download the full magazine here]({{ "/assets/magazines/03.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/Xpirit-magazine3-compleet.pdf)

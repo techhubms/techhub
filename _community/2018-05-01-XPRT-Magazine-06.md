@@ -5,7 +5,7 @@ description: "This issue covers OpenFaaS, DevOps mindset, Kubernetes, Blazor, Ch
 categories: ["DevOps", "Coding", "Security"]
 date: 2018-05-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2018-05-01-XPRT-Magazine-06.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["Automation", "Blazor", "Bots", "Browser Security", "ChatOps", "Cloud", "Coding", "DevOps", "FaaS", "Kubernetes", "Magazines", "Mindset", "Mob Programming", "OpenFaaS", "Performance", "Security", "Web", "Website Speed"]
@@ -37,4 +37,4 @@ XPRT Magazine 06 explores OpenFaaS, DevOps mindset, Kubernetes, Blazor, ChatOps,
 - **The Human Computer – Rise of the Bots**: Exploring the impact and development of bots in modern applications.
 - **The World is Becoming a Computer**: Reflections on the increasing integration of computing in daily life.
 
-[Download the full magazine here]({{ "/assets/magazines/06.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/OOMOOM2018102_Xpirit_magazine_6_2018-V8-FINAL.pdf)

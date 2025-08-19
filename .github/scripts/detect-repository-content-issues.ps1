@@ -12,7 +12,7 @@ Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""
 
 # Get all markdown files from content directories
-$contentDirs = @("_news", "_posts", "_videos", "_community", "_magazines", "_events", "_roundups")
+$contentDirs = @("_news", "_posts", "_videos", "_community", "_events", "_roundups")
 
 # Filter out excluded directories
 if ($ExcludeDirectories.Count -gt 0) {
@@ -1372,8 +1372,24 @@ if (-not $QuickCheck) {
         Write-Host "❌ Found $($candidateFiles.Count) files with potential duplicates:" -ForegroundColor Red
         Write-Host ""
         
+        # Only show each unique group of duplicate files once
+        $reportedFiles = @{}
+        
         for ($i = 0; $i -lt $candidateFiles.Count; $i++) {
             $candidate = $candidateFiles[$i]
+            
+            # Skip if this file was already reported as part of another group
+            if ($reportedFiles.ContainsKey($candidate.FilePath)) {
+                continue
+            }
+            
+            # Mark this file and all its similar files as reported
+            $reportedFiles[$candidate.FilePath] = $true
+            foreach ($similar in $candidate.SimilarTo) {
+                $reportedFiles[$similar.File] = $true
+            }
+            
+            # Show the duplicate group with original formatting
             $fileName = Split-Path $candidate.FilePath -Leaf
             
             Write-Host "   📁 $fileName" -ForegroundColor Yellow
@@ -1392,44 +1408,6 @@ if (-not $QuickCheck) {
                 Write-Host "         $typeMarker $($similar.Similarity)% - $similarName$sameDir" -ForegroundColor White
             }
             
-            Write-Host ""
-        }
-
-        # Only show each duplicate group once
-        $reportedGroups = @{}
-
-        # Improved: Only report each unique duplicate group once
-
-        # Only show each unique group of duplicate files once
-        $uniqueGroups = @{}
-        for ($i = 0; $i -lt $candidateFiles.Count; $i++) {
-            $candidate = $candidateFiles[$i]
-            $group = @($candidate.FilePath) + ($candidate.SimilarTo | ForEach-Object { $_.File })
-            $groupSorted = $group | Sort-Object -Unique
-            if ($groupSorted.Count -gt 1) {
-                $groupKey = $groupSorted -join '|'
-                if (-not $uniqueGroups.ContainsKey($groupKey)) {
-                    # Store representative candidate and all similar files
-                    $uniqueGroups[$groupKey] = @{ Representative = $candidate; Files = $groupSorted }
-                }
-            }
-        }
-
-        foreach ($group in $uniqueGroups.Values) {
-            $candidate = $group.Representative
-            $fileName = Split-Path $candidate.FilePath -Leaf
-            Write-Host "   📁 $fileName" -ForegroundColor Yellow
-            Write-Host "      Path: $($candidate.FilePath)" -ForegroundColor Gray
-            Write-Host "      Directory: $($candidate.Directory)" -ForegroundColor Gray
-            Write-Host "      Similar to $($candidate.SimilarTo.Count) other file(s):" -ForegroundColor White
-
-            $sortedSimilarities = $candidate.SimilarTo | Sort-Object Similarity -Descending
-            foreach ($similar in $sortedSimilarities) {
-                $similarName = Split-Path $similar.File -Leaf
-                $sameDir = if ($similar.Directory -eq $candidate.Directory) { " (same directory)" } else { "" }
-                $typeMarker = if ($similar.Type -eq "Exact Content Match") { "🔄" } else { "≈" }
-                Write-Host "         $typeMarker $($similar.Similarity)% - $similarName$sameDir" -ForegroundColor White
-            }
             Write-Host ""
         }
         

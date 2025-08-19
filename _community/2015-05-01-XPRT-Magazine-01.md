@@ -5,7 +5,7 @@ description: "The inaugural issue of XPRT Magazine explores modern software deve
 categories: ["Azure", "DevOps", "Coding", "Security"]
 date: 2015-05-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2015-05-01-XPRT-Magazine-01.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["API Management", "Application Insights", "Azure", "Coding", "DevOps", "HoloLens", "Ionic", "Magazines", "Microservices", "Mobile Apps", "Security", "Service Fabric", "Version Control", "Visual Studio"]
@@ -42,4 +42,4 @@ Welcome to the very first XPRT Magazine! This issue features practical articles 
 - **Exclusive Two Day Workshop**: "Hack Yourself First"—a hands-on security workshop teaching developers to think like attackers and defend against real-world vulnerabilities.
 - **Introduction**: The magazine opens with a message from Xpirit's founders, emphasizing their core principles and the importance of sharing knowledge, innovation, and customer focus.
 
-[Download the full magazine here]({{ "/assets/magazines/01.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/Xpirit-magazine.pdf)

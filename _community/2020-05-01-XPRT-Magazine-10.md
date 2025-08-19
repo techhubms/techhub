@@ -5,7 +5,7 @@ description: "A milestone edition featuring practical insights on cloud migratio
 categories: ["AI", "Azure", "Coding", "DevOps", "ML"]
 date: 2020-05-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2020-05-01-XPRT-Magazine-10.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["AI", "Automation", "Azure", "Azure Cosmos DB", "Cloud Migration", "Cloud Native", "Coding", "Dapr", "Data Modeling", "DevOps", "Digital Transformation", "Docker", "Feature Toggles", "Inner Source", "Knowledge Sharing", "Kubernetes", "Legacy Modernization", "Magazines", "Microservices", "ML", "Platform Engineering", "Remote Work", "SaaS", "Team Learning", "Virtual Machines", "Xpirit Belgium"]
@@ -37,4 +37,4 @@ This tenth edition of XPRT Magazine delivers a blend of technical depth and prac
 - *Encouraging Inner Source*: Promoting open source practices within organizations to improve code sharing and quality.
 - *We are crossing the border*: The story of Xpirit Belgium, building a culture of innovation, collaboration, and knowledge sharing across borders.
 
-[Download the full magazine here]({{ "/assets/magazines/10.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/Xpirit_XPRT_magazine_10_082020-V2.pdf)

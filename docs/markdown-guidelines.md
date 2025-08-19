@@ -73,10 +73,10 @@ While following these instructions carefully is important, minor formatting issu
 - `categories`: Array of strings formatted as `["AI", "GitHub Copilot"]`. Use the exact category names defined in the `site.sections` configuration in `_config.yml`. If you include 'GitHub Copilot', always include 'AI' as well. If unsure, leave empty
 - `feed_name`: Use provided feed name. Omit if not provided
 - `feed_url`: Use provided feed url. Omit if not provided
-- `permalink`: Is `/filename.html`. Replace `.md` with `.html` from the filename. The section is the target directory, without an underscore (e.g. `magazines`, `news`, `videos`, etc)
+- `permalink`: Is `/filename.html`. Replace `.md` with `.html` from the filename. The section is the target directory, without an underscore (e.g. `roundups`, `news`, `videos`, etc)
 - `page`: Automatically set based on directory structure. For `_posts` directory, use `"blogs"`. For other directories, use the directory name without underscore (e.g., `_news` becomes `"news"`, `_videos` becomes `"videos"`)
 - `viewing_mode`: Determines how content is displayed on the site:
-  - `"internal"`: Self-contained content displayed fully on site (videos, magazines)
+  - `"internal"`: Self-contained content displayed fully on site (videos, roundups)
   - `"external"`: Content that links to original sources (news, posts, community, etc)
 
 **Date and Filename Rules:**

@@ -5,7 +5,7 @@ description: "This issue covers value streams, Kubernetes, AI, property-based te
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 date: 2018-10-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2018-10-01-XPRT-Magazine-07.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["AI", "Automation", "Azure", "Azure Security", "Bots", "Cloud", "Coding", "Containers", "DevOps", "Kubernetes", "Magazines", "Property Based Testing", "Security", "Techorama", "Unit Testing", "Value Stream", "Visual Studio Code"]
@@ -35,4 +35,4 @@ XPRT Magazine 07 explores value stream management, Kubernetes metrics, AI in pop
 - **The Human Computer – The Rise of the Bots Part II**: The evolution and impact of bots in modern applications.
 - **Why Containers Will Take Over the World**: The future of containers in software development and deployment.
 
-[Download the full magazine here]({{ "/assets/magazines/07.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/Xpirit_XPRT_magazine_7_2018-V4.pdf)

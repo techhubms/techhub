@@ -91,8 +91,6 @@ collections:
     output: true       
   events:
     output: true
-  magazines:
-    output: true    
   roundups:
     output: true
 ```
@@ -101,9 +99,8 @@ collections:
 
 - **news**: Official announcements and product updates
 - **videos**: YouTube content and video tutorials
-- **community**: Community discussions and insights from Reddit and other platforms
+- **community**: Microsoft Tech community posts and other community-sourced content
 - **events**: Official events and community meetups
-- **magazines**: Magazine articles and publications
 - **posts**: Blog posts and technical articles
 - **roundups**: Curated content summaries (special collection shown on homepage)
 
@@ -229,7 +226,6 @@ There is one for each collection:
 - **`_news/`**: News article files
 - **`_videos/`**: Video content metadata
 - **`_events/`**: Events such as meetings or conferences
-- **`_magazines/`**: Magazine content
 - **`_posts/`**: Blog posts
 - **`_roundups/`**: Roundup content
 

@@ -5,7 +5,7 @@ description: "This issue covers chaos engineering, DevOps for data science, Azur
 categories: ["DevOps", "Azure", "ML", "AI", "Coding"]
 date: 2019-05-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2019-05-01-XPRT-Magazine-08.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["AI", "APIs", "Automation", "Azure", "Azure Service Bus", "Chaos Engineering", "Cloud", "Coding", "Data Science", "DevOps", "Event Sourcing", "Kubernetes", "Magazines", "ML", "Productivity", "Serverless", "Symbol Management", "Unit Testing", "Xamarin"]
@@ -33,4 +33,4 @@ XPRT Magazine 08 explores chaos engineering, DevOps for data science, enabling D
 - **NETCore.With(VSCode).Should()Have.(Unit Tests).Part(II)**: Advanced unit testing practices in VSCode for .NET Core projects.
 - **Taking Notes Like a Boss**: Productivity tips and tools for effective note-taking in tech projects.
 
-[Download the full magazine here]({{ "/assets/magazines/08.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/Xpirit_XPRT_magazine_8_2019.pdf)

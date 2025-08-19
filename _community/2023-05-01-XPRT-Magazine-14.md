@@ -2,11 +2,10 @@
 layout: "post"
 title: "XPRT Magazine 14"
 description: "This issue covers digital transformation, AI, ChatGPT, cloud security, Blazor, CI/CD, and more."
-magazine-description-ai: "Features AI and ChatGPT, exploring their impact on software engineering, automation, and digital transformation."
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 date: 2023-05-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2023-05-01-XPRT-Magazine-14.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["AI", "Automation", "Azure", "Bicep", "Blazor", "ChatGPT", "CI/CD", "Cloud Security", "Coding", "DevOps", "Digital Transformation", "Entity Framework", "Identity", "Load Testing", "Magazines", "Mutation Testing", "OAuth2", "Pulumi", "Security", "Terraform", "Zero Trust"]
@@ -41,4 +40,4 @@ XPRT Magazine 14 explores digital transformation, the rise of AI and ChatGPT, cl
 - **Adding Load Testing to Your CI/CD Workflows in GitHub Actions**: Integrating load testing into CI/CD pipelines.
 - **Bicep vs Pulumi vs Terraform**: Comparing infrastructure as code tools for cloud automation.
 
-[Download the full magazine here]({{ "/assets/magazines/14.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/Xebia_Xpirit_XPRT_magazine_Final.pdf)
