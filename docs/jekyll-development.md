@@ -27,7 +27,7 @@ The site is configured as a Jekyll static site generator with custom plugins and
 title: Tech Hub
 email: reinier.vanmaanen@xebia.com
 description: >-
-  Use our resources to learn! Find the right tools, and get help with your projects or stay updated on the latest trends.
+  All Microsoft tech content in once place.
 timezone: Europe/Brussels
 google_analytics: G-95LLB67KJV
 

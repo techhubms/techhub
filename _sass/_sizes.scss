@@ -1,27 +1,23 @@
 // Content Width
-$content-width: 800px !default;
-
-// Header widths
-$header-max-width: 920px !default;
-$subnav-max-width: 920px !default;
+$content-width: 800px;
 
 // When to collapse header into hamburger menu
-$on-mobile: 900px !default; 
-$on-palm: 900px !default;
-$on-laptop: 900px !default;
+$on-mobile: 935px; 
+$on-palm: 935x;
+$on-laptop: 935px;
 
 // When to switch to mobile view for sections/collections/posts
 $navigation-breakpoint: 750px;
 
 // Root index - section boxes (AI, GitHub Copilot)
-$sections-grid-desktop: 2 !default;  // 2 sections side by side on desktop
-$sections-grid-mobile: 1 !default;   // 1 section per row on mobile
+$sections-grid-desktop: 2;  // 2 sections side by side on desktop
+$sections-grid-mobile: 1;   // 1 section per row on mobile
 
 // Section index - collection boxes (News, Videos, Community, etc.)
-$collections-grid-desktop: 3 !default;  // 3 collections side by side on desktop
-$collections-grid-mobile: 2 !default;   // 2 collections per row on mobile
+$collections-grid-desktop: 3;  // 3 collections side by side on desktop
+$collections-grid-mobile: 2;   // 2 collections per row on mobile
 
 // Posts boxes - individual posts/articles
-$posts-grid-desktop: 2 !default;   // 2 posts items side by side on desktop
-$posts-grid-mobile: 1 !default;    // 1 posts item per row on mobile
+$posts-grid-desktop: 2;   // 2 posts items side by side on desktop
+$posts-grid-mobile: 1;    // 1 posts item per row on mobile
 

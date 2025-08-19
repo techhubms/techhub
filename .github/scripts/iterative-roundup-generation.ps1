@@ -1070,7 +1070,7 @@ Return only JSON with fields: title, tags, description, introduction
             $finalContent = @"
 ---
 layout: "post"
-title: "$publishDateFormatted - $($metadata.title)"
+title: "$($metadata.title)"
 description: "$($metadata.description)"
 author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->

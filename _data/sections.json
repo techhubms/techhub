@@ -142,7 +142,7 @@
     },
     "ml": {
         "title": "ML",
-        "description": "Master machine learning and data science with Microsoft's platform ecosystem. From custom model development to MLOps pipelines, explore the tools and techniques that power intelligent applications.",
+        "description": "Master machine learning and data science with Microsoft's platform ecosystem. Explore custom model development, MLOps pipelines, and the tools that power intelligent applications.",
         "url": "/ml",
         "section": "ml",
         "image": "/assets/section-backgrounds/ml.jpg",
