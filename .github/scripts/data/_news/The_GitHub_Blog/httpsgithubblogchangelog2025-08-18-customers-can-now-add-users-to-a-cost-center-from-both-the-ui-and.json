@@ -1,0 +1,14 @@
+{
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Tags": [],
+  "ProcessedDate": "2025-08-18 16:15:16",
+  "Link": "https://github.blog/changelog/2025-08-18-customers-can-now-add-users-to-a-cost-center-from-both-the-ui-and-api-2",
+  "EnhancedContent": "You can now search for, add, and remove individual users in cost centers directly from the billing UI.\n\nPreviously, managing cost center membership required using the REST API. This update makes it easier to track and attribute costs across your organization all within the billing UI.\n\n## What’s new\n\nWhen creating or editing a cost center, you can now:\n\n- Search for and select one or more users to add.\n- View all users assigned to a cost center.\n- Remove users with a single click.\n\n## How it works\n\nEnterprise admins and billing managers can view and manage all cost center users across the enterprise. Organization admins can view and manage users within their organizations.\n\nEach user can only belong to one cost center at a time. If you try to add a user who’s already assigned elsewhere, they will be moved to the new cost center and you will be notified.\n\nThis feature is available now for GitHub Enterprise Cloud customers.\n\n[Learn more about managing cost centers](https://docs.github.com/enterprise-cloud@latest/billing/tutorials/use-cost-centers).",
+  "Title": "Customers can now add users to a cost center from both the UI and API",
+  "PubDate": "2025-08-18T15:01:58+00:00",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "You can now search for, add, and remove individual users in cost centers directly from the billing UI. Previously, managing cost center membership required using the REST API. This update…\n\nThe post [Customers can now add users to a cost center from both the UI and API](https://github.blog/changelog/2025-08-18-customers-can-now-add-users-to-a-cost-center-from-both-the-ui-and-api-2) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Allison",
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog"
+}
