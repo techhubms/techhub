@@ -6321,5 +6321,137 @@
     "collection": "community",
     "timestamp": "2025-08-18 08:20:45 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/windows-10/windows-10-a-success/m-p/4444969#M18041"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/best-practices-for-running-effective-microsoft-teams-meetings/",
+    "timestamp": "2025-08-18 09:19:34 +00:00",
+    "reason": "No categories found: The content is excluded under the 'Non-Development Microsoft Products' generic exclusion rule in Chapter 3. The article is focused on usage tips, meeting organization, collaboration strategies, and technical setup for Microsoft Teams end-users, not on Teams development (e.g., building bots or integrations). There is no substantive focus on coding, customization, APIs, or developer scenarios. It does not fit Coding, Azure, AI, DevOps, ML, or Security categories under the inclusion criteria. Therefore, no categories are assigned."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-co-author-documents-in-real-time-in-microsoft-365/",
+    "timestamp": "2025-08-18 09:19:49 +00:00",
+    "reason": "No categories found: No categories assigned because the content is focused on end-user business productivity features of Microsoft 365 (co-authoring Word, Excel, PowerPoint documents, OneDrive/SharePoint basics, Teams integration), not on development, technical implementation, coding, DevOps, AI, ML, or security. Per the \"Non-Development Microsoft Products\" generic exclusion rule, content about general Microsoft 365 usage, Office features, and end-user collaboration (without developer aspect) is excluded. There are no sections about application development, API usage, Teams bot/framework development, or technical architecture. Therefore, none of the category inclusion rules apply."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-speed-up-boot-time-in-windows-11/",
+    "timestamp": "2025-08-18 09:20:05 +00:00",
+    "reason": "No categories found: All generic exclusion rules were checked before considering any categories. The content is an end-user focused tutorial on improving boot times in Windows 11. It covers system settings, startup programs, driver updates, and hardware upgrades, but does not address any Microsoft development, programming, coding, AI/ML, DevOps, security, or Azure-specific technologies. There is no focus on scripting, Windows API, enterprise endpoint management, or development tools—just step-by-step instructions aimed at standard users to optimize their personal Windows setup. As per generic exclusion rules for 'Non-Development Microsoft Products' and the lack of technical depth relevant to Microsoft developer/engineering workflows, no categories apply."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-365/microsoft-defender-for-office-365-shared-mailboxes-and-microsoft/m-p/4444989#M57911",
+    "timestamp": "2025-08-18 09:20:13 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/how-to-stop-beeping-when-i-copy-and-paste/m-p/4445008#M29636",
+    "timestamp": "2025-08-18 09:20:14 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/win11-login/m-p/4445007#M29635",
+    "timestamp": "2025-08-18 09:20:14 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-screen-flickering-and-then-suddenly-turning-black/m-p/4445011#M29638",
+    "timestamp": "2025-08-18 09:20:14 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-compatibility-11/m-p/4445009#M29637",
+    "timestamp": "2025-08-18 09:20:14 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: No categories assigned. Although the content is about SharePoint, it discusses new visual and user experience enhancements for SharePoint site headers and footers (branding, navigation, layout, font customization) aimed at site owners and viewers. There is no coverage of SharePoint development, coding, APIs, extensibility, or architectural implementation. The update is focused on user-facing site design and configuration, which falls under end-user features of Microsoft 365/SharePoint rather than development. According to the 'Non-Development Microsoft Products' and 'Business vs Technical Content' exclusion rules, such end-user-focused SharePoint or Microsoft 365 content is excluded unless it has a clear development or technical implementation focus. No technical architecture, coding, or development patterns are present.",
+    "timestamp": "2025-08-18 10:17:16 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/introducing-new-sharepoint-site-header-footer-enhancements/ba-p/4444261"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-18 10:17:16 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/a-square-in-windows-11-inside-which-no-click-can-take-effect/m-p/4445030#M29642"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-18 10:17:17 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/no-boot-manager-on-reboot/m-p/4445044#M29652"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: this is a community post that is primarily a feature request and discussion about Windows 11 end-user interface functionality (the movable taskbar). It does not provide substantive technical details, development guidance, or insights relevant to Microsoft developer, DevOps, AI, coding, Azure, ML, or security topics. The content is focused on end-user customization and usability, not development or technical implementation.",
+    "timestamp": "2025-08-18 10:17:29 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/when-can-we-have-a-movable-taskbar/m-p/4445043#M29651"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-18 10:17:29 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/windows-11/windows-11-file-manager/m-p/4445029#M29641"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because, after applying the rules, this content does not centrally involve Microsoft technologies, products, or developer services. The focus is on the Reanimated 4 library for React Native, which is open-source and not Microsoft-specific. Even though GitHub is owned by Microsoft, this video does not discuss GitHub features, tooling, or integrations relevant to the AI, Coding, Azure, DevOps, Security, or ML categories. Instead, it is about animation techniques in React Native using the Reanimated library. There is no mention of Azure, .NET, Visual Studio, GitHub Copilot, or other qualifying Microsoft developer technologies. According to processing rules, when Microsoft technology is not central (≥40% or architectural focus), content is excluded.",
+    "canonical_url": "https://www.youtube.com/shorts/e18KEe3ALms",
+    "timestamp": "2025-08-18 14:14:52 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to the Non-English Content exclusion rule. The description is primarily in Portuguese (less than 80% English in main text), which directly triggers the generic exclusion rule for non-English content. There is no indication of an English version provided. All other rules are secondary after a generic exclusion applies.",
+    "timestamp": "2025-08-18 15:14:36 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Dl3KidBv390",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded due to the Non-English Content generic exclusion rule. The description is primarily in Portuguese, as indicated by both the language in the text (e.g., 'Nesta semana vamos soltar a criatividade e construir um tema personalizado para o VS Code do zero!') and the '[pt-BR 🇧🇷]' marker, meeting the rule of less than 80% English in the main text. Therefore, no categories are assigned.",
+    "timestamp": "2025-08-18 15:14:48 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=oWoAP5UUGNw",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded based on generic exclusion rules. The description indicates this video consists of interviews and opinions about developer security (e.g., 'we asked attendees and some special guests about developer security'), but does not provide technical implementation details, best practices, or concrete guidance. It is focused on advice and broad perspectives rather than actionable technical content (business/industry discussion rather than technical walkthrough). The content field is null, so there is no substantive material to evaluate for category inclusion. Per exclusion rule for business strategy/executive content and lack of technical depth, no categories are assigned.",
+    "timestamp": "2025-08-18 15:15:38 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/SU8uVGY8154",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-08-18 17:13:46 +00:00",
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2025/08/18/gamescom-2025-meet-the-teams-xbox-booth/",
+    "reason": "No categories found: Content excluded because it falls under the generic exclusion rules: this article is focused on the promotion of games at the Xbox booth during Gamescom 2025, which is primarily consumer/gaming news and not technical content for developers or Microsoft consultants. The entire article introduces game studios and their upcoming titles and includes narratives about industry inspiration and careers, but does not include any technical implementation details, development practices, or information about Microsoft developer technologies, tools, coding, DevOps, AI, ML, Azure, or Security. There is also no coverage of Xbox development platform features or SDKs—only discussions about games, their stories, and their creators. Therefore, none of the knowledge platform categories apply according to the processing rules."
+  },
+  {
+    "timestamp": "2025-08-18 17:14:03 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_researchers-have-developed-a-deep-learning-activity-7363212136824659969-sD1B",
+    "reason": "No categories found: This content does not qualify for any categories based on the generic exclusion rules. Although a Microsoft executive is mentioned and the post highlights research involving a deep learning system called BioEmu for protein conformation generation, the content provided is essentially an announcement with no technical details, implementation insights, or substantive discussion of Microsoft technology or engineering practices. It is a high-level news post without technical depth or actionable details relevant to practitioners, developers, or Microsoft technology users. According to the Generic Exclusion Rule for business strategy and executive content (Chapter 3: Business Strategy and Executive Content), corporate announcements and strategic initiatives without technical depth are excluded. Additionally, the primary focus is not on AI implementation details, coding, Azure, DevOps, Security, or ML practices as required by the inclusion rules."
+  },
+  {
+    "timestamp": "2025-08-18 19:12:47 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_i-just-love-this-the-new-copilot-function-activity-7363257256714387459-3tYQ",
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: Non-Development Microsoft Products. The post focuses on the new =COPILOT() function in Excel, which is part of Microsoft 365 Copilot—a business productivity feature, not a developer tool. According to exclusion rules for Copilot products, features for business productivity, document creation, and general office work (such as Excel formulas enhanced for end-users) must be excluded and assigned no categories, even though these use AI. There is no developer, coding, or technical implementation detail relevant to practitioner Microsoft technologies. The content is also short and promotional in nature, fitting the exclusion for non-development Microsoft 365 Copilot features."
+  },
+  {
+    "timestamp": "2025-08-18 19:12:59 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/hello-from-a-future-azure-mvp/m-p/4444910#M22113",
+    "collection": "community",
+    "reason": "Insufficient content length"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: Content is excluded according to the generic exclusion rules for Non-Development Microsoft Products in Chapter 3. The entire article is about the Copilot function in Excel for Windows and Mac, which is a feature of Microsoft 365 Copilot focused on business productivity and document creation within Excel. It does not involve developer tools, code development, technical implementation, or developer APIs. The content describes how end-users can use natural language prompts to analyze and manage data in spreadsheets—not how developers can build or extend Copilot or Excel. Per the critical Copilot product distinction rule, Microsoft 365 Copilot and Office Copilot are explicitly excluded as non-development products, and content about those features must not be assigned any categories, regardless of AI references.",
+    "canonical_url": "https://techcommunity.microsoft.com/blog/microsoft365insiderblog/bring-ai-to-your-formulas-with-the-copilot-function-in-excel/4443487",
+    "timestamp": "2025-08-18 23:11:45 +00:00"
   }
 ]
