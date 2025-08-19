@@ -6471,5 +6471,17 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule: The input is primarily a high-level business strategy overview and does not contain substantive technical content or implementation details. The description refers to Microsoft AI use cases by industry, role, and business priority, but does not provide actionable technical depth, code, architectures, or development-oriented information. Per 'Business Strategy and Executive Content' and 'Business vs Technical Content Examples' in Chapter 3, purely strategic, industry-focused, or business-priority content is excluded unless it contains significant technical implementation details. No categories assigned.",
     "canonical_url": "https://www.youtube.com/watch?v=j9jGYAY9uig",
     "timestamp": "2025-08-19 12:23:32 +00:00"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-08-19 19:10:54 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/kamal-hinduja-geneva-switzerland-what-are-the-key-services/m-p/4445496#M13892",
+    "reason": "Insufficient content length"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-08-19 19:10:55 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/is-native-rdlc-report-support-planned-for-future-net-versions/m-p/4445393#M672",
+    "reason": "Insufficient content length"
   }
 ]
