@@ -6884,5 +6884,11 @@
     "reason": "Succesfully added: Assigned the Azure category because the content is exclusively about Azure Hybrid Benefit (Azure inclusion rules 1 and 4), focusing on Azure licensing, cost optimization, and workload migration. No other categories qualify: there is no substantive AI, machine learning, security, coding, GitHub Copilot, or DevOps coverage per the description. The episode is about cost management and licensing for Azure, and the associated resources and chapters confirm this focus.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=1LgV-kfnUAA"
+  },
+  {
+    "timestamp": "2025-08-19 10:14:53 +00:00",
+    "reason": "Succesfully added: Assigned the AI category since the post focuses on building custom copilots using Microsoft's Copilot Studio, which is a developer/maker AI platform (AI inclusion rule 1 and 2). Although Power Automate is also discussed, it's used to extend AI-driven copilots rather than for coding or DevOps purposes, and the post does not cover code-level customization or developer-focused extensibility, so Coding and DevOps categories were not included. Microsoft 365 Copilot and other end-user productivity tools are not involved, and Copilot Studio is explicitly a developer/maker tool per the Copilot Product Distinction rule.",
+    "canonical_url": "https://dellenny.com/integrating-copilot-studio-with-power-automate-for-end-to-end-workflows/",
+    "collection": "posts"
   }
 ]
