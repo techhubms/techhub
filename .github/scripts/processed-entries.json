@@ -6926,5 +6926,17 @@
     "canonical_url": "https://dellenny.com/creating-custom-plugins-and-connectors-in-copilot-studio/",
     "reason": "Succesfully added: Assigned the AI category because the entire article focuses on building custom plugins and connectors in Microsoft Copilot Studio, which is a platform specifically intended for developers and makers to extend AI copilots (AI rule 1). While Copilot Studio is not GitHub Copilot and is not a business productivity tool like Microsoft 365 Copilot, it is explicitly included as a developer/maker AI platform according to the Copilot product distinction section and the AI category inclusion rules. No Coding or DevOps categories were assigned since content is focused more on high-level integration and plugin/connector architecture rather than specific code implementations or software engineering details. Azure, ML, and Security are not primary focuses per the description and details.",
     "collection": "posts"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-08-19-dependabot-now-supports-rust-toolchain-updates",
+    "timestamp": "2025-08-19 16:15:53 +00:00",
+    "reason": "Succesfully added: The content announces a new feature in Dependabot—a CI/dependency management tool integrated into GitHub—that automates Rust toolchain version updates. While the feature is platform-agnostic, it is tightly coupled to GitHub workflows (see rules under DevOps: GitHub DevOps Tools and version control/infrastructure automation). No coding examples or security, AI, Azure, or ML topics are present. Therefore, only the 'DevOps' category applies."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=VC6nM0t-bUw",
+    "timestamp": "2025-08-19 16:16:34 +00:00",
+    "reason": "Succesfully added: Categories 'AI' and 'Azure' were assigned. 'AI' applies as the content focuses on business transformation via AI agents, agent workflows, and the evolution from chatbots (AI rule 1, 4, and 5). 'Azure' applies due to direct references to Azure AI, Azure resources, and Microsoft AI business solutions (Azure rule 1 and 3). No other categories were added because the focus is not primarily on coding, DevOps, ML engineering, or security implementation. The content meets technical depth and Microsoft technology centrality, and all generic exclusion rules were checked and found not to apply."
   }
 ]
