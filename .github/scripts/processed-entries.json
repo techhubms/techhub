@@ -6956,5 +6956,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/generating-classes-with-custom-naming-conventions-using-github/ba-p/4444837",
     "collection": "community",
     "timestamp": "2025-08-19 17:13:49 +00:00"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/test-and-validate-your-functions-with-develop-mode-in-fabric-user-data-functions-preview/",
+    "timestamp": "2025-08-19 18:17:29 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the ML category because Fabric User Data Functions are positioned as a data engineering/developer-focused feature in Microsoft Fabric, intended for users building and testing data-oriented functions (ML Rule 1, 2, and 5). No Azure or AI categories were added because the article is specifically about Fabric User Data Functions feature updates, not AI or coding in general. Exclusions did not apply: the content is technical, focused on development and testing workflows, and not about general business productivity, non-English content, career topics, or business management. Tags were created based on product names, technical terms, and features discussed."
   }
 ]
