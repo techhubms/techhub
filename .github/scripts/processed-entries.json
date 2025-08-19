@@ -6962,5 +6962,17 @@
     "timestamp": "2025-08-19 18:17:29 +00:00",
     "collection": "news",
     "reason": "Succesfully added: Assigned the ML category because Fabric User Data Functions are positioned as a data engineering/developer-focused feature in Microsoft Fabric, intended for users building and testing data-oriented functions (ML Rule 1, 2, and 5). No Azure or AI categories were added because the article is specifically about Fabric User Data Functions feature updates, not AI or coding in general. Exclusions did not apply: the content is technical, focused on development and testing workflows, and not about general business productivity, non-English content, career topics, or business management. Tags were created based on product names, technical terms, and features discussed."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-08-19 19:10:21 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-august-2025/",
+    "reason": "Succesfully added: Assigned AI category because the AI Projects libraries and Azure AI Foundry are central to parts of the release (AI rule 1). Assigned Azure category because all SDKs described are for Azure services and development (Azure rule 1). Assigned Coding category since the article discusses SDKs, programming languages, and client libraries for developers (Coding rules 1 and 2). The content is technical, focused on new libraries, features, and bug fixes for developer use. No exclusion rules apply."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-08-19 19:10:44 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-08-19-agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github-com",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the content describes the Copilot coding agent, an autonomous developer tool (AI rule 2 & 5, GitHub Copilot all rules). DevOps was included as the feature streamlines developer workflows, task management, and code review (DevOps rules 3, 9). The content does not fall under any generic exclusion rule—it is technical, developer-focused, and describes a new feature for code management on GitHub."
   }
 ]

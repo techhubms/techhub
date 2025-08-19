@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "In May, we launched [Copilot coding agent](https://github.blog/news-insights/product-news/github-copilot-meet-the-new-coding-agent/), our autonomous developer agent. You can delegate tasks to Copilot, and Copilot will work in the background and create a draft pull request for your review.\n\nWith the new Agents panel, available on every page on github.com, you can quickly hand new tasks to Copilot and monitor progress without breaking your flow.\n\nTo open the Agents panel, click the **Agents button** in the header, next to the Copilot button.\n\n![The Agents button in the GitHub header](https://github.com/user-attachments/assets/7ca17124-e7a6-47db-b0a9-2df4bf219b79)\n\nWhen you open the panel, you’ll see a list of tasks you’ve delegated to Copilot, with a clear status for each. To head to the pull request, just click on a task in the list.\n\nTo hand a new task to Copilot, just pick a repository (and optional base branch), describe what you want in natural language, then hit Return.\n\n## Who can use this feature\n\nCopilot coding agent and the Agents panel are available to all Copilot Pro and Copilot Pro+ users, plus Copilot Business and Copilot Enterprise users where an administrator has [enabled Copilot coding agent](https://docs.github.com/enterprise-cloud@latest/copilot/how-tos/agents/copilot-coding-agent/enabling-copilot-coding-agent).\n\nTo find out more about Copilot coding agent and get started, head to [our documentation](https://gh.io/copilot-coding-agent-docs).",
+  "FeedName": "The GitHub Blog",
+  "Tags": [],
+  "PubDate": "2025-08-19T17:52:31+00:00",
+  "Link": "https://github.blog/changelog/2025-08-19-agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github-com",
+  "Author": "Allison",
+  "Description": "In May, we launched Copilot coding agent, our autonomous developer agent. You can delegate tasks to Copilot, and Copilot will work in the background and create a draft pull request…\n\nThe post [Agents panel: Launch Copilot coding agent tasks anywhere on github.com](https://github.blog/changelog/2025-08-19-agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github-com) appeared first on [The GitHub Blog](https://github.blog).",
+  "ProcessedDate": "2025-08-19 19:09:02",
+  "OutputDir": "_news",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Title": "Agents panel: Launch Copilot coding agent tasks anywhere on github.com"
+}
