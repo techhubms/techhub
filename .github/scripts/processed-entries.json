@@ -6974,5 +6974,11 @@
     "timestamp": "2025-08-19 19:10:44 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-08-19-agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github-com",
     "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the content describes the Copilot coding agent, an autonomous developer tool (AI rule 2 & 5, GitHub Copilot all rules). DevOps was included as the feature streamlines developer workflows, task management, and code review (DevOps rules 3, 9). The content does not fall under any generic exclusion rule—it is technical, developer-focused, and describes a new feature for code management on GitHub."
+  },
+  {
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories because the article is centered on GitHub Copilot’s autonomous coding agent, a developer tool (AI rule 2 and GitHub Copilot inclusion rules). The content explains how Copilot, powered by generative AI, is integrated into developer workflows across GitHub, not related to business productivity. No other categories apply as the primary focus is task delegation, automation, and AI integration using GitHub Copilot. No exclusion rules were triggered.",
+    "timestamp": "2025-08-19 20:14:35 +00:00",
+    "canonical_url": "https://github.blog/news-insights/product-news/agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github/",
+    "collection": "news"
   }
 ]
