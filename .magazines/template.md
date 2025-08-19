@@ -2,20 +2,13 @@
 layout: "post"
 title: "XPRT Magazine XX"
 description: "A short 50 word summary of the magazine"
-magazine-description-ai: "A short 50 word summary of the magazine, focussing on AI articles. If there is nothing on AI, do not include this section."
-magazine-description-github-copilot: "A short 50 word summary of the magazine, focussing only on GitHub Copilot articles. If there is nothing on GitHub Copilot, do not include this section."
-magazine-description-data: "A short 50 word summary of the magazine, focussing on Microsoft data platform articles. If there is nothing on data platforms, do not include this section."
-magazine-description-azure: "A short 50 word summary of the magazine, focussing on Azure cloud platform articles. If there is nothing on Azure, do not include this section."
-magazine-description-coding: "A short 50 word summary of the magazine, focussing on .NET development and coding articles. If there is nothing on .NET/coding, do not include this section."
-magazine-description-devops: "A short 50 word summary of the magazine, focussing on DevOps methodology articles. If there is nothing on DevOps, do not include this section."
-magazine-description-security: "A short 50 word summary of the magazine, focussing on Microsoft security articles. If there is nothing on security, do not include this section."
-author: "GitHub Copilot"
+author: "Xebia"
 excerpt_separator: <!--excerpt_end-->
 download-url: "https://the.download.url/for/the/magazine"
-viewing_mode: "internal"
+viewing_mode: "external"
 date: 2025-01-01 00:00:00 +00:00
 permalink: "/2025-01-01-XPRT-Magazine-XX.html"
-categories: ["AI", "GitHub Copilot", "Data", "Azure", "Coding", "DevOps", "Security"]
+categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [A, Comma, Seperated, List, Of, Tags, Based, On, The, Contents, Of, The, Magazine, Spaces In A Tag, Are, Not Forbidden]
 tags_normalized: [a, comma, seperated, list, of, tags, based, on, the, contents, of, the, magazine, spaces in a tag, are, not forbidden]
 ---

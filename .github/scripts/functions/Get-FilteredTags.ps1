@@ -60,7 +60,6 @@ function Get-FilteredTags {
         'Videos', 
         'Community', 
         'Events', 
-        'Magazines', 
         'Roundups'
     )
     

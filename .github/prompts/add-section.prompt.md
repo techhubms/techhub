@@ -76,7 +76,7 @@ Check if `Get-FilteredTags.ps1` needs updates for new section tags:
 ### Review Existing Content
 
 1. **Scan all collections** for content that should be in the new section:
-   - `_news/`, `_posts/`, `_videos/`, `_community/`, `_magazines/`, `_events/`
+   - `_news/`, `_posts/`, `_videos/`, `_community/`, `_events/`
 
 2. **Provide categorization suggestions** to the user for relevant articles
 
@@ -123,8 +123,6 @@ foreach ($file in $files) {
 Update these files to include the new section:
 
 - `.github/copilot-instructions.md` - Add categorization rules
-- `.github/prompts/magazines.prompt.md` - Include new section
-- `_magazines/template.md` - Add section description template
 
 ### RSS Feeds (Optional)
 
