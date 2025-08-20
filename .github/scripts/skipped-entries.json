@@ -6495,5 +6495,23 @@
     "timestamp": "2025-08-20 09:14:41 +00:00",
     "collection": "posts",
     "canonical_url": "https://dellenny.com/how-to-secure-microsoft-365-accounts-without-a-dedicated-it-department/"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the provided content consists only of a title, a promotional description for Microsoft Build 2025, and no substantive main content ('content': null). There is no actual information, educational value, technical depth, or actionable insight present, only an event mention and a link to a corporate initiative. This triggers the Sales Pitch / Promotional exclusion and fails to meet the minimum quality and completeness requirements for categorization.",
+    "collection": "videos",
+    "timestamp": "2025-08-20 15:14:19 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/7Hwtlp8A3OQ"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-08-20 15:14:21 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/machine-learning-and-ai/boosting-productivity-with-github-copilot-real-world-net-coding/m-p/4446056#M48"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-08-20 15:14:21 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/machine-learning-and-ai/how-github-copilot-helps-with-test-driven-development-tdd/m-p/4446059#M49"
   }
 ]
