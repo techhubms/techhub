@@ -6483,5 +6483,17 @@
     "timestamp": "2025-08-19 19:10:55 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/is-native-rdlc-report-support-planned-for-future-net-versions/m-p/4445393#M672",
     "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is primarily about automating IT governance and administration for Microsoft 365 using ShareGate. According to the Non-Development Microsoft Products exclusion rule, content focused on Microsoft 365 workplace productivity, compliance, or business administration—rather than software development or development tooling—is excluded from categorization. The post details process automation, policy management, and compliance, but lacks substantive coverage of development, coding, DevOps, or custom implementation. No inclusion rule for Coding, DevOps, Azure, Security, AI, ML, or GitHub Copilot applies.",
+    "timestamp": "2025-08-20 09:14:29 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/automating-governance-with-sharegate-a-practical-guide-for-businesses/"
+  },
+  {
+    "reason": "No categories found: Content is excluded due to the generic exclusion rule: The content focuses on end-user security best practices for Microsoft 365, which is not development or IT pro technical content per Non-Development Microsoft Products and Business/Workplace Focus exclusions (Chapter 3). The steps are aimed at general users or small business owners, not at developer or IT professional audiences. There is no focus on coding, IT architecture, advanced configuration, or Microsoft security development tools (e.g., Azure, Sentinel, Defender integrations). Microsoft 365 productivity and general administration content is outside the platform's technical scope unless focused on development or advanced technical configuration.",
+    "timestamp": "2025-08-20 09:14:41 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-secure-microsoft-365-accounts-without-a-dedicated-it-department/"
   }
 ]
