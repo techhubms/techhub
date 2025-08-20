@@ -5,11 +5,11 @@ description: "This issue covers Azure Event Grid, ARM templates, cloud transitio
 categories: ["Azure", "DevOps"]
 date: 2017-05-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2017-05-01-XPRT-Magazine-05.html"
 excerpt_separator: <!--excerpt_end-->
-tags: ["ARM Templates", "Automation", "Azure", "Best Practices", "Cloud", "Cloud Transition", "Communities", "Containers", "Deployment Pipelines", "DevOps", "Event Grid", "Magazines", "Scaling", "Scrum", "Testing", "Web Applications"]
-tags_normalized: ["arm templates", "automation", "azure", "best practices", "cloud", "cloud transition", "communities", "containers", "deployment pipelines", "devops", "event grid", "magazines", "scaling", "scrum", "testing", "web applications"]
+tags: ["ARM Templates", "Automation", "Azure", "Best Practices", "Cloud", "Cloud Transition", "Communities", "Community", "Containers", "Deployment Pipelines", "DevOps", "Event Grid", "Magazines", "Scaling", "Scrum", "Testing", "Web Applications"]
+tags_normalized: ["arm templates", "automation", "azure", "best practices", "cloud", "cloud transition", "communities", "community", "containers", "deployment pipelines", "devops", "event grid", "magazines", "scaling", "scrum", "testing", "web applications"]
 ---
 
 XPRT Magazine 05 explores Azure Event Grid, best practices for ARM templates, cloud transition strategies, containerized testing, deployment pipelines, and scaling Scrum. This issue provides actionable insights for building resilient, scalable, and modern cloud solutions.
@@ -40,4 +40,4 @@ XPRT Magazine 05 explores Azure Event Grid, best practices for ARM templates, cl
 - **Scaling Scrum to the Limit**: Techniques and lessons for scaling Scrum in large organizations.
 - **8 Years of CPU in a Day**: Insights into high-performance computing and DevOps at scale.
 
-[Download the full magazine here]({{ "/assets/magazines/05.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/XPRT.-5.pdf)

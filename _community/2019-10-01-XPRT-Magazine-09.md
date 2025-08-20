@@ -5,11 +5,11 @@ description: "This issue covers open source, .NET Foundation, Azure, API managem
 categories: ["AI", "Azure", "Coding", "DevOps"]
 date: 2019-10-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2019-10-01-XPRT-Magazine-09.html"
 excerpt_separator: <!--excerpt_end-->
-tags: [".NET Foundation", "AI", "API Management", "Automation", "Azure", "Cloud", "Coding", "DevOps", "EventStorming", "Healthcare", "High Quality Releases", "Inclusive Education", "IT Future", "Machine Learning", "Magazines", "Observability", "Open Source", "Pod Security"]
-tags_normalized: ["net foundation", "ai", "api management", "automation", "azure", "cloud", "coding", "devops", "eventstorming", "healthcare", "high quality releases", "inclusive education", "it future", "machine learning", "magazines", "observability", "open source", "pod security"]
+tags: [".NET Foundation", "AI", "API Management", "Automation", "Azure", "Cloud", "Coding", "Community", "DevOps", "EventStorming", "Healthcare", "High Quality Releases", "Inclusive Education", "IT Future", "Machine Learning", "Magazines", "Observability", "Open Source", "Pod Security"]
+tags_normalized: ["net foundation", "ai", "api management", "automation", "azure", "cloud", "coding", "community", "devops", "eventstorming", "healthcare", "high quality releases", "inclusive education", "it future", "machine learning", "magazines", "observability", "open source", "pod security"]
 ---
 
 XPRT Magazine 09 explores open source and the .NET Foundation, Azure API management, disaster recovery, machine learning, DevOps, observability, event storming, healthcare APIs, inclusive programming education, and more. This issue provides practical strategies and technical insights for building modern, resilient, and inclusive solutions.
@@ -39,4 +39,4 @@ XPRT Magazine 09 explores open source and the .NET Foundation, Azure API managem
 - **How to Teach Programming to Blind Children**: Inclusive approaches to programming education.
 - **The Future of IT**: Reflections and predictions on the evolving IT landscape.
 
-[Download the full magazine here]({{ "/assets/magazines/09.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/OOM2019136-Xpirit_XPRT_magazine_9_2019-online.pdf)

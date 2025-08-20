@@ -2,16 +2,14 @@
 layout: "post"
 title: "XPRT Magazine 16"
 description: "A forward-looking edition focused on AI, security, cloud innovation, Blazor, prompting, sustainable engineering, and more. Features hands-on guides, real-world stories, and technical deep-dives for modern software professionals."
-magazine-description-ai: "Covers practical AI applications, prompt engineering, generative art, LLMs, Copilot, and agent-based solutions for business transformation."
-magazine-description-github-copilot: "Highlights the creation of the GitHub Copilot Bootcamp and real-world Copilot adoption."
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
 date: 2024-05-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2024-05-01-XPRT-Magazine-16.html"
 excerpt_separator: <!--excerpt_end-->
-tags: ["Agents", "AI", "Art", "Azure", "Blazor", "Carbon Measurement", "Coding", "Container Apps", "DDoS", "DevOps", "Entity Framework", "Environmental Impact", "GitHub Copilot", "LLM", "Magazines", "OAuth", "OpenID Connect", "PKCE", "Prompt Engineering", "Security", "SQL Merge"]
-tags_normalized: ["agents", "ai", "art", "azure", "blazor", "carbon measurement", "coding", "container apps", "ddos", "devops", "entity framework", "environmental impact", "github copilot", "llm", "magazines", "oauth", "openid connect", "pkce", "prompt engineering", "security", "sql merge"]
+tags: ["Agents", "AI", "Art", "Azure", "Blazor", "Carbon Measurement", "Coding", "Community", "Container Apps", "DDoS", "DevOps", "Entity Framework", "Environmental Impact", "GitHub Copilot", "LLM", "Magazines", "OAuth", "OpenID Connect", "PKCE", "Prompt Engineering", "Security", "SQL Merge"]
+tags_normalized: ["agents", "ai", "art", "azure", "blazor", "carbon measurement", "coding", "community", "container apps", "ddos", "devops", "entity framework", "environmental impact", "github copilot", "llm", "magazines", "oauth", "openid connect", "pkce", "prompt engineering", "security", "sql merge"]
 ---
 
 Xpirit Magazine 16 explores the rapid evolution of AI, security, and cloud innovation. This issue features practical guides on prompt engineering, Blazor, OAuth PKCE, sustainable software, DDoS protection, Copilot adoption, and more—offering actionable insights for developers and technology leaders.
@@ -46,4 +44,4 @@ Xpirit Magazine 16 explores the rapid evolution of AI, security, and cloud innov
 
 - **Sustainable Software Engineering Through the Lens of Environmental, Part 2: Measuring**: Focuses on measuring and reducing carbon emissions in Azure workloads.
 
-[Download the full magazine here]({{ "/assets/magazines/16.pdf" | relative_url }})
+[Download the full magazine here](https://pages.xebia.com/xprt-magazine-16-protecting-tomorrow-infuse-innovation)

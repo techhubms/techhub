@@ -5,11 +5,11 @@ description: "A knowledge-driven edition featuring engineering culture, accessib
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 date: 2022-10-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2022-10-01-XPRT-Magazine-13.html"
 excerpt_separator: <!--excerpt_end-->
-tags: ["Accessibility", "AI", "Automation", "Azure", "Azure Managed Grafana", "Azure Virtual Desktop", "Bitrot", "Blazor", "Cloud Adoption", "Coding", "Compliance", "DevOps", "Digital Twins", "Engineering Culture", "GitHub Actions", "Knowledge Sharing", "Magazines", "Mocking", "Nullable Reference Types", "Observability", "Platform Engineering", "Security", "Team Learning", "WireMock", "Xpirit USA"]
-tags_normalized: ["accessibility", "ai", "automation", "azure", "azure managed grafana", "azure virtual desktop", "bitrot", "blazor", "cloud adoption", "coding", "compliance", "devops", "digital twins", "engineering culture", "github actions", "knowledge sharing", "magazines", "mocking", "nullable reference types", "observability", "platform engineering", "security", "team learning", "wiremock", "xpirit usa"]
+tags: ["Accessibility", "AI", "Automation", "Azure", "Azure Managed Grafana", "Azure Virtual Desktop", "Bitrot", "Blazor", "Cloud Adoption", "Coding", "Community", "Compliance", "DevOps", "Digital Twins", "Engineering Culture", "GitHub Actions", "Knowledge Sharing", "Magazines", "Mocking", "Nullable Reference Types", "Observability", "Platform Engineering", "Security", "Team Learning", "WireMock", "Xpirit USA"]
+tags_normalized: ["accessibility", "ai", "automation", "azure", "azure managed grafana", "azure virtual desktop", "bitrot", "blazor", "cloud adoption", "coding", "community", "compliance", "devops", "digital twins", "engineering culture", "github actions", "knowledge sharing", "magazines", "mocking", "nullable reference types", "observability", "platform engineering", "security", "team learning", "wiremock", "xpirit usa"]
 ---
 
 This edition of XPRT Magazine is packed with knowledge sharing on engineering culture, accessibility, observability, cloud adoption, security, and modern .NET development. Explore practical guides, case studies, and innovation stories from Xpirit’s experts, with a focus on building inclusive, secure, and high-performing software.
@@ -37,4 +37,4 @@ This edition of XPRT Magazine is packed with knowledge sharing on engineering cu
 - *What is Azure Virtual Desktop*: Introduction to Azure Virtual Desktop for scalable, managed desktop and app virtualization.
 - *Xpirit USA – Expanding our worldwide Authority mission*: The story of Xpirit’s expansion into the US and building a global authority mission.
 
-[Download the full magazine here]({{ "/assets/magazines/13.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/Xpirit_XPRT_magazine_13_v5.pdf)

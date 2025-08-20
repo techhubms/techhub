@@ -29,13 +29,7 @@
                 "title": "Community",
                 "url": "/all/community.html",
                 "collection": "community",
-                "description": "All community discussions from Reddit and other platforms across every section."
-            },
-            {
-                "title": "Magazines",
-                "url": "/all/magazines.html",
-                "collection": "magazines",
-                "description": "All technical magazines and publications across every section."
+                "description": "Community announcements, discussions, magazines and insights."
             },
             {
                 "title": "Events",
@@ -69,13 +63,7 @@
                 "title": "Community",
                 "url": "/github-copilot/community.html",
                 "collection":"community",
-                "description": "Reddit and other community resources related to GitHub Copilot."
-            },            
-            {
-                "title": "Magazines",
-                "url": "/github-copilot/magazines.html",
-                "collection":"magazines",
-                "description": "Magazines about GitHub Copilot and other technical topics."
+                "description": "Community announcements, discussions, magazines and insights related to GitHub Copilot."
             },            
             {
                 "title": "Features",
@@ -124,13 +112,7 @@
                 "title": "Community",
                 "url": "/ai/community.html",
                 "collection":"community",
-                "description": "Reddit and other community resources related to AI."
-            },
-            {
-                "title": "Magazines",
-                "url": "/ai/magazines.html",
-                "collection":"magazines",
-                "description": "Magazines about AI and other technical topics."
+                "description": "Community announcements, discussions, magazines and insights related to AI."
             },
             {
                 "title": "Events",
@@ -170,7 +152,7 @@
                 "title": "Community",
                 "url": "/ml/community.html",
                 "collection": "community",
-                "description": "Community discussions about machine learning development and data science from Reddit and other platforms."
+                "description": "Community announcements, discussions, magazines and insights related to machine learning development and data science."
             }
         ]
     },    
@@ -204,13 +186,7 @@
                 "title": "Community",
                 "url": "/azure/community.html",
                 "collection": "community",
-                "description": "Community discussions and insights about Azure from Reddit and other platforms."
-            },
-            {
-                "title": "Magazines",
-                "url": "/azure/magazines.html",
-                "collection": "magazines",
-                "description": "Technical magazines featuring Azure content and cloud architecture."
+                "description": "Community announcements, discussions, magazines and insights about Azure."
             }
         ]
     },
@@ -244,13 +220,7 @@
                 "title": "Community",
                 "url": "/coding/community.html",
                 "collection": "community",
-                "description": "Community discussions about .NET development and coding from Reddit and other platforms."
-            },
-            {
-                "title": "Magazines",
-                "url": "/coding/magazines.html",
-                "collection": "magazines",
-                "description": "Technical magazines featuring .NET development and programming content."
+                "description": "Community discussions about .NET development and coding."
             }
         ]
     },    
@@ -284,7 +254,7 @@
                 "title": "Community",
                 "url": "/devops/community.html",
                 "collection": "community",
-                "description": "Community discussions about DevOps from Reddit and other platforms."
+                "description": "Community discussions about DevOps."
             }
         ]
     },
@@ -318,7 +288,7 @@
                 "title": "Community",
                 "url": "/security/community.html",
                 "collection": "community",
-                "description": "Community discussions about Microsoft security from Reddit and other platforms."
+                "description": "Community discussions about Microsoft security."
             }
         ]
     }

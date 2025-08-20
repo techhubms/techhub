@@ -2,15 +2,14 @@
 layout: "post"
 title: "XPRT Magazine 15"
 description: "A diverse edition featuring AI-driven creativity, sustainable software engineering, DevOps, cloud security, value stream mapping, and more. Includes hands-on guides, real-world stories, and technical deep-dives from Xpirit's international teams."
-magazine-description-ai: "Explores practical AI applications, including daily meditation content generation with GPT-4, and discusses responsible AI use in engineering culture."
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 date: 2023-10-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2023-10-01-XPRT-Magazine-15.html"
 excerpt_separator: <!--excerpt_end-->
-tags: ["AI", "Azure", "Azure Policy", "CKAD", "Cloud Security", "Coding", "DevOps", "Escape Room", "Fuzzing", "GreenOps", "InnerSource", "Kubernetes", "Magazines", "Meditation", "Platform Engineering", "Playwright", "Security", "Sustainable Software Engineering", "Value Stream Mapping"]
-tags_normalized: ["ai", "azure", "azure policy", "ckad", "cloud security", "coding", "devops", "escape room", "fuzzing", "greenops", "innersource", "kubernetes", "magazines", "meditation", "platform engineering", "playwright", "security", "sustainable software engineering", "value stream mapping"]
+tags: ["AI", "Azure", "Azure Policy", "CKAD", "Cloud Security", "Coding", "Community", "DevOps", "Escape Room", "Fuzzing", "GreenOps", "InnerSource", "Kubernetes", "Magazines", "Meditation", "Platform Engineering", "Playwright", "Security", "Sustainable Software Engineering", "Value Stream Mapping"]
+tags_normalized: ["ai", "azure", "azure policy", "ckad", "cloud security", "coding", "community", "devops", "escape room", "fuzzing", "greenops", "innersource", "kubernetes", "magazines", "meditation", "platform engineering", "playwright", "security", "sustainable software engineering", "value stream mapping"]
 ---
 
 Xpirit Magazine 15 brings together international voices to share knowledge on AI-driven content creation, sustainable software engineering, DevOps journeys, cloud security, value stream mapping, and more. This issue features hands-on guides, real-world stories, and technical deep-dives for modern software professionals.
@@ -46,4 +45,4 @@ Xpirit Magazine 15 brings together international voices to share knowledge on AI
 
 - **Xpirit Techorama Escape Room**: Chronicles the creation of an IoT-enabled escape room, showcasing innovation and teamwork at Xpirit events.
 
-[Download the full magazine here]({{ "/assets/magazines/15.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/Xebia_Xpirit_XPRT_magazine_15_2023-1.pdf)

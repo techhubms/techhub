@@ -1,0 +1,461 @@
+@use "colors";
+@use "settings";
+
+/**
+ * Site header
+ */
+.site-header {
+  padding: 5px 0;
+  color: colors.$light-gray;
+  border-bottom: 1px solid colors.$light-gray;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  position: relative;
+  z-index: 10000;
+  align-items: center;
+  align-content: center;
+
+  // Positioning context for the mobile navigation icon
+  .wrapper {
+    max-width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    height: 60px;
+  }
+
+  a {
+    color: colors.$light-gray;
+    transition: color 0.2s ease;
+
+    &:visited {
+      color: colors.$light-gray;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: colors.$bright-purple;
+      }
+    }
+  }
+
+  // Mobile responsive styling for header wrapper
+  @include settings.media-query(settings.$on-mobile) {
+    .wrapper {
+      max-width: 100%;
+      justify-content: unset;
+    }
+  }
+}
+
+.site-title-container {
+  white-space: nowrap;
+  align-items: center;
+  align-content: center;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+// Mobile responsive styling for site title container
+@include settings.media-query(settings.$on-mobile) {
+  .site-title-container {
+    margin-left: 5px;
+  }
+}
+
+.site-title {
+  @include settings.relative-font-size(1.625);
+  font-weight: 300;
+  line-height: settings.$base-line-height * settings.$base-font-size * 2.25;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  color: colors.$light-gray;
+  text-decoration: none;
+  align-items: center;
+  align-content: center;
+  gap: 0;
+
+  &,
+  &:visited {
+    color: colors.$light-gray;
+  }
+
+  svg.techhub-logo,
+  svg.xebia-logo,
+  svg.github-copilot-logo {
+    will-change: transform;
+    transform: translateZ(0);
+    fill: colors.$light-gray;
+    transition: fill 0.2s ease;
+    margin: 3px 0 0 0;
+    padding: 0;
+    display: block;
+  }
+
+  &:hover .xebia-logo,
+  &:hover .github-copilot-logo {
+    fill: colors.$bright-purple;
+  }
+}
+
+#xebia-logo {
+  height: 45px;
+}
+
+#github-copilot-logo {
+  height: 45px;
+  margin-left: 20px;
+}
+
+#techhub-logo {
+  height: 55px;
+  margin-right: 40px;
+}
+
+.site-nav {
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: 0;
+  padding-right: 0;
+
+  .nav-trigger {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+
+    svg.hamburger-menu {
+      will-change: transform;
+      transform: translateZ(0);
+      width: 30px;
+      height: auto;
+      margin: 5px;
+      fill: colors.$light-gray;
+      transition: fill 0.2s ease;
+    }
+
+    >svg {
+      fill: colors.$light-gray;
+      transition: fill 0.2s ease;
+    }
+  }
+
+  label[for="nav-trigger"]:hover .menu-icon .hamburger-menu {
+    fill: colors.$bright-purple;
+  }
+
+  a.page-link {
+    color: colors.$light-gray;
+    line-height: settings.$base-line-height;
+    text-decoration: none;
+    position: relative;
+    font-weight: 600;
+
+    &:visited {
+      color: colors.$light-gray;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: colors.$light-gray;
+      }
+    }
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    // Regular page links with underline effect
+    &.regular {
+      @media only screen and (min-width: settings.$on-mobile) {
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: colors.$bright-purple;
+          transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+          will-change: width, transform;
+          transform: translateZ(0);
+        }
+
+        @media (hover: hover) {
+
+          &:hover::after,
+          &.active::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    // Contact button styling
+    &.contact {
+      @media only screen and (min-width: settings.$on-mobile) {
+        font-size: 14px;
+        font-weight: 600;
+        background-color: rgba(colors.$light-gray, 0.1);
+        color: colors.$light-gray;
+        text-decoration: none;
+        padding: 8px 16px 10px 16px;
+        border-radius: 15px;
+        border: 2px solid colors.$bright-purple;
+        box-shadow: 0 2px 8px rgba(colors.$bright-purple, 0.3);
+        transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        will-change: background-color, box-shadow;
+
+        @media (hover: hover) {
+
+          &:hover,
+          &:visited:hover {
+            background-color: colors.$bright-purple;
+            color: colors.$light-gray;
+            border-color: colors.$bright-purple;
+            box-shadow: 0 4px 12px rgba(colors.$bright-purple, 0.4);
+            text-decoration: none;
+          }
+        }
+
+        &:visited {
+          color: colors.$light-gray;
+        }
+      }
+    }
+  }
+
+  @include settings.media-query(settings.$on-mobile) {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(colors.$dark-navy, 0.9);
+    border: 1px solid rgba(colors.$bright-purple, 0.2);
+    border-radius: 8px;
+    text-align: right;
+    font-size: larger;
+    z-index: 9999;
+    contain: layout style;
+
+    label[for="nav-trigger"] {
+      display: block;
+      float: right;
+      width: auto;
+      height: auto;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      display: block;
+      float: right;
+      width: auto;
+      line-height: 0;
+      text-align: center;
+
+      >svg {
+        fill: colors.$light-gray;
+      }
+    }
+
+    input~.trigger {
+      clear: both;
+      display: none;
+    }
+
+    input:checked~.trigger {
+      display: block;
+      padding-bottom: 5px;
+    }
+
+    a.page-link {
+      display: block;
+      margin-left: 20px;
+      padding: 5px 10px;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+  padding: 10px 0 10px 0;
+  color: colors.$medium-gray;
+  border-top: 1px solid colors.$light-gray;
+  background-color: transparent;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  contain: layout style;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0px;
+    margin: 0px auto;
+  }
+
+  .author {
+    margin: 0;
+
+    @media (max-width: #{settings.$on-mobile}) {
+      margin-left: 10px;
+    }
+  }
+
+  .rss-subscribe {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    contain: layout;
+
+    @media (max-width: #{settings.$on-mobile}) {
+      margin-right: 10px;
+    }
+  }
+
+  a {
+    color: colors.$medium-gray;
+    transition: color 0.2s ease;
+    will-change: color;
+
+    @media (hover: hover) {
+      &:hover {
+        color: colors.$lighter-gray;
+      }
+    }
+
+    &:visited {
+      color: colors.$medium-gray;
+    }
+  }
+}
+
+.footer-heading {
+  @include settings.relative-font-size(1.125);
+  margin-bottom: settings.$spacing-unit;
+}
+
+.contact-list,
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.footer-col-wrapper {
+  @include settings.relative-font-size(0.9375);
+  color: colors.$medium-gray;
+  margin-left: -(settings.$spacing-unit);
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.footer-col {
+  margin: 0;
+  contain: layout;
+}
+
+
+
+/**
+ * Page content
+ */
+.page-content {
+  padding: settings.$spacing-unit 0;
+  flex: 1;
+}
+
+.page-heading {
+  @include settings.relative-font-size(2);
+}
+
+.post-list-heading {
+  @include settings.relative-font-size(1.75);
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  >li {
+    margin-bottom: settings.$spacing-unit;
+  }
+}
+
+.post-meta {
+  font-size: settings.$small-font-size;
+  color: colors.$medium-gray;
+}
+
+.post-link {
+  display: block;
+  @include settings.relative-font-size(1.5);
+}
+
+
+
+/**
+ * Posts
+ */
+.post-header {
+  margin: 0;
+}
+
+.post-meta {
+  margin-top: -15px;
+  color: colors.$lighter-gray;
+  font-size: settings.$small-font-size;
+}
+
+.post-title {
+
+}
+
+.post-content {
+  margin-bottom: settings.$spacing-unit;
+
+  h2 {
+    @include settings.relative-font-size(2);
+
+    @include settings.media-query(settings.$on-laptop) {
+      @include settings.relative-font-size(1.75);
+    }
+  }
+
+  h3 {
+    @include settings.relative-font-size(1.625);
+
+    @include settings.media-query(settings.$on-laptop) {
+      @include settings.relative-font-size(1.375);
+    }
+  }
+
+  h4 {
+    @include settings.relative-font-size(1.25);
+
+    @include settings.media-query(settings.$on-laptop) {
+      @include settings.relative-font-size(1.125);
+    }
+  }
+}

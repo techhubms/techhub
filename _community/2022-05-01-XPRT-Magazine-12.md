@@ -5,11 +5,11 @@ description: "A diverse edition exploring cloud-native microservices, IoT, engin
 categories: ["AI", "Azure", "Coding", "DevOps", "Security", "GitHub Copilot"]
 date: 2022-05-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2022-05-01-XPRT-Magazine-12.html"
 excerpt_separator: <!--excerpt_end-->
-tags: ["AI", "ARM Templates", "Automation", "Azure", "Azure Container Apps", "Beacons", "Bicep", "Blinky", "Chaos Engineering", "Cloud Native", "Codespaces", "Coding", "Compliance", "Developer Productivity", "DevOps", "Engineering Culture", "GitHub Copilot", "IoT", "Knowledge Sharing", "Magazines", "Microservices", "Security", "Team Learning", "Value Chain", "WebAssembly", "Xpirit Germany"]
-tags_normalized: ["ai", "arm templates", "automation", "azure", "azure container apps", "beacons", "bicep", "blinky", "chaos engineering", "cloud native", "codespaces", "coding", "compliance", "developer productivity", "devops", "engineering culture", "github copilot", "iot", "knowledge sharing", "magazines", "microservices", "security", "team learning", "value chain", "webassembly", "xpirit germany"]
+tags: ["AI", "ARM Templates", "Automation", "Azure", "Azure Container Apps", "Beacons", "Bicep", "Blinky", "Chaos Engineering", "Cloud Native", "Codespaces", "Coding", "Community", "Compliance", "Developer Productivity", "DevOps", "Engineering Culture", "GitHub Copilot", "IoT", "Knowledge Sharing", "Magazines", "Microservices", "Security", "Team Learning", "Value Chain", "WebAssembly", "Xpirit Germany"]
+tags_normalized: ["ai", "arm templates", "automation", "azure", "azure container apps", "beacons", "bicep", "blinky", "chaos engineering", "cloud native", "codespaces", "coding", "community", "compliance", "developer productivity", "devops", "engineering culture", "github copilot", "iot", "knowledge sharing", "magazines", "microservices", "security", "team learning", "value chain", "webassembly", "xpirit germany"]
 ---
 
 This edition of XPRT Magazine explores cloud-native microservices, IoT, engineering culture, and developer productivity. Discover hands-on guides, real-world case studies, and stories of innovation, resilience, and knowledge sharing in the Microsoft ecosystem.
@@ -42,4 +42,4 @@ This edition of XPRT Magazine explores cloud-native microservices, IoT, engineer
 - *The value of your development toolchain*: The importance of developer productivity and modern tooling for talent retention and business success.
 - *Whats what with WebAssembly*: Exploring WebAssembly's potential beyond the browser, including .NET and cross-platform development.
 
-[Download the full magazine here]({{ "/assets/magazines/12.pdf" | relative_url }})
+[Download the full magazine here](https://xebia.com/media/2025/05/Xpirit_XPRT_magazine_12_def.pdf)

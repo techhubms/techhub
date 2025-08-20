@@ -2,16 +2,14 @@
 layout: "post"
 title: "XPRT Magazine 18"
 description: "The 10-year anniversary edition of XPRT Magazine, featuring deep dives into AI, cloud-native development, security, infrastructure, and knowledge sharing from Xebia’s experts."
-magazine-description-ai: "Covers AI agents, prompt engineering, accessibility with AI, and generative AI art. Includes practical guides and real-world use cases for GitHub Copilot and Semantic Kernel."
-magazine-description-github-copilot: "Highlights advanced prompt engineering techniques, real-world Copilot usage in C# and Playwright, and strategies for maximizing Copilot’s effectiveness. Includes step-by-step guides, practical examples, and insights into integrating Copilot into modern development workflows."
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
 date: 2025-05-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2025-05-01-XPRT-Magazine-18.html"
 excerpt_separator: <!--excerpt_end-->
-tags: [".NET Aspire", "Accessibility", "AI", "AI Agents", "Azure", "Cloud Native", "Coding", "DevOps", "Engagement Management", "Entra ID", "Generative AI", "GitHub Copilot", "Infrastructure From Code", "JWT", "Knowledge Sharing", "Magazines", "Octopus Deploy", "Prompt Engineering", "Security", "Semantic Kernel"]
-tags_normalized: ["net aspire", "accessibility", "ai", "ai agents", "azure", "cloud native", "coding", "devops", "engagement management", "entra id", "generative ai", "github copilot", "infrastructure from code", "jwt", "knowledge sharing", "magazines", "octopus deploy", "prompt engineering", "security", "semantic kernel"]
+tags: [".NET Aspire", "Accessibility", "AI", "AI Agents", "Azure", "Cloud Native", "Coding", "Community", "DevOps", "Engagement Management", "Entra ID", "Generative AI", "GitHub Copilot", "Infrastructure From Code", "JWT", "Knowledge Sharing", "Magazines", "Octopus Deploy", "Prompt Engineering", "Security", "Semantic Kernel"]
+tags_normalized: ["net aspire", "accessibility", "ai", "ai agents", "azure", "cloud native", "coding", "community", "devops", "engagement management", "entra id", "generative ai", "github copilot", "infrastructure from code", "jwt", "knowledge sharing", "magazines", "octopus deploy", "prompt engineering", "security", "semantic kernel"]
 ---
 
 XPRT Magazine 18 marks a decade of knowledge sharing at Xebia. This special edition features articles on AI agents, prompt engineering, accessibility, generative art, cloud-native development, security, and more. The magazine brings together insights from experts across the company, reflecting on innovation, practical solutions, and the evolution of technology in the Microsoft ecosystem.
@@ -40,4 +38,4 @@ XPRT Magazine 18 marks a decade of knowledge sharing at Xebia. This special edit
 - *Engagement Management - your first class ticket to value*: Describes Xebia’s Engagement Management Framework for delivering sustainable value in digital transformation projects.
 - *Introduction*: Provides the origin story of XPRT Magazine and highlights the evolution of the company and its publication.
 
-[Download the full magazine here]({{ "/assets/magazines/18.pdf" | relative_url }})
+[Download the full magazine here](https://pages.xebia.com/microsoft-services-xprt-magazine-18-the-gold-edition-01)

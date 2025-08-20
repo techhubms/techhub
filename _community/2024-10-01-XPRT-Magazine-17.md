@@ -2,16 +2,14 @@
 layout: "post"
 title: "XPRT Magazine 17"
 description: "A forward-looking edition exploring platform engineering, AI democratization, cloud-native development, DevOps, automation, and cost management in the Microsoft ecosystem."
-magazine-description-ai: "Features GitHub Models, automated content creation, and documentation generation with LLMs and Prompty. Explores practical AI integration, platform engineering, and security in modern development."
-magazine-description-github-copilot: "Covers Copilot’s role in documentation automation, content creation, and developer productivity. Includes real-world examples of integrating Copilot and LLMs into CI/CD, API documentation, and abstract generation workflows."
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
 date: 2024-10-01 00:00:00 +00:00
 author: "Xebia"
-viewing_mode: "internal"
+viewing_mode: "external"
 permalink: "/2024-10-01-XPRT-Magazine-17.html"
 excerpt_separator: <!--excerpt_end-->
-tags: ["AI", "Automation", "Azure", "Cloud Native", "Coding", "Cost Allocation", "DevOps", "Documentation", "GitHub Copilot", "GitHub Models", "Kubernetes", "LLM", "Magazines", "Managed DevOps Pools", "Network Policy", "Platform Engineering", "Prompty", "Radius", "Security", "Terraform"]
-tags_normalized: ["ai", "automation", "azure", "cloud native", "coding", "cost allocation", "devops", "documentation", "github copilot", "github models", "kubernetes", "llm", "magazines", "managed devops pools", "network policy", "platform engineering", "prompty", "radius", "security", "terraform"]
+tags: ["AI", "Automation", "Azure", "Cloud Native", "Coding", "Community", "Cost Allocation", "DevOps", "Documentation", "GitHub Copilot", "GitHub Models", "Kubernetes", "LLM", "Magazines", "Managed DevOps Pools", "Network Policy", "Platform Engineering", "Prompty", "Radius", "Security", "Terraform"]
+tags_normalized: ["ai", "automation", "azure", "cloud native", "coding", "community", "cost allocation", "devops", "documentation", "github copilot", "github models", "kubernetes", "llm", "magazines", "managed devops pools", "network policy", "platform engineering", "prompty", "radius", "security", "terraform"]
 ---
 
 XPRT Magazine 17 explores the evolution of platform engineering, democratization of AI, cloud-native development, and automation. This edition highlights practical solutions for cost management, DevOps, and documentation, with a strong focus on integrating AI and Copilot into modern workflows. The magazine brings together insights on security, productivity, and the future of development in the Microsoft ecosystem.
@@ -42,4 +40,4 @@ XPRT Magazine 17 explores the evolution of platform engineering, democratization
 
 - *Intro*: Reflects on the shift from code-centric to platform- and AI-centric development, the growing importance of infrastructure, and the team’s commitment to sharing knowledge and insights.
 
-[Download the full magazine here]({{ "/assets/magazines/17.pdf" | relative_url }})
+[Download the full magazine here](https://pages.xebia.com/xprt-magazine-17-revealing-strenght-ignite-capabilities)

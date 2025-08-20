@@ -32,8 +32,7 @@ You'll re-evaluate content from:
 - **News**: Official Microsoft announcements and updates
 - **Blogs**: Technical articles and tutorials
 - **Videos**: YouTube content and presentations
-- **Community**: Reddit discussions and Q&A posts
-- **Magazines**: Technical publications
+- **Community**: Discussions, announcements, magazines, Q&A posts
 
 ### Re-Categorization Standards
 
@@ -552,7 +551,7 @@ You will receive a JSON object with these fields from an existing markdown file:
 - `author`: The author's name or names
 - `tags`: The current tags assigned to the content
 - `categories`: The current categories assigned to the content
-- `type`: Content type (news, blog, community, videos, magazines, etc.)
+- `type`: Content type (news, blog, community, videos, etc.)
 
 ### Input Example
 

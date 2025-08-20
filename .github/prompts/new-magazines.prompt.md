@@ -33,7 +33,7 @@ When generating XPRT Magazine pages, follow these rules:
 5. Work on one magazine at a time. After finishing one, clear your context before starting the next.
 6. Use `.magazines/info.txt` for magazine titles, dates, and download URLs.
 7. Strictly follow the formatting and structure shown in `.magazines/template.md`. Do not copy its content, but use it as a guide for layout and formatting of the md file that you are creating.
-8. The output directory is always `_magazines`.
+8. The output directory is always `_community`.
 9. Ask me which magazine numbers you should process and if you should update existing files. Ranges are allowed too, like 1-14.
 
 ## Specific Front-Matter Rules

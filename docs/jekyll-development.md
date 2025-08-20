@@ -58,8 +58,6 @@ collections:
     output: true       
   events:
     output: true
-  magazines:
-    output: true    
   roundups:
     output: true
 ```

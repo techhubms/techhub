@@ -55,7 +55,7 @@ function Repair-MarkdownFormatting {
     $fixedCount = 0
 
     foreach ($file in $markdownFiles) {
-        Write-Host "Processing file: $($file.Name)"
+        #Write-Host "Processing file: $($file.Name)"
 
         $content = Get-Content $file.FullName -Raw
         if (-not $content) { 
