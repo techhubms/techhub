@@ -7010,5 +7010,11 @@
     "timestamp": "2025-08-20 12:24:06 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=1KrqMZNTvpY",
     "reason": "Succesfully added: I assigned the Coding category because the content focuses entirely on technical implementation—specifically, how to properly send emails using .NET (see Coding rule 1: Microsoft Programming Languages, and rule 4: Coding practices in Microsoft context). There is no evidence of Azure, AI, ML, DevOps, GitHub Copilot, or Security theme here. I did not assign other categories due to lack of content about those topics. The content is instructional for developers and avoids all generic exclusion rules."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because Microsoft Copilot, Azure AI, and AI-powered tools are central throughout the content (AI inclusion rules 1, 4, 5). Assigned 'GitHub Copilot' because a specific sideline feature is described as being built with GitHub Copilot for play filtering and analysis (GitHub Copilot inclusion rules 1–4), and per rules, this triggers inclusion of both 'AI' and 'GitHub Copilot'. Assigned 'Azure' because Azure AI services (including Azure AI Foundry and Azure cloud integration) are repeatedly cited as core technologies (Azure inclusion rules 1 and 3). Did not assign 'ML', 'DevOps', 'Coding', or 'Security' because the content does not focus on ML engineering, code, DevOps practices, or security implementations; business productivity Copilot mentions are described only in passing as part of club dashboards, not as a developer tool. No generic exclusion rules apply.",
+    "collection": "news",
+    "timestamp": "2025-08-20 14:13:53 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/2025/08/20/nfl-and-microsoft-expand-partnership-to-bring-copilot-to-the-sidelines-and-beyond/"
   }
 ]
