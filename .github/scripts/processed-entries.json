@@ -7052,5 +7052,11 @@
     "reason": "Succesfully added: Assigned 'AI' category because this announcement centers on an AI model (Google's Gemini 2.5 Pro) being integrated into GitHub Copilot (AI rule 1 and 2). Assigned 'GitHub Copilot' category because content specifically addresses new services and usage within GitHub Copilot, including user and admin access (GitHub Copilot rule 1, 2, 3, and 4). Business productivity Copilots are not mentioned; this is about developer usage, so inclusion rules are met.",
     "timestamp": "2025-08-20 19:11:15 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-08-19-gemini-2-5-pro-is-generally-available-in-copilot"
+  },
+  {
+    "timestamp": "2025-08-20 20:14:47 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/education/blog/2025/08/ai-in-education-report-insights-to-support-teaching-and-learning/",
+    "reason": "Succesfully added: Assigned only the 'AI' category. The content centers on how AI is transforming education, teaching, learning, and workforce readiness, referencing Microsoft's AI-related research, programs, and tools (AI category rule 1 and 5). There are repeated references to Microsoft platforms, but the context is policy and institutional usage for education rather than development, coding, or ML engineering—therefore, categories like 'Coding', 'Azure', or 'ML' do not apply. Although productivity tools like Microsoft 365 Copilot are mentioned, its use here is in the context of education for brainstorming and support, not software development, so GitHub Copilot and similar developer categories were not assigned. Exclusion rules do not trigger: the content is professional, technical, and in English, and is not business, job, or biographical content."
   }
 ]
