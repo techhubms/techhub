@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "What is GitHub Secret Protection? | GitHub Explained"
+title: "What is GitHub Secret Protection?"
 description: "This video offers an overview of GitHub Secret Protection, explaining how it safeguards credentials like API keys and tokens. It covers real-time scanning of code pushes, the use of GitHub Copilot for detecting non-standard passwords, and practical steps for developers to keep secrets secure during software development."
 author: "GitHub"
 excerpt_separator: <!--excerpt_end-->

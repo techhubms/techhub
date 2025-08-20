@@ -1,9 +1,12 @@
+@use "colors";
+@use "settings";
+
 .site-subheader {
     width: 100%;
-    margin: 0px auto !important;
+    margin: 0px auto;
     padding: 10px;
-    background: rgba($dark-navy, 0.9);
-    border-bottom: 1px solid rgba($bright-purple, 0.2);
+    background: rgba(colors.$dark-navy, 0.9);
+    border-bottom: 1px solid rgba(colors.$bright-purple, 0.2);
     contain: layout style;
     display: flex;
     justify-content: center;
@@ -14,47 +17,45 @@
     box-sizing: border-box;
 }
 
-.collection-link {
+a.collection-link {
     position: relative;
     font-weight: 500;
     text-decoration: none;
-    color: $light-gray !important;
+    color: colors.$light-gray;
     padding: 8px 16px;
     border-radius: 8px;
     margin: 0px 2px 0px 2px;
-    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    transition: background 0.2s ease, text-decoration 0.2s ease;
     font-size: 14px;
-    will-change: background, color;
     flex-shrink: 0;
     max-width: 100%;
     box-sizing: border-box;
 
     @media (hover: hover) {
         &:hover {
-            background: rgba($bright-purple, 0.1);
-            color: $bright-purple;
-            transform: translateY(-1px);
+            background: rgba(colors.$bright-purple, 0.2);
+            text-decoration: underline;
         }
     }
 
     &.active {
-        background: rgba($bright-purple, 0.2);
-        color: $bright-purple;
+        background: rgba(colors.$bright-purple, 0.5);
+        color: colors.$light-gray;
         font-weight: 600;
     }
 
     &:visited {
-        color: $light-gray;
+        color: colors.$light-gray;
 
         @media (hover: hover) {
             &:hover {
-                color: $bright-purple;
-                transform: translateY(-1px);
+                background: rgba(colors.$bright-purple, 0.1);
+                text-decoration: underline;
             }
         }
 
         &.active {
-            color: $bright-purple;
+            color: colors.$light-gray;
         }
     }
 }
@@ -73,33 +74,17 @@
 }
 
 .section-collections.hidden {
-    display: none !important;
+    display: none;
 }
 
-@media (max-width: #{$on-mobile}) {
+@media (max-width: #{settings.$on-mobile}) {
     .site-subheader {
         padding: 8px 15px;
         gap: 10px;
     }
 
-    .collection-link {
+    a.collection-link {
         padding: 6px 12px;
         font-size: 13px;
-        will-change: auto;
-        transform: none;
-
-        @media (hover: hover) {
-            &:hover {
-                transform: none;
-            }
-        }
-
-        &:visited {
-            @media (hover: hover) {
-                &:hover {
-                    transform: none;
-                }
-            }
-        }
     }
 }

@@ -84,7 +84,7 @@ try {
         )
         
         $currentTerminalSize = Get-SafeTerminalSize
-        $progressBarWidth = [Math]::Max(20, [Math]::Floor($currentTerminalSize.Width * 0.5))
+        $progressBarWidth = [Math]::Max(20, [Math]::Floor($currentTerminalSize.Width))
         
         if ($Complete) {
             return "█" * $progressBarWidth
