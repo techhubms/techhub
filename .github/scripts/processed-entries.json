@@ -7004,5 +7004,11 @@
     "collection": "posts",
     "timestamp": "2025-08-20 08:17:33 +00:00",
     "canonical_url": "https://dellenny.com/how-github-copilot-helps-with-test-driven-development-tdd/"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-08-20 12:24:06 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=1KrqMZNTvpY",
+    "reason": "Succesfully added: I assigned the Coding category because the content focuses entirely on technical implementation—specifically, how to properly send emails using .NET (see Coding rule 1: Microsoft Programming Languages, and rule 4: Coding practices in Microsoft context). There is no evidence of Azure, AI, ML, DevOps, GitHub Copilot, or Security theme here. I did not assign other categories due to lack of content about those topics. The content is instructional for developers and avoids all generic exclusion rules."
   }
 ]
