@@ -7022,5 +7022,11 @@
     "collection": "videos",
     "timestamp": "2025-08-20 15:14:04 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=xoUCZj4ZMRs"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' category because the content is about Microsoft Fabric Data Factory, which is a part of the Azure ecosystem (Azure Inclusion Rule 1, 4). Assigned 'ML' category because Copy Job in Fabric is used for orchestrating large-scale data ingestion—a key step in data engineering and analytics pipelines important for ML workloads (ML Inclusion Rule 2, 5). Did not assign 'AI' because the post does not discuss Azure AI/ML services or AI integration directly—it's focused on scheduling data ingestion rather than building or deploying models.",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-multiple-scheduler-support/",
+    "timestamp": "2025-08-20 16:16:26 +00:00"
   }
 ]
