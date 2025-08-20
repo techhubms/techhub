@@ -6992,5 +6992,17 @@
     "collection": "posts",
     "timestamp": "2025-08-20 06:20:10 +00:00",
     "canonical_url": "https://devops.com/debugging-in-production-leveraging-logs-metrics-and-traces/?utm_source=rss&utm_medium=rss&utm_campaign=debugging-in-production-leveraging-logs-metrics-and-traces"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the entire content centers around GitHub Copilot, an AI-powered development tool (AI rule 2). Included 'GitHub Copilot' category because the content extensively details Copilot's use, features, and real-world development impact for .NET (GitHub Copilot inclusion rules 1-4). Added 'Coding' because the post provides practical code examples in C#, ASP.NET Core, Entity Framework, xUnit, and demonstrates coding patterns and practices with Microsoft technologies (Coding rules 1-5). Did not include Azure, DevOps, ML, or Security because the content is focused on developer productivity within .NET and Copilot for code-writing, not cloud, DevOps, data science, or security aspects. Generic exclusion rules do not apply as the content is educational, technical, non-biographical, and does not fall afoul of language, negativity, or business-topic exclusions.",
+    "collection": "posts",
+    "timestamp": "2025-08-20 08:17:10 +00:00",
+    "canonical_url": "https://dellenny.com/boosting-productivity-with-github-copilot-real-world-net-coding-examples/"
+  },
+  {
+    "reason": "Succesfully added: Categories 'AI' and 'GitHub Copilot' are included because the content centers on GitHub Copilot, an AI-powered tool, and its integration into coding practices (AI Rule 2, GitHub Copilot Rule 1). 'Coding' is included because the article discusses improving code and test writing workflows, details about programming frameworks, and developer productivity (Coding Rule 4). No exclusion rules apply, as this is a technical, developer-focused article without business productivity or non-technical content.",
+    "collection": "posts",
+    "timestamp": "2025-08-20 08:17:33 +00:00",
+    "canonical_url": "https://dellenny.com/how-github-copilot-helps-with-test-driven-development-tdd/"
   }
 ]
