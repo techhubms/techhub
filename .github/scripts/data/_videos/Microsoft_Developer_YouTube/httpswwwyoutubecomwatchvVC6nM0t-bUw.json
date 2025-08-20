@@ -1,0 +1,22 @@
+{
+  "Link": "https://www.youtube.com/watch?v=VC6nM0t-bUw",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Description": "The AI revolution isn't just about chatbots anymore - it's about agents that plan, execute workflows, and get real work done 🤖\n\nJoin us as John Maeda breaks down why businesses need to move beyond customer support chatbots to unlock AI's true potential. Learn why \"English is the new programming language\" is only half the story - you need computational thinking to make agents truly work for you.\n\n🎯 Key Insights:\n\n- Why agents are just a higher-level abstraction of models + prompts + knowledge\n- The shift from User Experience (UX) to Agent Experience (AX) design\nHow agents can construct and execute workflows both synchronously and asynchronously\n- Why \"vibe coding\" without computational thinking leads nowhere\nThe critical difference between agents working WITH you vs. FOR you\n\n💡 Breakthrough Moments:\n\n\"Agents are aces at using the command line\" - why GUIs become obstacles How one line of agent code replaces hours of data parsing Why business leaders must get hands-on or risk \"AI fan fiction\" The planning capabilities that changed everything with GPT-4\n\n🔗 Resources Mentioned:\n\nAll Sip N Sync episodes: https://aka.ms/SipAndSyncPlaylist Azure AI Resources: https://ai.azure.com Microsoft AI for Business: https://www.microsoft.com/ai\n\n⏱️ Chapters: 00:00 Welcome 00:33 How businesses should approach AI investments 02:03 GenAI vs Agents: What's the real difference? 03:53 Synchronous vs Asynchronous agent workflows 05:05 The discovery that models can plan 06:02 From User Experience to Agent Experience 07:34 English as the new coding language (with a catch!) 08:49 Risk management in the age of AI 10:09 Why leaders must learn, not just delegate 📝 Key Takeaway: Stop thinking about AI as just a chat interface. Start thinking about agents as your workforce multiplier that can understand unstructured data, execute multi-step workflows, and transform how work gets done.\n\nSpeakers & Social Priyanka Vergadia (host) – LinkedIn: https://linkedin.com/in/pvergadia | X: https://x.com/pvergadia\n\nJohn Maeda – LinkedIn: https://linkedin.com/in/johnmaeda | X: https://x.com/johnmaeda ☕ Join the conversation! What workflows in your business could benefit from agent automation? Share in the comments!\n\n🏷️ Tags & Keywords: #AgentExperience #BusinessAI #AIAgents #MicrosoftAI #WorkflowAutomation #AzureAI #ComputationalThinking #AIStrategy #DigitalTransformation #SipAndSync #AILeadership #EnterpriseAI",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Title": "From UX to AX: Why Agent Experience is the Next Frontier in Business AI",
+  "Author": "Microsoft Developer",
+  "FeedName": "Microsoft Developer YouTube",
+  "EnhancedContent": null,
+  "PubDate": "2025-08-19T16:00:48+00:00",
+  "ProcessedDate": "2025-08-19 16:15:01"
+}
