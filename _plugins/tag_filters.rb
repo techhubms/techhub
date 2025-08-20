@@ -303,7 +303,7 @@ module Jekyll
           end
         end
         
-        # Build filter data for JavaScript
+        # Build filter data for JavaScript - no description needed since we search DOM directly
         filter_data << {
           'index' => global_item_index,
           'epoch' => item_epoch,

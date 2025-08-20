@@ -17,6 +17,12 @@
       {%- endfor -%}
     {%- endif -%}
 
+    {%- comment -%} Text search input (between date and tag filters) {%- endcomment -%}
+    <div class="text-search-container">
+      <input type="text" id="text-search-input" placeholder="Search tags and descriptions..." class="text-search-input">
+      <button id="text-search-clear" class="text-search-clear-btn hidden" title="Clear search">×</button>
+    </div>
+
     {%- comment -%} Mode-specific filter buttons {%- endcomment -%}
     {%- assign mode_filter_buttons = filter_results.mode_filter_buttons -%}
 

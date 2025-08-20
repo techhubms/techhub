@@ -12,12 +12,15 @@ window.tagRelationships = {}; // Tag relationships for optimized filtering (tag 
 window.cachedCountSpans = new Map(); // Cache for filter button count span elements (tag -> DOM element mapping)
 window.dateFilters = []; // Array of date filter labels
 window.currentFilterData = []; // Array of post data from Jekyll
+window.textSearchQuery = ''; // Current text search query
 
 // === LOCAL VARIABLES (file scope only) ===
 let cachedPosts = null;
 let cachedDateButtons = null;
 let cachedNonDateButtons = null;
 let cachedHiddenTagButtons = null;
+let cachedTextSearchInput = null;
+let cachedTextSearchClearBtn = null;
 
 // =============================================================================
 // INITIALIZATION FUNCTIONS
@@ -130,6 +133,14 @@ function initDOMCache() {
     if (!cachedHiddenTagButtons) {
         cachedHiddenTagButtons = document.querySelectorAll('.hidden-tag-btn');
     }
+
+    if (!cachedTextSearchInput) {
+        cachedTextSearchInput = document.getElementById('text-search-input');
+    }
+
+    if (!cachedTextSearchClearBtn) {
+        cachedTextSearchClearBtn = document.getElementById('text-search-clear');
+    }
 }
 
 // Pre-calculate date filter mappings for all posts
@@ -188,6 +199,12 @@ function parseURLFilters() {
         });
     }
 
+    const searchQuery = urlParams.get('search');
+    if (searchQuery && cachedTextSearchInput) {
+        window.textSearchQuery = decodeURIComponent(searchQuery);
+        cachedTextSearchInput.value = window.textSearchQuery;
+    }
+
     const showCollapsed = urlParams.get('showCollapsed');
     if (showCollapsed === 'true') {
         window.collapsedTagsVisible = true;
@@ -201,6 +218,16 @@ function parseURLFilters() {
 function setupEventDelegation() {
     // Collapsed event handler for all filter interactions
     document.addEventListener('click', handleFilterClick);
+    
+    // Text search event handlers
+    if (cachedTextSearchInput) {
+        cachedTextSearchInput.addEventListener('input', handleTextSearchInput);
+        cachedTextSearchInput.addEventListener('keydown', handleTextSearchKeydown);
+    }
+    
+    if (cachedTextSearchClearBtn) {
+        cachedTextSearchClearBtn.addEventListener('click', handleTextSearchClear);
+    }
 }
 
 function handleFilterClick(event) {
@@ -258,6 +285,115 @@ function handleFilterClick(event) {
 }
 
 // =============================================================================
+// TEXT SEARCH EVENT HANDLERS
+// =============================================================================
+
+function handleTextSearchInput(event) {
+    if (window.isUpdating) return;
+    
+    const query = event.target.value.trim();
+    window.textSearchQuery = query;
+    
+    // Update clear button visibility
+    updateTextSearchClearButton();
+    
+    // Debounce the search to avoid excessive filtering
+    clearTimeout(window.textSearchTimeout);
+    window.textSearchTimeout = setTimeout(() => {
+        if (!window.isUpdating) {
+            window.isUpdating = true;
+            try {
+                updateDisplay();
+                updateURL();
+            } finally {
+                window.isUpdating = false;
+            }
+        }
+    }, 250);
+}
+
+function handleTextSearchKeydown(event) {
+    if (event.key === 'Escape') {
+        clearTextSearch();
+    }
+}
+
+function handleTextSearchClear(event) {
+    if (window.isUpdating) {
+        event.preventDefault();
+        return;
+    }
+    
+    clearTextSearch();
+}
+
+function clearTextSearch() {
+    if (cachedTextSearchInput) {
+        cachedTextSearchInput.value = '';
+        window.textSearchQuery = '';
+        updateTextSearchClearButton();
+        
+        window.isUpdating = true;
+        try {
+            updateDisplay();
+            updateURL();
+        } finally {
+            window.isUpdating = false;
+        }
+    }
+}
+
+function updateTextSearchClearButton() {
+    if (cachedTextSearchClearBtn) {
+        if (window.textSearchQuery && window.textSearchQuery.trim()) {
+            cachedTextSearchClearBtn.classList.remove('hidden');
+        } else {
+            cachedTextSearchClearBtn.classList.add('hidden');
+        }
+    }
+}
+
+// Text search filtering function - searches directly on DOM content
+function passesTextSearch(postData, postIndex) {
+    if (!window.textSearchQuery) return true;
+    
+    const query = window.textSearchQuery.toLowerCase();
+    
+    // Search in DOM content for this post
+    if (postIndex < cachedPosts.length) {
+        const postElement = cachedPosts[postIndex].el;  // Access the 'el' property
+        
+        // Search in title
+        const titleElement = postElement.querySelector('.navigation-post-title');
+        if (titleElement && titleElement.textContent.toLowerCase().includes(query)) {
+            return true;
+        }
+        
+        // Search in description/excerpt
+        const descElement = postElement.querySelector('.navigation-post-desc');
+        if (descElement && descElement.textContent.toLowerCase().includes(query)) {
+            return true;
+        }
+        
+        // Search in author/feed name and date
+        const metaElements = postElement.querySelectorAll('.navigation-post-meta-value');
+        for (const metaElement of metaElements) {
+            if (metaElement.textContent.toLowerCase().includes(query)) {
+                return true;
+            }
+        }
+        
+        // Search in tags from data attribute (more efficient than server data)
+        const tagsAttribute = postElement.getAttribute('data-tags');
+        if (tagsAttribute && tagsAttribute.toLowerCase().includes(query)) {
+            return true;
+        }
+    }
+    
+    return false;
+}
+
+// =============================================================================
 // CORE FILTERING LOGIC
 // =============================================================================
 
@@ -282,13 +418,14 @@ function updateDisplay(initialPageLoad = false) {
 
         let isVisible;
 
-        // If no filters are active, show all posts
-        if (window.activeFilters.size === 0) {
+        // If no filters are active and no text search, show all posts
+        if (window.activeFilters.size === 0 && !window.textSearchQuery) {
             isVisible = true;
         } else {
             const passesModeFilter = modeFilters.length === 0 || checkFilterForCurrentMode(i, modeFilters);
             const passesDateFilter = !activeDateFilter || isWithinDateFilter(i, activeDateFilter);
-            isVisible = passesModeFilter && passesDateFilter;
+            const passesTextFilter = passesTextSearch(postData);
+            isVisible = passesModeFilter && passesDateFilter && passesTextFilter;
         }
 
         visibilityUpdates.push({ element: post.el, visible: isVisible });
@@ -308,6 +445,9 @@ function updateDisplay(initialPageLoad = false) {
 
     // Efficiently update date button counts using pre-calculated mappings
     updateDateButtonCountsAndState();
+    
+    // Update text search clear button visibility
+    updateTextSearchClearButton();
 }
 
 // Efficiently update date button counts using pre-calculated date filter mappings
@@ -512,6 +652,13 @@ function updateURL() {
         url.searchParams.set('filters', filterArray.join(','));
     } else {
         url.searchParams.delete('filters');
+    }
+
+    // Handle text search parameter
+    if (window.textSearchQuery && window.textSearchQuery.trim()) {
+        url.searchParams.set('search', window.textSearchQuery.trim());
+    } else {
+        url.searchParams.delete('search');
     }
 
     // Handle showCollapsed parameter

@@ -459,7 +459,7 @@ table {
 .about-profile {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: settings.$spacing-unit;
   margin-bottom: 30px;
 
   img {

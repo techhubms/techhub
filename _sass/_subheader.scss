@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: settings.$spacing-unit;
     min-height: 40px; // Ensure consistent height even when empty
     box-sizing: border-box;
 }
