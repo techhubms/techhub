@@ -7040,5 +7040,17 @@
     "collection": "news",
     "timestamp": "2025-08-20 17:13:00 +00:00",
     "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/08/20/quantum-safe-security-progress-towards-next-generation-cryptography/"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category per AI rules 1, 4, and 6 because the content centers on Microsoft's multi-agent generative AI architectures, agent orchestration, and large language models. Assigned Azure because the implementation emphasizes Azure AI services (Azure OpenAI Service, Azure Cognitive Search, Azure AI Agent Service, and integration with Azure infrastructure) as core platforms. Assigned Security due to in-depth discussion of AI-specific security risks (prompt injection, role-based access, secure deployment), Microsoft Defender XDR, Sentinel, and threat mitigation frameworks being central to architectures and customer solutions. Coding, DevOps, GitHub Copilot, and ML categories were not assigned since the main focus is high-level architecture, platform implementation, and enterprise integration of multi-agent AI, not direct programming tutorials, CI/CD practices, or custom ML model engineering.",
+    "timestamp": "2025-08-20 19:10:50 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/blog/designing-multi-agent-intelligence"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because this announcement centers on an AI model (Google's Gemini 2.5 Pro) being integrated into GitHub Copilot (AI rule 1 and 2). Assigned 'GitHub Copilot' category because content specifically addresses new services and usage within GitHub Copilot, including user and admin access (GitHub Copilot rule 1, 2, 3, and 4). Business productivity Copilots are not mentioned; this is about developer usage, so inclusion rules are met.",
+    "timestamp": "2025-08-20 19:11:15 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-08-19-gemini-2-5-pro-is-generally-available-in-copilot"
   }
 ]
