@@ -13,7 +13,8 @@ RSpec.describe Jekyll::SectionPagesGenerator do
     double('site', 
       source: temp_dir,
       pages: [],
-      in_theme_dir: nil
+      in_theme_dir: nil,
+      config: {}
     ).tap do |site_mock|
       allow(site_mock).to receive(:in_theme_dir).and_return('')
       allow(site_mock).to receive(:in_source_dir) do |*args|

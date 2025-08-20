@@ -696,10 +696,10 @@ tags: ["GitHub Copilot", "AI", "Visual Studio Code", "Development Tools"]
 **Tag Source Locations**:
 
 - `_posts/`: Blog posts with tags in frontmatter
-- `_community/`: Community discussions and Q&A posts
+- `_community/`: Magazines, community discussions and Q&A posts
 - `_news/`: News articles and announcements
 - `_videos/`: Video content with descriptive tags
-- Other collections: Events, magazines, roundups
+- Other collections: Events, roundups
 
 ### Stage 2: PowerShell Preprocessing
 

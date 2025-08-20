@@ -1,8 +1,7 @@
 ---
 layout: "page"
+title: "About us"
 ---
-
-# About us
 
 ## Reinier van Maanen
 

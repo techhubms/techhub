@@ -8,7 +8,7 @@ function Get-MarkdownFiles {
         [string[]]$IncludeDirectoryPatterns = @(),
         
         [Parameter(Mandatory = $false)]
-        [string[]]$ExcludeDirectoryPatterns = @('**/node_modules/*', '.git/*', '.magazines/*', 'spec/*', 'vendor/*', '_site/*')
+        [string[]]$ExcludeDirectoryPatterns = @('node_modules/*', '.git/*', 'spec/*', 'vendor/*', '_site/*')
     )
 
     $allFiles = Get-ChildItem -Path $Root -Recurse -File -Filter '*.md'

@@ -412,6 +412,8 @@ module Jekyll
       
       merged[:tag_data]['redundant_tags'] = merged[:tag_data]['redundant_tags'].uniq
       
+      merged[:filter_data].sort_by! { |item| item['index'] }
+      
       merged
     end
     
@@ -709,17 +711,26 @@ module Jekyll
         raise "Items must be a non-empty array."
       end
       
+      # Sort items by date (newest first) to match DOM rendering order in posts.html
+      # This ensures JavaScript data has the same order as the DOM elements
+      sorted_items = items.sort_by { |item| 
+        begin
+          date = DateUtils.extract_date(item)
+          DateUtils.to_epoch(date)
+        rescue
+          0 # Fallback for items without valid dates
+        end
+      }.reverse
+
       # Extract configuration once using helper functions
       date_filter_config = extract_date_filter_config(tag_filter_config)
       tag_display_limits = extract_tag_display_limits(tag_filter_config)
-      
+
       # Step 2: Pre-calculate date cutoffs
       date_cutoffs = calculate_date_cutoffs(date_filter_config)
-      
+
       # Step 3: Single pass processing of all item data (with parallel processing for large datasets)
-      processed_data = process_all_item_data_parallel(items, category, collection, date_cutoffs, sections)
-      
-      # Extract processed data
+      processed_data = process_all_item_data_parallel(sorted_items, category, collection, date_cutoffs, sections)      # Extract processed data
       preprocessed_data = processed_data[:tag_data]
       tag_filter_data = processed_data[:filter_data]
       item_epochs = processed_data[:item_epochs]

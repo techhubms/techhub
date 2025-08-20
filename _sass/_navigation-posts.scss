@@ -1,12 +1,20 @@
+@use "colors";
+@use "settings";
+@use "navigation";
+
+// Posts boxes - individual posts/articles
+$posts-grid-desktop: 2; // 2 posts items side by side on desktop
+$posts-grid-mobile: 1; // 1 posts item per row on mobile
+
 // Posts grid (Individual posts/articles for navigation)
 .navigation-posts-grid {
     @extend .nav-grid-base;
 
-    @media (min-width: $navigation-breakpoint) {
+    @media (min-width: settings.$navigation-breakpoint) {
         grid-template-columns: repeat($posts-grid-desktop, 1fr);
     }
 
-    @media (max-width: #{$navigation-breakpoint - 1px}) {
+    @media (max-width: #{settings.$navigation-breakpoint - 1px}) {
         grid-template-columns: repeat($posts-grid-mobile, 1fr);
     }
 }
@@ -15,18 +23,18 @@
     @extend .nav-square-base;
 
     // Visual styling (using base navigation pattern)
-    background: rgba($medium-blue, 0.10);
+    background: rgba(colors.$medium-blue, 0.10);
 
     .navigation-post-title {
         @extend .nav-title-base;
         // Post-specific title styling
-        color: $bright-blue;
+        color: colors.$bright-blue;
         font-size: 16px;
-        font-weight: normal;        
+        font-weight: normal;
 
         // Visited state for posts
         .navigation-post-square:visited & {
-            color: $bright-purple;
+            color: colors.$bright-purple;
         }
     }
 
@@ -72,12 +80,12 @@
     @media (hover: hover) {
         &:hover {
             // Visual styling on hover (consistent with collections)
-            background: rgba($medium-blue, 0.18);
-            box-shadow: 0 8px 25px rgba($medium-blue, 0.18);
+            background: rgba(colors.$medium-blue, 0.18);
+            box-shadow: 0 8px 25px rgba(colors.$medium-blue, 0.18);
         }
     }
 
-    @media (max-width: $on-mobile) {
+    @media (max-width: settings.$on-mobile) {
         will-change: auto;
     }
 }

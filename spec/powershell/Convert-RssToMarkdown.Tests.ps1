@@ -194,7 +194,7 @@ youtube_id: {{YOUTUBE_ID}}
         Set-Content -Path $script:TestProcessedEntriesPath -Value "[]"
         
         # Create collection directories and clear any existing files
-        $collectionDirs = @("_posts", "_community", "_news", "_videos", "_events", "_magazines", "_roundups")
+        $collectionDirs = @("_posts", "_community", "_news", "_videos", "_events", "_roundups")
         foreach ($dir in $collectionDirs) {
             $fullPath = Join-Path $script:TempPath $dir
             New-Item -Path $fullPath -ItemType Directory -Force | Out-Null

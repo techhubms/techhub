@@ -189,8 +189,8 @@ Date filter counts (e.g., "Today", "Last 3 days") are always recalculated client
 JavaScript relies on server-embedded data:
 
 ```javascript
-// Check if window.filterData is properly set
-console.log(window.filterData);
+// Check if window.currentFilterData is properly set
+console.log(window.currentFilterData);
 ```
 
 **Critical Requirements**:
@@ -264,7 +264,7 @@ performanceAwareFilter(() => executeFilterToggle('ai', 'tag'));
 
 **Debugging Steps**:
 
-1. Check if `window.filterData` is properly set
+1. Check if `window.currentFilterData` is properly set
 2. Verify server-rendered HTML structure  
 3. Test event delegation
 4. Check browser console for specific errors
@@ -275,7 +275,7 @@ performanceAwareFilter(() => executeFilterToggle('ai', 'tag'));
 
 ```javascript
 // Check filter data
-console.log(window.filterData);
+console.log(window.currentFilterData);
 
 // Test DOM structure
 console.log(document.querySelectorAll('[data-tag]'));
@@ -290,10 +290,10 @@ document.addEventListener('click', function(e) {
 
 ```javascript
 // Check embedded data
-console.log(window.filterData);
+console.log(window.currentFilterData);
 
 // Monitor filter interactions
-window.filterData.posts.forEach(post => {
+window.currentFilterData.posts.forEach(post => {
     console.log(`Post: ${post.title}, Tags: ${post.tags}`);
 });
 
@@ -367,8 +367,8 @@ JavaScript → Interactive filtering
 **Data Embedding Patterns**:
 
 ```javascript
-// Verify window.filterData structure
-console.log(window.filterData); // Should contain posts, tags, etc.
+// Verify window.currentFilterData structure
+console.log(window.currentFilterData); // Should contain posts, tags, etc.
 
 // Check data attributes on content elements
 document.querySelectorAll('[data-tags]').forEach(element => {

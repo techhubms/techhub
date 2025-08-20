@@ -91,7 +91,6 @@ test.describe('Section Navigation', () => {
       '/ai/posts.html',
       '/ai/videos.html',
       '/ai/community.html',
-      '/ai/magazines.html',
       '/ai/events.html'
     ];
 
@@ -137,7 +136,6 @@ test.describe('Section Navigation', () => {
       '/github-copilot/news.html',
       '/github-copilot/posts.html',
       '/github-copilot/community.html',
-      '/github-copilot/magazines.html'
     ];
 
     githubCopilotCollectionUrls.forEach(url => {

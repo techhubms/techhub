@@ -18,7 +18,7 @@ Please fill out the following information:
 - **News**: Official announcements and product updates from Microsoft and other technology sources
 - **Blog**: Blog posts and technical articles with in-depth analysis or tutorials
 - **Video**: YouTube content and video tutorials (provide YouTube URL)
-- **Community**: Community discussions and insights from Reddit and other community platforms
+- **Community**: Community announcements, discussions, magazines and insights
 
 ## Instructions for GitHub Copilot
 

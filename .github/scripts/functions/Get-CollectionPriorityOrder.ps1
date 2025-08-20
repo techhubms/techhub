@@ -21,7 +21,6 @@ function Get-CollectionPriorityOrder {
         "_videos" = 30
         "_events" = 40
         "_community" = 90
-        "_magazines" = 99 
         "_roundups" = 100
     }
 }

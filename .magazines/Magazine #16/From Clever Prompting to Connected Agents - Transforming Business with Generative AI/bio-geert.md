@@ -1,2 +1,0 @@
-# Geert van der Cruijsen
-Geert van der Cruijsen is Azure AI Lead at Xebia in the Netherlands and works as a principal consultant with customers to help them build their engineering cultures. Geert specialises in modern software architectures, cloud, AI & DevOps and loves combining these areas. Geert is an active member of the community, Microsoft MVP and loves speaking at conferences and is a co-host of the LEAD podcast.

@@ -39,9 +39,8 @@ This document defines the key terms and concepts used throughout the Tech Hub si
 
 - **news**: Official product updates and announcements
 - **videos**: Educational and informational video content
-- **community**: Reddit and other community-sourced discussions
+- **community**: Microsoft Tech community posts and other community-sourced content
 - **events**: Official events and community meetups
-- **magazines**: Technical magazines and publications
 - **posts**: Blog posts and articles
 - **roundups**: Curated content summaries (special collection shown on homepage)
 

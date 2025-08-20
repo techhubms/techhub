@@ -14,7 +14,7 @@
     6. Condense content to 200-300 lines while maintaining narrative quality
     7. Generate metadata (title, tags, description, introduction)
     8. Create final markdown file with table of contents
-    9. Validate content against writing style guidelines
+    9. Rewrite content against writing style guidelines
 
 .PARAMETER StartDate
     Start date for the roundup range (format: yyyy-MM-dd)
@@ -198,6 +198,23 @@ try {
     # Create week description for AI prompts
     $WeekDescription = "the week of $($startDateTime.ToString('MMMM d')) to $($endDateTime.ToString('MMMM d, yyyy'))"
 
+    # Define consistent writing style guidelines for all AI prompts
+    $WritingStyleGuidelines = @"
+- Maintain all technical accuracy and specificity
+- Use clear, direct professional tone - avoid marketing buzzwords and hyperbole
+- Focus on practical benefits and real-world context
+- Be authentic and down-to-earth rather than sensational
+- Create flowing narrative content that tells the story of developments
+- Preserve narrative flow and readability
+- Keep professional, down-to-earth tone throughout
+- Reference progression and ongoing storylines when relevant
+- Focus on concrete benefits and real-world applications
+- Eliminate repetitive phrases and unnecessary elaboration
+- Preserve references to previous roundups and ongoing narratives (these make content feel human-written)
+- Never use horizontal separators `---`, always use proper headings. The separators will be added automatically with CSS.
+- You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full enhanced content requested.
+"@
+
     # Generate consistent file information that will be used throughout the script
     $fileInfo = Get-RoundupFileInfo -EndDateTime $endDateTime
     $publishDateFormatted = $fileInfo.PublishDateFormatted
@@ -213,7 +230,7 @@ try {
         Write-Host "✅ Backup content loaded, starting from step $StartFromStep" -ForegroundColor Green
         
         # If starting from step 3 or later, parse the JSON backup to reconstruct articleSummaries
-        if ($StartFromStep -ge 3) {
+        if ($StartFromStep -eq 3) {
             try {
                 $backupData = $resumeContent | ConvertFrom-Json
                 Write-Host "📊 Reconstructing article summaries from backup..."
@@ -248,7 +265,7 @@ try {
     }
 
     if ($ResumeFromBackup -and $StartFromStep -eq 1) {
-        Write-Error "Cannot resume from backup and start from step 1. Use StartFromStep 2-7 when resuming."
+        Write-Error "Cannot resume from backup and start from step 1. Use StartFromStep 2-9 when resuming."
         exit 1
     }
 
@@ -318,14 +335,63 @@ RESPONSE FORMAT: Return ONLY a JSON object with this exact structure:
   "relevance_score": 1-10
 }
 
-SECTION CATEGORIZATION:
-- "GitHub Copilot": Anything specifically about GitHub Copilot, VS Code extensions, chat modes, features
-- "AI": General AI tools, models, platforms (excluding GitHub Copilot)
-- "ML": Machine learning, data science, model training, AI research
-- "Azure": Microsoft cloud services, Azure updates, cloud architecture
-- "Coding": .NET ecosystem, development tools, programming languages, frameworks
-- "DevOps": CI/CD, automation, deployment, development workflows
-- "Security": Cybersecurity, threats, security tools, compliance
+CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full detailed analysis requested.
+
+SECTION CATEGORIZATION - CHOOSE THE SINGLE BEST MATCH:
+Choose ONE section that best represents the primary focus of the content. Use this priority order when content could fit multiple sections:
+
+1. "GitHub Copilot": Content specifically about GitHub Copilot features, usage, integrations, or announcements
+   - GitHub Copilot Chat, code completion, enterprise features
+   - GitHub Copilot extensions and integrations
+   - Takes priority over "AI" or "Coding" when Copilot is the main focus
+
+2. "ML": Machine learning engineering, data science workflows, model development, AI research
+   - Azure ML, data science platforms, model training and deployment
+   - Advanced analytics, business intelligence development
+   - Custom ML implementations, algorithm development
+   - Takes priority over "AI" when technical ML development is the main focus
+
+3. "AI": General AI services, tools, and platforms (excluding GitHub Copilot and technical ML)
+   - Azure AI Foundry, Azure OpenAI, AI services and APIs, Copilot Studio
+   - AI integration and usage (not technical ML development)
+   - Prompt engineering, AI-powered applications
+   - Only use when content is not primarily about GitHub Copilot or technical ML
+
+4. "Azure": Microsoft cloud services, infrastructure, and platform services
+   - Azure services, cloud architecture, deployment
+   - ARM templates, Bicep, Terraform (if Azure) cloud management
+   - Use when Azure services are the primary focus, not just mentioned
+
+5. "Coding": .NET ecosystem, programming languages, development frameworks
+   - C#, F#, .NET, ASP.NET Core, development patterns
+   - Programming languages, frameworks, development tools, NuGet package manager
+   - Only use when development is the main focus and not about GitHub Copilot
+
+6. "DevOps": Development processes, CI/CD, automation, team collaboration
+   - GitHub Actions, Azure DevOps, deployment pipelines
+   - Development workflows, team practices, automation
+   - Version control, release management
+
+7. "Security": Cybersecurity, threats, security tools, compliance
+   - Security tools, vulnerability management, compliance
+   - Identity management, security architecture
+   - Threat detection, incident response
+
+DECISION EXAMPLES FOR COMMON SCENARIOS:
+- "GitHub Copilot for C# development" → "GitHub Copilot" (Copilot is primary focus)
+- "C# async patterns and best practices" → "Coding" (no AI/Copilot focus)
+- "Azure OpenAI integration tutorial" → "AI" (AI service usage, not technical ML)
+- "Custom ML model training on Azure" → "ML" (technical ML development)
+- "Building REST APIs in ASP.NET Core" → "Coding" (development focus)
+- "Deploying .NET apps with GitHub Actions" → "DevOps" (deployment process focus)
+- "Azure Functions serverless architecture" → "Azure" (Azure service focus)
+- "Zero Trust security architecture" → "Security" (security focus)
+
+WHEN CONTENT SPANS MULTIPLE AREAS:
+- Choose the section that represents the PRIMARY purpose or main audience
+- Ask: "What is this content mainly trying to teach or announce?"
+- If it's about using a tool/service, categorize by the tool/service being used
+- If it's about implementing something, categorize by the implementation domain
 
 SUMMARY REQUIREMENTS:
 - Provide comprehensive detailed context covering all key aspects of the article
@@ -380,9 +446,9 @@ $articleContent
                 -RateLimitPreventionDelay $RateLimitPreventionDelay
 
             # Check for errors with robust error handling
-            $validationResult = Test-AiResponseFormat -Response $response -StepName "Step 2 (AI analysis for $articleName)"
-            if (-not $validationResult.IsValid) {
-                throw $validationResult.ErrorMessage
+            $rewriteResult = Test-AiResponseFormat -Response $response -StepName "Step 2 (AI analysis for $articleName)"
+            if (-not $rewriteResult.IsValid) {
+                throw $rewriteResult.ErrorMessage
             }
 
             # Parse AI response
@@ -448,9 +514,7 @@ Return the complete content for the SINGLE section provided with:
 - Topic subsection headers (###)  
 - Detailed narrative content incorporating article information, ending with links
 - Article links in list format at the END of each topic section
-- Clear, professional narrative flow throughout
-- Authentic language focused on practical developer benefits
-- Never use horizontal separators `---`, always use proper headings. The seperators will be added automatically with CSS.
+- Do NOT add a summary. Stop after the last link.
 
 The section should follow this pattern:
 
@@ -463,14 +527,25 @@ The section should follow this pattern:
 
 [Detailed narrative content about the developments, incorporating key details from the articles and explaining their significance. Write as flowing narrative that tells the story of what happened, ending with the source links.]
 
-- [Article 1](link)
-- [Article 2](link)
+- [Theme 1 Article 1](link)
+- [Theme 1 Article 2](link)
+- [Theme 1 Article 3](link)
+- [Theme 1 Article 4](link)
 
 ### [Topic Theme 2]
 
 [Another detailed narrative section that flows directly into content, ending with links]
 
-- [More articles...]
+- [Theme 2 Article 1](link)
+- [Theme 2 Article 2](link)
+
+### Other News
+
+[Brief mentions of additional developments that don't fit into major themes. Write 1-2 sentences per article highlighting the key point or benefit, then list all the links together.]
+
+- [Single article 1](link)
+- [Single article 2](link)
+- [Single article 3](link)
 ```
 
 CRITICAL SECTION INTRODUCTION GUIDELINES:
@@ -483,11 +558,13 @@ CRITICAL SECTION INTRODUCTION GUIDELINES:
 - Provide comprehensive context without length restrictions
 
 CRITICAL TOPIC GROUPING STRATEGY:
-- Group 2-4 related articles under thematic headings
+- Group 2-4 related articles under thematic headings for major topics
 - Create compelling topic names that capture the essence of developments
 - Examples: "Coding Agent Capabilities Expand", "Azure AI Infrastructure Matures", "Developer Productivity Tools Evolve"
 - Look for natural connections: same product family, related features, complementary technologies
-- Don't over-group - if articles are genuinely different topics, keep them separate
+- IMPORTANT: Any articles that don't naturally group with others should go into an "Other News" section
+- Only create individual topic sections for articles that can be grouped with at least one other related article
+- Single standalone articles should be briefly mentioned in "Other News" with 1-2 sentences each
 
 CRITICAL TOPIC CONTENT GUIDELINES:
 - Write detailed narrative content that incorporates key information from the article summaries
@@ -497,15 +574,18 @@ CRITICAL TOPIC CONTENT GUIDELINES:
 - No separate introductory paragraph - dive straight into the narrative content
 - Focus on concrete benefits and real-world applications
 
+CRITICAL "OTHER NEWS" SECTION GUIDELINES:
+- Use this section for articles that don't naturally group with others
+- Write 1-2 sentences per article highlighting the key development or benefit
+- Be concise but informative - capture the essence of what's new or useful
+- List all the "Other News" article links together at the end of that section
+- This prevents creating many single-article topic sections
+
 CRITICAL CONTENT EDITING RULES:
-- Maintain all technical accuracy and specificity
-- Create flowing narrative content that tells the story of developments
 - Incorporate article details directly into narrative paragraphs
 - Keep all article titles and links intact, placing them at the END of each topic section
-- Use clear, direct professional tone - avoid marketing buzzwords and hyperbole
-- Focus on practical benefits and real-world context
-- Be authentic and down-to-earth rather than sensational
 - Each topic section should read as a cohesive story ending with source links
+$WritingStyleGuidelines
 "@
 
         # Process each section individually to avoid token limits
@@ -587,9 +667,9 @@ $sectionInput
                     -RateLimitPreventionDelay $RateLimitPreventionDelay
 
                 # Check for errors with robust error handling
-                $validationResult = Test-AiResponseFormat -Response $sectionResponse -StepName "Step 3 - $($sectionName)"
-                if (-not $validationResult.IsValid) {
-                    Write-Error "Step 3 failed for section $($sectionName): $($validationResult.ErrorMessage)"
+                $rewriteResult = Test-AiResponseFormat -Response $sectionResponse -StepName "Step 3 - $($sectionName)"
+                if (-not $rewriteResult.IsValid) {
+                    Write-Error "Step 3 failed for section $($sectionName): $($rewriteResult.ErrorMessage)"
                     Write-Host ""
                     Write-Host "💡 To resume from this section, use: -StartFromStep 3 -ResumeFromSection `"$($sectionName)`"" -ForegroundColor Cyan
                     exit 1
@@ -667,7 +747,7 @@ $sectionInput
 You are an expert content editor creating ongoing narrative connections between weekly tech roundups. Your task is to enhance the current week's content for a SINGLE SECTION by identifying themes, products, or developments that continue from the previous week's roundup.
 
 RESPONSE FORMAT:
-Return the enhanced content for the SINGLE section provided with the EXACT same structure as provided (all topics and links preserved), but with added narrative connections where relevant.
+- Return the enhanced content for the SINGLE section provided with the EXACT same structure as provided (all topics and links preserved), but with added narrative connections where relevant.
 
 ONGOING NARRATIVE ENHANCEMENT STRATEGY:
 1. Identify products, features, or themes mentioned in BOTH the previous and current roundup for this section
@@ -693,11 +773,10 @@ WHAT TO LOOK FOR:
 
 ENHANCEMENT GUIDELINES:
 - Only add connections where genuinely relevant - don't force connections
-- Keep the same professional, down-to-earth tone
 - Maintain the existing narrative flow while adding continuity
 - Place connections naturally within existing content
-- Preserve all technical accuracy and specificity
 - Keep all existing article titles and links exactly as provided
+$WritingStyleGuidelines
 
 WHAT NOT TO CHANGE:
 - Section structure and headers
@@ -799,8 +878,8 @@ $sectionContent
                         -RateLimitPreventionDelay $RateLimitPreventionDelay
 
                     # Check for errors with robust error handling  
-                    $validationResult = Test-AiResponseFormat -Response $sectionResponse -StepName "Step 4 - $sectionName"
-                    if (-not $validationResult.IsValid) {
+                    $rewriteResult = Test-AiResponseFormat -Response $sectionResponse -StepName "Step 4 - $sectionName"
+                    if (-not $rewriteResult.IsValid) {
                         Write-Host "⚠️ Warning: Step 4 ongoing narrative failed for $sectionName" -ForegroundColor Yellow
                         Write-Host "Using original content for this section..." -ForegroundColor Yellow
                         $sectionResponse = $sectionContent
@@ -864,8 +943,35 @@ $sectionContent
     }
     else {
         Write-Host "⏭️ Skipping Step 5 (merging) - resuming from backup"
-        if ($ResumeFromBackup -and $StartFromStep -eq 6) {
-            $step5Input = $resumeContent
+        # Only load Step 5 backup if we're actually going to execute Steps 6, 7, or 8
+        if ($StartFromStep -le 8) {
+            if ($ResumeFromBackup -and $StartFromStep -eq 6) {
+                $step5Input = $resumeContent
+            }
+            else {
+                # Load Step 5 backup if starting from later step
+                $step5BackupPattern = "*Step5-MergedInput*$StartDate*$EndDate*"
+                $step5BackupFile = Get-ChildItem ".tmp/roundup-debug" -Filter $step5BackupPattern -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+                
+                if ($step5BackupFile) {
+                    Write-Host "📂 Loading Step 5 backup from: $($step5BackupFile.Name)" -ForegroundColor Cyan
+                    $step5Input = Get-Content $step5BackupFile.FullName -Raw
+                }
+                else {
+                    # Fallback to Step 4 backup
+                    $step4BackupPattern = "*Step4-Combined*$StartDate*$EndDate*"
+                    $step4BackupFile = Get-ChildItem ".tmp/roundup-debug" -Filter $step4BackupPattern -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+                    
+                    if ($step4BackupFile) {
+                        Write-Host "📂 Loading Step 4 backup as fallback: $($step4BackupFile.Name)" -ForegroundColor Cyan
+                        $step5Input = Get-Content $step4BackupFile.FullName -Raw
+                    }
+                    else {
+                        Write-Error "No Step 4 or 5 backup found and required for continuation"
+                        exit 1
+                    }
+                }
+            }
         }
     }
 
@@ -875,15 +981,17 @@ $sectionContent
         Write-Host "📝 Step 6: Condensing content to target ~250 lines while preserving narrative quality..."
 
         $step6SystemMessage = @"
-You are an expert content editor focused on condensing well-organized content to an optimal length. You will receive complete, well-structured roundup content that needs to be condensed to approximately 250-400 lines while maintaining narrative quality and completeness.
+You are an expert content editor focused on condensing well-organized content to an optimal length. You will receive complete, well-structured roundup content that needs to be condensed while maintaining narrative quality and completeness.
 
 CONDENSATION TASK:
 - Receive well-organized content with proper sections, topics, and narrative flow
-- Condense to approximately 200-300 lines total
-- Preserve ALL article links - never remove source citations
-- Maintain the existing structure and organization
-- Keep all section headers (##) and topic headers (###) exactly as provided
-- Preserve narrative flow and professional tone
+- Condense to approximately 200-300 lines, EXCLUDING any article links. They should be preserved in their original form.
+- CRITICAL: Preserve ALL article links
+- CRITICAL: Maintain the existing structure and organization
+- CRITICAL: Keep all section headers (##) and topic headers (###) exactly as provided
+
+CRITICAL WRITING STYLE GUIDELINES:
+$WritingStyleGuidelines
 
 CONDENSATION STRATEGY:
 1. Trim verbose passages while keeping essential information
@@ -896,11 +1004,7 @@ CONDENSATION STRATEGY:
 WHAT TO PRESERVE:
 - All article titles and links (never remove these)
 - All section and topic headers
-- Technical accuracy and specific details
-- Narrative flow and context
-- Professional tone and readability
 - Key practical implications and benefits
-- References to previous roundups and ongoing narratives (these make content feel human-written)
 
 WHAT TO CONDENSE:
 - Verbose explanations that can be stated more concisely
@@ -920,6 +1024,7 @@ Return the condensed content maintaining the exact same structure as provided, w
 
         $step6UserMessage = @"
 WELL-ORGANIZED ROUNDUP CONTENT TO CONDENSE:
+
 $step5Input
 "@
 
@@ -933,8 +1038,8 @@ $step5Input
             -RateLimitPreventionDelay $RateLimitPreventionDelay
 
         # Check for errors with robust error handling
-        $validationResult = Test-AiResponseFormat -Response $step6Response -StepName "Step 6"
-        if (-not $validationResult.IsValid) {
+        $rewriteResult = Test-AiResponseFormat -Response $step6Response -StepName "Step 6"
+        if (-not $rewriteResult.IsValid) {
             Write-Host "⚠️ Warning: Step 6 content condensation failed" -ForegroundColor Yellow
             Write-Host "Using Step 5 content..." -ForegroundColor Yellow
             $step6Response = $step5Input
@@ -946,8 +1051,25 @@ $step5Input
     }
     else {
         Write-Host "⏭️ Skipping Step 6 (content condensation) - resuming from backup"
-        if ($ResumeFromBackup -and $StartFromStep -eq 7) {
-            $step6Response = $resumeContent
+        # Only load backup if we're actually going to need Step 6 output for Step 7
+        if ($StartFromStep -le 7) {
+            if ($ResumeFromBackup -and $StartFromStep -eq 7) {
+                $step6Response = $resumeContent
+            }
+            else {
+                # Load Step 6 backup if starting from later step
+                $step6BackupPattern = "*Step6-Condensed*$StartDate*$EndDate*"
+                $step6BackupFile = Get-ChildItem ".tmp/roundup-debug" -Filter $step6BackupPattern -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+                
+                if ($step6BackupFile) {
+                    Write-Host "📂 Loading Step 6 backup from: $($step6BackupFile.Name)" -ForegroundColor Cyan
+                    $step6Response = Get-Content $step6BackupFile.FullName -Raw
+                }
+                else {
+                    Write-Host "⚠️ No Step 6 backup found, using Step 5 content" -ForegroundColor Yellow
+                    $step6Response = $step5Input
+                }
+            }
         }
     }
 
@@ -960,7 +1082,7 @@ $step5Input
 You are an expert content curator generating metadata for a weekly tech roundup. Based on the condensed content, generate ONLY the metadata and introduction as a JSON response.
 
 CRITICAL REQUIREMENTS:
-- Return ONLY valid JSON with these exact fields: title, tags, description, introduction
+- Return ONLY valid JSON with ONLY these exact fields: title, tags, description, introduction
 - Title: Create an engaging, informative title that reflects the week's main themes. Do NOT include the date in the title.
 - Tags: Array of 10-15 relevant technology tags from the content
 - Description: Write a 2-3 sentence summary of the week's key developments
@@ -970,7 +1092,7 @@ CRITICAL REQUIREMENTS:
   * Provides context for the stories that follow
   * Sets up the narrative flow
 
-Do NOT include the full content or table of contents - only the metadata fields listed above.
+CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the complete metadata requested.
 "@
 
         $step7UserMessage = @"
@@ -991,9 +1113,9 @@ Return only JSON with fields: title, tags, description, introduction
             -RateLimitPreventionDelay $RateLimitPreventionDelay
 
         # Check for errors with robust error handling
-        $validationResult = Test-AiResponseFormat -Response $step7Response -StepName "Step 7"
-        if (-not $validationResult.IsValid) {
-            Write-Error $validationResult.ErrorMessage
+        $rewriteResult = Test-AiResponseFormat -Response $step7Response -StepName "Step 7"
+        if (-not $rewriteResult.IsValid) {
+            Write-Error $rewriteResult.ErrorMessage
             exit 1
         }
 
@@ -1019,8 +1141,25 @@ Return only JSON with fields: title, tags, description, introduction
     }
     else {
         Write-Host "⏭️ Skipping Step 7 (metadata generation) - resuming from backup"
-        if ($ResumeFromBackup -and $StartFromStep -eq 8) {
-            $step7Response = $resumeContent
+        # Only load backup if we're actually going to need Step 7 output for Step 8
+        if ($StartFromStep -le 8) {
+            if ($ResumeFromBackup -and $StartFromStep -eq 8) {
+                $step7Response = $resumeContent
+            }
+            else {
+                # Load Step 7 backup if starting from later step
+                $step7BackupPattern = "*Step7-Metadata*$StartDate*$EndDate*"
+                $step7BackupFile = Get-ChildItem ".tmp/roundup-debug" -Filter $step7BackupPattern -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+                
+                if ($step7BackupFile) {
+                    Write-Host "📂 Loading Step 7 backup from: $($step7BackupFile.Name)" -ForegroundColor Cyan
+                    $step7Response = Get-Content $step7BackupFile.FullName -Raw
+                }
+                else {
+                    Write-Error "Step 7 backup not found and required for continuation"
+                    exit 1
+                }
+            }
         }
     }
 
@@ -1091,116 +1230,83 @@ $tableOfContents
 $step6Response
 "@
             
-            Save-StepBackup -StepName "Step8-Final" -Content $finalContent -StartDate $StartDate -EndDate $EndDate
-            Write-Host "✅ Step 8 complete - Final markdown file created"
+            Save-StepBackup -StepName "Step8-IncludingFrontmatter" -Content $finalContent -StartDate $StartDate -EndDate $EndDate
+            Write-Host "✅ Step 8 complete - Markdown file including frontmatter created"
         }
     }
     else {
-        Write-Host "⏭️ Skipping Step 8 (final file creation) - not needed for this run"
-        $finalContent = $step7Response  # Use metadata as final content if we're not running step 8
+        Write-Host "⏭️ Skipping Step 8 (markdown + frontmatter file creation) - resuming from backup"
+        # If a backup file is explicitly provided, always use that
+        if ($ResumeFromBackup) {
+            $finalContent = $resumeContent
+            Write-Host "📂 Using provided backup file" -ForegroundColor Cyan
+        }
+        else {
+            Write-Error "Step 8 requires a backup file to continue. Please provide -ResumeFromBackup parameter."
+            exit 1
+        }
     }
 
-    # Step 9: Validate Content Against Writing Style Guidelines
-    Write-Host "📖 Step 9: Validating content against writing style guidelines..."
+    # Step 9: Rewrite Content Against Writing Style Guidelines
+    # If we're resuming from step 9 backup, the backup content should be the final content
+    if ($ResumeFromBackup -and $StartFromStep -eq 9) {
+        $finalContent = $resumeContent
+        Write-Host "� Step 9: Rewriting content against writing style guidelines... - resuming from backup"
+    }
+    else {    
+        Write-Host "� Step 9: Rewriting content against writing style guidelines..."
+    }
     
     # Read the writing style guidelines
     $guidelinesPath = "/workspaces/techhub/docs/writing-style-guidelines.md"
     if (-not (Test-Path $guidelinesPath)) {
-        Write-Host "⚠️ Warning: Writing style guidelines not found at $guidelinesPath" -ForegroundColor Yellow
-        Write-Host "Skipping validation step..." -ForegroundColor Yellow
+        throw "⚠️ Writing style guidelines not found at $guidelinesPath"
     }
-    else {
-        try {
-            $guidelines = Get-Content $guidelinesPath -Raw -Encoding UTF8
-            
-            $validationSystemMessage = @"
-You are a content editor tasked with validating content against specific writing style guidelines. 
 
-Review the provided content and check it against these writing style guidelines:
+    try {
+        $guidelines = Get-Content $guidelinesPath -Raw -Encoding UTF8
+
+        $rewriteSystemMessage = @"
+You are a content editor tasked with rewriting content to ensure it adheres to specific writing style guidelines. 
+
+CRITICAL: Do NOT remove any headers, links or other content. ONLY rewrite text to ensure compliance with the guidelines while preserving all structural elements.
+CRITICAL: Return ALL of the content, without the 'CONTENT TO REWRITE IF NEEDED' header or any other new headers.
 
 $guidelines
-
-Provide a brief analysis in JSON format with these fields:
-- "isValid": boolean (true if content meets guidelines, false if significant issues found)
-- "issues": array of specific issues found (empty array if no issues)
-- "suggestions": array of improvement suggestions (empty array if no suggestions)
-- "overall": string summary of the content quality
-
-Focus on:
-- Tone and voice alignment with guidelines
-- Language clarity and professionalism
-- Avoidance of buzzwords and marketing speak
-- Content structure and readability
-- Authenticity and directness
-
-Be constructive and specific in your feedback.
 "@
 
-            $validationUserMessage = @"
-Please validate this weekly tech roundup content against the writing style guidelines:
+        $rewriteUserMessage = @"
+CONTENT TO REWRITE IF NEEDED:
 
 $finalContent
-
-Return JSON with fields: isValid, issues, suggestions, overall
 "@
 
-            Write-Host "🤖 Calling AI model to validate writing style..."
-            $validationResponse = Invoke-AiApiCall `
-                -Token $Token `
-                -Model $Model `
-                -SystemMessage $validationSystemMessage `
-                -UserMessage $validationUserMessage `
-                -Endpoint $Endpoint `
-                -RateLimitPreventionDelay $RateLimitPreventionDelay
+        Write-Host "🤖 Calling AI model to rewrite content for writing style compliance..."
+        $finalContent = Invoke-AiApiCall `
+            -Token $Token `
+            -Model $Model `
+            -SystemMessage $rewriteSystemMessage `
+            -UserMessage $rewriteUserMessage `
+            -Endpoint $Endpoint `
+            -RateLimitPreventionDelay $RateLimitPreventionDelay
 
-            # Parse validation results
-            try {
-                $validation = $validationResponse | ConvertFrom-Json
-                
-                Write-Host "📋 Writing Style Validation Results:" -ForegroundColor Cyan
-                Write-Host "Overall: $($validation.overall)" -ForegroundColor White
-                
-                if ($validation.isValid) {
-                    Write-Host "✅ Content meets writing style guidelines" -ForegroundColor Green
-                }
-                else {
-                    Write-Host "⚠️ Content has style issues that should be addressed:" -ForegroundColor Yellow
-                }
-                
-                if ($validation.issues -and $validation.issues.Count -gt 0) {
-                    Write-Host "Issues found:" -ForegroundColor Yellow
-                    foreach ($issue in $validation.issues) {
-                        Write-Host "  • $issue" -ForegroundColor Yellow
-                    }
-                }
-                
-                if ($validation.suggestions -and $validation.suggestions.Count -gt 0) {
-                    Write-Host "Suggestions for improvement:" -ForegroundColor Cyan
-                    foreach ($suggestion in $validation.suggestions) {
-                        Write-Host "  • $suggestion" -ForegroundColor Cyan
-                    }
-                }
-                
-                # Save validation results for reference
-                $validationResults = @{
-                    timestamp      = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-                    validation     = $validation
-                    content_length = $finalContent.Length
-                } | ConvertTo-Json -Depth 10
-                
-                Save-StepBackup -StepName "Step9-Validation" -Content $validationResults -StartDate $StartDate -EndDate $EndDate
-                Write-Host "✅ Step 9 complete - Writing style validation finished"
-            }
-            catch {
-                Write-Host "⚠️ Warning: Could not parse validation response" -ForegroundColor Yellow
-                Write-Host "Response: $validationResponse" -ForegroundColor Gray
-                Write-Host "Continuing with file creation..." -ForegroundColor Yellow
-            }
+        # Check for errors with robust error handling
+        $rewriteResult = Test-AiResponseFormat -Response $finalContent -StepName "Step 9 (Content Rewriting)"
+        if (-not $rewriteResult.IsValid) {
+            Write-Host "⚠️ Warning: Step 9 content rewriting failed: $($rewriteResult.ErrorMessage)" -ForegroundColor Yellow
+            Write-Host "Using original content..." -ForegroundColor Yellow
+            # finalContent already contains the original content, so no change needed
         }
-        catch {
-            Write-Host "⚠️ Warning: Error during writing style validation: $($_.Exception.Message)" -ForegroundColor Yellow
-            Write-Host "Continuing with file creation..." -ForegroundColor Yellow
+        else {
+            # Save successful rewrite results
+            Save-StepBackup -StepName "Step9-RewriteResult" -Content $finalContent -StartDate $StartDate -EndDate $EndDate
+            Write-Host "✅ Step 9 complete - Content rewritten for writing style compliance"
         }
+       
+    }
+    catch {
+        Write-Host "⚠️ Warning: Error during writing style rewriting: $($_.Exception.Message)" -ForegroundColor Yellow
+        Write-Host "Continuing with file creation using original content..." -ForegroundColor Yellow
     }
 
     # Generate the OutputFile (filename already set at script start)
