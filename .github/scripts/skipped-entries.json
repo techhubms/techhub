@@ -6513,5 +6513,17 @@
     "collection": "community",
     "timestamp": "2025-08-20 15:14:21 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/machine-learning-and-ai/how-github-copilot-helps-with-test-driven-development-tdd/m-p/4446059#M49"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content focuses on community management, generational leadership change, and strategies for supporting and guiding new contributors (specifically Gen Z) in open source projects in general. There is substantial discussion of open source governance, onboarding, and succession, but there is no technical focus on Microsoft-specific technologies, development, coding, DevOps, security, AI, ML, or Azure. GitHub is referenced only in the context of community and open source, not developer tooling or technical implementations. Therefore, all rules for AI, GitHub Copilot, Coding, DevOps, Azure, ML, and Security are not met. Generic exclusion rules for business strategy, workplace focus, and organizational/leadership content outside of technical architecture also apply.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/open-source/maintainers/who-will-maintain-the-future-rethinking-open-source-leadership-for-a-new-generation/",
+    "timestamp": "2025-08-20 16:17:01 +00:00"
+  },
+  {
+    "reason": "No categories found: Excluded all categories because the 'content' field is null. Without substantive content, it is impossible to determine if Microsoft technologies are central or which category inclusion rules would apply. Additionally, the description indicates only a 'very quick video,' which suggests insufficient technical detail. Per core guidelines, categories can only be applied if the content is present and meets quality standards.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/xTbZjAzH_vg",
+    "timestamp": "2025-08-20 16:17:23 +00:00"
   }
 ]
