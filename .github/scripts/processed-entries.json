@@ -7058,5 +7058,29 @@
     "collection": "news",
     "canonical_url": "https://www.microsoft.com/en-us/education/blog/2025/08/ai-in-education-report-insights-to-support-teaching-and-learning/",
     "reason": "Succesfully added: Assigned only the 'AI' category. The content centers on how AI is transforming education, teaching, learning, and workforce readiness, referencing Microsoft's AI-related research, programs, and tools (AI category rule 1 and 5). There are repeated references to Microsoft platforms, but the context is policy and institutional usage for education rather than development, coding, or ML engineering—therefore, categories like 'Coding', 'Azure', or 'ML' do not apply. Although productivity tools like Microsoft 365 Copilot are mentioned, its use here is in the context of education for brainstorming and support, not software development, so GitHub Copilot and similar developer categories were not assigned. Exclusion rules do not trigger: the content is professional, technical, and in English, and is not business, job, or biographical content."
+  },
+  {
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2025/08/20/post-quantum-resilience-building-secure-foundations/",
+    "reason": "Succesfully added: Assigned the Security category because the entire news article centers on cybersecurity risks and cryptographic transition strategies in the face of quantum computing threats, following Security rules 1, 4, 5, and 9 (Microsoft security services, cloud/data security, collaboration with standard bodies, secure architecture). There is no specific focus on practical AI (no AI tools/services discussed) nor on Azure, DevOps, ML, or Coding; the principal focus is organizational cybersecurity and encryption strategy. None of the generic exclusion rules apply. No other development-oriented categories are relevant based on the content.",
+    "timestamp": "2025-08-20 21:12:41 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/research/blog/mindjourney-enables-ai-to-explore-simulated-3d-worlds-to-improve-spatial-interpretation/",
+    "reason": "Succesfully added: The 'AI' category is assigned because the entire article features Microsoft's AI research, specifically an innovative AI framework (MindJourney) that addresses AI limitations in spatial reasoning using world models and VLMs. No other category qualifies; there is no focus on coding, Azure/cloud, machine learning engineering, security, or DevOps/tooling. The content is technical, research-driven, and aligns with the AI inclusion rules (Chapter 4, AI rules 1, 4, and 5). No generic exclusions apply, as the content is not biographical, sales-focused, negative, non-English, job-related, or purely business-strategic.",
+    "timestamp": "2025-08-20 21:13:04 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=MUu9o8tDwi0",
+    "reason": "Succesfully added: Added 'AI' category because the content is focused on Microsoft AI services, specifically Mistral Document AI and Azure AI Foundry (AI inclusion rule 1 and 4). Added 'Azure' category since Azure AI Foundry is the platform at the center of the demonstration (Azure inclusion rule 1 and 4). Coding and ML categories were not assigned because the main focus is on using built-in AI services and workflows, not custom coding or data pipeline/machine learning engineering. No generic exclusion rules applied.",
+    "timestamp": "2025-08-20 21:13:33 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/optimizing-azure-devops-jira-integration-5-practical-use-cases/m-p/4445837#M22123",
+    "reason": "Succesfully added: Applied the generic exclusion rules first and found none that matched; content is not biographical, question-only, sales, negative, non-English, job-related, business/executive focused, or about non-development Microsoft products. The article well exceeds the minimum word count and is technical in focus. Inclusion rules for DevOps are satisfied (Azure DevOps, Jira, team workflows), and Azure is included due to central focus on Azure DevOps as the development backbone. No Coding, AI, ML, Security, or GitHub Copilot categories apply, as there is no significant programming, AI, ML, or security emphasis. Tags were expanded for technical accuracy and depth.",
+    "timestamp": "2025-08-20 21:13:58 +00:00",
+    "collection": "community"
   }
 ]
