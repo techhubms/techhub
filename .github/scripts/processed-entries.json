@@ -7028,5 +7028,17 @@
     "collection": "news",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-multiple-scheduler-support/",
     "timestamp": "2025-08-20 16:16:26 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the content centers on Copilot's new AI-powered features for .NET diagnostics in Visual Studio (AI rule 1, 2, 5; GitHub Copilot rules 1, 2). Assigned 'Coding' because the article addresses C#/.NET debugging tooling, profiling, and code analysis (Coding rules 1, 2, 5). The content is technical, practical, and aimed at developers, with no generic or business/productivity aspects. No Azure, DevOps, ML, or Security categories apply as the focus is exclusively on debugging, code analysis, and AI assistance in Visual Studio for .NET.",
+    "collection": "news",
+    "timestamp": "2025-08-20 17:12:11 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/github-copilot-diagnostics-toolset-for-dotnet-in-visual-studio/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Security category because the article's entire focus is Microsoft's initiative around cryptographic upgrades, quantum-safe standards, protocol updates (SymCrypt, TLS), and systemic guidance for mitigating future security threats as per Security rules 1, 2, 3, 4, and 9. Assigned the Azure category due to technical details about foundational product integration (e.g., Azure cryptography services, SymCrypt used across Azure), and references to Azure-specific updates (see Azure rules 1, 4, 5). Did not assign the AI or ML categories because, while quantum computing and security are discussed, there is no direct focus on AI model development, AI service use, or data science implementation. Tags were extracted on the basis of major technical terms, product names, algorithms, and concepts referenced throughout the article.",
+    "collection": "news",
+    "timestamp": "2025-08-20 17:13:00 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/08/20/quantum-safe-security-progress-towards-next-generation-cryptography/"
   }
 ]

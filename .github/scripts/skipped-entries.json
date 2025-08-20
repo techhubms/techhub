@@ -6525,5 +6525,17 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/xTbZjAzH_vg",
     "timestamp": "2025-08-20 16:17:23 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is an official announcement about the launch of the ROG Xbox Ally and ROG Xbox Ally X handheld gaming devices. The article primarily targets gamers and highlights hardware features, game compatibility, AI-powered consumer-facing features like automatic upscaling, highlight reels, and play recommendations. It does not contain developer-oriented or technical implementation content and does not focus on Microsoft technologies from a development, DevOps, coding, security, ML, or Azure integration perspective as required by the inclusion rules. The AI features described are end-user facing product features, not developer tools, APIs, or programming topics. No generic exclusion rule is strictly triggered (the content is not biographical, sales pitch, etc.), but per category inclusion rules, none apply.",
+    "collection": "news",
+    "timestamp": "2025-08-20 17:12:29 +00:00",
+    "canonical_url": "https://news.xbox.com/en-us/2025/08/20/rog-xbox-ally-handheld-release-date-october-features/"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content is an announcement and analysis of a new market intelligence platform (Futurum Signal) for DevOps tooling. While the post discusses concepts relevant to DevOps, platform engineering, market analysis, vendor evaluation, and AI-powered dashboards, it does not substantively focus on Microsoft technologies, tools, or platforms, nor does it feature Azure, GitHub, or any Microsoft ecosystem products/services (per the Multi-Platform Content Threshold: Microsoft technology must be ≥40% of content or central to the solution). No explicit Microsoft technology, product, or service is present or central in the platform, its solutions, or the examples provided. Therefore, none of the inclusion rules for AI, DevOps, Azure, Coding, ML, Security, or GitHub Copilot are met. As required, generic exclusions do not apply, but saturation threshold for Microsoft technology is not met for inclusion.",
+    "collection": "posts",
+    "timestamp": "2025-08-20 17:13:18 +00:00",
+    "canonical_url": "https://devops.com/futurum-signal-is-live-cutting-through-the-devops-noise/?utm_source=rss&utm_medium=rss&utm_campaign=futurum-signal-is-live-cutting-through-the-devops-noise"
   }
 ]
