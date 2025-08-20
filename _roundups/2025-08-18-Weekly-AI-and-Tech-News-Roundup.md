@@ -438,6 +438,6 @@ Included are guides on Teams encryption, survey data on breaches, new secret pro
 
 - [Encryption in Microsoft Teams: How Microsoft Secures Collaboration and Communication](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/encryption-in-microsoft-teams-june-2025/ba-p/4442913)
 - [Most Organizations Face Breaches Caused by Vulnerable Code, Survey Finds](https://devops.com/survey-traces-large-amount-of-breaches-back-to-vulnerable-code/?utm_source=rss&utm_medium=rss&utm_campaign=survey-traces-large-amount-of-breaches-back-to-vulnerable-code)
-- [What is GitHub Secret Protection? | GitHub Explained]({{ "/2025-08-17-What-is-GitHub-Secret-Protection-GitHub-Explained.html" | relative_url }})
+- [What is GitHub Secret Protection?]({{ "/2025-08-17-What-is-GitHub-Secret-Protection-GitHub-Explained.html" | relative_url }})
 - [Minimus Adds VEX Support and Microsoft SSO Integration to Hardened Images Service](https://devops.com/minimus-adds-vex-support-to-managed-hardened-images-service/?utm_source=rss&utm_medium=rss&utm_campaign=minimus-adds-vex-support-to-managed-hardened-images-service)
 - and additional updates as listed above

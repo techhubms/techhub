@@ -1,0 +1,30 @@
+// Define defaults for each variable.
+$base-font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$base-font-size: 16px !default;
+$base-font-weight: 400 !default;
+$base-line-height: 1.6 !default;
+
+$small-font-size: $base-font-size * 0.875 !default;
+
+$spacing-unit: 15px !default;
+
+$content-width: 800px !default;
+
+// When to collapse header into hamburger menu
+$on-mobile: 935px !default;
+$on-laptop: 935px !default;
+
+// When to switch to mobile view for sections/collections/posts
+$navigation-breakpoint: 750px !default;
+
+$table-text-align: left !default;
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
