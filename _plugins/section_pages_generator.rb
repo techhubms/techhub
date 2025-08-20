@@ -34,9 +34,6 @@ module Jekyll
           create_collection_page(site, section_data, page_data)
         end
       end
-
-      # Sleep for 1 second to give filesystem time to process
-      sleep(1)
     end
 
     private

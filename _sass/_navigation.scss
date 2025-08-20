@@ -46,7 +46,7 @@
         align-items: center;
         text-align: center;
         contain: layout style;
-        
+
         // Base structural styling only
         padding: 15px;
         border-radius: 12px;
@@ -54,36 +54,30 @@
         will-change: border-color;
     }
 
-    &:hover {
-        text-decoration: none !important;
-    }
-
     @media (hover: hover) {
         &:hover {
             border-color: $bright-purple;
             transform: scale(1.05);
         }
-    }
-
-    &,
-    &:link,
-    &:visited,
-    &:hover,
-    &:active,
-    &:focus {
-        outline: none;
-        text-decoration: none !important;
-
-        * {
-            text-decoration: none !important;
-        }
-    }
+    }    
 
     @media (max-width: $on-mobile) {
         @media (hover: hover) {
             &:hover {
                 transform: none; // Disable transform effects completely on small mobile
             }
+        }
+    }    
+
+    @media (hover: hover) {
+        &,
+        &:link,
+        &:visited,
+        &:hover,
+        &:active,
+        &:focus {
+            outline: none !important;
+            text-decoration: none !important;
         }
     }
 }
