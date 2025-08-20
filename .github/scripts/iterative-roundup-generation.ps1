@@ -198,6 +198,23 @@ try {
     # Create week description for AI prompts
     $WeekDescription = "the week of $($startDateTime.ToString('MMMM d')) to $($endDateTime.ToString('MMMM d, yyyy'))"
 
+    # Define consistent writing style guidelines for all AI prompts
+    $WritingStyleGuidelines = @"
+- Maintain all technical accuracy and specificity
+- Use clear, direct professional tone - avoid marketing buzzwords and hyperbole
+- Focus on practical benefits and real-world context
+- Be authentic and down-to-earth rather than sensational
+- Create flowing narrative content that tells the story of developments
+- Preserve narrative flow and readability
+- Keep professional, down-to-earth tone throughout
+- Reference progression and ongoing storylines when relevant
+- Focus on concrete benefits and real-world applications
+- Eliminate repetitive phrases and unnecessary elaboration
+- Preserve references to previous roundups and ongoing narratives (these make content feel human-written)
+- Never use horizontal separators `---`, always use proper headings. The separators will be added automatically with CSS.
+- You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full enhanced content requested.
+"@
+
     # Generate consistent file information that will be used throughout the script
     $fileInfo = Get-RoundupFileInfo -EndDateTime $endDateTime
     $publishDateFormatted = $fileInfo.PublishDateFormatted
@@ -320,14 +337,61 @@ RESPONSE FORMAT: Return ONLY a JSON object with this exact structure:
 
 CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full detailed analysis requested.
 
-SECTION CATEGORIZATION:
-- "GitHub Copilot": Anything specifically about GitHub Copilot, VS Code extensions, chat modes, features
-- "AI": General AI tools, models, platforms (excluding GitHub Copilot)
-- "ML": Machine learning, data science, model training, AI research
-- "Azure": Microsoft cloud services, Azure updates, cloud architecture
-- "Coding": .NET ecosystem, development tools, programming languages, frameworks
-- "DevOps": CI/CD, automation, deployment, development workflows
-- "Security": Cybersecurity, threats, security tools, compliance
+SECTION CATEGORIZATION - CHOOSE THE SINGLE BEST MATCH:
+Choose ONE section that best represents the primary focus of the content. Use this priority order when content could fit multiple sections:
+
+1. "GitHub Copilot": Content specifically about GitHub Copilot features, usage, integrations, or announcements
+   - GitHub Copilot Chat, code completion, enterprise features
+   - GitHub Copilot extensions and integrations
+   - Takes priority over "AI" or "Coding" when Copilot is the main focus
+
+2. "ML": Machine learning engineering, data science workflows, model development, AI research
+   - Azure ML, data science platforms, model training and deployment
+   - Advanced analytics, business intelligence development
+   - Custom ML implementations, algorithm development
+   - Takes priority over "AI" when technical ML development is the main focus
+
+3. "AI": General AI services, tools, and platforms (excluding GitHub Copilot and technical ML)
+   - Azure AI Foundry, Azure OpenAI, AI services and APIs, Copilot Studio
+   - AI integration and usage (not technical ML development)
+   - Prompt engineering, AI-powered applications
+   - Only use when content is not primarily about GitHub Copilot or technical ML
+
+4. "Azure": Microsoft cloud services, infrastructure, and platform services
+   - Azure services, cloud architecture, deployment
+   - ARM templates, Bicep, Terraform (if Azure) cloud management
+   - Use when Azure services are the primary focus, not just mentioned
+
+5. "Coding": .NET ecosystem, programming languages, development frameworks
+   - C#, F#, .NET, ASP.NET Core, development patterns
+   - Programming languages, frameworks, development tools, NuGet package manager
+   - Only use when development is the main focus and not about GitHub Copilot
+
+6. "DevOps": Development processes, CI/CD, automation, team collaboration
+   - GitHub Actions, Azure DevOps, deployment pipelines
+   - Development workflows, team practices, automation
+   - Version control, release management
+
+7. "Security": Cybersecurity, threats, security tools, compliance
+   - Security tools, vulnerability management, compliance
+   - Identity management, security architecture
+   - Threat detection, incident response
+
+DECISION EXAMPLES FOR COMMON SCENARIOS:
+- "GitHub Copilot for C# development" → "GitHub Copilot" (Copilot is primary focus)
+- "C# async patterns and best practices" → "Coding" (no AI/Copilot focus)
+- "Azure OpenAI integration tutorial" → "AI" (AI service usage, not technical ML)
+- "Custom ML model training on Azure" → "ML" (technical ML development)
+- "Building REST APIs in ASP.NET Core" → "Coding" (development focus)
+- "Deploying .NET apps with GitHub Actions" → "DevOps" (deployment process focus)
+- "Azure Functions serverless architecture" → "Azure" (Azure service focus)
+- "Zero Trust security architecture" → "Security" (security focus)
+
+WHEN CONTENT SPANS MULTIPLE AREAS:
+- Choose the section that represents the PRIMARY purpose or main audience
+- Ask: "What is this content mainly trying to teach or announce?"
+- If it's about using a tool/service, categorize by the tool/service being used
+- If it's about implementing something, categorize by the implementation domain
 
 SUMMARY REQUIREMENTS:
 - Provide comprehensive detailed context covering all key aspects of the article
@@ -450,11 +514,7 @@ Return the complete content for the SINGLE section provided with:
 - Topic subsection headers (###)  
 - Detailed narrative content incorporating article information, ending with links
 - Article links in list format at the END of each topic section
-- Clear, professional narrative flow throughout
-- Authentic language focused on practical developer benefits
-- Never use horizontal separators `---`, always use proper headings. The seperators will be added automatically with CSS.
-
-CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full detailed content requested.
+- Do NOT add a summary. Stop after the last link.
 
 The section should follow this pattern:
 
@@ -467,14 +527,25 @@ The section should follow this pattern:
 
 [Detailed narrative content about the developments, incorporating key details from the articles and explaining their significance. Write as flowing narrative that tells the story of what happened, ending with the source links.]
 
-- [Article 1](link)
-- [Article 2](link)
+- [Theme 1 Article 1](link)
+- [Theme 1 Article 2](link)
+- [Theme 1 Article 3](link)
+- [Theme 1 Article 4](link)
 
 ### [Topic Theme 2]
 
 [Another detailed narrative section that flows directly into content, ending with links]
 
-- [More articles...]
+- [Theme 2 Article 1](link)
+- [Theme 2 Article 2](link)
+
+### Other News
+
+[Brief mentions of additional developments that don't fit into major themes. Write 1-2 sentences per article highlighting the key point or benefit, then list all the links together.]
+
+- [Single article 1](link)
+- [Single article 2](link)
+- [Single article 3](link)
 ```
 
 CRITICAL SECTION INTRODUCTION GUIDELINES:
@@ -487,11 +558,13 @@ CRITICAL SECTION INTRODUCTION GUIDELINES:
 - Provide comprehensive context without length restrictions
 
 CRITICAL TOPIC GROUPING STRATEGY:
-- Group 2-4 related articles under thematic headings
+- Group 2-4 related articles under thematic headings for major topics
 - Create compelling topic names that capture the essence of developments
 - Examples: "Coding Agent Capabilities Expand", "Azure AI Infrastructure Matures", "Developer Productivity Tools Evolve"
 - Look for natural connections: same product family, related features, complementary technologies
-- Don't over-group - if articles are genuinely different topics, keep them separate
+- IMPORTANT: Any articles that don't naturally group with others should go into an "Other News" section
+- Only create individual topic sections for articles that can be grouped with at least one other related article
+- Single standalone articles should be briefly mentioned in "Other News" with 1-2 sentences each
 
 CRITICAL TOPIC CONTENT GUIDELINES:
 - Write detailed narrative content that incorporates key information from the article summaries
@@ -501,15 +574,18 @@ CRITICAL TOPIC CONTENT GUIDELINES:
 - No separate introductory paragraph - dive straight into the narrative content
 - Focus on concrete benefits and real-world applications
 
+CRITICAL "OTHER NEWS" SECTION GUIDELINES:
+- Use this section for articles that don't naturally group with others
+- Write 1-2 sentences per article highlighting the key development or benefit
+- Be concise but informative - capture the essence of what's new or useful
+- List all the "Other News" article links together at the end of that section
+- This prevents creating many single-article topic sections
+
 CRITICAL CONTENT EDITING RULES:
-- Maintain all technical accuracy and specificity
-- Create flowing narrative content that tells the story of developments
 - Incorporate article details directly into narrative paragraphs
 - Keep all article titles and links intact, placing them at the END of each topic section
-- Use clear, direct professional tone - avoid marketing buzzwords and hyperbole
-- Focus on practical benefits and real-world context
-- Be authentic and down-to-earth rather than sensational
 - Each topic section should read as a cohesive story ending with source links
+$WritingStyleGuidelines
 "@
 
         # Process each section individually to avoid token limits
@@ -671,9 +747,7 @@ $sectionInput
 You are an expert content editor creating ongoing narrative connections between weekly tech roundups. Your task is to enhance the current week's content for a SINGLE SECTION by identifying themes, products, or developments that continue from the previous week's roundup.
 
 RESPONSE FORMAT:
-Return the enhanced content for the SINGLE section provided with the EXACT same structure as provided (all topics and links preserved), but with added narrative connections where relevant.
-
-CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full enhanced content requested.
+- Return the enhanced content for the SINGLE section provided with the EXACT same structure as provided (all topics and links preserved), but with added narrative connections where relevant.
 
 ONGOING NARRATIVE ENHANCEMENT STRATEGY:
 1. Identify products, features, or themes mentioned in BOTH the previous and current roundup for this section
@@ -699,11 +773,10 @@ WHAT TO LOOK FOR:
 
 ENHANCEMENT GUIDELINES:
 - Only add connections where genuinely relevant - don't force connections
-- Keep the same professional, down-to-earth tone
 - Maintain the existing narrative flow while adding continuity
 - Place connections naturally within existing content
-- Preserve all technical accuracy and specificity
 - Keep all existing article titles and links exactly as provided
+$WritingStyleGuidelines
 
 WHAT NOT TO CHANGE:
 - Section structure and headers
@@ -912,13 +985,13 @@ You are an expert content editor focused on condensing well-organized content to
 
 CONDENSATION TASK:
 - Receive well-organized content with proper sections, topics, and narrative flow
-- Condense to approximately 200-300 lines total
+- Condense to approximately 200-300 lines, EXCLUDING any article links. They should be preserved in their original form.
 - CRITICAL: Preserve ALL article links
 - CRITICAL: Maintain the existing structure and organization
 - CRITICAL: Keep all section headers (##) and topic headers (###) exactly as provided
-- CRITICAL: Preserve narrative flow and professional tone
 
-CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full condensed content requested.
+CRITICAL WRITING STYLE GUIDELINES:
+$WritingStyleGuidelines
 
 CONDENSATION STRATEGY:
 1. Trim verbose passages while keeping essential information
@@ -931,11 +1004,7 @@ CONDENSATION STRATEGY:
 WHAT TO PRESERVE:
 - All article titles and links (never remove these)
 - All section and topic headers
-- Technical accuracy and specific details
-- Narrative flow and context
-- Professional tone and readability
 - Key practical implications and benefits
-- References to previous roundups and ongoing narratives (these make content feel human-written)
 
 WHAT TO CONDENSE:
 - Verbose explanations that can be stated more concisely
@@ -1013,7 +1082,7 @@ $step5Input
 You are an expert content curator generating metadata for a weekly tech roundup. Based on the condensed content, generate ONLY the metadata and introduction as a JSON response.
 
 CRITICAL REQUIREMENTS:
-- Return ONLY valid JSON with these exact fields: title, tags, description, introduction
+- Return ONLY valid JSON with ONLY these exact fields: title, tags, description, introduction
 - Title: Create an engaging, informative title that reflects the week's main themes. Do NOT include the date in the title.
 - Tags: Array of 10-15 relevant technology tags from the content
 - Description: Write a 2-3 sentence summary of the week's key developments
@@ -1024,8 +1093,6 @@ CRITICAL REQUIREMENTS:
   * Sets up the narrative flow
 
 CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the complete metadata requested.
-
-Do NOT include the full content or table of contents - only the metadata fields listed above.
 "@
 
         $step7UserMessage = @"
@@ -1198,17 +1265,12 @@ $step6Response
 
     try {
         $guidelines = Get-Content $guidelinesPath -Raw -Encoding UTF8
-            
+
         $rewriteSystemMessage = @"
 You are a content editor tasked with rewriting content to ensure it adheres to specific writing style guidelines. 
 
-CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the complete rewritten content.
-
 CRITICAL: Do NOT remove any headers, links or other content. ONLY rewrite text to ensure compliance with the guidelines while preserving all structural elements.
-
 CRITICAL: Return ALL of the content, without the 'CONTENT TO REWRITE IF NEEDED' header or any other new headers.
-
-The guidelines are these:
 
 $guidelines
 "@
