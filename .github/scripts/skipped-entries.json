@@ -6453,5 +6453,77 @@
     "reason": "No categories found: Content is excluded according to the generic exclusion rules for Non-Development Microsoft Products in Chapter 3. The entire article is about the Copilot function in Excel for Windows and Mac, which is a feature of Microsoft 365 Copilot focused on business productivity and document creation within Excel. It does not involve developer tools, code development, technical implementation, or developer APIs. The content describes how end-users can use natural language prompts to analyze and manage data in spreadsheets—not how developers can build or extend Copilot or Excel. Per the critical Copilot product distinction rule, Microsoft 365 Copilot and Office Copilot are explicitly excluded as non-development products, and content about those features must not be assigned any categories, regardless of AI references.",
     "canonical_url": "https://techcommunity.microsoft.com/blog/microsoft365insiderblog/bring-ai-to-your-formulas-with-the-copilot-function-in-excel/4443487",
     "timestamp": "2025-08-18 23:11:45 +00:00"
+  },
+  {
+    "timestamp": "2025-08-19 08:18:24 +00:00",
+    "reason": "No categories found: Content excluded based on generic exclusion rule regarding business productivity, non-development Microsoft 365 Copilot products, and business strategy focus. The post discusses Microsoft Copilot in the context of productivity tools for enterprises (Microsoft 365, Dynamics 365, Power Platform), focusing on innovation, productivity, business insights, collaboration, and compliance at a high level. There is only a brief mention of GitHub Copilot in one section and not enough technical depth related to developer tooling or coding practices. The main body centers on business outcomes, adoption strategies, workplace transformation, and how Copilot enhances productivity in knowledge work, not code development or technical implementation. According to Chapter 3 Non-Development Microsoft Products and Business Strategy Exclusion rules, this content does not qualify for any categories.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-enterprises-are-leveraging-microsoft-copilot-to-drive-innovation/"
+  },
+  {
+    "timestamp": "2025-08-19 10:15:44 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is focused on general mobile app frameworks (Flutter, React Native, .NET MAUI) and architectural patterns, not specific to Microsoft technologies or ecosystems. While .NET MAUI is mentioned, it is not the main subject nor central to the advice, and Microsoft-specific development comprises much less than 40% of the content (per Multi-Platform Content Threshold rule). There is no substantive focus on Azure, AI, DevOps, Security, or coding practices in the Microsoft ecosystem. Thus, all inclusion conditions are not met. Generic exclusions do not apply.",
+    "canonical_url": "https://devops.com/what-really-matters-when-picking-a-cross-platform-stack-today/?utm_source=rss&utm_medium=rss&utm_campaign=what-really-matters-when-picking-a-cross-platform-stack-today",
+    "collection": "posts"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The input is primarily a high-level business strategy overview and does not contain substantive technical content or implementation details. The description refers to Microsoft AI use cases by industry, role, and business priority, but does not provide actionable technical depth, code, architectures, or development-oriented information. Per 'Business Strategy and Executive Content' and 'Business vs Technical Content Examples' in Chapter 3, purely strategic, industry-focused, or business-priority content is excluded unless it contains significant technical implementation details. No categories assigned.",
+    "canonical_url": "https://www.youtube.com/watch?v=j9jGYAY9uig",
+    "timestamp": "2025-08-19 12:23:32 +00:00"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-08-19 19:10:54 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/kamal-hinduja-geneva-switzerland-what-are-the-key-services/m-p/4445496#M13892",
+    "reason": "Insufficient content length"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-08-19 19:10:55 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/is-native-rdlc-report-support-planned-for-future-net-versions/m-p/4445393#M672",
+    "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is primarily about automating IT governance and administration for Microsoft 365 using ShareGate. According to the Non-Development Microsoft Products exclusion rule, content focused on Microsoft 365 workplace productivity, compliance, or business administration—rather than software development or development tooling—is excluded from categorization. The post details process automation, policy management, and compliance, but lacks substantive coverage of development, coding, DevOps, or custom implementation. No inclusion rule for Coding, DevOps, Azure, Security, AI, ML, or GitHub Copilot applies.",
+    "timestamp": "2025-08-20 09:14:29 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/automating-governance-with-sharegate-a-practical-guide-for-businesses/"
+  },
+  {
+    "reason": "No categories found: Content is excluded due to the generic exclusion rule: The content focuses on end-user security best practices for Microsoft 365, which is not development or IT pro technical content per Non-Development Microsoft Products and Business/Workplace Focus exclusions (Chapter 3). The steps are aimed at general users or small business owners, not at developer or IT professional audiences. There is no focus on coding, IT architecture, advanced configuration, or Microsoft security development tools (e.g., Azure, Sentinel, Defender integrations). Microsoft 365 productivity and general administration content is outside the platform's technical scope unless focused on development or advanced technical configuration.",
+    "timestamp": "2025-08-20 09:14:41 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-secure-microsoft-365-accounts-without-a-dedicated-it-department/"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the provided content consists only of a title, a promotional description for Microsoft Build 2025, and no substantive main content ('content': null). There is no actual information, educational value, technical depth, or actionable insight present, only an event mention and a link to a corporate initiative. This triggers the Sales Pitch / Promotional exclusion and fails to meet the minimum quality and completeness requirements for categorization.",
+    "collection": "videos",
+    "timestamp": "2025-08-20 15:14:19 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/7Hwtlp8A3OQ"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-08-20 15:14:21 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/machine-learning-and-ai/boosting-productivity-with-github-copilot-real-world-net-coding/m-p/4446056#M48"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-08-20 15:14:21 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/machine-learning-and-ai/how-github-copilot-helps-with-test-driven-development-tdd/m-p/4446059#M49"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content focuses on community management, generational leadership change, and strategies for supporting and guiding new contributors (specifically Gen Z) in open source projects in general. There is substantial discussion of open source governance, onboarding, and succession, but there is no technical focus on Microsoft-specific technologies, development, coding, DevOps, security, AI, ML, or Azure. GitHub is referenced only in the context of community and open source, not developer tooling or technical implementations. Therefore, all rules for AI, GitHub Copilot, Coding, DevOps, Azure, ML, and Security are not met. Generic exclusion rules for business strategy, workplace focus, and organizational/leadership content outside of technical architecture also apply.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/open-source/maintainers/who-will-maintain-the-future-rethinking-open-source-leadership-for-a-new-generation/",
+    "timestamp": "2025-08-20 16:17:01 +00:00"
+  },
+  {
+    "reason": "No categories found: Excluded all categories because the 'content' field is null. Without substantive content, it is impossible to determine if Microsoft technologies are central or which category inclusion rules would apply. Additionally, the description indicates only a 'very quick video,' which suggests insufficient technical detail. Per core guidelines, categories can only be applied if the content is present and meets quality standards.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/xTbZjAzH_vg",
+    "timestamp": "2025-08-20 16:17:23 +00:00"
   }
 ]

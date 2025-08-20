@@ -1,0 +1,25 @@
+{
+  "ProcessedDate": "2025-08-20 15:12:57",
+  "Description": "A look at how the managed identity option for Azure File Sync works and what you need to do.\n\n▬▬▬▬▬▬ C H A P T E R S ⏰ ▬▬▬▬▬▬ 00:00 - Introduction 00:09 - Azure File Sync 101 03:30 - Certificates and access keys 04:41 - Using managed identity 06:47 - Default for new storage sync services 07:38 - Migrating an existing deployment 08:23 - Enabling MIs for the file servers 09:00 - Non-Azure file server handling 10:59 - Switching the storage sync service 11:49 - Permissions granted 13:26 - Permission exception scenarios 15:05 - Non-MI enabled server endpoints 15:23 - Reduced overhead 15:56 - Summary 16:47 - Close\n\n▬▬▬▬▬▬ K E Y L I N K S 🔗 ▬▬▬▬▬▬ ► Whiteboard: 🔗 https://github.com/johnthebrit/RandomStuff/raw/master/Whiteboards/AzureFileSyncMI.png ► Microsoft docs: 🔗 https://learn.microsoft.com/azure/storage/file-sync/file-sync-managed-identities?tabs=azure-portal#configure-your-azure-file-sync-deployment-to-use-system-assigned-managed-identities ► Resetting permission cmdlets: 🔗 https://learn.microsoft.com/powershell/module/az.storagesync/set-azstoragesynccloudendpointpermission?view=azps-14.3.0 🔗 https://learn.microsoft.com/powershell/module/az.storagesync/set-azstoragesyncserverendpointpermission?view=azps-14.3.0\n\n❔ Questions? Maybe I answered it in my FAQ 🔗 https://savilltech.com/faq 👕 Cure Childhood Cancer Charity T-Shirt Channel Store 🔗 https://johns-t-shirts-store.creator-spring.com/\n\n▬▬▬▬▬▬ Want to learn more? 🚀 ▬▬▬▬▬▬ 📖 Recommended Learning Path for Azure 🔗 https://learn.onboardtoazure.com 🥇 Certification Content Repository 🔗 https://github.com/johnthebrit/CertificationMaterials 📅 Weekly Azure Update 🔗 https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks ☁ Azure Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY ⚙ DevOps Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq 💻 PowerShell Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFq\\_hR7FcMYg32xsSAObuq8 🎓 Certification Cram Videos 🔗 https://youtube.com/playlist?list=PLlVtbbG169nHz2qfLvPsAz9CnnXofhmcA 🧠 Mentoring Content 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGHxNkSWB0PjzZHwZ0BkXZZ\n\n👂 Enable the subtitles and from there you can translate to your native language via the auto-translate feature in settings! https://youtu.be/v5b53-PgEmI for a demo of using this feature.\n\nSUBSCRIBE ✅ https://www.youtube.com/channel/UCpIn7ox7j7bH\\_OFj7tYouOQ?sub\\_confirmation=1\n\n#azure #azurestorage #entraid",
+  "FeedLevelAuthor": "John Savill's Technical Training",
+  "Link": "https://www.youtube.com/watch?v=xoUCZj4ZMRs",
+  "OutputDir": "_videos",
+  "PubDate": "2025-08-20T14:56:24+00:00",
+  "Title": "Azure File Sync Managed Identity - Improved and Simplified Security and Operations",
+  "Tags": [
+    "azure",
+    "azure ad",
+    "azure file sync",
+    "cloud",
+    "entra id",
+    "file share",
+    "managed identity",
+    "SMB",
+    "storage account",
+    "storage services"
+  ],
+  "EnhancedContent": null,
+  "FeedName": "John Savill's Technical Training",
+  "Author": "John Savill's Technical Training",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+}
