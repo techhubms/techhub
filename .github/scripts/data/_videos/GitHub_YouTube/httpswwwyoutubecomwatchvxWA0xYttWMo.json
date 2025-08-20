@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Description": "Join us for a live stream with Julia Kordick, Software Global Black Belt at Microsoft, as she demonstrates how AI-assisted tools like GitHub Copilot and autonomous agents are transforming large-scale COBOL modernization. Julia will showcase a live demo of migrating legacy COBOL, covering reverse engineering, automated documentation, test generation, and code transformation.",
+  "Link": "https://www.youtube.com/watch?v=xWA0xYttWMo",
+  "ProcessedDate": "2025-08-20 14:12:59",
+  "OutputDir": "_videos",
+  "Tags": [],
+  "Author": "GitHub",
+  "Title": "Modernizing Legacy: COBOL to Cloud with GitHub Copilot",
+  "PubDate": "2025-07-22T14:14:11+00:00",
+  "FeedLevelAuthor": "GitHub",
+  "FeedName": "GitHub YouTube"
+}
