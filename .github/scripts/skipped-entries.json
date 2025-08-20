@@ -6537,5 +6537,11 @@
     "collection": "posts",
     "timestamp": "2025-08-20 17:13:18 +00:00",
     "canonical_url": "https://devops.com/futurum-signal-is-live-cutting-through-the-devops-noise/?utm_source=rss&utm_medium=rss&utm_campaign=futurum-signal-is-live-cutting-through-the-devops-noise"
+  },
+  {
+    "timestamp": "2025-08-20 18:18:11 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned due to insufficient content. The 'content' field is null, and the available description and title lack enough technical detail to determine central Microsoft technologies or implementation focus. There is a mention of 'Copilot Agent Mode' and 'playwright MCP server,' but with no context or substantial information, it's unclear whether this pertains to GitHub Copilot (developer tool) or a non-development productivity tool, and there's no evidence of code, best practices, or technical workflow. Per fundamental guidelines, if unsure, exclude. Generic exclusion rule applies due to inadequate information.",
+    "canonical_url": "https://www.youtube.com/watch?v=0kiYEKqV9DY"
   }
 ]
