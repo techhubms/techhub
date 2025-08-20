@@ -539,13 +539,24 @@ The section should follow this pattern:
 - [Theme 2 Article 1](link)
 - [Theme 2 Article 2](link)
 
-### Other News
+### Other [Section Name] News
 
-[Brief mentions of additional developments that don't fit into major themes. Write 1-2 sentences per article highlighting the key point or benefit, then list all the links together.]
+[Brief mentions of additional developments that don't fit into major themes, if possible grouped very broadly - for instance group troubleshooting articles, how-to's or feature updates.  Write 1-2 sentences per broad grouping, highlighting the key point or benefit, then list all the links for that group.]
+
+- [Broadly grouped article 1](link)
+- [Broadly grouped article 2](link)
+- [Broadly grouped article 3](link)
+
+[If possible, continue with a next very broad grouping in an identical manner. When you can't find a suitable group, mention the remaining articles ungrouped at the end of this section.]
+
+- [Broadly grouped article 1](link)
+- [Broadly grouped article 2](link)
+- [Broadly grouped article 3](link)
+
+[Create a nice bridge to any remaining articles here]
 
 - [Single article 1](link)
 - [Single article 2](link)
-- [Single article 3](link)
 ```
 
 CRITICAL SECTION INTRODUCTION GUIDELINES:
@@ -557,15 +568,6 @@ CRITICAL SECTION INTRODUCTION GUIDELINES:
 - Focus on practical impact and create a sense of continuity
 - Provide comprehensive context without length restrictions
 
-CRITICAL TOPIC GROUPING STRATEGY:
-- Group 2-4 related articles under thematic headings for major topics
-- Create compelling topic names that capture the essence of developments
-- Examples: "Coding Agent Capabilities Expand", "Azure AI Infrastructure Matures", "Developer Productivity Tools Evolve"
-- Look for natural connections: same product family, related features, complementary technologies
-- IMPORTANT: Any articles that don't naturally group with others should go into an "Other News" section
-- Only create individual topic sections for articles that can be grouped with at least one other related article
-- Single standalone articles should be briefly mentioned in "Other News" with 1-2 sentences each
-
 CRITICAL TOPIC CONTENT GUIDELINES:
 - Write detailed narrative content that incorporates key information from the article summaries
 - Tell the story of what happened and why it matters, flowing directly into content
@@ -574,11 +576,21 @@ CRITICAL TOPIC CONTENT GUIDELINES:
 - No separate introductory paragraph - dive straight into the narrative content
 - Focus on concrete benefits and real-world applications
 
+CRITICAL TOPIC GROUPING STRATEGY:
+- Group 2-4 related articles under thematic headings for major topics
+- Create compelling topic names that capture the essence of developments
+- Examples: "Coding Agent Capabilities Expand", "Azure AI Infrastructure Matures", "Developer Productivity Tools Evolve"
+- Look for natural connections: same product family, related features, complementary technologies, type of development, target audience
+- Only create topic sections for articles that can be grouped with at least one other related article
+- IMPORTANT: Any articles that don't naturally group with others should go into an "Other News" section
+
 CRITICAL "OTHER NEWS" SECTION GUIDELINES:
 - Use this section for articles that don't naturally group with others
-- Write 1-2 sentences per article highlighting the key development or benefit
+- Replace [Section Name] with the name of the current section
+- Also try to create groups in here, but make them as broad as needed. If you still can't group them, leave them ungrouped.
+- Write 1-2 sentences per group highlighting the key developments and then list the related articles and continue with the next group
+- Do not create new headings, just paragraphs of text followed by article links
 - Be concise but informative - capture the essence of what's new or useful
-- List all the "Other News" article links together at the end of that section
 - This prevents creating many single-article topic sections
 
 CRITICAL CONTENT EDITING RULES:
@@ -978,17 +990,16 @@ $sectionContent
     # Step 6: Condense Content to 200-300 Lines (skip if resuming from later step)
     $step6Response = $null
     if ($StartFromStep -le 6) {
-        Write-Host "📝 Step 6: Condensing content to target ~250 lines while preserving narrative quality..."
+        Write-Host "📝 Step 6: Condensing content to target 200-300 lines while preserving narrative quality..."
 
         $step6SystemMessage = @"
 You are an expert content editor focused on condensing well-organized content to an optimal length. You will receive complete, well-structured roundup content that needs to be condensed while maintaining narrative quality and completeness.
 
+ABSOLUTELY CRITICAL: Preserve ALL article links! NEVER truncate lists with remarks like 'and additional updates' or 'and more'!
+
 CONDENSATION TASK:
 - Receive well-organized content with proper sections, topics, and narrative flow
 - Condense to approximately 200-300 lines, EXCLUDING any article links. They should be preserved in their original form.
-- CRITICAL: Preserve ALL article links
-- CRITICAL: Maintain the existing structure and organization
-- CRITICAL: Keep all section headers (##) and topic headers (###) exactly as provided
 
 CRITICAL WRITING STYLE GUIDELINES:
 $WritingStyleGuidelines
@@ -1002,8 +1013,9 @@ CONDENSATION STRATEGY:
 6. Eliminate repetitive phrases and unnecessary elaboration
 
 WHAT TO PRESERVE:
-- All article titles and links (never remove these)
-- All section and topic headers
+- CRITICAL: Maintain the existing structure and organization
+- CRITICAL: Keep all section headers (##) and topic headers (###) exactly as provided
+- CRITICAL: All article titles and links (never remove these)
 - Key practical implications and benefits
 
 WHAT TO CONDENSE:

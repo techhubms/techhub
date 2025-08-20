@@ -10,7 +10,7 @@
 .subscription-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: settings.$spacing-unit;
   margin-bottom: 10px;
 }
 
@@ -58,7 +58,7 @@
 .subscription-tiers-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: settings.$spacing-unit;
 }
 
 .subscription-tiers-container.full-width {
