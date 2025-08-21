@@ -137,8 +137,8 @@ try {
         Write-Host "📁 Processing collection: $($collectionDir.Name)" -ForegroundColor Cyan
         
         # Get all website directories within this collection
-        $websiteDirs = Get-ChildItem -Path $collectionDir.FullName -Directory
-        
+        $websiteDirs = @(Get-ChildItem -Path $collectionDir.FullName -Directory)
+
         if (-not $websiteDirs -or $websiteDirs.Count -eq 0) {
             Write-Host "  ⚠️ No website directories found in $($collectionDir.Name)"
             continue
