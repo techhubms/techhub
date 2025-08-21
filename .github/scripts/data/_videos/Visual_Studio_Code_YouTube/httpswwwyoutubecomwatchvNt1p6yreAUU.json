@@ -1,0 +1,17 @@
+{
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Author": "Visual Studio Code",
+  "PubDate": "2025-08-21T23:04:36+00:00",
+  "Tags": [
+    "code",
+    "vscode"
+  ],
+  "Link": "https://www.youtube.com/watch?v=Nt1p6yreAUU",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-08-21 23:11:31",
+  "Title": "🔴 VS Code Live - Vibe-hack VS Code with Joyride and Copilot",
+  "Description": "Let's use Joyride and Copilot to script VS Code in user space, while we are using it. We show how to get started, and examples of what you can make VS Code do.\n\n🔗 Community Links: Joyride repo: https://github.com/BetterThanTomorrow/joyride; Demo links and resources: https://github.com/PEZ/joyride-at-vscode-live\n\n🎙️ Featuring: Liam Hampton; Peter Strömberg (@pappapez)\n\n#vscode #code",
+  "FeedName": "Visual Studio Code YouTube"
+}
