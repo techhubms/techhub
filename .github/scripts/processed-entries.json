@@ -7208,5 +7208,23 @@
     "reason": "Succesfully added: Assigned 'AI' because the content centers on GitHub Copilot's AI-powered code generation (AI rule 2 and 5). Assigned 'GitHub Copilot' because the demonstration directly showcases Copilot's features and workflow (GitHub Copilot category rules 1 and 2). Assigned 'Coding' because it involves generating and testing a validation function, which is a programming task (Coding rules 1 and 4). All qualifying rules are met; none of the generic exclusions apply as this is technical, implementation-focused video content.",
     "timestamp": "2025-08-21 19:19:39 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/MPA-dZBUTUQ"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the content focuses on enhancements and workflow improvements for GitHub pull requests, which are central DevOps tools and practices (DevOps rule 2, 3, 5, 9). No Coding category because the article does not discuss code development or programming concepts directly; it is focused on developer tooling and review workflows. Generic exclusions do not apply as this is technical content about development tools, not business, biographical, or sales-focused, and is in English.",
+    "canonical_url": "https://github.blog/changelog/2025-08-21-pull-request-files-changed-public-preview-experience-august-21-updates",
+    "timestamp": "2025-08-21 20:13:30 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the core new feature discussed is the integration of GitHub Copilot (a developer tool) into .NET Aspire (AI rule 2, GitHub Copilot rule 1). Coding is included as the content focuses on development workflows and tools (Coding rule 5). Azure, DevOps, ML, and Security are not included because the focus is not on those domains.",
+    "canonical_url": "https://www.youtube.com/shorts/oLF1Z8DcqaA",
+    "timestamp": "2025-08-21 20:13:55 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the content is about GitHub Copilot integration (AI inclusion rule 2). Assigned 'GitHub Copilot' because the focus is on Copilot's new abilities within the .NET Aspire dashboard (GitHub Copilot rules 1-4). Did not assign 'Coding' as there is no evidence of specific code or programming techniques being covered—it's a feature overview. No 'DevOps', 'Azure', 'ML', or 'Security', as none are referenced. Followed rule to always include both 'AI' and 'GitHub Copilot' together for applicable Copilot developer tool content.",
+    "canonical_url": "https://www.youtube.com/watch?v=FseIFFXGbvw",
+    "timestamp": "2025-08-21 20:14:11 +00:00",
+    "collection": "videos"
   }
 ]
