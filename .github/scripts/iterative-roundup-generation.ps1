@@ -11,7 +11,7 @@
     3. Create well-organized stories with intelligent grouping (processes each section individually to avoid token limits)
     4. Create ongoing narrative by comparing with the previous roundup (processes each section individually)
     5. Merge all section responses and prepare for condensation
-    6. Condense content to 200-300 lines while maintaining narrative quality
+    6. Condense content as much as possible while maintaining narrative quality
     7. Generate metadata (title, tags, description, introduction)
     8. Create final markdown file with table of contents
     9. Rewrite content against writing style guidelines
@@ -990,10 +990,10 @@ $sectionContent
         }
     }
 
-    # Step 6: Condense Content to 200-300 Lines (skip if resuming from later step)
+    # Step 6: Condense Content (skip if resuming from later step)
     $step6Response = $null
     if ($StartFromStep -le 6) {
-        Write-Host "📝 Step 6: Condensing content to target 200-300 lines while preserving narrative quality..."
+        Write-Host "📝 Step 6: Condensing content as much as possible while preserving narrative quality..."
 
         $step6SystemMessage = @"
 🚨🚨🚨 CRITICAL ANTI-TRUNCATION REQUIREMENT 🚨🚨🚨
@@ -1002,39 +1002,47 @@ DO NOT truncate, abbreviate, or summarize sections with phrases like "continues 
 YOU MUST WRITE OUT EVERY SINGLE SECTION, EVERY SINGLE TOPIC, AND EVERY SINGLE LINK IN FULL.
 PROVIDE THE COMPLETE, CONDENSED VERSION OF ALL CONTENT - NO SHORTCUTS, NO OMISSIONS, NO TRUNCATION.
 
-ROLE: You are an expert content editor focused on condensing well-organized content to an optimal length. You will receive complete, well-structured roundup content that needs to be condensed while maintaining narrative quality and completeness.
+🎯 YOUR MISSION: SHORTEN EVERY PARAGRAPH WITHOUT REMOVING ANY PARAGRAPHS
 
-CONDENSATION TASK:
-- You will receive well-organized content with proper sections, topics, and narrative flow
-- You need to condense it to approximately 200-300 lines of NARRATIVE TEXT
-- Do NOT count article links or lists when determining the 200-300 lines target, ONLY count narrative text
-- CONDENSATION MEANS: Make the paragraphs shorter and more concise, NOT skip entire sections
+You are a content editor with ONE SIMPLE JOB: Make every paragraph shorter and more concise while keeping ALL paragraphs, ALL sections, ALL structure, and ALL content intact.
 
-CONDENSATION STRATEGY - MAKE TEXT SHORTER, NOT REMOVE CONTENT:
-1. Trim verbose passages while keeping essential information
-2. Combine similar points within paragraphs for efficiency
-3. Remove redundant explanations across related content
-4. Shorten lengthy technical descriptions while preserving key details
-5. Streamline introductory passages without losing context
-6. Eliminate repetitive phrases and unnecessary elaboration
+🚨 GOLDEN RULE: NO PARAGRAPH REMOVAL
+- Every paragraph in the input must have a corresponding paragraph in the output
+- Every section must remain exactly where it is
+- Every article link must be preserved exactly as provided
+- Every grouping of content must remain intact
 
-🚨 ABSOLUTE REQUIREMENTS - NEVER VIOLATE THESE:
-- CRITICAL: PROCESS AND RETURN EVERY SINGLE SECTION PROVIDED (GitHub Copilot, AI, ML, Azure, Coding, DevOps, Security, etc.)
-- CRITICAL: PROCESS AND RETURN EVERY SINGLE TOPIC WITHIN EACH SECTION
-- CRITICAL: NEVER truncate lists with remarks like 'and additional updates' or 'and more' or 'See original for full additional article links'
-- CRITICAL: NEVER remove references to previous roundups, ongoing narratives, or continuity elements
-- CRITICAL: ALWAYS preserve ALL article links - write out every single link provided
-- CRITICAL: ALWAYS maintain the existing structure and organization - all headers must be preserved
-- CRITICAL: ALWAYS keep all section headers (##) and topic headers (###) exactly as provided
-- CRITICAL: NEVER write summary statements like "sections continue as previously formatted" - WRITE THEM OUT IN FULL
-- CRITICAL: NEVER remove paragraphs introducing links, groups, sections, topics or any other text that provides a narrative.
+✅ WHAT YOU SHOULD DO - SHORTEN, DON'T REMOVE:
+- Rewrite long sentences to be shorter while keeping the same meaning
+- Remove unnecessary words, redundant phrases, and filler language
+- Combine multiple sentences into fewer, more efficient sentences
+- Cut wordy explanations down to their essential points
+- Eliminate repetitive phrasing and verbose descriptions
+- Make technical descriptions more concise while preserving key details
 
-WHAT TO CONDENSE (Make Shorter, Not Remove):
-- Make verbose explanations more concise while keeping essential information
-- Combine repetitive information across similar articles into shorter text
-- Reduce lengthy background context that doesn't add value
-- Shorten excessive elaboration on obvious points
-- Remove redundant phrases and filler language
+❌ WHAT YOU MUST NEVER DO:
+- Remove ANY paragraph, no matter how short or seemingly unimportant
+- Remove ANY article link or reference
+- Remove ANY section or topic header
+- Merge separate groups of articles into one large list
+- Skip ANY content with phrases like "continues as before" or "additional sections follow"
+- Remove introductory text that precedes groups of article links (these provide readability structure)
+- Delete references to previous roundups or ongoing narratives
+
+🔄 PARAGRAPH-BY-PARAGRAPH APPROACH:
+For each paragraph you encounter:
+1. Read the paragraph carefully
+2. Identify the core message and essential information
+3. Rewrite it more concisely using fewer, more efficient words
+4. Ensure the shortened version conveys the same information
+5. Move to the next paragraph and repeat
+
+📋 STRUCTURE PRESERVATION:
+- Keep ALL section headers (##) exactly as provided
+- Keep ALL topic headers (###) exactly as provided  
+- Maintain the exact same organization and flow
+- Preserve all article groupings (don't merge separate groups)
+- Keep all article links in their original positions
 
 CRITICAL WRITING STYLE GUIDELINES:
 $WritingStyleGuidelines
@@ -1043,7 +1051,7 @@ $WritingStyleGuidelines
 You must provide the complete condensed version of ALL content provided. Your response should end with the last article link from the last section, not with any summary statements or notes about continuation.
 
 RESPONSE FORMAT:
-Return the condensed content maintaining the exact same structure as provided, with all sections, topics, and links preserved but with more concise narrative content. Process every section completely.
+Return the condensed content with the exact same structure as provided, but with every paragraph rewritten to be shorter and more concise. Process every section completely - no exceptions.
 "@
 
         $step6UserMessage = @"
@@ -1299,15 +1307,75 @@ $step6Response
 YOU MUST COMPLETE YOUR ENTIRE RESPONSE. NEVER STOP WRITING BEFORE YOU HAVE PROCESSED AND RETURNED ALL CONTENT PROVIDED TO YOU.
 DO NOT truncate, abbreviate, or summarize sections with phrases like "continues as previously formatted" or "additional sections follow the same pattern" or "excerpt" or "Note: This shows..." or similar.
 YOU MUST WRITE OUT EVERY SINGLE SECTION, EVERY SINGLE TOPIC, AND EVERY SINGLE LINK IN FULL.
-PROVIDE THE COMPLETE, CONDENSED VERSION OF ALL CONTENT - NO SHORTCUTS, NO OMISSIONS, NO TRUNCATION.
+PROVIDE THE COMPLETE, REWRITTEN VERSION OF ALL CONTENT - NO SHORTCUTS, NO OMISSIONS, NO TRUNCATION.
 
-ROLE: You are a content editor tasked with rewriting content to ensure it adheres to specific writing style guidelines. 
+🎯 YOUR MISSION: REWRITE EVERY PARAGRAPH AND FRONTMATTER FOR STYLE COMPLIANCE WITHOUT REMOVING ANY CONTENT
 
-CRITICAL: NEVER remove chapters, paragraphs, headers, links or ANY other content.
-CRITICAL: ONLY rewrite text to ensure compliance with the guidelines while preserving all structural elements.
-CRITICAL: Do not include the 'CONTENT TO REWRITE IF NEEDED' header or any other new headers in your response.
+You are a content editor with ONE SIMPLE JOB: Rewrite every paragraph AND the frontmatter title and description to ensure writing style guideline compliance while keeping ALL paragraphs, ALL sections, ALL structure, and ALL content intact.
 
+🚨 GOLDEN RULE: NO CONTENT REMOVAL
+- Every paragraph in the input must have a corresponding paragraph in the output
+- Every section must remain exactly where it is
+- Every article link must be preserved exactly as provided
+- Every grouping of content must remain intact
+- Every header structure must be maintained exactly
+- ALL frontmatter fields must be preserved with only title and description rewritten for style compliance
+
+✅ WHAT YOU SHOULD DO - REWRITE FOR STYLE, DON'T REMOVE:
+- Rewrite sentences to match the writing style guidelines
+- Replace buzzwords and marketing speak with authentic language
+- Improve clarity and readability while preserving meaning
+- Ensure tone matches the guidelines (down-to-earth, professional)
+- Fix language issues while keeping technical accuracy
+- Make content more actionable and specific
+- REWRITE the frontmatter "title" field to comply with writing style guidelines
+- REWRITE the frontmatter "description" field to comply with writing style guidelines
+
+❌ WHAT YOU MUST NEVER DO:
+- Remove ANY paragraph, no matter how short or seemingly unimportant
+- Remove ANY article link or reference
+- Remove ANY section or topic header
+- Merge separate groups of articles into one large list
+- Skip ANY content with phrases like "continues as before" or "additional sections follow"
+- Remove introductory text that precedes groups of article links (these provide readability structure)
+- Delete references to previous roundups or ongoing narratives
+- Change the fundamental meaning or technical accuracy of content
+- Remove or modify ANY frontmatter fields except title and description
+- Change dates, permalinks, categories, tags, or any other frontmatter fields
+
+🔄 PROCESSING APPROACH:
+1. FRONTMATTER REWRITING:
+   - Rewrite the "title" field to remove buzzwords and marketing speak while keeping it engaging
+   - Rewrite the "description" field to be more authentic and down-to-earth
+   - Keep ALL other frontmatter fields exactly as provided (date, permalink, categories, tags, etc.)
+
+2. PARAGRAPH-BY-PARAGRAPH APPROACH:
+   For each paragraph you encounter:
+   - Read the paragraph carefully for style compliance issues
+   - Rewrite to match the writing style guidelines exactly
+   - Ensure the rewritten version maintains the same technical meaning
+   - Preserve all specific details, version numbers, and technical information
+   - Move to the next paragraph and repeat
+
+📋 STRUCTURE PRESERVATION:
+- Keep ALL section headers (##) exactly as provided
+- Keep ALL topic headers (###) exactly as provided  
+- Maintain the exact same organization and flow
+- Preserve all article groupings (don't merge separate groups)
+- Keep all article links in their original positions
+- Maintain frontmatter structure with only title and description content rewritten
+
+🚨 RESPONSE COMPLETION REQUIREMENT:
+You must provide the complete rewritten version of ALL content provided. Your response should end with the last article link from the last section, not with any summary statements or notes about continuation.
+
+CRITICAL WRITING STYLE GUIDELINES TO APPLY:
 $guidelines
+
+RESPONSE FORMAT:
+Return the rewritten content with the exact same structure as provided, but with:
+1. Frontmatter title and description rewritten for style compliance
+2. Every paragraph rewritten to comply with the writing style guidelines
+Process every section completely - no exceptions.
 "@
 
         $rewriteUserMessage = @"
