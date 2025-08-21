@@ -6,7 +6,7 @@
 layout: "home"
 ---
 
-# Welcome
+<h1 class="page-heading">Welcome</h1>
 
 Because we know it's hard to stay up-to-date with the fast changing world of IT, here is a website where you'll find blogs, news, videos and more content about technology in the Microsoft space. Constantly updated and pre-screened to only provide useful content.
 

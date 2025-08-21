@@ -165,7 +165,7 @@ h6 {
 }
 
 // Decorative lines for all headings (except post titles)
-h1:not(.post-title),
+h1:not(.post-title):not(.page-heading),
 h2 {
   &::after {
     content: '';

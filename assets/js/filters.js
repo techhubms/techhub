@@ -516,7 +516,6 @@ function updateDateButtonCountsAndState() {
             // Check mode filters
             const passesModeFilter = modeFilters.length === 0 || checkFilterForCurrentMode(index, modeFilters);
             
-            // Check text search
             const passesTextFilter = !window.textSearchQuery || passesTextSearch(window.cachedPosts[index]);
             
             return passesModeFilter && passesTextFilter;
