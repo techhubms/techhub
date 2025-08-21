@@ -7106,5 +7106,23 @@
     "canonical_url": "https://weblog.west-wind.com/posts/2025/Aug/20/Using-the-new-WebView2-AllowHostInputProcessing-Keyboard-Mapping-Feature",
     "timestamp": "2025-08-21 00:55:38 +00:00",
     "reason": "Succesfully added: I assigned the 'Coding' category only. The post is a deep, hands-on guide about solving keyboard handling issues in Microsoft's WebView2 when embedded in .NET/WPF applications, which fits Coding rule 2 (development frameworks/tools), Coding rule 4 (patterns/architectures), and Coding rule 5 (Microsoft developer tools). 'Azure', 'AI', 'ML', 'Security', 'DevOps', and 'GitHub Copilot' do not apply—the post doesn't discuss cloud services, AI, ML, security, DevOps practices, or Copilot, focusing purely on client-side development engineering for Windows desktop with Microsoft technologies."
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-08-21 14:14:26 +00:00",
+    "reason": "Succesfully added: Categories were assigned as follows: 'AI' due to the core focus on controlling and auditing data privacy in LLM prompts and AI integrations (AI rule 4, rule 6). 'DevOps' is included because the scanner is deployed within DevSecOps workflows, integrates with CI pipelines, and supports shift-left practices (DevOps rules 1, 3, 5). 'Security' is assigned given the emphasis on automated data privacy enforcement, sensitive data detection, and compliance features (Security rules 2, 3, 6, 7). No Azure- or Microsoft-specific technologies are identified, so 'Azure', 'ML', 'Coding', and 'GitHub Copilot' were not included.",
+    "canonical_url": "https://devops.com/hounddog-ai-code-scanner-shifts-data-privacy-responsibility-left/?utm_source=rss&utm_medium=rss&utm_campaign=hounddog-ai-code-scanner-shifts-data-privacy-responsibility-left"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enforcing-angular-unit-test-coverage-in-azure-devops-pipelines-a/ba-p/4446485",
+    "reason": "Succesfully added: Categories assigned: DevOps because the content covers Azure DevOps pipelines, CI/CD, and test automation (DevOps rule 1, 5). Azure is included as the guide is built around Azure DevOps services (Azure rule 1, 4). Coding is included since it demonstrates code/scripts for npm, Angular, Karma, and package.json changes in a development context (Coding rules 1, 4, 5). AI, ML, GitHub Copilot, and Security do not apply as there is no content on Microsoft AI services, machine learning/data science, Copilot tools, or security/identity implementation. No generic exclusion rule applies and the community post length meets the requirements.",
+    "timestamp": "2025-08-21 15:16:13 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'Azure' category due to the Microsoft Fabric service, which is part of Azure’s cloud and data platform ecosystem (Azure inclusion rule 1). Included 'ML' because Microsoft Fabric supports analytics workloads and the content is focused on data-driven capacity analysis, usage trends, and reporting—core ML/data engineering topics (ML rules 1, 2, and 4). Did not assign AI, Coding, DevOps, Security, or GitHub Copilot as the announcement does not focus on AI features, developer tooling, DevOps processes, or security/identity components. The content passed all generic exclusion rules: it is technical, product-focused, and not biographical, negative, or business-only. 'Power BI' is included as a tag due to integration but not added as a category since the central platform is Fabric.",
+    "timestamp": "2025-08-21 16:20:59 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/26307/"
   }
 ]

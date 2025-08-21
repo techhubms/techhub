@@ -1,0 +1,23 @@
+{
+  "Link": "https://www.youtube.com/watch?v=EbFqlYPvAE4",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "EnhancedContent": null,
+  "Description": "Join us for another community standup where we welcome Lukas Eder, author of jOOQ, to show us what it can do, and what inspiration we can get for EF from it.\n\nFeaturing: Jiri Cincura, Shay Rojansky, Lukas Eder\n\n#data #orm #net #java #jooq",
+  "Author": "dotnet",
+  "Tags": [
+    "data",
+    "demo",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetdeveloper",
+    "jooq",
+    "softwaredeveloper"
+  ],
+  "Title": ".NET Data Community Standup - Learning about jOOQ with Lukas Eder",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-08-21 16:20:09",
+  "FeedLevelAuthor": "dotnet",
+  "FeedName": "DotNet YouTube",
+  "PubDate": "2025-07-28T15:50:14+00:00"
+}

@@ -6543,5 +6543,29 @@
     "collection": "videos",
     "reason": "No categories found: No categories were assigned due to insufficient content. The 'content' field is null, and the available description and title lack enough technical detail to determine central Microsoft technologies or implementation focus. There is a mention of 'Copilot Agent Mode' and 'playwright MCP server,' but with no context or substantial information, it's unclear whether this pertains to GitHub Copilot (developer tool) or a non-development productivity tool, and there's no evidence of code, best practices, or technical workflow. Per fundamental guidelines, if unsure, exclude. Generic exclusion rule applies due to inadequate information.",
     "canonical_url": "https://www.youtube.com/watch?v=0kiYEKqV9DY"
+  },
+  {
+    "timestamp": "2025-08-21 08:17:35 +00:00",
+    "reason": "No categories found: No categories assigned because the content focuses on data governance, retention, and compliance using Microsoft 365 end-user administrative tools, not on development, coding, or technical architecture. The central theme is policy configuration for compliance within Microsoft 365, which is classified as a business/administrative feature and explicitly excluded by 'Non-Development Microsoft Products' (Chapter 3, Generic Exclusion Rules). There is no substantial technical depth related to developing for Microsoft 365, coding, automation, Azure development, security engineering, or data science—content centers on administrative settings and best practices for policy management.",
+    "canonical_url": "https://dellenny.com/managing-data-retention-policies-without-overcomplicating-things-in-microsoft-365-2/",
+    "collection": "posts"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-roll-out-microsoft-365-features-without-overwhelming-employees/",
+    "reason": "No categories found: No categories assigned because this article is primarily about business productivity and change management for Microsoft 365 features (Teams, OneDrive, SharePoint, Copilot, etc.) and focuses on rollout strategies, adoption, and end-user enablement. According to generic exclusion rules, content that centers on non-development Microsoft products (e.g., Office 365/Microsoft 365) without a development or technical implementation focus must be excluded. The technical steps described are admin and configuration tasks (e.g., setting up policies, enabling features, analytics dashboards) for IT administrators and do not involve coding, development, DevOps, or software engineering. No technical architecture, custom development, or developer tooling is discussed. Copilot is mentioned only as a business feature, not as a developer tool. Thus, ALL categories are excluded per 'Non-Development Microsoft Products' and business/process focus exclusions.",
+    "timestamp": "2025-08-21 10:13:52 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/building-a-culture-of-knowledge-sharing-with-sharepoint-viva/",
+    "reason": "No categories found: No categories were assigned because the content focuses on organizational knowledge sharing, employee engagement, and workplace culture using end-user features of SharePoint and Viva within Microsoft 365. According to the generic exclusion rules for non-development Microsoft products, content about general Microsoft 365, SharePoint, or Viva usage that does not address development, customization, extensibility, or coding is excluded. This article centers on business practices, adoption strategies, and culture-building, not technical development, coding, or architecture, and does not demonstrate customization or developer workflows with these technologies. Therefore, all categories were excluded.",
+    "timestamp": "2025-08-21 11:12:29 +00:00",
+    "collection": "posts"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/enterprise-ai-development-gets-a-major-upgrade-claude-code-now-bundled-with-team-and-enterprise-plans/?utm_source=rss&utm_medium=rss&utm_campaign=enterprise-ai-development-gets-a-major-upgrade-claude-code-now-bundled-with-team-and-enterprise-plans",
+    "reason": "No categories found: No categories assigned because the content is not centered on Microsoft technologies or platforms. It focuses entirely on Anthropic's Claude Code AI coding agent, its integration into enterprise plans, and related enterprise features, without any substantial mention of Microsoft services, products, frameworks, or APIs. According to the Core Processing Rules and the Multi-Platform Content Threshold, Microsoft technology must be central (≥40%) to the solution or discussion, which is not the case here.",
+    "timestamp": "2025-08-21 15:15:04 +00:00"
   }
 ]
