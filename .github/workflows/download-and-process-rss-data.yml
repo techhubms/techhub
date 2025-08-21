@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   download-and-process-rss-data:
@@ -25,8 +25,8 @@ jobs:
         id: app-token
         uses: actions/create-github-app-token@v1
         with:
-          app-id: ${{ secrets.RSS_APP_CLIENTID }}
-          private-key: ${{ secrets.RSS_APP_CLIENTSECRET }}
+          app-id: ${{ secrets.RSS_APP_APPID }}
+          private-key: ${{ secrets.RSS_APP_PRIVATEKEY }}
 
       - name: Check workflow status
         run: |
