@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Reddit Github Copilot",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/GithubCopilot.rss"
+  },
+  {
+    "name": "Reddit CSharp",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/csharp/.rss"
+  },
+  {
+    "name": "Reddit DotNet",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/dotnet/.rss"
+  },
+  {
+    "name": "Reddit AI Agents",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/AI_Agents/.rss"
+  },
+  {
+    "name": "Reddit Artificial Inteligence",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/ArtificialInteligence/.rss"
+  },
+  {
+    "name": "Reddit DevOps",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/devops/.rss"
+  },
+  {
+    "name": "Reddit Azure",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/azure/.rss"
+  },
+  {
+    "name": "Reddit GitHub",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/github/.rss"
+  },
+  {
+    "name": "Reddit Microsoft",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/microsoft/.rss"
+  },
+  {
+    "name": "Reddit Visual Studio",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/VisualStudio/.rss"
+  },
+  {
+    "name": "Reddit Azure DevOps",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/azuredevops/.rss"
+  },
+  {
+    "name": "Reddit Machine Learning",
+    "outputDir": "_community",
+    "url": "https://www.reddit.com/r/MachineLearning/.rss"
+  }
+]

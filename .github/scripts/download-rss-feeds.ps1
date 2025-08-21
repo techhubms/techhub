@@ -90,23 +90,10 @@ try {
     $successCount = 0
     $skippedCount = 0
     $totalCount = $feedConfigs.Count
-    $redditCount = @($feedConfigs | Where-Object { $_.url -match 'reddit\.com' }).Count
-    $processableCount = $totalCount - $redditCount
-    
-    if ($redditCount -gt 0) {
-        Write-Host "⏩ Skipping $redditCount Reddit feeds temporarily due to Playwright issues" -ForegroundColor Yellow
-    }
 
     foreach ($feedConfig in $feedConfigs) {
         try {
             Write-Host "Downloading: $($feedConfig.name)"
-            
-            # Skip Reddit feeds for now due to Playwright issues
-            if ($feedConfig.url -match 'reddit\.com') {
-                Write-Host "⏩ Skipping Reddit feed temporarily: $($feedConfig.name)" -ForegroundColor Yellow
-                $skippedCount++
-                continue
-            }
             
             $feed = [Feed]::new($feedConfig.name, $feedConfig.outputDir, $feedConfig.url)
 
@@ -366,7 +353,7 @@ try {
         }
         catch {
             Write-Host "❌ Error processing feed '$($feedConfig.name)': $($_.Exception.Message)" -ForegroundColor Red
-            Write-Host "📊 Progress after failure: $successCount/$processableCount feeds downloaded, $skippedCount Reddit feeds skipped" -ForegroundColor Yellow
+            Write-Host "📊 Progress after failure: $successCount/$totalCount feeds downloaded" -ForegroundColor Yellow
             # Continue with next feed instead of throwing
             continue
         }
@@ -391,12 +378,6 @@ try {
                     # Only process cleanup for feeds that were successfully processed
                     if ($successfulFeeds.ContainsKey($feedKey)) {
                         Write-Host "    🔍 Cleaning up successful feed: $($feedDirInfo.Name)"
-                        
-                        # Skip deletion of Reddit directories (identified by Reddit_ in directory name)
-                        if ($feedDirInfo.Name -match "Reddit_") {
-                            Write-Host "      ⏩ Skipping Reddit directory: $($feedDirInfo.Name)" -ForegroundColor Yellow
-                            continue
-                        }
                         
                         $feedDir = $feedDirInfo.FullName
                         $jsonFiles = @(Get-ChildItem -Path $feedDir -Filter "*.json")
@@ -434,7 +415,7 @@ try {
         Write-Host "⏩ Skipping cleanup - no feeds were successfully processed" -ForegroundColor Yellow
     }
 
-    Write-Host "✅ RSS feed download completed: $successCount/$processableCount feeds successful, $skippedCount Reddit feeds skipped"
+    Write-Host "✅ RSS feed download completed: $successCount/$totalCount feeds successful"
 }
 catch {
     Write-ErrorDetails -ErrorRecord $_ -Context "RSS feed download"

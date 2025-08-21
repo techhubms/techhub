@@ -212,7 +212,6 @@ try {
 - Eliminate repetitive phrases and unnecessary elaboration
 - Preserve references to previous roundups and ongoing narratives (these make content feel human-written)
 - Never use horizontal separators `---`, always use proper headings. The separators will be added automatically with CSS.
-- You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full enhanced content requested.
 "@
 
     # Generate consistent file information that will be used throughout the script
@@ -326,7 +325,9 @@ try {
         Write-Host "🤖 Step 2: Analyzing articles for summaries and categorization..."
 
         $step2SystemMessage = @"
-You are an expert technical content analyst creating detailed summaries for a comprehensive weekly tech roundup. Your analysis will be used to create narrative sections that tell the story of the week's developments.
+ABSOLUTE CRITICAL REQUIREMENT: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full enhanced content requested!
+
+ROLE: You are an expert technical content analyst creating detailed summaries for a comprehensive weekly tech roundup. Your analysis will be used to create narrative sections that tell the story of the week's developments.
 
 RESPONSE FORMAT: Return ONLY a JSON object with this exact structure:
 {
@@ -334,8 +335,6 @@ RESPONSE FORMAT: Return ONLY a JSON object with this exact structure:
   "summary": "Comprehensive Summary",
   "relevance_score": 1-10
 }
-
-CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full detailed analysis requested.
 
 SECTION CATEGORIZATION - CHOOSE THE SINGLE BEST MATCH:
 Choose ONE section that best represents the primary focus of the content. Use this priority order when content could fit multiple sections:
@@ -505,7 +504,9 @@ $articleContent
         Write-Host "📰 Step 3: Creating news-like stories with intelligent grouping..."
 
         $step3SystemMessage = @"
-You are an expert content editor creating compelling weekly tech roundup sections. Your task is to transform individual article summaries for a SINGLE SECTION into well-organized narrative content that tells the story of the week's developments in that specific area.
+ABSOLUTE CRITICAL REQUIREMENT: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full enhanced content requested!
+
+ROLE: You are an expert content editor creating compelling weekly tech roundup sections. Your task is to transform individual article summaries for a SINGLE SECTION into well-organized narrative content that tells the story of the week's developments in that specific area.
 
 RESPONSE FORMAT:
 Return the complete content for the SINGLE section provided with:
@@ -756,7 +757,9 @@ $sectionInput
 
         if ($previousRoundup -and $previousRoundupContent) {
             $step4SystemMessage = @"
-You are an expert content editor creating ongoing narrative connections between weekly tech roundups. Your task is to enhance the current week's content for a SINGLE SECTION by identifying themes, products, or developments that continue from the previous week's roundup.
+ABSOLUTE CRITICAL REQUIREMENT: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full enhanced content requested!
+
+ROLE: You are an expert content editor creating ongoing narrative connections between weekly tech roundups. Your task is to enhance the current week's content for a SINGLE SECTION by identifying themes, products, or developments that continue from the previous week's roundup.
 
 RESPONSE FORMAT:
 - Return the enhanced content for the SINGLE section provided with the EXACT same structure as provided (all topics and links preserved), but with added narrative connections where relevant.
@@ -993,18 +996,20 @@ $sectionContent
         Write-Host "📝 Step 6: Condensing content to target 200-300 lines while preserving narrative quality..."
 
         $step6SystemMessage = @"
-You are an expert content editor focused on condensing well-organized content to an optimal length. You will receive complete, well-structured roundup content that needs to be condensed while maintaining narrative quality and completeness.
+🚨🚨🚨 CRITICAL ANTI-TRUNCATION REQUIREMENT 🚨🚨🚨
+YOU MUST COMPLETE YOUR ENTIRE RESPONSE. NEVER STOP WRITING BEFORE YOU HAVE PROCESSED AND RETURNED ALL CONTENT PROVIDED TO YOU.
+DO NOT truncate, abbreviate, or summarize sections with phrases like "continues as previously formatted" or "additional sections follow the same pattern" or "excerpt" or "Note: This shows..." or similar.
+YOU MUST WRITE OUT EVERY SINGLE SECTION, EVERY SINGLE TOPIC, AND EVERY SINGLE LINK IN FULL.
+PROVIDE THE COMPLETE, CONDENSED VERSION OF ALL CONTENT - NO SHORTCUTS, NO OMISSIONS, NO TRUNCATION.
 
-ABSOLUTELY CRITICAL: Preserve ALL article links! NEVER truncate lists with remarks like 'and additional updates' or 'and more'!
+ROLE: You are an expert content editor focused on condensing well-organized content to an optimal length. You will receive complete, well-structured roundup content that needs to be condensed while maintaining narrative quality and completeness.
 
 CONDENSATION TASK:
-- Receive well-organized content with proper sections, topics, and narrative flow
-- Condense to approximately 200-300 lines, EXCLUDING any article links. They should be preserved in their original form.
+- You will receive well-organized content with proper sections, topics, and narrative flow
+- You need to condense it to approximately 200-300 lines of NARRATIVE TEXT, NOT counting any article links
+- CONDENSATION MEANS: Make the paragraphs shorter and more concise, NOT skip entire sections
 
-CRITICAL WRITING STYLE GUIDELINES:
-$WritingStyleGuidelines
-
-CONDENSATION STRATEGY:
+CONDENSATION STRATEGY - MAKE TEXT SHORTER, NOT REMOVE CONTENT:
 1. Trim verbose passages while keeping essential information
 2. Combine similar points within paragraphs for efficiency
 3. Remove redundant explanations across related content
@@ -1012,26 +1017,31 @@ CONDENSATION STRATEGY:
 5. Streamline introductory passages without losing context
 6. Eliminate repetitive phrases and unnecessary elaboration
 
-WHAT TO PRESERVE:
-- CRITICAL: Maintain the existing structure and organization
-- CRITICAL: Keep all section headers (##) and topic headers (###) exactly as provided
-- CRITICAL: All article titles and links (never remove these)
-- Key practical implications and benefits
+🚨 ABSOLUTE REQUIREMENTS - NEVER VIOLATE THESE:
+- CRITICAL: PROCESS AND RETURN EVERY SINGLE SECTION PROVIDED (GitHub Copilot, AI, ML, Azure, Coding, DevOps, Security, etc.)
+- CRITICAL: PROCESS AND RETURN EVERY SINGLE TOPIC WITHIN EACH SECTION
+- CRITICAL: NEVER truncate lists with remarks like 'and additional updates' or 'and more' or 'See original for full additional article links'
+- CRITICAL: NEVER remove references to previous roundups, ongoing narratives, or continuity elements
+- CRITICAL: ALWAYS preserve ALL article links - write out every single link provided
+- CRITICAL: ALWAYS maintain the existing structure and organization - all headers must be preserved
+- CRITICAL: ALWAYS keep all section headers (##) and topic headers (###) exactly as provided
+- CRITICAL: NEVER write summary statements like "sections continue as previously formatted" - WRITE THEM OUT IN FULL
 
-WHAT TO CONDENSE:
-- Verbose explanations that can be stated more concisely
-- Repetitive information across similar articles
-- Lengthy background context that doesn't add value
-- Excessive elaboration on obvious points
-- Redundant phrases and filler language
+WHAT TO CONDENSE (Make Shorter, Not Remove):
+- Make verbose explanations more concise while keeping essential information
+- Combine repetitive information across similar articles into shorter text
+- Reduce lengthy background context that doesn't add value
+- Shorten excessive elaboration on obvious points
+- Remove redundant phrases and filler language
 
-IMPORTANT NOTES:
-- NEVER remove references to previous roundups, ongoing narratives, or continuity elements
-- These historical connections are what make the roundups feel human-written and engaging
-- Preserve any mentions of "last week", "continuing from", "as we saw", etc.
+CRITICAL WRITING STYLE GUIDELINES:
+$WritingStyleGuidelines
+
+🚨 RESPONSE COMPLETION REQUIREMENT:
+You must provide the complete condensed version of ALL content provided. Your response should end with the last article link from the last section, not with any summary statements or notes about continuation.
 
 RESPONSE FORMAT:
-Return the condensed content maintaining the exact same structure as provided, with all sections, topics, and links preserved but with more concise narrative content.
+Return the condensed content maintaining the exact same structure as provided, with all sections, topics, and links preserved but with more concise narrative content. Process every section completely.
 "@
 
         $step6UserMessage = @"
@@ -1091,7 +1101,9 @@ $step5Input
         Write-Host "📝 Step 7: Generating roundup metadata..."
 
         $step7SystemMessage = @"
-You are an expert content curator generating metadata for a weekly tech roundup. Based on the condensed content, generate ONLY the metadata and introduction as a JSON response.
+ABSOLUTE CRITICAL REQUIREMENT: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full enhanced content requested!
+
+ROLE: You are an expert content curator generating metadata for a weekly tech roundup. Based on the condensed content, generate ONLY the metadata and introduction as a JSON response.
 
 CRITICAL REQUIREMENTS:
 - Return ONLY valid JSON with ONLY these exact fields: title, tags, description, introduction
@@ -1279,10 +1291,12 @@ $step6Response
         $guidelines = Get-Content $guidelinesPath -Raw -Encoding UTF8
 
         $rewriteSystemMessage = @"
-You are a content editor tasked with rewriting content to ensure it adheres to specific writing style guidelines. 
+ABSOLUTE CRITICAL REQUIREMENT: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full enhanced content requested!
+
+ROLE: You are a content editor tasked with rewriting content to ensure it adheres to specific writing style guidelines. 
 
 CRITICAL: Do NOT remove any headers, links or other content. ONLY rewrite text to ensure compliance with the guidelines while preserving all structural elements.
-CRITICAL: Return ALL of the content, without the 'CONTENT TO REWRITE IF NEEDED' header or any other new headers.
+CRITICAL: Do not include the 'CONTENT TO REWRITE IF NEEDED' header or any other new headers in your response.
 
 $guidelines
 "@
