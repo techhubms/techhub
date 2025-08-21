@@ -12,7 +12,7 @@ date: 2025-08-05 23:27:17 +00:00
 permalink: "/2025-08-05-FinOps-hubs-12-Non-Breaking-Schema-Versioning-and-FOCUS-12-Alignment.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Azure Advisor", "Azure Cost Management", "Azure Data Explorer", "Azure Hybrid Benefit", "Cloud Cost Intelligence", "Commitment Discount", "Community", "Cost Management Datasets", "Cost Optimization", "Cost Reporting", "Custom Columns", "Data Integration", "Data Model", "Data Schema Versioning", "Dataset Transformation", "FinOps Hubs", "FOCUS 1.2", "Microsoft", "Microsoft Fabric", "ML", "Power BI", "Real Datatype"]
-tags_normalized: ["azure", "azure advisor", "azure cost management", "azure data explorer", "azure hybrid benefit", "cloud cost intelligence", "commitment discount", "community", "cost management datasets", "cost optimization", "cost reporting", "custom columns", "data integration", "data model", "data schema versioning", "dataset transformation", "finops hubs", "focus 1 dot 2", "microsoft", "microsoft fabric", "ml", "power bi", "real datatype"]
+tags_normalized: ["azure", "azure advisor", "azure cost management", "azure data explorer", "azure hybrid benefit", "cloud cost intelligence", "commitment discount", "community", "cost management datasets", "cost optimization", "cost reporting", "custom columns", "data integration", "data model", "data schema versioning", "dataset transformation", "finops hubs", "focus 1dot2", "microsoft", "microsoft fabric", "ml", "power bi", "real datatype"]
 ---
 
 Michael Flanakin shares a deep dive into FinOps hubs 12, highlighting new approaches to schema versioning and alignment with FOCUS 1.2 for seamless Azure cost management and reporting.<!--excerpt_end-->

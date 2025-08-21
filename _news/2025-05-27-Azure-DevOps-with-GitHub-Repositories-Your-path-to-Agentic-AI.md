@@ -12,7 +12,7 @@ date: 2025-05-27 19:38:19 +00:00
 permalink: "/2025-05-27-Azure-DevOps-with-GitHub-Repositories-Your-path-to-Agentic-AI.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
 tags: ["Agentic AI", "AI", "AI Assistant", "Azure", "Azure & Cloud", "Azure DevOps", "Bug Fixing", "DevOps", "DevOps Integration", "Feature Implementation", "GitHub Copilot", "GitHub Repositories", "News", "Pull Requests", "Software Development Lifecycle"]
-tags_normalized: ["agentic ai", "ai", "ai assistant", "azure", "azure cloud", "azure devops", "bug fixing", "devops", "devops integration", "feature implementation", "github copilot", "github repositories", "news", "pull requests", "software development lifecycle"]
+tags_normalized: ["agentic ai", "ai", "ai assistant", "azure", "azure and cloud", "azure devops", "bug fixing", "devops", "devops integration", "feature implementation", "github copilot", "github repositories", "news", "pull requests", "software development lifecycle"]
 ---
 
 Aaron Hallberg outlines how GitHub Copilot’s agentic AI features, when integrated with Azure DevOps and GitHub Repositories, are reshaping key aspects of software development.<!--excerpt_end-->

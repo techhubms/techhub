@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-06 12:51:50 +00:00
 permalink: "/2025-08-06-Recommended-Code-Formatting-and-Linting-Solutions-for-NET-471-in-VS2022.html"
 categories: ["Coding", "DevOps"]
-tags: [".NET", ".NET 4.7.1", "Build Enforcement", "C#", "Code Formatting", "CodeMaid", "Coding", "Community", "CSharpier", "DevOps", "EditorConfig", "Linting", "Roslyn Analyzers", "Ruleset", "SonarAnalyzer.CSharp", "StyleCop.Analyzers", "Team Collaboration", "Visual Studio"]
-tags_normalized: ["net", "net 4 dot 71", "build enforcement", "c", "code formatting", "codemaid", "coding", "community", "csharpier", "devops", "editorconfig", "linting", "roslyn analyzers", "ruleset", "sonaranalyzer dot csharp", "stylecop dot analyzers", "team collaboration", "visual studio"]
+tags: [".NET", ".NET 4.7.1", "Build Enforcement", "C#", "Code Formatting", "CodeMaid", "Coding", "Community", "CSharpier", "DevOps", "EditorConfig", "Linting", "Roslyn Analyzers", "Ruleset", "SonarAnalyzer.CSharp", "StyleCop.Analyzers", "Team Collaboration", "VS"]
+tags_normalized: ["dotnet", "dotnet 4dot7dot1", "build enforcement", "csharp", "code formatting", "codemaid", "coding", "community", "csharpier", "devops", "editorconfig", "linting", "roslyn analyzers", "ruleset", "sonaranalyzerdotcsharp", "stylecopdotanalyzers", "team collaboration", "vs"]
 ---
 
 Efficient_Edge5500 and other Reddit users exchange candid advice about achieving reliable and enforceable formatting/linting for .NET 4.7.1 projects in Visual Studio 2022, sharing practical tool recommendations and configuration insights.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2024-10-08 07:20:31 +00:00
 permalink: "/2024-10-08-Implementing-ASPNET-Core-Automatic-Span-Linking-for-Internal-Redirects-with-Middleware-on-NET-9.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET 9", "Activity", "ASP.NET Core", "Coding", "DevOps", "Distributed Tracing", "ITempDataDictionaryFactory", "Middleware", "Observability", "OpenTelemetry", "Posts", "Span Linking", "Tracing"]
-tags_normalized: ["net 9", "activity", "asp dot net core", "coding", "devops", "distributed tracing", "itempdatadictionaryfactory", "middleware", "observability", "opentelemetry", "posts", "span linking", "tracing"]
+tags_normalized: ["dotnet 9", "activity", "aspdotnet core", "coding", "devops", "distributed tracing", "itempdatadictionaryfactory", "middleware", "observability", "opentelemetry", "posts", "span linking", "tracing"]
 ---
 
 In this detailed post by Steve Gordon, the author demonstrates a practical approach to implementing automatic span linking for internal redirects in ASP.NET Core apps with .NET 9, enhancing traceability and observability.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2025-08-02 21:12:15 +00:00
 permalink: "/2025-08-02-SchemaNest-A-Fast-Team-Friendly-CICD-Ready-JSON-Schema-Registry.html"
 categories: ["DevOps", "Security"]
 tags: ["API Keys", "Authentication", "CI/CD", "Community", "DevOps", "Go", "JSON Schema", "Next.js", "PostgreSQL", "Schema Registry", "Security", "SQLite", "Team Collaboration", "Versioning"]
-tags_normalized: ["api keys", "authentication", "ci slash cd", "community", "devops", "go", "json schema", "next dot js", "postgresql", "schema registry", "security", "sqlite", "team collaboration", "versioning"]
+tags_normalized: ["api keys", "authentication", "cislashcd", "community", "devops", "go", "json schema", "nextdotjs", "postgresql", "schema registry", "security", "sqlite", "team collaboration", "versioning"]
 ---
 
 Authored by R3ym4nn, this article introduces SchemaNest—a fast, DevOps-ready registry for managing JSON Schemas, highlighting its features, team focus, and open-source availability.<!--excerpt_end-->

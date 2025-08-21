@@ -12,7 +12,7 @@ date: 2025-04-15 09:00:00 +00:00
 permalink: "/2025-04-15-NetEscapadesAspNetCoreSecurityHeaders-100-Released-Major-Updates-and-New-Security-Features.html"
 categories: ["Coding", "Security"]
 tags: [".NET Core", "API Security", "ASP.NET Core", "Coding", "Content Security Policy", "HTTP Headers", "Middleware", "NetEscapades.AspNetCore.SecurityHeaders", "Nonce Generation", "OWASP", "Permissions Policy", "Posts", "Security", "Security Headers", "Trusted Types"]
-tags_normalized: ["net core", "api security", "asp dot net core", "coding", "content security policy", "http headers", "middleware", "netescapades dot aspnetcore dot securityheaders", "nonce generation", "owasp", "permissions policy", "posts", "security", "security headers", "trusted types"]
+tags_normalized: ["dotnet core", "api security", "aspdotnet core", "coding", "content security policy", "http headers", "middleware", "netescapadesdotaspnetcoredotsecurityheaders", "nonce generation", "owasp", "permissions policy", "posts", "security", "security headers", "trusted types"]
 ---
 
 Andrew Lock introduces NetEscapades.AspNetCore.SecurityHeaders 1.0.0, outlining extensive new features, updates, and best practices for integrating enhanced security headers in ASP.NET Core applications.<!--excerpt_end-->

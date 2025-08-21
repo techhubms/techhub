@@ -12,7 +12,7 @@ date: 2024-08-13 00:00:00 +00:00
 permalink: "/2024-08-13-How-To-Pick-The-Right-Constructor-When-Using-ActivatorUtilities-In-NET.html"
 categories: ["Coding"]
 tags: [".NET", "ActivatorUtilities", "ActivatorUtilitiesConstructorAttribute", "C#", "Coding", "Constructor Selection", "Dependency Injection", "Microsoft.Extensions.DependencyInjection", "Posts", "Reflection", "Service Provider", "ServiceCollection"]
-tags_normalized: ["net", "activatorutilities", "activatorutilitiesconstructorattribute", "c", "coding", "constructor selection", "dependency injection", "microsoft dot extensions dot dependencyinjection", "posts", "reflection", "service provider", "servicecollection"]
+tags_normalized: ["dotnet", "activatorutilities", "activatorutilitiesconstructorattribute", "csharp", "coding", "constructor selection", "dependency injection", "microsoftdotextensionsdotdependencyinjection", "posts", "reflection", "service provider", "servicecollection"]
 ---
 
 In this detailed guide, Khalid Abuhakmeh demonstrates how to select the appropriate constructor when using ActivatorUtilities for dependency injection in .NET. The author shares practical code examples and explains the impact of using attributes for constructor selection.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2024-11-08 21:01:44 +00:00
 permalink: "/2024-11-08-Announcing-TypeScript-57-RC-Key-Features-and-Updates.html"
 categories: ["Coding"]
 tags: ["Coding", "Composite Projects", "ES2024", "Implicit Any", "Index Signature", "JavaScript", "JSON Imports", "Lib.d.ts", "News", "Node.js", "Path Rewriting", "Project Configuration", "Relative Imports", "Release Candidate", "Rewriterelativeimportextensions", "Tsconfig", "TypedArray", "TypeScript", "TypeScript 5.7", "V8 Compile Caching", "Variable Initialization"]
-tags_normalized: ["coding", "composite projects", "es2024", "implicit any", "index signature", "javascript", "json imports", "lib dot dts", "news", "node dot js", "path rewriting", "project configuration", "relative imports", "release candidate", "rewriterelativeimportextensions", "tsconfig", "typedarray", "typescript", "typescript 5 dot 7", "v8 compile caching", "variable initialization"]
+tags_normalized: ["coding", "composite projects", "es2024", "implicit any", "index signature", "javascript", "json imports", "libdotddotts", "news", "nodedotjs", "path rewriting", "project configuration", "relative imports", "release candidate", "rewriterelativeimportextensions", "tsconfig", "typedarray", "typescript", "typescript 5dot7", "v8 compile caching", "variable initialization"]
 ---
 
 In this detailed announcement, Daniel Rosenwasser introduces the TypeScript 5.7 RC, outlining major feature enhancements and important changes for TypeScript developers.<!--excerpt_end-->

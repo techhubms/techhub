@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0S
 date: 2025-08-14 21:54:51 +00:00
 permalink: "/2025-08-14-VS-Code-Live-Telerik-and-KendoUI-AI-Coding-Assistants-and-Contextual-AI-Integration.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "AI Integration", "API Reference", "Code", "Code Generation", "Coding", "Contextual AI", "Developer Productivity", "GitHub Copilot", "KendoUI", "MCP Server", "Sample Code", "Telerik", "Videos", "Visual Studio Code"]
-tags_normalized: ["ai", "ai coding assistant", "ai integration", "api reference", "code", "code generation", "coding", "contextual ai", "developer productivity", "github copilot", "kendoui", "mcp server", "sample code", "telerik", "videos", "visual studio code"]
+tags: ["AI", "AI Coding Assistant", "AI Integration", "API Reference", "Code", "Code Generation", "Coding", "Contextual AI", "Developer Productivity", "GitHub Copilot", "KendoUI", "MCP Server", "Sample Code", "Telerik", "Videos", "VS Code"]
+tags_normalized: ["ai", "ai coding assistant", "ai integration", "api reference", "code", "code generation", "coding", "contextual ai", "developer productivity", "github copilot", "kendoui", "mcp server", "sample code", "telerik", "videos", "vs code"]
 ---
 
 In this VS Code Live video, Reynald Adolphe, Sam Basu, and Kristian Mariyanov discuss how Telerik and KendoUI AI Coding Assistants—integrated with GitHub Copilot—empower developers with contextual AI in Visual Studio Code.<!--excerpt_end-->

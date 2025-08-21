@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8
 date: 2025-05-20 20:01:23 +00:00
 permalink: "/2025-05-20-The-Agentic-Web-Part-1-with-Kevin-Scott.html"
 categories: ["AI"]
-tags: ["Agentic Web", "AI", "AI Agents", "AI Integration", "AI Strategy", "Artificial Intelligence", "Developer Productivity", "Future Of AI", "Kevin Scott", "Microsoft", "Microsoft Build", "Microsoft Ignite", "Technology Trends", "Videos"]
-tags_normalized: ["agentic web", "ai", "ai agents", "ai integration", "ai strategy", "artificial intelligence", "developer productivity", "future of ai", "kevin scott", "microsoft", "microsoft build", "microsoft ignite", "technology trends", "videos"]
+tags: ["Agentic Web", "AI", "AI Agents", "AI Integration", "AI Strategy", "Developer Productivity", "Future Of AI", "Kevin Scott", "Microsoft", "Microsoft Build", "Microsoft Ignite", "Technology Trends", "Videos"]
+tags_normalized: ["agentic web", "ai", "ai agents", "ai integration", "ai strategy", "developer productivity", "future of ai", "kevin scott", "microsoft", "microsoft build", "microsoft ignite", "technology trends", "videos"]
 ---
 
 Microsoft Events presents Kevin Scott sharing perspectives on the current AI landscape and the rise of agentic systems, setting the stage for deeper exploration in this two-part pre-Build conversation.<!--excerpt_end-->

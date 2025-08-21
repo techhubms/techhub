@@ -12,7 +12,7 @@ date: 2025-02-21 07:20:52 +00:00
 permalink: "/2025-02-21-Implement-Role-Based-Authorization-With-Keycloak-Web-API-and-Blazor-WebAssembly.html"
 categories: ["Coding", "Security"]
 tags: [".NET", "ASP.NET Core", "Authentication", "Authorization", "Blazor WebAssembly", "ClaimsPrincipal", "Coding", "Identity Management", "Keycloak", "OIDC", "Posts", "RBAC", "Role Based Authorization", "Roles", "Security", "Web API"]
-tags_normalized: ["net", "asp dot net core", "authentication", "authorization", "blazor webassembly", "claimsprincipal", "coding", "identity management", "keycloak", "oidc", "posts", "rbac", "role based authorization", "roles", "security", "web api"]
+tags_normalized: ["dotnet", "aspdotnet core", "authentication", "authorization", "blazor webassembly", "claimsprincipal", "coding", "identity management", "keycloak", "oidc", "posts", "rbac", "role based authorization", "roles", "security", "web api"]
 ---
 
 Marinko Spasojević guides readers through implementing role-based authorization using Keycloak with Blazor WebAssembly and Web API, exploring role assignment, claims mapping, and securing both UI and API endpoints in modern .NET applications.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2025-08-08 11:02:25 +00:00
 permalink: "/2025-08-08-Why-Continuous-Integration-Matters-More-Than-Ever.html"
 categories: ["DevOps"]
 tags: ["Agile Development", "And CI/CD Pipeline", "Automation", "Business Of DevOps", "CI/CD", "CI/CD Pipelines", "Cloud Native", "Continuous Integration", "Contributed Content", "Deployment Automation", "DevOps", "DevOps Practices", "Posts", "Release Engineering", "SDLC", "Security Testing", "Social Facebook", "Social LinkedIn", "Social X", "Software Development Lifecycle", "Software Quality", "Team Collaboration", "Testing Automation"]
-tags_normalized: ["agile development", "and ci slash cd pipeline", "automation", "business of devops", "ci slash cd", "ci slash cd pipelines", "cloud native", "continuous integration", "contributed content", "deployment automation", "devops", "devops practices", "posts", "release engineering", "sdlc", "security testing", "social facebook", "social linkedin", "social x", "software development lifecycle", "software quality", "team collaboration", "testing automation"]
+tags_normalized: ["agile development", "and cislashcd pipeline", "automation", "business of devops", "cislashcd", "cislashcd pipelines", "cloud native", "continuous integration", "contributed content", "deployment automation", "devops", "devops practices", "posts", "release engineering", "sdlc", "security testing", "social facebook", "social linkedin", "social x", "software development lifecycle", "software quality", "team collaboration", "testing automation"]
 ---
 
 Michael Chukwube explains why Continuous Integration is now a cornerstone of DevOps, highlighting its impact on software quality, delivery speed, and team collaboration in today's tech landscape.<!--excerpt_end-->

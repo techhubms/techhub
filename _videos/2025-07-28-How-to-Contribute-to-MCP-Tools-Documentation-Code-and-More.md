@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-07-28 16:01:33 +00:00
 permalink: "/2025-07-28-How-to-Contribute-to-MCP-Tools-Documentation-Code-and-More.html"
 categories: ["Coding"]
-tags: [".NET", "Best Practices", "Coding", "Contribution", "Documentation", "GitHub", "Java", "MCP", "Model Context Protocol", "Open Source", "Python", "Tools", "Videos"]
-tags_normalized: ["net", "best practices", "coding", "contribution", "documentation", "github", "java", "mcp", "model context protocol", "open source", "python", "tools", "videos"]
+tags: [".NET", "Best Practices", "Coding", "Contribution", "Documentation", "GitHub", "Java", "MCP", "Open Source", "Python", "Tools", "Videos"]
+tags_normalized: ["dotnet", "best practices", "coding", "contribution", "documentation", "github", "java", "mcp", "open source", "python", "tools", "videos"]
 ---
 
 Microsoft Developer shares how developers can actively contribute to the MCP (Model Context Protocol) community via code, documentation, and tools. This overview will help developers identify ways to participate and collaborate.<!--excerpt_end-->

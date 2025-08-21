@@ -12,7 +12,7 @@ date: 2025-08-04 19:14:27 +00:00
 permalink: "/2025-08-04-Loading-configurations-for-integration-tests.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 8", "Appsettings.json", "C#", "Coding", "Community", "Configuration", "Container", "Integration Tests", "Microservices", "Microsoft.Extensions.Configuration", "OS Patching", "Web API"]
-tags_normalized: ["net", "net 8", "appsettings dot json", "c", "coding", "community", "configuration", "container", "integration tests", "microservices", "microsoft dot extensions dot configuration", "os patching", "web api"]
+tags_normalized: ["dotnet", "dotnet 8", "appsettingsdotjson", "csharp", "coding", "community", "configuration", "container", "integration tests", "microservices", "microsoftdotextensionsdotconfiguration", "os patching", "web api"]
 ---
 
 Authored by LazyChief_117, this post highlights an integration testing issue in .NET 8 Web APIs, where configuration files intermittently fail to load after certain server updates.<!--excerpt_end-->

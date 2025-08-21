@@ -12,7 +12,7 @@ date: 2025-04-07 15:32:09 +00:00
 permalink: "/2025-04-07-Modeling-Your-Environment-with-Aspire.html"
 categories: ["Coding", "DevOps"]
 tags: ["Application Modeling", "Application Topology", "Aspire", "C#", "Cloud Computing", "Coding", "Containerization", "Contract First Development", "DevOps", "DevOps Automation", "Environment Configuration", "IaC", "JavaScript Frontend", "PostgreSQL", "Posts", "Redis", "Software Dependencies", "Software Development", "Tooling"]
-tags_normalized: ["application modeling", "application topology", "aspire", "c", "cloud computing", "coding", "containerization", "contract first development", "devops", "devops automation", "environment configuration", "iac", "javascript frontend", "postgresql", "posts", "redis", "software dependencies", "software development", "tooling"]
+tags_normalized: ["application modeling", "application topology", "aspire", "csharp", "cloud computing", "coding", "containerization", "contract first development", "devops", "devops automation", "environment configuration", "iac", "javascript frontend", "postgresql", "posts", "redis", "software dependencies", "software development", "tooling"]
 ---
 
 David Fowler discusses how Aspire transforms application modeling by making environment configuration and dependencies programmable, enabling automation and improved DevOps practices.<!--excerpt_end-->

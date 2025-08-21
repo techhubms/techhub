@@ -11,8 +11,8 @@ feed_url: "https://roadtoalm.com/feed/"
 date: 2025-07-11 07:29:51 +00:00
 permalink: "/2025-07-11-Your-New-Rubber-Duck-is-an-AI.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Artificial Intelligence", "Automation", "Chatgpt", "Cloud", "Code Review", "Collaboration", "Copilot", "Developer Experience", "Developer Productivity", "DevOps", "Engineering Culture", "Genai", "GitHub Copilot", "Lead Podcast", "Pair Programming", "Posts", "Prompting", "Team Adoption", "Technology"]
-tags_normalized: ["ai", "artificial intelligence", "automation", "chatgpt", "cloud", "code review", "collaboration", "copilot", "developer experience", "developer productivity", "devops", "engineering culture", "genai", "github copilot", "lead podcast", "pair programming", "posts", "prompting", "team adoption", "technology"]
+tags: ["AI", "Automation", "Chatgpt", "Cloud", "Code Review", "Collaboration", "Copilot", "Developer Experience", "Developer Productivity", "DevOps", "Engineering Culture", "Genai", "GitHub Copilot", "Lead Podcast", "Pair Programming", "Posts", "Prompting", "Team Adoption", "Technology"]
+tags_normalized: ["ai", "automation", "chatgpt", "cloud", "code review", "collaboration", "copilot", "developer experience", "developer productivity", "devops", "engineering culture", "genai", "github copilot", "lead podcast", "pair programming", "posts", "prompting", "team adoption", "technology"]
 ---
 
 Rene van Osnabrugge, co-creator of the LEAD podcast, discusses the evolution of developer roles in the age of AI, sharing insights from conversations about GitHub Copilot and engineering culture.<!--excerpt_end-->

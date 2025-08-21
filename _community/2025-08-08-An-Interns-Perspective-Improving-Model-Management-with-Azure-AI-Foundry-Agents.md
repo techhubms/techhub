@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?cate
 date: 2025-08-08 13:31:56 +00:00
 permalink: "/2025-08-08-An-Interns-Perspective-Improving-Model-Management-with-Azure-AI-Foundry-Agents.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "Azure", "Azure AI", "Azure AI Foundry", "Azure OpenAI Service", "Bicep", "Cloud Automation", "Community", "Conversational AI", "Deployment Automation", "Enterprise AI", "IaC", "Infrastructure as Agents", "Microsoft", "Model Inventory", "Model Lifecycle", "Model Management", "Model Operation Agent", "Model Upgrades", "Quota Validation", "SDK", "Terraform", "Visual Studio Code"]
-tags_normalized: ["ai", "ai agents", "azure", "azure ai", "azure ai foundry", "azure openai service", "bicep", "cloud automation", "community", "conversational ai", "deployment automation", "enterprise ai", "iac", "infrastructure as agents", "microsoft", "model inventory", "model lifecycle", "model management", "model operation agent", "model upgrades", "quota validation", "sdk", "terraform", "visual studio code"]
+tags: ["AI", "AI Agents", "Azure", "Azure AI", "Azure AI Foundry", "Azure OpenAI Service", "Bicep", "Cloud Automation", "Community", "Conversational AI", "Deployment Automation", "Enterprise AI", "IaC", "Infrastructure as Agents", "Microsoft", "Model Inventory", "Model Lifecycle", "Model Management", "Model Operation Agent", "Model Upgrades", "Quota Validation", "SDK", "Terraform", "VS Code"]
+tags_normalized: ["ai", "ai agents", "azure", "azure ai", "azure ai foundry", "azure openai service", "bicep", "cloud automation", "community", "conversational ai", "deployment automation", "enterprise ai", "iac", "infrastructure as agents", "microsoft", "model inventory", "model lifecycle", "model management", "model operation agent", "model upgrades", "quota validation", "sdk", "terraform", "vs code"]
 ---
 
 Harry-Cheng shares insights from his internship on the Azure AI Foundry team, presenting a hands-on look at building the 'model operation agent.' This post highlights how conversational AI is used to tackle enterprise model management challenges.<!--excerpt_end-->

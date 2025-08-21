@@ -12,7 +12,7 @@ date: 2025-06-06 08:34:23 +00:00
 permalink: "/2025-06-06-Agent-Orchestration-Strongly-Typed-Inputs-and-Results-in-Semantic-Kernel.html"
 categories: ["AI", "Coding"]
 tags: ["Agent Orchestration", "AI", "AI Agent Workflow", "AI Development", "AI Orchestration", "C#", "Code Robustness", "Coding", "Custom Classes", "InputTransform", "Microsoft AI", "Modular Architecture", "ResultTransform", "Semantic Kernel", "Strongly Typed Models", "Structured Data", "Type Safe AI", "Videos"]
-tags_normalized: ["agent orchestration", "ai", "ai agent workflow", "ai development", "ai orchestration", "c", "code robustness", "coding", "custom classes", "inputtransform", "microsoft ai", "modular architecture", "resulttransform", "semantic kernel", "strongly typed models", "structured data", "type safe ai", "videos"]
+tags_normalized: ["agent orchestration", "ai", "ai agent workflow", "ai development", "ai orchestration", "csharp", "code robustness", "coding", "custom classes", "inputtransform", "microsoft ai", "modular architecture", "resulttransform", "semantic kernel", "strongly typed models", "structured data", "type safe ai", "videos"]
 ---
 
 Learn Microsoft AI presents a guide on leveraging strongly-typed input and output models within Semantic Kernel agent workflows, demonstrating techniques for building scalable, robust AI applications.<!--excerpt_end-->

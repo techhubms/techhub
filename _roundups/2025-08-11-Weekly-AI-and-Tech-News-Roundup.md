@@ -8,8 +8,8 @@ viewing_mode: "internal"
 date: 2025-08-11 09:00:00 +00:00
 permalink: "/2025-08-11-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: [".NET", "AI", "AI Agents", "Azure", "CI/CD", "Claude Opus 4.1", "Cloud Identity", "Coding", "DevOps", "Enterprise AI", "GitHub Copilot", "GPT 5", "ML", "Model Context Protocol", "Multi Agent Systems", "Passwordless Authentication", "Roundups", "Security", "Visual Studio Code"]
-tags_normalized: ["net", "ai", "ai agents", "azure", "ci slash cd", "claude opus 4 dot 1", "cloud identity", "coding", "devops", "enterprise ai", "github copilot", "gpt 5", "ml", "model context protocol", "multi agent systems", "passwordless authentication", "roundups", "security", "visual studio code"]
+tags: [".NET", "AI", "AI Agents", "Azure", "CI/CD", "Claude Opus 4.1", "Cloud Identity", "Coding", "DevOps", "Enterprise AI", "GitHub Copilot", "GPT 5", "MCP", "ML", "Multi Agent Systems", "Passwordless Authentication", "Roundups", "Security", "VS Code"]
+tags_normalized: ["dotnet", "ai", "ai agents", "azure", "cislashcd", "claude opus 4dot1", "cloud identity", "coding", "devops", "enterprise ai", "github copilot", "gpt 5", "mcp", "ml", "multi agent systems", "passwordless authentication", "roundups", "security", "vs code"]
 ---
 
 Welcome to this week’s tech roundup, where the pace of innovation accelerates across AI, cloud, security, and DevOps domains. GitHub Copilot takes a commanding lead as it integrates next-gen models like OpenAI GPT-5 and Anthropic Claude Opus 4.1, enhancing context-aware code assistance and giving developers unprecedented control, transparency, and workflow-native automation. The arrival of hybrid, open-weight models such as gpt-oss, plus agentic frameworks in Azure and VS Code, signals a decisive move toward flexible, governable AI at every level of the software stack.

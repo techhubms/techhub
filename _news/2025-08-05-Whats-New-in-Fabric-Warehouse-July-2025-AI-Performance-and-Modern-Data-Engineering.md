@@ -11,8 +11,8 @@ feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-05 11:00:00 +00:00
 permalink: "/2025-08-05-Whats-New-in-Fabric-Warehouse-July-2025-AI-Performance-and-Modern-Data-Engineering.html"
 categories: ["AI", "Azure", "ML", "DevOps", "Security"]
-tags: ["Agentic AI", "AI", "Audit Logging", "Azure", "Azure AI Foundry", "Copilot Studio", "Cosmos DB", "Data Warehouse", "Databricks", "DevOps", "Governance", "Microsoft Fabric", "ML", "MSSQL Extension", "News", "OneLake", "Performance Tuning", "Python Notebooks", "Security", "SQL Analytics", "Synapse Migration", "Terraform", "Visual Studio Code"]
-tags_normalized: ["agentic ai", "ai", "audit logging", "azure", "azure ai foundry", "copilot studio", "cosmos db", "data warehouse", "databricks", "devops", "governance", "microsoft fabric", "ml", "mssql extension", "news", "onelake", "performance tuning", "python notebooks", "security", "sql analytics", "synapse migration", "terraform", "visual studio code"]
+tags: ["Agentic AI", "AI", "Audit Logging", "Azure", "Azure AI Foundry", "Copilot Studio", "Cosmos DB", "Data Warehouse", "Databricks", "DevOps", "Governance", "Microsoft Fabric", "ML", "MSSQL Extension", "News", "OneLake", "Performance Tuning", "Python Notebooks", "Security", "SQL Analytics", "Synapse Migration", "Terraform", "VS Code"]
+tags_normalized: ["agentic ai", "ai", "audit logging", "azure", "azure ai foundry", "copilot studio", "cosmos db", "data warehouse", "databricks", "devops", "governance", "microsoft fabric", "ml", "mssql extension", "news", "onelake", "performance tuning", "python notebooks", "security", "sql analytics", "synapse migration", "terraform", "vs code"]
 ---
 
 This comprehensive recap from the Microsoft Fabric Blog details July 2025’s new features and enhancements for Fabric Warehouse, including AI integration, security, performance improvements, and developer tools, making it relevant for data engineers and architects.<!--excerpt_end-->

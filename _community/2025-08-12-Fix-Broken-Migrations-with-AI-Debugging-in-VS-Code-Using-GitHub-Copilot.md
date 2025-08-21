@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 07:00:00 +00:00
 permalink: "/2025-08-12-Fix-Broken-Migrations-with-AI-Debugging-in-VS-Code-Using-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI in Development", "Code Automation", "Coding", "Community", "Database Migration", "Dev Workflow", "Developer Productivity", "Foreign Key", "GibsonAI CLI", "GitHub Copilot", "Migration Debugging", "Natural Language Prompts", "Prompt Engineering", "Schema Validation", "SQL", "Visual Studio Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai in development", "code automation", "coding", "community", "database migration", "dev workflow", "developer productivity", "foreign key", "gibsonai cli", "github copilot", "migration debugging", "natural language prompts", "prompt engineering", "schema validation", "sql", "visual studio code", "vs code extensions"]
+tags: ["AI", "AI in Development", "Code Automation", "Coding", "Community", "Database Migration", "Dev Workflow", "Developer Productivity", "Foreign Key", "GibsonAI CLI", "GitHub Copilot", "Migration Debugging", "Natural Language Prompts", "Prompt Engineering", "Schema Validation", "SQL", "VS Code", "VS Code Extensions"]
+tags_normalized: ["ai", "ai in development", "code automation", "coding", "community", "database migration", "dev workflow", "developer productivity", "foreign key", "gibsonai cli", "github copilot", "migration debugging", "natural language prompts", "prompt engineering", "schema validation", "sql", "vs code", "vs code extensions"]
 ---
 
 MuhammadSamiullah shows how to resolve broken database migrations using GitHub Copilot and GibsonAI CLI in Visual Studio Code. Learn how AI-powered suggestions speed up debugging and deployment.<!--excerpt_end-->

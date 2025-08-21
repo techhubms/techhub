@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/typescript/feed/"
 date: 2025-07-08 17:38:54 +00:00
 permalink: "/2025-07-08-Announcing-TypeScript-59-Beta-New-Features-Improvements-and-Optimizations.html"
 categories: ["Coding"]
-tags: ["Coding", "Compiler", "Developer Tools", "ECMAScript", "Import Defer", "JavaScript", "Language Server", "News", "Node.js", "Open Source", "Performance Optimization", "Quick Info", "Tsconfig.json", "TypeScript", "TypeScript 5.9", "Visual Studio Code"]
-tags_normalized: ["coding", "compiler", "developer tools", "ecmascript", "import defer", "javascript", "language server", "news", "node dot js", "open source", "performance optimization", "quick info", "tsconfig dot json", "typescript", "typescript 5 dot 9", "visual studio code"]
+tags: ["Coding", "Compiler", "Developer Tools", "ECMAScript", "Import Defer", "JavaScript", "Language Server", "News", "Node.js", "Open Source", "Performance Optimization", "Quick Info", "Tsconfig.json", "TypeScript", "TypeScript 5.9", "VS Code"]
+tags_normalized: ["coding", "compiler", "developer tools", "ecmascript", "import defer", "javascript", "language server", "news", "nodedotjs", "open source", "performance optimization", "quick info", "tsconfigdotjson", "typescript", "typescript 5dot9", "vs code"]
 ---
 
 In this post, Daniel Rosenwasser introduces TypeScript 5.9 Beta, highlighting important compiler and tooling updates. Developers are invited to try out new features and contribute feedback as TypeScript continues to evolve.<!--excerpt_end-->

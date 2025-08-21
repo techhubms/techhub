@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/"
 date: 2025-02-27 17:06:24 +00:00
 permalink: "/2025-02-27-Catch-Issues-Early-with-GitHub-Copilots-Local-Code-Review-in-Visual-Studio.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Features", "Code Review", "Coding", "Commit Workflow", "Copilot", "Copilot Suggestions", "Developer Experience", "DevOps", "Git", "GitHub Copilot", "News", "Performance Issues", "Security Issues", "Source Control", "Visual Studio"]
-tags_normalized: ["ai", "ai features", "code review", "coding", "commit workflow", "copilot", "copilot suggestions", "developer experience", "devops", "git", "github copilot", "news", "performance issues", "security issues", "source control", "visual studio"]
+tags: ["AI", "AI Features", "Code Review", "Coding", "Commit Workflow", "Copilot", "Copilot Suggestions", "Developer Experience", "DevOps", "Git", "GitHub Copilot", "News", "Performance Issues", "Security Issues", "Source Control", "VS"]
+tags_normalized: ["ai", "ai features", "code review", "coding", "commit workflow", "copilot", "copilot suggestions", "developer experience", "devops", "git", "github copilot", "news", "performance issues", "security issues", "source control", "vs"]
 ---
 
 Jessie Houghton presents a Visual Studio update that leverages GitHub Copilot's AI for local code review, helping developers catch issues before committing to Git.<!--excerpt_end-->

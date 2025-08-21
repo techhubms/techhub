@@ -12,7 +12,7 @@ date: 2025-03-25 09:00:00 +00:00
 permalink: "/2025-03-25-Creating-a-Software-Bill-of-Materials-SBOM-for-an-Open-Source-NuGet-Package.html"
 categories: ["Coding", "DevOps", "Security"]
 tags: [".NET", "Application Security", "CI/CD", "Coding", "Compliance", "CycloneDX", "Dependency Management", "DevOps", "GitHub", "GitHub Actions", "NuGet", "Open Source", "Posts", "SBOM", "Sbom Tool", "Security", "Software Supply Chain", "SPDX", "Syft"]
-tags_normalized: ["net", "application security", "ci slash cd", "coding", "compliance", "cyclonedx", "dependency management", "devops", "github", "github actions", "nuget", "open source", "posts", "sbom", "sbom tool", "security", "software supply chain", "spdx", "syft"]
+tags_normalized: ["dotnet", "application security", "cislashcd", "coding", "compliance", "cyclonedx", "dependency management", "devops", "github", "github actions", "nuget", "open source", "posts", "sbom", "sbom tool", "security", "software supply chain", "spdx", "syft"]
 ---
 
 In this comprehensive guide, Andrew Lock demonstrates how to generate SBOMs for .NET NuGet packages using tools like GitHub's SBOM export, Microsoft's sbom-tool, anchore/sbom-action, and CycloneDX, highlighting practical considerations for developers and operators.<!--excerpt_end-->

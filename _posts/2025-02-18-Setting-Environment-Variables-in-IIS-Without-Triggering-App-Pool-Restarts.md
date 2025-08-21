@@ -12,7 +12,7 @@ date: 2025-02-18 09:00:00 +00:00
 permalink: "/2025-02-18-Setting-Environment-Variables-in-IIS-Without-Triggering-App-Pool-Restarts.html"
 categories: ["Coding"]
 tags: [".NET", "Appcmd.exe", "Application Pool", "Applicationhost.config", "ASP.NET Core", "Coding", "Configuration", "Environment Variables", "Hosting", "IIS", "Posts", "PowerShell", "Recycling", "W3SVC", "Windows", "Worker Process"]
-tags_normalized: ["net", "appcmd dot exe", "application pool", "applicationhost dot config", "asp dot net core", "coding", "configuration", "environment variables", "hosting", "iis", "posts", "powershell", "recycling", "w3svc", "windows", "worker process"]
+tags_normalized: ["dotnet", "appcmddotexe", "application pool", "applicationhostdotconfig", "aspdotnet core", "coding", "configuration", "environment variables", "hosting", "iis", "posts", "powershell", "recycling", "w3svc", "windows", "worker process"]
 ---
 
 In this post, Andrew Lock provides practical strategies for setting environment variables in IIS application pools on Windows, covering both UI and command-line techniques, and explains how to prevent unwanted app pool restarts.<!--excerpt_end-->

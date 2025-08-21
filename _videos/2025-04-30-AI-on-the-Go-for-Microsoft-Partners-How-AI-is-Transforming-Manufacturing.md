@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6
 date: 2025-04-30 16:00:03 +00:00
 permalink: "/2025-04-30-AI-on-the-Go-for-Microsoft-Partners-How-AI-is-Transforming-Manufacturing.html"
 categories: ["AI"]
-tags: ["AI", "AI On The Go", "AI Opportunities", "AI Trends", "Artificial Intelligence", "Cyril Belikoff", "Dayan Rodriguez", "Engineering Innovation", "Factory Floor", "Hannover Messe", "Industrial Transformation", "Industrials", "Manufacturing", "Microsoft", "Microsoft Cloud", "Partner Ecosystem", "Videos"]
-tags_normalized: ["ai", "ai on the go", "ai opportunities", "ai trends", "artificial intelligence", "cyril belikoff", "dayan rodriguez", "engineering innovation", "factory floor", "hannover messe", "industrial transformation", "industrials", "manufacturing", "microsoft", "microsoft cloud", "partner ecosystem", "videos"]
+tags: ["AI", "AI On The Go", "AI Opportunities", "AI Trends", "Cyril Belikoff", "Dayan Rodriguez", "Engineering Innovation", "Factory Floor", "Hannover Messe", "Industrial Transformation", "Industrials", "Manufacturing", "Microsoft", "Microsoft Cloud", "Partner Ecosystem", "Videos"]
+tags_normalized: ["ai", "ai on the go", "ai opportunities", "ai trends", "cyril belikoff", "dayan rodriguez", "engineering innovation", "factory floor", "hannover messe", "industrial transformation", "industrials", "manufacturing", "microsoft", "microsoft cloud", "partner ecosystem", "videos"]
 ---
 
 In this episode of 'AI on the Go for Microsoft Partners,' Microsoft Cloud's Cyril Belikoff interviews CVP Dayan Rodriguez about the latest AI trends shaping the manufacturing industry.<!--excerpt_end-->

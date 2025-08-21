@@ -12,7 +12,7 @@ date: 2025-02-25 14:00:41 +00:00
 permalink: "/2025-02-25-Transforming-Customer-Interactions-with-Blip-AI-and-Microsoft-Solutions-at-Microsoft-Ignite-2024.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET 8", "AI", "AI Powered Customer Experience", "Azure", "Azure OpenAI Service", "Blip", "Cloud Innovation", "Coding", "Conversational AI", "Data Streams", "Messaging Platforms", "Microsoft", "Microsoft Ignite", "Microsoft Technologies", "Multimodal Interfaces", "Videos"]
-tags_normalized: ["net 8", "ai", "ai powered customer experience", "azure", "azure openai service", "blip", "cloud innovation", "coding", "conversational ai", "data streams", "messaging platforms", "microsoft", "microsoft ignite", "microsoft technologies", "multimodal interfaces", "videos"]
+tags_normalized: ["dotnet 8", "ai", "ai powered customer experience", "azure", "azure openai service", "blip", "cloud innovation", "coding", "conversational ai", "data streams", "messaging platforms", "microsoft", "microsoft ignite", "microsoft technologies", "multimodal interfaces", "videos"]
 ---
 
 In this Microsoft Ignite 2024 video interview, Rick Claus speaks with Sergio Passos of Blip about how his team employs Microsoft technologies and AI—including Azure OpenAI Service and .NET 8 migration—to create next-generation conversational interfaces. Insights from Sergio Passos inform developers and product teams interested in data-driven, AI-powered customer engagement.<!--excerpt_end-->

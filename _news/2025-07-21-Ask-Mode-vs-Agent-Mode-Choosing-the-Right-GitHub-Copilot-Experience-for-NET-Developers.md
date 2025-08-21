@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-07-21 17:05:00 +00:00
 permalink: "/2025-07-21-Ask-Mode-vs-Agent-Mode-Choosing-the-Right-GitHub-Copilot-Experience-for-NET-Developers.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "Agent Mode", "AI", "Ask Mode", "C#", "Code Automation", "Code Refactoring", "Coding", "Copilot", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "News", "Unit Testing", "Visual Studio", "Visual Studio Code"]
-tags_normalized: ["net", "agent mode", "ai", "ask mode", "c", "code automation", "code refactoring", "coding", "copilot", "copilot chat", "developer productivity", "github copilot", "news", "unit testing", "visual studio", "visual studio code"]
+tags: [".NET", "Agent Mode", "AI", "Ask Mode", "C#", "Code Automation", "Code Refactoring", "Coding", "Copilot", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "News", "Unit Testing", "VS", "VS Code"]
+tags_normalized: ["dotnet", "agent mode", "ai", "ask mode", "csharp", "code automation", "code refactoring", "coding", "copilot", "copilot chat", "developer productivity", "github copilot", "news", "unit testing", "vs", "vs code"]
 ---
 
 In this guide, Wendy Breiding delves into GitHub Copilot Chat's Ask Mode and Agent Mode, outlining when .NET developers should use each for optimal productivity and efficiency in Visual Studio environments.<!--excerpt_end-->

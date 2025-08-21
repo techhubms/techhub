@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-02 09:07:59 +00:00
 permalink: "/2025-08-02-Is-C-Dying-A-Perspective-on-Job-Markets-and-Ecosystem-Trends.html"
 categories: ["Coding"]
-tags: [".NET", "AWS", "C#", "Coding", "Community", "Ecosystem", "Engineering Management", "Go", "Java", "Job Market", "Kotlin", "Node.js", "Programming Languages", "Python", "Rust", "Technology Trends", "Visual Studio", "Visual Studio Code"]
-tags_normalized: ["net", "aws", "c", "coding", "community", "ecosystem", "engineering management", "go", "java", "job market", "kotlin", "node dot js", "programming languages", "python", "rust", "technology trends", "visual studio", "visual studio code"]
+tags: [".NET", "AWS", "C#", "Coding", "Community", "Ecosystem", "Engineering Management", "Go", "Java", "Job Market", "Kotlin", "Node.js", "Programming Languages", "Python", "Rust", "Technology Trends", "VS", "VS Code"]
+tags_normalized: ["dotnet", "aws", "csharp", "coding", "community", "ecosystem", "engineering management", "go", "java", "job market", "kotlin", "nodedotjs", "programming languages", "python", "rust", "technology trends", "vs", "vs code"]
 ---
 
 OnionDeluxe shares insights on the perceived decline of C#’s relevance in today’s job market, exploring the shift in language and tool preferences in engineering roles.<!--excerpt_end-->

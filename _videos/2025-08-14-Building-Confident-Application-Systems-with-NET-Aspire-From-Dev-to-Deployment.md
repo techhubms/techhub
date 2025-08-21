@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwf
 date: 2025-08-14 14:24:36 +00:00
 permalink: "/2025-08-14-Building-Confident-Application-Systems-with-NET-Aspire-From-Dev-to-Deployment.html"
 categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", ".NET Aspire", "Application Architecture", "Azure", "CI/CD", "Coding", "Containerization", "Custom Metrics", "Deployment", "DevOps", "Distributed Systems", "GitHub Actions", "Instrumentation", "Metrics", "Observability", "Software Development", "Videos", "Visual Studio"]
-tags_normalized: ["net", "net aspire", "application architecture", "azure", "ci slash cd", "coding", "containerization", "custom metrics", "deployment", "devops", "distributed systems", "github actions", "instrumentation", "metrics", "observability", "software development", "videos", "visual studio"]
+tags: [".NET", ".NET Aspire", "Application Architecture", "Azure", "CI/CD", "Coding", "Containerization", "Custom Metrics", "Deployment", "DevOps", "Distributed Systems", "GitHub Actions", "Instrumentation", "Metrics", "Observability", "Software Development", "Videos", "VS"]
+tags_normalized: ["dotnet", "dotnet aspire", "application architecture", "azure", "cislashcd", "coding", "containerization", "custom metrics", "deployment", "devops", "distributed systems", "github actions", "instrumentation", "metrics", "observability", "software development", "videos", "vs"]
 ---
 
 In this session by the dotnet team, you'll discover practical techniques for architecting, deploying, and monitoring distributed .NET Aspire applications, from development through to deployment and observability.<!--excerpt_end-->

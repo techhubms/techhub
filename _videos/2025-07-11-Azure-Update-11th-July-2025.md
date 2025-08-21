@@ -12,7 +12,7 @@ date: 2025-07-11 13:43:48 +00:00
 permalink: "/2025-07-11-Azure-Update-11th-July-2025.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["AFS", "AI", "AVNM", "AWS S3 Migration", "Azure", "Azure Automation", "Azure Blob Storage", "Azure Cloud", "Azure Firewall", "Azure Learning", "Cloud", "Cloud Migration", "Cloud Updates", "Codex Mini", "Customer Controlled Maintenance", "DevOps", "Granular RBAC", "High Scale PE", "Microsoft", "Microsoft Azure", "O3 Pro", "Phi 4 Mini Flash Reasoning", "PowerShell 7.4", "Python 3.10", "Trusted Launch", "Videos", "VMSS"]
-tags_normalized: ["afs", "ai", "avnm", "aws s3 migration", "azure", "azure automation", "azure blob storage", "azure cloud", "azure firewall", "azure learning", "cloud", "cloud migration", "cloud updates", "codex mini", "customer controlled maintenance", "devops", "granular rbac", "high scale pe", "microsoft", "microsoft azure", "o3 pro", "phi 4 mini flash reasoning", "powershell 7 dot 4", "python 3 dot 10", "trusted launch", "videos", "vmss"]
+tags_normalized: ["afs", "ai", "avnm", "aws s3 migration", "azure", "azure automation", "azure blob storage", "azure cloud", "azure firewall", "azure learning", "cloud", "cloud migration", "cloud updates", "codex mini", "customer controlled maintenance", "devops", "granular rbac", "high scale pe", "microsoft", "microsoft azure", "o3 pro", "phi 4 mini flash reasoning", "powershell 7dot4", "python 3dot10", "trusted launch", "videos", "vmss"]
 ---
 
 John Savill's Technical Training provides a weekly Azure Update covering new platform features such as trusted launch enhancements for VMSS, Azure Firewall changes, and recent Azure Automation and AI model updates.<!--excerpt_end-->

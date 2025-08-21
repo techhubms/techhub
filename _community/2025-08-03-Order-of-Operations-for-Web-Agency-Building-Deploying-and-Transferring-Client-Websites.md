@@ -12,7 +12,7 @@ date: 2025-08-03 05:28:12 +00:00
 permalink: "/2025-08-03-Order-of-Operations-for-Web-Agency-Building-Deploying-and-Transferring-Client-Websites.html"
 categories: ["DevOps"]
 tags: ["Client Handoff", "Community", "DevOps", "DNS Configuration", "Domain Management", "GitHub", "Lovable.dev", "Project Transfer", "SSL", "Vercel", "Web Agency Workflow", "Website Deployment"]
-tags_normalized: ["client handoff", "community", "devops", "dns configuration", "domain management", "github", "lovable dot dev", "project transfer", "ssl", "vercel", "web agency workflow", "website deployment"]
+tags_normalized: ["client handoff", "community", "devops", "dns configuration", "domain management", "github", "lovabledotdev", "project transfer", "ssl", "vercel", "web agency workflow", "website deployment"]
 ---
 
 Authored by DoodleMoodle542, this article details a practical workflow for web agencies: from building client sites on Lovable.dev to deploying on Vercel, managing domains, and efficiently transferring ownership.<!--excerpt_end-->

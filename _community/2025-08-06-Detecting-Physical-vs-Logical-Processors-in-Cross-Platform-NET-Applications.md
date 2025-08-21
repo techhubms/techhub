@@ -12,7 +12,7 @@ date: 2025-08-06 00:12:38 +00:00
 permalink: "/2025-08-06-Detecting-Physical-vs-Logical-Processors-in-Cross-Platform-NET-Applications.html"
 categories: ["Coding"]
 tags: [".NET 9", "C#", "Coding", "Community", "Cross Platform Development", "Environment.ProcessorCount", "HT", "Linux", "Logical Processor", "Macos", "Performance Optimization", "Physical Core", "Platform Invocation", "Processor Detection", "SMT", "Windows API", "WMI"]
-tags_normalized: ["net 9", "c", "coding", "community", "cross platform development", "environment dot processorcount", "ht", "linux", "logical processor", "macos", "performance optimization", "physical core", "platform invocation", "processor detection", "smt", "windows api", "wmi"]
+tags_normalized: ["dotnet 9", "csharp", "coding", "community", "cross platform development", "environmentdotprocessorcount", "ht", "linux", "logical processor", "macos", "performance optimization", "physical core", "platform invocation", "processor detection", "smt", "windows api", "wmi"]
 ---
 
 Eisenmonoxid1 opens a discussion on how to programmatically distinguish between physical and logical processor cores in cross-platform .NET apps, sharing technical constraints and potential approaches.<!--excerpt_end-->

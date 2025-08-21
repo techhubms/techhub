@@ -12,7 +12,7 @@ date: 2025-08-02 19:53:28 +00:00
 permalink: "/2025-08-02-Looking-for-Feedback-I-Made-this-StateMachine-Lib.html"
 categories: ["Coding"]
 tags: ["Agent SDK", "Architecture", "C#", "Coding", "Community", "Feedback", "Library", "LombdaAgentSDK", "Open Source", "Software Design", "State Machine"]
-tags_normalized: ["agent sdk", "architecture", "c", "coding", "community", "feedback", "library", "lombdaagentsdk", "open source", "software design", "state machine"]
+tags_normalized: ["agent sdk", "architecture", "csharp", "coding", "community", "feedback", "library", "lombdaagentsdk", "open source", "software design", "state machine"]
 ---
 
 UnityDever shares a custom state machine library for C#, seeking feedback on its architecture and design. The article welcomes constructive suggestions from the development community.<!--excerpt_end-->

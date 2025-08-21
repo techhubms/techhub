@@ -12,7 +12,7 @@ date: 2025-08-01 16:55:30 +00:00
 permalink: "/2025-08-01-Termix-v090-Add-Rename-Delete-Write-File-Ops-and-Fuzzy-Search-Preview.html"
 categories: ["Coding"]
 tags: [".NET", "Coding", "Community", "Delete", "File Navigator", "File Operations", "Fuzzy Search", "Keyboard Shortcuts", "Open Source", "Performance", "Rename", "Terminal", "Termix", "User Experience"]
-tags_normalized: ["net", "coding", "community", "delete", "file navigator", "file operations", "fuzzy search", "keyboard shortcuts", "open source", "performance", "rename", "terminal", "termix", "user experience"]
+tags_normalized: ["dotnet", "coding", "community", "delete", "file navigator", "file operations", "fuzzy search", "keyboard shortcuts", "open source", "performance", "rename", "terminal", "termix", "user experience"]
 ---
 
 amrohann shares the release of Termix v0.9.0, highlighting new file operation features, fuzzy search, and improvements in this .NET-based terminal file navigator.<!--excerpt_end-->

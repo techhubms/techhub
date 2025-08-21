@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-07 17:12:55 +00:00
 permalink: "/2025-08-07-AMA-GPT-5-Launch-and-GitHub-Copilot-Community-Questions-Answered.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Integration", "Auto Completion", "Beast Mode", "Coding", "Community", "Community AMA", "Copilot Enterprise", "Copilot Models", "Developer Tools", "GitHub Copilot", "GPT 5", "MCP", "Microsoft", "Model Pricing", "OpenAI", "Opus 4.1", "Sonnet 4", "Visual Studio Code"]
-tags_normalized: ["agent mode", "ai", "ai integration", "auto completion", "beast mode", "coding", "community", "community ama", "copilot enterprise", "copilot models", "developer tools", "github copilot", "gpt 5", "mcp", "microsoft", "model pricing", "openai", "opus 4 dot 1", "sonnet 4", "visual studio code"]
+tags: ["Agent Mode", "AI", "AI Integration", "Auto Completion", "Beast Mode", "Coding", "Community", "Community AMA", "Copilot Enterprise", "Copilot Models", "Developer Tools", "GitHub Copilot", "GPT 5", "MCP", "Microsoft", "Model Pricing", "OpenAI", "Opus 4.1", "Sonnet 4", "VS Code"]
+tags_normalized: ["agent mode", "ai", "ai integration", "auto completion", "beast mode", "coding", "community", "community ama", "copilot enterprise", "copilot models", "developer tools", "github copilot", "gpt 5", "mcp", "microsoft", "model pricing", "openai", "opus 4dot1", "sonnet 4", "vs code"]
 ---
 
 Burke Holland and a team of Microsoft engineers host an AMA to discuss the release of GPT-5 in GitHub Copilot, its implication for coding agents and VS Code users, and answer a wide range of technical questions from the developer community.<!--excerpt_end-->

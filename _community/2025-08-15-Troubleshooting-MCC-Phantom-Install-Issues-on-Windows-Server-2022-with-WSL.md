@@ -12,7 +12,7 @@ date: 2025-08-15 13:49:08 +00:00
 permalink: "/2025-08-15-Troubleshooting-MCC-Phantom-Install-Issues-on-Windows-Server-2022-with-WSL.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure Container Registry", "Community", "Container Deployment", "DevOps", "Gmsa", "Install Troubleshooting", "Log Diagnostics", "MCC", "Microsoft Connected Cache", "Port Proxy", "PowerShell", "Symlink Configuration", "TLS Infrastructure", "Ubuntu 24.04", "VHDX", "Windows Server", "Windows Subsystem For Linux", "WSL"]
-tags_normalized: ["azure", "azure container registry", "community", "container deployment", "devops", "gmsa", "install troubleshooting", "log diagnostics", "mcc", "microsoft connected cache", "port proxy", "powershell", "symlink configuration", "tls infrastructure", "ubuntu 24 dot 04", "vhdx", "windows server", "windows subsystem for linux", "wsl"]
+tags_normalized: ["azure", "azure container registry", "community", "container deployment", "devops", "gmsa", "install troubleshooting", "log diagnostics", "mcc", "microsoft connected cache", "port proxy", "powershell", "symlink configuration", "tls infrastructure", "ubuntu 24dot04", "vhdx", "windows server", "windows subsystem for linux", "wsl"]
 ---
 
 jjmehren shares a step-by-step installation log and troubleshooting notes for deploying Microsoft Connected Cache on Windows Server 2022 using WSL and Ubuntu, highlighting success indicators and points of confusion.<!--excerpt_end-->

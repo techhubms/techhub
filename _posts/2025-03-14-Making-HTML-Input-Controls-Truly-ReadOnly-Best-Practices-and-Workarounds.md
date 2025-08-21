@@ -12,7 +12,7 @@ date: 2025-03-14 20:26:04 +00:00
 permalink: "/2025-03-14-Making-HTML-Input-Controls-Truly-ReadOnly-Best-Practices-and-Workarounds.html"
 categories: ["Coding"]
 tags: ["Accessibility", "Bootstrap", "Coding", "CSS", "Disabled Attribute", "Form Submission", "Frontend", "HTML", "Input Controls", "Pointer Events", "Posts", "Razor", "Readonly Attribute", "Tabindex", "User Interface", "Vue.js", "Web Development"]
-tags_normalized: ["accessibility", "bootstrap", "coding", "css", "disabled attribute", "form submission", "frontend", "html", "input controls", "pointer events", "posts", "razor", "readonly attribute", "tabindex", "user interface", "vue dot js", "web development"]
+tags_normalized: ["accessibility", "bootstrap", "coding", "css", "disabled attribute", "form submission", "frontend", "html", "input controls", "pointer events", "posts", "razor", "readonly attribute", "tabindex", "user interface", "vuedotjs", "web development"]
 ---
 
 Rick Strahl offers practical solutions for improving HTML readonly input controls, providing tips on CSS, tabindex, and UI design trade-offs for web developers.<!--excerpt_end-->

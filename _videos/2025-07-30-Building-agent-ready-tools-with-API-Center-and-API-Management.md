@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-07-30 22:30:19 +00:00
 permalink: "/2025-07-30-Building-Agent-Ready-Tools-with-API-Center-and-API-Management.html"
 categories: ["AI", "Azure", "DevOps"]
-tags: ["Agent Service", "AI", "API Discovery", "API Governance", "API Management", "Azure", "Azure AI Foundry", "Azure API Center", "Centralized Registry", "Cloud APIs", "Cloud Computing", "Custom Agents", "Dev", "Developer Tools", "Development", "DevOps", "MCP", "Microsoft", "Microsoft Cloud", "Model Context Protocol", "Remote MCP Servers", "Tech", "Technology", "Videos", "Visual Studio Code"]
-tags_normalized: ["agent service", "ai", "api discovery", "api governance", "api management", "azure", "azure ai foundry", "azure api center", "centralized registry", "cloud apis", "cloud computing", "custom agents", "dev", "developer tools", "development", "devops", "mcp", "microsoft", "microsoft cloud", "model context protocol", "remote mcp servers", "tech", "technology", "videos", "visual studio code"]
+tags: ["Agent Service", "AI", "API Discovery", "API Governance", "API Management", "Azure", "Azure AI Foundry", "Azure API Center", "Centralized Registry", "Cloud APIs", "Cloud Computing", "Custom Agents", "Dev", "Developer Tools", "Development", "DevOps", "MCP", "Microsoft", "Microsoft Cloud", "Remote MCP Servers", "Tech", "Technology", "Videos", "VS Code"]
+tags_normalized: ["agent service", "ai", "api discovery", "api governance", "api management", "azure", "azure ai foundry", "azure api center", "centralized registry", "cloud apis", "cloud computing", "custom agents", "dev", "developer tools", "development", "devops", "mcp", "microsoft", "microsoft cloud", "remote mcp servers", "tech", "technology", "videos", "vs code"]
 ---
 
 Microsoft Developer offers insight into building agent-ready tools using Azure API Center, API Management, and MCP, providing strategies for API governance and integrating with Azure AI Foundry.<!--excerpt_end-->

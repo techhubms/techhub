@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
 date: 2025-08-07 14:01:25 +00:00
 permalink: "/2025-08-07-Managing-AI-Features-in-Visual-Studio-for-High-School-Computer-Science-Education.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI in Education", "C#", "C++", "Classroom Management", "Codespaces", "Coding", "Community", "Computer Science Education", "DevOps", "GitHub Copilot", "Group Policy", "IDE Configuration", "Intellisense", "Microsoft", "Software Licensing", "Visual Basic", "Visual Studio", "Visual Studio Code", "VisualStudio", "VSCodium"]
-tags_normalized: ["ai", "ai in education", "c", "c", "classroom management", "codespaces", "coding", "community", "computer science education", "devops", "github copilot", "group policy", "ide configuration", "intellisense", "microsoft", "software licensing", "visual basic", "visual studio", "visual studio code", "visualstudio", "vscodium"]
+tags: ["AI", "AI in Education", "C#", "C++", "Classroom Management", "Codespaces", "Coding", "Community", "Computer Science Education", "DevOps", "GitHub Copilot", "Group Policy", "IDE Configuration", "Intellisense", "Microsoft", "Software Licensing", "Visual Basic", "VS", "VS Code", "VSCodium"]
+tags_normalized: ["ai", "ai in education", "csharp", "cplusplus", "classroom management", "codespaces", "coding", "community", "computer science education", "devops", "github copilot", "group policy", "ide configuration", "intellisense", "microsoft", "software licensing", "visual basic", "vs", "vs code", "vscodium"]
 ---
 
 misterebs and fellow educators discuss best practices for managing AI-enabled features like GitHub Copilot in Visual Studio while teaching foundational programming skills to students, offering strategies, alternative tools, and reflections on teaching philosophies.<!--excerpt_end-->

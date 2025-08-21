@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-07-28 16:01:14 +00:00
 permalink: "/2025-07-28-Lessons-from-MCP-Early-Adopters.html"
 categories: ["AI"]
-tags: ["AI", "Browser Automation", "C#", "Dev Days", "Enterprise Support", "Finance", "Healthcare", "Java", "MCP", "MCP Servers", "Model Context Protocol", "Multi Model Orchestration", "Production Systems", "Prompt Management", "Python", "Videos"]
-tags_normalized: ["ai", "browser automation", "c", "dev days", "enterprise support", "finance", "healthcare", "java", "mcp", "mcp servers", "model context protocol", "multi model orchestration", "production systems", "prompt management", "python", "videos"]
+tags: ["AI", "Browser Automation", "C#", "Dev Days", "Enterprise Support", "Finance", "Healthcare", "Java", "MCP", "MCP Servers", "Multi Model Orchestration", "Production Systems", "Prompt Management", "Python", "Videos"]
+tags_normalized: ["ai", "browser automation", "csharp", "dev days", "enterprise support", "finance", "healthcare", "java", "mcp", "mcp servers", "multi model orchestration", "production systems", "prompt management", "python", "videos"]
 ---
 
 Presented by Microsoft Developer, this episode examines lessons from early MCP adopters, offering practical case studies and hands-on projects highlighting how the Model Context Protocol is being implemented across multiple industries.<!--excerpt_end-->

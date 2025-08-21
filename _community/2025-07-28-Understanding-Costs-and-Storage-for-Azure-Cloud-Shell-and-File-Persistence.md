@@ -12,7 +12,7 @@ date: 2025-07-28 22:48:41 +00:00
 permalink: "/2025-07-28-Understanding-Costs-and-Storage-for-Azure-Cloud-Shell-and-File-Persistence.html"
 categories: ["Azure"]
 tags: ["Admin.microsoft.com", "Azure", "Azure Cloud Shell", "Azure Storage", "Cloud Costs", "Cloud Storage Pricing", "Community", "E5 License", "Ephemeral Storage", "File Persistence", "PowerShell", "Storage Accounts"]
-tags_normalized: ["admin dot microsoft dot com", "azure", "azure cloud shell", "azure storage", "cloud costs", "cloud storage pricing", "community", "e5 license", "ephemeral storage", "file persistence", "powershell", "storage accounts"]
+tags_normalized: ["admindotmicrosoftdotcom", "azure", "azure cloud shell", "azure storage", "cloud costs", "cloud storage pricing", "community", "e5 license", "ephemeral storage", "file persistence", "powershell", "storage accounts"]
 ---
 
 Authored by smydsmith, this article discusses the costs and details of using Azure Cloud Shell's file storage, specifically addressing questions about licensing, pricing, and storage persistence within Azure environments.<!--excerpt_end-->

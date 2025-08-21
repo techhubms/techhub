@@ -12,7 +12,7 @@ date: 2025-08-02 06:09:33 +00:00
 permalink: "/2025-08-02-Save-on-GitHub-Copilot-Premium-Requests-with-Extensive-Mode-Inspired-by-Beast-Mode.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Automation", "Beast Mode", "Best Practices", "Bug Testing", "Community", "Extensive Mode", "GitHub Copilot", "GPT 4.1", "Memory System", "Prompt Engineering", "Refactoring"]
-tags_normalized: ["ai", "automation", "beast mode", "best practices", "bug testing", "community", "extensive mode", "github copilot", "gpt 4 dot 1", "memory system", "prompt engineering", "refactoring"]
+tags_normalized: ["ai", "automation", "beast mode", "best practices", "bug testing", "community", "extensive mode", "github copilot", "gpt 4dot1", "memory system", "prompt engineering", "refactoring"]
 ---
 
 cyb3rofficial shares their creation, 'Extensive Mode', a robust prompt mode for GitHub Copilot. Drawing inspiration from Beast Mode, it introduces advanced features to support developers in a wide range of coding scenarios.<!--excerpt_end-->

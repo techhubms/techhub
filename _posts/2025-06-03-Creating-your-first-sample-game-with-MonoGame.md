@@ -11,8 +11,8 @@ feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-06-03 09:00:00 +00:00
 permalink: "/2025-06-03-Creating-your-first-sample-game-with-MonoGame.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 8", ".NET CLI", "C#", "Coding", "Content Pipeline", "Cross Platform", "DesktopGL", "Game Development", "JetBrains Rider", "MGCB", "Microsoft XNA", "MonoGame", "MonoGame Templates", "MSBuild", "NuGet", "OpenGL", "Posts", "Project Setup", "Sample Application", "Visual Studio", "XNA 4.0 API"]
-tags_normalized: ["net", "net 8", "net cli", "c", "coding", "content pipeline", "cross platform", "desktopgl", "game development", "jetbrains rider", "mgcb", "microsoft xna", "monogame", "monogame templates", "msbuild", "nuget", "opengl", "posts", "project setup", "sample application", "visual studio", "xna 4 dot 0 api"]
+tags: [".NET", ".NET 8", ".NET CLI", "C#", "Coding", "Content Pipeline", "Cross Platform", "DesktopGL", "Game Development", "JetBrains Rider", "MGCB", "Microsoft XNA", "MonoGame", "MonoGame Templates", "MSBuild", "NuGet", "OpenGL", "Posts", "Project Setup", "Sample Application", "VS", "XNA 4.0 API"]
+tags_normalized: ["dotnet", "dotnet 8", "dotnet cli", "csharp", "coding", "content pipeline", "cross platform", "desktopgl", "game development", "jetbrains rider", "mgcb", "microsoft xna", "monogame", "monogame templates", "msbuild", "nuget", "opengl", "posts", "project setup", "sample application", "vs", "xna 4dot0 api"]
 ---
 
 Andrew Lock offers a step-by-step introduction to MonoGame, explaining its XNA roots, .NET-based setup, essential tools, and sample project structure for modern cross-platform game development.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2025-03-12 17:59:51 +00:00
 permalink: "/2025-03-12-Get-Started-with-Microsoft-Desired-State-Configuration-v300.html"
 categories: ["Coding", "DevOps"]
 tags: ["Automation", "CLI", "Coding", "Configuration Management", "Cross Platform", "Desired State Configuration", "DevOps", "DSC", "Dsc Command", "IaC", "IIS", "News", "PowerShell", "PowerShell DSC", "PSDSC", "Resource Adapters", "System Configuration", "V3.0.0", "Windows Server", "YAML"]
-tags_normalized: ["automation", "cli", "coding", "configuration management", "cross platform", "desired state configuration", "devops", "dsc", "dsc command", "iac", "iis", "news", "powershell", "powershell dsc", "psdsc", "resource adapters", "system configuration", "v3 dot 00", "windows server", "yaml"]
+tags_normalized: ["automation", "cli", "coding", "configuration management", "cross platform", "desired state configuration", "devops", "dsc", "dsc command", "iac", "iis", "news", "powershell", "powershell dsc", "psdsc", "resource adapters", "system configuration", "v3dot0dot0", "windows server", "yaml"]
 ---
 
 Jason Helmick walks through the installation and basics of Microsoft Desired State Configuration v3.0.0, helping IT professionals and developers automate infrastructure management using PowerShell.<!--excerpt_end-->

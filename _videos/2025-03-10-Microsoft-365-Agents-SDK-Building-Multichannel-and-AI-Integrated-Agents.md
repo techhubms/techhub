@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWp
 date: 2025-03-10 08:00:43 +00:00
 permalink: "/2025-03-10-Microsoft-365-Agents-SDK-Building-Multichannel-and-AI-Integrated-Agents.html"
 categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Development", "AI", "Artificial Intelligence", "Azure", "Azure AI SDK", "Coding", "Copilot Studio", "Enterprise Bots", "Facebook Messenger", "Full Stack Development", "Microsoft 365 Agents SDK", "Microsoft Teams", "Multichannel Integration", "SDK", "Semantic Kernel", "Slack", "Twilio", "Videos", "Webchat"]
-tags_normalized: ["agent development", "ai", "artificial intelligence", "azure", "azure ai sdk", "coding", "copilot studio", "enterprise bots", "facebook messenger", "full stack development", "microsoft 365 agents sdk", "microsoft teams", "multichannel integration", "sdk", "semantic kernel", "slack", "twilio", "videos", "webchat"]
+tags: ["Agent Development", "AI", "Azure", "Azure AI SDK", "Coding", "Copilot Studio", "Enterprise Bots", "Facebook Messenger", "Full Stack Development", "Microsoft 365 Agents SDK", "Microsoft Teams", "Multichannel Integration", "SDK", "Semantic Kernel", "Slack", "Twilio", "Videos", "Webchat"]
+tags_normalized: ["agent development", "ai", "azure", "azure ai sdk", "coding", "copilot studio", "enterprise bots", "facebook messenger", "full stack development", "microsoft 365 agents sdk", "microsoft teams", "multichannel integration", "sdk", "semantic kernel", "slack", "twilio", "videos", "webchat"]
 ---
 
 In this video, Learn Microsoft AI explores how developers can use the Microsoft 365 Agents SDK and Semantic Kernel to build AI-powered, multichannel agents that integrate with Microsoft 365, Teams, and more.<!--excerpt_end-->

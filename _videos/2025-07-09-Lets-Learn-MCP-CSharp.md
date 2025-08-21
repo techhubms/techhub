@@ -11,8 +11,8 @@ feed_name: "dotnet"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-09 17:53:52 +00:00
 permalink: "/2025-07-09-Lets-Learn-MCP-CSharp.html"
-tags: [".NET", "AI", "Beginner", "C#", "Coding", "Developer", "Developertools", "Dotnetdeveloper", "Mcp", "Microsoft", "Modelcontextprotocol", "Softwaredeveloper", "Videos"]
-tags_normalized: ["net", "ai", "beginner", "c", "coding", "developer", "developertools", "dotnetdeveloper", "mcp", "microsoft", "modelcontextprotocol", "softwaredeveloper", "videos"]
+tags: [".NET", "AI", "Beginner", "C#", "Coding", "Developer", "Developer Tools", "Dotnetdeveloper", "Mcp", "Microsoft", "Software Developer", "Videos"]
+tags_normalized: ["dotnet", "ai", "beginner", "csharp", "coding", "developer", "developer tools", "dotnetdeveloper", "mcp", "microsoft", "software developer", "videos"]
 ---
 
 In this comprehensive workshop, Katie Savage and James Montemagno from the dotnet team introduce developers to the Model Context Protocol (MCP), a cutting-edge framework designed to standardize interactions between AI models and client applications. This beginner-friendly session guides participants through creating their first MCP server using C#, providing practical insights into this emerging technology that's shaping the future of AI development. <!--excerpt_end-->

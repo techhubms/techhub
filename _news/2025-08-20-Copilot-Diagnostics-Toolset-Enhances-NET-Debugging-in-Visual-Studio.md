@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-20 17:05:00 +00:00
 permalink: "/2025-08-20-Copilot-Diagnostics-Toolset-Enhances-NET-Debugging-in-Visual-Studio.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", ".NET Fundamentals", "AI", "AI Development", "Breakpoint Suggestions", "C#", "Coding", "Copilot", "CPU Usage", "Debugging", "Developer Productivity", "Diagnostics", "Exception Assistance", "GitHub Copilot", "IEnumerable Visualizer", "Instrumentation Tool", "LINQ", "Memory Allocation", "News", "Parallel Stacks", "Performance Analysis", "Profiling", "Visual Studio"]
-tags_normalized: ["net", "net fundamentals", "ai", "ai development", "breakpoint suggestions", "c", "coding", "copilot", "cpu usage", "debugging", "developer productivity", "diagnostics", "exception assistance", "github copilot", "ienumerable visualizer", "instrumentation tool", "linq", "memory allocation", "news", "parallel stacks", "performance analysis", "profiling", "visual studio"]
+tags: [".NET", ".NET Fundamentals", "AI", "AI Development", "Breakpoint Suggestions", "C#", "Coding", "Copilot", "CPU Usage", "Debugging", "Developer Productivity", "Diagnostics", "Exception Assistance", "GitHub Copilot", "IEnumerable Visualizer", "Instrumentation Tool", "LINQ", "Memory Allocation", "News", "Parallel Stacks", "Performance Analysis", "Profiling", "VS"]
+tags_normalized: ["dotnet", "dotnet fundamentals", "ai", "ai development", "breakpoint suggestions", "csharp", "coding", "copilot", "cpu usage", "debugging", "developer productivity", "diagnostics", "exception assistance", "github copilot", "ienumerable visualizer", "instrumentation tool", "linq", "memory allocation", "news", "parallel stacks", "performance analysis", "profiling", "vs"]
 ---
 
 Harshada Hole showcases the Copilot Diagnostics toolset, which leverages GitHub Copilot within Visual Studio to assist .NET developers with smarter debugging, profiling, and code analysis.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2025-08-05 17:05:00 +00:00
 permalink: "/2025-08-05-Exploring-New-Agent-Quality-and-NLP-Evaluators-for-NET-AI-Applications.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "Agent Quality", "AI", "AI Evaluation", "Azure", "Azure OpenAI", "BLEU", "C#", "Coding", "Evaluations", "F1 Evaluator", "GLEU", "MEAI", "MEAI.Evaluation", "Microsoft.Extensions.AI", "Microsoft.Extensions.AI.Evaluation", "News", "NLP Metrics", "Testing"]
-tags_normalized: ["net", "agent quality", "ai", "ai evaluation", "azure", "azure openai", "bleu", "c", "coding", "evaluations", "f1 evaluator", "gleu", "meai", "meai dot evaluation", "microsoft dot extensions dot ai", "microsoft dot extensions dot ai dot evaluation", "news", "nlp metrics", "testing"]
+tags_normalized: ["dotnet", "agent quality", "ai", "ai evaluation", "azure", "azure openai", "bleu", "csharp", "coding", "evaluations", "f1 evaluator", "gleu", "meai", "meaidotevaluation", "microsoftdotextensionsdotai", "microsoftdotextensionsdotaidotevaluation", "news", "nlp metrics", "testing"]
 ---
 
 In this post, Shyam Namboodiripad details the latest agent quality and NLP evaluators in the Microsoft.Extensions.AI.Evaluation libraries, offering a comprehensive toolkit for .NET AI application assessment.<!--excerpt_end-->

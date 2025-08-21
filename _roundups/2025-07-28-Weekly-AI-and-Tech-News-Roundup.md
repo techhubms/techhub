@@ -8,8 +8,8 @@ viewing_mode: "internal"
 date: 2025-07-28 09:00:00 +00:00
 permalink: "/2025-07-28-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: [".NET", "AI", "AI Agents", "Azure", "Cloud Modernization", "Coding", "DevOps", "Enterprise AI", "GitHub Copilot", "MCP Protocol", "ML", "Multi Agent Systems", "Open Source", "Roundups", "Security", "Test Automation", "TypeScript", "Visual Studio Code", "Workflow Automation"]
-tags_normalized: ["net", "ai", "ai agents", "azure", "cloud modernization", "coding", "devops", "enterprise ai", "github copilot", "mcp protocol", "ml", "multi agent systems", "open source", "roundups", "security", "test automation", "typescript", "visual studio code", "workflow automation"]
+tags: [".NET", "AI", "AI Agents", "Azure", "Cloud Modernization", "Coding", "DevOps", "Enterprise AI", "GitHub Copilot", "MCP Protocol", "ML", "Multi Agent Systems", "Open Source", "Roundups", "Security", "Test Automation", "TypeScript", "VS Code", "Workflow Automation"]
+tags_normalized: ["dotnet", "ai", "ai agents", "azure", "cloud modernization", "coding", "devops", "enterprise ai", "github copilot", "mcp protocol", "ml", "multi agent systems", "open source", "roundups", "security", "test automation", "typescript", "vs code", "workflow automation"]
 ---
 
 Welcome to this week’s roundup, where the evolution of developer tooling, AI integration, and cloud modernization takes center stage. GitHub Copilot headlines with sweeping improvements in coding automation and workflow orchestration, including smarter Git operations, context-aware code review, and a powerful leap in rapid prototyping through the debut of GitHub Spark. The introduction of distributed custom instructions, advanced agent modes, and broader platform support signals Copilot’s transformation into an indispensable productivity engine for teams of every size.

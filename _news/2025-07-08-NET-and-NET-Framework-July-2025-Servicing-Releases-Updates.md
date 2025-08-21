@@ -12,7 +12,7 @@ date: 2025-07-08 19:00:00 +00:00
 permalink: "/2025-07-08-NET-and-NET-Framework-July-2025-servicing-releases-updates.html"
 categories: ["Coding", "Security"]
 tags: [".NET", ".NET Framework", "Bug Fixes", "Coding", "Framework", "Maintenance", "Maintenance & Updates", "Microsoft", "News", "Patches", "Release Notes", "Security", "Servicing Update"]
-tags_normalized: ["net", "net framework", "bug fixes", "coding", "framework", "maintenance", "maintenance updates", "microsoft", "news", "patches", "release notes", "security", "servicing update"]
+tags_normalized: ["dotnet", "dotnet framework", "bug fixes", "coding", "framework", "maintenance", "maintenance and updates", "microsoft", "news", "patches", "release notes", "security", "servicing update"]
 ---
 
 Authored by Tara Overfield and Victor Israel-Bolarinwa, this article outlines the latest servicing updates released for .NET and .NET Framework in July 2025.<!--excerpt_end-->

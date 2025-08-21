@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-07-19 17:58:00 +00:00
 permalink: "/2025-07-19-VS-Code-Extension-Preview-Mermaid-Diagrams-in-Markdown-for-Azure-DevOps.html"
 categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Azure DevOps", "Coding", "Community", "Developer Tools", "DevOps", "Documentation", "Extension", "Markdown", "Mermaid Diagrams", "Preview", "Visual Studio Code", "Visual Studio Marketplace", "Wiki", "Work"]
-tags_normalized: ["azure", "azure devops", "coding", "community", "developer tools", "devops", "documentation", "extension", "markdown", "mermaid diagrams", "preview", "visual studio code", "visual studio marketplace", "wiki", "work"]
+tags: ["Azure", "Azure DevOps", "Coding", "Community", "Developer Tools", "DevOps", "Documentation", "Extension", "Markdown", "Mermaid Diagrams", "Preview", "Visual Studio Marketplace", "VS Code", "Wiki", "Work"]
+tags_normalized: ["azure", "azure devops", "coding", "community", "developer tools", "devops", "documentation", "extension", "markdown", "mermaid diagrams", "preview", "visual studio marketplace", "vs code", "wiki", "work"]
 ---
 
 mavsankar presents a new VS Code extension to preview Mermaid diagrams in Markdown files for Azure DevOps documentation. Discover how this tool streamlines documentation and diagram workflows.<!--excerpt_end-->

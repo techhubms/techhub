@@ -12,7 +12,7 @@ date: 2025-08-03 05:51:52 +00:00
 permalink: "/2025-08-03-Build-Smarter-LLMs-with-Local-MCP-Servers-in-NET.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "C#", "Code Samples", "Coding", "Community", "Deterministic AI", "Function Triggering", "LLM", "Local Deployment", "MCP Server", "Offline AI", "Structured Prompts"]
-tags_normalized: ["net", "ai", "c", "code samples", "coding", "community", "deterministic ai", "function triggering", "llm", "local deployment", "mcp server", "offline ai", "structured prompts"]
+tags_normalized: ["dotnet", "ai", "csharp", "code samples", "coding", "community", "deterministic ai", "function triggering", "llm", "local deployment", "mcp server", "offline ai", "structured prompts"]
 ---
 
 In this community tutorial, HassanRezkHabib explains how to build a local MCP server in .NET to connect with local LLMs. The video provides practical guidance for developers aiming for more deterministic and offline LLM workflows.<!--excerpt_end-->

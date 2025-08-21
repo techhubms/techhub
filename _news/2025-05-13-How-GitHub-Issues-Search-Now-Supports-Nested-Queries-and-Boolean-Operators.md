@@ -12,7 +12,7 @@ date: 2025-05-13 16:00:00 +00:00
 permalink: "/2025-05-13-How-GitHub-Issues-Search-Now-Supports-Nested-Queries-and-Boolean-Operators.html"
 categories: ["DevOps"]
 tags: ["Advanced Search", "API", "Application Architecture", "Application Development", "Architecture & Optimization", "Boolean Operators", "Compatibility", "Developer Skills", "Developer Tools", "DevOps", "Elasticsearch", "Engineering", "Engineering Principles", "GitHub Issues", "Issues Search", "Nested Queries", "News", "Parsing", "Performance", "Search", "User Experience"]
-tags_normalized: ["advanced search", "api", "application architecture", "application development", "architecture optimization", "boolean operators", "compatibility", "developer skills", "developer tools", "devops", "elasticsearch", "engineering", "engineering principles", "github issues", "issues search", "nested queries", "news", "parsing", "performance", "search", "user experience"]
+tags_normalized: ["advanced search", "api", "application architecture", "application development", "architecture and optimization", "boolean operators", "compatibility", "developer skills", "developer tools", "devops", "elasticsearch", "engineering", "engineering principles", "github issues", "issues search", "nested queries", "news", "parsing", "performance", "search", "user experience"]
 ---
 
 In this article, Deborah Digges explains the major overhaul to GitHub Issues search, introducing nested queries and boolean logic. The post details architectural changes, implementation steps, and risk mitigation for this widely used developer feature.<!--excerpt_end-->

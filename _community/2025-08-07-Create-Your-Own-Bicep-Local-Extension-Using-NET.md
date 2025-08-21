@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?cate
 date: 2025-08-07 14:50:37 +00:00
 permalink: "/2025-08-07-Create-Your-Own-Bicep-Local-Extension-Using-NET.html"
 categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET 9", "ARM", "Azure", "Azure Bicep", "Bicep Extension", "Bicep Local", "C#", "CLI", "Coding", "Community", "Custom Extension", "DevOps", "IaC", "Local Deployment", "Main.bicep", "Program.cs", "Project Scaffolding", "Resource Handler", "Visual Studio Code"]
-tags_normalized: ["net 9", "arm", "azure", "azure bicep", "bicep extension", "bicep local", "c", "cli", "coding", "community", "custom extension", "devops", "iac", "local deployment", "main dot bicep", "program dot cs", "project scaffolding", "resource handler", "visual studio code"]
+tags: [".NET 9", "ARM", "Azure", "Azure Bicep", "Bicep Extension", "Bicep Local", "C#", "CLI", "Coding", "Community", "Custom Extension", "DevOps", "IaC", "Local Deployment", "Main.bicep", "Program.cs", "Project Scaffolding", "Resource Handler", "VS Code"]
+tags_normalized: ["dotnet 9", "arm", "azure", "azure bicep", "bicep extension", "bicep local", "csharp", "cli", "coding", "community", "custom extension", "devops", "iac", "local deployment", "maindotbicep", "programdotcs", "project scaffolding", "resource handler", "vs code"]
 ---
 
 Sydney Smith provides a comprehensive walkthrough for creating Bicep Local Extensions with .NET, enabling local infrastructure as code workflows without Azure connectivity.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-07 14:44:05 +00:00
 permalink: "/2025-08-07-Transitioning-from-NET-Framework-48-to-Modern-NET-Core9-Advice-and-Resources.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 9", ".NET Core", ".NET Framework", "ASP.NET Core", "C#", "Clean Architecture", "Coding", "Community", "CQRS", "Dependency Injection", "Docker", "Entity Framework", "Learning Resources", "LINQ", "Microservices", "Modularity", "Monolith", "NuGet", "Software Architecture", "Tim Corey", "Udemy", "Visual Studio Code"]
-tags_normalized: ["net", "net 9", "net core", "net framework", "asp dot net core", "c", "clean architecture", "coding", "community", "cqrs", "dependency injection", "docker", "entity framework", "learning resources", "linq", "microservices", "modularity", "monolith", "nuget", "software architecture", "tim corey", "udemy", "visual studio code"]
+tags: [".NET", ".NET 9", ".NET Core", ".NET Framework", "ASP.NET Core", "C#", "Clean Architecture", "Coding", "Community", "CQRS", "Dependency Injection", "Docker", "EF", "Learning Resources", "LINQ", "Microservices", "Modularity", "Monolith", "NuGet", "Software Architecture", "Tim Corey", "Udemy", "VS Code"]
+tags_normalized: ["dotnet", "dotnet 9", "dotnet core", "dotnet framework", "aspdotnet core", "csharp", "clean architecture", "coding", "community", "cqrs", "dependency injection", "docker", "ef", "learning resources", "linq", "microservices", "modularity", "monolith", "nuget", "software architecture", "tim corey", "udemy", "vs code"]
 ---
 
 RemoveFun747 shares insights and community-driven advice for developers transitioning from legacy .NET Framework 4.8 to modern .NET 9, including learning resources and practical architectural considerations.<!--excerpt_end-->

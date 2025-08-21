@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-06 17:05:00 +00:00
 permalink: "/2025-08-06-5-Copilot-Chat-Prompts-NET-Developers-Should-Use-Now.html"
 categories: ["AI", "GitHub Copilot", "Coding", "Security"]
-tags: [".NET", ".NET Fundamentals", "AI", "Async Await", "C#", "Code Optimization", "Coding", "Copilot", "Copilot Chat", "Debugging", "Development Productivity", "GitHub Copilot", "Mock Data", "MSTest", "News", "NUnit", "Security", "Unit Testing", "Visual Studio", "Visual Studio Code", "xUnit"]
-tags_normalized: ["net", "net fundamentals", "ai", "async await", "c", "code optimization", "coding", "copilot", "copilot chat", "debugging", "development productivity", "github copilot", "mock data", "mstest", "news", "nunit", "security", "unit testing", "visual studio", "visual studio code", "xunit"]
+tags: [".NET", ".NET Fundamentals", "AI", "Async Await", "C#", "Code Optimization", "Coding", "Copilot", "Copilot Chat", "Debugging", "Development Productivity", "GitHub Copilot", "Mock Data", "MSTest", "News", "NUnit", "Security", "Unit Testing", "VS", "VS Code", "xUnit"]
+tags_normalized: ["dotnet", "dotnet fundamentals", "ai", "async await", "csharp", "code optimization", "coding", "copilot", "copilot chat", "debugging", "development productivity", "github copilot", "mock data", "mstest", "news", "nunit", "security", "unit testing", "vs", "vs code", "xunit"]
 ---
 
 In this blog, Wendy Breiding presents five practical GitHub Copilot Chat prompts specifically designed to help .NET developers boost productivity, code quality, and security when working on Microsoft technologies.<!--excerpt_end-->

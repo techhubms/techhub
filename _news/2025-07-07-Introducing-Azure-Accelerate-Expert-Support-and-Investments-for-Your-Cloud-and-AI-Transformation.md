@@ -12,7 +12,7 @@ date: 2025-07-07 15:00:00 +00:00
 permalink: "/2025-07-07-Introducing-Azure-Accelerate-Expert-Support-and-Investments-for-Your-Cloud-and-AI-Transformation.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI + Machine Learning", "Azure", "Azure Accelerate", "Azure AI Search", "Azure Essentials", "Azure Innovate", "Azure Migrate", "Azure OpenAI", "Azure Well Architected Framework", "Cloud Accelerate Factory", "Cloud Transformation", "Customer Success", "Data Modernization", "Expert Support", "Funding", "Management And Governance", "Microsoft Partners", "Migration", "News"]
-tags_normalized: ["ai", "ai machine learning", "azure", "azure accelerate", "azure ai search", "azure essentials", "azure innovate", "azure migrate", "azure openai", "azure well architected framework", "cloud accelerate factory", "cloud transformation", "customer success", "data modernization", "expert support", "funding", "management and governance", "microsoft partners", "migration", "news"]
+tags_normalized: ["ai", "ai plus machine learning", "azure", "azure accelerate", "azure ai search", "azure essentials", "azure innovate", "azure migrate", "azure openai", "azure well architected framework", "cloud accelerate factory", "cloud transformation", "customer success", "data modernization", "expert support", "funding", "management and governance", "microsoft partners", "migration", "news"]
 ---
 
 Authored by Cyril Belikoff, this detailed post explains how Azure Accelerate brings together expert support, funding, and a unified set of tools to help organizations manage cloud and AI transformation efforts successfully.<!--excerpt_end-->

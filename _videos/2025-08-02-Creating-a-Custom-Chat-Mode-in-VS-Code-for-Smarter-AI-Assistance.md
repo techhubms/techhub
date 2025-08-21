@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0S
 date: 2025-08-02 06:32:44 +00:00
 permalink: "/2025-08-02-Creating-a-Custom-Chat-Mode-in-VS-Code-for-Smarter-AI-Assistance.html"
 categories: ["AI", "Coding"]
-tags: ["AI", "AI Coding Assistant", "Blog Mode", "Codebase Tools", "Coding", "Custom Chat Mode", "Developer Productivity", "GitHub Repo", "Personalized AI", "Research Mode", "Search Integration", "SQL Optimizer", "Videos", "Visual Studio Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai coding assistant", "blog mode", "codebase tools", "coding", "custom chat mode", "developer productivity", "github repo", "personalized ai", "research mode", "search integration", "sql optimizer", "videos", "visual studio code", "vs code extensions"]
+tags: ["AI", "AI Coding Assistant", "Blog Mode", "Codebase Tools", "Coding", "Custom Chat Mode", "Developer Productivity", "GitHub Repo", "Personalized AI", "Research Mode", "Search Integration", "SQL Optimizer", "Videos", "VS Code", "VS Code Extensions"]
+tags_normalized: ["ai", "ai coding assistant", "blog mode", "codebase tools", "coding", "custom chat mode", "developer productivity", "github repo", "personalized ai", "research mode", "search integration", "sql optimizer", "videos", "vs code", "vs code extensions"]
 ---
 
 Reynald Adolphe from Visual Studio Code explains how to build a Custom Chat Mode in VS Code, allowing developers to enhance their AI-powered coding environment with features like codebase analysis and GitHub integration.<!--excerpt_end-->

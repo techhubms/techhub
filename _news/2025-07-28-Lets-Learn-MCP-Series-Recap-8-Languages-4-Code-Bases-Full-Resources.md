@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-07-28 16:00:02 +00:00
 permalink: "/2025-07-28-Lets-Learn-MCP-Series-Recap-8-Languages-4-Code-Bases-Full-Resources.html"
 categories: ["AI", "Coding"]
-tags: ["AI", "AI Agents", "C#", "Coding", "Community Events", "Developer Events", "Developer Resources", "GitHub", "Integration", "Java", "MCP", "Microsoft", "Model Context Protocol", "Multilingual", "News", "Open Source", "Python", "Training", "TypeScript"]
-tags_normalized: ["ai", "ai agents", "c", "coding", "community events", "developer events", "developer resources", "github", "integration", "java", "mcp", "microsoft", "model context protocol", "multilingual", "news", "open source", "python", "training", "typescript"]
+tags: ["AI", "AI Agents", "C#", "Coding", "Community Events", "Developer Events", "Developer Resources", "GitHub", "Integration", "Java", "MCP", "Microsoft", "Multilingual", "News", "Open Source", "Python", "Training", "TypeScript"]
+tags_normalized: ["ai", "ai agents", "csharp", "coding", "community events", "developer events", "developer resources", "github", "integration", "java", "mcp", "microsoft", "multilingual", "news", "open source", "python", "training", "typescript"]
 ---
 
 Authored by Katie Savage, this article offers an in-depth recap of Microsoft's Model Context Protocol (MCP) training series, highlighting multilingual resources, practical guides, and upcoming opportunities for developers adopting MCP.<!--excerpt_end-->

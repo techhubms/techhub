@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-06-30 18:00:02 +00:00
 permalink: "/2025-06-30-Exploring-Azure-Developer-CLI-azd-Extensions-Customizing-Your-Azure-Development-Workflow.html"
 categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", "Azd Extensions", "Azure", "Azure Developer CLI", "Azure SDK", "CI/CD", "CLI", "Codespaces", "Coding", "Custom Commands", "Developer Tooling", "DevOps", "Docker", "Extension Framework", "Extension Registry", "Java", "JavaScript", "Kubernetes", "Modular Plugins", "News", "Open Source", "Python", "Typescript", "Visual Studio Code", "Workflow Automation"]
-tags_normalized: ["net", "azd extensions", "azure", "azure developer cli", "azure sdk", "ci slash cd", "cli", "codespaces", "coding", "custom commands", "developer tooling", "devops", "docker", "extension framework", "extension registry", "java", "javascript", "kubernetes", "modular plugins", "news", "open source", "python", "typescript", "visual studio code", "workflow automation"]
+tags: [".NET", "Azd Extensions", "Azure", "Azure Developer CLI", "Azure SDK", "CI/CD", "CLI", "Codespaces", "Coding", "Custom Commands", "Developer Tooling", "DevOps", "Docker", "Extension Framework", "Extension Registry", "Java", "JavaScript", "Kubernetes", "Modular Plugins", "News", "Open Source", "Python", "Typescript", "VS Code", "Workflow Automation"]
+tags_normalized: ["dotnet", "azd extensions", "azure", "azure developer cli", "azure sdk", "cislashcd", "cli", "codespaces", "coding", "custom commands", "developer tooling", "devops", "docker", "extension framework", "extension registry", "java", "javascript", "kubernetes", "modular plugins", "news", "open source", "python", "typescript", "vs code", "workflow automation"]
 ---
 
 Kristen Womack delves into Azure Developer CLI (azd) extensions, outlining their features, use cases, installation process, and ways developers can build and contribute extensions to optimize Azure workflow customization.<!--excerpt_end-->

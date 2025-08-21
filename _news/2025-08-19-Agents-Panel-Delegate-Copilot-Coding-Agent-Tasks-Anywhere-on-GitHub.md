@@ -11,8 +11,8 @@ feed_url: "https://github.blog/feed/"
 date: 2025-08-19 19:53:14 +00:00
 permalink: "/2025-08-19-Agents-Panel-Delegate-Copilot-Coding-Agent-Tasks-Anywhere-on-GitHub.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic Workflows", "Agents Panel", "AI", "AI Agents", "Autonomous Developer Agent", "Background Coding Tasks", "Copilot Coding Agent", "Generative AI", "GitHub Copilot", "GitHub Mobile", "MCP Server", "Model Context Protocol", "News", "News & Insights", "Product", "Pull Requests", "Task Delegation", "VS Code Integration", "Workflow Automation"]
-tags_normalized: ["agentic workflows", "agents panel", "ai", "ai agents", "autonomous developer agent", "background coding tasks", "copilot coding agent", "generative ai", "github copilot", "github mobile", "mcp server", "model context protocol", "news", "news insights", "product", "pull requests", "task delegation", "vs code integration", "workflow automation"]
+tags: ["Agentic Workflows", "Agents Panel", "AI", "AI Agents", "Autonomous Developer Agent", "Background Coding Tasks", "Copilot Coding Agent", "Generative AI", "GitHub Copilot", "GitHub Mobile", "MCP", "MCP Server", "News", "News & Insights", "Product", "Pull Requests", "Task Delegation", "VS Code Integration", "Workflow Automation"]
+tags_normalized: ["agentic workflows", "agents panel", "ai", "ai agents", "autonomous developer agent", "background coding tasks", "copilot coding agent", "generative ai", "github copilot", "github mobile", "mcp", "mcp server", "news", "news and insights", "product", "pull requests", "task delegation", "vs code integration", "workflow automation"]
 ---
 
 Tim Rogers explains how the new Agents panel lets developers assign and track Copilot coding agent tasks from anywhere on GitHub, making code automation and review more seamless.<!--excerpt_end-->

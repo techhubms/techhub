@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
 date: 2025-07-24 11:14:13 +00:00
 permalink: "/2025-07-24-Visual-Studio-might-be-getting-its-biggest-upgrade-in-years-and-itll-include-AI.html"
 categories: ["AI", "Coding"]
-tags: ["AI", "AI Features", "AI Integration", "Coding", "Community", "Development Tools", "IDE", "Microsoft", "Microsoft AI", "Programming", "Software Development", "Upgrade", "Visual Studio", "VisualStudio"]
-tags_normalized: ["ai", "ai features", "ai integration", "coding", "community", "development tools", "ide", "microsoft", "microsoft ai", "programming", "software development", "upgrade", "visual studio", "visualstudio"]
+tags: ["AI", "AI Features", "AI Integration", "Coding", "Community", "Development Tools", "IDE", "Microsoft", "Microsoft AI", "Programming", "Software Development", "Upgrade", "VS"]
+tags_normalized: ["ai", "ai features", "ai integration", "coding", "community", "development tools", "ide", "microsoft", "microsoft ai", "programming", "software development", "upgrade", "vs"]
 ---
 
 Author thetechminer shares insights into a potential major upgrade for Visual Studio, focusing on AI-driven improvements.<!--excerpt_end-->

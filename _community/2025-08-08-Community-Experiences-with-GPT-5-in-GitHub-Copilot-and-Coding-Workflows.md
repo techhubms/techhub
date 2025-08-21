@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-08 11:14:40 +00:00
 permalink: "/2025-08-08-Community-Experiences-with-GPT-5-in-GitHub-Copilot-and-Coding-Workflows.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistants", "Beast Mode", "Bug Fixing", "Claude 4", "Coding", "Community", "Copilot Chat", "Cost Analysis", "Data Science", "Developer Workflow", "Gemini 2.5 Pro", "GitHub Copilot", "GPT 5", "LLM Performance", "Prompt Engineering", "React", "Sonnet 4", "Visual Studio Code", "VS Code Settings"]
-tags_normalized: ["ai", "ai coding assistants", "beast mode", "bug fixing", "claude 4", "coding", "community", "copilot chat", "cost analysis", "data science", "developer workflow", "gemini 2 dot 5 pro", "github copilot", "gpt 5", "llm performance", "prompt engineering", "react", "sonnet 4", "visual studio code", "vs code settings"]
+tags: ["AI", "AI Coding Assistants", "Beast Mode", "Bug Fixing", "Claude 4", "Coding", "Community", "Copilot Chat", "Cost Analysis", "Data Science", "Developer Workflow", "Gemini 2.5 Pro", "GitHub Copilot", "GPT 5", "LLM Performance", "Prompt Engineering", "React", "Sonnet 4", "VS Code", "VS Code Settings"]
+tags_normalized: ["ai", "ai coding assistants", "beast mode", "bug fixing", "claude 4", "coding", "community", "copilot chat", "cost analysis", "data science", "developer workflow", "gemini 2dot5 pro", "github copilot", "gpt 5", "llm performance", "prompt engineering", "react", "sonnet 4", "vs code", "vs code settings"]
 ---
 
 gullu_7278 starts a community conversation sharing personal results and frustrations with GPT-5 inside GitHub Copilot and VS Code, inviting others to reflect on speed, cost, and code quality in practical developer settings.<!--excerpt_end-->

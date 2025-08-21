@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-08 01:34:26 +00:00
 permalink: "/2025-08-08-Issues-Accessing-Gemini-25-Pro-Model-After-GitHub-Copilot-Chat-Update.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Alternative Models", "API Integration", "Community", "Copilot Extensions", "Copilot Update", "Developer Workflow", "Gemini 2.5 Pro", "GitHub Copilot", "GitHub Copilot Chat", "Microsoft Copilot", "Model Availability", "Software Bugs", "Troubleshooting", "Visual Studio Code"]
-tags_normalized: ["ai", "ai models", "alternative models", "api integration", "community", "copilot extensions", "copilot update", "developer workflow", "gemini 2 dot 5 pro", "github copilot", "github copilot chat", "microsoft copilot", "model availability", "software bugs", "troubleshooting", "visual studio code"]
+tags: ["AI", "AI Models", "Alternative Models", "API Integration", "Community", "Copilot Extensions", "Copilot Update", "Developer Workflow", "Gemini 2.5 Pro", "GitHub Copilot", "GitHub Copilot Chat", "Microsoft Copilot", "Model Availability", "Software Bugs", "Troubleshooting", "VS Code"]
+tags_normalized: ["ai", "ai models", "alternative models", "api integration", "community", "copilot extensions", "copilot update", "developer workflow", "gemini 2dot5 pro", "github copilot", "github copilot chat", "microsoft copilot", "model availability", "software bugs", "troubleshooting", "vs code"]
 ---
 
 EchoingAngel shares concerns about losing access to Gemini 2.5 Pro after a GitHub Copilot Chat update in VS Code, detailing troubleshooting steps and community responses.<!--excerpt_end-->

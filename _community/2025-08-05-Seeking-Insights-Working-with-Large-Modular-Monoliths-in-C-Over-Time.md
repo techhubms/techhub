@@ -12,7 +12,7 @@ date: 2025-08-05 04:38:09 +00:00
 permalink: "/2025-08-05-Seeking-Insights-Working-with-Large-Modular-Monoliths-in-C-Over-Time.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Coding", "Community", "Modular Architecture", "Modular Monolith", "Module Communication", "Project Structure", "Scalability", "Software Architecture", "Solution Organization", "Team Workflow"]
-tags_normalized: ["net", "c", "coding", "community", "modular architecture", "modular monolith", "module communication", "project structure", "scalability", "software architecture", "solution organization", "team workflow"]
+tags_normalized: ["dotnet", "csharp", "coding", "community", "modular architecture", "modular monolith", "module communication", "project structure", "scalability", "software architecture", "solution organization", "team workflow"]
 ---
 
 Background-Brick-157 seeks community insight on handling large modular monolith solutions in C#, focusing on scalability, module organization, and team impact as these systems grow.<!--excerpt_end-->

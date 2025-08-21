@@ -12,7 +12,7 @@ date: 2025-07-28 15:03:49 +00:00
 permalink: "/2025-07-28-Aspire-A-Modern-DevOps-Toolchain.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET", "Application Model", "Aspire", "CI/CD", "Cloud Computing", "Cloud Deployment", "Cloud Native", "Coding", "DevOps", "DevOps Toolchain", "Distributed Applications", "Docker", "Infrastructure Automation", "JavaScript", "Kubernetes", "Onboarding", "Posts", "Python", "Service Orchestration", "Software Development", "Test Automation"]
-tags_normalized: ["net", "application model", "aspire", "ci slash cd", "cloud computing", "cloud deployment", "cloud native", "coding", "devops", "devops toolchain", "distributed applications", "docker", "infrastructure automation", "javascript", "kubernetes", "onboarding", "posts", "python", "service orchestration", "software development", "test automation"]
+tags_normalized: ["dotnet", "application model", "aspire", "cislashcd", "cloud computing", "cloud deployment", "cloud native", "coding", "devops", "devops toolchain", "distributed applications", "docker", "infrastructure automation", "javascript", "kubernetes", "onboarding", "posts", "python", "service orchestration", "software development", "test automation"]
 ---
 
 Authored by David Fowler, this article explores Aspire’s role as a modern DevOps toolchain, detailing its design philosophy, core features, and broad support for polyglot distributed app development.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-11 19:49:12 +00:00
 permalink: "/2025-08-11-Vote-for-the-Next-Deep-Dive-Azure-AI-Copilot-Vector-Databases-or-Voice-APIs.html"
 categories: ["AI", "Azure", "GitHub Copilot"]
-tags: ["AI", "AI Powered Coding", "Avatar Creation", "Azure", "Azure AI Foundry", "Azure Embeddings", "Azure Live Voice API", "Community", "Community Poll", "GitHub Copilot", "Intelligent Search", "Microsoft Azure", "Tech Events", "Vector Databases", "Visual Studio Code", "Voice Synthesis"]
-tags_normalized: ["ai", "ai powered coding", "avatar creation", "azure", "azure ai foundry", "azure embeddings", "azure live voice api", "community", "community poll", "github copilot", "intelligent search", "microsoft azure", "tech events", "vector databases", "visual studio code", "voice synthesis"]
+tags: ["AI", "AI Powered Coding", "Avatar Creation", "Azure", "Azure AI Foundry", "Azure Embeddings", "Azure Live Voice API", "Community", "Community Poll", "GitHub Copilot", "Intelligent Search", "Microsoft Azure", "Tech Events", "Vector Databases", "Voice Synthesis", "VS Code"]
+tags_normalized: ["ai", "ai powered coding", "avatar creation", "azure", "azure ai foundry", "azure embeddings", "azure live voice api", "community", "community poll", "github copilot", "intelligent search", "microsoft azure", "tech events", "vector databases", "voice synthesis", "vs code"]
 ---
 
 KonstantinosPassadis encourages community members to vote on upcoming deep-dive sessions for the Tech Community, featuring Microsoft AI and development platforms.<!--excerpt_end-->

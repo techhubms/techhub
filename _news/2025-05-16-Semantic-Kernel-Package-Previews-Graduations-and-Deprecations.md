@@ -12,7 +12,7 @@ date: 2025-05-16 08:32:47 +00:00
 permalink: "/2025-05-16-Semantic-Kernel-Package-Previews-Graduations-and-Deprecations.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "API Updates", "Azure Code Interpreter", "Coding", "HTTP Consistency", "Integration Tests", "Migration Guide", "News", "OpenAPI", "Package Deprecation", "Package Graduation", "Plugin Development", "Python Plugin", "Semantic Kernel"]
-tags_normalized: ["net", "ai", "api updates", "azure code interpreter", "coding", "http consistency", "integration tests", "migration guide", "news", "openapi", "package deprecation", "package graduation", "plugin development", "python plugin", "semantic kernel"]
+tags_normalized: ["dotnet", "ai", "api updates", "azure code interpreter", "coding", "http consistency", "integration tests", "migration guide", "news", "openapi", "package deprecation", "package graduation", "plugin development", "python plugin", "semantic kernel"]
 ---
 
 Authored by Sophia Lagerkrans-Pandey and Sergey Menshykh, this article details the latest Semantic Kernel .NET updates, highlighting package maturations, deprecations, and technical enhancements for developers.<!--excerpt_end-->

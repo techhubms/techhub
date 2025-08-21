@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-08-07 06:43:47 +00:00
 permalink: "/2025-08-07-Getting-Started-with-Copilot-Studio-Build-Your-First-AI-Powered-Bot.html"
 categories: ["AI"]
-tags: ["AI", "Artificial Intelligence", "Azure OpenAI Service", "Bot Development", "Conversational Bots", "Copilot", "Copilot Studio", "Dynamics 365", "Generative AI", "Low Code", "Microsoft 365", "Microsoft Copilot Studio", "No Code Bots", "Posts", "Power Automate", "Power Platform", "Power Virtual Agents"]
-tags_normalized: ["ai", "artificial intelligence", "azure openai service", "bot development", "conversational bots", "copilot", "copilot studio", "dynamics 365", "generative ai", "low code", "microsoft 365", "microsoft copilot studio", "no code bots", "posts", "power automate", "power platform", "power virtual agents"]
+tags: ["AI", "Azure OpenAI Service", "Bot Development", "Conversational Bots", "Copilot", "Copilot Studio", "Dynamics 365", "Generative AI", "Low Code", "Microsoft 365", "Microsoft Copilot Studio", "No Code Bots", "Posts", "Power Automate", "Power Platform", "Power Virtual Agents"]
+tags_normalized: ["ai", "azure openai service", "bot development", "conversational bots", "copilot", "copilot studio", "dynamics 365", "generative ai", "low code", "microsoft 365", "microsoft copilot studio", "no code bots", "posts", "power automate", "power platform", "power virtual agents"]
 ---
 
 Dellenny demonstrates how to build, test, and deploy your first bot using Microsoft Copilot Studio’s low-code environment, providing practical steps for anyone interested in conversational AI solutions.<!--excerpt_end-->

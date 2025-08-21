@@ -12,7 +12,7 @@ date: 2025-08-07 17:19:08 +00:00
 permalink: "/2025-08-07-Understanding-GitHub-Copilot-Usage-Quotas-and-Agent-Mode-Requests.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Billing", "Codebase Tags", "Community", "Copilot Agent Mode", "Copilot Edits", "Developer Tools", "GitHub Copilot", "GPT 4.1", "Premium Requests", "Request Counting", "Sonnet 4", "Subscription", "Usage Quotas", "Workspace Context"]
-tags_normalized: ["ai", "billing", "codebase tags", "community", "copilot agent mode", "copilot edits", "developer tools", "github copilot", "gpt 4 dot 1", "premium requests", "request counting", "sonnet 4", "subscription", "usage quotas", "workspace context"]
+tags_normalized: ["ai", "billing", "codebase tags", "community", "copilot agent mode", "copilot edits", "developer tools", "github copilot", "gpt 4dot1", "premium requests", "request counting", "sonnet 4", "subscription", "usage quotas", "workspace context"]
 ---
 
 In this community discussion, ogpterodactyl explores the nuances of GitHub Copilot's request quotas, the impact of using Agent Mode, and how new AI models and actions like co-pilot edits affect billing.<!--excerpt_end-->

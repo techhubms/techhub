@@ -12,7 +12,7 @@ date: 2025-08-08 11:12:45 +00:00
 permalink: "/2025-08-08-Deploying-Azure-Foundry-AI-Agents-via-API-for-Web-Integration.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agent Deployment", "AI", "API Integration", "Azure", "Azure AI Foundry", "Azure API", "Azure Foundry AI", "CI/CD", "Community", "Connector Configuration", "Conversational Agents", "Fabric Data Agent", "IaC", "Laravel", "Microsoft Fabric", "ML", "Tenant Management", "Terraform"]
-tags_normalized: ["agent deployment", "ai", "api integration", "azure", "azure ai foundry", "azure api", "azure foundry ai", "ci slash cd", "community", "connector configuration", "conversational agents", "fabric data agent", "iac", "laravel", "microsoft fabric", "ml", "tenant management", "terraform"]
+tags_normalized: ["agent deployment", "ai", "api integration", "azure", "azure ai foundry", "azure api", "azure foundry ai", "cislashcd", "community", "connector configuration", "conversational agents", "fabric data agent", "iac", "laravel", "microsoft fabric", "ml", "tenant management", "terraform"]
 ---
 
 Luisio93's community post explores practical steps to deploy Azure Foundry AI Agents and connect them to a Laravel front end, highlighting requirements for API integration and sharing deployment insights.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2025-08-01 16:25:32 +00:00
 permalink: "/2025-08-01-Templates-for-MVC-Razor-Pages-with-a-Modern-Frontend-Build-System.html"
 categories: ["Coding"]
 tags: [".NET", "ASP.NET", "Coding", "Community", "Custom Build System", "Frontend Architecture", "JavaScript", "MVC", "Razor Pages", "Template Repository", "Web Development", "Webpack"]
-tags_normalized: ["net", "asp dot net", "coding", "community", "custom build system", "frontend architecture", "javascript", "mvc", "razor pages", "template repository", "web development", "webpack"]
+tags_normalized: ["dotnet", "aspdotnet", "coding", "community", "custom build system", "frontend architecture", "javascript", "mvc", "razor pages", "template repository", "web development", "webpack"]
 ---
 
 In this article, baunegaard introduces a minimal template repository for ASP.NET MVC and Razor Pages, featuring a modern Webpack-driven frontend approach.<!--excerpt_end-->

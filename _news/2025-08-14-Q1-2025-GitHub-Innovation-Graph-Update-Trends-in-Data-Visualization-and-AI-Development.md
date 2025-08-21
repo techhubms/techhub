@@ -12,7 +12,7 @@ date: 2025-08-14 16:00:00 +00:00
 permalink: "/2025-08-14-Q1-2025-GitHub-Innovation-Graph-Update-Trends-in-Data-Visualization-and-AI-Development.html"
 categories: ["AI"]
 tags: ["AI", "AI Development", "AI Index Report", "Bar Chart Race", "Data Visualization", "Generative AI", "GitHub Innovation Graph", "Global Tech Trends", "Innovation Graph", "LLM", "Machine Learning", "News", "News & Insights", "Open Source Analytics", "Policy", "Programming Languages", "Public Developer Data", "Python", "Repository Metrics", "Research Insights", "Software Trends"]
-tags_normalized: ["ai", "ai development", "ai index report", "bar chart race", "data visualization", "generative ai", "github innovation graph", "global tech trends", "innovation graph", "llm", "machine learning", "news", "news insights", "open source analytics", "policy", "programming languages", "public developer data", "python", "repository metrics", "research insights", "software trends"]
+tags_normalized: ["ai", "ai development", "ai index report", "bar chart race", "data visualization", "generative ai", "github innovation graph", "global tech trends", "innovation graph", "llm", "machine learning", "news", "news and insights", "open source analytics", "policy", "programming languages", "public developer data", "python", "repository metrics", "research insights", "software trends"]
 ---
 
 Kevin Xu’s Q1 2025 Innovation Graph update summarizes shifts in global open source development, with a special focus on AI’s rapid growth and the emergence of data visualization as a prominent repository topic.<!--excerpt_end-->

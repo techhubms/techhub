@@ -12,7 +12,7 @@ date: 2025-07-16 15:20:20 +00:00
 permalink: "/2025-07-16-Build-Time-OpenAPI-Documentation-in-NET-9-A-OneDevQuestion-with-Mike-Kistler.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 9", "API Development", "Build Time Generation", "Code Generation", "Coding", "Documentation", "Linting", "OneDevQuestion", "OpenAPI", "Spectral", "Videos", "Web API"]
-tags_normalized: ["net", "net 9", "api development", "build time generation", "code generation", "coding", "documentation", "linting", "onedevquestion", "openapi", "spectral", "videos", "web api"]
+tags_normalized: ["dotnet", "dotnet 9", "api development", "build time generation", "code generation", "coding", "documentation", "linting", "onedevquestion", "openapi", "spectral", "videos", "web api"]
 ---
 
 In this video, Mike Kistler shares his top OpenAPI feature in .NET 9—build-time generation—offering insights on how it streamlines API development for .NET professionals.<!--excerpt_end-->

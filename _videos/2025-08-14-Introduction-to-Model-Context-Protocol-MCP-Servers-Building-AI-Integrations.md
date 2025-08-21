@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-08-14 17:00:05 +00:00
 permalink: "/2025-08-14-Introduction-to-Model-Context-Protocol-MCP-Servers-Building-AI-Integrations.html"
 categories: ["AI"]
-tags: ["AI", "AI Integration", "AI Platforms", "AI Workflows", "API", "Cloud Computing", "Database Integration", "Dev", "Developer Tutorial", "Development", "MCP", "Microsoft", "Microsoft Azure", "Model Context Protocol", "Prompts", "Resources And Tools", "Server Lifecycle", "Tech", "Technology", "Videos", "Visual Studio"]
-tags_normalized: ["ai", "ai integration", "ai platforms", "ai workflows", "api", "cloud computing", "database integration", "dev", "developer tutorial", "development", "mcp", "microsoft", "microsoft azure", "model context protocol", "prompts", "resources and tools", "server lifecycle", "tech", "technology", "videos", "visual studio"]
+tags: ["AI", "AI Integration", "AI Platforms", "AI Workflows", "API", "Cloud Computing", "Database Integration", "Dev", "Developer Tutorial", "Development", "MCP", "Microsoft", "Microsoft Azure", "Prompts", "Resources And Tools", "Server Lifecycle", "Tech", "Technology", "Videos", "VS"]
+tags_normalized: ["ai", "ai integration", "ai platforms", "ai workflows", "api", "cloud computing", "database integration", "dev", "developer tutorial", "development", "mcp", "microsoft", "microsoft azure", "prompts", "resources and tools", "server lifecycle", "tech", "technology", "videos", "vs"]
 ---
 
 Microsoft Developer introduces MCP (Model Context Protocol) servers, showing developers how to build integrations that allow AI assistants to interact with APIs, databases, and more.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?cate
 date: 2025-08-14 18:55:15 +00:00
 permalink: "/2025-08-14-Lower-Costs-and-Boost-Flexibility-with-Azure-Files-Provisioned-v2-for-SSD.html"
 categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Files", "Azure Kubernetes Service", "Azure Portal", "Azure Storage Account", "Cloud Storage", "Community", "Database Workloads", "DevOps", "Dynamic Scaling", "EPIC", "File Share", "IOPS", "Kubernetes", "Locally Redundant Storage", "Microsoft Azure", "Performance Tuning", "Premium Storage", "Provisioned V2", "SAP", "SSD Storage", "Storage Costs"]
-tags_normalized: ["azure", "azure files", "azure kubernetes service", "azure portal", "azure storage account", "cloud storage", "community", "database workloads", "devops", "dynamic scaling", "epic", "file share", "iops", "kubernetes", "locally redundant storage", "microsoft azure", "performance tuning", "premium storage", "provisioned v2", "sap", "ssd storage", "storage costs"]
+tags: ["AKS", "Azure", "Azure Files", "Azure Portal", "Azure Storage Account", "Cloud Storage", "Community", "Database Workloads", "DevOps", "Dynamic Scaling", "EPIC", "File Share", "IOPS", "Kubernetes", "Locally Redundant Storage", "Microsoft Azure", "Performance Tuning", "Premium Storage", "Provisioned V2", "SAP", "SSD Storage", "Storage Costs"]
+tags_normalized: ["aks", "azure", "azure files", "azure portal", "azure storage account", "cloud storage", "community", "database workloads", "devops", "dynamic scaling", "epic", "file share", "iops", "kubernetes", "locally redundant storage", "microsoft azure", "performance tuning", "premium storage", "provisioned v2", "sap", "ssd storage", "storage costs"]
 ---
 
 wmgries details how Azure Files provisioned v2 for SSD enables IT professionals and developers to optimize storage performance and cost, with practical examples and actionable guidance.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-07-28 16:00:51 +00:00
 permalink: "/2025-07-28-Full-Course-MCP-for-Beginners-Lessons-1-11-by-Microsoft-Developer.html"
 categories: ["AI", "Coding", "Security"]
-tags: ["AI", "AI Agents", "AI Development", "AI Toolkit", "Best Practices", "Coding", "Deployment", "MCP", "Model Context Protocol", "Real World Case Studies", "Scalability", "Security", "Videos", "Visual Studio Code"]
-tags_normalized: ["ai", "ai agents", "ai development", "ai toolkit", "best practices", "coding", "deployment", "mcp", "model context protocol", "real world case studies", "scalability", "security", "videos", "visual studio code"]
+tags: ["AI", "AI Agents", "AI Development", "AI Toolkit", "Best Practices", "Coding", "Deployment", "MCP", "Real World Case Studies", "Scalability", "Security", "Videos", "VS Code"]
+tags_normalized: ["ai", "ai agents", "ai development", "ai toolkit", "best practices", "coding", "deployment", "mcp", "real world case studies", "scalability", "security", "videos", "vs code"]
 ---
 
 Microsoft Developer presents an in-depth MCP for Beginners course led by April Gittens, covering everything from MCP fundamentals to building and deploying AI agents in Visual Studio Code.<!--excerpt_end-->

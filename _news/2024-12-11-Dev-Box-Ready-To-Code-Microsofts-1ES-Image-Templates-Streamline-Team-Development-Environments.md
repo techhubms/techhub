@@ -12,7 +12,7 @@ date: 2024-12-11 17:00:17 +00:00
 permalink: "/2024-12-11-Dev-Box-Ready-To-Code-Microsofts-1ES-Image-Templates-Streamline-Team-Development-Environments.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["1ES", "Azure", "Azure Bicep", "Azure DevOps", "Azure Image Builder", "CI/CD", "Coding", "Dev Box", "DevCenter", "Developer Productivity", "DevOps", "Engineering@Microsoft", "Environment Automation", "Image Templates", "Microsoft Dev Box", "News", "One Engineering System", "Ready To Code", "Team Customizations", "Template Artifacts"]
-tags_normalized: ["1es", "azure", "azure bicep", "azure devops", "azure image builder", "ci slash cd", "coding", "dev box", "devcenter", "developer productivity", "devops", "engineering at microsoft", "environment automation", "image templates", "microsoft dev box", "news", "one engineering system", "ready to code", "team customizations", "template artifacts"]
+tags_normalized: ["1es", "azure", "azure bicep", "azure devops", "azure image builder", "cislashcd", "coding", "dev box", "devcenter", "developer productivity", "devops", "engineeringatmicrosoft", "environment automation", "image templates", "microsoft dev box", "news", "one engineering system", "ready to code", "team customizations", "template artifacts"]
 ---
 
 In this comprehensive post, Dmitry Goncharenko from Microsoft's 1ES team shares how Ready-To-Code Dev Box image templates are used to standardize and automate development environments, demonstrating practical benefits and sharing sample resources.<!--excerpt_end-->

@@ -12,7 +12,7 @@ feed_url: "https://github.blog/feed/"
 date: 2025-07-01 18:57:22 +00:00
 permalink: "/2025-07-01-From-idea-to-PR-A-guide-to-GitHub-Copilots-agentic-workflows.html"
 tags: ["Agentic AI", "AI", "AI & ML", "Automation", "Chat Modes", "Coding Agents", "Generative AI", "GitHub Copilot", "MCP Server", "News", "Pull Requests", "Software Development"]
-tags_normalized: ["agentic ai", "ai", "ai ml", "automation", "chat modes", "coding agents", "generative ai", "github copilot", "mcp server", "news", "pull requests", "software development"]
+tags_normalized: ["agentic ai", "ai", "ai and ml", "automation", "chat modes", "coding agents", "generative ai", "github copilot", "mcp server", "news", "pull requests", "software development"]
 ---
 
 In this article, Chris Reddington explores how developers can leverage GitHub Copilot’s agentic coding agent, its chat modes, and the remote MCP server to efficiently transform issues into thoroughly tested pull requests. <!--excerpt_end--> The guide avoids unnecessary hype and instead presents clear, actionable steps for maximizing Copilot’s features in real-world scenarios.

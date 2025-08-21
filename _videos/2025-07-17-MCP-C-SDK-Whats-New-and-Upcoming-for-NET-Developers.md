@@ -12,7 +12,7 @@ date: 2025-07-17 06:05:33 +00:00
 permalink: "/2025-07-17-MCP-C-SDK-Whats-New-and-Upcoming-for-NET-Developers.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "AI Integration", "Azure App Service", "C#", "Coding", "Development Tips", "DNX", "MCP", "MCP SDK", "MCP Spec", "Microsoft", "SDK Updates", "Versions", "Videos"]
-tags_normalized: ["net", "ai", "ai integration", "azure app service", "c", "coding", "development tips", "dnx", "mcp", "mcp sdk", "mcp spec", "microsoft", "sdk updates", "versions", "videos"]
+tags_normalized: ["dotnet", "ai", "ai integration", "azure app service", "csharp", "coding", "development tips", "dnx", "mcp", "mcp sdk", "mcp spec", "microsoft", "sdk updates", "versions", "videos"]
 ---
 
 In this expert-led developer session, featuring Bruno Capuano, Mike Kistler, and Stephen Halter, you'll discover the newest additions to the C# MCP SDK, insights into leveraging AI with .NET, and practical guidance for modern Microsoft-centric app development.<!--excerpt_end-->

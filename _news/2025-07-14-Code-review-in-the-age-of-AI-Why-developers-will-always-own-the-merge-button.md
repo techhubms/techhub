@@ -12,7 +12,7 @@ date: 2025-07-14 16:38:03 +00:00
 permalink: "/2025-07-14-Code-review-in-the-age-of-AI-Why-developers-will-always-own-the-merge-button.html"
 viewing_mode: "external"
 tags: ["Agentic Workflows", "AI", "AI & ML", "AI Agents", "AI Assisted Coding", "Automation", "Code Merging", "Code Review", "Coding Workflow", "Collaboration", "Developer Tools", "Generative AI", "GitHub Copilot", "Merge Decisions", "News", "Programming Productivity", "Software Development"]
-tags_normalized: ["agentic workflows", "ai", "ai ml", "ai agents", "ai assisted coding", "automation", "code merging", "code review", "coding workflow", "collaboration", "developer tools", "generative ai", "github copilot", "merge decisions", "news", "programming productivity", "software development"]
+tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai agents", "ai assisted coding", "automation", "code merging", "code review", "coding workflow", "collaboration", "developer tools", "generative ai", "github copilot", "merge decisions", "news", "programming productivity", "software development"]
 ---
 
 Author Elle Shwer discusses the evolving role of GitHub Copilot in assisting with code merging processes, while emphasizing that ultimate control stays with developers. The article offers insights into how intelligent tools can support but not replace human judgement during critical development workflows.<!--excerpt_end-->

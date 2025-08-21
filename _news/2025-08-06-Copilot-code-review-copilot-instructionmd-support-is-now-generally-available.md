@@ -12,7 +12,7 @@ date: 2025-08-06 17:31:54 +00:00
 permalink: "/2025-08-06-Copilot-code-review-copilot-instructionmd-support-is-now-generally-available.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assisted Code Review", "Code Review Automation", "Copilot Code Review", "Copilot Instructions.md", "Developer Tools", "General Availability", "GitHub", "GitHub Copilot", "Natural Language Instructions", "News", "Workflow Customization"]
-tags_normalized: ["ai", "ai assisted code review", "code review automation", "copilot code review", "copilot instructions dot md", "developer tools", "general availability", "github", "github copilot", "natural language instructions", "news", "workflow customization"]
+tags_normalized: ["ai", "ai assisted code review", "code review automation", "copilot code review", "copilot instructionsdotmd", "developer tools", "general availability", "github", "github copilot", "natural language instructions", "news", "workflow customization"]
 ---
 
 Allison announces that copilot-instructions.md support in GitHub Copilot code review is now generally available, empowering developers to customize Copilot's review workflow directly within repositories.<!--excerpt_end-->

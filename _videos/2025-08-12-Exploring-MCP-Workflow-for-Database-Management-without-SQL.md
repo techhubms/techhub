@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-08-12 19:52:53 +00:00
 permalink: "/2025-08-12-Exploring-MCP-Workflow-for-Database-Management-without-SQL.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Azure AI Foundry", "Cloud Computing", "Cloud Tools", "Custom Agents", "Database Management", "Dev", "Development", "Foundry Agent Service", "MCP", "Microsoft", "Microsoft Developer", "Model Context Protocol", "Tech", "Technology", "Videos", "Visual Studio Code"]
-tags_normalized: ["ai", "azure", "azure ai foundry", "cloud computing", "cloud tools", "custom agents", "database management", "dev", "development", "foundry agent service", "mcp", "microsoft", "microsoft developer", "model context protocol", "tech", "technology", "videos", "visual studio code"]
+tags: ["AI", "Azure", "Azure AI Foundry", "Cloud Computing", "Cloud Tools", "Custom Agents", "Database Management", "Dev", "Development", "Foundry Agent Service", "MCP", "Microsoft", "Microsoft Developer", "Tech", "Technology", "Videos", "VS Code"]
+tags_normalized: ["ai", "azure", "azure ai foundry", "cloud computing", "cloud tools", "custom agents", "database management", "dev", "development", "foundry agent service", "mcp", "microsoft", "microsoft developer", "tech", "technology", "videos", "vs code"]
 ---
 
 Microsoft Developer presents an overview of using the Model Context Protocol (MCP) workflow for database management beyond SQL, showing how MCP tools can be integrated within VS Code and Azure AI Foundry Agent Service.<!--excerpt_end-->

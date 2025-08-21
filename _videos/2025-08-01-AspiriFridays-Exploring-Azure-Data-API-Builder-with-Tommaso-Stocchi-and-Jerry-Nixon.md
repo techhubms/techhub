@@ -12,7 +12,7 @@ date: 2025-08-01 21:43:53 +00:00
 permalink: "/2025-08-01-AspiriFridays-Exploring-Azure-Data-API-Builder-with-Tommaso-Stocchi-and-Jerry-Nixon.html"
 categories: ["Azure", "ML"]
 tags: [".NET", "Application Programming Interfaces", "Aspirify", "Azure", "Azure Data API Builder", "Data API", "Jerry Nixon", "Microsoft", "ML", "Tommaso Stocchi", "Videos"]
-tags_normalized: ["net", "application programming interfaces", "aspirify", "azure", "azure data api builder", "data api", "jerry nixon", "microsoft", "ml", "tommaso stocchi", "videos"]
+tags_normalized: ["dotnet", "application programming interfaces", "aspirify", "azure", "azure data api builder", "data api", "jerry nixon", "microsoft", "ml", "tommaso stocchi", "videos"]
 ---
 
 In this AspiriFridays episode, hosts Maddy and Damian are joined by Tommaso Stocchi and Jerry Nixon to dive into Azure Data API Builder. Learn about its features and best practices straight from Microsoft experts.<!--excerpt_end-->

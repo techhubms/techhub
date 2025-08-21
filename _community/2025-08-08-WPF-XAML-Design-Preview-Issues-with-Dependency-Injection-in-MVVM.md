@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-08 01:38:42 +00:00
 permalink: "/2025-08-08-WPF-XAML-Design-Preview-Issues-with-Dependency-Injection-in-MVVM.html"
 categories: ["Coding"]
-tags: [".NET", "C#", "Coding", "Community", "DataContext", "Dependency Injection", "Design Time Data", "IsDesignTimeCreatable", "Microsoft Docs", "Mock Data", "MVVM", "Parameterless Constructor", "StackOverflow", "UserControl", "ViewModel", "Visual Studio", "WPF", "XAML"]
-tags_normalized: ["net", "c", "coding", "community", "datacontext", "dependency injection", "design time data", "isdesigntimecreatable", "microsoft docs", "mock data", "mvvm", "parameterless constructor", "stackoverflow", "usercontrol", "viewmodel", "visual studio", "wpf", "xaml"]
+tags: [".NET", "C#", "Coding", "Community", "DataContext", "Dependency Injection", "Design Time Data", "IsDesignTimeCreatable", "Microsoft Docs", "Mock Data", "MVVM", "Parameterless Constructor", "StackOverflow", "UserControl", "ViewModel", "VS", "WPF", "XAML"]
+tags_normalized: ["dotnet", "csharp", "coding", "community", "datacontext", "dependency injection", "design time data", "isdesigntimecreatable", "microsoft docs", "mock data", "mvvm", "parameterless constructor", "stackoverflow", "usercontrol", "viewmodel", "vs", "wpf", "xaml"]
 ---
 
 nile-code raises a practical WPF/MVVM issue: design previews break when injecting the DataContext from code-behind due to dependency-injected ViewModel constructors. Community members discuss solutions and reference Microsoft documentation and StackOverflow answers.<!--excerpt_end-->

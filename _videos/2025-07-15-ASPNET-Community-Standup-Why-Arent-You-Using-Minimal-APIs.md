@@ -12,7 +12,7 @@ date: 2025-07-15 17:09:35 +00:00
 permalink: "/2025-07-15-ASPNET-Community-Standup-Why-arent-you-using-Minimal-APIs.html"
 categories: ["Coding"]
 tags: [".NET", "API Architecture", "ASP.NET", "ASP.NET Core", "Coding", "Controller Based Apps", "Daniel Roth", "Developer Community", "Mike Kistler", "Minimal APIs", "Minimalapis", "Safia Abdalla", "Videos", "Web APIs", "Web Development"]
-tags_normalized: ["net", "api architecture", "asp dot net", "asp dot net core", "coding", "controller based apps", "daniel roth", "developer community", "mike kistler", "minimal apis", "minimalapis", "safia abdalla", "videos", "web apis", "web development"]
+tags_normalized: ["dotnet", "api architecture", "aspdotnet", "aspdotnet core", "coding", "controller based apps", "daniel roth", "developer community", "mike kistler", "minimal apis", "minimalapis", "safia abdalla", "videos", "web apis", "web development"]
 ---
 
 Hosted by Daniel Roth, Mike Kistler, and Safia Abdalla, this ASP.NET Community Standup delves into the benefits of Minimal APIs and discusses reasons developers may prefer controller-based applications.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2025-07-16 04:23:03 +00:00
 permalink: "/2025-07-16-Centering-a-WPF-TreeViewItem-in-the-TreeView-ScrollViewer.html"
 categories: ["Coding"]
 tags: [".NET", "Application Usability", "BringIntoView", "C#", "Coding", "ContentPresenter", "Helper Methods", "Posts", "ScrollViewer", "TreeView", "UI Development", "Visual Tree", "WPF"]
-tags_normalized: ["net", "application usability", "bringintoview", "c", "coding", "contentpresenter", "helper methods", "posts", "scrollviewer", "treeview", "ui development", "visual tree", "wpf"]
+tags_normalized: ["dotnet", "application usability", "bringintoview", "csharp", "coding", "contentpresenter", "helper methods", "posts", "scrollviewer", "treeview", "ui development", "visual tree", "wpf"]
 ---
 
 In this article, Rick Strahl addresses a common usability issue with WPF's TreeView, offering .NET code and helper methods to properly center selected items and improve user experience.<!--excerpt_end-->

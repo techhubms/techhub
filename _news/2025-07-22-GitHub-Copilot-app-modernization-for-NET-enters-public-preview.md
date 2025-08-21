@@ -12,7 +12,7 @@ date: 2025-07-22 02:36:29 +00:00
 permalink: "/2025-07-22-GitHub-Copilot-app-modernization-for-NET-enters-public-preview.html"
 viewing_mode: "external"
 tags: [".NET", "AI", "AI Tools", "App Modernization", "Assessment", "Azure", "Cloud Migration", "Code Remediation", "Enterprise Migration", "GitHub Copilot", "News", "Validation"]
-tags_normalized: ["net", "ai", "ai tools", "app modernization", "assessment", "azure", "cloud migration", "code remediation", "enterprise migration", "github copilot", "news", "validation"]
+tags_normalized: ["dotnet", "ai", "ai tools", "app modernization", "assessment", "azure", "cloud migration", "code remediation", "enterprise migration", "github copilot", "news", "validation"]
 ---
 
 Authored by Allison, this article explores how GitHub Copilot app modernization for .NET assists enterprises in migrating their applications to Azure. It discusses features such as assessment, code remediation, and validation, all leveraging AI-powered intelligence, and highlights benefits for organizations aiming for efficient and confident migration.<!--excerpt_end-->

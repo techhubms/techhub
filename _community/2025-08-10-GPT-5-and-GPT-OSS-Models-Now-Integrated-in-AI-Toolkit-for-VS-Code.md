@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-10 04:15:00 +00:00
 permalink: "/2025-08-10-GPT-5-and-GPT-OSS-Models-Now-Integrated-in-AI-Toolkit-for-VS-Code.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "AI Toolkit", "Azure", "Azure AI Foundry", "Cloud AI", "Code Generation", "Community", "Edge AI", "GitHub", "GPT 5", "GPT OSS", "JavaScript", "Model Comparison", "Model Deployment", "ONNX Runtime", "OpenAI", "Python", "SDK Snippets", "Visual Studio Code"]
-tags_normalized: ["ai", "ai toolkit", "azure", "azure ai foundry", "cloud ai", "code generation", "community", "edge ai", "github", "gpt 5", "gpt oss", "javascript", "model comparison", "model deployment", "onnx runtime", "openai", "python", "sdk snippets", "visual studio code"]
+tags: ["AI", "AI Toolkit", "Azure", "Azure AI Foundry", "Cloud AI", "Code Generation", "Community", "Edge AI", "GitHub", "GPT 5", "GPT OSS", "JavaScript", "Model Comparison", "Model Deployment", "ONNX Runtime", "OpenAI", "Python", "SDK Snippets", "VS Code"]
+tags_normalized: ["ai", "ai toolkit", "azure", "azure ai foundry", "cloud ai", "code generation", "community", "edge ai", "github", "gpt 5", "gpt oss", "javascript", "model comparison", "model deployment", "onnx runtime", "openai", "python", "sdk snippets", "vs code"]
 ---
 
 junjieli explains how the AI Toolkit v0.18.3 for VS Code brings full support for GPT-5 and GPT OSS models, providing developers with powerful AI integration and deployment features across Azure and local environments.<!--excerpt_end-->

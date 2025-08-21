@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-06 19:24:20 +00:00
 permalink: "/2025-08-06-EF-Core-Database-Table-Naming-Best-Practices.html"
 categories: ["Coding"]
-tags: [".NET", "Attributes", "C#", "Coding", "Community", "Custom Conventions", "Database Design", "DbContext", "Entity Framework Core", "Fluent API", "Infrastructure Code", "Naming Conventions", "PascalCase", "Snake Case", "Table Naming"]
-tags_normalized: ["net", "attributes", "c", "coding", "community", "custom conventions", "database design", "dbcontext", "entity framework core", "fluent api", "infrastructure code", "naming conventions", "pascalcase", "snake case", "table naming"]
+tags: [".NET", "Attributes", "C#", "Coding", "Community", "Custom Conventions", "Database Design", "DbContext", "EF Core", "Fluent API", "Infrastructure Code", "Naming Conventions", "PascalCase", "Snake Case", "Table Naming"]
+tags_normalized: ["dotnet", "attributes", "csharp", "coding", "community", "custom conventions", "database design", "dbcontext", "ef core", "fluent api", "infrastructure code", "naming conventions", "pascalcase", "snake case", "table naming"]
 ---
 
 jemofcourse shares community insights and best practices on naming tables with Entity Framework Core, exploring default behaviors, Fluent API, and naming conventions for database clarity.<!--excerpt_end-->

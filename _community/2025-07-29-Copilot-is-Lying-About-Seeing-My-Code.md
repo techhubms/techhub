@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-29 09:59:08 +00:00
 permalink: "/2025-07-29-Copilot-is-lying-about-seeing-my-code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assistants", "Bug Fixing", "Code Analysis", "Code Completion", "Code Privacy", "Code Suggestion", "Coding", "Community", "GitHub Copilot", "Searchbar", "User Experience", "Visual Studio"]
-tags_normalized: ["ai", "ai assistants", "bug fixing", "code analysis", "code completion", "code privacy", "code suggestion", "coding", "community", "github copilot", "searchbar", "user experience", "visual studio"]
+tags: ["AI", "AI Assistants", "Bug Fixing", "Code Analysis", "Code Completion", "Code Privacy", "Code Suggestion", "Coding", "Community", "GitHub Copilot", "Searchbar", "User Experience", "VS"]
+tags_normalized: ["ai", "ai assistants", "bug fixing", "code analysis", "code completion", "code privacy", "code suggestion", "coding", "community", "github copilot", "searchbar", "user experience", "vs"]
 ---
 
 KingPvzYT shares their doubts about GitHub Copilot's privacy claims after Copilot seemed to reference their exact code. This article delves into the experience and questions raised around code context and transparency.<!--excerpt_end-->

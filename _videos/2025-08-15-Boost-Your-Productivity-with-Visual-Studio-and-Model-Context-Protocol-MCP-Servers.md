@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-08-15 20:17:18 +00:00
 permalink: "/2025-08-15-Boost-Your-Productivity-with-Visual-Studio-and-Model-Context-Protocol-MCP-Servers.html"
 categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Ready APIs", "AI", "AI Development", "Azure", "Azure AI Foundry", "Cloud Computing", "Coding", "Custom Agents", "Dev", "Developer Productivity", "Development", "Foundry Agent Service", "IDE Tooling", "MCP", "MCP Servers", "Microsoft", "Microsoft Cloud", "Model Context Protocol", "Tech", "Technology", "Videos", "Visual Studio", "Visual Studio Code", "VS Code Extensions"]
-tags_normalized: ["agent ready apis", "ai", "ai development", "azure", "azure ai foundry", "cloud computing", "coding", "custom agents", "dev", "developer productivity", "development", "foundry agent service", "ide tooling", "mcp", "mcp servers", "microsoft", "microsoft cloud", "model context protocol", "tech", "technology", "videos", "visual studio", "visual studio code", "vs code extensions"]
+tags: ["Agent Ready APIs", "AI", "AI Development", "Azure", "Azure AI Foundry", "Cloud Computing", "Coding", "Custom Agents", "Dev", "Developer Productivity", "Development", "Foundry Agent Service", "IDE Tooling", "MCP", "MCP Servers", "Microsoft", "Microsoft Cloud", "Tech", "Technology", "Videos", "VS", "VS Code", "VS Code Extensions"]
+tags_normalized: ["agent ready apis", "ai", "ai development", "azure", "azure ai foundry", "cloud computing", "coding", "custom agents", "dev", "developer productivity", "development", "foundry agent service", "ide tooling", "mcp", "mcp servers", "microsoft", "microsoft cloud", "tech", "technology", "videos", "vs", "vs code", "vs code extensions"]
 ---
 
 Microsoft Developer presents a session on integrating Model Context Protocol (MCP) servers with Visual Studio and VS Code, demonstrating new AI-driven development tools for enhanced productivity.<!--excerpt_end-->

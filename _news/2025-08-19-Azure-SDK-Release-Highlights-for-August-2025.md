@@ -12,7 +12,7 @@ date: 2025-08-19 18:43:38 +00:00
 permalink: "/2025-08-19-Azure-SDK-Release-Highlights-for-August-2025.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "AI", "AI Projects", "Azure", "Azure AI Foundry", "Azure OpenAI Service", "Azure SDK", "Carbon Optimization", "Client Libraries", "Coding", "Data Movement", "Go", "JavaScript", "Management Libraries", "Monitor Query Logs", "Monitor Query Metrics", "News", "Python", "Recovery Services", "Release Notes", "Resource Management", "Rust", "SDK", "Storage Discovery"]
-tags_normalized: ["net", "ai", "ai projects", "azure", "azure ai foundry", "azure openai service", "azure sdk", "carbon optimization", "client libraries", "coding", "data movement", "go", "javascript", "management libraries", "monitor query logs", "monitor query metrics", "news", "python", "recovery services", "release notes", "resource management", "rust", "sdk", "storage discovery"]
+tags_normalized: ["dotnet", "ai", "ai projects", "azure", "azure ai foundry", "azure openai service", "azure sdk", "carbon optimization", "client libraries", "coding", "data movement", "go", "javascript", "management libraries", "monitor query logs", "monitor query metrics", "news", "python", "recovery services", "release notes", "resource management", "rust", "sdk", "storage discovery"]
 ---
 
 Ronnie Geraghty announces the latest Azure SDK updates, highlighting new AI Projects libraries, data movement improvements for .NET, and resource management tools for multiple programming languages. This release is focused on practical features for Azure developers.<!--excerpt_end-->

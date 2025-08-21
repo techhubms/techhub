@@ -11,8 +11,8 @@ feed_url: "https://github.blog/feed/"
 date: 2025-08-12 13:52:49 +00:00
 permalink: "/2025-08-12-Why-We-Open-Sourced-Our-MCP-Server-and-What-It-Means-for-Developers.html"
 categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Integration", "APIs", "Architecture", "Automation", "Chatbots", "Coding", "Copilot", "DevOps", "DevOps Tools", "GitHub Actions", "GitHub MCP Server", "GitHub Podcast", "LLMs", "Maintainers", "MCP", "Model Context Protocol", "Natural Language Processing", "News", "Open Source", "Visual Studio Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai integration", "apis", "architecture", "automation", "chatbots", "coding", "copilot", "devops", "devops tools", "github actions", "github mcp server", "github podcast", "llms", "maintainers", "mcp", "model context protocol", "natural language processing", "news", "open source", "visual studio code", "vs code extensions"]
+tags: ["AI", "AI Integration", "APIs", "Architecture", "Automation", "Chatbots", "Coding", "Copilot", "DevOps", "DevOps Tools", "GitHub Actions", "GitHub MCP Server", "GitHub Podcast", "LLMs", "Maintainers", "MCP", "Natural Language Processing", "News", "Open Source", "VS Code", "VS Code Extensions"]
+tags_normalized: ["ai", "ai integration", "apis", "architecture", "automation", "chatbots", "coding", "copilot", "devops", "devops tools", "github actions", "github mcp server", "github podcast", "llms", "maintainers", "mcp", "natural language processing", "news", "open source", "vs code", "vs code extensions"]
 ---
 
 Kedasha Kerr explains how GitHub’s newly open-sourced MCP server bridges AI tools and GitHub, enabling rich, automated workflows and natural-language interactions for developers.<!--excerpt_end-->

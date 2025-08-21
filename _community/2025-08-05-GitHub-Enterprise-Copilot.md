@@ -12,7 +12,7 @@ date: 2025-08-05 00:50:53 +00:00
 permalink: "/2025-08-05-GitHub-Enterprise-Copilot.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Automation", "CI/CD Pipelines", "Codespaces", "Community", "Consulting Firm", "Deployment", "DevOps", "Digital Ocean", "GitHub Copilot", "GitHub Enterprise", "Pipeline Minutes", "Subscription Cost"]
-tags_normalized: ["ai", "automation", "ci slash cd pipelines", "codespaces", "community", "consulting firm", "deployment", "devops", "digital ocean", "github copilot", "github enterprise", "pipeline minutes", "subscription cost"]
+tags_normalized: ["ai", "automation", "cislashcd pipelines", "codespaces", "community", "consulting firm", "deployment", "devops", "digital ocean", "github copilot", "github enterprise", "pipeline minutes", "subscription cost"]
 ---
 
 In this post, SalishSeaview outlines their experience setting up GitHub Enterprise with Copilot for a consulting firm, touching on pricing, Codespaces, and CI/CD pipelines.<!--excerpt_end-->

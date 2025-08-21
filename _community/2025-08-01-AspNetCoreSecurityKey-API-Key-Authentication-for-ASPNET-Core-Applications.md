@@ -12,7 +12,7 @@ date: 2025-08-01 13:50:31 +00:00
 permalink: "/2025-08-01-AspNetCoreSecurityKey-API-Key-Authentication-for-ASPNET-Core-Applications.html"
 categories: ["Coding", "Security"]
 tags: ["API Key Authentication", "ASP.NET Core", "Attribute Based Security", "C#", "Coding", "Community", "Custom Validation", "ISecurityKeyValidator", "Middleware", "Minimal APIs", "NuGet Package", "OpenAPI", "Security", "Swagger"]
-tags_normalized: ["api key authentication", "asp dot net core", "attribute based security", "c", "coding", "community", "custom validation", "isecuritykeyvalidator", "middleware", "minimal apis", "nuget package", "openapi", "security", "swagger"]
+tags_normalized: ["api key authentication", "aspdotnet core", "attribute based security", "csharp", "coding", "community", "custom validation", "isecuritykeyvalidator", "middleware", "minimal apis", "nuget package", "openapi", "security", "swagger"]
 ---
 
 Authored by pwelter34, this article introduces AspNetCore.SecurityKey, a robust API key authentication library for ASP.NET Core. It examines installation steps, configuration options, and advanced customization for securing .NET applications.<!--excerpt_end-->

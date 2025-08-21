@@ -8,8 +8,8 @@ viewing_mode: "internal"
 date: 2025-08-04 09:00:00 +00:00
 permalink: "/2025-08-04-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: [".NET Aspire", "A2A", "Agent Orchestration", "AI", "AI Agents", "Azure", "C#", "Cloud Security", "Coding", "Developer Productivity", "DevOps", "GitHub Copilot", "Identity Management", "MCP", "ML", "Prompt Engineering", "Roundups", "Security", "TypeScript", "Visual Studio Code"]
-tags_normalized: ["net aspire", "a2a", "agent orchestration", "ai", "ai agents", "azure", "c", "cloud security", "coding", "developer productivity", "devops", "github copilot", "identity management", "mcp", "ml", "prompt engineering", "roundups", "security", "typescript", "visual studio code"]
+tags: [".NET Aspire", "A2A", "Agent Orchestration", "AI", "AI Agents", "Azure", "C#", "Cloud Security", "Coding", "Developer Productivity", "DevOps", "GitHub Copilot", "Identity Management", "MCP", "ML", "Prompt Engineering", "Roundups", "Security", "TypeScript", "VS Code"]
+tags_normalized: ["dotnet aspire", "a2a", "agent orchestration", "ai", "ai agents", "azure", "csharp", "cloud security", "coding", "developer productivity", "devops", "github copilot", "identity management", "mcp", "ml", "prompt engineering", "roundups", "security", "typescript", "vs code"]
 ---
 
 Welcome to this week’s tech roundup, where AI-driven developer tools and cloud innovation take center stage. GitHub Copilot has not only solidified its role as the premier AI companion for developers but has overtaken ChatGPT as the most relied-upon assistant in modern coding workflows. With new persistent memory features, expanded in-chat capabilities, and deep community engagement, Copilot is rapidly accelerating productivity, code quality, and automation for individuals and teams alike. Real-world stories—from social impact nonprofits to enterprise billing rollouts—highlight just how transformative these advancements are becoming.

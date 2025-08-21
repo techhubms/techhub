@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-07-28 16:01:31 +00:00
 permalink: "/2025-07-28-Build-AI-Agents-in-VS-Code-4-Hands-On-Labs-with-MCP-AI-Toolkit.html"
 categories: ["AI", "Coding"]
-tags: ["AI", "AI Agents", "AI Toolkit", "Coding", "Custom Server Development", "Developer Tools", "MCP", "Model Context Protocol", "Practical Labs", "Prompt Engineering", "Videos", "Visual Studio Code", "Web Integration"]
-tags_normalized: ["ai", "ai agents", "ai toolkit", "coding", "custom server development", "developer tools", "mcp", "model context protocol", "practical labs", "prompt engineering", "videos", "visual studio code", "web integration"]
+tags: ["AI", "AI Agents", "AI Toolkit", "Coding", "Custom Server Development", "Developer Tools", "MCP", "Practical Labs", "Prompt Engineering", "Videos", "VS Code", "Web Integration"]
+tags_normalized: ["ai", "ai agents", "ai toolkit", "coding", "custom server development", "developer tools", "mcp", "practical labs", "prompt engineering", "videos", "vs code", "web integration"]
 ---
 
 Microsoft Developer presents a practical video guide on building AI agents in Visual Studio Code using the AI Toolkit and Model Context Protocol. Discover how to extend your development workflow through four hands-on labs.<!--excerpt_end-->

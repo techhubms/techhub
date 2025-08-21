@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?cate
 date: 2025-08-19 16:26:20 +00:00
 permalink: "/2025-08-19-Generating-Classes-with-Custom-Naming-Conventions-Using-GitHub-Copilot-and-a-Custom-MCP-Server.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "ASP.NET Core", "Azure", "Azure App Service", "Business Logic", "C#", "Class Generation", "Coding", "Community", "Copilot Agent", "Dependency Injection", "Enterprise Compliance", "ExpressRoute", "GitHub Copilot", "GitHub Spark", "MCP Server", "Model Context Protocol", "Naming Convention", "NuGet", "Virtual Network", "Visual Studio", "Visual Studio Code", "Workspace Settings"]
-tags_normalized: ["net", "ai", "asp dot net core", "azure", "azure app service", "business logic", "c", "class generation", "coding", "community", "copilot agent", "dependency injection", "enterprise compliance", "expressroute", "github copilot", "github spark", "mcp server", "model context protocol", "naming convention", "nuget", "virtual network", "visual studio", "visual studio code", "workspace settings"]
+tags: [".NET", "AI", "ASP.NET Core", "Azure", "Azure App Service", "Business Logic", "C#", "Class Generation", "Coding", "Community", "Copilot Agent", "Dependency Injection", "Enterprise Compliance", "ExpressRoute", "GitHub Copilot", "GitHub Spark", "MCP", "MCP Server", "Naming Convention", "NuGet", "Virtual Network", "VS", "VS Code", "Workspace Settings"]
+tags_normalized: ["dotnet", "ai", "aspdotnet core", "azure", "azure app service", "business logic", "csharp", "class generation", "coding", "community", "copilot agent", "dependency injection", "enterprise compliance", "expressroute", "github copilot", "github spark", "mcp", "mcp server", "naming convention", "nuget", "virtual network", "vs", "vs code", "workspace settings"]
 ---
 
 daisami explains how to set up a custom MCP server with ASP.NET Core and integrate it with GitHub Copilot Agent, enabling developers to automate naming conventions and customize agent behavior for enterprise .NET projects.<!--excerpt_end-->

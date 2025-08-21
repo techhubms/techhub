@@ -12,7 +12,7 @@ date: 2025-08-02 20:00:17 +00:00
 permalink: "/2025-08-02-C-Inheritance-Puzzle.html"
 categories: ["Coding"]
 tags: ["Base Class", "C#", "Code Puzzle", "Coding", "Community", "Console Output", "Constructor", "Derived Class", "Inheritance", "Method Overriding", "Object Oriented Programming", "Virtual Methods"]
-tags_normalized: ["base class", "c", "code puzzle", "coding", "community", "console output", "constructor", "derived class", "inheritance", "method overriding", "object oriented programming", "virtual methods"]
+tags_normalized: ["base class", "csharp", "code puzzle", "coding", "community", "console output", "constructor", "derived class", "inheritance", "method overriding", "object oriented programming", "virtual methods"]
 ---
 
 calorap99 shares a challenging C# inheritance puzzle, inviting readers to predict the console output of a code snippet involving constructors and method overriding.<!--excerpt_end-->

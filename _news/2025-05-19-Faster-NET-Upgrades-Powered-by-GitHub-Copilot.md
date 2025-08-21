@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
 date: 2025-05-19 16:00:43 +00:00
 permalink: "/2025-05-19-Faster-NET-Upgrades-Powered-by-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", ".NET Upgrade", "AI", "AI Powered Upgrades", "App Modernization", "Artificial Intelligence", "Code Transformation", "Coding", "Copilot Agent Mode", "Development Tools", "Git Integration", "GitHub Copilot", "Manual Change Learning", "Modernization", "News", "Unit Test Validation", "Upgrade", "Upgrade Workflows", "Visual Studio", "Workflow Automation"]
-tags_normalized: ["net", "net upgrade", "ai", "ai powered upgrades", "app modernization", "artificial intelligence", "code transformation", "coding", "copilot agent mode", "development tools", "git integration", "github copilot", "manual change learning", "modernization", "news", "unit test validation", "upgrade", "upgrade workflows", "visual studio", "workflow automation"]
+tags: [".NET", ".NET Upgrade", "AI", "AI Powered Upgrades", "App Modernization", "Code Transformation", "Coding", "Copilot Agent Mode", "Development Tools", "Git Integration", "GitHub Copilot", "Manual Change Learning", "Modernization", "News", "Unit Test Validation", "Upgrade", "Upgrade Workflows", "VS", "Workflow Automation"]
+tags_normalized: ["dotnet", "dotnet upgrade", "ai", "ai powered upgrades", "app modernization", "code transformation", "coding", "copilot agent mode", "development tools", "git integration", "github copilot", "manual change learning", "modernization", "news", "unit test validation", "upgrade", "upgrade workflows", "vs", "workflow automation"]
 ---
 
 In this article, McKenna Barlow introduces the public preview of GitHub Copilot app modernization – Upgrade for .NET, detailing how developers can upgrade applications with AI-assisted tools in Visual Studio.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://github.blog/feed/"
 date: 2025-07-25 17:12:02 +00:00
 permalink: "/2025-07-25-How-to-Build-Secure-and-Scalable-Remote-MCP-Servers.html"
 categories: ["AI", "Security", "Azure"]
-tags: ["AI", "AI & ML", "AI Agents", "AI Gateway", "APIs", "Authorization", "Azure", "Azure Key Vault", "Distributed Tracing", "Generative AI", "MCP", "Model Context Protocol", "Multi Tenancy", "News", "OAuth 2.1", "OpenTelemetry", "Secrets Management", "Security", "Security Best Practices", "Token Validation"]
-tags_normalized: ["ai", "ai ml", "ai agents", "ai gateway", "apis", "authorization", "azure", "azure key vault", "distributed tracing", "generative ai", "mcp", "model context protocol", "multi tenancy", "news", "oauth 2 dot 1", "opentelemetry", "secrets management", "security", "security best practices", "token validation"]
+tags: ["AI", "AI & ML", "AI Agents", "AI Gateway", "APIs", "Authorization", "Azure", "Azure Key Vault", "Distributed Tracing", "Generative AI", "MCP", "Multi Tenancy", "News", "OAuth 2.1", "OpenTelemetry", "Secrets Management", "Security", "Security Best Practices", "Token Validation"]
+tags_normalized: ["ai", "ai and ml", "ai agents", "ai gateway", "apis", "authorization", "azure", "azure key vault", "distributed tracing", "generative ai", "mcp", "multi tenancy", "news", "oauth 2dot1", "opentelemetry", "secrets management", "security", "security best practices", "token validation"]
 ---
 
 Authored by Den Delimarsky, this article offers a thorough walkthrough for developers on building secure, scalable MCP servers. It focuses on robust security, authorization, secrets management, and architectural practices needed to safely enable AI agent connectivity and operations.<!--excerpt_end-->

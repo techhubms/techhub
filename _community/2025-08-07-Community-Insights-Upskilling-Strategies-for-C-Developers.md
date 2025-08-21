@@ -12,7 +12,7 @@ date: 2025-08-07 02:45:02 +00:00
 permalink: "/2025-08-07-Community-Insights-Upskilling-Strategies-for-C-Developers.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 8", "Advanced Concepts", "Async/await", "Books", "C#", "Coding", "Community", "Event Driven Architecture", "Framework Design Guide", "Functional Programming", "GitHub Exploration", "Learning Strategies", "Pluralsight", "Practice", "RavenDB", "Side Projects", "The C# Player's Guide", "Upskilling", "Vanilla C#", "YouTube Teaching"]
-tags_normalized: ["net", "net 8", "advanced concepts", "async slash await", "books", "c", "coding", "community", "event driven architecture", "framework design guide", "functional programming", "github exploration", "learning strategies", "pluralsight", "practice", "ravendb", "side projects", "the c sharp players guide", "upskilling", "vanilla c", "youtube teaching"]
+tags_normalized: ["dotnet", "dotnet 8", "advanced concepts", "asyncslashawait", "books", "csharp", "coding", "community", "event driven architecture", "framework design guide", "functional programming", "github exploration", "learning strategies", "pluralsight", "practice", "ravendb", "side projects", "the csharp players guide", "upskilling", "vanilla csharp", "youtube teaching"]
 ---
 
 Ok_Finish_1661 and fellow community members discuss diverse strategies for improving C# and .NET skills, recommending books, side projects, teaching, and advanced topic exploration.<!--excerpt_end-->

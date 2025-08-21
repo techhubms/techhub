@@ -12,7 +12,7 @@ date: 2025-08-04 15:00:00 +00:00
 permalink: "/2025-08-04-Inclusive-communication-with-Sign-Language-Mode-in-Microsoft-Teams.html"
 categories: ["AI"]
 tags: ["Accessibility", "AI", "AI Powered Features", "Assistive Technology", "Community", "D/HH", "Deaf", "Inclusive Design", "Interpreter", "Meeting Experience", "Microsoft Teams", "Sign Language Detection", "Sign Language Mode", "Video Quality"]
-tags_normalized: ["accessibility", "ai", "ai powered features", "assistive technology", "community", "d slash hh", "deaf", "inclusive design", "interpreter", "meeting experience", "microsoft teams", "sign language detection", "sign language mode", "video quality"]
+tags_normalized: ["accessibility", "ai", "ai powered features", "assistive technology", "community", "dslashhh", "deaf", "inclusive design", "interpreter", "meeting experience", "microsoft teams", "sign language detection", "sign language mode", "video quality"]
 ---
 
 Authored by KerryPerezHeffernan, this article introduces Sign Language Mode in Microsoft Teams, detailing features and AI-powered advancements to improve meeting accessibility for the Deaf and hard-of-hearing community.<!--excerpt_end-->

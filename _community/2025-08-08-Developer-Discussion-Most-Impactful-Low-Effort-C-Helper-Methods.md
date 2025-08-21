@@ -12,7 +12,7 @@ date: 2025-08-08 10:28:57 +00:00
 permalink: "/2025-08-08-Developer-Discussion-Most-Impactful-Low-Effort-C-Helper-Methods.html"
 categories: ["Coding"]
 tags: [".NET", "Async/await", "C#", "Choose", "Code Readability", "Coding", "Community", "DateTime Helpers", "Developer Tips", "Extension Methods", "Helper Methods", "IEnumerable", "IsIn", "IsNullOrWhiteSpace", "LINQ", "String.join", "Task Parallelism", "Utilities"]
-tags_normalized: ["net", "async slash await", "c", "choose", "code readability", "coding", "community", "datetime helpers", "developer tips", "extension methods", "helper methods", "ienumerable", "isin", "isnullorwhitespace", "linq", "string dot join", "task parallelism", "utilities"]
+tags_normalized: ["dotnet", "asyncslashawait", "csharp", "choose", "code readability", "coding", "community", "datetime helpers", "developer tips", "extension methods", "helper methods", "ienumerable", "isin", "isnullorwhitespace", "linq", "stringdotjoin", "task parallelism", "utilities"]
 ---
 
 zigs leads a community discussion exploring the most effective helper methods and C# extension patterns, sharing useful code snippets that simplify .NET development workflows.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0S
 date: 2025-08-07 17:44:15 +00:00
 permalink: "/2025-08-07-VS-Code-Live-Highlights-from-the-v1103-Release.html"
 categories: ["Coding"]
-tags: ["Code", "Code Demo", "Code Editor", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "Developercommunity", "Developertools", "Live Q&A", "Microsoft", "New Features", "Newfeatures", "Productivity", "Release Highlights", "Software Development", "Softwaredeveloper", "Videos", "Visual Studio Code", "Visualstudiocode", "VS Code V1.103", "Vscoderelease"]
-tags_normalized: ["code", "code demo", "code editor", "coding", "demo", "developer", "developer community", "developer tools", "developercommunity", "developertools", "live q and a", "microsoft", "new features", "newfeatures", "productivity", "release highlights", "software development", "softwaredeveloper", "videos", "visual studio code", "visualstudiocode", "vs code v1 dot 103", "vscoderelease"]
+tags: ["Code", "Code Demo", "Code Editor", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "Live Q&A", "Microsoft", "New Features", "Newfeatures", "Productivity", "Release Highlights", "Software Developer", "Software Development", "Videos", "VS Code", "VS Code V1.103", "Vscoderelease"]
+tags_normalized: ["code", "code demo", "code editor", "coding", "demo", "developer", "developer community", "developer tools", "live qanda", "microsoft", "new features", "newfeatures", "productivity", "release highlights", "software developer", "software development", "videos", "vs code", "vs code v1dot103", "vscoderelease"]
 ---
 
 Join Olivia McVicker and the Visual Studio Code team for a live walkthrough of new features in the July v1.103 release, including demos and Q&A for developers.<!--excerpt_end-->

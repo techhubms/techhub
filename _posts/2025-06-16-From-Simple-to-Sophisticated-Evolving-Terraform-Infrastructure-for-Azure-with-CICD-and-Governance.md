@@ -12,7 +12,7 @@ date: 2025-06-16 05:00:00 +00:00
 permalink: "/2025-06-16-From-Simple-to-Sophisticated-Evolving-Terraform-Infrastructure-for-Azure-with-CICD-and-Governance.html"
 categories: ["Azure", "DevOps"]
 tags: ["Automation", "Azure", "CI/CD", "Cost Management", "DevOps", "Drift Detection", "Environment Separation", "GitHub", "GitHub Actions", "Governance", "IaC", "Modules", "Naming Conventions", "Policy as Code", "Posts", "Terraform", "Terratest", "Testing"]
-tags_normalized: ["automation", "azure", "ci slash cd", "cost management", "devops", "drift detection", "environment separation", "github", "github actions", "governance", "iac", "modules", "naming conventions", "policy as code", "posts", "terraform", "terratest", "testing"]
+tags_normalized: ["automation", "azure", "cislashcd", "cost management", "devops", "drift detection", "environment separation", "github", "github actions", "governance", "iac", "modules", "naming conventions", "policy as code", "posts", "terraform", "terratest", "testing"]
 ---
 
 In this comprehensive guide, Hidde de Smet documents the step-by-step evolution of Terraform infrastructure for Azure. The post provides real-world insights and actionable patterns for teams modernizing their infrastructure-as-code, from basic setup to advanced automation and governance.<!--excerpt_end-->

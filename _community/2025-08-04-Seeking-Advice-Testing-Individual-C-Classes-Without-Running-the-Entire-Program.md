@@ -12,7 +12,7 @@ date: 2025-08-04 13:18:37 +00:00
 permalink: "/2025-08-04-Seeking-Advice-Testing-Individual-C-Classes-Without-Running-the-Entire-Program.html"
 categories: ["Coding"]
 tags: [".NET Fiddle", "C#", "Class Testing", "Code Testing", "Coding", "Community", "Debugging", "Development Workflow", "Intellisense", "Interactive Coding", "Lambda Expressions", "Project Structure"]
-tags_normalized: ["net fiddle", "c", "class testing", "code testing", "coding", "community", "debugging", "development workflow", "intellisense", "interactive coding", "lambda expressions", "project structure"]
+tags_normalized: ["dotnet fiddle", "csharp", "class testing", "code testing", "coding", "community", "debugging", "development workflow", "intellisense", "interactive coding", "lambda expressions", "project structure"]
 ---
 
 RutabagaJumpy3956 shares their challenges with testing C# code segments without executing the entire program and seeks advice from the community about better approaches.<!--excerpt_end-->

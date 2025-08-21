@@ -12,7 +12,7 @@ date: 2025-08-04 14:47:40 +00:00
 permalink: "/2025-08-04-Secret-Store-Pattern-in-Azure-Using-Secure-Vaults-for-Credentials-and-Secrets.html"
 categories: ["Azure", "Coding", "Security"]
 tags: ["Access Control", "App Configuration", "Application Security", "Architecture", "Audit Logging", "Azure", "Azure CLI", "Azure Key Vault", "Azure SDK", "C#", "Centralized Vault", "Cloud Security", "Coding", "Least Privilege", "Managed Identities", "Posts", "Runtime Secrets", "Secret Store Pattern", "Secrets Management", "Secure Storage", "Security", "Solution Architecture"]
-tags_normalized: ["access control", "app configuration", "application security", "architecture", "audit logging", "azure", "azure cli", "azure key vault", "azure sdk", "c", "centralized vault", "cloud security", "coding", "least privilege", "managed identities", "posts", "runtime secrets", "secret store pattern", "secrets management", "secure storage", "security", "solution architecture"]
+tags_normalized: ["access control", "app configuration", "application security", "architecture", "audit logging", "azure", "azure cli", "azure key vault", "azure sdk", "csharp", "centralized vault", "cloud security", "coding", "least privilege", "managed identities", "posts", "runtime secrets", "secret store pattern", "secrets management", "secure storage", "security", "solution architecture"]
 ---
 
 Dellenny details how to implement the Secret Store Pattern in Azure, guiding developers to use Azure Key Vault for managing credentials and secrets securely in cloud-native applications.<!--excerpt_end-->

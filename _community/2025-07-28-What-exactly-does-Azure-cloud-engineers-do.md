@@ -12,7 +12,7 @@ date: 2025-07-28 18:59:43 +00:00
 permalink: "/2025-07-28-What-exactly-does-Azure-cloud-engineers-do.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", "APIs", "Azure", "Azure Certification", "Azure Functions", "C#", "Career Transition", "Cloud Development", "Cloud Engineer", "Cloud Migration", "Coding", "Community", "DevOps"]
-tags_normalized: ["net", "apis", "azure", "azure certification", "azure functions", "c", "career transition", "cloud development", "cloud engineer", "cloud migration", "coding", "community", "devops"]
+tags_normalized: ["dotnet", "apis", "azure", "azure certification", "azure functions", "csharp", "career transition", "cloud development", "cloud engineer", "cloud migration", "coding", "community", "devops"]
 ---
 
 Author curious_monk77, a C# .NET developer exploring Azure, asks for advice on transitioning to a cloud engineer role and seeks insights into daily activities and skills relevant for Azure platform specialists.<!--excerpt_end-->

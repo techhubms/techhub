@@ -11,8 +11,8 @@ feed_url: "https://github.blog/feed/"
 date: 2025-08-08 16:00:00 +00:00
 permalink: "/2025-08-08-How-to-Use-GitHub-Copilot-to-Level-Up-Your-Code-Reviews-and-Pull-Requests.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agentic Workflows", "AI", "AI & ML", "AI Coding Tools", "Best Practices", "Code Review", "Coding", "Developer Productivity", "Development Lifecycle", "DevOps", "GitHub Actions", "GitHub Copilot", "Go", "Markdown Formatting", "News", "Pull Requests", "Refactoring Suggestions", "Ruby", "Software Development", "TypeScript", "Visual Studio Code", "Workflow Automation"]
-tags_normalized: ["agentic workflows", "ai", "ai ml", "ai coding tools", "best practices", "code review", "coding", "developer productivity", "development lifecycle", "devops", "github actions", "github copilot", "go", "markdown formatting", "news", "pull requests", "refactoring suggestions", "ruby", "software development", "typescript", "visual studio code", "workflow automation"]
+tags: ["Agentic Workflows", "AI", "AI & ML", "AI Coding Tools", "Best Practices", "Code Review", "Coding", "Developer Productivity", "Development Lifecycle", "DevOps", "GitHub Actions", "GitHub Copilot", "Go", "Markdown Formatting", "News", "Pull Requests", "Refactoring Suggestions", "Ruby", "Software Development", "TypeScript", "VS Code", "Workflow Automation"]
+tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai coding tools", "best practices", "code review", "coding", "developer productivity", "development lifecycle", "devops", "github actions", "github copilot", "go", "markdown formatting", "news", "pull requests", "refactoring suggestions", "ruby", "software development", "typescript", "vs code", "workflow automation"]
 ---
 
 Melissa Pastore walks through hands-on methods for using GitHub Copilot to streamline code reviews and pull requests, offering actionable workflow tips and Copilot prompt examples based on her engineering experience at GitHub.<!--excerpt_end-->

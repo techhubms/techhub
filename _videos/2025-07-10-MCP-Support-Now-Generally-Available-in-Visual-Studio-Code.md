@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0S
 date: 2025-07-10 21:30:10 +00:00
 permalink: "/2025-07-10-MCP-Support-Now-Generally-Available-in-Visual-Studio-Code.html"
 categories: ["AI"]
-tags: ["Agent Mode", "AI", "Developer Productivity", "Full Spec Support", "IDE Integration", "MCP", "MCP Support", "Microsoft Copilot Protocol", "Server Extensibility", "Videos", "Visual Studio Code", "VS Code Extensions"]
-tags_normalized: ["agent mode", "ai", "developer productivity", "full spec support", "ide integration", "mcp", "mcp support", "microsoft copilot protocol", "server extensibility", "videos", "visual studio code", "vs code extensions"]
+tags: ["Agent Mode", "AI", "Developer Productivity", "Full Spec Support", "IDE Integration", "MCP", "MCP Support", "Microsoft Copilot Protocol", "Server Extensibility", "Videos", "VS Code", "VS Code Extensions"]
+tags_normalized: ["agent mode", "ai", "developer productivity", "full spec support", "ide integration", "mcp", "mcp support", "microsoft copilot protocol", "server extensibility", "videos", "vs code", "vs code extensions"]
 ---
 
 Visual Studio Code announces the general availability of MCP support. This update, shared by the Visual Studio Code team, brings full spec compatibility and agent mode extensibility to the popular editor.<!--excerpt_end-->

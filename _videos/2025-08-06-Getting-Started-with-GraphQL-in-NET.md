@@ -12,7 +12,7 @@ date: 2025-08-06 11:00:58 +00:00
 permalink: "/2025-08-06-Getting-Started-with-GraphQL-in-NET.html"
 categories: ["Coding"]
 tags: [".NET", "API Development", "ASP.NET Core", "Backend Development", "C#", "Coding", "GraphQL", "GraphQL API", "HotChocolate", "Michael Staib", "Microsoft", "Nick Chapsas", "Videos"]
-tags_normalized: ["net", "api development", "asp dot net core", "backend development", "c", "coding", "graphql", "graphql api", "hotchocolate", "michael staib", "microsoft", "nick chapsas", "videos"]
+tags_normalized: ["dotnet", "api development", "aspdotnet core", "backend development", "csharp", "coding", "graphql", "graphql api", "hotchocolate", "michael staib", "microsoft", "nick chapsas", "videos"]
 ---
 
 Nick Chapsas introduces Michael Staib as he demonstrates how to create GraphQL APIs in .NET using the HotChocolate library, helping developers start working with GraphQL in a Microsoft ecosystem.<!--excerpt_end-->

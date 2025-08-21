@@ -12,7 +12,7 @@ date: 2025-07-29 16:35:03 +00:00
 permalink: "/2025-07-29-On-NET-Live-Supercharge-your-SQL-Development-with-Modern-NET.html"
 categories: ["Coding", "ML"]
 tags: [".NET", ".NET Build SDK", "Build Validation", "Coding", "Cross Platform", "Global Tool", "ML", "NuGet", "Software Development", "SQL", "SQL Server", "Static Code Analysis", "Videos"]
-tags_normalized: ["net", "net build sdk", "build validation", "coding", "cross platform", "global tool", "ml", "nuget", "software development", "sql", "sql server", "static code analysis", "videos"]
+tags_normalized: ["dotnet", "dotnet build sdk", "build validation", "coding", "cross platform", "global tool", "ml", "nuget", "software development", "sql", "sql server", "static code analysis", "videos"]
 ---
 
 In this video, Erik Ejlskov Jensen demonstrates how developers can leverage .NET tools and modern workflows to improve SQL Server development across platforms.<!--excerpt_end-->
