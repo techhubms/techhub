@@ -7094,5 +7094,17 @@
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-08-20-sunset-notice-copilot-knowledge-bases",
     "timestamp": "2025-08-20 23:12:22 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-workspace-level-private-link-preview/",
+    "timestamp": "2025-08-21 00:54:56 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' because the content focuses on integrating Azure Private Link—an Azure networking service—at the Fabric workspace level (Azure inclusion rule 1). Assigned 'Security' because the core focus is on improving network isolation, privacy, and regulatory compliance for Microsoft Fabric using security controls (Security inclusion rules 1, 4, 9). Did not assign 'ML', 'AI', 'Coding', 'DevOps', or 'GitHub Copilot' since the post is not about machine learning, AI integration, code-level development, DevOps processes, or GitHub Copilot. No generic exclusion rules applied as this is an official technical announcement targeting IT and data professionals."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://weblog.west-wind.com/posts/2025/Aug/20/Using-the-new-WebView2-AllowHostInputProcessing-Keyboard-Mapping-Feature",
+    "timestamp": "2025-08-21 00:55:38 +00:00",
+    "reason": "Succesfully added: I assigned the 'Coding' category only. The post is a deep, hands-on guide about solving keyboard handling issues in Microsoft's WebView2 when embedded in .NET/WPF applications, which fits Coding rule 2 (development frameworks/tools), Coding rule 4 (patterns/architectures), and Coding rule 5 (Microsoft developer tools). 'Azure', 'AI', 'ML', 'Security', 'DevOps', and 'GitHub Copilot' do not apply—the post doesn't discuss cloud services, AI, ML, security, DevOps practices, or Copilot, focusing purely on client-side development engineering for Windows desktop with Microsoft technologies."
   }
 ]
