@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-07-31 18:49:52 +00:00
 permalink: "/2025-07-31-Join-us-at-Azure-Dev-Summit-2025-Explore-AI-NET-and-Cloud-Innovation-in-Lisbon.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", "AI", "AI Powered Apps", "Architects", "Azure", "Azure Dev Summit", "Blazor", "C#", "Cloud Native", "Coding", "Community Event", "Developer Conference", "Developer Events", "Developer Productivity", "DevOps", "Generative AI", "Microsoft AI", "News", "Visual Studio Code"]
-tags_normalized: ["net", "ai", "ai powered apps", "architects", "azure", "azure dev summit", "blazor", "c", "cloud native", "coding", "community event", "developer conference", "developer events", "developer productivity", "devops", "generative ai", "microsoft ai", "news", "visual studio code"]
+tags: [".NET", "AI", "AI Powered Apps", "Architects", "Azure", "Azure Dev Summit", "Blazor", "C#", "Cloud Native", "Coding", "Community Event", "Developer Conference", "Developer Events", "Developer Productivity", "DevOps", "Generative AI", "Microsoft AI", "News", "VS Code"]
+tags_normalized: ["dotnet", "ai", "ai powered apps", "architects", "azure", "azure dev summit", "blazor", "csharp", "cloud native", "coding", "community event", "developer conference", "developer events", "developer productivity", "devops", "generative ai", "microsoft ai", "news", "vs code"]
 ---
 
 Written by Mike Hulme, this article announces Azure Dev Summit 2025—a major Microsoft event for developers focused on AI, Azure, DevOps, .NET, and innovative software design. Explore event highlights, speaker lineups, and session topics in this comprehensive overview.<!--excerpt_end-->

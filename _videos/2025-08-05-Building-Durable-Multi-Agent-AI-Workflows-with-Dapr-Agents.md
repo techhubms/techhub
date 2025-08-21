@@ -12,7 +12,7 @@ date: 2025-08-05 15:01:00 +00:00
 permalink: "/2025-08-05-Building-Durable-Multi-Agent-AI-Workflows-with-Dapr-Agents.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["Agentic Systems", "AI", "AI Agents", "Azure", "Cloud Architecture", "Cloud Computing", "Coding", "Dapr", "Dapr Agents", "Dev", "Developer Tools", "Development", "DevOps", "Distributed Applications", "Durable Workflows", "LLM", "Microservices", "Microsoft", "Microsoft Azure", "Open Source", "Production Systems", "Pub/Sub Messaging", "Scalability", "Stateful Workflows", "Tech", "Technology", "Videos", "Virtual Actor Model"]
-tags_normalized: ["agentic systems", "ai", "ai agents", "azure", "cloud architecture", "cloud computing", "coding", "dapr", "dapr agents", "dev", "developer tools", "development", "devops", "distributed applications", "durable workflows", "llm", "microservices", "microsoft", "microsoft azure", "open source", "production systems", "pub slash sub messaging", "scalability", "stateful workflows", "tech", "technology", "videos", "virtual actor model"]
+tags_normalized: ["agentic systems", "ai", "ai agents", "azure", "cloud architecture", "cloud computing", "coding", "dapr", "dapr agents", "dev", "developer tools", "development", "devops", "distributed applications", "durable workflows", "llm", "microservices", "microsoft", "microsoft azure", "open source", "production systems", "pubslashsub messaging", "scalability", "stateful workflows", "tech", "technology", "videos", "virtual actor model"]
 ---
 
 Microsoft Developer showcases how the Dapr Durable AI Agent Workflow Framework lets you create scalable, resilient, multi-agent AI systems with Dapr. Learn practical agent orchestration and production techniques.<!--excerpt_end-->

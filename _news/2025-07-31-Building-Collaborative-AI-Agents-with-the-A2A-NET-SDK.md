@@ -12,7 +12,7 @@ date: 2025-07-31 10:08:49 +00:00
 permalink: "/2025-07-31-Building-Collaborative-AI-Agents-with-the-A2A-NET-SDK.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "A2A", "A2A .NET SDK", "Agent Capability Discovery", "Agent Collaboration", "Agent2Agent Protocol", "Agents", "AI", "AI Agents", "AI Applications", "ASP.NET Core", "Autonomous Agents", "Azure", "Azure AI Foundry", "Coding", "Message Based Communication", "News", "Protocol", "Real Time Streaming", "Semantic Kernel", "Task Based Communication"]
-tags_normalized: ["net", "a2a", "a2a dot net sdk", "agent capability discovery", "agent collaboration", "agent2agent protocol", "agents", "ai", "ai agents", "ai applications", "asp dot net core", "autonomous agents", "azure", "azure ai foundry", "coding", "message based communication", "news", "protocol", "real time streaming", "semantic kernel", "task based communication"]
+tags_normalized: ["dotnet", "a2a", "a2a dotnet sdk", "agent capability discovery", "agent collaboration", "agent2agent protocol", "agents", "ai", "ai agents", "ai applications", "aspdotnet core", "autonomous agents", "azure", "azure ai foundry", "coding", "message based communication", "news", "protocol", "real time streaming", "semantic kernel", "task based communication"]
 ---
 
 Written by Sergey Menshykh, Adam Sitnik, and Brandon H, this article introduces the A2A .NET SDK, demonstrating how developers can build collaborative AI agents leveraging the Agent2Agent protocol within the Azure AI Foundry environment.<!--excerpt_end-->

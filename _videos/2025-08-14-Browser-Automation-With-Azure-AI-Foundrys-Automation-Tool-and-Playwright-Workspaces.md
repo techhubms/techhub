@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-08-14 15:59:53 +00:00
 permalink: "/2025-08-14-Browser-Automation-With-Azure-AI-Foundrys-Automation-Tool-and-Playwright-Workspaces.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "Automation", "Azure", "Azure AI Foundry", "Browser Automation Tool", "Cloud Computing", "Cloud Development", "Dev", "Development", "Microsoft", "Microsoft Developer", "Natural Language Automation", "Playwright Workspaces", "Secure Session Isolation", "Tech", "Technology", "Videos", "Visual Studio Code", "Web Automation"]
-tags_normalized: ["ai", "ai agents", "automation", "azure", "azure ai foundry", "browser automation tool", "cloud computing", "cloud development", "dev", "development", "microsoft", "microsoft developer", "natural language automation", "playwright workspaces", "secure session isolation", "tech", "technology", "videos", "visual studio code", "web automation"]
+tags: ["AI", "AI Agents", "Automation", "Azure", "Azure AI Foundry", "Browser Automation Tool", "Cloud Computing", "Cloud Development", "Dev", "Development", "Microsoft", "Microsoft Developer", "Natural Language Automation", "Playwright Workspaces", "Secure Session Isolation", "Tech", "Technology", "Videos", "VS Code", "Web Automation"]
+tags_normalized: ["ai", "ai agents", "automation", "azure", "azure ai foundry", "browser automation tool", "cloud computing", "cloud development", "dev", "development", "microsoft", "microsoft developer", "natural language automation", "playwright workspaces", "secure session isolation", "tech", "technology", "videos", "vs code", "web automation"]
 ---
 
 April from Microsoft Developer demonstrates how to use the Browser Automation Tool in Azure AI Foundry, showing step-by-step browser task automation with AI and Playwright Workspaces.<!--excerpt_end-->

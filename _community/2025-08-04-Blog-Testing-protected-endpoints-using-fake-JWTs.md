@@ -12,7 +12,7 @@ date: 2025-08-04 13:12:53 +00:00
 permalink: "/2025-08-04-Blog-Testing-protected-endpoints-using-fake-JWTs.html"
 categories: ["Coding", "Security"]
 tags: [".NET", "API Testing", "Authentication", "Authorization", "C#", "Coding", "Community", "Endpoint Security", "Fake JWT", "JWT", "Protected Endpoints", "Security", "Testing"]
-tags_normalized: ["net", "api testing", "authentication", "authorization", "c", "coding", "community", "endpoint security", "fake jwt", "jwt", "protected endpoints", "security", "testing"]
+tags_normalized: ["dotnet", "api testing", "authentication", "authorization", "csharp", "coding", "community", "endpoint security", "fake jwt", "jwt", "protected endpoints", "security", "testing"]
 ---
 
 In this post, Kralizek82 explores methods to test protected endpoints in C# applications using fake JWT tokens, providing practical guidance for .NET developers.<!--excerpt_end-->

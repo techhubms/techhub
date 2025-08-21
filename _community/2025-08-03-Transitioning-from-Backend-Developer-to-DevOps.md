@@ -12,7 +12,7 @@ date: 2025-08-03 22:48:15 +00:00
 permalink: "/2025-08-03-Transitioning-from-Backend-Developer-to-DevOps.html"
 categories: ["DevOps"]
 tags: ["Automation", "Backend Development", "Career Transition", "CI/CD", "Cloud", "Community", "Developer Skills", "DevOps", "Engineering Practices", "Infrastructure", "Software Engineering"]
-tags_normalized: ["automation", "backend development", "career transition", "ci slash cd", "cloud", "community", "developer skills", "devops", "engineering practices", "infrastructure", "software engineering"]
+tags_normalized: ["automation", "backend development", "career transition", "cislashcd", "cloud", "community", "developer skills", "devops", "engineering practices", "infrastructure", "software engineering"]
 ---
 
 DemiladeDee shares insights into moving from backend development to a DevOps role, outlining necessary skills and possible challenges.<!--excerpt_end-->

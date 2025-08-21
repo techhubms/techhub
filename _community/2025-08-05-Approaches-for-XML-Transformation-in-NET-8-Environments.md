@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-05 06:07:55 +00:00
 permalink: "/2025-08-05-Approaches-for-XML-Transformation-in-NET-8-Environments.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 8", "Code Based Transformation", "Coding", "Community", "Oxygen", "Schema Evolution", "Test Maintainability", "Unit Testing", "Visual Studio Code", "XML", "XSD", "XSLT"]
-tags_normalized: ["net", "net 8", "code based transformation", "coding", "community", "oxygen", "schema evolution", "test maintainability", "unit testing", "visual studio code", "xml", "xsd", "xslt"]
+tags: [".NET", ".NET 8", "Code Based Transformation", "Coding", "Community", "Oxygen", "Schema Evolution", "Test Maintainability", "Unit Testing", "VS Code", "XML", "XSD", "XSLT"]
+tags_normalized: ["dotnet", "dotnet 8", "code based transformation", "coding", "community", "oxygen", "schema evolution", "test maintainability", "unit testing", "vs code", "xml", "xsd", "xslt"]
 ---
 
 Authored by technically_a_user, this article delves into practical methods for transforming XML in .NET 8+ systems, comparing XSLT and code-based approaches.<!--excerpt_end-->

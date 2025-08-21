@@ -12,7 +12,7 @@ date: 2025-07-25 16:53:10 +00:00
 permalink: "/2025-07-25-Announcing-the-Release-Candidate-of-TypeScript-59-Whats-New-and-Improved.html"
 categories: ["Coding"]
 tags: ["Coding", "Developer Tools", "DOM APIs", "Expandable Hovers", "Import Defer", "JavaScript", "Module Detection", "News", "Node 20", "npm", "Performance Optimization", "Tsc Init", "Tsconfig.json", "Type Inference", "TypeScript", "TypeScript 5.9"]
-tags_normalized: ["coding", "developer tools", "dom apis", "expandable hovers", "import defer", "javascript", "module detection", "news", "node 20", "npm", "performance optimization", "tsc init", "tsconfig dot json", "type inference", "typescript", "typescript 5 dot 9"]
+tags_normalized: ["coding", "developer tools", "dom apis", "expandable hovers", "import defer", "javascript", "module detection", "news", "node 20", "npm", "performance optimization", "tsc init", "tsconfigdotjson", "type inference", "typescript", "typescript 5dot9"]
 ---
 
 Daniel Rosenwasser details the latest features and improvements in the TypeScript 5.9 Release Candidate. This update introduces new configuration defaults, deferred module imports, enhanced editor integration, and improvements based on community feedback.<!--excerpt_end-->

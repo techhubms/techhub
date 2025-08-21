@@ -12,7 +12,7 @@ date: 2025-07-09 22:57:13 +00:00
 permalink: "/2025-07-09-Search-any-GitHub-repo-from-agent.html"
 viewing_mode: "external"
 tags: ["AI", "API References", "Chat View", "Community", "Copilot Instructions.md", "Development Tools", "Embeddings", "GitHub Copilot", "GitHub Repositories", "Githubrepo", "Prompt Discovery", "Repo Search", "VS Code Agent"]
-tags_normalized: ["ai", "api references", "chat view", "community", "copilot instructions dot md", "development tools", "embeddings", "github copilot", "github repositories", "githubrepo", "prompt discovery", "repo search", "vs code agent"]
+tags_normalized: ["ai", "api references", "chat view", "community", "copilot instructionsdotmd", "development tools", "embeddings", "github copilot", "github repositories", "githubrepo", "prompt discovery", "repo search", "vs code agent"]
 ---
 
 In this article, digitarald highlights a powerful yet often overlooked feature of the VS Code agent: searching within GitHub repositories using embeddings for efficient code and prompt discovery. The author demonstrates this capability using the 'awesome-copilot' repository and shares an additional tip for enhancing copilot-instructions.md files to improve reference searching. The article provides insights that can streamline your development workflow and make Copilot even more effective.<!--excerpt_end-->

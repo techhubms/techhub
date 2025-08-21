@@ -12,7 +12,7 @@ date: 2025-02-11 22:10:32 +00:00
 permalink: "/2025-02-11-Azure-SDK-for-JavaScript-Ending-Support-for-Nodejs-18x-After-July-2025.html"
 categories: ["Azure", "Coding"]
 tags: ["Azure", "Azure SDK", "Coding", "JavaScript", "LTS", "News", "Node.js", "Node.js 18.x", "Node.js 20.x", "Nodejs", "npm Engines", "SDK Support Policy", "Typescript"]
-tags_normalized: ["azure", "azure sdk", "coding", "javascript", "lts", "news", "node dot js", "node dot js 18 dot x", "node dot js 20 dot x", "nodejs", "npm engines", "sdk support policy", "typescript"]
+tags_normalized: ["azure", "azure sdk", "coding", "javascript", "lts", "news", "nodedotjs", "nodedotjs 18dotx", "nodedotjs 20dotx", "nodejs", "npm engines", "sdk support policy", "typescript"]
 ---
 
 Authored by Maor Leger, this article details the timeline and implications of ending Node.js 18.x support in the Azure SDK for JavaScript, providing guidance on upgrading and support policies.<!--excerpt_end-->

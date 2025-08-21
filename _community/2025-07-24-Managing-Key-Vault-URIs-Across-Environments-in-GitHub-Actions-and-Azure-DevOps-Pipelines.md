@@ -12,7 +12,7 @@ date: 2025-07-24 15:56:04 +00:00
 permalink: "/2025-07-24-Managing-Key-Vault-URIs-Across-Environments-in-GitHub-Actions-and-Azure-DevOps-Pipelines.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Access Policy", "ARM Templates", "Azure", "Azure DevOps", "Azure Key Vault", "CI/CD", "Community", "DevOps", "Environment Variables", "GitHub Actions", "OIDC", "Pipeline Parameters", "Secrets Management", "Security", "Service Principal", "YAML Pipelines"]
-tags_normalized: ["access policy", "arm templates", "azure", "azure devops", "azure key vault", "ci slash cd", "community", "devops", "environment variables", "github actions", "oidc", "pipeline parameters", "secrets management", "security", "service principal", "yaml pipelines"]
+tags_normalized: ["access policy", "arm templates", "azure", "azure devops", "azure key vault", "cislashcd", "community", "devops", "environment variables", "github actions", "oidc", "pipeline parameters", "secrets management", "security", "service principal", "yaml pipelines"]
 ---
 
 Azure DevOps shares practical advice on securely managing Key Vault URIs in CI/CD pipelines across dev and prod environments, highlighting different approaches for Azure DevOps and GitHub Actions.<!--excerpt_end-->

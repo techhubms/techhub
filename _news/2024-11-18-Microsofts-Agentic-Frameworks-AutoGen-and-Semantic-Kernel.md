@@ -12,7 +12,7 @@ date: 2024-11-18 15:50:54 +00:00
 permalink: "/2024-11-18-Microsofts-Agentic-Frameworks-AutoGen-and-Semantic-Kernel.html"
 categories: ["AI", "Coding"]
 tags: ["Agentic Frameworks", "AI", "AI Agents", "AutoGen", "C#", "Coding", "Dapr", "Enterprise AI", "Event Driven Architecture", "GenAI", "Java", "LLMs", "Microsoft", "Microsoft Orleans", "Multi Agent Applications", "News", "Python", "Semantic Kernel"]
-tags_normalized: ["agentic frameworks", "ai", "ai agents", "autogen", "c", "coding", "dapr", "enterprise ai", "event driven architecture", "genai", "java", "llms", "microsoft", "microsoft orleans", "multi agent applications", "news", "python", "semantic kernel"]
+tags_normalized: ["agentic frameworks", "ai", "ai agents", "autogen", "csharp", "coding", "dapr", "enterprise ai", "event driven architecture", "genai", "java", "llms", "microsoft", "microsoft orleans", "multi agent applications", "news", "python", "semantic kernel"]
 ---
 
 Authored by Friederike Niedtner, this article explores the collaboration between Microsoft's Semantic Kernel and AutoGen agentic AI frameworks, detailing their capabilities, integration roadmap, and resources to help developers choose and leverage these powerful tools.<!--excerpt_end-->

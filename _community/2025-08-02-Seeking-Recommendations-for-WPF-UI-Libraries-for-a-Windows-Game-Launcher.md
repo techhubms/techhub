@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-02 15:24:41 +00:00
 permalink: "/2025-08-02-Seeking-Recommendations-for-WPF-UI-Libraries-for-a-Windows-Game-Launcher.html"
 categories: ["Coding"]
-tags: [".NET MAUI", "Blazor Hybrid", "C#", "Coding", "Community", "Component Customization", "Frontend", "Game Launcher", "Themes", "UI Library", "Window Management", "Windows", "WPF", "XAML"]
-tags_normalized: ["net maui", "blazor hybrid", "c", "coding", "community", "component customization", "frontend", "game launcher", "themes", "ui library", "window management", "windows", "wpf", "xaml"]
+tags: ["Blazor Hybrid", "C#", "Coding", "Community", "Component Customization", "Frontend", "Game Launcher", "MAUI", "Themes", "UI Library", "Window Management", "Windows", "WPF", "XAML"]
+tags_normalized: ["blazor hybrid", "csharp", "coding", "community", "component customization", "frontend", "game launcher", "maui", "themes", "ui library", "window management", "windows", "wpf", "xaml"]
 ---
 
 Author kkassius_ seeks community advice on selecting a WPF UI library to use in their Windows game launcher project, sharing initial goals, challenges, and future customization plans.<!--excerpt_end-->

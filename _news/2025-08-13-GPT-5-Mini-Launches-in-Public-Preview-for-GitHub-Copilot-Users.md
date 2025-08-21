@@ -11,8 +11,8 @@ feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-13 17:49:12 +00:00
 permalink: "/2025-08-13-GPT-5-Mini-Launches-in-Public-Preview-for-GitHub-Copilot-Users.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["Admin Settings", "AI", "AI Models", "Coding Assistance", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Free", "Developer Tools", "GitHub Copilot", "GPT 5 Mini", "IDE Integration", "Model Deployment", "Model Multipliers", "News", "OpenAI", "Productivity", "Public Preview", "Visual Studio Code"]
-tags_normalized: ["admin settings", "ai", "ai models", "coding assistance", "copilot business", "copilot chat", "copilot enterprise", "copilot free", "developer tools", "github copilot", "gpt 5 mini", "ide integration", "model deployment", "model multipliers", "news", "openai", "productivity", "public preview", "visual studio code"]
+tags: ["Admin Settings", "AI", "AI Models", "Coding Assistance", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Free", "Developer Tools", "GitHub Copilot", "GPT 5 Mini", "IDE Integration", "Model Deployment", "Model Multipliers", "News", "OpenAI", "Productivity", "Public Preview", "VS Code"]
+tags_normalized: ["admin settings", "ai", "ai models", "coding assistance", "copilot business", "copilot chat", "copilot enterprise", "copilot free", "developer tools", "github copilot", "gpt 5 mini", "ide integration", "model deployment", "model multipliers", "news", "openai", "productivity", "public preview", "vs code"]
 ---
 
 Allison highlights the public preview of GPT-5 mini in GitHub Copilot, explaining its key benefits—faster, more cost-effective coding support and broad integration across IDEs for all Copilot users.<!--excerpt_end-->

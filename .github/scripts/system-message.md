@@ -730,6 +730,7 @@ Return a JSON object with these 7 fields:
   4. **Exclude generic terms**: Avoid "news", "update", "announcement" unless central
   5. **Ensure technical depth**: Tags should reflect content's technical sophistication
 - Only include tags that genuinely fit the content
+- NEVER add namespaces, full package names or other long strings with a dotted notation as tags
 
 **excerpt** (string, target 50 words)
 

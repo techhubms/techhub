@@ -12,7 +12,7 @@ date: 2025-05-19 15:45:06 +00:00
 permalink: "/2025-05-19-Introducing-Microsoft-Discovery-An-Agentic-AI-Platform-for-Scientific-Research.html"
 categories: ["AI", "Azure"]
 tags: ["Adaptive AI", "Agentic R&D", "AI", "AI Agents", "AI Platform", "AI Science", "Azure", "Azure AI Foundry", "Azure HPC", "Enterprise AI", "Enterprise Research", "Microsoft", "Microsoft Cloud", "Microsoft Discovery", "Research And Development", "Science And Engineering", "Scientific Computing", "Scientific Discovery", "Specialized AI Agents", "Videos"]
-tags_normalized: ["adaptive ai", "agentic r and d", "ai", "ai agents", "ai platform", "ai science", "azure", "azure ai foundry", "azure hpc", "enterprise ai", "enterprise research", "microsoft", "microsoft cloud", "microsoft discovery", "research and development", "science and engineering", "scientific computing", "scientific discovery", "specialized ai agents", "videos"]
+tags_normalized: ["adaptive ai", "agentic randd", "ai", "ai agents", "ai platform", "ai science", "azure", "azure ai foundry", "azure hpc", "enterprise ai", "enterprise research", "microsoft", "microsoft cloud", "microsoft discovery", "research and development", "science and engineering", "scientific computing", "scientific discovery", "specialized ai agents", "videos"]
 ---
 
 Microsoft Cloud introduces Microsoft Discovery, a new Azure-based platform designed to empower scientists and engineers with adaptive AI agents to accelerate research and development.<!--excerpt_end-->

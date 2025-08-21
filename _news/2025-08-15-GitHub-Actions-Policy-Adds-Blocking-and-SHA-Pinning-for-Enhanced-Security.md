@@ -12,7 +12,7 @@ date: 2025-08-15 15:05:08 +00:00
 permalink: "/2025-08-15-GitHub-Actions-Policy-Adds-Blocking-and-SHA-Pinning-for-Enhanced-Security.html"
 categories: ["DevOps", "Security"]
 tags: ["Action Blocking", "Artifact Integrity", "CI/CD", "Dependabot", "DevOps", "DevOps Security", "GitHub Actions", "GitHub Well Architected Framework", "Immutable Releases", "News", "Policy Enforcement", "Release Management", "Repository Administration", "Security", "SHA Pinning", "Software Supply Chain", "Version Control", "Workflow Governance"]
-tags_normalized: ["action blocking", "artifact integrity", "ci slash cd", "dependabot", "devops", "devops security", "github actions", "github well architected framework", "immutable releases", "news", "policy enforcement", "release management", "repository administration", "security", "sha pinning", "software supply chain", "version control", "workflow governance"]
+tags_normalized: ["action blocking", "artifact integrity", "cislashcd", "dependabot", "devops", "devops security", "github actions", "github well architected framework", "immutable releases", "news", "policy enforcement", "release management", "repository administration", "security", "sha pinning", "software supply chain", "version control", "workflow governance"]
 ---
 
 Allison outlines recent improvements to GitHub Actions policies, focusing on blocking vulnerable actions and enforcing SHA pinning to enhance repository and workflow security.<!--excerpt_end-->

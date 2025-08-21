@@ -12,7 +12,7 @@ date: 2025-05-21 14:41:49 +00:00
 permalink: "/2025-05-21-Vector-Data-Extensions-for-NET-and-Semantic-Kernel-Now-Generally-Available.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "Abstractions", "AI", "AI Powered Applications", "Application Development", "Azure AI Search", "Coding", "Embedding Generation", "GA Release", "Interoperability", "Library Development", "Microsoft.Extensions.AI.Abstractions", "Microsoft.Extensions.VectorData.Abstractions", "News", "Semantic Kernel", "Vector Database", "Vector Store Connectors"]
-tags_normalized: ["net", "abstractions", "ai", "ai powered applications", "application development", "azure ai search", "coding", "embedding generation", "ga release", "interoperability", "library development", "microsoft dot extensions dot ai dot abstractions", "microsoft dot extensions dot vectordata dot abstractions", "news", "semantic kernel", "vector database", "vector store connectors"]
+tags_normalized: ["dotnet", "abstractions", "ai", "ai powered applications", "application development", "azure ai search", "coding", "embedding generation", "ga release", "interoperability", "library development", "microsoftdotextensionsdotaidotabstractions", "microsoftdotextensionsdotvectordatadotabstractions", "news", "semantic kernel", "vector database", "vector store connectors"]
 ---
 
 Written by Wes Steyn and Shay Rojansky, this article introduces the GA release of the Microsoft.Extensions.VectorData.Abstractions library. It focuses on shared abstractions for vector data, integration with AI tooling, and practical usage with Semantic Kernel and .NET.<!--excerpt_end-->

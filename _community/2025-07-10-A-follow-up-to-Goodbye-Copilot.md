@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-10 14:36:36 +00:00
 permalink: "/2025-07-10-A-follow-up-to-Goodbye-Copilot.html"
 viewing_mode: "external"
-tags: ["AI", "AI Models", "Code Completion", "Community", "Cursor", "Extension Compatibility", "GitHub Copilot", "Premium Plans", "Regressions", "Software Development", "User Experience", "Visual Studio Code"]
-tags_normalized: ["ai", "ai models", "code completion", "community", "cursor", "extension compatibility", "github copilot", "premium plans", "regressions", "software development", "user experience", "visual studio code"]
+tags: ["AI", "AI Models", "Code Completion", "Community", "Cursor", "Extension Compatibility", "GitHub Copilot", "Premium Plans", "Regressions", "Software Development", "User Experience", "VS Code"]
+tags_normalized: ["ai", "ai models", "code completion", "community", "cursor", "extension compatibility", "github copilot", "premium plans", "regressions", "software development", "user experience", "vs code"]
 ---
 
 In this follow-up article, author UsualResult revisits their decision to stop using GitHub Copilot, sharing candid feedback after several weeks of using Cursor as an alternative. The author compares both tools in terms of usability, stability, cost, and the overall developer experience, providing insights into their reasons for switching and ongoing impressions. Their experience offers a useful perspective for developers considering alternatives to popular AI code assistants.<!--excerpt_end-->

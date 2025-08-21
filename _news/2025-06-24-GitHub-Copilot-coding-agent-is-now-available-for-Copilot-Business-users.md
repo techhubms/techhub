@@ -12,7 +12,7 @@ feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-06-24 20:40:34 +00:00
 permalink: "/2025-06-24-GitHub-Copilot-coding-agent-is-now-available-for-Copilot-Business-users.html"
 tags: ["AI", "Coding Agent", "Copilot Enterprise", "Copilot Pro+", "GitHub Copilot", "News", "Productivity", "Public Preview", "Workflow Automation"]
-tags_normalized: ["ai", "coding agent", "copilot enterprise", "copilot pro", "github copilot", "news", "productivity", "public preview", "workflow automation"]
+tags_normalized: ["ai", "coding agent", "copilot enterprise", "copilot proplus", "github copilot", "news", "productivity", "public preview", "workflow automation"]
 ---
 
 In this article, Allison discusses the recent public preview launch of GitHub Copilot's coding agent, aimed at users with Copilot Pro+ and Copilot Enterprise subscriptions. <!--excerpt_end--> The new feature allows developers to delegate coding tasks to Copilot, allowing it to work autonomously in the background. This enhancement is designed to improve productivity by letting users offload routine or time-consuming tasks to the AI-powered agent.

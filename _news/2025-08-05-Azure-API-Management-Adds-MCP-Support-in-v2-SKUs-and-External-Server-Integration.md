@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-05 16:37:59 +00:00
 permalink: "/2025-08-05-Azure-API-Management-Adds-MCP-Support-in-v2-SKUs-and-External-Server-Integration.html"
 categories: ["AI", "Azure", "Security"]
-tags: ["Agent Integration", "AI", "API Center", "API Governance", "API Security", "Application Insights", "Azure", "Azure API Management", "Azure Functions", "Azure Monitor", "Credential Manager", "External MCP Server", "LangChain", "Logic Apps", "MCP", "Microsoft Entra ID", "Model Context Protocol", "News", "OAuth 2.1", "Policy Engine", "Rate Limiting", "REST APIs", "Security", "V2 SKUs"]
-tags_normalized: ["agent integration", "ai", "api center", "api governance", "api security", "application insights", "azure", "azure api management", "azure functions", "azure monitor", "credential manager", "external mcp server", "langchain", "logic apps", "mcp", "microsoft entra id", "model context protocol", "news", "oauth 2 dot 1", "policy engine", "rate limiting", "rest apis", "security", "v2 skus"]
+tags: ["Agent Integration", "AI", "API Center", "API Governance", "API Security", "Application Insights", "Azure", "Azure API Management", "Azure Functions", "Azure Monitor", "Credential Manager", "External MCP Server", "LangChain", "Logic Apps", "MCP", "Microsoft Entra ID", "News", "OAuth 2.1", "Policy Engine", "Rate Limiting", "REST APIs", "Security", "V2 SKUs"]
+tags_normalized: ["agent integration", "ai", "api center", "api governance", "api security", "application insights", "azure", "azure api management", "azure functions", "azure monitor", "credential manager", "external mcp server", "langchain", "logic apps", "mcp", "microsoft entra id", "news", "oauth 2dot1", "policy engine", "rate limiting", "rest apis", "security", "v2 skus"]
 ---
 
 anishta reports on key Azure API Management updates, including public preview MCP support in v2 SKUs and streamlined governance for external MCP-compliant servers, helping organizations connect APIs and AI agents securely.<!--excerpt_end-->

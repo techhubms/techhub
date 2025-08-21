@@ -12,7 +12,7 @@ date: 2025-08-02 18:13:16 +00:00
 permalink: "/2025-08-02-WinUI-OSS-Update-Phased-Rollout-Toward-Open-Collaboration.html"
 categories: ["Coding"]
 tags: [".NET", "Coding", "Collaboration", "Community", "Microsoft UI", "Open Collaboration", "Open Source", "OSS", "Phased Rollout", "UI Development", "WinUI"]
-tags_normalized: ["net", "coding", "collaboration", "community", "microsoft ui", "open collaboration", "open source", "oss", "phased rollout", "ui development", "winui"]
+tags_normalized: ["dotnet", "coding", "collaboration", "community", "microsoft ui", "open collaboration", "open source", "oss", "phased rollout", "ui development", "winui"]
 ---
 
 Nguyenkien shares news about the WinUI project's phased transition toward open source collaboration, outlining Microsoft’s efforts to involve the community.<!--excerpt_end-->

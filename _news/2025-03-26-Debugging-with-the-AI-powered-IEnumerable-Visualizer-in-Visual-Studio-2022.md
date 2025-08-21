@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/"
 date: 2025-03-26 15:00:31 +00:00
 permalink: "/2025-03-26-Debugging-with-the-AI-powered-IEnumerable-Visualizer-in-Visual-Studio-2022.html"
 categories: ["AI", "GitHub Copilot", "Coding"]
-tags: ["AI", "C#", "Code Visualization", "Coding", "Copilot", "Copilot Chat", "Debug", "Debugger Tools", "Debugging", "Developer Productivity", "GitHub Copilot", "IEnumerable Visualizer", "LINQ", "News", "Productivity", "Query Refinement", "Syntax Highlighting", "Visual Studio"]
-tags_normalized: ["ai", "c", "code visualization", "coding", "copilot", "copilot chat", "debug", "debugger tools", "debugging", "developer productivity", "github copilot", "ienumerable visualizer", "linq", "news", "productivity", "query refinement", "syntax highlighting", "visual studio"]
+tags: ["AI", "C#", "Code Visualization", "Coding", "Copilot", "Copilot Chat", "Debug", "Debugger Tools", "Debugging", "Developer Productivity", "GitHub Copilot", "IEnumerable Visualizer", "LINQ", "News", "Productivity", "Query Refinement", "Syntax Highlighting", "VS"]
+tags_normalized: ["ai", "csharp", "code visualization", "coding", "copilot", "copilot chat", "debug", "debugger tools", "debugging", "developer productivity", "github copilot", "ienumerable visualizer", "linq", "news", "productivity", "query refinement", "syntax highlighting", "vs"]
 ---
 
 Junyu Wang introduces the AI-powered enhancements in Visual Studio 2022’s IEnumerable Visualizer, featuring Copilot Chat integration to streamline LINQ query debugging and refinement.<!--excerpt_end-->

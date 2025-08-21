@@ -12,7 +12,7 @@ date: 2024-10-09 20:59:51 +00:00
 permalink: "/2024-10-09-Announcing-TypeScript-57-Beta.html"
 categories: ["Coding"]
 tags: ["Beta Release", "Coding", "JavaScript", "Microsoft", "Never Initialized Variables", "News", "npm", "Programming Languages", "Static Analysis", "Type Checking", "TypeScript", "TypeScript 5.7"]
-tags_normalized: ["beta release", "coding", "javascript", "microsoft", "never initialized variables", "news", "npm", "programming languages", "static analysis", "type checking", "typescript", "typescript 5 dot 7"]
+tags_normalized: ["beta release", "coding", "javascript", "microsoft", "never initialized variables", "news", "npm", "programming languages", "static analysis", "type checking", "typescript", "typescript 5dot7"]
 ---
 
 Daniel Rosenwasser announces the release of TypeScript 5.7 Beta, offering insights into new language features and improvements.<!--excerpt_end-->

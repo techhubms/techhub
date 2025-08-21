@@ -12,7 +12,7 @@ date: 2025-08-02 19:23:25 +00:00
 permalink: "/2025-08-02-NetLoom-my-new-WPF-C-network-analyzer-project.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Coding", "Community", "Interface Monitoring", "NetLoom", "Network Analyzer", "Network Connections", "Network Monitoring", "Real Time Analytics", "WPF"]
-tags_normalized: ["net", "c", "coding", "community", "interface monitoring", "netloom", "network analyzer", "network connections", "network monitoring", "real time analytics", "wpf"]
+tags_normalized: ["dotnet", "csharp", "coding", "community", "interface monitoring", "netloom", "network analyzer", "network connections", "network monitoring", "real time analytics", "wpf"]
 ---
 
 Rywent presents NetLoom, a new WPF C# project focused on network monitoring and analysis, sharing its initial goals and features.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-08-07 08:26:59 +00:00
 permalink: "/2025-08-07-Troubleshooting-Azure-DevOps-Pipeline-for-NET-MAUI-Blazor-Hybrid-App.html"
 categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET 9", ".NET MAUI", ".NET Workload", "Azure", "Azure DevOps", "Blazor Hybrid", "Build Automation", "CI/CD", "Coding", "Community", "DevOps", "DotNetCoreCLI", "Microsoft.NETCore.App.Runtime.Mono.win X64", "NuGet", "Pipeline", "Pipeline Troubleshooting", "SDK Installation", "Windows Desktop", "YAML"]
-tags_normalized: ["net 9", "net maui", "net workload", "azure", "azure devops", "blazor hybrid", "build automation", "ci slash cd", "coding", "community", "devops", "dotnetcorecli", "microsoft dot netcore dot app dot runtime dot mono dot win x64", "nuget", "pipeline", "pipeline troubleshooting", "sdk installation", "windows desktop", "yaml"]
+tags: [".NET 9", ".NET Workload", "Azure", "Azure DevOps", "Blazor Hybrid", "Build Automation", "CI/CD", "Coding", "Community", "DevOps", "DotNetCoreCLI", "MAUI", "Microsoft.NETCore.App.Runtime.Mono.win X64", "NuGet", "Pipeline", "Pipeline Troubleshooting", "SDK Installation", "Windows Desktop", "YAML"]
+tags_normalized: ["dotnet 9", "dotnet workload", "azure", "azure devops", "blazor hybrid", "build automation", "cislashcd", "coding", "community", "devops", "dotnetcorecli", "maui", "microsoftdotnetcoredotappdotruntimedotmonodotwin x64", "nuget", "pipeline", "pipeline troubleshooting", "sdk installation", "windows desktop", "yaml"]
 ---
 
 Background_March7229 seeks help configuring an Azure DevOps pipeline for a .NET MAUI Blazor Hybrid app, describing errors encountered with runtime packages and pipeline tasks.<!--excerpt_end-->

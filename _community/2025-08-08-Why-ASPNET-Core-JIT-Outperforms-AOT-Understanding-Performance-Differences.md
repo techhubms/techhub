@@ -12,7 +12,7 @@ date: 2025-08-08 12:41:21 +00:00
 permalink: "/2025-08-08-Why-ASPNET-Core-JIT-Outperforms-AOT-Understanding-Performance-Differences.html"
 categories: ["Coding"]
 tags: [".NET", "AOT Compilation", "ASP.NET Core", "Benchmarks", "CLR", "Coding", "Community", "Dynamic PGO", "JIT Compilation", "Optimization Techniques", "Performance Optimization", "Profile Guided Optimization", "R2R", "Startup Performance", "TechEmpower Benchmarks", "Web Application Performance"]
-tags_normalized: ["net", "aot compilation", "asp dot net core", "benchmarks", "clr", "coding", "community", "dynamic pgo", "jit compilation", "optimization techniques", "performance optimization", "profile guided optimization", "r2r", "startup performance", "techempower benchmarks", "web application performance"]
+tags_normalized: ["dotnet", "aot compilation", "aspdotnet core", "benchmarks", "clr", "coding", "community", "dynamic pgo", "jit compilation", "optimization techniques", "performance optimization", "profile guided optimization", "r2r", "startup performance", "techempower benchmarks", "web application performance"]
 ---
 
 Vectorial1024 provides a well-rounded technical discussion on the performance differences between JIT and AOT compilation for ASP.NET Core, supported by benchmark data and insights into .NET's compilation strategies.<!--excerpt_end-->

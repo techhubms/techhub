@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-06 21:13:04 +00:00
 permalink: "/2025-08-06-Discussion-New-CLI-Tool-for-NET-SDK-Management-and-Updates.html"
 categories: ["Coding"]
-tags: [".NET", ".NET Install", ".NET Runtime", ".NET SDK", "CLI Tools", "Coding", "Community", "Cross Platform Development", "Developer Experience", "Dnup", "Linux", "Package Management", "Scoop", "Self Contained Deployment", "Software Installation", "Tool Updates", "Ubuntu", "Visual Studio", "Windows", "Winget"]
-tags_normalized: ["net", "net install", "net runtime", "net sdk", "cli tools", "coding", "community", "cross platform development", "developer experience", "dnup", "linux", "package management", "scoop", "self contained deployment", "software installation", "tool updates", "ubuntu", "visual studio", "windows", "winget"]
+tags: [".NET", ".NET Install", ".NET Runtime", ".NET SDK", "CLI Tools", "Coding", "Community", "Cross Platform Development", "Developer Experience", "Dnup", "Linux", "Package Management", "Scoop", "Self Contained Deployment", "Software Installation", "Tool Updates", "Ubuntu", "VS", "Windows", "Winget"]
+tags_normalized: ["dotnet", "dotnet install", "dotnet runtime", "dotnet sdk", "cli tools", "coding", "community", "cross platform development", "developer experience", "dnup", "linux", "package management", "scoop", "self contained deployment", "software installation", "tool updates", "ubuntu", "vs", "windows", "winget"]
 ---
 
 chusk3 shares an invitation from the .NET SDK team, led by PM Chet, for developers to discuss a new CLI tool proposal aimed at streamlining .NET SDK and Runtime installations and updates.<!--excerpt_end-->

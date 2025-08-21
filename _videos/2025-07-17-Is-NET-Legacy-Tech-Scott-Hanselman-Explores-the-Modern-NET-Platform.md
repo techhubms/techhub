@@ -12,7 +12,7 @@ date: 2025-07-17 15:53:10 +00:00
 permalink: "/2025-07-17-Is-NET-Legacy-Tech-Scott-Hanselman-Explores-the-Modern-NET-Platform.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 9", "C#", "Coding", "Cross Platform", "Legacy Technology", "Modern Development", "OneDevQuestion", "Open Source", "Raspberry Pi", "Scott Hanselman", "Videos", "Xbox"]
-tags_normalized: ["net", "net 9", "c", "coding", "cross platform", "legacy technology", "modern development", "onedevquestion", "open source", "raspberry pi", "scott hanselman", "videos", "xbox"]
+tags_normalized: ["dotnet", "dotnet 9", "csharp", "coding", "cross platform", "legacy technology", "modern development", "onedevquestion", "open source", "raspberry pi", "scott hanselman", "videos", "xbox"]
 ---
 
 Scott Hanselman, in a #OneDevQuestion video, shares insights into whether .NET is legacy technology, discussing its maturity and ongoing modernization.<!--excerpt_end-->

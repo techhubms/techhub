@@ -12,7 +12,7 @@ date: 2025-08-13 11:30:45 +00:00
 permalink: "/2025-08-13-Enhancing-NET-Code-Using-Facet-Instead-of-Traditional-Mapping.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Code Performance", "Coding", "Data Transformation", "Development Practice", "Facet Library", "LINQ Projections", "Nick Chapsas", "Object Mapping", "Open Source", "Typed Projections", "Videos"]
-tags_normalized: ["net", "c", "code performance", "coding", "data transformation", "development practice", "facet library", "linq projections", "nick chapsas", "object mapping", "open source", "typed projections", "videos"]
+tags_normalized: ["dotnet", "csharp", "code performance", "coding", "data transformation", "development practice", "facet library", "linq projections", "nick chapsas", "object mapping", "open source", "typed projections", "videos"]
 ---
 
 In this video, Nick Chapsas explains how the Facet library provides an alternative to traditional mapping in .NET development, leveraging strongly-typed LINQ projections to improve performance and developer experience.<!--excerpt_end-->

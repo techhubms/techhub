@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-08-14 17:00:24 +00:00
 permalink: "/2025-08-14-GPT-5-Integrations-for-Microsoft-Developers-GitHub-Copilot-Azure-AI-and-VS-Code.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Toolkit", "API Integration", "Azure", "Azure AI Foundry", "Azure OpenAI Service", "C#", "Coding", "Copilot Studio", "DevOps", "GitHub Copilot", "GitHub Models", "GPT 5", "JavaScript", "LLM", "Model Evaluation", "News", "OpenAI .NET SDK", "Python", "RAG", "Reasoning Models", "Visual Studio", "Visual Studio Code"]
-tags_normalized: ["ai", "ai toolkit", "api integration", "azure", "azure ai foundry", "azure openai service", "c", "coding", "copilot studio", "devops", "github copilot", "github models", "gpt 5", "javascript", "llm", "model evaluation", "news", "openai dot net sdk", "python", "rag", "reasoning models", "visual studio", "visual studio code"]
+tags: ["AI", "AI Toolkit", "API Integration", "Azure", "Azure AI Foundry", "Azure OpenAI Service", "C#", "Coding", "Copilot Studio", "DevOps", "GitHub Copilot", "GitHub Models", "GPT 5", "JavaScript", "LLM", "Model Evaluation", "News", "OpenAI .NET SDK", "Python", "RAG", "Reasoning Models", "VS", "VS Code"]
+tags_normalized: ["ai", "ai toolkit", "api integration", "azure", "azure ai foundry", "azure openai service", "csharp", "coding", "copilot studio", "devops", "github copilot", "github models", "gpt 5", "javascript", "llm", "model evaluation", "news", "openai dotnet sdk", "python", "rag", "reasoning models", "vs", "vs code"]
 ---
 
 Jon Galloway, Pamela Fox, and Dan Wahlin deliver a deep dive into the integration of GPT-5 across GitHub Copilot, Azure AI, and core Microsoft developer tools, offering practical code samples and guidance for immediate adoption.<!--excerpt_end-->

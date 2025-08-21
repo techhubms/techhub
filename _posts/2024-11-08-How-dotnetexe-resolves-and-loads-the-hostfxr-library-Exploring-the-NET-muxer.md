@@ -12,7 +12,7 @@ date: 2024-11-08 10:11:59 +00:00
 permalink: "/2024-11-08-How-dotnetexe-Resolves-and-Loads-the-hostfxr-Library-Exploring-the-NET-Muxer.html"
 categories: ["Coding"]
 tags: [".NET", "CLR", "Coding", "Corehost", "Diagnostics", "Dotnet.exe", "Framework Resolution", "Hostfxr", "Internals", "Linux", "Macos", "Muxer", "Platform Abstraction", "Posts", "Runtime", "Version Selection", "Windows"]
-tags_normalized: ["net", "clr", "coding", "corehost", "diagnostics", "dotnet dot exe", "framework resolution", "hostfxr", "internals", "linux", "macos", "muxer", "platform abstraction", "posts", "runtime", "version selection", "windows"]
+tags_normalized: ["dotnet", "clr", "coding", "corehost", "diagnostics", "dotnetdotexe", "framework resolution", "hostfxr", "internals", "linux", "macos", "muxer", "platform abstraction", "posts", "runtime", "version selection", "windows"]
 ---
 
 In this article, Steve Gordon explores how dotnet.exe resolves and loads the hostfxr library, shedding light on the .NET muxer's internal steps. The discussion is a part of his deep dive series into the .NET hosting architecture.<!--excerpt_end-->

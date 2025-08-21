@@ -11,8 +11,8 @@ feed_url: "https://code-maze.com/feed/"
 date: 2025-01-23 11:08:23 +00:00
 permalink: "/2025-01-23-Testing-Database-Connectivity-with-EF-Core.html"
 categories: ["Coding", "DevOps"]
-tags: [".NET", "ASP.NET Core", "C#", "Coding", "Connectivity", "Container Orchestration", "Database", "Database Connectivity", "DbContext", "DevOps", "Entity Framework Core", "EntityFrameworkCore", "Health Checks", "Kubernetes", "Posts", "SQL Server", "Testcontainers"]
-tags_normalized: ["net", "asp dot net core", "c", "coding", "connectivity", "container orchestration", "database", "database connectivity", "dbcontext", "devops", "entity framework core", "entityframeworkcore", "health checks", "kubernetes", "posts", "sql server", "testcontainers"]
+tags: [".NET", "ASP.NET Core", "C#", "Coding", "Connectivity", "Container Orchestration", "Database", "Database Connectivity", "DbContext", "DevOps", "EF Core", "Health Checks", "Kubernetes", "Posts", "SQL Server", "Testcontainers"]
+tags_normalized: ["dotnet", "aspdotnet core", "csharp", "coding", "connectivity", "container orchestration", "database", "database connectivity", "dbcontext", "devops", "ef core", "health checks", "kubernetes", "posts", "sql server", "testcontainers"]
 ---
 
 In this article, Georgi Georgiev explores essential techniques for validating database connectivity with EF Core, covering both application and infrastructure-level health checks for resilient .NET services.<!--excerpt_end-->

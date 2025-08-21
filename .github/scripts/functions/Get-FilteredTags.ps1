@@ -88,159 +88,160 @@ function Get-FilteredTags {
             # Split on both semicolons and commas, trim whitespace, and filter out empty entries
             $splitTags = $tag -split '[;,]' | ForEach-Object { $_.Trim() } | Where-Object { $_ -ne '' }
             $expandedTags += $splitTags
-        } else {
+        }
+        else {
             $expandedTags += $tag
         }
     }
     $allTags = $expandedTags
 
-    # Custom replacements for specific tags
-    $customTagMap = @{
-        'aiagent'                = 'AI Agent'
-        'aiagents'               = 'AI Agents'
-        'onboardtoazure'         = 'Onboard to Azure'
-        'artificialintelligence' = 'Artificial Intelligence'
-        'githubcopilot'          = 'GitHub Copilot'
-        'vs'                     = 'Visual Studio'
-        'vscode'                 = 'Visual Studio Code'
-        'vs code'                = 'Visual Studio Code'
-        'infrastructureascode'   = 'IaC'
-        'infrastructure as code' = 'IaC'
-        'dotnet'                 = '.NET'
-        'csharp'                 = 'C#'
-        'fsharp'                 = 'F#'
-        'aspnet'                 = 'ASP.NET'
-        'aspnetcore'             = 'ASP.NET Core'
-        'webapi'                 = 'Web API'
-        'ef'                     = 'Entity Framework'
-        'efcore'                 = 'Entity Framework Core'
-        'entityframework'        = 'Entity Framework'
-        'semantickernel'         = 'Semantic Kernel'
-        'azureopenai'            = 'Azure OpenAI'
-        'azureai'                = 'Azure AI'
-        'azureml'                = 'Azure Machine Learning'
-        'aifoundry'              = 'Azure AI Foundry'
-        'cognitiveservices'      = 'Azure Cognitive Services'
-        'azurefunctions'         = 'Azure Functions'
-        'azuredevops'            = 'Azure DevOps'
-        'azdo'                   = 'Azure DevOps'
-        'githubactions'          = 'GitHub Actions'
-        'powerplatform'          = 'Power Platform'
-        'powerapps'              = 'Power Apps'
-        'powerbi'                = 'Power BI'
-        'powerautomate'          = 'Power Automate'
-        'bingchat'               = 'Bing Chat'
-        'mscopilot'              = 'Microsoft Copilot'
-        'copilotchat'            = 'Copilot Chat'
-        'copilotvoice'           = 'Copilot Voice'
-        'copilotcli'             = 'Copilot CLI'
-        'bicep'                  = 'Bicep'
-        'terraform'              = 'Terraform'
-        'armtemplates'           = 'ARM Templates'
-        'azureappservice'        = 'Azure App Service'
-        'azuresql'               = 'Azure SQL'
-        'azurestorage'           = 'Azure Storage'
-        'azurekeyvault'          = 'Azure Key Vault'
-        'azurecontainer'         = 'Azure Container'
-        'azurek8s'               = 'Azure Kubernetes Service'
-        'aks'                    = 'Azure Kubernetes Service'
-        'signalr'                = 'SignalR'
-        'blazor'                 = 'Blazor'
-        'maui'                   = '.NET MAUI'
-        'winui'                  = 'WinUI'
-        'xamarin'                = 'Xamarin'
-        'nuget'                  = 'NuGet'
-        'dotnetcli'              = '.NET CLI'
-        'msbuild'                = 'MSBuild'
-        'polly'                  = 'Polly'
-        'fluentassertions'       = 'FluentAssertions'
-        'mediatr'                = 'MediatR'
-        'automapper'             = 'AutoMapper'
-        'serilog'                = 'Serilog'
-        'nlog'                   = 'NLog'
-        'dapper'                 = 'Dapper'
-        'xunit'                  = 'xUnit'
-        'nunit'                  = 'NUnit'
-        'mstest'                 = 'MSTest'
-        'applicationinsights'    = 'Application Insights'
-        'appinsights'            = 'Application Insights'
-        'azuremonitor'           = 'Azure Monitor'
-        'data&ai'                = 'Data & AI'
-    }
-
-    # Define a word map for special casing, similar to customTagMap
-    $wordMap = @{
-        'a2a'        = 'A2A'
-        'dotnet'     = '.NET'
-        '.net'       = '.NET'
-        'in'         = 'in'
-        'as'         = 'as'
-        'ai'         = 'AI'
-        'github'     = 'GitHub'
-        'openai'     = 'OpenAI'
-        'iac'        = 'IaC'
-        'api'        = 'API'
-        'ui'         = 'UI'
-        'ux'         = 'UX'
-        'css'        = 'CSS'
-        'html'       = 'HTML'
-        'js'         = 'JavaScript'
-        'javascript' = 'JavaScript'
-        'sql'        = 'SQL'
-        'json'       = 'JSON'
-        'xml'        = 'XML'
-        'http'       = 'HTTP'
-        'https'      = 'HTTPS'
-        'ml'         = 'ML'
-        'ci'         = 'CI'
-        'cd'         = 'CD'
-        'qa'         = 'QA'
-        'ide'        = 'IDE'
-        'cli'        = 'CLI'
-        'sdk'        = 'SDK'
-        'orm'        = 'ORM'
-        'mvc'        = 'MVC'
-        'spa'        = 'SPA'
-        'pwa'        = 'PWA'
-        'rest'       = 'REST'
-        'grpc'       = 'gRPC'
-        'tcp'        = 'TCP'
-        'udp'        = 'UDP'
-        'dns'        = 'DNS'
-        'ssl'        = 'SSL'
-        'tls'        = 'TLS'
-        'jwt'        = 'JWT'
-        'oauth'      = 'OAuth'
-        'saml'       = 'SAML'
-        'ad'         = 'AD'
-        'arm'        = 'ARM'
-        'vm'         = 'VM'
-        'os'         = 'OS'
-        'db'         = 'DB'
-        'nosql'      = 'NoSQL'
-        'etl'        = 'ETL'
-        'csv'        = 'CSV'
-        'yaml'       = 'YAML'
-        'yml'        = 'YAML'
-        'toml'       = 'TOML'
-        'markdown'   = 'Markdown'
-        'md'         = 'Markdown'
-        'git'        = 'Git'
-        'npm'        = 'npm'
-        'nuget'      = 'NuGet'
-        'pip'        = 'pip'
-        'docker'     = 'Docker'
-        'k8s'        = 'Kubernetes'
-        'aws'        = 'AWS'
-        'gcp'        = 'GCP'
-        'vs'         = 'VS'
-        'vscode'     = 'VS Code'
+    $tagMappings = @{
+        '.net'                     = '.NET'
+        'dotnet'                   = '.NET'
+        'dotnetcli'                = '.NET CLI'
+        'a2a'                      = 'A2A'
+        'ad'                       = 'AD'
+        'ai'                       = 'AI'
+        'artificialintelligence'   = 'AI'
+        'aiagent'                  = 'AI Agent'
+        'aiagents'                 = 'AI Agents'
+        'aks'                      = 'AKS'
+        'azurekubernetesservice'   = 'AKS'
+        'azurek8s'                 = 'AKS'
+        'api'                      = 'API'
+        'applicationinsights'      = 'Application Insights'
+        'appinsights'              = 'Application Insights'
+        'arm'                      = 'ARM'
+        'armtemplates'             = 'ARM Templates'
+        'as'                       = 'as'
+        'aspnet'                   = 'ASP.NET'
+        'aspnetcore'               = 'ASP.NET Core'
+        'automapper'               = 'AutoMapper'
+        'aws'                      = 'AWS'
+        'azureai'                  = 'Azure AI'
+        'aifoundry'                = 'Azure AI Foundry'
+        'azureappservice'          = 'Azure App Service'
+        'cognitiveservices'        = 'Azure Cognitive Services'
+        'azurecontainer'           = 'Azure Container'
+        'azdo'                     = 'Azure DevOps'
+        'azuredevops'              = 'Azure DevOps'
+        'azurefunctions'           = 'Azure Functions'
+        'azurekeyvault'            = 'Azure Key Vault'
+        'azureml'                  = 'Azure Machine Learning'
+        'azuremonitor'             = 'Azure Monitor'
+        'azureopenai'              = 'Azure OpenAI'
+        'azuresql'                 = 'Azure SQL'
+        'azurestorage'             = 'Azure Storage'
+        'bicep'                    = 'Bicep'
+        'bingchat'                 = 'Bing Chat'
+        'blazor'                   = 'Blazor'
+        'csharp'                   = 'C#'
+        'cd'                       = 'CD'
+        'ci'                       = 'CI'
+        'cli'                      = 'CLI'
+        'copilotchat'              = 'Copilot Chat'
+        'copilotcli'               = 'Copilot CLI'
+        'copilotvoice'             = 'Copilot Voice'
+        'css'                      = 'CSS'
+        'csv'                      = 'CSV'
+        'dapper'                   = 'Dapper'
+        'data&ai'                  = 'Data & AI'
+        'db'                       = 'DB'
+        'developercommunity'       = 'Developer Community'
+        'developertools'           = 'Developer Tools'
+        'dns'                      = 'DNS'
+        'docker'                   = 'Docker'
+        'ef'                       = 'EF'
+        'entityframework'          = 'EF'
+        'efcore'                   = 'EF Core'
+        'entityframeworkcore'      = 'EF Core'
+        'etl'                      = 'ETL'
+        'fsharp'                   = 'F#'
+        'fluentassertions'         = 'FluentAssertions'
+        'gcp'                      = 'GCP'
+        'git'                      = 'Git'
+        'github'                   = 'GitHub'
+        'githubactions'            = 'GitHub Actions'
+        'githubcopilot'            = 'GitHub Copilot'
+        'grpc'                     = 'gRPC'
+        'html'                     = 'HTML'
+        'http'                     = 'HTTP'
+        'https'                    = 'HTTPS'
+        'iac'                      = 'IaC'
+        'infrastructureascode'     = 'IaC'
+        'ide'                      = 'IDE'
+        'in'                       = 'in'
+        'javascript'               = 'JavaScript'
+        'js'                       = 'JavaScript'
+        'json'                     = 'JSON'
+        'jwt'                      = 'JWT'
+        'k8s'                      = 'Kubernetes'
+        'markdown'                 = 'Markdown'
+        'md'                       = 'Markdown'
+        'maui'                     = 'MAUI'
+        '.netmaui'                 = 'MAUI'
+        'modelcontextprotocol'     = 'MCP'
+        'mediatr'                  = 'MediatR'
+        'mscopilot'                = 'Microsoft Copilot'
+        'ml'                       = 'ML'
+        'msbuilds'                 = 'MSBuild'
+        'mstest'                   = 'MSTest'
+        'mvc'                      = 'MVC'
+        'nlog'                     = 'NLog'
+        'nosql'                    = 'NoSQL'
+        'npm'                      = 'npm'
+        'nuget'                    = 'NuGet'
+        'nunit'                    = 'NUnit'
+        'oauth'                    = 'OAuth'
+        'onboardtoazure'           = 'Onboard to Azure'
+        'openai'                   = 'OpenAI'
+        'orm'                      = 'ORM'
+        'os'                       = 'OS'
+        'pip'                      = 'pip'
+        'polly'                    = 'Polly'
+        'powerautomate'            = 'Power Automate'
+        'powerapps'                = 'Power Apps'
+        'powerbi'                  = 'Power BI'
+        'powerplatform'            = 'Power Platform'
+        'pwa'                      = 'PWA'
+        'qa'                       = 'QA'
+        'rest'                     = 'REST'
+        'saml'                     = 'SAML'
+        'sdk'                      = 'SDK'
+        'semantickernel'           = 'Semantic Kernel'
+        'serilog'                  = 'Serilog'
+        'signalr'                  = 'SignalR'
+        'softwaredeveloper'        = 'Software Developer'
+        'softwaredevelopment'      = 'Software Development'
+        'spa'                      = 'SPA'
+        'sql'                      = 'SQL'
+        'sqlserver'                = 'SQL Server'
+        'ssl'                      = 'SSL'
+        'tcp'                      = 'TCP'
+        'terraform'                = 'Terraform'
+        'tls'                      = 'TLS'
+        'toml'                     = 'TOML'
+        'udp'                      = 'UDP'
+        'ui'                       = 'UI'
+        'ux'                       = 'UX'
+        'vm'                       = 'VM'
+        'vs'                       = 'VS'
+        'visualstudio'             = 'VS'
+        'vscode'                   = 'VS Code'
+        'visualstudiocode'         = 'VS Code'
+        'webapi'                   = 'Web API'
+        'winui'                    = 'WinUI'
+        'xamarin'                  = 'Xamarin'
+        'xml'                      = 'XML'
+        'xunit'                    = 'xUnit'
+        'yaml'                     = 'YAML'
+        'yml'                      = 'YAML'
     }
     
     # Add dynamic mappings for categories and collections
     foreach ($category in $Categories) {
         $categoryKey = ($category.ToLowerInvariant() -replace ' ', '')
-        $customTagMap[$categoryKey] = $category
+        $tagMappings[$categoryKey] = $category
     }
 
     $collectionKey = ($Collection.ToLowerInvariant() -replace ' ', '')
@@ -251,7 +252,7 @@ function Get-FilteredTags {
     else {
         $collectionValue = $collectionValue.Substring(0, 1).ToUpper() + $collectionValue.Substring(1).ToLower()
     }
-    $customTagMap[$collectionKey] = $collectionValue
+    $tagMappings[$collectionKey] = $collectionValue
 
     if ($allTags.Count -eq 0) {
         return @()
@@ -264,13 +265,14 @@ function Get-FilteredTags {
             continue
         }
 
-        # Apply custom tag mappings after word processing
+        # First, try full tag matching (highest priority)
         $tagKey = ($tag.ToLowerInvariant() -replace ' ', '')
-        if ($customTagMap.ContainsKey($tagKey)) {
-            $newTags += $customTagMap[$tagKey]
+        if ($tagMappings.ContainsKey($tagKey)) {
+            $newTags += $tagMappings[$tagKey]
             continue
         }
 
+        # If no full tag match, process individual words
         $words = $tag -split ' '
         # Remove words that look like a year in 20xx
         $words = @($words | Where-Object { $_ -notmatch '^20\d{2}$' })
@@ -281,8 +283,8 @@ function Get-FilteredTags {
         for ($j = 0; $j -lt $words.Count; $j++) {
             $word = $words[$j]
             $wordKey = $word.ToLowerInvariant()
-            if ($wordMap.ContainsKey($wordKey)) {
-                $words[$j] = $wordMap[$wordKey]
+            if ($tagMappings.ContainsKey($wordKey)) {
+                $words[$j] = $tagMappings[$wordKey]
             }
             elseif ($word.Length -gt 0 -and $word[0] -cmatch '[A-Z0-9]') {
                 # leave as is
@@ -346,8 +348,8 @@ function Get-FilteredTags {
         $tagKey = ($tag.ToLowerInvariant() -replace ' ', '')
         if ($tag.Length -eq 3 -or $tag.Length -eq 6) {
             if ($tag -match '^[0-9A-Fa-f]+$') {
-                # Preserve if in customTagMap or wordMap
-                if ($customTagMap.ContainsKey($tagKey) -or $wordMap.ContainsKey($tagKey)) {
+                # Preserve if in unified tagMappings
+                if ($tagMappings.ContainsKey($tagKey)) {
                     return $true
                 }
                 return $false  # Filter out hex color codes
@@ -465,7 +467,6 @@ function Get-FilteredTags {
             '#' = 'Sharp'
             '+' = 'Plus'
             '-' = 'Min'
-            '.' = 'Dot'
             '&' = 'And'
             '@' = 'At'
             '*' = 'Star'
@@ -473,20 +474,15 @@ function Get-FilteredTags {
             '|' = 'Pipe'
             '\' = 'Backslash'
             '/' = 'Slash'
+            '.' = 'Dot'
         }
         
         foreach ($char in $replacements.Keys) {
             $escapedChar = [regex]::Escape($char)
             $replacement = $replacements[$char]
             
-            # Replace character between two other characters (add spaces around)
-            $tag = $tag -replace "(\w)$escapedChar(\w)", "`$1 $replacement `$2"
-            
-            # Replace character with space before it (space + char)
-            $tag = $tag -replace " $escapedChar(\w)", " $replacement `$1"
-            
-            # Replace character with space after it (char + space)
-            $tag = $tag -replace "(\w)$escapedChar ", "`$1 $replacement "
+            # Replace character directly without adding extra spaces
+            $tag = $tag -replace $escapedChar, $replacement
         }
         
         # Apply normalization (remove non-alphanumeric/space/hyphen, downcase, clean whitespace)
@@ -501,7 +497,7 @@ function Get-FilteredTags {
     for ($i = 0; $i -lt $finalTags.Count; $i++) {
         if ($i -lt $normalizedTags.Count -and $normalizedTags[$i] -and $normalizedTags[$i].Trim() -ne '') {
             $validPairs += @{
-                original = $finalTags[$i]
+                original   = $finalTags[$i]
                 normalized = $normalizedTags[$i]
             }
         }
@@ -511,7 +507,7 @@ function Get-FilteredTags {
     $orderedNormalized = $validPairs | ForEach-Object { $_.normalized }
     
     return @{
-        tags = $orderedTags
+        tags            = $orderedTags
         tags_normalized = $orderedNormalized
     }
 }

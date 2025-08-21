@@ -12,7 +12,7 @@ date: 2025-08-04 17:33:57 +00:00
 permalink: "/2025-08-04-Supercharge-Your-SQL-Development-with-Modern-NET-On-NET-Live.html"
 categories: ["Coding", "ML"]
 tags: [".NET", "Build Validation", "CI/CD", "Coding", "Cross Platform Development", "Database Tooling", "Developer Tooling", "Erik Ejlskov Jensen", "Global Tool", "ML", "NuGet", "SQL Server", "Sqlpackage", "Static Code Analysis", "Videos"]
-tags_normalized: ["net", "build validation", "ci slash cd", "coding", "cross platform development", "database tooling", "developer tooling", "erik ejlskov jensen", "global tool", "ml", "nuget", "sql server", "sqlpackage", "static code analysis", "videos"]
+tags_normalized: ["dotnet", "build validation", "cislashcd", "coding", "cross platform development", "database tooling", "developer tooling", "erik ejlskov jensen", "global tool", "ml", "nuget", "sql server", "sqlpackage", "static code analysis", "videos"]
 ---
 
 Hosted by dotnet and featuring Erik Ejlskov Jensen, this On .NET Live episode demonstrates how to boost SQL Server development using modern .NET tools, NuGet packages, and static analysis.<!--excerpt_end-->

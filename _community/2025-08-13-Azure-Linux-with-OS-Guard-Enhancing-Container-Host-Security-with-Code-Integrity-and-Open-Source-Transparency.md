@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-13 16:01:17 +00:00
 permalink: "/2025-08-13-Azure-Linux-with-OS-Guard-Enhancing-Container-Host-Security-with-Code-Integrity-and-Open-Source-Transparency.html"
 categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Kubernetes Service", "Azure Linux", "Code Integrity", "Community", "Container Security", "Dm Verity", "FedRAMP", "FIPS 140 3", "Immutability", "IPE", "Microsoft Azure", "Open Source", "OS Guard", "Rootkit Protection", "Secure Boot", "Security", "Security Compliance", "SELinux", "Supply Chain Security", "Trusted Launch", "Unified Kernel Images", "Vtpm"]
-tags_normalized: ["azure", "azure kubernetes service", "azure linux", "code integrity", "community", "container security", "dm verity", "fedramp", "fips 140 3", "immutability", "ipe", "microsoft azure", "open source", "os guard", "rootkit protection", "secure boot", "security", "security compliance", "selinux", "supply chain security", "trusted launch", "unified kernel images", "vtpm"]
+tags: ["AKS", "Azure", "Azure Linux", "Code Integrity", "Community", "Container Security", "Dm Verity", "FedRAMP", "FIPS 140 3", "Immutability", "IPE", "Microsoft Azure", "Open Source", "OS Guard", "Rootkit Protection", "Secure Boot", "Security", "Security Compliance", "SELinux", "Supply Chain Security", "Trusted Launch", "Unified Kernel Images", "Vtpm"]
+tags_normalized: ["aks", "azure", "azure linux", "code integrity", "community", "container security", "dm verity", "fedramp", "fips 140 3", "immutability", "ipe", "microsoft azure", "open source", "os guard", "rootkit protection", "secure boot", "security", "security compliance", "selinux", "supply chain security", "trusted launch", "unified kernel images", "vtpm"]
 ---
 
 Sudhanva presents a comprehensive overview of Azure Linux with OS Guard, highlighting Microsoft's advancements in secure, immutable container hosting and the collaborative open source approach underlying these innovations.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-13 21:53:14 +00:00
 permalink: "/2025-08-13-MSLE-Newsletter-August-2025-AI-Applied-Skills-and-Educator-Community-Updates.html"
 categories: ["AI"]
-tags: ["AI", "AI Bootcamp", "AI Credentials", "AI Curriculum", "AI Economy Institute", "AI Education", "Applied Skills", "Cloud Skills", "Community", "Community Events", "Cybersecurity Education", "Education Technology", "MCP", "Microsoft Certifications", "Microsoft Elevate", "Microsoft Learn For Educators", "Model Context Protocol", "MSLE"]
-tags_normalized: ["ai", "ai bootcamp", "ai credentials", "ai curriculum", "ai economy institute", "ai education", "applied skills", "cloud skills", "community", "community events", "cybersecurity education", "education technology", "mcp", "microsoft certifications", "microsoft elevate", "microsoft learn for educators", "model context protocol", "msle"]
+tags: ["AI", "AI Bootcamp", "AI Credentials", "AI Curriculum", "AI Economy Institute", "AI Education", "Applied Skills", "Cloud Skills", "Community", "Community Events", "Cybersecurity Education", "Education Technology", "MCP", "Microsoft Certifications", "Microsoft Elevate", "Microsoft Learn For Educators", "MSLE"]
+tags_normalized: ["ai", "ai bootcamp", "ai credentials", "ai curriculum", "ai economy institute", "ai education", "applied skills", "cloud skills", "community", "community events", "cybersecurity education", "education technology", "mcp", "microsoft certifications", "microsoft elevate", "microsoft learn for educators", "msle"]
 ---
 
 RobinLBaldwin shares the August 2025 MSLE Newsletter, featuring updates on educator resources, Model Context Protocol workshops, Microsoft Applied Skills credentials, and integrating AI and cybersecurity in academic programs.<!--excerpt_end-->

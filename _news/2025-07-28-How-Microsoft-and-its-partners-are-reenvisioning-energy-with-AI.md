@@ -11,8 +11,8 @@ feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-28 18:04:45 +00:00
 permalink: "/2025-07-28-How-Microsoft-and-its-partners-are-reenvisioning-energy-with-AI.html"
 categories: ["AI"]
-tags: ["AI", "Artificial Intelligence", "Company News", "Energy Infrastructure", "Energy Innovation", "Energy Sector", "Grid Modernization", "Microsoft", "News", "Partners", "Sustainability", "Technology Transformation"]
-tags_normalized: ["ai", "artificial intelligence", "company news", "energy infrastructure", "energy innovation", "energy sector", "grid modernization", "microsoft", "news", "partners", "sustainability", "technology transformation"]
+tags: ["AI", "Company News", "Energy Infrastructure", "Energy Innovation", "Energy Sector", "Grid Modernization", "Microsoft", "News", "Partners", "Sustainability", "Technology Transformation"]
+tags_normalized: ["ai", "company news", "energy infrastructure", "energy innovation", "energy sector", "grid modernization", "microsoft", "news", "partners", "sustainability", "technology transformation"]
 ---
 
 Written by stclarke, this article examines Microsoft's partnership-driven efforts to revolutionize the energy industry using AI-powered solutions.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2024-09-04 09:31:35 +00:00
 permalink: "/2024-09-04-Getting-the-ASPNET-Core-Server-Hosting-URLs-at-Startup-and-in-Requests.html"
 categories: ["Coding"]
 tags: [".NET", "Application Development", "Asp.net", "Asp.net Core", "Coding", "Dependency Injection", "Host Configuration", "Iservaddressesfeature", "Iservice", "Logging", "Posts", "Program.cs", "Startup", "Urls"]
-tags_normalized: ["net", "application development", "asp dot net", "asp dot net core", "coding", "dependency injection", "host configuration", "iservaddressesfeature", "iservice", "logging", "posts", "program dot cs", "startup", "urls"]
+tags_normalized: ["dotnet", "application development", "aspdotnet", "aspdotnet core", "coding", "dependency injection", "host configuration", "iservaddressesfeature", "iservice", "logging", "posts", "programdotcs", "startup", "urls"]
 ---
 
 In this post, Rick Strahl explores different techniques to retrieve ASP.NET Core application hosting URLs at startup and during requests, providing code samples and practical advice.<!--excerpt_end-->

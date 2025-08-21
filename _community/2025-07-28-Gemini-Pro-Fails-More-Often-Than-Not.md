@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-28 12:55:30 +00:00
 permalink: "/2025-07-28-Gemini-Pro-fails-more-often-than-not.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Community", "Gemini Pro", "GitHub Copilot", "Lag", "Long Context", "Model Errors", "Model Reliability", "Premium Requests", "Pull Request", "Visual Studio Code"]
-tags_normalized: ["agent mode", "ai", "community", "gemini pro", "github copilot", "lag", "long context", "model errors", "model reliability", "premium requests", "pull request", "visual studio code"]
+tags: ["Agent Mode", "AI", "Community", "Gemini Pro", "GitHub Copilot", "Lag", "Long Context", "Model Errors", "Model Reliability", "Premium Requests", "Pull Request", "VS Code"]
+tags_normalized: ["agent mode", "ai", "community", "gemini pro", "github copilot", "lag", "long context", "model errors", "model reliability", "premium requests", "pull request", "vs code"]
 ---
 
 ChomsGP describes recurrent problems with the Gemini Pro model in GitHub Copilot, contrasting it with more stable alternatives, and raises concerns about its reliability and value.<!--excerpt_end-->

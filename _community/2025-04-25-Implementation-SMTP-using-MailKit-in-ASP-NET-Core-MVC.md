@@ -12,7 +12,7 @@ date: 2025-04-25 20:17:18 +00:00
 permalink: "/2025-04-25-Implementation-SMTP-using-MailKit-in-ASP-NET-Core-MVC.html"
 categories: ["Coding"]
 tags: [".NET Core", "ASP.NET Core", "C#", "Coding", "Community", "Email Integration", "Email Trigger", "Form Handling", "MailKit", "MVC", "SMTP", "Web Development"]
-tags_normalized: ["net core", "asp dot net core", "c", "coding", "community", "email integration", "email trigger", "form handling", "mailkit", "mvc", "smtp", "web development"]
+tags_normalized: ["dotnet core", "aspdotnet core", "csharp", "coding", "community", "email integration", "email trigger", "form handling", "mailkit", "mvc", "smtp", "web development"]
 ---
 
 soumyadipmajumder03 inquires about implementing automated email triggers using MailKit in an ASP.NET Core MVC application. The main focus is integrating the email-sending feature upon form submission.<!--excerpt_end-->

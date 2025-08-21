@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwf
 date: 2025-08-14 14:31:21 +00:00
 permalink: "/2025-08-14-The-Future-of-Web-Development-with-ASPNET-Core-and-Blazor-in-NET-10.html"
 categories: ["AI", "Coding", "Security"]
-tags: [".NET", ".NET 10", ".NET Aspire", "AI", "ASP.NET Core", "Blazor", "Coding", "Developer Productivity", "Diagnostics", "Minimal API", "OpenAPI", "Passkey", "Secure Web Apps", "Security", "Telemetry", "Videos", "Visual Studio", "Web Development", "WebAuthn"]
-tags_normalized: ["net", "net 10", "net aspire", "ai", "asp dot net core", "blazor", "coding", "developer productivity", "diagnostics", "minimal api", "openapi", "passkey", "secure web apps", "security", "telemetry", "videos", "visual studio", "web development", "webauthn"]
+tags: [".NET", ".NET 10", ".NET Aspire", "AI", "ASP.NET Core", "Blazor", "Coding", "Developer Productivity", "Diagnostics", "Minimal API", "OpenAPI", "Passkey", "Secure Web Apps", "Security", "Telemetry", "Videos", "VS", "Web Development", "WebAuthn"]
+tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "ai", "aspdotnet core", "blazor", "coding", "developer productivity", "diagnostics", "minimal api", "openapi", "passkey", "secure web apps", "security", "telemetry", "videos", "vs", "web development", "webauthn"]
 ---
 
 In this video, the .NET team showcases new features coming to ASP.NET Core and Blazor in .NET 10. Learn from dotnet about building secure, AI-powered web applications and advancing your web development skills.<!--excerpt_end-->

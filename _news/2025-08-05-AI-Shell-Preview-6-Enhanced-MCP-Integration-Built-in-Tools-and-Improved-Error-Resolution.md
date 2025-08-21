@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/powershell/feed/"
 date: 2025-08-05 18:40:38 +00:00
 permalink: "/2025-08-05-AI-Shell-Preview-6-Enhanced-MCP-Integration-Built-in-Tools-and-Improved-Error-Resolution.html"
 categories: ["AI", "Coding"]
-tags: ["AI", "AI Agent", "AI Shell", "Automation", "Azure OpenAI", "Coding", "Command Line", "Copilot in Azure", "Error Handling", "MCP", "Model Context Protocol", "News", "OpenAI", "PowerShell", "Resolve Error", "Terminal Tools"]
-tags_normalized: ["ai", "ai agent", "ai shell", "automation", "azure openai", "coding", "command line", "copilot in azure", "error handling", "mcp", "model context protocol", "news", "openai", "powershell", "resolve error", "terminal tools"]
+tags: ["AI", "AI Agent", "AI Shell", "Automation", "Azure OpenAI", "Coding", "Command Line", "Copilot in Azure", "Error Handling", "MCP", "News", "OpenAI", "PowerShell", "Resolve Error", "Terminal Tools"]
+tags_normalized: ["ai", "ai agent", "ai shell", "automation", "azure openai", "coding", "command line", "copilot in azure", "error handling", "mcp", "news", "openai", "powershell", "resolve error", "terminal tools"]
 ---
 
 Author Steven Bucher shares the latest on AI Shell Preview 6, highlighting richer MCP integration, built-in tools for PowerShell, and improved error resolution features. Learn how these updates foster a more productive, AI-enhanced shell environment.<!--excerpt_end-->

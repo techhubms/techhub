@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-06-17 18:40:23 +00:00
 permalink: "/2025-06-17-Azure-DevOps-MCP-Server-Now-in-Public-Preview-Integrating-GitHub-Copilot-with-DevOps-Context.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["Agentic AI", "Agile", "AI", "AI Integration", "Azure", "Azure & Cloud", "Azure DevOps", "Build Automation", "Cloud Development", "Developer Tools", "DevOps", "GitHub Copilot", "LLM", "MCP Server", "News", "Public Preview", "Pull Requests", "Test Plans", "Visual Studio", "Visual Studio Code", "Work Items"]
-tags_normalized: ["agentic ai", "agile", "ai", "ai integration", "azure", "azure cloud", "azure devops", "build automation", "cloud development", "developer tools", "devops", "github copilot", "llm", "mcp server", "news", "public preview", "pull requests", "test plans", "visual studio", "visual studio code", "work items"]
+tags: ["Agentic AI", "Agile", "AI", "AI Integration", "Azure", "Azure & Cloud", "Azure DevOps", "Build Automation", "Cloud Development", "Developer Tools", "DevOps", "GitHub Copilot", "LLM", "MCP Server", "News", "Public Preview", "Pull Requests", "Test Plans", "VS", "VS Code", "Work Items"]
+tags_normalized: ["agentic ai", "agile", "ai", "ai integration", "azure", "azure and cloud", "azure devops", "build automation", "cloud development", "developer tools", "devops", "github copilot", "llm", "mcp server", "news", "public preview", "pull requests", "test plans", "vs", "vs code", "work items"]
 ---
 
 Dan Hellem introduces the public preview of the Azure DevOps MCP Server. This new local service lets GitHub Copilot interact with Azure DevOps, providing AI-driven support tailored to your projects while keeping your data secure within your environment.<!--excerpt_end-->

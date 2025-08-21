@@ -12,7 +12,7 @@ date: 2025-08-18 07:00:00 +00:00
 permalink: "/2025-08-18-Beginners-Guide-Using-Custom-AI-Models-with-Foundry-Local-and-Microsoft-Olive.html"
 categories: ["AI"]
 tags: ["AI", "AI Chatbot", "Community", "CPU", "DeepSeek Models", "Foundry Local", "GGUF", "GPU", "Hugging Face", "INT4", "Local Inference", "Mac", "Microsoft Olive", "Model Compression", "Model Conversion", "ONNX", "Phi Models", "Python", "PyTorch", "Qwen Models", "Qwen3 0.6B", "Transformers", "Windows"]
-tags_normalized: ["ai", "ai chatbot", "community", "cpu", "deepseek models", "foundry local", "gguf", "gpu", "hugging face", "int4", "local inference", "mac", "microsoft olive", "model compression", "model conversion", "onnx", "phi models", "python", "pytorch", "qwen models", "qwen3 0 dot 6b", "transformers", "windows"]
+tags_normalized: ["ai", "ai chatbot", "community", "cpu", "deepseek models", "foundry local", "gguf", "gpu", "hugging face", "int4", "local inference", "mac", "microsoft olive", "model compression", "model conversion", "onnx", "phi models", "python", "pytorch", "qwen models", "qwen3 0dot6b", "transformers", "windows"]
 ---
 
 kinfey explains how to set up and run your own AI language models locally using Foundry Local and Microsoft Olive, covering installation, model format conversion, file organization, and troubleshooting for beginners.<!--excerpt_end-->

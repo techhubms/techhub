@@ -11,8 +11,8 @@ feed_url: "https://github.blog/feed/"
 date: 2025-07-29 16:31:29 +00:00
 permalink: "/2025-07-29-From-First-Commits-to-Big-Ships-Announcing-the-GitHub-Open-Source-Podcast.html"
 categories: ["DevOps"]
-tags: ["Abigail Cabunoc Mayes", "Andrea Griffiths", "Anime.JS", "Cassidy Williams", "Collaborative Tools", "Community Building", "CSS Zero", "Developer Community", "Developer Education", "DevOps", "Electron", "GitHub", "GitHub Podcast", "Kedasha Kerr", "Maintainers", "Model Context Protocol", "News", "Open Source", "Open Source Community", "Open Standards", "Podcast"]
-tags_normalized: ["abigail cabunoc mayes", "andrea griffiths", "anime dot js", "cassidy williams", "collaborative tools", "community building", "css zero", "developer community", "developer education", "devops", "electron", "github", "github podcast", "kedasha kerr", "maintainers", "model context protocol", "news", "open source", "open source community", "open standards", "podcast"]
+tags: ["Abigail Cabunoc Mayes", "Andrea Griffiths", "Anime.JS", "Cassidy Williams", "Collaborative Tools", "Community Building", "CSS Zero", "Developer Community", "Developer Education", "DevOps", "Electron", "GitHub", "GitHub Podcast", "Kedasha Kerr", "Maintainers", "MCP", "News", "Open Source", "Open Source Community", "Open Standards", "Podcast"]
+tags_normalized: ["abigail cabunoc mayes", "andrea griffiths", "animedotjs", "cassidy williams", "collaborative tools", "community building", "css zero", "developer community", "developer education", "devops", "electron", "github", "github podcast", "kedasha kerr", "maintainers", "mcp", "news", "open source", "open source community", "open standards", "podcast"]
 ---
 
 In this introduction by Abigail Cabunoc Mayes, discover the GitHub Podcast, a new series focusing on open source community stories, insights from maintainers, and discussions on trends such as AI and open standards.<!--excerpt_end-->

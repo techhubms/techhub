@@ -12,7 +12,7 @@ date: 2025-05-28 07:48:00 +00:00
 permalink: "/2025-05-28-Is-DevOps-Dead-Or-Just-Evolving.html"
 categories: ["DevOps"]
 tags: ["Automation", "CI/CD Pipelines", "Developer Experience", "DevOps", "Engineering Culture", "Internal Platforms", "Lead Podcast", "Platform Engineering", "Posts", "Software Delivery", "Software Teams", "Team Ownership"]
-tags_normalized: ["automation", "ci slash cd pipelines", "developer experience", "devops", "engineering culture", "internal platforms", "lead podcast", "platform engineering", "posts", "software delivery", "software teams", "team ownership"]
+tags_normalized: ["automation", "cislashcd pipelines", "developer experience", "devops", "engineering culture", "internal platforms", "lead podcast", "platform engineering", "posts", "software delivery", "software teams", "team ownership"]
 ---
 
 In this article, Rene van Osnabrugge shares insights from his LEAD podcast and discusses whether DevOps is truly dead or simply evolving, highlighting the impact of platform engineering on modern engineering culture.<!--excerpt_end-->

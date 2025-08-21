@@ -12,7 +12,7 @@ date: 2025-04-25 17:55:05 +00:00
 permalink: "/2025-04-25-Azure-SDK-Release-Highlights-for-April-2025-New-Features-Platform-Support-and-Key-Updates.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", "Azure", "Azure SDK", "C++", "Coding", "Embedded C", "End Of Life", "Go", "Java", "JavaScript", "Management Libraries", "News", "Node.js", "Python", "Release Notes", "Rust", "SDK", "TypeScript"]
-tags_normalized: ["net", "azure", "azure sdk", "c", "coding", "embedded c", "end of life", "go", "java", "javascript", "management libraries", "news", "node dot js", "python", "release notes", "rust", "sdk", "typescript"]
+tags_normalized: ["dotnet", "azure", "azure sdk", "cplusplus", "coding", "embedded c", "end of life", "go", "java", "javascript", "management libraries", "news", "nodedotjs", "python", "release notes", "rust", "sdk", "typescript"]
 ---
 
 Hector Norzagaray presents the April 2025 Azure SDK release update, highlighting new stable and beta libraries, essential platform advisories, and resources for further reading.<!--excerpt_end-->

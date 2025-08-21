@@ -12,7 +12,7 @@ date: 2025-08-13 12:30:08 +00:00
 permalink: "/2025-08-13-Finding-Large-Directories-and-Recovering-Lost-Disk-Space-with-PowerShell.html"
 categories: ["Coding"]
 tags: [".NET", "Automation", "Coding", "Community", "Directory Size", "Disk Space Management", "Filesystem Analysis", "Get DirectorySize", "Get DirectoryTreeSize", "Module Development", "PowerShell", "Reparse Points", "Scripting", "System.IO.Directory", "Windows"]
-tags_normalized: ["net", "automation", "coding", "community", "directory size", "disk space management", "filesystem analysis", "get directorysize", "get directorytreesize", "module development", "powershell", "reparse points", "scripting", "system dot io dot directory", "windows"]
+tags_normalized: ["dotnet", "automation", "coding", "community", "directory size", "disk space management", "filesystem analysis", "get directorysize", "get directorytreesize", "module development", "powershell", "reparse points", "scripting", "systemdotiodotdirectory", "windows"]
 ---
 
 LainRobertson shares a PowerShell module and examples for analyzing large directories and recovering lost disk space, offering practical insights for Windows administrators and developers.<!--excerpt_end-->

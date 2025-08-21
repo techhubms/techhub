@@ -12,7 +12,7 @@ feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-06-24 10:26:20 +00:00
 permalink: "/2025-06-24-GitHub-Desktop-35-GitHub-Copilot-commit-message-generation-now-generally-available.html"
 tags: ["AI", "GitHub Copilot", "GitHub Desktop", "Improvements", "News", "Version 3.5"]
-tags_normalized: ["ai", "github copilot", "github desktop", "improvements", "news", "version 3 dot 5"]
+tags_normalized: ["ai", "github copilot", "github desktop", "improvements", "news", "version 3dot5"]
 ---
 
 In this article, Allison introduces the general availability of GitHub Desktop 3.5, describing it as a significant milestone for the tool. The article highlights the key improvements and features added in this recent release. <!--excerpt_end-->

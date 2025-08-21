@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0S
 date: 2025-08-18 14:00:09 +00:00
 permalink: "/2025-08-18-Hello-GPT-5-and-GPT-5-mini-New-AI-Features-in-VS-Code-Agent-Mode.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Development", "AI Integration", "Beast Mode", "Coding", "Coding Productivity", "Developer Tools", "GitHub Copilot", "GPT 5", "GPT 5 Mini", "Model Management", "Task Lists", "Videos", "Visual Studio Code"]
-tags_normalized: ["agent mode", "ai", "ai development", "ai integration", "beast mode", "coding", "coding productivity", "developer tools", "github copilot", "gpt 5", "gpt 5 mini", "model management", "task lists", "videos", "visual studio code"]
+tags: ["Agent Mode", "AI", "AI Development", "AI Integration", "Beast Mode", "Coding", "Coding Productivity", "Developer Tools", "GitHub Copilot", "GPT 5", "GPT 5 Mini", "Model Management", "Task Lists", "Videos", "VS Code"]
+tags_normalized: ["agent mode", "ai", "ai development", "ai integration", "beast mode", "coding", "coding productivity", "developer tools", "github copilot", "gpt 5", "gpt 5 mini", "model management", "task lists", "videos", "vs code"]
 ---
 
 Visual Studio Code introduces the new GPT-5 and GPT-5 mini models within agent mode. In this podcast, the VS Code team explains these AI features and their impact for developers.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2025-08-20 13:31:20 +00:00
 permalink: "/2025-08-20-NFL-and-Microsoft-Expand-Partnership-Copilot-and-Azure-AI-Transform-Sidelines-and-Operations.html"
 categories: ["AI", "Azure", "GitHub Copilot"]
 tags: ["AI", "AI in Sports", "AI Innovation", "Azure", "Azure AI", "Azure AI Foundry", "Cloud Platforms", "Coaching Tools", "Company News", "Data Driven Insights", "Game Day Analytics", "Game Operations", "GitHub Copilot", "Microsoft 365 Copilot", "Microsoft Copilot", "News", "NFL", "Player Scouting", "Real Time Data", "Sideline Technology", "Sports Technology", "SurfaceCopilot+ PC"]
-tags_normalized: ["ai", "ai in sports", "ai innovation", "azure", "azure ai", "azure ai foundry", "cloud platforms", "coaching tools", "company news", "data driven insights", "game day analytics", "game operations", "github copilot", "microsoft 365 copilot", "microsoft copilot", "news", "nfl", "player scouting", "real time data", "sideline technology", "sports technology", "surfacecopilot plus pc"]
+tags_normalized: ["ai", "ai in sports", "ai innovation", "azure", "azure ai", "azure ai foundry", "cloud platforms", "coaching tools", "company news", "data driven insights", "game day analytics", "game operations", "github copilot", "microsoft 365 copilot", "microsoft copilot", "news", "nfl", "player scouting", "real time data", "sideline technology", "sports technology", "surfacecopilotplus pc"]
 ---
 
 stclarke reports on how the NFL and Microsoft are expanding their partnership, leveraging Copilot (including GitHub Copilot features) and Azure AI to enhance coaching, operations, and player experience throughout the league.<!--excerpt_end-->

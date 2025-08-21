@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?cate
 date: 2025-08-15 08:02:40 +00:00
 permalink: "/2025-08-15-Building-a-Dual-Transport-MCP-Server-with-NET-STDIO-and-HTTP-Support.html"
 categories: ["Azure", "Coding"]
-tags: [".NET", ".NET Builder Pattern", "ASP.NET", "Azure", "C#", "Coding", "Command Line Arguments", "Community", "Copilot Studio", "Dependency Injection", "Environment Variables", "Host", "HostApplicationBuilder", "HTTP Transport", "IHost", "MCP", "Model Context Protocol", "Sample Applications", "Server Deployment", "STDIO Transport", "WebApplication", "WebApplicationBuilder"]
-tags_normalized: ["net", "net builder pattern", "asp dot net", "azure", "c", "coding", "command line arguments", "community", "copilot studio", "dependency injection", "environment variables", "host", "hostapplicationbuilder", "http transport", "ihost", "mcp", "model context protocol", "sample applications", "server deployment", "stdio transport", "webapplication", "webapplicationbuilder"]
+tags: [".NET", ".NET Builder Pattern", "ASP.NET", "Azure", "C#", "Coding", "Command Line Arguments", "Community", "Copilot Studio", "Dependency Injection", "Environment Variables", "Host", "HostApplicationBuilder", "HTTP Transport", "IHost", "MCP", "Sample Applications", "Server Deployment", "STDIO Transport", "WebApplication", "WebApplicationBuilder"]
+tags_normalized: ["dotnet", "dotnet builder pattern", "aspdotnet", "azure", "csharp", "coding", "command line arguments", "community", "copilot studio", "dependency injection", "environment variables", "host", "hostapplicationbuilder", "http transport", "ihost", "mcp", "sample applications", "server deployment", "stdio transport", "webapplication", "webapplicationbuilder"]
 ---
 
 justinyoo explains how to implement a .NET MCP server with runtime-selectable STDIO and HTTP transports, reducing management overhead and supporting integration with Copilot Studio and other platforms.<!--excerpt_end-->

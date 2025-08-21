@@ -12,7 +12,7 @@ date: 2025-03-30 18:44:09 +00:00
 permalink: "/2025-03-30-Making-Software-Like-LEGO-How-Aspire-Brings-the-Pieces-Together.html"
 categories: ["Coding", "DevOps"]
 tags: ["AI", "AI Workflows", "Application Lifecycle", "Aspire", "CI/CD", "Cloud Computing", "Coding", "Composability", "Configuration", "Developer Experience", "DevOps", "Infrastructure", "Integration", "Orchestration", "Platform Engineering", "Posts", "Software Development", "System Modeling", "Vertical Platforms", "Web Development"]
-tags_normalized: ["ai", "ai workflows", "application lifecycle", "aspire", "ci slash cd", "cloud computing", "coding", "composability", "configuration", "developer experience", "devops", "infrastructure", "integration", "orchestration", "platform engineering", "posts", "software development", "system modeling", "vertical platforms", "web development"]
+tags_normalized: ["ai", "ai workflows", "application lifecycle", "aspire", "cislashcd", "cloud computing", "coding", "composability", "configuration", "developer experience", "devops", "infrastructure", "integration", "orchestration", "platform engineering", "posts", "software development", "system modeling", "vertical platforms", "web development"]
 ---
 
 In this post by David Fowler, the author discusses how Aspire transforms software development by making systems composable and robust, shifting focus from raw code to orchestration, resources, and extensible platform models for both developers and AI.<!--excerpt_end-->

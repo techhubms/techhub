@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-07-10 17:15:00 +00:00
 permalink: "/2025-07-10-Customize-AI-Responses-from-GitHub-Copilot-with-Custom-Instructions.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Customization", "C#", "Code Generation", "Coding", "Coding Standards", "Copilot", "Copilot Agent Mode", "Custom Instructions", "Development Workflow", "GitHub Copilot", "News", "Visual Studio", "Visual Studio Code"]
-tags_normalized: ["net", "ai", "ai customization", "c", "code generation", "coding", "coding standards", "copilot", "copilot agent mode", "custom instructions", "development workflow", "github copilot", "news", "visual studio", "visual studio code"]
+tags: [".NET", "AI", "AI Customization", "C#", "Code Generation", "Coding", "Coding Standards", "Copilot", "Copilot Agent Mode", "Custom Instructions", "Development Workflow", "GitHub Copilot", "News", "VS", "VS Code"]
+tags_normalized: ["dotnet", "ai", "ai customization", "csharp", "code generation", "coding", "coding standards", "copilot", "copilot agent mode", "custom instructions", "development workflow", "github copilot", "news", "vs", "vs code"]
 ---
 
 Matt Soucoup explains how custom instructions in GitHub Copilot help developers generate AI-powered code that aligns with their team’s coding standards and preferences.<!--excerpt_end-->

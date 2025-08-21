@@ -12,7 +12,7 @@ date: 2025-07-29 11:34:41 +00:00
 permalink: "/2025-07-29-Azure-Automation-Introduces-PowerShell-74-Python-310-and-New-Runtime-Environment.html"
 categories: ["Azure", "Coding", "Security"]
 tags: ["Azure", "Azure Automation", "Azure CLI", "Coding", "Community", "Cross Platform Orchestration", "Infrastructure Management", "Module Version Management", "Powershell", "PowerShell 7.4", "Python 3.10", "Rollback Capability", "Runbooks", "Runtime Environment", "Script Modernization", "Security"]
-tags_normalized: ["azure", "azure automation", "azure cli", "coding", "community", "cross platform orchestration", "infrastructure management", "module version management", "powershell", "powershell 7 dot 4", "python 3 dot 10", "rollback capability", "runbooks", "runtime environment", "script modernization", "security"]
+tags_normalized: ["azure", "azure automation", "azure cli", "coding", "community", "cross platform orchestration", "infrastructure management", "module version management", "powershell", "powershell 7dot4", "python 3dot10", "rollback capability", "runbooks", "runtime environment", "script modernization", "security"]
 ---
 
 Nikita_Bajaj announces major enhancements to Azure Automation, including support for PowerShell 7.4, Python 3.10, and a new Runtime Environment. The update boosts security, script modernization, control, and operational flexibility for enterprise automation.<!--excerpt_end-->

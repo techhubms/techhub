@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-04 11:12:31 +00:00
 permalink: "/2025-08-04-Challenges-and-Frustrations-with-Modern-ASPNET-for-Web-Development.html"
 categories: ["Coding"]
-tags: [".NET", "ASP.NET", "Blazor", "Bun", "C#", "Coding", "Community", "Deno", "JavaScript Frameworks", "Node.js", "Razor", "SignalR", "Visual Studio", "Visual Studio Code", "Vue", "Webforms"]
-tags_normalized: ["net", "asp dot net", "blazor", "bun", "c", "coding", "community", "deno", "javascript frameworks", "node dot js", "razor", "signalr", "visual studio", "visual studio code", "vue", "webforms"]
+tags: [".NET", "ASP.NET", "Blazor", "Bun", "C#", "Coding", "Community", "Deno", "JavaScript Frameworks", "Node.js", "Razor", "SignalR", "VS", "VS Code", "Vue", "Webforms"]
+tags_normalized: ["dotnet", "aspdotnet", "blazor", "bun", "csharp", "coding", "community", "deno", "javascript frameworks", "nodedotjs", "razor", "signalr", "vs", "vs code", "vue", "webforms"]
 ---
 
 Kingside2 critically examines the current state of ASP.NET and related technologies, highlighting pain points with Webforms, Razor, Blazor, and developer tooling.<!--excerpt_end-->

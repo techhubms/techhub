@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-04 16:46:19 +00:00
 permalink: "/2025-08-04-Beastmode-31-vs-Sonnet-4-in-GitHub-Copilot-A-Users-Experience-with-Tool-Calling-Limitations.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Model Comparison", "Beastmode 3.1", "Code Commit", "Community", "Developer Workflow", "GitHub Copilot", "GPT 4.1", "Rate Limits", "Software Development", "Sonnet 4", "Tool Calling", "Visual Studio Code"]
-tags_normalized: ["ai", "ai model comparison", "beastmode 3 dot 1", "code commit", "community", "developer workflow", "github copilot", "gpt 4 dot 1", "rate limits", "software development", "sonnet 4", "tool calling", "visual studio code"]
+tags: ["AI", "AI Model Comparison", "Beastmode 3.1", "Code Commit", "Community", "Developer Workflow", "GitHub Copilot", "GPT 4.1", "Rate Limits", "Software Development", "Sonnet 4", "Tool Calling", "VS Code"]
+tags_normalized: ["ai", "ai model comparison", "beastmode 3dot1", "code commit", "community", "developer workflow", "github copilot", "gpt 4dot1", "rate limits", "software development", "sonnet 4", "tool calling", "vs code"]
 ---
 
 In this article, pws7438 discusses personal experiences comparing GitHub Copilot’s Beastmode-3.1 and Sonnet 4 models in VS Code, focusing on tool-calling and code commit reliability.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2025-08-15 15:57:54 +00:00
 permalink: "/2025-08-15-AppSignal-Adds-Native-OpenTelemetry-Support-for-Enhanced-Application-Monitoring.html"
 categories: ["DevOps"]
 tags: ["AI", "AI in Software Development", "Application Monitoring", "AppSignal", "CNCF", "DevOps", "Elixir", "Go", "Instrumentation", "Java", "Monitoring And Analytics", "Node.js", "Observability", "OpenTelemetry", "Performance Metrics", "PHP", "Posts", "Ruby", "Social Facebook", "Social LinkedIn", "Social X", "Telemetry Data", "Zero Configuration"]
-tags_normalized: ["ai", "ai in software development", "application monitoring", "appsignal", "cncf", "devops", "elixir", "go", "instrumentation", "java", "monitoring and analytics", "node dot js", "observability", "opentelemetry", "performance metrics", "php", "posts", "ruby", "social facebook", "social linkedin", "social x", "telemetry data", "zero configuration"]
+tags_normalized: ["ai", "ai in software development", "application monitoring", "appsignal", "cncf", "devops", "elixir", "go", "instrumentation", "java", "monitoring and analytics", "nodedotjs", "observability", "opentelemetry", "performance metrics", "php", "posts", "ruby", "social facebook", "social linkedin", "social x", "telemetry data", "zero configuration"]
 ---
 
 Mike Vizard covers AppSignal’s new OpenTelemetry integration, explaining how the improved instrumentation benefits DevOps teams and why observability is increasingly vital in modern, AI-driven development environments.<!--excerpt_end-->

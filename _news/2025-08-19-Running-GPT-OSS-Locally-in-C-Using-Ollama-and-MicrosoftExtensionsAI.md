@@ -12,7 +12,7 @@ date: 2025-08-19 17:05:00 +00:00
 permalink: "/2025-08-19-Running-GPT-OSS-Locally-in-C-Using-Ollama-and-MicrosoftExtensionsAI.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET 8", "Agentic Apps", "AI", "AI Chatbot", "C#", "Coding", "Console Application", "Function Calling", "Gpt", "Gpt Oss", "Local LLM", "Microsoft.Extensions.AI", "News", "Offline AI", "Ollama", "OllamaSharp", "OpenAI", "Private AI", "Streaming Response"]
-tags_normalized: ["net", "net 8", "agentic apps", "ai", "ai chatbot", "c", "coding", "console application", "function calling", "gpt", "gpt oss", "local llm", "microsoft dot extensions dot ai", "news", "offline ai", "ollama", "ollamasharp", "openai", "private ai", "streaming response"]
+tags_normalized: ["dotnet", "dotnet 8", "agentic apps", "ai", "ai chatbot", "csharp", "coding", "console application", "function calling", "gpt", "gpt oss", "local llm", "microsoftdotextensionsdotai", "news", "offline ai", "ollama", "ollamasharp", "openai", "private ai", "streaming response"]
 ---
 
 Bruno Capuano demonstrates how developers can run GPT-OSS locally using C#, Ollama, and Microsoft.Extensions.AI libraries to create fast, private, offline-capable AI features.<!--excerpt_end-->

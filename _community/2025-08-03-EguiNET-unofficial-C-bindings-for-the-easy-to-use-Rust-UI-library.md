@@ -12,7 +12,7 @@ date: 2025-08-03 22:33:19 +00:00
 permalink: "/2025-08-03-EguiNET-unofficial-C-bindings-for-the-easy-to-use-Rust-UI-library.html"
 categories: ["Coding"]
 tags: ["Bindings", "C#", "Coding", "Community", "Egui", "Game Engines", "Immediate Mode GUI", "Memory Safety", "OpenGL", "Rust", "UI Library", "Vulkan"]
-tags_normalized: ["bindings", "c", "coding", "community", "egui", "game engines", "immediate mode gui", "memory safety", "opengl", "rust", "ui library", "vulkan"]
+tags_normalized: ["bindings", "csharp", "coding", "community", "egui", "game engines", "immediate mode gui", "memory safety", "opengl", "rust", "ui library", "vulkan"]
 ---
 
 In this article, The-Douglas shares the story behind Egui.NET—a C# wrapper for the egui Rust UI library—highlighting its technical foundations, design motivations, and sample usage for game engine UIs.<!--excerpt_end-->

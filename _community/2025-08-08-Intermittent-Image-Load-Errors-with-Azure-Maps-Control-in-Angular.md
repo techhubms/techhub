@@ -12,7 +12,7 @@ date: 2025-08-08 10:20:30 +00:00
 permalink: "/2025-08-08-Intermittent-Image-Load-Errors-with-Azure-Maps-Control-in-Angular.html"
 categories: ["Azure", "Coding"]
 tags: ["Angular", "Angular Modules", "AuthenticationType.subscriptionKey", "Azure", "Azure Maps", "Azure Maps Control", "Coding", "Community", "Image Load Error", "JavaScript", "JPEG", "Map Initialization", "Ngafterviewinit", "PNG", "SDK 2.3.7", "SVG Not Supported", "TypeScript"]
-tags_normalized: ["angular", "angular modules", "authenticationtype dot subscriptionkey", "azure", "azure maps", "azure maps control", "coding", "community", "image load error", "javascript", "jpeg", "map initialization", "ngafterviewinit", "png", "sdk 2 dot 37", "svg not supported", "typescript"]
+tags_normalized: ["angular", "angular modules", "authenticationtypedotsubscriptionkey", "azure", "azure maps", "azure maps control", "coding", "community", "image load error", "javascript", "jpeg", "map initialization", "ngafterviewinit", "png", "sdk 2dot3dot7", "svg not supported", "typescript"]
 ---
 
 JeroenBooij highlights an intermittent error encountered when initializing Azure Maps Control in an Angular application. This discussion offers firsthand insights into troubleshooting and handling SDK image loading issues.<!--excerpt_end-->

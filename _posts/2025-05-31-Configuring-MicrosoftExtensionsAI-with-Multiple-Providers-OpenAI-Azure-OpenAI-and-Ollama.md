@@ -12,7 +12,7 @@ date: 2025-05-31 08:56:33 +00:00
 permalink: "/2025-05-31-Configuring-MicrosoftExtensionsAI-with-Multiple-Providers-OpenAI-Azure-OpenAI-and-Ollama.html"
 categories: ["AI", "Coding", "Azure"]
 tags: [".NET", "AI", "Azure", "Azure OpenAI", "C#", "Chat Clients", "ChatOptions", "Coding", "Dependency Injection", "IChatClient", "Microsoft.Extensions.AI", "NuGet", "Ollama", "OpenAI", "Posts", "Streaming Completions", "WPF"]
-tags_normalized: ["net", "ai", "azure", "azure openai", "c", "chat clients", "chatoptions", "coding", "dependency injection", "ichatclient", "microsoft dot extensions dot ai", "nuget", "ollama", "openai", "posts", "streaming completions", "wpf"]
+tags_normalized: ["dotnet", "ai", "azure", "azure openai", "csharp", "chat clients", "chatoptions", "coding", "dependency injection", "ichatclient", "microsoftdotextensionsdotai", "nuget", "ollama", "openai", "posts", "streaming completions", "wpf"]
 ---
 
 In this comprehensive guide, Rick Strahl explores how to configure Microsoft.Extensions.AI with multiple providers such as OpenAI, Azure OpenAI, and Ollama, detailing the setup process and sharing practical code examples for streaming completions in .NET applications.<!--excerpt_end-->

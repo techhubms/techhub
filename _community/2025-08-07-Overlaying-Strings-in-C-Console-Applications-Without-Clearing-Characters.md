@@ -12,7 +12,7 @@ date: 2025-08-07 18:08:40 +00:00
 permalink: "/2025-08-07-Overlaying-Strings-in-C-Console-Applications-Without-Clearing-Characters.html"
 categories: ["Coding"]
 tags: [".NET", "ANSI Codes", "C#", "Character Output", "Coding", "Community", "Console Application", "Cursor Positioning", "Display Logic", "Escape Sequences", "Extension Methods", "Screen Buffer", "Spectre.Console", "String Manipulation", "String Overlay", "System.Console"]
-tags_normalized: ["net", "ansi codes", "c", "character output", "coding", "community", "console application", "cursor positioning", "display logic", "escape sequences", "extension methods", "screen buffer", "spectre dot console", "string manipulation", "string overlay", "system dot console"]
+tags_normalized: ["dotnet", "ansi codes", "csharp", "character output", "coding", "community", "console application", "cursor positioning", "display logic", "escape sequences", "extension methods", "screen buffer", "spectredotconsole", "string manipulation", "string overlay", "systemdotconsole"]
 ---
 
 06Hexagram initiates a discussion about overlaying strings in C# console apps without overwriting non-space characters, with community members contributing practical solutions.<!--excerpt_end-->

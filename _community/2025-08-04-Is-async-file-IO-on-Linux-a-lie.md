@@ -12,7 +12,7 @@ date: 2025-08-04 02:19:06 +00:00
 permalink: "/2025-08-04-Is-async-file-IO-on-Linux-a-lie.html"
 categories: ["Coding"]
 tags: [".NET", "Async IO", "Coding", "Community", "F GETFL", "Fcntl", "File.OpenHandle", "FileOptions.Asynchronous", "FileStream", "Linux", "O ASYNC", "O NONBLOCK", "SafeFileHandle", "Useasync"]
-tags_normalized: ["net", "async io", "coding", "community", "f getfl", "fcntl", "file dot openhandle", "fileoptions dot asynchronous", "filestream", "linux", "o async", "o nonblock", "safefilehandle", "useasync"]
+tags_normalized: ["dotnet", "async io", "coding", "community", "f getfl", "fcntl", "filedotopenhandle", "fileoptionsdotasynchronous", "filestream", "linux", "o async", "o nonblock", "safefilehandle", "useasync"]
 ---
 
 In this Reddit post, FergoTheGreat examines the behavior of asynchronous file I/O in .NET on Linux, noting possible discrepancies between .NET's async indicators and actual Linux kernel flags.<!--excerpt_end-->

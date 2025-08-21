@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj
 date: 2025-08-06 13:27:43 +00:00
 permalink: "/2025-08-06-App-Gateway-for-Containers-Web-Application-Firewall-WAF-Overview.html"
 categories: ["Azure", "Security"]
-tags: ["App Gateway For Containers", "Application Gateway", "Azure", "Azure Cloud", "Azure Kubernetes Service", "Azure Networking", "Azure Service Operator", "Cloud", "Cloud Security", "Container Security", "Firewall", "Firewall Policies", "Kubernetes", "Load Balancing", "Logging", "Microsoft", "Microsoft Azure", "Pricing", "Security", "Security Configuration", "Videos", "WAF", "Web Application Firewall"]
-tags_normalized: ["app gateway for containers", "application gateway", "azure", "azure cloud", "azure kubernetes service", "azure networking", "azure service operator", "cloud", "cloud security", "container security", "firewall", "firewall policies", "kubernetes", "load balancing", "logging", "microsoft", "microsoft azure", "pricing", "security", "security configuration", "videos", "waf", "web application firewall"]
+tags: ["AKS", "App Gateway For Containers", "Application Gateway", "Azure", "Azure Cloud", "Azure Networking", "Azure Service Operator", "Cloud", "Cloud Security", "Container Security", "Firewall", "Firewall Policies", "Kubernetes", "Load Balancing", "Logging", "Microsoft", "Microsoft Azure", "Pricing", "Security", "Security Configuration", "Videos", "WAF", "Web Application Firewall"]
+tags_normalized: ["aks", "app gateway for containers", "application gateway", "azure", "azure cloud", "azure networking", "azure service operator", "cloud", "cloud security", "container security", "firewall", "firewall policies", "kubernetes", "load balancing", "logging", "microsoft", "microsoft azure", "pricing", "security", "security configuration", "videos", "waf", "web application firewall"]
 ---
 
 John Savill's Technical Training explains the new Web Application Firewall (WAF) capability for Azure App Gateway for Containers, guiding viewers through configuration, policy application, and key limitations.<!--excerpt_end-->

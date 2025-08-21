@@ -12,7 +12,7 @@ date: 2025-08-02 03:08:35 +00:00
 permalink: "/2025-08-02-Wait-Premium-requests-reset-on-the-1st-of-every-month.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Billing Cycle", "Community", "Copilot Pro+", "Fairness", "Feature Clarity", "GitHub Copilot", "Monthly Reset", "Premium Requests", "Request Limits", "Subscription", "User Experience"]
-tags_normalized: ["ai", "billing cycle", "community", "copilot pro", "fairness", "feature clarity", "github copilot", "monthly reset", "premium requests", "request limits", "subscription", "user experience"]
+tags_normalized: ["ai", "billing cycle", "community", "copilot proplus", "fairness", "feature clarity", "github copilot", "monthly reset", "premium requests", "request limits", "subscription", "user experience"]
 ---
 
 In this Reddit post, livejc discusses the billing and premium request reset policy for GitHub Copilot Pro+, raising concerns about transparency and fairness for users subscribing at different times during the month.<!--excerpt_end-->

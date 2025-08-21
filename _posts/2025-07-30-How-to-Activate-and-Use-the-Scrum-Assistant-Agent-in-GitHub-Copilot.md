@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-07-30 08:08:05 +00:00
 permalink: "/2025-07-30-How-to-Activate-and-Use-the-Scrum-Assistant-Agent-in-GitHub-Copilot.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agile", "AI", "AI Agents", "Artificial Intelligence", "Automation", "Backlog Grooming", "Blocker Tracking", "Copilot Chat", "Copilot Workspace", "DevOps", "GitHub Copilot", "M365 Copilot", "Microsoft 365 Copilot", "Posts", "Productivity Tools", "Retrospective Summaries", "Scrum", "Scrum Assistant", "Sprint Planning", "Standup Automation", "Team Collaboration", "User Stories", "Visual Studio Code"]
-tags_normalized: ["agile", "ai", "ai agents", "artificial intelligence", "automation", "backlog grooming", "blocker tracking", "copilot chat", "copilot workspace", "devops", "github copilot", "m365 copilot", "microsoft 365 copilot", "posts", "productivity tools", "retrospective summaries", "scrum", "scrum assistant", "sprint planning", "standup automation", "team collaboration", "user stories", "visual studio code"]
+tags: ["Agile", "AI", "AI Agents", "Automation", "Backlog Grooming", "Blocker Tracking", "Copilot Chat", "Copilot Workspace", "DevOps", "GitHub Copilot", "M365 Copilot", "Microsoft 365 Copilot", "Posts", "Productivity Tools", "Retrospective Summaries", "Scrum", "Scrum Assistant", "Sprint Planning", "Standup Automation", "Team Collaboration", "User Stories", "VS Code"]
+tags_normalized: ["agile", "ai", "ai agents", "automation", "backlog grooming", "blocker tracking", "copilot chat", "copilot workspace", "devops", "github copilot", "m365 copilot", "microsoft 365 copilot", "posts", "productivity tools", "retrospective summaries", "scrum", "scrum assistant", "sprint planning", "standup automation", "team collaboration", "user stories", "vs code"]
 ---
 
 Dellenny details how GitHub Copilot’s Scrum Assistant agent can automate and enhance Agile ceremonies, guiding development teams through daily standups, sprint planning, and more with AI-driven workflow support.<!--excerpt_end-->

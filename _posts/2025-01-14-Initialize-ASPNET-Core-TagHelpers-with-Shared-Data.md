@@ -12,7 +12,7 @@ date: 2025-01-14 00:00:00 +00:00
 permalink: "/2025-01-14-Initialize-ASPNET-Core-TagHelpers-with-Shared-Data.html"
 categories: ["Coding"]
 tags: ["ASP.NET", "ASP.NET Core", "C#", "Coding", "Dependency Injection", "HtmlAttributeNotBound", "ITagHelperInitializer", "Posts", "Razor", "Singleton", "TagHelpers", "ViewContext", "Web Development"]
-tags_normalized: ["asp dot net", "asp dot net core", "c", "coding", "dependency injection", "htmlattributenotbound", "itaghelperinitializer", "posts", "razor", "singleton", "taghelpers", "viewcontext", "web development"]
+tags_normalized: ["aspdotnet", "aspdotnet core", "csharp", "coding", "dependency injection", "htmlattributenotbound", "itaghelperinitializer", "posts", "razor", "singleton", "taghelpers", "viewcontext", "web development"]
 ---
 
 In this blog post, Khalid Abuhakmeh explores how to leverage the ITagHelperInitializer interface in ASP.NET Core to provide shared data to TagHelpers, offering practical tips for efficient and maintainable Razor development.<!--excerpt_end-->

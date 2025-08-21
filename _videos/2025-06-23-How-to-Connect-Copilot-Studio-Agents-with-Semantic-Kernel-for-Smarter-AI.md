@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWp
 date: 2025-06-23 12:02:12 +00:00
 permalink: "/2025-06-23-How-to-Connect-Copilot-Studio-Agents-with-Semantic-Kernel-for-Smarter-AI.html"
 categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Agents", "AI Workflow", "API Integration", "App Permissions", "Azure", "Azure App Registration", "Coding", "Coding Tutorial", "Copilot Studio Agent", "External Integrations", "Microsoft AI", "Microsoft Copilot", "PowerShell", "Safe Travels Agent", "Semantic Kernel", "Tool Integration", "Videos", "Visual Studio"]
-tags_normalized: ["ai", "ai agents", "ai workflow", "api integration", "app permissions", "azure", "azure app registration", "coding", "coding tutorial", "copilot studio agent", "external integrations", "microsoft ai", "microsoft copilot", "powershell", "safe travels agent", "semantic kernel", "tool integration", "videos", "visual studio"]
+tags: ["AI", "AI Agents", "AI Workflow", "API Integration", "App Permissions", "Azure", "Azure App Registration", "Coding", "Coding Tutorial", "Copilot Studio Agent", "External Integrations", "Microsoft AI", "Microsoft Copilot", "PowerShell", "Safe Travels Agent", "Semantic Kernel", "Tool Integration", "Videos", "VS"]
+tags_normalized: ["ai", "ai agents", "ai workflow", "api integration", "app permissions", "azure", "azure app registration", "coding", "coding tutorial", "copilot studio agent", "external integrations", "microsoft ai", "microsoft copilot", "powershell", "safe travels agent", "semantic kernel", "tool integration", "videos", "vs"]
 ---
 
 Learn Microsoft AI demonstrates how to connect Copilot Studio agents with Semantic Kernel, providing a hands-on guide to making AI agents smarter and more dynamic using Microsoft technologies.<!--excerpt_end-->

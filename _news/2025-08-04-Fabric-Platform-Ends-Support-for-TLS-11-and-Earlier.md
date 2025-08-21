@@ -12,7 +12,7 @@ date: 2025-08-04 11:00:00 +00:00
 permalink: "/2025-08-04-Fabric-Platform-Ends-Support-for-TLS-11-and-Earlier.html"
 categories: ["ML", "Security"]
 tags: ["Cloud Security", "Data Integration", "Deprecation Notice", "Encryption Protocols", "Microsoft", "Microsoft Fabric", "Migration Guidance", "ML", "News", "Platform Update", "Secure Connections", "Security", "Security Compliance", "TLS 1.2", "Transport Layer Security"]
-tags_normalized: ["cloud security", "data integration", "deprecation notice", "encryption protocols", "microsoft", "microsoft fabric", "migration guidance", "ml", "news", "platform update", "secure connections", "security", "security compliance", "tls 1 dot 2", "transport layer security"]
+tags_normalized: ["cloud security", "data integration", "deprecation notice", "encryption protocols", "microsoft", "microsoft fabric", "migration guidance", "ml", "news", "platform update", "secure connections", "security", "security compliance", "tls 1dot2", "transport layer security"]
 ---
 
 Microsoft Fabric Blog announces the end of support for TLS 1.1 and earlier on the Fabric platform. Authors provide key migration steps and security implications for organizations relying on Fabric integrations.<!--excerpt_end-->

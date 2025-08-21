@@ -12,7 +12,7 @@ date: 2025-07-07 19:32:46 +00:00
 permalink: "/2025-07-07-Markdown-Support-Now-Available-for-Azure-DevOps-Work-Items.html"
 categories: ["Azure", "DevOps"]
 tags: ["Agile", "Azure", "Azure & Cloud", "Azure Cloud", "Azure DevOps", "DevOps", "Editor", "HTML Conversion", "Large Text Fields", "Markdown", "News", "Release Process", "REST API", "User Feedback", "Work Items"]
-tags_normalized: ["agile", "azure", "azure cloud", "azure cloud", "azure devops", "devops", "editor", "html conversion", "large text fields", "markdown", "news", "release process", "rest api", "user feedback", "work items"]
+tags_normalized: ["agile", "azure", "azure and cloud", "azure cloud", "azure devops", "devops", "editor", "html conversion", "large text fields", "markdown", "news", "release process", "rest api", "user feedback", "work items"]
 ---
 
 Dan Hellem introduces general availability of Markdown support for large text fields in Azure DevOps work items, detailing opt-in features, conversion steps, REST API usage, and release process.<!--excerpt_end-->

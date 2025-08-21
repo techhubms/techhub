@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-05-21 17:00:09 +00:00
 permalink: "/2025-05-21-Connect-Once-Integrate-Anywhere-Model-Context-Protocol-MCP-for-AI-Integration.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agent Mode", "AI", "AI Integration", "APIs", "Azure", "Azure API Management", "C# SDK", "Coding", "Developer Productivity", "DevOps", "GitHub Copilot", "MCP", "Model Context Protocol", "News", "OAuth 2.1", "Registry", "Security", "Visual Studio", "Visual Studio Code"]
-tags_normalized: ["agent mode", "ai", "ai integration", "apis", "azure", "azure api management", "c sharp sdk", "coding", "developer productivity", "devops", "github copilot", "mcp", "model context protocol", "news", "oauth 2 dot 1", "registry", "security", "visual studio", "visual studio code"]
+tags: ["Agent Mode", "AI", "AI Integration", "APIs", "Azure", "Azure API Management", "C# SDK", "Coding", "Developer Productivity", "DevOps", "GitHub Copilot", "MCP", "News", "OAuth 2.1", "Registry", "Security", "VS", "VS Code"]
+tags_normalized: ["agent mode", "ai", "ai integration", "apis", "azure", "azure api management", "csharp sdk", "coding", "developer productivity", "devops", "github copilot", "mcp", "news", "oauth 2dot1", "registry", "security", "vs", "vs code"]
 ---
 
 In this article, Maria Naggaga details the Model Context Protocol (MCP), outlining its impact on AI integration and developer productivity, with insights on leveraging GitHub Copilot, Visual Studio, Azure API Management, and robust security practices.<!--excerpt_end-->

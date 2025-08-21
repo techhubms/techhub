@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWp
 date: 2025-04-30 02:30:13 +00:00
 permalink: "/2025-04-30-Connecting-to-a-Local-MCP-Server-Using-MicrosoftExtensionsAI.html"
 categories: ["AI"]
-tags: ["AI", "AI Integration", "Application Integration", "Client Configuration", "MCP", "Microsoft AI", "Microsoft.Extensions.AI", "Model Context", "Model Context Protocol", "Real Time Processing", "Semantic Kernel", "Videos"]
-tags_normalized: ["ai", "ai integration", "application integration", "client configuration", "mcp", "microsoft ai", "microsoft dot extensions dot ai", "model context", "model context protocol", "real time processing", "semantic kernel", "videos"]
+tags: ["AI", "AI Integration", "Application Integration", "Client Configuration", "MCP", "Microsoft AI", "Microsoft.Extensions.AI", "Model Context", "Real Time Processing", "Semantic Kernel", "Videos"]
+tags_normalized: ["ai", "ai integration", "application integration", "client configuration", "mcp", "microsoft ai", "microsoftdotextensionsdotai", "model context", "real time processing", "semantic kernel", "videos"]
 ---
 
 Learn Microsoft AI walks through the process of connecting to a local Model Context Protocol (MCP) Server using Microsoft.Extensions.AI, covering setup and real-time model context integration.<!--excerpt_end-->

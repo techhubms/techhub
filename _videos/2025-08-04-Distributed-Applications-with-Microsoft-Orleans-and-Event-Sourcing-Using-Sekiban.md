@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwf
 date: 2025-08-04 23:30:19 +00:00
 permalink: "/2025-08-04-Distributed-Applications-with-Microsoft-Orleans-and-Event-Sourcing-Using-Sekiban.html"
 categories: ["Coding"]
-tags: [".NET", "C#", "Coding", "CQRS", "Demo", "Developer", "Developer Productivity", "Developercommunity", "Developertools", "Dotnetdeveloper", "Event Sourcing", "LLM Integration", "Microsoft Orleans", "Microsoftorleans", "Open Source", "Orleans", "Productivity", "Sekiban", "Softwaredeveloper", "Videos", "Visual Studio Code"]
-tags_normalized: ["net", "c", "coding", "cqrs", "demo", "developer", "developer productivity", "developercommunity", "developertools", "dotnetdeveloper", "event sourcing", "llm integration", "microsoft orleans", "microsoftorleans", "open source", "orleans", "productivity", "sekiban", "softwaredeveloper", "videos", "visual studio code"]
+tags: [".NET", "C#", "Coding", "CQRS", "Demo", "Developer", "Developer Community", "Developer Productivity", "Developer Tools", "Dotnetdeveloper", "Event Sourcing", "LLM Integration", "Microsoft Orleans", "Microsoftorleans", "Open Source", "Orleans", "Productivity", "Sekiban", "Software Developer", "Videos", "VS Code"]
+tags_normalized: ["dotnet", "csharp", "coding", "cqrs", "demo", "developer", "developer community", "developer productivity", "developer tools", "dotnetdeveloper", "event sourcing", "llm integration", "microsoft orleans", "microsoftorleans", "open source", "orleans", "productivity", "sekiban", "software developer", "videos", "vs code"]
 ---
 
 Hosted by dotnet with guest Tomohisa Takaoka, this discussion delves into developing distributed applications using Microsoft Orleans, event sourcing, and the Sekiban C# framework.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwf
 date: 2025-08-08 23:02:43 +00:00
 permalink: "/2025-08-08-Blazor-Community-Standup-Validation-Improvements-in-Blazor.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 10", "ASP.NET Core", "Blazor", "Blazor Community Standup", "Code Demos", "Coding", "Complex Types", "Demo", "Developer", "Developer Tools", "Developercommunity", "Developertools", "Dotnetdeveloper", "Microsoft", "Minimal APIs", "Software Development", "Softwaredeveloper", "Validation", "Videos"]
-tags_normalized: ["net", "net 10", "asp dot net core", "blazor", "blazor community standup", "code demos", "coding", "complex types", "demo", "developer", "developer tools", "developercommunity", "developertools", "dotnetdeveloper", "microsoft", "minimal apis", "software development", "softwaredeveloper", "validation", "videos"]
+tags: [".NET", ".NET 10", "ASP.NET Core", "Blazor", "Blazor Community Standup", "Code Demos", "Coding", "Complex Types", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnetdeveloper", "Microsoft", "Minimal APIs", "Software Developer", "Software Development", "Validation", "Videos"]
+tags_normalized: ["dotnet", "dotnet 10", "aspdotnet core", "blazor", "blazor community standup", "code demos", "coding", "complex types", "demo", "developer", "developer community", "developer tools", "dotnetdeveloper", "microsoft", "minimal apis", "software developer", "software development", "validation", "videos"]
 ---
 
 In this video, the .NET team, including Jon Galloway and others, present the latest validation improvements for Blazor in .NET 10, highlighting support for complex types and how developers can leverage these features.<!--excerpt_end-->

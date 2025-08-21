@@ -12,7 +12,7 @@ date: 2025-07-31 08:08:53 +00:00
 permalink: "/2025-07-31-DevOps-Meets-Blazor-in-2025-Streamlining-NET-Web-App-Delivery-for-the-Future.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET", "Blazor", "Business Of DevOps", "Coding", "Contributed Content", "DevOps", "DevOps Practice", "Doin' DevOps", "Enterprise", "Framework", "Microsoft", "Modern Web Development", "Posts", "Social Facebook", "Social LinkedIn", "Social X", "Tooling", "Web App Delivery", "Workflow"]
-tags_normalized: ["net", "blazor", "business of devops", "coding", "contributed content", "devops", "devops practice", "doin devops", "enterprise", "framework", "microsoft", "modern web development", "posts", "social facebook", "social linkedin", "social x", "tooling", "web app delivery", "workflow"]
+tags_normalized: ["dotnet", "blazor", "business of devops", "coding", "contributed content", "devops", "devops practice", "doin devops", "enterprise", "framework", "microsoft", "modern web development", "posts", "social facebook", "social linkedin", "social x", "tooling", "web app delivery", "workflow"]
 ---
 
 Amber Talavera examines how Blazor's evolution and integration with DevOps practices are shaping the future of .NET web application delivery.<!--excerpt_end-->

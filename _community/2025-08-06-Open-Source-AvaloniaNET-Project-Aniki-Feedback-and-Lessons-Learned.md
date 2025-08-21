@@ -12,7 +12,7 @@ date: 2025-08-06 21:57:29 +00:00
 permalink: "/2025-08-06-Open-Source-AvaloniaNET-Project-Aniki-Feedback-and-Lessons-Learned.html"
 categories: ["Coding"]
 tags: [".NET", "Application Development", "Avalonia", "BASE64", "Branding", "C#", "Code Quality", "Coding", "Community", "Community Feedback", "Cross Platform", "Encryption", "File Scoped Namespaces", "GitHub", "Global Usings", "Implicit Usings", "MyAnimeList", "Nullable Reference Types", "Open Source", "Regex Source Generator", "TreatWarningsAsErrors", "UI Framework"]
-tags_normalized: ["net", "application development", "avalonia", "base64", "branding", "c", "code quality", "coding", "community", "community feedback", "cross platform", "encryption", "file scoped namespaces", "github", "global usings", "implicit usings", "myanimelist", "nullable reference types", "open source", "regex source generator", "treatwarningsaserrors", "ui framework"]
+tags_normalized: ["dotnet", "application development", "avalonia", "base64", "branding", "csharp", "code quality", "coding", "community", "community feedback", "cross platform", "encryption", "file scoped namespaces", "github", "global usings", "implicit usings", "myanimelist", "nullable reference types", "open source", "regex source generator", "treatwarningsaserrors", "ui framework"]
 ---
 
 Loiuy123_ shares insights and receives technical feedback on their first significant open source project, Aniki, a MyAnimeList client built with Avalonia and .NET.<!--excerpt_end-->

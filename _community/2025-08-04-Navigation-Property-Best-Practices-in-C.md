@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-04 09:43:05 +00:00
 permalink: "/2025-08-04-Navigation-Property-Best-Practices-in-C.html"
 categories: ["Coding", "ML"]
-tags: [".NET", "Best Practices", "C#", "Coding", "Community", "Community Discussion", "Data Modeling", "Database Relationships", "Entity Framework", "ML", "Navigation Property", "Object Relational Mapping", "ORM"]
-tags_normalized: ["net", "best practices", "c", "coding", "community", "community discussion", "data modeling", "database relationships", "entity framework", "ml", "navigation property", "object relational mapping", "orm"]
+tags: [".NET", "Best Practices", "C#", "Coding", "Community", "Community Discussion", "Data Modeling", "Database Relationships", "EF", "ML", "Navigation Property", "Object Relational Mapping", "ORM"]
+tags_normalized: ["dotnet", "best practices", "csharp", "coding", "community", "community discussion", "data modeling", "database relationships", "ef", "ml", "navigation property", "object relational mapping", "orm"]
 ---
 
 In this community post, drld21 seeks input on best practices for navigation properties in C#. The article invites a discussion on the effective use of navigation properties in .NET applications, with a focus on real-world examples.<!--excerpt_end-->

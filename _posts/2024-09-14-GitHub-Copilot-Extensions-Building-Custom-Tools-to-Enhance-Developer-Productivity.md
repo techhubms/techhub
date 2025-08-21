@@ -11,8 +11,8 @@ feed_url: "https://devopsjournal.io/blog/atom.xml"
 date: 2024-09-14 00:00:00 +00:00
 permalink: "/2024-09-14-GitHub-Copilot-Extensions-Building-Custom-Tools-to-Enhance-Developer-Productivity.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "APIs", "Codespaces", "Copilot Extension SDK", "Copilot Extensions", "Custom Extensions", "Developer Productivity", "DevOps", "GitHub Apps", "GitHub Copilot", "LLM", "OpenAI", "Posts", "Retrieval Augmented Generation", "User Confirmation", "Visual Studio Code"]
-tags_normalized: ["ai", "apis", "codespaces", "copilot extension sdk", "copilot extensions", "custom extensions", "developer productivity", "devops", "github apps", "github copilot", "llm", "openai", "posts", "retrieval augmented generation", "user confirmation", "visual studio code"]
+tags: ["AI", "APIs", "Codespaces", "Copilot Extension SDK", "Copilot Extensions", "Custom Extensions", "Developer Productivity", "DevOps", "GitHub Apps", "GitHub Copilot", "LLM", "OpenAI", "Posts", "Retrieval Augmented Generation", "User Confirmation", "VS Code"]
+tags_normalized: ["ai", "apis", "codespaces", "copilot extension sdk", "copilot extensions", "custom extensions", "developer productivity", "devops", "github apps", "github copilot", "llm", "openai", "posts", "retrieval augmented generation", "user confirmation", "vs code"]
 ---
 
 In this detailed article, Rob Bos explores how developers can create custom GitHub Copilot Extensions. He describes extension types, provides a development walkthrough, and offers practical tips for integrating APIs and managing user interactions within Copilot Chat.<!--excerpt_end-->

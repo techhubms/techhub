@@ -12,7 +12,7 @@ date: 2025-08-08 12:24:02 +00:00
 permalink: "/2025-08-08-6-Month-Field-Report-AI-Agents-in-SDR-and-L1-SupportWhat-Worked-and-What-Broke.html"
 categories: ["AI"]
 tags: ["A/B Testing", "Agent Orchestration", "AI", "AI Agents", "Community", "CSAT", "HubSpot", "Human Handoff", "JSON Schema", "L1 Support", "LangChain", "Langfuse", "Langsmith", "Memory Management", "Microsoft Teams", "Observability", "OpenAI", "Pipedrive", "Process Automation", "SDR Automation", "Slack", "Twilio"]
-tags_normalized: ["a slash b testing", "agent orchestration", "ai", "ai agents", "community", "csat", "hubspot", "human handoff", "json schema", "l1 support", "langchain", "langfuse", "langsmith", "memory management", "microsoft teams", "observability", "openai", "pipedrive", "process automation", "sdr automation", "slack", "twilio"]
+tags_normalized: ["aslashb testing", "agent orchestration", "ai", "ai agents", "community", "csat", "hubspot", "human handoff", "json schema", "l1 support", "langchain", "langfuse", "langsmith", "memory management", "microsoft teams", "observability", "openai", "pipedrive", "process automation", "sdr automation", "slack", "twilio"]
 ---
 
 In this community report, Wednesday_Inu shares practical insights from six months deploying AI agents for sales and L1 support, highlighting key technology choices, business outcomes, and guardrails for reliability.<!--excerpt_end-->

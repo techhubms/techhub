@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/powershell/feed/"
 date: 2025-04-14 13:40:29 +00:00
 permalink: "/2025-04-14-PowerShell-OpenSSH-and-DSC-Team-Investments-for-2025-Security-Integrations-and-Community-Priorities.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
-tags: ["AI", "AI Shell", "Azure", "Coding", "Community Contributions", "Desired State Configuration", "DevOps", "DSC", "EntraID", "Microsoft Artifact Registry", "Model Context Protocol", "News", "OpenSSH", "PowerShell", "PowerShell Gallery", "PSResourceGet", "Script Analyzer", "Security", "VS Code Extension", "WinGet"]
-tags_normalized: ["ai", "ai shell", "azure", "coding", "community contributions", "desired state configuration", "devops", "dsc", "entraid", "microsoft artifact registry", "model context protocol", "news", "openssh", "powershell", "powershell gallery", "psresourceget", "script analyzer", "security", "vs code extension", "winget"]
+tags: ["AI", "AI Shell", "Azure", "Coding", "Community Contributions", "Desired State Configuration", "DevOps", "DSC", "EntraID", "MCP", "Microsoft Artifact Registry", "News", "OpenSSH", "PowerShell", "PowerShell Gallery", "PSResourceGet", "Script Analyzer", "Security", "VS Code Extension", "WinGet"]
+tags_normalized: ["ai", "ai shell", "azure", "coding", "community contributions", "desired state configuration", "devops", "dsc", "entraid", "mcp", "microsoft artifact registry", "news", "openssh", "powershell", "powershell gallery", "psresourceget", "script analyzer", "security", "vs code extension", "winget"]
 ---
 
 Steve Lee shares an in-depth look at the planned investments for PowerShell, OpenSSH, and Desired State Configuration (DSC) in 2025, emphasizing security, community input, and modernization across Microsoft's open tooling ecosystem.<!--excerpt_end-->

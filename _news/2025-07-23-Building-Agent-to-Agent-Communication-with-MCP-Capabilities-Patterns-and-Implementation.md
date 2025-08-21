@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-07-23 17:00:19 +00:00
 permalink: "/2025-07-23-Building-Agent-to-Agent-Communication-with-MCP-Capabilities-Patterns-and-Implementation.html"
 categories: ["AI"]
-tags: ["Agent Communication", "AI", "AI Agent", "Elicitation", "MCP", "Microsoft AI", "Model Context Protocol", "Multi Turn Interaction", "News", "Progress Updates", "Resumable Streams", "Sampling", "Session Resumption"]
-tags_normalized: ["agent communication", "ai", "ai agent", "elicitation", "mcp", "microsoft ai", "model context protocol", "multi turn interaction", "news", "progress updates", "resumable streams", "sampling", "session resumption"]
+tags: ["Agent Communication", "AI", "AI Agent", "Elicitation", "MCP", "Microsoft AI", "Multi Turn Interaction", "News", "Progress Updates", "Resumable Streams", "Sampling", "Session Resumption"]
+tags_normalized: ["agent communication", "ai", "ai agent", "elicitation", "mcp", "microsoft ai", "multi turn interaction", "news", "progress updates", "resumable streams", "sampling", "session resumption"]
 ---
 
 Authored by Victor Dibia, Mike Kistler, and Maria Naggaga, this article explores advanced features in Microsoft's Model Context Protocol (MCP), focusing on building robust agent-to-agent communication systems and showcasing practical implementation strategies.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/powershell/feed/"
 date: 2025-07-24 21:35:14 +00:00
 permalink: "/2025-07-24-Announcing-MicrosoftPowerShellPlatyPS-100-PowerShell-Help-Authoring-Simplified.html"
 categories: ["Coding"]
-tags: ["C#", "Cmdlets", "Coding", "Cross Platform", "Documentation", "MAML", "Markdown", "Microsoft Learn", "News", "PlatyPS", "PowerShell", "PowerShell Gallery", "PowerShell Help", "PowerShell PlatyPS", "Visual Studio Code"]
-tags_normalized: ["c", "cmdlets", "coding", "cross platform", "documentation", "maml", "markdown", "microsoft learn", "news", "platyps", "powershell", "powershell gallery", "powershell help", "powershell platyps", "visual studio code"]
+tags: ["C#", "Cmdlets", "Coding", "Cross Platform", "Documentation", "MAML", "Markdown", "Microsoft Learn", "News", "PlatyPS", "PowerShell", "PowerShell Gallery", "PowerShell Help", "PowerShell PlatyPS", "VS Code"]
+tags_normalized: ["csharp", "cmdlets", "coding", "cross platform", "documentation", "maml", "markdown", "microsoft learn", "news", "platyps", "powershell", "powershell gallery", "powershell help", "powershell platyps", "vs code"]
 ---
 
 Authored by Jason Helmick and Sean Wheeler, this post introduces Microsoft.PowerShell.PlatyPS 1.0.0, detailing the new capabilities and improvements for PowerShell help file authoring.<!--excerpt_end-->

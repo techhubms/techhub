@@ -12,7 +12,7 @@ date: 2025-07-27 04:47:10 +00:00
 permalink: "/2025-07-27-Understanding-GitHub-Environments-and-Deployments-A-Practical-Overview.html"
 categories: ["DevOps"]
 tags: ["Action Secrets", "Automation", "CI/CD", "Community", "Deployment Workflow", "DevOps", "GitHub", "GitHub Actions", "GitHub Deployments", "GitHub Environments", "GitHub Package Registry", "npm", "Workflow"]
-tags_normalized: ["action secrets", "automation", "ci slash cd", "community", "deployment workflow", "devops", "github", "github actions", "github deployments", "github environments", "github package registry", "npm", "workflow"]
+tags_normalized: ["action secrets", "automation", "cislashcd", "community", "deployment workflow", "devops", "github", "github actions", "github deployments", "github environments", "github package registry", "npm", "workflow"]
 ---
 
 In this article, NatoBoram demystifies GitHub Environments and Deployments, describing what they are, how they work, and practical ways developers can use them for organizing secrets and deployment workflows.<!--excerpt_end-->

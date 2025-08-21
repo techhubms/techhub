@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-07-28 16:01:25 +00:00
 permalink: "/2025-07-28-Build-your-first-MCP-server.html"
 categories: ["AI", "Coding"]
-tags: ["AI", "AI Toolkit", "C#", "Client", "Cloud Deployment", "Coding", "Java", "JavaScript", "LLM", "MCP", "MCP Inspector", "Model Context Protocol", "Python", "SDK", "Server", "Streaming", "TypeScript", "Videos", "Visual Studio Code"]
-tags_normalized: ["ai", "ai toolkit", "c", "client", "cloud deployment", "coding", "java", "javascript", "llm", "mcp", "mcp inspector", "model context protocol", "python", "sdk", "server", "streaming", "typescript", "videos", "visual studio code"]
+tags: ["AI", "AI Toolkit", "C#", "Client", "Cloud Deployment", "Coding", "Java", "JavaScript", "LLM", "MCP", "MCP Inspector", "Python", "SDK", "Server", "Streaming", "TypeScript", "Videos", "VS Code"]
+tags_normalized: ["ai", "ai toolkit", "csharp", "client", "cloud deployment", "coding", "java", "javascript", "llm", "mcp", "mcp inspector", "python", "sdk", "server", "streaming", "typescript", "videos", "vs code"]
 ---
 
 Microsoft Developer presents a video guide to building your first Model Context Protocol (MCP) server, covering environment setup, core development concepts, and cloud deployment.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0S
 date: 2025-08-07 23:16:05 +00:00
 permalink: "/2025-08-07-Let-it-Cook-with-GPT-5-Using-GPT-5-in-Visual-Studio-Code-and-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "AI Models", "AI Powered Development", "Burke Holland", "Code", "Coding", "Copilot Workflow", "Demo", "Developer", "Developer Tools", "Developertools", "GitHub Copilot", "GPT 5", "GPT5", "James Montemagno", "Microsoft", "Microsoft AI", "Pierce Boggan", "Software Developer", "Softwaredeveloper", "Vibecoding", "Videos", "Visual Studio Code", "Visualstudiocode", "VS Code Extensions", "Workflow Customization"]
-tags_normalized: ["ai", "ai integration", "ai models", "ai powered development", "burke holland", "code", "coding", "copilot workflow", "demo", "developer", "developer tools", "developertools", "github copilot", "gpt 5", "gpt5", "james montemagno", "microsoft", "microsoft ai", "pierce boggan", "software developer", "softwaredeveloper", "vibecoding", "videos", "visual studio code", "visualstudiocode", "vs code extensions", "workflow customization"]
+tags: ["AI", "AI Integration", "AI Models", "AI Powered Development", "Burke Holland", "Code", "Coding", "Copilot Workflow", "Demo", "Developer", "Developer Tools", "GitHub Copilot", "GPT 5", "GPT5", "James Montemagno", "Microsoft", "Microsoft AI", "Pierce Boggan", "Software Developer", "Vibecoding", "Videos", "VS Code", "VS Code Extensions", "Workflow Customization"]
+tags_normalized: ["ai", "ai integration", "ai models", "ai powered development", "burke holland", "code", "coding", "copilot workflow", "demo", "developer", "developer tools", "github copilot", "gpt 5", "gpt5", "james montemagno", "microsoft", "microsoft ai", "pierce boggan", "software developer", "vibecoding", "videos", "vs code", "vs code extensions", "workflow customization"]
 ---
 
 Pierce Boggan and James Montemagno, with guest Burke Holland, demonstrate the integration of GPT-5 and Copilot into Visual Studio Code, showcasing new AI-powered developer workflows.<!--excerpt_end-->

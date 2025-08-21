@@ -12,7 +12,7 @@ date: 2025-08-07 07:47:10 +00:00
 permalink: "/2025-08-07-RxNET-Packaging-Plan-2025-Progress-Testing-and-Community-Feedback.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", "AsyncEnumerable", "Automation", "Base Class Library", "Coding", "Community", "IObservable", "NuGet Packages", "Open Source Maintenance", "Power BI", "Rx.NET", "Software Packaging", "System.Linq.Async", "System.Reactive", "Unit Testing"]
-tags_normalized: ["net", "net 10", "asyncenumerable", "automation", "base class library", "coding", "community", "iobservable", "nuget packages", "open source maintenance", "power bi", "rx dot net", "software packaging", "system dot linq dot async", "system dot reactive", "unit testing"]
+tags_normalized: ["dotnet", "dotnet 10", "asyncenumerable", "automation", "base class library", "coding", "community", "iobservable", "nuget packages", "open source maintenance", "power bi", "rxdotnet", "software packaging", "systemdotlinqdotasync", "systemdotreactive", "unit testing"]
 ---
 
 hm_vr and other community members discuss Ian Griffiths' update on Rx.NET's packaging improvements, automated testing, and future plans for v7, including the challenges of BCL integration.<!--excerpt_end-->

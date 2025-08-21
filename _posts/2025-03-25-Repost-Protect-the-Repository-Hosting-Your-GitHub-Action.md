@@ -12,7 +12,7 @@ date: 2025-03-25 18:17:02 +00:00
 permalink: "/2025-03-25-Repost-Protect-the-Repository-Hosting-Your-GitHub-Action.html"
 categories: ["DevOps", "Security"]
 tags: ["Automation", "Changed Files Hack", "CI/CD", "DevOps", "GitHub", "GitHub Actions", "Posts", "Repository Protection", "Security", "Security Best Practices", "Software Supply Chain", "Token Security", "Versioning"]
-tags_normalized: ["automation", "changed files hack", "ci slash cd", "devops", "github", "github actions", "posts", "repository protection", "security", "security best practices", "software supply chain", "token security", "versioning"]
+tags_normalized: ["automation", "changed files hack", "cislashcd", "devops", "github", "github actions", "posts", "repository protection", "security", "security best practices", "software supply chain", "token security", "versioning"]
 ---
 
 Authored by Jesse Houwing, this detailed post focuses on safeguarding GitHub Action repositories, outlining practical recommendations to counteract risks like those recently exposed in the changed-files hack.<!--excerpt_end-->
