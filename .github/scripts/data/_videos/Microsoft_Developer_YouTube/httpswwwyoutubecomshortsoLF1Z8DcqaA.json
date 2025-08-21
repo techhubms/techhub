@@ -1,0 +1,16 @@
+{
+  "EnhancedContent": null,
+  "Tags": [
+    "OneDevQuestion"
+  ],
+  "FeedName": "Microsoft Developer YouTube",
+  "Description": "In this #OneDevQuestion, Maddy Montaquila reveals her favorite feature in .NET Aspire 9.3—GitHub Copilot is now built into the Aspire dashboard. You can chat with Copilot about your running app and dig into logs, trace errors, and find root causes without leaving the dashboard.\n\nLearn more: https://msft.it/6050snYXq",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Author": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/shorts/oLF1Z8DcqaA",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "PubDate": "2025-08-21T20:04:17+00:00",
+  "ProcessedDate": "2025-08-21 20:12:53",
+  "Title": "What's new with .NET Aspire?"
+}
