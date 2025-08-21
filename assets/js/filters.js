@@ -97,31 +97,31 @@ function initDOMCache() {
         window.cachedPosts = Array.from(postElements).map((el, index) => {
             // Extract content for text search
             let content = '';
-            
+
             // Get title content
             const titleElement = el.querySelector('.navigation-post-title');
             if (titleElement) {
                 content += titleElement.textContent.toLowerCase() + ' ';
             }
-            
+
             // Get description content
             const descElement = el.querySelector('.navigation-post-desc');
             if (descElement) {
                 content += descElement.textContent.toLowerCase() + ' ';
             }
-            
+
             // Get meta content (author, date, etc.)
             const metaElement = el.querySelector('.navigation-post-meta-info');
             if (metaElement) {
                 content += metaElement.textContent.toLowerCase() + ' ';
             }
-            
+
             // Get tag data from data-tags attribute
             const tagsAttr = el.getAttribute('data-tags');
             if (tagsAttr) {
                 content += tagsAttr.toLowerCase() + ' ';
             }
-            
+
             return {
                 el: el,
                 index: index,  // Add index for tag relationship lookups
@@ -241,14 +241,14 @@ function parseURLFilters() {
 function setupEventDelegation() {
     // Collapsed event handler for all filter interactions
     document.addEventListener('click', handleFilterClick);
-    
+
     // Text search event handlers
     const textSearchInput = document.getElementById('text-search-input');
     if (textSearchInput) {
         textSearchInput.addEventListener('input', handleTextSearchInput);
         textSearchInput.addEventListener('keydown', handleTextSearchKeydown);
     }
-    
+
     const textSearchClearBtn = document.getElementById('text-search-clear');
     if (textSearchClearBtn) {
         textSearchClearBtn.addEventListener('click', handleTextSearchClear);
@@ -315,13 +315,13 @@ function handleFilterClick(event) {
 
 function handleTextSearchInput(event) {
     if (window.isUpdating) return;
-    
+
     const query = event.target.value.trim();
     window.textSearchQuery = query;
-    
+
     // Update clear button visibility
     updateTextSearchClearButton();
-    
+
     // Debounce the search to avoid excessive filtering
     clearTimeout(window.textSearchTimeout);
     window.textSearchTimeout = setTimeout(() => {
@@ -348,7 +348,7 @@ function handleTextSearchClear(event) {
         event.preventDefault();
         return;
     }
-    
+
     clearTextSearch();
 }
 
@@ -358,7 +358,7 @@ function clearTextSearch() {
         textSearchInput.value = '';
         window.textSearchQuery = '';
         updateTextSearchClearButton();
-        
+
         window.isUpdating = true;
         try {
             updateDisplay();
@@ -383,14 +383,14 @@ function updateTextSearchClearButton() {
 // Text search filtering function - uses pre-cached content for fast search
 function passesTextSearch(cachedPost) {
     if (!window.textSearchQuery) return true;
-    
+
     const query = window.textSearchQuery.toLowerCase();
-    
+
     // Use pre-cached content from the cached post object
     if (cachedPost && cachedPost.content) {
         return cachedPost.content.includes(query);
     }
-    
+
     return false;
 }
 
@@ -446,7 +446,7 @@ function updateDisplay(initialPageLoad = false) {
 
     // Efficiently update date button counts using pre-calculated mappings
     updateDateButtonCountsAndState();
-    
+
     // Update text search clear button visibility
     updateTextSearchClearButton();
 }
@@ -515,16 +515,16 @@ function updateDateButtonCountsAndState() {
         const filteredCount = [...datePostIndices].filter(index => {
             // Check mode filters
             const passesModeFilter = modeFilters.length === 0 || checkFilterForCurrentMode(index, modeFilters);
-            
+
             const passesTextFilter = !window.textSearchQuery || passesTextSearch(window.cachedPosts[index]);
-            
+
             return passesModeFilter && passesTextFilter;
         }).length;
         filteredCounts[dateFilter] = filteredCount;
     });
 
     // Step 3: For all base set buttons, update count, state, and visibility
-    baseSet.forEach(({ dateFilter, dateButton, countSpan, datePostIndices }) => {
+    baseSet.forEach(({ dateFilter, dateButton, countSpan }) => {
         const count = filteredCounts[dateFilter];
         // Update count display
         countSpan.textContent = `(${count})`;
@@ -697,7 +697,6 @@ function checkFilterForCurrentMode(postIndex, filters) {
     }
 
     // No fallback - this indicates a problem with data generation
-    console.error('Tag relationships not available for filtering. This indicates a problem with server-side data generation.');
     return false;
 }
 
