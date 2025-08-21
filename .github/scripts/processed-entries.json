@@ -7238,5 +7238,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-azure-service-groups/ba-p/4446572",
     "collection": "community",
     "reason": "Succesfully added: Assigned the Azure category because the content is an announcement and overview of a new Azure-specific feature called Service Groups, which are used for resource management and monitoring within the Azure platform (Azure rule 1 and 4). There is no substantial technical coverage of AI, ML, DevOps, Coding, Security, or GitHub Copilot. Tags reflect product names, technical concepts (resource management, observability, RBAC), and related platform technologies. Content is technical, clearly aimed at practitioners, and focuses on Azure resource management, meeting the quality and inclusion requirements."
+  },
+  {
+    "timestamp": "2025-08-21 22:13:26 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the primary focus of the content is a Microsoft research paper on the occupational implications of generative AI chatbots like Bing Copilot (AI inclusion rule 1 and 5). There is no technical content about coding, DevOps, Azure-specific usage, ML engineering, or security, so those categories were not included. Although Bing Copilot is discussed, it is referenced in the context of end-user/knowledge work assistance (business productivity), not developer tooling or integration, thus GitHub Copilot and related categories do not apply. Generic exclusions such as career advice, job listings, or business-focused content do not apply because the piece is research-focused and technical in its analysis of AI applicability.",
+    "canonical_url": "https://www.microsoft.com/en-us/research/blog/applicability-vs-job-displacement-further-notes-on-our-recent-research-on-ai-and-occupations/",
+    "collection": "news"
   }
 ]
