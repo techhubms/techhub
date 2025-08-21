@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-14 17:00:00 +00:00
 permalink: "/2025-08-14-Announcing-the-NuGet-MCP-Server-Preview-Real-Time-NuGet-Package-Management-with-AI-Integration.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Powered Development", "Automation", "Coding", "Continuous Integration", "Copilot", "Dependency Management", "DevOps", "GitHub Copilot", "MCP", "Model Context Protocol", "News", "NuGet", "NuGet MCP Server", "NuGetSolver", "Package Management", "Package Vulnerabilities", "Visual Studio", "Visual Studio Code"]
-tags_normalized: ["net", "ai", "ai powered development", "automation", "coding", "continuous integration", "copilot", "dependency management", "devops", "github copilot", "mcp", "model context protocol", "news", "nuget", "nuget mcp server", "nugetsolver", "package management", "package vulnerabilities", "visual studio", "visual studio code"]
+tags: [".NET", "AI", "AI Powered Development", "Automation", "Coding", "Continuous Integration", "Copilot", "Dependency Management", "DevOps", "GitHub Copilot", "MCP", "News", "NuGet", "NuGet MCP Server", "NuGetSolver", "Package Management", "Package Vulnerabilities", "VS", "VS Code"]
+tags_normalized: ["dotnet", "ai", "ai powered development", "automation", "coding", "continuous integration", "copilot", "dependency management", "devops", "github copilot", "mcp", "news", "nuget", "nuget mcp server", "nugetsolver", "package management", "package vulnerabilities", "vs", "vs code"]
 ---
 
 Jeff Kluge announces the preview of the NuGet MCP Server, highlighting its integration into AI-powered development workflows, advanced package management features, and support for Visual Studio, VS Code, and GitHub Copilot.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj
 date: 2025-07-28 14:15:52 +00:00
 permalink: "/2025-07-28-Ctrl-Shift-MCP-and-A2A-Why-Business-Leaders-Should-Care.html"
 categories: ["AI"]
-tags: ["A2A", "Agent 2 Agent", "Agent To Agent", "Agents", "AI", "AI Agents", "AI Architecture", "Business AI", "Generative AI", "Large Language Models", "LLM", "MCP", "Model Context Protocol", "Tech Trends", "Videos"]
-tags_normalized: ["a2a", "agent 2 agent", "agent to agent", "agents", "ai", "ai agents", "ai architecture", "business ai", "generative ai", "large language models", "llm", "mcp", "model context protocol", "tech trends", "videos"]
+tags: ["A2A", "Agent 2 Agent", "Agent To Agent", "Agents", "AI", "AI Agents", "AI Architecture", "Business AI", "Generative AI", "Large Language Models", "LLM", "MCP", "Tech Trends", "Videos"]
+tags_normalized: ["a2a", "agent 2 agent", "agent to agent", "agents", "ai", "ai agents", "ai architecture", "business ai", "generative ai", "large language models", "llm", "mcp", "tech trends", "videos"]
 ---
 
 John Savill's Technical Training discusses the role of Model Context Protocol (MCP) and Agent to Agent (A2A) technologies, highlighting their significance for business leaders and their influence on AI-driven business strategies.<!--excerpt_end-->

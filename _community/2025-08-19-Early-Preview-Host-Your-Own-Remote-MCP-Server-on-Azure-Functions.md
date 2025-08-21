@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?cate
 date: 2025-08-19 02:35:21 +00:00
 permalink: "/2025-08-19-Early-Preview-Host-Your-Own-Remote-MCP-Server-on-Azure-Functions.html"
 categories: ["Azure", "Coding"]
-tags: [".NET", "API Management", "Authentication", "Azure", "Azure Developer CLI", "Azure Functions", "BYO MCP Server", "CI/CD", "Coding", "Community", "Flex Consumption Plan", "Func Start", "MCP", "MCP SDK", "Model Context Protocol", "Node.js", "Python", "Remote Server Hosting", "Serverless", "Serverless Deployment", "Stateless Servers", "Streamable HTTP", "Visual Studio Code"]
-tags_normalized: ["net", "api management", "authentication", "azure", "azure developer cli", "azure functions", "byo mcp server", "ci slash cd", "coding", "community", "flex consumption plan", "func start", "mcp", "mcp sdk", "model context protocol", "node dot js", "python", "remote server hosting", "serverless", "serverless deployment", "stateless servers", "streamable http", "visual studio code"]
+tags: [".NET", "API Management", "Authentication", "Azure", "Azure Developer CLI", "Azure Functions", "BYO MCP Server", "CI/CD", "Coding", "Community", "Flex Consumption Plan", "Func Start", "MCP", "MCP SDK", "Node.js", "Python", "Remote Server Hosting", "Serverless", "Serverless Deployment", "Stateless Servers", "Streamable HTTP", "VS Code"]
+tags_normalized: ["dotnet", "api management", "authentication", "azure", "azure developer cli", "azure functions", "byo mcp server", "cislashcd", "coding", "community", "flex consumption plan", "func start", "mcp", "mcp sdk", "nodedotjs", "python", "remote server hosting", "serverless", "serverless deployment", "stateless servers", "streamable http", "vs code"]
 ---
 
 lily-ma presents the early preview of hosting bring-your-own Remote MCP servers on Azure Functions, making it easier for developers to deploy existing MCP SDK-based servers to a highly scalable serverless environment.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-08-14 15:59:58 +00:00
 permalink: "/2025-08-14-Using-Model-Router-with-GPT-5-Models-in-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "AI Models", "Azure", "Azure AI Foundry", "Cloud AI", "Cloud Computing", "Cost Optimization", "Deployment", "Dev", "Development", "Development Workflow", "GPT 5", "Intelligent Agents", "Microsoft", "Microsoft AI", "Model Router", "Model Selection", "Performance Optimization", "Sample Code", "Tech", "Technology", "Videos", "Visual Studio Code"]
-tags_normalized: ["ai", "ai models", "azure", "azure ai foundry", "cloud ai", "cloud computing", "cost optimization", "deployment", "dev", "development", "development workflow", "gpt 5", "intelligent agents", "microsoft", "microsoft ai", "model router", "model selection", "performance optimization", "sample code", "tech", "technology", "videos", "visual studio code"]
+tags: ["AI", "AI Models", "Azure", "Azure AI Foundry", "Cloud AI", "Cloud Computing", "Cost Optimization", "Deployment", "Dev", "Development", "Development Workflow", "GPT 5", "Intelligent Agents", "Microsoft", "Microsoft AI", "Model Router", "Model Selection", "Performance Optimization", "Sample Code", "Tech", "Technology", "Videos", "VS Code"]
+tags_normalized: ["ai", "ai models", "azure", "azure ai foundry", "cloud ai", "cloud computing", "cost optimization", "deployment", "dev", "development", "development workflow", "gpt 5", "intelligent agents", "microsoft", "microsoft ai", "model router", "model selection", "performance optimization", "sample code", "tech", "technology", "videos", "vs code"]
 ---
 
 Microsoft Developer showcases the Model Router’s integration with GPT-5 models in Azure AI Foundry, providing a hands-on guide to deploying, selecting, and optimizing AI models within developer workflows.<!--excerpt_end-->

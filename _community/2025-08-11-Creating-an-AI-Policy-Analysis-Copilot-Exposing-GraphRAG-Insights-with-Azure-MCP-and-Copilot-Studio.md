@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-11 15:16:46 +00:00
 permalink: "/2025-08-11-Creating-an-AI-Policy-Analysis-Copilot-Exposing-GraphRAG-Insights-with-Azure-MCP-and-Copilot-Studio.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "AI Policy Analysis", "Azd", "Azure", "Azure Container Apps", "Azure Developer CLI", "Bicep Templates", "Coding", "Community", "Copilot Studio", "Custom Connectors", "DevOps", "Docker", "FastMCP", "GraphRAG", "Knowledge Graph", "LLM Agents", "MCP", "Microsoft Copilot", "Model Context Protocol", "Natural Language Processing", "Plugin Manifest", "Public Sector AI", "Python", "Teams Integration"]
-tags_normalized: ["ai", "ai policy analysis", "azd", "azure", "azure container apps", "azure developer cli", "bicep templates", "coding", "community", "copilot studio", "custom connectors", "devops", "docker", "fastmcp", "graphrag", "knowledge graph", "llm agents", "mcp", "microsoft copilot", "model context protocol", "natural language processing", "plugin manifest", "public sector ai", "python", "teams integration"]
+tags: ["AI", "AI Policy Analysis", "Azd", "Azure", "Azure Container Apps", "Azure Developer CLI", "Bicep Templates", "Coding", "Community", "Copilot Studio", "Custom Connectors", "DevOps", "Docker", "FastMCP", "GraphRAG", "Knowledge Graph", "LLM Agents", "MCP", "Microsoft Copilot", "Natural Language Processing", "Plugin Manifest", "Public Sector AI", "Python", "Teams Integration"]
+tags_normalized: ["ai", "ai policy analysis", "azd", "azure", "azure container apps", "azure developer cli", "bicep templates", "coding", "community", "copilot studio", "custom connectors", "devops", "docker", "fastmcp", "graphrag", "knowledge graph", "llm agents", "mcp", "microsoft copilot", "natural language processing", "plugin manifest", "public sector ai", "python", "teams integration"]
 ---
 
 Tim Meyers, with contributions from Todd Uhl, demonstrates how to expose actionable policy insights derived from 10,000+ public comments using a standards-based MCP server, Azure cloud services, and integration into Microsoft Copilot and Teams.<!--excerpt_end-->

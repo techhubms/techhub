@@ -12,7 +12,7 @@ feed_url: "https://devopsjournal.io/blog/atom.xml"
 date: 2023-04-24 00:00:00 +00:00
 permalink: "/2023-04-24-How-CopilotAI-helps-me-in-my-daily-work.html"
 tags: ["AI", "AI Code Generation", "Automation", "Azure", "Azure Functions", "Coding", "Deployment Protection Rules", "GitHub Actions", "GitHub Copilot", "Node.js", "OAuth", "Posts"]
-tags_normalized: ["ai", "ai code generation", "automation", "azure", "azure functions", "coding", "deployment protection rules", "github actions", "github copilot", "node dot js", "oauth", "posts"]
+tags_normalized: ["ai", "ai code generation", "automation", "azure", "azure functions", "coding", "deployment protection rules", "github actions", "github copilot", "nodedotjs", "oauth", "posts"]
 ---
 
 In this article, Rob Bos shares insights into leveraging AI tools, especially GitHub Copilot, to accelerate application and code generation workflows, focusing on GitHub Actions deployment protection and app setup. <!--excerpt_end-->

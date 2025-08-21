@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwf
 date: 2025-08-14 14:22:56 +00:00
 permalink: "/2025-08-14-Building-Mobile-and-Desktop-Apps-with-Visual-Studio-and-NET-MAUI.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET 9", ".NET MAUI", "App Size Optimization", "C#", "Coding", "Cross Platform", "Design Tools", "Desktop Apps", "Live Tools", "Mobile Development", "Multi Platform Development", "Performance Optimization", "Project Structure", "UI Development", "Videos", "Visual Studio", "XAML"]
-tags_normalized: ["net", "net 10", "net 9", "net maui", "app size optimization", "c", "coding", "cross platform", "design tools", "desktop apps", "live tools", "mobile development", "multi platform development", "performance optimization", "project structure", "ui development", "videos", "visual studio", "xaml"]
+tags: [".NET", ".NET 10", ".NET 9", "App Size Optimization", "C#", "Coding", "Cross Platform", "Design Tools", "Desktop Apps", "Live Tools", "MAUI", "Mobile Development", "Multi Platform Development", "Performance Optimization", "Project Structure", "UI Development", "Videos", "VS", "XAML"]
+tags_normalized: ["dotnet", "dotnet 10", "dotnet 9", "app size optimization", "csharp", "coding", "cross platform", "design tools", "desktop apps", "live tools", "maui", "mobile development", "multi platform development", "performance optimization", "project structure", "ui development", "videos", "vs", "xaml"]
 ---
 
 dotnet discusses how to efficiently build mobile and desktop applications using Visual Studio and .NET MAUI, focusing on solution structure, live UI tools, and upcoming framework updates.<!--excerpt_end-->

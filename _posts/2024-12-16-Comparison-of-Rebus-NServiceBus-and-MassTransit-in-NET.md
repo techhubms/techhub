@@ -12,7 +12,7 @@ date: 2024-12-16 04:28:02 +00:00
 permalink: "/2024-12-16-Comparison-of-Rebus-NServiceBus-and-MassTransit-in-NET.html"
 categories: ["Coding", "Security"]
 tags: [".NET", "ASP.NET Core", "C#", "Coding", "Community Support", "Distributed Systems", "Encryption", "Error Handling", "Licensing", "MassTransit", "Message Bus", "Messaging", "Microservices", "Monitoring", "NServiceBus", "Open Source", "Posts", "Rebus", "Saga Patterns", "Security", "Service Bus"]
-tags_normalized: ["net", "asp dot net core", "c", "coding", "community support", "distributed systems", "encryption", "error handling", "licensing", "masstransit", "message bus", "messaging", "microservices", "monitoring", "nservicebus", "open source", "posts", "rebus", "saga patterns", "security", "service bus"]
+tags_normalized: ["dotnet", "aspdotnet core", "csharp", "coding", "community support", "distributed systems", "encryption", "error handling", "licensing", "masstransit", "message bus", "messaging", "microservices", "monitoring", "nservicebus", "open source", "posts", "rebus", "saga patterns", "security", "service bus"]
 ---
 
 Authored by Michal Kaminski, this comprehensive comparison explores Rebus, NServiceBus, and MassTransit, guiding .NET developers through their features, implementation, and use cases.<!--excerpt_end-->

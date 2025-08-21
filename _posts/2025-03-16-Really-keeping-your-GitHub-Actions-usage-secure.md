@@ -12,7 +12,7 @@ date: 2025-03-16 00:00:00 +00:00
 permalink: "/2025-03-16-Really-Keeping-Your-GitHub-Actions-Usage-Secure.html"
 categories: ["DevOps", "Security"]
 tags: ["Action Backups", "CVE 30066", "Dependency Monitoring", "DevOps", "GitHub Actions", "GitHub Advanced Security", "Internal Marketplace", "Posts", "Security", "Security Alerts", "Slsa.dev", "StepSecurity", "Supply Chain Security", "Workflow Automation"]
-tags_normalized: ["action backups", "cve 30066", "dependency monitoring", "devops", "github actions", "github advanced security", "internal marketplace", "posts", "security", "security alerts", "slsa dot dev", "stepsecurity", "supply chain security", "workflow automation"]
+tags_normalized: ["action backups", "cve 30066", "dependency monitoring", "devops", "github actions", "github advanced security", "internal marketplace", "posts", "security", "security alerts", "slsadotdev", "stepsecurity", "supply chain security", "workflow automation"]
 ---
 
 In this post, Rob Bos details a recent security incident involving a compromised GitHub Action and offers guidance on securing your CI/CD pipelines with robust processes and tooling.<!--excerpt_end-->

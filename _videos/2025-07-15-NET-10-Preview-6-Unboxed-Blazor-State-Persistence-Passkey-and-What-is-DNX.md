@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwf
 date: 2025-07-15 21:09:16 +00:00
 permalink: "/2025-07-15-NET-10-Preview-6-Unboxed-Blazor-State-Persistence-Passkey-and-What-is-DNX.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 10", "Blazor", "Coding", "DNX", "Dotnet10", "Kestrel", "MCP Server", "MSBuild", "NuGet", "Passkeys", "Preview 6", "Validation", "Videos", "Visual Studio Code", "WebAuthN"]
-tags_normalized: ["net", "net 10", "blazor", "coding", "dnx", "dotnet10", "kestrel", "mcp server", "msbuild", "nuget", "passkeys", "preview 6", "validation", "videos", "visual studio code", "webauthn"]
+tags: [".NET", ".NET 10", "Blazor", "Coding", "DNX", "Dotnet10", "Kestrel", "MCP Server", "MSBuild", "NuGet", "Passkeys", "Preview 6", "Validation", "Videos", "VS Code", "WebAuthN"]
+tags_normalized: ["dotnet", "dotnet 10", "blazor", "coding", "dnx", "dotnet10", "kestrel", "mcp server", "msbuild", "nuget", "passkeys", "preview 6", "validation", "videos", "vs code", "webauthn"]
 ---
 
 In this video, the .NET team, including John Galloway, Daniel Roth, Chet Husk, and Joel Verhagen, present the latest enhancements in .NET 10 Preview 6.<!--excerpt_end-->

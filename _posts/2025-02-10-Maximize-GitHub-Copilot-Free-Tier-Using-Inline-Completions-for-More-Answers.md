@@ -11,8 +11,8 @@ feed_url: "https://jessehouwing.net/rss/"
 date: 2025-02-10 16:03:31 +00:00
 permalink: "/2025-02-10-Maximize-GitHub-Copilot-Free-Tier-Using-Inline-Completions-for-More-Answers.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Chat Messages", "Code Completions", "Coding Assistance", "Copilot Usage", "Developer Workflow", "Editor Plugins", "Free Tier", "GitHub", "GitHub Copilot", "Inline Completions", "Neovim", "Posts", "Productivity Tips", "Visual Studio Code"]
-tags_normalized: ["ai", "chat messages", "code completions", "coding assistance", "copilot usage", "developer workflow", "editor plugins", "free tier", "github", "github copilot", "inline completions", "neovim", "posts", "productivity tips", "visual studio code"]
+tags: ["AI", "Chat Messages", "Code Completions", "Coding Assistance", "Copilot Usage", "Developer Workflow", "Editor Plugins", "Free Tier", "GitHub", "GitHub Copilot", "Inline Completions", "Neovim", "Posts", "Productivity Tips", "VS Code"]
+tags_normalized: ["ai", "chat messages", "code completions", "coding assistance", "copilot usage", "developer workflow", "editor plugins", "free tier", "github", "github copilot", "inline completions", "neovim", "posts", "productivity tips", "vs code"]
 ---
 
 Jesse Houwing presents practical techniques for maximizing the GitHub Copilot free tier by leveraging inline completions, especially for users facing chat message limits or working in editors without chat integration.<!--excerpt_end-->

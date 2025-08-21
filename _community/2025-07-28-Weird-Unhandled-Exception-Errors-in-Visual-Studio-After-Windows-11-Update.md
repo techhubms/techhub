@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
 date: 2025-07-28 03:59:23 +00:00
 permalink: "/2025-07-28-Weird-Unhandled-Exception-Errors-in-Visual-Studio-After-Windows-11-Update.html"
 categories: ["Coding"]
-tags: [".NET", "Build Error", "Coding", "Community", "Debugging", "Development Environment", "Framework", "Project Upgrade", "SDK", "Unhandled Exception", "Visual Studio", "VisualStudio", "Windows 11"]
-tags_normalized: ["net", "build error", "coding", "community", "debugging", "development environment", "framework", "project upgrade", "sdk", "unhandled exception", "visual studio", "visualstudio", "windows 11"]
+tags: [".NET", "Build Error", "Coding", "Community", "Debugging", "Development Environment", "Framework", "Project Upgrade", "SDK", "Unhandled Exception", "VS", "Windows 11"]
+tags_normalized: ["dotnet", "build error", "coding", "community", "debugging", "development environment", "framework", "project upgrade", "sdk", "unhandled exception", "vs", "windows 11"]
 ---
 
 Quiet_Equivalent_569 details an issue with unhandled exceptions in Visual Studio after a Windows 11 update, looking for troubleshooting advice.<!--excerpt_end-->

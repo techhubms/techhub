@@ -12,7 +12,7 @@ date: 2025-08-01 17:38:03 +00:00
 permalink: "/2025-08-01-More-type-union-proposals-adopted-by-the-language-design-team.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "C# Language", "C# Proposals", "Coding", "Community", "Csharplang", "Feature Adoption", "Language Design", "Language Features", "Type System", "Type Unions"]
-tags_normalized: ["net", "c", "c sharp language", "c sharp proposals", "coding", "community", "csharplang", "feature adoption", "language design", "language features", "type system", "type unions"]
+tags_normalized: ["dotnet", "csharp", "csharp language", "csharp proposals", "coding", "community", "csharplang", "feature adoption", "language design", "language features", "type system", "type unions"]
 ---
 
 DayYam reports on recent developments in the C# language as the design team adopts more proposals for type unions. The article includes links to official meeting notes and community discussions.<!--excerpt_end-->

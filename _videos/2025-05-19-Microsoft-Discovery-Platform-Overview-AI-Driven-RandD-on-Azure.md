@@ -12,7 +12,7 @@ date: 2025-05-19 15:45:07 +00:00
 permalink: "/2025-05-19-Microsoft-Discovery-Platform-Overview-AI-Driven-RandD-on-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic R&D", "AI", "AI Agents", "AI Orchestration", "AI Science", "Azure", "Azure AI Foundry", "Azure HPC", "Azure Infrastructure", "Enterprise AI", "Iterative R&D", "Microsoft", "Microsoft Cloud", "Microsoft Discovery Platform", "Platform Overview", "R&D Acceleration", "Research Automation", "Scientific Computing", "Scientific Discovery", "Specialized AI Agents", "Videos"]
-tags_normalized: ["agentic r and d", "ai", "ai agents", "ai orchestration", "ai science", "azure", "azure ai foundry", "azure hpc", "azure infrastructure", "enterprise ai", "iterative r and d", "microsoft", "microsoft cloud", "microsoft discovery platform", "platform overview", "r and d acceleration", "research automation", "scientific computing", "scientific discovery", "specialized ai agents", "videos"]
+tags_normalized: ["agentic randd", "ai", "ai agents", "ai orchestration", "ai science", "azure", "azure ai foundry", "azure hpc", "azure infrastructure", "enterprise ai", "iterative randd", "microsoft", "microsoft cloud", "microsoft discovery platform", "platform overview", "randd acceleration", "research automation", "scientific computing", "scientific discovery", "specialized ai agents", "videos"]
 ---
 
 Microsoft Cloud presents an overview of their Discovery platform, detailing how Azure-powered AI agents can transform research and development for scientists and engineers.<!--excerpt_end-->

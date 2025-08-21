@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/typescript/feed/"
 date: 2025-02-28 19:35:56 +00:00
 permalink: "/2025-02-28-Announcing-TypeScript-58-New-Features-and-Improvements.html"
 categories: ["Coding"]
-tags: ["Coding", "Compiler Options", "Declaration Files", "ECMAScript Modules", "JavaScript", "News", "Node.js", "Performance Optimization", "Return Type Checking", "Type System", "TypeScript", "Visual Studio Code"]
-tags_normalized: ["coding", "compiler options", "declaration files", "ecmascript modules", "javascript", "news", "node dot js", "performance optimization", "return type checking", "type system", "typescript", "visual studio code"]
+tags: ["Coding", "Compiler Options", "Declaration Files", "ECMAScript Modules", "JavaScript", "News", "Node.js", "Performance Optimization", "Return Type Checking", "Type System", "TypeScript", "VS Code"]
+tags_normalized: ["coding", "compiler options", "declaration files", "ecmascript modules", "javascript", "news", "nodedotjs", "performance optimization", "return type checking", "type system", "typescript", "vs code"]
 ---
 
 Daniel Rosenwasser announces TypeScript 5.8, detailing new type system features, improved Node.js module interop, and important optimizations. This post guides TypeScript users through the latest enhancements and key behavioral updates.<!--excerpt_end-->

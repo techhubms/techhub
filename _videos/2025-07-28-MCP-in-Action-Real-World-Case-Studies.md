@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-07-28 16:00:25 +00:00
 permalink: "/2025-07-28-MCP-in-Action-Real-World-Case-Studies.html"
 categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "Azure", "Azure AI Search", "Azure API Management", "DevOps", "Enterprise Automation", "GitHub", "MCP", "Model Context Protocol", "Multi Agent Systems", "OpenAI", "Videos", "Visual Studio Code"]
-tags_normalized: ["ai", "azure", "azure ai search", "azure api management", "devops", "enterprise automation", "github", "mcp", "model context protocol", "multi agent systems", "openai", "videos", "visual studio code"]
+tags: ["AI", "Azure", "Azure AI Search", "Azure API Management", "DevOps", "Enterprise Automation", "GitHub", "MCP", "Multi Agent Systems", "OpenAI", "Videos", "VS Code"]
+tags_normalized: ["ai", "azure", "azure ai search", "azure api management", "devops", "enterprise automation", "github", "mcp", "multi agent systems", "openai", "videos", "vs code"]
 ---
 
 Authored by Microsoft Developer, this article showcases how the Model Context Protocol (MCP) is applied in real-world settings across Azure, GitHub, and VS Code, highlighting its integration with key AI tools and services.<!--excerpt_end-->

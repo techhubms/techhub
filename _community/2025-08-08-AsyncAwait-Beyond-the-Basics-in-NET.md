@@ -12,7 +12,7 @@ date: 2025-08-08 15:04:02 +00:00
 permalink: "/2025-08-08-AsyncAwait-Beyond-the-Basics-in-NET.html"
 categories: ["Coding"]
 tags: [".NET", "Async/await", "Asynchronous Programming", "C#", "Code Refactoring", "Coding", "Community", "Event Handlers", "GetAwaiter().GetResult()", "GUI Frameworks", "I/O Operations", "Microsoft", "Performance", "Result", "State Machine", "Sync Over Async", "Task Based Programming", "ThreadPool"]
-tags_normalized: ["net", "async slash await", "asynchronous programming", "c", "code refactoring", "coding", "community", "event handlers", "getawaitergetresult", "gui frameworks", "i slash o operations", "microsoft", "performance", "result", "state machine", "sync over async", "task based programming", "threadpool"]
+tags_normalized: ["dotnet", "asyncslashawait", "asynchronous programming", "csharp", "code refactoring", "coding", "community", "event handlers", "getawaiterdotgetresult", "gui frameworks", "islasho operations", "microsoft", "performance", "result", "state machine", "sync over async", "task based programming", "threadpool"]
 ---
 
 Delicious_Jaguar_341 shares a thoughtful discussion about advanced async/await usage in .NET, examining performance problems caused by the sync-over-async pattern and providing actionable tips for developers.<!--excerpt_end-->

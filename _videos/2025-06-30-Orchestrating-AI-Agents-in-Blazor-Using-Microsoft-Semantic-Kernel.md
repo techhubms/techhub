@@ -12,7 +12,7 @@ date: 2025-06-30 03:47:16 +00:00
 permalink: "/2025-06-30-Orchestrating-AI-Agents-in-Blazor-Using-Microsoft-Semantic-Kernel.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "Agent Resolver", "AgentOrchestration", "AI", "AI Agent Orchestration", "AI in Blazor", "AIinBlazor", "Blazor", "ChatCompletionAgents", "Coding", "Concurrent Orchestration", "ConcurrentOrchestration", "Dependency Injection", "DotNetAI", "Microsoft AI", "MicrosoftAI", "Multi Agent Systems", "MultiAgent", "Orchestration Service", "ProcessRuntime", "Semantic Kernel", "Videos"]
-tags_normalized: ["net", "agent resolver", "agentorchestration", "ai", "ai agent orchestration", "ai in blazor", "aiinblazor", "blazor", "chatcompletionagents", "coding", "concurrent orchestration", "concurrentorchestration", "dependency injection", "dotnetai", "microsoft ai", "microsoftai", "multi agent systems", "multiagent", "orchestration service", "processruntime", "semantic kernel", "videos"]
+tags_normalized: ["dotnet", "agent resolver", "agentorchestration", "ai", "ai agent orchestration", "ai in blazor", "aiinblazor", "blazor", "chatcompletionagents", "coding", "concurrent orchestration", "concurrentorchestration", "dependency injection", "dotnetai", "microsoft ai", "microsoftai", "multi agent systems", "multiagent", "orchestration service", "processruntime", "semantic kernel", "videos"]
 ---
 
 Learn Microsoft AI guides you through orchestrating multiple AI agents in a Blazor app using the Semantic Kernel framework, sharing code examples and orchestration strategies tailored for .NET developers.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-04 08:44:34 +00:00
 permalink: "/2025-08-04-Learning-Real-World-Complexity-as-a-Jr-NET-Backend-Developer.html"
 categories: ["Coding", "ML"]
-tags: [".NET", "AutoMapper", "Backend Development", "Coding", "Community", "Complex Endpoints", "CRUD Operations", "Data Validation", "Design Patterns", "DTO", "Entity Framework Core", "Fullstack Development", "ML", "SQL Server"]
-tags_normalized: ["net", "automapper", "backend development", "coding", "community", "complex endpoints", "crud operations", "data validation", "design patterns", "dto", "entity framework core", "fullstack development", "ml", "sql server"]
+tags: [".NET", "AutoMapper", "Backend Development", "Coding", "Community", "Complex Endpoints", "CRUD Operations", "Data Validation", "Design Patterns", "DTO", "EF Core", "Fullstack Development", "ML", "SQL Server"]
+tags_normalized: ["dotnet", "automapper", "backend development", "coding", "community", "complex endpoints", "crud operations", "data validation", "design patterns", "dto", "ef core", "fullstack development", "ml", "sql server"]
 ---
 
 Author Adjer_Nimossia recounts the sobering realization that comes with tackling complex backend endpoints in .NET. They seek advice from the community on navigating the leap from basic CRUD to more advanced architectural challenges.<!--excerpt_end-->

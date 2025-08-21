@@ -12,7 +12,7 @@ date: 2025-07-23 16:00:49 +00:00
 permalink: "/2025-07-23-GitHub-Spark-in-public-preview-for-Copilot-Pro-subscribers.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Driven Workflows", "Application Deployment", "Automation", "Copilot Pro+", "Developer Productivity", "Full Stack Development", "GitHub", "GitHub Copilot", "GitHub Spark", "News", "Prototyping", "Public Preview", "Software Engineering"]
-tags_normalized: ["ai", "ai driven workflows", "application deployment", "automation", "copilot pro", "developer productivity", "full stack development", "github", "github copilot", "github spark", "news", "prototyping", "public preview", "software engineering"]
+tags_normalized: ["ai", "ai driven workflows", "application deployment", "automation", "copilot proplus", "developer productivity", "full stack development", "github", "github copilot", "github spark", "news", "prototyping", "public preview", "software engineering"]
 ---
 
 Allison introduces GitHub Spark, now in public preview for Copilot Pro+ subscribers, highlighting how it accelerates development from idea to deployed app by harnessing automation and AI capabilities.<!--excerpt_end-->

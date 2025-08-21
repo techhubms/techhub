@@ -12,7 +12,7 @@ date: 2025-07-02 20:00:00 +00:00
 permalink: "/2025-07-02-Local-AI-NET-Generate-AltText-with-C-Scripts-and-Ollama.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET 10", "Accessibility", "AI", "AI Foundry Local", "Alttext", "C#", "Coding", "Generative AI", "Image Processing", "Local AI Models", "Local Models", "News", "Ollama", "OllamaSharp", "Script Execution", "Vision Models"]
-tags_normalized: ["net", "net 10", "accessibility", "ai", "ai foundry local", "alttext", "c", "coding", "generative ai", "image processing", "local ai models", "local models", "news", "ollama", "ollamasharp", "script execution", "vision models"]
+tags_normalized: ["dotnet", "dotnet 10", "accessibility", "ai", "ai foundry local", "alttext", "csharp", "coding", "generative ai", "image processing", "local ai models", "local models", "news", "ollama", "ollamasharp", "script execution", "vision models"]
 ---
 
 Bruno Capuano demonstrates how to use .NET 10 and local AI models to automatically generate AltText for images using a C# script. The article provides a hands-on example and practical tips.<!--excerpt_end-->

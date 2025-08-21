@@ -11,8 +11,8 @@ feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-14 16:32:15 +00:00
 permalink: "/2025-07-14-Model-Context-Protocol-MCP-support-in-VS-Code-is-generally-available.html"
 viewing_mode: "external"
-tags: ["AI", "AI Assistant", "Data Sources", "External Tools", "GitHub Copilot", "Integration", "MCP", "Model Context Protocol", "News", "Production Environments", "Software Development", "Visual Studio Code"]
-tags_normalized: ["ai", "ai assistant", "data sources", "external tools", "github copilot", "integration", "mcp", "model context protocol", "news", "production environments", "software development", "visual studio code"]
+tags: ["AI", "AI Assistant", "Data Sources", "External Tools", "GitHub Copilot", "Integration", "MCP", "News", "Production Environments", "Software Development", "VS Code"]
+tags_normalized: ["ai", "ai assistant", "data sources", "external tools", "github copilot", "integration", "mcp", "news", "production environments", "software development", "vs code"]
 ---
 
 Authored by Allison, this article highlights the availability of Model Context Protocol (MCP) for GitHub Copilot in VS Code production environments. The piece discusses how MCP empowers GitHub Copilot to integrate with external tools and data sources, enhancing developer workflows and productivity.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0S
 date: 2025-08-02 04:22:25 +00:00
 permalink: "/2025-08-02-VS-Code-Live-Exploring-GitHub-Spark-and-Copilot-in-Visual-Studio-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agentmode", "AI", "AI Assistant", "AI in Development", "Code", "Code Demo", "Coding", "Demo", "Developer Tools", "Developercommunity", "Developertools", "Extension Ecosystem", "GitHub Copilot", "GitHub Spark", "Githubspark", "Live Coding", "Productivity Tools", "Videos", "Visual Studio Code", "Visualstudiocode"]
-tags_normalized: ["agentmode", "ai", "ai assistant", "ai in development", "code", "code demo", "coding", "demo", "developer tools", "developercommunity", "developertools", "extension ecosystem", "github copilot", "github spark", "githubspark", "live coding", "productivity tools", "videos", "visual studio code", "visualstudiocode"]
+tags: ["Agentmode", "AI", "AI Assistant", "AI in Development", "Code", "Code Demo", "Coding", "Demo", "Developer Community", "Developer Tools", "Extension Ecosystem", "GitHub Copilot", "GitHub Spark", "Githubspark", "Live Coding", "Productivity Tools", "Videos", "VS Code"]
+tags_normalized: ["agentmode", "ai", "ai assistant", "ai in development", "code", "code demo", "coding", "demo", "developer community", "developer tools", "extension ecosystem", "github copilot", "github spark", "githubspark", "live coding", "productivity tools", "videos", "vs code"]
 ---
 
 Visual Studio Code’s team—James Montemagno, Burke Holland, and Pierce Boggan—explore and demo the latest AI development features including GitHub Copilot and the new GitHub Spark for developers.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
 date: 2025-05-13 17:26:51 +00:00
 permalink: "/2025-05-13-Agent-Mode-Public-Preview-Launches-for-Visual-Studio-1714.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Agents", "Artificial Intelligence", "Azure Storage", "Code Refactoring", "Coding", "Copilot", "Copilot Chat", "Cosmos DB", "Documentation Generation", "GitHub Copilot", "MCP Servers", "Model Context Protocol", "News", "Productivity", "Testing", "Visual Studio", "Visual Studio 17.14"]
-tags_normalized: ["agent mode", "ai", "ai agents", "artificial intelligence", "azure storage", "code refactoring", "coding", "copilot", "copilot chat", "cosmos db", "documentation generation", "github copilot", "mcp servers", "model context protocol", "news", "productivity", "testing", "visual studio", "visual studio 17 dot 14"]
+tags: ["Agent Mode", "AI", "AI Agents", "Azure Storage", "Code Refactoring", "Coding", "Copilot", "Copilot Chat", "Cosmos DB", "Documentation Generation", "GitHub Copilot", "MCP", "MCP Servers", "News", "Productivity", "Testing", "Visual Studio 17.14", "VS"]
+tags_normalized: ["agent mode", "ai", "ai agents", "azure storage", "code refactoring", "coding", "copilot", "copilot chat", "cosmos db", "documentation generation", "github copilot", "mcp", "mcp servers", "news", "productivity", "testing", "visual studio 17dot14", "vs"]
 ---
 
 Katie Savage and Aaron Yim introduce Agent mode in Visual Studio 17.14, which empowers developers to define and complete complex tasks in natural language using GitHub Copilot's autonomous planning and execution capabilities.<!--excerpt_end-->

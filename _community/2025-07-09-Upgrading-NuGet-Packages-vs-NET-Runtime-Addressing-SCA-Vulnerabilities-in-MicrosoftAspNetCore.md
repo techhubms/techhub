@@ -12,7 +12,7 @@ date: 2025-07-09 05:01:49 +00:00
 permalink: "/2025-07-09-Upgrading-NuGet-Packages-vs-NET-Runtime-Addressing-SCA-Vulnerabilities-in-MicrosoftAspNetCore.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 8", ".NET Runtime", "Authorization", "Best Practices", "Coding", "Community", "Components", "Dependency Management", "Microsoft.AspNetCore", "NuGet Packages", "Package Upgrade", "SCA", "SignalR", "Software Composition Analysis", "Vulnerability Management"]
-tags_normalized: ["net", "net 8", "net runtime", "authorization", "best practices", "coding", "community", "components", "dependency management", "microsoft dot aspnetcore", "nuget packages", "package upgrade", "sca", "signalr", "software composition analysis", "vulnerability management"]
+tags_normalized: ["dotnet", "dotnet 8", "dotnet runtime", "authorization", "best practices", "coding", "community", "components", "dependency management", "microsoftdotaspnetcore", "nuget packages", "package upgrade", "sca", "signalr", "software composition analysis", "vulnerability management"]
 ---
 
 MahaauD asks whether upgrading the .NET Runtime alone resolves SCA-detected vulnerabilities for Microsoft.AspNetCore.* NuGet packages, or if manual package updates are also necessary.<!--excerpt_end-->

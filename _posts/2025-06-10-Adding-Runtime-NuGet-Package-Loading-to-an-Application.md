@@ -12,7 +12,7 @@ date: 2025-06-10 04:40:37 +00:00
 permalink: "/2025-06-10-Adding-Runtime-NuGet-Package-Loading-to-an-Application.html"
 categories: ["Coding"]
 tags: [".NET", ".NET ASP.NET", "ASP.NET", "Assembly Loading", "C#", "Coding", "Dependency Management", "Dynamic Code", "LiveReloadServer", "NuGet", "Posts", "Razor Pages", "Runtime Extensibility"]
-tags_normalized: ["net", "net asp dot net", "asp dot net", "assembly loading", "c", "coding", "dependency management", "dynamic code", "livereloadserver", "nuget", "posts", "razor pages", "runtime extensibility"]
+tags_normalized: ["dotnet", "dotnet aspdotnet", "aspdotnet", "assembly loading", "csharp", "coding", "dependency management", "dynamic code", "livereloadserver", "nuget", "posts", "razor pages", "runtime extensibility"]
 ---
 
 In this article, Rick Strahl discusses how to enable runtime extensibility in .NET apps using NuGet package loading and dynamic assembly integration, with practical code samples and insights from his work on LiveReloadServer.<!--excerpt_end-->

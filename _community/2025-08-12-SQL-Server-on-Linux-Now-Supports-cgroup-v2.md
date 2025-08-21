@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 12:30:37 +00:00
 permalink: "/2025-08-12-SQL-Server-on-Linux-Now-Supports-cgroup-v2.html"
 categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Kubernetes Service", "Cgroup", "Cgroup V2", "Community", "Container Orchestration", "Containerization", "DevOps", "Docker", "Errorlog", "Kubernetes", "Linux", "Memory Limits", "OpenShift", "Platform Engineering", "Quality Of Service", "Resource Enforcement", "Resource Management", "SQL Server", "SQL Server CU 20", "SQL Server On Linux"]
-tags_normalized: ["azure", "azure kubernetes service", "cgroup", "cgroup v2", "community", "container orchestration", "containerization", "devops", "docker", "errorlog", "kubernetes", "linux", "memory limits", "openshift", "platform engineering", "quality of service", "resource enforcement", "resource management", "sql server", "sql server cu 20", "sql server on linux"]
+tags: ["AKS", "Azure", "Cgroup", "Cgroup V2", "Community", "Container Orchestration", "Containerization", "DevOps", "Docker", "Errorlog", "Kubernetes", "Linux", "Memory Limits", "OpenShift", "Platform Engineering", "Quality Of Service", "Resource Enforcement", "Resource Management", "SQL Server", "SQL Server CU 20", "SQL Server On Linux"]
+tags_normalized: ["aks", "azure", "cgroup", "cgroup v2", "community", "container orchestration", "containerization", "devops", "docker", "errorlog", "kubernetes", "linux", "memory limits", "openshift", "platform engineering", "quality of service", "resource enforcement", "resource management", "sql server", "sql server cu 20", "sql server on linux"]
 ---
 
 Attinder Pal Singh gives a practical look at cgroup v2 support in SQL Server 2025 preview and SQL Server 2022 CU 20 on Linux, helping DBAs and engineers adopt better resource controls and avoid OOM errors on Kubernetes and other container platforms.<!--excerpt_end-->

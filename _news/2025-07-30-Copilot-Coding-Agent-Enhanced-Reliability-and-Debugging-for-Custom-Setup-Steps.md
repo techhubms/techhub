@@ -12,7 +12,7 @@ date: 2025-07-30 18:13:18 +00:00
 permalink: "/2025-07-30-Copilot-Coding-Agent-Enhanced-Reliability-and-Debugging-for-Custom-Setup-Steps.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["Agent Session Logs", "AI", "Continuous Integration", "Copilot Coding Agent", "Custom Setup", "Debugging", "Development Tools", "DevOps", "GitHub Actions", "GitHub Copilot", "News", "Pro/Enterprise Features", "Workflow Automation"]
-tags_normalized: ["agent session logs", "ai", "continuous integration", "copilot coding agent", "custom setup", "debugging", "development tools", "devops", "github actions", "github copilot", "news", "pro slash enterprise features", "workflow automation"]
+tags_normalized: ["agent session logs", "ai", "continuous integration", "copilot coding agent", "custom setup", "debugging", "development tools", "devops", "github actions", "github copilot", "news", "proslashenterprise features", "workflow automation"]
 ---
 
 Allison introduces recent improvements to the GitHub Copilot coding agent, detailing enhanced reliability and easier debugging for custom workflow setup steps. These changes streamline automation for developers using Copilot Pro, Business, or Enterprise.<!--excerpt_end-->

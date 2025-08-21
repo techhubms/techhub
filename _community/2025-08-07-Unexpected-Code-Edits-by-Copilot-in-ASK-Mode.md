@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-07 18:00:25 +00:00
 permalink: "/2025-08-07-Unexpected-Code-Edits-by-Copilot-in-ASK-Mode.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Powered IDE", "Automated Code Edits", "Code Review", "Codebase Management", "Community", "Copilot Agent Mode", "Copilot ASK Mode", "Developer Tools", "Git Changes", "GitHub Copilot", "Software Development", "Source Control", "Visual Studio Code"]
-tags_normalized: ["ai", "ai powered ide", "automated code edits", "code review", "codebase management", "community", "copilot agent mode", "copilot ask mode", "developer tools", "git changes", "github copilot", "software development", "source control", "visual studio code"]
+tags: ["AI", "AI Powered IDE", "Automated Code Edits", "Code Review", "Codebase Management", "Community", "Copilot Agent Mode", "Copilot ASK Mode", "Developer Tools", "Git Changes", "GitHub Copilot", "Software Development", "Source Control", "VS Code"]
+tags_normalized: ["ai", "ai powered ide", "automated code edits", "code review", "codebase management", "community", "copilot agent mode", "copilot ask mode", "developer tools", "git changes", "github copilot", "software development", "source control", "vs code"]
 ---
 
 Nomadic_Dev shares findings on GitHub Copilot's ASK mode unexpectedly making direct edits to a production codebase, prompting discussion about Copilot's expected behavior and reliability.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2025-08-15 14:31:39 +00:00
 permalink: "/2025-08-15-Using-Entra-ID-Authentication-with-Arc-Enabled-SQL-Server-in-a-NET-Windows-Forms-Application.html"
 categories: ["Azure", "Coding", "Security"]
 tags: [".NET Framework", "Access Tokens", "API Permissions", "App Registration", "Arc Enabled SQL Server", "Authentication", "Azure", "Azure Active Directory", "Azure SQL Database", "Client App Registration", "Coding", "Community", "Managed Identity", "Microsoft Entra ID", "Microsoft.Data.SqlClient", "Microsoft.Identity.Client", "MSAL", "Security", "SQL Server", "SSMS", "Token Cache", "Windows Forms"]
-tags_normalized: ["net framework", "access tokens", "api permissions", "app registration", "arc enabled sql server", "authentication", "azure", "azure active directory", "azure sql database", "client app registration", "coding", "community", "managed identity", "microsoft entra id", "microsoft dot data dot sqlclient", "microsoft dot identity dot client", "msal", "security", "sql server", "ssms", "token cache", "windows forms"]
+tags_normalized: ["dotnet framework", "access tokens", "api permissions", "app registration", "arc enabled sql server", "authentication", "azure", "azure active directory", "azure sql database", "client app registration", "coding", "community", "managed identity", "microsoft entra id", "microsoftdotdatadotsqlclient", "microsoftdotidentitydotclient", "msal", "security", "sql server", "ssms", "token cache", "windows forms"]
 ---
 
 jpigott details how developers can use Microsoft Entra ID authentication with Arc-enabled SQL Server in a .NET Windows Forms application, focusing on token management, secure connections, and MSAL integration.<!--excerpt_end-->

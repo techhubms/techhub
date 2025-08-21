@@ -12,7 +12,7 @@ date: 2024-12-09 06:56:56 +00:00
 permalink: "/2024-12-09-Chain-of-Responsibility-Design-Pattern-in-C.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Chain Of Responsibility", "Coding", "Design Pattern", "Design Patterns", "Loose Coupling", "Middleware", "Posts", "Refactoring", "Request Handling", "Single Responsibility Principle", "Software Architecture"]
-tags_normalized: ["net", "c", "chain of responsibility", "coding", "design pattern", "design patterns", "loose coupling", "middleware", "posts", "refactoring", "request handling", "single responsibility principle", "software architecture"]
+tags_normalized: ["dotnet", "csharp", "chain of responsibility", "coding", "design pattern", "design patterns", "loose coupling", "middleware", "posts", "refactoring", "request handling", "single responsibility principle", "software architecture"]
 ---
 
 Ahsan Ullah explores the Chain of Responsibility design pattern in this in-depth article, demonstrating how to implement and leverage it for flexible, maintainable C# applications.<!--excerpt_end-->

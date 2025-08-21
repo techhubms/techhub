@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwf
 date: 2025-08-06 20:46:02 +00:00
 permalink: "/2025-08-06-NET-AI-Community-Standup-High-Performance-AI-Inference-on-a-Budget.html"
 categories: ["AI", "Coding", "ML"]
-tags: [".NET", ".NET 10", ".NET 9", "AI", "AI Inference", "AI Library Design", "AI Performance", "AIML", "Coding", "Cost Optimization", "Demo", "Developer", "Developer Tools", "Developercommunity", "Developertools", "Dotnetdeveloper", "GPU Utilization", "Hugging Face Models", "Machine Learning", "MachineLearning", "ML", "Onnx", "ONNX Runtime", "Production AI", "Python Integration", "Softwaredeveloper", "Videos"]
-tags_normalized: ["net", "net 10", "net 9", "ai", "ai inference", "ai library design", "ai performance", "aiml", "coding", "cost optimization", "demo", "developer", "developer tools", "developercommunity", "developertools", "dotnetdeveloper", "gpu utilization", "hugging face models", "machine learning", "machinelearning", "ml", "onnx", "onnx runtime", "production ai", "python integration", "softwaredeveloper", "videos"]
+tags: [".NET", ".NET 10", ".NET 9", "AI", "AI Inference", "AI Library Design", "AI Performance", "AIML", "Coding", "Cost Optimization", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnetdeveloper", "GPU Utilization", "Hugging Face Models", "Machine Learning", "MachineLearning", "ML", "Onnx", "ONNX Runtime", "Production AI", "Python Integration", "Software Developer", "Videos"]
+tags_normalized: ["dotnet", "dotnet 10", "dotnet 9", "ai", "ai inference", "ai library design", "ai performance", "aiml", "coding", "cost optimization", "demo", "developer", "developer community", "developer tools", "dotnetdeveloper", "gpu utilization", "hugging face models", "machine learning", "machinelearning", "ml", "onnx", "onnx runtime", "production ai", "python integration", "software developer", "videos"]
 ---
 
 Hosted by the dotnet team, this session features Bruno Capuano and Tal Wald as they demonstrate strategies for achieving fast, cost-effective AI inference using .NET, ONNX Runtime, and modern APIs.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2024-11-12 06:28:18 +00:00
 permalink: "/2024-11-12-FabConEurope-Key-Announcements-and-Features-from-Microsofts-First-Fabric-Community-Conference.html"
 categories: ["Azure", "ML"]
 tags: ["AI", "AI Skills", "Azure", "Conference", "Data & AI", "Data Engineering", "Data Factory", "Data Platform", "Data Warehouse", "Event Streaming", "Fabric Community Conference", "Fabric Runtime", "Microsoft Fabric", "ML", "Network Security", "Posts", "Real Time Analytics", "T SQL Notebooks"]
-tags_normalized: ["ai", "ai skills", "azure", "conference", "data ai", "data engineering", "data factory", "data platform", "data warehouse", "event streaming", "fabric community conference", "fabric runtime", "microsoft fabric", "ml", "network security", "posts", "real time analytics", "t sql notebooks"]
+tags_normalized: ["ai", "ai skills", "azure", "conference", "data and ai", "data engineering", "data factory", "data platform", "data warehouse", "event streaming", "fabric community conference", "fabric runtime", "microsoft fabric", "ml", "network security", "posts", "real time analytics", "t sql notebooks"]
 ---
 
 Authored by Samu Niemelä, this overview details the major innovations and updates unveiled at the first Microsoft Fabric Community Conference in Europe, focusing on improvements in data, analytics, and Azure-integrated capabilities.<!--excerpt_end-->

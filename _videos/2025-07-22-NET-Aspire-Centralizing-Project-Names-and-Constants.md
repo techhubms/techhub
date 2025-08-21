@@ -12,7 +12,7 @@ date: 2025-07-22 18:49:25 +00:00
 permalink: "/2025-07-22-NET-Aspire-Centralizing-Project-Names-and-Constants.html"
 categories: ["Coding"]
 tags: [".NET", "AppHost", "Aspire", "Cloud Apps", "Coding", "Constants", "Magic Strings", "Microsoft", "Project Naming", "Service References", "Shared Libraries", "Videos"]
-tags_normalized: ["net", "apphost", "aspire", "cloud apps", "coding", "constants", "magic strings", "microsoft", "project naming", "service references", "shared libraries", "videos"]
+tags_normalized: ["dotnet", "apphost", "aspire", "cloud apps", "coding", "constants", "magic strings", "microsoft", "project naming", "service references", "shared libraries", "videos"]
 ---
 
 In this instructional video by dotnet, learn how to centralize and manage project and service names in .NET Aspire by using constants instead of magic strings—improving maintainability across your system.<!--excerpt_end-->

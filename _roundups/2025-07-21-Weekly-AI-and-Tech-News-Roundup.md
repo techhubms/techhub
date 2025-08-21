@@ -8,8 +8,8 @@ viewing_mode: "internal"
 date: 2025-07-21 09:00:00 +00:00
 permalink: "/2025-07-21-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: [".NET 10", "Agentic AI", "AI", "Automation", "Azure", "Cloud", "Coding", "Coding Agents", "Compliance", "DevOps", "GitHub Copilot", "Machine Learning", "MCP", "ML", "Roundups", "Security", "Visual Studio", "Visual Studio Code"]
-tags_normalized: ["net 10", "agentic ai", "ai", "automation", "azure", "cloud", "coding", "coding agents", "compliance", "devops", "github copilot", "machine learning", "mcp", "ml", "roundups", "security", "visual studio", "visual studio code"]
+tags: [".NET 10", "Agentic AI", "AI", "Automation", "Azure", "Cloud", "Coding", "Coding Agents", "Compliance", "DevOps", "GitHub Copilot", "Machine Learning", "MCP", "ML", "Roundups", "Security", "VS", "VS Code"]
+tags_normalized: ["dotnet 10", "agentic ai", "ai", "automation", "azure", "cloud", "coding", "coding agents", "compliance", "devops", "github copilot", "machine learning", "mcp", "ml", "roundups", "security", "vs", "vs code"]
 ---
 
 Welcome to this week’s Tech Roundup, where automation and AI innovation are reshaping the developer experience from code inception to deployment and security. Major updates to GitHub Copilot drive the conversation, with new AI-assisted code review features, cross-IDE coding agents, and enhanced contextual intelligence transforming how teams collaborate and maintain code quality. The Model Context Protocol’s wider adoption and real-time extensibility signal a new era of hands-on workflow automation, backed by deeper analytics and operational transparency.

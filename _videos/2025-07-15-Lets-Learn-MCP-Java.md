@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0S
 date: 2025-07-15 17:28:28 +00:00
 permalink: "/2025-07-15-Lets-Learn-MCP-Java.html"
 categories: ["AI"]
-tags: ["AI", "AI Models", "Client Applications", "Demo", "Java", "Mcp", "Model Context Protocol", "Server Creation", "Standardization", "Videos", "Visual Studio Code", "Workshop"]
-tags_normalized: ["ai", "ai models", "client applications", "demo", "java", "mcp", "model context protocol", "server creation", "standardization", "videos", "visual studio code", "workshop"]
+tags: ["AI", "AI Models", "Client Applications", "Demo", "Java", "Mcp", "Server Creation", "Standardization", "Videos", "VS Code", "Workshop"]
+tags_normalized: ["ai", "ai models", "client applications", "demo", "java", "mcp", "server creation", "standardization", "videos", "vs code", "workshop"]
 ---
 
 Visual Studio Code presents an introductory workshop on MCP for Java, featuring Bruno Borges and Sandra Ahlgrimm, guiding viewers through MCP fundamentals and a live server demo.<!--excerpt_end-->

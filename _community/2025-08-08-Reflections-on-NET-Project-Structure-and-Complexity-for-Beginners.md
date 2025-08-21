@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-08 12:59:42 +00:00
 permalink: "/2025-08-08-Reflections-on-NET-Project-Structure-and-Complexity-for-Beginners.html"
 categories: ["Coding"]
-tags: [".NET", "ASP.NET Core", "Backend Development", "Coding", "Community", "Dependency Injection", "DTO", "Entity Framework", "Express.js", "Layered Architecture", "Legacy Applications", "NestJS", "Node.js", "OnModelCreating", "Project Structure", "Software Architecture", "Validation"]
-tags_normalized: ["net", "asp dot net core", "backend development", "coding", "community", "dependency injection", "dto", "entity framework", "express dot js", "layered architecture", "legacy applications", "nestjs", "node dot js", "onmodelcreating", "project structure", "software architecture", "validation"]
+tags: [".NET", "ASP.NET Core", "Backend Development", "Coding", "Community", "Dependency Injection", "DTO", "EF", "Express.js", "Layered Architecture", "Legacy Applications", "NestJS", "Node.js", "OnModelCreating", "Project Structure", "Software Architecture", "Validation"]
+tags_normalized: ["dotnet", "aspdotnet core", "backend development", "coding", "community", "dependency injection", "dto", "ef", "expressdotjs", "layered architecture", "legacy applications", "nestjs", "nodedotjs", "onmodelcreating", "project structure", "software architecture", "validation"]
 ---
 
 jeddthedoge initiates a thoughtful discussion on the complexities of starting a .NET project, with community members providing nuanced perspectives on why .NET emphasizes structure through DTOs, layers, and frameworks like Entity Framework.<!--excerpt_end-->

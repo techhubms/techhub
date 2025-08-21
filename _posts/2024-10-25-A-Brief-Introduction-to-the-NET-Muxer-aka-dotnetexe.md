@@ -12,7 +12,7 @@ date: 2024-10-25 08:57:43 +00:00
 permalink: "/2024-10-25-A-Brief-Introduction-to-the-NET-Muxer-aka-dotnetexe.html"
 categories: ["Coding"]
 tags: [".NET", "Apphost", "CLI", "Coding", "CoreHost", "Corehost.cpp", "Debugging", "Dotnet.exe", "Execution Model", "Internals", "Microsoft", "Muxer", "Native Code", "Performance", "Posts", "Runtime", "SDK", "Tracing"]
-tags_normalized: ["net", "apphost", "cli", "coding", "corehost", "corehost dot cpp", "debugging", "dotnet dot exe", "execution model", "internals", "microsoft", "muxer", "native code", "performance", "posts", "runtime", "sdk", "tracing"]
+tags_normalized: ["dotnet", "apphost", "cli", "coding", "corehost", "corehostdotcpp", "debugging", "dotnetdotexe", "execution model", "internals", "microsoft", "muxer", "native code", "performance", "posts", "runtime", "sdk", "tracing"]
 ---
 
 In this introduction by Steve Gordon, readers gain foundational knowledge of the .NET muxer (dotnet.exe), an essential component of the .NET ecosystem. Gordon's thorough exploration unveils the inner workings and key mechanisms underpinning the .NET command-line interface.<!--excerpt_end-->

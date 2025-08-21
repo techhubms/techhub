@@ -11,8 +11,8 @@ feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
 date: 2025-05-16 00:00:00 +00:00
 permalink: "/2025-05-16-Write-Better-Commit-Messages-with-GitHub-Copilot.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Best Practices", "Code History", "Code Reviews", "Commit Messages", "Conventional Commits", "Copilot Chat", "Developer Productivity", "DevOps", "GitHub Copilot", "Posts", "Pull Requests", "Visual Studio Code"]
-tags_normalized: ["ai", "best practices", "code history", "code reviews", "commit messages", "conventional commits", "copilot chat", "developer productivity", "devops", "github copilot", "posts", "pull requests", "visual studio code"]
+tags: ["AI", "Best Practices", "Code History", "Code Reviews", "Commit Messages", "Conventional Commits", "Copilot Chat", "Developer Productivity", "DevOps", "GitHub Copilot", "Posts", "Pull Requests", "VS Code"]
+tags_normalized: ["ai", "best practices", "code history", "code reviews", "commit messages", "conventional commits", "copilot chat", "developer productivity", "devops", "github copilot", "posts", "pull requests", "vs code"]
 ---
 
 Randy Pagels shares practical guidance for using GitHub Copilot to generate clear, concise commit messages, highlighting actionable steps and prompt ideas for developers looking to streamline their Git version control workflows.<!--excerpt_end-->

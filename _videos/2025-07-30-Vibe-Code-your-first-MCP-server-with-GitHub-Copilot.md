@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-07-30 22:23:12 +00:00
 permalink: "/2025-07-30-Vibe-Code-Your-First-MCP-Server-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Development", "AI", "AI Agent", "AI Integration", "AI Tools", "Azure AI Foundry", "Cloud Computing", "Coding", "Custom Agents", "Dev", "Development", "Foundry Agent Service", "GitHub Copilot", "MCP", "MCP Server", "Microsoft", "Model Context Protocol", "Tech", "Technology", "Videos", "Visual Studio Code"]
-tags_normalized: ["agent development", "ai", "ai agent", "ai integration", "ai tools", "azure ai foundry", "cloud computing", "coding", "custom agents", "dev", "development", "foundry agent service", "github copilot", "mcp", "mcp server", "microsoft", "model context protocol", "tech", "technology", "videos", "visual studio code"]
+tags: ["Agent Development", "AI", "AI Agent", "AI Integration", "AI Tools", "Azure AI Foundry", "Cloud Computing", "Coding", "Custom Agents", "Dev", "Development", "Foundry Agent Service", "GitHub Copilot", "MCP", "MCP Server", "Microsoft", "Tech", "Technology", "Videos", "VS Code"]
+tags_normalized: ["agent development", "ai", "ai agent", "ai integration", "ai tools", "azure ai foundry", "cloud computing", "coding", "custom agents", "dev", "development", "foundry agent service", "github copilot", "mcp", "mcp server", "microsoft", "tech", "technology", "videos", "vs code"]
 ---
 
 Microsoft Developer demonstrates how to use GitHub Copilot and MCP to build your first MCP server, explaining key concepts and showing hands-on coding in Visual Studio Code.<!--excerpt_end-->

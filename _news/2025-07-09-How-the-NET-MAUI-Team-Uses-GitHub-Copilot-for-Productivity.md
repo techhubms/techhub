@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-07-09 17:15:00 +00:00
 permalink: "/2025-07-09-How-the-NET-MAUI-Team-Uses-GitHub-Copilot-for-Productivity.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", ".NET MAUI", "AI", "Automation", "C#", "CI/CD", "Coding", "Copilot Coding Agent", "Copilot Productivity", "DevOps", "Firewall Rules", "GitHub Copilot", "MCP Server", "MEAI", "News", "Pull Requests", "Repository Instructions", "Visual Studio Code"]
-tags_normalized: ["net", "net maui", "ai", "automation", "c", "ci slash cd", "coding", "copilot coding agent", "copilot productivity", "devops", "firewall rules", "github copilot", "mcp server", "meai", "news", "pull requests", "repository instructions", "visual studio code"]
+tags: [".NET", "AI", "Automation", "C#", "CI/CD", "Coding", "Copilot Coding Agent", "Copilot Productivity", "DevOps", "Firewall Rules", "GitHub Copilot", "MAUI", "MCP Server", "MEAI", "News", "Pull Requests", "Repository Instructions", "VS Code"]
+tags_normalized: ["dotnet", "ai", "automation", "csharp", "cislashcd", "coding", "copilot coding agent", "copilot productivity", "devops", "firewall rules", "github copilot", "maui", "mcp server", "meai", "news", "pull requests", "repository instructions", "vs code"]
 ---
 
 Jonathan Peppers describes how the .NET MAUI team leverages GitHub Copilot to enhance productivity, sharing practical setup tips, workflow strategies, successes, and limitations.<!--excerpt_end-->

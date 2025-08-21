@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/typescript/feed/"
 date: 2025-03-11 14:31:27 +00:00
 permalink: "/2025-03-11-A-10x-Faster-TypeScript-Native-Compiler-Port-and-Performance-Roadmap.html"
 categories: ["Coding"]
-tags: ["Coding", "Developer Experience", "Editor Responsiveness", "Go", "JavaScript Ecosystem", "Language Services", "LSP", "Native Compiler", "News", "Open Source", "Performance Improvement", "Project Roadmap", "Source Code Management", "TypeScript", "TypeScript 7.0", "Visual Studio Code"]
-tags_normalized: ["coding", "developer experience", "editor responsiveness", "go", "javascript ecosystem", "language services", "lsp", "native compiler", "news", "open source", "performance improvement", "project roadmap", "source code management", "typescript", "typescript 7 dot 0", "visual studio code"]
+tags: ["Coding", "Developer Experience", "Editor Responsiveness", "Go", "JavaScript Ecosystem", "Language Services", "LSP", "Native Compiler", "News", "Open Source", "Performance Improvement", "Project Roadmap", "Source Code Management", "TypeScript", "TypeScript 7.0", "VS Code"]
+tags_normalized: ["coding", "developer experience", "editor responsiveness", "go", "javascript ecosystem", "language services", "lsp", "native compiler", "news", "open source", "performance improvement", "project roadmap", "source code management", "typescript", "typescript 7dot0", "vs code"]
 ---
 
 Anders Hejlsberg unveils major plans for TypeScript: a native compiler port offering significant speed and memory gains. This announcement details the benchmarks, roadmap, and expected impact on the developer workflow.<!--excerpt_end-->

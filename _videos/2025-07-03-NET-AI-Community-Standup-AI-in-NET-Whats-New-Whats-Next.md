@@ -12,7 +12,7 @@ date: 2025-07-03 06:07:04 +00:00
 permalink: "/2025-07-03-NET-AI-Community-Standup-AI-in-NET-Whats-New-Whats-Next.html"
 viewing_mode: "internal"
 tags: [".NET", ".NET 10", ".NET 9", "AI", "Bruno Capuano", "C#", "Coding", "Machine Learning", "Microsoft", "Tanner Gooding", "Tensor Support", "Videos"]
-tags_normalized: ["net", "net 10", "net 9", "ai", "bruno capuano", "c", "coding", "machine learning", "microsoft", "tanner gooding", "tensor support", "videos"]
+tags_normalized: ["dotnet", "dotnet 10", "dotnet 9", "ai", "bruno capuano", "csharp", "coding", "machine learning", "microsoft", "tanner gooding", "tensor support", "videos"]
 ---
 
 In this article, dotnet introduces an online session that delves into how the .NET ecosystem is amplifying its AI and Machine Learning capabilities. The session, featuring Bruno Capuano and Tanner Gooding, discusses enhancements like tensor support in .NET 9 and previews new features expected in .NET 10. This is an insightful resource for developers eager to leverage intelligent technologies within .NET applications.<!--excerpt_end-->

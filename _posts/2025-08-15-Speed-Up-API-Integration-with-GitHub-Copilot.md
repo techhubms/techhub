@@ -12,7 +12,7 @@ date: 2025-08-15 00:00:00 +00:00
 permalink: "/2025-08-15-Speed-Up-API-Integration-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "API Integration", "Async/Await", "Automation", "Code Generation", "Coding", "Copilot Prompts", "Developer Productivity", "Error Handling", "GitHub Copilot", "JavaScript", "OpenWeatherMap API", "Posts"]
-tags_normalized: ["ai", "api integration", "async slash await", "automation", "code generation", "coding", "copilot prompts", "developer productivity", "error handling", "github copilot", "javascript", "openweathermap api", "posts"]
+tags_normalized: ["ai", "api integration", "asyncslashawait", "automation", "code generation", "coding", "copilot prompts", "developer productivity", "error handling", "github copilot", "javascript", "openweathermap api", "posts"]
 ---
 
 Randy Pagels shares tips on using GitHub Copilot to speed up application API integration, blending Copilot's generated code with developer expertise for efficient and maintainable solutions.<!--excerpt_end-->

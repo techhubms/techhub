@@ -12,7 +12,7 @@ date: 2025-07-02 15:00:43 +00:00
 permalink: "/2025-07-02-Azure-SDK-Release-Highlights-for-June-2025.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: [".NET", "AI", "AI Agents", "Analytics", "Azure", "Azure AI Search", "Azure Identity", "Azure SDK", "Bing Search", "Bulk API", "Client Library", "Cloud Services", "Coding", "Cosmos DB", "DefaultAzureCredential", "Go", "Hybrid Search", "Java", "JavaScript", "ML", "News", "Online Experimentation", "Python", "Release Notes", "Resource Management", "Resource Manager", "SDK"]
-tags_normalized: ["net", "ai", "ai agents", "analytics", "azure", "azure ai search", "azure identity", "azure sdk", "bing search", "bulk api", "client library", "cloud services", "coding", "cosmos db", "defaultazurecredential", "go", "hybrid search", "java", "javascript", "ml", "news", "online experimentation", "python", "release notes", "resource management", "resource manager", "sdk"]
+tags_normalized: ["dotnet", "ai", "ai agents", "analytics", "azure", "azure ai search", "azure identity", "azure sdk", "bing search", "bulk api", "client library", "cloud services", "coding", "cosmos db", "defaultazurecredential", "go", "hybrid search", "java", "javascript", "ml", "news", "online experimentation", "python", "release notes", "resource management", "resource manager", "sdk"]
 ---
 
 In this comprehensive roundup, Ronnie Geraghty reviews the Azure SDK releases for June 2025, spotlighting advancements in AI, identity, Cosmos DB, and resource management libraries, with details for .NET, Python, Java, JavaScript, and Go developers.<!--excerpt_end-->

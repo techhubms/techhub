@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-07 10:00:00 +00:00
 permalink: "/2025-08-07-Evaluating-Azure-Application-Gateway-and-WAF-Placement-in-API-Architectures.html"
 categories: ["Azure", "Security"]
-tags: ["API Management", "API Ops", "API Security", "APIM", "Azure", "Azure Application Gateway", "Azure Front Door", "Azure Kubernetes Service", "Cloudflare", "Community", "Cost Optimization", "Firewall", "Landing Zone", "Networking", "Private Link", "Security", "WAF Policy", "Web Application Firewall"]
-tags_normalized: ["api management", "api ops", "api security", "apim", "azure", "azure application gateway", "azure front door", "azure kubernetes service", "cloudflare", "community", "cost optimization", "firewall", "landing zone", "networking", "private link", "security", "waf policy", "web application firewall"]
+tags: ["AKS", "API Management", "API Ops", "API Security", "APIM", "Azure", "Azure Application Gateway", "Azure Front Door", "Cloudflare", "Community", "Cost Optimization", "Firewall", "Landing Zone", "Networking", "Private Link", "Security", "WAF Policy", "Web Application Firewall"]
+tags_normalized: ["aks", "api management", "api ops", "api security", "apim", "azure", "azure application gateway", "azure front door", "cloudflare", "community", "cost optimization", "firewall", "landing zone", "networking", "private link", "security", "waf policy", "web application firewall"]
 ---
 
 TheCitrixGuy and members of the Azure community explore the architectural and cost considerations of using Azure Application Gateway with WAF in front of APIM. They share alternative solutions including Azure Front Door and Cloudflare, offering deployment insights and practical recommendations.<!--excerpt_end-->

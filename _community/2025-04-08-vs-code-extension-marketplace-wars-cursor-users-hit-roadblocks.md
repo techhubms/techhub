@@ -9,8 +9,8 @@ viewing_mode: "external"
 categories: ["DevOps"]
 date: 2025-04-08 00:00:00 +00:00
 permalink: "/2025-04-08-vs-code-extension-marketplace-wars-cursor-users-hit-roadblocks.html"
-tags: ["C/C++", "Community", "Compliance", "Cursor", "Developer Tools", "DevOps", "Extension Marketplace", "IDE", "Microsoft", "Open VSX", "Visual Studio Code"]
-tags_normalized: ["c slash c", "community", "compliance", "cursor", "developer tools", "devops", "extension marketplace", "ide", "microsoft", "open vsx", "visual studio code"]
+tags: ["C/C++", "Community", "Compliance", "Cursor", "Developer Tools", "DevOps", "Extension Marketplace", "IDE", "Microsoft", "Open VSX", "VS Code"]
+tags_normalized: ["cslashcplusplus", "community", "compliance", "cursor", "developer tools", "devops", "extension marketplace", "ide", "microsoft", "open vsx", "vs code"]
 ---
 
 Microsoft's stricter enforcement of its Visual Studio Code extension marketplace terms has left users of Cursor, an AI-powered coding editor, facing new roadblocks—especially with popular Microsoft extensions like C/C++. <!--excerpt_end-->

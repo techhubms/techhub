@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-05-06 09:15:41 +00:00
 permalink: "/2025-05-06-Reinventing-Legacy-App-Modernization-with-Crowdbotics-AI-Native-Platform-on-Azure.html"
 categories: ["AI", "Azure"]
-tags: ["Agents", "AI", "AI Apps", "AI Native Platform", "App Development", "Application Development", "Azure", "Azure App Service", "Azure Functions", "Azure Kubernetes Service", "Azure OpenAI Service", "COBOL", "Crowdbotics", "Developer Productivity", "Documentation Automation", "Functional Decomposition", "Legacy Modernization", "Mainframe Migration", "News", "Requirements Generation", "Software Architecture"]
-tags_normalized: ["agents", "ai", "ai apps", "ai native platform", "app development", "application development", "azure", "azure app service", "azure functions", "azure kubernetes service", "azure openai service", "cobol", "crowdbotics", "developer productivity", "documentation automation", "functional decomposition", "legacy modernization", "mainframe migration", "news", "requirements generation", "software architecture"]
+tags: ["Agents", "AI", "AI Apps", "AI Native Platform", "AKS", "App Development", "Application Development", "Azure", "Azure App Service", "Azure Functions", "Azure OpenAI Service", "COBOL", "Crowdbotics", "Developer Productivity", "Documentation Automation", "Functional Decomposition", "Legacy Modernization", "Mainframe Migration", "News", "Requirements Generation", "Software Architecture"]
+tags_normalized: ["agents", "ai", "ai apps", "ai native platform", "aks", "app development", "application development", "azure", "azure app service", "azure functions", "azure openai service", "cobol", "crowdbotics", "developer productivity", "documentation automation", "functional decomposition", "legacy modernization", "mainframe migration", "news", "requirements generation", "software architecture"]
 ---
 
 In this article, Charath Ranganathan, CTO of Crowdbotics, presents an AI-native approach to legacy application modernization built on Microsoft Azure, illustrating how AI-driven analysis and automation can transform enterprise modernization projects.<!--excerpt_end-->

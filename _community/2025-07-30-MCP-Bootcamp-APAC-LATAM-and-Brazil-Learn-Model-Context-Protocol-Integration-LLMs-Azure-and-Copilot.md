@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?cate
 date: 2025-07-30 19:00:00 +00:00
 permalink: "/2025-07-30-MCP-Bootcamp-APAC-LATAM-and-Brazil-Learn-Model-Context-Protocol-Integration-LLMs-Azure-and-Copilot.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Engineering", "Azure", "Azure Container Apps", "Bootcamp", "Cloud Deployment", "Coding", "Community", "GitHub Copilot", "HTTP Streaming", "LLM Integration", "MCP", "Model Context Protocol", "Python", "Real Time Streaming", "Server Sent Events", "Visual Studio Code"]
-tags_normalized: ["ai", "ai engineering", "azure", "azure container apps", "bootcamp", "cloud deployment", "coding", "community", "github copilot", "http streaming", "llm integration", "mcp", "model context protocol", "python", "real time streaming", "server sent events", "visual studio code"]
+tags: ["AI", "AI Engineering", "Azure", "Azure Container Apps", "Bootcamp", "Cloud Deployment", "Coding", "Community", "GitHub Copilot", "HTTP Streaming", "LLM Integration", "MCP", "Python", "Real Time Streaming", "Server Sent Events", "VS Code"]
+tags_normalized: ["ai", "ai engineering", "azure", "azure container apps", "bootcamp", "cloud deployment", "coding", "community", "github copilot", "http streaming", "llm integration", "mcp", "python", "real time streaming", "server sent events", "vs code"]
 ---
 
 Author cynthiazanoni invites developers to participate in the MCP Bootcamp, an international series teaching Model Context Protocol, LLM integration, Copilot, Azure deployment, and real-time features.<!--excerpt_end-->

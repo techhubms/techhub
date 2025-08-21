@@ -12,7 +12,7 @@ date: 2025-03-09 06:39:18 +00:00
 permalink: "/2025-03-09-Resolving-Paths-to-Server-Relative-Paths-in-NET-Code.html"
 categories: ["Coding"]
 tags: [".NET", "ASP.NET", "ASP.NET Core", "Business Logic", "Coding", "Controllers", "Extension Methods", "Helpers", "HttpContext", "Middleware", "PathBase", "Posts", "Razor Pages", "URL Resolution", "Virtual Paths", "Web Development"]
-tags_normalized: ["net", "asp dot net", "asp dot net core", "business logic", "coding", "controllers", "extension methods", "helpers", "httpcontext", "middleware", "pathbase", "posts", "razor pages", "url resolution", "virtual paths", "web development"]
+tags_normalized: ["dotnet", "aspdotnet", "aspdotnet core", "business logic", "coding", "controllers", "extension methods", "helpers", "httpcontext", "middleware", "pathbase", "posts", "razor pages", "url resolution", "virtual paths", "web development"]
 ---
 
 In this post, Rick Strahl describes strategies and provides helper methods for resolving URLs to server-relative paths in .NET code, extending beyond default ASP.NET Core mechanisms.<!--excerpt_end-->

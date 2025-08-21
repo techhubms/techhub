@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwf
 date: 2025-08-14 14:18:49 +00:00
 permalink: "/2025-08-14-Build-Next-Gen-AI-Apps-with-NET-and-Azure.html"
 categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "AI", "AI Applications", "AI Development", "Azure", "C#", "Cloud Development", "Coding", "End To End Development", "Frameworks", "Microsoft AI", "Production Deployment", "Samples And Templates", "Scalability", "Videos", "Visual Studio"]
-tags_normalized: ["net", "ai", "ai applications", "ai development", "azure", "c", "cloud development", "coding", "end to end development", "frameworks", "microsoft ai", "production deployment", "samples and templates", "scalability", "videos", "visual studio"]
+tags: [".NET", "AI", "AI Applications", "AI Development", "Azure", "C#", "Cloud Development", "Coding", "End To End Development", "Frameworks", "Microsoft AI", "Production Deployment", "Samples And Templates", "Scalability", "Videos", "VS"]
+tags_normalized: ["dotnet", "ai", "ai applications", "ai development", "azure", "csharp", "cloud development", "coding", "end to end development", "frameworks", "microsoft ai", "production deployment", "samples and templates", "scalability", "videos", "vs"]
 ---
 
 In this video session, dotnet demonstrates how to build next-generation AI applications with .NET and Azure, offering practical development guidance and showcasing the latest tools in the Microsoft ecosystem.<!--excerpt_end-->

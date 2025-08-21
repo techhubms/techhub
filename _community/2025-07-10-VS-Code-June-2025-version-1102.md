@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-10 18:25:27 +00:00
 permalink: "/2025-07-10-VS-Code-June-2025-version-1102.html"
 viewing_mode: "external"
-tags: ["AI", "Chat", "Community", "Copilot Coding Agent", "Custom Instructions", "Custom Modes", "Edit", "Editor Features", "Generate", "GitHub Copilot", "GitHub Copilot Chat", "Mcp", "MCP Support", "Open Source", "Scroll", "Settings Sync", "Start", "Terminal", "Terminal Commands", "Visual Studio Code"]
-tags_normalized: ["ai", "chat", "community", "copilot coding agent", "custom instructions", "custom modes", "edit", "editor features", "generate", "github copilot", "github copilot chat", "mcp", "mcp support", "open source", "scroll", "settings sync", "start", "terminal", "terminal commands", "visual studio code"]
+tags: ["AI", "Chat", "Community", "Copilot Coding Agent", "Custom Instructions", "Custom Modes", "Edit", "Editor Features", "Generate", "GitHub Copilot", "GitHub Copilot Chat", "Mcp", "MCP Support", "Open Source", "Scroll", "Settings Sync", "Start", "Terminal", "Terminal Commands", "VS Code"]
+tags_normalized: ["ai", "chat", "community", "copilot coding agent", "custom instructions", "custom modes", "edit", "editor features", "generate", "github copilot", "github copilot chat", "mcp", "mcp support", "open source", "scroll", "settings sync", "start", "terminal", "terminal commands", "vs code"]
 ---
 
 In this article, isidor_n discusses the latest updates to the GitHub Copilot Chat extension for Visual Studio Code. Readers will learn about new open-source contributions, support for custom project instructions, custom chat modes for specific tasks, and the general availability of MCP support. The article also highlights improved editor experiences for developers and invites questions about these enhancements.<!--excerpt_end-->

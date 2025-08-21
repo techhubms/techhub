@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/typescript/feed/"
 date: 2025-08-01 16:19:25 +00:00
 permalink: "/2025-08-01-Announcing-TypeScript-59-New-Features-Improvements-and-Whats-Next.html"
 categories: ["Coding"]
-tags: ["Coding", "ECMAScript", "Expandable Hovers", "Import Defer", "JavaScript", "News", "Node.js", "Performance Optimization", "Tsconfig", "Type Checking", "Type Inference", "TypeScript", "TypeScript 5.9", "Visual Studio Code"]
-tags_normalized: ["coding", "ecmascript", "expandable hovers", "import defer", "javascript", "news", "node dot js", "performance optimization", "tsconfig", "type checking", "type inference", "typescript", "typescript 5 dot 9", "visual studio code"]
+tags: ["Coding", "ECMAScript", "Expandable Hovers", "Import Defer", "JavaScript", "News", "Node.js", "Performance Optimization", "Tsconfig", "Type Checking", "Type Inference", "TypeScript", "TypeScript 5.9", "VS Code"]
+tags_normalized: ["coding", "ecmascript", "expandable hovers", "import defer", "javascript", "news", "nodedotjs", "performance optimization", "tsconfig", "type checking", "type inference", "typescript", "typescript 5dot9", "vs code"]
 ---
 
 Daniel Rosenwasser details the release of TypeScript 5.9, covering its new features, performance enhancements, and key behavior changes—essential reading for TypeScript developers.<!--excerpt_end-->

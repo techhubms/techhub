@@ -12,7 +12,7 @@ date: 2025-08-05 22:54:56 +00:00
 permalink: "/2025-08-05-NET-and-NET-Framework-August-2025-Servicing-Releases-Updates-and-Changelogs.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 8.0", ".NET 9.0", ".NET Framework", "Coding", "Installers", "Linux Packages", "Maintenance", "Maintenance & Updates", "News", "Release Notes", "Runtime", "Servicing Updates"]
-tags_normalized: ["net", "net 8 dot 0", "net 9 dot 0", "net framework", "coding", "installers", "linux packages", "maintenance", "maintenance updates", "news", "release notes", "runtime", "servicing updates"]
+tags_normalized: ["dotnet", "dotnet 8dot0", "dotnet 9dot0", "dotnet framework", "coding", "installers", "linux packages", "maintenance", "maintenance and updates", "news", "release notes", "runtime", "servicing updates"]
 ---
 
 Tara Overfield and Victor Israel-Bolarinwa provide a detailed recap of the August 2025 servicing updates for .NET 8.0, .NET 9.0, and the .NET Framework, focusing on new non-security fixes and resources.<!--excerpt_end-->

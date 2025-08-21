@@ -12,7 +12,7 @@ date: 2025-07-30 11:15:06 +00:00
 permalink: "/2025-07-30-Introducing-TickerQ-A-Modern-NET-Scheduling-Library-for-C-Developers.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "C# Development", "Coding", "GitHub", "Hangfire", "Job Scheduling", "Open Source", "Quartz", "Scheduling Library", "TickerQ", "Videos"]
-tags_normalized: ["net", "c", "c sharp development", "coding", "github", "hangfire", "job scheduling", "open source", "quartz", "scheduling library", "tickerq", "videos"]
+tags_normalized: ["dotnet", "csharp", "csharp development", "coding", "github", "hangfire", "job scheduling", "open source", "quartz", "scheduling library", "tickerq", "videos"]
 ---
 
 Nick Chapsas introduces TickerQ, a new and improved scheduling library tailored for .NET and C# developers, highlighting its advantages over Quartz and Hangfire.<!--excerpt_end-->

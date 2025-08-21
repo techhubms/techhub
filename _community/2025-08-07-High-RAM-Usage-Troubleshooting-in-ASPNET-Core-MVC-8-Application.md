@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-07 16:19:11 +00:00
 permalink: "/2025-08-07-High-RAM-Usage-Troubleshooting-in-ASPNET-Core-MVC-8-Application.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 8", "ASP.NET Core", "Caching", "Coding", "Community", "Entity Framework Core", "IIS", "Memory Leaks", "Memory Usage", "MVC", "Performance Profiling", "Production Diagnostics", "Thumbnails", "Visual Studio", "WinDbg", "Windows Server"]
-tags_normalized: ["net", "net 8", "asp dot net core", "caching", "coding", "community", "entity framework core", "iis", "memory leaks", "memory usage", "mvc", "performance profiling", "production diagnostics", "thumbnails", "visual studio", "windbg", "windows server"]
+tags: [".NET", ".NET 8", "ASP.NET Core", "Caching", "Coding", "Community", "EF Core", "IIS", "Memory Leaks", "Memory Usage", "MVC", "Performance Profiling", "Production Diagnostics", "Thumbnails", "VS", "WinDbg", "Windows Server"]
+tags_normalized: ["dotnet", "dotnet 8", "aspdotnet core", "caching", "coding", "community", "ef core", "iis", "memory leaks", "memory usage", "mvc", "performance profiling", "production diagnostics", "thumbnails", "vs", "windbg", "windows server"]
 ---
 
 scartus initiates a discussion about high memory usage in an ASP.NET Core MVC 8 application, seeking recommendations and insights from the developer community.<!--excerpt_end-->

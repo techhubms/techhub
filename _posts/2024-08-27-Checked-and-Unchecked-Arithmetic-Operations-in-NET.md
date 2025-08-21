@@ -12,7 +12,7 @@ date: 2024-08-27 00:00:00 +00:00
 permalink: "/2024-08-27-Checked-and-Unchecked-Arithmetic-Operations-in-NET.html"
 categories: ["Coding"]
 tags: [".NET", "Arithmetic Overflow", "Best Practices", "C#", "Checked Keyword", "Coding", "Fibonacci", "Integer Types", "INumber", "OverflowException", "Posts", "Project Settings", "Spectre.Console", "System.Numerics", "Unchecked Keyword"]
-tags_normalized: ["net", "arithmetic overflow", "best practices", "c", "checked keyword", "coding", "fibonacci", "integer types", "inumber", "overflowexception", "posts", "project settings", "spectre dot console", "system dot numerics", "unchecked keyword"]
+tags_normalized: ["dotnet", "arithmetic overflow", "best practices", "csharp", "checked keyword", "coding", "fibonacci", "integer types", "inumber", "overflowexception", "posts", "project settings", "spectredotconsole", "systemdotnumerics", "unchecked keyword"]
 ---
 
 In this post, Khalid Abuhakmeh demonstrates how easily integer overflow can occur in .NET when generating the Fibonacci sequence, and provides practical strategies to avoid overflow errors in critical .NET applications.<!--excerpt_end-->

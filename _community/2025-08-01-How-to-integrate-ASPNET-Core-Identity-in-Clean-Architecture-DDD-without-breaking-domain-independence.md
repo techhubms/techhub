@@ -12,7 +12,7 @@ date: 2025-08-01 12:05:09 +00:00
 permalink: "/2025-08-01-How-to-integrate-ASPNET-Core-Identity-in-Clean-Architecture-DDD-without-breaking-domain-independence.html"
 categories: ["Coding", "Security"]
 tags: [".NET", "ASP.NET Core", "Authentication", "Best Practices", "Clean Architecture", "Coding", "Community", "Domain Driven Design", "Entity Separation", "Identity", "Infrastructure", "Roles", "Security", "User Management"]
-tags_normalized: ["net", "asp dot net core", "authentication", "best practices", "clean architecture", "coding", "community", "domain driven design", "entity separation", "identity", "infrastructure", "roles", "security", "user management"]
+tags_normalized: ["dotnet", "aspdotnet core", "authentication", "best practices", "clean architecture", "coding", "community", "domain driven design", "entity separation", "identity", "infrastructure", "roles", "security", "user management"]
 ---
 
 Successful_Cycle_465 asks about integrating ASP.NET Core Identity into a Clean Architecture (DDD) app while keeping the domain layer independent, and requests best practices and examples.<!--excerpt_end-->

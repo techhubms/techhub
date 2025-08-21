@@ -12,7 +12,7 @@ date: 2025-08-01 08:13:28 +00:00
 permalink: "/2025-08-01-C-15-Wishlist-What-Features-Do-Developers-Hope-For.html"
 categories: ["Coding"]
 tags: ["C#", "C# 15", "Coding", "Community", "Community Discussion", "Developer Feedback", "Extension Properties", "Future Development", "Language Evolution", "Language Features", "Programming", "Wishlist"]
-tags_normalized: ["c", "c sharp 15", "coding", "community", "community discussion", "developer feedback", "extension properties", "future development", "language evolution", "language features", "programming", "wishlist"]
+tags_normalized: ["csharp", "csharp 15", "coding", "community", "community discussion", "developer feedback", "extension properties", "future development", "language evolution", "language features", "programming", "wishlist"]
 ---
 
 OnionDeluxe encourages C# enthusiasts to share their most-wanted features for C# 15, following the recent arrival of extension properties.<!--excerpt_end-->

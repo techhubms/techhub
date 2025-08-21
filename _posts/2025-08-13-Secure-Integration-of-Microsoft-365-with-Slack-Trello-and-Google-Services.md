@@ -12,7 +12,7 @@ date: 2025-08-13 08:24:46 +00:00
 permalink: "/2025-08-13-Secure-Integration-of-Microsoft-365-with-Slack-Trello-and-Google-Services.html"
 categories: ["Security"]
 tags: ["API Permissions", "Audit Logging", "Azure Active Directory", "Compliance", "Conditional Access", "Data Loss Prevention", "DLP Policies", "Enterprise Apps", "Google Services", "Least Privilege", "Microsoft 365", "Microsoft Graph API", "Multi Factor Authentication", "OAuth 2.0", "Posts", "Power Automate", "SaaS Security", "Security", "Single Sign On", "Slack Integration", "SSO", "Trello Integration"]
-tags_normalized: ["api permissions", "audit logging", "azure active directory", "compliance", "conditional access", "data loss prevention", "dlp policies", "enterprise apps", "google services", "least privilege", "microsoft 365", "microsoft graph api", "multi factor authentication", "oauth 2 dot 0", "posts", "power automate", "saas security", "security", "single sign on", "slack integration", "sso", "trello integration"]
+tags_normalized: ["api permissions", "audit logging", "azure active directory", "compliance", "conditional access", "data loss prevention", "dlp policies", "enterprise apps", "google services", "least privilege", "microsoft 365", "microsoft graph api", "multi factor authentication", "oauth 2dot0", "posts", "power automate", "saas security", "security", "single sign on", "slack integration", "sso", "trello integration"]
 ---
 
 Dellenny explains how technical teams can securely integrate Microsoft 365 with SaaS tools like Slack, Trello, and Google Services, offering actionable advice to maintain security while enabling collaboration.<!--excerpt_end-->

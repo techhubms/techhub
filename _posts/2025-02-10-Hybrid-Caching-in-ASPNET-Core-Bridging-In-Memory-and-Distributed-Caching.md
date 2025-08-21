@@ -12,7 +12,7 @@ date: 2025-02-10 07:02:05 +00:00
 permalink: "/2025-02-10-Hybrid-Caching-in-ASPNET-Core-Bridging-In-Memory-and-Distributed-Caching.html"
 categories: ["Coding"]
 tags: [".NET", "ASP.NET Core", "Cache Invalidation", "Caching", "Caching Patterns", "Coding", "Distributed Cache", "Distributed Caching", "Hybrid Caching", "in Memory Cache", "InMemory Caching", "Microsoft.Extensions.Caching.Hybrid", "Posts", "Service Configuration", "Web Application Performance"]
-tags_normalized: ["net", "asp dot net core", "cache invalidation", "caching", "caching patterns", "coding", "distributed cache", "distributed caching", "hybrid caching", "in memory cache", "inmemory caching", "microsoft dot extensions dot caching dot hybrid", "posts", "service configuration", "web application performance"]
+tags_normalized: ["dotnet", "aspdotnet core", "cache invalidation", "caching", "caching patterns", "coding", "distributed cache", "distributed caching", "hybrid caching", "in memory cache", "inmemory caching", "microsoftdotextensionsdotcachingdothybrid", "posts", "service configuration", "web application performance"]
 ---
 
 Bozo Spoljaric explains hybrid caching in ASP.NET Core, presenting its implementation, configuration, and practical examples. The article targets developers optimizing data access and scalability in .NET applications by combining local and distributed cache strategies.<!--excerpt_end-->

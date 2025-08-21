@@ -12,7 +12,7 @@ date: 2025-07-29 14:09:36 +00:00
 permalink: "/2025-07-29-Important-Changes-to-App-Service-Managed-Certificates-Is-Your-Certificate-Affected.html"
 categories: ["Azure"]
 tags: ["App Service", "Azure", "Certificate Management", "Certificate Update", "Cloud Services", "Community", "Managed Certificates", "Microsoft", "Service Changes", "TLS/SSL"]
-tags_normalized: ["app service", "azure", "certificate management", "certificate update", "cloud services", "community", "managed certificates", "microsoft", "service changes", "tls slash ssl"]
+tags_normalized: ["app service", "azure", "certificate management", "certificate update", "cloud services", "community", "managed certificates", "microsoft", "service changes", "tlsslashssl"]
 ---
 
 azredditj discusses important upcoming changes to Azure App Service Managed Certificates, urging users to review and verify their certificate status.<!--excerpt_end-->

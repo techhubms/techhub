@@ -12,7 +12,7 @@ date: 2025-08-08 09:05:50 +00:00
 permalink: "/2025-08-08-ZaString-A-Zero-Allocation-Span-Based-String-Builder-for-NET.html"
 categories: ["Coding"]
 tags: [".NET", "API Design", "ArrayPool", "Benchmarks", "Buffer Management", "C#", "Coding", "Community", "Garbage Collection", "ISpanFormattable", "Logging", "NuGet", "Performance", "ReadOnlySpan", "Serialization", "Span", "Stackalloc", "StringBuilder", "ZaString", "Zero Allocation", "ZString"]
-tags_normalized: ["net", "api design", "arraypool", "benchmarks", "buffer management", "c", "coding", "community", "garbage collection", "ispanformattable", "logging", "nuget", "performance", "readonlyspan", "serialization", "span", "stackalloc", "stringbuilder", "zastring", "zero allocation", "zstring"]
+tags_normalized: ["dotnet", "api design", "arraypool", "benchmarks", "buffer management", "csharp", "coding", "community", "garbage collection", "ispanformattable", "logging", "nuget", "performance", "readonlyspan", "serialization", "span", "stackalloc", "stringbuilder", "zastring", "zero allocation", "zstring"]
 ---
 
 typicalyume presents ZaString, a Span-powered zero-allocation string helper for .NET, and invites detailed feedback from the developer community on its API, safety, and performance.<!--excerpt_end-->

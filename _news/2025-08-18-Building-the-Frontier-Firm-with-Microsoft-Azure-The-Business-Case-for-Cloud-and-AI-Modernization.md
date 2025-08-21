@@ -12,7 +12,7 @@ date: 2025-08-18 21:00:00 +00:00
 permalink: "/2025-08-18-Building-the-Frontier-Firm-with-Microsoft-Azure-The-Business-Case-for-Cloud-and-AI-Modernization.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI + Machine Learning", "AI At Scale", "AI Transformation", "App Modernization Guidance", "Azure", "Azure Migration", "Business Agility", "Cloud Modernization", "Cloud Native Services", "Digital Transformation", "Enterprise AI", "Frontier Firms", "IDC Research", "Innovation", "IT Modernization", "Microsoft Azure", "News", "ROI", "Technical Debt"]
-tags_normalized: ["ai", "ai machine learning", "ai at scale", "ai transformation", "app modernization guidance", "azure", "azure migration", "business agility", "cloud modernization", "cloud native services", "digital transformation", "enterprise ai", "frontier firms", "idc research", "innovation", "it modernization", "microsoft azure", "news", "roi", "technical debt"]
+tags_normalized: ["ai", "ai plus machine learning", "ai at scale", "ai transformation", "app modernization guidance", "azure", "azure migration", "business agility", "cloud modernization", "cloud native services", "digital transformation", "enterprise ai", "frontier firms", "idc research", "innovation", "it modernization", "microsoft azure", "news", "roi", "technical debt"]
 ---
 
 Mike Hulme discusses how Frontier Firms are driving large-scale AI transformation using Microsoft Azure. He highlights leadership strategies, actionable modernization steps, and the quantifiable benefits of cloud and AI adoption.<!--excerpt_end-->

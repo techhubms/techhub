@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-05 16:00:00 +00:00
 permalink: "/2025-08-05-NET-Conf-2025-Call-for-Content-Share-Your-NET-10-Expertise.html"
 categories: ["AI", "Coding", "DevOps"]
-tags: [".NET", ".NET 10", ".NET Conf", ".NET MAUI", "AI", "Blazor", "Cloud", "Coding", "Conference", "Developers", "DevOps", "IoT", "Machine Learning", "Mobile Apps", "News", "Open Source", "Productivity", "Session Proposal", "Speakers", "Virtual Event", "Web"]
-tags_normalized: ["net", "net 10", "net conf", "net maui", "ai", "blazor", "cloud", "coding", "conference", "developers", "devops", "iot", "machine learning", "mobile apps", "news", "open source", "productivity", "session proposal", "speakers", "virtual event", "web"]
+tags: [".NET", ".NET 10", ".NET Conf", "AI", "Blazor", "Cloud", "Coding", "Conference", "Developers", "DevOps", "IoT", "Machine Learning", "MAUI", "Mobile Apps", "News", "Open Source", "Productivity", "Session Proposal", "Speakers", "Virtual Event", "Web"]
+tags_normalized: ["dotnet", "dotnet 10", "dotnet conf", "ai", "blazor", "cloud", "coding", "conference", "developers", "devops", "iot", "machine learning", "maui", "mobile apps", "news", "open source", "productivity", "session proposal", "speakers", "virtual event", "web"]
 ---
 
 Jeffrey T. Fritz invites the global .NET developer community to propose sessions for .NET Conf 2025, a premier virtual event launching .NET 10. Share your insights and projects, whether in web, mobile, AI, DevOps or open source, and be part of this worldwide celebration.<!--excerpt_end-->

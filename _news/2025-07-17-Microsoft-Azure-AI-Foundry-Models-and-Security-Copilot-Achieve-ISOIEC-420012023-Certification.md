@@ -12,7 +12,7 @@ date: 2025-07-17 15:00:00 +00:00
 permalink: "/2025-07-17-Microsoft-Azure-AI-Foundry-Models-and-Security-Copilot-Achieve-ISOIEC-420012023-Certification.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI + Machine Learning", "AI Compliance", "AI Foundry Models", "AI Governance", "AI Lifecycle", "AI Risk Management", "Azure", "Cloud Platform", "Copilot", "ISO/IEC 42001:2023", "Microsoft Azure", "Microsoft Security Copilot", "News", "Operational Resilience", "Regulatory Standards", "Responsible AI", "Security", "Security Certification", "Trust And Transparency"]
-tags_normalized: ["ai", "ai machine learning", "ai compliance", "ai foundry models", "ai governance", "ai lifecycle", "ai risk management", "azure", "cloud platform", "copilot", "iso slash iec 420012023", "microsoft azure", "microsoft security copilot", "news", "operational resilience", "regulatory standards", "responsible ai", "security", "security certification", "trust and transparency"]
+tags_normalized: ["ai", "ai plus machine learning", "ai compliance", "ai foundry models", "ai governance", "ai lifecycle", "ai risk management", "azure", "cloud platform", "copilot", "isoslashiec 420012023", "microsoft azure", "microsoft security copilot", "news", "operational resilience", "regulatory standards", "responsible ai", "security", "security certification", "trust and transparency"]
 ---
 
 In this post, Molly Bostic announces Microsoft's ISO/IEC 42001:2023 certification for Azure AI Foundry Models and Microsoft Security Copilot, detailing the implications for responsible AI, security, and compliance efforts.<!--excerpt_end-->

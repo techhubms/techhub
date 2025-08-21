@@ -12,7 +12,7 @@ date: 2025-08-07 23:40:52 +00:00
 permalink: "/2025-08-07-What-Senior-Engineers-Earning-150k-Work-On-Tech-and-Business-Realities.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: [".NET", ".NET 9", "Architecture", "Azure", "Azure Functions", "Azure Virtual Network", "Backend Development", "C#", "CI/CD", "Coding", "Community", "Data Factory", "Database", "DevOps", "Enterprise Software", "ETL", "Logic Apps", "Migration", "Monorepo", "NuGet", "Pull Request", "React", "Security", "Snowflake", "SSIS", "Version Control"]
-tags_normalized: ["net", "net 9", "architecture", "azure", "azure functions", "azure virtual network", "backend development", "c", "ci slash cd", "coding", "community", "data factory", "database", "devops", "enterprise software", "etl", "logic apps", "migration", "monorepo", "nuget", "pull request", "react", "security", "snowflake", "ssis", "version control"]
+tags_normalized: ["dotnet", "dotnet 9", "architecture", "azure", "azure functions", "azure virtual network", "backend development", "csharp", "cislashcd", "coding", "community", "data factory", "database", "devops", "enterprise software", "etl", "logic apps", "migration", "monorepo", "nuget", "pull request", "react", "security", "snowflake", "ssis", "version control"]
 ---
 
 Legitimate-School-59 shares a behind-the-scenes look at the technical and business realities for senior engineers earning over 150k, focusing on Azure migrations, large-scale codebase management, security enhancements, and more.<!--excerpt_end-->

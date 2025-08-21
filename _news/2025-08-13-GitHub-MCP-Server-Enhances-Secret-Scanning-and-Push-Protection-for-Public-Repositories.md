@@ -12,7 +12,7 @@ date: 2025-08-13 17:31:10 +00:00
 permalink: "/2025-08-13-GitHub-MCP-Server-Enhances-Secret-Scanning-and-Push-Protection-for-Public-Repositories.html"
 categories: ["DevOps", "Security"]
 tags: ["Agentic Workflows", "CI/CD", "Credential Protection", "DevOps", "Gist Toolset", "GitHub Actions", "GitHub MCP Server", "GraphQL", "News", "Prompt Injection", "Public Repositories", "Push Protection", "Repository Security", "Secret Scanning", "Security", "Tool Call Security", "Workflow Automation"]
-tags_normalized: ["agentic workflows", "ci slash cd", "credential protection", "devops", "gist toolset", "github actions", "github mcp server", "graphql", "news", "prompt injection", "public repositories", "push protection", "repository security", "secret scanning", "security", "tool call security", "workflow automation"]
+tags_normalized: ["agentic workflows", "cislashcd", "credential protection", "devops", "gist toolset", "github actions", "github mcp server", "graphql", "news", "prompt injection", "public repositories", "push protection", "repository security", "secret scanning", "security", "tool call security", "workflow automation"]
 ---
 
 Allison introduces major enhancements in secret scanning and push protection for the GitHub MCP server, explaining how these features help secure public repository workflows against credential leaks and prompt injection risks.<!--excerpt_end-->

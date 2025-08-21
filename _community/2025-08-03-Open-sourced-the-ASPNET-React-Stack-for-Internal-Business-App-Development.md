@@ -12,7 +12,7 @@ date: 2025-08-03 14:10:53 +00:00
 permalink: "/2025-08-03-Open-sourced-the-ASPNET-React-Stack-for-Internal-Business-App-Development.html"
 categories: ["Coding"]
 tags: [".NET", "ASP.NET Core", "Business Apps", "Coding", "Community", "CRUD Automation", "Framework", "Full Stack", "Open Source", "React", "Software Development", "User Management", "Xams"]
-tags_normalized: ["net", "asp dot net core", "business apps", "coding", "community", "crud automation", "framework", "full stack", "open source", "react", "software development", "user management", "xams"]
+tags_normalized: ["dotnet", "aspdotnet core", "business apps", "coding", "community", "crud automation", "framework", "full stack", "open source", "react", "software development", "user management", "xams"]
 ---
 
 blabmight shares the release of Xams, an open-source ASP.NET Core and React framework designed for streamlined business app development.<!--excerpt_end-->

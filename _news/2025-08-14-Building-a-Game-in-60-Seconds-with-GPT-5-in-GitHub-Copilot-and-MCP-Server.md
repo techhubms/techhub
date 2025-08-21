@@ -11,8 +11,8 @@ feed_url: "https://github.blog/feed/"
 date: 2025-08-14 16:30:00 +00:00
 permalink: "/2025-08-14-Building-a-Game-in-60-Seconds-with-GPT-5-in-GitHub-Copilot-and-MCP-Server.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Development", "Automation", "Coding", "Copilot Integration", "Developer Workflow", "DevOps", "Game Development", "Generative AI", "GitHub Actions", "GitHub Copilot", "GPT 5", "HTML5", "Issue Automation", "JavaScript", "MCP Server", "Model Context Protocol", "Natural Language Automation", "News", "OpenAI", "Programming Productivity", "Repository Management", "Spec Driven Development", "Visual Studio Code"]
-tags_normalized: ["ai", "ai ml", "ai development", "automation", "coding", "copilot integration", "developer workflow", "devops", "game development", "generative ai", "github actions", "github copilot", "gpt 5", "html5", "issue automation", "javascript", "mcp server", "model context protocol", "natural language automation", "news", "openai", "programming productivity", "repository management", "spec driven development", "visual studio code"]
+tags: ["AI", "AI & ML", "AI Development", "Automation", "Coding", "Copilot Integration", "Developer Workflow", "DevOps", "Game Development", "Generative AI", "GitHub Actions", "GitHub Copilot", "GPT 5", "HTML5", "Issue Automation", "JavaScript", "MCP", "MCP Server", "Natural Language Automation", "News", "OpenAI", "Programming Productivity", "Repository Management", "Spec Driven Development", "VS Code"]
+tags_normalized: ["ai", "ai and ml", "ai development", "automation", "coding", "copilot integration", "developer workflow", "devops", "game development", "generative ai", "github actions", "github copilot", "gpt 5", "html5", "issue automation", "javascript", "mcp", "mcp server", "natural language automation", "news", "openai", "programming productivity", "repository management", "spec driven development", "vs code"]
 ---
 
 Kedasha Kerr demonstrates how developers can rapidly build applications using GPT-5 in GitHub Copilot and automate GitHub workflows via the new MCP server, revolutionizing AI-powered coding and DevOps.<!--excerpt_end-->

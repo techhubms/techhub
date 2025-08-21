@@ -12,7 +12,7 @@ date: 2025-08-04 10:26:03 +00:00
 permalink: "/2025-08-04-The-Evolution-of-DevOps-Impact-of-2000-Token-Per-Second-AI-Code-Generation.html"
 categories: ["AI", "DevOps"]
 tags: ["AI", "Automation", "Business Of DevOps", "Cerebras", "CI/CD", "Code Generation", "Development Workflows", "DevOps", "Engineering", "IaC", "Machine Learning", "Open Source AI", "Posts", "Productivity", "Qwen3 Coder", "Scale", "Social Facebook", "Social LinkedIn", "Social X", "Speed", "Tokens", "Workflows", "WSE 3"]
-tags_normalized: ["ai", "automation", "business of devops", "cerebras", "ci slash cd", "code generation", "development workflows", "devops", "engineering", "iac", "machine learning", "open source ai", "posts", "productivity", "qwen3 coder", "scale", "social facebook", "social linkedin", "social x", "speed", "tokens", "workflows", "wse 3"]
+tags_normalized: ["ai", "automation", "business of devops", "cerebras", "cislashcd", "code generation", "development workflows", "devops", "engineering", "iac", "machine learning", "open source ai", "posts", "productivity", "qwen3 coder", "scale", "social facebook", "social linkedin", "social x", "speed", "tokens", "workflows", "wse 3"]
 ---
 
 In this article, Tom Smith analyzes the transformational impact of rapid AI code generation in the DevOps domain, highlighting new hardware, open-source model advancements, and the resulting effects on workflow efficiency.<!--excerpt_end-->

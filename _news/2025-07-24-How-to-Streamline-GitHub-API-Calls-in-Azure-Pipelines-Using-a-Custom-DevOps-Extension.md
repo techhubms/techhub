@@ -12,7 +12,7 @@ date: 2025-07-24 16:00:00 +00:00
 permalink: "/2025-07-24-How-to-Streamline-GitHub-API-Calls-in-Azure-Pipelines-Using-a-Custom-DevOps-Extension.html"
 categories: ["DevOps", "Azure", "Security"]
 tags: ["Automation", "Azure", "Azure DevOps", "Azure DevOps Extension", "Azure Pipelines", "CI/CD", "Company", "Custom Task", "DevOps", "Enterprise Software", "GitHub API", "GitHub Apps", "Integrations", "JWT Authentication", "News", "Security", "Service Connection", "Token Management", "YAML Pipeline"]
-tags_normalized: ["automation", "azure", "azure devops", "azure devops extension", "azure pipelines", "ci slash cd", "company", "custom task", "devops", "enterprise software", "github api", "github apps", "integrations", "jwt authentication", "news", "security", "service connection", "token management", "yaml pipeline"]
+tags_normalized: ["automation", "azure", "azure devops", "azure devops extension", "azure pipelines", "cislashcd", "company", "custom task", "devops", "enterprise software", "github api", "github apps", "integrations", "jwt authentication", "news", "security", "service connection", "token management", "yaml pipeline"]
 ---
 
 Written by Tiago Pascoal, this post details how to build a custom Azure DevOps extension for secure, efficient, and centralized authentication with GitHub APIs from Azure Pipelines, streamlining automation and improving security controls.<!--excerpt_end-->

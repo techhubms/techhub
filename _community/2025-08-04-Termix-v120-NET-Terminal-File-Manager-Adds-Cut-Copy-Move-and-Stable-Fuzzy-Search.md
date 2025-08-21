@@ -12,7 +12,7 @@ date: 2025-08-04 15:20:46 +00:00
 permalink: "/2025-08-04-Termix-v120-NET-Terminal-File-Manager-Adds-Cut-Copy-Move-and-Stable-Fuzzy-Search.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Tool", "Coding", "Community", "Copy", "File Manager", "Fuzzy Search", "Keyboard Shortcuts", "Move", "Open Source", "Paste", "Progress Bar", "Terminal", "Termix"]
-tags_normalized: ["net", "net tool", "coding", "community", "copy", "file manager", "fuzzy search", "keyboard shortcuts", "move", "open source", "paste", "progress bar", "terminal", "termix"]
+tags_normalized: ["dotnet", "dotnet tool", "coding", "community", "copy", "file manager", "fuzzy search", "keyboard shortcuts", "move", "open source", "paste", "progress bar", "terminal", "termix"]
 ---
 
 In this post, amrohann presents Termix v1.2.0, a .NET-powered terminal file manager, highlighting major new features and installation tips.<!--excerpt_end-->

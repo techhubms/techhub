@@ -12,7 +12,7 @@ date: 2025-07-16 11:00:23 +00:00
 permalink: "/2025-07-16-Writing-and-Running-Python-in-NET.html"
 categories: ["Coding", "ML"]
 tags: [".NET", "AI", "AI Workflows", "C#", "Coding", "Cross Language", "Interoperability", "ML", "Nick Chapsas", "Python Integration", "Python Libraries", "Python.NET", "Video Tutorial", "Videos"]
-tags_normalized: ["net", "ai", "ai workflows", "c", "coding", "cross language", "interoperability", "ml", "nick chapsas", "python integration", "python libraries", "python dot net", "video tutorial", "videos"]
+tags_normalized: ["dotnet", "ai", "ai workflows", "csharp", "coding", "cross language", "interoperability", "ml", "nick chapsas", "python integration", "python libraries", "pythondotnet", "video tutorial", "videos"]
 ---
 
 Nick Chapsas guides viewers through integrating Python with .NET using Python.NET, providing practical steps for C# developers to leverage Python code.<!--excerpt_end-->

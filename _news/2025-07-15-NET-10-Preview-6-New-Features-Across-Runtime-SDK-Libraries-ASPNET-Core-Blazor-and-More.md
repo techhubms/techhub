@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-07-15 17:22:00 +00:00
 permalink: "/2025-07-15-NET-10-Preview-6-New-Features-Across-Runtime-SDK-Libraries-ASPNET-Core-Blazor-and-More.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET MAUI", "Android", "ASP.NET Core", "Blazor", "C#", "Coding", "Containers", "Entity Framework Core", "Featured", "Ios", "JSON Serialization", "Mac Catalyst", "News", "Post Quantum Cryptography", "Visual Studio", "WinForms", "WPF"]
-tags_normalized: ["net", "net 10", "net maui", "android", "asp dot net core", "blazor", "c", "coding", "containers", "entity framework core", "featured", "ios", "json serialization", "mac catalyst", "news", "post quantum cryptography", "visual studio", "winforms", "wpf"]
+tags: [".NET", ".NET 10", "Android", "ASP.NET Core", "Blazor", "C#", "Coding", "Containers", "EF Core", "Featured", "Ios", "JSON Serialization", "Mac Catalyst", "MAUI", "News", "Post Quantum Cryptography", "VS", "WinForms", "WPF"]
+tags_normalized: ["dotnet", "dotnet 10", "android", "aspdotnet core", "blazor", "csharp", "coding", "containers", "ef core", "featured", "ios", "json serialization", "mac catalyst", "maui", "news", "post quantum cryptography", "vs", "winforms", "wpf"]
 ---
 
 In this announcement, the .NET Team details the latest features and improvements in .NET 10 Preview 6, covering updates to the core runtime, SDK, ASP.NET Core, Blazor, .NET MAUI, and more.<!--excerpt_end-->

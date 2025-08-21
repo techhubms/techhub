@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 13:36:46 +00:00
 permalink: "/2025-08-12-Private-Pod-Subnets-in-AKS-Without-Overlay-Networking.html"
 categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Azure CNI", "Azure Firewall", "Azure Kubernetes Service", "Coding", "Community", "ConfigMap", "DaemonSet", "DevOps", "Egress Gateway", "ExpressRoute", "Ip Masq Agent V2", "IP Masquerading", "Kubernetes", "Kubernetes Networking", "Network Address Translation", "Network Routing", "Node Subnet", "Overlay Network", "Pod Subnet", "Virtual Network", "VNet Peering", "VNets"]
-tags_normalized: ["azure", "azure cni", "azure firewall", "azure kubernetes service", "coding", "community", "configmap", "daemonset", "devops", "egress gateway", "expressroute", "ip masq agent v2", "ip masquerading", "kubernetes", "kubernetes networking", "network address translation", "network routing", "node subnet", "overlay network", "pod subnet", "virtual network", "vnet peering", "vnets"]
+tags: ["AKS", "Azure", "Azure CNI", "Azure Firewall", "Coding", "Community", "ConfigMap", "DaemonSet", "DevOps", "Egress Gateway", "ExpressRoute", "Ip Masq Agent V2", "IP Masquerading", "Kubernetes", "Kubernetes Networking", "Network Address Translation", "Network Routing", "Node Subnet", "Overlay Network", "Pod Subnet", "Virtual Network", "VNet Peering", "VNets"]
+tags_normalized: ["aks", "azure", "azure cni", "azure firewall", "coding", "community", "configmap", "daemonset", "devops", "egress gateway", "expressroute", "ip masq agent v2", "ip masquerading", "kubernetes", "kubernetes networking", "network address translation", "network routing", "node subnet", "overlay network", "pod subnet", "virtual network", "vnet peering", "vnets"]
 ---
 
 In this community article, samcogan breaks down how to manage private pod subnets in Azure Kubernetes Service (AKS) without overlay networking, addressing NAT challenges and actionable deployment steps.<!--excerpt_end-->

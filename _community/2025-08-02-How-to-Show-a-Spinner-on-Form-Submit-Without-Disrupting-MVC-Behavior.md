@@ -12,7 +12,7 @@ date: 2025-08-02 12:47:54 +00:00
 permalink: "/2025-08-02-How-to-Show-a-Spinner-on-Form-Submit-Without-Disrupting-MVC-Behavior.html"
 categories: ["Coding"]
 tags: [".NET", "AJAX", "ASP.NET MVC", "Client Side Validation", "Coding", "Community", "Double Requests", "Form Submission", "JavaScript", "MVC Forms", "Spinner Button", "UI Feedback", "UX"]
-tags_normalized: ["net", "ajax", "asp dot net mvc", "client side validation", "coding", "community", "double requests", "form submission", "javascript", "mvc forms", "spinner button", "ui feedback", "ux"]
+tags_normalized: ["dotnet", "ajax", "aspdotnet mvc", "client side validation", "coding", "community", "double requests", "form submission", "javascript", "mvc forms", "spinner button", "ui feedback", "ux"]
 ---
 
 Fragrant_Ride_29 discusses the challenges of displaying a spinner inside a submit button in ASP.NET MVC forms without causing double server requests or breaking the framework's default submission behavior.<!--excerpt_end-->

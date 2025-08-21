@@ -12,7 +12,7 @@ date: 2025-04-01 00:00:00 +00:00
 permalink: "/2025-04-01-GitHub-Copilot-Changing-the-Narrative-from-Productivity-to-Strong-DevOps-Foundations.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Application Delivery", "Automation", "CI/CD", "DevOps", "Engineering Productivity", "Generative AI", "GitHub Copilot", "Pipelines", "Posts", "Project Padawan", "Software Quality", "Team Effectiveness", "Technical Debt", "Testing", "Workflows"]
-tags_normalized: ["ai", "application delivery", "automation", "ci slash cd", "devops", "engineering productivity", "generative ai", "github copilot", "pipelines", "posts", "project padawan", "software quality", "team effectiveness", "technical debt", "testing", "workflows"]
+tags_normalized: ["ai", "application delivery", "automation", "cislashcd", "devops", "engineering productivity", "generative ai", "github copilot", "pipelines", "posts", "project padawan", "software quality", "team effectiveness", "technical debt", "testing", "workflows"]
 ---
 
 In this post, Rob Bos challenges the current narrative around GitHub Copilot, advocating for a DevOps-focused approach rather than just productivity. He offers practical advice on integrating Copilot to strengthen engineering foundations and team processes.<!--excerpt_end-->

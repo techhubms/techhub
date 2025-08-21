@@ -12,7 +12,7 @@ date: 2025-08-03 15:28:59 +00:00
 permalink: "/2025-08-03-Introducing-NET-Aspire-Event-Hub-Live-Explorer.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", ".NET Aspire", "Azure", "Azure Event Hubs", "Blazor", "Coding", "Community", "Consumer Groups", "Dashboard Integration", "Developer Tooling", "DevOps", "Event Driven Workflows", "Local Development", "NuGet Package", "Open Source"]
-tags_normalized: ["net", "net aspire", "azure", "azure event hubs", "blazor", "coding", "community", "consumer groups", "dashboard integration", "developer tooling", "devops", "event driven workflows", "local development", "nuget package", "open source"]
+tags_normalized: ["dotnet", "dotnet aspire", "azure", "azure event hubs", "blazor", "coding", "community", "consumer groups", "dashboard integration", "developer tooling", "devops", "event driven workflows", "local development", "nuget package", "open source"]
 ---
 
 Authored by LupusOnFire, this article introduces the .NET Aspire Event Hub Live Explorer—an open-source Blazor tool for local development with Azure Event Hubs.<!--excerpt_end-->

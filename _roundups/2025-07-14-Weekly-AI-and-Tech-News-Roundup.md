@@ -9,7 +9,7 @@ date: 2025-07-14 09:00:00 +00:00
 permalink: "/2025-07-14-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET", "AI", "AI Agents", "AI Ethics", "Automation", "Azure", "CI/CD", "Cloud Migration", "Coding", "DevOps", "GitHub Copilot", "Machine Learning", "Microsoft", "ML", "Model Context Protocol (mcp)", "Prompt Engineering", "Roundups", "Security", "Semantic Kernel", "TypeScript", "Zero Trust"]
-tags_normalized: ["net", "ai", "ai agents", "ai ethics", "automation", "azure", "ci slash cd", "cloud migration", "coding", "devops", "github copilot", "machine learning", "microsoft", "ml", "model context protocol mcp", "prompt engineering", "roundups", "security", "semantic kernel", "typescript", "zero trust"]
+tags_normalized: ["dotnet", "ai", "ai agents", "ai ethics", "automation", "azure", "cislashcd", "cloud migration", "coding", "devops", "github copilot", "machine learning", "microsoft", "ml", "model context protocol mcp", "prompt engineering", "roundups", "security", "semantic kernel", "typescript", "zero trust"]
 ---
 
 Welcome to this week's technology roundup, where we explore the dynamic intersection of automation, AI-powered platforms, and developer productivity. As GitHub Copilot cements its status as an agent-based platform, organizations are embracing new workflow patterns—embedding Copilot into CI/CD, leveraging prompts for secure automation, and experimenting with mobile, multi-agent, and background task features. These upgrades not only accelerate everyday coding but also spark fresh debates about the practical limits and best practices for AI in software development.

@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-07-30 22:24:59 +00:00
 permalink: "/2025-07-30-MCP-C-SDK-Deep-Dive.html"
 categories: ["AI", "Coding", "Azure"]
-tags: ["06 18 Spec", "Agent Integration", "AI", "AI Development", "Azure", "Azure AI Foundry", "C#", "Cloud Computing", "Coding", "Custom Agents", "Demo", "Dev", "Dev Tools", "Development", "Foundry Agent Service", "MCP", "Microsoft", "Model Context Protocol", "Programming", "SDK", "Tech", "Technology", "Videos", "Visual Studio Code"]
-tags_normalized: ["06 18 spec", "agent integration", "ai", "ai development", "azure", "azure ai foundry", "c", "cloud computing", "coding", "custom agents", "demo", "dev", "dev tools", "development", "foundry agent service", "mcp", "microsoft", "model context protocol", "programming", "sdk", "tech", "technology", "videos", "visual studio code"]
+tags: ["06 18 Spec", "Agent Integration", "AI", "AI Development", "Azure", "Azure AI Foundry", "C#", "Cloud Computing", "Coding", "Custom Agents", "Demo", "Dev", "Dev Tools", "Development", "Foundry Agent Service", "MCP", "Microsoft", "Programming", "SDK", "Tech", "Technology", "Videos", "VS Code"]
+tags_normalized: ["06 18 spec", "agent integration", "ai", "ai development", "azure", "azure ai foundry", "csharp", "cloud computing", "coding", "custom agents", "demo", "dev", "dev tools", "development", "foundry agent service", "mcp", "microsoft", "programming", "sdk", "tech", "technology", "videos", "vs code"]
 ---
 
 Microsoft Developer presents a deep dive into the MCP C# SDK, demonstrating new features from the 2025-06-18 spec and showing developers how to integrate MCP tools with custom agents and AI solutions.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2025-08-04 08:30:19 +00:00
 permalink: "/2025-08-04-Facet-v2-C-Source-Generator-for-Lightweight-Projections-and-Mappings.html"
 categories: ["Coding"]
 tags: [".NET", "API Models", "C#", "Coding", "Community", "Compile Time", "Custom Mappings", "DTOs", "Facet", "LINQ", "Partial Classes", "Projections", "Source Generator"]
-tags_normalized: ["net", "api models", "c", "coding", "community", "compile time", "custom mappings", "dtos", "facet", "linq", "partial classes", "projections", "source generator"]
+tags_normalized: ["dotnet", "api models", "csharp", "coding", "community", "compile time", "custom mappings", "dtos", "facet", "linq", "partial classes", "projections", "source generator"]
 ---
 
 Authored by Voiden0, this article introduces Facet v2, a C# source generator for creating projections and mappings efficiently, highlighting recent improvements driven by community feedback.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2025-08-03 19:16:38 +00:00
 permalink: "/2025-08-03-How-to-Keep-keyproperties-Private-in-a-Public-GitHub-Repository.html"
 categories: ["DevOps"]
 tags: [".gitignore", "Android Development", "Community", "DevOps", "GitHub", "Key.properties", "Private Files", "Public Repository", "Repository Privacy", "Secrets Management", "Sensitive Data", "Version Control"]
-tags_normalized: ["gitignore", "android development", "community", "devops", "github", "key dot properties", "private files", "public repository", "repository privacy", "secrets management", "sensitive data", "version control"]
+tags_normalized: ["dotgitignore", "android development", "community", "devops", "github", "keydotproperties", "private files", "public repository", "repository privacy", "secrets management", "sensitive data", "version control"]
 ---
 
 Author el_psy_kongree discusses strategies for keeping the key.properties file private in a public GitHub repo for Android app development.<!--excerpt_end-->

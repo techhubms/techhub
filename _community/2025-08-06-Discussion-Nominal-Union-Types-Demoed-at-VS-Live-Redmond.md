@@ -12,7 +12,7 @@ date: 2025-08-06 16:22:18 +00:00
 permalink: "/2025-08-06-Discussion-Nominal-Union-Types-Demoed-at-VS-Live-Redmond.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 11", "C#", "C# 15", "Coding", "Community", "Discriminated Unions", "Language Design", "Language Features", "Mads Torgerson", "Nominal Union Types", "TypeScript", "Union Types", "VS Live"]
-tags_normalized: ["net", "net 11", "c", "c sharp 15", "coding", "community", "discriminated unions", "language design", "language features", "mads torgerson", "nominal union types", "typescript", "union types", "vs live"]
+tags_normalized: ["dotnet", "dotnet 11", "csharp", "csharp 15", "coding", "community", "discriminated unions", "language design", "language features", "mads torgerson", "nominal union types", "typescript", "union types", "vs live"]
 ---
 
 ThinksAboutTooMuch shares insights from a VS Live Redmond session where Mads Torgerson demoed nominal union types for C#, exploring upcoming language features and community reactions.<!--excerpt_end-->

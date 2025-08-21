@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-03 11:37:06 +00:00
 permalink: "/2025-08-03-Being-rate-limited-on-VSCode-on-a-single-GitHub-Copilot-chat-thread.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "API Limits", "Chat Thread", "Community", "Copilot Pro+", "Developer Experience", "Extension Usage", "GitHub Copilot", "Rate Limiting", "Scaffolding", "Usage Limits", "Visual Studio Code"]
-tags_normalized: ["ai", "api limits", "chat thread", "community", "copilot pro", "developer experience", "extension usage", "github copilot", "rate limiting", "scaffolding", "usage limits", "visual studio code"]
+tags: ["AI", "API Limits", "Chat Thread", "Community", "Copilot Pro+", "Developer Experience", "Extension Usage", "GitHub Copilot", "Rate Limiting", "Scaffolding", "Usage Limits", "VS Code"]
+tags_normalized: ["ai", "api limits", "chat thread", "community", "copilot proplus", "developer experience", "extension usage", "github copilot", "rate limiting", "scaffolding", "usage limits", "vs code"]
 ---
 
 In this community post, matt_o_matic shares their experience of unexpectedly being rate limited by GitHub Copilot in VSCode while using a single chat thread for complex project scaffolding.<!--excerpt_end-->

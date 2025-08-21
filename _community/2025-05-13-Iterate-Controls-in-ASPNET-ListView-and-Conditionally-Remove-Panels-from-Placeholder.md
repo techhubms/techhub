@@ -12,7 +12,7 @@ date: 2025-05-13 03:59:20 +00:00
 permalink: "/2025-05-13-Iterate-Controls-in-ASPNET-ListView-and-Conditionally-Remove-Panels-from-Placeholder.html"
 categories: ["Coding"]
 tags: ["ASP.NET", "C#", "Coding", "Community", "Conditional Logic", "Control Iteration", "DataTable", "ItemDataBound", "ListView", "Panel", "Placeholder", "Webforms"]
-tags_normalized: ["asp dot net", "c", "coding", "community", "conditional logic", "control iteration", "datatable", "itemdatabound", "listview", "panel", "placeholder", "webforms"]
+tags_normalized: ["aspdotnet", "csharp", "coding", "community", "conditional logic", "control iteration", "datatable", "itemdatabound", "listview", "panel", "placeholder", "webforms"]
 ---
 
 In this community post, canalso describes an issue with removing a Panel from a Placeholder within an ASP.NET ListView using C#, seeking advice on how to perform this task based on a row condition.<!--excerpt_end-->

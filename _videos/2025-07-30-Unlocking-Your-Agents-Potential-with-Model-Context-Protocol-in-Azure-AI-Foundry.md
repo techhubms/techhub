@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-07-30 22:35:15 +00:00
 permalink: "/2025-07-30-Unlocking-Your-Agents-Potential-with-Model-Context-Protocol-in-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "AI Agent", "Azure", "Azure AI Foundry", "Cloud Computing", "Data Analytics", "Dev", "Development", "Foundry Agents Service", "MCP", "MCP Tools Integration", "Microsoft", "Model Context Protocol", "Tech", "Technology", "Videos", "Visual Studio Code"]
-tags_normalized: ["ai", "ai agent", "azure", "azure ai foundry", "cloud computing", "data analytics", "dev", "development", "foundry agents service", "mcp", "mcp tools integration", "microsoft", "model context protocol", "tech", "technology", "videos", "visual studio code"]
+tags: ["AI", "AI Agent", "Azure", "Azure AI Foundry", "Cloud Computing", "Data Analytics", "Dev", "Development", "Foundry Agents Service", "MCP", "MCP Tools Integration", "Microsoft", "Tech", "Technology", "Videos", "VS Code"]
+tags_normalized: ["ai", "ai agent", "azure", "azure ai foundry", "cloud computing", "data analytics", "dev", "development", "foundry agents service", "mcp", "mcp tools integration", "microsoft", "tech", "technology", "videos", "vs code"]
 ---
 
 Microsoft Developer walks through the process of creating an Azure AI Foundry Agent using the Model Context Protocol (MCP), highlighting practical integration tips and resources.<!--excerpt_end-->

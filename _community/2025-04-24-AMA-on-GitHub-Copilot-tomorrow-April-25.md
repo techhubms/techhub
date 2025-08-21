@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-04-24 19:04:44 +00:00
 permalink: "/2025-04-24-AMA-on-GitHub-Copilot-tomorrow-April-25.html"
 viewing_mode: "external"
-tags: ["Agent Mode", "AI", "AI Agents", "AI Models", "Community", "Community Engagement", "Company Vision", "GitHub", "GitHub Copilot", "Reddit AMA", "Software Development", "Visual Studio Code"]
-tags_normalized: ["agent mode", "ai", "ai agents", "ai models", "community", "community engagement", "company vision", "github", "github copilot", "reddit ama", "software development", "visual studio code"]
+tags: ["Agent Mode", "AI", "AI Agents", "AI Models", "Community", "Community Engagement", "Company Vision", "GitHub", "GitHub Copilot", "Reddit AMA", "Software Development", "VS Code"]
+tags_normalized: ["agent mode", "ai", "ai agents", "ai models", "community", "community engagement", "company vision", "github", "github copilot", "reddit ama", "software development", "vs code"]
 ---
 
 The GitHub team, including CPO Mario Rodriguez, VP of DevRel Martin Woodward, and Pierce Boggan from VS Code, hosted their first official Reddit AMA focused on GitHub Copilot. The session invited users to ask questions about Copilot’s AI agents, agent mode integration in VS Code, AI model developments, GitHub’s company vision, and future plans. This interactive event provided insights straight from the GitHub leaders to the developer community.<!--excerpt_end-->
