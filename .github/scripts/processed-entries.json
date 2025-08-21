@@ -7226,5 +7226,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=FseIFFXGbvw",
     "timestamp": "2025-08-21 20:14:11 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-08-21 20:46:57 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/the-future-of-ai-developing-lacuna-an-agent-for-revealing-quiet/ba-p/4434633",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'AI' category because the article focuses on developing and using a conversational agent with Microsoft AI technologies (AI inclusion rules 1, 3, and 4). Assigned 'Azure' category due to the prominent use and discussion of Azure AI Foundry as platform and SDK (Azure inclusion rules 1 and 4). Did not assign 'Coding,' 'ML,' or 'DevOps,' as the post centers on AI tool integration, not code or ML engineering. Did not assign 'GitHub Copilot,' as it is not discussed. The content is technical, substantial, and meets quality and length requirements for community posts. No generic exclusion rules apply."
+  },
+  {
+    "timestamp": "2025-08-21 20:47:18 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-azure-service-groups/ba-p/4446572",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the content is an announcement and overview of a new Azure-specific feature called Service Groups, which are used for resource management and monitoring within the Azure platform (Azure rule 1 and 4). There is no substantial technical coverage of AI, ML, DevOps, Coding, Security, or GitHub Copilot. Tags reflect product names, technical concepts (resource management, observability, RBAC), and related platform technologies. Content is technical, clearly aimed at practitioners, and focuses on Azure resource management, meeting the quality and inclusion requirements."
   }
 ]
