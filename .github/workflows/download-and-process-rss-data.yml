@@ -38,7 +38,7 @@ jobs:
       - name: Checkout RSS branch
         uses: actions/checkout@v4
         with:
-          ref: rss-updates
+          ref: ${{ env.RSS_BRANCH }}
           fetch-depth: 0
           token: ${{ steps.app-token.outputs.token }}
 
@@ -215,7 +215,8 @@ jobs:
             echo "Changes detected after RSS download, committing..."
             git add .
             git commit -m "Updated RSS data from feeds"
-            git push --force-with-lease https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git ${{ env.RSS_BRANCH }}
+            git fetch origin ${{ env.RSS_BRANCH }}
+            git push --force https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git ${{ env.RSS_BRANCH }}
             echo "RSS_DATA_CHANGED=true" >> $GITHUB_ENV
           else
             echo "No changes after RSS download"
@@ -253,7 +254,8 @@ jobs:
             echo "Changes detected after RSS processing, committing..."
             git add .
             git commit -m "Added new content from RSS processing"
-            git push --force-with-lease https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git ${{ env.RSS_BRANCH }}
+            git fetch origin ${{ env.RSS_BRANCH }}
+            git push --force https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git ${{ env.RSS_BRANCH }}
             echo "CONTENT_CHANGED=true" >> $GITHUB_ENV
           else
             echo "No new content after RSS processing"
@@ -283,7 +285,8 @@ jobs:
             echo "Changes detected after markdown fixes, committing..."
             git add .
             git commit -m "Fixed markdown file formatting and structure"
-            git push --force-with-lease https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git ${{ env.RSS_BRANCH }}
+            git fetch origin ${{ env.RSS_BRANCH }}
+            git push --force https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git ${{ env.RSS_BRANCH }}
             echo "FIXES_CHANGED=true" >> $GITHUB_ENV
           else
             echo "No changes after markdown fixes"
@@ -492,7 +495,8 @@ jobs:
           cd ..
           git fetch origin main
           git reset --hard origin/main
-          git push --force-with-lease https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git ${{ env.RSS_BRANCH }}
+          git fetch origin ${{ env.RSS_BRANCH }}
+          git push --force https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git ${{ env.RSS_BRANCH }}
 
           echo "✅ Successfully reset RSS branch"
 
