@@ -7244,5 +7244,23 @@
     "reason": "Succesfully added: Assigned the 'AI' category because the primary focus of the content is a Microsoft research paper on the occupational implications of generative AI chatbots like Bing Copilot (AI inclusion rule 1 and 5). There is no technical content about coding, DevOps, Azure-specific usage, ML engineering, or security, so those categories were not included. Although Bing Copilot is discussed, it is referenced in the context of end-user/knowledge work assistance (business productivity), not developer tooling or integration, thus GitHub Copilot and related categories do not apply. Generic exclusions such as career advice, job listings, or business-focused content do not apply because the piece is research-focused and technical in its analysis of AI applicability.",
     "canonical_url": "https://www.microsoft.com/en-us/research/blog/applicability-vs-job-displacement-further-notes-on-our-recent-research-on-ai-and-occupations/",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-21 23:12:18 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the announcement highlights Azure AI Foundry, model deployment, and AI agent development (AI inclusion rules 1, 4, 5). Assigned 'Azure' as the central focus is on Azure services (Azure rules 1, 4, 5). Assigned 'DevOps' due to detailed discussion of developer experience, GitHub Copilot integration, pipelines, and 'Agentic DevOps' (DevOps rules 2, 3, 5, 9). Assigned 'Coding' as the post covers application platform services, frameworks, language support, and developer tooling (Coding rules 1, 4, 5). Did not assign 'ML' since the article, while describing AI and agentic applications, does not delve into data science/analytics engineering or building custom ML models (ML rules). Did not assign 'Security' since the security focus is only on scalable, resilient operations rather than security implementation or architecture (Security rules). Generic exclusion rules do not apply.",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/microsoft-is-a-leader-in-the-2025-gartner-magic-quadrant-for-cloud-native-application-platforms/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-21 23:12:36 +00:00",
+    "reason": "Succesfully added: Assigned the DevOps category because the content deals with access control, permissions, and role management in GitHub Enterprise—core DevOps administrative concerns (DevOps rule 2 and 3). No other categories apply because there is no direct focus on Azure, AI, coding, ML, or security implementations, but the update impacts DevOps team workflows and organizational practices.",
+    "canonical_url": "https://github.blog/changelog/2025-08-21-enterprises-can-create-organization-roles-for-use-across-their-enterprise-and-custom-role-limits-have-been-increased",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-21 23:13:02 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' because Copilot is a central tool for scripting and code completion (GitHub Copilot inclusion rules 1, 2, and AI rules 2, 5). 'Coding' category is included because the content focuses on scripting and automation in VS Code, which involves code development (Coding rules 4, 5). Azure and DevOps are not assigned as there is no mention or demonstration of Azure services or DevOps-specific workflows. No generic exclusion rules trigger, as the content is technical, developer-centric, and in English.",
+    "canonical_url": "https://www.youtube.com/watch?v=Nt1p6yreAUU",
+    "collection": "videos"
   }
 ]
