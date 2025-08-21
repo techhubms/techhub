@@ -37,7 +37,11 @@ This guide is designed to be read sequentially, as each section builds on concep
   - [Tokens & Tokenization](#tokens--tokenization)
   - [Costs](#costs)
   - [Problems with models](#problems-with-models)
+  - [When not to use AI](#when-not-to-use-ai)
+  - [Societal impacts and risks](#societal-impacts-and-risks)
+  - [Model alignment (Constitutional AI)](#model-alignment-constitutional-ai)
   - [Fine-tuning a model](#fine-tuning-a-model)
+  - [How AI models actually work](#how-ai-models-actually-work)
   - [Advanced concepts](#advanced-concepts)
 - [GenAI part 2](#genai-part-2)
   - [Function calling](#function-calling)
@@ -45,11 +49,10 @@ This guide is designed to be read sequentially, as each section builds on concep
   - [Retrieval Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
   - [Agents & Agentic AI](#agents--agentic-ai)
 - [Inspiration](#inspiration)
-  - [Chat interfaces](#chat-interfaces)
-  - [Office 365](#office-365)
-  - [Windows](#windows)
-  - [GitHub](#github)
-  - [Other real-world examples](#other-real-world-examples)
+  - [Where You Find AI Today](#where-you-find-ai-today)
+  - [Real Projects You Can Build Today](#real-projects-you-can-build-today)
+  - [Beyond Chat: AI as Infrastructure](#beyond-chat-ai-as-infrastructure)
+  - [Where to Start Building](#where-to-start-building)
 - [Integrating AI into your applications](#integrating-ai-into-your-applications)
   - [Tools and IDEs](#tools-and-ides)
   - [Copilot](#copilot)
@@ -72,6 +75,9 @@ Some fun history facts about AI, showing how long AI has been around and how it 
 - 2018: OpenAI released the first version of GPT (Generative Pre-trained Transformer).
 - 2020: OpenAI released GPT-3, a significant advancement in natural language processing.
 - 2023: OpenAI released GPT-4, further enhancing capabilities in language understanding and generation.
+- 2023: Anthropic introduced the first Claude models, bringing Constitutional AI to mainstream use.
+- 2025: GPT-5 family models became broadly available across tooling and platforms.
+- 2025: Anthropic released the latest Claude generation (Claude 4.1 Opus) across APIs and products.
 
 ## ML vs AI vs GenAI
 
@@ -153,8 +159,8 @@ A **model** is the actual AI system that has been trained to perform specific ta
 
 **Large Language Models (LLMs):**
 
-- **GPT series** (3.5, 4, 4o): OpenAI's flagship models for text generation and reasoning
-- **Claude** (Sonnet, Opus): Anthropic's models focused on helpful, harmless, and honest interactions
+- **GPT series** (3.5, 4, 4o, 5): OpenAI's flagship models for text generation and reasoning
+- **Claude** (4.1 Opus, Sonnet, Haiku): Anthropic's models focused on helpful, harmless, and honest interactions
 - **Gemini** (Flash, Pro): Google's multimodal models that can process text, images, and other data
 - **Grok**: X (formerly Twitter)'s conversational AI model
 
@@ -326,6 +332,22 @@ Understanding AI costs helps you make informed decisions about which models and 
 - Consider using summarization to reduce context length in long conversations
 - Clear conversation history when starting new topics that don't require previous context
 
+**Token math and practical examples:**
+
+- Basic formula: total_cost ≈ (input_tokens × input_rate) + (output_tokens × output_rate). Rates differ per provider and model. Always check the provider’s pricing page.
+- Estimating tokens: a quick rule-of-thumb is 1 token ≈ 0.75 English words (see [Tokens & Tokenization](#tokens--tokenization)).
+- Examples (estimates for planning only):
+  - News article (800–1,200 words) → ~1,060–1,600 tokens. Summarizing such an article once costs 1–2k input tokens plus the summary output tokens.
+  - Email thread (10 messages, ~150 words each) → ~2,000 tokens of history before your next prompt. Each reply re-sends this context unless you trim/summarize.
+  - Image analysis: some multimodal models charge per “image token” in addition to text tokens. Budget for both when sending images plus captions.
+  - Long chats: token usage grows with history. Without trimming, costs can rise linearly per turn and you risk context-window truncation.
+
+**How token limits tie to failure modes:**
+
+- Truncation: when the context window is exceeded, earlier messages may be dropped. The model can “forget” critical instructions or facts.
+- Lost grounding: if retrieved citations or data are pushed out of context, the model may revert to guesses (hallucinations).
+- Incomplete tools loop: long tool results + long chat history can crowd out system prompts or tool specs, degrading tool-use accuracy. Prefer structured summaries between steps.
+
 ### Problems with models
 
 Understanding the limitations of AI models helps you use them more effectively and avoid common pitfalls.
@@ -351,6 +373,55 @@ When you need precise calculations or counting, consider using AI to generate co
 **Human-in-the-loop (HITL) approaches**
 Given these limitations, many organizations implement Human-in-the-loop (HITL) systems where humans remain involved in AI decision-making processes. Instead of fully automated AI systems, HITL approaches include human oversight, validation, or intervention at key points. For example, an AI might flag potentially problematic content, but a human reviews and makes the final decision about whether to remove it. This approach helps mitigate risks while still benefiting from AI's efficiency and capabilities.
 
+### When not to use AI
+
+Use the right tool for the job. Prefer non-AI or AI-assisted approaches for:
+
+- Exact arithmetic, counting, or unit conversions. Use a calculator, spreadsheet, or ask the model to generate code that computes the result and then run it.
+- Deterministic workflows with strict rules (compliance checks, tax calculations, safety-critical steps). Encode rules in code or rules engines and optionally add AI for explanations.
+- Long-lived, precise memory. Summaries drift over time; store source-of-truth data in databases and use RAG to re-ground when needed.
+- Sensitive data handling beyond approved boundaries. Keep PII/PHI within compliant systems; use redaction and data minimization.
+- Legal, medical, or financial decisions without human review. Keep a human in the loop for final approval.
+
+When in doubt, let AI help draft, explain, and prototype—but keep calculators, compilers, search, and databases as the “source of truth.”
+
+### Societal impacts and risks
+
+AI delivers value, but also introduces real-world risks that organizations should plan for:
+
+- Bias and fairness: models reflect training data. Establish evaluation, red-teaming, and escalation paths.
+- Misinformation: convincing but wrong answers spread quickly. Require citations and tracing via RAG where accuracy matters.
+- Privacy and IP: avoid training on proprietary or sensitive data without consent. Respect license terms and attribution.
+- Labor shifts: new roles emerge while others change. Invest in reskilling and transparent adoption.
+- Energy and cost: training/inference consume resources. Prefer efficient models, batch operations, and caching.
+
+See also: [Is AI the Right Solution? Part 2: Applying the Framework and Navigating Ethical Risks]({{ "/2025-06-02-Is-AI-the-Right-Solution-Part-2-Applying-the-Framework-and-Navigating-Ethical-Risks.html" | relative_url }}).
+
+### Model alignment (Constitutional AI)
+
+Constitutional AI (CAI) is an alignment approach (popularized by Anthropic) where a model follows a short, written set of principles—its “constitution”—to judge and improve its own outputs.
+
+How it works (simplified):
+
+- Draft: the model produces an initial answer.
+- Self-critique: it reviews that answer against the constitution (e.g., be helpful and honest; avoid facilitating harm; cite uncertainty).
+- Revise: it edits the answer to better follow the principles.
+- Train for preference: training favors these revised answers using RL from AI feedback (RLAIF), reducing dependence on large human-labeled datasets.
+
+Why it helps:
+
+- Makes safety rules explicit and auditable.
+- Scales alignment with fewer human labels.
+- Yields more consistent “helpful, harmless, honest” behavior.
+
+Limits:
+
+- Only as good as the chosen principles (they can be incomplete or biased).
+- May over-refuse or be overly conservative.
+- Doesn’t ensure factual accuracy—use grounding/RAG and tools for facts.
+
+Example principle: “Avoid providing instructions that meaningfully facilitate wrongdoing.” During self-critique, the model removes such content before replying.
+
 ### Fine-tuning a model
 
 Fine-tuning involves adjusting model behavior and output to better match your specific needs. While full model retraining requires significant resources, you can influence model behavior through several techniques:
@@ -373,52 +444,51 @@ Top P determines how many alternative words the model considers when generating 
 
 These settings work together - you might use low temperature and low Top P for consistent, factual responses, or high temperature and high Top P for creative brainstorming sessions.
 
+### How AI models actually work
+
+Before diving into advanced concepts, it's essential to understand the foundational building blocks that make AI possible. At its core, AI models work by converting human concepts into mathematical representations that computers can process and manipulate.
+
+**Vectors and embeddings: How AI understands meaning**
+Everything an AI processes—words, images, concepts—gets converted into **vectors**, which are simply lists of numbers. Think of a vector as a precise coordinate in multi-dimensional space that captures the essence of what something means.
+
+**Embeddings** are sophisticated vectors that capture semantic meaning. When an AI learns that "dog" and "puppy" are related, it places their embeddings close together in this mathematical space. Similarly, "king" minus "man" plus "woman" might land near "queen"—the model has learned relationships between concepts through the geometric arrangement of their embeddings.
+
+This mathematical representation allows AI models to understand that "vehicle" relates to both "car" and "bicycle," even if those specific connections weren't explicitly taught. The model discovers these relationships by observing patterns in how words appear together across millions of examples.
+
+**From embeddings to responses: The inference process**
+**Inference** is what happens when you send a prompt to an AI model and receive a response. The model converts your words into embeddings, processes those mathematical representations through its neural network, and converts the results back into human-readable text.
+
+During inference, the model doesn't "think" the way humans do. Instead, it performs billions of mathematical calculations to predict the most likely next word, then the word after that, building responses token by token based on the patterns it learned during training.
+
 ### Advanced concepts
 
-**What is a neural network?**
-A neural network is a computing system inspired by biological brains. It consists of interconnected nodes (artificial neurons) that process information. Each connection has a weight that determines how much influence one node has on another. Neural networks learn by adjusting these weights based on training data.
+Now that we understand how AI models represent and process information, we can explore the sophisticated mechanisms that make modern AI so powerful.
 
-**Training a model involves several key concepts:**
+**Neural networks: The foundation of learning**
+A **neural network** mimics how biological brains process information through interconnected nodes. Each connection has a **weight**—a number that determines how much influence one piece of information has on another. During training, the model adjusts billions of these weights to improve its predictions.
 
-**Transformers**
-The architecture that powers modern language models. Transformers excel at understanding context and relationships between words, even when they're far apart in a sentence. They use an "attention mechanism" to focus on relevant parts of the input when generating each part of the output.
+Modern language models use **transformers**, a revolutionary architecture that changed how AI understands language. Unlike earlier approaches that processed text sequentially (word by word), transformers can examine entire passages simultaneously and understand relationships between any words, regardless of how far apart they appear.
 
-**Training data**
-The text, images, or other information used to teach the model. Quality and diversity of training data significantly impact model performance. Modern LLMs are trained on billions of web pages, books, and articles.
+**Attention: Focusing on what matters**
+The breakthrough innovation in transformers is the **attention mechanism**. When generating each word, the model can "attend to" or focus on the most relevant parts of the input, just as you might reread key phrases when writing a response to a complex question.
 
-**Cut-off date**
-The latest date of information included in training data. Models don't automatically know about events after their cut-off date, which is why they can't provide information about very recent developments.
+For example, when translating "The cat that was sleeping on the mat was orange," the attention mechanism helps the model understand that "orange" describes "cat," not "mat," even though other words appear between them.
 
-**Weights and Parameters**
-The numerical values that determine how the model processes information. Large language models have billions or trillions of parameters. During training, these values are adjusted to improve the model's predictions.
+**Scale and capability: Parameters, context, and training**
+The **parameters** in a model—those adjustable weights we mentioned—directly impact capability. GPT-3 has 175 billion parameters, while some newer models have over a trillion. More parameters generally mean better understanding of nuanced language patterns, though they also require more computational resources.
 
-**Context**
-The amount of previous information the model can consider when generating a response. Larger context windows allow models to maintain coherence over longer conversations or documents.
+**Context windows** determine how much information a model can consider at once. Larger context windows allow models to maintain coherence across longer conversations and documents, but they also increase computational costs and processing time.
 
-**Input and Output size**
-Limits on how much information can be processed at once. Input size affects how much text you can include in a prompt, while output size determines the maximum length of generated responses.
+The **training data**—billions of web pages, books, and articles—shapes what the model knows. The **cut-off date** represents the latest information in this training data, which is why models can't discuss events that happened after their training completed.
 
-**Seed**
-A number used to make AI outputs reproducible. Using the same seed with identical inputs should produce the same output, which is useful for testing and debugging.
+**Practical implications: Balancing trade-offs**
+Every advanced feature involves trade-offs. Larger context windows enable more sophisticated reasoning but increase latency and costs. Higher-parameter models provide better quality but require more computational resources. Understanding these trade-offs helps you choose the right model configuration for your specific needs.
 
-**Vocabulary**
-The set of tokens the model understands. Larger vocabularies allow models to handle more languages and specialized terms but require more computational resources.
-
-**Attention**
-The mechanism that allows models to focus on relevant parts of the input when generating each part of the output. This enables understanding of long-range dependencies and context.
-
-**Foundational concepts:**
-
-**Vectors**
-Mathematical representations of concepts as lists of numbers. Words, images, and other data are converted into vectors that capture their meaning and relationships.
-
-**Embeddings**
-High-dimensional vector representations that capture semantic meaning. Similar concepts have similar embeddings, allowing models to understand relationships between different ideas.
-
-**Inference**
-The process of using a trained model to generate predictions or responses. This is what happens when you send a prompt to an AI model and receive a response.
+When designing applications, consider how **vocabulary size** (the tokens a model understands), **temperature settings** (creativity vs. consistency), and **seed values** (reproducibility) align with your goals for latency, accuracy, cost, and reliability.
 
 For a comprehensive deep dive into how these concepts work together, [Andrej Karpathy's tutorial on building ChatGPT from scratch](https://www.youtube.com/watch?v=kCc8FmEb1nY) provides an excellent technical foundation.
+
+Tip: keep these concepts practical. As you design a use case, tie terms like “context,” “embeddings,” and “attention” to concrete trade-offs: latency, accuracy, token cost, and guardrails.
 
 ## GenAI part 2
 
@@ -603,6 +673,14 @@ Think of MCP servers as specialized tools in a workshop, while AI agents are the
 
 - [Introducing Microsoft Discovery: An Agentic AI Platform for Scientific Research]({{ "/2025-05-19-Introducing-Microsoft-Discovery-An-Agentic-AI-Platform-for-Scientific-Research.html" | relative_url }})
 
+#### A2A vs MCP vs ACP (in practice)
+
+- MCP: a protocol for connecting models/applications to tools and data via standardized servers. Think “how to use tools.”
+- A2A: patterns/protocols for agents to coordinate with other agents. Think “how agents talk to each other.”
+- ACP: a proposed agent communication protocol (by BeeAI) that specifies agent-to-agent message formats and coordination strategies.
+
+Use MCP to standardize tool access; add A2A/ACP when multiple agents must coordinate. See: [What does MCP, A2A, and ACP mean?](https://akka.io/blog/mcp-a2a-acp-what-does-it-all-mean).
+
 ### Scaling AI implementations
 
 **Scaled GenAI** involves deploying generative AI solutions across entire organizations or large user bases. This requires considerations around infrastructure, cost management, quality control, security, and governance. Companies implementing scaled GenAI need to think about how to maintain consistency, manage costs, and ensure responsible use across thousands of users and use cases.
@@ -618,230 +696,76 @@ Think of MCP servers as specialized tools in a workshop, while AI agents are the
 
 ## Inspiration
 
-Cool, but don't know what to start with? Here are some examples to get you inspired.
+What can you actually *build* with AI? Beyond the corporate feature lists, here's what developers are creating right now—and what you could build next.
 
-### Chat interfaces
+### Where You Find AI Today
 
-Chat interfaces make AI accessible to everyone by providing familiar, conversation-like interactions. These interfaces have become the primary way people interact with AI models.
+AI isn't just in dedicated "AI apps"—it's embedded everywhere you already work and live. Understanding where AI appears helps you recognize opportunities to leverage it in your own projects.
 
-**Popular chat interfaces and their strengths:**
+**In Your Development Workflow**
+Your code editor probably already has AI. GitHub Copilot suggests code as you type. Chat interfaces help debug problems. Your pull requests get AI-generated summaries. Testing tools create test cases automatically. This isn't the future—it's happening now in your IDE.
 
-**ChatGPT**: OpenAI's web interface for their GPT models
+**In Everyday Software**
+Your email client drafts responses. Your browser summarizes articles. Your phone transcribes voicemails. Your photo app organizes pictures by faces and locations. Your music app creates playlists based on your mood. Each of these started as separate AI research projects that became invisible features.
 
-- Conversational AI for general questions, writing, and problem-solving
-- Supports file uploads for document analysis
-- Custom GPTs for specialized tasks
-- Voice interaction capabilities
+**In Business Applications**
+CRM systems score leads automatically. Accounting software categorizes expenses. Project management tools estimate completion times. HR platforms screen resumes. Customer service platforms route inquiries. The AI runs in the background, making existing workflows smarter.
 
-**Claude**: Anthropic's chat interface
+**Behind the Scenes**
+Search engines understand natural language queries. Translation services work in real-time. Navigation apps predict traffic patterns. Streaming services recommend content. Social media platforms detect harmful content. E-commerce sites personalize shopping experiences. The AI infrastructure is invisible but essential.
 
-- Focus on helpful, harmless, and honest responses
-- Strong performance on complex reasoning tasks
-- Good at maintaining context in long conversations
+**What This Means for Builders**
+AI success comes from integration, not replacement. The most useful AI applications enhance existing workflows rather than creating entirely new ones. People don't want to "use AI"—they want to accomplish their goals faster and better.
 
-**Gemini**: Google's AI chat interface
-
-- Integration with Google services and search
-- Multimodal capabilities (text, images, documents)
-- Real-time information access
-
-**Microsoft Copilot**: Integrated across Microsoft products
-
-- Available in Windows, Edge, Office applications
-- Context-aware based on what you're working on
-- Integration with Microsoft 365 data and services
-
-**GitHub Copilot Chat**: AI assistance within development environments
-
-- Code-focused conversations
-- Understanding of your codebase and development context
-- Integration with development workflows
-
-**What you can accomplish with chat interfaces:**
-
-- Get explanations of complex topics
-- Generate and edit content (writing, code, creative work)
-- Analyze documents and data
-- Brainstorm ideas and solutions
-- Learn new skills through interactive tutoring
-- Plan projects and break down complex tasks
+**Start Where You Are**
+Look at repetitive tasks in your current work. What takes time but doesn't require creativity? What patterns could be automated? What decisions could be supported with better data? These are your AI opportunities.
 
 **More information:**
 
 - [Chat in IDE]({{ "/2025-01-02-Chat-in-IDE.html" | relative_url }})
 - [Copilot vs Chat: Sidekick Showdown - When to Use Each Coding Sidekick]({{ "/2025-07-11-Copilot-vs-Chat-Sidekick-Showdown-When-to-Use-Each-Coding-Sidekick.html" | relative_url }})
-
-### Office 365
-
-AI has been integrated throughout Microsoft 365 (formerly Office 365) to enhance productivity and streamline common tasks across familiar applications.
-
-**Microsoft Copilot in Office applications:**
-
-**Word**: AI writing assistant that helps with:
-
-- Drafting documents from outlines or prompts
-- Rewriting content for different audiences or tones
-- Summarizing long documents
-- Suggesting improvements to writing style and clarity
-
-**Excel**: Data analysis and automation support:
-
-- Creating formulas from natural language descriptions
-- Generating charts and visualizations
-- Analyzing data patterns and trends
-- Creating pivot tables and data summaries
-
-**PowerPoint**: Presentation creation and design:
-
-- Generating slide content from topics or outlines
-- Suggesting design improvements and layouts
-- Creating speaker notes and talking points
-- Converting documents into presentation format
-
-**Outlook**: Email and calendar management:
-
-- Drafting email responses based on context
-- Summarizing long email threads
-- Scheduling meetings based on natural language requests
-- Creating meeting agendas and follow-up tasks
-
-**Teams**: Meeting and collaboration enhancement:
-
-- Real-time meeting transcription and summary
-- Action item extraction from discussions
-- Meeting preparation and follow-up assistance
-- Chat summarization for missed conversations
-
-**Benefits of AI in Office 365:**
-
-- Reduces time spent on routine tasks
-- Maintains consistency with existing workflows
-- Leverages your organization's data and context
-- Works within familiar interfaces you already know
-- Provides enterprise-grade security and compliance
-
-**More information:**
-
-- [Enhance IT Expertise and Efficiency with Copilot in Microsoft Intune]({{ "/2024-12-09-Enhance-IT-Expertise-and-Efficiency-with-Copilot-in-Microsoft-Intune.html" | relative_url }})
-
-### Windows
-
-Microsoft has integrated AI capabilities directly into Windows, making intelligent features available across the entire operating system.
-
-**Windows Copilot**: Integrated AI assistant for Windows 11
-
-- Available through the taskbar for quick access
-- Helps with system settings and configuration
-- Provides information and answers questions
-- Assists with file management and organization
-
-**AI-powered features in Windows:**
-
-- **Smart search**: Enhanced search capabilities that understand natural language queries
-- **Voice typing**: Improved speech recognition and dictation across applications
-- **Windows Recall**: AI-powered search through your activity history (when enabled)
-- **Enhanced clipboard**: Intelligent clipboard history with text suggestions
-
-**Developer and IT benefits:**
-
-- **PowerShell AI integration**: AI assistance for command-line tasks and script creation
-- **System administration**: AI-powered troubleshooting and system optimization
-- **Development environment**: Integration with AI coding assistants and development tools
-
-**Security and privacy considerations:**
-Microsoft has implemented security features for AI integration in Windows, including local processing for sensitive operations and user control over data sharing. The company is also working on enhanced security for AI protocols like MCP with server isolation and central registries.
-
-### GitHub
-
-GitHub has integrated AI throughout its platform to enhance developer productivity and streamline software development workflows.
-
-**GitHub Copilot**: AI-powered coding assistant
-
-- **Code completion**: Suggests code as you type based on context and comments
-- **Chat functionality**: Conversational AI for asking coding questions and getting explanations
-- **Code review assistance**: Helps identify issues and suggests improvements
-- **Test generation**: Creates unit tests based on your code
-
-**GitHub Actions with AI**: Automated workflows enhanced by AI
-
-- **Workflow optimization**: AI suggestions for improving CI/CD pipelines
-- **Security scanning**: AI-powered vulnerability detection and remediation
-- **Code quality checks**: Automated code analysis with intelligent recommendations
-
-**GitHub Models**: Platform for AI development
-
-- **Model catalog**: Access to various AI models for development and testing
-- **Prompt management**: Tools for creating and managing AI prompts
-- **Quantitative evaluations**: Testing and comparing AI model performance
-
-**Repository insights with AI**:
-
-- **Code analysis**: Understanding codebase patterns and dependencies
-- **Documentation generation**: AI-assisted README and documentation creation
-- **Issue and PR summarization**: Automatic summaries of discussions and changes
-
-**Benefits for development teams:**
-
-- Faster code development and fewer syntax errors
-- Improved code quality through AI-powered reviews
-- Better documentation and knowledge sharing
-- Reduced time on routine development tasks
-
-**More information:**
-
 - [What's new with the GitHub Copilot coding agent: A look at the updates]({{ "/2025-07-25-Whats-new-with-the-GitHub-Copilot-coding-agent-A-look-at-the-updates.html" | relative_url }})
-- [Modernizing Legacy COBOL to Cloud with GitHub Copilot]({{ "/2025-07-22-Modernizing-Legacy-COBOL-to-Cloud-with-GitHub-Copilot.html" | relative_url }})
-- [GitHub Copilot Helps One Acre Fund Scale Farming Impact]({{ "/2025-07-28-GitHub-Copilot-Helps-One-Acre-Fund-Scale-Farming-Impact.html" | relative_url }})
-- [How to Use AI Models in Your GitHub Actions Workflows]({{ "/2025-08-04-How-to-Use-AI-Models-in-Your-GitHub-Actions-Workflows.html" | relative_url }})
-- [Vibe Coding: PromptBoost.dev with GitHub Copilot in VS Code]({{ "/2025-07-26-Vibe-Coding-PromptBoostdev-with-GitHub-Copilot-in-VS-Code.html" | relative_url }})
-
-### Other real-world examples
-
-Companies across industries are finding practical ways to integrate AI into their operations, often starting with specific use cases that provide clear value.
-
-**Customer service and support**:
-
-- **Chatbots** that handle common questions and route complex issues to human agents
-- **Email response assistance** that suggests replies based on customer history and context
-- **Knowledge base enhancement** with AI-powered search and content recommendations
-
-**Content creation and marketing**:
-
-- **Social media management** with AI-generated post ideas and scheduling optimization
-- **Product descriptions** automatically generated from specifications and features
-- **A/B testing** enhanced with AI predictions about content performance
-
-**Business operations**:
-
-- **Document processing** that extracts information from invoices, contracts, and forms
-- **Meeting summarization** that creates action items and follow-up tasks
-- **Data analysis** that identifies trends and generates insights from business metrics
-
-**Software development**:
-
-- **Code review automation** that catches common issues and suggests improvements
-- **Testing assistance** with AI-generated test cases and bug detection
-- **Documentation generation** that keeps technical docs in sync with code changes
-
-**Industry-specific applications**:
-
-- **Healthcare**: AI assistance for medical documentation and diagnostic support
-- **Finance**: Fraud detection and risk assessment automation
-- **Manufacturing**: Predictive maintenance and quality control
-- **Education**: Personalized learning assistance and grading support
-
-**Key success factors**:
-
-- Start with clearly defined problems and measurable outcomes
-- Begin with low-risk applications to build confidence and expertise
-- Ensure proper data quality and security measures
-- Maintain human oversight for critical decisions
-- Provide training and support for users adapting to AI-enhanced workflows
-
-**More information:**
-
 - [AI Challenger: Loft Orbital - Building Smarter Satellites with AI]({{ "/2025-06-11-AI-Challenger-Loft-Orbital-Building-Smarter-Satellites-with-AI.html" | relative_url }})
-- [Is AI the Right Solution? Part 2: Applying the Framework and Navigating Ethical Risks]({{ "/2025-06-02-Is-AI-the-Right-Solution-Part-2-Applying-the-Framework-and-Navigating-Ethical-Risks.html" | relative_url }})
+
+### Real Projects You Can Build Today
+
+AI shows up across the stack even when you don’t open a “chat” app:
+
+**Build Your Own Satellite Ground Station**
+Want to track satellites and receive data from space? AI can help you process satellite telemetry, predict orbital paths, and analyze space weather data. [Satellite Ground Station Series]({{ "/2025-01-14-Satellite-Ground-Station-Series-Introduction.html" | relative_url }}) shows you exactly how to get started.
+
+**Create Multi-Agent Systems That Actually Work**
+Move beyond single AI assistants to systems where multiple AI agents collaborate. [Building a multi-agent system with Semantic Kernel]({{ "/2025-07-07-Building-a-multi-agent-system-with-Semantic-Kernel.html" | relative_url }}) demonstrates practical multi-agent architectures you can implement today.
+
+**Connect AI to Real-World Data with MCP**
+Stop limiting AI to training data. Build Model Context Protocol servers that give AI models access to live databases, APIs, and services. [Model Context Protocol Development Best Practices]({{ "/2025-07-28-MCP-Development-Best-Practices.html" | relative_url }}) shows you how to build secure, production-ready integrations.
+
+**Zero-Trust AI Agents for Enterprise**
+Build AI systems that can operate in secure environments with proper identity and access controls. [Zero Trust Agents: Adding Identity and Access to Multi-Agent Workflows]({{ "/2025-07-08-Zero-Trust-Agents-Adding-Identity-and-Access-to-Multi-Agent-Workflows.html" | relative_url }}) shows how to implement enterprise-grade security in AI systems.
+
+### Beyond Chat: AI as Infrastructure
+
+The most interesting AI applications aren't chatbots—they're invisible systems that make everything else smarter:
+
+**AI-Powered Development Workflows**
+Transform how you write code with AI that understands your entire codebase. [From Vibe Coding to Vibe Engineering: It's Time to Stop Riffing with AI]({{ "/2025-07-09-From-Vibe-Coding-to-Vibe-Engineering-Its-Time-to-Stop-Riffing-with-AI.html" | relative_url }}) explores how to move beyond simple code completion to systematic AI-enhanced development.
+
+**Scientific Research Acceleration**
+AI can analyze research papers, generate hypotheses, and even control laboratory equipment. [Introducing Microsoft Discovery: An Agentic AI Platform for Scientific Research]({{ "/2025-05-19-Introducing-Microsoft-Discovery-An-Agentic-AI-Platform-for-Scientific-Research.html" | relative_url }}) shows how AI is already accelerating scientific breakthroughs.
+
+**Visual Data Processing at Scale**
+Build systems that can analyze thousands of images, extract insights from videos, or process satellite imagery. AI vision capabilities are now accessible through simple APIs, making computer vision projects feasible for individual developers.
+
+### Where to Start Building
+
+**Start Small, Think Big**
+Begin with a problem you face regularly. Can AI help you process emails more efficiently? Analyze data faster? Generate better documentation? Start with a simple prototype using existing APIs.
+
+**Use Existing Building Blocks**
+You don't need to train models from scratch. Use pre-trained models through APIs, connect them with MCP, and build the unique value in how you combine and apply them.
+
+**Learn by Doing**
+The best way to understand AI capabilities is to build something. Follow the linked tutorials, modify the examples, and see what happens when you change parameters or combine different approaches.
 
 ## Integrating AI into your applications
 
@@ -1145,6 +1069,11 @@ Lots of things are happening in the AI space, a few things to keep an eye on:
 
 - A2A (Agent to Agent)
 - ACP (Agent Communication Protocol) from [BeeAI](https://github.com/i-am-bee)
+
+- GPT-5 and GPT-OSS availability across ecosystems:
+  - [Evaluating GPT-5 Models for RAG on Azure AI Foundry]({{ "/2025-08-13-Evaluating-GPT-5-Models-for-RAG-on-Azure-AI-Foundry.html" | relative_url }})
+  - [GPT-5 and GPT-OSS Models Now Integrated in AI Toolkit for VS Code]({{ "/2025-08-10-GPT-5-and-GPT-OSS-Models-Now-Integrated-in-AI-Toolkit-for-VS-Code.html" | relative_url }})
+  - [Model Mondays S2E9: Models for AI Agents]({{ "/2025-08-14-Model-Mondays-S2E9-Models-for-AI-Agents.html" | relative_url }})
 
 A good starting point is here: [What does MCP, A2A, and ACP mean?](https://akka.io/blog/mcp-a2a-acp-what-does-it-all-mean)
 
