@@ -11,19 +11,27 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: write
-  actions: write
-  models: read
-  pull-requests: write
+  contents: read
 
 jobs:
   download-and-process-rss-data:
     runs-on: ubuntu-latest
     env:
-      GIT_USER_EMAIL: "action@github.com"
-      GIT_USER_NAME: "GitHub Action"
+      GIT_USER_EMAIL: "reinier.vanmaanen@xebia.com"
+      GIT_USER_NAME: "RSS Processing Workflow"
       RSS_BRANCH: "rss-updates"
     steps:
+      - name: Generate App Token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.RSS_APP_CLIENTID }}
+          private-key: ${{ secrets.RSS_APP_CLIENTSECRET }}
+
+      - name: Set Git URL with Token
+        run: |
+          echo "GITHUB_REPO_URL=https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git" >> $GITHUB_ENV
+
       - name: Check workflow status
         run: |
           echo "🚀 Starting RSS processing workflow..."
@@ -36,11 +44,12 @@ jobs:
         with:
           ref: rss-updates
           fetch-depth: 0
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Configure Git user
         run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
+          git config --global user.email "${{ env.GIT_USER_EMAIL }}"
+          git config --global user.name "${{ env.GIT_USER_NAME }}"
 
       - name: Sync with main branch using selective backup/recreate strategy
         run: |
@@ -210,7 +219,7 @@ jobs:
             echo "Changes detected after RSS download, committing..."
             git add .
             git commit -m "Updated RSS data from feeds"
-            git push --force-with-lease origin ${{ env.RSS_BRANCH }}
+            git push --force-with-lease ${{ env.GITHUB_REPO_URL }} ${{ env.RSS_BRANCH }}
             echo "RSS_DATA_CHANGED=true" >> $GITHUB_ENV
           else
             echo "No changes after RSS download"
@@ -248,7 +257,7 @@ jobs:
             echo "Changes detected after RSS processing, committing..."
             git add .
             git commit -m "Added new content from RSS processing"
-            git push --force-with-lease origin ${{ env.RSS_BRANCH }}
+            git push --force-with-lease ${{ env.GITHUB_REPO_URL }} ${{ env.RSS_BRANCH }}
             echo "CONTENT_CHANGED=true" >> $GITHUB_ENV
           else
             echo "No new content after RSS processing"
@@ -278,7 +287,7 @@ jobs:
             echo "Changes detected after markdown fixes, committing..."
             git add .
             git commit -m "Fixed markdown file formatting and structure"
-            git push --force-with-lease origin ${{ env.RSS_BRANCH }}
+            git push --force-with-lease ${{ env.GITHUB_REPO_URL }} ${{ env.RSS_BRANCH }}
             echo "FIXES_CHANGED=true" >> $GITHUB_ENV
           else
             echo "No changes after markdown fixes"
@@ -394,6 +403,7 @@ jobs:
         with:
           ref: main
           path: main-workspace
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Copy selected changes to main branch
         if: env.SHOULD_COPY == 'true' && always() && !cancelled()
@@ -402,8 +412,6 @@ jobs:
           
           # Navigate to main workspace
           cd main-workspace
-          git config user.email "action@github.com"
-          git config user.name "GitHub Action"
           
           # First, handle file deletions (must be done before copies to avoid conflicts)
           if [ -f "/tmp/files_to_delete.txt" ] && [ -s "/tmp/files_to_delete.txt" ]; then
@@ -480,7 +488,7 @@ jobs:
           git commit -F /tmp/commit_msg.txt
           
           # Push to main
-          git push origin main
+          git push ${{ env.GITHUB_REPO_URL }} main
           
           echo "✅ Successfully synced all changes to main branch"
 
@@ -488,28 +496,9 @@ jobs:
           cd ..
           git fetch origin main
           git reset --hard origin/main
-          git push --force-with-lease origin ${{ env.RSS_BRANCH }}
+          git push --force-with-lease ${{ env.GITHUB_REPO_URL }} ${{ env.RSS_BRANCH }}
 
           echo "✅ Successfully reset RSS branch"
-
-      - name: Trigger Azure Static Web App deployment
-        if: env.SHOULD_COPY == 'true' && always() && !cancelled()
-        run: |
-          echo "🚀 Triggering Azure Static Web App deployment for new content..."
-          
-          # Trigger the Azure Static Web App workflow via workflow_dispatch
-          gh workflow run "deploy-static-web-app.yml" \
-            --repo ${{ github.repository }} \
-            --ref main
-          
-          if [ $? -eq 0 ]; then
-            echo "✅ Successfully triggered Azure Static Web App deployment"
-          else
-            echo "❌ Failed to trigger Azure Static Web App deployment"
-            echo "Note: This is not critical - content is still available on main branch"
-          fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Workflow summary
         if: always() && !cancelled()

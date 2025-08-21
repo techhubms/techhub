@@ -3,7 +3,7 @@
 param(
     [switch]$QuickCheck,
     [int]$SimilarityThreshold = 40,
-    [string[]]$ExcludeDirectories = @('_videos')
+    [string[]]$ExcludeDirectories = @()
 )
 
 Write-Host "========================================" -ForegroundColor Cyan

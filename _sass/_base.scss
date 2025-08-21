@@ -118,7 +118,14 @@ li {
 /**
  * Headings - Reset, spacing, typography, and decorative lines
  */
-h1,
+h1 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: settings.$spacing-unit;
+  font-weight: settings.$base-font-weight;
+  line-height: 1.2;
+}
+
 h2,
 h3,
 h4,
@@ -126,7 +133,8 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  margin-bottom: settings.$spacing-unit;
+  margin-top: settings.$spacing-unit * 2;
+  margin-bottom: 10px;
   font-weight: settings.$base-font-weight;
   line-height: 1.2;
 }

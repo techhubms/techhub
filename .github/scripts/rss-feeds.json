@@ -60,31 +60,6 @@
     "url": "https://blog.jesseswart.nl/index.xml"
   },
   {
-    "name": "Reddit Github Copilot",
-    "outputDir": "_community",
-    "url": "https://www.reddit.com/r/GithubCopilot.rss"
-  },
-  {
-    "name": "Reddit CSharp",
-    "outputDir": "_community",
-    "url": "https://www.reddit.com/r/csharp/.rss"
-  },
-  {
-    "name": "Reddit DotNet",
-    "outputDir": "_community",
-    "url": "https://www.reddit.com/r/dotnet/.rss"
-  },
-  {
-    "name": "Reddit AI Agents",
-    "outputDir": "_community",
-    "url": "https://www.reddit.com/r/AI_Agents/.rss"
-  },
-  {
-    "name": "Reddit Artificial Inteligence",
-    "outputDir": "_community",
-    "url": "https://www.reddit.com/r/ArtificialInteligence/.rss"
-  },
-  {
     "name": "John Savill's Technical Training",
     "outputDir": "_videos",
     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
@@ -123,11 +98,6 @@
     "name": "DevOps Blog",
     "outputDir": "_posts",
     "url": "https://devops.com/feed/"
-  },
-  {
-    "name": "Reddit DevOps",
-    "outputDir": "_community",
-    "url": "https://www.reddit.com/r/devops/.rss"
   },
   {
     "name": "Arrested DevOps",
@@ -193,16 +163,6 @@
     "name": "Microsoft DevBlog",
     "outputDir": "_news",
     "url": "https://devblogs.microsoft.com/azure-sdk/feed/"
-  },
-  {
-    "name": "Reddit Azure",
-    "outputDir": "_community",
-    "url": "https://www.reddit.com/r/azure/.rss"
-  },
-  {
-    "name": "Reddit GitHub",
-    "outputDir": "_community",
-    "url": "https://www.reddit.com/r/github/.rss"
   },
   {
     "name": "Microsoft Cloud YouTube",
@@ -285,26 +245,6 @@
     "url": "https://blog.fabric.microsoft.com/en-us/blog/feed/"
   },
   {
-    "name": "Reddit Microsoft",
-    "outputDir": "_community",
-    "url": "https://www.reddit.com/r/microsoft/.rss"
-  },
-  {
-    "name": "Reddit Visual Studio",
-    "outputDir": "_community",
-    "url": "https://www.reddit.com/r/VisualStudio/.rss"
-  },
-  {
-    "name": "Reddit Azure DevOps",
-    "outputDir": "_community",
-    "url": "https://www.reddit.com/r/azuredevops/.rss"
-  },
-  {
-    "name": "Reddit Machine Learning",
-    "outputDir": "_community",
-    "url": "https://www.reddit.com/r/MachineLearning/.rss"
-  },
-  {
     "name": "Visual Studio Code YouTube",
     "outputDir": "_videos",
     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
@@ -343,5 +283,10 @@
     "name": "DevClass",
     "outputDir": "_posts",
     "url": "https://devclass.com/feed/"
-  }
+  },
+  {
+    "name": "Spindev's Blog",
+    "outputDir": "_posts",
+    "url": "https://spindev.net/index.xml"
+  }  
 ]

@@ -13,6 +13,9 @@ on:
         - whatif
         - deploy
 
+permissions:
+  contents: read
+
 jobs:
   deploy-infrastructure:
     runs-on: ubuntu-latest
