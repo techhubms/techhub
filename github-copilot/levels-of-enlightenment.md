@@ -2,7 +2,7 @@
 layout: "page"
 title: "Levels of Enlightenment"
 author: "Rob Bos"
-description: "A guide to the 9 levels of enlightenment of GitHub Copilot."
+description: "Rob Bos's comprehensive guide to mastering GitHub Copilot through progressive learning stages."
 canonical_url: "https://devopsjournal.io/blog/2024/06/07/GitHub-Copilot-Levels-of-enlightenment"
 category: "GitHub Copilot"
 ---

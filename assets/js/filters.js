@@ -2,7 +2,6 @@
 // GLOBAL STATE AND CONFIGURATION
 // =============================================================================
 
-// === WINDOW SCOPE VARIABLES (accessible globally) ===
 window.activeFilters = new Set();
 window.collapsedTagsVisible = false;
 window.isUpdating = false; // Centralized mutex for all filter operations (accessible globally)
@@ -13,14 +12,10 @@ window.cachedCountSpans = new Map(); // Cache for filter button count span eleme
 window.dateFilters = []; // Array of date filter labels
 window.currentFilterData = []; // Array of post data from Jekyll
 window.textSearchQuery = ''; // Current text search query
-
-// === LOCAL VARIABLES (file scope only) ===
-let cachedPosts = null;
-let cachedDateButtons = null;
-let cachedNonDateButtons = null;
-let cachedHiddenTagButtons = null;
-let cachedTextSearchInput = null;
-let cachedTextSearchClearBtn = null;
+window.cachedPosts = null;
+window.cachedDateButtons = null;
+window.cachedNonDateButtons = null;
+window.cachedHiddenTagButtons = null;
 
 // =============================================================================
 // INITIALIZATION FUNCTIONS
@@ -96,19 +91,50 @@ function initializeDOM() {
 
 // Initialize DOM cache
 function initDOMCache() {
-    if (!cachedPosts) {
+    if (!window.cachedPosts) {
         const postElements = document.querySelectorAll('.navigation-post-square');
-        cachedPosts = Array.from(postElements).map((el, index) => ({
-            el: el,
-            index: index  // Add index for tag relationship lookups
-        }));
+
+        window.cachedPosts = Array.from(postElements).map((el, index) => {
+            // Extract content for text search
+            let content = '';
+
+            // Get title content
+            const titleElement = el.querySelector('.navigation-post-title');
+            if (titleElement) {
+                content += titleElement.textContent.toLowerCase() + ' ';
+            }
+
+            // Get description content
+            const descElement = el.querySelector('.navigation-post-desc');
+            if (descElement) {
+                content += descElement.textContent.toLowerCase() + ' ';
+            }
+
+            // Get meta content (author, date, etc.)
+            const metaElement = el.querySelector('.navigation-post-meta-info');
+            if (metaElement) {
+                content += metaElement.textContent.toLowerCase() + ' ';
+            }
+
+            // Get tag data from data-tags attribute
+            const tagsAttr = el.getAttribute('data-tags');
+            if (tagsAttr) {
+                content += tagsAttr.toLowerCase() + ' ';
+            }
+
+            return {
+                el: el,
+                index: index,  // Add index for tag relationship lookups
+                content: content.trim()  // Pre-extracted content for fast text search
+            };
+        });
     }
 
-    if (!cachedDateButtons) {
-        cachedDateButtons = document.querySelectorAll('.date-filter-btn');
+    if (!window.cachedDateButtons) {
+        window.cachedDateButtons = document.querySelectorAll('.date-filter-btn');
 
         // Cache count spans for date buttons
-        cachedDateButtons.forEach(btn => {
+        window.cachedDateButtons.forEach(btn => {
             const tag = btn.getAttribute('data-tag');
             const countSpan = btn.querySelector('.filter-count');
             if (countSpan && tag) {
@@ -117,11 +143,11 @@ function initDOMCache() {
         });
     }
 
-    if (!cachedNonDateButtons) {
-        cachedNonDateButtons = document.querySelectorAll('.tag-filter-btn[data-filter-type="tag"]');
+    if (!window.cachedNonDateButtons) {
+        window.cachedNonDateButtons = document.querySelectorAll('.tag-filter-btn[data-filter-type="tag"]');
 
         // Cache count spans for non-date buttons
-        cachedNonDateButtons.forEach(btn => {
+        window.cachedNonDateButtons.forEach(btn => {
             const tag = btn.getAttribute('data-tag');
             const countSpan = btn.querySelector('.filter-count');
             if (countSpan && tag) {
@@ -130,16 +156,8 @@ function initDOMCache() {
         });
     }
 
-    if (!cachedHiddenTagButtons) {
-        cachedHiddenTagButtons = document.querySelectorAll('.hidden-tag-btn');
-    }
-
-    if (!cachedTextSearchInput) {
-        cachedTextSearchInput = document.getElementById('text-search-input');
-    }
-
-    if (!cachedTextSearchClearBtn) {
-        cachedTextSearchClearBtn = document.getElementById('text-search-clear');
+    if (!window.cachedHiddenTagButtons) {
+        window.cachedHiddenTagButtons = document.querySelectorAll('.hidden-tag-btn');
     }
 }
 
@@ -199,10 +217,15 @@ function parseURLFilters() {
         });
     }
 
+    // Handle search query from URL
     const searchQuery = urlParams.get('search');
-    if (searchQuery && cachedTextSearchInput) {
+    if (searchQuery) {
         window.textSearchQuery = decodeURIComponent(searchQuery);
-        cachedTextSearchInput.value = window.textSearchQuery;
+        // Set the input value if the element exists
+        const textSearchInput = document.getElementById('text-search-input');
+        if (textSearchInput) {
+            textSearchInput.value = window.textSearchQuery;
+        }
     }
 
     const showCollapsed = urlParams.get('showCollapsed');
@@ -218,15 +241,17 @@ function parseURLFilters() {
 function setupEventDelegation() {
     // Collapsed event handler for all filter interactions
     document.addEventListener('click', handleFilterClick);
-    
+
     // Text search event handlers
-    if (cachedTextSearchInput) {
-        cachedTextSearchInput.addEventListener('input', handleTextSearchInput);
-        cachedTextSearchInput.addEventListener('keydown', handleTextSearchKeydown);
+    const textSearchInput = document.getElementById('text-search-input');
+    if (textSearchInput) {
+        textSearchInput.addEventListener('input', handleTextSearchInput);
+        textSearchInput.addEventListener('keydown', handleTextSearchKeydown);
     }
-    
-    if (cachedTextSearchClearBtn) {
-        cachedTextSearchClearBtn.addEventListener('click', handleTextSearchClear);
+
+    const textSearchClearBtn = document.getElementById('text-search-clear');
+    if (textSearchClearBtn) {
+        textSearchClearBtn.addEventListener('click', handleTextSearchClear);
     }
 }
 
@@ -290,13 +315,13 @@ function handleFilterClick(event) {
 
 function handleTextSearchInput(event) {
     if (window.isUpdating) return;
-    
+
     const query = event.target.value.trim();
     window.textSearchQuery = query;
-    
+
     // Update clear button visibility
     updateTextSearchClearButton();
-    
+
     // Debounce the search to avoid excessive filtering
     clearTimeout(window.textSearchTimeout);
     window.textSearchTimeout = setTimeout(() => {
@@ -323,16 +348,17 @@ function handleTextSearchClear(event) {
         event.preventDefault();
         return;
     }
-    
+
     clearTextSearch();
 }
 
 function clearTextSearch() {
-    if (cachedTextSearchInput) {
-        cachedTextSearchInput.value = '';
+    const textSearchInput = document.getElementById('text-search-input');
+    if (textSearchInput) {
+        textSearchInput.value = '';
         window.textSearchQuery = '';
         updateTextSearchClearButton();
-        
+
         window.isUpdating = true;
         try {
             updateDisplay();
@@ -344,52 +370,27 @@ function clearTextSearch() {
 }
 
 function updateTextSearchClearButton() {
-    if (cachedTextSearchClearBtn) {
+    const textSearchClearBtn = document.getElementById('text-search-clear');
+    if (textSearchClearBtn) {
         if (window.textSearchQuery && window.textSearchQuery.trim()) {
-            cachedTextSearchClearBtn.classList.remove('hidden');
+            textSearchClearBtn.classList.remove('hidden');
         } else {
-            cachedTextSearchClearBtn.classList.add('hidden');
+            textSearchClearBtn.classList.add('hidden');
         }
     }
 }
 
-// Text search filtering function - searches directly on DOM content
-function passesTextSearch(postData, postIndex) {
+// Text search filtering function - uses pre-cached content for fast search
+function passesTextSearch(cachedPost) {
     if (!window.textSearchQuery) return true;
-    
+
     const query = window.textSearchQuery.toLowerCase();
-    
-    // Search in DOM content for this post
-    if (postIndex < cachedPosts.length) {
-        const postElement = cachedPosts[postIndex].el;  // Access the 'el' property
-        
-        // Search in title
-        const titleElement = postElement.querySelector('.navigation-post-title');
-        if (titleElement && titleElement.textContent.toLowerCase().includes(query)) {
-            return true;
-        }
-        
-        // Search in description/excerpt
-        const descElement = postElement.querySelector('.navigation-post-desc');
-        if (descElement && descElement.textContent.toLowerCase().includes(query)) {
-            return true;
-        }
-        
-        // Search in author/feed name and date
-        const metaElements = postElement.querySelectorAll('.navigation-post-meta-value');
-        for (const metaElement of metaElements) {
-            if (metaElement.textContent.toLowerCase().includes(query)) {
-                return true;
-            }
-        }
-        
-        // Search in tags from data attribute (more efficient than server data)
-        const tagsAttribute = postElement.getAttribute('data-tags');
-        if (tagsAttribute && tagsAttribute.toLowerCase().includes(query)) {
-            return true;
-        }
+
+    // Use pre-cached content from the cached post object
+    if (cachedPost && cachedPost.content) {
+        return cachedPost.content.includes(query);
     }
-    
+
     return false;
 }
 
@@ -412,8 +413,8 @@ function updateDisplay(initialPageLoad = false) {
     const visibilityUpdates = [];
     const visiblePosts = [];
 
-    for (let i = 0; i < cachedPosts.length; i++) {
-        const post = cachedPosts[i];
+    for (let i = 0; i < window.cachedPosts.length; i++) {
+        const post = window.cachedPosts[i];
         const postData = window.currentFilterData[i];
 
         let isVisible;
@@ -424,7 +425,7 @@ function updateDisplay(initialPageLoad = false) {
         } else {
             const passesModeFilter = modeFilters.length === 0 || checkFilterForCurrentMode(i, modeFilters);
             const passesDateFilter = !activeDateFilter || isWithinDateFilter(i, activeDateFilter);
-            const passesTextFilter = passesTextSearch(postData);
+            const passesTextFilter = passesTextSearch(post);
             isVisible = passesModeFilter && passesDateFilter && passesTextFilter;
         }
 
@@ -445,7 +446,7 @@ function updateDisplay(initialPageLoad = false) {
 
     // Efficiently update date button counts using pre-calculated mappings
     updateDateButtonCountsAndState();
-    
+
     // Update text search clear button visibility
     updateTextSearchClearButton();
 }
@@ -467,7 +468,7 @@ function updateDateButtonCountsAndState() {
     dateFilterOrder.forEach(dateFilter => {
         const datePostIndices = window.dateFilterMappings[dateFilter];
 
-        const dateButton = Array.from(cachedDateButtons).find(btn => btn.getAttribute('data-tag') === dateFilter);
+        const dateButton = Array.from(window.cachedDateButtons).find(btn => btn.getAttribute('data-tag') === dateFilter);
         if (!dateButton) return;
 
         const countSpan = window.cachedCountSpans.get(dateFilter);
@@ -508,20 +509,23 @@ function updateDateButtonCountsAndState() {
         }
     });
 
-    // Step 2: If filters, recalculate counts for base set only
+    // Step 2: Recalculate counts for base set considering mode filters and text search
     const filteredCounts = {};
-    if (modeFilters.length > 0) {
-        baseSet.forEach(({ dateFilter, datePostIndices }) => {
-            const filteredCount = [...datePostIndices].filter(index => {
-                return checkFilterForCurrentMode(index, modeFilters);
-            }).length;
-            filteredCounts[dateFilter] = filteredCount;
-        });
-    }
+    baseSet.forEach(({ dateFilter, datePostIndices }) => {
+        const filteredCount = [...datePostIndices].filter(index => {
+            // Check mode filters
+            const passesModeFilter = modeFilters.length === 0 || checkFilterForCurrentMode(index, modeFilters);
+
+            const passesTextFilter = !window.textSearchQuery || passesTextSearch(window.cachedPosts[index]);
+
+            return passesModeFilter && passesTextFilter;
+        }).length;
+        filteredCounts[dateFilter] = filteredCount;
+    });
 
     // Step 3: For all base set buttons, update count, state, and visibility
-    baseSet.forEach(({ dateFilter, dateButton, countSpan, datePostIndices }) => {
-        const count = modeFilters.length > 0 ? filteredCounts[dateFilter] : datePostIndices.size;
+    baseSet.forEach(({ dateFilter, dateButton, countSpan }) => {
+        const count = filteredCounts[dateFilter];
         // Update count display
         countSpan.textContent = `(${count})`;
 
@@ -540,7 +544,7 @@ function updateNonDateButtonsCountsAndState(visiblePosts) {
     // Use cached non-date filter buttons only
 
     // Use pre-calculated visiblePosts instead of recalculating
-    cachedNonDateButtons.forEach(btn => {
+    window.cachedNonDateButtons.forEach(btn => {
         const tag = btn.getAttribute('data-tag');
         if (!tag) return;
 
@@ -615,6 +619,13 @@ function executeFilterToggle(tag, filterType) {
 function executeClearFilters() {
     window.activeFilters.clear();
 
+    // Clear text search as well
+    window.textSearchQuery = '';
+    const textSearchInput = document.getElementById('text-search-input');
+    if (textSearchInput) {
+        textSearchInput.value = '';
+    }
+
     if (window.collapsedTagsVisible) {
         window.collapsedTagsVisible = false;
         updateCollapsedTagsVisibility();
@@ -633,7 +644,9 @@ function executeToggleCollapsedTags() {
 
 // More/Less tags functionality
 function updateCollapsedTagsVisibility() {
-    cachedHiddenTagButtons.forEach(btn => btn.classList.toggle('show', window.collapsedTagsVisible));
+    if (window.cachedHiddenTagButtons && window.cachedHiddenTagButtons.length > 0) {
+        window.cachedHiddenTagButtons.forEach(btn => btn.classList.toggle('show', window.collapsedTagsVisible));
+    }
 
     const toggleBtn = document.getElementById('toggle-collapsed-tags');
     if (toggleBtn) {
@@ -684,7 +697,6 @@ function checkFilterForCurrentMode(postIndex, filters) {
     }
 
     // No fallback - this indicates a problem with data generation
-    console.error('Tag relationships not available for filtering. This indicates a problem with server-side data generation.');
     return false;
 }
 
@@ -701,10 +713,10 @@ window.initializeTagFilter = initializeTagFilter;
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
     // Test-only function to reset caches
     function resetCaches() {
-        cachedPosts = null;
-        cachedDateButtons = null;
-        cachedNonDateButtons = null;
-        cachedHiddenTagButtons = null;
+        window.cachedPosts = null;
+        window.cachedDateButtons = null;
+        window.cachedNonDateButtons = null;
+        window.cachedHiddenTagButtons = null;
     }
 
     module.exports = {

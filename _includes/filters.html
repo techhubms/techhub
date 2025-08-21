@@ -3,8 +3,14 @@
 
   {%- assign filter_results = include.items | generate_all_filters: index_tag_mode, site.data.sections, include.section, page.category, page.collection, site.tag_filter -%}
   
-  <div id="tag-filters" class="tag-filters-flex">
+  <div id="tag-filters">
     <button id="tags-clear-btn" class="tag-filter-btn clear-btn">Clear All</button>
+
+    {%- comment -%} Text search input (between date and tag filters) {%- endcomment -%}
+    <div class="text-search-container">
+      <input type="text" id="text-search-input" placeholder="Free search" class="text-search-input">
+      <button id="text-search-clear" class="text-search-clear-btn hidden" title="Clear search">×</button>
+    </div>
     
     {%- comment -%} Date filter buttons (always rendered first if available) {%- endcomment -%}
     {%- assign date_filter_buttons = filter_results.date_filter_buttons -%}
@@ -16,12 +22,6 @@
         </button>
       {%- endfor -%}
     {%- endif -%}
-
-    {%- comment -%} Text search input (between date and tag filters) {%- endcomment -%}
-    <div class="text-search-container">
-      <input type="text" id="text-search-input" placeholder="Search tags and descriptions..." class="text-search-input">
-      <button id="text-search-clear" class="text-search-clear-btn hidden" title="Clear search">×</button>
-    </div>
 
     {%- comment -%} Mode-specific filter buttons {%- endcomment -%}
     {%- assign mode_filter_buttons = filter_results.mode_filter_buttons -%}
