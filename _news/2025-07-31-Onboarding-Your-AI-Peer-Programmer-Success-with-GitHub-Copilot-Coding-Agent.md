@@ -12,7 +12,7 @@ date: 2025-07-31 17:12:43 +00:00
 permalink: "/2025-07-31-Onboarding-Your-AI-Peer-Programmer-Success-with-GitHub-Copilot-Coding-Agent.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["Agentic Workflows", "AI", "AI & ML", "AI Peer Programming", "Azure Bicep", "Copilot Coding Agent", "Custom Instructions", "Development Environment", "DevOps", "Firewall Configuration", "Generative AI", "GitHub Actions", "GitHub Copilot", "MCP Servers", "News", "Project Onboarding", "Repositories", "Workflow Automation"]
-tags_normalized: ["agentic workflows", "ai", "ai ml", "ai peer programming", "azure bicep", "copilot coding agent", "custom instructions", "development environment", "devops", "firewall configuration", "generative ai", "github actions", "github copilot", "mcp servers", "news", "project onboarding", "repositories", "workflow automation"]
+tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai peer programming", "azure bicep", "copilot coding agent", "custom instructions", "development environment", "devops", "firewall configuration", "generative ai", "github actions", "github copilot", "mcp servers", "news", "project onboarding", "repositories", "workflow automation"]
 ---
 
 Christopher Harrison guides readers through best practices for configuring and onboarding GitHub Copilot coding agent as an AI peer programmer. Discover strategies for environment setup, project optimization, custom instructions, and extending Copilot with MCP servers.<!--excerpt_end-->

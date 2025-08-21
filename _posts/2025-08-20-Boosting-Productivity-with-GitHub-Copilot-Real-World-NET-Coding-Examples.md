@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-08-20 07:58:07 +00:00
 permalink: "/2025-08-20-Boosting-Productivity-with-GitHub-Copilot-Real-World-NET-Coding-Examples.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Pair Programmer", "Artificial Intelligence", "ASP.NET Core", "Boilerplate Reduction", "C#", "Code Automation", "Coding", "Controller Scaffolding", "Copilot Best Practices", "Entity Framework", "GitHub Copilot", "LINQ", "Microsoft", "Posts", "Productivity Tools", "Software Development", "Unit Testing", "Visual Studio", "Visual Studio Code", "XML Documentation", "xUnit"]
-tags_normalized: ["net", "ai", "ai pair programmer", "artificial intelligence", "asp dot net core", "boilerplate reduction", "c", "code automation", "coding", "controller scaffolding", "copilot best practices", "entity framework", "github copilot", "linq", "microsoft", "posts", "productivity tools", "software development", "unit testing", "visual studio", "visual studio code", "xml documentation", "xunit"]
+tags: [".NET", "AI", "AI Pair Programmer", "ASP.NET Core", "Boilerplate Reduction", "C#", "Code Automation", "Coding", "Controller Scaffolding", "Copilot Best Practices", "EF", "GitHub Copilot", "LINQ", "Microsoft", "Posts", "Productivity Tools", "Software Development", "Unit Testing", "VS", "VS Code", "XML Documentation", "xUnit"]
+tags_normalized: ["dotnet", "ai", "ai pair programmer", "aspdotnet core", "boilerplate reduction", "csharp", "code automation", "coding", "controller scaffolding", "copilot best practices", "ef", "github copilot", "linq", "microsoft", "posts", "productivity tools", "software development", "unit testing", "vs", "vs code", "xml documentation", "xunit"]
 ---
 
 Dellenny demonstrates how developers can leverage GitHub Copilot as an AI coding assistant in the .NET ecosystem, showcasing real-world examples to boost productivity and reduce repetitive tasks.<!--excerpt_end-->

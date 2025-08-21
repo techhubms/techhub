@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-08-02 10:03:38 +00:00
 permalink: "/2025-08-02-Structuring-CICD-Pipelines-Across-Code-and-Helm-Chart-Repositories-in-Azure-DevOps.html"
 categories: ["Azure", "Coding", "DevOps"]
-tags: ["Artifact Handoff", "Azure", "Azure Container Registry", "Azure DevOps", "Azure Kubernetes Service", "Build Automation", "CI/CD", "Coding", "Community", "DevOps", "Docker", "Helm", "IaC", "Mono Repo", "Multi Repo CI/CD", "Pipelines", "Repository Structure", "YAML Pipelines"]
-tags_normalized: ["artifact handoff", "azure", "azure container registry", "azure devops", "azure kubernetes service", "build automation", "ci slash cd", "coding", "community", "devops", "docker", "helm", "iac", "mono repo", "multi repo ci slash cd", "pipelines", "repository structure", "yaml pipelines"]
+tags: ["AKS", "Artifact Handoff", "Azure", "Azure Container Registry", "Azure DevOps", "Build Automation", "CI/CD", "Coding", "Community", "DevOps", "Docker", "Helm", "IaC", "Mono Repo", "Multi Repo CI/CD", "Pipelines", "Repository Structure", "YAML Pipelines"]
+tags_normalized: ["aks", "artifact handoff", "azure", "azure container registry", "azure devops", "build automation", "cislashcd", "coding", "community", "devops", "docker", "helm", "iac", "mono repo", "multi repo cislashcd", "pipelines", "repository structure", "yaml pipelines"]
 ---
 
 machosalade and others discuss best practices for wiring up CI/CD pipelines using Azure DevOps, ACR, AKS, and Helm, including sample pipeline YAML and repo structure recommendations.<!--excerpt_end-->

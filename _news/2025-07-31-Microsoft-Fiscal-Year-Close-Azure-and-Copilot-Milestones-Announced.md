@@ -11,8 +11,8 @@ feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-31 01:44:00 +00:00
 permalink: "/2025-07-31-Microsoft-Fiscal-Year-Close-Azure-and-Copilot-Milestones-Announced.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "Artificial Intelligence", "Azure", "Azure AI", "Azure Foundry", "Cloud Adoption", "Cloud Revenue", "Company News", "Enterprise AI", "LinkedIn Post", "M365 Copilot", "Microsoft", "Microsoft Copilot", "News", "Platform Diffusion", "Project Red Dog", "Satya Nadella"]
-tags_normalized: ["ai", "artificial intelligence", "azure", "azure ai", "azure foundry", "cloud adoption", "cloud revenue", "company news", "enterprise ai", "linkedin post", "m365 copilot", "microsoft", "microsoft copilot", "news", "platform diffusion", "project red dog", "satya nadella"]
+tags: ["AI", "Azure", "Azure AI", "Azure Foundry", "Cloud Adoption", "Cloud Revenue", "Company News", "Enterprise AI", "LinkedIn Post", "M365 Copilot", "Microsoft", "Microsoft Copilot", "News", "Platform Diffusion", "Project Red Dog", "Satya Nadella"]
+tags_normalized: ["ai", "azure", "azure ai", "azure foundry", "cloud adoption", "cloud revenue", "company news", "enterprise ai", "linkedin post", "m365 copilot", "microsoft", "microsoft copilot", "news", "platform diffusion", "project red dog", "satya nadella"]
 ---
 
 Satya Nadella shares key Microsoft fiscal year achievements, highlighting Azure's record revenue and major growth in Copilot AI usage across the Microsoft ecosystem.<!--excerpt_end-->

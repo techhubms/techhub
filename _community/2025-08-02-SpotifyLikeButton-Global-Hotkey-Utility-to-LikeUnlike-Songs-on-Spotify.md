@@ -12,7 +12,7 @@ date: 2025-08-02 19:05:44 +00:00
 permalink: "/2025-08-02-SpotifyLikeButton-Global-Hotkey-Utility-to-LikeUnlike-Songs-on-Spotify.html"
 categories: ["Coding"]
 tags: ["C#", "Coding", "Community", "Dotfiles", "Global Hotkeys", "Hyprland", "Linux Scripts", "Music", "Open Source", "Spotify API", "Waybar", "Windows"]
-tags_normalized: ["c", "coding", "community", "dotfiles", "global hotkeys", "hyprland", "linux scripts", "music", "open source", "spotify api", "waybar", "windows"]
+tags_normalized: ["csharp", "coding", "community", "dotfiles", "global hotkeys", "hyprland", "linux scripts", "music", "open source", "spotify api", "waybar", "windows"]
 ---
 
 BuildBazaar introduces SpotifyLikeButton, a C# tool that lets users like or unlike Spotify songs with global hotkeys. Explore how it works, its technical details, and alternative Linux scripts.<!--excerpt_end-->

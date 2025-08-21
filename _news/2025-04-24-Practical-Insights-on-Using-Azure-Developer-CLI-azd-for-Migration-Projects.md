@@ -12,7 +12,7 @@ date: 2025-04-24 17:20:06 +00:00
 permalink: "/2025-04-24-Practical-Insights-on-Using-Azure-Developer-CLI-azd-for-Migration-Projects.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", "Azd", "Azure", "Azure Container Apps", "Azure Developer CLI", "Azure SDK", "Bicep", "Coding", "DevOps", "IaC", "News"]
-tags_normalized: ["net", "azd", "azure", "azure container apps", "azure developer cli", "azure sdk", "bicep", "coding", "devops", "iac", "news"]
+tags_normalized: ["dotnet", "azd", "azure", "azure container apps", "azure developer cli", "azure sdk", "bicep", "coding", "devops", "iac", "news"]
 ---
 
 In this post, Frank Boucher details firsthand lessons from migrating AzUrlShortener to Azure using the Azure Developer CLI (azd). Gain insights into automating IaC with Bicep, managing deployment pipelines, and overcoming real-life migration challenges.<!--excerpt_end-->

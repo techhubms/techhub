@@ -12,7 +12,7 @@ date: 2025-08-04 16:00:00 +00:00
 permalink: "/2025-08-04-Automate-Your-Project-with-GitHub-Models-in-Actions-AI-Integration-for-Workflows.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Inference Action", "AI Integration", "Automation", "CLI", "DevOps", "Generative AI", "Gh Models Extension", "GitHub Actions", "GitHub Copilot", "GitHub Models", "Issue Triage", "News", "Permissions", "Prompt Engineering", "Pull Requests", "Release Notes Automation", "Summarization", "Workflow Automation"]
-tags_normalized: ["ai", "ai ml", "ai inference action", "ai integration", "automation", "cli", "devops", "generative ai", "gh models extension", "github actions", "github copilot", "github models", "issue triage", "news", "permissions", "prompt engineering", "pull requests", "release notes automation", "summarization", "workflow automation"]
+tags_normalized: ["ai", "ai and ml", "ai inference action", "ai integration", "automation", "cli", "devops", "generative ai", "gh models extension", "github actions", "github copilot", "github models", "issue triage", "news", "permissions", "prompt engineering", "pull requests", "release notes automation", "summarization", "workflow automation"]
 ---
 
 Authored by Kevin Lewis, this article explores practical ways to automate your GitHub Actions workflows using GitHub Models. It guides readers through permissions and shows AI-powered automation for triaging issues, summarizing pull requests, and more.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2025-08-12 16:22:46 +00:00
 permalink: "/2025-08-12-Dependabot-Adds-Version-Update-Support-for-vcpkg.html"
 categories: ["Coding", "DevOps"]
 tags: ["C++", "Coding", "Continuous Integration", "Dependabot", "Dependency Updates", "DevOps", "DevOps Automation", "GitHub", "Manifest Mode", "Microsoft", "News", "Open Source Tools", "Package Management", "Vcpkg"]
-tags_normalized: ["c", "coding", "continuous integration", "dependabot", "dependency updates", "devops", "devops automation", "github", "manifest mode", "microsoft", "news", "open source tools", "package management", "vcpkg"]
+tags_normalized: ["cplusplus", "coding", "continuous integration", "dependabot", "dependency updates", "devops", "devops automation", "github", "manifest mode", "microsoft", "news", "open source tools", "package management", "vcpkg"]
 ---
 
 Allison details the new Dependabot support for automatic version updates in vcpkg, enabling C/C++ projects to maintain secure and current dependencies within GitHub workflows.<!--excerpt_end-->

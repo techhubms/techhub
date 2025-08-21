@@ -12,7 +12,7 @@ date: 2025-01-17 23:39:51 +00:00
 permalink: "/2025-01-17-AutoGen-Reimagined-Announcing-the-Launch-of-AutoGen-04.html"
 categories: ["AI"]
 tags: [".NET", "Agentic Workflows", "AI", "Asynchronous Messaging", "Autogen", "AutoGen Studio", "Cross Language Support", "Developer Tools", "Layered Architecture", "Magentic One", "Modular AI", "New Release", "News", "OpenTelemetry", "Python"]
-tags_normalized: ["net", "agentic workflows", "ai", "asynchronous messaging", "autogen", "autogen studio", "cross language support", "developer tools", "layered architecture", "magentic one", "modular ai", "new release", "news", "opentelemetry", "python"]
+tags_normalized: ["dotnet", "agentic workflows", "ai", "asynchronous messaging", "autogen", "autogen studio", "cross language support", "developer tools", "layered architecture", "magentic one", "modular ai", "new release", "news", "opentelemetry", "python"]
 ---
 
 Friederike Niedtner presents the release of AutoGen v0.4, a major update focusing on robust, scalable agentic AI workflows with improved architecture, developer tools, and cross-language support. Learn about its new features, migration guidance, and roadmap.<!--excerpt_end-->

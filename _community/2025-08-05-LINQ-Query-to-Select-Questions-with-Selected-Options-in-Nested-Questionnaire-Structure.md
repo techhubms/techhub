@@ -12,7 +12,7 @@ date: 2025-08-05 20:46:37 +00:00
 permalink: "/2025-08-05-LINQ-Query-to-Select-Questions-with-Selected-Options-in-Nested-Questionnaire-Structure.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Coding", "Community", "Data Query", "Functional Programming", "LINQ", "Nested Collections", "Options Pattern", "Query Optimization", "Questionnaire", "Questions Filtering", "SelectMany"]
-tags_normalized: ["net", "c", "coding", "community", "data query", "functional programming", "linq", "nested collections", "options pattern", "query optimization", "questionnaire", "questions filtering", "selectmany"]
+tags_normalized: ["dotnet", "csharp", "coding", "community", "data query", "functional programming", "linq", "nested collections", "options pattern", "query optimization", "questionnaire", "questions filtering", "selectmany"]
 ---
 
 GreatlyUnknown seeks advice on writing a LINQ query to retrieve questions with selected options from a nested questionnaire structure, sparking a discussion about effective usage of SelectMany in C#.<!--excerpt_end-->

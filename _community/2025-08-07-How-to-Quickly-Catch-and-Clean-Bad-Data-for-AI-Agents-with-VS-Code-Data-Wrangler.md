@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?cate
 date: 2025-08-07 04:15:00 +00:00
 permalink: "/2025-08-07-How-to-Quickly-Catch-and-Clean-Bad-Data-for-AI-Agents-with-VS-Code-Data-Wrangler.html"
 categories: ["AI", "Coding", "ML"]
-tags: ["AI", "AI Agents", "Coding", "Column Insights", "Community", "CSV", "Data Cleaning", "Data Exploration", "Data Science", "Data Wrangler", "Dataset Validation", "Fine Tuning", "Microsoft", "ML", "No Code Data Tools", "Null Values", "Outlier Detection", "Parquet", "Visual Studio Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai agents", "coding", "column insights", "community", "csv", "data cleaning", "data exploration", "data science", "data wrangler", "dataset validation", "fine tuning", "microsoft", "ml", "no code data tools", "null values", "outlier detection", "parquet", "visual studio code", "vs code extensions"]
+tags: ["AI", "AI Agents", "Coding", "Column Insights", "Community", "CSV", "Data Cleaning", "Data Exploration", "Data Science", "Data Wrangler", "Dataset Validation", "Fine Tuning", "Microsoft", "ML", "No Code Data Tools", "Null Values", "Outlier Detection", "Parquet", "VS Code", "VS Code Extensions"]
+tags_normalized: ["ai", "ai agents", "coding", "column insights", "community", "csv", "data cleaning", "data exploration", "data science", "data wrangler", "dataset validation", "fine tuning", "microsoft", "ml", "no code data tools", "null values", "outlier detection", "parquet", "vs code", "vs code extensions"]
 ---
 
 AngelosPetropoulos offers practical advice on catching and fixing bad data before it disrupts your AI agent, highlighting the use of VS Code Data Wrangler for rapid, code-free dataset inspection and cleaning.<!--excerpt_end-->

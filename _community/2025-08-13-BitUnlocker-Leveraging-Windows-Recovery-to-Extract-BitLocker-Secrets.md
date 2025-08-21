@@ -12,7 +12,7 @@ date: 2025-08-13 17:04:05 +00:00
 permalink: "/2025-08-13-BitUnlocker-Leveraging-Windows-Recovery-to-Extract-BitLocker-Secrets.html"
 categories: ["Security"]
 tags: ["BCD Store", "BitLocker", "Boot.sdi", "Community", "CVE 48003", "CVE 48800", "CVE 48804", "CVE 48818", "Exploit", "Microsoft STORM", "Offline Scanning", "Patch Tuesday", "ReAgent.xml", "Recovery OS", "REVISE Mitigation", "Security", "Security Testing", "SetupPlatform.exe", "TPM+PIN", "Trusted WIM Boot", "Vulnerability Research", "Windows Recovery Environment", "WinRE"]
-tags_normalized: ["bcd store", "bitlocker", "boot dot sdi", "community", "cve 48003", "cve 48800", "cve 48804", "cve 48818", "exploit", "microsoft storm", "offline scanning", "patch tuesday", "reagent dot xml", "recovery os", "revise mitigation", "security", "security testing", "setupplatform dot exe", "tpm plus pin", "trusted wim boot", "vulnerability research", "windows recovery environment", "winre"]
+tags_normalized: ["bcd store", "bitlocker", "bootdotsdi", "community", "cve 48003", "cve 48800", "cve 48804", "cve 48818", "exploit", "microsoft storm", "offline scanning", "patch tuesday", "reagentdotxml", "recovery os", "revise mitigation", "security", "security testing", "setupplatformdotexe", "tpmpluspin", "trusted wim boot", "vulnerability research", "windows recovery environment", "winre"]
 ---
 
 Alon Leviev, along with Netanel Ben Simon from Microsoft's STORM research team, details their investigation into newly discovered attack surfaces in Windows Recovery Environment impacting BitLocker. The post guides readers through research findings, exploitation techniques, and recommended mitigations.<!--excerpt_end-->

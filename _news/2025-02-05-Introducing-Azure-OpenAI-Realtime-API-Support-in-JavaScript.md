@@ -12,7 +12,7 @@ date: 2025-02-05 05:35:07 +00:00
 permalink: "/2025-02-05-Introducing-Azure-OpenAI-Realtime-API-Support-in-JavaScript.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "Authentication", "Azure", "Azure OpenAI", "Azure SDK", "Coding", "DefaultAzureCredential", "Event Handling", "JavaScript", "News", "Node.js", "OpenAI", "OpenAI Library", "Realtime API", "Streaming Data", "Typescript", "WebSocket"]
-tags_normalized: ["ai", "authentication", "azure", "azure openai", "azure sdk", "coding", "defaultazurecredential", "event handling", "javascript", "news", "node dot js", "openai", "openai library", "realtime api", "streaming data", "typescript", "websocket"]
+tags_normalized: ["ai", "authentication", "azure", "azure openai", "azure sdk", "coding", "defaultazurecredential", "event handling", "javascript", "news", "nodedotjs", "openai", "openai library", "realtime api", "streaming data", "typescript", "websocket"]
 ---
 
 Deyaaeldeen Almahallawi explains how developers can leverage the new Realtime API in the Azure OpenAI JavaScript library for fast, interactive applications.<!--excerpt_end-->

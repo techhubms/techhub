@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-06-26 19:15:00 +00:00
 permalink: "/2025-06-26-Simpler-XAML-in-NET-MAUI-10.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET MAUI", "AlohaKit Animations", "Coding", "Community Toolkit", "Global Namespaces", "Hot Reload", "Implicit Namespaces", "Namespace Prefixes", "News", "NuGet Packages", "Syncfusion Toolkit", "Visual Studio", "Xaml", "XmlnsDefinition", "XmlnsPrefix"]
-tags_normalized: ["net", "net 10", "net maui", "alohakit animations", "coding", "community toolkit", "global namespaces", "hot reload", "implicit namespaces", "namespace prefixes", "news", "nuget packages", "syncfusion toolkit", "visual studio", "xaml", "xmlnsdefinition", "xmlnsprefix"]
+tags: [".NET", ".NET 10", "AlohaKit Animations", "Coding", "Community Toolkit", "Global Namespaces", "Hot Reload", "Implicit Namespaces", "MAUI", "Namespace Prefixes", "News", "NuGet Packages", "Syncfusion Toolkit", "VS", "Xaml", "XmlnsDefinition", "XmlnsPrefix"]
+tags_normalized: ["dotnet", "dotnet 10", "alohakit animations", "coding", "community toolkit", "global namespaces", "hot reload", "implicit namespaces", "maui", "namespace prefixes", "news", "nuget packages", "syncfusion toolkit", "vs", "xaml", "xmlnsdefinition", "xmlnsprefix"]
 ---
 
 David Ortinau discusses new features in .NET MAUI 10 that streamline XAML development, focusing on implicit and global namespaces to minimize verbosity and improve maintainability.<!--excerpt_end-->

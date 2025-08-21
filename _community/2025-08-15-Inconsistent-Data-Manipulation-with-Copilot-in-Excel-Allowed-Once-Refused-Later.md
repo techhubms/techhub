@@ -12,7 +12,7 @@ date: 2025-08-15 20:39:55 +00:00
 permalink: "/2025-08-15-Inconsistent-Data-Manipulation-with-Copilot-in-Excel-Allowed-Once-Refused-Later.html"
 categories: ["AI"]
 tags: ["A/B Behavior", "AI", "AI Assistant", "Community", "Copilot", "Copilot Limitations", "Data Manipulation", "Excel", "Excel Copilot", "Microsoft 365", "Permissions Sorting", "Power Query", "Sheet1", "Table1", "Table3", "User Experience", "Worksheet Automation"]
-tags_normalized: ["a slash b behavior", "ai", "ai assistant", "community", "copilot", "copilot limitations", "data manipulation", "excel", "excel copilot", "microsoft 365", "permissions sorting", "power query", "sheet1", "table1", "table3", "user experience", "worksheet automation"]
+tags_normalized: ["aslashb behavior", "ai", "ai assistant", "community", "copilot", "copilot limitations", "data manipulation", "excel", "excel copilot", "microsoft 365", "permissions sorting", "power query", "sheet1", "table1", "table3", "user experience", "worksheet automation"]
 ---
 
 zivrivkis describes a case where Copilot in Excel was able to sort permission columns automatically on the first attempt, but refused to do so on a second, similar worksheet—prompting questions about the tool’s inconsistent capabilities and underlying technical constraints.<!--excerpt_end-->

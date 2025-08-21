@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-07-15 20:00:00 +00:00
 permalink: "/2025-07-15-Building-Your-First-MCP-Server-with-NET-10-and-Publishing-to-NuGet.html"
 categories: ["AI", "GitHub Copilot", "Coding"]
-tags: [".NET", ".NET 10", "AI", "AI Assistants", "C#", "Coding", "Community Tools", "Configuration", "GitHub Copilot", "MCP", "Model Context Protocol", "News", "NuGet", "Open Standard", "Project Publishing", "SDK", "Server Development", "Templates", "Visual Studio Code"]
-tags_normalized: ["net", "net 10", "ai", "ai assistants", "c", "coding", "community tools", "configuration", "github copilot", "mcp", "model context protocol", "news", "nuget", "open standard", "project publishing", "sdk", "server development", "templates", "visual studio code"]
+tags: [".NET", ".NET 10", "AI", "AI Assistants", "C#", "Coding", "Community Tools", "Configuration", "GitHub Copilot", "MCP", "News", "NuGet", "Open Standard", "Project Publishing", "SDK", "Server Development", "Templates", "VS Code"]
+tags_normalized: ["dotnet", "dotnet 10", "ai", "ai assistants", "csharp", "coding", "community tools", "configuration", "github copilot", "mcp", "news", "nuget", "open standard", "project publishing", "sdk", "server development", "templates", "vs code"]
 ---
 
 Written by Jon Douglas, Joel Verhagen, and Jon Galloway, this article demonstrates how to build, customize, and publish your first Model Context Protocol (MCP) server using .NET 10, enabling discoverable AI integrations via NuGet.<!--excerpt_end-->

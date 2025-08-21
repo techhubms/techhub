@@ -12,7 +12,7 @@ date: 2025-08-02 23:20:30 +00:00
 permalink: "/2025-08-02-Model-Validation-Best-Practices-in-NET-Using-FluentValidation.html"
 categories: ["Coding"]
 tags: [".NET", "Action Filters", "Clean Code", "Coding", "Community", "Controller Design", "Custom Validators", "Data Annotations", "Extension Methods", "FluentValidation", "Maintainability", "Model Validation", "Validation Best Practices"]
-tags_normalized: ["net", "action filters", "clean code", "coding", "community", "controller design", "custom validators", "data annotations", "extension methods", "fluentvalidation", "maintainability", "model validation", "validation best practices"]
+tags_normalized: ["dotnet", "action filters", "clean code", "coding", "community", "controller design", "custom validators", "data annotations", "extension methods", "fluentvalidation", "maintainability", "model validation", "validation best practices"]
 ---
 
 In this community post, ErfanBaghdadi seeks advice on best practices for implementing model validation in .NET with FluentValidation, focusing on maintainability and clean code.<!--excerpt_end-->

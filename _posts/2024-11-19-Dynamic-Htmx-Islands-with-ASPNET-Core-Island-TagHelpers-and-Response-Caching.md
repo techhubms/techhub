@@ -12,7 +12,7 @@ date: 2024-11-19 00:00:00 +00:00
 permalink: "/2024-11-19-Dynamic-Htmx-Islands-with-ASPNET-Core-Island-TagHelpers-and-Response-Caching.html"
 categories: ["Coding"]
 tags: ["ASP.NET", "ASP.NET Core", "Coding", "Dynamic Content", "Htmx", "Island Architecture", "Output Caching", "Posts", "Razor Pages", "Response Caching", "Server Islands", "Static Site Rendering", "TagHelper", "Web Development"]
-tags_normalized: ["asp dot net", "asp dot net core", "coding", "dynamic content", "htmx", "island architecture", "output caching", "posts", "razor pages", "response caching", "server islands", "static site rendering", "taghelper", "web development"]
+tags_normalized: ["aspdotnet", "aspdotnet core", "coding", "dynamic content", "htmx", "island architecture", "output caching", "posts", "razor pages", "response caching", "server islands", "static site rendering", "taghelper", "web development"]
 ---
 
 In this post, Khalid Abuhakmeh demonstrates how to build dynamic 'islands' in ASP.NET Core applications with Htmx, using TagHelpers and caching to combine static speed with dynamic server-rendered content.<!--excerpt_end-->

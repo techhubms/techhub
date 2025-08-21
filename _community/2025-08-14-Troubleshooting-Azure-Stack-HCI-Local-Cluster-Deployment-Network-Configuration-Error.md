@@ -12,7 +12,7 @@ date: 2025-08-14 07:04:16 +00:00
 permalink: "/2025-08-14-Troubleshooting-Azure-Stack-HCI-Local-Cluster-Deployment-Network-Configuration-Error.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Stack HCI", "CloudDeployment", "Cluster Deployment", "Cluster.psm1", "Community", "Deployment Error", "Hybrid Cloud", "Microsoft Azure", "Network Configuration", "PowerShell", "SCPSModule"]
-tags_normalized: ["azure", "azure stack hci", "clouddeployment", "cluster deployment", "cluster dot psm1", "community", "deployment error", "hybrid cloud", "microsoft azure", "network configuration", "powershell", "scpsmodule"]
+tags_normalized: ["azure", "azure stack hci", "clouddeployment", "cluster deployment", "clusterdotpsm1", "community", "deployment error", "hybrid cloud", "microsoft azure", "network configuration", "powershell", "scpsmodule"]
 ---
 
 JensI shares a problem encountered while deploying an Azure Stack HCI local cluster, highlighting a vague network configuration error and seeking troubleshooting steps.<!--excerpt_end-->

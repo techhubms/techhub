@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-03 01:29:08 +00:00
 permalink: "/2025-08-03-Seeking-Guidance-Effectively-Using-GitHub-Copilot-with-VS-Code-and-Docker.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Angular", "Beginner Questions", "Community", "DevOps", "Docker", "Git", "GitHub", "GitHub Copilot", "Node.js", "Project Workflow", "Restore Points", "Visual Studio Code", "Web Development", "Workspace Management"]
-tags_normalized: ["ai", "angular", "beginner questions", "community", "devops", "docker", "git", "github", "github copilot", "node dot js", "project workflow", "restore points", "visual studio code", "web development", "workspace management"]
+tags: ["AI", "Angular", "Beginner Questions", "Community", "DevOps", "Docker", "Git", "GitHub", "GitHub Copilot", "Node.js", "Project Workflow", "Restore Points", "VS Code", "Web Development", "Workspace Management"]
+tags_normalized: ["ai", "angular", "beginner questions", "community", "devops", "docker", "git", "github", "github copilot", "nodedotjs", "project workflow", "restore points", "vs code", "web development", "workspace management"]
 ---
 
 MaxellVideocassette, new to GitHub Copilot and development practices, seeks advice on workflows with VS Code, Docker, and source control.<!--excerpt_end-->

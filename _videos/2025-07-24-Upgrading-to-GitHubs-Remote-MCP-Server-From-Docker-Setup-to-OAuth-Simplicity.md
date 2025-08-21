@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOH
 date: 2025-07-24 16:37:37 +00:00
 permalink: "/2025-07-24-Upgrading-to-GitHubs-Remote-MCP-Server-From-Docker-Setup-to-OAuth-Simplicity.html"
 categories: ["DevOps"]
-tags: ["DevOps", "DevOps Workflow", "Dynamic Toolsets", "GitHub", "Installation", "MCP", "Model Context Protocol", "ModelContextProtocol", "OAuth", "Open Source", "Remote Server", "Server Upgrade", "Videos"]
-tags_normalized: ["devops", "devops workflow", "dynamic toolsets", "github", "installation", "mcp", "model context protocol", "modelcontextprotocol", "oauth", "open source", "remote server", "server upgrade", "videos"]
+tags: ["DevOps", "DevOps Workflow", "Dynamic Toolsets", "GitHub", "Installation", "MCP", "OAuth", "Open Source", "Remote Server", "Server Upgrade", "Videos"]
+tags_normalized: ["devops", "devops workflow", "dynamic toolsets", "github", "installation", "mcp", "oauth", "open source", "remote server", "server upgrade", "videos"]
 ---
 
 In this GitHub-hosted video, the team explains the major upgrade from the local to remote MCP server, examining features, setup, security, and future plans.<!--excerpt_end-->

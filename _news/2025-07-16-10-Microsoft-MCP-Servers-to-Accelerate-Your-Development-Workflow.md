@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-07-16 19:30:32 +00:00
 permalink: "/2025-07-16-10-Microsoft-MCP-Servers-to-Accelerate-Your-Development-Workflow.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "AI Integration", "Automation", "Azure", "Azure AI Foundry", "Azure DevOps", "Coding", "Developer Productivity", "DevOps", "GitHub", "MCP", "MCP Server", "Microsoft 365", "Model Context Protocol", "News", "Playwright", "SQL Server", "Visual Studio", "Visual Studio Code"]
-tags_normalized: ["ai", "ai integration", "automation", "azure", "azure ai foundry", "azure devops", "coding", "developer productivity", "devops", "github", "mcp", "mcp server", "microsoft 365", "model context protocol", "news", "playwright", "sql server", "visual studio", "visual studio code"]
+tags: ["AI", "AI Integration", "Automation", "Azure", "Azure AI Foundry", "Azure DevOps", "Coding", "Developer Productivity", "DevOps", "GitHub", "MCP", "MCP Server", "Microsoft 365", "News", "Playwright", "SQL Server", "VS", "VS Code"]
+tags_normalized: ["ai", "ai integration", "automation", "azure", "azure ai foundry", "azure devops", "coding", "developer productivity", "devops", "github", "mcp", "mcp server", "microsoft 365", "news", "playwright", "sql server", "vs", "vs code"]
 ---
 
 In this detailed blog post, Jon Galloway presents ten Microsoft MCP servers that can greatly improve your developer workflow, offering actionable tips, configuration guidance, and real-world use cases for integrating AI and automation across popular Microsoft development tools.<!--excerpt_end-->

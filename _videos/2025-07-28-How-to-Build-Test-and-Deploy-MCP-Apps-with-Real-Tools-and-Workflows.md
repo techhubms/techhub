@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-07-28 16:01:33 +00:00
 permalink: "/2025-07-28-How-to-Build-Test-and-Deploy-MCP-Apps-with-Real-Tools-and-Workflows.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
-tags: ["AI", "API Management", "App Security", "Azure", "Azure Functions", "C#", "Coding", "Deployment", "DevOps", "Java", "JavaScript", "Live Debugging", "MCP", "MCP Inspector", "Microsoft Entra ID", "Model Context Protocol", "Python", "SDK", "Security", "TypeScript", "Videos"]
-tags_normalized: ["ai", "api management", "app security", "azure", "azure functions", "c", "coding", "deployment", "devops", "java", "javascript", "live debugging", "mcp", "mcp inspector", "microsoft entra id", "model context protocol", "python", "sdk", "security", "typescript", "videos"]
+tags: ["AI", "API Management", "App Security", "Azure", "Azure Functions", "C#", "Coding", "Deployment", "DevOps", "Java", "JavaScript", "Live Debugging", "MCP", "MCP Inspector", "Microsoft Entra ID", "Python", "SDK", "Security", "TypeScript", "Videos"]
+tags_normalized: ["ai", "api management", "app security", "azure", "azure functions", "csharp", "coding", "deployment", "devops", "java", "javascript", "live debugging", "mcp", "mcp inspector", "microsoft entra id", "python", "sdk", "security", "typescript", "videos"]
 ---
 
 In this video, Microsoft Developer demonstrates how to build, test, and deploy Model Context Protocol (MCP) applications using real tools. The session details official SDKs, live debugging, Azure Functions, and securing APIs with Microsoft cloud services.<!--excerpt_end-->

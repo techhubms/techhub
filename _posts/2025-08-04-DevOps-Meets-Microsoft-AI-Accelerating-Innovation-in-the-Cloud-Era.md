@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-08-04 12:13:52 +00:00
 permalink: "/2025-08-04-DevOps-Meets-Microsoft-AI-Accelerating-Innovation-in-the-Cloud-Era.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "ML"]
-tags: ["AI", "AIOps", "Application Insights", "Artificial Intelligence", "Automation", "Azure", "Azure DevOps", "Azure Machine Learning", "Azure Monitor", "Azure Pipelines", "CI/CD", "Cloud Computing", "DevOps", "DevSecOps", "GitHub Actions", "GitHub Copilot", "Log Analytics", "Microsoft AI", "Microsoft Fabric", "Microsoft Sentinel", "ML", "MLflow", "OpenAI Codex", "Posts", "Responsible AI", "Software Delivery"]
-tags_normalized: ["ai", "aiops", "application insights", "artificial intelligence", "automation", "azure", "azure devops", "azure machine learning", "azure monitor", "azure pipelines", "ci slash cd", "cloud computing", "devops", "devsecops", "github actions", "github copilot", "log analytics", "microsoft ai", "microsoft fabric", "microsoft sentinel", "ml", "mlflow", "openai codex", "posts", "responsible ai", "software delivery"]
+tags: ["AI", "AIOps", "Application Insights", "Automation", "Azure", "Azure DevOps", "Azure Machine Learning", "Azure Monitor", "Azure Pipelines", "CI/CD", "Cloud Computing", "DevOps", "DevSecOps", "GitHub Actions", "GitHub Copilot", "Log Analytics", "Microsoft AI", "Microsoft Fabric", "Microsoft Sentinel", "ML", "MLflow", "OpenAI Codex", "Posts", "Responsible AI", "Software Delivery"]
+tags_normalized: ["ai", "aiops", "application insights", "automation", "azure", "azure devops", "azure machine learning", "azure monitor", "azure pipelines", "cislashcd", "cloud computing", "devops", "devsecops", "github actions", "github copilot", "log analytics", "microsoft ai", "microsoft fabric", "microsoft sentinel", "ml", "mlflow", "openai codex", "posts", "responsible ai", "software delivery"]
 ---
 
 Written by Dellenny, this comprehensive overview shows how Microsoft AI—including GitHub Copilot—integrates with DevOps tools to enhance productivity, automation, and secure software delivery.<!--excerpt_end-->

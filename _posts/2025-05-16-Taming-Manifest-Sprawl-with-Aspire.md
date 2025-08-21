@@ -12,7 +12,7 @@ date: 2025-05-16 15:15:55 +00:00
 permalink: "/2025-05-16-Taming-Manifest-Sprawl-with-Aspire.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET", "Aspire", "C#", "CI/CD", "Cloud Native", "Coding", "Configuration Management", "Developer Experience", "DevOps", "Docker", "Docker Compose", "Kubernetes", "OpenTelemetry", "Posts", "Service Modeling", "Software Development"]
-tags_normalized: ["net", "aspire", "c", "ci slash cd", "cloud native", "coding", "configuration management", "developer experience", "devops", "docker", "docker compose", "kubernetes", "opentelemetry", "posts", "service modeling", "software development"]
+tags_normalized: ["dotnet", "aspire", "csharp", "cislashcd", "cloud native", "coding", "configuration management", "developer experience", "devops", "docker", "docker compose", "kubernetes", "opentelemetry", "posts", "service modeling", "software development"]
 ---
 
 David Fowler explores how Aspire addresses 'manifest sprawl' by unifying application configuration and deployment manifests into a single, C#-coded model, streamlining workflows for developers.<!--excerpt_end-->

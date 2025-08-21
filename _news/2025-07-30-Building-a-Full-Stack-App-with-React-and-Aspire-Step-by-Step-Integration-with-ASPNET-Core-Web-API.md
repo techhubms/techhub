@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-07-30 17:00:00 +00:00
 permalink: "/2025-07-30-Building-a-Full-Stack-App-with-React-and-Aspire-Step-by-Step-Integration-with-ASPNET-Core-Web-API.html"
 categories: ["Coding"]
-tags: [".NET", ".NET Aspire", ".NET CLI", "ASP.NET Core", "Aspire", "C#", "Coding", "Entity Framework Core", "Full Stack Development", "JavaScript", "News", "React", "REST API", "SQLite", "Visual Studio Code", "Vite"]
-tags_normalized: ["net", "net aspire", "net cli", "asp dot net core", "aspire", "c", "coding", "entity framework core", "full stack development", "javascript", "news", "react", "rest api", "sqlite", "visual studio code", "vite"]
+tags: [".NET", ".NET Aspire", ".NET CLI", "ASP.NET Core", "Aspire", "C#", "Coding", "EF Core", "Full Stack Development", "JavaScript", "News", "React", "REST API", "SQLite", "Vite", "VS Code"]
+tags_normalized: ["dotnet", "dotnet aspire", "dotnet cli", "aspdotnet core", "aspire", "csharp", "coding", "ef core", "full stack development", "javascript", "news", "react", "rest api", "sqlite", "vite", "vs code"]
 ---
 
 In this guide, Sayed Ibrahim Hashimi demonstrates how to construct a full-stack TODO application using React and Aspire, coupling a modern front-end with an ASP.NET Core Web API and persistent SQLite storage.<!--excerpt_end-->

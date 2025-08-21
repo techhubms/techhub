@@ -12,7 +12,7 @@ date: 2025-08-20 11:00:02 +00:00
 permalink: "/2025-08-20-Sending-Email-Correctly-in-NET.html"
 categories: ["Coding"]
 tags: [".NET", "Application Development", "Backend Development", "C#", "Coding", "Dylan Beattie", "Email Best Practices", "Email Integration", "Email Sending", "Nick Chapsas", "SMTP", "Software Engineering", "Videos"]
-tags_normalized: ["net", "application development", "backend development", "c", "coding", "dylan beattie", "email best practices", "email integration", "email sending", "nick chapsas", "smtp", "software engineering", "videos"]
+tags_normalized: ["dotnet", "application development", "backend development", "csharp", "coding", "dylan beattie", "email best practices", "email integration", "email sending", "nick chapsas", "smtp", "software engineering", "videos"]
 ---
 
 Nick Chapsas, with guest Dylan Beattie, presents a developer-focused walkthrough on properly sending emails in .NET. This guide is crucial for those looking to implement reliable email features.<!--excerpt_end-->

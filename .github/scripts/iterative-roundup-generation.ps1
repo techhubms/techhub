@@ -1006,7 +1006,8 @@ ROLE: You are an expert content editor focused on condensing well-organized cont
 
 CONDENSATION TASK:
 - You will receive well-organized content with proper sections, topics, and narrative flow
-- You need to condense it to approximately 200-300 lines of NARRATIVE TEXT, NOT counting any article links
+- You need to condense it to approximately 200-300 lines of NARRATIVE TEXT
+- Do NOT count article links or lists when determining the 200-300 lines target, ONLY count narrative text
 - CONDENSATION MEANS: Make the paragraphs shorter and more concise, NOT skip entire sections
 
 CONDENSATION STRATEGY - MAKE TEXT SHORTER, NOT REMOVE CONTENT:
@@ -1026,6 +1027,7 @@ CONDENSATION STRATEGY - MAKE TEXT SHORTER, NOT REMOVE CONTENT:
 - CRITICAL: ALWAYS maintain the existing structure and organization - all headers must be preserved
 - CRITICAL: ALWAYS keep all section headers (##) and topic headers (###) exactly as provided
 - CRITICAL: NEVER write summary statements like "sections continue as previously formatted" - WRITE THEM OUT IN FULL
+- CRITICAL: NEVER remove paragraphs introducing links, groups, sections, topics or any other text that provides a narrative.
 
 WHAT TO CONDENSE (Make Shorter, Not Remove):
 - Make verbose explanations more concise while keeping essential information
@@ -1105,8 +1107,10 @@ ABSOLUTE CRITICAL REQUIREMENT: You must provide a complete, comprehensive respon
 
 ROLE: You are an expert content curator generating metadata for a weekly tech roundup. Based on the condensed content, generate ONLY the metadata and introduction as a JSON response.
 
-CRITICAL REQUIREMENTS:
-- Return ONLY valid JSON with ONLY these exact fields: title, tags, description, introduction
+CRITICAL: Make sure the response is VALID JSON
+CRITICAL: Return a JSON object with these exact fields: title, tags, description, introduction
+CRITICAL: These are what the 4 fields should contain:
+
 - Title: Create an engaging, informative title that reflects the week's main themes. Do NOT include the date in the title.
 - Tags: Array of 10-15 relevant technology tags from the content
 - Description: Write a 2-3 sentence summary of the week's key developments
@@ -1291,11 +1295,16 @@ $step6Response
         $guidelines = Get-Content $guidelinesPath -Raw -Encoding UTF8
 
         $rewriteSystemMessage = @"
-ABSOLUTE CRITICAL REQUIREMENT: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full enhanced content requested!
+🚨🚨🚨 CRITICAL ANTI-TRUNCATION REQUIREMENT 🚨🚨🚨
+YOU MUST COMPLETE YOUR ENTIRE RESPONSE. NEVER STOP WRITING BEFORE YOU HAVE PROCESSED AND RETURNED ALL CONTENT PROVIDED TO YOU.
+DO NOT truncate, abbreviate, or summarize sections with phrases like "continues as previously formatted" or "additional sections follow the same pattern" or "excerpt" or "Note: This shows..." or similar.
+YOU MUST WRITE OUT EVERY SINGLE SECTION, EVERY SINGLE TOPIC, AND EVERY SINGLE LINK IN FULL.
+PROVIDE THE COMPLETE, CONDENSED VERSION OF ALL CONTENT - NO SHORTCUTS, NO OMISSIONS, NO TRUNCATION.
 
 ROLE: You are a content editor tasked with rewriting content to ensure it adheres to specific writing style guidelines. 
 
-CRITICAL: Do NOT remove any headers, links or other content. ONLY rewrite text to ensure compliance with the guidelines while preserving all structural elements.
+CRITICAL: NEVER remove chapters, paragraphs, headers, links or ANY other content.
+CRITICAL: ONLY rewrite text to ensure compliance with the guidelines while preserving all structural elements.
 CRITICAL: Do not include the 'CONTENT TO REWRITE IF NEEDED' header or any other new headers in your response.
 
 $guidelines

@@ -12,7 +12,7 @@ date: 2025-07-10 09:57:01 +00:00
 permalink: "/2025-07-10-Docker-Adds-AI-Agent-Support-and-GPU-Powered-Offload-Service-to-Compose.html"
 categories: ["AI"]
 tags: ["Agentic Orchestration", "AI", "AI Agent", "AI Agents", "AI Workloads", "AI/ML", "Build Cloud", "Cloud Development", "Container Services", "Containers", "CrewAI", "Docker", "Docker Compose", "Docker Offload", "Ephemeral Compute", "GPU Cloud", "Hybrid Workflow", "LangGraph", "MCP Gateway", "Nvidia L4", "Port Forwarding", "Posts", "Remote Build", "Spring AI"]
-tags_normalized: ["agentic orchestration", "ai", "ai agent", "ai agents", "ai workloads", "ai slash ml", "build cloud", "cloud development", "container services", "containers", "crewai", "docker", "docker compose", "docker offload", "ephemeral compute", "gpu cloud", "hybrid workflow", "langgraph", "mcp gateway", "nvidia l4", "port forwarding", "posts", "remote build", "spring ai"]
+tags_normalized: ["agentic orchestration", "ai", "ai agent", "ai agents", "ai workloads", "aislashml", "build cloud", "cloud development", "container services", "containers", "crewai", "docker", "docker compose", "docker offload", "ephemeral compute", "gpu cloud", "hybrid workflow", "langgraph", "mcp gateway", "nvidia l4", "port forwarding", "posts", "remote build", "spring ai"]
 ---
 
 Tim Anderson analyzes Docker's new AI agent support in Compose and its GPU-powered Docker Offload cloud service, outlining key features and implications for developer workflows.<!--excerpt_end-->

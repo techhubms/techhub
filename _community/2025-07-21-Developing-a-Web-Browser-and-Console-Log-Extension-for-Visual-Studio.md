@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
 date: 2025-07-21 17:55:22 +00:00
 permalink: "/2025-07-21-Developing-a-Web-Browser-and-Console-Log-Extension-for-Visual-Studio.html"
 categories: ["Coding"]
-tags: ["Browser Panel", "Coding", "Community", "Console Log", "Developer Productivity", "Extension Development", "IDE Tools", "Olivier Dalet", "Proof Of Concept", "React", "User Interface", "Visual Studio", "VisualStudio", "WebView2"]
-tags_normalized: ["browser panel", "coding", "community", "console log", "developer productivity", "extension development", "ide tools", "olivier dalet", "proof of concept", "react", "user interface", "visual studio", "visualstudio", "webview2"]
+tags: ["Browser Panel", "Coding", "Community", "Console Log", "Developer Productivity", "Extension Development", "IDE Tools", "Olivier Dalet", "Proof Of Concept", "React", "User Interface", "VS", "WebView2"]
+tags_normalized: ["browser panel", "coding", "community", "console log", "developer productivity", "extension development", "ide tools", "olivier dalet", "proof of concept", "react", "user interface", "vs", "webview2"]
 ---
 
 ggobrien explores the idea of creating a Visual Studio extension that embeds a web browser and separate console log panel, enhancing the workflow for web developers.<!--excerpt_end-->

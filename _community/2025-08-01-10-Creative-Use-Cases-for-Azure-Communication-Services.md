@@ -12,7 +12,7 @@ date: 2025-08-01 13:06:56 +00:00
 permalink: "/2025-08-01-10-Creative-Use-Cases-for-Azure-Communication-Services.html"
 categories: ["AI", "Azure", "Coding", "Security"]
 tags: ["AI", "Azure", "Azure Communication Services", "Azure OpenAI", "Bot Framework", "Coding", "Community", "Cost Estimation", "Developer Workflow", "Dynamics 365", "Event Grid", "HIPAA Compliance", "Natural Language Processing", "Real Time Messaging", "Security", "SMS Scheduling", "Teams Interop", "Video Calling", "Voice Assistant", "WhatsApp Integration", "Zammo.ai"]
-tags_normalized: ["ai", "azure", "azure communication services", "azure openai", "bot framework", "coding", "community", "cost estimation", "developer workflow", "dynamics 365", "event grid", "hipaa compliance", "natural language processing", "real time messaging", "security", "sms scheduling", "teams interop", "video calling", "voice assistant", "whatsapp integration", "zammo dot ai"]
+tags_normalized: ["ai", "azure", "azure communication services", "azure openai", "bot framework", "coding", "community", "cost estimation", "developer workflow", "dynamics 365", "event grid", "hipaa compliance", "natural language processing", "real time messaging", "security", "sms scheduling", "teams interop", "video calling", "voice assistant", "whatsapp integration", "zammodotai"]
 ---
 
 In this article, Sean Keegan shares ten innovative ways to leverage Azure Communication Services, combining ACS with tools like Azure OpenAI and Event Grid to build intelligent, real-time, and secure communication solutions.<!--excerpt_end-->

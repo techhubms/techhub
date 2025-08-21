@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-07-17 04:05:05 +00:00
 permalink: "/2025-07-17-How-to-Auto-Resolve-100-Merge-Conflicts-by-Accepting-Incoming-Version-for-All-Files.html"
 categories: ["DevOps"]
-tags: ["Automation", "Azure DevOps", "Branching", "Community", "Conflict Resolution", "DevOps", "Git", "Incoming Changes", "Merge Conflicts", "Source Control", "Version Control", "Visual Studio"]
-tags_normalized: ["automation", "azure devops", "branching", "community", "conflict resolution", "devops", "git", "incoming changes", "merge conflicts", "source control", "version control", "visual studio"]
+tags: ["Automation", "Azure DevOps", "Branching", "Community", "Conflict Resolution", "DevOps", "Git", "Incoming Changes", "Merge Conflicts", "Source Control", "Version Control", "VS"]
+tags_normalized: ["automation", "azure devops", "branching", "community", "conflict resolution", "devops", "git", "incoming changes", "merge conflicts", "source control", "version control", "vs"]
 ---
 
 Dazzling_Touch_9699 seeks advice on efficiently resolving over 100 merge conflicts by keeping incoming branch changes using Visual Studio.<!--excerpt_end-->

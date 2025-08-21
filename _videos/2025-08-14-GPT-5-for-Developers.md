@@ -12,7 +12,7 @@ date: 2025-08-14 22:41:29 +00:00
 permalink: "/2025-08-14-GPT-5-for-Developers.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "AI APIs", "AI Integration", "Code Samples", "Coding", "Developer Demos", "GPT 5", "JavaScript", "Machine Learning", "Microsoft Developer Tools", "Python", "Videos"]
-tags_normalized: ["net", "ai", "ai apis", "ai integration", "code samples", "coding", "developer demos", "gpt 5", "javascript", "machine learning", "microsoft developer tools", "python", "videos"]
+tags_normalized: ["dotnet", "ai", "ai apis", "ai integration", "code samples", "coding", "developer demos", "gpt 5", "javascript", "machine learning", "microsoft developer tools", "python", "videos"]
 ---
 
 Presented by Microsoft Developer, this session features Pamela Fox, Burke Holland, Bruno Capuano, and Jon Galloway as they demonstrate practical GPT-5 integrations in Microsoft developer tools.<!--excerpt_end-->

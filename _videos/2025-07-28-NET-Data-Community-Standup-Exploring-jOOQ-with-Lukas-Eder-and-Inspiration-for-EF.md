@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwf
 date: 2025-07-28 15:50:14 +00:00
 permalink: "/2025-07-28-NET-Data-Community-Standup-Exploring-jOOQ-with-Lukas-Eder-and-Inspiration-for-EF.html"
 categories: ["Coding"]
-tags: [".NET", "Coding", "Data Access", "Demo", "Developer Community", "Developercommunity", "Developertools", "Dotnetdeveloper", "Entity Framework", "Jiri Cincura", "Jooq", "Lukas Eder", "ORM", "Shay Rojansky", "Software Development", "Softwaredeveloper", "Videos"]
-tags_normalized: ["net", "coding", "data access", "demo", "developer community", "developercommunity", "developertools", "dotnetdeveloper", "entity framework", "jiri cincura", "jooq", "lukas eder", "orm", "shay rojansky", "software development", "softwaredeveloper", "videos"]
+tags: [".NET", "Coding", "Data Access", "Demo", "Developer Community", "Developer Tools", "Dotnetdeveloper", "EF", "Jiri Cincura", "Jooq", "Lukas Eder", "ORM", "Shay Rojansky", "Software Developer", "Software Development", "Videos"]
+tags_normalized: ["dotnet", "coding", "data access", "demo", "developer community", "developer tools", "dotnetdeveloper", "ef", "jiri cincura", "jooq", "lukas eder", "orm", "shay rojansky", "software developer", "software development", "videos"]
 ---
 
 In this .NET Data Community Standup, author Lukas Eder demonstrates jOOQ and explores ideas that Entity Framework (EF) developers can learn from. Hosted by Jiri Cincura and Shay Rojansky, this session offers valuable takeaways for .NET data developers.<!--excerpt_end-->

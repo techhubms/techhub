@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-06-17 19:30:00 +00:00
 permalink: "/2025-06-17-Multimodal-Vision-Intelligence-with-NET-MAUI.html"
 categories: ["AI", "Coding"]
-tags: [".NET", ".NET MAUI", "AI", "Azure AI Foundry", "C#", "Coding", "Community Toolkit", "Computer Vision", "Copilot", "IChatClient", "Image Analysis", "MediaPicker", "Microsoft.Extensions.AI", "Mobile Development", "Multimodal", "News", "Prompt Engineering"]
-tags_normalized: ["net", "net maui", "ai", "azure ai foundry", "c", "coding", "community toolkit", "computer vision", "copilot", "ichatclient", "image analysis", "mediapicker", "microsoft dot extensions dot ai", "mobile development", "multimodal", "news", "prompt engineering"]
+tags: [".NET", "AI", "Azure AI Foundry", "C#", "Coding", "Community Toolkit", "Computer Vision", "Copilot", "IChatClient", "Image Analysis", "MAUI", "MediaPicker", "Microsoft.Extensions.AI", "Mobile Development", "Multimodal", "News", "Prompt Engineering"]
+tags_normalized: ["dotnet", "ai", "azure ai foundry", "csharp", "coding", "community toolkit", "computer vision", "copilot", "ichatclient", "image analysis", "maui", "mediapicker", "microsoftdotextensionsdotai", "mobile development", "multimodal", "news", "prompt engineering"]
 ---
 
 In this article, David Ortinau details the process of building multimodal, AI-powered image analysis into .NET MAUI apps, leveraging .NET tooling and Microsoft.Extensions.AI.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2025-08-02 08:40:47 +00:00
 permalink: "/2025-08-02-NET-Aspire-Start-Resource-on-Service-Bus-Message.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", ".NET Aspire", "Application Architecture", "Azure", "Azure Service Bus", "Cloud Services", "Coding", "Community", "Event Driven", "Messaging", "Resource Management", "Service Bus", "Workloads"]
-tags_normalized: ["net", "net aspire", "application architecture", "azure", "azure service bus", "cloud services", "coding", "community", "event driven", "messaging", "resource management", "service bus", "workloads"]
+tags_normalized: ["dotnet", "dotnet aspire", "application architecture", "azure", "azure service bus", "cloud services", "coding", "community", "event driven", "messaging", "resource management", "service bus", "workloads"]
 ---
 
 LeonardSpencer discusses how to trigger a resource in a .NET Aspire setup upon receiving messages from Azure Service Bus, providing insights for developers building event-driven applications.<!--excerpt_end-->

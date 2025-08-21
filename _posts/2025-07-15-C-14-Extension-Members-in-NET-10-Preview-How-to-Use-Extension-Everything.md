@@ -11,8 +11,8 @@ feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-07-15 10:00:00 +00:00
 permalink: "/2025-07-15-C-14-Extension-Members-in-NET-10-Preview-How-to-Use-Extension-Everything.html"
 categories: ["Coding"]
-tags: [".NET 10", "C#", "C# 14", "Coding", "Extension Members", "Extension Methods", "Extension Properties", "Instance Extension Properties", "Language Features", "NetEscapades.EnumGenerators", "Posts", "Static Extension Methods", "Syntax Changes", "Visual Studio"]
-tags_normalized: ["net 10", "c", "c sharp 14", "coding", "extension members", "extension methods", "extension properties", "instance extension properties", "language features", "netescapades dot enumgenerators", "posts", "static extension methods", "syntax changes", "visual studio"]
+tags: [".NET 10", "C#", "C# 14", "Coding", "Extension Members", "Extension Methods", "Extension Properties", "Instance Extension Properties", "Language Features", "NetEscapades.EnumGenerators", "Posts", "Static Extension Methods", "Syntax Changes", "VS"]
+tags_normalized: ["dotnet 10", "csharp", "csharp 14", "coding", "extension members", "extension methods", "extension properties", "instance extension properties", "language features", "netescapadesdotenumgenerators", "posts", "static extension methods", "syntax changes", "vs"]
 ---
 
 In this post, Andrew Lock provides a detailed walkthrough of C# 14’s new extension members feature in .NET 10, including how to convert existing extension methods, the new syntax, and updates to his NetEscapades.EnumGenerators package.<!--excerpt_end-->

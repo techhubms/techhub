@@ -12,7 +12,7 @@ date: 2025-08-01 04:00:55 +00:00
 permalink: "/2025-08-01-August-2025-Community-Project-Showcase-C-Side-Projects.html"
 categories: ["Coding"]
 tags: ["AOT", "ASP.NET Core", "Blazor", "C#", "Clean Architecture", "Coding", "Community", "Community Projects", "GitHub", "Nature Sounds App", "Open Source", "Performance Optimization", "React", "SignalR", "Tray Application", "Windows Service", "WinForms"]
-tags_normalized: ["aot", "asp dot net core", "blazor", "c", "clean architecture", "coding", "community", "community projects", "github", "nature sounds app", "open source", "performance optimization", "react", "signalr", "tray application", "windows service", "winforms"]
+tags_normalized: ["aot", "aspdotnet core", "blazor", "csharp", "clean architecture", "coding", "community", "community projects", "github", "nature sounds app", "open source", "performance optimization", "react", "signalr", "tray application", "windows service", "winforms"]
 ---
 
 AutoModerator presents this month's r/csharp side project discussion thread, spotlighting innovative member creations—from ASP.NET Core Kanban solutions to open source productivity and utility apps.<!--excerpt_end-->

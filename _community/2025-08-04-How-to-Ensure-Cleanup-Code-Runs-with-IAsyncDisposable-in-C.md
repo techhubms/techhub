@@ -12,7 +12,7 @@ date: 2025-08-04 21:20:25 +00:00
 permalink: "/2025-08-04-How-to-Ensure-Cleanup-Code-Runs-with-IAsyncDisposable-in-C.html"
 categories: ["Coding"]
 tags: ["Async", "Best Practices", "C#", "Cleanup", "Coding", "Community", "Finalizer", "IAsyncDisposable", "IDisposable", "Memory Management", "Resource Management", "Using Statement"]
-tags_normalized: ["async", "best practices", "c", "cleanup", "coding", "community", "finalizer", "iasyncdisposable", "idisposable", "memory management", "resource management", "using statement"]
+tags_normalized: ["async", "best practices", "csharp", "cleanup", "coding", "community", "finalizer", "iasyncdisposable", "idisposable", "memory management", "resource management", "using statement"]
 ---
 
 In this community post, detroitmatt explores how to make cleanup code reliably run in C# with IAsyncDisposable, highlighting pitfalls with disposable patterns.<!--excerpt_end-->

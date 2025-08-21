@@ -11,8 +11,8 @@ feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-08-07 17:00:02 +00:00
 permalink: "/2025-08-07-OpenAI-GPT-5-Public-Preview-Launches-for-GitHub-Copilot-Users.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic AI", "AI", "AI Collaboration", "AI Models", "AI Preview", "Code Generation", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Developer Tools", "GitHub Copilot", "GPT 5", "Intelligent Assistant", "Model Deployment", "News", "OpenAI", "Visual Studio Code"]
-tags_normalized: ["agentic ai", "ai", "ai collaboration", "ai models", "ai preview", "code generation", "copilot business", "copilot chat", "copilot enterprise", "developer tools", "github copilot", "gpt 5", "intelligent assistant", "model deployment", "news", "openai", "visual studio code"]
+tags: ["Agentic AI", "AI", "AI Collaboration", "AI Models", "AI Preview", "Code Generation", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Developer Tools", "GitHub Copilot", "GPT 5", "Intelligent Assistant", "Model Deployment", "News", "OpenAI", "VS Code"]
+tags_normalized: ["agentic ai", "ai", "ai collaboration", "ai models", "ai preview", "code generation", "copilot business", "copilot chat", "copilot enterprise", "developer tools", "github copilot", "gpt 5", "intelligent assistant", "model deployment", "news", "openai", "vs code"]
 ---
 
 Allison reports on the launch of OpenAI’s GPT-5 model in public preview for GitHub Copilot users, detailing improved coding capabilities and how paid users and administrators can enable access.<!--excerpt_end-->

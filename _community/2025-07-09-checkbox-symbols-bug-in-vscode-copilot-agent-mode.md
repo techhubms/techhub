@@ -9,8 +9,8 @@ viewing_mode: "external"
 categories: ["AI", "GitHub Copilot"]
 date: 2025-07-09 09:41:14 +00:00
 permalink: "/2025-07-09-checkbox-symbols-bug-in-vscode-copilot-agent-mode.html"
-tags: ["AI", "Bug Report", "Checkbox Issue", "Code Editor", "Community", "GitHub Copilot", "PowerShell", "Visual Studio Code"]
-tags_normalized: ["ai", "bug report", "checkbox issue", "code editor", "community", "github copilot", "powershell", "visual studio code"]
+tags: ["AI", "Bug Report", "Checkbox Issue", "Code Editor", "Community", "GitHub Copilot", "PowerShell", "VS Code"]
+tags_normalized: ["ai", "bug report", "checkbox issue", "code editor", "community", "github copilot", "powershell", "vs code"]
 ---
 
 ZomboBrain shares their recent experience using GitHub Copilot Pro within Visual Studio Code to improve their PowerShell scripting abilities. <!--excerpt_end--> One issue that has arisen during this process is the unexpected appearance of checkbox-like symbols in the code whenever a new task starts and ends, despite no actual checkboxes being intended in the script. The author points out this behavior as confusing and questions whether it is a known bug or some misconfiguration on their part.

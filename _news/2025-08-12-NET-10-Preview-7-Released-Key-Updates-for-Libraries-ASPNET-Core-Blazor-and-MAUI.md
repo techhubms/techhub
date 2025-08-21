@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-12 19:20:00 +00:00
 permalink: "/2025-08-12-NET-10-Preview-7-Released-Key-Updates-for-Libraries-ASPNET-Core-Blazor-and-MAUI.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET MAUI", ".NET Runtime", "AES KeyWrap", "ASP.NET Core", "Blazor", "C#", "C# Dev Kit", "Coding", "Community Standup", "Entity Framework Core", "Featured", "Libraries", "News", "PipeReader", "Preview Release", "Process Group", "Release Notes", "SDK", "TLS 1.3", "Visual Studio", "WebSocketStream", "Windows Forms", "WPF"]
-tags_normalized: ["net", "net 10", "net maui", "net runtime", "aes keywrap", "asp dot net core", "blazor", "c", "c sharp dev kit", "coding", "community standup", "entity framework core", "featured", "libraries", "news", "pipereader", "preview release", "process group", "release notes", "sdk", "tls 1 dot 3", "visual studio", "websocketstream", "windows forms", "wpf"]
+tags: [".NET", ".NET 10", ".NET Runtime", "AES KeyWrap", "ASP.NET Core", "Blazor", "C#", "C# Dev Kit", "Coding", "Community Standup", "EF Core", "Featured", "Libraries", "MAUI", "News", "PipeReader", "Preview Release", "Process Group", "Release Notes", "SDK", "TLS 1.3", "VS", "WebSocketStream", "Windows Forms", "WPF"]
+tags_normalized: ["dotnet", "dotnet 10", "dotnet runtime", "aes keywrap", "aspdotnet core", "blazor", "csharp", "csharp dev kit", "coding", "community standup", "ef core", "featured", "libraries", "maui", "news", "pipereader", "preview release", "process group", "release notes", "sdk", "tls 1dot3", "vs", "websocketstream", "windows forms", "wpf"]
 ---
 
 .NET Team presents a summary of features and improvements in .NET 10 Preview 7, highlighting updates across the ecosystem and providing links to detailed resources. Authors from the .NET Team offer guidance on how developers can get started with this release.<!--excerpt_end-->

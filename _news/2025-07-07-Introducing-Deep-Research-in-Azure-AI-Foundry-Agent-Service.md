@@ -12,7 +12,7 @@ date: 2025-07-07 17:00:00 +00:00
 permalink: "/2025-07-07-Introducing-Deep-Research-in-Azure-AI-Foundry-Agent-Service.html"
 categories: ["AI", "Azure"]
 tags: ["Agents", "AI", "AI + Machine Learning", "API", "Azure", "Azure AI Foundry", "Azure Functions", "Azure Logic Apps", "Bing Search", "Compliance", "Compute", "Containers", "Deep Research", "Enterprise Automation", "GPT 4", "Integration", "Internet Of Things", "News", "OpenAI", "Pricing", "SDK", "Web Research"]
-tags_normalized: ["agents", "ai", "ai machine learning", "api", "azure", "azure ai foundry", "azure functions", "azure logic apps", "bing search", "compliance", "compute", "containers", "deep research", "enterprise automation", "gpt 4", "integration", "internet of things", "news", "openai", "pricing", "sdk", "web research"]
+tags_normalized: ["agents", "ai", "ai plus machine learning", "api", "azure", "azure ai foundry", "azure functions", "azure logic apps", "bing search", "compliance", "compute", "containers", "deep research", "enterprise automation", "gpt 4", "integration", "internet of things", "news", "openai", "pricing", "sdk", "web research"]
 ---
 
 Authored by Yina Arenas, this article introduces Deep Research in Azure AI Foundry Agent Service, detailing its features and benefits for enterprise AI-driven research automation using API and SDK integrations.<!--excerpt_end-->

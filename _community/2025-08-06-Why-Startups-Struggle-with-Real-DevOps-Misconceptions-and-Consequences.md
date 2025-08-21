@@ -12,7 +12,7 @@ date: 2025-08-06 12:26:20 +00:00
 permalink: "/2025-08-06-Why-Startups-Struggle-with-Real-DevOps-Misconceptions-and-Consequences.html"
 categories: ["DevOps"]
 tags: ["Agile", "Automation", "CI/CD", "Community", "Development Processes", "DevOps", "IaC", "Monitoring", "Platform Engineering", "Rollbacks", "Scaling", "SOC2", "SOX", "Startups", "Team Culture", "Technical Debt", "Zero Downtime Deployments"]
-tags_normalized: ["agile", "automation", "ci slash cd", "community", "development processes", "devops", "iac", "monitoring", "platform engineering", "rollbacks", "scaling", "soc2", "sox", "startups", "team culture", "technical debt", "zero downtime deployments"]
+tags_normalized: ["agile", "automation", "cislashcd", "community", "development processes", "devops", "iac", "monitoring", "platform engineering", "rollbacks", "scaling", "soc2", "sox", "startups", "team culture", "technical debt", "zero downtime deployments"]
 ---
 
 Pichipaul discusses the common startup misconception that DevOps is a quick fix, emphasizing the cultural and technical depth required. Community voices share real-world challenges and highlight why organizational investment is crucial.<!--excerpt_end-->

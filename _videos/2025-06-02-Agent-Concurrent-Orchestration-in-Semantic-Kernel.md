@@ -12,7 +12,7 @@ date: 2025-06-02 06:45:23 +00:00
 permalink: "/2025-06-02-Agent-Concurrent-Orchestration-in-Semantic-Kernel.html"
 categories: ["AI", "Coding"]
 tags: ["Agent Aggregation", "AI", "AI Agent Orchestration", "AI Agents", "AI Demo", "AI in .NET", "AI Patterns", "AIDemo", "AIinTamil", "AIOrchestration", "BrainstormingAI", "Coding", "Concurrent Pattern", "ConcurrentPattern", "DotNetAI", "Ensemble Reasoning", "Microsoft AI", "Microsoft Ecosystem", "OpenAI", "OpenAISolutions", "Parallel Processing", "Semantic Kernel", "Videos", "Voting Systems"]
-tags_normalized: ["agent aggregation", "ai", "ai agent orchestration", "ai agents", "ai demo", "ai in dot net", "ai patterns", "aidemo", "aiintamil", "aiorchestration", "brainstormingai", "coding", "concurrent pattern", "concurrentpattern", "dotnetai", "ensemble reasoning", "microsoft ai", "microsoft ecosystem", "openai", "openaisolutions", "parallel processing", "semantic kernel", "videos", "voting systems"]
+tags_normalized: ["agent aggregation", "ai", "ai agent orchestration", "ai agents", "ai demo", "ai in dotnet", "ai patterns", "aidemo", "aiintamil", "aiorchestration", "brainstormingai", "coding", "concurrent pattern", "concurrentpattern", "dotnetai", "ensemble reasoning", "microsoft ai", "microsoft ecosystem", "openai", "openaisolutions", "parallel processing", "semantic kernel", "videos", "voting systems"]
 ---
 
 Learn Microsoft AI presents an in-depth demo on concurrent orchestration in Semantic Kernel, showcasing how to run multiple AI agents in parallel and aggregate their results in .NET applications.<!--excerpt_end-->

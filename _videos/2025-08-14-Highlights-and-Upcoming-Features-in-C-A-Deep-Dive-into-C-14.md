@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwf
 date: 2025-08-14 14:27:34 +00:00
 permalink: "/2025-08-14-Highlights-and-Upcoming-Features-in-C-A-Deep-Dive-into-C-14.html"
 categories: ["Coding"]
-tags: [".NET", "C#", "C# 14", "C# Features", "Code Clarity", "Code Safety", "Coding", "Developer Tools", "Expressiveness", "Language Evolution", "Modern C#", "Performance", "Programming", "Videos", "Visual Studio"]
-tags_normalized: ["net", "c", "c sharp 14", "c sharp features", "code clarity", "code safety", "coding", "developer tools", "expressiveness", "language evolution", "modern c", "performance", "programming", "videos", "visual studio"]
+tags: [".NET", "C#", "C# 14", "C# Features", "Code Clarity", "Code Safety", "Coding", "Developer Tools", "Expressiveness", "Language Evolution", "Modern C#", "Performance", "Programming", "Videos", "VS"]
+tags_normalized: ["dotnet", "csharp", "csharp 14", "csharp features", "code clarity", "code safety", "coding", "developer tools", "expressiveness", "language evolution", "modern csharp", "performance", "programming", "videos", "vs"]
 ---
 
 Mads presents an in-depth tour of new and forthcoming features in C#, spotlighting what developers can expect in C# 14. The session emphasizes practical improvements in code safety, performance, and expressiveness.<!--excerpt_end-->

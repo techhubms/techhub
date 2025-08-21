@@ -12,7 +12,7 @@ date: 2025-02-26 19:09:17 +00:00
 permalink: "/2025-02-26-Azure-SDK-Release-Highlights-and-Notes-for-February-2025.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", "Android", "Azure", "Azure SDK", "C++", "Coding", "Compute Schedule", "Dependency Management", "DevOps", "Embedded C", "Go", "Ios", "Java", "JavaScript", "Library", "News", "Node.js", "Open Telemetry", "Pinecone Vector DB", "Platform Support", "Python", "SDK"]
-tags_normalized: ["net", "android", "azure", "azure sdk", "c", "coding", "compute schedule", "dependency management", "devops", "embedded c", "go", "ios", "java", "javascript", "library", "news", "node dot js", "open telemetry", "pinecone vector db", "platform support", "python", "sdk"]
+tags_normalized: ["dotnet", "android", "azure", "azure sdk", "cplusplus", "coding", "compute schedule", "dependency management", "devops", "embedded c", "go", "ios", "java", "javascript", "library", "news", "nodedotjs", "open telemetry", "pinecone vector db", "platform support", "python", "sdk"]
 ---
 
 In this news update, Hector Norzagaray summarizes the key highlights and notes from the February 2025 Azure SDK release, including support advisories, new stable and beta library releases, and links to in-depth documentation.<!--excerpt_end-->

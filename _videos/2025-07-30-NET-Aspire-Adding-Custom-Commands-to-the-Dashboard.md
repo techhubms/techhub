@@ -12,7 +12,7 @@ date: 2025-07-30 17:19:49 +00:00
 permalink: "/2025-07-30-NET-Aspire-Adding-Custom-Commands-to-the-Dashboard.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Aspire", "Automation", "Coding", "Configuration", "Custom Commands", "Dashboard", "Developer Tools", "Development Environment", "Scripts", "Team Collaboration", "Videos"]
-tags_normalized: ["net", "net aspire", "automation", "coding", "configuration", "custom commands", "dashboard", "developer tools", "development environment", "scripts", "team collaboration", "videos"]
+tags_normalized: ["dotnet", "dotnet aspire", "automation", "coding", "configuration", "custom commands", "dashboard", "developer tools", "development environment", "scripts", "team collaboration", "videos"]
 ---
 
 In this video, Fritz guides viewers through the process of adding custom commands to the .NET Aspire dashboard, focusing on developer productivity and environment configuration tasks.<!--excerpt_end-->

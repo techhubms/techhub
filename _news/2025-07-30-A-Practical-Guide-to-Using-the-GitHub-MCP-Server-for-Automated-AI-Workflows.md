@@ -11,8 +11,8 @@ feed_url: "https://github.blog/feed/"
 date: 2025-07-30 16:00:00 +00:00
 permalink: "/2025-07-30-A-Practical-Guide-to-Using-the-GitHub-MCP-Server-for-Automated-AI-Workflows.html"
 categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agent Collaboration", "AI", "AI & ML", "AI Agents", "AI Workflow", "CI/CD", "Cloud Automation", "Dependabot", "DevOps", "Generative AI", "GitHub Copilot", "MCP", "Model Context Protocol", "News", "OAuth", "Pull Requests", "Remote MCP Server", "Secret Scanning", "Security", "Security Alerts", "Visual Studio Code"]
-tags_normalized: ["agent collaboration", "ai", "ai ml", "ai agents", "ai workflow", "ci slash cd", "cloud automation", "dependabot", "devops", "generative ai", "github copilot", "mcp", "model context protocol", "news", "oauth", "pull requests", "remote mcp server", "secret scanning", "security", "security alerts", "visual studio code"]
+tags: ["Agent Collaboration", "AI", "AI & ML", "AI Agents", "AI Workflow", "CI/CD", "Cloud Automation", "Dependabot", "DevOps", "Generative AI", "GitHub Copilot", "MCP", "News", "OAuth", "Pull Requests", "Remote MCP Server", "Secret Scanning", "Security", "Security Alerts", "VS Code"]
+tags_normalized: ["agent collaboration", "ai", "ai and ml", "ai agents", "ai workflow", "cislashcd", "cloud automation", "dependabot", "devops", "generative ai", "github copilot", "mcp", "news", "oauth", "pull requests", "remote mcp server", "secret scanning", "security", "security alerts", "vs code"]
 ---
 
 Andrea Griffiths explores the migration from a local MCP Docker image to GitHub's managed MCP server, streamlining authentication, automation, and security-focused AI workflows with GitHub Copilot integration.<!--excerpt_end-->

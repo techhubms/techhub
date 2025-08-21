@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-05 14:40:13 +00:00
 permalink: "/2025-08-05-Trail-Bike-A-New-Cycling-App-Prototype-Using-NET-MAUI.html"
 categories: ["Coding"]
-tags: [".NET MAUI", "App Prototyping", "C#", "Coding", "Community", "Community Projects", "Cross Platform Development", "Cycling App", "Mobile App Development", "Programming", "Social Network Features", "UI Design"]
-tags_normalized: ["net maui", "app prototyping", "c", "coding", "community", "community projects", "cross platform development", "cycling app", "mobile app development", "programming", "social network features", "ui design"]
+tags: ["App Prototyping", "C#", "Coding", "Community", "Community Projects", "Cross Platform Development", "Cycling App", "MAUI", "Mobile App Development", "Programming", "Social Network Features", "UI Design"]
+tags_normalized: ["app prototyping", "csharp", "coding", "community", "community projects", "cross platform development", "cycling app", "maui", "mobile app development", "programming", "social network features", "ui design"]
 ---
 
 Rywent introduces a prototype cycling app built with C# and MAUI, inviting feedback from the development community as he explores MAUI for cross-platform application design.<!--excerpt_end-->

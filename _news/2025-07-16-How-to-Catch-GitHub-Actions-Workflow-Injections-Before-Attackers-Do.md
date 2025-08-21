@@ -12,7 +12,7 @@ date: 2025-07-16 16:00:00 +00:00
 permalink: "/2025-07-16-How-to-catch-GitHub-Actions-workflow-injections-before-attackers-do.html"
 categories: ["DevOps", "Security"]
 tags: ["Attack Prevention", "CI/CD", "Code Scanning", "CodeQL", "DevOps", "GitHub Actions", "News", "Repository Security", "Security", "Vulnerability Research", "Workflow Injection", "Workflow Security"]
-tags_normalized: ["attack prevention", "ci slash cd", "code scanning", "codeql", "devops", "github actions", "news", "repository security", "security", "vulnerability research", "workflow injection", "workflow security"]
+tags_normalized: ["attack prevention", "cislashcd", "code scanning", "codeql", "devops", "github actions", "news", "repository security", "security", "vulnerability research", "workflow injection", "workflow security"]
 ---
 
 In this article, Dylan Birtolo addresses strategies for detecting and mitigating GitHub Actions workflow injections, offering practical guidance on boosting repository security.<!--excerpt_end-->

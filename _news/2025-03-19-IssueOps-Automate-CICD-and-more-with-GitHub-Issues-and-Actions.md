@@ -12,7 +12,7 @@ date: 2025-03-19 16:00:24 +00:00
 permalink: "/2025-03-19-IssueOps-Automate-CICD-and-more-with-GitHub-Issues-and-Actions.html"
 categories: ["DevOps"]
 tags: ["Approval Workflows", "Automation", "CI/CD", "DevOps", "Engineering", "Finite State Machine", "GitHub Actions", "GitHub Issues", "Issue Templates", "IssueOps", "News", "Pull Requests", "State Machines", "Team Management", "Workflow Automation"]
-tags_normalized: ["approval workflows", "automation", "ci slash cd", "devops", "engineering", "finite state machine", "github actions", "github issues", "issue templates", "issueops", "news", "pull requests", "state machines", "team management", "workflow automation"]
+tags_normalized: ["approval workflows", "automation", "cislashcd", "devops", "engineering", "finite state machine", "github actions", "github issues", "issue templates", "issueops", "news", "pull requests", "state machines", "team management", "workflow automation"]
 ---
 
 In this comprehensive article, Nick Alteen introduces the concept of IssueOps, showing how GitHub Issues can be leveraged to automate CI/CD workflows, approval processes, and more using GitHub Actions and pull requests.<!--excerpt_end-->

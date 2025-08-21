@@ -11,8 +11,8 @@ feed_url: "https://jessehouwing.net/rss/"
 date: 2025-04-02 17:56:59 +00:00
 permalink: "/2025-04-02-Running-Model-Context-Protocol-Servers-in-a-Specific-Node-Version-in-Visual-Studio-Code.html"
 categories: ["DevOps", "GitHub Copilot", "AI", "Coding"]
-tags: ["AI", "Azure Pipelines", "Coding", "DevOps", "Fast Node Manager", "GitHub", "GitHub Copilot", "MCP Server", "Model Context Protocol", "Node Version Management", "Node Version Switcher", "Node.js", "Npx", "Playwright", "Posts", "Typescript", "Visual Studio Code"]
-tags_normalized: ["ai", "azure pipelines", "coding", "devops", "fast node manager", "github", "github copilot", "mcp server", "model context protocol", "node version management", "node version switcher", "node dot js", "npx", "playwright", "posts", "typescript", "visual studio code"]
+tags: ["AI", "Azure Pipelines", "Coding", "DevOps", "Fast Node Manager", "GitHub", "GitHub Copilot", "MCP", "MCP Server", "Node Version Management", "Node Version Switcher", "Node.js", "Npx", "Playwright", "Posts", "Typescript", "VS Code"]
+tags_normalized: ["ai", "azure pipelines", "coding", "devops", "fast node manager", "github", "github copilot", "mcp", "mcp server", "node version management", "node version switcher", "nodedotjs", "npx", "playwright", "posts", "typescript", "vs code"]
 ---
 
 In this post, Jesse Houwing details solutions for managing Node versions to run Model Context Protocol (MCP) servers with Visual Studio Code Insiders and Azure Pipelines extensions, sharing practical configurations and troubleshooting insights.<!--excerpt_end-->

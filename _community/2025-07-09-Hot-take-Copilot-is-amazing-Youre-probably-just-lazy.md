@@ -12,7 +12,7 @@ date: 2025-07-09 20:18:19 +00:00
 permalink: "/2025-07-09-Hot-take-Copilot-is-amazing-Youre-probably-just-lazy.html"
 viewing_mode: "external"
 tags: [".NET", "AI", "Angular", "Backend Development", "Claude 4", "Coding", "Community", "Enterprise Software", "Frontend Development", "GitHub Copilot", "Junior Developers", "Prompt Engineering", "Software Maintenance", "Solution Architecture", "Testability"]
-tags_normalized: ["net", "ai", "angular", "backend development", "claude 4", "coding", "community", "enterprise software", "frontend development", "github copilot", "junior developers", "prompt engineering", "software maintenance", "solution architecture", "testability"]
+tags_normalized: ["dotnet", "ai", "angular", "backend development", "claude 4", "coding", "community", "enterprise software", "frontend development", "github copilot", "junior developers", "prompt engineering", "software maintenance", "solution architecture", "testability"]
 ---
 
 In this article, shifty303, an experienced enterprise developer, discusses their hands-on use of GitHub Copilot and Claude 4, highlighting how expertise and thoughtful planning are essential when leveraging AI tools for software development. The author offers practical advice on prompt crafting, solution architecture, and avoiding common pitfalls encountered by less experienced developers.<!--excerpt_end-->

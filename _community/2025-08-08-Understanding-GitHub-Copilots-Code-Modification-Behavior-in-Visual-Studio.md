@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
 date: 2025-08-08 14:07:47 +00:00
 permalink: "/2025-08-08-Understanding-GitHub-Copilots-Code-Modification-Behavior-in-Visual-Studio.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Code Assistant", "Best Practices", "Code Modification", "Code Refactoring", "Coding", "Community", "Contextual Code", "Copilot Usage Tips", "Developer Experience", "GitHub Copilot", "LLM Limitations", "Prompt Engineering", "Visual Studio", "VisualStudio", "VS Integration"]
-tags_normalized: ["ai", "ai code assistant", "best practices", "code modification", "code refactoring", "coding", "community", "contextual code", "copilot usage tips", "developer experience", "github copilot", "llm limitations", "prompt engineering", "visual studio", "visualstudio", "vs integration"]
+tags: ["AI", "AI Code Assistant", "Best Practices", "Code Modification", "Code Refactoring", "Coding", "Community", "Contextual Code", "Copilot Usage Tips", "Developer Experience", "GitHub Copilot", "LLM Limitations", "Prompt Engineering", "VS", "VS Integration"]
+tags_normalized: ["ai", "ai code assistant", "best practices", "code modification", "code refactoring", "coding", "community", "contextual code", "copilot usage tips", "developer experience", "github copilot", "llm limitations", "prompt engineering", "vs", "vs integration"]
 ---
 
 BusyCode shares insights into using GitHub Copilot in Visual Studio, noting its challenges with modifying code and offering strategies for better results with AI code assistance.<!--excerpt_end-->

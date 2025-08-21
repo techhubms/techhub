@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0S
 date: 2025-07-17 16:48:30 +00:00
 permalink: "/2025-07-17-VS-Code-Live-Exploring-v1102-Release-FeaturesAI-Chat-MCP-Coding-Agent-More.html"
 categories: ["AI", "Coding"]
-tags: ["AI", "AI Editor", "Chat Improvements", "Coding", "Coding Agent Integration", "Custom Modes", "Development Tools", "Edit Chat", "MCP Support", "Open Source", "Videos", "Visual Studio Code", "VS Code V1.102"]
-tags_normalized: ["ai", "ai editor", "chat improvements", "coding", "coding agent integration", "custom modes", "development tools", "edit chat", "mcp support", "open source", "videos", "visual studio code", "vs code v1 dot 102"]
+tags: ["AI", "AI Editor", "Chat Improvements", "Coding", "Coding Agent Integration", "Custom Modes", "Development Tools", "Edit Chat", "MCP Support", "Open Source", "Videos", "VS Code", "VS Code V1.102"]
+tags_normalized: ["ai", "ai editor", "chat improvements", "coding", "coding agent integration", "custom modes", "development tools", "edit chat", "mcp support", "open source", "videos", "vs code", "vs code v1dot102"]
 ---
 
 In this live session, the Visual Studio Code team—including Olivia McVicker, Isidor Nikolic, and more—uncover the headline features from VS Code v1.102. Discover enhancements like AI chat, MCP updates, and coding agent integration.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2025-01-13 07:47:49 +00:00
 permalink: "/2025-01-13-How-to-Perform-Snapshot-Testing-With-Verify-in-C.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Coding", "Integration Testing", "Object State Verification", "Posts", "Snapshot Testing", "Test Automation", "Test Best Practices", "Test Driven Development", "Testing", "Testing Frameworks", "Unit Testing", "Verify Library", "xUnit"]
-tags_normalized: ["net", "c", "coding", "integration testing", "object state verification", "posts", "snapshot testing", "test automation", "test best practices", "test driven development", "testing", "testing frameworks", "unit testing", "verify library", "xunit"]
+tags_normalized: ["dotnet", "csharp", "coding", "integration testing", "object state verification", "posts", "snapshot testing", "test automation", "test best practices", "test driven development", "testing", "testing frameworks", "unit testing", "verify library", "xunit"]
 ---
 
 In this guide, Januarius Njoku demonstrates how to leverage the Verify library for snapshot testing in C#. The article offers practical steps for setup and execution, providing sample code and clear explanations for developers looking to ensure robust object state validation.<!--excerpt_end-->

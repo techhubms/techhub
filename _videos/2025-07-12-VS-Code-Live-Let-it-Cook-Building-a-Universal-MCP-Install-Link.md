@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0S
 date: 2025-07-12 04:27:01 +00:00
 permalink: "/2025-07-12-VS-Code-Live-Let-it-Cook-Building-a-Universal-MCP-Install-Link.html"
 categories: ["DevOps", "Coding"]
-tags: ["Burke Holland", "Centralized Installation", "Coding", "Deep Linking", "Developer Tools", "DevOps", "Install Link", "Installation Directions", "Microsoft Certified Projects", "Netlify", "Pierce Boggan", "Repository Badges", "Sean Roberts", "Vibecoding", "Videos", "Visual Studio Code"]
-tags_normalized: ["burke holland", "centralized installation", "coding", "deep linking", "developer tools", "devops", "install link", "installation directions", "microsoft certified projects", "netlify", "pierce boggan", "repository badges", "sean roberts", "vibecoding", "videos", "visual studio code"]
+tags: ["Burke Holland", "Centralized Installation", "Coding", "Deep Linking", "Developer Tools", "DevOps", "Install Link", "Installation Directions", "Microsoft Certified Projects", "Netlify", "Pierce Boggan", "Repository Badges", "Sean Roberts", "Vibecoding", "Videos", "VS Code"]
+tags_normalized: ["burke holland", "centralized installation", "coding", "deep linking", "developer tools", "devops", "install link", "installation directions", "microsoft certified projects", "netlify", "pierce boggan", "repository badges", "sean roberts", "vibecoding", "videos", "vs code"]
 ---
 
 In this episode, Sean Roberts, Burke Holland, and Pierce Boggan from Visual Studio Code discuss strategies to build a universal install link for MCPs to streamline developer installation workflows.<!--excerpt_end-->

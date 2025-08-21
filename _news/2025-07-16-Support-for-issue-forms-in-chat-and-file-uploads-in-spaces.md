@@ -12,7 +12,7 @@ date: 2025-07-16 16:04:14 +00:00
 permalink: "/2025-07-16-Support-for-issue-forms-in-chat-and-file-uploads-in-spaces.html"
 viewing_mode: "external"
 tags: ["AI", "AI Assistance", "Automation", "Copilot Features", "Developer Tools", "GitHub", "GitHub Copilot", "Github.com", "Issue Creation", "Issue Forms", "News", "Productivity"]
-tags_normalized: ["ai", "ai assistance", "automation", "copilot features", "developer tools", "github", "github copilot", "github dot com", "issue creation", "issue forms", "news", "productivity"]
+tags_normalized: ["ai", "ai assistance", "automation", "copilot features", "developer tools", "github", "github copilot", "githubdotcom", "issue creation", "issue forms", "news", "productivity"]
 ---
 
 Allison discusses new improvements to GitHub Copilot, particularly its enhanced capability in creating issues on github.com. The update introduces support for issue forms, further streamlining and augmenting the developer experience with AI-driven assistance during the issue creation process.<!--excerpt_end-->

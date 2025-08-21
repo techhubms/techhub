@@ -12,7 +12,7 @@ date: 2025-08-07 18:46:10 +00:00
 permalink: "/2025-08-07-Comparing-GPT-5-and-Opus-41-Model-Capabilities-and-Economics-in-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Evaluation", "AI Model Comparison", "Code Generation", "Coding AI", "Community", "GitHub Copilot", "GPT 5", "Model Pricing", "Opus 4.1", "Pass@1", "Software Engineering Evaluation", "Sonnet 4", "SWE Bench", "Technical Benchmarks", "Token Cost"]
-tags_normalized: ["ai", "ai evaluation", "ai model comparison", "code generation", "coding ai", "community", "github copilot", "gpt 5", "model pricing", "opus 4 dot 1", "pass at 1", "software engineering evaluation", "sonnet 4", "swe bench", "technical benchmarks", "token cost"]
+tags_normalized: ["ai", "ai evaluation", "ai model comparison", "code generation", "coding ai", "community", "github copilot", "gpt 5", "model pricing", "opus 4dot1", "passat1", "software engineering evaluation", "sonnet 4", "swe bench", "technical benchmarks", "token cost"]
 ---
 
 fishchar explores how GPT-5 fares against Opus 4.1 and Sonnet 4 in GitHub Copilot, analyzing technical evaluation details, token economics, and the significance of future Copilot model changes.<!--excerpt_end-->

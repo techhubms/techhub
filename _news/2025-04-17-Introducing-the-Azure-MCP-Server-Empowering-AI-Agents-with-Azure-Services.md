@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-04-17 19:59:42 +00:00
 permalink: "/2025-04-17-Introducing-the-Azure-MCP-Server-Empowering-AI-Agents-with-Azure-Services.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["Agents", "AI", "AI Agents", "App Configuration", "Azure", "Azure CLI", "Azure MCP Server", "Azure SDK", "Azure Services", "Azure Storage", "Coding", "Cosmos DB", "GitHub Copilot", "Log Analytics", "MCP", "MCP SDK", "Model Context Protocol", "News", "Open Source", "Public Preview", "Semantic Kernel", "Visual Studio Code"]
-tags_normalized: ["agents", "ai", "ai agents", "app configuration", "azure", "azure cli", "azure mcp server", "azure sdk", "azure services", "azure storage", "coding", "cosmos db", "github copilot", "log analytics", "mcp", "mcp sdk", "model context protocol", "news", "open source", "public preview", "semantic kernel", "visual studio code"]
+tags: ["Agents", "AI", "AI Agents", "App Configuration", "Azure", "Azure CLI", "Azure MCP Server", "Azure SDK", "Azure Services", "Azure Storage", "Coding", "Cosmos DB", "GitHub Copilot", "Log Analytics", "MCP", "MCP SDK", "News", "Open Source", "Public Preview", "Semantic Kernel", "VS Code"]
+tags_normalized: ["agents", "ai", "ai agents", "app configuration", "azure", "azure cli", "azure mcp server", "azure sdk", "azure services", "azure storage", "coding", "cosmos db", "github copilot", "log analytics", "mcp", "mcp sdk", "news", "open source", "public preview", "semantic kernel", "vs code"]
 ---
 
 Rohit Ganguly introduces the Azure MCP Server, an open-source platform in public preview that connects AI agents like GitHub Copilot Agent Mode to Azure services. This post details supported capabilities, practical integrations, and what developers can expect next.<!--excerpt_end-->

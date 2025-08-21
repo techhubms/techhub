@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOH
 date: 2025-08-15 16:12:57 +00:00
 permalink: "/2025-08-15-GPT-5-and-Claude-41-Arrive-in-GitHub-Copilot-TypeScript-59-Updates-and-Community-News.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "Anthropic", "Claude Opus 4.1", "Coding", "Developer Tools", "DeveloperNews", "GitHub", "GitHub Copilot", "GPT 5", "JS13kGames", "MCP", "Mojo Language", "Open Source", "OpenAI", "Python 3.14", "React Native", "Reanimated 4", "TypeScript 5.9", "Videos", "Visual Studio Code"]
-tags_normalized: ["ai", "ai integration", "anthropic", "claude opus 4 dot 1", "coding", "developer tools", "developernews", "github", "github copilot", "gpt 5", "js13kgames", "mcp", "mojo language", "open source", "openai", "python 3 dot 14", "react native", "reanimated 4", "typescript 5 dot 9", "videos", "visual studio code"]
+tags: ["AI", "AI Integration", "Anthropic", "Claude Opus 4.1", "Coding", "Developer Tools", "DeveloperNews", "GitHub", "GitHub Copilot", "GPT 5", "JS13kGames", "MCP", "Mojo Language", "Open Source", "OpenAI", "Python 3.14", "React Native", "Reanimated 4", "TypeScript 5.9", "Videos", "VS Code"]
+tags_normalized: ["ai", "ai integration", "anthropic", "claude opus 4dot1", "coding", "developer tools", "developernews", "github", "github copilot", "gpt 5", "js13kgames", "mcp", "mojo language", "open source", "openai", "python 3dot14", "react native", "reanimated 4", "typescript 5dot9", "videos", "vs code"]
 ---
 
 GitHub presents this week's developer news, spotlighting the integration of GPT-5 and Claude 4.1 into GitHub Copilot. Hosted by the GitHub team, the episode also covers TypeScript 5.9 updates and other key releases.<!--excerpt_end-->

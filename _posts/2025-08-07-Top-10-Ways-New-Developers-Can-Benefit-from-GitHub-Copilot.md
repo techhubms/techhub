@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-08-07 09:54:15 +00:00
 permalink: "/2025-08-07-Top-10-Ways-New-Developers-Can-Benefit-from-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "Artificial Intelligence", "Automated Code Suggestions", "Code Autocompletion", "Coding", "Coding Best Practices", "Debugging", "Developer Productivity", "GitHub Copilot", "JetBrains", "Language Learning", "Learning Programming", "New Developers", "OpenAI", "Pair Programming", "Posts", "Unit Test Generation", "Visual Studio Code"]
-tags_normalized: ["ai", "ai coding assistant", "artificial intelligence", "automated code suggestions", "code autocompletion", "coding", "coding best practices", "debugging", "developer productivity", "github copilot", "jetbrains", "language learning", "learning programming", "new developers", "openai", "pair programming", "posts", "unit test generation", "visual studio code"]
+tags: ["AI", "AI Coding Assistant", "Automated Code Suggestions", "Code Autocompletion", "Coding", "Coding Best Practices", "Debugging", "Developer Productivity", "GitHub Copilot", "JetBrains", "Language Learning", "Learning Programming", "New Developers", "OpenAI", "Pair Programming", "Posts", "Unit Test Generation", "VS Code"]
+tags_normalized: ["ai", "ai coding assistant", "automated code suggestions", "code autocompletion", "coding", "coding best practices", "debugging", "developer productivity", "github copilot", "jetbrains", "language learning", "learning programming", "new developers", "openai", "pair programming", "posts", "unit test generation", "vs code"]
 ---
 
 Dellenny shares a practical top-10 guide for new developers, outlining how GitHub Copilot can accelerate coding, improve learning, and boost confidence through AI-powered assistance.<!--excerpt_end-->

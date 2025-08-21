@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
 date: 2025-03-11 15:00:21 +00:00
 permalink: "/2025-03-11-GPT-4o-Copilot-Code-Completion-Model-Now-Available-in-Visual-Studio-1714-Preview-2.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Coding", "Artificial Intelligence", "Code Completion", "Coding", "Copilot", "Copilot Business", "Copilot Enterprise", "Copilot Free", "Copilot Pro", "Developer Feedback", "GitHub Copilot", "GitHub Copilot Completions", "GPT 4o", "IDE", "Model Selection", "News", "Productivity", "Programming Languages", "Visual Studio"]
-tags_normalized: ["ai", "ai assisted coding", "artificial intelligence", "code completion", "coding", "copilot", "copilot business", "copilot enterprise", "copilot free", "copilot pro", "developer feedback", "github copilot", "github copilot completions", "gpt 4o", "ide", "model selection", "news", "productivity", "programming languages", "visual studio"]
+tags: ["AI", "AI Assisted Coding", "Code Completion", "Coding", "Copilot", "Copilot Business", "Copilot Enterprise", "Copilot Free", "Copilot Pro", "Developer Feedback", "GitHub Copilot", "GitHub Copilot Completions", "GPT 4o", "IDE", "Model Selection", "News", "Productivity", "Programming Languages", "VS"]
+tags_normalized: ["ai", "ai assisted coding", "code completion", "coding", "copilot", "copilot business", "copilot enterprise", "copilot free", "copilot pro", "developer feedback", "github copilot", "github copilot completions", "gpt 4o", "ide", "model selection", "news", "productivity", "programming languages", "vs"]
 ---
 
 Authored by Simona Liao, this blog post introduces the new GPT-4o Copilot code completion model for GitHub Copilot in Visual Studio. The article details its enhanced training, user access, and configuration steps, encouraging developers to try the feature and provide feedback.<!--excerpt_end-->

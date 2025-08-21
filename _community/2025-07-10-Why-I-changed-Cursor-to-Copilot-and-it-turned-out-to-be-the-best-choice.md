@@ -11,8 +11,8 @@ feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-10 21:28:42 +00:00
 permalink: "/2025-07-10-Why-I-changed-Cursor-to-Copilot-and-it-turned-out-to-be-the-best-choice.html"
 viewing_mode: "external"
-tags: ["Agentic Behavior", "AI", "AI Assistants", "APM", "Billing Changes", "Claude Code", "Community", "Copilot Pro", "Cursor", "Developer Tools", "GitHub Copilot", "LLM", "Open Source", "Request Limits", "Student Subscriptions", "Visual Studio Code"]
-tags_normalized: ["agentic behavior", "ai", "ai assistants", "apm", "billing changes", "claude code", "community", "copilot pro", "cursor", "developer tools", "github copilot", "llm", "open source", "request limits", "student subscriptions", "visual studio code"]
+tags: ["Agentic Behavior", "AI", "AI Assistants", "APM", "Billing Changes", "Claude Code", "Community", "Copilot Pro", "Cursor", "Developer Tools", "GitHub Copilot", "LLM", "Open Source", "Request Limits", "Student Subscriptions", "VS Code"]
+tags_normalized: ["agentic behavior", "ai", "ai assistants", "apm", "billing changes", "claude code", "community", "copilot pro", "cursor", "developer tools", "github copilot", "llm", "open source", "request limits", "student subscriptions", "vs code"]
 ---
 
 Author Cobuter_Man, creator of APM, reflects on their year-long experience using AI-driven code editors. After switching from Cursor to VS Code with GitHub Copilot, they critique Cursor's opaque billing practices and praise Copilot's transparent limits and performance. The article discusses open-source AI code assistants, the rise of alternatives like Claude Code, and the importance of fair policies and user trust.<!--excerpt_end-->

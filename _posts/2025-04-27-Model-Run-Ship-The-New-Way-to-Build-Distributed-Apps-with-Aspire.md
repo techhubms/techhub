@@ -12,7 +12,7 @@ date: 2025-04-27 22:27:35 +00:00
 permalink: "/2025-04-27-Model-Run-Ship-The-New-Way-to-Build-Distributed-Apps-with-Aspire.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET", "Application Modeling", "Aspire", "Automation", "C#", "Ci/cd", "Cloud Native", "Coding", "Deployment", "DevOps", "Distributed Applications", "Docker Compose", "GitHub Actions", "IaC", "Microservices", "Posts", "Pulumi", "Software Development", "Terraform", "Web Development"]
-tags_normalized: ["net", "application modeling", "aspire", "automation", "c", "ci slash cd", "cloud native", "coding", "deployment", "devops", "distributed applications", "docker compose", "github actions", "iac", "microservices", "posts", "pulumi", "software development", "terraform", "web development"]
+tags_normalized: ["dotnet", "application modeling", "aspire", "automation", "csharp", "cislashcd", "cloud native", "coding", "deployment", "devops", "distributed applications", "docker compose", "github actions", "iac", "microservices", "posts", "pulumi", "software development", "terraform", "web development"]
 ---
 
 In this post, David Fowler discusses how Aspire streamlines the modeling and deployment of distributed applications, making connections between services explicit and repeatable.<!--excerpt_end-->

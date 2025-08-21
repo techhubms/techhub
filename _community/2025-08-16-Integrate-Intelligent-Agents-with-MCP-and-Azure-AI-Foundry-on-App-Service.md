@@ -11,8 +11,8 @@ feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-16 01:15:20 +00:00
 permalink: "/2025-08-16-Integrate-Intelligent-Agents-with-MCP-and-Azure-AI-Foundry-on-App-Service.html"
 categories: ["AI", "Azure"]
-tags: ["Agent Service", "AI", "AI Agent Integration", "App Deployment", "Automation", "Azure", "Azure AI Foundry", "Azure App Service", "Azure Developer CLI", "Cloud Hosting", "Community", "Developer Guide", "FastAPI", "LLMs", "Managed Identity", "MCP", "MCP Server", "Model Context Protocol", "Natural Language Processing", "OpenAPI", "Python", "To Do List App", "Web Applications"]
-tags_normalized: ["agent service", "ai", "ai agent integration", "app deployment", "automation", "azure", "azure ai foundry", "azure app service", "azure developer cli", "cloud hosting", "community", "developer guide", "fastapi", "llms", "managed identity", "mcp", "mcp server", "model context protocol", "natural language processing", "openapi", "python", "to do list app", "web applications"]
+tags: ["Agent Service", "AI", "AI Agent Integration", "App Deployment", "Automation", "Azure", "Azure AI Foundry", "Azure App Service", "Azure Developer CLI", "Cloud Hosting", "Community", "Developer Guide", "FastAPI", "LLMs", "Managed Identity", "MCP", "MCP Server", "Natural Language Processing", "OpenAPI", "Python", "To Do List App", "Web Applications"]
+tags_normalized: ["agent service", "ai", "ai agent integration", "app deployment", "automation", "azure", "azure ai foundry", "azure app service", "azure developer cli", "cloud hosting", "community", "developer guide", "fastapi", "llms", "managed identity", "mcp", "mcp server", "natural language processing", "openapi", "python", "to do list app", "web applications"]
 ---
 
 jordanselig walks through how developers can connect Azure AI Foundry agents to any application using the Model Context Protocol (MCP) and App Service, with practical examples and deployment guidance.<!--excerpt_end-->

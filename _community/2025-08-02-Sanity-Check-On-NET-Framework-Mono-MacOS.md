@@ -12,7 +12,7 @@ date: 2025-08-02 18:53:34 +00:00
 permalink: "/2025-08-02-Sanity-Check-On-NET-Framework-Mono-MacOS.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Framework", "Assembly Versioning", "Build Toolchain", "Coding", "Community", "Cross Platform Development", "Developer Workflow", "MacOS", "Mono", "Rider IDE", "System.Net.Http", "Unit Testing"]
-tags_normalized: ["net", "net framework", "assembly versioning", "build toolchain", "coding", "community", "cross platform development", "developer workflow", "macos", "mono", "rider ide", "system dot net dot http", "unit testing"]
+tags_normalized: ["dotnet", "dotnet framework", "assembly versioning", "build toolchain", "coding", "community", "cross platform development", "developer workflow", "macos", "mono", "rider ide", "systemdotnetdothttp", "unit testing"]
 ---
 
 Author tparikka discusses the challenges of building and testing .NET Framework 4.8 services on MacOS using Mono, highlighting assembly compatibility issues.<!--excerpt_end-->

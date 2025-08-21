@@ -12,7 +12,7 @@ date: 2025-08-19 15:56:42 +00:00
 permalink: "/2025-08-19-Dependabot-Adds-Support-for-Automated-Rust-Toolchain-Updates.html"
 categories: ["DevOps"]
 tags: [".github/dependabot.yml", "Automation", "CI", "Continuous Integration", "Dependabot", "Dependency Management", "DevOps", "GitHub", "News", "Rust", "Rust Toolchain", "Rust Toolchain.toml", "Rustup", "Toolchain Management", "Version Updates"]
-tags_normalized: ["github slash dependabot dot yml", "automation", "ci", "continuous integration", "dependabot", "dependency management", "devops", "github", "news", "rust", "rust toolchain", "rust toolchain dot toml", "rustup", "toolchain management", "version updates"]
+tags_normalized: ["dotgithubslashdependabotdotyml", "automation", "ci", "continuous integration", "dependabot", "dependency management", "devops", "github", "news", "rust", "rust toolchain", "rust toolchaindottoml", "rustup", "toolchain management", "version updates"]
 ---
 
 Allison introduces Dependabot's new feature that automates updates for Rust toolchain versions, making it easier for Rust developers to maintain up-to-date CI environments across teams.<!--excerpt_end-->

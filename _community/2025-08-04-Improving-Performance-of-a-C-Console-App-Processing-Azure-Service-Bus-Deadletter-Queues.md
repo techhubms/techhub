@@ -12,7 +12,7 @@ date: 2025-08-04 11:47:42 +00:00
 permalink: "/2025-08-04-Improving-Performance-of-a-C-Console-App-Processing-Azure-Service-Bus-Deadletter-Queues.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Async Programming", "Azure", "Azure Service Bus", "Azure Storage", "C#", "Coding", "Community", "Console App", "Deadletter Queue", "DevOps", "DevOps Pipeline", "Message Processing", "Performance", "Subscription"]
-tags_normalized: ["async programming", "azure", "azure service bus", "azure storage", "c", "coding", "community", "console app", "deadletter queue", "devops", "devops pipeline", "message processing", "performance", "subscription"]
+tags_normalized: ["async programming", "azure", "azure service bus", "azure storage", "csharp", "coding", "community", "console app", "deadletter queue", "devops", "devops pipeline", "message processing", "performance", "subscription"]
 ---
 
 TTwelveUnits asks for guidance on making a C# console app method more performant for processing Azure Service Bus deadletter messages, especially for large queues, as part of a nightly Azure DevOps pipeline.<!--excerpt_end-->

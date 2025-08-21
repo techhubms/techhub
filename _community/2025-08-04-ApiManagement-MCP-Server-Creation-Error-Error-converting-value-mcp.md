@@ -12,7 +12,7 @@ date: 2025-08-04 15:19:58 +00:00
 permalink: "/2025-08-04-ApiManagement-MCP-Server-Creation-Error-Error-converting-value-mcp.html"
 categories: ["Azure"]
 tags: ["API Exposure", "API Gateway", "Azure", "Azure API Management", "Community", "ControlPath", "Error Handling", "Input Parsing", "MCP Server", "Microsoft Documentation", "Microsoft.Azure.ApiManagement", "REST API"]
-tags_normalized: ["api exposure", "api gateway", "azure", "azure api management", "community", "controlpath", "error handling", "input parsing", "mcp server", "microsoft documentation", "microsoft dot azure dot apimanagement", "rest api"]
+tags_normalized: ["api exposure", "api gateway", "azure", "azure api management", "community", "controlpath", "error handling", "input parsing", "mcp server", "microsoft documentation", "microsoftdotazuredotapimanagement", "rest api"]
 ---
 
 Authored by Competitive-Ad-5081, this post details a technical issue faced when exposing an API as an MCP server via Azure API Management and seeks advice from the community.<!--excerpt_end-->

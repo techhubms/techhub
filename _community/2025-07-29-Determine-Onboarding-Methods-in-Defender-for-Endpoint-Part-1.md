@@ -12,7 +12,7 @@ date: 2025-07-29 14:00:39 +00:00
 permalink: "/2025-07-29-Determine-Onboarding-Methods-in-Defender-for-Endpoint-Part-1.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "BKMK EPLog", "Co Management", "Community", "Defender For Endpoint", "Device Onboarding", "EndpointProtectionAgent.log", "GPO", "Group Policy", "Local Script", "MCM", "Microsoft Configuration Manager", "Microsoft Intune", "Onboard", "Registry Keys", "Security", "Troubleshoot", "Troubleshooting", "Understanding", "Windows Endpoint"]
-tags_normalized: ["azure", "bkmk eplog", "co management", "community", "defender for endpoint", "device onboarding", "endpointprotectionagent dot log", "gpo", "group policy", "local script", "mcm", "microsoft configuration manager", "microsoft intune", "onboard", "registry keys", "security", "troubleshoot", "troubleshooting", "understanding", "windows endpoint"]
+tags_normalized: ["azure", "bkmk eplog", "co management", "community", "defender for endpoint", "device onboarding", "endpointprotectionagentdotlog", "gpo", "group policy", "local script", "mcm", "microsoft configuration manager", "microsoft intune", "onboard", "registry keys", "security", "troubleshoot", "troubleshooting", "understanding", "windows endpoint"]
 ---
 
 edgarus71 details approaches for onboarding devices to Defender for Endpoint, distinguishing between methods like Intune, GPO, and MCM, and providing troubleshooting advice.<!--excerpt_end-->

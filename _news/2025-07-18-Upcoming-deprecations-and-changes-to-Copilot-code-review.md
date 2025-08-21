@@ -12,7 +12,7 @@ date: 2025-07-18 19:28:33 +00:00
 permalink: "/2025-07-18-Upcoming-deprecations-and-changes-to-Copilot-code-review.html"
 viewing_mode: "external"
 tags: ["AI", "Code Review", "Coding Guidelines", "Copilot Instructions.md", "Developer Tools", "Feature Update", "GitHub", "GitHub Copilot", "News", "Pull Request", "UI Enhancement", "Workflow"]
-tags_normalized: ["ai", "code review", "coding guidelines", "copilot instructions dot md", "developer tools", "feature update", "github", "github copilot", "news", "pull request", "ui enhancement", "workflow"]
+tags_normalized: ["ai", "code review", "coding guidelines", "copilot instructionsdotmd", "developer tools", "feature update", "github", "github copilot", "news", "pull request", "ui enhancement", "workflow"]
 ---
 
 In this article, Allison discusses forthcoming updates to Copilot's code review experience. The post highlights the transition from coding guidelines to a dedicated copilot-instructions.md file, improvements in the user interface to make the Copilot review request option more prominent, and hints at additional features to streamline development workflows.<!--excerpt_end-->

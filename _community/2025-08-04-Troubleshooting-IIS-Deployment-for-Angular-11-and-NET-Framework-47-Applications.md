@@ -12,7 +12,7 @@ date: 2025-08-04 17:20:05 +00:00
 permalink: "/2025-08-04-Troubleshooting-IIS-Deployment-for-Angular-11-and-NET-Framework-47-Applications.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET", ".NET Framework 4.7", "404 Error", "Angular 11", "Backend Deployment", "Coding", "Community", "DevOps", "Frontend Deployment", "IIS Deployment", "MSBuild", "Production Build", "Site Configuration", "Web.config"]
-tags_normalized: ["net", "net framework 4 dot 7", "404 error", "angular 11", "backend deployment", "coding", "community", "devops", "frontend deployment", "iis deployment", "msbuild", "production build", "site configuration", "web dot config"]
+tags_normalized: ["dotnet", "dotnet framework 4dot7", "404 error", "angular 11", "backend deployment", "coding", "community", "devops", "frontend deployment", "iis deployment", "msbuild", "production build", "site configuration", "webdotconfig"]
 ---
 
 Defiant_Priority_801 outlines challenges encountered while deploying an Angular 11 and .NET Framework 4.7 application stack to IIS, particularly struggling with 404 errors after following standard deployment procedures.<!--excerpt_end-->

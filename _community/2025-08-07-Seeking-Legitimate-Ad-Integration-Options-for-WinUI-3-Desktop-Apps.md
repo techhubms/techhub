@@ -12,7 +12,7 @@ date: 2025-08-07 18:04:40 +00:00
 permalink: "/2025-08-07-Seeking-Legitimate-Ad-Integration-Options-for-WinUI-3-Desktop-Apps.html"
 categories: ["Coding"]
 tags: ["AD Integration", "AD Networks", "AD SDK", "AdMob", "Banner Ads", "C#", "Coding", "Community", "Desktop Monetization", "Native Ads", "Native Desktop Apps", "PubMatic", "Rust FFI", "Unity Ads", "WebView2", "Win32", "Windows App SDK", "WinUI 3"]
-tags_normalized: ["ad integration", "ad networks", "ad sdk", "admob", "banner ads", "c", "coding", "community", "desktop monetization", "native ads", "native desktop apps", "pubmatic", "rust ffi", "unity ads", "webview2", "win32", "windows app sdk", "winui 3"]
+tags_normalized: ["ad integration", "ad networks", "ad sdk", "admob", "banner ads", "csharp", "coding", "community", "desktop monetization", "native ads", "native desktop apps", "pubmatic", "rust ffi", "unity ads", "webview2", "win32", "windows app sdk", "winui 3"]
 ---
 
 lordaimer raises a detailed technical question about integrating advertisements into a native WinUI 3 desktop app using C#, highlighting the lack of ad network support beyond UWP and seeking compliant solutions from the community.<!--excerpt_end-->

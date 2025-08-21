@@ -12,7 +12,7 @@ date: 2025-08-04 04:16:15 +00:00
 permalink: "/2025-08-04-Our-Infra-Was-Fine-The-AI-Pipeline-Wasnt-3-Silent-Crashes-We-Kept-Missing.html"
 categories: ["DevOps", "AI", "Security"]
 tags: ["AI", "Bootstrap Ordering", "Canary Prompt", "CI/CD", "Community", "Deployment Deadlock", "DevOps", "Incident Response", "LLM Pipeline", "Pre Deploy Collapse", "Problem Mapping", "Production Failures", "Security", "Semantic Health Checks", "Semantic Tree"]
-tags_normalized: ["ai", "bootstrap ordering", "canary prompt", "ci slash cd", "community", "deployment deadlock", "devops", "incident response", "llm pipeline", "pre deploy collapse", "problem mapping", "production failures", "security", "semantic health checks", "semantic tree"]
+tags_normalized: ["ai", "bootstrap ordering", "canary prompt", "cislashcd", "community", "deployment deadlock", "devops", "incident response", "llm pipeline", "pre deploy collapse", "problem mapping", "production failures", "security", "semantic health checks", "semantic tree"]
 ---
 
 wfgy_engine highlights persistent DevOps challenges in AI pipelines, describing how classic infrastructure issues led to subtle, production-breaking failures and how their team created a problem map and lightweight controls to address them.<!--excerpt_end-->

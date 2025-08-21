@@ -12,7 +12,7 @@ date: 2025-08-04 13:39:41 +00:00
 permalink: "/2025-08-04-Split-CommandQuery-Classes-vs-Monolithic-Repository-in-C-Projects.html"
 categories: ["Coding"]
 tags: ["Backend Development", "C#", "Coding", "Command Query Segregation", "Community", "CQRS", "Design Patterns", "File Organization", "Maintainability", "Project Structure", "Repository Pattern", "Software Practices"]
-tags_normalized: ["backend development", "c", "coding", "command query segregation", "community", "cqrs", "design patterns", "file organization", "maintainability", "project structure", "repository pattern", "software practices"]
+tags_normalized: ["backend development", "csharp", "coding", "command query segregation", "community", "cqrs", "design patterns", "file organization", "maintainability", "project structure", "repository pattern", "software practices"]
 ---
 
 In this community post, Square_Potato6312 discusses their recent experiences with CQRS and monolithic repository patterns in C# backend development, exploring team perspectives and best practices.<!--excerpt_end-->

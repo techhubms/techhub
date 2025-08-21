@@ -11,8 +11,8 @@ feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KV
 date: 2025-07-30 22:27:34 +00:00
 permalink: "/2025-07-30-Practical-Introduction-to-Building-Remote-MCP-Servers.html"
 categories: ["AI", "Coding", "DevOps", "Azure"]
-tags: ["Agent Integration", "AI", "Azure", "Azure AI Foundry", "Cloud Computing", "Cloud Platforms", "Coding", "Custom Agents", "Dev", "Developer Tools", "Development", "DevOps", "GitHub", "Live Demo", "MCP", "MCP SDK", "Microsoft", "Model Context Protocol", "Remote Server", "Tech", "Technology", "Videos", "Visual Studio Code"]
-tags_normalized: ["agent integration", "ai", "azure", "azure ai foundry", "cloud computing", "cloud platforms", "coding", "custom agents", "dev", "developer tools", "development", "devops", "github", "live demo", "mcp", "mcp sdk", "microsoft", "model context protocol", "remote server", "tech", "technology", "videos", "visual studio code"]
+tags: ["Agent Integration", "AI", "Azure", "Azure AI Foundry", "Cloud Computing", "Cloud Platforms", "Coding", "Custom Agents", "Dev", "Developer Tools", "Development", "DevOps", "GitHub", "Live Demo", "MCP", "MCP SDK", "Microsoft", "Remote Server", "Tech", "Technology", "Videos", "VS Code"]
+tags_normalized: ["agent integration", "ai", "azure", "azure ai foundry", "cloud computing", "cloud platforms", "coding", "custom agents", "dev", "developer tools", "development", "devops", "github", "live demo", "mcp", "mcp sdk", "microsoft", "remote server", "tech", "technology", "videos", "vs code"]
 ---
 
 Microsoft Developer presents a hands-on guide, with Toby P. and Joe Z. demonstrating how to build remote MCP servers and integrate MCP functionalities using open-source SDKs.<!--excerpt_end-->

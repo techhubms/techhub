@@ -12,7 +12,7 @@ date: 2025-07-09 16:00:00 +00:00
 permalink: "/2025-07-09-Reasoning-Reimagined-Introducing-Phi-4-mini-flash-reasoning-for-Efficient-Edge-AI.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI + Machine Learning", "Azure", "Azure AI Foundry", "Copilot", "Deployment", "Developer Tools", "Edge AI", "Gated Memory Unit", "Generative AI", "Math Reasoning", "Microsoft", "Mobile AI", "Model Efficiency", "News", "Phi 4 Mini Flash Reasoning", "Real Time Applications", "Responsible AI", "SambaY Architecture"]
-tags_normalized: ["ai", "ai machine learning", "azure", "azure ai foundry", "copilot", "deployment", "developer tools", "edge ai", "gated memory unit", "generative ai", "math reasoning", "microsoft", "mobile ai", "model efficiency", "news", "phi 4 mini flash reasoning", "real time applications", "responsible ai", "sambay architecture"]
+tags_normalized: ["ai", "ai plus machine learning", "azure", "azure ai foundry", "copilot", "deployment", "developer tools", "edge ai", "gated memory unit", "generative ai", "math reasoning", "microsoft", "mobile ai", "model efficiency", "news", "phi 4 mini flash reasoning", "real time applications", "responsible ai", "sambay architecture"]
 ---
 
 By Weizhu Chen, Jianfeng Gao, and Liliang Ren. Discover Microsoft’s Phi-4-mini-flash-reasoning model, engineered for efficient, fast reasoning at the edge and on mobile devices, and available now via Azure AI Foundry.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-05-29 20:38:42 +00:00
 permalink: "/2025-05-29-Go-from-Prompt-to-Playback-Sora-Video-Generation-in-Azure-AI-Foundrys-Video-Playground.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "AI Development", "API Integration", "Azure", "Azure AI Content Safety", "Azure AI Foundry", "Azure OpenAI", "Developer Tools", "Model Prototyping", "Multi Lingual Code Samples", "News", "Prompt Engineering", "Sora", "Video Generation", "Visual Studio Code"]
-tags_normalized: ["ai", "ai development", "api integration", "azure", "azure ai content safety", "azure ai foundry", "azure openai", "developer tools", "model prototyping", "multi lingual code samples", "news", "prompt engineering", "sora", "video generation", "visual studio code"]
+tags: ["AI", "AI Development", "API Integration", "Azure", "Azure AI Content Safety", "Azure AI Foundry", "Azure OpenAI", "Developer Tools", "Model Prototyping", "Multi Lingual Code Samples", "News", "Prompt Engineering", "Sora", "Video Generation", "VS Code"]
+tags_normalized: ["ai", "ai development", "api integration", "azure", "azure ai content safety", "azure ai foundry", "azure openai", "developer tools", "model prototyping", "multi lingual code samples", "news", "prompt engineering", "sora", "video generation", "vs code"]
 ---
 
 Authored by Thasmika Gokal, this article explores the video playground within Azure AI Foundry and its integration with the Sora video generation model, providing insights and guidance for developers looking to experiment and deploy AI-generated video workflows.<!--excerpt_end-->

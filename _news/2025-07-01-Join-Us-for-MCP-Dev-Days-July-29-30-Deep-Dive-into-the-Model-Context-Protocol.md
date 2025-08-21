@@ -11,8 +11,8 @@ feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-07-01 22:00:46 +00:00
 permalink: "/2025-07-01-Join-Us-for-MCP-Dev-Days-July-29-30-Deep-Dive-into-the-Model-Context-Protocol.html"
 categories: ["AI", "GitHub Copilot", "Coding", "DevOps", "Azure", "Security"]
-tags: ["Agent Experiences", "AI", "AI Models", "API Management", "Azure", "Coding", "Developer Events", "Developer Tools", "DevOps", "GitHub Copilot", "MCP", "MCP Dev Days", "Microsoft Developer", "Model Context Protocol", "News", "Prompt Driven Development", "Security", "Security Best Practices", "Visual Studio", "Visual Studio Code", "Workshops"]
-tags_normalized: ["agent experiences", "ai", "ai models", "api management", "azure", "coding", "developer events", "developer tools", "devops", "github copilot", "mcp", "mcp dev days", "microsoft developer", "model context protocol", "news", "prompt driven development", "security", "security best practices", "visual studio", "visual studio code", "workshops"]
+tags: ["Agent Experiences", "AI", "AI Models", "API Management", "Azure", "Coding", "Developer Events", "Developer Tools", "DevOps", "GitHub Copilot", "MCP", "MCP Dev Days", "Microsoft Developer", "News", "Prompt Driven Development", "Security", "Security Best Practices", "VS", "VS Code", "Workshops"]
+tags_normalized: ["agent experiences", "ai", "ai models", "api management", "azure", "coding", "developer events", "developer tools", "devops", "github copilot", "mcp", "mcp dev days", "microsoft developer", "news", "prompt driven development", "security", "security best practices", "vs", "vs code", "workshops"]
 ---
 
 Authored by Katie Savage and Marc Baiza, this post introduces MCP Dev Days, a Microsoft event dedicated to the Model Context Protocol (MCP), offering deep technical content, hands-on sessions, and real-world demos across major development tools.<!--excerpt_end-->

@@ -12,7 +12,7 @@ date: 2025-07-23 16:00:00 +00:00
 permalink: "/2025-07-23-Solving-the-Inference-Problem-for-Open-Source-AI-Projects-with-GitHub-Models.html"
 categories: ["AI", "DevOps"]
 tags: ["AI", "AI & ML", "AI in Open Source", "AI Models", "CI/CD", "DeepSeek R1", "DevOps", "GitHub Actions", "GitHub Models", "GPT 4o", "Inference API", "Llama 3", "LLMs", "News", "OpenAI Compatible", "Personal Access Token"]
-tags_normalized: ["ai", "ai ml", "ai in open source", "ai models", "ci slash cd", "deepseek r1", "devops", "github actions", "github models", "gpt 4o", "inference api", "llama 3", "llms", "news", "openai compatible", "personal access token"]
+tags_normalized: ["ai", "ai and ml", "ai in open source", "ai models", "cislashcd", "deepseek r1", "devops", "github actions", "github models", "gpt 4o", "inference api", "llama 3", "llms", "news", "openai compatible", "personal access token"]
 ---
 
 Sean Goedecke explains how GitHub Models, a free inference API, simplifies adding AI features to open source software. The article provides practical advice for integration and scaling, aiming to lower barriers for users and contributors.<!--excerpt_end-->
