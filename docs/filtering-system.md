@@ -126,7 +126,7 @@ Post from July 10, 2025  ← Excluded (older than 7 days)
 
 ### Filter Interaction Rules
 
-The filtering system operates with two types of filters that work together to provide precise content discovery:
+The filtering system operates with three types of filters that work together to provide precise content discovery:
 
 #### Filter Types and Logic
 
@@ -139,6 +139,12 @@ The filtering system operates with two types of filters that work together to pr
    - Each additional filter further narrows the results
    - All active filters must match for content to be displayed
    - **Unified Implementation**: Sections, collections, and content tags are all implemented as tags
+
+3. **Text Search Filter (Real-Time)**: Free-form text search that filters content by keywords
+   - Searches across titles, descriptions, meta information, and tags
+   - Works independently with both date and tag filters
+   - Uses real-time filtering with debounced input for performance
+   - Supports partial matching and case-insensitive search
 
 #### Universal Tag-Based Architecture
 
@@ -168,6 +174,103 @@ const isMatch = relatedPostIndices.includes(postIndex);
 ```
 
 **Server-Side Generation**: The `generate_all_filters` filter in `tag_filters.rb` provides unified tag relationship generation. See [Plugins](plugins.md) for the Ruby implementation details.
+
+### Text Search Implementation
+
+#### Overview
+
+The text search functionality provides real-time content filtering based on user-entered keywords. It works seamlessly alongside date and tag filters to create powerful content discovery capabilities.
+
+#### Search Functionality
+
+**Search Scope**: Text search indexes and searches across multiple content areas:
+
+- **Post titles**: Full title text content
+- **Post descriptions**: Meta descriptions and excerpts  
+- **Author and meta information**: Author names, publication dates, and metadata
+- **Tags and categories**: All associated tags and category data
+
+**Search Features**:
+
+- **Case-insensitive matching**: Searches ignore letter case
+- **Partial word matching**: Matches substrings within words
+- **Real-time filtering**: Results update as you type with debounced input (300ms delay)
+- **URL persistence**: Search terms are preserved in browser URL for bookmarking and sharing
+- **Clear functionality**: One-click search clearing with dedicated clear button
+
+#### Implementation Details
+
+**Content Indexing**: During page load, JavaScript pre-processes all content items to create searchable text:
+
+```javascript
+// Pre-extracted content for fast text search
+const content = titleText + ' ' + descriptionText + ' ' + metaText + ' ' + tagData;
+cachedPost.content = content.toLowerCase().trim();
+```
+
+**Search Processing**: The `passesTextSearch()` function handles real-time filtering:
+
+```javascript
+function passesTextSearch(cachedPost) {
+    if (!window.textSearchQuery) return true;
+    const query = window.textSearchQuery.toLowerCase();
+    return cachedPost.content.includes(query);
+}
+```
+
+**Event Handling**: Multiple event handlers provide comprehensive search interaction:
+
+- **Input events**: `handleTextSearchInput()` processes typing with debouncing
+- **Keyboard shortcuts**: Escape key clears search (`handleTextSearchKeydown()`)
+- **Clear button**: Dedicated clear button (`handleTextSearchClear()`)
+
+#### User Interface
+
+**Search Input Field**: Located prominently in the filter interface between the "Clear All" button and date filters:
+
+```html
+<div class="text-search-container">
+  <input type="text" id="text-search-input" placeholder="Search" class="text-search-input">
+  <button id="text-search-clear" class="text-search-clear-btn hidden" title="Clear search">×</button>
+</div>
+```
+
+**Clear Button Behavior**:
+- Automatically appears when text is entered
+- Hidden when search field is empty
+- Provides immediate search clearing functionality
+
+#### Integration with Other Filters
+
+**Filter Combination Logic**: Text search works additively with other filter types:
+
+1. **Date Filter + Text Search**: Shows content from selected time period matching search terms
+2. **Tag Filter + Text Search**: Shows tagged content matching search terms
+3. **All Filters Combined**: Shows content matching date range, selected tags, AND search terms
+
+**Filter Count Updates**: When text search is active, all filter button counts automatically update to reflect the intersection of search results with each filter option.
+
+**URL State Management**: Search terms are preserved in the URL using the `search` parameter:
+
+```
+/ai/?filters=azure,visual%20studio&search=copilot
+```
+
+#### Performance Optimization
+
+**Debounced Input**: Search updates are debounced (300ms delay) to prevent excessive filtering during rapid typing:
+
+```javascript
+clearTimeout(window.textSearchTimeout);
+window.textSearchTimeout = setTimeout(() => {
+    updateDisplay();
+    updateURL();
+}, 300);
+```
+
+**Pre-computed Content**: Search content is indexed once during page load, not recalculated during each search.
+
+**Efficient Filtering**: Text search uses simple string inclusion rather than complex regex for maximum performance.
 
 ### Filter Interaction Behavior
 
@@ -302,11 +405,15 @@ When filters are deselected, the filtering scope adjusts accordingly:
 
 4. **Tag Filter Accumulation**: Tag filters use AND logic; each additional filter further narrows results
 
-5. **Real-Time Updates**: All filter counts update immediately when any filter state changes
+5. **Text Search Integration**: Text search works alongside all other filters using AND logic; search terms must match in addition to any active date or tag filters
 
-6. **Subset Matching Consistency**: Tag subset matching applies consistently across all filter interactions
+6. **Real-Time Updates**: All filter counts update immediately when any filter state changes, including text search input
 
-7. **Unified Tag Implementation**: All filters (sections, collections, content tags) are implemented as tags with identical behavior
+7. **Subset Matching Consistency**: Tag subset matching applies consistently across all filter interactions
+
+8. **Unified Tag Implementation**: All filters (sections, collections, content tags) are implemented as tags with identical behavior
+
+9. **Text Search Persistence**: Search terms are preserved in URL parameters for bookmarking and sharing
 
 ### Server-Client Consistency Requirements
 
@@ -334,6 +441,8 @@ The filtering system maintains consistency between server-side Jekyll/Liquid pro
    - Handles real-time filtering without page reload
    - Uses pre-calculated tag relationships for instant filtering
    - Recalculates all DATE filter counts (e.g., "Today", "Last 3 days") using the user's local timezone. This means the set of visible posts for a date filter is always correct for the user's context, even if it differs from the server's timezone.
+   - Implements real-time text search with content indexing and debounced input processing
+   - Manages text search URL parameters for state persistence
    - Exception: Only `assets/js/sections.js` may modify content on page load
 
 **Plugin-JavaScript Consistency**: Client-side filtering logic uses server-generated tag relationship mappings to ensure consistent user experience. See [Plugins](plugins.md) for the server-side filter implementations that generate the data structures JavaScript uses.
@@ -412,7 +521,7 @@ expanded_view_max_count: 100
 
 - **More button**: Expands to show up to 100 tags (when >30 available)
 - **Less button**: Collapses back to 30 tags
-- **Clear All button**: Removes all selections, collapses tags, resets to default state
+- **Clear All button**: Removes all selections (date filters, tag filters, and text search), collapses tags, resets to default state
 
 **Filter Interaction Flow**:
 
@@ -517,7 +626,8 @@ Each of the three filter modes is expected to display both filter types under no
 1. **DOM Manipulation**: Show/hide existing elements (no re-rendering)
 2. **Minimal DOM Queries**: Efficient event delegation
 3. **Debounced Updates**: Prevent excessive recalculations during rapid interactions
-4. **Client Efficiency**: JavaScript operates on pre-limited, structured data
+4. **Pre-indexed Text Search**: Content indexed once on page load for fast search
+5. **Client Efficiency**: JavaScript operates on pre-limited, structured data
 
 ### Data Consistency Requirements
 

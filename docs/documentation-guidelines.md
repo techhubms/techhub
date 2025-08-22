@@ -52,13 +52,17 @@ When creating or updating documentation, follow this strict hierarchy to ensure 
 
 - **`docs/plugins.md`**: Creating and maintaining Jekyll plugins
 - **`docs/jekyll-development.md`**: Jekyll-specific development patterns and practices
+- **`docs/github-token-setup.md`**: GitHub token configuration and authentication setup
 - **Purpose**: Explain **how to do** specific development tasks
 
 ### 5. Language-Oriented Files
 
 - **`docs/javascript-guidelines.md`**: JavaScript development standards and patterns
 - **`docs/powershell-guidelines.md`**: PowerShell scripting conventions
+- **`docs/ruby-guidelines.md`**: Ruby development standards and best practices
 - **`docs/markdown-guidelines.md`**: Markdown formatting and content standards
+- **`docs/frontend-guidelines.md`**: Frontend development standards and practices
+- **`docs/writing-style-guidelines.md`**: Content writing style and tone guidelines
 - **Purpose**: Language-specific syntax, conventions, and best practices
 
 ### 6. Performance and Optimization
@@ -132,9 +136,9 @@ This file references another file that references back to this file.
 
 ```text
 docs/
-├── README.md                    # Documentation index and overview
 ├── terminology.md               # Foundation: Definitions and concepts
 ├── site-overview.md            # Foundation: Architecture overview
+├── documentation-guidelines.md # Foundation: Documentation structure and hierarchy
 ├── content-management.md       # Functionality: Content workflows
 ├── datetime-processing.md      # Functionality: Date and timezone handling
 ├── filtering-system.md         # Functionality: Filtering implementation
@@ -144,8 +148,12 @@ docs/
 ├── jekyll-development.md      # Task: Jekyll development
 ├── javascript-guidelines.md   # Language: JavaScript standards
 ├── powershell-guidelines.md   # Language: PowerShell standards
+├── ruby-guidelines.md         # Language: Ruby standards
 ├── markdown-guidelines.md     # Language: Markdown standards
-└── performance-guidelines.md  # Performance: Optimization strategies
+├── frontend-guidelines.md     # Language: Frontend development standards
+├── writing-style-guidelines.md # Language: Content writing standards
+├── performance-guidelines.md  # Performance: Optimization strategies
+└── github-token-setup.md      # Task: GitHub token configuration
 ```
 
 ## Content Organization Within Files
@@ -227,12 +235,12 @@ Follow the comprehensive guidelines in [Writing Style Guidelines](writing-style-
 
 ### Index Update Process
 
-1. **Add new files** to the appropriate section in `docs/README.md`
+1. **Add new files** to the appropriate section in this file (`documentation-guidelines.md`)
 2. **Update file descriptions** to reflect current content
 3. **Maintain reading order** recommendations for new users
 4. **Cross-reference** related files appropriately
 
-For the current documentation index structure, see [docs/README.md](README.md).
+For the current documentation index structure, see the [Directory Structure](#directory-structure) section in this file.
 
 ## Current Documentation Index
 
