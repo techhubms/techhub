@@ -235,12 +235,12 @@ Follow the comprehensive guidelines in [Writing Style Guidelines](writing-style-
 
 ### Index Update Process
 
-1. **Add new files** to the appropriate section in `docs/README.md`
+1. **Add new files** to the appropriate section in this file (`documentation-guidelines.md`)
 2. **Update file descriptions** to reflect current content
 3. **Maintain reading order** recommendations for new users
 4. **Cross-reference** related files appropriately
 
-For the current documentation index structure, see [docs/README.md](README.md).
+For the current documentation index structure, see the [Directory Structure](#directory-structure) section in this file.
 
 ## Current Documentation Index
 
