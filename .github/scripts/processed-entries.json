@@ -7002,5 +7002,11 @@
     "timestamp": "2025-08-22 18:17:39 +00:00",
     "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content focuses on policy management for GitHub Copilot (developer tool), which falls under AI-driven coding assistance (AI rule 2, GitHub Copilot rules 1 and 5). The post is an official update—not a sales pitch, negative post, or non-technical business strategy—so none of the generic exclusion rules apply.",
     "canonical_url": "https://github.blog/changelog/2025-08-22-premium-request-overage-policy-is-generally-available-for-copilot-business-and-enterprise"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the article highlights how SRE.ai uses artificial intelligence to automate DevOps programmatically, matching AI inclusion rule 1 (Microsoft AI Products/Services does not directly apply, but the higher-level AI usage and integration is central). Assigned the DevOps category because the entire focus is on unifying, automating, and managing DevOps workflows for SaaS, which matches multiple points in the DevOps inclusion rules, especially those involving workflows, automation, CI/CD, and tooling. Microsoft-specific technologies are not the central focus, so Azure, Coding, ML, Security, and GitHub Copilot categories were not assigned. No generic exclusion rules apply: the content is technical, sufficiently detailed, and non-promotional, and does not focus on non-development Microsoft products or biographical content.",
+    "timestamp": "2025-08-22 20:14:27 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/sre-ai-looks-to-unify-devops-workflows-across-multiple-saas-applications/?utm_source=rss&utm_medium=rss&utm_campaign=sre-ai-looks-to-unify-devops-workflows-across-multiple-saas-applications"
   }
 ]
