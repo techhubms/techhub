@@ -198,6 +198,25 @@ $on-laptop: 900px;
   Filter content by AI topic. Currently 12 posts available.
 </div>
 
+<!-- Text search input with proper labeling -->
+<div class="text-search-container">
+  <label for="text-search-input" class="sr-only">Search content</label>
+  <input 
+    type="text" 
+    id="text-search-input" 
+    placeholder="Search" 
+    class="text-search-input"
+    aria-describedby="search-help">
+  <button 
+    id="text-search-clear" 
+    class="text-search-clear-btn hidden" 
+    title="Clear search"
+    aria-label="Clear search">×</button>
+</div>
+<div id="search-help" class="sr-only">
+  Search across titles, descriptions, and tags. Results update as you type.
+</div>
+
 <!-- Live region for dynamic updates -->
 <div
   aria-live="polite"
