@@ -22,7 +22,7 @@ The sections grid is populated using Liquid templating:
 
 The site is organized into multiple sections, each representing a distinct topic area:
 
-### Current Sections (as of 2025-08-09)
+### Current Sections (as of 2025-08-22)
 
 1. **Everything Section** (`/all`)
    - Category: "All"
@@ -186,7 +186,7 @@ The core plugin that creates pages based on `sections.json`:
 
 ## Section Directories
 
-### Current Section Folders (as of 2025-08-09)
+### Current Section Folders (as of 2025-08-22)
 
 - **`ai/`**: Contains AI section-specific files
   - Custom pages like `ai-to-z.md`

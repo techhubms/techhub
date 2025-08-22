@@ -172,6 +172,33 @@ This document defines the key terms and concepts used throughout the Tech Hub si
 - Show GitHub Copilot Community content tagged with "visual studio code" or "productivity"
 - Find Videos tagged with specific programming languages through normalized tag matching
 
+### Text Search Filter
+
+**Definition**: Client-side real-time text search functionality that allows users to filter content by entering keywords or phrases directly into a search input field.
+
+**Purpose**: Enables users to quickly find content by searching across titles, descriptions, metadata, and tags using free-form text input, complementing the structured tag-based filtering system.
+
+**Functionality**:
+
+- Real-time filtering as user types with debounced input (300ms delay)
+- Searches across multiple content areas: titles, descriptions, author info, and tags
+- Case-insensitive and partial word matching
+- Works alongside date and tag filters using AND logic
+- URL parameter persistence for bookmarking search results
+- Dedicated clear button for immediate search reset
+- Keyboard shortcuts (Escape key) for quick clearing
+
+**Implementation**: JavaScript-based system using pre-indexed content strings generated during page load. Content is processed once and cached for fast search performance.
+
+**Usage Examples**:
+
+- Search for "copilot chat" to find all content mentioning GitHub Copilot Chat features
+- Enter "azure devops" to discover content related to Azure DevOps across all collections
+- Type partial terms like "visual studio" to match "Visual Studio Code", "Visual Studio 2022", etc.
+- Combine with filters: select "Last 7 days" + "AI" tag + search "machine learning"
+
+**Integration with Other Filters**: Text search enhances the filtering system by allowing users to combine structured filtering (dates, tags) with unstructured search (keywords), providing comprehensive content discovery capabilities.
+
 ## Jekyll/Liquid Processing
 
 ### Jekyll Filters (Liquid Filters)
@@ -225,11 +252,12 @@ Located in `_plugins/` directory and extend Jekyll's functionality:
 
 1. **Sections** contain multiple **Collections**
 2. **Collections** contain multiple **Items**
-3. **Items** have metadata (dates, tags) used by **Date Filters** and **Tag Filters**
+3. **Items** have metadata (dates, tags) used by **Date Filters**, **Tag Filters**, and **Text Search Filter**
 4. **Jekyll Filters** process all data during build time to prepare content for client-side consumption
-5. Client-side **Date Filters** and **Tag Filters** provide interactive content discovery
+5. Client-side **Date Filters**, **Tag Filters**, and **Text Search Filter** provide interactive content discovery
+6. **Text Search Filter** works additively with structured filters to enable comprehensive content exploration
 
-This hierarchical organization enables both powerful content management and flexible user experience through multiple layers of filtering and organization.
+This hierarchical organization enables both powerful content management and flexible user experience through multiple layers of filtering and organization, combining structured (date/tag) and unstructured (text search) discovery methods.
 
 ## Content Structure Terminology
 
