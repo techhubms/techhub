@@ -6972,5 +6972,23 @@
     "canonical_url": "https://www.linkedin.com/posts/satyanadella_aiinhealthcare-dragoncopilot-epic-activity-7364045330037817345-y8cF",
     "collection": "news",
     "reason": "Succesfully added: AI category assigned because the main focus is integration and advancement of Microsoft's ambient AI (Dragon Copilot) in healthcare workflows (AI rule 1 and 5). No other categories apply since there is no substantive coverage of coding, Azure, DevOps, ML, or security implementation details. The content centers on AI-powered healthcare innovation, in line with Tech Hub’s inclusion rules for Microsoft AI platform news."
+  },
+  {
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/building-your-first-mcp-server-how-to-extend-ai-tools-with-custom-capabilities/",
+    "timestamp": "2025-08-22 17:11:51 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because the piece is centered around extending AI tools (GitHub Copilot) with the Model Context Protocol and discusses technical details of AI extensibility (AI inclusion rules 1,2,4,5). Assigned 'GitHub Copilot' because Copilot is the focus—how to add custom tools to it and technical project integration (GitHub Copilot rules 1-4). Assigned 'Coding' because it covers practical TypeScript code development, Next.js, API building, and MCP server logic (Coding rules 1,2,4). Did not assign 'DevOps', 'Azure', 'ML', or 'Security' as the content doesn't focus on CI/CD, cloud services, ML/data science, or security/identity. No generic exclusion rules applied; the content is technical, focused, and aimed at developers."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/troubleshooting-network-issues-with-retina/ba-p/4446071",
+    "timestamp": "2025-08-22 17:12:53 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Categories assigned per rules: Azure (content describes deployment and usage on Azure Kubernetes Service, e.g., node naming such as 'aks-agentpool', and Azure blob storage). DevOps applies as the piece covers cluster-level debugging, automation, continuous monitoring, CLI tools, and infrastructure management inside Kubernetes (DevOps rule 1, 4, and 6). Security is included due to focus on network observability, tracing, troubleshooting, and packet capture, all central to network security practices. No Coding, AI, ML, or GitHub Copilot categories as the article does not cover programming, model development, or AI platforms."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/tool-or-approach-to-identify-and-replace-obsolete-net-framework/m-p/4446845#M161",
+    "timestamp": "2025-08-22 17:13:16 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: The Coding category is assigned because the content is about code migration, identifying and replacing obsolete APIs, and tool usage within the Microsoft .NET ecosystem (Coding rules 1, 2, and 4). There is no content meeting generic exclusion rules; the focus is technical, and the post directly seeks actionable solutions for .NET code modernization. AI, DevOps, Azure, ML, and Security do not apply because the discussion does not involve those domains or relevant products or services."
   }
 ]

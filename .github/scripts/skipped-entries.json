@@ -6615,5 +6615,23 @@
     "canonical_url": "https://www.youtube.com/watch?v=pNRyn0ukwFM",
     "collection": "videos",
     "reason": "No categories found: No categories have been assigned because the content, as described in the title, description, and tags, focuses on a personal habit for daily learning and productivity using Microsoft To Do. There is insufficient evidence that the video contains substantive technical implementation, architecture, or discussion specific to Microsoft security products or technologies. Instead, it highlights personal strategies for staying up to date, which falls under 'workplace and business focus'—a generic exclusion. Additionally, the actual video content is not provided (content field is null), so I must rely only on the available metadata, which further indicates this is more of a personal productivity tip, not a technical how-to or deep dive into Microsoft technology. As per the generic exclusion rules, content primarily about business productivity, learning habits, or workflow tips without technical Microsoft development/security depth is excluded."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=yctwWsjqU1M",
+    "timestamp": "2025-08-22 17:12:10 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the content field is null, meaning there is no substantive content to analyze. Without actual content, it is impossible to determine if any Microsoft technology or category inclusion rules apply. Per workflow, if there is no main content, categorization cannot proceed."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/app-development/maui-android-api-35-action-bar-still-visible-despite/m-p/4446762#M1271",
+    "timestamp": "2025-08-22 17:12:14 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/securing-azure-workloads-from-identity-to-monitoring/m-p/4447160#M22127",
+    "timestamp": "2025-08-22 17:12:14 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length"
   }
 ]

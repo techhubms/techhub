@@ -1,0 +1,14 @@
+{
+  "PubDate": "2025-08-22T16:31:31+00:00",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/securing-azure-workloads-from-identity-to-monitoring/m-p/4447160#M22127",
+  "EnhancedContent": "Hi everyone 👋 — following up on my journey, I want to share how I approach end-to-end security in Azure workloads.\n\n- Identity First – Microsoft Entra ID for Conditional Access, PIM, and risk-based policies.\n- Workload Security – Defender for Cloud to monitor compliance and surface misconfigurations.\n- Visibility & Monitoring – Log Analytics + Sentinel to bring everything under one pane of glass.\n\nThrough my projects, I’ve been simulating enterprise scenarios where security isn’t just a checklist — it’s integrated into the architecture.\n\nComing soon:\n- A lab demo showing how Defender for Cloud highlights insecure configurations.\n- A real-world style Conditional Access baseline for Azure workloads.\n\nExcited to hear how others in this community are securing their Azure environments!\n\n#Azure | #AzureSecurity | #MicrosoftLearn | #ZeroTrust | #PerparimLabs",
+  "OutputDir": "_community",
+  "FeedName": "Microsoft Tech Community",
+  "Description": "Hi everyone 👋 — following up on my journey, I want to share how I approach end-to-end security in Azure workloads.\n\n- Identity First – Microsoft Entra ID for Conditional Access, PIM, and risk-based policies.\n- Workload Security – Defender for Cloud to monitor compliance and surface misconfigurations.\n- Visibility & Monitoring – Log Analytics + Sentinel to bring everything under one pane of glass.\n\nThrough my projects, I’ve been simulating enterprise scenarios where security isn’t just a checklist — it’s integrated into the architecture.\n\nComing soon:\n- A lab demo showing how Defender for Cloud highlights insecure configurations.\n- A real-world style Conditional Access baseline for Azure workloads.\n\nExcited to hear how others in this community are securing their Azure environments!\n\n#Azure | #AzureSecurity | #MicrosoftLearn | #ZeroTrust | #PerparimLabs",
+  "ProcessedDate": "2025-08-22 17:11:09",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Title": "👉 Securing Azure Workloads: From Identity to Monitoring",
+  "Tags": [],
+  "Author": "PerparimLabs"
+}
