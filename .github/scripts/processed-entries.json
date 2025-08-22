@@ -6990,5 +6990,17 @@
     "timestamp": "2025-08-22 17:13:16 +00:00",
     "collection": "community",
     "reason": "Succesfully added: The Coding category is assigned because the content is about code migration, identifying and replacing obsolete APIs, and tool usage within the Microsoft .NET ecosystem (Coding rules 1, 2, and 4). There is no content meeting generic exclusion rules; the focus is technical, and the post directly seeks actionable solutions for .NET code modernization. AI, DevOps, Azure, ML, and Security do not apply because the discussion does not involve those domains or relevant products or services."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-08-22 18:17:15 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the entire article is about deploying and using GPT-5 via Azure AI Foundry, focusing on an advanced AI feature (AI rules 1 and 4). Assigned Azure category because the content centers on Azure OpenAI and Azure AI Foundry platforms (Azure rule 1). Assigned Coding because the feature empowers direct code execution (Python, SQL) and development automation (Coding rule 4). No other categories were relevant. The categorization is supported by mentions of tool calling, Python, SQL, API authentication, and orchestration chains, clearly targeting technical devs.",
+    "canonical_url": "https://devblogs.microsoft.com/foundry/unlocking-gpt-5s-freeform-tool-calling-a-new-era-of-seamless-integration/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-08-22 18:17:39 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content focuses on policy management for GitHub Copilot (developer tool), which falls under AI-driven coding assistance (AI rule 2, GitHub Copilot rules 1 and 5). The post is an official update—not a sales pitch, negative post, or non-technical business strategy—so none of the generic exclusion rules apply.",
+    "canonical_url": "https://github.blog/changelog/2025-08-22-premium-request-overage-policy-is-generally-available-for-copilot-business-and-enterprise"
   }
 ]
