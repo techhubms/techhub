@@ -1,6 +1,6 @@
 # JavaScript Development Guidelines
 
-This file contains all JavaScript-specific development guidelines for the Tech Hub site. For comprehensive development patterns, see the [AI Coding Standards](../ai-coding-standards.md).
+This file contains all JavaScript-specific development guidelines for the Tech Hub site. For comprehensive development patterns, see [Documentation Guidelines](documentation-guidelines.md).
 
 ## Core JavaScript Principles
 
@@ -72,11 +72,14 @@ The filtering system uses a unified tag-based approach with these core functions
 - `executeFilterToggle()`: Handle all tag filter interactions (sections, collections, content tags)
 - `updateDisplay()`: Update content visibility and filter counts in real-time
 - `updateURL()`: Preserve filter state in browser URL for bookmarking
+- `handleTextSearchInput()`: Process real-time text search with debounced input
+- `passesTextSearch()`: Filter content based on search query matching
 
 ### Filter Interaction Flow
 
 ```javascript
 User clicks tag → JavaScript filters content → DOM updated → URL updated
+User types search → Debounced input → Text filter applied → Display updated
 ```
 
 ### Unified Tag Filter Implementation
@@ -150,6 +153,98 @@ function checkFilterForCurrentMode(postIndex, filters) {
         return window.tagRelationships[filter] &&
                window.tagRelationships[filter].includes(postIndex);
     });
+}
+```
+
+### Text Search Implementation
+
+**Real-Time Text Search with Debouncing**:
+
+Text search provides immediate content filtering based on user input while maintaining performance through debounced updates:
+
+```javascript
+function handleTextSearchInput(event) {
+    if (window.isUpdating) return;
+    
+    const query = event.target.value.trim();
+    window.textSearchQuery = query;
+    
+    // Debounce search to avoid excessive filtering
+    clearTimeout(window.textSearchTimeout);
+    window.textSearchTimeout = setTimeout(() => {
+        updateDisplay();
+        updateURL();
+    }, 300); // 300ms debounce delay
+}
+```
+
+**Content Indexing for Fast Search**:
+
+Content is pre-indexed during page load to enable fast real-time search:
+
+```javascript
+// Pre-extract searchable content from all posts
+window.cachedPosts = Array.from(postElements).map((el, index) => {
+    let content = '';
+    
+    // Index title, description, meta info, and tags
+    content += titleElement.textContent.toLowerCase() + ' ';
+    content += descElement.textContent.toLowerCase() + ' ';
+    content += metaElement.textContent.toLowerCase() + ' ';
+    content += el.getAttribute('data-tags').toLowerCase() + ' ';
+    
+    return {
+        el: el,
+        index: index,
+        content: content.trim()  // Pre-indexed for fast search
+    };
+});
+```
+
+**Search Filter Logic**:
+
+```javascript
+function passesTextSearch(cachedPost) {
+    if (!window.textSearchQuery) return true;
+    
+    const query = window.textSearchQuery.toLowerCase();
+    return cachedPost.content.includes(query);
+}
+```
+
+**Integration with Filter System**:
+
+Text search works additively with date and tag filters:
+
+```javascript
+function updateDisplay() {
+    window.cachedPosts.forEach(post => {
+        const passesModeFilter = checkFilterForCurrentMode(post.index, filters);
+        const passesDateFilter = checkDateFilter(post.index);
+        const passesTextFilter = passesTextSearch(post);
+        
+        const isVisible = passesModeFilter && passesDateFilter && passesTextFilter;
+        post.el.style.display = isVisible ? '' : 'none';
+    });
+}
+```
+
+**URL Parameter Management**:
+
+Text search terms are preserved in URL parameters for bookmarking and sharing:
+
+```javascript
+function updateURL() {
+    const url = new URL(window.location);
+    
+    // Preserve search query in URL
+    if (window.textSearchQuery && window.textSearchQuery.trim()) {
+        url.searchParams.set('search', window.textSearchQuery.trim());
+    } else {
+        url.searchParams.delete('search');
+    }
+    
+    window.history.replaceState({}, '', url);
 }
 ```
 
@@ -501,9 +596,10 @@ pwsh /workspaces/techhub/run-javascript-tests.ps1 -Verbose
 
 **JavaScript tests should cover**:
 
-- **Filter Logic**: Tag filtering, date filtering, and filter combinations
+- **Filter Logic**: Tag filtering, date filtering, text search, and filter combinations
 - **State Management**: Filter state, URL synchronization, and data transformations
-- **Data Processing**: Tag relationships, date calculations, and utility functions
+- **Data Processing**: Tag relationships, date calculations, text search indexing, and utility functions
+- **Text Search**: Content indexing, search query processing, and debounced input handling
 - **Error Handling**: Invalid inputs and graceful degradation
 - **Edge Cases**: Empty data, boundary conditions, and special scenarios
 
@@ -611,9 +707,10 @@ global.resetGlobalFilterState = function() {
 
 **Key Test Categories**:
 
-- **Filter Logic**: Test tag filtering, date filtering, and combinations
+- **Filter Logic**: Test tag filtering, date filtering, text search, and combinations
 - **State Management**: Test filter state operations without DOM dependencies
 - **URL Synchronization**: Test URL parameter handling and state persistence
+- **Text Search**: Test content indexing, search logic, and debounced input
 - **Performance**: Test efficiency with large datasets
 - **Error Handling**: Test graceful degradation and edge cases
 
@@ -621,9 +718,10 @@ global.resetGlobalFilterState = function() {
 
 **Core Testing Requirements**:
 
-- **Filter Logic**: Tag filtering, date filtering, and filter combinations
+- **Filter Logic**: Tag filtering, date filtering, text search, and filter combinations
 - **State Management**: Filter state, URL synchronization, and data transformations
-- **Data Processing**: Tag relationships, date calculations, and utility functions
+- **Data Processing**: Tag relationships, date calculations, text search indexing, and utility functions
+- **Text Search**: Content indexing, query processing, and performance optimization
 - **Error Handling**: Invalid inputs and graceful degradation
 - **Edge Cases**: Empty data, boundary conditions, and special scenarios
 
