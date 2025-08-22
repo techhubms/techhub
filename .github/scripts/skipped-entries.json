@@ -6567,5 +6567,35 @@
     "canonical_url": "https://devops.com/enterprise-ai-development-gets-a-major-upgrade-claude-code-now-bundled-with-team-and-enterprise-plans/?utm_source=rss&utm_medium=rss&utm_campaign=enterprise-ai-development-gets-a-major-upgrade-claude-code-now-bundled-with-team-and-enterprise-plans",
     "reason": "No categories found: No categories assigned because the content is not centered on Microsoft technologies or platforms. It focuses entirely on Anthropic's Claude Code AI coding agent, its integration into enterprise plans, and related enterprise features, without any substantial mention of Microsoft services, products, frameworks, or APIs. According to the Core Processing Rules and the Multi-Platform Content Threshold, Microsoft technology must be central (≥40%) to the solution or discussion, which is not the case here.",
     "timestamp": "2025-08-21 15:15:04 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-08-22 07:12:15 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/az-900/m-p/4446695#M22126"
+  },
+  {
+    "timestamp": "2025-08-22 09:15:03 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: All categories excluded because the content is primarily focused on the hiring process and interviewing for full-stack engineers, rather than on technical implementation, Microsoft-specific technologies, or development practices. It triggers the generic exclusion rule for job-related content (Chapter 3: Job-Related Content) and business strategy (workplace and hiring focus). There is no substantive discussion of Microsoft technology, coding, DevOps, AI, ML, or security.",
+    "canonical_url": "https://www.mindbyte.nl/2024/12/28/practical-approach-hiring-great-full-stack-engineers.html"
+  },
+  {
+    "timestamp": "2025-08-22 09:15:20 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content is excluded because it is primarily high-level, business strategy, and executive-focused, rather than technical or development content. The episode centers on Microsoft's 50th anniversary, executive perspectives on digital transformation, culture, leadership, and responsible AI governance in the context of retail and financial services. While 'AI' is mentioned as an industry trend, there are no concrete technical implementation details, coding/development focus, or specific Microsoft tools, platforms, or services being discussed in a practitioner or developer context. This aligns with the 'Business Strategy and Executive Content' and 'Workplace and Business Focus' generic exclusion rules in Chapter 3.",
+    "canonical_url": "https://www.youtube.com/watch?v=aeUuSw2Rgyk"
+  },
+  {
+    "timestamp": "2025-08-22 09:15:33 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content is about DAX Copilot (now part of Microsoft Dragon Copilot) and focuses on business productivity (automating clinical documentation for healthcare professionals) rather than code development or technical implementation. Based on the rules in the prompt: Microsoft 365 Copilot, Office Copilot, and related business productivity Copilots (such as DAX Copilot/Dragon Copilot for clinical notetaking) are explicitly excluded as non-development, business productivity tools. There is no indication of developer, coding, AI engineering, or technical architecture content. Generic exclusion rules for non-development Microsoft products and business productivity tools apply; therefore, the content is excluded.",
+    "canonical_url": "https://www.youtube.com/watch?v=DaMWXnKUp_U"
+  },
+  {
+    "timestamp": "2025-08-22 09:15:47 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the content is about Copilot in Microsoft Intune, which falls under the exclusion for 'Non-Development Microsoft Products.' Intune is an end-user/business management product, and 'Copilot in Intune' is positioned as an IT admin productivity tool, not a development tool or platform (see Chapter 3: Non-Development Microsoft Products and Copilot Product Distinction). The description emphasizes IT efficiency, admin workflows, and policy management, providing no indication of development, coding, or platform extensibility work relevant to the predefined categories. Therefore, by the critical exclusion rules, this session is excluded from categorization.",
+    "canonical_url": "https://www.youtube.com/watch?v=KyrRycDZ4A0"
   }
 ]
