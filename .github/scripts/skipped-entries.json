@@ -6597,5 +6597,23 @@
     "collection": "videos",
     "reason": "No categories found: No categories assigned because the content is about Copilot in Microsoft Intune, which falls under the exclusion for 'Non-Development Microsoft Products.' Intune is an end-user/business management product, and 'Copilot in Intune' is positioned as an IT admin productivity tool, not a development tool or platform (see Chapter 3: Non-Development Microsoft Products and Copilot Product Distinction). The description emphasizes IT efficiency, admin workflows, and policy management, providing no indication of development, coding, or platform extensibility work relevant to the predefined categories. Therefore, by the critical exclusion rules, this session is excluded from categorization.",
     "canonical_url": "https://www.youtube.com/watch?v=KyrRycDZ4A0"
+  },
+  {
+    "timestamp": "2025-08-22 16:15:18 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_football-season-is-almost-here-and-were-activity-7363927271578980353-YOi_",
+    "collection": "news",
+    "reason": "No categories found: No categories were assigned because the content does not provide any substantive technical information about Microsoft technologies. The available text consists almost entirely of LinkedIn interface prompts, navigation, social/user comments, or links, with only a single promotional announcement: 'bringing Copilot and Azure AI Foundry to the game.' There are no technical implementation details, developer-focused discussion, or educational content. The post functions as a high-level partnership announcement rather than a technical article or tutorial, and is thus excluded due to lack of technical depth per Generic Exclusion Rules—specifically, the 'Sales Pitches' and 'Corporate announcements and strategic initiatives without technical depth' rules. This aligns with the standards that require educational or technical value for inclusion."
+  },
+  {
+    "timestamp": "2025-08-22 16:15:40 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/6DfwI9qcMX0",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the content is excluded under the generic exclusion rules. The video primarily features a personal productivity habit—daily learning for security topics—using Microsoft To Do. There is no substantive technical implementation, development guidance, or security tool integration described. The focus is on a personal routine and productivity rather than hands-on security, coding, or technical procedures. Additionally, Microsoft To Do is a general productivity tool, not a development or security product, and the content lacks sufficient technical depth as required by the inclusion rules."
+  },
+  {
+    "timestamp": "2025-08-22 16:15:54 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=pNRyn0ukwFM",
+    "collection": "videos",
+    "reason": "No categories found: No categories have been assigned because the content, as described in the title, description, and tags, focuses on a personal habit for daily learning and productivity using Microsoft To Do. There is insufficient evidence that the video contains substantive technical implementation, architecture, or discussion specific to Microsoft security products or technologies. Instead, it highlights personal strategies for staying up to date, which falls under 'workplace and business focus'—a generic exclusion. Additionally, the actual video content is not provided (content field is null), so I must rely only on the available metadata, which further indicates this is more of a personal productivity tip, not a technical how-to or deep dive into Microsoft technology. As per the generic exclusion rules, content primarily about business productivity, learning habits, or workflow tips without technical Microsoft development/security depth is excluded."
   }
 ]
