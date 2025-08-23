@@ -6633,5 +6633,11 @@
     "timestamp": "2025-08-22 17:12:14 +00:00",
     "collection": "community",
     "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: No categories assigned because this content is primarily a help-seeking question from a community forum post without any substantive technical answer, solution, how-to, or educational content (see Generic Exclusion Rules > Question-Only Content). The post is structured as a request for support about an issue encountered with Azure Trusted Signing identity validation, asking for help and advice, but does not offer informational, architectural, or implementation guidance that could be categorized. The content is not a technical tutorial, code guide, or architectural discussion, and it lacks actionable information about Microsoft technology implementation. Therefore, it is excluded as question-only community content.",
+    "collection": "community",
+    "timestamp": "2025-08-22 22:11:58 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/identity-validation-how-long-does-it-take/m-p/4447210#M22128"
   }
 ]
