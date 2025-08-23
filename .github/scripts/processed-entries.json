@@ -7026,5 +7026,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-entra-security-copilot-how-it-s-changing-identity/m-p/4447388#M22132",
     "collection": "community",
     "reason": "Succesfully added: Assigned AI category because Azure Entra Security Copilot leverages generative AI for identity protection (AI rule 1). Assigned Security category as the content focuses directly on security operations, threat detection, and incident response using Microsoft Entra ID and Defender products (Security rules 1, 5, and 9). Assigned Azure category because Security Copilot is integrated with Azure Entra (Azure rule 1) and interacts deeply with Azure-based security infrastructure. The content is technical, hands-on, and not a business/productivity or executive focus (all generic exclusions checked and not triggered)."
+  },
+  {
+    "canonical_url": "https://pagelsr.github.io/CooknWithCopilot/blog/work-smarter-across-multiple-files.html",
+    "timestamp": "2025-08-23 14:10:32 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' because the content focuses on GitHub Copilot features related to multi-file context (GitHub Copilot rule 1). Assigned 'AI' because Copilot is an AI-powered tool (AI rule 2). 'Coding' is assigned because the article demonstrates developer workflows and code practices involving controllers, models, tests, and refactoring tools (Coding rules 1, 4, and 5). Exclusion rules do not apply since the post is technical, developer-targeted, and does not focus on business productivity tools.",
+    "collection": "posts"
   }
 ]
