@@ -7008,5 +7008,11 @@
     "timestamp": "2025-08-22 20:14:27 +00:00",
     "collection": "posts",
     "canonical_url": "https://devops.com/sre-ai-looks-to-unify-devops-workflows-across-multiple-saas-applications/?utm_source=rss&utm_medium=rss&utm_campaign=sre-ai-looks-to-unify-devops-workflows-across-multiple-saas-applications"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category due to the detailed coverage of AI at scale, including OpenAI, ChatGPT, Semantic Kernel, AutoGen, and Phi-4 Mini (AI rule 1, 4, 5, 6). Azure is central throughout, powering cloud-native and AI workloads (Azure rules 1, 4, 5). Coding is included due to extensive discussion of developer tools (Visual Studio Code, GitHub), open source contributions (Dapr, Radius, etc.), and .NET/VS Code as open source developer environments (Coding rules 1, 2, 3, 4). Did not assign ML or Security because the primary focus is on AI usage/scale/platforms, not code-level ML engineering or security-specific architectures.",
+    "timestamp": "2025-08-23 02:22:43 +00:00",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/microsofts-open-source-journey-from-20000-lines-of-linux-code-to-ai-at-global-scale/",
+    "collection": "news"
   }
 ]
