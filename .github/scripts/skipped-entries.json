@@ -6639,5 +6639,35 @@
     "collection": "community",
     "timestamp": "2025-08-22 22:11:58 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/identity-validation-how-long-does-it-take/m-p/4447210#M22128"
+  },
+  {
+    "canonical_url": "https://dellenny.com/fixing-common-windows-11-update-errors/",
+    "reason": "No categories found: No categories are assigned because the content focuses on general end-user troubleshooting for Windows 11 update errors and maintenance. It does not address coding, development, DevOps, AI, ML, Azure, or security practices relevant for Microsoft consultants/developers. There are no technical implementation, automation, programming, or architectural details. This aligns with the 'Non-Development Microsoft Products' and 'Workplace and Business Focus' generic exclusion rules—end-user operating system support is out of scope for this taxonomy.",
+    "timestamp": "2025-08-23 08:15:54 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-join-and-use-the-windows-insider-program/",
+    "reason": "No categories found: No categories assigned. The content provides a user-oriented guide around joining and using the Windows Insider Program for early access to Windows 11 builds. It is focused on previewing operating system features and participating in the Windows feedback process, but does not cover coding, development, DevOps, Azure/cloud, AI, ML, security engineering, or usage of developer or IT pro tools. There are no actionable technical development details or references to SDKs, APIs, programming, or related technical tasks as defined in the inclusion rules. The only included Microsoft technology is Windows (an end-user operating system in this context), which alone does not qualify unless presented in the context of application development or deployment.",
+    "timestamp": "2025-08-23 08:16:07 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-set-up-hyper-v-virtual-machines-in-windows-11/",
+    "reason": "No categories found: No categories were assigned because, per the inclusion rules, this content focuses on configuring and using Hyper-V virtualization in Windows 11 for running virtual machines, but does not emphasize coding (no programming or software development), DevOps (no CI/CD or automation practices), Azure (not cloud-based or Azure tech), AI, ML, Security, or GitHub Copilot. Hyper-V, while a Microsoft platform technology, is not itself included as a category unless the content is specifically about coding, DevOps, Azure, AI, ML, or Security contexts. The tutorial is about system administration and virtualization setup on Windows 11, not development, coding, or cloud/AI/ML practices.",
+    "timestamp": "2025-08-23 08:16:27 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/privacy-settings-to-review-right-after-installing-windows-11/",
+    "reason": "No categories found: No categories assigned because the content focuses on end-user privacy configuration within Windows 11, which is not directly related to software development, coding, DevOps, AI/ML, or security implementation in the Microsoft developer/admin context. The article is a practical user guide for adjusting privacy and account settings after installing Windows 11. According to the generic exclusion rules in Chapter 3, topics that center on non-development or end-user product usage (such as adjusting privacy controls in Windows or Microsoft Edge for personal use) are excluded. While Security is mentioned (privacy settings), the article is purely about user settings and does not discuss security architectures, programming, or development/integration of security features.",
+    "timestamp": "2025-08-23 08:17:03 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/syncing-your-android-phone-with-windows-11-using-phone-link/",
+    "reason": "No categories found: No categories assigned because the content focuses on end-user features of Microsoft Phone Link in Windows 11, guiding users on syncing their Android phones for productivity purposes. It does not provide developer-focused content, coding, development, DevOps, security, AI, or ML usage. According to the generic exclusion rules (Non-Development Microsoft Products, Non-Development Microsoft 365 and Windows features), end-user productivity guides for Windows features are excluded unless they cover development or technical implementation. This content is written for users, not developers or IT professionals implementing solutions.",
+    "timestamp": "2025-08-23 08:17:16 +00:00",
+    "collection": "posts"
   }
 ]

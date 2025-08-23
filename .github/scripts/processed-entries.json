@@ -7014,5 +7014,11 @@
     "timestamp": "2025-08-23 02:22:43 +00:00",
     "canonical_url": "https://azure.microsoft.com/en-us/blog/microsofts-open-source-journey-from-20000-lines-of-linux-code-to-ai-at-global-scale/",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://dellenny.com/microsoft-defender-advanced-protection-tips-for-windows-11/",
+    "reason": "Succesfully added: Assigned Security category because the content is fundamentally focused on configuring, optimizing, and understanding Microsoft Defender Antivirus on Windows 11, which directly fits under the Security rules (Security rules 1, 2, 3, 4, and 5). There is no development, coding, AI, Azure, or ML focus, so those categories do not apply. The content is technically detailed, practical, and meets the standard for Security content related to Microsoft's suite. None of the generic exclusion rules are triggered.",
+    "timestamp": "2025-08-23 08:16:50 +00:00",
+    "collection": "posts"
   }
 ]
