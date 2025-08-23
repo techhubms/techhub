@@ -7032,5 +7032,11 @@
     "timestamp": "2025-08-23 14:10:32 +00:00",
     "reason": "Succesfully added: Assigned 'GitHub Copilot' because the content focuses on GitHub Copilot features related to multi-file context (GitHub Copilot rule 1). Assigned 'AI' because Copilot is an AI-powered tool (AI rule 2). 'Coding' is assigned because the article demonstrates developer workflows and code practices involving controllers, models, tests, and refactoring tools (Coding rules 1, 4, and 5). Exclusion rules do not apply since the post is technical, developer-targeted, and does not focus on business productivity tools.",
     "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Security' category because the content centers on Conditional Access, a security feature of Microsoft Entra ID, focusing on Zero Trust, MFA, and secure policy deployment (Security rules 1, 2, 3, 4, 9). 'Azure' is included because Microsoft Entra ID is the evolution of Azure AD, and both are referenced as core to the solution (Azure rule 1, clarified in rebranding rules). 'DevOps' is included due to the use of GitHub Actions for automation and scripts for CI/CD deployment (DevOps rules 2, 5, 6). 'Coding', 'AI', 'ML', and 'GitHub Copilot' do not apply as the post does not cover code development, AI, ML topics, or Copilot.",
+    "collection": "community",
+    "timestamp": "2025-08-23 15:11:06 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/kickstart-conditional-access-in-microsoft-entra-free-starter/m-p/4447413#M22136"
   }
 ]
