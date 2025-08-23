@@ -7038,5 +7038,11 @@
     "collection": "community",
     "timestamp": "2025-08-23 15:11:06 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/kickstart-conditional-access-in-microsoft-entra-free-starter/m-p/4447413#M22136"
+  },
+  {
+    "timestamp": "2025-08-23 19:09:12 +00:00",
+    "reason": "Succesfully added: The 'Azure' category was assigned because the content centers on Azure Storage, detailing its services, architecture, and management strategies (Azure inclusion rules 1, 2, 4). No other category applies: there's not enough development, code, or AI/ML specifics for Coding, AI, ML, GitHub Copilot, DevOps, or Security. No generic exclusion rules apply—the content is technical, community-focused, over 200 words, and not biographical, sales, or non-English.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-storage/m-p/4447460#M22137",
+    "collection": "community"
   }
 ]
