@@ -6669,5 +6669,17 @@
     "reason": "No categories found: No categories assigned because the content focuses on end-user features of Microsoft Phone Link in Windows 11, guiding users on syncing their Android phones for productivity purposes. It does not provide developer-focused content, coding, development, DevOps, security, AI, or ML usage. According to the generic exclusion rules (Non-Development Microsoft Products, Non-Development Microsoft 365 and Windows features), end-user productivity guides for Windows features are excluded unless they cover development or technical implementation. This content is written for users, not developers or IT professionals implementing solutions.",
     "timestamp": "2025-08-23 08:17:16 +00:00",
     "collection": "posts"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-08-23 10:12:12 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/event-based-design-architecture-pattern-in-azure/m-p/4447357#M783"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-08-23 10:12:12 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/understanding-architecture-patterns-a-guide-for-software/m-p/4447360#M784"
   }
 ]
