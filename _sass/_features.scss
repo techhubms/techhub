@@ -75,7 +75,7 @@
   background: rgba(colors.$medium-blue, 0.10);
   border: 1px solid colors.$bright-purple;
   border-radius: 12px;
-  padding: 5px 15px 15px 15px;
+  padding: 10px 15px 15px 15px;
   box-shadow: 0 8px 25px rgba(colors.$medium-blue, 0.18);
   flex: 1;
   min-width: 250px;
@@ -231,13 +231,6 @@
 .ghes-not-supported {
   background-color: colors.$bright-red;
   display: none;
-}
-
-.entry-separator {
-  margin: 0px 0px 25px 0px;
-  border: 0;
-  height: 1px;
-  background-color: rgba(colors.$light-gray, 0.5);
 }
 
 @media (max-width: #{settings.$on-mobile - 1px}) {

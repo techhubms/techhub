@@ -92,7 +92,7 @@ sass:
    - Includes proper cleanup and configuration for development
    - Use when you need a fresh Jekyll restart for plugin/data changes
    - CRITICAL: No need to sleep or use other wait statements, look at the terminal until you see `Server running` to detect when Jekyll is started.
-   - CRITICAL: Startup time can take as long as 2 minutes, do NOT interrupt it with any commands or you will break the startup sequence.
+   - CRITICAL: Startup time can take as long as 2-3 minutes, do NOT interrupt it with any commands or you will break the startup sequence.
    - CRITICAL: When startup is complete, do NOT use curl or other web commands to check if the server is running. If the output says Jekyll is started, it is running.
 
 2. **Use `/workspaces/techhub/jekyll-stop.ps1` to stop Jekyll servers**

@@ -236,7 +236,7 @@ function Start-Jekyll {
     }
     
     # Wait for Jekyll to start with extended timeout
-    $timeout = 120  # Extended timeout for slower systems
+    $timeout = 180  # Extended timeout for slower systems - Jekyll can take up to 2-3 minutes
     $elapsed = 0
     
     Write-ColoredOutput "Waiting for Jekyll server to start (timeout: ${timeout}s)..." $Yellow
