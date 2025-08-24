@@ -1,0 +1,30 @@
+{
+  "Link": "https://devblogs.microsoft.com/visualstudio/mcp-is-now-generally-available-in-visual-studio/",
+  "ProcessedDate": "2025-08-24 16:27:33",
+  "PubDate": "2025-08-19T18:23:21+00:00",
+  "FeedLevelAuthor": "Visual Studio Blog",
+  "Title": "Model Context Protocol (MCP) is Now Generally Available in Visual Studio 🎉",
+  "FeedUrl": "https://devblogs.microsoft.com/visualstudio/feed/",
+  "EnhancedContent": "We’re excited to announce that MCP support is now GA in Visual Studio—unlocking richer, real-time context from your entire development stack and expanding the power of Agent Mode like never before.\n\nModel Context Protocol (MCP) is an open standard that makes it easy for AI agents to connect with external tools and services—think of it like HTTP, but for AI-enabled developer workflows. Instead of building custom integrations for every tool, MCP lets you plug into robust server endpoints for databases, code search, deployment pipelines, and more, all through a consistent, secure protocol.\n\nWith GA support in Visual Studio, you’ll find new ways to connect, configure, and control your MCP servers—plus a growing set of features to make setup seamless and enterprise-ready.\n\n[Try MCP in Visual Studio](https://visualstudio.microsoft.com/)\n\n## Why It Matters\n\nIn Visual Studio, MCP unlocks new possibilities for:\n\n- **Custom workflows** – Use your custom MCP servers, or choose from the vast ecosystem of existing ones, to automate repetitive tasks, query metrics, interact with databases, or call internal APIs—directly from Copilot Chat.\n- **Enterprise integration** – Connect AI to your company’s internal tools and systems while keeping sensitive data safe.\n- **Smarter conversations** – Give Copilot structured access to project-specific knowledge, services, and workflows so it can provide richer, more relevant answers.\n\n## What’s new?\n\n### **Full MCP client integration**\n\nIn Visual Studio, you can connect to local or remote MCP servers using .mcp.json configuration. [See our official documentation](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022) for more instructions on how to configure servers.\n\n[![Picture2 image](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAABnAQMAAACAW+0tAAAAA1BMVEXW1taWrGEgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAG0lEQVRIie3BMQEAAADCoPVPbQ0PoAAAAIA7Aw+xAAH1P27/AAAAAElFTkSuQmCC)](https://devblogs.microsoft.com/visualstudio/wp-content/uploads/sites/4/2025/08/Picture2.png)\n\nWith seamless flows to manage server inputs, authentication, and tools, managing MCPs in Visual Studio is truly a first class experience designed with developers in mind.\n\n### **First-class authentication**\n\nSign in securely to protected endpoints with built-in Visual Studio flows. With support for the full MCP authentication specification, Visual Studio can connect to protected MCP servers regardless of what authentication provider they use.\n\n[![Picture1 image](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACkAQMAAAAXJ4E3AAAAA1BMVEXW1taWrGEgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAHUlEQVRYhe3BAQ0AAADCoPdPbQ8HFAAAAAAAwI8BGPwAAU0SE3YAAAAASUVORK5CYII=)](https://devblogs.microsoft.com/visualstudio/wp-content/uploads/sites/4/2025/08/Picture1.png)\n\n### **Easier ways to connect to new servers**\n\nVisual Studio now supports one-click server installation from the web. With this new functionality, adding new MCP servers in VS is as simple as the click of a button. Be on the lookout for “Install in VS” buttons to start appearing in the repos for your favorite MCP servers!\n\nWe’ve made it easier than ever to add connections to new MCP servers with our new add flow. Whether it’s a server you found online, or a custom built MCP server for your organization, you no longer need to manually copy, paste, and configure JSON to connect to new servers. To access this flow, simply click the new green plus button icon in the tool picker window in GitHub Copilot Chat.\n\n[![image image](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAD4AQMAAABsa0m7AAAAA1BMVEXW1taWrGEgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAIElEQVRoge3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAHgaJcgAARi5ySkAAAAASUVORK5CYII=)](https://devblogs.microsoft.com/visualstudio/wp-content/uploads/sites/4/2025/08/image-2.png)\n\n### **Enterprise Governance controls**\n\nWe understand that organizations may have different policies and through a new integration with GitHub policy, enterprises and organizations can now have fine grained control over access to MCP functionality within their organizations. Your IT admin can now simply navigate to your GitHub policy settings, and toggle on or off MCP features for all users.\n\n## Give us your feedback!\n\n**We’re excited to continue evolving the MCP experience in VS, and your input plays a big role—please give us your feedback** [**here**](https://developercommunity.visualstudio.com/home)**, and let us know what you’d like to see next!**\n\n[Try MCP in Visual Studio](https://visualstudio.microsoft.com/)",
+  "Tags": [
+    "Agent Mode",
+    "agents",
+    "Artificial Intelligence",
+    "Authentication",
+    "code",
+    "Copilot",
+    "GitHub",
+    "GitHub Copilot",
+    "LLM",
+    "MCP",
+    "microsoft",
+    "Model Context Protocol",
+    "security",
+    "servers",
+    "Visual Studio"
+  ],
+  "Description": "We’re excited to announce that MCP support is now GA in Visual Studio—unlocking richer, real-time context from your entire development stack and expanding the power of Agent Mode like never before. Model Context Protocol (MCP) is an open standard that makes it easy for AI agents to connect with external tools and services—think of it […]\n\nThe post [Model Context Protocol (MCP) is Now Generally Available in Visual Studio 🎉](https://devblogs.microsoft.com/visualstudio/mcp-is-now-generally-available-in-visual-studio/) appeared first on [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio).",
+  "OutputDir": "_news",
+  "FeedName": "Microsoft VisualStudio Blog",
+  "Author": "Allie Barry"
+}
