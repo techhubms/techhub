@@ -134,8 +134,8 @@ Suggest these sources to the user and let the user decide if they should be adde
 ### Build and Test
 
 1. **Format content FIRST**: `pwsh .github/scripts/fix-markdown-files.ps1` - **CRITICAL: Run this after categorization**
-2. **Jekyll build**: `pwsh jekyll-start.ps1` - verify no errors
-3. **Run all tests**: `pwsh run-all-tests.ps1`
+2. **Jekyll build**: `pwsh jekyll-start.ps1` - verify no errors (startup can take 2-3 minutes)
+3. **Run all tests**: `pwsh run-all-tests.ps1` - **Note: Jekyll startup can take 2-3 minutes for E2E tests**
 
 **Important Order**: Always run markdown formatters before Jekyll build and testing to ensure proper frontmatter formatting.
 

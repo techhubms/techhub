@@ -38,8 +38,8 @@ Describe "Get-FilteredTags" {
         It "Should replace dashes and underscores with spaces" {
             $result = Get-FilteredTags -Tags @("azure-ai", "visual_studio") -Categories @("AI") -Collection "news"
             
-            $result.tags | Should -Contain "azure ai"
-            $result.tags | Should -Contain "visual studio"
+            $result.tags | Should -Contain "Azure AI"
+            $result.tags | Should -Contain "VS"
         }
         
         It "Should filter out tags containing only special characters" {
@@ -85,9 +85,9 @@ Describe "Get-FilteredTags" {
                 @{ Input = "githubcopilot"; Expected = "GitHub Copilot" },
                 @{ Input = "aiagent"; Expected = "AI Agent" },
                 @{ Input = "aiagents"; Expected = "AI Agents" },
-                @{ Input = "vs"; Expected = "Visual Studio" },
-                @{ Input = "vscode"; Expected = "Visual Studio Code" },
-                @{ Input = "vs code"; Expected = "Visual Studio Code" },
+                @{ Input = "vs"; Expected = "VS" },
+                @{ Input = "vscode"; Expected = "VS Code" },
+                @{ Input = "vs code"; Expected = "VS Code" },
                 @{ Input = "dotnet"; Expected = ".NET" },
                 @{ Input = "csharp"; Expected = "C#" },
                 @{ Input = "infrastructureascode"; Expected = "IaC" },
@@ -385,7 +385,7 @@ Describe "Get-FilteredTags" {
             $result.tags | Should -Contain "GitHub Copilot"
             $result.tags | Should -Contain "Azure AI"
             $result.tags | Should -Contain ".NET Framework"
-            $result.tags | Should -Contain "Visual Studio Code"
+            $result.tags | Should -Contain "VS Code"
             $result.tags | Should -Contain "IaC"
             $result.tags | Should -Contain "AI"
             $result.tags | Should -Contain "Development"

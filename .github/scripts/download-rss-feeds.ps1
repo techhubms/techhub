@@ -88,7 +88,6 @@ try {
     $successfulFeeds = @{}  # Track feeds that were successfully processed
 
     $successCount = 0
-    $skippedCount = 0
     $totalCount = $feedConfigs.Count
 
     foreach ($feedConfig in $feedConfigs) {
