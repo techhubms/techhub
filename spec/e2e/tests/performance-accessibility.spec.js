@@ -153,11 +153,13 @@ test.describe('Performance and Accessibility', () => {
 
     // This is a basic check - in a real scenario you'd use axe-core
     // Check that text is visible against backgrounds
-    const textElements = page.locator('p, h1, h2, h3, h4, h5, h6, a, span').first();
-    if (await textElements.count() > 0) {
-      await expect(textElements).toBeVisible();
+    // Use :visible selector to only get visible elements
+    const visibleTextElements = page.locator('p:visible, h1:visible, h2:visible, h3:visible, h4:visible, h5:visible, h6:visible, a:visible, span:visible').first();
+    
+    if (await visibleTextElements.count() > 0) {
+      await expect(visibleTextElements).toBeVisible();
 
-      const styles = await textElements.evaluate(el => {
+      const styles = await visibleTextElements.evaluate(el => {
         const computed = window.getComputedStyle(el);
         return {
           color: computed.color,

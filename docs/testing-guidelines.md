@@ -133,6 +133,8 @@ pwsh /workspaces/techhub/run-all-tests.ps1
 **All Tests Script:**
 The `/workspaces/techhub/run-all-tests.ps1` script executes all test suites in the optimal order with proper error handling and reporting.
 
+**Jekyll Startup Time**: E2E tests automatically start Jekyll if needed, which can take 2-3 minutes for initial startup. Be patient during the first run as Jekyll builds the complete site.
+
 **CRITICAL**: When you need to fix many failed tests, first analyze and see what the biggest common problem is and focus on fixing that first. If you can, make a generic fix to cover multiple tests at once. And especially with the e2e tests, use the `-MaxFailures` option to quickly see if your fixes worked.
 
 ## Test Organization and Structure
