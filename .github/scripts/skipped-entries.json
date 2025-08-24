@@ -6681,5 +6681,23 @@
     "timestamp": "2025-08-23 10:12:12 +00:00",
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/understanding-architecture-patterns-a-guide-for-software/m-p/4447360#M784"
+  },
+  {
+    "timestamp": "2025-08-24 10:14:31 +00:00",
+    "reason": "No categories found: Content is excluded due to generic exclusion rules for non-development Microsoft products (Chapter 3: Non-Development Microsoft Products). The article is about using Focus Sessions in Windows 11, a productivity feature targeted at end users, not development, engineering, or technical implementation. There is no coverage of coding, developer tools, Microsoft cloud platforms, or development frameworks. No category inclusion rules are met. Therefore, no categories are assigned.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-use-focus-sessions-in-windows-11-to-stay-productive/"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/save-hours-every-week-with-power-automate-workflows-in-microsoft-365/",
+    "timestamp": "2025-08-24 14:10:44 +00:00",
+    "reason": "No categories found: All content focuses on using Power Automate within Microsoft 365 to automate business tasks and increase user productivity through no-code workflows. Per the Generic Exclusion Rules (Chapter 3) and rule clarifications, Power Automate business process automation without a developer focus is excluded. There is no discussion of Power Automate development, coding (using Power Automate APIs, custom connectors, or developer extensibility), or architecture—only end-user and business workflow usage. This is considered a non-development Microsoft product scenario and thus triggers the Non-Development Microsoft Products exclusion. No categories are assigned."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/understanding-microsoft-365-compliance-center-basics/",
+    "timestamp": "2025-08-24 14:10:56 +00:00",
+    "reason": "No categories found: No categories assigned because the content is focused entirely on end-user and administrative features of the Microsoft 365 Compliance Center such as data loss prevention, auditing, and compliance management. There is no substantive discussion of technical implementation, development, coding, DevOps, AI/ML, or security architecture from an engineering perspective. This matches the generic exclusion rules for 'Business Strategy and Executive Content' and 'Non-Development Microsoft Products' since the content only describes administration usage and does not address developer, architectural, or implementation topics."
   }
 ]

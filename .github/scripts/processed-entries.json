@@ -7044,5 +7044,179 @@
     "reason": "Succesfully added: The 'Azure' category was assigned because the content centers on Azure Storage, detailing its services, architecture, and management strategies (Azure inclusion rules 1, 2, 4). No other category applies: there's not enough development, code, or AI/ML specifics for Coding, AI, ML, GitHub Copilot, DevOps, or Security. No generic exclusion rules apply—the content is technical, community-focused, over 200 words, and not biographical, sales, or non-English.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-storage/m-p/4447460#M22137",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-08-24 16:32:01 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content specifically details the release and use of the GPT-5 model within GitHub Copilot for Visual Studio, which qualifies for both categories according to the AI and GitHub Copilot rules (AI rule 2, GitHub Copilot rules 1 and 2). No other categories apply because the content focuses on new model capabilities and access, not code implementation, DevOps, Azure, ML, or Security topics.",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/gpt-5-now-available-in-visual-studio/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:32:24 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the core upgrade involves AI-driven semantic search and vector embeddings in Visual Studio (AI inclusion rules 1 and 4). Added 'GitHub Copilot' as Copilot Chat is central and includes Copilot-specific features throughout (GitHub Copilot rule 1). Included 'Coding' since the feature is embedded in Visual Studio and influences developer workflow for code understanding and navigation (Coding rules 2 and 4). Did not assign 'Azure' or 'DevOps' as they are mentioned only in passing regarding repository hosting; the focus remains on coding AI features in Visual Studio Copilot Chat. No exclusions apply.",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/improving-codebase-awareness-in-visual-studio-chat/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:32:45 +00:00",
+    "reason": "Succesfully added: Included the AI category because the article centers on AI-powered editing advancements and model techniques (AI rule 1, 4). Added GitHub Copilot because the entire article focuses on new capabilities and engineering in Copilot for Visual Studio (GitHub Copilot rules 1, 2, 4). Included Coding due to the deep dive into code modification workflows, error handling, and integration into the code editing process (Coding rule 4, 5). There is no focus on Azure services, DevOps practices, ML/data science, or security topics, so those categories were not assigned.",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/smarter-ai-edits-in-visual-studio-copilot/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:33:05 +00:00",
+    "reason": "Succesfully added: Assigned 'Coding' category as the announcement is focused on the lifecycle, feature enhancements, and development experience in Visual Studio—a core Microsoft development tool (Coding rule 5). Assigned 'DevOps' because the guidance covers best practices for toolchain upgrades, version control integration, and lifecycle management (DevOps rules 2, 5, 8, and general tooling). Did not assign 'AI' or 'GitHub Copilot' because while Copilot is mentioned as a feature of VS2022, the content itself does not specifically teach or focus on its capabilities (mention is non-substantive). No Azure-, Security-, or ML-specific guidance is included.",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2015-retirement-support-reminder-for-older-versions-of-visual-studio/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:33:26 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because several showcased courses focus on AI topics such as prompt engineering, generative AI, and Copilot in Microsoft Fabric (AI inclusion rule 1, 3, 4, 5). Assigned GitHub Copilot because one course specifically focuses on security best practices with GitHub Copilot, and per rules, GitHub Copilot content always also gets the AI category. Coding is included as all highlighted courses are technical, targeting coding skills with VS Code, secure software development, and serverless architectures (Coding rules 1, 2, 4). Azure is included for the automation of Azure storage and Azure Functions content (Azure rules 1, 4). No ML category because while there is mention of data pipelines and Power BI, the focus is not on custom ML, data science, or analytics engineering. No Security category because while security best practices are mentioned (e.g., 'Secure Development with GitHub Copilot', 'serverless security'), the central topic is not Microsoft security services or features as per Security rules—the security aspects here are integrated into development practices.",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/vss-pluralsight-2025-2/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:33:55 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the article introduces and explains an AI-powered feature (Copilot Edits) for code editing (AI rule 1, 2). Assigned 'GitHub Copilot' because Copilot Edits is a feature of GitHub Copilot, discussed in-depth with its capabilities, integration, and architecture (GitHub Copilot rules 1, 2, 4, 6). Assigned 'Coding' since the entire focus is on code editing, workflow improvement, and developer-centric use cases within Visual Studio Code (Coding rules 2, 4, 5). Did not assign 'Azure', 'DevOps', 'ML', or 'Security' as there is no direct coverage of Azure services, DevOps tooling, machine learning engineering, or security topics. Content is in English, non-biographical, non-sales, technical, and targets developers.",
+    "canonical_url": "https://code.visualstudio.com/blogs/2024/11/12/introducing-copilot-edits",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:34:16 +00:00",
+    "reason": "Succesfully added: Applied the AI category because this tool integrates Copilot Chat (AI rule 2) and enables using Azure AI features directly from the editor (AI rule 1, 4, 5). Included GitHub Copilot category since it extends GitHub Copilot for Azure (GitHub Copilot rules 1, 2, 3). Azure category applies since the central value is interacting with Azure services (Azure rule 1, 4). Coding category is warranted due to direct integration with development workflows in VS Code and support for code deployment (Coding rule 5, 4). DevOps category applies due to automation, CI/CD, infrastructure management, diagnostics, and operational workflows (DevOps rules 1, 3, 5, 6, 7). Did not assign Security or ML as the content does not focus primarily on security or machine learning engineering, even though Azure AI features are supported.",
+    "canonical_url": "https://code.visualstudio.com/blogs/2024/11/15/introducing-github-copilot-for-azure",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:34:47 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the announcement and feature walkthrough revolve entirely around GitHub Copilot, its AI-powered coding assistance, and related functionality (AI rules 1-5, GitHub Copilot rules 1-6). Assigned 'Coding' because all discussed features (code completion, chat, multi-file editing, model selection, terminal chat, project awareness) directly support code development workflows in VS Code (Coding rules 2, 4, 5). No other categories apply since there is no direct focus on Azure, DevOps, ML engineering, or Security topics. Generic exclusion rules do not apply as this is not a sales pitch, biographical, or business/productivity (non-developer) content. Microsoft technology is central throughout.",
+    "canonical_url": "https://code.visualstudio.com/blogs/2024/12/18/free-github-copilot",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:35:14 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the article introduces and describes new AI-powered features (including NES and Vision) for GitHub Copilot (AI inclusion rule 1 and 5). Assigned 'GitHub Copilot' category because the focus is specifically on new Copilot functionalities for developers (GitHub Copilot inclusion rules 1, 2, and 4). Assigned 'Coding' because the content centers on code editing, code completion, and AI-assisted programming in Visual Studio Code (Coding inclusion rules 1, 4, and 5). Did not assign Azure, ML, DevOps, or Security because these aspects are not primary in the post—they are not discussed in the context of cloud, DevOps workflows, data science/ML, or security implementation.",
+    "canonical_url": "https://code.visualstudio.com/blogs/2025/02/12/next-edit-suggestions",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:35:44 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the content is focused on AI-powered coding assistance, specifically via GitHub Copilot agent mode (AI rule 2). Included 'GitHub Copilot' because the article centers on new features of Copilot (GitHub Copilot inclusion rules 1 and 2); as per rules, AI and GitHub Copilot must both be assigned together. Added 'Coding' because Copilot agent mode interacts with code, automates development tasks, integrates with the coding workflow, and the article includes examples relevant for developers (Coding rule 2 and 4). Did not add 'DevOps' or 'Azure' because the content focuses on code assistance within VS Code rather than deployment or pipeline automation, and there is no central Azure-related functionality demonstrated.",
+    "canonical_url": "https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:36:08 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the entire article centers on using GitHub Copilot and its new AI-driven customization features within VS Code (AI rules 1, 2, 4; GitHub Copilot rules 1-4). 'Coding' is included because it provides concrete examples and guidance for improving code quality and workflow through code-related instructions and templates (Coding rule 4). No Azure, DevOps, ML, or Security content is present, so those categories are not included.",
+    "canonical_url": "https://code.visualstudio.com/blogs/2025/03/26/custom-instructions",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:36:36 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the article describes an autonomous coding agent driven by AI, operating in a developer context within Visual Studio Code and leveraging LLMs (Chapter 4, AI Inclusion Rules 1 and 4). Assigned Coding category because the content directly concerns features and workflows for programming, code editing, VS Code extension APIs, automating code tasks, and integrating development tools (Coding rules 1, 2, and 5). Did not assign DevOps or Azure, as the focus is specifically on editor workflow automation and tool extensibility—not on deployments, CI/CD, or Azure services. GitHub Copilot was not mentioned; while Copilot underpins some capabilities, the article’s explicit scope is agent mode, not Copilot features or brand. ML and Security were not assigned, as no data science or security implementation details are discussed.",
+    "canonical_url": "https://code.visualstudio.com/blogs/2025/04/07/agentMode",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:36:58 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the integration of Model Context Protocol (MCP) directly enables AI agents in VS Code to interact with external services, aligning with AI Category inclusion rule 4 (AI agent development/integration using Microsoft products) and rule 1 (Microsoft AI service integration). Assigned Coding because the article discusses extensibility, tool integration, and features in VS Code from a developer's perspective, matching Coding rules 2 and 4. Did not assign Azure, ML, DevOps, Security, or GitHub Copilot: Azure is mentioned only as a MCP server example, not central to implementation; ML is not the focus (no data science/analytics/ML engineering); DevOps is not a core topic of the article; Security is covered in safe config and secret handling but not in depth for Microsoft security technologies; no mention of GitHub Copilot specifically. Generic exclusions do not apply because this news article has technical depth, is in English, and centers on development features.",
+    "canonical_url": "https://code.visualstudio.com/blogs/2025/05/12/agent-mode-meets-mcp",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:37:17 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category as the announcement centers on AI integration within VS Code and open sourcing AI features (AI rule 1, 4, 5). Included 'GitHub Copilot' since the GitHub Copilot Chat extension is the main subject, triggering the rule to always assign both 'AI' and 'GitHub Copilot' together. Included 'Coding' because the core topic is code editor development and AI-powered developer tooling, fitting Coding rules 1, 2, and 5. Did not assign other categories as no significant content addressed Azure, DevOps, ML, or Security specifically.",
+    "canonical_url": "https://code.visualstudio.com/blogs/2025/05/19/openSourceAIEditor",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:37:46 +00:00",
+    "reason": "Succesfully added: Assigned the AI and GitHub Copilot categories because the core of the article covers the integration and use of AI and GitHub Copilot features specifically in VS Code, meeting AI inclusion rules 1–5 and the strict Copilot rules. Assigned Coding because it discusses environment setup and code workflow in detail, including remote container development, configuration, and extension usage (Coding rule 2 & 4). Assigned DevOps because it describes developer workflows, team productivity, CI-like remote setups, and operational best practices with dev environments (DevOps rule 3, 5, and 6). Did not assign Azure, ML, or Security as the content focuses on workflow and tools within VS Code and does not deeply address a specific Azure technology, ML methodology, or security implementation.",
+    "canonical_url": "https://code.visualstudio.com/blogs/2025/05/27/ai-and-remote",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:38:08 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the article covers MCP as a technical standard for AI agent integration and workflow automation (AI rule 1 and 4). Assigned Coding because MCP integration directly targets developer workflows in VS Code, a major Microsoft coding tool, and involves using prompts, commands, and extensions (Coding rule 1, 2, 4, 5). Assigned DevOps because it includes remote server integration, authentication workflows, and secure infrastructure for multi-agent orchestration, aligning with modern DevOps practices (DevOps rule 6 and 7). Did not assign Azure, ML, or Security categories: Azure is mentioned only in the sense of Microsoft's broader ecosystem, not as a technical focus; ML is not the primary focus because the article is about agent integration, not custom ML or data science; Security is present as a design principle (authorization, OAuth) but the article revolves around workflow and tooling, not security-specific technologies or configurations.",
+    "canonical_url": "https://code.visualstudio.com/blogs/2025/06/12/full-mcp-spec-support",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:38:32 +00:00",
+    "reason": "Succesfully added: Added 'AI' because the content centers on the integration and open sourcing of AI-powered capabilities (AI inclusion rules 1, 5). Added 'GitHub Copilot' since the main focus is the Copilot Chat extension for developers (GitHub Copilot rules 1 and 2). Added 'Coding' because it targets developers, open-source collaboration, and the technical underpinnings of VS Code and Copilot Chat (Coding rules 1, 2, and 4). No generic exclusion rules were triggered, and the critical Copilot distinction is observed—this is a developer coding tool, not a business productivity tool.",
+    "canonical_url": "https://code.visualstudio.com/blogs/2025/06/30/openSourceAIEditorFirstMilestone",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:39:02 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the article discusses the GitHub Copilot Coding Agent as an autonomous AI developer tool, qualifying under AI Category rule 2. Assigned 'GitHub Copilot' because it specifically focuses on the Copilot Coding Agent, a developer tool by GitHub (GitHub Copilot Category rules 1-4). Assigned 'Coding' because it involves workflow automation, issue assignments, code reviews, and PR handling in VS Code using Copilot, all of which are coding-related technical practices (Coding category rules 2 and 4). Did not assign 'DevOps', 'Azure', or 'ML', as the article is centered on coding automation, agent management, and development workflow within GitHub and VS Code, without substantial coverage of CI/CD, Azure architecture, or custom ML engineering.",
+    "canonical_url": "https://code.visualstudio.com/blogs/2025/07/17/copilot-coding-agent",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:39:33 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the release heavily features AI-driven tools, including Copilot, OpenAI model integration, and semantic search (AI rules 1, 4, 5). Assigned 'GitHub Copilot' because Copilot Chat, NES, and agent mode enhancements are central (GitHub Copilot rule 1, 2). Assigned 'Coding' due to extensive improvements to code editing, chat-prompted changes, and editor workflows (Coding rules 2, 4, 5). Assigned 'DevOps' because of CI/CD, extension security, release engineering, source control, and GitHub PR support (DevOps rules 2, 5, 9, 11). Assigned 'Security' for multiple extension security measures, mandatory signatures, and tools to review and respond to vulnerabilities (Security rules 1, 4, 5, 7). Did not assign 'Azure' or 'ML' as content does not meet the threshold for central Azure service usage or explicit ML/data science workflow engineering.",
+    "canonical_url": "https://code.visualstudio.com/updates/v1_100",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:41:14 +00:00",
+    "reason": "Succesfully added: The content details the May 2025 release of Visual Studio Code, focusing on technical implementation topics central to developers and extension authors. 'AI' and 'GitHub Copilot' categories are included because the release covers new Copilot Coding Agent features, AI-powered chat tooling, and semantic search enhancements. 'Coding' is included for the coverage of Python, Jupyter, and source code features, and 'DevOps' for its improvements in source control, release collaboration, automation via agent tooling, and remote development workflows. No generic exclusion rules apply. Azure, ML, and Security categories do not qualify: while authentication and Entra are mentioned, the focus is on extension/auth API development rather than security concepts. The content specifically avoids end-user business/productivity topics and is squarely aimed at developers.",
+    "canonical_url": "https://code.visualstudio.com/updates/v1_101",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:43:10 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the release centers around GitHub Copilot Chat's AI-powered features, open sourcing of the AI chat extension, and expanded chat mode/custom instruction support (AI rules 1, 2, 3, and 4). Assigned 'GitHub Copilot' as the extension, Copilot coding agent, and Copilot integration threads are a major release focus (GitHub Copilot inclusion rules 1–6). Added 'Coding' because the release targets developer workflows, VS Code customization, and code/terminal automation, all core to Microsoft developer tools (Coding rules 1, 4, 5). 'DevOps' applies because of enhancements involving GitHub PR workflows, CI/CD, task automation, and VS Code extension management (DevOps rules 2, 3, 5, 9, 11). Did not assign 'Azure', 'ML', or 'Security' as no substantive Azure/cloud, machine learning pipeline, or security implementation features are described in this release note.",
+    "canonical_url": "https://code.visualstudio.com/updates/v1_102",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:44:50 +00:00",
+    "reason": "Succesfully added: Categories were assigned as follows: 'AI' because of the extensive coverage of GPT-5 integration and chat/agent AI enhancements (AI rules 1, 4, 5). 'GitHub Copilot' because improvements, availability, and AI model features specifically reference Copilot, and these occur in a developer tool context, not business productivity (GitHub Copilot rules 1, 2). 'Coding' applies based on updates to editor features, language support, terminal coding, agent-driven coding chats, and pull request workflows (Coding rules 1, 2, 4, 5). 'DevOps' is included due to Azure DevOps remote index support, integrated source control, and toolchain automation (DevOps rules 1, 2, 6, 11). 'Azure' is included because of Azure DevOps specific indexing and tooling (Azure rules 1, 4). No ML category assigned as the release focuses on developer experience and AI integration rather than data science/ML model engineering. Security is not assigned, since there is no major focus or updates in that area in the content.",
+    "canonical_url": "https://code.visualstudio.com/updates/v1_103",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:45:22 +00:00",
+    "reason": "Succesfully added: Categories assigned as follows: 'GitHub Copilot' and 'AI' because this release introduces numerous enhancements for GitHub Copilot's code generation, chat, and integration features (AI inclusion rule 2, GitHub Copilot rule 1, CRITICAL copilot distinction rule). 'DevOps' is included due to significant improvements to source control, git integration, remote development, and terminal features (DevOps rules 2, 5, 6, 7, 9, and general VS Code update context). 'Coding' is included because the release substantially improves core editor, IntelliSense, language support (Python, TypeScript, JavaScript), and developer workflow features (Coding rules 1, 2, 4, 5). Not including Azure, Security or ML because these technologies are not central to the release as described. No exclusion rules apply.",
+    "canonical_url": "https://code.visualstudio.com/updates/v1_93",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:45:57 +00:00",
+    "reason": "Succesfully added: Categories 'AI' and 'GitHub Copilot' are both assigned based on extensive new features related to Copilot, including chat improvements, code referencing, model selection, and integration with GPT-4o (AI Rule 2, 5; GitHub Copilot Rule 1-4). 'Coding' applies as the release includes significant new tooling for languages (TypeScript 5.6, Python), editor improvements, and code completion features (Coding Rule 1-5). 'DevOps' is included due to updates to source control, remote development extensions, test and debug automation (DevOps Rule 2, 5, 6), and overall workflow enhancements impacting team productivity and CI/CD. Azure-specific or ML-focused content is not central to this release, so those are not included. Security is not a primary theme in these notes.",
+    "canonical_url": "https://code.visualstudio.com/updates/v1_94",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:46:33 +00:00",
+    "reason": "Succesfully added: Categories 'AI', 'GitHub Copilot', 'Coding', and 'DevOps' were assigned. 'AI' is included due to extensive Copilot, LLM, and data analysis features (AI rules 1, 4, 5). 'GitHub Copilot' is included per critical rule because the content discusses Copilot Chat, Copilot Edits, code reviews, and Copilot extensibility (GitHub Copilot rules 1, 2, 3). 'Coding' is included as the release highlights tools/features for Python, TypeScript, docstring generation, and code review (Coding rules 1, 4, 5). 'DevOps' is included for workflows around multi-account GitHub integrations, workspace indexing, CI/CD workflows, and extension authoring (DevOps rules 2, 9, 11). No Azure, ML, or Security categories were assigned, as those topics are not substantively or centrally covered in this release note.",
+    "canonical_url": "https://code.visualstudio.com/updates/v1_95",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:47:02 +00:00",
+    "reason": "Succesfully added: Assigned the 'GitHub Copilot' and 'AI' categories because multiple sections focus on GitHub Copilot features, including the new free plan, Copilot Edits, Copilot Chat enhancements, and Copilot-powered debugging (per AI and GitHub Copilot rules). 'Coding' was included since the update provides substantial new coding features—TypeScript 5.7, Python Environments, paste with imports, overtype mode, and editor improvements—all aimed at programmers (Coding rules 1-5). 'DevOps' was added due to extension allow-listing, source control/CI integration improvements, and testing APIs supporting refined CI workflows (DevOps rules 1, 2, 5, 6, 11). Other categories like Azure, ML, and Security were not included as this release does not substantively focus on Azure-specific, data science/ML, or security implementation topics.",
+    "canonical_url": "https://code.visualstudio.com/updates/v1_96",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:47:33 +00:00",
+    "reason": "Succesfully added: The content is a detailed release note for Visual Studio Code 1.97, published by the Visual Studio Code Team. Multiple major features and updates center on GitHub Copilot, including new edit suggestions, general availability of Copilot Edits, agent mode, Copilot Vision, and tight integration for code completion. According to the inclusion rules: 'AI' is assigned due to in-depth coverage of GitHub Copilot enhancements (AI rule 1 and 2), 'GitHub Copilot' is assigned (Copilot-specific sections and features), 'Coding' is included due to technical depth and programming tool enhancements (Coding rule 5), and 'DevOps' is included as the update discusses version control, workspace indexing, continuous integration, and extension management. Exclusion rules do not apply, as this is highly technical developer-focused content with direct relation to Microsoft technology.",
+    "canonical_url": "https://code.visualstudio.com/updates/v1_97",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:49:16 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because a major focus of this release is on Copilot-powered AI features—Agent mode, edit suggestions, notebook support, vision (image-based) interactions, model selection, and workflow automation (AI rule 1, 2, 5). Assigned 'GitHub Copilot' as the Copilot workflow enhancements (including chat, agent, custom instructions, and model selection) are central throughout the notes, directly impacting code authoring (GitHub Copilot rule 1, 2, 3). Assigned 'Coding' because the majority of new features affect everyday code editing, language support, command-line integration, debugging, and notebook workflows (Coding rule 1, 4, 5). Assigned 'DevOps' because the update highlights advances in source control integration, Git workflow enhancements, remote development, task management, and improved diagnostics hooks in the commit process (DevOps rule 2, 5, 7, 8). Azure, ML, or Security categories were not applied because this release note does not target Azure services, ML platforms, or Security content directly.",
+    "canonical_url": "https://code.visualstudio.com/updates/v1_98",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-24 16:49:43 +00:00",
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' for the extensive new agent mode, MCP server integration, and AI-powered features throughout chat, editing, and notebooks (AI Inclusion Rules 1, 3, 4, 5). 'Coding' because this release is fundamentally about the developer experience in Visual Studio Code, including code editing, chat-assisted coding, Jupyter notebooks, source control, and extension authoring (Coding Inclusion Rules 2, 4, 5). No Azure, DevOps, ML, or Security categories as there is no primary focus on Azure services, dedicated ML/data science frameworks, or security-specific features. Tags extracted from all technical, product, and methodology mentions in order of relevance.",
+    "canonical_url": "https://code.visualstudio.com/updates/v1_99",
+    "collection": "news"
   }
 ]
