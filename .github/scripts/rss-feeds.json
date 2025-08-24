@@ -10,27 +10,17 @@
     "url": "https://github.blog/changelog/feed/"
   },
   {
-    "name": "Microsoft DevBlog",
-    "outputDir": "_news",
-    "url": "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
-  },
-  {
-    "name": "Microsoft DevBlog",
-    "outputDir": "_news",
-    "url": "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/"
-  },
-  {
-    "name": "Microsoft DevBlog",
+    "name": "Microsoft AI Foundry Blog",
     "outputDir": "_news",
     "url": "https://devblogs.microsoft.com/foundry/feed/"
   },
   {
-    "name": "Microsoft DevBlog",
+    "name": "Microsoft Semantic Kernel Blog",
     "outputDir": "_news",
     "url": "https://devblogs.microsoft.com/semantic-kernel/feed/"
   },
   {
-    "name": "Microsoft DevBlog",
+    "name": "Microsoft AutoGen Blog",
     "outputDir": "_news",
     "url": "https://devblogs.microsoft.com/autogen/feed/"
   },
@@ -73,7 +63,7 @@
     "name": "GitHub YouTube",
     "outputDir": "_videos",
     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
-  },  
+  },
   {
     "name": "Learn Microsoft AI Youtube",
     "outputDir": "_videos",
@@ -105,7 +95,7 @@
     "url": "https://www.arresteddevops.com/episode/index.xml"
   },
   {
-    "name": "Microsoft DevBlog",
+    "name": "Microsoft DevOps Blog",
     "outputDir": "_news",
     "url": "https://devblogs.microsoft.com/devops/feed/"
   },
@@ -135,32 +125,32 @@
     "url": "https://azure.microsoft.com/en-us/blog/feed/"
   },
   {
-    "name": "Microsoft DevBlog",
+    "name": "Microsoft Blog",
     "outputDir": "_news",
     "url": "https://devblogs.microsoft.com/feed"
   },
   {
-    "name": "Microsoft DevBlog",
+    "name": "Microsoft Engineering Blog",
     "outputDir": "_news",
     "url": "https://devblogs.microsoft.com/engineering-at-microsoft/feed/"
   },
   {
-    "name": "Microsoft DevBlog",
+    "name": "Microsoft Azure Notification Hubs Blog",
     "outputDir": "_news",
     "url": "https://devblogs.microsoft.com/azure-notification-hubs/feed/"
   },
   {
-    "name": "Microsoft DevBlog",
+    "name": "Microsoft All Things Azure Blog",
     "outputDir": "_news",
     "url": "https://devblogs.microsoft.com/all-things-azure/feed/"
   },
   {
-    "name": "Microsoft DevBlog",
+    "name": "Microsoft OpenAPI Blog",
     "outputDir": "_news",
     "url": "https://devblogs.microsoft.com/openapi/feed/"
   },
   {
-    "name": "Microsoft DevBlog",
+    "name": "Microsoft Azure SDK Blog",
     "outputDir": "_news",
     "url": "https://devblogs.microsoft.com/azure-sdk/feed/"
   },
@@ -288,5 +278,15 @@
     "name": "Spindev's Blog",
     "outputDir": "_posts",
     "url": "https://spindev.net/index.xml"
-  }  
+  },
+  {
+    "name": "Visual Studio Code Releases",
+    "outputDir": "_news",
+    "url": "https://code.visualstudio.com/feed.xml"
+  },
+  {
+    "name": "Microsoft VisualStudio Blog",
+    "outputDir": "_news",
+    "url": "https://devblogs.microsoft.com/visualstudio/feed/"
+  }
 ]

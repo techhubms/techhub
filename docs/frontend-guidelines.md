@@ -398,6 +398,7 @@ This section covers end-to-end testing standards using Playwright for Phase 5 te
 **Purpose**: End-to-end testing of complete user workflows, browser compatibility, and visual behavior
 **Test Location**: `spec/e2e/tests/`
 **Test Execution**: Use `/workspaces/techhub/run-e2e-tests.ps1` wrapper script
+**Jekyll Startup**: E2E tests automatically start Jekyll if needed, which can take 2-3 minutes for initial startup
 
 ### Test Structure and Organization
 
