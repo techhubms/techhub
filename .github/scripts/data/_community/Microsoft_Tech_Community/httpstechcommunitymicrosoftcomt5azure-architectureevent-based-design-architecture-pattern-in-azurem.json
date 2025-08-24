@@ -1,0 +1,14 @@
+{
+  "Description": "Event-driven architecture (EDA) is a design pattern that enables applications to respond to real-time events rather than relying on traditional request-response communication. In the cloud-native ecosystem, EDA is particularly powerful for building scalable, loosely coupled, and resilient solutions. Azure provides a robust set of services to implement event-based design, ensuring seamless integration and high availability.\n\n[https://dellenny.com/event-based-design-architecture-pattern-in-azure/](https://dellenny.com/event-based-design-architecture-pattern-in-azure/)",
+  "Tags": [],
+  "Author": "JohnNaguib",
+  "FeedName": "Microsoft Tech Community",
+  "PubDate": "2025-08-23T09:45:41+00:00",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Title": "Event Based Design Architecture Pattern in Azure",
+  "OutputDir": "_community",
+  "ProcessedDate": "2025-08-23 12:20:59",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-architecture/event-based-design-architecture-pattern-in-azure/m-p/4447357#M783",
+  "EnhancedContent": "Event-driven architecture (EDA) is a design pattern that enables applications to respond to real-time events rather than relying on traditional request-response communication. In the cloud-native ecosystem, EDA is particularly powerful for building scalable, loosely coupled, and resilient solutions. Azure provides a robust set of services to implement event-based design, ensuring seamless integration and high availability.\n\n[https://dellenny.com/event-based-design-architecture-pattern-in-azure/](https://dellenny.com/event-based-design-architecture-pattern-in-azure/)",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node"
+}
