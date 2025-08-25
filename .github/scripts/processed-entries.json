@@ -7284,5 +7284,11 @@
     "reason": "Succesfully added: Assigned AI category because the show addresses Azure AI Foundry community questions and discusses cost optimization for Azure AI services (AI inclusion rule 1, 4). Assigned Azure category due to focus on Azure cloud services (Azure inclusion rule 1). Coding is not included because the content summary only mentions cost optimization strategies for AI services, not specific programming, languages, or code implementation. Other categories do not fit based on provided information.",
     "canonical_url": "https://www.youtube.com/watch?v=CdrXTcpTAhI",
     "timestamp": "2025-08-25 16:17:46 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/announcing-more-azure-vmware-solution-enhancements/ba-p/4447103",
+    "timestamp": "2025-08-25 17:11:03 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content is focused on technical updates and regional/service enhancements for the Azure VMware Solution (Azure rule 1, 4, 5). The article details managed service improvements, security compliance, storage integration, and migration resources related specifically to Azure infrastructure. No other category fits: there is no software coding, development tooling, AI, ML, or explicit security implementation walkthrough (the security mention is regulatory/government approval rather than technical security content). Exclusion rules do not apply: content is not biographical, non-English, question-only, job-related, business strategy, or business productivity focused. Community-type length is sufficient and technical depth is present.",
+    "collection": "community"
   }
 ]
