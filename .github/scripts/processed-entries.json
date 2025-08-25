@@ -7320,5 +7320,23 @@
     "timestamp": "2025-08-25 20:14:25 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/mine-your-azure-backup-data-it-could-save-you/m-p/4448003#M22143",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Included only the DevOps category because the article is centered on architecture as code and its automation/integration into DevOps workflows. CALM is not specific to Microsoft technologies as required by Azure, AI, ML, Coding, Security, or GitHub Copilot inclusion rules, so those categories do not apply. The solution focuses on universal enterprise DevOps pipeline improvements with no substantial Microsoft product, tool, or cloud component; the primary fit is 'DevOps' (Development Methodologies, CI/CD, Infrastructure as Code, etc.). No generic exclusion rules triggered — the content is technical, implementation-focused, and sufficiently detailed.",
+    "canonical_url": "https://devops.com/morgan-stanley-open-sources-calm-the-architecture-as-code-solution-transforming-enterprise-devops/?utm_source=rss&utm_medium=rss&utm_campaign=morgan-stanley-open-sources-calm-the-architecture-as-code-solution-transforming-enterprise-devops",
+    "timestamp": "2025-08-25 23:12:30 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Coding category because the content is centered around ASP.NET Core API development and new features in .NET 10, in accordance with Coding rules 1 and 4. Assigned the Security category because the session discusses authentication flows and the prevention of unwanted login redirects, which is pertinent to secure coding practices (Security rules 2 and 3). Did not assign other categories since the focus is tightly on coding and security practices rather than DevOps, AI, Azure, or ML.",
+    "canonical_url": "https://www.youtube.com/watch?v=csueqgXEroM",
+    "timestamp": "2025-08-25 23:12:51 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the session focuses on leveraging AI tools and solutions in the .NET ecosystem (AI rules 1 and 4). Assigned GitHub Copilot category because it is specifically mentioned as a core focus and example of an AI development tool (GitHub Copilot rules 1 and 2; see also AI rule 2). Assigned Coding category because the content is about practical coding enhancements, tips, and automation for developers in the .NET context (Coding rules 1, 2, and 4). No generic or specific exclusion rules apply.",
+    "canonical_url": "https://www.youtube.com/watch?v=dASHCBVyrnQ",
+    "timestamp": "2025-08-25 23:13:08 +00:00",
+    "collection": "videos"
   }
 ]
