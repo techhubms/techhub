@@ -1,0 +1,25 @@
+{
+  "OutputDir": "_videos",
+  "Title": "Azure Service Groups - Flexible Resource Organization",
+  "ProcessedDate": "2025-08-25 15:12:41",
+  "Link": "https://www.youtube.com/watch?v=wurJ2LKmDs4",
+  "FeedName": "John Savill's Technical Training",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ",
+  "Author": "John Savill's Technical Training",
+  "PubDate": "2025-08-25T14:57:08+00:00",
+  "Tags": [
+    "azure",
+    "azure ad",
+    "azure resource manager",
+    "cloud",
+    "control plane",
+    "entra id",
+    "resource group",
+    "resources",
+    "service groups",
+    "subscription"
+  ],
+  "EnhancedContent": null,
+  "Description": "A brand-new way to organize your resources to be used as a scope for functionality like health monitoring!\n\n▬▬▬▬▬▬ C H A P T E R S ⏰ ▬▬▬▬▬▬ 00:00 - Introduction 00:15 - Existing Azure grouping constructs 01:58 - The challenge 03:32 - Azure Service Group flexibility 04:53 - Root service group 06:33 - Service group hierarchy 08:38 - Globally unique names 10:50 - Hierarchy depth 11:06 - Permissions to create service groups 11:29 - What can be in a service group 12:50 - Relationships 14:23 - Permission to add relationship 15:40 - Limits 16:37 - What is the point? 16:59 - What I CAN'T do 17:23 - What I CAN do 19:47 - Future 20:33 - Summary 21:03 - Close\n\n▬▬▬▬▬▬ K E Y L I N K S 🔗 ▬▬▬▬▬▬ ► Whiteboard: 🔗 https://github.com/johnthebrit/RandomStuff/raw/master/Whiteboards/AzureServiceGroups.png ► Microsoft docs: 🔗 https://learn.microsoft.com/azure/governance/service-groups/overview#how-it-works\n\n❔ Questions? Maybe I answered it in my FAQ 🔗 https://savilltech.com/faq 👕 Cure Childhood Cancer Charity T-Shirt Channel Store 🔗 https://johns-t-shirts-store.creator-spring.com/\n\n▬▬▬▬▬▬ Want to learn more? 🚀 ▬▬▬▬▬▬ 📖 Recommended Learning Path for Azure 🔗 https://learn.onboardtoazure.com 🥇 Certification Content Repository 🔗 https://github.com/johnthebrit/CertificationMaterials 📅 Weekly Azure Update 🔗 https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks ☁ Azure Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY ⚙ DevOps Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq 💻 PowerShell Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFq\\_hR7FcMYg32xsSAObuq8 🎓 Certification Cram Videos 🔗 https://youtube.com/playlist?list=PLlVtbbG169nHz2qfLvPsAz9CnnXofhmcA 🧠 Mentoring Content 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGHxNkSWB0PjzZHwZ0BkXZZ\n\n👂 Enable the subtitles and from there you can translate to your native language via the auto-translate feature in settings! https://youtu.be/v5b53-PgEmI for a demo of using this feature.\n\nSUBSCRIBE ✅ https://www.youtube.com/channel/UCpIn7ox7j7bH\\_OFj7tYouOQ?sub\\_confirmation=1\n\n#azure #cloud #microsoft #johnsavillstechnicaltraining",
+  "FeedLevelAuthor": "John Savill's Technical Training"
+}

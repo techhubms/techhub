@@ -7236,5 +7236,29 @@
     "canonical_url": "https://www.youtube.com/shorts/ZW-cO0Tj7LE",
     "collection": "videos",
     "timestamp": "2025-08-25 14:13:45 +00:00"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-08-25 15:13:42 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because Microsoft Fabric and Data Factory are Azure-based data engineering and orchestration services (Azure inclusion rule 1). Assigned ML category because the activity directly supports data ingestion, pipeline orchestration, and CDC, which are used in analytics/data engineering scenarios common in data science, ML, and data warehousing (ML rule 2, 3, and 7). No other categories apply. Content does not fit generic exclusion rules: it is not biographical, career-focused, non-English, or business/management content. It offers technical depth regarding orchestration and data movement features targeting technical practitioners.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/now-in-public-preview-copy-job-activity-in-pipelines/"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-08-25 15:14:15 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content is entirely focused on the new Azure Service Groups, which are a feature of Azure Resource Manager used for organizing and managing cloud resources (Azure rules 1 and 5). No other category applies as the video does not cover development, coding, AI, DevOps, ML, or explicit security implementation. The tags emphasize Azure-specific terminology, resource management, and governance based on the content, title, and supplied input.",
+    "canonical_url": "https://www.youtube.com/watch?v=wurJ2LKmDs4"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-08-25 15:15:06 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the content thoroughly discusses Azure Capacity Reservations, Reserved Instances, architecture strategies, and VM considerations (Azure rule 1 and 4). Assigned DevOps category because the article emphasizes systems reliability, FinOps hygiene, high availability, failover planning, and architectural best practices within a Microsoft (Azure) context (DevOps rules 3, 5, and 6). Did not assign Coding, AI, ML, Security, or GitHub Copilot, as there is no direct focus on those areas. Content is technical, implementation-focused, and entirely relevant, with no generic exclusion rules triggered.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/designing-for-certainty-how-azure-capacity-reservations/m-p/4447901#M347"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-08-25 15:15:45 +00:00",
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the core focus is on Azure platform features and server management (Azure inclusion rules 1, 4, 5). 'Security' applies because managed identities secure access to configuration packages, improving cloud security (Security rules 1, 4, 7). 'DevOps' is included because the article covers configuration as code, policy management, and automation relevant to DevOps practices (DevOps rules 1, 5, 6). No Coding, ML, AI, or GitHub Copilot category: the topic does not involve app development or machine learning.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/system-assigned-identity-based-access-for-machine-configuration/ba-p/4446603"
   }
 ]

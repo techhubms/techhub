@@ -6729,5 +6729,11 @@
     "canonical_url": "https://devops.com/five-great-devops-job-opportunities-153/?utm_source=rss&utm_medium=rss&utm_campaign=five-great-devops-job-opportunities-153",
     "collection": "posts",
     "timestamp": "2025-08-25 14:13:17 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-08-25 15:14:30 +00:00",
+    "reason": "No categories found: Content excluded due to lack of substantive technical information. The 'content' field is null, which means there is no available main text to analyze, only a short promotional description. Per generic exclusion rules, content without primary explanatory text (such as announcements, short promos, or empty/null fields) cannot be categorized because there is no technical detail, actionable insight, or depth to assess. The description only references a Microsoft event and a broad topic ('developer security'), but provides no discussion of technologies, architectures, or implementation details. This fails to meet minimum information and quality standards required by the workflow.",
+    "canonical_url": "https://www.youtube.com/shorts/YPIbBZ_83ts"
   }
 ]
