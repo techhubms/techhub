@@ -6735,5 +6735,11 @@
     "timestamp": "2025-08-25 15:14:30 +00:00",
     "reason": "No categories found: Content excluded due to lack of substantive technical information. The 'content' field is null, which means there is no available main text to analyze, only a short promotional description. Per generic exclusion rules, content without primary explanatory text (such as announcements, short promos, or empty/null fields) cannot be categorized because there is no technical detail, actionable insight, or depth to assess. The description only references a Microsoft event and a broad topic ('developer security'), but provides no discussion of technologies, architectures, or implementation details. This fails to meet minimum information and quality standards required by the workflow.",
     "canonical_url": "https://www.youtube.com/shorts/YPIbBZ_83ts"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. Although the description refers to Azure AI Foundry (which would typically trigger the AI category under AI inclusion rule 1), the actual content is absent (content: null), leaving no substantive technical information or details to assess. According to the guidelines in Chapter 2 ('Focus on actual content'), and Chapter 3 ('Question-Only Content' and insufficient data), if there is no main content, categories cannot be applied. The input lacks any technical details, examples, or answers – it simply restates a community question and provides a link, which matches the exclusion for 'question-only content' without substantive response or technical information.",
+    "canonical_url": "https://www.youtube.com/shorts/MUIH0N4mEQI",
+    "timestamp": "2025-08-25 16:17:26 +00:00"
   }
 ]
