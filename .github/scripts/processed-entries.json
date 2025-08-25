@@ -7224,5 +7224,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=UB6QNYKStVI",
     "timestamp": "2025-08-25 08:19:36 +00:00"
+  },
+  {
+    "timestamp": "2025-08-25 10:15:17 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/branding-your-sharepoint-site-for-your-organization/",
+    "reason": "Succesfully added: Assigned the Coding category because the article offers practical, step-by-step instructions for customizing SharePoint sites—including applying themes, modifying headers/footers, editing layouts with web parts, and accessibility testing—which aligns with SharePoint development and technical site customization (Coding rule 4, Microsoft development focus). It does *not* qualify for business-only, non-technical, or end-user/office productivity exclusions, as the content is aimed at site administrators and customizers rather than general end users, satisfying the development context exception under SharePoint. No other categories apply, as there is no AI, Azure, DevOps, ML, or Security content present."
   }
 ]
