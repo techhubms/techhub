@@ -1,0 +1,24 @@
+{
+  "OutputDir": "_videos",
+  "Tags": [
+    "API",
+    "aspnetcore",
+    "demo",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetdeveloper",
+    "microsoft",
+    "softwaredeveloper"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "FeedLevelAuthor": "dotnet",
+  "Author": "dotnet",
+  "Link": "https://www.youtube.com/watch?v=csueqgXEroM",
+  "ProcessedDate": "2025-08-25 23:11:22",
+  "PubDate": "2025-08-25T22:49:37+00:00",
+  "Description": "Tired of login redirects when calling your APIs? See how ASP.NET Core in .NET 10 now prevents login directs when accessing API endpoints and returns proper 401 unauthorized responses. Join the conversation and level up your API experience!\n\n🔗 Community Links: https://www.theurlist.com/aspnet-standup-20250902\n\n🎙️ Featuring: Daniel Roth, Stephen Halter\n\n#dotnet #aspnetcore",
+  "EnhancedContent": null,
+  "FeedName": "DotNet YouTube",
+  "Title": "ASP.NET Community Standup - Prevent login redirects for APIs"
+}
