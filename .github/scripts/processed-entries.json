@@ -7260,5 +7260,29 @@
     "timestamp": "2025-08-25 15:15:45 +00:00",
     "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the core focus is on Azure platform features and server management (Azure inclusion rules 1, 4, 5). 'Security' applies because managed identities secure access to configuration packages, improving cloud security (Security rules 1, 4, 7). 'DevOps' is included because the article covers configuration as code, policy management, and automation relevant to DevOps practices (DevOps rules 1, 5, 6). No Coding, ML, AI, or GitHub Copilot category: the topic does not involve app development or machine learning.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/system-assigned-identity-based-access-for-machine-configuration/ba-p/4446603"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories since the core subject is the VS Code Copilot Chat extension, which is an AI-powered development tool (AI rules 1–2), and the article focuses on prompt injection and LLM interactions. Security is included due to the focus on exploits, vulnerabilities, mitigation, and best practices for secure usage (Security rules 1, 2, 5). Coding is assigned because the discussion revolves around developer tools, extensions, workspace trust, and source code editing within VS Code (Coding rules 2, 4, 5). Azure, DevOps, and ML do not apply as there is no specific Azure service, DevOps workflow, or ML/custom data science work discussed in the content. All assignments follow the inclusion rules, with strong Microsoft and developer tool focus, technical depth, and actionable mitigation steps.",
+    "canonical_url": "https://github.blog/security/vulnerability-research/safeguarding-vs-code-against-prompt-injections/",
+    "timestamp": "2025-08-25 16:16:00 +00:00"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: The 'AI' category is assigned because the entire article focuses on building retrieval-augmented generation (RAG) solutions powered by generative AI and Azure's AI services (AI rule 1 and 4). The 'Azure' category is included as the guide provides detailed, step-by-step use of Azure-specific tools and services (Azure AI Search, Azure OpenAI, AI Foundry, etc.), matching Azure inclusion rules 1 and 4. No Coding, DevOps, ML, Security, or GitHub Copilot categories are assigned because the emphasis is on architecture, setup, and configuration rather than application coding, DevOps practices, low-level ML engineering, or security-specific implementation. The guide references coding approaches but does not focus primarily on code development or DevOps pipelines.",
+    "canonical_url": "https://dellenny.com/retrieval-augmented-generation-rag-in-azure-ai-a-step-by-step-guide/",
+    "timestamp": "2025-08-25 16:16:36 +00:00"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned DevOps category because the core focus is on DevOps philosophy, frameworks like CAMS, and cultural discussions central to DevOps (DevOps rule 4: development methodologies, team organization). Assigned Security category because the article covers DevSecOps, emphasizes security ownership as a behavior, and discusses DASP (Security rules 2, 3, 6, 9). Coding, AI, Azure, ML, and GitHub Copilot categories are not assigned because there is no substantial technical depth in programming, platform usage, or AI/ML tooling. The post is reflective—highlighting cultural and security trends within DevOps but remains grounded in actionable, technical team practices, making it relevant for practitioners. Article is not excluded because it’s not biographical (focus is on Willis’s industry impact and actionable frameworks, not his life story), nor does it violate any generic exclusions.",
+    "canonical_url": "https://devops.com/john-willis-the-true-north-of-devops-and-devsecops/?utm_source=rss&utm_medium=rss&utm_campaign=john-willis-the-true-north-of-devops-and-devsecops",
+    "timestamp": "2025-08-25 16:17:06 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the show addresses Azure AI Foundry community questions and discusses cost optimization for Azure AI services (AI inclusion rule 1, 4). Assigned Azure category due to focus on Azure cloud services (Azure inclusion rule 1). Coding is not included because the content summary only mentions cost optimization strategies for AI services, not specific programming, languages, or code implementation. Other categories do not fit based on provided information.",
+    "canonical_url": "https://www.youtube.com/watch?v=CdrXTcpTAhI",
+    "timestamp": "2025-08-25 16:17:46 +00:00"
   }
 ]
