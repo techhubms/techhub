@@ -6717,5 +6717,17 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/writing-effective-prompts-for-microsoft-365-copilot/",
     "timestamp": "2025-08-25 08:19:00 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories are assigned because the content is an introductory tutorial for Microsoft Clipchamp, a browser-based video editor targeted at general users and content creators, not developers or technical professionals. It does not cover software development, coding, AI, DevOps, security, ML, or cloud infrastructure. The primary focus is beginner-level video editing, which falls under end-user business applications and general productivity, and is excluded by the 'Non-Development Microsoft Products' generic exclusion rule (Chapter 3). No technical implementation, programming, or developer-focused details are present.",
+    "timestamp": "2025-08-25 13:26:46 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/mastering-clipchamp-from-beginner-to-pro-1/"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: it is primarily job-related, focusing on job openings, hiring opportunities, and salary information for DevOps professionals. According to the 'Job-Related Content' exclusion rule in Chapter 3, career advice, job postings, and salary discussions are not eligible for categorization. The majority of the text consists of job postings and advice for advancing one's career, not technical implementation or knowledge sharing around Microsoft technologies.",
+    "canonical_url": "https://devops.com/five-great-devops-job-opportunities-153/?utm_source=rss&utm_medium=rss&utm_campaign=five-great-devops-job-opportunities-153",
+    "collection": "posts",
+    "timestamp": "2025-08-25 14:13:17 +00:00"
   }
 ]

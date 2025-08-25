@@ -1,0 +1,22 @@
+{
+  "Title": "Why did the cost of my AI Agent exceed the set budget?",
+  "FeedName": "Microsoft Developer YouTube",
+  "Link": "https://www.youtube.com/shorts/ZW-cO0Tj7LE",
+  "Description": "Question of the week from our Azure AI Foundry community. Why did the cost of my AI Agent exceed the set budget? Join our community and more https://aka.ms/context-window",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Developer",
+  "PubDate": "2025-08-25T14:01:01+00:00",
+  "Author": "Microsoft Developer",
+  "ProcessedDate": "2025-08-25 14:12:46",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ]
+}
