@@ -7218,5 +7218,11 @@
     "reason": "Succesfully added: Categories assigned as follows: 'AI' for the extensive new agent mode, MCP server integration, and AI-powered features throughout chat, editing, and notebooks (AI Inclusion Rules 1, 3, 4, 5). 'Coding' because this release is fundamentally about the developer experience in Visual Studio Code, including code editing, chat-assisted coding, Jupyter notebooks, source control, and extension authoring (Coding Inclusion Rules 2, 4, 5). No Azure, DevOps, ML, or Security categories as there is no primary focus on Azure services, dedicated ML/data science frameworks, or security-specific features. Tags extracted from all technical, product, and methodology mentions in order of relevance.",
     "canonical_url": "https://code.visualstudio.com/updates/v1_99",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned Coding category because the content centers on Visual Studio Code development, planning, and new features (Coding rules 2 and 5). Assigned DevOps category due to focus on development tooling improvements, automation, and collaborative planning (DevOps rules 3, 9, 11). Content does not qualify for other categories since no AI, Azure services, ML, or Security-focused topics are present. Based on provided description and tags, there is no deep technical focus on AI/ML, just mention as a hashtag; thus, AI and GitHub Copilot are not included.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=UB6QNYKStVI",
+    "timestamp": "2025-08-25 08:19:36 +00:00"
   }
 ]

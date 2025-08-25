@@ -1,0 +1,18 @@
+{
+  "Author": "Visual Studio Code",
+  "Description": "What features are coming to VS Code in the next update? The August iteration plan is completely done in the open. How does it work, how you look at it, and how to you get involved? We also sit down with VS Code engineer Daniel Imms about vast improvements coming to the Terminal for agent mode integration.\n\nLinks:\n- Iteration Plan: https://github.com/microsoft/vscode/issues/260895\n- Auto Approve: https://code.visualstudio.com/updates/v1\\_103#\\_terminal-autoapprove-improvements\n- Terminal Improvements Coming: https://github.com/microsoft/vscode/issues?q=state%3Aclosed%20label%3A%22chat-terminal%22%20milestone%3A%22August%202025%22\n\nSubscribe on your favorite podcast app:\n- Apple Podcasts: https://podcasts.apple.com/us/podcast/id1833924784\n- Spotify: https://open.spotify.com/show/3S2fExHkmbfQwwYw4a56yQ\n- Amazon Music: https://music.amazon.com/podcasts/bd5f1efc-cdae-49c8-8ec7-c9b48b00ce46/vs-code-insiders-podcast\n- Castbox: https://castbox.fm/channel/id6720052?country=us\n- Overcast: https://overcast.fm/itunes1833924784/vs-code-insiders-podcast\n- Pocket Casts: https://pca.st/itunes/1833924784\n- and more: https://www.vscodepodcast.com/subscribe\n\nFollow VS Code: \\* X: https://x.com/code \\* Bluesky: https://bsky.app/profile/vscode.dev \\* YouTube: https://youtube.com/code \\* LinkedIn: https://www.linkedin.com/showcase/104107263 \\* GitHub: https://github.com/microsoft/vscode\n\n#vscode #terminal #aidevelopment #githubcopilot",
+  "Title": "Iteration Plan for August & Re-writing Terminal Tools | VS Code Insiders Podcast ep. 2",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-08-25 08:18:25",
+  "FeedName": "Visual Studio Code YouTube",
+  "Link": "https://www.youtube.com/watch?v=UB6QNYKStVI",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "PubDate": "2025-08-25T07:00:26+00:00"
+}

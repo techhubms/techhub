@@ -6699,5 +6699,23 @@
     "canonical_url": "https://dellenny.com/understanding-microsoft-365-compliance-center-basics/",
     "timestamp": "2025-08-24 14:10:56 +00:00",
     "reason": "No categories found: No categories assigned because the content is focused entirely on end-user and administrative features of the Microsoft 365 Compliance Center such as data loss prevention, auditing, and compliance management. There is no substantive discussion of technical implementation, development, coding, DevOps, AI/ML, or security architecture from an engineering perspective. This matches the generic exclusion rules for 'Business Strategy and Executive Content' and 'Non-Development Microsoft Products' since the content only describes administration usage and does not address developer, architectural, or implementation topics."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=0luUDS6wGoM",
+    "timestamp": "2025-08-24 21:11:41 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this is biographical content, focusing primarily on the author's personal activities and experiences outside of technical topics. There is no substantive discussion of Microsoft technologies, development, or related technical implementation. According to the Biographical Focus exclusion in Chapter 3, this content does not qualify for categorization."
+  },
+  {
+    "timestamp": "2025-08-25 05:14:42 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=gHGMBxy2W1c",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: The description indicates that this video primarily focuses on high-level business strategy, executive leadership perspectives, and business transformation discussions rather than technical implementation or developer-focused guidance. The conversation revolves around partnering with senior business leaders, business transformation, and the role of AI from a strategic or business impact perspective, not technical depth. According to the 'Business Strategy and Executive Content' and 'Business vs Technical Content Examples' exclusions in Chapter 3 and Chapter 6, such business-focused content should be excluded unless there are substantial technical implementation details, which are not evidenced in the provided description."
+  },
+  {
+    "reason": "No categories found: All possible categories are excluded due to the business productivity nature of the content. The article focuses entirely on using Microsoft 365 Copilot within Office applications such as Word, Excel, PowerPoint, Outlook, and Teams for tasks like drafting emails, summarizing meetings, and creating presentations. According to the critical distinction in the workflow (Chapter 2, Copilot Product Distinction, and Non-Development Microsoft Products under Generic Exclusion Rules), Microsoft 365 Copilot is classified as a business productivity tool—not a developer tool. This content does not involve code, APIs, developer integrations, or technical implementations for Microsoft 365 Copilot, but rather focuses on prompt engineering for end-user productivity scenarios. As such, it triggers the exclusion rules for non-development Microsoft products and business productivity tools. No categories apply.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/writing-effective-prompts-for-microsoft-365-copilot/",
+    "timestamp": "2025-08-25 08:19:00 +00:00"
   }
 ]
