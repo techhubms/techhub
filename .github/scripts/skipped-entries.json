@@ -6741,5 +6741,17 @@
     "reason": "No categories found: No categories assigned. Although the description refers to Azure AI Foundry (which would typically trigger the AI category under AI inclusion rule 1), the actual content is absent (content: null), leaving no substantive technical information or details to assess. According to the guidelines in Chapter 2 ('Focus on actual content'), and Chapter 3 ('Question-Only Content' and insufficient data), if there is no main content, categories cannot be applied. The input lacks any technical details, examples, or answers – it simply restates a community question and provides a link, which matches the exclusion for 'question-only content' without substantive response or technical information.",
     "canonical_url": "https://www.youtube.com/shorts/MUIH0N4mEQI",
     "timestamp": "2025-08-25 16:17:26 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-08-25 18:18:50 +00:00",
+    "reason": "No categories found: Content excluded because it is mainly philosophical and community-oriented, lacking any technical depth or substantive information about Microsoft technologies or developer tooling. The description focuses on open source as a concept and community participation, without describing specific products, coding, DevOps, Microsoft platforms, or technical know-how. No technical implementation, how-to details, or product focus is present. According to generic exclusion rules, content with only community lessons, abstract advice, or questions (e.g., 'What has open source taught you?') and without technical depth does not qualify for categorization.",
+    "canonical_url": "https://www.youtube.com/shorts/AJacEGbtRCE"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-08-25 18:19:05 +00:00",
+    "reason": "No categories found: No categories were assigned because the provided content is a community 'question-only' type of post, lacking any substantive technical content, explanation, or answer. The title and description both indicate it's a prompt for discussion rather than an informative resource or technical solution, explicitly matching the 'Question-Only Content' criterion in the generic exclusion rules (Chapter 3), which require excluding content that mainly asks questions or seeks information without providing substantive answers or solutions.",
+    "canonical_url": "https://www.youtube.com/shorts/Zq_aquaEpC0"
   }
 ]
