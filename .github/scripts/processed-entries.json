@@ -7314,5 +7314,11 @@
     "timestamp": "2025-08-25 19:11:52 +00:00",
     "reason": "Succesfully added: The 'AI' category is assigned because the demo centers on AI-powered programming and debugging workflows (AI rule 1 and 2). 'GitHub Copilot' is included since Copilot Agent Mode is spotlighted, in line with the rule to always assign both 'AI' and 'GitHub Copilot' together for such content. The 'Coding' category qualifies because the scenario covers code workflow automation, bug fixing, and technical debugging using developer tools (Coding rules 2 and 4). Content is not excluded because it focuses on technical, developer-oriented features of GitHub Copilot and Playwright MCP rather than business productivity or end-user scenarios. No generic exclusion rules apply and Microsoft developer tools are central.",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the post is centered on managing Azure backup resources, data analysis, and cost optimization within Azure (Azure inclusion rule 1 and 4). The use of Power BI is for operational reporting rather than advanced analytics or ML workloads, so ML was not assigned. The focus is specifically on Azure service administration and reporting through PowerShell automation and Power BI dashboards, aligning with Azure but not the Coding or DevOps categories, as the PowerShell usage is for administration, not application development or deployment pipelines.",
+    "timestamp": "2025-08-25 20:14:25 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/mine-your-azure-backup-data-it-could-save-you/m-p/4448003#M22143",
+    "collection": "community"
   }
 ]
