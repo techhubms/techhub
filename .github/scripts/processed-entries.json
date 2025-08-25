@@ -7290,5 +7290,11 @@
     "timestamp": "2025-08-25 17:11:03 +00:00",
     "reason": "Succesfully added: Assigned the Azure category because the content is focused on technical updates and regional/service enhancements for the Azure VMware Solution (Azure rule 1, 4, 5). The article details managed service improvements, security compliance, storage integration, and migration resources related specifically to Azure infrastructure. No other category fits: there is no software coding, development tooling, AI, ML, or explicit security implementation walkthrough (the security mention is regulatory/government approval rather than technical security content). Exclusion rules do not apply: content is not biographical, non-English, question-only, job-related, business strategy, or business productivity focused. Community-type length is sufficient and technical depth is present.",
     "collection": "community"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-08-25 18:18:23 +00:00",
+    "reason": "Succesfully added: Assigned the 'Coding' category because the article is focused on the MauiReactor UI library, exploring the MVU (Model-View-Update) pattern within .NET MAUI development (Coding rules 1, 2, 4). While Azure and Power BI are mentioned, they're only referenced as part of a solution context (not the article's focus), so Azure or ML categories do not apply. No AI/ML, DevOps, GitHub Copilot, or Security specialist content is present. The content meets all quality standards: it's in English, technically detailed, developer-focused, and not promotional or negative.",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/mauireactor-mvu-for-dotnet-maui/"
   }
 ]
