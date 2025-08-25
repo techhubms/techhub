@@ -6753,5 +6753,17 @@
     "timestamp": "2025-08-25 18:19:05 +00:00",
     "reason": "No categories found: No categories were assigned because the provided content is a community 'question-only' type of post, lacking any substantive technical content, explanation, or answer. The title and description both indicate it's a prompt for discussion rather than an informative resource or technical solution, explicitly matching the 'Question-Only Content' criterion in the generic exclusion rules (Chapter 3), which require excluding content that mainly asks questions or seeks information without providing substantive answers or solutions.",
     "canonical_url": "https://www.youtube.com/shorts/Zq_aquaEpC0"
+  },
+  {
+    "canonical_url": "https://opensource.microsoft.com/blog/2025/08/25/documentdb-joins-the-linux-foundation/",
+    "timestamp": "2025-08-25 19:10:23 +00:00",
+    "reason": "No categories found: Content excluded due to lack of substantial technical detail and failure to meet category-specific inclusion rules. The content primarily consists of a brief announcement that DocumentDB joins the Linux Foundation, without any technical explanation, development guidance, or discussion of implementation related to Microsoft technologies. According to Generic Exclusion Rules, business partnership and organizational news without depth on technical architecture, tools, or development practices do not qualify for any categories. Additionally, the post acts as a redirect or placeholder with minimal original content, further disqualifying it under the requirement to focus on actual technical substance.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/ado-widgets-for-developers/m-p/4447614#M22140",
+    "timestamp": "2025-08-25 19:11:56 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community"
   }
 ]

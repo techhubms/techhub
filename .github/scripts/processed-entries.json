@@ -7296,5 +7296,23 @@
     "timestamp": "2025-08-25 18:18:23 +00:00",
     "reason": "Succesfully added: Assigned the 'Coding' category because the article is focused on the MauiReactor UI library, exploring the MVU (Model-View-Update) pattern within .NET MAUI development (Coding rules 1, 2, 4). While Azure and Power BI are mentioned, they're only referenced as part of a solution context (not the article's focus), so Azure or ML categories do not apply. No AI/ML, DevOps, GitHub Copilot, or Security specialist content is present. The content meets all quality standards: it's in English, technically detailed, developer-focused, and not promotional or negative.",
     "canonical_url": "https://devblogs.microsoft.com/dotnet/mauireactor-mvu-for-dotnet-maui/"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/github-copilot-for-azure-preview-launches-in-visual-studio-2022-with-azure-mcp-support/",
+    "timestamp": "2025-08-25 19:10:54 +00:00",
+    "reason": "Succesfully added: Assigned GitHub Copilot and AI categories because the content centers on the GitHub Copilot for Azure extension (AI rule 2 and GitHub Copilot rules 1-4). Assigned Azure category as the extension directly provides Azure development tools and services (Azure rules 1, 3, and 4). Assigned Coding because it targets development workflows inside Visual Studio and covers tool-assisted coding/deployment practices (Coding rule 5, with strong Visual Studio developer tool focus). No exclusion rules apply; this is technical news about a developer-integrated extension.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/protecting-azure-infrastructure-from-silicon-to-systems/",
+    "timestamp": "2025-08-25 19:11:23 +00:00",
+    "reason": "Succesfully added: Included 'Azure' category because the article focuses deeply on Azure's infrastructure, services, and platform-specific security technologies (Azure rules 1, 4, and 5). Included 'Security' because the entire article is about hardware security, confidential computing, hardware-based root of trust, and supply chain transparency (Security rules 1, 4, 7, 8, and 9). Did not assign AI or ML since the article does not specifically discuss building or deploying AI/ML workloads, but rather focuses on infrastructure and foundational defenses relevant to cloud, hardware, and secure operations. No Coding or DevOps since those aspects are not discussed. Categories were selected strictly following Chapter 4 inclusion logic after all generic exclusion rules were checked and found not to apply.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=Sh9D3lQs3A8",
+    "timestamp": "2025-08-25 19:11:52 +00:00",
+    "reason": "Succesfully added: The 'AI' category is assigned because the demo centers on AI-powered programming and debugging workflows (AI rule 1 and 2). 'GitHub Copilot' is included since Copilot Agent Mode is spotlighted, in line with the rule to always assign both 'AI' and 'GitHub Copilot' together for such content. The 'Coding' category qualifies because the scenario covers code workflow automation, bug fixing, and technical debugging using developer tools (Coding rules 2 and 4). Content is not excluded because it focuses on technical, developer-oriented features of GitHub Copilot and Playwright MCP rather than business productivity or end-user scenarios. No generic exclusion rules apply and Microsoft developer tools are central.",
+    "collection": "videos"
   }
 ]

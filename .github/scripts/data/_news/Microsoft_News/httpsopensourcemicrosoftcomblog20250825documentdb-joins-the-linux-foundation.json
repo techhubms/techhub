@@ -1,0 +1,17 @@
+{
+  "FeedName": "Microsoft News",
+  "ProcessedDate": "2025-08-25 19:09:32",
+  "Author": "stclarke",
+  "Title": "DocumentDB joins the Linux Foundation",
+  "FeedUrl": "https://news.microsoft.com/source/feed/",
+  "EnhancedContent": "![](https://opensource.microsoft.com/blog/wp-content/uploads/2024/06/CLO19_Ubisoft_Azure_030-388x212.png)\n\nAug 22 •\n\n6 min read\n\n### [Microsoft’s open source journey: From 20,000 lines of Linux code to AI at global scale](https://azure.microsoft.com/en-us/blog/microsofts-open-source-journey-from-20000-lines-of-linux-code-to-ai-at-global-scale/)\n\nFrom Linux kernel code to AI at scale, discover Microsoft’s open source…",
+  "Link": "https://opensource.microsoft.com/blog/2025/08/25/documentdb-joins-the-linux-foundation/",
+  "OutputDir": "_news",
+  "Description": "The post [DocumentDB joins the Linux Foundation](https://opensource.microsoft.com/blog/2025/08/25/documentdb-joins-the-linux-foundation/) appeared first on [Source](https://news.microsoft.com/source).",
+  "Tags": [
+    "Company News",
+    "Technology"
+  ],
+  "FeedLevelAuthor": "Source",
+  "PubDate": "2025-08-25T18:14:11+00:00"
+}
