@@ -1,0 +1,22 @@
+{
+  "PubDate": "2025-08-26T18:29:14+00:00",
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Developer YouTube",
+  "ProcessedDate": "2025-08-26 19:09:21",
+  "Description": "In this episode, we welcome Chef Anisha Latchman to the AI kitchen to cook up something special: GraphRAG. Anisha, a college senior and security intern, walks us through how GraphRAG—an open-source project from Microsoft—is transforming how we search and analyze security data using graphs and embeddings. From parsing emails to uncovering hidden relationships and themes, this episode is a delicious blend of technical insight and practical demo. Whether you're new to Retrieval-Augmented Generation or curious about graph-based search, this one's for you.\n\nChapters: 00:00 - Welcome to the Cozy AI Kitchen 00:20 - Meet Chef Anisha Latchman 00:33 - What is GraphRAG and Why It Matters 01:08 - GraphRAG Setup: Inputs and Configuration 01:36 - Emails as Input Data 02:02 - Running the GraphRAG API 02:46 - Indexing and Output Files Explained 03:00 - Understanding Nodes and Relationships 03:33 - Weighted Graphs and Their Importance 04:01 - Querying the GraphRAG Output 04:13 - Comparing Baseline RAG vs GraphRAG 05:00 - Community Search and Subgraphs 05:17 - Prompt Folder and Transparency 05:38 - Entity Extraction Prompt Deep Dive 06:03 - Prompt Engineering vs Context Engineering 06:40 - Chunking Strategies in RAG 07:30 - Final Query Results: GraphRAG vs Baseline 08:50 - Advice for Aspiring AI Builders 09:41 - Wrap-Up and Final Thoughts\n\nWhat You'll Learn:\n\nHow GraphRAG enhances traditional RAG with graph-based context Why embeddings and nodes matter in security data analysis The difference between semantic search and graph traversal How to set up and run GraphRAG using open-source tools Insights into prompt engineering and chunking strategies\n\n📂 Links & Resources: 🚀 GraphRAG GitHub Repository - https://aka.ms/CAIK-GraphRAG 🔍 Azure OpenAI Documentation - https://learn.microsoft.com/azure/ai-foundry/\n\n👥 Speakers: Anusha Latchman – Security Intern, Microsoft LinkedIn: https://www.linkedin.com/in/anisha-latchman/\n\nJohn Maeda LinkedIn: https://www.linkedin.com/in/johnmaeda/ X: https://x.com/johnmaeda\n\n🔔 Stay Connected Don't miss an episode - hit Subscribe and ring the bell!\n\n📣 Follow the Series All Cozy AI Kitchen episodes: https://aka.ms/CAIK-YTPlaylist\n\n🏷️ Tags & Keywords #GraphRAG, #RetrievalAugmentedGeneration, #AzureOpenAI, #MicrosoftDeveloper, #SecurityData, #GraphSearch, #PromptEngineering, #ContextEngineering, #OpenSourceAI, #AIKitchen, #Developers, #SoftwareDevelopment, #GenerativeAI, #AIFoundry, #Coding",
+  "OutputDir": "_videos",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Author": "Microsoft Developer",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Link": "https://www.youtube.com/watch?v=gv5fRtBk8IM",
+  "Title": "GraphRAG in Action with Anisha Latchman, on Mr. Maeda's Cozy AI Kitchen"
+}
