@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "Grok Code Fast 1 will be available as an opt-in public preview for GitHub Copilot Pro, Pro+, Business, and Enterprise plans in Visual Studio Code.\n\nRollout will be gradual — check back soon if you don’t see it yet.\n\nxAI models are also available in GitHub Copilot individual plans via Bring Your Own Key (BYOK), which lets you use your own xAI API key to access them.\n\n### Enabling access\n\nFor Copilot Business and Enterprise plans, an administrator must first enable the Grok Code Fast 1 policy in Copilot settings. Once enabled, it becomes visible in the Visual Studio Code model picker for all users in that organization.\n\nFor individual paid plans, enable Grok Code Fast 1 by selecting it in the Visual Studio Code model picker and confirming the one-time prompt.\n\nTo enable access via Bring Your Own Key (BYOK), select **Manage Models** from the model picker, choose **xAI**, enter your API key when prompted, and select **Grok Code Fast 1**.\n\nComplimentary access (excluding BYOK) is available until 2 p.m. PDT on Tuesday, September 2, 2025. [Regular pricing](https://docs.github.com/en/copilot/reference/ai-models/supported-models#model-multipliers) applies after that point.\n\nTo learn more about the models available in Copilot, see [our documentation on models](https://docs.github.com/copilot/reference/ai-models/model-hosting) and get started with Copilot today.",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "OutputDir": "_news",
+  "PubDate": "2025-08-26T21:00:52+00:00",
+  "Tags": [],
+  "ProcessedDate": "2025-08-26 22:12:04",
+  "Link": "https://github.blog/changelog/2025-08-26-grok-code-fast-1-is-rolling-out-in-public-preview-for-github-copilot",
+  "Description": "Grok Code Fast 1 will be available as an opt-in public preview for GitHub Copilot Pro, Pro+, Business, and Enterprise plans in Visual Studio Code. Rollout will be gradual —…\n\nThe post [Grok Code Fast 1 is rolling out in public preview for GitHub Copilot](https://github.blog/changelog/2025-08-26-grok-code-fast-1-is-rolling-out-in-public-preview-for-github-copilot) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Allison",
+  "FeedName": "The GitHub Blog",
+  "Title": "Grok Code Fast 1 is rolling out in public preview for GitHub Copilot",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog"
+}

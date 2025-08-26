@@ -6783,5 +6783,11 @@
     "reason": "No categories found: Content excluded due to insufficient substantive technical content. The provided description is a brief promotional preview of sessions at Microsoft Ignite, focusing generally on security and AI transformation without any technical implementation details, educational material, or actionable insights. There is no main content body, and the description does not detail specific Microsoft security technologies, AI products, or technical approaches. This triggers the generic exclusion for content that is promotional and lacks technical depth (Sales Pitches, Format and Length Exclusions).",
     "timestamp": "2025-08-26 21:11:53 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded due to Generic Exclusion Rules. The description and content (which is null) indicate the video is primarily a promotional event announcement for Microsoft Ignite, not a technical deep-dive or implementation guide. It appears to focus on managing Copilot experiences at an administrative or business level, without sufficient evidence of technical development, code, or architecture focus related to qualifying Microsoft technologies (see Non-Development Microsoft Products rule and Business Strategy and Executive Content exclusion). No technical content is presented, and Copilot here likely refers to business productivity tools (Microsoft 365 Copilot or its management), which are explicitly excluded from all categories.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=QE3LIfKCaNo",
+    "timestamp": "2025-08-26 22:15:07 +00:00"
   }
 ]

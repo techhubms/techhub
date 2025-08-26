@@ -7476,5 +7476,29 @@
     "reason": "Succesfully added: Assigned DevOps category because the content introduces workflow and software supply chain security features essential for developer operations, CI/CD, and repository management (DevOps rules 2, 5, 6). Assigned Security category as the core focus is securing software releases and protecting supply chains against tampering (Security rules 1, 5, 7). Coding, AI, ML, Azure, and GitHub Copilot do not apply as the feature is operational, not code-centric or AI/ML related, and is not about Copilot.",
     "timestamp": "2025-08-26 21:11:31 +00:00",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' category because the content is a product update specifically for GitHub Copilot, discussing new AI model availability, feature rollout, and usage in Visual Studio Code (GitHub Copilot Inclusion Rules 1 and 2). Assigned 'AI' category because it centers around the integration and usage of AI models (AI Inclusion Rule 1 and 2). Coding was not assigned because the content focuses on product availability and enablement, not implementation or programming. No exclusion rules apply.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-08-26-grok-code-fast-1-is-rolling-out-in-public-preview-for-github-copilot",
+    "timestamp": "2025-08-26 22:13:31 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content is directly about improvements to GitHub repository management, workflow setup, rulesets, and insights—all of which are central to DevOps practices (DevOps rule 2: GitHub DevOps Tools, rule 3: Team Collaboration, and rule 5: CI/CD and deployment). No other categories were assigned as the content does not involve coding tutorials, AI, ML, Security, or Azure services. Generic exclusion rules do not apply since the content is technical, development-focused, and pertinent to practitioners.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-08-26-improved-repository-creation-generally-available-plus-ruleset-insights-improvements",
+    "timestamp": "2025-08-26 22:13:54 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content focuses on improving developer workflows around fine-grained Personal Access Token (PAT) creation and management on GitHub, which directly relates to DevOps practices (DevOps rules 2, 6, and 9). The main topics are permission management, automation, and developer experience improvements for CI/CD and API use-cases. There is specific mention of managing Copilot via API, but the content does not provide technical or developmental information about Copilot itself, so the 'GitHub Copilot' and 'AI' categories do not apply. No Coding, Azure, ML, or Security categories were added as the technical depth is primarily centered on workflow improvements, not on coding patterns, Microsoft cloud services, machine learning, or in-depth security engineering.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-08-26-template-urls-for-fine-grained-pats-and-updated-permissions-ui",
+    "timestamp": "2025-08-26 22:14:24 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category because the content focuses on secret scanning, leak detection, and organizational security management (Security rules 1, 5, 7, 8). Assigned DevOps category as the tool addresses organization-wide security posture, integrates with team processes, and supports incident management (DevOps rules 2, 5, 7). Not assigned AI, Coding, Azure, ML, or GitHub Copilot categories as there is no focus on AI, coding/development specifics, Azure services, or Copilot tooling. The content is technical, actionable, and describes security-related tool usage, fitting platform and workflow requirements.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-08-26-the-secret-risk-assessment-is-generally-available",
+    "timestamp": "2025-08-26 22:14:46 +00:00"
   }
 ]
