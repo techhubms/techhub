@@ -7344,5 +7344,11 @@
     "timestamp": "2025-08-26 11:12:06 +00:00",
     "canonical_url": "https://andrewlock.net/fixing-an-old-dotnet-core-native-library-loading-issue-on-alpine/",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-08-26 13:28:52 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content details the use of Azure OpenAI Service and LLMs to automate and generate insights from log data (AI rules 1, 4, 5). Assigned Azure category because the workflow is built entirely with Azure services, including Logic Apps, Log Analytics, Application Insights, and Azure Monitor (Azure rules 1, 4). Did not assign Coding, ML, Security, DevOps, or GitHub Copilot because the focus is on workflow automation and AI-driven summarization, not hands-on development, MLOps, or security-specific architectures.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/automate-your-log-analytics-workflows-with-ai-and-logic-apps/ba-p/4442803",
+    "collection": "community"
   }
 ]
