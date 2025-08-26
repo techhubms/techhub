@@ -1,0 +1,14 @@
+{
+  "Description": "I'm using Windows 11 multi-session (23H2) with an AVD. I'm disappointed that in-place upgrade to 24H2 is not supported. It's nonsense that the only way to upgrade to 24H2 or 25H2 is to create a new environment from the Marketplace. No one wants to spend a lot of time creating an environment every year. Please support in-place upgrades.",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Title": "I would like AVD to support in-place upgrades",
+  "PubDate": "2025-08-26T10:03:31+00:00",
+  "ProcessedDate": "2025-08-26 11:11:25",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "EnhancedContent": "I'm using Windows 11 multi-session (23H2) with an AVD. I'm disappointed that in-place upgrade to 24H2 is not supported. It's nonsense that the only way to upgrade to 24H2 or 25H2 is to create a new environment from the Marketplace. No one wants to spend a lot of time creating an environment every year. Please support in-place upgrades.",
+  "Tags": [],
+  "Link": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/i-would-like-avd-to-support-in-place-upgrades/idi-p/4448244",
+  "FeedName": "Microsoft Tech Community",
+  "Author": "koji1972",
+  "OutputDir": "_community"
+}
