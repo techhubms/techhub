@@ -7368,5 +7368,17 @@
     "timestamp": "2025-08-26 14:14:02 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=onVn-lnHZ9s",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-08-26 15:14:03 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content directly provides practical usage guidance for GitHub Copilot, which, per inclusion rules, always triggers both categories. Also added 'Coding' because the discussion centers around code generation, prompt engineering, IDE workflows, and code review practices (Coding rules 1 and 4). Did not add other categories because the article is specific to Copilot usage and coding workflows, without discussing, for example, Azure or ML development.",
+    "canonical_url": "https://dellenny.com/mastering-github-copilot-tips-shortcuts-and-prompts-that-work/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-08-26 15:14:23 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the core topic centers on the use of GitHub Copilot, an AI-powered assistant, in programming education (AI rule 2 and 4). Assigned 'GitHub Copilot' category because the article discusses its practical application, features, educational impact, and classroom strategies (GitHub Copilot rules 1–4). Did not assign 'Coding' because the content focuses on pedagogical uses and strategies rather than programming language or framework specifics. No generic exclusion rules apply, as the article is substantive, technical, and directly relates to AI and developer tools.",
+    "canonical_url": "https://dellenny.com/using-github-copilot-to-teach-programming-a-new-approach-for-educators/",
+    "collection": "posts"
   }
 ]
