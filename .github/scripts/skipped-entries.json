@@ -6771,5 +6771,11 @@
     "collection": "community",
     "timestamp": "2025-08-26 10:14:01 +00:00",
     "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-08-26 16:16:52 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/the-quantum-shift-is-here-a-survival-guide-for-the-new-era-of-software/?utm_source=rss&utm_medium=rss&utm_campaign=the-quantum-shift-is-here-a-survival-guide-for-the-new-era-of-software",
+    "reason": "No categories found: All generic exclusion rules were carefully reviewed. The article is a general commentary about the evolving role of software professionals and the increasing complexity in engineering, security, and DevOps, using language like 'Quantum Shift' to describe industry changes. It advocates for unified platforms, automation, and integration but does so in high-level, industry-abstract terms that apply broadly to the tech sector. Microsoft technologies (e.g., Azure, GitHub, etc.) are only mentioned as part of a list of industry vendors ('NVIDIA, ServiceNow, Sonar, and GitHub'), without any technical depth or central Microsoft focus. No substantive technical implementation details, tutorials, or architecture patterns related to Microsoft products are present. Therefore, no categories apply. This is a thought leadership/business strategy article, which is explicitly excluded under the 'Business Strategy and Executive Content' and 'Workplace and Business Focus' generic exclusion rules. No substantial hands-on development, DevOps practices using Microsoft tools, or implementation-specific Microsoft content is present."
   }
 ]

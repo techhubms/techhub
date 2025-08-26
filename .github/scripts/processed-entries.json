@@ -7380,5 +7380,23 @@
     "reason": "Succesfully added: Assigned 'AI' category because the core topic centers on the use of GitHub Copilot, an AI-powered assistant, in programming education (AI rule 2 and 4). Assigned 'GitHub Copilot' category because the article discusses its practical application, features, educational impact, and classroom strategies (GitHub Copilot rules 1–4). Did not assign 'Coding' because the content focuses on pedagogical uses and strategies rather than programming language or framework specifics. No generic exclusion rules apply, as the article is substantive, technical, and directly relates to AI and developer tools.",
     "canonical_url": "https://dellenny.com/using-github-copilot-to-teach-programming-a-new-approach-for-educators/",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-08-26 16:15:39 +00:00",
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/source/asia/features/a-digital-colleague-how-chemist-warehouse-and-insurgence-ai-are-rewriting-the-hr-playbook/",
+    "reason": "Succesfully added: Content centrally describes building and applying an enterprise AI solution (AIHRA) using Microsoft Azure AI Foundry and Power Platform, fitting AI inclusion rule 1 and Azure rule 1. Technical integration, automation, and governance of AI-driven workflows are explained. There are no substantial coding, DevOps, ML, or Security implementation details. Content is not a sales pitch, job post, business/management advice, nor a focus on non-development Microsoft products. Copilot, GitHub, or ML-specific engineering are not featured—thus, only 'AI' and 'Azure' categories are assigned."
+  },
+  {
+    "timestamp": "2025-08-26 16:16:06 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/developer-skills/career-growth/rediscovering-joy-in-learning-jason-lengstorf-on-the-state-of-development/",
+    "reason": "Succesfully added: Assigned the AI category because the podcast features insight into integrating AI into development workflows (AI Category Rule 4) and discusses the impact of AI tools and standards like MCP on developer experience. Although open source, web innovation, and community support are central themes, they do not match any other available categories per the rules. GitHub Copilot is not discussed, and there is no significant focus on Microsoft-specific services, coding implementations, or DevOps. The open source tools and TypeScript schema validators (like Zod) discussed are general ecosystem components, not Microsoft-specific development, so Coding and other categories do not apply. As per the tags and content, the podcast is educative about AI in a Microsoft-adjacent ecosystem."
+  },
+  {
+    "timestamp": "2025-08-26 16:16:38 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/can-ai-replace-devops-engineers-3/?utm_source=rss&utm_medium=rss&utm_campaign=can-ai-replace-devops-engineers-3",
+    "reason": "Succesfully added: Assigned the 'AI' category as the article substantially discusses the impact, use, and limitations of AI tooling in engineering workflows (AI rule 4: AI Development with Microsoft Technologies; AI rule 5: High-Level AI Usage). Assigned 'DevOps' because the primary focus is on DevOps roles, automation, tooling (DevOps rule 1: Automation and infrastructure as code; DevOps rule 3: Team collaboration), with numerous examples (Terraform, CI/CD, policy-as-code) fitting DevOps contexts. No other categories apply because the article does not focus on coding details, does not describe Azure or Microsoft-specific implementations in technical depth, and does not address security or ML/data science as core content. The article avoids generic exclusion, as it offers constructive, technical analysis with actionable context."
   }
 ]
