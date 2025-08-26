@@ -7500,5 +7500,23 @@
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-08-26-the-secret-risk-assessment-is-generally-available",
     "timestamp": "2025-08-26 22:14:46 +00:00"
+  },
+  {
+    "timestamp": "2025-08-26 23:12:15 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the solution involves Azure SQL Database, OneLake, and Microsoft Fabric, which are all Azure services (Azure rule 1 and 4, 5, 6). Assigned ML category because the focus is on scalable data engineering, Medallion architecture, and transformation patterns that directly underpin analytics and AI/ML workloads (ML rules 1, 2, 3, and 4), even though no explicit model training is shown; the article provides architectural and engineering steps relevant for analytics development. Did not assign AI because there is no substantial coverage of AI services, pre-built models, or direct application of AI beyond enabling downstream analytics readiness. Excluded all other categories due to lack of content about coding, DevOps, or security implementation.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/mastering-declarative-data-transformations-with-materialized-lake-views/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-26 23:12:46 +00:00",
+    "reason": "Succesfully added: Assigned AI because the central theme is leveraging Microsoft Azure's AI and NVIDIA GPU technologies to power advanced use cases, including building and deploying AI models (AI rules 1, 4, and 5). Assigned Azure since the article details multiple Azure services, infrastructure, and compliance capabilities (Azure rules 1, 4, and 5). Assigned ML because Basecamp Research, Pangaea Data, and Global Objects specifically use Azure and NVIDIA infrastructure to develop, train, and scale machine learning models, and manage large datasets for scientific and healthcare research (ML rules 1, 2, 3, and 9). Did not assign Coding, DevOps, GitHub Copilot, or Security because the article does not focus on software development practices, DevOps process, or security tooling/architecture.",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/transforming-scientific-discovery-with-microsoft-azure-and-nvidia/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-08-26 23:13:30 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the core subject is LLM inference benchmarking (AI inclusion rule 1 and 4) using Microsoft/Open models. Assigned 'Azure' because all tests are against Azure ND-series VMs, with significant Azure-specific setup, infrastructure, and cost metrics (Azure inclusion rules 1 and 5). Did not assign 'ML' because the focus is on operational AI inference, not model development or data science pipelines. Did not assign 'DevOps', 'Coding', or 'Security' because content does not address CI/CD, application code, or security practices. All category decisions are based on explicit references to Azure infra, AI model inference, and benchmarks throughout the content.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/inference-performance-of-llama-3-1-8b-using-vllm-across-various/ba-p/4448420",
+    "collection": "community"
   }
 ]
