@@ -1,0 +1,18 @@
+{
+  "Link": "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-april-2025/",
+  "ProcessedDate": "2025-08-24 16:16:36",
+  "PubDate": "2025-04-25T17:55:05+00:00",
+  "FeedLevelAuthor": "Azure SDK Blog",
+  "Title": "Azure SDK Release (April 2025)",
+  "FeedUrl": "https://devblogs.microsoft.com/azure-sdk/feed/",
+  "EnhancedContent": "Thank you for your interest in the new Azure SDKs! We release new features, improvements, and bug fixes every month. Subscribe to our [Azure SDK Blog RSS Feed](https://devblogs.microsoft.com/azure-sdk/feed/) to get notified when a new release is available.\n\nYou can find links to packages, code, and docs on our [Azure SDK Releases page](https://aka.ms/azsdk/releases).\n\n## Release highlights\n\n### Node.js 18 end of life\n\nAccording to the official Node.js [release timeline](https://nodejs.org/about/previous-releases), Node.js 18 will reach its official end-of-life on April 30, 2025 and will no longer receive security updates and critical bug fixes. We strongly recommend upgrading to the latest version to ensure continued support.\n\nAs a reminder, the Azure SDK libraries aren’t guaranteed to work on platforms and with other dependencies that are deemed end of life. Dropping support for such dependencies may be done without increasing the major version of the Azure SDK libraries. We strongly recommend migration to supported platforms and other dependencies to be eligible for technical support.\n\nFor more information, please refer to the [Azure SDK Blog](https://devblogs.microsoft.com/azure-sdk/announcing-the-end-of-support-for-node-js-18-x-in-the-azure-sdk-for-javascript/)\n\n### Initial stable releases\n\n- **Management Library for .NET**\n- Recovery Services Data Replication\n\n### Initial Beta releases\n\n- **Client Library for Rust**\n\n- [Storage Blob](https://crates.io/crates/azure_storage_blob)\n- **Management Library for .NET**\n\n- Agriculture Platform\n- Database Watcher\n- Migration Assessment\n- **Management Library for Go**\n\n- Arize AI Observability\n- Durable Task\n- Weights and Biases\n- **Management Library for Java**\n\n- Arize AI Observability\n- Durable Task\n- Weights and Biases\n- **Management Library for JavaScript**\n\n- Agriculture Platform\n- Arize AI Observability\n- Durable Task\n- Migration Assessment\n- Weights and Biases\n- **Management Library for Python**\n\n- Arize AI Observability\n- Durable Task\n- Weights and Biases\n\n## Release notes\n\n- [All languages](https://azure.github.io/azure-sdk/releases/2025-04/index.html)\n- [.NET](https://azure.github.io/azure-sdk/releases/2025-04/dotnet.html)\n- [Java](https://azure.github.io/azure-sdk/releases/2025-04/java.html)\n- [JavaScript/TypeScript](https://azure.github.io/azure-sdk/releases/2025-04/js.html)\n- [Python](https://azure.github.io/azure-sdk/releases/2025-04/python.html)\n- [Go](https://azure.github.io/azure-sdk/releases/2025-04/go.html)\n- [Rust](https://azure.github.io/azure-sdk/releases/2025-04/rust.html)\n- [C++](https://azure.github.io/azure-sdk/releases/2025-04/cpp.html)\n- [Embedded C](https://azure.github.io/azure-sdk/releases/2025-04/c.html)\n- [Android](https://azure.github.io/azure-sdk/releases/2025-04/android.html)\n- [iOS](https://azure.github.io/azure-sdk/releases/2025-04/ios.html)",
+  "Tags": [
+    "Azure SDK",
+    "release",
+    "sdk"
+  ],
+  "Description": "Azure SDK releases every month. In this post, you find this month's highlights and release notes.\n\nThe post [Azure SDK Release (April 2025)](https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-april-2025/) appeared first on [Azure SDK Blog](https://devblogs.microsoft.com/azure-sdk).",
+  "OutputDir": "_news",
+  "FeedName": "Microsoft Azure SDK Blog",
+  "Author": "Hector Norzagaray"
+}
