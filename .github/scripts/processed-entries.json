@@ -7338,5 +7338,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=dASHCBVyrnQ",
     "timestamp": "2025-08-25 23:13:08 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Coding' category because the post is a highly technical walkthrough about debugging, troubleshooting, and resolving a core .NET development issue—namely, native library loading failures on Linux. The content focuses on .NET runtime behavior, environment configuration, use of diagnostic tools (`ldd`, `strace`, `LD_DEBUG`), and direct fixes for developers. It does not qualify for Azure, AI, DevOps, ML, GitHub Copilot, or Security categories as it doesn't directly focus on those themes. Exclusion rules do not apply: the content is technical, not biographical, sales-oriented, or negative, and is entirely English.",
+    "timestamp": "2025-08-26 11:12:06 +00:00",
+    "canonical_url": "https://andrewlock.net/fixing-an-old-dotnet-core-native-library-loading-issue-on-alpine/",
+    "collection": "posts"
   }
 ]

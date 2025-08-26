@@ -6765,5 +6765,11 @@
     "timestamp": "2025-08-25 19:11:56 +00:00",
     "reason": "Insufficient content length",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/i-would-like-avd-to-support-in-place-upgrades/idi-p/4448244",
+    "collection": "community",
+    "timestamp": "2025-08-26 10:14:01 +00:00",
+    "reason": "Insufficient content length"
   }
 ]
