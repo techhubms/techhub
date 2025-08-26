@@ -7422,5 +7422,41 @@
     "collection": "news",
     "reason": "Succesfully added: Added 'DevOps' because the update improves developer and operations workflows related to source code security and credential management (DevOps rule 2, 11). Added 'Security' because the content centralizes on secret scanning, token validation, and securing developer credentials (Security rule 1, 5). Did not add other categories since this GitHub feature is not AI-related, nor does the content focus on application coding, Azure cloud, or ML/data science specifics.",
     "canonical_url": "https://github.blog/changelog/2025-08-26-secret-scanning-adds-10-new-validators-including-square-wakatime-and-yandex"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/enhanced-monitoring-for-spark-high-concurrency-workloads-in-microsoft-fabric/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is a core Azure data analytics platform (Azure rule 1). Assigned ML category due to the heavy focus on Spark, distributed computation, notebook orchestration, and pipeline integration, which are central components of ML/data engineering workflows (ML rules 1, 2, 4, and 7). The content details technical monitoring and debugging features relevant to ML and data engineering practitioners. 'AI' not assigned since no direct AI services, models, or features are described—focus remains on analytics, observability, and distributed workloads.",
+    "timestamp": "2025-08-26 19:09:59 +00:00"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/now-in-fabric-notebook-udf-integration-with-native-support-for-pandas-dataframes-and-series-via-apache-arrow/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'ML' category because the content is focused on large-scale data engineering and data science workflows in Fabric Notebooks, highlighting DataFrames, feature engineering, and analytics, aligning with ML rule 1, 2, 3, and 4. Assigned 'Azure' because Microsoft Fabric runs on Azure and leverages platform capabilities (Azure rule 1 and 4). Did not assign 'AI' as there is no direct use of pre-built Microsoft AI services, and did not assign 'Coding' or 'DevOps' because the focus is on data engineering at a workflow and platform integration level, not custom code development or deployment pipelines. 'Security' was not assigned because no security-related topics are discussed.",
+    "timestamp": "2025-08-26 19:10:28 +00:00"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/research/blog/crescent-library-brings-privacy-to-digital-identity-systems/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Security because Crescent's main focus is on cryptographic techniques for identity privacy and unlinkability, aligning with Security rule 1 and rule 2 (Microsoft Security Services and Application Security). Also assigned AI because the library leverages advanced cryptographic proofs (SNARKs) and references Azure AI Foundry Labs, aligning with AI rules 1 and 5 (Microsoft AI Products/Services and High-Level AI Usage in security applications). The content provides significant technical detail about Microsoft cryptography, digital identity, and privacy, directly involving Microsoft technology (well over 40% of the article), and does not trigger any generic exclusions. Tags cover relevant cryptography, identity, and Microsoft research terms.",
+    "timestamp": "2025-08-26 19:10:58 +00:00"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/the-visual-studio-august-update-is-here-smarter-ai-better-debugging-and-more-control/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because GPT-5 support, MCP (Model Context Protocol) integration, and 'bring your own AI model' features are central, matching AI Category rules 1, 3, and 4. Assigned 'GitHub Copilot' because multiple features (Copilot Chat, Copilot suggestions, partial accept, Copilot with Google) are discussed in depth, aligning with GitHub Copilot Category rules 1-5. Assigned 'Coding' because enhancements directly impact coding experience in Visual Studio, covering editor improvements, code completions, C++, Unreal Engine debugging, and developer workflows (Coding rules 1-5). Did not assign 'Azure', 'DevOps', 'ML', or 'Security' since the update does not focus on those areas. Categories and tags were selected according to the input’s technical content and inclusion criteria.",
+    "timestamp": "2025-08-26 19:11:29 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/E_-t-YjR2fk",
+    "collection": "videos",
+    "reason": "Succesfully added: The content, based on the title and description, focuses on Azure Service Groups, a feature of Azure for organizing resources. It qualifies for the 'Azure' category (Azure rule 1: Any Azure Service/Technology). There is no detailed evidence for other categories such as AI, Coding, DevOps, ML, Security, or GitHub Copilot from the information provided. No generic exclusion rules apply, as the content is a technical overview and not a sales pitch, biographical, negative, or non-English, and fits the 'videos' type for brief overviews.",
+    "timestamp": "2025-08-26 19:11:56 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=gv5fRtBk8IM",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category since GraphRAG is an AI project leveraging Retrieval-Augmented Generation (AI rule 1) and embedding-based search. Azure is included as the setup and documentation references Azure OpenAI and Azure AI Foundry (Azure rule 3). Security is included because GraphRAG is presented in the context of security data analysis, with the speaker's role being Security Intern and explicit discussion of security data, analysis, and relationships (Security rule 1). Coding and ML categories were not assigned as the focus is on platform/tool usage and AI-powered search rather than code-level development or custom ML engineering.",
+    "timestamp": "2025-08-26 19:12:25 +00:00"
   }
 ]
