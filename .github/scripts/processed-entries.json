@@ -7404,5 +7404,23 @@
     "timestamp": "2025-08-26 17:12:05 +00:00",
     "reason": "Succesfully added: Assigned AI category as the article is fundamentally about AI inference architectures, models, and deployment, particularly LLMs (AI rule 1). Assigned Azure because the benchmarking is done on Microsoft's Azure ND-H100-v5 GPU infrastructure (Azure rules 1 and 4). Assigned ML as the article delves into large language models (LLMs), inference performance, optimization strategies, and quantization—key ML engineering considerations (ML rules 1, 2, 6, and 10). All category assignments are supported by technical content in the body. The post is technical, sufficiently long, and focused on Microsoft platform usage, meeting all inclusion criteria and not violating any generic exclusions.",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-08-26 18:18:03 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Applied generic exclusion rules first; none triggered (content is technical, not biographical, sales, non-English, etc.). Applied category inclusion rules: AI category assigned due to extensive coverage of Microsoft AI agent technologies (Copilot Studio, Azure AI Foundry, MCP, agent risk mitigation). Security category assigned because content centers on identity, access management, threat detection, zero trust, and security posture for AI agents using Microsoft Entra ID, Purview, and Defender (Security rules 1, 3, 4, 5, 9). Did not assign other categories, as primary technical details are governance, identity/security, and agentic AI.",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/08/26/securing-and-governing-the-rise-of-autonomous-agents/"
+  },
+  {
+    "timestamp": "2025-08-26 18:18:28 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the DevOps category because the content directly addresses dependency management automation, repository configuration, and PR workflow streamlining within DevOps practices. No other categories are applicable: there is no AI, Coding, Azure, ML, or Security focus—Dependabot's update is about controlling automated dependency update workflows in GitHub repositories, fitting DevOps inclusion Rule 2 (GitHub DevOps Tools), Rule 5 (CI/CD and Deployment), and Rule 6 (Infrastructure and Automation).",
+    "canonical_url": "https://github.blog/changelog/2025-08-26-dependabot-can-now-exclude-automatic-pull-requests-for-manifests-in-selected-subdirectories"
+  },
+  {
+    "timestamp": "2025-08-26 18:18:47 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Added 'DevOps' because the update improves developer and operations workflows related to source code security and credential management (DevOps rule 2, 11). Added 'Security' because the content centralizes on secret scanning, token validation, and securing developer credentials (Security rule 1, 5). Did not add other categories since this GitHub feature is not AI-related, nor does the content focus on application coding, Azure cloud, or ML/data science specifics.",
+    "canonical_url": "https://github.blog/changelog/2025-08-26-secret-scanning-adds-10-new-validators-including-square-wakatime-and-yandex"
   }
 ]
