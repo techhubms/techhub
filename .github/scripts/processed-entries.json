@@ -7458,5 +7458,17 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI category since GraphRAG is an AI project leveraging Retrieval-Augmented Generation (AI rule 1) and embedding-based search. Azure is included as the setup and documentation references Azure OpenAI and Azure AI Foundry (Azure rule 3). Security is included because GraphRAG is presented in the context of security data analysis, with the speaker's role being Security Intern and explicit discussion of security data, analysis, and relationships (Security rule 1). Coding and ML categories were not assigned as the focus is on platform/tool usage and AI-powered search rather than code-level development or custom ML engineering.",
     "timestamp": "2025-08-26 19:12:25 +00:00"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-08-26 20:14:32 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/gain-deeper-insights-into-spark-jobs-with-jobinsight-in-microsoft-fabric/",
+    "reason": "Succesfully added: Assigned ML category because content is focused on post-execution Spark job analysis, monitoring, and diagnostics in Microsoft Fabric, which is primarily a data engineering/data science workload (ML rules 1, 2, 4, and 6). Assigned Azure category because Microsoft Fabric is a component of Microsoft's Azure data platform (Azure rule 1). Did not assign AI or Coding because this does not cover building AI models or traditional application code, but is focused on data engineering and analytics diagnostics. All exclusion rules were checked and do not apply: this is technical, not biographical, not a sales pitch, not job-related, not negative, and is in English."
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-08-26 20:15:02 +00:00",
+    "canonical_url": "https://devops.com/broadcom-adds-argo-and-ubuntu-support-to-vmware-cloud-foundation/?utm_source=rss&utm_medium=rss&utm_campaign=broadcom-adds-argo-and-ubuntu-support-to-vmware-cloud-foundation",
+    "reason": "Succesfully added: No generic exclusion rules apply: the article is news-format, over 200 words, technical (not biographical, sales pitch, excessively negative, or non-English), and not business strategy or productivity content. For inclusion, DevOps is assigned because the main focus is the integration of developer tools (Argo CD, Kubernetes), GitOps practices, unified application/infrastructure management, and platform engineering—all central DevOps themes. No categories like Azure, AI, GitHub Copilot, Coding, ML, or Security are assigned, as Microsoft technologies or developer/coding details are not present and no ML/AI platform building is demonstrated."
   }
 ]
