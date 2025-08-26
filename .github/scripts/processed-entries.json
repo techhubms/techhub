@@ -7470,5 +7470,11 @@
     "timestamp": "2025-08-26 20:15:02 +00:00",
     "canonical_url": "https://devops.com/broadcom-adds-argo-and-ubuntu-support-to-vmware-cloud-foundation/?utm_source=rss&utm_medium=rss&utm_campaign=broadcom-adds-argo-and-ubuntu-support-to-vmware-cloud-foundation",
     "reason": "Succesfully added: No generic exclusion rules apply: the article is news-format, over 200 words, technical (not biographical, sales pitch, excessively negative, or non-English), and not business strategy or productivity content. For inclusion, DevOps is assigned because the main focus is the integration of developer tools (Argo CD, Kubernetes), GitOps practices, unified application/infrastructure management, and platform engineering—all central DevOps themes. No categories like Azure, AI, GitHub Copilot, Coding, ML, or Security are assigned, as Microsoft technologies or developer/coding details are not present and no ML/AI platform building is demonstrated."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-08-26-releases-now-support-immutability-in-public-preview",
+    "reason": "Succesfully added: Assigned DevOps category because the content introduces workflow and software supply chain security features essential for developer operations, CI/CD, and repository management (DevOps rules 2, 5, 6). Assigned Security category as the core focus is securing software releases and protecting supply chains against tampering (Security rules 1, 5, 7). Coding, AI, ML, Azure, and GitHub Copilot do not apply as the feature is operational, not code-centric or AI/ML related, and is not about Copilot.",
+    "timestamp": "2025-08-26 21:11:31 +00:00",
+    "collection": "news"
   }
 ]
