@@ -6681,5 +6681,101 @@
     "timestamp": "2025-08-23 10:12:12 +00:00",
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/understanding-architecture-patterns-a-guide-for-software/m-p/4447360#M784"
+  },
+  {
+    "timestamp": "2025-08-24 10:14:31 +00:00",
+    "reason": "No categories found: Content is excluded due to generic exclusion rules for non-development Microsoft products (Chapter 3: Non-Development Microsoft Products). The article is about using Focus Sessions in Windows 11, a productivity feature targeted at end users, not development, engineering, or technical implementation. There is no coverage of coding, developer tools, Microsoft cloud platforms, or development frameworks. No category inclusion rules are met. Therefore, no categories are assigned.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-use-focus-sessions-in-windows-11-to-stay-productive/"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/save-hours-every-week-with-power-automate-workflows-in-microsoft-365/",
+    "timestamp": "2025-08-24 14:10:44 +00:00",
+    "reason": "No categories found: All content focuses on using Power Automate within Microsoft 365 to automate business tasks and increase user productivity through no-code workflows. Per the Generic Exclusion Rules (Chapter 3) and rule clarifications, Power Automate business process automation without a developer focus is excluded. There is no discussion of Power Automate development, coding (using Power Automate APIs, custom connectors, or developer extensibility), or architecture—only end-user and business workflow usage. This is considered a non-development Microsoft product scenario and thus triggers the Non-Development Microsoft Products exclusion. No categories are assigned."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/understanding-microsoft-365-compliance-center-basics/",
+    "timestamp": "2025-08-24 14:10:56 +00:00",
+    "reason": "No categories found: No categories assigned because the content is focused entirely on end-user and administrative features of the Microsoft 365 Compliance Center such as data loss prevention, auditing, and compliance management. There is no substantive discussion of technical implementation, development, coding, DevOps, AI/ML, or security architecture from an engineering perspective. This matches the generic exclusion rules for 'Business Strategy and Executive Content' and 'Non-Development Microsoft Products' since the content only describes administration usage and does not address developer, architectural, or implementation topics."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=0luUDS6wGoM",
+    "timestamp": "2025-08-24 21:11:41 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this is biographical content, focusing primarily on the author's personal activities and experiences outside of technical topics. There is no substantive discussion of Microsoft technologies, development, or related technical implementation. According to the Biographical Focus exclusion in Chapter 3, this content does not qualify for categorization."
+  },
+  {
+    "timestamp": "2025-08-25 05:14:42 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=gHGMBxy2W1c",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: The description indicates that this video primarily focuses on high-level business strategy, executive leadership perspectives, and business transformation discussions rather than technical implementation or developer-focused guidance. The conversation revolves around partnering with senior business leaders, business transformation, and the role of AI from a strategic or business impact perspective, not technical depth. According to the 'Business Strategy and Executive Content' and 'Business vs Technical Content Examples' exclusions in Chapter 3 and Chapter 6, such business-focused content should be excluded unless there are substantial technical implementation details, which are not evidenced in the provided description."
+  },
+  {
+    "reason": "No categories found: All possible categories are excluded due to the business productivity nature of the content. The article focuses entirely on using Microsoft 365 Copilot within Office applications such as Word, Excel, PowerPoint, Outlook, and Teams for tasks like drafting emails, summarizing meetings, and creating presentations. According to the critical distinction in the workflow (Chapter 2, Copilot Product Distinction, and Non-Development Microsoft Products under Generic Exclusion Rules), Microsoft 365 Copilot is classified as a business productivity tool—not a developer tool. This content does not involve code, APIs, developer integrations, or technical implementations for Microsoft 365 Copilot, but rather focuses on prompt engineering for end-user productivity scenarios. As such, it triggers the exclusion rules for non-development Microsoft products and business productivity tools. No categories apply.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/writing-effective-prompts-for-microsoft-365-copilot/",
+    "timestamp": "2025-08-25 08:19:00 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories are assigned because the content is an introductory tutorial for Microsoft Clipchamp, a browser-based video editor targeted at general users and content creators, not developers or technical professionals. It does not cover software development, coding, AI, DevOps, security, ML, or cloud infrastructure. The primary focus is beginner-level video editing, which falls under end-user business applications and general productivity, and is excluded by the 'Non-Development Microsoft Products' generic exclusion rule (Chapter 3). No technical implementation, programming, or developer-focused details are present.",
+    "timestamp": "2025-08-25 13:26:46 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/mastering-clipchamp-from-beginner-to-pro-1/"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: it is primarily job-related, focusing on job openings, hiring opportunities, and salary information for DevOps professionals. According to the 'Job-Related Content' exclusion rule in Chapter 3, career advice, job postings, and salary discussions are not eligible for categorization. The majority of the text consists of job postings and advice for advancing one's career, not technical implementation or knowledge sharing around Microsoft technologies.",
+    "canonical_url": "https://devops.com/five-great-devops-job-opportunities-153/?utm_source=rss&utm_medium=rss&utm_campaign=five-great-devops-job-opportunities-153",
+    "collection": "posts",
+    "timestamp": "2025-08-25 14:13:17 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-08-25 15:14:30 +00:00",
+    "reason": "No categories found: Content excluded due to lack of substantive technical information. The 'content' field is null, which means there is no available main text to analyze, only a short promotional description. Per generic exclusion rules, content without primary explanatory text (such as announcements, short promos, or empty/null fields) cannot be categorized because there is no technical detail, actionable insight, or depth to assess. The description only references a Microsoft event and a broad topic ('developer security'), but provides no discussion of technologies, architectures, or implementation details. This fails to meet minimum information and quality standards required by the workflow.",
+    "canonical_url": "https://www.youtube.com/shorts/YPIbBZ_83ts"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. Although the description refers to Azure AI Foundry (which would typically trigger the AI category under AI inclusion rule 1), the actual content is absent (content: null), leaving no substantive technical information or details to assess. According to the guidelines in Chapter 2 ('Focus on actual content'), and Chapter 3 ('Question-Only Content' and insufficient data), if there is no main content, categories cannot be applied. The input lacks any technical details, examples, or answers – it simply restates a community question and provides a link, which matches the exclusion for 'question-only content' without substantive response or technical information.",
+    "canonical_url": "https://www.youtube.com/shorts/MUIH0N4mEQI",
+    "timestamp": "2025-08-25 16:17:26 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-08-25 18:18:50 +00:00",
+    "reason": "No categories found: Content excluded because it is mainly philosophical and community-oriented, lacking any technical depth or substantive information about Microsoft technologies or developer tooling. The description focuses on open source as a concept and community participation, without describing specific products, coding, DevOps, Microsoft platforms, or technical know-how. No technical implementation, how-to details, or product focus is present. According to generic exclusion rules, content with only community lessons, abstract advice, or questions (e.g., 'What has open source taught you?') and without technical depth does not qualify for categorization.",
+    "canonical_url": "https://www.youtube.com/shorts/AJacEGbtRCE"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-08-25 18:19:05 +00:00",
+    "reason": "No categories found: No categories were assigned because the provided content is a community 'question-only' type of post, lacking any substantive technical content, explanation, or answer. The title and description both indicate it's a prompt for discussion rather than an informative resource or technical solution, explicitly matching the 'Question-Only Content' criterion in the generic exclusion rules (Chapter 3), which require excluding content that mainly asks questions or seeks information without providing substantive answers or solutions.",
+    "canonical_url": "https://www.youtube.com/shorts/Zq_aquaEpC0"
+  },
+  {
+    "canonical_url": "https://opensource.microsoft.com/blog/2025/08/25/documentdb-joins-the-linux-foundation/",
+    "timestamp": "2025-08-25 19:10:23 +00:00",
+    "reason": "No categories found: Content excluded due to lack of substantial technical detail and failure to meet category-specific inclusion rules. The content primarily consists of a brief announcement that DocumentDB joins the Linux Foundation, without any technical explanation, development guidance, or discussion of implementation related to Microsoft technologies. According to Generic Exclusion Rules, business partnership and organizational news without depth on technical architecture, tools, or development practices do not qualify for any categories. Additionally, the post acts as a redirect or placeholder with minimal original content, further disqualifying it under the requirement to focus on actual technical substance.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/ado-widgets-for-developers/m-p/4447614#M22140",
+    "timestamp": "2025-08-25 19:11:56 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/i-would-like-avd-to-support-in-place-upgrades/idi-p/4448244",
+    "collection": "community",
+    "timestamp": "2025-08-26 10:14:01 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-08-26 16:16:52 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/the-quantum-shift-is-here-a-survival-guide-for-the-new-era-of-software/?utm_source=rss&utm_medium=rss&utm_campaign=the-quantum-shift-is-here-a-survival-guide-for-the-new-era-of-software",
+    "reason": "No categories found: All generic exclusion rules were carefully reviewed. The article is a general commentary about the evolving role of software professionals and the increasing complexity in engineering, security, and DevOps, using language like 'Quantum Shift' to describe industry changes. It advocates for unified platforms, automation, and integration but does so in high-level, industry-abstract terms that apply broadly to the tech sector. Microsoft technologies (e.g., Azure, GitHub, etc.) are only mentioned as part of a list of industry vendors ('NVIDIA, ServiceNow, Sonar, and GitHub'), without any technical depth or central Microsoft focus. No substantive technical implementation details, tutorials, or architecture patterns related to Microsoft products are present. Therefore, no categories apply. This is a thought leadership/business strategy article, which is explicitly excluded under the 'Business Strategy and Executive Content' and 'Workplace and Business Focus' generic exclusion rules. No substantial hands-on development, DevOps practices using Microsoft tools, or implementation-specific Microsoft content is present."
   }
 ]

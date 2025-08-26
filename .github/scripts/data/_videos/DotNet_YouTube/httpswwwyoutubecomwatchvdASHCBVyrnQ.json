@@ -1,0 +1,25 @@
+{
+  "OutputDir": "_videos",
+  "Tags": [
+    "AI",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetdeveloper",
+    "microsoft",
+    "softwaredeveloper",
+    "tipsandtricks"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "FeedLevelAuthor": "dotnet",
+  "Author": "dotnet",
+  "Link": "https://www.youtube.com/watch?v=dASHCBVyrnQ",
+  "ProcessedDate": "2025-08-25 23:11:22",
+  "PubDate": "2025-08-25T22:38:30+00:00",
+  "Description": "Today we’ll share our best practices for using AI tools in the .NET ecosystem — from coding with AI to building applications for AI. We’ll walk through real-world scenarios, tips, and lessons learned on how GitHub Copilot, MCP, and other AI-powered solutions can help you code smarter, automate repetitive tasks, and even design new AI-driven experiences.\n\nWhether you’re curious about AI-assisted coding or exploring how to bring AI into your own apps, this session will give you practical insights to level up your developer workflow.\n\n🔗 Links: https://learn.microsoft.com/en-us/collections/66ypt7tm5yp60q?source=docs\n\n🎙️ Featuring: Bruno Capuano (@elbruno) , Pablo Lopes (@pablonlopes) , Matt Soucoup (@codemillmatt)\n\n#dotnet #AI #GitHubCopilot",
+  "EnhancedContent": null,
+  "FeedName": "DotNet YouTube",
+  "Title": ".NET AI Community Standup: AI Tools Every .NET Dev Needs 📎"
+}

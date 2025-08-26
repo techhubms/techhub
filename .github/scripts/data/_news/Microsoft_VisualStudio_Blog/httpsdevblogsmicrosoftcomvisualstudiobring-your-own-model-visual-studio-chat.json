@@ -1,0 +1,27 @@
+{
+  "Link": "https://devblogs.microsoft.com/visualstudio/bring-your-own-model-visual-studio-chat/",
+  "ProcessedDate": "2025-08-24 16:27:33",
+  "PubDate": "2025-08-20T15:40:20+00:00",
+  "FeedLevelAuthor": "Visual Studio Blog",
+  "Title": "Bring Your Own Model to Chat in Visual Studio",
+  "FeedUrl": "https://devblogs.microsoft.com/visualstudio/feed/",
+  "EnhancedContent": "**We’re excited to announce that you can now bring your own language model into Visual Studio Chat.**\n\nYou can connect API keys from providers (OpenAI, Anthropic, and Google) to access a wider range of models. This makes it easy to test the latest releases, customize workflows, or run on infrastructure you control.\n\n[Try it out in Visual Studio](https://visualstudio.microsoft.com/)\n\n### What it unlocks\n\n- **Choice** – Access more than just the built-in defaults, and try new models the moment they drop.\n- **Customization** – Pick models that align with your security, infra, or performance needs.\n- **Control** – Manage usage, quotas, and billing directly with your provider.\n- **Flexibility** – Switch seamlessly between Copilot’s built-in models and your own.\n\n### Getting started\n\nIf you already have an API key from OpenAI, Anthropic, or Google, setup takes just a minute:\n\n1. Open the **Chat Window** in Visual Studio.\n2. Select **Manage Models** from the model picker.\n3. Choose your provider and paste your API key.\n4. Pick from the preset list, or enter a model name.\n5. That’s it—your model will now show up in the picker.\n\nThis feature is not currently available for Copilot Business or Copilot Enterprise users.\n\n#### A few important considerations:\n\n- This feature currently applies **only to Chat** in Visual Studio (not completions, commit messages, or other AI features).\n- Model capabilities vary—some may not support advanced features like tool use or vision inputs.\n- Certain services (embeddings, repo indexing, intent detection) will still run through Copilot’s API.\n- Output from third-party models comes directly from the provider and may not pass through Copilot’s responsible AI filters.\n\n[Try it out in Visual Studio](https://visualstudio.microsoft.com/)\n\nThis is just the beginning. We’re expanding support for additional model providers soon, and we look forward to seeing how you use this feature and which models you choose.",
+  "Tags": [
+    "Anthropic",
+    "Artificial Intelligence",
+    "BYOK",
+    "Claude",
+    "Copilot",
+    "Gemini",
+    "Google",
+    "GPT",
+    "Key",
+    "Models",
+    "OpenAI",
+    "Visual Studio"
+  ],
+  "Description": "We’re excited to announce that you can now bring your own language model into Visual Studio Chat. You can connect API keys from providers (OpenAI, Anthropic, and Google) to access a wider range of models. This makes it easy to test the latest releases, customize workflows, or run on infrastructure you control. What it unlocks […]\n\nThe post [Bring Your Own Model to Chat in Visual Studio](https://devblogs.microsoft.com/visualstudio/bring-your-own-model-visual-studio-chat/) appeared first on [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio).",
+  "OutputDir": "_news",
+  "FeedName": "Microsoft VisualStudio Blog",
+  "Author": "Rhea Patel, Samruddhi Khandale"
+}
