@@ -7350,5 +7350,23 @@
     "reason": "Succesfully added: Assigned AI category because the content details the use of Azure OpenAI Service and LLMs to automate and generate insights from log data (AI rules 1, 4, 5). Assigned Azure category because the workflow is built entirely with Azure services, including Logic Apps, Log Analytics, Application Insights, and Azure Monitor (Azure rules 1, 4). Did not assign Coding, ML, Security, DevOps, or GitHub Copilot because the focus is on workflow automation and AI-driven summarization, not hands-on development, MLOps, or security-specific architectures.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/automate-your-log-analytics-workflows-with-ai-and-logic-apps/ba-p/4442803",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the central focus is on an AI-powered DevOps platform, as specified by multiple references to AI agents, knowledge graphs, and automation functions (AI inclusion rule 1, 4, and 5). Assigned 'DevOps' because the content directly addresses DevOps teams, practices, pipeline automation, and workflow optimization (DevOps inclusion rules 1, 3, 5, and 9). There is no substantive focus on Microsoft-specific products or development tooling, so Azure, ML, Coding, Security, or GitHub Copilot categories do not apply. No generic exclusion rules were triggered, and the article is an educational news piece—not promotional, biographical, or off-topic.",
+    "timestamp": "2025-08-26 14:13:05 +00:00",
+    "canonical_url": "https://devops.com/harness-delivers-on-ai-promise-for-devops/?utm_source=rss&utm_medium=rss&utm_campaign=harness-delivers-on-ai-promise-for-devops",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Content qualifies for both DevOps and Security categories. DevOps is assigned because the article discusses CRA compliance requirements throughout the software development process, with emphasis on SBOMs, CI/CD, and vulnerability management—aligning with DevOps category rules 1, 5, and 6. Security is assigned because it details regulatory standards for cybersecurity, vulnerability management, secure updates, and risk analysis per Security category rules 1, 2, 4, 5, and 9. Microsoft and GitHub are referenced as major stakeholders, meeting the multi-platform threshold since their roles are discussed as part of the compliance ecosystem and open source community contributions. No other categories apply, and generic exclusions do not trigger since the content is technical, implementation-focused, and written in English.",
+    "timestamp": "2025-08-26 14:13:34 +00:00",
+    "canonical_url": "https://devops.com/the-eus-cyber-resilience-act-redefining-secure-software-development/?utm_source=rss&utm_medium=rss&utm_campaign=the-eus-cyber-resilience-act-redefining-secure-software-development",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the content demonstrates the use of GitHub Copilot as an AI-powered coding agent (AI inclusion rule 2 and rule 1). Assigned 'GitHub Copilot' because the entire video centers on Copilot's features and workflow automation (GitHub Copilot rules 1–4). Assigned 'Coding' due to focus on hands-on coding workflows, issue triage, code generation, debugging, and test management using Copilot (Coding rules 2, 4, 5). Content does not fit any generic exclusion rule: it is instructional, technical, and developer-focused.",
+    "timestamp": "2025-08-26 14:14:02 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=onVn-lnHZ9s",
+    "collection": "videos"
   }
 ]
