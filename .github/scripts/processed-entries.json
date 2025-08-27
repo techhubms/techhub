@@ -7530,5 +7530,11 @@
     "collection": "news",
     "reason": "Succesfully added: The post centers on changes to template argument handling in Semantic Kernel, a Microsoft AI developer technology. Assigned the 'AI' category because Semantic Kernel is a Microsoft AI framework (AI rule 3) and the changes focus on prompt/template security, a core AI developer concern (AI rule 4). Assigned the 'Coding' category because the content provides practical .NET and Python code examples and directly addresses how to update code (Coding rules 1 and 4). Did not add 'Azure', 'DevOps', 'ML', or 'Security' categories since the changes relate specifically to application-level SDK use rather than security operations or ML/data science pipelines.",
     "timestamp": "2025-08-27 06:19:17 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/service-mesh-architecture-pattern-in-azure-handling-service-to-service-communication-security-and-observability/",
+    "timestamp": "2025-08-27 08:16:53 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' category because the content specifically focuses on Azure-native service mesh solutions (Azure, Azure Kubernetes Service, Azure integrations). Assigned 'Security' category since it provides in-depth guidance on secure microservice communication (mTLS, RBAC, zero trust, integration with Azure Key Vault and Azure AD) in line with the Security inclusion rules. Did not assign 'DevOps' because, while policy automation via CI/CD pipelines is mentioned, the core focus is on architecture and security, not CI/CD practices themselves. Did not assign 'AI', 'ML', 'GitHub Copilot', or 'Coding' as the article neither discusses AI/ML capabilities, GitHub Copilot, nor software implementation details or code. All decisions reference Category Inclusion Rules; no Generic Exclusion Rules were triggered."
   }
 ]

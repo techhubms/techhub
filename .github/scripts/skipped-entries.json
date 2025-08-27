@@ -6789,5 +6789,17 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=QE3LIfKCaNo",
     "timestamp": "2025-08-26 22:15:07 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/mastering-github-copilot-tips-shortcuts-and-prompts-that-work/m-p/4448549#M163",
+    "timestamp": "2025-08-27 08:17:02 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/using-github-copilot-to-teach-programming-a-new-approach-for/m-p/4448547#M162",
+    "timestamp": "2025-08-27 08:17:02 +00:00",
+    "reason": "Insufficient content length"
   }
 ]
