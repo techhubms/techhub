@@ -7572,5 +7572,29 @@
     "canonical_url": "https://www.youtube.com/watch?v=HDEGFNAUkX8",
     "timestamp": "2025-08-27 15:16:00 +00:00",
     "reason": "Succesfully added: Categories 'AI' and 'GitHub Copilot' are assigned because the video focuses on GitHub Copilot's AI-assisted features for code review and Autofix (AI rule 2, GitHub Copilot rules 1 and 2). 'DevOps' is included due to the emphasis on code review, testing, pull requests, and integration processes within team workflows (DevOps rules 2, 3, and 5). No generic exclusion rules apply; the content is technical, not promotional or biographical, and targets developer practices."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-08-27 16:15:44 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the article focuses on GitHub Copilot features, including AI agents, model switching, and Copilot’s web chat platform (AI inclusion rule 2/5, GitHub Copilot rule 1/2/3/4). 'Coding' was included since the content details prototyping, code generation, and bug fixes via Copilot, which are software development activities handled outside the IDE but within the coding context (Coding rule 4). 'DevOps' was included because the article discusses workflow orchestration, issue management, automation, and integrating project coordination tasks—core DevOps practices (DevOps rules 3, 5, 9). No exclusions applied as the content is technical, developer-focused, and not business productivity or general business content.",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-on-github-com-a-power-users-guide/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-08-27 16:16:02 +00:00",
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories, as this news directly discusses an upgrade to GitHub Copilot's AI code completion, specifically mentioning the GPT-4.1 model (AI rules 1, GitHub Copilot rules 1 & 2). No coding, DevOps, Azure, ML, or Security categories apply since the content is focused solely on GitHub Copilot’s model update, not on development frameworks, pipelines, or broader infrastructure.",
+    "canonical_url": "https://github.blog/changelog/2025-08-27-copilot-code-completion-now-uses-the-gpt-4-1-copilot-model"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-08-27 16:16:28 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content centers on an autonomous, AI-powered developer agent (AI rule 1, 'Microsoft AI Products/Services'). Assigned 'GitHub Copilot' because the GitHub Copilot coding agent is a developer-focused tool directly related to GitHub Copilot (GitHub Copilot inclusion rules 1 and 2). Business productivity Copilot products are not discussed. No other categories were assigned as the focus is not on coding implementation details, Azure integration, DevOps methodologies, ML engineering, or security topics.",
+    "canonical_url": "https://github.blog/changelog/2025-08-27-copilot-coding-agent-is-now-available-in-github-enterprise-cloud-with-data-residency"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-08-27 16:17:05 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the video directly covers AI agent protocols (AI inclusion rules 1, 4, 6). Assigned Azure because Microsoft cloud development context is implied, reinforced by tags and links to aka.ms resources (Azure rule 1). Assigned Coding because the video discusses and demonstrates code samples for each protocol (Coding rule 4). No exclusion rules apply.",
+    "canonical_url": "https://www.youtube.com/watch?v=X-Dh9R3Opn8"
   }
 ]
