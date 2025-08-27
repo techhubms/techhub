@@ -7620,5 +7620,35 @@
     "reason": "Succesfully added: Assigned 'AI' category because the article focuses on AI-powered features in VS Code and learning about AI-assisted development (AI inclusion rule 1, 4, 5). Assigned 'GitHub Copilot' because there are explicit sessions and references to GitHub Copilot in both event agendas and feature highlights (GitHub Copilot inclusion rules 1, 2, 4). Assigned 'Coding' because of the hands-on workshops involving practical coding exercises and the direct application of development tools (Coding inclusion rules 1, 5). No other categories apply, as the primary content is not about DevOps pipelines, Azure platform specifics, machine learning systems development, or security. Generic exclusion rules do not apply; there are no biographical, sales-pitch, business-productivity, or non-English elements. The content is technical, educational, and focused on developer tooling.",
     "collection": "news",
     "timestamp": "2025-08-27 17:13:29 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category because the content is focused on protecting sensitive healthcare data, regulatory compliance (especially HIPAA), and implementation of Microsoft Purview DLP policies, which directly support security and compliance (Security rules 1, 4, 5, 10). Assigned Azure category because Microsoft Fabric and Purview are Azure cloud services and the content discusses their configuration and management (Azure rules 1, 2, 4). AI and ML were not included since there is no substantive focus on AI/ML features, and Coding/DevOps were not included as there is no programming or development methodology content. The content qualifies because it provides technical, actionable security guidance centered on Microsoft technology.",
+    "collection": "news",
+    "timestamp": "2025-08-27 18:18:08 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/meet-your-healthcare-regulation-and-compliance-requirements-with-purview-data-loss-prevention-dlp-policies/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Security' category because the entire piece focuses on threat actor behavior, security incident details, Microsoft Defender product usage, and actionable security mitigations (Security rules 1, 2, 4, 5, 6, 9, 10). Assigned 'Azure' because Azure tenant, Storage, RBAC, and other resource operations are fundamental to both the attack and the mitigation strategies (Azure rules 1, 2, 4, 5, 6). Did not assign ML, AI, DevOps, or Coding because the focus is entirely on security, cloud identity/infrastructure, and operational protection rather than development practice or data/model engineering. No generic exclusion rules apply.",
+    "collection": "news",
+    "timestamp": "2025-08-27 18:18:57 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/08/27/storm-0501s-evolving-techniques-lead-to-cloud-based-ransomware/"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the article features BrainKey's use of advanced AI models for analyzing MRI brain scans and enabling early detection of neurological decline (AI inclusion rules 1 and 4). Assigned Azure category due to substantial focus on Azure services powering the solution (Azure inclusion rule 1), including specifics such as Azure Kubernetes Service, Azure Blob Storage, and HIPAA-compliant cloud infrastructure. Coding, DevOps, ML, Security, and GitHub Copilot categories do not apply: the article emphasizes AI utilization and cloud architecture but doesn't delve into custom code, CI/CD, pure MLOps pipelines, or detailed security engineering; security is addressed from a compliance/usage perspective rather than hands-on security implementation.",
+    "collection": "news",
+    "timestamp": "2025-08-27 18:19:22 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/startups/blog/from-personal-crisis-to-global-impact-how-brainkey-reimagines-brain-health-with-ai-and-microsoft-azure/"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the entire roadmap centers on AI-driven features, agentic tooling, and integration enhancements within Visual Studio (AI rules 1, 4, and 5). 'GitHub Copilot' is covered extensively as both code assistant and chat agent (GitHub Copilot rules 1, 2, 4). 'Coding' applies since these tools and workflows are for programming and development in Visual Studio (.NET, debugging, profiling—Coding rules 1 and 2). 'Azure' qualifies because of integrated Azure MCP, agentic DevOps workflows, and CI/CD to Azure services (Azure rules 1, 4, and 5). 'DevOps' is included due to Azure DevOps, GitHub Actions, CI/CD workflow integration, and DevOps tooling in Visual Studio (DevOps rules 1, 2, 5, and 6). No ML or Security categories as the content does not focus on data science/ML engineering or Microsoft-specific security tooling. All categorization decisions follow the explicit rules and references to content in the provided text.",
+    "collection": "news",
+    "timestamp": "2025-08-27 18:19:55 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-september/"
+  },
+  {
+    "reason": "Succesfully added: AI category assigned because the main focus is on using GPT-5 and Azure AI Foundry, both Microsoft AI products (AI rule 1). Azure category assigned because technology is showcased and deployed on the Azure AI Foundry platform (Azure rule 1). Coding and ML categories were not assigned because, while code (Python, SQL) is generated and executed, the core instructional focus is on AI service integration and workflow automation, not code design or custom ML engineering. Content easily surpasses 40% Microsoft technology threshold, and none of the generic exclusion rules are triggered by the provided description.",
+    "collection": "videos",
+    "timestamp": "2025-08-27 18:20:32 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=y43sgs-Y8-U"
   }
 ]

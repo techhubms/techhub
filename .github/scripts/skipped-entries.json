@@ -6837,5 +6837,11 @@
     "reason": "No categories found: No categories assigned. The content is entirely about the launch of Microsoft Copilot on Samsung TVs and monitors, which is a general consumer productivity/entertainment tool and not a developer tool. According to the explicit rules in Chapter 3 (Non-Development Microsoft Products, Copilot Distinction), Microsoft Copilot in consumer/productivity scenarios (including TV, Bing Chat, and general-use Copilot) is excluded from categorization. There is no substantive developer, coding, DevOps, Azure, ML, Security, or GitHub Copilot aspect. Content focuses on end-user features, entertainment, and personal productivity.",
     "collection": "news",
     "timestamp": "2025-08-27 17:12:23 +00:00"
+  },
+  {
+    "reason": "No categories found: All categories are excluded based on generic exclusion rules regarding non-development Microsoft products. The content primarily focuses on using Microsoft 365 Copilot, Copilot Chat, and general AI tools in educational settings for productivity, lesson planning, and improved learning outcomes for students and educators. The central theme is business productivity and education, not software development, technical implementation, or coding. Additionally, it references Microsoft 365 Copilot and Copilot for education -- these are specifically listed under the exclusion rules (Non-Development Microsoft Products exclusion and Copilot Product Distinction). While it mentions Azure OpenAI Service and Learning Accelerators, the application is strictly for learning, not development or engineering use cases. No substantial technical content, coding, DevOps, Azure engineering, security practices, or ML engineering appears. Hence, per Chapter 3, this qualifies for exclusion and no categories are assigned.",
+    "collection": "news",
+    "timestamp": "2025-08-27 18:18:22 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/education/blog/2025/08/5-ways-to-use-copilot-and-ai-tools-to-spark-curiosity-this-school-year/"
   }
 ]
