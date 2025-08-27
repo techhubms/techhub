@@ -6861,5 +6861,17 @@
     "timestamp": "2025-08-27 21:12:19 +00:00",
     "collection": "news",
     "canonical_url": "https://news.xbox.com/en-us/2025/08/27/how-the-outer-worlds-2-sets-you-up-for-adventure/"
+  },
+  {
+    "reason": "No categories found: All content focuses on Microsoft 365 Copilot as a business productivity tool, which is explicitly excluded according to the generic exclusion rules for non-development Microsoft products. The post describes how GPT-5 capabilities have enhanced workflows in Microsoft 365 Copilot, but does not involve developer tools, coding, or implementation for developers. No technical depth or developer focus is presented; content centers on using Copilot for general workplace productivity, which is not eligible for any categories according to the workflow.",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_its-been-a-few-weeks-since-webrought-gpt-activity-7366554485684436993-kPp6",
+    "timestamp": "2025-08-27 23:11:52 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "No categories found: Content excluded because the main content field is null, indicating that there is no substantive text or technical detail to evaluate. Additionally, the description reveals this is an informal, lighthearted live coding stream invitation with no provided information about focus on Microsoft technologies or concrete implementation details. Per Generic Exclusion Rules, content with insufficient detail or lacking main body content is excluded.",
+    "canonical_url": "https://www.youtube.com/watch?v=sWTXM-DlSI0",
+    "timestamp": "2025-08-27 23:12:14 +00:00",
+    "collection": "videos"
   }
 ]

@@ -7686,5 +7686,17 @@
     "timestamp": "2025-08-27 22:11:40 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=UDrjP8sBI94",
     "reason": "Succesfully added: Assigned the 'Azure' category because the video specifically addresses technical practices for enhancing reliability in Azure (Azure inclusion rule 1: Any Azure Service/Technology, and rule 5: Azure Architecture). The focus is on technical configuration and architectural patterns for Microsoft Azure, not business or generic cloud advice. AI, DevOps, ML, Security, Coding, and GitHub Copilot categories do not apply, as there is no discussion of those areas in either the title, description, chapters, or resource links. Tags were extracted from the title, chapter contents, links, and description, prioritizing Azure services, networking, reliability, and architectural practices. No generic exclusion rules were triggered, as the content is technical, solution-focused, and in English."
+  },
+  {
+    "reason": "Succesfully added: Generic exclusion rules do not apply: the post is in English, technically detailed, and not biographical, sales, or business-focused. The content centers on integrating Azure Static Web Apps with Azure Functions (Azure rule 1), discusses C# and backend code (Coding rules 1 and 2), and gives a configuration solution, so both \"Azure\" and \"Coding\" categories are included. Though the main issue is app routing, it involves backend service configuration and C# code. No other categories fit, as the post is not about AI, ML, DevOps, GitHub Copilot, or Security.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure/what-s-the-secret-sauce-for-getting-functions-api-to-work-with/m-p/4448430#M1359",
+    "timestamp": "2025-08-27 23:12:47 +00:00",
+    "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' because Copilot Studio is an AI developer platform and the content focuses on customizing conversational agents with AI rule 1 and 2. 'Azure' assigned due to significant use of Azure Communication Services and Azure Function as the backbone for sending emails (Azure rule 1 and 4). 'Coding' assigned because the tutorial walks through creating and deploying a Python-based Azure Function (Coding rules 1 and 2). The content is development-focused, has technical depth, and does not fall under any generic exclusion. Microsoft 365 Copilot is only mentioned as a potential deployment channel (not as the development target), so does not trigger the business product exclusion. The principal focus is developer usage of Microsoft AI and Azure development tools.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-communication-services/build-your-ai-email-agent-with-microsoft-copilot-studio/ba-p/4448724",
+    "timestamp": "2025-08-27 23:13:16 +00:00",
+    "collection": "community"
   }
 ]
