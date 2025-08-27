@@ -7650,5 +7650,35 @@
     "collection": "videos",
     "timestamp": "2025-08-27 18:20:32 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=y43sgs-Y8-U"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the content is centrally focused on AI agent development, observability, evaluation, and governance using Microsoft Azure AI Foundry (AI inclusion rules 1, 4, and 5). Assigned Azure because Azure AI Foundry is the core platform discussed (Azure rule 1). Assigned Security due to discussion of safety, red teaming, compliance, and governance (Security rules 1, 4, 5, and 9). Assigned DevOps because the integration with CI/CD pipelines for continuous evaluation and automated testing directly aligns with DevOps practices (DevOps rules 5 and 11). Coding and ML are not assigned; while evaluators and agent development are referenced, there is no focus on code, algorithms, or custom machine learning development.",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/agent-factory-top-5-agent-observability-best-practices-for-reliable-ai/",
+    "timestamp": "2025-08-27 19:11:40 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because Copilot code review is an AI-powered developer tool and the improvements focus on its new features and availability (AI category rule 2 and 5). Assigned 'GitHub Copilot' because the news specifically covers GitHub Copilot features, rollout, and administration (GitHub Copilot category rules 1, 2, and 5). Did not assign 'Coding' since the content is about code review tooling, not direct programming or coding patterns. Did not assign 'DevOps', 'Azure', 'ML', or 'Security' as the focus is not on those areas.",
+    "canonical_url": "https://github.blog/changelog/2025-08-27-copilot-code-review-generally-available-in-xcode-and-new-admin-control",
+    "timestamp": "2025-08-27 19:12:02 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the 'AI' category because the video centers on using advanced AI-driven features (GitHub Copilot agent mode) and Model Context Protocol Servers (AI rule 2 and 4). 'GitHub Copilot' category applies as the content specifically demonstrates Copilot features, setup, and use cases (GitHub Copilot rules 1 and 2). 'Coding' is included since developers are guided through integration, setup, and custom server development in a programming tool (Coding rules 2 and 4). No generic exclusion rules apply, and the material is clearly technical and development-focused.",
+    "canonical_url": "https://www.youtube.com/watch?v=vUQfqW5GKAQ",
+    "timestamp": "2025-08-27 19:12:47 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Applied AI category because content is wholly focused on Azure AI (AI inclusion rule 1: Microsoft AI Products/Services). Included Azure category because this is built specifically for and on Azure (Azure inclusion rule 1: Any Azure Service/Technology). Did not assign Coding or ML: the article is an announcement about platform/API capability (not code-level or ML/data science engineering). Did not assign Security, DevOps, or GitHub Copilot as none of those topics are central. No generic or specific exclusions apply (content is technical, in English, and developer-focused).",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/the-responses-api-in-azure-ai-foundry-is-now-generally-available/ba-p/4446567",
+    "timestamp": "2025-08-27 19:13:19 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'Azure' category as the content centers on deploying Azure Logic Apps and references Azure-specific configuration (Azure rule 1, 4, 5, 6). 'DevOps' is included since the article covers infrastructure setup (Kubernetes cluster, Azure Arc, Docker, Helm, PowerShell, infrastructure provisioning) aligning with DevOps rules for infrastructure, CI/CD, cluster management, and developer workflow (DevOps rules 1, 2, 6, 9). 'Coding' is included because processes include PowerShell scripting, Kubernetes CLI, and automation tasks used for technical implementation (Coding rule 2, 5). Not assigning 'AI', 'GitHub Copilot', 'ML', or 'Security' as there's no substantive AI, Copilot, ML/data science, or security solution focus. The content exceeds community length thresholds and maintains a technical, implementation-oriented perspective.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/hybrid-logic-apps-deployment-on-rancher-k3s-kubernetes-cluster/ba-p/4448557",
+    "timestamp": "2025-08-27 19:14:00 +00:00"
   }
 ]

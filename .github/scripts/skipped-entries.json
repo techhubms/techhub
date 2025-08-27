@@ -6843,5 +6843,11 @@
     "collection": "news",
     "timestamp": "2025-08-27 18:18:22 +00:00",
     "canonical_url": "https://www.microsoft.com/en-us/education/blog/2025/08/5-ways-to-use-copilot-and-ai-tools-to-spark-curiosity-this-school-year/"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the provided description indicates this is event coverage focused on partnerships, announcements, and business growth insights related to the Microsoft Ignite event, rather than substantive technical content. There is no detailed technical information present, and the content appears aimed at a broad audience with business/executive interests. Additionally, the absence of the actual video content text prevents assessment for technical depth, so only the description can be used. Per business strategy/executive content exclusion rules in Chapter 3, this content does not qualify for any technical development categories.",
+    "canonical_url": "https://www.youtube.com/watch?v=TOPpkEClTiE",
+    "timestamp": "2025-08-27 19:12:24 +00:00"
   }
 ]
