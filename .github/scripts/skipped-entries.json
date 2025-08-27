@@ -6801,5 +6801,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/tools/using-github-copilot-to-teach-programming-a-new-approach-for/m-p/4448547#M162",
     "timestamp": "2025-08-27 08:17:02 +00:00",
     "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: The input is missing the main content and description fields, which means there is no substantive information to analyze for Microsoft technologies or technical detail. According to the core workflow, if content is missing, incomplete, or non-existent, none of the categories can be assigned, as content categorization requires a technical body to process. As per exclusion and quality requirements, only surrounding metadata is not sufficient grounds for inclusion.",
+    "canonical_url": "https://www.youtube.com/shorts/2yeZWFU1kNY",
+    "timestamp": "2025-08-27 10:14:07 +00:00",
+    "collection": "videos"
   }
 ]
