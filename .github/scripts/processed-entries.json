@@ -7548,5 +7548,11 @@
     "canonical_url": "https://devops.com/qwiet-ai-extends-microsoft-support-in-platform-for-fixing-vulnerabilities/?utm_source=rss&utm_medium=rss&utm_campaign=qwiet-ai-extends-microsoft-support-in-platform-for-fixing-vulnerabilities",
     "timestamp": "2025-08-27 10:13:47 +00:00",
     "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Coding category because the content centers on a new programming language feature (Discriminated Unions) being introduced to C# 15 and 16, which applies directly to C# development (Coding rule 1). Tags focus on the new language feature, relevant versions, and .NET. No other categories are applicable because there is no coverage of Azure, AI, DevOps, ML, Security, or GitHub Copilot products.",
+    "collection": "videos",
+    "timestamp": "2025-08-27 12:23:37 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=tD46WVJ2h9I"
   }
 ]

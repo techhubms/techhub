@@ -6807,5 +6807,11 @@
     "canonical_url": "https://www.youtube.com/shorts/2yeZWFU1kNY",
     "timestamp": "2025-08-27 10:14:07 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content provides an overview of clipboard features (Clipboard History and Cloud Sync) in Windows 11, focused on end-user productivity tips rather than technical development, programming, software engineering, or IT architecture. It does not involve Microsoft's developer tools, coding, scripting, DevOps practices, security implementation, Azure configuration, AI/ML/advanced analytics, nor does it address technical integration, API usage, or application development. The core focus is on using built-in Windows 11 features for personal productivity, which falls under the 'Non-Development Microsoft Products' exclusion rule. Therefore, according to the generic exclusion rules (Non-Development Microsoft Products and Business/Productivity tools), this content must be excluded and assigned no categories.",
+    "collection": "posts",
+    "timestamp": "2025-08-27 12:23:11 +00:00",
+    "canonical_url": "https://dellenny.com/windows-11-clipboard-history-cloud-sync-copy-paste-superpowers/"
   }
 ]
