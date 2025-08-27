@@ -55,7 +55,37 @@ function Get-WebResponseDetailsFromException {
                 }
             }
             elseif ($webResponse -and $webResponse.PSObject.Properties.Name -contains "Content") {
-                $responseContent = $webResponse.Content
+                $content = $webResponse.Content
+                # Handle HttpConnectionResponseContent objects that need to be read asynchronously
+                if ($content.GetType().Name -eq "HttpConnectionResponseContent") {
+                    try {
+                        # Try to read the content as a string
+                        $responseContent = $content.ReadAsStringAsync().GetAwaiter().GetResult()
+                    }
+                    catch {
+                        # Fallback to converting to string
+                        $responseContent = $content.ToString()
+                    }
+                } else {
+                    $responseContent = $content
+                }
+            }
+            # Special handling for HttpConnectionResponseContent - try to get content from the error message
+            elseif ($Exception.Message -and $Exception.Message.Contains("{")){
+                # Extract JSON content from the error message if it's embedded
+                $startIndex = $Exception.Message.IndexOf("{")
+                if ($startIndex -ge 0) {
+                    $jsonPart = $Exception.Message.Substring($startIndex)
+                    # Clean up any trailing text that might not be part of the JSON
+                    try {
+                        $testJson = $jsonPart | ConvertFrom-Json
+                        $responseContent = $jsonPart
+                    }
+                    catch {
+                        # If the entire JSON doesn't parse, try to find just the error object
+                        $responseContent = $jsonPart
+                    }
+                }
             }
         }
         catch {

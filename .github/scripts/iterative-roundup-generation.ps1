@@ -98,6 +98,14 @@ function Test-AiResponseFormat {
     )
     
     # Check if response indicates an error
+    if ($Response -like "*I cannot*" -or $Response -like "*I'm unable*" -or $Response -like "*I don't have*") {
+        return @{
+            IsValid = $false
+            ErrorMessage = "AI indicated it cannot complete the request: $($Response.Substring(0, [Math]::Min(200, $Response.Length)))"
+        }
+    }
+    
+    # Check if response contains error JSON
     if ($Response -like "*`"Error`": true*") {
         try {
             $errorObj = $Response | ConvertFrom-Json
@@ -123,6 +131,40 @@ function Test-AiResponseFormat {
     
     # Response appears to be successful
     return @{ IsValid = $true; ErrorType = $null; ErrorMessage = $null }
+}
+
+# Function to analyze grouping quality in generated content
+function Test-GroupingQuality {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$GeneratedContent,
+        [Parameter(Mandatory = $true)]
+        [string]$SectionName
+    )
+    
+    $warnings = @()
+    
+    # Count topic sections (### headers)
+    $topicSectionsArray = @($GeneratedContent -split "`n" | Where-Object { $_ -match "^### " })
+    $totalLinksArray = @($GeneratedContent -split "`n" | Where-Object { $_ -match "^- \[.*\]\(" })
+    $topicSections = $topicSectionsArray.Length
+    $totalLinks = $totalLinksArray.Length
+    
+    if ($topicSections -gt 0) {
+        $avgArticlesPerTopic = $totalLinks / $topicSections
+        
+        # Check for too many small groups
+        if ($topicSections -gt 3 -and $avgArticlesPerTopic -lt 2.5) {
+            $warnings += "⚠️ Section '$SectionName' has many small groups ($topicSections topics, avg $([Math]::Round($avgArticlesPerTopic, 1)) articles each). Consider consolidating."
+        }
+        
+        # Check for unbalanced distribution
+        if ($topicSections -eq 1 -and $totalLinks -gt 8) {
+            $warnings += "⚠️ Section '$SectionName' has only 1 topic group with $totalLinks articles. Consider splitting into multiple themes."
+        }
+    }
+    
+    return $warnings
 }
 
 # Function to create backup files for debugging
@@ -290,7 +332,7 @@ try {
             if (Test-Path $collectionDir) {
                 Write-Host "Scanning $collectionDir..."
                 
-                $files = Get-ChildItem $collectionDir -Filter "*.md" -Recurse
+                $files = @(Get-ChildItem $collectionDir -Filter "*.md" -Recurse)
                 
                 foreach ($file in $files) {
                     # Extract date from filename (format: YYYY-MM-DD-title.md)
@@ -314,6 +356,16 @@ try {
         if ($articles.Count -eq 0) {
             throw "No articles found in the specified date range: $StartDate to $EndDate"
         }
+        
+        # Create numbered list of full file paths and save to tmp
+        $numberedArticleList = @()
+        for ($i = 0; $i -lt $articles.Count; $i++) {
+            $numberedArticleList += "$($i + 1). $($articles[$i])"
+        }
+        
+        $step1Output = $numberedArticleList -join "`n"
+        
+        Save-StepBackup -StepName "Step1-ArticleList" -Content $step1Output -StartDate $StartDate -EndDate $EndDate
         Write-Host "📊 Processing $($articles.Count) articles"
     }
     else {
@@ -333,7 +385,14 @@ RESPONSE FORMAT: Return ONLY a JSON object with this exact structure:
 {
   "section": "Suggested Section Name",
   "summary": "Comprehensive Summary",
-  "relevance_score": 1-10
+  "relevance_score": 1-10,
+  "primary_topic": "Main product/technology/concept",
+  "topic_type": "announcement|tutorial|update|guide|analysis|feature|troubleshooting|case-study|news|preview|ga-release|deprecation|migration|integration|comparison",
+  "target_audience": "developers|administrators|business|researchers|data-scientists|devops-engineers",
+  "original_tags": ["tag1", "tag2", "tag3"],
+  "ai_suggested_tags": ["additional-tag1", "additional-tag2"],
+  "impact_level": "high|medium|low",
+  "time_sensitivity": "immediate|this-week|this-month|long-term"
 }
 
 SECTION CATEGORIZATION - CHOOSE THE SINGLE BEST MATCH:
@@ -405,13 +464,60 @@ SUMMARY REQUIREMENTS:
   * Reference to specific tools, IDEs, or development scenarios affected
   * Both immediate and longer-term implications for developers
 
-RELEVANCE SCORING (1-10):
-- 9-10: Major product announcements, significant new features, industry-changing developments
-- 7-8: Important updates, useful developer tools, notable capability expansions
-- 5-6: Minor updates, educational content, incremental improvements
-- 3-4: Niche topics, limited applicability, specialized use cases
-- 1-2: Off-topic or very limited relevance
+RELEVANCE SCORING (1-10) - FOR PRE-FILTERED TECH CONTENT:
+Since content is already filtered for tech relevance, score based on IMPACT and IMPORTANCE within the tech ecosystem:
+- 9-10: Breaking news, major product launches, industry-changing announcements, critical security issues
+- 7-8: Significant feature releases, important updates that affect many developers, notable capability expansions
+- 5-6: Useful updates, incremental improvements, helpful tutorials for common scenarios
+- 3-4: Minor releases, niche features, specialized use cases, maintenance updates
+- 1-2: Very minor updates, extremely niche content, or edge case scenarios
+
+IMPACT LEVEL ASSESSMENT:
+- HIGH: Affects large developer populations, changes workflows significantly, major announcements
+- MEDIUM: Affects specific developer segments, incremental improvements, useful capabilities
+- LOW: Niche use cases, minor updates, specialized scenarios
+
+TIME SENSITIVITY CLASSIFICATION:
+- IMMEDIATE: Breaking news, critical security fixes, urgent action items
+- THIS-WEEK: New releases, important updates, timely announcements
+- THIS-MONTH: General improvements, educational content, planning items
+- LONG-TERM: Strategic content, future roadmaps, educational materials
+
+TOPIC TYPE EXPANDED DEFINITIONS:
+- announcement: Official product or feature announcements
+- tutorial: Step-by-step educational content
+- update: Product updates, new versions, improvements
+- guide: Best practices, how-to documentation
+- analysis: Technical analysis, comparisons, insights
+- feature: New feature highlights and explanations
+- troubleshooting: Problem-solving and debugging content
+- case-study: Real-world implementation examples
+- news: Industry news, company updates, general tech news
+- preview: Beta features, previews, early access content
+- ga-release: General availability releases, official launches
+- deprecation: End-of-life announcements, migration notices
+- migration: Migration guides, upgrade instructions
+- integration: Integration tutorials, ecosystem connections
+- comparison: Product comparisons, technology evaluations
+
+TAGS REQUIREMENTS:
+- ORIGINAL_TAGS: Extract all tags from the article's frontmatter "tags" field exactly as they appear
+- AI_SUGGESTED_TAGS: Add 3-5 additional relevant tags that would help with grouping and discovery
+- Focus AI suggested tags on: product families, technology stacks, use cases, developer roles
 "@
+
+        # Save Step 2 input for debugging
+        $step2Input = @"
+STEP 2 INPUT: Article Analysis Configuration
+AI Model: $Model
+Endpoint: $Endpoint
+Date Range: $StartDate to $EndDate
+Total Articles to Process: $($articles.Count)
+
+SYSTEM MESSAGE:
+$step2SystemMessage
+"@
+        Save-StepBackup -StepName "Step2-Input" -Content $step2Input -StartDate $StartDate -EndDate $EndDate
 
         # Process each article for analysis
         for ($i = 0; $i -lt $articles.Count; $i++) {
@@ -428,11 +534,32 @@ RELEVANCE SCORING (1-10):
         
             # Read the article content
             $articleContent = Get-Content $articleFilePath -Raw
+            
+            # Extract original tags for AI analysis
+            $originalTags = Get-FrontMatterValue -Content $articleContent -Key "tags"
+            $tagsForAI = if ($originalTags) { 
+                ($originalTags | ConvertTo-Json -Compress) 
+            } else { 
+                "[]" 
+            }
 
             $step2UserMessage = @"
 ARTICLE CONTENT:
 $articleContent
+
+ORIGINAL ARTICLE TAGS: $tagsForAI
 "@
+            
+            # Save individual article input for debugging
+            $individualInput = @"
+STEP 2 INDIVIDUAL ARTICLE INPUT ($articleNum of $($articles.Count))
+Article: $articleName
+File Path: $articleFilePath
+
+USER MESSAGE:
+$step2UserMessage
+"@
+            Save-StepBackup -StepName "Step2-Article$($articleNum)-$($articleName.Replace('.md', ''))-Input" -Content $individualInput -StartDate $StartDate -EndDate $EndDate
         
             # Call the AI model
             Write-Host "🤖 Calling AI model for analysis..."
@@ -447,8 +574,30 @@ $articleContent
             # Check for errors with robust error handling
             $rewriteResult = Test-AiResponseFormat -Response $response -StepName "Step 2 (AI analysis for $articleName)"
             if (-not $rewriteResult.IsValid) {
+                # Save failed response for debugging
+                $failedResponse = @"
+STEP 2 INDIVIDUAL ARTICLE FAILED RESPONSE ($articleNum of $($articles.Count))
+Article: $articleName
+File Path: $articleFilePath
+Error: $($rewriteResult.ErrorMessage)
+
+AI RESPONSE:
+$response
+"@
+                Save-StepBackup -StepName "Step2-Article$($articleNum)-$($articleName.Replace('.md', ''))-FAILED" -Content $failedResponse -StartDate $StartDate -EndDate $EndDate
                 throw $rewriteResult.ErrorMessage
             }
+
+            # Save successful individual article response for debugging
+            $individualOutput = @"
+STEP 2 INDIVIDUAL ARTICLE OUTPUT ($articleNum of $($articles.Count))
+Article: $articleName
+File Path: $articleFilePath
+
+AI RESPONSE:
+$response
+"@
+            Save-StepBackup -StepName "Step2-Article$($articleNum)-$($articleName.Replace('.md', ''))-Output" -Content $individualOutput -StartDate $StartDate -EndDate $EndDate
 
             # Parse AI response
             try {
@@ -464,6 +613,12 @@ $articleContent
                 $title = Get-FrontMatterValue -Content $articleContent -Key "title"
                 $viewingMode = Get-FrontMatterValue -Content $articleContent -Key "viewing_mode"
                 $permalink = Get-FrontMatterValue -Content $articleContent -Key "permalink"
+                $originalTags = Get-FrontMatterValue -Content $articleContent -Key "tags"
+                
+                # Ensure original_tags is populated from frontmatter if not provided by AI
+                if (-not $analysisResult.original_tags -and $originalTags) {
+                    $analysisResult | Add-Member -NotePropertyName "original_tags" -NotePropertyValue $originalTags
+                }
                 
                 $analysisResult | Add-Member -NotePropertyName "canonical_url" -NotePropertyValue $canonicalUrl
                 $analysisResult | Add-Member -NotePropertyName "title" -NotePropertyValue $title
@@ -477,20 +632,39 @@ $articleContent
                     $articleSummaries[$section] = @()
                 }
                 $articleSummaries[$section] += $analysisResult
-                Write-Host "  ✅ Added to $section section (score: $($analysisResult.relevance_score))"
+                Write-Host "  ✅ Added to $section section (score: $($analysisResult.relevance_score), impact: $($analysisResult.impact_level), timing: $($analysisResult.time_sensitivity))"
             }
             catch {
+                $parseError = @"
+STEP 2 INDIVIDUAL ARTICLE PARSE ERROR ($articleNum of $($articles.Count))
+Article: $articleName
+File Path: $articleFilePath
+Parse Error: $($_.Exception.Message)
+
+AI RESPONSE:
+$($response.Substring(0, [Math]::Min(500, $response.Length)))
+"@
+                Save-StepBackup -StepName "Step2-Article$($articleNum)-$($articleName.Replace('.md', ''))-PARSE-ERROR" -Content $parseError -StartDate $StartDate -EndDate $EndDate
                 throw "Failed to parse AI response for $($articleName): $($_.Exception.Message). Response was: $($response.Substring(0, [Math]::Min(200, $response.Length)))"
             }
         
             Write-Host "✅ Article $articleNum analyzed successfully"
-            Start-Sleep -Seconds 1
         }
 
         Write-Host "✅ Step 2 complete - All articles analyzed"
         
         # Create backup of analysis results
         $analysisBackup = $articleSummaries | ConvertTo-Json -Depth 10
+        $step2FinalOutput = @"
+STEP 2 FINAL OUTPUT: Complete Analysis Results
+Total Articles Processed: $($articles.Count)
+Sections Created: $($articleSummaries.Keys.Count)
+Sections: $($articleSummaries.Keys -join ', ')
+
+ANALYSIS RESULTS JSON:
+$analysisBackup
+"@
+        Save-StepBackup -StepName "Step2-FinalOutput" -Content $step2FinalOutput -StartDate $StartDate -EndDate $EndDate
         Save-StepBackup -StepName "Step2-Analysis" -Content $analysisBackup -StartDate $StartDate -EndDate $EndDate
     }
     else {
@@ -542,22 +716,21 @@ The section should follow this pattern:
 
 ### Other [Section Name] News
 
-[Brief mentions of additional developments that don't fit into major themes, if possible grouped very broadly - for instance group troubleshooting articles, how-to's or feature updates.  Write 1-2 sentences per broad grouping, highlighting the key point or benefit, then list all the links for that group.]
+Developer Tools received several updates this week, enhancing productivity across different workflows. The new debugging capabilities and performance improvements address common developer pain points.
 
-- [Broadly grouped article 1](link)
-- [Broadly grouped article 2](link)
-- [Broadly grouped article 3](link)
+- [Developer Tool Update 1](link)
+- [Developer Tool Update 2](link)
+- [Developer Tool Update 3](link)
 
-[If possible, continue with a next very broad grouping in an identical manner. When you can't find a suitable group, mention the remaining articles ungrouped at the end of this section.]
+Security enhancements continue to evolve with new vulnerability management features and improved compliance tools for enterprise environments.
 
-- [Broadly grouped article 1](link)
-- [Broadly grouped article 2](link)
-- [Broadly grouped article 3](link)
+- [Security Update 1](link)
+- [Security Update 2](link)
 
-[Create a nice bridge to any remaining articles here]
+Additional noteworthy developments include migration guidance and troubleshooting resources that help teams navigate common technical challenges.
 
-- [Single article 1](link)
-- [Single article 2](link)
+- [Migration Guide Article](link)
+- [Troubleshooting Resource](link)
 ```
 
 CRITICAL SECTION INTRODUCTION GUIDELINES:
@@ -578,21 +751,62 @@ CRITICAL TOPIC CONTENT GUIDELINES:
 - Focus on concrete benefits and real-world applications
 
 CRITICAL TOPIC GROUPING STRATEGY:
-- Group 2-4 related articles under thematic headings for major topics
-- Create compelling topic names that capture the essence of developments
-- Examples: "Coding Agent Capabilities Expand", "Azure AI Infrastructure Matures", "Developer Productivity Tools Evolve"
-- Look for natural connections: same product family, related features, complementary technologies, type of development, target audience
-- Only create topic sections for articles that can be grouped with at least one other related article
-- IMPORTANT: Any articles that don't naturally group with others should go into an "Other News" section
+
+Use the enhanced metadata to make smarter grouping decisions:
+- IMPACT LEVEL: Prioritize high-impact articles for major topics
+- TIME SENSITIVITY: Group immediate/this-week items for timely themes
+- TOPIC TYPE: Group similar types (announcements, tutorials, updates)
+- ORIGINAL_TAGS + AI_TAGS: Use for identifying related technologies and themes
+
+PRIMARY GROUPING RULES:
+- Create Major Topic Groups: 3+ articles on closely related themes (no upper limit - group as many closely related articles as exist)
+- Create Minor Topic Groups: 2-3 articles on similar themes when they're strongly related
+- Reserve "Other News": Single articles or 2+ articles that only have weak connections
+
+ENHANCED HIERARCHICAL GROUPING APPROACH:
+1. FIRST PASS - Identify Major Themes (3+ articles):
+   - Same product announcements/updates (check PRIMARY_TOPIC and tags)
+   - Related feature releases (check ORIGINAL_TAGS and AI_TAGS for technology overlap)
+   - Common workflow improvements (check TARGET_AUDIENCE and IMPACT LEVEL)
+   - Shared technology stack (check tags for framework/platform commonalities)
+   - Time-sensitive clusters (multiple IMMEDIATE or THIS-WEEK items on related topics)
+
+2. SECOND PASS - Group Remaining Articles:
+   - Pair articles with matching TOPIC_TYPE and similar PRIMARY_TOPIC
+   - Group by TARGET_AUDIENCE when content serves the same developer role
+   - Use tag overlap to identify technology relationships
+   - Examples: "Security Tool Updates", "Database Migration Improvements"
+
+3. FINAL PASS - Other News Section:
+   - Group very broadly by TOPIC_TYPE: tutorials, troubleshooting, announcements
+   - Consider IMPACT LEVEL for prioritization within groups
+   - Keep single articles that don't fit elsewhere
+   - Avoid forcing weak connections
+
+ENHANCED GROUPING QUALITY CRITERIA:
+- Strong Connection: Same PRIMARY_TOPIC + significant tag overlap + matching IMPACT_LEVEL
+- Medium Connection: Related technologies in tags + similar TARGET_AUDIENCE + compatible TOPIC_TYPE
+- Weak Connection: Same general section but different purposes/audiences/impact levels
+- Only group articles with Strong or Medium connections into named sections
+
+PRIORITIZATION WITHIN GROUPS:
+- Lead with high-impact, time-sensitive articles
+- Use RELEVANCE_SCORE to order articles within each group
+- Consider TIME_SENSITIVITY for positioning (immediate items first)
 
 CRITICAL "OTHER NEWS" SECTION GUIDELINES:
 - Use this section for articles that don't naturally group with others
 - Replace [Section Name] with the name of the current section
-- Also try to create groups in here, but make them as broad as needed. If you still can't group them, leave them ungrouped.
-- Write 1-2 sentences per group highlighting the key developments and then list the related articles and continue with the next group
+- STRUCTURE THE OTHER NEWS SECTION:
+  * Start with groups of 2-3 related articles (use broad categories like "Developer Tools", "Security Updates", "Migration Guides")
+  * Write 1-2 sentences per group highlighting key developments
+  * List all articles for that group
+  * Continue with next group
+  * End with any remaining single articles
+- Group sizing guidelines: Aim for 3+ articles in major topics when closely related, 2-3 in minor topics, minimize single-article groups
 - Do not create new headings, just paragraphs of text followed by article links
 - Be concise but informative - capture the essence of what's new or useful
-- This prevents creating many single-article topic sections
+- This prevents creating many single-article topic sections while maintaining content organization
 
 CRITICAL CONTENT EDITING RULES:
 - Incorporate article details directly into narrative paragraphs
@@ -600,6 +814,20 @@ CRITICAL CONTENT EDITING RULES:
 - Each topic section should read as a cohesive story ending with source links
 $WritingStyleGuidelines
 "@
+
+        # Save Step 3 input for debugging
+        $step3Input = @"
+STEP 3 INPUT: News Story Creation Configuration
+AI Model: $Model
+Endpoint: $Endpoint
+Date Range: $StartDate to $EndDate
+Sections to Process: $($articleSummaries.Keys.Count)
+Section Names: $($articleSummaries.Keys -join ', ')
+
+SYSTEM MESSAGE:
+$step3SystemMessage
+"@
+        Save-StepBackup -StepName "Step3-Input" -Content $step3Input -StartDate $StartDate -EndDate $EndDate
 
         # Process each section individually to avoid token limits
         $step3Responses = @()
@@ -645,12 +873,88 @@ $WritingStyleGuidelines
                 Write-Host "🔄 Processing section $processedSections of $($articleSummaries.Keys.Count): $($sectionName)"
                 
                 $sectionArticles = $articleSummaries[$($sectionName)] | Sort-Object relevance_score -Descending
+                
+                # Analyze grouping potential for better AI guidance
+                $groupingAnalysis = @()
+                if ($sectionArticles.Count -gt 1) {
+                    # Enhanced grouping analysis using new metadata
+                    $topicGroups = @($sectionArticles | Group-Object { $_.primary_topic } | Where-Object { $_.Count -gt 1 })
+                    $typeGroups = @($sectionArticles | Group-Object { $_.topic_type } | Where-Object { $_.Count -gt 1 })
+                    $impactGroups = @($sectionArticles | Group-Object { $_.impact_level } | Where-Object { $_.Count -gt 1 })
+                    $timingGroups = @($sectionArticles | Group-Object { $_.time_sensitivity } | Where-Object { $_.Count -gt 1 })
+                    $audienceGroups = @($sectionArticles | Group-Object { $_.target_audience } | Where-Object { $_.Count -gt 1 })
+                    
+                    if ($topicGroups.Length -gt 0) {
+                        $groupingAnalysis += "IDENTIFIED TOPIC CLUSTERS:"
+                        foreach ($group in $topicGroups) {
+                            $groupingAnalysis += "- $($group.Name): $($group.Count) articles"
+                        }
+                    }
+                    
+                    if ($typeGroups.Length -gt 0) {
+                        $groupingAnalysis += "IDENTIFIED TYPE CLUSTERS:"
+                        foreach ($group in $typeGroups) {
+                            $groupingAnalysis += "- $($group.Name): $($group.Count) articles"
+                        }
+                    }
+                    
+                    if ($impactGroups.Length -gt 0) {
+                        $groupingAnalysis += "IDENTIFIED IMPACT CLUSTERS:"
+                        foreach ($group in $impactGroups) {
+                            $groupingAnalysis += "- $($group.Name) impact: $($group.Count) articles"
+                        }
+                    }
+                    
+                    if ($timingGroups.Length -gt 0) {
+                        $groupingAnalysis += "IDENTIFIED TIMING CLUSTERS:"
+                        foreach ($group in $timingGroups) {
+                            $groupingAnalysis += "- $($group.Name): $($group.Count) articles"
+                        }
+                    }
+                    
+                    if ($audienceGroups.Length -gt 0) {
+                        $groupingAnalysis += "IDENTIFIED AUDIENCE CLUSTERS:"
+                        foreach ($group in $audienceGroups) {
+                            $groupingAnalysis += "- $($group.Name): $($group.Count) articles"
+                        }
+                    }
+                }
             
                 $sectionInput = "## $($sectionName)`n`n"
+                
+                # Add grouping analysis if available
+                if ($groupingAnalysis.Length -gt 0) {
+                    $sectionInput += "GROUPING ANALYSIS:`n"
+                    $sectionInput += ($groupingAnalysis -join "`n") + "`n`n"
+                }
+                
                 foreach ($article in $sectionArticles) {
                     $sectionInput += "ARTICLE: $($article.title)`n"
                     $sectionInput += "SUMMARY: $($article.summary)`n"
                     $sectionInput += "RELEVANCE: $($article.relevance_score)`n"
+                    
+                    # Add enhanced metadata for better grouping
+                    if ($article.primary_topic) {
+                        $sectionInput += "PRIMARY_TOPIC: $($article.primary_topic)`n"
+                    }
+                    if ($article.topic_type) {
+                        $sectionInput += "TYPE: $($article.topic_type)`n"
+                    }
+                    if ($article.target_audience) {
+                        $sectionInput += "AUDIENCE: $($article.target_audience)`n"
+                    }
+                    if ($article.impact_level) {
+                        $sectionInput += "IMPACT: $($article.impact_level)`n"
+                    }
+                    if ($article.time_sensitivity) {
+                        $sectionInput += "TIMING: $($article.time_sensitivity)`n"
+                    }
+                    if ($article.original_tags) {
+                        $sectionInput += "ORIGINAL_TAGS: $($article.original_tags -join ', ')`n"
+                    }
+                    if ($article.ai_suggested_tags) {
+                        $sectionInput += "AI_TAGS: $($article.ai_suggested_tags -join ', ')`n"
+                    }
                 
                     # Use appropriate URL based on viewing_mode
                     if ($article.viewing_mode -eq "internal") {
@@ -682,10 +986,29 @@ $sectionInput
                 # Check for errors with robust error handling
                 $rewriteResult = Test-AiResponseFormat -Response $sectionResponse -StepName "Step 3 - $($sectionName)"
                 if (-not $rewriteResult.IsValid) {
+                    # Save failed response for debugging
+                    $failedResponse = @"
+STEP 3 SECTION FAILED RESPONSE: $($sectionName)
+Error: $($rewriteResult.ErrorMessage)
+
+AI RESPONSE:
+$sectionResponse
+"@
+                    Save-StepBackup -StepName "Step3-$($sectionName)-FAILED" -Content $failedResponse -StartDate $StartDate -EndDate $EndDate
                     Write-Error "Step 3 failed for section $($sectionName): $($rewriteResult.ErrorMessage)"
                     Write-Host ""
                     Write-Host "💡 To resume from this section, use: -StartFromStep 3 -ResumeFromSection `"$($sectionName)`"" -ForegroundColor Cyan
                     exit 1
+                }
+
+                # Analyze grouping quality and provide feedback
+                $groupingWarnings = Test-GroupingQuality -GeneratedContent $sectionResponse -SectionName $sectionName
+                if ($groupingWarnings -and $groupingWarnings.Length -gt 0) {
+                    Write-Host ""
+                    foreach ($warning in $groupingWarnings) {
+                        Write-Host $warning -ForegroundColor Yellow
+                    }
+                    Write-Host ""
                 }
 
                 Save-StepBackup -StepName "Step3-Response-$($sectionName)" -Content $sectionResponse -StartDate $StartDate -EndDate $EndDate
@@ -700,6 +1023,15 @@ $sectionInput
         # Combine all section responses
         if ($step3Responses.Count -gt 0) {
             $step3Response = $step3Responses -join "`n`n"
+            $step3FinalOutput = @"
+STEP 3 FINAL OUTPUT: Complete News-Style Stories
+Sections Processed: $($step3Responses.Count)
+Date Range: $StartDate to $EndDate
+
+COMBINED SECTION RESPONSES:
+$step3Response
+"@
+            Save-StepBackup -StepName "Step3-FinalOutput" -Content $step3FinalOutput -StartDate $StartDate -EndDate $EndDate
             Save-StepBackup -StepName "Step3-Combined" -Content $step3Response -StartDate $StartDate -EndDate $EndDate
             Write-Host "✅ Step 3 complete - All $($step3Responses.Count) sections processed and combined"
         }
@@ -736,7 +1068,7 @@ $sectionInput
         $previousRoundupContent = ""
         
         if (Test-Path "_roundups") {
-            $roundupFiles = Get-ChildItem "_roundups" -Filter "*.md" | Sort-Object Name -Descending
+            $roundupFiles = @(Get-ChildItem "_roundups" -Filter "*.md" | Sort-Object Name -Descending)
         
             # Find the most recent roundup that's older than our start date
             foreach ($file in $roundupFiles) {
