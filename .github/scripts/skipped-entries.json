@@ -6831,5 +6831,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/service-mesh-architecture-pattern-in-azure/m-p/4448708#M785",
     "timestamp": "2025-08-27 15:16:17 +00:00",
     "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2025/08/27/a-smarter-way-to-talk-to-your-tv-microsoft-copilot-launches-on-samsung-tvs-and-monitors/",
+    "reason": "No categories found: No categories assigned. The content is entirely about the launch of Microsoft Copilot on Samsung TVs and monitors, which is a general consumer productivity/entertainment tool and not a developer tool. According to the explicit rules in Chapter 3 (Non-Development Microsoft Products, Copilot Distinction), Microsoft Copilot in consumer/productivity scenarios (including TV, Bing Chat, and general-use Copilot) is excluded from categorization. There is no substantive developer, coding, DevOps, Azure, ML, Security, or GitHub Copilot aspect. Content focuses on end-user features, entertainment, and personal productivity.",
+    "collection": "news",
+    "timestamp": "2025-08-27 17:12:23 +00:00"
   }
 ]

@@ -7596,5 +7596,29 @@
     "timestamp": "2025-08-27 16:17:05 +00:00",
     "reason": "Succesfully added: Assigned AI category because the video directly covers AI agent protocols (AI inclusion rules 1, 4, 6). Assigned Azure because Microsoft cloud development context is implied, reinforced by tags and links to aka.ms resources (Azure rule 1). Assigned Coding because the video discusses and demonstrates code samples for each protocol (Coding rule 4). No exclusion rules apply.",
     "canonical_url": "https://www.youtube.com/watch?v=X-Dh9R3Opn8"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/ef-core-visualizer-view-entity-framework-core-query-plan-inside-visual-studio/",
+    "reason": "Succesfully added: Assigned the Coding category because the content centers on enhancing the development workflow for .NET/Entity Framework Core inside Visual Studio, including writing, debugging, and optimizing LINQ queries, which fits Coding rules 1, 2, and 5. Did not assign AI, ML, Azure, DevOps, or Security as the content does not cover those aspects according to their inclusion rules. Tags were extracted focusing on technologies, extension names, and relevant database/ORM terminology.",
+    "collection": "news",
+    "timestamp": "2025-08-27 17:11:23 +00:00"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/august-2025-fabric-feature-summary/",
+    "reason": "Succesfully added: Assigned 'Azure' due to extensive use of Azure-based services and Azure DevOps integrations throughout the feature summary (Azure Inclusion Rules 1, 2, 4, 5). Assigned 'ML' for machine learning and data science enhancements, specifically real-time ML model endpoints, Data Agent improvements, Notebook/Python ML integration, and analytics features (ML Rules 1, 2, 4, 6, 9). 'DevOps' is included for new service principal and cross-tenant Azure DevOps support, CI/CD in Dataflows, Git integration, and pipelines improvements (DevOps Rules 1, 2, 5, 6, 11). 'AI' is included due to Copilot-powered setup, Data Agent (AI/agent feature), OpenAPI/UDF updates, and references to Copilot integration for developer/data engineering workflow (AI Rules 1, 3, 4). 'Coding' is relevant as new API specifications, Python Notebook integration, expanded UDF support, and collaboration features directly target developer workflows (Coding Rules 1, 4, 5). Security is not included because, while audit log and role improvements are mentioned, they are presented as administrative and analytics tooling updates, not as deep-dive security or compliance implementation content.",
+    "collection": "news",
+    "timestamp": "2025-08-27 17:12:09 +00:00"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/08/27/microsoft-ranked-number-one-in-modern-endpoint-security-market-share-third-year-in-a-row/",
+    "reason": "Succesfully added: Assigned the Security category because the article's sole focus is on Microsoft Defender for Endpoint, a core Microsoft security product, and its cross-platform endpoint protection (Security Inclusion Rule 1). The article discusses technical innovations, platform support, and security operations, which meet criteria for enterprise security architecture (Security Inclusion Rules 4, 5, and 9). No other categories apply as there is no significant focus on coding, Azure development/deployment, DevOps, ML, or AI algorithms beyond describing Defender's AI-powered features. This is not a sales pitch but a technical news announcement with relevant programmatic details.",
+    "collection": "news",
+    "timestamp": "2025-08-27 17:12:52 +00:00"
+  },
+  {
+    "canonical_url": "https://code.visualstudio.com/blogs/2025/08/27/vscode-dev-days",
+    "reason": "Succesfully added: Assigned 'AI' category because the article focuses on AI-powered features in VS Code and learning about AI-assisted development (AI inclusion rule 1, 4, 5). Assigned 'GitHub Copilot' because there are explicit sessions and references to GitHub Copilot in both event agendas and feature highlights (GitHub Copilot inclusion rules 1, 2, 4). Assigned 'Coding' because of the hands-on workshops involving practical coding exercises and the direct application of development tools (Coding inclusion rules 1, 5). No other categories apply, as the primary content is not about DevOps pipelines, Azure platform specifics, machine learning systems development, or security. Generic exclusion rules do not apply; there are no biographical, sales-pitch, business-productivity, or non-English elements. The content is technical, educational, and focused on developer tooling.",
+    "collection": "news",
+    "timestamp": "2025-08-27 17:13:29 +00:00"
   }
 ]
