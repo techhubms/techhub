@@ -7536,5 +7536,11 @@
     "canonical_url": "https://dellenny.com/service-mesh-architecture-pattern-in-azure-handling-service-to-service-communication-security-and-observability/",
     "timestamp": "2025-08-27 08:16:53 +00:00",
     "reason": "Succesfully added: Assigned 'Azure' category because the content specifically focuses on Azure-native service mesh solutions (Azure, Azure Kubernetes Service, Azure integrations). Assigned 'Security' category since it provides in-depth guidance on secure microservice communication (mTLS, RBAC, zero trust, integration with Azure Key Vault and Azure AD) in line with the Security inclusion rules. Did not assign 'DevOps' because, while policy automation via CI/CD pipelines is mentioned, the core focus is on architecture and security, not CI/CD practices themselves. Did not assign 'AI', 'ML', 'GitHub Copilot', or 'Coding' as the article neither discusses AI/ML capabilities, GitHub Copilot, nor software implementation details or code. All decisions reference Category Inclusion Rules; no Generic Exclusion Rules were triggered."
+  },
+  {
+    "canonical_url": "https://devops.com/staying-on-top-of-shadow-ai/?utm_source=rss&utm_medium=rss&utm_campaign=staying-on-top-of-shadow-ai",
+    "reason": "Succesfully added: Assigned the 'AI' category because the article centrally discusses the risks and management of unsanctioned AI use ('shadow AI'), fulfilling AI inclusion rule 5 (high-level AI usage, business applications, strategy). Assigned 'DevOps' because the target audience, context, and multiple sections focus on how DevOps teams can handle these issues (DevOps rules 3 and 4: team collaboration, best practices). Assigned 'Security' because a major theme is preventing data leakage, governance, and addressing compliance and reputational risks linked to shadow AI (Security rules 1, 2, 4, 5). No Microsoft-specific implementation details are present, so no other categories fit. Categories align with content focus and inclusion rules; generic exclusion rules don’t apply as content is technical, English-language, and practitioner-oriented.",
+    "collection": "posts",
+    "timestamp": "2025-08-27 09:14:01 +00:00"
   }
 ]
