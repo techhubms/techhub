@@ -1,0 +1,14 @@
+{
+  "Author": "JohnNaguib",
+  "Description": "As organizations modernize applications using **microservices** and **cloud-native architectures**, managing how these services communicate becomes increasingly complex. Microservices often run across distributed environments, scaling dynamically, and interacting over the network. This is where the **Service Mesh architecture pattern** comes in — providing a dedicated infrastructure layer for **service-to-service communication, security, and observability**.\n\nIn the Azure ecosystem, implementing a Service Mesh can simplify operational challenges while improving reliability and control of microservices deployments.\n\n[https://dellenny.com/service-mesh-architecture-pattern-in-azure-handling-service-to-service-communication-security-and-observability/](https://dellenny.com/service-mesh-architecture-pattern-in-azure-handling-service-to-service-communication-security-and-observability/)",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-architecture/service-mesh-architecture-pattern-in-azure/m-p/4448708#M785",
+  "OutputDir": "_community",
+  "PubDate": "2025-08-27T14:53:05+00:00",
+  "Tags": [],
+  "Title": "Service Mesh Architecture Pattern in Azure",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "EnhancedContent": "As organizations modernize applications using **microservices** and **cloud-native architectures**, managing how these services communicate becomes increasingly complex. Microservices often run across distributed environments, scaling dynamically, and interacting over the network. This is where the **Service Mesh architecture pattern** comes in — providing a dedicated infrastructure layer for **service-to-service communication, security, and observability**.\n\nIn the Azure ecosystem, implementing a Service Mesh can simplify operational challenges while improving reliability and control of microservices deployments.\n\n[https://dellenny.com/service-mesh-architecture-pattern-in-azure-handling-service-to-service-communication-security-and-observability/](https://dellenny.com/service-mesh-architecture-pattern-in-azure-handling-service-to-service-communication-security-and-observability/)",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2025-08-27 15:14:09"
+}

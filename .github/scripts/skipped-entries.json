@@ -6813,5 +6813,23 @@
     "collection": "posts",
     "timestamp": "2025-08-27 12:23:11 +00:00",
     "canonical_url": "https://dellenny.com/windows-11-clipboard-history-cloud-sync-copy-paste-superpowers/"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/best-windows-11-widgets-and-how-to-add-them/",
+    "timestamp": "2025-08-27 15:14:38 +00:00",
+    "reason": "No categories found: All assigned categories are excluded because the content is primarily focused on end-user productivity features of Windows 11, specifically widgets such as weather, calendar, to-do, traffic, news, and more. There is no discussion of development, coding, DevOps processes, AI/ML/automation implementation, security configuration, or Microsoft technical architecture. The information provided is aimed at general users to improve desktop experience, not for Microsoft developers or consultants. This qualifies as 'Non-Development Microsoft Products' and general business/productivity exclusion per Chapter 3: Generic Exclusion Rules and the 'Non-Development Microsoft Products' exclusion. No categories are appropriate."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/O-aGmPErq-4",
+    "timestamp": "2025-08-27 15:16:15 +00:00",
+    "reason": "No categories found: No categories assigned. The description indicates that this video collects general attendee and guest opinions about developer security at an event (Microsoft Build 2025) rather than providing concrete technical guidance or implementation details. The content is not provided, and based on the description, it focuses on high-level perspectives and a Microsoft initiative (Secure Future Initiative) without in-depth technical substance. According to the generic exclusion rules, content that is event coverage, summary of opinions, or high-level advocacy without actionable technical depth is excluded—especially since there is no substantive content present to evaluate against category inclusion rules."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/service-mesh-architecture-pattern-in-azure/m-p/4448708#M785",
+    "timestamp": "2025-08-27 15:16:17 +00:00",
+    "reason": "Insufficient content length"
   }
 ]
