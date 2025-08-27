@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "AI, Developer Workflows, and Security: This Week’s Key Developments in GitHub Copilot, Azure, and Cloud"
+title: "This Week’s Key Developments in GitHub Copilot, Azure, and Cloud"
 description: "Explore this week's important updates in developer productivity and cloud technology, including deep GPT-5 integration in GitHub Copilot, the expansion of the Model Context Protocol for secure AI workflows, and Microsoft's fresh approaches to agent orchestration, Copilot Studio, open-source projects, and essential security fixes. Across the industry, new tools, platform improvements, and AI-driven automation are shaping how teams collaborate, code, build machine learning solutions, manage infrastructure, and address security."
 author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
