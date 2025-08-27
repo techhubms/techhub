@@ -62,7 +62,7 @@ AI’s role isn’t limited to writing code. Microsoft continues to fold GitHub 
 - [Coding](#coding)
   - [Major Platform Features and Updates: .NET 10 Preview, Excel Python Image Analysis, Spark Resilience](#major-platform-features-and-updates-net-10-preview-excel-python-image-analysis-spark-resilience)
   - [Guides for Modern, Cross-Platform Development: .NET Aspire, .NET MAUI, Browser-Based .NET](#guides-for-modern-cross-platform-development-net-aspire-net-maui-browser-based-net)
-  - [Language Evolution and the Future of Web Development: C# 14, ASP.NET Core & Blazor in .NET 10](#language-evolution-and-the-future-of-web-development-c-14-aspnet-core-blazor-in-net-10)
+  - [Language Evolution and the Future of Web Development: C# 14, ASP.NET Core & Blazor in .NET 10](#language-evolution-and-the-future-of-web-development-c-14-aspnet-core--blazor-in-net-10)
   - [Other Coding News](#other-coding-news)
 - [DevOps](#devops)
   - [The Rise of AI Agents and Automation in DevOps](#the-rise-of-ai-agents-and-automation-in-devops)
