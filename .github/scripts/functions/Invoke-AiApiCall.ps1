@@ -62,6 +62,10 @@ function Invoke-AiApiCall {
     }
 
     if ($PSCmdlet.ShouldProcess("AI API", "Send chat completion request")) {
+        Write-Host "Sending request to: $uri" -ForegroundColor Cyan
+        Write-Host "Model: $Model" -ForegroundColor Cyan
+        Write-Host "Request body length: $($apiRequestBody.Length) characters" -ForegroundColor Cyan
+        
         $retryCount = 0
         $success = $false
         $response = $null
@@ -101,6 +105,16 @@ function Invoke-AiApiCall {
 
                 if ($statusDescription) {
                     Write-Host "Response StatusDescription: $statusDescription"
+                }
+
+                # Log response content for 400 errors to help debug
+                if ($statusCode -eq 400) {
+                    Write-Host "Response Content for 400 error:" -ForegroundColor Yellow
+                    if ($responseContent) {
+                        Write-Host $responseContent -ForegroundColor Yellow
+                    } else {
+                        Write-Host "No response content available" -ForegroundColor Yellow
+                    }
                 }
 
                 if ($statusCode -eq 413 -or $statusDescription -eq 'Request Entity Too Large') {
@@ -166,6 +180,13 @@ function Invoke-AiApiCall {
                 try {
                     # Try to read response content for content filter detection
                     if ($responseContent) {
+                        $contentToCheck = $responseContent
+                    } else {
+                        # If responseContent is not available, try to extract from exception message
+                        $contentToCheck = $_.Exception.Message
+                    }
+                    
+                    if ($contentToCheck) {
                         $errorPatterns = @(
                             "content.*filter",
                             "content.*policy",
@@ -173,13 +194,18 @@ function Invoke-AiApiCall {
                             "content.*violation",
                             "blocked.*content",
                             "safety.*filter",
-                            "content.*moderation"
+                            "content.*moderation",
+                            "jailbreak.*filtered",
+                            "ResponsibleAIPolicyViolation",
+                            "content_filter"
                         )
                 
-                        $errorText = "$($_.Exception.Message) $responseContent".ToLower()
+                        # Convert to string first, then to lowercase for pattern matching
+                        $errorText = $contentToCheck.ToString().ToLower()
                         foreach ($pattern in $errorPatterns) {
                             if ($errorText -match $pattern) {
-                                return ([PSCustomObject]@{ Error = $true; Type = "ContentFilter"; Pattern = $pattern } | ConvertTo-Json -Compress)
+                                Write-Host "❌ Content filter violation detected. Pattern: $pattern" -ForegroundColor Red
+                                return ([PSCustomObject]@{ Error = $true; Type = "ContentFilter"; Pattern = $pattern; ResponseContent = $contentToCheck.ToString() } | ConvertTo-Json -Compress)
                             }
                         }
                     }
