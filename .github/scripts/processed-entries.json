@@ -7518,5 +7518,17 @@
     "reason": "Succesfully added: Assigned 'AI' because the core subject is LLM inference benchmarking (AI inclusion rule 1 and 4) using Microsoft/Open models. Assigned 'Azure' because all tests are against Azure ND-series VMs, with significant Azure-specific setup, infrastructure, and cost metrics (Azure inclusion rules 1 and 5). Did not assign 'ML' because the focus is on operational AI inference, not model development or data science pipelines. Did not assign 'DevOps', 'Coding', or 'Security' because content does not address CI/CD, application code, or security practices. All category decisions are based on explicit references to Azure infra, AI model inference, and benchmarks throughout the content.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/inference-performance-of-llama-3-1-8b-using-vllm-across-various/ba-p/4448420",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/semantic-kernel/azure-authentication-changes-in-semantic-kernel-python/",
+    "collection": "news",
+    "reason": "Succesfully added: AI category assigned because content is about Semantic Kernel, a Microsoft AI development tool (AI rule 3). Azure assigned due to the focus on Azure authentication practices and Azure Identity SDK (Azure rules 1, 2, and 4). Coding assigned due to discussion of Python code, APIs, and credential integration (Coding rules 1, 2, 4). No categories for DevOps, ML, Security, or GitHub Copilot as the content does not focus on those areas.",
+    "timestamp": "2025-08-27 06:18:38 +00:00"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/semantic-kernel/encoding-changes-for-template-arguments-in-semantic-kernel/",
+    "collection": "news",
+    "reason": "Succesfully added: The post centers on changes to template argument handling in Semantic Kernel, a Microsoft AI developer technology. Assigned the 'AI' category because Semantic Kernel is a Microsoft AI framework (AI rule 3) and the changes focus on prompt/template security, a core AI developer concern (AI rule 4). Assigned the 'Coding' category because the content provides practical .NET and Python code examples and directly addresses how to update code (Coding rules 1 and 4). Did not add 'Azure', 'DevOps', 'ML', or 'Security' categories since the changes relate specifically to application-level SDK use rather than security operations or ML/data science pipelines.",
+    "timestamp": "2025-08-27 06:19:17 +00:00"
   }
 ]
