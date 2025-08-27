@@ -7554,5 +7554,23 @@
     "collection": "videos",
     "timestamp": "2025-08-27 12:23:37 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=tD46WVJ2h9I"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/system-initiative-adds-ai-agents-to-infrastructure-automation-platform/?utm_source=rss&utm_medium=rss&utm_campaign=system-initiative-adds-ai-agents-to-infrastructure-automation-platform",
+    "timestamp": "2025-08-27 15:15:04 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the article’s main focus is the use of AI agents for automating infrastructure tasks (AI inclusion rule 1 and rule 4). Assigned the DevOps category because the content centers on DevOps workflows, automation, and how these AI agents integrate with existing DevOps teams (DevOps inclusion rules 1, 3, and 5). There is no substantive Microsoft-specific focus, so Azure, ML, Coding, Security, and GitHub Copilot categories do not apply. None of the generic exclusion rules apply, as the article is technical and relevant, with sufficient detail and no marketing or biographical focus."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/7_MaC7CabkM",
+    "timestamp": "2025-08-27 15:15:35 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content centers around the impact of AI on developer careers, the importance of AI mastery, and project-based learning using AI technologies (AI rules 4, 5). Did not assign 'GitHub Copilot' because the video discusses AI generically as a field/tool and does not reference GitHub Copilot specifically (no mention of code completion, Copilot-specific features, or AI-powered developer assistants). Similarly, other categories like 'Coding', 'DevOps', 'Azure', 'ML', and 'Security' are not assigned since the main focus is on high-level AI adoption and professional development, not hands-on coding tutorials, DevOps or Azure-specific technologies, or ML/data science engineering."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=HDEGFNAUkX8",
+    "timestamp": "2025-08-27 15:16:00 +00:00",
+    "reason": "Succesfully added: Categories 'AI' and 'GitHub Copilot' are assigned because the video focuses on GitHub Copilot's AI-assisted features for code review and Autofix (AI rule 2, GitHub Copilot rules 1 and 2). 'DevOps' is included due to the emphasis on code review, testing, pull requests, and integration processes within team workflows (DevOps rules 2, 3, and 5). No generic exclusion rules apply; the content is technical, not promotional or biographical, and targets developer practices."
   }
 ]
