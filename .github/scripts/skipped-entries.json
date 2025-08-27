@@ -6855,5 +6855,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=OxMAutnbaY0",
     "timestamp": "2025-08-27 20:13:45 +00:00"
+  },
+  {
+    "reason": "No categories found: All categories are excluded based on generic exclusion rules. The content is a game review/preview with a hands-on look at 'The Outer Worlds 2,' which is a consumer-focused, non-development video game. No Microsoft developer technologies, coding, devops, AI, Azure, ML, or security topics are discussed; the article is entertainment and gaming-focused with no technical implementation or development aspect. As per generic exclusion rules, consumer gaming/news/entertainment content is not relevant for technical aggregation and receives no categories.",
+    "timestamp": "2025-08-27 21:12:19 +00:00",
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2025/08/27/how-the-outer-worlds-2-sets-you-up-for-adventure/"
   }
 ]
