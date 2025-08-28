@@ -7746,5 +7746,11 @@
     "reason": "Succesfully added: Categories assigned as follows: 'DevOps' because the content is centered on administration, governance, and management of code repositories and developer tools (DevOps rules 1, 3, 4, 9); 'GitHub Copilot' and 'AI' because the video covers configuration and governance of GitHub Copilot (GitHub Copilot rule 1 and 2, and AI rule 2); 'Security' because it explicitly discusses security settings and enforcement (Security rules 1 and 4). 'Azure' and 'ML' were not assigned since the video does not directly address Azure cloud or data/ML topics. Content does not trigger any exclusion rules and meets the standard for technical relevance and depth.",
     "collection": "videos",
     "timestamp": "2025-08-28 14:13:29 +00:00"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: The content focuses on an individual's experience with the AI-900 Microsoft certification exam, including details about the concepts covered—such as Azure AI services, machine learning, computer vision, NLP, and conversational AI. Although the post includes some personal context, the main value is technical and educational regarding Microsoft Azure AI technologies and certification strategies. Therefore, the AI category is included under 'AI rule 1' as Azure AI Fundamentals is a core Microsoft AI certification. The Azure category is included under 'Azure rule 1' since all AI features and certification scope discussed are Azure-based. No Coding, ML, DevOps, Security, or GitHub Copilot categories were added because the post does not cover hands-on development or ML engineering, and focuses on foundational and platform aspects of Azure AI rather than implementation from scratch. Generic exclusion rules for biographical content do not apply since the post's main value is in explaining Azure AI's technical certification landscape, not the author's biography.",
+    "canonical_url": "https://www.thomasmaurer.ch/2025/08/passed-the-microsoft-ai-900-exam-for-microsoft-certified-azure-ai-fundamentals-%f0%9f%8e%89/",
+    "timestamp": "2025-08-28 15:13:29 +00:00"
   }
 ]

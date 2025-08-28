@@ -1,0 +1,14 @@
+{
+  "PubDate": "2025-08-28T14:26:53+00:00",
+  "Title": "Entra ID User Properties - Dynamic Groups",
+  "EnhancedContent": "Does anyone now if MS is planning on added more properties that can be used to create dynamic groups. It would be great to have a number of generic properties that can be set.\n\nCurrently I am using the ExtensionAttributes from On-Prem, but would like to get away from them.",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/entra-id-user-properties-dynamic-groups/m-p/4449174#M22151",
+  "Author": "adm_lawrimore",
+  "ProcessedDate": "2025-08-28 15:12:34",
+  "OutputDir": "_community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Tags": [],
+  "Description": "Does anyone now if MS is planning on added more properties that can be used to create dynamic groups. It would be great to have a number of generic properties that can be set.\n\nCurrently I am using the ExtensionAttributes from On-Prem, but would like to get away from them.",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "FeedName": "Microsoft Tech Community"
+}

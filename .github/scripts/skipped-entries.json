@@ -6891,5 +6891,11 @@
     "timestamp": "2025-08-28 12:23:46 +00:00",
     "reason": "No categories found: Content excluded because the 'content' field is null, so there is not enough substantive information to determine its technical depth or apply category inclusion rules. Per workflow, when there is insufficient main content (lack of full content text), the exclusion applies under the 'focus on actual content' guideline in Chapter 2 and the general principle of not fabricating information from incomplete data. Therefore, no categories can be assigned.",
     "collection": "videos"
+  },
+  {
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/entra-id-user-properties-dynamic-groups/m-p/4449174#M22151",
+    "timestamp": "2025-08-28 15:13:33 +00:00"
   }
 ]
