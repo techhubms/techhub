@@ -7788,5 +7788,11 @@
     "timestamp": "2025-08-28 17:13:09 +00:00",
     "collection": "news",
     "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the content centers on practical usage of Copilot (developer coding assistant) as an AI coding agent (AI Rule 2, GitHub Copilot Rules 1–4). Coding is included since the focus is on automation and code-generation tasks (Coding Rule 4). Security qualifies due to the technical focus on Secret Protection, application security, and credential management (Security Rule 2, 7). DevOps is included as the workflow involves GitHub Actions, automated pull requests, and pipeline integration (DevOps Rules 2, 5, 9). All categories are supported by strong technical detail focused on engineering, not business productivity or end-user scenarios. The article is in English, meets technical accuracy requirements, contains no biographical, sales, or business strategy content, and does not trigger any generic exclusions."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-08-28-improvements-to-the-home-dashboard-available-in-public-preview",
+    "reason": "Succesfully added: Assigned the DevOps category because the announced improvements are focused on workflow management features within GitHub, specifically around handling pull requests and issues—a core concern for software delivery and team collaboration (DevOps rules 2, 3, and 9). No Coding or AI categories are assigned because there is no mention of programming languages, code, or AI features. Azure, ML, Security, and GitHub Copilot categories do not apply since the content does not discuss those areas. The update is technical and relevant for developer productivity, not general business or end-user functionality.",
+    "collection": "news",
+    "timestamp": "2025-08-28 18:18:11 +00:00"
   }
 ]
