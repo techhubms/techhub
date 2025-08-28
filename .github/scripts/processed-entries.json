@@ -7698,5 +7698,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-communication-services/build-your-ai-email-agent-with-microsoft-copilot-studio/ba-p/4448724",
     "timestamp": "2025-08-27 23:13:16 +00:00",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-08-28 00:54:13 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-08-27-create-sub-issues-with-copilot-in-public-preview",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content focuses on new features within GitHub Copilot, a developer AI assistant, per the AI and GitHub Copilot inclusion rules. The 'DevOps' category is included because issue management and project organization through GitHub are core aspects of DevOps workflows (DevOps rule 11). Coding is not included since the feature is about project/issue management mechanisms, not code development itself. Azure, ML, and Security are not relevant to this update. All rules followed: categories assigned for technical depth and developer audience, not productivity for general business users."
+  },
+  {
+    "timestamp": "2025-08-28 00:54:47 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/_NnAGjBc64Y",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centers on using MCP Server in conjunction with GitHub Copilot, which is a Microsoft AI developer tool (AI rules 1, 2). Assigned 'GitHub Copilot' category because MCP is specifically referenced as part of the GitHub Copilot feature set and agent mode (GitHub Copilot rules 1, 2, 3). The description and tags make it clear this is about developer coding assistance, not business productivity. Not assigning Coding or DevOps categories because the primary focus is tool installation and workflow enablement rather than specific coding practices or DevOps processes. 'Azure' and 'ML' categories are not relevant based on the content."
   }
 ]

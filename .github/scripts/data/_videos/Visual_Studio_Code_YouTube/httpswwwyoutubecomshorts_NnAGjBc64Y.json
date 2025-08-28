@@ -1,0 +1,22 @@
+{
+  "Tags": [
+    "copilot",
+    "githubcopilot",
+    "mcp",
+    "mcpserver",
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "Author": "Visual Studio Code",
+  "Description": "Super charge your developer workflow with local and remote MCP Servers inside VS Code and GitHub Copilot Agent mode! 🚀\n\n#mcpserver #vscode #githubcopilot Follow VS Code: \\* X: https://x.com/code \\* Bluesky: https://bsky.app/profile/vscode.dev \\* YouTube: https://youtube.com/code \\* LinkedIn: https://www.linkedin.com/showcase/104107263 \\* GitHub: https://github.com/microsoft/vscode",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Link": "https://www.youtube.com/shorts/_NnAGjBc64Y",
+  "FeedName": "Visual Studio Code YouTube",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "EnhancedContent": null,
+  "PubDate": "2025-08-28T00:00:43+00:00",
+  "ProcessedDate": "2025-08-28 00:53:27",
+  "Title": "Installing the GitHub MCP Server in VS Code"
+}
