@@ -7740,5 +7740,11 @@
     "reason": "Succesfully added: Assigned the Azure category since the content’s main focus is deploying Azure Logic Apps using Azure's Deployment Center feature (Azure rule 1 and 4). Assigned the DevOps category because it describes CI/CD automation and integration with pipelines, source control, and deployment scripts (DevOps rules 1, 3, and 5). Did not assign Coding, AI, ML, Security, or GitHub Copilot – there is no code-level development focus, AI/ML detail, security implementation, or GitHub Copilot coverage present. Generic exclusion rules do not apply because the article meets content length, is technical and implementation-focused, and is not biographical, sales, or business-strategy oriented.",
     "timestamp": "2025-08-28 09:14:34 +00:00",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=ArHfPM4lnPA",
+    "reason": "Succesfully added: Categories assigned as follows: 'DevOps' because the content is centered on administration, governance, and management of code repositories and developer tools (DevOps rules 1, 3, 4, 9); 'GitHub Copilot' and 'AI' because the video covers configuration and governance of GitHub Copilot (GitHub Copilot rule 1 and 2, and AI rule 2); 'Security' because it explicitly discusses security settings and enforcement (Security rules 1 and 4). 'Azure' and 'ML' were not assigned since the video does not directly address Azure cloud or data/ML topics. Content does not trigger any exclusion rules and meets the standard for technical relevance and depth.",
+    "collection": "videos",
+    "timestamp": "2025-08-28 14:13:29 +00:00"
   }
 ]
