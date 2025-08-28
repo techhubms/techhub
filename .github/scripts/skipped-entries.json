@@ -6873,5 +6873,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=sWTXM-DlSI0",
     "timestamp": "2025-08-27 23:12:14 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-08-28 07:12:53 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/storage-not-reachable-from-network-using-service-endpoint/m-p/4448952#M679"
   }
 ]

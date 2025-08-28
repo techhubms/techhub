@@ -7734,5 +7734,11 @@
     "reason": "Succesfully added: Categories assigned are 'AI' (due to the central discussion of AI coding assistants, AI-generated code, open source AI models, and their impacts—AI rule 1 and 4), 'DevOps' (extensive focus on team productivity, DevSecOps best practices, SCA toolchains, and SBOM—DevOps rules 5, 6, 9, 10), 'Security' (due to primary concerns over vulnerabilities introduced by AI, open source license risk, and the need for greater governance—Security rules 2, 4, 5, 8, 10), and 'Coding' (because of language, toolchain, and developmental practice coverage—Coding rules 1, 2, 4). No Microsoft category (e.g., Azure, ML) applies since Microsoft platforms are not central or specifically mentioned in the survey content.",
     "timestamp": "2025-08-28 06:22:15 +00:00",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-setup-cd-in-azure-logic-apps-standard-with-deployment/ba-p/4449013",
+    "reason": "Succesfully added: Assigned the Azure category since the content’s main focus is deploying Azure Logic Apps using Azure's Deployment Center feature (Azure rule 1 and 4). Assigned the DevOps category because it describes CI/CD automation and integration with pipelines, source control, and deployment scripts (DevOps rules 1, 3, and 5). Did not assign Coding, AI, ML, Security, or GitHub Copilot – there is no code-level development focus, AI/ML detail, security implementation, or GitHub Copilot coverage present. Generic exclusion rules do not apply because the article meets content length, is technical and implementation-focused, and is not biographical, sales, or business-strategy oriented.",
+    "timestamp": "2025-08-28 09:14:34 +00:00",
+    "collection": "community"
   }
 ]
