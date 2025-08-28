@@ -314,7 +314,7 @@ try {
 
     # Validate StartFromStep - Steps 2A and 2B are both part of Step 2
     if ($StartFromStep -lt 1 -or $StartFromStep -gt 9) {
-        Write-Error "StartFromStep must be between 1 and 9. Note: Step 2 now includes both 2A (filtering) and 2B (analysis)."
+        Write-Error "StartFromStep must be between 1 and 9. Note: Step 2 includes both 2A (developer relevance filtering) and 2B (detailed analysis). Both substeps run automatically when using StartFromStep 2."
         exit 1
     }
 
@@ -524,6 +524,17 @@ $articleContent
     }
     else {
         Write-Host "⏭️ Skipping Step 2A (developer relevance filtering) - resuming from backup"
+        # Restore developerRelevantArticles from backup
+        $filteringBackupJson = Load-StepBackup -StepName "Step2A-FilteringResults" -StartDate $StartDate -EndDate $EndDate
+        if ($null -eq $filteringBackupJson -or $filteringBackupJson -eq "") {
+            throw "Could not restore developer-relevant articles from backup for Step 2A. Backup file missing or empty."
+        }
+        try {
+            $developerRelevantArticles = $filteringBackupJson | ConvertFrom-Json
+        }
+        catch {
+            throw "Failed to parse developer-relevant articles backup for Step 2A: $($_.Exception.Message)"
+        }
     }
 
     # Step 2B: Deep Analysis of Developer-Relevant Articles (skip if resuming from later step)
@@ -1663,6 +1674,14 @@ Return only JSON with fields: title, tags, description, introduction
                 Write-Host "❌ Step 7 response missing required metadata fields (title, description, tags)" -ForegroundColor Red
                 Write-Host "Response: $step7Response" -ForegroundColor Red
                 Write-Error "Step 7 metadata generation failed: missing required fields"
+                exit 1
+            }
+            
+            # Validate title length (max 80 characters)
+            if ($testParse.title.Length -gt 80) {
+                Write-Host "❌ Step 7 title exceeds 80 character limit: $($testParse.title.Length) characters" -ForegroundColor Red
+                Write-Host "Title: $($testParse.title)" -ForegroundColor Red
+                Write-Error "Step 7 metadata generation failed: title exceeds 80 character limit"
                 exit 1
             }
         }
