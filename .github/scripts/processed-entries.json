@@ -7836,5 +7836,11 @@
     "reason": "Succesfully added: The content is focused on the introduction of the GPT-5 mini model within GitHub Copilot, a developer tool. According to Chapter 4, assigning the 'GitHub Copilot' category is appropriate for coverage of Copilot features (GitHub Copilot rule 1). The 'AI' category must always be included alongside 'GitHub Copilot' when directly relevant (AI rule 2). The post discusses deployment in development environments like Visual Studio and JetBrains IDEs, but as the content is an announcement of availability rather than code-level integration or DevOps configuration, 'Coding' and 'DevOps' categories are not justified. There are no generic exclusion rules triggered, as the content is technical, relevant, and developer-focused.",
     "canonical_url": "https://github.blog/changelog/2025-08-28-openai-gpt-5-mini-is-now-available-in-public-preview-in-visual-studio-jetbrains-ides-xcode-and-eclipse",
     "timestamp": "2025-08-28 21:12:53 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/performance-analysis-of-deepseek-r1-ai-inference-using-vllm-on/ba-p/4449351",
+    "reason": "Succesfully added: The content covers large language model inference (DeepSeek R1) on Azure GPUs using open-source tools (vLLM), focusing on benchmark results, cost analysis, installation, hardware configuration, and API usage. This qualifies for the AI category due to its discussion of AI models and inference serving, and for the Azure category because the infrastructure and deployment focus is on Azure ND_H100_v5 VMs (Azure rules 1 and 4; AI rules 1 and 4). Coding, ML, and DevOps categories were not chosen because, while there are code snippets and benchmarking, the primary focus is infrastructure, deployment, and AI inference analysis rather than software engineering, ML framework development, or DevOps pipelines. Security is not substantively addressed. No generic exclusion rules apply (the content is in English, technically substantive, and not biographical or commercially promotional).",
+    "timestamp": "2025-08-28 23:13:07 +00:00",
+    "collection": "community"
   }
 ]
