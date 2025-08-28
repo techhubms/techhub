@@ -7794,5 +7794,29 @@
     "reason": "Succesfully added: Assigned the DevOps category because the announced improvements are focused on workflow management features within GitHub, specifically around handling pull requests and issues—a core concern for software delivery and team collaboration (DevOps rules 2, 3, and 9). No Coding or AI categories are assigned because there is no mention of programming languages, code, or AI features. Azure, ML, Security, and GitHub Copilot categories do not apply since the content does not discuss those areas. The update is technical and relevant for developer productivity, not general business or end-user functionality.",
     "collection": "news",
     "timestamp": "2025-08-28 18:18:11 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-08-28-copilot-coding-agent-now-supports-agents-md-custom-instructions",
+    "collection": "news",
+    "timestamp": "2025-08-28 19:10:45 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the news covers GitHub Copilot's autonomous coding agent and its support for AGENTS.md custom instruction files (GitHub Copilot Inclusion Rule 1 and 2; AI Inclusion Rule 1 and 2). Technical details focus on enabling developer control and workflow automation through configuration files, which fits the technical domain. No other categories apply—content does not address coding logic, DevOps pipelines, Azure infrastructure, ML/data science, or security practices."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-08-28-start-and-track-copilot-coding-agent-tasks-from-raycast",
+    "collection": "news",
+    "timestamp": "2025-08-28 19:11:11 +00:00",
+    "reason": "Succesfully added: Included 'AI' because the article explains interacting with GitHub Copilot coding agents and AI agent automation (AI rule 2, 1, 4). Included 'GitHub Copilot' because the main focus is GitHub Copilot’s new integration with Raycast for coding agent tasks (GitHub Copilot inclusion rules 1-4). Did not assign 'Coding' since the article does not describe code writing or sample code; instead it is about workflow integration. No 'Azure', 'DevOps', 'ML', or 'Security' content present."
+  },
+  {
+    "canonical_url": "https://github.blog/open-source/maintainers/how-github-models-can-help-open-source-maintainers-focus-on-what-matters/",
+    "collection": "news",
+    "timestamp": "2025-08-28 19:11:58 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the content focuses on GitHub Models, which are AI-powered tools for workflow automation (AI category rule 1). Assigned 'DevOps' because the article demonstrates the use of GitHub Actions, workflow configuration, and automation concepts typical of DevOps practices (DevOps category rules 2, 5, and 6). Did not assign 'GitHub Copilot' since the content is specifically about GitHub Models, not Copilot itself; Copilot is not discussed. 'Coding', 'Azure', 'ML', and 'Security' were not added because the focus is on project automation and maintainership, not direct application software development, Azure platform specifics, ML algorithm creation, or security configuration."
+  },
+  {
+    "canonical_url": "https://r-vm.com/new-website-tech-hub-ms.html",
+    "collection": "posts",
+    "timestamp": "2025-08-28 19:12:56 +00:00",
+    "reason": "Succesfully added: The content is a detailed announcement of a technical website that curates Microsoft engineering content with an AI-driven taxonomy. Categories 'AI' and 'GitHub Copilot' are included because the site features and aggregates dedicated sections for each (per AI Category rule 1 and GitHub Copilot Category rule 1). 'Azure' is included as it's a major site topic and multiple technical features/services and future plans are Azure-specific (Azure Category rule 1). 'DevOps' is included since DevOps is named as a primary focus and the technical workflow involves DevOps tooling and CI/CD automation (DevOps Category rule 1 and 5). Coding and ML are NOT included—while coding topics are planned for future blogs, this announcement is not a development tutorial nor does it provide code-level how-to guidance, so Coding Category rule 4 does not apply; ML is not included since, although mentioned, the content is not about building ML workflows (ML Category not met). Security is not included since it is listed as a covered topic but is not substantively discussed in the post. The explanation includes tag selection methods as specified in instructions."
   }
 ]

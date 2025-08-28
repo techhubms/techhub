@@ -6909,5 +6909,17 @@
     "reason": "No categories found: All categories are excluded according to the generic exclusion rules. The content is a company news update focused on Xbox hardware, console features, cross-device play, app navigation, and new game/service releases. There is no substantive developer, coding, DevOps, Azure, AI, ML, or Security content. The mention of 'Gaming Copilot (Beta)' refers to a consumer-facing gaming assistant, not a developer tool (rule: exclude Microsoft Copilot in consumer/business productivity contexts). The article does not cover app/game development, APIs, SDKs, or technical implementation details relevant to the predefined categories. Therefore, no categories apply.",
     "collection": "news",
     "timestamp": "2025-08-28 18:17:50 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-set-up-multi-factor-authentication-mfa-in-microsoft-365/",
+    "collection": "posts",
+    "timestamp": "2025-08-28 19:12:15 +00:00",
+    "reason": "No categories found: No categories assigned. The content is focused on administering and configuring Multi-Factor Authentication (MFA) for Microsoft 365 using the Admin Center, aimed at improving end-user account security. According to the generic exclusion rules for 'Non-Development Microsoft Products', content about Microsoft 365 that isn't focused on development, APIs, automation, or custom integration should be excluded. This article does not discuss development, scripting, integration, or technical architecture but rather provides end-user-oriented administrative instructions for an IT configuration. Therefore, it does not qualify for any Tech Hub categories."
+  },
+  {
+    "canonical_url": "https://dellenny.com/troubleshooting-common-windows-11-issues/",
+    "collection": "posts",
+    "timestamp": "2025-08-28 19:12:28 +00:00",
+    "reason": "No categories found: No categories were assigned because the content, 'Troubleshooting Common Windows 11 Issues', is focused on general end-user troubleshooting of Windows 11, such as performance, network, Bluetooth, printer, and UI issues. According to the Generic Exclusion Rules, content about non-development Microsoft products—such as Windows OS usage, general system administration, device connectivity, and productivity troubleshooting—is excluded unless there is a development or technical architecture focus. There is no coverage of programming, scripting, deployment, coding, DevOps, AI, ML, security development, or developer tool usage. Therefore, this post does not meet the inclusion criteria for any predefined categories."
   }
 ]
