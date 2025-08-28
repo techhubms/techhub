@@ -1,4 +1,6 @@
 name: Weekly Roundup Generation
+permissions:
+  contents: write
 
 on:
   schedule:
