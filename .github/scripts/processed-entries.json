@@ -7752,5 +7752,23 @@
     "reason": "Succesfully added: The content focuses on an individual's experience with the AI-900 Microsoft certification exam, including details about the concepts covered—such as Azure AI services, machine learning, computer vision, NLP, and conversational AI. Although the post includes some personal context, the main value is technical and educational regarding Microsoft Azure AI technologies and certification strategies. Therefore, the AI category is included under 'AI rule 1' as Azure AI Fundamentals is a core Microsoft AI certification. The Azure category is included under 'Azure rule 1' since all AI features and certification scope discussed are Azure-based. No Coding, ML, DevOps, Security, or GitHub Copilot categories were added because the post does not cover hands-on development or ML engineering, and focuses on foundational and platform aspects of Azure AI rather than implementation from scratch. Generic exclusion rules for biographical content do not apply since the post's main value is in explaining Azure AI's technical certification landscape, not the author's biography.",
     "canonical_url": "https://www.thomasmaurer.ch/2025/08/passed-the-microsoft-ai-900-exam-for-microsoft-certified-azure-ai-fundamentals-%f0%9f%8e%89/",
     "timestamp": "2025-08-28 15:13:29 +00:00"
+  },
+  {
+    "timestamp": "2025-08-28 16:15:35 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-august-2025/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the ML category because the spotlighted content has a data science and analytics development focus, with sections dedicated to Data Science (advanced Pandas for analysis), Data Engineering (data flows, error handling), and Power BI development (DAX, calculation groups). While the article is a monthly community round-up primarily aggregating links and highlights, its technical depth meets the inclusion rules for the ML category as the content centers on Microsoft Fabric's advanced data engineering, BI, and data science practices (ML rules 1-4, 9). The content does not meet the Azure, Coding, Security, DevOps, AI, or GitHub Copilot rules as neither Azure-specific nor AI tool integration is substantially discussed, and there's no programming or DevOps process focus. The spotlighted works primarily demo development and analytics workflows within the Fabric platform, matching the ML category."
+  },
+  {
+    "timestamp": "2025-08-28 16:16:08 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/oL9wOFW4p9o",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned Coding category because the content is centered on the technical facets of WSL (Windows Subsystem for Linux) being open sourced, with mention of VM management, file system mounting, GPU access, and the availability of source code for developer inspection and contribution. No other inclusion or exclusion criteria for Azure, AI, DevOps, Security, or ML are triggered by the description and tags. Generic exclusion rules do not apply as this is not sales, biographical, or business/productivity content, nor is it too short or link-heavy."
+  },
+  {
+    "timestamp": "2025-08-28 16:16:33 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=FKanhfIwK-0",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Coding category because the video centers on open sourcing the Windows Subsystem for Linux (WSL), a development and platform tool, and encourages developers to inspect, learn from, and build with the WSL source code, which fits under Coding rule 5 (Microsoft development tools) and rule 4 (Microsoft ecosystem packages/libraries). No other categories qualify as the topic does not specifically focus on AI, DevOps, Azure, ML, Security, or GitHub Copilot as per their respective rules."
   }
 ]
