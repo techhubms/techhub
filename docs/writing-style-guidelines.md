@@ -28,6 +28,8 @@ This document defines the writing style and tone requirements for all content in
 - **Superlatives**: "the best", "amazing", "incredible", "the ultimate solution"
 - **Marketing speak**: "delve into", "leverage", "synergize", "transformative", "unprecedented"
 - **AI-generated tells**: Starting with "In an era", "In a world", excessive use of "fundamentally"
+- **Impact qualifiers**: "pivotal", "significant", "major", "substantial", "dramatic", "massive"
+- **Intensity words**: "breakthrough", "cutting-edge", "world-class", "industry-leading", "paradigm-shifting"
 
 ### Vague or Generic Language
 
@@ -50,6 +52,8 @@ This document defines the writing style and tone requirements for all content in
 - **Practical benefits**: Focus on what users can actually accomplish
 - **Real-world context**: Explain how features solve actual problems
 - **Honest limitations**: Acknowledge when something has constraints or trade-offs
+- **Neutral descriptors**: Use "new", "updated", "improved", "enhanced", "additional", "latest" instead of flashy qualifiers
+- **Capability-focused**: Describe what something "enables", "provides", "supports", or "includes" rather than how impressive it is
 
 ### Clear Structure
 

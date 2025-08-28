@@ -7,7 +7,8 @@
 .DESCRIPTION
     This script creates weekly roundups using a structured 9-step process:
     1. Collect articles from the specified date range
-    2. Analyze each article for summary and section categorization via AI
+    2A. Filter articles for developer relevance (exclude corporate content)
+    2B. Analyze developer-relevant articles for summary and section categorization via AI
     3. Create well-organized stories with intelligent grouping (processes each section individually to avoid token limits)
     4. Create ongoing narrative by comparing with the previous roundup (processes each section individually)
     5. Merge all section responses and prepare for condensation
@@ -204,15 +205,18 @@ function Get-RoundupFileInfo {
     }
 }
 
-# Import functions
-$functionsPath = if ($WorkspaceDirectory -eq $PSScriptRoot) {
-    # Running from the script's directory
-    Join-Path $PSScriptRoot "functions"
+# Establish base script directory path for consistent usage throughout script
+$ScriptDirectory = if ($WorkspaceDirectory -eq $PSScriptRoot) {
+    # Running from the script's directory - use PSScriptRoot directly
+    $PSScriptRoot
 }
 else {
-    # Running from workspace root
-    Join-Path $WorkspaceDirectory ".github/scripts/functions"
+    # Running from workspace root - construct path to script directory
+    Join-Path $WorkspaceDirectory ".github" "scripts"
 }
+
+# Import functions using the established base path
+$functionsPath = Join-Path $ScriptDirectory "functions"
 
 # Import Write-ErrorDetails first (for error handling), then all others sorted alphabetically
 . (Join-Path $functionsPath "Write-ErrorDetails.ps1")
@@ -254,6 +258,15 @@ try {
 - Eliminate repetitive phrases and unnecessary elaboration
 - Preserve references to previous roundups and ongoing narratives (these make content feel human-written)
 - Never use horizontal separators `---`, always use proper headings. The separators will be added automatically with CSS.
+
+🚨 CRITICAL: AVOID FLASHY/OVERSELLING LANGUAGE:
+- NEVER use: "pivotal", "major breakthrough", "revolutionary", "game-changing", "transformative"
+- NEVER use impact qualifiers: "significant", "major", "substantial", "dramatic", "massive"
+- NEVER use intensity words: "incredible", "amazing", "groundbreaking", "cutting-edge", "paradigm-shifting"
+- NEVER use marketing superlatives: "ultimate", "best-in-class", "industry-leading", "world-class"
+- INSTEAD use neutral descriptors: "new", "updated", "improved", "enhanced", "additional", "latest"
+- INSTEAD focus on specific capabilities: "enables X", "provides Y", "supports Z", "includes A and B"
+- Be factual and specific rather than emotional and grandiose
 "@
 
     # Generate consistent file information that will be used throughout the script
@@ -299,9 +312,9 @@ try {
         exit 1
     }
 
-    # Validate StartFromStep
+    # Validate StartFromStep - Steps 2A and 2B are both part of Step 2
     if ($StartFromStep -lt 1 -or $StartFromStep -gt 9) {
-        Write-Error "StartFromStep must be between 1 and 9"
+        Write-Error "StartFromStep must be between 1 and 9. Note: Step 2 now includes both 2A (filtering) and 2B (analysis)."
         exit 1
     }
 
@@ -372,21 +385,164 @@ try {
         Write-Host "⏭️ Skipping Step 1 (collection scanning) - resuming from backup"
     }
 
-    # Step 2: Analyze Each Article for Summary and Categorization (skip if resuming from later step)
+    # Step 2A: Filter Articles for Developer Relevance (skip if resuming from later step)
+    $developerRelevantArticles = @()
     if ($StartFromStep -le 2) {
-        Write-Host "🤖 Step 2: Analyzing articles for summaries and categorization..."
+        Write-Host "🔍 Step 2A: Filtering articles for developer relevance..."
 
-        $step2SystemMessage = @"
+        $step2ASystemMessage = @"
+ROLE: You are a content filter specialist determining if technical articles are relevant for a DEVELOPER-FOCUSED tech roundup.
+
+🎯 DEVELOPER-FOCUSED CONTENT FILTER:
+This roundup is specifically for developers, so you must filter out corporate/business content that isn't relevant to developers.
+
+EXCLUDE (mark as "corporate"):
+- Corporate partnerships and business announcements (e.g., "NFL and Microsoft Expand Partnership")
+- Industry reports without technical actionables (e.g., "AI in Education Report: Key Insights")
+- Analyst reports and market positioning (e.g., "Microsoft Named Leader in Gartner Magic Quadrant")
+- Executive interviews and corporate strategy discussions
+- Business case studies without technical implementation details
+- General industry trend pieces without specific developer tools/features
+- Marketing announcements without concrete developer benefits
+- Pure business/financial announcements
+- Company acquisition news without technical implications
+- Executive appointments and organizational changes
+
+INCLUDE (mark as "high", "medium", or "low"):
+- New developer tools, features, and capabilities
+- Technical tutorials, guides, and how-to content
+- Product updates that affect developer workflows
+- API announcements and SDK releases
+- Technical deep-dives and implementation guidance
+- Developer-focused case studies with code examples
+- Technical previews and beta program announcements
+- Bug fixes and technical improvements
+- Migration guides and technical documentation updates
+- Open source project updates and releases
+
+RESPONSE FORMAT: Return ONLY a JSON object with this exact structure:
+{
+  "developer_relevance": "high|medium|low|corporate",
+  "reasoning": "Brief explanation of why this content is/isn't relevant for developers",
+  "title": "Article title from frontmatter"
+}
+
+CLASSIFICATION GUIDE:
+- HIGH: Direct impact on developer workflows, new coding capabilities, essential tools and features
+- MEDIUM: Useful for specific developer scenarios, incremental improvements, educational content
+- LOW: Limited developer application, niche use cases, requires significant business context
+- CORPORATE: Business announcements, partnerships, analyst reports, executive content with no developer impact
+"@
+
+        # Save Step 2A input for debugging
+        $step2AInput = @"
+STEP 2A INPUT: Developer Relevance Filter Configuration
+AI Model: $Model
+Endpoint: $Endpoint
+Date Range: $StartDate to $EndDate
+Total Articles to Process: $($articles.Count)
+
+SYSTEM MESSAGE:
+$step2ASystemMessage
+"@
+        Save-StepBackup -StepName "Step2A-Input" -Content $step2AInput -StartDate $StartDate -EndDate $EndDate
+
+        # Process each article for developer relevance filtering
+        for ($i = 0; $i -lt $articles.Count; $i++) {
+            $articleFilePath = $articles[$i]
+            $articleNum = $i + 1
+            $articleName = Split-Path $articleFilePath -Leaf
+        
+            Write-Host "� Filtering article $articleNum of $($articles.Count): $($articleName)"
+        
+            # Check if file exists
+            if (-not (Test-Path $articleFilePath)) {
+                throw "Article file not found: $articleFilePath"
+            }
+        
+            # Read the article content
+            $articleContent = Get-Content $articleFilePath -Raw
+
+            $step2AUserMessage = @"
+ARTICLE CONTENT:
+$articleContent
+"@
+            
+            # Call the AI model for filtering
+            Write-Host "🤖 Calling AI model for developer relevance filtering..."
+            $response = Invoke-AiApiCall `
+                -Token $Token `
+                -Model $Model `
+                -SystemMessage $step2ASystemMessage `
+                -UserMessage $step2AUserMessage `
+                -Endpoint $Endpoint `
+                -RateLimitPreventionDelay $RateLimitPreventionDelay
+
+            # Check for errors
+            $filterResult = Test-AiResponseFormat -Response $response -StepName "Step 2A (Developer relevance filter for $articleName)"
+            if (-not $filterResult.IsValid) {
+                throw $filterResult.ErrorMessage
+            }
+
+            # Parse AI response
+            try {
+                $relevanceResult = $response | ConvertFrom-Json
+                
+                # Validate required fields
+                if (-not $relevanceResult.developer_relevance -or -not $relevanceResult.reasoning) {
+                    throw "Invalid response for $($articleName): Missing required fields"
+                }
+                
+                # Only keep articles that are not corporate
+                if ($relevanceResult.developer_relevance -ne "corporate") {
+                    $developerRelevantArticles += @{
+                        FilePath = $articleFilePath
+                        DeveloperRelevance = $relevanceResult.developer_relevance
+                        Reasoning = $relevanceResult.reasoning
+                        Title = $relevanceResult.title
+                    }
+                    Write-Host "  ✅ INCLUDED - Relevance: $($relevanceResult.developer_relevance)"
+                    Write-Host "  📝 Reasoning: $($relevanceResult.reasoning)"
+                } else {
+                    Write-Host "  ❌ EXCLUDED - Corporate content" -ForegroundColor Yellow
+                    Write-Host "  📝 Reasoning: $($relevanceResult.reasoning)" -ForegroundColor Yellow
+                }
+            }
+            catch {
+                throw "Failed to parse AI response for $($articleName): $($_.Exception.Message). Response was: $($response.Substring(0, [Math]::Min(200, $response.Length)))"
+            }
+        
+            Write-Host "✅ Article $articleNum filtered successfully"
+        }
+
+        Write-Host "✅ Step 2A complete - Developer relevance filtering complete"
+        Write-Host "📊 Filtered from $($articles.Count) total articles to $($developerRelevantArticles.Count) developer-relevant articles" -ForegroundColor Green
+        
+        # Create backup of filtering results
+        $filteringBackup = $developerRelevantArticles | ConvertTo-Json -Depth 10
+        Save-StepBackup -StepName "Step2A-FilteringResults" -Content $filteringBackup -StartDate $StartDate -EndDate $EndDate
+    }
+    else {
+        Write-Host "⏭️ Skipping Step 2A (developer relevance filtering) - resuming from backup"
+    }
+
+    # Step 2B: Deep Analysis of Developer-Relevant Articles (skip if resuming from later step)
+    if ($StartFromStep -le 2) {
+        Write-Host "🤖 Step 2B: Analyzing developer-relevant articles for detailed summaries and categorization..."
+
+        $step2BSystemMessage = @"
 ABSOLUTE CRITICAL REQUIREMENT: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full enhanced content requested!
 
-ROLE: You are an expert technical content analyst creating detailed summaries for a comprehensive weekly tech roundup. Your analysis will be used to create narrative sections that tell the story of the week's developments.
+ROLE: You are an expert technical content analyst creating detailed summaries for a comprehensive weekly tech roundup focused on DEVELOPERS. Your analysis will be used to create narrative sections that tell the story of the week's developments from a developer perspective.
 
 RESPONSE FORMAT: Return ONLY a JSON object with this exact structure:
 {
   "section": "Suggested Section Name",
   "summary": "Comprehensive Summary",
   "relevance_score": 1-10,
+  "developer_relevance": "high|medium|low",
   "primary_topic": "Main product/technology/concept",
+  "technology_stack": "Specific technology/framework/platform involved",
   "topic_type": "announcement|tutorial|update|guide|analysis|feature|troubleshooting|case-study|news|preview|ga-release|deprecation|migration|integration|comparison",
   "target_audience": "developers|administrators|business|researchers|data-scientists|devops-engineers",
   "original_tags": ["tag1", "tag2", "tag3"],
@@ -435,22 +591,6 @@ Choose ONE section that best represents the primary focus of the content. Use th
    - Identity management, security architecture
    - Threat detection, incident response
 
-DECISION EXAMPLES FOR COMMON SCENARIOS:
-- "GitHub Copilot for C# development" → "GitHub Copilot" (Copilot is primary focus)
-- "C# async patterns and best practices" → "Coding" (no AI/Copilot focus)
-- "Azure OpenAI integration tutorial" → "AI" (AI service usage, not technical ML)
-- "Custom ML model training on Azure" → "ML" (technical ML development)
-- "Building REST APIs in ASP.NET Core" → "Coding" (development focus)
-- "Deploying .NET apps with GitHub Actions" → "DevOps" (deployment process focus)
-- "Azure Functions serverless architecture" → "Azure" (Azure service focus)
-- "Zero Trust security architecture" → "Security" (security focus)
-
-WHEN CONTENT SPANS MULTIPLE AREAS:
-- Choose the section that represents the PRIMARY purpose or main audience
-- Ask: "What is this content mainly trying to teach or announce?"
-- If it's about using a tool/service, categorize by the tool/service being used
-- If it's about implementing something, categorize by the implementation domain
-
 SUMMARY REQUIREMENTS:
 - Provide comprehensive detailed context covering all key aspects of the article
 - Include specific version numbers, feature names, and technical details
@@ -464,13 +604,17 @@ SUMMARY REQUIREMENTS:
   * Reference to specific tools, IDEs, or development scenarios affected
   * Both immediate and longer-term implications for developers
 
-RELEVANCE SCORING (1-10) - FOR PRE-FILTERED TECH CONTENT:
-Since content is already filtered for tech relevance, score based on IMPACT and IMPORTANCE within the tech ecosystem:
-- 9-10: Breaking news, major product launches, industry-changing announcements, critical security issues
-- 7-8: Significant feature releases, important updates that affect many developers, notable capability expansions
-- 5-6: Useful updates, incremental improvements, helpful tutorials for common scenarios
-- 3-4: Minor releases, niche features, specialized use cases, maintenance updates
-- 1-2: Very minor updates, extremely niche content, or edge case scenarios
+RELEVANCE SCORING (1-10) - FOR DEVELOPER-FOCUSED TECH CONTENT:
+Rate based on DEVELOPER IMPACT and relevance to developer workflows:
+- 9-10: Critical developer tools, major SDK releases, breaking changes, essential security fixes for developers
+- 7-8: Significant new features affecting developer productivity, important API updates, useful new capabilities
+- 5-6: Incremental improvements, helpful tutorials, minor feature additions, maintenance updates with developer impact
+- 3-4: Niche developer tools, specialized use cases, minor updates with limited developer relevance
+
+🚨 DEVELOPER RELEVANCE ASSESSMENT:
+- HIGH: Direct impact on developer workflows, new coding capabilities, essential tools and features
+- MEDIUM: Useful for specific developer scenarios, incremental improvements, educational content
+- LOW: Limited developer application, niche use cases, requires significant business context
 
 IMPACT LEVEL ASSESSMENT:
 - HIGH: Affects large developer populations, changes workflows significantly, major announcements
@@ -506,31 +650,28 @@ TAGS REQUIREMENTS:
 - Focus AI suggested tags on: product families, technology stacks, use cases, developer roles
 "@
 
-        # Save Step 2 input for debugging
-        $step2Input = @"
-STEP 2 INPUT: Article Analysis Configuration
+        # Save Step 2B input for debugging
+        $step2BInput = @"
+STEP 2B INPUT: Deep Analysis Configuration
 AI Model: $Model
 Endpoint: $Endpoint
 Date Range: $StartDate to $EndDate
-Total Articles to Process: $($articles.Count)
+Developer-Relevant Articles to Process: $($developerRelevantArticles.Count)
 
 SYSTEM MESSAGE:
-$step2SystemMessage
+$step2BSystemMessage
 "@
-        Save-StepBackup -StepName "Step2-Input" -Content $step2Input -StartDate $StartDate -EndDate $EndDate
+        Save-StepBackup -StepName "Step2B-Input" -Content $step2BInput -StartDate $StartDate -EndDate $EndDate
 
-        # Process each article for analysis
-        for ($i = 0; $i -lt $articles.Count; $i++) {
-            $articleFilePath = $articles[$i]
+        # Process each developer-relevant article for deep analysis
+        for ($i = 0; $i -lt $developerRelevantArticles.Count; $i++) {
+            $articleInfo = $developerRelevantArticles[$i]
+            $articleFilePath = $articleInfo.FilePath
             $articleNum = $i + 1
             $articleName = Split-Path $articleFilePath -Leaf
         
-            Write-Host "🔄 Analyzing article $articleNum of $($articles.Count): $($articleName)"
-        
-            # Check if file exists
-            if (-not (Test-Path $articleFilePath)) {
-                throw "Article file not found: $articleFilePath"
-            }
+            Write-Host "🔄 Deep analyzing article $articleNum of $($developerRelevantArticles.Count): $($articleName)"
+            Write-Host "  📝 Pre-filter relevance: $($articleInfo.DeveloperRelevance)"
         
             # Read the article content
             $articleContent = Get-Content $articleFilePath -Raw
@@ -543,61 +684,31 @@ $step2SystemMessage
                 "[]" 
             }
 
-            $step2UserMessage = @"
+            $step2BUserMessage = @"
 ARTICLE CONTENT:
 $articleContent
 
 ORIGINAL ARTICLE TAGS: $tagsForAI
+
+PRE-FILTER DEVELOPER RELEVANCE: $($articleInfo.DeveloperRelevance)
+PRE-FILTER REASONING: $($articleInfo.Reasoning)
 "@
             
-            # Save individual article input for debugging
-            $individualInput = @"
-STEP 2 INDIVIDUAL ARTICLE INPUT ($articleNum of $($articles.Count))
-Article: $articleName
-File Path: $articleFilePath
-
-USER MESSAGE:
-$step2UserMessage
-"@
-            Save-StepBackup -StepName "Step2-Article$($articleNum)-$($articleName.Replace('.md', ''))-Input" -Content $individualInput -StartDate $StartDate -EndDate $EndDate
-        
-            # Call the AI model
-            Write-Host "🤖 Calling AI model for analysis..."
+            # Call the AI model for deep analysis
+            Write-Host "🤖 Calling AI model for deep analysis..."
             $response = Invoke-AiApiCall `
                 -Token $Token `
                 -Model $Model `
-                -SystemMessage $step2SystemMessage `
-                -UserMessage $step2UserMessage `
+                -SystemMessage $step2BSystemMessage `
+                -UserMessage $step2BUserMessage `
                 -Endpoint $Endpoint `
                 -RateLimitPreventionDelay $RateLimitPreventionDelay
 
-            # Check for errors with robust error handling
-            $rewriteResult = Test-AiResponseFormat -Response $response -StepName "Step 2 (AI analysis for $articleName)"
-            if (-not $rewriteResult.IsValid) {
-                # Save failed response for debugging
-                $failedResponse = @"
-STEP 2 INDIVIDUAL ARTICLE FAILED RESPONSE ($articleNum of $($articles.Count))
-Article: $articleName
-File Path: $articleFilePath
-Error: $($rewriteResult.ErrorMessage)
-
-AI RESPONSE:
-$response
-"@
-                Save-StepBackup -StepName "Step2-Article$($articleNum)-$($articleName.Replace('.md', ''))-FAILED" -Content $failedResponse -StartDate $StartDate -EndDate $EndDate
-                throw $rewriteResult.ErrorMessage
+            # Check for errors
+            $analysisResult = Test-AiResponseFormat -Response $response -StepName "Step 2B (Deep analysis for $articleName)"
+            if (-not $analysisResult.IsValid) {
+                throw $analysisResult.ErrorMessage
             }
-
-            # Save successful individual article response for debugging
-            $individualOutput = @"
-STEP 2 INDIVIDUAL ARTICLE OUTPUT ($articleNum of $($articles.Count))
-Article: $articleName
-File Path: $articleFilePath
-
-AI RESPONSE:
-$response
-"@
-            Save-StepBackup -StepName "Step2-Article$($articleNum)-$($articleName.Replace('.md', ''))-Output" -Content $individualOutput -StartDate $StartDate -EndDate $EndDate
 
             # Parse AI response
             try {
@@ -635,40 +746,30 @@ $response
                 Write-Host "  ✅ Added to $section section (score: $($analysisResult.relevance_score), impact: $($analysisResult.impact_level), timing: $($analysisResult.time_sensitivity))"
             }
             catch {
-                $parseError = @"
-STEP 2 INDIVIDUAL ARTICLE PARSE ERROR ($articleNum of $($articles.Count))
-Article: $articleName
-File Path: $articleFilePath
-Parse Error: $($_.Exception.Message)
-
-AI RESPONSE:
-$($response.Substring(0, [Math]::Min(500, $response.Length)))
-"@
-                Save-StepBackup -StepName "Step2-Article$($articleNum)-$($articleName.Replace('.md', ''))-PARSE-ERROR" -Content $parseError -StartDate $StartDate -EndDate $EndDate
                 throw "Failed to parse AI response for $($articleName): $($_.Exception.Message). Response was: $($response.Substring(0, [Math]::Min(200, $response.Length)))"
             }
         
-            Write-Host "✅ Article $articleNum analyzed successfully"
+            Write-Host "✅ Article $articleNum deep analysis completed"
         }
 
-        Write-Host "✅ Step 2 complete - All articles analyzed"
+        Write-Host "✅ Step 2B complete - All developer-relevant articles analyzed"
         
         # Create backup of analysis results
         $analysisBackup = $articleSummaries | ConvertTo-Json -Depth 10
-        $step2FinalOutput = @"
-STEP 2 FINAL OUTPUT: Complete Analysis Results
-Total Articles Processed: $($articles.Count)
+        $step2BFinalOutput = @"
+STEP 2B FINAL OUTPUT: Complete Deep Analysis Results
+Total Articles After Filtering: $($developerRelevantArticles.Count)
 Sections Created: $($articleSummaries.Keys.Count)
 Sections: $($articleSummaries.Keys -join ', ')
 
 ANALYSIS RESULTS JSON:
 $analysisBackup
 "@
-        Save-StepBackup -StepName "Step2-FinalOutput" -Content $step2FinalOutput -StartDate $StartDate -EndDate $EndDate
-        Save-StepBackup -StepName "Step2-Analysis" -Content $analysisBackup -StartDate $StartDate -EndDate $EndDate
+        Save-StepBackup -StepName "Step2B-FinalOutput" -Content $step2BFinalOutput -StartDate $StartDate -EndDate $EndDate
+        Save-StepBackup -StepName "Step2B-Analysis" -Content $analysisBackup -StartDate $StartDate -EndDate $EndDate
     }
     else {
-        Write-Host "⏭️ Skipping Step 2 (article analysis) - resuming from backup"
+        Write-Host "⏭️ Skipping Step 2B (deep analysis) - resuming from backup"
         # Note: articleSummaries will be reconstructed from the next step's input if needed
     }
 
@@ -752,42 +853,74 @@ CRITICAL TOPIC CONTENT GUIDELINES:
 
 CRITICAL TOPIC GROUPING STRATEGY:
 
-Use the enhanced metadata to make smarter grouping decisions:
-- IMPACT LEVEL: Prioritize high-impact articles for major topics
-- TIME SENSITIVITY: Group immediate/this-week items for timely themes
-- TOPIC TYPE: Group similar types (announcements, tutorials, updates)
-- ORIGINAL_TAGS + AI_TAGS: Use for identifying related technologies and themes
+🎯 TECHNOLOGY-FOCUSED GROUPING APPROACH:
+Group articles by the underlying technology or platform they discuss, not just by general topic similarity. This creates more meaningful, cohesive content sections.
 
-PRIMARY GROUPING RULES:
-- Create Major Topic Groups: 3+ articles on closely related themes (no upper limit - group as many closely related articles as exist)
-- Create Minor Topic Groups: 2-3 articles on similar themes when they're strongly related
-- Reserve "Other News": Single articles or 2+ articles that only have weak connections
+PRIMARY GROUPING RULES - TECHNOLOGY-FIRST:
+1. TECHNOLOGY PLATFORM GROUPS (3+ articles preferred):
+   - Same core technology (e.g., "GitHub Copilot with MCP" - group ALL MCP-related articles together regardless of specific use case)
+   - Shared development stack (e.g., ".NET 9 updates" - group all .NET 9 content together)
+   - Common service family (e.g., "Azure AI services" - group Azure OpenAI, Cognitive Services, AI Foundry together)
+   - Unified platform experiences (e.g., "Visual Studio family" - group VS Code, VS 2022, GitHub integration)
+
+2. FEATURE ECOSYSTEM GROUPS (2+ articles):
+   - Related capabilities within same product (e.g., "GitHub Actions workflow improvements")
+   - Connected development experiences (e.g., "Container development tools")
+   - Complementary technologies in same workflow (e.g., "Infrastructure as Code updates")
+
+3. DEVELOPER WORKFLOW GROUPS (2+ articles):
+   - Same development phase (e.g., "Testing and Quality Assurance")
+   - Common developer tasks (e.g., "API Development and Integration")
+   - Shared technical challenges (e.g., "Performance Optimization")
+
+ENHANCED GROUPING METADATA USAGE:
+- TECHNOLOGY_STACK: Primary indicator for technology-based grouping
+- PRIMARY_TOPIC + TECHNOLOGY_STACK: Combine to identify platform families
+- AI_SUGGESTED_TAGS: Look for technology framework/platform commonalities
+- ORIGINAL_TAGS: Use specific product names and versions for precise grouping
+
+TECHNOLOGY GROUPING EXAMPLES:
+✅ GOOD: "GitHub Copilot with MCP" (groups: MCP in VS, custom MCP servers, MCP tooling)
+✅ GOOD: ".NET 9 Development" (groups: new features, migration guides, performance improvements)
+✅ GOOD: "Azure Container Services" (groups: AKS updates, Container Apps, Azure Functions containers)
+
+❌ AVOID: Generic topic grouping like "Developer Tools" when specific technology alignment exists
+❌ AVOID: Separating related technology articles into different groups based on use case alone
+
+PRIORITIZATION WITHIN TECHNOLOGY GROUPS:
+- Lead with highest DEVELOPER_RELEVANCE articles
+- Order by IMPACT_LEVEL (high → medium → low)
+- Consider TIME_SENSITIVITY for positioning
+- Use RELEVANCE_SCORE as tiebreaker
 
 ENHANCED HIERARCHICAL GROUPING APPROACH:
-1. FIRST PASS - Identify Major Themes (3+ articles):
-   - Same product announcements/updates (check PRIMARY_TOPIC and tags)
-   - Related feature releases (check ORIGINAL_TAGS and AI_TAGS for technology overlap)
-   - Common workflow improvements (check TARGET_AUDIENCE and IMPACT LEVEL)
-   - Shared technology stack (check tags for framework/platform commonalities)
-   - Time-sensitive clusters (multiple IMMEDIATE or THIS-WEEK items on related topics)
+1. FIRST PASS - Identify Technology Platform Groups (3+ articles preferred):
+   - Same technology/platform across different use cases (check TECHNOLOGY_STACK and PRIMARY_TOPIC)
+   - Related product family announcements (check PRIMARY_TOPIC and AI_SUGGESTED_TAGS)
+   - Shared development framework/stack (check ORIGINAL_TAGS and AI_SUGGESTED_TAGS for platform commonalities)
+   - Connected ecosystem tools (check tags for technology framework overlap)
 
-2. SECOND PASS - Group Remaining Articles:
-   - Pair articles with matching TOPIC_TYPE and similar PRIMARY_TOPIC
-   - Group by TARGET_AUDIENCE when content serves the same developer role
-   - Use tag overlap to identify technology relationships
-   - Examples: "Security Tool Updates", "Database Migration Improvements"
+2. SECOND PASS - Group Remaining Articles by Technology Affinity:
+   - Common development tools and frameworks (check TECHNOLOGY_STACK and tags)
+   - Related capabilities within same service family (check PRIMARY_TOPIC relationships)
+   - Complementary technologies in developer workflows (check TARGET_AUDIENCE and DEVELOPER_RELEVANCE)
+   - Shared technical problem domains (check TOPIC_TYPE and PRIMARY_TOPIC)
 
 3. FINAL PASS - Other News Section:
-   - Group very broadly by TOPIC_TYPE: tutorials, troubleshooting, announcements
-   - Consider IMPACT LEVEL for prioritization within groups
-   - Keep single articles that don't fit elsewhere
-   - Avoid forcing weak connections
+   - Technology-based subcategories when possible (e.g., "Security Tools", "Database Updates")
+   - Group by DEVELOPER_RELEVANCE level for prioritization
+   - Consider IMPACT_LEVEL for organization within groups
+   - Keep corporate/low-relevance articles at the end or exclude if DEVELOPER_RELEVANCE is "corporate"
 
 ENHANCED GROUPING QUALITY CRITERIA:
-- Strong Connection: Same PRIMARY_TOPIC + significant tag overlap + matching IMPACT_LEVEL
-- Medium Connection: Related technologies in tags + similar TARGET_AUDIENCE + compatible TOPIC_TYPE
-- Weak Connection: Same general section but different purposes/audiences/impact levels
-- Only group articles with Strong or Medium connections into named sections
+- Strong Technology Connection: Same TECHNOLOGY_STACK + related PRIMARY_TOPIC + overlapping technical tags
+- Medium Technology Connection: Related technologies in ecosystem + similar DEVELOPER_RELEVANCE + compatible workflows
+- Weak Connection: Same general category but different technologies/platforms/developer impact
+- Only group articles with Strong or Medium technology connections into named sections
+
+Example Technology-First Grouping:
+Instead of: "New Features" and "Updates" and "Tutorials" (topic-based)
+Use: "GitHub Copilot with MCP", ".NET 9 Development", "Azure AI Services" (technology-based)
 
 PRIORITIZATION WITHIN GROUPS:
 - Lead with high-impact, time-sensitive articles
@@ -874,15 +1007,38 @@ $step3SystemMessage
                 
                 $sectionArticles = $articleSummaries[$($sectionName)] | Sort-Object relevance_score -Descending
                 
-                # Analyze grouping potential for better AI guidance
+                # Filter out corporate articles with low developer relevance
+                $developerArticles = @($sectionArticles | Where-Object { 
+                    $_.developer_relevance -ne "corporate" -and $_.relevance_score -ge 3 
+                })
+                
+                if ($developerArticles.Count -eq 0) {
+                    Write-Host "⏭️ Skipping section $($sectionName) - no developer-relevant articles found" -ForegroundColor Yellow
+                    continue
+                }
+                
+                Write-Host "📊 Section $($sectionName): $($sectionArticles.Count) total articles, $($developerArticles.Count) developer-relevant articles"
+                
+                # Analyze grouping potential for better AI guidance using developer-relevant articles
                 $groupingAnalysis = @()
-                if ($sectionArticles.Count -gt 1) {
+                if ($developerArticles.Count -gt 1) {
                     # Enhanced grouping analysis using new metadata
-                    $topicGroups = @($sectionArticles | Group-Object { $_.primary_topic } | Where-Object { $_.Count -gt 1 })
-                    $typeGroups = @($sectionArticles | Group-Object { $_.topic_type } | Where-Object { $_.Count -gt 1 })
-                    $impactGroups = @($sectionArticles | Group-Object { $_.impact_level } | Where-Object { $_.Count -gt 1 })
-                    $timingGroups = @($sectionArticles | Group-Object { $_.time_sensitivity } | Where-Object { $_.Count -gt 1 })
-                    $audienceGroups = @($sectionArticles | Group-Object { $_.target_audience } | Where-Object { $_.Count -gt 1 })
+                    $topicGroups = @($developerArticles | Group-Object { $_.primary_topic } | Where-Object { $_.Count -gt 1 })
+                    $technologyGroups = @($developerArticles | Group-Object { $_.technology_stack } | Where-Object { $_.Count -gt 1 })
+                    $typeGroups = @($developerArticles | Group-Object { $_.topic_type } | Where-Object { $_.Count -gt 1 })
+                    $impactGroups = @($developerArticles | Group-Object { $_.impact_level } | Where-Object { $_.Count -gt 1 })
+                    $timingGroups = @($developerArticles | Group-Object { $_.time_sensitivity } | Where-Object { $_.Count -gt 1 })
+                    $audienceGroups = @($developerArticles | Group-Object { $_.target_audience } | Where-Object { $_.Count -gt 1 })
+                    $relevanceGroups = @($developerArticles | Group-Object { $_.developer_relevance } | Where-Object { $_.Count -gt 1 })
+                    
+                    if ($technologyGroups.Length -gt 0) {
+                        $groupingAnalysis += "IDENTIFIED TECHNOLOGY CLUSTERS:"
+                        foreach ($group in $technologyGroups) {
+                            if ($group.Name -and $group.Name.Trim() -ne "") {
+                                $groupingAnalysis += "- $($group.Name): $($group.Count) articles"
+                            }
+                        }
+                    }
                     
                     if ($topicGroups.Length -gt 0) {
                         $groupingAnalysis += "IDENTIFIED TOPIC CLUSTERS:"
@@ -895,6 +1051,13 @@ $step3SystemMessage
                         $groupingAnalysis += "IDENTIFIED TYPE CLUSTERS:"
                         foreach ($group in $typeGroups) {
                             $groupingAnalysis += "- $($group.Name): $($group.Count) articles"
+                        }
+                    }
+                    
+                    if ($relevanceGroups.Length -gt 0) {
+                        $groupingAnalysis += "IDENTIFIED DEVELOPER RELEVANCE CLUSTERS:"
+                        foreach ($group in $relevanceGroups) {
+                            $groupingAnalysis += "- $($group.Name) relevance: $($group.Count) articles"
                         }
                     }
                     
@@ -928,14 +1091,20 @@ $step3SystemMessage
                     $sectionInput += ($groupingAnalysis -join "`n") + "`n`n"
                 }
                 
-                foreach ($article in $sectionArticles) {
+                foreach ($article in $developerArticles) {
                     $sectionInput += "ARTICLE: $($article.title)`n"
                     $sectionInput += "SUMMARY: $($article.summary)`n"
                     $sectionInput += "RELEVANCE: $($article.relevance_score)`n"
                     
                     # Add enhanced metadata for better grouping
+                    if ($article.developer_relevance) {
+                        $sectionInput += "DEVELOPER_RELEVANCE: $($article.developer_relevance)`n"
+                    }
                     if ($article.primary_topic) {
                         $sectionInput += "PRIMARY_TOPIC: $($article.primary_topic)`n"
+                    }
+                    if ($article.technology_stack) {
+                        $sectionInput += "TECHNOLOGY_STACK: $($article.technology_stack)`n"
                     }
                     if ($article.topic_type) {
                         $sectionInput += "TYPE: $($article.topic_type)`n"
@@ -1451,7 +1620,7 @@ CRITICAL: Make sure the response is VALID JSON
 CRITICAL: Return a JSON object with these exact fields: title, tags, description, introduction
 CRITICAL: These are what the 4 fields should contain:
 
-- Title: Create an engaging, informative title that reflects the week's main themes. Do NOT include the date in the title.
+- Title: Create an engaging, informative title that reflects the week's main themes. Do NOT include the date in the title. MAX LENGTH is 80 characters!
 - Tags: Array of 10-15 relevant technology tags from the content
 - Description: Write a 2-3 sentence summary of the week's key developments
 - Introduction: Create a compelling 2-3 paragraph introduction that:
@@ -1561,12 +1730,20 @@ Return only JSON with fields: title, tags, description, introduction
             foreach ($line in $contentLines) {
                 if ($line -match '^## (.+)$') {
                     $sectionTitle = $matches[1].Trim()
-                    $anchor = $sectionTitle.ToLower() -replace '[^a-z0-9\s-]', '' -replace '\s+', '-'
+                    # Follow Kramdown's anchor generation algorithm:
+                    # 1. Remove all characters except letters, numbers, spaces and dashes
+                    $cleaned = $sectionTitle -replace '[^a-zA-Z0-9\s-]', ''
+                    # 2. Convert everything except letters and numbers to dashes (spaces become dashes, multiple consecutive become multiple dashes)
+                    $anchor = $cleaned.ToLower() -replace '[^a-z0-9]', '-'
                     $tocLines += "- [$sectionTitle](#$anchor)"
                 }
                 elseif ($line -match '^### (.+)$') {
                     $subsectionTitle = $matches[1].Trim()
-                    $anchor = $subsectionTitle.ToLower() -replace '[^a-z0-9\s-]', '' -replace '\s+', '-'
+                    # Follow Kramdown's anchor generation algorithm:
+                    # 1. Remove all characters except letters, numbers, spaces and dashes
+                    $cleaned = $subsectionTitle -replace '[^a-zA-Z0-9\s-]', ''
+                    # 2. Convert everything except letters and numbers to dashes (spaces become dashes, multiple consecutive become multiple dashes)
+                    $anchor = $cleaned.ToLower() -replace '[^a-z0-9]', '-'
                     $tocLines += "  - [$subsectionTitle](#$anchor)"
                 }
             }
@@ -1656,10 +1833,15 @@ You are a content editor with ONE SIMPLE JOB: Rewrite every paragraph AND the fr
 ✅ WHAT YOU SHOULD DO - REWRITE FOR STYLE, DON'T REMOVE:
 - Rewrite sentences to match the writing style guidelines
 - Replace buzzwords and marketing speak with authentic language
+- SPECIFICALLY remove flashy qualifiers: "pivotal", "significant", "major", "substantial", "dramatic", "massive"
+- SPECIFICALLY remove intensity words: "incredible", "amazing", "groundbreaking", "cutting-edge", "breakthrough"
+- REPLACE with neutral descriptors: "new", "updated", "improved", "enhanced", "additional", "latest"
+- REPLACE with capability descriptions: "enables X", "provides Y", "supports Z", "includes A and B"
 - Improve clarity and readability while preserving meaning
 - Ensure tone matches the guidelines (down-to-earth, professional)
 - Fix language issues while keeping technical accuracy
 - Make content more actionable and specific
+- Focus on concrete developer benefits rather than emotional language
 - REWRITE the frontmatter "title" field to comply with writing style guidelines
 - REWRITE the frontmatter "description" field to comply with writing style guidelines
 
@@ -1759,7 +1941,7 @@ $finalContent
     # Format the created file using the fix-markdown-files script
     Write-Host "🔧 Formatting the created roundup file..."
     try {
-        $fixScriptPath = Join-Path (Split-Path $PSScriptRoot -Parent) "scripts" "fix-markdown-files.ps1"
+        $fixScriptPath = Join-Path $ScriptDirectory "fix-markdown-files.ps1"
         if (Test-Path $fixScriptPath) {
             & $fixScriptPath -FilePath $OutputFile
             Write-Host "✅ File formatting completed"

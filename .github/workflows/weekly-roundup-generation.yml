@@ -1,0 +1,158 @@
+name: Weekly Roundup Generation
+permissions:
+  contents: write
+
+on:
+  schedule:
+    # Run every Monday at 8:00 AM UTC (10:00 AM GMT+2)
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: 'Start date (YYYY-MM-DD) - optional, defaults to last Monday'
+        required: false
+        type: string
+      end_date:
+        description: 'End date (YYYY-MM-DD) - optional, defaults to last Sunday'
+        required: false
+        type: string
+
+jobs:
+  generate-roundup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360  # 6 hours timeout to handle long AI processing
+    env:
+      GIT_USER_EMAIL: "reinier.vanmaanen@xebia.com"
+      GIT_USER_NAME: "RSS Processing Workflow"
+    
+    steps:
+    - name: Generate App Token
+      id: app-token
+      uses: actions/create-github-app-token@v1
+      with:
+        app-id: ${{ secrets.RSS_APP_APPID }}
+        private-key: ${{ secrets.RSS_APP_PRIVATEKEY }}
+
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ steps.app-token.outputs.token }}
+
+    - name: Setup PowerShell
+      uses: azure/powershell@v2
+      with:
+        azPSVersion: 'latest'
+        inlineScript: |
+          Write-Host "PowerShell setup complete"
+
+    - name: Configure Git user
+      run: |
+        git config --global user.email "${{ env.GIT_USER_EMAIL }}"
+        git config --global user.name "${{ env.GIT_USER_NAME }}"
+
+    - name: Calculate date range
+      id: dates
+      shell: pwsh
+      run: |
+        # If manual dates are provided, use them
+        if ("${{ github.event.inputs.start_date }}" -and "${{ github.event.inputs.end_date }}") {
+          $startDate = "${{ github.event.inputs.start_date }}"
+          $endDate = "${{ github.event.inputs.end_date }}"
+          Write-Host "Using manual dates: $startDate to $endDate"
+        } else {
+          # Calculate dates automatically
+          $today = Get-Date
+          
+          # Find last Monday (start of the week we're reporting on)
+          $daysFromMonday = ($today.DayOfWeek.value__ + 6) % 7
+          if ($daysFromMonday -eq 0) {
+            # If today is Monday, go back to last Monday
+            $daysFromMonday = 7
+          }
+          $lastMonday = $today.AddDays(-$daysFromMonday)
+          
+          # End date is the Sunday before today (end of the week we're reporting on)
+          $lastSunday = $lastMonday.AddDays(6)
+          
+          $startDate = $lastMonday.ToString("yyyy-MM-dd")
+          $endDate = $lastSunday.ToString("yyyy-MM-dd")
+          
+          Write-Host "Calculated dates: $startDate to $endDate"
+          Write-Host "Today is: $($today.ToString('yyyy-MM-dd dddd'))"
+          Write-Host "Last Monday: $($lastMonday.ToString('yyyy-MM-dd dddd'))"
+          Write-Host "Last Sunday: $($lastSunday.ToString('yyyy-MM-dd dddd'))"
+        }
+        
+        # Output for next step
+        "start-date=$startDate" >> $env:GITHUB_OUTPUT
+        "end-date=$endDate" >> $env:GITHUB_OUTPUT
+
+    - name: Generate Weekly Roundup
+      shell: pwsh
+      run: |
+        try {
+          Write-Host "🚀 Starting Weekly Roundup Generation"
+          Write-Host "📅 Date Range: ${{ steps.dates.outputs.start-date }} to ${{ steps.dates.outputs.end-date }}"
+          Write-Host "🔑 Using AI endpoint with secret token"
+          
+          # Set working directory to the repository root
+          Set-Location $env:GITHUB_WORKSPACE
+          
+          # Run the roundup generation script with default parameters
+          & .github/scripts/iterative-roundup-generation.ps1 `
+            -Token "${{ secrets.AZURE_AI_KEY }}" `
+            -StartDate "${{ steps.dates.outputs.start-date }}" `
+            -EndDate "${{ steps.dates.outputs.end-date }}" `
+            -WorkspaceDirectory "${{ github.workspace }}"
+            
+          Write-Host "✅ Roundup generation completed successfully"
+        }
+        catch {
+          Write-Host "❌ Error during roundup generation: $($_.Exception.Message)" -ForegroundColor Red
+          Write-Host "Full error details:" -ForegroundColor Red
+          Write-Host $_.Exception.ToString() -ForegroundColor Red
+          exit 1
+        }
+      env:
+        # Ensure we're in the right directory context
+        GITHUB_WORKSPACE: ${{ github.workspace }}
+
+    - name: Commit and Push Generated Roundup
+      shell: pwsh
+      run: |
+        try {
+          # Check if there are any changes to commit
+          $gitStatus = git status --porcelain
+          if ($gitStatus) {
+            Write-Host "📝 Changes detected, committing new roundup..."
+            
+            # Add all changes
+            git add .
+            
+            # Create commit message with date range
+            $commitMessage = "🤖 Add weekly roundup for ${{ steps.dates.outputs.start-date }} to ${{ steps.dates.outputs.end-date }} - Generated automatically via GitHub Actions"
+            git commit -m "$commitMessage"
+            
+            # Push changes using app token to bypass branch protection
+            git push https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git main
+            
+            Write-Host "✅ Successfully committed and pushed new roundup"
+          } else {
+            Write-Host "ℹ️ No changes to commit - roundup may already exist"
+          }
+        }
+        catch {
+          Write-Host "❌ Error during git operations: $($_.Exception.Message)" -ForegroundColor Red
+          exit 1
+        }
+
+    - name: Upload Debug Artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: roundup-debug-${{ steps.dates.outputs.start-date }}-to-${{ steps.dates.outputs.end-date }}
+        path: |
+          .tmp/roundup-debug/
+          _roundups/
+        retention-days: 30
