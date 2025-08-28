@@ -6921,5 +6921,11 @@
     "collection": "posts",
     "timestamp": "2025-08-28 19:12:28 +00:00",
     "reason": "No categories found: No categories were assigned because the content, 'Troubleshooting Common Windows 11 Issues', is focused on general end-user troubleshooting of Windows 11, such as performance, network, Bluetooth, printer, and UI issues. According to the Generic Exclusion Rules, content about non-development Microsoft products—such as Windows OS usage, general system administration, device connectivity, and productivity troubleshooting—is excluded unless there is a development or technical architecture focus. There is no coverage of programming, scripting, deployment, coding, DevOps, AI, ML, security development, or developer tool usage. Therefore, this post does not meet the inclusion criteria for any predefined categories."
+  },
+  {
+    "timestamp": "2025-08-28 20:18:07 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The article focuses on troubleshooting end-user connection issues in Microsoft Teams, which is a non-development Microsoft product. According to the Non-Development Microsoft Products exclusion rule in Chapter 3, content about Teams is only included if it focuses on Teams development or building bots/integrations. This content is targeted at general users, covering basic troubleshooting tips rather than technical implementation or development. Therefore, no categories are assigned.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-fix-common-microsoft-teams-connection-problems/"
   }
 ]

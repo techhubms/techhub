@@ -7818,5 +7818,17 @@
     "collection": "posts",
     "timestamp": "2025-08-28 19:12:56 +00:00",
     "reason": "Succesfully added: The content is a detailed announcement of a technical website that curates Microsoft engineering content with an AI-driven taxonomy. Categories 'AI' and 'GitHub Copilot' are included because the site features and aggregates dedicated sections for each (per AI Category rule 1 and GitHub Copilot Category rule 1). 'Azure' is included as it's a major site topic and multiple technical features/services and future plans are Azure-specific (Azure Category rule 1). 'DevOps' is included since DevOps is named as a primary focus and the technical workflow involves DevOps tooling and CI/CD automation (DevOps Category rule 1 and 5). Coding and ML are NOT included—while coding topics are planned for future blogs, this announcement is not a development tutorial nor does it provide code-level how-to guidance, so Coding Category rule 4 does not apply; ML is not included since, although mentioned, the content is not about building ML workflows (ML Category not met). Security is not included since it is listed as a covered topic but is not substantively discussed in the post. The explanation includes tag selection methods as specified in instructions."
+  },
+  {
+    "timestamp": "2025-08-28 20:17:50 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' category because the article is specifically about GitHub Copilot features (GitHub Copilot Inclusion Rule 1). Also assigned 'AI' because Copilot improvements are AI-driven (AI Rule 1) and involve GPT-5 integration. 'Coding' is included because the update directly affects developer coding workflows in Visual Studio (Coding Rule 5). No other categories qualify, as the focus is not on DevOps, Azure, ML, or Security. All content is technical, aimed at developers, and relevant to Microsoft technologies. No generic exclusion rules were triggered.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-08-28-github-copilot-in-visual-studio-august-update"
+  },
+  {
+    "timestamp": "2025-08-28 20:18:48 +00:00",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the entire content is focused on deploying and running Siemens Teamcenter Simulation Process Data Management (SPDM) architecture using Azure services, including Azure CycleCloud, VNet, Azure Firewall, and other core Azure infrastructure (Azure inclusion rules 1, 2, 4, 5). Assigned the 'Security' category because authentication via Azure Entra ID, use of Azure Firewall, backbone security, VNet isolation, and RBAC are crucial architectural elements for the solution (Security inclusion rules 1, 3, 4, 7, 9). Other categories such as AI, ML, DevOps, Coding, or GitHub Copilot do not apply as the subject is not about developing custom code, ML modeling, or AI integration, but rather about enterprise PLM simulation orchestration and secure Azure deployment.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/teamcenter-simulation-process-data-management-architecture-on/ba-p/4449316"
   }
 ]
