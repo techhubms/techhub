@@ -7770,5 +7770,23 @@
     "canonical_url": "https://www.youtube.com/watch?v=FKanhfIwK-0",
     "collection": "videos",
     "reason": "Succesfully added: Assigned the Coding category because the video centers on open sourcing the Windows Subsystem for Linux (WSL), a development and platform tool, and encourages developers to inspect, learn from, and build with the WSL source code, which fits under Coding rule 5 (Microsoft development tools) and rule 4 (Microsoft ecosystem packages/libraries). No other categories qualify as the topic does not specifically focus on AI, DevOps, Azure, ML, Security, or GitHub Copilot as per their respective rules."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/getting-started-with-the-aspire-cli/",
+    "timestamp": "2025-08-28 17:12:04 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'Coding' because content centers on .NET development practices and project scaffolding (Coding rules 1 and 2). Assigned 'DevOps' because Aspire CLI addresses automation, deploys to cloud or containers, and covers aspects of application orchestration and CI/CD (DevOps rules 1, 3, and 5). Assigned 'Azure' because the CLI's official integrations prominently include Azure services and deployment targets (Azure rule 1, 2, and 6). Did not assign 'AI', 'ML', 'GitHub Copilot', or 'Security' since the content does not address AI/ML services, Copilot, or security-specific features. The decision is based on multiple sections referencing .NET microservices, Azure add-ins, automation, and deployment workflows."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/blog/announcing-awesome-copilot-mcp-server",
+    "timestamp": "2025-08-28 17:12:34 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because the content revolves around customizing and enhancing GitHub Copilot's AI-driven chat and code generation experience (AI rule 1 & 2). Assigned the GitHub Copilot category because the article is specifically about GitHub Copilot features, integrations, and related customizations (GitHub Copilot rules 1-4). Assigned the Coding category because it targets developer workflows and the integration of Copilot customizations directly in development environments (Coding rules 1, 4, 5). 'DevOps', 'Azure', 'ML', and 'Security' were not assigned due to lack of relevant content. No exclusion rules applied as the article is technical, focused on Copilot developer tooling, and fulfills the Microsoft-centric threshold."
+  },
+  {
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-we-accelerated-secret-protection-engineering-with-copilot/",
+    "timestamp": "2025-08-28 17:13:09 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the content centers on practical usage of Copilot (developer coding assistant) as an AI coding agent (AI Rule 2, GitHub Copilot Rules 1–4). Coding is included since the focus is on automation and code-generation tasks (Coding Rule 4). Security qualifies due to the technical focus on Secret Protection, application security, and credential management (Security Rule 2, 7). DevOps is included as the workflow involves GitHub Actions, automated pull requests, and pipeline integration (DevOps Rules 2, 5, 9). All categories are supported by strong technical detail focused on engineering, not business productivity or end-user scenarios. The article is in English, meets technical accuracy requirements, contains no biographical, sales, or business strategy content, and does not trigger any generic exclusions."
   }
 ]
