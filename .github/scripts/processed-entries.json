@@ -7710,5 +7710,29 @@
     "canonical_url": "https://www.youtube.com/shorts/_NnAGjBc64Y",
     "collection": "videos",
     "reason": "Succesfully added: Assigned 'AI' category because the content centers on using MCP Server in conjunction with GitHub Copilot, which is a Microsoft AI developer tool (AI rules 1, 2). Assigned 'GitHub Copilot' category because MCP is specifically referenced as part of the GitHub Copilot feature set and agent mode (GitHub Copilot rules 1, 2, 3). The description and tags make it clear this is about developer coding assistance, not business productivity. Not assigning Coding or DevOps categories because the primary focus is tool installation and workflow enablement rather than specific coding practices or DevOps processes. 'Azure' and 'ML' categories are not relevant based on the content."
+  },
+  {
+    "canonical_url": "https://devops.com/ai-agent-onboarding-is-now-a-critical-devops-function/?utm_source=rss&utm_medium=rss&utm_campaign=ai-agent-onboarding-is-now-a-critical-devops-function",
+    "reason": "Succesfully added: Categories 'AI' and 'DevOps' are assigned. 'AI' is included because the content is centrally about AI agents, autonomous systems, LLM-based agents, and their deployment and governance (AI inclusion rules 1, 4, 5). 'DevOps' is included as the entire article positions onboarding and lifecycle management of AI agents as a key DevOps responsibility, covering ownership, pipeline, and observability practices (DevOps inclusion rules 3, 4, 5, 7). The article is not focused on code-level implementation, specific Microsoft platforms, or security deep-dives, so 'Coding', 'Azure', 'ML', and 'Security' are not assigned. The explanation and focus areas referenced come directly from the content body, especially the frequent discussion of agent management as a DevOps function, CI/CD, operational contracts, and governance.",
+    "timestamp": "2025-08-28 06:20:12 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://devops.com/coding-at-the-speed-of-ai-innovation-vulnerability-and-the-genai-paradox/?utm_source=rss&utm_medium=rss&utm_campaign=coding-at-the-speed-of-ai-innovation-vulnerability-and-the-genai-paradox",
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' because the article is centrally about generative AI in development workflows (AI rule 1, 4, 5). 'GitHub Copilot' because it is specifically discussed as a representative tool throughout the post (GitHub Copilot inclusion rule 1). 'Coding' is included because the article covers the impact of AI tools on code production and secure coding practices (Coding inclusion rule 4). 'DevOps' applies as the content discusses integration into DevSecOps pipelines and workflow changes (DevOps rules 3, 5). 'Security' is justified due to the substantial focus on vulnerabilities, secure coding, regulatory oversight, and risk mitigation (Security rules 2, 4, 6, 9). No exclusion rules were triggered. GitHub Copilot and AI are included together as per the critical requirement on Copilot categorization.",
+    "timestamp": "2025-08-28 06:20:48 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://devops.com/how-engineers-are-automating-more-with-less-trends-in-devops-tooling/?utm_source=rss&utm_medium=rss&utm_campaign=how-engineers-are-automating-more-with-less-trends-in-devops-tooling",
+    "reason": "Succesfully added: Assigned the DevOps category because the article discusses DevOps automation, CI/CD pipeline evolution, toolchain consolidation, and trends in workflow orchestration—all central to DevOps (DevOps inclusion rules 1, 5, 6). The AI category was assigned due to extensive coverage on AI integration in DevOps automation—including the use of AI for anomaly detection, observability, and test automation, plus references to GitHub Copilot and other AI features (AI inclusion rules 1, 4, 5). Added the GitHub Copilot category specifically because the content highlights Copilot's developer-oriented automation features, such as pipeline configuration, explicitly referencing GitHub Copilot as a coding assistant in DevOps (GitHub Copilot rules 1, 2), and per the prompt, both GitHub Copilot and AI must be assigned together. Coding, Azure, ML, and Security were not included since the primary content does not provide explicit detail on coding with Microsoft languages, Azure-specific cloud services, in-depth ML engineering, or Microsoft-focused security implementation.",
+    "timestamp": "2025-08-28 06:21:34 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://devops.com/survey-surfaces-raft-of-ai-coding-issues-involving-embedded-systems/?utm_source=rss&utm_medium=rss&utm_campaign=survey-surfaces-raft-of-ai-coding-issues-involving-embedded-systems",
+    "reason": "Succesfully added: Categories assigned are 'AI' (due to the central discussion of AI coding assistants, AI-generated code, open source AI models, and their impacts—AI rule 1 and 4), 'DevOps' (extensive focus on team productivity, DevSecOps best practices, SCA toolchains, and SBOM—DevOps rules 5, 6, 9, 10), 'Security' (due to primary concerns over vulnerabilities introduced by AI, open source license risk, and the need for greater governance—Security rules 2, 4, 5, 8, 10), and 'Coding' (because of language, toolchain, and developmental practice coverage—Coding rules 1, 2, 4). No Microsoft category (e.g., Azure, ML) applies since Microsoft platforms are not central or specifically mentioned in the survey content.",
+    "timestamp": "2025-08-28 06:22:15 +00:00",
+    "collection": "posts"
   }
 ]
