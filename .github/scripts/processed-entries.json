@@ -7830,5 +7830,11 @@
     "reason": "Succesfully added: Assigned the 'Azure' category because the entire content is focused on deploying and running Siemens Teamcenter Simulation Process Data Management (SPDM) architecture using Azure services, including Azure CycleCloud, VNet, Azure Firewall, and other core Azure infrastructure (Azure inclusion rules 1, 2, 4, 5). Assigned the 'Security' category because authentication via Azure Entra ID, use of Azure Firewall, backbone security, VNet isolation, and RBAC are crucial architectural elements for the solution (Security inclusion rules 1, 3, 4, 7, 9). Other categories such as AI, ML, DevOps, Coding, or GitHub Copilot do not apply as the subject is not about developing custom code, ML modeling, or AI integration, but rather about enterprise PLM simulation orchestration and secure Azure deployment.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/teamcenter-simulation-process-data-management-architecture-on/ba-p/4449316"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: The content is focused on the introduction of the GPT-5 mini model within GitHub Copilot, a developer tool. According to Chapter 4, assigning the 'GitHub Copilot' category is appropriate for coverage of Copilot features (GitHub Copilot rule 1). The 'AI' category must always be included alongside 'GitHub Copilot' when directly relevant (AI rule 2). The post discusses deployment in development environments like Visual Studio and JetBrains IDEs, but as the content is an announcement of availability rather than code-level integration or DevOps configuration, 'Coding' and 'DevOps' categories are not justified. There are no generic exclusion rules triggered, as the content is technical, relevant, and developer-focused.",
+    "canonical_url": "https://github.blog/changelog/2025-08-28-openai-gpt-5-mini-is-now-available-in-public-preview-in-visual-studio-jetbrains-ides-xcode-and-eclipse",
+    "timestamp": "2025-08-28 21:12:53 +00:00"
   }
 ]
