@@ -6945,5 +6945,11 @@
     "timestamp": "2025-08-29 12:22:48 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=1QDygIRl3kE",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-08-29 17:12:05 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=u0pHfrKdWHA",
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because the content does not provide enough substantive technical detail and consists solely of a promotional announcement for a Visual Studio Code extension. While the extension is related to a Microsoft development tool (Visual Studio Code), the input does not include any description of technical implementation, architectural concepts, or integration guidance that would justify classification under the Coding category or any other. Additionally, the absence of 'content' means there is no information about the depth or focus of the video, making it impossible to assess its eligibility for inclusion rules. As per the 'when in doubt, exclude' guideline, and the emphasis on not categorizing promotional or showcase content without technical depth (Generic Exclusion Rule: Sales Pitches), this item is excluded."
   }
 ]

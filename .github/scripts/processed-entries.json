@@ -7890,5 +7890,23 @@
     "timestamp": "2025-08-29 16:15:53 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Assigned the Azure category because the content focuses on Azure Kubernetes Service, Azure CNI Overlay, Application Gateway, and other Azure-specific networking technologies (Azure inclusion rules 1, 4, 5, and 6). Assigned DevOps because implementing ingress controllers, networking overlays, and load balancing in AKS are central DevOps practices for deploying and managing modern Kubernetes workloads (DevOps rule 6—Infrastructure and Automation, and rule 5—CI/CD and Deployment). Coding and ML categories were not assigned as there is no substantial discussion of programming languages, code implementation, or data/ML workloads. AI category is not included as there are no Microsoft AI products or services discussed. Security is not assigned as the focus is on networking and scalability, not on explicit security or identity features."
+  },
+  {
+    "timestamp": "2025-08-29 17:11:18 +00:00",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/under-the-hood-exploring-the-ai-models-powering-github-copilot/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the article focuses on the AI models powering GitHub Copilot, the evolution of underlying models, details of model selection, and how AI infrastructure informs developer experience in coding tasks. The content does not directly provide code-level or framework-specific tutorials, so 'Coding' is not added. DevOps, Azure, ML, and Security are not central topics. 'GitHub Copilot' inclusion is required and always paired with 'AI' according to Copilot product distinction rules. Multiple concrete references to LLMs, workflow automation, and developer productivity validate these category assignments."
+  },
+  {
+    "timestamp": "2025-08-29 17:11:48 +00:00",
+    "canonical_url": "https://devops.com/bringing-order-to-chaotic-software-engineering-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=bringing-order-to-chaotic-software-engineering-workflows",
+    "collection": "posts",
+    "reason": "Succesfully added: AI category assigned because the article discusses the role, impact, and limitations of AI tools in software development workflows (AI inclusion rule 5). DevOps assigned due to a focus on workflow organization, process improvement, and practical remedies for engineering teams (DevOps rule 3 and 4). Coding, Azure, ML, Security, and GitHub Copilot were not added because the article does not provide hands-on technical details, coding guidance, or Microsoft-specific implementation examples."
+  },
+  {
+    "timestamp": "2025-08-29 17:12:26 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-communication-services/azure-communication-services-is-now-generally-available-in-azure/ba-p/4448034",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the content is focused on Azure Communication Services and its availability within the Azure Government cloud (Azure rule 1 and 4). The content does not qualify for DevOps, AI, Coding, Security, or ML categories since it discusses service availability, features, and compliance—not technical implementation, security configuration, AI/ML integration, or development practices. The post is an announcement with relevant technical details appropriate for practitioners evaluating Azure Communication Services in a government context."
   }
 ]
