@@ -2,7 +2,7 @@
 layout: "post"
 title: "Code Docs"
 description: "Generate comprehensive documentation for your codebase"
-author: "Fokko"
+author: "Fokko Veegens"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/66epMMY-YUc"
 categories: ["AI", "GitHub Copilot"]

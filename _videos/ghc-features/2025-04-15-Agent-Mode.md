@@ -2,7 +2,7 @@
 layout: "post"
 title: "Agent Mode"
 description: "AI agent iterates and improves your prompts automatically"
-author: "Fokko"
+author: "Fokko Veegens"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/JtJ3_ATBsTY"
 categories: ["AI", "GitHub Copilot"]

@@ -2,7 +2,7 @@
 layout: "post"
 title: "Fetch Webpage"
 description: "Retrieve web pages as context for your prompts"
-author: "Fokko"
+author: "Fokko Veegens"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/UuIrbI-qX-0"
 categories: ["AI", "GitHub Copilot"]

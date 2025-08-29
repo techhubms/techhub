@@ -2,7 +2,7 @@
 layout: "post"
 title: "Next Edit Suggestions"
 description: "AI predicts and suggests your next code edits"
-author: "Fokko"
+author: "Fokko Veegens"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/OZKC2c9wD1Q"
 categories: ["AI", "GitHub Copilot"]

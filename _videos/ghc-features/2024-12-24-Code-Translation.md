@@ -2,7 +2,7 @@
 layout: "post"
 title: "Code Translation"
 description: "Convert code between different programming languages"
-author: "Fokko"
+author: "Fokko Veegens"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/UfQGauPcAgE"
 categories: ["AI", "GitHub Copilot"]
