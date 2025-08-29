@@ -7842,5 +7842,11 @@
     "reason": "Succesfully added: The content covers large language model inference (DeepSeek R1) on Azure GPUs using open-source tools (vLLM), focusing on benchmark results, cost analysis, installation, hardware configuration, and API usage. This qualifies for the AI category due to its discussion of AI models and inference serving, and for the Azure category because the infrastructure and deployment focus is on Azure ND_H100_v5 VMs (Azure rules 1 and 4; AI rules 1 and 4). Coding, ML, and DevOps categories were not chosen because, while there are code snippets and benchmarking, the primary focus is infrastructure, deployment, and AI inference analysis rather than software engineering, ML framework development, or DevOps pipelines. Security is not substantively addressed. No generic exclusion rules apply (the content is in English, technically substantive, and not biographical or commercially promotional).",
     "timestamp": "2025-08-28 23:13:07 +00:00",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-08-29 00:55:10 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the 'Azure' category because this content is focused on technical and operational changes within Microsoft Azure's billing infrastructure in response to Red Hat's pricing model update (Azure inclusion rules 1 and 4). No other technology, AI, Coding, DevOps, ML, Security, or GitHub-specific development is covered; the focus is on billing system migration and its operational impact for Azure users, not on coding or integration of any development tools or services. The content has technical clarity, actionable steps, and is directly relevant to Azure platform users. No generic exclusion rules applied—the post is not sales pitch, biography, negative, or business strategy. Community content is well above 200 words and technical in nature.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/red-hat-enterprise-linux-billing-meter-id-updates-on-azure/ba-p/4449348"
   }
 ]
