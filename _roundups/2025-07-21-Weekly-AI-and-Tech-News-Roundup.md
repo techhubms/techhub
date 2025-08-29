@@ -77,7 +77,7 @@ Copilot’s Model Context Protocol (MCP) is now fully live in VS Code, enabling 
 
 - [Model Context Protocol (MCP) support in VS Code is generally available](https://github.blog/changelog/2025-07-14-model-context-protocol-mcp-support-in-vs-code-is-generally-available)
 - [VS Code Live - Exploring v1.102 Release Features—AI Chat, MCP, Coding Agent & More]({{ "/2025-07-17-VS-Code-Live-Exploring-v1102-Release-FeaturesAI-Chat-MCP-Coding-Agent-More.html" | relative_url }})
-- [GitHub Copilot Features - Model selection]({{ "/2025-07-16-GitHub-Copilot-Features-Model-selection.html" | relative_url }})
+- [Model selection]({{ "/2025-07-16-GitHub-Copilot-Features-Model-selection.html" | relative_url }})
 - [Automating Developer Tasks with GitHub Copilot Agent Mode and MCP Servers in VS Code]({{ "/2025-07-18-Automating-Developer-Tasks-with-GitHub-Copilot-Agent-Mode-and-MCP-Servers-in-VS-Code.html" | relative_url }})
 
 ### Productivity and Reporting Enhancements

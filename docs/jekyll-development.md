@@ -10,8 +10,6 @@ This file contains all Jekyll-specific development guidelines, configuration, de
 
 - ✅ **CORRECT**: `site.data.sections` - Accesses `_data/sections.json`
 - ❌ **WRONG**: `site.sections` - This will NOT work in Jekyll
-- ✅ **CORRECT**: `site.data.copilot_plans` - Accesses `_data/copilot_plans.json`
-- ❌ **WRONG**: `site.copilot_plans` - This will NOT work in Jekyll
 
 **Remember**: The `.data` part is MANDATORY for Jekyll data file access. This is a Jekyll convention that cannot be omitted.
 
@@ -158,7 +156,6 @@ pwsh /workspaces/techhub/jekyll-stop.ps1
    ```powershell
    # Check generated data files
    Get-Content "_data/sections.json" | ConvertFrom-Json | ConvertTo-Json -Depth 10
-   Get-Content "_data/copilot_plans.json" | ConvertFrom-Json | ConvertTo-Json -Depth 10
    ```
 
 5. **Advantages**:
@@ -418,7 +415,6 @@ Access in includes using the `include.` prefix: `include.posts`, `include.collec
 #### Existing Data Files
 
 - **_data/sections.json**: Site structure and navigation configuration
-- **_data/copilot_plans.json**: GitHub Copilot feature comparison data
 - **Purpose**: Centralized configuration data for Jekyll templates and plugins
 - **Usage**: Accessed via `site.data.filename` convention in Liquid templates
 
@@ -524,7 +520,7 @@ Access in includes using the `include.` prefix: `include.posts`, `include.collec
 **Solutions**:
 
 1. Restart Jekyll server
-2. Check existing data files (`_data/sections.json`, `_data/copilot_plans.json`)
+2. Check existing data files (`_data/sections.json`)
 3. Verify data structure and format
 4. Check Jekyll build logs for plugin errors
 
@@ -549,7 +545,6 @@ Access in includes using the `include.` prefix: `include.posts`, `include.collec
 
 ```powershell
 Get-Content "_data/sections.json" | ConvertFrom-Json
-Get-Content "_data/copilot_plans.json" | ConvertFrom-Json
 ```
 
 **Verbose Build for Debugging**:

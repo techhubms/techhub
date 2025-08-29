@@ -236,6 +236,7 @@ function passesTextSearch(cachedPost) {
 ```
 
 **Clear Button Behavior**:
+
 - Automatically appears when text is entered
 - Hidden when search field is empty
 - Provides immediate search clearing functionality

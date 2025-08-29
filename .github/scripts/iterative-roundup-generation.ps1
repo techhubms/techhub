@@ -101,7 +101,7 @@ function Test-AiResponseFormat {
     # Check if response indicates an error
     if ($Response -like "*I cannot*" -or $Response -like "*I'm unable*" -or $Response -like "*I don't have*") {
         return @{
-            IsValid = $false
+            IsValid      = $false
             ErrorMessage = "AI indicated it cannot complete the request: $($Response.Substring(0, [Math]::Min(200, $Response.Length)))"
         }
     }
@@ -496,14 +496,15 @@ $articleContent
                 # Only keep articles that are not corporate
                 if ($relevanceResult.developer_relevance -ne "corporate") {
                     $developerRelevantArticles += @{
-                        FilePath = $articleFilePath
+                        FilePath           = $articleFilePath
                         DeveloperRelevance = $relevanceResult.developer_relevance
-                        Reasoning = $relevanceResult.reasoning
-                        Title = $relevanceResult.title
+                        Reasoning          = $relevanceResult.reasoning
+                        Title              = $relevanceResult.title
                     }
                     Write-Host "  ✅ INCLUDED - Relevance: $($relevanceResult.developer_relevance)"
                     Write-Host "  📝 Reasoning: $($relevanceResult.reasoning)"
-                } else {
+                }
+                else {
                     Write-Host "  ❌ EXCLUDED - Corporate content" -ForegroundColor Yellow
                     Write-Host "  📝 Reasoning: $($relevanceResult.reasoning)" -ForegroundColor Yellow
                 }
@@ -691,7 +692,8 @@ $step2BSystemMessage
             $originalTags = Get-FrontMatterValue -Content $articleContent -Key "tags"
             $tagsForAI = if ($originalTags) { 
                 ($originalTags | ConvertTo-Json -Compress) 
-            } else { 
+            }
+            else { 
                 "[]" 
             }
 
@@ -1020,8 +1022,8 @@ $step3SystemMessage
                 
                 # Filter out corporate articles with low developer relevance
                 $developerArticles = @($sectionArticles | Where-Object { 
-                    $_.developer_relevance -ne "corporate" -and $_.relevance_score -ge 3 
-                })
+                        $_.developer_relevance -ne "corporate" -and $_.relevance_score -ge 3 
+                    })
                 
                 if ($developerArticles.Count -eq 0) {
                     Write-Host "⏭️ Skipping section $($sectionName) - no developer-relevant articles found" -ForegroundColor Yellow
@@ -1631,7 +1633,7 @@ CRITICAL: Make sure the response is VALID JSON
 CRITICAL: Return a JSON object with these exact fields: title, tags, description, introduction
 CRITICAL: These are what the 4 fields should contain:
 
-- Title: Create an engaging, informative title that reflects the week's main themes. Do NOT include the date in the title. MAX LENGTH is 80 characters!
+- Title: Create an engaging, informative title that reflects the week's main themes. Do NOT include the date in the title. MAX LENGTH is 70 characters!
 - Tags: Array of 10-15 relevant technology tags from the content
 - Description: Write a 2-3 sentence summary of the week's key developments
 - Introduction: Create a compelling 2-3 paragraph introduction that:
@@ -1660,6 +1662,8 @@ Return only JSON with fields: title, tags, description, introduction
             -Endpoint $Endpoint `
             -RateLimitPreventionDelay $RateLimitPreventionDelay
 
+        Save-StepBackup -StepName "Step7-Metadata" -Content $step7Response -StartDate $StartDate -EndDate $EndDate
+
         # Check for errors with robust error handling
         $rewriteResult = Test-AiResponseFormat -Response $step7Response -StepName "Step 7"
         if (-not $rewriteResult.IsValid) {
@@ -1670,20 +1674,6 @@ Return only JSON with fields: title, tags, description, introduction
         # Additional validation for Step 7 - ensure it's valid JSON
         try {
             $testParse = $step7Response | ConvertFrom-Json
-            if (-not $testParse.title -or -not $testParse.description -or -not $testParse.tags) {
-                Write-Host "❌ Step 7 response missing required metadata fields (title, description, tags)" -ForegroundColor Red
-                Write-Host "Response: $step7Response" -ForegroundColor Red
-                Write-Error "Step 7 metadata generation failed: missing required fields"
-                exit 1
-            }
-            
-            # Validate title length (max 80 characters)
-            if ($testParse.title.Length -gt 80) {
-                Write-Host "❌ Step 7 title exceeds 80 character limit: $($testParse.title.Length) characters" -ForegroundColor Red
-                Write-Host "Title: $($testParse.title)" -ForegroundColor Red
-                Write-Error "Step 7 metadata generation failed: title exceeds 80 character limit"
-                exit 1
-            }
         }
         catch {
             Write-Host "❌ Step 7 response is not valid JSON" -ForegroundColor Red
@@ -1692,7 +1682,13 @@ Return only JSON with fields: title, tags, description, introduction
             exit 1
         }
 
-        Save-StepBackup -StepName "Step7-Metadata" -Content $step7Response -StartDate $StartDate -EndDate $EndDate
+        if (-not $testParse.title -or -not $testParse.description -or -not $testParse.tags) {
+            Write-Host "❌ Step 7 response missing required metadata fields (title, description, tags)" -ForegroundColor Red
+            Write-Host "Response: $step7Response" -ForegroundColor Red
+            Write-Error "Step 7 metadata generation failed: missing required fields"
+            exit 1
+        }
+
         Write-Host "✅ Step 7 complete - Roundup metadata generated"
     }
     else {
