@@ -18,6 +18,51 @@ This document defines the writing style and tone requirements for all content in
 - **Active voice preferred**: "The system processes data" instead of "Data is processed by the system"
 - **Consistent terminology**: Use the same terms throughout all documentation (see [Terminology](terminology.md))
 
+### Punctuation and Sentence Flow
+
+- **Prefer flowing sentences**: Create smooth, readable prose that connects ideas naturally
+- **Limit em dashes (—)**: Use sparingly for emphasis or to set off important information. When used, maintain consistency throughout the document
+- **Minimize semicolons (;)**: Use periods and start new sentences instead. Semicolons can make text feel formal and choppy
+- **Reduce parenthetical statements (...)**: Incorporate information into the main sentence flow when possible. Excessive parentheses interrupt reading flow
+- **Use commas for clarity**: Connect related ideas with commas and coordinating conjunctions rather than breaking into choppy fragments
+- **Maintain consistent punctuation patterns**: If using em dashes for explanatory content in one section, use them consistently for similar content throughout
+
+**Examples:**
+
+✅ **Good flowing sentences**:
+> Everything an AI processes—words, images, concepts—gets converted into vectors, which are simply lists of numbers that capture meaning.
+
+❌ **Choppy with mixed punctuation**:
+> Everything an AI processes (words, images, concepts) gets converted into vectors. Which are simply lists of numbers; they capture meaning.
+
+## Specific Guidelines for AI Models
+
+### Common AI Writing Patterns to Avoid
+
+- **Generic openings**: Never start with "In today's digital landscape", "In an era of", "In a world where"
+- **Transition sentence starters**: Limit sentences beginning with "Moreover", "Furthermore", "Additionally", "However" to one per paragraph maximum
+- **Qualification overuse**: Avoid starting sentences with "It's worth noting", "It's important to understand", "It should be mentioned"
+- **Abstract positioning**: Don't use phrases like "stands at the forefront", "represents a paradigm shift", "marks a new era"
+- **Temporal vagueness**: Avoid "moving at this speed", "continues to move fast", "develops quickly" without specific context
+- **Generic trend language**: Replace "clear uptick", "remains a focus", "across the board" with specific facts
+
+### Positive Patterns to Embrace
+
+- **Direct statements**: Start with the main point: "GitHub Copilot suggests code completions" not "GitHub Copilot offers innovative code completion capabilities"
+- **Specific benefits**: Use measurable outcomes: "reduces coding time by 30%" not "significantly improves productivity"
+- **Active voice**: "The system processes data" not "Data is processed by the system"
+- **Human-centered language**: Focus on what users can do, not what technology enables
+
+### Writing Quality Checks for AI
+
+Before finishing any piece of writing, check:
+
+1. **Count transition words**: No more than one "Moreover/Furthermore/Additionally" per paragraph
+2. **Scan for buzzwords**: Remove any words from the "avoid" lists above
+3. **Check sentence starters**: Vary how sentences begin - avoid repetitive patterns
+4. **Verify specificity**: Each claim should be concrete and actionable
+5. **Read for flow**: Text should sound natural when read aloud
+
 ## What to Avoid
 
 **CRITICAL**: Avoid these types of words and phrases that create hype or overstate importance:
@@ -27,16 +72,24 @@ This document defines the writing style and tone requirements for all content in
 - **Buzzwords**: "groundbreaking", "revolutionary", "game-changing", "cutting-edge", "paradigm shift"
 - **Superlatives**: "the best", "amazing", "incredible", "the ultimate solution"
 - **Marketing speak**: "delve into", "leverage", "synergize", "transformative", "unprecedented"
-- **AI-generated tells**: Starting with "In an era", "In a world", excessive use of "fundamentally"
+- **AI-generated tells**: Starting with "In an era", "In a world", excessive use of "fundamentally", "Moreover", "Furthermore", "Additionally" at sentence starts, overuse of "seamlessly", "effortlessly", "streamlined"
 - **Impact qualifiers**: "pivotal", "significant", "major", "substantial", "dramatic", "massive"
 - **Intensity words**: "breakthrough", "cutting-edge", "world-class", "industry-leading", "paradigm-shifting"
+- **Speed and movement clichés**: "move fast", "moving at this speed", "continue to advance rapidly", "develop quickly"
+- **Vague growth patterns**: "clear uptick", "clear trend", "obvious shift", "dramatic increase"
 
 ### Vague or Generic Language
 
-- **Filler phrases**: "In this article", "In this post", "It's worth noting that"
+- **Filler phrases**: "In this article", "In this post", "It's worth noting that", "As we dive into", "Let's explore"
 - **Generic adjectives**: "nice", "great", "awesome" without specific context
-- **Hedge words**: Excessive use of "basically", "essentially", "obviously"
+- **Hedge words**: Excessive use of "basically", "essentially", "obviously", "simply", "just"
 - **Redundant expressions**: "future plans", "past history", "final conclusion"
+- **Transition overuse**: Starting multiple sentences with "Moreover", "Furthermore", "Additionally", "However"
+- **Vague trend language**: "remains a focus", "continues to be", "across the board", "with plenty of"
+- **Generic emphasis**: "as well", "too", "also" when used excessively for emphasis
+- **Unclear quantifiers**: "plenty of practical news", "clear uptick", "obvious trend"
+- **Speed qualifiers**: "moving at this speed", "continues to move fast", "develops quickly"
+- **Generic conclusions**: "With technology advancing rapidly", "As the industry evolves"
 
 ### Technical Jargon Without Context
 
@@ -120,9 +173,13 @@ Ask yourself these questions about your content:
 
 > The new activity report shows which features your team uses most, helping you identify training opportunities and measure adoption success.
 
+> GitHub Copilot now uses OpenAI's GPT-5 across Visual Studio, VS Code, and JetBrains IDEs, providing improved code completion and debugging assistance.
+
 #### ❌ Poor: Generic and Buzzword-Heavy
 
 > This groundbreaking report delivers game-changing insights that will transform your understanding of user engagement and drive synergistic adoption strategies.
+
+> AI integration, cloud platforms, and developer tools continue to move fast, with plenty of practical news across the board.
 
 ### Content Type Examples
 
@@ -142,36 +199,10 @@ Ask yourself these questions about your content:
 ❌ **Poor**:
 > Our innovative tag-based filtering solution empowers users to delve into highly targeted content discovery through an unprecedented multi-dimensional taxonomy system.
 
-## Integration with Documentation Standards
+#### News Roundups
 
-This style guide works alongside:
+✅ **Good**:
+> GitHub Copilot now supports GPT-5 across major IDEs. Microsoft announced new security features for Azure. Three companies released updates to their development tools this week.
 
-- **[Documentation Guidelines](documentation-guidelines.md)**: For document structure and organization
-- **[Markdown Guidelines](markdown-guidelines.md)**: For formatting and frontmatter standards
-- **[Terminology](terminology.md)**: For consistent vocabulary usage
-- **[Content Management](content-management.md)**: For content creation workflows
-
-## Maintenance
-
-### Regular Review
-
-- **Quarterly updates**: Review and update guidelines based on content feedback
-- **Example refresh**: Add new examples as the site evolves
-- **Community input**: Incorporate feedback from content creators and readers
-- **Consistency checks**: Audit existing content against current guidelines
-
-### Enforcement
-
-- **Content review**: All new content should follow these guidelines
-- **Documentation updates**: Apply standards when updating existing documentation
-- **Tool integration**: Incorporate style checks into automated content processing where possible
-- **Training**: Share guidelines with new contributors and content creators
-
-## Resources
-
-For additional guidance on specific content types, see:
-
-- **RSS Feed Content**: [RSS Feeds](rss-feeds.md)
-- **Plugin Documentation**: [Plugins](plugins.md)
-- **Performance Content**: [Performance Guidelines](performance-guidelines.md)
-- **Testing Documentation**: [Testing Guidelines](testing-guidelines.md)
+❌ **Poor**:
+> Technology continues to move fast across the board. There's a clear uptick in adoption of cutting-edge solutions. Meanwhile, the industry remains focused on innovation at unprecedented speed.

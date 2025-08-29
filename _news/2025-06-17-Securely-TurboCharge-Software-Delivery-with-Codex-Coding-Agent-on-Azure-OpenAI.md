@@ -131,8 +131,8 @@ jobs:
       - name: Run Codex agent
         run: |
           npm install -g @openai/codex
-          export AZURE_OPENAI_API_KEY=${{ secrets.AZURE_OPENAI_API_KEY }}
-          export OPENAI_API_KEY=${{ secrets.AZURE_OPENAI_API_KEY }}
+          export AZURE_OPENAI_API_KEY={% raw %}${{ secrets.AZURE_OPENAI_API_KEY }}{% endraw %}
+          export OPENAI_API_KEY={% raw %}${{ secrets.AZURE_OPENAI_API_KEY }}{% endraw %}
           codex -p azure "# refactor the authentication module for clarity"
 ```
 

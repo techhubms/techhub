@@ -95,8 +95,8 @@ jobs:
     system-prompt: |
       Given a bug report title and text for an application, return 'pass' if there is enough information to reliably reproduce the issue...
     prompt: |
-      Title: ${{ steps.issue.outputs.title }}
-      Body: ${{ steps.issue.outputs.body }}
+      Title: {% raw %}${{ steps.issue.outputs.title }}{% endraw %}
+      Body: {% raw %}${{ steps.issue.outputs.body }}{% endraw %}
 ```
 
 1. If the AI response is not 'pass', post a comment asking for missing details.
@@ -158,13 +158,13 @@ jobs:
 - name: Install gh-models extension
   run: gh extension install https://github.com/github/gh-models
   env:
-    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    GH_TOKEN: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
 ```
 
 1. Summarize the PR using an AI model and append summary to release issue:
 
 ```bash
-PR_NUMBER="${{ github.event.pull_request.number }}"
+PR_NUMBER="{% raw %}${{ github.event.pull_request.number }}{% endraw %}"
 
 # Fetch PR data
 
@@ -221,14 +221,14 @@ jobs:
       - name: Install gh-models extension
         run: gh extension install https://github.com/github/gh-models
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: {% raw %}${{ github.token }}{% endraw %}
 ```
 
 1. Gather open issues from the past week and summarize them with a prompt file:
 
 ```bash
 LAST_WEEK=$(date -d "7 days ago" +"%Y-%m-%d")
-gh search issues "created:>$LAST_WEEK" --state=open --json title,body,url --repo ${{ github.repository }} > issues.json
+gh search issues "created:>$LAST_WEEK" --state=open --json title,body,url --repo {% raw %}${{ github.repository }}{% endraw %} > issues.json
 cat issues.json | gh models run --file prompts/issue-summary.prompt.yml > summary.md
 ```
 

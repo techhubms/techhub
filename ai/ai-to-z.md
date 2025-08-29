@@ -7,22 +7,10 @@ category: "AI"
 page-name: "ai-to-z"
 ---
 
-The goal of this page is not to dive into every detail of AI, but to provide a solid foundation and a starting point for anyone interested in learning about AI, whether you are a beginner or have some experience.
+This page is designed to be a starting point for learning about AI.
 
-**What you'll learn in this guide:**
-
-This comprehensive guide takes you on a journey through the AI landscape, from historical context to cutting-edge applications. We'll explore the fundamental concepts that power modern AI systems, examine practical tools and platforms you can use today, and look ahead to emerging trends that will shape the future.
-
-**Who this guide is for:**
-
-- **Developers** wanting to integrate AI into their applications
-- **Business professionals** exploring AI opportunities for their organizations  
-- **Students and researchers** seeking a practical understanding of AI technologies
-- **Anyone curious** about how AI works and how to get started with AI tools
-
-**How to use this guide:**
-
-This guide is designed to be read sequentially, as each section builds on concepts from previous sections. However, experienced readers can jump to specific topics using the table of contents. Look for FAQ sections throughout that address common questions, and follow the "More information" links for deeper dives into specific topics.
+- Suitable for beginners and those with some experience.
+- Each section builds on concepts from previous sections, so it's best read sequentially.
 
 ## Table of Contents
 
@@ -39,7 +27,6 @@ This guide is designed to be read sequentially, as each section builds on concep
   - [Problems with models](#problems-with-models)
   - [When not to use AI](#when-not-to-use-ai)
   - [Societal impacts and risks](#societal-impacts-and-risks)
-  - [Model alignment (Constitutional AI)](#model-alignment-constitutional-ai)
   - [Fine-tuning a model](#fine-tuning-a-model)
   - [How AI models actually work](#how-ai-models-actually-work)
   - [Advanced concepts](#advanced-concepts)
@@ -48,6 +35,9 @@ This guide is designed to be read sequentially, as each section builds on concep
   - [Model Context Protocol (MCP)](#model-context-protocol-mcp)
   - [Retrieval Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
   - [Agents & Agentic AI](#agents--agentic-ai)
+  - [Multi-agent solutions](#multi-agent-solutions)
+  - [Scaling AI implementations](#scaling-ai-implementations)
+  - [The AI-native web: NLWeb, llms.txt, and semantic search](#the-ai-native-web-nlweb-llmstxt-and-semantic-search)
 - [Inspiration](#inspiration)
   - [Where You Find AI Today](#where-you-find-ai-today)
   - [Real Projects You Can Build Today](#real-projects-you-can-build-today)
@@ -59,8 +49,8 @@ This guide is designed to be read sequentially, as each section builds on concep
   - [Azure AI services](#azure-ai-services)
   - [Languages & SDKs](#languages--sdks)
   - [Semantic Kernel](#semantic-kernel)
-- [(Near) future](#near-future)
 - [Want to know more?](#want-to-know-more)
+- [Conclusion](#conclusion)
 
 ## History
 
@@ -262,6 +252,12 @@ GitHub Models is a development platform that gives developers access to various 
 
 **Reusable prompts** are templates or standardized instructions that you can use repeatedly for similar tasks. These save time and ensure consistency. For example, you might create a standard prompt for code reviews or document summaries that includes specific criteria and formatting instructions.
 
+**More information:**
+
+- [Craft Prompts That Get Copilot to Deliver What You Need](https://randypagels.com/blog/prompt-engineering-for-github-copilot-part-1-introduction-prompt-engineering-and-prompts-that-get-copilot-to-deliver-what-you-need/)
+- [Best Prompt Engineering Tools (2025) for Building and Debugging LLM Agents](https://www.reddit.com/r/AI_Agents/comments/1mc4q9i/best_prompt_engineering_tools_2025_for_building/)
+- [Go from Prompt to Playback: Sora Video Generation in Azure AI Foundry's Video Playground](https://devblogs.microsoft.com/azure-ai/go-from-prompt-to-playback-with-sora-from-azure-openai-in-the-video-playground-in-azure-ai-foundry/)
+
 ### Tokens & Tokenization
 
 **Tokens** are the basic units that AI models use to process text. Think of them as the "words" that the AI actually understands, though they don't always match human words exactly.
@@ -311,6 +307,12 @@ Different models use different tokenization methods, so you can't directly trans
 - **Images**: Converted into fixed-size "image tokens" representing visual information
 - **Audio**: Processed into time-based segments representing sound patterns
 - **Code**: Often tokenized similar to text but may handle syntax differently
+
+**More information:**
+
+- [GPT-5 Launches in Azure AI Foundry: New Era for AI Apps, Agents and Developers](https://devblogs.microsoft.com/azure-ai/gpt-5-launches-in-azure-ai-foundry-new-era-for-ai-apps-agents-and-developers/)
+- [Maximize Your ROI for Azure OpenAI: Pricing, Deployment, and Cost Optimization Strategies](https://devblogs.microsoft.com/azure-ai/maximize-your-roi-for-azure-openai-pricing-deployment-and-cost-optimization-strategies/)
+- [Introducing Deep Research in Azure AI Foundry Agent Service](https://devblogs.microsoft.com/azure-ai/introducing-deep-research-in-azure-ai-foundry-agent-service/)
 
 ### Costs
 
@@ -379,48 +381,26 @@ Use the right tool for the job. Prefer non-AI or AI-assisted approaches for:
 
 - Exact arithmetic, counting, or unit conversions. Use a calculator, spreadsheet, or ask the model to generate code that computes the result and then run it.
 - Deterministic workflows with strict rules (compliance checks, tax calculations, safety-critical steps). Encode rules in code or rules engines and optionally add AI for explanations.
-- Long-lived, precise memory. Summaries drift over time; store source-of-truth data in databases and use RAG to re-ground when needed.
-- Sensitive data handling beyond approved boundaries. Keep PII/PHI within compliant systems; use redaction and data minimization.
+- Long-lived, precise memory; summaries drift over time, so store source-of-truth data in databases and use RAG to re-ground when needed.
+- Sensitive data handling beyond approved boundaries; keep PII/PHI within compliant systems and use redaction and data minimization.
 - Legal, medical, or financial decisions without human review. Keep a human in the loop for final approval.
 
-When in doubt, let AI help draft, explain, and prototype—but keep calculators, compilers, search, and databases as the “source of truth.”
+When in doubt, let AI help draft, explain, and prototype, but keep calculators, compilers, search, and databases as the “source of truth.”
 
 ### Societal impacts and risks
 
-AI delivers value, but also introduces real-world risks that organizations should plan for:
+AI’s benefits come with human and environmental costs that show up across society. Key impacts and current risks include:
 
-- Bias and fairness: models reflect training data. Establish evaluation, red-teaming, and escalation paths.
-- Misinformation: convincing but wrong answers spread quickly. Require citations and tracing via RAG where accuracy matters.
-- Privacy and IP: avoid training on proprietary or sensitive data without consent. Respect license terms and attribution.
-- Labor shifts: new roles emerge while others change. Invest in reskilling and transparent adoption.
-- Energy and cost: training/inference consume resources. Prefer efficient models, batch operations, and caching.
+- Hidden human labor: low‑paid data annotation and content moderation—often outsourced to the Global South—with long hours, low wages, trauma exposure, and poor working conditions documented in reporting (see [The Conversation](https://theconversation.com/long-hours-and-low-wages-the-human-labour-powering-ais-development-217038) and [Guardian report](https://www.theguardian.com/technology/article/2024/jul/06/mercy-anita-african-workers-ai-artificial-intelligence-exploitation-feeding-machine)).
+- Environmental footprint: high electricity demand tied to grid carbon intensity; significant water use for data‑center cooling; upstream mining for chips and batteries; e‑waste and localized environmental burdens near facilities.
+- Bias and discrimination: training‑data and deployment‑context bias can lead to unequal outcomes in hiring, lending, healthcare, education, and policing—often affecting marginalized groups most.
+- Information integrity: synthetic media and confident but wrong outputs accelerate misinformation, deepfakes, and election interference; provenance and content authenticity remain open challenges.
+- Privacy and IP: mass data collection, scraping, and model training without consent raise privacy, surveillance, and creator‑rights concerns.
+- Work and the economy: automation reshapes tasks and wages; some roles are displaced while new ones emerge; growing surveillance and metrics can increase precarity in workplaces.
+- Concentration and access: a few firms control models, compute, and distribution; lock‑in and digital divides influence who benefits and who is excluded.
+- Security and misuse: prompt injection, data poisoning, model extraction, and jailbreaks; voice‑clone fraud, large‑scale phishing, and code generation that lowers the bar for cyberattacks.
 
-See also: [Is AI the Right Solution? Part 2: Applying the Framework and Navigating Ethical Risks]({{ "/2025-06-02-Is-AI-the-Right-Solution-Part-2-Applying-the-Framework-and-Navigating-Ethical-Risks.html" | relative_url }}).
-
-### Model alignment (Constitutional AI)
-
-Constitutional AI (CAI) is an alignment approach (popularized by Anthropic) where a model follows a short, written set of principles—its “constitution”—to judge and improve its own outputs.
-
-How it works (simplified):
-
-- Draft: the model produces an initial answer.
-- Self-critique: it reviews that answer against the constitution (e.g., be helpful and honest; avoid facilitating harm; cite uncertainty).
-- Revise: it edits the answer to better follow the principles.
-- Train for preference: training favors these revised answers using RL from AI feedback (RLAIF), reducing dependence on large human-labeled datasets.
-
-Why it helps:
-
-- Makes safety rules explicit and auditable.
-- Scales alignment with fewer human labels.
-- Yields more consistent “helpful, harmless, honest” behavior.
-
-Limits:
-
-- Only as good as the chosen principles (they can be incomplete or biased).
-- May over-refuse or be overly conservative.
-- Doesn’t ensure factual accuracy—use grounding/RAG and tools for facts.
-
-Example principle: “Avoid providing instructions that meaningfully facilitate wrongdoing.” During self-critique, the model removes such content before replying.
+See also: [Is AI the Right Solution? Part 2: Applying the Framework and Navigating Ethical Risks](https://hiddedesmet.com/ai-project-validation-framework-part2).
 
 ### Fine-tuning a model
 
@@ -444,6 +424,12 @@ Top P determines how many alternative words the model considers when generating 
 
 These settings work together - you might use low temperature and low Top P for consistent, factual responses, or high temperature and high Top P for creative brainstorming sessions.
 
+**More information:**
+
+- [Enhancing Conversational Agents with Azure AI Language: CLU and Custom Question Answering](https://devblogs.microsoft.com/azure-ai/enhancing-conversational-agents-with-azure-ai-language-clu-and-custom-question-answering/)
+- [What's New in Azure AI Foundry | July 2025](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/what%E2%80%99s-new-in-azure-ai-foundry-finetuning-july-2025/4438850)
+- [OpenAI's Open‑Source Model: gpt‑oss on Azure AI Foundry and Windows AI Foundry](https://www.microsoft.com/en-us/ai/open-source-ai-models)
+
 ### How AI models actually work
 
 Before diving into advanced concepts, it's essential to understand the foundational building blocks that make AI possible. At its core, AI models work by converting human concepts into mathematical representations that computers can process and manipulate.
@@ -460,6 +446,29 @@ This mathematical representation allows AI models to understand that "vehicle" r
 
 During inference, the model doesn't "think" the way humans do. Instead, it performs billions of mathematical calculations to predict the most likely next word, then the word after that, building responses token by token based on the patterns it learned during training.
 
+**Alignment: making models follow principles (Constitutional AI)**
+As models get stronger, we also need them to behave safely and predictably. "Alignment" is the process of shaping model behavior to follow clear rules and values, not just statistics from the training data. A practical approach you’ll see in modern systems is Constitutional AI (popularized by Anthropic): the model uses a short, written set of principles (a “constitution”) to critique and improve its own answers.
+
+How this works in practice:
+
+- Draft: the model produces an initial answer.
+- Self‑critique: it reviews that answer against the constitution (e.g., be helpful and honest, avoid facilitating harm, acknowledge uncertainty).
+- Revise: it edits the answer to better follow the principles.
+- Preference training (RLAIF): training then favors these revised answers using reinforcement learning from AI feedback, reducing dependence on large human‑labeled datasets.
+
+Why this helps
+
+- Principles are explicit and auditable.
+- Scales alignment with fewer human labels.
+- Produces more consistent “helpful, harmless, honest” behavior.
+
+Limits to keep in mind
+
+- Only as good as the chosen principles (they can be incomplete or biased) and may lead to over‑refusal in edge cases.
+- Not a substitute for factual grounding—use retrieval (RAG) and tools for accuracy and citations.
+
+Example principle: “Avoid providing instructions that meaningfully facilitate wrongdoing.” During self‑critique, the model removes or reframes such content before replying.
+
 ### Advanced concepts
 
 Now that we understand how AI models represent and process information, we can explore the sophisticated mechanisms that make modern AI so powerful.
@@ -475,11 +484,11 @@ The breakthrough innovation in transformers is the **attention mechanism**. When
 For example, when translating "The cat that was sleeping on the mat was orange," the attention mechanism helps the model understand that "orange" describes "cat," not "mat," even though other words appear between them.
 
 **Scale and capability: Parameters, context, and training**
-The **parameters** in a model—those adjustable weights we mentioned—directly impact capability. GPT-3 has 175 billion parameters, while some newer models have over a trillion. More parameters generally mean better understanding of nuanced language patterns, though they also require more computational resources.
+The **parameters** in a model (the adjustable weights we mentioned) directly impact capability. GPT-3 has 175 billion parameters, while some newer models have over a trillion. More parameters generally mean better understanding of nuanced language patterns, though they also require more computational resources.
 
 **Context windows** determine how much information a model can consider at once. Larger context windows allow models to maintain coherence across longer conversations and documents, but they also increase computational costs and processing time.
 
-The **training data**—billions of web pages, books, and articles—shapes what the model knows. The **cut-off date** represents the latest information in this training data, which is why models can't discuss events that happened after their training completed.
+The **training data** (billions of web pages, books, and articles) shapes what the model knows. The **cut-off date** represents the latest information in this training data, which is why models can't discuss events that happened after their training completed.
 
 **Practical implications: Balancing trade-offs**
 Every advanced feature involves trade-offs. Larger context windows enable more sophisticated reasoning but increase latency and costs. Higher-parameter models provide better quality but require more computational resources. Understanding these trade-offs helps you choose the right model configuration for your specific needs.
@@ -487,6 +496,12 @@ Every advanced feature involves trade-offs. Larger context windows enable more s
 When designing applications, consider how **vocabulary size** (the tokens a model understands), **temperature settings** (creativity vs. consistency), and **seed values** (reproducibility) align with your goals for latency, accuracy, cost, and reliability.
 
 For a comprehensive deep dive into how these concepts work together, [Andrej Karpathy's tutorial on building ChatGPT from scratch](https://www.youtube.com/watch?v=kCc8FmEb1nY) provides an excellent technical foundation.
+
+**More information:**
+
+- [Microsoft Releases Dion: A New Scalable Optimizer for Training AI Models](https://techcommunity.microsoft.com/blog/educator-developer-blog/microsoft-releases-dion-a-new-scalable-optimizer-for-training-ai-models/4500124)
+- [Optimizing Large-Scale AI Performance with Pretraining Validation on a Single Azure ND GB200 v6](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimizing-large-scale-ai-performance-with-pretraining/ba-p/4445273)
+- [Benchmarking Llama 3.1 8B AI Inference on Azure ND-H100-v5 with vLLM](https://techcommunity.microsoft.com/blog/educator-developer-blog/benchmarking-llama-3-1-8b-ai-inference-on-azure-nd-h100-v5-with-vllm/4440725)
 
 Tip: keep these concepts practical. As you design a use case, tie terms like “context,” “embeddings,” and “attention” to concrete trade-offs: latency, accuracy, token cost, and guardrails.
 
@@ -531,9 +546,12 @@ Models use the function descriptions and parameter details to understand when a 
 
 **More information:**
 
-- [Connecting to a Local MCP Server Using Microsoft.Extensions.AI]({{ "/2025-04-30-Connecting-to-a-Local-MCP-Server-Using-MicrosoftExtensionsAI.html" | relative_url }})
-- [Model Context Protocol Development Best Practices]({{ "/2025-07-28-MCP-Development-Best-Practices.html" | relative_url }})
-- [Let's Learn Model Context Protocol with JavaScript and TypeScript]({{ "/2025-07-21-Lets-Learn-Model-Context-Protocol-with-JavaScript-and-TypeScript.html" | relative_url }})
+- [Connecting to a Local MCP Server Using Microsoft.Extensions.AI](https://www.youtube.com/watch?v=iYHh5n-6ez4)
+- [Model Context Protocol Development Best Practices](https://www.youtube.com/watch?v=W56H9W7x-ao)
+- [Building AI Agents with Ease: Function Calling in VS Code AI Toolkit](https://techcommunity.microsoft.com/t5/educator-developer-blog/building-ai-agents-with-ease-function-calling-in-vs-code-ai/ba-p/4442637)
+- [Unlocking GPT-5's Freeform Tool Calling in Azure AI Foundry](https://devblogs.microsoft.com/foundry/unlocking-gpt-5s-freeform-tool-calling-a-new-era-of-seamless-integration/)
+- [General Availability of the Responses API in Azure AI Foundry](https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/general-availability-of-the-responses-api-in-azure-ai-foundry/ba-p/4234701)
+- [Let's Learn Model Context Protocol with JavaScript and TypeScript](https://www.youtube.com/watch?v=AKjW94vQZkc)
 
 ### Model Context Protocol (MCP)
 
@@ -574,9 +592,12 @@ Current MCP implementations have limited security features, but improvements are
 
 **More information:**
 
-- [Connecting to a Local MCP Server Using Microsoft.Extensions.AI]({{ "/2025-04-30-Connecting-to-a-Local-MCP-Server-Using-MicrosoftExtensionsAI.html" | relative_url }})
-- [Model Context Protocol Development Best Practices]({{ "/2025-07-28-MCP-Development-Best-Practices.html" | relative_url }})
-- [Let's Learn Model Context Protocol with JavaScript and TypeScript]({{ "/2025-07-21-Lets-Learn-Model-Context-Protocol-with-JavaScript-and-TypeScript.html" | relative_url }})
+- [Connecting to a Local MCP Server Using Microsoft.Extensions.AI](https://www.youtube.com/watch?v=iYHh5n-6ez4)
+- [Model Context Protocol Development Best Practices](https://www.youtube.com/watch?v=W56H9W7x-ao)
+- [Let's Learn Model Context Protocol with JavaScript and TypeScript](https://www.youtube.com/watch?v=AKjW94vQZkc)
+- [Building AI Agents with Semantic Kernel, MCP Servers, and Python](https://www.youtube.com/watch?v=vfIwpctNbv4)
+- [Agent Factory: Building Your First AI Agent with Azure AI Foundry](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-building-your-first-ai-agent-with-azure-ai-foundry/4295871)
+- [Zero Trust Agents: Adding Identity and Access to Multi-Agent Workflows](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/zero-trust-agents-adding-identity-and-access-to-multi-agent-workflows/4273932)
 
 ### Retrieval Augmented Generation (RAG)
 
@@ -626,6 +647,11 @@ Retrieval Augmented Generation combines the power of AI language models with acc
 - You want direct control over what external services the AI can access
 - You're building custom integrations for specific use cases
 
+**More information:**
+
+- [Retrieval-Augmented Generation (RAG) in Azure AI: A Step-by-Step Guide](https://dellenny.com/retrieval-augmented-generation-rag-in-azure-ai-a-step-by-step-guide/)
+- [Evaluating GPT-5 Models for RAG on Azure AI Foundry](https://techcommunity.microsoft.com/blog/educator-developer-blog/evaluating-gpt-5-models-for-rag-on-azure-ai-foundry/4392693)
+
 ### Agents & Agentic AI
 
 **What makes something an agent?**
@@ -671,19 +697,90 @@ Think of MCP servers as specialized tools in a workshop, while AI agents are the
 
 **More information:**
 
-- [Introducing Microsoft Discovery: An Agentic AI Platform for Scientific Research]({{ "/2025-05-19-Introducing-Microsoft-Discovery-An-Agentic-AI-Platform-for-Scientific-Research.html" | relative_url }})
+- [Introducing Microsoft Discovery: An Agentic AI Platform for Scientific Research](https://www.youtube.com/watch?v=k3S4lPbUWng)
+- [Designing and Creating Agentic AI Systems on Azure](https://www.techug.com/designing-and-creating-agentic-ai-in-azure/)
+- [Agent Factory: Enterprise Patterns and Best Practices for Agentic AI with Azure AI Foundry](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/4296074)
+- [Building a multi-agent system with Semantic Kernel](https://geekodon.com/building-a-multi-agent-system-with-semantic-kernel/)
+- [Build Biosensing AI-Native Apps on Azure with BCI, AI Foundry, and Agents Service](https://azure.microsoft.com/en-us/blog/build-biosensing-ai-native-apps-on-azure-with-bci-ai-foundry-and-agents-service/)
+- [Unlocking Innovation with Azure AI Foundry Agent Service](https://johnnaguib.substack.com/p/unlocking-innovation-with-azure-ai)
 
-#### A2A vs MCP vs ACP (in practice)
+### Multi-agent solutions
 
-- MCP: a protocol for connecting models/applications to tools and data via standardized servers. Think “how to use tools.”
-- A2A: patterns/protocols for agents to coordinate with other agents. Think “how agents talk to each other.”
-- ACP: a proposed agent communication protocol (by BeeAI) that specifies agent-to-agent message formats and coordination strategies.
+Multi‑agent intelligence views your application as a team: each agent brings a specific skill, and together they pursue a shared goal. This shift from a single “do‑everything” assistant to a collaborating group pays off when you want clearer responsibilities, predictable behavior, and outputs you can verify. As systems grow, that separation of concerns is what keeps them understandable and operable.
 
-Use MCP to standardize tool access; add A2A/ACP when multiple agents must coordinate. See: [What does MCP, A2A, and ACP mean?](https://akka.io/blog/mcp-a2a-acp-what-does-it-all-mean).
+#### Core principles
+
+Effective multi‑agent systems start by breaking work into bounded subtasks with crisp objectives. Those subtasks are then assigned to specialized agents: one excels at retrieval, another at planning, a third at coding, and a fourth at review. An orchestrator (or router) selects which agent should act next and, where possible, makes that choice deterministically so runs are reproducible.
+
+- Information flows as compact artifacts (file identifiers, summaries, and links), so context stays short and handoffs remain explicit.
+- Guardrails (least‑privilege identities, policy checks, and explicit stop conditions) keep loops in check and scope contained.
+- Evaluation closes the feedback loop: define success criteria, measure outcomes, and feed results back into the process.
+- Across the system, observability and provenance matter: log handoffs, tool calls, and sources. Keep cost and latency in check by parallelizing independent work and capping tokens and turns.
+
+#### Coordination models
+
+Coordination models describe how control and data move between agents. There isn’t a single model. In practice, you combine three choices:
+
+- Control pattern: who decides and in what order:
+  - Orchestrator–worker (also called planner/router): a single coordinator chooses the next agent and enforces sequence.
+  - Decentralized/peer: agents trigger or negotiate with each other without a central coordinator.
+
+- Execution topology: how the work is scheduled:
+  - Serial/pipeline: dependent steps run one after another.
+  - Parallel fan‑out/fan‑in: independent subtasks run concurrently and merge when all are done.
+
+- State sharing: how agents exchange context:
+  - Shared memory/blackboard: agents post and read structured artifacts (IDs, summaries, links) from a common store.
+  - Direct messages: agents hand artifacts to specific peers.
+
+How these relate:
+
+- Orchestrator–worker is about control. You can still run fan‑out/fan‑in or a serial pipeline under an orchestrator. The orchestrator decides who acts when.
+- Fan‑out/fan‑in is about topology. It pairs with either centralized (orchestrator) or decentralized control.
+- Shared memory is about state. It works with both approaches to persist intermediate artifacts without over‑sharing raw context.
+
+These building blocks scale from small workflows to complex pipelines without changing the mental model.
+
+#### MCP and A2A in the architecture
+
+Two protocols help anchor the architecture.
+
+MCP (Model Context Protocol) standardizes how agents access tools and data: servers expose capabilities, and hosts route requests with consistent security and observability. It avoids one‑off integrations and keeps tool use uniform across agents.
+
+A2A (agent‑to‑agent) covers how agents talk to each other: structured messages and artifacts for planning, handoffs, and reconciliation. When multiple agents must coordinate, A2A turns ad‑hoc prompt passing into a predictable contract.
+
+ACP is an emerging specification that aims to standardize A2A message formats and interaction patterns.
+
+Together: MCP connects agents to the outside world. A2A connects agents to each other. MCP keeps tool access consistent, and A2A keeps collaboration predictable.
+
+#### When to adopt multi‑agent designs
+
+Choose multi‑agent designs when distinct competencies are clearer and safer than one large prompt, such as retrieval versus code generation, or when you need separation of duties like a policy checker or reviewer. They also shine when you can exploit fan‑out/fan‑in across independent subtasks to shorten wall‑clock time, or when stronger assurance and isolation matter, for example by running different agents under least‑privilege identities.
+
+#### Design guidance
+
+Make handoffs explicit: define schemas that capture the goal, inputs, constraints, evidence, and success criteria. Pass artifacts by reference (file IDs or links) and keep messages minimal to control context growth.
+
+Bound execution with token/turn caps and clear exit conditions.
+
+Capture the trail: log every handoff and tool call, including sources, for traceability. Finally, build an evaluation harness that exercises end‑to‑end scenarios so you can quantify quality, prevent regressions, and iterate safely.
+
+More information:
+
+- Articles
+  - [Designing Multi‑Agent Intelligence (Microsoft DevBlogs)](https://devblogs.microsoft.com/blog/designing-multi-agent-intelligence)
+  - [Agent Factory: Enterprise Patterns and Best Practices for Agentic AI with Azure AI Foundry](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/4296074)
+  - [Zero Trust Agents: Adding Identity and Access to Multi‑Agent Workflows](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/zero-trust-agents-adding-identity-and-access-to-multi-agent-workflows/4273932)
+  - [Building a multi-agent system with Semantic Kernel](https://geekodon.com/building-a-multi-agent-system-with-semantic-kernel/)
+
+- Videos
+  - [Choosing Between MCP and A2A for AI Applications](https://www.youtube.com/watch?v=IMcDEvXRBkY)
+  - [Ctrl Shift — MCP & A2A: Why Business Leaders Should Care](https://www.youtube.com/watch?v=s8xJTAu5icM)
+  - [Using Agentic Protocols (MCP, A2A, and NLWeb)](https://www.youtube.com/watch?v=X-Dh9R3Opn8)
 
 ### Scaling AI implementations
 
-**Scaled GenAI** involves deploying generative AI solutions across entire organizations or large user bases. This requires considerations around infrastructure, cost management, quality control, security, and governance. Companies implementing scaled GenAI need to think about how to maintain consistency, manage costs, and ensure responsible use across thousands of users and use cases.
+**Scaled GenAI** refers to deploying generative AI solutions across entire organizations or large user bases. This requires considerations around infrastructure, cost management, quality control, security, and governance. Companies implementing scaled GenAI need to think about how to maintain consistency, manage costs, and ensure responsible use across thousands of users and use cases.
 
 **Key considerations for scaling AI:**
 
@@ -694,16 +791,88 @@ Use MCP to standardize tool access; add A2A/ACP when multiple agents must coordi
 - **Governance frameworks**: Establishing policies for appropriate AI use and oversight
 - **Change management**: Training users and managing the transition to AI-enhanced workflows
 
+#### AI Center of Excellence (CCoE)
+
+An AI CCoE is a cross‑functional hub that accelerates safe, consistent, and cost‑effective AI adoption at scale by centralizing strategy, governance, platforms, and skills.
+
+What it does:
+
+- Strategic guidance: enterprise AI vision, roadmaps, business case/ROI models
+- Governance and standards: responsible AI policy, risk and compliance controls, audit processes
+- Technical enablement: shared AI platforms, reference architectures, MLOps, tooling
+- Knowledge sharing: best practices, communities of practice, reuse catalogs
+- Talent development: training paths, certification, mentorship
+
+Lean structure (typical core roles):
+
+- Director (strategy and executive alignment)
+- Technical lead (architecture and platform)
+- Business liaison (intake, value, adoption)
+- Ethics/compliance officer (responsible AI, legal)
+- Program manager (portfolio and delivery)
+
+Operating model (lightweight but enforced):
+
+- Intake and prioritization: clear request template and value/risk scoring
+- Standard lifecycle: quality gates for data, evals, security, and responsible‑AI checks
+- Support and operations: monitoring, incident handling, cost/perf optimization
+
+Phased rollout (fastest path to impact):
+
+- Phase 1: Foundation (3 months) — team, inventory, initial policy, comms
+- Phase 2: Pilots (3–6 months) — 2–3 business‑value pilots on the shared platform
+- Phase 3: Scale (6–9 months) — replicate patterns, expand governance and literacy
+
+Measure what matters (sample KPIs):
+
+- Time to production (target 3–6 months), component reuse rate (≥60%)
+- Model quality/compliance (≥90% production‑ready, incident reduction)
+- Business impact (ROI uplift, adoption rates), reliability (uptime)
+
+Tip: Pair the CCoE with centralized platforms (for consistency and cost control) plus sandbox spaces (to keep innovation fast), and apply least‑privilege access throughout.
+
+See: [Building a Center of Excellence for AI: A Strategic Roadmap for Enterprise Adoption](https://hiddedesmet.com/creating-ccoe-for-ai).
+
+### The AI-native web: NLWeb, llms.txt, and semantic search
+
+AI is changing how we navigate websites and data. Instead of clicking through menus and forms, we’ll increasingly describe what we want in natural language. Sites and apps will respond by resolving intent, pulling the right data, and assembling answers with sources. Three related ideas are emerging that make this possible:
+
+#### Semantic search (and why it matters)
+
+Traditional search matches exact words. Semantic search matches meaning using embeddings (numeric representations of text, images, or other data). This lets users ask questions in their own words and still find the right content. In practice, semantic search powers Retrieval‑Augmented Generation (RAG), site search that understands synonyms and context, and cross‑type discovery (e.g., “the video that explains streaming tokens”).
+
+#### NLWeb (natural-language web)
+
+NLWeb refers to patterns that make the web conversational by default. Pages expose capabilities (search, lookup, actions) as structured affordances that AI agents can call. Content is organized as artifacts with clear identifiers and metadata. Users ask for outcomes (“Find the latest pricing and compare to last quarter”), and the site resolves the request through tools and data rather than forcing step‑by‑step navigation.
+
+What changes:
+
+- Interfaces become intent‑first rather than page‑first
+- Sites describe actions and data in machine‑readable ways so agents can help
+- Results include sources, links, and artifacts you can reuse
+- NLWeb becomes to MCP/A2A what HTML is to HTTP - the semantic layer for agent-web communication
+
+**Implementation Details**: NLWeb is an open-source framework that simplifies building conversational interfaces for websites. It natively supports MCP (Model Context Protocol) and leverages Schema.org and RSS formats used by over 100 million websites. The [GitHub repository](https://github.com/nlweb-ai/NLWeb) provides a Python implementation with comprehensive documentation, featuring REST API protocols, LLM connectors, and support for major vector stores (Qdrant, Azure AI Search, Elasticsearch, Postgres).
+
+#### llms.txt
+
+Like robots.txt for crawlers, llms.txt is a simple convention that tells AI systems how to use your content. You publish a text or markdown file at a predictable path with guidance for large language models: what content is allowed, preferred source files, update cadence, and licensing. This helps AI systems find authoritative content and respect usage rules.
+
+- Spec and guidance: [llms.txt](https://llmstxt.org/)
+- Example: [GoFastMCP llms.txt](https://gofastmcp.com/llms-full.txt)
+
+The bottom line: AI turns websites and data stores into conversational surfaces. By adding llms.txt, semantic search, and you make your content discoverable to both people and agents and easier to cite and reuse.
+
 ## Inspiration
 
-What can you actually *build* with AI? Beyond the corporate feature lists, here's what developers are creating right now—and what you could build next.
+What can you actually *build* with AI? Beyond the corporate feature lists, here's what developers are creating right now, and what you could build next.
 
 ### Where You Find AI Today
 
-AI isn't just in dedicated "AI apps"—it's embedded everywhere you already work and live. Understanding where AI appears helps you recognize opportunities to leverage it in your own projects.
+AI isn't just in dedicated "AI apps." It's embedded everywhere you already work and live. Understanding where AI appears helps you recognize opportunities to leverage it in your own projects.
 
 **In Your Development Workflow**
-Your code editor probably already has AI. GitHub Copilot suggests code as you type. Chat interfaces help debug problems. Your pull requests get AI-generated summaries. Testing tools create test cases automatically. This isn't the future—it's happening now in your IDE.
+Your code editor probably already has AI. GitHub Copilot suggests code as you type. Chat interfaces help debug problems. Your pull requests get AI-generated summaries. Testing tools create test cases automatically. This isn't the future. It's happening now in your IDE.
 
 **In Everyday Software**
 Your email client drafts responses. Your browser summarizes articles. Your phone transcribes voicemails. Your photo app organizes pictures by faces and locations. Your music app creates playlists based on your mood. Each of these started as separate AI research projects that became invisible features.
@@ -715,43 +884,43 @@ CRM systems score leads automatically. Accounting software categorizes expenses.
 Search engines understand natural language queries. Translation services work in real-time. Navigation apps predict traffic patterns. Streaming services recommend content. Social media platforms detect harmful content. E-commerce sites personalize shopping experiences. The AI infrastructure is invisible but essential.
 
 **What This Means for Builders**
-AI success comes from integration, not replacement. The most useful AI applications enhance existing workflows rather than creating entirely new ones. People don't want to "use AI"—they want to accomplish their goals faster and better.
+AI success comes from integration, not replacement. The most useful AI applications enhance existing workflows rather than creating entirely new ones. People don't want to "use AI." They want to accomplish their goals faster and better.
 
 **Start Where You Are**
 Look at repetitive tasks in your current work. What takes time but doesn't require creativity? What patterns could be automated? What decisions could be supported with better data? These are your AI opportunities.
 
 **More information:**
 
-- [Chat in IDE]({{ "/2025-01-02-Chat-in-IDE.html" | relative_url }})
-- [Copilot vs Chat: Sidekick Showdown - When to Use Each Coding Sidekick]({{ "/2025-07-11-Copilot-vs-Chat-Sidekick-Showdown-When-to-Use-Each-Coding-Sidekick.html" | relative_url }})
-- [What's new with the GitHub Copilot coding agent: A look at the updates]({{ "/2025-07-25-Whats-new-with-the-GitHub-Copilot-coding-agent-A-look-at-the-updates.html" | relative_url }})
-- [AI Challenger: Loft Orbital - Building Smarter Satellites with AI]({{ "/2025-06-11-AI-Challenger-Loft-Orbital-Building-Smarter-Satellites-with-AI.html" | relative_url }})
+- [Chat in IDE](https://youtu.be/TorMsn9bjLY)
+- [Copilot vs Chat: Sidekick Showdown - When to Use Each Coding Sidekick](https://pagelsr.github.io/CooknWithCopilot/blog/copilot-vs-chat-sidekick-showdown.html)
+- [What's new with the GitHub Copilot coding agent: A look at the updates](https://www.youtube.com/watch?v=vgPl6sK6rQo)
+- [AI Challenger: Loft Orbital - Building Smarter Satellites with AI](https://www.youtube.com/watch?v=lGtTnFlI6yA)
 
 ### Real Projects You Can Build Today
 
 AI shows up across the stack even when you don’t open a “chat” app:
 
 **Build Your Own Satellite Ground Station**
-Want to track satellites and receive data from space? AI can help you process satellite telemetry, predict orbital paths, and analyze space weather data. [Satellite Ground Station Series]({{ "/2025-01-14-Satellite-Ground-Station-Series-Introduction.html" | relative_url }}) shows you exactly how to get started.
+Want to track satellites and receive data from space? AI can help you process satellite telemetry, predict orbital paths, and analyze space weather data. [From Space to Subsurface: Predicting Gold Zones with Azure AI and Machine Learning](https://techcommunity.microsoft.com/t5/ai-machine-learning/from-space-to-subsurface-using-azure-ai-to-predict-gold-rich/m-p/4441134#M258) shows you exactly how to get started.
 
 **Create Multi-Agent Systems That Actually Work**
-Move beyond single AI assistants to systems where multiple AI agents collaborate. [Building a multi-agent system with Semantic Kernel]({{ "/2025-07-07-Building-a-multi-agent-system-with-Semantic-Kernel.html" | relative_url }}) demonstrates practical multi-agent architectures you can implement today.
+Move beyond single AI assistants to systems where multiple AI agents collaborate. [Building a multi-agent system with Semantic Kernel](https://www.reddit.com/r/dotnet/comments/1ltr8tf/building_a_multiagent_system_with_semantic_kernel/) demonstrates practical multi-agent architectures you can implement today.
 
 **Connect AI to Real-World Data with MCP**
-Stop limiting AI to training data. Build Model Context Protocol servers that give AI models access to live databases, APIs, and services. [Model Context Protocol Development Best Practices]({{ "/2025-07-28-MCP-Development-Best-Practices.html" | relative_url }}) shows you how to build secure, production-ready integrations.
+Stop limiting AI to training data. Build Model Context Protocol servers that give AI models access to live databases, APIs, and services. [Model Context Protocol Development Best Practices](https://www.youtube.com/watch?v=W56H9W7x-ao) shows you how to build secure, production-ready integrations.
 
 **Zero-Trust AI Agents for Enterprise**
-Build AI systems that can operate in secure environments with proper identity and access controls. [Zero Trust Agents: Adding Identity and Access to Multi-Agent Workflows]({{ "/2025-07-08-Zero-Trust-Agents-Adding-Identity-and-Access-to-Multi-Agent-Workflows.html" | relative_url }}) shows how to implement enterprise-grade security in AI systems.
+Build AI systems that can operate in secure environments with proper identity and access controls. [Zero Trust Agents: Adding Identity and Access to Multi-Agent Workflows](https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/zero-trust-agents-adding-identity-and-access-to-multi-agent/ba-p/4427790) shows how to implement enterprise-grade security in AI systems.
 
 ### Beyond Chat: AI as Infrastructure
 
-The most interesting AI applications aren't chatbots—they're invisible systems that make everything else smarter:
+The most interesting AI applications aren't chatbots. They're invisible systems that make everything else smarter:
 
 **AI-Powered Development Workflows**
-Transform how you write code with AI that understands your entire codebase. [From Vibe Coding to Vibe Engineering: It's Time to Stop Riffing with AI]({{ "/2025-07-09-From-Vibe-Coding-to-Vibe-Engineering-Its-Time-to-Stop-Riffing-with-AI.html" | relative_url }}) explores how to move beyond simple code completion to systematic AI-enhanced development.
+Transform how you write code with AI that understands your entire codebase. [From Vibe Coding to Vibe Engineering: It's Time to Stop Riffing with AI](https://thenewstack.io/from-vibe-coding-to-vibe-engineering-its-time-to-stop-riffing-with-ai/) explores how to move beyond simple code completion to systematic AI-enhanced development.
 
 **Scientific Research Acceleration**
-AI can analyze research papers, generate hypotheses, and even control laboratory equipment. [Introducing Microsoft Discovery: An Agentic AI Platform for Scientific Research]({{ "/2025-05-19-Introducing-Microsoft-Discovery-An-Agentic-AI-Platform-for-Scientific-Research.html" | relative_url }}) shows how AI is already accelerating scientific breakthroughs.
+AI can analyze research papers, generate hypotheses, and even control laboratory equipment. [Introducing Microsoft Discovery: An Agentic AI Platform for Scientific Research](https://www.youtube.com/watch?v=k3S4lPbUWng) shows how AI is already accelerating scientific breakthroughs.
 
 **Visual Data Processing at Scale**
 Build systems that can analyze thousands of images, extract insights from videos, or process satellite imagery. AI vision capabilities are now accessible through simple APIs, making computer vision projects feasible for individual developers.
@@ -872,10 +1041,14 @@ Lots of examples and detailed information can be found in the [GitHub Copilot Hu
 
 **More information:**
 
-- [What's new with the GitHub Copilot coding agent: A look at the updates]({{ "/2025-07-25-Whats-new-with-the-GitHub-Copilot-coding-agent-A-look-at-the-updates.html" | relative_url }})
-- [Copilot vs Chat: Sidekick Showdown - When to Use Each Coding Sidekick]({{ "/2025-07-11-Copilot-vs-Chat-Sidekick-Showdown-When-to-Use-Each-Coding-Sidekick.html" | relative_url }})
-- [Modernizing Legacy COBOL to Cloud with GitHub Copilot]({{ "/2025-07-22-Modernizing-Legacy-COBOL-to-Cloud-with-GitHub-Copilot.html" | relative_url }})
-- [GitHub Copilot Helps One Acre Fund Scale Farming Impact]({{ "/2025-07-28-GitHub-Copilot-Helps-One-Acre-Fund-Scale-Farming-Impact.html" | relative_url }})
+- [What's new with the GitHub Copilot coding agent: A look at the updates](https://www.youtube.com/watch?v=vgPl6sK6rQo)
+- [Copilot vs Chat: Sidekick Showdown - When to Use Each Coding Sidekick](https://pagelsr.github.io/CooknWithCopilot/blog/copilot-vs-chat-sidekick-showdown.html)
+- [Modernizing Legacy COBOL to Cloud with GitHub Copilot](https://www.youtube.com/watch?v=xWA0xYttWMo)
+- [GitHub Copilot Helps One Acre Fund Scale Farming Impact](https://www.youtube.com/watch?v=ol_un2Nam2E)
+- [Introducing automatic documentation comment generation in Visual Studio](https://devblogs.microsoft.com/visualstudio/introducing-automatic-documentation-comment-generation-in-visual-studio/)
+- [VS Code June 2025 (version 1.102)](https://code.visualstudio.com/updates/v1_102)
+- [GitHub Copilot in 2025: More Intelligent, More Accessible, More Productive](https://github.blog/news-insights/product-news/github-copilot-in-2025-more-intelligent-more-accessible-more-productive/)
+- [Building AI Agents with Ease: Function Calling in VS Code AI Toolkit](https://techcommunity.microsoft.com/blog/educatordeveloperblog/building-ai-agents-with-ease-function-calling-in-vs-code-ai-toolkit/4362419)
 
 ### Azure AI services
 
@@ -925,8 +1098,11 @@ For most modern AI applications, you can start with high-level services like Azu
 
 **More information:**
 
-- [Azure Update: 20th June 2025]({{ "/2025-06-20-Azure-Update-20th-June-2025.html" | relative_url }})
-- [Azure Updates: August 2025 Highlights]({{ "/2025-08-01-Azure-Updates-August-2025-Highlights.html" | relative_url }})
+- [Azure Update: 20th June 2025](https://www.youtube.com/watch?v=2L4cSig9Y4Y)
+- [Azure Updates: August 2025 Highlights](https://www.youtube.com/watch?v=-8sH0QFhvkQ)
+- [What's New in Azure AI Foundry: July 2025 Releases and Updates](https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-july-2025/)
+- [Introducing Deep Research in Azure AI Foundry Agent Service](https://azure.microsoft.com/en-us/blog/introducing-deep-research-in-azure-ai-foundry-agent-service/)
+- [Agent Factory: Building Your First AI Agent with Azure AI Foundry](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-building-your-first-ai-agent-with-azure-ai-foundry/4295871)
 
 ### Languages & SDKs
 
@@ -997,8 +1173,8 @@ Most programming languages have robust SDKs and libraries for AI development, ma
 
 **More information:**
 
-- [.NET AI Community Standup: AI in .NET - What's New, What's Next]({{ "/2025-07-03-NET-AI-Community-Standup-AI-in-NET-Whats-New-Whats-Next.html" | relative_url }})
-- [Connecting to a Local MCP Server Using Microsoft.Extensions.AI]({{ "/2025-04-30-Connecting-to-a-Local-MCP-Server-Using-MicrosoftExtensionsAI.html" | relative_url }})
+- [.NET AI Community Standup: AI in .NET - What's New, What's Next](https://www.youtube.com/watch?v=pt4CJKm-2ZI)
+- [Connecting to a Local MCP Server Using Microsoft.Extensions.AI](https://www.youtube.com/watch?v=iYHh5n-6ez4)
 
 ### Semantic Kernel
 
@@ -1060,33 +1236,20 @@ Current limitations and areas of active development:
 
 **More information:**
 
-- [.NET AI Community Standup: AI in .NET - What's New, What's Next]({{ "/2025-07-03-NET-AI-Community-Standup-AI-in-NET-Whats-New-Whats-Next.html" | relative_url }})
-- [Connecting to a Local MCP Server Using Microsoft.Extensions.AI]({{ "/2025-04-30-Connecting-to-a-Local-MCP-Server-Using-MicrosoftExtensionsAI.html" | relative_url }})
-
-## (Near) future
-
-Lots of things are happening in the AI space, a few things to keep an eye on:
-
-- A2A (Agent to Agent)
-- ACP (Agent Communication Protocol) from [BeeAI](https://github.com/i-am-bee)
-
-- GPT-5 and GPT-OSS availability across ecosystems:
-  - [Evaluating GPT-5 Models for RAG on Azure AI Foundry]({{ "/2025-08-13-Evaluating-GPT-5-Models-for-RAG-on-Azure-AI-Foundry.html" | relative_url }})
-  - [GPT-5 and GPT-OSS Models Now Integrated in AI Toolkit for VS Code]({{ "/2025-08-10-GPT-5-and-GPT-OSS-Models-Now-Integrated-in-AI-Toolkit-for-VS-Code.html" | relative_url }})
-  - [Model Mondays S2E9: Models for AI Agents]({{ "/2025-08-14-Model-Mondays-S2E9-Models-for-AI-Agents.html" | relative_url }})
-
-A good starting point is here: [What does MCP, A2A, and ACP mean?](https://akka.io/blog/mcp-a2a-acp-what-does-it-all-mean)
-
-Also SLIM (Secure Low-Latency Interactive Messaging), previously called AGP (Agent Gateway Protocol) is interesting. Find more information here: [SLIM](https://github.com/agntcy/slim).
-
-[llms.txt](https://llmstxt.org/) is another initative to keep an eye on, suggesting adding a markdown file to websites to provide LLM-friendly content. [Here is an example for GoFastMCP](https://gofastmcp.com/llms-full.txt).
-
-Microsoft is also embracing MCP and adding support for a central server registry, server isolation and other security features. [Read the blogpost here](https://blogs.windows.com/windowsexperience/2025/05/19/securing-the-model-context-protocol-building-a-safer-agentic-future-on-windows).
+- [.NET AI Community Standup: AI in .NET - What's New, What's Next](https://www.youtube.com/watch?v=pt4CJKm-2ZI)
+- [Connecting to a Local MCP Server Using Microsoft.Extensions.AI](https://www.youtube.com/watch?v=iYHh5n-6ez4)
+- [Building AI Agents with Semantic Kernel, MCP Servers, and Python](https://www.youtube.com/watch?v=vfIwpctNbv4)
+- [Semantic Kernel and Microsoft.Extensions.AI: Better Together, Part 2](https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-and-microsoft-extensions-ai-better-together-part-2/)
+- [How Microsoft Semantic Kernel Transforms Proven Workflows into Intelligent Agents](https://hackernoon.com/how-microsoft-semantic-kernel-transforms-proven-workflows-into-intelligent-agents)
+- [Smarter SK Agents with Contextual Function Selection in Semantic Kernel](https://devblogs.microsoft.com/semantic-kernel/smarter-sk-agents-with-contextual-function-selection/)
+- [Building Multi-Agent AI Solutions Using Semantic Kernel and the A2A Protocol](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/building-multi-agent-ai-solutions-using-semantic-kernel-and-the-a2a-protocol/4273899)
+- [Microsoft's Agentic Frameworks: AutoGen and Semantic Kernel](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/microsofts-agentic-frameworks-autogen-and-semantic-kernel/4292949)
 
 ## Want to know more?
 
 ### Learning resources
 
+- **[Microsoft Learn](https://learn.microsoft.com/en-us/training/paths/introduction-to-ai-on-azure/)**: This introduction to AI on Azure and many others
 - **[Hugging Face](https://huggingface.co/)**: Comprehensive platform for AI models, datasets, and learning resources
 - **[Rob Bos' LinkedIn Learning Course on AI development with GitHub models](https://www.linkedin.com/learning/enterprise-ai-development-with-github-models-and-azure)**: Practical course for enterprise AI development
 - **[GitHub Skills](https://skills.github.com/)**: Free courses on AI and related development topics
@@ -1094,9 +1257,9 @@ Microsoft is also embracing MCP and adding support for a central server registry
 
 ### More content from this site
 
-- **[AI-focused videos and tutorials]({{ "/videos/" | relative_url }})**: Regular updates on AI tools and techniques
-- **[Blog posts about AI implementation]({{ "/posts/" | relative_url }})**: Practical insights and real-world examples
-- **[Microsoft and Azure updates]({{ "/" | relative_url }})**: Latest developments in Microsoft's AI ecosystem
+- **[AI-focused videos and tutorials](/ai/videos.html)**: Regular updates on AI tools and techniques
+- **[Blog posts about AI implementation](/ai/posts.html)**: Practical insights and real-world examples
+- **[Microsoft and Azure updates](/all/posts.html)**: Latest developments in Microsoft's AI ecosystem
 
 ### Hands-on learning
 

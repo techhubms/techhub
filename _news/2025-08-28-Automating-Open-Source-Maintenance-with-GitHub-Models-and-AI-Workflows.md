@@ -56,12 +56,12 @@ permissions:
   issues: write
 jobs:
   continuous-triage-dedup:
-    if: ${{ github.event.issue.user.type != 'Bot' }}
+    if: {% raw %}${{ github.event.issue.user.type != 'Bot' }}{% endraw %}
     runs-on: ubuntu-latest
     steps:
       - uses: pelikhan/action-genai-issue-dedup@v0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
       # Optional tuning: labels, count, since
 ```
 
@@ -89,8 +89,8 @@ jobs:
         with:
           prompt: |
             Analyze this GitHub issue for completeness. If missing reproduction steps, version, or expected/actual behavior, respond with a friendly request. If complete, say so.
-            Title: ${{ github.event.issue.title }}
-            Body: ${{ github.event.issue.body }}
+            Title: {% raw %}${{ github.event.issue.title }}{% endraw %}
+            Body: {% raw %}${{ github.event.issue.body }}{% endraw %}
             system-prompt: You are a helpful assistant that helps analyze GitHub issues for completeness.
             model: openai/gpt-4o-mini
             temperature: 0.2
@@ -102,8 +102,8 @@ jobs:
             github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: ${{ github.event.issue.number }},
-              body: `${{ steps.ai.outputs.response }}`
+              issue_number: {% raw %}${{ github.event.issue.number }}{% endraw %},
+              body: `{% raw %}${{ steps.ai.outputs.response }}{% endraw %}`
             })
 ```
 
@@ -131,9 +131,9 @@ jobs:
         id: ai
         with:
           prompt: |
-            Is this GitHub ${{ github.event_name == 'issues' && 'issue' || 'pull request' }} spam, AI-generated slop, or low quality?
-            Title: ${{ github.event.issue.title || github.event.pull_request.title }}
-            Body: ${{ github.event.issue.body || github.event.pull_request.body }}
+            Is this GitHub {% raw %}${{ github.event_name == 'issues' && 'issue' || 'pull request' }}{% endraw %} spam, AI-generated slop, or low quality?
+            Title: {% raw %}${{ github.event.issue.title || github.event.pull_request.title }}{% endraw %}
+            Body: {% raw %}${{ github.event.issue.body || github.event.pull_request.body }}{% endraw %}
             Respond: spam, ai-generated, needs-review, or ok
             system-prompt: You detect spam and low-quality contributions. Be conservative.
             model: openai/gpt-4o-mini
@@ -143,8 +143,8 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const label = `${{ steps.ai.outputs.response }}`;
-            const number = ${{ github.event.issue.number || github.event.pull_request.number }};
+            const label = `{% raw %}${{ steps.ai.outputs.response }}{% endraw %}`;
+            const number = {% raw %}${{ github.event.issue.number || github.event.pull_request.number }}{% endraw %};
             if (label && label !== 'ok') {
               await github.rest.issues.addLabels({ owner: context.repo.owner, repo: context.repo.repo, issue_number: number, labels: [label] });
             }
@@ -170,7 +170,7 @@ jobs:
       - name: Run resolver
         uses: ashleywolf/continuous-ai-resolver@main
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
 ```
 
 ### 5. New Contributor Onboarding
@@ -205,8 +205,8 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const message = `${{ steps.ai.outputs.response }}`;
-            await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: ${{ github.event.pull_request.number }}, body: message });
+            const message = `{% raw %}${{ steps.ai.outputs.response }}{% endraw %}`;
+            await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: {% raw %}${{ github.event.pull_request.number }}{% endraw %}, body: message });
 ```
 
 ## Best Practices

@@ -12,9 +12,9 @@ tags: [".NET", "Agentic AI", "AI", "AI Tools", "Application Security", "Azure", 
 tags_normalized: ["dotnet", "agentic ai", "ai", "ai tools", "application security", "azure", "cloud security", "coding", "copilot studio", "data analytics", "devops", "enterprise automation", "github copilot", "gpt 5", "llms", "machine learning", "mcp", "microsoft fabric", "ml", "open source", "roundups", "security", "vs code"]
 ---
 
-Welcome to this week’s tech roundup. AI integration, cloud platforms, and developer tools continue to move fast, with plenty of practical news across the board. GitHub Copilot now uses OpenAI’s GPT-5 and its lighter “Mini” model for more thoughtful automation, smarter code suggestions, and secure, team-oriented workflows on Visual Studio, VS Code, JetBrains, Xcode, and Eclipse. A new Model Context Protocol (MCP) is building a standard for multi-context development automation, while Copilot is broadening—from in-editor repository chat to deep refactoring and modernization tools for businesses.
+Welcome to this week’s tech roundup. AI integration, cloud platforms, and developer tools continue to advance rapidly, with plenty of practical news across the board. GitHub Copilot now uses OpenAI’s GPT-5 and its lighter “Mini” model for more thoughtful automation, smarter code suggestions, and secure, team-oriented workflows on Visual Studio, VS Code, JetBrains, Xcode, and Eclipse. A new Model Context Protocol (MCP) is building a standard for multi-context development automation, while Copilot is broadening—from in-editor repository chat to deep refactoring and modernization tools for businesses.
 
-AI’s role isn’t limited to writing code. Microsoft continues to fold GitHub more tightly into its main AI engineering efforts while rolling out new agent orchestration models in Azure AI Foundry and making Copilot Studio more accessible. There’s a clear uptick in adoption of AI tools, open-source cloud solutions, and analytics that work across cloud boundaries. Security remains a focus as well, with new updates across Azure and Microsoft Fabric supporting stronger data governance and compliance. Meanwhile, teams in DevOps and development get new patterns for modern workflows, better productivity features, and improved support for different programming languages. With technology moving at this speed, the stories below aim to provide clear, useful context for everyone leading, building, or maintaining solutions today.<!--excerpt_end-->
+AI’s role isn’t limited to writing code. Microsoft continues to fold GitHub more tightly into its main AI engineering efforts while rolling out new agent orchestration models in Azure AI Foundry and making Copilot Studio more accessible. There’s a clear uptick in adoption of AI tools, open-source cloud solutions, and analytics that work across cloud boundaries. Security updates across Azure and Microsoft Fabric support stronger data governance and compliance. Teams in DevOps and development get new patterns for modern workflows, better productivity features, and improved support for different programming languages. With technology advancing rapidly, the stories below provide clear, useful context for everyone leading, building, or maintaining solutions today.<!--excerpt_end-->
 
 ## This Week's Overview
 
@@ -99,7 +99,7 @@ GPT-5 is now available across GitHub Copilot, enhancing code completion, context
 
 ### Automation and Developer Workflows: From Natural Language to Real Code
 
-Building on advances in automation, Copilot combines GPT-5 and MCP for closer DevOps alignment. As shown this week, Copilot can now generate full games from natural language prompts in under a minute. MCP lets Copilot fire off real GitHub actions—handling repository management, issue triage, tool integrations—straight from the IDE, so developers avoid context switching. New guides help teams set up MCP securely and expand Copilot’s role from code generation to full automation, boosting project best practices.
+Copilot combines GPT-5 and MCP for closer DevOps alignment. As shown this week, Copilot can now generate full games from natural language prompts in under a minute. MCP lets Copilot fire off real GitHub actions—handling repository management, issue triage, tool integrations—straight from the IDE, so developers avoid context switching. New guides help teams set up MCP securely and expand Copilot’s role from code generation to full automation, boosting project best practices.
 
 - [Building a Game in 60 Seconds with GPT-5 in GitHub Copilot and MCP Server](https://github.blog/ai-and-ml/generative-ai/gpt-5-in-github-copilot-how-i-built-a-game-in-60-seconds/)
 - [Announcing the NuGet MCP Server Preview: Real-Time NuGet Package Management with AI Integration](https://devblogs.microsoft.com/dotnet/nuget-mcp-server-preview/)
@@ -162,7 +162,7 @@ As new pull request summarization features arrive, GitHub is deprecating text co
 
 ## AI
 
-AI continues to develop quickly, driven by strategic changes at Microsoft, broader model support, new orchestration frameworks, and evolving developer perspectives. GPT-5, Copilot Studio, and MCP are pushing enterprise innovation, security, and practical tool adoption forward. These updates show AI not just assisting work but actively transforming how software and systems are designed, deployed, and maintained—impacting skills, policies, DevOps, and open-source integration.
+AI development accelerates with strategic changes at Microsoft, broader model support, new orchestration frameworks, and evolving developer perspectives. GPT-5, Copilot Studio, and MCP are pushing enterprise innovation, security, and practical tool adoption forward. These updates show AI not just assisting work but actively transforming how software and systems are designed, deployed, and maintained—impacting skills, policies, DevOps, and open-source integration.
 
 ### Strategic Shifts and Leadership in Microsoft's AI Ecosystem
 
@@ -259,7 +259,7 @@ AI-powered workflows are now common in Azure, Copilot, and OpenAI environments�
 
 ## ML
 
-Machine learning advanced this week with expanded cloud support for open models, step-by-step LLM deployment, scalable optimizers, and upgraded analytics tools. Microsoft introduced more open-source, cloud-native, and production-friendly options, while new tools like Dion are making large model training more efficient. Companies are highlighting useful deployment strategies and tuning guidance so teams can deliver quality ML systems with less friction.
+Machine learning updates this week include expanded cloud support for open models, step-by-step LLM deployment, scalable optimizers, and upgraded analytics tools. Microsoft introduced more open-source, cloud-native, and production-friendly options, while new tools like Dion are making large model training more efficient. Companies are highlighting useful deployment strategies and tuning guidance so teams can deliver quality ML systems with less friction.
 
 ### Cloud-Native LLM Deployment and Optimization
 
