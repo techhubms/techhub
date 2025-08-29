@@ -18,6 +18,23 @@ This document defines the writing style and tone requirements for all content in
 - **Active voice preferred**: "The system processes data" instead of "Data is processed by the system"
 - **Consistent terminology**: Use the same terms throughout all documentation (see [Terminology](terminology.md))
 
+### Punctuation and Sentence Flow
+
+- **Prefer flowing sentences**: Create smooth, readable prose that connects ideas naturally
+- **Limit em dashes (—)**: Use sparingly for emphasis or to set off important information. When used, maintain consistency throughout the document
+- **Minimize semicolons (;)**: Use periods and start new sentences instead. Semicolons can make text feel formal and choppy
+- **Reduce parenthetical statements (...)**: Incorporate information into the main sentence flow when possible. Excessive parentheses interrupt reading flow
+- **Use commas for clarity**: Connect related ideas with commas and coordinating conjunctions rather than breaking into choppy fragments
+- **Maintain consistent punctuation patterns**: If using em dashes for explanatory content in one section, use them consistently for similar content throughout
+
+**Examples:**
+
+✅ **Good flowing sentences**:
+> Everything an AI processes—words, images, concepts—gets converted into vectors, which are simply lists of numbers that capture meaning.
+
+❌ **Choppy with mixed punctuation**:
+> Everything an AI processes (words, images, concepts) gets converted into vectors. Which are simply lists of numbers; they capture meaning.
+
 ## What to Avoid
 
 **CRITICAL**: Avoid these types of words and phrases that create hype or overstate importance:

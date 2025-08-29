@@ -7,7 +7,10 @@ category: "AI"
 page-name: "ai-to-z"
 ---
 
-The goal of this page is not to dive into every detail of AI, but to provide a starting point for anyone interested in learning about AI, whether you are a beginner or have some experience. It is designed to be read sequentially, as each section builds on concepts from previous sections.
+This page is designed to be a starting point for learning about AI.
+
+- Suitable for beginners and those with some experience.
+- Each section builds on concepts from previous sections, so it's best read sequentially.
 
 ## Table of Contents
 
@@ -378,8 +381,8 @@ Use the right tool for the job. Prefer non-AI or AI-assisted approaches for:
 
 - Exact arithmetic, counting, or unit conversions. Use a calculator, spreadsheet, or ask the model to generate code that computes the result and then run it.
 - Deterministic workflows with strict rules (compliance checks, tax calculations, safety-critical steps). Encode rules in code or rules engines and optionally add AI for explanations.
-- Long-lived, precise memory. Summaries drift over time. Store source-of-truth data in databases and use RAG to re-ground when needed.
-- Sensitive data handling beyond approved boundaries. Keep PII/PHI within compliant systems. Use redaction and data minimization.
+- Long-lived, precise memory; summaries drift over time, so store source-of-truth data in databases and use RAG to re-ground when needed.
+- Sensitive data handling beyond approved boundaries; keep PII/PHI within compliant systems and use redaction and data minimization.
 - Legal, medical, or financial decisions without human review. Keep a human in the loop for final approval.
 
 When in doubt, let AI help draft, explain, and prototype, but keep calculators, compilers, search, and databases as the “source of truth.”
@@ -432,9 +435,9 @@ These settings work together - you might use low temperature and low Top P for c
 Before diving into advanced concepts, it's essential to understand the foundational building blocks that make AI possible. At its core, AI models work by converting human concepts into mathematical representations that computers can process and manipulate.
 
 **Vectors and embeddings: How AI understands meaning**
-Everything an AI processes (words, images, concepts) gets converted into **vectors**, which are simply lists of numbers. Think of a vector as a precise coordinate in multi-dimensional space that captures the essence of what something means.
+Everything an AI processes—words, images, concepts—gets converted into **vectors**, which are simply lists of numbers. Think of a vector as a precise coordinate in multi-dimensional space that captures the essence of what something means.
 
-**Embeddings** are sophisticated vectors that capture semantic meaning. When an AI learns that "dog" and "puppy" are related, it places their embeddings close together in this mathematical space. Similarly, "king" minus "man" plus "woman" might land near "queen". The model has learned relationships between concepts through the geometric arrangement of their embeddings.
+**Embeddings** are sophisticated vectors that capture semantic meaning. When an AI learns that "dog" and "puppy" are related, it places their embeddings close together in this mathematical space. Similarly, "king" minus "man" plus "woman" might land near "queen"—the model has learned relationships between concepts through the geometric arrangement of their embeddings.
 
 This mathematical representation allows AI models to understand that "vehicle" relates to both "car" and "bicycle," even if those specific connections weren't explicitly taught. The model discovers these relationships by observing patterns in how words appear together across millions of examples.
 
@@ -471,7 +474,7 @@ Example principle: “Avoid providing instructions that meaningfully facilitate 
 Now that we understand how AI models represent and process information, we can explore the sophisticated mechanisms that make modern AI so powerful.
 
 **Neural networks: The foundation of learning**
-A **neural network** mimics how biological brains process information through interconnected nodes. Each connection has a **weight**, a number that determines how much influence one piece of information has on another. During training, the model adjusts billions of these weights to improve its predictions.
+A **neural network** mimics how biological brains process information through interconnected nodes. Each connection has a **weight**—a number that determines how much influence one piece of information has on another. During training, the model adjusts billions of these weights to improve its predictions.
 
 Modern language models use **transformers**, a revolutionary architecture that changed how AI understands language. Unlike earlier approaches that processed text sequentially (word by word), transformers can examine entire passages simultaneously and understand relationships between any words, regardless of how far apart they appear.
 
