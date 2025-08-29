@@ -7860,5 +7860,11 @@
     "timestamp": "2025-08-29 08:16:14 +00:00",
     "collection": "posts",
     "reason": "Succesfully added: Assigned the 'DevOps' category since the entire article focuses on operational/CI-CD disruptions, incident management, and platform reliability issues across multiple DevOps tools including Azure DevOps and GitHub (DevOps inclusion rules 1, 5, 7, 9). 'Azure' was assigned because Azure DevOps is directly analyzed with technical breakdowns of its core services and incident impacts (Azure rule 1, 4). 'Security' applies because of significant coverage of ransomware, data theft incidents, and the convergence of uptime and cybersecurity (Security rules 1, 5, 8). 'Coding', 'AI', 'GitHub Copilot', and 'ML' do not apply as the article is not about programming, AI/ML engineering, GitHub Copilot, or code-centric topics. The content is professional, technical, lacks biographical or business-only focus, and does not violate any generic exclusion rules."
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned 'DevOps' because the episode focuses on DevOps workflows, security culture, and team practices (DevOps inclusion rules 3, 4, 5, and 9). Assigned 'Security' because it revolves around practical approaches to container vulnerabilities, Kubernetes security, patching, and compliance (Security inclusion rules 1, 2, 4, and 5). Did NOT assign Azure or Coding as there’s no substantial focus on Microsoft technologies or programming/development details. AI, GitHub Copilot, and ML are not discussed. Generic exclusion rules do NOT apply: this is in-depth technical, practitioner-level content focused on implementation, not biographical or sales-focused, and not negative, non-English, or business strategy oriented (see Chapter 3 for exclusion checks).",
+    "canonical_url": "https://www.arresteddevops.com/digging-into-security/",
+    "timestamp": "2025-08-29 10:14:15 +00:00"
   }
 ]

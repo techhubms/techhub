@@ -6933,5 +6933,11 @@
     "reason": "No categories found: No categories were added because this announcement focuses on a platform feature update (WebP image support in GitHub) unrelated to the core developer and technical categories defined in Chapter 4 (AI, GitHub Copilot, Coding, DevOps, Azure, ML, Security). The update pertains to asset management and user experience, not development practices, coding, automation, Azure, security, or AI features. The technical tags provided reflect the relevant technologies and application areas for users searching for information about GitHub and image handling.",
     "canonical_url": "https://github.blog/changelog/2025-08-28-added-support-for-webp-images",
     "timestamp": "2025-08-28 21:12:32 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/creating-and-using-an-azure-automation-custom-runtime/m-p/4449541#M22158",
+    "timestamp": "2025-08-29 10:14:26 +00:00"
   }
 ]
