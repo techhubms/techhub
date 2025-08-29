@@ -2,7 +2,7 @@
 layout: "post"
 title: "GPT-4o Copilot Suggestions Model"
 description: "Upgraded to GPT-4o for better code suggestions"
-author: "Fokko"
+author: "Fokko Veegens"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/zZI34xmoWbw"
 categories: ["AI", "GitHub Copilot"]

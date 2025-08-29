@@ -6,8 +6,6 @@ author: "Liuba Gonta"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/xf6i-eOnQE4"
 categories: ["AI", "GitHub Copilot", "Coding"]
-feed_name: "Rob Bos"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCUhUzCG4QBTMm06-zlS408A"
 date: 2025-07-16 12:45:13 +00:00
 permalink: "/2025-07-16-Model-selection.html"
 viewing_mode: "internal"

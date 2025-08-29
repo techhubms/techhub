@@ -2,7 +2,7 @@
 layout: "post"
 title: "@github Chat Participant"
 description: "Use Copilot as a participant in GitHub discussions"
-author: "Fokko"
+author: "Fokko Veegens"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/M_BNfo01YsQ"
 categories: ["AI", "GitHub Copilot"]
