@@ -124,12 +124,6 @@
                 "url": "/ai/community.html",
                 "collection":"community",
                 "description": "Community announcements, discussions, magazines and insights related to AI."
-            },
-            {
-                "title": "Events",
-                "url": "/ai/events.html",
-                "collection":"events",
-                "description": "Events about AI"
             }
         ]
     },

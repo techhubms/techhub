@@ -201,15 +201,15 @@ $on-laptop: 900px;
 <!-- Text search input with proper labeling -->
 <div class="text-search-container">
   <label for="text-search-input" class="sr-only">Search content</label>
-  <input 
-    type="text" 
-    id="text-search-input" 
-    placeholder="Search" 
+  <input
+    type="text"
+    id="text-search-input"
+    placeholder="Search"
     class="text-search-input"
     aria-describedby="search-help">
-  <button 
-    id="text-search-clear" 
-    class="text-search-clear-btn hidden" 
+  <button
+    id="text-search-clear"
+    class="text-search-clear-btn hidden"
     title="Clear search"
     aria-label="Clear search">×</button>
 </div>

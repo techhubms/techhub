@@ -83,7 +83,7 @@ module Jekyll
 
     def generate_section_index_content(section_data)
       # Generate collections array from section_data in Ruby
-      collections = section_data['collections']&.map { |collection| collection['collection'] }&.compact&.reject { |collection| collection == 'events' } || []
+      collections = section_data['collections']&.map { |collection| collection['collection'] }&.compact || []
       collections_string = collections.join(',')
       
       <<~CONTENT
@@ -96,6 +96,7 @@ module Jekyll
         {%- if page.category != "All" -%}
           {%- assign items = items | where_exp: "item", "item.categories contains page.category" -%}
         {%- endif -%}
+        {%- assign items = items | where_exp: "item", "item.date <= site.time" -%}
         {%- assign items = items | limit_with_same_day: 50 -%}
 
         {{ section_data.description }}
@@ -131,6 +132,9 @@ module Jekyll
         {%- assign items = site[page.collection] -%}
         {%- if page.category != "All" -%}
           {%- assign items = items | where_exp: "item", "item.categories contains page.category" -%}
+        {%- endif -%}
+        {%- if page.collection != "events" -%}
+          {%- assign items = items | where_exp: "item", "item.date <= site.time" -%}
         {%- endif -%}
 
         {% include filters.html items=items index_tag_mode="tags" section=page.section %}

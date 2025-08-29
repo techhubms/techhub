@@ -1,95 +1,289 @@
 ---
 layout: "page"
-title: "Feature Highlights"
+title: "Plans & Feature Highlights"
 description: "An overview of GitHub Copilot plans and features."
 category: "GitHub Copilot"
 ---
 
-This page provides a comprehensive overview of GitHub Copilot plans as of June the 27th 2025, combining official features with example videos.
+This page provides a comprehensive overview of GitHub Copilot plans as of August 29th 2025, combining official features with example videos. For the most current pricing, visit [GitHub's official pricing page](https://github.com/features/copilot/plans).
+
+**Note**: GitHub Copilot is not currently available for GitHub Enterprise Server. For the most recent plan details [view this page](https://docs.github.com/en/copilot/get-started/plans).
+
+{% comment %} Set up global date variable for filtering {% endcomment %}
+{% assign now_epoch = '' | now_epoch %}
 
 <div class="features-vertical-container">
-
   <!-- Subscription Tiers Container -->
   <div class="subscription-wrapper">
-    {% for entry in site.data.copilot_plans %}
-    <div class="subscription-tiers-container {% if entry.width == '100%' %}full-width{% else %}half-width{% endif %}">
-        {% for plan in entry.plans %}
-        <div class="subscription-section">
-          <h2>{{ plan.name }}</h2>
-          <p>{{ plan.description }}</p>
-          <ul>
-            {% for benefit in plan.benefits %}
-            <li>{{ benefit }}</li>
-            {% endfor %}
-          </ul>
-          <div class="tier-link">
-            <a href="#videos-{% for plan in entry.plans %}{{ plan.name | downcase | replace: ' ', '-' | replace: '+', 'plus' }}{% unless forloop.last %}-{% endunless %}{% endfor %}">View Features →</a>
-          </div>
+    <!-- Free Plan -->
+    <div class="subscription-tiers-container full-width">
+      <div class="subscription-section">
+        <h2>Free</h2>
+        <p>A fast way to get started with GitHub Copilot</p>
+        <ul>
+          <li>50 agent mode or chat requests per month</li>
+          <li>2,000 completions per month</li>
+          <li>Access to Claude 3.5 Sonnet, GPT-4.1, and more</li>
+        </ul>
+        <div class="tier-link">
+          <a href="#videos-free">View Features →</a>
         </div>
-        {% endfor %}
+      </div>
     </div>
-    {% endfor %}
+    <!-- Pro Plan -->
+    <div class="subscription-tiers-container half-width">
+      <div class="subscription-section">
+        <h2>Pro</h2>
+        <p>Unlimited completions and chats with access to more models</p>
+        <ul>
+          <li>Everything in Free</li>
+          <li>Unlimited agent mode and chats with GPT-5 mini</li>
+          <li>Unlimited code completions</li>
+          <li>Access to code review, Claude Sonnet 4, GPT-5, Gemini 2.5 Pro, and more</li>
+          <li>6x more premium requests than Copilot Free</li>
+          <li>Coding agent (preview)</li>
+          <li>Free for verified students, teachers, and maintainers of popular open source projects</li>
+        </ul>
+        <div class="tier-link">
+          <a href="#videos-pro">View Features →</a>
+        </div>
+      </div>
+    </div>
+    <!-- Business Plan -->
+    <div class="subscription-tiers-container half-width">
+      <div class="subscription-section">
+        <h2>Business</h2>
+        <p>For teams and organizations ($19 USD per user per month)</p>
+        <ul>
+          <li>Everything in Pro</li>
+          <li>Coding agent for organizations</li>
+          <li>Usage metrics and analytics</li>
+          <li>Data excluded from training by default</li>
+          <li>User management and policies</li>
+          <li>Content exclusions</li>
+          <li>Audit logs</li>
+          <li>300 premium requests per user per month</li>
+        </ul>
+        <div class="tier-link">
+          <a href="#videos-pro">View Features →</a>
+        </div>
+      </div>
+    </div>
+    <!-- Pro+ Plan -->
+    <div class="subscription-tiers-container half-width">
+      <div class="subscription-section">
+        <h2>Pro+</h2>
+        <p>Maximum flexibility and model choice ($39 USD per month or $390 per year)</p>
+        <ul>
+          <li>Everything in Pro</li>
+          <li>Access to all models, including Claude Opus 4.1, o3, and more</li>
+          <li>30x more premium requests than Copilot Free</li>
+          <li>Access to GitHub Spark</li>
+        </ul>
+        <div class="tier-link">
+          <a href="#videos-proplus">View Features →</a>
+        </div>
+      </div>
+    </div>
+    <!-- Enterprise Plan -->
+    <div class="subscription-tiers-container half-width">
+      <div class="subscription-section">
+        <h2>Enterprise</h2>
+        <p>Full enterprise features and controls ($39 USD per user per month)</p>
+        <ul>
+          <li>Everything in Business</li>
+          <li>Copilot knowledge bases</li>
+          <li>1,000 premium requests per user per month</li>
+          <li>Advanced compliance and security features</li>
+          <li>Custom policies and content exclusions</li>
+          <li>Enterprise-grade audit logs</li>
+          <li>SAML SSO integration</li>
+        </ul>
+        <div class="tier-link">
+          <a href="#videos-proplus">View Features →</a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  {% for entry in site.data.copilot_plans %}
-    <div id="videos-{% for plan in entry.plans %}{{ plan.name | downcase | replace: ' ', '-' | replace: '+', 'plus' }}{% unless forloop.last %}-{% endunless %}{% endfor %}">
-      <h2 class="section-title">
-        {% for plan in entry.plans %}{{ plan.name }}{% unless forloop.last %} & {% endunless %}{% endfor %}
-      </h2>
-    </div>
+  <!-- Free Features Section (videos that do not include Pro/Pro+/Business/Enterprise) -->
+  {% assign feature_videos = site.videos | where: "section", "github-copilot" | where_exp: "video", "video.plans and video.plans.size > 0" | sort: "title" %}
 
-    <!-- Filter buttons for this section -->
-    <div class="ghes-filter section-filter">
-      <button class="ghes-toggle-btn">Show features with GHES support</button>
-      <button class="video-toggle-btn">Show features with videos</button>
-    </div>
+  <div id="videos-free">
+    <h2 class="section-title">Free Features</h2>
+  </div>
 
-    <!-- Features for this subscription tier -->
-    <div class="tier-videos">
-      <div class="videos-grid">
-        {% for feature in entry.features %}
-        {% if feature.videoUrl != "" %}
-        <a href="{{ feature.videoUrl }}" class="video-card-link">
-          <div class="video-card" data-ghes="{{ feature.ghes_support }}" data-title="{{ feature.title }}">
-            <div class="video-header">
-              <h3>{{ feature.title }}</h3>
-              <div class="video-icons">
-                {% if feature.ghes_support %}
-                  <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
-                {% else %}
-                  <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
-                {% endif %}
-                <span class="play-icon" title="View Demo Video">
-                  <span class="play-triangle"></span>
-                </span>
-              </div>
-            </div>
-            <div class="feature-description">
-              <p>{{ feature.description }}</p>
-            </div>
-          </div>
-        </a>
-        {% else %}
-        <div class="video-card" data-ghes="{{ feature.ghes_support }}" data-title="{{ feature.title }}">
+  <!-- Filter buttons for this section -->
+  <div class="ghes-filter section-filter">
+    <button class="ghes-toggle-btn">Show features with GHES support</button>
+    <button class="video-toggle-btn">Show features with videos</button>
+  </div>
+
+  <!-- Features for Free tier -->
+  <div class="tier-videos">
+    <div class="videos-grid">
+      {% for video in feature_videos %}
+      {% unless video.plans contains 'Free' %}{% continue %}{% endunless %}
+      {% assign video_epoch = video.date | date_to_epoch %}
+      {% if video_epoch <= now_epoch %}
+      <a href="{{ video.url | relative_url }}" class="video-card-link">
+        <div class="video-card" data-ghes="{{ video.ghes_support }}" data-title="{{ video.title }}">
           <div class="video-header">
-            <h3>{{ feature.title }}</h3>
+            <h3>{{ video.title }}</h3>
             <div class="video-icons">
-              {% if feature.ghes_support %}
+              {% if video.ghes_support %}
                 <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
               {% else %}
                 <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
               {% endif %}
+              <span class="play-icon" title="View Demo Video">
+                <span class="play-triangle"></span>
+              </span>
             </div>
           </div>
           <div class="feature-description">
-            <p>{{ feature.description }}</p>
+            <p>{{ video.description }}</p>
           </div>
         </div>
-        {% endif %}
-        {% endfor %}
+      </a>
+      {% else %}
+      <div class="video-card" data-ghes="{{ video.ghes_support }}" data-title="{{ video.title }}">
+        <div class="video-header">
+          <h3>{{ video.title }}</h3>
+          <div class="video-icons">
+            {% if video.ghes_support %}
+              <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
+            {% else %}
+              <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
+            {% endif %}
+          </div>
+        </div>
+        <div class="feature-description">
+          <p>{{ video.description }}</p>
+        </div>
       </div>
+      {% endif %}
+      {% endfor %}
     </div>
-  {% endfor %}
+  </div>
+
+  <!-- Pro & Business Features Section (videos that include Pro or Business but not Pro+ or Enterprise) -->
+  <div id="videos-pro">
+    <h2 class="section-title">Pro & Business Features</h2>
+  </div>
+
+  <!-- Filter buttons for this section -->
+  <div class="ghes-filter section-filter">
+    <button class="ghes-toggle-btn">Show features with GHES support</button>
+    <button class="video-toggle-btn">Show features with videos</button>
+  </div>
+
+  <!-- Features for Pro & Business tiers -->
+  <div class="tier-videos">
+    <div class="videos-grid">
+      {% for video in feature_videos %}
+      {% unless video.plans contains 'Pro' or video.plans contains 'Business' %}{% continue %}{% endunless %}
+      {% assign video_epoch = video.date | date_to_epoch %}
+      {% if video_epoch <= now_epoch %}
+      <a href="{{ video.url | relative_url }}" class="video-card-link">
+        <div class="video-card" data-ghes="{{ video.ghes_support }}" data-title="{{ video.title }}">
+          <div class="video-header">
+            <h3>{{ video.title }}</h3>
+            <div class="video-icons">
+              {% if video.ghes_support %}
+                <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
+              {% else %}
+                <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
+              {% endif %}
+              <span class="play-icon" title="View Demo Video">
+                <span class="play-triangle"></span>
+              </span>
+            </div>
+          </div>
+          <div class="feature-description">
+            <p>{{ video.description }}</p>
+          </div>
+        </div>
+      </a>
+      {% else %}
+      <div class="video-card" data-ghes="{{ video.ghes_support }}" data-title="{{ video.title }}">
+        <div class="video-header">
+          <h3>{{ video.title }}</h3>
+          <div class="video-icons">
+            {% if video.ghes_support %}
+              <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
+            {% else %}
+              <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
+            {% endif %}
+          </div>
+        </div>
+        <div class="feature-description">
+          <p>{{ video.description }}</p>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Pro+ & Enterprise Features Section (videos that include Pro+ or Enterprise) -->
+  <div id="videos-proplus">
+    <h2 class="section-title">Pro+ & Enterprise Features</h2>
+  </div>
+
+  <!-- Filter buttons for this section -->
+  <div class="ghes-filter section-filter">
+    <button class="ghes-toggle-btn">Show features with GHES support</button>
+    <button class="video-toggle-btn">Show features with videos</button>
+  </div>
+
+  <!-- Features for Pro+ & Enterprise tiers -->
+  <div class="tier-videos">
+    <div class="videos-grid">
+      {% for video in feature_videos %}
+      {% unless video.plans contains 'Pro+' or video.plans contains 'Enterprise' %}{% continue %}{% endunless %}
+      {% assign video_epoch = video.date | date_to_epoch %}
+      {% if video_epoch <= now_epoch %}
+      <a href="{{ video.url | relative_url }}" class="video-card-link">
+        <div class="video-card" data-ghes="{{ video.ghes_support }}" data-title="{{ video.title }}">
+          <div class="video-header">
+            <h3>{{ video.title }}</h3>
+            <div class="video-icons">
+              {% if video.ghes_support %}
+                <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
+              {% else %}
+                <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
+              {% endif %}
+              <span class="play-icon" title="View Demo Video">
+                <span class="play-triangle"></span>
+              </span>
+            </div>
+          </div>
+          <div class="feature-description">
+            <p>{{ video.description }}</p>
+          </div>
+        </div>
+      </a>
+      {% else %}
+      <div class="video-card" data-ghes="{{ video.ghes_support }}" data-title="{{ video.title }}">
+        <div class="video-header">
+          <h3>{{ video.title }}</h3>
+          <div class="video-icons">
+            {% if video.ghes_support %}
+              <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
+            {% else %}
+              <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
+            {% endif %}
+          </div>
+        </div>
+        <div class="feature-description">
+          <p>{{ video.description }}</p>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
 
 </div>
 

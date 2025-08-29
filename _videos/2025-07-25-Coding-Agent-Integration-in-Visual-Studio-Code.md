@@ -6,6 +6,7 @@ author: "Visual Studio Code"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://www.youtube.com/watch?v=xGYHPN5NNd0"
 viewing_mode: "internal"
+section: "github-copilot"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-07-25 14:01:36 +00:00

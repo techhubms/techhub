@@ -30,7 +30,27 @@ For direct file creation:
 2. **Create the File**: Use naming convention `YYYY-MM-DD-title-slug.md`
 3. **Add Content**: Follow the structure and formatting rules in [Markdown Guidelines](markdown-guidelines.md)
 
-### 3. Automated RSS Content Creation
+### 3. GitHub Copilot Features Content
+
+GitHub Copilot feature demonstration videos are managed through a special collection structure:
+
+**Location**: `_videos/ghc-features/` subfolder
+
+**Special Requirements**:
+
+- Must include `section: "github-copilot"` in frontmatter
+- Must include `plans: ["Free"|"Pro"|"Business"|"Pro+"|"Enterprise"]` array to specify which subscription tiers support the feature
+- Must include `ghes_support: true|false` to indicate GitHub Enterprise Server support
+- **Date-based filtering**: Videos with future dates are still shown as features but are not clickable as this is the mechanism to distinguish between features that have a demo video or not. So if you create a video for a feature, make sure to set update the date in the filename, frontmatter AND permalink!
+
+**Automatic Integration**:
+
+- Videos in this folder automatically populate the `/github-copilot/features.md` page
+- Features are organized by subscription tier based on the `plans` frontmatter
+- The page dynamically filters features based on publication date and subscription level
+- Replaces the previous `_data/copilot_plans.json` system with a more maintainable video-based approach
+
+### 4. Automated RSS Content Creation
 
 The site automatically processes RSS feeds:
 
