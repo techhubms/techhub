@@ -1,0 +1,14 @@
+{
+  "Title": "Added support for WebP images",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2025-08-28T20:29:09+00:00",
+  "FeedName": "The GitHub Blog",
+  "Author": "Allison",
+  "Description": "WebP image support is now available across github.com and GitHub Enterprise Cloud with data residency. Previously, uploading WebP images resulted in broken previews or forced users to download files to…\n\nThe post [Added support for WebP images](https://github.blog/changelog/2025-08-28-added-support-for-webp-images) appeared first on [The GitHub Blog](https://github.blog).",
+  "Tags": [],
+  "Link": "https://github.blog/changelog/2025-08-28-added-support-for-webp-images",
+  "EnhancedContent": "WebP image support is now available across github.com and GitHub Enterprise Cloud with data residency. Previously, uploading WebP images resulted in broken previews or forced users to download files to view them. This created friction for users that rely on high-efficiency formats like WebP for faster loading and better compression. By supporting WebP, we’re helping users share, collaborate, and showcase assets without compromise.\n\n### What’s changed?\n\n#### WebP support in comment boxes\n\nYou can now upload `.webp` files directly in comment boxes for:\n\n- **Issues**\n- **Discussions**\n- **Pull requests**\n- **Gists**\n\nUploaded images in the locations specified above will now display inline, just like PNGs and JPEGs.\n\n#### WebP rendering for repository blobs & gists\n\nWhen you upload a WebP image file directly to a **repository** or **gist**, the image will render fully inline when viewed. You’ll see the image just like with other formats and won’t have the “View Raw” feedback.\n\n## How to give feedback\n\nWe want to hear from you! If you encounter any issues, edge cases, or have suggestions on how WebP support can be improved, leave a comment in our [Community discussion](https://github.com/orgs/community/discussions/171343).",
+  "ProcessedDate": "2025-08-28 21:11:08",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "OutputDir": "_news"
+}

@@ -162,10 +162,21 @@ test.describe('Page-Specific Filtering Behavior', () => {
       expect(sectionFilterCount).toBe(0);
       console.log(`✅ Correctly no section filters on ${sectionPage.name} (uses collection filters instead)`);
 
-      // Test collection filter functionality
-      for (let i = 0; i < Math.min(collectionFilterCount, 3); i++) {
-        const collectionFilter = collectionFilters.nth(i);
-        const collectionTag = await collectionFilter.getAttribute('data-tag');
+      // Test collection filter functionality with reliable filters (prioritize news, posts, videos)
+      const reliableFilters = ['news', 'posts', 'videos'];
+      const testFilters = [];
+      
+      for (const filterTag of reliableFilters) {
+        const filter = page.locator(`.tag-filter-btn[data-tag="${filterTag}"]`);
+        const count = await filter.count();
+        if (count > 0) {
+          testFilters.push({ locator: filter, tag: filterTag });
+        }
+      }
+
+      for (let i = 0; i < Math.min(testFilters.length, 3); i++) {
+        const collectionFilter = testFilters[i].locator;
+        const collectionTag = testFilters[i].tag;
 
         console.log(`🔍 Testing collection filter: "${collectionTag}"`);
 

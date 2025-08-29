@@ -6903,5 +6903,35 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-load-test-pricing/m-p/4449198#M22152",
     "collection": "community",
     "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://news.xbox.com/en-us/2025/08/28/xbox-august-update-cross-device-play-history-controller-updates/",
+    "reason": "No categories found: All categories are excluded according to the generic exclusion rules. The content is a company news update focused on Xbox hardware, console features, cross-device play, app navigation, and new game/service releases. There is no substantive developer, coding, DevOps, Azure, AI, ML, or Security content. The mention of 'Gaming Copilot (Beta)' refers to a consumer-facing gaming assistant, not a developer tool (rule: exclude Microsoft Copilot in consumer/business productivity contexts). The article does not cover app/game development, APIs, SDKs, or technical implementation details relevant to the predefined categories. Therefore, no categories apply.",
+    "collection": "news",
+    "timestamp": "2025-08-28 18:17:50 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-set-up-multi-factor-authentication-mfa-in-microsoft-365/",
+    "collection": "posts",
+    "timestamp": "2025-08-28 19:12:15 +00:00",
+    "reason": "No categories found: No categories assigned. The content is focused on administering and configuring Multi-Factor Authentication (MFA) for Microsoft 365 using the Admin Center, aimed at improving end-user account security. According to the generic exclusion rules for 'Non-Development Microsoft Products', content about Microsoft 365 that isn't focused on development, APIs, automation, or custom integration should be excluded. This article does not discuss development, scripting, integration, or technical architecture but rather provides end-user-oriented administrative instructions for an IT configuration. Therefore, it does not qualify for any Tech Hub categories."
+  },
+  {
+    "canonical_url": "https://dellenny.com/troubleshooting-common-windows-11-issues/",
+    "collection": "posts",
+    "timestamp": "2025-08-28 19:12:28 +00:00",
+    "reason": "No categories found: No categories were assigned because the content, 'Troubleshooting Common Windows 11 Issues', is focused on general end-user troubleshooting of Windows 11, such as performance, network, Bluetooth, printer, and UI issues. According to the Generic Exclusion Rules, content about non-development Microsoft products—such as Windows OS usage, general system administration, device connectivity, and productivity troubleshooting—is excluded unless there is a development or technical architecture focus. There is no coverage of programming, scripting, deployment, coding, DevOps, AI, ML, security development, or developer tool usage. Therefore, this post does not meet the inclusion criteria for any predefined categories."
+  },
+  {
+    "timestamp": "2025-08-28 20:18:07 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The article focuses on troubleshooting end-user connection issues in Microsoft Teams, which is a non-development Microsoft product. According to the Non-Development Microsoft Products exclusion rule in Chapter 3, content about Teams is only included if it focuses on Teams development or building bots/integrations. This content is targeted at general users, covering basic troubleshooting tips rather than technical implementation or development. Therefore, no categories are assigned.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-fix-common-microsoft-teams-connection-problems/"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: No categories were added because this announcement focuses on a platform feature update (WebP image support in GitHub) unrelated to the core developer and technical categories defined in Chapter 4 (AI, GitHub Copilot, Coding, DevOps, Azure, ML, Security). The update pertains to asset management and user experience, not development practices, coding, automation, Azure, security, or AI features. The technical tags provided reflect the relevant technologies and application areas for users searching for information about GitHub and image handling.",
+    "canonical_url": "https://github.blog/changelog/2025-08-28-added-support-for-webp-images",
+    "timestamp": "2025-08-28 21:12:32 +00:00"
   }
 ]
