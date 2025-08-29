@@ -7866,5 +7866,17 @@
     "reason": "Succesfully added: Assigned 'DevOps' because the episode focuses on DevOps workflows, security culture, and team practices (DevOps inclusion rules 3, 4, 5, and 9). Assigned 'Security' because it revolves around practical approaches to container vulnerabilities, Kubernetes security, patching, and compliance (Security inclusion rules 1, 2, 4, and 5). Did NOT assign Azure or Coding as there’s no substantial focus on Microsoft technologies or programming/development details. AI, GitHub Copilot, and ML are not discussed. Generic exclusion rules do NOT apply: this is in-depth technical, practitioner-level content focused on implementation, not biographical or sales-focused, and not negative, non-English, or business strategy oriented (see Chapter 3 for exclusion checks).",
     "canonical_url": "https://www.arresteddevops.com/digging-into-security/",
     "timestamp": "2025-08-29 10:14:15 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Included 'AI' and 'GitHub Copilot' categories because the episode covers the new Copilot agents panel (AI rule 2, GitHub Copilot rules 1–4). 'DevOps' was included due to detailed discussion of new GitHub Actions security policies (DevOps rules 2, 5, 6). 'Coding' applies as the episode reviews Next.js 15.5, Vite, and Webpack—core web development frameworks (Coding rules 1, 2, and 4). Did not assign 'Azure', 'ML', or 'Security': Azure is not mentioned; while security is discussed, it is specific to GitHub Actions within DevOps, not broader Microsoft security solutions. Content is technical, relevant, and aligns with category inclusion requirements.",
+    "timestamp": "2025-08-29 15:11:24 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=HqqzOZA8Hs0",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the content is an Azure-focused update (Azure rule 1) with coverage of new features and enhancements spanning Azure migration, identity, networking, and SQL. Added AI and ML categories because updates include OpenAI service (provisioned spillover), new AI voice models, and developer tooling like Roslyn Analyzer for Durable Functions (AI rules 1, 3, 4; ML rule 1). Included Security because of App Gateway WAF, Entra ID/RBAC, and improved identity management (Security rules 1, 3, 4). Coding and DevOps are included due to coverage of Azure Functions, Node.js 22 support, Roslyn Analyzer, schema tools, and migration tooling (Coding rules 1, 2, 4; DevOps rules 1, 5, 6). All categories correspond directly to the Azure feature areas and services highlighted. There are no exclusion triggers: the content is professional, technical, and centers on Microsoft development and operations.",
+    "timestamp": "2025-08-29 15:12:01 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=iXTnCccJEHU",
+    "collection": "videos"
   }
 ]

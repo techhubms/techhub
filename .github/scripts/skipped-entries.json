@@ -6939,5 +6939,11 @@
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/creating-and-using-an-azure-automation-custom-runtime/m-p/4449541#M22158",
     "timestamp": "2025-08-29 10:14:26 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The description is primarily in Portuguese (pt-BR), violating the Non-English Content exclusion (language threshold not met: less than 80% English in main text). Additionally, the main focus is on an open source fork (Tahopen) of Pentaho (an ETL tool), with no clear or explicit mention of Microsoft technologies or developer content central to Microsoft platforms. Therefore, no categories apply.",
+    "timestamp": "2025-08-29 12:22:48 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=1QDygIRl3kE",
+    "collection": "videos"
   }
 ]
