@@ -51,14 +51,20 @@
                 "title": "News",
                 "url": "/github-copilot/news.html",
                 "collection":"news",
-                "description": "GitHub Copilot news from their official product updates"
+                "description": "GitHub Copilot news from their official product updates."
             },
             {
                 "title": "Blogs",
                 "url": "/github-copilot/posts.html",
                 "collection":"posts",
-                "description": "A collection of blogs that are worth your while"
-            },          
+                "description": "A collection of blogs that are worth your while."
+            },
+            {
+                "title": "Videos",
+                "url": "/github-copilot/videos.html",
+                "collection": "videos",
+                "description": "Practical video tutorials and demonstrations showing GitHub Copilot features, workflows, and real-world coding scenarios."
+            },                      
             {
                 "title": "Community",
                 "url": "/github-copilot/community.html",
@@ -68,7 +74,7 @@
             {
                 "title": "Features",
                 "url": "/github-copilot/features.html",
-                "description": "GitHub Copilot features and capabilities overview."
+                "description": "GitHub Copilot features and capabilities overview, including demo videos."
             },
             {
                 "title": "Levels of Enlightenment",
