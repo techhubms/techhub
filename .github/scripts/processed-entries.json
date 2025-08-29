@@ -7854,5 +7854,11 @@
     "reason": "Succesfully added: Assigned the Azure category because the content focuses on the management, billing, and operational arrangement of Azure subscriptions (Azure inclusion rule 1 and 4). The article does not discuss AI, coding, DevOps, ML, Security, or GitHub Copilot, so those categories are not included. The focus is technical and directly related to structuring Azure environments for enterprise customers, with cost management, commitment usage, and governance being central themes.",
     "timestamp": "2025-08-29 05:12:41 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/finops-blog/provider-managed-azure-subscriptions-cost-control-and-commitment/ba-p/4448688"
+  },
+  {
+    "canonical_url": "https://devops.com/devops-platforms-show-cracks-github-incidents-surge-58-azure-gitlab-and-jira-also-under-pressure/?utm_source=rss&utm_medium=rss&utm_campaign=devops-platforms-show-cracks-github-incidents-surge-58-azure-gitlab-and-jira-also-under-pressure",
+    "timestamp": "2025-08-29 08:16:14 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the 'DevOps' category since the entire article focuses on operational/CI-CD disruptions, incident management, and platform reliability issues across multiple DevOps tools including Azure DevOps and GitHub (DevOps inclusion rules 1, 5, 7, 9). 'Azure' was assigned because Azure DevOps is directly analyzed with technical breakdowns of its core services and incident impacts (Azure rule 1, 4). 'Security' applies because of significant coverage of ransomware, data theft incidents, and the convergence of uptime and cybersecurity (Security rules 1, 5, 8). 'Coding', 'AI', 'GitHub Copilot', and 'ML' do not apply as the article is not about programming, AI/ML engineering, GitHub Copilot, or code-centric topics. The content is professional, technical, lacks biographical or business-only focus, and does not violate any generic exclusion rules."
   }
 ]
