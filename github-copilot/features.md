@@ -5,7 +5,9 @@ description: "An overview of GitHub Copilot plans and features."
 category: "GitHub Copilot"
 ---
 
-This page provides a comprehensive overview of GitHub Copilot plans as of August 29th 2025, combining official features with example videos.
+This page provides a comprehensive overview of GitHub Copilot plans as of August 29th 2025, combining official features with example videos. For the most current pricing, visit [GitHub's official pricing page](https://github.com/features/copilot/plans).
+
+**Note**: GitHub Copilot is not currently available for GitHub Enterprise Server. For the most recent plan details [view this page](https://docs.github.com/en/copilot/get-started/plans).
 
 {% comment %} Set up global date variable for filtering {% endcomment %}
 {% assign now_epoch = '' | now_epoch %}
@@ -35,11 +37,12 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
         <p>Unlimited completions and chats with access to more models</p>
         <ul>
           <li>Everything in Free</li>
-          <li>Unlimited agent mode and chats with GPT-4.1</li>
+          <li>Unlimited agent mode and chats with GPT-5 mini</li>
           <li>Unlimited code completions</li>
-          <li>Access to code review, Claude 3.7/4 Sonnet, Gemini 2.5 Pro, and more</li>
+          <li>Access to code review, Claude Sonnet 4, GPT-5, Gemini 2.5 Pro, and more</li>
           <li>6x more premium requests than Copilot Free</li>
           <li>Coding agent (preview)</li>
+          <li>Free for verified students, teachers, and maintainers of popular open source projects</li>
         </ul>
         <div class="tier-link">
           <a href="#videos-pro">View Features →</a>
@@ -50,12 +53,16 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
     <div class="subscription-tiers-container half-width">
       <div class="subscription-section">
         <h2>Business</h2>
-        <p>For teams and organizations</p>
+        <p>For teams and organizations ($19 USD per user per month)</p>
         <ul>
-          <li>Usage metrics</li>
+          <li>Everything in Pro</li>
+          <li>Coding agent for organizations</li>
+          <li>Usage metrics and analytics</li>
           <li>Data excluded from training by default</li>
-          <li>User management</li>
+          <li>User management and policies</li>
           <li>Content exclusions</li>
+          <li>Audit logs</li>
+          <li>300 premium requests per user per month</li>
         </ul>
         <div class="tier-link">
           <a href="#videos-pro">View Features →</a>
@@ -66,12 +73,12 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
     <div class="subscription-tiers-container half-width">
       <div class="subscription-section">
         <h2>Pro+</h2>
-        <p>Advanced features for power users</p>
+        <p>Maximum flexibility and model choice ($39 USD per month or $390 per year)</p>
         <ul>
           <li>Everything in Pro</li>
-          <li>Advanced model access</li>
-          <li>Fine-tuned models</li>
-          <li>Knowledge bases</li>
+          <li>Access to all models, including Claude Opus 4.1, o3, and more</li>
+          <li>30x more premium requests than Copilot Free</li>
+          <li>Access to GitHub Spark</li>
         </ul>
         <div class="tier-link">
           <a href="#videos-proplus">View Features →</a>
@@ -82,12 +89,15 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
     <div class="subscription-tiers-container half-width">
       <div class="subscription-section">
         <h2>Enterprise</h2>
-        <p>Full enterprise features and controls</p>
+        <p>Full enterprise features and controls ($39 USD per user per month)</p>
         <ul>
           <li>Everything in Business</li>
-          <li>Enterprise security</li>
-          <li>Advanced compliance</li>
-          <li>Custom policies</li>
+          <li>Copilot knowledge bases</li>
+          <li>1,000 premium requests per user per month</li>
+          <li>Advanced compliance and security features</li>
+          <li>Custom policies and content exclusions</li>
+          <li>Enterprise-grade audit logs</li>
+          <li>SAML SSO integration</li>
         </ul>
         <div class="tier-link">
           <a href="#videos-proplus">View Features →</a>
