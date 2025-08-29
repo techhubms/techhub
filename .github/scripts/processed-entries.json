@@ -7908,5 +7908,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-communication-services/azure-communication-services-is-now-generally-available-in-azure/ba-p/4448034",
     "collection": "community",
     "reason": "Succesfully added: Assigned the Azure category because the content is focused on Azure Communication Services and its availability within the Azure Government cloud (Azure rule 1 and 4). The content does not qualify for DevOps, AI, Coding, Security, or ML categories since it discusses service availability, features, and compliance—not technical implementation, security configuration, AI/ML integration, or development practices. The post is an announcement with relevant technical details appropriate for practitioners evaluating Azure Communication Services in a government context."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content announces a new developer-focused feature of GitHub Copilot (Next Edit Suggestions) specifically for JetBrains IDEs, aligning with the AI inclusion rules (usage of AI-powered code assistants) and GitHub Copilot rules (feature updates, usage guidance). The Coding category was not assigned because the primary focus is on the Copilot tool’s workflow enhancements rather than programming techniques or language features. Azure, DevOps, ML, and Security categories do not apply based on the absence of relevant content per their rules.",
+    "canonical_url": "https://github.blog/changelog/2025-08-29-copilots-next-edit-suggestion-nes-in-public-preview-in-jetbrains",
+    "timestamp": "2025-08-29 18:16:43 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security because the article focuses on credential theft, secret leakage, GitHub workflow exploitation, and supply chain risks (Security rules 1, 2, 4, 5, 8, 9). Assigned DevOps because the attack leveraged automation pipelines (publish.yml), GitHub Actions, npm, and highlights operational aspects of software supply chain security (DevOps rules 2, 5, 6, 7). Assigned AI because attackers specifically targeted and weaponized AI CLI tools such as Claude, Gemini, and Q for secret enumeration, which is a novel AI-related vector in this context (AI rules 4 and 5). The content maintains technical focus, is primarily in English, and is not a sales pitch or biographical. All rules are followed; social media links and newsletter prompts were ignored as instructed.",
+    "canonical_url": "https://devops.com/malicious-nx-packages-used-in-two-waves-of-supply-chain-attack/?utm_source=rss&utm_medium=rss&utm_campaign=malicious-nx-packages-used-in-two-waves-of-supply-chain-attack",
+    "timestamp": "2025-08-29 18:17:55 +00:00",
+    "collection": "posts"
   }
 ]
