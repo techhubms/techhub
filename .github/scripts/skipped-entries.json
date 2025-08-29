@@ -6969,5 +6969,35 @@
     "canonical_url": "https://dellenny.com/what-to-do-when-outlook-stops-syncing/",
     "timestamp": "2025-08-29 18:17:25 +00:00",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=3EjwodII568",
+    "reason": "No categories found: Content excluded by generic exclusion rules: The input consists solely of a promotional event teaser and brief descriptive sentence with no substantive technical information or main content provided ('content' is null). As per Format and Length Exclusions, the absence of actual content means there are no technical details to evaluate against category inclusion rules. The description is high-level, event-focused, and lacks actionable details, so it is excluded.",
+    "collection": "videos",
+    "timestamp": "2025-08-29 19:10:32 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/building-a-fully-secure-architecture-integrating-azure-openai/m-p/4449699#M786",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-08-29 19:10:34 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-ai-adoption-framework-a-strategic-guide-for-organizations/m-p/4449697#M22159",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-08-29 19:10:34 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/extracting-information-from-pdfs-and-storing-in-a-database-using/m-p/4449698#M22160",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-08-29 19:10:34 +00:00"
+  },
+  {
+    "timestamp": "2025-08-29 21:11:55 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/delete-old-irm-labels/m-p/4449510#M22157",
+    "reason": "Insufficient content length",
+    "collection": "community"
   }
 ]

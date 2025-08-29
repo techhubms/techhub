@@ -7920,5 +7920,11 @@
     "canonical_url": "https://devops.com/malicious-nx-packages-used-in-two-waves-of-supply-chain-attack/?utm_source=rss&utm_medium=rss&utm_campaign=malicious-nx-packages-used-in-two-waves-of-supply-chain-attack",
     "timestamp": "2025-08-29 18:17:55 +00:00",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-08-29 21:11:49 +00:00",
+    "canonical_url": "https://pagelsr.github.io/CooknWithCopilot/blog/use-edit-mode-for-quick-targeted-improvements.html",
+    "reason": "Succesfully added: Assigned the AI category because the article details the use of GitHub Copilot, which is an AI-powered code assistant (AI inclusion rule 2 and 5). 'GitHub Copilot' category is included as the content focuses specifically on Copilot functionality (GitHub Copilot rules 1, 2, and 4). 'Coding' is included since it discusses code style, logic, and error handling improvements through developer practices (Coding rules 1 and 4). Azure, DevOps, ML, and Security are not included since there is no mention of relevant Azure technologies, development operations, machine learning development, or security implementation. Exclusion rules do not apply, as the content is technical, English, meets length requirements, and is focused on developer productivity rather than business or biographical aspects.",
+    "collection": "posts"
   }
 ]

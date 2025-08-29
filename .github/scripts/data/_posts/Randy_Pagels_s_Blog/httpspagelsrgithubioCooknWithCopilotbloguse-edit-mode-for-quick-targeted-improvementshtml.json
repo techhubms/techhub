@@ -1,0 +1,14 @@
+{
+  "Tags": [],
+  "Link": "https://pagelsr.github.io/CooknWithCopilot/blog/use-edit-mode-for-quick-targeted-improvements.html",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "Title": "Use Edit Mode for Quick, Targeted Improvements",
+  "FeedName": "Randy Pagels's Blog",
+  "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Use Edit Mode for Quick, Targeted Improvements\n\n*Posted on Aug 29, 2025*\n\nUsage\n\nSometimes you don’t need a new feature, you just need your code polished.\n\nThat’s where **GitHub Copilot Edit Mode** shines. With a single comment, you can rewrite a block of code to improve readability, simplify logic, or follow a specific style.\n\nProTip\n\n**Use Edit Mode for Quick, Targeted Improvements**\n\nInstead of rewriting code by hand, highlight what you want to change and tell GitHub Copilot exactly what to do.\n\nTry These Approaches\n\n**1️⃣ Simplify Complex Logic**\n\nHighlight a block and type:\n\n`# Rewrite this function to be easier to read without changing its behavior`\n\nCopilot will clean it up while keeping the output the same.\n\n**2️⃣ Match a Coding Style**\n\n`// Update this function to use async/await instead of promises`\n\nCopilot adjusts the syntax to follow modern best practices.\n\n**3️⃣ Add Error Handling Automatically**\n\n`// Add try/catch blocks to handle potential runtime errors`\n\nA quick way to improve reliability in one step.\n\n**4️⃣ Agent Mode for Larger Jobs**\n\n*Review all service files and update them to follow the same error-handling pattern*\n\nCopilot Agent Mode expands the scope, applying consistent improvements across multiple files.\n\nExtra Prompts to Try\n\n- # Refactor this loop into a more concise version\n- # Add XML or JSDoc comments to describe parameters and return values\n- # Replace deprecated methods with supported alternatives\n\nQuick Takeaway\n\nEdit Mode is like a focused assistant, it takes your instructions and makes precise changes without touching the rest of your code.\n\nFor bigger patterns, Agent Mode can apply the same logic repo-wide.",
+  "PubDate": "2025-08-29T00:00:00+00:00",
+  "ProcessedDate": "2025-08-29 21:10:14",
+  "OutputDir": "_posts",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "Description": "Polish code fast with Copilot Edit Mode, simplify logic, match style, and add error handling with a single prompt.",
+  "FeedUrl": "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+}
