@@ -43,6 +43,8 @@ This document defines the writing style and tone requirements for all content in
 - **Transition sentence starters**: Limit sentences beginning with "Moreover", "Furthermore", "Additionally", "However" to one per paragraph maximum
 - **Qualification overuse**: Avoid starting sentences with "It's worth noting", "It's important to understand", "It should be mentioned"
 - **Abstract positioning**: Don't use phrases like "stands at the forefront", "represents a paradigm shift", "marks a new era"
+- **Temporal vagueness**: Avoid "moving at this speed", "continues to move fast", "develops quickly" without specific context
+- **Generic trend language**: Replace "clear uptick", "remains a focus", "across the board" with specific facts
 
 ### Positive Patterns to Embrace
 
@@ -73,6 +75,8 @@ Before finishing any piece of writing, check:
 - **AI-generated tells**: Starting with "In an era", "In a world", excessive use of "fundamentally", "Moreover", "Furthermore", "Additionally" at sentence starts, overuse of "seamlessly", "effortlessly", "streamlined"
 - **Impact qualifiers**: "pivotal", "significant", "major", "substantial", "dramatic", "massive"
 - **Intensity words**: "breakthrough", "cutting-edge", "world-class", "industry-leading", "paradigm-shifting"
+- **Speed and movement clichés**: "move fast", "moving at this speed", "continue to advance rapidly", "develop quickly"
+- **Vague growth patterns**: "clear uptick", "clear trend", "obvious shift", "dramatic increase"
 
 ### Vague or Generic Language
 
@@ -81,6 +85,11 @@ Before finishing any piece of writing, check:
 - **Hedge words**: Excessive use of "basically", "essentially", "obviously", "simply", "just"
 - **Redundant expressions**: "future plans", "past history", "final conclusion"
 - **Transition overuse**: Starting multiple sentences with "Moreover", "Furthermore", "Additionally", "However"
+- **Vague trend language**: "remains a focus", "continues to be", "across the board", "with plenty of"
+- **Generic emphasis**: "as well", "too", "also" when used excessively for emphasis
+- **Unclear quantifiers**: "plenty of practical news", "clear uptick", "obvious trend"
+- **Speed qualifiers**: "moving at this speed", "continues to move fast", "develops quickly"
+- **Generic conclusions**: "With technology advancing rapidly", "As the industry evolves"
 
 ### Technical Jargon Without Context
 
@@ -164,9 +173,13 @@ Ask yourself these questions about your content:
 
 > The new activity report shows which features your team uses most, helping you identify training opportunities and measure adoption success.
 
+> GitHub Copilot now uses OpenAI's GPT-5 across Visual Studio, VS Code, and JetBrains IDEs, providing improved code completion and debugging assistance.
+
 #### ❌ Poor: Generic and Buzzword-Heavy
 
 > This groundbreaking report delivers game-changing insights that will transform your understanding of user engagement and drive synergistic adoption strategies.
+
+> AI integration, cloud platforms, and developer tools continue to move fast, with plenty of practical news across the board.
 
 ### Content Type Examples
 
@@ -185,3 +198,11 @@ Ask yourself these questions about your content:
 
 ❌ **Poor**:
 > Our innovative tag-based filtering solution empowers users to delve into highly targeted content discovery through an unprecedented multi-dimensional taxonomy system.
+
+#### News Roundups
+
+✅ **Good**:
+> GitHub Copilot now supports GPT-5 across major IDEs. Microsoft announced new security features for Azure. Three companies released updates to their development tools this week.
+
+❌ **Poor**:
+> Technology continues to move fast across the board. There's a clear uptick in adoption of cutting-edge solutions. Meanwhile, the industry remains focused on innovation at unprecedented speed.
