@@ -1,6 +1,4 @@
 name: Weekly Roundup Generation
-permissions:
-  contents: write
 
 on:
   schedule:
@@ -17,10 +15,13 @@ on:
         required: false
         type: string
 
+permissions:
+  contents: write
+
 jobs:
   generate-roundup:
     runs-on: ubuntu-latest
-    timeout-minutes: 360  # 6 hours timeout to handle long AI processing
+    timeout-minutes: 120  # Reduced to 2 hours to prevent hung workflows
     env:
       GIT_USER_EMAIL: "reinier.vanmaanen@xebia.com"
       GIT_USER_NAME: "RSS Processing Workflow"
@@ -102,6 +103,8 @@ jobs:
           # Run the roundup generation script with default parameters
           & .github/scripts/iterative-roundup-generation.ps1 `
             -Token "${{ secrets.AZURE_AI_KEY }}" `
+            -Model "gpt-4.1" `
+            -Endpoint "https://oai-techhub.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview" `
             -StartDate "${{ steps.dates.outputs.start-date }}" `
             -EndDate "${{ steps.dates.outputs.end-date }}" `
             -WorkspaceDirectory "${{ github.workspace }}"
