@@ -205,18 +205,19 @@ function Get-RoundupFileInfo {
     }
 }
 
-# Establish base script directory path for consistent usage throughout script
-$ScriptDirectory = if ($WorkspaceDirectory -eq $PSScriptRoot) {
-    # Running from the script's directory - use PSScriptRoot directly
-    $PSScriptRoot
+# Establish base paths for consistent usage throughout script
+$isRunningFromScriptDirectory = ($WorkspaceDirectory -eq $PSScriptRoot)
+
+if ($isRunningFromScriptDirectory) {
+    # Running from the script's directory (.github/scripts)
+    $WorkspaceRoot = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
 }
 else {
-    # Running from workspace root - construct path to script directory
-    Join-Path $WorkspaceDirectory ".github" "scripts"
+    # Running from workspace root
+    $WorkspaceRoot = $WorkspaceDirectory
 }
 
-# Import functions using the established base path
-$functionsPath = Join-Path $ScriptDirectory "functions"
+$functionsPath = Join-Path $WorkspaceRoot ".github" "scripts" "functions"
 
 # Import Write-ErrorDetails first (for error handling), then all others sorted alphabetically
 . (Join-Path $functionsPath "Write-ErrorDetails.ps1")
@@ -1830,8 +1831,8 @@ $step6Response
         Write-Host "� Step 9: Rewriting content against writing style guidelines..."
     }
     
-    # Read the writing style guidelines
-    $guidelinesPath = "/workspaces/techhub/docs/writing-style-guidelines.md"
+    # Read the writing style guidelines using the established WorkspaceRoot variable
+    $guidelinesPath = Join-Path $WorkspaceRoot "docs" "writing-style-guidelines.md"
     if (-not (Test-Path $guidelinesPath)) {
         throw "⚠️ Writing style guidelines not found at $guidelinesPath"
     }
