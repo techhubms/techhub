@@ -6999,5 +6999,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/delete-old-irm-labels/m-p/4449510#M22157",
     "reason": "Insufficient content length",
     "collection": "community"
+  },
+  {
+    "collection": "posts",
+    "reason": "No categories found: All categories are excluded due to lack of development focus. The content is an end-user security guide for Windows 11, covering built-in protections, authentication, encryption, and best practices for personal device security. It does not address enterprise security implementation, custom security solutions, or development with Microsoft security technologies. There is no technical depth related to coding, DevOps, AI, ML, or Azure-specific configuration as required by the inclusion rules. Windows Defender and BitLocker are discussed only at the consumer usage level, not in a development or advanced technical context. Based on these factors and per Non-Development Microsoft Products and Business Strategy exclusion rules, no categories are assigned.",
+    "timestamp": "2025-08-30 11:10:02 +00:00",
+    "canonical_url": "https://dellenny.com/improving-security-on-your-windows-11-pc/"
   }
 ]
