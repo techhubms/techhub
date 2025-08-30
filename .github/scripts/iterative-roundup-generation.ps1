@@ -314,9 +314,9 @@ try {
         exit 1
     }
 
-    # Validate StartFromStep - Steps 2A and 2B are both part of Step 2
+    # Validate StartFromStep
     if ($StartFromStep -lt 1 -or $StartFromStep -gt 9) {
-        Write-Error "StartFromStep must be between 1 and 9. Note: Step 2 includes both 2A (developer relevance filtering) and 2B (detailed analysis). Both substeps run automatically when using StartFromStep 2."
+        Write-Error "StartFromStep must be between 1 and 9."
         exit 1
     }
 
@@ -387,18 +387,19 @@ try {
         Write-Host "⏭️ Skipping Step 1 (collection scanning) - resuming from backup"
     }
 
-    # Step 2A: Filter Articles for Developer Relevance (skip if resuming from later step)
-    $developerRelevantArticles = @()
+    # Step 2: Filter and Analyze Articles for Developer Relevance (skip if resuming from later step)
     if ($StartFromStep -le 2) {
-        Write-Host "🔍 Step 2A: Filtering articles for developer relevance..."
+        Write-Host "🔍 Step 2: Filtering and analyzing articles for developer relevance..."
 
-        $step2ASystemMessage = @"
-ROLE: You are a content filter specialist determining if technical articles are relevant for a DEVELOPER-FOCUSED tech roundup.
+        $step2SystemMessage = @"
+ABSOLUTE CRITICAL REQUIREMENT: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full enhanced content requested!
+
+ROLE: You are an expert technical content analyst who filters and analyzes articles for a DEVELOPER-FOCUSED tech roundup. You must first determine if content is relevant for developers, then provide detailed analysis for relevant articles.
 
 🎯 DEVELOPER-FOCUSED CONTENT FILTER:
 This roundup is specifically for developers, so you must filter out corporate/business content that isn't relevant to developers.
 
-EXCLUDE (mark as "corporate"):
+EXCLUDE (mark as skip_article: true):
 - Corporate partnerships and business announcements (e.g., "NFL and Microsoft Expand Partnership")
 - Industry reports without technical actionables (e.g., "AI in Education Report: Key Insights")
 - Analyst reports and market positioning (e.g., "Microsoft Named Leader in Gartner Magic Quadrant")
@@ -410,7 +411,7 @@ EXCLUDE (mark as "corporate"):
 - Company acquisition news without technical implications
 - Executive appointments and organizational changes
 
-INCLUDE (mark as "high", "medium", or "low"):
+INCLUDE AND ANALYZE (mark as skip_article: false):
 - New developer tools, features, and capabilities
 - Technical tutorials, guides, and how-to content
 - Product updates that affect developer workflows
@@ -422,133 +423,6 @@ INCLUDE (mark as "high", "medium", or "low"):
 - Migration guides and technical documentation updates
 - Open source project updates and releases
 
-CRITICAL RESPONSE FORMAT: Return ONLY a valid JSON object with this exact structure:
-{
-  "developer_relevance": "high|medium|low|corporate",
-  "reasoning": "Brief explanation of why this content is/isn't relevant for developers",
-  "title": "Article title from frontmatter"
-}
-
-CLASSIFICATION GUIDE:
-- HIGH: Direct impact on developer workflows, new coding capabilities, essential tools and features
-- MEDIUM: Useful for specific developer scenarios, incremental improvements, educational content
-- LOW: Limited developer application, niche use cases, requires significant business context
-- CORPORATE: Business announcements, partnerships, analyst reports, executive content with no developer impact
-"@
-
-        # Save Step 2A input for debugging
-        $step2AInput = @"
-STEP 2A INPUT: Developer Relevance Filter Configuration
-AI Model: $Model
-Endpoint: $Endpoint
-Date Range: $StartDate to $EndDate
-Total Articles to Process: $($articles.Count)
-
-SYSTEM MESSAGE:
-$step2ASystemMessage
-"@
-        Save-StepBackup -StepName "Step2A-Input" -Content $step2AInput -StartDate $StartDate -EndDate $EndDate
-
-        # Process each article for developer relevance filtering
-        for ($i = 0; $i -lt $articles.Count; $i++) {
-            $articleFilePath = $articles[$i]
-            $articleNum = $i + 1
-            $articleName = Split-Path $articleFilePath -Leaf
-        
-            Write-Host "� Filtering article $articleNum of $($articles.Count): $($articleName)"
-        
-            # Check if file exists
-            if (-not (Test-Path $articleFilePath)) {
-                throw "Article file not found: $articleFilePath"
-            }
-        
-            # Read the article content
-            $articleContent = Get-Content $articleFilePath -Raw
-
-            $step2AUserMessage = @"
-ARTICLE CONTENT:
-$articleContent
-"@
-            
-            # Call the AI model for filtering
-            Write-Host "🤖 Calling AI model for developer relevance filtering..."
-            $response = Invoke-AiApiCall `
-                -Token $Token `
-                -Model $Model `
-                -SystemMessage $step2ASystemMessage `
-                -UserMessage $step2AUserMessage `
-                -Endpoint $Endpoint `
-                -RateLimitPreventionDelay $RateLimitPreventionDelay
-
-            # Check for errors
-            $filterResult = Test-AiResponseFormat -Response $response -StepName "Step 2A (Developer relevance filter for $articleName)"
-            if (-not $filterResult.IsValid) {
-                throw $filterResult.ErrorMessage
-            }
-
-            # Parse AI response
-            try {
-                $relevanceResult = $response | ConvertFrom-Json
-                
-                # Validate required fields
-                if (-not $relevanceResult.developer_relevance -or -not $relevanceResult.reasoning) {
-                    throw "Invalid response for $($articleName): Missing required fields"
-                }
-                
-                # Only keep articles that are not corporate
-                if ($relevanceResult.developer_relevance -ne "corporate") {
-                    $developerRelevantArticles += @{
-                        FilePath           = $articleFilePath
-                        DeveloperRelevance = $relevanceResult.developer_relevance
-                        Reasoning          = $relevanceResult.reasoning
-                        Title              = $relevanceResult.title
-                    }
-                    Write-Host "  ✅ INCLUDED - Relevance: $($relevanceResult.developer_relevance)"
-                    Write-Host "  📝 Reasoning: $($relevanceResult.reasoning)"
-                }
-                else {
-                    Write-Host "  ❌ EXCLUDED - Corporate content" -ForegroundColor Yellow
-                    Write-Host "  📝 Reasoning: $($relevanceResult.reasoning)" -ForegroundColor Yellow
-                }
-            }
-            catch {
-                throw "Failed to parse AI response for $($articleName): $($_.Exception.Message). Response was: $($response.Substring(0, [Math]::Min(200, $response.Length)))"
-            }
-        
-            Write-Host "✅ Article $articleNum filtered successfully"
-        }
-
-        Write-Host "✅ Step 2A complete - Developer relevance filtering complete"
-        Write-Host "📊 Filtered from $($articles.Count) total articles to $($developerRelevantArticles.Count) developer-relevant articles" -ForegroundColor Green
-        
-        # Create backup of filtering results
-        $filteringBackup = $developerRelevantArticles | ConvertTo-Json -Depth 10
-        Save-StepBackup -StepName "Step2A-FilteringResults" -Content $filteringBackup -StartDate $StartDate -EndDate $EndDate
-    }
-    else {
-        Write-Host "⏭️ Skipping Step 2A (developer relevance filtering) - resuming from backup"
-        # Restore developerRelevantArticles from backup
-        $filteringBackupJson = Load-StepBackup -StepName "Step2A-FilteringResults" -StartDate $StartDate -EndDate $EndDate
-        if ($null -eq $filteringBackupJson -or $filteringBackupJson -eq "") {
-            throw "Could not restore developer-relevant articles from backup for Step 2A. Backup file missing or empty."
-        }
-        try {
-            $developerRelevantArticles = $filteringBackupJson | ConvertFrom-Json
-        }
-        catch {
-            throw "Failed to parse developer-relevant articles backup for Step 2A: $($_.Exception.Message)"
-        }
-    }
-
-    # Step 2B: Deep Analysis of Developer-Relevant Articles (skip if resuming from later step)
-    if ($StartFromStep -le 2) {
-        Write-Host "🤖 Step 2B: Analyzing developer-relevant articles for detailed summaries and categorization..."
-
-        $step2BSystemMessage = @"
-ABSOLUTE CRITICAL REQUIREMENT: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the full enhanced content requested!
-
-ROLE: You are an expert technical content analyst creating detailed summaries for a comprehensive weekly tech roundup focused on DEVELOPERS. Your analysis will be used to create narrative sections that tell the story of the week's developments from a developer perspective.
-
 🚨 CRITICAL JSON FORMATTING RULES:
 - Return ONLY valid JSON - no other text before or after
 - Escape ALL special characters properly in JSON strings:
@@ -559,8 +433,18 @@ ROLE: You are an expert technical content analyst creating detailed summaries fo
 - Keep all text content on single lines within JSON strings
 - Test your JSON response mentally before providing it
 
-CRITICAL RESPONSE FORMAT: Return ONLY a JSON object with this exact structure including ALL fields:
+CRITICAL RESPONSE FORMAT: Return ONLY a JSON object with this exact structure:
+
+For articles to SKIP (corporate/non-developer content):
 {
+  "skip_article": true,
+  "reasoning": "Brief explanation of why this content isn't relevant for developers",
+  "title": "Article title from frontmatter"
+}
+
+For articles to INCLUDE (developer-relevant content):
+{
+  "skip_article": false,
   "section": "Suggested Section Name",
   "summary": "Comprehensive Summary",
   "relevance_score": 1-10,
@@ -569,10 +453,10 @@ CRITICAL RESPONSE FORMAT: Return ONLY a JSON object with this exact structure in
   "technology_stack": "Specific technology/framework/platform involved",
   "topic_type": "announcement|tutorial|update|guide|analysis|feature|troubleshooting|case-study|news|preview|ga-release|deprecation|migration|integration|comparison",
   "target_audience": "developers|administrators|business|researchers|data-scientists|devops-engineers",
-  "original_tags": ["tag1", "tag2", "tag3"],
-  "ai_suggested_tags": ["additional-tag1", "additional-tag2"],
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
   "impact_level": "high|medium|low",
-  "time_sensitivity": "immediate|this-week|this-month|long-term"
+  "time_sensitivity": "immediate|this-week|this-month|long-term",
+  "reasoning": "Brief explanation of why this content is relevant for developers"
 }
 
 SECTION CATEGORIZATION - CHOOSE THE SINGLE BEST MATCH:
@@ -669,136 +553,151 @@ TOPIC TYPE EXPANDED DEFINITIONS:
 - comparison: Product comparisons, technology evaluations
 
 TAGS REQUIREMENTS:
-- ORIGINAL_TAGS: Extract all tags from the article's frontmatter "tags" field exactly as they appear
-- AI_SUGGESTED_TAGS: Add 3-5 additional relevant tags that would help with grouping and discovery
-- Focus AI suggested tags on: product families, technology stacks, use cases, developer roles
+- Provide a comprehensive list of all relevant tags (combining original tags from frontmatter plus additional relevant tags)
+- Focus on: product families, technology stacks, use cases, developer roles, specific features mentioned
+- Include 10-20 tags total that would help with content grouping and discovery
 
 CRITICAL WRITING STYLE GUIDELINES:
 $WritingStyleGuidelines
 "@
 
-        # Save Step 2B input for debugging
-        $step2BInput = @"
-STEP 2B INPUT: Deep Analysis Configuration
+        # Save Step 2 input for debugging
+        $step2Input = @"
+STEP 2 INPUT: Combined Filter and Analysis Configuration
 AI Model: $Model
 Endpoint: $Endpoint
 Date Range: $StartDate to $EndDate
-Developer-Relevant Articles to Process: $($developerRelevantArticles.Count)
+Total Articles to Process: $($articles.Count)
 
 SYSTEM MESSAGE:
-$step2BSystemMessage
+$step2SystemMessage
 "@
-        Save-StepBackup -StepName "Step2B-Input" -Content $step2BInput -StartDate $StartDate -EndDate $EndDate
+        Save-StepBackup -StepName "Step2-Input" -Content $step2Input -StartDate $StartDate -EndDate $EndDate
 
-        # Process each developer-relevant article for deep analysis
-        for ($i = 0; $i -lt $developerRelevantArticles.Count; $i++) {
-            $articleInfo = $developerRelevantArticles[$i]
-            $articleFilePath = $articleInfo.FilePath
+        # Process each article for filtering and analysis
+        $includedCount = 0
+        $excludedCount = 0
+        for ($i = 0; $i -lt $articles.Count; $i++) {
+            $articleFilePath = $articles[$i]
             $articleNum = $i + 1
             $articleName = Split-Path $articleFilePath -Leaf
         
-            Write-Host "🔄 Deep analyzing article $articleNum of $($developerRelevantArticles.Count): $($articleName)"
-            Write-Host "  📝 Pre-filter relevance: $($articleInfo.DeveloperRelevance)"
+            Write-Host "🔄 Processing article $articleNum of $($articles.Count): $($articleName)"
+        
+            # Check if file exists
+            if (-not (Test-Path $articleFilePath)) {
+                throw "Article file not found: $articleFilePath"
+            }
         
             # Read the article content
             $articleContent = Get-Content $articleFilePath -Raw
-            
-            # Extract original tags for AI analysis
-            $originalTags = Get-FrontMatterValue -Content $articleContent -Key "tags"
-            $tagsForAI = if ($originalTags) { 
-                ($originalTags | ConvertTo-Json -Compress) 
-            }
-            else { 
-                "[]" 
-            }
 
-            $step2BUserMessage = @"
+            $step2UserMessage = @"
 ARTICLE CONTENT:
 $articleContent
-
-ORIGINAL ARTICLE TAGS: $tagsForAI
-
-PRE-FILTER DEVELOPER RELEVANCE: $($articleInfo.DeveloperRelevance)
-PRE-FILTER REASONING: $($articleInfo.Reasoning)
 "@
             
-            # Call the AI model for deep analysis
-            Write-Host "🤖 Calling AI model for deep analysis..."
+            # Call the AI model for filtering and analysis
+            Write-Host "🤖 Calling AI model for filtering and analysis..."
             $response = Invoke-AiApiCall `
                 -Token $Token `
                 -Model $Model `
-                -SystemMessage $step2BSystemMessage `
-                -UserMessage $step2BUserMessage `
+                -SystemMessage $step2SystemMessage `
+                -UserMessage $step2UserMessage `
                 -Endpoint $Endpoint `
                 -RateLimitPreventionDelay $RateLimitPreventionDelay
 
             # Check for errors
-            $analysisResult = Test-AiResponseFormat -Response $response -StepName "Step 2B (Deep analysis for $articleName)"
+            $analysisResult = Test-AiResponseFormat -Response $response -StepName "Step 2 (Filter and analysis for $articleName)"
             if (-not $analysisResult.IsValid) {
                 throw $analysisResult.ErrorMessage
             }
 
             # Parse AI response
             try {
-                $analysisResult = $response | ConvertFrom-Json
+                $result = $response | ConvertFrom-Json
                 
                 # Validate required fields
-                if (-not $analysisResult.section -or -not $analysisResult.summary -or -not $analysisResult.relevance_score) {
-                    throw "Invalid response for $($articleName): Missing required fields"
+                if ($null -eq $result.skip_article -or -not $result.reasoning) {
+                    throw "Invalid response for $($articleName): Missing required fields (skip_article, reasoning)"
                 }
                 
-                # Extract original title and link from frontmatter using existing function
-                $canonicalUrl = Get-FrontMatterValue -Content $articleContent -Key "canonical_url"
-                $title = Get-FrontMatterValue -Content $articleContent -Key "title"
-                $viewingMode = Get-FrontMatterValue -Content $articleContent -Key "viewing_mode"
-                $permalink = Get-FrontMatterValue -Content $articleContent -Key "permalink"
-                $originalTags = Get-FrontMatterValue -Content $articleContent -Key "tags"
-                
-                # Ensure original_tags is populated from frontmatter if not provided by AI
-                if (-not $analysisResult.original_tags -and $originalTags) {
-                    $analysisResult | Add-Member -NotePropertyName "original_tags" -NotePropertyValue $originalTags
+                # Check if article should be skipped
+                if ($result.skip_article -eq $true) {
+                    $excludedCount++
+                    Write-Host "  ❌ EXCLUDED - Corporate/non-developer content" -ForegroundColor Yellow
+                    Write-Host "  📝 Reasoning: $($result.reasoning)" -ForegroundColor Yellow
                 }
-                
-                $analysisResult | Add-Member -NotePropertyName "canonical_url" -NotePropertyValue $canonicalUrl
-                $analysisResult | Add-Member -NotePropertyName "title" -NotePropertyValue $title
-                $analysisResult | Add-Member -NotePropertyName "viewing_mode" -NotePropertyValue $viewingMode
-                $analysisResult | Add-Member -NotePropertyName "permalink" -NotePropertyValue $permalink
-                $analysisResult | Add-Member -NotePropertyName "filename" -NotePropertyValue $articleFilePath
-                
-                # Add to appropriate section
-                $section = $analysisResult.section
-                if (-not $articleSummaries.ContainsKey($section)) {
-                    $articleSummaries[$section] = @()
+                else {
+                    # Validate analysis fields for included articles
+                    if (-not $result.section -or -not $result.summary -or -not $result.relevance_score) {
+                        throw "Invalid response for $($articleName): Missing required analysis fields (section, summary, relevance_score)"
+                    }
+                    
+                    $includedCount++
+                    Write-Host "  ✅ INCLUDED - Relevance: $($result.developer_relevance)"
+                    Write-Host "  📝 Reasoning: $($result.reasoning)"
+                    
+                    # Extract original title and link from frontmatter using existing function
+                    $canonicalUrl = Get-FrontMatterValue -Content $articleContent -Key "canonical_url"
+                    $title = Get-FrontMatterValue -Content $articleContent -Key "title"
+                    $viewingMode = Get-FrontMatterValue -Content $articleContent -Key "viewing_mode"
+                    $permalink = Get-FrontMatterValue -Content $articleContent -Key "permalink"
+                    
+                    $result | Add-Member -NotePropertyName "canonical_url" -NotePropertyValue $canonicalUrl
+                    $result | Add-Member -NotePropertyName "title" -NotePropertyValue $title
+                    $result | Add-Member -NotePropertyName "viewing_mode" -NotePropertyValue $viewingMode
+                    $result | Add-Member -NotePropertyName "permalink" -NotePropertyValue $permalink
+                    $result | Add-Member -NotePropertyName "filename" -NotePropertyValue $articleFilePath
+                    
+                    # Add to appropriate section
+                    $section = $result.section
+                    if (-not $articleSummaries.ContainsKey($section)) {
+                        $articleSummaries[$section] = @()
+                    }
+                    $articleSummaries[$section] += $result
+                    Write-Host "  ✅ Added to $section section (score: $($result.relevance_score), impact: $($result.impact_level), timing: $($result.time_sensitivity))"
                 }
-                $articleSummaries[$section] += $analysisResult
-                Write-Host "  ✅ Added to $section section (score: $($analysisResult.relevance_score), impact: $($analysisResult.impact_level), timing: $($analysisResult.time_sensitivity))"
             }
             catch {
                 throw "Failed to parse AI response for $($articleName): $($_.Exception.Message). Response was: $($response.Substring(0, [Math]::Min(200, $response.Length)))"
             }
         
-            Write-Host "✅ Article $articleNum deep analysis completed"
+            Write-Host "✅ Article $articleNum processing completed"
         }
 
-        Write-Host "✅ Step 2B complete - All developer-relevant articles analyzed"
+        Write-Host "✅ Step 2 complete - All articles filtered and analyzed"
+        Write-Host "📊 Processed $($articles.Count) total articles: $includedCount included, $excludedCount excluded" -ForegroundColor Green
         
         # Create backup of analysis results
         $analysisBackup = $articleSummaries | ConvertTo-Json -Depth 10
-        $step2BFinalOutput = @"
-STEP 2B FINAL OUTPUT: Complete Deep Analysis Results
-Total Articles After Filtering: $($developerRelevantArticles.Count)
+        $step2FinalOutput = @"
+STEP 2 FINAL OUTPUT: Complete Filter and Analysis Results
+Total Articles Processed: $($articles.Count)
+Articles Included: $includedCount
+Articles Excluded: $excludedCount
 Sections Created: $($articleSummaries.Keys.Count)
 Sections: $($articleSummaries.Keys -join ', ')
 
 ANALYSIS RESULTS JSON:
 $analysisBackup
 "@
-        Save-StepBackup -StepName "Step2B-FinalOutput" -Content $step2BFinalOutput -StartDate $StartDate -EndDate $EndDate
-        Save-StepBackup -StepName "Step2B-Analysis" -Content $analysisBackup -StartDate $StartDate -EndDate $EndDate
+        Save-StepBackup -StepName "Step2-FinalOutput" -Content $step2FinalOutput -StartDate $StartDate -EndDate $EndDate
+        Save-StepBackup -StepName "Step2-Analysis" -Content $analysisBackup -StartDate $StartDate -EndDate $EndDate
     }
     else {
-        Write-Host "⏭️ Skipping Step 2B (deep analysis) - resuming from backup"
-        # Note: articleSummaries will be reconstructed from the next step's input if needed
+        Write-Host "⏭️ Skipping Step 2 (filter and analysis) - resuming from backup"
+        # Restore analysis results from backup
+        $analysisBackupJson = Load-StepBackup -StepName "Step2-Analysis" -StartDate $StartDate -EndDate $EndDate
+        if ($null -eq $analysisBackupJson -or $analysisBackupJson -eq "") {
+            throw "Could not restore analysis results from backup for Step 2. Backup file missing or empty."
+        }
+        try {
+            $articleSummaries = $analysisBackupJson | ConvertFrom-Json -AsHashtable
+        }
+        catch {
+            throw "Failed to parse analysis results backup for Step 2: $($_.Exception.Message)"
+        }
     }
 
     # Step 3: Create News-Like Stories with Intelligent Grouping (skip if resuming from later step)
@@ -904,8 +803,7 @@ PRIMARY GROUPING RULES - TECHNOLOGY-FIRST:
 ENHANCED GROUPING METADATA USAGE:
 - TECHNOLOGY_STACK: Primary indicator for technology-based grouping
 - PRIMARY_TOPIC + TECHNOLOGY_STACK: Combine to identify platform families
-- AI_SUGGESTED_TAGS: Look for technology framework/platform commonalities
-- ORIGINAL_TAGS: Use specific product names and versions for precise grouping
+- TAGS: Look for technology framework/platform commonalities and specific product names
 
 TECHNOLOGY GROUPING EXAMPLES:
 ✅ GOOD: "GitHub Copilot with MCP" (groups: MCP in VS, custom MCP servers, MCP tooling)
@@ -924,9 +822,9 @@ PRIORITIZATION WITHIN TECHNOLOGY GROUPS:
 ENHANCED HIERARCHICAL GROUPING APPROACH:
 1. FIRST PASS - Identify Technology Platform Groups (3+ articles preferred):
    - Same technology/platform across different use cases (check TECHNOLOGY_STACK and PRIMARY_TOPIC)
-   - Related product family announcements (check PRIMARY_TOPIC and AI_SUGGESTED_TAGS)
-   - Shared development framework/stack (check ORIGINAL_TAGS and AI_SUGGESTED_TAGS for platform commonalities)
-   - Connected ecosystem tools (check tags for technology framework overlap)
+   - Related product family announcements (check PRIMARY_TOPIC and TAGS)
+   - Shared development framework/stack (check TAGS for platform commonalities)
+   - Connected ecosystem tools (check TAGS for technology framework overlap)
 
 2. SECOND PASS - Group Remaining Articles by Technology Affinity:
    - Common development tools and frameworks (check TECHNOLOGY_STACK and tags)
@@ -1146,11 +1044,8 @@ $step3SystemMessage
                     if ($article.time_sensitivity) {
                         $sectionInput += "TIMING: $($article.time_sensitivity)`n"
                     }
-                    if ($article.original_tags) {
-                        $sectionInput += "ORIGINAL_TAGS: $($article.original_tags -join ', ')`n"
-                    }
-                    if ($article.ai_suggested_tags) {
-                        $sectionInput += "AI_TAGS: $($article.ai_suggested_tags -join ', ')`n"
+                    if ($article.tags) {
+                        $sectionInput += "TAGS: $($article.tags -join ', ')`n"
                     }
                 
                     # Use appropriate URL based on viewing_mode
