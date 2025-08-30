@@ -35,6 +35,8 @@ jobs:
           api_location: ""
           output_location: "_site"
           production_branch: "main"
+        env:
+          JEKYLL_ENV: production
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
