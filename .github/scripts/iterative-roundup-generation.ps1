@@ -420,7 +420,7 @@ INCLUDE (mark as "high", "medium", or "low"):
 - Migration guides and technical documentation updates
 - Open source project updates and releases
 
-RESPONSE FORMAT: Return ONLY a JSON object with this exact structure:
+CRITICAL RESPONSE FORMAT: Return ONLY a valid JSON object with this exact structure:
 {
   "developer_relevance": "high|medium|low|corporate",
   "reasoning": "Brief explanation of why this content is/isn't relevant for developers",
@@ -547,7 +547,7 @@ ABSOLUTE CRITICAL REQUIREMENT: You must provide a complete, comprehensive respon
 
 ROLE: You are an expert technical content analyst creating detailed summaries for a comprehensive weekly tech roundup focused on DEVELOPERS. Your analysis will be used to create narrative sections that tell the story of the week's developments from a developer perspective.
 
-RESPONSE FORMAT: Return ONLY a JSON object with this exact structure:
+CRITICAL RESPONSE FORMAT: Return ONLY a JSON object with this exact structure including ALL fields:
 {
   "section": "Suggested Section Name",
   "summary": "Comprehensive Summary",
@@ -660,6 +660,8 @@ TAGS REQUIREMENTS:
 - ORIGINAL_TAGS: Extract all tags from the article's frontmatter "tags" field exactly as they appear
 - AI_SUGGESTED_TAGS: Add 3-5 additional relevant tags that would help with grouping and discovery
 - Focus AI suggested tags on: product families, technology stacks, use cases, developer roles
+
+CRITICAL: Make sure to adhere to the critical response format described earlier and return a valid JSON object with all requested fields!
 "@
 
         # Save Step 2B input for debugging
@@ -1630,7 +1632,7 @@ ABSOLUTE CRITICAL REQUIREMENT: You must provide a complete, comprehensive respon
 ROLE: You are an expert content curator generating metadata for a weekly tech roundup. Based on the condensed content, generate ONLY the metadata and introduction as a JSON response.
 
 CRITICAL: Make sure the response is VALID JSON
-CRITICAL: Return a JSON object with these exact fields: title, tags, description, introduction
+CRITICAL: Return a valid JSON object with these exact fields: title, tags, description, introduction
 CRITICAL: These are what the 4 fields should contain:
 
 - Title: Create an engaging, informative title that reflects the week's main themes. Do NOT include the date in the title. MAX LENGTH is 70 characters!
