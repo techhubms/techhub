@@ -7005,5 +7005,23 @@
     "reason": "No categories found: All categories are excluded due to lack of development focus. The content is an end-user security guide for Windows 11, covering built-in protections, authentication, encryption, and best practices for personal device security. It does not address enterprise security implementation, custom security solutions, or development with Microsoft security technologies. There is no technical depth related to coding, DevOps, AI, ML, or Azure-specific configuration as required by the inclusion rules. Windows Defender and BitLocker are discussed only at the consumer usage level, not in a development or advanced technical context. Based on these factors and per Non-Development Microsoft Products and Business Strategy exclusion rules, no categories are assigned.",
     "timestamp": "2025-08-30 11:10:02 +00:00",
     "canonical_url": "https://dellenny.com/improving-security-on-your-windows-11-pc/"
+  },
+  {
+    "reason": "No categories found: All content in the provided text focuses on end-user setup of Windows Hello on Windows 11, a consumer security and convenience feature. It does not involve development techniques, code, APIs, Microsoft identity platform integration for custom apps, or technical security architecture. According to the 'Non-Development Microsoft Products' generic exclusion rule in Chapter 3, Windows/Windows Hello end-user features are excluded unless the content is about development or technical implementation for custom solutions. No eligible categories assigned.",
+    "timestamp": "2025-08-30 12:20:16 +00:00",
+    "canonical_url": "https://dellenny.com/setting-up-windows-hello-for-faster-logins-in-windows-11/",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: All category arrays are left empty because the core content is absent. There is no substantive content provided in the input (the 'content' and 'description' fields are both null or empty), which makes it impossible to assess category inclusion under any rules. As per the instruction to only use the provided content and never fabricate or assume details, exclusion is triggered due to insufficient input. No technical, architectural, or other information is available for extraction or analysis.",
+    "timestamp": "2025-08-30 12:20:36 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/ItXop9ulIsw",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: All categories are excluded based on the Generic Exclusion Rules. The content is a celebratory message marking the anniversary of the Linux kernel and does not contain any technical implementation, development guidance, or in-depth information about Microsoft technologies. Microsoft technologies are not mentioned or discussed in the title, description, tags, or content. The video centers on the open-source history of Linux, which, while relevant for broad software audiences, does not meet the inclusion threshold of Microsoft technologies being central to the content. The presence of GitHub social media links does not make it qualify under DevOps or Coding, as rules require substantive technical focus, which is not present here. Therefore, per exclusion rules, no categories apply.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/e8tN4Li2eNo",
+    "timestamp": "2025-08-30 14:09:55 +00:00"
   }
 ]
