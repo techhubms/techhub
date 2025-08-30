@@ -217,7 +217,8 @@ else {
     $WorkspaceRoot = $WorkspaceDirectory
 }
 
-$functionsPath = Join-Path $WorkspaceRoot ".github" "scripts" "functions"
+$scriptsDirectory = Join-Path $WorkspaceRoot ".github" "scripts"
+$functionsPath = Join-Path $scriptsDirectory "functions"
 
 # Import Write-ErrorDetails first (for error handling), then all others sorted alphabetically
 . (Join-Path $functionsPath "Write-ErrorDetails.ps1")
@@ -1970,7 +1971,7 @@ $finalContent
     # Format the created file using the fix-markdown-files script
     Write-Host "🔧 Formatting the created roundup file..."
     try {
-        $fixScriptPath = Join-Path $ScriptDirectory "fix-markdown-files.ps1"
+        $fixScriptPath = Join-Path $scriptsDirectory "fix-markdown-files.ps1"
         if (Test-Path $fixScriptPath) {
             & $fixScriptPath -FilePath $OutputFile
             Write-Host "✅ File formatting completed"
