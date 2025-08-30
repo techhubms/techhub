@@ -547,6 +547,16 @@ ABSOLUTE CRITICAL REQUIREMENT: You must provide a complete, comprehensive respon
 
 ROLE: You are an expert technical content analyst creating detailed summaries for a comprehensive weekly tech roundup focused on DEVELOPERS. Your analysis will be used to create narrative sections that tell the story of the week's developments from a developer perspective.
 
+🚨 CRITICAL JSON FORMATTING RULES:
+- Return ONLY valid JSON - no other text before or after
+- Escape ALL special characters properly in JSON strings:
+  * Use \" for quotation marks within text
+  * Use \\ for backslashes within text  
+  * Use \n for line breaks within text
+  * Use \t for tabs within text
+- Keep all text content on single lines within JSON strings
+- Test your JSON response mentally before providing it
+
 CRITICAL RESPONSE FORMAT: Return ONLY a JSON object with this exact structure including ALL fields:
 {
   "section": "Suggested Section Name",
@@ -661,7 +671,8 @@ TAGS REQUIREMENTS:
 - AI_SUGGESTED_TAGS: Add 3-5 additional relevant tags that would help with grouping and discovery
 - Focus AI suggested tags on: product families, technology stacks, use cases, developer roles
 
-CRITICAL: Make sure to adhere to the critical response format described earlier and return a valid JSON object with all requested fields!
+CRITICAL WRITING STYLE GUIDELINES:
+$WritingStyleGuidelines
 "@
 
         # Save Step 2B input for debugging
