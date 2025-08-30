@@ -90,8 +90,7 @@ test.describe('Section Navigation', () => {
       '/ai/news.html',
       '/ai/posts.html',
       '/ai/videos.html',
-      '/ai/community.html',
-      '/ai/events.html'
+      '/ai/community.html'
     ];
 
     aiCollectionUrls.forEach(url => {

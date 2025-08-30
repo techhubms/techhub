@@ -135,6 +135,29 @@ jobs:
             $branchName = "roundup/${{ steps.dates.outputs.start-date }}-to-${{ steps.dates.outputs.end-date }}"
             Write-Host "🌿 Creating branch: $branchName"
             
+            # Fetch latest remote information
+            Write-Host "🔄 Fetching latest remote information..."
+            git fetch origin
+            
+            # Check if branch already exists locally and remove it
+            $branchExists = git branch --list $branchName
+            if ($branchExists) {
+                Write-Host "🗑️ Local branch $branchName already exists, removing it..."
+                git branch -D $branchName
+            }
+            
+            # Check if remote branch exists and remove it
+            $remoteBranchExists = git branch -r --list "origin/$branchName"
+            if ($remoteBranchExists) {
+                Write-Host "🗑️ Remote branch $branchName exists, removing it..."
+                try {
+                    git push https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git --delete $branchName
+                    Write-Host "🗑️ Removed remote branch $branchName"
+                } catch {
+                    Write-Host "⚠️ Failed to remove remote branch $branchName - continuing anyway"
+                }
+            }
+            
             # Create and switch to new branch
             git checkout -b $branchName
             
