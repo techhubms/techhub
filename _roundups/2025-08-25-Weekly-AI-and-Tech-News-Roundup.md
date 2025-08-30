@@ -1,449 +1,456 @@
 ---
 layout: "post"
-title: "AI Agents, Cloud Automation, and Security: Key Platform Shifts Across the Tech Stack"
-description: "This week brings important advancements in AI agent orchestration, cloud management, and security practices. GitHub Copilot now offers robust agent workflows and supports more AI models, while Microsoft enhances enterprise AI with new architectures and developer tools for both local and cloud deployments. In security, the spotlight is on new defense strategies, steps toward post-quantum readiness, and improved DevSecOps integration—highlighting how automation, governance, and secure development are converging."
+title: "Updated AI DevOps, Copilot Personalization, and Secure Cloud Developments"
+description: "This weekly roundup highlights recent changes in AI-driven development, cloud automation, and security engineering. GitHub Copilot offers new options for model customization and workflow agents, while Azure introduces updated management, AI, and data services. Ongoing advancements in ML, DevOps, and security—including quantum-safe cryptography previews and policy automation—improve collaboration, protection, and development productivity across platforms."
 author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-08-25 09:00:00 +00:00
 permalink: "/2025-08-25-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: ["Agentic Workflows", "AI", "Azure", "Cloud Native Platforms", "Coding", "Context Engineering", "Developer Productivity", "DevOps", "DevSecOps", "Enterprise Security", "GitHub Copilot", "Machine Learning", "ML", "Model Integration", "Multi Agent Systems", "Post Quantum Cryptography", "Roundups", "Security", "Workflow Automation"]
-tags_normalized: ["agentic workflows", "ai", "azure", "cloud native platforms", "coding", "context engineering", "developer productivity", "devops", "devsecops", "enterprise security", "github copilot", "machine learning", "ml", "model integration", "multi agent systems", "post quantum cryptography", "roundups", "security", "workflow automation"]
+tags: [".NET Modernization", "AI", "AI Agents", "Azure", "Azure Updates", "CI/CD Pipelines", "Cloud Infrastructure", "Coding", "Developer Productivity", "DevOps", "DevOps Automation", "Enterprise Security", "Git", "GitHub Copilot", "MCP", "ML", "ML Optimization", "Quantum Safe Security", "Roundups", "Security", "VS", "Workflow Automation"]
+tags_normalized: ["dotnet modernization", "ai", "ai agents", "azure", "azure updates", "cislashcd pipelines", "cloud infrastructure", "coding", "developer productivity", "devops", "devops automation", "enterprise security", "git", "github copilot", "mcp", "ml", "ml optimization", "quantum safe security", "roundups", "security", "vs", "workflow automation"]
 ---
 
-Welcome to this week’s tech highlights. We're seeing major movement in agent-focused AI, workflow automation, and modern cloud platforms, all changing how software is developed and delivered. GitHub Copilot has taken important steps forward, introducing deeper workflow automation, enhanced agent panels, and improved support for both IDEs and enterprise environments. These features let developers and organizations coordinate and manage coding tasks easily, regardless of where or how they work. Over at Microsoft, the focus spans multi-agent coordination, bringing new ways to integrate AI models, and bolstering security features—making AI an everyday part of fields like sports, healthcare, and software engineering. Azure remains at the heart of infrastructure, delivering better platform management, security, and flexible resource handling to help businesses modernize with confidence.
+Welcome to this week’s roundup, where AI, cloud platforms, and developer-focused tools continue to shape developer workflows. GitHub Copilot leads with new premium models, improved workflow automation, and enhanced customization for both individual and organizational users. Teams now have more tools to manage Copilot and adopt Spaces for context-driven collaboration, along with better diagnostics in Visual Studio and .NET environments.
 
-Security remains top of mind. As threats—from sophisticated exploits to future quantum risks—continue to escalate, enterprise defenders now have fresh tools: stronger cryptography, advanced automation, and closer DevSecOps alignment. Developers and DevOps teams are seeing more unified automation frameworks, smarter AI context handling, and productivity boosts in tools like Git and .NET. As the lines blur between AI, development, operations, and security, this week’s recap looks at ways innovation stays grounded—even as resilience and secure practices move forward—helping teams deliver, protect, and grow digital solutions in the real world.<!--excerpt_end-->
+Azure continues to expand with Service Groups, serverless hosting with Model Context Protocol (MCP), enhanced SDK and storage options, and strengthened security for AI/ML deployments. Machine learning teams benefit from improved optimization tools and agent-based reasoning, while DevOps pipelines integrate AI for streamlined CI/CD, observability, and workflow automation. Security updates address evolving challenges, with previews of quantum-safe cryptography and updated DevSecOps tooling integrated at every level. Collectively, this week’s changes support more intelligent, governed, and reliable technology stacks for innovation at scale.<!--excerpt_end-->
 
 ## This Week's Overview
 
 - [GitHub Copilot](#github-copilot)
-  - [Agentic Workflows: Copilot Coding Agents and the Agents Panel](#agentic-workflows-copilot-coding-agents-and-the-agents-panel)
-  - [Model Context Protocol (MCP): A New Standard for AI Integration](#model-context-protocol-mcp-a-new-standard-for-ai-integration)
-  - [Deepening .NET and IDE Integrations](#deepening-net-and-ide-integrations)
-  - [BYOM: Custom Language Models for Visual Studio Chat](#byom-custom-language-models-for-visual-studio-chat)
-  - [Copilot Spaces and Knowledge Base Evolution](#copilot-spaces-and-knowledge-base-evolution)
-  - [Gemini 2.5 Pro: Advanced AI Model Available for Copilot](#gemini-25-pro-advanced-ai-model-available-for-copilot)
-  - [Copilot in Real-World Workflows and Innovation](#copilot-in-real-world-workflows-and-innovation)
-  - [Extending Copilot: MCP Servers and Enterprise Workflow Customization](#extending-copilot-mcp-servers-and-enterprise-workflow-customization)
-  - [GitHub Universe 2025: Copilot Showcases and Community Growth](#github-universe-2025-copilot-showcases-and-community-growth)
+  - [GitHub Copilot: New Models, Automation Workflows, and Core Feature Updates](#github-copilot-new-models-automation-workflows-and-core-feature-updates)
+  - [Copilot in Visual Studio and .NET Ecosystem: Diagnostics, Controls, and Integration](#copilot-in-visual-studio-and-net-ecosystem-diagnostics-controls-and-integration)
+  - [Model Context Protocol (MCP): Advanced Extensibility and Custom AI Workflows](#model-context-protocol-mcp-advanced-extensibility-and-custom-ai-workflows)
+  - [Copilot Spaces and Context Management: Transitioning from Knowledge Bases to Spaces](#copilot-spaces-and-context-management-transitioning-from-knowledge-bases-to-spaces)
+  - [Everyday Productivity, Workflow Automation, and Developer Experience](#everyday-productivity-workflow-automation-and-developer-experience)
+  - [Copilot Customization: Bring Your Own Models and VS Code Personalization](#copilot-customization-bring-your-own-models-and-vs-code-personalization)
   - [Other GitHub Copilot News](#other-github-copilot-news)
 - [AI](#ai)
-  - [Enterprise-Ready Multi-Agent and Model Orchestration](#enterprise-ready-multi-agent-and-model-orchestration)
-  - [Feature Announcements: Copilot, GPT-5, and Dragon AI Across Industries](#feature-announcements-copilot-gpt-5-and-dragon-ai-across-industries)
-  - [Flexible Developer Tools for Model Integration and Local AI](#flexible-developer-tools-for-model-integration-and-local-ai)
-  - [AI in Education: Adoption, Skills, and Responsible Use](#ai-in-education-adoption-skills-and-responsible-use)
-  - [Product and Developer Experience Innovations](#product-and-developer-experience-innovations)
-  - [Practical AI Guidance: Model Choice, Integration, and Document Intelligence](#practical-ai-guidance-model-choice-integration-and-document-intelligence)
-  - [AI Research and Societal Impact](#ai-research-and-societal-impact)
-  - [Other AI News](#other-ai-news)
+  - [Agentic AI Development on Azure AI Foundry](#agentic-ai-development-on-azure-ai-foundry)
+  - [Advanced AI Features and Integration in Developer Tools](#advanced-ai-features-and-integration-in-developer-tools)
+  - [Local Model Hosting and Deployment with .NET and Foundry Local](#local-model-hosting-and-deployment-with-net-and-foundry-local)
+  - [Workflow Automation and Copilot Studio Development](#workflow-automation-and-copilot-studio-development)
+  - [Specialty Agents and Agent-Centered Design](#specialty-agents-and-agent-centered-design)
 - [ML](#ml)
-  - [Enhanced Workflow and API Integration in Microsoft Fabric User Data Functions](#enhanced-workflow-and-api-integration-in-microsoft-fabric-user-data-functions)
-  - [Performance Benchmarking and Optimization for Large-Scale Model Pretraining on Azure ND GB200 v6](#performance-benchmarking-and-optimization-for-large-scale-model-pretraining-on-azure-nd-gb200-v6)
+  - [Large-Scale AI Pretraining Optimization on Azure ND GB200 v6](#large-scale-ai-pretraining-optimization-on-azure-nd-gb200-v6)
+  - [Feature Updates: Enhanced AI Capability and Developer Workflow](#feature-updates-enhanced-ai-capability-and-developer-workflow)
 - [Azure](#azure)
-  - [Azure’s Leadership in Cloud-Native & AI-Driven Platforms](#azures-leadership-in-cloud-native--ai-driven-platforms)
-  - [Platform Management, Resource Organization, and Data Protection](#platform-management-resource-organization-and-data-protection)
-  - [Developer Productivity, Automation, and Data Integration](#developer-productivity-automation-and-data-integration)
+  - [Azure Service Groups and Advanced Resource Management](#azure-service-groups-and-advanced-resource-management)
+  - [MCP Server Hosting and Azure Functions Flex Consumption](#mcp-server-hosting-and-azure-functions-flex-consumption)
+  - [Azure SDK: AI Libraries, Observability, and Data Movement](#azure-sdk-ai-libraries-observability-and-data-movement)
+  - [Enterprise AI/ML Security and Scalability with Azure Application Gateway](#enterprise-aiml-security-and-scalability-with-azure-application-gateway)
+  - [Microsoft Fabric: Workspace Security, Metric Insights, and Data Orchestration](#microsoft-fabric-workspace-security-metric-insights-and-data-orchestration)
+  - [Elastic SAN, Storage Best Practices, and Data Protection](#elastic-san-storage-best-practices-and-data-protection)
+  - [SQL and Data Connectivity in Microsoft Fabric and Power BI](#sql-and-data-connectivity-in-microsoft-fabric-and-power-bi)
+  - [Developer Experience and Tooling: Azure Developer CLI (azd)](#developer-experience-and-tooling-azure-developer-cli-azd)
+  - [Azure Platform Updates: Infrastructure, Serverless, and Security Enhancements](#azure-platform-updates-infrastructure-serverless-and-security-enhancements)
   - [Other Azure News](#other-azure-news)
 - [Coding](#coding)
-  - [Major Updates: Git 2.51 and dotnet test Modernization](#major-updates-git-251-and-dotnet-test-modernization)
-  - [Modern Testing & Migration Strategies in .NET](#modern-testing--migration-strategies-in-net)
-  - [Advanced Application Integration & Practical Tutorials](#advanced-application-integration--practical-tutorials)
+  - [Git 2.51: Storage, Workflow, and CLI Enhancements](#git-251-storage-workflow-and-cli-enhancements)
+  - [.NET Testing Modernization: CLI, TUnit Migration, and Email Workflow](#net-testing-modernization-cli-tunit-migration-and-email-workflow)
+  - [.NET Application Modernization: Migration, WebView2, and Obsolete APIs](#net-application-modernization-migration-webview2-and-obsolete-apis)
 - [DevOps](#devops)
-  - [AI-Driven Automation and the Future of DevOps Workflows](#ai-driven-automation-and-the-future-of-devops-workflows)
-  - [Role and Permissions Management, Issue Dependencies, and Cost Controls in GitHub](#role-and-permissions-management-issue-dependencies-and-cost-controls-in-github)
-  - [Unified DevOps Platforms and Toolchain Automation](#unified-devops-platforms-and-toolchain-automation)
-  - [DevOps Observability, Cost Optimization, and Platform Integration Best Practices](#devops-observability-cost-optimization-and-platform-integration-best-practices)
-  - [Other DevOps News](#other-devops-news)
+  - [GitHub Platform Enhancements and Developer Workflow Updates](#github-platform-enhancements-and-developer-workflow-updates)
+  - [Advancing Observability and Kubernetes Troubleshooting](#advancing-observability-and-kubernetes-troubleshooting)
+  - [AI-Driven Automation and the Evolution of DevOps Pipelines](#ai-driven-automation-and-the-evolution-of-devops-pipelines)
+  - [CI/CD Workflows, Testing, and Seamless Integrations](#cicd-workflows-testing-and-seamless-integrations)
+  - [Observability, Debugging, and Production Reliability](#observability-debugging-and-production-reliability)
+  - [The Expanding Ecosystem: AI-Powered Content, Fusion Development, and Cost Optimization](#the-expanding-ecosystem-ai-powered-content-fusion-development-and-cost-optimization)
 - [Security](#security)
-  - [New Attack Techniques: ClickFix Social Engineering and PipeMagic Modular Malware](#new-attack-techniques-clickfix-social-engineering-and-pipemagic-modular-malware)
-  - [Post-Quantum Security: Microsoft's Strategic Roadmap and Industry Progress](#post-quantum-security-microsofts-strategic-roadmap-and-industry-progress)
-  - [Elevating Application Security: DevSecOps and Next-Gen Code Scanning](#elevating-application-security-devsecops-and-next-gen-code-scanning)
-  - [Identity and Access: AI-driven Protection and Automation at Scale](#identity-and-access-ai-driven-protection-and-automation-at-scale)
-  - [Operational Code Security: GitHub Tools and Advanced Secret Scanning](#operational-code-security-github-tools-and-advanced-secret-scanning)
+  - [GitHub Platform Security: Developer-first Tools and Enhanced Secret Scanning](#github-platform-security-developer-first-tools-and-enhanced-secret-scanning)
+  - [Quantum-safe Cryptography: Preparing for a Post-Quantum Security Era](#quantum-safe-cryptography-preparing-for-a-post-quantum-security-era)
+  - [Microsoft Defender and Security Copilot: Threat Detection, Response, and Automation](#microsoft-defender-and-security-copilot-threat-detection-response-and-automation)
+  - [DevSecOps and Software Supply Chain: From Privacy by Design to Lifecycle Visibility](#devsecops-and-software-supply-chain-from-privacy-by-design-to-lifecycle-visibility)
   - [Other Security News](#other-security-news)
 
 ## GitHub Copilot
 
-GitHub Copilot had a pivotal week, introducing new agent-focused workflows, deeper integration with popular IDEs, extended support for custom AI models, and a host of features for developers at all levels. These improvements in context handling, model choice, and enterprise controls are making development more efficient. A variety of guides and case studies outline how Copilot is supporting everything from rapid prototyping to compliance-focused projects. The unifying factor across these updates is Copilot’s maturing abilities as an AI partner—driving context-driven automation and supporting seamless collaboration for developer teams.
+GitHub Copilot delivered updated features this week, introducing premium model options, customizable workflows with Model Context Protocol (MCP), and new code editing capabilities to support more personalized AI-assisted coding. GitHub refined controls, extended automation, and consolidated context management in response to user feedback. Copilot’s transition from legacy environments to new collaboration solutions is ongoing, with organizations gaining more oversight for policy and spending, as illustrated by new case studies.
 
-### Agentic Workflows: Copilot Coding Agents and the Agents Panel
+### GitHub Copilot: New Models, Automation Workflows, and Core Feature Updates
 
-This week, Copilot introduced the GitHub Agents panel—a significant step for automated, AI-driven development. Developers can now assign Copilot agents to handle coding tasks directly from anywhere on github.com, treating Copilot as an asynchronous collaborator for common needs such as feature development, code refactoring, and pull request management. Requesting help is straightforward: you prompt Copilot with a task, and it plans, builds, tests, and prepares code for your feedback. The panel integrates with Issues, PRs, VS Code, GitHub Mobile, and tools supporting the Model Context Protocol (MCP), making it simple to collaborate in real time or asynchronously. Enterprise environments benefit from layered admin controls. With a public preview now open, Copilot is paving the way toward more autonomous, integrated development experiences.
+Gemini 2.5 Pro is now available to all Copilot Pro/Pro+, Business, and Enterprise users. GitHub continues to support flexible, multi-model work with Gemini, OpenAI’s latest models, and more, enabling users to choose the AI that fits their work best. Gemini is selectable in Copilot Chat across major IDEs including VS Code, Visual Studio, JetBrains, Xcode, and Eclipse, and organization administrators can set Gemini as the default, following similar GPT-5 organization rollouts.
 
-- [Agents Panel: Delegate Copilot Coding Agent Tasks Anywhere on GitHub](https://github.blog/news-insights/product-news/agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github/)
-- [Agents Panel: Easily Delegate Tasks to Copilot Coding Agent Across GitHub](https://github.blog/changelog/2025-08-19-agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github-com)
+Copilot provides commit message suggestions in the GitHub web editor for all users, moving automation beyond code writing to workflow documentation. Copilot Spaces improvements add precision in linking to repositories, directories, files, and branches, further supporting collaboration. These updates expand on earlier context management updates, making Spaces more practical for day-to-day team work.
 
-### Model Context Protocol (MCP): A New Standard for AI Integration
-
-As of this week, the Model Context Protocol (MCP) is now generally available in Visual Studio. This cements MCP as a core feature for connecting Copilot, Copilot Chat, and a wide range of tools, APIs, and data systems. MCP supports secure and unified automation in mixed-context developer environments, building on prior releases for JetBrains, Eclipse, and Xcode. Teams can now set up secure, policy-driven server configurations using either UI or JSON, lowering barriers to onboarding. Visual Studio becomes a main hub for context-rich AI development, a clear sign of the rising importance of standardized, multi-tool AI integration.
-
-- [Model Context Protocol (MCP) Is Now Generally Available in Visual Studio](https://devblogs.microsoft.com/visualstudio/mcp-is-now-generally-available-in-visual-studio/)
-
-### Deepening .NET and IDE Integrations
-
-Building on momentum from last week, Copilot now connects directly with the .NET Aspire 9.3 dashboard, streamlining observability and helping with root-cause discovery and operational debugging. The Copilot Diagnostics Toolset, evolved from last week’s code summarization and code understanding capabilities, now adds breakpoint, tracepoint, and parallel stack analysis tools. These new features help teams working with complex or legacy codebases tackle modernization projects more efficiently.
-
-- [GitHub Copilot Now Integrated Into .NET Aspire Dashboard]({{ "/2025-08-21-GitHub-Copilot-Now-Integrated-Into-NET-Aspire-Dashboard.html" | relative_url }})
-- [Copilot Diagnostics Toolset Enhances .NET Debugging in Visual Studio](https://devblogs.microsoft.com/dotnet/github-copilot-diagnostics-toolset-for-dotnet-in-visual-studio/)
-- [GitHub Copilot Integration in .NET Aspire 9.3 Dashboard]({{ "/2025-08-21-GitHub-Copilot-Integration-in-NET-Aspire-93-Dashboard.html" | relative_url }})
-
-### BYOM: Custom Language Models for Visual Studio Chat
-
-Responding to more demand for tailored model support, Visual Studio Chat now lets you choose “Bring Your Own Model” (BYOM). Developers can select models from OpenAI, Anthropic, and Google—enabling organizations to stick to their preferred models for reasons like compliance or data privacy. BYOM is currently chat-only, but sets the stage for more customizable AI across Microsoft’s tools.
-
-- [Bring Your Own Language Model to Visual Studio Chat](https://devblogs.microsoft.com/visualstudio/bring-your-own-model-visual-studio-chat/)
-
-### Copilot Spaces and Knowledge Base Evolution
-
-Knowledge management in Copilot is moving forward as GitHub phases out the old knowledge bases in favor of Copilot Spaces. These new spaces support collaboration across multiple repositories, offer enhanced access controls and context sharing, and improve answer quality through smarter context-awareness. Additional features—such as file linking, branch selection, and directory monitoring—respond directly to user requests, keeping Copilot adaptive for teams and enterprise environments alike.
-
-- [GitHub Copilot Knowledge Bases Retiring: Transition to Copilot Spaces](https://github.blog/changelog/2025-08-20-sunset-notice-copilot-knowledge-bases)
-- [GitHub Copilot Introduces Commit Message Suggestions and Spaces Enhancements](https://github.blog/changelog/2025-08-21-copilot-generated-commit-messages-on-github-com-is-in-public-preview)
-
-### Gemini 2.5 Pro: Advanced AI Model Available for Copilot
-
-The Copilot platform now includes Google’s Gemini 2.5 Pro model, giving users more flexibility when choosing the AI that fits their workflow. Teams get the benefit of additional admin controls, supporting responsible use and organizational policy as Copilot’s supported model set continues to grow.
+Workflow automation receives an upgrade with the Copilot coding agent and the Agents panel, available to all Copilot paid users. Developers can now assign tasks, track status, and manage pull request drafts directly on GitHub.com, shifting Copilot’s capability from code suggestion toward comprehensive project automation.
 
 - [Gemini 2.5 Pro Model Now Available for GitHub Copilot Users](https://github.blog/changelog/2025-08-19-gemini-2-5-pro-is-generally-available-in-copilot)
+- [GitHub Copilot Introduces Commit Message Suggestions and Spaces Enhancements](https://github.blog/changelog/2025-08-21-copilot-generated-commit-messages-on-github-com-is-in-public-preview)
+- [Agents Panel: Easily Delegate Tasks to Copilot Coding Agent Across GitHub](https://github.blog/changelog/2025-08-19-agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github-com)
+- [Agents Panel: Delegate Copilot Coding Agent Tasks Anywhere on GitHub](https://github.blog/news-insights/product-news/agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github/)
 
-### Copilot in Real-World Workflows and Innovation
+### Copilot in Visual Studio and .NET Ecosystem: Diagnostics, Controls, and Integration
 
-Business use cases are beginning to show Copilot’s tangible value. For example, Bank Galicia’s story illustrates how Copilot sped up responses to regulatory changes—demonstrating measurable impact in the fast-changing financial industry. This follows a recurring pattern of Copilot enabling teams to respond more quickly and securely to shifting business or compliance needs.
+Visual Studio continues to improve Copilot for .NET with expanded debugging and smarter context support. The Copilot Diagnostics tool now brings AI-powered debugging—with automated breakpoints, LINQ analysis, and focused profiling for CPU and memory. Aspire 9.3 now includes Copilot for live troubleshooting and log review, following last week's integration of Copilot into cloud-native .NET applications.
 
-- [Software Developers in Argentina’s Financial Sector Boost Innovation with GitHub Copilot and AI](https://news.microsoft.com/source/latam/features/ai/galicia-naranja-x-github-copilot/?lang=en)
+Refined Copilot controls in Visual Studio respond directly to developer feedback. Updated delay settings for completions, selective suggestion handling, and keyboard shortcuts help developers maintain control over automated code suggestions.
 
-### Extending Copilot: MCP Servers and Enterprise Workflow Customization
+Model Context Protocol (MCP) integration in Visual Studio has reached general availability. Using `.mcp.json` files, developers can now connect to custom or community MCP servers, simplifying adoption of secure context automation.
 
-Organizations looking to tailor Copilot’s capabilities can now use custom MCP servers. This week’s guides offer practical examples, such as setting naming conventions or backend service integration, highlighting how Copilot is becoming a flexible, secure foundation for deeper workflow orchestration. These tools continue a trend of providing hands-on approaches to modernization and policy-based integration.
+- [Copilot Diagnostics Toolset Enhances .NET Debugging in Visual Studio](https://devblogs.microsoft.com/dotnet/github-copilot-diagnostics-toolset-for-dotnet-in-visual-studio/)
+- [GitHub Copilot Integration in .NET Aspire 9.3 Dashboard]({{ "/2025-08-21-GitHub-Copilot-Integration-in-NET-Aspire-93-Dashboard.html" | relative_url }})
+- [GitHub Copilot Now Integrated Into .NET Aspire Dashboard]({{ "/2025-08-21-GitHub-Copilot-Now-Integrated-Into-NET-Aspire-Dashboard.html" | relative_url }})
+- [Better Control Over GitHub Copilot Code Suggestions in Visual Studio](https://devblogs.microsoft.com/visualstudio/better-control-over-your-copilot-code-suggestions/)
+- [Model Context Protocol (MCP) Is Now Generally Available in Visual Studio](https://devblogs.microsoft.com/visualstudio/mcp-is-now-generally-available-in-visualstudio/)
+
+### Model Context Protocol (MCP): Advanced Extensibility and Custom AI Workflows
+
+Building on prior enterprise automation news, this week introduces detailed guides and general availability for custom MCP servers. With MCP, Copilot can connect to internal APIs and business applications, supporting tailored automation. Real examples—such as a TypeScript server for turn-based games or automated class naming—demonstrate how teams can use MCP to apply domain-specific automation within their preferred IDEs.
+
+With full support for MCP in Visual Studio, organizations can better manage secure orchestration and contextual workflows, especially where process control is essential.
 
 - [Building Your First MCP Server: Extending GitHub Copilot with Custom Tools](https://github.blog/ai-and-ml/github-copilot/building-your-first-mcp-server-how-to-extend-ai-tools-with-custom-capabilities/)
 - [Generating Classes with Custom Naming Conventions Using GitHub Copilot and a Custom MCP Server](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/generating-classes-with-custom-naming-conventions-using-github/ba-p/4444837)
+- [Model Context Protocol (MCP) Is Now Generally Available in Visual Studio](https://devblogs.microsoft.com/visualstudio/mcp-is-now-generally-available-in-visualstudio/)
 
-### GitHub Universe 2025: Copilot Showcases and Community Growth
+### Copilot Spaces and Context Management: Transitioning from Knowledge Bases to Spaces
 
-Looking to the future, GitHub Universe 2025 will showcase Copilot’s expanding capabilities alongside product deep-dives, lab sessions, and collaborative projects. These events reinforce Copilot’s place as a daily developer tool and underline the platform’s openness to community feedback and contribution.
+Copilot Spaces is scheduled to fully replace the former knowledge base system by September 2025. This change consolidates Copilot’s context features into a unified platform. Spaces now support linking to code, documentation, images, issues, pull requests, and more, allowing for comprehensive context and information sharing. Users should move their content using migration tools before retirement. This change makes Spaces the central location for team-oriented, context-driven AI workflows.
 
-- [Explore GitHub Universe 2025: Dev Tools, Community Spaces, and More](https://github.blog/news-insights/company-news/explore-the-best-of-github-universe-9-spaces-built-to-spark-creativity-connection-and-joy/)
+- [GitHub Copilot Knowledge Bases Retiring: Transition to Copilot Spaces](https://github.blog/changelog/2025-08-20-sunset-notice-copilot-knowledge-bases)
+
+### Everyday Productivity, Workflow Automation, and Developer Experience
+
+New resources this week emphasize Copilot’s impact on productivity within .NET and workflows involving multiple files and TDD. Guides show how Copilot aids in tracing dependencies, maintaining cross-file consistency, and organizing large projects. The system now provides support for TDD, prototyping, and code scaffolding by improving its understanding of file relationships.
+
+Recent case studies, such as Bank Galicia, demonstrate that Copilot is increasingly essential for teams seeking more reliable and faster delivery, evolving from small pilots to standard practice.
+
+- [Work Smarter Across Multiple Files with GitHub Copilot](https://pagelsr.github.io/CooknWithCopilot/blog/work-smarter-across-multiple-files.html)
+- [Boosting Productivity with GitHub Copilot: Real-World .NET Coding Examples](https://dellenny.com/boosting-productivity-with-github-copilot-real-world-net-coding-examples/)
+- [How GitHub Copilot Helps with Test-Driven Development (TDD)](https://dellenny.com/how-github-copilot-helps-with-test-driven-development-tdd/)
+- [How to Test Nonexistent Code with GitHub Copilot]({{ "/2025-08-21-How-to-Test-Nonexistent-Code-with-GitHub-Copilot.html" | relative_url }})
+- [Software Developers in Argentina’s Financial Sector Boost Innovation with GitHub Copilot and AI](https://news.microsoft.com/source/latam/features/ai/galicia-naranja-x-github-copilot/?lang=en)
+
+### Copilot Customization: Bring Your Own Models and VS Code Personalization
+
+Visual Studio Chat now lets developers integrate third-party models (such as OpenAI, Anthropic, or Gemini) by providing their API keys and selecting from available models, currently for chat-based use only. This builds on Copilot’s existing support for a growing set of models, including GPT-5, Claude, and Gemini. Copilot plans further flexibility for model selection.
+
+Recent guides for VS Code Joyride and Copilot demonstrate workflow personalization. Developers use Copilot within scripts and personalized tools, reflecting a wider trend of individualized automation routines.
+
+- [Bring Your Own Language Model to Visual Studio Chat](https://devblogs.microsoft.com/visualstudio/bring-your-own-model-visual-studio-chat/)
+- [VS Code Live: Scripting with Joyride and GitHub Copilot]({{ "/2025-08-21-VS-Code-Live-Scripting-with-Joyride-and-GitHub-Copilot.html" | relative_url }})
 
 ### Other GitHub Copilot News
 
-Tooling improvements this week focus on real-world usability, transparency, and providing more control to developers. Building on recent updates for onboarding, suggestion quality, and expanded context support, new features let users pause, trigger, or accept Copilot suggestions as they code.
+New for Business and Enterprise customers, Copilot now features a request overage policy. This lets administrators set usage boundaries or enable overage pricing to control expenses—a capability needed as Copilot adoption grows in organizations.
 
-Improvements in scriptability are in the spotlight with Joyride and Copilot for VS Code, expanding options for workflow customization. A new Studio extensibility guide gives teams the steps needed to create plugins and automation flows, helping organizations fully tailor their developer experience.
+The announcement of GitHub Universe 2025 highlights technical sessions on Copilot, Actions, security, and community learning. As with past conferences, these sessions aim to help teams optimize their use of GitHub’s AI and collaboration tools at scale.
 
-.NET developer productivity also gets a lift, with guides covering code generation, multi-file refactoring, and test-driven approaches. These changes keep the focus on cutting down repetitive tasks for individuals and teams.
-
-On the policy side, Copilot Business and Enterprise offerings now include new controls for managing user requests and quotas, making it easier for IT administrators to handle growth and stay within budget.
-
-- [Better Control Over GitHub Copilot Code Suggestions in Visual Studio](https://devblogs.microsoft.com/visualstudio/better-control-over-your-copilot-code-suggestions/)
-- [VS Code Live: Scripting with Joyride and GitHub Copilot]({{ "/2025-08-21-VS-Code-Live-Scripting-with-Joyride-and-GitHub-Copilot.html" | relative_url }})
-- [Creating Custom Plugins and Connectors in Copilot Studio](https://dellenny.com/creating-custom-plugins-and-connectors-in-copilot-studio/)
-- [Boosting Productivity with GitHub Copilot: Real-World .NET Coding Examples](https://dellenny.com/boosting-productivity-with-github-copilot-real-world-net-coding-examples/)
-- [How GitHub Copilot Helps with Test-Driven Development (TDD)](https://dellenny.com/how-github-copilot-helps-with-test-driven-development-tdd/)
-- [Work Smarter Across Multiple Files with GitHub Copilot](https://pagelsr.github.io/CooknWithCopilot/blog/work-smarter-across-multiple-files.html)
 - [GitHub Copilot Business and Enterprise: Premium Request Overage Policy Now Available](https://github.blog/changelog/2025-08-22-premium-request-overage-policy-is-generally-available-for-copilot-business-and-enterprise)
-- [How to Test Nonexistent Code with GitHub Copilot]({{ "/2025-08-21-How-to-Test-Nonexistent-Code-with-GitHub-Copilot.html" | relative_url }})
+- [Explore GitHub Universe 2025: Dev Tools, Community Spaces, and More](https://github.blog/news-insights/company-news/explore-the-best-of-github-universe-9-spaces-built-to-spark-creativity-connection-and-joy/)
 
 ## AI
 
-AI developments this week centered on making agent-based intelligence, productivity boosters, and enterprise apps more accessible and reliable. With Microsoft at the forefront, there’s an emphasis on solid reference architectures for multi-agent teams, easier model deployment, and using AI as part of daily workflows—whether in sports, healthcare, or education. Cross-industry partnerships continue, as tools for deploying and governing AI in real use cases evolve. Enterprise leaders remain sharply focused on staying secure, resilient, and responsible as they put AI to work.
+This week, the AI landscape included updated frameworks for agent-based development, additional options for local deployment, enhancements to developer tools, and resources for constructing agentic and generative AI systems. The focus continued to be on flexible integration—local or cloud—and supporting enterprise-scale agent architectures as well as individual productivity needs. Tutorials centered on adaptable model options, privacy, and streamlined AI workflow orchestration.
 
-### Enterprise-Ready Multi-Agent and Model Orchestration
+### Agentic AI Development on Azure AI Foundry
 
-Microsoft’s AI Co-Innovation Labs shared a new reference architecture for orchestrating multi-agent systems in enterprise, following recent releases of Agent Factory and MCP tools. This blueprint details ways to coordinate domain-specific agent teams using platforms like Semantic Kernel, and includes guidelines for policy-driven agent supervision and registries. Real-world applications are already up and running in industries such as cybersecurity, life sciences, and retail, showing connections with Azure Monitor and Defender XDR for live resilience. Existing platforms such as MCP and Entra ID continue to build a strong, secure, multi-context foundation, and rapid expansion of workflow integrations makes adoption faster for teams. Enterprises are moving from architecture to production-level, compliance-ready agent deployments in record time.
+Building on previous content about Agent Factory and orchestration, this week presents new guides and technical references for deploying agents within Azure AI Foundry. Resources support enterprise use, including documentation for MCP integration and Logic Apps connectivity.
 
-- [Designing Multi-Agent Intelligence: Microsoft Reference Architecture and Enterprise Case Studies](https://devblogs.microsoft.com/blog/designing-multi-agent-intelligence)
+A multi-agent architecture reference, complete with industry case studies (such as cybersecurity and retail), extends earlier material about governance and versioning in production environments.
+
+Guidance on selecting models is now broader and more practical for first-time deployment. New resources walk through the use of the Foundry Model Catalog and Model Router, continuing to address compliance and matching use cases to specific business needs—reiterating points made in earlier roundups.
+
 - [Agent Factory: Building Your First AI Agent with Azure AI Foundry](https://azure.microsoft.com/en-us/blog/agent-factory-building-your-first-ai-agent-with-the-tools-to-deliver-real-world-outcomes/)
-
-### Feature Announcements: Copilot, GPT-5, and Dragon AI Across Industries
-
-This week, Microsoft and the NFL announced a league-wide Copilot and Azure AI rollout on over 2,500 SurfaceCopilot+ devices—putting Copilot at the core of field analytics and operations. This mirrors the broader trend of moving from test environments to widespread, daily business use.
-
-Healthcare also took a leap forward, with Dragon’s ambient AI now available for real-time documentation in Epic EHR systems. These efforts signal AI’s growing acceptance and trustworthiness in highly regulated fields.
-
-In development environments, Visual Studio Code’s support for both GPT-5 and Mini agent mode brings features like flexible context switching, “beast mode” for resource-intensive tasks, and live code completions. These additions echo the expanding role of agent-driven AI within everyday developer workflows.
-
-- [NFL and Microsoft Expand Partnership: Copilot and Azure AI Transform Sidelines and Operations](https://news.microsoft.com/source/2025/08/20/nfl-and-microsoft-expand-partnership-to-bring-copilot-to-the-sidelines-and-beyond/)
-- [Integrating Dragon Ambient AI with Epic Charting Tools for Clinicians](https://www.linkedin.com/posts/satyanadella_aiinhealthcare-dragoncopilot-epic-activity-7364045330037817345-y8cF)
-- [Hello GPT-5 & GPT-5 mini: New AI Features in VS Code Agent Mode]({{ "/2025-08-18-Hello-GPT-5-and-GPT-5-mini-New-AI-Features-in-VS-Code-Agent-Mode.html" | relative_url }})
-
-### Flexible Developer Tools for Model Integration and Local AI
-
-Tooling for model integration became more adaptive this week. Azure AI Foundry introduced support for freeform tool calling—no longer limiting developers to rigid JSON only. This allows smoother chaining and combination of AI tools within real conversations.
-
-Local AI support now extends to both C# and Python, making it easier for developers to run open-source LLM models (using Ollama and Microsoft Olive) on desktops, servers, or at the edge. This supports privacy needs and offers cost control for hybrid teams, with abundant documentation and code samples to help everyone get started quickly.
-
-- [Unlocking GPT-5’s Freeform Tool Calling in Azure AI Foundry](https://devblogs.microsoft.com/foundry/unlocking-gpt-5s-freeform-tool-calling-a-new-era-of-seamless-integration/)
-- [Beginner’s Guide: Using Custom AI Models with Foundry Local and Microsoft Olive](https://techcommunity.microsoft.com/t5/educator-developer-blog/how-to-use-custom-models-with-foundry-local-a-beginner-s-guide/ba-p/4428857)
-- [Running GPT-OSS Locally in C# Using Ollama and Microsoft.Extensions.AI](https://devblogs.microsoft.com/dotnet/gpt-oss-csharp-ollama/)
-
-### AI in Education: Adoption, Skills, and Responsible Use
-
-Microsoft’s "2025 AI in Education Report" recorded high rates of institutional adoption—over 86%—for AI in academic settings. However, there are still gaps in readiness and upskilling, echoing last week’s focus on building digital competence. To close this gap, Microsoft’s AI Skills Navigator and new teaching resources support responsible AI use and provide practical ways for educators to upskill at scale.
-
-- [2025 AI in Education Report: Key Insights and Strategies](https://www.microsoft.com/en-us/education/blog/2025/08/ai-in-education-report-insights-to-support-teaching-and-learning/)
-
-### Product and Developer Experience Innovations
-
-Microsoft continues to advocate for agent-first workflows (Agent Experience, or AX), which go beyond classic chatbot models. Leaders like John Maeda and Priyanka Vergadia highlight how programmable, context-aware agents can drive business value—building on previously covered agent design patterns.
-
-A practical integration guide now shows end-to-end orchestration with Copilot Studio and Power Automate. In addition, the "Lacuna" requirements agent demonstrates how AI can help improve documentation and reduce bias during the development process.
-
-- [From UX to AX: Why Agent Experience is the Next Frontier in Business AI]({{ "/2025-08-19-From-UX-to-AX-Why-Agent-Experience-is-the-Next-Frontier-in-Business-AI.html" | relative_url }})
-- [Integrating Copilot Studio with Power Automate for End-to-End Workflows](https://dellenny.com/integrating-copilot-studio-with-power-automate-for-end-to-end-workflows/)
-- [The Future of AI: Developing Lacuna – An Agent for Revealing Quiet Assumptions in Product Design](https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/the-future-of-ai-developing-lacuna-an-agent-for-revealing-quiet/ba-p/4434633)
-
-### Practical AI Guidance: Model Choice, Integration, and Document Intelligence
-
-Developers can now access new walkthroughs and resources to make the right AI model choices and ensure compliance, supporting clean integration and thorough testing. A practical guide on deploying Mistral Document AI with Azure AI Foundry helps teams set up document extraction for business processes—building on last week’s focus on reliable, scalable AI integration.
-
+- [Designing Multi-Agent Intelligence: Microsoft Reference Architecture and Enterprise Case Studies](https://devblogs.microsoft.com/blog/designing-multi-agent-intelligence)
 - [How to Choose the Right Model for Your AI Agent: A Developer’s Guide](https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-do-i-choose-the-right-model-for-my-agent/ba-p/4445267)
+
+### Advanced AI Features and Integration in Developer Tools
+
+Extending earlier GPT-5 integration news, Visual Studio Code now allows developers to switch between GPT-5 and GPT-5 mini, giving them more direct control over price and speed. These adjustments are part of the Copilot/VS Code move toward greater convergence and personalization. Additional features such as ‘beast mode’ and task list automation give users new customized workflows.
+
+Azure AI Foundry’s new GPT-5 freeform tool calling allows for flexible Python/SQL execution, moving beyond previous, more restricted function-call API patterns. These capabilities reflect the increasing sophistication of agentic and orchestrated workflows.
+
+In addition, a new tutorial on Mistral Document AI provides hands-on steps for incorporating document parsing into developer environments, supporting conversion of unstructured PDFs and handwriting to structured, AI-ready data.
+
+- [Hello GPT-5 & GPT-5 mini: New AI Features in VS Code Agent Mode]({{ "/2025-08-18-Hello-GPT-5-and-GPT-5-mini-New-AI-Features-in-VS-Code-Agent-Mode.html" | relative_url }})
+- [Unlocking GPT-5’s Freeform Tool Calling in Azure AI Foundry](https://devblogs.microsoft.com/foundry/unlocking-gpt-5s-freeform-tool-calling-a-new-era-of-seamless-integration/)
 - [Mistral Document AI Integration with Azure AI Foundry]({{ "/2025-08-20-Mistral-Document-AI-Integration-with-Azure-AI-Foundry.html" | relative_url }})
 
-### AI Research and Societal Impact
+### Local Model Hosting and Deployment with .NET and Foundry Local
 
-Microsoft’s "MindJourney" project explores new ways AI agents interpret and reason about simulated 3D spaces, pushing boundaries beyond natural language alone. In addition, fresh research highlights that AI is augmenting jobs rather than replacing them—reinforcing a narrative of partnership rather than competition between humans and machines.
+Following prior coverage of local model inference, this week’s resources include detailed instructions for running open-source models such as GPT-OSS within C# projects using Ollama. These methods align with recent developments for Foundry Local and ONNX integration—letting developers deploy streaming chatbots and retrieval-augmented generation solutions on local machines. Forthcoming enhancements in Windows and hardware acceleration reinforce the trend toward hybrid AI workloads.
 
-- [MindJourney: AI Agents Navigate and Reason in Simulated 3D Worlds](https://www.microsoft.com/en-us/research/blog/mindjourney-enables-ai-to-explore-simulated-3d-worlds-to-improve-spatial-interpretation/)
-- [AI and Jobs Research: Addressing Misconceptions](https://www.microsoft.com/en-us/research/blog/applicability-vs-job-displacement-further-notes-on-our-recent-research-on-ai-and-occupations/)
+“Beginner’s Guide” articles detail use of Foundry Local alongside Microsoft Olive, covering ONNX optimization, choosing formats, and troubleshooting—helping more developers move toward flexible AI deployments.
 
-### Other AI News
+- [Running GPT-OSS Locally in C# Using Ollama and Microsoft.Extensions.AI](https://devblogs.microsoft.com/dotnet/gpt-oss-csharp-ollama/)
+- [Beginner’s Guide: Using Custom AI Models with Foundry Local and Microsoft Olive](https://techcommunity.microsoft.com/t5/educator-developer-blog/how-to-use-custom-models-with-foundry-local-a-beginner-s-guide/ba-p/4428857)
 
-Microsoft Power Platform now lets developers across a range of skill levels build full stack solutions using AI, natural language features, and trustworthy guardrails—a seamless next step in democratizing AI development and enabling broad team collaboration.
+### Workflow Automation and Copilot Studio Development
 
-- [Microsoft Morphs Fusion Developers To Full Stack Builders](https://devops.com/microsoft-morphs-fusion-developers-to-full-stack-builders/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-morphs-fusion-developers-to-full-stack-builders)
+Continuing from last week’s focus on no-code tools, this week offers resources for deeper organizational integration in Copilot Studio. In-depth guides explain the creation of custom plugins and connectors, including advanced OpenAPI authentication, supporting more tailored organizational automation strategies.
+
+Step-by-step resources cover integrating Copilot Studio with Power Automate for process automation involving platforms like SharePoint and Dynamics 365. The system’s library of over a thousand prebuilt connectors further supports broader enterprise workflow automation.
+
+- [Creating Custom Plugins and Connectors in Copilot Studio](https://dellenny.com/creating-custom-plugins-and-connectors-in-copilot-studio/)
+- [Integrating Copilot Studio with Power Automate for End-to-End Workflows](https://dellenny.com/integrating-copilot-studio-with-power-automate-for-end-to-end-workflows/)
+
+### Specialty Agents and Agent-Centered Design
+
+This week’s updates highlight the transition from traditional user experience (UX) to agent experience (AX). The Lacuna agent, created using Copilot Studio and AI Foundry, is designed to identify hidden assumptions in product design, expanding on last week’s discussion of agent-based collaboration. Agents focused on domains such as code review and risk assessment are also featured.
+
+The discussion encourages a new focus on agent-centered design, emphasizing planning, orchestration, and domain expertise over simple chatbot-based systems. This builds on last week’s analysis of GPT-4-based planners and Semantic Kernel tools, demonstrating real-world adoption in risk and assumption management.
+
+- [The Future of AI: Developing Lacuna – An Agent for Revealing Quiet Assumptions in Product Design](https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/the-future-of-ai-developing-lacuna-an-agent-for-revealing-quiet/ba-p/4434633)
+- [From UX to AX: Why Agent Experience is the Next Frontier in Business AI]({{ "/2025-08-19-From-UX-to-AX-Why-Agent-Experience-is-the-Next-Frontier-in-Business-AI.html" | relative_url }})
 
 ## ML
 
-Machine learning improvements this week include better productivity features and large-model optimization tools. Microsoft Fabric is making its user functions more flexible with easier OpenAPI integration, while Azure is sharing benchmarking data to help teams assess and boost their AI hardware investments. The recurring theme is supporting rapid experimentation and strong, production-ready infrastructure.
+This week’s machine learning news focuses on practical improvements to scaling model training and agent development. Developers now have guides for optimizing pretraining at scale, new research on agent reasoning, and updates to data engineering workflows that simplify testing and iteration. The overall direction continues to support efficient ML development and deployment.
 
-### Enhanced Workflow and API Integration in Microsoft Fabric User Data Functions
+### Large-Scale AI Pretraining Optimization on Azure ND GB200 v6
 
-Microsoft Fabric now supports automatic OpenAPI specification generation for User Data Functions, promoting open integration and maintainability—complementing existing Apache Iceberg features. Inline Python docstring support ensures that documentation stays up-to-date as code changes.
+Building on last week’s discussions around cloud-based model training, this week’s benchmarking research provides detailed recommendations for optimizing the pretraining of Llama3 8B models on Azure ND GB200 v6. The study covers adjustments to tensor, pipeline, context, and data parallelism, repeating last week’s strategies for deploying scalable workloads using Azure AKS and vLLM. Benchmarking batch sizes and numerical precision modes, the authors recommend specific parameters for the best throughput: tensor parallelism 1, pipeline parallelism 2, context parallelism 1, and micro batch size 4.
 
-A new Develop mode (currently in preview) allows developers to edit, test, and version their functions directly in the Fabric portal, smoothing the path from prototyping to production and helping teams keep pace with agile workflows.
-
-- [OpenAPI Specification Generation in Fabric User Data Functions](https://blog.fabric.microsoft.com/en-US/blog/openapi-specification-code-generation-now-available-in-fabric-user-data-functions/)
-- [Test and Validate Functions with Develop Mode in Fabric User Data Functions](https://blog.fabric.microsoft.com/en-US/blog/test-and-validate-your-functions-with-develop-mode-in-fabric-user-data-functions-preview/)
-
-### Performance Benchmarking and Optimization for Large-Scale Model Pretraining on Azure ND GB200 v6
-
-Azure rolled out new benchmarking results for its ND GB200 v6 machines with NVIDIA Blackwell GPUs, using Llama3 as a test case. The findings focus on parallelism strategies, micro-batch sizing, and communication-overhead trade-offs, offering actionable insights for organizations working with large-scale model pretraining or fine-tuning. These resources support smarter infrastructure planning and reflect ongoing industry efforts to maximize the value of AI hardware.
+All scripts are shared for reproducibility via the Azure AI Benchmarking Guide, supporting transparent scaling and tuning for teams running production ML on large clusters.
 
 - [Optimizing Large-Scale AI Performance with Pretraining Validation on a Single Azure ND GB200 v6](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimizing-large-scale-ai-performance-with-pretraining/ba-p/4445273)
 
+### Feature Updates: Enhanced AI Capability and Developer Workflow
+
+Following on recent analytics and optimizer updates, MindJourney—developed by Microsoft Research—improves spatial reasoning for agents in dynamic, simulated environments. Integrating a pretrained world model and spatial beam search, MindJourney improves agent navigation and accuracy by 8% without requiring agent retraining, with clear uses in robotics, simulation, and accessibility development.
+
+Microsoft Fabric’s new “Develop mode” for User Data Functions now provides a safe editor for testing Python logic before production deployment. This is a direct response to calls for safer, more controlled custom code testing in platforms like Spark, Databricks, and Fabric, and only requires a library update to enable.
+
+- [MindJourney: AI Agents Navigate and Reason in Simulated 3D Worlds](https://www.microsoft.com/en-us/research/blog/mindjourney-enables-ai-to-explore-simulated-3d-worlds-to-improve-spatial-interpretation/)
+- [Test and Validate Functions with Develop Mode in Fabric User Data Functions](https://blog.fabric.microsoft.com/en-US/blog/test-and-validate-your-functions-with-develop-mode-in-fabric-user-data-functions-preview/)
+
 ## Azure
 
-Azure this week demonstrated progress in creating more versatile, secure, and enterprise-ready cloud platforms. The core tenets were leadership recognition in cloud-native services, improved developer tooling, and resource management features designed with flexibility and compliance in mind. Microsoft’s focus on open source, business agility, and cost effectiveness was clear, with feature rollouts that directly help both IT and development teams.
+Azure’s recent updates introduce new resource management options, deeper AI features, upgraded tooling, and security improvements. The latest previews and releases make it easier to manage core infrastructure, automate developer workflows, and secure data at scale—continuing to build on recent governance, migration, and optimization guidance.
 
-### Azure’s Leadership in Cloud-Native & AI-Driven Platforms
+### Azure Service Groups and Advanced Resource Management
 
-Microsoft was named a Leader in Gartner’s 2025 Magic Quadrant for Cloud-Native Application Platforms, following its recent container management recognitions. The portfolio now spans traditional PaaS, serverless GPU options with AI Foundry, on-demand .NET 8 Flex Consumption, and more. Azure’s Application Gateway remains a staple for large AI/ML solutions, offering configurable traffic management and tailored security.
-
-Open source continues to shape Azure’s offerings, from VS Code and GitHub to Dapr and Semantic Kernel—confirming Azure’s reputation for a flexible, AI-first, open-cloud experience.
-
-- [Microsoft Named Leader in 2025 Gartner Magic Quadrant for Cloud-Native Application Platforms](https://azure.microsoft.com/en-us/blog/microsoft-is-a-leader-in-the-2025-gartner-magic-quadrant-for-cloud-native-application-platforms/)
-- [Scaling Enterprise AI/ML: Azure Application Gateway as the Intelligent Access Layer](https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-enterprise-ai-ml-with-confidence-azure-application/ba-p/4445691)
-- [Microsoft’s Open Source Journey: From Linux Contributions to AI at Scale](https://azure.microsoft.com/en-us/blog/microsofts-open-source-journey-from-20000-lines-of-linux-code-to-ai-at-global-scale/)
-- [Building the Frontier Firm with Microsoft Azure: The Business Case for Cloud and AI Modernization](https://azure.microsoft.com/en-us/blog/building-the-frontier-firm-with-microsoft-azure-the-business-case-for-cloud-and-ai-modernization/)
-
-### Platform Management, Resource Organization, and Data Protection
-
-Resource management on Azure has become more granular, with the introduction of Service Groups that let organizations define resource clusters for targeted monitoring without altering permissions or policy logic. This is designed for teams managing large or multidimensional environments.
-
-Elastic SAN backup (public preview) adds scheduled, multi-volume restores backed by compliance-friendly cost controls. Workspace-level Private Link (also in preview) enables isolated, compliant network design. The new Capacity Metrics "Item History" page provides 30-day, item-specific analytics for easier scaling and upgrade decisions—further cementing Azure as an adaptable, compliance-oriented platform.
+Azure Service Groups are now in public preview, allowing resource grouping for targeted monitoring and health checks at the tenant level. These containers function separately from traditional RBAC or policy scopes, making it easier to group resources for app-centric monitoring or detailed cost analysis via the REST API, portal, and Azure Monitor health model.
 
 - [Announcing Public Preview for Azure Service Groups](https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-azure-service-groups/ba-p/4446572)
-- [Enhance Your Data Protection Strategy with Azure Elastic SAN’s Newest Backup Options](https://techcommunity.microsoft.com/t5/azure-storage-blog/enhance-your-data-protection-strategy-with-azure-elastic-san-s/ba-p/4443607)
-- [Microsoft Fabric Introduces Workspace-Level Private Link (Preview)](https://blog.fabric.microsoft.com/en-US/blog/fabric-workspace-level-private-link-preview/)
-- [Preview of Item History Page in Microsoft Fabric Capacity Metrics App](https://blog.fabric.microsoft.com/en-US/blog/26307/)
 
-### Developer Productivity, Automation, and Data Integration
+### MCP Server Hosting and Azure Functions Flex Consumption
 
-Azure’s August 2025 CLI update features improved PowerShell experience, robust CI/CD automation, and more accessible documentation, along with new templates for AI workloads, monitoring, and security—helping teams onboard faster.
+Developers can now deploy remote MCP servers as fully serverless applications using Azure Functions Flex Consumption (early preview), supporting Python, Node.js, and .NET SDKs. Integration options include the Azure MCP Extension or your own SDK, with deployment managed via Azure CLI, local debugging, and API Management extensions. The model allows flexible scaling and cost management, and early adopter feedback will help refine it further.
 
-Support for custom MCP servers in Azure Functions (early preview) makes it easier to deploy stateless, event-driven code using Python, Node.js, or .NET, reducing friction for hybrid or scale-out apps.
+This development supports a shift towards truly cloud-native, serverless MCP deployments, following recent expansions to MCP integration and IDE support.
 
-Fabric’s Data Factory now supports multiple scheduling engines for data copy jobs, while Entra ID is now supported for PostgreSQL in the on-premises data gateway—both showcasing Azure’s progress toward seamless data integration and security.
-
-- [Azure Developer CLI (azd) August 2025 Release Overview](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-august-2025/)
 - [Early Preview: Host Your Own Remote MCP Server on Azure Functions](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-early-preview-byo-remote-mcp-server-on-azure/ba-p/4445317)
-- [Simplifying Data Ingestion with Copy Job: Multiple Scheduler Support in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-multiple-scheduler-support/)
-- [On-premises Data Gateway August 2025 Release: Entra ID Support for PostgreSQL](https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-august-2025-release/)
 
-### Other Azure News
+### Azure SDK: AI Libraries, Observability, and Data Movement
 
-Administrators and developers benefit from new DC EC esv6 VMs for performance, AKS Bastion integration, and larger Azure Functions memory quotas.
+The August Azure SDK update covers releases and betas for several programming languages. New AI libraries for JavaScript and Python are now generally available and integrate with Azure AI Foundry and Azure OpenAI Services. .NET’s updated Storage Data Movement library addresses migration and file transfer pain points, and new Management, Monitor, and Metrics tools are being introduced for Carbon Optimization, Recovery Services, Rust language support, browser automation, and storage management. Migration documentation supports smoother setup and better cost visibility.
 
-Application Gateway’s MaxSurge improves rolling update reliability, while better billing management drives Azure Files Premium cost efficiency. Enhanced log and metric capabilities support enterprise troubleshooting at scale.
-
-Azure’s compliance reach continues to expand along with updates to service retirement timelines and stricter identity controls: Azure File Sync has moved to managed identities by default, supporting simpler and more secure hybrid deployments. The Azure Essentials Show provides clear guidance for cloud cost savings with Azure Hybrid Benefit.
-
-A new video on Microsoft Fabric SQL database illustrates hybrid integration scenarios, detailed Copilot acceleration strategies, and tips for optimizing performance and costs.
-
-August’s Azure SDK update delivers production-ready AI project libraries and stable monitoring SDKs, helping developers manage modern cloud workloads more effectively.
-
-Retina eBPF’s open-source network troubleshooting for Kubernetes offers advanced packet inspection and debugging. And a new Azure Storage guide brings together foundational practices for secure, cost-effective design and disaster recovery.
-
-- [Azure Update - 22nd August 2025]({{ "/2025-08-22-Azure-Update-22nd-August-2025.html" | relative_url }})
-
-Azure File Sync is now secured by managed identities, moving away from deprecated secrets for simpler Entra ID-based access—a valuable update for hybrid environments.
-
-- [Azure File Sync Managed Identity: Enhanced Security and Simplified Operations]({{ "/2025-08-20-Azure-File-Sync-Managed-Identity-Enhanced-Security-and-Simplified-Operations.html" | relative_url }})
-
-The Azure Essentials Show offers direct advice on using Hybrid Benefit licensing to cut cloud spending for Windows, SQL Server, and Linux workloads—making it easier for enterprises to manage costs.
-
-- [Your Guide to Saving with Azure Hybrid Benefit]({{ "/2025-08-19-Your-Guide-to-Saving-with-Azure-Hybrid-Benefit.html" | relative_url }})
-
-A detailed Microsoft Fabric SQL Database video covers OneLake integration, code acceleration with Copilot, and performance tuning—ideal for database architects optimizing deployments.
-
-- [SQL Database in Microsoft Fabric]({{ "/2025-08-18-SQL-Database-in-Microsoft-Fabric.html" | relative_url }})
-
-The August Azure SDK release includes new libraries for AI Projects and stable monitoring SDKs, expanding developer tools for multi-cloud and AI-first scenarios.
+These SDK improvements build on previous enhancements, supporting interoperability, AI integration, and ongoing cross-language support.
 
 - [Azure SDK Release Highlights for August 2025](https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-august-2025/)
 
-Retina eBPF advances Kubernetes troubleshooting with in-depth packet capture and live debugging, adding strong observability to cloud-native environments.
+### Enterprise AI/ML Security and Scalability with Azure Application Gateway
 
-- [Troubleshooting Kubernetes Network Issues with Retina and eBPF](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/troubleshooting-network-issues-with-retina/ba-p/4446071)
+An in-depth analysis outlines best practices for using Azure Application Gateway as a secure entry point for AI/ML services, including OpenAI, Cognitive Services, and custom APIs. The article covers routing, TLS/mTLS, web application firewalls, logging, observability, and integration practices. Adaptive load routing and planned features aim to support demanding workloads.
 
-The new Azure Storage best practices guide compiles strategies for balancing costs, maintaining security, and preparing for disaster recovery—expanding on last week’s focus on storage planning.
+- [Scaling Enterprise AI/ML: Azure Application Gateway as the Intelligent Access Layer](https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-enterprise-ai-ml-with-confidence-azure-application/ba-p/4445691)
 
-- [Azure Storage: Fundamentals, Services, and Community Best Practices](https://techcommunity.microsoft.com/t5/azure/azure-storage/m/p/4447460#M22137)
+### Microsoft Fabric: Workspace Security, Metric Insights, and Data Orchestration
+
+Microsoft Fabric now offers workspace-level Private Link (preview), allowing granular network isolation per workspace. The Fabric Capacity Metrics App preview introduces an Item History page for deeper evaluation of compute trends and resource planning.
+
+Fabric Data Factory Copy Jobs now support multiple schedulers, reducing duplication and simplifying integration with CI/CD and pipelines. New OpenAPI spec generation features make it easier to integrate function APIs with other systems.
+
+These features expand on recent security, orchestration, and automation enhancements in Fabric, showing a stronger focus on precise management and developer automation.
+
+- [Microsoft Fabric Introduces Workspace-Level Private Link (Preview)](https://blog.fabric.microsoft.com/en-US/blog/fabric-workspace-level-private-link-preview/)
+- [Preview of Item History Page in Microsoft Fabric Capacity Metrics App](https://blog.fabric.microsoft.com/en-US/blog/26307/)
+- [Simplifying Data Ingestion with Copy Job: Multiple Scheduler Support in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-multiple-scheduler-support/)
+- [OpenAPI Specification Generation in Fabric User Data Functions](https://blog.fabric.microsoft.com/en-US/blog/openapi-specification-code-generation-now-available-in-fabric-user-data-functions/)
+
+### Elastic SAN, Storage Best Practices, and Data Protection
+
+Azure Elastic SAN now features integrated backup through Azure Backup and Commvault, currently in preview. Azure Backup provides lifecycle-managed snapshots, while Commvault enables rapid cross-region restore and protection. Both are designed for VM-oriented protection and meet cost/retention needs with detailed setup guidance.
+
+A comprehensive Azure Storage guide covers product fundamentals, security, cost, and best practices for Blob, File, Queue, Table, Disk, and Elastic SAN services—continuing the ongoing evolution of storage solutions.
+
+- [Enhance Your Data Protection Strategy with Azure Elastic SAN’s Newest Backup Options](https://techcommunity.microsoft.com/t5/azure-storage-blog/enhance-your-data-protection-strategy-with-azure-elastic-san-s/ba-p/4443607)
+- [Azure Storage: Fundamentals, Services, and Community Best Practices](https://techcommunity.microsoft.com/t5/azure/azure-storage/m-p/4447460#M22137)
+
+### SQL and Data Connectivity in Microsoft Fabric and Power BI
+
+A new video walks through Fabric SQL database setup, OneLake and Purview management, service selection, and live analytics integration, offering practical insights for Fabric’s SQL and pricing. The on-premises Data Gateway August release introduces Entra ID authentication for PostgreSQL, improving security and supporting more secure cloud analytics.
+
+These advances align with earlier efforts to unify and secure data connectivity across the Microsoft ecosystem.
+
+- [SQL Database in Microsoft Fabric]({{ "/2025-08-18-SQL-Database-in-Microsoft-Fabric.html" | relative_url }})
+- [On-premises Data Gateway August 2025 Release: Entra ID Support for PostgreSQL](https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-august-2025-release/)
+
+### Developer Experience and Tooling: Azure Developer CLI (azd)
+
+The August 2025 release of the Azure Developer CLI enhances reliability, adds documentation, and expands template options. Enhancements cover PowerShell support, .NET Aspire detection, Visual Studio fixes, and improved workflows for environment and deployment management. Documentation now covers configuration, CI/CD, and progression from local builds to production. A template library further assists teams with deployments involving monitoring, AI, and data integration.
+
+These updates continue last week’s improvements for development toolchains and automation on Azure.
+
+- [Azure Developer CLI (azd) August 2025 Release Overview](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-august-2025/)
+
+### Azure Platform Updates: Infrastructure, Serverless, and Security Enhancements
+
+Recent Azure updates include new VM options, improved diagnostics, and flexible deployment solutions. New DC EC esv6 VMs support specialized workloads, AKS now offers integrated Azure Bastion for easier remote access, serverless Functions can now scale with Flex Consumption, and Application Gateway receives maxSurge for zero-downtime updates. Storage improvements clarify Azure Files Premium cost, add Blob Storage regional archiving, and enhance NetApp Files logging and cool access settings. Log Analytics now supports up to 100M results per query, and deprecated workflows (Sentinel/Defender in China, CNAME certs) are announced.
+
+These enhancements build on work to make Azure’s platform more robust, adaptable, and cost-efficient.
+
+- [Azure Update - 22nd August 2025]({{ "/2025-08-22-Azure-Update-22nd-August-2025.html" | relative_url }})
+
+### Other Azure News
+
+Azure File Sync now leverages managed identities, moving away from credential-based management for stronger security and simpler operations, with migration tutorials and PowerShell scripts provided.
+
+Microsoft’s open source journey entry shares their contributions from the Linux kernel to global-scale AI—including AKS, Dapr, Radius, and published best practices.
+
+A new entry in Azure Essentials covers saving costs with Azure Hybrid Benefit, giving users details on licensing, rights, and migration planning tools.
+
+These updates underline Azure’s focus on managed identities, open source partnership, and actionable cost management advice—consistent with last week's directions.
+
+- [Azure File Sync Managed Identity: Enhanced Security and Simplified Operations]({{ "/2025-08-20-Azure-File-Sync-Managed-Identity-Enhanced-Security-and-Simplified-Operations.html" | relative_url }})
+- [Microsoft’s Open Source Journey: From Linux Contributions to AI at Scale](https://azure.microsoft.com/en-us/blog/microsofts-open-source-journey-from-20000-lines-of-linux-code-to-ai-at-global-scale/)
+- [Your Guide to Saving with Azure Hybrid Benefit]({{ "/2025-08-19-Your-Guide-to-Saving-with-Azure-Hybrid-Benefit.html" | relative_url }})
 
 ## Coding
 
-Significant engineering improvements landed across core developer tools this week, delivering more reliable workflows and practical resources for daily coding. Git and .NET both saw upgrades that address productivity, automate testing, and support better migration—helping teams maintain momentum as platforms evolve.
+Developers benefit this week from updated toolchains and workflow features, helping with modernization and streamlining in both Git and .NET. Git delivers new storage and workflow improvements, while .NET introduces new approaches for testing, migration, and UI challenges.
 
-### Major Updates: Git 2.51 and dotnet test Modernization
+### Git 2.51: Storage, Workflow, and CLI Enhancements
 
-Git 2.51 introduces a "cruft-free" Multi-Pack Index (MIDX), slicing pack file size by roughly 38% and improving fetch and read operations—especially in large repositories. Developers can now migrate stashes between machines with new CLI options, as well as generate smaller packs using improved delta compression. Additional features like Bloom filter support and foundation work for SHA-256 make Git more future-ready.
+Git 2.51 delivers enhancements to storage and workflow efficiency. The new cruft-free MIDX feature allows for duplication of reachable objects from cruft packs, resulting in smaller, faster repositories and up to 38% storage reduction. This is managed via the `repack.MIDXMustContainCruft` setting. The updated `git repack --path-walk` uses file layout to optimize delta compression and pack size.
 
-.NET 10 brings a modernized `dotnet test` leveraging the new Microsoft.Testing.Platform. This results in quicker test discovery and execution, improved diagnostics, easier configuration, and native support for parallel testing—streamlining workflows for both legacy and new codebases.
+A new stash interchange format allows linked ancestor commits, enabling stash export/import across devices. Scripting is improved via more accurate `git cat-file` submodule reporting; commit-graph Bloom filters offer accelerated path filtering in large repositories.
+
+The commands `git switch` and `git restore` are now stable, while the deprecated `git whatchanged` is replaced by `git log --raw`. Looking ahead, Git 3.0 will default to SHA-256 and implement a new reftable backend, so users should start planning for migration. Updates to C99 support and patch submission workflows further modernize the codebase.
+
+These updates maintain Git’s focus on workflow effectiveness and code modernization.
 
 - [Key Updates in Git 2.51: Cruft-Free MIDX, Stash Interchange, and More](https://github.blog/open-source/git/highlights-from-git-2-51/)
+
+### .NET Testing Modernization: CLI, TUnit Migration, and Email Workflow
+
+.NET 10 now runs `dotnet test` using the Microsoft.Testing.Platform (MTP), replacing the previous VSTest engine. The update improves automation, performance, diagnostics, filtering, parallelism, and output. Developers should migrate tests to MTP, update configurations, and remove obsolete settings for simpler and faster solution builds.
+
+Migration resources confirm that moving from xUnit to TUnit is direct, with analyzer and source generator support for parallel, NativeAOT-ready, and .NET Standard 2.0 projects. Guides cover assert conversion, snapshot usage, and CI integration.
+
+A new tutorial explains how to implement reliable email sending within .NET, covering SMTP setup, formatting, debugging, and best practices for maintainable code.
+
 - [Enhance your CLI testing workflow with the new dotnet test](https://devblogs.microsoft.com/dotnet/dotnet-test-with-mtp/)
-
-### Modern Testing & Migration Strategies in .NET
-
-Andrew Lock explains how teams can move from xUnit to TUnit, making test discovery and execution faster and more reliable for parallel pipelines. TUnit supports both legacy and new platforms, and his guide walks through dependency management and migration best practices.
-
-For legacy migration, GopalKrishnan covers how to update .NET Framework 4.8 APIs to .NET 8 using code analyzers and systematic checklists—supporting safe, incremental upgrades across large codebases. These guides continue the focus on actionable modernization strategies and tool-driven upgrades.
-
 - [Migrating an xUnit Test Project to TUnit: Experience, Issues, and Practical Steps](https://andrewlock.net/converting-an-xunit-project-to-tunit/)
-- [Tools and Approaches for Migrating Obsolete .NET Framework APIs to .NET 8](https://techcommunity.microsoft.com/t5/tools/tool-or-approach-to-identify-and-replace-obsolete-net-framework/m-p/4446845#M161)
+- [Sending Email Correctly in .NET]({{ "/2025-08-20-Sending-Email-Correctly-in-NET.html" | relative_url }})
 
-### Advanced Application Integration & Practical Tutorials
+### .NET Application Modernization: Migration, WebView2, and Obsolete APIs
 
-Rick Strahl shares how to reliably support Windows shortcut keys in hybrid desktop apps using the new WebView2 keyboard mapping, complete with caveats and practical workarounds. For backend teams, Nick Chapsas and Dylan Beattie provide a detailed tutorial on building secure, maintainable email solutions in .NET, covering SMTP setup, credentials handling, and error management.
+Migrating .NET Framework 4.8 applications to .NET 8 is now easier, with tools like Upgrade Assistant, Portability Analyzer, and Roslyn analyzers designed for incremental and batch migration. Documentation and automation help prioritize modernization and minimize risk.
 
-These actionable guides cement this week’s commitment to practical, developer-focused content—ensuring teams can deliver and integrate apps with confidence.
+These resources support ongoing themes around cross-platform modernization and multi-targeted project upgrades, including those for Aspire and MAUI. The focus is on easy migration of APIs and structuring large solution upgrades.
+
+WebView2 now supports improved keyboard input mapping, simplifying desktop usability in WPF/WinForms applications. The new `CoreWebView2ControllerOptions.AllowHostInputProcessing` property restores expected keyboard behaviors, supporting better integration between host and browser-based UIs.
+
+Additional tools are available for mapping obsolete APIs to .NET 8. This continues last week’s theme of smoother API and UI modernization.
 
 - [Handling Keyboard Mapping in WebView2 with AllowHostInputProcessing](https://weblog.west-wind.com/posts/2025/Aug/20/Using-the-new-WebView2-AllowHostInputProcessing-Keyboard-Mapping-Feature)
-- [Sending Email Correctly in .NET]({{ "/2025-08-20-Sending-Email-Correctly-in-NET.html" | relative_url }})
+- [Tools and Approaches for Migrating Obsolete .NET Framework APIs to .NET 8](https://techcommunity.microsoft.com/t5/tools/tool-or-approach-to-identify-and-replace-obsolete-net-framework/m-p/4446845#M161)
 
 ## DevOps
 
-Innovation in DevOps this week centered on adopting more AI automation, best practices for transparency, and platform improvements by both GitHub and Azure DevOps. Teams benefit from more refined roles, stronger cost controls, and automation enhancements that safely scale with business needs. Observability, extensibility, and cost accountability remained core priorities.
+This week’s DevOps updates include new features and integrations to support more reliable workflows, stronger observability, and increased use of AI for automation, all while emphasizing oversight and collaboration. GitHub adds improved permissions, dependency management, and UI features. AI is being integrated into CI/CD, combining productivity with careful governance. Practical guides help troubleshoot Kubernetes, automate Angular CI, and link Azure DevOps with Jira. The ecosystem maintains a focus on cost, quality, and productivity.
 
-### AI-Driven Automation and the Future of DevOps Workflows
+### GitHub Platform Enhancements and Developer Workflow Updates
 
-This week, resources center on blending system-level context with AI to enable smarter agent-driven coding, testing, and deployment—including success stories like a payments company doubling migration speed with context-rich AI automation.
+GitHub’s recent updates include general availability for issue dependency management, support for enterprise-level custom organization roles and increased limits, pull request improvements, and Dependabot Rust toolchain automation. New features for cost attribution and repository migration align with GitHub’s focus on usability and admin features, and the retirement of GraphQL Explorer reflects ongoing documentation and API enhancements.
 
-Papers on fully autonomous DevSecOps pipelines show how AI and machine learning can power self-healing deployments and instant threat responses. However, these advances are balanced with a careful focus on trust, privacy, and the importance of human oversight—a topic that’s been emphasized throughout recent DevOps updates.
-
-New insights from Anthropic and CloudBees demonstrate MCP’s practical impact in automating complex pipeline deployments and troubleshooting, supporting platform-based governance, and prompting teams to be mindful of workflow strain from uncontrolled code generation.
-
-- [Unlocking DevOps-Ready AI Agents Through Context Engineering](https://devops.com/context-engineering-is-the-key-to-unlocking-ai-agents-in-devops/?utm_source=rss&utm_medium=rss&utm_campaign=context-engineering-is-the-key-to-unlocking-ai-agents-in-devops)
-- [The Future of DevSecOps in Fully Autonomous CI/CD Pipelines](https://devops.com/white-paper-the-future-of-devsecops-in-a-fully-autonomous-ci-cd-pipeline/?utm_source=rss&utm_medium=rss&utm_campaign=white-paper-the-future-of-devsecops-in-a-fully-autonomous-ci-cd-pipeline)
-- [How MCP Is Shaping the Future of DevOps Processes](https://devops.com/mcp-emerges-as-a-catalyst-for-modern-devops-processes/?utm_source=rss&utm_medium=rss&utm_campaign=mcp-emerges-as-a-catalyst-for-modern-devops-processes)
-- [How AI-Created Code Will Strain DevOps Workflows](https://devops.com/how-ai-created-code-will-strain-devops-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=how-ai-created-code-will-strain-devops-workflows)
-- [Why Human Oversight Remains Essential in an AI-Driven DevOps Landscape](https://devops.com/keeping-humans-in-the-loop-why-human-oversight-still-matters-in-an-ai-driven-devops-future/?utm_source=rss&utm_medium=rss&utm_campaign=keeping-humans-in-the-loop-why-human-oversight-still-matters-in-an-ai-driven-devops-future)
-
-### Role and Permissions Management, Issue Dependencies, and Cost Controls in GitHub
-
-GitHub now lets organizations define up to 40 custom roles per org, giving admins better tools to set up and enforce precise permission models. New issue dependency features allow teams to link issues as blockers and automate cross-project tracking. The billing UI now integrates cost center management, supporting batch updates and transparent allocation of users and expenses.
-
+- [Managing Issue Dependencies in GitHub Now Generally Available](https://github.blog/changelog/2025-08-21-dependencies-on-issues)
 - [Enterprise-Wide Custom Organization Roles and Increased Role Limits in GitHub](https://github.blog/changelog/2025-08-21-enterprises-can-create-organization-roles-for-use-across-their-enterprise-and-custom-role-limits-have-been-increased)
-- [Managing Issue Dependencies in GitHub Now Generally Available](https://github.blog/changelog/2025-08-21-dependencies-on-issues)
-- [Manage Cost Center Users in GitHub Enterprise Cloud via Billing UI and API](https://github.blog/changelog/2025-08-18-customers-can-now-add-users-to-a-cost-center-from-both-the-ui-and-api-2)
-
-### Unified DevOps Platforms and Toolchain Automation
-
-SRE.ai’s release of a unified platform for deployment and monitoring addresses the pain of toolchain sprawl, supporting everything from low-code/no-code to traditional engineering. GitHub now enables automated Rust toolchain updates with Dependabot, reducing manual upkeep. New migration paths—including GitHub-owned blob storage—make shifting large repositories simpler and more secure.
-
-- [SRE.ai Aims to Streamline DevOps for SaaS with AI Automation](https://devops.com/sre-ai-looks-to-unify-devops-workflows-across-multiple-saas-applications/?utm_source=rss&utm_medium=rss&utm_campaign=sre-ai-looks-to-unify-devops-workflows-across-multiple-saas-applications)
-- [Dependabot Adds Support for Automated Rust Toolchain Updates](https://github.blog/changelog/2025-08-19-dependabot-now-supports-rust-toolchain-updates)
-- [Migrate Repositories Using GitHub-Owned Blob Storage](https://github.blog/changelog/2025-08-18-migrate-repositories-with-github-owned-blob-storage)
-
-### DevOps Observability, Cost Optimization, and Platform Integration Best Practices
-
-This week’s guidance includes comprehensive reviews of production observability—how to combine logs, metrics, and traces for debugging. The "FinOps as Code" approach codifies cost policy in pipelines, creating accountability alongside agility. Real-world guides on Azure DevOps and Jira integration illustrate how careful toolchain design slashes manual effort for teams working across platforms.
-
-- [Debugging in Production: Leveraging Logs, Metrics and Traces](https://devops.com/debugging-in-production-leveraging-logs-metrics-and-traces/?utm_source=rss&utm_medium=rss&utm_campaign=debugging-in-production-leveraging-logs-metrics-and-traces)
-- [FinOps as Code – Unlocking Cloud Cost Optimization](https://devops.com/finops-as-code-unlocking-cloud-cost-optimization/?utm_source=rss&utm_medium=rss&utm_campaign=finops-as-code-unlocking-cloud-cost-optimization)
-- [Optimizing Azure DevOps and Jira Integration: 5 Real-World Use Cases for DevOps Teams](https://techcommunity.microsoft.com/t5/azure/optimizing-azure-devops-jira-integration-5-practical-use-cases/m-p/4445837#M22123)
-
-### Other DevOps News
-
-Recent upgrades to GitHub’s ‘Files Changed’ review interface aid code review for large projects, building on previous efforts to streamline developer workflows. Feature releases around security, cost controls, and migration further reinforce best practice standards. Practical guides on enforcing Angular test coverage and pipeline testing ensure rigorous, automated checks carry over as platforms evolve.
-
 - [GitHub Pull Request 'Files Changed' Public Preview: August 21 Updates](https://github.blog/changelog/2025-08-21-pull-request-files-changed-public-preview-experience-august-21-updates)
-- [Managing Issue Dependencies in GitHub Now Generally Available](https://github.blog/changelog/2025-08-21-dependencies-on-issues)
 - [Dependabot Adds Support for Automated Rust Toolchain Updates](https://github.blog/changelog/2025-08-19-dependabot-now-supports-rust-toolchain-updates)
+- [Manage Cost Center Users in GitHub Enterprise Cloud via Billing UI and API](https://github.blog/changelog/2025-08-18-customers-can-now-add-users-to-a-cost-center-from-both-the-ui-and-api-2)
 - [Migrate Repositories Using GitHub-Owned Blob Storage](https://github.blog/changelog/2025-08-18-migrate-repositories-with-github-owned-blob-storage)
 - [GraphQL Explorer Removal from GitHub API Documentation in 2025](https://github.blog/changelog/2025-08-21-graphql-explorer-removal-from-api-documentation-on-november-1-2025)
+
+### Advancing Observability and Kubernetes Troubleshooting
+
+New tools such as Retina and eBPF for Kubernetes support deeper inspection and debugging for cloud workloads. These resources extend earlier distributed tracing and monitoring improvements, helping teams trace issues in modern networking environments.
+
+- [Troubleshooting Kubernetes Network Issues with Retina and eBPF](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/troubleshooting-network-issues-with-retina/ba-p/4446071)
+
+### AI-Driven Automation and the Evolution of DevOps Pipelines
+
+Recent developments in AI integration for DevOps build on previous releases for agents, pipelines, and MCP tools. Discussions cover the potential and challenges of AI-driven orchestration in CI/CD, with articles emphasizing platform engineering, robust oversight, and the role of humans in overseeing automated, agent-based pipelines.
+
+Contextual engineering is also stressed as necessary for safe and practical automation. Case studies illustrate the stepwise adoption of smarter, more context-rich automation practices.
+
+- [How MCP Is Shaping the Future of DevOps Processes](https://devops.com/mcp-emerges-as-a-catalyst-for-modern-devops-processes/?utm_source=rss&utm_medium=rss&utm_campaign=mcp-emerges-as-a-catalyst-for-modern-devops-processes)
+- [How AI-Created Code Will Strain DevOps Workflows](https://devops.com/how-ai-created-code-will-strain-devops-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=how-ai-created-code-will-strain-devops-workflows)
+- [Unlocking DevOps-Ready AI Agents Through Context Engineering](https://devops.com/context-engineering-is-the-key-to-unlocking-ai-agents-in-devops/?utm_source=rss&utm_medium=rss&utm_campaign=context-engineering-is-the-key-to-unlocking-ai-agents-in-devops)
+- [Why Human Oversight Remains Essential in an AI-Driven DevOps Landscape](https://devops.com/keeping-humans-in-the-loop-why-human-oversight-still-matters-in-an-ai-driven-devops-future/?utm_source=rss&utm_medium=rss&utm_campaign=keeping-humans-in-the-loop-why-human-oversight-still-matters-in-an-ai-driven-devops-future)
+- [The Future of DevSecOps in Fully Autonomous CI/CD Pipelines](https://devops.com/white-paper-the-future-of-devsecops-in-a-fully-autonomous-ci-cd-pipeline/?utm_source=rss&utm_medium=rss&utm_campaign=white-paper-the-future-of-devsecops-in-a-fully-autonomous-ci-cd-pipeline)
+
+### CI/CD Workflows, Testing, and Seamless Integrations
+
+Workflow automation guides this week reflect ongoing trends toward secure, frictionless CI/CD pipelines. Articles cover Angular coverage enforcement in Azure DevOps and practical synchronization between Azure DevOps and Jira, supporting smoother testing, deployment, and coordination across development suites.
+
 - [Enforcing Angular Unit Test Coverage in Azure DevOps Pipelines: A Step-by-Step Guide](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enforcing-angular-unit-test-coverage-in-azure-devops-pipelines-a/ba-p/4446485)
+- [Optimizing Azure DevOps and Jira Integration: 5 Real-World Use Cases for DevOps Teams](https://techcommunity.microsoft.com/t5/azure/optimizing-azure-devops-jira-integration-5-practical-use-cases/m-p/4445837#M22123)
+
+### Observability, Debugging, and Production Reliability
+
+Teams can further improve production operations with guidance on structured logging, metrics, and alerting. These resources are designed to help debug live systems and maintain high reliability, building on last week’s monitoring and incident response coverage.
+
+- [Debugging in Production: Leveraging Logs, Metrics and Traces](https://devops.com/debugging-in-production-leveraging-logs-metrics-and-traces/?utm_source=rss&utm_medium=rss&utm_campaign=debugging-in-production-leveraging-logs-metrics-and-traces)
+
+### The Expanding Ecosystem: AI-Powered Content, Fusion Development, and Cost Optimization
+
+Ecosystem-wide updates include the introduction of tech.hub.ms, a platform for curated Microsoft technical content. Fusion development stories show increased adoption of blended business and engineering workflows; articles on FinOps as Code and SRE.ai explore automation and cost-conscious practices across SaaS and DevOps teams.
+
+- [Announcing tech.hub.ms: Curated Microsoft Tech Content Platform](https://r-vm.com/new-website-tech-hub-ms.html)
+- [Microsoft Morphs Fusion Developers To Full Stack Builders](https://devops.com/microsoft-morphs-fusion-developers-to-full-stack-builders/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-morphs-fusion-developers-to-full-stack-builders)
+- [FinOps as Code – Unlocking Cloud Cost Optimization](https://devops.com/finops-as-code-unlocking-cloud-cost-optimization/?utm_source=rss&utm_medium=rss&utm_campaign=finops-as-code-unlocking-cloud-cost-optimization)
+- [SRE.ai Aims to Streamline DevOps for SaaS with AI Automation](https://devops.com/sre-ai-looks-to-unify-devops-workflows-across-multiple-saas-applications/?utm_source=rss&utm_medium=rss&utm_campaign=sre-ai-looks-to-unify-devops-workflows-across-multiple-saas-applications)
 
 ## Security
 
-Security was front and center this week, with new deep-dives into the latest attack methods, next-generation cryptography, and practical security tooling for defenders and DevOps. Microsoft’s threat research team identified active campaigns, while guidance from both Microsoft and the community detailed ways to mitigate new risks and automate secure practices in daily workflows.
+Security this week emphasizes expanded AI-driven development tools, quantum-safe cryptography integration, and DevSecOps best practices. New resources address continuous security, automation, and software supply chain integrity.
 
-### New Attack Techniques: ClickFix Social Engineering and PipeMagic Modular Malware
+### GitHub Platform Security: Developer-first Tools and Enhanced Secret Scanning
 
-Microsoft’s threat intelligence exposed a rising ClickFix social engineering tactic, where users are manipulated into running malicious commands, leading to stealthy malware infections. These campaigns are increasingly automated and more often target macOS systems as well. Defender tools provide some protection, but organizations will benefit most from stronger policy controls and comprehensive education for end users.
+GitHub continues to extend secret scanning and push protection. Organizations now have support for custom secret scanning patterns during push protection, allowing company-specific policies to be enforced as needed. These changes support compliance requirements and help prevent disruptions.
 
-The PipeMagic campaign, linked to Storm-2460, showcases a modular backdoor attacking via a trojanized ChatGPT desktop app that exploits a zero-day vulnerability (CVE-2025-29824). Its architecture—with dynamic module injection, encryption, and advanced C2—poses new hurdles for defenders. Microsoft recommends using block mode in endpoint detection, network zoning, and Defender/Copilot workflows to monitor and respond. As attack methods blend social engineering with zero-day tactics, defenders must rely on both automation and solid policies.
+Integration of CodeQL and Copilot Autofix remains central, with security checks a routine part of CI. Security Campaigns and Dependency Review are more widely used to help mitigate supply chain risks as part of standard workflows.
 
-- [Analyzing the ClickFix Social Engineering Technique and Defenses with Microsoft Security](https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/)
-- [Dissecting PipeMagic: Technical Analysis of a Modular Malware Backdoor](https://www.microsoft.com/en-us/security/blog/2025/08/18/dissecting-pipemagic-inside-the-architecture-of-a-modular-backdoor-framework/)
+- [Enhancing Code Security with GitHub Tools]({{ "/2025-08-19-Enhancing-Code-Security-with-GitHub-Tools.html" | relative_url }})
+- [GitHub Secret Scanning: Custom Pattern Configuration in Push Protection Now Available](https://github.blog/changelog/2025-08-19-secret-scanning-configuring-patterns-in-push-protection-is-now-generally-available)
 
-### Post-Quantum Security: Microsoft's Strategic Roadmap and Industry Progress
+### Quantum-safe Cryptography: Preparing for a Post-Quantum Security Era
 
-Microsoft announced a comprehensive plan to future-proof its products with post-quantum cryptography, aiming to finish before 2029’s regulatory deadlines. The Quantum Safe Program brings together new algorithms, pilot projects, and industry partnerships to stay ahead of potential “harvest now, decrypt later” attacks. Teams are advised to audit their current cryptographic landscape and begin pilot migrations using Microsoft’s resources and hybrid key exchange updates for Azure, Entra, and Office.
+Microsoft advances its Quantum Safe Program (QSP) with previews for NIST PQC algorithms, hybrid TLS 1.3, and hardware integrations. These are now available for hands-on testing on Windows and Linux systems, supporting staged planning for cryptographic updates. Microsoft’s dual strategy combines policy, education, and developer guidance to enable future cryptographic agility.
 
-- [Microsoft Unveils Quantum Safe Program Strategy to Prepare for Post-Quantum Security Era](https://blogs.microsoft.com/on-the-issues/2025/08/20/post-quantum-resilience-building-secure-foundations/)
 - [Quantum-safe Security: Microsoft's Progress Toward Next-generation Cryptography](https://www.microsoft.com/en-us/security/blog/2025/08/20/quantum-safe-security-progress-towards-next-generation-cryptography/)
+- [Microsoft Unveils Quantum Safe Program Strategy to Prepare for Post-Quantum Security Era](https://blogs.microsoft.com/on-the-issues/2025/08/20/post-quantum-resilience-building-secure-foundations/)
 
-### Elevating Application Security: DevSecOps and Next-Gen Code Scanning
+### Microsoft Defender and Security Copilot: Threat Detection, Response, and Automation
 
-Tools like HoundDog.ai now scan source code for over 150 sensitive data types, making it easier for organizations to identify risks before they reach production. With privacy regulations in mind, real-time and CI-integrated scanning support both developer and DevOps teams.
+Recent updates provide analysis of new malware threats such as PipeMagic, insight into recent social engineering methods (ClickFix), and updated detection strategies. Automation tools like EDR block mode and cloud policy remediation—combined with Sentinel/Defender integrations—demonstrate a stronger focus on flexible, cross-platform security operations.
 
-Software Bill of Materials (SBOM) adoption is driven by new frameworks that mean developers can trace software components and improve transparency—helping to prevent supply chain attacks. DevSecOps is increasingly automated, shifting application security earlier in the development process for stronger, end-to-end coverage.
+Security Copilot use expands, providing advanced identity threat protection with Azure Entra, building on improvements detailed last week in automated response and incident closure.
+
+- [Dissecting PipeMagic: Technical Analysis of a Modular Malware Backdoor](https://www.microsoft.com/en-us/security/blog/2025/08/18/dissecting-pipemagic-inside-the-architecture-of-a-modular-backdoor-framework/)
+- [Analyzing the ClickFix Social Engineering Technique and Defenses with Microsoft Security](https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/)
+- [Enhancing Identity Protection with Azure Entra Security Copilot](https://techcommunity.microsoft.com/t5/azure/azure-entra-security-copilot-how-it-s-changing-identity/m-p/4447388#M22132)
+
+### DevSecOps and Software Supply Chain: From Privacy by Design to Lifecycle Visibility
+
+The new HoundDog.ai code scanner supports privacy-first, “shift left” governance—integrating with popular IDEs to detect shadow AI use and protect sensitive data. This parallels efforts by Microsoft and GitHub to strengthen privacy and regulatory compliance tools directly in CI/CD and editor workflows.
+
+Content on visibility and SBOM (Software Bill of Materials) management continues to focus on transparency and regulated supply chain practices, as both threat patterns and policy requirements increase in complexity.
 
 - [HoundDog.ai Code Scanner Shifts Data Privacy Responsibility Left](https://devops.com/hounddog-ai-code-scanner-shifts-data-privacy-responsibility-left/?utm_source=rss&utm_medium=rss&utm_campaign=hounddog-ai-code-scanner-shifts-data-privacy-responsibility-left)
 - [Tackling the DevSecOps Gap in Software Understanding](https://devops.com/tackling-the-devsecops-gap-in-software-understanding/?utm_source=rss&utm_medium=rss&utm_campaign=tackling-the-devsecops-gap-in-software-understanding)
 
-### Identity and Access: AI-driven Protection and Automation at Scale
-
-AI-driven incident response is now central to Azure Entra Security Copilot, which rapidly surfaces risk trends and automates investigation actions. Teams benefit from automated incident summaries and policy analysis, while a new Conditional Access starter pack for Entra ID includes scripts and GitHub workflows for Zero Trust implementation—shortening the distance from policy to practice for IT and DevOps.
-
-- [Enhancing Identity Protection with Azure Entra Security Copilot](https://techcommunity.microsoft.com/t5/azure/azure-entra-security-copilot-how-it-s-changing-identity/m-p/4447388#M22132)
-- [Kickstart Conditional Access in Microsoft Entra: Free Starter Pack with Policies & Automation](https://techcommunity.microsoft.com/t5/azure/kickstart-conditional-access-in-microsoft-entra-free-starter/m-p/4447413#M22136)
-
-### Operational Code Security: GitHub Tools and Advanced Secret Scanning
-
-GitHub now allows organizations to define custom secret scanning patterns, expanding visibility and push protection at scale. Upgraded dashboards and REST APIs help organizations apply governance consistently.
-
-A new overview video goes hands-on with security tools such as CodeQL, Copilot Autofix, Security Campaigns, and Dependency Review—showing how these capabilities fit into the daily software lifecycle and DevSecOps strategies.
-
-- [GitHub Secret Scanning: Custom Pattern Configuration in Push Protection Now Available](https://github.blog/changelog/2025-08-19-secret-scanning-configuring-patterns-in-push-protection-is-now-generally-available)
-- [Enhancing Code Security with GitHub Tools]({{ "/2025-08-19-Enhancing-Code-Security-with-GitHub-Tools.html" | relative_url }})
-
 ### Other Security News
 
-A new Windows 11 endpoint protection guide covers key Defender features like Controlled Folder Access, Tamper Protection, Exploit Protection, and BitLocker. Admins get actionable steps for building layered defenses—sometimes outperforming third-party security suites—emphasizing the ongoing importance of operational, practical guidance as the threat landscape shifts.
+Microsoft Entra ID’s Conditional Access Starter Pack offers a library of scripts and policy templates for automatic policy enforcement, supporting infrastructure-as-code management of identity controls on hybrid and on-premises systems.
 
+A technical guide for Windows 11 details practical steps for configuring Defender for stronger threat intelligence and automation, using PowerShell scripts and custom dashboards to implement layered endpoint protection.
+
+- [Kickstart Conditional Access in Microsoft Entra: Free Starter Pack with Policies & Automation](https://techcommunity.microsoft.com/t5/azure/kickstart-conditional-access-in-microsoft-entra-free-starter/m-p/4447413#M22136)
 - [Microsoft Defender Advanced Protection Tips for Windows 11](https://dellenny.com/microsoft-defender-advanced-protection-tips-for-windows-11/)
