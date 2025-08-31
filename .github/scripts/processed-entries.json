@@ -7944,5 +7944,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/multi-agent-orchestration-with-azure-ai-foundry-from-idea-to/ba-p/4449925",
     "reason": "Succesfully added: Categories assigned: 'AI' because the article focuses on multi-agent AI design, Azure AI Foundry, and orchestration (AI Rule 1 and 4); 'Azure' because content is centered entirely on Azure AI Foundry and usage of related Azure services like Azure AI Search, Logic Apps, and Functions (Azure Rule 1 and 4). Not assigning 'ML' as the focus is not on data science, custom model training, or analytics workloads (per ML inclusion rules). Not assigning 'Coding', as while some code structure and agent configuration concepts are shown, the guide is more architectural, with no deep programming implementation. 'DevOps' and 'Security' categories are not included because CI/CD, developer experience, operational practices, or specific security tooling and policy implementation are not the main focus. The article provides in-depth, actionable, technical guidance and preserves all technical details, fully meeting quality and inclusion standards."
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: The content directly discusses Azure Application Gateway for Containers (AGC) within the context of Azure Kubernetes Service (AKS) networking, covering overlay and flat networking models, supported security policies, deployment practices, and step-by-step API usage. 'Azure' is assigned per Azure rule 1 (use of core Azure services). 'DevOps' is assigned due to focus on operational deployment, GitOps/CI, and controller setup (DevOps rules 1, 5). 'Security' applies due to detailed handling of NSGs, firewalls, network policies, and TLS (Security rules 1, 2, 3, 4). 'Coding' is included due to the provided YAML manifests and technical hands-on implementation (Coding rule 4). None of the generic exclusion rules apply: the post is technical, in English, and purely focused on implementation and architecture relevant to Microsoft technologies.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/container-networking-with-azure-application-gateway-for/ba-p/4449941",
+    "timestamp": "2025-08-31 16:13:27 +00:00"
   }
 ]
