@@ -7932,5 +7932,17 @@
     "reason": "Succesfully added: Included the Security category because the content centrally focuses on configuring ransomware protection using Microsoft Defender Antivirus inside Windows 11. This matches the Security inclusion rules for application security within the Microsoft ecosystem and usage of specific Microsoft security technologies. Did not include Azure, AI, ML, or Coding, as there is no mention of these technologies, development workflows, or data science focus. Did not include DevOps, as this is an end-user security feature guide, not a workflow or engineering pattern. Tags are focused on security and Microsoft Defender, aligning with the guide's practical, technical emphasis.",
     "timestamp": "2025-08-30 11:09:49 +00:00",
     "canonical_url": "https://dellenny.com/how-to-enable-ransomware-protection-in-windows-11/"
+  },
+  {
+    "timestamp": "2025-08-31 15:12:19 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/wOV0ebsqb88",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content is focused specifically on GitHub Copilot, a developer AI tool (GitHub Copilot Inclusion Rule 1, and AI Inclusion Rule 2). The video demonstrates new Copilot features for repository analysis and coding assistance, clearly falling under developer AI tools, not business productivity applications. No other categories (such as Coding, DevOps, Azure, ML, or Security) are indicated based on the lack of technical code examples, deployment, or Microsoft cloud integration in the description."
+  },
+  {
+    "timestamp": "2025-08-31 15:12:59 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/multi-agent-orchestration-with-azure-ai-foundry-from-idea-to/ba-p/4449925",
+    "reason": "Succesfully added: Categories assigned: 'AI' because the article focuses on multi-agent AI design, Azure AI Foundry, and orchestration (AI Rule 1 and 4); 'Azure' because content is centered entirely on Azure AI Foundry and usage of related Azure services like Azure AI Search, Logic Apps, and Functions (Azure Rule 1 and 4). Not assigning 'ML' as the focus is not on data science, custom model training, or analytics workloads (per ML inclusion rules). Not assigning 'Coding', as while some code structure and agent configuration concepts are shown, the guide is more architectural, with no deep programming implementation. 'DevOps' and 'Security' categories are not included because CI/CD, developer experience, operational practices, or specific security tooling and policy implementation are not the main focus. The article provides in-depth, actionable, technical guidance and preserves all technical details, fully meeting quality and inclusion standards."
   }
 ]

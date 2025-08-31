@@ -7005,5 +7005,47 @@
     "reason": "No categories found: All categories are excluded due to lack of development focus. The content is an end-user security guide for Windows 11, covering built-in protections, authentication, encryption, and best practices for personal device security. It does not address enterprise security implementation, custom security solutions, or development with Microsoft security technologies. There is no technical depth related to coding, DevOps, AI, ML, or Azure-specific configuration as required by the inclusion rules. Windows Defender and BitLocker are discussed only at the consumer usage level, not in a development or advanced technical context. Based on these factors and per Non-Development Microsoft Products and Business Strategy exclusion rules, no categories are assigned.",
     "timestamp": "2025-08-30 11:10:02 +00:00",
     "canonical_url": "https://dellenny.com/improving-security-on-your-windows-11-pc/"
+  },
+  {
+    "reason": "No categories found: All content in the provided text focuses on end-user setup of Windows Hello on Windows 11, a consumer security and convenience feature. It does not involve development techniques, code, APIs, Microsoft identity platform integration for custom apps, or technical security architecture. According to the 'Non-Development Microsoft Products' generic exclusion rule in Chapter 3, Windows/Windows Hello end-user features are excluded unless the content is about development or technical implementation for custom solutions. No eligible categories assigned.",
+    "timestamp": "2025-08-30 12:20:16 +00:00",
+    "canonical_url": "https://dellenny.com/setting-up-windows-hello-for-faster-logins-in-windows-11/",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: All category arrays are left empty because the core content is absent. There is no substantive content provided in the input (the 'content' and 'description' fields are both null or empty), which makes it impossible to assess category inclusion under any rules. As per the instruction to only use the provided content and never fabricate or assume details, exclusion is triggered due to insufficient input. No technical, architectural, or other information is available for extraction or analysis.",
+    "timestamp": "2025-08-30 12:20:36 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/ItXop9ulIsw",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: All categories are excluded based on the Generic Exclusion Rules. The content is a celebratory message marking the anniversary of the Linux kernel and does not contain any technical implementation, development guidance, or in-depth information about Microsoft technologies. Microsoft technologies are not mentioned or discussed in the title, description, tags, or content. The video centers on the open-source history of Linux, which, while relevant for broad software audiences, does not meet the inclusion threshold of Microsoft technologies being central to the content. The presence of GitHub social media links does not make it qualify under DevOps or Coding, as rules require substantive technical focus, which is not present here. Therefore, per exclusion rules, no categories apply.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/e8tN4Li2eNo",
+    "timestamp": "2025-08-30 14:09:55 +00:00"
+  },
+  {
+    "timestamp": "2025-08-31 11:09:32 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/advanced-task-manager-tips-for-power-users-in-windows-11/",
+    "reason": "No categories found: No categories assigned. The content is an advanced user guide for the Windows 11 Task Manager, focusing on built-in performance, monitoring, and troubleshooting features for Windows end-users and power users. It does not cover programming, scripting, development, automation, Microsoft development tools, coding, Azure, AI/ML, DevOps, security implementation, or developer/IT administration features. Per the generic exclusion rules, end-user productivity features and OS usage tips without a developer/IT pro coding or administration angle are excluded. No inclusion criteria for any category are met."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/registry-tweaks-to-unlock-hidden-features-in-windows-11/",
+    "timestamp": "2025-08-31 12:21:09 +00:00",
+    "reason": "No categories found: All generic exclusion rules must be applied first. The content focuses exclusively on end-user customization of Windows 11 using registry tweaks, such as restoring old context menus, adjusting lock screen blur, adding right-click options, and tweaking startup messages. None of the instructions involve software development, coding, scripting, automation, or building solutions for Microsoft's developer ecosystem. The article is not about coding, DevOps, Azure, AI/ML, or security implementation from a development or administrative perspective. It is also not about development or management of Windows internals, but rather desktop UI and personal productivity tweaks for end users. Per generic exclusion rules, non-development Microsoft product content focused on end-user features, customization, or productivity is specifically excluded. Therefore, no categories can be assigned."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/M-9dmtH4CTE",
+    "timestamp": "2025-08-31 12:21:29 +00:00",
+    "reason": "No categories found: Excluded all categories because the input is missing the main content text. The 'content' field is null, which means there is no substantive material to categorize. According to the rules, categorization must be based on actual content. Without any content to analyze, it is impossible to determine relevance or assign categories. Also, the description field is empty and tags contain only an empty string, offering no further substantive information."
+  },
+  {
+    "timestamp": "2025-08-31 15:11:55 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/advanced-file-explorer-tips-for-faster-navigation-in-windows-11/",
+    "reason": "No categories found: All categories are excluded according to the generic exclusion rules in Chapter 3. The content is a collection of advanced tips for using Windows File Explorer in Windows 11, targeting end-users and power users for personal productivity. There is no substantive discussion of Microsoft developer tooling, coding, DevOps, Azure services, AI, ML, or security relevant to Microsoft development or consulting. It is not focused on programming, scripting, or automation from a developer standpoint, but rather end-user navigation and UI features. The article does not contain any technical implementation details for Microsoft developer tools, frameworks, or services (see Non-Development Microsoft Products and Business/Productivity Tool exclusions)."
   }
 ]
