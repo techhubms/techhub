@@ -7950,5 +7950,11 @@
     "reason": "Succesfully added: The content directly discusses Azure Application Gateway for Containers (AGC) within the context of Azure Kubernetes Service (AKS) networking, covering overlay and flat networking models, supported security policies, deployment practices, and step-by-step API usage. 'Azure' is assigned per Azure rule 1 (use of core Azure services). 'DevOps' is assigned due to focus on operational deployment, GitOps/CI, and controller setup (DevOps rules 1, 5). 'Security' applies due to detailed handling of NSGs, firewalls, network policies, and TLS (Security rules 1, 2, 3, 4). 'Coding' is included due to the provided YAML manifests and technical hands-on implementation (Coding rule 4). None of the generic exclusion rules apply: the post is technical, in English, and purely focused on implementation and architecture relevant to Microsoft technologies.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/container-networking-with-azure-application-gateway-for/ba-p/4449941",
     "timestamp": "2025-08-31 16:13:27 +00:00"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/codex-azure-openai-integration-fast-secure-code-development/",
+    "timestamp": "2025-08-31 17:10:22 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the post centers on integrating OpenAI Codex (AI rule 1) and configuring AI agents. Assigned Azure because Azure OpenAI, Azure AI Foundry, and Azure resource deployment are central throughout (Azure rules 1 and 3). Assigned Coding because the content revolves around code generation, refactoring, code automation, and Python/CLI/agent development (Coding rules 1, 2, 4). Assigned DevOps because Codex is integrated into CI/CD pipelines with GitHub Actions, and development workflow automation is a focus (DevOps rules 2, 5, 6, 9). No ML or Security category: while the article mentions AI and automation, it does not focus on ML/data science methods or security implementation. No generic exclusions apply; the content is technical, English, and focused on Microsoft technology development."
   }
 ]
