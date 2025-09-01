@@ -1,0 +1,20 @@
+{
+  "Tags": [
+    "active directory",
+    "ad",
+    "azure ad",
+    "cloud",
+    "entra id"
+  ],
+  "ProcessedDate": "2025-09-01 15:11:34",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ",
+  "Description": "A quick video for those trying to understand WHAT Entra ID actually is!\n\n🔎 Looking for content on a particular topic? Search the channel. If I have something it will be there! 🤔 Due to the channel growth and number of people wanting help I no longer can answer or even read questions and they will just stay in the moderation queue never to be seen so please post questions to other sites like Reddit, Microsoft Community Hub etc.\n\n▬▬▬▬▬▬ C H A P T E R S ⏰ ▬▬▬▬▬▬ 00:00 - Introduction 00:18 - Entra ID intro 00:48 - Users and devices 01:55 - On-premises integration 02:50 - HR systems 03:28 - Application and service integration 04:47 - Using single sign-on 06:22 - Identity as the security perimeter 06:49 - MFA and passkeys 07:40 - Conditional access 08:57 - On-premises resource and Internet site integration 09:14 - Summary 09:40 - Close\n\n▬▬▬▬▬▬ Want to learn more? 🚀 ▬▬▬▬▬▬ 📖 Recommended Learning Path for Azure 🔗 https://learn.onboardtoazure.com 🥇 Certification Content Repository 🔗 https://github.com/johnthebrit/CertificationMaterials 📅 Weekly Azure Update 🔗 https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks ☁ Azure Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY ⚙ DevOps Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq 💻 PowerShell Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFq\\_hR7FcMYg32xsSAObuq8 🎓 Certification Cram Videos 🔗 https://youtube.com/playlist?list=PLlVtbbG169nHz2qfLvPsAz9CnnXofhmcA 🧠 Mentoring Content 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGHxNkSWB0PjzZHwZ0BkXZZ ❔ Questions? Maybe I answered it in my FAQ 🔗 https://savilltech.com/faq 👕 Cure Childhood Cancer Charity T-Shirt Channel Store 🔗 https://johns-t-shirts-store.creator-spring.com/\n\n👂 Enable the subtitles and from there you can translate to your native language via the auto-translate feature in settings! https://youtu.be/v5b53-PgEmI for a demo of using this feature.\n\nSUBSCRIBE ✅ https://www.youtube.com/channel/UCpIn7ox7j7bH\\_OFj7tYouOQ?sub\\_confirmation=1\n\n#activedirectory #entraid #azuread #johnsavillstechnicaltraining #onboardtoazure",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "John Savill's Technical Training",
+  "Link": "https://www.youtube.com/watch?v=UP2kzp14WA0",
+  "EnhancedContent": null,
+  "Author": "John Savill's Technical Training",
+  "PubDate": "2025-09-01T14:09:40+00:00",
+  "FeedName": "John Savill's Technical Training",
+  "Title": "Beginners Guide to Entra ID"
+}

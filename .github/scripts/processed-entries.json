@@ -7974,5 +7974,11 @@
     "timestamp": "2025-09-01 14:12:16 +00:00",
     "collection": "videos",
     "reason": "Succesfully added: Assigned the 'AI' category because the video directly discusses GitHub Copilot, a Microsoft AI-powered developer tool (AI category rule 2). 'GitHub Copilot' category is also assigned as the content is entirely focused on this product and its new web-based agents panel (GitHub Copilot rules 1, 2, and 3). Coding, DevOps, Azure, ML, and Security categories do not apply, as there’s no mention of coding best practices, DevOps pipelines, Azure deployment, machine learning development, or security specifics. Generic exclusion rules do not apply, as the content is technical, developer-focused, in English, and not a sales pitch or biographical."
+  },
+  {
+    "timestamp": "2025-09-01 15:12:32 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=UP2kzp14WA0",
+    "reason": "Succesfully added: Assigned the Security category because the content comprehensively explains Entra ID (formerly Azure AD), which is Microsoft's core identity and access management solution (Security rule 1). The video covers security concepts such as MFA, conditional access, and using identity as a security perimeter (Security rules 2, 3, 4). Did not assign Azure because while Entra ID is an Azure-based service, the focus is on identity/security rather than broader Azure platform/development aspects. No Coding, DevOps, AI, GitHub Copilot, or ML content is covered based on the video description and chapter list.",
+    "collection": "videos"
   }
 ]
