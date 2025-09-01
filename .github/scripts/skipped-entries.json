@@ -7053,5 +7053,11 @@
     "collection": "posts",
     "timestamp": "2025-09-01 06:20:04 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rule—this post is primarily focused on job opportunities and hiring announcements, which falls under the 'Job-Related Content' exclusion in Chapter 3. It lists available DevOps jobs at various companies and mentions pay scales, but does not provide technical implementation details or hands-on technical guidance relevant to Microsoft technologies or professional development. Therefore, no categories are assigned."
+  },
+  {
+    "timestamp": "2025-09-01 09:16:25 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/microsoft-365-for-education-best-practices-for-teachers/",
+    "reason": "No categories found: All categories are excluded based on the Generic Exclusion Rules (Chapter 3). The content is primarily focused on tips and best practices for teachers using various Microsoft 365 applications (Teams, OneNote, Forms, Word, PowerPoint, Excel) in an educational setting. There is no substantial coverage of development, coding, AI, ML, DevOps, or security implementation or architecture. End-user product usage, especially in non-development, non-administration, and non-customization scenarios, is explicitly excluded according to the 'Non-Development Microsoft Products' exclusion rule. The tutorial is aimed at educators, not at technical implementation or development audiences. Therefore, no categories are assigned."
   }
 ]

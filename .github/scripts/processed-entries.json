@@ -7962,5 +7962,11 @@
     "reason": "Succesfully added: Assigned the 'AI' category because the episode discusses the impact and adoption of AI in developer workflows (AI inclusion rule 5), specifically through EpicAI and VS Code enhancements. 'Coding' was assigned because much of the content revolves around developer workflows, building extensions, and integrating MCP servers (Coding rules 2 and 4). 'DevOps' is included due to the focus on developer tools, workflow improvements, and the integration of infrastructure like MCP servers and Playwright into development processes (DevOps rules 2, 5, and 9). The content is technical and centrally focused on Microsoft developer platforms, easily exceeding the required Microsoft technology threshold.",
     "collection": "videos",
     "timestamp": "2025-09-01 07:15:03 +00:00"
+  },
+  {
+    "timestamp": "2025-09-01 09:16:11 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/creating-custom-microsoft-teams-apps-and-tabs/",
+    "reason": "Succesfully added: The content focuses on developer-centric aspects of building custom Microsoft Teams apps and tabs, including using Teams Toolkit, Azure Active Directory authentication, Power Apps, and code-based solutions. This aligns with the Coding category, specifically covering Microsoft application development, frameworks, and developer tools (Coding rules 1, 2, and 5). Teams development is explicitly called out as in-scope for Coding per rebranding guidelines. The content does not qualify for the AI, DevOps, Azure, ML, or Security categories as it does not address those topics directly or in technical depth. No generic exclusion rules apply."
   }
 ]
