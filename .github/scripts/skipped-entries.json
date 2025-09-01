@@ -7071,5 +7071,11 @@
     "timestamp": "2025-09-01 14:12:31 +00:00",
     "collection": "videos",
     "reason": "No categories found: Content excluded due to generic exclusion rule—there is no substantive content provided ('content' and 'description' are empty/null). Without content, it is impossible to assess if the entry qualifies for any technical categories. According to the requirement to focus on actual content and not fabricate information, no categories can be assigned."
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content is about 'Copilot for Azure SQL,' which falls under the business productivity Copilot products (Microsoft 365 Copilot, Copilot for Microsoft 365, Copilot for Azure SQL, Office Copilot, Bing Chat) per Chapter 2: CRITICAL: Copilot Product Distinction. These are explicitly excluded as non-development Microsoft 365/business productivity tools and must not be assigned any categories. The video focuses on crafting effective prompts for Copilot for Azure SQL, which is aimed at making end-user interactions with Azure SQL easier using Copilot, not at coding, AI/ML engineering, or core developer tooling.",
+    "timestamp": "2025-09-01 16:14:52 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=Ex8yvAqYNCs"
   }
 ]
