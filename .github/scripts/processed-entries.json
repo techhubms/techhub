@@ -7968,5 +7968,11 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/creating-custom-microsoft-teams-apps-and-tabs/",
     "reason": "Succesfully added: The content focuses on developer-centric aspects of building custom Microsoft Teams apps and tabs, including using Teams Toolkit, Azure Active Directory authentication, Power Apps, and code-based solutions. This aligns with the Coding category, specifically covering Microsoft application development, frameworks, and developer tools (Coding rules 1, 2, and 5). Teams development is explicitly called out as in-scope for Coding per rebranding guidelines. The content does not qualify for the AI, DevOps, Azure, ML, or Security categories as it does not address those topics directly or in technical depth. No generic exclusion rules apply."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/oBW4Xt6c_Uo",
+    "timestamp": "2025-09-01 14:12:16 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the 'AI' category because the video directly discusses GitHub Copilot, a Microsoft AI-powered developer tool (AI category rule 2). 'GitHub Copilot' category is also assigned as the content is entirely focused on this product and its new web-based agents panel (GitHub Copilot rules 1, 2, and 3). Coding, DevOps, Azure, ML, and Security categories do not apply, as there’s no mention of coding best practices, DevOps pipelines, Azure deployment, machine learning development, or security specifics. Generic exclusion rules do not apply, as the content is technical, developer-focused, in English, and not a sales pitch or biographical."
   }
 ]

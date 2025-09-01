@@ -7059,5 +7059,17 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/microsoft-365-for-education-best-practices-for-teachers/",
     "reason": "No categories found: All categories are excluded based on the Generic Exclusion Rules (Chapter 3). The content is primarily focused on tips and best practices for teachers using various Microsoft 365 applications (Teams, OneNote, Forms, Word, PowerPoint, Excel) in an educational setting. There is no substantial coverage of development, coding, AI, ML, DevOps, or security implementation or architecture. End-user product usage, especially in non-development, non-administration, and non-customization scenarios, is explicitly excluded according to the 'Non-Development Microsoft Products' exclusion rule. The tutorial is aimed at educators, not at technical implementation or development audiences. Therefore, no categories are assigned."
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-09-01 10:14:28 +00:00",
+    "canonical_url": "https://dellenny.com/how-nonprofits-can-maximize-microsoft-365-donations/",
+    "reason": "No categories found: All categories are excluded due to generic exclusion rules regarding non-development Microsoft products. The content is focused on maximizing the use of Microsoft 365 (Office apps, Teams, SharePoint, OneDrive) for nonprofit organizations, but it addresses licensing, adoption, productivity, and security at the end-user/business productivity level, not from a developer or technical implementation perspective. There is brief mention of Power Platform components (e.g. Power Automate, Power Apps, Power BI), but these are presented as end-user/business automation tools for nonprofits and not in a developer or advanced technical context. There is no substantive focus on coding, DevOps, Azure architecture, AI/ML development, or security implementation for developers. Per rules in Chapter 3 'Non-Development Microsoft Products' and the Copilot product distinction, all Microsoft 365/Office 365 business productivity content is excluded unless it specifically covers development. Therefore, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/edE2qCwSSk4",
+    "timestamp": "2025-09-01 14:12:31 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule—there is no substantive content provided ('content' and 'description' are empty/null). Without content, it is impossible to assess if the entry qualifies for any technical categories. According to the requirement to focus on actual content and not fabricate information, no categories can be assigned."
   }
 ]
