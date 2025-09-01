@@ -7992,5 +7992,11 @@
     "timestamp": "2025-09-01 16:15:24 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-premium-v4-for-azure-app/ba-p/4446204"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-09-01 20:13:13 +00:00",
+    "reason": "Succesfully added: The content qualifies for AI (AI Rule 1 and 4) because the Azure SRE Agent is described as a pre-built AI assistant providing intelligent automation. Azure category is included (Azure Rule 1 and 4) since the product is purpose-built for Azure workload management and extensively covers Azure services. DevOps is included (DevOps Rules 2, 5, 6, 11) due to deep integration with CI/CD tools (GitHub, Azure DevOps), operational automation, incident management workflows, and focus on closing the loop from incidents to remediation. Security is included (Security Rules 1, 2, 3) as it emphasizes secure-by-design operations, granular permissions, governance, and secure incident handling. ML is not included because there is no direct coverage of custom model building, advanced analytics, or data science workflows—the AI discussed is delivered as a platform service and not configured or trained by the end user. No exclusion rules were met.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/enterprise-ready-and-extensible-update-on-the-azure-sre-agent/ba-p/4444299"
   }
 ]
