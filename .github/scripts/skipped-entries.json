@@ -7047,5 +7047,11 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/advanced-file-explorer-tips-for-faster-navigation-in-windows-11/",
     "reason": "No categories found: All categories are excluded according to the generic exclusion rules in Chapter 3. The content is a collection of advanced tips for using Windows File Explorer in Windows 11, targeting end-users and power users for personal productivity. There is no substantive discussion of Microsoft developer tooling, coding, DevOps, Azure services, AI, ML, or security relevant to Microsoft development or consulting. It is not focused on programming, scripting, or automation from a developer standpoint, but rather end-user navigation and UI features. The article does not contain any technical implementation details for Microsoft developer tools, frameworks, or services (see Non-Development Microsoft Products and Business/Productivity Tool exclusions)."
+  },
+  {
+    "canonical_url": "https://devops.com/five-great-devops-job-opportunities-154/?utm_source=rss&utm_medium=rss&utm_campaign=five-great-devops-job-opportunities-154",
+    "collection": "posts",
+    "timestamp": "2025-09-01 06:20:04 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule—this post is primarily focused on job opportunities and hiring announcements, which falls under the 'Job-Related Content' exclusion in Chapter 3. It lists available DevOps jobs at various companies and mentions pay scales, but does not provide technical implementation details or hands-on technical guidance relevant to Microsoft technologies or professional development. Therefore, no categories are assigned."
   }
 ]

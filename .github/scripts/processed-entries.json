@@ -7956,5 +7956,11 @@
     "timestamp": "2025-08-31 17:10:22 +00:00",
     "collection": "news",
     "reason": "Succesfully added: Assigned AI category because the post centers on integrating OpenAI Codex (AI rule 1) and configuring AI agents. Assigned Azure because Azure OpenAI, Azure AI Foundry, and Azure resource deployment are central throughout (Azure rules 1 and 3). Assigned Coding because the content revolves around code generation, refactoring, code automation, and Python/CLI/agent development (Coding rules 1, 2, 4). Assigned DevOps because Codex is integrated into CI/CD pipelines with GitHub Actions, and development workflow automation is a focus (DevOps rules 2, 5, 6, 9). No ML or Security category: while the article mentions AI and automation, it does not focus on ML/data science methods or security implementation. No generic exclusions apply; the content is technical, English, and focused on Microsoft technology development."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=E50EsAAd8qI",
+    "reason": "Succesfully added: Assigned the 'AI' category because the episode discusses the impact and adoption of AI in developer workflows (AI inclusion rule 5), specifically through EpicAI and VS Code enhancements. 'Coding' was assigned because much of the content revolves around developer workflows, building extensions, and integrating MCP servers (Coding rules 2 and 4). 'DevOps' is included due to the focus on developer tools, workflow improvements, and the integration of infrastructure like MCP servers and Playwright into development processes (DevOps rules 2, 5, and 9). The content is technical and centrally focused on Microsoft developer platforms, easily exceeding the required Microsoft technology threshold.",
+    "collection": "videos",
+    "timestamp": "2025-09-01 07:15:03 +00:00"
   }
 ]
