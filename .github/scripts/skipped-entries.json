@@ -7113,5 +7113,11 @@
     "collection": "community",
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/tools/how-to-migrate-legacy-applications-using-github-copilot/m-p/4450330#M164"
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_accelerating-ai-adoption-for-the-us-government-activity-7368633377911992321-sOUy",
+    "reason": "No categories found: All content categories are excluded due to the generic exclusion rule for non-development Microsoft products. The main topic is the partnership between Microsoft and the US Government to accelerate AI and digital technology adoption, with a highlighted offer of Microsoft 365 Copilot. According to the workflow (Chapter 3: Non-Development Microsoft Products exclusion and CRITICAL Copilot Product Distinction), business productivity tools such as Microsoft 365 Copilot, Copilot for Microsoft 365, and Office Copilot are specifically excluded from all categories. The content focuses on strategic, business-level programs, broad digital transformation, cost savings, and the facilitation of AI productivity in federal agencies, but it does not address development, coding, DevOps, ML, or technical AI implementation for developers. Azure and Dynamics 365 are also mentioned, but only in a high-level business context with no actionable technical details or developer-focused content. Therefore, no categories are assigned.",
+    "collection": "news",
+    "timestamp": "2025-09-02 15:16:01 +00:00"
   }
 ]

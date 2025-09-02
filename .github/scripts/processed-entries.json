@@ -8058,5 +8058,23 @@
     "timestamp": "2025-09-02 14:13:53 +00:00",
     "reason": "Succesfully added: Assigned the 'AI' category because the content focuses on using AI tools in software development, specifically discussing context and requirements for effective AI-driven coding (AI inclusion rule 4). Assigned 'GitHub Copilot' category because the video directly references GitHub Copilot as the AI coding assistant (GitHub Copilot rule 1). As per rules, whenever 'GitHub Copilot' is assigned, 'AI' must also be assigned. 'Coding' and 'DevOps' categories were not assigned because the focus is on guiding AI via requirements rather than direct code writing or DevOps practices.",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/asia/2025/09/02/powering-progress-in-asia-ai-and-energy/",
+    "reason": "Succesfully added: Assigned 'AI' category because the content discusses the use of AI technology for grid forecasting, energy management, and sustainability initiatives, meeting AI category rule 1 and 4. Assigned 'Azure' category because the article references using Azure as the platform for AI energy solutions (Azure rule 1 and 3). Did not assign 'ML' (machine learning), 'DevOps', 'Coding', 'Security', or 'GitHub Copilot' because there is no content about code development, machine learning engineering, DevOps tooling, or security systems, only general AI application in operational contexts. Content is not biographical, not a sales pitch, not business/executive strategy-only, and is substantively technical and English-language, so none of the generic exclusions apply.",
+    "collection": "news",
+    "timestamp": "2025-09-02 15:15:11 +00:00"
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/emea/features/the-benefits-of-ai-in-healthcare-extend-far-beyond-improved-patient-care/",
+    "reason": "Succesfully added: Assigned the 'AI' category as the article discusses the adoption and transformative effects of artificial intelligence in Kenya's healthcare system, specifically referencing Microsoft's role and investments (AI rule 1 and AI rule 6). No other categories apply: while Microsoft is mentioned, the focus is on AI benefits, infrastructure, and skill-building, not coding, DevOps, Azure-specific technologies, ML engineering, or security. There is no technical depth related to coding, data science, Azure-specific engineering, or security implementations, so those categories were not assigned.",
+    "collection": "news",
+    "timestamp": "2025-09-02 15:15:45 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/securing-cloud-shell-access-to-aks/ba-p/4450299",
+    "reason": "Succesfully added: Assigned 'Azure' category since the article is entirely about Azure Cloud Shell and Azure Kubernetes Service, satisfying Azure Category rule 1 and 4. Assigned 'Security' because the primary focus is securing AKS API server access—options include authorized IP ranges, network isolation, Bastion, and vNet configuration (Security rules 1, 3, 4, 7, and 9). Assigned 'DevOps' as it discusses operational approaches for managing AKS in a secure, automated fashion, involving scripting, Command Invoke, and access control (DevOps rules 1, 5, 6, and 7). Did NOT assign 'Coding', 'AI', 'ML', or 'GitHub Copilot' as the article contains no programming language or AI/ML development, nor is it focused on code or application development specifically; instead, the content is architecture, access, and scripting for administration.",
+    "collection": "community",
+    "timestamp": "2025-09-02 15:17:04 +00:00"
   }
 ]
