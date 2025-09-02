@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "Starting today, developers with write access to repositories in security campaigns will receive email notifications without needing to subscribe to repository activity. Previously, users needed to subscribe to All activity…\n\nThe post [Improved notifications in security campaigns](https://github.blog/changelog/2025-09-01-improved-notifications-in-security-campaigns) appeared first on [The GitHub Blog](https://github.blog).",
+  "ProcessedDate": "2025-09-02 11:10:14",
+  "Author": "Allison",
+  "Title": "Improved notifications in security campaigns",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Tags": [],
+  "FeedName": "The GitHub Blog",
+  "PubDate": "2025-09-02T09:29:30+00:00",
+  "OutputDir": "_news",
+  "EnhancedContent": "Starting today, developers with `write` access to repositories in security campaigns will receive email notifications without needing to subscribe to repository activity. Previously, users needed to subscribe to **All activity** or **Security alerts** to be notified when campaigns were created or reached their due date.\n\nThis change ensures that developers best positioned to remediate security alerts are automatically aware of their security team’s priorities, making collaboration and communication more seamless. Security campaigns help teams prioritize and rapidly reduce their backlog of application security debt with GitHub Copilot Autofix, which automatically suggests fixes when campaigns are created.\n\nSecurity campaigns are available for users of GitHub Code Security on GitHub Enterprise Cloud. For more information, see [About security campaigns](https://docs.github.com/enterprise-cloud@latest/code-security/securing-your-organization/fixing-security-alerts-at-scale/about-security-campaigns) in the GitHub documentation.\n\nHave feedback on security campaigns? Join the discussion in the [GitHub Community](https://gh.io/security-campaigns-feedback).",
+  "Link": "https://github.blog/changelog/2025-09-01-improved-notifications-in-security-campaigns"
+}

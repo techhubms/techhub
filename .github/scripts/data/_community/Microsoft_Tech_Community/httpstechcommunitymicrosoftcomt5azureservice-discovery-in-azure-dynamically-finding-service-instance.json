@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Description": "Modern cloud-native applications are built from **microservices**—independently deployable units that must communicate with each other to form a cohesive system. In dynamic environments like **Azure Kubernetes Service (AKS)**, **Azure App Service**, or **Azure Container Apps**, service instances can scale up, scale down, or move across nodes at any time.\n\nThis creates a challenge:\n\n*How do services reliably find and talk to each other without hardcoding IP addresses or endpoints?*\n\nThe answer lies in the **Service Discovery architecture pattern**.\n\n[https://dellenny.com/service-discovery-in-azure-dynamically-finding-service-instances/](https://dellenny.com/service-discovery-in-azure-dynamically-finding-service-instances/)",
+  "ProcessedDate": "2025-09-02 11:10:55",
+  "Author": "JohnNaguib",
+  "Title": "Service Discovery in Azure Dynamically Finding Service Instances",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Tags": [],
+  "FeedName": "Microsoft Tech Community",
+  "PubDate": "2025-09-02T10:39:09+00:00",
+  "OutputDir": "_community",
+  "EnhancedContent": "Modern cloud-native applications are built from **microservices**—independently deployable units that must communicate with each other to form a cohesive system. In dynamic environments like **Azure Kubernetes Service (AKS)**, **Azure App Service**, or **Azure Container Apps**, service instances can scale up, scale down, or move across nodes at any time.\n\nThis creates a challenge:\n\n*How do services reliably find and talk to each other without hardcoding IP addresses or endpoints?*\n\nThe answer lies in the **Service Discovery architecture pattern**.\n\n[https://dellenny.com/service-discovery-in-azure-dynamically-finding-service-instances/](https://dellenny.com/service-discovery-in-azure-dynamically-finding-service-instances/)",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/service-discovery-in-azure-dynamically-finding-service-instances/m-p/4450327#M22172"
+}

@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet",
+  "Description": "Migrating legacy applications to modern platforms is one of the most challenging tasks in software development. Legacy systems often contain years of business logic, outdated frameworks, and dependencies that are no longer supported. At the same time, businesses need these applications to remain reliable and secure while benefiting from modern practices.\n\nThis is where **GitHub Copilot** can become a powerful ally. By acting as your AI pair programmer, Copilot can help accelerate repetitive refactoring tasks, suggest modern equivalents for deprecated code, and provide scaffolding for newer frameworks. While it won’t completely automate a migration, it can dramatically reduce the effort and improve developer productivity.\n\n[https://dellenny.com/how-to-migrate-legacy-applications-using-github-copilot/](https://dellenny.com/how-to-migrate-legacy-applications-using-github-copilot/)",
+  "ProcessedDate": "2025-09-02 11:10:52",
+  "Author": "JohnNaguib",
+  "Title": "How to Migrate Legacy Applications Using GitHub Copilot",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Tags": [],
+  "FeedName": "Microsoft Tech Community",
+  "PubDate": "2025-09-02T10:41:26+00:00",
+  "OutputDir": "_community",
+  "EnhancedContent": "Migrating legacy applications to modern platforms is one of the most challenging tasks in software development. Legacy systems often contain years of business logic, outdated frameworks, and dependencies that are no longer supported. At the same time, businesses need these applications to remain reliable and secure while benefiting from modern practices.\n\nThis is where **GitHub Copilot** can become a powerful ally. By acting as your AI pair programmer, Copilot can help accelerate repetitive refactoring tasks, suggest modern equivalents for deprecated code, and provide scaffolding for newer frameworks. While it won’t completely automate a migration, it can dramatically reduce the effort and improve developer productivity.\n\n[https://dellenny.com/how-to-migrate-legacy-applications-using-github-copilot/](https://dellenny.com/how-to-migrate-legacy-applications-using-github-copilot/)",
+  "Link": "https://techcommunity.microsoft.com/t5/tools/how-to-migrate-legacy-applications-using-github-copilot/m-p/4450330#M164"
+}

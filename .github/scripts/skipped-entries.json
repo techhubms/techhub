@@ -7095,5 +7095,23 @@
     "reason": "No categories found: Content excluded due to generic exclusion rules. The provided title and description indicate this is a leadership-focused conversation about Matt Shay's career, his role at the National Retail Federation, and general business/industry leadership principles within the retail sector. There is no substantive technical detail, no focus on Microsoft technology implementation, and the discussion centers on career journey, organizational strategy, and business challenges. This fits the 'Biographical Focus', 'Business Strategy and Executive Content', and 'Workplace and Business Focus' exclusions, which all mandate exclusion when content is not technical or developer focused.",
     "timestamp": "2025-09-02 05:13:27 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-09-02 11:12:33 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: No categories were assigned because, while the content is highly technical and focused on generative AI and DevOps for solution architects, it centers exclusively on Amazon Q, an AWS generative AI assistant, with no substantive coverage of Microsoft technologies or platforms. According to Multi-Platform Content Threshold rules (Chapter 2) and the Azure/AI/ML inclusion rules (Chapter 4), Microsoft technologies must comprise at least 40% of substantive content or be central to the solution. This post is specifically about AWS services and tools, not Microsoft offerings, and therefore does not qualify for any categories.",
+    "canonical_url": "https://dellenny.com/how-amazon-q-helps-solution-architects-in-their-day-to-day-tasks/"
+  },
+  {
+    "timestamp": "2025-09-02 11:13:13 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/service-discovery-in-azure-dynamically-finding-service-instances/m-p/4450327#M22172"
+  },
+  {
+    "timestamp": "2025-09-02 11:13:13 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/how-to-migrate-legacy-applications-using-github-copilot/m-p/4450330#M164"
   }
 ]

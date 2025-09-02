@@ -8028,5 +8028,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-an-ai-image-caption-generator-on-azure-app-service-with/ba-p/4450313",
     "timestamp": "2025-09-02 10:15:45 +00:00",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-09-02 11:11:30 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Security category because the content centers on application security, security alert notifications, and remediation through GitHub security campaigns (Security rule 1 and 5). Assigned DevOps category because security campaigns foster collaboration, automation, and operational improvement for development teams (DevOps rule 3 and 7). Added GitHub Copilot category because GitHub Copilot Autofix is specifically mentioned as part of the remediation process (GitHub Copilot rule 1 and 2), which also triggers inclusion of the AI category per the critical Copilot product distinction. AI is included as required when GitHub Copilot is mentioned. The content meets all thresholds for Microsoft-related developer tools and does not violate any exclusion rules.",
+    "canonical_url": "https://github.blog/changelog/2025-09-01-improved-notifications-in-security-campaigns"
+  },
+  {
+    "timestamp": "2025-09-02 11:12:18 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned 'Coding' category because the post focuses on .NET tool authoring, code packaging, compatibility via multi-targeting, and manipulation of project files (Coding rule 1 and 2). Assigned 'DevOps' because it discusses robust testing practices in CI, repeatable builds, and tool usage in development pipelines (DevOps rules 5, 6, and CI/CD practices). Did not assign 'Azure', 'AI', 'ML', 'Security', or 'GitHub Copilot' as the content does not cover cloud, AI, ML, security, or Copilot topics. The content is deeply technical, developer-focused, and does not violate any generic exclusion rules.",
+    "canonical_url": "https://andrewlock.net/using-and-authoring-dotnet-tools/"
+  },
+  {
+    "timestamp": "2025-09-02 11:13:05 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Categories assigned: AI (the primary topic is AI-assisted coding and team workflows, per AI inclusion rule 5), DevOps (content is centered on DevOps and CI/CD process improvements, aligning with DevOps inclusion rules 1, 5, 9), and Coding (focuses on collaborative coding practices and AI-powered code creation, matching Coding inclusion rule 4). No generic exclusion rules apply: content is technical, not biographical, not a sales pitch, not negative, is in English, and targets practitioner-level DevOps and development themes.",
+    "canonical_url": "https://devops.com/vibing-with-the-future-why-vibe-coding-is-the-next-big-wave-for-devops-and-ci-cd-teams/?utm_source=rss&utm_medium=rss&utm_campaign=vibing-with-the-future-why-vibe-coding-is-the-next-big-wave-for-devops-and-ci-cd-teams"
   }
 ]
