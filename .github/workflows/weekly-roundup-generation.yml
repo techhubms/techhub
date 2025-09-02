@@ -52,6 +52,8 @@ jobs:
       run: |
         git config --global user.email "${{ env.GIT_USER_EMAIL }}"
         git config --global user.name "${{ env.GIT_USER_NAME }}"
+        # use token from GitHub Actions for authentication
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/techhubms/techhub.git
 
     - name: Calculate date range
       id: dates
