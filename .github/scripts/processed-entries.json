@@ -8106,5 +8106,11 @@
     "timestamp": "2025-09-02 17:13:58 +00:00",
     "reason": "Succesfully added: Assigned 'Azure' category based on the centrality of Azure Linux 3.0 and Azure Kubernetes Service (Azure rule 1). Assigned 'Security' category due to the content’s focus on CIS benchmarks, regulatory compliance, and best practices for secure configuration (Security rules 1, 4, and 5). Did not assign Coding, DevOps, AI, ML, or GitHub Copilot categories because there is no programming, DevOps pipeline, AI/ML, or Copilot focus. All generic exclusion criteria were checked—content is technical, not biographical, is in English, is of sufficient length, and is not focused on job opportunities or business-only strategy.",
     "collection": "community"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/broadcom-vmware-licensing-changes-what-azure-vmware-solution/ba-p/4448784",
+    "timestamp": "2025-09-02 18:18:12 +00:00",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the article focuses exclusively on Azure VMware Solution (AVS), a Microsoft Azure service, and details upcoming changes affecting its use due to Broadcom's VMware licensing updates (Azure inclusion rule 1 and 4). There is no technical information that falls under Coding, DevOps, Security, ML, AI, or GitHub Copilot; the content is about cloud service management, licensing, and deployment within Azure. No generic exclusion rules applied: the article is in English, not biographical, not job-related, and is technical rather than business/strategy or sales-pitch focused."
   }
 ]

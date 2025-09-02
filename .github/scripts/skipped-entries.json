@@ -7131,5 +7131,17 @@
     "timestamp": "2025-09-02 17:13:04 +00:00",
     "reason": "No categories found: No categories were assigned because the content focuses exclusively on Persistent’s iAURA 2.0 Agentic AI Suite and AWS for data management modernization, without any substantive mention or usage of Microsoft technologies. AWS is the central cloud platform referenced, and there are no indications of Microsoft Azure, .NET, Power Platform, or related developer/cloud tooling. According to the multi-platform content threshold, Microsoft technologies must be central or constitute 40% or more of the technical discussion to qualify for categorization. Therefore, this post is excluded based on content scope rules.",
     "collection": "posts"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/accelerating-devops-automation-how-aws-and-platformr-streamline-your-cloud-journey/?utm_source=rss&utm_medium=rss&utm_campaign=accelerating-devops-automation-how-aws-and-platformr-streamline-your-cloud-journey",
+    "timestamp": "2025-09-02 18:17:21 +00:00",
+    "reason": "No categories found: No categories assigned. After careful analysis, the content is centered on DevOps automation and cloud migration using AWS and Platformr, with no mention of Microsoft technologies. According to the Multi-Platform Content Threshold in Chapter 2 and Azure category rules, Microsoft technologies must comprise at least 40% or be central to the solution for inclusion. There are no substantive Microsoft references in the title, description, content, or tags. Thus, per instructions, the categories array remains empty."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/the-ai-implementation-paradox-why-your-best-strategy-might-be-your-smallest-move/?utm_source=rss&utm_medium=rss&utm_campaign=the-ai-implementation-paradox-why-your-best-strategy-might-be-your-smallest-move",
+    "timestamp": "2025-09-02 18:17:36 +00:00",
+    "reason": "No categories found: All generic exclusion rules must be applied first, per Chapter 3. After reviewing the provided title, description, and content, there is no substantive technical detail present about Microsoft technologies, products, services, frameworks, or development practices. The content is entirely a high-level discussion about AI adoption in general business strategy and decision-making, targeted at organizational leaders rather than technical practitioners, and does not mention or focus on any specific Microsoft technologies or implementation details. This matches the 'Business Strategy and Executive Content' and 'Business vs Technical Content' exclusions in Chapter 3, and also does not reach the threshold for any inclusion category. Therefore, no categories apply."
   }
 ]
