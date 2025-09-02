@@ -122,6 +122,13 @@ jobs:
         # Ensure we're in the right directory context
         GITHUB_WORKSPACE: ${{ github.workspace }}
 
+    - name: Generate Fresh Token for Git Operations
+      id: git-token
+      uses: actions/create-github-app-token@v1
+      with:
+        app-id: ${{ secrets.RSS_APP_APPID }}
+        private-key: ${{ secrets.RSS_APP_PRIVATEKEY }}
+
     - name: Create Branch and Commit Generated Roundup
       shell: pwsh
       run: |
@@ -143,12 +150,12 @@ jobs:
             }
             
             # Check if remote branch exists and remove it (fetch first to update remote tracking)
-            git fetch https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git
+            git fetch https://x-access-token:${{ steps.git-token.outputs.token }}@github.com/${{ github.repository }}.git
             $remoteBranchExists = git branch -r --list "origin/$branchName"
             if ($remoteBranchExists) {
                 Write-Host "🗑️ Remote branch $branchName exists, removing it..."
                 try {
-                    git push https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git --delete $branchName
+                    git push https://x-access-token:${{ steps.git-token.outputs.token }}@github.com/${{ github.repository }}.git --delete $branchName
                     Write-Host "🗑️ Removed remote branch $branchName"
                 } catch {
                     Write-Host "⚠️ Failed to remove remote branch $branchName - continuing anyway"
@@ -165,8 +172,8 @@ jobs:
             $commitMessage = "🤖 Add weekly roundup for ${{ steps.dates.outputs.start-date }} to ${{ steps.dates.outputs.end-date }} - Generated automatically via GitHub Actions"
             git commit -m "$commitMessage"
             
-            # Push branch using app token
-            git push https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git $branchName
+            # Push branch using fresh app token
+            git push https://x-access-token:${{ steps.git-token.outputs.token }}@github.com/${{ github.repository }}.git $branchName
             
             Write-Host "✅ Successfully committed and pushed branch: $branchName"
             
@@ -183,6 +190,14 @@ jobs:
           exit 1
         }
       id: commit-changes
+
+    - name: Generate Fresh Token for PR Creation
+      if: steps.commit-changes.outputs.has-changes == 'true'
+      id: pr-token
+      uses: actions/create-github-app-token@v1
+      with:
+        app-id: ${{ secrets.RSS_APP_APPID }}
+        private-key: ${{ secrets.RSS_APP_PRIVATEKEY }}
 
     - name: Create Pull Request
       if: steps.commit-changes.outputs.has-changes == 'true'
@@ -211,8 +226,8 @@ jobs:
         > This PR was automatically created by the Weekly Roundup Generation workflow.
         "@
           
-          # Create pull request using GitHub CLI (which uses the app token from environment)
-          $env:GITHUB_TOKEN = "${{ steps.app-token.outputs.token }}"
+          # Create pull request using GitHub CLI with fresh app token
+          $env:GITHUB_TOKEN = "${{ steps.pr-token.outputs.token }}"
           gh pr create --title "$prTitle" --body "$prBody" --base main --head $branchName --repo ${{ github.repository }}
           
           Write-Host "✅ Successfully created pull request"
