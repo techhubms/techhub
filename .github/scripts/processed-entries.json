@@ -8004,5 +8004,17 @@
     "reason": "Succesfully added: Assigned Azure category due to extensive and central coverage of Azure Logic Apps, Azure Functions, Azure Integration Services, Service Bus, Virtual Networks, Kubernetes, and other Azure technologies throughout the newsletter (Azure rules 1, 4, 5). Assigned DevOps because of repeated technical discussions on CI/CD pipelines, GitHub integration, deployment automation, and workflow management in both product and community posts (DevOps rules 1, 5, 6). Assigned AI as several articles explicitly cover AI agent loops in Logic Apps, Azure OpenAI integration, ChatGPT provisioning, and practical LLM automation (AI rules 1, 4, 5). Coding category applies due to systematic coverage of developer workflows for Logic Apps, JSON mapping, secure service integration, and scripting with APIs (Coding rules 1, 2, 4). All generic exclusion rules were reviewed and do not apply: content is technical, sufficiently long, in English, and not biographical or sales-driven. Community content is above the 200-word threshold. Overlap with community and product news is structured and educational, not promotional.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-september-25/ba-p/4450195",
     "timestamp": "2025-09-01 22:11:47 +00:00"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-09-02 08:18:28 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the central focus is using Microsoft Copilot Studio—a platform for building generative AI solutions that combine artificial intelligence with deterministic business logic (AI rule 1, Copilot Studio listed in AI rule 1). No 'Coding' category, as there's no focus on code or programming language implementation; the article is centered on low-code solution design and workflow assembly. 'DevOps', 'Azure', 'ML', 'Security', and 'GitHub Copilot' categories do not apply, as the content does not discuss those topics. The tags were derived by extracting product names, methodologies, and concepts discussed in the technical description and architecture. The content is in English, presents actionable information for technical professionals building AI copilots, and is not promotional or biographical in nature.",
+    "canonical_url": "https://dellenny.com/combining-generative-ai-and-business-logic-with-copilot-studio/"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-09-02 08:19:00 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the article thoroughly discusses service discovery across Azure platforms like AKS, App Service, Service Fabric, and Container Apps (Azure rule 1, 4, and 5). Assigned Coding because it addresses software architecture, programming patterns, and implementation strategies relevant to developers (Coding rules 3 and 4). Did not assign DevOps, ML, AI, GitHub Copilot, or Security as there is no focus on CI/CD, data science, machine learning, AI, developer tooling, or security-specific practices. The content uses clear, technical language, meeting the quality requirements and does not violate any generic exclusion rules.",
+    "canonical_url": "https://dellenny.com/service-discovery-in-azure-dynamically-finding-service-instances/"
   }
 ]
