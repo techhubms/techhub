@@ -8082,5 +8082,29 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/ga-enhanced-audit-in-azure-security-baseline-for-linux/ba-p/4446170",
     "collection": "community",
     "reason": "Succesfully added: Assigned 'Azure' because the content centers on Azure services (Azure Policy, Azure Machine Configuration, Azure Arc) and their roles in enforcing security baselines for Linux infrastructure (Azure rule 1, 2, 4, 5, 6). Assigned 'Security' because the central purpose is security compliance, auditing, and configuration management aligned with benchmarks for enterprise environments (Security rules 1, 2, 4, 7, 9). Did not assign 'AI', 'ML', 'Coding', 'DevOps' because no content relates directly to those areas (rules not triggered). No generic exclusion rules applied as content is technical, detailed, and relevant to Azure and security practitioners."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/startups/blog/could-your-startup-be-the-next-imagine-cup-world-champion/",
+    "timestamp": "2025-09-02 17:12:02 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because Argus leverages Azure AI Foundry and Azure AI Speech (AI inclusion rules 1 and 4). Assigned 'Azure' due to the core use of Azure cloud services and direct discussion of deployment details (Azure rules 1 and 3). Did not assign other categories: the content does not provide sufficient technical depth on custom ML engineering (ML), coding practices or code development (Coding), DevOps (DevOps), GitHub Copilot, or security implementation. No generic exclusion rules apply: the article is technical, focuses on Microsoft technologies (>40% of content), and is not a business/productivity, biographical, sales, or non-English piece.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/",
+    "timestamp": "2025-09-02 17:12:34 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the article focuses on using AI-powered coding agents (GitHub Copilot, Claude Code, Gemini CLI) to execute spec-driven development (AI rule 1, 4, and 5). Included GitHub Copilot since it is specifically mentioned as a supported tool, and content covers usage, workflow, and integration details (GitHub Copilot rules 1-4). Assigned Coding because the toolkit, process, and agent usage directly relate to coding workflows and software project implementation with code (Coding rules 4 and 5). Did not include DevOps, Azure, ML, or Security, as there is no focus on deployment pipelines, cloud services, data science, or security implementation.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=O1nx8mve5RY",
+    "timestamp": "2025-09-02 17:13:33 +00:00",
+    "reason": "Succesfully added: Applied Azure category because Azure Key Vault is a central integration in the episode (Azure rule 1, 2). Security was assigned due to the focus on secure secret management, compliance, and risk reduction (Security rules 1, 2, 4). DevOps was included since secret management is shown as part of DevOps and Kubernetes operational workflows with runtime rotation and automation (DevOps rules 3, 6, 7). The content remains technical with actionable steps, and none of the generic exclusion criteria apply.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-3-0-achieves-level-1-cis-benchmark-certification/ba-p/4450410",
+    "timestamp": "2025-09-02 17:13:58 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' category based on the centrality of Azure Linux 3.0 and Azure Kubernetes Service (Azure rule 1). Assigned 'Security' category due to the content’s focus on CIS benchmarks, regulatory compliance, and best practices for secure configuration (Security rules 1, 4, and 5). Did not assign Coding, DevOps, AI, ML, or GitHub Copilot categories because there is no programming, DevOps pipeline, AI/ML, or Copilot focus. All generic exclusion criteria were checked—content is technical, not biographical, is in English, is of sufficient length, and is not focused on job opportunities or business-only strategy.",
+    "collection": "community"
   }
 ]

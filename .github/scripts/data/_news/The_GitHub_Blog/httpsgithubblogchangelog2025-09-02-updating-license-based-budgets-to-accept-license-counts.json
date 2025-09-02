@@ -1,0 +1,14 @@
+{
+  "Link": "https://github.blog/changelog/2025-09-02-updating-license-based-budgets-to-accept-license-counts",
+  "Author": "Allison",
+  "ProcessedDate": "2025-09-02 17:10:38",
+  "Title": "Updating license-based budgets to accept license counts",
+  "PubDate": "2025-09-02T15:07:35+00:00",
+  "OutputDir": "_news",
+  "Tags": [],
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedName": "The GitHub Blog",
+  "Description": "We’ve updated how license-based budgets work to make managing your enterprise and organization licenses simpler. Now, all new and existing license-based budgets use license counts instead of dollar amounts. For…\n\nThe post [Updating license-based budgets to accept license counts](https://github.blog/changelog/2025-09-02-updating-license-based-budgets-to-accept-license-counts) appeared first on [The GitHub Blog](https://github.blog).",
+  "EnhancedContent": "We’ve updated how license-based budgets work to make managing your enterprise and organization licenses simpler. Now, all new and existing license-based budgets use license counts instead of dollar amounts. For existing license-based budgets, your current budgets will be automatically converted to license counts — **no additional action is required**. The scope of your budgets and any alert notifications you’ve set up will not change.\n\nThis update makes it simpler to manage licensing and billing the way admins already work, so you can stay focused on what matters.\n\nLearn more about [how to create and manage budgets](https://docs.github.com/enterprise-cloud@latest/billing/tutorials/set-up-budgets) in our documentation.",
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}

@@ -7119,5 +7119,17 @@
     "reason": "No categories found: All content categories are excluded due to the generic exclusion rule for non-development Microsoft products. The main topic is the partnership between Microsoft and the US Government to accelerate AI and digital technology adoption, with a highlighted offer of Microsoft 365 Copilot. According to the workflow (Chapter 3: Non-Development Microsoft Products exclusion and CRITICAL Copilot Product Distinction), business productivity tools such as Microsoft 365 Copilot, Copilot for Microsoft 365, and Office Copilot are specifically excluded from all categories. The content focuses on strategic, business-level programs, broad digital transformation, cost savings, and the facilitation of AI productivity in federal agencies, but it does not address development, coding, DevOps, ML, or technical AI implementation for developers. Azure and Dynamics 365 are also mentioned, but only in a high-level business context with no actionable technical details or developer-focused content. Therefore, no categories are assigned.",
     "collection": "news",
     "timestamp": "2025-09-02 15:16:01 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-09-02-updating-license-based-budgets-to-accept-license-counts",
+    "timestamp": "2025-09-02 17:12:47 +00:00",
+    "reason": "No categories found: All generic exclusion rules were applied first, as required. The content is a product update about a change in how license-based budgets are configured in GitHub, moving from dollar amounts to license counts. While it is related to administrative and billing management within GitHub, there are no technical, development, coding, AI, DevOps, Azure, ML, or security implementation details in the content. The update is targeted at license administrators and focuses solely on financial and organizational aspects, not any developer-centric workflow or technical solution. According to the Generic Exclusion Rules in Chapter 3, business management and administrative content is excluded unless it involves technical implementation or development. Therefore, no categories apply.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://devops.com/accelerate-data-management-modernization-with-persistents-iaura-2-0-agentic-ai-suite-and-aws/?utm_source=rss&utm_medium=rss&utm_campaign=accelerate-data-management-modernization-with-persistents-iaura-2-0-agentic-ai-suite-and-aws",
+    "timestamp": "2025-09-02 17:13:04 +00:00",
+    "reason": "No categories found: No categories were assigned because the content focuses exclusively on Persistent’s iAURA 2.0 Agentic AI Suite and AWS for data management modernization, without any substantive mention or usage of Microsoft technologies. AWS is the central cloud platform referenced, and there are no indications of Microsoft Azure, .NET, Power Platform, or related developer/cloud tooling. According to the multi-platform content threshold, Microsoft technologies must be central or constitute 40% or more of the technical discussion to qualify for categorization. Therefore, this post is excluded based on content scope rules.",
+    "collection": "posts"
   }
 ]
