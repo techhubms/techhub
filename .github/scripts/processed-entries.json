@@ -8016,5 +8016,17 @@
     "timestamp": "2025-09-02 08:19:00 +00:00",
     "reason": "Succesfully added: Assigned the Azure category because the article thoroughly discusses service discovery across Azure platforms like AKS, App Service, Service Fabric, and Container Apps (Azure rule 1, 4, and 5). Assigned Coding because it addresses software architecture, programming patterns, and implementation strategies relevant to developers (Coding rules 3 and 4). Did not assign DevOps, ML, AI, GitHub Copilot, or Security as there is no focus on CI/CD, data science, machine learning, AI, developer tooling, or security-specific practices. The content uses clear, technical language, meeting the quality requirements and does not violate any generic exclusion rules.",
     "canonical_url": "https://dellenny.com/service-discovery-in-azure-dynamically-finding-service-instances/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the article centrally discusses using GitHub Copilot for software migration (GitHub Copilot rules 1–6, AI rules 1–5). Added 'Coding' due to the focus on hands-on refactoring tasks, code examples, and programming practices (Coding rules 1–4). Included 'DevOps' because the guide covers continuous integration, deployment strategies, and automated pipelines integral to modern migration workflows (DevOps rules 5–6, 9). No Azure, ML, or Security category applies, as there is no substantive focus on those platforms or concerns. None of the generic exclusion rules are triggered: this is a technical, developer-focused how-to with substantive content.",
+    "canonical_url": "https://dellenny.com/how-to-migrate-legacy-applications-using-github-copilot/",
+    "timestamp": "2025-09-02 10:14:44 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the app uses Azure AI Vision for image tagging and Azure OpenAI (GPT-4o-mini) for caption generation, both Microsoft AI technologies (AI rule 1). Azure is included since the app is built on and deploys to Azure App Service and related Azure-managed resources (Azure rule 1, 4, 5). Coding is relevant because the content covers Python code structure, uses the Streamlit framework, and demonstrates API integration logic (Coding rules 1, 2, 4, 5). All major points in the content directly relate to the technical development and deployment of an AI-powered application using Microsoft services, meeting all category inclusion thresholds.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-an-ai-image-caption-generator-on-azure-app-service-with/ba-p/4450313",
+    "timestamp": "2025-09-02 10:15:45 +00:00",
+    "collection": "community"
   }
 ]
