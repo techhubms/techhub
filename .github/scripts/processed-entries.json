@@ -8046,5 +8046,11 @@
     "collection": "posts",
     "reason": "Succesfully added: Categories assigned: AI (the primary topic is AI-assisted coding and team workflows, per AI inclusion rule 5), DevOps (content is centered on DevOps and CI/CD process improvements, aligning with DevOps inclusion rules 1, 5, 9), and Coding (focuses on collaborative coding practices and AI-powered code creation, matching Coding inclusion rule 4). No generic exclusion rules apply: content is technical, not biographical, not a sales pitch, not negative, is in English, and targets practitioner-level DevOps and development themes.",
     "canonical_url": "https://devops.com/vibing-with-the-future-why-vibe-coding-is-the-next-big-wave-for-devops-and-ci-cd-teams/?utm_source=rss&utm_medium=rss&utm_campaign=vibing-with-the-future-why-vibe-coding-is-the-next-big-wave-for-devops-and-ci-cd-teams"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/boost-your-copilot-collaboration-with-reusable-prompt-files/",
+    "timestamp": "2025-09-02 12:23:39 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because the core focus is improving the developer experience with GitHub Copilot through better prompting workflows (AI rule 2 and 5). Assigned the GitHub Copilot category specifically since the entire article is about creating, saving, and sharing custom prompts for GitHub Copilot in Visual Studio, and fits the inclusion rules for Copilot features, workflow, and integrations (GitHub Copilot rules 1–4). Excluded Coding because while prompt files support coding, the content does not discuss language features, frameworks, or code; it centers on AI tool usage. Did not include DevOps or Azure as the article focuses specifically on developer tool enhancements, not CI/CD, infrastructure, or cloud services."
   }
 ]
