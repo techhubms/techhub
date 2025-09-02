@@ -8124,5 +8124,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI category because the episode discusses using AI (GitHub Copilot) with Spec Kit for driving development (AI rule 2 and 5). Included GitHub Copilot because it’s specifically mentioned as part of the workflow demonstration (GitHub Copilot rule 1 and 2). Included Coding because the primary focus is on a developer tool (Spec Kit) for code generation and software implementation (Coding rules 3-5). The content does not qualify for other categories as it does not focus on Azure, DevOps processes, ML/data science, or Security.",
     "timestamp": "2025-09-02 19:10:26 +00:00"
+  },
+  {
+    "timestamp": "2025-09-02 20:14:06 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Izrmr4VM4a8",
+    "reason": "Succesfully added: Content qualifies for the AI and Azure categories. The description and tags reference Azure AI Foundry, Azure AI agents, and direct developer Q&A, confirming substantial focus on Azure-based AI solutions (AI rule 1, Azure rule 1). There is no exclusion by generic rules: it is not biographical, negative, career-related, or promotional without depth, nor is it non-English or off-topic. Coding, DevOps, ML, Security, and GitHub Copilot categories do not directly apply as there is no evidence of hands-on coding, DevOps practices, custom ML engineering, security, or GitHub Copilot usage in the given description.",
+    "collection": "videos"
   }
 ]
