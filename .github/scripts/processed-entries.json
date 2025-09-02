@@ -8130,5 +8130,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=Izrmr4VM4a8",
     "reason": "Succesfully added: Content qualifies for the AI and Azure categories. The description and tags reference Azure AI Foundry, Azure AI agents, and direct developer Q&A, confirming substantial focus on Azure-based AI solutions (AI rule 1, Azure rule 1). There is no exclusion by generic rules: it is not biographical, negative, career-related, or promotional without depth, nor is it non-English or off-topic. Coding, DevOps, ML, Security, and GitHub Copilot categories do not directly apply as there is no evidence of hands-on coding, DevOps practices, custom ML engineering, security, or GitHub Copilot usage in the given description.",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'DevOps' category as the content is focused on technical details of GitHub Actions workflow configuration, CI/CD process security, and actionable best practices for development teams (DevOps rule 1, 2, 5, 6, 7). Assigned the 'Security' category because the main thrust is on mitigating supply chain and secret exfiltration attacks, secret management, and vulnerability remediation in developer pipelines using Microsoft GitHub (Security rules 1, 2, 4, 5, 6, 7, 8). No AI/ML/Azure categories, as the content does not cover Azure cloud, ML, or AI tooling. Content thoroughly meets technical knowledge-sharing standards and does not trigger any generic exclusion rules.",
+    "canonical_url": "https://jessehouwing.net/github-actions-learnings-from-the-recent-nx-hack/",
+    "collection": "posts",
+    "timestamp": "2025-09-02 21:10:38 +00:00"
   }
 ]
