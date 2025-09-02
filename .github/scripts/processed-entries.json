@@ -8052,5 +8052,11 @@
     "timestamp": "2025-09-02 12:23:39 +00:00",
     "collection": "news",
     "reason": "Succesfully added: Assigned the AI category because the core focus is improving the developer experience with GitHub Copilot through better prompting workflows (AI rule 2 and 5). Assigned the GitHub Copilot category specifically since the entire article is about creating, saving, and sharing custom prompts for GitHub Copilot in Visual Studio, and fits the inclusion rules for Copilot features, workflow, and integrations (GitHub Copilot rules 1–4). Excluded Coding because while prompt files support coding, the content does not discuss language features, frameworks, or code; it centers on AI tool usage. Did not include DevOps or Azure as the article focuses specifically on developer tool enhancements, not CI/CD, infrastructure, or cloud services."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/Nj2c3qPJ1Ng",
+    "timestamp": "2025-09-02 14:13:53 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content focuses on using AI tools in software development, specifically discussing context and requirements for effective AI-driven coding (AI inclusion rule 4). Assigned 'GitHub Copilot' category because the video directly references GitHub Copilot as the AI coding assistant (GitHub Copilot rule 1). As per rules, whenever 'GitHub Copilot' is assigned, 'AI' must also be assigned. 'Coding' and 'DevOps' categories were not assigned because the focus is on guiding AI via requirements rather than direct code writing or DevOps practices.",
+    "collection": "videos"
   }
 ]
