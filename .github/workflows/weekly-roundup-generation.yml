@@ -52,8 +52,6 @@ jobs:
       run: |
         git config --global user.email "${{ env.GIT_USER_EMAIL }}"
         git config --global user.name "${{ env.GIT_USER_NAME }}"
-        # use token from GitHub Actions for authentication
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/techhubms/techhub.git
 
     - name: Calculate date range
       id: dates
@@ -135,6 +133,9 @@ jobs:
       shell: pwsh
       run: |
         try {
+          # update the token to prevent issues during timeout
+          git remote set-url origin https://x-access-token:${{ steps.git-token.outputs.token }}@github.com/${{ github.repository }}.git
+          
           # Check if there are any changes to commit
           $gitStatus = git status --porcelain
           if ($gitStatus) {
@@ -152,6 +153,7 @@ jobs:
             }
             
             # Check if remote branch exists and remove it (fetch first to update remote tracking)
+            Write-Host "Fetching the remote branches"
             git fetch https://x-access-token:${{ steps.git-token.outputs.token }}@github.com/${{ github.repository }}.git
             $remoteBranchExists = git branch -r --list "origin/$branchName"
             if ($remoteBranchExists) {
