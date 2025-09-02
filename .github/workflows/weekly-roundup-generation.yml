@@ -123,67 +123,80 @@ jobs:
         GITHUB_WORKSPACE: ${{ github.workspace }}
 
     - name: Create Branch and Commit Generated Roundup
+      shell: pwsh
       run: |
-        # Check if there are any changes to commit
-        if [ -n "$(git status --porcelain)" ]; then
-          echo "📝 Changes detected, creating branch and committing new roundup..."
-          
-          # Create a unique branch name with date range
-          BRANCH_NAME="roundup/${{ steps.dates.outputs.start-date }}-to-${{ steps.dates.outputs.end-date }}"
-          echo "🌿 Creating branch: $BRANCH_NAME"
-          
-          # Check if branch already exists locally and remove it
-          if git branch --list "$BRANCH_NAME" | grep -q "$BRANCH_NAME"; then
-            echo "🗑️ Local branch $BRANCH_NAME already exists, removing it..."
-            git branch -D "$BRANCH_NAME"
-          fi
-          
-          # Check if remote branch exists and remove it (fetch first to update remote tracking)
-          git fetch https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git
-          if git branch -r --list "origin/$BRANCH_NAME" | grep -q "$BRANCH_NAME"; then
-            echo "🗑️ Remote branch $BRANCH_NAME exists, removing it..."
-            git push https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git --delete "$BRANCH_NAME" || echo "⚠️ Failed to remove remote branch - continuing anyway"
-          fi
-          
-          # Create and switch to new branch
-          git checkout -b "$BRANCH_NAME"
-          
-          # Add all changes
-          git add .
-          
-          # Create commit message with date range
-          COMMIT_MESSAGE="🤖 Add weekly roundup for ${{ steps.dates.outputs.start-date }} to ${{ steps.dates.outputs.end-date }} - Generated automatically via GitHub Actions"
-          git commit -m "$COMMIT_MESSAGE"
-          
-          # Push branch using app token
-          git push https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git "$BRANCH_NAME"
-          
-          echo "✅ Successfully committed and pushed branch: $BRANCH_NAME"
-          
-          # Output branch name for next step
-          echo "branch-name=$BRANCH_NAME" >> $GITHUB_OUTPUT
-          echo "has-changes=true" >> $GITHUB_OUTPUT
-        else
-          echo "ℹ️ No changes to commit - roundup may already exist"
-          echo "has-changes=false" >> $GITHUB_OUTPUT
-        fi
+        try {
+          # Check if there are any changes to commit
+          $gitStatus = git status --porcelain
+          if ($gitStatus) {
+            Write-Host "📝 Changes detected, creating branch and committing new roundup..."
+            
+            # Create a unique branch name with date range
+            $branchName = "roundup/${{ steps.dates.outputs.start-date }}-to-${{ steps.dates.outputs.end-date }}"
+            Write-Host "🌿 Creating branch: $branchName"
+            
+            # Check if branch already exists locally and remove it
+            $branchExists = git branch --list $branchName
+            if ($branchExists) {
+                Write-Host "🗑️ Local branch $branchName already exists, removing it..."
+                git branch -D $branchName
+            }
+            
+            # Check if remote branch exists and remove it (fetch first to update remote tracking)
+            git fetch https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git
+            $remoteBranchExists = git branch -r --list "origin/$branchName"
+            if ($remoteBranchExists) {
+                Write-Host "🗑️ Remote branch $branchName exists, removing it..."
+                try {
+                    git push https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git --delete $branchName
+                    Write-Host "🗑️ Removed remote branch $branchName"
+                } catch {
+                    Write-Host "⚠️ Failed to remove remote branch $branchName - continuing anyway"
+                }
+            }
+            
+            # Create and switch to new branch
+            git checkout -b $branchName
+            
+            # Add all changes
+            git add .
+            
+            # Create commit message with date range
+            $commitMessage = "🤖 Add weekly roundup for ${{ steps.dates.outputs.start-date }} to ${{ steps.dates.outputs.end-date }} - Generated automatically via GitHub Actions"
+            git commit -m "$commitMessage"
+            
+            # Push branch using app token
+            git push https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git $branchName
+            
+            Write-Host "✅ Successfully committed and pushed branch: $branchName"
+            
+            # Output branch name for next step
+            "branch-name=$branchName" >> $env:GITHUB_OUTPUT
+            "has-changes=true" >> $env:GITHUB_OUTPUT
+          } else {
+            Write-Host "ℹ️ No changes to commit - roundup may already exist"
+            "has-changes=false" >> $env:GITHUB_OUTPUT
+          }
+        }
+        catch {
+          Write-Host "❌ Error during git operations: $($_.Exception.Message)" -ForegroundColor Red
+          exit 1
+        }
       id: commit-changes
 
     - name: Create Pull Request
       if: steps.commit-changes.outputs.has-changes == 'true'
-      env:
-        GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+      shell: pwsh
       run: |
-        echo "📋 Creating pull request for weekly roundup..."
-        
-        BRANCH_NAME="${{ steps.commit-changes.outputs.branch-name }}"
-        PR_TITLE="🤖 Weekly Roundup: ${{ steps.dates.outputs.start-date }} to ${{ steps.dates.outputs.end-date }}"
-        
-        # Create temporary file with PR body
-        cat > /tmp/pr_body.md << 'EOF'
+        try {
+          Write-Host "📋 Creating pull request for weekly roundup..."
+          
+          $branchName = "${{ steps.commit-changes.outputs.branch-name }}"
+          $prTitle = "🤖 Weekly Roundup: ${{ steps.dates.outputs.start-date }} to ${{ steps.dates.outputs.end-date }}"
+          $prBody = @"
         ## 📅 Weekly Roundup Generated
         
-        Date Range: ${{ steps.dates.outputs.start-date }} to ${{ steps.dates.outputs.end-date }}
+        **Date Range:** ${{ steps.dates.outputs.start-date }} to ${{ steps.dates.outputs.end-date }}
         
         This pull request contains the automatically generated weekly roundup for the specified date range.
         
@@ -195,13 +208,19 @@ jobs:
         ### ✅ Ready for Review
         Please review the generated content and merge when ready.
         
-        This PR was automatically created by the Weekly Roundup Generation workflow.
-        EOF
-        
-        # Create pull request using GitHub CLI
-        gh pr create --title "$PR_TITLE" --body-file /tmp/pr_body.md --base main --head "$BRANCH_NAME" --repo ${{ github.repository }}
-        
-        echo "✅ Successfully created pull request"
+        > This PR was automatically created by the Weekly Roundup Generation workflow.
+        "@
+          
+          # Create pull request using GitHub CLI (which uses the app token from environment)
+          $env:GITHUB_TOKEN = "${{ steps.app-token.outputs.token }}"
+          gh pr create --title "$prTitle" --body "$prBody" --base main --head $branchName --repo ${{ github.repository }}
+          
+          Write-Host "✅ Successfully created pull request"
+        }
+        catch {
+          Write-Host "❌ Error creating pull request: $($_.Exception.Message)" -ForegroundColor Red
+          exit 1
+        }
 
     - name: Upload Debug Artifacts
       if: always()
