@@ -7149,5 +7149,17 @@
     "timestamp": "2025-09-03 08:18:04 +00:00",
     "collection": "posts",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The post, 'Lesser-Known Microsoft 365 Features That Save Hours (Beyond Teams and Outlook),' is primarily focused on highlighting business productivity features and tips for Microsoft 365 end-users (Quick Steps, Power Automate prebuilt flows, Editor, Dictation, OneNote, Excel Analyze Data, Loop, Presenter Coach, Bookings with Me, Whiteboard). It does not address development, engineering, coding, architecture, or in-depth technical implementation related to Microsoft development platforms. The article is educational for business and general productivity use, not for developers or technical consultants. Per the 'Non-Development Microsoft Products' and 'Business Productivity Tools' exclusion rules in Chapter 3, Microsoft 365 end-user features that are not development-focused (including Power Automate templates and Loop usage outside of custom development scenarios) are excluded from all categories."
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the content primarily discusses Microsoft 365 end-user administrative configuration and accessibility settings, which fall under the exclusion for non-development Microsoft products. The article focuses on enabling and administrating built-in accessibility features for Office apps, Teams, SharePoint, Outlook, and Windows, aimed at IT administrators—but not at developers, development, coding, DevOps, AI, ML, or security implementation. There is no technical depth regarding application development, automation, coding, or deployment, and none of the AI/ML, coding, or DevOps category inclusion rules apply. This aligns with the generic exclusion rule for business productivity and non-development Microsoft product content.",
+    "timestamp": "2025-09-03 11:11:17 +00:00",
+    "canonical_url": "https://dellenny.com/accessibility-features-in-microsoft-365-that-most-admins-forget-to-enable/",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The main description promotes a site-wide discount and newsletter, and while it mentions discussing 'every software architecture that you should be aware of,' there are no substantive technical details or any references to Microsoft technologies or specific software architectures in the provided text. The majority of the content consists of promotional links and social media reminders, fitting the 'Sales Pitches' and 'Low Content' (no main content text) exclusion criteria from Chapter 3. No categories are assigned.",
+    "timestamp": "2025-09-03 11:12:09 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=0bsY9z6qp1c",
+    "collection": "videos"
   }
 ]
