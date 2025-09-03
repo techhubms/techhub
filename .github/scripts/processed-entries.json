@@ -8190,5 +8190,17 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-communication-services/general-availability-of-teams-phone-extensibility/ba-p/4446092",
     "timestamp": "2025-09-03 16:18:40 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category as the content focuses on using an AI-powered tool (GitHub Copilot Coding Agent) to automate development tasks, matching AI rule 1. Assigned GitHub Copilot as the article is dedicated to that product, per the category's specific inclusion criteria. Assigned Coding because scenarios involve writing, testing, and reviewing .NET/C# code, matching Coding rules 1 and 2. Assigned DevOps as the article details automation of workflows, integration with GitHub issues and pull requests, and discusses continuous integration practices (DevOps rules 2, 5, 9). Did not assign Azure, ML, or Security since the article does not focus on those technologies or categories. The assigned categories are based on explicit mentions of .NET, C#, GitHub workflows, automated testing, PRs, and use of Copilot Coding Agent in the development lifecycle.",
+    "timestamp": "2025-09-03 17:11:37 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/copilot-coding-agent-dotnet/"
+  },
+  {
+    "reason": "Succesfully added: Included the Security category because the content is focused on network security controls, exfiltration prevention, and compliance (Security category rules 1, 5, 7, 9). Included Azure because Microsoft Fabric is a core Azure Data platform service integrating with Azure networking and data security infrastructure (Azure category rule 1). Included ML because it specifically addresses Spark workloads, data engineering artifacts, and implications for data-driven analytics pipelines—typical concerns in data science and ML contexts (ML category rules 1, 2, 5). Did not assign AI (not about AI services or development), DevOps (not about CI/CD or software processes), Coding (no code-level programming focus), nor GitHub Copilot. No generic exclusion rules applied as this is an official technical security announcement targeting practitioners.",
+    "timestamp": "2025-09-03 17:12:16 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-workspace-outbound-access-protection-for-spark-preview/"
   }
 ]

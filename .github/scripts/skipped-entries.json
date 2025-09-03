@@ -7197,5 +7197,17 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=w2qMcctqv40",
     "timestamp": "2025-09-03 16:17:53 +00:00"
+  },
+  {
+    "reason": "No categories found: All categories were excluded because the content does not provide any substantive technical information. The title 'Rubber Duck Thursday!', the description 'Let's hack and vibe together!', and the lack of content indicate this is likely a community, social, or casual event without technical focus or relevant Microsoft technology details. No technical depth, implementation, or reference to Microsoft product development is present, triggering the generic exclusion for lack of substantive/main content.",
+    "timestamp": "2025-09-03 17:12:40 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=M0vnGwc5dQU"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The provided content is a short video (likely a #shorts interview) asking attendees about their preferred cryptographic algorithm at Microsoft Build 2025, based on the description and hashtag usage. There's no substantive technical detail or depth about Microsoft technologies, no tutorial, implementation, or architectural information, and the actual content (full text or transcript) is missing (content is null). According to generic exclusion rules, content that is only attendee opinions or event interviews without technical depth is excluded, and lack of main content prevents relevant categorization.",
+    "timestamp": "2025-09-03 17:12:56 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/uRTZnGWs8ME"
   }
 ]
