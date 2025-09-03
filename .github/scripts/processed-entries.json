@@ -8136,5 +8136,17 @@
     "canonical_url": "https://jessehouwing.net/github-actions-learnings-from-the-recent-nx-hack/",
     "collection": "posts",
     "timestamp": "2025-09-02 21:10:38 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-retail-businesses-are-automating-customer-service-with-copilot-studio/",
+    "timestamp": "2025-09-03 08:17:48 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the AI category because Copilot Studio is a Microsoft AI platform focused on automating workflows (AI inclusion rule 1, 4, and 5). No other categories apply: the article does not involve software development, coding, DevOps, Azure-specific services, ML/data science engineering, or security/identity implementations. The focus is on using AI features via Copilot Studio in a business context, not on code development or ML engineering. This is supported by the technical workflow descriptions (integration, bots, automation) and use case examples. GitHub Copilot is *not* discussed; Copilot Studio is a builder for automated bots, so only AI category is assigned according to the workflow."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=d-oD3pApHAg",
+    "timestamp": "2025-09-03 08:18:36 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the AI category because the content demonstrates intelligent agent-to-agent automation using Microsoft Copilot Studio, an AI-powered developer/maker tool (AI inclusion rule 1 and 2). No other categories apply, as the focus is not on code-level implementation (Coding), Azure platforms (Azure), or DevOps, ML, or Security topics. Explicitly avoided 'GitHub Copilot' because Copilot Studio is a distinct tool as per the rules. Content is educational and technically detailed, with no exclusion triggers from generic exclusion rules."
   }
 ]

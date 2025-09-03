@@ -7143,5 +7143,11 @@
     "canonical_url": "https://devops.com/the-ai-implementation-paradox-why-your-best-strategy-might-be-your-smallest-move/?utm_source=rss&utm_medium=rss&utm_campaign=the-ai-implementation-paradox-why-your-best-strategy-might-be-your-smallest-move",
     "timestamp": "2025-09-02 18:17:36 +00:00",
     "reason": "No categories found: All generic exclusion rules must be applied first, per Chapter 3. After reviewing the provided title, description, and content, there is no substantive technical detail present about Microsoft technologies, products, services, frameworks, or development practices. The content is entirely a high-level discussion about AI adoption in general business strategy and decision-making, targeted at organizational leaders rather than technical practitioners, and does not mention or focus on any specific Microsoft technologies or implementation details. This matches the 'Business Strategy and Executive Content' and 'Business vs Technical Content' exclusions in Chapter 3, and also does not reach the threshold for any inclusion category. Therefore, no categories apply."
+  },
+  {
+    "canonical_url": "https://dellenny.com/lesser-known-microsoft-365-features-that-save-hours-beyond-teams-and-outlook/",
+    "timestamp": "2025-09-03 08:18:04 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The post, 'Lesser-Known Microsoft 365 Features That Save Hours (Beyond Teams and Outlook),' is primarily focused on highlighting business productivity features and tips for Microsoft 365 end-users (Quick Steps, Power Automate prebuilt flows, Editor, Dictation, OneNote, Excel Analyze Data, Loop, Presenter Coach, Bookings with Me, Whiteboard). It does not address development, engineering, coding, architecture, or in-depth technical implementation related to Microsoft development platforms. The article is educational for business and general productivity use, not for developers or technical consultants. Per the 'Non-Development Microsoft Products' and 'Business Productivity Tools' exclusion rules in Chapter 3, Microsoft 365 end-user features that are not development-focused (including Power Automate templates and Loop usage outside of custom development scenarios) are excluded from all categories."
   }
 ]

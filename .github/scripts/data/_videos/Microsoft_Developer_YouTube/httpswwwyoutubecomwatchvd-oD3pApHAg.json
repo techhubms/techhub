@@ -1,0 +1,22 @@
+{
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "FeedName": "Microsoft Developer YouTube",
+  "Title": "Agent-to-agent collaboration in Copilot Studio",
+  "Description": "Join Elaiza Benitez and special guest, Sudeep Ghatak, Practice Lead at Theta New Zealand, to discover how Microsoft Copilot Studio enables intelligent agent-to-agent collaboration for seamless employee onboarding.\n\nIn this episode, Sudeep showcases multiple AI agents working together to automate key onboarding tasks such HR registration, IT setup, and facilities access. Learn how each agent is purpose-built to handle specific workflows, creating a scalable and efficient onboarding experience. Perfect for developers, IT professionals, and enterprise teams exploring advanced AI automation in Microsoft Copilot Studio.\n\nNote: at the time of when this episode airs, this is a Preview feature.\n\nLearn more about how to connect your agents to other agents at https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-add-other-agents Learn more about Copilot at aka.ms/copilotstudio\n\n✅ Chapters: 00:00 Introduction 01:13 Difference between bot and agent 02:02 Key features of agents 03:13 Agent use case - staff recruitment 05:20 Agent solution design 05:58 Recruitment agent 08:06 Offer Letter agent 09:14 Office Admin agent 09:34 Service Desk agent 09:56 Canvas app to initiate the hiring process 10:11 Demo of agent to agent collaboration 13:54 Outro 15:15 Limitations\n\n✅ Resources: Sudeep Ghatak LinkedIn profile - https://www.linkedin.com/in/sudeepghatak/ GitHub profile - https://github.com/sudeepghatak YouTube Channel - https://www.youtube.com/channel/UCEXVGKXko70Y4wk3DZE26OQ",
+  "PubDate": "2025-09-03T07:00:38+00:00",
+  "Author": "Microsoft Developer",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Link": "https://www.youtube.com/watch?v=d-oD3pApHAg",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "ProcessedDate": "2025-09-03 08:16:41"
+}
