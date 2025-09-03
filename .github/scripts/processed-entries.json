@@ -8208,5 +8208,11 @@
     "timestamp": "2025-09-03 18:17:31 +00:00",
     "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric Warehouse and its integration with Azure Storage and OneLake are central to the update (Azure rules 1, 2, 4, 5, 6, 7). 'ML' is included as the content covers data engineering, analytics, SQL analytics endpoints, and features (ML rules 1, 2, 4, and 5). 'AI' is appropriate due to Copilot, agentic workflows, Copilot Studio, Azure AI Foundry, and data agents (AI rules 1, 3, 4, 5). 'Security' is included because of multiple enhancements including Private Link, governance, collation, and secure data movement (Security rules 1, 4, 5, 7). 'DevOps' applies as modern CLI, CI/CD pipelines, VS Code, scheduler, and deployment tooling are significant (DevOps rules 5, 6, 9). 'Coding' is relevant due to SQL development, database projects, T-SQL, and function support (Coding rules 1, 2, 4, 5). All category assignments are supported by specific references in the text. No generic exclusion rule applies.",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-august-2025/"
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/agent-factory-from-prototype-to-production-developer-tools-and-rapid-agent-development/",
+    "collection": "news",
+    "timestamp": "2025-09-03 21:11:18 +00:00",
+    "reason": "Succesfully added: AI category assigned due to focus on agentic AI, Azure AI Foundry, and developer tools for AI agent development (AI category rules 1, 4). Azure category included because the article spotlights Azure AI Foundry services and deployment (Azure rules 1, 3, 4). DevOps category added because content discusses CI/CD integration, developer workflows in VS Code/GitHub, and platform observability (DevOps rules 3, 5, 7). Coding also included as building, debugging, and iterating AI agents in code is detailed, including IDE use, framework selection, and code-level tasks (Coding rules 4, 5). GitHub Copilot is mentioned, but not central enough to justify the GitHub Copilot category per category rules. ML is excluded as advanced machine learning pipelines or data science engineering are not the primary focus. Security is not included since security topics are mentioned only as part of guardrails, not in technical implementation or security operations detail."
   }
 ]
