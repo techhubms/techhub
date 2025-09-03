@@ -7161,5 +7161,23 @@
     "timestamp": "2025-09-03 11:12:09 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=0bsY9z6qp1c",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/QQSk_U4IcWU",
+    "reason": "No categories found: No categories assigned because the content field is missing (null), and there is no description or substantive content to assess. According to the processing rules, content is required to determine relevance and apply inclusion rules. Without actual content to analyze, categorization cannot proceed.",
+    "timestamp": "2025-09-03 12:23:02 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/emea/features/ribera-uses-a-technology-to-help-patients-and-doctors/",
+    "timestamp": "2025-09-03 13:22:28 +00:00",
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. Although the title and tags mention AI technology, the provided content consists only of a featured image description, the post title, and generic tags with no substantive technical information or implementation details about Microsoft technologies. No actionable insights, technical details, or development focus are present — only a news headline and image caption. Per the workflow guidelines, content without substantive technical depth or actionable detail is excluded."
+  },
+  {
+    "canonical_url": "https://devops.com/kong-acquires-openmeter-for-api-metering-and-billing/?utm_source=rss&utm_medium=rss&utm_campaign=kong-acquires-openmeter-for-api-metering-and-billing",
+    "timestamp": "2025-09-03 13:22:50 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: No categories were assigned because the content does not centrally involve any Microsoft technology. The article describes Kong's acquisition of OpenMeter for API metering, billing, and security in the context of AI and LLM costs management. While the content discusses API management, security, and implications for AI-driven services and cloud APIs, it does not reference or focus on Microsoft-specific services (such as Azure, Azure DevOps, Microsoft AI, or the broader Microsoft ecosystem). According to the workflow, for content to qualify for categories, Microsoft technologies must be central (≥40%) or substantively featured; this article is focused on Kong products and OpenMeter in a general API management and AI context."
   }
 ]

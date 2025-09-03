@@ -8160,5 +8160,11 @@
     "timestamp": "2025-09-03 11:11:49 +00:00",
     "canonical_url": "https://devops.com/can-vibe-codingwork-on-an-enterprise-level/?utm_source=rss&utm_medium=rss&utm_campaign=can-vibe-codingwork-on-an-enterprise-level",
     "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the post covers in-depth updates to Azure AI Foundry’s AI/ML capabilities (AI Inclusion Rule 1), including GPT-5 model family, Browser Automation, Sora, FLUX, and Mistral Document AI. Assigned Azure because all features revolve around Azure’s cloud platform, deployment, and management (Azure rules 1–5). Assigned Coding because numerous SDK/API updates, code examples (Python, .NET, Java, TypeScript), and code samples are included, supporting developer workflows (Coding rules 1–5). No other categories are appropriate as there is no detailed focus on ML/data engineering, DevOps, or Security; the central focus is on AI model deployment and integration, agent automation, and code-based development on Azure.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-august-2025/",
+    "timestamp": "2025-09-03 15:13:54 +00:00"
   }
 ]
