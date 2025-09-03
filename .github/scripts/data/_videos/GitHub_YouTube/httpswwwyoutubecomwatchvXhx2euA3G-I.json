@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "FeedName": "GitHub YouTube",
+  "Title": "Rubber Duck Thursdays - Time to build!",
+  "ProcessedDate": "2025-09-03 16:14:39",
+  "Link": "https://www.youtube.com/watch?v=Xhx2euA3G-I",
+  "Author": "GitHub",
+  "Description": "Join us for Rubber Duck Thursdays! A lighthearted and informal stream where we live code on some projects. Come along, suggest some ideas and let's see what we'll build.",
+  "FeedLevelAuthor": "GitHub",
+  "OutputDir": "_videos",
+  "Tags": [],
+  "PubDate": "2025-09-03T15:44:11+00:00",
+  "EnhancedContent": null
+}

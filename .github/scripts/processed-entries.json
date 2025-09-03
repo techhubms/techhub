@@ -8166,5 +8166,29 @@
     "collection": "news",
     "canonical_url": "https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-august-2025/",
     "timestamp": "2025-09-03 15:13:54 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric and Dataflow Gen2 are Azure-native technologies, with SQL database and OneLake also part of Azure's data ecosystem (Azure rule 1, 7). Assigned 'ML' because the article is about data engineering and analytics pipeline optimization, focusing on high-volume ETL and data movement for modern analytics workloads, which fits ML inclusion rule 2 (data engineering) and rule 4 (analytics/BI dev). Not 'AI' since no Azure AI services, models, or Copilot features are mentioned. Not 'Coding' as there is no programming or code-focused implementation. Not 'DevOps' since no CI/CD, team workflows, or automation topics are present. Not 'Security' as no security or compliance themes appear.",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/accelerating-data-movement-by-using-fast-copy-to-unlock-performance-and-efficiency-during-data-ingestion-from-sql-database-in-fabric/",
+    "timestamp": "2025-09-03 16:16:00 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned are AI (because GitHub Copilot is an AI-powered coding assistant per AI inclusion rule 2), GitHub Copilot (content is entirely about Copilot per GitHub Copilot rules 1–4), and Coding (as the advice is about writing effective instructions to guide code generation and includes best practices/coding guidelines, which fits Coding rules 4 and 5). The content remains technical, hands-on, and targets developers working on projects with Copilot, with actionable guidance rather than high-level product marketing. No other categories apply as the primary focus is coding with Copilot, not broader DevOps, Azure, ML, or Security topics.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/5-tips-for-writing-better-custom-instructions-for-copilot/",
+    "timestamp": "2025-09-03 16:16:54 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category because the workshop is centered on Zero Trust architecture and practical security implementation using Microsoft technologies, especially Microsoft Entra, Intune, and Sentinel (Security rules 1, 3, 4, and 9). Assigned Azure category because the content includes Azure security solutions and is relevant to cloud and hybrid scenarios (Azure rules 1 and 5). The entire focus is on technical implementation, not general business or productivity, and no generic exclusion rules apply.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=xVWr1ml47_g",
+    "timestamp": "2025-09-03 16:17:37 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the content covers substantial integration of conversational AI, automated meeting summaries, sentiment analysis, PII redaction, and AI-powered features with Azure Communication Services (AI inclusion rules 1, 4, and 5). Assigned 'Azure' as Teams Phone extensibility relies on Azure Communication Services, APIs, and portal capabilities (Azure inclusion rules 1 and 4). Did not assign Coding, DevOps, ML, Security, or GitHub Copilot: Coding would apply if there was detailed code or programming focus (not present), ML is not directly discussed (focus is on AI service integration, not custom ML engineering), DevOps is not central, Security is limited to compliance features, and GitHub Copilot is never mentioned. The content is highly technical, focused on platform extensibility and developer APIs, not end-user business productivity, so it fits the required technical focus for these categories.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-communication-services/general-availability-of-teams-phone-extensibility/ba-p/4446092",
+    "timestamp": "2025-09-03 16:18:40 +00:00"
   }
 ]

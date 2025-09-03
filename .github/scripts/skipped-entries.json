@@ -7179,5 +7179,23 @@
     "timestamp": "2025-09-03 13:22:50 +00:00",
     "collection": "posts",
     "reason": "No categories found: No categories were assigned because the content does not centrally involve any Microsoft technology. The article describes Kong's acquisition of OpenMeter for API metering, billing, and security in the context of AI and LLM costs management. While the content discusses API management, security, and implications for AI-driven services and cloud APIs, it does not reference or focus on Microsoft-specific services (such as Azure, Azure DevOps, Microsoft AI, or the broader Microsoft ecosystem). According to the workflow, for content to qualify for categories, Microsoft technologies must be central (≥40%) or substantively featured; this article is focused on Kong products and OpenMeter in a general API management and AI context."
+  },
+  {
+    "reason": "No categories found: All generic exclusion rules have been applied. The content provided consists almost entirely of a brief announcement about a published research result—Microsoft's analog optical computer—and contains minimal technical detail or substantive information about Microsoft technology relevant to developers or practitioners. The main content is an executive announcement, is high-level in nature, and lacks any actual discussion of architecture, development, implementation, or technical application of Microsoft technologies. Additionally, the rest of the content is composed of social media navigation prompts, user reactions, and unrelated platform elements. This falls under the business strategy and executive content generic exclusion, as it is a public relations announcement and not an actionable technical article or deep dive (see Generic Exclusion Rules: Business Strategy and Executive Content, Sales Pitches, Content Quality Exclusions). No categories are assigned.",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_microsofts-analog-optical-computer-cracks-activity-7369024536601690112-ljgB",
+    "timestamp": "2025-09-03 16:16:17 +00:00"
+  },
+  {
+    "reason": "No categories found: Excluded all categories due to insufficient technical content. According to the generic exclusion rules, content that lacks substantive technical detail, such as live coding streams described only as 'lighthearted and informal' with no specifics on technologies, frameworks, or Microsoft developer topics, should be excluded. The title, description, and absence of actual coding content make it unclear if the video focuses on Microsoft-related tech or developer tools, and there's no indication of any qualifying product or substantive educational content.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=Xhx2euA3G-I",
+    "timestamp": "2025-09-03 16:17:16 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to lack of substantive technical content and insufficient details. The description only mentions a release livestream about the new features in VS Code v1.104, but provides no technical details, summary of features, or content body to evaluate for category inclusion. Without actual content or descriptive technical substance, no categories can be confidently assigned as required by the workflow (focus on actual content and inclusion rules).",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=w2qMcctqv40",
+    "timestamp": "2025-09-03 16:17:53 +00:00"
   }
 ]

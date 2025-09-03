@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "FeedName": "Visual Studio Code YouTube",
+  "Title": "VS Code Live - v1.104 Release",
+  "ProcessedDate": "2025-09-03 16:14:51",
+  "Link": "https://www.youtube.com/watch?v=w2qMcctqv40",
+  "Author": "Visual Studio Code",
+  "Description": "It's time for another release livestream! Join the VS Code team and friends as they dive into the latest features from the v1.104 release.",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "OutputDir": "_videos",
+  "Tags": [],
+  "PubDate": "2025-09-03T15:18:47+00:00",
+  "EnhancedContent": null
+}
