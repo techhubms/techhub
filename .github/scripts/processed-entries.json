@@ -8202,5 +8202,11 @@
     "timestamp": "2025-09-03 17:12:16 +00:00",
     "collection": "news",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-workspace-outbound-access-protection-for-spark-preview/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-09-03 18:17:31 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric Warehouse and its integration with Azure Storage and OneLake are central to the update (Azure rules 1, 2, 4, 5, 6, 7). 'ML' is included as the content covers data engineering, analytics, SQL analytics endpoints, and features (ML rules 1, 2, 4, and 5). 'AI' is appropriate due to Copilot, agentic workflows, Copilot Studio, Azure AI Foundry, and data agents (AI rules 1, 3, 4, 5). 'Security' is included because of multiple enhancements including Private Link, governance, collation, and secure data movement (Security rules 1, 4, 5, 7). 'DevOps' applies as modern CLI, CI/CD pipelines, VS Code, scheduler, and deployment tooling are significant (DevOps rules 5, 6, 9). 'Coding' is relevant due to SQL development, database projects, T-SQL, and function support (Coding rules 1, 2, 4, 5). All category assignments are supported by specific references in the text. No generic exclusion rule applies.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-august-2025/"
   }
 ]
