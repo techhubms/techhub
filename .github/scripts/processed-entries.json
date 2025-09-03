@@ -8220,5 +8220,23 @@
     "timestamp": "2025-09-03 22:11:23 +00:00",
     "reason": "Succesfully added: Assigned the AI and GitHub Copilot categories. The announcement is about GitHub Copilot’s code review feature and its customization options through path-scoped instruction files, meeting the inclusion criteria for the 'GitHub Copilot' category (GitHub Copilot rule 1). Per workflow instructions, the 'AI' category must always be included when 'GitHub Copilot' is assigned. The content does not introduce coding, DevOps, Azure, ML, or Security-specific guidance or implementation details, so those categories were not applied.",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-03 23:11:56 +00:00",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content centers on Azure Local environments and Azure-specific management skills (Azure inclusion rule 1, 4, 5). 'Security' is also included as core training topics explicitly mention security best practices (Security inclusion rule 2). No other categories are assigned: there are no explicit development, AI, ML, or DevOps tools/techniques in scope. The content is not excluded by any generic exclusion rules: it is not biographical, sales-oriented, business-only, or non-English, and meets length/quality requirements for community content.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/introducing-azure-local-training-empowering-you-to-succeed/ba-p/4447957",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-09-03 23:12:24 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the migration centers on Azure Application Gateway and related Azure services (Azure rule 1, 4, 5). Added Security because of focus on integrated Web Application Firewall (WAF), certificate management with Key Vault, SSL/TLS termination, and secure migration practices (Security rule 1, 2, 7). Added DevOps for emphasis on Infrastructure as Code for deployments, environment standardization, automation, and operational monitoring (DevOps rule 5, 6, 7). Did not assign Coding, AI, GitHub Copilot, or ML since there is no substantive content on coding, AI integration, or machine learning-related tasks.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/migrating-application-load-balancer-from-aws-to-azure/ba-p/4439880",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-09-03 23:12:44 +00:00",
+    "reason": "Succesfully added: Content qualifies for the AI category because the livestream series focuses on generative AI, Agents, and Model Context Protocol, which are all AI-centric technologies (AI rules 1, 4, 5). Coding is also included as there is a strong emphasis on Python development, live coding sessions, and hands-on examples (Coding rules 1, 4). Although Azure and Azure AI Foundry are mentioned in tags, the main content does not include substantial Azure-specific implementation details, so Azure category is not added. No Microsoft-only exclusion rules apply because generic exclusion rules are not triggered and technical, developer-focused content is central.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/level-up-your-python-game-with-generative-ai-free-livestream/ba-p/4450646",
+    "collection": "community"
   }
 ]
