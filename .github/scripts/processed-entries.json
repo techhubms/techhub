@@ -8214,5 +8214,11 @@
     "collection": "news",
     "timestamp": "2025-09-03 21:11:18 +00:00",
     "reason": "Succesfully added: AI category assigned due to focus on agentic AI, Azure AI Foundry, and developer tools for AI agent development (AI category rules 1, 4). Azure category included because the article spotlights Azure AI Foundry services and deployment (Azure rules 1, 3, 4). DevOps category added because content discusses CI/CD integration, developer workflows in VS Code/GitHub, and platform observability (DevOps rules 3, 5, 7). Coding also included as building, debugging, and iterating AI agents in code is detailed, including IDE use, framework selection, and code-level tasks (Coding rules 4, 5). GitHub Copilot is mentioned, but not central enough to justify the GitHub Copilot category per category rules. ML is excluded as advanced machine learning pipelines or data science engineering are not the primary focus. Security is not included since security topics are mentioned only as part of guardrails, not in technical implementation or security operations detail."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-09-03-copilot-code-review-path-scoped-custom-instruction-file-support",
+    "timestamp": "2025-09-03 22:11:23 +00:00",
+    "reason": "Succesfully added: Assigned the AI and GitHub Copilot categories. The announcement is about GitHub Copilot’s code review feature and its customization options through path-scoped instruction files, meeting the inclusion criteria for the 'GitHub Copilot' category (GitHub Copilot rule 1). Per workflow instructions, the 'AI' category must always be included when 'GitHub Copilot' is assigned. The content does not introduce coding, DevOps, Azure, ML, or Security-specific guidance or implementation details, so those categories were not applied.",
+    "collection": "news"
   }
 ]
