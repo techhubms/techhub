@@ -7263,5 +7263,23 @@
     "canonical_url": "https://www.youtube.com/watch?v=kd3ftKBzGv8",
     "collection": "videos",
     "timestamp": "2025-09-04 19:10:47 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The news content focuses on Microsoft’s partnerships and initiatives to expand AI education, provide Microsoft 365 Copilot access to students, and promote AI skills development in schools and colleges. However, per the generic exclusion rules (Chapter 3), 'Microsoft 365 Copilot' and 'Copilot for Microsoft 365' are business productivity tools and not developer tools, so no categories are assigned. Additionally, the content centers around education policy, workforce development, and access to productivity applications, not hands-on developer usage, programming, AI model implementation, software development, or technical architecture. There is no substantial technical implementation detail, development tooling, or code-centric usage that would trigger the AI, Coding, DevOps, Azure, ML, Security, or GitHub Copilot categories.",
+    "collection": "news",
+    "timestamp": "2025-09-04 20:13:35 +00:00",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2025/09/04/new-white-house-commitments/"
+  },
+  {
+    "reason": "No categories found: Excluded all categories due to generic exclusion rules. The content is primarily a high-level company announcement addressing national priorities for AI in education and economic opportunity, with no technical implementation, development, or practitioner-focused details related to Microsoft developer or engineering products. The focus is on free access to business productivity tools (Microsoft 365 Copilot) and skilling initiatives rather than technical, developer, or architect-level usage or implementation. According to the generic exclusion rules ('Business Strategy and Executive Content', 'Non-Development Microsoft Products'), such content is excluded unless there are substantive technical details aimed at practitioners, which are absent here.",
+    "collection": "news",
+    "timestamp": "2025-09-04 20:13:51 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_ai-is-the-defining-technology-of-our-time-ugcPost-7369429577355444224-8WdM"
+  },
+  {
+    "reason": "No categories found: Content excluded because the 'content' field is null, providing no substantive main content to analyze. As per processing rules, if the main content is missing or unavailable, no categories can be assigned since there is no technical information to process. Additionally, only the title and tags are available, which are insufficient for a meaningful categorization or transformation into the required structured markdown format.",
+    "collection": "videos",
+    "timestamp": "2025-09-04 20:15:05 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/jQitg9aZm2s"
   }
 ]

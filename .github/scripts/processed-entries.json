@@ -8322,5 +8322,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=xRTgusuYm8k",
     "collection": "videos",
     "timestamp": "2025-09-04 19:10:33 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the update revolves around improving workflow, navigation, and editing experience in GitHub's web UI, which directly relates to development operations (DevOps rule 11: GitHub content that doesn't fit the Copilot category, rule 3: team collaboration/workflow). There is no Coding, AI, Azure, ML, Security, or GitHub Copilot content here, as the announcement strictly covers UI/UX enhancements around version control and branch management in GitHub. Tags reflect the technical focus and concrete features described in the content.",
+    "collection": "news",
+    "timestamp": "2025-09-04 20:14:17 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-04-improved-file-navigation-and-editing-in-the-web-ui"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Coding category as the session discusses .NET MAUI, C#, and development updates (Coding rule 1 and 2). The focus is on development topics for .NET MAUI, including release candidates, mobile targets, and cross-platform features. No content exists to support Azure, AI, ML, DevOps, Security, or GitHub Copilot categories. Content meets quality and relevance, avoiding all generic exclusions.",
+    "collection": "videos",
+    "timestamp": "2025-09-04 20:14:50 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Y8W56JPCqQo"
   }
 ]
