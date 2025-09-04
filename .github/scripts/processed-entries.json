@@ -8262,5 +8262,17 @@
     "canonical_url": "https://devblogs.microsoft.com/visualstudio/make-sense-of-your-output-window-with-copilot/",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the article describes new Copilot functionality for analyzing and interacting with build/debug logs in Visual Studio (AI inclusion rules 1, 2, and 5; GitHub Copilot rules 1 and 2). 'Coding' is included because the feature targets developers working in Visual Studio and focuses on coding/troubleshooting workflows (Coding rule 4 and 5). Did not assign 'Azure', 'DevOps', 'ML', or 'Security' since the content does not primarily address those areas. The content meets quality requirements and does not trigger any generic exclusion rules.",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://dellenny.com/avoiding-sharepoint-sprawl-without-killing-collaboration/",
+    "collection": "posts",
+    "timestamp": "2025-09-04 14:13:36 +00:00",
+    "reason": "Succesfully added: Assigned the 'Coding' category because the article is focused on SharePoint site organization and governance from an implementation perspective, with actionable strategies relevant to SharePoint development and configuration (Coding Rule 4). The article does not fit business-only, end-user, or executive strategy content. Although SharePoint is part of Microsoft 365, the content emphasizes technical management practices rather than basic end-user features (clarified in Non-Development Microsoft Products rule exceptions). Other categories (AI, Azure, DevOps, ML, Security) did not apply as the article does not discuss those technologies or practices."
+  },
+  {
+    "canonical_url": "https://dellenny.com/what-to-do-when-sharepoint-search-doesnt-return-the-right-results/",
+    "collection": "posts",
+    "timestamp": "2025-09-04 14:14:15 +00:00",
+    "reason": "Succesfully added: The content is a technical how-to guide focused on improving and troubleshooting SharePoint's search functionality. It has development and configuration guidance related to SharePoint search schemas, managed properties, PnP Modern Web Parts, and Microsoft Search integration. This fits the Coding category under the rule for development with Microsoft technologies (Coding rule 4) and administrative configuration. 'AI', 'ML', 'Azure', 'DevOps', or 'Security' categories do not apply as there is no focus on artificial intelligence, data science/analytics engineering, cloud platform services, DevOps practices, or security topics. The guide is not general end-user or business productivity content, but aimed at technical audiences managing SharePoint configuration."
   }
 ]
