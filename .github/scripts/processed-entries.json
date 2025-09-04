@@ -8250,5 +8250,11 @@
     "reason": "Succesfully added: Assigned 'AI' category because the article centers on building AI agents, describing how memory improves agent intelligence, and the integration of AI toolkits (AI rule 1, 4). 'Azure' is included as the architecture uses Microsoft's Azure AI Foundry Agent Service for deployment and agent orchestration (Azure rule 1, 4). 'Coding' is included due to the presence of implementation code, setup instructions, usage of Python, and developer-focused material (Coding rules 1, 2, 5). The content does not qualify for 'DevOps', 'ML', 'Security', or 'GitHub Copilot' categories because there's no discussion of CI/CD, machine learning algorithm development, security practices, or Copilot-specific tooling. All included categories and tags are directly supported by substantive content and technical depth.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/build-a-smart-shopping-ai-agent-with-memory-using-the-azure-ai/ba-p/4450348",
     "timestamp": "2025-09-04 07:13:21 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the Test Run Hub is part of Azure DevOps Test Plans and focuses on QA processes, continuous improvement, and collaboration (DevOps rules 1, 3, 4, 5). Assigned 'Azure' since the feature is central to Azure DevOps, an Azure service (Azure rule 1). Other categories like AI, ML, Coding, Security are not included because the content does not discuss AI/ML, coding implementations, or security measures—it centers on test/lifecycle management within DevOps. Content quality is high, focused on actionable features for teams, and fits all inclusion criteria.",
+    "canonical_url": "https://devblogs.microsoft.com/devops/new-test-run-hub/",
+    "collection": "news",
+    "timestamp": "2025-09-04 10:13:55 +00:00"
   }
 ]

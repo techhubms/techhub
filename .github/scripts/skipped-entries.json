@@ -7209,5 +7209,11 @@
     "timestamp": "2025-09-03 17:12:56 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/uRTZnGWs8ME"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the primary language of the description is Spanish, not English. According to the Non-English Content rule, content not primarily in English (<80% English in main text) should be excluded. The provided description ('¡Ven a crear y aprender sobre MCP-UI y Postman con Rubén Casas! Conéctate, comparte ideas y colabora con devs de todas partes. ¡Nos vemos en la sesión!') is almost entirely in Spanish, and there is no English version present. No categories have been assigned.",
+    "timestamp": "2025-09-04 09:13:00 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=rDdspScnSWs"
   }
 ]
