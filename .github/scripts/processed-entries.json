@@ -8304,5 +8304,17 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned only the AI category. The lesson clearly focuses on building and improving AI agents, emphasizing practical context engineering and agent reliability, which fits AI rule 1 and 4 (Microsoft AI development and agent practices). There is no substantive content regarding coding syntax, dev tools, or non-AI Azure services, so Coding and Azure were not assigned. ML is not assigned as the focus is on agent operation, not data science or model engineering. No content fits DevOps or Security based on provided description.",
     "canonical_url": "https://www.youtube.com/watch?v=F5zqRV7gEag"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-09-04-manage-copilot-and-users-via-enterprise-teams-in-public-preview",
+    "timestamp": "2025-09-04 18:16:44 +00:00",
+    "reason": "Succesfully added: Categories 'AI' and 'GitHub Copilot' were assigned because the content specifically details Copilot Business management capabilities (AI rule 2, GitHub Copilot rules 1 and 5). 'DevOps' was included due to the focus on enterprise user, license, and group management workflows in GitHub, which directly support software delivery teams and organizational processes (DevOps rules 2, 3, 9). 'Coding', 'Azure', 'ML', and 'Security' do not qualify since the content is not about code development, Azure/cloud-specific services, machine learning/data science, or security implementation. Generic exclusion rules do not apply because the content is not biographical, not a sales pitch, in English, of sufficient length, and targeted at technical/organizational admin workflows related to developer tooling.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://devops.com/report-chatgpt-5-coding-gains-come-at-a-higher-cost/?utm_source=rss&utm_medium=rss&utm_campaign=report-chatgpt-5-coding-gains-come-at-a-higher-cost",
+    "timestamp": "2025-09-04 18:17:17 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the article centers on AI code generation tools (ChatGPT-5 from OpenAI) (AI rule 1 and AI rule 5). Added 'Coding' since the main focus is code generation, code flaws, and outcomes for developers (Coding rule 4). Included 'DevOps' because the article discusses implications for DevOps teams, productivity, verification practices, and team-level decision-making (DevOps rule 3, 5, and 9). No Microsoft technologies are directly involved, but the AI, Coding, and DevOps categories apply due to the technology-agnostic categorization rules for LLM-based developer tools. Other categories (Azure, ML, Security) were excluded as the primary focus is not Microsoft platforms, ML engineering, or implementation of security tools but rather the general coding and process tradeoffs observed in AI code generation.",
+    "collection": "posts"
   }
 ]

@@ -7239,5 +7239,17 @@
     "collection": "posts",
     "timestamp": "2025-09-04 14:13:50 +00:00",
     "reason": "No categories found: All content in this article centers on migrating from legacy Office versions to Microsoft 365 cloud products, focusing on adoption best practices, change management, compatibility checks, and cloud benefits. Per Generic Exclusion Rules, content primarily about business user productivity, general collaboration, and Microsoft 365 adoption (not technical development or coding) must be excluded. No aspects of coding, development, automation, AI, DevOps, or security architecture are present. None of the category inclusion criteria are met. Additionally, Copilot or Microsoft development features are not referenced. Therefore, no categories are assigned."
+  },
+  {
+    "reason": "No categories found: Content is excluded based on generic exclusion rules for business strategy, executive content, and lack of technical implementation details (Chapter 3, Business Strategy and Executive Content). The post discusses high-level AI-driven modernization in government and economic growth but provides no substantive technical content or actionable information about Microsoft technology usage, development, architecture, or hands-on implementation. Additionally, the main body consists solely of a 4-minute read notice and a link to another article, with no technical depth or detail present in the provided content.",
+    "collection": "news",
+    "timestamp": "2025-09-04 17:10:37 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/government/2025/09/03/modernize-public-finance-with-ai-informed-budgeting-for-economic-growth/"
+  },
+  {
+    "reason": "No categories found: Excluded all categories based on generic exclusion rules. The content is an event preview/announcement for GitHub Universe 2025, focused on speaker lineup, sessions, and event tips, without any substantive technical content or coverage of Microsoft technologies, developer tools, or technical implementation details. This type of event-focused, non-technical community announcement does not meet the inclusion criteria described in Chapter 3 (exclusion of event previews, corporate/community announcements without technical depth).",
+    "collection": "videos",
+    "timestamp": "2025-09-04 17:11:00 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=cFb3zGrNJ_U"
   }
 ]
