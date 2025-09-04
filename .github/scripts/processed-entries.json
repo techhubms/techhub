@@ -8280,5 +8280,29 @@
     "timestamp": "2025-09-04 15:13:04 +00:00",
     "canonical_url": "https://news.microsoft.com/source/asia/features/unlocking-the-productivity-dividend-of-digital-government/",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-04 16:15:36 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI and ML categories as the article details building generative AI solutions, enabling enterprise-scale AI agents, and integrating with Azure AI Foundry (AI rules 1, 4, 5; ML rules 1, 2, 3, 4, 5, and 9). Assigned Azure because OneLake is a core Azure/Fabric service with multi-cloud integration, and the solution is positioned as central to the Microsoft cloud ecosystem (Azure rules 1, 2, 4, 5). Assigned Security due to comprehensive discussion of security models, role-based access control, Purview sensitivity labels and DLP, and maintaining compliance for data sharing (Security rules 1, 2, 3, 4, 7, and 10). Coding and DevOps were NOT assigned because the content does not focus on software development practices or DevOps-specific workflows, but on data architecture and AI/ML enablement. The content fulfills minimum Microsoft technology threshold and contains detailed, actionable information without violating any generic exclusion rules.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/onelake-your-foundation-for-an-ai-ready-data-estate/"
+  },
+  {
+    "timestamp": "2025-09-04 16:16:09 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because the content explains how elicitation, an AI interaction design, improves tool calls for AI-powered developer tools (AI inclusion rule 1, 4). 'GitHub Copilot' category is included as both a subject and demonstration platform (GitHub Copilot inclusion rule 1, 2, and 3). 'Coding' is included since the article covers MCP server implementation, tool refactoring, and code practices in a developer context (Coding inclusion rules 1, 2, and 4). Did not assign 'Azure', 'DevOps', 'ML', or 'Security' as the article does not cover cloud services, operations pipelines, ML/data engineering, or Microsoft-specific security aspects.",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/building-smarter-interactions-with-mcp-elicitation-from-clunky-tool-calls-to-seamless-user-experiences/"
+  },
+  {
+    "timestamp": "2025-09-04 16:16:31 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because the MCP Server enables AI assistants (including Copilot agents) to automate GitHub workflows, matching AI rule 1 and 5. Included 'GitHub Copilot' because Copilot is referenced directly and integrates with MCP workflows per GitHub Copilot rules 1 and 2. Chose 'DevOps' as this product centers on automating and managing development workflows, supporting code reviews, pull requests, issue management, and automation (DevOps rules 2, 5, 6). 'Security' is included due to detailed updates regarding secret scanning, code scanning alerts, security advisories, and improved authentication (Security rules 1, 2, and 5). Exclusions do not apply (not biographical, not sales-focused, fully technical, and developer/audience focused).",
+    "canonical_url": "https://github.blog/changelog/2025-09-04-remote-github-mcp-server-is-now-generally-available"
+  },
+  {
+    "timestamp": "2025-09-04 16:16:59 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned only the AI category. The lesson clearly focuses on building and improving AI agents, emphasizing practical context engineering and agent reliability, which fits AI rule 1 and 4 (Microsoft AI development and agent practices). There is no substantive content regarding coding syntax, dev tools, or non-AI Azure services, so Coding and Azure were not assigned. ML is not assigned as the focus is on agent operation, not data science or model engineering. No content fits DevOps or Security based on provided description.",
+    "canonical_url": "https://www.youtube.com/watch?v=F5zqRV7gEag"
   }
 ]

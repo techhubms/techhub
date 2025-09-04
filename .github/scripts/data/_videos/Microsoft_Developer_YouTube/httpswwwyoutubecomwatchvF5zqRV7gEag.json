@@ -1,0 +1,22 @@
+{
+  "Description": "Prompts are just the start of guiding our AI Agents. Context is everything. In this lesson, you will learn how to identify, collect, and serve the right information and tools to your AI Agents at the right time. You will get a practical understanding of the growing field of context engineering and how it applies to building reliable AI Agents.\n\n➡️ Find the sample code at https://aka.ms/ai-agents-beginners\n\nFind the full \"AI Agents for Beginners\" Course and code samples here ➡️ https://aka.ms/ai-agents-beginners\n\nJoin the Discord to get your questions answered here ➡️ https://aka.ms/ai-agents/discord\n\nChapters: 00:00 - Introduction 01:20 - What Is context engineering? 02:30 - The Different Types of Context 03:56 - Context Engineering Best Practices 06:35 - Code Example 14:40 - Common Context Engineering Issues and Solutions",
+  "Link": "https://www.youtube.com/watch?v=F5zqRV7gEag",
+  "Author": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "FeedName": "Microsoft Developer YouTube",
+  "Title": "Context engineering for AI agents",
+  "ProcessedDate": "2025-09-04 16:14:43",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "PubDate": "2025-09-04T16:00:23+00:00",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ]
+}
