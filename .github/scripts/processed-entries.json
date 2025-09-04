@@ -8316,5 +8316,11 @@
     "timestamp": "2025-09-04 18:17:17 +00:00",
     "reason": "Succesfully added: Assigned 'AI' because the article centers on AI code generation tools (ChatGPT-5 from OpenAI) (AI rule 1 and AI rule 5). Added 'Coding' since the main focus is code generation, code flaws, and outcomes for developers (Coding rule 4). Included 'DevOps' because the article discusses implications for DevOps teams, productivity, verification practices, and team-level decision-making (DevOps rule 3, 5, and 9). No Microsoft technologies are directly involved, but the AI, Coding, and DevOps categories apply due to the technology-agnostic categorization rules for LLM-based developer tools. Other categories (Azure, ML, Security) were excluded as the primary focus is not Microsoft platforms, ML engineering, or implementation of security tools but rather the general coding and process tradeoffs observed in AI code generation.",
     "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: The main content promotes newly developed Blazor features—specifically component development and navigation state improvements—by Blazor interns, which are directly related to coding with Microsoft technologies (Coding rule 4). It does not mention Azure, AI, ML, DevOps, or Security topics, so only the Coding category is assigned. All tags are derived from named presenters, technologies, feature areas (media handling, state persistence), and the event source. The video is developer-focused, with no biographical, sales, negative, or exclusion rule triggers.",
+    "canonical_url": "https://www.youtube.com/watch?v=xRTgusuYm8k",
+    "collection": "videos",
+    "timestamp": "2025-09-04 19:10:33 +00:00"
   }
 ]

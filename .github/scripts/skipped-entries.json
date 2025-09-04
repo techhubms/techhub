@@ -7251,5 +7251,17 @@
     "collection": "videos",
     "timestamp": "2025-09-04 17:11:00 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=cFb3zGrNJ_U"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this video is primarily biographical, focusing on a conversation with Scott Hanselman without any substantive technical content, implementation details, or discussion of Microsoft technology categories. The description only mentions a chat and does not provide technical depth, making it fall under the Biographical Focus exclusion in Chapter 3.",
+    "canonical_url": "https://www.youtube.com/watch?v=wRwV7CeLsKM",
+    "collection": "videos",
+    "timestamp": "2025-09-04 19:10:10 +00:00"
+  },
+  {
+    "reason": "No categories found: Excluded all categories due to insufficient technical depth and lack of qualifying content. The content field is null, so there is no substantive main content to evaluate against inclusion rules. The title and description reference a 'Rubber Duck Thursday' stream and mention MCP Server for visual testing with PlayWright, but do not provide any technical implementation details, instructional content, or substantive information about Microsoft technologies. Without actual content or specifics, the material does not meet minimum requirements for technical accuracy or completeness as set in the workflow.",
+    "canonical_url": "https://www.youtube.com/watch?v=kd3ftKBzGv8",
+    "collection": "videos",
+    "timestamp": "2025-09-04 19:10:47 +00:00"
   }
 ]
