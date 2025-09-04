@@ -7215,5 +7215,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule - the primary language of the description is Spanish, not English. According to the Non-English Content rule, content not primarily in English (<80% English in main text) should be excluded. The provided description ('¡Ven a crear y aprender sobre MCP-UI y Postman con Rubén Casas! Conéctate, comparte ideas y colabora con devs de todas partes. ¡Nos vemos en la sesión!') is almost entirely in Spanish, and there is no English version present. No categories have been assigned.",
     "timestamp": "2025-09-04 09:13:00 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=rDdspScnSWs"
+  },
+  {
+    "timestamp": "2025-09-04 12:23:47 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/Ucje-AzMv8A",
+    "reason": "No categories found: Content excluded because the 'content' field is null and there is no substantive technical content provided in the 'title', 'description', or 'tags'. According to the Generic Exclusion Rules (Chapter 3), if the main content is missing or empty, no categories can be assigned. Additionally, the lack of provided content means category inclusion rules cannot be evaluated.",
+    "collection": "videos"
   }
 ]

@@ -8256,5 +8256,11 @@
     "canonical_url": "https://devblogs.microsoft.com/devops/new-test-run-hub/",
     "collection": "news",
     "timestamp": "2025-09-04 10:13:55 +00:00"
+  },
+  {
+    "timestamp": "2025-09-04 12:23:22 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/make-sense-of-your-output-window-with-copilot/",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the article describes new Copilot functionality for analyzing and interacting with build/debug logs in Visual Studio (AI inclusion rules 1, 2, and 5; GitHub Copilot rules 1 and 2). 'Coding' is included because the feature targets developers working in Visual Studio and focuses on coding/troubleshooting workflows (Coding rule 4 and 5). Did not assign 'Azure', 'DevOps', 'ML', or 'Security' since the content does not primarily address those areas. The content meets quality requirements and does not trigger any generic exclusion rules.",
+    "collection": "news"
   }
 ]
