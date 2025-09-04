@@ -8274,5 +8274,11 @@
     "collection": "posts",
     "timestamp": "2025-09-04 14:14:15 +00:00",
     "reason": "Succesfully added: The content is a technical how-to guide focused on improving and troubleshooting SharePoint's search functionality. It has development and configuration guidance related to SharePoint search schemas, managed properties, PnP Modern Web Parts, and Microsoft Search integration. This fits the Coding category under the rule for development with Microsoft technologies (Coding rule 4) and administrative configuration. 'AI', 'ML', 'Azure', 'DevOps', or 'Security' categories do not apply as there is no focus on artificial intelligence, data science/analytics engineering, cloud platform services, DevOps practices, or security topics. The guide is not general end-user or business productivity content, but aimed at technical audiences managing SharePoint configuration."
+  },
+  {
+    "reason": "Succesfully added: The content qualifies for the AI category because it discusses the transformational impact of AI technologies—and in particular, government use of AI tools and platforms (AI rule 1 and 5). The Azure category is included since the article references cloud infrastructure and the partnership with Microsoft, implying Azure as the core cloud platform in government migration examples (Azure rules 1 and 6). The Security category is also included due to significant coverage of cybersecurity improvements, breach reduction, and risk mitigation attributed to cloud migration (Security rules 1, 4, and 5). The article does not qualify for DevOps, Coding, ML, or GitHub Copilot because it does not discuss development workflows, programming, custom data science pipelines, or developer tools, and the M365 Copilot trial is referenced only as an AI-enabled productivity example (not as a developer tool).",
+    "timestamp": "2025-09-04 15:13:04 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/asia/features/unlocking-the-productivity-dividend-of-digital-government/",
+    "collection": "news"
   }
 ]
