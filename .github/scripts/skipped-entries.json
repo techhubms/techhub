@@ -7209,5 +7209,35 @@
     "timestamp": "2025-09-03 17:12:56 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/uRTZnGWs8ME"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the primary language of the description is Spanish, not English. According to the Non-English Content rule, content not primarily in English (<80% English in main text) should be excluded. The provided description ('¡Ven a crear y aprender sobre MCP-UI y Postman con Rubén Casas! Conéctate, comparte ideas y colabora con devs de todas partes. ¡Nos vemos en la sesión!') is almost entirely in Spanish, and there is no English version present. No categories have been assigned.",
+    "timestamp": "2025-09-04 09:13:00 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=rDdspScnSWs"
+  },
+  {
+    "timestamp": "2025-09-04 12:23:47 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/Ucje-AzMv8A",
+    "reason": "No categories found: Content excluded because the 'content' field is null and there is no substantive technical content provided in the 'title', 'description', or 'tags'. According to the Generic Exclusion Rules (Chapter 3), if the main content is missing or empty, no categories can be assigned. Additionally, the lack of provided content means category inclusion rules cannot be evaluated.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://devops.com/sendmarc-appoints-rob-bowker-as-north-american-region-lead/?utm_source=rss&utm_medium=rss&utm_campaign=sendmarc-appoints-rob-bowker-as-north-american-region-lead",
+    "timestamp": "2025-09-04 13:21:43 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: All categories are excluded based on Generic Exclusion Rules in Chapter 3. The content is primarily a business announcement about an executive appointment (Rob Bowker as Sendmarc's North American Region Lead) and focuses on company growth, partnerships, and strategy. There is no substantive technical content related to Microsoft technologies, developer tools, DevOps practices, coding, or security implementation using Microsoft platforms. The email security references (DMARC, SPF, DKIM) are industry standards and are only discussed in a strategic or business context, not via technical implementation or Microsoft platform integration. Therefore, this post meets the exclusion criteria for 'Corporate announcements and strategic initiatives without technical depth' and 'Industry trends and market analysis without technical implementation details.' No categories can be assigned."
+  },
+  {
+    "canonical_url": "https://ukstories.microsoft.com/features/how-microsoft-dragon-copilot-is-helping-uk-clinicians-focus-on-care/?ocid=msftnews_li",
+    "collection": "news",
+    "timestamp": "2025-09-04 14:13:05 +00:00",
+    "reason": "No categories found: All categories were excluded due to the 'Non-Development Microsoft Products' generic exclusion rule. The content is entirely focused on the use of Microsoft Dragon Copilot as an AI assistant in clinical documentation and healthcare workflows. It describes productivity, time-saving, and quality-of-care benefits for clinicians and patients, rather than software development, coding, or integration with Microsoft developer platforms. There is no discussion of development, coding, AI engineering, DevOps, Azure, ML architecture, or security implementation for practitioners. The product (Dragon Copilot) is targeted at general workplace productivity in healthcare, making it a business/clinical productivity tool, and thus all categories must be excluded according to the rules for business productivity and non-development Microsoft products."
+  },
+  {
+    "canonical_url": "https://dellenny.com/common-mistakes-when-upgrading-from-older-office-versions-to-microsoft-365/",
+    "collection": "posts",
+    "timestamp": "2025-09-04 14:13:50 +00:00",
+    "reason": "No categories found: All content in this article centers on migrating from legacy Office versions to Microsoft 365 cloud products, focusing on adoption best practices, change management, compatibility checks, and cloud benefits. Per Generic Exclusion Rules, content primarily about business user productivity, general collaboration, and Microsoft 365 adoption (not technical development or coding) must be excluded. No aspects of coding, development, automation, AI, DevOps, or security architecture are present. None of the category inclusion criteria are met. Additionally, Copilot or Microsoft development features are not referenced. Therefore, no categories are assigned."
   }
 ]
