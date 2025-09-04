@@ -8334,5 +8334,35 @@
     "collection": "videos",
     "timestamp": "2025-09-04 20:14:50 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=Y8W56JPCqQo"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/build-your-own-microsoft-docs-ai-assistant-with-azure-container-apps-and-azure-openai/",
+    "reason": "Succesfully added: All generic exclusion rules were reviewed and none triggered. Assigned 'AI' category due to focus on Azure OpenAI Service and MCP (AI rules 1, 4, and 6). Assigned 'Azure' because infrastructure and deployment use Azure services (Azure rules 1, 4, and 5). Assigned 'DevOps' for containerization, CI/CD, Azure environments, and deployment flows (DevOps rules 1, 5, 6). Assigned 'Coding' due to code configuration, Dockerfile setup, and developer tooling (Coding rules 1, 2, and 5). ML was not assigned since the AI focus is on leveraging pre-built services and contextual retrieval, not custom model engineering or data science workflows.",
+    "timestamp": "2025-09-04 22:12:25 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/microsoft-cost-management-updates-july-august-2025/",
+    "reason": "Succesfully added: Assigned the Azure category because the content is entirely focused on Azure-specific cost management, governance, automation, and migration tools (Azure inclusion rules 1, 2 and 4). No other categories apply: there are no coding tutorials, developer frameworks, or DevOps/AI/ML/security technical implementations described; coverage remains at the operational, billing, and resource governance level within Azure. All material is technical and actionable, with no exclusions triggered under generic or business rules.",
+    "timestamp": "2025-09-04 22:12:59 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-09-04-the-dashboard-feed-page-gets-a-refreshed-faster-experience",
+    "reason": "Succesfully added: Assigned the DevOps category because the update centers around improvements to infrastructure, deployment of new features, and enhancements to the developer experience on GitHub, which aligns with DevOps rules 2, 9, and 11. No other categories fit since there is no direct focus on AI, Coding, Security, ML, or Azure. The content is a technical changelog and does not trigger any exclusion rules.",
+    "timestamp": "2025-09-04 22:13:22 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=MLpGP_L7ZRU",
+    "reason": "Succesfully added: Assigned Azure category as Microsoft Fabric is a platform within the Azure ecosystem and the content covers Azure SQL services and features (Azure rule 1, Fabric evolution). Assigned ML category because Microsoft Fabric is an analytics/data platform and the episode highlights data engineering and analytics (ML rule 1 and 4). Did not assign Coding, DevOps, AI, GitHub Copilot, or Security because the focus is on platform features, demos, and roadmap, not custom development, deployment pipelines, or security implementation beyond customer-managed keys (which serve as general data platform security, not app security focus). Content is in English, has substantive technical depth, and comes from an official Microsoft developer source.",
+    "timestamp": "2025-09-04 22:13:54 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-the-public-preview-of-the-new-app-service-quota-self/ba-p/4450415",
+    "reason": "Succesfully added: Assigned the Azure category because the content centers on a new resource management experience for Azure App Service, detailing quota management and resource allocation in the Azure portal (Azure inclusion rules 1 and 4). No other categories (such as DevOps or Coding) apply, since the primary focus is administrative management and portal usage, not development or operations pipelines. There are no generic exclusion triggers: the content is technical, in English, and targets hands-on Azure resource management for developers and IT admins.",
+    "timestamp": "2025-09-04 22:14:20 +00:00",
+    "collection": "community"
   }
 ]
