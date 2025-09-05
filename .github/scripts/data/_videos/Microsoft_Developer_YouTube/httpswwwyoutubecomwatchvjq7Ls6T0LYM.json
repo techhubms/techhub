@@ -1,0 +1,22 @@
+{
+  "PubDate": "2025-09-05T17:29:28+00:00",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=jq7Ls6T0LYM",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedName": "Microsoft Developer YouTube",
+  "ProcessedDate": "2025-09-05 18:16:12",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Title": "From Issue to PR - Asynchronously develop with GitHub Copilot Coding Agent",
+  "OutputDir": "_videos",
+  "Author": "Microsoft Developer",
+  "Description": "The future of coding is here, and it’s not just autocomplete anymore! 🚀 Join us as Luke Hoban reveals how GitHub Copilot has evolved from simple code suggestions to autonomous coding agents that can tackle entire tasks while you focus on high-value work. Discover how to assign your backlog items directly to AI and watch it work independently for minutes at a time.\n\n🎯 Key Insights\n\nThe 4-year evolution from “next few lines” to autonomous task completion How to assign entire GitHub issues directly to Copilot coding agents The new github.com/copilot/agents command center for managing AI work Built-in web browser testing with automatic screenshot documentation MCP (Model Context Protocol) integration expanding agent capabilities Mobile task creation so you can kick off work while walking your dog\n\n💡 Breakthrough Moments\n\n- Real example: Year-old GitHub CLI bug automatically fixed by the agent\n- “Improve the readme” — natural language becomes instant work assignments\n- 10+ minute autonomous work sessions with full session logs\n- Visual testing with Playwright integration and screenshot proof\n- From individual productivity to team-wide AI collaboration\n\n🔗 Resources Mentioned\n\nGitHub Copilot: https://github.com/features/copilot All Sip N Sync episodes: https://aka.ms/SipAndSyncPlaylist Azure AI Resources: https://ai.azure.com Coding Agent Docs: https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent\n\n⏱️ Chapters\n\n00:00 Welcome & Introduction 00:11 Evolution of GitHub Copilot over 4 years 01:26 From individual to team productivity 02:21 Live demo: Assigning issues to Copilot 03:27 New agent command center walkthrough 05:57 Mobile task creation capabilities 06:41 Advanced agent capabilities & web browser integration 08:05 MCP integration and extensibility 09:32 GitHub MCP server availability 10:01 Wrap-up\n\n📝 Key Takeaway\n\nStop thinking about AI as just code completion. GitHub Copilot agents can now handle entire tasks autonomously — from writing tests to fixing bugs to improving documentation — while you focus on architecture and high-impact features.\n\nSpeakers & Social\n\nPriyanka Vergadia (host) LinkedIn: https://www.linkedin.com/in/pvergadia/ X: https://x.com/pvergadia\n\nLuke Hoban – LinkedIn: https://www.linkedin.com/in/lukejhoban X: https://x.com/lukehoban\n\n☕ Join the conversation! What tasks in your development backlog would you assign to a coding agent? Share in the comments!\n\n🏷️ Tags & Keywords #GitHubCopilot #CodingAgents #AICodeGeneration #SoftwareDevelopment #DevProductivity #MCP #ModelContextProtocol #AutonomousAgents #SipAndSync #MicrosoftDeveloper #AIForDevelopers #CodeReview #TestGeneration"
+}

@@ -7329,5 +7329,11 @@
     "reason": "No categories found: No categories were assigned because this content primarily announces an Xbox gaming event (ID@Xbox Indie Selects Demo Fest) and highlights upcoming indie game demos for players. According to the generic exclusion rules, end-user/gaming-focused content (not development, coding, or technical implementation) does not qualify for any categories. There is no information about coding, development, Microsoft technical platforms, or technical implementation. The content is intended for gamers, not Microsoft developers or consultants.",
     "collection": "news",
     "timestamp": "2025-09-05 17:10:50 +00:00"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-09-05 18:17:15 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-devops-releases-are-failing-for-all-the-repo-all-of-sudden/m-p/4451136#M22181"
   }
 ]

@@ -8412,5 +8412,11 @@
     "reason": "Succesfully added: Categories were assigned as follows: 'AI' due to extensive focus on Azure AI Foundry agents, connected agents, and orchestration of AI-powered features (AI rules 1, 4, 5, 6). 'Azure' was included because the core deployment architecture, hosting, and integration targets Azure App Service and related Azure infrastructure (Azure rules 1, 4, 5). 'Coding' was assigned as the article covers development with .NET Aspire, agent integration, code configuration, deployment scripts, and sample workflows (Coding rules 1, 2, 4, 5). No generic exclusion rules applied as the content is technical, English-language, not biographical or negative, and is focused on technical implementation rather than business strategy or workplace issues.",
     "collection": "community",
     "timestamp": "2025-09-05 17:12:20 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-09-05 18:17:13 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories because the primary focus is on GitHub Copilot's advanced AI-driven features, specifically autonomous coding agents (AI rules 1-2, GitHub Copilot rules 1-4). 'Coding' is included due to demonstrated end-to-end development workflows, bug fixes, and code automation (Coding rules 2-4). 'DevOps' is included because features like backlog assignment, PR workflows, automated testing, and team collaboration tools align with DevOps practices (DevOps rules 3, 5, 8, 9). No exclusions apply: this is technically in-depth, non-promotional, and developer-focused content.",
+    "canonical_url": "https://www.youtube.com/watch?v=jq7Ls6T0LYM"
   }
 ]

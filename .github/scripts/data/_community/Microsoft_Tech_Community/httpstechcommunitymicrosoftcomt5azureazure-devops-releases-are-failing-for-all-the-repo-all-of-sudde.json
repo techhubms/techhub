@@ -1,0 +1,14 @@
+{
+  "Title": "Azure DevOps Releases are failing for all the repo all of sudden",
+  "PubDate": "2025-09-05T06:20:27+00:00",
+  "OutputDir": "_community",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "FeedName": "Microsoft Tech Community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "ProcessedDate": "2025-09-05 18:16:22",
+  "Description": "Before 1st of Sept all the release succeeded without any issue , but all of sudden all the release pipelines are failing due to the below error.\n\nError:\n\n**2025-09-05T05:52:56.8522017Z error: error parsing STDIN: error converting YAML to JSON: yaml: mapping values are not allowed in this context**\n\n![]() What could be the issue ?? Can anyone come across this issue, Please suggest.",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/azure-devops-releases-are-failing-for-all-the-repo-all-of-sudden/m-p/4451136#M22181",
+  "EnhancedContent": "Before 1st of Sept all the release succeeded without any issue , but all of sudden all the release pipelines are failing due to the below error.\n\nError:\n\n**2025-09-05T05:52:56.8522017Z error: error parsing STDIN: error converting YAML to JSON: yaml: mapping values are not allowed in this context**\n\nWhat could be the issue ?? Can anyone come across this issue, Please suggest.",
+  "Tags": [],
+  "Author": "GuttuSajjan"
+}
