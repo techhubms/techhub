@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedName": "Microsoft Developer YouTube",
+  "Link": "https://www.youtube.com/watch?v=sDLrub3WyG4",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "PubDate": "2025-09-05T16:54:20+00:00",
+  "OutputDir": "_videos",
+  "Title": "What is a threat model?",
+  "EnhancedContent": null,
+  "Author": "Microsoft Developer",
+  "ProcessedDate": "2025-09-05 17:10:21",
+  "Description": "Michael Howard breaks down what a threat model really is in this #OneDevQuestion. He explains it as a design-time blueprint for security to make sure you’ve asked the right questions about authentication, data protection, and privilege before you ship your app.\n\nMore: https://msft.it/6052s5tP8",
+  "Tags": [
+    "OneDevQuestion"
+  ]
+}

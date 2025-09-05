@@ -8394,5 +8394,23 @@
     "reason": "Succesfully added: Included AI and GitHub Copilot categories because the entire post discusses automating web app debugging and bug reproduction through GitHub Copilot (AI rule 2, GitHub Copilot rules 1-4). Assigned Coding because it involves practical setup, VS Code usage for configuration, Playwright testing, and real debugging workflow with code (Coding rules 2-5). 'Azure', 'DevOps', 'ML', and 'Security' did not apply since the focus is not on those domains or their technologies. No generic exclusion rules apply—the content is technical, developer-focused, not sales, not negative, and central to Microsoft developer tools.",
     "collection": "news",
     "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-to-debug-a-web-app-with-playwright-mcp-and-github-copilot/"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/mdj2LkzblX0",
+    "reason": "Succesfully added: Assigned the Security category because the video directly addresses threat modeling—a core practice in application security (Security rule 2). The content focuses on applying security considerations (authentication, data protection, privilege) during software design. No other categories apply as there is no substantive coverage of coding, DevOps, Azure, AI, or ML topics.",
+    "collection": "videos",
+    "timestamp": "2025-09-05 17:11:25 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=sDLrub3WyG4",
+    "reason": "Succesfully added: Assigned Security category according to Security Rule 2 (Application Security in Microsoft Ecosystem) because the video explains threat modeling as it relates to authentication, data protection, and privilege in application design. The content is technical in nature and intended for software developers and architects, not business managers. There is no content or indication in the title, description, or tags that relates to Coding, AI, DevOps, Azure, ML, or GitHub Copilot categories, so only Security is included.",
+    "collection": "videos",
+    "timestamp": "2025-09-05 17:11:42 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-multi-agent-ai-systems-on-azure-app-service/ba-p/4451373",
+    "reason": "Succesfully added: Categories were assigned as follows: 'AI' due to extensive focus on Azure AI Foundry agents, connected agents, and orchestration of AI-powered features (AI rules 1, 4, 5, 6). 'Azure' was included because the core deployment architecture, hosting, and integration targets Azure App Service and related Azure infrastructure (Azure rules 1, 4, 5). 'Coding' was assigned as the article covers development with .NET Aspire, agent integration, code configuration, deployment scripts, and sample workflows (Coding rules 1, 2, 4, 5). No generic exclusion rules applied as the content is technical, English-language, not biographical or negative, and is focused on technical implementation rather than business strategy or workplace issues.",
+    "collection": "community",
+    "timestamp": "2025-09-05 17:12:20 +00:00"
   }
 ]

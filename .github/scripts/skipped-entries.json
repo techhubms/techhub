@@ -7323,5 +7323,11 @@
     "timestamp": "2025-09-05 15:14:19 +00:00",
     "reason": "Insufficient content length",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://news.xbox.com/en-us/2025/09/04/id-xbox-indie-selects-demo-fest-2025/",
+    "reason": "No categories found: No categories were assigned because this content primarily announces an Xbox gaming event (ID@Xbox Indie Selects Demo Fest) and highlights upcoming indie game demos for players. According to the generic exclusion rules, end-user/gaming-focused content (not development, coding, or technical implementation) does not qualify for any categories. There is no information about coding, development, Microsoft technical platforms, or technical implementation. The content is intended for gamers, not Microsoft developers or consultants.",
+    "collection": "news",
+    "timestamp": "2025-09-05 17:10:50 +00:00"
   }
 ]
