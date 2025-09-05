@@ -15,8 +15,8 @@ on:
         required: false
         type: string
   # uncomment for testing in a branch
-  push:
-    paths: .github/workflows/weekly-roundup-generation.yml
+  # push:
+    # paths: .github/workflows/weekly-roundup-generation.yml
 
 permissions:
   contents: write
