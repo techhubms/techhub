@@ -1,0 +1,17 @@
+{
+  "FeedName": "Microsoft News",
+  "EnhancedContent": "![](https://opensource.microsoft.com/blog/wp-content/uploads/2024/06/CLO20b_Garrett_Preeti_Jayesh_Aline_001_v2-388x212.png)\n\nJul 14 •\n\n7 min read\n\n### [Hyperlight: Debugging hardware-protected guests](https://opensource.microsoft.com/blog/2025/07/14/hyperlight-debugging-hardware-protected-guests/)\n\nYou can now interactively debug Hyperlight guest micro-VMs. Attach the GNU Debugger…",
+  "FeedLevelAuthor": "Source",
+  "Title": "Bringing BASIC back: Microsoft’s 6502 BASIC is now open source",
+  "PubDate": "2025-09-05T14:24:06+00:00",
+  "Description": "The post [Bringing BASIC back: Microsoft’s 6502 BASIC is now open source](https://opensource.microsoft.com/blog/2025/09/03/microsoft-open-source-historic-6502-basic/) appeared first on [Source](https://news.microsoft.com/source).",
+  "OutputDir": "_news",
+  "FeedUrl": "https://news.microsoft.com/source/feed/",
+  "Author": "stclarke",
+  "Link": "https://opensource.microsoft.com/blog/2025/09/03/microsoft-open-source-historic-6502-basic/",
+  "Tags": [
+    "Company News",
+    "Technology"
+  ],
+  "ProcessedDate": "2025-09-05 15:12:00"
+}

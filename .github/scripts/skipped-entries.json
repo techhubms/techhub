@@ -7311,5 +7311,17 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/understanding-the-microsoft-365-roadmap/",
     "timestamp": "2025-09-05 14:12:58 +00:00"
+  },
+  {
+    "canonical_url": "https://opensource.microsoft.com/blog/2025/09/03/microsoft-open-source-historic-6502-basic/",
+    "timestamp": "2025-09-05 15:13:38 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The content is a high-level company news announcement regarding the open-sourcing of Microsoft's 6502 BASIC. There is no substantial technical content, implementation detail, or developer-centric guidance provided. The main body consists of a link to the announcement post and an image, with no technical discussion about Microsoft technologies as required by category inclusion rules. This type of business-level or historical product announcement fits under the 'Sales Pitches' and 'Business Strategy and Executive Content' exclusions (Chapter 3), as it serves primarily as an announcement without providing technical substance for practitioners.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/aks-log-analytics-workspace-records-the-log-for-only-3-hours/m-p/4451092#M22180",
+    "timestamp": "2025-09-05 15:14:19 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community"
   }
 ]

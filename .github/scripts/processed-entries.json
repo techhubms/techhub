@@ -8376,5 +8376,11 @@
     "collection": "news",
     "canonical_url": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/08/25/fyai-explore-the-microsoft-ai-for-good-lab-with-juan-m-lavista-ferres/",
     "timestamp": "2025-09-05 14:12:23 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=UhZE9sb-Odg",
+    "timestamp": "2025-09-05 15:14:16 +00:00",
+    "reason": "Succesfully added: The content is a weekly Azure update video focused strictly on developments, product retirements, new features, and roadmap items across a breadth of Microsoft Azure services. None of the generic exclusion rules apply. The video details enhancements and new functionality in Azure components including App Service Premium, Logic Apps, API Management, Azure networking, and includes a mention of the Azure OpenAI Service. However, Azure OpenAI is a brief announcement rather than a central topic, and there is no deep-dive into AI, ML, Coding, Security, DevOps, or GitHub Copilot development-specific areas. Therefore, only the 'Azure' category is assigned according to Chapter 4, Azure rule 1 and Azure rule 4. Other categories do not qualify given the content's summary nature.",
+    "collection": "videos"
   }
 ]
