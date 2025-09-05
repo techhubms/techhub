@@ -8382,5 +8382,17 @@
     "timestamp": "2025-09-05 15:14:16 +00:00",
     "reason": "Succesfully added: The content is a weekly Azure update video focused strictly on developments, product retirements, new features, and roadmap items across a breadth of Microsoft Azure services. None of the generic exclusion rules apply. The video details enhancements and new functionality in Azure components including App Service Premium, Logic Apps, API Management, Azure networking, and includes a mention of the Azure OpenAI Service. However, Azure OpenAI is a brief announcement rather than a central topic, and there is no deep-dive into AI, ML, Coding, Security, DevOps, or GitHub Copilot development-specific areas. Therefore, only the 'Azure' category is assigned according to Chapter 4, Azure rule 1 and Azure rule 4. Other categories do not qualify given the content's summary nature.",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-09-05 16:15:48 +00:00",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content is directly about Azure services and administrative operations (Azure rule 1 and 4). Assigned the 'Security' category due to the primary focus on enforcing multifactor authentication to enhance identity security and protect cloud resources (Security rules 1, 3, 4, and 7). No other category qualifies since there is no coding, ML/data, AI, DevOps, or GitHub Copilot development focus. All generic exclusion rules were checked and do not apply; this is official Microsoft security news with actionable technical details.",
+    "collection": "news",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/azure-mandatory-multifactor-authentication-phase-2-starting-in-october-2025/"
+  },
+  {
+    "timestamp": "2025-09-05 16:16:26 +00:00",
+    "reason": "Succesfully added: Included AI and GitHub Copilot categories because the entire post discusses automating web app debugging and bug reproduction through GitHub Copilot (AI rule 2, GitHub Copilot rules 1-4). Assigned Coding because it involves practical setup, VS Code usage for configuration, Playwright testing, and real debugging workflow with code (Coding rules 2-5). 'Azure', 'DevOps', 'ML', and 'Security' did not apply since the focus is not on those domains or their technologies. No generic exclusion rules apply—the content is technical, developer-focused, not sales, not negative, and central to Microsoft developer tools.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-to-debug-a-web-app-with-playwright-mcp-and-github-copilot/"
   }
 ]
