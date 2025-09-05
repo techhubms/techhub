@@ -21,6 +21,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  actions: read
 
 jobs:
   generate-roundup:
@@ -31,18 +32,11 @@ jobs:
       GIT_USER_NAME: "RSS Processing Workflow"
     
     steps:
-    - name: Generate App Token
-      id: app-token
-      uses: actions/create-github-app-token@v1
-      with:
-        app-id: ${{ secrets.RSS_APP_APPID }}
-        private-key: ${{ secrets.RSS_APP_PRIVATEKEY }}
-
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
-        token: ${{ steps.app-token.outputs.token }}
+        token: ${{ github.token }}
 
     - name: Setup PowerShell
       uses: azure/powershell@v2
@@ -50,11 +44,6 @@ jobs:
         azPSVersion: 'latest'
         inlineScript: |
           Write-Host "PowerShell setup complete"
-
-    - name: Configure Git user
-      run: |
-        git config --global user.email "${{ env.GIT_USER_EMAIL }}"
-        git config --global user.name "${{ env.GIT_USER_NAME }}"
 
     - name: Calculate date range
       id: dates
@@ -93,6 +82,52 @@ jobs:
         "start-date=$startDate" >> $env:GITHUB_OUTPUT
         "end-date=$endDate" >> $env:GITHUB_OUTPUT
 
+    - name: Prepare Branch for Roundup
+      id: prepare-branch
+      shell: pwsh
+      run: |
+        try {
+          # Configure Git user
+          git config --global user.email "${{ env.GIT_USER_EMAIL }}"
+          git config --global user.name "${{ env.GIT_USER_NAME }}"
+          
+          # Create a unique branch name with date range
+          $branchName = "roundup/${{ steps.dates.outputs.start-date }}-to-${{ steps.dates.outputs.end-date }}"
+          Write-Host "🌿 Preparing branch: $branchName"
+          
+          # Check if branch already exists locally and remove it
+          $branchExists = git branch --list $branchName
+          if ($branchExists) {
+              Write-Host "🗑️ Local branch $branchName already exists, removing it..."
+              git branch -D $branchName
+          }
+          
+          # Check if remote branch exists and remove it
+          Write-Host "🔍 Fetching remote branches..."
+          git fetch origin
+          $remoteBranchExists = git branch -r --list "origin/$branchName"
+          if ($remoteBranchExists) {
+              Write-Host "🗑️ Remote branch $branchName exists, removing it..."
+              try {
+                  git push origin --delete $branchName
+                  Write-Host "🗑️ Removed remote branch $branchName"
+              } catch {
+                  Write-Host "⚠️ Failed to remove remote branch $branchName - continuing anyway"
+              }
+          }
+          
+          # Create and switch to new branch
+          git checkout -b $branchName
+          Write-Host "✅ Successfully created and switched to branch: $branchName"
+          
+          # Output branch name for next steps
+          "branch-name=$branchName" >> $env:GITHUB_OUTPUT
+        }
+        catch {
+          Write-Host "❌ Error during branch preparation: $($_.Exception.Message)" -ForegroundColor Red
+          exit 1
+        }
+
     - name: Generate Weekly Roundup
       shell: pwsh
       run: |
@@ -105,13 +140,13 @@ jobs:
           Set-Location $env:GITHUB_WORKSPACE
           
           # Run the roundup generation script with default parameters
-          #& .github/scripts/iterative-roundup-generation.ps1 `
-          #  -Token "${{ secrets.AZURE_AI_KEY }}" `
-          #  -Model "gpt-4.1" `
-          #  -Endpoint "https://oai-techhub.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview" `
-          #  -StartDate "${{ steps.dates.outputs.start-date }}" `
-          #  -EndDate "${{ steps.dates.outputs.end-date }}" `
-          #  -WorkspaceDirectory "${{ github.workspace }}"
+          & .github/scripts/iterative-roundup-generation.ps1 `
+            -Token "${{ secrets.AZURE_AI_KEY }}" `
+            -Model "gpt-4.1" `
+            -Endpoint "https://oai-techhub.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview" `
+            -StartDate "${{ steps.dates.outputs.start-date }}" `
+            -EndDate "${{ steps.dates.outputs.end-date }}" `
+            -WorkspaceDirectory "${{ github.workspace }}"
             
           Write-Host "✅ Roundup generation completed successfully"
         }
@@ -125,52 +160,15 @@ jobs:
         # Ensure we're in the right directory context
         GITHUB_WORKSPACE: ${{ github.workspace }}
 
-    - name: Generate Fresh Token for Git Operations
-      id: git-token
-      uses: actions/create-github-app-token@v1
-      with:
-        app-id: ${{ secrets.RSS_APP_APPID }}
-        private-key: ${{ secrets.RSS_APP_PRIVATEKEY }}
-
-    - name: Create Branch and Commit Generated Roundup
+    - name: Commit Generated Roundup
+      id: commit-changes
       shell: pwsh
       run: |
         try {
-          # update the token to prevent issues during timeout
-          git remote set-url origin https://x-access-token:${{ steps.git-token.outputs.token }}@github.com/${{ github.repository }}.git
-          
           # Check if there are any changes to commit
           $gitStatus = git status --porcelain
           if ($gitStatus) {
-            Write-Host "📝 Changes detected, creating branch and committing new roundup..."
-            
-            # Create a unique branch name with date range
-            $branchName = "roundup/${{ steps.dates.outputs.start-date }}-to-${{ steps.dates.outputs.end-date }}"
-            Write-Host "🌿 Creating branch: $branchName"
-            
-            # Check if branch already exists locally and remove it
-            $branchExists = git branch --list $branchName
-            if ($branchExists) {
-                Write-Host "🗑️ Local branch $branchName already exists, removing it..."
-                git branch -D $branchName
-            }
-            
-            # Check if remote branch exists and remove it (fetch first to update remote tracking)
-            Write-Host "Fetching the remote branches"
-            git fetch https://x-access-token:${{ steps.git-token.outputs.token }}@github.com/${{ github.repository }}.git
-            $remoteBranchExists = git branch -r --list "origin/$branchName"
-            if ($remoteBranchExists) {
-                Write-Host "🗑️ Remote branch $branchName exists, removing it..."
-                try {
-                    git push https://x-access-token:${{ steps.git-token.outputs.token }}@github.com/${{ github.repository }}.git --delete $branchName
-                    Write-Host "🗑️ Removed remote branch $branchName"
-                } catch {
-                    Write-Host "⚠️ Failed to remove remote branch $branchName - continuing anyway"
-                }
-            }
-            
-            # Create and switch to new branch
-            git checkout -b $branchName
+            Write-Host "📝 Changes detected, committing new roundup..."
             
             # Add all changes
             git add .
@@ -179,13 +177,12 @@ jobs:
             $commitMessage = "🤖 Add weekly roundup for ${{ steps.dates.outputs.start-date }} to ${{ steps.dates.outputs.end-date }} - Generated automatically via GitHub Actions"
             git commit -m "$commitMessage"
             
-            # Push branch using fresh app token
-            git push https://x-access-token:${{ steps.git-token.outputs.token }}@github.com/${{ github.repository }}.git $branchName
+            # Push branch using GITHUB_TOKEN
+            git push origin ${{ steps.prepare-branch.outputs.branch-name }}
             
-            Write-Host "✅ Successfully committed and pushed branch: $branchName"
+            Write-Host "✅ Successfully committed and pushed changes to branch: ${{ steps.prepare-branch.outputs.branch-name }}"
             
-            # Output branch name for next step
-            "branch-name=$branchName" >> $env:GITHUB_OUTPUT
+            # Output for next step
             "has-changes=true" >> $env:GITHUB_OUTPUT
           } else {
             Write-Host "ℹ️ No changes to commit - roundup may already exist"
@@ -196,15 +193,6 @@ jobs:
           Write-Host "❌ Error during git operations: $($_.Exception.Message)" -ForegroundColor Red
           exit 1
         }
-      id: commit-changes
-
-    - name: Generate Fresh Token for PR Creation
-      if: steps.commit-changes.outputs.has-changes == 'true'
-      id: pr-token
-      uses: actions/create-github-app-token@v1
-      with:
-        app-id: ${{ secrets.RSS_APP_APPID }}
-        private-key: ${{ secrets.RSS_APP_PRIVATEKEY }}
 
     - name: Create Pull Request
       if: steps.commit-changes.outputs.has-changes == 'true'
@@ -213,7 +201,7 @@ jobs:
         try {
           Write-Host "📋 Creating pull request for weekly roundup..."
           
-          $branchName = "${{ steps.commit-changes.outputs.branch-name }}"
+          $branchName = "${{ steps.prepare-branch.outputs.branch-name }}"
           $prTitle = "🤖 Weekly Roundup: ${{ steps.dates.outputs.start-date }} to ${{ steps.dates.outputs.end-date }}"
           $prBody = @"
         ## 📅 Weekly Roundup Generated
@@ -233,8 +221,8 @@ jobs:
         > This PR was automatically created by the Weekly Roundup Generation workflow.
         "@
           
-          # Create pull request using GitHub CLI with fresh app token
-          $env:GITHUB_TOKEN = "${{ steps.pr-token.outputs.token }}"
+          # Create pull request using GitHub CLI with GITHUB_TOKEN
+          $env:GITHUB_TOKEN = "${{ github.token }}"
           gh pr create --title "$prTitle" --body "$prBody" --base main --head $branchName --repo ${{ github.repository }}
           
           Write-Host "✅ Successfully created pull request"
