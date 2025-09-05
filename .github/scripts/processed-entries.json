@@ -8418,5 +8418,11 @@
     "timestamp": "2025-09-05 18:17:13 +00:00",
     "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories because the primary focus is on GitHub Copilot's advanced AI-driven features, specifically autonomous coding agents (AI rules 1-2, GitHub Copilot rules 1-4). 'Coding' is included due to demonstrated end-to-end development workflows, bug fixes, and code automation (Coding rules 2-4). 'DevOps' is included because features like backlog assignment, PR workflows, automated testing, and team collaboration tools align with DevOps practices (DevOps rules 3, 5, 8, 9). No exclusions apply: this is technically in-depth, non-promotional, and developer-focused content.",
     "canonical_url": "https://www.youtube.com/watch?v=jq7Ls6T0LYM"
+  },
+  {
+    "reason": "Succesfully added: Included the 'AI' category because the content specifically discusses the GitHub Copilot Coding Agent, which is an AI-powered tool (AI rule 1 and 2). Assigned 'GitHub Copilot' because the video is centrally about GitHub Copilot features and integrations (GitHub Copilot rules 1-4). Did NOT include 'Coding', 'DevOps', or 'Azure' because the focus is on task automation and Copilot agent workflows, not development implementation, DevOps practices, or Azure-specific technologies. The content is educational, technical, and targeted at developers, thus meets all inclusion criteria and avoids exclusion triggers.",
+    "timestamp": "2025-09-05 19:10:19 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=t4ERV6aHCPM"
   }
 ]
