@@ -8370,5 +8370,11 @@
     "canonical_url": "https://devops.com/making-observability-actionable-turning-metrics-logs-and-traces-into-better-business-outcomes/?utm_source=rss&utm_medium=rss&utm_campaign=making-observability-actionable-turning-metrics-logs-and-traces-into-better-business-outcomes",
     "reason": "Succesfully added: I assigned the 'DevOps' category because the main topic is best practices for observability in modern DevOps environments, which aligns with DevOps rule 3 (Team collaboration and ways of working), rule 6 (Monitoring and operations), and rule 5 (CI/CD and deployment—proactive monitoring is integral to modern pipelines). There was no substantive coverage of specific Microsoft platforms, Azure, or coding/AI/ML technologies; the article stays at the methodology and tool-agnostic practice level. AI/ML are mentioned as part of analysis, but not in a technical, Microsoft-specific way, so AI/ML categories do not apply. No generic exclusion rule matched: it's not negative, not biographical, not sales-focused, and is of appropriate length and language. No Microsoft-specific technology focus is present, so only DevOps is assigned.",
     "timestamp": "2025-09-05 06:18:48 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned only the AI category. The entire news article focuses on Microsoft's AI for Good Lab—its mission, technical partnerships, projects (flood response, healthcare diagnostics, biodiversity monitoring, Project SPARROW), and global AI impact—all under the aegis of Microsoft’s advanced AI research. No code-level implementation or software engineering practices are discussed, so Coding, DevOps, Azure, ML, Security are not applicable. The piece does not fall under generic exclusions: it's in English, not biographical, not a sales pitch, not negative, and not business-strategy oriented. Central focus is on Microsoft's responsible AI research and applications—meeting AI inclusion rules 1, 4, 5, and 6.",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/08/25/fyai-explore-the-microsoft-ai-for-good-lab-with-juan-m-lavista-ferres/",
+    "timestamp": "2025-09-05 14:12:23 +00:00"
   }
 ]

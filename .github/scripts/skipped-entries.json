@@ -7293,5 +7293,23 @@
     "canonical_url": "https://devops.com/what-is-the-secret-sauce-behind-atlassians-610m-buy-of-the-browser-company/?utm_source=rss&utm_medium=rss&utm_campaign=what-is-the-secret-sauce-behind-atlassians-610m-buy-of-the-browser-company",
     "reason": "No categories found: No Microsoft technology is discussed or referenced in the title, description, tags, or main content. The article's focus is Atlassian's acquisition of The Browser Company, the strategic role of AI-first browsers, and potential implications for enterprise software vendors. While DevOps workflows are mentioned, there is no mention or technical discussion of Microsoft DevOps tools, Azure, GitHub, or any other Microsoft ecosystem technology. As required by the inclusion rules, Microsoft technologies must be central or comprise at least 40% of the substantive content. Since this article does not meet that threshold and does not discuss any Microsoft product, no categories are assigned.",
     "timestamp": "2025-09-05 06:19:03 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-09-05 13:21:37 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/problems-connecting-with-the-virtual-desktop/idi-p/4451296"
+  },
+  {
+    "reason": "No categories found: No categories assigned due to generic exclusion rules. The content focuses on IT administration, change management, and feature rollout strategies for Microsoft 365, with no coverage of development, coding, DevOps, AI, ML, Azure, or security implementation. It is primarily about business process, organizational change management, and communications—matching the 'Business Strategy and Executive Content' exclusion, as well as 'Non-Development Microsoft Products.' Microsoft 365 is discussed strictly from a user adoption and admin process standpoint, with no mention of developer tooling, coding, DevOps, automation scripts, or technical architecture. Therefore, exclusion rules for non-development products apply and no technical/developer categories are appropriate.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-test-and-roll-out-new-features-without-disrupting-users-in-microsoft-365/",
+    "timestamp": "2025-09-05 14:12:45 +00:00"
+  },
+  {
+    "reason": "No categories found: All categories are excluded because the content is focused on end-user feature tracking, adoption planning, and general IT change management within Microsoft 365. It does not address coding, development, technical architecture, or implementation of Microsoft technologies in a development context. None of the inclusion criteria for Coding, Azure, DevOps, AI, ML, Security, or GitHub Copilot are met. This content does not qualify as developer-focused material and is primarily aimed at IT pros and business users for general product awareness and planning, triggering the 'Non-Development Microsoft Products' and 'Business Strategy and Executive Content' generic exclusion rules.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/understanding-the-microsoft-365-roadmap/",
+    "timestamp": "2025-09-05 14:12:58 +00:00"
   }
 ]
