@@ -7281,5 +7281,17 @@
     "collection": "videos",
     "timestamp": "2025-09-04 20:15:05 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/jQitg9aZm2s"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-09-04-profile-menu-enhancements-in-global-navigation",
+    "reason": "No categories found: No categories assigned. Although the news covers changes to GitHub's user interface—specifically, the profile menu—it does not discuss developer tools, workflows, coding features, DevOps practices, or integrations that would qualify under the inclusion rules for 'Coding', 'DevOps', or other technical categories. The update is focused on user navigation and UI enhancements, lacking technical depth, coding, or Microsoft technology relevance. No generic exclusion rules strictly apply (such as negativity or non-English), but per inclusion rules and Chapter 4 category requirements, the content does not qualify for any predefined categories.",
+    "timestamp": "2025-09-05 00:53:00 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/what-is-the-secret-sauce-behind-atlassians-610m-buy-of-the-browser-company/?utm_source=rss&utm_medium=rss&utm_campaign=what-is-the-secret-sauce-behind-atlassians-610m-buy-of-the-browser-company",
+    "reason": "No categories found: No Microsoft technology is discussed or referenced in the title, description, tags, or main content. The article's focus is Atlassian's acquisition of The Browser Company, the strategic role of AI-first browsers, and potential implications for enterprise software vendors. While DevOps workflows are mentioned, there is no mention or technical discussion of Microsoft DevOps tools, Azure, GitHub, or any other Microsoft ecosystem technology. As required by the inclusion rules, Microsoft technologies must be central or comprise at least 40% of the substantive content. Since this article does not meet that threshold and does not discuss any Microsoft product, no categories are assigned.",
+    "timestamp": "2025-09-05 06:19:03 +00:00"
   }
 ]

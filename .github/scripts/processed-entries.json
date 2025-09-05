@@ -8364,5 +8364,11 @@
     "reason": "Succesfully added: Assigned the Azure category because the content centers on a new resource management experience for Azure App Service, detailing quota management and resource allocation in the Azure portal (Azure inclusion rules 1 and 4). No other categories (such as DevOps or Coding) apply, since the primary focus is administrative management and portal usage, not development or operations pipelines. There are no generic exclusion triggers: the content is technical, in English, and targets hands-on Azure resource management for developers and IT admins.",
     "timestamp": "2025-09-04 22:14:20 +00:00",
     "collection": "community"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/making-observability-actionable-turning-metrics-logs-and-traces-into-better-business-outcomes/?utm_source=rss&utm_medium=rss&utm_campaign=making-observability-actionable-turning-metrics-logs-and-traces-into-better-business-outcomes",
+    "reason": "Succesfully added: I assigned the 'DevOps' category because the main topic is best practices for observability in modern DevOps environments, which aligns with DevOps rule 3 (Team collaboration and ways of working), rule 6 (Monitoring and operations), and rule 5 (CI/CD and deployment—proactive monitoring is integral to modern pipelines). There was no substantive coverage of specific Microsoft platforms, Azure, or coding/AI/ML technologies; the article stays at the methodology and tool-agnostic practice level. AI/ML are mentioned as part of analysis, but not in a technical, Microsoft-specific way, so AI/ML categories do not apply. No generic exclusion rule matched: it's not negative, not biographical, not sales-focused, and is of appropriate length and language. No Microsoft-specific technology focus is present, so only DevOps is assigned.",
+    "timestamp": "2025-09-05 06:18:48 +00:00"
   }
 ]
