@@ -7335,5 +7335,11 @@
     "timestamp": "2025-09-05 18:17:15 +00:00",
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-devops-releases-are-failing-for-all-the-repo-all-of-sudden/m-p/4451136#M22181"
+  },
+  {
+    "reason": "No categories found: Content is excluded based on the 'Non-Development Microsoft Products' generic exclusion rule (Chapter 3). The post is primarily about Microsoft 365 Copilot and GPT-5 being used for business productivity tasks such as email summarization, meeting quizzes, and workflow improvements within Microsoft 365 applications. According to the workflow, Microsoft 365 Copilot is considered a business productivity tool, not a developer tool. The exclusion applies regardless of technical depth since the examples focus on workplace productivity, not development or implementation. Therefore, no categories are assigned.",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_its-been-a-few-weeks-since-webrought-gpt-activity-7369816504252420097-nLb7",
+    "collection": "news",
+    "timestamp": "2025-09-05 22:11:56 +00:00"
   }
 ]

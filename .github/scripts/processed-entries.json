@@ -8424,5 +8424,11 @@
     "timestamp": "2025-09-05 19:10:19 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=t4ERV6aHCPM"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the post describes GitHub Actions that leverage the GitHub Models inference API and AI-based automation (AI category, rules 1 and 2). Assigned DevOps category since the content is focused on GitHub Actions, automation in developer workflows, and issue/project management using CI/CD-like practices (DevOps category rules 2, 5, 6, and 11). Did not assign the GitHub Copilot category as the content does not reference GitHub Copilot specifically. Coding category is not included because the article is about workflow/tool usage rather than code development. The Azure, ML, and Security categories do not apply, as Azure/Microsoft cloud, ML engineering, and security-specific implementation are not central.",
+    "collection": "news",
+    "timestamp": "2025-09-05 23:12:00 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-05-github-actions-ai-labeler-and-moderator-with-the-github-models-inference-api"
   }
 ]

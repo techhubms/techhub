@@ -1,0 +1,14 @@
+{
+  "Description": "Two GitHub Actions are now available to help open source maintainers using the GitHub Models inference API: AI assessment comment labeler: Streamline your issue triage with a simple trigger label…\n\nThe post [GitHub Actions: AI labeler and moderator with the GitHub Models inference API](https://github.blog/changelog/2025-09-05-github-actions-ai-labeler-and-moderator-with-the-github-models-inference-api) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Allison",
+  "Link": "https://github.blog/changelog/2025-09-05-github-actions-ai-labeler-and-moderator-with-the-github-models-inference-api",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2025-09-05 23:10:46",
+  "Title": "GitHub Actions: AI labeler and moderator with the GitHub Models inference API",
+  "EnhancedContent": "Two GitHub Actions are now available to help open source maintainers using the [GitHub Models inference API](https://docs.github.com/rest/models?apiVersion=2022-11-28):\n\n- [AI assessment comment labeler](https://github.com/github/ai-assessment-comment-labeler): Streamline your issue triage with a simple trigger label that automatically kicks off configurable AI assessments using GitHub Models. This is perfect for issue templates that need instant evaluation! The action processes multiple AI prompts at once, generating comments with standardized labels (like `ai:bug-review:ready for review`\n) that make filtering and project automation easier. Plus it supports smart comment suppression when you want the labels without the noise for seamless automated workflows.\n- [AI moderator](https://github.com/github/ai-moderator): Scan new issues and comments with AI for spam, link spam, or AI‑generated content. You can auto‑label and optionally minimize them, with support for custom prompts.\n\nBoth actions:\n\n- Use your workflow `GITHUB_TOKEN`\nwith `models: read` (no extra API key).\n- Let you tailor prompts (multiple prompt files for assessment, toggle or replace moderation prompts).\n- Produce consistent labels you can filter, search, or automate against.\n\nThese actions complement the existing [AI inference action](https://github.com/actions/ai-inference), a reference workflow template you can adapt when calling GitHub Models in your own automation. Add them to your workflows to reduce manual triage and improve community health.\n\nFor more details, check out [our models documentation](https://docs.github.com/github-models) or join our [community discussions](https://github.com/orgs/community/discussions/categories/models?discussions_q=is%3Aopen+category%3AModels+).",
+  "OutputDir": "_news",
+  "Tags": [],
+  "PubDate": "2025-09-05T22:38:54+00:00",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog"
+}
