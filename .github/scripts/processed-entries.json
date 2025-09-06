@@ -8436,5 +8436,11 @@
     "reason": "Succesfully added: Assigned the DevOps category because the content focuses on workflow and collaboration improvements, organization-level sharing, and deployment visibility, all relating to DevOps practices (DevOps rules 3, 5, 9, and 11). Assigned Coding because it covers the local development process, new repository creation, Codespaces usage, and starting development with code (Coding rules 2 and 5). Did not assign AI, Azure, ML, GitHub Copilot, or Security because the content does not reference AI capabilities, Azure services, custom data engineering, Copilot features, or security implementations. Content qualifies as it does not trigger any generic exclusions; it's English, technical, substantive, and relevant to developer workflows using Microsoft's GitHub ecosystem.",
     "canonical_url": "https://github.blog/changelog/2025-09-05-new-spark-sharing-option-and-improved-local-dev-experience",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=jNl3CQPZ-QA",
+    "timestamp": "2025-09-06 08:14:45 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' because the session showcases AI-assisted development using GitHub Copilot and autonomous agents (AI rule 2, 1). 'GitHub Copilot' is specifically highlighted, so both 'AI' and 'GitHub Copilot' are assigned (AI and Copilot critical distinction). 'Coding' is included as the demo covers code migration, reverse engineering, and code transformation (Coding rules 1, 4). 'Azure' is included because the modernization uses Azure services and the provided repo is an Azure sample (Azure rule 1)."
   }
 ]
