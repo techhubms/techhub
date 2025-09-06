@@ -8430,5 +8430,11 @@
     "collection": "news",
     "timestamp": "2025-09-05 23:12:00 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-09-05-github-actions-ai-labeler-and-moderator-with-the-github-models-inference-api"
+  },
+  {
+    "timestamp": "2025-09-06 02:16:14 +00:00",
+    "reason": "Succesfully added: Assigned the DevOps category because the content focuses on workflow and collaboration improvements, organization-level sharing, and deployment visibility, all relating to DevOps practices (DevOps rules 3, 5, 9, and 11). Assigned Coding because it covers the local development process, new repository creation, Codespaces usage, and starting development with code (Coding rules 2 and 5). Did not assign AI, Azure, ML, GitHub Copilot, or Security because the content does not reference AI capabilities, Azure services, custom data engineering, Copilot features, or security implementations. Content qualifies as it does not trigger any generic exclusions; it's English, technical, substantive, and relevant to developer workflows using Microsoft's GitHub ecosystem.",
+    "canonical_url": "https://github.blog/changelog/2025-09-05-new-spark-sharing-option-and-improved-local-dev-experience",
+    "collection": "news"
   }
 ]
