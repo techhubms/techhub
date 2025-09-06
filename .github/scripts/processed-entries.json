@@ -8448,5 +8448,11 @@
     "canonical_url": "https://pagelsr.github.io/CooknWithCopilot/blog/draft-smarter-regex-without-the-headaches.html",
     "collection": "posts",
     "timestamp": "2025-09-06 12:20:12 +00:00"
+  },
+  {
+    "timestamp": "2025-09-06 15:10:36 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the content focuses on advanced use of GitHub Copilot prompt files in VS Code (AI rule 2, GitHub Copilot rules 1 and 2). 'Coding' was added as guidance specifically targets developer workflow and productivity with coding tools (Coding rules 4 and 5). All rules for non-development Copilot products are not triggered since GitHub Copilot is a developer tool.",
+    "canonical_url": "https://www.youtube.com/shorts/bz-e_c21Eek"
   }
 ]
