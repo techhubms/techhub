@@ -7341,5 +7341,11 @@
     "canonical_url": "https://www.linkedin.com/posts/satyanadella_its-been-a-few-weeks-since-webrought-gpt-activity-7369816504252420097-nLb7",
     "collection": "news",
     "timestamp": "2025-09-05 22:11:56 +00:00"
+  },
+  {
+    "reason": "No categories found: Content cannot be processed because the 'content' field is missing. Per the workflow, decisions must be based only on provided content, and with no actual content included, it is impossible to determine technical relevance or appropriate categories. Exclusion is required since content cannot be evaluated.",
+    "canonical_url": "https://www.youtube.com/shorts/Ef4iV-m-57k",
+    "collection": "videos",
+    "timestamp": "2025-09-06 12:20:31 +00:00"
   }
 ]

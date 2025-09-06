@@ -8442,5 +8442,11 @@
     "timestamp": "2025-09-06 08:14:45 +00:00",
     "collection": "videos",
     "reason": "Succesfully added: Assigned 'AI' because the session showcases AI-assisted development using GitHub Copilot and autonomous agents (AI rule 2, 1). 'GitHub Copilot' is specifically highlighted, so both 'AI' and 'GitHub Copilot' are assigned (AI and Copilot critical distinction). 'Coding' is included as the demo covers code migration, reverse engineering, and code transformation (Coding rules 1, 4). 'Azure' is included because the modernization uses Azure services and the provided repo is an Azure sample (Azure rule 1)."
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories because the article centers on using GitHub Copilot Chat, a developer-focused AI tool (AI rule 2 and GitHub Copilot category first rule). 'Coding' is included because the content revolves around regular expression (regex) authoring, explanation, and testing within the developer workflow (Coding rule 4). Azure, DevOps, ML, and Security categories are not assigned since the content does not cover those areas. None of the generic exclusion rules apply.",
+    "canonical_url": "https://pagelsr.github.io/CooknWithCopilot/blog/draft-smarter-regex-without-the-headaches.html",
+    "collection": "posts",
+    "timestamp": "2025-09-06 12:20:12 +00:00"
   }
 ]
