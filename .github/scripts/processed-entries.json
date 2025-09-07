@@ -8466,5 +8466,11 @@
     "timestamp": "2025-09-07 12:20:57 +00:00",
     "reason": "Succesfully added: Assigned the Security category as the content extensively covers BitLocker and TPM, both Microsoft security technologies, and focuses on secure configuration (Security rule 1 and rule 2). The piece explains BitLocker’s interaction with Hyper-V, provides command examples for manage-bde, and discusses Platform Configuration Registers (PCRs), all within a technical, implementation-focused context for Windows users. No other categories apply since the article does not focus on development, coding, Azure, DevOps, AI, or ML. The content is entirely technical, clear, and aligns with professional clarity and technical accuracy standards.",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-07 15:11:08 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the article is entirely about the developer-focused GitHub Copilot tool, discussing new features, integrations, and workflow improvements (AI rules 2 and 6, GitHub Copilot rules 1-4). 'AI' is added per category co-requirement. 'Coding' is included because the enhancements directly improve code authoring, IDE experience, and workflows (Coding rules 4 and 5). No non-development productivity Copilot products are discussed, and the entire focus is on developer tools and API integration. No generic exclusion rules applied, and the news type meets all quality and technical standards.",
+    "canonical_url": "https://github.blog/changelog/2025-09-05-new-features-in-github-copilot-in-eclipse",
+    "collection": "news"
   }
 ]
