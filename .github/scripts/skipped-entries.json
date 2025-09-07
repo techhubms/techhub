@@ -7347,5 +7347,41 @@
     "canonical_url": "https://www.youtube.com/shorts/Ef4iV-m-57k",
     "collection": "videos",
     "timestamp": "2025-09-06 12:20:31 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-play-xbox-games-on-windows-11-like-a-pro/",
+    "reason": "No categories found: No categories assigned. The content is focused on end-user features, specifically playing Xbox games and using gaming-related functionality of Windows 11. It revolves around setting up Xbox apps, Game Pass, controllers, Xbox Cloud Gaming, and Game Bar. There is no development, coding, DevOps, AI/ML, or security implementation/engineering content. This fits the generic exclusion rule for 'Non-Development Microsoft Products' and 'General End-User Features,' as the content describes using Microsoft products for consumer gaming rather than any developer, technical implementation, or architecture focus.",
+    "collection": "posts",
+    "timestamp": "2025-09-06 17:10:09 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/optimizing-windows-11-for-gaming-performance/",
+    "reason": "No categories found: No categories assigned. The content is a consumer-focused guide to optimizing Windows 11 for gaming performance, covering system settings, driver updates, and hardware tweaks. It does not provide development, coding, Azure, ML, AI, security, or DevOps instructions, nor does it cater to technical architecture or development with Microsoft technologies. Per the 'Non-Development Microsoft Products' generic exclusion rule in Chapter 3, content primarily about end-user features and tuning (like Windows OS for gaming) is excluded. No development, engineering, or practitioner focus is present.",
+    "collection": "posts",
+    "timestamp": "2025-09-06 17:10:22 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/solving-wi-fi-and-bluetooth-connectivity-issues-in-windows-11/",
+    "reason": "No categories found: All category arrays are left empty because the content is focused on general end-user troubleshooting for Wi-Fi and Bluetooth connectivity issues within Windows 11 (a consumer operating system scenario) and does not meet any inclusion rules for Microsoft developer technologies. According to the generic exclusion rules (Non-Development Microsoft Products), coverage of general Windows 11 usage, system settings, and device troubleshooting falls outside the scope unless there's a significant focus on coding, scripting, automation, development tools, or admin-level configuration. The article strictly addresses typical user fixes such as toggling Airplane Mode, updating drivers through Device Manager, settings navigation, and basic troubleshooting steps—none of which pertain to coding, DevOps, security engineering, or any development-related technical implementation. No categories are assigned per exclusion rule.",
+    "collection": "posts",
+    "timestamp": "2025-09-06 17:10:37 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/xbox-game-pass-integration-and-hidden-features/",
+    "reason": "No categories found: No categories were assigned because the content is focused on Xbox Game Pass, a consumer gaming subscription service, and its integration/hidden features for general users. The article is not about Microsoft development technologies, coding, DevOps practices, AI, Azure, ML, or security implementation. It discusses subscription benefits, cross-device saves, social features, Microsoft Rewards, gamification, and storage management for game downloads—all of which are targeted to end users, not developers or technical practitioners. This article is excluded under the 'Non-Development Microsoft Products' generic exclusion rule, as it is a product feature overview for end users. None of the inclusion rules for any category apply.",
+    "collection": "posts",
+    "timestamp": "2025-09-06 17:10:50 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-recover-from-onedrive-sync-nightmares/",
+    "reason": "No categories found: No categories assigned. The content primarily offers end-user troubleshooting and recovery tips for OneDrive sync problems, focusing on consumer-level file management rather than software development or technical implementation. It does not discuss Microsoft development, coding, DevOps practices, security engineering, AI/ML, or any technical architecture aspects. Per 'Non-Development Microsoft Products' exclusion in the generic exclusion rules (Chapter 3), guidance for OneDrive and Microsoft 365 general usage is excluded unless it is development-focused, which is not the case here.",
+    "timestamp": "2025-09-07 07:13:10 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/run-your-microsoft-365-tenant-like-a-pro-right-from-your-couch/",
+    "reason": "No categories found: All categories have been excluded because the content is primarily focused on administrative and management tasks for Microsoft 365 tenants, emphasizing the use of mobile tools for organizational management (such as the Microsoft 365 Admin app, Authenticator, Teams, Intune, and Office apps). Per the generic exclusion rules in Chapter 3 and the non-development products guidelines, content about daily administration, office productivity tools, or non-developer usage of Microsoft 365 does not qualify for any of the technical categories. There is no significant focus on development, coding, DevOps, Azure platform development, AI, ML, or security engineering that meets the inclusion thresholds. The content also does not dive into implementation details about scripting, custom development, or technical architecture—rather, it is targeted toward admins and general IT management. Therefore, per the workflow instructions, no categories have been assigned.",
+    "timestamp": "2025-09-07 07:13:24 +00:00"
   }
 ]
