@@ -7383,5 +7383,11 @@
     "canonical_url": "https://dellenny.com/run-your-microsoft-365-tenant-like-a-pro-right-from-your-couch/",
     "reason": "No categories found: All categories have been excluded because the content is primarily focused on administrative and management tasks for Microsoft 365 tenants, emphasizing the use of mobile tools for organizational management (such as the Microsoft 365 Admin app, Authenticator, Teams, Intune, and Office apps). Per the generic exclusion rules in Chapter 3 and the non-development products guidelines, content about daily administration, office productivity tools, or non-developer usage of Microsoft 365 does not qualify for any of the technical categories. There is no significant focus on development, coding, DevOps, Azure platform development, AI, ML, or security engineering that meets the inclusion thresholds. The content also does not dive into implementation details about scripting, custom development, or technical architecture—rather, it is targeted toward admins and general IT management. Therefore, per the workflow instructions, no categories have been assigned.",
     "timestamp": "2025-09-07 07:13:24 +00:00"
+  },
+  {
+    "timestamp": "2025-09-07 11:09:24 +00:00",
+    "reason": "No categories found: No categories were assigned because the main content and description fields are empty. Without substantive content to analyze for technical depth or category inclusion (such as discussion or tutorial details about nullable regions in C#), categorization is not possible according to Processing Rule: 'Never fabricate information – Base decisions only on provided content.' Additionally, with no tags or description provided, and content being null, there is insufficient information to proceed.",
+    "canonical_url": "https://www.youtube.com/shorts/SDlra_Y6qFM",
+    "collection": "videos"
   }
 ]

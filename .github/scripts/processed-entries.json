@@ -8460,5 +8460,11 @@
     "canonical_url": "https://dellenny.com/top-10-things-you-can-do-with-github-copilot-as-a-new-developer-2/",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the entire article focuses on how developers can use GitHub Copilot, a developer AI assistant tool (AI rules 1, 2 and GitHub Copilot rules 1, 2). Also added 'Coding' because the post details practical code-related tasks (code suggestions, unit tests, debugging, learning languages) fitting Coding category inclusion rules 1, 4. The content is written in English, is not biographical, negative, or sales-focused, and does not fall into any business product exclusion (Generic Exclusion Rules).",
     "timestamp": "2025-09-07 07:13:50 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-use-hyper-v-with-bitlocker-without-constant-recovery-prompts/",
+    "timestamp": "2025-09-07 12:20:57 +00:00",
+    "reason": "Succesfully added: Assigned the Security category as the content extensively covers BitLocker and TPM, both Microsoft security technologies, and focuses on secure configuration (Security rule 1 and rule 2). The piece explains BitLocker’s interaction with Hyper-V, provides command examples for manage-bde, and discusses Platform Configuration Registers (PCRs), all within a technical, implementation-focused context for Windows users. No other categories apply since the article does not focus on development, coding, Azure, DevOps, AI, or ML. The content is entirely technical, clear, and aligns with professional clarity and technical accuracy standards.",
+    "collection": "posts"
   }
 ]
