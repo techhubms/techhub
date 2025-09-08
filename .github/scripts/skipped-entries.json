@@ -7461,5 +7461,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=AknDAFc6rtA",
     "collection": "videos",
     "reason": "No categories found: No categories assigned because the provided content and description are purely promotional and lack substantive technical details required for any category inclusion. The description simply teases 'hybrid cloud insights', 'customer conversations', and 'software sneak peeks', which matches the 'Sales Pitches' and 'Promotional content without educational value' exclusion under Generic Exclusion Rules (Chapter 3). There are no specifics about Microsoft technologies, implementation, or technical guidance. The title and tags are also generic and do not reference technical depth, coding, AI, Azure, DevOps, Security, or ML topics. Therefore, the content does not qualify for categorization."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_our-researcher-agent-in-microsoft-365-copilot-activity-7370934761244028928-slFL",
+    "reason": "No categories found: Content excluded due to generic exclusion rule for non-development Microsoft products (Chapter 3). The entire post centers on Microsoft 365 Copilot, specifically highlighting the 'Researcher agent' and its ability to analyze work data (chats, meetings, files, emails) to generate reports for meeting preparation, trend analysis, or strategy building—these are all business productivity features, not development tools. No substantial developer, coding, DevOps, AI platform, security, ML, or Azure technical content or implementation is present. This matches explicit rules for excluding Microsoft 365 Copilot and similar business productivity/office tools, which must never be assigned any categories, regardless of any AI capabilities discussed. Rule reinforced by: 'CRITICAL: Copilot Product Distinction' and 'Non-Development Microsoft Products' in Chapter 3.",
+    "timestamp": "2025-09-08 22:13:17 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/debugging-java-script-in-old-asp-core-app/m-p/4451729#M674",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-09-08 22:14:20 +00:00"
   }
 ]

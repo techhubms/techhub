@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "Hy, I need to modify an asp.net.core app witch I made years ago.  in version 2.2.  I do succeed to alter C# code in visual studio (2022), but I need to alter also some Java script. The problem is that if I try to do so and I want to debug it it seems that the script in my browser (MS Edge) is not changing.\n\nI have enabled Java script debugging in VS. I emptied the browsers cache but nothing seems to help. When I run the application in debugging mode and hit F12 I still see the old script.\n\nPlease help!",
+  "Description": "Hy, I need to modify an asp.net.core app witch I made years ago. in version 2.2. I do succeed to alter C# code in visual studio (2022), but I need to alter also some Java script. The problem is that if I try to do so and I want to debug it it seems that the script in my browser (MS Edge) is not changing.\n\nI have enabled Java script debugging in VS. I emptied the browsers cache but nothing seems to help. When I run the application in debugging mode and hit F12 I still see the old script.\n\nPlease help!",
+  "Link": "https://techcommunity.microsoft.com/t5/web-development/debugging-java-script-in-old-asp-core-app/m-p/4451729#M674",
+  "Author": "RobertWarning",
+  "Title": "Debugging Java script in old asp core app",
+  "Tags": [],
+  "PubDate": "2025-09-07T21:13:19+00:00",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet",
+  "ProcessedDate": "2025-09-08 22:12:23",
+  "FeedName": "Microsoft Tech Community",
+  "OutputDir": "_community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node"
+}
