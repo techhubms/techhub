@@ -8508,5 +8508,23 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/protect-your-storage-accounts-using-network-security-perimeter/ba-p/4449046",
     "reason": "Succesfully added: Assigned 'Azure' category because the content is focused on Azure Storage accounts and related Azure services (Azure category rule 1). Assigned 'Security' category due to the in-depth discussion of network security perimeters, firewall rules, data exfiltration prevention, and centralized access management—core security concerns (Security category rules 1, 2, 4, 9). The article directly addresses technical implementation for practitioners and does not fall under any generic exclusion rule."
+  },
+  {
+    "timestamp": "2025-09-08 21:12:38 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the entire post is centered around Azure Logic Apps and related integration services (Azure rule 1 and 4). Assigned AI category because the MCP (Model Context Protocol) framework is designed to support agent and AI tool integration scenarios, and the post is tagged with 'ai' and discusses building agent-based solutions (AI rule 1, 4, and 5). No other categories apply because there is no detailed developer code or DevOps process, nor direct focus on ML, Security, or Coding as such—it's about integration architecture and enterprise composition.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-logic-apps-mcp-servers-public-preview/ba-p/4450419"
+  },
+  {
+    "timestamp": "2025-09-08 21:12:59 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the demos center on Azure Logic Apps, a core Microsoft cloud integration platform (Azure inclusion rule 1). Added DevOps category since the content deals with automating workflows, system integration, and enterprise IT process automation using Azure services (DevOps inclusion rules 3, 6, and 9). Did NOT assign AI, ML, Security, Coding, or GitHub Copilot, as the content does not address AI/ML development, security, or coding frameworks directly. All technical details and examples are grounded in Azure Logic Apps and connecting business systems, fulfilling the inclusion requirements and meeting the >40% Microsoft-centric content threshold.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-mcp-demos/ba-p/4452175"
+  },
+  {
+    "timestamp": "2025-09-08 21:13:21 +00:00",
+    "reason": "Succesfully added: Included the Azure category because the main topic is Azure Monitor's Container Insights (Azure rule 1 and 4). Included the DevOps category because the content discusses observability, log collection, and monitoring best practices for AKS clusters, which are central to DevOps (DevOps rules 5 and 7). Excluded other categories since there is no focus on coding, AI/ML, or security. No generic or language-based exclusion rules applied, and the community content exceeds 200 words.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/generally-available-high-scale-mode-in-azure-monitor-container/ba-p/4452199"
   }
 ]
