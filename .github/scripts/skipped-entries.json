@@ -7389,5 +7389,29 @@
     "reason": "No categories found: No categories were assigned because the main content and description fields are empty. Without substantive content to analyze for technical depth or category inclusion (such as discussion or tutorial details about nullable regions in C#), categorization is not possible according to Processing Rule: 'Never fabricate information – Base decisions only on provided content.' Additionally, with no tags or description provided, and content being null, there is insufficient information to proceed.",
     "canonical_url": "https://www.youtube.com/shorts/SDlra_Y6qFM",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=uRaES5Zwmuo",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the content triggers the Biographical Focus exclusion from the Generic Exclusion Rules (Chapter 3). The description and title indicate this is a personal anecdote about the author's first experience driving a tractor and moving dirt around personal property, unrelated to any Microsoft technology, product, or developer-focused technical topic. There is no evidence of substantial technical content or relevance to the defined categories, nor does it pertain to AI, Coding, Azure, DevOps, ML, GitHub Copilot, or Security.",
+    "timestamp": "2025-09-07 16:13:26 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/preparing-employees-for-moving-from-google-workspace-to-microsoft-365/",
+    "timestamp": "2025-09-08 07:14:49 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: All generic exclusion rules were checked. The content is primarily about preparing employees (organizational change management, training, communication, and support) for migration from Google Workspace to Microsoft 365, focusing on change management best practices for staff, not technical details of development, coding, DevOps, security implementation, or Cloud architecture. According to the exclusion rules for business strategy, organizational planning, and workplace focus, content that is about productivity, change management, and empowering employees without substantial technical implementation details or developer focus must be excluded from categorization. There is no discussion of development, coding, DevOps, Azure services, Security engineering, AI/ML, or any other qualifying technical Microsoft category. Therefore, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://dellenny.com/streamlining-legal-workflows-with-microsoft-365-a-guide-for-compliance-heavy-industries/",
+    "timestamp": "2025-09-08 07:15:02 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: Excluded all categories due to generic exclusion rules under Non-Development Microsoft Products. The content primarily focuses on using Microsoft 365 for business productivity, compliance management, and workflow automation in legal and compliance-heavy industries. It showcases features such as SharePoint, Teams, Power Automate, Planner, and Power BI to streamline and automate business processes, but does not cover development, coding, technical implementation, or architecture targeting developers or technical practitioners. This falls under end-user/business productivity applications, which must be excluded unless there is a clear development focus. No inclusion rules for AI, Coding, DevOps, Azure, ML, or Security are met; therefore, no categories apply."
+  },
+  {
+    "canonical_url": "https://devops.com/five-great-devops-job-opportunities-155/?utm_source=rss&utm_medium=rss&utm_campaign=five-great-devops-job-opportunities-155",
+    "timestamp": "2025-09-08 07:15:16 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: All categories are excluded according to the 'Job-Related Content' generic exclusion rule in Chapter 3. The content is a weekly report listing DevOps job opportunities, focusing on careers, hiring, salaries and industry job trends, which falls directly under the exclusion of job opportunities, job openings, hiring announcements, salary discussions, and career advancement topics. No substantial technical content or Microsoft technology focus is present outside of the job context."
   }
 ]

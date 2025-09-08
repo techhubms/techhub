@@ -8472,5 +8472,11 @@
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the article is entirely about the developer-focused GitHub Copilot tool, discussing new features, integrations, and workflow improvements (AI rules 2 and 6, GitHub Copilot rules 1-4). 'AI' is added per category co-requirement. 'Coding' is included because the enhancements directly improve code authoring, IDE experience, and workflows (Coding rules 4 and 5). No non-development productivity Copilot products are discussed, and the entire focus is on developer tools and API integration. No generic exclusion rules applied, and the news type meets all quality and technical standards.",
     "canonical_url": "https://github.blog/changelog/2025-09-05-new-features-in-github-copilot-in-eclipse",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/zone-redundancy-is-now-enabled-by-default-in-azure-container/ba-p/4450618",
+    "timestamp": "2025-09-08 07:15:54 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the entire content concerns a feature upgrade in Azure Container Registry, focusing on cloud resilience and infrastructure improvements (Azure inclusion rule 1). No other categories were added: there is no direct coverage of Coding, DevOps (no process/automation), ML, AI, GitHub Copilot, or Security topics. The content is technical, targets Azure practitioners, and clearly exceeds 200 words, with no generic exclusion rules met."
   }
 ]
