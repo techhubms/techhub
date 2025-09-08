@@ -7413,5 +7413,11 @@
     "timestamp": "2025-09-08 07:15:16 +00:00",
     "collection": "posts",
     "reason": "No categories found: All categories are excluded according to the 'Job-Related Content' generic exclusion rule in Chapter 3. The content is a weekly report listing DevOps job opportunities, focusing on careers, hiring, salaries and industry job trends, which falls directly under the exclusion of job opportunities, job openings, hiring announcements, salary discussions, and career advancement topics. No substantial technical content or Microsoft technology focus is present outside of the job context."
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is a technical comparison between Intel HAXM and Microsoft's Hyper-V/WHPX for hardware acceleration in Android emulation on Windows. While it discusses Microsoft technologies (Hyper-V, Windows Hypervisor Platform), it solely focuses on setting up Android app development environments, not Microsoft development, Azure, DevOps, Coding (.NET, C#, etc.), or AI/ML/Security in a Microsoft technology context. There is no substantial Microsoft development, deployment, or implementation detail that fits any predefined category. The subject matter is about virtualization choices for Android Studio, not for building with Microsoft software or cloud products.",
+    "canonical_url": "https://dellenny.com/intel-haxm-vs-hyper-v-whpx-choosing-the-right-setup-for-android-emulator-on-windows/",
+    "timestamp": "2025-09-08 08:18:29 +00:00",
+    "collection": "posts"
   }
 ]

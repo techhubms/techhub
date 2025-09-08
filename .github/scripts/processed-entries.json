@@ -8478,5 +8478,11 @@
     "timestamp": "2025-09-08 07:15:54 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Assigned the Azure category because the entire content concerns a feature upgrade in Azure Container Registry, focusing on cloud resilience and infrastructure improvements (Azure inclusion rule 1). No other categories were added: there is no direct coverage of Coding, DevOps (no process/automation), ML, AI, GitHub Copilot, or Security topics. The content is technical, targets Azure practitioners, and clearly exceeds 200 words, with no generic exclusion rules met."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the episode centers on integrating and configuring language models—including Azure, OpenAI, Anthropic, and others—within VS Code (AI rules 1, 4, 5). Assigned 'Coding' category since the content is directed towards developers and extension authors, emphasizing extension development, API usage, and code-level model integration in Visual Studio Code (Coding rules 3, 4, 5). Did not assign 'Azure' or 'ML' because Azure is discussed as one of several providers, not the core focus, and there is no deep dive into data science or ML engineering workflows. 'GitHub Copilot' is mentioned only as a hashtag, without substantive focus, so that category was not included. All generic exclusion rules were checked and none applied.",
+    "canonical_url": "https://www.youtube.com/watch?v=9pMJdzHVaNE",
+    "timestamp": "2025-09-08 08:19:08 +00:00",
+    "collection": "videos"
   }
 ]
