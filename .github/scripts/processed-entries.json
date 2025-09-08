@@ -8496,5 +8496,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=zQNk1BjhwQI",
     "timestamp": "2025-09-08 12:25:41 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: 'Security' because the article focuses on access control, role-based permissions, and protecting data across OneLake and Microsoft Fabric (Security rules 1, 2, 7, 9). 'Azure' included as Microsoft Fabric and OneLake are Azure-based data lake and analytics offerings (Azure rule 1, 4, 5, 7). 'ML' assigned because the security features are designed for analytics workloads across Lakehouse, Spark, and Power BI, supporting data science, advanced analytics, and reporting (ML rules 1, 2, 4, and 9). Not eligible for Coding, DevOps, AI, or GitHub Copilot as the content is not focused on application programming, DevOps methodology, or AI/ML platform model training but rather on security, management, and governance within the Azure analytics stack. Content has no generic exclusion triggers—it's technical, implementation-focused, and calls out Microsoft Azure services.",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/onelake-security-is-now-available-in-public-preview/",
+    "timestamp": "2025-09-08 15:13:08 +00:00"
   }
 ]
