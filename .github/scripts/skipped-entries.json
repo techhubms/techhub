@@ -7437,5 +7437,29 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=TneSegJ9kuI",
     "timestamp": "2025-09-08 14:13:53 +00:00"
+  },
+  {
+    "timestamp": "2025-09-08 16:13:37 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/6YwZg9SZzls",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the 'content' field is null, and the description only mentions attendee interviews at Microsoft Build 2025 regarding developer security, without providing any substantive technical detail, tutorial, or implementation content. There is no actual informational or educational material to categorize according to the processing rules. Without substantive content to analyze, no categories can be assigned.",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: All categories are excluded because the content is primarily an announcement and promotional post for the DevOps Dozen 2025 awards. It focuses on the nomination process, event details, categories, past winners, and community recognition rather than offering technical implementation details, tutorials, hands-on DevOps practices, or substantial technical content about Microsoft technologies. It does not include core technical knowledge or actionable guidance related to Microsoft DevOps tools, Azure, AI, or development frameworks as required by the inclusion rules. The content is general industry news and event-oriented, which falls under 'Sales Pitches' and 'Business Strategy and Executive Content' in the generic exclusion rules. There are also no clear engineering-focused best practices or deep dives into technical tooling, so no categories apply.",
+    "timestamp": "2025-09-08 17:11:56 +00:00",
+    "canonical_url": "https://devops.com/nominations-are-open-devops-dozen-2025/?utm_source=rss&utm_medium=rss&utm_campaign=nominations-are-open-devops-dozen-2025",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: Content was excluded due to lack of substantive content to process. The 'description' field is empty, the 'content' field is null, and the 'tags' field is empty. Without actual content or a meaningful description, it is impossible to determine whether any inclusion rules apply or to generate structured output. According to the workflow, content must have enough information to assess against the quality and category inclusion rules. Therefore, no categories are assigned.",
+    "timestamp": "2025-09-08 17:12:17 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/RXadJADmlz4",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-09-08 18:17:53 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=AknDAFc6rtA",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the provided content and description are purely promotional and lack substantive technical details required for any category inclusion. The description simply teases 'hybrid cloud insights', 'customer conversations', and 'software sneak peeks', which matches the 'Sales Pitches' and 'Promotional content without educational value' exclusion under Generic Exclusion Rules (Chapter 3). There are no specifics about Microsoft technologies, implementation, or technical guidance. The title and tags are also generic and do not reference technical depth, coding, AI, Azure, DevOps, Security, or ML topics. Therefore, the content does not qualify for categorization."
   }
 ]
