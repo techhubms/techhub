@@ -8484,5 +8484,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=9pMJdzHVaNE",
     "timestamp": "2025-09-08 08:19:08 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' category because the content explains a new Azure Application Gateway feature (Azure inclusion rule 1). Assigned 'Security' because network isolation is inherently a security and network protection topic (Security inclusion rule 1 and 9). No 'AI', 'ML', 'Coding', 'DevOps', or 'GitHub Copilot' content is present. The content is not excluded by any generic exclusion rules—the video is technical, feature-focused, in English, and not personal, job-related, or business-strategy oriented. Although full content is unavailable, the title and description are sufficiently specific to apply the relevant categories.",
+    "canonical_url": "https://www.youtube.com/shorts/Gm4TZukbu8s",
+    "timestamp": "2025-09-08 12:25:11 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category due to the central focus on Azure Application Gateway, its architecture, and deployment within Azure (Azure rule 1 and 5). Assigned Security because the video covers secure network architecture, removal of public endpoints, firewall, WAF considerations, and control plane communication (Security rules 1, 2, and 4). No other categories fit as content does not cover AI, ML/data science, DevOps pipelines/tooling, or code-level implementation. Description, tags, and content were synthesized from detailed chapter notes and resource links provided in the input.",
+    "canonical_url": "https://www.youtube.com/watch?v=zQNk1BjhwQI",
+    "timestamp": "2025-09-08 12:25:41 +00:00",
+    "collection": "videos"
   }
 ]

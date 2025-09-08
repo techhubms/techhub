@@ -1,0 +1,24 @@
+{
+  "Author": "John Savill's Technical Training",
+  "Link": "https://www.youtube.com/watch?v=zQNk1BjhwQI",
+  "Tags": [
+    "app gateway",
+    "azure",
+    "azure cloud",
+    "cloud",
+    "firewall",
+    "load balancing",
+    "microsoft",
+    "microsoft azure",
+    "security"
+  ],
+  "OutputDir": "_videos",
+  "Title": "Application Gateway Network Isolation",
+  "FeedName": "John Savill's Technical Training",
+  "Description": "A deep dive into the new architecture available for App Gateway that removes the need to have a public endpoint and many other restrictions.\n\n🔎 Looking for content on a particular topic? Search the channel. If I have something it will be there! 🤔 Due to the channel growth and number of people wanting help I no longer can answer or even read questions and they will just stay in the moderation queue never to be seen so please post questions to other sites like Reddit, Microsoft Community Hub etc.\n\n▬▬▬▬▬▬ C H A P T E R S ⏰ ▬▬▬▬▬▬ 00:00 - Introduction 00:16 - App GW network 101 02:20 - V2 vs V1 version of App GW 02:57 - Front end configuration 04:55 - Why I have to have a public endpoint 05:51 - Shared data and control plane implications 08:11 - Network isolated architecture 09:10 - Switch for new architecture 10:43 - How the switch impacts deployment architecture 11:34 - Post flag set behavior for NEW deployments 13:32 - New experience 14:01 - Frontend options 15:37 - New control plane traffic path 16:27 - Removal of restrictions 18:46 - Setting the flag on and off 19:29 - WAF support 20:01 - Flag only impacts NEW instance creation 20:39 - Current limitation in new architecture 21:26 - Summary 22:29 - Close\n\n▬▬▬▬▬▬ K E Y L I N K S 🔗 ▬▬▬▬▬▬ ► Video whiteboard: 🔗 https://github.com/johnthebrit/RandomStuff/raw/master/Whiteboards/AppGWNetworkIsolation.png ► App GW v1 to v2 migration: 🔗 https://learn.microsoft.com/azure/application-gateway/migrate-v1-v2 ► Control plane communication requirement documentation: 🔗 https://learn.microsoft.com/azure/application-gateway/configuration-infrastructure#required-security-rules ► App GW Network Isolation docs: 🔗 https://learn.microsoft.com/azure/application-gateway/application-gateway-private-deployment?tabs=portal#onboard-to-the-feature\n\n▬▬▬▬▬▬ Want to learn more? 🚀 ▬▬▬▬▬▬ 📖 Recommended Learning Path for Azure 🔗 https://learn.onboardtoazure.com 🥇 Certification Content Repository 🔗 https://github.com/johnthebrit/CertificationMaterials 📅 Weekly Azure Update 🔗 https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks ☁ Azure Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY ⚙ DevOps Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq 💻 PowerShell Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFq\\_hR7FcMYg32xsSAObuq8 🎓 Certification Cram Videos 🔗 https://youtube.com/playlist?list=PLlVtbbG169nHz2qfLvPsAz9CnnXofhmcA 🧠 Mentoring Content 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGHxNkSWB0PjzZHwZ0BkXZZ ❔ Questions? Maybe I answered it in my FAQ 🔗 https://savilltech.com/faq 👕 Cure Childhood Cancer Charity T-Shirt Channel Store 🔗 https://johns-t-shirts-store.creator-spring.com/\n\n👂 Enable the subtitles and from there you can translate to your native language via the auto-translate feature in settings! https://youtu.be/v5b53-PgEmI for a demo of using this feature.\n\nSUBSCRIBE ✅ https://www.youtube.com/channel/UCpIn7ox7j7bH\\_OFj7tYouOQ?sub\\_confirmation=1\n\n#microsoft #azure #cloud #johnsavillstechnicaltraining #onboardtoazure",
+  "FeedLevelAuthor": "John Savill's Technical Training",
+  "ProcessedDate": "2025-09-08 12:23:46",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ",
+  "EnhancedContent": null,
+  "PubDate": "2025-09-08T11:48:33+00:00"
+}

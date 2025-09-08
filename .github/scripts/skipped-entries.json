@@ -7419,5 +7419,11 @@
     "canonical_url": "https://dellenny.com/intel-haxm-vs-hyper-v-whpx-choosing-the-right-setup-for-android-emulator-on-windows/",
     "timestamp": "2025-09-08 08:18:29 +00:00",
     "collection": "posts"
+  },
+  {
+    "collection": "posts",
+    "reason": "No categories found: Content was excluded due to the generic rule for Non-Development Microsoft Products. The content is about Copilot in Microsoft 365 (M365 Copilot), focusing on business productivity, marketing workflows, and document/presentation automation within Office apps like Word, PowerPoint, Excel, Teams, and Outlook. According to the CRITICAL: Copilot Product Distinction section (Generic Exclusion), Microsoft 365 Copilot and related M365 Copilot products are excluded because they are not developer tools but business/user productivity tools. The text offers step-by-step guides for marketers on using Copilot features in various M365 applications, with no developer, coding, or technical implementation focus. Therefore, no categories are assigned.",
+    "canonical_url": "https://dellenny.com/unlock-marketing-superpowers-with-copilot-in-microsoft-365-a-step-by-step-guide/",
+    "timestamp": "2025-09-08 09:15:08 +00:00"
   }
 ]
