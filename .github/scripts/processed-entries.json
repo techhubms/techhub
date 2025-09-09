@@ -8538,5 +8538,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/implementing-zero-trust-network-security-for-azure-web-apps/m-p/4451649#M22190",
     "reason": "Succesfully added: The content is a technical, step-by-step guide describing how to secure Azure App Service Web Apps using Private Endpoints and Zero Trust principles. According to the inclusion rules, it qualifies for the 'Azure' category (use of Azure App Service, VNets, Private Endpoints) and for 'Security' (network security, zero trust, configuration of access restrictions). There is no focus on code or DevOps pipeline specifics, so 'Coding', 'DevOps', 'AI', 'ML', or 'GitHub Copilot' are not applied. The content is educational, English, technical, and meets minimum quality standards.",
     "timestamp": "2025-09-08 22:14:19 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/designing-ai-workloads-with-the-azure-well-architected-framework/ba-p/4452252",
+    "timestamp": "2025-09-09 00:55:04 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the primary focus is designing and deploying artificial intelligence workloads (AI rule 1). Assigned Azure because the entire framework and examples are based on Microsoft Azure (Azure rule 1). ML is assigned because the article discusses machine learning engineering, model retraining, MLOps, and addresses technical challenges of data science/ML on Azure (ML rules 1, 2, 6, and 9). Security is assigned due to emphasis on data protection, compliance, and secure architectures in AI workloads (Security rules 1, 2, 3). DevOps is included because the content covers operational excellence, CI/CD, monitoring, and MLOps practices for AI lifecycle management (DevOps rules 3, 4, 5, 9). No exclusion rules apply—content is technical, development-focused, and fits within category inclusion requirements."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-azure-d192-sizes-in-the-azure/ba-p/4451427",
+    "timestamp": "2025-09-09 00:55:37 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content is specifically about the general availability and detailed technical specifications of new Azure VM sizes (D192) in the Dsv6 and Ddsv6-series, focusing on architecture, configuration, storage, performance, security (Intel TME), and region/pricing information. Although security features (like Intel TME) are mentioned, the primary focus is on Azure VM usage and management, and there is not enough depth on security architecture or implementation to warrant the Security category. No other rule-based categories apply (no coding, DevOps, AI, ML content present). Generic exclusion rules do not apply—content is technical, not biographical, not business strategy, not negative, not a sales pitch, and meets community content length requirements."
   }
 ]
