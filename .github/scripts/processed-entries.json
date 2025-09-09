@@ -8736,5 +8736,11 @@
     "canonical_url": "https://github.blog/enterprise-software/devsecops/how-to-use-the-github-and-jfrog-integration-for-secure-traceable-builds-from-commit-to-production/",
     "collection": "news",
     "reason": "Succesfully added: Assigned DevOps because the article centers on CI/CD pipeline automation, source-to-artifact traceability, and integrating GitHub Actions with JFrog (DevOps rules 1, 2, 5, 6). Assigned Security because the integration’s core value is supply chain security: automated provenance, security scanning, artifact validation, vulnerability alerting, and compliance (Security rules 1, 2, 5, 7, 9). Did not assign Azure, AI, ML, Coding, or GitHub Copilot because content is specific to GitHub, JFrog, and general CI/CD/security practices, without direct Microsoft cloud, AI/ML, or code-level development focus."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=fzYN_kgl-OM",
+    "reason": "Succesfully added: Assigned AI category due to the focus on AI-assisted coding techniques and features like Copilot Vision and Agent Mode within VS Code (AI rules 1, 4, 5). Assigned GitHub Copilot category as Copilot is mentioned as a core tool being demonstrated and discussed (GitHub Copilot rules 1, 2, 4). Assigned Coding category because the video demonstrates practical programming tasks, workflows, and application development using VS Code (Coding rules 4, 5). The video fits all quality standards: it's technically focused, development-oriented, and not a sales pitch or biographical content.",
+    "timestamp": "2025-09-09 23:12:04 +00:00"
   }
 ]
