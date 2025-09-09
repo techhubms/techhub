@@ -8724,5 +8724,17 @@
     "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories per the explicit segmentation of Copilot developer tools (AI rule 2 and GitHub Copilot rule 1). The content focuses solely on the availability and configuration of new AI models in GitHub Copilot—a developer-centric tool—making these categories directly applicable. No 'Coding', 'DevOps', 'Azure', 'ML', or 'Security' categories are assigned because the article does not provide development tutorials, DevOps workflows, Azure integration, machine learning engineering, or security-related details or practices.",
     "canonical_url": "https://github.blog/changelog/2025-09-09-openai-gpt-5-and-gpt-5-mini-are-now-generally-available-in-github-copilot",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-09 22:11:08 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/retail/2025/09/09/ask-ralph-where-style-meets-ai-a-new-era-of-conversational-commerce/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centers on an AI-powered solution using Microsoft Azure OpenAI (AI inclusion rule 1). Assigned 'Azure' because Microsoft Azure is the hosting and enabling infrastructure for the solution (Azure inclusion rule 1). Not assigned 'Coding', 'DevOps', 'ML', or 'Security' since the content does not cover application development, data science, deployment, or security configuration. The content is a news article focused on a technical solution rollout rather than high-level business strategy or business productivity, complying with all inclusion and exclusion criteria."
+  },
+  {
+    "timestamp": "2025-09-09 22:11:39 +00:00",
+    "canonical_url": "https://github.blog/enterprise-software/devsecops/how-to-use-the-github-and-jfrog-integration-for-secure-traceable-builds-from-commit-to-production/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned DevOps because the article centers on CI/CD pipeline automation, source-to-artifact traceability, and integrating GitHub Actions with JFrog (DevOps rules 1, 2, 5, 6). Assigned Security because the integration’s core value is supply chain security: automated provenance, security scanning, artifact validation, vulnerability alerting, and compliance (Security rules 1, 2, 5, 7, 9). Did not assign Azure, AI, ML, Coding, or GitHub Copilot because content is specific to GitHub, JFrog, and general CI/CD/security practices, without direct Microsoft cloud, AI/ML, or code-level development focus."
   }
 ]
