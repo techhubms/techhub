@@ -8562,5 +8562,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=crHR6sEnTpE",
     "collection": "videos",
     "reason": "Succesfully added: The main focus is on Microsoft Copilot Studio and AI Builder, which are both Microsoft AI-related development tools. The process described automates document workflows using these AI services, and all technical examples revolve around Microsoft platforms. According to AI inclusion rule 1 (Microsoft AI products/services) and rule 3 (Microsoft AI frameworks/tools), the 'AI' category is assigned. The content does not show source code or programming, so 'Coding' is not included. GitHub Copilot, DevOps, Azure, ML, or Security categories do not apply, as Copilot Studio and AI Builder are low-code/no-code AI platforms not covered under those headings."
+  },
+  {
+    "timestamp": "2025-09-09 11:12:47 +00:00",
+    "canonical_url": "https://andrewlock.net/exploring-dotnet-10-preview-features-7-packaging-self-contained-and-native-aot-dotnet-tools-for-nuget/",
+    "collection": "posts",
+    "reason": "Succesfully added: The Coding category is assigned since this blog post explains development and packaging techniques for .NET tools, covering detailed usage of .NET SDK deployment and project setup features (Coding rule 1, 2, and 4). Azure, AI, DevOps, Security, ML, and GitHub Copilot categories are not assigned, as the post does not address those areas. All guidance is strictly about .NET tool packaging, project file configuration, deployment modes, and native AOT—all central to Coding. Tags focus on .NET, MSBuild/project properties, packaging, and deployment specifics. The content remains technical, practical, and development-focused as required."
   }
 ]

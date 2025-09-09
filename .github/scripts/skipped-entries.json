@@ -7473,5 +7473,29 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/debugging-java-script-in-old-asp-core-app/m-p/4451729#M674",
     "reason": "Insufficient content length",
     "timestamp": "2025-09-08 22:14:20 +00:00"
+  },
+  {
+    "timestamp": "2025-09-09 09:14:48 +00:00",
+    "canonical_url": "https://dellenny.com/naming-conventions-people-actually-use-in-microsoft-365/",
+    "collection": "posts",
+    "reason": "No categories found: All category arrays are left empty because of the 'Non-Development Microsoft Products' generic exclusion rule (Chapter 3). The content is focused on practical, end-user naming conventions and governance in Microsoft 365 (Teams, SharePoint, etc.) but does NOT cover coding, development, DevOps, automation, security, or technical implementation aimed at developers/architects. There are no developer-focused technical details, frameworks, or programming details. Content is about end-user policies, usability, and workplace conventions—explicitly excluded according to workflow guidelines, especially for Microsoft 365 content not focused on development."
+  },
+  {
+    "timestamp": "2025-09-09 09:15:01 +00:00",
+    "canonical_url": "https://dellenny.com/using-microsoft-365-effectively-in-education-without-overloading-teachers/",
+    "collection": "posts",
+    "reason": "No categories found: All categories were excluded due to the generic exclusion rules regarding non-development Microsoft products. The content is focused on using Microsoft 365 (M365) for teaching, communication, and classroom management in education settings, with recommendations for teachers on workflow, student engagement, and wellbeing. There is no focus on M365 development, coding, technical implementation, or developer tools—only end-user productivity features (Teams, Forms, OneDrive, SharePoint, Power Automate as an end-user automation tool, etc.). According to the Non-Development Microsoft Products rule and the Business/Workplace Focus rule, such content is excluded from categorization."
+  },
+  {
+    "reason": "No categories found: All categories are excluded based on the generic exclusion rules. The content is focused on workplace culture and productivity within Microsoft Teams (a business communication tool), specifically addressing issues of 'Teams fatigue,' meeting overload, notifications, and healthy work boundaries. There is no coverage of Teams development, coding, technical architecture, or engineering implementation (see Non-Development Microsoft Products and Workplace and Business Focus exclusions in Chapter 3). This is end-user content, not developer/technical practitioner content. Therefore, no categories apply.",
+    "timestamp": "2025-09-09 10:15:02 +00:00",
+    "canonical_url": "https://dellenny.com/overcoming-microsoft-teams-fatigue-and-keeping-communication-effective/",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: All categories are excluded due to the Generic Exclusion Rules: the content is an overview of Windows 11 end-user features and enhancements compared to Windows 10, focusing on UI, multitasking, gaming, hardware requirements, security features for users, and general productivity improvements. It does not address Microsoft development tools, programming, coding, DevOps, Azure, AI/ML development, or technical implementation guidance. Even mention of Microsoft Copilot is in the context of consumer/productivity features, not developer tools (see rule on Microsoft 365 Copilot and exclusion of business/consumer productivity-focused Copilot content). No section deals with APIs, application architecture, developer scenarios, code samples, DevOps processes, or platform engineering. Based on these criteria (Non-Development Microsoft Products and Business Strategy and Executive Content exclusions), all category assignments must be omitted.",
+    "timestamp": "2025-09-09 10:15:16 +00:00",
+    "canonical_url": "https://dellenny.com/windows-11-whats-new-compared-to-windows-10/",
+    "collection": "posts"
   }
 ]
