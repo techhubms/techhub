@@ -7527,5 +7527,17 @@
     "timestamp": "2025-09-09 17:13:42 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=h7yTai0cRtE"
+  },
+  {
+    "timestamp": "2025-09-09 18:16:41 +00:00",
+    "collection": "news",
+    "reason": "No categories found: All generic exclusion rules must be checked first per Chapter 3. This news item is an official Microsoft/Xbox event announcement focused on the Tokyo Game Show 2025 and how to watch or participate. The content is about company events, gaming culture, show streaming, booth experiences, merchandise, co-streaming guidelines, and accessibility, but does not cover game development, technical design, coding, DevOps, Microsoft cloud services, security, or any developer/development-focused topics. No technical implementation or developer-oriented guidance is present. There is no mention of Xbox SDK/API usage, Xbox development kits, Azure cloud services, or other Microsoft development platforms. Gaming hardware (ROG Xbox Ally) is mentioned as part of the event experience, not from a technical/development or engineering perspective. Per the generic exclusion rule for non-development Microsoft products and non-development content, this content is excluded and no categories are assigned.",
+    "canonical_url": "https://news.xbox.com/en-us/2025/09/08/xbox-tgs-tokyo-game-show-2025-broadcast/"
+  },
+  {
+    "timestamp": "2025-09-09 18:16:55 +00:00",
+    "collection": "news",
+    "reason": "No categories found: No categories assigned. This news article is about the expansion of Xbox Cloud Gaming (Beta) through a partnership with LG to bring gaming to select vehicles via the webOS Automotive Content Platform. While it discusses Xbox services and general cloud gaming features, it does not focus on development, coding, DevOps, AI/ML, Azure, or security topics. There is no technical depth about Microsoft developer-oriented technologies, tools, frameworks, programming, or architecture. All content is end-user focused (gaming/entertainment), which falls under non-development Microsoft products—explicitly excluded by the generic exclusion rules (Non-Development Microsoft Products and Business/Workplace Content). Therefore, per the Generic Exclusion Rules in Chapter 3, this content is excluded.",
+    "canonical_url": "https://news.xbox.com/en-us/2025/09/09/xbox-cloud-gaming-vehicles-cars-lg/"
   }
 ]

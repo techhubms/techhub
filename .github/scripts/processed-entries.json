@@ -8670,5 +8670,23 @@
     "timestamp": "2025-09-09 17:14:47 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/reimagining-telco-with-microsoft-ai-tm-forum-oda-and-developer/ba-p/4451724"
+  },
+  {
+    "timestamp": "2025-09-09 18:16:21 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: The content provides a technical summary of .NET and .NET Framework servicing updates, targeting developers and administrators. Assigned the 'Coding' category because the focus is on technical maintenance, release notes, and version details of Microsoft's development frameworks (Coding rule 1 and 2). No direct DevOps, Security, AI, ML, or Azure implementation details are present, so those categories were not added.",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-september-2025-servicing-updates/"
+  },
+  {
+    "timestamp": "2025-09-09 18:17:34 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Categories assigned based on the following: 'AI' because the post discusses agent loops, natural language interaction, and automatic code generation (AI rule 1, 4, 5). 'Azure' because Azure Container Apps are central for code execution (Azure rule 1). 'Coding' because it covers Python code authoring, data cleaning, code execution, and developer features (Coding rules 1, 2, 4). 'ML' was considered but not added since the focus is not on custom machine learning, but rather on analytics and automation with code. Post meets quality and length requirements, and none of the generic exclusion rules apply.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcement-python-code-interpreter-in-logic-apps-is-now-in/ba-p/4452239"
+  },
+  {
+    "timestamp": "2025-09-09 18:18:03 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the AI category because the content is centered on enhancing Azure Logic Apps with agentic workflows, advanced AI integration (including Foundry Agent Service, conversational agents, and the Python code interpreter), meeting AI category rules 1, 3, and 4. Azure category is included as the entire announcement deeply involves Azure Logic Apps, an Azure product (Azure rules 1 and 4). Coding category is added due to developer-centric features like Python code interpreter, extensible agent tools, and custom logic (Coding rules 1, 2, and 5). Security is assigned due to focus on authentication (Microsoft Entra ID), On-Behalf-Of flows, enterprise security controls, and compliance capabilities (Security rules 1, 3, 7, and 10). The content is in English, not a sales pitch or biographical, and has significant technical depth well beyond community content thresholds.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-logic-apps-ushering-in-the-era-of-multi-agentic-business/ba-p/4452275"
   }
 ]
