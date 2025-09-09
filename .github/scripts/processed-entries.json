@@ -8574,5 +8574,29 @@
     "reason": "Succesfully added: Applied generic exclusion rules first—none triggered. The content is not biographical, not a sales pitch, is in English, and contains sufficient technical depth. On inclusion, assigned AI category per AI rule 1 and 4: The article discusses embedding small language model AI (based on Meta's Llama project) to automate synthetic data creation for DevOps testing. Assigned DevOps category per DevOps rule 1, 5, and 7: The use case directly targets DevOps teams, focusing on CI/CD, automation, and operational practices within regulated and air-gapped environments. Did not assign Azure, Coding, ML, Security, or GitHub Copilot categories—no Microsoft technologies, direct software coding, or security/ML toolsets specific to the Microsoft stack are described. The focus is on Perforce's platform and generic (not Microsoft) AI/DevOps enablement.",
     "collection": "posts",
     "canonical_url": "https://devops.com/perforce-adds-small-language-model-to-create-synthetic-data-for-app-testing/?utm_source=rss&utm_medium=rss&utm_campaign=perforce-adds-small-language-model-to-create-synthetic-data-for-app-testing"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned AI category because the platform is fundamentally an AI coding tool intended for application development (AI rules 1 and 4). Assigned DevOps because the article specifically discusses integration with DevOps team workflows, LLMOps, and application deployment (DevOps rule 5, 6, and general developer experience). Did not assign the Coding category since the content focuses on platform features and the development ecosystem, not specific coding techniques, languages, or code-level examples (Coding rules 1–5 not met). No direct Microsoft technology is present; Azure, ML, and Security categories are not assigned, as the focus is third-party AI/DevOps tooling, not Microsoft-specific services.",
+    "canonical_url": "https://devops.com/empromptu-unveils-vibecoding-platform-for-building-enterprise-class-apps/?utm_source=rss&utm_medium=rss&utm_campaign=empromptu-unveils-vibecoding-platform-for-building-enterprise-class-apps",
+    "timestamp": "2025-09-09 13:27:32 +00:00"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the AI category because the content directly addresses the challenges and preparedness of IT teams for managing and scaling AI workloads (AI rule 5: High-Level AI Usage, and AI rule 4: AI Development with Microsoft Technologies in broader context). Assigned the DevOps category due to the extensive discussion of infrastructure automation, IaC tools (notably Terraform), platform engineering, and operational readiness (DevOps rules 1, 6, 9). Not assigned the Azure, ML, Coding, Security, or GitHub Copilot categories since the discussion is product-agnostic (focused on general cloud and DevOps practices rather than Microsoft-specific technologies or development practices). The content meets the technical accuracy and down-to-earth tone quality standards as required.",
+    "canonical_url": "https://devops.com/survey-most-it-teams-not-prepared-to-manage-ai-workloads/?utm_source=rss&utm_medium=rss&utm_campaign=survey-most-it-teams-not-prepared-to-manage-ai-workloads",
+    "timestamp": "2025-09-09 13:28:28 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: The main focus of the content is the open-sourcing and technical capabilities of the VS Code Copilot Extension, a developer-focused tool integrating GitHub Copilot (AI, GitHub Copilot categories). Custom Modes and productivity features for code generation further support including the Coding category. There is no content related to business productivity Copilot tools, non-technical Microsoft 365, or career/biography, thus no generic exclusions are triggered. The deep technical dive, demonstration of prompt engineering, and extension customization firmly fit the AI, GitHub Copilot, and Coding inclusion rules, referencing explicit features and development practices.",
+    "canonical_url": "https://www.youtube.com/shorts/5Ffbk_hJWWI",
+    "timestamp": "2025-09-09 13:28:59 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' category per AI Inclusion Rule 2 and 4, as Copilot involves AI-powered coding. Assigned 'GitHub Copilot' explicitly because the VS Code Copilot Extension is specifically about GitHub Copilot (GitHub Copilot rules 1-6) and customization thereof. Assigned 'Coding' because the episode focuses on extension development, custom agent modes for development, and developer tooling within VS Code (Coding rules 1, 2, 4, 5). Did not assign 'DevOps', 'Azure', 'ML', or 'Security' as there is no substantive coverage of those topics. Generic exclusion rules do not apply: content is not biographical, non-technical, or focused on business productivity. Content is aimed squarely at developers.",
+    "canonical_url": "https://www.youtube.com/watch?v=GfVnJO8fwwk",
+    "timestamp": "2025-09-09 13:29:22 +00:00"
   }
 ]

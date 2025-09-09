@@ -7509,5 +7509,17 @@
     "reason": "No categories found: No categories were assigned because the content focuses on a consumer-facing AI-powered shopping assistant built for Ralph Lauren, powered by Microsoft AI. According to Generic Exclusion Rules (Non-Development Microsoft Products), business productivity and end-user applications (like AI-driven shopping assistants) are excluded if they do not have a development, coding, technical, or architectural implementation focus. The description only mentions the benefits and experience from a consumer perspective, with no details on technical architecture, development, or how developers would build or integrate such a solution. This aligns with the requirement to exclude content that covers business productivity, end-user use cases, or general AI adoption from a non-development standpoint.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=JK1tqjqQeL8"
+  },
+  {
+    "collection": "posts",
+    "reason": "No categories found: All generic exclusion rules must be evaluated first. The content provides a news-style report about a dramatic increase in DDoS attacks in Europe, citing data from Link11, a security company. The text contains coverage of attack methods, statistics, motives, and a general call for better enterprise security strategies, including recommendations for AI-supported defense, redundancy, and resilience. However, there is no substantive technical content tied to Microsoft technologies, products, platforms, or services, which is mandatory for any categories per the inclusion rules and the Microsoft technology threshold (≥40% or central to solution, Chapter 2). Furthermore, there is no explicit technical coverage of Azure, Microsoft Defender, Microsoft Sentinel, Entra ID, or any other Microsoft ecosystem security product. Because the post only discusses general cybersecurity trends and strategies, with a focus on Link11's service and analysis, it does not meet the required threshold for Security or any other categorization. No categories assigned.",
+    "canonical_url": "https://devops.com/link11-reports-225-more-ddos-attacks-in-h1-2025-with-new-tactics-against-infrastructure/?utm_source=rss&utm_medium=rss&utm_campaign=link11-reports-225-more-ddos-attacks-in-h1-2025-with-new-tactics-against-infrastructure",
+    "timestamp": "2025-09-09 13:27:46 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: All category arrays are left empty because the input lacks sufficient content for category assignment. The 'content' field is null, and there is no usable main content or description to evaluate for technical scope, Microsoft technology relevance, or rule application. According to workflow Chapter 2 and Chapter 3, content must be assessed based on actual substance, not just on the title or author fields. Since neither 'description' nor 'content' provides any technical information or context, the generic exclusion 'When in doubt, exclude' applies, and no categories are assigned.",
+    "canonical_url": "https://www.youtube.com/shorts/Z6YBNV-TRaQ",
+    "timestamp": "2025-09-09 13:29:35 +00:00"
   }
 ]
