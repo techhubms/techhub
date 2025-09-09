@@ -1,0 +1,22 @@
+{
+  "EnhancedContent": null,
+  "Author": "Microsoft Developer",
+  "Title": "Build AI agents for fast, high-volume document automation in Copilot Studio",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Description": "Join Elaiza Benitez and special guest, Ragavan Rajan, Solutions Architect at Downer New Zealand, to discover how Microsoft Copilot Studio can revolutionize your workflow by automating data extraction from heavy vehicle permits - no coding required.\n\nRagvan shares\n- how to set up an AI Builder model that reads and pulls key details from documents that allow large vehicles to carry heavier loads.\n- develop agents in Microsoft Copilot Studio and deploy them to initiate bulk processing, monitor progress and deliver real‐time alerts.\n\nBy replacing slow, manual processes with a smart, conversational interface, organizations cut processing time from days to minutes, reduce errors, and clearly measure the benefits of using AI powered tools with Power Platform.\n\nLearn more about AI Builder at https://learn.microsoft.com/en-us/ai-builder/overview Learn more about Copilot at aka.ms/copilotstudio\n\nLinkedIn profile link - https://www.linkedin.com/in/ragavan-rajan/ Blog - https://ragavanrajan.medium.com/ YouTube - https://www.youtube.com/@ragavanrajan",
+  "PubDate": "2025-09-09T07:00:27+00:00",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=crHR6sEnTpE",
+  "ProcessedDate": "2025-09-09 07:12:13",
+  "FeedName": "Microsoft Developer YouTube",
+  "FeedLevelAuthor": "Microsoft Developer"
+}

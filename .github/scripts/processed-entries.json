@@ -8556,5 +8556,11 @@
     "timestamp": "2025-09-09 06:19:48 +00:00",
     "reason": "Succesfully added: Generic exclusion rules do not apply: the content is in English, focused on technical implementation rather than biographical or business/management themes, and exceeds all community content length minimums. \n\nAssigned 'AI' because Azure OpenAI Service and Azure Foundry’s OpenAI models are core to the workflow automation (AI inclusion rules 1 and 4). Assigned 'Azure' because deploying and scaling n8n on Azure Container Apps is central to the article (Azure inclusion rule 1). Did not assign 'Coding', 'DevOps', 'ML', or 'Security' because the article focuses on orchestration, deployment, and integration with Azure and AI—there are no significant details about custom code, CI/CD, MLOps, or security configurations. The AI integration is at the workflow/API usage level, not ML model development. Tags extract key technologies and deployment patterns discussed.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-agentic-workflows-with-n8n-and-azure-container-apps/ba-p/4452362"
+  },
+  {
+    "timestamp": "2025-09-09 07:13:21 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=crHR6sEnTpE",
+    "collection": "videos",
+    "reason": "Succesfully added: The main focus is on Microsoft Copilot Studio and AI Builder, which are both Microsoft AI-related development tools. The process described automates document workflows using these AI services, and all technical examples revolve around Microsoft platforms. According to AI inclusion rule 1 (Microsoft AI products/services) and rule 3 (Microsoft AI frameworks/tools), the 'AI' category is assigned. The content does not show source code or programming, so 'Coding' is not included. GitHub Copilot, DevOps, Azure, ML, or Security categories do not apply, as Copilot Studio and AI Builder are low-code/no-code AI platforms not covered under those headings."
   }
 ]
