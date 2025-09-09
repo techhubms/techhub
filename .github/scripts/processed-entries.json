@@ -8610,5 +8610,23 @@
     "reason": "Succesfully added: Categories assigned as follows: 'AI' and 'GitHub Copilot' because the content directly focuses on GitHub Copilot (an AI-driven developer tool) and its integration into the developer workflow (AI rule 2, GitHub Copilot rules 1-4). 'Coding' is assigned because Copilot is applied to Node.js/Express code and API endpoints, and the post includes specific programming workflow demonstrations (Coding rules 1, 2, 4, 5). No 'Azure', 'ML', 'DevOps', or 'Security' because no substantive coverage of those topics appears. Content meets all generic inclusion criteria, has technical depth, and is not a sales pitch or biographical/personal narrative.",
     "timestamp": "2025-09-09 14:13:13 +00:00",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-09-09 15:14:44 +00:00",
+    "canonical_url": "https://devops.com/jfrog-continues-leaping-at-swampup/?utm_source=rss&utm_medium=rss&utm_campaign=jfrog-continues-leaping-at-swampup",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the content centers around software delivery, release management, and DevOps automation, as shown in discussions of JFrog Fly, AppTrust, and the Evidence Ecosystem (DevOps rules 1, 3, 5). 'AI' is assigned because AI-native development, AI workflow automation, and AI/ML model management are central themes (AI rules 1, 4, 5). 'Security' is included because supply chain security, governance, compliance, and audit trails are major focuses (Security rules 1, 4, 9). No Microsoft technologies are centrally described (no Azure, GitHub, etc.), but as rule hierarchy clarifies, eligible non-Microsoft DevOps/AI/Security content is included if substantial for its own sake. Coding, Azure, ML categories do not apply as the main technical substance does not align with language/framework programming, Azure platform, or detailed ML engineering.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-09 15:15:33 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/a-quick-guide-to-benchmarking-ai-models-on-azure-llama-405b-and/ba-p/4452192",
+    "reason": "Succesfully added: Categories AI, Azure, and ML were assigned. 'AI' is included as the article focuses on benchmarking large language AI models (AI inclusion rule 1). 'Azure' is assigned because the benchmarking is done entirely on Azure ND GB200 v6 infrastructure (Azure rule 1 and 4). 'ML' applies, as the document details technical ML benchmarking (custom workflow, datasets, models, containerization), not just consuming pre-built AI but orchestrating and measuring model inference at an engineering level (ML rules 1, 2, 5, and 10). Coding and DevOps are not included as the primary focus is on ML deployment, benchmarking, and AI model workflow rather than coding paradigms, application development, or CI/CD practices. Security is not included, as there are no security-related details or implementation steps. The tags were selected to represent all key technical aspects discussed.",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-09-09 15:16:00 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/enforce-or-audit-policy-inheritance-in-api-management/ba-p/4452204",
+    "reason": "Succesfully added: Assigned the Azure category because the content is focused on Azure API Management and Azure Policy (Azure category, rule 1). Assigned the Security category as the enforcement of policy inheritance specifically addresses governance, compliance, and security controls within the API estate (Security rules 1 and 9). Coding and DevOps categories do not directly apply, as the content is about configuration and governance—not hands-on code, DevOps pipelines, or development workflows. AI, ML, and GitHub Copilot are not discussed. The article is not excluded by any generic exclusion rules: it is technical, substantive, in English, not biographical, not a sales pitch, and not about business productivity tools.",
+    "collection": "community"
   }
 ]
