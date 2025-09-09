@@ -8598,5 +8598,17 @@
     "reason": "Succesfully added: Assigned 'AI' category per AI Inclusion Rule 2 and 4, as Copilot involves AI-powered coding. Assigned 'GitHub Copilot' explicitly because the VS Code Copilot Extension is specifically about GitHub Copilot (GitHub Copilot rules 1-6) and customization thereof. Assigned 'Coding' because the episode focuses on extension development, custom agent modes for development, and developer tooling within VS Code (Coding rules 1, 2, 4, 5). Did not assign 'DevOps', 'Azure', 'ML', or 'Security' as there is no substantive coverage of those topics. Generic exclusion rules do not apply: content is not biographical, non-technical, or focused on business productivity. Content is aimed squarely at developers.",
     "canonical_url": "https://www.youtube.com/watch?v=GfVnJO8fwwk",
     "timestamp": "2025-09-09 13:29:22 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-preview-of-new-azure-dasv7-easv7-fasv7-series-vms/ba-p/4448360",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content is exclusively focused on Azure Virtual Machines, new VM families, and their technical enhancements (Azure inclusion rule 1 and 4). No other category qualifies: there is no code/software development (so not Coding), no mention of DevOps or CI/CD (not DevOps), while AI and ML are only referenced in passing as workload examples rather than implementation details (not AI or ML categories). Security is referenced for hardware-based encryption and HSM support but not in the context of application security, IAM, or detailed security architecture, so Security is not assigned. All tags were extracted from key technical terminology and features throughout the content.",
+    "timestamp": "2025-09-09 14:12:11 +00:00",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/supercharge-your-tm-forum-open-api-development-with-github/ba-p/4451366",
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' and 'GitHub Copilot' because the content directly focuses on GitHub Copilot (an AI-driven developer tool) and its integration into the developer workflow (AI rule 2, GitHub Copilot rules 1-4). 'Coding' is assigned because Copilot is applied to Node.js/Express code and API endpoints, and the post includes specific programming workflow demonstrations (Coding rules 1, 2, 4, 5). No 'Azure', 'ML', 'DevOps', or 'Security' because no substantive coverage of those topics appears. Content meets all generic inclusion criteria, has technical depth, and is not a sales pitch or biographical/personal narrative.",
+    "timestamp": "2025-09-09 14:13:13 +00:00",
+    "collection": "community"
   }
 ]
