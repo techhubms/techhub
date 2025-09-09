@@ -7521,5 +7521,11 @@
     "reason": "No categories found: All category arrays are left empty because the input lacks sufficient content for category assignment. The 'content' field is null, and there is no usable main content or description to evaluate for technical scope, Microsoft technology relevance, or rule application. According to workflow Chapter 2 and Chapter 3, content must be assessed based on actual substance, not just on the title or author fields. Since neither 'description' nor 'content' provides any technical information or context, the generic exclusion 'When in doubt, exclude' applies, and no categories are assigned.",
     "canonical_url": "https://www.youtube.com/shorts/Z6YBNV-TRaQ",
     "timestamp": "2025-09-09 13:29:35 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the 'content' field is null, which means there is no main content to analyze. According to the workflow, all analysis and categorization must be based on substantive content, not just meta-information. Without the actual content, it is not possible to confirm the technical depth, Microsoft technology focus, or match any inclusion rules from the categories. Per Chapter 2 and Chapter 5, if content is missing, categories cannot be assigned.",
+    "timestamp": "2025-09-09 17:13:42 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=h7yTai0cRtE"
   }
 ]

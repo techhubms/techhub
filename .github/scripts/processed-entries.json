@@ -8640,5 +8640,35 @@
     "reason": "Succesfully added: The primary focus of this content is the technical announcement of BYOL support for JBoss EAP on Azure App Service. It explains Azure platform features, enterprise Java workload deployment, and licensing strategies—all tied specifically to Azure. 'Azure' is assigned to reflect the centrality of Azure App Service and the integration with JBoss EAP. While Java and JBoss EAP are emphasized, there is no deep coverage of coding, DevOps, security, AI, or ML implementations, so those categories are not included. The content is technical, not biographical, promotional, negative, or business-strategy-only. The decision is based on Azure rule 1 (Any Azure Service/Technology), with the Java hosting and licensing aspects being core to the post.",
     "collection": "community",
     "timestamp": "2025-09-09 16:16:43 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Included the 'AI' category because the entire article addresses infrastructural challenges and solutions critical to advancing AI system performance at scale, consistent with AI inclusion rule 1. 'Azure' is also included as the development and deployment contexts reference collaboration with Azure, and the solutions target large-scale cloud environments (Azure inclusion rules 1 and 4). Did not include 'ML', 'DevOps', 'Coding', or 'Security' because there is no direct discussion of machine learning development, coding practices, DevOps tooling, or security implementation. The content focuses on hardware, networking, and AI infrastructure improvement at the platform level.",
+    "timestamp": "2025-09-09 17:12:27 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/research/blog/breaking-the-networking-wall-in-ai-infrastructure/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the release emphasizes deep AI integration into developer workflows (AI rule 1), including contextual code suggestions, documentation assistance, code review insights, and the availability of GitHub Copilot Free within the IDE. Assigned 'Coding' because the announcement centers on developer coding experience, IDE improvements, and features that directly support writing and reviewing code (Coding rules 1, 4, and 5). 'GitHub Copilot' was not added because, while Copilot is referenced, the article does not focus on Copilot itself or its technical capabilities—rather, it is mentioned as an included benefit. 'DevOps', 'Azure', 'ML', and 'Security' do not qualify, as the content lacks detailed coverage of those domains or Microsoft services. All generic exclusion rules were checked and none apply: the content is an official technical announcement, not a sales pitch, executive strategy, or biographical post, and it is in English.",
+    "timestamp": "2025-09-09 17:12:54 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2026-insiders-is-here/"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the platform and discussion focus heavily on integrating artificial intelligence agents into DevOps workflows (AI Rule 1, AI Rule 4). Assigned DevOps because the entire context is about a DevOps platform and improving SDLC processes for development teams (DevOps Rule 1, DevOps Rule 5). Assigned GitHub Copilot because it is specifically mentioned as an integration within JFry (GitHub Copilot Rule 1). Assigned Security because of focus on security vulnerability remediation, governance, compliance, and risk management components (Security Rules 1, 4, 9). There is no Azure, ML, or Coding category assignment, as the content centers on platform integration and workflow, not specific code or Microsoft cloud services. All decisions are based only on the provided content, following inclusion and exclusion rules precisely.",
+    "timestamp": "2025-09-09 17:13:25 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/jfrog-unveils-devops-platform-for-the-agentic-ai-era/?utm_source=rss&utm_medium=rss&utm_campaign=jfrog-unveils-devops-platform-for-the-agentic-ai-era"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Coding' category based on the content focusing on hands-on technical comparison between Dapper (a micro-ORM) and Entity Framework Core (a full-featured ORM) for .NET projects, following Coding category inclusion rule 1 and 2. No Azure, AI, ML, Security, DevOps, or GitHub Copilot content is presented; the discussion is entirely about .NET data access coding practices. No generic exclusion rules apply, as the content is technical, implementation-focused, in English, and not promotional, biographical, or business strategy-oriented.",
+    "timestamp": "2025-09-09 17:14:04 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=ppaf8CZjRkI"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category because the content heavily focuses on Microsoft's AI solutions in telecom (AI rule 1), including Azure AI Foundry, Model Context Protocol, and AI-driven architectural strategies. 'Azure' is included due to central coverage of Azure services, platform orchestration, and deployments for telco transformation (Azure rule 1 and 4). 'GitHub Copilot' and 'Coding' are included because the article details GitHub Copilot's use in accelerating Open API coding, best practices, and productivity benefits (GitHub Copilot rule 1–6, always paired with AI; Coding rule 2, 4). 'DevOps' is included because the article addresses development lifecycle acceleration, modular cloud-native architectures, and team enablement (DevOps rules 2, 5, 6, and 7). All content is technical, focused on developer tools and architectures, and does not trigger any exclusion rules.",
+    "timestamp": "2025-09-09 17:14:47 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/reimagining-telco-with-microsoft-ai-tm-forum-oda-and-developer/ba-p/4451724"
   }
 ]
