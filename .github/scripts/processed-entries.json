@@ -8550,5 +8550,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-azure-d192-sizes-in-the-azure/ba-p/4451427",
     "timestamp": "2025-09-09 00:55:37 +00:00",
     "reason": "Succesfully added: Assigned the Azure category because the content is specifically about the general availability and detailed technical specifications of new Azure VM sizes (D192) in the Dsv6 and Ddsv6-series, focusing on architecture, configuration, storage, performance, security (Intel TME), and region/pricing information. Although security features (like Intel TME) are mentioned, the primary focus is on Azure VM usage and management, and there is not enough depth on security architecture or implementation to warrant the Security category. No other rule-based categories apply (no coding, DevOps, AI, ML content present). Generic exclusion rules do not apply—content is technical, not biographical, not business strategy, not negative, not a sales pitch, and meets community content length requirements."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-09-09 06:19:48 +00:00",
+    "reason": "Succesfully added: Generic exclusion rules do not apply: the content is in English, focused on technical implementation rather than biographical or business/management themes, and exceeds all community content length minimums. \n\nAssigned 'AI' because Azure OpenAI Service and Azure Foundry’s OpenAI models are core to the workflow automation (AI inclusion rules 1 and 4). Assigned 'Azure' because deploying and scaling n8n on Azure Container Apps is central to the article (Azure inclusion rule 1). Did not assign 'Coding', 'DevOps', 'ML', or 'Security' because the article focuses on orchestration, deployment, and integration with Azure and AI—there are no significant details about custom code, CI/CD, MLOps, or security configurations. The AI integration is at the workflow/API usage level, not ML model development. Tags extract key technologies and deployment patterns discussed.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-agentic-workflows-with-n8n-and-azure-container-apps/ba-p/4452362"
   }
 ]
