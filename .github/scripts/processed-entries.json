@@ -8628,5 +8628,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/enforce-or-audit-policy-inheritance-in-api-management/ba-p/4452204",
     "reason": "Succesfully added: Assigned the Azure category because the content is focused on Azure API Management and Azure Policy (Azure category, rule 1). Assigned the Security category as the enforcement of policy inheritance specifically addresses governance, compliance, and security controls within the API estate (Security rules 1 and 9). Coding and DevOps categories do not directly apply, as the content is about configuration and governance—not hands-on code, DevOps pipelines, or development workflows. AI, ML, and GitHub Copilot are not discussed. The article is not excluded by any generic exclusion rules: it is technical, substantive, in English, not biographical, not a sales pitch, and not about business productivity tools.",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=koBGu8PNeds",
+    "reason": "Succesfully added: Assigned AI category, as the episode revolves around embedding and using AI agents in spreadsheets via GPT-4.1 and Azure OpenAI (AI inclusion rules 1, 4, 5). Assigned Azure category because the tech stack and demos directly use Azure OpenAI and integrate with Microsoft services (Azure rule 1). Coding was not assigned since the solution is specifically described as 'no code', and there are no details about programming or development frameworks. ML is not assigned as the focus is on pre-built AI and user interaction, not on model development or data engineering. Categories like DevOps, Security, and GitHub Copilot do not apply based on content. Generic exclusions do not trigger.",
+    "collection": "videos",
+    "timestamp": "2025-09-09 16:16:17 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bring-your-own-license-byol-support-for-jboss-eap-on-azure-app/ba-p/4452152",
+    "reason": "Succesfully added: The primary focus of this content is the technical announcement of BYOL support for JBoss EAP on Azure App Service. It explains Azure platform features, enterprise Java workload deployment, and licensing strategies—all tied specifically to Azure. 'Azure' is assigned to reflect the centrality of Azure App Service and the integration with JBoss EAP. While Java and JBoss EAP are emphasized, there is no deep coverage of coding, DevOps, security, AI, or ML implementations, so those categories are not included. The content is technical, not biographical, promotional, negative, or business-strategy-only. The decision is based on Azure rule 1 (Any Azure Service/Technology), with the Java hosting and licensing aspects being core to the post.",
+    "collection": "community",
+    "timestamp": "2025-09-09 16:16:43 +00:00"
   }
 ]
