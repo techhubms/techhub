@@ -8568,5 +8568,11 @@
     "canonical_url": "https://andrewlock.net/exploring-dotnet-10-preview-features-7-packaging-self-contained-and-native-aot-dotnet-tools-for-nuget/",
     "collection": "posts",
     "reason": "Succesfully added: The Coding category is assigned since this blog post explains development and packaging techniques for .NET tools, covering detailed usage of .NET SDK deployment and project setup features (Coding rule 1, 2, and 4). Azure, AI, DevOps, Security, ML, and GitHub Copilot categories are not assigned, as the post does not address those areas. All guidance is strictly about .NET tool packaging, project file configuration, deployment modes, and native AOT—all central to Coding. Tags focus on .NET, MSBuild/project properties, packaging, and deployment specifics. The content remains technical, practical, and development-focused as required."
+  },
+  {
+    "timestamp": "2025-09-09 12:25:34 +00:00",
+    "reason": "Succesfully added: Applied generic exclusion rules first—none triggered. The content is not biographical, not a sales pitch, is in English, and contains sufficient technical depth. On inclusion, assigned AI category per AI rule 1 and 4: The article discusses embedding small language model AI (based on Meta's Llama project) to automate synthetic data creation for DevOps testing. Assigned DevOps category per DevOps rule 1, 5, and 7: The use case directly targets DevOps teams, focusing on CI/CD, automation, and operational practices within regulated and air-gapped environments. Did not assign Azure, Coding, ML, Security, or GitHub Copilot categories—no Microsoft technologies, direct software coding, or security/ML toolsets specific to the Microsoft stack are described. The focus is on Perforce's platform and generic (not Microsoft) AI/DevOps enablement.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/perforce-adds-small-language-model-to-create-synthetic-data-for-app-testing/?utm_source=rss&utm_medium=rss&utm_campaign=perforce-adds-small-language-model-to-create-synthetic-data-for-app-testing"
   }
 ]

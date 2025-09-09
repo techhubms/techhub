@@ -7497,5 +7497,17 @@
     "timestamp": "2025-09-09 10:15:16 +00:00",
     "canonical_url": "https://dellenny.com/windows-11-whats-new-compared-to-windows-10/",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-09 12:24:54 +00:00",
+    "reason": "No categories found: No categories assigned. Despite the use of Azure OpenAI Service and Microsoft AI technologies, the content is a press release for a consumer-facing business application (Ask Ralph, a fashion shopping assistant) and is focused on retail experience, brand engagement, and business innovation. According to the Generic Exclusion Rules, business/productivity/non-development applications not related to coding, data, or developer enablement do not qualify for any category. There is no technical implementation detail or focus on development, coding, AI engineering, DevOps, or security; therefore, none of the inclusion rules for categories (AI, Azure, Coding, etc.) are met.",
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/source/2025/09/09/ralph-lauren-introduces-ask-ralph-a-new-conversational-ai-shopping-experience/"
+  },
+  {
+    "timestamp": "2025-09-09 12:25:54 +00:00",
+    "reason": "No categories found: No categories were assigned because the content focuses on a consumer-facing AI-powered shopping assistant built for Ralph Lauren, powered by Microsoft AI. According to Generic Exclusion Rules (Non-Development Microsoft Products), business productivity and end-user applications (like AI-driven shopping assistants) are excluded if they do not have a development, coding, technical, or architectural implementation focus. The description only mentions the benefits and experience from a consumer perspective, with no details on technical architecture, development, or how developers would build or integrate such a solution. This aligns with the requirement to exclude content that covers business productivity, end-user use cases, or general AI adoption from a non-development standpoint.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=JK1tqjqQeL8"
   }
 ]
