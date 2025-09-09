@@ -7539,5 +7539,11 @@
     "collection": "news",
     "reason": "No categories found: No categories assigned. This news article is about the expansion of Xbox Cloud Gaming (Beta) through a partnership with LG to bring gaming to select vehicles via the webOS Automotive Content Platform. While it discusses Xbox services and general cloud gaming features, it does not focus on development, coding, DevOps, AI/ML, Azure, or security topics. There is no technical depth about Microsoft developer-oriented technologies, tools, frameworks, programming, or architecture. All content is end-user focused (gaming/entertainment), which falls under non-development Microsoft products—explicitly excluded by the generic exclusion rules (Non-Development Microsoft Products and Business/Workplace Content). Therefore, per the Generic Exclusion Rules in Chapter 3, this content is excluded.",
     "canonical_url": "https://news.xbox.com/en-us/2025/09/09/xbox-cloud-gaming-vehicles-cars-lg/"
+  },
+  {
+    "timestamp": "2025-09-09 21:11:17 +00:00",
+    "reason": "No categories found: All categories excluded due to generic exclusion rules. The content is a company event announcement for Microsoft's participation at IBC, centered on business strategy and high-level industry trends in media and entertainment without technical implementation details, programming, or developer focus. The blog post linked ('Ask Ralph: Where style meets AI') discusses applications in conversational commerce and AI-powered style assistants, but the provided excerpt offers no technical depth or developer/tutorial content. This falls under the 'Business Strategy and Executive Content' exclusion, as per Chapter 3, and does not qualify for developer/technical AI, Coding, DevOps, Azure, ML, or Security categories.",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/media-and-entertainment/2025/09/09/microsoft-at-ibc-2025-accelerating-the-frontier-of-media-and-entertainment-with-ai/",
+    "collection": "news"
   }
 ]

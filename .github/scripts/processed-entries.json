@@ -8718,5 +8718,11 @@
     "collection": "community",
     "timestamp": "2025-09-09 19:12:11 +00:00",
     "reason": "Succesfully added: Assigned the 'Azure' category since the content centers on Azure Files and introduces a new management approach for Azure cloud storage (Azure inclusion rule 1 and 4). No other categories were assigned because the article does not cover AI, ML, Coding, DevOps (no explicit deployment practices, CI/CD, or automation pipelines shown), Security (while security controls are mentioned, the focus is operational and not specific to security architectures, services, or implementations), or GitHub Copilot. The post is technical and explains a Microsoft platform feature in detail, meeting all inclusion and quality requirements."
+  },
+  {
+    "timestamp": "2025-09-09 21:11:38 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories per the explicit segmentation of Copilot developer tools (AI rule 2 and GitHub Copilot rule 1). The content focuses solely on the availability and configuration of new AI models in GitHub Copilot—a developer-centric tool—making these categories directly applicable. No 'Coding', 'DevOps', 'Azure', 'ML', or 'Security' categories are assigned because the article does not provide development tutorials, DevOps workflows, Azure integration, machine learning engineering, or security-related details or practices.",
+    "canonical_url": "https://github.blog/changelog/2025-09-09-openai-gpt-5-and-gpt-5-mini-are-now-generally-available-in-github-copilot",
+    "collection": "news"
   }
 ]
