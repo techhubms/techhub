@@ -8760,5 +8760,11 @@
     "reason": "Succesfully added: Assigned the Azure category because the article focuses on Azure architectures (Azure rule 1) and demonstrates Azure-specific implementations of the sidecar pattern, including AKS, Container Apps with Dapr, and Service Fabric (Azure rule 1 and 4). Assigned DevOps because the sidecar pattern is tied to deployment, operational consistency, and cross-cutting app concerns, directly relevant to DevOps practices (DevOps rule 6: Infrastructure and automation, as well as team practices and consistency). Did not assign Coding, ML, Security, or AI because the post does not focus on code-level implementation, machine learning/data science, or deep security/AI architecture. Main technical focus is on Azure-native DevOps and architecture patterns.",
     "collection": "posts",
     "canonical_url": "https://dellenny.com/riding-in-tandem-unlocking-the-sidecar-pattern-in-azure-microservices/"
+  },
+  {
+    "reason": "Succesfully added: Content is centered on emerging security practices for secrets management using a new runtime identity-driven platform and SPIFFE, targeting application security in DevOps and cloud-native scenarios. 'Security' is assigned due to direct discussion of access control, credential elimination, risk management, and least-privilege enforcement with new technology. 'DevOps' is assigned because the article addresses DevSecOps, microservices, and modern application environments. No Microsoft-specific technologies are discussed, so categories like 'Azure', 'AI', or 'ML' are not applicable. No Coding or GitHub Copilot content is present. All category assignments are based on explicit Security and DevOps rules from Chapter 4.",
+    "timestamp": "2025-09-10 12:23:22 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/hush-security-emerges-to-eliminate-need-for-application-secrets/?utm_source=rss&utm_medium=rss&utm_campaign=hush-security-emerges-to-eliminate-need-for-application-secrets"
   }
 ]

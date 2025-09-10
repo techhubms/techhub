@@ -7557,5 +7557,11 @@
     "reason": "No categories found: Content excluded per generic exclusion rules. The main content is primarily focused on business strategy and executive decision-making regarding AI adoption, with a strong emphasis on Copilot as a strategic enabler for business transformation, productivity, and enterprise operations (see Chapter 3: Business Strategy and Executive Content exclusion, as well as Non-Development Microsoft Products exclusion). While GitHub Copilot is briefly mentioned in the context of software development, the article does not provide technical implementation details or hands-on development, but rather addresses leadership and change management considerations for adopting Copilot across the Microsoft ecosystem, especially in business productivity and organizational strategy scenarios. Therefore, no technical categories are assigned.",
     "collection": "posts",
     "canonical_url": "https://dellenny.com/microsoft-copilot-and-the-ai-first-enterprise-a-strategic-perspective/"
+  },
+  {
+    "reason": "No categories found: Content is excluded because it does not meet the category inclusion rules: it is about the Model Context Protocol (MCP) Registry, which is not a Microsoft product, service, or technology. There is no mention of any Microsoft technology, framework, or ecosystem in the title, description, tags, or content body. The content focuses on accessing and publishing to the MCP Registry, which is an open catalog for MCP servers unrelated to Microsoft platforms. Per the multi-platform content threshold in Chapter 2 and Microsoft technology centricity, this does not qualify for any categories.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure/how-to-use-the-newly-launched-mcp-registry/m-p/4452855#M1363",
+    "collection": "community",
+    "timestamp": "2025-09-10 09:13:47 +00:00"
   }
 ]
