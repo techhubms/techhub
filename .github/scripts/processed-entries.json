@@ -8742,5 +8742,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=fzYN_kgl-OM",
     "reason": "Succesfully added: Assigned AI category due to the focus on AI-assisted coding techniques and features like Copilot Vision and Agent Mode within VS Code (AI rules 1, 4, 5). Assigned GitHub Copilot category as Copilot is mentioned as a core tool being demonstrated and discussed (GitHub Copilot rules 1, 2, 4). Assigned Coding category because the video demonstrates practical programming tasks, workflows, and application development using VS Code (Coding rules 4, 5). The video fits all quality standards: it's technically focused, development-oriented, and not a sales pitch or biographical content.",
     "timestamp": "2025-09-09 23:12:04 +00:00"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: Categories assigned as follows: 'DevOps' because the entire article focuses on cultural and technical DevOps practices and their evolution (DevOps rule 4). 'AI' is included due to the significant focus on AI adoption, shadow AI, AI supply chains, and Copilot references (AI rules 1 and 4). 'Security' is assigned since the text repeatedly highlights compliance, artifact trust, governance, and addressing organizational security requirements within DevOps pipelines (Security rules 1, 2, and 4). No Microsoft-specific centrality, but content about AI governance in DevOps is platform-agnostic and meets the central technology threshold under the workflow's guidelines for modern DevOps content influenced by AI tools like GitHub Copilot. Coding, Azure, ML categories do not qualify as there's no substantive focus on hands-on development, language/framework specifics, direct ML implementation, or Azure details.",
+    "canonical_url": "https://devops.com/devgovops-a-new-play-in-devops-or-is-it/?utm_source=rss&utm_medium=rss&utm_campaign=devgovops-a-new-play-in-devops-or-is-it",
+    "timestamp": "2025-09-10 07:12:56 +00:00"
   }
 ]
