@@ -7545,5 +7545,17 @@
     "reason": "No categories found: All categories excluded due to generic exclusion rules. The content is a company event announcement for Microsoft's participation at IBC, centered on business strategy and high-level industry trends in media and entertainment without technical implementation details, programming, or developer focus. The blog post linked ('Ask Ralph: Where style meets AI') discusses applications in conversational commerce and AI-powered style assistants, but the provided excerpt offers no technical depth or developer/tutorial content. This falls under the 'Business Strategy and Executive Content' exclusion, as per Chapter 3, and does not qualify for developer/technical AI, Coding, DevOps, Azure, ML, or Security categories.",
     "canonical_url": "https://www.microsoft.com/en-us/industry/blog/media-and-entertainment/2025/09/09/microsoft-at-ibc-2025-accelerating-the-frontier-of-media-and-entertainment-with-ai/",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-10 08:17:44 +00:00",
+    "reason": "No categories found: No categories were assigned because the content focuses entirely on end-user desktop personalization in Windows 11 (themes, accent colors, wallpapers, system UI tweaks). There is no discussion of software development, coding, DevOps, Microsoft developer tools, security, AI, ML, or Azure platform technologies. All technical instructions pertain to using the Windows Settings app for personal customization, not development or programming. As per the generic exclusion rules for non-development Microsoft products, content about end-user features, desktop experience, or UI customization without a developer/engineering aspect does not qualify for any categories.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/customizing-shell-ui-elements-beyond-the-basics-task-view-experimental-winui-styling/"
+  },
+  {
+    "timestamp": "2025-09-10 08:18:19 +00:00",
+    "reason": "No categories found: Content excluded per generic exclusion rules. The main content is primarily focused on business strategy and executive decision-making regarding AI adoption, with a strong emphasis on Copilot as a strategic enabler for business transformation, productivity, and enterprise operations (see Chapter 3: Business Strategy and Executive Content exclusion, as well as Non-Development Microsoft Products exclusion). While GitHub Copilot is briefly mentioned in the context of software development, the article does not provide technical implementation details or hands-on development, but rather addresses leadership and change management considerations for adopting Copilot across the Microsoft ecosystem, especially in business productivity and organizational strategy scenarios. Therefore, no technical categories are assigned.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/microsoft-copilot-and-the-ai-first-enterprise-a-strategic-perspective/"
   }
 ]
