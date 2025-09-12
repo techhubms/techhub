@@ -124,6 +124,7 @@ try {
     $totalNewMarkdownFiles = 0
     $successCount = 0
     $totalWebsiteCount = 0
+    $failedArticleCount = [ref]0
     
     # Count total websites across all collections for progress reporting
     foreach ($collectionDir in $collectionDirs) {
@@ -183,7 +184,8 @@ try {
                     -Token $Token `
                     -Model $Model `
                     -Endpoint $Endpoint `
-                    -RateLimitPreventionDelay $RateLimitPreventionDelay
+                    -RateLimitPreventionDelay $RateLimitPreventionDelay `
+                    -FailedArticleCount $failedArticleCount
                 
                 # Check rate limit after successful call
                 $rateLimitInEffect = Test-RateLimitInEffect
@@ -212,6 +214,7 @@ try {
     
     Write-Host "✅ RSS data processing completed: $successCount/$totalWebsiteCount websites processed"
     Write-Host "📄 Total new markdown files created: $totalNewMarkdownFiles"
+    Write-Host "⚠️ Total articles that failed processing: $($failedArticleCount.Value)"
 }
 catch {
     Write-ErrorDetails -ErrorRecord $_ -Context "RSS data processing"
