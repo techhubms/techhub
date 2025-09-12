@@ -118,7 +118,7 @@ function Invoke-AiApiCall {
                 }
 
                 if ($statusCode -eq 413 -or $statusDescription -eq 'Request Entity Too Large') {
-                    return ([PSCustomObject]@{ Error = $true; Type = "RequestEntityTooLarge"; } | ConvertTo-Json -Compress)
+                    return ([PSCustomObject]@{ Error = $true; Type = "RequestEntityTooLarge"; Message = "Request entity too large" } | ConvertTo-Json -Compress)
                 }
                 
                 # Check for rate limit immediately
@@ -172,7 +172,7 @@ function Invoke-AiApiCall {
                             $endDate = (Get-Date).AddSeconds([int]$rateLimitSeconds)
                             $json = @{ endDate = $endDate.ToString("o") } | ConvertTo-Json
                             $json | Out-File -FilePath $rateLimitEndDatePath -Force
-                            return ([PSCustomObject]@{ Error = $true; Type = "RateLimit"; RateLimitSeconds = $rateLimitSeconds } | ConvertTo-Json -Compress)
+                            return ([PSCustomObject]@{ Error = $true; Type = "RateLimit"; RateLimitSeconds = $rateLimitSeconds; Message = "Rate limit exceeded, wait $rateLimitSeconds seconds" } | ConvertTo-Json -Compress)
                         }
                     }
                 }
@@ -205,7 +205,7 @@ function Invoke-AiApiCall {
                         foreach ($pattern in $errorPatterns) {
                             if ($errorText -match $pattern) {
                                 Write-Host "❌ Content filter violation detected. Pattern: $pattern" -ForegroundColor Red
-                                return ([PSCustomObject]@{ Error = $true; Type = "ContentFilter"; Pattern = $pattern; ResponseContent = $contentToCheck.ToString() } | ConvertTo-Json -Compress)
+                                return ([PSCustomObject]@{ Error = $true; Type = "ContentFilter"; Pattern = $pattern; Message = "Content filter violation: $pattern"; ResponseContent = $contentToCheck.ToString() } | ConvertTo-Json -Compress)
                             }
                         }
                     }
@@ -229,6 +229,16 @@ function Invoke-AiApiCall {
             }
         }
             
+        # Check if response is null (all retries failed)
+        if ($null -eq $response) {
+            Write-Host "❌ All API call retries failed - no response received" -ForegroundColor Red
+            return ([PSCustomObject]@{ 
+                Error = $true 
+                Type = "AllRetriesFailed" 
+                Message = "All API call retries failed - no response received"
+            } | ConvertTo-Json -Compress)
+        }
+            
         # Process the successful response and extract content
         $responseJson = $null
         try {
@@ -242,6 +252,7 @@ function Invoke-AiApiCall {
             return ([PSCustomObject]@{ 
                 Error           = $true 
                 Type            = "ResponseParseError" 
+                Message         = "Failed to parse AI model response: $($_.Exception.Message)"
                 ResponseContent = if ($null -ne $responseJson) { $responseJson } elseif ($response -and $response.Content) { $response.Content } else { $null }
             } | ConvertTo-Json -Compress)
         }
