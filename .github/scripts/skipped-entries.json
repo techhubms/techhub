@@ -7689,5 +7689,23 @@
     "canonical_url": "https://www.youtube.com/watch?v=Gz1b_ujD6X4",
     "reason": "No categories found: No categories assigned because the content violates the generic exclusion rule regarding biographical focus and insufficient technical depth. The event primarily features a discussion with the creator of Joplin about his personal journey and the app's story, without substantive detail on Microsoft technologies, coding, or platform development. The description showcases a product demo and Q&A, focused on open source, privacy, and contributing, but does not reference any specific Microsoft technologies, development frameworks, or qualifying technical categories. Therefore, as per Biographical Focus and Content Quality Exclusions in Chapter 3, all categories are excluded.",
     "collection": "videos"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/beginners-guide-to-microsoft-teams-chat-meetings-and-channels/",
+    "reason": "No categories found: No categories assigned because the content is a beginner's how-to guide for using Microsoft Teams as an end-user, focusing on chat, meetings, and channels. According to the generic exclusion rules (Chapter 3), non-development Microsoft products such as Teams are only included if the content is about Teams development (bots, apps, or development-specific features). This article provides usage instructions for workplace collaboration and communication, not technical implementation, development, or coding. There is no mention of Teams development, coding, APIs, bots, app integration, or technical architecture. Thus, all categories are excluded as per the strict content filtering requirements.",
+    "timestamp": "2025-09-12 19:10:39 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/mastering-keyboard-shortcuts-across-the-microsoft-365-suite/",
+    "reason": "No categories found: All categories are excluded due to the Non-Development Microsoft Products generic exclusion rule. The content is focused on end-user productivity features (keyboard shortcuts) for Microsoft 365 applications such as Excel, Word, Outlook, PowerPoint, and Teams. There is no discussion of development, coding, DevOps, technical configuration, or implementation of Microsoft technologies in a developer or technical context. This matches the explicit rule in Chapter 3, which excludes Microsoft 365 content unless it is focused on development or technical extension/customization (SharePoint development, Teams bots, etc.). No eligible categories apply.",
+    "timestamp": "2025-09-12 19:10:52 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/bna0GAkzXdA",
+    "reason": "No categories found: No categories assigned because the video content is primarily a community announcement and call-to-action inviting developers to share their personal development story as part of a GitHub campaign. There is no substantive technical content, tutorial, or educational content about Microsoft technologies, GitHub Copilot, or development architecture. The content does not meet any inclusion rules, and falls under the 'Biographical Focus' and sales/promotion exclusion in Generic Exclusion Rules (Chapter 3), as it encourages personal stories without technical depth.",
+    "timestamp": "2025-09-12 19:11:10 +00:00"
   }
 ]

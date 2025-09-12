@@ -9006,5 +9006,11 @@
     "canonical_url": "https://devops.com/oasis-security-identifies-security-weakness-in-cursor-ai-coding-tool/?utm_source=rss&utm_medium=rss&utm_campaign=oasis-security-identifies-security-weakness-in-cursor-ai-coding-tool",
     "reason": "Succesfully added: Assigned AI category because the article focuses on security issues and developer workflow implications with an AI-powered code editor (Cursor) and discusses risks inherent to AI-generated code (AI inclusion rule 1 and 4). Assigned Security because the main topic is a vulnerability affecting coding tool security, with actionable mitigation steps (Security inclusion rules 1 and 2). Assigned DevOps because it discusses policies, controls, and the role of DevSecOps teams in managing tooling risk and enforcement (DevOps rule 3 and 9). Did not assign 'Azure', 'ML', 'GitHub Copilot', or 'Coding' categories as the content does not address Microsoft cloud, ML engineering, GitHub Copilot products, nor specific development with Microsoft programming languages or frameworks.",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-12 20:14:01 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' category because the content is focused exclusively on new features and agent enhancements of GitHub Copilot in VS Code (GitHub Copilot rule 1 and 2), including productivity and collaboration updates. Per CRITICAL rules, assigned 'AI' as well since all GitHub Copilot content must include 'AI'. 'Coding' is included since the discussed features affect the code authoring experience, editing workflows, and developer productivity (Coding rules 2, 4, and 5). 'DevOps' is assigned because features like collaborative agent workflows, configuration controls, and productivity improvements impact development workflows and team practices (DevOps rules 3, 5, and 9). 'Security' is included as multiple new features specifically address confirmation for sensitive file edits, terminal auto-approve controls, and agent safety settings (Security rules 2, 7, and 8).",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-09-12-github-copilot-in-vs-code-august-release-v1-104"
   }
 ]
