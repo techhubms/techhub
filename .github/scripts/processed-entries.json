@@ -8988,5 +8988,17 @@
     "canonical_url": "https://github.blog/open-source/maintainers/building-personal-apps-with-open-source-and-ai/",
     "collection": "news",
     "reason": "Succesfully added: Assigned AI category because the article explicitly discusses the use of AI tools (e.g., GitHub Copilot) for software development (AI inclusion rule 1, 4). GitHub Copilot category is included as the content details its application as a coding assistant (GitHub Copilot rules 1, 2, 4) and describes its value for accelerating development. Coding is included because the content focuses on building scripts, personal developer tools, and workflows (Coding rule 4, 5). Azure, DevOps, ML, and Security are not included as those topics are not a primary or central feature of the post. Security is mentioned only as a consideration when open sourcing, but not as a technical focus. No exclusion rules apply: content is in English, not biographical, not a sales pitch, not negative, not job-related, and is technical and developer-focused."
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the DevOps category because the content is about GitHub Discussions, which is a core collaboration and knowledge management tool in DevOps and development workflows (DevOps rules 3, 9, and 11). Although GitHub Copilot and LLM integration are mentioned, the focus is not on Copilot usage or AI/ML development but rather on improving trust and collaboration in developer communities with verified answers, so those categories were not added. No generic exclusion rules apply. No Coding category because there is no direct programming or implementation content.",
+    "timestamp": "2025-09-12 17:11:07 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-11-verified-answers-generally-available-in-github-discussions"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'Coding' category because the content focuses on Visual Studio Code, which is a Microsoft development environment, and demos features relevant to software development (Coding rule 5). Added 'DevOps' due to the introduction of Git Worktrees and terminal workflow automation, which are relevant to DevOps best practices (DevOps rules 5 and 8). Included 'AI' because the video covers features labeled as 'AI stats,' suggesting integration of AI-powered enhancements (AI rule 5). Did not add 'Azure', 'ML', 'GitHub Copilot', or 'Security' as the content does not specifically address Azure services, machine learning development, GitHub Copilot, or security-focused features. No generic exclusion rules apply, as this is authentic, technical content about Microsoft developer tools.",
+    "timestamp": "2025-09-12 17:12:04 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=9qAkd2mGYCo"
   }
 ]

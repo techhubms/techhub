@@ -7647,5 +7647,23 @@
     "canonical_url": "https://devops.com/sketch-coding-and-the-rise-of-mcp-in-devops/?utm_source=rss&utm_medium=rss&utm_campaign=sketch-coding-and-the-rise-of-mcp-in-devops",
     "timestamp": "2025-09-12 15:12:48 +00:00",
     "reason": "No categories found: All categories are excluded under the Generic Exclusion Rules. The content primarily focuses on Yonatan Arbel's personal career trajectory inside JFrog, reflecting on his journey from engineer to leadership and developer relations. While there are high-level mentions of open source projects, MCP, and AI-assisted coding, there are no detailed technical implementations, nor is Microsoft technology referenced at all. This triggers the 'Biographical Focus' exclusion (content mainly about a person's career or journey), as well as the requirement that Microsoft technology must be central to the content (Chapter 3, Non-Microsoft/Non-Development Exclusion). The article is also lacking substantive actionable technical depth concerning the eligible Microsoft categories."
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because the content focuses on Mautic, an open source marketing automation project, and there is no mention of Microsoft technologies, developer tools, or implementation details related to the predefined Microsoft technology categories. Additionally, the content is about a business productivity tool (marketing software) and not about development with Microsoft platforms. This does not meet the inclusion rules for any category.",
+    "timestamp": "2025-09-12 17:11:28 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=ZmNwaa0q5dI"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule – the provided content lacks substantive technical details and instead focuses on promotional aspects and general conversation around developer community guests and upcoming announcements. There is no main body content, no technical implementation guidance, no explicit Microsoft technology subject matter, and no educational or actionable developer information present. Therefore, no categories apply.",
+    "timestamp": "2025-09-12 17:11:42 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=4Q9TDw2paUQ"
+  },
+  {
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-09-12 17:12:05 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/mysterious-nightly-cpu-spikes-on-app-service-plans-22-00-10-00/m-p/4453615#M22200"
   }
 ]
