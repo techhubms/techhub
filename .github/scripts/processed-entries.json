@@ -8958,5 +8958,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/general-availability-automatic-identity-management-aim-for-entra/ba-p/4452206",
     "collection": "community",
     "reason": "Succesfully added: Categories 'Azure' and 'Security' are assigned. 'Azure' is included since the content centers on Azure Databricks (Azure rule 1) and its integration and management practices (Azure rule 4). 'Security' is included due to its strong focus on identity management, access control, and integration with Microsoft Entra ID (Security rules 1, 3, 4), covering secure automation for user and group provisioning. No other categories are applicable; while dashboards and APIs are mentioned, there is no custom code/ML/AI content. All generic exclusion rules are reviewed and do not apply: content is technical, not biographical or business-only, written in English, and discusses technical implementation."
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-09-12 13:20:47 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the article focuses on observability and automation for AI agents using OpenTelemetry and discusses large language models, telemetry data, and AI-driven IT tasks, satisfying AI category inclusion rule 1 and 4. Assigned 'DevOps' category because the content centers on DevOps observability, IT operations automation, and integrating AI into operational workflows, reflecting DevOps rules 3, 5, and 7. Did not assign 'Azure', 'Coding', 'ML', 'Security', or 'GitHub Copilot' because while Microsoft and Azure are not mentioned, the focus is platform-agnostic OpenTelemetry and vendor-specific innovations from Cisco and Splunk, not covered by those categories.",
+    "canonical_url": "https://devops.com/opentelemetry-extensions-to-enable-observability-of-ai-agents/?utm_source=rss&utm_medium=rss&utm_campaign=opentelemetry-extensions-to-enable-observability-of-ai-agents"
   }
 ]
