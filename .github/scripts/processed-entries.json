@@ -9018,5 +9018,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/revolutionizing-learning-with-immersive-ai/ba-p/4453680",
     "timestamp": "2025-09-12 21:10:52 +00:00",
     "reason": "Succesfully added: Categories 'AI' and 'Azure' were assigned because the content focuses on implementing immersive AI experiences through Azure AI services, specifically Azure Speech Studio, neural voice, and avatar technology (AI rule 1, AI rule 4, Azure rule 1, Azure rule 4). 'Security' was included as there is substantial attention to security practices: Microsoft Entra ID integration, Defender for Storage, DLP, and private networking (Security rules 1, 4, 7). The piece does not qualify for 'Coding', 'DevOps', 'ML', or 'GitHub Copilot' since it centers on low-code/no-code workflows rather than code development, DevOps pipelines, or ML/analytics engineering. All details are based directly on architectural, workflow, and security implementation content."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/approaches-to-integrating-azure-databricks-with-microsoft-fabric/ba-p/4453643",
+    "reason": "Succesfully added: Categories assigned: 'Azure' because the content centers on Azure Databricks, Fabric, and related Microsoft cloud services (Azure category rule 1, 4, 5, 6). 'ML' assigned due to the heavy focus on data engineering, analytics, ETL, and connecting advanced data services—a core focus of Microsoft Fabric and Databricks in unified analytics and data science scenarios (ML category rules 1, 2, 3, 4, 5, 6, 8, 9). 'AI' was not assigned because the content does not primarily cover AI services, model integration, or pre-built AI capabilities as per the AI category rules. 'Coding', 'DevOps', and 'Security' were not selected as the article does not focus on application development, pipeline optimization, infrastructure automation, or security management. The structure, technical depth, and explicit Microsoft services make the content highly relevant under the Azure and ML categories.",
+    "collection": "community",
+    "timestamp": "2025-09-12 22:11:47 +00:00"
   }
 ]
