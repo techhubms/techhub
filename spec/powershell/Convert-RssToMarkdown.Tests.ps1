@@ -440,9 +440,9 @@ youtube_id: {{YOUTUBE_ID}}
                 }
             }
             
-            # Should throw because APIError is not a recognized error type
+            # Should throw because APIError is not a recognized error type  
             { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" } |
-            Should -Throw "*Unknown error type: APIError*"
+            Should -Throw "*Unknown error type: Type: APIError, Message: Network error occurred*"
         }
         
         It "Should stop processing on rate limit errors" {
