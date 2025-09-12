@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "Link": "https://github.blog/changelog/2025-09-11-bring-your-own-key-byok-support-for-jetbrains-ides-and-xcode-in-public-preview",
+  "Title": "Bring Your Own Key (BYOK) support for JetBrains IDEs and Xcode in public preview",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "Bring Your Own Key (BYOK) support is now in public preview for GitHub Copilot Chat in JetBrains IDEs and Xcode! If you already have an API key from a supported…\n\nThe post [Bring Your Own Key (BYOK) support for JetBrains IDEs and Xcode in public preview](https://github.blog/changelog/2025-09-11-bring-your-own-key-byok-support-for-jetbrains-ides-and-xcode-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Author": "Allison",
+  "EnhancedContent": "Bring Your Own Key (BYOK) support is now in public preview for GitHub Copilot Chat in JetBrains IDEs and Xcode! If you already have an API key from a supported model provider, you can connect it in just a minute and start using their models directly in JetBrains IDEs or Xcode. Supported providers include Anthropic, Azure, Google Gemini, Groq, OpenAI, and OpenRouter. BYOK support for GitHub Copilot Chat in Eclipse is coming soon.\n\n## What BYOK unlocks\n\nUsing your own language model API key offers several advantages:\n\n- **Model flexibility**: Access a wide range of models beyond the built-in options.\n- **Experimentation**: Try out new models and features as they become available.\n- **Greater control**: Choose the models you prefer, with fewer limitations on rate limits or usage policies.\n\n## Try it out\n\nTo use BYOK, install the latest [GitHub Copilot plugin for JetBrains](https://plugins.jetbrains.com/plugin/17718-github-copilot) or [Xcode](https://github.com/github/CopilotForXcode). You will also need to have a valid [Copilot license](https://github.com/features/copilot).\n\nIn JetBrains IDEs:\n\n1. Open the Copilot chat and click **Manage Models** in the model picker.\n2. Choose your provider and click **Add Models**.\n3. Enter your API key and required details, then click **Save**.\n4. Select the models under your key and save again — they’ll appear in the model picker.\n5. Enable the ones you want to use in Copilot chat.\n\nIn Xcode:\n\n1. Open the Copilot chat and select **Manage Models** from the Model picker.\n2. Choose your provider (e.g., Anthropic, OpenAI, Azure).\n3. Enter the API key and endpoint URL (if needed).\n4. Click **Add** to continue.\n5. Once saved, it will list available AI models in the “Model Settings” page. Enable the ones you want to use.\n\n## Share your feedback\n\nWe value your feedback! Share your experience through the following channels:\n\n- [GitHub Copilot for JetBrains IDEs](https://github.com/microsoft/copilot-intellij-feedback/issues)\n- [GitHub Copilot for Xcode Feedback](https://github.com/github/CopilotForXcode/issues)",
+  "PubDate": "2025-09-12T00:20:55+00:00",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2025-09-12 11:12:04",
+  "OutputDir": "_news"
+}

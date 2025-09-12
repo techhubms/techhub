@@ -1,0 +1,22 @@
+{
+  "Description": "The Azure AI Foundry Translator API (Public Preview) enables you to translate text leveraging neural machine translation (NMT) or large language model translation (LLM). In this episode, April shows you how to translate a conversation between an English speaking customer support agent and a French speaking customer, accommodating for both tone and gender.\n\nTry it yourself in Azure AI Foundry and start translating with LLMs: ai.azure.com\n\nGet the code from this episode: https://aka.ms/insideAIF/code\n\nLearn more about the Azure AI Translator API: https://aka.ms/insideAIF/translator-API Configure your Azure AI Foundry resource: https://aka.ms/insideAIF/configure-Azure-resources\n\nJoin the Discord: https://aka.ms/insideAIF/discord Hop on Forum: https://aka.ms/insideAIF/forum\n\nChapters: 0:00 - 1:10 Intro 1:11 - 5:35 Setup Azure and Azure AI Foundry resources 5:36 - 10:17 NMT and LLM translation 10:18 - 11:24 When to use NMT vs. LLM translation 11:25 - 14:43 LLM translation with tone 14:44 - 18:07 LLM translation with gender 18:08 - 21:23 Combining targets for translation 21:24 - 22:03 Outro",
+  "FeedName": "Microsoft Developer YouTube",
+  "ProcessedDate": "2025-09-12 11:13:32",
+  "PubDate": "2025-09-11T17:57:05+00:00",
+  "Link": "https://www.youtube.com/watch?v=Xam_QQnb5wQ",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Author": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "Title": "Azure AI Translator API (Public Preview) in Azure AI Foundry",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+}

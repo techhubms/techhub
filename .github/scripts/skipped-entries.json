@@ -7569,5 +7569,77 @@
     "collection": "news",
     "timestamp": "2025-09-12 10:08:53 +00:00",
     "canonical_url": "https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-10/"
+  },
+  {
+    "timestamp": "2025-09-12 11:16:06 +00:00",
+    "canonical_url": "https://blogs.microsoft.com/blog/2025/09/11/a-joint-statement-from-microsoft-and-openai/",
+    "collection": "news",
+    "reason": "No categories found: Content excluded under generic exclusion rules. The post is a brief company news announcement about a business agreement (memorandum of understanding) between Microsoft and OpenAI. It lacks substantial technical detail, contains no technical implementation content, code, architecture, or actionable guidance as required by the inclusion categories. This is high-level business/corporate communication and thus is excluded per the 'Business Strategy and Executive Content' and 'Company News without technical depth' exclusions in Chapter 3."
+  },
+  {
+    "timestamp": "2025-09-12 11:22:53 +00:00",
+    "canonical_url": "https://dellenny.com/how-to-create-reusable-templates-in-word-excel-and-powerpoint/",
+    "collection": "posts",
+    "reason": "No categories found: No categories assigned because the content is focused purely on end-user productivity tips for Microsoft Word, Excel, and PowerPoint within Microsoft 365. It does not discuss development, coding, DevOps, AI, ML, Security, or any implementation details related to Microsoft technologies for developers or IT professionals. As per the generic exclusion rules, non-development Microsoft 365 content is excluded (Non-Development Microsoft Products exclusion)."
+  },
+  {
+    "timestamp": "2025-09-12 11:23:06 +00:00",
+    "canonical_url": "https://dellenny.com/storage-sense-and-disk-cleanup-tips-in-windows-11/",
+    "collection": "posts",
+    "reason": "No categories found: All categories are excluded due to the generic exclusion rules. The content focuses entirely on end-user Windows 11 storage management (Storage Sense, Disk Cleanup, file organization) rather than technical development, coding, Azure, DevOps, AI, ML, or security. There is no focus on software development, programming, scripting, or system architecture; instead, it provides consumer-oriented guidance for regular users. As per the Non-Development Microsoft Products exclusion, content aimed at typical Windows usage and system maintenance for non-developer audiences does not qualify for any categories."
+  },
+  {
+    "timestamp": "2025-09-12 11:25:58 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=ireCH411CPY",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule—The material is primarily a spotlight on the open source project Guardrails AI, focusing on community engagement, project background, and event promotion, not on technical implementation or development with Microsoft technologies. There is no evidence in the provided description, title, tags, or author that Microsoft platforms, products, or development tools are involved. Additionally, no substantive technical tutorial or code-level detail is present. As per the multi-platform and category inclusion rules, only technical content focused on Microsoft technologies qualifies for categorization."
+  },
+  {
+    "timestamp": "2025-09-12 11:26:11 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=SfVwyKnfWKk",
+    "collection": "videos",
+    "reason": "No categories found: All categories excluded due to insufficient substantive content. The description and title do not contain technical detail regarding Microsoft technologies or development topics. The only mention of 'MCP servers' is ambiguous, and there is no content field to provide further information. Since there is no technical information or evidence that Microsoft platforms are central, and the description appears to promote a casual or community event ('Come vibe + build with us!'), generic exclusion rules regarding lack of clear technical focus and missing content apply."
+  },
+  {
+    "timestamp": "2025-09-12 11:27:03 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/GDG3qwqngDM",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. Although the video relates to developer security and references Microsoft's Secure Future Initiative, the actual content is missing (content field is null) and the description does not provide substantive technical details, implementation guidance, or developer-focused workflows. According to the Generic Exclusion Rules, if the core content is absent and only a promotional summary or video snippet is provided, it should be excluded as it does not meet the requirement for actionable technical value or content depth."
+  },
+  {
+    "timestamp": "2025-09-12 11:28:25 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/nTEU7x1g7SE",
+    "collection": "videos",
+    "reason": "No categories found: All categories were excluded based on the generic exclusion rules. The content is an announcement about Microsoft partners and the AI Cloud Partner Program at MS Ignite, focusing on partnership, business enablement, and high-level success stories, rather than technical implementation or hands-on guidance. There are no substantive technical details, code, or specific information about Microsoft technologies, developer tools, or development practices. The post is marketing-oriented and lacks the technical depth required for inclusion in any category."
+  },
+  {
+    "timestamp": "2025-09-12 11:28:38 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/5-98BgbnrTM",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to lack of substantive content. The input provides only a title, author name, and type, with empty or null fields for description, tags, and content. There is no actual technical content or description to analyze for categorization, so none of the inclusion rules can be applied."
+  },
+  {
+    "timestamp": "2025-09-12 11:28:50 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/omXCSo5Svko",
+    "collection": "videos",
+    "reason": "No categories found: All category arrays remain empty because there is no substantive content available for analysis. The input lacks a description, content field, and tags, providing only an author, title, and type. Without the actual content or summary, it is impossible to apply inclusion rules for any category, extract meaningful metadata, or assess alignment with Microsoft technology categories. According to Chapter 2 (Focus on actual content) and multiple references throughout the workflow, categorization decisions must be based solely on provided content. Therefore, exclusion is required due to insufficient information."
+  },
+  {
+    "timestamp": "2025-09-12 11:29:03 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/VJSGLYkEBxk",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. Generic exclusion rules apply: the 'content' and 'description' fields are empty or null, providing no substantive information to evaluate against inclusion rules or to extract technical details. Without actual content or a meaningful description, it's impossible to determine if the material is technical, relevant, or aligned with any Microsoft developer technologies as required by the workflow. Therefore, exclusion is mandatory."
+  },
+  {
+    "timestamp": "2025-09-12 11:29:45 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/hub-spoke-design-with-nva-firewall/m-p/4452972#M682",
+    "collection": "community",
+    "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-09-12 11:29:45 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/fslogix-printing-does-not-work-after-changing-profile-from-upm/m-p/4452846#M13902",
+    "collection": "community",
+    "reason": "Insufficient content length"
   }
 ]

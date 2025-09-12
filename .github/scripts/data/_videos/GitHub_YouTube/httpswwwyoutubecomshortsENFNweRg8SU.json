@@ -1,0 +1,18 @@
+{
+  "Description": "It's here! The remote GitHub MCP server is now generally available, connecting the full suite of GitHub tools to your favorite LLMs. This release brings integrations for the Copilot coding agent, secret scanning, code scanning alerts, security advisories, and much more. Install it from the official repository today!\n\n#GitHub #MCP #AI\n\nStay up-to-date on all things GitHub by connecting with us:\n\nYouTube: https://gh.io/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Insider newsletter: https://resources.github.com/newsletter/ Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github\n\nAbout GitHub It’s where over 100 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "FeedName": "GitHub YouTube",
+  "ProcessedDate": "2025-09-12 11:13:16",
+  "PubDate": "2025-09-10T14:00:32+00:00",
+  "Link": "https://www.youtube.com/shorts/ENFNweRg8SU",
+  "Tags": [
+    "AI",
+    "GitHub",
+    "MCP"
+  ],
+  "FeedLevelAuthor": "GitHub",
+  "Author": "GitHub",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "Title": "GitHub's Remote MCP update explained in 60 seconds",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+}

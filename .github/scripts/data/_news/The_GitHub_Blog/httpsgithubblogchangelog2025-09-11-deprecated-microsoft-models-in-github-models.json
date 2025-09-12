@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "ecosystem & accessibility",
+    "Retired"
+  ],
+  "Link": "https://github.blog/changelog/2025-09-11-deprecated-microsoft-models-in-github-models",
+  "Title": "Deprecated Microsoft models in GitHub Models",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "The following models are now deprecated in GitHub Models. Please transition to the suggested versions to continue using the improved models with enhanced features: Phi-3-medium-4k-instruct users should transition to Phi-4.…\n\nThe post [Deprecated Microsoft models in GitHub Models](https://github.blog/changelog/2025-09-11-deprecated-microsoft-models-in-github-models) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Author": "Allison",
+  "EnhancedContent": "The following models are now deprecated in GitHub Models. Please transition to the suggested versions to continue using the improved models with enhanced features:\n\n- **Phi-3-medium-4k-instruct** users should transition to [Phi-4](https://github.com/marketplace/models/azureml/Phi-4).\n- **Phi-3-medium-128k-instruct** users should transition to [Phi-4](https://github.com/marketplace/models/azureml/Phi-4).\n- **Phi-3-mini-128k-instruct** users should transition to [Phi-4-mini-instruct](https://github.com/marketplace/models/azureml/Phi-4-mini-instruct).\n- **Phi-3-mini-4k-instruct** users should transition to [Phi-4-mini-instruct](https://github.com/marketplace/models/azureml/Phi-4-mini-instruct).\n- **Phi-3-small-128k-instruct** users should transition to [Phi-4-mini-instruct](https://github.com/marketplace/models/azureml/Phi-4-mini-instruct).\n- **Phi-3-small-8k-instruct** users should transition to [Phi-4-mini-instruct](https://github.com/marketplace/models/azureml/Phi-4-mini-instruct).\n- **Phi-3.5-mini-instruct** users should transition to [Phi-4-mini-instruct](https://github.com/marketplace/models/azureml/Phi-4-mini-instruct).\n- **Phi-3.5-MoE-instruct** users should transition to [Phi-4-mini-instruct](https://github.com/marketplace/models/azureml/Phi-4-mini-instruct).\n- **Phi-3.5-vision-instruct** users should transition to [Phi-4-mini-instruct](https://github.com/marketplace/models/azureml/Phi-4-mini-instruct).\n\nTo learn more about GitHub Models, [check out the docs](https://docs.github.com/github-models). You can also join our [community discussions](https://github.com/orgs/community/discussions/categories/models?discussions_q=is%3Aopen+category%3AModels+).",
+  "PubDate": "2025-09-11T20:06:02+00:00",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2025-09-12 11:12:04",
+  "OutputDir": "_news"
+}

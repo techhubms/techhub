@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "collaboration tools",
+    "Improvement"
+  ],
+  "Link": "https://github.blog/changelog/2025-09-11-multiple-assignees-for-issues-and-pull-requests-now-available-in-all-repositories",
+  "Title": "Multiple assignees for issues and pull requests now available in all repositories",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "Multiple assignees are now available on issues and pull requests in all public and private repos.\n\nThe post [Multiple assignees for issues and pull requests now available in all repositories](https://github.blog/changelog/2025-09-11-multiple-assignees-for-issues-and-pull-requests-now-available-in-all-repositories) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Author": "Allison",
+  "EnhancedContent": "Assignees are useful for clarifying who is working on an issue or pull request, and starting today, you can now assign up to 10 users to any issue or pull request on any repository on GitHub! ⭐\n\nPreviously, private repositories on free plans were limited to only one assignee.\n\nLearn more about [assigning issues and pull requests to other GitHub users](https://docs.github.com/issues/tracking-your-work-with-issues/using-issues/assigning-issues-and-pull-requests-to-other-github-users).",
+  "PubDate": "2025-09-11T20:11:25+00:00",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2025-09-12 11:12:04",
+  "OutputDir": "_news"
+}

@@ -1,0 +1,16 @@
+{
+  "Description": "This #OpenSourceFriday, we're spotlighting Guardrails AI—an open source framework for adding safety, reliability, and observability to your AI applications.\n\nFounded by Shreya Rajpal, Guardrails AI empowers developers to define and enforce data quality and security standards for LLM outputs with ease.\n\nWhether you're building with AI or just curious about responsible deployment, this project is a must-watch for anyone interested in trustworthy and production-grade AI. Join us and the Guardrails team for demos, Q&A, and community insights—catch the playlist here and become part of the conversation!",
+  "FeedName": "GitHub YouTube",
+  "ProcessedDate": "2025-09-12 11:13:16",
+  "PubDate": "2025-09-10T23:33:26+00:00",
+  "Link": "https://www.youtube.com/watch?v=ireCH411CPY",
+  "Tags": [
+    "OpenSourceFriday"
+  ],
+  "FeedLevelAuthor": "GitHub",
+  "Author": "GitHub",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "Title": "Open Source Friday with Guardrails AI",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+}

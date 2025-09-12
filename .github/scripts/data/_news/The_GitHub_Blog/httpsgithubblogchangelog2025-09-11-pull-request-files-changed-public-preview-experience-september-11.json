@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "collaboration tools",
+    "Improvement"
+  ],
+  "Link": "https://github.blog/changelog/2025-09-11-pull-request-files-changed-public-preview-experience-september-11-updates",
+  "Title": "Pull request “Files changed” public preview experience – September 11 updates",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "Performance improvements and a higher file limit in this week’s update to the new pull request “Files changed” page public preview. 🚀 Single file view with increased file limits To…\n\nThe post [Pull request “Files changed” public preview experience – September 11 updates](https://github.blog/changelog/2025-09-11-pull-request-files-changed-public-preview-experience-september-11-updates) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Author": "Allison",
+  "EnhancedContent": "Performance improvements and a higher file limit in this week’s update to the [new pull request “Files changed” page](https://github.blog/changelog/2025-06-26-improved-pull-request-files-changed-experience-now-in-public-preview/) public preview.\n\n## 🚀 Single file view with increased file limits\n\nTo improve browser performance when viewing larger pull requests, we are experimenting with a new single file mode on the page. This new mode is automatically enabled when a pull request has a **significant** number of changes. Instead of presenting the changes for every file, only the changes for a single file at a time are shown.\n\nTo ease navigation between files, buttons on the toolbar let you jump to the next or previous file.\n\n![Screen shot of the new Files changed page showing new buttons for navigating between files in the pull request when in single file mode](https://github.com/user-attachments/assets/522a07fd-f799-496f-926a-07618ca29b26)\n\nWith this change we are also raising the file limit from 300 to **1,000 files**! 🎉\n\n> >\n> Note: This change is rolling out more slowly than usual so we can make adjustments based on your feedback as more users are onboarded.\n> >\n\n## ❤️ Feedback\n\nIf you haven’t tried the improved experience yet, click the **Try the new experience** link at the top of the existing pull request “Files changed” page.\n\nYour feedback is super important to us! To report problems, ask questions, view known issues, and more, visit the [feedback discussion](https://gh.io/new-files-changed-feedback).\n\n*Disclaimer: The UI for features in public preview is subject to change.*",
+  "PubDate": "2025-09-11T22:53:29+00:00",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2025-09-12 11:12:04",
+  "OutputDir": "_news"
+}
