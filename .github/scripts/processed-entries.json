@@ -8964,5 +8964,11 @@
     "timestamp": "2025-09-12 13:20:47 +00:00",
     "reason": "Succesfully added: Assigned 'AI' category because the article focuses on observability and automation for AI agents using OpenTelemetry and discusses large language models, telemetry data, and AI-driven IT tasks, satisfying AI category inclusion rule 1 and 4. Assigned 'DevOps' category because the content centers on DevOps observability, IT operations automation, and integrating AI into operational workflows, reflecting DevOps rules 3, 5, and 7. Did not assign 'Azure', 'Coding', 'ML', 'Security', or 'GitHub Copilot' because while Microsoft and Azure are not mentioned, the focus is platform-agnostic OpenTelemetry and vendor-specific innovations from Cisco and Splunk, not covered by those categories.",
     "canonical_url": "https://devops.com/opentelemetry-extensions-to-enable-observability-of-ai-agents/?utm_source=rss&utm_medium=rss&utm_campaign=opentelemetry-extensions-to-enable-observability-of-ai-agents"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-09-12 14:12:35 +00:00",
+    "reason": "Succesfully added: Assigned Security because the leading story is a supply chain attack on npm packages, which directly targets software security (Security rule 1). Assigned AI due to prominent coverage of the NVIDIA Rubin platform, model hallucination issues, Trackio for ML experiments, and Google's AI for edge devices (AI rules 4 & 5). Assigned DevOps for coverage of GitHub MCP remote server, GitHub Universe (dev practices/events), and broader DevOps workflow implications (DevOps rules 2 and 11). Assigned Coding because the show targets developers and covers topics such as VS Code Dev Days and general coding practices (Coding rules 1 & 5). Azure or ML categories were not assigned because Microsoft cloud/data services or custom ML engineering were not central to any covered stories.",
+    "canonical_url": "https://www.youtube.com/watch?v=GQ0tqZXxaIk"
   }
 ]
