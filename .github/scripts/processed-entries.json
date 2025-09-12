@@ -8970,5 +8970,17 @@
     "timestamp": "2025-09-12 14:12:35 +00:00",
     "reason": "Succesfully added: Assigned Security because the leading story is a supply chain attack on npm packages, which directly targets software security (Security rule 1). Assigned AI due to prominent coverage of the NVIDIA Rubin platform, model hallucination issues, Trackio for ML experiments, and Google's AI for edge devices (AI rules 4 & 5). Assigned DevOps for coverage of GitHub MCP remote server, GitHub Universe (dev practices/events), and broader DevOps workflow implications (DevOps rules 2 and 11). Assigned Coding because the show targets developers and covers topics such as VS Code Dev Days and general coding practices (Coding rules 1 & 5). Azure or ML categories were not assigned because Microsoft cloud/data services or custom ML engineering were not central to any covered stories.",
     "canonical_url": "https://www.youtube.com/watch?v=GQ0tqZXxaIk"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/bringing-trust-and-governance-to-ai-driven-devops/?utm_source=rss&utm_medium=rss&utm_campaign=bringing-trust-and-governance-to-ai-driven-devops",
+    "timestamp": "2025-09-12 15:12:35 +00:00",
+    "reason": "Succesfully added: The content was assigned 'AI' because it focuses on the integration and implications of AI within DevOps pipelines and tooling (AI Inclusion Rule 1, 4, and 5). It was also assigned 'DevOps' since it discusses the transformation of DevOps practices and infrastructure in the era of AI (DevOps Inclusion Rules 3, 4, and 11). There is no Microsoft-specific content or code/deployment implementation, so categories such as Azure, Coding, ML, Security, or GitHub Copilot were not included. The content is a panel discussion on AI governance in DevOps, not a promotional, career, or business-strategy-only piece. Thus, none of the generic exclusion rules applied."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=6ZfVssHBvUw",
+    "timestamp": "2025-09-12 15:13:19 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the video content systematically summarizes changes, new features, and retirements for core Azure services (Azure inclusion rules 1 and 4). Assigned DevOps because the update includes topics relevant to DevOps operations (e.g., service retirements, monitoring, and deployment-related updates, as well as a dedicated DevOps master class resource - DevOps inclusion rules 3, 5, and 9). Did not assign Coding, AI, ML, or Security categories, as the video lacks substantive coverage of programming, machine learning, security, or AI topics in depth. No generic exclusions apply; the content is in English, not biographical, and meets quality criteria."
   }
 ]

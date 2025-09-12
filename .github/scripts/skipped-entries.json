@@ -7641,5 +7641,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/fslogix-printing-does-not-work-after-changing-profile-from-upm/m-p/4452846#M13902",
     "collection": "community",
     "reason": "Insufficient content length"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/sketch-coding-and-the-rise-of-mcp-in-devops/?utm_source=rss&utm_medium=rss&utm_campaign=sketch-coding-and-the-rise-of-mcp-in-devops",
+    "timestamp": "2025-09-12 15:12:48 +00:00",
+    "reason": "No categories found: All categories are excluded under the Generic Exclusion Rules. The content primarily focuses on Yonatan Arbel's personal career trajectory inside JFrog, reflecting on his journey from engineer to leadership and developer relations. While there are high-level mentions of open source projects, MCP, and AI-assisted coding, there are no detailed technical implementations, nor is Microsoft technology referenced at all. This triggers the 'Biographical Focus' exclusion (content mainly about a person's career or journey), as well as the requirement that Microsoft technology must be central to the content (Chapter 3, Non-Microsoft/Non-Development Exclusion). The article is also lacking substantive actionable technical depth concerning the eligible Microsoft categories."
   }
 ]
