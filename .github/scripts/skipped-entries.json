@@ -7665,5 +7665,29 @@
     "reason": "Insufficient content length",
     "timestamp": "2025-09-12 17:12:05 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/mysterious-nightly-cpu-spikes-on-app-service-plans-22-00-10-00/m-p/4453615#M22200"
+  },
+  {
+    "timestamp": "2025-09-12 18:15:54 +00:00",
+    "canonical_url": "https://blogs.windows.com/windowsexperience/2025/09/12/ifa-2025-accelerating-innovation-with-copilot-pcs-and-windows-11/",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The article focuses on partner hardware announcements (Copilot+ PCs from Acer and Lenovo) and high-level Windows 11 product innovation at a trade show (IFA Berlin). There is no substantive technical implementation, development guidance, or hands-on usage of Microsoft developer technologies (AI, Coding, DevOps, Azure, ML, Security). The discussion centers on business partnerships, end-user computing experiences, and product marketing. No developer tools, code, or architectural details are provided, and the presence of consumer AI features (Copilot+ PCs) is not the same as GitHub Copilot or technical AI/ML development work. This fits under the business strategy, product announcement, and non-development product exclusions in Chapter 3. No categories assigned.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-12 18:16:13 +00:00",
+    "canonical_url": "https://dellenny.com/discovering-nomados-ai-destinations-your-new-travel-co-pilot/",
+    "reason": "No categories found: All categories were excluded due to the generic exclusion rules in Chapter 3. The content is about Nomados.ai, an AI-powered travel logistics platform for digital nomads, focusing on travel, visa, coworking spaces, and lifestyle—none of which are Microsoft technologies or developer-centric AI, coding, DevOps, Azure, ML, or Security topics. There is no discussion of Microsoft technology, programming, or any of the required technical domains. The mention of AI is limited to the use of AI in a travel context, not in a technical or developer context related to Microsoft. Therefore, no categories are applicable as per the defined rules.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-12 18:16:56 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=7_t7M6jPgko",
+    "reason": "No categories found: All categories are excluded because the content, as described, does not focus on Microsoft technologies or development with Microsoft tools or services. The video centers on the Julia programming language and its creators, highlighting Julia's strengths in high-performance technical computing and scientific machine learning, but there is no indicated integration or substantial focus on Microsoft technologies such as Azure, Azure AI, .NET, or any other relevant Microsoft developer platforms. Generic exclusion based on lack of Microsoft relevance applies per the Multi-Platform Content Threshold (Chapter 2) and Category Inclusion Rules (Chapters 4 and 6).",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-09-12 18:17:09 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Gz1b_ujD6X4",
+    "reason": "No categories found: No categories assigned because the content violates the generic exclusion rule regarding biographical focus and insufficient technical depth. The event primarily features a discussion with the creator of Joplin about his personal journey and the app's story, without substantive detail on Microsoft technologies, coding, or platform development. The description showcases a product demo and Q&A, focused on open source, privacy, and contributing, but does not reference any specific Microsoft technologies, development frameworks, or qualifying technical categories. Therefore, as per Biographical Focus and Content Quality Exclusions in Chapter 3, all categories are excluded.",
+    "collection": "videos"
   }
 ]

@@ -9000,5 +9000,11 @@
     "reason": "Succesfully added: Assigned 'Coding' category because the content focuses on Visual Studio Code, which is a Microsoft development environment, and demos features relevant to software development (Coding rule 5). Added 'DevOps' due to the introduction of Git Worktrees and terminal workflow automation, which are relevant to DevOps best practices (DevOps rules 5 and 8). Included 'AI' because the video covers features labeled as 'AI stats,' suggesting integration of AI-powered enhancements (AI rule 5). Did not add 'Azure', 'ML', 'GitHub Copilot', or 'Security' as the content does not specifically address Azure services, machine learning development, GitHub Copilot, or security-focused features. No generic exclusion rules apply, as this is authentic, technical content about Microsoft developer tools.",
     "timestamp": "2025-09-12 17:12:04 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=9qAkd2mGYCo"
+  },
+  {
+    "timestamp": "2025-09-12 18:16:38 +00:00",
+    "canonical_url": "https://devops.com/oasis-security-identifies-security-weakness-in-cursor-ai-coding-tool/?utm_source=rss&utm_medium=rss&utm_campaign=oasis-security-identifies-security-weakness-in-cursor-ai-coding-tool",
+    "reason": "Succesfully added: Assigned AI category because the article focuses on security issues and developer workflow implications with an AI-powered code editor (Cursor) and discusses risks inherent to AI-generated code (AI inclusion rule 1 and 4). Assigned Security because the main topic is a vulnerability affecting coding tool security, with actionable mitigation steps (Security inclusion rules 1 and 2). Assigned DevOps because it discusses policies, controls, and the role of DevSecOps teams in managing tooling risk and enforcement (DevOps rule 3 and 9). Did not assign 'Azure', 'ML', 'GitHub Copilot', or 'Coding' categories as the content does not address Microsoft cloud, ML engineering, GitHub Copilot products, nor specific development with Microsoft programming languages or frameworks.",
+    "collection": "posts"
   }
 ]
