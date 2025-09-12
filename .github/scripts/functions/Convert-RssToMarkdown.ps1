@@ -167,8 +167,41 @@ function Convert-RssToMarkdown {
                     
                 continue
             }
+            elseif ($response.Type -eq "ResponseParseError") {
+                Write-Host "AI API response could not be parsed" -ForegroundColor Yellow
+                
+                # Add to skipped entries and continue to next item
+                $errorMessage = if ($response.PSObject.Properties.Name -Contains 'Message') { $response.Message } else { "Response parse error" }
+                Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "AI API response parse error: $errorMessage" -Collection $collection_value
+                    
+                continue
+            }
+            elseif ($response.Type -eq "AllRetriesFailed") {
+                Write-Host "All API call retries failed" -ForegroundColor Yellow
+                
+                # Add to skipped entries and continue to next item
+                $errorMessage = if ($response.PSObject.Properties.Name -Contains 'Message') { $response.Message } else { "All retries failed" }
+                Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "API call retries failed: $errorMessage" -Collection $collection_value
+                    
+                continue
+            }
             else {
-                throw "Unknown error type: $($response.Type) - $($response.Message)"
+                # Create error message using available properties
+                $errorDetails = @()
+                $errorDetails += "Type: $($response.Type)"
+                
+                if ($response.PSObject.Properties.Name -Contains 'Message') {
+                    $errorDetails += "Message: $($response.Message)"
+                }
+                if ($response.PSObject.Properties.Name -Contains 'RateLimitSeconds') {
+                    $errorDetails += "RateLimitSeconds: $($response.RateLimitSeconds)"
+                }
+                if ($response.PSObject.Properties.Name -Contains 'Pattern') {
+                    $errorDetails += "Pattern: $($response.Pattern)"
+                }
+                
+                $errorMessage = $errorDetails -join ", "
+                throw "Unknown error type: $errorMessage"
             }
         }
 
