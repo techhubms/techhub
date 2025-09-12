@@ -9012,5 +9012,11 @@
     "reason": "Succesfully added: Assigned 'GitHub Copilot' category because the content is focused exclusively on new features and agent enhancements of GitHub Copilot in VS Code (GitHub Copilot rule 1 and 2), including productivity and collaboration updates. Per CRITICAL rules, assigned 'AI' as well since all GitHub Copilot content must include 'AI'. 'Coding' is included since the discussed features affect the code authoring experience, editing workflows, and developer productivity (Coding rules 2, 4, and 5). 'DevOps' is assigned because features like collaborative agent workflows, configuration controls, and productivity improvements impact development workflows and team practices (DevOps rules 3, 5, and 9). 'Security' is included as multiple new features specifically address confirmation for sensitive file edits, terminal auto-approve controls, and agent safety settings (Security rules 2, 7, and 8).",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-09-12-github-copilot-in-vs-code-august-release-v1-104"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/revolutionizing-learning-with-immersive-ai/ba-p/4453680",
+    "timestamp": "2025-09-12 21:10:52 +00:00",
+    "reason": "Succesfully added: Categories 'AI' and 'Azure' were assigned because the content focuses on implementing immersive AI experiences through Azure AI services, specifically Azure Speech Studio, neural voice, and avatar technology (AI rule 1, AI rule 4, Azure rule 1, Azure rule 4). 'Security' was included as there is substantial attention to security practices: Microsoft Entra ID integration, Defender for Storage, DLP, and private networking (Security rules 1, 4, 7). The piece does not qualify for 'Coding', 'DevOps', 'ML', or 'GitHub Copilot' since it centers on low-code/no-code workflows rather than code development, DevOps pipelines, or ML/analytics engineering. All details are based directly on architectural, workflow, and security implementation content."
   }
 ]
