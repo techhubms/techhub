@@ -10,7 +10,9 @@ function Convert-RssToMarkdown {
         [Parameter(Mandatory = $false)]
         [string]$Endpoint = "https://models.github.ai/inference/chat/completions",
         [Parameter(Mandatory = $false)]
-        [int]$RateLimitPreventionDelay = 15        
+        [int]$RateLimitPreventionDelay = 15,
+        [Parameter(Mandatory = $false)]
+        [ref]$FailedArticleCount = ([ref]0)
     )
 
     $sourceRoot = Get-SourceRoot
@@ -62,62 +64,63 @@ function Convert-RssToMarkdown {
     Write-Host ""
 
     foreach ($item in $itemsToProcess) {
-        Write-Host "📄 Processing: $($item.Link)" -ForegroundColor Magenta
+        try {
+            Write-Host "📄 Processing: $($item.Link)" -ForegroundColor Magenta
 
-        # Determine collection from output directory
-        $collection_value = $null
-        if ($item.OutputDir -match '_(.+)$') {
-            $collection_value = $matches[1].Trim()
-        }
-        if (-not $collection_value) {
-            throw "Collection could not be determined from OutputDir '$($item.OutputDir)'"
-        }
+            # Determine collection from output directory
+            $collection_value = $null
+            if ($item.OutputDir -match '_(.+)$') {
+                $collection_value = $matches[1].Trim()
+            }
+            if (-not $collection_value) {
+                throw "Collection could not be determined from OutputDir '$($item.OutputDir)'"
+            }
 
-        # Remove old file if it already exists based on canonical_url, so we can update markdown files by removing their entries from the processed and/or skipped entries files
-        $existingFiles = Get-ChildItem -Path $item.OutputDir -Filter "*.md" -ErrorAction SilentlyContinue
-        foreach ($existingFile in $existingFiles) {
-            try {
-                $existingContent = Get-Content -Path $existingFile.FullName -Raw -ErrorAction SilentlyContinue
-                if ($existingContent -and $existingContent -match 'canonical_url:\s*"?([^"\s]+)"?') {
-                    $existingCanonicalUrl = $matches[1].Trim('"')
-                    if ($existingCanonicalUrl -eq $item.Link) {
-                        if ($PSCmdlet.ShouldProcess($existingFile.FullName, "Remove existing markdown file")) {
-                            Remove-Item -Path $existingFile.FullName -Force
-                            Write-Host "Removing existing file with same canonical_url: $($existingFile.FullName)"
+            # Remove old file if it already exists based on canonical_url, so we can update markdown files by removing their entries from the processed and/or skipped entries files
+            $existingFiles = Get-ChildItem -Path $item.OutputDir -Filter "*.md" -ErrorAction SilentlyContinue
+            foreach ($existingFile in $existingFiles) {
+                try {
+                    $existingContent = Get-Content -Path $existingFile.FullName -Raw -ErrorAction SilentlyContinue
+                    if ($existingContent -and $existingContent -match 'canonical_url:\s*"?([^"\s]+)"?') {
+                        $existingCanonicalUrl = $matches[1].Trim('"')
+                        if ($existingCanonicalUrl -eq $item.Link) {
+                            if ($PSCmdlet.ShouldProcess($existingFile.FullName, "Remove existing markdown file")) {
+                                Remove-Item -Path $existingFile.FullName -Force
+                                Write-Host "Removing existing file with same canonical_url: $($existingFile.FullName)"
+                            }
+                            else {
+                                Write-Host "What if: Would remove existing file with same canonical_url: $($existingFile.FullName)"
+                            }
+                            break
                         }
-                        else {
-                            Write-Host "What if: Would remove existing file with same canonical_url: $($existingFile.FullName)"
-                        }
-                        break
                     }
                 }
+                catch {
+                    Write-Host "Warning: Could not check existing file $($existingFile.FullName): $($_.Exception.Message)" -ForegroundColor Yellow
+                }
             }
-            catch {
-                Write-Host "Warning: Could not check existing file $($existingFile.FullName): $($_.Exception.Message)" -ForegroundColor Yellow
+
+            # Apply content length check only for community data
+            $lengthRequirement = if ($collection_value -eq "community") { 1000 } else { 0 }
+            if ($item.EnhancedContent -and $item.EnhancedContent.Length -lt $lengthRequirement) {
+                Write-Host "Skipping item due to insufficient content length: $($item.Link)" -ForegroundColor Yellow
+                
+                # Write canonical URL to skipped-entries.json to avoid reprocessing
+                Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "Insufficient content length" -Collection $collection_value
+                
+                continue
             }
-        }
 
-        # Apply content length check only for community data
-        $lengthRequirement = if ($collection_value -eq "community") { 1000 } else { 0 }
-        if ($item.EnhancedContent -and $item.EnhancedContent.Length -lt $lengthRequirement) {
-            Write-Host "Skipping item due to insufficient content length: $($item.Link)" -ForegroundColor Yellow
-            
-            # Write canonical URL to skipped-entries.json to avoid reprocessing
-            Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "Insufficient content length" -Collection $collection_value
-            
-            continue
-        }
+            $description = $item.Description
+            $content = $item.EnhancedContent
 
-        $description = $item.Description
-        $content = $item.EnhancedContent
+            if (-not $item.Tags) {
+                $item.Tags = @()
+            }
 
-        if (-not $item.Tags) {
-            $item.Tags = @()
-        }
-
-        $inputData = @{
-            title       = $item.Title
-            description = $description
+            $inputData = @{
+                title       = $item.Title
+                description = $description
             content     = $content
             author      = $item.Author
             tags        = $item.Tags -join ', '
@@ -328,6 +331,60 @@ function Convert-RssToMarkdown {
 
         # Count both real and simulated file creation
         $newMarkdownFilesCount++
+        }
+        catch {
+            # Determine if this is a retryable processing failure or a logic/validation error
+            $errorMessage = $_.Exception.Message
+            $shouldFailWorkflow = $false
+            
+            # Logic errors and validation errors should still fail the workflow immediately
+            if ($errorMessage -like "*Unknown error type*" -or 
+                $errorMessage -like "*Collection could not be determined*" -or
+                $errorMessage -like "*Template file not found*") {
+                # These are logic/configuration errors that should fail fast
+                throw
+            }
+            
+            # Network errors, rate limiting, and API failures should be handled gracefully
+            if ($errorMessage -like "*429*" -or 
+                $errorMessage -like "*Too Many Requests*" -or
+                $errorMessage -like "*Response status code does not indicate success*" -or
+                $errorMessage -like "*rate limit*" -or
+                $errorMessage -like "*network*" -or 
+                $errorMessage -like "*timeout*" -or
+                $errorMessage -like "*HttpResponseException*" -or
+                $errorMessage -like "*HttpRequestException*") {
+                
+                # Handle individual article processing failures
+                $FailedArticleCount.Value++
+                
+                Write-Host "❌ Failed to process article: $($item.Link)" -ForegroundColor Red
+                Write-Host "   Error: $errorMessage" -ForegroundColor Red
+                Write-Host "   Failed articles so far: $($FailedArticleCount.Value)" -ForegroundColor Yellow
+                
+                # Add to skipped entries so we don't retry this article in future runs
+                try {
+                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "Processing failed after retries: $errorMessage" -Collection $collection_value
+                }
+                catch {
+                    Write-Host "   Warning: Could not add failed article to skipped entries: $($_.Exception.Message)" -ForegroundColor Yellow
+                }
+                
+                # Check if we've hit the failure threshold
+                if ($FailedArticleCount.Value -ge 3) {
+                    Write-Host "💥 Workflow failure threshold reached: $($FailedArticleCount.Value) articles have failed" -ForegroundColor Red
+                    Write-Host "   Failing the entire workflow to prevent further issues" -ForegroundColor Red
+                    throw "Too many article processing failures ($($FailedArticleCount.Value)). Last failure: $errorMessage"
+                }
+                
+                # Continue processing remaining articles
+                Write-Host "   Continuing with next article..." -ForegroundColor Yellow
+            }
+            else {
+                # Unknown error types should still fail immediately for debugging
+                throw
+            }
+        }
     }
     
     return $newMarkdownFilesCount
