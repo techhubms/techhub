@@ -8982,5 +8982,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=6ZfVssHBvUw",
     "timestamp": "2025-09-12 15:13:19 +00:00",
     "reason": "Succesfully added: Assigned Azure category because the video content systematically summarizes changes, new features, and retirements for core Azure services (Azure inclusion rules 1 and 4). Assigned DevOps because the update includes topics relevant to DevOps operations (e.g., service retirements, monitoring, and deployment-related updates, as well as a dedicated DevOps master class resource - DevOps inclusion rules 3, 5, and 9). Did not assign Coding, AI, ML, or Security categories, as the video lacks substantive coverage of programming, machine learning, security, or AI topics in depth. No generic exclusions apply; the content is in English, not biographical, and meets quality criteria."
+  },
+  {
+    "timestamp": "2025-09-12 16:13:13 +00:00",
+    "canonical_url": "https://github.blog/open-source/maintainers/building-personal-apps-with-open-source-and-ai/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the article explicitly discusses the use of AI tools (e.g., GitHub Copilot) for software development (AI inclusion rule 1, 4). GitHub Copilot category is included as the content details its application as a coding assistant (GitHub Copilot rules 1, 2, 4) and describes its value for accelerating development. Coding is included because the content focuses on building scripts, personal developer tools, and workflows (Coding rule 4, 5). Azure, DevOps, ML, and Security are not included as those topics are not a primary or central feature of the post. Security is mentioned only as a consideration when open sourcing, but not as a technical focus. No exclusion rules apply: content is in English, not biographical, not a sales pitch, not negative, not job-related, and is technical and developer-focused."
   }
 ]
