@@ -7761,5 +7761,41 @@
     "timestamp": "2025-09-15 07:14:57 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=tpClCNcCgwQ",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content focuses on business productivity features of Microsoft AI and Copilot, specifically their integration into Microsoft 365 products (Excel, Word, PowerPoint, Teams, Dynamics 365) to automate administrative, marketing, and customer support tasks for entrepreneurs and startups. According to the Generic Exclusion Rules and Copilot Product Distinction, content covering Microsoft 365 Copilot, Copilot for Microsoft 365, or general productivity uses (document creation, business operations, content generation) is explicitly excluded and does not qualify for any category. There is no content about developer-specific tools, GitHub Copilot, or technical development-related topics. Therefore, exclusion is based on the 'Non-Development Microsoft Products' and 'Business Productivity Tools' rules.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/boost-your-startup-with-microsoft-ai-copilot-a-game-changer-for-entrepreneurs/",
+    "timestamp": "2025-09-15 10:13:48 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content, based on the description, is a preview for an episode focusing on sustainability, decarbonization, and operational performance in the context of Microsoft's datacenter and cloud operations. While AI is mentioned as part of the discussion, there is no substantive detail or technical information provided about Microsoft AI products, development practices, AI integration methods, or technical implementations. The focus remains on executive-level sustainability initiatives, smart design, and material innovation rather than technical architecture, coding, or specific Microsoft developer/engineering tools. This qualifies under the 'Business Strategy and Executive Content' and 'Workplace and Business Focus' generic exclusion rules in Chapter 3, which exclude industry trends and market analysis without technical implementation details or actionable developer/engineering guidance.",
+    "timestamp": "2025-09-15 11:11:05 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=_xQcmXI9dhw"
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the content is focused on high-level business impact, sustainability strategy, and executive insights rather than technical implementation or development-focused details. According to the generic exclusion rules (Chapter 3), content targeting executive/business/organizational outcomes without technical depth must be excluded. The description centers on how AI enables sustainability and business performance, featuring marketing executives discussing business value and impact, but does not cover hands-on, technical, or developmental aspects relevant for developers or IT practitioners. None of the inclusion rules for 'AI', 'Coding', 'DevOps', 'Azure', 'ML', or 'Security' are satisfied, as the content does not address technical usage, architecture, or development with Microsoft AI technologies.",
+    "timestamp": "2025-09-15 11:11:18 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=UTymSy_YT7I"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content focuses on supply chain sustainability, efficiency, and resilience strategies at Microsoft, rather than technical implementation or developer tooling. The description emphasizes high-level business operations, sustainability, and supply chain management. There is no substantive mention of specific Microsoft developer platforms, APIs, programming, or coding, and none of the main content categories (AI, Coding, Azure, DevOps, ML, Security, GitHub Copilot) are supported. This matches the business strategy and executive content exclusion rule in the Generic Exclusion Rules (Chapter 3), as the content is about operational transformation and leadership, not technical architecture or hands-on development.",
+    "timestamp": "2025-09-15 11:11:32 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=zQukNIKywIo"
+  },
+  {
+    "timestamp": "2025-09-15 13:23:16 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is an administrative product update about a report field removal in GitHub's organization export feature. It does not involve development tooling, DevOps, coding practices, AI, ML, Azure, or security implementation according to the inclusion rules of Chapter 4. Generic and category-specific exclusions did not apply, but the post is an administrative notice rather than technical guidance, development, or engineering content.",
+    "canonical_url": "https://github.blog/changelog/2025-09-14-last_active-field-removed-from-the-organization-members-export-report",
+    "collection": "news"
+  },
+  {
+    "reason": "No categories found: All categories are excluded due to the generic exclusion rule regarding job-related content. The entire article is a listing of DevOps job opportunities and commentary about the job market for DevOps professionals, without substantive technical depth or implementation details about Microsoft technologies, DevOps practices, or related engineering topics. According to the explicit exclusion rules in Chapter 3—'Job-Related Content'—this includes job opportunities, hiring announcements, and career advancement topics. No categories apply.",
+    "timestamp": "2025-09-15 14:14:35 +00:00",
+    "canonical_url": "https://devops.com/five-great-devops-job-opportunities-156/?utm_source=rss&utm_medium=rss&utm_campaign=five-great-devops-job-opportunities-156",
+    "collection": "posts"
   }
 ]

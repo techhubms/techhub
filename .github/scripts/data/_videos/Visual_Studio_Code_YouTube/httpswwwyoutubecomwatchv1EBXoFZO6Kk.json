@@ -1,0 +1,27 @@
+{
+  "PubDate": "2025-09-15T14:00:03+00:00",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-09-15 14:13:04",
+  "Description": "Learn how to refactor an existing e-commerce codebase with the help of GitHub Copilot. In this video, we’ll walk through a FastAPI + Cosmos DB inventory project, identify code smells, and craft effective Copilot instructions to guide the refactor. You’ll see how to build prompts, run them with Agent Mode, and review the generated code step by step. Finally, we’ll wrap up with key best practices to make AI-assisted refactoring faster, cleaner, and more reliable.\n\n🔎 Chapters: 00:00 Intro 00:36 Getting Started 02:25 Choosing our directory - product\\_crud\\_batch.py 03:50 Custom Instructions 05:25 Creating our prompt 09:58 Running our prompt with agent mode 19:11 Testing Changes 23:39 In Summary 24:14 Wrap\n\n🔗 Link: Repo: https://github.com/madebygps/cosmosdb-fastapi-functions\n\n🎙️ Featuring: Gwyneth Peña-Siguenza (@madebygps)\n\n📲 Follow VS Code: \\* X: https://x.com/code \\* Bluesky: https://bsky.app/profile/vscode.dev \\* YouTube: https://youtube.com/code \\* LinkedIn: https://www.linkedin.com/showcase/104107263 \\* GitHub: https://github.com/microsoft/vscode\n\n#vscode #ai #prompt",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Title": "Refactor an Existing Codebase using Prompt Driven Development",
+  "Author": "Visual Studio Code",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Tags": [
+    "agentmode",
+    "AI",
+    "code",
+    "copilot",
+    "demo",
+    "developer",
+    "ecommerce",
+    "microsoft",
+    "softwaredeveloper",
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=1EBXoFZO6Kk",
+  "FeedName": "Visual Studio Code YouTube"
+}

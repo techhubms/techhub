@@ -9054,5 +9054,29 @@
     "reason": "Succesfully added: Assigned the Azure category because the content centers on practical usage of Azure Hybrid Benefit for Linux, including migration, licensing, and cost optimization for Linux VMs within Azure (Azure category rule 1 and 4). No other categories qualified because the discussion is focused on infrastructure management, licensing, migration, and cost savings, without significant content on application coding, DevOps processes, security, AI, ML, or GitHub Copilot. The categorization is supported by the episode's breakdown of Azure services, migration processes for Linux, and financial optimization strategies.",
     "timestamp": "2025-09-15 08:20:41 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Security category because the content focuses on improving security incident notification management for GitHub enterprise accounts (Security rule 1: Microsoft Security Services and Security Monitoring/Response). GitHub is covered under Microsoft's developer ecosystem, and the announcement revolves around organizational security practices and tooling, not about business productivity or end-user guidance. No other categories apply, as there is no direct coverage of DevOps, AI, ML, Azure, Coding, or GitHub Copilot tools.",
+    "timestamp": "2025-09-15 14:14:11 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-14-security-contact-for-security-notification-emails-is-generally-available",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the core focus is on agentic AI, OpenAI integrations, and AI-driven product recommendations (AI inclusion rules 1, 4, and 5). Assigned Azure category since the Microsoft Cloud stack and Azure AI are explicitly highlighted as the technological foundation (Azure inclusion rule 1). Did not assign other categories—there’s no detailed discussion of coding, DevOps, ML engineering, or security implementation. Content is technical and solution-focused, not business strategy or sales pitch, and meets quality standards. No generic exclusions apply.",
+    "timestamp": "2025-09-15 14:15:04 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=0BqIUtFL3KY",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the entire content is about using GitHub Copilot (Azure OpenAI-based) for development (AI, rule 2 and 4). Assigned 'GitHub Copilot' because the focus is the setup, usage, and best practices with Copilot (GitHub Copilot, rules 1 and 2). 'Coding' applies because actual Python/FastAPI code refactoring is performed (Coding rules 1 and 4). Assigned 'Azure' since Cosmos DB, a Microsoft Azure service, is central to the project demo and walkthrough (Azure rule 1). No other categories apply, as content does not cover ML/data science engineering, DevOps workflows, or Security aspects.",
+    "timestamp": "2025-09-15 14:15:33 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=1EBXoFZO6Kk",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' because the post extensively covers how agentic AI and GitHub Copilot are central to modernisation (AI rules 1, 2, 4). 'GitHub Copilot' because the article is explicitly about GitHub Copilot's usage in code, migration, cloud, and DevOps scenarios (GitHub Copilot rules 1–4, always paired with 'AI'). 'Azure' because Azure migration and cloud-native modernisation are substantial focuses (Azure rules 1–5). 'DevOps' because the article discusses automation through CI/CD pipelines, infrastructure-as-code, and deployment practices (DevOps rules 5, 6). 'Coding' since legacy code refactoring, upgrades, test case generation, and language translations are discussed in developer-oriented detail (Coding rules 1, 4, 5). ML and Security categories were considered, but ML (custom algorithm/data science) is not the main focus, and while security is mentioned (debt/vulnerabilities), it is not the focus of implementation, so Security is not included. The content meets all inclusion requirements and does not trigger any exclusions.",
+    "timestamp": "2025-09-15 14:16:23 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unlocking-application-modernisation-with-github-copilot/ba-p/4454121",
+    "collection": "community"
   }
 ]
