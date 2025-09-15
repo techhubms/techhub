@@ -9078,5 +9078,11 @@
     "timestamp": "2025-09-15 14:16:23 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unlocking-application-modernisation-with-github-copilot/ba-p/4454121",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content's primary focus is on building generative AI solutions using Microsoft AI Services, Azure AI Foundry, and Copilot Studio (AI inclusion rule 1 and 4). Assigned Azure category because it covers Azure AI Foundry and general Azure-based agent development (Azure inclusion rules 1 and 4). Assigned ML category as the workflow includes creation of custom sample datasets, data preparation, and applied analytics, as well as building data-driven agents for industry solutions (ML category rules 1, 2, and 4). Did not assign DevOps, Security, Coding, or GitHub Copilot, as the content does not materially cover CI/CD practices, security implementation, code development, or GitHub Copilot usage. The content exceeds the minimum length for community content, is highly technical, and provides actionable steps and architecture, thus meeting quality standards.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/explore-microsoft-fabric-data-agent-azure-ai-foundry-for-agentic/ba-p/4453709",
+    "timestamp": "2025-09-15 15:15:09 +00:00"
   }
 ]

@@ -7797,5 +7797,11 @@
     "timestamp": "2025-09-15 14:14:35 +00:00",
     "canonical_url": "https://devops.com/five-great-devops-job-opportunities-156/?utm_source=rss&utm_medium=rss&utm_campaign=five-great-devops-job-opportunities-156",
     "collection": "posts"
+  },
+  {
+    "reason": "No categories found: All categories are excluded based on the 'Non-Development Microsoft Products' generic exclusion rule in Chapter 3. The content is focused on using Microsoft 365 and Copilot for travel planning, business trip organization, itinerary management, and personal productivity. Despite mentions of AI and Copilot, the referenced Copilot is the Microsoft 365 Copilot (a business productivity tool, not a developer tool or developer-focussed Copilot product such as GitHub Copilot or Copilot Studio). The article describes automation and productivity features in Outlook, Excel, Teams, OneNote, OneDrive, and Authenticator for travel use cases but does not present any technical implementation, development, coding, DevOps, ML, Azure, or security topics. As per the Copilot Product Distinction and corresponding exclusion rules, Microsoft 365 Copilot and content in the context of business/productivity use are excluded and receive no categories.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/stress-free-travel-how-to-use-microsoft-365-and-copilot-to-plan-your-vacation-or-business-trip/",
+    "timestamp": "2025-09-15 15:14:24 +00:00"
   }
 ]
