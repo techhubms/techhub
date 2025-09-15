@@ -9126,5 +9126,17 @@
     "collection": "posts",
     "reason": "Succesfully added: Assigned the Security category based on explicit details about threat actors targeting developer supply chains, use of malware (LummaStealer), and exploitation via malicious extensions (Security rules 1, 2, and 4). Assigned DevOps because the context and primary attack vectors relate directly to software development and DevOps environments (DevOps rule 11), specifically targeting VSCode extension users and development teams. No Azure, AI, Coding, ML, or GitHub Copilot content is present, as this is about attack vectors and supply chain risk, not development or Microsoft-specific technologies.",
     "canonical_url": "https://devops.com/whitecobra-targets-developers-with-dozens-of-malicious-extensions/?utm_source=rss&utm_medium=rss&utm_campaign=whitecobra-targets-developers-with-dozens-of-malicious-extensions"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=km1bLnw_zm4",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Coding category because the video focuses on .NET 10 performance improvements for WebAssembly and Blazor, which are Microsoft programming frameworks and development topics (Coding rule 1 and 2). Azure, AI, ML, DevOps, GitHub Copilot, and Security categories were not assigned as there is no evidence in the description or tags of Azure services, AI, ML, DevOps tooling, GitHub Copilot, or security implementation being discussed. The content fits the standards for development-focused technical content and does not trigger any generic exclusion rules (no biographical focus, job/strategy/business content, negativity, or non-English content).",
+    "timestamp": "2025-09-15 18:17:42 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-communication-services/how-ai-communication-apis-are-transforming-work-across/ba-p/4454224",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because the entire article centers on practical applications of Microsoft AI (Azure OpenAI, AI Foundry, Copilot Studio) for communication workflows (AI inclusion rule 1 and 4). Assigned Azure because Azure Communication Services and Azure AI Foundry are the core technologies described (Azure inclusion rules 1 and 3). No other categories apply: there is no focus on code-level implementation, DevOps tooling, security, or data/ML engineering. The content is technical, targeted at solution implementers, not business managers, and provides explicit references to Microsoft platforms and links to docs and sample code, confirming the Microsoft technology threshold is met. There are no generic exclusion triggers.",
+    "timestamp": "2025-09-15 18:18:17 +00:00"
   }
 ]

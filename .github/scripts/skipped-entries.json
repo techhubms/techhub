@@ -7827,5 +7827,11 @@
     "collection": "community",
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/web-portal-azure-architecture-best-practice/m-p/4454067#M791"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-09-14-github-mobile-now-supports-ios-26-with-refined-visuals-and-smoother-navigation",
+    "collection": "news",
+    "reason": "No categories found: No categories assigned. The content is a product update about GitHub Mobile's new support for iOS 26, focusing on design, navigation, and productivity improvements in a mobile end-user client. There is no coverage of developer tooling, DevOps practices, code development, AI capabilities, security, ML/data science, or Azure service usage. The guidance applies Generic Exclusion rules, specifically that non-development client and productivity tool announcements without a code/developer context are excluded (see Non-Development Microsoft Products and Coding/DevOps inclusion rules). GitHub Mobile enhancements largely pertain to user experience and mobile workflows, not to software development implementation details using Microsoft technology.",
+    "timestamp": "2025-09-15 18:17:16 +00:00"
   }
 ]

@@ -1,0 +1,24 @@
+{
+  "FeedName": "DotNet YouTube",
+  "ProcessedDate": "2025-09-15 18:16:10",
+  "Link": "https://www.youtube.com/watch?v=km1bLnw_zm4",
+  "OutputDir": "_videos",
+  "Tags": [
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetdeveloper",
+    "microsoft",
+    "softwaredeveloper",
+    "webassembly"
+  ],
+  "EnhancedContent": null,
+  "PubDate": "2025-09-15T17:03:05+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Description": ".NET 10 includes several performance enhancements. In this standup, we will review the improvements in .NET 10 for WebAssembly, which help Blazor WebAssembly apps run faster than ever before!\n\n🔗 Community Links: https://www.theurlist.com/blazor-standup-20250916\n\n🎙️ Featuring: Daniel Roth, Larry Ewing\n\n#dotnet #aspnetcore",
+  "Author": "dotnet",
+  "FeedLevelAuthor": "dotnet",
+  "Title": "ASP.NET Community Standup - .NET WebAssembly performance improvements"
+}

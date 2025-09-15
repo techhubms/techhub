@@ -1,0 +1,17 @@
+{
+  "Link": "https://github.blog/changelog/2025-09-14-github-mobile-now-supports-ios-26-with-refined-visuals-and-smoother-navigation",
+  "Title": "GitHub Mobile now supports iOS 26 with refined visuals and smoother navigation",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2025-09-15 18:15:53",
+  "EnhancedContent": "With support for iOS 26, GitHub Mobile adopts a refined visual language, smoother motion, and tighter system integration. This helps you move from idea to pull request more naturally across all your devices.\n\n## A more beautiful, more focused app\n\n- **Liquid Glass design:** Blur, translucency, and layered depth are used throughout the app to make content clearer and more delightful.\n- **Refined tab bar and navigation:** Navigation now feels native to iOS 26 with a cleaner hierarchy and more fluid interaction.\n- **Polished controls:** Buttons, toggles, sliders, and modals have been restyled to match the new aesthetic and improve glanceability.\n- **Thoughtful motion:** Streamlined animations and transitions reduce visual clutter and help your attention flow from task to task.\n- **Responsive layout improvements**: Whether you’re using your device in portrait or landscape, elements like the tab bar, search, and notifications adapt smoothly for multitasking and larger screens.\n\n![Image showing iPhone screen on the left and some liquid glass design elements on the right.](https://github.com/user-attachments/assets/fbd509ec-5c1d-4e14-9454-922ac6905bee)\n\n## Designed for productivity\n\n- **Faster flows:** Search, tab switching, and toolbars have been reorganized so you can find and act on code more quickly.\n- **Practical accessibility upgrades:** Larger touch targets, improved contrast, and enhanced Dynamic Type support so the app is easier to use for more people.\n- **Optimized for flexible workflows**: Features like Stage Manager and responsive design scale seamlessly for windowed workflows and larger displays.\n\n![Image showing two iPhone screens zoomed in to show the new design elements](https://github.com/user-attachments/assets/2cb9e5eb-cb0f-4314-b4e6-ebfe4c54d0ec)\n\n## A thoughtful home screen presence\n\n- **Adaptive app icon:** Updated to look its best in light, dark, and tint modes using the liquid glass effect.\n\n![Image showing all the adaptive app icon designs.](https://github.com/user-attachments/assets/54df227d-9ed2-4757-9564-0d360f884b8e)\n\nThis release is rolling out now on the App Store. Update to the latest version to experience these improvements firsthand. We’ll continue to refine performance and accessibility based on your feedback. Join the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements) to tell us what you think.",
+  "PubDate": "2025-09-15T10:43:31+00:00",
+  "Tags": [
+    "client apps",
+    "Improvement"
+  ],
+  "Description": "With support for iOS 26, GitHub Mobile adopts a refined visual language, smoother motion, and tighter system integration. This helps you move from idea to pull request more naturally across…\n\nThe post [GitHub Mobile now supports iOS 26 with refined visuals and smoother navigation](https://github.blog/changelog/2025-09-14-github-mobile-now-supports-ios-26-with-refined-visuals-and-smoother-navigation) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Allison",
+  "FeedName": "The GitHub Blog",
+  "OutputDir": "_news",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog"
+}
