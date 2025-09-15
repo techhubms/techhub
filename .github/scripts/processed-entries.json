@@ -9114,5 +9114,17 @@
     "collection": "news",
     "timestamp": "2025-09-15 16:17:35 +00:00",
     "canonical_url": "https://code.visualstudio.com/blogs/2025/09/15/autoModelSelection"
+  },
+  {
+    "timestamp": "2025-09-15 17:11:54 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category as the content is centered on AI-powered performance recommendations and GitHub Copilot integration (AI rules 1, 2, 4). Included GitHub Copilot because the article highlights its role in delivering and actioning recommendations (GitHub Copilot rules 1, 2, 3, 4). Assigned Azure since Application Insights and Azure Monitor are core Microsoft Azure services (Azure rule 1). Included Coding because the post addresses .NET development, profiling, and actionable code recommendations (Coding rule 1, 2, 4). Added DevOps as it details integration with Azure DevOps, GitHub Issues, and team workflows (DevOps rules 2, 5, 9, 11). The content meets all required inclusion thresholds and is highly technical in nature.",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/application-insights-code-optimizations/"
+  },
+  {
+    "timestamp": "2025-09-15 17:12:55 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the Security category based on explicit details about threat actors targeting developer supply chains, use of malware (LummaStealer), and exploitation via malicious extensions (Security rules 1, 2, and 4). Assigned DevOps because the context and primary attack vectors relate directly to software development and DevOps environments (DevOps rule 11), specifically targeting VSCode extension users and development teams. No Azure, AI, Coding, ML, or GitHub Copilot content is present, as this is about attack vectors and supply chain risk, not development or Microsoft-specific technologies.",
+    "canonical_url": "https://devops.com/whitecobra-targets-developers-with-dozens-of-malicious-extensions/?utm_source=rss&utm_medium=rss&utm_campaign=whitecobra-targets-developers-with-dozens-of-malicious-extensions"
   }
 ]

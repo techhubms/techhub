@@ -1,0 +1,14 @@
+{
+  "Author": "jimmy123",
+  "FeedName": "Microsoft Tech Community",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "ProcessedDate": "2025-09-15 17:11:08",
+  "OutputDir": "_community",
+  "Description": "Hi\n\nI am seeking some ideas and challenges etc.. what else to consider..\n\nDesigning a dummy project in Azure. Needs to be secure, scalable etc.\n\nA web portal with SQL back end and site replication for HA / DR.\n\n![]() Many Thanks!",
+  "Title": "Web Portal - Azure architecture best practice",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Tags": [],
+  "EnhancedContent": "Hi\n\nI am seeking some ideas and challenges etc.. what else to consider..\n\nDesigning a dummy project in Azure. Needs to be secure, scalable etc.\n\nA web portal with SQL back end and site replication for HA / DR.\n\nMany Thanks!",
+  "PubDate": "2025-09-15T09:15:58+00:00",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-architecture/web-portal-azure-architecture-best-practice/m-p/4454067#M791"
+}

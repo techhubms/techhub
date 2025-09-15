@@ -7809,5 +7809,23 @@
     "collection": "videos",
     "timestamp": "2025-09-15 16:17:58 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/h7hi51OTSTo"
+  },
+  {
+    "timestamp": "2025-09-15 17:12:13 +00:00",
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This news article primarily focuses on celebrating Hispanic Heritage Month with Xbox, highlighting diversity, community engagement, and cultural contributions to gaming. There is no substantial technical implementation, development, or Microsoft technology focus as required by the category inclusion rules (Chapters 2 and 4). Content is company news with a diversity and culture emphasis rather than technical or developer-oriented content.",
+    "canonical_url": "https://news.xbox.com/en-us/2025/09/15/hispanic-heritage-month-2025-xbox/"
+  },
+  {
+    "timestamp": "2025-09-15 17:13:14 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The provided content is a video short (YouTube Shorts format) with an extremely brief description and no substantive technical content, actionable insights, or implementation details. The description and title do not provide enough information to determine a Microsoft technology focus, and the focus appears to be general-purpose developer security and high-level opinions rather than in-depth technical content. Additionally, the content field is null, indicating no further information to analyze. As per the workflow and exclusion rules for low-quality or insufficient-detail content, no categories are assigned.",
+    "canonical_url": "https://www.youtube.com/shorts/2YeOIWZemXY"
+  },
+  {
+    "timestamp": "2025-09-15 17:13:17 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/web-portal-azure-architecture-best-practice/m-p/4454067#M791"
   }
 ]
