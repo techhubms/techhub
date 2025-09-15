@@ -9138,5 +9138,11 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned AI category because the entire article centers on practical applications of Microsoft AI (Azure OpenAI, AI Foundry, Copilot Studio) for communication workflows (AI inclusion rule 1 and 4). Assigned Azure because Azure Communication Services and Azure AI Foundry are the core technologies described (Azure inclusion rules 1 and 3). No other categories apply: there is no focus on code-level implementation, DevOps tooling, security, or data/ML engineering. The content is technical, targeted at solution implementers, not business managers, and provides explicit references to Microsoft platforms and links to docs and sample code, confirming the Microsoft technology threshold is met. There are no generic exclusion triggers.",
     "timestamp": "2025-09-15 18:18:17 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content centers on Azure Networking services and the organization of Azure cloud network infrastructure (Azure rule 1). Added the 'Security' category since network security services (Azure Firewall, DDoS Protection, Web Application Firewall) and a dedicated Network Security scenario are discussed in depth (Security rule 1). No other categories such as AI, ML, DevOps, or Coding were included because the post does not address programming, development workflows, data/ML pipelines, or AI services specifically, but rather service discovery and infrastructure management.",
+    "timestamp": "2025-09-15 20:15:09 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-networking-portfolio-consolidation/ba-p/4454248"
   }
 ]

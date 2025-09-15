@@ -7833,5 +7833,11 @@
     "collection": "news",
     "reason": "No categories found: No categories assigned. The content is a product update about GitHub Mobile's new support for iOS 26, focusing on design, navigation, and productivity improvements in a mobile end-user client. There is no coverage of developer tooling, DevOps practices, code development, AI capabilities, security, ML/data science, or Azure service usage. The guidance applies Generic Exclusion rules, specifically that non-development client and productivity tool announcements without a code/developer context are excluded (see Non-Development Microsoft Products and Coding/DevOps inclusion rules). GitHub Mobile enhancements largely pertain to user experience and mobile workflows, not to software development implementation details using Microsoft technology.",
     "timestamp": "2025-09-15 18:17:16 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded because the actual substance is unavailable (the 'content' field is null). Without access to the content of the video, it is impossible to determine if any of the category inclusion rules apply. Per the workflow's rule to never fabricate information and to only use actual input, no categories can be assigned.",
+    "timestamp": "2025-09-15 20:14:36 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=ZbNiP4PZgs0"
   }
 ]
