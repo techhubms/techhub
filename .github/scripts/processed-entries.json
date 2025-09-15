@@ -9162,5 +9162,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/4L0V_TYs7So",
     "reason": "Succesfully added: Assigned the AI category because the entire content centers on explaining an advanced AI topic—AI hallucinations—with reference to large language models and research from OpenAI (AI rules 1 and 5). No other categories like Coding, DevOps, or Azure apply since the content does not go into depth about Microsoft coding technologies, DevOps, Azure, or machine learning engineering—it's focused on AI theory and model behavior. The content is not about GitHub Copilot or ML implementation, so those categories are not included."
+  },
+  {
+    "reason": "Succesfully added: Included the AI category because the article centers on AI agents used in software development (AI rule 1, 4) and discusses context setting for AI-powered coding. Included GitHub Copilot because this is highlighted as an example of such AI agents (GitHub Copilot rule 1, 2, 3, 4), and the toolkit provides agent-specific prompts for Copilot. Included Coding as the content covers development workflows, requirements engineering, and tool usage relevant to software engineering (Coding rules 1, 2, 4, 5). Did not assign Azure, DevOps, ML, or Security because those platforms or practices are not the main technical focus.",
+    "canonical_url": "https://devblogs.microsoft.com/blog/spec-driven-development-spec-kit",
+    "timestamp": "2025-09-15 22:11:53 +00:00",
+    "collection": "news"
   }
 ]

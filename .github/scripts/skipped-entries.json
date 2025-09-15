@@ -7839,5 +7839,11 @@
     "reason": "No categories found: Content excluded because the actual substance is unavailable (the 'content' field is null). Without access to the content of the video, it is impossible to determine if any of the category inclusion rules apply. Per the workflow's rule to never fabricate information and to only use actual input, no categories can be assigned.",
     "timestamp": "2025-09-15 20:14:36 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=ZbNiP4PZgs0"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content is a brief event announcement without substantive technical details. The description indicates that Mark Russinovich will discuss topics like cloud-native computing at Microsoft Ignite, but no actual technical implementation, architecture, or developer guidance is provided in the input fields. The provided text promotes an event and links to a blog post, meeting the sales/promotion generic exclusion rule and lacking actionable technical content required for categorization.",
+    "canonical_url": "https://www.youtube.com/watch?v=NlEQlhuUAEg",
+    "timestamp": "2025-09-15 22:12:22 +00:00",
+    "collection": "videos"
   }
 ]
