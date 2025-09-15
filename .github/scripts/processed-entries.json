@@ -9084,5 +9084,35 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/explore-microsoft-fabric-data-agent-azure-ai-foundry-for-agentic/ba-p/4453709",
     "timestamp": "2025-09-15 15:15:09 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Security category because the update is centered on cryptographic enhancements, SSH key exchange, and safeguarding user data from future quantum threats (Security rules 1, 2, 4, and 7). Assigned the DevOps category because managing SSH access, Git workflows, and enterprise platform configuration falls within DevOps practices (DevOps rule 2 and rule 11 regarding GitHub platform infrastructure). No other categories apply, as the content does not focus on coding, AI, Azure, ML, or GitHub Copilot.",
+    "collection": "news",
+    "timestamp": "2025-09-15 16:15:37 +00:00",
+    "canonical_url": "https://github.blog/engineering/platform-security/post-quantum-security-for-ssh-access-on-github/"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category due to the prominent focus on building AI-powered solutions with Microsoft Fabric, including use of Copilot Studio, AI Agents, model training, and AI features (AI inclusion rule 1, 3, 4, 5). Assigned Azure because content includes Azure Databases and data integration on Microsoft’s cloud platform (Azure inclusion rule 1, 5, 6). Assigned ML because of references to custom ML models, AutoML, SynapseML, and scenario-based model building/training within Fabric (ML inclusion rules 1, 3, 4, 6, 9). Did not assign Coding or DevOps because the announcement does not cover programming language specifics or ops tooling. Content meets central Microsoft technology threshold (100% focus) and does not trigger any generic exclusion rule.",
+    "collection": "news",
+    "timestamp": "2025-09-15 16:16:26 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcement-hack-the-future-of-data-with-microsoft-fabric/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'GitHub Copilot' and 'AI' categories because the content is entirely focused on the GitHub Copilot developer tool within Visual Studio Code (GitHub Copilot Rule 1). The feature discussed is AI-driven model selection and includes both technical details about model optimization and usage in a development environment. There is no marketing, sales, business productivity, or excluded content (reviewed generic exclusion rules in Chapter 3)—all focus is technical and highly relevant to Microsoft developer tools.",
+    "collection": "news",
+    "timestamp": "2025-09-15 16:16:51 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-14-auto-model-selection-for-copilot-in-vs-code-in-public-preview"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content is about GitHub Enterprise license management and administration tools, which falls under DevOps category rule 11 ('GitHub content (non-Copilot)'). The update is relevant for enterprise account management and team operations, not individual coding, AI, Azure, ML, or Security. No other categories fit based on the inclusion rules and the focus on license tracking for enterprise administration.",
+    "collection": "news",
+    "timestamp": "2025-09-15 16:17:10 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-15-github-enterprise-license-history-tracking-now-available-in-public-preview"
+  },
+  {
+    "reason": "Succesfully added: Content qualifies for the AI category because it describes an AI-powered model selection system integrated within VS Code (AI rules 1 and 2). GitHub Copilot is central (named repeatedly, developer tool context), so the 'GitHub Copilot' category is included (GitHub Copilot rules 1 and 2). No Coding, DevOps, Azure, ML, or Security categories apply as the main technical depth is about tool-level AI operations and experience, not source code, pipelines, or infrastructure implementation. The post is not business productivity or end-user focused—it's aimed at developers configuring and using Copilot within VS Code, fitting inclusion rules. All generic exclusion checks were considered and do not trigger exclusion.",
+    "collection": "news",
+    "timestamp": "2025-09-15 16:17:35 +00:00",
+    "canonical_url": "https://code.visualstudio.com/blogs/2025/09/15/autoModelSelection"
   }
 ]

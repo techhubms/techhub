@@ -7803,5 +7803,11 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/stress-free-travel-how-to-use-microsoft-365-and-copilot-to-plan-your-vacation-or-business-trip/",
     "timestamp": "2025-09-15 15:14:24 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to missing required information. The 'content' field is null and the 'description' field is empty. Without substantial content, it is impossible to assess technical focus, Microsoft technology relevance, or assign categories according to the workflow. Generic exclusion rules require actual technical content to proceed with categorization.",
+    "collection": "videos",
+    "timestamp": "2025-09-15 16:17:58 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/h7hi51OTSTo"
   }
 ]
