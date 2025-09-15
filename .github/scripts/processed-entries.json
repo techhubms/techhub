@@ -9144,5 +9144,23 @@
     "reason": "Succesfully added: Assigned the 'Azure' category because the content centers on Azure Networking services and the organization of Azure cloud network infrastructure (Azure rule 1). Added the 'Security' category since network security services (Azure Firewall, DDoS Protection, Web Application Firewall) and a dedicated Network Security scenario are discussed in depth (Security rule 1). No other categories such as AI, ML, DevOps, or Coding were included because the post does not address programming, development workflows, data/ML pipelines, or AI services specifically, but rather service discovery and infrastructure management.",
     "timestamp": "2025-09-15 20:15:09 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-networking-portfolio-consolidation/ba-p/4454248"
+  },
+  {
+    "timestamp": "2025-09-15 21:11:36 +00:00",
+    "collection": "news",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/accelerating-ai-and-databases-with-azure-container-storage-now-7-times-faster-and-open-source/",
+    "reason": "Succesfully added: I assigned the Azure category because the content is centered around Azure Container Storage, an official Azure service (Azure rules 1 and 4), with extensive technical details on implementation, performance tuning, and integration with AKS and other Azure features. The AI category is warranted due to detailed sections on accelerated AI model loading, integration with the KAITO AI model deployment tool, and focused performance improvements for AI inferencing workloads (AI rules 1 and 4). DevOps was not assigned due to no substantive focus on CI/CD or operational practices. ML and Coding categories were not assigned: while AI/ML is discussed, the emphasis is on infrastructure/storage improvements rather than data engineering/model development (see ML vs AI clarification). Security was not assigned as there is no significant security-focused content. Generic exclusion rules do not apply: the technical content is detailed, English, not biographical or sales-focused, does not discuss business management topics, and is written for builders and developers."
+  },
+  {
+    "timestamp": "2025-09-15 21:11:59 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-09-15-enterprise-access-restrictions-with-corporate-proxies-is-now-generally-available",
+    "reason": "Succesfully added: Assigned DevOps because the feature targets enterprise-level governance, network controls, and workflow management within GitHub, which fits DevOps rule 11 (GitHub platform management) and rule 3 (collaboration and organization). Assigned Security because the core function is enforcing secure network access and compliance through authentication headers, proxy configuration, and data leak prevention (Security rules 1, 4, and 9). The content does not qualify for AI, Coding, Azure, ML, or GitHub Copilot categories as it does not address AI/ML features, Copilot developer tools, or coding topics. There are no generic exclusion triggers present; the article is technical, policy-focused, and targets technical audiences managing secure software delivery environments."
+  },
+  {
+    "timestamp": "2025-09-15 21:12:31 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/4L0V_TYs7So",
+    "reason": "Succesfully added: Assigned the AI category because the entire content centers on explaining an advanced AI topic—AI hallucinations—with reference to large language models and research from OpenAI (AI rules 1 and 5). No other categories like Coding, DevOps, or Azure apply since the content does not go into depth about Microsoft coding technologies, DevOps, Azure, or machine learning engineering—it's focused on AI theory and model behavior. The content is not about GitHub Copilot or ML implementation, so those categories are not included."
   }
 ]
