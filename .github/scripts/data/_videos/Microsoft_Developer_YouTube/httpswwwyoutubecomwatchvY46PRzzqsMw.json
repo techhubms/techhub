@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Developer YouTube",
+  "Author": "Microsoft Developer",
+  "Description": "In this episode of the Azure Essentials Show, host Thomas Maurer is joined by Shreya Bahati for a discussion of the Azure Hybrid Benefit for Linux. This episode covers how organizations can modernize infrastructure, reduce cloud costs (by up to 76%!), and migrate existing Red Hat and SUSE Linux subscriptions to Azure with zero downtime and flexible payment models. Watch this video to gain insights into licensing options, cost-saving strategies, and the seamless migration process supported by Azure.\n\nBy watching this episode, you will learn: • How Azure Hybrid Benefit for Linux enables migration of existing Red Hat and SUSE subscriptions to Azure without downtime, supporting both new and existing VMs. • The differences between Bring Your Own Subscription (BYOS) and Pay-As-You-Go (PAYG) models, and how each impacts cost savings. • Steps to estimate savings using the Azure Pricing Calculator and where to find detailed documentation for enabling Azure Hybrid Benefit for Linux.\n\nResources: • Azure Hybrid Benefit https://aka.ms/AHB • Azure Pricing Calculator https://azure.microsoft.com/pricing/calculator • Azure Hybrid Benefit for Linux https://aka.ms/AzEssentials/222/01 • Explore essential resources! https://azure.com/AzureEssentials\n\nChapters 0:00 In this episode… 0:15 Introduction 0:52 What is Azure Hybrid Benefit for Linux? 2:08 Supported Linux Distributions and Requirements 2:52 Cost Savings: BYOS vs. PAYG Models 4:34 Applying Azure Hybrid Benefit to New and Existing VMs 5:21 Switching Between Licensing Models 6:06 Supported VM Types and Flexibility 6:26 Where to Learn More: Resources and Next Steps\n\nRelated episodes • Save on Azure SQL with Azure Hybrid Benefit https://aka.ms/AzEssentials/189 • Track savings opportunities with Advisor workbooks https://aka.ms/azenable/165 • Watch more Azure Pricing Videos https://aka.ms/AzurePricingVideos • Watch the Azure Essentials Show https://aka.ms/AzureEssentialsShow",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "PubDate": "2025-09-15T07:00:26+00:00",
+  "Title": "Unlock Cloud Savings for Linux VMs",
+  "ProcessedDate": "2025-09-15 08:18:08",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Tags": [],
+  "Link": "https://www.youtube.com/watch?v=Y46PRzzqsMw"
+}

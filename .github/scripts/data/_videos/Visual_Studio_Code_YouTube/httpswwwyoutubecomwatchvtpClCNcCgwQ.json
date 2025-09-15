@@ -1,0 +1,18 @@
+{
+  "EnhancedContent": null,
+  "FeedName": "Visual Studio Code YouTube",
+  "Author": "Visual Studio Code",
+  "Description": "Christy joins us to talk about her internship on the VS Code team, her journey, how she landed the internship, how she developed git worktree support in VS Code, and what's next for her.\n\nLinks:\n- Git Worktree Support: https://code.visualstudio.com/updates/v1\\_103#\\_git-worktree-support\n- New Merge for Worktrees: https://code.visualstudio.com/updates/v1\\_104#\\_preview-and-migrate-git-worktree-changes\n\nSubscribe on your favorite podcast app:\n- Apple Podcasts: https://podcasts.apple.com/us/podcast/id1833924784\n- Spotify: https://open.spotify.com/show/3S2fExHkmbfQwwYw4a56yQ\n- Amazon Music: https://music.amazon.com/podcasts/bd5f1efc-cdae-49c8-8ec7-c9b48b00ce46/vs-code-insiders-podcast\n- Castbox: https://castbox.fm/channel/id6720052?country=us\n- Overcast: https://overcast.fm/itunes1833924784/vs-code-insiders-podcast\n- Pocket Casts: https://pca.st/itunes/1833924784\n- and more: https://www.vscodepodcast.com/subscribe\n\nFollow VS Code: \\* X: https://x.com/code \\* Bluesky: https://bsky.app/profile/vscode.dev \\* YouTube: https://youtube.com/code \\* LinkedIn: https://www.linkedin.com/showcase/104107263 \\* GitHub: https://github.com/microsoft/vscode\n\n#vscode #git #gitworktrees #githubcopilot",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "PubDate": "2025-09-15T07:01:01+00:00",
+  "Title": "Life of a VS Code SWE Intern with Christy Nguyen | VS Code Insiders Podcast ep. 5",
+  "ProcessedDate": "2025-09-15 08:18:05",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "Link": "https://www.youtube.com/watch?v=tpClCNcCgwQ"
+}

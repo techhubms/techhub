@@ -7707,5 +7707,59 @@
     "canonical_url": "https://www.youtube.com/shorts/bna0GAkzXdA",
     "reason": "No categories found: No categories assigned because the video content is primarily a community announcement and call-to-action inviting developers to share their personal development story as part of a GitHub campaign. There is no substantive technical content, tutorial, or educational content about Microsoft technologies, GitHub Copilot, or development architecture. The content does not meet any inclusion rules, and falls under the 'Biographical Focus' and sales/promotion exclusion in Generic Exclusion Rules (Chapter 3), as it encourages personal stories without technical depth.",
     "timestamp": "2025-09-12 19:11:10 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/unlocking-hidden-superpowers-in-windows-11-speech-eye-and-voice-access-tools-you-didnt-know-you-had/",
+    "timestamp": "2025-09-13 09:11:15 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: All generic exclusion rules were applied first, per Chapter 2 and Chapter 3. This content is primarily about end-user features in Windows 11—namely Voice Access, Eye Control, and Speech Access tools. It focuses on accessibility and productivity features from a general user and accessibility perspective. There is no substantive technical implementation, software development, coding, DevOps, AI, ML, Azure, security, or Microsoft developer tooling discussed. No hands-on technical configuration for developers, programming APIs, extensibility, or software integration is covered. The intent is end-user education for using Windows features rather than technical documentation for consultants or developers. Therefore, none of the inclusion categories apply. This is further supported by the specific rule under 'Non-Development Microsoft Products': End-user business applications and accessibility/productivity tools (when not involving developer scenarios) are excluded. All content is excluded from categorization."
+  },
+  {
+    "timestamp": "2025-09-13 10:12:16 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is focused on end-user customization and productivity tips for Windows 11, such as configuring the context menu and File Explorer shortcuts. It does not involve development, programming, DevOps, AI, ML, Azure, security implementations, or coding with Microsoft APIs, frameworks, or tools. According to the Non-Development Microsoft Products exclusion rule in the workflow, content about using or customizing Windows for general productivity or power user purposes should not be categorized.",
+    "canonical_url": "https://dellenny.com/how-to-reconfigure-the-hidden-context-menu-and-unlock-power-tweaks-in-windows/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-13 10:12:29 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The article is focused on business/productivity side of Microsoft 365 vs Office perpetual licensing. It covers subscription changes, collaborative features, support, and user adoption for Microsoft 365, but does not include any development, engineering, coding, DevOps, AI, ML, security architecture, or Microsoft 365 developer platform/application development aspects. The focus is entirely on feature and business differences for end users and organizational decision-makers, which qualifies for exclusion under the rules for Non-Development Microsoft Products and Business Strategy content. No categories apply.",
+    "canonical_url": "https://dellenny.com/moving-from-office-2016-2019-to-microsoft-365-what-changes/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-13 11:10:26 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to lack of substantial information. The 'content' and 'description' fields are empty, and the 'tags' field is also empty. Without any content to analyze, it is impossible to determine if any category inclusion rules are met. Per the workflow, I must only rely on the provided content and not fabricate details. Therefore, no categories can be assigned.",
+    "canonical_url": "https://www.youtube.com/shorts/pxkJWE89VPE"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-09-13 20:12:13 +00:00",
+    "reason": "No categories found: No categories assigned because all content focuses on end-user tips for Windows 11 personal productivity and configuration, such as customizing the Start menu, using Snap Layouts, widgets, screenshots, personalization, and voice typing. There is no mention of software development, coding, scripting, DevOps, Azure, AI, ML, security, or any developer tooling. Per the Generic Exclusion Rules (Non-Development Microsoft Products), content about using Windows or Microsoft 365 for basic user tasks and productivity does not qualify unless it focuses on development or technical implementation. The entire guide is for beginners seeking to optimize their experience with Windows 11 features, not for Microsoft technical practitioners.",
+    "canonical_url": "https://dellenny.com/top-10-windows-11-tips-every-beginner-should-know/"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-09-13 21:10:29 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/riding-in-tandem-unlocking-the-sidecar-pattern-in-azure/m-p/4453833#M788",
+    "collection": "community"
+  },
+  {
+    "reason": "No categories found: All category arrays are left empty because the content is focused on end-user automation and non-development features of Excel and Power Query within Microsoft 365. Per the Non-Development Microsoft Products exclusion rule in Chapter 3, content primarily about using Microsoft 365 (Office) apps for business productivity and non-development workflows is excluded. Power Query, while present in Power BI in development contexts, is here demonstrated only in Excel for manual data entry automation for typical users, not as a development, coding, or machine learning activity. There is no substantial coding, data science/ML, security, DevOps, or Azure engineering content. The post does not meet the threshold for any inclusion rule.",
+    "timestamp": "2025-09-14 08:15:38 +00:00",
+    "canonical_url": "https://dellenny.com/automating-data-entry-in-excel-using-power-query/",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/advanced-excel-formulas-for-business-analysis/",
+    "reason": "No categories found: Content does not qualify for any categories. It focuses on advanced usage of Microsoft Excel formulas for business analysis but does not address development, coding, automation (beyond built-in formulas), or technical implementation related to development, security, DevOps, Azure, or AI/ML. Per generic exclusion rules in Chapter 3 and the Non-Development Microsoft Products section, end-user content about Microsoft 365 (including Excel usage for business analysis) is excluded unless it specifically focuses on development, APIs, or extensibility (such as Office/Excel add-in development or VBA programming). Content here is centered on using built-in Excel features and formulas for analysis rather than development or extensibility topics, so no categories are applied.",
+    "timestamp": "2025-09-14 11:11:19 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules—this episode is primarily biographical, focusing on Christy Nguyen's journey to and experience as a VS Code SWE intern, rather than on technical implementation details. While there is mention of developing git worktree support in VS Code, the main emphasis according to the title and description is on her personal internship story (Biographical Focus exclusion), which is explicitly listed as a reason to exclude under the Content Quality Exclusions section of Chapter 3. Therefore, no categories are assigned.",
+    "timestamp": "2025-09-15 07:14:57 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=tpClCNcCgwQ",
+    "collection": "videos"
   }
 ]
