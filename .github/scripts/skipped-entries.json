@@ -7845,5 +7845,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=NlEQlhuUAEg",
     "timestamp": "2025-09-15 22:12:22 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-09-15 23:11:28 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/2025/09/15/microsoft-announces-quarterly-dividend-increase-6/",
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This news article is a corporate announcement focused on Microsoft's quarterly dividend increase and annual shareholders meeting. It contains no technical content, implementation details, Microsoft developer or technical products, or solutions relevant to practitioners (business or technical). The article instead pertains to financial performance, investor information, shareholder actions, and high-level executive events, which are specifically excluded under the 'Business Strategy and Executive Content' and 'Job-Related Content' rules in Chapter 3. No Microsoft technology, development, coding, AI, DevOps, or related topics are discussed."
   }
 ]

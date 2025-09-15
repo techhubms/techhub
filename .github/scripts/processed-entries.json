@@ -9168,5 +9168,11 @@
     "canonical_url": "https://devblogs.microsoft.com/blog/spec-driven-development-spec-kit",
     "timestamp": "2025-09-15 22:11:53 +00:00",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-15 23:12:02 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=6_shqDBaOE0",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content directly references GitHub Copilot and includes it as a tag, aligning with GitHub Copilot rules 1 and 2 in Chapter 4. Since GitHub Copilot is a developer tool, it fits these categories, and 'AI' must be included whenever 'GitHub Copilot' is present. Added 'Coding' because the session centers on code presentations, developer workflow, and technical details relevant to software development with VS Code and related extensions. The presence of substantial technical context justifies these inclusions. No Azure, ML, DevOps, or Security details are observable in the provided description."
   }
 ]

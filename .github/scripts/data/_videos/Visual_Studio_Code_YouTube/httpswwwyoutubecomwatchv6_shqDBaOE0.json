@@ -1,0 +1,17 @@
+{
+  "Author": "Visual Studio Code",
+  "Title": "🔴 VS Code Live - Behind the scenes of Demo Time: better presentations and live coding in VS Code",
+  "EnhancedContent": null,
+  "PubDate": "2025-09-15T22:30:14+00:00",
+  "Link": "https://www.youtube.com/watch?v=6_shqDBaOE0",
+  "Description": "Explore the development of Demo Time for VS Code and discover how it can improve your live coding and presentations.\n\n🔗 Links: Demo Time: https://demotime.show Repo: https://github.com/estruyf/vscode-demo-time\n\n🎙️ Liam Hampton (https://www.linkedin.com/in/liam-conroy-hampton/), Elio Strufy\n\nConnect with Elio: X: @eliostruyf GitHub: github.com/estruyf/ Bluesky: https://bsky.app/profile/eliostruyf.com LinkedIn: http://be.linkedin.com/in/estruyf Blog: https://www.eliostruyf.com\n\nFollow VS Code: \\* X: https://x.com/code \\* Bluesky: https://bsky.app/profile/vscode.dev \\* YouTube: https://youtube.com/code \\* LinkedIn: https://www.linkedin.com/showcase/104107263 \\* GitHub: https://github.com/microsoft/vscode\n\n#vscode #githubcopilot",
+  "Tags": [
+    "githubcopilot",
+    "vscode"
+  ],
+  "FeedName": "Visual Studio Code YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "ProcessedDate": "2025-09-15 23:10:51",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "OutputDir": "_videos"
+}
