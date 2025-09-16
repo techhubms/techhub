@@ -9330,5 +9330,11 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned 'Azure' because the entire announcement and technical details focus on Azure Kubernetes Service (AKS) and Azure Linux (Azure inclusion rules 1, 2, 4, 5, and 6). Assigned 'DevOps' due to extensive discussion of automated cluster operations, node management, scaling, monitoring, and end-to-end operational support (DevOps inclusion rules 1, 3, 5, 6, 7, and 9). Assigned 'Security' because significant space is devoted to hardened security, default compliance (FIPS, FedRAMP, CIS), CVE management, and secure-by-default configurations (Security inclusion rules 1, 2, 4, 7, and 9). Did NOT assign 'AI', 'ML', 'Coding', or 'GitHub Copilot' because there is no substantive AI/ML or explicit code-level development content. Community post exceeds 200 words of substantive content, satisfying minimum length requirement. Generic exclusion rules do not apply.",
     "timestamp": "2025-09-16 18:20:19 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-09-16-anthropic-claude-opus-4-1-is-now-available-in-public-preview-in-visual-studio-jetbrains-xcode-and-eclipse",
+    "timestamp": "2025-09-16 20:14:34 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content discusses the rollout of an AI language model (Claude Opus 4.1) for GitHub Copilot (AI rule 1). Assigned GitHub Copilot because content is focused on Copilot features, model integration, availability, and configuration (GitHub Copilot rules 1-3). No other categories applied as there is no focus on coding practices, DevOps, Azure, ML, or security aspects. The announcement fits a technical practitioner audience and avoids business productivity, generic end-user, or non-development contexts.",
+    "collection": "news"
   }
 ]

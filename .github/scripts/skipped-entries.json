@@ -7899,5 +7899,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/2z5c3u5UeJ0",
     "timestamp": "2025-09-16 15:14:33 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The provided input contains no actual technical content ('content' is null), only a high-level description that references Microsoft Ignite highlights. There is no substantive technical detail to process or categorize. Additionally, the description indicates a focus on event highlights and general moments, not on hands-on technical implementation or in-depth coverage of Microsoft technologies. Therefore, no categories are assigned.",
+    "timestamp": "2025-09-16 19:11:11 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=uSTiHZYeZQg"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2025-09-16-anthropic-claude-opus-4-1-is-now-available-in-public-preview-in-visual-studio-jetbrains-xcode-and-eclipse",
+  "Description": "Claude Opus 4.1 is rolling out in public preview to users of GitHub Copilot in Visual Studio, JetBrains IDEs, Xcode, and Eclipse. Availability in GitHub Copilot Claude Opus 4.1 is…\n\nThe post [Anthropic Claude Opus 4.1 is now available in public preview in Visual Studio, JetBrains IDEs, Xcode, and Eclipse](https://github.blog/changelog/2025-09-16-anthropic-claude-opus-4-1-is-now-available-in-public-preview-in-visual-studio-jetbrains-xcode-and-eclipse) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "Title": "Anthropic Claude Opus 4.1 is now available in public preview in Visual Studio, JetBrains IDEs, Xcode, and Eclipse",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "EnhancedContent": "Claude Opus 4.1 is rolling out in public preview to users of GitHub Copilot in Visual Studio, JetBrains IDEs, Xcode, and Eclipse.\n\n## Availability in GitHub Copilot\n\nClaude Opus 4.1 is available to Copilot Enterprise and Pro+ plans. You will be able to access the model in GitHub Copilot Chat on github.com, GitHub Mobile, VS Code, Visual Studio, JetBrains IDEs, Xcode, and Eclipse through the chat model picker (**Agent**, **Ask**, and **Edit** modes). If you do not yet have access, please continue to check back.\n\n## Enabling access\n\nCopilot Enterprise administrators must opt in by enabling the new Claude Opus 4.1 policy in Copilot settings. Once enabled, users in that organization will see **Claude Opus 4.1** in the model picker.\n\nTo learn more about the models available in Copilot, see [our documentation on models](https://docs.github.com/copilot/reference/ai-models/model-hosting#anthropic-models) and get started with Copilot today.\n\n## Share your feedback\n\nHave feedback or questions? Join the [community discussion](https://github.com/orgs/community/discussions/168820) to share feedback and tips.",
+  "ProcessedDate": "2025-09-16 20:13:21",
+  "Author": "Allison",
+  "PubDate": "2025-09-16T16:57:42+00:00",
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}
