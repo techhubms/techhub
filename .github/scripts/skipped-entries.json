@@ -7887,5 +7887,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/centralized-logging-in-azure-proven-observability-patterns-for/m-p/4454498#M795",
     "collection": "community",
     "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: No categories assigned because this content is solely about Oracle's Java 25 release and its new capabilities, including AI support and post-quantum encryption. There is no substantive mention or coverage of Microsoft technologies, products, platforms, or services, nor any technical content that qualifies for the Microsoft-focused categories (AI, Azure, Coding, etc.). As per the multi-platform threshold (Chapter 2) and cross-vendor inclusion rules, Microsoft technologies must be central or ≥40% of substantive content. All content here is specific to Java (Oracle) and its ecosystem, not Microsoft.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/oracle-delivers-java-25-edition-of-venerable-programming-language-for-the-ai-era/?utm_source=rss&utm_medium=rss&utm_campaign=oracle-delivers-java-25-edition-of-venerable-programming-language-for-the-ai-era",
+    "timestamp": "2025-09-16 15:14:16 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content focuses on a general cybersecurity incident (npm supply chain attack via phishing) and does not provide substantive technical details about Microsoft technologies or products. The only Microsoft-related mention is in the form of links to GitHub's various channels, but the main focus is on npm package security, which is not Microsoft-owned and does not meet the minimum threshold for Microsoft centrality. This falls under generic exclusion rules as non-Microsoft technology content.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/2z5c3u5UeJ0",
+    "timestamp": "2025-09-16 15:14:33 +00:00"
   }
 ]

@@ -9258,5 +9258,17 @@
     "canonical_url": "https://devops.com/why-automation-fails-without-the-right-qa-mindset/?utm_source=rss&utm_medium=rss&utm_campaign=why-automation-fails-without-the-right-qa-mindset",
     "collection": "posts",
     "reason": "Succesfully added: Assigned the 'DevOps' category because the article is focused on DevOps practices such as CI/CD pipelines, test automation, and integrating QA throughout the software development lifecycle (DevOps rules 1, 3, 4, 5). There is no substantial focus on Microsoft technologies, platforms, or services, so categories like Azure or Coding were not included. The article discussed general best practices and methodologies within DevOps but did not meet criteria for other categories. All generic exclusion rules were checked and do not apply."
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the Computer Use tool is a Microsoft AI product that enables agents to interact with computer interfaces via natural language, and the content discusses Azure AI Foundry features (AI Rules 1 and 4). Assigned Azure category because Computer Use is part of Azure AI Foundry Agent Service (Azure Rule 1). Did not assign Coding because, while some code examples are shown, the primary focus is on capability announcement and service usage, not on code development or frameworks. Other categories do not apply based on content alignment.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/foundry/announcing-computer-use-tool-preview-in-azure-ai-foundry-agent-service/",
+    "timestamp": "2025-09-16 15:13:45 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content focuses on general purpose AI agents and demonstrates Microsoft's Core AI technologies (AI rule 1). Assigned the Azure category due to multiple discussions and demos involving Azure services, tools, and developer interactions with Azure (Azure rule 1). Did not assign Coding, DevOps, ML, Security, or GitHub Copilot because the episode emphasizes conceptual, architectural, and demo aspects rather than specific code, DevOps processes, ML engineering, security, or GitHub Copilot functionality.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=fvx4QtDMlGo",
+    "timestamp": "2025-09-16 15:15:00 +00:00"
   }
 ]
