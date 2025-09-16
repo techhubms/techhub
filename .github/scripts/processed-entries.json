@@ -9336,5 +9336,17 @@
     "timestamp": "2025-09-16 20:14:34 +00:00",
     "reason": "Succesfully added: Assigned AI category because the content discusses the rollout of an AI language model (Claude Opus 4.1) for GitHub Copilot (AI rule 1). Assigned GitHub Copilot because content is focused on Copilot features, model integration, availability, and configuration (GitHub Copilot rules 1-3). No other categories applied as there is no focus on coding practices, DevOps, Azure, ML, or security aspects. The announcement fits a technical practitioner audience and avoids business productivity, generic end-user, or non-development contexts.",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-16 23:11:29 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Security category because the feature centers on secret scanning, push protection, and reviewer management—all of which are core aspects of code security and governance on GitHub (Security rules 1, 2, 4, 5, 6). Assigned DevOps because the content discusses workflow changes, automation (API integration), and operational practices relevant to development teams on GitHub (DevOps rules 2, 5, 6, 7, and 11). Azure and AI categories do not apply because there is no direct mention of Azure services or AI features. Coding and ML also do not apply, as the content is focused on security operations and workflow management in GitHub.",
+    "canonical_url": "https://github.blog/changelog/2025-09-16-delegated-bypass-controls-for-push-protection-now-available-at-the-enterprise-level"
+  },
+  {
+    "timestamp": "2025-09-16 23:12:11 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'Azure' category because the main focus is on Azure's confidential VM offerings, service enhancements, and platform integrations (Azure rule 1). Assigned 'Security' category due to detailed coverage of security features such as hardware-rooted attestation, memory encryption, SEV-SNP technology, Virtualization-Based Security, data confidentiality, and compliance for regulated industries (Security rules 1, 4, 7, 9, 10). Did not assign other categories (e.g., Coding, DevOps, ML, AI) because the article does not discuss application development, data science, or machine learning topics in depth, nor does it focus on developer tooling or DevOps practices. The content is technical and implementation-oriented, with no generic exclusions triggered.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-confidential-computing/ga-dcasv6-and-ecasv6-confidential-vms-based-on-4th-generation/ba-p/4451460"
   }
 ]
