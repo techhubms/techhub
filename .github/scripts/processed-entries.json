@@ -9270,5 +9270,41 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=fvx4QtDMlGo",
     "timestamp": "2025-09-16 15:15:00 +00:00"
+  },
+  {
+    "timestamp": "2025-09-16 17:12:10 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'Coding' category because the content focuses on .NET release support, lifecycle, and upgrade guidance, which is directly relevant to software development using Microsoft technologies (Coding rule 1 and 4). There is no substantive Azure, DevOps, Security, ML, or AI technical detail present, nor mention of GitHub Copilot; thus those categories are excluded. The content is not excluded by any generic rules—this is not biographical, sales, negativity, or business-only strategy content, and it is clear and technical, targeted at developers and technical leads.",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-sts-releases-supported-for-24-months/"
+  },
+  {
+    "timestamp": "2025-09-16 17:12:45 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is Microsoft’s integrated analytics platform built on Azure (Azure rule 1, 4, 5). Assigned AI category because the post repeatedly highlights AI-driven automation, AI agents, and products like Osmos AI Data Engineer and Lucid’s Agent Mart Studio (AI rule 1, 4, 5). Assigned ML category due to explicit mention of data engineering, analytics workloads, graph analytics, ETL pipelines, master data management, and experimentation—all key elements in data science and ML engineering scenarios (ML rule 1, 2, 4, 5, 9). Did not assign Coding because focus is on platform integrations and managed solutions, not code-level guidance; DevOps and Security are not central themes. All exclusion rules were considered and none applied.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/the-power-of-isvs-unleashing-innovation-in-microsoft-fabric/"
+  },
+  {
+    "timestamp": "2025-09-16 17:13:16 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the announcement focuses on preparing and governing data estates specifically for AI transformation using Microsoft Fabric and Purview (AI rule 1, rule 5). Assigned Security because of detailed discussion of information protection, insider risk management, data loss prevention, compliance controls, and overall data security posture management (Security rules 1, 2, 4, 5, and 10). Assigned Azure as Microsoft Fabric is built atop Azure infrastructure and tightly integrates with Azure data and governance features (Azure rules 1, 4, 5, and 6). Assigned ML because Purview and Fabric are enabling analytics and AI/ML workloads by enhancing data discoverability, quality management, cataloging, and model-ready data governance (ML rules 1, 2, 4, and 7). Did not assign DevOps or Coding as there is no focus on software development tooling or workflows.",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/09/16/microsoft-purview-innovations-for-your-fabric-data-unify-data-security-and-governance-for-the-ai-era/"
+  },
+  {
+    "timestamp": "2025-09-16 17:13:40 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because the entire piece focuses on tools and infrastructure for AI agent development and integration (AI rule 1, 4, and 5). 'GitHub Copilot' is included because the MCP Registry directly addresses Copilot extensibility, agentic workflows, and integration with Copilot (GitHub Copilot rule 1 and 3). 'DevOps' applies because it discusses infrastructure tools, workflow automation, and developer operations improvements enabled by MCP servers (DevOps rules 2, 6, and 9). Coding was not assigned: while development is discussed broadly, the focus is on service discovery and integration, not on specific language, framework, or hands-on coding practices.",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/meet-the-github-mcp-registry-the-fastest-way-to-discover-mcp-servers/"
+  },
+  {
+    "timestamp": "2025-09-16 17:14:01 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centers on AI agent infrastructure, AI tools, and agentic workflows, meeting AI inclusion rules #1 and #4. Assigned 'GitHub Copilot' category because Copilot is named explicitly as a key user/tool within the ecosystem (see AI rules and GitHub Copilot rule #1). Azure, Coding, DevOps, ML, and Security categories do not apply as the focus remains on AI tool discovery rather than general coding, deployment, data science, or explicit security implementation. No generic exclusion rules apply: the article is technical, English, non-biographical, non-sales, and not overly negative or business-strategy focused.",
+    "canonical_url": "https://github.blog/changelog/2025-09-16-github-mcp-registry-the-fastest-way-to-discover-ai-tools"
+  },
+  {
+    "timestamp": "2025-09-16 17:14:47 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Included the AI category as the article focuses on leveraging GitHub Copilot (an AI-powered assistant) and discusses its integration with organizational knowledge via the MCP server (AI Rule 1 and 2). Included GitHub Copilot as the content is directly about implementation, usage, and optimization of Copilot (GitHub Copilot Rule 1). Added DevOps since the integration is specifically with Azure DevOps, covers developer workflows, repository/discovery automation, and team productivity (DevOps Rule 1 and 3). Included Azure as Azure DevOps and Azure CLI (az login) are central to the implementation (Azure Rule 1 and 4). The article details setup, workflow, and best practices using these technologies; all decisions were made strictly following the inclusion and hierarchy rules, with no generic exclusions triggered.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/search-less-build-more-inner-sourcing-with-github-copilot-and/ba-p/4454560"
   }
 ]
