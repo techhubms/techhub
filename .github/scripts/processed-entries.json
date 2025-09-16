@@ -9234,5 +9234,23 @@
     "canonical_url": "https://devblogs.microsoft.com/devops/azure-boards-integration-with-github-copilot-private-preview/",
     "collection": "news",
     "timestamp": "2025-09-16 12:23:31 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the platform's core function is AI-powered code review, as noted throughout the description and content (AI rule 1 and 4). Assigned the DevOps category because the article repeatedly references integration into DevOps workflows and code review as part of the CI/CD process (DevOps rules 3, 4, 5). Assigned the Coding category due to strong developer-centric features such as unit test generation, code dependency analysis, custom pre-merge checks, and integration with developer tools/IDEs (Coding rules 2, 3, 4, 5). No evidence of Microsoft-specific technologies means Azure, ML, Security, or GitHub Copilot categories are not assigned. Generic exclusion rules do not apply—the content is technical, non-biographical, not a sales pitch, and suitable for developer/DevOps audiences.",
+    "canonical_url": "https://devops.com/coderabbit-adds-cli-support-to-code-review-platform-based-on-ai/?utm_source=rss&utm_medium=rss&utm_campaign=coderabbit-adds-cli-support-to-code-review-platform-based-on-ai",
+    "collection": "posts",
+    "timestamp": "2025-09-16 13:24:27 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the article focuses on AI-driven features and automation within Pulumi Neo (AI rule 1, 4, and 5). Assigned DevOps because Pulumi is an IaC DevOps platform and the article discusses automation in DevOps workflows (DevOps rule 1 and 5). No Azure, Coding, ML, or Security categories apply, as the article does not focus on Microsoft technologies, custom code, ML/data science engineering, or security implementations as primary themes.",
+    "canonical_url": "https://devops.com/pulumi-previews-ai-agents-trained-to-automate-infrastructure-management/?utm_source=rss&utm_medium=rss&utm_campaign=pulumi-previews-ai-agents-trained-to-automate-infrastructure-management",
+    "collection": "posts",
+    "timestamp": "2025-09-16 13:25:24 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category per the inclusion rules since the content focuses on protecting, securing, and recovering identity infrastructure (Active Directory and Microsoft Entra ID), both of which are core Microsoft security services. Assigned Azure category because Microsoft Entra is part of Azure and the context includes Azure-centric identity management. Did not assign ML, AI, Coding, or DevOps because there is no evidence of machine learning, application development, coding practices, or DevOps pipeline content. The discussion also is not biographical, sales, or business/strategy focused, nor does it violate any generic exclusion rules.",
+    "canonical_url": "https://www.thomasmaurer.ch/2025/09/protecting-identity-in-active-directory-microsoft-entra/",
+    "collection": "posts",
+    "timestamp": "2025-09-16 13:25:58 +00:00"
   }
 ]

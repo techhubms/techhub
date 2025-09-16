@@ -7875,5 +7875,11 @@
     "timestamp": "2025-09-16 09:15:50 +00:00",
     "collection": "posts",
     "canonical_url": "https://dellenny.com/microsoft-designer-vs-canva-can-ai-really-replace-creativity/"
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the content is focused entirely on MongoDB's new AI-powered application modernization platform, which leverages agentic AI agents to refactor and migrate legacy applications for deployment on MongoDB. There is no substantive coverage of any Microsoft technology, developer tool, or platform in the title, description, or main content. The only database discussed is MongoDB, and the frameworks mentioned (Java Spring) are not Microsoft-specific. As per the instructions in Chapter 2, multi-platform content must have Microsoft technologies be central to the solution or comprise at least 40% of the content, which is not met here. Furthermore, none of the inclusion rules for the Microsoft-specific categories (AI, Coding, DevOps, Azure, ML, Security) apply. Therefore, the correct action is to exclude all categories.",
+    "canonical_url": "https://devops.com/mongodb-taps-ai-agent-to-launch-application-modernization-platform/?utm_source=rss&utm_medium=rss&utm_campaign=mongodb-taps-ai-agent-to-launch-application-modernization-platform",
+    "collection": "posts",
+    "timestamp": "2025-09-16 13:24:42 +00:00"
   }
 ]
