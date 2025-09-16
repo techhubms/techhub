@@ -9222,5 +9222,11 @@
     "timestamp": "2025-09-16 09:15:18 +00:00",
     "collection": "posts",
     "canonical_url": "https://dellenny.com/centralized-logging-in-azure-proven-observability-patterns-for-modern-apps/"
+  },
+  {
+    "canonical_url": "https://andrewlock.net/exploring-dotnet-10-preview-features-8-supporting-platform-specific-dotnet-tools-on-old-sdks/",
+    "collection": "posts",
+    "timestamp": "2025-09-16 11:11:23 +00:00",
+    "reason": "Succesfully added: Assigned the Coding category because the content provides deep technical insights and hands-on guidance on .NET tool development, NuGet packaging strategies, and SDK compatibility, matching Coding rule criteria. AI, Azure, DevOps, ML, and Security do not apply as the focus is exclusively on .NET tool authoring, packaging, and related SDK concerns, not on AI services, data/ML, cloud infrastructure, security practices, or DevOps workflows. All relevant .NET packaging, framework, and deployment technical terms were added as tags to capture key technologies and methods discussed in the article."
   }
 ]
