@@ -9228,5 +9228,11 @@
     "collection": "posts",
     "timestamp": "2025-09-16 11:11:23 +00:00",
     "reason": "Succesfully added: Assigned the Coding category because the content provides deep technical insights and hands-on guidance on .NET tool development, NuGet packaging strategies, and SDK compatibility, matching Coding rule criteria. AI, Azure, DevOps, ML, and Security do not apply as the focus is exclusively on .NET tool authoring, packaging, and related SDK concerns, not on AI services, data/ML, cloud infrastructure, security practices, or DevOps workflows. All relevant .NET packaging, framework, and deployment technical terms were added as tags to capture key technologies and methods discussed in the article."
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' because this feature centers on automating development workflows using GitHub Copilot's coding agent (AI rule 1 and 2). 'GitHub Copilot' because the entire integration is focused explicitly on the Copilot coding agent (GitHub Copilot rules 1-4). 'DevOps' is assigned since the feature enhances Azure DevOps workflows, connects boards and code repositories, and automates development lifecycle tasks (DevOps rules 1, 2, 5). 'Azure' is assigned because Azure Boards and Azure DevOps are the central services being integrated (Azure rules 1, 4). No Coding or ML categories apply since the focus is on DevOps process automation and tooling, not direct code or ML/analytics development.",
+    "canonical_url": "https://devblogs.microsoft.com/devops/azure-boards-integration-with-github-copilot-private-preview/",
+    "collection": "news",
+    "timestamp": "2025-09-16 12:23:31 +00:00"
   }
 ]
