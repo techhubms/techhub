@@ -7863,5 +7863,17 @@
     "collection": "posts",
     "timestamp": "2025-09-16 08:19:41 +00:00",
     "canonical_url": "https://dellenny.com/the-complete-guide-to-widgets-in-windows-11/"
+  },
+  {
+    "reason": "No categories found: Content is excluded due to the 'Non-Development Microsoft Products' generic exclusion rule. The article is focused on Microsoft Designer, which is an AI-powered business productivity tool included in Microsoft 365 for creating graphics, social media posts, and invitations. It does not focus on development, coding, or technical implementation relevant to developers or IT practitioners, but instead on general design usage for non-technical audiences such as business owners, marketers, and creative enthusiasts. Per workflow Chapter 3, business/productivity tools such as Microsoft Designer are excluded from categorization unless the content is about development or customization. No applicable categories.",
+    "timestamp": "2025-09-16 09:15:35 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/mastering-microsoft-designer-a-step-by-step-guide-benefits-and-use-cases/"
+  },
+  {
+    "reason": "No categories found: No categories are assigned because, although Microsoft Designer is discussed as an AI-powered tool, the article focuses on consumer-facing design software (Microsoft Designer and Canva) for creating marketing and visual content rather than on development, coding, or technical implementation relevant to Microsoft consultants/developers. As per the Non-Development Microsoft Products exclusion in Chapter 3 and AI category rules in Chapter 4, Microsoft Designer is not a developer AI platform or API, but a business/end-user design tool. The content is about visual design, not building with Microsoft AI services, Copilot Studio, or Azure OpenAI, and does not describe technical integration or developer-focused architecture. Therefore, generic exclusions apply.",
+    "timestamp": "2025-09-16 09:15:50 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/microsoft-designer-vs-canva-can-ai-really-replace-creativity/"
   }
 ]
