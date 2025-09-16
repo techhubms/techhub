@@ -1,0 +1,14 @@
+{
+  "FeedName": "Microsoft Tech Community",
+  "PubDate": "2025-09-16T02:12:23+00:00",
+  "Description": "dotnet on linux gpg key not working....\n\nWarning: https://packages.microsoft.com/ubuntu/25.04/prod/dists/plucky/InRelease: Policy will reject signature wi thin a year, see --audit for details Controle: https://packages.microsoft.com/ubuntu/25.04/prod/dists/plucky/InRelease: Sub-process /usr/bin/sqv returned a n error code (1), error message is: Signing key on BC528686B50D79E339D3721CEB3E94ADBE1229CF is not bound: No binding signature at time 2025-09-12T15:59:00Z because: Policy rejected non-revocation signature (PositiveCertification) requiring second pre-image resistance because: SHA1 is not considered secure since 2026-02-01T00:00:00Z",
+  "Author": "Dutchglory",
+  "Title": "dotnet on linux - Signing key on ... is not bound",
+  "Link": "https://techcommunity.microsoft.com/t5/net-runtime/dotnet-on-linux-signing-key-on-is-not-bound/m-p/4454321#M768",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet",
+  "Tags": [],
+  "EnhancedContent": "dotnet on linux  gpg key not working....\n\nWarning: https://packages.microsoft.com/ubuntu/25.04/prod/dists/plucky/InRelease: Policy will reject signature wi thin a year, see --audit for details Controle: https://packages.microsoft.com/ubuntu/25.04/prod/dists/plucky/InRelease: Sub-process /usr/bin/sqv returned a n error code (1), error message is: Signing key on BC528686B50D79E339D3721CEB3E94ADBE1229CF is not bound: No binding signature at time 2025-09-12T15:59:00Z because: Policy rejected non-revocation signature (PositiveCertification) requiring second pre-image resistance because: SHA1 is not considered secure since 2026-02-01T00:00:00Z",
+  "OutputDir": "_community",
+  "ProcessedDate": "2025-09-16 07:12:48"
+}
