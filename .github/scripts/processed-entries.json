@@ -9306,5 +9306,29 @@
     "collection": "community",
     "reason": "Succesfully added: Included the AI category as the article focuses on leveraging GitHub Copilot (an AI-powered assistant) and discusses its integration with organizational knowledge via the MCP server (AI Rule 1 and 2). Included GitHub Copilot as the content is directly about implementation, usage, and optimization of Copilot (GitHub Copilot Rule 1). Added DevOps since the integration is specifically with Azure DevOps, covers developer workflows, repository/discovery automation, and team productivity (DevOps Rule 1 and 3). Included Azure as Azure DevOps and Azure CLI (az login) are central to the implementation (Azure Rule 1 and 4). The article details setup, workflow, and best practices using these technologies; all decisions were made strictly following the inclusion and hierarchy rules, with no generic exclusions triggered.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/search-less-build-more-inner-sourcing-with-github-copilot-and/ba-p/4454560"
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/azure-kubernetes-service-automatic-fast-and-frictionless-kubernetes-for-all/",
+    "collection": "news",
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because AKS Automatic is an Azure cloud managed service (Azure rule 1 and 4); 'DevOps' because the announcement emphasizes automation for app delivery, integration with CI/CD pipelines, and reduced operational overhead (DevOps rules 1, 3, 5, 6); 'AI' because the solution is explicitly designed to support AI and ML workloads and adaptively scales compute resources for model training/inference (AI rule 1, 5). Coding and Security categories were considered but not included as the primary focus is orchestration and operations, not application code or deep security implementation.",
+    "timestamp": "2025-09-16 18:18:51 +00:00"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/computer-use-is-now-in-public-preview-in-microsoft-copilot-studio/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category as this content is about new AI-powered automation capabilities launched in Microsoft Copilot Studio, which qualifies under AI Category Inclusion Rule 1 and Rule 5 (Microsoft AI products and AI-powered development tools). Did not assign the 'Coding', 'Azure', 'DevOps', 'Security', 'GitHub Copilot', or 'ML' categories, as the content specifically focuses on Copilot Studio's automation and agent features, which are platform tools for low-code/no-code AI-powered automation, not traditional software development, coding, or data science workloads. Exclusion rules for business productivity do not apply since this is a developer/maker tool and the announcement is technical in scope.",
+    "timestamp": "2025-09-16 18:19:19 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-09-16-conda-ecosystem-support-for-dependabot-now-generally-available",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned DevOps category because Dependabot is a DevOps automation tool that enables automated dependency management and integration within CI/CD pipelines (DevOps rule 2 and 5). Assigned Security because the release centers on supply chain security improvements, automated vulnerability detection, and security updates for dependencies (Security rule 1 and 5). 'AI', 'Azure', 'GitHub Copilot', 'Coding', and 'ML' were not assigned since the content does not focus on AI services, coding practices, machine learning, or Azure-specific implementations, nor does it mention GitHub Copilot.",
+    "timestamp": "2025-09-16 18:19:42 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/aks-automatic-with-azure-linux/ba-p/4454284",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'Azure' because the entire announcement and technical details focus on Azure Kubernetes Service (AKS) and Azure Linux (Azure inclusion rules 1, 2, 4, 5, and 6). Assigned 'DevOps' due to extensive discussion of automated cluster operations, node management, scaling, monitoring, and end-to-end operational support (DevOps inclusion rules 1, 3, 5, 6, 7, and 9). Assigned 'Security' because significant space is devoted to hardened security, default compliance (FIPS, FedRAMP, CIS), CVE management, and secure-by-default configurations (Security inclusion rules 1, 2, 4, 7, and 9). Did NOT assign 'AI', 'ML', 'Coding', or 'GitHub Copilot' because there is no substantive AI/ML or explicit code-level development content. Community post exceeds 200 words of substantive content, satisfying minimum length requirement. Generic exclusion rules do not apply.",
+    "timestamp": "2025-09-16 18:20:19 +00:00"
   }
 ]

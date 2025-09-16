@@ -1,0 +1,17 @@
+{
+  "EnhancedContent": "Dependabot now supports parsing and updating `environment.yml` Conda environment specification files. This release includes both security and version Dependabot updates for Conda-based Python projects.\n\n### Why it matters\n\nMany Python projects rely on Conda for managing dependencies and environments. Extending Dependabot’s support to Conda for Python allows teams who use Conda to benefit from automated security alerts and dependency management. Organizations can more effectively keep their Conda-based environments up to date, reducing the risk of vulnerabilities and improving their project security.\n\n### Details\n\nDependabot will detect Conda environment files and create update pull requests. These updates cover version and security for Python dependencies listed in the Conda manifest files. Only Python packages are supported, and security advisories are sourced from the pip [GitHub Advisory database](https://github.com/advisories). To receive security updates, you must submit a dependency graph via the [Dependency Submission API](https://docs.github.com/code-security/supply-chain-security/understanding-your-software-supply-chain/using-the-dependency-submission-api).\n\nTo help you get started, full documentation, examples, and usage notes are available in the [Dependabot documentation](https://docs.github.com/code-security/dependabot/ecosystems-supported-by-dependabot/supported-ecosystems-and-repositories#supported-ecosystems-and-repositories).\n\n### Availability\n\nThis capability is available on github.com today and will be coming to GitHub Enterprise Server (GHES) with version 3.20.\n\nJoin the discussion within the [Dependabot Community](https://github.com/dependabot/dependabot-core/issues/2227).",
+  "Author": "Allison",
+  "PubDate": "2025-09-16T18:01:54+00:00",
+  "Tags": [
+    "Improvement",
+    "supply chain security"
+  ],
+  "Description": "Dependabot now supports parsing and updating environment.yml Conda environment specification files. This release includes both security and version Dependabot updates for Conda-based Python projects. Why it matters Many Python projects…\n\nThe post [Conda ecosystem support for Dependabot now generally available](https://github.blog/changelog/2025-09-16-conda-ecosystem-support-for-dependabot-now-generally-available) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2025-09-16-conda-ecosystem-support-for-dependabot-now-generally-available",
+  "ProcessedDate": "2025-09-16 18:17:16",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedName": "The GitHub Blog",
+  "Title": "Conda ecosystem support for Dependabot now generally available",
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}
