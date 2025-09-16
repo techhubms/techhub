@@ -9174,5 +9174,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=6_shqDBaOE0",
     "collection": "videos",
     "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content directly references GitHub Copilot and includes it as a tag, aligning with GitHub Copilot rules 1 and 2 in Chapter 4. Since GitHub Copilot is a developer tool, it fits these categories, and 'AI' must be included whenever 'GitHub Copilot' is present. Added 'Coding' because the session centers on code presentations, developer workflow, and technical details relevant to software development with VS Code and related extensions. The presence of substantial technical context justifies these inclusions. No Azure, ML, DevOps, or Security details are observable in the provided description."
+  },
+  {
+    "timestamp": "2025-09-16 00:53:04 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the webinar discusses AI-enabled research projects, integration of AI models/services, and data-driven workflows (AI rule 1, 4, and 5). Assigned Azure category because Terawe ManageX is described as being deployed on Azure and the session invites viewers to join the Microsoft Azure for Academic Research community (Azure rule 1 and 4). Did not assign ML, Coding, DevOps, or Security categories since the content focuses primarily on provisioning research workflows, AI services integration, and compliance within research infrastructure rather than on hands-on model building, software development, deployment automation, or explicit security implementation details.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=vdZeka_5-Ss"
+  },
+  {
+    "timestamp": "2025-09-16 00:53:40 +00:00",
+    "reason": "Succesfully added: The content focuses on AI-driven agentic solutions on Azure (AI rule 1 and 4), specifically presenting details on Azure AI Agent Service, Azure Logic Apps, and developer frameworks for agent orchestration—all Azure-centric (Azure rule 1, 4). It thoroughly discusses Microsoft services like Azure AI Foundry, Azure OpenAI Service, Semantic Kernel, and AutoGen (Microsoft AI platforms and orchestration tools). 'AI' is assigned due to extensive coverage of Microsoft-provided AI services, agent construction, orchestration challenges, and technical architecture. 'Azure' is included because recommendations, product comparisons, tooling, and all usage contexts are specific to Azure cloud services, fulfilling the ≥40% Microsoft threshold. 'Coding', 'DevOps', 'ML', 'Security', and 'GitHub Copilot' categories do not apply: there is no hands-on code walkthrough, CI/CD only touched on in context, no code-level ML development, no security implementation focus, and Copilot is explicitly excluded by the author. The structure and depth target technical practitioners rather than business or end-user audiences, with no exclusion rules triggered.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/selecting-the-right-agentic-solution-on-azure/ba-p/4453955"
   }
 ]
