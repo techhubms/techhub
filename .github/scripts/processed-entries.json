@@ -9252,5 +9252,11 @@
     "canonical_url": "https://www.thomasmaurer.ch/2025/09/protecting-identity-in-active-directory-microsoft-entra/",
     "collection": "posts",
     "timestamp": "2025-09-16 13:25:58 +00:00"
+  },
+  {
+    "timestamp": "2025-09-16 14:13:39 +00:00",
+    "canonical_url": "https://devops.com/why-automation-fails-without-the-right-qa-mindset/?utm_source=rss&utm_medium=rss&utm_campaign=why-automation-fails-without-the-right-qa-mindset",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the article is focused on DevOps practices such as CI/CD pipelines, test automation, and integrating QA throughout the software development lifecycle (DevOps rules 1, 3, 4, 5). There is no substantial focus on Microsoft technologies, platforms, or services, so categories like Azure or Coding were not included. The article discussed general best practices and methodologies within DevOps but did not meet criteria for other categories. All generic exclusion rules were checked and do not apply."
   }
 ]
