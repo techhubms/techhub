@@ -7857,5 +7857,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/net-runtime/dotnet-on-linux-signing-key-on-is-not-bound/m-p/4454321#M768",
     "reason": "Insufficient content length",
     "timestamp": "2025-09-16 02:17:11 +00:00"
+  },
+  {
+    "reason": "No categories found: All categories were excluded because the content focuses entirely on end-user features and usability enhancements in Windows 11 (Widgets), not technical implementation, development, configuration, or architecture. According to the Generic Exclusion Rules, non-development Microsoft product content — such as usage tips for Windows 11 features targeted at general consumers or productivity users, with no developer or IT pro technical focus — is not eligible for any categories. The article provides a user guide for Widgets and does not discuss coding, DevOps, security, Azure services, AI, ML, or development tools, nor does it address configuration scenarios relevant to Windows IT pros. Therefore, no predefined tech categories can be assigned.",
+    "collection": "posts",
+    "timestamp": "2025-09-16 08:19:41 +00:00",
+    "canonical_url": "https://dellenny.com/the-complete-guide-to-widgets-in-windows-11/"
   }
 ]
