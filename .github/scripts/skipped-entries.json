@@ -7923,5 +7923,11 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/how-to-build-a-no-code-business-workflow-in-microsoft-365/",
     "reason": "No categories found: Content is excluded according to generic exclusion rules for non-development Microsoft products. The article focuses on no-code business workflow automation in Microsoft 365 using Power Automate, Power Apps, SharePoint, and Teams. The primary audience is business managers and non-technical staff, and the content demonstrates how to automate processes without coding. This is aimed at end-user/business productivity (see Non-Development Microsoft Products exclusion) and does not cover development-focused scenarios, custom coding, or technical implementation details beyond configuration of out-of-the-box tools. Additionally, Power Automate business process automation is specifically listed as excluded (business automation, not development) in the rules. No categories apply."
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: All fields except author and title are either empty or null. There is no content, description, or tags provided. According to the generic exclusion rules in Chapter 3, if there is no substantive content to assess, immediately assign no categories. Without content, description, tags, or any technical detail, it's impossible to determine if this material qualifies for inclusion under any category.",
+    "canonical_url": "https://www.youtube.com/shorts/N69-iDrjusw",
+    "timestamp": "2025-09-17 11:11:41 +00:00"
   }
 ]

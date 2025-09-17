@@ -9372,5 +9372,11 @@
     "canonical_url": "https://dellenny.com/azure-for-beginners-how-to-launch-your-first-cloud-project-in-30-minutes/",
     "reason": "Succesfully added: Assigned the Azure category because the content is a step-by-step technical introduction to cloud projects using Microsoft Azure, including how to deploy a virtual machine, use Azure Portal, and connect to resources (Azure rule 1 and 4). It does not qualify for AI, Coding, DevOps, ML, GitHub Copilot, or Security categories as the scope is cloud basics—not focused on those specific technologies or programming aspects. Tags emphasize Azure, VM setup, portal usage, and related beginner steps.",
     "collection": "posts"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the Azure category because the entire content is dedicated to technical, actionable strategies for optimizing Azure cost, using Azure-native tools and features (Virtual Machines, Azure Advisor, Azure Monitor, Reserved Instances, Savings Plans, Azure Automation, Logic Apps, Azure Blob Storage, etc.), matching multiple Azure category inclusion rules (rules 1, 2, 4, 6). No other categories such as Coding, AI, ML, Security, DevOps are included, as the primary focus is on Azure infrastructure and operational cost efficiency, not development, data science, or security. The content fits quality and relevance standards, contains technical depth, and surpasses all generic exclusion rules.",
+    "canonical_url": "https://dellenny.com/how-to-cut-your-azure-bill-in-half-without-losing-performance/",
+    "timestamp": "2025-09-17 11:11:21 +00:00"
   }
 ]
