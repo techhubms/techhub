@@ -7917,5 +7917,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/finops/focus-data/m-p/4454649#M73",
     "timestamp": "2025-09-17 04:15:32 +00:00"
+  },
+  {
+    "timestamp": "2025-09-17 09:14:09 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-build-a-no-code-business-workflow-in-microsoft-365/",
+    "reason": "No categories found: Content is excluded according to generic exclusion rules for non-development Microsoft products. The article focuses on no-code business workflow automation in Microsoft 365 using Power Automate, Power Apps, SharePoint, and Teams. The primary audience is business managers and non-technical staff, and the content demonstrates how to automate processes without coding. This is aimed at end-user/business productivity (see Non-Development Microsoft Products exclusion) and does not cover development-focused scenarios, custom coding, or technical implementation details beyond configuration of out-of-the-box tools. Additionally, Power Automate business process automation is specifically listed as excluded (business automation, not development) in the rules. No categories apply."
   }
 ]

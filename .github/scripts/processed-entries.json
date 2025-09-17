@@ -9366,5 +9366,11 @@
     "reason": "Succesfully added: Assigned AI category because the article is centrally about an AI-powered coding assistant (GPT-5-Codex) and its application in software engineering (AI inclusion rule 1 and 4). Assigned DevOps because it addresses integration in DevOps workflows, code review automation, and deployment process improvements (DevOps rules 3, 5, and 11). Included Coding since the subject is a tool focused on code generation, review, debugging, and IDE integration (Coding rules 2, 4, and 5). There is no mention of Microsoft-specific technology, so Azure, ML, Security, or GitHub Copilot categories are not included. No generic exclusion rules applied since this is technical content, not biographical, sales, or business/executive-focused.",
     "collection": "posts",
     "canonical_url": "https://devops.com/openais-gpt-5-codex-a-smarter-approach-to-enterprise-development/?utm_source=rss&utm_medium=rss&utm_campaign=openais-gpt-5-codex-a-smarter-approach-to-enterprise-development"
+  },
+  {
+    "timestamp": "2025-09-17 10:14:55 +00:00",
+    "canonical_url": "https://dellenny.com/azure-for-beginners-how-to-launch-your-first-cloud-project-in-30-minutes/",
+    "reason": "Succesfully added: Assigned the Azure category because the content is a step-by-step technical introduction to cloud projects using Microsoft Azure, including how to deploy a virtual machine, use Azure Portal, and connect to resources (Azure rule 1 and 4). It does not qualify for AI, Coding, DevOps, ML, GitHub Copilot, or Security categories as the scope is cloud basics—not focused on those specific technologies or programming aspects. Tags emphasize Azure, VM setup, portal usage, and related beginner steps.",
+    "collection": "posts"
   }
 ]
