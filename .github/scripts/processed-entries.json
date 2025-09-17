@@ -9450,5 +9450,17 @@
     "collection": "posts",
     "canonical_url": "https://devops.com/why-automation-fails-without-the-right-qa-mindset/",
     "timestamp": "2025-09-17 17:18:04 +00:00"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/mcp-prompts-resources-sampling/",
+    "reason": "Succesfully added: Assigned AI category because the content describes leveraging Copilot with advanced LLM-driven integrations using MCP (AI Rule 4/5). Assigned GitHub Copilot because Copilot functionality is a central focus, including integration features and prompt enhancements (GitHub Copilot Rule 1/2/3). Assigned Coding category due to in-depth coverage of developer workflows and use within IDE coding environments (Coding Rule 4/5). Assigned DevOps category because Azure DevOps integration (work items, sprints, planning) is highlighted as a key use case (DevOps Rule 1/5), and integration with other development tools (GitHub, Playwright) is covered. Assigned Azure because Azure DevOps MCP server is specifically discussed for contextual integration and resource referencing within projects (Azure Rule 1/4/6). Other categories (ML, Security) were omitted as the primary focus wasn't on data science/ML engineering or security implementation.",
+    "timestamp": "2025-09-17 18:17:32 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/ai-powered-migration-modernization-secure-resilient-and-ready/ba-p/4454849",
+    "reason": "Succesfully added: Assigned Azure category because the entire content focuses on Azure migration and modernization tools (Azure Essentials, Azure Migrate). AI category is included as the integration of AI (agentic applications, AI-assisted migration, GitHub Copilot) is a central theme. Security category is warranted due to emphasis on secure migration strategies (security benchmark, RBAC, Defender for Cloud, compliance). DevOps is included since the operational and governance aspects (automation, monitoring, best practices, optimization) align with cloud DevOps workflows. GitHub Copilot is a developer tool featured throughout for assessment, remediation, and refactoring, meeting inclusion criteria for both GitHub Copilot and AI per workflow rules. All generic exclusions were checked and do not apply (community content is detailed, technical, in English, substantive, not sales/biographical/negative, and meets word count).",
+    "timestamp": "2025-09-17 18:18:24 +00:00",
+    "collection": "community"
   }
 ]
