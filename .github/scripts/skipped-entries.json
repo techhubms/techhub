@@ -7929,5 +7929,23 @@
     "reason": "No categories found: All fields except author and title are either empty or null. There is no content, description, or tags provided. According to the generic exclusion rules in Chapter 3, if there is no substantive content to assess, immediately assign no categories. Without content, description, tags, or any technical detail, it's impossible to determine if this material qualifies for inclusion under any category.",
     "canonical_url": "https://www.youtube.com/shorts/N69-iDrjusw",
     "timestamp": "2025-09-17 11:11:41 +00:00"
+  },
+  {
+    "reason": "No categories found: All generic exclusion rules must be applied first. The content is focused entirely on end-user productivity with Microsoft Teams while traveling, offering practical advice for remote workers and business travelers about how to schedule meetings, use chat, manage files, and maintain work-life balance, all without any development, coding, customization, or technical implementation details. According to the Non-Development Microsoft Products exclusion rule in Chapter 3, posts about using Microsoft Teams (unless Teams development/bots is covered) are excluded. There is no mention of coding, bots, Teams development, extensibility, or advanced technical implementation, so no categories are assigned.",
+    "timestamp": "2025-09-17 12:23:58 +00:00",
+    "canonical_url": "https://dellenny.com/staying-connected-on-the-road-how-travelers-can-make-the-most-of-microsoft-teams/",
+    "collection": "posts"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-for-beginners-how-to-launch-your-first-cloud-project-in-30/m-p/4454773#M22219",
+    "timestamp": "2025-09-17 13:23:54 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-to-cut-your-azure-bill-in-half-without-losing-performance/m-p/4454772#M22218",
+    "timestamp": "2025-09-17 13:23:54 +00:00"
   }
 ]

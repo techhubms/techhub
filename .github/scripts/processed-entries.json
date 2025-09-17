@@ -9378,5 +9378,11 @@
     "reason": "Succesfully added: Assigned the Azure category because the entire content is dedicated to technical, actionable strategies for optimizing Azure cost, using Azure-native tools and features (Virtual Machines, Azure Advisor, Azure Monitor, Reserved Instances, Savings Plans, Azure Automation, Logic Apps, Azure Blob Storage, etc.), matching multiple Azure category inclusion rules (rules 1, 2, 4, 6). No other categories such as Coding, AI, ML, Security, DevOps are included, as the primary focus is on Azure infrastructure and operational cost efficiency, not development, data science, or security. The content fits quality and relevance standards, contains technical depth, and surpasses all generic exclusion rules.",
     "canonical_url": "https://dellenny.com/how-to-cut-your-azure-bill-in-half-without-losing-performance/",
     "timestamp": "2025-09-17 11:11:21 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the content centers on practical AI usage in learning, including responsible AI adoption and AI-powered study plans (AI rules 1 and 5). Assigned 'ML' because much of the series involves data science and machine learning skills, curriculums, AMAs, and hands-on ML activities (ML rules 1, 2, and 9). 'GitHub Copilot' is included (with 'AI') because the Showcase event specifically highlights GitHub Copilot for Data Science (GitHub Copilot rule 1 and critical AI+Copilot rule). Coding, DevOps, Azure, and Security were not assigned because the event series is oriented toward AI, ML, and Copilot within the context of learning and practical applications, not specific coding or DevOps implementations.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/practical-ways-to-use-ai-in-your-data-science-and-ml-journey/ba-p/4454764",
+    "timestamp": "2025-09-17 13:24:27 +00:00"
   }
 ]
