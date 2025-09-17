@@ -1,0 +1,22 @@
+{
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-09-17 07:12:51",
+  "FeedName": "Microsoft Developer YouTube",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Link": "https://www.youtube.com/watch?v=bjMdBPLl4Kc",
+  "Author": "Microsoft Developer",
+  "Title": "Unlocking MCP Server: AI Integration for Dataverse & Dynamics 365",
+  "PubDate": "2025-09-17T07:00:41+00:00",
+  "Description": "Join Elaiza Benitez and guest Nathan Rose - Microsoft MVP and HSO Functional Architect, as we explore how MCP Server is transforming low-code development and intelligent agent design. In this episode of The Low Code Revolution show, we dive into the Model Context Protocol (MCP) - the powerful new layer enabling seamless AI integration across Dataverse, Dynamics 365, and Copilot Studio.\n\nIn this video, Nathan shares:\n- What MCP Server is and how it works\n- Why MCP matters for everyone\n- How MCP enables interactive and autonomous agentic AI\n- Hands-on demos using Copilot Studio and Dataverse\n- How to connect your own agents using MCP\n- Key limitations and security considerations\n\nWhether you're building intelligent agents or exploring AI in enterprise apps, this episode will help you unlock the potential of MCP Server.\n\nNote: at the time of when this episode airs, this is a Preview feature.\n\nLearn more about MCP in Copilot Studio at https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp Learn more about how to connect to Dataverse using an MCP server in Microsoft Copilot Studio at https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-mcps Learn more about Microsoft Copilot Studio at https://aka.ms/copilotstudio Check out Copilot Studio Agent Academy - Recruit, free self-paced learning to help you get started with Copilot Studio - https://aka.ms/agent-academy\n\n✅ Chapters: 00:00 Introduction 01:06 Redefined creative boundaries 03:10 Agentic AI with MCP 06:54 Demo of connecting to MCP 08:03 Demo of autonomous agent 15:58 Demo of interactive agent 22:57 Key considerations 25:07 Comparison of Dataverse and Dynamics 365 MCP servers 25:45 Microsoft Learn Resources 26:05 Outro\n\n✅ Resources: LinkedIn profile - https://www.linkedin.com/in/nathanroseakl Blog - http://nocodenomercy.com/"
+}

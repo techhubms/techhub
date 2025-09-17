@@ -1,0 +1,18 @@
+{
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-09-17 07:12:47",
+  "FeedName": "Visual Studio Code YouTube",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "OutputDir": "_videos",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Link": "https://www.youtube.com/shorts/K4Vz-Wih-40",
+  "Author": "Visual Studio Code",
+  "Title": "The new MCP registry experience in VS Code!",
+  "PubDate": "2025-09-17T01:15:46+00:00",
+  "Description": "Checkout how to get hands on with the new GitHub MCP server registry experience directly in VS Code!\n\nTo get started with MCP servers checkout https://github.com/microsoft/mcp-for-beginners for all hands on guides.\n\nGitHub MCP Registry: https://github.com/mcp\n\nLiam Hampton: https://www.linkedin.com/in/liam-conroy-hampton/"
+}

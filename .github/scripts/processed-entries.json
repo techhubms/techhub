@@ -9348,5 +9348,11 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned 'Azure' category because the main focus is on Azure's confidential VM offerings, service enhancements, and platform integrations (Azure rule 1). Assigned 'Security' category due to detailed coverage of security features such as hardware-rooted attestation, memory encryption, SEV-SNP technology, Virtualization-Based Security, data confidentiality, and compliance for regulated industries (Security rules 1, 4, 7, 9, 10). Did not assign other categories (e.g., Coding, DevOps, ML, AI) because the article does not discuss application development, data science, or machine learning topics in depth, nor does it focus on developer tooling or DevOps practices. The content is technical and implementation-oriented, with no generic exclusions triggered.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-confidential-computing/ga-dcasv6-and-ecasv6-confidential-vms-based-on-4th-generation/ba-p/4451460"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=bjMdBPLl4Kc",
+    "reason": "Succesfully added: Assigned the 'AI' category because the episode fundamentally focuses on the integration of AI into Microsoft low-code platforms (Copilot Studio, Dataverse, Dynamics 365) using MCP Server and demonstrates building intelligent and autonomous agents (AI Category rules 1, 3, and 4). Although Copilot Studio is used, GitHub Copilot is not relevant here, so the 'GitHub Copilot' category is not assigned. No content fulfills requirements for Coding or DevOps (not about development frameworks, traditional coding, nor developer toolchains). Azure and ML categories are not assigned as Azure and ML/data science engineering are not central topics; the primary focus is the AI-enablement layer for low-code Microsoft business platforms. Security is discussed only as a limitation, not the main focus, so 'Security' is not assigned.",
+    "timestamp": "2025-09-17 07:13:56 +00:00"
   }
 ]

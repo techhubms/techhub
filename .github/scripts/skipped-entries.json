@@ -7905,5 +7905,17 @@
     "timestamp": "2025-09-16 19:11:11 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=uSTiHZYeZQg"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/K4Vz-Wih-40",
+    "timestamp": "2025-09-17 02:17:23 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: the provided input does not contain substantive main content (the 'content' field is null). There is no meaningful technical description, tutorial, or information to evaluate for categorization. According to the Content Quality Exclusions in Chapter 3, absence of actual content constitutes grounds for exclusion, as there is no material to assess against category inclusion rules."
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/finops/focus-data/m-p/4454649#M73",
+    "timestamp": "2025-09-17 04:15:32 +00:00"
   }
 ]

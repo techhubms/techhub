@@ -1,0 +1,14 @@
+{
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Tags": [],
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Link": "https://techcommunity.microsoft.com/t5/finops/focus-data/m-p/4454649#M73",
+  "Title": "FOCUS data",
+  "OutputDir": "_community",
+  "Author": "Neha_Sandhu",
+  "ProcessedDate": "2025-09-17 07:13:01",
+  "PubDate": "2025-09-17T03:41:45+00:00",
+  "FeedName": "Microsoft Tech Community",
+  "EnhancedContent": "Is FOCUS data important or essential for FinOps Toolkit? Can we not use normal Cost Management Actual and Amortized data to feed into FinOps toolkit?",
+  "Description": "Is FOCUS data important or essential for FinOps Toolkit? Can we not use normal Cost Management Actual and Amortized data to feed into FinOps toolkit?"
+}
