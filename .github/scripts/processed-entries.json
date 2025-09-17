@@ -9396,5 +9396,59 @@
     "reason": "Succesfully added: Assigned the AI category because the content focuses on Microsoft's quantum computing efforts, including the Microsoft Quantum compute platform, quantum error correction, and topological qubits (AI Rule 1: Microsoft AI Products/Services; also Rule 4: AI Development with Microsoft Technologies). Did not add ML, Azure, or Coding since the article centers on research platforms and collaboration, not explicit programming, ML workflow, or cloud-specific deployment. News focuses on public-private partnerships, technological advances, and platform strategy in quantum computing, which fits the AI category as per guidelines. No generic exclusion rules apply since the content is technical, English, and not biographical, sales, or business productivity focused.",
     "collection": "news",
     "timestamp": "2025-09-17 16:16:46 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the content is centrally about GitHub Copilot, an AI-powered developer tool (AI rules 2 and 6). Assigned 'GitHub Copilot' because the article focuses on Copilot's usage, features, and custom configuration (GitHub Copilot inclusion rules 1–4). Assigned 'Coding' because the guide is specifically oriented toward .NET, C#, and ASP.NET developers using GitHub Copilot for coding tasks (Coding rules 1, 2, and 4). 'Azure', 'DevOps', 'ML', and 'Security' were not assigned since the focus remains on Copilot setup and developer workflow, not on Azure/cloud, CI/CD, ML/data science, or security-specific implementation.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/prompt-files-and-instructions-files-explained/",
+    "timestamp": "2025-09-17 17:13:18 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the entire news article centers on Microsoft’s large-scale investment in AI infrastructure and operations in the UK (AI inclusion rule 1 and 4). The Azure category is included since much of the investment is described as building out cloud and AI infrastructure, which directly relates to Microsoft Azure services (Azure inclusion rule 1 and 4). Coding, DevOps, ML, and Security were not assigned because the article does not provide in-depth technical details or actionable information specific to those topics, focusing instead on infrastructure and high-level initiatives. Copilot product references (GitHub Copilot, Microsoft Copilot) are discussed in the context of productivity improvements and adoption statistics rather than technical implementation, thus only reinforcing the relevance of the AI/Azure categories.",
+    "collection": "news",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2025/09/16/microsoft-30-billion-uk-ai-future/",
+    "timestamp": "2025-09-17 17:13:48 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Security category because the article centrally describes the takedown of a major phishing operation targeting Microsoft 365 users (Security rule 1, 5, 6). It details the methods used, the consequences for critical sectors, and direct legal, technical, and cross-sector security responses—fitting Security category criteria. No other category applies: There’s no coverage of coding, DevOps, Azure-specific technologies, ML/AI development, or GitHub Copilot. The content is news-oriented, focused squarely on security threats and incident response involving Microsoft technologies.",
+    "collection": "news",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2025/09/16/microsoft-seizes-338-websites-to-disrupt-rapidly-growing-raccoono365-phishing-service/",
+    "timestamp": "2025-09-17 17:14:17 +00:00"
+  },
+  {
+    "reason": "Succesfully added: I assigned the AI category because the content is centered around an AI-powered code review platform (AI category rule 1 and 5). DevOps is included because CodeRabbit is designed to be integrated into DevOps workflows and supports team review processes (DevOps category rules 3, 4, and 5). Coding is included since the platform directly analyzes code, generates unit tests, and enforces coding practices (Coding category rules 4 and 5). There is no direct reference to Azure, ML, Security, or GitHub Copilot, so those categories were not included.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/coderabbit-adds-cli-support-to-code-review-platform-based-on-ai/",
+    "timestamp": "2025-09-17 17:14:46 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the article focuses on OpenAI's GPT-5-Codex, an AI coding assistant (AI rule 1), with extensive discussion about the application of AI in practical engineering contexts. Assigned Coding category as the content covers code review, refactoring, debugging, and IDE integration (Coding rules 2-4). Assigned DevOps category because the focus includes workflow integration, toolchain enhancements (CLI/IDE), and enterprise-level development process improvements (DevOps rules 3, 4, 5). No Azure, Security, or ML categories since Microsoft technology is not central, and while security features are discussed, they relate specifically to AI sandboxing and not Microsoft security ecosystems.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/openais-gpt-5-codex-a-smarter-approach-to-enterprise-development/",
+    "timestamp": "2025-09-17 17:15:54 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Categories 'DevOps' and 'Security' assigned because the content primarily analyzes outages and breaches in major software delivery tools such as GitHub and Jira, which aligns with DevOps (DevOps category rules 2, 5, 6, 7, 9) and Security (Security category rules 2, 4, 5, 6, 7, 9). The article contains technical workarounds, security hardening suggestions, and discusses operational resilience, without being a sales pitch or non-technical leadership content, and does not trigger any generic exclusion rule.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/outages-and-security-threats-in-devops-tooling-cracks-in-the-foundation/",
+    "timestamp": "2025-09-17 17:16:39 +00:00"
+  },
+  {
+    "reason": "Succesfully added: The content directly focuses on the use of AI agents (AI category) to automate and optimize infrastructure management and workflow in the Pulumi Infrastructure-as-Code platform, targeting DevOps teams (DevOps category, as per DevOps rules 3, 5, 6, and 9). There is significant technical information on automation, compliance, and integration within the context of DevOps processes. The article is not focused on Microsoft technologies, so Azure, Coding, ML, and Security categories do not apply per the category inclusion rules and multi-platform guidelines. No generic exclusion rules are triggered, as it is technical, not biographical, not career or management focused, in English, and of substantial length and depth.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/pulumi-previews-ai-agents-trained-to-automate-infrastructure-management/",
+    "timestamp": "2025-09-17 17:17:06 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security because the article focuses on a sophisticated malware campaign targeting developers, describing in detail the attack methodology (malicious VSCode and Open VSX extensions), code-level attack chain, credential theft, malware (LummaStealer), and security lessons—meeting multiple Security category inclusion rules. Assigned DevOps because content is directly relevant to the DevOps/development community and addresses secure development practices, IDE usage, and broader software supply chain risks (DevOps rule 3 and rule 11). Not assigning Coding, Azure, AI, ML, or GitHub Copilot as the article does not specifically discuss coding practices, Microsoft cloud technologies, AI, ML, or Copilot features in technical depth. The article is technical, not a sales pitch, biography, or business strategy post, and exceeds the exclusion thresholds.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/whitecobra-targets-developers-with-dozens-of-malicious-extensions/",
+    "timestamp": "2025-09-17 17:17:40 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the article focuses extensively on DevOps culture and practices, with automation, continuous delivery, and integration of QA mindset throughout the CI/CD process (DevOps Inclusion Rules 1, 3–5). There is no specific technical focus on Microsoft or GitHub tools, coding, AI, ML, Azure, or Security, and no exclusion rule applies. The content discusses general strategies and experiences relevant to DevOps practitioners, emphasizing QA's role in automated environments.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/why-automation-fails-without-the-right-qa-mindset/",
+    "timestamp": "2025-09-17 17:18:04 +00:00"
   }
 ]

@@ -7959,5 +7959,29 @@
     "reason": "No categories found: Content excluded due to applicability of generic exclusion rules. The video is primarily a collection of attendee and guest opinions (likely short interviews or vox pops) from Microsoft Build 2025 about developer security, as indicated by the description and the use of YouTube Shorts format. There is no actual substantive technical content, solution, tutorial, or concrete implementation details related to Microsoft technology categories. The content appears to promote awareness of the Secure Future Initiative rather than provide technical depth, and lacks any meaningful technical explanation, code, or guidance as required by inclusion rules. Thus, per the sales pitch/business awareness and insufficient technical depth exclusions (Generic Exclusion Rules: Sales pitches, Format and Length), no categories are assigned.",
     "collection": "videos",
     "timestamp": "2025-09-17 16:17:26 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content is not substantively about Microsoft technologies. It describes the addition of AI agent orchestration capabilities to the Honeycomb observability platform, which is a third-party tool independent of Microsoft. There is no mention in the title, description, content, or tags of Microsoft-specific products, services, or development frameworks. Per multi-platform and inclusion rules, Microsoft technology must be central or at least 40% of the content, which is not met here. Therefore, all categories are excluded.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/honeycomb-adds-ability-to-orchestrate-multiple-ai-agents-to-observability-platform/",
+    "timestamp": "2025-09-17 17:14:59 +00:00"
+  },
+  {
+    "reason": "No categories found: Excluded all categories because the content does not centrally feature any Microsoft technologies, services, or platforms. The article is focused on MongoDB, its new application modernization platform, and how it leverages AI agents to refactor legacy code for deployment on MongoDB. There is no substantial coverage of Microsoft products (such as Azure, .NET, GitHub, or Power Platform), and MongoDB is not a Microsoft technology. Despite references to AI and DevOps, the technical context is entirely non-Microsoft, which does not meet the multi-platform content threshold (Microsoft content must be ≥40% or central). Per the processing rules and multi-platform content guidelines, content where Microsoft is only absent or marginal is excluded.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/mongodb-taps-ai-agent-to-launch-application-modernization-platform/",
+    "timestamp": "2025-09-17 17:15:13 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the content is a product announcement and overview for the Syteca cybersecurity platform, not a Microsoft technology or product. The content only discusses Syteca's own features (agentless access, sensitive data masking, session playback, UAM, PAM) and does not reference or focus on any Microsoft technology, platform, or ecosystem. According to the processing rules, content must be substantially or centrally about Microsoft services or developer tools to qualify. Additionally, this is a vendor product release and, per the sales pitch exclusion rule, must offer substantive educational or technical content regarding Microsoft technology to be included. No Microsoft-related technical depth is present.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/new-in-syteca-release-7-21-agentless-access-sensitive-data-masking-and-smooth-session-playback/",
+    "timestamp": "2025-09-17 17:15:26 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned due to the Generic Exclusion Rule: The content is centered entirely on Oracle Java 25, their AI/cryptography features, and next-generation Java improvements, not on Microsoft technologies. Per Chapter 2 (Multi-Platform Content Threshold) and Chapter 4 inclusion rules, Microsoft technologies must be central to the content. There is no mention or substantive technical discussion of any Microsoft platform (such as Azure, .NET, Power Platform, GitHub, Entra, Microsoft Fabric, etc.) or any integration with Microsoft tools. The only references to AI are in a general technology sense as relates to Java, not Microsoft's AI stack. Therefore, this article does not qualify for any of the predefined Microsoft-centric categories.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/oracle-delivers-java-25-edition-of-venerable-programming-language-for-the-ai-era/",
+    "timestamp": "2025-09-17 17:16:10 +00:00"
   }
 ]
