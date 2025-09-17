@@ -9354,5 +9354,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=bjMdBPLl4Kc",
     "reason": "Succesfully added: Assigned the 'AI' category because the episode fundamentally focuses on the integration of AI into Microsoft low-code platforms (Copilot Studio, Dataverse, Dynamics 365) using MCP Server and demonstrates building intelligent and autonomous agents (AI Category rules 1, 3, and 4). Although Copilot Studio is used, GitHub Copilot is not relevant here, so the 'GitHub Copilot' category is not assigned. No content fulfills requirements for Coding or DevOps (not about development frameworks, traditional coding, nor developer toolchains). Azure and ML categories are not assigned as Azure and ML/data science engineering are not central topics; the primary focus is the AI-enablement layer for low-code Microsoft business platforms. Security is discussed only as a limitation, not the main focus, so 'Security' is not assigned.",
     "timestamp": "2025-09-17 07:13:56 +00:00"
+  },
+  {
+    "timestamp": "2025-09-17 08:17:56 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the content focuses on AI-driven agent development, embedding models, and retrieval augmentation using Azure AI Foundry (AI category rules 1, 3, and 4). Assigned the Azure category because it details multiple Azure services (AI Foundry, AI Search, Azure Blob Storage, ADLS Gen2, Microsoft OneLake) and their integration in a cloud development context (Azure category rules 1, 2, and 4). The Coding, DevOps, ML, Security, and GitHub Copilot categories were not applied, as the content does not center on code-level development, DevOps pipelines, ML/model engineering from scratch, or security-specific implementation details. The post fully satisfies the technical content and Microsoft centrality requirements, with no generic exclusion rules triggered.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/foundry/ground-your-agents-faster-native-azure-ai-search-indexing-foundry/"
+  },
+  {
+    "timestamp": "2025-09-17 08:18:40 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the article is centrally about an AI-powered coding assistant (GPT-5-Codex) and its application in software engineering (AI inclusion rule 1 and 4). Assigned DevOps because it addresses integration in DevOps workflows, code review automation, and deployment process improvements (DevOps rules 3, 5, and 11). Included Coding since the subject is a tool focused on code generation, review, debugging, and IDE integration (Coding rules 2, 4, and 5). There is no mention of Microsoft-specific technology, so Azure, ML, Security, or GitHub Copilot categories are not included. No generic exclusion rules applied since this is technical content, not biographical, sales, or business/executive-focused.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/openais-gpt-5-codex-a-smarter-approach-to-enterprise-development/?utm_source=rss&utm_medium=rss&utm_campaign=openais-gpt-5-codex-a-smarter-approach-to-enterprise-development"
   }
 ]
