@@ -7947,5 +7947,17 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-to-cut-your-azure-bill-in-half-without-losing-performance/m-p/4454772#M22218",
     "timestamp": "2025-09-17 13:23:54 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=5ShnL40r-ko",
+    "reason": "No categories found: No categories assigned. The provided content is about 'varlock', an open source tool for managing .env files and secrets management, built on a simple DSL called @env-spec. The description does not mention any Microsoft technologies or platforms, nor does it reference Azure, GitHub Copilot, .NET, or any other Microsoft ecosystem projects. According to the Core Processing Rules and Category Inclusion Rules, content must focus on Microsoft technologies to qualify for categorization. Therefore, this does not meet the required content threshold for any Microsoft category.",
+    "collection": "videos",
+    "timestamp": "2025-09-17 16:17:10 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/kH4Ti_8P2H8",
+    "reason": "No categories found: Content excluded due to applicability of generic exclusion rules. The video is primarily a collection of attendee and guest opinions (likely short interviews or vox pops) from Microsoft Build 2025 about developer security, as indicated by the description and the use of YouTube Shorts format. There is no actual substantive technical content, solution, tutorial, or concrete implementation details related to Microsoft technology categories. The content appears to promote awareness of the Secure Future Initiative rather than provide technical depth, and lacks any meaningful technical explanation, code, or guidance as required by inclusion rules. Thus, per the sales pitch/business awareness and insufficient technical depth exclusions (Generic Exclusion Rules: Sales pitches, Format and Length), no categories are assigned.",
+    "collection": "videos",
+    "timestamp": "2025-09-17 16:17:26 +00:00"
   }
 ]

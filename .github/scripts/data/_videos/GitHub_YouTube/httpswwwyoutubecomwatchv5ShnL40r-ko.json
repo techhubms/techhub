@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-09-17 16:15:51",
+  "PubDate": "2025-09-17T15:15:17+00:00",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "EnhancedContent": null,
+  "Title": "Open Source Friday with varlock: The Future of Configuration Management",
+  "Link": "https://www.youtube.com/watch?v=5ShnL40r-ko",
+  "Description": "Join us this week for Open Source Friday as we welcome Phil Miller and Theo Ephraim, the creators of varlock! varlock is an open source tool designed to make .env files safer and more useful for teams. Built on a simple DSL called @env-spec (RFC), varlock helps teams manage configuration and secrets with ease and security.",
+  "Author": "GitHub",
+  "Tags": [],
+  "FeedName": "GitHub YouTube",
+  "FeedLevelAuthor": "GitHub"
+}

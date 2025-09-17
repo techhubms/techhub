@@ -9390,5 +9390,11 @@
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content centrally demonstrates GitHub Copilot Chat—a developer AI tool—its integration with debugging and prompt-driven workflows (AI rule 2, GitHub Copilot rules 1–4). 'Coding' is included because the main focus is on debugging and improving a software application with Microsoft-centric tools (Coding rules 4 and 5). Azure OpenAI and AI Search are present, but Azure is not the main focus; more weight is placed on usage of Copilot within VS Code. No exclusions applied: the content is developer-focused, technical, and not biographical, sales, or business-productivity. Content type 'videos' is supported.",
     "timestamp": "2025-09-17 15:14:06 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=QLAIww-Vhqo"
+  },
+  {
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2025/09/17/our-new-collaboration-with-maryland-will-accelerate-scalable-quantum-computing/",
+    "reason": "Succesfully added: Assigned the AI category because the content focuses on Microsoft's quantum computing efforts, including the Microsoft Quantum compute platform, quantum error correction, and topological qubits (AI Rule 1: Microsoft AI Products/Services; also Rule 4: AI Development with Microsoft Technologies). Did not add ML, Azure, or Coding since the article centers on research platforms and collaboration, not explicit programming, ML workflow, or cloud-specific deployment. News focuses on public-private partnerships, technological advances, and platform strategy in quantum computing, which fits the AI category as per guidelines. No generic exclusion rules apply since the content is technical, English, and not biographical, sales, or business productivity focused.",
+    "collection": "news",
+    "timestamp": "2025-09-17 16:16:46 +00:00"
   }
 ]
