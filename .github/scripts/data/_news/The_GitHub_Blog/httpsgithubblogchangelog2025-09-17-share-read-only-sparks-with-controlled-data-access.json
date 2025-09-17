@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "EnhancedContent": "✨ You can now share your Sparks as **read-only**, giving you greater control over how others interact with your apps. When publishing a Spark, you can choose between granting write-access (allowing users to edit content) or read-access (restricting users to view-only mode).\n\nTo share a read-only Spark:\n\n1. Publish your Spark\n2. Set visibility to “Organization” or “All GitHub users”\n3. Select “Read access” in the expanded data access options\n\nThis update helps you protect your Spark’s data while still enabling collaboration and sharing within your organization or the broader GitHub community.\n\n[Try sharing a read-only Spark today](https://github.com/spark)\n\n🐞 We’ve also squashed some key bugs to keep your workflow flowing:\n\n- **JSON mode:** We’ve fixed the quirky JSON return format when calling `spark.llm`\nwith JSON mode enabled. 🎉\n- **Editor sync:** The code editor in Spark now stays in sync more reliably, no matter what edits are being made. 🔄\n- **Loading state:** Sparks will no longer get stuck in “loading” limbo thanks to improvements in workbench state logic. 🚦\n\n### Try out these improvements today\n\nVisit [github.com/spark](https://github.com/spark) to build your next app.",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Title": "Share read-only Sparks with controlled data access",
+  "PubDate": "2025-09-17T20:00:28+00:00",
+  "Link": "https://github.blog/changelog/2025-09-17-share-read-only-sparks-with-controlled-data-access",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "Description": "✨ You can now share your Sparks as read-only, giving you greater control over how others interact with your apps. When publishing a Spark, you can choose between granting write-access…\n\nThe post [Share read-only Sparks with controlled data access](https://github.blog/changelog/2025-09-17-share-read-only-sparks-with-controlled-data-access) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Allison",
+  "ProcessedDate": "2025-09-17 22:11:05",
+  "OutputDir": "_news"
+}

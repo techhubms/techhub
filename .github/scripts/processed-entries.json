@@ -9462,5 +9462,17 @@
     "reason": "Succesfully added: Assigned Azure category because the entire content focuses on Azure migration and modernization tools (Azure Essentials, Azure Migrate). AI category is included as the integration of AI (agentic applications, AI-assisted migration, GitHub Copilot) is a central theme. Security category is warranted due to emphasis on secure migration strategies (security benchmark, RBAC, Defender for Cloud, compliance). DevOps is included since the operational and governance aspects (automation, monitoring, best practices, optimization) align with cloud DevOps workflows. GitHub Copilot is a developer tool featured throughout for assessment, remediation, and refactoring, meeting inclusion criteria for both GitHub Copilot and AI per workflow rules. All generic exclusions were checked and do not apply (community content is detailed, technical, in English, substantive, not sales/biographical/negative, and meets word count).",
     "timestamp": "2025-09-17 18:18:24 +00:00",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-09-17-share-read-only-sparks-with-controlled-data-access",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the DevOps category because the content centers on new tools and workflow improvements within GitHub, particularly around app sharing controls and developer collaboration features (DevOps rules 2, 3, 9). The content does not mention AI, GitHub Copilot, Azure, Coding, ML, or Security, so those categories are not included. The tag 'copilot' from the input refers to Copilot branding but is not about GitHub Copilot the developer tool; instead, the product here is Spark, not Copilot. No generic exclusion rules apply.",
+    "timestamp": "2025-09-17 22:12:37 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-and-simplify-cloud-transformation-with-new-agentic-ai/ba-p/4454873",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category since the summit and sessions emphasize new AI capabilities, agentic AI, and AI-assisted migration (AI inclusion rule 1, 4, and 5). Assigned Azure because the entire summit and actionable guidance focus on Azure modernization, tooling, and workloads (Azure inclusion rule 1 and 4). Included DevOps because content highlights transformation of IT and developer experiences, modernization practices, and migration—core DevOps themes (DevOps inclusion rule 5 and 9). Mention of GitHub Copilot was considered; however, it is referenced as a feature within Azure migration, not the primary subject, so it is included as a tag but not as a separate category. Based category decision strictly on the event's substantial focus on Azure and AI-powered modernization technologies.",
+    "timestamp": "2025-09-17 22:13:18 +00:00"
   }
 ]

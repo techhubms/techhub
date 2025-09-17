@@ -7983,5 +7983,11 @@
     "collection": "posts",
     "canonical_url": "https://devops.com/oracle-delivers-java-25-edition-of-venerable-programming-language-for-the-ai-era/",
     "timestamp": "2025-09-17 17:16:10 +00:00"
+  },
+  {
+    "timestamp": "2025-09-17 20:14:36 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=qyGbCfjclCw",
+    "reason": "No categories found: All categories have been excluded due to the application of the generic exclusion rules. The content, as described by the title and description, is biographical in nature and primarily focuses on Karuana Gatimu's leadership and experiences at Microsoft Ignite. It lacks substantive technical detail about Microsoft technologies or development practices, and is centered around personal journeys and networking rather than actionable technical knowledge. This matches the 'Biographical Focus' and 'Workplace and Business Focus' exclusions in Chapter 3. The description further confirms this by highlighting experiences, team leadership, and building connections, without any mention of technical implementation, development, or Microsoft technology details."
   }
 ]
