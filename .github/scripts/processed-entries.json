@@ -9474,5 +9474,17 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned AI category since the summit and sessions emphasize new AI capabilities, agentic AI, and AI-assisted migration (AI inclusion rule 1, 4, and 5). Assigned Azure because the entire summit and actionable guidance focus on Azure modernization, tooling, and workloads (Azure inclusion rule 1 and 4). Included DevOps because content highlights transformation of IT and developer experiences, modernization practices, and migration—core DevOps themes (DevOps inclusion rule 5 and 9). Mention of GitHub Copilot was considered; however, it is referenced as a feature within Azure migration, not the primary subject, so it is included as a tag but not as a separate category. Based category decision strictly on the event's substantial focus on Azure and AI-powered modernization technologies.",
     "timestamp": "2025-09-17 22:13:18 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Categories 'AI' and 'Azure' are assigned because the content primarily discusses Azure AI Search—a Microsoft cloud AI product (AI rule 1, Azure rule 1)—and its technical implementation of Retrieval Augmented Generation, hybrid retrieval, security, and integration within Azure. Coding, ML, DevOps, Security, and GitHub Copilot are not assigned since there is no direct focus on software development, machine learning engineering, operations, or code tooling. The explanation references technical features, practical use cases, and learning/skilling resources in the original content as rationale for the assigned categories.",
+    "collection": "videos",
+    "timestamp": "2025-09-18 07:13:39 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=uU0Fyde1yFo"
+  },
+  {
+    "reason": "Succesfully added: This content is a technical, developer-focused article about engineering multi-agent AI systems using Azure AI Foundry, Microsoft's enterprise agent platform, and related tooling such as the Model Context Protocol (MCP). The primary focus is on orchestration, architecture, observability, safety, and cost management for AI-powered workflows—core topics for the 'AI' category (due to explicit Azure AI Foundry, LLM agents, and agent orchestration coverage) and 'Azure' category (due to deep integration and usage of Azure services). No other category is appropriate, as the subject does not focus on DevOps, ML (in the custom data science sense), Coding (there's architectural and SDK detail but coding is not primary), Security (though governance and access are discussed, this is not a security solution article), or GitHub Copilot. The article preserves all technical concepts, implementation nuances, and is aimed directly at technical implementers and architects.",
+    "collection": "community",
+    "timestamp": "2025-09-18 07:14:38 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/build-multi-agent-ai-systems-with-microsoft/ba-p/4454510"
   }
 ]
