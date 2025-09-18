@@ -9564,5 +9564,17 @@
     "timestamp": "2025-09-18 17:13:12 +00:00",
     "canonical_url": "https://devops.com/shai-hulud-attacks-shake-software-supply-chain-security-confidence/",
     "reason": "Succesfully added: Assigned DevOps category because the content focuses on DevOps security practices, CI/CD, and software supply chain issues which fall under DevOps rules 3, 5, and 6. Assigned Security category because the article centers on vulnerability, secure software practices, SBOMs, MFA, and trust issues in software supply chains aligned with Security rules 2, 4, 5, 6, and 7. No Microsoft-specific content appears, so no Azure, AI, Coding, ML, or GitHub Copilot categories apply. The content's core is practical, technical, and actionable, meeting quality and relevance criteria."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the video focuses on Azure AI Foundry, custom language models, and deploying/using AI for coding assistance (AI rules 1, 4, 5). Assigned 'GitHub Copilot' because a significant portion is about integrating these models as Copilot's backend, and Copilot is a developer tool (GitHub Copilot rules 1, 2, 3). Assigned 'Azure' since all deployment and model management occurs on Azure, and Azure AI Foundry is featured throughout (Azure rule 1). Did not assign 'Coding' because the focus is on setup, integration, and deployment rather than direct code authoring or programming patterns. Did not assign 'DevOps', 'ML', or 'Security' as the content does not center on CI/CD, MLOps pipelines, or security aspects.",
+    "collection": "videos",
+    "timestamp": "2025-09-18 18:18:40 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=pG6d6Wwl9gU"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because the core focus is on Azure Monitor services and Azure portal integration (Azure rule 1, 4, 5). Added 'DevOps' because the content directly addresses cloud-native SRE/DevOps teams’ needs for observability tooling, discusses operational monitoring practices and integration of open-source tools into Azure DevOps/SRE workflows (DevOps rules 3, 5, 7). Did NOT assign AI, GitHub Copilot, Coding, ML, or Security: there is no focus on AI/ML (prebuilt AI services, model development, or machine learning engineering are not covered), no content regarding development with .NET/C#, nor on security/identity features. Explanation draws from sections describing DevOps team benefits, operational impacts, and the use of Microsoft monitoring platforms.",
+    "collection": "community",
+    "timestamp": "2025-09-18 18:19:09 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-managed-service-for-prometheus-now-includes-native/ba-p/4454254"
   }
 ]
