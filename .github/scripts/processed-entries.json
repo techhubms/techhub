@@ -9606,5 +9606,11 @@
     "reason": "Succesfully added: Assigned 'AI' because the content describes GitHub Copilot coding agent, an AI-powered development tool (AI inclusion rules 1 & 2). Included 'GitHub Copilot' as content specifically features Copilot and its functionalities (GitHub Copilot rules 1 & 2). Added 'DevOps' because the integration connects task planning (Azure Boards) with automation/developer workflow, aligning with DevOps (DevOps rules 1, 5, and 6). Included 'Azure' because Azure Boards and Azure DevOps are central to the integration (Azure inclusion rule 1).",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-09-18-assign-azure-boards-work-items-to-copilot-coding-agent-in-public-preview"
+  },
+  {
+    "timestamp": "2025-09-18 23:12:27 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the content focuses on Azure AI Foundry models and their use as language models (AI rule 1). Assigned 'GitHub Copilot' because it covers connecting these models to GitHub Copilot as its language engine, and per AI/ Copilot rules, both 'AI' and 'GitHub Copilot' categories are always assigned together. Assigned 'Azure' because Azure is central to the hosting, deployment, and management of AI models (Azure rule 1). Included 'Coding' because it demonstrates integrating developer tools (Visual Studio Code, AI Toolkit extension) with AI models for coding workflows (Coding rule 5). No generic exclusion rules apply; all content is technical and developer-oriented.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=k8TjuskSeEw"
   }
 ]
