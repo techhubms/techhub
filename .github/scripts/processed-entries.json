@@ -9576,5 +9576,23 @@
     "collection": "community",
     "timestamp": "2025-09-18 18:19:09 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-managed-service-for-prometheus-now-includes-native/ba-p/4454254"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the content focuses on integrating and managing local AI models within Visual Studio Code, specifically leveraging Microsoft Foundry Local, AI Toolkit, and related Microsoft AI technologies (AI category rule 1). Assigned 'GitHub Copilot' because the article covers detailed steps for integrating Foundry Local models with GitHub Copilot in VS Code (GitHub Copilot category rules 1, 2, and 3). Added 'Coding' as it is centered on enhancing coding workflows and developer tools (Coding rules 2, 5). Did not apply DevOps, Azure, ML, or Security as the primary focus remains on AI-assisted coding with privacy and local model management in a developer environment.",
+    "timestamp": "2025-09-18 19:11:13 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/foundry/ai-assisted-development-powered-by-local-models/"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category because the article focuses on Microsoft Defender and its impact on organizational security, aligning with Security rule 1. Assigned Azure category because Microsoft Sentinel (an Azure service) is discussed as a central component of the solution, qualifying under Azure rule 1. Assigned AI category due to the repeated emphasis on Defender’s AI-driven insights, automation, and SecOps improvements (AI rule 1, AI rule 5). Coding, DevOps, ML, and GitHub Copilot categories are not included as there is no significant content focusing on software development, DevOps pipelines, machine learning engineering, or GitHub Copilot. The article is not excluded by generic rules, as it is technical, practitioner-focused, primarily in English, and clearly addresses security implementation with Microsoft technologies.",
+    "timestamp": "2025-09-18 19:11:48 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/09/18/microsoft-defender-delivered-242-return-on-investment-over-three-years/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the entire content focuses on improvements and new capabilities in GitHub Actions, a core DevOps automation tool (DevOps rules 2, 3, 5). None of the generic exclusion rules applied: the announcement is technical, not biographical or sales-oriented, and centers on configuration and CI/CD process improvements. No coding, Azure, AI, ML, Security, or GitHub Copilot categories are appropriate, as the content does not cover programming practices, Microsoft-specific cloud services, AI/ML, or security implementation details, nor is it about Copilot features.",
+    "timestamp": "2025-09-18 19:12:10 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-09-18-actions-yaml-anchors-and-non-public-workflow-templates"
   }
 ]
