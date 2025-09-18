@@ -7995,5 +7995,17 @@
     "collection": "posts",
     "timestamp": "2025-09-18 09:14:38 +00:00",
     "reason": "No categories found: All of the content focuses on troubleshooting Microsoft OneNote end-user issues—sync errors, application crashes, sharing issues, etc.—which is strictly about usage and support for a business productivity tool. According to the generic exclusion rules, non-development Microsoft products like Microsoft 365 and OneNote, unless the content is about app development or technical customization, are excluded from categorization. There is no development content (e.g., API usage, add-in creation, developer tool configuration) present, so no categories apply."
+  },
+  {
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/top-7-azure-services-you-didn-t-know-you-needed/m-p/4455066#M22221",
+    "collection": "community",
+    "timestamp": "2025-09-18 12:23:54 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/using-an-ai-agent-to-automate-jira-updates-pr-reviews-and-code/m-p/4455068#M168",
+    "collection": "community",
+    "timestamp": "2025-09-18 12:23:54 +00:00"
   }
 ]
