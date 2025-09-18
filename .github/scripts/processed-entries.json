@@ -9546,5 +9546,23 @@
     "canonical_url": "https://www.youtube.com/watch?v=I39PSkDmfHQ",
     "timestamp": "2025-09-18 16:17:52 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-09-18 17:12:06 +00:00",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2025/09/18/made-in-wisconsin-the-worlds-most-powerful-ai-datacenter/",
+    "reason": "Succesfully added: Assigned 'AI' because the post primarily details the creation and operation of an AI datacenter designed for training state-of-the-art AI models (AI rule 1 and 4). Assigned 'Azure' because the datacenter is clearly associated with Azure cloud infrastructure and services (Azure rule 1 and 4), which is implied in Microsoft's datacenter operations context even without the brand name explicitly used, and the article is on a Microsoft official site. Did not include 'ML' or 'Coding' as there is no detailed coverage of machine learning model development or code-level implementation. 'DevOps' and 'Security' were not assigned as the article covers physical infrastructure and community impact, not CI/CD, developer workflows, or security practices. Generic exclusions do not apply."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-09-18 17:12:32 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-18-copilot-code-review-now-in-jetbrains-ides-and-visual-studio",
+    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories. The content explicitly focuses on a new capability for GitHub Copilot—a developer tool for code review—being available in Visual Studio (Microsoft IDE) and JetBrains IDEs. The announcement is about Copilot code review (AI-powered feedback) and does not relate to business productivity tools, so it's eligible for 'AI' (AI rule 2 and 5) and 'GitHub Copilot' categories (GitHub Copilot rules 1–4). It does not qualify for 'Coding,' 'DevOps,' 'Azure,' 'ML,' or 'Security,' as the content is focused on tooling and workflow enhancement rather than code, cloud, or security techniques."
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-09-18 17:13:12 +00:00",
+    "canonical_url": "https://devops.com/shai-hulud-attacks-shake-software-supply-chain-security-confidence/",
+    "reason": "Succesfully added: Assigned DevOps category because the content focuses on DevOps security practices, CI/CD, and software supply chain issues which fall under DevOps rules 3, 5, and 6. Assigned Security category because the article centers on vulnerability, secure software practices, SBOMs, MFA, and trust issues in software supply chains aligned with Security rules 2, 4, 5, 6, and 7. No Microsoft-specific content appears, so no Azure, AI, Coding, ML, or GitHub Copilot categories apply. The content's core is practical, technical, and actionable, meeting quality and relevance criteria."
   }
 ]
