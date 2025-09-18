@@ -9516,5 +9516,11 @@
     "collection": "community",
     "reason": "Succesfully added: Included Security category because content is centered on identity, access, and directory user management using cloud identity (Entra ID) and discusses permissions, attribute modification, and Microsoft Graph security boundaries (Security rule 1, 3, 9). Did NOT include Azure, DevOps, ML, AI, Coding, GitHub Copilot categories because the content does not focus on those domains (no development, coding, or AI context). Content depth and troubleshooting make it suitable for inclusion according to technical quality standards.",
     "timestamp": "2025-09-18 14:14:59 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/introducing-image-customizer-for-azure-linux/ba-p/4454859",
+    "collection": "community",
+    "timestamp": "2025-09-18 15:13:52 +00:00",
+    "reason": "Succesfully added: The content focuses on technical implementation and usage of a tool for customizing Azure Linux images. Assigned 'Azure' because Image Customizer is for Azure Linux (Azure rule 1, 4). Assigned 'DevOps' because the tool integrates with CI/CD workflows, streamlines image building for deployment, and targets automation and operational best practices (DevOps rules 5 and 6). No 'Coding', 'AI', 'GitHub Copilot', 'ML', or 'Security' because the article is not about writing code, AI/ML features, GitHub Copilot, or implementing security-specific architectures—though dm-verity and OS Guard are mentioned, the primary context is image integrity, not security engineering."
   }
 ]
