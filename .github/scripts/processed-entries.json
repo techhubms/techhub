@@ -9522,5 +9522,29 @@
     "collection": "community",
     "timestamp": "2025-09-18 15:13:52 +00:00",
     "reason": "Succesfully added: The content focuses on technical implementation and usage of a tool for customizing Azure Linux images. Assigned 'Azure' because Image Customizer is for Azure Linux (Azure rule 1, 4). Assigned 'DevOps' because the tool integrates with CI/CD workflows, streamlines image building for deployment, and targets automation and operational best practices (DevOps rules 5 and 6). No 'Coding', 'AI', 'GitHub Copilot', 'ML', or 'Security' because the article is not about writing code, AI/ML features, GitHub Copilot, or implementing security-specific architectures—though dm-verity and OS Guard are mentioned, the primary context is image integrity, not security engineering."
+  },
+  {
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the article focuses entirely on GitHub Copilot's AI-powered coding agent (AI rule 2, Copilot rules 1-6). 'Coding' category applies due to specific development tasks, workflows, and integration with developer tools (Coding rules 1, 4, 5). 'DevOps' is included because the workflows involve pull requests, branch strategies, automation, team collaboration, and improving CI practices (DevOps rules 3, 4, 5, 9). Azure/ML/Security categories are not applied because Azure services, ML development, or Microsoft security services are not covered. Generic exclusion rules do not apply because content is educational, technical, and central to Microsoft developer tools.",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/5-ways-to-integrate-github-copilot-coding-agent-into-your-workflow/",
+    "timestamp": "2025-09-18 16:16:31 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the article focuses on AI automation and AI agent integration in DevOps workflows (AI inclusion rules 1 and 4). 'DevOps' is included as the entire article revolves around the modernization of CI/CD pipelines and DevSecOps practices (DevOps rules 1, 3, 5, 6, and 7). 'Security' is included due to the discussion of AI-driven security vulnerability remediation and DevSecOps integration (Security rules 1, 2, and 5). No Microsoft-specific technologies are central to the story, so 'Azure', 'ML', 'Coding', and 'GitHub Copilot' categories are not applied. The content is not excluded by any generic exclusion rule; it is technical, not promotional or biographical, and maintains a professional tone.",
+    "canonical_url": "https://devops.com/harness-ceo-calls-for-reimagining-of-ci-cd-workflows-in-the-ai-era/",
+    "timestamp": "2025-09-18 16:17:03 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category since the content specifically focuses on Azure Monitor and new health model features (Azure rule 1: Any Azure Service/Technology). Did not assign AI, GitHub Copilot, Coding, DevOps, ML, or Security; content does not address those topics. Tags were extracted based on the main subject—monitoring in Azure, health modeling, and operational terms. Azure is the single qualifying category under the explicit rules.",
+    "canonical_url": "https://www.youtube.com/shorts/uxfqDjRhPeA",
+    "timestamp": "2025-09-18 16:17:28 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Azure' category because the video is focused on Azure Monitor Health Models, a feature within the Azure platform (Azure rule 1). No evidence of significant AI, Coding, DevOps, ML, or Security themes is present in the description or title. The content specifically addresses how Azure Monitor Health Models aggregate monitoring data for operational clarity, so only the appropriate Azure-related tag was assigned. No generic exclusion rules apply since the content is technical and Microsoft-specific.",
+    "canonical_url": "https://www.youtube.com/watch?v=I39PSkDmfHQ",
+    "timestamp": "2025-09-18 16:17:52 +00:00",
+    "collection": "videos"
   }
 ]
