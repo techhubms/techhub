@@ -7989,5 +7989,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=qyGbCfjclCw",
     "reason": "No categories found: All categories have been excluded due to the application of the generic exclusion rules. The content, as described by the title and description, is biographical in nature and primarily focuses on Karuana Gatimu's leadership and experiences at Microsoft Ignite. It lacks substantive technical detail about Microsoft technologies or development practices, and is centered around personal journeys and networking rather than actionable technical knowledge. This matches the 'Biographical Focus' and 'Workplace and Business Focus' exclusions in Chapter 3. The description further confirms this by highlighting experiences, team leadership, and building connections, without any mention of technical implementation, development, or Microsoft technology details."
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-fix-common-onenote-issues-a-complete-troubleshooting-guide/",
+    "collection": "posts",
+    "timestamp": "2025-09-18 09:14:38 +00:00",
+    "reason": "No categories found: All of the content focuses on troubleshooting Microsoft OneNote end-user issues—sync errors, application crashes, sharing issues, etc.—which is strictly about usage and support for a business productivity tool. According to the generic exclusion rules, non-development Microsoft products like Microsoft 365 and OneNote, unless the content is about app development or technical customization, are excluded from categorization. There is no development content (e.g., API usage, add-in creation, developer tool configuration) present, so no categories apply."
   }
 ]

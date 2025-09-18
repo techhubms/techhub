@@ -9486,5 +9486,17 @@
     "collection": "community",
     "timestamp": "2025-09-18 07:14:38 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/build-multi-agent-ai-systems-with-microsoft/ba-p/4454510"
+  },
+  {
+    "canonical_url": "https://dellenny.com/supercharging-your-workflow-using-an-ai-agent-to-automate-jira-updates-pr-reviews-and-code-deployment/",
+    "collection": "posts",
+    "timestamp": "2025-09-18 09:15:08 +00:00",
+    "reason": "Succesfully added: Content qualifies for the AI category because it centers on developing and using AI-powered agents for automation (AI rule 1). Coding is included due to substantial code samples, language references, and integration guides (Coding rules 2, 4, 5). DevOps is included because the workflow involves CI/CD pipelines, deployment automation, pull request reviews, and process orchestration (DevOps rules 2, 5, 6, 10). Azure, ML, and Security categories are not assigned, as there is no Microsoft-specific service usage or machine learning development described. The article is technical and actionable, meeting all quality standards, with no exclusion rules triggered."
+  },
+  {
+    "canonical_url": "https://devops.com/github-mcp-registry-launches-as-central-hub-for-ai-development-tools/",
+    "collection": "posts",
+    "timestamp": "2025-09-18 09:15:41 +00:00",
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' because the piece centers on AI agent integrations, AI-powered workflows, and the Model Context Protocol (AI inclusion rule 1, 4, 5). 'DevOps' is included due to the article's focus on developer workflows, automation, infrastructure as code (Terraform), and toolchain integration (DevOps inclusion rule 3, 5, 6). 'GitHub Copilot' was not added since the central subject is not specifically about Copilot, even though it is referenced as an integrated tool; the coverage remains at the registry/protocol level. Coding, Azure, ML, Security categories don't apply because the main focus is not coding patterns (though Copilot is mentioned, it's part of workflows not a tutorial), and Azure/ML/Security are not substantive to the technical context. All content was in English, and none of the generic exclusion rules apply."
   }
 ]
