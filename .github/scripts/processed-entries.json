@@ -9594,5 +9594,17 @@
     "timestamp": "2025-09-18 19:12:10 +00:00",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-09-18-actions-yaml-anchors-and-non-public-workflow-templates"
+  },
+  {
+    "timestamp": "2025-09-18 21:13:10 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' because the content specifically addresses Copilot premium request budgets and management in enterprise and team settings (GitHub Copilot rule 1, 3, 5). Assigned 'AI' because Copilot is an AI-based developer tool (AI rule 2 and 1). Other categories such as Coding, DevOps, Azure, ML, and Security do not apply because the content is about administrative and billing changes, not technical implementation or coding practices. The content does not trigger any generic exclusion rules as it is not biographical, question-only, sales, negative, too short, non-English, job-focused, business/strategy without technical elements, or focused on non-development Microsoft products.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-09-17-upcoming-removal-of-copilot-premium-request-0-budgets-for-enterprise-and-team-accounts"
+  },
+  {
+    "timestamp": "2025-09-18 21:13:29 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the content describes GitHub Copilot coding agent, an AI-powered development tool (AI inclusion rules 1 & 2). Included 'GitHub Copilot' as content specifically features Copilot and its functionalities (GitHub Copilot rules 1 & 2). Added 'DevOps' because the integration connects task planning (Azure Boards) with automation/developer workflow, aligning with DevOps (DevOps rules 1, 5, and 6). Included 'Azure' because Azure Boards and Azure DevOps are central to the integration (Azure inclusion rule 1).",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-09-18-assign-azure-boards-work-items-to-copilot-coding-agent-in-public-preview"
   }
 ]
