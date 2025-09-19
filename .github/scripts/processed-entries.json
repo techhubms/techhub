@@ -9666,5 +9666,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=qzTqjJECIRk",
     "reason": "Succesfully added: Assigned the AI and GitHub Copilot categories because significant focus is on the integration of AI-powered GitHub Copilot in the coding workflow, as well as how AI supports specification-driven development (AI Rule 2, GitHub Copilot Rule 1). Coding category is included because the core topic is about creating and generating code from specs in Visual Studio Code (Coding Rules 1, 2, and 4). Azure and other categories are not assigned, as there is no specific mention or context related to Azure or Microsoft cloud platforms, DevOps, ML, or Security. The content is technical, developer-focused, and does not trigger any generic exclusion rules.",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-09-19 17:12:24 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the DevOps category because the content addresses CI/CD infrastructure changes, workflow migration, and GitHub Actions runner management, aligning with DevOps rules 2, 5, and 6. No other categories were assigned as the announcement does not cover AI, Coding, Azure, ML, Security, or GitHub Copilot topics. The inclusion is guided by the explicit guidance regarding toolchain and workflow adjustments within GitHub Actions, a central DevOps platform.",
+    "canonical_url": "https://github.blog/changelog/2025-09-19-github-actions-macos-13-runner-image-is-closing-down"
   }
 ]

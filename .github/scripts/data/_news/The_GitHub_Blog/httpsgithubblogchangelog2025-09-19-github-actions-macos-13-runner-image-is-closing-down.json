@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "actions",
+    "Retired"
+  ],
+  "Link": "https://github.blog/changelog/2025-09-19-github-actions-macos-13-runner-image-is-closing-down",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog",
+  "EnhancedContent": "The macOS 13 runner image will be retired by December 4th, 2025. To raise awareness of the upcoming removal, jobs using macOS 13 will temporarily fail during the scheduled brownout time periods defined below:\n\n- November 4, 14:00 UTC to November 5, 00:00 UTC\n- November 11, 14:00 UTC to November 12, 00:00 UTC\n- November 18, 14:00 UTC to November 19, 00:00 UTC\n- November 25, 14:00 UTC to November 26, 00:00 UTC\n\nThis deprecation includes the following labels:\n\n– `macos-13`\n\n– `macos-13-large`\n\n– `macos-13-xlarge`\n\n### What you need to do\n\n(Recommended) If your workflow is architecture agnostic, you can migrate to any of our arm64 labels:\n\n– `macos-15` or `macos-latest`\n\n– `macos-14`\n\n– `macos-14-xlarge`\n\n– `macos-latest-xlarge` or `macos-15-xlarge`\n\nFor users that require the x86\\_64 (Intel) architecture, we have added a new label to support standard runner users. Jobs can be migrated to one of the following labels:\n\n– `macos-15-intel` (new)\n\n– `macos-14-large`\n\n– `macos-latest-large` or `macos-15-large`\n\nFor more information, please visit the [runner images repository](https://github.com/actions/runner-images/labels/Announcement).\n\n### Notice of macOS x86_64 (Intel) architecture deprecation\n\nApple has discontinued support for the x86\\_64 (Intel) architecture. GitHub will no longer support this architecture on macOS after the macOS 15 runner image is retired in Fall 2027. You should begin migrating your workloads to arm64-based (Apple Silicon) runners as soon as possible to prepare for this eventual deprecation.",
+  "Description": "The macOS 13 runner image will be retired by December 4th, 2025. To raise awareness of the upcoming removal, jobs using macOS 13 will temporarily fail during the scheduled brownout…\n\nThe post [GitHub Actions: macOS 13 runner image is closing down](https://github.blog/changelog/2025-09-19-github-actions-macos-13-runner-image-is-closing-down) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Larissa Fortuna",
+  "Title": "GitHub Actions: macOS 13 runner image is closing down",
+  "ProcessedDate": "2025-09-19 17:10:24",
+  "PubDate": "2025-09-19T16:21:39+00:00"
+}

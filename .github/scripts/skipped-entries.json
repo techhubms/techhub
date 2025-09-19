@@ -8037,5 +8037,53 @@
     "canonical_url": "https://devops.com/building-end-to-end-trust-in-the-software-supply-chain/",
     "reason": "No categories found: No categories assigned. The content primarily discusses JFrog's AppTrust and JFrog Fly, both of which are proprietary JFrog technologies. While MCP (Model Context Protocol) and references to 'AI-era DevOps' are mentioned, the article does not present any in-depth content, examples, or implementation details relating to Microsoft technologies as required by the Multi-Platform Content Threshold—there is no Azure, GitHub, Microsoft AI platform, or related dev/devops tool usage. Most of the content is about vendor-agnostic or JFrog-proprietary approaches for securing the software supply chain with agentic AI. Generic exclusion applies: core Microsoft development technologies do not comprise ≥40% of the content nor are they central to the solution.",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-19 16:16:27 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: All content focuses on security best practices for non-IT users of Microsoft 365, covering topics like MFA, phishing, permissions, device updates, and reporting suspicious activity. However, per the Generic Exclusion Rules (Chapter 3), content primarily about non-development Microsoft 365 features for regular users—including productivity, collaboration, and basic security hygiene with no development, coding, or technical configuration focus—is excluded. The post is general audience security awareness, not technical or development-focused, so no categories apply.",
+    "canonical_url": "https://dellenny.com/microsoft-365-security-made-simple-what-non-it-teams-must-know/"
+  },
+  {
+    "timestamp": "2025-09-19 16:16:41 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: All content focuses on the usage, benefits, and implementation of Microsoft 365, Teams, SharePoint, Power Automate, and Power BI in the context of remote healthcare collaboration, patient engagement, and administrative streamlining. However, there is no discussion of development, coding, customization, Microsoft 365 development, API usage, bot development, or architecture patterns relevant to developers or technical implementers. The content is primarily targeting healthcare professionals and decision-makers, highlighting productivity, compliance, and business outcomes rather than any hands-on technical, developer-focused, or code-oriented guidance. This falls under the generic exclusion rule for 'Non-Development Microsoft Products' and 'Business Strategy and Executive Content' (see Chapter 3 - Non-Development Microsoft Products, Business Strategy, and Executive Content). Therefore, no categories are assigned.",
+    "canonical_url": "https://dellenny.com/transforming-remote-healthcare-collaboration-with-microsoft-365/"
+  },
+  {
+    "timestamp": "2025-09-19 16:16:55 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: All content focuses on the adoption and benefits of Microsoft 365 in compliance-heavy industries (law, finance, healthcare) from an operational and business productivity standpoint. The article does not cover development or technical implementation details related to coding, DevOps, security configurations, custom app/extensions, Microsoft cloud deployments, or technical solutions. The text showcases M365's compliance features, collaboration tools, and best practices for configuring out-of-the-box settings (MFA, RBAC, DLP, etc.), but does not go into technically detailed implementations or development. According to the Generic Exclusion Rules (Non-Development Microsoft Products), content primarily about business productivity or end-user features of Office 365/Microsoft 365 is excluded unless it specifically covers development, customization, or deep technical implementation. Therefore, no categories apply.",
+    "canonical_url": "https://dellenny.com/using-microsoft-365-for-law-firms-and-compliance-heavy-industries/"
+  },
+  {
+    "timestamp": "2025-09-19 16:17:14 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the content is not primarily in English (<80% English in main text). The title, description, and event information are entirely in Spanish, which violates the non-English content exclusion under generic exclusion rules.",
+    "canonical_url": "https://www.youtube.com/watch?v=6bD7H1gXyVM"
+  },
+  {
+    "timestamp": "2025-09-19 16:20:22 +00:00",
+    "collection": "videos",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 400 (Bad Request).",
+    "canonical_url": "https://www.youtube.com/watch?v=LLih8bO_bCA"
+  },
+  {
+    "timestamp": "2025-09-19 16:20:36 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the content is a short video (as indicated by the title '#shorts' and 'type':'videos') centering on a developer being asked a 'favorite security bug'. There is no substantive technical implementation, educational content, or detailed security discussion present. The description references an anecdote or quirky bug but lacks actionable technical guidance or depth required by the category inclusion rules. Additionally, with only a brief promotional link and generic tags, this is excluded by the business/biographical focus and lack of technical depth per the generic exclusion rules.",
+    "canonical_url": "https://www.youtube.com/shorts/HtFL2dGW9qU"
+  },
+  {
+    "timestamp": "2025-09-19 16:20:49 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this is a short-format Q&A video primarily focused on a developer's personal 'favorite security bug,' with no substantive technical depth, code, or practical guidance related to Microsoft technologies. Additionally, there is no actual content provided (content field is null), so it's not possible to assess for technical implementation details or category inclusion. Exclusion is based on both biographical focus and lack of substantive technical content.",
+    "canonical_url": "https://www.youtube.com/watch?v=j25d-lSp-rs"
+  },
+  {
+    "timestamp": "2025-09-19 17:12:38 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/avd-remoteapp-disconnects-after-sleep-any-way-to-mimic-citrix/m-p/4455458#M13911"
   }
 ]

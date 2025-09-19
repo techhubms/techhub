@@ -1,0 +1,16 @@
+{
+  "OutputDir": "_videos",
+  "PubDate": "2025-09-19T15:35:24+00:00",
+  "Description": "We asked Michael Howard what his all-time favorite security bug is. His pick involves a quirky problem with the letter “i” in the Turkish locale—and it’s a reminder of how tricky input validation can get.\n\nMore from Michael: https://msft.it/6053sW79v\n\n#OneDevQuestion",
+  "Author": "Microsoft Developer",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Tags": [
+    "OneDevQuestion"
+  ],
+  "FeedName": "Microsoft Developer YouTube",
+  "ProcessedDate": "2025-09-19 17:11:32",
+  "Title": "What's your favority security bug?",
+  "Link": "https://www.youtube.com/watch?v=j25d-lSp-rs"
+}
