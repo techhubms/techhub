@@ -8019,5 +8019,11 @@
     "timestamp": "2025-09-18 22:11:52 +00:00",
     "reason": "No categories found: Content excluded due to lack of substantive technical information and violation of generic exclusion rules. The description ('Let's keeping hacking on our project and using mcp server. The repo to the project is here: https://gh.io/advocatehub') does not provide enough technical detail to assess relevance to Microsoft technologies or any category inclusion rules. Additionally, the content is null and contains only a promotional call to action with a link—this resembles a link-sharing or event announcement format without educational or technical depth. As per the generic exclusion rules (focus on actual content, not navigation or superficial event announcements), no categories are assigned.",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/burst-b-series-vms/m-p/4455385#M22225",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-09-19 10:17:25 +00:00"
   }
 ]
