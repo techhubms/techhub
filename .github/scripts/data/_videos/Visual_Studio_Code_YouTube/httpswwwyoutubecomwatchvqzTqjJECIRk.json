@@ -1,0 +1,18 @@
+{
+  "Title": "Let it Cook - More Spec Kit for Spec-Driven Development with Den",
+  "Link": "https://www.youtube.com/watch?v=qzTqjJECIRk",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Description": "Den comes back on to show us how to cook with the new Spec-Kit project: https://github.com/github/spec-kit. Spec-Driven Development flips the script on traditional software development. For decades, code has been king — specifications were just scaffolding we built and discarded once the \"real work\" of coding began. Spec-Driven Development changes this: specifications become executable, directly generating working implementations rather than just guiding them. Let's take a look at is live with Den!\n\n🔗 Community Links: https://github.com/github/spec-kit 🔗 Blog: https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/\n\n🎙️ Featuring: James Montemagno (@JamesMontemagno), Burke Holland (@BurkeHolland), Pierce Boggan (@pierceboggan), and Den Delimarsky\n\n#speckit #vscode #githubcopilot",
+  "PubDate": "2025-09-19T14:37:29+00:00",
+  "OutputDir": "_videos",
+  "Tags": [
+    "githubcopilot",
+    "speckit",
+    "vscode"
+  ],
+  "FeedName": "Visual Studio Code YouTube",
+  "ProcessedDate": "2025-09-19 15:12:32",
+  "EnhancedContent": null,
+  "Author": "Visual Studio Code",
+  "FeedLevelAuthor": "Visual Studio Code"
+}

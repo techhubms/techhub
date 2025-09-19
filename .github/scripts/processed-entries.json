@@ -9648,5 +9648,23 @@
     "timestamp": "2025-09-19 13:24:30 +00:00",
     "collection": "posts",
     "reason": "Succesfully added: Assigned 'DevOps' because the article centrally discusses trends, practices, and models in DevOps, particularly the evolution from DIY platforms to DevOps-as-a-Service (category inclusion: DevOps rules 1, 3, 4, 5, 6). Assigned 'AI' because the article highlights AI-driven agents and automation within DevOps-as-a-Service as an emerging model (AI inclusion rule 5), with several references to AI's impact on pipeline orchestration and problem remediation. Did not assign Azure, Coding, ML, Security, or GitHub Copilot because the article does not discuss Microsoft-specific cloud offerings, software languages, custom programming, machine learning/data science implementations, security-focused features, or any GitHub-specific tools. The content remains high-level and strategic regarding DevOps platform and service trends, while mentioning AI as a key differentiator."
+  },
+  {
+    "timestamp": "2025-09-19 15:14:16 +00:00",
+    "canonical_url": "https://devops.com/empowering-secure-agentic-software-delivery/",
+    "reason": "Succesfully added: Assigned AI category because the content discusses AI-driven DevOps, AI agents, and the MCP protocol (AI category inclusion rules 1 and 4). Assigned DevOps category as the entire piece focuses on software delivery themes, automation, and workflows central to DevOps practices (DevOps rules 1, 3, 5). Assigned Security due to the repeated emphasis on governance, compliance, validation, traceability, and supply chain security (Security rules 1, 2, 4). There is no Microsoft-specific technology referenced, but according to the multi-platform content threshold, the absence of Microsoft content does not disqualify if general category rules are satisfied for AI/DevOps/Security. Generic exclusions (e.g., biographical, sales, non-English, etc.) do not apply—this is substantial, technical, and industry-relevant content.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-19 15:14:49 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Umvbk3sBXn8",
+    "reason": "Succesfully added: Assigned 'Azure' category because the content exclusively covers updates and new features across Microsoft Azure services and platforms (Azure rule 1). Assigned 'DevOps' because several updates relate to service orchestration, deployment automation, AKS, Fleet Manager, and infrastructure management (DevOps rules 1, 5, and 6). Assigned 'Coding' because there are development-relevant details such as .NET 10 support in Azure Functions, distributed tracing, and Databricks updates (Coding rule 1 & 2). No AI, ML, Security, or GitHub Copilot categories were directly applicable based on the content, as there are no major themes around AI/ML implementation or deep-dive security workflows. The tags prioritize relevant Azure services and technical focus, and the explanation fields directly reference inclusion rule triggers.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-09-19 15:15:14 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=qzTqjJECIRk",
+    "reason": "Succesfully added: Assigned the AI and GitHub Copilot categories because significant focus is on the integration of AI-powered GitHub Copilot in the coding workflow, as well as how AI supports specification-driven development (AI Rule 2, GitHub Copilot Rule 1). Coding category is included because the core topic is about creating and generating code from specs in Visual Studio Code (Coding Rules 1, 2, and 4). Azure and other categories are not assigned, as there is no specific mention or context related to Azure or Microsoft cloud platforms, DevOps, ML, or Security. The content is technical, developer-focused, and does not trigger any generic exclusion rules.",
+    "collection": "videos"
   }
 ]

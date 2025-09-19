@@ -8025,5 +8025,17 @@
     "reason": "Insufficient content length",
     "collection": "community",
     "timestamp": "2025-09-19 10:17:25 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-credit/m-p/4455420#M22226",
+    "collection": "community",
+    "timestamp": "2025-09-19 14:12:43 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-09-19 15:13:52 +00:00",
+    "canonical_url": "https://devops.com/building-end-to-end-trust-in-the-software-supply-chain/",
+    "reason": "No categories found: No categories assigned. The content primarily discusses JFrog's AppTrust and JFrog Fly, both of which are proprietary JFrog technologies. While MCP (Model Context Protocol) and references to 'AI-era DevOps' are mentioned, the article does not present any in-depth content, examples, or implementation details relating to Microsoft technologies as required by the Multi-Platform Content Threshold—there is no Azure, GitHub, Microsoft AI platform, or related dev/devops tool usage. Most of the content is about vendor-agnostic or JFrog-proprietary approaches for securing the software supply chain with agentic AI. Generic exclusion applies: core Microsoft development technologies do not comprise ≥40% of the content nor are they central to the solution.",
+    "collection": "posts"
   }
 ]
