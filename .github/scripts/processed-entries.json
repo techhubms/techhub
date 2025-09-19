@@ -9642,5 +9642,11 @@
     "collection": "posts",
     "canonical_url": "https://devops.com/from-legacy-to-gitops-a-roadmap-for-enterprise-modernization/",
     "timestamp": "2025-09-19 11:11:32 +00:00"
+  },
+  {
+    "canonical_url": "https://devops.com/is-the-future-of-devops-daas/",
+    "timestamp": "2025-09-19 13:24:30 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned 'DevOps' because the article centrally discusses trends, practices, and models in DevOps, particularly the evolution from DIY platforms to DevOps-as-a-Service (category inclusion: DevOps rules 1, 3, 4, 5, 6). Assigned 'AI' because the article highlights AI-driven agents and automation within DevOps-as-a-Service as an emerging model (AI inclusion rule 5), with several references to AI's impact on pipeline orchestration and problem remediation. Did not assign Azure, Coding, ML, Security, or GitHub Copilot because the article does not discuss Microsoft-specific cloud offerings, software languages, custom programming, machine learning/data science implementations, security-focused features, or any GitHub-specific tools. The content remains high-level and strategic regarding DevOps platform and service trends, while mentioning AI as a key differentiator."
   }
 ]
