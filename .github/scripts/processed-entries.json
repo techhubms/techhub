@@ -9684,5 +9684,11 @@
     "collection": "news",
     "timestamp": "2025-09-19 19:11:52 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/disciplined-guardrail-development-in-enterprise-application-with/ba-p/4455321",
+    "timestamp": "2025-09-19 20:16:01 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' category because the entire content revolves around advanced usage of GitHub Copilot, including configuration, custom instructions, and chat modes (GitHub Copilot rule 1, 2, 3, 4). Assigned 'AI' because the guide focuses on leveraging large language models (LLMs), AI-assisted development techniques, and prompt engineering for software creation (AI rules 1, 4, 5). Assigned 'Coding' due to detailed coverage of best practices for architecture, coding standards, and developer workflows (Coding rules 2, 4, 5). Assigned 'DevOps' because the article addresses process flows, quality control, and team practices (DevOps rules 3, 4, 5, 9). The content contains actionable, technical detail for practitioners, with no business/productivity focus and well above community content minimum word count."
   }
 ]
