@@ -9672,5 +9672,11 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned the DevOps category because the content addresses CI/CD infrastructure changes, workflow migration, and GitHub Actions runner management, aligning with DevOps rules 2, 5, and 6. No other categories were assigned as the announcement does not cover AI, Coding, Azure, ML, Security, or GitHub Copilot topics. The inclusion is guided by the explicit guidance regarding toolchain and workflow adjustments within GitHub Actions, a central DevOps platform.",
     "canonical_url": "https://github.blog/changelog/2025-09-19-github-actions-macos-13-runner-image-is-closing-down"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the article is specifically about GitHub Copilot coding agent usage and integration (AI Inclusion Rule 2, GitHub Copilot Inclusion Rule 1). 'Coding' was added since the tool is used for code-related tasks such as generating pull requests, bug fixes, and feature implementation (Coding Inclusion Rule 4). 'Azure', 'DevOps', 'ML', and 'Security' were not assigned as the content focuses on code writing automation in Teams, not on Azure services, DevOps pipelines, data science, or security implementation. The mention of Microsoft Teams pertains to workflow integration, not a development focus for Teams itself. All Copilot references are for the developer GitHub Copilot tool, not Microsoft 365 Copilot, matching Copilot product distinction rules.",
+    "canonical_url": "https://github.blog/changelog/2025-09-19-work-with-copilot-coding-agent-in-microsoft-teams",
+    "timestamp": "2025-09-19 18:17:31 +00:00"
   }
 ]

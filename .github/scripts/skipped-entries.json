@@ -8085,5 +8085,11 @@
     "collection": "community",
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/avd-remoteapp-disconnects-after-sleep-any-way-to-mimic-citrix/m-p/4455458#M13911"
+  },
+  {
+    "collection": "posts",
+    "reason": "No categories found: All category arrays are left empty because the content is about Zencoder's AI coding agent, which is not a Microsoft technology or ecosystem product. Neither the description nor the content reference any Microsoft technology, framework, service, or developer tool. There is no mention of Azure, GitHub, Visual Studio, .NET, or any other Microsoft-specific development or cloud offerings. According to the multi-platform content threshold, content must have Microsoft technology as central or at least 40% substantive—this post is about a non-Microsoft product (Zencoder). Therefore, no categories are assigned.",
+    "canonical_url": "https://devops.com/zencoder-adds-cli-edition-of-ai-agent-that-generates-code/",
+    "timestamp": "2025-09-19 18:17:48 +00:00"
   }
 ]
