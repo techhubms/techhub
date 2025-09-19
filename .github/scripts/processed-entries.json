@@ -9690,5 +9690,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/disciplined-guardrail-development-in-enterprise-application-with/ba-p/4455321",
     "timestamp": "2025-09-19 20:16:01 +00:00",
     "reason": "Succesfully added: Assigned 'GitHub Copilot' category because the entire content revolves around advanced usage of GitHub Copilot, including configuration, custom instructions, and chat modes (GitHub Copilot rule 1, 2, 3, 4). Assigned 'AI' because the guide focuses on leveraging large language models (LLMs), AI-assisted development techniques, and prompt engineering for software creation (AI rules 1, 4, 5). Assigned 'Coding' due to detailed coverage of best practices for architecture, coding standards, and developer workflows (Coding rules 2, 4, 5). Assigned 'DevOps' because the article addresses process flows, quality control, and team practices (DevOps rules 3, 4, 5, 9). The content contains actionable, technical detail for practitioners, with no business/productivity focus and well above community content minimum word count."
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content is centered on an AI-powered tool (GitHub Copilot) in developer workflows, matching AI inclusion rules 1 and 2. 'GitHub Copilot' category is included since the app's main feature is the integration of Copilot (GitHub Copilot rules 1-3), and the article details its operation as a developer tool. The DevOps category applies given the integration with GitHub and Teams to support development workflow automation, pull requests, and team collaboration (DevOps rules 1, 3, 5). Coding is included because the app supports writing and reviewing code, bug resolution, and other developer tasks (Coding rules 2, 4, and 5). Exclusion rules do not apply: the content is not about business productivity tools, non-technical features, or non-development products, and it meets all quality and technical relevance checks.",
+    "canonical_url": "https://devblogs.microsoft.com/microsoft365dev/copilot-powered-github-app-for-teams-preview/",
+    "timestamp": "2025-09-19 22:13:14 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the content highlights AI-assisted development with GitHub Copilot (AI rule 2 and 5). Included 'GitHub Copilot' because the session specifically covers its usage (GitHub Copilot rule 1). Added 'Coding' since the focus is on adopting these tools in software development workflows (Coding rules 2 and 4). The title, description, and tags are all relevant and tied directly to the integration of AI tools in coding environments. The absence of the full content does not affect category assignment, as the provided description is sufficiently detailed.",
+    "canonical_url": "https://www.youtube.com/watch?v=ujSgVqC94TQ",
+    "timestamp": "2025-09-19 22:14:00 +00:00",
+    "collection": "videos"
   }
 ]

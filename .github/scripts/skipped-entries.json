@@ -8091,5 +8091,11 @@
     "reason": "No categories found: All category arrays are left empty because the content is about Zencoder's AI coding agent, which is not a Microsoft technology or ecosystem product. Neither the description nor the content reference any Microsoft technology, framework, service, or developer tool. There is no mention of Azure, GitHub, Visual Studio, .NET, or any other Microsoft-specific development or cloud offerings. According to the multi-platform content threshold, content must have Microsoft technology as central or at least 40% substantive—this post is about a non-Microsoft product (Zencoder). Therefore, no categories are assigned.",
     "canonical_url": "https://devops.com/zencoder-adds-cli-edition-of-ai-agent-that-generates-code/",
     "timestamp": "2025-09-19 18:17:48 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. Per the strict Copilot Product Distinction rules in Chapter 2, Microsoft 365 Copilot, Copilot for Microsoft 365, and general Copilot/AI features targeting workplace collaboration, team productivity, or business users are specifically excluded. This content focuses on collaborative AI agents within Microsoft 365 Copilot, Teams, SharePoint, and Viva Engage, emphasizing workflow enhancement, meetings, and business communication—not coding, DevOps, development tools, or technical architecture. Therefore, none of the inclusion categories ('AI', 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', 'Security') are applicable, and generic exclusion rules for non-development Microsoft products directly apply.",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-365/blog/2025/09/18/microsoft-365-copilot-enabling-human-agent-teams/",
+    "timestamp": "2025-09-19 22:13:27 +00:00",
+    "collection": "news"
   }
 ]
