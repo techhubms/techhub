@@ -9678,5 +9678,11 @@
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the article is specifically about GitHub Copilot coding agent usage and integration (AI Inclusion Rule 2, GitHub Copilot Inclusion Rule 1). 'Coding' was added since the tool is used for code-related tasks such as generating pull requests, bug fixes, and feature implementation (Coding Inclusion Rule 4). 'Azure', 'DevOps', 'ML', and 'Security' were not assigned as the content focuses on code writing automation in Teams, not on Azure services, DevOps pipelines, data science, or security implementation. The mention of Microsoft Teams pertains to workflow integration, not a development focus for Teams itself. All Copilot references are for the developer GitHub Copilot tool, not Microsoft 365 Copilot, matching Copilot product distinction rules.",
     "canonical_url": "https://github.blog/changelog/2025-09-19-work-with-copilot-coding-agent-in-microsoft-teams",
     "timestamp": "2025-09-19 18:17:31 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Applied the DevOps category because the announcement revolves around GitHub Actions runners, CI/CD process changes, and workflow/environment variable management (DevOps inclusion rules 2, 5, 6). Coding, AI, Azure, Security, and ML categories do not apply as the content is exclusively about DevOps pipeline infrastructure and version migration, not code development or Microsoft cloud services. No generic exclusion rules apply, as this is a technical announcement and not biographical, business-focused, or negative.",
+    "collection": "news",
+    "timestamp": "2025-09-19 19:11:52 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners"
   }
 ]
