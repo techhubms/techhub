@@ -9702,5 +9702,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=ujSgVqC94TQ",
     "timestamp": "2025-09-19 22:14:00 +00:00",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/azure-migrate-connected-experiences/ba-p/4454927",
+    "timestamp": "2025-09-20 23:13:50 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category because the core content is about Azure Migrate and related Azure services (Azure inclusion rule 1). Assigned AI category because the agentic method uses AI-driven assessment and automation (AI inclusion rules 1 and 4). Assigned Security category because of detailed coverage of built-in security features such as Private Link, Key Vault integration, Defender for Cloud, and vulnerability management (Security rules 1, 3, 5, 9). Assigned DevOps because of the focus on migration processes, Infrastructure as Code (IaC), integration with GitHub Copilot, and platform automation (DevOps rules 1, 6, and 11). GitHub Copilot is mentioned in an integration context, but the primary focus is not on Copilot features, so only the generic DevOps and Azure categories are assigned, not 'GitHub Copilot'. No Coding or ML assigned because the content is not about software development or machine learning implementation."
   }
 ]

@@ -8097,5 +8097,29 @@
     "canonical_url": "https://www.microsoft.com/en-us/microsoft-365/blog/2025/09/18/microsoft-365-copilot-enabling-human-agent-teams/",
     "timestamp": "2025-09-19 22:13:27 +00:00",
     "collection": "news"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-09-20 08:16:15 +00:00",
+    "reason": "No categories found: No categories were assigned because, while the article explores advanced usage of Microsoft Lists (a Microsoft 365 product), it focuses on end-user automation and customization (not developer-oriented SharePoint/Lists development, Coding, DevOps, or Security). The workflow automation is tailored for business users via Power Automate, not for custom code or technical developer solutions. According to the exclusion rules, content about non-development Microsoft 365 features is excluded unless there’s a focus on actual development or engineering of solutions (not present here). Thus, no predefined technical categories apply.",
+    "canonical_url": "https://dellenny.com/deep-dive-into-microsoft-lists-advanced-formatting-and-automation/"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-personalize-your-windows-11-desktop-like-a-pro/",
+    "collection": "posts",
+    "reason": "No categories found: No categories were assigned because the content is focused on end-user customization and personal productive use of Windows 11, not on software development, coding, Microsoft programming frameworks, DevOps, AI/ML, security, or Azure/cloud architecture. This follows the generic exclusion rule for non-development Microsoft products (including Windows OS personalization guides and business/user features). The tutorial is for customizing user interface aspects of Windows 11 and does not discuss development, scripting, programming, or deployment of applications.",
+    "timestamp": "2025-09-20 14:11:43 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/gDDyhhnExMM",
+    "collection": "videos",
+    "reason": "No categories found: Excluded all categories because there is no substantive content to analyze: the 'content' field is null, and both 'description' and 'tags' fields are empty. Without any actual content to process, it's not possible to determine if the video qualifies for any Microsoft technology categories. Following the workflow, generic exclusion rules require focusing on the main content and not fabricating information, so no categories can be assigned.",
+    "timestamp": "2025-09-20 14:12:03 +00:00"
+  },
+  {
+    "timestamp": "2025-09-20 16:14:07 +00:00",
+    "canonical_url": "https://dellenny.com/how-to-enable-and-personalize-dark-mode-on-any-device/",
+    "collection": "posts",
+    "reason": "No categories found: No categories were assigned because the content focuses on general user interface personalization (Dark Mode) across multiple consumer devices and apps, including iOS, Android, macOS, and Windows, without any technical depth related to Microsoft development, coding, DevOps, AI, ML, Azure, or security. The content does not address programming, developer tooling, architectural practices, or implementation details for Microsoft technologies. It is aimed at end-users and lacks any relevant Microsoft technology development context as required by the inclusion rules."
   }
 ]
