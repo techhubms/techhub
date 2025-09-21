@@ -8121,5 +8121,17 @@
     "canonical_url": "https://dellenny.com/how-to-enable-and-personalize-dark-mode-on-any-device/",
     "collection": "posts",
     "reason": "No categories found: No categories were assigned because the content focuses on general user interface personalization (Dark Mode) across multiple consumer devices and apps, including iOS, Android, macOS, and Windows, without any technical depth related to Microsoft development, coding, DevOps, AI, ML, Azure, or security. The content does not address programming, developer tooling, architectural practices, or implementation details for Microsoft technologies. It is aimed at end-users and lacks any relevant Microsoft technology development context as required by the inclusion rules."
+  },
+  {
+    "canonical_url": "https://dellenny.com/creating-custom-themes-wallpapers-in-windows-11/",
+    "collection": "posts",
+    "timestamp": "2025-09-21 08:15:09 +00:00",
+    "reason": "No categories found: Content is excluded due to generic exclusion rules—specifically, it describes end-user personalization of Windows 11 through theme and wallpaper customization. According to the rules, content focused on non-development Microsoft products or features (such as user customization, desktop personalization, and visual styling in Windows 11) is not included unless there is a substantial development or coding aspect. The article is a user guide for personalizing a desktop and does not address technical development, coding, security, DevOps, or AI/ML engineering topics."
+  },
+  {
+    "canonical_url": "https://dellenny.com/windows-11-privacy-settings-you-should-change-right-now/",
+    "collection": "posts",
+    "reason": "No categories found: No categories assigned because the content is focused on end-user privacy settings and consumer configuration for Windows 11, rather than development, programming, engineering, or technical implementation details related to Microsoft developer/enterprise technologies. This article is a guide for adjusting Windows 11 privacy preferences, which is classified as end-user product usage and does not fit any of the inclusion rules for categories such as AI, GitHub Copilot, Coding, DevOps, Azure, ML, or Security in a developer context. Per generic exclusion rules for non-development products and content, as well as the focus on configuration rather than implementation, all categories are excluded.",
+    "timestamp": "2025-09-21 14:11:17 +00:00"
   }
 ]
