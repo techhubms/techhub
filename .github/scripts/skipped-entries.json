@@ -8145,5 +8145,41 @@
     "canonical_url": "https://devops.com/five-great-devops-job-opportunities-157/",
     "timestamp": "2025-09-22 06:19:50 +00:00",
     "collection": "posts"
+  },
+  {
+    "reason": "No categories found: No categories assigned because Microsoft technologies are not central to the solution. The entire post focuses exclusively on AWS services for generative AI (Amazon Bedrock, SageMaker, S3, AWS Glue, Trainium, Inferentia, etc.). There is no substantial content about Microsoft Azure, Microsoft AI services, or any other Microsoft technology. According to the Multi-Platform Content Threshold, to qualify for any category, Microsoft technologies must comprise ≥40% of substantive content or be central to the solution. Additionally, inclusion rules specify that content about non-Microsoft platforms (AWS) without meaningful Microsoft coverage receives no categories.",
+    "canonical_url": "https://dellenny.com/understanding-aws-generative-ai-fundamentals/",
+    "timestamp": "2025-09-22 09:18:57 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-use-google-forms-and-sheets-to-manage-your-business/",
+    "timestamp": "2025-09-22 10:15:45 +00:00",
+    "reason": "No categories found: No categories assigned because the content solely focuses on Google Forms and Google Sheets, which are Google technologies and not Microsoft products. Per the Multi-Platform Content Threshold and Category Inclusion Rules, Microsoft technologies must constitute at least 40% or be central to the solution for categorization. There are no references to Microsoft platforms (such as Azure, Power Platform, Microsoft 365, etc.), nor any content about development, coding, AI, ML, DevOps, or Security within the Microsoft ecosystem. Therefore, this content does not qualify for any categories.",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/the-small-business-guide-to-managing-customers-with-microsoft-365/",
+    "timestamp": "2025-09-22 10:15:58 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The content is focused on end-user features and business productivity use cases for Microsoft 365 (Outlook, Teams, Forms, Lists, Bookings, OneDrive, SharePoint, Power Automate, etc.), targeting small business owners and not developers or technical practitioners. It does not cover development, coding, DevOps, AI/ML, or technical configuration/architecture. As per non-development Microsoft products exclusion, general end-user/business usage of Microsoft 365 is not included unless the article focuses on development or technical implementation. Therefore, no categories are assigned.",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-ai-studio-azure-ai-foundry-a-powerful-platform-for/m-p/4455870#M22237",
+    "timestamp": "2025-09-22 10:16:07 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/generative-ai-in-azure-a-practical-guide-to-getting-started/m-p/4455869#M22236",
+    "timestamp": "2025-09-22 10:16:08 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-09-22 17:12:40 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/jNMme-todUI",
+    "reason": "No categories found: Content excluded due to insufficient substantive content provided (content field is null). There is not enough detailed technical information, discussion, or instruction to evaluate for category inclusion. Generic exclusion rules require actual content for assessment; title and description alone are insufficient. As such, no categories are applied."
   }
 ]

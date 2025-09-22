@@ -1,0 +1,18 @@
+{
+  "ProcessedDate": "2025-09-22 17:10:49",
+  "Author": "Allison",
+  "Link": "https://github.blog/changelog/2025-09-22-visualize-metered-usage-by-organization-in-github-enterprise-cloud",
+  "FeedName": "The GitHub Blog",
+  "OutputDir": "_news",
+  "Title": "Visualize GitHub Enterprise metered usage by organization",
+  "PubDate": "2025-09-22T14:22:35+00:00",
+  "Description": "Starting October 1, 2025, GitHub Enterprise Cloud (GHEC) metered usage will include details about which organization is billed for each GHEC license. With this update, enterprise owners and billing managers…\n\nThe post [Visualize GitHub Enterprise metered usage by organization](https://github.blog/changelog/2025-09-22-visualize-metered-usage-by-organization-in-github-enterprise-cloud) appeared first on [The GitHub Blog](https://github.blog).",
+  "Tags": [
+    "account management",
+    "enterprise management tools",
+    "Improvement"
+  ],
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "EnhancedContent": "Starting October 1, 2025, GitHub Enterprise Cloud (GHEC) metered usage will include details about which organization is billed for each GHEC license. With this update, enterprise owners and billing managers can visualize GHEC metered usage by organization throughout the billing experience.\n\n### What’s changing\n\n- GHEC metered usage is now included in the “Usage by organization” tile on the **Billing and licensing &gt; Overview** page. Previously, this usage was classified as “All other orgs”.\n- On the **Metered usage** page, GHEC metered usage is attributed to organizations when grouping by organization. Previously, this usage appeared as “All other”.\n- The organization column in the metered billing usage reports now shows data for GHEC usage.\n- The usage API now contains organization name for GHEC usage.\n- GHEC metered usage is attributed to cost centers when the organization is a resource of the cost center, allowing for automatic cost center assignment of license-based usage by organization.\n\n### What you should know\n\n- For users that belong to more than one organization within a given enterprise, the oldest organization will be selected.\n- This change will only apply to usage beginning October 1, 2025. Historical data will not be backfilled.\n\nIf you have questions or feedback about this change, join the discussion in the [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}

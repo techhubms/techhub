@@ -1,0 +1,22 @@
+{
+  "FeedName": "Microsoft Developer YouTube",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Link": "https://www.youtube.com/shorts/jNMme-todUI",
+  "Author": "Microsoft Developer",
+  "PubDate": "2025-09-22T16:30:19+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "Description": "At Microsoft Build 2025, we asked attendees and some special guests about developer security. Learn more about developer security and the Secure Future Initiative at https://msft.it/6056sDed0\n\n#shorts #developersecurity #securefutureinitiative",
+  "ProcessedDate": "2025-09-22 17:11:15",
+  "EnhancedContent": null,
+  "Title": "Should people build threat models?"
+}
