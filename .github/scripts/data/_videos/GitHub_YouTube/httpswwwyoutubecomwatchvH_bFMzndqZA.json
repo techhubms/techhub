@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "FeedName": "GitHub YouTube",
+  "Title": "Open Source Friday: Mockoon – Run mock APIs locally",
+  "FeedLevelAuthor": "GitHub",
+  "Tags": [],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Link": "https://www.youtube.com/watch?v=H_bFMzndqZA",
+  "ProcessedDate": "2025-09-22 21:10:50",
+  "Author": "GitHub",
+  "Description": "On this stream of Open Source Friday, we're excited to shine a spotlight on Mockoon - the open source tool that makes API mocking fast, easy, and local!\n\nWhether you're developing, testing, or learning, Mockoon can help you simulate APIs with just a few clicks. Mockoon Cloud allows data synchronization, collaboration, and instant deployment.\n\nJoin us as we chat with Guillaume Monnet, creator and maintainer behind Mockoon to explore how this project is shaping the future of API development.",
+  "PubDate": "2025-09-22T19:14:35+00:00"
+}

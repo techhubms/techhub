@@ -9840,5 +9840,11 @@
     "timestamp": "2025-09-22 19:11:22 +00:00",
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI because the main focus is on building self-improving AI agents and discusses tools like Semantic Kernel and Azure AI Search directly in a development context (AI rules 1, 3, 4). Assigned Azure since Azure AI Search is a highlighted Microsoft service (Azure rule 1, 3). Assigned Coding because the session includes concrete code samples and technical implementation topics (Coding rule 4). The content is eligible as it is educational, deeply technical, Microsoft-focused, and not subject to any generic exclusion rules."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-maps-in-fabric-geospatial-insights-for-everyone/",
+    "reason": "Succesfully added: Assigned 'Azure' category because Microsoft Fabric is a core Azure service and the article centers on its Real-Time Intelligence features involving Lakehouse and Eventhouse (Azure Rule 1, 4, 5). 'ML' is included because the focus is on advanced data analytics and business intelligence development using Microsoft platforms, especially spatial analytics (ML Rule 1, 4). 'AI' is not assigned because, while the term is mentioned, the article is about geospatial visualization and real-time analytics — not AI modeling, pre-built AI service integration, or model development (AI rules not sufficiently met). Content is not excluded because it is technical, implementation-focused, and avoids generic exclusion triggers.",
+    "timestamp": "2025-09-22 21:11:49 +00:00"
   }
 ]

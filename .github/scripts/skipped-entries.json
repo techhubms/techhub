@@ -8181,5 +8181,17 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/jNMme-todUI",
     "reason": "No categories found: Content excluded due to insufficient substantive content provided (content field is null). There is not enough detailed technical information, discussion, or instruction to evaluate for category inclusion. Generic exclusion rules require actual content for assessment; title and description alone are insufficient. As such, no categories are applied."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=H_bFMzndqZA",
+    "timestamp": "2025-09-22 20:14:31 +00:00",
+    "reason": "No categories found: No categories assigned. The content is a stream highlighting Mockoon, an open-source tool for API mocking. While Mockoon can be used in Microsoft technology environments, there is no mention or evidence in the description, title, or provided information that Microsoft technologies, products, or development tools are central to this episode. According to the workflow, Microsoft technology must be central (≥40%) or essential to the solution (Multi-Platform Content Threshold). Since the description focuses only on Mockoon and its creator and does not reference Azure, GitHub Copilot, AI, DevOps, Coding with Microsoft, or any Microsoft-specific service, the content does not meet inclusion requirements for any category."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=g-SxoLZF-R4",
+    "timestamp": "2025-09-22 20:14:45 +00:00",
+    "reason": "No categories found: Content excluded because it primarily focuses on business productivity and collaboration advancements using Copilot, which according to the critical Copilot Product Distinction and Non-Development Microsoft Products generic exclusion rules, does not qualify for any categories. The description emphasizes workplace collaboration and knowledge management improvements, rather than development or implementation details relevant to technical audiences. There is no substantive technical content about AI development, coding, Azure, or other developer-oriented Microsoft technology. Therefore, no categories are assigned."
   }
 ]
