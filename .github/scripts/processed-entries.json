@@ -9786,5 +9786,11 @@
     "timestamp": "2025-09-22 14:14:08 +00:00",
     "reason": "Succesfully added: Added 'AI' and 'GitHub Copilot' categories because the video focuses on leveraging GitHub Copilot with MCP (AI rules 1, 2; Copilot rules 1, 2). 'AI' is required whenever Copilot is included. Included 'Coding' because it demonstrates custom Python client development and API integration (Coding rules 1, 2, 4). The content is technical, focuses on developer tools, and shows practical coding usage, meeting inclusion criteria.",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned DevOps category because the content describes configuring CI/CD workflows with GitHub Actions for package publishing (DevOps rules 2, 5). Assigned Security because it focuses on eliminating long-lived secrets and adds a new secure method (Security rules 2, 7). Assigned Coding because it is targeted at .NET package developers and provides YAML workflow and dotnet CLI usage (Coding rules 1, 4, 5). There's no content focused on AI, ML, or Azure specifically, so those categories are not applied.",
+    "timestamp": "2025-09-22 16:16:04 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/enhanced-security-is-here-with-the-new-trust-publishing-on-nuget-org/",
+    "collection": "news"
   }
 ]
