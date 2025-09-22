@@ -9804,5 +9804,29 @@
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-09-22-visualize-metered-usage-by-organization-in-github-enterprise-cloud",
     "reason": "Succesfully added: Assigned the DevOps category because the content is centered on GitHub Enterprise Cloud usage reporting, billing management, and enterprise administration, which are core components of the DevOps toolchain (DevOps rule 11). There is no technical coding, AI, ML, security, or Azure service coverage. The update is relevant to process and administrative improvements for DevOps teams managing enterprise GitHub environments."
+  },
+  {
+    "timestamp": "2025-09-22 18:18:12 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-microsoft-fabric-extension-for-vs-code/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category because Fabric is part of the Azure data/cloud ecosystem and features relate to Azure services. Assigned DevOps category because Git integration with Azure DevOps and source control is a key part of the extension's workflow (DevOps rule 2, 5, and 8). Assigned Coding category because the extension enhances development practices in VS Code, allowing scripting and code management. Assigned ML because the extension is used for data and analytics/ML workflow orchestration with Fabric (ML rule 1 and 4). Did not assign AI because this release focuses on automation, databases, and developer experiences rather than pre-built AI or Copilot integration. All inclusion and exclusion rules are strictly followed."
+  },
+  {
+    "timestamp": "2025-09-22 18:18:41 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/research/blog/using-ai-to-assist-in-rare-disease-diagnosis/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because the content is centered on the design and application of generative AI to support genetic professionals, with a strong focus on sensemaking, workflow enhancement, and AI-human collaboration, as per AI Category rule 1 and 5. Azure AI Foundry is discussed as an experimental Microsoft technology underpinning the prototypes. No other categories are assigned—'ML' is not included because the emphasis is not on custom model training or advanced data science pipelines but on AI-assisted synthesis and workflow integration; 'Azure' is not included as the technical depth on Azure as a platform is minimal and references are limited to context rather than implementation. The description, excerpt, and tags were constructed to reflect the deep technical and collaborative aspects of using AI in genomic research, targeting professionals interested in the intersection of AI, health, and data synthesis. No generic exclusions applied: content is in English, not biographical, not sales-focused, and does not target business productivity tools."
+  },
+  {
+    "timestamp": "2025-09-22 18:19:04 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/enhancements-to-xaml-live-preview-in-visual-studio-for-net-maui/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' because the content describes GitHub Copilot (AI developer tool) and Copilot Vision used for XAML authoring, satisfying AI rules 2 and 3 as well as GitHub Copilot rules 1 and 2. 'Coding' assigned since the article focuses on XAML and .NET MAUI development practices (Coding rules 1 and 4). No Azure category since Azure technologies are not mentioned. No 'DevOps', 'ML', or 'Security' as none of those themes are present in the content."
+  },
+  {
+    "timestamp": "2025-09-22 18:19:35 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=NUELGzIHT-I",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the DevOps category because the content is focused on core GitHub and Git workflows—repositories, pull requests, version control, and developer collaboration—which align with the DevOps rules 2 (GitHub DevOps Tools), 8 (Version Control), and general team collaboration practices. No AI, Coding, Azure, ML, GitHub Copilot, or Security categories qualify as there is no direct discussion of those products or developer frameworks. The tags reflect technical terms, tools, workflows, and methodologies established in both the video's chapter structure and linked resources."
   }
 ]
