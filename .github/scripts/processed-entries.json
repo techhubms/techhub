@@ -9726,5 +9726,11 @@
     "timestamp": "2025-09-22 03:36:14 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-maps-blog/introducing-the-azure-maps-geocode-autocomplete-api/ba-p/4455780",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=hPKDV5N99GU",
+    "collection": "videos",
+    "reason": "Succesfully added: Included the Coding category because the discussion focuses on technical advancements in developer workflows within Visual Studio Code (Coding rule 5). Included the AI category because the episode covers Copilot Coding Agents, which are AI-powered features tied to GitHub Copilot (AI rule 1 and mention of Copilot integration in the description and episode links). Did not include 'GitHub Copilot' category because the content covers integration and usage in VS Code, but the focus is broader on coding agents as a feature rather than Copilot itself. Azure, DevOps, ML, and Security categories were not assigned as there is no substantial discussion of those topics in the description or referenced links. Generic exclusion rules do not apply, as the content is technical, relevant, and clearly focused on tools and features for developers.",
+    "timestamp": "2025-09-22 07:14:23 +00:00"
   }
 ]

@@ -8139,5 +8139,11 @@
     "collection": "posts",
     "reason": "No categories found: No categories were assigned. The content is focused on end-user guidance for enabling and using BitLocker, a security feature of Windows 11, but it does not provide technical implementation, development, architecture, or hands-on practitioner content as required by Security or other categories. It does not discuss programming, coding, development practices, or Microsoft security services integration from an engineering or administrative perspective. Security category is reserved for application security, IAM, zero trust, or technical security architecture with Microsoft services, not end-user or consumer-level privacy how-tos. All generic exclusion rules were checked; content is not job-related, sales, or negative, and is in English. Main reason for exclusion: content does not meet Security or any other technical category inclusion criteria.",
     "timestamp": "2025-09-21 16:13:24 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to the 'Job-Related Content' generic exclusion rule in Chapter 3. The post is primarily a list of DevOps job opportunities and a discussion of the job market, with no substantive technical content or technical implementation details relevant to Microsoft technologies or developer practices. There are no sections about tools, coding, platforms, DevOps methodologies, or technical tutorials, only job openings and general hiring context.",
+    "canonical_url": "https://devops.com/five-great-devops-job-opportunities-157/",
+    "timestamp": "2025-09-22 06:19:50 +00:00",
+    "collection": "posts"
   }
 ]
