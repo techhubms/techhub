@@ -9780,5 +9780,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=aP-kn76-emI",
     "reason": "Succesfully added: The content qualifies for the Azure category as it provides a detailed technical exploration of Azure Database for PostgreSQL (Azure rule 1), focusing on architecture, configuration, security, high availability, and operational management in the Azure environment. No other categories apply: there is no coverage of coding (no programming or frameworks demonstrated), DevOps, AI, ML, GitHub Copilot, or Security as a central subject outside of database-level authentication and encryption. The reasoning references both the detailed outline in the description and the video chapter listing, which focuses entirely on Azure-specific managed database technology and its operational best practices."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=JJJ6pbq7Aac",
+    "timestamp": "2025-09-22 14:14:08 +00:00",
+    "reason": "Succesfully added: Added 'AI' and 'GitHub Copilot' categories because the video focuses on leveraging GitHub Copilot with MCP (AI rules 1, 2; Copilot rules 1, 2). 'AI' is required whenever Copilot is included. Included 'Coding' because it demonstrates custom Python client development and API integration (Coding rules 1, 2, 4). The content is technical, focuses on developer tools, and shows practical coding usage, meeting inclusion criteria.",
+    "collection": "videos"
   }
 ]
