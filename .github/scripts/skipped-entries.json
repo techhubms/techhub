@@ -8175,5 +8175,11 @@
     "timestamp": "2025-09-22 10:16:08 +00:00",
     "reason": "Insufficient content length",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-09-22 17:12:40 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/jNMme-todUI",
+    "reason": "No categories found: Content excluded due to insufficient substantive content provided (content field is null). There is not enough detailed technical information, discussion, or instruction to evaluate for category inclusion. Generic exclusion rules require actual content for assessment; title and description alone are insufficient. As such, no categories are applied."
   }
 ]

@@ -9792,5 +9792,17 @@
     "timestamp": "2025-09-22 16:16:04 +00:00",
     "canonical_url": "https://devblogs.microsoft.com/dotnet/enhanced-security-is-here-with-the-new-trust-publishing-on-nuget-org/",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-22 17:11:54 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/public-preview-announcement-fabric-spark-applications-comparison/",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is a Microsoft cloud offering directly under Azure and integrates with Azure analytics and data engineering tools (Azure inclusion rule 1 and 4). Assigned ML category because the comparison and optimization of Spark jobs, data trends, and debugging capabilities are central to ML/data engineering workflows and align with ML inclusion rules 1 and 2. Did not assign AI, Coding, DevOps, Security, or GitHub Copilot since the content focuses on data engineering, performance metrics, and optimization rather than software development, DevOps processes, code-level implementation, AI services, or security concerns."
+  },
+  {
+    "timestamp": "2025-09-22 17:12:17 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-09-22-visualize-metered-usage-by-organization-in-github-enterprise-cloud",
+    "reason": "Succesfully added: Assigned the DevOps category because the content is centered on GitHub Enterprise Cloud usage reporting, billing management, and enterprise administration, which are core components of the DevOps toolchain (DevOps rule 11). There is no technical coding, AI, ML, security, or Azure service coverage. The update is relevant to process and administrative improvements for DevOps teams managing enterprise GitHub environments."
   }
 ]
