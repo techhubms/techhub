@@ -9732,5 +9732,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Included the Coding category because the discussion focuses on technical advancements in developer workflows within Visual Studio Code (Coding rule 5). Included the AI category because the episode covers Copilot Coding Agents, which are AI-powered features tied to GitHub Copilot (AI rule 1 and mention of Copilot integration in the description and episode links). Did not include 'GitHub Copilot' category because the content covers integration and usage in VS Code, but the focus is broader on coding agents as a feature rather than Copilot itself. Azure, DevOps, ML, and Security categories were not assigned as there is no substantial discussion of those topics in the description or referenced links. Generic exclusion rules do not apply, as the content is technical, relevant, and clearly focused on tools and features for developers.",
     "timestamp": "2025-09-22 07:14:23 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://www.thomasmaurer.ch/2025/09/unlock-cloud-savings-for-linux-vms-with-the-azure-hybrid-benefit/",
+    "timestamp": "2025-09-22 08:19:46 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content centers on Azure Hybrid Benefit, a Microsoft Azure feature for optimizing Linux virtual machine costs (Azure inclusion rules 1 and 4). Other categories, such as AI, Coding, DevOps, ML, GitHub Copilot, and Security do not apply: the article is focused on cloud infrastructure, subscription management, and cost optimization specific to Azure, not on development, AI/ML, security, or DevOps/infrastructure-as-code practices. The content is technical, targets practitioners, and avoids business-only or biographical focus, satisfying inclusion and exclusion rules."
   }
 ]
