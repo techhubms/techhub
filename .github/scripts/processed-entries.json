@@ -9756,5 +9756,23 @@
     "canonical_url": "https://devops.com/hugging-face-opens-github-copilot-chat-to-open-source-models/",
     "timestamp": "2025-09-22 09:19:28 +00:00",
     "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'DevOps' category because the article centrally discusses how modern DevOps teams evolve and adapt practices (DevOps rule 3, 4, 5, 9, 10). Assigned 'Security' category because the main focus is on integrating security into DevOps processes, covering essential topics like vulnerability management, secure CI/CD, threat modeling, infrastructure as code, and compliance (Security rule 2, 4, 6, 7, 9). No other categories apply as there is no focus on specific Microsoft technologies, coding, or AI/ML. Content qualifies as it meets length/quality standards, is technical/practical, and targets practitioners.",
+    "canonical_url": "https://devops.com/the-devsecops-career-path-what-no-one-tells-you-about-getting-started/",
+    "timestamp": "2025-09-22 11:13:40 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Coding category because the content specifically addresses .NET lifecycle policy changes, which are of primary interest to developers working with C# and .NET (Coding rule 1 and 4). The tags were chosen based on the discussion of .NET, C#, lifecycle, and release management. No other categories apply, as this is focused on coding framework support policy and not Azure, AI, ML, DevOps, or Security.",
+    "canonical_url": "https://www.youtube.com/watch?v=3i6YASbyuHw",
+    "timestamp": "2025-09-22 11:14:14 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: The main focus of this article is architecting and implementing multi-region solutions in Azure, matching the Azure category inclusion rule (Azure service/deployment focus). It also deeply discusses infrastructure, networking, monitoring, and governance topics relevant to DevOps, thus qualifying for the DevOps category. Security considerations like compliance, data residency, disaster recovery, and resilience are addressed throughout, justifying the Security category. The content is technical, not business or end-user focused, and passes the content quality requirements; it is not a biographical piece, sales pitch, or business productivity article.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/architecting-multi-region-solution-in-azure-lessons-learned/ba-p/4415554",
+    "timestamp": "2025-09-22 11:14:57 +00:00",
+    "collection": "community"
   }
 ]
