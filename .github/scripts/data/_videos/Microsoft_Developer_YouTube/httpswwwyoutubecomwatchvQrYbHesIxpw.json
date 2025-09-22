@@ -1,0 +1,22 @@
+{
+  "FeedName": "Microsoft Developer YouTube",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=QrYbHesIxpw",
+  "Author": "Microsoft Developer",
+  "ProcessedDate": "2025-09-22 19:10:13",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Description": "Check out the sample code at http://aka.ms/ai-agents-for-beginners\n\nAI Agents have amazing capabilities of self-improvement and personalization, but these features need to be built. In this lesson, you will learn how memory management can enable your AI Agents to do amazing things for your users and understand the planning, tools and application needed to manage the different types of memory for AI Agents.\n\nChapters 00:00 - Introduction 01:06 - What is Memory for AI Agents? 02:00 - Different Types of Memory 04:10 - Methods for Storing Memory for AI Agents 04:58 - How Memory Helps with Self-Improvement 05:24 - Code Sample - Mem0 + Semantic Kernel + Azure AI Search 13:02 - Wrapping Up",
+  "Title": "AI Agent Memory: Building Self-Improving Agents",
+  "PubDate": "2025-09-22T18:59:37+00:00"
+}
