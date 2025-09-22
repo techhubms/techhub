@@ -8133,5 +8133,11 @@
     "collection": "posts",
     "reason": "No categories found: No categories assigned because the content is focused on end-user privacy settings and consumer configuration for Windows 11, rather than development, programming, engineering, or technical implementation details related to Microsoft developer/enterprise technologies. This article is a guide for adjusting Windows 11 privacy preferences, which is classified as end-user product usage and does not fit any of the inclusion rules for categories such as AI, GitHub Copilot, Coding, DevOps, Azure, ML, or Security in a developer context. Per generic exclusion rules for non-development products and content, as well as the focus on configuration rather than implementation, all categories are excluded.",
     "timestamp": "2025-09-21 14:11:17 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/using-bitlocker-to-encrypt-your-files-in-windows-11/",
+    "collection": "posts",
+    "reason": "No categories found: No categories were assigned. The content is focused on end-user guidance for enabling and using BitLocker, a security feature of Windows 11, but it does not provide technical implementation, development, architecture, or hands-on practitioner content as required by Security or other categories. It does not discuss programming, coding, development practices, or Microsoft security services integration from an engineering or administrative perspective. Security category is reserved for application security, IAM, zero trust, or technical security architecture with Microsoft services, not end-user or consumer-level privacy how-tos. All generic exclusion rules were checked; content is not job-related, sales, or negative, and is in English. Main reason for exclusion: content does not meet Security or any other technical category inclusion criteria.",
+    "timestamp": "2025-09-21 16:13:24 +00:00"
   }
 ]

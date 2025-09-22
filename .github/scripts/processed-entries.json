@@ -9720,5 +9720,11 @@
     "timestamp": "2025-09-21 15:12:53 +00:00",
     "reason": "Succesfully added: Assigned 'AI' because the article focuses on selecting and understanding different AI models within GitHub Copilot (AI inclusion rules 1 and 2). Assigned 'GitHub Copilot' because the entire article is about usage and best practices for GitHub Copilot's coding assistant features (GitHub Copilot rules 1, 2, and 4). Did not assign 'Coding' because the article does not cover code-level implementation, only model selection. Did not assign 'DevOps', 'Azure', 'ML', or 'Security' as none of those themes or platforms are discussed.",
     "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the content centers on Azure Maps, a Microsoft Azure service (Azure rule 1). Assigned Coding category because the article discusses implementing and integrating the REST API into applications (Coding rules 2 and 4). Exclusion rules did not apply—post is technical, developer-focused, in English, and meets the length requirement. No other categories apply since there is no AI, ML, DevOps, Security, or GitHub Copilot focus.",
+    "timestamp": "2025-09-22 03:36:14 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-maps-blog/introducing-the-azure-maps-geocode-autocomplete-api/ba-p/4455780",
+    "collection": "community"
   }
 ]
