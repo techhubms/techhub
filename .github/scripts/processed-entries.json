@@ -9738,5 +9738,23 @@
     "canonical_url": "https://www.thomasmaurer.ch/2025/09/unlock-cloud-savings-for-linux-vms-with-the-azure-hybrid-benefit/",
     "timestamp": "2025-09-22 08:19:46 +00:00",
     "reason": "Succesfully added: Assigned the Azure category because the content centers on Azure Hybrid Benefit, a Microsoft Azure feature for optimizing Linux virtual machine costs (Azure inclusion rules 1 and 4). Other categories, such as AI, Coding, DevOps, ML, GitHub Copilot, and Security do not apply: the article is focused on cloud infrastructure, subscription management, and cost optimization specific to Azure, not on development, AI/ML, security, or DevOps/infrastructure-as-code practices. The content is technical, targets practitioners, and avoids business-only or biographical focus, satisfying inclusion and exclusion rules."
+  },
+  {
+    "reason": "Succesfully added: The categories 'AI' and 'Azure' are assigned because the article details Azure AI Studio/Azure AI Foundry—Microsoft's integrated platform for AI and generative model development. It covers features for creating, managing, and deploying AI models, clearly qualifying for both AI (AI Category Rule 1) and Azure (Azure Category Rule 1). No other categories (e.g., Coding, ML) apply as the article is focused on platform capabilities, features, use cases, and practitioner considerations, not on code or custom ML engineering. Microsoft’s technology comprises 100% of the subject matter, and there are no generic exclusion rule triggers.",
+    "canonical_url": "https://dellenny.com/azure-ai-studio-azure-ai-foundry-a-powerful-platform-for-generative-ai/",
+    "timestamp": "2025-09-22 09:17:02 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: The content centrally focuses on generative AI capabilities and usage in Microsoft Azure, specifically discussing Azure OpenAI Service, Azure Machine Learning, and Azure Cognitive Services. Assigned 'AI' category due to extensive coverage of Microsoft's AI platforms and integration (AI rule 1 and 4). Assigned 'Azure' category since all technical steps, examples, and service descriptions pertain to Azure (Azure rule 1, 4, and 5). Content does not qualify for 'Coding' as it provides high-level integration steps and a simple code example but does not delve into in-depth code or developer frameworks directly. 'ML' is not assigned because, while Azure ML is mentioned, the focus is not on custom ML engineering or data science workflows. No generic exclusion rules apply.",
+    "canonical_url": "https://dellenny.com/generative-ai-in-azure-a-practical-guide-to-getting-started/",
+    "timestamp": "2025-09-22 09:18:42 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category because the core content focuses on AI-powered developer tools, specifically integrating open-source AI models through Hugging Face for code assistance in VS Code (AI rule 1 and 4). Assigned the 'GitHub Copilot' category because the article is specifically about extending GitHub Copilot Chat’s capabilities (GitHub Copilot rules 1–4). Did not assign 'Coding', 'Azure', 'DevOps', 'ML', or 'Security' because the content concerns tool integration and workflow improvements rather than direct coding, development, security, or ML engineering with Microsoft platforms. All core rules and distinctions per Chapter 4 were followed, and the content does not trigger any generic exclusions (e.g., not negative, not sales, not biographical, is in English, and meets the substantive threshold).",
+    "canonical_url": "https://devops.com/hugging-face-opens-github-copilot-chat-to-open-source-models/",
+    "timestamp": "2025-09-22 09:19:28 +00:00",
+    "collection": "posts"
   }
 ]

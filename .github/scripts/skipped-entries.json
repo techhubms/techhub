@@ -8145,5 +8145,11 @@
     "canonical_url": "https://devops.com/five-great-devops-job-opportunities-157/",
     "timestamp": "2025-09-22 06:19:50 +00:00",
     "collection": "posts"
+  },
+  {
+    "reason": "No categories found: No categories assigned because Microsoft technologies are not central to the solution. The entire post focuses exclusively on AWS services for generative AI (Amazon Bedrock, SageMaker, S3, AWS Glue, Trainium, Inferentia, etc.). There is no substantial content about Microsoft Azure, Microsoft AI services, or any other Microsoft technology. According to the Multi-Platform Content Threshold, to qualify for any category, Microsoft technologies must comprise ≥40% of substantive content or be central to the solution. Additionally, inclusion rules specify that content about non-Microsoft platforms (AWS) without meaningful Microsoft coverage receives no categories.",
+    "canonical_url": "https://dellenny.com/understanding-aws-generative-ai-fundamentals/",
+    "timestamp": "2025-09-22 09:18:57 +00:00",
+    "collection": "posts"
   }
 ]
