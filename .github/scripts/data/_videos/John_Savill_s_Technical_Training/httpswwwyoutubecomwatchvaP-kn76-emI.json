@@ -1,0 +1,23 @@
+{
+  "FeedLevelAuthor": "John Savill's Technical Training",
+  "FeedName": "John Savill's Technical Training",
+  "EnhancedContent": null,
+  "Description": "A deep dive look at Azure Database for PostgreSQL. What it is and how it works!\n\n🔎 Looking for content on a particular topic? Search the channel. If I have something it will be there! 🤔 Due to the channel growth and number of people wanting help I no longer can answer or even read questions and they will just stay in the moderation queue never to be seen so please post questions to other sites like Reddit, Microsoft Community Hub etc.\n\n▬▬▬▬▬▬ C H A P T E R S ⏰ ▬▬▬▬▬▬ 00:00 - Introduction 00:21 - What is PostgreSQL 03:32 - Why PostgreSQL 03:51 - Azure offerings for PostgreSQL 05:42 - Primary instance 07:27 - Parameters to tweak 08:56 - VM SKU 13:02 - Disk configuration 15:02 - AZ configuration 15:24 - PostgreSQL version 15:59 - Authentication options 17:52 - Networking 19:28 - Encryption 21:37 - High availability 25:50 - DNS name for connections 28:34 - PGBouncer and connection pooling 30:42 - Read replicas 37:08 - Virtual endpoints 39:20 - Maintenance 39:34 - Auto minor version upgrade 40:27 - Maintenance window 44:12 - Major version upgrades 46:45 - Backups 49:43 - Azure Backup 50:50 - Pricing 52:25 - Citus and elastic cluster 53:18 - Summary 54:55 - Close\n\n▬▬▬▬▬▬ K E Y L I N K S 🔗 ▬▬▬▬▬▬ ► Whiteboard: 🔗 https://github.com/johnthebrit/RandomStuff/raw/master/Whiteboards/PostgreSQLDeepDive.png ► MS PostgreSQL blog: 🔗 https://techcommunity.microsoft.com/category/azuredatabases/blog/adforpostgresql ► MS Docs: 🔗 https://learn.microsoft.com/azure/postgresql/\n\n▬▬▬▬▬▬ Want to learn more? 🚀 ▬▬▬▬▬▬ 📖 Recommended Learning Path for Azure 🔗 https://learn.onboardtoazure.com 🥇 Certification Content Repository 🔗 https://github.com/johnthebrit/CertificationMaterials 📅 Weekly Azure Update 🔗 https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks ☁ Azure Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY ⚙ DevOps Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq 💻 PowerShell Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFq\\_hR7FcMYg32xsSAObuq8 🎓 Certification Cram Videos 🔗 https://youtube.com/playlist?list=PLlVtbbG169nHz2qfLvPsAz9CnnXofhmcA 🧠 Mentoring Content 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGHxNkSWB0PjzZHwZ0BkXZZ ❔ Questions? Maybe I answered it in my FAQ 🔗 https://savilltech.com/faq 👕 Cure Childhood Cancer Charity T-Shirt Channel Store 🔗 https://johns-t-shirts-store.creator-spring.com/\n\n👂 Enable the subtitles and from there you can translate to your native language via the auto-translate feature in settings! https://youtu.be/v5b53-PgEmI for a demo of using this feature.\n\nSUBSCRIBE ✅ https://www.youtube.com/channel/UCpIn7ox7j7bH\\_OFj7tYouOQ?sub\\_confirmation=1\n\n#microsoft #azure #postgresql #johnsavillstechnicaltraining #onboardtoazure",
+  "Author": "John Savill's Technical Training",
+  "OutputDir": "_videos",
+  "PubDate": "2025-09-22T13:17:22+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ",
+  "ProcessedDate": "2025-09-22 13:23:56",
+  "Tags": [
+    "azure",
+    "azure cloud",
+    "cloud",
+    "database",
+    "microsoft",
+    "microsoft azure",
+    "postgreSQL",
+    "postgress"
+  ],
+  "Title": "Azure PostgreSQL Flexible Deep Dive",
+  "Link": "https://www.youtube.com/watch?v=aP-kn76-emI"
+}
