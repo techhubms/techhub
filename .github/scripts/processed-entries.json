@@ -9846,5 +9846,11 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-maps-in-fabric-geospatial-insights-for-everyone/",
     "reason": "Succesfully added: Assigned 'Azure' category because Microsoft Fabric is a core Azure service and the article centers on its Real-Time Intelligence features involving Lakehouse and Eventhouse (Azure Rule 1, 4, 5). 'ML' is included because the focus is on advanced data analytics and business intelligence development using Microsoft platforms, especially spatial analytics (ML Rule 1, 4). 'AI' is not assigned because, while the term is mentioned, the article is about geospatial visualization and real-time analytics — not AI modeling, pre-built AI service integration, or model development (AI rules not sufficiently met). Content is not excluded because it is technical, implementation-focused, and avoids generic exclusion triggers.",
     "timestamp": "2025-09-22 21:11:49 +00:00"
+  },
+  {
+    "timestamp": "2025-09-22 23:12:32 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-the-microsoft-fabric-extensibility-toolkit/",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is an Azure service and this content focuses on building and deploying integrated solutions within Azure’s ecosystem (Azure rules 1, 4, 5). Assigned ML because the toolkit covers integration with data engineering, Power BI, Spark, and OneLake analytics scenarios, which pertain to data science and analytics development (ML rules 1, 4, 7). Assigned AI because there is direct mention of AI-enabled functionality through Copilot integration and platform development assistance (AI rules 2, 4, 5). Assigned Coding as the Toolkit enables development from the ground up, including custom app creation, API integration, and advanced frontend/backend development for Fabric platform extensions (Coding rules 1, 3, 4). The content has no generic exclusion criteria triggered.",
+    "collection": "news"
   }
 ]
