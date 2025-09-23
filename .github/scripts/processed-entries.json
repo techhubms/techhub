@@ -9876,5 +9876,11 @@
     "timestamp": "2025-09-23 07:15:39 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/use-copilot-and-mcp-to-query-microsoft-learn-docs/ba-p/4455835",
     "reason": "Succesfully added: Assigned the 'AI' category because the post explains how to use AI tools (GitHub Copilot) in Agent Mode, particularly with grounded context from Microsoft Learn Docs (AI rule 1, 4, and 6). 'GitHub Copilot' is included, as the entire tutorial is focused on its configuration and use (GitHub Copilot inclusion rules 1-4). 'Azure' is included due to the central role of Azure development workflows and query examples about Azure services (Azure rule 1 and 4). 'Coding' is added because developers are guided through setting up development environments, working with Python, and integrating tools in Visual Studio Code (Coding rule 2 and 4). The post is technical, practical, focused on developer workflows, and does not trigger any generic exclusion rules."
+  },
+  {
+    "reason": "Succesfully added: Categories assigned based on the strong focus on Azure cloud services and Azure Migrate's new capabilities (Azure inclusion rule 1 and 4). Content addresses database migration to both Azure IaaS (VMs) and Azure PaaS (Database for PostgreSQL) as primary solution. While PostgreSQL is an open-source technology, Microsoft Azure is central to the migration, assessment, and modernization workflow presented, clearly exceeding the required 40% Microsoft threshold. No AI, ML, DevOps, Coding, Security, or GitHub Copilot topics are present. The content is technical, migration/development-focused, and free of generic exclusion triggers.",
+    "timestamp": "2025-09-23 08:17:19 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/discover-and-assess-postgresql-databases-for-migration-to-azure/ba-p/4456108"
   }
 ]
