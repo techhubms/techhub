@@ -9888,5 +9888,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-maps-blog/introducing-the-azure-maps-geocode-autocomplete-api/ba-p/4455784",
     "reason": "Succesfully added: Generic exclusion rules do not apply: this is an English-language, engineering-focused announcement with substantive technical content and no biographical, unconstructive, or business-only focus. The Azure category is included because the content centers on a new Microsoft Azure Maps API (Azure rules 1 and 4). Coding is included as the content explains how developers can integrate and use this REST API in their applications, providing code-like usage examples and technical scenarios (Coding rules 2 and 4). Other categories (AI, ML, Security, DevOps, GitHub Copilot) are not included as the content does not address artificial intelligence, machine learning, security, DevOps, or GitHub Copilot.",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://andrewlock.net/sleep-pc-a-dotnet-tool-to-make-windows-sleep-after-a-timeout/",
+    "reason": "Succesfully added: Included the Coding category because the post is a hands-on technical walkthrough of building a .NET tool, covering code, project structure, Native AOT compilation, and CLI framework usage (Coding rules 1-5). Did not include DevOps, Azure, AI, ML, Security, or GitHub Copilot as there is no DevOps process, Azure/cloud, AI, ML, security, or Copilot relevance. All content is technical, development-focused, and non-promotional. No generic exclusions applied: the post is not biographical, not a question, not a sales pitch, not negative, not job/strategy content, and is in English. The post is directly relevant to developers interested in .NET 8/10, Native AOT, CLI tools, and practical Windows automation.",
+    "collection": "posts",
+    "timestamp": "2025-09-23 11:11:37 +00:00"
   }
 ]
