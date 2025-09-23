@@ -8241,5 +8241,17 @@
     "canonical_url": "https://dellenny.com/microsoft-teams-vs-slack-in-2025-which-wins-for-remote-work/",
     "timestamp": "2025-09-23 15:14:07 +00:00",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-23 16:17:43 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_ai-chips-are-getting-hotter-a-microfluidics-activity-7376270288591851520-fcCs",
+    "reason": "No categories found: No categories were assigned because, despite being an official Microsoft announcement and pertaining to hardware innovation (datacenter cooling), it does not directly discuss the implementation, development, coding, or deployment of Microsoft software technologies or services (such as Azure, AI services, ML, DevOps, Coding, or Security). It is a high-level engineering advancement announcement, not a technical how-to, code, or platform guide. Per the inclusion and exclusion rules, infrastructure hardware topics like cooling methods are out of scope unless they tie directly into Microsoft developer, cloud, or security solutions."
+  },
+  {
+    "timestamp": "2025-09-23 16:19:02 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/azure-express-route-peering-with-on-prem-firewall/m-p/4456300#M688",
+    "reason": "Insufficient content length"
   }
 ]
