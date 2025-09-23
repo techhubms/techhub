@@ -9978,5 +9978,23 @@
     "collection": "news",
     "reason": "Succesfully added: Category 'Security' was assigned because the content centers on data protection, governance, and compliance using Microsoft Purview, directly aligning with Security inclusion rules for application security, compliance, information governance, and risk management in a Microsoft context. No other categories apply because the focus is not on building or integrating through code (not Coding, DevOps, Azure, ML, or AI category), but instead highlights strategic and operational security outcomes supported by Microsoft technology. No generic exclusions apply—this is official news, not biographical, sales, or executive-only content and provides substantive technical and organizational value.",
     "timestamp": "2025-09-23 17:10:42 +00:00"
+  },
+  {
+    "timestamp": "2025-09-23 18:18:46 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/mssql-extension-for-vs-code-fabric-integration-public-preview/",
+    "reason": "Succesfully added: Assigned the Azure category because the features focus on Microsoft Fabric and SQL Database provisioning, both of which are part of Azure's data ecosystem (Azure inclusion rule 1 and 5). Assigned Coding because the extension is used within VS Code for SQL/database development and workflow integration (Coding rules 2 and 4). Did not assign ML or AI as the features do not include AI/ML usage or data science tasks, and Security is not a main focus. The content meets quality and length requirements and does not trigger any exclusion rules.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-23 18:19:09 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-23-accelerate-remediation-with-security-campaigns-and-assignable-alerts-for-code-scanning-and-secret-scanning",
+    "reason": "Succesfully added: Assigned Security category as the main focus is on improving issue remediation for code and secret scanning within GitHub, directly addressing application security (Security rule 1 and 2). Assigned DevOps because the new features—security campaigns and alert assignment—support operational development workflows, team collaboration, and CI/CD pipeline security (DevOps rules 2, 3, 5, and 9). Did not assign other categories since the post is not about coding, AI, Azure, or ML technologies. The post introduces actionable, technical features relevant for security and operational teams, rather than business/end-user or productivity content.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-23 18:19:43 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=STigfiK_n1Q",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' because the tags and description highlight GitHub Copilot integration and the Model Context Protocol (MCP), which is a developer tool (GitHub Copilot rules 1, 2, and 6). 'AI' is included per critical rule for all GitHub Copilot content. 'Coding' applies since the content focuses on developer tools within VS Code, automated test writing, and workflow enhancement (Coding rule 2, 5). 'DevOps' is included as this involves workflow automation, test orchestration, and developer productivity tooling within an IDE (DevOps rule 9). There are no triggers for exclusion under generic rules—the content is technical, developer-focused, not business productivity or business-only Copilot. Content is primarily in English and meets all length/form requirements.",
+    "collection": "videos"
   }
 ]
