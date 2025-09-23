@@ -9852,5 +9852,17 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-the-microsoft-fabric-extensibility-toolkit/",
     "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is an Azure service and this content focuses on building and deploying integrated solutions within Azure’s ecosystem (Azure rules 1, 4, 5). Assigned ML because the toolkit covers integration with data engineering, Power BI, Spark, and OneLake analytics scenarios, which pertain to data science and analytics development (ML rules 1, 4, 7). Assigned AI because there is direct mention of AI-enabled functionality through Copilot integration and platform development assistance (AI rules 2, 4, 5). Assigned Coding as the Toolkit enables development from the ground up, including custom app creation, API integration, and advanced frontend/backend development for Fabric platform extensions (Coding rules 1, 3, 4). The content has no generic exclusion criteria triggered.",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Azure' category because the article centers on connecting Azure Monitor Diagnostic Logs to Microsoft Fabric (Azure rule 1, 4, 5). Assigned the 'ML' category because the integration is designed for real-time data ingestion, transformation, and analytics within Fabric (ML rules 1, 2, 4), enabling operational intelligence, analytics workflows, and business intelligence development. Did not assign 'AI', 'Coding', 'DevOps', or 'Security' categories, as the focus is on configuration and operational analytics rather than direct development, machine learning from code, DevOps, or security topics. No generic exclusion rules apply; the content is technical, implementation-focused, and not primarily business/management or product marketing.",
+    "timestamp": "2025-09-23 00:53:37 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/unlocking-real-time-operational-intelligence-azure-monitor-logs-integration-in-fabric-via-eventstream/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: The content qualifies for the 'Security' category because it focuses on securing the npm package registry, addressing malware threats, authentication improvements, and trusted publishing (Security rules 1, 5, 6, 7, 8, 9). 'DevOps' is also included since the article discusses changes in publishing workflows, CI/CD security, and operational practices relevant to development teams that manage software supply chains (DevOps rules 5, 6, 7, 11). 'AI', 'Azure', 'ML', 'Coding', and 'GitHub Copilot' are not assigned since there is no focus on artificial intelligence, machine learning, Microsoft Azure, general code-level development, or GitHub Copilot features. The decision is based on segments detailing security incidents, roadmap for supply chain hardening, token/authentication management, and CI/CD integration—all of which align with the above rules.",
+    "timestamp": "2025-09-23 00:54:03 +00:00",
+    "canonical_url": "https://github.blog/security/supply-chain-security/our-plan-for-a-more-secure-npm-supply-chain/",
+    "collection": "news"
   }
 ]
