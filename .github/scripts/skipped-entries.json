@@ -8217,5 +8217,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=u1eWdX1w6m8",
     "collection": "videos",
     "reason": "No categories found: No categories assigned. The content focuses on improving the visual quality of shared videos during Microsoft Teams meetings, which is an end-user and business productivity topic. According to the generic exclusion rules, Microsoft Teams content is only included if it is about Teams development or bot creation. This content is purely about user experience enhancements for regular Teams meetings and does not address development, coding, DevOps, AI, ML, Security, or any Microsoft service configuration relevant to developers. Therefore, no category applies."
+  },
+  {
+    "timestamp": "2025-09-23 14:14:08 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_for-me-our-analyst-agent-in-microsoft-365-activity-7375943403420884992-eDlX",
+    "reason": "No categories found: All categories have been excluded due to the Non-Development Microsoft Products exclusion rule in the Generic Exclusion Rules (Chapter 3). The content focuses on Microsoft 365 Copilot, specifically its 'Analyst agent' feature, which is described as a business productivity tool for data visualization and work efficiency. Per the Copilot Product Distinction section: 'Microsoft 365 Copilot', 'Copilot for Microsoft 365', and 'Office Copilot' are expressly excluded because they target business productivity, not code development or developer tooling. The content does not describe development, customization, coding, AI/ML engineering, or implementation details for Microsoft development, DevOps, or security. It only showcases end-user/analyst capabilities in a business context. Therefore, by strict workflow (Generic Exclusion: Non-Development Microsoft Products and Copilot Product Distinction), no categories are assigned."
+  },
+  {
+    "timestamp": "2025-09-23 14:15:06 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_saving-marine-life-with-every-dive-activity-7376036936911790080-SOoe",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. Although the post mentions the use of AI to help remove abandoned nets in oceans, it is not technical in nature and lacks any substantive implementation detail about specific Microsoft technology, platform, developer tool, or concrete solution. The content is extremely brief, functions more as an inspirational social media post, and does not contain actionable guidance, code, architecture, or technical depth. No underlying Microsoft AI services, products, frameworks, or developer focus are described. The post is primarily a high-level highlight appropriate for general audiences, which excludes it from categorization according to the workflow (Generic Exclusion: Does not meet technical content or knowledge base relevance)."
   }
 ]

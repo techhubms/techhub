@@ -9912,5 +9912,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=r3iTEqujO1s",
     "collection": "videos",
     "reason": "Succesfully added: Content focuses on using GitHub Copilot for Java modernization (GitHub Copilot rule 1; always include AI as well). Demonstrates code upgrades, security checks, and migration workflows, fulfilling Coding and DevOps inclusion (Coding rules 1/4, DevOps rules 5/6). Multiple references to deploying and migrating apps to Azure (Azure rule 1/4/5/6). All inclusion rules applied after generic exclusions: none are triggered—the video is technical, not promotional/biographical, and clearly developer-focused."
+  },
+  {
+    "timestamp": "2025-09-23 14:14:51 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_if-intelligence-is-the-log-of-compute-it-activity-7374444167059468288-wxxV",
+    "reason": "Succesfully added: Assigned the AI category because the content is centered on Microsoft launching a purpose-built datacenter for large-scale AI training, inference, and workloads, with deep technical focus on architecture for AI (AI inclusion rule 1 and 4). Assigned the Azure category because the datacenter underpins Microsoft's cloud infrastructure and is referenced as supporting AI workloads on Azure globally (Azure inclusion rule 1 and 4). Did not assign Coding, DevOps, ML, Security, or GitHub Copilot because there is no direct coverage of development coding, DevOps practices, explicit ML/data science workflow details, or security/identity engineering. The content aligns with AI/infra themes and cloud platform expansion."
+  },
+  {
+    "timestamp": "2025-09-23 14:15:31 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-09-22-github-copilot-app-modernization-is-now-generally-available-for-java-and-net",
+    "reason": "Succesfully added: Assigned the 'AI' category because GitHub Copilot is an AI-powered developer tool (AI rule 2). Included 'GitHub Copilot' as content centers on this product (GitHub Copilot inclusion rule 1). Added 'Coding' because the solution covers source code transformation, dependency upgrades, and language migrations (Coding rules 1 and 4). Included 'DevOps' for automation and containerization involving build and deployment workflows (DevOps rules 5 and 6). Azure is not specifically discussed in the content, so 'Azure' is not assigned."
   }
 ]
