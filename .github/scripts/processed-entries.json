@@ -9966,5 +9966,17 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/calling-logic-apps-mcp-server-from-copilot-studio/ba-p/4456277",
     "reason": "Succesfully added: AI category assigned because Copilot Studio is a Microsoft AI developer/maker tool, enabling agentic conversational experiences and this post details its usage with Logic Apps MCP Server (AI Rule 1). Azure category applies since the server being configured and most operational practices relate directly to Azure Logic Apps, an Azure service (Azure Rule 1). Security is included due to the discussion of Entra ID authentication, App registrations, and secure Managed Identity practices for authentication and authorization (Security Rule 1, 2, and 3). Coding is NOT included as there is no code-level programming focus—it's workflow/service integration. GitHub Copilot does not apply, as it is not mentioned. ML is not assigned because no machine learning, analytics, or data science engineering topics are present. All generic exclusion rules were checked and do not apply: the post is technical, focused on solution setup, sufficiently detailed, and not biographical, sales, negative, or non-English."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/whats-new-to-mirroring-new-sources-and-capabilities-for-all-your-zero-etl-needs/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the content emphasizes AI-driven analytics, chat-based data interaction, and data unification for AI/BI purposes (AI rules 1, 4, 5). Assigned Azure category because Azure SQL Managed Instance, Azure SQL Database, VNet, and on-premises gateway features are central (Azure rule 1 and 2). Assigned ML category due to strong analytics, Power BI semantic model creation, real-time BI enablement, and business intelligence integration, which correspond to data science/analytics engineering use-cases (ML rules 1, 2, 4). Did not assign Coding, DevOps, or Security, as there are no direct references to application development, DevOps practices, or in-depth security implementation. The content is focused on technical platforms and enhancements for AI and ML, meeting the Microsoft technology threshold.",
+    "timestamp": "2025-09-23 17:10:16 +00:00"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/09/23/microsoft-purview-delivered-30-reduction-in-data-breach-likelihood/",
+    "collection": "news",
+    "reason": "Succesfully added: Category 'Security' was assigned because the content centers on data protection, governance, and compliance using Microsoft Purview, directly aligning with Security inclusion rules for application security, compliance, information governance, and risk management in a Microsoft context. No other categories apply because the focus is not on building or integrating through code (not Coding, DevOps, Azure, ML, or AI category), but instead highlights strategic and operational security outcomes supported by Microsoft technology. No generic exclusions apply—this is official news, not biographical, sales, or executive-only content and provides substantive technical and organizational value.",
+    "timestamp": "2025-09-23 17:10:42 +00:00"
   }
 ]
