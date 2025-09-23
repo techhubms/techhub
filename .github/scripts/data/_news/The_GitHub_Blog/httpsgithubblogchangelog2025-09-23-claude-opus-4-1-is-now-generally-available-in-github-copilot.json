@@ -1,0 +1,17 @@
+{
+  "ProcessedDate": "2025-09-23 23:10:16",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "EnhancedContent": "### Availability in GitHub Copilot\n\nClaude Opus 4.1 is available to Copilot Pro+ and Copilot Enterprise plans. You can access this model in GitHub Copilot Chat on github.com, VS Code, Visual Studio, JetBrains IDEs, Xcode, Eclipse, and in GitHub Mobile through the chat model picker.\n\n### Enabling access\n\nCopilot Enterprise administrators must opt in by enabling the new Claude Opus 4.1 policy in Copilot settings. Once enabled, users in that organization will see the models in the model picker across all supported IDEs.\n\nFor Copilot Pro+ plans, enable either model by selecting it in the model picker in any supported IDE and confirming the one-time prompt.\n\n### Share your feedback\n\nTo learn more about the models available in Copilot, see [our documentation on models](https://docs.github.com/copilot/reference/ai-models/model-hosting#openai-models) and get started with Copilot today.\n\nHave feedback or questions? Join the discussion within [GitHub Community](https://github.com/orgs/community/discussions/168107).",
+  "Title": "Claude Opus 4.1 is now generally available in GitHub Copilot",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "Availability in GitHub Copilot Claude Opus 4.1 is available to Copilot Pro+ and Copilot Enterprise plans. You can access this model in GitHub Copilot Chat on github.com, VS Code, Visual…\n\nThe post [Claude Opus 4.1 is now generally available in GitHub Copilot](https://github.blog/changelog/2025-09-23-claude-opus-4-1-is-now-generally-available-in-github-copilot) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "PubDate": "2025-09-23T20:42:15+00:00",
+  "Link": "https://github.blog/changelog/2025-09-23-claude-opus-4-1-is-now-generally-available-in-github-copilot",
+  "FeedName": "The GitHub Blog"
+}

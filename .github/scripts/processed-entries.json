@@ -10026,5 +10026,23 @@
     "timestamp": "2025-09-23 20:15:38 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Assigned the Azure category since the majority of content revolves around Azure infrastructure, cloud migration, and platform capabilities (Azure Inclusion Rule 1, 4, 5). Included the AI category because of dedicated sessions and communities on AI, Azure AI Foundry, and AI community meetups (AI Inclusion Rule 1, 4, 6). Added the ML category due to the data analytics, intelligence, SQL, and data platform coverage within Azure and event content (ML Inclusion Rule 1, 4, 7). Excluded Coding, DevOps, GitHub Copilot, and Security because the content does not directly address those topics at a technical or implementation level, but rather focuses on event overviews and community learning opportunities."
+  },
+  {
+    "timestamp": "2025-09-23 23:11:30 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/teaching-the-llm-good-habits-how-azure-mcp-uses-best-practice-tools/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on tooling for prompting and instructing LLMs (especially GitHub Copilot in VS Code), involving integration of best-practice rules for AI-assisted development (AI rules 1, 4). Assigned Azure category because all examples, guidance, and tools discussed are specific to Microsoft's Azure platform (Azure rule 1). Assigned DevOps because of its focus on CI/CD, Infrastructure-as-Code, deployment patterns, governance, and team workflows (DevOps rules 1, 4, 6). Assigned Coding category as the article addresses application code generation, SDK usage, secure coding, and technical code suggestions (Coding rules 1, 4). Did not assign Security, as while security best practices are discussed, it's within the larger context of coding and deployment processes for Azure, not exclusively security architecture or operations. All specific category assignments directly match the inclusion rules for each category."
+  },
+  {
+    "timestamp": "2025-09-23 23:11:57 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/ai-powered-real-time-intelligence-with-anomaly-detection-preview/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category (AI rule 1) because the feature is an AI-based anomaly detection system in Microsoft Fabric’s Real-Time Intelligence. Assigned Azure category (Azure rule 1) since Microsoft Fabric is a core Azure-based service and all features are deployed on Microsoft’s cloud platform. Assigned ML category (ML rules 1, 2, and 10) as the post describes data science and machine learning model selection, deployment, and anomaly detection for streaming data. Coding and DevOps categories were not included because the blog is focused on configuring and using an AI feature (not code development or DevOps processes), and Security does not apply as there’s no mention of security or compliance."
+  },
+  {
+    "timestamp": "2025-09-23 23:12:22 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-23-claude-opus-4-1-is-now-generally-available-in-github-copilot",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content specifically discusses an AI model (Claude Opus 4.1) being made available in GitHub Copilot, a developer tool. This fits AI inclusion rule 2 and GitHub Copilot rule 1. No other categories apply since it's focused exclusively on AI model access within Copilot and does not discuss coding practices, DevOps, Azure, or security."
   }
 ]

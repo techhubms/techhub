@@ -8259,5 +8259,11 @@
     "timestamp": "2025-09-23 20:15:09 +00:00",
     "collection": "videos",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The description indicates this is a high-level event interview/recap (\"Steve Dispenza shares with Rick Claus how this event helps practitioners stay sharp, make connections, and keep ahead of the curve in a rapidly evolving digital landscape\") with no substantive technical details on Microsoft security technology, tools, or solutions. There is no technical implementation, actionable guidance, or specifics about security services or development, which is required for inclusion per the quality and business strategy exclusions."
+  },
+  {
+    "timestamp": "2025-09-23 23:12:39 +00:00",
+    "canonical_url": "https://devops.com/open-letter-calls-for-fundamental-change-to-open-source-economics/",
+    "collection": "posts",
+    "reason": "No categories found: No categories have been assigned because the content discusses open source economic sustainability, IT infrastructure funding, and community usage patterns in general, without specific and substantial technical coverage of Microsoft technologies or platforms. The article references industry-wide open source foundations, CI platforms, containers, AI coding tool impact, and general DevOps ecosystem economics but does not focus on Azure, GitHub, or any Microsoft-specific topics, products, services, frameworks, or development tools. There is also no detailed technical information about DevOps methodologies in a Microsoft context or a focus on AI/ML/Coding/Security as it relates to Microsoft tools. This fits the inclusion threshold: if Microsoft technologies are not central or at least 40% of the substantive technical content, all categories are to remain empty as per multi-platform content and category inclusion rules."
   }
 ]
