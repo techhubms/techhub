@@ -8193,5 +8193,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=g-SxoLZF-R4",
     "timestamp": "2025-09-22 20:14:45 +00:00",
     "reason": "No categories found: Content excluded because it primarily focuses on business productivity and collaboration advancements using Copilot, which according to the critical Copilot Product Distinction and Non-Development Microsoft Products generic exclusion rules, does not qualify for any categories. The description emphasizes workplace collaboration and knowledge management improvements, rather than development or implementation details relevant to technical audiences. There is no substantive technical content about AI development, coding, Azure, or other developer-oriented Microsoft technology. Therefore, no categories are assigned."
+  },
+  {
+    "reason": "No categories found: Content excluded due to biographical focus (Generic Exclusion Rule). The post is a personal announcement about receiving the Microsoft MVP Award, primarily expresses gratitude, and focuses on the author’s personal journey, support network, and feelings. There is no substantive technical content, implementation details, or hands-on tutorial/informational value about Microsoft technologies as required by the categorization rules.",
+    "collection": "posts",
+    "timestamp": "2025-09-23 06:19:37 +00:00",
+    "canonical_url": "https://harrybin.de/posts/microsoft-mvp-2025/"
   }
 ]
