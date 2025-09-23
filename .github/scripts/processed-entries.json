@@ -10008,5 +10008,23 @@
     "reason": "Succesfully added: Assigned 'AI' category because the episode centers on building an AI coaching agent leveraging Azure OpenAI and AI engineering techniques (AI rules 1, 4, 5). Added 'Coding' because it demonstrates agent deployment using code (Python, VS Code) and practical implementation steps (Coding rules 1, 2, 5). Although the original content leans on psychology, it details technical deployment, satisfies the Microsoft relevance threshold, and is not a business productivity tool—so business/productivity Copilots exclusion does not apply.",
     "canonical_url": "https://www.youtube.com/watch?v=Rvp_oQXia_8",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/unlocking-enterprise-ready-sql-database-in-microsoft-fabric-auditing-backup-copilot-more/",
+    "timestamp": "2025-09-23 20:14:24 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric is an evolution of Microsoft's Azure-based data services (Azure rule 1). 'ML' was included as the article addresses platform features for data estates (ML rule 1 and 4), relevant for advanced analytics and business intelligence development. 'AI' was included due to significant use of Copilot (preview), which is an AI-assisted developer tool (AI rule 2 and 5). 'Coding' was assigned since the article covers database provisioning, integration with developer tools (VS Code, REST APIs), and developer workflows (Coding rules 1, 2, and 5). 'Security' is present because the article details new auditing features, compliance support, and recovery options (Security rules 1, 7, 10). GitHub Copilot was not assigned as the Copilot referenced is a database assistant, not the GitHub developer tool, per Copilot Distinction rules."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-09-23-openai-gpt-5-codex-is-rolling-out-in-public-preview-for-github-copilot",
+    "timestamp": "2025-09-23 20:14:46 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because the content is about an OpenAI large language model (GPT-5-Codex) being released and integrated into a developer tool, fitting AI inclusion rule 1. Assigned 'GitHub Copilot' because the entire update focuses on GitHub Copilot, its plans, activation, and developer usage scenarios, as per GitHub Copilot inclusion rules. Did not assign 'Coding', as the content describes a product release and activation process, not technical coding or API/code usage specifics. No other categories qualify. Generic exclusion rules do not apply, as the content is news about a developer-focused product enhancement."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/your-guide-to-azure-community-activations-at-microsoft-ignite/ba-p/4455501",
+    "timestamp": "2025-09-23 20:15:38 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category since the majority of content revolves around Azure infrastructure, cloud migration, and platform capabilities (Azure Inclusion Rule 1, 4, 5). Included the AI category because of dedicated sessions and communities on AI, Azure AI Foundry, and AI community meetups (AI Inclusion Rule 1, 4, 6). Added the ML category due to the data analytics, intelligence, SQL, and data platform coverage within Azure and event content (ML Inclusion Rule 1, 4, 7). Excluded Coding, DevOps, GitHub Copilot, and Security because the content does not directly address those topics at a technical or implementation level, but rather focuses on event overviews and community learning opportunities."
   }
 ]

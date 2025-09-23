@@ -8253,5 +8253,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/azure-express-route-peering-with-on-prem-firewall/m-p/4456300#M688",
     "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=FPAKR5BqrjA",
+    "timestamp": "2025-09-23 20:15:09 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The description indicates this is a high-level event interview/recap (\"Steve Dispenza shares with Rick Claus how this event helps practitioners stay sharp, make connections, and keep ahead of the curve in a rapidly evolving digital landscape\") with no substantive technical details on Microsoft security technology, tools, or solutions. There is no technical implementation, actionable guidance, or specifics about security services or development, which is required for inclusion per the quality and business strategy exclusions."
   }
 ]
