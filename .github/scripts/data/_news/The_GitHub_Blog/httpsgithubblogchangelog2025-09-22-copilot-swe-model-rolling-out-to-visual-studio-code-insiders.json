@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_news",
+  "Description": "GitHub Copilot-SWE, a new experimental model in GitHub Copilot, is now rolling out to Visual Studio Code Insiders as part of a technical preview. Optimized for code-related tasks like editing,…\n\nThe post [Copilot-SWE model rolling out to Visual Studio Code Insiders](https://github.blog/changelog/2025-09-22-copilot-swe-model-rolling-out-to-visual-studio-code-insiders) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2025-09-23 15:11:58",
+  "PubDate": "2025-09-22T23:12:41+00:00",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Link": "https://github.blog/changelog/2025-09-22-copilot-swe-model-rolling-out-to-visual-studio-code-insiders",
+  "Author": "Allison",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "FeedName": "The GitHub Blog",
+  "Title": "Copilot-SWE model rolling out to Visual Studio Code Insiders",
+  "EnhancedContent": "GitHub Copilot-SWE, a new experimental model in GitHub Copilot, is now rolling out to [Visual Studio Code Insiders](https://code.visualstudio.com/insiders/) as part of a technical preview.\n\nOptimized for code-related tasks like editing, refactoring, and small code transformations, GitHub Copilot-SWE is a task-focused model. It’s designed for working with GitHub Copilot inside VS Code. GitHub Copilot-SWE can be used in any [Chat Mode in VS Code](https://code.visualstudio.com/docs/copilot/customization/custom-chat-modes). We recommend writing detailed prompts or using [prompt files](https://code.visualstudio.com/docs/copilot/customization/prompt-files) when using GitHub Copilot-SWE.\n\n# Availability in GitHub Copilot\n\nGitHub Copilot-SWE will be available to all Copilot individual users through [VS Code Insiders](https://code.visualstudio.com/insiders/). Rollout will be gradual — ensure you have the latest version of VS Code Insiders installed and check back soon if you don’t see it yet.\n\n# Learn more\n\nTo explore all models available in GitHub Copilot, see [our documentation on models](https://docs.github.com/copilot/reference/ai-models/supported-models). For more information on selecting models in VS Code, see [VS Code documentation on GitHub Copilot models](https://code.visualstudio.com/docs/copilot/customization/language-models).\n\nIf you would like to provide feedback on Copilot-SWE from within [VS Code Insiders](https://code.visualstudio.com/insiders/), please use the `Report Issue` button within the [VS Code chat panel](https://code.visualstudio.com/docs/copilot/chat/copilot-chat)."
+}

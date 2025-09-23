@@ -8229,5 +8229,17 @@
     "collection": "news",
     "canonical_url": "https://www.linkedin.com/posts/satyanadella_saving-marine-life-with-every-dive-activity-7376036936911790080-SOoe",
     "reason": "No categories found: Content excluded due to generic exclusion rules. Although the post mentions the use of AI to help remove abandoned nets in oceans, it is not technical in nature and lacks any substantive implementation detail about specific Microsoft technology, platform, developer tool, or concrete solution. The content is extremely brief, functions more as an inspirational social media post, and does not contain actionable guidance, code, architecture, or technical depth. No underlying Microsoft AI services, products, frameworks, or developer focus are described. The post is primarily a high-level highlight appropriate for general audiences, which excludes it from categorization according to the workflow (Generic Exclusion: Does not meet technical content or knowledge base relevance)."
+  },
+  {
+    "reason": "No categories found: All categories are excluded because this content is focused on business productivity hacks, tips, and end-user features for Microsoft 365 applications like Outlook, Word, PowerPoint, OneNote, Teams, Excel, SharePoint, and Power Automate. There is no development, coding, technical architecture, or implementation guidance. This directly falls under the 'Non-Development Microsoft Products' exclusion rule, as it is aimed at helping office workers and end users be more efficient with standard Microsoft 365 tools rather than enabling technical, development, or architecture tasks. No eligible developer, coding, Azure, DevOps, AI, ML, Security, or GitHub Copilot content is presented.",
+    "canonical_url": "https://dellenny.com/10-microsoft-365-hacks-that-will-instantly-save-you-an-hour-a-day/",
+    "timestamp": "2025-09-23 15:13:52 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The post is a high-level comparison between Microsoft Teams and Slack targeted at remote work scenarios, focusing on user experience, communication, meetings, AI features, security, integration, and cross-platform usability. There are no substantial technical implementation details, programming, development guidance, or code-level integration specifics involving Microsoft technologies. The core focus is on business productivity, organizational tooling, and feature comparison, not developer-oriented content (see Generic Exclusion: Non-Development Microsoft Products and Business Strategy/Workplace focus).",
+    "canonical_url": "https://dellenny.com/microsoft-teams-vs-slack-in-2025-which-wins-for-remote-work/",
+    "timestamp": "2025-09-23 15:14:07 +00:00",
+    "collection": "posts"
   }
 ]

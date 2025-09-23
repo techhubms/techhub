@@ -9924,5 +9924,23 @@
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-09-22-github-copilot-app-modernization-is-now-generally-available-for-java-and-net",
     "reason": "Succesfully added: Assigned the 'AI' category because GitHub Copilot is an AI-powered developer tool (AI rule 2). Included 'GitHub Copilot' as content centers on this product (GitHub Copilot inclusion rule 1). Added 'Coding' because the solution covers source code transformation, dependency upgrades, and language migrations (Coding rules 1 and 4). Included 'DevOps' for automation and containerization involving build and deployment workflows (DevOps rules 5 and 6). Azure is not specifically discussed in the content, so 'Azure' is not assigned."
+  },
+  {
+    "reason": "Succesfully added: Content is included under 'GitHub Copilot' and 'AI' categories because it announces a new experimental model (Copilot-SWE) within GitHub Copilot—an AI-powered developer tool. The article focuses on new features for VS Code Insiders related to code editing, matching inclusion rules for both categories. No other categories apply because there's no coverage of coding practices, DevOps, ML, Azure, or Security. All generic exclusions were checked and do not apply.",
+    "canonical_url": "https://github.blog/changelog/2025-09-22-copilot-swe-model-rolling-out-to-visual-studio-code-insiders",
+    "timestamp": "2025-09-23 15:13:35 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories since the video focuses on using GitHub Copilot as a developer tool for automating .NET modernization (GitHub Copilot inclusion rules 1–4 and AI rule 2). 'Coding' category applies because of hands-on code migration, upgrades, and .NET architectural practices (Coding rules 1–4). 'Azure' is included because Azure Container Apps, resource provisioning (Bicep, AZD), and deployment are central to the solution (Azure rules 1, 4, 5, 7). 'DevOps' applies due to use of automation, workflows, deployment pipelines, and infrastructure provisioning (DevOps rules 1, 5, 6, 8). No exclusion rules triggered; all content is technical, developer-focused, and within Microsoft ecosystem.",
+    "canonical_url": "https://www.youtube.com/watch?v=-YKguff5GY8",
+    "timestamp": "2025-09-23 15:14:40 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the content is exclusively about the development, production, and scaling of Hollow Core Fiber (HCF) within Microsoft Azure's network infrastructure. The article details Azure's deployment strategies, collaborations for manufacturing, and cloud infrastructure improvements, meeting Azure inclusion rules (Azure rule 1 and 4). It does not cover hands-on development, coding, DevOps tooling, AI/ML-specific technology usage, or security implementation, so those categories were not applied. The technical detail is focused on infrastructure engineering, not code or application layer, thus Coding, DevOps, AI, ML, and Security do not apply.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/microsoft-azure-scales-hollow-core-fiber-hcf-production-through/ba-p/4455953",
+    "timestamp": "2025-09-23 15:15:13 +00:00",
+    "collection": "community"
   }
 ]
