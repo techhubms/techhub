@@ -1,0 +1,22 @@
+{
+  "FeedName": "Microsoft Developer YouTube",
+  "Description": "Boost your Java app modernization with GitHub Copilot! 🚀 Discover how GitHub Copilot streamlines Java app upgrades and updates, fixes code faster, eliminates bugs and vulnerabilities, and ensures enterprise-level security and compliance—while accelerating your entire modernization workflow. Get started with modernizing your Java apps (https://aka.ms/ghcp-appmod/Java) today and learn more about the details here: https://aka.ms/ghcp-appmod/blog\n\n00:06 - Why modernizing apps is hard 00:31 - Introducing GitHub Copilot App Mod Tool 00:45 - Running the initial code assessment 01:21 - Reviewing assessment results 01:39 - Upgrading Java with Copilot 02:10 - Java 21 upgrade plan and execution 02:32 - Security checks and dependency updates 03:03 - Reviewing upgrade results 03:36 - Migrating PostgreSQL to Azure 04:24 - Database migration plan and execution 05:06 - Reviewing migration results 05:48 - Deploying to Azure with Code-to-Cloud 06:13 - Architecture diagram and deployment plan 07:03 - Final deployment and validation 07:47 - Wrap-up and call to action",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Author": "Microsoft Developer",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "PubDate": "2025-09-23T13:01:50+00:00",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=r3iTEqujO1s",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "ProcessedDate": "2025-09-23 13:23:23",
+  "Title": "Modernize Java apps in days with GitHub Copilot",
+  "EnhancedContent": null
+}

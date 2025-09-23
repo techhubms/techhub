@@ -9894,5 +9894,23 @@
     "reason": "Succesfully added: Included the Coding category because the post is a hands-on technical walkthrough of building a .NET tool, covering code, project structure, Native AOT compilation, and CLI framework usage (Coding rules 1-5). Did not include DevOps, Azure, AI, ML, Security, or GitHub Copilot as there is no DevOps process, Azure/cloud, AI, ML, security, or Copilot relevance. All content is technical, development-focused, and non-promotional. No generic exclusions applied: the post is not biographical, not a question, not a sales pitch, not negative, not job/strategy content, and is in English. The post is directly relevant to developers interested in .NET 8/10, Native AOT, CLI tools, and practical Windows automation.",
     "collection": "posts",
     "timestamp": "2025-09-23 11:11:37 +00:00"
+  },
+  {
+    "timestamp": "2025-09-23 13:24:23 +00:00",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/a-step-by-step-guide-to-modernizing-java-projects-with-github-copilot-agent-mode/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' because the article centers on using Copilot's agent mode and AI features for modernization (AI rules 1, 2, 4, and GitHub Copilot rules 1-6). 'DevOps' is included for its focus on CI/CD practices, automated upgrades, and build/test automation (DevOps rules 2, 3, 5). 'Azure' is included because cloud migration and deployment to Azure (including AKS, App Service) are central features (Azure rules 1, 4, and 5). 'Security' is included due to the CVE scanning, security hardening steps, and Microsoft Entra ID (Azure AD) authentication migration (Security rules 1, 2, 5, 7). Did not include 'Coding' because the development is primarily about process and automation rather than code patterns, and 'ML' because no data science or custom model engineering is present. All decisions reference specific steps described in the detailed guide per the chapter 4 inclusion criteria."
+  },
+  {
+    "timestamp": "2025-09-23 13:24:58 +00:00",
+    "canonical_url": "https://devops.com/harness-extends-scope-and-reach-of-ai-platform-for-automating-devops-workflows/",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned 'AI' category because the content is focused on the application of artificial intelligence to DevOps processes, including specific AI modules for maintenance, rollout, and orchestration (AI inclusion rules 1, 4, 5). 'DevOps' is included since the subject matter centers on DevOps workflow automation, engineering best practices, and tools (DevOps inclusion rules 1, 5, 6). 'Azure', 'Coding', 'Security', 'ML', and 'GitHub Copilot' categories are not assigned because the article does not discuss Microsoft Azure, code-level development practices, enterprise security specifics, machine learning engineering, or GitHub Copilot. The focus is on a third-party (Harness) DevOps solution, with no substantial Microsoft technologies featured."
+  },
+  {
+    "timestamp": "2025-09-23 13:25:41 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=r3iTEqujO1s",
+    "collection": "videos",
+    "reason": "Succesfully added: Content focuses on using GitHub Copilot for Java modernization (GitHub Copilot rule 1; always include AI as well). Demonstrates code upgrades, security checks, and migration workflows, fulfilling Coding and DevOps inclusion (Coding rules 1/4, DevOps rules 5/6). Multiple references to deploying and migrating apps to Azure (Azure rule 1/4/5/6). All inclusion rules applied after generic exclusions: none are triggered—the video is technical, not promotional/biographical, and clearly developer-focused."
   }
 ]

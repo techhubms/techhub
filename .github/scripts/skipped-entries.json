@@ -8199,5 +8199,23 @@
     "collection": "posts",
     "timestamp": "2025-09-23 06:19:37 +00:00",
     "canonical_url": "https://harrybin.de/posts/microsoft-mvp-2025/"
+  },
+  {
+    "canonical_url": "https://devops.com/spycloud-report-2-3-orgs-extremely-concerned-about-identity-attacks-yet-major-blind-spots-persist/",
+    "reason": "No categories found: No categories assigned because the content does not meet inclusion criteria for any Tech Hub categories. The article is a press release/industry report summary discussing identity-based security threats and enterprise response gaps based on a third-party (SpyCloud) report. It is generic cybersecurity analysis without technical implementation details or actionable Microsoft-specific content. There is no coverage of Microsoft Security tools, Azure/Entra ID, Defender, Sentinel, or any technical development, DevOps, or coding practices involving Microsoft products. Content focuses on industry trends, organizational concerns, and vendor positioning, which is explicitly excluded by generic business strategy and executive content rules, as well as non-technical/non-development coverage in the generic exclusion rules. No mention of Microsoft technology is central or even present in the substantive content.",
+    "timestamp": "2025-09-23 12:23:10 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/kkiFr4mv0W4",
+    "reason": "No categories found: No categories were assigned because the input is missing substantive content. The 'content', 'description', and 'tags' fields are empty or null, and the title alone ('Console Write in Tests is different in C#') does not provide enough technical detail to accurately categorize the material according to the workflow rules. Per the workflow, categorization may only be performed using actual provided content, and no extrapolation from a title is allowed. Therefore, the generic exclusion rule requiring sufficient content quality applies.",
+    "timestamp": "2025-09-23 12:23:31 +00:00",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-09-23 13:25:17 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=u1eWdX1w6m8",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content focuses on improving the visual quality of shared videos during Microsoft Teams meetings, which is an end-user and business productivity topic. According to the generic exclusion rules, Microsoft Teams content is only included if it is about Teams development or bot creation. This content is purely about user experience enhancements for regular Teams meetings and does not address development, coding, DevOps, AI, ML, Security, or any Microsoft service configuration relevant to developers. Therefore, no category applies."
   }
 ]
