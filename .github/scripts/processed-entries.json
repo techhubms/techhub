@@ -9996,5 +9996,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=STigfiK_n1Q",
     "reason": "Succesfully added: Assigned 'GitHub Copilot' because the tags and description highlight GitHub Copilot integration and the Model Context Protocol (MCP), which is a developer tool (GitHub Copilot rules 1, 2, and 6). 'AI' is included per critical rule for all GitHub Copilot content. 'Coding' applies since the content focuses on developer tools within VS Code, automated test writing, and workflow enhancement (Coding rule 2, 5). 'DevOps' is included as this involves workflow automation, test orchestration, and developer productivity tooling within an IDE (DevOps rule 9). There are no triggers for exclusion under generic rules—the content is technical, developer-focused, not business productivity or business-only Copilot. Content is primarily in English and meets all length/form requirements.",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-09-23 19:11:11 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on Foundry Local, a local AI runtime, and details Microsoft's on-device AI acceleration (AI rules 1 and 4). Assigned Azure because Foundry Local is a product of Azure AI Foundry and tightly integrated with Microsoft's Azure ecosystem (Azure rule 1). Assigned Coding because the article targets developers, provides installation steps, and gives command-line usage guidance for running AI models (Coding rules 2 and 5). Did not assign ML because the primary focus is on deployment and acceleration of AI models, not developing custom ML algorithms or analytics workflows from scratch.",
+    "canonical_url": "https://devblogs.microsoft.com/foundry/foundry-local-meets-more-silicon/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-23 19:11:52 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the episode centers on building an AI coaching agent leveraging Azure OpenAI and AI engineering techniques (AI rules 1, 4, 5). Added 'Coding' because it demonstrates agent deployment using code (Python, VS Code) and practical implementation steps (Coding rules 1, 2, 5). Although the original content leans on psychology, it details technical deployment, satisfies the Microsoft relevance threshold, and is not a business productivity tool—so business/productivity Copilots exclusion does not apply.",
+    "canonical_url": "https://www.youtube.com/watch?v=Rvp_oQXia_8",
+    "collection": "videos"
   }
 ]
