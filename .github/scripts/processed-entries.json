@@ -10044,5 +10044,11 @@
     "canonical_url": "https://github.blog/changelog/2025-09-23-claude-opus-4-1-is-now-generally-available-in-github-copilot",
     "collection": "news",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content specifically discusses an AI model (Claude Opus 4.1) being made available in GitHub Copilot, a developer tool. This fits AI inclusion rule 2 and GitHub Copilot rule 1. No other categories apply since it's focused exclusively on AI model access within Copilot and does not discuss coding practices, DevOps, Azure, or security."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-09-23-upcoming-deprecation-of-select-copilot-models-from-claude-openai-and-gemini",
+    "collection": "news",
+    "timestamp": "2025-09-24 00:54:12 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the post is about the deprecation and migration of AI models within GitHub Copilot (AI rules 1, 2, 5, and 6). Assigned GitHub Copilot because it specifically discusses GitHub Copilot's AI model lifecycle and settings (GitHub Copilot rules 1 and 2). The content is not about business productivity Copilots, and no generic exclusion criteria apply."
   }
 ]
