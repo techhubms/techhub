@@ -10218,5 +10218,11 @@
     "timestamp": "2025-09-24 22:12:20 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-automation-feature-improvements-and-bugs/m-p/4456195#M22242",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' category because Microsoft Fabric and OneLake are part of the Azure ecosystem (Azure Inclusion Rule 1). Assigned 'ML' category because the content focuses on data integration and analytics engineering for multi-cloud scenarios, supporting advanced BI and analytics use cases (ML Inclusion Rules 1, 2, and 4). Did not assign 'AI' because this post does not specifically detail AI-powered solutions or model development; its primary focus is data movement and analytics readiness. No other categories qualified as there is no programming, DevOps, Copilot, or explicit security/developer focus.",
+    "collection": "news",
+    "timestamp": "2025-09-24 23:12:14 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-mirroring-for-google-bigquery-in-microsoft-fabric/"
   }
 ]
