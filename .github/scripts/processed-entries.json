@@ -10212,5 +10212,11 @@
     "reason": "Succesfully added: The content describes a technical walkthrough of the GitHub MCP Registry, emphasizing interoperability for AI agents and tools. The inclusion of GitHub and AI-specific functionality and terminology meets the criteria for the 'AI' category (AI rule 4 and 5). The content does not directly address coding, DevOps, Azure, ML, Security, or anything specifically about GitHub Copilot; it is focused on infrastructure and interoperability for AI, thus only 'AI' is assigned.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=wm1yjcTk50w"
+  },
+  {
+    "reason": "Succesfully added: Assigned categories as follows: 'Azure' because the content exclusively addresses Microsoft Azure Automation Accounts, a core Azure platform service (Azure rule 1, 4). 'DevOps' was assigned since Azure Automation is foundational to DevOps practices for CI/CD, infrastructure as code, job scheduling, and process automation (DevOps rule 1, 5, 6). 'Coding' is included as several requests concern PowerShell, script integration, and runbook development within the Microsoft ecosystem (Coding rules 1, 2, 4). No generic exclusion rule applies: the post is not biographical or sales-oriented, focuses on technical feedback, and exceeds minimum word requirements for community content. No other categories apply (e.g., AI, Security, ML) because the discussion does not involve these domains.",
+    "timestamp": "2025-09-24 22:12:20 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-automation-feature-improvements-and-bugs/m-p/4456195#M22242",
+    "collection": "community"
   }
 ]

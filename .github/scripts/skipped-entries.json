@@ -8331,5 +8331,11 @@
     "reason": "Insufficient content length",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/how-to-setup-internet-access-after-all-basic-ips-be-retired-on/m-p/4456084#M687"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-09-24 22:11:51 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/green-pixelation-in-when-resizing-rdp-window-in-windows-app/m-p/4456382#M13913",
+    "collection": "community"
   }
 ]
