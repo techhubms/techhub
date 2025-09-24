@@ -1,0 +1,18 @@
+{
+  "EnhancedContent": "With GitHub Copilot coding agent on GitHub Mobile, you can delegate tasks to Copilot and let it handle them in the background while you’re on the go.\n\nWe’ve got two major additions to the Copilot coding agent experience on GitHub Mobile:\n\n### Kick off new tasks while you’re on the go\n\nYou can now ask Copilot to start a new coding task directly from **Home** or the **Repository** view. Simply tap the **+** button, choose your repository, and enter your prompt. Copilot will create a draft pull request, work in the background, and tag you for review once it’s ready. If you have push notifications enabled on mobile, you’ll also receive a notification when your draft is ready.\n\n### Track the status of all your Copilot coding agents’ work\n\nYou can now easily access the Agents page from **Home** on the mobile app. Just tap the **Agents** section under the **My Work** section to see a list of your Copilot coding agent tasks. This provides a centralized view of all your agent tasks at a glance, making it simple to stay on top of your work from anywhere.\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2025-09-24-start-and-track-copilot-coding-agent-tasks-in-github-mobile",
+  "ProcessedDate": "2025-09-24 17:11:14",
+  "Description": "With GitHub Copilot coding agent on GitHub Mobile, you can delegate tasks to Copilot and let it handle them in the background while you’re on the go. We’ve got two…\n\nThe post [Start and track Copilot coding agent tasks in GitHub Mobile](https://github.blog/changelog/2025-09-24-start-and-track-copilot-coding-agent-tasks-in-github-mobile) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "PubDate": "2025-09-24T16:16:48+00:00",
+  "Tags": [
+    "client apps",
+    "copilot",
+    "Release"
+  ],
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Author": "Allison",
+  "Title": "Start and track Copilot coding agent tasks in GitHub Mobile"
+}

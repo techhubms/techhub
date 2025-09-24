@@ -8295,5 +8295,11 @@
     "timestamp": "2025-09-24 16:17:13 +00:00",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-09-24-progressive-error-handling-speedier-publishing-and-reliability-fixes"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-09-24 17:13:58 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_expanding-model-choice-in-microsoft-365-copilot-activity-7376648629895352321-cwXP",
+    "reason": "No categories found: Content was excluded due to the generic exclusion rule for non-development Microsoft products. The main focus is on Microsoft 365 Copilot's expansion with Anthropic's Claude models, which is a business productivity tool, not a developer tool (see 'CRITICAL: Copilot Product Distinction' and 'Non-Development Microsoft Products' in Generic Exclusion Rules). There is no coverage of technical implementation, development, or engineering aspects, nor any substantive focus on Copilot Studio as a development platform. Therefore, no categories are assigned."
   }
 ]

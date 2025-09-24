@@ -10122,5 +10122,41 @@
     "timestamp": "2025-09-24 16:18:47 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=yVPmHIvJLYg"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-09-24 17:12:53 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/general-availability-announcement-fabric-spark-monitoring-apis/",
+    "reason": "Succesfully added: Assigned Azure category as Microsoft Fabric is an Azure-based analytics platform and the Spark Monitoring APIs discussed are part of this Azure service (Azure rule 1, 4, and 5). Assigned ML category because managing, optimizing, and observing Spark workloads is central to large-scale data engineering and analytics/ML workflows (ML rule 1 and 2). Did not assign AI, Coding, DevOps, Security, or GitHub Copilot, as there is no mention of AI integration, coding implementation details, DevOps pipelines, security concerns, or Copilot tooling."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-09-24 17:13:41 +00:00",
+    "canonical_url": "https://blogs.windows.com/windowsdeveloper/2025/09/23/windows-ml-is-generally-available-empowering-developers-to-scale-local-ai-across-windows-devices/",
+    "reason": "Succesfully added: Assigned the AI category because the content centers on Windows ML, Microsoft's built-in runtime for local AI inferencing on Windows 11 devices, and covers a wide range of AI workloads, deployment strategies, developer tooling, and silicon partner optimizations (AI rules 1, 4, 5, 6). Coding category was included because the piece details developer tools, APIs, ONNX model workflows, implementation guidance, and real-world app development strategies (Coding rules 2, 4, 5). Azure category and ML category were not included because the article is not focused on Azure-based services or technical ML/data science workflows; it's about local, client-side inference. Content is technical and educational, with actionable implementation details, and does not trigger any generic exclusions."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-09-24 17:14:25 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_sap-and-openai-partner-to-launch-sovereign-activity-7376627188332335104-2h6b",
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' because the announcement clearly focuses on introducing AI solutions and innovations in the public sector (AI rule 1 and 5). 'Azure' because Microsoft Azure is the platform that will power these solutions (Azure rule 1). 'Security' is included due to explicit mention of 'data sovereignty, security, and legal standards,' which aligns with Security category rules for compliance, cloud security, and data protection (Security rules 1, 4, 7, and 10). No Coding, DevOps, or ML categories were added, as the announcement does not discuss development tools, code, or machine learning/data science engineering. All content is technical and implementation-focused, not high-level executive or generic business strategy."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-09-24 17:14:58 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/anthropic-joins-the-multi-model-lineup-in-microsoft-copilot-studio/",
+    "reason": "Succesfully added: Assigned the AI category because the content directly focuses on Microsoft's Copilot Studio—a developer/maker tool—gaining Anthropic model support for AI agent creation, orchestration, and automation (AI rule 1). Although Copilot Studio is part of the Microsoft 365 product family, it is specifically a developer/maker platform and not a general business productivity tool, so inclusion is warranted. The content does not focus on Coding, DevOps, Azure, ML, Security, or GitHub Copilot, so those categories were not assigned. The article thoroughly explains technical usage, admin controls, and agent workflow composition using Microsoft AI services. Excluded other categories due to lack of relevant, substantial content per their rules."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-09-24 17:15:37 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-24-deprecate-github-copilot-extensions-github-apps",
+    "reason": "Succesfully added: Assigned 'AI' category because the deprecation of Copilot Extensions is in favor of the Model Context Protocol (MCP), whose purpose is integrating AI agents across software (AI category rule 1). Assigned 'GitHub Copilot' because the content is about Copilot Extensions and their migration (GitHub Copilot rules 1-4). Assigned 'DevOps' because this change directly impacts CI/CD, extension lifecycle, and developer operations, including marketplace and integration processes (DevOps rules 2, 6, 9). Coding and Azure categories were not selected as there is little to no focus on application-level source code or Azure services in the main content."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-09-24 17:16:10 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-24-start-and-track-copilot-coding-agent-tasks-in-github-mobile",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories. The content is about a new feature for GitHub Copilot coding agent in GitHub Mobile, focusing on how developers can initiate and track automated coding tasks (Category Inclusion Rules: AI Rule 2 and 5, GitHub Copilot Rules 1-4). The post covers Copilot's developer features and workflow integration (not business productivity or consumer tools). No Coding, DevOps, Azure, ML, or Security content is covered. Generic exclusion rules do not apply as the content is technical, in English, not sales-oriented or biographical, and not business- or workplace-focused."
   }
 ]
