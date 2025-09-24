@@ -1,0 +1,30 @@
+{
+  "OutputDir": "_videos",
+  "FeedName": "Visual Studio Code YouTube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Description": "What if you could turn a web app into a mobile app with just a few smart prompts? 🤯 In this video, I’ll reveal the prompt engineering tricks that make it possible—no heavy coding required. Watch till the end to see how fast you can go from web to mobile with GitHub Copilot.\n\n▶️ Check out the full series playlist: https://aka.ms/Prompt-DrivenDevelopment/Playlist\n\n🔎 Chapters: 00:00 Introduction 00:31 Getting Started 02:23 Demo - Convert a Web App to Mobile App Using Prompts 02:52 Plan Mode 02:54 Voice Prompting 04:25 Model Picker 04:42 Installation continues 06:53 Ask Mode 18:20 Cleaning up the duplicate titles 19:22 Adding a new feature 22:04 BYOK - Bring Your Own Key 27:51 In Summary 28:35 Wrap\n\n🔗 Links: Check out Reynald's last video in this series: https://youtu.be/fzYN\\_kgl-OM\n\n🎙️ Featuring: Reynald Adolphe (@ReynaldAdolphe)\n\n#vscode #promptdrivendevelopment",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Author": "Visual Studio Code",
+  "Tags": [
+    "AI",
+    "code",
+    "copilot",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "githubcopilot",
+    "MCP",
+    "Microsoft",
+    "modelcontextprotocol",
+    "promptdrivendevelopment",
+    "softwaredeveloper",
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "ProcessedDate": "2025-09-24 14:11:36",
+  "PubDate": "2025-09-24T14:01:37+00:00",
+  "Link": "https://www.youtube.com/watch?v=sKW4LUVlOSo",
+  "Title": "Let's Convert a Web App to Mobile Using Prompts"
+}

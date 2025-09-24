@@ -10080,5 +10080,11 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the news is about GitHub Copilot's expanded developer features for assigning coding agents to issues (GitHub Copilot Inclusion Rules 1, 2, 3; AI Inclusion Rule 2). No Coding category as the content focuses on workflow management, not programming techniques or code development. No DevOps, Azure, ML, or Security categories as those are not covered. Content quality is technical and does not trigger any generic exclusion rules.",
     "canonical_url": "https://github.blog/changelog/2025-09-23-pick-the-repository-and-base-branch-when-assigning-issues-to-copilot"
+  },
+  {
+    "timestamp": "2025-09-24 14:12:57 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=sKW4LUVlOSo",
+    "reason": "Succesfully added: Assigned 'AI' category because the video focuses on prompt engineering with GitHub Copilot, fitting AI rule 2 and AI rule 4. 'GitHub Copilot' is included as the core subject, in line with the rules requiring both 'AI' and 'GitHub Copilot' for Copilot content. 'Coding' is added due to the transformation of a web app to a mobile app using developer tools in Visual Studio Code, satisfying Coding rules 1, 4, and 5. Azure, DevOps, ML, and Security categories are not assigned as there is no substantive content on those areas. Generic exclusion rules do not apply as the video is technical, in English, and focused on development techniques."
   }
 ]
