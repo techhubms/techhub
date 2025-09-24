@@ -8265,5 +8265,23 @@
     "canonical_url": "https://devops.com/open-letter-calls-for-fundamental-change-to-open-source-economics/",
     "collection": "posts",
     "reason": "No categories found: No categories have been assigned because the content discusses open source economic sustainability, IT infrastructure funding, and community usage patterns in general, without specific and substantial technical coverage of Microsoft technologies or platforms. The article references industry-wide open source foundations, CI platforms, containers, AI coding tool impact, and general DevOps ecosystem economics but does not focus on Azure, GitHub, or any Microsoft-specific topics, products, services, frameworks, or development tools. There is also no detailed technical information about DevOps methodologies in a Microsoft context or a focus on AI/ML/Coding/Security as it relates to Microsoft tools. This fits the inclusion threshold: if Microsoft technologies are not central or at least 40% of the substantive technical content, all categories are to remain empty as per multi-platform content and category inclusion rules."
+  },
+  {
+    "timestamp": "2025-09-24 09:14:36 +00:00",
+    "canonical_url": "https://dellenny.com/ai-mistakes-in-microsoft-copilot-and-how-to-fix-them/",
+    "reason": "No categories found: All content focuses on Microsoft Copilot features for Microsoft 365 (Word, Excel, PowerPoint, Outlook). According to the critical Copilot Product Distinction and the Non-Development Microsoft Products exclusion in Chapter 3, content about Microsoft 365 Copilot or Copilot for Microsoft 365 (business productivity tools) must be excluded ('no categories'). Despite tags like 'AI' and 'Copilot', the content is specifically about productivity/product usage, not developer tools or code. Therefore, NO categories are assigned.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-24 09:14:49 +00:00",
+    "canonical_url": "https://dellenny.com/copilot-in-excel-turning-data-nightmares-into-insights-in-seconds/",
+    "reason": "No categories found: No categories assigned. The content is focused on Copilot in Excel (a Microsoft 365 Copilot feature) for business productivity (summarizing, analyzing, and visualizing data in Excel for non-developers). According to the Copilot Product Distinction rules, content about Microsoft 365 Copilot, business productivity tools, and Copilot in Excel must be excluded, as they are not developer tools or focused on development. The article does not discuss coding, development, technical implementation, or developer-centric Microsoft technologies. No generic exclusion rules (such as negativity or biographical content) were needed: the exclusion is exclusively due to non-development product focus.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-24 09:15:23 +00:00",
+    "canonical_url": "https://jessehouwing.net/github-billing-cost-centers-set-by-organization-and-repository-owners/",
+    "reason": "No categories found",
+    "collection": "posts"
   }
 ]

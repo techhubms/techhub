@@ -10062,5 +10062,11 @@
     "reason": "Succesfully added: Assigned only the Azure category because the content focuses on Azure’s custom Cobalt 100 VM offering, its impact on cloud workloads, and real-world customer outcomes (Azure rule 1 and 4). The article extensively covers Azure infrastructure and its adoption in customer scenarios. While data platforms, AKS, and security workloads are mentioned, the focus is on VM infrastructure and not on ML/data engineering or security technical implementation, so ML and Security categories do not apply. Content does not have programming/code samples or CI/CD/process coverage, so Coding and DevOps categories do not apply. No AI development or use of Microsoft AI APIs is described—mentions of 'AI-powered banking' are customer use cases, not developer implementation guidance for AI tools/services. No generic exclusion rules apply.",
     "collection": "news",
     "timestamp": "2025-09-24 04:16:33 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/ai-builder-in-action-automating-tedious-business-tasks/",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the 'AI' category because the article is focused on Microsoft AI Builder, a low-code AI capability within the Power Platform, and details how it enables business users to automate processes with AI (AI Inclusion Rule 3 and 4). The content emphasizes features like form processing, text classification, and prediction models powered by AI Builder, all falling under Microsoft's AI frameworks and AI development with Microsoft technologies. No other categories (such as Coding, Azure, ML, DevOps, GitHub Copilot, Security) apply: there is no code-centric development (Coding), no deep ML/data science engineering focus (ML), nor DevOps, Azure, or security content, and Copilot references are limited to related post links, not this article's topic.",
+    "timestamp": "2025-09-24 10:15:09 +00:00"
   }
 ]
