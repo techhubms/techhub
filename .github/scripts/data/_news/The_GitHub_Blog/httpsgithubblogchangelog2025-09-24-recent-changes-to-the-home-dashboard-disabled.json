@@ -1,0 +1,17 @@
+{
+  "Link": "https://github.blog/changelog/2025-09-24-recent-changes-to-the-home-dashboard-disabled",
+  "Author": "Allison",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2025-09-24 18:17:13",
+  "OutputDir": "_news",
+  "PubDate": "2025-09-24T17:08:05+00:00",
+  "Description": "Last month, we began testing improvements to the content and layout of the home dashboard and enabled it for a small subset of users. That test is over and we…\n\nThe post [Recent changes to the home dashboard disabled](https://github.blog/changelog/2025-09-24-recent-changes-to-the-home-dashboard-disabled) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedName": "The GitHub Blog",
+  "Tags": [
+    "collaboration tools",
+    "Retired"
+  ],
+  "Title": "Recent changes to the home dashboard disabled",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "EnhancedContent": "Last month, we [began testing improvements](https://github.blog/changelog/2025-08-28-improvements-to-the-home-dashboard-available-in-public-preview/) to the content and layout of the home dashboard and enabled it for a small subset of users. That test is over and we have returned the dashboard to its original state, focused on the feed.\n\n### What’s changed\n\n- Users that were automatically added to the feature preview are now removed.\n- All users will see the feed on their home dashboard."
+}

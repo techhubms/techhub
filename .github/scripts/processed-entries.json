@@ -10158,5 +10158,35 @@
     "timestamp": "2025-09-24 17:16:10 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-09-24-start-and-track-copilot-coding-agent-tasks-in-github-mobile",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories. The content is about a new feature for GitHub Copilot coding agent in GitHub Mobile, focusing on how developers can initiate and track automated coding tasks (Category Inclusion Rules: AI Rule 2 and 5, GitHub Copilot Rules 1-4). The post covers Copilot's developer features and workflow integration (not business productivity or consumer tools). No Coding, DevOps, Azure, ML, or Security content is covered. Generic exclusion rules do not apply as the content is technical, in English, not sales-oriented or biographical, and not business- or workplace-focused."
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: DevOps category assigned because the content centers on containerization tooling and workflows within Visual Studio—specifically, managing, running, and debugging containers (DevOps rules 1, 3, and 6). Coding category included because container development and integration in the IDE inherently involve build, run, and debug activities (Coding rule 4, and Visual Studio's usage for development). No Azure- or AI-specific technology is central. Security is discussed as a benefit but not in a direct technical implementation context. The content does not fit generic exclusion criteria: it is technical, in English, not a personal journey, and is focused on developer tooling.",
+    "timestamp": "2025-09-24 18:19:11 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/blog/visual-studio-2026-insiders-using-podman-for-container-development"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Security category due to central focus on cyberattack analysis, incident response, identity management, and Microsoft security technology (Security rules 1, 2, 5, 9). Assigned Azure category because Microsoft Entra ID, Azure Virtual Desktop, Defender, Sentinel, and cloud identity management are core elements (Azure rule 1, 4). Did not assign ML, AI, Coding, DevOps, or GitHub Copilot as there is no substantial content on those technologies or practices. The post is technical, implementation-focused, and is not a sales pitch, non-English, or business/strategy content, meeting all inclusion and exclusion criteria.",
+    "timestamp": "2025-09-24 18:19:41 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/09/24/retail-at-risk-how-one-alert-uncovered-a-persistent-cyberthreat/"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: The content is a news piece about the general availability of GitHub Copilot Spaces, a feature directly related to GitHub Copilot and its developer-focused capabilities. According to Chapter 4, GitHub Copilot-specific content should always be assigned both the 'GitHub Copilot' and 'AI' categories. None of the generic exclusion rules apply as the article is technically focused, English language, and not business productivity or non-development oriented. The tags were chosen to reflect the technical depth, features introduced, and development context.",
+    "timestamp": "2025-09-24 18:20:02 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-24-copilot-spaces-is-now-generally-available"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the content is focused on Azure Container Apps and the integration of Azure Monitor with Grafana (Azure Inclusion Rule 1, 4, and 5). Assigned DevOps because the dashboards provide operational monitoring, observability, and application insights, which are core DevOps practices (DevOps Inclusion Rules 1, 5, 6, and 7). Coding, AI, ML, Security, and GitHub Copilot were not assigned since the post does not address development frameworks, AI/ML, or security/identity specifics—it's focused on operational monitoring features within Azure.",
+    "timestamp": "2025-09-24 18:20:51 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-the-public-preview-of-azure-container-apps-azure/ba-p/4450958"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Category 'AI' was assigned because the solution leverages AI for extracting structured insights from call transcripts (AI rule 1 and 4). 'Azure' is included due to extensive use of Azure Communication Services and Azure OpenAI for both transcription and AI analysis (Azure rules 1 and 3). No Coding category was assigned since the focus is not on code-level implementation but the architecture and workflow; there are mentions of Node.js and JavaScript, but the content remains at the solution and integration level rather than hands-on coding tutorials. None of the generic exclusion rules apply, as the content is substantial, technical, and focused on Microsoft developer/consultant-oriented scenarios.",
+    "timestamp": "2025-09-24 18:21:20 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-communication-services/from-call-transcripts-to-crm-gold-ai-powered-post-call/ba-p/4456337"
   }
 ]
