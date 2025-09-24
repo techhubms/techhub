@@ -1,0 +1,22 @@
+{
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Description": "The MSSQL extension for Visual Studio Code is now more capable than ever with the integration of GitHub Copilot. In this episode, we explore GitHub Copilot in both Ask and Agent modes, demonstrating how AI-assisted coding can accelerate query writing and improve productivity. We also take a closer look at Agent tools and Slash commands, which simplify common tasks and bring intelligent automation directly into the SQL development workflow.\n\nTo wrap things up, we showcase the latest deployment features that enable developers to quickly provision local SQL Server containers as well as SQL databases in Microsoft Fabric. These innovations unlock new levels of efficiency and flexibility, making it easier than ever to build, test, and scale modern solutions.\n\nLearn how to enhance your SQL development experience with GitHub Copilot, SQL Server containers, and Fabric in this episode of Data Exposed.\n\n✅ Chapters: 0:00 Introduction 1:25 Demo 8:00 Demo 20:47 Getting started\n\n✅ Resources: Install: https://aka.ms/vscode-mssql Demos: https://aka.ms/vscode-mssql-demos\n\nBlogs: https://aka.ms/vscode-mssql-blogs\n\nDocumentation: https://aka.ms/vscode-mssql-docs\n\n📌 Let's connect: Twitter - Anna Hoffman, https://twitter.com/AnalyticAnna Twitter - Carlos Robles, https://twitter.com/croblesmr\n\nTwitter - AzureSQL, https://aka.ms/azuresqltw\n\n🔴 Watch even more Data Exposed episodes: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt\n\n#AzureSQL #SQL #LearnSQL",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=jj9O5FR7v3A",
+  "Author": "Microsoft Developer",
+  "FeedName": "Microsoft Developer YouTube",
+  "OutputDir": "_videos",
+  "Title": "Next-Level SQL in VS Code: GitHub Copilot, Containers & more | Data Exposed",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "PubDate": "2025-09-24T16:01:28+00:00",
+  "ProcessedDate": "2025-09-24 16:16:08",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ]
+}

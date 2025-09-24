@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "Title": "Upcoming changes to GitHub Dependabot alerts REST API offset-based pagination parameters (`page`, `first`, and `last`)",
+  "Tags": [
+    "Retired",
+    "supply chain security"
+  ],
+  "OutputDir": "_news",
+  "ProcessedDate": "2025-09-24 16:15:16",
+  "Description": "We’re closing down offset-based pagination parameters (page, first, and last) in all GitHub Dependabot alerts REST API endpoints. Going forward, only cursor-based pagination parameters (before, after, and per\\_page) will be…\n\nThe post [Upcoming changes to GitHub Dependabot alerts REST API offset-based pagination parameters (`page`, `first`, and `last`)](https://github.blog/changelog/2025-09-23-upcoming-changes-to-github-dependabot-alerts-rest-api-offset-based-pagination-parameters-page-first-and-last) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "EnhancedContent": "We’re closing down offset-based pagination parameters (`page` , `first` , and `last` ) in all GitHub Dependabot alerts REST API endpoints. Going forward, only cursor-based pagination parameters (`before` , `after` , and `per_page` ) will be supported. This change brings GitHub Dependabot alerts in line with other GitHub security APIs, and simplifies how you retrieve large sets of alerts.\n\n### What’s changing\n\nYou’ll no longer be able to use `page` , `first` , or `last` parameters when listing Dependabot alerts via the REST API. This affects the following endpoints:\n\n- List Dependabot alerts for a repository\n- List Dependabot alerts for an organization\n- List Dependabot alerts for an enterprise\n\nTo paginate through results, use these cursor-based parameters instead:\n\n- `before`\n- `after`\n- `per_page`\n\n### Why we’re making this change\n\nCursor-based pagination is more consistent, reliable, and performant than offset-based pagination. By standardizing on cursor-based pagination, we’re making it easier for you to work with large datasets and align your integrations across GitHub security APIs.\n\n### Timeline and next steps\n\n- Offset-based pagination parameters (`page`\n, `first` , and `last` ) will be removed from all Dependabot alert endpoints on October 14, 2025.\n- Please update your scripts and integrations to use cursor-based parameters as soon as possible\n\nFor more details on how cursor-based pagination works in the API, see the [GitHub API documentation](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api?apiVersion=2022-11-28). For more information on the working with Dependabot, see the [Dependabot Alerts API documentation](https://docs.github.com/en/rest/dependabot/alerts?apiVersion=2022-11-28#list-dependabot-alerts-for-a-repository).\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "PubDate": "2025-09-23T15:35:24+00:00",
+  "Author": "Allison",
+  "Link": "https://github.blog/changelog/2025-09-23-upcoming-changes-to-github-dependabot-alerts-rest-api-offset-based-pagination-parameters-page-first-and-last",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog"
+}

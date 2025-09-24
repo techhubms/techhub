@@ -10092,5 +10092,35 @@
     "canonical_url": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/09/23/accelerating-sustainability-and-resilience-with-ai-powered-innovation/",
     "reason": "Succesfully added: Included the AI category because the entire content discusses uses of artificial intelligence in sustainability, in line with AI inclusion rules (Chapter 4, section 1, 4, 5). Added the Azure category because key projects leverage Azure Databricks, Azure OpenAI, and Azure Quantum Elements (Azure inclusion rule 1, 3, 4). Did NOT assign ML, Coding, DevOps, GitHub Copilot, or Security: although there are technical implementations, there are no details of ML model development, coding instructions, DevOps workflows, Copilot usage, or security architecture. Exclusion rules did not apply; content is technical, relevant, and written for practitioners.",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'DevOps' because the content changes how developers and DevOps professionals interact with Dependabot REST API endpoints, which are used for automation and integration tasks (DevOps rule 11). 'Security' is included because Dependabot alerts are a part of GitHub's supply chain security ecosystem and the change directly impacts security operations (Security rule 1). AI, GitHub Copilot, Coding, Azure, and ML categories do not apply since the content is focused on API usage and automation but does not involve coding samples, AI, or Microsoft cloud services.",
+    "timestamp": "2025-09-24 16:16:55 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-09-23-upcoming-changes-to-github-dependabot-alerts-rest-api-offset-based-pagination-parameters-page-first-and-last"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the project centers on applying artificial intelligence and machine learning, particularly through Microsoft's AI for Good Lab, to analyze drone imagery and generate maps. GitHub Copilot was mentioned as a key tool in streamlining the data and code preparation process, thus triggering the GitHub Copilot category (which always also assigns AI per the rules). Azure and Coding categories are not included because, although Microsoft technology is present, the focus is not directly on Azure-specific services or hands-on code development practices; the technical emphasis is on AI model application and open collaboration, not building software from scratch. There was no content supporting assignment of DevOps, Security, or ML (in the engineering from scratch sense) per the inclusion rules and content focus.",
+    "timestamp": "2025-09-24 16:17:35 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/open-source/social-impact/using-ai-to-map-hope-for-refugees-with-unhcr-the-un-refugee-agency/"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the topic centers on Model Context Protocol (MCP), a protocol empowering AI tools (AI rule 1). Assigned GitHub Copilot category because the video specifically discusses how MCP enables Copilot to perform actions (GitHub Copilot rule 1, 2). Coding, DevOps, Azure, ML, Security categories were not assigned as content is about integrating tools rather than direct development or cloud/system operations.",
+    "timestamp": "2025-09-24 16:18:07 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/rTW1eM0T_90"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the episode centers on using GitHub Copilot for AI-assisted SQL development (AI rules 1, 2, and 5; GitHub Copilot rules 1-4). 'Coding' applies due to the deep focus on writing and optimizing SQL queries with tools in VS Code (Coding rule 1 and 4). 'Azure' is included as Microsoft Fabric and Azure SQL deployment features are covered, central to the cloud-based database solutions presented (Azure rules 1, 4, and 5). The content is highly technical, targets developers, and does not violate any generic exclusion rules.",
+    "timestamp": "2025-09-24 16:18:28 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=jj9O5FR7v3A"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content discusses advancing AI developer tools through the Model Context Protocol (AI rule 1 and 4). Assigned GitHub Copilot because MCP's context and examples are directly applied to GitHub Copilot and its capabilities (GitHub Copilot inclusion rule 1 and 2). Coding category was not assigned because the focus is not on language, frameworks, or direct code development, but rather on developer tool evolution. Azure, DevOps, ML, and Security categories do not apply as there is no substantive content on those aspects.",
+    "timestamp": "2025-09-24 16:18:47 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=yVPmHIvJLYg"
   }
 ]

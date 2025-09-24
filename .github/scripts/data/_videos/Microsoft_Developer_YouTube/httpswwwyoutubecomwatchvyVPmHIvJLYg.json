@@ -1,0 +1,14 @@
+{
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Description": "Model Context Protocol (MCP) might sound abstract, but Damian Brady breaks down why it matters for developers. Hint: it’s about giving tools like GitHub Copilot the power to actually do things, not just suggest code.\n\nLearn more: https://msft.it/6050sSKzn",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=yVPmHIvJLYg",
+  "Author": "Microsoft Developer",
+  "FeedName": "Microsoft Developer YouTube",
+  "OutputDir": "_videos",
+  "Title": "What is Model Context Protocol (MCP)?",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "PubDate": "2025-09-24T15:59:03+00:00",
+  "ProcessedDate": "2025-09-24 16:16:08",
+  "Tags": []
+}
