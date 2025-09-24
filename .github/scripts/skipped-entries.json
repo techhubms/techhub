@@ -8283,5 +8283,11 @@
     "canonical_url": "https://jessehouwing.net/github-billing-cost-centers-set-by-organization-and-repository-owners/",
     "reason": "No categories found",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-24 13:25:08 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the required input fields contain insufficient information for categorization. The 'content' field is null and the 'description' and 'tags' fields are empty. Without substantive content, there is no way to determine if the video addresses any Microsoft technology, programming, or development topics described in the inclusion or exclusion rules. Per workflow, only actual content may be used for categorization; with no content present, exclusion is required.",
+    "canonical_url": "https://www.youtube.com/shorts/Cug2vZfWSUs"
   }
 ]

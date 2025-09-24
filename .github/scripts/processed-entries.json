@@ -10068,5 +10068,17 @@
     "collection": "posts",
     "reason": "Succesfully added: Assigned the 'AI' category because the article is focused on Microsoft AI Builder, a low-code AI capability within the Power Platform, and details how it enables business users to automate processes with AI (AI Inclusion Rule 3 and 4). The content emphasizes features like form processing, text classification, and prediction models powered by AI Builder, all falling under Microsoft's AI frameworks and AI development with Microsoft technologies. No other categories (such as Coding, Azure, ML, DevOps, GitHub Copilot, Security) apply: there is no code-centric development (Coding), no deep ML/data science engineering focus (ML), nor DevOps, Azure, or security content, and Copilot references are limited to related post links, not this article's topic.",
     "timestamp": "2025-09-24 10:15:09 +00:00"
+  },
+  {
+    "timestamp": "2025-09-24 13:24:19 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category as the content focuses on both attack and defense sides of AI in cybersecurity, aligning with AI inclusion rule 1 and 4. Assigned 'Security' due to technical depth on threat detection, phishing mechanisms, and defense strategies per Security inclusion rules 1, 4, 5, and 7. Did not include Azure/DevOps/ML/Coding as the article focuses on email security, threat intelligence, and AI's application in obfuscation and detection—not on platform development, deployment, or core coding practices.",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/09/24/ai-vs-ai-detecting-an-ai-obfuscated-phishing-campaign/"
+  },
+  {
+    "timestamp": "2025-09-24 13:24:40 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the news is about GitHub Copilot's expanded developer features for assigning coding agents to issues (GitHub Copilot Inclusion Rules 1, 2, 3; AI Inclusion Rule 2). No Coding category as the content focuses on workflow management, not programming techniques or code development. No DevOps, Azure, ML, or Security categories as those are not covered. Content quality is technical and does not trigger any generic exclusion rules.",
+    "canonical_url": "https://github.blog/changelog/2025-09-23-pick-the-repository-and-base-branch-when-assigning-issues-to-copilot"
   }
 ]

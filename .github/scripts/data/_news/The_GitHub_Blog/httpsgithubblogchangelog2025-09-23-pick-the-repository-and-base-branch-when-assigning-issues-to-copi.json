@@ -1,0 +1,18 @@
+{
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2025-09-23-pick-the-repository-and-base-branch-when-assigning-issues-to-copilot",
+  "EnhancedContent": "We’re bringing you a range of additional options for assigning Copilot to issues as part of this public preview. When assigning an issue to Copilot coding agent, you can now choose which repository Copilot should work in, pick a starting branch, and provide additional instructions to give it more context.\n\nHere’s what’s new:\n\n- **Start Copilot assignment in one click**: Assign tasks directly to Copilot with the new **Assign to Copilot** button. This feature makes it easier and faster to start a Copilot assignment with a single click.\n- **Pick the target repository**: Choose any repository you have access to, even if your issues and code don’t live in the same place. Now you can work with Copilot across repositories, so it’s easy to start assignments from issues no matter where your code is stored.\n- **Pick a starting branch**: Choose which branch Copilot should start from. Whether you want Copilot to work off a feature branch, a bug fix branch, or any other starting point, you now have the flexibility to direct Copilot’s work to exactly where you want it.\n- **Add additional instructions**: Give Copilot more context with optional instructions. You can provide specific guidance, requirements, or extra details to help Copilot understand exactly what you want to accomplish. This makes assignments more precise and helps Copilot deliver results that match your needs.\n\nFor more details, check out our [documentation on assigning Copilot to an issue](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/assign-copilot-to-an-issue).\n\nWant to share feedback on this public preview or join the conversation? Visit our [GitHub Community announcements](https://github.com/orgs/community/discussions/173575).\n\n*Disclaimer: The UI for features in public preview is subject to change.*",
+  "Title": "Pick the repository and base branch when assigning issues to Copilot",
+  "ProcessedDate": "2025-09-24 13:22:44",
+  "Tags": [
+    "copilot",
+    "Improvement",
+    "projects & issues"
+  ],
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "OutputDir": "_news",
+  "Description": "We’re bringing you a range of additional options for assigning Copilot to issues as part of this public preview. When assigning an issue to Copilot coding agent, you can now…\n\nThe post [Pick the repository and base branch when assigning issues to Copilot](https://github.blog/changelog/2025-09-23-pick-the-repository-and-base-branch-when-assigning-issues-to-copilot) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Allison",
+  "PubDate": "2025-09-24T09:30:06+00:00",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog"
+}
