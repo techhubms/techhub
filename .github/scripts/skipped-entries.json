@@ -8313,5 +8313,23 @@
     "timestamp": "2025-09-24 19:11:28 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=EHccwVnNK4c",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-09-24 20:14:20 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/uRzujC6TPgI",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded based on the Generic Exclusion Rule: there is no substantive content provided (the 'content' field is null and only a brief event description is present). Because there is no actual technical or educational material to evaluate, and the rules specify to focus on actual content and not announcements or promotional blurbs, no categories are assigned."
+  },
+  {
+    "timestamp": "2025-09-24 21:13:18 +00:00",
+    "reason": "No categories found: No categories assigned due to the generic exclusion rule for business strategy and executive content. The description centers on enterprise innovation, culture, and leadership, with a focus on how Flipkart approaches AI at an organizational level rather than hands-on technical details or implementation of Microsoft technologies. There are no specifics provided on technical architecture, coding practices, or Microsoft platforms. As per the rules in Chapter 3, content focused on executive decision-making, business transformation, or high-level strategy without technical implementation is excluded.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=uEosZd4DqfQ"
+  },
+  {
+    "timestamp": "2025-09-24 21:13:40 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/how-to-setup-internet-access-after-all-basic-ips-be-retired-on/m-p/4456084#M687"
   }
 ]

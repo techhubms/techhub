@@ -10194,5 +10194,23 @@
     "timestamp": "2025-09-24 19:11:03 +00:00",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-fabric-user-data-functions-now-in-general-availability/",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-24 21:12:26 +00:00",
+    "reason": "Succesfully added: Assigned Security because the core topic is data protection, DLP policies, and information classification using Microsoft Purview within Microsoft Fabric (Security rules 1, 2, and 7). Purview is a Microsoft service, and Fabric runs on Azure (Azure rule 1), making Azure a relevant category. Did NOT assign 'ML' as content focuses on data security and governance, not analytics/data science. 'AI' is not included because the features described are security/governance, not AI. 'Coding' is not included as there are no development or programming tutorials or examples. 'DevOps' is not included as neither automation nor deployment practices are covered. All inclusion and exclusion rules, including rule hierarchy and content focus, have been followed.",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/protecting-your-fabric-data-using-purview-is-now-generally-available/"
+  },
+  {
+    "timestamp": "2025-09-24 21:12:55 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the article centers on a new embedding model, AI-based code retrieval, and techniques like contrastive learning (AI rule 1, 4, 5). Assigned the GitHub Copilot category as the entire article focuses on updates to GitHub Copilot's functionality and experience (GitHub Copilot rules 1, 2, 4, and CRITICAL rule for dual inclusion). Assigned the Coding category because the improvements directly affect code search and programming within VS Code, with specific developer use cases and code examples (Coding rule 4). Did not assign categories like Azure, DevOps, ML, or Security as these are not core topics in the content.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/news-insights/product-news/copilot-new-embedding-model-vs-code/"
+  },
+  {
+    "timestamp": "2025-09-24 21:13:36 +00:00",
+    "reason": "Succesfully added: The content describes a technical walkthrough of the GitHub MCP Registry, emphasizing interoperability for AI agents and tools. The inclusion of GitHub and AI-specific functionality and terminology meets the criteria for the 'AI' category (AI rule 4 and 5). The content does not directly address coding, DevOps, Azure, ML, Security, or anything specifically about GitHub Copilot; it is focused on infrastructure and interoperability for AI, thus only 'AI' is assigned.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=wm1yjcTk50w"
   }
 ]
