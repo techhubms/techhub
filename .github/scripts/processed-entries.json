@@ -10050,5 +10050,17 @@
     "collection": "news",
     "timestamp": "2025-09-24 00:54:12 +00:00",
     "reason": "Succesfully added: Assigned the AI category because the post is about the deprecation and migration of AI models within GitHub Copilot (AI rules 1, 2, 5, and 6). Assigned GitHub Copilot because it specifically discusses GitHub Copilot's AI model lifecycle and settings (GitHub Copilot rules 1 and 2). The content is not about business productivity Copilots, and no generic exclusion criteria apply."
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/accelerate-migration-and-modernization-with-agentic-ai/",
+    "reason": "Succesfully added: Included AI category because the entire piece revolves around agentic AI solutions, generative AI, and Microsoft’s AI-powered modernization tools (AI inclusion rules 1, 4, 5). GitHub Copilot receives dedicated coverage as a developer modernization tool, requiring both 'GitHub Copilot' and 'AI' categories (GitHub Copilot inclusion rule 1, AI inclusion rule 2). Azure is central—nearly every solution described is for Microsoft Azure services (Azure inclusion rules 1, 4, 5). DevOps is included based on the strong focus on automation, modernization, developer/IT collaboration, CI/CD, and workflow tools (DevOps inclusion rules 3, 5, 6, 9). Coding is included for substantial discussion of automating code-level modernization in Java and .NET, including dependency analysis, migration, build fixes, containerization (Coding inclusion rules 1, 2, 4, 5). ML is not included since the primary focus is not on custom machine learning model building or data science—the article centers on application modernization and migration via AI rather than ML engineering. All category inclusion rules take precedence as the content is technically deep, developer-focused, and Microsoft-centric.",
+    "collection": "news",
+    "timestamp": "2025-09-24 04:16:09 +00:00"
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/how-azure-cobalt-100-vms-are-powering-real-world-solutions-delivering-performance-and-efficiency-results/",
+    "reason": "Succesfully added: Assigned only the Azure category because the content focuses on Azure’s custom Cobalt 100 VM offering, its impact on cloud workloads, and real-world customer outcomes (Azure rule 1 and 4). The article extensively covers Azure infrastructure and its adoption in customer scenarios. While data platforms, AKS, and security workloads are mentioned, the focus is on VM infrastructure and not on ML/data engineering or security technical implementation, so ML and Security categories do not apply. Content does not have programming/code samples or CI/CD/process coverage, so Coding and DevOps categories do not apply. No AI development or use of Microsoft AI APIs is described—mentions of 'AI-powered banking' are customer use cases, not developer implementation guidance for AI tools/services. No generic exclusion rules apply.",
+    "collection": "news",
+    "timestamp": "2025-09-24 04:16:33 +00:00"
   }
 ]
