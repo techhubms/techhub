@@ -10188,5 +10188,11 @@
     "reason": "Succesfully added: Category 'AI' was assigned because the solution leverages AI for extracting structured insights from call transcripts (AI rule 1 and 4). 'Azure' is included due to extensive use of Azure Communication Services and Azure OpenAI for both transcription and AI analysis (Azure rules 1 and 3). No Coding category was assigned since the focus is not on code-level implementation but the architecture and workflow; there are mentions of Node.js and JavaScript, but the content remains at the solution and integration level rather than hands-on coding tutorials. None of the generic exclusion rules apply, as the content is substantial, technical, and focused on Microsoft developer/consultant-oriented scenarios.",
     "timestamp": "2025-09-24 18:21:20 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-communication-services/from-call-transcripts-to-crm-gold-ai-powered-post-call/ba-p/4456337"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because Fabric is a Microsoft Azure-based SaaS platform and the content focuses on Azure services and integration (Azure rule 1). Assigned 'ML' because User Data Functions are leveraged in contexts like data engineering, pipelines, Notebooks, and Power BI, which are data science/analytics and machine learning workloads per ML rules 1-4. Assigned 'Coding' as the article directly discusses developing reusable functions in Python, using VS Code, customization, and working with data frameworks (Coding rules 1, 2, 4). Not 'AI' since the article covers extensibility and integration, but does not focus on AI or pre-built AI models/services. No exclusions apply as this meets content and technical inclusion requirements.",
+    "timestamp": "2025-09-24 19:11:03 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-fabric-user-data-functions-now-in-general-availability/",
+    "collection": "news"
   }
 ]

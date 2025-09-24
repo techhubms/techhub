@@ -8307,5 +8307,11 @@
     "reason": "No categories found: Content does not qualify for any categories due to the following generic exclusion rules: (1) The content is a product update/announcement about the layout of the GitHub home dashboard, which is not developer/development focused or technical in nature, but rather concerns end-user UI and minor feature changes. (2) There is no mention of Microsoft technologies, development workflows, coding practices, DevOps, AI, ML, or security aspects. (3) Content does not meet category inclusion criteria for GitHub (as a development platform) because this update focuses strictly on the home dashboard UI for users, not technical features, development integrations, or workflows. Per Chapter 3 and 4, no categories are applicable.",
     "timestamp": "2025-09-24 18:20:16 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-09-24-recent-changes-to-the-home-dashboard-disabled"
+  },
+  {
+    "reason": "No categories found: Excluded all categories due to insufficient technical detail. The content lacks a main content body (content is null), and the description primarily promotes a tech-for-good story and links out to a blog rather than providing substantive technical implementation discussion. There is no clear focus on Microsoft technologies, coding, or DevOps practices in the provided text. While there are references to drones, AI, and GitHub/Open Source, the absence of specific information on Microsoft AI tools, GitHub Copilot, Azure, or coding concepts means inclusion rules are not met. Per instructions, when in doubt or if actual technical details are missing, exclude.",
+    "timestamp": "2025-09-24 19:11:28 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=EHccwVnNK4c",
+    "collection": "videos"
   }
 ]
