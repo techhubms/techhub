@@ -10368,5 +10368,11 @@
     "timestamp": "2025-09-25 19:13:19 +00:00",
     "reason": "Succesfully added: Assigned 'Azure' because Azure CycleCloud is central to deploying and managing the HPC/SLURM environment (Azure rule 1, 4, 5). Assigned 'DevOps' because the post details infrastructure provisioning, automation, and operational best practices (DevOps rules 3, 5, 6). Assigned 'Coding' due to hands-on configuration, cloud template use, Linux-native file system management, and operational scripting (Coding rule 4). No AI or ML assigned since there is no focus on artificial intelligence, machine learning, or Microsoft AI services. Security is not addressed as a central theme. All information relevant to Microsoft tech and technical implementation is preserved, with no exclusion rules triggered.",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-09-25 20:14:07 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview",
+    "reason": "Succesfully added: Applied the Generic Exclusion Rules first—none were triggered as the content is technical, focused on a developer tool, and does not fit business productivity or sales. Assigned the 'AI' category because the content is centered on GitHub Copilot, which is an AI development tool (AI Inclusion Rule 2). Assigned the 'GitHub Copilot' category for direct focus on new Copilot CLI capabilities (GitHub Copilot Inclusion Rule 1). Assigned 'Coding' because Copilot CLI is a code-focused developer tool that aids code building, editing, refactoring, and debugging in development workflows (Coding Inclusion Rules 2, 4, and 5). Did not assign DevOps or Security as the focus is strictly on coding assistance within the CLI. All categories are justified by explicit coverage and features described in the content."
   }
 ]
