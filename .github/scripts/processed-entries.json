@@ -10404,5 +10404,23 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned AI category because Azure OpenAI Service is the central platform being accessed for LLMs (AI rule 1). Assigned Azure category because the architecture uses Azure networking components (Azure rule 1) including Application Gateway, VNet, NSG, and Azure OpenAI. Assigned Security category because the main focus is on network security, SSL termination, Web Application Firewall, IP restrictions, and compliance-driven governance (Security rules 1, 2, 7, and 9). Coding, DevOps, ML, and GitHub Copilot categories are not applicable, as content does not focus on code, pipelines, data engineering, or development frameworks. Generic exclusion rules do not apply; content is technical, in English, and meets length and subject matter requirements.",
     "timestamp": "2025-09-25 22:12:16 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category because the content centers on managing access, permissions, and security roles in Microsoft Fabric’s OneLake catalog, with significant references to role management, RLS, CLS, and access validation (Security rules 1, 2, and 7). Assigned Azure category because Microsoft Fabric and OneLake are Azure-based data platform products and the catalog is part of Azure’s data ecosystem (Azure rule 1). Did not assign AI, ML, Coding, DevOps, or GitHub Copilot categories as the article does not discuss AI, machine learning, code development practices, DevOps workflows, or GitHub Copilot features. Tags reflect technical aspects of governance and security in Microsoft Fabric.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/view-and-manage-security-in-the-onelake-catalog-now-in-preview/",
+    "timestamp": "2025-09-25 23:13:27 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the news focuses on Copilot (a developer tool) enhancing GitHub issue creation with AI-generated suggestions and code snippet automation (AI rule 2 and GitHub Copilot rules 1, 2, and 4). Content is a technical announcement relevant to developers and does not fall under any exclusion criteria.",
+    "canonical_url": "https://github.blog/changelog/2025-09-25-copilot-can-create-issues-with-code-snippets-in-public-preview",
+    "timestamp": "2025-09-25 23:13:48 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned DevOps category because the content is directly about enhancing GitHub workflows, pull request code review features, and collaboration, which are central aspects of DevOps practices (DevOps inclusion rule 2, 3, 9, and 11). No categories like Coding, AI, Azure, ML, Security are appropriate since technical implementation/code examples aren't present and the focus is on developer tools and workflow improvements. Content does not trigger any generic exclusion rules.",
+    "canonical_url": "https://github.blog/changelog/2025-09-25-pull-request-files-changed-public-preview-now-supports-commenting-on-unchanged-lines",
+    "timestamp": "2025-09-25 23:14:07 +00:00",
+    "collection": "news"
   }
 ]
