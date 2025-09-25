@@ -10290,5 +10290,11 @@
     "collection": "posts",
     "timestamp": "2025-09-25 14:14:46 +00:00",
     "reason": "Succesfully added: Content was assigned to the DevOps category because it discusses integration with CI/CD pipelines, artifact managers, and DevSecOps practices (DevOps rules 3, 4, 5, and 9). Security was assigned due to the primary focus on supply chain protection, malware mitigation, SLSA compliance, and open source dependency curation (Security rules 2, 4, 5, and 7). There was no substantial Microsoft technology or platform presence (the article is about Chainguard and SLSA rather than Azure, GitHub, or other Microsoft ecosystems), so Azure, AI, ML, and Coding were not assigned. The content does not trigger any generic exclusion rules: it is not biographical, sales-oriented, insufficient in length, or non-English."
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content emphasizes AI apps, agents, and AI transformation in the Microsoft ecosystem (AI rules 1, 4, 5). Assigned the 'Azure' category because the Marketplace is described as an extension of Azure, with integration and deployment features centered on Azure services (Azure rules 1, 4, and 5). Did not assign other categories such as 'ML', 'Security', or 'Coding' because the article is focused on platform features, partner integrations, and business enablement rather than technical ML engineering, security implementation, or programming specifics. The entry avoided categories for 'Microsoft 365 Copilot' and related business productivity copilot experiences per the critical exclusion rule; Copilot is only mentioned as an example of app availability within the Marketplace, not as the main technical focus. No generic exclusion rules (such as biographical, non-English, job-related, or executive-only content) apply.",
+    "timestamp": "2025-09-25 15:14:34 +00:00",
+    "canonical_url": "https://blogs.microsoft.com/blog/2025/09/25/introducing-microsoft-marketplace-thousands-of-solutions-millions-of-customers-one-marketplace/"
   }
 ]
