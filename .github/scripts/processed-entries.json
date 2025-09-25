@@ -10374,5 +10374,11 @@
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview",
     "reason": "Succesfully added: Applied the Generic Exclusion Rules first—none were triggered as the content is technical, focused on a developer tool, and does not fit business productivity or sales. Assigned the 'AI' category because the content is centered on GitHub Copilot, which is an AI development tool (AI Inclusion Rule 2). Assigned the 'GitHub Copilot' category for direct focus on new Copilot CLI capabilities (GitHub Copilot Inclusion Rule 1). Assigned 'Coding' because Copilot CLI is a code-focused developer tool that aids code building, editing, refactoring, and debugging in development workflows (Coding Inclusion Rules 2, 4, and 5). Did not assign DevOps or Security as the focus is strictly on coding assistance within the CLI. All categories are justified by explicit coverage and features described in the content."
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Azure category is assigned because Microsoft Fabric is a cloud-based data analytics and management platform under Azure, and the article refers to core platform features. ML category is assigned because the update enables advanced data ingestion, processing, and enrichment with workloads like Osmos and Profisee, supporting machine learning and analytics-driven workflows (ML rules 1, 2, 4, and 7). The content does not directly focus on code-level programming (no Coding), DevOps, Security, or AI model usage, so those categories are not included. None of the generic exclusion rules apply.",
+    "timestamp": "2025-09-25 21:11:38 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/new-in-microsoft-fabric-empowering-workspace-admins-with-direct-workload-assignment/"
   }
 ]
