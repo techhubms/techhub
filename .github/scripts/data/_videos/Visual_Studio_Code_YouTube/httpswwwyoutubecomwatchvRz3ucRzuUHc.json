@@ -1,0 +1,26 @@
+{
+  "Title": "🔴 VS Code - Let it Cook with GPT-5 -Codex",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "PubDate": "2025-09-25T17:48:26+00:00",
+  "Description": "Join James and Pierce as they uncover the latest models in VS Code and GitHub Copilot. We will take a look at GPT-5-Codex and also the new Copilot-SWE model! Let's go!\n\n🔗 OpenAI GPT-5-Codex Blog: https://github.blog/changelog/2025-09-23-openai-gpt-5-codex-is-rolling-out-in-public-preview-for-github-copilot/\n\n🎙️Featuring: Pierce Boggan https://x.com/pierceboggan James Montemagno: https://x.com/JamesMontemagno\n\n📲 Follow VS Code: \\* X: https://x.com/code \\* Bluesky: https://bsky.app/profile/vscode.dev \\* YouTube: https://youtube.com/code \\* LinkedIn: https://www.linkedin.com/showcase/104107263 \\* GitHub: https://github.com/microsoft/vscode\n\n#vscode #gpt5codex #githubcopilot",
+  "Tags": [
+    "code",
+    "codex",
+    "demo",
+    "developer",
+    "developercommunity",
+    "gpt",
+    "gpt5",
+    "microsoft",
+    "softwaredeveloper",
+    "visualstudiocode",
+    "vscode"
+  ],
+  "Link": "https://www.youtube.com/watch?v=Rz3ucRzuUHc",
+  "FeedName": "Visual Studio Code YouTube",
+  "ProcessedDate": "2025-09-25 18:17:50",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Author": "Visual Studio Code",
+  "OutputDir": "_videos"
+}

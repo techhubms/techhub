@@ -8385,5 +8385,23 @@
     "reason": "No categories found: No categories assigned because the content is primarily about open source community culture, maintainership, governance, and sustainability, centered around the Electron project. There is no substantive technical discussion of Microsoft technologies, development frameworks, or tools; Electron itself is not a Microsoft product, and although Microsoft pays Electron contributors, this does not make Microsoft technology central to the technical content (per multi-platform threshold rules). AI is discussed only in terms of spam proposal detection and communication assistance, not technical AI integration or usage with Microsoft services. No Coding, DevOps, Azure, Security, ML, AI, or GitHub Copilot-specific technical guidance or implementation details are presented. Therefore, per generic and inclusion rules, no categories apply.",
     "canonical_url": "https://github.blog/open-source/maintainers/building-beyond-the-browser-keeley-hammond-on-electron-open-source-and-the-future-of-maintainership/",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=bTsGKiuZwXA",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The video is primarily focused on personal stories, neurodiversity (ADHD), workplace culture, and mental health in tech, rather than technical implementation, development practices, or specific Microsoft technology usage. There is no substantive coverage of Microsoft products, coding, DevOps, AI, ML, Azure, or security from an implementation or engineering perspective. Despite tags mentioning Azure, Microsoft, and development, the description and content overview indicate a focus on cultural, personal, and career experiences—which are explicitly excluded by the 'Workplace and Business Focus' and 'Biographical Focus' generic exclusion rules.",
+    "timestamp": "2025-09-25 18:19:52 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure/unable-to-send-pro-active-messages-to-users-on-microsoft-teams/m-p/4456891#M1364",
+    "collection": "community",
+    "reason": "No categories found: Content is excluded due to the 'Question-Only Content' generic exclusion rule. The submission is primarily a request for help, seeking troubleshooting guidance for a technical issue (not being able to send pro-active messages in Microsoft Teams using the C# Bot Framework). The bulk of the content describes the issue, steps attempted, and links to forum threads, but does not provide a substantive technical solution, explanation, or tutorial. It fits the rule: 'Content mainly asking questions or seeking information' with no substantive answer included. Therefore, no categories are assigned.",
+    "timestamp": "2025-09-25 18:20:28 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/messaging-on-azure/can-iam-permission-be-given-to-service-bus-with-local/m-p/4456842#M30",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-09-25 18:20:28 +00:00"
   }
 ]

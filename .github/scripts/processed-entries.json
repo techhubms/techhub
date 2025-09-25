@@ -10326,5 +10326,23 @@
     "reason": "Succesfully added: Assigned 'Azure' category because the content is centered on an Azure platform feature (Azure Integrated HSM) and deployment details on AMD v7 Trusted Launch VMs (Azure rule 1, 4, 5). Assigned 'Security' category because it discusses hardware security modules (HSM), cryptographic operations, key protection, compliance (FIPS 140-3), and comparisons to Azure Key Vault Managed HSM (Security rules 1, 2, 7, 9). Did not assign 'Coding,' 'DevOps,' 'AI,' 'ML,' or 'GitHub Copilot' as there is no content on application coding, DevOps workflow, AI/ML development, or GitHub Copilot. The content meets technical detail, length, and direct relevance thresholds.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/microsoft-azure-introduces-azure-integrated-hsm-a-key-cache-for/ba-p/4456283",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/announcing-dotnet-aspire-95/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because the release features new integrations for OpenAI, Azure AI Foundry, GenAI telemetry and visualizer, with actionable code samples (AI rule 1, 3, 4). 'Coding' is assigned as the content deeply covers .NET Aspire CLI, AppHost, and project configuration, including multiple code examples and development workflows (Coding rules 1, 2, 4). 'DevOps' applies due to dashboard, CLI tooling, deployment, upgrade flows, distributed debugging, and developer experience improvements (DevOps rules 1, 3, 9). Did not assign 'Azure' (content isn't Azure-first, focuses on .NET tooling and integration points rather than Azure platform details), nor 'ML' or 'Security' (the ML content is usage, not custom engineering; no security implementation focus). No exclusion rules triggered.",
+    "timestamp": "2025-09-25 18:18:54 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-09-25-copilot-coding-agent-is-now-generally-available",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the entire announcement centers on GitHub Copilot's new coding agent and its autonomous capabilities, matching AI rules 1 and 2, and GitHub Copilot rules 1–4. 'DevOps' is included due to integration with GitHub Actions and the automation of pull request workflows (DevOps rules 2, 5, and 6). 'Coding' is assigned since the agent directly implements code-level changes, features, and bug fixes (Coding rules 1–4). The content is technical, developer-focused, and fits no generic exclusion criteria.",
+    "timestamp": "2025-09-25 18:19:28 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=Rz3ucRzuUHc",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the video centers on new AI models (GPT-5-Codex and Copilot-SWE) integrated with GitHub Copilot, matching AI rule 1 and GitHub Copilot category rule 1. Per the workflow, both 'AI' and 'GitHub Copilot' must be included for Copilot-focused content. Added 'Coding' because the content focuses on code completion and developer productivity with VS Code and Copilot, which fits Coding rules 2 and 5. No generic exclusions apply; this is technical developer-focused content.",
+    "timestamp": "2025-09-25 18:20:14 +00:00"
   }
 ]
