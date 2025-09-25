@@ -8379,5 +8379,11 @@
     "collection": "videos",
     "timestamp": "2025-09-25 14:15:19 +00:00",
     "reason": "No categories found: Content is excluded due to generic exclusion rules. Although the description references AI apps and Microsoft Marketplace, the content (as described) is focused on marketplace features, discovery, deployment, and general business app availability, not on technical implementation, coding, architecture, or actual Microsoft AI/application development. There is no evidence in the description or title of hands-on technical depth, developer-oriented how-to content, or architectural insight as required by category inclusion rules. The content appears to be a non-technical, end-user- and business-focused overview of marketplace offerings, which is excluded under the Non-Development Microsoft Products and Business Strategy exclusions."
+  },
+  {
+    "timestamp": "2025-09-25 17:11:49 +00:00",
+    "reason": "No categories found: No categories assigned because the content is primarily about open source community culture, maintainership, governance, and sustainability, centered around the Electron project. There is no substantive technical discussion of Microsoft technologies, development frameworks, or tools; Electron itself is not a Microsoft product, and although Microsoft pays Electron contributors, this does not make Microsoft technology central to the technical content (per multi-platform threshold rules). AI is discussed only in terms of spam proposal detection and communication assistance, not technical AI integration or usage with Microsoft services. No Coding, DevOps, Azure, Security, ML, AI, or GitHub Copilot-specific technical guidance or implementation details are presented. Therefore, per generic and inclusion rules, no categories apply.",
+    "canonical_url": "https://github.blog/open-source/maintainers/building-beyond-the-browser-keeley-hammond-on-electron-open-source-and-the-future-of-maintainership/",
+    "collection": "news"
   }
 ]

@@ -10314,5 +10314,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-native-pure-storage-cloud-brings-the-best-of-pure-and/ba-p/4456246",
     "reason": "Succesfully added: Assigned the Azure category because the entire article focuses on Azure service architecture, native partner integrations, and Azure-centric deployment scenarios (Azure rule 1, 4, 5). The post does not go into technical coding details (exclude 'Coding'), nor is it about DevOps, AI/ML, or Security. The primary audience is technical architects and practitioners looking to implement or operate enterprise storage within Azure environments. Community content is above the 200-word threshold, so the length exclusion does not apply.",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-09-25 17:11:32 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because Fabric Data Factory is an Azure-native data integration and orchestration service (Azure inclusion rule 1), and the entire article discusses its new features. ML category is included because several features pertain to orchestrating ETL, data transformations, and integrating with Notebooks/Python code—these are core ML/data engineering tasks (ML inclusion rules 1, 2, 3, 5, 6). DevOps is assigned since the news highlights CI/CD integration and DevOps pipeline enhancements (DevOps inclusion rule 5, 6). AI is included due to the introduction of the AI-driven Copilot for pipeline expression assistance (AI inclusion rule 1, 3). The content is not biographical, not a sales pitch, not question-only, is in English, and is technical and implementation-focused, so no generic exclusions apply.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-new-innovations-for-fabric-data-factory-orchestration-at-fabric-conference-europe-2025/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-25 17:12:27 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' category because the content is centered on an Azure platform feature (Azure Integrated HSM) and deployment details on AMD v7 Trusted Launch VMs (Azure rule 1, 4, 5). Assigned 'Security' category because it discusses hardware security modules (HSM), cryptographic operations, key protection, compliance (FIPS 140-3), and comparisons to Azure Key Vault Managed HSM (Security rules 1, 2, 7, 9). Did not assign 'Coding,' 'DevOps,' 'AI,' 'ML,' or 'GitHub Copilot' as there is no content on application coding, DevOps workflow, AI/ML development, or GitHub Copilot. The content meets technical detail, length, and direct relevance thresholds.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/microsoft-azure-introduces-azure-integrated-hsm-a-key-cache-for/ba-p/4456283",
+    "collection": "community"
   }
 ]
