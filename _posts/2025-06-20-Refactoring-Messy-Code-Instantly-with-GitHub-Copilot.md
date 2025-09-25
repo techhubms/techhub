@@ -4,10 +4,10 @@ title: "Refactoring Messy Code Instantly with GitHub Copilot"
 description: "This post by Randy Pagels explains how developers can use GitHub Copilot to efficiently refactor messy legacy code. It provides practical steps, a clear example, and highlights the workflow improvements Copilot brings to code refactoring."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/refactor-messy-code-in-seconds-with-github-copilot.html"
+canonical_url: "https://cooknwithcopilot.com/blog/refactor-messy-code-in-seconds-with-github-copilot.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-06-20 00:00:00 +00:00
 permalink: "/2025-06-20-Refactoring-Messy-Code-Instantly-with-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
@@ -71,4 +71,4 @@ When facing messy code, don't get bogged down in manual rewrites. Use GitHub Cop
 
 *For more tips on AI-assisted coding and productivity, continue exploring resources from Randy Pagels.*
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/refactor-messy-code-in-seconds-with-github-copilot.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/refactor-messy-code-in-seconds-with-github-copilot.html)

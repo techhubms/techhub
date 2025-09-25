@@ -4,10 +4,10 @@ title: "Using GitHub Copilot Chat to Write Better Regex Patterns"
 description: "This guide shows how developers can leverage GitHub Copilot Chat to efficiently write, explain, and test regular expressions. It covers practical techniques for generating patterns, simplifying complex regex, automating test case creation, and improving existing regex for maintainability—all directly within the developer workflow."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/draft-smarter-regex-without-the-headaches.html"
+canonical_url: "https://cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-09-05 00:00:00 +00:00
 permalink: "/2025-09-05-Using-GitHub-Copilot-Chat-to-Write-Better-Regex-Patterns.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
@@ -82,4 +82,4 @@ Perfect for large codebases where consistency is important.
 
 With Copilot Chat, you can write, explain, and test regular expressions more efficiently—directly in your editor. Whether you need to generate new patterns or improve existing ones, these techniques help you ship high-quality code with less hassle.
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/draft-smarter-regex-without-the-headaches.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html)

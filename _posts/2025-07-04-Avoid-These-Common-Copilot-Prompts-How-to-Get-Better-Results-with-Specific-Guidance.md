@@ -4,10 +4,10 @@ title: "Avoid These Common Copilot Prompts: How to Get Better Results with Speci
 description: "Randy Pagels explores why generic prompts like 'write a function' limit GitHub Copilot’s effectiveness and provides actionable tips for crafting prompts that yield more accurate and helpful results. The post highlights the value of context, specificity, and practical examples for coding with Copilot."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/avoid-these-common-prompts.html"
+canonical_url: "https://cooknwithcopilot.com/blog/avoid-these-common-prompts.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-07-04 00:00:00 +00:00
 permalink: "/2025-07-04-Avoid-These-Common-Copilot-Prompts-How-to-Get-Better-Results-with-Specific-Guidance.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
@@ -69,4 +69,4 @@ To make the most of Copilot, be detailed in your prompts. Here are ways to provi
 
 The more context you give Copilot, the more accurately it can interpret your intent and offer smart, relevant code or explanations. Avoid the common traps of short, vague prompts—describe your problem, constraints, and intent, and benefit from Copilot's capabilities to their fullest.
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/avoid-these-common-prompts.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/avoid-these-common-prompts.html)

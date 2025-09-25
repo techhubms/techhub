@@ -4,10 +4,10 @@ title: "Top 10 GitHub Copilot Tips for Maximizing Productivity"
 description: "This post by Randy Pagels outlines practical tips and techniques to make the most out of GitHub Copilot, including using natural language prompts, leveraging code context, refining suggestions, and integrating Copilot into pull requests and reviews for more efficient development workflows."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/top-10-copilot-tips.html"
+canonical_url: "https://cooknwithcopilot.com/blog/top-10-copilot-tips.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-06-27 00:00:00 +00:00
 permalink: "/2025-06-27-Top-10-GitHub-Copilot-Tips-for-Maximizing-Productivity.html"
 categories: ["AI", "GitHub Copilot"]
@@ -97,4 +97,4 @@ Open related files in your editor before writing new code. Copilot reads the ope
 
 For continuous improvement, keep your coding context rich, engage with the Copilot community, and stay proactive about reviewing Copilot’s output. These strategies will help you get the most out of GitHub Copilot as it evolves.
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/top-10-copilot-tips.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/top-10-copilot-tips.html)
