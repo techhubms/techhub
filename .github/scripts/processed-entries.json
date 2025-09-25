@@ -10344,5 +10344,29 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the video centers on new AI models (GPT-5-Codex and Copilot-SWE) integrated with GitHub Copilot, matching AI rule 1 and GitHub Copilot category rule 1. Per the workflow, both 'AI' and 'GitHub Copilot' must be included for Copilot-focused content. Added 'Coding' because the content focuses on code completion and developer productivity with VS Code and Copilot, which fits Coding rules 2 and 5. No generic exclusions apply; this is technical developer-focused content.",
     "timestamp": "2025-09-25 18:20:14 +00:00"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/27082/",
+    "timestamp": "2025-09-25 19:11:19 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the core subject is building and deploying AI agents with Microsoft Fabric and OneLake, fitting AI Inclusion Rule 1 and 4. Assigned 'Azure' because Microsoft Fabric, OneLake, and Azure integrations are central, fulfilling Azure Inclusion Rule 1. Did NOT assign 'Coding' because the focus is on no-code/low-code solutions for business users, not programming with Microsoft languages or frameworks. Did NOT assign 'ML' because there is no deep discussion of model development, advanced analytics, or custom ML engineering (ML rules not met). Did NOT assign 'DevOps' as there is no coverage of CI/CD, pipelines, infrastructure, or development methodologies. Tags were extracted for technical relevance, platform, and business process context. Content meets all inclusion criteria and does not violate any generic exclusion rules.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/access-governance-blueprint-for-ai-landing-zone/ba-p/4455910",
+    "timestamp": "2025-09-25 19:12:20 +00:00",
+    "reason": "Succesfully added: Assigned 'AI', 'Azure', 'ML', 'Security', and 'DevOps' categories because the document focuses on technical RBAC architecture, security guardrails, automation identities, and persona-based access models for Azure AI/ML/Data workloads. 'AI' applies due to the governance focus on Azure AI, OpenAI, and AI Foundry. 'ML' applies for ML Engineer/Data Scientist persona, Azure ML, and AI Foundry. 'Azure' applies for deep Azure-specific implementations. 'Security' applies due to security guardrails, least privilege, and operational security. 'DevOps' applies due to automation, pipelines, CI/CD, MLOps, and operational workflows. Content is technical, enterprise-focused, and clearly meets inclusion guidelines.",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/ai-azure-landing-zone-shared-capabilities-and-models-to-enable/ba-p/4455951",
+    "timestamp": "2025-09-25 19:12:53 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the content centers on deploying and governing Azure-based AI workloads, leverages Azure OpenAI, Cognitive Services, and Azure AI Foundry (AI Inclusion Rule 1, 4, 5). Assigned Azure category due to heavy emphasis on Azure services (App Gateway, Key Vault, Cosmos DB, App Service, etc.) and enterprise-scale cloud architecture (Azure Inclusion Rule 1, 4, 5). Assigned Security category because of extensive detail on secure architecture, private networking, WAF, Key Vault, NSGs, DDoS protection, Defender for Cloud, and governance (Security Inclusion Rules 1, 2, 4, 9). Coding, DevOps, and ML categories were not included since the content is focused on architecture/design, not code, DevOps processes, or technical data science/ML experimentation.",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/cyclecloud-hammerspace/ba-p/4457043",
+    "timestamp": "2025-09-25 19:13:19 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' because Azure CycleCloud is central to deploying and managing the HPC/SLURM environment (Azure rule 1, 4, 5). Assigned 'DevOps' because the post details infrastructure provisioning, automation, and operational best practices (DevOps rules 3, 5, 6). Assigned 'Coding' due to hands-on configuration, cloud template use, Linux-native file system management, and operational scripting (Coding rule 4). No AI or ML assigned since there is no focus on artificial intelligence, machine learning, or Microsoft AI services. Security is not addressed as a central theme. All information relevant to Microsoft tech and technical implementation is preserved, with no exclusion rules triggered.",
+    "collection": "community"
   }
 ]
