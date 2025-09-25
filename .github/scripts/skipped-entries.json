@@ -8337,5 +8337,17 @@
     "timestamp": "2025-09-24 22:11:51 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/green-pixelation-in-when-resizing-rdp-window-in-windows-app/m-p/4456382#M13913",
     "collection": "community"
+  },
+  {
+    "reason": "No categories found: No categories are assigned because the content is focused on end-user configuration and optimization of Windows 11 for gaming performance. It does not cover coding, development, DevOps practices, AI/ML development, or enterprise-level security within the Microsoft ecosystem. The article is aimed at general users, not developers or IT professionals, and does not detail technical implementations or development topics as required by the inclusion rules. This aligns with the generic exclusion rules for non-development Microsoft products and end-user/business productivity features.",
+    "timestamp": "2025-09-25 10:13:29 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/windows-11-for-gamers-settings-that-actually-boost-fps/"
+  },
+  {
+    "timestamp": "2025-09-25 12:24:40 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=c8Q1qA1kyO0",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The provided content is missing the main body ('content' is null), which means there is no substantive text to evaluate for technical or category inclusion. Without the main content, it's impossible to assess technical depth or relevance to any Microsoft technology category as required in Chapter 2 and Chapter 3. Therefore, no categories are assigned.",
+    "collection": "videos"
   }
 ]

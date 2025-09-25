@@ -10266,5 +10266,11 @@
     "canonical_url": "https://dellenny.com/getting-started-with-microsoft-playwright-testing-features-and-how-to-use-it/",
     "timestamp": "2025-09-25 09:15:12 +00:00",
     "reason": "Succesfully added: Assigned the Azure category because the content covers Playwright's integration with Azure (Azure rule 1 and Azure rule 4), including use of Azure DevOps and Azure-managed test infrastructure. Assigned DevOps because it focuses on CI/CD pipelines, test automation in release workflows (DevOps rule 5), and modern DevOps practices. Assigned Coding because it provides code-level setup, sample tests, APIs, and implementation details in multiple programming languages (.NET, JavaScript, etc.; Coding rules 1 and 2). Did not assign AI, ML, Security, or GitHub Copilot because the post does not cover those specific topics or services."
+  },
+  {
+    "timestamp": "2025-09-25 12:25:19 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/openai-agent-sdk-integration-with-azure-durable-functions/ba-p/4453402",
+    "reason": "Succesfully added: Content centers on integrating the OpenAI Agent SDK (Microsoft-branded AI/development tooling) with Azure Durable Functions (Azure cloud service) to improve agent reliability in production. Assigned 'AI' due to strong focus on building and operating AI agents with Microsoft SDKs (AI rule 1, 4). Assigned 'Azure' for extensive coverage of Azure Durable Functions orchestration and deployment (Azure rule 1, 4). Assigned 'Coding' due to the technical coding examples in Python and the agent SDK's development focus (Coding rules 1, 2, 4). Did not assign DevOps, ML, or Security because content does not address software lifecycle automation, advanced data science/ML engineering, or explicit security implementation topics.",
+    "collection": "community"
   }
 ]
