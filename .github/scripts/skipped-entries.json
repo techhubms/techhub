@@ -8349,5 +8349,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=c8Q1qA1kyO0",
     "reason": "No categories found: Content excluded due to generic exclusion rule: The provided content is missing the main body ('content' is null), which means there is no substantive text to evaluate for technical or category inclusion. Without the main content, it's impossible to assess technical depth or relevance to any Microsoft technology category as required in Chapter 2 and Chapter 3. Therefore, no categories are assigned.",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-09-25 13:27:02 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/end-to-end-confidence-in-the-cloud-a-walkthrough-of-azure/m-p/4456922#M22246",
+    "collection": "community",
+    "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-09-25 13:27:02 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/getting-started-with-microsoft-playwright-testing-features-and/m-p/4456920#M169",
+    "collection": "community",
+    "reason": "Insufficient content length"
   }
 ]

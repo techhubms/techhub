@@ -10272,5 +10272,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/openai-agent-sdk-integration-with-azure-durable-functions/ba-p/4453402",
     "reason": "Succesfully added: Content centers on integrating the OpenAI Agent SDK (Microsoft-branded AI/development tooling) with Azure Durable Functions (Azure cloud service) to improve agent reliability in production. Assigned 'AI' due to strong focus on building and operating AI agents with Microsoft SDKs (AI rule 1, 4). Assigned 'Azure' for extensive coverage of Azure Durable Functions orchestration and deployment (Azure rule 1, 4). Assigned 'Coding' due to the technical coding examples in Python and the agent SDK's development focus (Coding rules 1, 2, 4). Did not assign DevOps, ML, or Security because content does not address software lifecycle automation, advanced data science/ML engineering, or explicit security implementation topics.",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-09-25 13:26:20 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-arc-gateway-for-azure/ba-p/4456256",
+    "collection": "community",
+    "reason": "Succesfully added: Categories 'Azure' and 'Security' were assigned. Azure applies due to the core focus on Azure Local, Arc Gateway, and hybrid Azure connectivity (Azure Inclusion Rule 1 and 4). Security applies because the content emphasizes secure traffic management, reduction of firewall complexity, and improved network security (Security Inclusion Rule 2 and 4). There is no substantial Coding, DevOps, AI, ML, or GitHub Copilot aspect present. Content meets all basic inclusion requirements and does not trigger any generic exclusion rules."
+  },
+  {
+    "timestamp": "2025-09-25 13:27:01 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-the-azure-arc-gateway-for/ba-p/4456356",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category because the content centers on Azure Arc, a core Azure service, and its deployment/configuration in enterprise environments (Azure rules 1, 4, 5). Assigned DevOps due to themes of streamlined onboarding, automation, infrastructure setup, and operations improvement (DevOps rules 3, 5, 6). Assigned Security because the reduction in firewall/proxy endpoints, networking security controls, and the discussion on network approvals are key aspects (Security rules 1, 4, 9). There is no content qualifying for AI, ML, GitHub Copilot, or Coding categories."
   }
 ]
