@@ -10224,5 +10224,23 @@
     "collection": "news",
     "timestamp": "2025-09-24 23:12:14 +00:00",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-mirroring-for-google-bigquery-in-microsoft-fabric/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the article is focused on text-to-image AI generation, AI abstractions, and developer applications using Microsoft's AI SDKs (AI rule 1, rule 4). Assigned the Coding category because it contains .NET development details, C# code examples, API abstractions, and is directly relevant to developers writing code (Coding rules 1, 2, and 4). Did not assign 'Azure' since while Azure is referenced as a provider, the main focus is on abstractions and sample code rather than Azure-specific setup or deployment. Did not assign 'ML' since the content is about integrating and using AI services, not custom model building, training, or analytics. 'GitHub Copilot', 'DevOps', and 'Security' do not apply as neither Copilot nor DevOps/CI/CD/security topics are discussed. The content meets all quality, language, and depth requirements by providing technical detail, clear examples, and actionable information for developers.",
+    "timestamp": "2025-09-25 00:53:51 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/explore-text-to-image-dotnet/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category because the article centers on enabling LLM-driven analytics and NL2SQL features within Microsoft Fabric's Data Agent (AI rule 1, 5). 'Azure' was included as the content highlights operational data integration from Azure-based databases (Azure SQL Database, Cosmos DB) and runs within Microsoft Fabric, a core Azure service (Azure rule 1). Added 'ML' because the focus on analytics, data mirroring, and use of LLMs (Large Language Models) via natural language queries directly supports machine learning-enabled data workflows (ML rules 1, 2, 4). No other categories applied, as the article is not about developer coding, DevOps practices, or security implementation.",
+    "timestamp": "2025-09-25 00:54:17 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/unlocking-llm-powered-through-data-agent-from-your-mirrored-databases-in-microsoft-fabric/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Coding category because the content centers on technical discussions around the Marten .NET data library, database migrations, and Entity Framework Core usage—fitting Coding rules 1, 2, and 4. Azure, AI, DevOps, ML, GitHub Copilot, and Security categories were not assigned as there is no evidence in the description of topics meeting inclusion rules for those categories. No generic exclusion rules apply.",
+    "timestamp": "2025-09-25 00:54:48 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=_ICoF0utyt4",
+    "collection": "videos"
   }
 ]
