@@ -10284,5 +10284,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-the-azure-arc-gateway-for/ba-p/4456356",
     "collection": "community",
     "reason": "Succesfully added: Assigned Azure category because the content centers on Azure Arc, a core Azure service, and its deployment/configuration in enterprise environments (Azure rules 1, 4, 5). Assigned DevOps due to themes of streamlined onboarding, automation, infrastructure setup, and operations improvement (DevOps rules 3, 5, 6). Assigned Security because the reduction in firewall/proxy endpoints, networking security controls, and the discussion on network approvals are key aspects (Security rules 1, 4, 9). There is no content qualifying for AI, ML, GitHub Copilot, or Coding categories."
+  },
+  {
+    "canonical_url": "https://devops.com/chainguard-adds-curated-repository-to-secure-javascript-libraries/",
+    "collection": "posts",
+    "timestamp": "2025-09-25 14:14:46 +00:00",
+    "reason": "Succesfully added: Content was assigned to the DevOps category because it discusses integration with CI/CD pipelines, artifact managers, and DevSecOps practices (DevOps rules 3, 4, 5, and 9). Security was assigned due to the primary focus on supply chain protection, malware mitigation, SLSA compliance, and open source dependency curation (Security rules 2, 4, 5, and 7). There was no substantial Microsoft technology or platform presence (the article is about Chainguard and SLSA rather than Azure, GitHub, or other Microsoft ecosystems), so Azure, AI, ML, and Coding were not assigned. The content does not trigger any generic exclusion rules: it is not biographical, sales-oriented, insufficient in length, or non-English."
   }
 ]

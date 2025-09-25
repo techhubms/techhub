@@ -8361,5 +8361,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/tools/getting-started-with-microsoft-playwright-testing-features-and/m-p/4456920#M169",
     "collection": "community",
     "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://news.xbox.com/en-us/2025/09/25/xbox-tokyo-game-show-broadcast-recap-everything-announced/",
+    "collection": "news",
+    "timestamp": "2025-09-25 14:14:04 +00:00",
+    "reason": "No categories found: No categories were assigned because, according to the workflow, the content is primarily gaming-focused, summarizing releases, platform updates, and game features for Xbox consoles, PC, and cloud. Although Microsoft technologies are central, the coverage is oriented towards end-user video game experiences, not technical development, implementation, coding, DevOps, AI, ML, or security as outlined in the inclusion rules. Microsoft gaming platform announcements, updates, and new game titles—even when developed by Microsoft Studios—do not fit the technical development scope required for any of the predefined categories. This is consistent with the exclusion of non-development product announcements and end-user features even when Microsoft-branded."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=ACM_lNWx8kQ",
+    "collection": "videos",
+    "timestamp": "2025-09-25 14:15:06 +00:00",
+    "reason": "No categories found: Content excluded because it matches the generic exclusion rule for 'Sales Pitches.' The description is a high-level promotional overview of the Microsoft Marketplace, focusing on the availability of solutions rather than providing any technical implementation, integration, development, or hands-on guidance. There is no substantive content or technical depth in the description or title, and the provided links are promotional. This fails to meet the inclusion threshold for any development-related category."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=SilJPeLXmL8",
+    "collection": "videos",
+    "timestamp": "2025-09-25 14:15:19 +00:00",
+    "reason": "No categories found: Content is excluded due to generic exclusion rules. Although the description references AI apps and Microsoft Marketplace, the content (as described) is focused on marketplace features, discovery, deployment, and general business app availability, not on technical implementation, coding, architecture, or actual Microsoft AI/application development. There is no evidence in the description or title of hands-on technical depth, developer-oriented how-to content, or architectural insight as required by category inclusion rules. The content appears to be a non-technical, end-user- and business-focused overview of marketplace offerings, which is excluded under the Non-Development Microsoft Products and Business Strategy exclusions."
   }
 ]
