@@ -10380,5 +10380,29 @@
     "reason": "Succesfully added: Azure category is assigned because Microsoft Fabric is a cloud-based data analytics and management platform under Azure, and the article refers to core platform features. ML category is assigned because the update enables advanced data ingestion, processing, and enrichment with workloads like Osmos and Profisee, supporting machine learning and analytics-driven workflows (ML rules 1, 2, 4, and 7). The content does not directly focus on code-level programming (no Coding), DevOps, Security, or AI model usage, so those categories are not included. None of the generic exclusion rules apply.",
     "timestamp": "2025-09-25 21:11:38 +00:00",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/new-in-microsoft-fabric-empowering-workspace-admins-with-direct-workload-assignment/"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-09-25-upcoming-deprecation-of-gh-copilot-cli-extension",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because the content centers on AI-powered developer tooling (GitHub Copilot CLI and related AI integrations), qualifying under AI rule 2 (GitHub Copilot). The 'GitHub Copilot' category is assigned because the entire content is about GitHub Copilot, its CLI extension, and migration (GitHub Copilot Inclusion Rules 1, 2, and 3). No additional categories (such as Coding) apply, as the focus is on tooling, transition, and policy, not on writing code or programming practices.",
+    "timestamp": "2025-09-25 22:10:52 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=4EXGyCgVNp4",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'Coding' category because the session focuses on .NET MAUI—a Microsoft cross-platform development framework—and includes developer demos, best practices, and Q&A (Coding rule 1 and 4). There was no AI, Azure, DevOps, ML, Security, or GitHub Copilot content indicated. The content is technical, community-focused, and developer-oriented with presentation and demo elements. Generic exclusion rules do not apply because the video is not biographical, not a sales pitch, not negative, and is clear technical content delivered by the Microsoft product team.",
+    "timestamp": "2025-09-25 22:11:19 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-visibility-flexibility-and-cost-efficiency-with/ba-p/4456707",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'Azure' category because the article is centered around Azure Application Gateway, Azure Monitor, and Log Analytics (Azure rules 1, 2, 4, and 5). Included 'DevOps' as the content focuses on operational monitoring, log management, and cost optimization, which are core DevOps practices (DevOps rules 6 and 7). Added 'Security' because it covers Web Application Firewall (WAF) logging, resource access control (RBAC), and compliance topics such as GDPR/CCPA (Security rules 1, 2, 3, 5, and 10). Did not assign 'AI', 'Coding', 'ML', or 'GitHub Copilot' as the article strictly discusses Azure infrastructure, operations, and security, without code or AI/ML development. Generic exclusion rules do not apply as content is technical, in English, non-biographical, and focused on actionable infrastructure implementation.",
+    "timestamp": "2025-09-25 22:11:53 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/using-application-gateway-to-secure-access-to-the-azure-openai/ba-p/4456696",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because Azure OpenAI Service is the central platform being accessed for LLMs (AI rule 1). Assigned Azure category because the architecture uses Azure networking components (Azure rule 1) including Application Gateway, VNet, NSG, and Azure OpenAI. Assigned Security category because the main focus is on network security, SSL termination, Web Application Firewall, IP restrictions, and compliance-driven governance (Security rules 1, 2, 7, and 9). Coding, DevOps, ML, and GitHub Copilot categories are not applicable, as content does not focus on code, pipelines, data engineering, or development frameworks. Generic exclusion rules do not apply; content is technical, in English, and meets length and subject matter requirements.",
+    "timestamp": "2025-09-25 22:12:16 +00:00"
   }
 ]
