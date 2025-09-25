@@ -10248,5 +10248,11 @@
     "timestamp": "2025-09-25 05:13:37 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Assigned 'AI' because the extension integrates with GitHub Copilot and offers AI-powered features like IntelliSense suggestions, query explanation, and optimization (AI rules 1, 2, 5). 'GitHub Copilot' was included due to its direct integration and highlighted AI interactions (GitHub Copilot rules 1, 2, 4). 'Coding' is justified as the article focuses on developer workflows, SQL/code editing, and database interactions in VS Code (Coding rules 2, 4, 5). 'Azure' is included because the extension supports and discusses Azure Database for PostgreSQL, secure Azure authentication with Entra ID, and enterprise scenarios (Azure rules 1, 2, 4). ML is not included, as the focus is on operational development and AI features rather than custom ML engineering or analytics. The content is technical, hands-on, and fits core category inclusion without triggering any generic exclusion rules."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/it-s-time-to-secure-your-mcp-servers-here-s-how/ba-p/4434308",
+    "timestamp": "2025-09-25 07:14:47 +00:00",
+    "reason": "Succesfully added: Assigned Security category because the entire article is about authentication, authorization, and securing a server (Security rule 2 and 3). Assigned Azure category because the project referenced is hosted under Azure Samples, suggesting Azure relevance (Azure rule 1 and 4). Assigned Coding category because it provides Node.js code samples and middleware implementation (Coding rule 2 and 4). Did not assign AI or ML categories as content is centered around backend security and coding, not AI model building or direct Microsoft AI service use."
   }
 ]
