@@ -10440,5 +10440,11 @@
     "reason": "Succesfully added: Assigned 'AI' because Copilot coding agent utilizes AI services for code changes (AI rule 1, 2). Included 'GitHub Copilot' because this is a developer-centric Copilot tool directly referenced (GitHub Copilot rule 1, 2), and per critical instruction, 'GitHub Copilot' always requires 'AI' also. Assigned 'Coding' because the content focuses on automating coding workflows, pull requests, and code review in GitHub (Coding rule 4, 5). 'DevOps' is included because the process involves workflow automation, version control, and developer productivity tooling with the GitHub CLI (DevOps rule 2, 5, 9). There are no generic exclusion triggers (the content is technical, not biographical, negative, business-focused, etc.), and all Copilot references are to developer tools, not business productivity.",
     "timestamp": "2025-09-26 12:24:14 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-09-25-kick-off-and-track-copilot-coding-agent-sessions-from-the-github-cli"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-09-25-product-specific-billing-apis-are-closing-down",
+    "reason": "Succesfully added: Assigned the DevOps category because the changes directly impact CI/CD tooling and developers managing GitHub Actions, Packages, and shared storage billing through automation (DevOps rules 2, 5, and 11). There are no coding or AI elements in the content, and Azure or security categories are not relevant. The content is focused on workflow/process adaptation for technical practitioners rather than business or end-user concerns. Generic exclusion rules do not apply, as the content is technical, relevant, and not sales or biographical.",
+    "timestamp": "2025-09-26 13:23:04 +00:00",
+    "collection": "news"
   }
 ]
