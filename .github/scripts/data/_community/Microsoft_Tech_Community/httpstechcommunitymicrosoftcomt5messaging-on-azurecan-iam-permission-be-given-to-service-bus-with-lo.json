@@ -1,0 +1,14 @@
+{
+  "Tags": [],
+  "FeedName": "Microsoft Tech Community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Title": "Can IAM permission be given to Service Bus with Local authentication",
+  "PubDate": "2025-09-25T09:28:28+00:00",
+  "Author": "curious7",
+  "ProcessedDate": "2025-09-25 18:18:10",
+  "Description": "If I have a Service Bus with queues in it and it has local authentication enabled. Can I give some users (using their on-premises synced account) the \"Azure Service Bus Data Receiver\" and \"Azure Service Bus Data Sender\" permission to allow them to see messages in the queue?\n\nThey have Reader role on the parent Resource group so they can already see the Service Bus but can't access queues.\n\nOr IAM permissions won't work if the Service bus has local authentication enabled.",
+  "OutputDir": "_community",
+  "Link": "https://techcommunity.microsoft.com/t5/messaging-on-azure/can-iam-permission-be-given-to-service-bus-with-local/m-p/4456842#M30",
+  "EnhancedContent": "If I have a Service Bus with queues in it and it has local authentication enabled. Can I give some users (using their on-premises synced account) the \"Azure Service Bus Data Receiver\" and \"Azure Service Bus Data Sender\" permission to allow them to see messages in the queue?\n\nThey have Reader role on the parent Resource group so they can already see the Service Bus but can't access queues.\n\nOr IAM permissions won't work if the Service bus has local authentication enabled.",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+}

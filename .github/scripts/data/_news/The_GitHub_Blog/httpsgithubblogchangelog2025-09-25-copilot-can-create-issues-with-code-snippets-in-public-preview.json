@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "Title": "Copilot can create issues with code snippets in public preview",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Link": "https://github.blog/changelog/2025-09-25-copilot-can-create-issues-with-code-snippets-in-public-preview",
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "Author": "Allison",
+  "PubDate": "2025-09-25T21:59:40+00:00",
+  "Description": "Following the release of using Copilot to create issues, we’re making issue creation even smarter. You can now ask Copilot to include relevant code snippets and files directly into your…\n\nThe post [Copilot can create issues with code snippets in public preview](https://github.blog/changelog/2025-09-25-copilot-can-create-issues-with-code-snippets-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).",
+  "EnhancedContent": "Following the release of [using Copilot to create issues](https://github.blog/changelog/2025-05-19-creating-issues-with-copilot-on-github-com-is-in-public-preview/), we’re making issue creation even smarter. You can now ask Copilot to include relevant code snippets and files directly into your issues on [github.com/copilot](https://github.com/copilot).\n\nYou can now:\n\n- Create an issue and ask Copilot to attach related code snippets or files.\n- Add snippets after Copilot’s initial draft.\n- Review and edit Copilot’s suggestions before creating the issue.\n\n## Try it out\n\n1. Navigate to [github.com/copilot](https://github.com/copilot).\n2. Try prompts like: “Create me an issue for `YOUR-PROMPT-HERE`\nin `YOUR-ORGANIZATION/YOUR-REPOSITORY` and add relevant code snippets.”\n\n## Helpful tips\n\n- Snippets aren’t added by default, so be sure to prompt Copilot to include them.\n- Copilot may make mistakes, so always double-check the snippets and files it suggests.\n- Be specific with your prompts to get the most useful results.\n\nWith this update, issues can carry richer context from the start, helping you maintain continuity from reporting to implementation.",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2025-09-25 23:11:53",
+  "OutputDir": "_news"
+}

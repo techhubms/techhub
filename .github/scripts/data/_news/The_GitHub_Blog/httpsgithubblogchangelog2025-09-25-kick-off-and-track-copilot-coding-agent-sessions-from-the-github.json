@@ -1,0 +1,18 @@
+{
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2025-09-26 12:22:16",
+  "Title": "Kick off and track Copilot coding agent sessions from the GitHub CLI",
+  "PubDate": "2025-09-26T09:00:02+00:00",
+  "Description": "Copilot coding agent is our asynchronous, autonomous background agent. Delegate a task to Copilot, and it opens a draft pull request, makes changes in the background, then requests a review…\n\nThe post [Kick off and track Copilot coding agent sessions from the GitHub CLI](https://github.blog/changelog/2025-09-25-kick-off-and-track-copilot-coding-agent-sessions-from-the-github-cli) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "OutputDir": "_news",
+  "Tags": [
+    "client apps",
+    "copilot",
+    "Release"
+  ],
+  "Link": "https://github.blog/changelog/2025-09-25-kick-off-and-track-copilot-coding-agent-sessions-from-the-github-cli",
+  "Author": "Allison",
+  "EnhancedContent": "[Copilot coding agent](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent) is our asynchronous, autonomous background agent. Delegate a task to Copilot, and it opens a draft pull request, makes changes in the background, then requests a review from you.\n\nThe [GitHub CLI 2.80.0 release](https://github.com/cli/cli/releases/tag/v2.80.0) introduces the `agent-task` command set for managing coding agent tasks in `gh` :\n\n- Start a new task: `gh agent-task create \"refactor the codebase\"`\n- List all your tasks: `gh agent-task list`\n- View task details: `gh agent-task view 1234`\n- View the task log in real-time: `gh agent-task view 1234 --log --follow`\n\nThe `agent-task` command set also ships with the following aliases for convenience:\n\n- `gh agent-tasks`\n- `gh agent`\n- `gh agents`\n\nFor more information about command line flags and arguments, run `gh agent-task --help` .",
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}

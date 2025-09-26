@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-09-25 13:25:12",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "OutputDir": "_community",
+  "Title": "End-to-End Confidence in the Cloud A Walkthrough of Azure Playwright Testing (Preview)",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/end-to-end-confidence-in-the-cloud-a-walkthrough-of-azure/m-p/4456922#M22246",
+  "PubDate": "2025-09-25T12:47:03+00:00",
+  "EnhancedContent": "If you’ve been using Playwright for your end-to-end testing, you know how powerful it is for browser automation. But running large test suites locally or in CI can be slow, flaky, and resource-hungry. That’s where **Azure Playwright Testing (Preview)** — also called *Microsoft Playwright Testing* — comes in.\n\nThis walkthrough will show you how to go from a plain Playwright project to running tests at scale in the Azure cloud, complete with reporting, debugging, and parallel execution.\n\n[https://dellenny.com/end-to-end-confidence-in-the-cloud-a-walkthrough-of-azure-playwright-testing-preview/](https://dellenny.com/end-to-end-confidence-in-the-cloud-a-walkthrough-of-azure-playwright-testing-preview/)",
+  "Description": "If you’ve been using Playwright for your end-to-end testing, you know how powerful it is for browser automation. But running large test suites locally or in CI can be slow, flaky, and resource-hungry. That’s where **Azure Playwright Testing (Preview)** — also called *Microsoft Playwright Testing* — comes in.\n\nThis walkthrough will show you how to go from a plain Playwright project to running tests at scale in the Azure cloud, complete with reporting, debugging, and parallel execution.\n\n[https://dellenny.com/end-to-end-confidence-in-the-cloud-a-walkthrough-of-azure-playwright-testing-preview/](https://dellenny.com/end-to-end-confidence-in-the-cloud-a-walkthrough-of-azure-playwright-testing-preview/)",
+  "FeedName": "Microsoft Tech Community",
+  "Tags": [],
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Author": "JohnNaguib"
+}

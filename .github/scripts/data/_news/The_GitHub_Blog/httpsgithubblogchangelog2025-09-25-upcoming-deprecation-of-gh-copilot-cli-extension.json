@@ -1,0 +1,18 @@
+{
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "EnhancedContent": "We’re announcing the scheduled deprecation of the [GitHub Copilot in the CLI](https://github.com/github/gh-copilot) extension for GitHub CLI (i.e., `gh-copilot` ) which will stop working on **October 25, 2025**. This extension’s capabilities are being replaced by the new [GitHub Copilot CLI](https://github.com/github/copilot-cli), a fully agentic AI assistant that provides the full power of Copilot’s coding agent locally in your terminal.\n\n### What’s changing\n\n- The [gh-copilot](https://github.com/github/gh-copilot) extension will be deprecated and stop functioning on October 25, 2025.\n- Enterprise customers with the “Copilot in the CLI” policy currently enabled will notice we’re automatically disabling this policy. We’re doing this so administrators can review whether to allow access to the new Copilot CLI, which is now in public preview.\n- The new Copilot CLI provides a much more powerful, agentic experience compared to the limited suggestion capabilities of `gh-copilot`\n.\n\n### Migration and alternatives\n\n- **Copilot Pro and Enterprise users**: We recommend migrating to the new [GitHub Copilot CLI](https://github.com/github/copilot-cli), which offers enhanced agentic capabilities.\n- **Free plan users**: Since the new Copilot CLI isn’t available on the free plan, we recommend using Ask mode in Visual Studio Code to get explanations and command suggestions. Alternatively, you could explore the [gh-models](https://github.com/github/gh-models) extension to interact with AI models via the GitHub CLI.\n\nFor more information about the new GitHub Copilot CLI, visit the [GitHub Copilot CLI repository](https://github.com/github/copilot-cli).",
+  "Tags": [
+    "client apps",
+    "copilot",
+    "Retired"
+  ],
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2025-09-25T20:32:31+00:00",
+  "OutputDir": "_news",
+  "ProcessedDate": "2025-09-25 22:09:13",
+  "Description": "We’re announcing the scheduled deprecation of the GitHub Copilot in the CLI extension for GitHub CLI (i.e., gh-copilot) which will stop working on October 25, 2025. This extension’s capabilities are…\n\nThe post [Upcoming deprecation of gh-copilot CLI extension](https://github.blog/changelog/2025-09-25-upcoming-deprecation-of-gh-copilot-cli-extension) appeared first on [The GitHub Blog](https://github.blog).",
+  "Title": "Upcoming deprecation of gh-copilot CLI extension",
+  "FeedName": "The GitHub Blog",
+  "Author": "Allison",
+  "Link": "https://github.blog/changelog/2025-09-25-upcoming-deprecation-of-gh-copilot-cli-extension"
+}

@@ -1,0 +1,18 @@
+{
+  "Tags": [
+    "client apps",
+    "copilot",
+    "Release"
+  ],
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "ProcessedDate": "2025-09-25 20:12:44",
+  "Link": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview",
+  "Title": "GitHub Copilot CLI is now in public preview",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "EnhancedContent": "### GitHub Copilot CLI is now in public preview\n\nWe’re bringing the power of GitHub Copilot coding agent directly to your terminal. With GitHub Copilot CLI, you can work locally and synchronously with an AI agent that understands your code and GitHub context.\n\n**What’s new:**\n\n- **Terminal-native development:** Work with Copilot coding agent directly in your command line — no context switching required.\n- **GitHub integration out of the box:** Access your repositories, issues, and pull requests using natural language, all authenticated with your existing GitHub account.\n- **Agentic capabilities:** Build, edit, debug, and refactor code with an AI collaborator that can plan and execute complex tasks.\n- **MCP-powered extensibility:** Take advantage of the fact that the coding agent ships with GitHub’s MCP server by default and supports custom MCP servers to extend capabilities.\n- **Full control:** Preview every action before execution — nothing happens without your explicit approval.\n\n**Getting started is simple:**\n\n1. Install via npm: `npm install -g @github/copilot`\n2. Authenticate with your GitHub account.\n3. Start building with your existing Copilot Pro, Pro+, Business, or Enterprise plan.\n\nWhether you’re exploring a new codebase, implementing features from issues, or debugging locally, Copilot CLI brings intelligent assistance right where developers work.\n\n### Ready to get started?\n\n- [Install Copilot CLI today](https://github.com/github/copilot-cli?utm_source=changelog-source-cta&amp;utm_campaign=agentic-copilot-cli-launch-2025).\n\n### Looking for more information?\n\n- [Read the documentation](https://docs.github.com/copilot/how-tos/use-copilot-agents/use-copilot-cli)\n- [Learn more about Copilot coding agent](https://docs.github.com/copilot/concepts/agents/about-copilot-cli)\n- [Check out our product page](https://github.com/features/copilot/cli?utm_source=changelog-landing-page&amp;utm_campaign=agentic-copilot-cli-launch-2025)",
+  "OutputDir": "_news",
+  "Description": "GitHub Copilot CLI is now in public preview We’re bringing the power of GitHub Copilot coding agent directly to your terminal. With GitHub Copilot CLI, you can work locally and…\n\nThe post [GitHub Copilot CLI is now in public preview](https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).",
+  "PubDate": "2025-09-25T19:22:27+00:00",
+  "FeedName": "The GitHub Blog",
+  "Author": "Allison"
+}

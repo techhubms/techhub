@@ -1,0 +1,24 @@
+{
+  "Tags": [
+    "demo",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetdeveloper",
+    "dotnetmaui",
+    "maui",
+    "microsoft",
+    "softwaredeveloper"
+  ],
+  "Description": "Join the .NET MAUI team for a special live stream from the Microsoft office in Prague. Demos, questions, and tons of fun are on the agenda.\n\n🔗 Community Links: https://www.theurlist.com/maui-standup-oct2025\n\n🎙️ Featuring: David Ortinau (@davidortinau), Gerald Versluis (@jfversluis) and the team\n\n#dotnet #dotnetmaui #csharp",
+  "Link": "https://www.youtube.com/watch?v=4EXGyCgVNp4",
+  "Author": "dotnet",
+  "FeedName": "DotNet YouTube",
+  "Title": ".NET MAUI Community Standup - Live from Prague with the .NET MAUI Team",
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "PubDate": "2025-09-25T21:07:04+00:00",
+  "FeedLevelAuthor": "dotnet",
+  "ProcessedDate": "2025-09-25 22:09:47",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+}

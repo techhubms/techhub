@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Title": "Copilot coding agent is now generally available",
+  "PubDate": "2025-09-25T16:49:31+00:00",
+  "Author": "Allison",
+  "ProcessedDate": "2025-09-25 18:17:12",
+  "Description": "Copilot coding agent, our asynchronous, autonomous developer agent, is now generally available for all paid Copilot subscribers. Delegate a task to Copilot, and Copilot will open a draft pull request…\n\nThe post [Copilot coding agent is now generally available](https://github.blog/changelog/2025-09-25-copilot-coding-agent-is-now-generally-available) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2025-09-25-copilot-coding-agent-is-now-generally-available",
+  "EnhancedContent": "Copilot coding agent, our asynchronous, autonomous developer agent, is now **generally available** for all paid Copilot subscribers.\n\nDelegate a task to Copilot, and Copilot will open a draft pull request and work in the background in its own development environment. It does this through the power of GitHub Actions. Once Copilot is done, it will request a review from you, and you can ask Copilot to make changes by leaving comments on the pull request.\n\nCopilot coding agent has already been used to create **more than 1,000,000 pull requests** since it launched in public preview in May.\n\nCopilot coding agent can complete a wide range of software development tasks including:\n\n- Implementing new features\n- Fixing bugs\n- Addressing technical debt\n- Improving test coverage\n- Updating documentation\n\nThere are many ways to hand tasks to Copilot, including assigning it an issue, using the agents panel accessible on every page on GitHub, or using the **Delegate to coding agent** button in Visual Studio Code.\n\nTo learn more about Copilot coding agent, head to [our documentation](https://docs.github.com/enterprise-cloud@latest/copilot/concepts/agents/coding-agent/about-coding-agent).\n\nIf you’re a Copilot Business or Copilot Enterprise subscriber, an administrator will have to [enable Copilot coding agent from the “Policies” page](https://docs.github.com/enterprise-cloud@latest/copilot/concepts/agents/coding-agent/coding-agent-for-business-and-enterprise) before you can use it.",
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}
