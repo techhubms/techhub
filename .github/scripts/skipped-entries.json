@@ -8415,5 +8415,17 @@
     "reason": "No categories found: Content excluded due to generic exclusion rules. The content is primarily an event announcement, focusing on guidance, community, and Microsoft-sponsored networking for student founders rather than containing substantial technical or developer-focused information. There are no technical implementation details, no developer tutorials, and no substantive coverage of Microsoft technologies, frameworks, or coding practices beyond high-level references to 'AI' and support from MVPs. This aligns with 'Business Strategy and Executive Content' and 'Workplace and Business Focus' exclusions from Chapter 3, as the focus is on community, support, and the student founder journey, not technical implementation.",
     "collection": "news",
     "canonical_url": "https://techcommunity.microsoft.com/blog/studentdeveloperblog/sprint-to-imagine-cup-fuel-your-innovation/4457098"
+  },
+  {
+    "timestamp": "2025-09-26 19:10:10 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_microsoft-marketplace-activity-7377393224635645953-hANp",
+    "reason": "No categories found: The content is excluded because it is an official announcement about the launch of the Microsoft Marketplace, focusing on business-level solution discovery and deployment—not technical implementation or developer guidance. It does not meet any inclusion criteria for technical categories such as AI, Coding, DevOps, Azure, ML, or Security. It discusses the marketplace from a strategic, marketing, and business point of view, without providing actionable technical depth or implementation details. This fits the 'Business Strategy and Executive Content' and 'Business vs Technical Content' generic exclusion rules in Chapter 3."
+  },
+  {
+    "timestamp": "2025-09-26 19:10:38 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/iu8Ihw0oksg",
+    "reason": "No categories found: No categories were assigned because the input lacks substantive content to evaluate. The 'content' field is null and there is no description or substantive text available. According to the workflow, category assignment depends on the actual technical substance provided, not just on the tags or title. Without main content text, it's not possible to determine whether the video demonstrates developer workflows, DevOps, Coding, or AI related to Microsoft technologies. The generic exclusion rule (focus on actual content) applies, so no categories are assigned."
   }
 ]
