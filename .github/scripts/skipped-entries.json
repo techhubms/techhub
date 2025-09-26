@@ -8409,5 +8409,11 @@
     "timestamp": "2025-09-26 17:14:00 +00:00",
     "reason": "No categories found: No categories were assigned because, while the article delivers a detailed architectural overview and practical comparison, it does not focus on Microsoft technologies, platforms, or development tools as required by the inclusion rules (e.g., no Azure, .NET, Microsoft cloud, or developer products are discussed). All reference frameworks are general-purpose or industry-wide, with none tied to Microsoft or its ecosystem. Therefore, as per the requirement that Microsoft technology be central to content and strict adherence to the inclusion rules, no technology categories apply.",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-26 18:16:00 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The content is primarily an event announcement, focusing on guidance, community, and Microsoft-sponsored networking for student founders rather than containing substantial technical or developer-focused information. There are no technical implementation details, no developer tutorials, and no substantive coverage of Microsoft technologies, frameworks, or coding practices beyond high-level references to 'AI' and support from MVPs. This aligns with 'Business Strategy and Executive Content' and 'Workplace and Business Focus' exclusions from Chapter 3, as the focus is on community, support, and the student founder journey, not technical implementation.",
+    "collection": "news",
+    "canonical_url": "https://techcommunity.microsoft.com/blog/studentdeveloperblog/sprint-to-imagine-cup-fuel-your-innovation/4457098"
   }
 ]

@@ -10494,5 +10494,11 @@
     "timestamp": "2025-09-26 17:14:32 +00:00",
     "reason": "Succesfully added: Assigned the 'AI' category because the content centers on how artificial intelligence impacts and reshapes software architecture frameworks and practices (AI rule 5). There is no substantial discussion of Microsoft technologies, coding, DevOps, ML engineering, Azure, or Security; the focus remains on general concepts and frameworks, so only 'AI' applies. The exclusion of other categories is due to a lack of Microsoft-specific implementation or technology discussion.",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-26 18:16:31 +00:00",
+    "reason": "Succesfully added: Assigned the 'Coding' category because the video's content centers on developing an MCP server in C# using ASP.NET Core, fitting Coding rules 1 and 2 (Microsoft programming language and framework). The description and tags emphasize practical development in C# and ASP.NET Core, with no other Microsoft technologies (such as Azure, AI/ML, or Security) or DevOps aspects being central to the content. Although 'AI' appears in the tags, there is no evidence in the description or title that AI-related technology is covered, thus AI and other non-relevant categories were excluded.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=dje8EMF3Shc"
   }
 ]
