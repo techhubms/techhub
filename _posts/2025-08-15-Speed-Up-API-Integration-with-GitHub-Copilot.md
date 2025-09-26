@@ -4,10 +4,10 @@ title: "Speed Up API Integration with GitHub Copilot"
 description: "This guide discusses how developers can leverage GitHub Copilot to streamline the process of integrating APIs into applications. Covering strategies such as prompting Copilot for boilerplate code and refining generated code with follow-up prompts, readers will learn to accelerate their development workflow while retaining control over key implementation details."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/speed-up-api-integration.html"
+canonical_url: "https://cooknwithcopilot.com/blog/speed-up-api-integration.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-08-15 00:00:00 +00:00
 permalink: "/2025-08-15-Speed-Up-API-Integration-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
@@ -51,4 +51,4 @@ By iteratively prompting Copilot, developers can get to functional and productio
 - Developer supervision ensures correct and robust implementations
 - Combining AI assistance with personal expertise leads to optimal outcomes
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/speed-up-api-integration.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/speed-up-api-integration.html)

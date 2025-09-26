@@ -153,7 +153,7 @@ Copilot’s platform is growing—Claude 4.1 joins GPT-5 to support code intelli
 
 Practical tutorials this week included streamlining API integration with Copilot and tackling broken migrations using Copilot’s AI debugging tools—two useful areas for boosting day-to-day productivity.
 
-- [Speed Up API Integration with GitHub Copilot](https://pagelsr.github.io/CooknWithCopilot/blog/speed-up-api-integration.html)
+- [Speed Up API Integration with GitHub Copilot](https://cooknwithcopilot.com/blog/speed-up-api-integration.html)
 - [Fix Broken Migrations with AI Debugging in VS Code Using GitHub Copilot](https://techcommunity.microsoft.com/t5/educator-developer-blog/fix-broken-migrations-with-ai-powered-debugging-in-vs-code-using/ba-p/4439418)
 
 As new pull request summarization features arrive, GitHub is deprecating text completion for pull request descriptions. Organizations should keep an eye on update channels to catch the latest changes.

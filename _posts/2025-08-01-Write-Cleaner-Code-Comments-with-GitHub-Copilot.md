@@ -4,10 +4,10 @@ title: "Write Cleaner Code Comments with GitHub Copilot"
 description: "Randy Pagels demonstrates how developers can leverage GitHub Copilot to generate clear, meaningful code comments. The guide covers using Copilot's Chat, Edit, and Agent modes to draft effective documentation, improving code maintainability and team collaboration."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/write-cleaner-code-comments-with-github-copilot.html"
+canonical_url: "https://cooknwithcopilot.com/blog/write-cleaner-code-comments-with-github-copilot.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-08-01 00:00:00 +00:00
 permalink: "/2025-08-01-Write-Cleaner-Code-Comments-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
@@ -103,4 +103,4 @@ Readable code is more than just clean syntax—it needs clear explanations. With
 
 *Posted on Aug 1, 2025 by Randy Pagels*
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/write-cleaner-code-comments-with-github-copilot.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/write-cleaner-code-comments-with-github-copilot.html)

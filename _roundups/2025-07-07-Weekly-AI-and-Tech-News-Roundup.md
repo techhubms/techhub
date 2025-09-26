@@ -69,7 +69,7 @@ Copilot now significantly eases large pull request reviews, offering more intell
 Copilot Vision extends key features to Xcode, including image upload/discussion in chat—crucial for UI reviews in macOS development—alongside enhanced custom instructions and locale-aware support. Prompt engineering best practices are further emphasized: specificity (languages, frameworks, intent) in prompts is proving essential for quality output. Moving from generic to highly tailored prompting is accelerating accurate code generation and faster bug fixes.
 
 - [GitHub Copilot in Xcode - Explore with Copilot Vision, custom instructions, and locale response support](https://github.blog/changelog/2025-06-29-github-copilot-in-xcode-explore-with-copilot-vision-custom-instructions-and-locale-response-support)
-- [Avoid These Common Copilot Prompts: How to Get Better Results with Specific Guidance](https://pagelsr.github.io/CooknWithCopilot/blog/avoid-these-common-prompts.html)
+- [Avoid These Common Copilot Prompts: How to Get Better Results with Specific Guidance](https://cooknwithcopilot.com/blog/avoid-these-common-prompts.html)
 
 ---
 

@@ -151,7 +151,7 @@ Ongoing improvements now allow Copilot Chat to leverage more contextual input fo
 
 - [Debugging Faster with GitHub Copilot Chat: Tips from GitHub]({{ "/2025-08-01-Debugging-Faster-with-GitHub-Copilot-Chat-Tips-from-GitHub.html" | relative_url }})
 - [GitHub Copilot Coding Agent: Automatic Updates for Pull Request Titles and Descriptions](https://github.blog/changelog/2025-07-30-copilot-coding-agent-keeps-pull-request-titles-and-bodies-up-to-date)
-- [Write Cleaner Code Comments with GitHub Copilot](https://pagelsr.github.io/CooknWithCopilot/blog/write-cleaner-code-comments-with-github-copilot.html)
+- [Write Cleaner Code Comments with GitHub Copilot](https://cooknwithcopilot.com/blog/write-cleaner-code-comments-with-github-copilot.html)
 
 ### Real-World Guidance and Best Practices for New Users
 

@@ -4,10 +4,10 @@ title: "Ways to Use GitHub Copilot for Documentation & Clarity"
 description: "Randy Pagels explores how GitHub Copilot can automate and enhance documentation tasks. The article details practical Copilot features and prompts for generating docstrings, API explanations, inline comments, and commit messages, all aimed at improving code readability and maintainability."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/ways-to-use-github-copilot-for-documentation-clarity.html"
+canonical_url: "https://cooknwithcopilot.com/blog/ways-to-use-github-copilot-for-documentation-clarity.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-06-06 00:00:00 +00:00
 permalink: "/2025-06-06-Ways-to-Use-GitHub-Copilot-for-Documentation-and-Clarity.html"
 categories: ["AI", "GitHub Copilot"]
@@ -121,4 +121,4 @@ From quick docstrings to comprehensive API docs, GitHub Copilot can automate muc
 
 [← Back to Main Page](../index.html)
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/ways-to-use-github-copilot-for-documentation-clarity.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/ways-to-use-github-copilot-for-documentation-clarity.html)

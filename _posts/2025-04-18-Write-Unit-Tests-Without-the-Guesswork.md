@@ -4,10 +4,10 @@ title: "Write Unit Tests Without the Guesswork"
 description: "This article by Randy Pagels explores how GitHub Copilot can streamline unit test creation for various languages by generating comprehensive tests from simple code comments, helping developers improve code coverage and catch bugs more efficiently."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/write-unit-tests-without-the-guesswork.html"
+canonical_url: "https://cooknwithcopilot.com/blog/write-unit-tests-without-the-guesswork.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-04-18 00:00:00 +00:00
 permalink: "/2025-04-18-Write-Unit-Tests-Without-the-Guesswork.html"
 categories: ["AI", "GitHub Copilot"]
@@ -58,4 +58,4 @@ Unit testing can be fast and less tedious with the help of GitHub Copilot. By si
 
 In summary, leveraging GitHub Copilot for unit test generation elevates your development workflow, helping you catch bugs earlier and document code behavior without unnecessary guesswork.
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/write-unit-tests-without-the-guesswork.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/write-unit-tests-without-the-guesswork.html)

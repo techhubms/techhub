@@ -4,10 +4,10 @@ title: "Find and Fix Typos Faster with GitHub Copilot"
 description: "This guide explains how developers can use GitHub Copilot's various modes—Chat, Edit, and Agent—to quickly discover and fix typos in code, comments, and naming conventions. It walks through practical prompts and workflows to make typo detection a routine part of development, ultimately saving time and reducing bugs."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/find-and-fix-typos-faster-with-github-copilot.html"
+canonical_url: "https://cooknwithcopilot.com/blog/find-and-fix-typos-faster-with-github-copilot.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-08-08 00:00:00 +00:00
 permalink: "/2025-08-08-Find-and-Fix-Typos-Faster-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
@@ -72,4 +72,4 @@ Small mistakes in names or comments can introduce bugs and slow down development
 
 A proactive typo and naming review with GitHub Copilot can eliminate frustrating bugs and improve overall code quality. Making this habit reduces debugging time and leads to more maintainable codebases.
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/find-and-fix-typos-faster-with-github-copilot.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/find-and-fix-typos-faster-with-github-copilot.html)

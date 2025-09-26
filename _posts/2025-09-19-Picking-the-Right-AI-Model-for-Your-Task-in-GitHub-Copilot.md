@@ -4,10 +4,10 @@ title: "Picking the Right AI Model for Your Task in GitHub Copilot"
 description: "This article by Randy Pagels explains how developers can choose among multiple AI models in GitHub Copilot. It discusses the strengths of different models based on task complexity, outlines plan-based model availability, and provides practical advice for model selection and prompt tuning. Readers will learn strategies for efficient use of Copilot features across Free, Pro, Business, and Enterprise plans."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/picking-the-right-ai-model-for-your-task.html"
+canonical_url: "https://cooknwithcopilot.com/blog/picking-the-right-ai-model-for-your-task.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-09-19 00:00:00 +00:00
 permalink: "/2025-09-19-Picking-the-Right-AI-Model-for-Your-Task-in-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
@@ -85,4 +85,4 @@ Premium models (e.g., GPT-5, Claude Sonnet 4) may use premium requests, so facto
 
 By matching your Copilot model to the complexity of your work, you’ll reduce retries and move faster from idea to shipped code.
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/picking-the-right-ai-model-for-your-task.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/picking-the-right-ai-model-for-your-task.html)

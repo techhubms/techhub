@@ -4,10 +4,10 @@ title: "Multi-File Edits Made Simple"
 description: "This article explains how developers can use GitHub Copilot's new multi-file edits feature to perform wide-reaching code changes such as refactoring, import modernization, and style enforcement across an entire project. It highlights key use cases, practical tips, and how the review workflow helps keep developers in control of changes."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/multi-file-edits-made-simple.html"
+canonical_url: "https://cooknwithcopilot.com/blog/multi-file-edits-made-simple.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-09-12 00:00:00 +00:00
 permalink: "/2025-09-12-Multi-File-Edits-Made-Simple.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
@@ -58,4 +58,4 @@ With multi-file edits, Copilot:
 
 Multi-file Copilot Edits allow you to handle broad, repetitive refactors in minutes instead of hours, freeing you to focus on higher-level problem solving while maintaining complete oversight of your codebase.
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/multi-file-edits-made-simple.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/multi-file-edits-made-simple.html)

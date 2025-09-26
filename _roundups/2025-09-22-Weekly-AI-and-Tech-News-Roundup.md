@@ -103,7 +103,7 @@ Claude Opus 4.1 is now available for enterprise and Pro+ users in leading IDEs, 
 - [Auto Model Selection Preview for GitHub Copilot Chat in VS Code](https://code.visualstudio.com/blogs/2025/09/15/autoModelSelection)
 - [Auto Model Selection for GitHub Copilot in VS Code Public Preview](https://github.blog/changelog/2025-09-14-auto-model-selection-for-copilot-in-vs-code-in-public-preview)
 - [Claude Opus 4.1 Rolls Out for GitHub Copilot Users in Popular IDEs](https://github.blog/changelog/2025-09-16-anthropic-claude-opus-4-1-is-now-available-in-public-preview-in-visual-studio-jetbrains-xcode-and-eclipse)
-- [Picking the Right AI Model for Your Task in GitHub Copilot](https://pagelsr.github.io/CooknWithCopilot/blog/picking-the-right-ai-model-for-your-task.html)
+- [Picking the Right AI Model for Your Task in GitHub Copilot](https://cooknwithcopilot.com/blog/picking-the-right-ai-model-for-your-task.html)
 - [Integrating Foundry Local with GitHub Copilot in Visual Studio Code](https://devblogs.microsoft.com/foundry/ai-assisted-development-powered-by-local-models/)
 
 ### GitHub Copilot with Azure AI Foundry and Enterprise Model Integration

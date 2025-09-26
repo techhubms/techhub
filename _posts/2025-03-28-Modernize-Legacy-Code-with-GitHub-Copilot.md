@@ -4,10 +4,10 @@ title: "Modernize Legacy Code with GitHub Copilot"
 description: "Explore how GitHub Copilot can support modernization of legacy codebases by suggesting cleaner, updated patterns and practices. Learn actionable tips on using Copilot to refactor functions, update libraries or APIs, and keep code compliant with modern development standards."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/modernize-legacy-code-with-github-copilot.html"
+canonical_url: "https://cooknwithcopilot.com/blog/modernize-legacy-code-with-github-copilot.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-03-28 00:00:00 +00:00
 permalink: "/2025-03-28-Modernize-Legacy-Code-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
@@ -92,4 +92,4 @@ Modernizing legacy code is achievable through incremental improvements. GitHub C
 
 **Original author:** Randy Pagels at Xebia
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/modernize-legacy-code-with-github-copilot.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/modernize-legacy-code-with-github-copilot.html)

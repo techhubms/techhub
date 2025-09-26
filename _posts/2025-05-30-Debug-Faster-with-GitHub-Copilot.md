@@ -4,10 +4,10 @@ title: "Debug Faster with GitHub Copilot"
 description: "Learn how to leverage GitHub Copilot to accelerate debugging tasks. This guide details practical ways Copilot can help interpret errors, find bugs, insert debugging code, and generate test cases so developers spend more time coding and less time troubleshooting."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/debug-faster-with-github-copilot.html"
+canonical_url: "https://cooknwithcopilot.com/blog/debug-faster-with-github-copilot.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-05-30 00:00:00 +00:00
 permalink: "/2025-05-30-Debug-Faster-with-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
@@ -83,4 +83,4 @@ Test cases produced by Copilot can act as a safety net to prevent regressions an
 
 Let GitHub Copilot take some of the pain out of debugging. By leveraging its ability to explain errors, detect bugs, generate debug statements, and write test cases, you can spend less time troubleshooting and more time building features.
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/debug-faster-with-github-copilot.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/debug-faster-with-github-copilot.html)

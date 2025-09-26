@@ -96,7 +96,7 @@ Veteran devs offer blunt advice: Copilot, used well, supercharges repetitive wor
 These evolving best practices echo last week’s feedback theme, reinforcing that Copilot works best as a disciplined co-pilot, not a surrogate engineer.
 
 - [Hot take - Copilot is amazing! You're probably just lazy.](https://www.reddit.com/r/GithubCopilot/comments/1lvt549/hot_take_copilot_is_amazing_youre_probably_just/)
-- [Copilot vs. Chat: Sidekick Showdown – When to Use Each Coding Sidekick](https://pagelsr.github.io/CooknWithCopilot/blog/copilot-vs-chat-sidekick-showdown.html)
+- [Copilot vs. Chat: Sidekick Showdown – When to Use Each Coding Sidekick](https://cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html)
 - [Why I changed Cursor to Copilot and it turned out to be the best choice](https://www.reddit.com/r/GithubCopilot/comments/1lwosq7/why_i_changed_cursor_to_copilot_and_it_turned_out/)
 - [You're probably using Copilot the wrong way](https://www.reddit.com/r/GithubCopilot/comments/1lwg11b/youre_probably_using_copilot_the_wrong_way/)
 - [Beyond prompt crafting - How to be a better partner for your AI pair programmer](https://github.blog/ai-and-ml/github-copilot/beyond-prompt-crafting-how-to-be-a-better-partner-for-your-ai-pair-programmer/)

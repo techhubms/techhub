@@ -892,7 +892,7 @@ Look at repetitive tasks in your current work. What takes time but doesn't requi
 **More information:**
 
 - [Chat in IDE](https://youtu.be/TorMsn9bjLY)
-- [Copilot vs Chat: Sidekick Showdown - When to Use Each Coding Sidekick](https://pagelsr.github.io/CooknWithCopilot/blog/copilot-vs-chat-sidekick-showdown.html)
+- [Copilot vs Chat: Sidekick Showdown - When to Use Each Coding Sidekick](https://cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html)
 - [What's new with the GitHub Copilot coding agent: A look at the updates](https://www.youtube.com/watch?v=vgPl6sK6rQo)
 - [AI Challenger: Loft Orbital - Building Smarter Satellites with AI](https://www.youtube.com/watch?v=lGtTnFlI6yA)
 
@@ -1042,7 +1042,7 @@ Lots of examples and detailed information can be found in the [GitHub Copilot Hu
 **More information:**
 
 - [What's new with the GitHub Copilot coding agent: A look at the updates](https://www.youtube.com/watch?v=vgPl6sK6rQo)
-- [Copilot vs Chat: Sidekick Showdown - When to Use Each Coding Sidekick](https://pagelsr.github.io/CooknWithCopilot/blog/copilot-vs-chat-sidekick-showdown.html)
+- [Copilot vs Chat: Sidekick Showdown - When to Use Each Coding Sidekick](https://cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html)
 - [Modernizing Legacy COBOL to Cloud with GitHub Copilot](https://www.youtube.com/watch?v=xWA0xYttWMo)
 - [GitHub Copilot Helps One Acre Fund Scale Farming Impact](https://www.youtube.com/watch?v=ol_un2Nam2E)
 - [Introducing automatic documentation comment generation in Visual Studio](https://devblogs.microsoft.com/visualstudio/introducing-automatic-documentation-comment-generation-in-visual-studio/)

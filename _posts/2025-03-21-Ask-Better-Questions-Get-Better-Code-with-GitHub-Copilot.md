@@ -4,10 +4,10 @@ title: "Ask Better Questions, Get Better Code with GitHub Copilot"
 description: "This post by Randy Pagels highlights how to improve code suggestions from GitHub Copilot by asking clear, specific questions. It offers concrete prompt examples, advice on using Copilot Chat to enhance your requests, and practical tips for treating Copilot like a coding partner for better results."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/ask-better-questions-get-better-code.html"
+canonical_url: "https://cooknwithcopilot.com/blog/ask-better-questions-get-better-code.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-03-21 00:00:00 +00:00
 permalink: "/2025-03-21-Ask-Better-Questions-Get-Better-Code-with-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
@@ -75,4 +75,4 @@ GitHub Copilot’s responses are only as good as the clarity of your questions. 
 
 **Share your best prompts! We’re all learning together—if you have a prompt that always gets good results, share it with the group!**
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/ask-better-questions-get-better-code.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/ask-better-questions-get-better-code.html)

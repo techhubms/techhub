@@ -4,10 +4,10 @@ title: "Work Smarter Across Multiple Files with GitHub Copilot"
 description: "This practical guide explains how developers can use GitHub Copilot’s multi-file context features to navigate and refactor code that spans multiple files, such as controllers, models, and tests. Real-world examples show how Copilot Chat, Edit Mode, and Agent Mode streamline development and improve code understanding."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/work-smarter-across-multiple-files.html"
+canonical_url: "https://cooknwithcopilot.com/blog/work-smarter-across-multiple-files.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-08-22 00:00:00 +00:00
 permalink: "/2025-08-22-Work-Smarter-Across-Multiple-Files-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
@@ -71,4 +71,4 @@ Copilot Agent Mode can generate summaries integrating logic from multiple files.
 
 GitHub Copilot’s multi-file context empowers you to work smarter—linking, updating, and understanding code across your whole project, not just a single file.
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/work-smarter-across-multiple-files.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/work-smarter-across-multiple-files.html)

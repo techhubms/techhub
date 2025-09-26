@@ -118,7 +118,7 @@ Copilot now gives Pro+, Business, and Enterprise users the ability to choose bet
 - [Create GitHub Copilot Instructions in Just One Click]({{ "/2025-08-31-Create-GitHub-Copilot-Instructions-in-Just-One-Click.html" | relative_url }})
 - [Mastering GitHub Copilot: Tips, Shortcuts, and Prompts That Work](https://dellenny.com/mastering-github-copilot-tips-shortcuts-and-prompts-that-work/)
 - [How to Use GitHub Copilot on github.com: A Power User’s Guide](https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-on-github-com-a-power-users-guide/)
-- [Boost Code Quality Fast with GitHub Copilot Edit Mode](https://pagelsr.github.io/CooknWithCopilot/blog/use-edit-mode-for-quick-targeted-improvements.html)
+- [Boost Code Quality Fast with GitHub Copilot Edit Mode](https://cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html)
 - [How to Automate Code Reviews and Testing with GitHub Copilot]({{ "/2025-08-27-How-to-Automate-Code-Reviews-and-Testing-with-GitHub-Copilot.html" | relative_url }})
 - [Managing Your GitHub Enterprise: Policies, Copilot, and Security Settings]({{ "/2025-08-28-Managing-Your-GitHub-Enterprise-Policies-Copilot-and-Security-Settings.html" | relative_url }})
 - [Using GitHub Copilot to Teach Programming: A New Approach for Educators](https://dellenny.com/using-github-copilot-to-teach-programming-a-new-approach-for-educators/)

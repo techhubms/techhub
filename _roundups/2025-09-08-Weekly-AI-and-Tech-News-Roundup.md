@@ -136,7 +136,7 @@ This week’s focus on education builds on existing learning resources, offering
 Additional topics such as RegEx validation and conducting Agent Mode code reviews support the growing role of Copilot for automation and efficient onboarding.
 
 - [Top 10 Things You Can Do with GitHub Copilot as a New Developer](https://dellenny.com/top-10-things-you-can-do-with-github-copilot-as-a-new-developer-2/)
-- [Using GitHub Copilot Chat to Write Better Regex Patterns](https://pagelsr.github.io/CooknWithCopilot/blog/draft-smarter-regex-without-the-headaches.html)
+- [Using GitHub Copilot Chat to Write Better Regex Patterns](https://cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html)
 - [How to Get the Most Out of Your AI with Vibe Coding]({{ "/2025-09-02-How-to-Get-the-Most-Out-of-Your-AI-with-Vibe-Coding.html" | relative_url }})
 
 ## AI

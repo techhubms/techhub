@@ -4,10 +4,10 @@ title: "Craft Prompts That Get Copilot to Deliver What You Need"
 description: "Randy Pagels outlines actionable strategies for crafting effective prompts when working with GitHub Copilot. Tips include using structured guidance, adding context, specifying constraints or styles, employing persona-based prompts, framing with context, and iteratively refining prompts to get more accurate coding results."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/craft-prompts-that-get-better-results.html"
+canonical_url: "https://cooknwithcopilot.com/blog/craft-prompts-that-get-better-results.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-05-02 00:00:00 +00:00
 permalink: "/2025-05-02-Craft-Prompts-That-Get-Copilot-to-Deliver-What-You-Need.html"
 categories: ["AI", "GitHub Copilot"]
@@ -70,4 +70,4 @@ If Copilot's output isn't right, try rewording the comment with more details or 
 
 When Copilot doesn't deliver what you expect, it isn't stuck; it may just need clearer, more structured prompts. By enhancing the specificity, adding structure, and iteratively refining your instructions, you can noticeably improve the quality of Copilot's generated output.
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/craft-prompts-that-get-better-results.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/craft-prompts-that-get-better-results.html)

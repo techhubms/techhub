@@ -4,10 +4,10 @@ title: "Automate Repetitive Code with GitHub Copilot"
 description: "This post by Randy Pagels explains how GitHub Copilot can recognize and automate repetitive coding tasks such as boilerplate code, loops, and API calls. It details practical steps for leveraging Copilot to speed up development, reduce errors, and improve workflow efficiency."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/automate-repetitive-code-with-github-copilot.html"
+canonical_url: "https://cooknwithcopilot.com/blog/automate-repetitive-code-with-github-copilot.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-06-13 00:00:00 +00:00
 permalink: "/2025-06-13-Automate-Repetitive-Code-with-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
@@ -64,4 +64,4 @@ Let GitHub Copilot take over your repetitive tasks so you can concentrate on cre
 
 **Try it:** Explore how Copilot can save you time on your next project, and consider sharing your experiences with others!
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/automate-repetitive-code-with-github-copilot.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/automate-repetitive-code-with-github-copilot.html)
