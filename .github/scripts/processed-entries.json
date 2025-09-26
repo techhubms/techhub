@@ -10422,5 +10422,11 @@
     "canonical_url": "https://github.blog/changelog/2025-09-25-pull-request-files-changed-public-preview-now-supports-commenting-on-unchanged-lines",
     "timestamp": "2025-09-25 23:14:07 +00:00",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-26 00:55:10 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category per Azure rule 1, as the guide centrally discusses Azure Databricks, Azure Firewall, Private Link, VNets, and related services. Security category included per Security rules 1, 4, 5, and 7 since the main focus is securing outbound Databricks traffic using Azure Firewall, NSGs, application rules, and network controls. ML category added per ML rule 1, as Databricks is a Microsoft ML/data analytics platform and the guide focuses on securing its analytics workloads, which are typically ML/data science oriented. Reviewed for generic exclusion rules: content is technical, not biographical, not a sales pitch, is >200 words, is in English, not job-related, and is not business strategy focused. All category assignments directly follow the respective rules in Chapter 4.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/securing-azure-databricks-serverless-practical-guide-to-private/ba-p/4457083"
   }
 ]
