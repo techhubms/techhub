@@ -8403,5 +8403,11 @@
     "collection": "community",
     "reason": "Insufficient content length",
     "timestamp": "2025-09-25 18:20:28 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/software-architecture-frameworks-a-guide-to-the-landscape-and-their-differences/",
+    "timestamp": "2025-09-26 17:14:00 +00:00",
+    "reason": "No categories found: No categories were assigned because, while the article delivers a detailed architectural overview and practical comparison, it does not focus on Microsoft technologies, platforms, or development tools as required by the inclusion rules (e.g., no Azure, .NET, Microsoft cloud, or developer products are discussed). All reference frameworks are general-purpose or industry-wide, with none tied to Microsoft or its ecosystem. Therefore, as per the requirement that Microsoft technology be central to content and strict adherence to the inclusion rules, no technology categories apply.",
+    "collection": "posts"
   }
 ]

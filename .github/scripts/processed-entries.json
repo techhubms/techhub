@@ -10464,5 +10464,35 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned 'Azure' because the content centers on Terraform features for Azure and management of Azure infrastructure (Azure inclusion rule 1 and 4). 'DevOps' is included since the article details workflow improvements, CI/CD, policy validation, Infrastructure as Code, and Teams collaboration features (DevOps rules 3, 5, 6). 'AI' is assigned because Copilot integration for code generation in the Azure portal is a Microsoft AI-driven feature (AI inclusion rules 1 and 4). Did not assign 'ML', 'Coding', or 'Security' because while infrastructure, code generation, and compliance are discussed, there is no focus on custom ML/analytics, code-centric development, or deep-dive on security implementations. No generic exclusion criteria applied.",
     "timestamp": "2025-09-26 16:16:13 +00:00"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/maui-google-play-16-kb-page-size-support/",
+    "timestamp": "2025-09-26 17:11:58 +00:00",
+    "reason": "Succesfully added: Assigned the 'Coding' category since the content focuses on .NET MAUI development, dependency management, and application compatibility for a technical developer audience (Coding rules 1, 2, and 4). Did not assign 'Azure', 'AI', 'DevOps', 'ML', 'Security', or 'GitHub Copilot' because the content does not cover Microsoft cloud platforms, artificial intelligence, DevOps, security, data science, or Copilot tools. The topic is specifically about technical implementation for .NET MAUI Android apps in response to a Google Play policy update.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-09-26-product-specific-billing-apis-are-closing-down",
+    "timestamp": "2025-09-26 17:12:31 +00:00",
+    "reason": "Succesfully added: Assigned the DevOps category because the content concerns workflow automation, API changes affecting usage reporting, and billing for GitHub Actions, Packages, and shared storage (DevOps rules 2, 5, 6). No generic exclusions apply; the content is technical, English, and not about business strategy or productivity tools. Azure and Microsoft-specific coding categories do not apply, as this is platform management rather than application code. AI, ML, and Security rules do not trigger. The assignment is based on the focus on DevOps practices, automation, and API endpoint migration central to engineering workflows.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/news-insights/policy-news-and-insights/how-github-protects-developers-from-copyright-enforcement-overreach/",
+    "timestamp": "2025-09-26 17:12:58 +00:00",
+    "reason": "Succesfully added: Assigned the DevOps category because the article primarily discusses platform policy, developer workflow impact, and operational aspects of code hosting and collaboration on GitHub. DevOps inclusion is justified by its focus on how legal, moderation, and policy frameworks affect developer experience, project sharing, and operational management in software engineering (DevOps rules 3, 9, 11). No Coding, AI, Azure, ML, Security categories apply because the article does not focus on code implementation, AI, Microsoft/Azure services, machine learning, or technical security engineering. Generic exclusions do not apply since this is substantive technical policy/news for developers, written in English, and not career/business-focused or a sales pitch.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://dellenny.com/mlops-architectures-building-scalable-ai-systems/",
+    "timestamp": "2025-09-26 17:13:37 +00:00",
+    "reason": "Succesfully added: Categories 'AI' and 'ML' are assigned. The article is focused on artificial intelligence systems implemented via machine learning, specifically discussing the architecture and best practices for deploying, monitoring, and managing ML workflows (AI rules 4, 5; ML rules 1, 2, 3, 5, 6, and 10). While there are references to general MLOps tools and practices, the content is platform-agnostic and technology-focused, but matches the categorization for AI (usage of AI in systems) and ML (engineering, pipelines, deployment). No Coding, Azure, Security, DevOps, or GitHub Copilot categories are assigned, as the content does not focus on Microsoft-specific implementation, code, developer tools, or security. Generic exclusion rules do not apply—the content is technical, English, and not career, business, or management-focused.",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/software-architecture-frameworks-and-artificial-intelligence-building-smarter-systems/",
+    "timestamp": "2025-09-26 17:14:32 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content centers on how artificial intelligence impacts and reshapes software architecture frameworks and practices (AI rule 5). There is no substantial discussion of Microsoft technologies, coding, DevOps, ML engineering, Azure, or Security; the focus remains on general concepts and frameworks, so only 'AI' applies. The exclusion of other categories is due to a lack of Microsoft-specific implementation or technology discussion.",
+    "collection": "posts"
   }
 ]
