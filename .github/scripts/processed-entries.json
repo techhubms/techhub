@@ -10512,5 +10512,11 @@
     "collection": "videos",
     "timestamp": "2025-09-26 21:04:53 +00:00",
     "reason": "Succesfully added: Assigned 'AI' because the video centers on an AI-powered tool (GitHub Copilot) assisting with code modernization (AI rules 1 and 4). Assigned 'GitHub Copilot' because it specifically demonstrates the GitHub Copilot App Modernization Tool (GitHub Copilot rule 1). Assigned 'Coding' as it directly illustrates Java code upgrades, migration, and practical development using Microsoft's ecosystem (Coding rules 1, 2, and 4). Did not assign 'DevOps' or 'Azure' because while deployment is discussed, there is no clear evidence (in the input provided) of Azure integration or CI/CD focus, and the primary emphasis is on the code upgrade process itself."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-09-26 23:04:25 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=2a94mcuzGQE",
+    "reason": "Succesfully added: Assigned Azure category because the session demonstrates how to use Azure services, specifically mentioning Azure Key Vault (Azure rule 1). Assigned Coding because it discusses Rust development and SDK usage (Coding rules 1, 2, 4, and 5). Assigned Security because securing applications and secrets management with Azure Key Vault are central topics (Security rules 1 and 2). The content is technical, developer-focused, and meets all inclusion criteria with none of the generic exclusion rules applying."
   }
 ]
