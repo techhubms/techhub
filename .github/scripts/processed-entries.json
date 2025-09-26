@@ -10428,5 +10428,11 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned Azure category per Azure rule 1, as the guide centrally discusses Azure Databricks, Azure Firewall, Private Link, VNets, and related services. Security category included per Security rules 1, 4, 5, and 7 since the main focus is securing outbound Databricks traffic using Azure Firewall, NSGs, application rules, and network controls. ML category added per ML rule 1, as Databricks is a Microsoft ML/data analytics platform and the guide focuses on securing its analytics workloads, which are typically ML/data science oriented. Reviewed for generic exclusion rules: content is technical, not biographical, not a sales pitch, is >200 words, is in English, not job-related, and is not business strategy focused. All category assignments directly follow the respective rules in Chapter 4.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/securing-azure-databricks-serverless-practical-guide-to-private/ba-p/4457083"
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/agent-factory-designing-the-open-agentic-web-stack/",
+    "collection": "news",
+    "timestamp": "2025-09-26 11:11:50 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the post deeply focuses on the architecture, best practices, and standards (MCP, A2A) for building agentic AI using Microsoft technologies—a core fit for AI (AI inclusion rule 1, 4, 5). Assigned Azure because Azure AI Foundry is the featured enabling platform throughout, with examples and links, making Azure central (Azure rule 1, 3, 4). Assigned Security for the in-depth coverage of identity (Microsoft Entra ID), zero-trust models, and agent governance—demonstrating security implementation (Security rules 1, 3, 4, 9). Exclusions: Coding and ML were not assigned as the post does not cover code-level implementation or data science/ML engineering in depth; DevOps was not assigned as the DevOps/automation context is focused on orchestration within agentic systems rather than pipelines or CI/CD. All major points reference/are grounded in Microsoft technology, and no exclusion rules are triggered."
   }
 ]
