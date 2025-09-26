@@ -10446,5 +10446,11 @@
     "reason": "Succesfully added: Assigned the DevOps category because the changes directly impact CI/CD tooling and developers managing GitHub Actions, Packages, and shared storage billing through automation (DevOps rules 2, 5, and 11). There are no coding or AI elements in the content, and Azure or security categories are not relevant. The content is focused on workflow/process adaptation for technical practitioners rather than business or end-user concerns. Generic exclusion rules do not apply, as the content is technical, relevant, and not sales or biographical.",
     "timestamp": "2025-09-26 13:23:04 +00:00",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-26 15:13:15 +00:00",
+    "reason": "Succesfully added: Assigned Security because the core topic is GitHub's Bug Bounty program, vulnerability discovery, and researcher recognition, matching Security category rules 1, 5, 7, and 8. Assigned GitHub Copilot because enhanced incentives specifically target Copilot Coding Agent and Copilot Spaces, which are developer-centric extensions of Copilot (GitHub Copilot Category rules 1 and 2). Did not assign 'AI' because the content does not focus on AI capabilities or usage, but rather on security vulnerability research; likewise, did not assign 'DevOps', 'Azure', 'Coding', or 'ML' because the post is centered on security programs and community engagement, without development or operational practice details.",
+    "canonical_url": "https://github.blog/security/vulnerability-research/kicking-off-cybersecurity-awareness-month-2025-researcher-spotlights-and-enhanced-incentives/",
+    "collection": "news"
   }
 ]
