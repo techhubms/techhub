@@ -10434,5 +10434,11 @@
     "collection": "news",
     "timestamp": "2025-09-26 11:11:50 +00:00",
     "reason": "Succesfully added: Assigned AI category because the post deeply focuses on the architecture, best practices, and standards (MCP, A2A) for building agentic AI using Microsoft technologies—a core fit for AI (AI inclusion rule 1, 4, 5). Assigned Azure because Azure AI Foundry is the featured enabling platform throughout, with examples and links, making Azure central (Azure rule 1, 3, 4). Assigned Security for the in-depth coverage of identity (Microsoft Entra ID), zero-trust models, and agent governance—demonstrating security implementation (Security rules 1, 3, 4, 9). Exclusions: Coding and ML were not assigned as the post does not cover code-level implementation or data science/ML engineering in depth; DevOps was not assigned as the DevOps/automation context is focused on orchestration within agentic systems rather than pipelines or CI/CD. All major points reference/are grounded in Microsoft technology, and no exclusion rules are triggered."
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because Copilot coding agent utilizes AI services for code changes (AI rule 1, 2). Included 'GitHub Copilot' because this is a developer-centric Copilot tool directly referenced (GitHub Copilot rule 1, 2), and per critical instruction, 'GitHub Copilot' always requires 'AI' also. Assigned 'Coding' because the content focuses on automating coding workflows, pull requests, and code review in GitHub (Coding rule 4, 5). 'DevOps' is included because the process involves workflow automation, version control, and developer productivity tooling with the GitHub CLI (DevOps rule 2, 5, 9). There are no generic exclusion triggers (the content is technical, not biographical, negative, business-focused, etc.), and all Copilot references are to developer tools, not business productivity.",
+    "timestamp": "2025-09-26 12:24:14 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-25-kick-off-and-track-copilot-coding-agent-sessions-from-the-github-cli"
   }
 ]
