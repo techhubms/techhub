@@ -10518,5 +10518,11 @@
     "timestamp": "2025-09-26 23:04:25 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=2a94mcuzGQE",
     "reason": "Succesfully added: Assigned Azure category because the session demonstrates how to use Azure services, specifically mentioning Azure Key Vault (Azure rule 1). Assigned Coding because it discusses Rust development and SDK usage (Coding rules 1, 2, 4, and 5). Assigned Security because securing applications and secrets management with Azure Key Vault are central topics (Security rules 1 and 2). The content is technical, developer-focused, and meets all inclusion criteria with none of the generic exclusion rules applying."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=MB5uMCCGpMY",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the episode centers on new features in GitHub Copilot, including integration of new AI models (GPT-5 Codex, Claude Opus 4.1) and tools like Copilot CLI and Beast Mode. All features are related to developer workflow enhancements through Copilot (AI rule 1, 2, 5; GitHub Copilot rule 1-4). Other categories like Coding or DevOps are not primary since the focus is feature announcements rather than in-depth development tutorials or team workflows.",
+    "collection": "videos",
+    "timestamp": "2025-09-27 00:08:58 +00:00"
   }
 ]
