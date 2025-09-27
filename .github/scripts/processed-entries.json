@@ -10554,5 +10554,11 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/microsoft-entra-suite-the-future-of-identity-and-access-security/",
     "reason": "Succesfully added: Assigned the Security category because the entire article is focused on Microsoft Entra Suite, which is a suite of Microsoft security services for identity, access management, and Zero Trust (Security category rule 1). The content details secure access, Conditional Access policies, governance, risk detection, and policy administration—all fitting core Security rules. Azure is not included as a category because, while Entra is related to Azure, the article specifically and only discusses Entra Suite components and not Azure product usage, architecture, or management. None of the generic exclusion rules apply: the post is technical, implementation-focused, in English, and targeted at practitioners, not at business users or executives."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' category because the entire content is focused on Azure API Management features, deployment options, and architectural considerations (Azure rule 1 and 4). There is no direct coding or DevOps implementation described, so 'Coding' and 'DevOps' were not added. No AI, ML, Security features are central to the content. The post is technical, focused on Azure infrastructure, and does not trigger any generic exclusion rules, as it is not biographical, business-only, sales-focused, negative, job-related, or non-English, and the community content comfortably exceeds the 200-word minimum.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-paas-blog/developer-tier-apim-self-hosted-gateway/ba-p/4457556",
+    "collection": "community",
+    "timestamp": "2025-09-27 17:06:30 +00:00"
   }
 ]
