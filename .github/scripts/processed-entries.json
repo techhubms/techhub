@@ -10548,5 +10548,11 @@
     "reason": "Succesfully added: Assigned 'AI' and 'ML' categories because the content centers on operationalizing AI and machine learning in production environments, highlighting the challenges and best practices relevant to both fields (AI rules 4 & 5; ML rules 2, 4, 5, 6). Assigned 'DevOps' because it discusses themes like CI/CD for ML, model deployment pipelines, observability, and scaling which are core DevOps concerns (DevOps rules 1, 5, 6). No generic exclusion rules applied, as the content is technical, primarily in English, not biographical, and offers actionable insights for practitioners.",
     "canonical_url": "https://devops.com/mlops-at-scale-how-community-is-driving-ai-into-production/",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-27 09:05:10 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/microsoft-entra-suite-the-future-of-identity-and-access-security/",
+    "reason": "Succesfully added: Assigned the Security category because the entire article is focused on Microsoft Entra Suite, which is a suite of Microsoft security services for identity, access management, and Zero Trust (Security category rule 1). The content details secure access, Conditional Access policies, governance, risk detection, and policy administration—all fitting core Security rules. Azure is not included as a category because, while Entra is related to Azure, the article specifically and only discusses Entra Suite components and not Azure product usage, architecture, or management. None of the generic exclusion rules apply: the post is technical, implementation-focused, in English, and targeted at practitioners, not at business users or executives."
   }
 ]
