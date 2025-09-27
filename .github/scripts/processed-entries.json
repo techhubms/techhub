@@ -10524,5 +10524,29 @@
     "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the episode centers on new features in GitHub Copilot, including integration of new AI models (GPT-5 Codex, Claude Opus 4.1) and tools like Copilot CLI and Beast Mode. All features are related to developer workflow enhancements through Copilot (AI rule 1, 2, 5; GitHub Copilot rule 1-4). Other categories like Coding or DevOps are not primary since the focus is feature announcements rather than in-depth development tutorials or team workflows.",
     "collection": "videos",
     "timestamp": "2025-09-27 00:08:58 +00:00"
+  },
+  {
+    "timestamp": "2025-09-27 03:13:13 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because HashiCorp has introduced agentic AI agents to its infrastructure automation platform, and several features (like the Model Context Protocol server and Vault Radar integrations) are purpose-built for AI-driven workflow management (AI inclusion rules 1, 4, 5). Assigned the DevOps category because the entire article focuses on infrastructure as code, workflow automation, secrets management, and multi-framework DevOps pipeline enhancements with explicit mention of Microsoft integration (DevOps rules 1, 5, 6, and 11). Assigned the Security category for features on secrets management (Vault Radar, HCP Vault Dedicated), cryptographic workflow automation, zero-trust controls, and credential injection (Security rules 1, 2, 7, and 9). Azure category is excluded since Microsoft technology is integrated via third-party support but not central enough to meet multi-platform threshold. Content does not cover custom coding or development topics, so Coding and ML categories do not apply.",
+    "canonical_url": "https://devops.com/hashicorp-embraces-agentic-ai-to-streamline-management-of-it/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-27 03:13:37 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category because the article centers on CI/CD process changes, trusted publishing setup, and DevOps practices for software package registries (DevOps inclusion rules 1, 5, 6; extensive discussion of CI/CD and GitHub Actions workflows). Assigned Security category as the main focus is mitigation of supply chain attacks, credential management, and industry-wide secure authentication strategies (Security inclusion rules 1, 5, 6, 7, 8). No Azure, AI, GitHub Copilot, Coding, or ML content is present—no applicable rules for those. Content is not excluded due to any generic exclusion rules, as it is technical, solution-oriented, English, and not biographical or sales-focused.",
+    "canonical_url": "https://devops.com/how-github-plans-to-secure-npm-after-recent-supply-chain-attacks/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-27 03:14:18 +00:00",
+    "reason": "Succesfully added: AI category assigned because the article focuses on Microsoft's AI-powered GitHub Copilot agents used for code modernization (AI rule 1, 2). GitHub Copilot is assigned because the AI agents are a new Copilot feature (GitHub Copilot rule 1 and 2). Azure is included due to substantial discussion of Azure Migrate and Azure Accelerate services (Azure rule 1, 4). DevOps is assigned based on the article's emphasis on enterprise modernization, application migration, and impact on development practices (DevOps rule 3, 5, 6). Coding is included because the core offering modernizes codebases, updates APIs, and refactors legacy .NET and Java projects (Coding rule 1, 2, 4). No generic exclusions apply as the article is technical, not biographical, sufficiently detailed, not a sales pitch, and meets language and format requirements.",
+    "canonical_url": "https://devops.com/microsofts-ai-agents-target-technical-debt-crisis/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-27 03:14:38 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' and 'ML' categories because the content centers on operationalizing AI and machine learning in production environments, highlighting the challenges and best practices relevant to both fields (AI rules 4 & 5; ML rules 2, 4, 5, 6). Assigned 'DevOps' because it discusses themes like CI/CD for ML, model deployment pipelines, observability, and scaling which are core DevOps concerns (DevOps rules 1, 5, 6). No generic exclusion rules applied, as the content is technical, primarily in English, not biographical, and offers actionable insights for practitioners.",
+    "canonical_url": "https://devops.com/mlops-at-scale-how-community-is-driving-ai-into-production/",
+    "collection": "posts"
   }
 ]
