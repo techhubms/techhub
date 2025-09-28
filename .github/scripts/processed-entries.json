@@ -10560,5 +10560,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-paas-blog/developer-tier-apim-self-hosted-gateway/ba-p/4457556",
     "collection": "community",
     "timestamp": "2025-09-27 17:06:30 +00:00"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-09-28 13:10:29 +00:00",
+    "canonical_url": "https://dellenny.com/introducing-knowledge-agent-in-sharepoint-public-preview/",
+    "reason": "Succesfully added: Assigned the AI category because the content is centered on Microsoft's AI-driven Knowledge Agent feature for SharePoint. Although the article mentions Copilot and requires a Microsoft 365 Copilot license, the public preview and management of Knowledge Agent focus on AI functionality, metadata extraction, and content summarization (AI rule 1 and 4). SharePoint development is NOT the main theme here—this is end-user AI content automation, not developer features or coding, so categories like 'Coding' and 'DevOps' don't apply. Microsoft 365 Copilot (business productivity) involvement alone would trigger exclusion per Copilot Product Distinction rules, but here the subject is the AI Knowledge Agent itself as part of broader Copilot and AI features specific to SharePoint's content organization. No other generic exclusion rule is triggered."
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-09-28 13:10:52 +00:00",
+    "canonical_url": "https://devops.com/latest-dora-report-from-google-surfaces-significant-ai-adoption/",
+    "reason": "Succesfully added: Assigned AI category because the article centers on the adoption and productivity impact of AI tools within IT and software teams (AI rules 1, 4, 5). Assigned DevOps category because the DORA report is a DevOps-focused research project, and all analysis is within a software delivery, platform engineering, and process improvement context (DevOps rules 3-5). No Microsoft-specific platform is central to the content, but the multi-platform AI adoption and DevOps context qualifies under general AI and DevOps categories."
   }
 ]

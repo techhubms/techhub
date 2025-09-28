@@ -8451,5 +8451,29 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/unlocking-employee-potential-a-complete-guide-to-microsoft-viva-suite/",
     "reason": "No categories found: All generic exclusion rules were applied first as required. The content is primarily focused on Microsoft Viva, an employee experience platform within Microsoft 365. The article details the features, benefits, and adoption of Microsoft Viva for improving workplace engagement, productivity, learning, and well-being. However, this content is not focused on developer tools, development frameworks, or technical implementation, but rather on organizational and employee experience, business process transformation, and workplace culture. This is confirmed by repeated references to business leaders, HR professionals, workforce collaboration, employee engagement, leadership participation, and the absence of development APIs, technical implementation, or dev-centric scenarios. According to the generic business/productivity exclusion rules in Chapter 3, content about non-development Microsoft products—such as business productivity suites, end-user tools, organizational well-being, or business strategy—must be excluded. Viva is presented not as a tool for developers but as a platform for HR, business leaders, and IT managers to manage engagement and culture. There is no technical, development, or engineering focus present. Therefore, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://dellenny.com/advanced-file-explorer-tips-for-faster-navigation-in-windows-11-2/",
+    "reason": "No categories found: No categories assigned because the content focuses on advanced productivity tips and user-focused features of Windows 11 File Explorer, not technical development, coding, DevOps, Azure, AI, ML, or security topics. It does not involve programming, Microsoft cloud services, developer tools, or IT architecture, but instead provides end-user advice and workflow enhancements for Windows users. According to the exclusion rules (Non-Development Microsoft Products and General Business/Productivity content), such topics are out of scope.",
+    "collection": "posts",
+    "timestamp": "2025-09-28 08:05:56 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/hidden-gestures-for-touchscreen-touchpad-users/",
+    "reason": "No categories found: No categories were assigned because the content focuses entirely on general productivity tips for touchscreen and touchpad devices, covering gesture shortcuts across both Windows and Mac platforms. It does not specifically discuss any Microsoft developer technologies, coding practices, DevOps concepts, Azure, AI, ML, Security, or GitHub Copilot. There is no mention of implementation, development, or architecture details pertaining to Microsoft technologies. According to the core processing and generic exclusion rules, tips for general device usage and user interface navigation do not qualify for inclusion in any of the predefined Microsoft technical categories.",
+    "collection": "posts",
+    "timestamp": "2025-09-28 08:06:08 +00:00"
+  },
+  {
+    "timestamp": "2025-09-28 10:06:30 +00:00",
+    "reason": "No categories found: No categories assigned. The content is a productivity-focused tutorial about using the built-in Voice Typing feature in Windows 11 for general text entry and accessibility. It does not involve software development, coding, Microsoft developer tools, DevOps, AI/ML, Azure, or security practices. There is no discussion of development frameworks, code, or implementation details relevant to the predefined categories. According to the Non-Development Microsoft Products exclusion rule in Chapter 3, content centered on end-user features or business/consumer productivity tools (such as Windows 11 dictation) must be excluded.",
+    "canonical_url": "https://dellenny.com/voice-typing-in-windows-11-dictate-like-a-pro/",
+    "collection": "posts"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-09-28 13:11:12 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/spyiBp9vfbA",
+    "reason": "No categories found: Content excluded due to insufficient information. The content field is null, the description is empty, and the tags are missing. According to the workflow, only the actual provided content, description, title, tags, and author can be used for categorization (Processing Rules). With no substantive information beyond the title and author, it is impossible to determine if any inclusion categories apply or if exclusion rules are triggered. As directed, when in doubt, categories array should remain empty."
   }
 ]
