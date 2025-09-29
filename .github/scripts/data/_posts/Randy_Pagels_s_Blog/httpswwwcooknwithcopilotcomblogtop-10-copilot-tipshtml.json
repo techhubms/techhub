@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Top 10 Copilot Tips\n\n*Posted on Jun 27, 2025*\n\nUsage\n\nCopilot isn’t magic, but it sure feels that way sometimes. Want to get more out of it? Here are the top 10 ways you can use Copilot to write better code, save time, and make your dev life smoother.\n\nProTips\n\n1. **Start with a comment.** Plain English instructions (or any spoken language) help Copilot “think” in your context. Try “// build a function that…” or “# check if file exists…”\n2. **Prompt for style.** Want a function in a specific style? Just say so: “// as a one-liner” or “// use async/await.”\n3. **Cycle through suggestions.** Press `Alt+]`\nor `Alt+[` (or use `Ctrl+]` /`Ctrl+[` on Mac) to see alternate completions.\n4. **Be specific, not just brief.** “// sort list” works, but “// sort users by signup date descending, handle empty case” is better.\n5. **Refactor with Copilot Chat.** Highlight code, ask Copilot Chat for a rewrite, simplification, or new feature—it’ll walk you through options and let you edit or accept its changes.\n6. **Leverage docs and types.** Copilot uses inline documentation and type hints. Keep your docstrings and JSDoc up-to-date for better predictions.\n7. **Quickly write tests.** Comments like “# test for edge cases” or “// create tests for validation” let Copilot suggest realistic, scenario-based tests.\n8. **Use Copilot in PRs and code reviews.** Summarize diffs, explain code, or auto-generate review comments in VS Code and on GitHub.com.\n9. **Don’t accept everything.** Copilot is smart, not infallible. Review and edit before shipping; it can make mistakes or miss context.\n10. **Share your own pro tips!** The more Copilot learns from real-world usage, the better it gets. Contribute feedback and ideas on the GitHub Copilot repo.\n11. **Use context files strategically.** Open related files in VS Code tabs before coding—Copilot reads your workspace context and suggests code that matches your project's patterns, naming conventions, and architecture.",
+  "PubDate": "2025-06-27T00:00:00+00:00",
+  "ProcessedDate": "2025-09-29 10:08:14",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "Description": "Quick wins and power moves that will make you wonder how you ever coded without Copilot.",
+  "Title": "Top 10 Copilot Tips",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "OutputDir": "_posts",
+  "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
+  "Link": "https://www.cooknwithcopilot.com/blog/top-10-copilot-tips.html",
+  "Tags": [],
+  "FeedName": "Randy Pagels's Blog"
+}

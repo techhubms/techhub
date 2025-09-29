@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Modernize Legacy Code with GitHub Copilot\n\n*Posted on Apr 18, 2025*\n\nLegacy code isn’t always broken—but it’s often hard to read, maintain, or extend. Whether you're working with outdated patterns, older libraries, or just messy functions, GitHub Copilot can help you update and simplify your code, one suggestion at a time. Let’s break it down!\n\nProTip\n\nUse Copilot to Suggest Cleaner, More Modern Versions of Outdated Code\n\nCopilot can refactor legacy code into modern standards—whether you’re moving from callbacks to async/await, cleaning up nested logic, or removing unused code.\n\nHere’s how to do it:\n\n1️⃣ Copilot Chat: Ask for Modernization Help\n\n# Update this function to use async/await instead of callbacks\n\n2️⃣ Copilot Edit: Inline Refactor Requests\n\nHighlight a block of legacy code and add a comment like:\n\n# Refactor this to use modern Python practices\n\nThen trigger Copilot Edit to generate an improved version.\n\n3️⃣ Chat Follow-up: Library or API Updates\n\n# Rewrite this to use the latest version of the fetch API and remove deprecated methods\n\nPerfect for keeping your code current with evolving standards.\n\nExtra Prompts to Try:\n\n• # Clean up this loop using modern JavaScript\n\n• # Remove unused variables and simplify logic\n\n• # Rewrite this component using React Hooks\n\n• # Update this SQL query using modern JOIN syntax\n\n**Quick Takeaway**\n\nLegacy code doesn’t need to stay stuck in the past. Let Copilot help you upgrade it without rewriting everything from scratch.",
+  "PubDate": "2025-03-28T00:00:00+00:00",
+  "ProcessedDate": "2025-09-29 10:08:14",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "Description": "Breathe new life into old codebases by gradually updating patterns and practices with Copilot's help.",
+  "Title": "Modernize Legacy Code with GitHub Copilot",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "OutputDir": "_posts",
+  "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
+  "Link": "https://www.cooknwithcopilot.com/blog/modernize-legacy-code-with-github-copilot.html",
+  "Tags": [],
+  "FeedName": "Randy Pagels's Blog"
+}

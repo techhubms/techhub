@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Start New Files Faster with GitHub Copilot\n\n*Posted on May 16, 2025*\n\nStarting a new file from scratch can feel like a chore—but it doesn’t have to be. Whether it’s a Python script, a React component, or a configuration file, GitHub Copilot can help you generate the foundation instantly. No boilerplate hunting, no tab-hopping. Just start typing, and let Copilot do the rest. Let’s break it down!\n\nProTip\n\nLet Copilot Generate the Starting Template\n\nInstead of manually setting up new files with import statements, class declarations, or HTML structure, Copilot can build out the basic structure for you.\n\nHere’s how to do it:\n\n1️⃣ Create a new file in your project (e.g., index.html, app.py, or component.jsx).\n\n2️⃣ Start with a natural language comment at the top, like:\n\n# Create a Flask API with one GET route\n\nor\n\n// Create a basic React component that displays a user profile\n\n3️⃣ Press Tab or open Copilot Chat (Ctrl + I) to accept or refine the suggestion.\n\n4️⃣ Review the generated code and tweak as needed—your foundation is ready.\n\nCommon File Types Copilot Can Start for You:\n\n• Python scripts\n\n• HTML boilerplates\n\n• React components\n\n• CSS files\n\n• YAML config files\n\n• Dockerfiles\n\n• GitHub Actions workflows\n\n**Quick Takeaway**\n\nNext time you're staring at an empty file, let GitHub Copilot do the heavy lifting. Starting with a smart foundation helps you move quicker and stay focused on what matters most—writing great code.",
+  "PubDate": "2025-04-25T00:00:00+00:00",
+  "ProcessedDate": "2025-09-29 10:08:14",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "Description": "Beat the blank file syndrome with techniques to kickstart any new code file or project.",
+  "Title": "Start New Files Faster with GitHub Copilot",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "OutputDir": "_posts",
+  "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
+  "Link": "https://www.cooknwithcopilot.com/blog/start-new-files-faster-with-github-copilot.html",
+  "Tags": [],
+  "FeedName": "Randy Pagels's Blog"
+}

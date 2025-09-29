@@ -1,81 +1,61 @@
 ---
 layout: "post"
 title: "Write Better Commit Messages with GitHub Copilot"
-description: "This post by Randy Pagels explores how GitHub Copilot can assist developers in crafting clear, meaningful commit messages directly from code changes. It covers practical steps for using Copilot within VS Code and Copilot Chat, and provides extra prompt ideas for optimizing commit narratives."
+description: "This guide explains how developers can leverage GitHub Copilot to craft clear and professional commit messages efficiently. It covers practical Copilot prompts both in chat and directly within coding environments, offers actionable tips, and highlights ways to improve teamwork and project history with better commits."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://cooknwithcopilot.com/blog/write-better-commit-messages-with-github-copilot.html"
+canonical_url: "https://www.cooknwithcopilot.com/blog/write-better-commit-messages-with-github-copilot.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://cooknwithcopilot.com/rss.xml"
+feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-05-16 00:00:00 +00:00
 permalink: "/2025-05-16-Write-Better-Commit-Messages-with-GitHub-Copilot.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Best Practices", "Code History", "Code Reviews", "Commit Messages", "Conventional Commits", "Copilot Chat", "Developer Productivity", "DevOps", "GitHub Copilot", "Posts", "Pull Requests", "VS Code"]
-tags_normalized: ["ai", "best practices", "code history", "code reviews", "commit messages", "conventional commits", "copilot chat", "developer productivity", "devops", "github copilot", "posts", "pull requests", "vs code"]
+categories: ["AI", "Coding", "GitHub Copilot"]
+tags: ["AI", "AI Tools", "Best Practices", "Code Change Summaries", "Coding", "Commit Messages", "Conventional Commits", "Copilot Chat", "Developer Workflow", "GitHub Copilot", "Posts", "PR Descriptions", "Tab Completion", "VS Code"]
+tags_normalized: ["ai", "ai tools", "best practices", "code change summaries", "coding", "commit messages", "conventional commits", "copilot chat", "developer workflow", "github copilot", "posts", "pr descriptions", "tab completion", "vs code"]
 ---
 
-Randy Pagels shares practical guidance for using GitHub Copilot to generate clear, concise commit messages, highlighting actionable steps and prompt ideas for developers looking to streamline their Git version control workflows.<!--excerpt_end-->
+Randy Pagels outlines practical strategies for using GitHub Copilot to write effective commit messages, focusing on tips developers can immediately apply to improve code documentation and collaboration.<!--excerpt_end-->
 
-## Write Better Commit Messages with GitHub Copilot
+# Write Better Commit Messages with GitHub Copilot
 
-**Posted on Apr 11, 2025 by Randy Pagels**
+A good commit message helps convey the intent of your code changes, and with GitHub Copilot, this task becomes even easier. This guide breaks down how to use Copilot to write clear, concise commit messages, saving you time and helping your team.
 
-A well-written commit message tells the story behind your code change—without requiring a lengthy writing process. Whether you’re addressing a minor bug or implementing a major feature, GitHub Copilot can help you quickly generate clear, professional commit messages.
+## Let Copilot Suggest Commit Messages Based on Code Changes
 
-### Why Good Commit Messages Matter
+Rather than spending extra time composing commit logs, let Copilot review your diffs and generate summaries tailored to your workflow. Copilot supports different styles, like conventional commits or concise past-tense notes.
 
-- **Storytelling:** A strong commit message provides context to teammates and your future self, clarifying why the change was made.
-- **Efficiency:** Automating message suggestions saves time and reduces cognitive load, making version control smoother.
+### Practical Ways to Use Copilot for Commits
 
-### Let GitHub Copilot Suggest Commit Messages
+**1. In Copilot Chat:**
 
-GitHub Copilot can analyze the diff of your staged changes and suggest meaningful, context-aware commit messages. These suggestions can fit your team's preferred style, such as conventional commits, concise summaries, or past-tense descriptions.
+- Ask Copilot directly: `# Suggest a commit message based on my staged changes`
+- Copilot will read the context and provide a professional summary.
 
-#### Ways to Use GitHub Copilot for Commit Messages
+**2. In the Commit Message Field (VS Code):**
 
-#### 1️⃣ In Copilot Chat: Ask for a Commit Message
+- Type a prompt, e.g.:
+  `// Suggest a concise commit message for the updated login form validation`
+- Trigger Copilot's suggestion (often with the Tab key) to autocomplete your message.
 
-Use natural language instructions in Copilot Chat, such as:
+**3. For Pull Request (PR) Titles and Descriptions:**
 
-```
-# Suggest a commit message based on my staged changes
-```
+- Use prompts like:
+  `# Summarize this pull request in a clear, professional message`
+- Copilot can help create summaries that reflect the changes accurately.
 
-Copilot Chat will review your diffs and generate a relevant message summarizing your work.
-
-#### 2️⃣ In the Commit Message Field (Visual Studio Code)
-
-When you’re in the commit message field, type a comment that describes what you’ve changed:
-
-```js
-// Suggest a concise commit message for the updated login form validation
-```
-
-Trigger Copilot’s suggestion (by pressing `Tab` or using the Copilot action), and Copilot will autocomplete a commit message.
-
-#### 3️⃣ For Pull Request Titles or Descriptions
-
-Use Copilot to summarize PRs with a clear, professional overview of what’s changed, for example:
-
-```
-# Summarize this pull request in a clear, professional message
-```
-
-This ensures your PR descriptions match the content and improve team communication.
-
-### Extra Prompt Ideas
+### Extra Prompts to Try
 
 - `# Write a commit message using the Conventional Commits format`
 - `# Generate a descriptive commit message for a refactor`
 - `# Create a commit message that mentions the related issue #245`
 
-### Quick Takeaway
+## Quick Takeaway
 
-Good commit messages improve code history and team collaboration. GitHub Copilot makes it easy by turning your changes into clear, useful messages—helping you focus on coding while keeping your version control organized.
+Well-written commits benefit everyone involved in a project. GitHub Copilot helps you keep your commit history clean and your documentation useful, allowing you to focus more on coding.
 
 ---
 
-*For additional support and tutorials, consult GitHub Copilot documentation or experiment with your own custom prompts to further tailor Copilot’s output to your workflow.*
+*Author: Randy Pagels*
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/write-better-commit-messages-with-github-copilot.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://www.cooknwithcopilot.com/blog/write-better-commit-messages-with-github-copilot.html)

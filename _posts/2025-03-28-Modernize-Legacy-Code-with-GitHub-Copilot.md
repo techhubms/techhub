@@ -1,95 +1,79 @@
 ---
 layout: "post"
 title: "Modernize Legacy Code with GitHub Copilot"
-description: "Explore how GitHub Copilot can support modernization of legacy codebases by suggesting cleaner, updated patterns and practices. Learn actionable tips on using Copilot to refactor functions, update libraries or APIs, and keep code compliant with modern development standards."
+description: "This guide demonstrates practical approaches to modernizing legacy codebases using GitHub Copilot. It covers how Copilot can refactor outdated code into current standards, make use of features like Copilot Chat and Copilot Edit, and provides specific prompts for updating languages and frameworks. Consultants and developers will discover step-by-step recommendations to incrementally clean up, update, and maintain older code by leveraging AI-powered tooling."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://cooknwithcopilot.com/blog/modernize-legacy-code-with-github-copilot.html"
+canonical_url: "https://www.cooknwithcopilot.com/blog/modernize-legacy-code-with-github-copilot.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://cooknwithcopilot.com/rss.xml"
+feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-03-28 00:00:00 +00:00
 permalink: "/2025-03-28-Modernize-Legacy-Code-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "API Modernization", "Async/await", "Code Modernization", "Coding", "Copilot Chat", "Copilot Edit", "GitHub Copilot", "JavaScript", "Legacy Code", "Library Updates", "Posts", "Python", "React Hooks", "Refactoring", "SQL"]
-tags_normalized: ["ai", "api modernization", "asyncslashawait", "code modernization", "coding", "copilot chat", "copilot edit", "github copilot", "javascript", "legacy code", "library updates", "posts", "python", "react hooks", "refactoring", "sql"]
+tags: ["AI", "API Updates", "Async/await", "Code Cleanup", "Code Modernization", "Coding", "Copilot Chat", "Copilot Edit", "GitHub Copilot", "JavaScript", "Legacy Code", "Posts", "Python", "React Hooks", "Refactoring", "Software Maintenance", "SQL"]
+tags_normalized: ["ai", "api updates", "asyncslashawait", "code cleanup", "code modernization", "coding", "copilot chat", "copilot edit", "github copilot", "javascript", "legacy code", "posts", "python", "react hooks", "refactoring", "software maintenance", "sql"]
 ---
 
-Randy Pagels discusses practical strategies for using GitHub Copilot to modernize legacy codebases. This guide covers refactoring, updating libraries, and specific Copilot prompts to keep code updated.<!--excerpt_end-->
+Randy Pagels explains how to leverage GitHub Copilot to update and refactor legacy codebases, offering actionable prompts and stepwise workflows for modernizing outdated software.<!--excerpt_end-->
 
 # Modernize Legacy Code with GitHub Copilot
 
-**Author:** Randy Pagels
-
-**Posted on Apr 18, 2025**
-
-Legacy code isn’t always broken—but it’s often hard to read, maintain, or extend. This guide explores how GitHub Copilot can assist you in bringing legacy codebases up to modern standards, making them more maintainable and efficient without requiring a complete rewrite.
-
----
+Legacy code often creates maintenance and readability challenges, even when it's not fundamentally broken. In this article, Randy Pagels outlines practical ways for developers and consultants to harness GitHub Copilot for refactoring and gradually upgrading older code.
 
 ## Why Modernize Legacy Code?
 
-Legacy code often uses outdated patterns (e.g., callbacks, deprecated APIs, or inefficient loops) that can slow development and introduce maintenance challenges. Gradually updating these practices helps ensure:
-
-- Better readability and maintainability
-- Compatibility with new libraries and frameworks
-- Improved performance and security
-
----
+- Improve readability and maintainability
+- Update to follow current standards and best practices
+- Reduce technical debt by removing unused or outdated constructs
 
 ## How GitHub Copilot Can Help
 
-GitHub Copilot offers AI-assisted suggestions to bring your code up to date. Here are practical ways you can use Copilot to modernize legacy codebases:
+GitHub Copilot serves as an AI-powered partner, suggesting modern solutions and helping eliminate legacy patterns:
 
-### 1. Copilot Chat: Ask for Modernization Help
+### 1. Copilot Chat: Modernization Requests
 
-Interact with Copilot Chat directly in your editor to request updates on specific code patterns. For example:
+Use Copilot Chat to ask targeted upgrade questions, such as:
 
 ```python
 # Update this function to use async/await instead of callbacks
 ```
 
-This prompt helps refactor synchronous or callback-based code to modern patterns like async/await.
+Copilot will suggest a replacement using the more modern async/await approach, making your code easier to understand and maintain.
 
-### 2. Copilot Edit: Inline Refactor Requests
+### 2. Copilot Edit: Inline Refactoring
 
-Select portions of your code and leave an inline comment. Copilot Edit will then suggest a more up-to-date version. Example:
+Highlight blocks of legacy code and use descriptive comments to prompt Copilot Edit:
 
 ```python
 # Refactor this to use modern Python practices
 ```
 
-This feature is useful for cleaning up nested logic, removing deprecated methods, and applying general best practices.
+Copilot will suggest edits that streamline and modernize your code within the editor.
 
-### 3. Chat Follow-up: Library or API Updates
+### 3. Updating Libraries and APIs
 
-Legacy code often relies on outdated libraries or deprecated API methods. You can prompt Copilot to migrate to newer APIs:
+Keep your code current by requesting that Copilot update outdated APIs or deprecated methods:
 
 ```javascript
 # Rewrite this to use the latest version of the fetch API and remove deprecated methods
 ```
 
-Copilot evaluates the code and provides suggestions using up-to-date standards and libraries.
+This is especially useful when libraries evolve and old patterns become obsolete.
 
----
-
-## Extra Prompts to Try
+## Additional Prompt Ideas
 
 - `# Clean up this loop using modern JavaScript`
 - `# Remove unused variables and simplify logic`
 - `# Rewrite this component using React Hooks`
 - `# Update this SQL query using modern JOIN syntax`
 
-These prompts encourage Copilot to apply optimizations and best practices within a variety of languages and frameworks.
+## Key Takeaways
 
----
+- GitHub Copilot can streamline the process of bringing legacy code up to modern standards.
+- Use chat and inline prompts to refactor, simplify, and update code incrementally.
+- This approach enables technical teams to modernize without complete rewrites, saving time and reducing risk.
 
-## Quick Takeaway
+Upgrade your projects one suggestion at a time and let GitHub Copilot be your guide to cleaner, more future-proof code.
 
-Modernizing legacy code is achievable through incremental improvements. GitHub Copilot can help you clean up, refactor, and modernize your codebase step by step—making your software more robust without needing a total rewrite.
-
----
-
-**Original author:** Randy Pagels at Xebia
-
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/modernize-legacy-code-with-github-copilot.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://www.cooknwithcopilot.com/blog/modernize-legacy-code-with-github-copilot.html)

@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Quick Chat is your instant AI sidekick.\n\n*Posted on May 30, 2025*\n\nNeed help on the spot without breaking your flow? Enter GitHub Copilot Quick Chat—a fast, lightweight way to get inline suggestions, explanations, and answers right where you’re coding. Whether it’s a code snippet, an error, or a tricky block of logic, Quick Chat is your instant AI sidekick. Let’s break it down!\n\nProTip\n\nUse GitHub Copilot Quick Chat for Fast, Focused Help\n\nNo need to open a full chat panel—just launch Quick Chat for instant guidance.\n\nHere’s how to use it:\n\n1️⃣ Place your cursor on the line of code you need help with.\n\n2️⃣ Press Ctrl + Shift + Alt + L (Windows/Linux/Mac).\n\n3️⃣ A lightweight inline chat box will appear.\n\n4️⃣ Ask something like:\n\nWhat does this function do?\n\n5️⃣ Hit Enter and Copilot will respond right there—no switching windows.\n\nExamples of what you can ask:\n\n• “Explain this function”\n\n• “Optimize this code”\n\n• “Add logging to this block”\n\n• “Write a unit test for this”\n\nHow is Quick Chat Different from Inline Chat?\n\n**Quick Takeaway**\n\nGitHub Copilot Quick Chat is your just-in-time AI assistant—perfect for fast questions, quick edits, and instant insights. It’s like having a co-pilot whispering help into your ear—without missing a beat in your workflow.",
+  "PubDate": "2025-05-09T00:00:00+00:00",
+  "ProcessedDate": "2025-09-29 10:08:14",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "Description": "Master the art of Quick Chat for instant answers without leaving your coding flow.",
+  "Title": "Quick Chat is your instant AI sidekick",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "OutputDir": "_posts",
+  "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
+  "Link": "https://www.cooknwithcopilot.com/blog/quick-chat-is-your-instant-ai-sidekick.html",
+  "Tags": [],
+  "FeedName": "Randy Pagels's Blog"
+}

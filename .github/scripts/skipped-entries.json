@@ -8493,5 +8493,17 @@
     "collection": "posts",
     "reason": "No categories found: All categories have been excluded due to generic exclusion rules. The content is primarily end-user focused and centers on the process of transferring files, apps, and settings during a Windows 11 upgrade using OneDrive, external drives, or third-party tools. It does not provide technical, development, or engineering guidance relevant to Microsoft consultants or developers. The article addresses end-user workflows, not developer tools, programming, DevOps, security, AI, ML, or Azure technologies. Therefore, per the Non-Development Microsoft Products and Business/Productivity Tools exclusion rules in Chapter 3, no categories are assigned.",
     "timestamp": "2025-09-29 08:05:49 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/the-small-business-owners-guide-to-using-ai-5-immediate-wins-with-microsoft-365/",
+    "reason": "No categories found: No categories assigned because this content is primarily about business productivity features of Microsoft 365 (Word, Excel, Outlook, PowerPoint, Teams) and Copilot for Microsoft 365. According to Generic Exclusion Rules in Chapter 3, business productivity Copilots (Microsoft 365 Copilot, Copilot for Microsoft 365, Office Copilot) and non-development Microsoft 365 features are explicitly excluded. The article focuses on end-user business value (writing, admin, productivity, security basics for small business owners), not technical/developer implementation or development-focused aspects. Therefore, all categories are excluded.",
+    "collection": "posts",
+    "timestamp": "2025-09-29 09:04:39 +00:00"
+  },
+  {
+    "canonical_url": "https://devops.com/five-great-devops-job-opportunities-158/",
+    "reason": "No categories found: Content excluded due to the 'Generic Exclusion Rules' in Chapter 3: the primary focus is job opportunities and career advancement in DevOps, which falls under 'Job-Related Content' (specifically: job opportunities, hiring announcements, and career advancement topics). There is no substantive technical implementation, architecture, programming, or Microsoft technology focus. The content is a curated job board/report for DevOps professionals, so all categories are left empty as per exclusion rules.",
+    "timestamp": "2025-09-29 10:10:07 +00:00",
+    "collection": "posts"
   }
 ]

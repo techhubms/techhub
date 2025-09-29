@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Find and Fix Typos Faster with GitHub Copilot\n\n*Posted on Aug 8, 2025*\n\nUsage\n\nTypos can be sneaky. A missing letter in a variable name, a wrong parameter in a function call, or a simple misspelling in a comment can cause real headaches.\n\nGitHub Copilot can help you spot and correct these errors before they cause bigger problems.\n\nProTip\n\n**Use GitHub Copilot Chat or Edit mode to review your code for spelling and naming errors.**\n\nYou can even ask it to standardize naming conventions across a file.\n\n**Try These Approaches**\n\n**1️⃣ GitHub Copilot Ask: Quick Proofread**\n\n`Review this file for typos in variable names, function names, and comments. Suggest corrections.`\n\nGreat for catching subtle naming mistakes that might break functionality.\n\n**2️⃣ Edit Mode: Spot and Fix**\n\nHighlight a section and type:\n\n`Check for typos in code and comments. Fix them.`\n\nCopilot will make corrections in place, keeping the rest of your code intact.\n\n**3️⃣ Agent Mode: Naming Consistency**\n\n`Review this repository for inconsistent naming. Suggest a consistent style for variables and functions.`\n\nPerfect for large projects where typos often slip into similar-sounding identifiers.\n\n**Takeaway:** A quick review with Copilot can save you hours of debugging caused by a single misplaced letter.\n\nKeep it part of your routine before you commit.",
+  "PubDate": "2025-08-08T00:00:00+00:00",
+  "ProcessedDate": "2025-09-29 10:08:14",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "Description": "Typos can be sneaky. A missing letter in a variable name, can cause real headaches.",
+  "Title": "Find and Fix Typos Faster with GitHub Copilot",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "OutputDir": "_posts",
+  "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
+  "Link": "https://www.cooknwithcopilot.com/blog/find-and-fix-typos-faster-with-github-copilot.html",
+  "Tags": [],
+  "FeedName": "Randy Pagels's Blog"
+}

@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Craft Prompts That Get Better Results\n\n*Posted on May 23, 2025*\n\nSometimes, a short prompt works just fine—but when Copilot’s suggestions miss the mark, it’s time to sharpen your prompt game. The key? Be specific, add context, and guide it like you would a junior dev. Let’s break it down!\n\nProTip\n\nUse Structured Prompts to Guide Copilot to the Right Solution\n\nLarge language models respond better when you spell out what you want with more clarity. You don’t need fancy language—just think step-by-step, and stay focused.\n\nHere’s a simple formula to use:\n\n[Goal] + [Tech/Context] + [Constraints or Style]\n\nExamples of Clear, Effective Prompts:\n\n1️⃣ Task + Context:\n\n# Write a Python function that parses a CSV and returns rows where age &gt; 30\n\nSimple, direct, and goal-focused.\n\n2️⃣ Structure it step-by-step:\n\n# Step-by-step:\n\n# 1. Read a CSV file\n\n# 2. Filter rows by a column value\n\n# 3. Return filtered list\n\nThis often results in cleaner, better-organized code.\n\n3️⃣ Style or Approach Guidance:\n\n// Write a TypeScript function that uses map/filter instead of a for loop\n\nPerfect for shaping the style of Copilot’s output.\n\n4️⃣ Use a Persona-Based Prompt\n\n// Act like a senior front-end engineer writing a reusable button component in React with TypeScript and Tailwind\n\nGiving Copilot a role helps it follow conventions and patterns a real expert might use.\n\n5️⃣ Use a Context-Framing Prompt\n\n# This YAML defines a GitHub Actions workflow that runs tests on every push to the main branch using Node.js 18\n\nGiving Copilot a quick summary of what the file is for helps generate accurate boilerplate that fits your workflow.\n\nPrompt Debugging Tip:\n\nIf the output isn’t quite right, reword your comment with more details or add one step at a time. Think of it like teaching a new teammate—specific instructions lead to better results.\n\n**Quick Takeaway**\n\nWhen Copilot feels off, it’s not stuck—it just needs a better prompt. Add structure, be specific, and watch the quality improve.",
+  "PubDate": "2025-05-02T00:00:00+00:00",
+  "ProcessedDate": "2025-09-29 10:08:14",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "Description": "Learn the secret sauce of writing prompts that get Copilot to deliver exactly what you need.",
+  "Title": "Craft Prompts That Get Better Results",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "OutputDir": "_posts",
+  "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
+  "Link": "https://www.cooknwithcopilot.com/blog/craft-prompts-that-get-better-results.html",
+  "Tags": [],
+  "FeedName": "Randy Pagels's Blog"
+}

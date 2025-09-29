@@ -10578,5 +10578,179 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned 'AI' category because the discussion centers around AI standards and model context interoperability involving GitHub Copilot and VS Code (AI rule 1, 3, 4). Assigned 'GitHub Copilot' category since the registry directly supports GitHub Copilot and the conversation and hashtags mention it (GitHub Copilot rules 1, 2, 3). Did not assign other categories because while development and tooling are mentioned, the core focus is the AI registry standard, rather than direct code or DevOps practices.",
     "timestamp": "2025-09-29 08:06:18 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-azure-ai-is-revolutionizing-supply-chain-forecasting-and-inventory/",
+    "reason": "Succesfully added: Assigned the AI category because the article is centrally about Azure AI features applied to supply chain and inventory management, including Azure Cognitive Services and Azure Machine Learning (AI rule 1, 4, and 5). Assigned Azure category as all solutions are built with Azure cloud services (Azure rule 1, 2, 3, 4, 5, 6). Assigned ML category because the article covers custom forecasting models using techniques like time-series analysis, deep learning, and AutoML (ML rules 1, 2, 4, and 6). Coding and Security categories do not apply, because no programming or security implementation is described. The article is clearly technical, and there are no generic exclusion rule triggers—it's not business strategy, sales, biographical, or non-English content.",
+    "timestamp": "2025-09-29 10:09:20 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://devops.com/dora-2025-faster-but-are-we-any-better/",
+    "reason": "Succesfully added: Included the AI category because the article centers on how AI is adopted and impacts software development teams per the 2025 DORA Report (see references throughout, e.g., 'AI-assisted Software Development', trust in AI-generated code, and AI’s effect on productivity and performance). Included the DevOps category because the content’s context, metrics, and recommendations are anchored in DevOps practices, platform engineering, and value stream management (core DevOps concepts, see repeated usage of 'DevOps', 'platforms', 'CI/CD', and 'DORA metrics'). No Azure, Coding, Security, ML, or GitHub Copilot categories are assigned as there is no substantive technical, product, or platform-specific content about those Microsoft technologies or detailed coding/AI-ML implementation.",
+    "timestamp": "2025-09-29 10:09:54 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/ask-better-questions-get-better-code.html",
+    "reason": "Succesfully added: Assigned the GitHub Copilot category because the article focuses directly on improving interactions with GitHub Copilot and using Copilot Chat (GitHub Copilot category rule 1 and rule 2). AI is included because Copilot is an AI-powered code assistant per the AI category rule 2. Coding is included because the guidance improves how developers request code and comments from Copilot, impacting coding practices (Coding rule 4). No exclusions apply, as the content is technical, developer-focused, and not business productivity or end-user oriented.",
+    "timestamp": "2025-09-29 10:10:27 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/automate-repetitive-code-with-github-copilot.html",
+    "reason": "Succesfully added: Assigned categories 'AI' and 'GitHub Copilot' based on the focus on Copilot's AI-assisted code generation (AI rules 1 and 2, GitHub Copilot category rule 1). 'Coding' is included because the article demonstrates hands-on code automation techniques across multiple programming languages (Coding rules 1, 4, and 5). Content is technical, centered on developer tooling, and avoids any exclusion rules.",
+    "timestamp": "2025-09-29 10:10:48 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/avoid-these-common-prompts.html",
+    "reason": "Succesfully added: Content centers on best practices for using GitHub Copilot, focusing on how specificity and context improve AI-generated coding assistance. Qualifies for 'AI' (AI rule 2: GitHub Copilot content) and 'GitHub Copilot' (GitHub Copilot inclusion rules 1–4), as the entire article is about developer-focused Copilot prompt engineering. No other categories apply, as it does not cover programming language usage, DevOps, ML, Azure, or Security beyond Copilot prompt construction. No generic exclusion rules apply.",
+    "timestamp": "2025-09-29 10:11:10 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html",
+    "reason": "Succesfully added: Assigned the AI category because the content discusses AI-powered coding tools (AI rule 1 and 4) and compares their use in development workflows. Assigned the GitHub Copilot category because it specifically addresses GitHub Copilot's features, usage, and integration (GitHub Copilot rules 1, 2, and 4). Didn't assign Coding, as the focus is on tool comparison and workflow, not technical programming implementation. DevOps, Azure, ML, and Security don't apply as the content is not centered on those topics.",
+    "timestamp": "2025-09-29 10:11:32 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/craft-prompts-that-get-better-results.html",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the entire post focuses on maximizing the effectiveness of GitHub Copilot (see AI rule 2 and GitHub Copilot rules 1–4). It provides prompt engineering strategies directly for Copilot, not general business productivity tools, and the advice is aimed at developers, not end-users. No exclusion rules apply as there is clearly substantive, technical, developer-facing content.",
+    "timestamp": "2025-09-29 10:11:59 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/debug-faster-with-github-copilot.html",
+    "reason": "Succesfully added: Assigned 'AI' because GitHub Copilot is a Microsoft AI tool (AI rule 2). Assigned 'GitHub Copilot' because the entire post is about using GitHub Copilot for debugging (GitHub Copilot category rules 1–4). Assigned 'Coding' because it provides hands-on coding prompts, covers multiple languages, and addresses developer workflows (Coding rules 1, 4, and 5). No exclusion rules apply, and the content is highly relevant to Microsoft developer tooling.",
+    "timestamp": "2025-09-29 10:12:19 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html",
+    "reason": "Succesfully added: Assigned 'AI' category because the article focuses on GitHub Copilot's AI-based features for code generation and explanation (AI rule 2 and 5). 'GitHub Copilot' was included due to explicit and central coverage of Copilot tool usage (GitHub Copilot rules 1 and 2). 'Coding' is included because the content centers on programming practices, specifically writing regex (Coding rule 4). Azure, DevOps, ML, and Security are not relevant as the focus does not involve those platforms or contexts.",
+    "timestamp": "2025-09-29 10:12:40 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/find-and-fix-typos-faster-with-github-copilot.html",
+    "reason": "Succesfully added: Assigned 'AI' category because the article is dedicated to using GitHub Copilot, an AI-powered developer assistant (AI rule 2). Added 'GitHub Copilot' because the entire content focuses specifically on Copilot's features (GitHub Copilot category rules 1 and 2). Included 'Coding' as the post deals directly with practices for writing and reviewing code, including variable naming, typos, and code quality (Coding rule 4).",
+    "timestamp": "2025-09-29 10:12:59 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/guide-your-ai-with-copilot-instructions-md.html",
+    "reason": "Succesfully added: Assigned the 'GitHub Copilot' category because the post focuses on configuring GitHub Copilot with copilot-instructions.md, per the GitHub Copilot inclusion rules (rules 1 and 2). 'AI' is included because the content discusses how an AI-powered tool follows development guidance (AI rule 2). 'Coding' is included as the main theme is enforcing code style and best practices, including naming, docs, and security patterns (Coding rules 3 and 4). No other categories apply as it does not cover Azure, DevOps, ML, or Security implementation as a primary focus.",
+    "timestamp": "2025-09-29 10:13:24 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/let-copilot-help-you-name-things.html",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the content centers on using GitHub Copilot's AI-powered features for code naming (AI rule 1 and GitHub Copilot rule 1). Added Coding because it directly addresses code review, naming, and refactoring best practices with Microsoft tooling (Coding rules 2 and 4). No exclusion rules apply, as the post is technical, focused on developer productivity, and provides actionable instructions for Copilot use in code.",
+    "timestamp": "2025-09-29 10:13:43 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/modernize-legacy-code-with-github-copilot.html",
+    "reason": "Succesfully added: Included 'GitHub Copilot' and 'AI' categories because the content's core focus is on practical usage of GitHub Copilot (developer tool) for code modernization, matching AI inclusion rule 2. Also included 'Coding' since the article directly involves programming, code refactoring, language features (async/await, modern practices), and incremental software improvement (Coding inclusion rules 1–4). No Azure, ML, DevOps, or Security topics are addressed. The original content is instructional, developer-focused, and meets all quality standards required by the workflow.",
+    "timestamp": "2025-09-29 10:14:06 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/multi-file-edits-made-simple.html",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the article is specifically about a new feature in GitHub Copilot, which per Chapter 4 always triggers both 'GitHub Copilot' and 'AI' categories (AI rules 2, 6 and GitHub Copilot rule 1). Assigned Coding because the content focuses on software refactoring, code modernization, and development workflow for developers (Coding rules 2, 4, and 5). Content is technical, developer-focused, and does not fall under any generic exclusion rule.",
+    "timestamp": "2025-09-29 10:14:29 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/picking-the-right-ai-model-for-your-task.html",
+    "reason": "Succesfully added: Assigned the AI category because the content is centered on the usage and selection of AI models within GitHub Copilot, a Microsoft-owned developer AI tool (AI inclusion rule 2 and 1). GitHub Copilot category is included because the post's focus is entirely on GitHub Copilot features, AI model selection, and developer best practices (GitHub Copilot inclusion rules 1-4). Content does not qualify for Coding because it does not detail programming concepts, languages, or framework usage. Other categories do not apply since there is no discussion of Azure, DevOps processes, security, or direct machine learning implementation. All exclusion rules have been checked; none apply as content is technical, developer-focused, and English language.",
+    "timestamp": "2025-09-29 10:14:48 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/promptception-improve-prompts-with-copilot.html",
+    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories because the article revolves around the use of GitHub Copilot (an AI-powered developer tool) to engineer and optimize prompts for its own modes (Chat, Edit, Agent). 'Coding' is also appropriate, as the article includes practical prompt examples for code generation, testing, reviewing, and automation tasks—all core programming workflow activities. The tags were chosen based on the focus on Copilot features, prompt engineering, developer tools, and related practices discussed in the content. No exclusion rules apply; the content is technical, developer-focused, and centrally about Microsoft technologies.",
+    "timestamp": "2025-09-29 10:15:12 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/quick-chat-is-your-instant-ai-sidekick.html",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content is about the GitHub Copilot Quick Chat feature, which is an AI-powered development assistant (AI rules 1, 2, and 6; GitHub Copilot rules 1 and 2). Added 'Coding' because use cases focus on code explanations, optimization, and writing unit tests (Coding rules 4 and 5). The content is not business productivity-oriented and does not fall under any generic exclusion rules.",
+    "timestamp": "2025-09-29 10:15:33 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/refactor-messy-code-in-seconds-with-github-copilot.html",
+    "reason": "Succesfully added: Assigned the 'GitHub Copilot' category because the post directly explains how to use GitHub Copilot features for code refactoring (GitHub Copilot Inclusion Rule 1). Added 'AI' because Copilot is an AI-powered tool and all Copilot content must also be tagged 'AI' (CRITICAL rule for Copilot). 'Coding' is included because the content is focused on code improvement with live code examples and best practices using development tools (Coding Inclusion Rules 1, 4, and 5). No other categories are relevant as there is no mention of DevOps practices, Azure services, ML/data science, or security topics.",
+    "timestamp": "2025-09-29 10:15:52 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/speed-up-api-integration.html",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content focuses entirely on using GitHub Copilot—a developer AI tool—for code generation support (GitHub Copilot and AI rules 1-2). Assigned 'Coding' because the tutorial demonstrates JavaScript API integration and improving code, which falls under programming with Microsoft-related tools (Coding rule 4). No other categories apply: Azure, ML, Security, and DevOps are not mentioned or implied.",
+    "timestamp": "2025-09-29 10:16:10 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/start-new-files-faster-with-github-copilot.html",
+    "reason": "Succesfully added: The content is a technical guide focused on using GitHub Copilot to generate new code file templates for a variety of development environments. The GitHub Copilot category is assigned because the content is specifically about its use as a developer assistant, meeting the explicit inclusion criteria (GitHub Copilot rule 1). The AI category is included per workflow requirements when GitHub Copilot is involved. Coding is assigned because the primary topic is coding workflow improvement with practical coding examples and file types (Coding rules 1 and 4). Content is not excluded by any generic exclusion rule: it is technical, relevant, and developer-focused.",
+    "timestamp": "2025-09-29 10:16:31 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/top-10-copilot-tips.html",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content is entirely focused on using GitHub Copilot, which is a developer-focused AI coding tool (AI rule 2, GitHub Copilot rules 1-4). 'Coding' category is included due to code examples, tips for integrating Copilot in developer workflows, and discussion of programming practices (Coding rule 4). No other categories apply, as there is no Azure, ML, DevOps, or Security focus. The content is technical, practical, non-promotional, and targeted at developers, meeting quality standards and passing all exclusion rules.",
+    "timestamp": "2025-09-29 10:16:52 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/use-copilot-in-vs-code-to-summarize-prs.html",
+    "reason": "Succesfully added: Categories 'AI', 'GitHub Copilot', and 'Coding' were assigned. The article is centered on GitHub Copilot (a developer tool—see GitHub Copilot inclusion rule 1) and its use within Visual Studio Code to automate PR documentation (Coding rule 5). The content explicitly demonstrates Copilot Chat features for code review efficiency, involving AI-based assistance (AI rule 2). The title, description, and step-by-step guide are all tool-focused and technical, satisfying inclusion criteria for each assigned category. No generic exclusion rules were triggered.",
+    "timestamp": "2025-09-29 10:17:12 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html",
+    "reason": "Succesfully added: Categories 'AI' and 'GitHub Copilot' were assigned because the content is entirely about GitHub Copilot Edit Mode and Agent Mode, explicitly an AI-powered developer tool (AI rules 1, 2, and 5, GitHub Copilot rules 1-4). 'Coding' was included because the article gives hands-on instructions for code refactoring, style matching, and error handling prompts (Coding rules 4 and 5). There is no DevOps, Azure, ML, or Security focus. No generic exclusion rules apply, as the content is technical, focused on developer workflow, and written in English.",
+    "timestamp": "2025-09-29 10:17:33 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/use-github-copilot-chat-to-plan-before-you-code.html",
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories: The content centers on using GitHub Copilot Chat as a developer workflow and planning tool (GitHub Copilot Inclusion Rule 1, 2, and 4), and it discusses capabilities of an AI-powered assistant in software planning (AI Inclusion Rule 1, 5). No Coding, DevOps, Azure, ML, or Security categories apply, since the article is about development workflow and conversational planning rather than specific code, DevOps process, cloud infrastructure, or ML/data topics. No exclusion rules apply; the post is technical, English, non-biographical, and aimed at developers.",
+    "timestamp": "2025-09-29 10:17:58 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/ways-to-use-github-copilot-for-documentation-clarity.html",
+    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories because the content is entirely devoted to using GitHub Copilot, which, by inclusion rule, always requires both 'AI' and 'GitHub Copilot' (AI rule 2, GitHub Copilot rule 1). Assigned 'Coding' because the focus is on improving code documentation and clarity within the context of developer workflows (Coding rule 4: Coding practices with Microsoft technologies). The content does not qualify for Azure, DevOps, ML, or Security, as it does not address those domains. No generic exclusion rules apply, and Copilot here refers specifically to GitHub Copilot, not business productivity tools.",
+    "timestamp": "2025-09-29 10:18:22 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/work-smarter-across-multiple-files.html",
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories because the article specifically details how GitHub Copilot’s AI-driven multi-file context aids developers (AI Rule 2 and GitHub Copilot Rule 1). There is no programming language or Microsoft technology-specific coding guidance (so Coding is not included), nor does the content focus on DevOps, Azure, ML, or Security topics. The content is technical in nature and fits the inclusion criteria for these categories.",
+    "timestamp": "2025-09-29 10:18:42 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/write-better-commit-messages-with-github-copilot.html",
+    "reason": "Succesfully added: Assigned the 'GitHub Copilot' category because the article's main focus is on practical usage of GitHub Copilot for generating commit messages (GitHub Copilot rules 1–4). Also assigned 'AI' because GitHub Copilot is an AI-powered developer tool (AI rule 2) and 'Coding' since the guide covers code workflow and commit best practices relevant for developers using Microsoft technologies (Coding rule 4). No DevOps, Azure, ML, or Security category applies because the content is not about broader CI/CD, cloud, or security topics.",
+    "timestamp": "2025-09-29 10:19:01 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/write-cleaner-code-comments-with-github-copilot.html",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the entire content focuses on using GitHub Copilot (which is a developer AI tool) to enhance code comments (AI and GitHub Copilot rules 1 and 2). 'Coding' category is included since the advice centers on improving code quality and documentation, relevant to Microsoft ecosystem developers (Coding rule 4). No other categories apply, and none of the generic exclusion rules are triggered.",
+    "timestamp": "2025-09-29 10:19:20 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/write-unit-tests-without-the-guesswork.html",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the post is specifically about using GitHub Copilot (a code-focused AI tool) to generate unit tests, matching AI rules 1, 2, and GitHub Copilot rules 1-4. Included 'Coding' since the guide applies to writing and improving code quality using developer tools (Coding rule 4 and 5). All technical steps revolve around Copilot's code suggestions for test automation, with precise instructions for multiple programming languages and frameworks.",
+    "timestamp": "2025-09-29 10:19:41 +00:00",
+    "collection": "posts"
   }
 ]

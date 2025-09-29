@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Refactor Messy Code in Seconds with GitHub Copilot\n\n*Posted on Jul 11, 2025*\n\nWe’re diving into [quick teaser—e.g., ‘how Copilot can help you refactor messy code in seconds’]. Whether you’re looking to code faster, smarter, or just get unstuck, this tip will level up your workflow. Let’s break it down!\"\n\nProTip\n\nLet GitHub Copilot Clean Up Your Code\n\nMessy code? No problem. Instead of manually rewriting it, let GitHub Copilot suggest cleaner, more efficient alternatives.\n\nHere’s how\n\n1️⃣ Highlight the code you want to refactor.\n\n2️⃣ Add a simple comment above it, like:\n\n# Refactor this function to be more readable and efficient\n\n3️⃣ Press Ctrl + Enter (Windows/Linux) or Cmd + Enter (Mac) to open GitHub Copilot Chat.\n\n4️⃣ Copilot will generate a cleaner, more optimized version—review and apply!\n\n🔹 Example: Before\n\ndef calculate\\_total(items):\n\ntotal = 0\n\nfor item in items:\n\nif 'price' in item and 'quantity' in item:\n\ntotal += item['price'] \\* item['quantity']\n\nreturn total\n\n🔹 After Copilot Refactor:\n\ndef calculate\\_total(items):\n\nreturn sum(item['price'] \\* item['quantity'] for item in items if 'price' in item and 'quantity' in item)\n\nWhy it’s awesome! More readable, more Pythonic, and less boilerplate.\n\n**Quick Takeaway**\n\nNext time you’re staring at ugly code, don’t sweat it—just ask GitHub Copilot to refactor it for you. A simple comment and one keystroke can turn messy logic into clean, maintainable code.",
+  "PubDate": "2025-06-20T00:00:00+00:00",
+  "ProcessedDate": "2025-09-29 10:08:14",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "Description": "Turn legacy spaghetti code into clean, maintainable solutions with targeted refactoring prompts.",
+  "Title": "Refactor Messy Code in Seconds with GitHub Copilot",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "OutputDir": "_posts",
+  "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
+  "Link": "https://www.cooknwithcopilot.com/blog/refactor-messy-code-in-seconds-with-github-copilot.html",
+  "Tags": [],
+  "FeedName": "Randy Pagels's Blog"
+}

@@ -1,75 +1,54 @@
 ---
 layout: "post"
 title: "Find and Fix Typos Faster with GitHub Copilot"
-description: "This guide explains how developers can use GitHub Copilot's various modes—Chat, Edit, and Agent—to quickly discover and fix typos in code, comments, and naming conventions. It walks through practical prompts and workflows to make typo detection a routine part of development, ultimately saving time and reducing bugs."
+description: "This article explains how developers can leverage GitHub Copilot to detect and correct typos in code, whether in variable names, function calls, or comments. It provides actionable tips for using Copilot's chat, edit, and agent modes to improve code quality and naming consistency, highlighting practical routines for cleaner commits."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://cooknwithcopilot.com/blog/find-and-fix-typos-faster-with-github-copilot.html"
+canonical_url: "https://www.cooknwithcopilot.com/blog/find-and-fix-typos-faster-with-github-copilot.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://cooknwithcopilot.com/rss.xml"
+feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-08-08 00:00:00 +00:00
 permalink: "/2025-08-08-Find-and-Fix-Typos-Faster-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Powered Development", "Code Quality", "Coding", "Copilot Chat", "Debugging", "Developer Productivity", "Edit Mode", "GitHub Copilot", "Microsoft", "Naming Conventions", "Posts", "Typo Detection"]
-tags_normalized: ["agent mode", "ai", "ai powered development", "code quality", "coding", "copilot chat", "debugging", "developer productivity", "edit mode", "github copilot", "microsoft", "naming conventions", "posts", "typo detection"]
+tags: ["AI", "Automated Refactoring", "Best Practices", "Code Quality", "Code Review", "Coding", "Copilot Agent Mode", "Copilot Chat", "Copilot Edit Mode", "Debugging", "Developer Productivity", "Function Naming", "GitHub Copilot", "Naming Conventions", "Posts", "Typo Detection", "Variable Names"]
+tags_normalized: ["ai", "automated refactoring", "best practices", "code quality", "code review", "coding", "copilot agent mode", "copilot chat", "copilot edit mode", "debugging", "developer productivity", "function naming", "github copilot", "naming conventions", "posts", "typo detection", "variable names"]
 ---
 
-Randy Pagels details how developers can use GitHub Copilot’s Chat, Edit, and Agent modes to catch and fix typos in code and comments, streamlining code reviews and reducing bugs.<!--excerpt_end-->
+Randy Pagels demonstrates how GitHub Copilot can accelerate typo detection and correction in code, offering practical guidance on proofing, editing, and standardizing naming before you commit.<!--excerpt_end-->
 
 # Find and Fix Typos Faster with GitHub Copilot
 
-_Posted on Aug 8, 2025 by Randy Pagels_
+Typos can be sneaky—a missing letter in a variable name, an incorrect parameter, or a misspelled comment can all trigger problems that are hard to spot. GitHub Copilot offers robust tools to help developers spot and fix these issues early.
 
-Typos can undermine the quality of your code—be it a misplaced letter in a variable name or a subtle misspelling in a comment. These errors can break functionality or cause confusion during future maintenance. GitHub Copilot offers practical ways to spot and correct typos quickly, making typo-checking an integral part of your workflow.
+## Why It Matters
 
-## Why Typo Detection Matters
+Even minor typos can cause bugs or slow down your development process. Integrating typo checks into your workflow helps ensure better quality code with fewer hours wasted tracking down mistakes.
 
-Small mistakes in names or comments can introduce bugs and slow down development. Integrating typo checks early in your process helps prevent compounded issues later.
+## Practical Ways to Use Copilot
 
-## Using GitHub Copilot to Catch Errors
+### 1️⃣ GitHub Copilot Ask: Quick Proofread
 
-### 1. Chat Mode: Quick Proofreading
+- Prompt Copilot: `Review this file for typos in variable names, function names, and comments. Suggest corrections.`
+- The tool assists in catching subtle naming errors that could break functionality.
 
-- Activate Copilot Chat in your environment.
-- Use the prompt:
+### 2️⃣ Copilot Edit Mode: Spot and Fix in Place
 
-  ```
-  Review this file for typos in variable names, function names, and comments. Suggest corrections.
-  ```
+- Highlight relevant sections.
+- Prompt: `Check for typos in code and comments. Fix them.`
+- Copilot corrects typos in context, preserving surrounding code.
 
-- This is ideal for catching subtle variable or function naming issues that are easy to overlook.
+### 3️⃣ Copilot Agent Mode: Naming Consistency Across Projects
 
-### 2. Edit Mode: Spot and Fix In-Place
+- Prompt Copilot: `Review this repository for inconsistent naming. Suggest a consistent style for variables and functions.`
+- Ideal for larger projects or teams where different naming patterns slip in over time.
 
-- Highlight any section of your code.
-- Ask Copilot:
+## Takeaway
 
-  ```
-  Check for typos in code and comments. Fix them.
-  ```
+A quick, routine review with Copilot before committing changes can shave hours off your debugging process and improve code clarity. Adopting these habits helps keep your projects cleaner and more maintainable.
 
-- Copilot revises the highlighted section, correcting spelling mistakes while preserving logic.
+---
 
-### 3. Agent Mode: Naming Consistency Across Projects
+**Author:** Randy Pagels
 
-- For larger codebases or multiple files, use Agent mode.
-- Provide the prompt:
-
-  ```
-  Review this repository for inconsistent naming. Suggest a consistent style for variables and functions.
-  ```
-
-- Agent mode is especially helpful for maintaining a uniform style in bigger projects.
-
-## Best Practices
-
-- Incorporate Copilot-based typo checks before every commit.
-- Use these features to standardize naming patterns, making code easier for future contributors to read and maintain.
-- Make typo detection with Copilot a routine part of your review process.
-
-## Summary
-
-A proactive typo and naming review with GitHub Copilot can eliminate frustrating bugs and improve overall code quality. Making this habit reduces debugging time and leads to more maintainable codebases.
-
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/find-and-fix-typos-faster-with-github-copilot.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://www.cooknwithcopilot.com/blog/find-and-fix-typos-faster-with-github-copilot.html)
