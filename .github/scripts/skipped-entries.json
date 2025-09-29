@@ -8475,5 +8475,23 @@
     "timestamp": "2025-09-28 13:11:12 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/spyiBp9vfbA",
     "reason": "No categories found: Content excluded due to insufficient information. The content field is null, the description is empty, and the tags are missing. According to the workflow, only the actual provided content, description, title, tags, and author can be used for categorization (Processing Rules). With no substantive information beyond the title and author, it is impossible to determine if any inclusion categories apply or if exclusion rules are triggered. As directed, when in doubt, categories array should remain empty."
+  },
+  {
+    "canonical_url": "https://dellenny.com/copilot-for-sales-and-service-moving-from-crm-data-entry-to-customer-insight/",
+    "collection": "posts",
+    "reason": "No categories found: No categories assigned. The content discusses the impact of 'copilots' (AI assistants) in sales and service CRM contexts, but it does not specify or focus on GitHub Copilot, Copilot Studio, or developer/maker tools (per Copilot Product Distinction). Instead, it describes AI copilots as productivity tools in business/customer service scenarios—matching the generic exclusion rule for 'Microsoft 365 Copilot', 'Copilot for Microsoft 365', and other business productivity/office Copilot products. The post is aimed at business process improvement rather than development or technical implementation, as required by Category Inclusion Rules. As such, all categories (AI, Coding, DevOps, Azure, ML, Security, GitHub Copilot) are excluded.",
+    "timestamp": "2025-09-29 08:05:22 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/unlocking-smarter-learning-how-to-use-googles-notebooklm-in-education/",
+    "collection": "posts",
+    "reason": "No categories found: No categories assigned because the content is entirely focused on Google's AI product (NotebookLM) and its use in education. The content does not discuss Microsoft technologies, platforms, or development practices—Microsoft is not mentioned, nor is there any direct or indirect connection to the Microsoft ecosystem, as required by the core processing rules and the multi-platform threshold (Chapter 2). Although this is AI-focused content, Microsoft's AI platforms or developer tools are not featured or referenced, thus none of the AI, Coding, Azure, DevOps, ML, Security, or GitHub Copilot categories are applicable.",
+    "timestamp": "2025-09-29 08:05:36 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/upgrading-your-laptop-heres-how-to-transfer-everything-to-windows-11-easily/",
+    "collection": "posts",
+    "reason": "No categories found: All categories have been excluded due to generic exclusion rules. The content is primarily end-user focused and centers on the process of transferring files, apps, and settings during a Windows 11 upgrade using OneDrive, external drives, or third-party tools. It does not provide technical, development, or engineering guidance relevant to Microsoft consultants or developers. The article addresses end-user workflows, not developer tools, programming, DevOps, security, AI, ML, or Azure technologies. Therefore, per the Non-Development Microsoft Products and Business/Productivity Tools exclusion rules in Chapter 3, no categories are assigned.",
+    "timestamp": "2025-09-29 08:05:49 +00:00"
   }
 ]

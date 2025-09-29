@@ -10572,5 +10572,11 @@
     "timestamp": "2025-09-28 13:10:52 +00:00",
     "canonical_url": "https://devops.com/latest-dora-report-from-google-surfaces-significant-ai-adoption/",
     "reason": "Succesfully added: Assigned AI category because the article centers on the adoption and productivity impact of AI tools within IT and software teams (AI rules 1, 4, 5). Assigned DevOps category because the DORA report is a DevOps-focused research project, and all analysis is within a software delivery, platform engineering, and process improvement context (DevOps rules 3-5). No Microsoft-specific platform is central to the content, but the multi-platform AI adoption and DevOps context qualifies under general AI and DevOps categories."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=rafl28faFec",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' category because the discussion centers around AI standards and model context interoperability involving GitHub Copilot and VS Code (AI rule 1, 3, 4). Assigned 'GitHub Copilot' category since the registry directly supports GitHub Copilot and the conversation and hashtags mention it (GitHub Copilot rules 1, 2, 3). Did not assign other categories because while development and tooling are mentioned, the core focus is the AI registry standard, rather than direct code or DevOps practices.",
+    "timestamp": "2025-09-29 08:06:18 +00:00"
   }
 ]
