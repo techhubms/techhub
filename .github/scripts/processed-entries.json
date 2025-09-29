@@ -10812,5 +10812,17 @@
     "reason": "Succesfully added: Included the AI category because the content centers on enabling open interoperability between AI agents and developer tools via the MCP Registry (AI rule 1 and 4). Assigned DevOps because the registry supports integration and automation workflows with development tools (DevOps rule 6 and 9). GitHub Copilot and Coding categories were not assigned, as there is no mention of Copilot functionality or direct code development. Azure, ML, and Security categories were not relevant to this video's focus. The content is educational and technical, meets quality standards, and does not trigger any generic exclusion rules.",
     "canonical_url": "https://www.youtube.com/shorts/A2ERvKTml98",
     "timestamp": "2025-09-29 20:04:30 +00:00"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/virtual-network-data-gateway-support-for-fabric-pipeline-dataflow-gen2-fast-copy-and-copy-job-is-now-generally-available/",
+    "reason": "Succesfully added: Assigned the Azure category because the VNET Data Gateway, Fabric Pipeline, and related capabilities fall within Microsoft's Azure-based data integration and networking services (Azure rule 1, 2, 4, 5). Assigned Security because the content focuses on protecting sensitive/regulated data, secure connections, and compliance (Security rules 1, 4, 5, 7). Assigned ML because Microsoft Fabric enables advanced analytics and data science workloads, and the VNET Data Gateway facilitates data engineering pipelines that are foundational to ML/analytics solutions (ML rule 1, 2 – data engineering for analytics/ML). AI was not assigned as there is no explicit use of AI services or features. Coding and DevOps did not apply since the focus is platform-level configuration, not coding or software development lifecycle automation.",
+    "collection": "news",
+    "timestamp": "2025-09-29 21:04:28 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/explore-hpc-ai-innovation-microsoft-amd-at-hpc-roundtable-2025/ba-p/4457974",
+    "reason": "Succesfully added: Assigned 'Azure' because the content extensively discusses Microsoft Azure's HPC offerings, including HB-series VMs and Azure Managed Lustre, and their role in modern engineering and CAE workflows (Azure inclusion rule 1, 4, 5). Assigned 'AI' because the event and sessions repeatedly address the intersection of HPC with AI infrastructure, including panel discussions on the convergence of simulation and machine learning workloads (AI inclusion rule 1, 5). Did not assign 'ML', 'Coding', 'DevOps', or 'Security' because there are no technical details on machine learning development, application coding, CI/CD, or security topics. Generic exclusion rules do not apply, as the content is substantial (well over 200 words), in English, and technically focused.",
+    "collection": "community",
+    "timestamp": "2025-09-29 21:05:10 +00:00"
   }
 ]
