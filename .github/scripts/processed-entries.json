@@ -10764,5 +10764,11 @@
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the episode centers on using GitHub Copilot, an AI-driven developer tool, for code documentation (AI Rule 1, 2; GitHub Copilot Rule 1, 2). 'Coding' applies because it covers best practices for documentation, code comments, and prompt-based workflows in VS Code (Coding Rule 4, 5). Exclusion rules do not apply as the content is technical, development-focused, provided in English, and not a sales pitch or negative critique.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=zRZLBiO4DYA"
+  },
+  {
+    "timestamp": "2025-09-29 15:04:44 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/security/vulnerability-research/codeql-zero-to-hero-part-5-debugging-queries/",
+    "reason": "Succesfully added: Included the Coding category because the content is a detailed technical guide on CodeQL, a code analysis and query language, with extensive code and predicate examples (Coding rules 1, 2, 4). Assigned DevOps because CodeQL is a DevSecOps tool used for code security automation in the software development lifecycle, and the article discusses integration and debugging as part of secure DevOps workflows (DevOps rules 2, 5, 6, 7, 11). Included Security because the main focus is on vulnerability research using static analysis, unsafe deserialization, and taint tracking—centrally addressing secure software development and vulnerability discovery with Microsoft-ecosystem tools (Security rules 2, 4, 5, 6, 8). Did not include AI, ML, or Azure as the article isn't specifically about AI features, ML engineering, or Azure platform products."
   }
 ]
