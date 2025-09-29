@@ -4,10 +4,10 @@ title: "Write Better Commit Messages with GitHub Copilot"
 description: "This post by Randy Pagels explores how GitHub Copilot can assist developers in crafting clear, meaningful commit messages directly from code changes. It covers practical steps for using Copilot within VS Code and Copilot Chat, and provides extra prompt ideas for optimizing commit narratives."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/write-better-commit-messages-with-github-copilot.html"
+canonical_url: "https://cooknwithcopilot.com/blog/write-better-commit-messages-with-github-copilot.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-05-16 00:00:00 +00:00
 permalink: "/2025-05-16-Write-Better-Commit-Messages-with-GitHub-Copilot.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
@@ -78,4 +78,4 @@ Good commit messages improve code history and team collaboration. GitHub Copilot
 
 *For additional support and tutorials, consult GitHub Copilot documentation or experiment with your own custom prompts to further tailor Copilot’s output to your workflow.*
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/write-better-commit-messages-with-github-copilot.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/write-better-commit-messages-with-github-copilot.html)

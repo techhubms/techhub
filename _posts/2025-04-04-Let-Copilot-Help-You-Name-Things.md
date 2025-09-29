@@ -4,10 +4,10 @@ title: "Let Copilot Help You Name Things"
 description: "Randy Pagels describes how developers can use GitHub Copilot to generate better names for functions, variables, and other code elements. The article provides practical suggestions for using Copilot’s chat, edit, and agent modes to improve naming consistency and code clarity across your projects."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/let-copilot-help-you-name-things.html"
+canonical_url: "https://cooknwithcopilot.com/blog/let-copilot-help-you-name-things.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-04-04 00:00:00 +00:00
 permalink: "/2025-04-04-Let-Copilot-Help-You-Name-Things.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
@@ -70,4 +70,4 @@ Letting Copilot name things can free you from decision paralysis and help ensure
 
 **Authored by [Randy Pagels](mailto:randy.pagels@xebia.com)**
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/let-copilot-help-you-name-things.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/let-copilot-help-you-name-things.html)

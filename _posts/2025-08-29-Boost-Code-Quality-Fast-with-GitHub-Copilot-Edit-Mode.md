@@ -4,10 +4,10 @@ title: "Boost Code Quality Fast with GitHub Copilot Edit Mode"
 description: "This guide explains how to use GitHub Copilot Edit Mode and Agent Mode for quick, targeted improvements in your codebase. Learn techniques to simplify logic, enforce consistent coding styles, and add error handling efficiently using Copilot’s AI-driven suggestions. Includes practical tips and prompt examples to help developers enhance reliability and maintainability."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/use-edit-mode-for-quick-targeted-improvements.html"
+canonical_url: "https://cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-08-29 00:00:00 +00:00
 permalink: "/2025-08-29-Boost-Code-Quality-Fast-with-GitHub-Copilot-Edit-Mode.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
@@ -61,4 +61,4 @@ Edit Mode acts as a focused code assistant, applying your instructions to precis
 
 *Authored by Randy Pagels*
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/use-edit-mode-for-quick-targeted-improvements.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html)

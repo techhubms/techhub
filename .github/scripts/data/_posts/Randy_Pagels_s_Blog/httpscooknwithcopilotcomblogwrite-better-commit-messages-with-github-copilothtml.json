@@ -6,9 +6,9 @@
   "ProcessedDate": "2025-08-05 17:11:47",
   "Description": "Craft clear, informative commit messages that tell the story of your code changes.",
   "Author": "randy.pagels@xebia.com (Randy Pagels)",
-  "Link": "https://pagelsr.github.io/CooknWithCopilot/blog/write-better-commit-messages-with-github-copilot.html",
+  "Link": "https://cooknwithcopilot.com/blog/write-better-commit-messages-with-github-copilot.html",
   "PubDate": "2025-05-16T00:00:00+00:00",
   "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Write Better Commit Messages with GitHub Copilot\n\n*Posted on Apr 11, 2025*\n\nA good commit message tells a story—but that story shouldn’t take 15 minutes to write. Whether you’re committing a quick bug fix or a full feature, GitHub Copilot can help you summarize your changes in a clear, professional tone. Let’s break it down!\n\nProTip\n\nLet Copilot Suggest Commit Messages Based on Your Code Changes\n\nDon’t overthink your commit log. Copilot can review your diffs and suggest meaningful messages that follow your preferred style—whether that’s conventional commits, past-tense descriptions, or concise summaries.\n\nHere’s how to do it:\n\n1️⃣ In Copilot Chat: Ask for a Commit Message\n\n# Suggest a commit message based on my staged changes\n\nCopilot will read the context and generate a helpful summary.\n\n2️⃣ In the Commit Message Field (VS Code)\n\nType a comment like:\n\n// Suggest a concise commit message for the updated login form validation\n\nThen trigger Copilot suggestion (Tab) to autocomplete a message.\n\n3️⃣ Use for PR Titles or Descriptions Too\n\n# Summarize this pull request in a clear, professional message\n\nPerfect when finalizing a PR and you want your description to actually reflect what changed.\n\nExtra Prompts to Try:\n\n• # Write a commit message using the Conventional Commits format\n\n• # Generate a descriptive commit message for a refactor\n\n• # Create a commit message that mentions the related issue #245\n\n**Quick Takeaway**\n\nGood commits help everyone—from your teammates to future you. Let Copilot turn your changes into clear commit messages, so you can stay focused on the code and keep your history clean.",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "FeedUrl": "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+  "FeedUrl": "https://cooknwithcopilot.com/rss.xml"
 }

@@ -1,6 +1,6 @@
 {
   "Tags": [],
-  "Link": "https://pagelsr.github.io/CooknWithCopilot/blog/use-edit-mode-for-quick-targeted-improvements.html",
+  "Link": "https://cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
   "Title": "Use Edit Mode for Quick, Targeted Improvements",
   "FeedName": "Randy Pagels's Blog",
@@ -10,5 +10,5 @@
   "OutputDir": "_posts",
   "Author": "randy.pagels@xebia.com (Randy Pagels)",
   "Description": "Polish code fast with Copilot Edit Mode, simplify logic, match style, and add error handling with a single prompt.",
-  "FeedUrl": "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+  "FeedUrl": "https://cooknwithcopilot.com/rss.xml"
 }
