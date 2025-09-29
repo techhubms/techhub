@@ -10806,5 +10806,11 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-mirroring-for-azure-sql-managed-instance-in-microsoft-fabric/",
     "collection": "news",
     "timestamp": "2025-09-29 19:04:09 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Included the AI category because the content centers on enabling open interoperability between AI agents and developer tools via the MCP Registry (AI rule 1 and 4). Assigned DevOps because the registry supports integration and automation workflows with development tools (DevOps rule 6 and 9). GitHub Copilot and Coding categories were not assigned, as there is no mention of Copilot functionality or direct code development. Azure, ML, and Security categories were not relevant to this video's focus. The content is educational and technical, meets quality standards, and does not trigger any generic exclusion rules.",
+    "canonical_url": "https://www.youtube.com/shorts/A2ERvKTml98",
+    "timestamp": "2025-09-29 20:04:30 +00:00"
   }
 ]
