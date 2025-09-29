@@ -10800,5 +10800,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/use-entra-ids-to-run-jobs-on-your-hpc-cluster/ba-p/4457932",
     "collection": "community",
     "reason": "Succesfully added: Assigned the Azure category because the solution focuses on deploying and configuring SSSD specifically on Azure Linux 3.0 HPC clusters (Azure inclusion rule 1, 4, and 5). Assigned the Security category because the content centers on identity management and authentication using Microsoft Entra ID (Security inclusion rule 1 and 3), and also covers related configuration for secure access and proper permissions. Did not assign ML, AI, Coding, or DevOps: the main thrust is not about machine learning/data science, direct software development, or CI/CD/dev tooling, but rather secure authentication and centralized identity for HPC environments. There are no generic exclusion rules triggered: the content is technical, focused, implementation-rich, and Microsoft technologies are central throughout."
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content centers on Azure SQL Managed Instance and its integration with Microsoft Fabric, which meets Azure inclusion criteria (Azure rule 1 and 4). Assigned 'ML' because Mirroring provides analytics-ready data for use in Data Science, Machine Learning, Power BI, and data engineering scenarios (ML rules 1, 2, and 4), as highlighted in its use with Notebooks and Power BI Direct Lake mode. Did not assign the 'AI' category because there is no focus on AI features or Microsoft AI services; the article highlights data engineering, analytics, and ML readiness, not AI development or AI service integration. No Coding, DevOps, Security, or GitHub Copilot categories are applicable, as there is no programming, development tooling content, deployment automation, or security engineering instruction.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-mirroring-for-azure-sql-managed-instance-in-microsoft-fabric/",
+    "collection": "news",
+    "timestamp": "2025-09-29 19:04:09 +00:00"
   }
 ]

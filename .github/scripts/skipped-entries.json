@@ -8559,5 +8559,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=PYRGQpjj7Gc",
     "collection": "videos",
     "reason": "No categories found: No categories assigned. The content does not provide substantive technical information, context, or detail about Microsoft technologies, tools, or development practices. The title ('Rubber Duck Thursday!') and description ('Come hang and code with me!') do not mention any qualifying Microsoft technologies or technical focus, nor is there a full content body to assess. This falls under the generic exclusion rule due to lack of technical detail and insufficient information for categorization."
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is an announcement about the availability of Claude Sonnet 4.5 in Visual Studio Code. There is no substantive technical content describing Microsoft technologies, development, implementation, or architecture. The mention of a GitHub changelog refers to a feature announcement related to GitHub Copilot, but the actual content provided is only a brief preview and link, without further information or technical details. The description and tags do not provide evidence of relevant development or technical depth. According to the processing rules, content that is merely an announcement or a first-look preview without technical detail, tutorial, or substantive discussion does not qualify for any categories.",
+    "canonical_url": "https://www.youtube.com/watch?v=JBJhRB_wdx0",
+    "collection": "videos",
+    "timestamp": "2025-09-29 19:04:39 +00:00"
   }
 ]
