@@ -1,0 +1,14 @@
+{
+  "Link": "https://techcommunity.microsoft.com/t5/azure-integration-services/fixed-ip-address-for-outbound-calls-from-azure-apim-standard-v2/m-p/4457882#M361",
+  "OutputDir": "_community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "ProcessedDate": "2025-09-29 17:05:21",
+  "Title": "Fixed ip address for outbound calls from Azure APIM Standard V2",
+  "FeedName": "Microsoft Tech Community",
+  "Tags": [],
+  "EnhancedContent": "Hi,\n\nI recently ran a PoC deployment of Azure APIM Standard V2 Sku instead of our current Premium Classic instance. This worked well! Performance is great and I am able to route calls to an on-prem network ok using vnet-integration. However, one of the features we currently make use of with the Premium Classic instance is a fixed ip address for calls from APIM to 3rd parties.\n\nIs there a way to achieve this using Standard V2? We have tried a nat gateway with fixed ip on the same vnet but this does not seem to help.",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Author": "BizTalkers",
+  "PubDate": "2025-09-29T14:21:13+00:00",
+  "Description": "Hi,\n\nI recently ran a PoC deployment of Azure APIM Standard V2 Sku instead of our current Premium Classic instance. This worked well! Performance is great and I am able to route calls to an on-prem network ok using vnet-integration. However, one of the features we currently make use of with the Premium Classic instance is a fixed ip address for calls from APIM to 3rd parties.\n\nIs there a way to achieve this using Standard V2? We have tried a nat gateway with fixed ip on the same vnet but this does not seem to help."
+}

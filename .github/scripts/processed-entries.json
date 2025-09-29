@@ -10770,5 +10770,11 @@
     "collection": "news",
     "canonical_url": "https://github.blog/security/vulnerability-research/codeql-zero-to-hero-part-5-debugging-queries/",
     "reason": "Succesfully added: Included the Coding category because the content is a detailed technical guide on CodeQL, a code analysis and query language, with extensive code and predicate examples (Coding rules 1, 2, 4). Assigned DevOps because CodeQL is a DevSecOps tool used for code security automation in the software development lifecycle, and the article discusses integration and debugging as part of secure DevOps workflows (DevOps rules 2, 5, 6, 7, 11). Included Security because the main focus is on vulnerability research using static analysis, unsafe deserialization, and taint tracking—centrally addressing secure software development and vulnerability discovery with Microsoft-ecosystem tools (Security rules 2, 4, 5, 6, 8). Did not include AI, ML, or Azure as the article isn't specifically about AI features, ML engineering, or Azure platform products."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=JXH_i5Eo_CA",
+    "timestamp": "2025-09-29 17:08:19 +00:00",
+    "reason": "Succesfully added: The content centers on integrating OpenAI’s GPT models with Azure SQL Database to implement RAG solutions. The 'AI' category is assigned because it details AI-driven application enhancements (AI rules 1, 4, and 5). 'Azure' is included as Azure SQL Database is the core platform (Azure rule 1). 'Coding' is included due to the technical, step-by-step guide for practical application integration (Coding rules 2 and 4). There was no content requiring generic exclusion, and the video is not primarily biographical, sales-oriented, or business-only (reviewed as per chapters 2, 3, and 4)."
   }
 ]

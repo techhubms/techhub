@@ -8523,5 +8523,35 @@
     "reason": "No categories found: All input fields except 'title', 'author', and 'type' are empty or null, meaning there is no substantive content to evaluate for category inclusion. According to the instructions, if there is insufficient content to determine technical depth, quality, or relevance to Microsoft technology categories, the item should be excluded. No categories are assigned.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/NtuLP3TJdvY"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2025/09/29/xbox-september-update-2025/",
+    "timestamp": "2025-09-29 17:05:48 +00:00",
+    "reason": "No categories found: All categories are excluded according to generic exclusion rules. The content is a general update about Xbox gaming features, device pre-orders, and new consumer services. 'Gaming Copilot (Beta)' is a business or consumer productivity/entertainment tool, not a developer-focused or coding Copilot product—per Copilot critical distinction, business productivity Copilots are excluded. The remainder covers hardware releases, user experience updates, controller announcements, consumer features, and general platform news for players, which are all end-user/game audience and lack any development, coding, DevOps, Azure, AI, ML, or Security implementation focus as required by inclusion rules. No technical architecture, developer tooling, or Microsoft professional platform development content is present."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_four-decades-in-some-things-never-change-activity-7378435958305640448-7TCm",
+    "timestamp": "2025-09-29 17:06:05 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The main post text is extremely brief and non-technical, acting primarily as a reflective statement by Satya Nadella celebrating the longevity of Excel without any substantial technical detail. The comments are mostly congratulatory or philosophical discussions about Excel's impact, with the only technical content being a link to an external blog about 'Agent Mode in Excel' (but not discussed in-depth in the main content). According to the rules: (1) Content is largely company milestone/biographical/reflection, not technical implementation, so falls under the biographical focus exclusion; (2) The post also serves as a corporate/leadership announcement about Excel's history, not actual hands-on content, thus is excluded for being business strategy/executive content without technical depth (see Chapter 3: Content Quality Exclusions and Business Strategy exclusions)."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_our-newoffice-agentturns-just-a-few-words-activity-7378470080357068800-y6wu",
+    "timestamp": "2025-09-29 17:06:19 +00:00",
+    "reason": "No categories found: Content is excluded due to generic exclusion rules. The primary focus is on Microsoft 365 Copilot and 'Office Agent' features for Word and PowerPoint, which are classified as business productivity tools and not developer tools per Non-Development Microsoft Products exclusions. The post only illustrates how end users can use natural language prompts to generate office documents, without development or technical implementation details relevant to consultants or developers. Therefore, no categories are assigned."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-365/blog/2025/09/29/vibe-working-introducing-agent-mode-and-office-agent-in-microsoft-365-copilot/",
+    "timestamp": "2025-09-29 17:07:44 +00:00",
+    "reason": "No categories found: All content centers on new features (Agent Mode and Office Agent) in Microsoft 365 Copilot, described exclusively as tools for business productivity, document/spreadsheet generation, and Office applications (Word, Excel, PowerPoint). According to Generic Exclusion Rules, Microsoft 365 Copilot, Copilot for Microsoft 365, and Office Copilot are specifically excluded as these are not development-focused tools but business productivity assistants. The article has no focus on programming, coding, AI/ML development, DevOps, Azure infrastructure, or security implementation. There are no references to developer workflows, APIs, code integration, or technical architectural practices. Therefore, no categories apply."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services/fixed-ip-address-for-outbound-calls-from-azure-apim-standard-v2/m-p/4457882#M361",
+    "timestamp": "2025-09-29 17:08:22 +00:00",
+    "reason": "Insufficient content length"
   }
 ]
