@@ -8505,5 +8505,23 @@
     "reason": "No categories found: Content excluded due to the 'Generic Exclusion Rules' in Chapter 3: the primary focus is job opportunities and career advancement in DevOps, which falls under 'Job-Related Content' (specifically: job opportunities, hiring announcements, and career advancement topics). There is no substantive technical implementation, architecture, programming, or Microsoft technology focus. The content is a curated job board/report for DevOps professionals, so all categories are left empty as per exclusion rules.",
     "timestamp": "2025-09-29 10:10:07 +00:00",
     "collection": "posts"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-azure-ai-is-revolutionizing-supply-chain-forecasting-and/m-p/4457866#M22249",
+    "timestamp": "2025-09-29 13:12:13 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-09-29 14:04:42 +00:00",
+    "reason": "No categories found: No categories are assigned because the content is about Microsoft 365 Copilot, which is classified as a business productivity tool and not a developer or maker tool per the CRITICAL Copilot Product Distinction. The post focuses on features like document, spreadsheet, and PowerPoint assistance for end users, with no evidence of developer, coding, or maker scenarios. According to the Generic Exclusion Rules and the Copilot Product Distinction, any content mainly about Microsoft 365 Copilot, Copilot for Microsoft 365, or Office Copilot is excluded from all categories, regardless of its use of AI.",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_vibe-work-is-here-with-agent-mode-in-m365-activity-7378422158190047232-46VI"
+  },
+  {
+    "timestamp": "2025-09-29 14:05:35 +00:00",
+    "reason": "No categories found: All input fields except 'title', 'author', and 'type' are empty or null, meaning there is no substantive content to evaluate for category inclusion. According to the instructions, if there is insufficient content to determine technical depth, quality, or relevance to Microsoft technology categories, the item should be excluded. No categories are assigned.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/NtuLP3TJdvY"
   }
 ]
