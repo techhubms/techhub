@@ -8553,5 +8553,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services/fixed-ip-address-for-outbound-calls-from-azure-apim-standard-v2/m-p/4457882#M361",
     "timestamp": "2025-09-29 17:08:22 +00:00",
     "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-09-29 18:06:08 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=PYRGQpjj7Gc",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content does not provide substantive technical information, context, or detail about Microsoft technologies, tools, or development practices. The title ('Rubber Duck Thursday!') and description ('Come hang and code with me!') do not mention any qualifying Microsoft technologies or technical focus, nor is there a full content body to assess. This falls under the generic exclusion rule due to lack of technical detail and insufficient information for categorization."
   }
 ]

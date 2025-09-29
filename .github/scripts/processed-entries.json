@@ -10776,5 +10776,29 @@
     "canonical_url": "https://www.youtube.com/watch?v=JXH_i5Eo_CA",
     "timestamp": "2025-09-29 17:08:19 +00:00",
     "reason": "Succesfully added: The content centers on integrating OpenAI’s GPT models with Azure SQL Database to implement RAG solutions. The 'AI' category is assigned because it details AI-driven application enhancements (AI rules 1, 4, and 5). 'Azure' is included as Azure SQL Database is the core platform (Azure rule 1). 'Coding' is included due to the technical, step-by-step guide for practical application integration (Coding rules 2 and 4). There was no content requiring generic exclusion, and the video is not primarily biographical, sales-oriented, or business-only (reviewed as per chapters 2, 3, and 4)."
+  },
+  {
+    "timestamp": "2025-09-29 18:05:25 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/cross-cloud-data-movement-with-best-in-class-connectivity-whats-new-and-whats-next/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric is a core Azure SaaS platform and the post focuses on its cloud data integration offerings (Azure category rule 1, 4, 5, 7). Assigned 'ML' because the content highlights data pipeline engineering, cross-cloud data movement, CDC, data lakehouse integration, and analytics-ready features—key for data engineering and analytics use cases in the Microsoft ecosystem (ML category rules 1, 2, 5, 7). Did not assign 'AI' because while Fabric is described as 'AI-ready', the article does not cover usage or implementation of AI or prebuilt Microsoft AI services (AI rules 1-6); 'AI-ready' is marketing language, not technical implementation. Did not assign 'DevOps' as the focus is on data movement and integration, not CI/CD, deployment pipelines, or developer practices. Did not assign 'Coding' since the blog does not address programming, SDKs, or development frameworks. 'Security' is discussed in context of governance and compliance, but not in depth regarding implementation, so 'Security' was not applied. The content is not excluded by any generic exclusion rules—it's technical, not biographical, not sales-focused, and clearly aimed at data architects and engineers."
+  },
+  {
+    "timestamp": "2025-09-29 18:05:47 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-29-anthropic-claude-sonnet-4-5-is-in-public-preview-for-github-copilot",
+    "collection": "news",
+    "reason": "Succesfully added: Categories 'AI' and 'GitHub Copilot' were assigned because the content specifically focuses on integrating the Anthropic Claude Sonnet 4.5 large language model within GitHub Copilot (AI rule 1 and GitHub Copilot rule 1). The article explains its technical availability, deployment modes, and configuration details for developers. Exclusion rules do not apply because the content is about developer tools, and not about productivity Copilot offerings or business strategy."
+  },
+  {
+    "timestamp": "2025-09-29 18:06:48 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/cloud-and-ai-cost-efficiency-a-strategic-imperative-for-long/ba-p/4455955",
+    "collection": "community",
+    "reason": "Succesfully added: The content is a comprehensive guide from a Microsoft source about how organizations can use Azure Essentials and a set of Microsoft frameworks, cloud governance resources, and AI tools to maximize cost efficiency in their cloud and AI investments. I assigned the 'Azure' category because the content is focused on Azure frameworks, tools, and adoption best practices (Azure inclusion rules 1, 2, 4, 5). I assigned the 'AI' category because the content refers to Azure AI Foundry, AI workloads, Copilot in Azure, and frameworks like AI Ops and the AI Center of Excellence, making AI usage and strategy a central theme (AI inclusion rules 1, 3, and 5). No other categories like 'DevOps', 'Coding', 'ML', or 'Security' are central or sufficiently detailed for assignment. The post is not a sales pitch, not biographical, has ample technical substance, and is in English, so it passes all generic exclusion rules."
+  },
+  {
+    "timestamp": "2025-09-29 18:07:36 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/use-entra-ids-to-run-jobs-on-your-hpc-cluster/ba-p/4457932",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the solution focuses on deploying and configuring SSSD specifically on Azure Linux 3.0 HPC clusters (Azure inclusion rule 1, 4, and 5). Assigned the Security category because the content centers on identity management and authentication using Microsoft Entra ID (Security inclusion rule 1 and 3), and also covers related configuration for secure access and proper permissions. Did not assign ML, AI, Coding, or DevOps: the main thrust is not about machine learning/data science, direct software development, or CI/CD/dev tooling, but rather secure authentication and centralized identity for HPC environments. There are no generic exclusion rules triggered: the content is technical, focused, implementation-rich, and Microsoft technologies are central throughout."
   }
 ]
