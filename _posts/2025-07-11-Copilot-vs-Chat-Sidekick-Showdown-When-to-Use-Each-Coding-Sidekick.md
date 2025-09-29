@@ -4,10 +4,10 @@ title: "Copilot vs. Chat: Sidekick Showdown – When to Use Each Coding Sidekick
 description: "This article by Randy Pagels explores the practical differences between GitHub Copilot inline suggestions and chatbot-based coding assistants like Copilot Chat and ChatGPT, outlining optimal use cases and proposing an effective workflow that leverages both tools for efficient, creative coding."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/copilot-vs-chat-sidekick-showdown.html"
+canonical_url: "https://cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-07-11 00:00:00 +00:00
 permalink: "/2025-07-11-Copilot-vs-Chat-Sidekick-Showdown-When-to-Use-Each-Coding-Sidekick.html"
 categories: ["AI", "GitHub Copilot"]
@@ -73,4 +73,4 @@ Don’t treat it as an either/or decision. Leveraging both tools in tandem bring
 
 By using both, you’ll benefit from faster development, greater learning opportunities, and the ability to tackle challenges from multiple angles.
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/copilot-vs-chat-sidekick-showdown.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html)

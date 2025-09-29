@@ -4,10 +4,10 @@ title: "Start New Files Faster with GitHub Copilot"
 description: "This post by Randy Pagels explains how GitHub Copilot can help developers quickly generate boilerplate code for new files across various technologies. It covers practical steps for leveraging Copilot's AI-powered suggestions, streamlining the process of starting new scripts, components, and configuration files."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/start-new-files-faster-with-github-copilot.html"
+canonical_url: "https://cooknwithcopilot.com/blog/start-new-files-faster-with-github-copilot.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-04-25 00:00:00 +00:00
 permalink: "/2025-04-25-Start-New-Files-Faster-with-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
@@ -55,4 +55,4 @@ GitHub Copilot significantly boosts productivity by handling the repetitive part
 
 When facing a blank file, letting GitHub Copilot generate a smart starting point accelerates your workflow and lets you concentrate on writing great code—rather than setting up the basics.
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/start-new-files-faster-with-github-copilot.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/start-new-files-faster-with-github-copilot.html)

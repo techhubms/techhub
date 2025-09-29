@@ -86,7 +86,7 @@ Copilot adds support for interactive issue forms on github.com and enhances admi
 
 - [Support for issue forms in chat and file uploads in spaces](https://github.blog/changelog/2025-07-16-support-for-issue-forms-in-chat-and-file-uploads-in-spaces)
 - [New GitHub Copilot activity report with enhanced authentication and usage insights](https://github.blog/changelog/2025-07-18-new-github-copilot-activity-report-with-enhanced-authentication-and-usage-insights)
-- [Use GitHub Copilot Chat to Plan Your Software Before Coding](https://pagelsr.github.io/CooknWithCopilot/blog/use-github-copilot-chat-to-plan-before-you-code.html)
+- [Use GitHub Copilot Chat to Plan Your Software Before Coding](https://cooknwithcopilot.com/blog/use-github-copilot-chat-to-plan-before-you-code.html)
 
 ### Availability, Incident Management, and Community Engagement
 

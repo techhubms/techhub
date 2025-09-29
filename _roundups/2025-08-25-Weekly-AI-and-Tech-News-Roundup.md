@@ -117,7 +117,7 @@ New resources this week emphasize Copilot’s impact on productivity within .NET
 
 Recent case studies, such as Bank Galicia, demonstrate that Copilot is increasingly essential for teams seeking more reliable and faster delivery, evolving from small pilots to standard practice.
 
-- [Work Smarter Across Multiple Files with GitHub Copilot](https://pagelsr.github.io/CooknWithCopilot/blog/work-smarter-across-multiple-files.html)
+- [Work Smarter Across Multiple Files with GitHub Copilot](https://cooknwithcopilot.com/blog/work-smarter-across-multiple-files.html)
 - [Boosting Productivity with GitHub Copilot: Real-World .NET Coding Examples](https://dellenny.com/boosting-productivity-with-github-copilot-real-world-net-coding-examples/)
 - [How GitHub Copilot Helps with Test-Driven Development (TDD)](https://dellenny.com/how-github-copilot-helps-with-test-driven-development-tdd/)
 - [How to Test Nonexistent Code with GitHub Copilot]({{ "/2025-08-21-How-to-Test-Nonexistent-Code-with-GitHub-Copilot.html" | relative_url }})

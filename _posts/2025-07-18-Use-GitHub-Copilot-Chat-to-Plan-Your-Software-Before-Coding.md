@@ -4,10 +4,10 @@ title: "Use GitHub Copilot Chat to Plan Your Software Before Coding"
 description: "This post by Randy Pagels explores how developers can leverage GitHub Copilot Chat as a partner in planning software logic and architecture, not just for code generation. It offers practical prompts and strategies to use Copilot Chat for outlining logic, surfacing edge cases, and clarifying implementation before writing code."
 author: "randy.pagels@xebia.com (Randy Pagels)"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://pagelsr.github.io/CooknWithCopilot/blog/use-github-copilot-chat-to-plan-before-you-code.html"
+canonical_url: "https://cooknwithcopilot.com/blog/use-github-copilot-chat-to-plan-before-you-code.html"
 viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
-feed_url: "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-07-18 00:00:00 +00:00
 permalink: "/2025-07-18-Use-GitHub-Copilot-Chat-to-Plan-Your-Software-Before-Coding.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
@@ -82,4 +82,4 @@ GitHub Copilot is much more than a code generator. It serves as a thought partne
 **Discussion Prompt:**
 What’s the most surprising thing GitHub Copilot helped you figure out before you started coding? Do you have a favorite planning prompt? Share it with the community to help others make the most of Copilot as a planning tool.
 
-This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://pagelsr.github.io/CooknWithCopilot/blog/use-github-copilot-chat-to-plan-before-you-code.html)
+This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/use-github-copilot-chat-to-plan-before-you-code.html)

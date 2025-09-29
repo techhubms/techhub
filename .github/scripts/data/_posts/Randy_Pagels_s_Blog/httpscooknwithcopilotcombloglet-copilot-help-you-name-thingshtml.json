@@ -6,9 +6,9 @@
   "ProcessedDate": "2025-08-05 17:11:47",
   "Description": "Solve one of programming's hardest problems with AI-powered naming suggestions that actually make sense.",
   "Author": "randy.pagels@xebia.com (Randy Pagels)",
-  "Link": "https://pagelsr.github.io/CooknWithCopilot/blog/let-copilot-help-you-name-things.html",
+  "Link": "https://cooknwithcopilot.com/blog/let-copilot-help-you-name-things.html",
   "PubDate": "2025-04-04T00:00:00+00:00",
   "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Let Copilot Help You Name Things\n\n*Posted on Apr 25, 2025*\n\nNaming things is hard. Whether it’s a new function, a database field, or a variable inside a loop, finding the right name can break your flow. GitHub Copilot can help suggest clear, consistent names based on the surrounding code and its intended purpose. Let’s break it down!\n\nProTip\n\nUse Copilot to Generate Better Names—Functionally and Descriptively\n\nInstead of overthinking or leaving temp, foo, or xyz in your code, ask Copilot for name suggestions that are more descriptive and easier to maintain.\n\nHere’s how to do it:\n\n1️⃣ Copilot Chat: Ask for a Better Name\n\n// Suggest a more descriptive name for this function that calculates discount based on user role and cart total\n\n2️⃣ Edit Mode: Inline Rename Prompt\n\nHighlight the function or variable, then use a comment like:\n\n# Rename this variable to better reflect what it represents\n\nThen trigger Copilot Agent Mode and apply the change in one go.\n\n3️⃣ Agent Mode: Naming Conventions at Scale\n\nGenerate consistent variable and method names across all controllers based on their purpose (CRUD pattern)\n\nPerfect for larger refactors or codebase cleanups.\n\nExtra Prompts to Try:\n\n• # Rename this class to better describe what it models\n\n• # What’s a better name for this loop counter?\n\n• # Suggest field names for a form collecting user contact details\n\n• // Rename this test to clearly describe what it's testing\n\n**Quick Takeaway**\n\nDon’t let naming slow you down. Let Copilot help you pick clear, practical names that make your code easier to read—and easier to revisit next week.",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "FeedUrl": "https://pagelsr.github.io/CooknWithCopilot/rss.xml"
+  "FeedUrl": "https://cooknwithcopilot.com/rss.xml"
 }
