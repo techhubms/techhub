@@ -1,0 +1,26 @@
+{
+  "Tags": [
+    "AI",
+    "aspdotnet",
+    "aspnetcore",
+    "c#",
+    "csharp",
+    "developercommunity",
+    "developertools",
+    "mcp",
+    "mcpserver",
+    "microsoft",
+    "vibecoding"
+  ],
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "ProcessedDate": "2025-09-26 18:15:19",
+  "Link": "https://www.youtube.com/watch?v=dje8EMF3Shc",
+  "Description": "Join us for a chill ASP.NET Community Standup with Mike Kistler, Leslie Richardson, and Mackinnon Buck as they dive into vibe coding an MCP server using C#.\n\n🔗 Community Links: https://www.theurlist.com/aspnet-standup-20250930\n\n🎙️ Featuring: Daniel Roth, Mike Kistler, Leslie Richardson, Mackinnon Buck\n\n#dotnet #aspnetcore",
+  "EnhancedContent": null,
+  "FeedName": "DotNet YouTube",
+  "Title": "ASP.NET Community Standup - Vibe coding a C# MCP server",
+  "PubDate": "2025-09-26T17:46:41+00:00",
+  "FeedLevelAuthor": "dotnet",
+  "Author": "dotnet"
+}

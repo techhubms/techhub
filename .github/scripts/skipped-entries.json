@@ -8403,5 +8403,95 @@
     "collection": "community",
     "reason": "Insufficient content length",
     "timestamp": "2025-09-25 18:20:28 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/software-architecture-frameworks-a-guide-to-the-landscape-and-their-differences/",
+    "timestamp": "2025-09-26 17:14:00 +00:00",
+    "reason": "No categories found: No categories were assigned because, while the article delivers a detailed architectural overview and practical comparison, it does not focus on Microsoft technologies, platforms, or development tools as required by the inclusion rules (e.g., no Azure, .NET, Microsoft cloud, or developer products are discussed). All reference frameworks are general-purpose or industry-wide, with none tied to Microsoft or its ecosystem. Therefore, as per the requirement that Microsoft technology be central to content and strict adherence to the inclusion rules, no technology categories apply.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-26 18:16:00 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The content is primarily an event announcement, focusing on guidance, community, and Microsoft-sponsored networking for student founders rather than containing substantial technical or developer-focused information. There are no technical implementation details, no developer tutorials, and no substantive coverage of Microsoft technologies, frameworks, or coding practices beyond high-level references to 'AI' and support from MVPs. This aligns with 'Business Strategy and Executive Content' and 'Workplace and Business Focus' exclusions from Chapter 3, as the focus is on community, support, and the student founder journey, not technical implementation.",
+    "collection": "news",
+    "canonical_url": "https://techcommunity.microsoft.com/blog/studentdeveloperblog/sprint-to-imagine-cup-fuel-your-innovation/4457098"
+  },
+  {
+    "timestamp": "2025-09-26 19:10:10 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_microsoft-marketplace-activity-7377393224635645953-hANp",
+    "reason": "No categories found: The content is excluded because it is an official announcement about the launch of the Microsoft Marketplace, focusing on business-level solution discovery and deployment—not technical implementation or developer guidance. It does not meet any inclusion criteria for technical categories such as AI, Coding, DevOps, Azure, ML, or Security. It discusses the marketplace from a strategic, marketing, and business point of view, without providing actionable technical depth or implementation details. This fits the 'Business Strategy and Executive Content' and 'Business vs Technical Content' generic exclusion rules in Chapter 3."
+  },
+  {
+    "timestamp": "2025-09-26 19:10:38 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/iu8Ihw0oksg",
+    "reason": "No categories found: No categories were assigned because the input lacks substantive content to evaluate. The 'content' field is null and there is no description or substantive text available. According to the workflow, category assignment depends on the actual technical substance provided, not just on the tags or title. Without main content text, it's not possible to determine whether the video demonstrates developer workflows, DevOps, Coding, or AI related to Microsoft technologies. The generic exclusion rule (focus on actual content) applies, so no categories are assigned."
+  },
+  {
+    "timestamp": "2025-09-27 03:13:51 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules for business strategy, executive content, and workplace/business focus. The content is primarily about the speaker lineup for a cybersecurity conference (HRMCon 2025) and trends in Human Risk Management (HRM) within enterprises, without detailed technical implementation or Microsoft-specific technologies. It targets CISOs, HR, and security leadership for culture and risk programs and focuses on organizational strategy, culture, and leadership rather than hands-on technical details, engineering architecture, or Microsoft technology implementation. There is mention of AI and identity, but only in general business and strategy terms, not in the context of technical implementations (e.g., no substantial Azure AD/Entra, Defender, or Microsoft security tool how-tos). This content therefore falls under the business strategy and executive content exclusion in Chapter 3.",
+    "canonical_url": "https://devops.com/living-security-unveils-hrmcon-2025-speakers-as-report-finds-firms-detect-just-19-of-human-risk/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-27 03:14:51 +00:00",
+    "reason": "No categories found: All categories are excluded due to the generic exclusion rule for biographical content. The article primarily centers on Yossi Shaul's personal career journey, his long-term role at JFrog, and JFrog's organizational evolution in the DevOps sector (see content: 'reflect on both his personal journey and JFrog’s evolving role...', 'Shaul has been with JFrog since its early days, starting with the creation of Artifactory...', 'Shaul’s long tenure gives him a unique perspective...'). The technical information provided is not specific to Microsoft technologies, products, or development. Additionally, there is no substantive discussion of Microsoft-related DevOps practices or tools, and no technical learning outcomes relevant to the Tech Hub's Microsoft-focused audience. Therefore, according to generic exclusion rules (Biographical Focus and lack of Microsoft technology centrality), no categories are assigned.",
+    "canonical_url": "https://devops.com/securing-the-software-supply-chain-with-full-visibility-and-compliance/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-09-27 09:04:48 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/building-prompts-for-m365-copilot-that-give-consistently-good-results/",
+    "reason": "No categories found: Content is excluded due to the Generic Exclusion Rule for Non-Development Microsoft Products, specifically business productivity content about Microsoft 365 Copilot (see 'Non-Development Microsoft Products' and 'CRITICAL: Copilot Product Distinction' in exclusion rules). The article focuses on using Microsoft 365 Copilot for summarizing meetings, drafting reports, generating presentations, and writing prompts for productivity outcomes in Word, Excel, and PowerPoint—these are business productivity features, not developer or maker tooling. There are no development, coding, technical integration, or Microsoft development platform topics present. Therefore, per the workflow instructions, no categories can be assigned."
+  },
+  {
+    "timestamp": "2025-09-27 09:05:24 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/unlocking-employee-potential-a-complete-guide-to-microsoft-viva-suite/",
+    "reason": "No categories found: All generic exclusion rules were applied first as required. The content is primarily focused on Microsoft Viva, an employee experience platform within Microsoft 365. The article details the features, benefits, and adoption of Microsoft Viva for improving workplace engagement, productivity, learning, and well-being. However, this content is not focused on developer tools, development frameworks, or technical implementation, but rather on organizational and employee experience, business process transformation, and workplace culture. This is confirmed by repeated references to business leaders, HR professionals, workforce collaboration, employee engagement, leadership participation, and the absence of development APIs, technical implementation, or dev-centric scenarios. According to the generic business/productivity exclusion rules in Chapter 3, content about non-development Microsoft products—such as business productivity suites, end-user tools, organizational well-being, or business strategy—must be excluded. Viva is presented not as a tool for developers but as a platform for HR, business leaders, and IT managers to manage engagement and culture. There is no technical, development, or engineering focus present. Therefore, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://dellenny.com/advanced-file-explorer-tips-for-faster-navigation-in-windows-11-2/",
+    "reason": "No categories found: No categories assigned because the content focuses on advanced productivity tips and user-focused features of Windows 11 File Explorer, not technical development, coding, DevOps, Azure, AI, ML, or security topics. It does not involve programming, Microsoft cloud services, developer tools, or IT architecture, but instead provides end-user advice and workflow enhancements for Windows users. According to the exclusion rules (Non-Development Microsoft Products and General Business/Productivity content), such topics are out of scope.",
+    "collection": "posts",
+    "timestamp": "2025-09-28 08:05:56 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/hidden-gestures-for-touchscreen-touchpad-users/",
+    "reason": "No categories found: No categories were assigned because the content focuses entirely on general productivity tips for touchscreen and touchpad devices, covering gesture shortcuts across both Windows and Mac platforms. It does not specifically discuss any Microsoft developer technologies, coding practices, DevOps concepts, Azure, AI, ML, Security, or GitHub Copilot. There is no mention of implementation, development, or architecture details pertaining to Microsoft technologies. According to the core processing and generic exclusion rules, tips for general device usage and user interface navigation do not qualify for inclusion in any of the predefined Microsoft technical categories.",
+    "collection": "posts",
+    "timestamp": "2025-09-28 08:06:08 +00:00"
+  },
+  {
+    "timestamp": "2025-09-28 10:06:30 +00:00",
+    "reason": "No categories found: No categories assigned. The content is a productivity-focused tutorial about using the built-in Voice Typing feature in Windows 11 for general text entry and accessibility. It does not involve software development, coding, Microsoft developer tools, DevOps, AI/ML, Azure, or security practices. There is no discussion of development frameworks, code, or implementation details relevant to the predefined categories. According to the Non-Development Microsoft Products exclusion rule in Chapter 3, content centered on end-user features or business/consumer productivity tools (such as Windows 11 dictation) must be excluded.",
+    "canonical_url": "https://dellenny.com/voice-typing-in-windows-11-dictate-like-a-pro/",
+    "collection": "posts"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-09-28 13:11:12 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/spyiBp9vfbA",
+    "reason": "No categories found: Content excluded due to insufficient information. The content field is null, the description is empty, and the tags are missing. According to the workflow, only the actual provided content, description, title, tags, and author can be used for categorization (Processing Rules). With no substantive information beyond the title and author, it is impossible to determine if any inclusion categories apply or if exclusion rules are triggered. As directed, when in doubt, categories array should remain empty."
+  },
+  {
+    "canonical_url": "https://dellenny.com/copilot-for-sales-and-service-moving-from-crm-data-entry-to-customer-insight/",
+    "collection": "posts",
+    "reason": "No categories found: No categories assigned. The content discusses the impact of 'copilots' (AI assistants) in sales and service CRM contexts, but it does not specify or focus on GitHub Copilot, Copilot Studio, or developer/maker tools (per Copilot Product Distinction). Instead, it describes AI copilots as productivity tools in business/customer service scenarios—matching the generic exclusion rule for 'Microsoft 365 Copilot', 'Copilot for Microsoft 365', and other business productivity/office Copilot products. The post is aimed at business process improvement rather than development or technical implementation, as required by Category Inclusion Rules. As such, all categories (AI, Coding, DevOps, Azure, ML, Security, GitHub Copilot) are excluded.",
+    "timestamp": "2025-09-29 08:05:22 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/unlocking-smarter-learning-how-to-use-googles-notebooklm-in-education/",
+    "collection": "posts",
+    "reason": "No categories found: No categories assigned because the content is entirely focused on Google's AI product (NotebookLM) and its use in education. The content does not discuss Microsoft technologies, platforms, or development practices—Microsoft is not mentioned, nor is there any direct or indirect connection to the Microsoft ecosystem, as required by the core processing rules and the multi-platform threshold (Chapter 2). Although this is AI-focused content, Microsoft's AI platforms or developer tools are not featured or referenced, thus none of the AI, Coding, Azure, DevOps, ML, Security, or GitHub Copilot categories are applicable.",
+    "timestamp": "2025-09-29 08:05:36 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/upgrading-your-laptop-heres-how-to-transfer-everything-to-windows-11-easily/",
+    "collection": "posts",
+    "reason": "No categories found: All categories have been excluded due to generic exclusion rules. The content is primarily end-user focused and centers on the process of transferring files, apps, and settings during a Windows 11 upgrade using OneDrive, external drives, or third-party tools. It does not provide technical, development, or engineering guidance relevant to Microsoft consultants or developers. The article addresses end-user workflows, not developer tools, programming, DevOps, security, AI, ML, or Azure technologies. Therefore, per the Non-Development Microsoft Products and Business/Productivity Tools exclusion rules in Chapter 3, no categories are assigned.",
+    "timestamp": "2025-09-29 08:05:49 +00:00"
   }
 ]
