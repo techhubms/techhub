@@ -10824,5 +10824,23 @@
     "reason": "Succesfully added: Assigned 'Azure' because the content extensively discusses Microsoft Azure's HPC offerings, including HB-series VMs and Azure Managed Lustre, and their role in modern engineering and CAE workflows (Azure inclusion rule 1, 4, 5). Assigned 'AI' because the event and sessions repeatedly address the intersection of HPC with AI infrastructure, including panel discussions on the convergence of simulation and machine learning workloads (AI inclusion rule 1, 5). Did not assign 'ML', 'Coding', 'DevOps', or 'Security' because there are no technical details on machine learning development, application coding, CI/CD, or security topics. Generic exclusion rules do not apply, as the content is substantial (well over 200 words), in English, and technically focused.",
     "collection": "community",
     "timestamp": "2025-09-29 21:05:10 +00:00"
+  },
+  {
+    "timestamp": "2025-09-29 23:04:23 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the ML category because Microsoft Fabric is a data analytics and engineering platform, and the content is highly relevant for developers and technical users performing analytics, data engineering, and BI development (ML category, rule 1 and rule 4). The post introduces workflow and UI improvements specifically for developing, managing, and navigating analytics pipelines and related resources in Fabric, making it highly pertinent to technical data work. Did not assign 'AI', 'Azure', or 'Coding' categories as the content focuses on platform UX/features for analytics engineering, not code-level or AI service implementation. Exclusion rules did not apply because the post is technical, avoids business/consumer focus, and is written in clear English.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/supercharge-your-workflow-new-multitasking-features-coming-to-fabric/"
+  },
+  {
+    "timestamp": "2025-09-29 23:04:44 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the DevOps category because the content is specifically about changes to GitHub Actions cache eviction policy, which directly impacts CI/CD workflows and repository management practices (DevOps inclusion rules 2, 5). No other category applies because there is no discussion of AI, Coding, Security, ML, or Azure technologies. The announcement is technical and directly relevant to DevOps practitioners managing workflow automation in the Microsoft ecosystem.",
+    "canonical_url": "https://github.blog/changelog/2025-09-29-new-date-for-enforcement-of-cache-eviction-policy"
+  },
+  {
+    "timestamp": "2025-09-29 23:05:30 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Categories assigned: 'AI' due to the central focus on AI workloads and landing zones (AI inclusion rules 1, 4, 5); 'Azure' because all guidance and architecture concern Azure-specific services (Azure rules 1, 4, 5); 'Security' as the article is structured around security architecture, governance, and protection using multiple Microsoft security services (Security rules 1, 4, 5, 9). 'ML' is not included as the focus is on securing and operating AI environments rather than development or data science engineering. The content fully qualifies as it is technical, implementation-focused, and provides actionable architectural insight for practitioners, with no exclusion rules applicable.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/securing-ai-workloads-with-microsoft-defender-for-cloud-purview/ba-p/4457345"
   }
 ]

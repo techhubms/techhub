@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_news",
+  "Title": "New date for enforcement of cache eviction policy",
+  "PubDate": "2025-09-29T22:02:07+00:00",
+  "EnhancedContent": "We’re delaying the enforcement of a new cache eviction policy for GitHub Actions from mid-October to November. Currently, each repository has a maximum cache size of 10 GB, and we evict the oldest cache entries every 24 hours to keep usage below this limit. We’re changing the eviction interval to every hour.\n\nIf your repositories use more than 10 GB of cache in a 24-hour period, you have received an email from GitHub about this update. Increasing the frequency of eviction checks could lead to additional cache thrashing, so we recommend reviewing your workflows and making any necessary adjustments as soon as possible. With this delay, you now have more time to prepare before the new policy is enforced.\n\nTo check your current cache usage in a repository, [follow these instructions](https://docs.github.com/actions/advanced-guides/caching-dependencies-to-speed-up-workflows#usage-limits-and-eviction-policy).\n\nTo see cache usage at the organization level, visit `https://github.com/organizations/ORG/settings/actions/caches` but remember to replace the `ORG` in the URL.",
+  "ProcessedDate": "2025-09-29 23:02:52",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Tags": [
+    "actions",
+    "Retired"
+  ],
+  "Description": "We’re delaying the enforcement of a new cache eviction policy for GitHub Actions from mid-October to November. Currently, each repository has a maximum cache size of 10 GB, and we…\n\nThe post [New date for enforcement of cache eviction policy](https://github.blog/changelog/2025-09-29-new-date-for-enforcement-of-cache-eviction-policy) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2025-09-29-new-date-for-enforcement-of-cache-eviction-policy",
+  "Author": "Allison"
+}
