@@ -10872,5 +10872,11 @@
     "canonical_url": "https://dellenny.com/how-ai-is-transforming-devops-smarter-faster-and-more-reliable-software-delivery/",
     "timestamp": "2025-09-30 09:05:14 +00:00",
     "reason": "Succesfully added: The 'AI' category was assigned because the entire article focuses on applying Artificial Intelligence to DevOps practices, including concrete use cases like machine learning-based monitoring, automated testing, and predictive analytics (AI Inclusion Rules 1, 4, 5). The 'DevOps' category was included because the article's core is about improving DevOps lifecycles and workflows (DevOps Inclusion Rules 3, 5, 9). Categories like 'Azure', 'ML', 'Security', or 'Coding' were not assigned as there is no mention of specific Microsoft technologies, hands-on coding examples, or depth in ML engineering; security is discussed at a high level only through DevSecOps examples. No generic exclusion rules apply."
+  },
+  {
+    "reason": "Succesfully added: Included the 'Azure' category because the tutorial is centered on Azure Storage Actions and managing Azure Blob/Data Lake Storage (Azure rule 1, 4). It demonstrates how to use the Exclude Prefix feature to configure automation within Azure using the portal and covers task creation and management specifics. The content does not address AI, DevOps, Coding, Security, ML, or GitHub Copilot categories; it focuses solely on platform configuration and storage task automation. No generic exclusion rules applied, and content exceeds the minimum length and provides clear technical value.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-paas-blog/exclude-prefix-in-azure-storage-action-smarter-blob-management/ba-p/4440075",
+    "timestamp": "2025-09-30 10:05:03 +00:00",
+    "collection": "community"
   }
 ]
