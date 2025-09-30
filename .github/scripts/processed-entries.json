@@ -10842,5 +10842,11 @@
     "collection": "community",
     "reason": "Succesfully added: Categories assigned: 'AI' due to the central focus on AI workloads and landing zones (AI inclusion rules 1, 4, 5); 'Azure' because all guidance and architecture concern Azure-specific services (Azure rules 1, 4, 5); 'Security' as the article is structured around security architecture, governance, and protection using multiple Microsoft security services (Security rules 1, 4, 5, 9). 'ML' is not included as the focus is on securing and operating AI environments rather than development or data science engineering. The content fully qualifies as it is technical, implementation-focused, and provides actionable architectural insight for practitioners, with no exclusion rules applicable.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/securing-ai-workloads-with-microsoft-defender-for-cloud-purview/ba-p/4457345"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric and OneLake are part of the Azure data platform, and the article describes integration and operational aspects of Azure-related services (Azure rule 1, 4, 6, 7). Assigned ML category because the content discusses using mirrored Oracle data for analytics, predictive models, and machine learning across Fabric workloads (ML rule 1, 4, 6). Did not assign AI because the article does not discuss Microsoft AI products or frameworks, nor does it focus on AI developer tools or specific AI platform features. Did not assign Coding, DevOps, GitHub Copilot, or Security as those technical areas are not covered or central. The content is fully technical, focused on data integration and modernization, meeting category thresholds.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/mirroring-for-oracle-in-microsoft-fabric-preview/",
+    "collection": "news",
+    "timestamp": "2025-09-30 01:31:05 +00:00"
   }
 ]
