@@ -8565,5 +8565,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=JBJhRB_wdx0",
     "collection": "videos",
     "timestamp": "2025-09-29 19:04:39 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to the Microsoft technology threshold rule under Multi-Platform Content Guidelines (Chapter 2 and Chapter 6). While the announcement covers important security improvements in the npm ecosystem—including token management and CI/CD workflows—the actual technologies and platforms discussed (npm, GitHub Actions, GitLab CI/CD, etc.) do not center on Microsoft technologies or make them ≥40% of the content. Azure Pipelines is referenced only as a future work item and is not part of the main guidance or technical steps presented. There are no substantial, actionable Microsoft-focused technical details as required for any Azure, DevOps, Security, or Coding categorization. As such, no categories apply.",
+    "timestamp": "2025-09-30 03:14:21 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-29-strengthening-npm-security-important-changes-to-authentication-and-token-management"
   }
 ]

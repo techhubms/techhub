@@ -10848,5 +10848,11 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/mirroring-for-oracle-in-microsoft-fabric-preview/",
     "collection": "news",
     "timestamp": "2025-09-30 01:31:05 +00:00"
+  },
+  {
+    "timestamp": "2025-09-30 05:05:20 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-master-github-copilot-build-prompt-deploy-smarter/ba-p/4456660",
+    "collection": "community",
+    "reason": "Succesfully added: Categories assigned as follows: 'GitHub Copilot' and 'AI' are both included because the entire content is about mastering GitHub Copilot, a developer AI tool (GitHub Copilot rules 1, 2, and AI rule 2). 'Coding' is added since the workshop covers concrete programming concepts, languages (JavaScript, Python, C#), and code quality, meeting Coding rules 1, 4, and 5. 'Azure' qualifies due to dedicated modules on deploying to Azure (Azure rule 1 and 4). Exclusion rules do not apply—the post is fully technical, in English, and meets length/quality requirements."
   }
 ]
