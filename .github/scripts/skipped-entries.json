@@ -8571,5 +8571,11 @@
     "reason": "No categories found: Content excluded due to the Microsoft technology threshold rule under Multi-Platform Content Guidelines (Chapter 2 and Chapter 6). While the announcement covers important security improvements in the npm ecosystem—including token management and CI/CD workflows—the actual technologies and platforms discussed (npm, GitHub Actions, GitLab CI/CD, etc.) do not center on Microsoft technologies or make them ≥40% of the content. Azure Pipelines is referenced only as a future work item and is not part of the main guidance or technical steps presented. There are no substantial, actionable Microsoft-focused technical details as required for any Azure, DevOps, Security, or Coding categorization. As such, no categories apply.",
     "timestamp": "2025-09-30 03:14:21 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-09-29-strengthening-npm-security-important-changes-to-authentication-and-token-management"
+  },
+  {
+    "timestamp": "2025-09-30 15:06:33 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because the content focuses on enhancing a GitHub user profile through the creation of a custom profile README. There is no discussion or instructional content relating to Microsoft core technologies, developer tools, or coding practices (such as .NET, Azure, AI, DevOps, Security, ML), nor does it cover GitHub Copilot or developer workflow. The tutorial is about personalizing one's GitHub profile for recruiters and the community, which is not within the scope of the included categories. According to Chapter 4 (Category Inclusion Rules), profile or branding enhancements do not qualify, and per the multi-platform rules, GitHub content must involve technical/developer-focused features, not personal branding.",
+    "canonical_url": "https://www.youtube.com/shorts/7YGrL-C3lNU"
   }
 ]

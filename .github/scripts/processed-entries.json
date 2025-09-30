@@ -10890,5 +10890,23 @@
     "canonical_url": "https://devblogs.microsoft.com/visualstudio/visual-studio-september-update/",
     "timestamp": "2025-09-30 14:04:49 +00:00",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-30 15:05:37 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on Grok 4, a frontier reasoning AI model, and its developer access via Azure AI Foundry (AI inclusion rule 1, 4, 6). Assigned Azure category since Azure AI Foundry is the delivery and management platform for Grok 4 (Azure inclusion rule 1, 4). Did not assign ML (content does not cover custom ML/data science), Coding, or Security categories (no direct development/code or security focus). No generic exclusion rules applied as this is official technical/product news with substantive technical details.",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/grok-4-is-now-available-in-azure-ai-foundry-unlock-frontier-intelligence-and-business-ready-capabilities/"
+  },
+  {
+    "timestamp": "2025-09-30 15:06:07 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category due to significant discussion of agentic AI, Security Copilot, and AI-driven security capabilities in Microsoft Sentinel (AI rules 1, 4, 5, and 6). Assigned Security category because the content is centrally about Microsoft security products, Sentinel as a SIEM platform, incident response, and security governance (Security rules 1, 4, 5, 6, 9, 10). Assigned Azure because Microsoft Sentinel is an Azure-native service and Azure AI Foundry/Defender/Purview integrations are discussed (Azure rules 1, 3, 4, 5). GitHub Copilot and Coding categories were not assigned because GitHub Copilot was mentioned solely as an environment used for building agents, not as a focus; coding/development content was not central to the main discussion. Generic exclusion rules do not apply; the content is high-quality, technical, and English.",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/09/30/empowering-defenders-in-the-era-of-agentic-ai-with-microsoft-sentinel/"
+  },
+  {
+    "timestamp": "2025-09-30 15:06:55 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Coding category because the content is about feature updates in Visual Studio Code, which is a Microsoft development tool (Coding rule 5). There is no mention of AI, Azure, DevOps, ML, Security, or GitHub Copilot, so those categories do not apply. The video aims at technical practices rather than business, biographical, or non-English content. The generic exclusion rules do not apply as this is a feature update intended for developers.",
+    "canonical_url": "https://www.youtube.com/watch?v=PWCWCQg_EUo"
   }
 ]

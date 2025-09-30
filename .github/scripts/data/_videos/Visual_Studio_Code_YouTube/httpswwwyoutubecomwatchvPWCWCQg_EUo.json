@@ -1,0 +1,18 @@
+{
+  "Link": "https://www.youtube.com/watch?v=PWCWCQg_EUo",
+  "EnhancedContent": null,
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "ProcessedDate": "2025-09-30 15:04:38",
+  "PubDate": "2025-09-30T14:00:49+00:00",
+  "Author": "Visual Studio Code",
+  "Description": "Hear about the latest updates to the coding agent integration in VS Code, directly from Alex and Osvaldo on the VS Code engineering team!\n\nCheck out the full release livestream: https://youtube.com/live/w2qMcctqv40",
+  "OutputDir": "_videos",
+  "FeedName": "Visual Studio Code YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Title": "What's new in VS Code: Coding agent integration updates"
+}
