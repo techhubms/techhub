@@ -8577,5 +8577,17 @@
     "collection": "videos",
     "reason": "No categories found: No categories were assigned because the content focuses on enhancing a GitHub user profile through the creation of a custom profile README. There is no discussion or instructional content relating to Microsoft core technologies, developer tools, or coding practices (such as .NET, Azure, AI, DevOps, Security, ML), nor does it cover GitHub Copilot or developer workflow. The tutorial is about personalizing one's GitHub profile for recruiters and the community, which is not within the scope of the included categories. According to Chapter 4 (Category Inclusion Rules), profile or branding enhancements do not qualify, and per the multi-platform rules, GitHub content must involve technical/developer-focused features, not personal branding.",
     "canonical_url": "https://www.youtube.com/shorts/7YGrL-C3lNU"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content describes a community event or live stream focused on open source collaboration and the introduction of an awards show. There is no evidence of substantive technical content related to specific Microsoft technologies or development practices in the provided text, nor is there any mention of topics that would qualify for categories such as AI, Azure, Coding, DevOps, Security, ML, or GitHub Copilot. Therefore, based on the inclusion rules and multi-platform threshold, and in the absence of technical details, the content is excluded.",
+    "canonical_url": "https://www.youtube.com/watch?v=fjeow5yRvuk",
+    "timestamp": "2025-09-30 16:05:21 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The video primarily discusses ADHD experiences, neurodiversity, emotional regulation, relationships, mental health, and coping strategies in life and the workplace. There is no substantive technical content related to Microsoft technologies, software development, coding, DevOps, Azure, AI, ML, Security, or any development frameworks or tools. The mention of 'neurodiversity in tech' and 'MicrosoftDeveloper' as a tag does not provide evidence of development-focused details. Per the rules in Chapter 3 (Job-Related Content, Workplace and Business Focus, and Non-Development Microsoft Products), content focusing on workplace wellbeing, mental health, personal experiences, and general tech culture is excluded unless there is a substantial technical implementation or developer experience focus, which is not present here.",
+    "canonical_url": "https://www.youtube.com/watch?v=MXfGk55trJk",
+    "timestamp": "2025-09-30 16:05:38 +00:00",
+    "collection": "videos"
   }
 ]

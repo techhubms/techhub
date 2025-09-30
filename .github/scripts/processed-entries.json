@@ -10908,5 +10908,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned the Coding category because the content is about feature updates in Visual Studio Code, which is a Microsoft development tool (Coding rule 5). There is no mention of AI, Azure, DevOps, ML, Security, or GitHub Copilot, so those categories do not apply. The video aims at technical practices rather than business, biographical, or non-English content. The generic exclusion rules do not apply as this is a feature update intended for developers.",
     "canonical_url": "https://www.youtube.com/watch?v=PWCWCQg_EUo"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the entire discussion and troubleshooting are about Azure Storage accounts, permissions, and PowerShell commands (Azure rule 1). Coding, DevOps, AI, ML, Security, and GitHub Copilot were not assigned because the discussion does not pertain to writing code, ML/data, security architecture, DevOps methodology, or AI. The technical focus is on Azure permissions and command-line storage account operations, fitting only the Azure category.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage/differences-between-powershell-and-browser-when-upload-file/m-p/4458068#M574",
+    "timestamp": "2025-09-30 16:06:08 +00:00",
+    "collection": "community"
   }
 ]
