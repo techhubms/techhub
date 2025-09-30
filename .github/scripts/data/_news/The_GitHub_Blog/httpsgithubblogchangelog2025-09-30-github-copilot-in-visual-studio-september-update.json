@@ -1,0 +1,17 @@
+{
+  "Title": "GitHub Copilot in Visual Studio — September update",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "EnhancedContent": "The September 2025 update to Visual Studio brings game-changing Profiler and .NET Modernization agents, more powerful MCP interactions, and smarter code reviews.\n\n### Highlights\n\nHere’s what’s new with GitHub Copilot in Visual Studio 2022 (v17.14):\n\n- **Profiler Agent**: Get started with Profiler Agent to find and fix performance issues more easily than ever before. `@Profiler`\nin Copilot Chat provides AI-powered analysis to highlight bottlenecks, suggest fixes, and optimize benchmarks in a guided loop.\n- **.NET Modernization Agent**: Upgrade your .NET projects to the latest versions and migrate them to Azure with the help of the .NET Modernization Agent. Right-click your project and select **Modernize** or prompt `@Modernize`\ndirectly in Copilot Chat to get started.\n- **Agent mode improvements**: Use agent mode more seamlessly thanks to faster response times, cleaner file management, and greater control. Agent mode is faster, smoother, and more stable with updates every month.\n- **MCP prompts, resources, and sampling**: Leverage more powerful and customizable model interactions with MCP prompts, contextual resources, and agentic sampling.\n- **Mermaid diagrams**: Visualize data structures and workflows by generating Mermaid diagrams with Copilot and clicking **Preview** to see the rendered diagrams directly in your Markdown editor.\n- **Smarter code reviews**: Access more powerful local code reviews with advanced reasoning, more insightful comments, and support for custom instructions.\n\n[Download Visual Studio](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&amp;channel=Release&amp;version=VS2022&amp;source=VSLandingPage&amp;cid=2030&amp;passive=false) to experience all the new Copilot features today. To learn more about what’s new, check out the [Visual Studio blog](https://devblogs.microsoft.com/visualstudio/visual-studio-september-update) and [release notes](https://learn.microsoft.com/visualstudio/releases/2022/release-notes?tabs=September).\n\n### What’s next for Copilot in Visual Studio\n\nStay up to date on the latest Copilot features by following the [Visual Studio blog](https://devblogs.microsoft.com/visualstudio), where you’ll find roadmap updates and opportunities to share feedback.\n\nFor the latest news, release notes, videos, and community conversations, visit the [Visual Studio Hub](https://visualstudio.microsoft.com/hub/), your central resource for all things Visual Studio.",
+  "PubDate": "2025-09-30T17:34:58+00:00",
+  "Description": "The September 2025 update to Visual Studio brings game-changing Profiler and .NET Modernization agents, more powerful MCP interactions, and smarter code reviews. Highlights Here’s what’s new with GitHub Copilot in…\n\nThe post [GitHub Copilot in Visual Studio — September update](https://github.blog/changelog/2025-09-30-github-copilot-in-visual-studio-september-update) appeared first on [The GitHub Blog](https://github.blog).",
+  "ProcessedDate": "2025-09-30 18:03:36",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedName": "The GitHub Blog",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "Link": "https://github.blog/changelog/2025-09-30-github-copilot-in-visual-studio-september-update"
+}

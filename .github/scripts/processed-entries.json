@@ -10950,5 +10950,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-is-headed-to-oracle-ai-world-2025-in-las-vegas/ba-p/4457390",
     "reason": "Succesfully added: Assigned AI category because the sessions and main content discuss implementing AI and AI-powered applications using Azure's cloud platform and Microsoft toolsets (AI rules 1, 4, and 5). Assigned Azure category as the event, sessions, and technical topics repeatedly focus on Oracle Database@Azure, Azure AI Foundry, Microsoft Fabric, and multicloud with Azure (Azure rules 1, 2, 4, 5, and 6). Assigned ML category because topics include data modernization, analytics engineering, and building intelligent applications—including data transformation, real-time analytics, and advanced analytics using Azure services (ML rules 1, 2, 3, 4, and 9). Did not assign Coding because while developer tools and platforms are central, the session descriptions and overview do not include programming languages, code-level programming, or framework-level tutorials. Did not assign Security or DevOps as neither software delivery pipelines nor security implementation are a central focus. No generic exclusion rule triggered—content is technical, explanatory, and clearly development/architecture oriented.",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-09-30 18:06:09 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-09-30-github-copilot-in-visual-studio-september-update",
+    "reason": "Succesfully added: The content qualifies for categories 'AI' and 'GitHub Copilot' by directly focusing on enhanced GitHub Copilot features in Visual Studio (AI rule 1, GitHub Copilot rules 1-6). The 'Coding' category applies due to integration with Visual Studio, improvements around .NET project modernization, performance profiling, and code review (Coding rules 1, 2, and 4). Exclusion rules do not apply as the article is technical, development-focused, and stays within the Microsoft ecosystem."
+  },
+  {
+    "timestamp": "2025-09-30 18:06:33 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-09-30-secret-scanning-adds-validators-for-mongodb-meta-and-microsoft-azure",
+    "reason": "Succesfully added: Assigned Security category as the primary focus is on credential protection and secret scanning (Security inclusion rule 1). Azure category applied since Microsoft Azure secrets and Entra ID are explicitly mentioned and validated (Azure inclusion rule 1). DevOps category is appropriate given the integration of secret scanning into continuous integration workflows and its impact on repository security (DevOps inclusion rule 5 and 7). Content is technical, focused on implementation details, and fits news type standards with no generic exclusion rules triggered."
   }
 ]

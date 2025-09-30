@@ -8601,5 +8601,11 @@
     "canonical_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2025/09/29/introducing-a-more-immersive-chat-experience-with-copilot-portraits/",
     "reason": "No categories found: Excluded all categories because this news article is about Copilot Portraits for the general Copilot chat interface, specifically a consumer-facing/office productivity scenario. The content describes an update to the Copilot Voice and Portraits features within Copilot Labs, not related to developer tools, coding, Microsoft AI development platforms, or any other qualifying category. Per the Copilot Product Distinction rules, 'Microsoft Copilot' (consumer version) and similar business/consumer productivity tools are explicitly excluded, and none of the inclusion rules for 'AI', 'GitHub Copilot', 'Azure', 'DevOps', 'Security', 'ML', or 'Coding' apply. There is no development or technical implementation content present.",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-30 18:05:45 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blogs.windows.com/windowsexperience/2025/09/30/how-to-get-the-windows-11-2025-update/",
+    "reason": "No categories found: No categories assigned because the content focuses primarily on end-user guidance for updating to the Windows 11 2025 Update. The article covers Windows update procedures, deployment advice for organizations, and new security/management features from an IT administration and OS operations perspective, but it does not include developer tooling, coding, Azure, DevOps, AI, ML, or Security technical implementation details from a developer or practitioner standpoint. The information is relevant for IT administrators and general users, but does not meet the threshold for development-oriented technical content as required by the inclusion rules. Generic exclusion for non-development Microsoft products and end-user OS update topics applies."
   }
 ]
