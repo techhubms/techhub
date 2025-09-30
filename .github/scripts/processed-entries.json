@@ -10860,5 +10860,17 @@
     "collection": "posts",
     "reason": "Succesfully added: Assigned the 'AI' category because the core focus is on using AI—including Microsoft technologies such as GitHub Copilot and OpenAI APIs—for automating and enhancing software architecture documentation (AI rule 1 and 4). Did not assign 'DevOps', 'Azure', or 'Coding' because although Microsoft tools (GitHub Copilot, CI/CD) are mentioned, the primary topic is the application of AI to documentation, not specific programming, DevOps workflows, or Azure service implementation. The article discusses general approaches and tools, some of which may involve Microsoft tech, but maintains a vendor-agnostic focus with AI at its center. The inclusion of GitHub Copilot is within the context of AI assistance, and other categories do not strictly apply under the provided workflow.",
     "canonical_url": "https://dellenny.com/documenting-architecture-using-ai-from-painful-chore-to-strategic-advantage/"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/aiops-bringing-intelligence-to-it-operations/",
+    "timestamp": "2025-09-30 09:04:47 +00:00",
+    "reason": "Succesfully added: Included AI category as the core subject is using artificial intelligence and machine learning (AI rules 1 and 4) to enhance IT operations. Included DevOps because the focus is on operational automation, CI/CD, and integrating process improvements in modern IT teams (DevOps rules 3, 5, 6). Did not add Azure, ML, or Coding since the article is conceptual and platform-agnostic, mentioning various platforms but not centering on Microsoft offerings or deep coding/ML implementation. No generic exclusions applied as the article is technical, actionable, and written in English."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-ai-is-transforming-devops-smarter-faster-and-more-reliable-software-delivery/",
+    "timestamp": "2025-09-30 09:05:14 +00:00",
+    "reason": "Succesfully added: The 'AI' category was assigned because the entire article focuses on applying Artificial Intelligence to DevOps practices, including concrete use cases like machine learning-based monitoring, automated testing, and predictive analytics (AI Inclusion Rules 1, 4, 5). The 'DevOps' category was included because the article's core is about improving DevOps lifecycles and workflows (DevOps Inclusion Rules 3, 5, 9). Categories like 'Azure', 'ML', 'Security', or 'Coding' were not assigned as there is no mention of specific Microsoft technologies, hands-on coding examples, or depth in ML engineering; security is discussed at a high level only through DevSecOps examples. No generic exclusion rules apply."
   }
 ]
