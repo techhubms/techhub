@@ -10998,5 +10998,29 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-general-availability-of-azure-local-on-microsoft/ba-p/4458013",
     "reason": "Succesfully added: Assigned 'Azure' category because the content is fundamentally about Azure Local, a service integrated with Azure Government and managed via the Azure portal (Azure rules 1, 4, 5). 'Security' was added due to multiple discussions of Microsoft Defender for Cloud, extended security updates, Trusted Launch, vTPM, BitLocker encryption, and compliance features, all central to the service (Security rules 1, 2, 3, 4, 7, 9). No 'AI', 'ML', 'DevOps', 'Coding', or 'GitHub Copilot' categories were applied as the content does not focus on those technologies or development practices. Content is English, sufficiently detailed, and not business/career or negative in tone, meeting all qualification thresholds.",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: The content showcases a round-up of community posts and blogs focused on Microsoft Fabric, with significant coverage of Data Engineering, Data Science, and the Fabric platform itself. Content includes technical implementation details concerning data pipelines, model evaluation in data science, advanced Power BI usage, semantic model governance, and CI/CD with Microsoft Fabric. Microsoft Fabric is a core Azure SaaS service, so the 'Azure' category is appropriate. Because several articles cover data engineering and data science topics (such as model metrics, Python/scikit-learn, and building data pipelines for analytics), the 'ML' category also applies per rules for data engineering/analytics/ML on Microsoft platforms. Other categories (AI, Coding, DevOps, Security) do not directly apply as the highlighted technical content stays focused on analytics, data, and platform implementation rather than general AI or broad coding/devops/security domains.",
+    "collection": "news",
+    "timestamp": "2025-09-30 21:05:19 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-september-2025/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Azure' category because the on-premises data gateway is a core service enabling hybrid/cloud connectivity for Microsoft data analytics platforms (Azure rule 1 and 4). Assigned the 'ML' category as the gateway and mirroring features directly support data integration and ETL processes for Microsoft Fabric and Power BI, aligning with ML rules 1 and 2 regarding data engineering and analytics workflows. Did not assign 'AI', 'DevOps', 'Coding', 'Security', or 'GitHub Copilot' as the content neither focuses on AI development, coding, DevOps tooling, security implementation, nor Copilot/assistant usage.",
+    "collection": "news",
+    "timestamp": "2025-09-30 21:05:38 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-september-2025-release/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric and VNET Data Gateway are Azure-based services (Azure rule 1 and 2). Added 'Security' as the content's main focus is securing data transfer within private networks using Microsoft tools (Security rules 1, 4, and 7). 'ML' is included because the data movement scenario directly supports analytics and machine learning workflows (ML rule 2: 'ETL/ELT processes for analytics, data science, or ML pipelines' and rule 7: 'Data integration for analytics/ML workloads'). No other categories directly apply—the post is not about development tooling or DevOps, nor about coding or AI services.",
+    "collection": "news",
+    "timestamp": "2025-09-30 21:05:59 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/secure-your-data-movement-with-copy-job-and-virtual-network-data-gateway/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content focuses on collaborating and contributing to an open source project using GitHub (DevOps rules 2 and 11). GitHub is central, and the video demonstrates developer practices, collaboration, and version control. No other categories apply, as there is no content on AI, Azure, ML, Security, or coding details beyond general collaboration. Generic exclusion rules do not apply, as the content is technical, community-focused, and in English.",
+    "collection": "videos",
+    "timestamp": "2025-09-30 21:06:31 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/QHQ0GCyyAjo"
   }
 ]
