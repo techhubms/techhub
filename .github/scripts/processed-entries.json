@@ -10968,5 +10968,35 @@
     "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric and Dataflow Gen2 are Azure-based enterprise data integration and analytics services (Azure rule 1); content discusses new integrations with Azure ADLS Gen2 and other Azure resources. Assigned ML because multiple sections detail enabling Lakehouse-first data science workflows, Spark-based model training, direct landing of feature sets for ML, as well as hybrid and orchestration scenarios (ML rules 1, 2, 3, and 9). AI was not assigned because the focus is on data engineering, integration, and data science enablement rather than direct AI capabilities or model usage. No generic exclusion rules were triggered.",
     "timestamp": "2025-09-30 19:04:48 +00:00",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-30 20:05:33 +00:00",
+    "canonical_url": "https://github.blog/ai-and-ml/generative-ai/spec-driven-development-using-markdown-as-a-programming-language-when-building-with-ai/",
+    "reason": "Succesfully added: Assigned 'AI' category as the article discusses workflows and best practices with GitHub Copilot and AI coding agents (AI rules 1, 2, 3, and 4). 'GitHub Copilot' is included because the workflow and tooling are built specifically around GitHub Copilot features and integration (GitHub Copilot rules 1–6). 'Coding' is assigned due to the hands-on development process—specifying app architecture, CLIs, database design, and actual programming tasks (Coding rules 1–5). Did not assign 'DevOps', 'Azure', 'ML', or 'Security' categories, as the focus does not touch on those topics.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-30 20:05:55 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-09-30-premium-requests-analytics-page-is-now-generally-available",
+    "reason": "Succesfully added: Assigned the 'GitHub Copilot' category because the analytics dashboard, API, and context all relate to Copilot premium request usage (see GitHub Copilot Category Rule 1 and 2). 'AI' is also included as per rules requiring 'AI' whenever GitHub Copilot applies. 'DevOps' is included because the dashboard and API provide actionable insights into usage and cost management, which are core to DevOps practices (DevOps Rule 5, 9, and GitHub content). No other categories apply as the content does not address coding development, security, ML/data engineering, or Azure-specific services.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-30 20:06:22 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=2r2SxVa70JQ",
+    "reason": "Succesfully added: Included the Coding category because the content is focused on technical updates for ASP.NET Core, Razor, and Hot Reload in Visual Studio, which are central Microsoft developer tools and frameworks (Coding rules 1, 2, and 5). Azure, DevOps, AI, ML, GitHub Copilot, and Security categories are not included, as there's no evidence of Azure platform focus, DevOps practices, AI/ML features, Copilot, or security-specific content. Input mentions only technical and coding-relevant topics.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-09-30 20:06:44 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=5eUbaOGbFpk",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content is centered on the use and enhancements of GitHub Copilot within Visual Studio Code, which meets AI and Copilot-specific inclusion criteria (AI rules 1-2, GitHub Copilot rules 1-2). 'Coding' was added as the features and demos are for developers using VS Code and Copilot, aligning with Coding inclusion rule 5. The input description and tags reference Copilot, VS Code, and background agents, confirming the technical focus.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-09-30 20:07:10 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-general-availability-of-azure-local-on-microsoft/ba-p/4458013",
+    "reason": "Succesfully added: Assigned 'Azure' category because the content is fundamentally about Azure Local, a service integrated with Azure Government and managed via the Azure portal (Azure rules 1, 4, 5). 'Security' was added due to multiple discussions of Microsoft Defender for Cloud, extended security updates, Trusted Launch, vTPM, BitLocker encryption, and compliance features, all central to the service (Security rules 1, 2, 3, 4, 7, 9). No 'AI', 'ML', 'DevOps', 'Coding', or 'GitHub Copilot' categories were applied as the content does not focus on those technologies or development practices. Content is English, sufficiently detailed, and not business/career or negative in tone, meeting all qualification thresholds.",
+    "collection": "community"
   }
 ]

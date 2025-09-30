@@ -1,0 +1,17 @@
+{
+  "Link": "https://github.blog/changelog/2025-09-30-premium-requests-analytics-page-is-now-generally-available",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "OutputDir": "_news",
+  "EnhancedContent": "Starting September 29, 2025, a new comprehensive premium request dashboard will be available that provides insights about your premium request activity dating back to August 1, 2025. This new dashboard aims to help enterprise customers, organizations, and individual developers easily understand how their usage translates to their final bill and provide answers to common premium request usage questions.\n\n![Chart showing top five users by usage with accompanying table displaying per-user model breakdown.](https://github.com/user-attachments/assets/447383cc-09aa-488b-95eb-8792bcf8fb6c)\n\nThe analytics page will be available as a subpage within the “Billing” platform pages. For more information, reference our [billing documentation](https://docs.github.com/billing/how-tos/products/view-productlicense-use). Access to the analytics page follows the same pattern as the rest of the billing platform experience. It will be available to enterprise owners, organization owners, billing managers, and personal account users with Copilot subscriptions.\n\nWe’re also shipping a dedicated API endpoint for premium request analytics data that allows users to build internal dashboards, create custom usage reports, and easily track expenses across teams. For more information reference our [API documentation](https://docs.github.com/rest/billing/enhanced-billing?apiVersion=2022-11-28).\n\n# Key features\n\nWith the new analytics dashboard, you can:\n\n- View total usage for premium requests across all products that consume premium requests.\n- Track the count of premium requests consumed beyond your monthly quota.\n- Monitor the total number of included premium requests consumed (i.e., requests used within your monthly quota).\n- Filter usage by user, model, organization, and cost center.\n- View detailed breakdowns by the number of included and billed premium requests.\n- See associated gross and billed amounts for your premium request usage.",
+  "Description": "Starting September 29, 2025, a new comprehensive premium request dashboard will be available that provides insights about your premium request activity dating back to August 1, 2025. This new dashboard…\n\nThe post [Premium requests analytics page is now generally available](https://github.blog/changelog/2025-09-30-premium-requests-analytics-page-is-now-generally-available) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedName": "The GitHub Blog",
+  "PubDate": "2025-09-30T18:05:46+00:00",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2025-09-30 20:03:03",
+  "Author": "Allison",
+  "Title": "Premium requests analytics page is now generally available",
+  "Tags": [
+    "copilot",
+    "Release"
+  ]
+}

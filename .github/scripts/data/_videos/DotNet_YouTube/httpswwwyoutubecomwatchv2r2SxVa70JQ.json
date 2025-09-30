@@ -1,0 +1,26 @@
+{
+  "Title": "ASP.NET Community Standup - Razor Reloaded",
+  "EnhancedContent": null,
+  "Description": "Get an inside look at the latest Razor tooling and Hot Reload enhancements coming to Visual Studio 2026 Insiders, straight from the team that's building it!!\n\n🔗 Links: https://www.theurlist.com/aspnet-standup-20251007\n\n🎙️ Featuring: Daniel Roth, Devin Breshears, Sayed Hashimi, David Wengier, Chris Sienkiewicz\n\n#dotnet #aspnetcore",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "ProcessedDate": "2025-09-30 20:04:11",
+  "PubDate": "2025-09-30T19:33:50+00:00",
+  "Author": "dotnet",
+  "Link": "https://www.youtube.com/watch?v=2r2SxVa70JQ",
+  "FeedLevelAuthor": "dotnet",
+  "FeedName": "DotNet YouTube",
+  "Tags": [
+    "aspdotnet",
+    "aspnetcore",
+    "demo",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetdeveloper",
+    "microsoft",
+    "razor",
+    "visualstudio2026",
+    "visualstudioinsiders"
+  ],
+  "OutputDir": "_videos"
+}
