@@ -8589,5 +8589,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=MXfGk55trJk",
     "timestamp": "2025-09-30 16:05:38 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-09-30 17:06:43 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/blog/studentdeveloperblog/imagine-cup-2026-where-students-build-what%E2%80%99s-next/4456700",
+    "reason": "No categories found: No categories were assigned because the content is primarily an event/competition announcement and overview, not a technical tutorial, implementation guide, or detailed Microsoft technology content. While it mentions Microsoft products (e.g., Azure credits, AI, cybersecurity), the focus is on participating in the Imagine Cup, eligibility, tracks, and prizes, rather than demonstrating or explaining Microsoft technology use or development. This aligns with the workflow's rules that exclude content which is mostly competition announcements, even if developer-focused, unless there is significant coverage of hands-on technical topics.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-09-30 17:06:56 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2025/09/29/introducing-a-more-immersive-chat-experience-with-copilot-portraits/",
+    "reason": "No categories found: Excluded all categories because this news article is about Copilot Portraits for the general Copilot chat interface, specifically a consumer-facing/office productivity scenario. The content describes an update to the Copilot Voice and Portraits features within Copilot Labs, not related to developer tools, coding, Microsoft AI development platforms, or any other qualifying category. Per the Copilot Product Distinction rules, 'Microsoft Copilot' (consumer version) and similar business/consumer productivity tools are explicitly excluded, and none of the inclusion rules for 'AI', 'GitHub Copilot', 'Azure', 'DevOps', 'Security', 'ML', or 'Coding' apply. There is no development or technical implementation content present.",
+    "collection": "news"
   }
 ]

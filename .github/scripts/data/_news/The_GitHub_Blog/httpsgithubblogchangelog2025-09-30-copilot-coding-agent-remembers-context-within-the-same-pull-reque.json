@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-09-30T16:50:47+00:00",
+  "FeedName": "The GitHub Blog",
+  "Title": "Copilot coding agent remembers context within the same pull request",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "Author": "Allison",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "OutputDir": "_news",
+  "Description": "Copilot coding agent is our asynchronous, background developer agent. Delegate a task to Copilot, and it opens a draft pull request, makes changes in the background, then requests review from…\n\nThe post [Copilot coding agent remembers context within the same pull request](https://github.blog/changelog/2025-09-30-copilot-coding-agent-remembers-context-within-the-same-pull-request) appeared first on [The GitHub Blog](https://github.blog).",
+  "ProcessedDate": "2025-09-30 17:03:29",
+  "EnhancedContent": "Copilot coding agent is our asynchronous, background developer agent. Delegate a task to Copilot, and it opens a draft pull request, makes changes in the background, then requests review from you.\n\nAfter Copilot coding agent requests your review, you can leave comments, mentioning `@copilot` , to ask it to make changes. This starts a new session.\n\nNow, Copilot remembers context between sessions for the same pull request, instead of exploring the repository and reading the same files again and again. This makes the agent faster and more reliable for follow-up requests.\n\nCopilot coding agent is available to Copilot Pro, Copilot Pro+, Copilot Business, and Copilot Enterprise subscribers. If you’re a Copilot Business or Copilot Enterprise subscriber, an administrator will have to [enable Copilot coding agent from the “Policies” page](https://docs.github.com/enterprise-cloud@latest/copilot/how-tos/agents/copilot-coding-agent/enabling-copilot-coding-agent) before you can use it. To learn more about Copilot coding agent, head to [our documentation on coding agent](https://docs.github.com/enterprise-cloud@latest/copilot/concepts/agents/coding-agent/about-coding-agent).",
+  "Link": "https://github.blog/changelog/2025-09-30-copilot-coding-agent-remembers-context-within-the-same-pull-request"
+}
