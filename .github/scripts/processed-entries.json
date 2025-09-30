@@ -10854,5 +10854,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-master-github-copilot-build-prompt-deploy-smarter/ba-p/4456660",
     "collection": "community",
     "reason": "Succesfully added: Categories assigned as follows: 'GitHub Copilot' and 'AI' are both included because the entire content is about mastering GitHub Copilot, a developer AI tool (GitHub Copilot rules 1, 2, and AI rule 2). 'Coding' is added since the workshop covers concrete programming concepts, languages (JavaScript, Python, C#), and code quality, meeting Coding rules 1, 4, and 5. 'Azure' qualifies due to dedicated modules on deploying to Azure (Azure rule 1 and 4). Exclusion rules do not apply—the post is fully technical, in English, and meets length/quality requirements."
+  },
+  {
+    "timestamp": "2025-09-30 08:05:11 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the 'AI' category because the core focus is on using AI—including Microsoft technologies such as GitHub Copilot and OpenAI APIs—for automating and enhancing software architecture documentation (AI rule 1 and 4). Did not assign 'DevOps', 'Azure', or 'Coding' because although Microsoft tools (GitHub Copilot, CI/CD) are mentioned, the primary topic is the application of AI to documentation, not specific programming, DevOps workflows, or Azure service implementation. The article discusses general approaches and tools, some of which may involve Microsoft tech, but maintains a vendor-agnostic focus with AI at its center. The inclusion of GitHub Copilot is within the context of AI assistance, and other categories do not strictly apply under the provided workflow.",
+    "canonical_url": "https://dellenny.com/documenting-architecture-using-ai-from-painful-chore-to-strategic-advantage/"
   }
 ]
