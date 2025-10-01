@@ -8607,5 +8607,11 @@
     "collection": "news",
     "canonical_url": "https://blogs.windows.com/windowsexperience/2025/09/30/how-to-get-the-windows-11-2025-update/",
     "reason": "No categories found: No categories assigned because the content focuses primarily on end-user guidance for updating to the Windows 11 2025 Update. The article covers Windows update procedures, deployment advice for organizations, and new security/management features from an IT administration and OS operations perspective, but it does not include developer tooling, coding, Azure, DevOps, AI, ML, or Security technical implementation details from a developer or practitioner standpoint. The information is relevant for IT administrators and general users, but does not meet the threshold for development-oriented technical content as required by the inclusion rules. Generic exclusion for non-development Microsoft products and end-user OS update topics applies."
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This article is centered on Anthropic's Claude Sonnet 4.5 model release and its capabilities for coding, automation, developer workflows, and AI agent use. There is no substantive technical focus on Microsoft technologies—Azure, GitHub, .NET, or other Microsoft developer platforms are not central to the solution or discussed in technical depth. Incidental mentions of industry uses or developer workflows do not meet the ≥40% Microsoft centrality threshold required for category inclusion. Per the Multi-Platform Content Threshold section and core guidelines, currently this does not qualify for any Microsoft technology categories.",
+    "canonical_url": "https://devops.com/anthropic-launches-claude-sonnet-4-5-built-for-production-coding-and-extended-autonomous-work/",
+    "timestamp": "2025-10-01 07:04:53 +00:00",
+    "collection": "posts"
   }
 ]

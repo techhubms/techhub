@@ -11046,5 +11046,35 @@
     "timestamp": "2025-10-01 05:05:06 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-a-secure-and-compliant-azure-ai-landing-zone-policy/ba-p/4457165",
     "reason": "Succesfully added: Assigned AI category because the content focuses on governance and compliance for Microsoft AI/ML services (AI rule 1 and 4). Assigned Azure because the Azure AI Landing Zone and Azure resource governance are central (Azure rule 1 and 4). Assigned Security since major focus is on securing AI assets, enforcing compliance, and protecting data (Security rules 1, 4, 7, 10). Assigned DevOps because of Policy as Code, use of CI/CD, Infrastructure as Code, and automation with EPAC (DevOps rules 2, 5, 6). Coding and ML categories were not included since the post is about governance, policy, security, and operational automation, not hands-on code development or data science/analytics engineering. All decisions are based strictly on the presence and intent of AI, Azure, Security, and DevOps features discussed throughout the content."
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category based on the article's core focus on artificial intelligence agents integrated into the ControlMonkey platform (AI inclusion rule 1 and 5). Assigned DevOps because the content centers around infrastructure automation, IaC tooling (Terraform), DevOps team policy enforcement, and developer operations practices (DevOps inclusion rules 1, 5, and 6). No Microsoft-specific technologies are central, so categories like Azure, Coding, ML, or Security are not assigned. Explanation and tag selection reflect included technical details and major thematic elements.",
+    "canonical_url": "https://devops.com/controlmonkey-adds-ai-agents-to-infrastructure-automation-platform/",
+    "timestamp": "2025-10-01 07:05:15 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the article focuses on the integration of artificial intelligence features (Static Code Analyzer Agent, use of AI agents, Model Context Protocol) into infrastructure automation platforms (AI inclusion rule 1 and 4). Assigned 'DevOps' because the primary topic is infrastructure automation, policy enforcement, and workflow improvements for DevOps teams (DevOps inclusion rules 1, 3, 5, 6). Did not assign Azure or Coding since there is no Microsoft-specific cloud or significant code/content focused on Microsoft development frameworks. ML and Security were not assigned because, although compliance and security are mentioned, the content does not center on ML or security engineering as defined by inclusion rules.",
+    "canonical_url": "https://devops.com/env-zero-revamps-infrastructure-automation-platform-for-ai-era/",
+    "timestamp": "2025-10-01 07:05:37 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because Qwiet AI uses AI agents and AI-driven code analysis tools, central to the article (AI rule 1, 4). Assigned DevOps category because the main context is the integration of security into DevOps workflows, with emphasis on the software development lifecycle (DevOps rules 3, 5). Assigned Security category due to the focus on application security, vulnerability detection, DevSecOps, and secure code delivery (Security rules 1, 2, 4, 6). No Microsoft-specific technologies are discussed, but since categories are not limited to Microsoft when the main topic is DevOps + AI + Security as technical subjects, these three categories are appropriate.",
+    "canonical_url": "https://devops.com/harness-acquires-qwiet-ai-to-gain-code-testing-tool/",
+    "timestamp": "2025-10-01 07:05:59 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content is centrally about DevOps workflows, application development platforms, and the evaluation of Microsoft and its competitors in supporting modern software development lifecycles. The article offers a technical, comparison-driven overview focused on platform-facing developer tools and DevOps practices—meeting Tech Hub's criteria for technical, practitioner-oriented evaluations. The presence of AI as a topic is not technical or Microsoft-specific enough (mostly market/strategy-level commentary) to warrant the AI category, and there's no focus on specific coding frameworks, Azure services, or security implementation details, so no other categories apply.",
+    "canonical_url": "https://devops.com/report-microsoft-aws-and-google-atop-software-development-platform-heap/",
+    "timestamp": "2025-10-01 07:06:25 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the content centers on the impact of AI and AI-generated code on software development workflows (AI inclusion rule 5). Assigned 'DevOps' because the focus is the DevOps challenges, productivity, automation, and pipeline issues created by AI code (DevOps rules 3, 4, 5). Did not assign 'Azure', 'Coding', 'Security', or 'ML' because the article discusses platform-agnostic DevOps challenges and does not reference any Microsoft-specific technology, coding languages/frameworks, or deep dives into security implementation or ML engineering. The content is educational, not a sales pitch, sufficiently technical, and meets the inclusion standards.",
+    "canonical_url": "https://devops.com/survey-surfaces-downstream-devops-challenges-created-by-ai-code/",
+    "timestamp": "2025-10-01 07:06:49 +00:00",
+    "collection": "posts"
   }
 ]
