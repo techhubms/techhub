@@ -11202,5 +11202,41 @@
     "reason": "Succesfully added: Content was assigned the AI category because it centers on Microsoft Agent Framework, multi-agent orchestration, and Azure AI Foundry, all qualifying under AI category rules 1, 3, 4 and 6. The Azure category is included due to demonstrated use of Azure AI Foundry and integration with Azure services (Azure rule 1 and 4). The Coding category is included because the Agent Framework is an SDK for developers, with technical details on APIs, SDKs, and workflow implementation (Coding rules 1, 2, and 4). No other categories were assigned, as the post does not focus on DevOps, ML (in the data science sense), GitHub Copilot, or Security topics per their inclusion rules.",
     "timestamp": "2025-10-01 20:04:31 +00:00",
     "canonical_url": "https://azure.microsoft.com/en-us/blog/introducing-microsoft-agent-framework/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the article centers on AI-powered functions (summarization, classification, translation, sentiment analysis) integrated into Data Wrangler, matching AI inclusion rules 1, 3, and 4. Assigned ML because the content addresses data science workflows, scalable transformations, and big data pipelines with pandas and PySpark in Microsoft Fabric, per ML inclusion rules 1, 2, and 3. Did not add Azure (focus is on Microsoft Fabric/Data Wrangler). No generic exclusion rules triggered; content is technical and implementation-oriented.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/accelerate-data-transformation-with-ai-functions-in-data-wrangler/",
+    "timestamp": "2025-10-01 21:04:15 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category because the content focuses on preventing data exfiltration and implementing outbound access restrictions (Security rules 1, 4, 7). Assigned Azure category because Microsoft Fabric is a core Azure platform and the workspace control features are accessed via the Azure ecosystem (Azure rule 1). Assigned ML category since Spark workloads in Fabric are commonly associated with ML/data engineering tasks, and OAP impacts how these workloads can securely interact (ML rule 1 and 2). All included categories directly relate to announced features and scenarios; no generic exclusion rules apply.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/workspace-outbound-access-protection-for-spark-is-now-generally-available/",
+    "timestamp": "2025-10-01 21:04:33 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: The content qualifies for the AI category as it extensively covers an open standard for AI development (MCP), focusing on agent/tool integration, developer workflows, productivity, and security (AI inclusion rules 1, 4, and 5). It qualifies for the DevOps category because MCP addresses fragmentation in developer toolchains, impacts agentic IDE experience, and discusses secure integration and governance—central to DevOps practices (DevOps rules 3, 5, and 6). There is no coverage of Microsoft-specific platforms/products, so Azure, ML, Coding, Security, and GitHub Copilot categories are not relevant. Generic exclusion rules do not apply—the content is technical, non-biographical, not a sales pitch, and English-language throughout. The tags are selected for technical depth, reflecting key concepts, protocols, enterprise security, workflow features, and tool interoperability.",
+    "canonical_url": "https://devops.com/how-model-context-protocol-mcp-is-fueling-the-next-era-of-developer-productivity/",
+    "timestamp": "2025-10-01 21:05:02 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the entire article centers on NLP (a major AI domain), model architectures (transformers/embeddings), automation, and prompt engineering, consistent with AI inclusion rules (AI rules 1, 3, 4, 5). Assigned DevOps because the piece details integration with CI/CD, deployment strategies, production workloads, horizontal scaling, and developer workflow optimizations (DevOps rules 1, 3, 5, 6). Did not assign Coding, Azure, ML, Security, or GitHub Copilot because Microsoft-specific technologies, custom ML development, direct coding practices, or security topics are not substantively covered or central. GitHub Copilot is referenced as an example but not a technical focus—thus only AI and DevOps are included. Generic exclusion rules do not apply: the content is technical, substantial, not negative, and not business strategy/executive-focused.",
+    "canonical_url": "https://devops.com/nlp-tools-for-intelligent-documentation-and-developer-enablement/",
+    "timestamp": "2025-10-01 21:05:25 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned are DevOps and Security. DevOps qualifies due to in-depth discussion of supply chain attacks targeting CI/CD pipelines, build workflows, and automation practices (DevOps rules 2, 5, 9). Security is included because the content describes credential theft, secret scanning, security best practices, and recommendations to harden pipelines against malware (Security rules 1, 2, 5, 9). No Microsoft-specific technology is discussed in an architectural or platform capacity, so Azure, AI, ML, and Coding categories do not apply. The inclusion is justified by the central focus on actionable DevOps and security practices aligned with technical implementation and pipeline management, not just theoretical discussion or business strategy.",
+    "canonical_url": "https://devops.com/worms-in-the-supply-chain-shai-hulud-and-the-next-devops-reckoning/",
+    "timestamp": "2025-10-01 21:05:47 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the content focuses on Azure Resource Manager and operations management (Azure rule 1). Added DevOps since it covers operational resource management and governance practices (DevOps rules 6 and 7). Included Security because the guidance relates to compliance, auditing, and accountability, which are security-involved activities (Security rules 1, 4, and 5). No categories like AI, ML, Coding, or GitHub Copilot apply because there are no references to those technologies or developer tools in the content.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/who-created-this-azure-resource-here-s-how-to-find-out/ba-p/4458470",
+    "timestamp": "2025-10-01 21:06:16 +00:00",
+    "collection": "community"
   }
 ]
