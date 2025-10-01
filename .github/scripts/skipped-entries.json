@@ -8661,5 +8661,11 @@
     "reason": "No categories found: The content field is null and the description is empty. There is no substantive content to analyze or categorize. According to the Generic Exclusion Rules (Format and Length Exclusions), content with missing or empty main text is excluded because there is no technical information to process or assess for category inclusion.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/Uyqtl3BIlMw"
+  },
+  {
+    "timestamp": "2025-10-01 16:06:52 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/passed-az-104-exam-in-2025-with-practice-questions/m-p/4458366#M22253",
+    "reason": "Insufficient content length",
+    "collection": "community"
   }
 ]

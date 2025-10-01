@@ -11130,5 +11130,11 @@
     "reason": "Succesfully added: Assigned the AI category because the content is centered on Microsoft's Agent Framework, which is explicitly an SDK for building agentic AI systems (AI rule 1). Added the Azure category as the framework features direct support and integrations with Azure AI services and Azure OpenAI, making Azure central to intended use (Azure rule 1 and 4). Assigned Coding as the framework involves .NET and Python programming, developer SDKs, and code samples (Coding rules 1, 2, and 5). The content provides clear technical guidance, targets developers, and meets all quality, technical detail, and Microsoft technology centrality requirements. No generic exclusion rules were triggered; author and content focus fully align with inclusion rules.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-the-microsoft-agent-framework/ba-p/4458377"
+  },
+  {
+    "timestamp": "2025-10-01 16:06:34 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/ai-powered-development-with-fabric-data-factory-ingest-transform-and-understand-your-data-with-copilot/",
+    "reason": "Succesfully added: Assigned AI category because the entire content is about Copilot (an AI-powered assistant) enhancing Data Factory workflows with natural language processing and automation (AI rules 1, 4, and 5). Assigned Azure category, as Fabric Data Factory is a Microsoft cloud service operating within the Azure ecosystem (Azure rule 1). Did NOT assign ML: while advanced data manipulation is described, the focus is on AI-driven productivity and automation rather than data science/ML engineering tasks. Did NOT assign Coding: there is no explicit programming, code walkthrough, or development framework usage. Did NOT assign DevOps or Security: no process automation, CI/CD, or security implementation is discussed. The blog meets all inclusion and quality requirements and does not trigger any generic exclusions.",
+    "collection": "news"
   }
 ]
