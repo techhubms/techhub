@@ -8667,5 +8667,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/passed-az-104-exam-in-2025-with-practice-questions/m-p/4458366#M22253",
     "reason": "Insufficient content length",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-01 17:04:38 +00:00",
+    "canonical_url": "https://blogs.windows.com/windowsexperience/2025/10/01/microsoft-marks-50-years-with-limited-edition-crocs-shoes-nodding-to-windows-xp/",
+    "reason": "No categories found: All content centers on a promotional announcement for a limited-edition consumer product (Crocs shoes) celebrating Microsoft’s anniversary, with no technical information, developer insight, or discussion of Microsoft technologies relevant for practitioners. This is a brand/culture/event news piece, not technical content. Generic exclusion rules for Sales Pitches and Non-Development Microsoft Products (business/culture events, not technical) apply—no categories are assigned.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-01 17:04:52 +00:00",
+    "canonical_url": "https://news.xbox.com/en-us/2025/10/01/xbox-game-pass-ultimate-premium-essential-plans/",
+    "reason": "No categories found: No categories assigned. The content is exclusively consumer-facing news about Xbox Game Pass upgrades, focused on gaming subscriptions, new plans, and benefits for gamers on Xbox consoles, PC, and cloud. There is no technical depth, developer, or coding/deployment focus, nor does it cover topics related to actual development, AI, DevOps, coding, ML, security, or Microsoft cloud/enterprise products as required by the category inclusion rules. The entire article is a product feature and service announcement for end users in the gaming segment. Per Generic Exclusion Rules, non-development Microsoft product content and general end-user business or consumer product updates must be excluded.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-01 17:06:29 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=6aCrYQKCv0E",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The provided content is an event announcement and promotional save-the-date for .NET Conf 2025, with social media and web resource links, but no substantive technical information, implementation details, or educational material. It serves as a marketing announcement without technical depth (Generic Exclusion: Sales Pitches/Promotional Content).",
+    "collection": "videos"
   }
 ]

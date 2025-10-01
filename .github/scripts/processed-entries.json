@@ -11136,5 +11136,41 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/ai-powered-development-with-fabric-data-factory-ingest-transform-and-understand-your-data-with-copilot/",
     "reason": "Succesfully added: Assigned AI category because the entire content is about Copilot (an AI-powered assistant) enhancing Data Factory workflows with natural language processing and automation (AI rules 1, 4, and 5). Assigned Azure category, as Fabric Data Factory is a Microsoft cloud service operating within the Azure ecosystem (Azure rule 1). Did NOT assign ML: while advanced data manipulation is described, the focus is on AI-driven productivity and automation rather than data science/ML engineering tasks. Did NOT assign Coding: there is no explicit programming, code walkthrough, or development framework usage. Did NOT assign DevOps or Security: no process automation, CI/CD, or security implementation is discussed. The blog meets all inclusion and quality requirements and does not trigger any generic exclusions.",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-01 17:05:13 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/startups/blog/building-effortless-events-how-inevent-and-microsoft-for-startups-are-transforming-event-management/",
+    "reason": "Succesfully added: Assigned AI category because Azure OpenAI Service and AI-driven automation (using ChatGPT) are central to workflow improvements (AI category rule 1 and 5). Assigned Azure category due to extensive use of Azure infrastructure (AKS, Azure Marketplace) and Azure AD integration (Azure category rule 1, 2, and 4). Assigned Security category because of detailed coverage of Azure Active Directory single sign-on and enterprise authentication (Security category rule 1 and 3). Did not assign Coding, DevOps, or ML because the article focuses on service integration, automation, and event infrastructure rather than hands-on development, CI/CD, or data science implementation.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-01 17:05:43 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/10/01/cybersecurity-awareness-month-security-starts-with-you/",
+    "reason": "Succesfully added: Assigned Security category due to central focus on cybersecurity awareness, security resources, Secure Future Initiative, and extensive discussion of multifactor authentication, risk mitigation, and training (Security rules 1, 2, 3, 4, 5, 7, 9). Assigned AI category because the article addresses the role of AI in security practices, risk management in the AI era, and offers AI-related security training (AI rule 5, 6). Coding, DevOps, Azure, ML, and GitHub Copilot categories were not assigned as the content does not detail software development, operations, Azure service architecture, or machine learning/data science implementation. Generic exclusion rules do not apply—the post contains actionable technical and organizational content, not biographical, business/management, or promotional in nature.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-01 17:06:05 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/unlock-vss-benefits-myvisualstudio/",
+    "reason": "Succesfully added: Assigned Azure category due to emphasis on Azure credits and Dev/Test environments (Azure rule 1, 4). DevOps category was included for focus on development environments, team benefits, and resource utilization (DevOps rules 3, 5, and 9). Coding category is relevant since the article highlights developer-centric features, software downloads for coding, and individual developer stories (Coding rule 4). Did not include AI, Security, ML, or GitHub Copilot as these were not covered or central in the content. No generic exclusion rules applied.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-01 17:06:48 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/Ysm86Aymd2M",
+    "reason": "Succesfully added: Assigned the AI category because the video discusses AI models, agent-based AI approaches, and broader AI trends (AI rule 1 and 5). Assigned the Azure category because Azure AI Foundry is referenced as a key enabler in this space (Azure rule 1 and 3). No Coding, DevOps, ML, Security, or GitHub Copilot categories, as the content does not describe code, development frameworks, operations, specific ML engineering, security topics, or GitHub Copilot. Content is technical and development-oriented, meets quality standards, and is not excluded by generic rules.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-01 17:07:05 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=vewSU9egocs",
+    "reason": "Succesfully added: Assigned the AI category because the content is centered around the evolution in artificial intelligence from models to agents and explicitly mentions Azure AI Foundry—a Microsoft AI platform (AI rules 1, 4, and 6). No other categories qualify as there is no detail about coding, ML, Azure architecture specifics, or security/devops topics. Coding, Azure, ML, DevOps, Security, and GitHub Copilot are not relevant based on the provided description.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-01 17:07:33 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-public-preview-asev3-outbound-network-segmentation/ba-p/4458398",
+    "reason": "Succesfully added: Included the Azure category because the content is fully focused on Azure's App Service Environment v3 features (Azure rule 1 and 4). Added the Security category as the post centers on controlling outbound traffic, egress control, NSGs, and firewall integration, all of which are security topics (Security rules 1, 2, 4, and 7). Coding, AI, DevOps, ML, or GitHub Copilot categories do not apply, since there is no code-level development, AI, devops pipelines, or ML focus. The content is technical, not a sales pitch, not biographical, primarily English, and easily exceeds the 200-word threshold for community posts.",
+    "collection": "community"
   }
 ]
