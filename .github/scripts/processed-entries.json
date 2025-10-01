@@ -11076,5 +11076,23 @@
     "canonical_url": "https://devops.com/survey-surfaces-downstream-devops-challenges-created-by-ai-code/",
     "timestamp": "2025-10-01 07:06:49 +00:00",
     "collection": "posts"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because the entire piece centers on agentic AI and frameworks built to enable reasoning, collaboration, orchestration, and automation with AI (AI Category rules 1, 3, 4, 5). Assigned 'Azure' because core deployment, observability, and integration features are tied to Azure AI Foundry, Azure pipelines, and services (Azure rules 1, 4, 5), and Azure is repeatedly referenced as a deployment and hosting backbone. Assigned 'Coding' because the article deeply explores SDKs (for both .NET and Python), code-level abstractions, and developer workflows (Coding rules 2, 4, 5). Specific mention of declarative agent definitions, connectors, and extensibility for programmers supports this. No ML category because focus is not specifically on data science/model development from scratch, but rather on building, managing, and deploying AI-powered agents leveraging Microsoft’s platforms. No DevOps as main focus is architectural framework and agent logic wiring, not primarily CI/CD or ops engineering. No Security: while security/compliance is mentioned (Entra ID, content safety), it’s not the main focus of content.",
+    "canonical_url": "https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/",
+    "timestamp": "2025-10-01 14:05:36 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Included 'AI' and 'GitHub Copilot' categories as the content centers on Copilot's AI-powered model selection within Visual Studio Code for enterprise development workflows (AI rule 1, 2; GitHub Copilot rules 1-4). The feature is described as part of an enhanced developer experience, rather than business productivity or end-user functionality. The focus on transparency, model policy, and admin controls further supports categorization under developer AI tooling.",
+    "canonical_url": "https://github.blog/changelog/2025-09-30-auto-model-selection-is-now-in-vs-code-for-copilot-business-and-enterprise",
+    "timestamp": "2025-10-01 14:06:41 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Included the 'AI' category because the content is centrally about building multi-agent intelligent systems using LLMs and Microsoft AI services, specifically Azure OpenAI, which fits AI Inclusion Rules 1 and 4. 'Azure' is included since the text explicitly references Azure AI and Azure OpenAI as supported providers, and covers integration with Azure SDKs (Azure Inclusion Rules 1, 3). 'Coding' is applicable because the content targets developers, dives into .NET and Python SDK usage, contains code install commands, and is about programming frameworks (Coding Inclusion Rules 1, 2, and 4). 'DevOps', 'ML', 'GitHub Copilot', and 'Security' were not assigned because the content does not prominently feature deployment practices, machine learning engineering, Copilot features, or security implementation, per inclusion/exclusion rules. The content is written in an eligible, technical style, does not trigger any generic exclusion rules, and the author and tags are suitable.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-the-micrsoft-agent-framework/ba-p/4458377",
+    "timestamp": "2025-10-01 14:07:25 +00:00"
   }
 ]

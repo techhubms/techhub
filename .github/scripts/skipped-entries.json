@@ -8613,5 +8613,41 @@
     "canonical_url": "https://devops.com/anthropic-launches-claude-sonnet-4-5-built-for-production-coding-and-extended-autonomous-work/",
     "timestamp": "2025-10-01 07:04:53 +00:00",
     "collection": "posts"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-01 08:05:05 +00:00",
+    "canonical_url": "https://dellenny.com/mastering-clipchamp-from-beginner-to-pro-2/",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The post 'Mastering Clipchamp – From Beginner to Pro 2' is an end-user tutorial on video editing with Clipchamp. Clipchamp is a Microsoft-owned product, but the content focuses exclusively on practical editing actions (trimming, splitting, resizing clips) for general users, not development, coding, or technical implementation related to Microsoft's developer or cloud products. There are no references to programming, automation, extensibility, or technical architecture. Per the rules in Chapter 3 (Non-Development Microsoft Products), content about end-user business or consumer products, unless focused on coding or development, does not qualify for any categories."
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-01 08:05:18 +00:00",
+    "canonical_url": "https://dellenny.com/mastering-clipchamp-from-beginner-to-pro-3/",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The post 'Mastering Clipchamp – From Beginner to Pro 3' is focused on video editing and audio features using Clipchamp, a Microsoft end-user application. There is no substantial coverage of development, coding, Azure, AI, ML, DevOps, or security topics. The content is purely instructional for general video creation, not for developer or technical implementation. As per the 'Non-Development Microsoft Products' exclusion (Chapter 3), content about end-user features (including Office/Microsoft 365 and Clipchamp) is excluded unless there is a clear developer or coding focus, which is not present here."
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-01 08:05:31 +00:00",
+    "canonical_url": "https://dellenny.com/mastering-clipchamp-from-beginner-to-pro-4/",
+    "reason": "No categories found: All categories are excluded based on the generic exclusion rules. The content is a how-to post about using text, titles, and subtitles within Clipchamp, which is a Microsoft product for video editing. However, Clipchamp is an end-user video editing application and the post only covers end-user feature usage (text overlays, subtitles, basic customization), not development, coding, scripting, or integration. There is no mention of any development, automation, API, or scripting aspects that would justify categorization into AI, Azure, Coding, DevOps, ML, Security, or GitHub Copilot categories. Per the Non-Development Microsoft Products exclusion rule, product usage tutorials that are not focused on development or technical implementation are excluded."
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/canada/features/ai/first-west-credit-union-copilot-deployment/",
+    "reason": "No categories found: No categories assigned. The content is entirely focused on Microsoft 365 Copilot as a business productivity and workplace tool for branch operations at a credit union. This is excluded by Generic Exclusion Rules (Non-Development Microsoft Products), as outlined in Chapters 3 and 4: Microsoft 365 Copilot is a business productivity assistant, not a developer tool. The article centers on administrative efficiency, meeting preparation, and personalized banking—not developer technologies, coding, AI development, or technical implementation. No category (AI/Coding/Azure/ML/etc.) applies.",
+    "timestamp": "2025-10-01 13:13:20 +00:00",
+    "collection": "news"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: Content is excluded based on generic exclusion rules. The post is primarily an announcement and promotional invite to join a '5 Day AI Challenge' without any substantive technical content, implementation details, or educational depth on Microsoft technologies. It contains no description of what tools, platforms, or frameworks are used, and does not meet the required threshold for technical information per this workflow. The purpose of the post is to encourage sign-ups and participation, not to provide technical learning or actionable content. This falls squarely within the sales/promotion exclusion and lacks the required technical detail for inclusion in any category.",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_ai-is-reshaping-the-way-we-work-but-how-activity-7378850599334952960-AzqC",
+    "timestamp": "2025-10-01 14:05:59 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: All applicable generic exclusion rules were evaluated. This post is primarily a brief, celebratory LinkedIn message marking Excel's 40th birthday, written by Satya Nadella. The body content consists of congratulations and high-level reflections on Excel's impact, without technical detail, implementation guidance, developer focus, or depth on Microsoft technologies beyond general statements about business and AI. It does not discuss programming, AI service implementation, coding, ML development, infrastructure, DevOps practices, security architecture, or any technical aspect relevant to developer or architect practitioners. According to generic exclusion rules, high-level business celebration, corporate milestones, product anniversaries, or general impact statements targeting a broad professional audience (rather than technical practitioners) do not qualify for any of the platform's technical categories. The AI mention is at a surface social/marketing level only, not actionable technical use or deep product integration. Therefore, no categories are assigned.",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_happy-40th-birthday-excel-activity-7378831755056893952--Z0u",
+    "timestamp": "2025-10-01 14:06:13 +00:00"
   }
 ]
