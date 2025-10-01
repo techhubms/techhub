@@ -1,0 +1,17 @@
+{
+  "Description": "GitHub Copilot coding agent, our asynchronous developer agent, now works with Claude Sonnet 4.5, Anthropic’s most advanced model for coding and real-world agents. Claude Sonnet 4.5 is state of the…\n\nThe post [Anthropic Claude Sonnet 4.5 is in public preview for Copilot coding agent](https://github.blog/changelog/2025-09-30-anthropic-claude-sonnet-4-5-is-in-public-preview-for-copilot-coding-agent) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "ProcessedDate": "2025-10-01 00:10:12",
+  "EnhancedContent": "GitHub Copilot coding agent, our asynchronous developer agent, now works with Claude Sonnet 4.5, Anthropic’s most advanced model for coding and real-world agents.\n\nClaude Sonnet 4.5 is state of the art on the SWE-bench Verified evaluation, which measures real-world coding abilities.\n\nIf you are a Copilot Pro or Copilot Pro+ user, coding agent will automatically use Claude Sonnet 4.5.\n\nIf you are a Copilot Business or Copilot Enterprise user, an administrator will need to [enable the Claude Sonnet 4.5 policy in Copilot settings](https://docs.github.com/copilot/concepts/policies). If this policy is not enabled, coding agent will continue to use Claude Sonnet 4.\n\nTo learn more about Copilot coding agent, head to [our documentation on coding agent](https://docs.github.com/enterprise-cloud@latest/copilot/concepts/agents/coding-agent/about-coding-agent).",
+  "PubDate": "2025-09-30T22:57:41+00:00",
+  "Author": "Allison",
+  "Title": "Anthropic Claude Sonnet 4.5 is in public preview for Copilot coding agent",
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2025-09-30-anthropic-claude-sonnet-4-5-is-in-public-preview-for-copilot-coding-agent"
+}

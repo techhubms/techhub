@@ -1,0 +1,18 @@
+{
+  "Description": "When creating a repository, you can now use Copilot coding agent to kickstart your work. On the “New repository” page, enter your prompt in the new Prompt field. After the…\n\nThe post [Start your new repository with Copilot coding agent](https://github.blog/changelog/2025-09-30-start-your-new-repository-with-copilot-coding-agent) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Tags": [
+    "collaboration tools",
+    "copilot",
+    "Improvement"
+  ],
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "ProcessedDate": "2025-10-01 00:10:12",
+  "EnhancedContent": "When creating a repository, you can now use Copilot coding agent to kickstart your work.\n\nOn the “New repository” page, enter your prompt in the new **Prompt** field. After the repository is created, Copilot will open a draft pull request, write the requested code, and then request a review from you. This makes it easier than ever to get started on new projects.\n\nCopilot coding agent is available to Copilot Pro, Copilot Pro+, Copilot Business, and Copilot Enterprise subscribers. If you’re a Copilot Business or Copilot Enterprise subscriber, an administrator will have to [enable Copilot coding agent from the “Policies” page](https://docs.github.com/enterprise-cloud@latest/copilot/concepts/agents/coding-agent/coding-agent-for-business-and-enterprise) before you can use it.\n\nTo learn more, head over to [our Copilot coding agent documentation](https://docs.github.com/enterprise-cloud@latest/copilot/concepts/agents/coding-agent/about-coding-agent).",
+  "PubDate": "2025-09-30T22:58:07+00:00",
+  "Author": "Allison",
+  "Title": "Start your new repository with Copilot coding agent",
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2025-09-30-start-your-new-repository-with-copilot-coding-agent"
+}
