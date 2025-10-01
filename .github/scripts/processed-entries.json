@@ -11040,5 +11040,11 @@
     "timestamp": "2025-10-01 01:33:44 +00:00",
     "collection": "news",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-connection-parameterization-expanded-cdc-and-connectors/"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-10-01 05:05:06 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-a-secure-and-compliant-azure-ai-landing-zone-policy/ba-p/4457165",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on governance and compliance for Microsoft AI/ML services (AI rule 1 and 4). Assigned Azure because the Azure AI Landing Zone and Azure resource governance are central (Azure rule 1 and 4). Assigned Security since major focus is on securing AI assets, enforcing compliance, and protecting data (Security rules 1, 4, 7, 10). Assigned DevOps because of Policy as Code, use of CI/CD, Infrastructure as Code, and automation with EPAC (DevOps rules 2, 5, 6). Coding and ML categories were not included since the post is about governance, policy, security, and operational automation, not hands-on code development or data science/analytics engineering. All decisions are based strictly on the presence and intent of AI, Azure, Security, and DevOps features discussed throughout the content."
   }
 ]
