@@ -11184,5 +11184,17 @@
     "timestamp": "2025-10-01 18:05:20 +00:00",
     "canonical_url": "https://www.microsoft.com/en-us/education/blog/2025/10/build-secure-future-ready-learning-experiences-with-windows-11/",
     "collection": "news"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-general-availability-of-workspace-level-private-link-in-microsoft-fabric/",
+    "timestamp": "2025-10-01 19:04:24 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric operates as a platform under Azure and involves Azure networking/security features (Azure rule 1). Assigned ML category because Microsoft Fabric supports data science, analytics, and ML workloads, and this update focuses on workspace security for such artifacts (ML rule 1 and 5). Assigned Security because the main topic is configuring secure, private connectivity to Fabric workspaces (Security rule 1, 4, and 7). Content does not meet any generic exclusion rules—it's technical and implementation-focused on network and workspace security."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=EXu8QLEvulM",
+    "timestamp": "2025-10-01 19:04:57 +00:00",
+    "reason": "Succesfully added: Assigned the Coding category because the video focuses on API design, coding patterns (REPR), and practical development practices in .NET using FastEndpoints (Coding rules 1, 2, and 4). The session is clearly aimed at developers, covering request/response structuring and endpoint implementation in C#. No AI, Azure, DevOps, ML, Security, or GitHub Copilot content is present. All exclusion rules were checked and none apply: the content is technical, solution-focused, and free from sales, job, or biographical focus."
   }
 ]
