@@ -8649,5 +8649,17 @@
     "reason": "No categories found: All applicable generic exclusion rules were evaluated. This post is primarily a brief, celebratory LinkedIn message marking Excel's 40th birthday, written by Satya Nadella. The body content consists of congratulations and high-level reflections on Excel's impact, without technical detail, implementation guidance, developer focus, or depth on Microsoft technologies beyond general statements about business and AI. It does not discuss programming, AI service implementation, coding, ML development, infrastructure, DevOps practices, security architecture, or any technical aspect relevant to developer or architect practitioners. According to generic exclusion rules, high-level business celebration, corporate milestones, product anniversaries, or general impact statements targeting a broad professional audience (rather than technical practitioners) do not qualify for any of the platform's technical categories. The AI mention is at a surface social/marketing level only, not actionable technical use or deep product integration. Therefore, no categories are assigned.",
     "canonical_url": "https://www.linkedin.com/posts/satyanadella_happy-40th-birthday-excel-activity-7378831755056893952--Z0u",
     "timestamp": "2025-10-01 14:06:13 +00:00"
+  },
+  {
+    "timestamp": "2025-10-01 15:05:03 +00:00",
+    "reason": "No categories found: Excluded all categories because the content falls under the business strategy and executive content generic exclusion rule. The post is a leadership and organizational announcement describing changes to Microsoft's commercial business structure and leadership (appointment of Judson Althoff as CEO of the commercial business). It focuses on executive roles, business units, and company strategy rather than any technical details, implementation, or development with Microsoft technologies. No category inclusion rules are met, and multiple generic exclusion rules apply (business strategy, executive content, and leadership focus).",
+    "collection": "news",
+    "canonical_url": "https://blogs.microsoft.com/blog/2025/10/01/accelerating-our-commercial-growth/"
+  },
+  {
+    "timestamp": "2025-10-01 15:06:37 +00:00",
+    "reason": "No categories found: The content field is null and the description is empty. There is no substantive content to analyze or categorize. According to the Generic Exclusion Rules (Format and Length Exclusions), content with missing or empty main text is excluded because there is no technical information to process or assess for category inclusion.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/Uyqtl3BIlMw"
   }
 ]

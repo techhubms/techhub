@@ -1,80 +1,83 @@
 ---
 layout: "post"
 title: "Introducing the Microsoft Agent Framework: Unified SDK for AI Agents and Workflows"
-description: "This article presents the Microsoft Agent Framework, an open-source SDK from Microsoft designed for building intelligent, multi-agent systems in .NET or Python. It merges innovations from Semantic Kernel and AutoGen with new capabilities such as graph-based workflows, checkpointing, and human-in-the-loop support. The framework emphasizes agent orchestration, extensibility, and integration with Azure OpenAI and Microsoft AI services, and offers migration guidance for existing users. The content details developer experience, installation steps, compatibility, and best practices for building scalable AI agent solutions."
+description: "This article introduces the Microsoft Agent Framework, an open-source SDK for building advanced agentic AI applications using .NET or Python. It unifies features from Semantic Kernel and AutoGen, adds new orchestration and workflow tools, and supports multi-agent patterns, with backward compatibility and extensive integration with other Microsoft AI and cloud services."
 author: "Lee_Stott"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-the-micrsoft-agent-framework/ba-p/4458377"
+canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-the-microsoft-agent-framework/ba-p/4458377"
 viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
-date: 2025-10-01 14:02:09 +00:00
+date: 2025-10-01 14:14:57 +00:00
 permalink: "/2025-10-01-Introducing-the-Microsoft-Agent-Framework-Unified-SDK-for-AI-Agents-and-Workflows.html"
 categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "A2A SDK", "Agent Orchestration", "Agent SDK", "Agent Threads", "Agent Workflows", "AI", "AI Agents", "AutoGen", "Azure", "Azure AI", "Azure OpenAI", "Coding", "Community", "Graph Workflows", "Human in The Loop", "LLM", "MCP SDK", "Microsoft Agent Framework", "Migration Guide", "Multimodal AI", "Open Source", "Python", "Semantic Kernel"]
-tags_normalized: ["dotnet", "a2a sdk", "agent orchestration", "agent sdk", "agent threads", "agent workflows", "ai", "ai agents", "autogen", "azure", "azure ai", "azure openai", "coding", "community", "graph workflows", "human in the loop", "llm", "mcp sdk", "microsoft agent framework", "migration guide", "multimodal ai", "open source", "python", "semantic kernel"]
+tags: [".NET", "A2A SDK", "Agent Orchestration", "Agentic AI", "AI", "AutoGen", "Azure", "Azure OpenAI", "Coding", "Community", "Context Providers", "Foundry SDK", "Graph Based Workflows", "Human in The Loop", "LLM Integration", "M365 Copilot Agents", "MCP SDK", "Microsoft Agent Framework", "Middleware", "Migration Guides", "Multi Agent Systems", "Python", "Semantic Kernel", "State Management", "Workflow Automation"]
+tags_normalized: ["dotnet", "a2a sdk", "agent orchestration", "agentic ai", "ai", "autogen", "azure", "azure openai", "coding", "community", "context providers", "foundry sdk", "graph based workflows", "human in the loop", "llm integration", "m365 copilot agents", "mcp sdk", "microsoft agent framework", "middleware", "migration guides", "multi agent systems", "python", "semantic kernel", "state management", "workflow automation"]
 ---
 
-Lee Stott introduces the Microsoft Agent Framework, an SDK empowering developers to build robust, multi-agent AI solutions in Python or .NET, with features for orchestration, extensibility, and workflow design.<!--excerpt_end-->
+Lee Stott presents the Microsoft Agent Framework, guiding developers through its unified, open-source SDK for agentic AI apps with .NET and Python support, multi-agent orchestration, and advanced workflow capabilities.<!--excerpt_end-->
 
-# Introducing the Microsoft Agent Framework: A Unified Foundation for AI Agents and Workflows
+# Introducing the Microsoft Agent Framework: Unified SDK for AI Agents and Workflows
 
-The Microsoft Agent Framework is an open-source SDK intended for developers building advanced AI agent systems using .NET or Python. It unifies the capabilities of Semantic Kernel and AutoGen into a single, extensible toolkit, introducing new features like graph-based workflow orchestration, checkpointing, and human-in-the-loop support.
+The Microsoft Agent Framework is an open-source SDK designed for developers aiming to build intelligent, multi-agent applications in .NET or Python. It delivers a unified foundation by merging the best of Semantic Kernel’s enterprise features with AutoGen’s research-oriented abstractions and introduces advanced capabilities for agent orchestration and workflow design.
 
-## Why Choose the Microsoft Agent Framework?
+## Key Features
 
-- **Unified Platform**: Merges simplicity from AutoGen with robust features from Semantic Kernel
-- **Cross-Language Support**: Use either .NET or Python when developing agent systems
-- **Open Source**: Available via [GitHub](https://github.com/microsoft/agent-framework) and welcomes contributions
+- **Multi-Agent Orchestration:** Simplifies building systems with multiple autonomous agents using both .NET and Python.
+- **Integrated Best-of-Breed:** Combines AutoGen’s orchestration simplicity and Semantic Kernel’s strong features like thread-based state management, type safety, and telemetry.
+- **Graph-Based Workflows:** Define complex, modular workflows with routing, conditional logic, checkpointing, and support for human-in-the-loop interventions.
+- **Open and Extensible:** Developers can extend with middleware, memory context providers, and custom integrations.
+- **Supports Major Providers:** Out-of-the-box support for Azure OpenAI, OpenAI, and Azure AI.
+- **Backward Compatibility:** Migration guides ensure a smooth upgrade path from existing Semantic Kernel or AutoGen-based solutions.
 
-## Core Capabilities
+## Installation and Getting Started
 
-### AI Agents
+- **Python:**
 
-- Build intelligent, autonomous agents driven by large language models (LLMs) such as Azure OpenAI and Azure AI
-- Supports state management through agent threads, context providers, and middleware for advanced use-cases
-- Integrates easily with MCP servers and third-party tools
-- Typical applications: customer support, automated workflows, code generation, research assistants, etc.
+  ```shell
+  pip install agent-framework
+  ```
 
-### Workflows
+- **.NET:**
 
-- Enables complex, graph-based orchestration of multi-agent systems
-- Supports type-based routing, conditional logic, checkpointing, and human-in-the-loop design
-- Scales from prototype use to enterprise-grade production systems
+  ```shell
+  dotnet add package Microsoft.Agents.AI
+  ```
 
-## Developer Experience
+## Integration Ecosystem
 
-- **Installation:**
-  - Python: `pip install agent-framework`
-  - .NET: `dotnet add package Microsoft.Agents.AI`
-- **Integration:** Works with Foundry SDK, MCP SDK, A2A SDK, and supports interop with M365 Copilot Agents
-- **Learning Resources:**
-  - [Microsoft Learn modules](https://learn.microsoft.com/training/paths/develop-ai-agents-on-azure/)
-  - [AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners)
-  - [AI Show demos and community](https://aka.ms/AIShow/NewAgentFramework)
-  - [Azure AI Foundry Discord](https://aka.ms/foundry/discord)
+- Works seamlessly with Foundry SDK, MCP SDK, A2A SDK, and integrates with M365 Copilot Agents.
+- Rich library of declarative agent manifests and code samples.
+- Learning resources and community involvement provided through Microsoft Learn modules, GitHub repositories, and the Azure AI Foundry Discord server.
+
+## Workflow and Agent Design
+
+- **AI Agents**: Enable dynamic, decision-making components that process inputs, leverage state management, call tools or MCP servers, and generate responses.
+- **Workflows**: Structure complex processing using type-based routing, orchestration patterns (sequential, concurrent, hand-off), and checkpoints for reliability and flexibility.
+
+### Example Use Cases
+
+- Building enterprise customer support bots
+- Automating research agent tasks
+- Orchestrating code generation or educational AI systems
+- Integrating human oversight into process loops
 
 ## Migration and Compatibility
 
-- Migration guides for Semantic Kernel and AutoGen users
-- Backwards compatibility wherever possible
-- Community involvement and support for future enhancements via open GitHub issues and PRs
+Developers using Semantic Kernel or AutoGen will find migration guides and backward compatibility built in. Community input is welcome with active feedback and contributions on GitHub.
 
-## Important Considerations
+## Important Notes
 
-- The framework is currently in public preview—community feedback welcome
-- Review data sharing and compliance practices when integrating with external agents or services
-- Designed for safety, scalability, and modularity
+- Agent Framework is currently in public preview; developers are encouraged to participate in testing and to be mindful of data handling and compliance when integrating third-party agents or services.
+- Documentation, downloads, and migration resources available via official [Microsoft resources](https://aka.ms/AgentFramework).
 
-## Getting Started
+## Community and Support Resources
 
-- [Download the Microsoft Agent Framework](https://aka.ms/AgentFramework)
-- Explore official [documentation](https://aka.ms/AgentFramework/Docs)
-- Connect with the community to shape the future of AI agent development
+- [Microsoft Learn Modules](https://learn.microsoft.com/training/paths/develop-ai-agents-on-azure/)
+- [AI Agents for Beginners GitHub](https://github.com/microsoft/ai-agents-for-beginners)
+- [Azure AI Foundry Discord](https://aka.ms/foundry/discord)
+- [Microsoft Agent Framework GitHub](https://github.com/microsoft/agent-framework)
 
----
-*Author: Lee Stott*
+Get started by downloading the SDK, exploring documentation, and joining the growing developer community building the next generation of AI agentic workflows.
 
-*Published October 1, 2025 — Version 1.0*
-
-This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-the-micrsoft-agent-framework/ba-p/4458377)
+This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-the-microsoft-agent-framework/ba-p/4458377)
