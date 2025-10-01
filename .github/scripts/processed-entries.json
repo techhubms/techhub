@@ -11238,5 +11238,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/who-created-this-azure-resource-here-s-how-to-find-out/ba-p/4458470",
     "timestamp": "2025-10-01 21:06:16 +00:00",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because Spark is a feature for Copilot Enterprise users—Copilot is classified as a developer AI tool (AI rule 2, GitHub Copilot inclusion rules). No other categories apply due to the focus on user experience improvements, reliability, and deployment within the Copilot/GitHub AI ecosystem. There is no evidence of content relating to Coding, DevOps, Azure, ML, or Security. The product discussed is not Microsoft 365 Copilot, but GitHub Copilot, which qualifies for inclusion. All improvements and features are aimed at developer-centric tooling within the GitHub Copilot environment.",
+    "timestamp": "2025-10-01 22:04:23 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-10-01-spark-%f0%9f%9a%80-expanded-access-enhanced-reliability-and-faster-iteration-history"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the article directly discusses practical usage of GitHub Copilot and associated tools (AI rules 2 and 5, GitHub Copilot category rules 1-4). Assigned 'Coding' because it details coding tasks, developer workflows, and integration with CLI tools and actions (Coding rules 2, 4, 5). Did not include DevOps, Azure, ML, or Security because the content is focused on Copilot tools and general developer productivity rather than specific DevOps pipelines, Azure services, machine learning, or security implementations.",
+    "timestamp": "2025-10-01 22:04:50 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://harrybin.de/posts/parallel-github-copilot-workflow/"
   }
 ]
