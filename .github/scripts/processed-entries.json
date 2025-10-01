@@ -11250,5 +11250,11 @@
     "timestamp": "2025-10-01 22:04:50 +00:00",
     "collection": "posts",
     "canonical_url": "https://harrybin.de/posts/parallel-github-copilot-workflow/"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the Azure category because Microsoft Fabric is a cloud-native service integrated with the Azure ecosystem, and the content describes usage and management of a core Azure service (SQL Database) per Azure rule 1 and 5. Assigned ML category because the focus is on dashboard-based data engineering, metrics monitoring, and performance analytics—core tasks in data platform engineering (ML rule 1 and 2). Other categories like Coding or AI do not apply as the article does not cover programming, development frameworks, or AI-specific features. All exclusion rules were reviewed and not triggered, as the piece is technical, development-focused, and meets platform inclusion standards.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/memory-consumption-metrics-now-available-for-fabric-sql-database/",
+    "timestamp": "2025-10-01 23:04:12 +00:00"
   }
 ]
