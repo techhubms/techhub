@@ -11172,5 +11172,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-public-preview-asev3-outbound-network-segmentation/ba-p/4458398",
     "reason": "Succesfully added: Included the Azure category because the content is fully focused on Azure's App Service Environment v3 features (Azure rule 1 and 4). Added the Security category as the post centers on controlling outbound traffic, egress control, NSGs, and firewall integration, all of which are security topics (Security rules 1, 2, 4, and 7). Coding, AI, DevOps, ML, or GitHub Copilot categories do not apply, since there is no code-level development, AI, devops pipelines, or ML focus. The content is technical, not a sales pitch, not biographical, primarily English, and easily exceeds the 200-word threshold for community posts.",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category as the content centers on Microsoft’s Agent Framework, which enables building and orchestrating AI-driven multi-agent systems (AI rule 1, 4, 5). Assigned the Azure category since the framework operates within Azure AI Foundry and deep Azure integration is a key technical component (Azure rule 1, 4, 6). Coding, ML, Security, DevOps, and GitHub Copilot were not included, as the post does not describe code-level implementation, machine learning workflows, security-specific practices, DevOps processes, or GitHub-specific content. The post qualified because it provides details about new technical capabilities for practitioners, with no exclusions triggered.",
+    "timestamp": "2025-10-01 18:04:59 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_introducing-microsoft-agent-framework-microsoft-activity-7379202146988318720-WDPf",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Content qualified for categories as follows: 'AI' included due to frequent reference to AI-powered features, Copilot+ PCs, and the Learning Zone app (AI inclusion rules 1, 4, 5). 'Security' included because of the focus on Microsoft Defender, TPM 2.0, Intune-based device management, and data protection for education environments (Security inclusion rules 1, 2, 3). 'Azure' included based on Intune's Azure-based management and deployment, as well as platform-level integration (Azure inclusion rule 2). Did not include Coding, DevOps, ML categories as there is no direct guidance on development, programming, DevOps practices, or ML engineering. The content is not excluded by generic rules: it is not biographical, help-seeking, sales-focused, negative, too short, non-English, career-focused, or business executive-only strategy. Copilot+ PC coverage here is hardware-anchored for developers and educators, and not general business/consumer productivity. Education content here focuses on technical platform and implementation details meeting inclusion criteria.",
+    "timestamp": "2025-10-01 18:05:20 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/education/blog/2025/10/build-secure-future-ready-learning-experiences-with-windows-11/",
+    "collection": "news"
   }
 ]
