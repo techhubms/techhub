@@ -11034,5 +11034,11 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned the AI and GitHub Copilot categories because the feature centers on GitHub Copilot's coding agent (AI Category rule 2 and GitHub Copilot Category rule 1). The Coding category applies since this workflow generates code and involves repository setup (Coding Rules 1 and 4). No generic exclusion rules were triggered: the content is technical, in English, and developer-oriented, and does not focus on business productivity tools intended for office/document use. The description, tags, and markdown structure preserve all technical details and actionable insights from the source.",
     "canonical_url": "https://github.blog/changelog/2025-09-30-start-your-new-repository-with-copilot-coding-agent"
+  },
+  {
+    "reason": "Succesfully added: Azure category assigned because the feature set centers on Microsoft Fabric Data Factory, an Azure-based platform for data integration (Azure rule 1, 4, 5, 6). ML category assigned due to the support for CDC, Lakehouse tables, analytics/data replication/migration features, and connectors enabling advanced data engineering workflows typical in ML and analytics scenarios (ML rules 1, 2, 5, 7, 8). AI does not apply because the content is about data movement and engineering, not pre-built AI models or model building. Coding, DevOps, Security, and GitHub Copilot do not apply, as there is no explicit code-level implementation, deployment scripting, developer tooling, or security solution described.",
+    "timestamp": "2025-10-01 01:33:44 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-connection-parameterization-expanded-cdc-and-connectors/"
   }
 ]
