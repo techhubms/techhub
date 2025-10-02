@@ -11268,5 +11268,11 @@
     "reason": "Succesfully added: Assigned the Azure category because the entire content is focused on Azure Event Grid updates and features, matching Azure inclusion rules 1 and 4. Assigned Security because numerous sections discuss OAuth 2.0, JWT, custom webhook authentication, and device certificate-based auth, satisfying Security inclusion rules 1 and 2. Assigned DevOps because many features (event-driven workflow, integration, operational efficiency, SCADA integration, system interoperability) directly support cloud development workflows and real-time operations (DevOps rules 5 and 8). Did NOT assign Coding, AI, or ML because the content is about event-driven architecture, IoT, authentication, and system integration, not about writing application code, pre-built AI, or custom ML/data science engineering.",
     "collection": "community",
     "timestamp": "2025-10-02 00:10:09 +00:00"
+  },
+  {
+    "reason": "Succesfully added: AI category assigned because the post directly discusses AI-assisted development and integration with AI agents for expanding CLI functionality (AI Rule 1 and Rule 5). DevOps is included due to explicit support for CI/CD pipelines, deployment automation, and team workflows (DevOps Rules 1, 5, 6). Azure is included as the Fabric CLI is a core tool for Microsoft Fabric, a service within the Azure ecosystem (Azure Rule 1). Coding is included because the content covers automation scripting, CLI development, extensions, and developer tooling (Coding Rules 2, 4, 5).",
+    "timestamp": "2025-10-02 01:31:34 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-cli-open-source-ai-ready-and-more-powerful/",
+    "collection": "news"
   }
 ]
