@@ -8685,5 +8685,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=6aCrYQKCv0E",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The provided content is an event announcement and promotional save-the-date for .NET Conf 2025, with social media and web resource links, but no substantive technical information, implementation details, or educational material. It serves as a marketing announcement without technical depth (Generic Exclusion: Sales Pitches/Promotional Content).",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=y4UNT20ufjE",
+    "reason": "No categories found: All categories were excluded because the provided content lacks enough substantive detail to assess technical depth, focus, or central Microsoft technology. The 'description' is promotional for an event segment and does not specify any concrete threat protection technologies, implementation details, AI service names, or actionable technical content. It does not meet the minimum requirements for category inclusion (Generic Exclusion – focus on event marketing, lacks technical implementation per Coding, AI, Security, Azure, etc. rules).",
+    "collection": "videos",
+    "timestamp": "2025-10-02 00:09:08 +00:00"
   }
 ]

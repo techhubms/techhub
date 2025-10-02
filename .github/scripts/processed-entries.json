@@ -11256,5 +11256,17 @@
     "reason": "Succesfully added: Assigned the Azure category because Microsoft Fabric is a cloud-native service integrated with the Azure ecosystem, and the content describes usage and management of a core Azure service (SQL Database) per Azure rule 1 and 5. Assigned ML category because the focus is on dashboard-based data engineering, metrics monitoring, and performance analytics—core tasks in data platform engineering (ML rule 1 and 2). Other categories like Coding or AI do not apply as the article does not cover programming, development frameworks, or AI-specific features. All exclusion rules were reviewed and not triggered, as the piece is technical, development-focused, and meets platform inclusion standards.",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/memory-consumption-metrics-now-available-for-fabric-sql-database/",
     "timestamp": "2025-10-01 23:04:12 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-parse-chunk-with-metadata-in-logic-apps-build-context/ba-p/4458438",
+    "reason": "Succesfully added: Assigned 'AI' category because the article centers on AI-powered actions in Logic Apps, including using embeddings, conversational workflows, and integrating with Azure OpenAI (AI rules 1 and 4). Assigned 'Azure' because the entire process is built using Azure products, specifically Azure AI Search, Azure OpenAI, Azure Blob Storage, and Logic Apps (Azure rules 1 and 4). Did not assign 'Coding', 'ML', 'DevOps', or 'Security' because the content is focused on low/no-code logic app workflow configuration, orchestration, and AI service integration, not on programming, MLOps engineering, developer tools, DevOps practices, or security topics. No generic exclusion rules apply—the content is technical, implementation-focused, and written in English. All categories are justified based on explicit mention and step-by-step architectural guidance.",
+    "collection": "community",
+    "timestamp": "2025-10-02 00:09:41 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/what-s-new-in-azure-event-grid/ba-p/4458299",
+    "reason": "Succesfully added: Assigned the Azure category because the entire content is focused on Azure Event Grid updates and features, matching Azure inclusion rules 1 and 4. Assigned Security because numerous sections discuss OAuth 2.0, JWT, custom webhook authentication, and device certificate-based auth, satisfying Security inclusion rules 1 and 2. Assigned DevOps because many features (event-driven workflow, integration, operational efficiency, SCADA integration, system interoperability) directly support cloud development workflows and real-time operations (DevOps rules 5 and 8). Did NOT assign Coding, AI, or ML because the content is about event-driven architecture, IoT, authentication, and system integration, not about writing application code, pre-built AI, or custom ML/data science engineering.",
+    "collection": "community",
+    "timestamp": "2025-10-02 00:10:09 +00:00"
   }
 ]
