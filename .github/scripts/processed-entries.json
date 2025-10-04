@@ -11280,5 +11280,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/expanding-the-public-preview-of-the-azure-sre-agent/ba-p/4458514",
     "timestamp": "2025-10-02 02:28:25 +00:00",
     "reason": "Succesfully added: Assigned 'Azure' because the Azure SRE Agent is an Azure-native automation, diagnostics, and reliability tool, with extensive coverage of services like Azure Functions, AKS, App Service, and more (Azure inclusion rules 1, 4, 5). 'DevOps' applies due to native integration with DevOps practices: incident automation, runbooks, reporting in GitHub and Azure DevOps, and workflow improvements (DevOps inclusion rules 2, 4, 5, 9, 11). 'Security' qualifies given the emphasis on governance, least-privilege by default, RBAC, explicit write approval, and traceable actions (Security inclusion rules 1, 3, 4, 7, 9). The content is technical, focused on reliability engineering and incident automation, and does not match any generic exclusion rules."
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/supercharge-your-prompts-with-prompt-md.html",
+    "collection": "posts",
+    "timestamp": "2025-10-04 23:09:56 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' because the post is entirely about improving Copilot prompt management (GitHub Copilot Inclusion Rule 1). Assigned 'AI' because Copilot is an AI-powered developer tool (AI Inclusion Rule 2). Assigned 'Coding' because the usage and examples directly enhance development workflows, unit testing, and refactoring (Coding Inclusion Rules 2 and 4). Did not assign DevOps, Azure, ML, or Security as the content does not directly address these topics. The tags were chosen to reflect the technical focus on prompts, workflow, testing, documentation, refactoring, and specific technologies/tools referenced in the post."
   }
 ]

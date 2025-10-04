@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2025-10-04 23:05:01",
+  "EnhancedContent": "You can now resolve merge conflicts directly in the github.com web interface with a single click.\n\nWhen a pull request has merge conflicts that can be resolved in the web interface, you’ll see new **Accept incoming changes**, **Accept current changes**, and **Accept both changes** buttons in the web editor. These actions, familiar to users of code editors like Visual Studio Code, make it easier and faster to resolve conflicts without leaving your browser.\n\n![A code editor in the web UI showing options to accept current changes, accept incoming changes, and accept both changes](https://github.com/user-attachments/assets/4a235221-12c2-44f3-802e-90c46f9126bf)\n\n*Editor’s note (October 2, 2025): Updated the image demonstrating the web UI.*\n\n### How does it work?\n\nWhen a PR has merge conflicts, you’ll see clear conflict markers and the new one-click resolution buttons.\n\n- **Accept current changes** keeps the changes from the current working branch.\n- **Accept incoming changes** uses the changes from the base branch.\n- **Accept both changes** combines both sets of changes in the file.\n\nThis update brings the productivity and convenience of popular code editors’ merge tools directly to your github.com workflow—no context switching required.\n\n### How you can help\n\nIf you run into issues or have any feedback, feel free to drop a comment in our [Community discussion](https://github.com/orgs/community/discussions/175270).",
+  "Link": "https://github.blog/changelog/2025-10-02-one-click-merge-conflict-resolution-now-in-the-web-interface",
+  "Title": "One-click merge conflict resolution now in the web interface",
+  "Author": "Allison",
+  "OutputDir": "_news",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Tags": [
+    "collaboration tools",
+    "Improvement"
+  ],
+  "Description": "You can now resolve merge conflicts directly in the github.com web interface with a single click. When a pull request has merge conflicts that can be resolved in the web…\n\nThe post [One-click merge conflict resolution now in the web interface](https://github.blog/changelog/2025-10-02-one-click-merge-conflict-resolution-now-in-the-web-interface) appeared first on [The GitHub Blog](https://github.blog).",
+  "PubDate": "2025-10-02T18:07:10+00:00",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog"
+}

@@ -1,0 +1,18 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Author": "Visual Studio Code",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "PubDate": "2025-10-03T19:55:25+00:00",
+  "EnhancedContent": null,
+  "Title": "Bring Your Own Key in VS Code",
+  "Link": "https://www.youtube.com/watch?v=xXFTlPZJJoo",
+  "FeedName": "Visual Studio Code YouTube",
+  "Description": "In our latest release livestream, Pierce Boggan breaks down the latest updates to the Bring Your Own Key (BYOK) experience in VS Code. Model providers can now contribute models via extensions with the Language Model Chat Provider API - so with a single extension install, your model choice just got even larger.\n\nCatch the on-demand of the full livestream: https://youtube.com/live/w2qMcctqv40 Language Model Chat Provider API docs: https://code.visualstudio.com/api/extension-guides/ai/language-model-chat-provider",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-10-04 23:07:33"
+}

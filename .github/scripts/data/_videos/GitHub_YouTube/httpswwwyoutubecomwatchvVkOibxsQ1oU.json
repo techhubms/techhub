@@ -1,0 +1,18 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Author": "GitHub",
+  "Tags": [
+    "GitHubCopilot",
+    "GitHubCopilotCLI",
+    "Terminal"
+  ],
+  "PubDate": "2025-10-02T14:01:01+00:00",
+  "EnhancedContent": null,
+  "Title": "The ultimate guide to the GitHub Copilot CLI | Full demo | GitHub Checkout",
+  "Link": "https://www.youtube.com/watch?v=VkOibxsQ1oU",
+  "FeedName": "GitHub YouTube",
+  "Description": "In this episode of GitHub Checkout, we take a deep dive into the GitHub Copilot CLI with Product Manager, Ryan Hecht. See how this agentic AI is filling the \"last remaining gap\" for developers who live in the terminal. This full demo covers installation, codebase exploration, debugging, and contributing to a project without ever leaving the command line.\n\n#GitHubCopilotCLI #GitHubCopilot #Terminal\n\n— Learn more —\n\nhttps://github.com/github/copilot-cli\n\n— CHAPTERS —\n\n00:00 - Introduction: GitHub Copilot CLI 00:55 - Installation and first impressions 01:30 - Understanding a new codebase 03:12 - Solving a common developer problem 04:17 - GitHub Integration Power with MCP server 04:53 - Fixing an issue with the AI agent 05:45 - Your main AI collaborator\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 100 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "FeedLevelAuthor": "GitHub",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-10-04 23:07:28"
+}

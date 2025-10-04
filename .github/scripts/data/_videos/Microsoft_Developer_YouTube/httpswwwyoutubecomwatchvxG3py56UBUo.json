@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Author": "Microsoft Developer",
+  "Tags": [
+    "OneDevQuestion"
+  ],
+  "PubDate": "2025-10-02T17:36:29+00:00",
+  "EnhancedContent": null,
+  "Title": "What is an AI agent?",
+  "Link": "https://www.youtube.com/watch?v=xG3py56UBUo",
+  "FeedName": "Microsoft Developer YouTube",
+  "Description": "“AI agent” gets thrown around a lot—but what does it actually mean? Seth Juarez breaks it down as a new kind of control structure that turns plain language into real code execution.\n\nLearn more: https://msft.it/6059saiQt\n\n#OneDevQuestion",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-10-04 23:07:34"
+}

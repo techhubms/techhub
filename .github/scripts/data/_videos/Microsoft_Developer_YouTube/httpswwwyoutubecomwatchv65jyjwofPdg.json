@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Author": "Microsoft Developer",
+  "Tags": [
+    "OneDevQuestion"
+  ],
+  "PubDate": "2025-10-03T15:38:26+00:00",
+  "EnhancedContent": null,
+  "Title": "Have we made any progress securing code in the last 25 yrs?",
+  "Link": "https://www.youtube.com/watch?v=65jyjwofPdg",
+  "FeedName": "Microsoft Developer YouTube",
+  "Description": "After 25 years of fighting vulnerabilities, has the industry actually made progress? Michael Howard says yes—but the bugs we’re left with are the harder ones, and they may force us to rethink languages like C and C++.\n\nhttps://msft.it/6056sx1eg\n\n#OneDevQuestion",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-10-04 23:07:34"
+}
