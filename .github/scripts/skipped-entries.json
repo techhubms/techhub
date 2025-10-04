@@ -8691,5 +8691,335 @@
     "reason": "No categories found: All categories were excluded because the provided content lacks enough substantive detail to assess technical depth, focus, or central Microsoft technology. The 'description' is promotional for an event segment and does not specify any concrete threat protection technologies, implementation details, AI service names, or actionable technical content. It does not meet the minimum requirements for category inclusion (Generic Exclusion – focus on event marketing, lacks technical implementation per Coding, AI, Security, Azure, etc. rules).",
     "collection": "videos",
     "timestamp": "2025-10-02 00:09:08 +00:00"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "timestamp": "2025-10-02 07:07:11 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-use-microsoft-365-offline/"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "timestamp": "2025-10-02 07:10:13 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/the-new-age-of-pc-copilots-windows-11/"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "timestamp": "2025-10-02 07:13:25 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/foundry-fridays-your-front-row-seat-to-azure-ai-innovation/ba-p/4456956"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-provide-feedback-to-microsoft-and-actually-get-heard/",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "timestamp": "2025-10-02 08:07:57 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-use-microsoft-365-on-mobile-devices/",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "timestamp": "2025-10-02 08:10:59 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "timestamp": "2025-10-02 14:07:37 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=VkOibxsQ1oU",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-02 15:08:05 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-september-2025/",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-02 15:11:28 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/IN6pBCKypxA",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-02 15:14:32 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/the-open-source-paradox-how-microsoft-is-giving-back/ba-p/4458630",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/visual-studio-live-orlando-2025/",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "timestamp": "2025-10-02 16:07:58 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "timestamp": "2025-10-02 17:09:08 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/unlocking-seamless-data-integration-with-the-latest-fabric-data-factory-connector-innovations/",
+    "collection": "news"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "timestamp": "2025-10-02 17:12:25 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=QCF0C7NpBcE",
+    "collection": "videos"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "canonical_url": "https://www.youtube.com/shorts/5ms4A7NELtw",
+    "timestamp": "2025-10-02 18:08:30 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "canonical_url": "https://www.youtube.com/watch?v=xG3py56UBUo",
+    "timestamp": "2025-10-02 18:11:33 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/extending-point-in-time-retention-in-fabric-sql-db-from-7-to-35-days/",
+    "timestamp": "2025-10-02 19:08:01 +00:00",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/10/02/microsoft-named-a-leader-in-the-idc-marketscape-for-xdr/",
+    "timestamp": "2025-10-02 19:11:05 +00:00",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-10-02-one-click-merge-conflict-resolution-now-in-the-web-interface",
+    "timestamp": "2025-10-02 19:14:09 +00:00",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "news"
+  },
+  {
+    "collection": "news",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "timestamp": "2025-10-02 20:07:45 +00:00",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-we-automated-accessibility-compliance-in-five-hours-with-github-copilot/"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/27219/",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "timestamp": "2025-10-02 21:08:23 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_strengthening-nucleic-acid-biosecurity-screening-activity-7379576230414753792-zB85",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "timestamp": "2025-10-02 21:11:26 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-10-02-claude-sonnet-4-5-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "timestamp": "2025-10-02 21:14:30 +00:00"
+  },
+  {
+    "timestamp": "2025-10-02 23:08:40 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-fabric-mcp-public-preview/",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied)."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/mission-critical-data-integration-whats-new-in-fabric-data-factory/",
+    "collection": "news",
+    "timestamp": "2025-10-03 01:35:50 +00:00",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied)."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/managing-context-retention-in-agentic-ai/ba-p/4458586",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "timestamp": "2025-10-03 06:09:35 +00:00"
+  },
+  {
+    "timestamp": "2025-10-03 07:08:56 +00:00",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/from-lab-to-live-a-blueprint-for-a-voice-powered-ai-sales-coach/"
+  },
+  {
+    "collection": "videos",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "timestamp": "2025-10-03 11:09:20 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=DPYO8hxqCcs"
+  },
+  {
+    "timestamp": "2025-10-03 15:09:54 +00:00",
+    "collection": "posts",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "canonical_url": "https://www.arresteddevops.com/ai-sdlc/"
+  },
+  {
+    "timestamp": "2025-10-03 15:12:58 +00:00",
+    "collection": "posts",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "canonical_url": "https://dellenny.com/crafting-better-ai-images-with-copilot-tips-techniques-and-pitfalls/"
+  },
+  {
+    "timestamp": "2025-10-03 15:16:00 +00:00",
+    "collection": "posts",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "canonical_url": "https://dellenny.com/from-start-menu-to-widgets-customizing-windows-11-like-a-pro/"
+  },
+  {
+    "timestamp": "2025-10-03 16:10:02 +00:00",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/unlocking-the-power-of-sharepoint-embedded-a-modern-approach-to-content-management/"
+  },
+  {
+    "timestamp": "2025-10-03 16:13:13 +00:00",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/tZQzYlDQnr8"
+  },
+  {
+    "timestamp": "2025-10-03 16:16:15 +00:00",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=m36P_8s1624"
+  },
+  {
+    "timestamp": "2025-10-03 17:10:50 +00:00",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "canonical_url": "https://blogs.bing.com/search/October-2025/Introducing-the-New-Bing-Places-for-Business-Built-for-Business-Owners,-Powered-by-Research",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-03 17:13:52 +00:00",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_our-approach-to-ai-infra-is-simple-build-activity-7379681735934083073-Scma",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-03 17:16:57 +00:00",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "canonical_url": "https://github.blog/changelog/2025-10-03-github-copilot-cli-enhanced-model-selection-image-support-and-streamlined-ui",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/1jZYYCWYgj4",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "videos",
+    "timestamp": "2025-10-03 18:11:31 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=65jyjwofPdg",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "videos",
+    "timestamp": "2025-10-03 18:14:34 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=MGQegwNKRS4",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "videos",
+    "timestamp": "2025-10-03 18:17:37 +00:00"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "canonical_url": "https://www.youtube.com/shorts/oqqj7d6Xao8",
+    "collection": "videos",
+    "timestamp": "2025-10-03 19:10:58 +00:00"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/choosing-the-right-azure-containerisation-strategy-aks-app/ba-p/4456645",
+    "collection": "community",
+    "timestamp": "2025-10-03 19:14:02 +00:00"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/drasi-is-fluent-in-gql-integrating-the-new-graph-query-standard/ba-p/4458888",
+    "collection": "community",
+    "timestamp": "2025-10-03 19:17:04 +00:00"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-october/",
+    "timestamp": "2025-10-03 20:11:31 +00:00"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=xXFTlPZJJoo",
+    "timestamp": "2025-10-03 20:14:47 +00:00"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-now-supports-oracle-database-19c-on/ba-p/4458643",
+    "timestamp": "2025-10-03 20:17:51 +00:00"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/ca-policy-application-not-found-in-target-resources/m-p/4458834#M13916",
+    "timestamp": "2025-10-03 21:11:33 +00:00",
+    "collection": "community"
+  },
+  {
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "canonical_url": "https://www.youtube.com/shorts/mHml0umhm9s",
+    "timestamp": "2025-10-03 22:11:04 +00:00",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-04 04:11:41 +00:00",
+    "canonical_url": "https://devops.com/build-vs-buy-what-it-really-takes-to-harden-your-software-supply-chain/",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-04 04:14:44 +00:00",
+    "canonical_url": "https://devops.com/shortcut-adds-ai-agent-to-orchestrate-management-of-software-development-projects/",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-04 04:17:46 +00:00",
+    "canonical_url": "https://devops.com/why-automation-fails-without-the-right-qa-mindset-2/",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied).",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/24-hidden-windows-11-features-youll-wish-you-found-sooner/",
+    "collection": "posts",
+    "timestamp": "2025-10-04 10:13:54 +00:00",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied)."
+  },
+  {
+    "canonical_url": "https://dellenny.com/the-hybrid-cloud-playbook-mastering-azure-stack/",
+    "collection": "posts",
+    "timestamp": "2025-10-04 10:16:56 +00:00",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied)."
+  },
+  {
+    "canonical_url": "https://dellenny.com/what-microsoft-entra-really-means-for-identity-and-security/",
+    "collection": "posts",
+    "timestamp": "2025-10-04 10:19:58 +00:00",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied)."
+  },
+  {
+    "timestamp": "2025-10-04 11:09:19 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/the-hybrid-cloud-playbook-mastering-azure-stack/m-p/4458977#M797"
+  },
+  {
+    "timestamp": "2025-10-04 11:09:19 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/what-microsoft-entra-really-means-for-identity-and-security/m-p/4458980#M798"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/1gdGGSeO5ew",
+    "timestamp": "2025-10-04 16:12:49 +00:00",
+    "reason": "Processing failed after retries: Response status code does not indicate success: 401 (PermissionDenied)."
   }
 ]
