@@ -6081,5 +6081,257 @@
     "reason": "No categories found: All categories were excluded because the provided content lacks enough substantive detail to assess technical depth, focus, or central Microsoft technology. The 'description' is promotional for an event segment and does not specify any concrete threat protection technologies, implementation details, AI service names, or actionable technical content. It does not meet the minimum requirements for category inclusion (Generic Exclusion – focus on event marketing, lacks technical implementation per Coding, AI, Security, Azure, etc. rules).",
     "collection": "videos",
     "timestamp": "2025-10-02 00:09:08 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/license-plans-for-microsoft-365-copilot/",
+    "timestamp": "2025-10-05 10:04:54 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: Content is excluded due to the generic exclusion rule for non-development Microsoft products. The article is entirely focused on Microsoft 365 Copilot and its licensing for productivity applications (Word, Excel, Teams, etc.), which, as outlined in the workflow, is considered a business productivity tool and not a developer tool. According to the CRITICAL Copilot Product Distinction rule and the Non-Development Microsoft Products exclusion, content about Microsoft 365 Copilot, Copilot for Microsoft 365, and similar products does not qualify for any categories, regardless of the presence of AI-related discussion. The article does not include implementation, development, integration, technical architecture, or DevOps content related to Microsoft developer platforms. Therefore, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://dellenny.com/microsoft-365-copilot-and-the-future-of-visual-agent-is-it-deprecated-or-replaced/",
+    "timestamp": "2025-10-05 10:05:07 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: Excluded all categories due to generic exclusion rule: this content is primarily focused on Microsoft 365 Copilot, Visual Agent, and agent model changes in Microsoft 365 end-user productivity tools (Word, Excel, Teams). As stated in the Non-Development Microsoft Products exclusion rule, content centered on Microsoft 365 Copilot, Copilot for Microsoft 365, or general business/productivity features is not categorized unless it is specifically a developer tool (e.g., GitHub Copilot, Copilot Studio). This content does not concentrate on development, customization through Copilot Studio, or SDK programming guidance, but rather on product features and administrative/user experience changes in business productivity apps. Therefore, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://dellenny.com/microsoft-365-copilot-vs-other-ai-tools-the-game-changer-for-modern-businesses/",
+    "timestamp": "2025-10-05 10:05:20 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: All categories are excluded due to the 'Non-Development Microsoft Products' generic exclusion rule. The content is focused entirely on Microsoft 365 Copilot as a business productivity assistant, describing features that enhance productivity in Word, Excel, PowerPoint, Outlook, and Teams. There is no coverage of development, developer tooling, programming, or technical implementation. Additionally, it compares Microsoft 365 Copilot to other generative AI tools from a workplace/business adoption standpoint, not from a developer or solution-building context. This matches the exclusion criteria for business-productivity focused Copilots such as Microsoft 365 Copilot. No categories can be assigned."
+  },
+  {
+    "timestamp": "2025-10-05 11:18:31 +00:00",
+    "reason": "API call retries failed: All API call retries failed - no response received",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-10/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-05 11:21:18 +00:00",
+    "reason": "No categories found: All categories are excluded due to generic exclusion rules. The content is an official announcement about the Bing Places for Business platform. While it discusses technical improvements and platform evolution, the focus is not on development, coding, DevOps, AI, ML, Security, or Azure implementation but rather on business owner usability, product design, and product management. There are no technical implementation or development details for Microsoft developer/consultant audiences. Bing Places for Business itself is an end-user, non-developer product and the article is aimed at business owners. By the non-development Microsoft products and business/productivity focus exclusion rules, no categories apply.",
+    "canonical_url": "https://blogs.bing.com/search/October-2025/Introducing-the-New-Bing-Places-for-Business-Built-for-Business-Owners,-Powered-by-Research",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-05 11:27:01 +00:00",
+    "reason": "No categories found: All generic exclusion rules were evaluated. The content focuses on hidden end-user features and productivity tricks within Windows 11—such as Snap Layouts, Virtual Desktops, the Widgets panel, PowerToys utilities (as an add-on), and more. There is no discussion of software development, programming, coding, DevOps, AI, ML, Azure, or security implementations. The entire article is aimed at general users, not Microsoft developers or consultants. Therefore, none of the category inclusion rules are met. Rule: Non-development Microsoft product content is excluded (see Non-Development Microsoft Products in Chapter 3), and there is no technical implementation or development detail present.",
+    "canonical_url": "https://dellenny.com/24-hidden-windows-11-features-youll-wish-you-found-sooner/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-05 11:27:14 +00:00",
+    "reason": "No categories found: All content is focused on Microsoft Copilot's image generation features, specifically under the umbrella of Microsoft 365 Copilot and its end-user productivity integrations (e.g., creating images within Office applications). According to Generic Exclusion Rules (Non-Development Microsoft Products), content about Microsoft 365 Copilot (a business productivity tool and not a developer tool) must be excluded, even though it touches on AI. The article is targeted at end-users and creative professionals aiming to get better results from Copilot as a productivity feature, not at developers or technical implementation. There is no focus on code, development, or platform integration for developers. Therefore, no categories are assigned.",
+    "canonical_url": "https://dellenny.com/crafting-better-ai-images-with-copilot-tips-techniques-and-pitfalls/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-05 11:28:37 +00:00",
+    "reason": "No categories found: Content excluded because it focuses on end-user customization and productivity features of Windows 11, such as Start Menu personalization, taskbar tweaks, themes, widgets, virtual desktops, and third-party utility enhancements. There is no substantial focus on development, coding, DevOps, Azure, AI, ML, or security implementation as required by category inclusion rules. This falls under the Non-Development Microsoft Products generic exclusion rule, as the entire article is about customizing the Windows 11 user interface and experience, not developer or technical practitioner content.",
+    "canonical_url": "https://dellenny.com/from-start-menu-to-widgets-customizing-windows-11-like-a-pro/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-05 11:28:51 +00:00",
+    "reason": "No categories found: All generic exclusion rules have been checked. This content is an educational guide on providing feedback to Microsoft, featuring user-level tools like Feedback Hub, Feedback Portal, in-app feedback, community forums, Insider programs, and social media. It targets general Microsoft product users—including Windows, Office, Xbox, Teams, and Azure—but does not go into technical implementation, coding, developer tools, or platform architecture. There are no details of development practices, coding, DevOps processes, security engineering, AI/ML, or Microsoft developer platform customization. The advice remains general and user-focused, without actionable technical content for consultants or developers. As per Generic Exclusion 'Business Strategy and Executive Content', 'Non-Development Microsoft Products', and the detailed guidelines in Chapter 3, this post does not qualify for any categories.",
+    "canonical_url": "https://dellenny.com/how-to-provide-feedback-to-microsoft-and-actually-get-heard/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-05 11:29:03 +00:00",
+    "reason": "No categories found: Content is excluded because it falls under the 'Non-Development Microsoft Products' generic exclusion rule. The content is a guide for end users on how to use Microsoft 365 (formerly Office 365) applications offline, highlighting installation, offline file management, Outlook offline mode, and sync with OneDrive, but does not contain any development, coding, Azure, AI, security, DevOps, or ML implementation or architectural guidance. It is focused purely on business productivity usage rather than development or technical depth per Chapter 3 exclusion rules.",
+    "canonical_url": "https://dellenny.com/how-to-use-microsoft-365-offline/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-05 11:29:16 +00:00",
+    "reason": "No categories found: All categories were excluded according to the generic exclusion rules. The content is focused entirely on using Microsoft 365 and associated productivity apps (Outlook, Word, Excel, PowerPoint, Teams, OneDrive) in an end-user, business productivity, and mobile scenario. There is no mention of development, programming, DevOps, Azure, or technical implementation; no developer tools or concepts are discussed. Microsoft 365 Copilot, Office apps, and Teams are specifically excluded unless the content covers development (see Non-Development Microsoft Products and Business/Productivity exclusions). The post offers general productivity tips rather than technical content for developers or IT professionals.",
+    "canonical_url": "https://dellenny.com/how-to-use-microsoft-365-on-mobile-devices/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-05 11:31:02 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The entire article focuses on the end-user/business productivity assistant features of Microsoft Copilot for Windows 11, Microsoft 365, Bing, and Edge, but not on any developer tooling, SDKs, APIs, coding, development practices, or technical implementation. According to the Non-Development Microsoft Products exclusion rules, coverage of Microsoft Copilot as a Windows/Office/consumer productivity tool does not qualify for any categories. There is only a brief passing mention of Copilot Studio in the context of workflow automation for end-users, but without a developer/maker tool focus, and no discussion of building bots, custom plugins, or development. No qualifying technical depth or developer focus as required by inclusion rules.",
+    "canonical_url": "https://dellenny.com/the-new-age-of-pc-copilots-windows-11/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-05 11:32:05 +00:00",
+    "reason": "No categories found: All categories are excluded due to the Generic Exclusion Rules. The content is fundamentally an announcement about an open source GitHub mascot ('Ducky') and sharing 3D print files, with a community and event promotion focus. There is no substantive technical depth, Microsoft technology context, or development implementation detail present. It is not a tutorial, integration guide, or technical article concerning Coding, DevOps, AI, Azure, ML, or Security. No coding practices, architectural patterns, or Microsoft products are discussed, and it does not meet criteria for any technical category. The informational focus is on mascot promotion and community engagement, triggering the 'Sales Pitches' and 'Content Quality' generic exclusions.",
+    "canonical_url": "https://www.youtube.com/shorts/tZQzYlDQnr8",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-05 11:32:18 +00:00",
+    "reason": "No categories found: No categories assigned. This content primarily centers on the personal and organizational journey of Quincy Larson and the story of freeCodeCamp, a nonprofit coding education platform. While there are brief mentions of AI, machine learning, and coding, the main focus is biographical (Quincy Larson's background, growth of freeCodeCamp) and organizational (how the nonprofit works, future educational ambitions). According to the Generic Exclusion Rules (Chapter 3), biographical content focused on a single individual's story is expressly excluded. Additionally, there is no deep technical focus on Microsoft technologies or developer-centric implementation; the references to AI and machine learning are forward-looking about freeCodeCamp's educational plans, not a technical guide or hands-on tutorial. Therefore, this content is excluded.",
+    "canonical_url": "https://www.youtube.com/watch?v=m36P_8s1624",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-05 11:33:12 +00:00",
+    "reason": "No categories found: Content does not qualify for any categories due to the following reasons: (1) There is no substantive technical content provided in the input—'content' field is null, and the description is very high level. (2) The video summary focuses on a high-level discussion about historical industry progress in code security, rethinking programming languages such as C/C++. There are no clear indications of in-depth implementation details, Microsoft technology usage, developer guidance, or actionable discussion of security tooling. (3) According to the business strategy and executive content exclusion rule and the focus on 'industry progress' rather than technical implementation, this content is excluded. (4) Without more detail on Microsoft-specific technology, tools, or hands-on security guidance, no categories apply.",
+    "canonical_url": "https://www.youtube.com/shorts/1jZYYCWYgj4",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-05 11:33:40 +00:00",
+    "reason": "No categories found: Content does not qualify for any categories. The provided video description and title indicate a high-level industry discussion about security progress and challenges over 25 years, referencing general industry trends and programming languages like C and C++, without substantive or actionable technical implementation details involving Microsoft technologies or specific products. According to the generic exclusion rules, high-level business strategy and industry trend content without concrete technical implementation or guidance is excluded. The absence of actual content (full text is null) also means there is no technical substance for further rule application.",
+    "canonical_url": "https://www.youtube.com/watch?v=65jyjwofPdg",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-05 11:34:47 +00:00",
+    "reason": "No categories found: No categories assigned because the provided input is missing core content. Both 'description' and 'content' fields are empty or null. According to the Generic Exclusion Rules (Chapter 3), if the main content is missing or non-existent, there is not enough technical information to evaluate, assign categories, or generate further metadata.",
+    "canonical_url": "https://www.youtube.com/shorts/1gdGGSeO5ew",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-05 11:34:58 +00:00",
+    "reason": "No categories found: No categories assigned. The content is missing a description and the main content text (content is null). Without substantive content to analyze, it's impossible to determine if any of the category inclusion rules are met. According to the workflow, only actual content should be processed, and if there is no main content, the item cannot be categorized.",
+    "canonical_url": "https://www.youtube.com/shorts/IN6pBCKypxA",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-05 11:35:10 +00:00",
+    "reason": "No categories found: Content excluded due to lack of substantive content in the input fields. The 'content' field is null, and both 'description' and 'tags' are empty strings, providing no technical details or main body to analyze for category assignment or informative extraction. Per core processing rules, categorization relies on the actual content, which is missing here. As such, all categories are excluded.",
+    "canonical_url": "https://www.youtube.com/shorts/oqqj7d6Xao8",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-05 11:35:23 +00:00",
+    "reason": "No categories found: Content excluded due to insufficient substantive content. The input is missing a description and has a null content field, providing no technical information or details to assess for category inclusion (per Content Quality Exclusion rules). No meaningful context available to apply inclusion rules. Therefore, no categories can be assigned.",
+    "canonical_url": "https://www.youtube.com/shorts/mHml0umhm9s",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-05 11:35:40 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/app-development/is-clean-architecture-overkill-for-small-teams-maintaining-a/m-p/4441078#M1265",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:35:41 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/app-development/is-it-normal-for-collectionview-to-lag-on-larger-lists-or-am-i/m-p/4441074#M1264",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:35:41 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/app-development/maui-android-api-35-action-bar-still-visible-despite/m-p/4446762#M1271",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:36:04 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/the-hybrid-cloud-playbook-mastering-azure-stack/m-p/4458977#M797",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:36:04 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/what-microsoft-entra-really-means-for-identity-and-security/m-p/4458980#M798",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:36:48 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/passed-az-104-exam-in-2025-with-practice-questions/m-p/4458366#M22253",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:37:09 +00:00",
+    "reason": "No categories found: No categories were assigned. The content does not feature or center on any Microsoft technologies or products. Drasi is an open-source Rust platform for property graph data change processing. It discusses GQL and openCypher query languages but is not related to Microsoft’s Azure, .NET, Power Platform, or other Microsoft services. There is no significant Microsoft DevOps, Coding, AI, ML, Security, or Azure content, nor is there integration with Microsoft ecosystems. Tags reflect the technical focus, but no category inclusion rules are satisfied. All exclusion rules were checked and content is high-quality, technical, and relevant, but not Microsoft-centric.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/drasi-is-fluent-in-gql-integrating-the-new-graph-query-standard/ba-p/4458888",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:37:31 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/machine-learning-and-ai/boosting-productivity-with-github-copilot-real-world-net-coding/m-p/4446056#M48",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:37:31 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/machine-learning-and-ai/how-github-copilot-helps-with-test-driven-development-tdd/m-p/4446059#M49",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:37:53 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/net-runtime/dotnet-on-linux-signing-key-on-is-not-bound/m-p/4454321#M768",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:37:53 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/net-runtime/wont-install-framework-ect-automaticly/m-p/4444195#M759",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:38:14 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/getting-started-with-microsoft-playwright-testing-features-and/m-p/4456920#M169",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:38:14 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/github-copilot-for-students-how-it-can-help-you-learn-faster/m-p/4440677#M159",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:38:14 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/how-to-migrate-legacy-applications-using-github-copilot/m-p/4450330#M164",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:38:14 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/mastering-github-copilot-tips-shortcuts-and-prompts-that-work/m-p/4448549#M163",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:38:14 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/top-10-things-you-can-do-with-github-copilot-as-a-new-developer/m-p/4441047#M160",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:38:15 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/using-an-ai-agent-to-automate-jira-updates-pr-reviews-and-code/m-p/4455068#M168",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:38:15 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/using-github-copilot-to-teach-programming-a-new-approach-for/m-p/4448547#M162",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:38:15 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/creating-a-pooled-resource-for-dependency-injection/m-p/4441617#M670",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:38:15 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/debugging-java-script-in-old-asp-core-app/m-p/4451729#M674",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:38:15 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/is-native-rdlc-report-support-planned-for-future-net-versions/m-p/4445393#M672",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-05 11:38:15 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/when-should-i-use-sql-server-mysql-or-postgresql/m-p/4440172#M668",
+    "collection": "community"
   }
 ]
