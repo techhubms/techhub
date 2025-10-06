@@ -11622,5 +11622,23 @@
     "timestamp": "2025-10-06 19:06:13 +00:00",
     "reason": "Succesfully added: La publicación cumple los criterios mínimos para contenido técnico extenso (community type, claramente más de 200 palabras) y está en español pero contiene un resumen dedicado y enlaces para audiencia en inglés. Se incluyen varias tecnologías de Microsoft: Azure AI Search, Semantic Kernel, Azure AI Content Safety, GitHub Copilot, OpenAI SDK (Azure-compatible); por tanto, la categoría 'AI' aplica (AI rules 1, 4, 5), 'Azure' (Azure rules 1, 3, 4), 'Coding' (Coding rules 1, 4, 5, desarrollo en Python con frameworks de Microsoft), y 'Security' (Security rules 1, 2, 7, por la cobertura de seguridad con Azure AI Content Safety y buenas prácticas). 'ML' no aplica porque el curso se centra en el uso e integración de IA generativa más que en implementación de algoritmos ML desde cero, y no hay foco principal en data engineering ni en desarrollo de modelos personalizados. La explicación descarta exclusiones genéricas porque hay suficiente enfoque técnico, y la difusión no es promocional ni personal/biográfica.",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category per AI rule 1 because the article focuses on Azure AI Foundry, the OpenAI model suite, and advancing pre-built and developer-integration AI services. 'Azure' is included per Azure rule 1 as all content revolves around Azure AI Foundry and Microsoft's deployment of these models. Not assigning 'ML' since the emphasis is on using and deploying pre-built AI models, not custom ML engineering or data science workflows. 'Coding' is not included because the article targets developer empowerment and platform/tooling, but does not detail code, programming techniques, or Microsoft language APIs. 'DevOps' and 'Security' are not included as the content does not discuss CI/CD, operational practices, or security implementation specifics. The reasoning is based on the direct, central coverage of Azure's AI platform and multimodal AI model announcements, backed by examples and feature descriptions.",
+    "collection": "news",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/",
+    "timestamp": "2025-10-06 21:05:00 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the article focuses on how AI, especially GitHub Copilot (including Spaces and Code Review), is transforming development workflows (AI inclusion rules 1, 2, 5; GitHub Copilot rules 1-4). Added Coding because it provides guidance on programming practices with Copilot and general AI tools (Coding rule 4). Did not include Azure, ML, DevOps, or Security because the focus is not on specific Azure services, ML engineering, DevOps methods, or deep technical security implementation. The content is technical, uses no sales pitch or biographical focus, and avoids business productivity Copilot products or non-development Microsoft 365 scenarios.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/ai-and-ml/the-developer-role-is-evolving-heres-how-to-stay-ahead/",
+    "timestamp": "2025-10-06 21:05:30 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' category because the content focuses on deploying and configuring Azure Data Factory, Azure SQL Managed Instance, and related networking solutions (Azure inclusion rule 1, 2, 4, 5). Assigned 'ML' category because it covers large-scale data engineering, pipeline orchestration, SSIS for ETL, data movement, and Microsoft Fabric integration for analytics, which align with data and ML/analytics platform focus (ML inclusion rules 1, 2, 4, 5, 9). Did not assign 'AI' (no AI services or platform integration described), 'Coding' (not focused on code development), 'DevOps' (not focused on CI/CD or team processes), or 'Security' (mentions Entra for auth but not substantial security architecture or implementation). No generic exclusion rules apply, content is substantive, technical, and developer-focused.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-data-factory-sql-managed-instance-and-ssis-implementation/ba-p/4459525",
+    "timestamp": "2025-10-06 21:06:12 +00:00"
   }
 ]
