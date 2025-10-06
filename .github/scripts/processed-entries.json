@@ -11502,5 +11502,11 @@
     "timestamp": "2025-10-06 08:04:57 +00:00",
     "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the episode discusses the impact of artificial intelligence and GitHub Copilot on developer education (AI rule 5 and GitHub Copilot rule 1). Added Coding because the primary focus is learning to code and the transformation of coding education (Coding rule 4). Azure, DevOps, ML, and Security do not apply as there is no substantive content focused on those domains. Exclusion rules do not apply because the episode is about technical subject matter, centered on AI coding tools, without biographical focus or business/strategy-only discussion.",
     "collection": "videos"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: The content thoroughly compares Azure Functions and Azure Container Apps, focusing on use cases, operating models, architecture, scaling, cost, and developer experience. Assigned 'Azure' because all services and comparisons revolve around Microsoft Azure (Azure rule 1, 4, 5). Assigned 'Coding' because it discusses programming models, language support, automation scripts, APIs, and developer experience (Coding rules 1, 2, 4, 5). Did not assign 'DevOps': while deployment and operational models are discussed, the main focus is application architecture/use case selection, not DevOps practices. There is no AI or ML content. Security is not a central theme. All conclusions and assignments follow the prescribed inclusion rules and quality standards.",
+    "canonical_url": "https://dellenny.com/azure-functions-vs-azure-container-apps-choosing-your-serverless-compute/",
+    "timestamp": "2025-10-06 10:06:29 +00:00"
   }
 ]
