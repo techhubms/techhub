@@ -6339,5 +6339,23 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/CT78MB5CH58",
     "timestamp": "2025-10-06 00:09:27 +00:00"
+  },
+  {
+    "collection": "posts",
+    "reason": "No categories found: All categories are excluded based on the Generic Exclusion Rules. The content is entirely focused on Microsoft 365 Companion Apps for Windows 11, which are end-user productivity tools aimed at improving task switching and workflow for business users but do not cover any development, coding, DevOps, AI, ML, Azure, or Security implementation. There are no technical implementation details for developers (e.g., APIs, code, automation, or platform development). The mention of Microsoft Graph relates to secure backend integration but is only referenced as part of the end-user feature set, not as a topic for development or coding. According to Non-Development Microsoft Products exclusions, Microsoft 365 and its user tools—unless there is a software development focus—are not covered categories. Thus, no categories apply.",
+    "canonical_url": "https://dellenny.com/microsoft-365-companion-apps-for-windows-11-a-new-way-to-stay-productive/",
+    "timestamp": "2025-10-06 10:06:43 +00:00"
+  },
+  {
+    "collection": "posts",
+    "reason": "No categories found: All categories are excluded because the content focuses on Microsoft 365 Copilot, SharePoint Copilot features, and general business productivity AI embedded in SharePoint, Teams, and Viva. According to the generic exclusion rules (Non-Development Microsoft Products) and the CRITICAL Copilot Product Distinction, content about Microsoft 365 Copilot, and Copilot as a business productivity tool (document summarization, content authoring, collaboration within SharePoint/Teams), are NOT included, as these are not developer or technical implementation tools. There is no SharePoint development guidance, custom coding, API integration, DevOps process, or hands-on AI/ML engineering; the content is about user-facing productivity enhancements. Thus, no categories apply.",
+    "canonical_url": "https://dellenny.com/the-future-of-sharepoint-ai-agents-and-smarter-collaboration-2025-update/",
+    "timestamp": "2025-10-06 10:06:57 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-10-06 12:04:58 +00:00",
+    "reason": "No categories found: Content excluded by generic exclusion rules. The provided content consists almost entirely of promotional material for courses, social media, and calls to action (subscribe, comment, like), without substantive technical detail. The main topic—a discussion on why startups and small companies don't use .NET and C#—is referenced only at a high level in the introduction, and no technical depth, reasoning, or actionable content is present in the submitted text. According to the workflow's focus on 'actual content' and exclusion of navigation and promotional sections, there is not enough technical substance to qualify for any categories.",
+    "canonical_url": "https://www.youtube.com/watch?v=lmhFfOM4LXw"
   }
 ]

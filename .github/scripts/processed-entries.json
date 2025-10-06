@@ -11496,5 +11496,23 @@
     "collection": "posts",
     "timestamp": "2025-10-06 04:05:46 +00:00",
     "reason": "Succesfully added: Assigned only the 'DevOps' category. The content thoroughly focuses on QA and test automation practices in the context of DevOps processes, emphasizing continuous integration, continuous testing, and collaborative mindset—all central to 'DevOps' category inclusion (DevOps rules 3, 5, and 9). It does not delve into specific Microsoft platforms, programming, or ML/AI/development topics related to Microsoft's technologies; thus, other categories such as Azure, AI, ML, Coding, Security, or GitHub Copilot do not apply. No generic exclusion rules are triggered, as the content is technical, substantial, and relevant."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=q7YLP6e0kXA",
+    "timestamp": "2025-10-06 08:04:57 +00:00",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the episode discusses the impact of artificial intelligence and GitHub Copilot on developer education (AI rule 5 and GitHub Copilot rule 1). Added Coding because the primary focus is learning to code and the transformation of coding education (Coding rule 4). Azure, DevOps, ML, and Security do not apply as there is no substantive content focused on those domains. Exclusion rules do not apply because the episode is about technical subject matter, centered on AI coding tools, without biographical focus or business/strategy-only discussion.",
+    "collection": "videos"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: The content thoroughly compares Azure Functions and Azure Container Apps, focusing on use cases, operating models, architecture, scaling, cost, and developer experience. Assigned 'Azure' because all services and comparisons revolve around Microsoft Azure (Azure rule 1, 4, 5). Assigned 'Coding' because it discusses programming models, language support, automation scripts, APIs, and developer experience (Coding rules 1, 2, 4, 5). Did not assign 'DevOps': while deployment and operational models are discussed, the main focus is application architecture/use case selection, not DevOps practices. There is no AI or ML content. Security is not a central theme. All conclusions and assignments follow the prescribed inclusion rules and quality standards.",
+    "canonical_url": "https://dellenny.com/azure-functions-vs-azure-container-apps-choosing-your-serverless-compute/",
+    "timestamp": "2025-10-06 10:06:29 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'Azure' because the content focuses exclusively on Azure Storage platform features and how to use Azure Monitor for operational management (Azure rule 1, 2, 4, 5). Assigned 'DevOps' because the post addresses operational monitoring, cross-resource alerting, and automation practices central to DevOps (DevOps rules 5, 6, 7: CI/CD and deployment, infrastructure/automation, monitoring/operations). Did not assign 'Coding', 'AI', 'ML', 'Security', or 'GitHub Copilot' because there is no code-level development, AI/ML, security configuration, or Copilot functionality discussed. Content is technical, actionable, and meets minimum length/quality requirements for community content.",
+    "timestamp": "2025-10-06 13:11:48 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/introducing-cross-resource-metrics-and-alerts-support-for-azure/ba-p/4459193"
   }
 ]
