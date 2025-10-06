@@ -11496,5 +11496,11 @@
     "collection": "posts",
     "timestamp": "2025-10-06 04:05:46 +00:00",
     "reason": "Succesfully added: Assigned only the 'DevOps' category. The content thoroughly focuses on QA and test automation practices in the context of DevOps processes, emphasizing continuous integration, continuous testing, and collaborative mindset—all central to 'DevOps' category inclusion (DevOps rules 3, 5, and 9). It does not delve into specific Microsoft platforms, programming, or ML/AI/development topics related to Microsoft's technologies; thus, other categories such as Azure, AI, ML, Coding, Security, or GitHub Copilot do not apply. No generic exclusion rules are triggered, as the content is technical, substantial, and relevant."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=q7YLP6e0kXA",
+    "timestamp": "2025-10-06 08:04:57 +00:00",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the episode discusses the impact of artificial intelligence and GitHub Copilot on developer education (AI rule 5 and GitHub Copilot rule 1). Added Coding because the primary focus is learning to code and the transformation of coding education (Coding rule 4). Azure, DevOps, ML, and Security do not apply as there is no substantive content focused on those domains. Exclusion rules do not apply because the episode is about technical subject matter, centered on AI coding tools, without biographical focus or business/strategy-only discussion.",
+    "collection": "videos"
   }
 ]
