@@ -11598,5 +11598,29 @@
     "reason": "Succesfully added: AI category is assigned because the entire series centers on implementing and integrating AI and LLMs, with explicit focus on generative AI, embeddings, RAG, and agents (AI rule 1/4/5). Azure category is assigned due to multiple sessions focusing on Azure AI services, Azure AI Search, and Azure-specific tools for safety and evaluation (Azure rules 1 and 3). Coding is assigned because the development examples, agent integrations, and practical hands-on Python programming are at the series' core (Coding rules 1/4/5). ML is not added because the primary focus and terminology are on AI usage and application development, not custom ML engineering or data science (per ML vs AI distinction). DevOps and Security are not in scope; agent protocols and safety are discussed at application level, not through security implementations or operations workflows.",
     "timestamp": "2025-10-06 18:06:52 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/level-up-your-python-gen-ai-skills-from-our-free-nine-part/ba-p/4459464"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/onelake-security-on-the-sql-analytics-endpoint/",
+    "timestamp": "2025-10-06 19:04:37 +00:00",
+    "reason": "Succesfully added: Assigned the Security category because the content focuses on authorization, centralized RBAC, RLS, CLS, policy enforcement, and secure data access models specific to the Microsoft Fabric ecosystem and SQL Analytics Endpoint (Security rules 1, 2, 3, 4). Assigned ML because Microsoft Fabric and Lakehouse architectures are core to the analytics and data science platform in the Microsoft stack, and this article covers data governance and secure analytics workflows central to ML/data engineering projects (ML rules 1, 5). Azure is not applied because the content specifically addresses Fabric’s own managed data platform, not broader Azure cloud services.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/10/06/investigating-active-exploitation-of-cve-2025-10035-goanywhere-managed-file-transfer-vulnerability/",
+    "timestamp": "2025-10-06 19:05:12 +00:00",
+    "reason": "Succesfully added: The 'Security' category is assigned because the central focus is on a critical vulnerability (CVE-2025-10035), its exploitation, the steps of a ransomware attack by Storm-1175, and protection methods using Microsoft Defender products. Content includes detailed security analysis, detection guidance, incident response, threat intelligence, and actionable hardening recommendations. No other categories (e.g., Azure, DevOps, Coding, AI, ML) apply as the technical implementation centers on security incident response and threat mitigation rather than software engineering, development, or specific Microsoft cloud technologies.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/bxV3Fw8nh5M",
+    "timestamp": "2025-10-06 19:05:41 +00:00",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the content focuses specifically on how the City Energy Analyst project uses GitHub Copilot to enhance development (GitHub Copilot inclusion rules 1, 2, 4; AI inclusion rule 2). Copilot is discussed as a code development/acceleration tool, qualifying under developer tool Copilot rules and AI category rules for Microsoft AI-powered developer tools. No other Microsoft technology categories apply, and the focus is not product marketing or business productivity. Generic exclusion rules do not apply.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/curso-oficial-y-gratuito-de-genai-y-python/ba-p/4459466",
+    "timestamp": "2025-10-06 19:06:13 +00:00",
+    "reason": "Succesfully added: La publicación cumple los criterios mínimos para contenido técnico extenso (community type, claramente más de 200 palabras) y está en español pero contiene un resumen dedicado y enlaces para audiencia en inglés. Se incluyen varias tecnologías de Microsoft: Azure AI Search, Semantic Kernel, Azure AI Content Safety, GitHub Copilot, OpenAI SDK (Azure-compatible); por tanto, la categoría 'AI' aplica (AI rules 1, 4, 5), 'Azure' (Azure rules 1, 3, 4), 'Coding' (Coding rules 1, 4, 5, desarrollo en Python con frameworks de Microsoft), y 'Security' (Security rules 1, 2, 7, por la cobertura de seguridad con Azure AI Content Safety y buenas prácticas). 'ML' no aplica porque el curso se centra en el uso e integración de IA generativa más que en implementación de algoritmos ML desde cero, y no hay foco principal en data engineering ni en desarrollo de modelos personalizados. La explicación descarta exclusiones genéricas porque hay suficiente enfoque técnico, y la difusión no es promocional ni personal/biográfica.",
+    "collection": "community"
   }
 ]
