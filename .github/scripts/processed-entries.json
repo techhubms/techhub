@@ -11544,5 +11544,17 @@
     "collection": "community",
     "timestamp": "2025-10-06 15:08:15 +00:00",
     "reason": "Succesfully added: Generic exclusion rules do NOT apply: the newsletter is technical, written in English, well above length minimum, and not business/biographical-focused beyond a single intro section. The bulk is highly technical and focused on Azure Logic Apps, integration, and AI agent implementation. Categories assigned:\n- AI: Multiple articles (Agent Loop, Logic Apps as multi-agentic automation, Copilot Studio integration, next action suggestions, AI in Logic Apps) align with AI inclusion rules 1 and 4.\n- Azure: The newsletter is centered on Azure Logic Apps and Azure-based integration tools/platforms (Azure rule 1).\n- DevOps: Topics include automation, MCP server workflows, hybrid migration, and governance (DevOps inclusion rules 4, 5, 6, and 7).\n- Coding: Includes code execution (Python interpreter), workflow customization, event handling, API integration, and migration from BizTalk (Coding inclusion rule 4).\n- Security: Entra ID, Managed Identity, enterprise-grade security features of Logic Apps are specifically mentioned (Security inclusion rule 1 & 4). \n\nExcluded ML because none of the content focuses primarily on ML model development or analytics engineering—the focus is automation, integration, and AI agents, not ML training or data science. Explanation fields in each assignment reference details from the summarized content and inclusion rule numbers."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-10-06 16:05:11 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-general-availability-of-migration-assistant-for-fabric-data-warehouse/",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the Migration Assistant enables migration from Azure Synapse Analytics and is part of Microsoft’s cloud data ecosystem (Azure & Fabric). Assigned 'ML' because the main focus is on analytical data warehousing, migration, and integration with modern data lake architectures and analytical workloads, aligning with ML/data engineering rules (ML rules 1, 2, 3, 4, 5). Did not assign 'AI' since core usage of AI services or Copilot for code development is not central; Copilot is only briefly mentioned regarding migration problem-solving, not as a development tool. Did not assign 'DevOps', 'Coding', 'Security', or 'GitHub Copilot' because there is no significant focus on CI/CD, application code, security, or GitHub integrations. No generic exclusion rules apply."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-10-06 16:05:34 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/visual-studio-dev-test-benefit-explained/",
+    "reason": "Succesfully added: Included 'Azure' because the article focuses on deploying, managing, and optimizing environments in Microsoft Azure (Azure rule 1 and 4). Included 'DevOps' because the article is about provisioning non-production environments for development and testing (DevOps rules 1, 5, 6, and 9) and discusses practices that optimize developer workflow, cloud provisioning, and team agility. 'Coding', 'AI', 'GitHub Copilot', 'ML', and 'Security' do not apply as the content does not cover programming concepts, AI/ML tools, GitHub Copilot, or security-specific details. No generic exclusions apply, as the article is technical, solution-focused, and intended for practitioners."
   }
 ]
