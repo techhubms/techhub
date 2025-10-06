@@ -1,0 +1,25 @@
+{
+  "Tags": [
+    "agent",
+    "agentmode",
+    "AI",
+    "copilot",
+    "demo",
+    "developer",
+    "dotnet",
+    "dotnetdeveloper",
+    "microsoft",
+    "softwaredeveloper"
+  ],
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=KDxi3NG3nfU",
+  "FeedLevelAuthor": "dotnet",
+  "FeedName": "DotNet YouTube",
+  "Description": "Want to start building AI-powered agents in your apps? In this session, we’ll walk through the fundamentals of the Microsoft Agent Framework with .NET. We’ll learn how to design, orchestrate, and run agents, with demos based on the latest Microsoft resources. A great starting point for developers ready to bring intelligence into their applications!\n\n🔗 Community Link: Docs: https://learn.microsoft.com/en-us/collections/gwp3f3t0z8771p?source=docs\n\n🎙️ Featuring: Bruno Capuano (https://developer.microsoft.com/en-us/advocates/bruno-capuano) Zack Way (https://www.linkedin.com/in/zacharyway/)\n\n#dotNET #AI #AgentFramework #AgetnFx",
+  "PubDate": "2025-10-06T16:35:53+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Title": ".NET AI Community Standup - Getting Started with the Microsoft Agent Framework",
+  "ProcessedDate": "2025-10-06 17:04:03",
+  "Author": "dotnet"
+}

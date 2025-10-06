@@ -11556,5 +11556,29 @@
     "timestamp": "2025-10-06 16:05:34 +00:00",
     "canonical_url": "https://devblogs.microsoft.com/visualstudio/visual-studio-dev-test-benefit-explained/",
     "reason": "Succesfully added: Included 'Azure' because the article focuses on deploying, managing, and optimizing environments in Microsoft Azure (Azure rule 1 and 4). Included 'DevOps' because the article is about provisioning non-production environments for development and testing (DevOps rules 1, 5, 6, and 9) and discusses practices that optimize developer workflow, cloud provisioning, and team agility. 'Coding', 'AI', 'GitHub Copilot', 'ML', and 'Security' do not apply as the content does not cover programming concepts, AI/ML tools, GitHub Copilot, or security-specific details. No generic exclusions apply, as the article is technical, solution-focused, and intended for practitioners."
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric and Service Principals are Azure native concepts (Azure rule 1, Azure AD/Entra ID and Key Vault usage). Included 'ML' because Semantic Link is positioned for data professionals enabling advanced analytics, notebook integration, and pipeline automation (ML rules 1, 2, 4). Added 'Security' since the core update is about credential management, authentication, and aligning with enterprise security practices (Security rules 1, 3, 4, 7). Did not assign AI because the focus is on workflow/security automation for data pipelines rather than direct use of Microsoft-hosted AI models or AI platforms. No 'DevOps' category: content focuses on data workflows and automation, not general DevOps, versioning, or development methodologies.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/service-principal-support-in-semantic-link-enabling-scalable-secure-automation/",
+    "timestamp": "2025-10-06 17:04:52 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: The content is an announcement about the public preview of Grok Code Fast 1, a model accessible through GitHub Copilot for Pro, Business, and Enterprise plans. It centers on Copilot's developer tool context (GitHub Copilot), the new AI model (AI), and platform availability in various development environments. According to the AI and GitHub Copilot inclusion rules, this qualifies for both categories. Coding was not assigned as the focus is not on code development or language features, but rather model accessibility within the developer tool. No exclusion rules apply.",
+    "canonical_url": "https://github.blog/changelog/2025-10-06-grok-code-fast-1-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse",
+    "timestamp": "2025-10-06 17:05:39 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the AI category because the session is focused on building 'AI-powered agents' using the Microsoft Agent Framework (AI inclusion rules 1, 4, and 5). Assigned the Coding category because the session is oriented around .NET development and implementation (Coding rules 1 and 2). No other categories were applied because there is no explicit coverage of DevOps, Azure, ML, or Security features. The content is relevant as it provides technical insights and demos for developers, meeting the quality and relevance requirements. Copilot is mentioned as a tag but not as a central technical subject, so 'GitHub Copilot' was not included.",
+    "canonical_url": "https://www.youtube.com/watch?v=KDxi3NG3nfU",
+    "timestamp": "2025-10-06 17:06:05 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the content focuses exclusively on Azure Migrate, a Microsoft Azure service (Azure inclusion rule 1), and details how to use a Microsoft-specific pricing agreement (MCA) during cloud migration assessments in Azure. No other categories apply: there are no AI, ML, Coding, Security, DevOps, or GitHub Copilot elements present. All content is technical in nature and includes practical how-to information, meeting quality and inclusion standards.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/empower-your-migration-decisions-with-negotiated-agreements-ea/ba-p/4459425",
+    "timestamp": "2025-10-06 17:06:40 +00:00"
   }
 ]

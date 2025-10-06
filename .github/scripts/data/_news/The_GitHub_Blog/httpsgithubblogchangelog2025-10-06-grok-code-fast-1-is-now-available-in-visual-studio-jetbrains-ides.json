@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_news",
+  "PubDate": "2025-10-06T16:11:26+00:00",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Author": "Allison",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2025-10-06-grok-code-fast-1-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse",
+  "Description": "Grok Code Fast 1 is available in public preview to GitHub Copilot Pro, Pro+, Business, and Enterprise plans. You’ll be able to access the model in GitHub Copilot Chat on…\n\nThe post [Grok Code Fast 1 is now available in Visual Studio, JetBrains IDEs, Xcode, and Eclipse](https://github.blog/changelog/2025-10-06-grok-code-fast-1-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse) appeared first on [The GitHub Blog](https://github.blog).",
+  "ProcessedDate": "2025-10-06 17:03:31",
+  "EnhancedContent": "Grok Code Fast 1 is available in public preview to GitHub Copilot Pro, Pro+, Business, and Enterprise plans.\n\nYou’ll be able to access the model in GitHub Copilot Chat on github.com, GitHub Mobile, Visual Studio Code, Visual Studio, JetBrains IDEs, Xcode, and Eclipse through the chat model picker (agent, ask, and edit modes). If you do not yet have access, please check again later.\n\n## Enabling access\n\nCopilot Business and Enterprise administrators must opt in by enabling the Grok Code Fast 1 policy in Copilot settings. Once enabled, users in that organization will see **Grok Code Fast 1** in the model picker.\n\nTo learn more about the models available in Copilot, see [our documentation on models](https://docs.github.com/copilot/reference/ai-models/supported-models) and get started with Copilot today.\n\n## Share your feedback\n\nHave feedback or questions? Join the [community discussion](https://github.com/orgs/community/discussions/categories/copilot-conversations) to share feedback and tips.",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Title": "Grok Code Fast 1 is now available in Visual Studio, JetBrains IDEs, Xcode, and Eclipse"
+}

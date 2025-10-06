@@ -6381,5 +6381,23 @@
     "collection": "community",
     "timestamp": "2025-10-06 15:07:33 +00:00",
     "reason": "Insufficient content length"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The content consists entirely of a one-sentence summary focused on the business impact of Microsoft technologies for a pension system, with no technical depth, implementation details, developer practices, or coverage of specific Microsoft products in a technical context. The material is high-level, business/strategy oriented, and does not qualify for any development-related categories. Additionally, the excerpt does not reference any substantive technical content or actionable information, triggering business strategy and executive content exclusions.",
+    "canonical_url": "https://news.microsoft.com/source/asia/features/epfs-digital-leap-to-build-a-future-ready-pension-system/",
+    "timestamp": "2025-10-06 17:05:04 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: No categories assigned. The content is a news post about Xbox and Microsoft's partnership with Special Olympics, focusing on disability inclusion, gaming events, accessibility, and athlete empowerment. It highlights community events, inclusion initiatives, and learning experiences but does not provide substantive technical or development-focused content, code, or practical implementation details relevant to Microsoft developer tools, cloud platforms, coding, DevOps, AI, ML, or security. It falls under the generic exclusion rule of business strategy, community/culture, and workplace focus (Chapter 3), with no substantial hands-on development or technical depth as required by any category inclusion rule.",
+    "canonical_url": "https://news.xbox.com/en-us/2025/10/06/xbox-special-olympics-gaming-disability-inclusion-2025/",
+    "timestamp": "2025-10-06 17:05:19 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content is an announcement for a VS Code live stream event with minimal technical detail about the release. The description lacks substantive information, code discussion, or technical depth about Microsoft technologies, features, or development practices as required by category rules. There is no content text to evaluate for deeper technical explanation or walkthroughs, and the tags focus on the product/community aspect rather than meaningful implementation or development patterns. As such, there is insufficient information to justify inclusion in any developer-focused category.",
+    "canonical_url": "https://www.youtube.com/watch?v=4Oscngju_xQ",
+    "timestamp": "2025-10-06 17:06:20 +00:00"
   }
 ]
