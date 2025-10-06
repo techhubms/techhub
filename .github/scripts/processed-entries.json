@@ -11640,5 +11640,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-data-factory-sql-managed-instance-and-ssis-implementation/ba-p/4459525",
     "timestamp": "2025-10-06 21:06:12 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Coding category because the content discusses using C# and F# (Microsoft languages) with Pulumi to define and deploy infrastructure, meeting Coding rule 1 and 4. Assigned DevOps because Pulumi is an Infrastructure as Code (IaC) platform and the video centers on infrastructure management and cloud deployment tooling, meeting DevOps rule 6. Assigned Azure as a tag (not a category) because while Pulumi supports Azure, the content does not focus solely or primarily on Microsoft cloud services but on IaC approaches with .NET languages—threshold for Azure category not met. No other categories apply.",
+    "collection": "videos",
+    "timestamp": "2025-10-06 23:05:24 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=4ljqB21s5L8"
   }
 ]
