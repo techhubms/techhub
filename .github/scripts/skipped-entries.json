@@ -6363,5 +6363,23 @@
     "collection": "videos",
     "reason": "No categories found: Content excluded due to generic exclusion rule - the description is primarily in Portuguese, indicated by the '[pt-BR]' in the title and the use of primarily Portuguese language. According to the Non-English Content exclusion rule, content not primarily in English (<80% English in main text) is excluded. There is also no substantive technical content in English to assess further category inclusion. As a result, no categories are assigned.",
     "timestamp": "2025-10-06 14:04:40 +00:00"
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_excel-agent-mode-testing-microsofts-new-activity-7380375743207309312-NekE",
+    "collection": "news",
+    "timestamp": "2025-10-06 15:05:48 +00:00",
+    "reason": "No categories found: All generic exclusion rules must be applied first. This content is a LinkedIn post by Satya Nadella with only a very brief and non-technical commentary about 'Agent Mode' in Excel, focusing on how the feature makes Excel feel more like a partner, alongside a collection of very short, non-substantive community comments. There is no educational, implementation, or developer-focused detail regarding Microsoft technology, programming, AI services, coding, DevOps, ML, Azure, or security, nor does it contain technical architecture or actionable insights. Additionally, the post is not primarily targeted at developers or technical practitioners and does not provide technical accuracy, professional clarity, or actionable technical information as required by quality standards. Thus, it is excluded for lack of technical depth and relevance per the core workflow (focus on actual content and not surrounding UI), and also due to not meeting the threshold for development-focused Microsoft technology content."
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_supercharged-past-few-weeks-as-we-push-the-activity-7380319088272781312-aY4x",
+    "collection": "news",
+    "timestamp": "2025-10-06 15:06:29 +00:00",
+    "reason": "No categories found: No categories assigned because the main content is about Microsoft 365 Copilot (identified by 'model-forward innovation across Microsoft 365,' and references to 'M365 Copilot agents'). According to the CRITICAL Copilot Product Distinction rule, Microsoft 365 Copilot, Copilot for Microsoft 365, Office Copilot, and related business productivity tools are excluded and do not qualify for any categories, as they are not considered development or technical implementation content. The rest of the text consists mainly of navigation, UI elements, or community comments. No substantial technical or developer-focused Azure, AI (except business productivity, which is excluded), Coding, ML, DevOps, or Security content is present."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure/azure-functions-vs-azure-container-apps-choosing-your-serverless/m-p/4459314#M2162",
+    "collection": "community",
+    "timestamp": "2025-10-06 15:07:33 +00:00",
+    "reason": "Insufficient content length"
   }
 ]
