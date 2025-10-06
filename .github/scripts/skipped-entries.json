@@ -6357,5 +6357,11 @@
     "timestamp": "2025-10-06 12:04:58 +00:00",
     "reason": "No categories found: Content excluded by generic exclusion rules. The provided content consists almost entirely of promotional material for courses, social media, and calls to action (subscribe, comment, like), without substantive technical detail. The main topic—a discussion on why startups and small companies don't use .NET and C#—is referenced only at a high level in the introduction, and no technical depth, reasoning, or actionable content is present in the submitted text. According to the workflow's focus on 'actual content' and exclusion of navigation and promotional sections, there is not enough technical substance to qualify for any categories.",
     "canonical_url": "https://www.youtube.com/watch?v=lmhFfOM4LXw"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=uatYL2S0F5I",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the description is primarily in Portuguese, indicated by the '[pt-BR]' in the title and the use of primarily Portuguese language. According to the Non-English Content exclusion rule, content not primarily in English (<80% English in main text) is excluded. There is also no substantive technical content in English to assess further category inclusion. As a result, no categories are assigned.",
+    "timestamp": "2025-10-06 14:04:40 +00:00"
   }
 ]

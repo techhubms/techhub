@@ -11514,5 +11514,11 @@
     "reason": "Succesfully added: Assigned 'Azure' because the content focuses exclusively on Azure Storage platform features and how to use Azure Monitor for operational management (Azure rule 1, 2, 4, 5). Assigned 'DevOps' because the post addresses operational monitoring, cross-resource alerting, and automation practices central to DevOps (DevOps rules 5, 6, 7: CI/CD and deployment, infrastructure/automation, monitoring/operations). Did not assign 'Coding', 'AI', 'ML', 'Security', or 'GitHub Copilot' because there is no code-level development, AI/ML, security configuration, or Copilot functionality discussed. Content is technical, actionable, and meets minimum length/quality requirements for community content.",
     "timestamp": "2025-10-06 13:11:48 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/introducing-cross-resource-metrics-and-alerts-support-for-azure/ba-p/4459193"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/addressing-air-gap-requirements-through-secure-azure-arc/ba-p/4458748",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'Azure' category since the article is centrally focused on Azure Arc, Azure networking, Private Link, Azure Firewall, and integration patterns for cloud management (Azure inclusion rule 1, 4, 5). Assigned 'Security' due to extensive coverage of air-gap network security, zero trust principles, strict governance, control/data plane isolation, layered defense, and regulatory compliance (Security inclusion rule 1, 3, 4, and 9). Did not assign DevOps, Coding, ML, or AI as the article does not focus on software development, DevOps processes, or AI/ML workloads; its scope is secure architecture, deployment patterns, and compliance for Azure Arc in regulated environments.",
+    "timestamp": "2025-10-06 14:05:11 +00:00"
   }
 ]
