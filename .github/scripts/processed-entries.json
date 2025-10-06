@@ -11478,5 +11478,23 @@
     "reason": "Succesfully added: Assigned the Azure category because the content is centered on the technical announcement and features of Oracle Database@Azure, including Azure region expansion, Exadata Exascale Infrastructure support, and integration with Microsoft services like Fabric and Sentinel (Azure category inclusion rule 1 and 4). While Oracle is a non-Microsoft technology, the focus is on its deployment, integration, and operation within Microsoft Azure, making Azure central. None of the generic exclusion rules apply. The AI, ML, DevOps, Coding, GitHub Copilot, or Security categories do not apply because the post does not detail those aspects directly or at the technical implementation level.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-now-supports-oracle-database-19c-on/ba-p/4458643",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://devops.com/build-vs-buy-what-it-really-takes-to-harden-your-software-supply-chain/",
+    "collection": "posts",
+    "timestamp": "2025-10-06 04:05:03 +00:00",
+    "reason": "Succesfully added: Assigned 'DevOps' because the entire article centers around securing CI/CD build pipelines, automation, and processes relevant to modern DevOps practices (DevOps category rules 1, 5, 6). Assigned 'Security' since the focus is on mitigating threats in the software supply chain, vulnerability management, and securing container distribution (Security rules 1, 2, 4, 5, 9). No Azure, Coding, AI, ML, or GitHub Copilot categories because the article does not discuss Microsoft-specific technologies, programming languages, or AI/ML components. No generic exclusion rule triggers; the article is in English, technically detailed, and sufficiently informative."
+  },
+  {
+    "canonical_url": "https://devops.com/shortcut-adds-ai-agent-to-orchestrate-management-of-software-development-projects/",
+    "collection": "posts",
+    "timestamp": "2025-10-06 04:05:25 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because Korey is an AI agent designed to automate aspects of software project management (AI category rule 1 and 5). Assigned the DevOps category because the article centers on orchestrating DevOps workflows, project tracking, and automating processes for engineering teams (DevOps rules 3, 4, 9, and general context). No Microsoft-specific technologies are discussed, so Azure, ML, Coding, GitHub Copilot, and Security categories were not assigned. Content is technical, not sales or biographical, and fits the inclusion criteria."
+  },
+  {
+    "canonical_url": "https://devops.com/why-automation-fails-without-the-right-qa-mindset-2/",
+    "collection": "posts",
+    "timestamp": "2025-10-06 04:05:46 +00:00",
+    "reason": "Succesfully added: Assigned only the 'DevOps' category. The content thoroughly focuses on QA and test automation practices in the context of DevOps processes, emphasizing continuous integration, continuous testing, and collaborative mindset—all central to 'DevOps' category inclusion (DevOps rules 3, 5, and 9). It does not delve into specific Microsoft platforms, programming, or ML/AI/development topics related to Microsoft's technologies; thus, other categories such as Azure, AI, ML, Coding, Security, or GitHub Copilot do not apply. No generic exclusion rules are triggered, as the content is technical, substantial, and relevant."
   }
 ]

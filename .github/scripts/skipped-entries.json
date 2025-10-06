@@ -6333,5 +6333,11 @@
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/when-should-i-use-sql-server-mysql-or-postgresql/m-p/4440172#M668",
     "collection": "community"
+  },
+  {
+    "reason": "No categories found: Excluded all categories because the provided content lacks sufficient information. The 'content' field is null, and both 'description' and 'tags' are empty. Given only the title ('Reusing HttpClient is bad') and author ('Nick Chapsas'), there are not enough technical details to determine if the content focuses on Microsoft technologies or development practices as required by the inclusion rules. Per the guidelines in Chapter 2 and 5, categorization cannot proceed based solely on title and author without substantive content for analysis.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/CT78MB5CH58",
+    "timestamp": "2025-10-06 00:09:27 +00:00"
   }
 ]
