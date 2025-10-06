@@ -11580,5 +11580,23 @@
     "reason": "Succesfully added: Assigned the Azure category because the content focuses exclusively on Azure Migrate, a Microsoft Azure service (Azure inclusion rule 1), and details how to use a Microsoft-specific pricing agreement (MCA) during cloud migration assessments in Azure. No other categories apply: there are no AI, ML, Coding, Security, DevOps, or GitHub Copilot elements present. All content is technical in nature and includes practical how-to information, meeting quality and inclusion standards.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/empower-your-migration-decisions-with-negotiated-agreements-ea/ba-p/4459425",
     "timestamp": "2025-10-06 17:06:40 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: I assigned the 'Azure' category because this content is about Microsoft Fabric Spark, a core Azure data platform technology, and covers advanced features in Delta Lake table management (Azure rule 1). I also included the 'ML' category because the article discusses features essential to large-scale data engineering and Lakehouse architectures, closely tied to analytics and data science workloads (ML rules 1 and 2). The article does not focus directly on coding practices, AI, DevOps, or Security, as it emphasizes data engineering automation and optimization. The content is technical, focused on platform features, and free of generic or business-only topics, meeting all inclusion criteria.",
+    "timestamp": "2025-10-06 18:05:54 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-optimized-compaction-in-fabric-spark/"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category because the connector is designed for Microsoft Azure data platforms (Azure SQL Database, Azure SQL Managed Instance, SQL Server on Azure VM) and the Fabric SQL database, which is a part of the Microsoft Azure ecosystem (Azure rule 1, 2, and 4). Assigned ML category because the content revolves around enabling data scientists and Spark developers to perform data engineering, analytics, and integration workflows—key ML/data engineering scenarios (ML rule 1, 2, 3, 4, and 5). The article does not include AI, Coding, DevOps, GitHub Copilot, or Security as primary focuses, as it does not address AI services, code development, CI/CD, or security processes outside standard SQL enforcement.",
+    "timestamp": "2025-10-06 18:06:13 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/spark-connector-for-sql-databases-preview/"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: AI category is assigned because the entire series centers on implementing and integrating AI and LLMs, with explicit focus on generative AI, embeddings, RAG, and agents (AI rule 1/4/5). Azure category is assigned due to multiple sessions focusing on Azure AI services, Azure AI Search, and Azure-specific tools for safety and evaluation (Azure rules 1 and 3). Coding is assigned because the development examples, agent integrations, and practical hands-on Python programming are at the series' core (Coding rules 1/4/5). ML is not added because the primary focus and terminology are on AI usage and application development, not custom ML engineering or data science (per ML vs AI distinction). DevOps and Security are not in scope; agent protocols and safety are discussed at application level, not through security implementations or operations workflows.",
+    "timestamp": "2025-10-06 18:06:52 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/level-up-your-python-gen-ai-skills-from-our-free-nine-part/ba-p/4459464"
   }
 ]

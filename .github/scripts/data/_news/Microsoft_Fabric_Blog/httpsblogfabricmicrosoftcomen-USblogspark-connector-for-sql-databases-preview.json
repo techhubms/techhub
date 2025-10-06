@@ -1,0 +1,14 @@
+{
+  "Author": "Microsoft Fabric Blog",
+  "FeedLevelAuthor": "Microsoft Fabric Blog",
+  "PubDate": "2025-10-06T10:12:54+00:00",
+  "Tags": [],
+  "Title": "Spark Connector for SQL databases (Preview)",
+  "Link": "https://blog.fabric.microsoft.com/en-US/blog/spark-connector-for-sql-databases-preview/",
+  "EnhancedContent": "Fabric Spark connector for SQL databases (Azure SQL databases, Azure SQL Managed Instances, Fabric SQL databases and SQL Server in Azure VM) in the Fabric Spark runtime is now available. This connector enables Spark developers and data scientists to access and work with data from SQL database engines using a simplified Spark API. The connector will be included as a default library within the Fabric Runtime, eliminating the need for separate installation.\n\n![](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/SparkConnectorForSQL-AR.gif)\n\n## Operation Support\n\nThe Spark connector for Microsoft Fabric Spark Runtime is a high-performance library that enables you to read from and write to SQL databases. The connector offers the following capabilities:\n\n- Use Spark to perform large write and read operations on the following SQL products: Azure SQL Database, Azure SQL Managed Instance, SQL Server on Azure VM, Fabric SQL databases.\n- The connector comes preinstalled within the Fabric runtime, which eliminates the need for separate installation.\n- While you’re accessing a table or a view, the connector upholds security models defined at the SQL engine level. These models include object-level security (OLS), row-level security (RLS), and column-level security (CLS).\n\n## Language Support\n\nWe are also introducing PySpark support for this connector, in addition to Scala. This means that you no longer need to use a workaround to utilize this connector in PySpark, as it is now available as a native capability.\n\n## Authentication Support\n\nThis connector supports multiple authentication methods which you can choose based on your need and setup.\n\nTo learn more about the Spark connector for SQL databases, please refer to the [Spark connector for SQL databases](https://learn.microsoft.com/fabric/data-engineering/spark-sql-connector) documentation.",
+  "Description": "Fabric Spark connector for SQL databases (Azure SQL databases, Azure SQL Managed Instances, Fabric SQL databases and SQL Server in Azure VM) in the Fabric Spark runtime is now available. This connector enables Spark developers and data scientists to access and work with data from SQL database engines using a simplified Spark API. The connector …\n\n[Continue reading “Spark Connector for SQL databases (Preview)”](https://blog.fabric.microsoft.com/en-us/blog/spark-connector-for-sql-databases-preview/)",
+  "FeedUrl": "https://blog.fabric.microsoft.com/en-us/blog/feed/",
+  "ProcessedDate": "2025-10-06 18:03:09",
+  "OutputDir": "_news",
+  "FeedName": "Microsoft Fabric Blog"
+}
