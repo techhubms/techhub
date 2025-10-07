@@ -11688,5 +11688,17 @@
     "timestamp": "2025-10-07 09:05:56 +00:00",
     "collection": "posts",
     "reason": "Succesfully added: Assigned the Security category because the entire article focuses on Zero Trust security architecture, implementation strategies, and Microsoft security tools, as per Security inclusion rules 1–9. Assigned the Azure category because every section applies Zero Trust principles in the context of Azure cloud services (Azure rule 1, 4, 5). Did not assign AI, Coding, DevOps, ML, or GitHub Copilot categories as the content does not focus on AI/ML workloads, developer coding, development or DevOps practices, or GitHub Copilot. Referenced specific Azure services such as Microsoft Entra ID, Defender for Cloud, Sentinel, Purview, and Azure Policy, confirming clear relevance to both assigned categories. No generic exclusion rules applied, as this is a detailed technical implementation guide."
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-agentic-ai-works-and-how-to-build-it-in-azure/",
+    "collection": "posts",
+    "timestamp": "2025-10-07 10:04:52 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the entire post focuses on agentic AI concepts and implementation using AI models (AI rule 1). Assigned Azure category due to the detailed use of Azure-specific services (Azure rule 1), such as Azure OpenAI, Azure Functions, Logic Apps, Cosmos DB, Cognitive Search, and integration frameworks. Did not assign ML: while Azure Machine Learning is mentioned at the improvement stage, the focus is on orchestrating AI-driven agents using Azure's platform rather than custom ML or data science workflows. Did not assign Coding: the post details architecture and pattern integration, not code-level development or programming practices. No DevOps/Security categories apply, as the post is not about CI/CD, team collaboration, or security implementation, though security and governance are discussed at a high level."
+  },
+  {
+    "canonical_url": "https://devops.com/how-can-the-usage-of-ai-help-boost-devops-pipelines/",
+    "collection": "posts",
+    "timestamp": "2025-10-07 10:05:18 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the content focuses on how artificial intelligence is integrated into DevOps and CI/CD pipelines, meeting AI inclusion rule 5 and 6. Assigned 'DevOps' as the topic is entirely about CI/CD and software delivery automation, aligning with DevOps inclusion rules 1, 5, and 6. Assigned 'Security' since the article discusses AI-powered security testing, incident response, and DevSecOps (Security rules 2, 5, and 6). No Microsoft-specific technologies (such as Azure or GitHub Copilot) are centrally featured, so Azure, GitHub Copilot, Coding, and ML categories were not assigned."
   }
 ]
