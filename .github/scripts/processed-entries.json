@@ -11646,5 +11646,11 @@
     "collection": "videos",
     "timestamp": "2025-10-06 23:05:24 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=4ljqB21s5L8"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-10-06-enterprise-access-restrictions-now-supports-multiple-enterprises",
+    "collection": "news",
+    "timestamp": "2025-10-07 01:31:45 +00:00",
+    "reason": "Succesfully added: Added DevOps category since the update affects version control, workflow security, network configuration, and platform governance in a development/operations context (DevOps rules 1, 2, 6). Added Security category due to focus on network security, authentication, firewall/proxy settings, and access restrictions to protect enterprise resources (Security rules 1, 3, 4). Did not add Azure or AI/GitHub Copilot/Coding/ML since the content does not cover those topics per inclusion rules. Copilot is mentioned in the context of access control, not as a development tool, so GitHub Copilot and AI categories are not added."
   }
 ]
