@@ -11658,5 +11658,11 @@
     "canonical_url": "https://devops.com/how-graph-intelligence-is-transforming-software-supply-chain-visibility/",
     "collection": "posts",
     "timestamp": "2025-10-07 04:05:21 +00:00"
+  },
+  {
+    "timestamp": "2025-10-07 06:05:16 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-importance-of-streaming-for-llm-powered-chat-applications/ba-p/4459574",
+    "reason": "Succesfully added: Assigned 'AI' because the content centers on building chat applications that utilize LLMs and Azure OpenAI Service (AI inclusion rule 1, 4, 6). Assigned 'Azure' category since all implementation details and sample apps are focused on or deployed using Azure services (Azure inclusion rule 1, 4, 5, and 6). Assigned 'Coding' as the article provides code snippets (Python), references to APIs, and practical frontend/backend engineering solutions (Coding inclusion rules 1, 2, 4, and 5). Not assigned to 'ML' since content is mainly about integrating and streaming existing LLM APIs rather than building or training custom ML models. Not assigned 'DevOps' or 'Security' as there's no focus on CI/CD, infrastructure, or security practices. The content meets community length and relevance criteria for developer-focused knowledge."
   }
 ]
