@@ -1,0 +1,18 @@
+{
+  "Title": "GitHub now supports social login with Apple",
+  "OutputDir": "_news",
+  "PubDate": "2025-10-07T21:07:24+00:00",
+  "ProcessedDate": "2025-10-07 23:02:55",
+  "Description": "GitHub now offers social login with Apple, simplifying sign-ups for our iOS developers. We previously launched social login with Google, and we’re now extending that for Apple. You can create…\n\nThe post [GitHub now supports social login with Apple](https://github.blog/changelog/2025-10-07-github-now-supports-social-login-with-apple) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Usha Narayanabhatta",
+  "EnhancedContent": "GitHub now offers social login with Apple, simplifying sign-ups for our iOS developers.\n\nWe previously launched [social login with Google](https://github.blog/changelog/2025-07-15-social-login-with-google-is-now-generally-available/), and we’re now extending that for Apple.\n\nYou can create a new GitHub account using your Apple or Google credentials in just a few clicks. Or [link your trusted social login email](https://docs.github.com/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/adding-an-email-address-to-your-github-account) with your existing GitHub accounts, securing them further by eliminating the need to create and manage a separate GitHub password. For enhanced security, we recommend enabling two-factor authentication (2FA) and adding a passkey or a password for account recovery.\n\nCreate your free GitHub account using your trusted Apple identity and start coding with Copilot today!\n\nLearn more about [authentication with GitHub](https://docs.github.com/authentication/keeping-your-account-and-data-secure/about-authentication-to-github).\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "Link": "https://github.blog/changelog/2025-10-07-github-now-supports-social-login-with-apple",
+  "FeedName": "The GitHub Blog",
+  "Tags": [
+    "account management",
+    "copilot",
+    "Improvement"
+  ],
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}

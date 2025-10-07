@@ -6483,5 +6483,11 @@
     "collection": "community",
     "reason": "Insufficient content length",
     "timestamp": "2025-10-07 17:07:46 +00:00"
+  },
+  {
+    "timestamp": "2025-10-07 22:04:44 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-10-07-github-now-supports-social-login-with-apple",
+    "collection": "news",
+    "reason": "No categories found: No category is assigned. Although GitHub Copilot is briefly referenced, the content is not about its usage or features, but only mentions it as a post-signup suggestion. The primary content revolves around account management, authentication, and social login—none of which fall under the defined 'Coding', 'DevOps', 'AI', 'Security', 'Azure', 'ML', or 'GitHub Copilot' categories. 'GitHub Copilot' and 'AI' categories require content focused on Copilot functions, integrations, or technical best practices, which are absent here. Thus, no categories apply per the inclusion rules."
   }
 ]
