@@ -1,0 +1,17 @@
+{
+  "Description": "In this episode of the #AzureEssentialsShow, host Thomas Maurer and guest Britt Henderson from Microsoft Azure dive into the #AzurePricingCalculator, exploring its features, benefits, and practical applications for cloud cost estimation. The discussion covers how the calculator provides precision, clarity, and confidence for users planning and managing Azure workloads, and highlights collaborative and personalized pricing capabilities for organizations of all sizes.\n\nIn this episode you will learn: • How to access and navigate the Azure Pricing Calculator for estimating cloud costs. • The key benefits of using the calculator, including real-time pricing, scenario modeling, and detailed cost breakdowns. • The ways the calculator supports collaboration and personalized pricing for different roles within an organization.\n\nTo get started, visit the Azure Pricing Calculator, experiment with configuring services, and explore available tutorials and best practices to deepen their understanding of Azure cost estimation. Engaging with the tool firsthand will help you make informed decisions and optimize your cloud spending.\n\nResources • Estimate costs with the Azure pricing calculator https://learn.microsoft.com/azure/cost-management-billing/costs/pricing-calculator • Plan to manage Azure costs https://learn.microsoft.com.azure/cost-management-billing/understand/plan-manage-costs • Azure Pricing Calculator https://azure.microsoft.com/pricing/calculator • Explore essential resources! https://azure.com/AzureEssentials Related episodes • Understand Azure Pricing & Resources https://aka.ms/azenable/163 • Learn to Budget & Optimize in Azure https://aka.ms/azenable/164 • Watch more episodes on Pricing https://aka.ms/AzurePricingVideos • Watch the Azure Essentials Show https://aka.ms/AzureEssentialsShow\n\nConnect • Thomas Maurer https://www.linkedin.com/in/thomasmaurer2 • Britt Henderson https://www.linkedin.com/in/bleg\n\nChapters 0:00 In this episode … 0:28 Introduction 1:00 What is the Azure Pricing Calculator 1:40 Three key benefits 2:30 How it works 3:17 Quick demo 5:35 Who should use it 6:40 Next steps 7:20 Resources",
+  "FeedName": "Microsoft Developer YouTube",
+  "EnhancedContent": null,
+  "Tags": [
+    "AzureEssentialsShow",
+    "AzurePricingCalculator"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Link": "https://www.youtube.com/watch?v=7b84OrcATUQ",
+  "Title": "Azure Pricing Calculator: Estimate Smarter, Plan Confidently",
+  "ProcessedDate": "2025-10-07 08:03:42",
+  "PubDate": "2025-10-07T07:00:05+00:00",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "Author": "Microsoft Developer"
+}

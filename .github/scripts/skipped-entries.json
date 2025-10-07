@@ -6411,5 +6411,11 @@
     "canonical_url": "https://devops.com/five-great-devops-job-opportunities-159/",
     "collection": "posts",
     "timestamp": "2025-10-07 04:04:59 +00:00"
+  },
+  {
+    "timestamp": "2025-10-07 08:04:23 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: this is biographical content focusing primarily on a single individual's career move (Thomas Maurer becoming EMEA Global Black Belt for Sovereign Cloud at Microsoft) rather than providing technical implementation information, tutorials, or deep technical analysis of Microsoft technologies. The majority of the text is about the author's new role, responsibilities, and career context, which triggers the 'Biographical Focus' exclusion in the Content Quality Exclusions. There is not enough substantive technical detail, guidance, or architectural analysis to override the generic exclusion.",
+    "canonical_url": "https://www.thomasmaurer.ch/2025/10/my-new-role-as-emea-global-black-belt-gbb-for-sovereign-cloud-at-microsoft/",
+    "collection": "posts"
   }
 ]
