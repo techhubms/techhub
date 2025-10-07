@@ -11700,5 +11700,11 @@
     "collection": "posts",
     "timestamp": "2025-10-07 10:05:18 +00:00",
     "reason": "Succesfully added: Assigned 'AI' category because the content focuses on how artificial intelligence is integrated into DevOps and CI/CD pipelines, meeting AI inclusion rule 5 and 6. Assigned 'DevOps' as the topic is entirely about CI/CD and software delivery automation, aligning with DevOps inclusion rules 1, 5, and 6. Assigned 'Security' since the article discusses AI-powered security testing, incident response, and DevSecOps (Security rules 2, 5, and 6). No Microsoft-specific technologies (such as Azure or GitHub Copilot) are centrally featured, so Azure, GitHub Copilot, Coding, and ML categories were not assigned."
+  },
+  {
+    "reason": "Succesfully added: Content assigned only the DevOps category because it covers workflow changes for handling pull requests in GitHub, including transitioning from Dependabot comment commands to official GitHub tools (DevOps rule 2: GitHub DevOps tools, and rule 5: CI/CD and deployment). No Coding, AI, Azure, ML, or Security categories are appropriate because the content does not address code-level development, AI/ML, Azure-specific technologies, or direct security implementations. The mention of supply chain security is contextual but not enough for the Security category, as this update is about workflow and tool usage.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-10-06-upcoming-changes-to-github-dependabot-pull-request-comment-commands",
+    "timestamp": "2025-10-07 14:04:54 +00:00"
   }
 ]

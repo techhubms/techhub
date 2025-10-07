@@ -6423,5 +6423,29 @@
     "timestamp": "2025-10-07 09:05:24 +00:00",
     "collection": "posts",
     "reason": "No categories found: Content is excluded due to generic exclusion rules for non-development Microsoft products (see 'Non-Development Microsoft Products' under Generic Exclusion Rules). The article focuses on Microsoft Viva Insights, which is designed to enhance employee experience, workplace well-being, and productivity for end-users, managers, and leaders. The content centers on workplace culture, leadership buy-in, employee well-being, best practices for adoption, privacy, and organizational change—not on technical development, coding, architecture, or implementation from a developer or technical IT perspective. There are no code samples, APIs, architecture diagrams, customization, or extensibility topics that would align with any included category. As such, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/copilot-in-the-c-suite/",
+    "timestamp": "2025-10-07 13:12:26 +00:00",
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to the generic exclusion rule for business strategy and executive content. The post's title and description indicate a focus on leadership's interaction with AI (specifically Copilot) at the executive level, rather than technical implementation, developer tools, or architectural details. The Copilot referenced is not GitHub Copilot but a business productivity tool, falling under the non-development Microsoft products exclusion. Additionally, there is no technical depth or developer-centric content present in the available text."
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/europe/2025/10/07/microsoft-dragon-copilot-an-ai-clinical-assistant-that-enables-clinicians-to-streamline-clinical-documentation-surface-information-and-automate-tasks-is-now-available-in-ireland/",
+    "timestamp": "2025-10-07 13:12:39 +00:00",
+    "collection": "news",
+    "reason": "No categories found: No categories assigned due to generic exclusion rules. The content is a product announcement for Microsoft Dragon Copilot, an AI clinical assistant tool intended for healthcare and clinical documentation, not for developer or technical use. This falls under non-development Microsoft product exclusions—content about business productivity, industry solutions, or end-user tools (not developer-focused) are not included (Non-Development Microsoft Products exclusion). There is no mention of coding, technical implementation, or use within software development. Therefore, per the workflow, all categories are excluded."
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content is primarily a biographical story focusing on Brandon Gallmeyer's journey from realtor to developer, meeting the 'Biographical Focus' generic exclusion rule in Chapter 3. While the video describes technical achievements (building a CRM app with AI, OpenAI APIs, PostgreSQL, and GitHub), the main focus is Chef Gallmeyer's personal transformation and self-driven innovation, lacking sustained technical depth about Microsoft technologies or practical implementation. The description repeatedly frames the episode as inspirational and centered on personal background ('Meet Chef Gallmeyer', 'Realtor Turned Developer', 'this is a masterclass in self-driven innovation'), confirming the exclusion criteria. No categories applied.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=5h52awwiJGU",
+    "timestamp": "2025-10-07 14:05:19 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/ms-sql-backup-immutability/m-p/4459660#M22256",
+    "timestamp": "2025-10-07 14:05:21 +00:00"
   }
 ]
