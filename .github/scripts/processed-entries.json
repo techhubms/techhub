@@ -11664,5 +11664,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-importance-of-streaming-for-llm-powered-chat-applications/ba-p/4459574",
     "reason": "Succesfully added: Assigned 'AI' because the content centers on building chat applications that utilize LLMs and Azure OpenAI Service (AI inclusion rule 1, 4, 6). Assigned 'Azure' category since all implementation details and sample apps are focused on or deployed using Azure services (Azure inclusion rule 1, 4, 5, and 6). Assigned 'Coding' as the article provides code snippets (Python), references to APIs, and practical frontend/backend engineering solutions (Coding inclusion rules 1, 2, 4, and 5). Not assigned to 'ML' since content is mainly about integrating and streaming existing LLM APIs rather than building or training custom ML models. Not assigned 'DevOps' or 'Security' as there's no focus on CI/CD, infrastructure, or security practices. The content meets community length and relevance criteria for developer-focused knowledge."
+  },
+  {
+    "timestamp": "2025-10-07 07:05:12 +00:00",
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the article focuses on Azure Databricks, ADLS Gen2, and Azure-native cloud/security services (Azure inclusion rule 1). 'Security' was added because the central theme is securing data pipelines, least-privilege identity, storage segregation, and governance using Microsoft Entra ID, managed identities, and Key Vault (Security inclusion rules 1, 3, 4, 7, 9). 'ML' is included because the Medallion Architecture and Lakehouse pattern described are fundamental to analytics and ML/advanced data pipeline design in Databricks, and the article covers transformations and analytics-ready datasets (ML inclusion rules 1, 2, 4, 5, 6). The content is technical, actionable, and not excluded by any generic exclusion rules.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/secure-medallion-architecture-pattern-on-azure-databricks-part-i/ba-p/4459268",
+    "collection": "community"
   }
 ]
