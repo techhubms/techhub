@@ -11766,5 +11766,11 @@
     "timestamp": "2025-10-07 18:06:12 +00:00",
     "collection": "news",
     "reason": "Succesfully added: The content was assigned the 'Security' category because it provides a detailed examination of threat actor techniques targeting Microsoft Teams and extensive guidance on security controls, monitoring, and incident response (Security rules 1, 2, 3, 4, 5, 6, 9). 'Azure' was included because several security measures revolve around Azure-hosted services like Microsoft Entra ID (Azure AD), Microsoft Defender, Purview, Intune, and Sentinel, and the protection and identity layers central to Azure's ecosystem (Azure rules 1, 4, 6). 'AI', 'GitHub Copilot', 'Coding', 'DevOps', and 'ML' were not applied, as the primary focus is security strategy and operations—there is no relevant AI, Copilot, coding/development, DevOps, or data science/ML engineering content present. All inclusion and exclusion rules were followed carefully."
+  },
+  {
+    "timestamp": "2025-10-07 21:05:03 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the DevOps category because the content focuses on Azure DevOps Server, upgrade paths from Team Foundation Server, DevOps platform features, policies, and tools (DevOps rules 1, 2, 5, and 11). Assigned the Azure category as Azure DevOps Server is an Azure product and the content covers its integration and support within the Microsoft Azure ecosystem (Azure rule 1). No other categories qualified: there is no focus on AI, ML, Coding (no programming tutorial or specific source code), Security, or GitHub Copilot. All content is technical, meets language requirements, is not focused on business productivity or management, does not contain sales pitches or overt negativity, and is relevant to practitioners.",
+    "canonical_url": "https://devblogs.microsoft.com/devops/announcing-the-new-azure-devops-server-rc-release/"
   }
 ]
