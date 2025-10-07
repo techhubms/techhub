@@ -6399,5 +6399,17 @@
     "reason": "No categories found: No categories assigned. The content is an announcement for a VS Code live stream event with minimal technical detail about the release. The description lacks substantive information, code discussion, or technical depth about Microsoft technologies, features, or development practices as required by category rules. There is no content text to evaluate for deeper technical explanation or walkthroughs, and the tags focus on the product/community aspect rather than meaningful implementation or development patterns. As such, there is insufficient information to justify inclusion in any developer-focused category.",
     "canonical_url": "https://www.youtube.com/watch?v=4Oscngju_xQ",
     "timestamp": "2025-10-06 17:06:20 +00:00"
+  },
+  {
+    "reason": "No categories found: Excluded all categories based on Generic Exclusion Rules: The content is primarily focused on JFrog's platform, practical DevOps automation, and general software supply chain practices, with no substantive technical details or focus on Microsoft technologies. There is no mention or centrality of Azure, GitHub, or any specific Microsoft DevOps tools, services, or platforms. Based on the Multi-Platform Content Threshold, Microsoft content must comprise at least 40% or be central, which is not the case here. Therefore, no categories are assigned.",
+    "canonical_url": "https://devops.com/building-faster-safer-pipelines-through-practical-automation/",
+    "collection": "posts",
+    "timestamp": "2025-10-07 04:04:46 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule — this is job-related content primarily focused on employment opportunities, salaries, hiring trends, and career advancement within the DevOps field. According to the exclusion rules in Chapter 3, job opportunities, job openings, hiring announcements, salary discussions, and career advice are not eligible for categorization, regardless of the presence of DevOps or Microsoft technology references.",
+    "canonical_url": "https://devops.com/five-great-devops-job-opportunities-159/",
+    "collection": "posts",
+    "timestamp": "2025-10-07 04:04:59 +00:00"
   }
 ]

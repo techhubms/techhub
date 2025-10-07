@@ -11652,5 +11652,11 @@
     "collection": "news",
     "timestamp": "2025-10-07 01:31:45 +00:00",
     "reason": "Succesfully added: Added DevOps category since the update affects version control, workflow security, network configuration, and platform governance in a development/operations context (DevOps rules 1, 2, 6). Added Security category due to focus on network security, authentication, firewall/proxy settings, and access restrictions to protect enterprise resources (Security rules 1, 3, 4). Did not add Azure or AI/GitHub Copilot/Coding/ML since the content does not cover those topics per inclusion rules. Copilot is mentioned in the context of access control, not as a development tool, so GitHub Copilot and AI categories are not added."
+  },
+  {
+    "reason": "Succesfully added: Assigned DevOps category because the article focuses extensively on DevOps environments, workflows, and principles (DevOps rules 3, 4, and 5). Assigned Security because the primary theme is securing the software supply chain, including risk detection and integrated security across the development lifecycle (Security rules 2, 4, 5, and 9). Assigned AI because the context includes AI-driven workflows and automation in modern software delivery, and discusses the convergence of these trends (AI rules 1, 4, and 5). Did not assign Azure, Coding, or ML categories because there is no substantive focus on Microsoft-specific cloud technologies, programming frameworks, or custom ML engineering. The content is sufficiently detailed, not biographical, and meets minimum quality requirements without any generic exclusion triggers.",
+    "canonical_url": "https://devops.com/how-graph-intelligence-is-transforming-software-supply-chain-visibility/",
+    "collection": "posts",
+    "timestamp": "2025-10-07 04:05:21 +00:00"
   }
 ]
