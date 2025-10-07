@@ -6417,5 +6417,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule: this is biographical content focusing primarily on a single individual's career move (Thomas Maurer becoming EMEA Global Black Belt for Sovereign Cloud at Microsoft) rather than providing technical implementation information, tutorials, or deep technical analysis of Microsoft technologies. The majority of the text is about the author's new role, responsibilities, and career context, which triggers the 'Biographical Focus' exclusion in the Content Quality Exclusions. There is not enough substantive technical detail, guidance, or architectural analysis to override the generic exclusion.",
     "canonical_url": "https://www.thomasmaurer.ch/2025/10/my-new-role-as-emea-global-black-belt-gbb-for-sovereign-cloud-at-microsoft/",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/elevating-employee-experience-with-microsoft-viva-insights/",
+    "timestamp": "2025-10-07 09:05:24 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: Content is excluded due to generic exclusion rules for non-development Microsoft products (see 'Non-Development Microsoft Products' under Generic Exclusion Rules). The article focuses on Microsoft Viva Insights, which is designed to enhance employee experience, workplace well-being, and productivity for end-users, managers, and leaders. The content centers on workplace culture, leadership buy-in, employee well-being, best practices for adoption, privacy, and organizational change—not on technical development, coding, architecture, or implementation from a developer or technical IT perspective. There are no code samples, APIs, architecture diagrams, customization, or extensibility topics that would align with any included category. As such, no categories are assigned."
   }
 ]
