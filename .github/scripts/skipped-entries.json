@@ -6447,5 +6447,41 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/ms-sql-backup-immutability/m-p/4459660#M22256",
     "timestamp": "2025-10-07 14:05:21 +00:00"
+  },
+  {
+    "timestamp": "2025-10-07 16:04:07 +00:00",
+    "canonical_url": "https://github.blog/security/how-a-top-bug-bounty-researcher-got-their-start-in-security/",
+    "collection": "news",
+    "reason": "No categories found: Generic exclusion rule - The content is a biographical spotlight focusing primarily on the personal career journey, methodology, hobbies, and advice of a single individual security researcher (@xiridium). While there are some insights into security tools, workflows, and bug bounty experience, the main thrust is personal story, how the individual got started, their approach to learning, and career milestones. According to the Generic Exclusion Rules (Chapter 3), 'Biographical Focus' and 'Individual spotlight articles without substantial technical content' must be excluded, regardless of security-related keywords. The majority of the piece centers on personal anecdotes and professional journey, not technical deep dives or hands-on Microsoft technology implementation."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/healthcare/2025/10/07/new-ai-tool-helps-rural-hospitals-improve-financial-incomes/",
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: this is a news post that primarily consists of an image and a short link to another article, with no substantive technical content. There are no technical details, implementation guidance, or discussion of Microsoft technologies or developer tools. The body text is minimal and does not meet the content quality threshold required for category inclusion. Excluded as per quality standards and generic exclusion rules.",
+    "timestamp": "2025-10-07 17:06:02 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=GnFsorph358",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule—this video is primarily in Portuguese, as indicated by the title '[pt-BR]' and the language used in the description. According to the Non-English Content exclusion rule (Chapter 3), content that is not primarily in English (<80% English in main text) is excluded. Additionally, the provided description and title show that the focus is biographical (about Jess Temporal and the GitFichas project history) rather than technical implementation or Microsoft-specific technology. There is also a lack of substantive technical content on Microsoft technologies or development. Consequently, no categories are assigned.",
+    "timestamp": "2025-10-07 17:07:30 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/FbDLNKQ5Vt4",
+    "collection": "videos",
+    "reason": "No categories found: All fields except the title and author are either empty or null, including the critical 'content' field which contains no information. Generic exclusion rules state that if there is insufficient substantive content to evaluate (such as missing content or description), the item must be excluded as there is no basis to determine technical relevance or category assignment.",
+    "timestamp": "2025-10-07 17:07:44 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-agentic-ai-works-and-how-to-build-it-in-azure/m-p/4459720#M22257",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-10-07 17:07:46 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/implementing-zero-trust-architecture-in-an-azure-environment/m-p/4459721#M22258",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-10-07 17:07:46 +00:00"
   }
 ]

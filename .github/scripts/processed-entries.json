@@ -11712,5 +11712,41 @@
     "canonical_url": "https://www.youtube.com/shorts/AWvpFKOdGMg",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the description centers on the use of GitHub Copilot (an AI-driven code assistant) to generate mapping applications for MapYourGrid, fitting AI inclusion rules 1 and 2 and GitHub Copilot inclusion rules 1 and 2. Coding and Azure are not assigned because, while tools are mentioned, there is no explicit focus on programming techniques or Microsoft cloud services. ML and Security do not apply as the content does not involve machine learning development or security-related contexts.",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-data-agent-now-supports-ci-cd-alm-flow-and-git-integration/",
+    "collection": "news",
+    "reason": "Succesfully added: The content qualifies for 'DevOps' because it discusses CI/CD, ALM flow, Git integration, and deployment pipelines for managing data agent development—matching DevOps rules 1, 5, and 6. 'Azure' is included since Microsoft Fabric is an Azure-based platform and the article is hosted on the official Microsoft Fabric Blog, falling under Azure rule 1. 'ML' is included as Fabric relates to data engineering and supports analytics/data science use cases, with references to Lakehouse, Power BI Semantic Models, and KQL databases (ML rules 1 and 2). AI and Security categories do not apply, as the focus is on lifecycle and data management rather than AI/ML model development or security.",
+    "timestamp": "2025-10-07 17:05:29 +00:00"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/simplifying-file-access-in-openrowset-using-data-sources-and-relative-paths-preview/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'Azure' because the content centers around Azure Data Lake Storage (Azure rule 1) and Lakehouse, both Microsoft Azure services. Included 'ML' because the article targets data engineering and analytics workflows in Microsoft Fabric, which is part of Microsoft's analytics and data science ecosystem (ML rules 1 and 4). Did not assign 'AI', 'Security', 'GitHub Copilot', 'DevOps', or 'Coding' because there is no mention of AI services, coding implementation details, security contexts, developer toolchains, Copilot, or DevOps practices. No generic exclusion rules applied as the article is technical, solution-focused, and meets all inclusion standards.",
+    "timestamp": "2025-10-07 17:05:49 +00:00"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/10/07/new-microsoft-secure-future-initiative-sfi-patterns-and-practices-practical-guides-to-strengthen-security/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned only the Security category because the post focuses exclusively on security architecture, best practices, and actionable implementation guidance through Microsoft's Secure Future Initiative. The content explicitly addresses usage of Microsoft security technologies (e.g., Entra ID, Zero Trust, secure CI/CD), network and log security, and practical advice for security teams. While DevOps and Azure security are mentioned in passing (e.g., CI/CD), the central focus is not Azure management or DevOps methodologies but practical organizational security. No other inclusion rules apply. The post avoids Generic Exclusion rules, maintaining technical depth, actionable advice, and clarity throughout.",
+    "timestamp": "2025-10-07 17:06:24 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-we-automated-accessibility-compliance-in-five-hours-with-github-copilot/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the article focuses on how GitHub Copilot, an AI-powered developer tool, was central to building the automation (AI rules 1 and 2, GitHub Copilot rules 1-4). Assigned DevOps because the workflow automates issue management, compliance remediation, and team processes using GitHub Actions and GitHub Projects (DevOps rules 2, 5, 6, and 9). The article centers on technical implementation, workflow optimization, and governance, justifying these categories. Coding and Azure were not included as primary software development with Microsoft languages/frameworks or Azure-specific services are not the focus. ML and Security are not central to the solution.",
+    "timestamp": "2025-10-07 17:06:49 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-10-07-secret-protection-expands-default-pattern-support-september-2025",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'Security' because the update is about enhancing secret scanning, which is core to application and repository security (Security rule 1). Added 'DevOps' because secret scanning and push protection are part of secure development pipelines and CI/CD practices (DevOps rules 2, 5, 6). Included 'Azure' because multiple Azure-specific secrets are highlighted in the update, and Azure detection is central to the new patterns (Azure rule 1). Did not assign AI, Coding, ML, or GitHub Copilot, as the content is not about AI workloads, coding tutorials, ML engineering, or Copilot functionality.",
+    "timestamp": "2025-10-07 17:07:08 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/why-your-llm-powered-app-needs-concurrency/ba-p/4459584",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because the article centers on building LLM-powered applications with Azure OpenAI Service and Azure AI Search, directly referencing Microsoft's AI offerings (AI rule 1 and 4). Assigned Azure because Azure OpenAI and Azure AI Search are the backbone services described (Azure rules 1 and 4). Assigned Coding because it details Python development patterns, async code examples, and backend architecture (Coding rules 1, 2, and 4). ML is not assigned, as the focus is not on custom data science, analytics engineering, or building models from scratch, but on utilizing platform AI services and best practices. No exclusion rules apply.",
+    "timestamp": "2025-10-07 17:08:10 +00:00"
   }
 ]
