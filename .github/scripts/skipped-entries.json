@@ -6513,5 +6513,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule - this episode is primarily biographical in focus, centering on April Dunnam's personal and professional journey (biographical exclusion). It highlights her career development, experiences, insecurities, and personal growth, rather than providing substantial technical depth or actionable educational content about Microsoft technologies. The majority of the description and chapter headings revolve around personal anecdotes and career advice, not technical instruction or architectural guidance.",
     "collection": "videos",
     "timestamp": "2025-10-08 08:05:58 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/5-azure-mistakes-that-are-costing-businesses-thousands/m-p/4459891#M22261",
+    "timestamp": "2025-10-08 10:05:08 +00:00"
   }
 ]

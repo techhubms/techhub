@@ -11814,5 +11814,11 @@
     "reason": "Succesfully added: Assigned Azure category because the article focuses on Azure platform services, management, and cost optimization (Azure rule 1, 4, 5). Assigned DevOps category because the content involves operational practices—tagging, cost governance, infrastructure automation, continuous monitoring, and FinOps — all within a technical operational context (DevOps rules 3, 5, 6, 7, and 9). Did not assign Coding, AI, ML, Security, or GitHub Copilot because the article does not focus on application code, AI/ML, or security-specific topics. All decisions were made by strictly applying category inclusion rules without improvisation.",
     "collection": "posts",
     "timestamp": "2025-10-08 08:05:10 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned DevOps category as the article focuses extensively on DevOps practices and improvements involving IaC security (DevOps rules 1, 4, 5). Assigned Security because the primary focus is security vulnerabilities, remediations, and best practices in IaC—covering audit, secrets management, policy, drift, and access control (Security rules 1, 2, 7). Assigned Azure because the article includes Azure Policy, Azure Key Vault, and Azure Activity Log among recommended tools/solutions (Azure rules 1, 2). AI and ML categories were not assigned, as content does not address AI/ML products, platform services, or code-level ML/AI development. Content meets all quality standards, has technical depth, and targets practitioners, so no generic exclusions apply.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/common-iac-security-issues-and-how-to-fix-them/",
+    "timestamp": "2025-10-08 10:04:58 +00:00"
   }
 ]
