@@ -6495,5 +6495,23 @@
     "reason": "No categories found: Content excluded due to generic exclusion rules. The article is a press release about an industry benchmark report focusing on cross-training in networking and cybersecurity, sharing survey results and strategic recommendations on organizational skills development. There is no substantive technical implementation detail about Microsoft technologies or products, nor any in-depth coverage of software development, coding, DevOps, or security engineering involving Microsoft tools or platforms. The content is primarily business strategy and workforce training guidance, rather than a hands-on technical resource. According to the workflow, content primarily about business strategy, organizational planning, or high-level workforce recommendations without Microsoft-specific technical depth should be excluded.",
     "timestamp": "2025-10-08 05:03:59 +00:00",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-fix-windows-11-problems-without-calling-it/",
+    "reason": "No categories found: No categories were assigned because the content is a troubleshooting guide for end users on how to fix common Windows 11 issues, such as Wi-Fi problems, update errors, and sound issues. According to the generic exclusion rules in Chapter 3, content focused on end-user product support, general troubleshooting, or consumer usage (rather than development, deployment, coding, DevOps, security engineering, or AI/ML implementation) should be excluded. There is no technical implementation, coding, development, security, DevOps, Azure, AI, or ML content. The article targets typical users rather than developers or IT professionals creating solutions using Microsoft technologies.",
+    "collection": "posts",
+    "timestamp": "2025-10-08 08:05:24 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/maintaining-productivity-during-hybrid-or-phased-rollouts-in-microsoft-365/",
+    "reason": "No categories found: No categories were assigned because the content focuses on organizational change management and productivity during phased or hybrid rollouts of Microsoft 365. Per the Generic Exclusion Rules (Non-Development Microsoft Products), unless the content has a substantial development or technical architecture perspective (e.g., SharePoint or Teams development, identity engineering, or scripting for deployment), Microsoft 365 rollout strategies, workplace productivity, governance, training, and adoption management are excluded. There is no technical depth covering development, coding, DevOps, AI, ML, Azure service implementation, or security engineering. The article centers on planning, communication, user training, and change management—topics explicitly classified as business/productivity guidance, not developer-focused implementation or architecture.",
+    "collection": "posts",
+    "timestamp": "2025-10-08 08:05:37 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=IdQF0w1RZJ8",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this episode is primarily biographical in focus, centering on April Dunnam's personal and professional journey (biographical exclusion). It highlights her career development, experiences, insecurities, and personal growth, rather than providing substantial technical depth or actionable educational content about Microsoft technologies. The majority of the description and chapter headings revolve around personal anecdotes and career advice, not technical instruction or architectural guidance.",
+    "collection": "videos",
+    "timestamp": "2025-10-08 08:05:58 +00:00"
   }
 ]

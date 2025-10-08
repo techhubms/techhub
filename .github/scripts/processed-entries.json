@@ -11808,5 +11808,11 @@
     "timestamp": "2025-10-08 07:03:51 +00:00",
     "reason": "Succesfully added: Assigned the AI category because the content is focused on Microsoft AI development frameworks (AI rule 1 and 4: Microsoft AI Products/Services, AI Development with Microsoft Technologies). Assigned Azure because the Microsoft Agent Framework is positioned as part of the Azure AI ecosystem and emphasizes Azure integration (Azure rule 1 and 4). Assigned Coding because it covers code libraries (Semantic Kernel, Agent Framework), migration of code, and framework usage in Python and C# (Coding rule 1 and 2). Did not assign ML because the article is focused on frameworks for AI agent orchestration, not custom data science or machine learning engineering. Did not assign DevOps or Security because these topics are not present in the content.",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://dellenny.com/5-azure-mistakes-that-are-costing-businesses-thousands/",
+    "reason": "Succesfully added: Assigned Azure category because the article focuses on Azure platform services, management, and cost optimization (Azure rule 1, 4, 5). Assigned DevOps category because the content involves operational practices—tagging, cost governance, infrastructure automation, continuous monitoring, and FinOps — all within a technical operational context (DevOps rules 3, 5, 6, 7, and 9). Did not assign Coding, AI, ML, Security, or GitHub Copilot because the article does not focus on application code, AI/ML, or security-specific topics. All decisions were made by strictly applying category inclusion rules without improvisation.",
+    "collection": "posts",
+    "timestamp": "2025-10-08 08:05:10 +00:00"
   }
 ]
