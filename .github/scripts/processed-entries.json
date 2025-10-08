@@ -11796,5 +11796,11 @@
     "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content specifically concerns the deprecation of an AI model (Claude Sonnet 3.5) within GitHub Copilot, and covers updates, administration, and migration strategies relevant to developers and admins (GitHub Copilot rules 1–6, AI rule 1). No other categories apply as there is no hand-on coding, DevOps, Azure, ML, or security focus. Generic exclusion rules do not apply because the content is technical, implementation-oriented, and free of sales, negativity, or business-only focus.",
     "timestamp": "2025-10-08 01:32:34 +00:00",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://devops.com/report-full-stack-observability-cuts-downtime-costs/",
+    "reason": "Succesfully added: Assigned DevOps category because the content revolves around observability, tooling strategy, incident response, and productivity impacts for IT and engineering teams, which are fundamental DevOps topics (DevOps rules 3, 5, 7, 9). Applied Security because security monitoring is listed as a core observability layer (Security rule 1), and protecting against operational risks and monitoring for incidents are major themes. Assigned AI because of the substantial focus on AI-driven monitoring, LLM-powered services, and the evolving use of AIOps and machine learning for infrastructure and incident response (AI rules 1, 4, 5). Did not assign Azure or other Microsoft-specific categories, as the piece references enterprise observability and AI monitoring in generalized, platform-agnostic terms, with no sufficient Microsoft technology emphasis. Coding and ML were not assigned because the article discusses application operations, not code, ML model building, or data engineering.",
+    "timestamp": "2025-10-08 05:04:22 +00:00",
+    "collection": "posts"
   }
 ]
