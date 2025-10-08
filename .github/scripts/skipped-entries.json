@@ -6519,5 +6519,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/5-azure-mistakes-that-are-costing-businesses-thousands/m-p/4459891#M22261",
     "timestamp": "2025-10-08 10:05:08 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/-o8ora0olPQ",
+    "collection": "videos",
+    "timestamp": "2025-10-08 15:05:11 +00:00",
+    "reason": "No categories found: Content excluded under the Generic Exclusion Rules. The provided input lacks substantive main text content: the 'content' field is null, and the 'description' consists only of a brief summary (less than 50 words) and a promotional link. According to the exclusion rules (Format and Length Exclusions), content must contain sufficient technical depth and actionable information in the main body, which is required for categorization. Additionally, extremely short 'shorts' or video snippet formats without technical exposition are excluded."
   }
 ]

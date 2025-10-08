@@ -11832,5 +11832,17 @@
     "reason": "Succesfully added: The 'Azure' category is assigned as the content centers on Azure platform improvements, describing updates to built-in Service Health policy and deployment methods (Azure category rule 1). 'Security' is included because the main focus includes Azure RBAC, permission reduction, and best practices for least privilege (Security category rules 1, 3, 7). 'DevOps' is assigned due to extensive discussion on automated deployment methods (Azure Pipelines, GitHub Actions, Terraform), operational governance, and policy management (DevOps category rules 5, 6, and 7). No AI, ML, or Coding categories apply as there is no discussion of code, programming, or data science/AI development.",
     "timestamp": "2025-10-08 14:05:42 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/amba-alz-pattern-learn-about-the-latest-and-greatest/ba-p/4458320"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/locking-and-ddl-blocking-behavior-in-microsoft-fabric-data-warehouse-what-you-need-to-know/",
+    "collection": "news",
+    "timestamp": "2025-10-08 15:04:44 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric Data Warehouse is a core Azure data platform component (Azure rule 1 and 4). Assigned ML category because Fabric Data Warehouse is frequently used for large-scale analytics, data engineering, and supports ML/data science workloads (ML rules 1, 2, and 4). The content focuses on technical details relevant to data pipeline architects and engineers. AI category does not apply as the post is not about AI services or development, Coding does not apply as the focus is not on algorithm development or code, DevOps does not apply as the article is not about CI/CD, workflows, or ops, and Security does not apply as security is not the main topic."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=2p9kRRcrv80",
+    "collection": "videos",
+    "timestamp": "2025-10-08 15:05:29 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the content is about using AI (GitHub Copilot and MCP) for practical development tasks (AI Rule 1 and 2). Assigned 'GitHub Copilot' since Copilot is the main developer tool discussed (GitHub Copilot Rule 1). Assigned 'Coding' because the content covers automated test generation with Playwright, which involves writing or generating code for testing workflows (Coding Rule 4 and 5). No other categories were assigned since there is no mention of Azure, DevOps, ML, or Security aspects."
   }
 ]
