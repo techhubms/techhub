@@ -11784,5 +11784,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/ignite-nyc-join-the-microsoft-ignite-2026-watch-party-in-times/ec-p/4459801#M661",
     "collection": "community",
     "timestamp": "2025-10-07 23:05:10 +00:00"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-september-2025/",
+    "reason": "Succesfully added: Assigned AI category because the content fundamentally centers on Azure AI models (AI rule 1), large language models, agents, and AI orchestration. Azure category fits since the released and previewed technologies are all delivered in the Azure cloud ecosystem (Azure rule 1). ML applies as it details model training, fine-tuning, evaluation, and analytics features on Azure platforms (ML rules 1, 2, 5). Assigned Coding because of numerous code model workflows (like GPT-5-Codex) and SDK updates including code generation, .NET, Python, and Java enhancements (Coding rules 1, 2, and 5). Security fits due to the inclusion of Key Vault, enhanced identity SDKs, and security-related documentation (Security rules 1, 2, 3). DevOps is included for coverage of automation tooling (Browser Automation, Computer Use), platform orchestration, CI/CD relevant language SDKs, and observability improvements (DevOps rules 2, 6, and 7). No category exclusion rules apply as all content is technical, Azure-, and developer-focused, and meets Microsoft centrality requirements.",
+    "timestamp": "2025-10-08 01:32:08 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-10-07-upcoming-deprecation-of-claude-sonnet-3-5",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content specifically concerns the deprecation of an AI model (Claude Sonnet 3.5) within GitHub Copilot, and covers updates, administration, and migration strategies relevant to developers and admins (GitHub Copilot rules 1–6, AI rule 1). No other categories apply as there is no hand-on coding, DevOps, Azure, ML, or security focus. Generic exclusion rules do not apply because the content is technical, implementation-oriented, and free of sales, negativity, or business-only focus.",
+    "timestamp": "2025-10-08 01:32:34 +00:00",
+    "collection": "news"
   }
 ]
