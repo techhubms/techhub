@@ -11850,5 +11850,23 @@
     "timestamp": "2025-10-08 16:05:16 +00:00",
     "reason": "Succesfully added: Assigned the 'GitHub Copilot' and 'AI' categories because the content is centered on the Copilot coding agent, which is classified under developer AI tools (AI rule 2; GitHub Copilot category rule 1), and includes best practices and advanced usage scenarios. Assigned 'DevOps' because the article covers automated deployments, CI/CD via GitHub Actions, IssueOps, and workflow automation (DevOps rules 2, 5, and 6). Included 'Coding' due to detailed discussion of coding standards, instructions files, and code review practices (Coding rules 1, 4, and 5). Did NOT assign 'Azure', 'ML', or 'Security' because those technologies and topics are not substantively covered. No generic exclusion rules apply.",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-08 17:05:00 +00:00",
+    "reason": "Succesfully added: Included the 'Coding' category because the content is a deep technical analysis and guide for .NET 10 developers, centered around configuring and tuning the GC (DATAS) feature and its effect on application behavior – matching Coding inclusion rules around Microsoft programming languages and development frameworks. Did not assign 'DevOps', 'Azure', or 'ML' because the focus is specifically on .NET runtime memory management, not CI/CD, cloud management, or analytics workloads. 'AI', 'GitHub Copilot', and 'Security' were excluded as the content never discusses AI/machine learning, Copilot tooling, or security topics. Example tuning scenarios, metric explanations, and configuration code show strong technical depth as required.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/preparing-for-dotnet-10-gc/"
+  },
+  {
+    "timestamp": "2025-10-08 17:05:41 +00:00",
+    "reason": "Succesfully added: The content is primarily a technical discussion around how GitHub Copilot (an AI-powered developer tool) and similar AI tools are changing workflows for neurodiverse (ADHD) developers. Per AI category rule 2, all GitHub Copilot content triggers both 'AI' and 'GitHub Copilot' categories. The discussion also explores practical technical strategies and workflows, but coding and platform-specific topics are not sufficiently central to assign additional categories. Content is not excluded by any generic exclusion rules, as the focus is on practical, technical experiences and tool usage rather than being purely biographical, negative, sales-focused, or non-technical.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=eeTOToKnpCg"
+  },
+  {
+    "timestamp": "2025-10-08 17:06:01 +00:00",
+    "reason": "Succesfully added: Assigned AI because Copilot integration for SQL in Microsoft Fabric is a developer/maker-facing Microsoft AI feature (AI inclusion rule 1). Assigned Azure because Microsoft Fabric is an Azure-based data platform (Azure inclusion rule 1). Assigned ML because notebook integration and data engineering in Fabric focus on data science and analytics workflows (ML inclusion rules 1, 2, and 4). Did not assign Coding, as content centers on data engineering, not application programming. Did not assign DevOps or Security, as those themes do not appear in the described features. The episode is technical, aimed at development and analytics workflows, and does not violate any exclusion rules.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=h7DhCqFArtc"
   }
 ]

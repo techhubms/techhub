@@ -1,0 +1,22 @@
+{
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "ProcessedDate": "2025-10-08 17:04:14",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "OutputDir": "_videos",
+  "Title": "SQL in Fabric–Copilot, Data Virtualization, Notebook Integration & Backup/Restore | Data Exposed",
+  "FeedName": "Microsoft Developer YouTube",
+  "Link": "https://www.youtube.com/watch?v=h7DhCqFArtc",
+  "EnhancedContent": null,
+  "PubDate": "2025-10-08T16:01:29+00:00",
+  "Description": "In this episode of Data Exposed, discover the latest enhancements in SQL database in Microsoft Fabric and get an exclusive sneak peek of what’s coming soon. We’ll dive into key feature areas including Copilot, data virtualization, notebook integrations, and backup/restore — showing how these advancements can simplify your workflows and unlock new possibilities!\n\n✅ Chapters: 0:00 Introduction 1:28 What's new in SQL database in Fabric: Copilot 4:43 Fabric SQL - Data Virtualization (Preview) 7:52 Notebook Integrations for SQL database 13:55 Backup/Restore\n\n✅ Resources:\n\nCopilot: MS Learn documentation: https://aka.ms/fabric-sql-copilot Data Exposed Episodes: https://aka.ms/fabric-sql-copilot-demos Blog: https://blog.fabric.microsoft.com/en-us/blog/introducing-copilot-for-sql-database-in-microsoft-fabric?ft=Databases:category Data virtualization: MS Learn documentation: https://aka.ms/fabricsqldv Notebook integration: MS Learn documentation: https://learn.microsoft.com/en-us/fabric/data-engineering/tsql-magic-command-notebook Backup/Restore: MS Learn documentation: Backup: https://learn.microsoft.com/en-us/fabric/database/sql/backup Restore: https://learn.microsoft.com/en-us/fabric/database/sql/restore\n\n📌 Let's connect: Twitter - Anna Hoffman, https://twitter.com/AnalyticAnna Twitter - AzureSQL, https://aka.ms/azuresqltw\n\n🔴 Watch even more Data Exposed episodes: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt\n\n#AzureSQL #SQL #LearnSQL",
+  "Author": "Microsoft Developer"
+}
