@@ -11802,5 +11802,11 @@
     "reason": "Succesfully added: Assigned DevOps category because the content revolves around observability, tooling strategy, incident response, and productivity impacts for IT and engineering teams, which are fundamental DevOps topics (DevOps rules 3, 5, 7, 9). Applied Security because security monitoring is listed as a core observability layer (Security rule 1), and protecting against operational risks and monitoring for incidents are major themes. Assigned AI because of the substantial focus on AI-driven monitoring, LLM-powered services, and the evolving use of AIOps and machine learning for infrastructure and incident response (AI rules 1, 4, 5). Did not assign Azure or other Microsoft-specific categories, as the piece references enterprise observability and AI monitoring in generalized, platform-agnostic terms, with no sufficient Microsoft technology emphasis. Coding and ML were not assigned because the article discusses application operations, not code, ML model building, or data engineering.",
     "timestamp": "2025-10-08 05:04:22 +00:00",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-and-microsoft-agent-framework/",
+    "timestamp": "2025-10-08 07:03:51 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the content is focused on Microsoft AI development frameworks (AI rule 1 and 4: Microsoft AI Products/Services, AI Development with Microsoft Technologies). Assigned Azure because the Microsoft Agent Framework is positioned as part of the Azure AI ecosystem and emphasizes Azure integration (Azure rule 1 and 4). Assigned Coding because it covers code libraries (Semantic Kernel, Agent Framework), migration of code, and framework usage in Python and C# (Coding rule 1 and 2). Did not assign ML because the article is focused on frameworks for AI agent orchestration, not custom data science or machine learning engineering. Did not assign DevOps or Security because these topics are not present in the content.",
+    "collection": "news"
   }
 ]
