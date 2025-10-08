@@ -11868,5 +11868,11 @@
     "reason": "Succesfully added: Assigned AI because Copilot integration for SQL in Microsoft Fabric is a developer/maker-facing Microsoft AI feature (AI inclusion rule 1). Assigned Azure because Microsoft Fabric is an Azure-based data platform (Azure inclusion rule 1). Assigned ML because notebook integration and data engineering in Fabric focus on data science and analytics workflows (ML inclusion rules 1, 2, and 4). Did not assign Coding, as content centers on data engineering, not application programming. Did not assign DevOps or Security, as those themes do not appear in the described features. The episode is technical, aimed at development and analytics workflows, and does not violate any exclusion rules.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=h7DhCqFArtc"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/ama-azure-ai-foundry-voice-live-api-build-smarter-faster-voice/ba-p/4460118",
+    "timestamp": "2025-10-08 18:06:25 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centers on Azure AI Foundry’s new Voice Live API, a developer-focused solution for building voice-enabled AI agents, aligning with AI inclusion rules 1 and 5. Assigned 'Azure' category because this is an Azure-native product and the event is explicitly tied to Azure cloud services (Azure rule 1). Coding and DevOps categories were not added, as the content is an event announcement and product deep dive, not a tutorial or process guide involving code or deployment pipelines. ML and Security categories do not apply because the main focus is on AI service integration and real-time voice agents, not data science, model engineering, or security implementation."
   }
 ]

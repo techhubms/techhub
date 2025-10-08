@@ -6525,5 +6525,23 @@
     "collection": "videos",
     "timestamp": "2025-10-08 15:05:11 +00:00",
     "reason": "No categories found: Content excluded under the Generic Exclusion Rules. The provided input lacks substantive main text content: the 'content' field is null, and the 'description' consists only of a brief summary (less than 50 words) and a promotional link. According to the exclusion rules (Format and Length Exclusions), content must contain sufficient technical depth and actionable information in the main body, which is required for categorization. Additionally, extremely short 'shorts' or video snippet formats without technical exposition are excluded."
+  },
+  {
+    "canonical_url": "https://news.xbox.com/en-us/2025/10/08/xbox-game-pass-october-2025-wave-1/",
+    "timestamp": "2025-10-08 18:05:38 +00:00",
+    "collection": "news",
+    "reason": "No categories found: Content excluded according to generic exclusion rules. The post primarily announces new games and content updates for Xbox Game Pass, which is consumer-facing gaming content and not technical, developer-focused material. There is no substantive discussion of Microsoft developer tools, coding, DevOps, Azure, AI, ML, or Security implementation as outlined in the inclusion rules. It does not discuss any development, architecture, or technical implementation aspects related to Microsoft technologies. Therefore, no categories apply."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=0Zv-VCR-jp4",
+    "timestamp": "2025-10-08 18:06:02 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: Content is missing the main content field (content is null) and does not provide substantive technical content. Additionally, based on the title and description, this appears to be an announcement or social event, not focused on technical or Microsoft technology topics. No categories assigned."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-stack/ash-nvidia-tesla-t4-gpu-driver-issues/m-p/4459925#M285",
+    "timestamp": "2025-10-08 18:06:06 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length"
   }
 ]
