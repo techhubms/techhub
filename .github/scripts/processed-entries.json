@@ -11820,5 +11820,17 @@
     "collection": "posts",
     "canonical_url": "https://devops.com/common-iac-security-issues-and-how-to-fix-them/",
     "timestamp": "2025-10-08 10:04:58 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Azure category assigned because Microsoft Fabric Data Warehouse is a core Azure data platform (Azure rule 1). ML category assigned because the article addresses data warehousing, high-concurrency ETL, and transactional management central to advanced data engineering and analytics workloads (ML rules 1, 2, 5, and 6). Not assigned to AI: no pre-built AI services or frameworks are featured. Not assigned to Coding: focus is on data platform management, not programming APIs or development tools. Not assigned to Security or DevOps: the main topic is transactional consistency and concurrency, not security controls or DevOps practices. Categorization draws on technical focus and explicit mention of platform features and best practices.",
+    "timestamp": "2025-10-08 14:04:53 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/concurrency-control-and-conflict-resolution-in-microsoft-fabric-data-warehouse/"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: The 'Azure' category is assigned as the content centers on Azure platform improvements, describing updates to built-in Service Health policy and deployment methods (Azure category rule 1). 'Security' is included because the main focus includes Azure RBAC, permission reduction, and best practices for least privilege (Security category rules 1, 3, 7). 'DevOps' is assigned due to extensive discussion on automated deployment methods (Azure Pipelines, GitHub Actions, Terraform), operational governance, and policy management (DevOps category rules 5, 6, and 7). No AI, ML, or Coding categories apply as there is no discussion of code, programming, or data science/AI development.",
+    "timestamp": "2025-10-08 14:05:42 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/amba-alz-pattern-learn-about-the-latest-and-greatest/ba-p/4458320"
   }
 ]
