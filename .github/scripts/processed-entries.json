@@ -11970,5 +11970,11 @@
     "collection": "videos",
     "timestamp": "2025-10-09 18:12:05 +00:00",
     "reason": "Succesfully added: Included AI category because the video centers on AI features in VS Code, including new models such as Claude Sonnet 4.5 and GPT-5 and AI-powered functionality (AI rule 1). Included GitHub Copilot as the GitHub Copilot Coding Agent is a major topic (GitHub Copilot rules 1 and 2), and per rules both AI and GitHub Copilot must be included together. Included Coding because the features directly impact code editing, conflict resolution, and developer productivity within VS Code (Coding rules 2 and 5)."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/join-the-microsoft-ignite-2025-nyc-community-summit-in-times/ec-p/4459801#M661",
+    "timestamp": "2025-10-09 21:08:14 +00:00",
+    "reason": "Succesfully added: Included AI because the sessions explicitly focus on AI topics (AI Foundry, agent orchestration, AI-powered tools, Copilot Studio). Included Azure because of several session topics covering Azure services (Azure AI, Azure Load Balancer, cloud). Included Coding as technical tracks include .NET, Power Apps, web development, and developer-focused talks. Did not assign DevOps, Security, or ML as there is insufficient emphasis or technical session detail specific to those categories based on provided content."
   }
 ]

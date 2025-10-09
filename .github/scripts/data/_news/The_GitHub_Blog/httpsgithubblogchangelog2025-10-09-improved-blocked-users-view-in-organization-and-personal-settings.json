@@ -1,0 +1,17 @@
+{
+  "EnhancedContent": "We’ve updated the blocked users view in organization and personal settings for improved transparency and easier record keeping. Previously, organization admins lacked clear visibility into moderation history and context for blocked users, which made auditing decisions and tracking accountability more difficult.\n\n### What’s new\n\n- **See when users were blocked:** The date each user was blocked now appears in the blocked users list.\n- **Identify who performed the block:** The admin or user who blocked each individual is now displayed.\n- **Longer descriptions:** The note description field now supports longer entries, so admins can add more context and include URLs.\n- **Clearer validation and error feedback:** A new character counter gives real-time feedback on your description length, clearly indicating whether you’re within the limit.\n- **UI and style updates:** Various design improvements make the experience more readable and accessible.\n\nThese changes help organizations audit moderation actions, provide clearer context for block decisions, and improve accountability within teams.\n\n### How to give feedback\n\nFeel free to drop a comment in our [Community discussion](https://github.com/orgs/community/discussions/176110) if you have any feedback or run into issues.",
+  "Tags": [
+    "collaboration tools",
+    "Improvement"
+  ],
+  "Author": "Allison",
+  "PubDate": "2025-10-09T18:06:01+00:00",
+  "FeedName": "The GitHub Blog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Title": "Improved blocked users view in organization and personal settings",
+  "Link": "https://github.blog/changelog/2025-10-09-improved-blocked-users-view-in-organization-and-personal-settings",
+  "OutputDir": "_news",
+  "Description": "We’ve updated the blocked users view in organization and personal settings for improved transparency and easier record keeping. Previously, organization admins lacked clear visibility into moderation history and context for…\n\nThe post [Improved blocked users view in organization and personal settings](https://github.blog/changelog/2025-10-09-improved-blocked-users-view-in-organization-and-personal-settings) appeared first on [The GitHub Blog](https://github.blog).",
+  "ProcessedDate": "2025-10-09 21:02:52"
+}
