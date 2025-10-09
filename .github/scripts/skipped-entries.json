@@ -6597,5 +6597,17 @@
     "canonical_url": "https://github.blog/changelog/2025-10-09-improved-blocked-users-view-in-organization-and-personal-settings",
     "reason": "No categories found: No categories assigned. The content is a news update about UI/UX and moderation improvements in the blocked users view for GitHub organization and personal settings. It focuses on administrative features such as visibility into moderation history, note length, and UI changes. There is no substantive discussion of software engineering, coding, DevOps, AI, Azure, Security, or ML as defined in the categorization rules. The update refers to organizational administration and transparency features, not technical implementation or developer tools. None of the category inclusion rules are met.",
     "collection": "news"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-09 23:06:26 +00:00",
+    "canonical_url": "https://devops.com/gemini-cli-extensions-bring-customization-to-the-command-line/",
+    "reason": "No categories found: No categories are assigned because the content focuses exclusively on Google Gemini CLI extensions, Model Context Protocol (MCP), and integrations with non-Microsoft tools (Figma, Stripe, Postman, Dynatrace, etc.). There is no substantive mention of Microsoft technologies, products, services, or development frameworks. According to the multi-platform content threshold and inclusion rules, content must focus centrally on Microsoft technologies (≥40% of substantive content or central to the solution) to qualify, which is not the case here. All category inclusion rules therefore do not apply."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-10-09 23:07:30 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=LLih8bO_bCA",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the description is primarily in Spanish, not English, and there is no actual content provided (content is null). This violates the Non-English Content exclusion (Chapter 3: Language and Scope Exclusions). Without a primarily English main text or additional details, the input is excluded from categorization."
   }
 ]

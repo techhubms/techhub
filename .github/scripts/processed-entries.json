@@ -11976,5 +11976,41 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/join-the-microsoft-ignite-2025-nyc-community-summit-in-times/ec-p/4459801#M661",
     "timestamp": "2025-10-09 21:08:14 +00:00",
     "reason": "Succesfully added: Included AI because the sessions explicitly focus on AI topics (AI Foundry, agent orchestration, AI-powered tools, Copilot Studio). Included Azure because of several session topics covering Azure services (Azure AI, Azure Load Balancer, cloud). Included Coding as technical tracks include .NET, Power Apps, web development, and developer-focused talks. Did not assign DevOps, Security, or ML as there is insufficient emphasis or technical session detail specific to those categories based on provided content."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-10-09 23:05:00 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-10-09-codeql-2-23-2-adds-additional-detections-for-rust-and-improves-accuracy-across-languages",
+    "reason": "Succesfully added: Assigned Security because CodeQL is a security-focused static analysis engine used in GitHub code scanning, and release 2.23.2 introduces new queries that help identify vulnerabilities (Security rules 1 and 8). Assigned Coding due to improvements in data flow, null guards, and support for multiple programming languages (Coding rules 1, 2, and 4). Assigned DevOps because GitHub code scanning is an integral part of automated CI/CD pipelines, and the changes impact overall code quality and deployment workflows (DevOps rules 2, 5, and 9). Not assigning GitHub Copilot, AI, Azure, or ML since no Copilot, Microsoft AI, Azure, or machine learning/platform engineering content is present."
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-09 23:05:27 +00:00",
+    "canonical_url": "https://devops.com/atlassian-makes-ai-coding-agent-generally-available/",
+    "reason": "Succesfully added: Assigned the AI category because the core of the article is about Atlassian's AI-powered coding agent and its impact on software engineering productivity (AI inclusion rule 1, 4, 5). Assigned DevOps category because the agent's primary integrations and workflow focus are with DevOps tools like Bitbucket CI/CD, Compass, and Jira (DevOps rules 1, 2, 5). Assigned Coding category because the article discusses AI for code writing and review tasks, as well as workflow automation for developers (Coding rules 4 and 5). No Microsoft-specific categories (e.g., Azure, Security, ML, GitHub Copilot) qualify here, as the technology stack centers on Atlassian’s ecosystem with some GitHub mentions but no Microsoft-centric details."
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-09 23:05:49 +00:00",
+    "canonical_url": "https://devops.com/coding-agent-teams-the-next-frontier-in-ai-assisted-software-development/",
+    "reason": "Succesfully added: Assigned the AI category per AI rule 1, as the core article focus is on agentic AI, AI developer tools, and coding automation frameworks, with frequent discussion of Microsoft's AutoGen (a Microsoft tool). Assigned DevOps because the article is published on a DevOps-focused publication and explicitly discusses automation, developer productivity, and workflow transformation in software engineering (see DevOps rules 3, 4, and 9). Assigned Coding because the entire discussion is about AI's role in software engineering, developer tooling, and coding agent frameworks (Coding rules 2, 4, and 5). GitHub Copilot is not the technical focus, so that category is not assigned. Azure is not a central technology here. ML and Security are not deeply covered. The content meets all inclusion rules and passes generic exclusion—no business productivity, biographical, or sales content."
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-09 23:06:12 +00:00",
+    "canonical_url": "https://devops.com/developer-experience-overcoming-6-ai-induced-challenges/",
+    "reason": "Succesfully added: Assigned the AI category because the article analyzes challenges specifically related to the adoption and integration of artificial intelligence in developer experience and software development (AI inclusion rules 1, 4, 5). Assigned the DevOps category because the content repeatedly discusses DevOps platforms, practices, tools integration, quality assurance, automation, and strategic workflow improvements (DevOps inclusion rules 3, 4, 5, 6). Did not assign Coding, Azure, ML, Security, or GitHub Copilot categories as the article does not address specific coding practices, platform implementations, machine learning model development, Microsoft technologies, security strategies, or Copilot tool usage. The content meets quality and technical depth requirements, and no generic exclusion rules apply."
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-09 23:06:47 +00:00",
+    "canonical_url": "https://devops.com/survey-surfaces-lots-of-room-for-software-engineering-improvement/",
+    "reason": "Succesfully added: Assigned 'DevOps' due to strong focus on developer workflows, tool integration, automation, and developer experience in software engineering (DevOps inclusion rules 3, 5, and 9). 'AI' assigned because the article discusses the impact of AI technologies on productivity within software engineering and DevOps contexts (AI inclusion rules 1 and 5). No Microsoft-specific category assigned, as the article is general to the field and does not highlight Microsoft technologies as central. Coding, Azure, ML, Security are not included as the article does not address programming techniques, Azure or Microsoft-specific platforms, advanced ML development, or security-specific themes. Article meets quality, technical, and relevance standards and does not trigger any generic exclusion rules."
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-09 23:07:13 +00:00",
+    "canonical_url": "https://devops.com/whose-ops-is-it-anyway-how-idps-ai-and-security-are-evolving-developer-culture/",
+    "reason": "Succesfully added: The article qualifies for the AI category because it discusses AIOps (AI-driven operations in DevOps), automation, and the integration of machine learning (ML) in DevOps practices, aligning with AI and ML inclusion rules. 'DevOps' is included due to the central focus on DevOps culture, deployment, CI/CD, and process automation. 'Security' is added as it covers DevSecOps—embedding security into pipelines and addressing risks introduced by AI. 'ML' is included since it covers MLOps, model lifecycle, and infrastructure for AI/ML workloads, meeting the ML platform and workflow rules. Although various tools and platforms are discussed, there is no detailed focus on Microsoft-specific technologies, so Azure and Coding categories are not assigned."
   }
 ]
