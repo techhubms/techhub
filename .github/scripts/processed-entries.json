@@ -11922,5 +11922,11 @@
     "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories because the content centers on the GitHub Copilot CLI, a developer-focused tool that leverages AI for coding assistance at the command line (GitHub Copilot Inclusion Rule 1 and AI Rule 2). The description and hashtags reinforce the AI-powered nature and coding utility. No other categories applied as there is no explicit tutorial, code example, or DevOps/Cloud discussion.",
     "timestamp": "2025-10-09 15:27:43 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/rx_e9RDL1c8"
+  },
+  {
+    "timestamp": "2025-10-09 16:07:02 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the Security category based on extensive coverage of identity-based attacks, MFA compromise, inbox manipulation, and defense strategies using Microsoft Defender and Sentinel (Security rules 1, 2, 3, 4, 5, 7, 9). Assigned Azure because the post references Microsoft Entra ID (Azure AD), Exchange Online, Defender for Cloud Apps, and Microsoft Sentinel, which are central Azure services for security and monitoring (Azure rule 1, 4, 6). AI, ML, DevOps, Coding, and GitHub Copilot were not assigned because the content does not cover development, coding, AI/ML, or DevOps practices. All aspects of the content are technical, focused on threat detection and incident response.",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/10/09/investigating-targeted-payroll-pirate-attacks-affecting-us-universities/"
   }
 ]
