@@ -11910,5 +11910,11 @@
     "collection": "posts",
     "timestamp": "2025-10-09 08:07:42 +00:00",
     "reason": "Succesfully added: Assigned 'AI' category because the post is focused on Microsoft Copilot Studio, a Power Platform tool for building AI conversational agents (AI inclusion rules 1 and 5). The content describes Copilot Studio's role as a developer/maker tool for creating custom AI solutions, which falls under the developer tool exemption in the Microsoft Copilot product rules (AI inclusion rule 1 and Copilot product distinction). Did not assign categories like Coding, DevOps, Azure, ML, or Security because the article does not delve into code, software engineering, DevOps practices, Azure-specific cloud architectures, data science/ML development, or technical security implementation. The focus is on solution design and business use cases for no-code AI agent creation, which fits only the 'AI' category."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-10-09 11:06:00 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/cut-migration-costs-with-b-series-and-cobalt-100-vm-support-in/ba-p/4460285",
+    "reason": "Succesfully added: The Azure category was assigned because the content is focused on Azure Migrate, Azure VMs (B-Series, Cobalt 100), and Azure cloud infrastructure (Azure rules 1, 2, 4, 5). No other categories apply: there is no coding/development focus (no implementation/code samples), DevOps is not discussed directly, Security and AI are not relevant, and ML is not present. The content is clearly technical, migration-focused, and relevant for IT professionals or cloud architects optimizing Azure infrastructure."
   }
 ]
