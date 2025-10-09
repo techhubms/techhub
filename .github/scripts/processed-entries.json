@@ -11880,5 +11880,11 @@
     "reason": "Succesfully added: Assigned the Coding category because the content deals with a technical defect in WPF application behavior, explores workarounds via code/configuration, and concerns event handling in .NET/WPF development (Coding rules 1, 2, 4, and 5). No generic exclusion rules apply: this is not biographical, sales, job, or negative content, and it's in English. No other categories fit since this is not AI, DevOps, Azure, ML, or Security focused. The technical nature, code/config details, and analysis center strictly on desktop application development.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/app-development/wpf-application-becomes-unresponsive-after-plugging-unplugging/m-p/4459751#M1274",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-09 01:31:54 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-to-build-frontier-ai-solutions-with-azure-ai-landing-zone/ba-p/4460199",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centrally discusses Azure AI Landing Zone and Azure AI Foundry, which are Microsoft AI platforms/frameworks (AI inclusion rules 1, 4, 5). Assigned 'Azure' category since the article revolves around Azure services, environments, and deployment processes (Azure inclusion rules 1, 4, 5). Did not assign 'ML' because although ML lifecycle, reference architectures, and foundational models are mentioned, the focus is on platform and deployment patterns, not on building ML from code or analytics engineering. Did not assign 'Coding' as there's no in-depth programming detail or focus on code, frameworks, or development practices. Did not assign 'DevOps' as while IaC (Terraform, Bicep) is referenced, the emphasis is on architecture and automation rather than DevOps methodology or pipelines. Did not assign 'Security' as a direct category because security governance is covered as part of cloud architecture but not as a primary technical focus. No generic exclusion rules apply; content is clearly technical, English, and focused on Microsoft practitioner guidance."
   }
 ]
