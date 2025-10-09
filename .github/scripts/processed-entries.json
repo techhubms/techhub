@@ -11892,5 +11892,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/study-buddy-learning-data-science-and-machine-learning-with-an/ba-p/4460144",
     "timestamp": "2025-10-09 07:05:24 +00:00",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://github.blog/open-source/git/20-years-of-git-2-days-at-github-hq-git-merge-2025-highlights-%f0%9f%8e%89/",
+    "collection": "news",
+    "timestamp": "2025-10-09 08:06:33 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category because the content centers around Git, GitHub, and related open source developer collaboration tools, with a strong focus on workflow, version control, and modern DevOps practices (DevOps rules 2, 3, 8). There is no substantial content about Microsoft-specific technologies, coding in specific Microsoft languages, AI/ML subjects, or security. Therefore, only the DevOps category is included."
+  },
+  {
+    "canonical_url": "https://dellenny.com/enhancing-copilot-bots-with-azure-openai-services/",
+    "collection": "posts",
+    "timestamp": "2025-10-09 08:07:13 +00:00",
+    "reason": "Succesfully added: Assigned both AI and Azure categories because the content discusses enhancing Microsoft Copilot bots (developer/maker tools, not end-user productivity tools) with Azure OpenAI Services (AI rules 1 and 4, Azure rules 1 and 3). The post focuses on the technical aspects—data grounding, API/tooling, security, and bot deployment—using Azure and Microsoft developer platforms. I did not assign the GitHub Copilot category, as this post does not discuss GitHub Copilot. Coding and DevOps are not directly assigned because the content is architectural/integration-focused rather than application development or DevOps processes. ML is not assigned because the post does not cover hands-on model training, analytics, or custom ML engineering."
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-copilot-studio-improves-customer-engagement-in-financial-services/",
+    "collection": "posts",
+    "timestamp": "2025-10-09 08:07:42 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the post is focused on Microsoft Copilot Studio, a Power Platform tool for building AI conversational agents (AI inclusion rules 1 and 5). The content describes Copilot Studio's role as a developer/maker tool for creating custom AI solutions, which falls under the developer tool exemption in the Microsoft Copilot product rules (AI inclusion rule 1 and Copilot product distinction). Did not assign categories like Coding, DevOps, Azure, ML, or Security because the article does not delve into code, software engineering, DevOps practices, Azure-specific cloud architectures, data science/ML development, or technical security implementation. The focus is on solution design and business use cases for no-code AI agent creation, which fits only the 'AI' category."
   }
 ]

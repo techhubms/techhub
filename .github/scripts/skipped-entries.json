@@ -6573,5 +6573,17 @@
     "reason": "No categories found: Content excluded due to generic exclusion rules. This post is primarily a help-seeking question about a personal account issue (locked out of Azure and unable to recover access), which falls under the 'Question-Only Content' exclusion. Additionally, it focuses on the author's personal problem with account access and support process, lacking substantive technical implementation details, architectural content, or actionable technical guidance relevant to Microsoft technologies. No categories were assigned.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/locked-out-of-azure-account-for-5-months-spent-hours-on-phone/m-p/4459791#M22259",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://dellenny.com/unleashing-creativity-exploring-microsoft-365-copilots-new-image-editing-features/",
+    "collection": "posts",
+    "timestamp": "2025-10-09 08:07:57 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is entirely about Microsoft 365 Copilot's new image editing features focused on end-user business productivity, document/image creation, and general office work. According to the Generic Exclusion Rules and the Copilot Product Distinction in Chapter 2 and 3, any content primarily about Microsoft 365 Copilot, Copilot for Microsoft 365, or Office Copilot is explicitly excluded as it is not a developer tool or focused on technical/development implementation. No technical coding, development, Azure, or AI/ML engineering content relevant to the Tech Hub target audience is present."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/enhancing-copilot-bots-with-azure-openai-services/m-p/4460253#M22262",
+    "collection": "community",
+    "timestamp": "2025-10-09 08:08:06 +00:00",
+    "reason": "Insufficient content length"
   }
 ]
