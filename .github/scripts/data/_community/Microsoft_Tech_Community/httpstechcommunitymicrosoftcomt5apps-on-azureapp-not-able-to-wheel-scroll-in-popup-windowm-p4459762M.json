@@ -1,0 +1,14 @@
+{
+  "Link": "https://techcommunity.microsoft.com/t5/apps-on-azure/app-not-able-to-wheel-scroll-in-popup-window/m-p/4459762#M1366",
+  "OutputDir": "_community",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Tags": [],
+  "FeedName": "Microsoft Tech Community",
+  "Author": "Matt_Fallen",
+  "Title": "App Not Able to Wheel Scroll in Popup Window",
+  "EnhancedContent": "We are working to finish off our transition from Citrix to Azure.  We are working through final issues now and are stuck with an issue on wheel scrolling in a popup window.\n\nOne of our applications will launch and open a session in the browser.  It is only approved for Internet Explorer and will start a session in whichever browser you are using.  The original screens users are on when the application opens users have no issues with wheel scrolling.  But after they make the selection of the department they need to work in, a window will popup that they would work in for that area of the application.  Wheel scrolling will not work in this popup window.  Users can still use the side scroll bar.  But this is severely affecting users productivity.\n\nRunning into a wall at this point.  Application vendor is advising this is an adjustment we need to make in our Azure environments, just as they would (and did years ago) for Citrix.  Unfortunately our vendor can't speak to Azure at all and nobody can advise on the change to Citrix, so that I can try to mimic in Azure.  That is even if it would be similar options to mimic.\n\nWe're willing to look into all options at this point.",
+  "Description": "We are working to finish off our transition from Citrix to Azure. We are working through final issues now and are stuck with an issue on wheel scrolling in a popup window.\n\nOne of our applications will launch and open a session in the browser. It is only approved for Internet Explorer and will start a session in whichever browser you are using. The original screens users are on when the application opens users have no issues with wheel scrolling. But after they make the selection of the department they need to work in, a window will popup that they would work in for that area of the application. Wheel scrolling will not work in this popup window. Users can still use the side scroll bar. But this is severely affecting users productivity.\n\nRunning into a wall at this point. Application vendor is advising this is an adjustment we need to make in our Azure environments, just as they would (and did years ago) for Citrix. Unfortunately our vendor can't speak to Azure at all and nobody can advise on the change to Citrix, so that I can try to mimic in Azure. That is even if it would be similar options to mimic.\n\nWe're willing to look into all options at this point.",
+  "ProcessedDate": "2025-10-09 00:09:01",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "PubDate": "2025-10-07T19:18:15+00:00"
+}

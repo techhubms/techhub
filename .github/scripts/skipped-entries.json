@@ -6543,5 +6543,35 @@
     "timestamp": "2025-10-08 18:06:06 +00:00",
     "collection": "community",
     "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: All categories are excluded because the content does not focus on Microsoft technologies, development with Microsoft platforms, or official Microsoft products. The main topic is Simulacrum, a toolkit for simulating the GitHub API, but there is no information indicating substantive discussion of Microsoft technologies (such as Azure DevOps, .NET, Azure services, or any of the defined categories). GitHub content itself only qualifies under DevOps (or GitHub Copilot if specific to Copilot), but this content is about open source GitHub API simulation—not about Microsoft DevOps tooling or developer practices with Microsoft platforms. According to the workflow, when Microsoft technologies are not central (≥40% focus) or the core of the solution, no category should be assigned. Additionally, the content, description, and tags show no indication of covered Microsoft technology, product, or development tools.",
+    "canonical_url": "https://www.youtube.com/watch?v=Uw8kjouXiU0",
+    "timestamp": "2025-10-08 19:04:32 +00:00",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-08 21:04:09 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/2025/10/08/microsoft-announces-quarterly-earnings-release-date-65/",
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this is a press release about Microsoft's financial results release schedule and includes company information and investor relations contacts. It does not cover technical, development, architectural, or educational content about Microsoft technologies or products. No category inclusion rules apply."
+  },
+  {
+    "timestamp": "2025-10-09 00:10:05 +00:00",
+    "reason": "No categories found: Content excluded due to the 'Question-Only Content' generic exclusion rule (Chapter 3). The post is primarily asking for help regarding a technical issue with wheel scrolling in Azure-based environments, without providing a substantive answer, solution, or technical insight. It does not meet the criteria for development-focused, educational, or reference content and lacks technical depth regarding Microsoft technologies. No categories assigned.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure/app-not-able-to-wheel-scroll-in-popup-window/m-p/4459762#M1366",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-09 00:10:17 +00:00",
+    "reason": "No categories found: Excluded due to the 'Question-Only Content' generic exclusion rule. The submission is a help-seeking community post primarily asking for clarification about Azure Storage account network security, without offering substantive technical solutions or documented answers. The author is explicitly seeking information and troubleshooting advice, rather than providing an in-depth tutorial, implementation walkthrough, or technical guide with actionable details. As per Chapter 3, content that mainly asks questions or seeks help is excluded from categorization.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/azure-traffic-to-storage-account/m-p/4459831#M704",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-09 00:10:29 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This post is primarily a help-seeking question about a personal account issue (locked out of Azure and unable to recover access), which falls under the 'Question-Only Content' exclusion. Additionally, it focuses on the author's personal problem with account access and support process, lacking substantive technical implementation details, architectural content, or actionable technical guidance relevant to Microsoft technologies. No categories were assigned.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/locked-out-of-azure-account-for-5-months-spent-hours-on-phone/m-p/4459791#M22259",
+    "collection": "community"
   }
 ]

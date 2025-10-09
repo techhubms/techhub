@@ -11874,5 +11874,11 @@
     "timestamp": "2025-10-08 18:06:25 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Assigned 'AI' category because the content centers on Azure AI Foundry’s new Voice Live API, a developer-focused solution for building voice-enabled AI agents, aligning with AI inclusion rules 1 and 5. Assigned 'Azure' category because this is an Azure-native product and the event is explicitly tied to Azure cloud services (Azure rule 1). Coding and DevOps categories were not added, as the content is an event announcement and product deep dive, not a tutorial or process guide involving code or deployment pipelines. ML and Security categories do not apply because the main focus is on AI service integration and real-time voice agents, not data science, model engineering, or security implementation."
+  },
+  {
+    "timestamp": "2025-10-09 00:09:53 +00:00",
+    "reason": "Succesfully added: Assigned the Coding category because the content deals with a technical defect in WPF application behavior, explores workarounds via code/configuration, and concerns event handling in .NET/WPF development (Coding rules 1, 2, 4, and 5). No generic exclusion rules apply: this is not biographical, sales, job, or negative content, and it's in English. No other categories fit since this is not AI, DevOps, Azure, ML, or Security focused. The technical nature, code/config details, and analysis center strictly on desktop application development.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/app-development/wpf-application-becomes-unresponsive-after-plugging-unplugging/m-p/4459751#M1274",
+    "collection": "community"
   }
 ]
