@@ -6585,5 +6585,11 @@
     "collection": "community",
     "timestamp": "2025-10-09 08:08:06 +00:00",
     "reason": "Insufficient content length"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to insufficient input: the 'content' field is null and the 'description' field is empty, leaving no substantive material to evaluate. According to the Generic Exclusion Rules (Chapter 3), there must be enough core content to assess relevance, quality, and category fit. With no content provided, it is not possible to determine if any inclusion rules apply, so no categories are assigned.",
+    "timestamp": "2025-10-09 15:31:06 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/fBSR7B9-DpA"
   }
 ]

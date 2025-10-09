@@ -11916,5 +11916,11 @@
     "timestamp": "2025-10-09 11:06:00 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/cut-migration-costs-with-b-series-and-cobalt-100-vm-support-in/ba-p/4460285",
     "reason": "Succesfully added: The Azure category was assigned because the content is focused on Azure Migrate, Azure VMs (B-Series, Cobalt 100), and Azure cloud infrastructure (Azure rules 1, 2, 4, 5). No other categories apply: there is no coding/development focus (no implementation/code samples), DevOps is not discussed directly, Security and AI are not relevant, and ML is not present. The content is clearly technical, migration-focused, and relevant for IT professionals or cloud architects optimizing Azure infrastructure."
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories because the content centers on the GitHub Copilot CLI, a developer-focused tool that leverages AI for coding assistance at the command line (GitHub Copilot Inclusion Rule 1 and AI Rule 2). The description and hashtags reinforce the AI-powered nature and coding utility. No other categories applied as there is no explicit tutorial, code example, or DevOps/Cloud discussion.",
+    "timestamp": "2025-10-09 15:27:43 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/rx_e9RDL1c8"
   }
 ]
