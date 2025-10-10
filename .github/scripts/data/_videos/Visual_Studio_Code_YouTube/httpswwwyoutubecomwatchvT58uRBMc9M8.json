@@ -1,0 +1,18 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "Author": "Visual Studio Code",
+  "Title": "Can MCP servers help AI make your apps better!?",
+  "FeedName": "Visual Studio Code YouTube",
+  "Description": "Super charge your developer workflow with MCP Servers inside VS Code and GitHub Copilot agent mode. In this video you can see how to use remote MCP servers like context7 and MS Learn and how the servers help GitHub Copilot agent mode build better apps.\n\n🔗 Links: MCP Servers for agent mode: https://code.visualstudio.com/mcp Learn more about MCP Repo: https://github.com/microsoft/mcp-for-...\n\n➡️ Connect with Marc: Marc Baiza (https://x.com/MarcBaiza)\n\n📲 Follow VS Code: \\* X: https://x.com/code \\* Bluesky: https://bsky.app/profile/vscode.dev \\* YouTube: https://youtube.com/code \\* LinkedIn: https://www.linkedin.com/showcase/104107263 \\* GitHub: https://github.com/microsoft/vscode\n\n#vscode #mcpserver #githubcopilot",
+  "PubDate": "2025-10-10T21:30:06+00:00",
+  "ProcessedDate": "2025-10-10 22:03:59",
+  "Link": "https://www.youtube.com/watch?v=T58uRBMc9M8",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "FeedLevelAuthor": "Visual Studio Code"
+}

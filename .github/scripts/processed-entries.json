@@ -12090,5 +12090,17 @@
     "canonical_url": "https://harrybin.de/posts/github-spark-buzzword-bingo/",
     "reason": "Succesfully added: Assigned AI category because GitHub Spark is explicitly an AI-powered application builder and the workflow described revolves around using AI prompts and interfaces (AI rule 1, 4). Assigned GitHub Copilot because the post explicitly discusses Copilot’s coding agent for automation and dependency management (GitHub Copilot rule 1, 2, 4), and per workflow, whenever GitHub Copilot is assigned, AI must be assigned too. Assigned Coding because significant development details are provided, including code structure, React/TypeScript usage, editing code, and integration with manual workflows (Coding rules 1, 2, 4, 5). Assigned DevOps due to coverage of GitHub Actions workflows, automated deployments, repo management, and continuous deployment pipelines (DevOps rules 2, 5, 6, 8). Azure, ML, and Security do not apply as there is no substantive focus on Microsoft's cloud platform, ML/data science, or security/identity topics. Generic exclusion rules do not apply as the content is technical, substantive, and meets quality standards.",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-10-10-github-copilot-cli-faster-more-concise-and-prettier",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' because the content centers on Copilot CLI (GitHub Copilot category rule 1-4). 'AI' included as Copilot CLI is an AI-driven developer tool and per the rules both must be present. 'Coding' assigned since the improvements directly impact developer workflows, file editing, and terminal usage (Coding rule 5). 'DevOps' included due to CLI enhancements, terminal workflows, bugfixes, and automation features benefiting the software development lifecycle (DevOps rules 4, 5, 9, 11). No Azure, ML, or Security category rules apply as those topics are not discussed.",
+    "collection": "news",
+    "timestamp": "2025-10-10 22:04:42 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=T58uRBMc9M8",
+    "reason": "Succesfully added: Content focuses on using MCP Servers with GitHub Copilot agent mode inside Visual Studio Code. This directly meets criteria for the 'AI' category (integration of Microsoft AI-powered tools), 'GitHub Copilot' category (Copilot-specific features and agent mode), and 'Coding' category (development workflow enhancements within VS Code). All categories are justified by details in the description and content, which highlight technical usage, setup, and developer productivity improvements.",
+    "collection": "videos",
+    "timestamp": "2025-10-10 22:05:10 +00:00"
   }
 ]
