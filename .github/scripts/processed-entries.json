@@ -12048,5 +12048,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-enterprise-ai-adoption-with-azure-ai-landing-zone/ba-p/4460199",
     "timestamp": "2025-10-10 03:17:10 +00:00"
+  },
+  {
+    "timestamp": "2025-10-10 13:11:24 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/defining-the-raw-data-vault-with-artificial-intelligence/ba-p/4453557",
+    "reason": "Succesfully added: Categories assigned as follows:\n- AI: The article centrally discusses the use of artificial intelligence (Flow.BI and AI-driven automation) for Data Vault modeling (AI rule 1 and 4).\n- Azure: Microsoft Fabric, Synapse, and Azure Data Lake Storage are prominent as supported and integrated platforms (Azure rule 1 and 3).\n- ML: The article covers the application of AI/ML for automating schema/modeling, data platform integration, and privacy classification, aligning with ML rules for data science engineering and automation (ML rules 1 and 2).\n\nContent is highly technical, focuses on implementation and architecture (not just business strategy or marketing), meets length/quality thresholds, and does not trigger any generic exclusion rules. Reference to multiple Microsoft cloud services ensures the Microsoft-tech centrality threshold is met.",
+    "collection": "community"
   }
 ]
