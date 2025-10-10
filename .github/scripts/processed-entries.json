@@ -12012,5 +12012,17 @@
     "timestamp": "2025-10-09 23:07:13 +00:00",
     "canonical_url": "https://devops.com/whose-ops-is-it-anyway-how-idps-ai-and-security-are-evolving-developer-culture/",
     "reason": "Succesfully added: The article qualifies for the AI category because it discusses AIOps (AI-driven operations in DevOps), automation, and the integration of machine learning (ML) in DevOps practices, aligning with AI and ML inclusion rules. 'DevOps' is included due to the central focus on DevOps culture, deployment, CI/CD, and process automation. 'Security' is added as it covers DevSecOps—embedding security into pipelines and addressing risks introduced by AI. 'ML' is included since it covers MLOps, model lifecycle, and infrastructure for AI/ML workloads, meeting the ML platform and workflow rules. Although various tools and platforms are discussed, there is no detailed focus on Microsoft-specific technologies, so Azure and Coding categories are not assigned."
+  },
+  {
+    "canonical_url": "https://devops.com/pagerduty-adds-suite-of-ai-agents-to-it-management-platform/",
+    "timestamp": "2025-10-10 01:31:30 +00:00",
+    "reason": "Succesfully added: Categories 'AI' and 'DevOps' were assigned. The content focuses on technology for automating IT operations and DevOps workflows via new AI agents in PagerDuty’s platform—meeting AI category criteria (use of AI in technical/operations) and DevOps category criteria (workflows, SRE agents, schedule automation, platform/tooling integration). There is no Microsoft-specific technology, so Azure, Coding, ML, Security, or GitHub Copilot categories do not apply. The article does not trigger any generic exclusions—it is a technical news article, not a sales pitch or executive strategy. Tags were chosen based on technical depth, avoiding overly generic or irrelevant terms.",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://devops.com/spacelift-adds-open-source-ai-vibecoding-tool-to-provision-infrastructure/",
+    "timestamp": "2025-10-10 01:31:53 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the content centers on an AI-powered framework (Spacelift Intent) designed for infrastructure provisioning, specifically referencing agentic AI, large language models, and natural language processing (AI rules 1, 3, and 4). Assigned the DevOps category because the article addresses automation and tooling for DevOps teams, discusses DevOps workflows, and describes infrastructure as code management improvements (DevOps rules 3, 5, and 6). No Microsoft technology is discussed, so categories like Azure, Coding, or ML do not apply.",
+    "collection": "posts"
   }
 ]
