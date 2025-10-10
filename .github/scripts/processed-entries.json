@@ -12042,5 +12042,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-resource-scope-query-for-azure-monitor-workspaces/ba-p/4460567",
     "timestamp": "2025-10-10 02:30:27 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category because the article centers on architectural and implementation guidance for AI workloads using Azure technologies, meeting multiple rules under the AI category (Microsoft AI Products/Services, AI Development with Microsoft Technologies). 'Azure' is included because all frameworks, platforms, and compute options discussed are specific to Azure services (Azure rule 1, 4, 5). Did not assign Coding, DevOps, ML, Security, or GitHub Copilot since the focus is on architecture, landing zones, and platform adoption, not hands-on coding, operations, ML algorithm implementation, or GitHub Copilot use. The content meets quality, technical depth, and language criteria and does not match any exclusion or generic exclusion rules.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-enterprise-ai-adoption-with-azure-ai-landing-zone/ba-p/4460199",
+    "timestamp": "2025-10-10 03:17:10 +00:00"
   }
 ]
