@@ -6609,5 +6609,29 @@
     "timestamp": "2025-10-09 23:07:30 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=LLih8bO_bCA",
     "reason": "No categories found: Content excluded due to generic exclusion rule - the description is primarily in Spanish, not English, and there is no actual content provided (content is null). This violates the Non-English Content exclusion (Chapter 3: Language and Scope Exclusions). Without a primarily English main text or additional details, the input is excluded from categorization."
+  },
+  {
+    "canonical_url": "https://dellenny.com/setting-up-conditional-formatting-in-microsoft-lists/",
+    "reason": "No categories found: The content primarily focuses on how to use conditional formatting within Microsoft Lists, an end-user feature of Microsoft 365. According to the Generic Exclusion Rules, content about general usage of non-development Microsoft products such as Office 365/Microsoft 365 is excluded unless there is a development focus (such as coding, API integration, or customization via SharePoint Framework). This post is aimed at end users configuring visual rules, not developers or technical implementers, and does not provide guidance on extending, customizing, or developing for Microsoft Lists. There are no references to development, APIs, programming, SharePoint Framework, or architectural aspects. Therefore, no categories are assigned.",
+    "collection": "posts",
+    "timestamp": "2025-10-10 15:05:11 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/the-7-smartest-prompts-to-get-the-best-out-of-copilot/",
+    "reason": "No categories found: No categories were assigned because the content is primarily about prompt engineering for various AI copilots, including GitHub Copilot, ChatGPT, and other 'copilots,' but it does NOT focus on GitHub Copilot specifically or in sufficient detail (the examples cover Python, JavaScript, TypeScript, SQL, etc. in a generic way and are not tied to the specifics of GitHub Copilot as a development tool). There are also several mentions of business-productivity copilots such as Microsoft 365 Copilot, which are explicitly excluded based on the Copilot Product Distinction rule. The post is fundamentally about maximizing coding assistant tools generally, not about GitHub Copilot's technical use, setup, or specific features. Additionally, while 'Copilot' is referenced throughout, the guidance is not Microsoft-technology-centric (≥40%) as required by Multi-Platform Content Threshold rules. Therefore, none of the inclusion rules for 'AI,' 'GitHub Copilot,' or other technical categories are met according to the strict requirements.",
+    "collection": "posts",
+    "timestamp": "2025-10-10 15:05:26 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=a3cwp7xGjbY",
+    "reason": "No categories found: No categories assigned. Although GitHub and AI topics are discussed, the episode functions as a technical news roundup rather than a focused tutorial, how-to guide, or in-depth technical implementation. The segment about OpenAI's AgentKit is a high-level news mention, and there is no indication of detailed development, coding, or technical architecture regarding Microsoft or GitHub Copilot technologies. According to the rules, product news, project spotlights, and general event coverage do not qualify unless they demonstrate substantive technical depth, code, or technical guidance involving Microsoft technologies. Generic exclusion rules direct to avoid categorizing general news coverage.",
+    "collection": "videos",
+    "timestamp": "2025-10-10 15:06:16 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/unlocking-the-power-of-conversational-ai-with-azure-bot-service/m-p/4460665#M22267",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-10-10 15:06:20 +00:00"
   }
 ]
