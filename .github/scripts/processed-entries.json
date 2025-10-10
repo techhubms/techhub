@@ -12060,5 +12060,17 @@
     "reason": "Succesfully added: AI category assigned because the content deeply covers conversational AI concepts using Microsoft Azure Bot Service, integrating Azure Cognitive Services and OpenAI (AI rules 1, 4, 5). Azure category assigned since the entire article is based on Azure's Bot Service and related cloud resources (Azure rule 1, 4). Did not assign Coding because, while developer tools are mentioned, the focus is more on bot architecture, platform features, and integration—not language- or SDK-specific implementation. Other categories weren't assigned, as there's no primary DevOps, ML/data science, or Security focus.",
     "collection": "posts",
     "timestamp": "2025-10-10 15:05:52 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=IfnVlYkC-c4",
+    "timestamp": "2025-10-10 16:05:18 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' category as the update centers on new Azure features, services, and retirements (Azure rule 1 and 4). 'AI' was included due to coverage of GitHub Copilot for App Modernization and AI tours (AI rules 1 and 2). 'DevOps' is included because of updates related to AKS management, backups, monitoring, and CI/CD-related integrations (DevOps rules 1, 5, and 7). Excluded 'Coding', 'ML', 'Security' as there is no direct focus on coding practices, deep ML/data science engineering, or explicit security implementation details."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=FTHUFYMIoj8",
+    "timestamp": "2025-10-10 16:05:41 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the content is focused on Azure CycleCloud and orchestration of HPC environments on Azure (Azure rule 1). No AI or ML categories are given because, although 'AI computing' is mentioned briefly in the title, the main description and details are about infrastructure, job schedulers, and cluster management for academic research workloads, not AI solution development or ML engineering. Not assigned Coding, DevOps, or Security because there is no focus on software programming, DevOps workflows, or cybersecurity implementation in the description. Tags were drawn from tool names, technologies, and relevant processes explicitly mentioned in the description and title."
   }
 ]
