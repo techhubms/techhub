@@ -12084,5 +12084,11 @@
     "timestamp": "2025-10-10 18:06:10 +00:00",
     "collection": "news",
     "canonical_url": "https://www.linkedin.com/posts/satyanadella_another-first-for-our-ai-fleet-a-supercomputing-activity-7382086397152858113-BlSd"
+  },
+  {
+    "timestamp": "2025-10-10 21:04:31 +00:00",
+    "canonical_url": "https://harrybin.de/posts/github-spark-buzzword-bingo/",
+    "reason": "Succesfully added: Assigned AI category because GitHub Spark is explicitly an AI-powered application builder and the workflow described revolves around using AI prompts and interfaces (AI rule 1, 4). Assigned GitHub Copilot because the post explicitly discusses Copilot’s coding agent for automation and dependency management (GitHub Copilot rule 1, 2, 4), and per workflow, whenever GitHub Copilot is assigned, AI must be assigned too. Assigned Coding because significant development details are provided, including code structure, React/TypeScript usage, editing code, and integration with manual workflows (Coding rules 1, 2, 4, 5). Assigned DevOps due to coverage of GitHub Actions workflows, automated deployments, repo management, and continuous deployment pipelines (DevOps rules 2, 5, 6, 8). Azure, ML, and Security do not apply as there is no substantive focus on Microsoft's cloud platform, ML/data science, or security/identity topics. Generic exclusion rules do not apply as the content is technical, substantive, and meets quality standards.",
+    "collection": "posts"
   }
 ]
