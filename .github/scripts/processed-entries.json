@@ -12072,5 +12072,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=FTHUFYMIoj8",
     "timestamp": "2025-10-10 16:05:41 +00:00",
     "reason": "Succesfully added: Assigned Azure category because the content is focused on Azure CycleCloud and orchestration of HPC environments on Azure (Azure rule 1). No AI or ML categories are given because, although 'AI computing' is mentioned briefly in the title, the main description and details are about infrastructure, job schedulers, and cluster management for academic research workloads, not AI solution development or ML engineering. Not assigned Coding, DevOps, or Security because there is no focus on software programming, DevOps workflows, or cybersecurity implementation in the description. Tags were drawn from tool names, technologies, and relevant processes explicitly mentioned in the description and title."
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the entire article centers on Microsoft's efforts to equip Washington's students and educators with AI technology and AI skills, specifically mentioning Copilot Studio, Copilot Chat, and AI training for educational purposes (AI inclusion rules 1 and 4–5). Did not assign the broader Microsoft 365 Copilot/Office Copilot exclusion, as the content is not about business productivity tools for general office work, but rather educational access to generative AI as a platform. No other category was directly addressed: there is no developer tooling, Azure platform, ML engineering, security, coding, or DevOps content. The article is about broad AI access and digital skill-building using Microsoft AI tools in an educational context.",
+    "timestamp": "2025-10-10 18:05:47 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2025/10/09/microsoft-elevate-washington/"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the core focus is on building advanced infrastructure to enable and accelerate AI workloads (AI rule 1: Microsoft AI products/services and AI infrastructure). Assigned Azure because this infrastructure underpins Microsoft Azure AI services and cloud datacenters (Azure rule 1 and rule 4). Not assigned to DevOps, Coding, ML, Security, or GitHub Copilot since the content is about hardware and infrastructure for AI at scale, not software development, code, data science, or security implementation.",
+    "timestamp": "2025-10-10 18:06:10 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_another-first-for-our-ai-fleet-a-supercomputing-activity-7382086397152858113-BlSd"
   }
 ]

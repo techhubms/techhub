@@ -6633,5 +6633,11 @@
     "reason": "Insufficient content length",
     "collection": "community",
     "timestamp": "2025-10-10 15:06:20 +00:00"
+  },
+  {
+    "reason": "No categories found: All provided fields except for 'author' and 'title' are empty or null. The 'content' is null, and there is no 'description' or 'tags' field populated. According to the processing rules, when there is no substantive content provided to evaluate technical depth or coverage (title alone is never sufficient), it is not possible to assign any categories or extract technical context. As a result, this content does not qualify for categorization.",
+    "timestamp": "2025-10-10 18:06:38 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/fgLUMKhb-0o"
   }
 ]
