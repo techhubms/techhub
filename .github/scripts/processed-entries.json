@@ -12108,5 +12108,23 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=VEuoNhFvegQ",
     "timestamp": "2025-10-11 01:31:44 +00:00"
+  },
+  {
+    "timestamp": "2025-10-11 07:04:17 +00:00",
+    "canonical_url": "https://devops.com/grafana-labs-extends-ai-capabilities-of-observability-platform/",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the AI category because the article centers on new Grafana features leveraging AI for observability, query generation, and incident management (AI inclusion rule 1 and 5). Assigned the DevOps category because the context is observability, IT operations, and incident management—core DevOps practices (DevOps rule 7, 9, and general focus). Did not assign categories like Azure, Coding, ML, Security, or GitHub Copilot because the content does not reference Microsoft technologies, programming guidance, ML development, security implementation with Microsoft tools, or GitHub Copilot. The technology is about Grafana Labs' platform and not Microsoft-focused, so multi-platform centrality requirements for Azure or other Microsoft categories are not met."
+  },
+  {
+    "timestamp": "2025-10-11 07:04:41 +00:00",
+    "canonical_url": "https://devops.com/how-to-eliminate-devops-toil-using-automation-scripts/",
+    "collection": "posts",
+    "reason": "Succesfully added: Included the 'DevOps' category because the article centers on automating repetitive DevOps tasks through scripting, aligning directly with DevOps category rule 1 (Automation, deployment, workflows) and relevant DevOps practices (category rules 1, 5, and 6). No Microsoft-specific technologies or tools are featured or central, so Azure, Coding, AI, ML, Security, and GitHub Copilot categories were not assigned. The article focuses on principles and script-based automation in DevOps tooling and is technically detailed, not biographical, sales-oriented, or too negative, so none of the generic exclusion rules apply."
+  },
+  {
+    "timestamp": "2025-10-11 07:05:03 +00:00",
+    "canonical_url": "https://devops.com/technical-debt-make-developers-happier-now-or-pay-more-later/",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the content discusses DevOps culture, practices for improving engineering productivity, and continuous integration, which match multiple DevOps inclusion rules (team organization, CI/CD, collaboration, developer experience). Assigned 'AI' because the article references the use of AI tooling and agents in engineering workflows, including automation of routine tasks and the projected growth of agentic AI, consistent with the AI inclusion rules regarding Microsoft AI technologies and general AI integration in development. Did not assign other categories since there are no Microsoft-specific technologies or frameworks detailed, nor is there substantial coverage of Security, Azure, Coding, ML, or GitHub Copilot. Strictly followed the category inclusion and exclusion workflow."
   }
 ]
