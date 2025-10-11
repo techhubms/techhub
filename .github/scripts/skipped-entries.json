@@ -6639,5 +6639,35 @@
     "timestamp": "2025-10-10 18:06:38 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/fgLUMKhb-0o"
+  },
+  {
+    "reason": "No categories found: All generic exclusion rules were applied first, as specified in Chapter 2. The content is primarily about an end-user feature of Windows 11 (Windows Spotlight wallpapers), focusing on the aesthetic and motivational appeal of background images. There is no development, coding, AI, DevOps, Azure, ML, or security implementation, usage, or architecture described. It is not aimed at Microsoft developers or consultants, but rather general users and enthusiasts. According to the generic exclusions in Chapter 3 (Non-Development Microsoft Products, Non-Development content), and supported by Category Inclusion rules in Chapter 4 (Microsoft development content only), no categories apply.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/windows-11-spotlight-discovering-beauty-in-random-places/",
+    "timestamp": "2025-10-11 09:04:09 +00:00"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-11 10:04:13 +00:00",
+    "canonical_url": "https://dellenny.com/experimental-features-via-canary-channels-in-windows-11/",
+    "reason": "No categories found: No categories assigned. The content discusses the experimental 'Canary Channel' within the Windows Insider Program for Windows 11, describing how Microsoft tests new OS features and architectural changes. However, it does not focus substantially on development tooling, Microsoft developer platforms, coding practices, DevOps methods, Azure services, ML/AI integration, or security implementation. Although it references developers and technical enthusiasts, the topic is about operating system preview builds and user participation rather than software development or engineering work with Microsoft developer technologies. According to the workflow's Generic Exclusion Rules and Category Inclusion Rules, general end-user Windows features and preview channel participation are outside Tech Hub's developer-focused categories."
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-11 11:04:25 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This article is focused on maximizing value and productivity in Microsoft 365 for non-profits, but it does not discuss development, customization, technical implementation, or anything related to coding, development frameworks, or platform architecture. It offers end-user advice for business productivity, licensing, cost-saving, and adoption—topics that are explicitly excluded by the 'Non-Development Microsoft Products' and 'Business Strategy and Executive Content' exclusion rules. No categories apply.",
+    "canonical_url": "https://dellenny.com/microsoft-365-tips-for-non-profits-with-limited-budgets/"
+  },
+  {
+    "timestamp": "2025-10-11 14:04:30 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/48vSTBqhggo",
+    "reason": "No categories found: No categories assigned. While the content mentions GitHub Copilot, it is not about developer tool usage, code development, or technical integration (GitHub Copilot inclusion rules). Instead, it describes the 3D printing of a GitHub Copilot logo figurine, focusing on open-sourcing a 3D model for personal use, which does not meet the criteria for 'AI', 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', or 'Security' categories. There is no coverage of developer workflows, code, configuration, technical best practices, or any programming concepts. This is a hobbyist/merchandise topic, not technical content as required by category inclusion rules.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/jSFXcNMV-d0",
+    "timestamp": "2025-10-11 15:04:45 +00:00",
+    "reason": "No categories found: Content excluded due to insufficient information. The provided fields contain only a title ('Span from List is awesome in .NET'), and the description and tags are empty. The 'content' field is null. According to the workflow, categorization decisions must be based on substantive analysis of actual content text. Without access to the content or a meaningful description, it is not possible to determine the applicable categories or to verify whether any generic exclusion rules apply. Therefore, no categories are assigned.",
+    "collection": "videos"
   }
 ]

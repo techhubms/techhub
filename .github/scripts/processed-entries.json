@@ -12126,5 +12126,11 @@
     "canonical_url": "https://devops.com/technical-debt-make-developers-happier-now-or-pay-more-later/",
     "collection": "posts",
     "reason": "Succesfully added: Assigned the 'DevOps' category because the content discusses DevOps culture, practices for improving engineering productivity, and continuous integration, which match multiple DevOps inclusion rules (team organization, CI/CD, collaboration, developer experience). Assigned 'AI' because the article references the use of AI tooling and agents in engineering workflows, including automation of routine tasks and the projected growth of agentic AI, consistent with the AI inclusion rules regarding Microsoft AI technologies and general AI integration in development. Did not assign other categories since there are no Microsoft-specific technologies or frameworks detailed, nor is there substantial coverage of Security, Azure, Coding, ML, or GitHub Copilot. Strictly followed the category inclusion and exclusion workflow."
+  },
+  {
+    "timestamp": "2025-10-11 19:04:22 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' category because the core focus is replicating VMware workloads to Azure via Azure Site Recovery (matches Azure inclusion rule 1 and 4). 'Security' is included since there is a substantive discussion about integrating on-premise third-party network security tools and identity integration with Microsoft Entra ID (Security inclusion rules 1, 3, and 4). Excluded AI, ML, Coding, DevOps, and GitHub Copilot as the post does not involve coding, development frameworks, DevOps methodologies, custom ML/data science, or AI platform/tools. Community content meets the minimum length and provides technical, not biographical or business-only strategic, details. All generic exclusions were reviewed and do not apply.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/replicate-workload-from-vmware-to-azure-using-azure-site/m-p/4460851#M22268"
   }
 ]
