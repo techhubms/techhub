@@ -1,0 +1,14 @@
+{
+  "OutputDir": "_community",
+  "EnhancedContent": "As voice-driven technologies continue to transform how users interact with applications, delivering **accurate, natural, and noise-resilient speech recognition** has become essential. From virtual assistants and customer service bots to voice-controlled industrial systems, users expect speech interfaces that just work — even in noisy environments or when complex technical terms are spoken.\n\nThat’s where **Azure Custom Speech** comes in. It allows you to **tailor Azure’s Speech-to-Text service** for your specific domain by training it to handle background noise, unique terminology, and diverse accents — enabling seamless and reliable voice experiences across industries.\n\n[https://dellenny.com/when-words-matter-noise-free-domain-specific-voice-recognition-with-azure-custom-speech/](https://dellenny.com/when-words-matter-noise-free-domain-specific-voice-recognition-with-azure-custom-speech/)",
+  "Description": "As voice-driven technologies continue to transform how users interact with applications, delivering **accurate, natural, and noise-resilient speech recognition** has become essential. From virtual assistants and customer service bots to voice-controlled industrial systems, users expect speech interfaces that just work — even in noisy environments or when complex technical terms are spoken.\n\nThat’s where **Azure Custom Speech** comes in. It allows you to **tailor Azure’s Speech-to-Text service** for your specific domain by training it to handle background noise, unique terminology, and diverse accents — enabling seamless and reliable voice experiences across industries.\n\n[https://dellenny.com/when-words-matter-noise-free-domain-specific-voice-recognition-with-azure-custom-speech/](https://dellenny.com/when-words-matter-noise-free-domain-specific-voice-recognition-with-azure-custom-speech/)",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2025-10-12 09:03:43",
+  "Author": "JohnNaguib",
+  "PubDate": "2025-10-12T08:38:47+00:00",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/when-words-matter-noise-free-domain-specific-voice-recognition/m-p/4460898#M22270",
+  "Tags": [],
+  "Title": "When Words Matter Noise-Free, Domain-Specific Voice Recognition with Azure Custom Speech"
+}

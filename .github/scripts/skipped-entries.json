@@ -6669,5 +6669,23 @@
     "timestamp": "2025-10-11 15:04:45 +00:00",
     "reason": "No categories found: Content excluded due to insufficient information. The provided fields contain only a title ('Span from List is awesome in .NET'), and the description and tags are empty. The 'content' field is null. According to the workflow, categorization decisions must be based on substantive analysis of actual content text. Without access to the content or a meaningful description, it is not possible to determine the applicable categories or to verify whether any generic exclusion rules apply. Therefore, no categories are assigned.",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-12 09:04:36 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule. The article is focused on organizational strategy, change management, productivity maintenance, and user adoption during Microsoft 365 rollouts. It covers communication, training, and governance best practices for phased or hybrid deployments and is targeted at business leaders, IT change managers, and organizational strategists. It does not include technical implementation details, code, development, or deployment guidance, nor content aimed primarily at developers or technical architects for Microsoft 365 development. According to the prompt's generic exclusions under 'Non-Development Microsoft Products' and 'Business Strategy and Executive Content,' content focusing on business productivity, adoption strategy, or organizational change management for Microsoft 365 (not developer-focused) is explicitly excluded from categorization.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/maintaining-productivity-during-hybrid-or-phased-rollouts-in-microsoft-365-2/"
+  },
+  {
+    "timestamp": "2025-10-12 09:05:06 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/azure-enterprise-scale-landing-zone-building-a-future-ready/m-p/4460899#M801"
+  },
+  {
+    "timestamp": "2025-10-12 09:05:06 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/when-words-matter-noise-free-domain-specific-voice-recognition/m-p/4460898#M22270"
   }
 ]

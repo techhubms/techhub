@@ -12138,5 +12138,17 @@
     "reason": "Succesfully added: Assigned 'Coding' category because the guide is technically detailed, developer-focused, and relevant to open source project maintainers within the Microsoft/.NET ecosystem. It covers licensing practices, permissible license types, and project business models—all central technical concerns for .NET developers considering Foundation membership. No other categories apply, as it does not involve AI, DevOps, Azure, ML, Security, or GitHub Copilot.",
     "canonical_url": "https://dotnetfoundation.org/news-events/detail/license-compatibility-guide",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-12 09:04:23 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the entire content is centered around building and managing Azure environments using Microsoft's Enterprise-Scale Landing Zone architecture (Azure inclusion rules 1, 4, 5). Assigned Security because substantial focus is given to governance, Azure Security Center, Defender for Cloud, Sentinel, RBAC, and compliance controls (Security inclusion rules 1, 2, 4, 5, 9). Assigned DevOps because the article discusses Infrastructure as Code with Bicep and Terraform, CI/CD pipelines with Azure DevOps and GitHub Actions, and automation best practices (DevOps inclusion rules 5, 6, 11). Coding and AI/ML were not assigned because the content is not about application development or AI/ML workloads, but infrastructure, security, and DevOps for cloud foundations.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/azure-enterprise-scale-landing-zone-building-a-future-ready-cloud-foundation/"
+  },
+  {
+    "timestamp": "2025-10-12 09:04:56 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the entire article focuses on Azure Custom Speech, which is an Azure AI service for speech-to-text with custom adaptation (AI rule 1). 'Azure' is assigned since the solution, steps, and implementation all hinge on Azure AI Speech (Azure rule 1 and 4). Coding, DevOps, Security, ML, and GitHub Copilot are not applicable: the content does not focus on programming language implementation, DevOps tooling or process, security implementation, or custom ML model building from scratch. The content is technical and targeted at developers building voice-enabled applications rather than general business audiences, meeting quality and relevance standards.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/when-words-matter-noise-free-domain-specific-voice-recognition-with-azure-custom-speech/"
   }
 ]
