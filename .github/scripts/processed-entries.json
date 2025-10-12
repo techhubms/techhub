@@ -12132,5 +12132,11 @@
     "reason": "Succesfully added: Assigned 'Azure' category because the core focus is replicating VMware workloads to Azure via Azure Site Recovery (matches Azure inclusion rule 1 and 4). 'Security' is included since there is a substantive discussion about integrating on-premise third-party network security tools and identity integration with Microsoft Entra ID (Security inclusion rules 1, 3, and 4). Excluded AI, ML, Coding, DevOps, and GitHub Copilot as the post does not involve coding, development frameworks, DevOps methodologies, custom ML/data science, or AI platform/tools. Community content meets the minimum length and provides technical, not biographical or business-only strategic, details. All generic exclusions were reviewed and do not apply.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/replicate-workload-from-vmware-to-azure-using-azure-site/m-p/4460851#M22268"
+  },
+  {
+    "timestamp": "2025-10-12 02:31:01 +00:00",
+    "reason": "Succesfully added: Assigned 'Coding' category because the guide is technically detailed, developer-focused, and relevant to open source project maintainers within the Microsoft/.NET ecosystem. It covers licensing practices, permissible license types, and project business models—all central technical concerns for .NET developers considering Foundation membership. No other categories apply, as it does not involve AI, DevOps, Azure, ML, Security, or GitHub Copilot.",
+    "canonical_url": "https://dotnetfoundation.org/news-events/detail/license-compatibility-guide",
+    "collection": "posts"
   }
 ]
