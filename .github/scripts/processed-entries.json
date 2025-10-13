@@ -12234,5 +12234,17 @@
     "canonical_url": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/10/13/fyai-why-developers-will-lead-ai-transformation-across-the-enterprise/",
     "reason": "Succesfully added: Assigned AI category because the article centrally discusses Microsoft's AI products, tools (e.g., copilots, Azure AI Foundry) and their use in enterprise development (AI inclusion rules 1, 4, 5, 6). Assigned Azure category as Azure AI Foundry and related cloud solutions are significant parts of the solution space (Azure inclusion rule 1, 3, 4). Assigned DevOps since DevOps practices, automation, and continuous modernization are key topics, including agentic DevOps (DevOps rules 3, 4, 5). Assigned GitHub Copilot because the article specifically details its use in development workflows (GitHub Copilot rules 1, 2, 3), and as required, also includes AI when GitHub Copilot is present. Not assigned Coding, ML, or Security as the article focused on AI-driven workflows and developer/ops automation rather than direct coding tutorials, ML engineering, or security implementation details.",
     "timestamp": "2025-10-13 17:06:58 +00:00"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-10-13 18:05:12 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' because OneLake diagnostics is tightly integrated with Azure Blob Storage APIs and supports Azure Storage monitoring, fulfilling Azure inclusion rules 1 and 2. Assigned 'ML' because OneLake and Fabric are core Microsoft data/analytics platforms, and the article focuses on data governance, ingestion, and analytics scenarios (ML rules 1, 4, and 5). 'Security' is included as the primary focus is on data access tracking, compliance (e.g., visibility, auditing, workspace/user monitoring), and integration with security features in Microsoft Purview and Microsoft 365 security logs (Security rule 1 and 5). The content is technical and implementation-oriented, with no generic exclusion rules triggered.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/gain-end-to-end-visibility-into-data-activity-using-onelake-diagnostics/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-10-13 18:05:32 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content focuses on the integration of a new AI model (Claude Sonnet 4.5) into GitHub Copilot, fulfilling AI inclusion rule 1 and GitHub Copilot rules 1 and 2. The news describes technical details about how to enable and use the model in Copilot Chat across multiple development environments, with Copilot as a development tool. No generic exclusion rules apply. Business productivity-only Copilots are not included (per the prompt), but GitHub Copilot is a developer tool.",
+    "canonical_url": "https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot"
   }
 ]
