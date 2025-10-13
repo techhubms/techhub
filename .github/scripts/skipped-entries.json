@@ -6741,5 +6741,17 @@
     "collection": "community",
     "timestamp": "2025-10-13 14:06:02 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/languages/powershell-hosting-in-c/m-p/4461118#M303"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/pulse/meet-5-copilot-agents-from-our-partners-changing-how-work-nadella-mzrsc/",
+    "reason": "No categories found: Content is excluded based on Non-Development Microsoft Products exclusion in Chapter 3. The content is focused on Microsoft 365 Copilot, Copilot agents, and their use in Microsoft Teams to improve workplace productivity rather than development or technical implementation. There is no substantial technical or developer focus—it's centered on end-user functionality, productivity enhancements, and business workflow transformation, which matches several examples provided under the exclusions for non-development Microsoft 365 Copilot/Office Copilot and Teams (unless bot/development engineering focused). No categories assigned.",
+    "timestamp": "2025-10-13 17:06:03 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=VzOsw5NjgtY",
+    "reason": "No categories found: No categories were assigned because, while the video is a technical overview of Windows hotpatching, it does not focus on development, coding, DevOps, ML, AI, Azure, GitHub Copilot, or security topics as described in the category inclusion rules. The content revolves around system administration and update management for Windows—operations and system maintenance—rather than software development or cloud architecture. Therefore, according to the workflow and inclusion rules, no categories are applicable.",
+    "timestamp": "2025-10-13 17:07:30 +00:00"
   }
 ]
