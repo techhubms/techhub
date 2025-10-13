@@ -12168,5 +12168,11 @@
     "collection": "videos",
     "timestamp": "2025-10-13 08:09:32 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=vFFXY6YRkNs"
+  },
+  {
+    "timestamp": "2025-10-13 10:05:02 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/building-environmental-aware-api-platforms-with-azure-api/ba-p/4458308",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content is centered on Azure API Management platform enhancements, configuration, and deployment (Azure rule 1 and 4). Assigned 'AI' category since there is a strong focus on sustainability features that explicitly target AI workloads and the GenAI channel (AI rules 1, 4, 5), especially in relation to reducing the carbon footprint of AI infrastructures. Other categories (Coding, DevOps, Security, ML, GitHub Copilot) were not assigned as the focus was platform configuration, sustainability features, routing, and policy—not hands-on code development, operations pipelines, security engineering, machine learning, or Copilot usage.",
+    "collection": "community"
   }
 ]
