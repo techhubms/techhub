@@ -12204,5 +12204,17 @@
     "collection": "community",
     "timestamp": "2025-10-13 14:05:49 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/power-stabilization-for-ai-training-datacenters/ba-p/4460937"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned only the AI category. Content centers on consumer usage, generational differences, emotional impact, and behavioral insights regarding Microsoft's AI-powered tools for personal use. There is no substantial technical content related to Coding, DevOps, Azure, ML, or Security. The article discusses Microsoft's Copilot ecosystem at a high level but does not provide development details, code, deployment practices, or anything specific to developer, engineer, or architect audiences. Per workflow, end-user and consumer AI adoption content that does not focus on development or integration qualifies only under 'AI' when Microsoft tech is central.",
+    "canonical_url": "https://blogs.windows.com/windowsexperience/2025/10/13/across-the-ambition-gap-how-ai-users-are-gaining-more-than-answers/",
+    "timestamp": "2025-10-13 16:05:27 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Included AI category because the article focuses on AI-native development, agentic frameworks, and prompt engineering for building reliable AI workflows (AI rules 1, 4). Included GitHub Copilot because the content details extensive usage and integration of Copilot and Copilot CLI as engineering tools (GitHub Copilot rules 1, 2). Added Coding due to the strong focus on developer workflows, prompt design, modular instructions, and the use of tools inside coding environments (Coding rules 1, 4, 5). Included DevOps as the article covers automation, workflow orchestration, CI/CD integration, and package management via APM, all of which concern developer operations and systematic engineering processes (DevOps rules 2, 5, 9, 11). Azure is not assigned, as Azure is mentioned as an example (log querying) rather than a central topic; ML and Security are not central technical foci. All inclusion and exclusion rules, as well as Copilot-category distinctions, have been followed per prompt.",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-to-build-reliable-ai-workflows-with-agentic-primitives-and-context-engineering/",
+    "timestamp": "2025-10-13 16:06:05 +00:00"
   }
 ]
