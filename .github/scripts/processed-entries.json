@@ -12150,5 +12150,11 @@
     "reason": "Succesfully added: Assigned the 'AI' category because the entire article focuses on Azure Custom Speech, which is an Azure AI service for speech-to-text with custom adaptation (AI rule 1). 'Azure' is assigned since the solution, steps, and implementation all hinge on Azure AI Speech (Azure rule 1 and 4). Coding, DevOps, Security, ML, and GitHub Copilot are not applicable: the content does not focus on programming language implementation, DevOps tooling or process, security implementation, or custom ML model building from scratch. The content is technical and targeted at developers building voice-enabled applications rather than general business audiences, meeting quality and relevance standards.",
     "collection": "posts",
     "canonical_url": "https://dellenny.com/when-words-matter-noise-free-domain-specific-voice-recognition-with-azure-custom-speech/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-10-13 06:05:23 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-10-07-upcoming-changes-to-github-dependabot-pull-request-comment-commands",
+    "reason": "Succesfully added: Assigned the DevOps category because the content focuses on pull request workflow automation, developer workflow changes, and the integration of Dependabot features into native GitHub tooling—all of which align with DevOps criteria (DevOps rule 2: GitHub DevOps Tools; rule 5: CI/CD and deployment; rule 9: Developer Experience). No other categories were assigned since the content does not focus on coding, AI, ML, Security, or Azure technologies. The reasoning is based on the presented migration strategies and the direct impact on development operations."
   }
 ]

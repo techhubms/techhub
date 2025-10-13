@@ -1,0 +1,14 @@
+{
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "ProcessedDate": "2025-10-13 06:04:49",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-stack/azure-local/m-p/4460914#M287",
+  "Author": "Mina-Thabet",
+  "Tags": [],
+  "OutputDir": "_community",
+  "EnhancedContent": "i am trying to install Azure local on nested Hyper-V VM as test environment, 1 DC, 1 HCI VM and unfortunately  i am stuck with an error:\n\n\"Type 'ValidateArcIntegration' of Role 'EnvironmentValidator' raised an exception: { \"ExceptionType\": \"text\", \"ErrorMessage\": \"The provided account MSI@50342 does not have access to subscription ID \\\"7187cfd2-689c-4918-b43b-6e767d2bc1eb\\\". Please try logging in with different credentials or a different subscription ID. If a subscription is not specified, please check the configs by `Get-AzConfig`\"",
+  "FeedName": "Microsoft Tech Community",
+  "Title": "Azure Local",
+  "PubDate": "2025-10-12T10:39:03+00:00",
+  "Description": "i am trying to install Azure local on nested Hyper-V VM as test environment, 1 DC, 1 HCI VM and unfortunately i am stuck with an error:\n\n\"Type 'ValidateArcIntegration' of Role 'EnvironmentValidator' raised an exception: { \"ExceptionType\": \"text\", \"ErrorMessage\": \"The provided account MSI@50342 does not have access to subscription ID \\\"7187cfd2-689c-4918-b43b-6e767d2bc1eb\\\". Please try logging in with different credentials or a different subscription ID. If a subscription is not specified, please check the configs by `Get-AzConfig`\"\n\n![]()![]()"
+}
