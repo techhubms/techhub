@@ -12246,5 +12246,11 @@
     "timestamp": "2025-10-13 18:05:32 +00:00",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content focuses on the integration of a new AI model (Claude Sonnet 4.5) into GitHub Copilot, fulfilling AI inclusion rule 1 and GitHub Copilot rules 1 and 2. The news describes technical details about how to enable and use the model in Copilot Chat across multiple development environments, with Copilot as a development tool. No generic exclusion rules apply. Business productivity-only Copilots are not included (per the prompt), but GitHub Copilot is a developer tool.",
     "canonical_url": "https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-10-13 23:04:54 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centers on integrating GitHub Copilot's AI assistance directly within the terminal (AI rule 2). 'GitHub Copilot' is included because the Copilot CLI is an extension of GitHub Copilot for developers (GitHub Copilot rule 1 and 2). 'Coding' is included due to the focus on developer workflow, command-line coding tasks, and practical software development steps (Coding rule 4 and 5). Azure, DevOps, ML, and Security do not apply as there is no substantive coverage of those topics.",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-how-to-get-started/"
   }
 ]

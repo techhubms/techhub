@@ -6753,5 +6753,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=VzOsw5NjgtY",
     "reason": "No categories found: No categories were assigned because, while the video is a technical overview of Windows hotpatching, it does not focus on development, coding, DevOps, ML, AI, Azure, GitHub Copilot, or security topics as described in the category inclusion rules. The content revolves around system administration and update management for Windows—operations and system maintenance—rather than software development or cloud architecture. Therefore, according to the workflow and inclusion rules, no categories are applicable.",
     "timestamp": "2025-10-13 17:07:30 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The provided content contains no substantive content text (content field is null), and the description only mentions a general discussion about .NET Conf 2025 keynote, .NET 10 release, event sessions, and participation. Without detailed content, there is no evidence of hands-on technical guidance, code, or educational or architectural depth regarding Microsoft technologies as required under category inclusion rules. Per the core processing rules, only the 'description' field is available, which is too high-level and event-focused to qualify for any technical category. Therefore, this content is excluded due to insufficient informational substance.",
+    "collection": "videos",
+    "timestamp": "2025-10-13 22:05:25 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=uOdXkWjH3UU"
   }
 ]
