@@ -12156,5 +12156,17 @@
     "timestamp": "2025-10-13 06:05:23 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-10-07-upcoming-changes-to-github-dependabot-pull-request-comment-commands",
     "reason": "Succesfully added: Assigned the DevOps category because the content focuses on pull request workflow automation, developer workflow changes, and the integration of Dependabot features into native GitHub tooling—all of which align with DevOps criteria (DevOps rule 2: GitHub DevOps Tools; rule 5: CI/CD and deployment; rule 9: Developer Experience). No other categories were assigned since the content does not focus on coding, AI, ML, Security, or Azure technologies. The reasoning is based on the presented migration strategies and the direct impact on development operations."
+  },
+  {
+    "reason": "Succesfully added: The AI category is assigned because the announcement centers on enabling the use of AI agents created in Microsoft Copilot Studio (AI inclusion rule 1) for financial services workflows, integrating LSEG-licensed data via the Model Context Protocol. While Copilot Studio qualifies as a developer/maker tool (AI inclusion rule 1 and 2), the use context described here—deployment of these agents within Microsoft 365 Copilot for business productivity—prevents assignment of other categories according to strict Copilot product distinction rules. Although the content describes building agents, it does not provide substantial information on custom coding, DevOps processes, or Azure platform specifics that would justify those categories. GitHub Copilot and ML also do not apply because they are not directly discussed. The content meets quality and language standards, remaining technical and implementation-focused.",
+    "collection": "news",
+    "timestamp": "2025-10-13 08:05:34 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/2025/10/12/lseg-and-microsoft-transform-access-to-ai-ready-financial-data-in-customer-workflows/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the episode discusses GitHub Copilot customization, which involves AI-driven coding assistance (AI rule 2). Assigned 'GitHub Copilot' category because the main focus is on Copilot features, custom instructions, and prompts (GitHub Copilot rule 1, 2, 4). Assigned 'Coding' category since it covers extension development and integrating AI agents into the development workflow in VS Code (Coding rule 2, 4, 5). Did not assign DevOps, Azure, ML, or Security because these aspects are not central in the episode description. The Generic Exclusion Rules do not apply as the content is primarily technical, focused on coding productivity in the Microsoft ecosystem, and meets the required standards.",
+    "collection": "videos",
+    "timestamp": "2025-10-13 08:09:32 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=vFFXY6YRkNs"
   }
 ]

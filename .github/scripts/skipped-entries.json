@@ -6705,5 +6705,17 @@
     "reason": "No categories found: Content excluded due to lack of substantive text: the 'content' and 'description' fields are both empty, and no tags are provided. According to the workflow, content must be assessed based on actual content. With no substantive content to evaluate, it is impossible to determine technical depth, category, or quality. Therefore, no categories are assigned.",
     "timestamp": "2025-10-12 18:04:22 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/ih3c9fjWkBw"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-13 07:05:01 +00:00",
+    "reason": "No categories found: No categories assigned. The content is focused on Microsoft 365 Copilot, which is a business productivity tool and not a developer tool. According to the Copilot Product Distinction rules and 'Non-Development Microsoft Products' exclusion, content about Microsoft 365 Copilot (business productivity) must be excluded regardless of the technical depth because it does not target developer audiences or programming/development practices. Although Microsoft Purview and Microsoft Graph are discussed, their usage here is in the context of protecting organizational data within Microsoft 365 Copilot, not in a development or custom solution scenario. Therefore, all categories are excluded based on Generic Exclusion Rules.",
+    "canonical_url": "https://dellenny.com/copilots-invisible-shield-leveraging-purview-graph-to-control-generative-ai-risk/"
+  },
+  {
+    "reason": "No categories found: Content is excluded because it focuses exclusively on Copilot for Microsoft 365, which is a business productivity tool, not a developer/maker tool (see 'CRITICAL: Copilot Product Distinction' and 'Non-Development Microsoft Products' exclusion in Chapter 3 and 4). While it discusses compliance automation and AI, the features described pertain to automating business processes for legal and compliance teams using business-facing M365 Copilot capabilities rather than development, coding, or technical architecture. According to exclusion rules, Microsoft 365 Copilot, Copilot for Microsoft 365, and Office Copilot content are not to be assigned any categories, regardless of AI or automation context.",
+    "collection": "posts",
+    "timestamp": "2025-10-13 08:05:53 +00:00",
+    "canonical_url": "https://dellenny.com/beyond-compliance-using-copilot-to-automate-gdpr-and-hipaa-reporting-from-teams-and-outlook/"
   }
 ]
