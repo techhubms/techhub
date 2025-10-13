@@ -6735,5 +6735,11 @@
     "collection": "community",
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/scaling-plan-with-avd-session-hosts-on-azure-local-doesn-t/m-p/4460960#M13919"
+  },
+  {
+    "reason": "No categories found: The content is a community post seeking help with using the PowerShell Get-ClusterResource cmdlet from C# on Windows 11. According to the generic exclusion rules (Question-Only Content), community posts that are mainly asking technical questions without providing substantive answers, guidance, or completed solutions are excluded from categorization. This post is primarily a help request about module packaging and deployment, lacking a substantial technical solution, tutorial, or knowledge-sharing component. Therefore, no categories are assigned as per the workflow.",
+    "collection": "community",
+    "timestamp": "2025-10-13 14:06:02 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/languages/powershell-hosting-in-c/m-p/4461118#M303"
   }
 ]

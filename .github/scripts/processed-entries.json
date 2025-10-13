@@ -12186,5 +12186,23 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned DevOps category because the content is centered on Azure DevOps tooling and process improvements (DevOps rule 1, 5, 6). Azure category was added because Azure DevOps is a core Azure-linked service (Azure rule 1). AI category is included since the MCP Server functions as an integration layer for AI assistants like GitHub Copilot, injecting real-time DevOps context into LLM prompts (AI rule 1 and 2). The post describes development-related features, technical setup, and open-source tooling improvements, all aligned with development practices on Microsoft technologies.",
     "canonical_url": "https://devblogs.microsoft.com/devops/azure-devops-local-mcp-server-generally-available/"
+  },
+  {
+    "reason": "Succesfully added: The content qualifies for the Azure category because Microsoft Fabric and OneLake are Azure-based data platforms (Azure inclusion rule 1), with a focus on managing data lakes. The ML category is also assigned because the APIs are designed for analytics/machine learning workflows, supporting open table formats (ML inclusion rules 1, 2, 3, 4, 5). The post explains technical programmatic integration via REST APIs for developers and data engineers. No other categories apply—there is no code-level development (so not Coding), no focus on DevOps, Security, GitHub Copilot, or AI-powered tools.",
+    "collection": "news",
+    "timestamp": "2025-10-13 14:04:43 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/now-in-preview-onelake-table-apis/"
+  },
+  {
+    "reason": "Succesfully added: Content qualifies for DevOps category because it addresses a new software development workflow and tool (GitHub Spec Kit) focused on planning, specification, and automation (DevOps rules 3-5). The use of AI is discussed, but not specifically in the context of Microsoft AI technologies, GitHub Copilot, or custom AI/ML development—so AI, GitHub Copilot, Coding, Azure, ML, and Security categories do not apply. No generic exclusion rules are triggered as the content is technical, not biographical, not a sales pitch, not negative, and focuses on GitHub (a Microsoft platform).",
+    "collection": "videos",
+    "timestamp": "2025-10-13 14:05:17 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/AQwwrxyQfA0"
+  },
+  {
+    "reason": "Succesfully added: Assigned only the AI category. The content is focused on technical infrastructure challenges and mitigation strategies specifically for large-scale AI training datacenters, with primary emphasis on stabilizing power for AI workloads (AI Inclusion Rule 1, 4, 5). There is insufficient detail about Azure or coding/development practices, and while Nvidia hardware and software approaches are mentioned, they serve the context of AI workload management—not general DevOps, Coding, or ML engineering as defined in category rules. Security, DevOps, Azure, and ML categories do not apply. The article is entirely in English and exceeds length requirements for community content. No generic exclusion rules matched.",
+    "collection": "community",
+    "timestamp": "2025-10-13 14:05:49 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/power-stabilization-for-ai-training-datacenters/ba-p/4460937"
   }
 ]
