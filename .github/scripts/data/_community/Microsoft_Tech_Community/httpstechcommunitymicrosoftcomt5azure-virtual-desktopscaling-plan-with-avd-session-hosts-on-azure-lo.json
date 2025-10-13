@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Author": "MattENZ",
+  "Description": "I have setup a scaling plan for my AVD sessions hosts that are running on Azure Local. The scaling plan is working as expected and the machines are taken offline during the hours specified which is reducing the service fee costs.\n\nHowever, I've noticed that the Scaling Plan is simply powering off the VM, it's not telling the VM to cleanly shut down which is leading to the sessions hosts having event log entries that they weren't shut down correctly and putting them at risk of disk corruption issues. Is this intended?",
+  "FeedName": "Microsoft Tech Community",
+  "EnhancedContent": "I have setup a scaling plan for my AVD sessions hosts that are running on Azure Local. The scaling plan is working as expected and the machines are taken offline during the hours specified which is reducing the service fee costs.\n\nHowever, I've noticed that the Scaling Plan is simply powering off the VM, it's not telling the VM to cleanly shut down which is leading to the sessions hosts having event log entries that they weren't shut down correctly and putting them at risk of disk corruption issues. Is this intended?",
+  "PubDate": "2025-10-12T21:01:37+00:00",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/scaling-plan-with-avd-session-hosts-on-azure-local-doesn-t/m-p/4460960#M13919",
+  "OutputDir": "_community",
+  "Tags": [],
+  "ProcessedDate": "2025-10-13 13:12:16",
+  "Title": "Scaling Plan with AVD session hosts on Azure Local doesn't perform a clean shutdown"
+}

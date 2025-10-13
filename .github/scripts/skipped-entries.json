@@ -6723,5 +6723,17 @@
     "canonical_url": "https://dellenny.com/prompt-injection-protection-how-microsoft-365-copilot-defends-against-jailbreak-attacks/",
     "reason": "No categories found: No categories assigned because the content is primarily about Microsoft 365 Copilot—a business productivity tool. According to the critical distinction in the prompt (Chapter 2, Copilot Product Distinction), content concerning Microsoft 365 Copilot, Copilot for Microsoft 365, or Office Copilot must be excluded as non-development Microsoft 365 products, regardless of the security and AI subjects discussed. The subject matter focuses on Copilot's security architecture within the productivity suite, not developer tools, code, or technical architectures directly implementable by developers. Thus, exclusion rules apply.",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-13 13:13:18 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to insufficient information. The input is missing the 'content' field, and both 'description' and 'tags' are empty. Without any substantive content to evaluate, none of the category inclusion rules can be applied, and the generic exclusion rule ('focus on actual content') is triggered.",
+    "canonical_url": "https://www.youtube.com/shorts/RhgzvdFnJ98"
+  },
+  {
+    "timestamp": "2025-10-13 13:13:20 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/scaling-plan-with-avd-session-hosts-on-azure-local-doesn-t/m-p/4460960#M13919"
   }
 ]

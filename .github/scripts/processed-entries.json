@@ -12180,5 +12180,11 @@
     "reason": "Succesfully added: Content qualifies for the Coding category because it demonstrates how to create console applications in .NET using a third-party library (RazorConsole) and C#, aligning with Coding category rules for frameworks, tools, and programming practices. The content is not biographical, not excessively negative, isn't a sales pitch, and focuses on technical implementation, so no generic exclusions apply. No other categories fit as the focus is strictly on programming with .NET in C#.",
     "timestamp": "2025-10-13 11:05:05 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=1C1gTRm7BB4"
+  },
+  {
+    "timestamp": "2025-10-13 13:12:50 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned DevOps category because the content is centered on Azure DevOps tooling and process improvements (DevOps rule 1, 5, 6). Azure category was added because Azure DevOps is a core Azure-linked service (Azure rule 1). AI category is included since the MCP Server functions as an integration layer for AI assistants like GitHub Copilot, injecting real-time DevOps context into LLM prompts (AI rule 1 and 2). The post describes development-related features, technical setup, and open-source tooling improvements, all aligned with development practices on Microsoft technologies.",
+    "canonical_url": "https://devblogs.microsoft.com/devops/azure-devops-local-mcp-server-generally-available/"
   }
 ]
