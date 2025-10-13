@@ -1,0 +1,17 @@
+{
+  "Link": "https://www.youtube.com/watch?v=1C1gTRm7BB4",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg",
+  "FeedLevelAuthor": "Nick Chapsas",
+  "Title": "Building the Coolest Console Apps in .NET",
+  "Author": "Nick Chapsas",
+  "EnhancedContent": null,
+  "FeedName": "Nick Chapsas YouTube",
+  "OutputDir": "_videos",
+  "PubDate": "2025-10-13T10:45:00+00:00",
+  "Tags": [
+    "csharp",
+    "dotnet"
+  ],
+  "Description": "Check out my courses on Dometrain: https://dometrain.com/courses/?ref=nick-chapsas&promo=youtube Download the code here: https://mailchi.mp/dometrain/1c1gtrm7bb4 Subscribe to my newsletter: https://nickchapsas.com\n\nHello, everybody. I'm Nick, and in this video, I will show you how to build the coolest consoles in .NET using a library called RazorConsole. RazorConsole uses razor pages and turns them into console applications which is a very fun way to build console apps.\n\nGive RazorConsole a star on GitHub: https://github.com/LittleLittleCloud/RazorConsole\n\nCheck out my workshops: https://dometrain.com/workshops/\n\nDon't forget to comment, like and subscribe :)\n\nSocial Media: Follow me on GitHub: https://github.com/Elfocrash Follow me on Twitter: https://twitter.com/nickchapsas Connect on LinkedIn: https://www.linkedin.com/in/nick-chapsas\n\n#csharp #dotnet",
+  "ProcessedDate": "2025-10-13 11:04:04"
+}
