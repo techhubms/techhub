@@ -12288,5 +12288,17 @@
     "collection": "posts",
     "timestamp": "2025-10-14 01:31:54 +00:00",
     "canonical_url": "https://devops.com/nlp-tools-for-intelligent-documentation-and-developer-enablement-2/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the content deeply discusses DevOps practices, SRE roles, modern observability, and incident management—all aligning with DevOps rule 4, 5, and 7 (team collaboration, deployment, monitoring, and operations). No specific Microsoft technologies, coding frameworks or AI/ML platforms are mentioned or significantly featured, so other categories do not apply. The article is technical and practice-focused, not business strategy, biographical, or purely promotional, and exceeds minimum word counts. Uses technical terms such as distributed tracing, contextual logging, SRE, and incident response to construct tags.",
+    "collection": "posts",
+    "timestamp": "2025-10-14 02:30:06 +00:00",
+    "canonical_url": "https://devops.com/when-metrics-overwhelm-how-sres-help-engineers-reclaim-focus/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' category because the post centers on Azure NetApp Files, a first-party Azure storage service, and details Azure operational features, deployment, and scalability (Azure rule 1, 2, 4, and 5). Assigned 'DevOps' category because there is a strong emphasis on operational simplicity, automation (Terraform/CLI), role-based access controls, and best practices for scaling, deploying, and managing infrastructure as code in cloud-based engineering workflows (DevOps rules 3, 4, 5, and 6), as well as the focus on global team collaboration and continuous operation. Did not assign 'ML' since data science and ML analytics are not the focus; assigned no 'AI', 'Security', 'Coding', or 'GitHub Copilot' categories as those are not relevant to the primary technical content.",
+    "collection": "community",
+    "timestamp": "2025-10-14 02:30:48 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/validating-scalable-eda-storage-performance-azure-netapp-files/ba-p/4459517"
   }
 ]
