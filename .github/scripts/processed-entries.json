@@ -12432,5 +12432,23 @@
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-10-14-codeql-scanning-rust-and-c-c-without-builds-is-now-generally-available",
     "timestamp": "2025-10-14 21:04:39 +00:00"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2025/",
+    "timestamp": "2025-10-14 22:05:49 +00:00",
+    "reason": "Succesfully added: Azure category assigned (Azure rule 1) because the entire content is focused on Azure Developer CLI features, Azure service deployment, and app templating. DevOps category assigned (DevOps rules 1, 9, 5) due to continuous integration/deployment (CI/CD), deployment workflow control, and extension management. Coding category assigned (Coding rules 2, 4, 5) because of frequent references to Bicep, .NET, Python, containerization, IaC, and extending developer tooling. No AI or ML assigned as the focus on machine learning or pre-built AI systems is secondary/not central. Security was not assigned as security content is mentioned as part of some templates but not as a primary theme.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=SkmluS-xzmM",
+    "timestamp": "2025-10-14 22:06:24 +00:00",
+    "reason": "Succesfully added: Assigned AI category because Archestra is described as an AI and automation platform that orchestrates enterprise agents (AI category rule 1 and 4). The Security category is included due to multiple references to secure deployment, model governance, and advanced access controls (Security category rule 1 and 9). MCP is interpreted as Microsoft Cloud Platform; the platform is identified as Microsoft-based, meeting the Microsoft centrality requirement. Not enough detail is present for Coding (not about programming or dev frameworks), DevOps (not about tooling/deployment pipelines), Azure (no direct Azure product reference), or ML (focus is on orchestration/governance, not custom ML implementation). Generic exclusion rules do not apply since the video has substantial technical focus and relates directly to Microsoft technologies.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/windows-10-extended-security-updates-for-azure-virtual-desktop/ba-p/4459715",
+    "timestamp": "2025-10-14 22:06:51 +00:00",
+    "reason": "Succesfully added: Included the Azure category because the content is focused on Azure Virtual Desktop service usage, deployment, and lifecycle management (Azure rule 1, 4, and 5). Assigned Security category because the article centers on Extended Security Updates (ESU), covers patching, security update delivery, and operational OS security lifecycle (Security rules 1, 4, and 7). Did not assign Coding, DevOps, ML, AI, or GitHub Copilot since the article does not discuss programming, DevOps automation, machine learning, or AI features in technical depth. No generic exclusion rules apply: it is not biographical, negative, sales content, non-English, nor too short for community content.",
+    "collection": "community"
   }
 ]
