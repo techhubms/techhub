@@ -12450,5 +12450,17 @@
     "timestamp": "2025-10-14 22:06:51 +00:00",
     "reason": "Succesfully added: Included the Azure category because the content is focused on Azure Virtual Desktop service usage, deployment, and lifecycle management (Azure rule 1, 4, and 5). Assigned Security category because the article centers on Extended Security Updates (ESU), covers patching, security update delivery, and operational OS security lifecycle (Security rules 1, 4, and 7). Did not assign Coding, DevOps, ML, AI, or GitHub Copilot since the article does not discuss programming, DevOps automation, machine learning, or AI features in technical depth. No generic exclusion rules apply: it is not biographical, negative, sales content, non-English, nor too short for community content.",
     "collection": "community"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'Coding' category because the content centers on the release of .NET 10 RC2, which is a core Microsoft development platform update (Coding rule 1 and 2), covering frameworks, programming language changes, libraries, SDK improvements, and other technical features directly relevant to developers. No other categories apply because there is no substantial focus on AI, DevOps tooling, Azure services, ML/data science, or Microsoft Security products in this announcement.",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-10-rc-2/",
+    "timestamp": "2025-10-14 23:04:34 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the Security category because the post focuses significantly on security improvements and CVE vulnerability fixes in .NET and .NET Framework, referencing multiple CVEs with links and mitigation status (Security rules 1, 7, and 8). Included the Coding category since the update is directly relevant to practitioners maintaining .NET environments, SDKs, and coding with .NET and ASP.NET Core (Coding rule 1, 2). Did not assign Azure, AI, ML, DevOps, or GitHub Copilot because the content does not discuss Azure, artificial intelligence, machine learning, DevOps practices, or GitHub Copilot features—instead focusing on framework patching and security updates.",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-october-2025-servicing-updates/",
+    "timestamp": "2025-10-14 23:04:59 +00:00"
   }
 ]

@@ -6819,5 +6819,17 @@
     "reason": "No categories found: Content is excluded because it focuses on Microsoft 365 Copilot/Office Copilot, specifically describing AI-powered formula completions in Excel for end users. Per the Copilot Product Distinction rules and Non-Development Microsoft Products exclusion, business productivity features such as Microsoft 365 Copilot are not categorized as they are not development or coding tools. The post highlights end-user productivity improvements in Excel with Copilot, not technical development or integration work. Therefore, according to the strict inclusion/exclusion workflow, no categories apply.",
     "collection": "news",
     "timestamp": "2025-10-14 20:04:47 +00:00"
+  },
+  {
+    "collection": "posts",
+    "reason": "No categories found: No categories assigned because the content does not meet the Microsoft technology focus required by the category inclusion rules. The article centers on JFrog's MLOps platform strategy, governance for AI models, industry challenges, and references solutions by JFrog and NVIDIA at swampUP 2025. Nowhere does the content mention any Microsoft technology, Azure, or Microsoft AI services; nor does it detail comparisons or integrations where Microsoft products are central to the solution (multi-platform threshold). The content is technical but falls entirely outside the scope of eligible Microsoft-focused technologies outlined in the inclusion rules. Generic exclusion rules do not trigger, but all inclusion categories (AI, Azure, DevOps, etc.) require substantive Microsoft technology involvement, which is absent here.",
+    "canonical_url": "https://devops.com/secure-governance-and-scalable-management-for-ai-models/",
+    "timestamp": "2025-10-14 23:05:25 +00:00"
+  },
+  {
+    "collection": "posts",
+    "reason": "No categories found: No Microsoft technologies are substantively discussed or central to the content. The article centers on partnerships between Sonar and JFrog, broader trends in DevOps and AI, and executive cybersecurity priorities—none of which reference Microsoft products, services, or development tools. According to the Multi-Platform Content Threshold guidelines, Microsoft technologies must comprise at least 40% of substantive content or be central to the solution. Since there is no technical Microsoft focus, all category arrays remain empty as outlined in the core processing rules.",
+    "canonical_url": "https://devops.com/strengthening-software-trust-in-modern-devops-workflows/",
+    "timestamp": "2025-10-14 23:05:38 +00:00"
   }
 ]
