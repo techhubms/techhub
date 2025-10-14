@@ -6759,5 +6759,11 @@
     "collection": "videos",
     "timestamp": "2025-10-13 22:05:25 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=uOdXkWjH3UU"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-10-14 00:12:47 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/change-thumnails-avd-picture-in-windows-app/m-p/4461182#M13920",
+    "reason": "Insufficient content length"
   }
 ]

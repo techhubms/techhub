@@ -12252,5 +12252,35 @@
     "timestamp": "2025-10-13 23:04:54 +00:00",
     "reason": "Succesfully added: Assigned 'AI' category because the content centers on integrating GitHub Copilot's AI assistance directly within the terminal (AI rule 2). 'GitHub Copilot' is included because the Copilot CLI is an extension of GitHub Copilot for developers (GitHub Copilot rule 1 and 2). 'Coding' is included due to the focus on developer workflow, command-line coding tasks, and practical software development steps (Coding rule 4 and 5). Azure, DevOps, ML, and Security do not apply as there is no substantive coverage of those topics.",
     "canonical_url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-how-to-get-started/"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-10-14 00:11:17 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/jump-starting-quantum-computing-on-azure/ba-p/4459053",
+    "reason": "Succesfully added: Assigned AI category because Azure Quantum is a Microsoft AI platform and the article walks through quantum information concepts and hands-on quantum programming using quantum states and algorithms (AI category rule 1). Assigned Azure because Azure Quantum is a central Microsoft cloud service featured in both technical explanation and implementation (Azure rule 1). Assigned Coding because the post covers actual code samples and working with Qiskit, Python, quantum circuits, and SDKs (Coding rules 2 and 4). Did not assign ML (there's no data science/analytics or ML workloads), Security (no identity/compliance/defender focus), DevOps (no CI/CD, deployment, or team/dev tooling discussion), or GitHub Copilot (not mentioned or relevant)."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-10-14 00:11:42 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/caliptra-2-1-an-open-source-silicon-root-of-trust-with-enhanced/ba-p/4460758",
+    "reason": "Succesfully added: Assigned the Azure category due to explicit references to Azure hardware security architecture and multiple integrations with Azure technologies (Azure inclusion rule 1, 4, and 5). Assigned the Security category because the entire content focuses on hardware root of trust, cryptography, confidentiality, key management, and secure device implementation (Security inclusion rules 1, 3, 4, and 9). Did not assign AI, Coding, ML, DevOps, or GitHub Copilot as the article does not address those topics. Content is technical and meets quality/length standards, and does not trigger any generic exclusion rules."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-10-14 00:12:02 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/next-generation-hxu-doubling-cooling-power-for-the-ai-era/ba-p/4460953",
+    "reason": "Succesfully added: Assigned the AI category as the article centers on cooling solutions specifically for AI workloads and high-density AI accelerators in datacenters (AI rule 5 and general emphasis on supporting AI infrastructure). Assigned Azure because it explicitly addresses Azure datacenters and is published on the Azure Infrastructure Blog (Azure rule 1 and 4). Assigned Security because datacenter cybersecurity features, including secure boot and compliance standards (NIST, CIS, ISO/IEC 27001), are prominently detailed (Security rule 1 and 2). No Coding, DevOps, ML, or GitHub Copilot since the content is focused on physical and operational infrastructure, not code, pipelines, data engineering, or developer tools."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-10-14 00:12:26 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/operational-excellence-in-ai-infrastructure-fleets-standardized/ba-p/4460754",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centrally discusses the management and scaling of AI infrastructure—standardizing processes, onboarding diverse accelerators (including GPUs and CPUs), and enabling scalable AI hardware platforms (AI rule 1, 4, 5). Assigned 'Azure' category since Microsoft’s cloud infrastructure is both the use case and context, with multiple mentions of Azure integration, Datacenters, hyperscale fleets, and cloud provider platform management (Azure rule 1, 4, 5). Did not assign ML, Coding, DevOps, or Security: no custom ML/data science, code-level dev, DevOps process, or specific security practices are described."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-10-14 00:12:47 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/rethinking-power-conversion-and-distribution-for-the-ai-era/ba-p/4460759",
+    "reason": "Succesfully added: Content qualifies for the Azure category under inclusion rule 1 (any Azure service/technology) since it discusses advancements and architectures in data center power systems—a core part of Microsoft's Azure infrastructure—and the Mt Diablo project. While AI workloads and GPU clusters are mentioned, the technical focus is on power delivery infrastructure, not on AI programming or services; thus, the AI, Coding, ML, and Security categories do not apply. No DevOps practices, developer tooling, or security architectures are discussed in technical implementation detail. Exclusion rules do not apply, as the content is technical, not biographical, business-strategy-only, or focused on non-development Microsoft solutions."
   }
 ]
