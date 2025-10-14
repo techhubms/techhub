@@ -12426,5 +12426,11 @@
     "timestamp": "2025-10-14 19:06:05 +00:00",
     "reason": "Succesfully added: Assigned AI category because the content focuses on developing and deploying intelligent agents and running AI inference workloads with open-source models (AI inclusion rules 1, 3, and 4). Assigned Azure category because Azure Container Apps is the central platform (Azure inclusion rules 1 and 4). No other category applies as the article does not involve specific ML engineering, coding frameworks, or DevOps pipelines. Content is technical, developer-focused, meets content length and quality requirements, and does not trigger any generic exclusion rule.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-agents-on-azure-container-apps-with-goose-ai-agent/ba-p/4460215"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category because the content is centered on code scanning, vulnerability detection, and secure code practices (Security rule 1). Assigned DevOps because CodeQL integrates with GitHub workflows, supports CI/CD automation, and aids in scaling security across repositories (DevOps rules 2, 5, and 6). Did not assign Coding because while developer workflow is discussed, the post is about code analysis tooling, not programming techniques. Did not assign AI, Azure, ML, or GitHub Copilot since CodeQL and Copilot Autofix integration are security tools, and GitHub Copilot's developer coding assistant features are referenced only in the context of autofix recommendations, not as a development or coding tutorial.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-10-14-codeql-scanning-rust-and-c-c-without-builds-is-now-generally-available",
+    "timestamp": "2025-10-14 21:04:39 +00:00"
   }
 ]

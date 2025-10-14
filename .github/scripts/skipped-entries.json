@@ -6813,5 +6813,11 @@
     "timestamp": "2025-10-14 18:06:15 +00:00",
     "collection": "news",
     "reason": "No categories found: Content excluded under Generic Exclusion Rules: The article is a promotional news piece about Xbox's Shocktober event, focusing on sales, seasonal events, and game releases for Xbox and PC. It contains no technical implementation details, development content, or Microsoft technology central to development/architecture. The primary focus is announcements, consumer game promotions, and event highlights, which are excluded as non-development Microsoft products/content. No rules for category inclusion are met."
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_this-is-super-useful-with-new-formula-completions-activity-7383939173986213888-GKAN",
+    "reason": "No categories found: Content is excluded because it focuses on Microsoft 365 Copilot/Office Copilot, specifically describing AI-powered formula completions in Excel for end users. Per the Copilot Product Distinction rules and Non-Development Microsoft Products exclusion, business productivity features such as Microsoft 365 Copilot are not categorized as they are not development or coding tools. The post highlights end-user productivity improvements in Excel with Copilot, not technical development or integration work. Therefore, according to the strict inclusion/exclusion workflow, no categories apply.",
+    "collection": "news",
+    "timestamp": "2025-10-14 20:04:47 +00:00"
   }
 ]
