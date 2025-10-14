@@ -6771,5 +6771,23 @@
     "collection": "posts",
     "canonical_url": "https://devops.com/five-great-devops-job-posts/",
     "reason": "No categories found: Content excluded due to generic exclusion rules: the content is primarily focused on job opportunities, salary details, and career advancement in DevOps (see Job-Related Content exclusion rule in Chapter 3). The main body lists job openings and compensation information, and discusses trends in DevOps hiring rather than technical implementation or architecture of Microsoft technologies. There is no substantive technical content or demonstration of Microsoft-specific development, DevOps tools, architectures, or engineering processes. As stated in the workflow, topics such as job market, salaries, hiring trends, and career advice are specifically excluded, regardless of the presence of peripheral technical terms. No categories were assigned."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/ma-due-diligence-in-minute-copilot-chats-power-to-cross-reference-disparate-data-silo/",
+    "reason": "No categories found: No categories assigned. The content focuses on Microsoft 365 Copilot (also referred to here as Copilot Chat) as an efficiency tool for finance and legal due diligence—specifically for document review across OneDrive, SharePoint, and Teams. Per the Generic Exclusion Rules and the CRITICAL Copilot Product Distinction, business productivity Copilots (Microsoft 365 Copilot, Copilot for Microsoft 365, Office Copilot, general Copilot Chat for office work, or Bing Chat) are strictly excluded because they are not developer tools. There is no focus on software development, coding, DevOps, engineering architecture, or technical implementation of Microsoft technologies. The content is oriented toward business use cases rather than technical practitioner guidance; therefore, all categories are excluded.",
+    "timestamp": "2025-10-14 11:04:45 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/measuring-the-un-done-work-calculating-the-roi-of-microsoft-365-copilot/",
+    "reason": "No categories found: No categories assigned because the content is about Microsoft 365 Copilot as a business productivity tool (see Chapter 3, Non-Development Microsoft Products exclusion and Copilot Product Distinction in Chapter 2). The post focuses on measuring productivity ROI, workplace efficiency, and business outcomes using Microsoft 365 Copilot, which is specifically excluded as it is a non-development, business productivity assistant. There is no technical or developer-focused Microsoft platform implementation, development, coding, DevOps, security, or AI development content. The entire article is centered on business process improvement and productivity gains, not development, DevOps, coding, security, AI development, or ML/data science work.",
+    "timestamp": "2025-10-14 11:04:58 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/the-art-of-delegating-to-ai-a-new-prompting-mindset-for-knowledge-workers/",
+    "reason": "No categories found: No categories assigned because the content is excluded under the generic exclusion rule for non-development Microsoft products. The article is centered on prompting strategies for knowledge workers using AI copilots, specifically Microsoft 365 Copilot, which is a business productivity tool and not a developer tool (see Chapter 3: Non-Development Microsoft Products and Chapter 4: Critical Copilot Product Distinction). The focus is on mindset and workflow for business productivity, not on technical implementation, developer tools, or code development. Therefore, all categories are excluded as per the workflow instructions.",
+    "timestamp": "2025-10-14 11:05:11 +00:00"
   }
 ]
