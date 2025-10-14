@@ -6765,5 +6765,11 @@
     "timestamp": "2025-10-14 00:12:47 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/change-thumnails-avd-picture-in-windows-app/m-p/4461182#M13920",
     "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-10-14 04:04:28 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/five-great-devops-job-posts/",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: the content is primarily focused on job opportunities, salary details, and career advancement in DevOps (see Job-Related Content exclusion rule in Chapter 3). The main body lists job openings and compensation information, and discusses trends in DevOps hiring rather than technical implementation or architecture of Microsoft technologies. There is no substantive technical content or demonstration of Microsoft-specific development, DevOps tools, architectures, or engineering processes. As stated in the workflow, topics such as job market, salaries, hiring trends, and career advice are specifically excluded, regardless of the presence of peripheral technical terms. No categories were assigned."
   }
 ]

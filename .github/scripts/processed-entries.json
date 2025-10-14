@@ -12300,5 +12300,11 @@
     "collection": "community",
     "timestamp": "2025-10-14 02:30:48 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/validating-scalable-eda-storage-performance-azure-netapp-files/ba-p/4459517"
+  },
+  {
+    "timestamp": "2025-10-14 04:04:49 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/git-services-need-better-security-heres-how-end-to-end-encryption-could-help/",
+    "reason": "Succesfully added: The content does not trigger any generic exclusion rules; it is a technical blog post focused on security enhancements for Git services, commonly used within Microsoft-centric development workflows. 'DevOps' is assigned because it discusses development team workflows, repository management, and practices foundational to DevOps. 'Security' is assigned based on the main topic—end-to-end encryption, protecting intellectual property in code repositories, and supply chain security (Security rule 1, 2, 3, 4, 5, and 7). The article references Microsoft-related operations (GitHub’s integration with Azure) but does not focus on Azure platform specifics, so Azure is not assigned. ML, AI, Coding, and GitHub Copilot categories are also not assigned because the piece does not address AI/ML, Copilot, or programming specifics as its core topic."
   }
 ]
