@@ -12408,5 +12408,23 @@
     "timestamp": "2025-10-14 18:07:28 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Applied 'AI' category because the article highlights integrations with Azure AI services, Copilot Studio, Azure AI Foundry, and various AI-ready data features (AI rule 1 and 4). 'Azure' is included due to central focus on Azure services, deployment, and native integrations (Azure rule 1, 4, 5). 'DevOps' is assigned because of automation, deployment, management with Azure Arc, Terraform, and operational enhancements (DevOps rule 6 and 9). 'ML' is included due to data engineering, real-time analytics, and Lakehouse/Azure ML references (ML rules 1, 2, 4, 9). 'Security' is included for the detailed coverage of Microsoft Defender, Sentinel, Entra ID, and enterprise-grade security practices tailored for Oracle on Azure (Security rule 1, 4, 7). No exclusion rules apply; the content is technical, substantial, and developer/IT practitioner-focused."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-10-14 19:04:54 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the content is fundamentally about building, fine-tuning, and customizing AI models using Azure AI Foundry (AI rules 1, 3, 4, 5, 6). Assigned 'Azure' category since the article extensively covers Azure AI Foundry, its features, APIs, deployment, and ecosystem (Azure rule 1, 4, 5, 6). Did not add 'ML' because, while there is mention of model training and evaluation, the primary focus is leveraging and refining pre-built LLMs with Azure's managed AI platform—it's more about platform-driven fine-tuning and practical deployment than handwriting models or advanced ML engineering from scratch. Did not add 'Coding' as there is no specific programming walkthrough; the focus is more on workflow, resources, and use-cases rather than code or architecture design. Other categories do not apply because there is minimal focus on security, DevOps, or custom coding topics per respective inclusion rules.",
+    "canonical_url": "https://devblogs.microsoft.com/foundry/the-developers-guide-to-smarter-fine-tuning/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-10-14 19:05:25 +00:00",
+    "reason": "Succesfully added: The content qualifies for the DevOps category due to its focus on enterprise-scale deployment, team/project management, monitoring, and operational automation, which matches DevOps rules 1, 3, 5, 6, and 9. Security is included because of the enhanced code scanning alerts, Dependabot configuration for vulnerability management, and governance improvements, satisfying Security rules 2, 5, 7, and 8. There are no references to AI, coding practices, Azure, or ML/data science. No generic exclusion rules apply: the content is technical, English, not promotional, not biographical, not question-only, and not business strategy/executive content.",
+    "canonical_url": "https://github.blog/changelog/2025-10-14-github-enterprise-server-3-18-is-now-generally-available"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-10-14 19:06:05 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on developing and deploying intelligent agents and running AI inference workloads with open-source models (AI inclusion rules 1, 3, and 4). Assigned Azure category because Azure Container Apps is the central platform (Azure inclusion rules 1 and 4). No other category applies as the article does not involve specific ML engineering, coding frameworks, or DevOps pipelines. Content is technical, developer-focused, meets content length and quality requirements, and does not trigger any generic exclusion rule.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-agents-on-azure-container-apps-with-goose-ai-agent/ba-p/4460215"
   }
 ]
