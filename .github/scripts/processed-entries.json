@@ -12348,5 +12348,23 @@
     "reason": "Succesfully added: I assigned the 'Azure' category because the article's core topic is the Azure NetApp Files Object REST API, an Azure service (Azure rule 1). The 'AI' category applies because the API enables and is directly used for integrations with Azure AI services, including Azure OpenAI, Fabric (with embedded AI), and Retrieval-Augmented Generation (AI rule 1 and 4). The 'ML' category is included since the API supports direct data science and machine learning workloads—explicitly enabling Azure Databricks, Azure ML, and data science workflows (ML rules 1, 2, 3, 6, and 9). I did not include 'Coding', 'DevOps', or 'Security' since there is no focus on programming frameworks, code/architecture, deployment patterns, or security implementation details, although security and compliance are discussed in the sense of storage context and regulation. I used relevant, specific tags reflecting Azure, AI/ML tooling, storage, analytics workflow integration, and compliance, while omitting generic and non-technical terms. The description and content organize the article's facts for technical clarity, emphasizing learnings and actionable knowledge as required.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-azure-netapp-files-object-rest-api-powers-azure-and-isv-data/ba-p/4459545",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Security' because the content centers on authentication modernization and improving identity standards, fulfilling Security rule 1. 'DevOps' is appropriate as it discusses Azure DevOps, client tools, and practices affecting development workflows (DevOps rules 1 and 5). 'Azure' is added since Azure DevOps and Microsoft Entra ID (formerly Azure AD) are central to the update (Azure rules 1 and 4). Content does not focus on code, direct programming, or custom AI/ML engineering, so Coding, AI, GitHub Copilot, and ML are not included.",
+    "timestamp": "2025-10-14 16:04:49 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/devops/modernizing-authentication-for-legacy-visual-studio-clients/"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content centers on using AI, including autonomous agents and Microsoft Semantic Kernel, for code analysis and modernization (AI rule 1, 3, 4). Assigned GitHub Copilot because Copilot is a main tool used for extracting business logic and assisting developers throughout the modernization process (GitHub Copilot rules 1, 2, 4). Assigned Azure because the Azure OpenAI Service and Semantic Kernel are repeatedly referenced and the open-source framework runs atop Azure platforms (Azure rule 1, 3, 4). Assigned Coding for the strong programming/development focus—using Copilot, prompt engineering, and codebase migration (Coding rule 1, 4, 5). Did not assign DevOps, ML, or Security because while automation and orchestration are discussed, the emphasis remains on code analysis, AI tooling, and modernization engineering—not CI/CD, data science, or security-specific practices.",
+    "timestamp": "2025-10-14 16:05:20 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-github-copilot-and-ai-agents-are-saving-legacy-systems/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content is focused on workflow automation, server configuration, project management, and consolidated tooling in GitHub—each falling under DevOps inclusion rules (DevOps rules 2, 3, 5, and 6). There is no direct focus on AI, Coding, Security, ML, or Azure services; it's strictly about DevOps tools, automation, and best practices. No generic exclusion rules applied since the content is technical, in English, and not biographical, business, or productivity-tool oriented.",
+    "timestamp": "2025-10-14 16:05:41 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-10-14-github-mcp-server-now-supports-github-projects-and-more"
   }
 ]
