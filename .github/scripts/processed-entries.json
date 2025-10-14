@@ -12330,5 +12330,23 @@
     "reason": "Succesfully added: Assigned the 'DevOps' category because most content centers on practices such as SBOM generation, pipeline integration, policy enforcement, CICD, and automation in the context of software development and operations (DevOps rule 1, 5, 6). Assigned 'Security' because the entire article addresses software supply chain security, vulnerability management, and secure operations (Security rules 2, 4, 7, 8, 10). Did not assign Azure or other Microsoft-specific categories because, while Microsoft-relevant best practices (e.g., SBOMs, Gatekeeper, SLSA) are referenced, the article is not centrally about Microsoft technology or tools, nor does it cover specific implementations on Microsoft platforms. There are also no explicit Microsoft technology or architecture details in the text.",
     "collection": "posts",
     "timestamp": "2025-10-14 14:05:28 +00:00"
+  },
+  {
+    "timestamp": "2025-10-14 15:05:03 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because Fabric Spark is a core component of Microsoft Fabric, which runs on Azure and is positioned as an Azure-native service (Azure rule 1). Assigned ML category because the content focuses on data engineering challenges related to file layout optimization in lakehouses, Delta tables, and performance tuning for analytics and ELT pipelines (ML rule 1, 2, 4, 5). No AI, Coding, DevOps, or Security categories were assigned as the article does not address AI integration, application coding, DevOps practices, or security topics per their respective rules.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/adaptive-target-file-size-management-in-fabric-spark/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-14 15:05:25 +00:00",
+    "reason": "Succesfully added: Assigned the DevOps category because the content centers on changes to GitHub's Dependabot API, a key tool in DevOps and automation workflows (DevOps rule 11: GitHub content; rule 5: CI/CD and deployment). Assigned Security because Dependabot deals directly with security alerts and supply chain risk related to code dependencies (Security rule 1: Microsoft security services and vulnerability management; rule 5: Security monitoring/response). Did not assign Coding or AI because the post does not focus on software programming practices or AI technologies. No Azure or ML categories are relevant since neither Azure nor data science/ML aspects are central. All categorizations follow the inclusion rules specified.",
+    "canonical_url": "https://github.blog/changelog/2025-10-14-dependabot-alerts-api-pagination-parameters-deprecated",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-14 15:06:21 +00:00",
+    "reason": "Succesfully added: I assigned the 'Azure' category because the article's core topic is the Azure NetApp Files Object REST API, an Azure service (Azure rule 1). The 'AI' category applies because the API enables and is directly used for integrations with Azure AI services, including Azure OpenAI, Fabric (with embedded AI), and Retrieval-Augmented Generation (AI rule 1 and 4). The 'ML' category is included since the API supports direct data science and machine learning workloads—explicitly enabling Azure Databricks, Azure ML, and data science workflows (ML rules 1, 2, 3, 6, and 9). I did not include 'Coding', 'DevOps', or 'Security' since there is no focus on programming frameworks, code/architecture, deployment patterns, or security implementation details, although security and compliance are discussed in the sense of storage context and regulation. I used relevant, specific tags reflecting Azure, AI/ML tooling, storage, analytics workflow integration, and compliance, while omitting generic and non-technical terms. The description and content organize the article's facts for technical clarity, emphasizing learnings and actionable knowledge as required.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-azure-netapp-files-object-rest-api-powers-azure-and-isv-data/ba-p/4459545",
+    "collection": "community"
   }
 ]

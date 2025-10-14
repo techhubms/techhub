@@ -6789,5 +6789,11 @@
     "canonical_url": "https://dellenny.com/the-art-of-delegating-to-ai-a-new-prompting-mindset-for-knowledge-workers/",
     "reason": "No categories found: No categories assigned because the content is excluded under the generic exclusion rule for non-development Microsoft products. The article is centered on prompting strategies for knowledge workers using AI copilots, specifically Microsoft 365 Copilot, which is a business productivity tool and not a developer tool (see Chapter 3: Non-Development Microsoft Products and Chapter 4: Critical Copilot Product Distinction). The focus is on mindset and workflow for business productivity, not on technical implementation, developer tools, or code development. Therefore, all categories are excluded as per the workflow instructions.",
     "timestamp": "2025-10-14 11:05:11 +00:00"
+  },
+  {
+    "timestamp": "2025-10-14 15:05:47 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: biographical focus. The episode centers on the hosts' personal journeys into open source and their individual backgrounds ('Abby's journey', 'Kedasha's journey', 'Cassidy's journey'), as well as general discussions about community and the value of open source, rather than providing substantive technical content or practical guidance about Microsoft technologies. No category inclusion rules are triggered, as the content is primarily introductory and personal rather than technical.",
+    "canonical_url": "https://www.youtube.com/watch?v=PeOcZB1_vM0",
+    "collection": "videos"
   }
 ]

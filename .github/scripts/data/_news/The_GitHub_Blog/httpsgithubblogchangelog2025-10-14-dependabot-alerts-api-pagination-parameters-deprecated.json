@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog",
+  "Description": "We’ve removed offset-based pagination parameters (page, first, and last) in all GitHub Dependabot alerts for REST API endpoints. Going forward, we only support cursor-based pagination parameters (before, after, and per\\_page).…\n\nThe post [Dependabot alerts API offset-based pagination parameters deprecated](https://github.blog/changelog/2025-10-14-dependabot-alerts-api-pagination-parameters-deprecated) appeared first on [The GitHub Blog](https://github.blog).",
+  "Title": "Dependabot alerts API offset-based pagination parameters deprecated",
+  "Author": "Allison",
+  "PubDate": "2025-10-14T14:38:56+00:00",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "ProcessedDate": "2025-10-14 15:03:37",
+  "Link": "https://github.blog/changelog/2025-10-14-dependabot-alerts-api-pagination-parameters-deprecated",
+  "Tags": [
+    "Retired",
+    "supply chain security"
+  ],
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "EnhancedContent": "We’ve removed offset-based pagination parameters (`page` , `first` , and `last` ) in all GitHub Dependabot alerts for REST API endpoints. Going forward, we only support cursor-based pagination parameters (`before` , `after` , and `per_page` ). This change brings GitHub Dependabot alerts in line with other GitHub security APIs and simplifies how you retrieve large sets of alerts.\n\n### What’s changing\n\nYou are longer able to use `page` , `first` , or `last` parameters when listing Dependabot alerts via the REST API. This affects the following endpoints:\n\n- List Dependabot alerts for a repository\n- List Dependabot alerts for an organization\n- List Dependabot alerts for an enterprise\n\nTo paginate through results, use these cursor-based parameters instead:\n\n- `before`\n- `after`\n- `per_page`\n\n### Why we made this change\n\nCursor-based pagination is more consistent, reliable, and performant than offset-based pagination. By standardizing on cursor-based pagination, we’re making it easier for you to work with large datasets and align your integrations across GitHub security APIs.\n\nFor more details on how cursor-based pagination works in the API, see the [GitHub API documentation](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api?apiVersion=2022-11-28). For more information on the working with Dependabot, see the [Dependabot Alerts API documentation](https://docs.github.com/rest/dependabot/alerts?apiVersion=2022-11-28#list-dependabot-alerts-for-a-repository)."
+}
