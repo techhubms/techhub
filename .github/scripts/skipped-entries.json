@@ -6807,5 +6807,11 @@
     "collection": "videos",
     "reason": "No categories found: No categories assigned because the content does not qualify under any inclusion rules. The description focuses on non-technical aspects of software development such as community, communication, and impact, rather than specific technologies, code, development practices, or Microsoft-centric tools. There is no substantive mention of Microsoft development frameworks, products, technical methodologies, or related technical depth. The discussion is about software development culture and the open source community, which falls under generic exclusion criteria for business/culture-focused content (Generic Exclusion Rule: Workplace and Business Focus). The provided tags and linked resources reinforce the non-technical, community-oriented nature. There is no available technical content to evaluate for category inclusion.",
     "timestamp": "2025-10-14 17:05:53 +00:00"
+  },
+  {
+    "canonical_url": "https://news.xbox.com/en-us/2025/10/14/shocktober-xbox-2025-sale-deals-halloween-xbox/",
+    "timestamp": "2025-10-14 18:06:15 +00:00",
+    "collection": "news",
+    "reason": "No categories found: Content excluded under Generic Exclusion Rules: The article is a promotional news piece about Xbox's Shocktober event, focusing on sales, seasonal events, and game releases for Xbox and PC. It contains no technical implementation details, development content, or Microsoft technology central to development/architecture. The primary focus is announcements, consumer game promotions, and event highlights, which are excluded as non-development Microsoft products/content. No rules for category inclusion are met."
   }
 ]

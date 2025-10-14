@@ -12384,5 +12384,29 @@
     "collection": "videos",
     "reason": "Succesfully added: The content qualifies for the 'AI' and 'GitHub Copilot' categories because it demonstrates practical usage of GitHub Copilot—a developer-centric AI tool—for generating tests via prompt-driven development (AI rule 2 and GitHub Copilot rule 1). 'Coding' is included because the focus is on writing, organizing, and executing test code within VS Code using Copilot (Coding rules 1, 2, and 4). No exclusion rules apply—this is technical content aimed at developers using Microsoft tooling for coding and test automation, and does not fall under any generic exclusion category.",
     "timestamp": "2025-10-14 17:06:18 +00:00"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/announcing-dotnet-security-group/",
+    "timestamp": "2025-10-14 18:05:35 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Security category due to the primary focus on delivering and coordinating security patches, vulnerability (CVE) disclosures, and security best practices relevant to .NET (Security rules 1, 2, 5, 7). Assigned Coding category because the group and process directly relate to .NET distributions, source code patching, and software vendor practices important for Microsoft developers and maintainers (Coding rule 1, 4). Exclusion rules do not apply: this is not business/productivity, career, or strategy content, and it is technically substantive. Microsoft technologies (.NET) are central and the content is in English."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/general-availability-azure-synapse-runtime-for-apache-spark-3-5/",
+    "timestamp": "2025-10-14 18:06:02 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category because the content centers on Azure Synapse and Spark runtimes (Azure rule 1). Assigned ML category because the focus is on data engineering, analytics workloads, and Spark-based data processing, which aligns with ML inclusion rules regarding data science and analytics engineering (ML rules 1, 2, and 4). Content does not qualify for Coding, DevOps, AI, GitHub Copilot, or Security, as there is no code-level or CI/CD focus, no AI/ML platform usage, and no mention of security implementation beyond general lakehouse security features."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-timeouts-to-triumph-optimizing-gpt-4o-mini-for-speed/ba-p/4461531",
+    "timestamp": "2025-10-14 18:06:57 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the AI category because the article is focused on optimizing large-scale GPT-4o-mini deployments—an Azure OpenAI Service (AI Rule 1). Assigned the Azure category since the solutions leverage core Azure services like API Management, Front Door, and Kusto telemetry (Azure Rule 1, 4, and 5). Did not add ML or Coding: the article is not about custom model development (no ML) nor about direct coding (not focused on source code or frameworks). Also, the content is technical, meets length requirements, is in English, and does not trigger any generic exclusion rules."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-at-oracle-ai-world-2025-powering-the-next/ba-p/4460749",
+    "timestamp": "2025-10-14 18:07:28 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Applied 'AI' category because the article highlights integrations with Azure AI services, Copilot Studio, Azure AI Foundry, and various AI-ready data features (AI rule 1 and 4). 'Azure' is included due to central focus on Azure services, deployment, and native integrations (Azure rule 1, 4, 5). 'DevOps' is assigned because of automation, deployment, management with Azure Arc, Terraform, and operational enhancements (DevOps rule 6 and 9). 'ML' is included due to data engineering, real-time analytics, and Lakehouse/Azure ML references (ML rules 1, 2, 4, 9). 'Security' is included for the detailed coverage of Microsoft Defender, Sentinel, Entra ID, and enterprise-grade security practices tailored for Oracle on Azure (Security rule 1, 4, 7). No exclusion rules apply; the content is technical, substantial, and developer/IT practitioner-focused."
   }
 ]
