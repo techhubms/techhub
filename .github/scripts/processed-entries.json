@@ -12366,5 +12366,23 @@
     "timestamp": "2025-10-14 16:05:41 +00:00",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-10-14-github-mcp-server-now-supports-github-projects-and-more"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/sourcing-schema-driven-events-from-eventhub-into-fabric-eventstreams-preview/",
+    "collection": "news",
+    "reason": "Succesfully added: The content is centrally focused on Azure EventHub integration with Fabric Real-Time Intelligence, detailing schema-driven event streaming (Azure rule 1, 4). Discusses benefits for real-time analytics, data governance, and quality (Azure, ML). Microsoft Fabric's Schema Registry usage for data modeling and analytics aligns with ML category rules (ML rules 1, 4, 5), given the emphasis on operational real-time analytics pipelines. Coding, AI, DevOps, and Security are not assigned because the article does not include code-level examples, AI platforms/services, DevOps/CD practices, or security topics.",
+    "timestamp": "2025-10-14 17:04:58 +00:00"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/10/14/microsoft-raises-the-bar-a-smarter-way-to-measure-ai-for-cybersecurity/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because ExCyTIn-Bench is an AI benchmarking tool designed to evaluate language models in cybersecurity scenarios (AI rules 1 and 5). Assigned 'Security' category due to its primary focus on measuring and improving cyber defense and integration with Microsoft security products (Security rules 1, 2, and 4). Assigned 'Azure' category as the benchmark simulates investigations within Azure-based SOC environments and leverages Sentinel, which is an Azure-native service (Azure rules 1 and 5). Did not assign 'ML' as the primary focus is AI reasoning and applied security analytics, not custom model development or data science engineering. 'DevOps' and 'Coding' are not central to the article.",
+    "timestamp": "2025-10-14 17:05:28 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=f-4NNlIQzQw",
+    "collection": "videos",
+    "reason": "Succesfully added: The content qualifies for the 'AI' and 'GitHub Copilot' categories because it demonstrates practical usage of GitHub Copilot—a developer-centric AI tool—for generating tests via prompt-driven development (AI rule 2 and GitHub Copilot rule 1). 'Coding' is included because the focus is on writing, organizing, and executing test code within VS Code using Copilot (Coding rules 1, 2, and 4). No exclusion rules apply—this is technical content aimed at developers using Microsoft tooling for coding and test automation, and does not fall under any generic exclusion category.",
+    "timestamp": "2025-10-14 17:06:18 +00:00"
   }
 ]

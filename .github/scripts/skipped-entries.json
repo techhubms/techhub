@@ -6801,5 +6801,11 @@
     "timestamp": "2025-10-14 16:06:04 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/pZQPuk6rIHU"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/BcEuml08QG8",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the content does not qualify under any inclusion rules. The description focuses on non-technical aspects of software development such as community, communication, and impact, rather than specific technologies, code, development practices, or Microsoft-centric tools. There is no substantive mention of Microsoft development frameworks, products, technical methodologies, or related technical depth. The discussion is about software development culture and the open source community, which falls under generic exclusion criteria for business/culture-focused content (Generic Exclusion Rule: Workplace and Business Focus). The provided tags and linked resources reinforce the non-technical, community-oriented nature. There is no available technical content to evaluate for category inclusion.",
+    "timestamp": "2025-10-14 17:05:53 +00:00"
   }
 ]
