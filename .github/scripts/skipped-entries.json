@@ -6849,5 +6849,23 @@
     "timestamp": "2025-10-15 08:04:50 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rule: The article focuses on Copilot in general office productivity scenarios such as Excel, Word, and basic document handling, with a central emphasis on workforce upskilling and inclusion. According to the critical Copilot product distinction rules, content about Microsoft 365 Copilot, Copilot for Microsoft 365, and general productivity Copilot usage is strictly excluded as these are not developer tools or focused on development aspects. There is no substantive discussion of GitHub Copilot, Copilot Studio, code development, or any developer-focused Microsoft technology. Therefore, no categories apply.",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-15 12:05:15 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/SPk5DmwWDAc",
+    "reason": "No categories found: All input fields except 'title', 'author', and 'type' are empty or null ('content', 'description', and 'tags'). There is no substantive content to evaluate for technical depth, category inclusion, or relevancy. According to the workflow, the process must focus on actual content and cannot assign categories based solely on a title. Without 'content' or 'description', it is impossible to determine whether the video meets any inclusion criteria. Generic exclusion rules require substantive content for categorization, so no categories are assigned.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://dellenny.com/elevating-the-executive-briefing-from-a-teams-meeting-transcript-to-a-powerpoint-deck-in-one-prompt/",
+    "reason": "No categories found: All categories are excluded due to the generic exclusion rule for non-development Microsoft products. The content focuses on using Microsoft 365 Copilot and AI to generate executive briefings, which centers on business productivity, document creation, and aiding executive decision-making—not code development, DevOps, security, or technical implementation. Specific references to Teams, PowerPoint, and executive workflows indicate an end-user productivity scenario (see 'Non-Development Microsoft Products' exclusion and 'CRITICAL: Copilot Product Distinction'). There is no technical depth regarding programming, development, or engineering practices, so no categories apply.",
+    "timestamp": "2025-10-15 13:13:10 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/pQArcFH-fj4",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content is a podcast video clip centered on open-source philosophy and the community spirit, using an anecdotal hackathon story. There are no substantive technical details, implementation guidance, or discussion of Microsoft products, platforms, or development practices. The main focus is inspirational and community-oriented, which falls outside the specified technical scope for all categories. This is further supported by the lack of concrete technical content in the description or tags, triggering exclusion under the requirement to focus on actual technical content.",
+    "timestamp": "2025-10-15 15:05:32 +00:00"
   }
 ]

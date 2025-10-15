@@ -12504,5 +12504,11 @@
     "timestamp": "2025-10-15 10:05:58 +00:00",
     "reason": "Succesfully added: Assigned 'Azure' category because the content specifically addresses Azure Kubernetes Service (AKS) and its autoscaling behavior, matching Azure inclusion rule 1. Added 'DevOps' because the primary focus is on operational scaling, resource management, monitoring, and process automation in Kubernetes, which are core DevOps concerns (DevOps rules 3, 5, and 6). 'Coding', 'AI', 'ML', 'GitHub Copilot', and 'Security' were not assigned because the content does not cover actual code, AI/ML workloads, Copilot, or security-specific practices. The content is substantial, technical, and well over 200 words, meeting quality requirements, and does not trigger any generic exclusion rules.",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/copilot-faster-smarter-and-built-for-how-you-work-now/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because the article centrally focuses on GitHub Copilot's evolution as an AI-powered development assistant (AI inclusion rule 2 and 1). Added 'GitHub Copilot' category due to detailed coverage of GitHub Copilot, its features (CLI, agent mode), and its core role in the developer workflow (GitHub Copilot inclusion rules). Included 'Coding' because the article discusses coding best practices, code automation, PR drafting, and code review—all related to hands-on software development (Coding inclusion rules 4 and 5). Did not assign DevOps, Azure, ML, or Security as primary categories since the focus is on coding, AI-assistance, and Copilot features, with security and workflow enhancements discussed as part of Copilot's context.",
+    "timestamp": "2025-10-15 15:05:08 +00:00"
   }
 ]
