@@ -12486,5 +12486,11 @@
     "timestamp": "2025-10-15 06:06:10 +00:00",
     "reason": "Succesfully added: Applied the generic exclusion rules first; none were triggered, as the content is not biographical, does not seek help, is not a sales pitch, is sufficiently detailed, and is in English. The topic is technical, focused on a new Azure Migrate feature, not business strategy or workplace issues. For category inclusion, 'Azure' is assigned because Azure Migrate is an Azure-specific tool (Azure Rule 1), and the whole discussion revolves around Azure migration planning and storage optimization. No other categories (AI, ML, Coding, DevOps, Security) are relevant because the content does not discuss code development, DevOps pipelines, ML/data science workflows, AI, or security implementation—only infrastructure optimization within Azure. Technical tags like 'Azure Migrate', 'Cloud Migration', and 'Storage Optimization' were chosen based on the focus and context.",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://www.thomasmaurer.ch/2025/10/how-microsoft-is-addressing-digital-sovereignty-in-switzerland/",
+    "timestamp": "2025-10-15 08:05:22 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the article extensively covers Microsoft Azure offerings for data sovereignty, region selection, and cloud architecture (Azure Inclusion Rule 1, 2, 4, 5). Assigned Security category because multiple features discussed are directly about security, data protection (encryption, Confidential Computing, External Key Management), and compliance management (Security Inclusion Rule 1, 2, 4, 5, 7, 9, 10). The technical depth and focus on practical implementation using Azure, Azure Arc, Azure Confidential Computing, and regulatory controls clearly fit both categories. No other categories apply because there is no hands-on coding, DevOps methodology, AI/ML development, or GitHub Copilot discussion. All generic exclusion rules were checked—content is technical, not a sales pitch, career story, or business-only executive discussion.",
+    "collection": "posts"
   }
 ]

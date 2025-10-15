@@ -6843,5 +6843,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=LJHUtTghQfY",
     "timestamp": "2025-10-15 03:19:11 +00:00",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://dellenny.com/from-fear-to-function-using-copilot-to-bridge-the-digital-skills-gap-in-your-workforce/",
+    "timestamp": "2025-10-15 08:04:50 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The article focuses on Copilot in general office productivity scenarios such as Excel, Word, and basic document handling, with a central emphasis on workforce upskilling and inclusion. According to the critical Copilot product distinction rules, content about Microsoft 365 Copilot, Copilot for Microsoft 365, and general productivity Copilot usage is strictly excluded as these are not developer tools or focused on development aspects. There is no substantive discussion of GitHub Copilot, Copilot Studio, code development, or any developer-focused Microsoft technology. Therefore, no categories apply.",
+    "collection": "posts"
   }
 ]
