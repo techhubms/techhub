@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2025-10-15-anthropics-claude-haiku-4-5-is-in-public-preview-for-github-copilot",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "EnhancedContent": "Claude Haiku 4.5, Anthropic’s newest model aimed at delivering high performance with faster speeds, is now rolling out in GitHub Copilot.\n\n### Availability in GitHub Copilot\n\nClaude Haiku 4.5 will be available to Copilot Pro, Pro+, Business, and Enterprise.\n\nYou’ll be able to select the model in the Copilot Chat model picker from:\n\n- Visual Studio Code chat, ask, edit, and agent modes\n- github.com\n- GitHub Mobile iOS and Android\n\nRollout will be gradual. Check back soon if you don’t see it yet.\n\n### Enabling access\n\n- **Enterprise & Business plans**: Administrators must enable the Claude Haiku 4.5 policy in Copilot settings. Once enabled, users in that organization will see Claude Haiku 4.5 in the model picker in Visual Studio Code.\n- **Pro & Pro+ plans**: Enable by selecting the model in the Visual Studio Code picker and confirming the one-time prompt.\n- **Bring Your Own Key**: Select **Manage Models** from the picker, choose Claude Haiku 4.5, and enter your API key when prompted.\n\nIt’s recommended to use Visual Studio Code version 1.105 or higher for an optimal experience with this model due to ongoing updates.\n\n### Learn more\n\nTo explore all models available in GitHub Copilot, see our [documentation on models](https://docs.github.com/copilot/reference/ai-models/supported-models) and get started with Copilot.\n\n### Share your feedback\n\nHave feedback or questions? Join the [community discussion](https://github.com/orgs/community/discussions/176935) to share your experiences and tips.",
+  "Title": "Anthropic’s Claude Haiku 4.5 is in public preview for GitHub Copilot",
+  "ProcessedDate": "2025-10-15 18:03:40",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Author": "Allison",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "Claude Haiku 4.5, Anthropic’s newest model aimed at delivering high performance with faster speeds, is now rolling out in GitHub Copilot. Availability in GitHub Copilot Claude Haiku 4.5 will be…\n\nThe post [Anthropic’s Claude Haiku 4.5 is in public preview for GitHub Copilot](https://github.blog/changelog/2025-10-15-anthropics-claude-haiku-4-5-is-in-public-preview-for-github-copilot) appeared first on [The GitHub Blog](https://github.blog).",
+  "PubDate": "2025-10-15T16:40:53+00:00"
+}

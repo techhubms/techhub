@@ -12540,5 +12540,23 @@
     "reason": "Succesfully added: Assigned the Security category because the article provides hands-on, technical guidance for reducing risk and hardening customer support operations against cyberattacks, with a focus on identity management, RBAC, privilege control, and monitoring—all aligned with Security category inclusion rules (rules 1, 2, 3, 4, 5, and 9). The content references services like Microsoft Azure and Microsoft 365 as operational targets, but the main focus is on the secure architecture and defensive practices, not on development or configuration of these services, thus not meeting criteria for Azure, Coding, or DevOps. AI and ML are not discussed. No exclusion rules trigger, as the content is by a technical executive sharing security solutions, not solely business or executive strategy. There is no biographical, negative, or non-English focus. All rules have been followed according to the workflow.",
     "timestamp": "2025-10-15 17:06:33 +00:00",
     "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/10/15/the-importance-of-hardening-customer-support-tools-against-attack/"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/azure-sdk/easily-connect-ai-workloads-to-azure-blob-storage-with-adlfs/",
+    "collection": "news",
+    "timestamp": "2025-10-15 18:05:17 +00:00",
+    "reason": "Succesfully added: Assigned AI category because adlfs directly supports AI workloads and integrates with machine learning frameworks (AI inclusion rule 4 and 5). Assigned Azure category as adlfs is a Pythonic interface specifically for Azure Blob and Data Lake Storage (Azure inclusion rule 1). Assigned ML category because the content focuses on data/ML engineering workflows with ETL, Dask, PyTorch, ETL, and Ray examples (ML inclusion rules 1, 2, 6, and 9). Coding and DevOps are not assigned since the article does not focus on software development patterns, application code, or CI/CD but rather on data engineering and storage integration for ML/AI scenarios."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-10-15-anthropics-claude-haiku-4-5-is-in-public-preview-for-github-copilot",
+    "collection": "news",
+    "timestamp": "2025-10-15 18:05:44 +00:00",
+    "reason": "Succesfully added: The content is focused on the release and usage of Claude Haiku 4.5 within GitHub Copilot, a developer-focused tool—triggering the 'GitHub Copilot' category per inclusion rules, and per Chapter 4 AI Category rule 2, both 'AI' and 'GitHub Copilot' were assigned together. The guidance, activation instructions, and Copilot context confirm these categories. No Coding, DevOps, Azure, ML, or Security categories apply, as the content does not cover those topic areas."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-10-15-copilot-generated-commit-messages-on-github-com-are-generally-available",
+    "collection": "news",
+    "timestamp": "2025-10-15 18:06:03 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category per AI rule 1 and 2, as the feature centers on GitHub Copilot (an AI-powered developer assistant). Added 'GitHub Copilot' since the content is specifically about GitHub Copilot features (GitHub Copilot rules 1, 2, 3, 4). Added 'DevOps' because commit workflow and documentation automation are core aspects of collaborative development and version control (DevOps rules 3, 5, 8). No 'Coding', 'Azure', 'ML', or 'Security' since the focus is on workflow enhancement, not direct code, cloud, data science, or security topics."
   }
 ]
