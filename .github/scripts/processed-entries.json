@@ -12492,5 +12492,11 @@
     "timestamp": "2025-10-15 08:05:22 +00:00",
     "reason": "Succesfully added: Assigned Azure category because the article extensively covers Microsoft Azure offerings for data sovereignty, region selection, and cloud architecture (Azure Inclusion Rule 1, 2, 4, 5). Assigned Security category because multiple features discussed are directly about security, data protection (encryption, Confidential Computing, External Key Management), and compliance management (Security Inclusion Rule 1, 2, 4, 5, 7, 9, 10). The technical depth and focus on practical implementation using Azure, Azure Arc, Azure Confidential Computing, and regulatory controls clearly fit both categories. No other categories apply because there is no hands-on coding, DevOps methodology, AI/ML development, or GitHub Copilot discussion. All generic exclusion rules were checked—content is technical, not a sales pitch, career story, or business-only executive discussion.",
     "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content focuses fundamentally on creating, customizing, and deploying AI agents (Digital Twin Employees) using Copilot Studio, which is a Microsoft AI developer/maker tool (AI inclusion rules 1 and 2). The article shows hands-on technical practices for AI prompt engineering and system integration but does not focus on traditional Coding (no .NET, C#, programming frameworks), DevOps, ML/data science, Security, or Azure services. Content does not discuss GitHub Copilot or other listed categories, nor does it satisfy the GitHub Copilot inclusion rules. Excluded business productivity Copilots such as Microsoft 365 Copilot and general M365 features because the focus is the developer/maker Copilot Studio tool per strict inclusion/exclusion rules.",
+    "timestamp": "2025-10-15 09:05:03 +00:00",
+    "canonical_url": "https://dellenny.com/the-digital-twin-employee-creating-hyper-personalized-copilot-prompts-with-copilot-studio/",
+    "collection": "posts"
   }
 ]
