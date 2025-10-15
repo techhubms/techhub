@@ -6879,5 +6879,11 @@
     "reason": "No categories found: All content focuses on Microsoft 365 Copilot, Copilot Chat, and AI-powered features for teaching, learning, and education workflows. According to the critical Microsoft Copilot product distinction in Chapter 2 and the generic exclusion rules in Chapter 3, content about Microsoft 365 Copilot, Copilot for Microsoft 365, or Microsoft Copilot with a business/education focus is explicitly excluded and receives no categories, as it is considered a business productivity tool and not a developer tool. The posts highlight new offerings and integrations but are targeted at educators, students, and staff for productivity, not development. No category from the inclusion rules applies.",
     "timestamp": "2025-10-15 17:06:07 +00:00",
     "canonical_url": "https://www.microsoft.com/en-us/education/blog/2025/10/designing-microsoft-365-copilot-to-empower-educators-students-and-staff/"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=EQaFEDCaeKg",
+    "timestamp": "2025-10-15 20:05:46 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The provided description and title indicate this is an event promotion for skills development and certification (Microsoft Ignite, Microsoft Learn) with no substantive technical details, tutorial content, or focus on Microsoft development tools. It is primarily an announcement/sales pitch for an event and certification rather than a technical guide, tutorial, or deep-dive valid for categorization. No main content text is present to analyze further."
   }
 ]

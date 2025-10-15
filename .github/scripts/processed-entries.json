@@ -12564,5 +12564,11 @@
     "collection": "community",
     "timestamp": "2025-10-15 19:05:07 +00:00",
     "reason": "Succesfully added: Assigned the Azure category because the entire content focuses on Azure Virtual Desktop and Azure-specific infrastructure developments (Azure inclusion rule 1). There was no substantial content meeting criteria for AI, Coding, DevOps, ML, Security, or GitHub Copilot categories. The content is fully in English, technically detailed, and exceeds the 200-word minimum for community posts with technical guidance rather than sales, career, or negative critique. All generic exclusion checks were passed."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-for-sharing-capacity-reservation-groups-now/ba-p/4461834",
+    "reason": "Succesfully added: Assigned the Azure category because the content discusses a feature update for Azure Virtual Machines Capacity Reservation Groups, focusing on cross-subscription sharing—a core Azure compute capability (Azure inclusion rule 1). The post did not present substantive coding procedures, DevOps practices, or AI/ML/security features, so those categories were not applied. The content is not biographical, not a question, not a sales pitch, and meets community content length and technical depth requirements, satisfying all inclusion and exclusion criteria.",
+    "timestamp": "2025-10-15 23:05:08 +00:00",
+    "collection": "community"
   }
 ]
