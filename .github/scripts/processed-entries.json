@@ -12468,5 +12468,23 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/hosting-remote-mcp-server-on-azure-container-apps-aca-using/ba-p/4459263",
     "reason": "Succesfully added: Assigned AI category because the content focuses on deploying a Model Context Protocol (MCP) server that interfaces with AI assistants (AI inclusion rule 4). Azure category is included because the solution extensively uses Azure Container Apps for deployment (Azure inclusion rules 1 and 4). Coding was added since the process involves code-level setup, Node.js usage, and instructions for building and testing the server (Coding rules 1 and 5). Rules for exclusion do not apply since the article is technical, hands-on, in English, and fits the development focus."
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/accelerating-open-source-infrastructure-development-for-frontier-ai-at-scale/",
+    "timestamp": "2025-10-15 06:05:07 +00:00",
+    "reason": "Succesfully added: Assigned AI because the content is fundamentally about large-scale infrastructure for supporting AI workloads and details Microsoft’s new standards and contributions to the AI datacenter ecosystem (AI rule 1 and 4). Assigned Azure because the focus is on Microsoft’s cloud-scale infrastructure and datacenter innovation, which underpins Azure cloud operations (Azure rule 1 and 5). Assigned Security because there are significant references to new hardware security standards, silicon root of trust innovations, and cryptographic key management for secure AI operations (Security rule 1, 4, 5, and 9). Coding, ML, GitHub Copilot, and DevOps do not apply as there is no direct coverage of application/software engineering, programming, model customization, ML pipeline design, or CI/CD practices.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/oracle-databaseazure-offers-new-features-regions-and-programs-to-unlock-data-and-ai-innovation/",
+    "timestamp": "2025-10-15 06:05:36 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the content focuses extensively on Oracle Database@Azure and deployment/operations/features within Microsoft Azure (Azure rules 1, 4, 5). Assigned AI because AI tools (Copilot Studio, Azure AI Foundry, Power BI) and AI-driven innovation are a central theme (AI rules 1, 4, 5). Assigned Security because of the integration and explicit focus on Microsoft Defender, Sentinel, Entra ID, policy enforcement, and compliance (Security rules 1, 3, 4, 5, 7). Assigned ML because of zero-ETL real-time analytics integration with Microsoft Fabric, OneLake, Power BI, and fabric-enabled data estate and analytics (ML rules 1, 2, 4, 9). Did not assign Coding or DevOps, as no custom code, SDK practices, CI/CD, or development workflows are the focus. All categorization decisions are based directly on the presence in the content of new AI, security, analytics, and hybrid data features tied centrally to the Azure platform.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/unlock-cost-savings-with-utilization-based-storage/ba-p/4461634",
+    "timestamp": "2025-10-15 06:06:10 +00:00",
+    "reason": "Succesfully added: Applied the generic exclusion rules first; none were triggered, as the content is not biographical, does not seek help, is not a sales pitch, is sufficiently detailed, and is in English. The topic is technical, focused on a new Azure Migrate feature, not business strategy or workplace issues. For category inclusion, 'Azure' is assigned because Azure Migrate is an Azure-specific tool (Azure Rule 1), and the whole discussion revolves around Azure migration planning and storage optimization. No other categories (AI, ML, Coding, DevOps, Security) are relevant because the content does not discuss code development, DevOps pipelines, ML/data science workflows, AI, or security implementation—only infrastructure optimization within Azure. Technical tags like 'Azure Migrate', 'Cloud Migration', and 'Storage Optimization' were chosen based on the focus and context.",
+    "collection": "community"
   }
 ]
