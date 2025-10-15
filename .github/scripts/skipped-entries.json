@@ -6831,5 +6831,17 @@
     "reason": "No categories found: No Microsoft technologies are substantively discussed or central to the content. The article centers on partnerships between Sonar and JFrog, broader trends in DevOps and AI, and executive cybersecurity priorities—none of which reference Microsoft products, services, or development tools. According to the Multi-Platform Content Threshold guidelines, Microsoft technologies must comprise at least 40% of substantive content or be central to the solution. Since there is no technical Microsoft focus, all category arrays remain empty as outlined in the core processing rules.",
     "canonical_url": "https://devops.com/strengthening-software-trust-in-modern-devops-workflows/",
     "timestamp": "2025-10-14 23:05:38 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content consists entirely of a keynote invitation and promotional announcement for GitHub Universe Day 2, without any technical or substantive information about Microsoft technologies or development with Microsoft tools. The description focuses on event details, inspiration, and social media links, lacking information on technical sessions, developer tools, Microsoft integration, or hands-on tutorials. According to the core processing rules and generic exclusion guidelines, absence of actionable technical content results in exclusion from all categories.",
+    "canonical_url": "https://www.youtube.com/watch?v=_KqdBb-iOAQ",
+    "timestamp": "2025-10-15 03:18:59 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The content is primarily an event announcement and stream notification for the GitHub Universe keynote, without any substantive technical content. It provides information on how to watch the keynote and general links to GitHub's social media but does not contain technical information, tutorials, or implementation details about Microsoft technologies (see Sales Pitches and Format exclusions).",
+    "canonical_url": "https://www.youtube.com/watch?v=LJHUtTghQfY",
+    "timestamp": "2025-10-15 03:19:11 +00:00",
+    "collection": "videos"
   }
 ]

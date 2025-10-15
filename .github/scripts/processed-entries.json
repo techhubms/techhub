@@ -12462,5 +12462,11 @@
     "reason": "Succesfully added: Assigned the Security category because the post focuses significantly on security improvements and CVE vulnerability fixes in .NET and .NET Framework, referencing multiple CVEs with links and mitigation status (Security rules 1, 7, and 8). Included the Coding category since the update is directly relevant to practitioners maintaining .NET environments, SDKs, and coding with .NET and ASP.NET Core (Coding rule 1, 2). Did not assign Azure, AI, ML, DevOps, or GitHub Copilot because the content does not discuss Azure, artificial intelligence, machine learning, DevOps practices, or GitHub Copilot features—instead focusing on framework patching and security updates.",
     "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-october-2025-servicing-updates/",
     "timestamp": "2025-10-14 23:04:59 +00:00"
+  },
+  {
+    "timestamp": "2025-10-15 05:04:43 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/hosting-remote-mcp-server-on-azure-container-apps-aca-using/ba-p/4459263",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on deploying a Model Context Protocol (MCP) server that interfaces with AI assistants (AI inclusion rule 4). Azure category is included because the solution extensively uses Azure Container Apps for deployment (Azure inclusion rules 1 and 4). Coding was added since the process involves code-level setup, Node.js usage, and instructions for building and testing the server (Coding rules 1 and 5). Rules for exclusion do not apply since the article is technical, hands-on, in English, and fits the development focus."
   }
 ]
