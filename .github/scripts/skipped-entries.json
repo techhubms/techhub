@@ -6867,5 +6867,17 @@
     "collection": "videos",
     "reason": "No categories found: No categories assigned. The content is a podcast video clip centered on open-source philosophy and the community spirit, using an anecdotal hackathon story. There are no substantive technical details, implementation guidance, or discussion of Microsoft products, platforms, or development practices. The main focus is inspirational and community-oriented, which falls outside the specified technical scope for all categories. This is further supported by the lack of concrete technical content in the description or tags, triggering exclusion under the requirement to focus on actual technical content.",
     "timestamp": "2025-10-15 15:05:32 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: All content revolves around consumer gaming hardware (ROG Xbox Ally) and general user experience with the Windows-based handheld device. The post covers device setup, menu navigation, Gaming Copilot for gaming tips (not the developer tool), personalization options, gaming library management, and accessibility features, all focused on end-user usage and not on software development, coding, or Microsoft developer technologies. No substantial technical development, coding, cloud, AI, security, DevOps, or ML aspects are discussed. The use of 'Gaming Copilot' here is not the same as the GitHub Copilot or Copilot Studio developer tools; it is described as a player assistant for gamers. Per the generic exclusion rule for non-development Microsoft products and business/consumer productivity tools, this content does not qualify for any categories.",
+    "timestamp": "2025-10-15 17:05:53 +00:00",
+    "canonical_url": "https://news.xbox.com/en-us/2025/10/15/rog-xbox-ally-handheld-essential-tips-getting-started/"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: All content focuses on Microsoft 365 Copilot, Copilot Chat, and AI-powered features for teaching, learning, and education workflows. According to the critical Microsoft Copilot product distinction in Chapter 2 and the generic exclusion rules in Chapter 3, content about Microsoft 365 Copilot, Copilot for Microsoft 365, or Microsoft Copilot with a business/education focus is explicitly excluded and receives no categories, as it is considered a business productivity tool and not a developer tool. The posts highlight new offerings and integrations but are targeted at educators, students, and staff for productivity, not development. No category from the inclusion rules applies.",
+    "timestamp": "2025-10-15 17:06:07 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/education/blog/2025/10/designing-microsoft-365-copilot-to-empower-educators-students-and-staff/"
   }
 ]

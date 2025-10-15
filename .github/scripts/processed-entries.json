@@ -12528,5 +12528,17 @@
     "timestamp": "2025-10-15 16:06:36 +00:00",
     "reason": "Succesfully added: Assigned Azure because the content centers on integrating SAP Business Data Cloud with Azure Databricks and leveraging Azure services (Azure rule 1, 4, 5). Assigned ML category because the integration directly supports machine learning, data engineering, and analytics on Azure Databricks (ML rule 1, 2, 4). Assigned AI category because the content highlights enabling AI and BI through the unified data estate and use of Databricks' advanced analytics and machine learning capabilities (AI rule 5). Did not assign Coding, DevOps, Security, or GitHub Copilot as there is no direct focus on application coding, DevOps practices, developer tools, or security implementation; rather, the focus is on platform integration and data analytics enablement.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/sap-business-data-cloud-connect-with-azure-databricks-is-now/ba-p/4459490"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the feature centers on Azure Key Vault and Microsoft Fabric, both of which are Azure-based services (Azure rule 1). Assigned the 'Security' category because the content extensively discusses data encryption, key management, and compliance-driven security capabilities specifically implemented with Microsoft tools (Security rules 1, 2, and 7). Did not assign 'AI', 'ML', 'DevOps', 'GitHub Copilot', or 'Coding' because the article does not cover development, AI/ML, or DevOps-related workflows or tools.",
+    "timestamp": "2025-10-15 17:05:39 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/customer-managed-keys-for-fabric-workspaces-generally-available/"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the Security category because the article provides hands-on, technical guidance for reducing risk and hardening customer support operations against cyberattacks, with a focus on identity management, RBAC, privilege control, and monitoring—all aligned with Security category inclusion rules (rules 1, 2, 3, 4, 5, and 9). The content references services like Microsoft Azure and Microsoft 365 as operational targets, but the main focus is on the secure architecture and defensive practices, not on development or configuration of these services, thus not meeting criteria for Azure, Coding, or DevOps. AI and ML are not discussed. No exclusion rules trigger, as the content is by a technical executive sharing security solutions, not solely business or executive strategy. There is no biographical, negative, or non-English focus. All rules have been followed according to the workflow.",
+    "timestamp": "2025-10-15 17:06:33 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/10/15/the-importance-of-hardening-customer-support-tools-against-attack/"
   }
 ]
