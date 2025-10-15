@@ -12558,5 +12558,11 @@
     "collection": "news",
     "timestamp": "2025-10-15 18:06:03 +00:00",
     "reason": "Succesfully added: Assigned the 'AI' category per AI rule 1 and 2, as the feature centers on GitHub Copilot (an AI-powered developer assistant). Added 'GitHub Copilot' since the content is specifically about GitHub Copilot features (GitHub Copilot rules 1, 2, 3, 4). Added 'DevOps' because commit workflow and documentation automation are core aspects of collaborative development and version control (DevOps rules 3, 5, 8). No 'Coding', 'Azure', 'ML', or 'Security' since the focus is on workflow enhancement, not direct code, cloud, data science, or security topics."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/now-in-public-preview-ephemeral-os-disk-support-on-azure-virtual/ba-p/4460172",
+    "collection": "community",
+    "timestamp": "2025-10-15 19:05:07 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the entire content focuses on Azure Virtual Desktop and Azure-specific infrastructure developments (Azure inclusion rule 1). There was no substantial content meeting criteria for AI, Coding, DevOps, ML, Security, or GitHub Copilot categories. The content is fully in English, technically detailed, and exceeds the 200-word minimum for community posts with technical guidance rather than sales, career, or negative critique. All generic exclusion checks were passed."
   }
 ]
