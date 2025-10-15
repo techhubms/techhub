@@ -10,6 +10,10 @@ Stay current with the latest Visual Studio Code features and improvements! Each 
 
 Fokko Veegens provides video walkthroughs of the most significant updates in each Visual Studio Code release, with a special focus on GitHub, GitHub Copilot, and AI features when they're available. You'll find comprehensive coverage of what's new and how to make the most of these features in your daily workflow.
 
+## Version 1.105 (October 2025)
+
+{% youtube zsCBEVCQ98I %}
+
 ## Version 1.104 (September 2025)
 
 {% youtube fwPFPJlw3w4 %}
