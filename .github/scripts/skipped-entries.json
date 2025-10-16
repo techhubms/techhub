@@ -6897,5 +6897,11 @@
     "timestamp": "2025-10-16 01:32:51 +00:00",
     "canonical_url": "https://devops.com/mcptotal-launches-to-power-secure-enterprise-mcp-workflows/",
     "collection": "posts"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/auditing-the-ai-how-to-use-the-copilot-interaction-export-api-for-compliance-logs/",
+    "reason": "No categories found: Content is excluded due to generic exclusion rules — it is primarily focused on Microsoft 365 Copilot compliance and auditing in business productivity scenarios, not developer or technical implementation. The 'Copilot Interaction Export API' covers compliance, legal holds, eDiscovery, and audit, but does not discuss development, coding, AI engineering, or any developer-focused Copilot product. This is explicitly excluded under the Non-Development Microsoft Products rule in Chapter 3 and the Copilot Product Distinction in Chapter 2. Tags and content focus on compliance, governance, and regulatory alignment (business productivity), not on technical usage for developers.",
+    "timestamp": "2025-10-16 07:04:18 +00:00"
   }
 ]

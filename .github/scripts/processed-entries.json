@@ -12588,5 +12588,11 @@
     "collection": "news",
     "timestamp": "2025-10-16 02:30:42 +00:00",
     "canonical_url": "https://www.linkedin.com/posts/satyanadella_microsoft-raises-the-bar-a-smarter-way-to-activity-7384329693614759936-VB0Z"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/copilot-for-sysadmins-automating-powershell-script-generation-from-plain-english-prompts/",
+    "reason": "Succesfully added: The content focuses on GitHub Copilot Chat (a developer tool), which qualifies for both 'AI' and 'GitHub Copilot' categories (per Copilot Product Distinction and AI/GitHub Copilot rules). PowerShell automation and script development with Microsoft 365 and Azure AD qualify as 'Coding' and 'Azure' (since Azure AD is central to the examples). Excluded M365 Copilot as a tag and category because the content is not about Microsoft 365 Copilot business productivity features, but about developer tools and automation. All determinations follow the inclusion rules and proper distinctions for Copilot, AI, and Microsoft technologies involved.",
+    "timestamp": "2025-10-16 07:04:38 +00:00"
   }
 ]
