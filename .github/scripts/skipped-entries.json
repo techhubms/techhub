@@ -6909,5 +6909,11 @@
     "canonical_url": "https://dellenny.com/pre-flight-check-the-5-non-negotiable-sharepoint-cleanups-before-deploying-copilot/",
     "collection": "posts",
     "reason": "No categories found: All categories are excluded due to the generic exclusion rule for 'Non-Development Microsoft Products.' The content is exclusively focused on preparing SharePoint environments for Microsoft 365 Copilot, which is classified as a business productivity tool, not a developer tool (see Chapter 3, Non-Development Microsoft Products exclusion and Copilot Product Distinction). There is no coverage of development, coding, AI development, engineering or security implementation—rather, the post targets IT admins and business users responsible for data hygiene and governance prior to deploying a productivity/collaborative assistant. No included content pertains to SharePoint development, Power Platform development, or coding with Microsoft 365 APIs. Therefore, no categories are assigned."
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This news item is primarily an announcement of general consumer AI features in Windows 11, focused on Copilot and agentic experiences for end-users. It does not include any technical depth, developer topics, engineering implementation, or substantive Microsoft technology specifics applicable to the platform's predefined categories. The content also centers on business/productivity enhancements for general Windows users, which is explicitly excluded under the Non-Development Microsoft Products rule (Copilot for Windows is a consumer/business productivity feature, not a developer tool).",
+    "timestamp": "2025-10-16 14:04:42 +00:00",
+    "canonical_url": "https://news.microsoft.com/windows-october-2025-news/",
+    "collection": "news"
   }
 ]
