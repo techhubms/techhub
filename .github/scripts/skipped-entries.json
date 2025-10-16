@@ -6927,5 +6927,17 @@
     "timestamp": "2025-10-16 15:05:13 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/debug-asp-net-quot-this-site-can-t-be-reached-quot/m-p/4461833#M678",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://news.xbox.com/en-us/2025/10/16/rog-xbox-ally-handheld-out-now-launch/",
+    "reason": "No categories found: Excluded all categories due to generic exclusion rules. The content is primarily a news announcement about the global launch of the ROG Xbox Ally and Ally X handheld gaming devices in partnership with ASUS and AMD. It focuses on product features, availability, and general consumer experience. There is no technical, developer-focused content, no discussion of software development, coding, DevOps, AI/ML, Azure, or Security relevant to Microsoft consultants or developers. Mentions of 'Gaming Copilot' refer to a general gaming assistant feature and do not pertain to GitHub Copilot or developer tooling (see Copilot Product Distinction and Non-Development Microsoft Products exclusion). Thus, the content is promotional, consumer-facing, and not technical in scope, and does not qualify for any categories.",
+    "timestamp": "2025-10-16 16:05:11 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_hey-copilot-show-everyone-how-were-transforming-activity-7384575152665067521-poD8",
+    "reason": "No categories found: Content excluded due to generic exclusion rules for non-development Microsoft products and business productivity tools. The post centers on Microsoft Copilot as integrated into Windows PCs for end-user productivity and natural interaction, not for software development, coding, or IT implementation. As per the CRITICAL: Copilot Product Distinction and Non-Development Microsoft Products rules, business productivity Copilot (such as 'Microsoft Copilot' in Windows and Microsoft 365) content is explicitly excluded from all categories. The content does not provide technical implementation, developer guidance, or code-level details, and instead demonstrates consumer-facing features and general use case scenarios.",
+    "timestamp": "2025-10-16 16:05:45 +00:00",
+    "collection": "news"
   }
 ]

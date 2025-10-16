@@ -12612,5 +12612,29 @@
     "timestamp": "2025-10-16 15:04:42 +00:00",
     "canonical_url": "https://news.microsoft.com/source/2025/10/16/microsoft-extends-ai-advancements-in-dragon-copilot-to-nurses-and-partners-to-enhance-patient-care/",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2025/10/16/mddr-2025/",
+    "reason": "Succesfully added: Assigned Security because the entire content is focused on cybersecurity threats, defensive strategies, and Microsoft's incident report (Security rules 1, 4, 5, 9, 10). Assigned AI because both attackers and defenders are substantially described using AI for cyber operations and defense (AI rules 1 and 5). No other categories apply, as there is no coverage of development, coding, DevOps, specific Azure implementations, or ML/data engineering. The content is technical and analytical, not promotional or business-executive focused, and all generic exclusion rules were checked and found inapplicable.",
+    "timestamp": "2025-10-16 16:04:57 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://ukstories.microsoft.com/features/how-lg-is-reinventing-customer-care-with-ai/",
+    "reason": "Succesfully added: Assigned the AI category because the article focuses on deploying AI-powered features in customer service via Microsoft Dynamics 365 Contact Centre and Copilot (AI category, rules 1 and 5). Assigned Azure because the platform operates within L&G’s Microsoft ecosystem, explicitly mentioning Azure and Power Platform as core infrastructure (Azure rule 1 and 4). Did not assign Coding, DevOps, ML, Security, or GitHub Copilot: the article highlights integration and application of existing Microsoft services, not software development, DevOps practices, custom ML, or security architectures beyond mentioning data security as a governance concern. Content is technical and implementation-focused rather than general business strategy or end-user product usage, meeting inclusion criteria.",
+    "timestamp": "2025-10-16 16:05:32 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_no-question-that-nurses-are-the-heartbeat-activity-7384590573808234496-aaYh",
+    "reason": "Succesfully added: Applied the AI category because the core of the announcement is about Dragon Copilot, an AI-powered ambient experience for nursing workflows, which fits AI category rules 1 and 4. There is no technical content qualifying for other categories like Coding, Azure, DevOps, ML, or Security; the focus is on workflow automation and ambient AI in clinical settings. The content is not a business productivity tool (like M365 Copilot) but a specialized AI solution for healthcare, so it qualifies for inclusion. All relevant information was extracted from the transcript and the provided announcement; tags reflect core technologies, use cases, and AI focus.",
+    "timestamp": "2025-10-16 16:06:03 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=VvOWQQiSRxw",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the video focuses on GitHub Copilot integration inside SQL Server Management Studio (AI rule 2, GitHub Copilot rule 1). Assigned Coding because it demonstrates Copilot aiding T-SQL script writing and database development tasks (Coding rule 4). Azure was not assigned since the central technology is SSMS with Copilot, not Azure platform services. The content is technical, aimed at developers, and avoids all generic exclusion rules.",
+    "timestamp": "2025-10-16 16:06:36 +00:00",
+    "collection": "videos"
   }
 ]
