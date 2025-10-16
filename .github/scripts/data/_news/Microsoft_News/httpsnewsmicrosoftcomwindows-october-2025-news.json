@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_news",
+  "FeedUrl": "https://news.microsoft.com/source/feed/",
+  "Author": "stclarke",
+  "Description": "The post [Making every Windows 11 PC an AI PC: New Copilot and agentic experiences make powerful AI easy on Windows 11](https://news.microsoft.com/windows-october-2025-news/) appeared first on [Source](https://news.microsoft.com/source).",
+  "EnhancedContent": "![Windows 11 PC open from a left angle, with the Windows 11 logo in the upper left corner and words that say meet the computer you can talk to.](https://msftstories.thesourcemediaassets.com/sites/736/2025/10/Header-1900x1000-1.png)\n\n##\n\nWindows October 2025 news",
+  "FeedLevelAuthor": "Source",
+  "ProcessedDate": "2025-10-16 14:03:21",
+  "Link": "https://news.microsoft.com/windows-october-2025-news/",
+  "Title": "Making every Windows 11 PC an AI PC: New Copilot and agentic experiences make powerful AI easy on Windows 11",
+  "PubDate": "2025-10-16T13:10:39+00:00",
+  "FeedName": "Microsoft News",
+  "Tags": [
+    "AI",
+    "Company News"
+  ]
+}
