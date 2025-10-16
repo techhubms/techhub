@@ -12648,5 +12648,23 @@
     "collection": "videos",
     "timestamp": "2025-10-16 19:04:35 +00:00",
     "reason": "Succesfully added: Assigned the Coding category because the video content focuses on integrating development tools (VS Code, Code Connect) with design workflows (Figma MCP server), which relates to developer tooling and code generation practices (Coding rules 2, 4, and 5). While Microsoft products are mentioned (VS Code, Code Connect), there is no substantive central coverage of Azure, AI, ML, DevOps, or Security topics. There is no indication of GitHub Copilot or other AI tooling. The content does not fall under any generic exclusion rule, and the session fits the inclusion criteria for Coding due to its technical focus on integrating a developer tool with code and design workflows."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/10/16/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-siem/",
+    "collection": "news",
+    "timestamp": "2025-10-16 20:04:36 +00:00",
+    "reason": "Succesfully added: Assigned Security category due to the clear focus on Microsoft Sentinel as a Security Information and Event Management (SIEM) solution, references to SOC, threat detection, and integration with Microsoft Defender (Security rules 1, 2, 4, 5). Assigned AI category because the article describes advanced AI, agentic AI, AI-powered analytics, and embedded machine learning features in security operations (AI rules 1, 5). Assigned Azure because Microsoft Sentinel is a cloud-native, Azure-based service (Azure rule 1). Coding, ML, DevOps, and GitHub Copilot were not assigned since the content does not detail programming practices, developer tools, software engineering, model development from scratch, or DevOps methodologies."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-10-16-actions-runner-controller-release-0-13-0",
+    "collection": "news",
+    "timestamp": "2025-10-16 20:04:59 +00:00",
+    "reason": "Succesfully added: Assigned DevOps because the content centers on Actions Runner Controller, GitHub Actions self-hosted runner orchestration, CI/CD, and related operations (DevOps rules 2, 5, 6, 7). Assigned Azure because Azure Key Vault integration is a significant component, with specific implementation recommendations for Microsoft cloud (Azure rule 1, 2). Assigned Security because content discusses secure secret handling using Azure Key Vault, reducing exposure risk, and security improvements in ARC (Security rules 1, 2, 7). GitHub Copilot and AI categories don't apply as this update is for CI/CD infrastructure. ML does not apply as there is no data science/ML focus."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-10-16-grok-code-fast-1-is-now-generally-available-in-github-copilot",
+    "collection": "news",
+    "timestamp": "2025-10-16 20:05:17 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the content centers on the general availability of a new AI model ('Grok Code Fast 1') for GitHub Copilot, a developer-focused coding assistant, meeting both AI inclusion rule 1 and GitHub Copilot inclusion rules 1 and 2. Details reference developer tool integrations (various IDEs) and administrative setup but do not describe specific coding techniques or platform-specific deployment, so Coding, Azure, DevOps, ML, and Security do not apply."
   }
 ]
