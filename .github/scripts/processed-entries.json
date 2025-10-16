@@ -12570,5 +12570,17 @@
     "reason": "Succesfully added: Assigned the Azure category because the content discusses a feature update for Azure Virtual Machines Capacity Reservation Groups, focusing on cross-subscription sharing—a core Azure compute capability (Azure inclusion rule 1). The post did not present substantive coding procedures, DevOps practices, or AI/ML/security features, so those categories were not applied. The content is not biographical, not a question, not a sales pitch, and meets community content length and technical depth requirements, satisfying all inclusion and exclusion criteria.",
     "timestamp": "2025-10-15 23:05:08 +00:00",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security because the content centers on leaked secrets (access tokens, API keys) in Microsoft VS Code and Azure DevOps environments, as per Security category rules 1 and 2. Assigned DevOps because extension publishing/deployment and integration with Azure DevOps are key aspects discussed (DevOps rule 1, 5, 8). Assigned AI due to explicit mention of AI provider credentials (OpenAI, Anthropic, Google Gemini, etc.) being leaked, and the role of AI-assisted coding and tooling (AI rules 1, 4, 5). Assigned Azure since Azure DevOps tokens and services are central examples and Microsoft Azure services are directly referenced (Azure rules 1, 4, 5). Coding was considered, but the article is about extension management/security, not about programming practices or frameworks. Did not assign ML as machine learning engineering is not the focus. Determined no generic exclusion rules are triggered, as content is technical, in English, focused on Microsoft technologies, and provides actionable developer and security guidance.",
+    "timestamp": "2025-10-16 01:32:38 +00:00",
+    "canonical_url": "https://devops.com/massive-vs-code-secrets-leak-puts-focus-on-extensions-ai-wiz/",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content is centered on AI adoption in application security and DevSecOps, aligning with AI category rule 5 (high-level AI usage in organizational contexts). Assigned DevOps category as DevSecOps practices and their evolution with AI are the core focus (DevOps rule 3 and 5). Assigned Security category due to the emphasis on application security workflows, vulnerability detection, and remediation (Security rules 2 and 4). No mention of specific Microsoft technologies, so Azure, ML, Coding, and GitHub Copilot categories are not assigned.",
+    "timestamp": "2025-10-16 01:33:13 +00:00",
+    "canonical_url": "https://devops.com/survey-surfaces-widespread-adoption-of-ai-to-improve-devsecops/",
+    "collection": "posts"
   }
 ]

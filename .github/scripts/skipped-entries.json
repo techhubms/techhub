@@ -6885,5 +6885,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=EQaFEDCaeKg",
     "timestamp": "2025-10-15 20:05:46 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The provided description and title indicate this is an event promotion for skills development and certification (Microsoft Ignite, Microsoft Learn) with no substantive technical details, tutorial content, or focus on Microsoft development tools. It is primarily an announcement/sales pitch for an event and certification rather than a technical guide, tutorial, or deep-dive valid for categorization. No main content text is present to analyze further."
+  },
+  {
+    "reason": "No categories found: No categories were assigned because, while the article discusses developer responsibilities, AI integrations, and DevOps concepts generally, it does not focus on any Microsoft technology, framework, or platform (required for all available categories, per the Multi-Platform Content Threshold rule in Chapter 2 and all Category Inclusion Rules in Chapter 4). There is no substantial discussion of Azure, GitHub Copilot, Microsoft AI services, .NET coding, Microsoft-specific DevOps processes, ML platforms, or Microsoft security technologies. The input centers on OpenAI/ChatGPT's MCP protocol, which is not a Microsoft technology, and does not meet the ≥40% 'Microsoft content centrality' rule. Thus, exclusion is in accordance with required decision hierarchy.",
+    "timestamp": "2025-10-16 01:32:12 +00:00",
+    "canonical_url": "https://devops.com/chatgpt-developer-mode-full-mcp-access-with-serious-responsibilities/",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: No categories are assigned because the content is a commercial press release announcing the launch of a non-Microsoft-specific security product (MCPTotal) for securing MCP workflows. There are no substantive technical details about Microsoft products, services, or ecosystems meeting any specific category inclusion requirements. The content focuses on a new product's features, security positioning, and executive quotes—this triggers the generic exclusion for sales pitches (Generic Exclusion Rules: Sales Pitches), as well as the business strategy and executive content exclusion (Generic Exclusion Rules: Business Strategy and Executive Content). There is no evidence of deep technical implementation, developer workflow, or Microsoft technology centrality, so no categories can be assigned.",
+    "timestamp": "2025-10-16 01:32:51 +00:00",
+    "canonical_url": "https://devops.com/mcptotal-launches-to-power-secure-enterprise-mcp-workflows/",
+    "collection": "posts"
   }
 ]
