@@ -12642,5 +12642,11 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/from-files-to-delta-tables-parquet-json-data-ingestion-simplified-with-shortcut-transformations/",
     "timestamp": "2025-10-16 17:04:20 +00:00",
     "reason": "Succesfully added: Assigned the Azure category because the piece centers on a major Microsoft cloud data platform (Microsoft Fabric) and discusses core Azure data integration features (Azure rule 1, 4, 5, and 6). Assigned the ML category because the content focuses on development of data engineering pipelines, schema design, and prepares data for analytics and advanced BI/ML workloads—particularly with Delta tables, which are foundational for data science and analytics workloads on cloud platforms (ML rules 1, 2, 3, and 4). Did not assign AI, Coding, DevOps, or Security as there is no mention of AI features, code-level development, DevOps processes, or security implementations in the presented content."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=1DwXS__CVzg",
+    "collection": "videos",
+    "timestamp": "2025-10-16 19:04:35 +00:00",
+    "reason": "Succesfully added: Assigned the Coding category because the video content focuses on integrating development tools (VS Code, Code Connect) with design workflows (Figma MCP server), which relates to developer tooling and code generation practices (Coding rules 2, 4, and 5). While Microsoft products are mentioned (VS Code, Code Connect), there is no substantive central coverage of Azure, AI, ML, DevOps, or Security topics. There is no indication of GitHub Copilot or other AI tooling. The content does not fall under any generic exclusion rule, and the session fits the inclusion criteria for Coding due to its technical focus on integrating a developer tool with code and design workflows."
   }
 ]
