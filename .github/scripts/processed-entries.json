@@ -12666,5 +12666,17 @@
     "collection": "news",
     "timestamp": "2025-10-16 20:05:17 +00:00",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the content centers on the general availability of a new AI model ('Grok Code Fast 1') for GitHub Copilot, a developer-focused coding assistant, meeting both AI inclusion rule 1 and GitHub Copilot inclusion rules 1 and 2. Details reference developer tool integrations (various IDEs) and administrative setup but do not describe specific coding techniques or platform-specific deployment, so Coding, Azure, DevOps, ML, and Security do not apply."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-10-16 21:05:33 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-10-16-copilot-coding-agent-can-now-search-the-web",
+    "reason": "Succesfully added: Assigned 'AI' category because the content describes an AI-driven tool (GitHub Copilot agent) that automates development tasks and uses web search to supplement knowledge (AI rules 1 and 2). Assigned 'GitHub Copilot' because the focus is specifically on the Copilot coding agent, which is a feature of GitHub Copilot (GitHub Copilot inclusion rule 1). Did not include Coding, DevOps, Azure, ML, or Security as the content is not about code development details, DevOps workflows, Azure services, data science, or security implementation; it spotlights a developer tool enhancement."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-10-16 21:05:53 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-10-16-copilot-coding-agent-uses-better-branch-names-and-pull-request-titles",
+    "reason": "Succesfully added: Assigned 'AI' category as the content focuses on GitHub Copilot, a Microsoft AI-driven developer tool (AI rule 2). Assigned 'GitHub Copilot' category because the primary subject is Copilot's new coding agent and its workflow improvements (GitHub Copilot inclusion rule 1). Not assigned 'Coding' because the post is about workflow automation, not direct programming techniques. Not assigned 'DevOps', since this is focused more on Copilot's feature update rather than deployment, CI/CD, or team practices. No exclusion rules apply, as the news is technical, relevant, and not biographical, sales-focused, business/productivity-oriented, or negative."
   }
 ]
