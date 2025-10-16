@@ -12582,5 +12582,11 @@
     "timestamp": "2025-10-16 01:33:13 +00:00",
     "canonical_url": "https://devops.com/survey-surfaces-widespread-adoption-of-ai-to-improve-devsecops/",
     "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category due to the focus on benchmarking and measuring artificial intelligence systems, as detailed in the introduction and throughout the post, which aligns with AI category rule 1 and 4. Assigned the Security category because the benchmarking tool specifically targets cybersecurity use cases and reasoning around cyberattack scenarios (Security rule 1 and 4). The exclusion rules do not apply since the content is educational, in English, and provides substantive technical and architectural insight into security AI evaluation. No other categories were relevant as coding, DevOps, Azure, ML, or GitHub Copilot are not directly discussed in the text.",
+    "collection": "news",
+    "timestamp": "2025-10-16 02:30:42 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_microsoft-raises-the-bar-a-smarter-way-to-activity-7384329693614759936-VB0Z"
   }
 ]
