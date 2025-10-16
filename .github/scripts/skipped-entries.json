@@ -6915,5 +6915,17 @@
     "timestamp": "2025-10-16 14:04:42 +00:00",
     "canonical_url": "https://news.microsoft.com/windows-october-2025-news/",
     "collection": "news"
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the content is a high-level announcement and promotion for the Open Source Zone at GitHub Universe, featuring various open source projects (Homebrew, Oh My Zsh, OpenCV, etc.) with no substantive technical detail, hands-on implementation, or Microsoft technology focus. The description is promotional and event-oriented, primarily advertising a digital event and encouraging signups and social media engagement, rather than delivering technical knowledge or educational guidance relevant to Microsoft technologies. As per the generic exclusion rules, promotional content without technical depth or actionable Microsoft-centric information is excluded.",
+    "timestamp": "2025-10-16 15:05:08 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/Y_3UBot8M5A",
+    "collection": "videos"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-10-16 15:05:13 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/debug-asp-net-quot-this-site-can-t-be-reached-quot/m-p/4461833#M678",
+    "collection": "community"
   }
 ]

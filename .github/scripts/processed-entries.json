@@ -12606,5 +12606,11 @@
     "timestamp": "2025-10-16 14:05:14 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=wCI6Oqiv4KQ",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: The content qualifies for the 'AI' category as it centers on the expansion of Dragon Copilot, described explicitly as Microsoft's AI-driven clinical assistant leveraging ambient and generative AI. The update covers the integration of AI features into clinical and nursing workflows, partner AI app extensibility, and the embedding of AI-driven automation and clinical intelligence. None of the other categories (Azure, Coding, DevOps, ML, Security) apply, as there is no substantial technical discussion of Microsoft cloud services, programming, DevOps practices, machine learning engineering, or security architecture; the focus remains on AI-powered workflow tools for healthcare. No generic exclusion rules apply: the content is technical, English, of sufficient length, free from biographical, job/career, business strategy, or negative focus, and is not about consumer productivity Copilots or business-automation products.",
+    "timestamp": "2025-10-16 15:04:42 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/2025/10/16/microsoft-extends-ai-advancements-in-dragon-copilot-to-nurses-and-partners-to-enhance-patient-care/",
+    "collection": "news"
   }
 ]
