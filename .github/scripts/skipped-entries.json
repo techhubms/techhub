@@ -6903,5 +6903,11 @@
     "canonical_url": "https://dellenny.com/auditing-the-ai-how-to-use-the-copilot-interaction-export-api-for-compliance-logs/",
     "reason": "No categories found: Content is excluded due to generic exclusion rules — it is primarily focused on Microsoft 365 Copilot compliance and auditing in business productivity scenarios, not developer or technical implementation. The 'Copilot Interaction Export API' covers compliance, legal holds, eDiscovery, and audit, but does not discuss development, coding, AI engineering, or any developer-focused Copilot product. This is explicitly excluded under the Non-Development Microsoft Products rule in Chapter 3 and the Copilot Product Distinction in Chapter 2. Tags and content focus on compliance, governance, and regulatory alignment (business productivity), not on technical usage for developers.",
     "timestamp": "2025-10-16 07:04:18 +00:00"
+  },
+  {
+    "timestamp": "2025-10-16 09:04:19 +00:00",
+    "canonical_url": "https://dellenny.com/pre-flight-check-the-5-non-negotiable-sharepoint-cleanups-before-deploying-copilot/",
+    "collection": "posts",
+    "reason": "No categories found: All categories are excluded due to the generic exclusion rule for 'Non-Development Microsoft Products.' The content is exclusively focused on preparing SharePoint environments for Microsoft 365 Copilot, which is classified as a business productivity tool, not a developer tool (see Chapter 3, Non-Development Microsoft Products exclusion and Copilot Product Distinction). There is no coverage of development, coding, AI development, engineering or security implementation—rather, the post targets IT admins and business users responsible for data hygiene and governance prior to deploying a productivity/collaborative assistant. No included content pertains to SharePoint development, Power Platform development, or coding with Microsoft 365 APIs. Therefore, no categories are assigned."
   }
 ]
