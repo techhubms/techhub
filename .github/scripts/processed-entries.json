@@ -12636,5 +12636,11 @@
     "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the video focuses on GitHub Copilot integration inside SQL Server Management Studio (AI rule 2, GitHub Copilot rule 1). Assigned Coding because it demonstrates Copilot aiding T-SQL script writing and database development tasks (Coding rule 4). Azure was not assigned since the central technology is SSMS with Copilot, not Azure platform services. The content is technical, aimed at developers, and avoids all generic exclusion rules.",
     "timestamp": "2025-10-16 16:06:36 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/from-files-to-delta-tables-parquet-json-data-ingestion-simplified-with-shortcut-transformations/",
+    "timestamp": "2025-10-16 17:04:20 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the piece centers on a major Microsoft cloud data platform (Microsoft Fabric) and discusses core Azure data integration features (Azure rule 1, 4, 5, and 6). Assigned the ML category because the content focuses on development of data engineering pipelines, schema design, and prepares data for analytics and advanced BI/ML workloads—particularly with Delta tables, which are foundational for data science and analytics workloads on cloud platforms (ML rules 1, 2, 3, and 4). Did not assign AI, Coding, DevOps, or Security as there is no mention of AI features, code-level development, DevOps processes, or security implementations in the presented content."
   }
 ]

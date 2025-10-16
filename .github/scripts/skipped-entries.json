@@ -6939,5 +6939,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rules for non-development Microsoft products and business productivity tools. The post centers on Microsoft Copilot as integrated into Windows PCs for end-user productivity and natural interaction, not for software development, coding, or IT implementation. As per the CRITICAL: Copilot Product Distinction and Non-Development Microsoft Products rules, business productivity Copilot (such as 'Microsoft Copilot' in Windows and Microsoft 365) content is explicitly excluded from all categories. The content does not provide technical implementation, developer guidance, or code-level details, and instead demonstrates consumer-facing features and general use case scenarios.",
     "timestamp": "2025-10-16 16:05:45 +00:00",
     "collection": "news"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/news-insights/company-news/how-to-navigate-github-universe-or-any-tech-conference-if-youre-an-introvert/",
+    "timestamp": "2025-10-16 17:04:36 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The article 'How to navigate GitHub Universe (or any tech conference) if you’re an introvert' is primarily focused on conference attendance best practices for introverts and does not contain substantive technical content related to Microsoft technologies or development. It does not cover any of the defined technical categories such as Coding, DevOps, AI, ML, Azure, Security, or GitHub Copilot. The article is advice-oriented, discussing personal experience, event comfort, networking tips, and general participation strategies, which falls under the excluded business/workplace category. Therefore, it does not qualify for any categories per the exclusion rules."
   }
 ]
