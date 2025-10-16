@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-10-16 15:04:01",
+  "OutputDir": "_community",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet",
+  "PubDate": "2025-10-15T22:35:40+00:00",
+  "Title": "Debug Asp.Net - \"This site can't be reached\"",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "EnhancedContent": "Hello,\n\nToday, all my Visual Studio 2019 Community projects stopped debugging and are displaying the following message in the browser: \"This site can't be reached.\"\n\nI've tried using Visual Studio 2022 Community, but the problem is the same. I have numerous projects (Asp.Net - vb), and they all have the same issue. Even creating a new project (VS 20219 or VS 2022), the error persists. I've tried reinstalling IIS Express, disabling my antivirus, and reinstalling Visual Studio 2022 (since it was just for testing). Nothing works.\n\nEverything was working until yesterday, but now I can't work anymore. It seems like a Windows update, but I don't have restore points to revert to.\n\nI'd appreciate it if anyone has any idea what this could be.\n\nEduardo",
+  "FeedName": "Microsoft Tech Community",
+  "Tags": [],
+  "Description": "Hello,\n\nToday, all my Visual Studio 2019 Community projects stopped debugging and are displaying the following message in the browser: \"This site can't be reached.\"\n\nI've tried using Visual Studio 2022 Community, but the problem is the same. I have numerous projects (Asp.Net - vb), and they all have the same issue. Even creating a new project (VS 20219 or VS 2022), the error persists. I've tried reinstalling IIS Express, disabling my antivirus, and reinstalling Visual Studio 2022 (since it was just for testing). Nothing works.\n\nEverything was working until yesterday, but now I can't work anymore. It seems like a Windows update, but I don't have restore points to revert to.\n\nI'd appreciate it if anyone has any idea what this could be.\n\nEduardo",
+  "Author": "EduardoFornaro",
+  "Link": "https://techcommunity.microsoft.com/t5/web-development/debug-asp-net-quot-this-site-can-t-be-reached-quot/m-p/4461833#M678"
+}
