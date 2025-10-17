@@ -12738,5 +12738,11 @@
     "reason": "Succesfully added: Assigned DevOps category because the article is focused on modern developer platforms, automation, CI/CD, and environment provisioning, fitting several DevOps rules (DevOps rules 3, 5, 6, 9). Assigned Azure because Microsoft Dev Box is an Azure-hosted service and the content references Azure integration and usage directly (Azure rules 1, 2, 4). Assigned Coding because the example workflows involve actual development tasks (Python, FastAPI, React, Docker) and developer environment setup (Coding rules 1, 2, 4). Did not assign ML, AI, GitHub Copilot, or Security, as the central focus remains platform tooling, workflow, and productivity—not AI, ML, or security features. Content is technical, practical, lengthy, and aligns with all quality standards, with no exclusion triggers.",
     "collection": "community",
     "timestamp": "2025-10-17 18:06:06 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-10-17-copilot-cli-multiline-input-new-mcp-enhancements-and-haiku-4-5",
+    "collection": "news",
+    "timestamp": "2025-10-17 19:03:52 +00:00",
+    "reason": "Succesfully added: Included 'GitHub Copilot' and 'AI' because the content focuses on GitHub Copilot CLI's new features, improvements, and AI model support per AI category rule 2 and GitHub Copilot rule 1. Added 'Coding' as the CLI updates and integrations directly impact developer workflows consistent with Coding inclusion rule 2. The article is technical, developer-focused, and revolves around Microsoft-related tooling, thus meeting including criteria and not triggering any generic exclusions."
   }
 ]
