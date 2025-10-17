@@ -6945,5 +6945,29 @@
     "canonical_url": "https://github.blog/news-insights/company-news/how-to-navigate-github-universe-or-any-tech-conference-if-youre-an-introvert/",
     "timestamp": "2025-10-16 17:04:36 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The article 'How to navigate GitHub Universe (or any tech conference) if you’re an introvert' is primarily focused on conference attendance best practices for introverts and does not contain substantive technical content related to Microsoft technologies or development. It does not cover any of the defined technical categories such as Coding, DevOps, AI, ML, Azure, Security, or GitHub Copilot. The article is advice-oriented, discussing personal experience, event comfort, networking tips, and general participation strategies, which falls under the excluded business/workplace category. Therefore, it does not qualify for any categories per the exclusion rules."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/sensitivity-labels-vs-copilot-creating-an-ai-policy-that-honors-information-protection-mip/",
+    "reason": "No categories found: No categories assigned. The primary focus of this article is on Microsoft 365 Copilot (a business productivity tool), Microsoft Information Protection, and the application of sensitivity labels for compliance and information governance within Microsoft 365 apps. According to the workflow's generic exclusion rules, content about Microsoft 365 Copilot, Copilot for Microsoft 365, or Office Copilot (i.e., business productivity/office tools) must not be categorized, as these are not considered development tools or relevant to coding/dev/DevOps/AI product development. The article does not discuss GitHub Copilot, Copilot Studio, developer-focused AI tooling, nor does it present substantial information about coding, DevOps, Azure, ML, or security from a development or engineering perspective. It is entirely oriented toward end-user productivity and compliance/governance within Microsoft 365. Therefore, per the explicit Copilot Product Distinction and Non-Development Microsoft Products exclusion, this content is excluded from all categories.",
+    "timestamp": "2025-10-17 15:04:07 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=4dhkm6PSb1c",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the content is not primarily in English (less than 80% of the main text is English), as required by the Non-English Content exclusion rule. The title and description are written in Portuguese, thus failing the language requirement set forth in Chapter 3.",
+    "timestamp": "2025-10-17 15:04:26 +00:00"
+  },
+  {
+    "reason": "No categories found: All categories are excluded due to the generic exclusion rule for non-development Microsoft products (Chapter 3: Non-Development Microsoft Products). The content centers entirely on using 'Microsoft Copilot Chat' within Microsoft 365 for legal and eDiscovery purposes (emails, Teams, SharePoint, OneDrive, Microsoft Purview). This is described as a business productivity workflow for compliance, governance, and legal teams—NOT as a development or maker tool, and not related to code development, AI development, custom solution building, or developer tooling. Under the Copilot Product Distinction in Chapter 2, 'Microsoft 365 Copilot' (including productivity, compliance, and eDiscovery use-cases) is explicitly excluded. While the terms AI and Copilot appear, the context is for IT/compliance/legal business productivity, not developer/maker enablement. Therefore, per the critical rule, NO categories apply.",
+    "canonical_url": "https://dellenny.com/litigation-hold-in-seconds-using-copilot-to-identify-relevant-communication-threads/",
+    "timestamp": "2025-10-17 16:07:02 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: Content is excluded because it is focused exclusively on Microsoft Copilot for Microsoft 365, which is a business productivity tool and not a developer product or technical developer/maker tool. According to the Generic Exclusion Rules in Chapter 3 and the Copilot Product Distinction in Chapter 2, any content about 'Microsoft 365 Copilot', 'Copilot for Microsoft 365', or 'Office Copilot' is explicitly excluded from categorization, regardless of how technical it becomes in the governance, adoption, or IT monitoring domain. The content does not discuss development, coding, automation, AI development services, or any other qualifying category, but instead focuses on usage telemetry, governance, and compliance for a business productivity tool within Microsoft 365. No categories assigned.",
+    "canonical_url": "https://dellenny.com/the-copilot-impact-report-turning-usage-telemetry-into-actionable-governance-insights/",
+    "timestamp": "2025-10-17 16:07:16 +00:00",
+    "collection": "posts"
   }
 ]
