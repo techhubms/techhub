@@ -12696,5 +12696,11 @@
     "canonical_url": "https://devops.com/beyond-the-platform-how-enterprises-can-unify-their-devops-toolchains-for-better-governance-and-ai-readiness/",
     "collection": "posts",
     "timestamp": "2025-10-17 05:04:03 +00:00"
+  },
+  {
+    "timestamp": "2025-10-17 08:05:19 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/langchain-v1-is-now-generally-available/ba-p/4462159",
+    "reason": "Succesfully added: Assigned the AI category because the entire content centers on building and orchestrating agentic LLM (AI) applications with LangChain, including Azure AI and Azure OpenAI integration (AI inclusion rules 1, 4). Assigned Azure category because there is explicit, recurring focus on Azure AI Foundry, Azure OpenAI, and integrations relevant to Microsoft cloud platforms (Azure inclusion rules 1 and 3). Coding and ML categories are not assigned as the post is about a major AI library release and developer usage pattern, not showing in-depth code, algorithms, or data science/ML practices per se. There is no irrelevant or exclusionary business or productivity focus, and content is technical, detailed, and well above the 200-word community post threshold."
   }
 ]
