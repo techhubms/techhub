@@ -15,7 +15,8 @@ layout: null
 
   {%- comment -%} Get all documents from all collections that have the GitHub Copilot tag {%- endcomment -%}
   {%- assign all_items = site.documents | where_exp: "item", "item.date" -%}
-  {%- assign filtered_items = all_items | where_exp: "item", "item.tags contains 'GitHub Copilot'" -%}
+  {%- assign published_items = all_items | where_exp: "item", "item.date <= site.time" -%}
+  {%- assign filtered_items = published_items | where_exp: "item", "item.tags contains 'GitHub Copilot'" -%}
   {%- assign sorted_items = filtered_items | sort: 'date' | reverse -%}
   {%- assign latest_items = sorted_items | slice: 0, 50 -%}
 

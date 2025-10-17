@@ -15,7 +15,8 @@ layout: null
 
   {%- comment -%} Get all items from roundups collection only {%- endcomment -%}
   {%- assign roundup_items = site.roundups | where_exp: "item", "item.date" -%}
-  {%- assign sorted_items = roundup_items | sort: 'date' | reverse -%}
+  {%- assign published_items = roundup_items | where_exp: "item", "item.date <= site.time" -%}
+  {%- assign sorted_items = published_items | sort: 'date' | reverse -%}
 
   {%- for item in sorted_items -%}
   <entry>
