@@ -12702,5 +12702,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/langchain-v1-is-now-generally-available/ba-p/4462159",
     "reason": "Succesfully added: Assigned the AI category because the entire content centers on building and orchestrating agentic LLM (AI) applications with LangChain, including Azure AI and Azure OpenAI integration (AI inclusion rules 1, 4). Assigned Azure category because there is explicit, recurring focus on Azure AI Foundry, Azure OpenAI, and integrations relevant to Microsoft cloud platforms (Azure inclusion rules 1 and 3). Coding and ML categories are not assigned as the post is about a major AI library release and developer usage pattern, not showing in-depth code, algorithms, or data science/ML practices per se. There is no irrelevant or exclusionary business or productivity focus, and content is technical, detailed, and well above the 200-word community post threshold."
+  },
+  {
+    "timestamp": "2025-10-17 12:04:50 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=4Jfy0L82DZo",
+    "reason": "Succesfully added: Assigned the Azure category because the video centrally covers Azure service updates, including Azure Functions, AKS, Event Grid, Azure Firewall, storage, and more (Azure inclusion rules 1 and 4). Assigned the AI category due to the mention of GPT-image-1-mini and the Custom Vision retirement, both of which are Microsoft AI platform features (AI inclusion rules 1 and 5). Did not assign other categories because while there are references to DevOps, Security, and Data, the content lacks substantial technical depth or focused implementation details on these topics within the provided summary. The input is also in English, exceeds community content length requirements, and is not biographical, sales pitch, or business management content."
   }
 ]
