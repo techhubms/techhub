@@ -12726,5 +12726,11 @@
     "canonical_url": "https://github.blog/open-source/accelerate-developer-productivity-with-these-9-open-source-ai-and-mcp-projects/",
     "timestamp": "2025-10-17 16:06:44 +00:00",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/beyond-basics-practical-scenarios-with-azure-storage-actions/ba-p/4447151",
+    "reason": "Succesfully added: Assigned the Azure category because the entire content is dedicated to implementing, automating, and managing storage policies and actions specifically using Azure Storage technologies (Azure rule 1 and 4). Assigned the AI and ML categories because two scenarios specifically discuss automation in ML workflows and AI embedding management—scenario 2 details audit-proofing model training datasets for machine learning (ML rule 1/2/5/6), and scenario 3 focuses on automating the cleanup of embeddings in Retrieval-Augmented Generation (RAG) AI systems (AI rule 4, ML rule 6, and 9). Did not use Coding or DevOps, as the article focuses on configuration, automation, and governance via Azure Storage, rather than application development or DevOps pipelines. Security is not specifically discussed, as true security configuration or architecture is not the focus.",
+    "timestamp": "2025-10-17 17:05:45 +00:00",
+    "collection": "community"
   }
 ]
