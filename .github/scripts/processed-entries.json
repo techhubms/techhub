@@ -12708,5 +12708,23 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=4Jfy0L82DZo",
     "reason": "Succesfully added: Assigned the Azure category because the video centrally covers Azure service updates, including Azure Functions, AKS, Event Grid, Azure Firewall, storage, and more (Azure inclusion rules 1 and 4). Assigned the AI category due to the mention of GPT-image-1-mini and the Custom Vision retirement, both of which are Microsoft AI platform features (AI inclusion rules 1 and 5). Did not assign other categories because while there are references to DevOps, Security, and Data, the content lacks substantial technical depth or focused implementation details on these topics within the provided summary. The input is also in English, exceeds community content length requirements, and is not biographical, sales pitch, or business management content."
+  },
+  {
+    "reason": "Succesfully added: AI category is included because the solution is explicitly described as an AI-driven tool (AI rule 1), using AI embedding and semantic clustering techniques. Azure category is included because the tool is built to support Azure product teams and leverages Azure infrastructure (Azure rules 1 and 4). 'Coding', 'DevOps', 'ML', 'Security', and 'GitHub Copilot' categories are not assigned as there is no in-depth focus on application coding, DevOps practices, custom ML engineering, security, or GitHub Copilot development. The post is not a sales pitch or biographical story (biographical content is present but does not dominate), nor does it fall under any generic or format-based exclusions.",
+    "canonical_url": "https://www.microsoft.com/en-us/garage/wall-of-fame/cx-observe-product-feedback/",
+    "timestamp": "2025-10-17 16:05:54 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: The content qualifies for both 'AI' and 'GitHub Copilot' categories. The core topic is an update to the GPT-4.1 Copilot model, which directly relates to GitHub Copilot (GitHub Copilot rule 1) and constitutes an advancement in AI-powered developer tooling (AI rule 1 and 2). No Coding, Azure, DevOps, ML, or Security categories apply, as the article is focused specifically on Copilot's AI model improvement for code suggestions, not on broader code, deployment, or security implementation details.",
+    "canonical_url": "https://github.blog/changelog/2025-10-17-gpt-4-1-copilot-code-completion-model-october-update",
+    "timestamp": "2025-10-17 16:06:16 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: The categories 'AI' and 'GitHub Copilot' apply because the content centrally discusses MCP projects sponsored by the GitHub Copilot and VS Code teams, focusing on AI-native development tooling (AI inclusion rule 1 and 2, Copilot rule 1). The 'Coding' category is included since these projects target developer workflows, code integration, IDE assistants, and productivity tools for developers, directly linking to Microsoft's coding tool ecosystem (Coding rules 2, 4, and 5). Azure or DevOps categories are not assigned as the article does not focus on Azure services or DevOps practices. ML is not selected because it is not centered on machine learning techniques but rather practical AI/agent tooling and automation.",
+    "canonical_url": "https://github.blog/open-source/accelerate-developer-productivity-with-these-9-open-source-ai-and-mcp-projects/",
+    "timestamp": "2025-10-17 16:06:44 +00:00",
+    "collection": "news"
   }
 ]
