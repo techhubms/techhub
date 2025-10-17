@@ -1,0 +1,14 @@
+{
+  "Tags": [],
+  "Description": "Keep .prompt.md and copilot-instructions.md in Git, review with PRs, and evolve prompts like code.",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "ProcessedDate": "2025-10-17 20:03:33",
+  "Title": "Treat Your AI Prompts Like Code",
+  "Link": "https://www.cooknwithcopilot.com/blog/treat-your-ai-prompts-like-code.html",
+  "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
+  "OutputDir": "_posts",
+  "FeedName": "Randy Pagels's Blog",
+  "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Treat Your AI Prompts Like Code\n\n*Posted on Oct 17, 2025*\n\nUsage\n\nYou have seen how `.prompt.md` can store reusable prompts right inside your repo.\n\nBut what happens when your team updates those prompts or wants to refine them over time?\n\nJust like source code, prompts evolve, so you should version them, review them, and improve them with your team.\n\nProTip\n\n**Keep Prompts Under Version Control**\n\nPrompts are not one and done. They are living instructions.\n\nBy keeping them in version control, you create a history of what worked, what did not, and why certain prompts were changed.\n\nTry These Approaches\n\n**1️⃣ Version Your .prompt.md and copilot-instructions.md**\n\n- Store these files at the root of your repo.\n- Every change is tracked in Git just like code.\n- Example commit message, `\"Refine unit test prompt for better error handling\"`\n\n**2️⃣ Use Pull Requests for Prompt Changes**\n\n- Treat prompt edits like code edits.\n- Open a PR when you refine or add a new prompt.\n- Use Copilot Chat to summarize or review the changes.\n- Example, `# Summarize the changes in this .prompt.md update`\n\n**3️⃣ Document the Reason for Changes**\n\n- In PR descriptions, explain why the prompt changed.\n- Example, “Updated the refactoring prompt to emphasize TypeScript over JavaScript.”\n\n**4️⃣ Iterate with Feedback**\n\n- Review prompt changes in team discussions.\n- Ask Copilot to suggest refinements or flag inconsistencies.\n- Example, `# Check this .prompt.md for clarity and duplication`\n\nQuick Warning\n\nBe mindful of drift. If you have multiple repos, keep prompt standards aligned.\n\nOtherwise, teams may end up with different versions of the same prompt.\n\nQuick Takeaway\n\nPrompts are part of your development process, not just throwaway instructions.\n\nVersion them like code, review them like code, and you will build a library of effective prompts that grows stronger with your team’s input.",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "PubDate": "2025-10-17T00:00:00+00:00"
+}

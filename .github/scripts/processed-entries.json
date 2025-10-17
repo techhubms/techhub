@@ -12744,5 +12744,17 @@
     "collection": "news",
     "timestamp": "2025-10-17 19:03:52 +00:00",
     "reason": "Succesfully added: Included 'GitHub Copilot' and 'AI' because the content focuses on GitHub Copilot CLI's new features, improvements, and AI model support per AI category rule 2 and GitHub Copilot rule 1. Added 'Coding' as the CLI updates and integrations directly impact developer workflows consistent with Coding inclusion rule 2. The article is technical, developer-focused, and revolves around Microsoft-related tooling, thus meeting including criteria and not triggering any generic exclusions."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' because the article directly focuses on usage patterns and advice for working with different Copilot modes (GitHub Copilot category rule 1). Also assigned 'AI' because GitHub Copilot is an AI-driven development tool and 'AI' is always assigned alongside 'GitHub Copilot' (GitHub Copilot category critical rule). Did not include other categories as the content is not focused on general coding techniques or non-Copilot platforms. The content explicitly addresses Copilot features and optimizing context for code assistance.",
+    "collection": "posts",
+    "timestamp": "2025-10-17 20:05:00 +00:00",
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/how-much-context-should-you-give.html"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the content concerns best practices around AI prompt engineering files and Copilot instructions (AI rule 3 and 4). 'Coding' is included because developers are advised to integrate prompt management directly into their workflow with code-like practices (Coding rule 4 and 5). 'DevOps' is assigned because it covers collaboration, PRs, and version control as part of the software lifecycle (DevOps rules 3, 5, and 9). 'GitHub Copilot' is included as specific Copilot instruction files and Copilot Chat are referenced (GitHub Copilot rules 1 and 2). The advice is technical, targets developers, and matches required quality and inclusion criteria. No generic exclusions apply.",
+    "collection": "posts",
+    "timestamp": "2025-10-17 20:05:19 +00:00",
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/treat-your-ai-prompts-like-code.html"
   }
 ]
