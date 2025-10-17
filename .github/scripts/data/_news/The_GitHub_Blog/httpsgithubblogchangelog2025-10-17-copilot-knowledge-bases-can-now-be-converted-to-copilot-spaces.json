@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-10-17T20:49:48+00:00",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "OutputDir": "_news",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "Link": "https://github.blog/changelog/2025-10-17-copilot-knowledge-bases-can-now-be-converted-to-copilot-spaces",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2025-10-17 22:02:39",
+  "EnhancedContent": "Ahead of the [sunset of Copilot knowledge bases](https://github.blog/changelog/2025-08-20-sunset-notice-copilot-knowledge-bases/) on November 1, 2025, we’ve introduced a new way for you to migrate your legacy knowledge bases into a Copilot Space. Simply press the **Convert to Space** button under each knowledge base you want to convert into its own space.\n\n## 🔐 Security by design\n\nFor security and peace of mind, each knowledge base is converted to an individual space for organization admins to manage and test. When they’re ready, they can promote them for organizational access on their terms.\n\n## 📂 Examples of how\u2028teams are already using Copilot Spaces\n\n- Generating code that follows security patterns, API standards, and team preferences.\n- Sharing knowledge like SQL/KQL queries, telemetry schemas, or best-practice auth docs.\n- Onboarding new developers by giving them instant access to curated project knowledge.\n- Planning projects and create issues by centralizing PRDs and decisions in one space.\n\n## 💬 Get started\n\n- Try Copilot Spaces today at [github.com/copilot/spaces](https://github.com/copilot/spaces?utm_source=changelog-source-product&amp;utm_campaign=copilot-spaces-launch-sep-2025). Spaces are currently available in github.com for all Copilot users.\n- Provide feedback in the Copilot Spaces [community discussion](https://github.com/orgs/community/discussions/174462?utm_source=changelog-source-feedback-post&amp;utm_campaign=copilot-spaces-launch-sep-2025) or using the inline **Give feedback** button in the UI.\n- Learn more about spaces in our [documentation on Copilot Spaces](https://docs.github.com/copilot/concepts/context/spaces?utm_source=changelog-source-docs&amp;utm_campaign=copilot-spaces-launch-sep-2025).\n- Copilot Spaces follow the same [billing model](https://docs.github.com/copilot/concepts/billing/copilot-requests) as Copilot Chat.",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Author": "Allison",
+  "Description": "Ahead of the sunset of Copilot knowledge bases on November 1, 2025, we’ve introduced a new way for you to migrate your legacy knowledge bases into a Copilot Space. Simply…\n\nThe post [Copilot knowledge bases can now be converted to Copilot Spaces](https://github.blog/changelog/2025-10-17-copilot-knowledge-bases-can-now-be-converted-to-copilot-spaces) appeared first on [The GitHub Blog](https://github.blog).",
+  "Title": "Copilot knowledge bases can now be converted to Copilot Spaces"
+}

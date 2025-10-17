@@ -12756,5 +12756,17 @@
     "collection": "posts",
     "timestamp": "2025-10-17 20:05:19 +00:00",
     "canonical_url": "https://www.cooknwithcopilot.com/blog/treat-your-ai-prompts-like-code.html"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-10-17 22:03:56 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories because the content announces a feature for GitHub Copilot (developer-focused coding AI), specifically relating to organizational knowledge bases and workflows. The announcement is directly about a GitHub Copilot capability (migrating knowledge bases to Copilot Spaces), fitting the AI category (AI rules 1 and 2) and GitHub Copilot category (rules 1, 2, and 3). Content is not about business productivity, but about developer and team collaboration using AI-powered coding tools, so it does not fall under the generic non-development Copilot exclusion. Content does not fit Coding, DevOps, Azure, ML, or Security as those aspects are not deeply covered. All generic exclusion rules were checked and do not apply.",
+    "canonical_url": "https://github.blog/changelog/2025-10-17-copilot-knowledge-bases-can-now-be-converted-to-copilot-spaces"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-10-17 22:04:32 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content exclusively discusses new Azure Virtual Machine customization features, including technical details about disabling SMT/hyperthreading and configuring constrained core counts (Azure category rule 1 and 4). No other categories apply: there is no coverage of ML/data science, AI services, code, developer frameworks, security practices, or DevOps pipelines. The tags are drawn from the main technical topics, feature names, usage methods, and targeted workloads mentioned in the announcement.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-public-preview-of-vm-customization-in-azure-disable/ba-p/4462417"
   }
 ]
