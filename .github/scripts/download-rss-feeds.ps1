@@ -285,17 +285,11 @@ try {
                     $contentProcessingSuccessful = $false
                     try {
                         if ($processingItem.IsYouTube) {
-                            Write-Host "    📺 Processing YouTube item: $($item.Title.Substring(0, [Math]::Min(50, $item.Title.Length)))..."
+                            Write-Host "    📺 Processing YouTube content: $($item.Title.Substring(0, [Math]::Min(50, $item.Title.Length)))..."
                             $contentProcessingSuccessful = $true
                         }
                         elseif ($contentMap.ContainsKey($item.Link)) {
-                            $contentType = if ($processingItem.IsReddit) { 
-                                "Reddit" 
-                            }
-                            else { 
-                                "web" 
-                            }
-                            Write-Host "    🔍 Processing $contentType content: $($item.Title.Substring(0, [Math]::Min(50, $item.Title.Length)))..."
+                            Write-Host "    🔍 Processing regular content: $($item.Title.Substring(0, [Math]::Min(50, $item.Title.Length)))..."
                             
                             $htmlContent = $contentMap[$item.Link]
                             $mainContent = Get-MainContentFromHtml -InputHtml $htmlContent -SourceUrl $item.Link

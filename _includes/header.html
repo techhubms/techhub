@@ -14,6 +14,11 @@ Also handle URL parameters: ?section=ai
   {%- endif -%}
 {%- endif -%}
 
+{%- comment -%} Fallback: if section not found in URL, check page.section frontmatter {%- endcomment -%}
+{%- if current_section == "" and page.section -%}
+  {%- assign current_section = page.section -%}
+{%- endif -%}
+
 {%- assign current_collection = "" -%}
 {%- if page.collection -%}
   {%- assign current_collection = page.collection -%}
