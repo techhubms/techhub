@@ -12678,5 +12678,17 @@
     "timestamp": "2025-10-16 21:05:53 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-10-16-copilot-coding-agent-uses-better-branch-names-and-pull-request-titles",
     "reason": "Succesfully added: Assigned 'AI' category as the content focuses on GitHub Copilot, a Microsoft AI-driven developer tool (AI rule 2). Assigned 'GitHub Copilot' category because the primary subject is Copilot's new coding agent and its workflow improvements (GitHub Copilot inclusion rule 1). Not assigned 'Coding' because the post is about workflow automation, not direct programming techniques. Not assigned 'DevOps', since this is focused more on Copilot's feature update rather than deployment, CI/CD, or team practices. No exclusion rules apply, as the news is technical, relevant, and not biographical, sales-focused, business/productivity-oriented, or negative."
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' since the service leverages Copilot in Azure, enabling natural language queries and AI-driven insights (AI rule 1, AI rule 5). Assigned 'Azure' because Azure Storage Discovery exclusively analyzes and manages data within Microsoft Azure storage solutions (Azure rules 1 and 4). Assigned 'Security' because the content highlights security best practices, security configuration reporting, and integration with identity systems like Microsoft Entra ID (Security rules 1, 2, 3, 4). Did not assign 'Coding,' 'DevOps,' 'GitHub Copilot,' or 'ML' since the article focuses on platform management and analytics, not application development, code, deployment, or machine learning engineering.",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/",
+    "timestamp": "2025-10-17 03:18:49 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: The content is a Microsoft news announcement about Sora 2 launching in Azure AI Foundry. It qualifies for the 'AI' category because it discusses an advanced OpenAI video generation model available through Microsoft's AI platform (AI rule 1 and 5). The 'Azure' category applies since Azure AI Foundry is central to the offering and integration (Azure rule 1 and 4). No other categories were applied because the focus is on platform features and developer enablement, not on code-level development, DevOps, ML tooling, or security implementation (security is mentioned primarily in the context of platform features, not hands-on technical security integration).",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/sora-2-now-available-in-azure-ai-foundry/",
+    "timestamp": "2025-10-17 03:19:11 +00:00"
   }
 ]
