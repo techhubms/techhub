@@ -12690,5 +12690,11 @@
     "reason": "Succesfully added: The content is a Microsoft news announcement about Sora 2 launching in Azure AI Foundry. It qualifies for the 'AI' category because it discusses an advanced OpenAI video generation model available through Microsoft's AI platform (AI rule 1 and 5). The 'Azure' category applies since Azure AI Foundry is central to the offering and integration (Azure rule 1 and 4). No other categories were applied because the focus is on platform features and developer enablement, not on code-level development, DevOps, ML tooling, or security implementation (security is mentioned primarily in the context of platform features, not hands-on technical security integration).",
     "canonical_url": "https://azure.microsoft.com/en-us/blog/sora-2-now-available-in-azure-ai-foundry/",
     "timestamp": "2025-10-17 03:19:11 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned DevOps category because the content is centrally about DevOps toolchains, CI/CD practices, and team workflows (DevOps rules 1–6, 9). Assigned AI category as the article discusses the importance of AI readiness, data context for generative AI, and enabling AI-driven DevOps automation (AI rules 1, 5). Assigned Security category as it addresses governance, security enforcement, compliance, and protection against AI-driven threats (Security rules 1, 2, 7, 9). There is no software/code or platform-specific development to justify Azure, Coding, or ML categories. Content is not a sales pitch as it explores technical concepts, challenges, and architectural solutions around governance, AI, and security.",
+    "canonical_url": "https://devops.com/beyond-the-platform-how-enterprises-can-unify-their-devops-toolchains-for-better-governance-and-ai-readiness/",
+    "collection": "posts",
+    "timestamp": "2025-10-17 05:04:03 +00:00"
   }
 ]
