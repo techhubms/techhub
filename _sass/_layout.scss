@@ -405,6 +405,50 @@
 
 
 /**
+ * Page heading with RSS icon
+ */
+.page-heading-with-rss {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 0;
+  
+  .page-heading {
+    margin-bottom: 0;
+  }
+  
+  .rss-icon-link {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    
+    .rss-icon {
+      width: 20px;
+      height: 20px;
+      fill: colors.$medium-gray;
+      transition: fill 0.2s ease;
+    }
+    
+    @media (hover: hover) {
+      &:hover .rss-icon {
+        fill: colors.$bright-purple;
+      }
+    }
+  }
+  
+  @include settings.media-query(settings.$on-mobile) {
+    gap: 10px;
+    
+    .rss-icon-link .rss-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+/**
  * Posts
  */
 .post-header {
