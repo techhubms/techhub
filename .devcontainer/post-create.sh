@@ -8,15 +8,27 @@ echo "Setting up development environment..."
 # Ensure Node.js tools are available system-wide by creating symlinks
 # This fixes issues where npx/npm aren't available in sudo context or other shells
 echo "Setting up Node.js tools system-wide..."
-# Find the current nvm-managed node/npm/npx paths
-NODE_PATH=$(which node)
-NPM_PATH=$(which npm)
-NPX_PATH=$(which npx)
 
-# Create symlinks in /usr/local/bin so they're available in all contexts
-sudo ln -sf "$NODE_PATH" /usr/local/bin/node || echo "Node symlink already exists"
-sudo ln -sf "$NPM_PATH" /usr/local/bin/npm || echo "NPM symlink already exists"
-sudo ln -sf "$NPX_PATH" /usr/local/bin/npx || echo "NPX symlink already exists"
+# Find the current nvm-managed node/npm/npx paths
+# Use /usr/local/share/nvm/current/bin as fallback if which doesn't work
+if [ -d "/usr/local/share/nvm/current/bin" ]; then
+    NODE_PATH="/usr/local/share/nvm/current/bin/node"
+    NPM_PATH="/usr/local/share/nvm/current/bin/npm"
+    NPX_PATH="/usr/local/share/nvm/current/bin/npx"
+else
+    NODE_PATH=$(which node 2>/dev/null || echo "")
+    NPM_PATH=$(which npm 2>/dev/null || echo "")
+    NPX_PATH=$(which npx 2>/dev/null || echo "")
+fi
+
+# Only create symlinks if we found the paths
+if [ -n "$NODE_PATH" ] && [ -f "$NODE_PATH" ]; then
+    sudo ln -sf "$NODE_PATH" /usr/local/bin/node || echo "Node symlink already exists"
+    sudo ln -sf "$NPM_PATH" /usr/local/bin/npm || echo "NPM symlink already exists"
+    sudo ln -sf "$NPX_PATH" /usr/local/bin/npx || echo "NPX symlink already exists"
+else
+    echo "Warning: Node.js not found, skipping symlink creation"
+fi
 
 echo "Node.js tools available system-wide:"
 echo "  node: $(ls -la /usr/local/bin/node)"
@@ -36,14 +48,14 @@ npm install -g npm-check-updates
 echo "Updating JavaScript test dependencies to latest versions..."
 cd /workspaces/techhub/spec/javascript || cd $(pwd)/spec/javascript
 # Update all packages to latest versions
-ncu -u
+npx npm-check-updates -u
 npm install
 
 # Update and install Node.js dependencies for end-to-end tests (Playwright)
 echo "Updating E2E test dependencies to latest versions..."
 cd /workspaces/techhub/spec/e2e || cd $(pwd)/spec/e2e
 # Update all packages to latest versions
-ncu -u
+npx npm-check-updates -u
 npm install
 
 # Install latest Playwright globally to ensure we have the newest version
@@ -53,16 +65,12 @@ npm install -g playwright@latest
 # Install system libraries required by Playwright browsers first
 # This ensures all dependencies are in place before browser installation
 echo "Installing Playwright system dependencies first..."
-sudo npx playwright install-deps
+sudo npx -y playwright install-deps
 
 # Install latest Playwright browsers using the global installation
 # This ensures we always get the latest browser versions
 echo "Installing latest Playwright browsers..."
-npx playwright@latest install --force
-
-# Install Chrome browser for Playwright MCP compatibility
-echo "Installing Chrome browser for Playwright MCP..."
-npx playwright@latest install --force chrome
+npx -y playwright@latest install --force
 
 echo "Latest Playwright browsers and dependencies installed successfully"
 echo "Playwright version: $(npx playwright@latest --version)"
@@ -96,19 +104,25 @@ else
     echo "⚠️  Ruby not found, skipping bundler PATH setup"
 fi
 
-echo "Development environment setup complete!"
-echo "Checking available tools and browsers:"
-echo "Ruby bundle: $(which bundle 2>/dev/null || echo 'Not found in PATH')"
-echo "Playwright browsers:"
-ls -la /home/vscode/.cache/ms-playwright/ 2>/dev/null || echo "  No Playwright browsers found"
-echo "System browsers:"
-which chromium-browser chromium google-chrome google-chrome-stable firefox 2>/dev/null || echo "  Limited system browsers available"
+# Update .NET workloads
+echo "Updating .NET workloads..."
+sudo dotnet workload update
 
 # Install Entity Framework Core tools
+echo "Installing Entity Framework Core tools..."
 dotnet tool install --global dotnet-ef
 
-# Update PATH to include .NET tools
-echo 'export PATH="$PATH:/home/vscode/.dotnet/tools"' >> /home/vscode/.bashrc
+# Add .NET tools to PATH for current and future sessions
+echo "Setting up .NET tools PATH..."
+if ! grep -q "/home/vscode/.dotnet/tools" /home/vscode/.bashrc 2>/dev/null; then
+    echo 'export PATH="$PATH:/home/vscode/.dotnet/tools"' >> /home/vscode/.bashrc
+    echo "✅ Added .NET tools to PATH"
+else
+    echo "✅ .NET tools already in PATH"
+fi
+
+# Add to current session PATH
+export PATH="$PATH:/home/vscode/.dotnet/tools"
 
 # Install Bicep CLI
 echo "Installing Bicep CLI..."
@@ -150,3 +164,10 @@ curl -fsSL https://aka.ms/install-azd.sh | bash
 # Set up Azure CLI completion
 echo "Setting up Azure CLI completion..."
 echo 'source /etc/bash_completion.d/azure-cli' >> /home/vscode/.bashrc
+
+echo ""
+echo "=================================="
+echo "Development Environment Setup Complete!"
+echo "=================================="
+
+exit 0

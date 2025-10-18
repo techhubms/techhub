@@ -31,7 +31,6 @@
         "ms-dotnettools.csdevkit",
         "ms-vscode.vscode-nuget-package-manager",
         "ms-vscode.powershell",
-        "msazurermtools.azurerm-vscode-tools",        
         "ms-azuretools.vscode-bicep",
         "ms-azuretools.vscode-azureresourcegroups",
         "ms-azuretools.vscode-azurestorage",
@@ -45,58 +44,33 @@
         "Jekyll.vscode-jekyll-snippets",
         "orta.vscode-jest",
         "Shopify.ruby-lsp",
-        "kaiwood.endwise"
+        "kaiwood.endwise",
+        "ms-azuretools.vscode-azure-github-copilot",
+        "github.vscode-pull-request-github",
+        "ms-vscode.vscode-node-azure-pack",
+        "humao.rest-client"
       ],
       "settings": {
-        // AI and Copilot Settings (Latest v1.99-1.103 Features)
-        "chat.math.enabled": true,
-        "chat.todoListTool.enabled": true,
-        "chat.checkpoints.enabled": true,
-        "chat.notifyWindowOnConfirmation": true,
-        "chat.editRequests": "inline",
-        "editor.aiStats.enabled": true,
-        "inlineChat.notebookAgent": true,
-        "inlineChat.enableV2": true,
-        "chat.agentSessionsViewLocation": "view",
-        "github.copilot.chat.newWorkspace.useContext7": true,
-        "github.copilot.chat.codeGeneration.useInstructionFiles": true,
-        "github.copilot.chat.virtualTools.threshold": 128,
-        "githubPullRequests.codingAgent.uiIntegration": true,
-        
-        // MCP (Model Context Protocol) Settings
-        "chat.mcp.discovery.enabled": true,
-        "chat.mcp.autostart": "newAndOutdated",
-        "chat.promptFiles": true,
-        
-        // PowerShell Settings
-        "powershell.scriptAnalysis.enable": true,
-        "powershell.codeFormatting.useCorrectCasing": true,
-        "powershell.integratedConsole.showOnStartup": false,
-        "powershell.debugging.createTemporaryIntegratedConsole": true,
-        
-        // Source Control Settings (v1.103 Git Worktrees)
-        "git.detectWorktrees": true,
-        
-        // Accessibility Settings (Enhanced v1.103)
-        "accessibility.openChatEditedFiles": false,
-        
-        // Chat and UI Settings (v1.102-1.103)
-        "workbench.secondarySideBar.defaultVisibility": "maximized",
-        
-        // Terminal Settings
-        "terminal.integrated.defaultProfile.linux": "pwsh",
-        
-        // Testing Framework Settings
-        "jest.jestCommandLine": "npm test --prefix spec/javascript",
-        "jest.rootPath": "spec/javascript",
-        "playwright.showTrace": true,
-        "playwright.reuseBrowser": true,
-        
-        // C# and .NET Settings
-        "dotnet.defaultSolution": "*.sln",
-        "csharp.semanticHighlighting.enabled": true,
-        "csharp.format.enable": true,
-        "editor.codeLens": true,
+        "chat.agent.enabled": true, // Enable Agent mode for autonomous task completion (becoming default)
+        "csharp.format.enable": true, // Enable automatic C# code formatting
+        "csharp.semanticHighlighting.enabled": true, // Enable semantic syntax highlighting for C#
+        "dotnet.defaultSolution": "*.sln", // Auto-detect solution files with .sln extension
+        "github.copilot.chat.codeGeneration.useInstructionFiles": true, // Use custom instruction files for code generation
+        "github.copilot.chat.newWorkspace.useContext7": true, // Enable Context7 integration for documentation
+        "github.copilot.chat.runCommand.enabled": true, // Allow executing VS Code commands from Copilot Chat
+        "github.copilot.chat.virtualTools.threshold": 128, // Set virtual tools threshold for agent mode
+        "github.copilot.nextEditSuggestions.enabled": true, // Enable predictive editing suggestions based on context
+        "githubPullRequests.codingAgent.uiIntegration": true, // Enable Copilot Coding Agent UI integration
+        "jest.jestCommandLine": "npm test --prefix spec/javascript", // Jest command for running JavaScript tests
+        "jest.rootPath": "spec/javascript", // Root path for Jest test discovery
+        "playwright.reuseBrowser": true, // Reuse browser instances across Playwright tests for performance
+        "playwright.showTrace": true, // Show Playwright trace viewer after test runs
+        "powershell.debugging.createTemporaryIntegratedConsole": true, // Create temporary console for debugging sessions
+        "powershell.integratedConsole.showOnStartup": false, // Don't show PowerShell console on startup
+        "remote.autoForwardPortsFallback": 0, // Disable automatic port forwarding fallback
+        "search.searchView.semanticSearchBehavior": "auto", // Enable automatic semantic search for better search results
+        "terminal.integrated.defaultProfile.linux": "pwsh", // Use PowerShell as default terminal on Linux
+        "workbench.secondarySideBar.defaultVisibility": "maximized", // Show secondary sidebar maximized by default
         
         "files.associations": {
           "*.ps1": "powershell",
@@ -115,120 +89,134 @@
           "*.cshtml": "razor"
         },
         "chat.tools.terminal.autoApprove": {
-          "/\\becho\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bcd\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bls\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bcat\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bpwd\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bdir\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bless\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bmore\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bhead\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\btail\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\btree\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bfile\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bstat\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bwhich\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bwhoami\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bid\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\buname\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bdate\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\buptime\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bhistory\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\benv\\b/i": { "approve": true, "matchCommandLine": true },
+          // Unsafe commands
+          "chmod": false,
+          "chown": false,
+          "curl": true,
+          "del": false,
+          "eval": false,
+          "kill": false,
+          "rm": false,
+          "rmdir": false,
+          "wget": true,
+
+          // Shell interpreters - block to prevent arbitrary code execution except pwsh
+          "/^bundle\\b.*/": { "approve": false, "matchCommandLine": true },
+          "/^dotnet\\b.*/": { "approve": false, "matchCommandLine": true },
+          "/^gem\\b.*/": { "approve": false, "matchCommandLine": true },
+          "/^node\\b.*/": { "approve": false, "matchCommandLine": true },
+          "/^npm\\b.*/": { "approve": false, "matchCommandLine": true },
+          "/^npx\\b.*/": { "approve": false, "matchCommandLine": true },
+          "/^pwsh\\b.*/": true,
+          "/^python\\b.*/": { "approve": false, "matchCommandLine": true },
+          "/^python3\\b.*/": { "approve": false, "matchCommandLine": true },
+          "/^ruby\\b.*/": { "approve": false, "matchCommandLine": true },
+          "/^yarn\\b.*/": { "approve": false, "matchCommandLine": true },
           
-          "/\\bps\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\btop\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bnetstat\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bdf\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bdu\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bfree\\b/i": { "approve": true, "matchCommandLine": true },
-          
-          "/\\bgrep\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bwc\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bsort\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\buniq\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bcut\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\btr\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bfind\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bdiff\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bjq\\b/i": { "approve": true, "matchCommandLine": true },
-          
-          "/\\bGet-ChildItem\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bGet-Content\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bGet-Location\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bGet-Date\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bGet-Random\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bGet-Process\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bGet-Service\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bTest-Path\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bJoin-Path\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bSplit-Path\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bResolve-Path\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bSelect-String\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bSort-Object\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bWhere-Object\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bForEach-Object\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bMeasure-Object\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bSelect-Object\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bGroup-Object\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bCompare-Object\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bConvertTo-Json\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bConvertFrom-Json\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bWrite-Host\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bWrite-Output\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bWrite-Error\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bWrite-Warning\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bWrite-Verbose\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bWrite-Debug\\b/i": { "approve": true, "matchCommandLine": true },
+          // Safe pwsh functions
+          "Compare-Object": true,
+          "ConvertFrom-Json": true,
+          "ConvertTo-Json": true,
+          "ForEach-Object": true,
+          "Format-Table": true,
+          "Get-ChildItem": true,
+          "Get-Content": true,
+          "Get-Date": true,
+          "Get-Location": true,
+          "Get-Process": true,
+          "Get-Random": true,
+          "Get-Service": true,
+          "Group-Object": true,
+          "Join-Path": true,
+          "Measure-Object": true,
+          "Out-File": true,
+          "Resolve-Path": true,
+          "Select-Object": true,
+          "Select-String": true,
+          "Set-Content": true,
+          "Set-Location": true,
+          "Sort-Object": true,
+          "Split-Path": true,
+          "Test-Path": true,
+          "Where-Object": true,
+          "Write-Debug": true,
+          "Write-Error": true,
+          "Write-Host": true,
+          "Write-Output": true,
+          "Write-Verbose": true,
+          "Write-Warning": true,
 
-          "/\\bSet-Content\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bSet-Location\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bOut-File\\b/i": { "approve": true, "matchCommandLine": true },
-          
-          "/\\bcurl\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bwget\\b/i": { "approve": true, "matchCommandLine": true },
-
-          "/\\bsleep\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\btimeout\\b/i": { "approve": true, "matchCommandLine": true },
-
-          "/\\bgit\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bjekyll\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bbundle\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\brspec\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bpwsh\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bpython3\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bpython\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bnode\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bruby\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bnpm\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bnpx\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\byarn\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bgem\\b/i": { "approve": true, "matchCommandLine": true },
-
-          "/\\baz\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bbicep\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bdotnet\\b/i": { "approve": true, "matchCommandLine": true },
-          "/\\bnuget\\b/i": { "approve": true, "matchCommandLine": true },
-
-          "/\\brm\\b/i": { "approve": false, "matchCommandLine": true },
-          "/\\brmdir\\b/i": { "approve": false, "matchCommandLine": true },
-          "/\\bdel\\b/i": { "approve": false, "matchCommandLine": true },
-          "/\\bkill\\b/i": { "approve": false, "matchCommandLine": true },
-          "/\\beval\\b/i": { "approve": false, "matchCommandLine": true },
-          "/\\bchmod\\b/i": { "approve": false, "matchCommandLine": true },
-          "/\\bchown\\b/i": { "approve": false, "matchCommandLine": true },
-          "/\\bRemove-Item\\b/i": { "approve": false, "matchCommandLine": true }
+          // Safeish commands
+          "az": true,
+          "bicep": true,
+          "cat": true,
+          "cd": true,
+          "cut": true,
+          "date": true,
+          "df": true,
+          "diff": true,
+          "dir": true,
+          "du": true,
+          "echo": true,
+          "env": true,
+          "file": true,
+          "find": true,
+          "free": true,
+          "git": true,
+          "grep": true,
+          "head": true,
+          "history": true,
+          "id": true,
+          "jekyll": true,
+          "jq": true,
+          "less": true,
+          "ls": true,
+          "more": true,
+          "netstat": true,
+          "nuget": true,
+          "ps": true,
+          "pwd": true,
+          "rspec": true,
+          "sleep": true,
+          "sort": true,
+          "stat": true,
+          "tail": true,
+          "timeout": true,
+          "top": true,
+          "tr": true,
+          "tree": true,
+          "uname": true,
+          "uniq": true,
+          "uptime": true,
+          "wc": true,
+          "which": true,
+          "whoami": true
         }
       },
       "mcp": {
         "servers": {
           "github": {
+            "type": "http",
             "url": "https://api.githubcopilot.com/mcp/"
           },
           "playwright": {
+            "type": "stdio",
             "command": "npx",
-            "args": ["-y", "@microsoft/mcp-server-playwright"]
+            "args": [
+              "-y",
+              "@playwright/mcp@latest",
+              "--vision",
+              "--headless",
+              "--isolated",
+              "--no-sandbox"
+            ]
+          },
+          "context7": {
+            "type": "http",
+            "url": "https://mcp.context7.com/mcp",
+            "headers": {
+              "CONTEXT7_API_KEY": "ctx7sk-bccb071c-99f8-497a-a08c-b29bf6ce1810"
+            }
           }
         }
       }

@@ -1,7 +1,7 @@
 ---
 mode: "agent"
 description: "Step-by-step workflow for safely and precisely executing code and GitHub operations according to strict instructions."
-model: "Claude Sonnet 4"
+model: "Claude Sonnet 4.5"
 ---
 
 **🚨 ABSOLUTE CRITICAL REQUIREMENT 1**: NEVER EVER use pattern recognition or "I know what this step should do" thinking. Each step has EXACT instructions - follow them literally, not what you think they should accomplish.

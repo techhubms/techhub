@@ -22,7 +22,7 @@
 - Always place scripts in a file in the `.tmp` directory and then execute them. Do NOT paste them into the terminal and do NOT call `pwsh -Command`.
 - Always use backticks (`) to escape special characters in PowerShell. Never use backslashes (\\) for escaping in PowerShell.
 - Always store any temporary files you create in the `.tmp` directory.
-- Always use the PlayWright MCP server to interact with or look at websites. If you need the raw HTML, always use curl.
+- Always use the PlayWright MCP server to interact with or look at websites for debugging or coding purposes. If you need the raw HTML or just get documentation, always use curl or a built-in tool.
 - Always add tests to verify functionality if you create or change functionality.
 - Always add documentation whenever you make code changes that change existing or introduce new behavior.
 - Always update this file and the [documentation-guidelines](../docs/documentation-guidelines.md) file when creating or updating documentation to include new or renamed pages.
@@ -35,6 +35,7 @@
 - Always apply edits directly using the appropriate tools unless you need to ask clarifying questions about the intended changes before proceeding.
 - Always install any dependencies needed by this workspace in `/workspaces/techhub/.devcontainer/post-create.sh` and never inside PowerShell or other scripts. 
 - Always look at `/workspaces/techhub/.github/workflows` when you make updates to `/workspaces/techhub/.devcontainer/post-create.sh` and check if you need to apply similar updates in the workflows.
+- Always get documentation using the context7 MCP tool if you need to do any coding tasks.
 
 - Never leave documentation out of sync with the codebase. If you are unsure which documentation files to update, review the documentation index and ask for clarification.
 - Never use content that is not factual or verifiable.
