@@ -11,8 +11,8 @@ date: 2025-08-21 00:00:00 +00:00
 permalink: "/2025-08-21-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1103.html"
 categories: ["AI", "GitHub Copilot"]
 section: "github-copilot"
-tags: ["AI", "GitHub Copilot", "Visual Studio Code", "VS Code", "VS Code 1.103", "Checkpoints", "Todo List", "GPT-5", "Agent Mode", "Model Management", "Terminal Inline Chat", "MCP Autostart", "AI Stats", "Pull Request Extension", "Math Rendering"]
-tags_normalized: ["ai", "github copilot", "visual studio code", "vs code", "vs code 1dot103", "checkpoints", "todo list", "gpt-5", "agent mode", "model management", "terminal inline chat", "mcp autostart", "ai stats", "pull request extension", "math rendering"]
+tags: ["Agent Mode", "AI", "AI Stats", "Checkpoints", "GitHub Copilot", "GPT 5", "Math Rendering", "MCP Autostart", "Model Management", "Pull Request Extension", "Terminal Inline Chat", "Todo List", "Videos", "VS Code", "VS Code 1.103"]
+tags_normalized: ["agent mode", "ai", "ai stats", "checkpoints", "github copilot", "gpt 5", "math rendering", "mcp autostart", "model management", "pull request extension", "terminal inline chat", "todo list", "videos", "vs code", "vs code 1dot103"]
 ---
 
 {{ page.description }}<!--excerpt_end-->
