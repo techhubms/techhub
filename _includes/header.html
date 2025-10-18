@@ -19,6 +19,19 @@ Also handle URL parameters: ?section=ai
   {%- assign current_section = page.section -%}
 {%- endif -%}
 
+{%- comment -%} Fallback: if still no section, check page.categories in priority order {%- endcomment -%}
+{%- if current_section == "" and page.categories -%}
+  {%- assign priority_categories = "GitHub Copilot,Azure,AI,Coding,ML,Security,DevOps" | split: "," -%}
+  {%- for priority_cat in priority_categories -%}
+    {%- if page.categories contains priority_cat -%}
+      {%- comment -%} Convert category to section format (lowercase with hyphens) {%- endcomment -%}
+      {%- assign temp_section = priority_cat | downcase | replace: " ", "-" -%}
+      {%- assign current_section = temp_section -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
 {%- assign current_collection = "" -%}
 {%- if page.collection -%}
   {%- assign current_collection = page.collection -%}
