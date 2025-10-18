@@ -5,8 +5,6 @@ show_excerpts: true
 timezone: Europe/Brussels
 google_analytics: G-95LLB67KJV
 port: 4000
-baseurl: ""
-url: ""
 
 markdown: kramdown
 theme: minima

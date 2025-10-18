@@ -20,14 +20,14 @@ end
 
 RSpec.describe YouTube do
   describe 'initialization' do
-    it 'extracts YouTube ID from markup' do
+    it 'stores markup from input' do
       youtube_tag = create_youtube_tag('dQw4w9WgXcQ')
-      expect(youtube_tag.instance_variable_get(:@id)).to eq('dQw4w9WgXcQ')
+      expect(youtube_tag.instance_variable_get(:@markup)).to eq('dQw4w9WgXcQ')
     end
 
-    it 'extracts YouTube ID with extra parameters' do
+    it 'stores markup with extra parameters' do
       youtube_tag = create_youtube_tag('dQw4w9WgXcQ 560 315')
-      expect(youtube_tag.instance_variable_get(:@id)).to eq('dQw4w9WgXcQ')
+      expect(youtube_tag.instance_variable_get(:@markup)).to eq('dQw4w9WgXcQ 560 315')
     end
 
     it 'raises error when no YouTube ID provided' do
@@ -44,7 +44,7 @@ RSpec.describe YouTube do
 
     it 'handles YouTube ID with whitespace' do
       youtube_tag = create_youtube_tag('  dQw4w9WgXcQ  ')
-      expect(youtube_tag.instance_variable_get(:@id)).to eq('dQw4w9WgXcQ')
+      expect(youtube_tag.instance_variable_get(:@markup)).to eq('dQw4w9WgXcQ')
     end
   end
 
@@ -86,6 +86,36 @@ RSpec.describe YouTube do
       
       expect(result).to include("src=\"https://www.youtube.com/embed/#{different_id}\"")
     end
+
+    it 'extracts YouTube ID when width and height are provided' do
+      youtube_tag = create_youtube_tag('dQw4w9WgXcQ 560 315')
+      result = youtube_tag.render(context)
+      
+      expect(result).to include('src="https://www.youtube.com/embed/dQw4w9WgXcQ"')
+      expect(result).to include('<iframe')
+      expect(result).to include('class="youtube"')
+    end
+
+    it 'extracts YouTube ID when only width is provided' do
+      youtube_tag = create_youtube_tag('dQw4w9WgXcQ 560')
+      result = youtube_tag.render(context)
+      
+      expect(result).to include('src="https://www.youtube.com/embed/dQw4w9WgXcQ"')
+    end
+
+    it 'ignores extra text after YouTube ID' do
+      youtube_tag = create_youtube_tag('dQw4w9WgXcQ some extra text here')
+      result = youtube_tag.render(context)
+      
+      expect(result).to include('src="https://www.youtube.com/embed/dQw4w9WgXcQ"')
+    end
+
+    it 'handles multiple spaces between tokens' do
+      youtube_tag = create_youtube_tag('dQw4w9WgXcQ    560    315')
+      result = youtube_tag.render(context)
+      
+      expect(result).to include('src="https://www.youtube.com/embed/dQw4w9WgXcQ"')
+    end
   end
 
   describe 'Liquid template registration' do
@@ -109,22 +139,40 @@ RSpec.describe YouTube do
       expect(result).to include('youtube.com/embed/test123')
       expect(result).to include('class="youtube"')
     end
+
+    it 'works with width and height parameters in Liquid template' do
+      template_source = '{% youtube dQw4w9WgXcQ 560 315 %}'
+      template = Liquid::Template.parse(template_source)
+      result = template.render
+      
+      expect(result).to include('<iframe')
+      expect(result).to include('youtube.com/embed/dQw4w9WgXcQ')
+      expect(result).to include('class="youtube"')
+    end
+
+    it 'works with only width parameter in Liquid template' do
+      template_source = '{% youtube dQw4w9WgXcQ 560 %}'
+      template = Liquid::Template.parse(template_source)
+      result = template.render
+      
+      expect(result).to include('youtube.com/embed/dQw4w9WgXcQ')
+    end
   end
 
   describe 'markup parsing edge cases' do
     it 'handles YouTube ID followed by numbers' do
       youtube_tag = create_youtube_tag('dQw4w9WgXcQ 560 315')
-      expect(youtube_tag.instance_variable_get(:@id)).to eq('dQw4w9WgXcQ')
+      expect(youtube_tag.instance_variable_get(:@markup)).to eq('dQw4w9WgXcQ 560 315')
     end
 
     it 'handles YouTube ID with just one number' do
       youtube_tag = create_youtube_tag('dQw4w9WgXcQ 560')
-      expect(youtube_tag.instance_variable_get(:@id)).to eq('dQw4w9WgXcQ')
+      expect(youtube_tag.instance_variable_get(:@markup)).to eq('dQw4w9WgXcQ 560')
     end
 
     it 'handles YouTube ID with extra whitespace and numbers' do
       youtube_tag = create_youtube_tag('  dQw4w9WgXcQ   560   315  ')
-      expect(youtube_tag.instance_variable_get(:@id)).to eq('dQw4w9WgXcQ')
+      expect(youtube_tag.instance_variable_get(:@markup)).to eq('dQw4w9WgXcQ   560   315')
     end
 
     it 'handles common YouTube ID formats' do
@@ -138,7 +186,7 @@ RSpec.describe YouTube do
 
       ids.each do |id|
         youtube_tag = create_youtube_tag(id)
-        expect(youtube_tag.instance_variable_get(:@id)).to eq(id)
+        expect(youtube_tag.instance_variable_get(:@markup)).to eq(id)
         
         result = youtube_tag.render({})
         expect(result).to include("youtube.com/embed/#{id}")
@@ -147,10 +195,11 @@ RSpec.describe YouTube do
   end
 
   describe 'error handling' do
-    it 'handles special characters in markup gracefully' do
+    it 'raises error on invalid YouTube ID during render' do
+      youtube_tag = create_youtube_tag('!@#$%^&*()')
       expect {
-        create_youtube_tag('!@#$%^&*()')
-      }.to raise_error('No YouTube ID provided in the "youtube" tag')
+        youtube_tag.render({})
+      }.to raise_error(/No valid YouTube ID provided/)
     end
 
     it 'handles only whitespace in markup' do
@@ -170,17 +219,17 @@ RSpec.describe YouTube do
     it 'handles YouTube ID with maximum length' do
       long_id = 'a' * 11  # YouTube IDs are typically 11 characters
       youtube_tag = create_youtube_tag(long_id)
-      expect(youtube_tag.instance_variable_get(:@id)).to eq(long_id)
+      expect(youtube_tag.instance_variable_get(:@markup)).to eq(long_id)
     end
 
-    it 'extracts only the first token as YouTube ID' do
+    it 'stores full markup including extra text' do
       youtube_tag = create_youtube_tag('dQw4w9WgXcQ some other text here')
-      expect(youtube_tag.instance_variable_get(:@id)).to eq('dQw4w9WgXcQ')
+      expect(youtube_tag.instance_variable_get(:@markup)).to eq('dQw4w9WgXcQ some other text here')
     end
 
     it 'handles single character YouTube ID' do
       youtube_tag = create_youtube_tag('a')
-      expect(youtube_tag.instance_variable_get(:@id)).to eq('a')
+      expect(youtube_tag.instance_variable_get(:@markup)).to eq('a')
     end
   end
 end

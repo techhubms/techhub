@@ -77,15 +77,15 @@
                 "description": "GitHub Copilot features and capabilities overview, including demo videos."
             },
             {
-                "title": "Levels of Enlightenment",
-                "url": "/github-copilot/levels-of-enlightenment.html",
-                "description": "Rob Bos's comprehensive guide to mastering GitHub Copilot through progressive learning stages."
-            },
-            {
                 "title": "Visual Studio Code Updates",
                 "url": "/github-copilot/vscode-updates.html",
                 "description": "Fokko Veegens showing you all the latest features of each Visual Studio Code release."
-            }         
+            },
+            {
+                "title": "Levels of Enlightenment",
+                "url": "/github-copilot/levels-of-enlightenment.html",
+                "description": "Rob Bos's comprehensive guide to mastering GitHub Copilot through progressive learning stages."
+            }     
         ]
     },
     "ai": {
