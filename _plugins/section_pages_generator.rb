@@ -42,12 +42,22 @@ module Jekyll
       # Create a new Jekyll page using PageWithoutAFile
       page = Jekyll::PageWithoutAFile.new(site, site.source, section_data['section'], 'index.md')
       
+      # Determine RSS feed URL based on section
+      rss_feed_url = if section_data['section'] == 'all'
+        '/feed.xml'
+      elsif section_data['section'] == 'github-copilot'
+        '/github-copilot.xml'
+      else
+        "/#{section_data['section']}.xml"
+      end
+      
       # Set page data (front matter)
       page.data['layout'] = 'home'
       page.data['section'] = section_data['section']
       page.data['category'] = section_data['category']
       page.data['title'] = section_data['title']
       page.data['description'] = section_data['description']
+      page.data['rss_feed'] = rss_feed_url
       
       # Set page content
       page.content = generate_section_index_content(section_data)
@@ -86,15 +96,6 @@ module Jekyll
       collections = section_data['collections']&.map { |collection| collection['collection'] }&.compact || []
       collections_string = collections.join(',')
       
-      # Determine RSS feed URL based on section
-      rss_feed_url = if section_data['section'] == 'all'
-        '/feed.xml'
-      elsif section_data['section'] == 'github-copilot'
-        '/github-copilot.xml'
-      else
-        "/#{section_data['section']}.xml"
-      end
-      
       <<~CONTENT
         {%- comment -%} Dynamic section index - generated from sections config {%- endcomment -%}
         
@@ -108,10 +109,7 @@ module Jekyll
         {%- assign items = items | where_exp: "item", "item.date <= site.time" -%}
         {%- assign items = items | limit_with_same_day: 50 -%}
 
-        <div class="section-header-with-rss">
-          <div class="section-description">{{ section_data.description }}</div>
-          <div class="section-rss"><a href="{{ '#{rss_feed_url}' | relative_url }}" title="Subscribe to RSS feed">RSS</a></div>
-        </div>
+        {{ section_data.description }}
 
         <div class="navigation-collections-grid">
         {%- for collection_info in section_data.collections -%}

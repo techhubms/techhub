@@ -405,46 +405,45 @@
 
 
 /**
- * Section header with RSS link
+ * Page heading with RSS icon
  */
-.section-header-with-rss {
+.page-heading-with-rss {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: settings.$spacing-unit;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 0;
   
-  .section-description {
-    flex: 1;
+  .page-heading {
+    margin-bottom: 0;
   }
   
-  .section-rss {
+  .rss-icon-link {
     flex-shrink: 0;
-    margin-left: 20px;
-    font-size: settings.$small-font-size;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
     
-    a {
-      color: colors.$medium-gray;
-      text-decoration: none;
-      transition: color 0.2s ease;
-      
-      @media (hover: hover) {
-        &:hover {
-          color: colors.$bright-purple;
-        }
-      }
-      
-      &:visited {
-        color: colors.$medium-gray;
+    .rss-icon {
+      width: 20px;
+      height: 20px;
+      fill: colors.$medium-gray;
+      transition: fill 0.2s ease;
+    }
+    
+    @media (hover: hover) {
+      &:hover .rss-icon {
+        fill: colors.$bright-purple;
       }
     }
   }
   
   @include settings.media-query(settings.$on-mobile) {
-    flex-direction: column;
+    gap: 10px;
     
-    .section-rss {
-      margin-left: 0;
-      margin-top: 10px;
+    .rss-icon-link .rss-icon {
+      width: 18px;
+      height: 18px;
     }
   }
 }
