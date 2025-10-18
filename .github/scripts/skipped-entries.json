@@ -7005,5 +7005,11 @@
     "reason": "No categories found: No categories assigned. The content is focused on end-user guidance regarding hardware requirements for installing Windows 11. It does not address software development, coding, DevOps, AI, machine learning, Azure operations, security implementation, or deployment/architecture guidance for Microsoft technologies. According to generic exclusion rules, technical implementation details or developer-oriented instructions are necessary for inclusion; coverage here is limited to consumer setup requirements, not development-related topics. Therefore, the post does not qualify for any Tech Hub categories.",
     "collection": "posts",
     "canonical_url": "https://dellenny.com/windows-11-system-requirements-explained-simply/"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/YFz5Xcbfleo",
+    "collection": "videos",
+    "timestamp": "2025-10-18 17:04:21 +00:00",
+    "reason": "No categories found: No categories assigned because the content (video clip from The GitHub Podcast) discusses open standards, specifically the Model Context Protocol (MCP), in the context of AI transparency and interoperability. However, based on the description and tags, there is no evidence that Microsoft technologies or services are a central focus, nor are Microsoft developer tools, platforms, or frameworks discussed. The content is GitHub-branded, but does not specifically mention Microsoft technology usage, integration, or development. According to Multi-Platform Content Threshold rules and AI Category rules, Microsoft technologies must be central or comprise at least 40% of the substantive content. The content here is focused generically on open standards and plug-and-play benefits for AI tool choice, not on Microsoft AI platforms, GitHub Copilot, or Microsoft-specific coding/deployment practices. Therefore, all categories are excluded."
   }
 ]
