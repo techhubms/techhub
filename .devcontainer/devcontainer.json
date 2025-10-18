@@ -52,6 +52,7 @@
       ],
       "settings": {
         "chat.agent.enabled": true, // Enable Agent mode for autonomous task completion (becoming default)
+        "chat.agent.maxRequests": 100, // Increase max requests for Agent mode to handle complex tasks
         "csharp.format.enable": true, // Enable automatic C# code formatting
         "csharp.semanticHighlighting.enabled": true, // Enable semantic syntax highlighting for C#
         "dotnet.defaultSolution": "*.sln", // Auto-detect solution files with .sln extension
@@ -113,7 +114,7 @@
           "/^ruby\\b.*/": { "approve": false, "matchCommandLine": true },
           "/^yarn\\b.*/": { "approve": false, "matchCommandLine": true },
           
-          // Safe pwsh functions
+          // Safeish pwsh functions
           "Compare-Object": true,
           "ConvertFrom-Json": true,
           "ConvertTo-Json": true,
@@ -213,7 +214,7 @@
           },
           "context7": {
             "type": "http",
-            "url": "https://mcp.context7.com/mcp",
+            "url": "https://mcp.context7.com/mcp"
           }
         }
       }
