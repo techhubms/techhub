@@ -107,7 +107,7 @@
           "/^node\\b.*/": { "approve": false, "matchCommandLine": true },
           "/^npm\\b.*/": { "approve": false, "matchCommandLine": true },
           "/^npx\\b.*/": { "approve": false, "matchCommandLine": true },
-          "/^pwsh\\b.*/": true,
+          "/^pwsh\\b.*/": { "approve": true, "matchCommandLine": true },
           "/^python\\b.*/": { "approve": false, "matchCommandLine": true },
           "/^python3\\b.*/": { "approve": false, "matchCommandLine": true },
           "/^ruby\\b.*/": { "approve": false, "matchCommandLine": true },
