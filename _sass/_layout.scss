@@ -405,6 +405,51 @@
 
 
 /**
+ * Section header with RSS link
+ */
+.section-header-with-rss {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: settings.$spacing-unit;
+  
+  .section-description {
+    flex: 1;
+  }
+  
+  .section-rss {
+    flex-shrink: 0;
+    margin-left: 20px;
+    font-size: settings.$small-font-size;
+    
+    a {
+      color: colors.$medium-gray;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      
+      @media (hover: hover) {
+        &:hover {
+          color: colors.$bright-purple;
+        }
+      }
+      
+      &:visited {
+        color: colors.$medium-gray;
+      }
+    }
+  }
+  
+  @include settings.media-query(settings.$on-mobile) {
+    flex-direction: column;
+    
+    .section-rss {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+}
+
+/**
  * Posts
  */
 .post-header {
