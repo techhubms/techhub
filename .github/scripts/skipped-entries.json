@@ -6975,5 +6975,17 @@
     "reason": "No categories found: No categories assigned. The provided input lacks substantive content, description, tags, and the main content field is null. Without actual content to evaluate, it's impossible to determine what technical topics are covered or whether the material qualifies for any Microsoft technology categories. Per the workflow rules, decisions must be based only on the content provided. Since there is no content, none of the inclusion rules can be met.",
     "timestamp": "2025-10-17 17:05:11 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-17 23:04:12 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/happening-in-the-community/orchard-harvest-community-conference/m-p/4462419#M43",
+    "collection": "community",
+    "reason": "No categories found: No categories assigned because the content is primarily an event/community announcement and invitation with only a general technology description. The message does not contain substantive technical details, educational content, development practices, or architectural guidance about Orchard Core or related Microsoft technologies. According to the rules, event announcements and conference invitations without in-depth technical explanation or actionable developer content do not qualify for categorization."
+  },
+  {
+    "reason": "No categories found: Excluded due to the generic exclusion rule for 'Question-Only Content.' The post is primarily an individual asking for recommendations and guidance on moving an Azure SQL VM and VM to another subscription and does not provide substantive answers or technical solutions. According to Chapter 3, Question-Only Content (\"Content mainly asking questions or seeking information; help-seeking posts without substantive answers or solutions\") is excluded from categorization.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/creating-azure-sql-vm-with-same-name-as-vm/m-p/4462422#M22272",
+    "collection": "community",
+    "timestamp": "2025-10-18 00:08:47 +00:00"
   }
 ]
