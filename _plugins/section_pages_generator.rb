@@ -42,12 +42,22 @@ module Jekyll
       # Create a new Jekyll page using PageWithoutAFile
       page = Jekyll::PageWithoutAFile.new(site, site.source, section_data['section'], 'index.md')
       
+      # Determine RSS feed URL based on section
+      rss_feed_url = if section_data['section'] == 'all'
+        '/feed.xml'
+      elsif section_data['section'] == 'github-copilot'
+        '/github-copilot.xml'
+      else
+        "/#{section_data['section']}.xml"
+      end
+      
       # Set page data (front matter)
       page.data['layout'] = 'home'
       page.data['section'] = section_data['section']
       page.data['category'] = section_data['category']
       page.data['title'] = section_data['title']
       page.data['description'] = section_data['description']
+      page.data['rss_feed'] = rss_feed_url
       
       # Set page content
       page.content = generate_section_index_content(section_data)

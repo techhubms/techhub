@@ -4,6 +4,34 @@
 
 The Tech Hub automatically processes RSS feeds from Microsoft and technology sources to keep content current. This system combines automated feed processing with AI-powered content categorization and runs hourly via GitHub Actions.
 
+## Available RSS Feeds
+
+The site provides RSS feeds for all sections and collections:
+
+### Section RSS Feeds
+
+Each section has its own RSS feed containing all content with that category:
+
+- **Everything**: `/feed.xml` - All content across all sections
+- **AI**: `/ai.xml` - AI-related content
+- **GitHub Copilot**: `/github-copilot.xml` - GitHub Copilot content
+- **ML**: `/ml.xml` - Machine learning content
+- **Azure**: `/azure.xml` - Azure cloud platform content
+- **Coding**: `/coding.xml` - .NET and coding content
+- **DevOps**: `/devops.xml` - DevOps and automation content
+- **Security**: `/security.xml` - Security content
+
+### Collection RSS Feeds
+
+- **Roundups**: `/roundups.xml` - Weekly content roundups
+
+### RSS Feed Access
+
+RSS feeds are accessible in two ways:
+
+1. **Section Pages**: Each section overview page includes a subtle RSS link in the header area
+2. **Footer**: The main "Subscribe via RSS" link in the footer points to the everything feed (`/feed.xml`)
+
 ## Feed Configuration
 
 RSS feeds are configured in `.github/scripts/rss-feeds.json`:

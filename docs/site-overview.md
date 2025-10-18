@@ -53,7 +53,8 @@ The site is organized into multiple sections, each representing a distinct topic
 
 Each section contains:
 
-- **Index page**: Auto-generated overview of the section
+- **Index page**: Auto-generated overview of the section with RSS feed link
+- **RSS Feed**: Dedicated feed for the section's content (e.g., `/ai.xml`, `/github-copilot.xml`)
 - **Collections**: Various content types (news, blogs, videos, etc.)
 - **Custom pages**: Manually created pages specific to the section
 
