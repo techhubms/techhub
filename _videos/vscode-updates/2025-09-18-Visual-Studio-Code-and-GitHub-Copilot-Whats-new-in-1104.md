@@ -11,8 +11,8 @@ date: 2025-09-18 00:00:00 +00:00
 permalink: "/2025-09-18-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1104.html"
 categories: ["AI", "GitHub Copilot"]
 section: "github-copilot"
-tags: ["AI", "GitHub Copilot", "Visual Studio Code", "VS Code", "VS Code 1.104", "Auto Model Selection", "AGENTS.md", "Prompt Files", "Chat Sessions", "Coding Agent", "Terminal", "Developer Tools", "Productivity", "Custom Chat Modes"]
-tags_normalized: ["ai", "github copilot", "visual studio code", "vs code", "vs code 1dot104", "auto model selection", "agentsdotmd", "prompt files", "chat sessions", "coding agent", "terminal", "developer tools", "productivity", "custom chat modes"]
+tags: ["AGENTS.md", "AI", "Auto Model Selection", "Chat Sessions", "Coding Agent", "Custom Chat Modes", "Developer Tools", "GitHub Copilot", "Productivity", "Prompt Files", "Terminal", "Videos", "VS Code", "VS Code 1.104"]
+tags_normalized: ["agentsdotmd", "ai", "auto model selection", "chat sessions", "coding agent", "custom chat modes", "developer tools", "github copilot", "productivity", "prompt files", "terminal", "videos", "vs code", "vs code 1dot104"]
 ---
 
 {{ page.description }}<!--excerpt_end-->
