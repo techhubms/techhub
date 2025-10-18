@@ -6987,5 +6987,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/creating-azure-sql-vm-with-same-name-as-vm/m-p/4462422#M22272",
     "collection": "community",
     "timestamp": "2025-10-18 00:08:47 +00:00"
+  },
+  {
+    "timestamp": "2025-10-18 07:04:19 +00:00",
+    "reason": "No categories found: No categories assigned. The content provides a step-by-step guide for end users on how to perform a clean installation of Windows 11. It focuses on general PC usage, user-level installation, and setup guidance, not software development, coding, DevOps, Azure, AI, ML, or security engineering. There is no developer-focused implementation, scripting, automation, or technical architecture relevant to professional Microsoft consultants or developers. This matches the 'Non-Development Microsoft Products' generic exclusion rule—Windows or Office end-user instructions are excluded unless they focus on application development or technical engineering topics.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-clean-install-windows-11-step-by-step/"
+  },
+  {
+    "timestamp": "2025-10-18 07:04:32 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The post focuses on Copilot+ PC features in Windows 11, centering around business and personal productivity enhancements such as AI-powered PC management, creative and accessibility tools, language translation, and workflow improvements—all for end users. While several AI features are discussed, the content does not address developer, coding, or technical implementation aspects and instead highlights consumer and productivity capabilities (e.g., Agent in Settings, Paint with AI, Windows Search, Photos, Voice Access, Recall). According to the critical Copilot Product Distinction rule, Copilot+ PC (Windows 11 Copilot) falls under non-development/business productivity tools and must be excluded. No categories are assigned because the content is not developer- or practitioner-focused and does not detail code, APIs, or Microsoft technology integration workflows.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/unlocking-the-future-of-productivity-unique-copilot-pc-features-in-windows-11/"
+  },
+  {
+    "timestamp": "2025-10-18 07:04:45 +00:00",
+    "reason": "No categories found: No categories assigned. The content is focused on end-user guidance regarding hardware requirements for installing Windows 11. It does not address software development, coding, DevOps, AI, machine learning, Azure operations, security implementation, or deployment/architecture guidance for Microsoft technologies. According to generic exclusion rules, technical implementation details or developer-oriented instructions are necessary for inclusion; coverage here is limited to consumer setup requirements, not development-related topics. Therefore, the post does not qualify for any Tech Hub categories.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/windows-11-system-requirements-explained-simply/"
   }
 ]
