@@ -15,7 +15,8 @@ layout: null
 
   {%- comment -%} Get all documents from all collections {%- endcomment -%}
   {%- assign all_items = site.documents | where_exp: "item", "item.date" -%}
-  {%- assign sorted_items = all_items | sort: 'date' | reverse -%}
+  {%- assign published_items = all_items | where_exp: "item", "item.date <= site.time" -%}
+  {%- assign sorted_items = published_items | sort: 'date' | reverse -%}
   {%- assign latest_items = sorted_items | slice: 0, 50 -%}
 
   {%- for item in latest_items -%}

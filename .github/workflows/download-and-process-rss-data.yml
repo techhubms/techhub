@@ -5,7 +5,6 @@ on:
     - cron: '*/60 * * * *'
   workflow_dispatch:
 
-# Prevent multiple instances from running simultaneously
 concurrency:
   group: rss-processing
   cancel-in-progress: false
@@ -169,27 +168,6 @@ jobs:
           fi
           
           echo "✅ RSS branch sync completed using selective backup/recreate strategy"
-
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: '20'
-      #     cache: 'npm'
-      #     cache-dependency-path: |
-      #       spec/javascript/package-lock.json
-      #       spec/e2e/package-lock.json
-
-      # - name: Install JavaScript dependencies
-      #   run: |
-      #     echo "Installing E2E test dependencies for content fetching..."
-      #     cd spec/e2e
-      #     npm ci
-
-      # - name: Install Playwright browsers
-      #   run: |
-      #     cd spec/e2e
-      #     npx playwright install-deps
-      #     npx playwright install
 
       - name: Download RSS feeds
         id: download-rss
@@ -404,7 +382,7 @@ jobs:
           path: main-workspace
           token: ${{ steps.app-token.outputs.token }}
 
-      - name: Copy selected changes to main branch
+      - name: Copy selected changes to main branch and reset RSS branch
         if: env.SHOULD_COPY == 'true' && always() && !cancelled()
         run: |
           echo "Syncing selected changes to main branch..."

@@ -17,7 +17,6 @@ function Invoke-AiApiCall {
         [int]$RateLimitPreventionDelay = 15
     )
 
-    # Build messages array
     $messages = @(
         @{
             "role"    = "system"
@@ -34,7 +33,6 @@ function Invoke-AiApiCall {
         "messages" = $messages
     } | ConvertTo-Json -Depth 10 -Compress
 
-    # Configure headers based on endpoint
     $headers = @{
         "Content-Type" = "application/json"
     }
