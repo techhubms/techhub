@@ -14,6 +14,7 @@ ghes_support: "false"
 plans: ["Free"]
 tags: ["AI", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "github copilot", "videos"]
+alt-collection: "features"
 ---
 
 This content demonstrates GitHub Copilot's Explain Failed Action Jobs feature. Get help understanding and fixing failed GitHub Actions<!--excerpt_end-->

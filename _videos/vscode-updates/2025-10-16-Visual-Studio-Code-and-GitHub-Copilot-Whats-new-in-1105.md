@@ -13,6 +13,7 @@ categories: ["AI", "GitHub Copilot"]
 section: "github-copilot"
 tags: ["AI", "Chain Of Thought", "Chat Terminal", "Code Coverage", "Developer Tools", "GitHub Copilot", "MCP Marketplace", "Merge Conflicts", "Productivity", "Terminal Profiles", "Videos", "VS Code", "VS Code 1.105"]
 tags_normalized: ["ai", "chain of thought", "chat terminal", "code coverage", "developer tools", "github copilot", "mcp marketplace", "merge conflicts", "productivity", "terminal profiles", "videos", "vs code", "vs code 1dot105"]
+alt-collection: "vscode-updates"
 ---
 
 {{ page.description }}<!--excerpt_end-->

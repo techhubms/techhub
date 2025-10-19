@@ -14,6 +14,7 @@ ghes_support: "false"
 plans: ["Free"]
 tags: ["AI", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "github copilot", "videos"]
+alt-collection: "features"
 ---
 
 This content demonstrates GitHub Copilot's Web Search with Bing feature. Search the web directly from your coding environment<!--excerpt_end-->

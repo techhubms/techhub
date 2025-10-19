@@ -14,6 +14,7 @@ ghes_support: "true"
 plans: ["Free"]
 tags: ["AI", "Chat", "GitHub Copilot", "Mobile", "Pull Request", "Videos"]
 tags_normalized: ["ai", "chat", "github copilot", "mobile", "pull request", "videos"]
+alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Chat on Mobile feature. Get coding assistance on-the-go with Copilot's mobile chat feature. This lets you summarize issues/pull requests/discussions, or ask broader questions about a repository for example.<!--excerpt_end-->

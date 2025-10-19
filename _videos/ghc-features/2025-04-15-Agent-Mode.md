@@ -14,6 +14,7 @@ ghes_support: "true"
 plans: ["Free"]
 tags: ["Agent Mode", "AI", "GitHub Copilot", "Videos"]
 tags_normalized: ["agent mode", "ai", "github copilot", "videos"]
+alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Agent Mode feature. How Agent Mode helps you by iterating over your prompt by itself.<!--excerpt_end-->

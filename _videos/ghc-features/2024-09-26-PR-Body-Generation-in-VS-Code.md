@@ -14,6 +14,7 @@ ghes_support: "true"
 plans: ["Free"]
 tags: ["AI", "Code", "GitHub Copilot", "Pull Request", "Videos", "VS Code"]
 tags_normalized: ["ai", "code", "github copilot", "pull request", "videos", "vs code"]
+alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's PR Body Generation in VS Code feature. Generate detailed PR descriptions directly in VS Code.<!--excerpt_end-->

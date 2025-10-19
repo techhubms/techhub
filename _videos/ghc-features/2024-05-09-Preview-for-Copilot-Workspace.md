@@ -14,6 +14,7 @@ ghes_support: "false"
 plans: ["Pro+", "Enterprise"]
 tags: ["AI", "Code Review", "GitHub Copilot", "Pull Request", "Videos", "Workspace"]
 tags_normalized: ["ai", "code review", "github copilot", "pull request", "videos", "workspace"]
+alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Preview for Copilot Workspace feature. Get a preview of the Copilot Workspace environment for better collaboration.<!--excerpt_end-->

@@ -33,7 +33,10 @@ Also handle URL parameters: ?section=ai
 {%- endif -%}
 
 {%- assign current_collection = "" -%}
-{%- if page.collection -%}
+{%- comment -%} Check for alt-collection frontmatter first to override default collection {%- endcomment -%}
+{%- if page.alt-collection -%}
+  {%- assign current_collection = page.alt-collection -%}
+{%- elsif page.collection -%}
   {%- assign current_collection = page.collection -%}
 {%- elsif url_parts.size >= 2 -%}
   {%- assign possible_collection = url_parts[1] | split: '.' | first -%}

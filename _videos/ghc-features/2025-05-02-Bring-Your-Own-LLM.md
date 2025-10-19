@@ -14,6 +14,7 @@ ghes_support: "true"
 plans: ["Free"]
 tags: ["AI", "BYOLLM", "Chat", "Code", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "byollm", "chat", "code", "github copilot", "videos"]
+alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Bring Your Own LLM feature. A powerfull feature in the current insiders version of VS Code is to bring your own model to the chat conversation. You can use a local running model or connect with a remote model using your own API key.<!--excerpt_end-->

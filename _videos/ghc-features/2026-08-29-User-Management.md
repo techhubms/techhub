@@ -14,6 +14,7 @@ ghes_support: "false"
 plans: ["Pro", "Business"]
 tags: ["AI", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "github copilot", "videos"]
+alt-collection: "features"
 ---
 
 This content demonstrates GitHub Copilot's User Management feature. Assign licenses per user, team, or organization<!--excerpt_end-->

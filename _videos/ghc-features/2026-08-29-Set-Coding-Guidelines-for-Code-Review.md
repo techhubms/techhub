@@ -14,6 +14,7 @@ ghes_support: "false"
 plans: ["Pro+", "Enterprise"]
 tags: ["AI", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "github copilot", "videos"]
+alt-collection: "features"
 ---
 
 This content demonstrates GitHub Copilot's Set Coding Guidelines for Code Review feature. Define custom coding standards for AI code reviews<!--excerpt_end-->
