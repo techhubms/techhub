@@ -74,13 +74,11 @@
             {
                 "title": "Features",
                 "url": "/github-copilot/features.html",
-                "collection": "features",
                 "description": "GitHub Copilot features and capabilities overview, including demo videos."
             },
             {
                 "title": "Visual Studio Code Updates",
                 "url": "/github-copilot/vscode-updates.html",
-                "collection": "vscode-updates",
                 "description": "Fokko Veegens showing you all the latest features of each Visual Studio Code release."
             },
             {
