@@ -11,9 +11,9 @@ date: 2025-10-16 07:12:43 +00:00
 permalink: "/2025-10-16-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1105.html"
 categories: ["AI", "GitHub Copilot"]
 section: "github-copilot"
+alt-collection: "vscode-updates"
 tags: ["AI", "Chain Of Thought", "Chat Terminal", "Code Coverage", "Developer Tools", "GitHub Copilot", "MCP Marketplace", "Merge Conflicts", "Productivity", "Terminal Profiles", "Videos", "VS Code", "VS Code 1.105"]
 tags_normalized: ["ai", "chain of thought", "chat terminal", "code coverage", "developer tools", "github copilot", "mcp marketplace", "merge conflicts", "productivity", "terminal profiles", "videos", "vs code", "vs code 1dot105"]
-alt-collection: "vscode-updates"
 ---
 
 {{ page.description }}<!--excerpt_end-->

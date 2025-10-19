@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "false"
 plans: ["Free"]
+alt-collection: "features"
 tags: ["AI", "Code", "GitHub Copilot", "Templates", "Videos"]
 tags_normalized: ["ai", "code", "github copilot", "templates", "videos"]
-alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Ice Breakers feature. Generate starter templates or boilerplate code to jump-start development.<!--excerpt_end-->

@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"
 plans: ["Free"]
+alt-collection: "features"
 tags: ["AI", "Documentation", "GitHub", "GitHub Copilot", "Premium", "Pull Request", "Videos"]
 tags_normalized: ["ai", "documentation", "github", "github copilot", "premium", "pull request", "videos"]
-alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Premium Requests feature. What are GitHub Copilot Premium Requests and do their rate limits work? These chances will be in effect during the month of May. Read more info of the enforcements in the documentation.<!--excerpt_end-->

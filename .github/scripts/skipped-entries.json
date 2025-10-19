@@ -7005,5 +7005,29 @@
     "reason": "No categories found: No categories assigned. The content is focused on end-user guidance regarding hardware requirements for installing Windows 11. It does not address software development, coding, DevOps, AI, machine learning, Azure operations, security implementation, or deployment/architecture guidance for Microsoft technologies. According to generic exclusion rules, technical implementation details or developer-oriented instructions are necessary for inclusion; coverage here is limited to consumer setup requirements, not development-related topics. Therefore, the post does not qualify for any Tech Hub categories.",
     "collection": "posts",
     "canonical_url": "https://dellenny.com/windows-11-system-requirements-explained-simply/"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/YFz5Xcbfleo",
+    "collection": "videos",
+    "timestamp": "2025-10-18 17:04:21 +00:00",
+    "reason": "No categories found: No categories assigned because the content (video clip from The GitHub Podcast) discusses open standards, specifically the Model Context Protocol (MCP), in the context of AI transparency and interoperability. However, based on the description and tags, there is no evidence that Microsoft technologies or services are a central focus, nor are Microsoft developer tools, platforms, or frameworks discussed. The content is GitHub-branded, but does not specifically mention Microsoft technology usage, integration, or development. According to Multi-Platform Content Threshold rules and AI Category rules, Microsoft technologies must be central or comprise at least 40% of the substantive content. The content here is focused generically on open standards and plug-and-play benefits for AI tool choice, not on Microsoft AI platforms, GitHub Copilot, or Microsoft-specific coding/deployment practices. Therefore, all categories are excluded."
+  },
+  {
+    "timestamp": "2025-10-19 07:03:56 +00:00",
+    "canonical_url": "https://dellenny.com/how-to-transfer-files-and-apps-from-old-pc-to-windows-11/",
+    "reason": "No categories found: All categories were excluded based on the generic exclusion rules in Chapter 3. The content is focused on end-user guidance for transferring files and apps to Windows 11, detailing personal migration steps and consumer-friendly advice. It does not demonstrate development, coding, DevOps, AI, ML, Security, or Azure architectural topics. No software development, code, or implementation of Microsoft developer technologies is referenced. The only Microsoft technologies mentioned are end-user products (Windows 11, OneDrive) and third-party tools. The content is not development-focused, data- or code-centric, nor does it provide technical implementation or architecture. Per 'Non-Development Microsoft Products' and 'Workplace and Business Focus' exclusions, content focusing on consumer/end-user features is excluded.",
+    "collection": "posts"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/setting-up-windows-hello-face-and-fingerprint-sign-in-a-step-by-step-guide/",
+    "timestamp": "2025-10-19 08:04:05 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is an end-user guide focused on configuring and using Microsoft Windows Hello biometric authentication for personal device login. It does not contain technical implementation, coding, architecture, development, deployment, or security integration details relevant to Microsoft consultants or developers. The content targets general users, not practitioners, and only addresses configuration through the Windows graphical interface. Per Chapter 3 (Generic Exclusion Rules), end-user business application content—such as basic Windows usage or features not involving development—is excluded. Security category was considered but not assigned, as the coverage is user-focused and does not address secure coding, architectural security, or technical security implementation in Microsoft environments."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/windows-11-out-of-box-experience-oobe-guide-step-by-step-setup/",
+    "timestamp": "2025-10-19 08:04:18 +00:00",
+    "reason": "No categories found: All content is focused on guiding users through the initial Windows 11 setup, known as the Out-of-Box Experience (OOBE). This is strictly end-user (consumer/professional) guidance with no focus on software development, coding, DevOps, AI/ML, security architecture, or Azure cloud setup/management. There are no programming concepts, no technical implementation details for developers, and no integration of Microsoft developer technologies. This triggers the 'Non-Development Microsoft Products' generic exclusion, as it is not technical or developer-oriented content. No categories are assigned."
   }
 ]

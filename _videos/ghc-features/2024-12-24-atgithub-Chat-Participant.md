@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "false"
 plans: ["Free"]
+alt-collection: "features"
 tags: ["AI", "Chat", "Chat Participant", "GitHub", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "chat", "chat participant", "github", "github copilot", "videos"]
-alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's @github Chat Participant feature. Use Copilot as a chat participant in GitHub discussions.<!--excerpt_end-->

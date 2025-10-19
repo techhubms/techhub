@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "false"
 plans: ["Pro", "Business"]
+alt-collection: "features"
 tags: ["AI", "Code", "Content Management", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "code", "content management", "github copilot", "videos"]
-alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Content Exclusions feature. With Content Exclusions you can exclude certain parts of your codebase from being sent to Copilot. Think for example of files containing sensitive information, like secrets.<!--excerpt_end-->

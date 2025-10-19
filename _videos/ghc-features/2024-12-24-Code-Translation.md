@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"
 plans: ["Free"]
+alt-collection: "features"
 tags: ["AI", "Code", "GitHub Copilot", "Translation", "Videos"]
 tags_normalized: ["ai", "code", "github copilot", "translation", "videos"]
-alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Code Translation feature. Translate code across different languages with ease using Copilot.<!--excerpt_end-->

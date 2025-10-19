@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "false"
 plans: ["Free"]
+alt-collection: "features"
 tags: ["AI", "Code", "Git", "GitHub Copilot", "Suggestions", "Videos"]
 tags_normalized: ["ai", "code", "git", "github copilot", "suggestions", "videos"]
-alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Commit Message Suggestions feature. Copilot proposes commit messages based on the code changes in the current changeset.<!--excerpt_end-->

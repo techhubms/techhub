@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"
 plans: ["Free"]
+alt-collection: "features"
 tags: ["Agent Mode", "AI", "Azure", "GitHub", "GitHub Copilot", "MCP", "Videos"]
 tags_normalized: ["agent mode", "ai", "azure", "github", "github copilot", "mcp", "videos"]
-alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's MCP with Azure and GitHub feature. Empower Agent Mode with extra context and capabilities by supercharging it with MCP servers. See how you can bring in extra information from Azure resources to add extra information to creating GitHub issues.<!--excerpt_end-->

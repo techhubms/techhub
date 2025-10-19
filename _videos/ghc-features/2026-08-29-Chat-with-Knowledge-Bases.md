@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "false"
 plans: ["Pro+", "Enterprise"]
+alt-collection: "features"
 tags: ["AI", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "github copilot", "videos"]
-alt-collection: "features"
 ---
 
 This content demonstrates GitHub Copilot's Chat with Knowledge Bases feature. Leverage organizational knowledge in your AI conversations<!--excerpt_end-->

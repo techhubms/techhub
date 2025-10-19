@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "false"
 plans: ["Pro", "Business"]
+alt-collection: "features"
 tags: ["AI", "Analytics", "Coding", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "analytics", "coding", "github copilot", "videos"]
-alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Usage Metrics feature. Track and analyze Copilot usage across your team.<!--excerpt_end-->

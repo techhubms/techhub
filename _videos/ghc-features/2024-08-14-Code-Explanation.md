@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"
 plans: ["Free"]
+alt-collection: "features"
 tags: ["AI", "Code", "Explanation", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "code", "explanation", "github copilot", "videos"]
-alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Code Explanation feature. Get detailed explanations for complex code snippets with Copilot.<!--excerpt_end-->

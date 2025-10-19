@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"
 plans: ["Free"]
+alt-collection: "features"
 tags: ["AI", "CLI", "Commands", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "cli", "commands", "github copilot", "videos"]
-alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's CLI Assistance feature. Streamline your command line tasks with Copilot's CLI assistance.<!--excerpt_end-->

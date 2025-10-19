@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"
 plans: ["Free"]
+alt-collection: "features"
 tags: ["AI", "Coding", "GitHub Copilot", "Testing", "Videos"]
 tags_normalized: ["ai", "coding", "github copilot", "testing", "videos"]
-alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Unit Tests feature. Automate your testing process with Copilot's unit test generation.<!--excerpt_end-->

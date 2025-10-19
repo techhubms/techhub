@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "false"
 plans: ["Free"]
+alt-collection: "features"
 tags: ["AI", "Code", "Code Review", "Editing", "GitHub Copilot", "IDE", "Videos"]
 tags_normalized: ["ai", "code", "code review", "editing", "github copilot", "ide", "videos"]
-alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Local In-Editor Code Reviews feature. Highlight and review suggested code changes directly from within the Visual Studio editor.<!--excerpt_end-->

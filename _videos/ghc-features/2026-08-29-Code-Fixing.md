@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"
 plans: ["Free"]
+alt-collection: "features"
 tags: ["AI", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "github copilot", "videos"]
-alt-collection: "features"
 ---
 
 This content demonstrates GitHub Copilot's Code Fixing feature. Quickly fix coding errors with '/fix' command<!--excerpt_end-->

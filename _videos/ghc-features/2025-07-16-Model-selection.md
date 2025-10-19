@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"
 plans: ["Free"]
+alt-collection: "features"
 tags: ["AI", "Chat Interface", "Coding", "GitHub Copilot", "Model Selection", "Programming", "Software Development", "Videos", "VS Code"]
 tags_normalized: ["ai", "chat interface", "coding", "github copilot", "model selection", "programming", "software development", "videos", "vs code"]
-alt-collection: "features"
 ---
 
 In this comprehensive guide, Liuba explores the strategic use of different models in GitHub Copilot's chat interface through expert demonstrations. The video covers when and how to select the most appropriate model for various coding scenarios, providing practical insights that can improve your development workflow and code quality. Whether you're new to GitHub Copilot or looking to optimize your current usage, this tutorial offers valuable guidance on leveraging model selection effectively.<!--excerpt_end-->

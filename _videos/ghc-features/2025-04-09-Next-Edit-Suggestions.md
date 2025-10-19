@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"
 plans: ["Free"]
+alt-collection: "features"
 tags: ["AI", "Editing", "GitHub Copilot", "Suggestions", "Videos"]
 tags_normalized: ["ai", "editing", "github copilot", "suggestions", "videos"]
-alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Next Edit Suggestions feature. NES Looks ahead for you while editing and comes up with related changes.<!--excerpt_end-->

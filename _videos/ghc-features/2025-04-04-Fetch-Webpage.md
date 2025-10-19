@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"
 plans: ["Free"]
+alt-collection: "features"
 tags: ["AI", "GitHub Copilot", "Videos", "Web Scraping", "Web UI"]
 tags_normalized: ["ai", "github copilot", "videos", "web scraping", "web ui"]
-alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Fetch Webpage feature. Retrieve a web page as part of the context you provide with your prompt.<!--excerpt_end-->

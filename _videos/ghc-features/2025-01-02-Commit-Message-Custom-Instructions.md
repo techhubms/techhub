@@ -12,9 +12,9 @@ viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "false"
 plans: ["Free"]
+alt-collection: "features"
 tags: ["AI", "Git", "GitHub Copilot", "Instructions", "Videos"]
 tags_normalized: ["ai", "git", "github copilot", "instructions", "videos"]
-alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Commit Message Custom Instructions feature. Customize commit messages with tailored instructions for more descriptive and meaningful comments.<!--excerpt_end-->
