@@ -3,6 +3,17 @@ layout: "page"
 title: "About us"
 ---
 
+## Fokko Veegens
+
+<div class="about-profile">
+  <img src="{{ '/assets/about/fokko.jpg' | relative_url }}" alt="Fokko Veegens">
+  <div class="profile-content">
+    <p>Fokko is a consultant at Xebia Microsoft Services specializing in GitHub Copilot and AI-powered development tools. He creates educational content and tutorials to help developers maximize their productivity with modern AI assistants.</p>
+    <p>Fokko regularly produces video content showcasing the latest features in Visual Studio Code and GitHub Copilot, helping developers stay up-to-date with the rapidly evolving AI development landscape.</p>
+    <p><strong>Find Fokko</strong>: <a href="https://github.com/fokkoveegens" target="_blank">GitHub</a> • <a href="https://nl.linkedin.com/in/fokkoveegens" target="_blank">LinkedIn</a></p>
+  </div>
+</div>
+
 ## Reinier van Maanen
 
 <div class="about-profile">
