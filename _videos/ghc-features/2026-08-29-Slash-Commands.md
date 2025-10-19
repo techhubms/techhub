@@ -14,6 +14,7 @@ ghes_support: "true"
 plans: ["Free"]
 tags: ["AI", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "github copilot", "videos"]
+alt-collection: "features"
 ---
 
 This content demonstrates GitHub Copilot's Slash Commands feature. Enhance workflow with powerful slash commands<!--excerpt_end-->

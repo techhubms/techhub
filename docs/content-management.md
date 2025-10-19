@@ -41,6 +41,7 @@ GitHub Copilot feature demonstration videos are managed through a special collec
 - Must include `section: "github-copilot"` in frontmatter
 - Must include `plans: ["Free"|"Pro"|"Business"|"Pro+"|"Enterprise"]` array to specify which subscription tiers support the feature
 - Must include `ghes_support: true|false` to indicate GitHub Enterprise Server support
+- Must include `alt-collection: "features"` to highlight the Features tab instead of the Videos tab
 - **Date-based filtering**: Videos with future dates are still shown as features but are not clickable as this is the mechanism to distinguish between features that have a demo video or not. So if you create a video for a feature, make sure to set update the date in the filename, frontmatter AND permalink!
 
 **Automatic Integration**:
@@ -50,7 +51,25 @@ GitHub Copilot feature demonstration videos are managed through a special collec
 - The page dynamically filters features based on publication date and subscription level
 - Replaces the previous `_data/copilot_plans.json` system with a more maintainable video-based approach
 
-### 4. Automated RSS Content Creation
+### 4. Visual Studio Code Updates Videos
+
+Visual Studio Code update videos are managed through a special collection structure:
+
+**Location**: `_videos/vscode-updates/` subfolder
+
+**Special Requirements**:
+
+- Must include `section: "github-copilot"` in frontmatter
+- Must include `alt-collection: "vscode-updates"` to highlight the Visual Studio Code Updates tab instead of the Videos tab
+- Should include `youtube_id` for embedded video playback
+
+**Automatic Integration**:
+
+- Videos in this folder automatically appear on the `/github-copilot/vscode-updates.md` page
+- The latest video is featured prominently at the top of the page
+- Older videos are listed below with links and descriptions
+
+### 5. Automated RSS Content Creation
 
 The site automatically processes RSS feeds:
 
@@ -103,3 +122,51 @@ Use the PowerShell repair script to fix common issues:
 ```
 
 This script automatically fixes formatting, dates, frontmatter, and other common issues.
+
+## Alternative Collection Tab Highlighting
+
+### Overview
+
+The `alt-collection` frontmatter field allows content items to highlight a different collection tab in the navigation bar than their default collection would suggest. This is particularly useful for specialized subcollections like GitHub Copilot Features and Visual Studio Code Updates.
+
+### How It Works
+
+By default, videos in the `_videos` collection highlight the "Videos" tab in the navigation. However, videos in the `ghc-features` and `vscode-updates` subfolders should highlight their respective tabs instead:
+
+- Videos in `_videos/ghc-features/` highlight the "Features" tab
+- Videos in `_videos/vscode-updates/` highlight the "Visual Studio Code Updates" tab
+
+### Usage
+
+Add the `alt-collection` field to the frontmatter of your content:
+
+```yaml
+---
+layout: "post"
+title: "Your Video Title"
+section: "github-copilot"
+alt-collection: "features"  # or "vscode-updates"
+---
+```
+
+### Supported Values
+
+- `"features"` - Highlights the Features tab
+- `"vscode-updates"` - Highlights the Visual Studio Code Updates tab
+
+### Implementation Details
+
+The header template (`_includes/header.html`) checks for the `alt-collection` frontmatter field and uses it to determine which collection tab should be highlighted. This overrides the default collection-based highlighting logic.
+
+The `alt-collection` value is matched against the URL path of collection links in the navigation. For example, `"features"` matches `/github-copilot/features.html`, and `"vscode-updates"` matches `/github-copilot/vscode-updates.html`.
+
+### Testing
+
+End-to-end tests verify that the correct tabs are highlighted for:
+
+- GitHub Copilot Features videos
+- Visual Studio Code Updates videos
+- Regular videos (control group)
+- Collection pages themselves
+
+Tests are located in `spec/e2e/tests/alt-collection-highlighting.spec.js`.

@@ -14,6 +14,7 @@ ghes_support: "true"
 plans: ["Free"]
 tags: ["AI", "Code", "Documentation", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "code", "documentation", "github copilot", "videos"]
+alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Code Documenting feature. Generate comprehensive documentation for your codebase with Copilot.<!--excerpt_end-->

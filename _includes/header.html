@@ -33,7 +33,10 @@ Also handle URL parameters: ?section=ai
 {%- endif -%}
 
 {%- assign current_collection = "" -%}
-{%- if page.collection -%}
+{%- comment -%} Check for alt-collection frontmatter first to override default collection {%- endcomment -%}
+{%- if page.alt-collection -%}
+  {%- assign current_collection = page.alt-collection -%}
+{%- elsif page.collection -%}
   {%- assign current_collection = page.collection -%}
 {%- elsif url_parts.size >= 2 -%}
   {%- assign possible_collection = url_parts[1] | split: '.' | first -%}
@@ -156,9 +159,15 @@ Also handle URL parameters: ?section=ai
           {%- if collection_data.collection and current_collection == collection_data.collection -%}
             {%- assign is_active = true -%}
           {%- elsif collection_data.collection == null or collection_data.collection == '' -%}
+            {%- comment -%} For non-standard collections (like Features, VS Code Updates), match by URL path component {%- endcomment -%}
             {%- assign collection_url_path = collection_data.url | relative_url -%}
             {%- if page.url == collection_url_path -%}
               {%- assign is_active = true -%}
+            {%- elsif current_collection != "" -%}
+              {%- comment -%} Check if URL contains the current_collection identifier (e.g., "features" or "vscode-updates") {%- endcomment -%}
+              {%- if collection_url_path contains current_collection -%}
+                {%- assign is_active = true -%}
+              {%- endif -%}
             {%- endif -%}
           {%- endif -%}
           <a class="collection-link{% if is_active %} active{% endif %}" href="{{ collection_data.url | relative_url }}">{{ collection_data.title | escape }}</a>

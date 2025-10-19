@@ -14,6 +14,7 @@ ghes_support: "false"
 plans: ["Pro", "Business"]
 tags: ["AI", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "github copilot", "videos"]
+alt-collection: "features"
 ---
 
 This content demonstrates GitHub Copilot's Data Excluded From Training by Default feature. Your code stays private and won't train AI models<!--excerpt_end-->

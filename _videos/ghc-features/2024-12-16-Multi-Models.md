@@ -14,6 +14,7 @@ ghes_support: "true"
 plans: ["Free"]
 tags: ["AI", "GitHub Copilot", "LLM", "Multi Feature", "Videos"]
 tags_normalized: ["ai", "github copilot", "llm", "multi feature", "videos"]
+alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Multi-Models feature. Access multiple AI models through Copilot for different tasks.<!--excerpt_end-->

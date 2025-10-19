@@ -13,6 +13,7 @@ categories: ["AI", "GitHub Copilot"]
 section: "github-copilot"
 tags: ["AI", "Coding Agent", "Custom Chat Modes", "Custom Instructions", "Developer Tools", "GitHub Copilot", "MCP Servers", "Open Source", "Productivity", "Terminal Auto Approval", "Videos", "VS Code", "VS Code 1.102"]
 tags_normalized: ["ai", "coding agent", "custom chat modes", "custom instructions", "developer tools", "github copilot", "mcp servers", "open source", "productivity", "terminal auto approval", "videos", "vs code", "vs code 1dot102"]
+alt-collection: "vscode-updates"
 ---
 
 {{ page.description }}<!--excerpt_end-->

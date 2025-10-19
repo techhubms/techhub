@@ -14,6 +14,7 @@ ghes_support: "false"
 plans: ["Free"]
 tags: ["AI", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "github copilot", "videos"]
+alt-collection: "features"
 ---
 
 This content demonstrates GitHub Copilot's Playwright Test Generation feature. Generate UI tests with Playwright from existing code<!--excerpt_end-->

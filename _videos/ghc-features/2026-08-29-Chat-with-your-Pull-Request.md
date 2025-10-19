@@ -14,6 +14,7 @@ ghes_support: "false"
 plans: ["Free"]
 tags: ["AI", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "github copilot", "videos"]
+alt-collection: "features"
 ---
 
 This content demonstrates GitHub Copilot's Chat with your Pull Request feature. Get AI insights and improvements on your pull requests<!--excerpt_end-->

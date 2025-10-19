@@ -14,6 +14,7 @@ ghes_support: "true"
 plans: ["Free"]
 tags: ["AI", "Code", "GitHub Copilot", "Instructions", "Videos"]
 tags_normalized: ["ai", "code", "github copilot", "instructions", "videos"]
+alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's User Instructions feature. With user instructions in VS Code you can help guide Copilot in the right direction for your codebase, like being a Python 3 developer and skip older language constructs.<!--excerpt_end-->

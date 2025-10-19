@@ -14,6 +14,7 @@ ghes_support: "true"
 plans: ["Free"]
 tags: ["AI", "Editing", "GitHub Copilot", "Multi Feature", "Videos"]
 tags_normalized: ["ai", "editing", "github copilot", "multi feature", "videos"]
+alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's Multi-file Edits feature. Make changes across multiple files simultaneously with Copilot.<!--excerpt_end-->

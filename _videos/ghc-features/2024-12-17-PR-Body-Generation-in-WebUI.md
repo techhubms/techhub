@@ -14,6 +14,7 @@ ghes_support: "false"
 plans: ["Free"]
 tags: ["AI", "GitHub Copilot", "Pull Request", "Videos", "Web UI"]
 tags_normalized: ["ai", "github copilot", "pull request", "videos", "web ui"]
+alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's PR Body Generation in WebUI feature. Automatically generate detailed pull request bodies with Copilot in the webUI.<!--excerpt_end-->

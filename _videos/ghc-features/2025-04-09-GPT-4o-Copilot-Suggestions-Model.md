@@ -14,6 +14,7 @@ ghes_support: "true"
 plans: ["Free"]
 tags: ["AI", "GitHub Copilot", "GPT", "LLM", "Suggestions", "Videos"]
 tags_normalized: ["ai", "github copilot", "gpt", "llm", "suggestions", "videos"]
+alt-collection: "features"
 ---
 
 This video demonstrates GitHub Copilot's GPT-4o Copilot Suggestions Model feature. GPT-4o Copilot replaces the previously used GPT 3.5 TURBO model for suggestions.<!--excerpt_end-->
