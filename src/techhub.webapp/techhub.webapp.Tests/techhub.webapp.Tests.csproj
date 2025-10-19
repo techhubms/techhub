@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\techhub.webapp.ApiService\techhub.webapp.ApiService.csproj" />
     <ProjectReference Include="..\techhub.webapp.AppHost\techhub.webapp.AppHost.csproj" />
   </ItemGroup>
 
