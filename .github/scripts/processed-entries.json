@@ -12836,5 +12836,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=5-HRDXO3iC0",
     "collection": "videos",
     "timestamp": "2025-10-20 08:05:56 +00:00"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-20 12:06:02 +00:00",
+    "reason": "Succesfully added: The article centrally discusses AI's impact on software development and education. The AI category is assigned because much of the content is devoted to the integration and impact of AI tools (AI rule 1, 4, 5). 'GitHub Copilot' is explicitly mentioned as a central example of agentic AI (GitHub Copilot rule 1–4); therefore, both 'AI' and 'GitHub Copilot' are required (per Copilot category rules). The article repeatedly frames these impacts in the context of developer workflows, productivity, collaboration, and DevOps process transformation, meeting the inclusion requirements for 'DevOps' (DevOps rule 3, 5, and 9). Other categories, such as Coding, Azure, ML, or Security, do not apply, as the article does not focus on technical implementation of programming, ML algorithms, Azure/Microsoft-specific platforms, or security architectures. The explanation field details these category choices with direct references to the decision rules.",
+    "canonical_url": "https://devops.com/how-software-engineers-and-students-use-ai-to-move-faster-than-ever-without-breaking-things/"
   }
 ]

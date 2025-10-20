@@ -7065,5 +7065,17 @@
     "canonical_url": "https://dellenny.com/why-businesses-are-moving-to-the-cloud-top-5-benefits-driving-digital-transformation/",
     "collection": "posts",
     "timestamp": "2025-10-20 08:05:27 +00:00"
+  },
+  {
+    "timestamp": "2025-10-20 11:04:33 +00:00",
+    "reason": "No categories found: No categories assigned. The content is a general comparison and architectural guide to database types (SQL, NoSQL, Graph, etc.), but it does not cover Microsoft-specific technologies in any substantive detail. Although Microsoft SQL Server is listed among many examples, the discussion remains generic with no technical focus on Microsoft technologies, products, or development/deployment practices. Per multi-platform rules, simply mentioning a Microsoft product does not meet the ≥40% threshold or make it central. None of the inclusion rules (for AI, Azure, Coding, DevOps, ML, Security, or GitHub Copilot) are triggered by the content. Therefore, it is excluded.",
+    "canonical_url": "https://dellenny.com/choosing-the-right-database-a-practical-guide-to-sql-nosql-graph/",
+    "collection": "posts"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-20 12:05:35 +00:00",
+    "reason": "No categories found: All categories are excluded due to the generic exclusion rule for job-related content. The text is a roundup of DevOps job opportunities and includes links to job postings, salary figures, and descriptions of open roles at companies such as Viasat, CTG, Dell Technologies, and OpenAI. Per Chapter 3, job openings, hiring announcements, salary discussions, and career advancement topics are all excluded, even if they mention technical roles or companies connected to Microsoft technologies. No substantive technical content or implementation detail is provided.",
+    "canonical_url": "https://devops.com/five-great-devops-job-opportunities-160/"
   }
 ]
