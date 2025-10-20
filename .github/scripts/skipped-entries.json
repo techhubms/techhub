@@ -7053,5 +7053,17 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/understanding-the-different-types-of-cloud-services-iaas-paas-saas/",
     "timestamp": "2025-10-20 07:04:21 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is a general overview of public, private, and hybrid cloud deployment models from a high-level perspective. While Microsoft Azure is mentioned as an example of a public cloud provider, there is no substantive technical guidance, implementation detail, or code related to Microsoft technologies that passes the minimum threshold described in the Multi-Platform Content guidelines (Microsoft content is <40% and not central). The entire article remains vendor-neutral and conceptual, without actionable technical depth relating to Microsoft platforms or developer/IT implementation. This falls outside category inclusion criteria and does not meet Azure, Coding, DevOps, Security, AI, ML, or GitHub Copilot rules.",
+    "canonical_url": "https://dellenny.com/public-vs-private-vs-hybrid-cloud-models-explained/",
+    "collection": "posts",
+    "timestamp": "2025-10-20 08:05:14 +00:00"
+  },
+  {
+    "reason": "No categories found: Content was excluded due to generic exclusion rule under 'Business Strategy and Executive Content' and 'Workplace and Business Focus.' The article focuses on high-level business benefits of cloud computing (cost savings, scalability, collaboration, security, innovation) and digital transformation. There are no technical implementation details, no discussion of Microsoft technologies or development, and no actionable content aimed at practitioners or developers. Furthermore, the tags provided reference certifications and products, but the content itself is non-technical, business-focused, and lacks specific coverage of Microsoft technologies or developer topics as per the inclusion criteria.",
+    "canonical_url": "https://dellenny.com/why-businesses-are-moving-to-the-cloud-top-5-benefits-driving-digital-transformation/",
+    "collection": "posts",
+    "timestamp": "2025-10-20 08:05:27 +00:00"
   }
 ]
