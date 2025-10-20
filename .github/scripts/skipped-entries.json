@@ -7047,5 +7047,11 @@
     "timestamp": "2025-10-19 17:04:17 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/UJ0LVyCLvTM",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is a general overview and comparison of cloud service models (IaaS, PaaS, SaaS), with only brief mentions of Microsoft Azure (as one example alongside AWS and Google) and no technical implementation details specific to Microsoft technologies. The Microsoft technology threshold (≥40% substantive focus or centrality) is not met. There is no code, tutorial, or hands-on Azure/Microsoft demonstration, and the entire article remains high-level and platform-agnostic. Therefore, according to Multi-Platform Content Threshold and Category Inclusion Rules, no categories are appropriate.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/understanding-the-different-types-of-cloud-services-iaas-paas-saas/",
+    "timestamp": "2025-10-20 07:04:21 +00:00"
   }
 ]
