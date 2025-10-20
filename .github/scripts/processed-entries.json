@@ -12884,5 +12884,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=t74ClffSUW0",
     "collection": "videos",
     "reason": "Succesfully added: Assigned the Security category because the entire content focuses on the Log4Shell vulnerability—a major software security incident—with detailed technical and ecosystem discussion relevant to secure development, patch management, and vulnerability response (Security rules 1, 2, 5, 7, 8). Despite being hosted by GitHub and discussing development community impact, there is no substantive technical guidance about coding, GitHub Actions, or DevOps practices, so Coding, DevOps, and Azure are not assigned. AI is discussed only briefly as an influence on security, not as a technology used, so AI category is not assigned. The content meets quality standards, is in English, and is not promotional, biographical, or business-only; thus, no generic exclusions apply."
+  },
+  {
+    "timestamp": "2025-10-20 17:05:46 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Categories 'Azure' and 'Security' are assigned. The post is centrally about Azure Blob Storage (Azure category, Azure rule 1) and maps out threats, attack chains, and security controls (Security category, Security rules 1, 4, 5, 7, and 9). It comprehensively details threat activity, MITRE ATT&CK tactics, credential access, incident response, and Azure-native security recommendations, meeting the inclusion criteria. No generic exclusion rules apply. No other categories fit: there is no code-level implementation, DevOps tooling, or ML/AI engineering focus.",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/10/20/inside-the-attack-chain-threat-activity-targeting-azure-blob-storage/"
   }
 ]
