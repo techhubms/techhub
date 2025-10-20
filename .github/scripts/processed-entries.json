@@ -12842,5 +12842,17 @@
     "timestamp": "2025-10-20 12:06:02 +00:00",
     "reason": "Succesfully added: The article centrally discusses AI's impact on software development and education. The AI category is assigned because much of the content is devoted to the integration and impact of AI tools (AI rule 1, 4, 5). 'GitHub Copilot' is explicitly mentioned as a central example of agentic AI (GitHub Copilot rule 1–4); therefore, both 'AI' and 'GitHub Copilot' are required (per Copilot category rules). The article repeatedly frames these impacts in the context of developer workflows, productivity, collaboration, and DevOps process transformation, meeting the inclusion requirements for 'DevOps' (DevOps rule 3, 5, and 9). Other categories, such as Coding, Azure, ML, or Security, do not apply, as the article does not focus on technical implementation of programming, ML algorithms, Azure/Microsoft-specific platforms, or security architectures. The explanation field details these category choices with direct references to the decision rules.",
     "canonical_url": "https://devops.com/how-software-engineers-and-students-use-ai-to-move-faster-than-ever-without-breaking-things/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the content's main focus is Azure Managed Redis, including deployment, architecture, and operational details on the Azure platform (Azure inclusion rules 1, 4, 5, 6). No other categories like AI or Coding were assigned—while there is a mention of 'AI inferencing scenario and demo', it appears only as a minor example among broader Redis/architecture coverage and not as the primary focus (AI inclusion rule not triggered). The session discusses Redis usage, application patterns, and Azure-specific implementations, aligning clearly with Azure category rules.",
+    "collection": "videos",
+    "timestamp": "2025-10-20 13:12:19 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=jIpJplSaFQM"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the content is focused on introducing a new RabbitMQ Connector for Azure Logic Apps. The announcement details integration features, configuration steps, hybrid/on-premises scenarios, and rollout, all centered around Azure Logic Apps (Azure inclusion rules 1 and 4). No other categories apply, as the post is not about coding practices, DevOps pipelines, AI, ML, security, or GitHub Copilot. There are no generic exclusion rules triggered—the content is technical, not biographical, not sales or job-focused, not management/business strategy, and it is in English and above the word count threshold for community content.",
+    "collection": "community",
+    "timestamp": "2025-10-20 13:12:54 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-rabbitmq-connector-public-preview/ba-p/4462627"
   }
 ]
