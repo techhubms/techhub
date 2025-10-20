@@ -7083,5 +7083,17 @@
     "collection": "news",
     "reason": "No categories found: No categories assigned. This content is excluded under generic exclusion rules for 'Non-Development Microsoft Products' and 'Business Productivity Tools' (Chapter 3). The article is a holiday-season promotional overview of Microsoft hardware and consumer-facing AI features (like Copilot+ PCs, gaming with Xbox, Copilot in Edge, Copilot on Windows 11, etc.), targeting general consumers and focused on shopping, gifts, and general productivity enhancement rather than technical implementation, development, configuration, or hands-on technical usage. Mentions of AI (Copilot features) are all business/productivity/consumer-focused, not developer-focused or related to technical integration or development. There are no technical development details, code, implementation examples, or developer scenarios. This triggers full exclusion—the content is not eligible for any of the technical categories such as AI, Coding, Azure, etc.",
     "timestamp": "2025-10-20 14:04:36 +00:00"
+  },
+  {
+    "reason": "No categories found: All categories are excluded based on generic exclusion rules. The content focuses on a marketing event and celebrates the launch of a video game (*Ninja Gaiden 4*) with an entertainment spectacle involving helicopters, not on development, technical implementation, or Microsoft technologies in a practitioner or developer context. The article discusses the event spectacle, promotion, preorders, and product features, but does not provide technical depth regarding game development, Microsoft developer tools, programming, coding, DevOps, Azure, AI, ML, or Security topics. This fits the 'sales pitches' (promotional content without educational value), 'business/productivity (non-development Microsoft products)', and 'format and length (entertainment, not technical)' exclusions in Chapter 3. No categories apply.",
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2025/10/20/ninja-gaiden-4-helicopter-world-record/",
+    "timestamp": "2025-10-20 18:05:47 +00:00"
+  },
+  {
+    "reason": "No categories found: Content is excluded due to the lack of substantial Microsoft technology focus. The provided description and tags are centered on the Log4Shell (Log4j) vulnerability, which is not a Microsoft technology. The technical explanation is given by a Log4j maintainer and focuses on the Java logging framework, its security flaw, and related concepts like JNDI. Although the video is shared by GitHub, there is no evidence in the title, description, tags, or surrounding context that Microsoft services, platforms, or tools are central to the technical discussion or solution (does not meet the ≥40% Microsoft content threshold as per multi-platform rules). No Microsoft categories qualify.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/2ksYTVd2wMo",
+    "timestamp": "2025-10-20 18:06:36 +00:00"
   }
 ]

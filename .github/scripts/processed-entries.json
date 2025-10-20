@@ -12890,5 +12890,17 @@
     "collection": "news",
     "reason": "Succesfully added: Categories 'Azure' and 'Security' are assigned. The post is centrally about Azure Blob Storage (Azure category, Azure rule 1) and maps out threats, attack chains, and security controls (Security category, Security rules 1, 4, 5, 7, and 9). It comprehensively details threat activity, MITRE ATT&CK tactics, credential access, incident response, and Azure-native security recommendations, meeting the inclusion criteria. No generic exclusion rules apply. No other categories fit: there is no code-level implementation, DevOps tooling, or ML/AI engineering focus.",
     "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/10/20/inside-the-attack-chain-threat-activity-targeting-azure-blob-storage/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric is a core Azure analytics service (Azure rule 1). Assigned 'ML' because the content emphasizes advanced analytics, time-series analysis, anomaly detection, and Python integration—activities central to data science and machine learning (ML rules 2, 3, and 6). 'AI' was considered but not included because the feature enables AI-driven scenarios but is not itself an AI API or AI-specific tool (ML rules take precedence for analytics platform features).",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/unlock-real-time-intelligence-with-the-eventhouse-endpoint-for-lakehouse/",
+    "timestamp": "2025-10-20 18:05:33 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category since the entire content centers on Microsoft Copilot Studio, which is a developer/maker tool for building AI agents, directly matching AI rule 1 (Microsoft AI products/services) and rule 2 (Copilot Studio as a developer tool). No other categories qualify as there is no focus on code-level development, DevOps/CI-CD, advanced data/ML engineering, or security architecture. GitHub Copilot is not mentioned, so that category is not relevant. All features discussed are directly relevant to practitioners building or extending Copilot agents as a technical, AI-powered development activity (not productivity-focused Copilot for Microsoft 365).",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/whats-new-in-copilot-studio-september-2025/",
+    "timestamp": "2025-10-20 18:06:11 +00:00"
   }
 ]
