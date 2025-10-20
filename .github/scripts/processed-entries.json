@@ -12854,5 +12854,11 @@
     "collection": "community",
     "timestamp": "2025-10-20 13:12:54 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-rabbitmq-connector-public-preview/ba-p/4462627"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-the-rabbitmq-connector-public-preview/ba-p/4462627",
+    "collection": "community",
+    "reason": "Succesfully added: The Azure category is assigned because the content heavily focuses on Azure Logic Apps technology and its integration with RabbitMQ, per Azure rule 1 and 4, as well as hybrid/on-premises scenarios. No other categories from the workflow apply: there is no code-level implementation or .NET focus to justify 'Coding'; AI, ML, Security, GitHub Copilot, or DevOps practices are not discussed. The content is technical, explains the usage and configuration of messaging integrations, and avoids any generic exclusion triggers. All category assignments and exclusions follow the specified inclusion and exclusion rules.",
+    "timestamp": "2025-10-20 14:05:13 +00:00"
   }
 ]

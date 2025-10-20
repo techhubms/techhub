@@ -7077,5 +7077,11 @@
     "timestamp": "2025-10-20 12:05:35 +00:00",
     "reason": "No categories found: All categories are excluded due to the generic exclusion rule for job-related content. The text is a roundup of DevOps job opportunities and includes links to job postings, salary figures, and descriptions of open roles at companies such as Viasat, CTG, Dell Technologies, and OpenAI. Per Chapter 3, job openings, hiring announcements, salary discussions, and career advancement topics are all excluded, even if they mention technical roles or companies connected to Microsoft technologies. No substantive technical content or implementation detail is provided.",
     "canonical_url": "https://devops.com/five-great-devops-job-opportunities-160/"
+  },
+  {
+    "canonical_url": "https://blogs.windows.com/devices/?p=263772",
+    "collection": "news",
+    "reason": "No categories found: No categories assigned. This content is excluded under generic exclusion rules for 'Non-Development Microsoft Products' and 'Business Productivity Tools' (Chapter 3). The article is a holiday-season promotional overview of Microsoft hardware and consumer-facing AI features (like Copilot+ PCs, gaming with Xbox, Copilot in Edge, Copilot on Windows 11, etc.), targeting general consumers and focused on shopping, gifts, and general productivity enhancement rather than technical implementation, development, configuration, or hands-on technical usage. Mentions of AI (Copilot features) are all business/productivity/consumer-focused, not developer-focused or related to technical integration or development. There are no technical development details, code, implementation examples, or developer scenarios. This triggers full exclusion—the content is not eligible for any of the technical categories such as AI, Coding, Azure, etc.",
+    "timestamp": "2025-10-20 14:04:36 +00:00"
   }
 ]
