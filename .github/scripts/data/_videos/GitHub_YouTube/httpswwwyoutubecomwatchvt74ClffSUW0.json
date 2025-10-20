@@ -1,0 +1,18 @@
+{
+  "FeedName": "GitHub YouTube",
+  "Author": "GitHub",
+  "Link": "https://www.youtube.com/watch?v=t74ClffSUW0",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Tags": [
+    "GitHub",
+    "Log4j",
+    "Log4Shell"
+  ],
+  "OutputDir": "_videos",
+  "PubDate": "2025-10-20T15:45:07+00:00",
+  "ProcessedDate": "2025-10-20 16:05:10",
+  "Description": "In late 2021, the Log4Shell vulnerability sent shockwaves through the global tech community. For the first time, we're sharing the untold, inside story from the perspective of Christian Grobmeier, a maintainer of the Log4j project. Hear about the immense pressure, the race for a fix, and the crucial lessons learned from one of the most severe security incidents in history.\n\nGitHub Blog Post - The untold story of Log4Shell: https://github.blog/open-source/inside-the-breach-that-broke-the-internet-the-untold-story-of-log4shell/ GitHub Secure Open Source Fund: https://resources.github.com/github-secure-open-source-fund/\n\n#Log4Shell #Log4j #GitHub\n\n— CHAPTERS —\n\n00:00 - Introduction: a global crisis before Christmas 01:03 - Meet the maintainer: Christian Grobmeier 01:50 - What is Log4j and why is it everywhere? 03:56 - The day the internet broke: discovering Log4Shell 06:07 - How a single string caused the vulnerability 08:53 - The Minecraft moment: a personal connection 09:45 - The pressure of being a maintainer 11:22 - A CVSS score of 10/10 13:49 - The technical danger for developers 15:18 - The race to release a patch 17:30 - Losing the community's trust 19:02 - A call from the White House 20:09 - Is funding a silver bullet? 23:54 - The patching paradox 24:48 - What is an SBOM? 26:04 - Three crucial lessons for software 27:17 - GitHub Secure Open Source Fund 28:18 - Developers are the first line of defense 29:01 - How AI impacts security 31:14 - The only cure against ignorance 32:13 - A final message to the open source community\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 100 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "Title": "The Untold Story of Log4j and Log4Shell | Christian Grobmeier | GitHub",
+  "FeedLevelAuthor": "GitHub",
+  "EnhancedContent": null
+}

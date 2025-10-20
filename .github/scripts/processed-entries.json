@@ -12860,5 +12860,29 @@
     "collection": "community",
     "reason": "Succesfully added: The Azure category is assigned because the content heavily focuses on Azure Logic Apps technology and its integration with RabbitMQ, per Azure rule 1 and 4, as well as hybrid/on-premises scenarios. No other categories from the workflow apply: there is no code-level implementation or .NET focus to justify 'Coding'; AI, ML, Security, GitHub Copilot, or DevOps practices are not discussed. The content is technical, explains the usage and configuration of messaging integrations, and avoids any generic exclusion triggers. All category assignments and exclusions follow the specified inclusion and exclusion rules.",
     "timestamp": "2025-10-20 14:05:13 +00:00"
+  },
+  {
+    "timestamp": "2025-10-20 16:05:51 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/external-data-materialization-in-fabric-data-warehouse/",
+    "collection": "news",
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because Fabric Data Warehouse is a Microsoft cloud analytics service built on Azure (Azure Inclusion Rule 1, 5, 6, 7). 'ML' assigned because the content focuses on data warehousing, data engineering, and analytics patterns—central topics for ML and data platform work (ML Inclusion Rules 1, 2, 4, 5), particularly discussing ETL/ELT and data modeling for analytics. Not 'AI', as the focus is not on AI services, APIs, or model development. Not 'DevOps' or 'Coding', since the post is about data architecture and SQL usage, not general app development or deployment processes. Not 'Security' since there is no discussion of authentication, authorization, or threat mitigation. Content is technical, in English, and not excluded by any generic rules."
+  },
+  {
+    "timestamp": "2025-10-20 16:06:22 +00:00",
+    "canonical_url": "https://github.blog/open-source/inside-the-breach-that-broke-the-internet-the-untold-story-of-log4shell/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the Security category because the content revolves around a critical software vulnerability (Log4Shell), supply chain security, and best practices for maintaining security in open source systems. It covers security fundamentals (input validation, disabling dangerous defaults, defense in depth), introduces tools like GitHub code scanning and Dependabot, and discusses organizational responses (GitHub Secure Open Source Fund). There is no in-depth content about Microsoft technologies, DevOps practices specific to Azure/GitHub, coding tutorials, AI, or ML. The core focus is on open source and software supply chain security, matching the Security category as per Chapter 4 inclusion rules, but does not meet threshold for other categories."
+  },
+  {
+    "timestamp": "2025-10-20 16:06:56 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=2F8qDdqzClg",
+    "collection": "videos",
+    "reason": "Succesfully added: The 'AI' category applies because the session centers on Microsoft Agent Framework and intelligent workflows, both part of Microsoft's AI toolset (AI inclusion rules 1, 4, and 5). 'Azure' is included because the session highlights Azure integration and deployment scenarios (Azure rules 1 and 4). 'Coding' is included as the content specifically addresses C# development, migration strategies, and code-level practice (Coding rules 1 and 4). The content is not a sales pitch or business-productivity showcase and does not trigger any generic exclusion rules."
+  },
+  {
+    "timestamp": "2025-10-20 16:07:19 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=t74ClffSUW0",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Security category because the entire content focuses on the Log4Shell vulnerability—a major software security incident—with detailed technical and ecosystem discussion relevant to secure development, patch management, and vulnerability response (Security rules 1, 2, 5, 7, 8). Despite being hosted by GitHub and discussing development community impact, there is no substantive technical guidance about coding, GitHub Actions, or DevOps practices, so Coding, DevOps, and Azure are not assigned. AI is discussed only briefly as an influence on security, not as a technology used, so AI category is not assigned. The content meets quality standards, is in English, and is not promotional, biographical, or business-only; thus, no generic exclusions apply."
   }
 ]
