@@ -12812,5 +12812,11 @@
     "collection": "videos",
     "timestamp": "2025-10-18 16:04:23 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=zsCBEVCQ98I"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-10-20 01:31:54 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-native-service-bus-message-publishing-from-azure-api/ba-p/4462644",
+    "reason": "Succesfully added: Assigned the Azure category because the feature is specifically about Azure services—Azure API Management and Azure Service Bus (Azure inclusion rule 1). Assigned DevOps because the functionality supports API-based workflow automation, infrastructure configuration, and integration patterns commonly used in CI/CD, DevOps, and cloud-native architectures (DevOps rules 6 and 7). Assigned Security because the feature centers on secure communication using managed identities, RBAC, centralized policy enforcement, and enterprise governance (Security inclusion rules 1, 3, 4, and 7). Did not assign AI, ML, or Coding since the content does not discuss artificial intelligence, machine learning, or specific coding/development patterns."
   }
 ]

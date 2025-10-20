@@ -7029,5 +7029,23 @@
     "canonical_url": "https://dellenny.com/windows-11-out-of-box-experience-oobe-guide-step-by-step-setup/",
     "timestamp": "2025-10-19 08:04:18 +00:00",
     "reason": "No categories found: All content is focused on guiding users through the initial Windows 11 setup, known as the Out-of-Box Experience (OOBE). This is strictly end-user (consumer/professional) guidance with no focus on software development, coding, DevOps, AI/ML, security architecture, or Azure cloud setup/management. There are no programming concepts, no technical implementation details for developers, and no integration of Microsoft developer technologies. This triggers the 'Non-Development Microsoft Products' generic exclusion, as it is not technical or developer-oriented content. No categories are assigned."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-10-19 12:04:10 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this is biographical/advisory content focused on personal health awareness with no technical Microsoft content or relevance to the predefined categories. The title and description both focus on skin cancer awareness and personal care rather than technical topics. No further analysis required.",
+    "canonical_url": "https://www.youtube.com/shorts/1j0Gv4J1G_w"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules related to non-development Microsoft products. The article focuses on end-user features of Microsoft 365 such as OneDrive, Teams, Word, Excel, and general cloud concepts for beginners. There is no discussion of software development, development frameworks, coding, deployment, DevOps, AI, ML, or security implementation. Content is aimed at learners and new users interested in productivity and cloud fundamentals, not technical practitioners or developers. This matches the exclusion criteria for non-development Microsoft products and business productivity tools.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/what-is-the-cloud-a-beginners-guide-for-microsoft-365/",
+    "timestamp": "2025-10-19 13:07:24 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is about an open-source project for visualizing Top Chef TV show statistics, not about Microsoft technologies or developer tooling. There is no discussion of Microsoft products, Azure, AI, ML, security, coding, or DevOps practices. It also lacks technical depth relevant to the Tech Hub platform and does not qualify under any inclusion rules. The content is general interest and entertainment-focused.",
+    "timestamp": "2025-10-19 17:04:17 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/UJ0LVyCLvTM",
+    "collection": "videos"
   }
 ]
