@@ -12902,5 +12902,17 @@
     "collection": "news",
     "canonical_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/whats-new-in-copilot-studio-september-2025/",
     "timestamp": "2025-10-20 18:06:11 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the ML category because the core subject is Microsoft Fabric User Data Functions, which are used for embedding custom logic (through Python functions) in data engineering and analytics architectures. This matches ML inclusion rules—data science/data engineering with Microsoft platforms and the development of custom analytics/data platform functionality. Assigned Azure because Microsoft Fabric is a central Azure cloud offering and the content focuses on operating and configuring it. Excluded AI, Coding, DevOps, Security, and GitHub Copilot categories because the article does not cover AI services or techniques, general software/code development, DevOps workflows, security or identity features, or GitHub Copilot. The explanation is supported by the content's focus on the resource usage of Python functions in a data platform context.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/capacity-usage-enabled-date-for-test-capability-in-user-data-functions/",
+    "collection": "news",
+    "timestamp": "2025-10-20 19:05:22 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category as the entire guide is centered around Microsoft cloud services, specifically Fabric Data Factory, Azure Data Lake Gen2, and tenant-related configurations (Azure category rule 1, 2, 4, 5). Assigned ML category because the context is data pipeline/ETL for analytics and data warehousing, where Microsoft Fabric is positioned as a solution for analytics engineering (ML rule 1, 2, 3, 4). Did not add Coding, DevOps, AI, Security, or GitHub Copilot as there is no focus on code development, DevOps workflows, AI/ML model development, or security implementation beyond standard RBAC/service principal setup. The content is technical, with clear step-by-step guidance and technical reasoning, meeting all quality standards.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-copy-data-across-tenants-using-copy-job-in-fabric-data-factory/",
+    "collection": "news",
+    "timestamp": "2025-10-20 19:05:45 +00:00"
   }
 ]
