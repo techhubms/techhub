@@ -12980,5 +12980,35 @@
     "timestamp": "2025-10-21 15:05:15 +00:00",
     "reason": "Succesfully added: Applied the Generic Exclusion Rules first. The content is not biographical, help-seeking, a sales pitch, or negative. It is primarily in English, not job-related, and is not focused on business strategy or organizational management; rather, it discusses technical and go-to-market opportunities for startups. It does not focus on end-user business productivity tools but highlights Microsoft Copilot, Copilot Studio, Azure AI Foundry, and ecosystem integration, which fit AI and Azure inclusion rules. The presence of security, compliance, and ecosystem themes—alongside direct references to Microsoft AI platforms and developer tools—satisfies the category inclusion thresholds for \"AI\", \"Azure\", and \"Security\". No specific in-depth coding/development tutorials or ML engineering details were found, so Coding, DevOps, and ML categories were not applied. The explanation field cites the application of category rules vs. inclusion/exclusion criteria, referencing specific session highlights and foundational technology focus.",
     "canonical_url": "https://www.microsoft.com/en-us/startups/blog/why-startups-shouldnt-miss-microsoft-ignite-2025-a-front-row-seat-to-the-future-of-ai-innovation/"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/how-spark-supports-onelake-security-with-row-and-column-level-security-policies/",
+    "reason": "Succesfully added: Assigned 'Security' because the article focuses on enforcing Row and Column Level Security and access controls (Security rule 1). 'ML' is included because Spark and Lakehouse solutions are core components for analytics, data science, and machine learning on Microsoft platforms; the security implementation directly impacts analytics/ML workloads (ML rule 1 and 3). 'Azure' is added as OneLake and Microsoft Fabric are Azure cloud-based services and the content discusses Azure-based technical features (Azure rules 1 and 4). No other categories qualify, as the content does not discuss coding practices, AI model usage, Copilot, or DevOps processes.",
+    "timestamp": "2025-10-21 16:05:20 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-to-update-community-health-files-with-ai/",
+    "reason": "Succesfully added: Categories 'AI' and 'GitHub Copilot' were assigned. The article focuses on the use of GitHub Copilot (an AI-based developer tool) to automate and maintain community health files in repositories (AI rule 2, 3 and GitHub Copilot rules 1-4). It details prompt engineering, workflows, and best practices, which directly align with these categories. Coding is not included, as there is no substantial code or framework development; DevOps, Azure, ML, and Security are not central topics here. All generic exclusions were verified not to apply.",
+    "timestamp": "2025-10-21 16:05:45 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=H0SGK1yPHD0",
+    "reason": "Succesfully added: Assigned Coding category because the event focuses on technical implementation details for the MCP authorization flow in .NET/ASP.NET Core (Coding rules 1, 2, and 4). Assigned Security category because it is centered on secure authorization flows and protocols (Security rules 2 and 3). Azure, AI, GitHub Copilot, DevOps, and ML categories were not applied as the content does not focus on those subjects. No generic exclusion rules were triggered: the content is technical, not biographical, not sales-oriented, and the context is developer-focused.",
+    "timestamp": "2025-10-21 16:06:14 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/-LJYU75wwrw",
+    "reason": "Succesfully added: Assigned the AI category as the entire discussion centers on the future impact, integration, and new development patterns of AI within web development, directly aligning with AI Inclusion Rule 5 (High-Level AI Usage) and Rule 6 (Microsoft/GitHub-provided AI content). No Coding, Azure, ML, Security, DevOps, or GitHub Copilot categories were assigned since the content is high-level and does not focus on programming specifics, GitHub Copilot, Microsoft-specific platforms, or operational/deployment practices.",
+    "timestamp": "2025-10-21 16:06:31 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=4fYXcmyZH3U",
+    "reason": "Succesfully added: Assigned AI category due to the core focus on AI integration in documentation (AI rule 1, 4, 5, and 6). Assigned GitHub Copilot category because Copilot Highlights and GitHub Copilot usage are detailed main topics (GitHub Copilot rules 1 and 2). Coding category applies because examples include Python development, .NET object serialization, code migration, and coding best practices (Coding rules 1-4). Azure category is justified because deploying Azure Functions with Visual Studio Code is discussed as a real-world example (Azure rule 1 and 4). No exclusion rules from Chapter 3 matched. Multi-category logic applies since content centers on developer tools and hands-on workflows.",
+    "timestamp": "2025-10-21 16:06:55 +00:00",
+    "collection": "videos"
   }
 ]

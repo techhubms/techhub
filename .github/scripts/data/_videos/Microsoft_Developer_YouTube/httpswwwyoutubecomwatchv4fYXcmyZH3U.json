@@ -1,0 +1,22 @@
+{
+  "Author": "Microsoft Developer",
+  "Description": "In this episode, host John Maeda welcomes Megha Anand, a content developer on the Microsoft Learn documentation team, to explore how AI is being integrated into developer documentation. From code migration to game development, Megha shares how Copilot Highlights are making technical docs more practical, actionable, and AI-powered. Learn how AI is being embedded directly into Microsoft Learn docs to help developers solve real-world coding challenges faster and smarter.\n\nChapters: 00:01 - Why Developer Docs Matter 00:10 - Meet Megha Anand from Learn Docs 00:22 - The AI Moment in Documentation 00:33 - Introducing Copilot Highlights 01:02 - Migrating JSON Code with AI Help 01:40 - Enhancing Python Games with Copilot 02:05 - Deploying Azure Functions with VS Code 02:40 - Context Engineering for Better Prompts 03:45 - Serializing .NET Objects with AI 04:30 - Empowering Developers with Copilot 05:10 - Final Thoughts and Community Call-to-Action What You’ll Learn:\n\n- How Microsoft Learn is integrating AI into developer documentation\n- What Copilot Highlights are and how they work\n- Real-world examples of AI-assisted coding tasks\n- How GitHub Copilot supports context-aware development in VS Code\n- Tips for content developers embracing AI\n- Ways to contribute to Microsoft Learn docs as a community member\nSpeakers: Megha Anand – Content Developer, Microsoft Learn Works on Visual Studio documentation and leads Copilot Highlights integration. https://www.linkedin.com/in/megha-anand-426a8033/ John Maeda – Host https://www.linkedin.com/in/johnmaeda/ https://x.com/johnmaeda Links & Resources: Learn Docs with Copilot prompt: https://aka.ms/CAIK-AIDevDocSample 🚀 Explore Microsoft Learn: https://learn.microsoft.com 📝 Visual Studio Documentation: https://learn.microsoft.com/visualstudio ⚡ GitHub Copilot: https://github.com/features/copilot 🎯 Learn Python for Beginners: https://learn.microsoft.com/training/paths/python-language/ 📚 Azure Functions with VS Code: https://learn.microsoft.com/azure/azure-functions/functions-develop-vs-code 🔍 All Cozy AI Kitchen episodes: https://aka.ms/CAIK-YTPlaylist 🔔 Subscribe for more episodes: https://aka.ms/SubscribeMicrosoftDeveloper\n\nHashtags: #CopilotHighlights #MicrosoftLearn #VisualStudio #GitHubCopilot #AI #DeveloperDocs #Python #AzureFunctions #VSCode #DotNet #Documentation #MachineLearning #SipAndSync #MicrosoftDeveloper #CodingWithAI",
+  "FeedName": "Microsoft Developer YouTube",
+  "Link": "https://www.youtube.com/watch?v=4fYXcmyZH3U",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "Title": "Cooking Up Smarter Dev Docs, on Mr. Maeda's Cozy AI Kitchen",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "PubDate": "2025-10-21T15:41:25+00:00",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "ProcessedDate": "2025-10-21 16:04:36"
+}
