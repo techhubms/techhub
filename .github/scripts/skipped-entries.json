@@ -7119,5 +7119,11 @@
     "canonical_url": "https://www.youtube.com/shorts/PA9LgQBTPK4",
     "timestamp": "2025-10-21 12:06:07 +00:00",
     "reason": "No categories found: No categories assigned because the main content is missing (the 'content' field is null). Without substantive content to evaluate, none of the category inclusion rules can be applied. Per the workflow, categorization requires substantive input in the 'content' field to determine relevant categories and generate output. Generic exclusion rule applies: insufficient information."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/fslogix-add-a-command-line-to-release-the-profile/idi-p/4463099",
+    "timestamp": "2025-10-21 13:14:36 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community"
   }
 ]

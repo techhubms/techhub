@@ -12956,5 +12956,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-great-engineers-make-architectural-decisions-adrs-trade-offs/ba-p/4463013",
     "timestamp": "2025-10-21 12:06:37 +00:00",
     "reason": "Succesfully added: Added DevOps category due to the strong focus on engineering process, team decision-making, and leveraging architecture documentation like ADRs in DevOps workflows (DevOps rule 3, 4, 9). Added Azure category since the Azure Well-Architected Framework, Cosmos DB, and Redis (as an Azure service) are central technical elements (Azure rule 1, 5). Added Security category because security is a core architectural pillar discussed and is considered within decision templates and trade-off analysis (Security rule 9). Added Coding category as the content covers architectural choices in code, code-adjacent documentation, and technical trade-offs affecting implementation (Coding rule 4)."
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content centers on the adoption, usage, and impact of AI in Australian workplaces, specifically highlighting Microsoft’s role and the behaviors of Gen Z professionals (AI category rule 1 and 5). No other categories were assigned because the content does not provide technical detail on coding, DevOps, Azure, ML, Security, or developer tooling. Content is newsworthy, does not fall under any exclusion rules (no career advice, biographical focus, or business productivity Copilot coverage), and Microsoft technologies are more than central—they are the primary subject via the Microsoft-commissioned study.",
+    "collection": "news",
+    "timestamp": "2025-10-21 14:05:26 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/asia/features/gen-z-staff-lead-workplace-ai-adoption-despite-job-fears-microsoft-australia-study/"
+  },
+  {
+    "reason": "Succesfully added: Assigned Coding category because the content focuses on Visual Studio extensibility, developer-facing APIs, vsixmanifest handling, and practical guidance for extension developers (Coding rules 2, 4, and 5). The focus is technical, covers tooling, and is not high-level strategy/business. No generic exclusions apply, as the post contains substantial actionable guidance for developers.",
+    "collection": "news",
+    "timestamp": "2025-10-21 14:05:55 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/modernizing-visual-studio-extension-compatibility-effortless-migration-for-extension-developers-and-users/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the episode demonstrates AI-driven code generation for music applications using GitHub Copilot (AI rules 1, 2; GitHub Copilot rules 1, 2, 4). 'Coding' is included as Julia codes a web app live using JavaScript and Tone.js within VS Code (Coding rule 1, 2). No other generic or category-specific exclusions applied.",
+    "collection": "videos",
+    "timestamp": "2025-10-21 14:06:30 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=9NKNNHCsykQ"
   }
 ]
