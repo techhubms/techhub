@@ -13022,5 +13022,11 @@
     "timestamp": "2025-10-21 17:06:03 +00:00",
     "reason": "Succesfully added: Assigned AI due to the in-depth focus on Microsoft Agent Framework and building intelligent AI agents (AI rule 1, 4, 6). Assigned Azure because the article centers on deploying and architecting agent-based AI applications on Azure App Service and related Azure services (Azure rules 1, 4, 5). Assigned Coding because the content covers code-level architecture, .NET 9 application development, async patterns, sample app source code, and deep technical implementation (Coding rules 1, 2, 4, 5). ML was not included since the primary focus is orchestrating AI with Agent Framework and platform services—not custom ML modeling or deep data engineering.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-long-running-ai-agents-on-azure-app-service-with-microsoft/ba-p/4463159"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/10/21/the-new-microsoft-security-store-unites-partners-and-innovation/",
+    "reason": "Succesfully added: Assigned Security category because the article focuses on Microsoft Security Store, the deployment of security solutions, and integration with platforms like Microsoft Sentinel, Defender, Entra, and Purview. Assigned AI category due to significant emphasis on AI-powered security agents, Security Copilot, and automation for security response (AI inclusion rules 1 and 5). Coding, Azure, DevOps, ML, and GitHub Copilot categories do not apply, as the content does not cover software development, DevOps practices, Azure operational detail, or machine learning/data engineering at a technical implementation level. The content is news-type but detailed and technical in its description of security service organization; it is not purely executive strategy or business-focused and does not trigger any exclusion rules.",
+    "timestamp": "2025-10-21 18:05:15 +00:00",
+    "collection": "news"
   }
 ]
