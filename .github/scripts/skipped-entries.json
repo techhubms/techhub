@@ -7095,5 +7095,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/2ksYTVd2wMo",
     "timestamp": "2025-10-20 18:06:36 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=FVhmY-OmDbs",
+    "reason": "No categories found: This content is excluded because it does not meet the category inclusion criteria. The description focuses on promoting an Open Source Friday event featuring Dagger, a general-purpose CI/CD engine, but there is no evidence in the description of specific Microsoft technologies being central (such as Azure DevOps, GitHub Actions for Microsoft solutions, or .NET ecosystem involvement). Dagger is not a Microsoft-specific technology, and the content does not mention Azure, GitHub Actions in a Microsoft context, or other relevant Microsoft platforms. There is also no substantive technical information or detail present—only promotional highlights of the Dagger tool. As per the Multi-Platform Content Threshold and Category Inclusion Rules, content must be Microsoft technology-focused or contain ≥40% substantive Microsoft content, which is not the case here.",
+    "timestamp": "2025-10-20 23:04:35 +00:00"
   }
 ]

@@ -1,0 +1,16 @@
+{
+  "FeedLevelAuthor": "GitHub",
+  "Tags": [
+    "OpenSourceFriday"
+  ],
+  "Title": "Open Source Friday: Dagger - Components for modern software and workflows",
+  "PubDate": "2025-10-20T21:59:10+00:00",
+  "FeedName": "GitHub YouTube",
+  "Link": "https://www.youtube.com/watch?v=FVhmY-OmDbs",
+  "Author": "GitHub",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Description": "Join us on Open Source Friday this week with Solomon Hykes, author and maintainer of Dagger — a programmable CI/CD engine that lets you automate builds, tests, and deployments with code.\n\nWhy Dagger? ✅ Define pipelines in your favorite language ✅ Reusable & portable workflows ✅ Active community & tons of integrations\n\n🚀 It’s #OpenSourceFriday!",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-10-21 01:31:05",
+  "EnhancedContent": null
+}

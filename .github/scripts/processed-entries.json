@@ -12914,5 +12914,11 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-copy-data-across-tenants-using-copy-job-in-fabric-data-factory/",
     "collection": "news",
     "timestamp": "2025-10-20 19:05:45 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the article centers on Azure Arc, Azure Policy, and Azure Machine Configuration (Azure rule 1 and 2). The Security category is assigned since enabling and auditing Windows Recovery Environment (WinRE) directly relates to system recovery, reliability, and operational security, targeting scenarios like mission-critical workloads (Security rule 1 and 9). Coding, DevOps, ML, AI, and GitHub Copilot categories are not included: the content covers infrastructure management and OS configuration with Azure tools, not app development, DevOps workflows, ML/AI development, or GitHub Copilot. No generic exclusion rules triggered; content is technical, relevant, and in English.",
+    "timestamp": "2025-10-21 01:32:16 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-audit-and-enable-windows-recovery-environment/ba-p/4462939"
   }
 ]
