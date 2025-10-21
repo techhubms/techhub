@@ -13010,5 +13010,17 @@
     "reason": "Succesfully added: Assigned AI category due to the core focus on AI integration in documentation (AI rule 1, 4, 5, and 6). Assigned GitHub Copilot category because Copilot Highlights and GitHub Copilot usage are detailed main topics (GitHub Copilot rules 1 and 2). Coding category applies because examples include Python development, .NET object serialization, code migration, and coding best practices (Coding rules 1-4). Azure category is justified because deploying Azure Functions with Visual Studio Code is discussed as a real-world example (Azure rule 1 and 4). No exclusion rules from Chapter 3 matched. Multi-category logic applies since content centers on developer tools and hands-on workflows.",
     "timestamp": "2025-10-21 16:06:55 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-10-21 17:05:11 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric Warehouse is part of the Azure ecosystem and the content centers on its integration with SSMS (Azure rule 1 and 4). Assigned 'Coding' due to the in-depth discussion of T-SQL features, development workflows, and developer tool enhancements (Coding rules 4 and 5). Included 'ML' as the Fabric Data Warehouse and SQL Analytics Endpoints are commonly used in large-scale analytics and data science workflows (ML rules 1 and 4). Did not assign 'AI', 'Security', 'DevOps', or 'GitHub Copilot' because the content does not focus on those areas. No generic exclusion rules apply as this is technical, development-centered Microsoft content.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/ssms-22-meets-fabric-data-warehouse-evolving-the-developer-experiences/"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-10-21 17:06:03 +00:00",
+    "reason": "Succesfully added: Assigned AI due to the in-depth focus on Microsoft Agent Framework and building intelligent AI agents (AI rule 1, 4, 6). Assigned Azure because the article centers on deploying and architecting agent-based AI applications on Azure App Service and related Azure services (Azure rules 1, 4, 5). Assigned Coding because the content covers code-level architecture, .NET 9 application development, async patterns, sample app source code, and deep technical implementation (Coding rules 1, 2, 4, 5). ML was not included since the primary focus is orchestrating AI with Agent Framework and platform services—not custom ML modeling or deep data engineering.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-long-running-ai-agents-on-azure-app-service-with-microsoft/ba-p/4463159"
   }
 ]
