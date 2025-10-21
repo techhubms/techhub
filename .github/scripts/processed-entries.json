@@ -12950,5 +12950,11 @@
     "collection": "posts",
     "timestamp": "2025-10-21 11:05:11 +00:00",
     "reason": "Succesfully added: Assigned the 'DevOps' category because the entire article focuses on how DevOps teams are driving workload migration decisions, advocating for private and hybrid clouds, and discusses operational, security, and cost considerations central to DevOps practices (DevOps inclusion rules 3, 4, 5, and 6). There is no deep technical discussion of Microsoft-specific services, Azure, or coding, so other categories like Azure, Coding, AI, ML, GitHub Copilot, and Security do not apply. The article is technical in its treatment of DevOps strategy, rather than business-focused or biographical, and does not trigger any generic exclusion rules."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-great-engineers-make-architectural-decisions-adrs-trade-offs/ba-p/4463013",
+    "timestamp": "2025-10-21 12:06:37 +00:00",
+    "reason": "Succesfully added: Added DevOps category due to the strong focus on engineering process, team decision-making, and leveraging architecture documentation like ADRs in DevOps workflows (DevOps rule 3, 4, 9). Added Azure category since the Azure Well-Architected Framework, Cosmos DB, and Redis (as an Azure service) are central technical elements (Azure rule 1, 5). Added Security category because security is a core architectural pillar discussed and is considered within decision templates and trade-off analysis (Security rule 9). Added Coding category as the content covers architectural choices in code, code-adjacent documentation, and technical trade-offs affecting implementation (Coding rule 4)."
   }
 ]

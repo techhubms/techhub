@@ -7101,5 +7101,23 @@
     "canonical_url": "https://www.youtube.com/watch?v=FVhmY-OmDbs",
     "reason": "No categories found: This content is excluded because it does not meet the category inclusion criteria. The description focuses on promoting an Open Source Friday event featuring Dagger, a general-purpose CI/CD engine, but there is no evidence in the description of specific Microsoft technologies being central (such as Azure DevOps, GitHub Actions for Microsoft solutions, or .NET ecosystem involvement). Dagger is not a Microsoft-specific technology, and the content does not mention Azure, GitHub Actions in a Microsoft context, or other relevant Microsoft platforms. There is also no substantive technical information or detail present—only promotional highlights of the Dagger tool. As per the Multi-Platform Content Threshold and Category Inclusion Rules, content must be Microsoft technology-focused or contain ≥40% substantive Microsoft content, which is not the case here.",
     "timestamp": "2025-10-20 23:04:35 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/explore-the-core-components-of-microsoft-365-copilot/",
+    "timestamp": "2025-10-21 12:05:33 +00:00",
+    "reason": "No categories found: No categories assigned. The content focuses on Microsoft 365 Copilot, which is explicitly excluded according to the workflow (Generic Exclusion Rules: Non-Development Microsoft Products; Copilot Product Distinction). The article is about business productivity features of Microsoft 365 Copilot, its underlying architecture, and productivity applications, not developer tooling or technical implementation for development. Per the rule: 'Microsoft 365 Copilot and Copilot for Microsoft 365 → No categories (excluded as non-development Microsoft 365 product)'."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/microsoft-365-copilot-agents-fundamentals/",
+    "timestamp": "2025-10-21 12:05:47 +00:00",
+    "reason": "No categories found: All content revolves around Microsoft 365 Copilot, Microsoft 365 Copilot Chat, and the new Agents capability within the context of business productivity tools. The focus is on productivity improvements, organizational workflows, and user empowerment in productivity suites like Word, Excel, Teams, and Outlook. According to the critical Copilot product distinction and generic exclusion rules, Microsoft 365 Copilot, Copilot for Microsoft 365, and Office Copilot are business productivity tools, not developer tools, and therefore must be excluded from categorization. Even though Copilot Studio and custom Agents are mentioned, their discussion is strictly about business automation within Microsoft 365. There are no technical development, coding, DevOps, Azure, or security topics present. Thus, the content is excluded and no categories are assigned."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/PA9LgQBTPK4",
+    "timestamp": "2025-10-21 12:06:07 +00:00",
+    "reason": "No categories found: No categories assigned because the main content is missing (the 'content' field is null). Without substantive content to evaluate, none of the category inclusion rules can be applied. Per the workflow, categorization requires substantive input in the 'content' field to determine relevant categories and generate output. Generic exclusion rule applies: insufficient information."
   }
 ]
