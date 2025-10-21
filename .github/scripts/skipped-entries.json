@@ -7149,5 +7149,11 @@
     "timestamp": "2025-10-21 17:05:37 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The primary language of the description is Portuguese (pt-BR), as indicated by the title and the body of the text ('Open Source Friday Brasil 💚 Toda sexta-feira, ao vivo no canal GitHub Brasil...' etc). Per the Non-English Content exclusion rule in Chapter 3, content that is not primarily in English (<80% English in main text) is excluded and assigned no categories.",
     "canonical_url": "https://www.youtube.com/watch?v=LNGpRWovX-s"
+  },
+  {
+    "timestamp": "2025-10-21 19:05:55 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/ZKflkRvIRis",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule—there is no substantive technical content provided. The content consists of a high-level mention of the Microsoft Ignite event, referencing community impressions, but lacks any technical details, topics, or Microsoft technology discussions. The content is event-oriented with no actual technical substance to categorize."
   }
 ]
