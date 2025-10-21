@@ -12938,5 +12938,11 @@
     "collection": "posts",
     "reason": "Succesfully added: Assigned the 'Azure' category because the entire content centers on the Azure Pricing Calculator, a core Azure management tool, following Azure Inclusion Rule 1. Other categories like 'DevOps', 'AI', 'Coding', and 'Security' do not apply since the focus is not on development, deployment, AI, coding, or security, but strictly on cloud cost management in Azure. The tags were extracted to reflect Azure, cloud cost estimation, and management tools as described in the episode's summary and bullet points.",
     "timestamp": "2025-10-21 09:09:21 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories. The article is entirely centered on the GitHub Copilot Certification, which is a developer tool for AI-powered coding assistance (AI rule 1, GitHub Copilot inclusion rules 1-4). The article discusses Copilot features, responsible AI usage, prompt engineering, and certification steps, all tightly focused on Copilot as a development tool. No generic exclusions apply, as this is not career advice, sales content, or business/end-user focused; it is technical and targeted at practitioners. Did not assign 'Coding', as the article does not teach specific programming or frameworks. 'DevOps', 'Azure', 'ML', and 'Security' were not assigned, as the content does not primarily address those domains.",
+    "timestamp": "2025-10-21 10:04:29 +00:00",
+    "canonical_url": "https://dellenny.com/what-is-the-github-copilot-certification-and-why-it-matters-for-developers/",
+    "collection": "posts"
   }
 ]
