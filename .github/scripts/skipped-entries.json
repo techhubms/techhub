@@ -7125,5 +7125,17 @@
     "timestamp": "2025-10-21 13:14:36 +00:00",
     "reason": "Insufficient content length",
     "collection": "community"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-10-21 15:05:41 +00:00",
+    "reason": "No categories found: No categories assigned because the content falls under the generic exclusion rule for biographical focus: it centers on Jason Lengstorf's professional journey, career, and personal story within open source, live coding, and developer education. While there are passing mentions of AI and technology trends, there are no substantial technical implementation details or focus on Microsoft technologies or development practices. The overall episode summary, as well as the chapter breakdowns, emphasize community experiences, open source inspiration, developer learning, and project sharing, rather than hands-on technical detail or instruction relevant to the predefined Microsoft technology categories. This matches the exclusion rule for biographical or spotlight content without substantive technical depth.",
+    "canonical_url": "https://www.youtube.com/watch?v=YnqJOJ9FzvE"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-10-21 15:05:45 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/container-apps-in-new-zealand-north-expected-availability/m-p/4462951#M22276"
   }
 ]
