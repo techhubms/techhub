@@ -88,6 +88,25 @@ public class Tag
     }
 
     /// <summary>
+    /// Static helper to check if one tag subset-matches another.
+    /// </summary>
+    /// <param name="subsetTag">Tag that may be a subset</param>
+    /// <param name="fullTag">Tag that may contain the subset</param>
+    /// <returns>True if subsetTag is contained as complete words in fullTag</returns>
+    public static bool IsSubsetOf(string subsetTag, string fullTag)
+    {
+        var normalizedSubset = NormalizeTag(subsetTag);
+        var normalizedFull = NormalizeTag(fullTag);
+
+        if (normalizedSubset == normalizedFull)
+            return true;
+
+        // Check word boundary matching
+        var pattern = $@"\b{System.Text.RegularExpressions.Regex.Escape(normalizedSubset)}\b";
+        return System.Text.RegularExpressions.Regex.IsMatch(normalizedFull, pattern);
+    }
+
+    /// <summary>
     /// Validates the tag according to business rules.
     /// </summary>
     public void Validate()
