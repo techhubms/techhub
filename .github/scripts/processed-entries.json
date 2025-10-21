@@ -12926,5 +12926,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/postgres-as-a-distributed-cache-unlocks-speed-and-simplicity-for/ba-p/4462139",
     "collection": "community",
     "reason": "Succesfully added: Assigned the Coding category because the article is focused on technical implementation for .NET developers, specifically around using the Microsoft.Extensions.Caching.Postgres package and concepts like HybridCache, distributed caching, and database configuration. There is in-depth .NET ecosystem discussion, interface usage, and application integration, but no substantive Azure, DevOps, AI, ML, or Security-specific implementation, so only Coding applies according to inclusion rules. The content is well above the 200-word threshold and has technical depth required. There are no generic exclusion triggers present."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/sql-server/blog/2025/10/20/innovation-spotlight-how-3-customers-are-driving-change-with-migration-to-azure-sql/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category because the core topic is migrating organizational workloads from legacy systems to Azure SQL Managed Instance (Azure rules 1, 4, and 5). The content is focused on Microsoft's Azure platform, cloud database modernization, and is not biographical, sales-oriented, or negative. No AI or ML categories were assigned because, while 'AI-ready' is mentioned, the content doesn't describe actual AI or ML implementations, only the infrastructure to support them.",
+    "timestamp": "2025-10-21 09:08:51 +00:00"
+  },
+  {
+    "canonical_url": "https://www.thomasmaurer.ch/2025/10/azure-pricing-calculator-estimate-smarter-plan-confidently/",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the entire content centers on the Azure Pricing Calculator, a core Azure management tool, following Azure Inclusion Rule 1. Other categories like 'DevOps', 'AI', 'Coding', and 'Security' do not apply since the focus is not on development, deployment, AI, coding, or security, but strictly on cloud cost management in Azure. The tags were extracted to reflect Azure, cloud cost estimation, and management tools as described in the episode's summary and bullet points.",
+    "timestamp": "2025-10-21 09:09:21 +00:00"
   }
 ]
