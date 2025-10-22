@@ -7221,5 +7221,11 @@
     "timestamp": "2025-10-22 17:07:58 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/zU6-mKQ8kEQ",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content primarily focuses on game development with the Godot engine using C#. While C# is a Microsoft language (Coding rule 1), the course centers on the Godot platform, which is not a Microsoft technology or ecosystem. There is no evidence of integration with Microsoft services (e.g., Azure, Visual Studio, .NET ecosystems), nor does the content highlight any central Microsoft technologies apart from the use of C#. The Microsoft technology threshold (Chapter 6) is not met; C# usage alone does not qualify unless it is within the context of Microsoft's ecosystem or tooling. Additionally, the tags supplied (e.g., 'Azure', 'Cloud Computing') are not reflected in the content's actual focus, which remains on Godot game development basics. Therefore, based on the inclusion and exclusion rules, no categories apply.",
+    "timestamp": "2025-10-22 19:04:26 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=0Pf41YBedMk"
   }
 ]
