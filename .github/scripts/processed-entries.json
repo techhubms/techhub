@@ -13220,5 +13220,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/upcoming-changes-to-azure-relay-ip-addresses-and-dns-support/ba-p/4463597",
     "timestamp": "2025-10-22 21:05:20 +00:00",
     "reason": "Succesfully added: Content qualifies for the Azure category because it is centrally focused on Azure Relay, an Azure cloud service (Azure inclusion rule 1 and 4). The post contains technical guidance for updating network configurations, managing IP ranges, and using PowerShell automation in an Azure context. No other categories are relevant as there is no AI, Coding, DevOps, Security, ML, or GitHub Copilot content. Generic exclusion rules do not apply, as the post is technical, non-promotional, sufficiently detailed, and in English."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/securely-accessing-on-premises-data-with-fabric-data-engineering-workloads/",
+    "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric is a core Azure-based Microsoft service, and the content addresses its integration and networking features (Azure rule 1, 4, 5). Assigned 'ML' because the focus is on Fabric Data Engineering workloads and Spark compute for advanced analytics, which falls under ML/data engineering per the guidelines (ML rules 1, 2, 4, 5). Assigned 'Security' because private connectivity, approval workflows, and compliance are a major focus, with features like Managed Private Endpoints, admin approvals, and FQDN allowlisting (Security rules 1, 3, 4, 7, 9). Not assigned 'AI' because there is no substantive mention of AI or prebuilt AI services; not assigned 'Coding' due to the content focusing on configuration, networking, and data engineering APIs rather than code structure or programming patterns. DevOps not assigned as the main thrust is secure data connectivity and not CI/CD or deployment tooling.",
+    "timestamp": "2025-10-22 22:04:11 +00:00"
   }
 ]
