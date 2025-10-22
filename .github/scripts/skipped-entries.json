@@ -7173,5 +7173,17 @@
     "canonical_url": "https://devops.com/sendmarc-appoints-dan-levinson-as-customer-success-director-in-north-america/",
     "timestamp": "2025-10-22 01:32:42 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The main focus of this post is on a corporate appointment—announcing Dan Levinson as Customer Success Director for Sendmarc in North America. The text discusses leadership experience, company expansion, and customer success team building, but provides no technical depth on Microsoft technologies, development, or implementation details. The majority of the content is biographical and organizational (biographical focus rule and business strategy/executive content exclusion). No categories were assigned."
+  },
+  {
+    "timestamp": "2025-10-22 08:06:08 +00:00",
+    "reason": "No categories found: No categories assigned. While the article mentions Azure among other cloud providers, Microsoft technologies do not comprise at least 40% of the substantive content or serve as the central focus (see Multi-Platform Content Threshold). The content is a general, platform-neutral business/financial overview comparing CapEx vs OpEx in cloud computing and does not provide technical details or in-depth architectural discussion about Microsoft Azure or any other specific Microsoft technology. There is also a focus on business strategy and financial planning instead of development or technical implementation, which falls under the 'Business Strategy and Executive Content' generic exclusion rule. Therefore, per the workflow, all categories are excluded.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/capex-vs-opex-in-cloud-computing-why-it-matters-for-businesses/"
+  },
+  {
+    "timestamp": "2025-10-22 08:06:46 +00:00",
+    "reason": "No categories found: No categories assigned because the content exclusively focuses on distributed tracing and observability patterns for microservices in AWS using AWS-specific services (AWS X-Ray, AWS Distro for OpenTelemetry, CloudWatch, Amazon Managed Grafana) without any mention of Microsoft technologies, platforms, or tools. According to the multi-platform content rules, Microsoft technologies must be central or comprise at least 40% of the content; in this article, AWS is the sole focus and there is no substantial Microsoft context. Therefore, per the exclusion rules, the content is out of scope for categorization.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/tracing-the-cloud-thread-distributed-tracing-patterns-for-microservices-in-aws/"
   }
 ]

@@ -13046,5 +13046,17 @@
     "canonical_url": "https://devops.com/sonar-previews-service-to-improve-quality-of-ai-generated-code/",
     "timestamp": "2025-10-22 01:33:03 +00:00",
     "reason": "Succesfully added: The content is centrally focused on AI code generation, code quality, and the mitigation of security vulnerabilities in AI-generated code—meeting the criteria for 'AI' (AI rules 1, 4, and 5). SonarSweep uses techniques to reduce risks and bugs, which places strong emphasis on 'Security' (Security rules 2, 5, and 9). The platform and process fit within DevOps/DevSecOps workflows, qualifying for 'DevOps' (DevOps rules 3, 4, and 5). The content is not biographical, sales pitching, or business strategy focused and passes the generic exclusion rules. No specific Microsoft technology is discussed, so other categories are omitted."
+  },
+  {
+    "timestamp": "2025-10-22 08:06:33 +00:00",
+    "reason": "Succesfully added: Assigned Azure category as the content focuses on implementing distributed tracing patterns specifically in Azure, aligned with Azure category rules 1 and 4. Assigned DevOps because distributed tracing and observability are key DevOps practices for monitoring, troubleshooting, and improving collaboration between development and operations, satisfying DevOps category rules 3, 5, and 7. The article showcases Azure-native observability tools (Monitor, Application Insights) and open standards (OpenTelemetry), which are central to cloud development and operational monitoring on Azure. No AI, Coding, ML, GitHub Copilot, or Security aspects were substantive or present.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/follow-the-thread-distributed-tracing-patterns-for-microservices-in-azure/"
+  },
+  {
+    "timestamp": "2025-10-22 08:07:28 +00:00",
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' because the sample centers on building and integrating AI agents using LangChain.js v1 and MCP (AI category rule 1 and 5). 'Azure' because all deployment, architecture, and production readiness involve Microsoft's Azure cloud and corresponding services (Azure category rule 1 and 4). 'Coding' because the content walks through implementing Node.js, JavaScript, Azure Functions, and related development tasks (Coding rules 1, 2, and 5). The content is technical, focused on implementation, and avoids any generic exclusion triggers (no biographical, business, or career-centric focus), and is well above length thresholds.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/serverless-mcp-agent-with-langchain-js-v1-burgers-tools-and/ba-p/4463157"
   }
 ]
