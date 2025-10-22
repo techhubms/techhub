@@ -13064,5 +13064,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/mastering-azure-queries-skip-token-and-batching-for-scale/ba-p/4463387",
     "collection": "community",
     "timestamp": "2025-10-22 09:06:00 +00:00"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: I assigned the Coding category based on the content's technical depth and focus on ASP.NET Core patterns, metadata, routing, and endpoint configuration, which are all relevant to Microsoft programming frameworks (Coding rules 1, 2, and 4). There is no direct use of Azure, AI, DevOps services, or Security-specific implementation, which excludes those categories. The tags focus on ASP.NET Core, routing, endpoints, metadata, and related constructs as detailed in both the content and the instructions. No generic exclusion rules apply, as the content is a technical, developer-oriented guide with no biographical, sales, or non-technical business focus.",
+    "canonical_url": "https://andrewlock.net/adding-metadata-to-fallback-endpoints-in-aspnetcore/",
+    "timestamp": "2025-10-22 13:51:25 +00:00"
   }
 ]

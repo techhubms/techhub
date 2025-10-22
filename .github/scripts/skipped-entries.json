@@ -7185,5 +7185,11 @@
     "reason": "No categories found: No categories assigned because the content exclusively focuses on distributed tracing and observability patterns for microservices in AWS using AWS-specific services (AWS X-Ray, AWS Distro for OpenTelemetry, CloudWatch, Amazon Managed Grafana) without any mention of Microsoft technologies, platforms, or tools. According to the multi-platform content rules, Microsoft technologies must be central or comprise at least 40% of the content; in this article, AWS is the sole focus and there is no substantial Microsoft context. Therefore, per the exclusion rules, the content is out of scope for categorization.",
     "collection": "posts",
     "canonical_url": "https://dellenny.com/tracing-the-cloud-thread-distributed-tracing-patterns-for-microservices-in-aws/"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: All of the primary content fields ('description', 'content') are either empty or null, and no substantive information about the technical details or purpose of the content is provided. Without actual content or a meaningful description, I cannot determine if any category inclusion rules apply. According to the core workflow, with missing main text and insufficient metadata, exclusion is required, as meaningful category assessment is not possible.",
+    "canonical_url": "https://www.youtube.com/shorts/dMVeuOYQ9XQ",
+    "timestamp": "2025-10-22 13:51:49 +00:00"
   }
 ]
