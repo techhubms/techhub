@@ -13034,5 +13034,17 @@
     "canonical_url": "https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides",
     "collection": "news",
     "reason": "Succesfully added: Assigned the AI category because the content directly focuses on the availability and enablement of an AI model (Claude Haiku 4.5) within GitHub Copilot products (AI rule 1 and 6). Assigned the GitHub Copilot category because the content is specific to features, plans, and capabilities in GitHub Copilot (GitHub Copilot inclusion rules 1 and 2). No other categories apply as the article is centered on model enablement, not code or DevOps practices. The content is not business productivity-focused but is about developer tooling and AI model access."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/cycode-previews-ability-to-identify-ai-tools-and-platforms-used-to-write-code/",
+    "timestamp": "2025-10-22 01:32:28 +00:00",
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' due to focus on identifying, governing, and tracing AI coding tools and AI-generated code within DevSecOps workflows (AI rule 1 and 4). 'DevOps' because the ASPM platform targets DevSecOps teams and practices (DevOps rule 4 and 5). 'Security' because features enhance application security posture, policy enforcement, and vulnerability assessment (Security rule 1, 5, 9). 'ML' included due to explicit coverage of machine learning assets and technologies (ML rule 1, 6). No generic exclusion rules triggered: content is technical, focused on DevSecOps practitioners, and free from sales pitches or biographical focus. Although not exclusively Microsoft technologies, integrations and best practices for enterprise-grade security align with platform-agnostic guidance allowed by the workflow's rule hierarchy clarification."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/sonar-previews-service-to-improve-quality-of-ai-generated-code/",
+    "timestamp": "2025-10-22 01:33:03 +00:00",
+    "reason": "Succesfully added: The content is centrally focused on AI code generation, code quality, and the mitigation of security vulnerabilities in AI-generated code—meeting the criteria for 'AI' (AI rules 1, 4, and 5). SonarSweep uses techniques to reduce risks and bugs, which places strong emphasis on 'Security' (Security rules 2, 5, and 9). The platform and process fit within DevOps/DevSecOps workflows, qualifying for 'DevOps' (DevOps rules 3, 4, and 5). The content is not biographical, sales pitching, or business strategy focused and passes the generic exclusion rules. No specific Microsoft technology is discussed, so other categories are omitted."
   }
 ]

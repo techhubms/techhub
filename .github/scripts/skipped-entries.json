@@ -7155,5 +7155,23 @@
     "canonical_url": "https://www.youtube.com/shorts/ZKflkRvIRis",
     "collection": "videos",
     "reason": "No categories found: Content excluded due to generic exclusion rule—there is no substantive technical content provided. The content consists of a high-level mention of the Microsoft Ignite event, referencing community impressions, but lacks any technical details, topics, or Microsoft technology discussions. The content is event-oriented with no actual technical substance to categorize."
+  },
+  {
+    "timestamp": "2025-10-21 21:04:50 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/microsoft-dynamics_at-microsoft-we-believe-agentic-business-ugcPost-7386416207454818305-324u",
+    "reason": "No categories found: No categories assigned. The content is excluded under multiple generic exclusion rules: (1) Business strategy and executive content: The post focuses on high-level concepts such as 'agentic business applications,' 'enterprise transformation,' and moving from 'system of record to system of action,' all of which are business-oriented rather than technical implementation details (Generic Exclusion: Business Strategy and Executive Content). (2) Non-development Microsoft products: Coverage of Dynamics 365 is focused on its role in business transformation and business process optimization, but does not include substantial technical detail about customization, integration, or development topics (Generic Exclusion: Non-Development Microsoft Products). (3) The remainder of the content consists primarily of meta/discussion, comments, and calls for donations, none of which constitute technical content about Microsoft technologies. Referenced comments do not provide technical implementation information, code, or developer-focused insights. Therefore, the exclusion rules apply, and no categories are assigned.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-21 21:05:03 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_today-i-shared-my-annual-letter-to-shareholders-activity-7386500272207978496-rAsr",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This news post is high-level executive/organizational content aimed at shareholders, focusing on company vision, business strategy, and Microsoft's position during a generational technology shift. It does not contain concrete technical implementation details, actionable guidance, or substantive coverage of Microsoft development tools, architecture, or coding topics. According to the exclusion rules under 'Business Strategy and Executive Content,' announcements or letters to shareholders that emphasize vision and leadership direction without technical implementation specifics are to be omitted.",
+    "collection": "news"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/sendmarc-appoints-dan-levinson-as-customer-success-director-in-north-america/",
+    "timestamp": "2025-10-22 01:32:42 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The main focus of this post is on a corporate appointment—announcing Dan Levinson as Customer Success Director for Sendmarc in North America. The text discusses leadership experience, company expansion, and customer success team building, but provides no technical depth on Microsoft technologies, development, or implementation details. The majority of the content is biographical and organizational (biographical focus rule and business strategy/executive content exclusion). No categories were assigned."
   }
 ]
