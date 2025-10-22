@@ -13070,5 +13070,11 @@
     "reason": "Succesfully added: I assigned the Coding category based on the content's technical depth and focus on ASP.NET Core patterns, metadata, routing, and endpoint configuration, which are all relevant to Microsoft programming frameworks (Coding rules 1, 2, and 4). There is no direct use of Azure, AI, DevOps services, or Security-specific implementation, which excludes those categories. The tags focus on ASP.NET Core, routing, endpoints, metadata, and related constructs as detailed in both the content and the instructions. No generic exclusion rules apply, as the content is a technical, developer-oriented guide with no biographical, sales, or non-technical business focus.",
     "canonical_url": "https://andrewlock.net/adding-metadata-to-fallback-endpoints-in-aspnetcore/",
     "timestamp": "2025-10-22 13:51:25 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category due to the deep focus on building adaptive AI apps, feedback loops, and integrating Azure AI Foundry for model fine-tuning (AI inclusion rules 1, 4, 5, 6). Assigned ML because the article covers hands-on fine-tuning methods, reinforcement learning, LoRA, distillation, and data/model iteration (ML inclusion rules 1, 2, 3, 5, 10, 11). Assigned Azure because Azure AI Foundry is central and provides the architecture, tooling, and examples (Azure inclusion rules 1, 4, 5). Assigned GitHub Copilot due to multiple, detailed technical discussions about how it leverages signals loops and continuous fine-tuning for code suggestions (GitHub Copilot inclusion rules 1, 2, 4, with AI category always added alongside). Did not assign DevOps, Coding, or Security because while development workflows and reliability are discussed, the main technical emphasis is on AI/ML architecture and platform-level fine-tuning, not direct CI/CD pipeline management, coding language topics, or security implementation. No generic exclusion rules were triggered.",
+    "collection": "news",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/the-signals-loop-fine-tuning-for-world-class-ai-apps-and-agents/",
+    "timestamp": "2025-10-22 13:55:23 +00:00"
   }
 ]
