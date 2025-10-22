@@ -1,0 +1,16 @@
+{
+  "FeedName": "DotNet YouTube",
+  "Author": "dotnet",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "PubDate": "2025-10-22T16:30:04+00:00",
+  "Description": "In Episode 8 of our Godot C# training series, we explore how to make your game world feel alive through player interactions. Using Godot’s signal system and Area3D nodes, you’ll learn how to detect when a player enters a space, trigger events like collecting items, and communicate between game systems like inventory and UI.\n\nThis hands-on episode walks through building a “Chicken Station” that responds to player input, emits custom signals, and updates other parts of the game. You’ll also learn how to set up collision layers and masks, connect signals in C#, and prepare your game for crafting mechanics in the next lesson.\n\n✅ What You'll Learn How to use Area3D nodes to detect player proximity Setting up collision shapes and layers/masks for interaction Connecting built-in signals like body\\_entered and body\\_exited Creating and emitting custom signals in C# Communicating between game systems using signal events Preparing interactive objects for crafting systems\n\n✅ Resources GitHub repo with starter and final projects -https://github.com/microsoft/godot-cs... GoDot Website - https://godotengine.org/\n\n✅ Challenge Create a new interactive object — a “Milk Station” — that works just like the Chicken Station. When the player presses E, they collect milk. This sets the stage for crafting a recipe in the next episode.\n\n✅ Chapters 00:04 - Why Interactions Make Games Feel Alive 00:23 - Using Area3D for Proximity Detection 01:18 - Setting Up Collision Shapes and Layers 03:00 - Adding the Chicken Station to the Scene 04:52 - Connecting Signals in C# Scripts 06:00 - Testing Player Interaction with Input Events 07:30 - Creating and Emitting Custom Signals 09:00 - Building a Game Manager to Listen for Events 10:36 - Challenge: Create a Milk Station 11:00 - Wrap-Up and Preview of Crafting UI\n\n✅ Hashtags #GodotEngine #CSharp #GameDevelopment #Signals #Area3D #PlayerInteraction #VisualStudioCode #IndieDev #LearnToCode #GameDevTools #MicrosoftDeveloper #DevEducation #CraftingSystem\n\nConnect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet",
+  "ProcessedDate": "2025-10-22 17:04:08",
+  "Link": "https://www.youtube.com/watch?v=E9WACDWjWzI",
+  "Title": "Interactions - Handle player input using signals and collision detection (Part 8 of 9)",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "Tags": [
+    ".NET"
+  ],
+  "OutputDir": "_videos"
+}

@@ -1,0 +1,16 @@
+{
+  "FeedName": "DotNet YouTube",
+  "Author": "dotnet",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "PubDate": "2025-10-22T16:30:13+00:00",
+  "Description": "Welcome to your first step into game development with Godot and C#! This beginner-friendly training video walks you through the essentials of using C# inside the Godot engine to build interactive games. By the end, you understand the core concepts and workflows needed to bring your ideas to life.\n\nYou'll learn how to create a controllable player, build levels with scenes and nodes, add interactive objects, and even design a simple crafting UI. With hands-on challenges and a final sample project, you'll gain the confidence to start building your own games.\n\n✅ Resources: GitHub repo with starter and final projects - https://github.com/microsoft/godot-csharp-essentials GoDot Website - https://godotengine.org/\n\n✅What You'll Learn How to use C# in the Godot engine Creating and controlling a player character Prototyping levels with CSG nodes Building a simple crafting UI Structuring scenes and nodes in Godot Applying programming skills to game development\n\n✅ Chapters 00:05 - Welcome to Godot C# Essentials 00:11 - Who This Course Is For 00:19 - What We’ll Focus On 00:54 - Using the GitHub Repository 01:06 - Final Sample Project: Fly by Cafe 01:18 - Challenges to Reinforce Learning 01:30 - Course Wrap-Up and Next Steps\n\n✅ Hashtags\n\n#GodotEngine #CSharp #GameDevelopment #BeginnerTutorial #GodotCSharp #LearnToCode #IndieDev #GameDevTraining #VisualStudio #MicrosoftDeveloper #Tutorial #DevEducation Connect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet",
+  "ProcessedDate": "2025-10-22 17:04:08",
+  "Link": "https://www.youtube.com/watch?v=f0-ucs37ASQ",
+  "Title": "Introduction to Godot C# Essentials: A Complete Beginner's Guide (Part 1 of 9)",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "Tags": [
+    ".NET"
+  ],
+  "OutputDir": "_videos"
+}

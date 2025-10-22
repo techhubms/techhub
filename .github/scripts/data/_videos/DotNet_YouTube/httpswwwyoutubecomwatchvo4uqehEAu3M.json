@@ -1,0 +1,16 @@
+{
+  "FeedName": "DotNet YouTube",
+  "Author": "dotnet",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "PubDate": "2025-10-22T16:30:21+00:00",
+  "Description": "In Episode 4 of our Godot C# training series, we dive into the foundational building blocks of game development in Godot: scenes and nodes. You'll learn how to create your first level scene, add a ground plane with collision, and build a reusable player character complete with a third-person camera setup.\n\nThis hands-on walkthrough covers everything from node hierarchy and mesh setup to lighting and reusable scene instancing. By the end of this lesson, you'll have a playable scene with a controllable character and a camera that follows the action.\n\n✅ What You'll Learn How scenes and nodes work together in Godot Creating a level scene with ground and collision Building a reusable player character using CharacterBody3D Setting up a third-person camera with SpringArm3D Adding directional lighting to your scene Using reusable scenes for efficient game design\n\n✅ Resources GitHub repo with starter and final projects -https://github.com/microsoft/godot-csharp-essentials GoDot Website - https://godotengine.org/\n\n✅ Challenge Create a new reusable obstacle scene that blocks player movement. Experiment with material settings to explore how they affect rendering.\n\n✅ Chapters 00:04 - Scenes and Nodes in Godot 01:01 - Creating the Level Scene 02:32 - Adding Ground and Collision 04:00 - Visualizing with MeshInstance3D 05:20 - Fixing Collision Shape Warnings 06:45 - Understanding Node Inheritance 08:00 - Building the Player Scene 11:00 - Godot’s Coordinate System Explained 12:00 - Setting Up the Third-Person Camera 13:45 - Adding and Positioning the Camera 15:00 - Nesting and Reusing Scenes 16:00 - Adding Lighting to the Scene 17:30 - Challenge: Create an Obstacle Scene 18:00 - Wrap-Up and What’s Next\n\n✅ Hashtags #GodotEngine #CSharp #GameDevelopment #SceneSetup #CharacterBody3D #SpringArm3D #VisualStudioCode #BeginnerTutorial #IndieDev #LearnToCode #GameDevTools #MicrosoftDeveloper #DevEducation Connect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet",
+  "ProcessedDate": "2025-10-22 17:04:08",
+  "Link": "https://www.youtube.com/watch?v=o4uqehEAu3M",
+  "Title": "Scenes and Nodes - The Core Building Blocks (Part 4 of 9)",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "Tags": [
+    ".NET"
+  ],
+  "OutputDir": "_videos"
+}

@@ -7215,5 +7215,11 @@
     "collection": "community",
     "timestamp": "2025-10-22 16:06:49 +00:00",
     "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content describes a video clip where the Log4j maintainer discusses the shock of discovering Log4Shell, which is a general security incident affecting open source libraries. While GitHub produced the video and is mentioned in social links, the clip focuses on the broader implications and risks of foundational open source code—not on Microsoft-specific technologies, products, or development practices. There is no technical depth about Microsoft security tools, Azure, DevOps, or hands-on coding practices, and no evidence of Microsoft technologies being ≥40% or central. Per the workflow, only content with substantial and directly relevant Microsoft technical information qualifies for categorization.",
+    "timestamp": "2025-10-22 17:07:58 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/zU6-mKQ8kEQ",
+    "collection": "videos"
   }
 ]

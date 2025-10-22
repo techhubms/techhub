@@ -1,0 +1,16 @@
+{
+  "FeedName": "DotNet YouTube",
+  "Author": "dotnet",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "PubDate": "2025-10-22T16:30:14+00:00",
+  "Description": "In Episode 6 of our Godot C# training series, we shift from building gameplay to diagnosing and fixing issues. Debugging is a critical skill in game development, and this episode walks you through the tools Godot and Visual Studio Code offer to help you track down bugs and understand what’s happening under the hood.\n\nYou'll learn how to use Godot’s built-in debugger, visualize collision shapes, inspect live scene data, and leverage Visual Studio Code’s powerful debugging features — including conditional breakpoints, watch expressions, and the call stack. Whether you're troubleshooting physics, input, or timing issues, this lesson gives you the confidence to debug like a pro.\n\n✅ What You'll Learn How to inspect live scene data using Godot’s Remote tab Using print, warnings, and errors to debug in Godot Visualizing collision shapes and physics bodies Setting and using breakpoints in Visual Studio Code Exploring watch expressions, call stack, and debug console Creating and using conditional breakpoints for cleaner debugging\n\n✅ Resources GitHub repo with starter and final projects -https://github.com/microsoft/godot-csharp-essentials GoDot Website - https://godotengine.org/\n\n✅ Challenge Try adding a conditional breakpoint to your project that only triggers when a specific value is reached. Use it to pause the game at the right moment and inspect what’s happening.\n\n✅ Chapters 00:04 - Debugging Mindset: Bugs Are Normal 00:36 - Godot’s Built-In Debugging Tools 01:03 - Inspecting Live Scene Data with Remote Tab 01:52 - Using Print, Warnings, and Errors 02:58 - Visualizing Collision Shapes 04:30 - Debugging in Visual Studio Code 05:30 - Breakpoints, Watch Expressions, and Call Stack 07:00 - Conditional Breakpoints Explained 08:30 - Logging and Hit Count Breakpoints 10:00 - Wait-For Breakpoint Demo 11:00 - Wrap-Up and Challenge: Try Conditional Breakpoints\n\n✅ Hashtags #GodotEngine #CSharp #GameDevelopment #Debugging #VisualStudioCode #ConditionalBreakpoints #CollisionShapes #GameDevTools #MicrosoftDeveloper #LearnToCode #DevEducation #IndieDev #GodotDebugging\n\nConnect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet",
+  "ProcessedDate": "2025-10-22 17:04:08",
+  "Link": "https://www.youtube.com/watch?v=eQzfXKf1YfY",
+  "Title": "Debugging - Troubleshoot in  Godot & VS Code (Part 6 of 9)",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "Tags": [
+    ".NET"
+  ],
+  "OutputDir": "_videos"
+}

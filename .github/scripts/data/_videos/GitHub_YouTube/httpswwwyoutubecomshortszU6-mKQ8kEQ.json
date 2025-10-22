@@ -1,0 +1,18 @@
+{
+  "FeedName": "GitHub YouTube",
+  "Author": "GitHub",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "PubDate": "2025-10-22T16:01:44+00:00",
+  "Description": "\"We're just such a small library, hidden in the big applications.\" In this powerful clip, Log4j maintainer Christian Grobmeier shares the shock and disbelief he felt when Log4Shell was discovered. It's a critical lesson about the invisible, foundational code the world relies on.\n\n#Log4Shell #OpenSource #Security\n\nStay up-to-date on all things GitHub by connecting with us:\n\nYouTube: https://gh.io/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Insider newsletter: https://resources.github.com/newsletter/ Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github\n\nAbout GitHub It’s where over 100 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "ProcessedDate": "2025-10-22 17:04:11",
+  "Link": "https://www.youtube.com/shorts/zU6-mKQ8kEQ",
+  "Title": "The open source risk no one talks about",
+  "FeedLevelAuthor": "GitHub",
+  "EnhancedContent": null,
+  "Tags": [
+    "Log4Shell",
+    "OpenSource",
+    "Security"
+  ],
+  "OutputDir": "_videos"
+}

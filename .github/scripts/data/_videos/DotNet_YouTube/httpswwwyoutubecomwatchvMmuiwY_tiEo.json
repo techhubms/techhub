@@ -1,0 +1,16 @@
+{
+  "FeedName": "DotNet YouTube",
+  "Author": "dotnet",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "PubDate": "2025-10-22T16:30:09+00:00",
+  "Description": "Before you start building games in Godot with C#, it's essential to get your development environment properly configured. In this episode, you'll walk through every step needed to install and set up Godot with .NET support, configure Visual Studio Code, and download the course project from GitHub.\n\n✅ What You'll Learn How to install Godot with .NET support Setting up Visual Studio Code as your editor Installing the .NET SDK and C# Dev Kit Configuring Godot to work with VS Code Creating launch and task files for debugging Installing the C# Tools for Godot extension Downloading the course files from GitHub\n\n✅ Resources GitHub repo with starter and final projects -https://github.com/microsoft/godot-csharp-essentials GoDot Website - https://godotengine.org/ C# Tools for Godot extension .NET SDK download page Visual Studio Code setup instructions\n\n✅ Chapters 00:05 - Intro: Setting Up Your Environment 00:15 - Installing Godot with .NET Support 00:31 - Setting Up Visual Studio Code 01:00 - Installing the .NET SDK 01:30 - Configuring Godot to Use VS Code 02:20 - Creating a Debug-Friendly Project 03:00 - Adding Launch and Task Files 04:00 - Installing C# Tools for Godot 05:18 - Downloading Course Files from GitHub 05:32 - Wrap-Up and What’s Next\n\n✅ Hashtags\n\n#GodotEngine #CSharp #GameDevelopment #VisualStudioCode #DotNet #BeginnerTutorial #GodotSetup #MicrosoftDeveloper #IndieDev #LearnToCode #GameDevTools #Tutorial #DevEducation Connect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet",
+  "ProcessedDate": "2025-10-22 17:04:08",
+  "Link": "https://www.youtube.com/watch?v=MmuiwY_tiEo",
+  "Title": "Installation - Set up Godot, VS Code, and C# (Part 2 of 9)",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "Tags": [
+    ".NET"
+  ],
+  "OutputDir": "_videos"
+}

@@ -1,0 +1,16 @@
+{
+  "FeedName": "DotNet YouTube",
+  "Author": "dotnet",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "PubDate": "2025-10-22T16:30:16+00:00",
+  "Description": "In Episode 5 of our Godot C# training series, we bring your player character to life with code! This lesson introduces the fundamentals of scripting in Godot using C#, including how to handle input, apply movement, and rotate the player smoothly using physics-based logic.\n\nYou'll learn how to use Godot’s built-in lifecycle and input methods, configure the Input Map for flexible controls, and write clean, reusable code to drive gameplay. By the end of this episode, your player will be fully controllable and responsive to keyboard input — and ready to interact with the world.\n\n✅ What You'll Learn How to configure the Input Map for keyboard controls Using lifecycle methods like \\_Ready, \\_Process, and \\_PhysicsProcess Handling input with \\_UnhandledInput and \\_UnhandledKeyInput Writing movement logic using CharacterBody3D Applying smooth rotation with LerpAngle Organizing script variables with Export and ExportGroup Debugging common issues in Godot C# scripts\n\n✅ Resources GitHub repo with starter and final projects -https://github.com/microsoft/godot-csharp-essentials GoDot Website - https://godotengine.org/\n\n✅ Challenge Create an interactive object in your scene that responds to a button press — like a spinning obstacle or a moving block triggered by the Y key. ✅ Chapters 00:04 - Intro: Making the Player Move 01:00 - Setting Up the Input Map 02:00 - Creating Movement Actions 03:00 - Adding a C# Script to the Player 04:30 - Understanding Built-In Methods 05:30 - Input Handling and Movement Logic 07:00 - Physics-Based Movement with CharacterBody3D 09:00 - Running the Game and Testing Movement 10:00 - Adding Rotation with LerpAngle 12:00 - Exporting Variables to the Inspector 13:00 - Finalizing Rotation and Debugging 13:45 - Challenge: Create an Interactive Obstacle 14:30 - Wrap-Up and Preview of Debugging Lesson\n\n✅ Hashtags #GodotEngine #CSharp #GameDevelopment #PlayerMovement #InputHandling #PhysicsProcess #CharacterBody3D #VisualStudioCode #BeginnerTutorial #IndieDev #LearnToCode #GameDevTools #MicrosoftDeveloper #DevEducation\n\nConnect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet",
+  "ProcessedDate": "2025-10-22 17:04:08",
+  "Link": "https://www.youtube.com/watch?v=iEMbetxAwvA",
+  "Title": "Scripting Basics - Write C# scripts and attach them to nodes (Part 5 of 9)",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "Tags": [
+    ".NET"
+  ],
+  "OutputDir": "_videos"
+}

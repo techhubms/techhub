@@ -13112,5 +13112,77 @@
     "collection": "news",
     "timestamp": "2025-10-22 16:06:33 +00:00",
     "reason": "Succesfully added: Assigned Security category because the article centers on software vulnerability research, bug bounty processes, and security best practices in the GitHub ecosystem (Security rules 2, 3, 5, 7, 9). Assigned DevOps because GitHub's bug bounty and security practices are tied to operational aspects of software development and reliability (DevOps rules 2, 5, and 9). Assigned GitHub Copilot because the content highlights security implications of Copilot and similar AI-powered features (GitHub Copilot rule 1, 2 and 3). Did not assign AI, as the emphasis is on security and vulnerability discovery in the context of platforms that include AI tools, rather than direct use or development of AI. Coding and Azure were not assigned; there is no focus on programming techniques or Azure platform technologies."
+  },
+  {
+    "reason": "Succesfully added: Assigned Coding category because the content is a technical guide for developers on using C# within the Godot engine to create and rapidly prototype 3D environments—a direct fit for 'Microsoft programming languages' (C#), 'Microsoft development frameworks/tools' (Godot + .NET), and software architecture practices (prototyping, scene management). There is no substantial coverage of Azure, AI/ML, DevOps, or Security—so only Coding applies. The description, tags, and resource links all reinforce the development-focused nature, with no exclusionary conditions from generic rules.",
+    "timestamp": "2025-10-22 17:05:11 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=53B49XIcZk4",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Included the Coding category because the episode is centered on hands-on C# scripting with Godot—implementing signals, player input handling, event-driven interactions, and connecting game systems (Coding rules 1, 2, 4, and 5). No other Microsoft category applies: AI, GitHub Copilot, DevOps, Azure, ML, and Security are not relevant. The content qualifies as it is clearly technical, educational, and focused on code implementations with Microsoft technology (.NET/C#), with thorough details per the description.",
+    "timestamp": "2025-10-22 17:05:30 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=E9WACDWjWzI",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Coding' category because the video focuses on debugging practices for C# development in Godot, using Visual Studio Code and Godot's own tools (Coding rules 1, 2, and 4). There is no substantial coverage of DevOps, Azure, AI, ML, Security, or GitHub Copilot; the main theme is programming tooling and debugging within a Microsoft-supported C# workflow for Godot game projects.",
+    "timestamp": "2025-10-22 17:05:48 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=eQzfXKf1YfY",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Applied only the Coding category. The content is focused on hands-on game development using C# within the Godot engine. Rule: Coding category is for programming with Microsoft languages/frameworks (Coding rules 1, 2, and 4). Although the tutorial references Microsoft and .NET resources, it does not focus on Azure, AI, ML, Security, DevOps, or GitHub Copilot (per category rules). Godot is an open-source engine, but the primary tutorial focus is Microsoft C# development in that ecosystem, thus qualifying for Coding. No exclusion rules applied: video is technically focused, with substantial C# and programming content.",
+    "timestamp": "2025-10-22 17:06:06 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=f0-ucs37ASQ",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Coding' category because the content focuses on programming with C#—a Microsoft language—within the Godot game engine context, covering scripting basics, input handling, and movement logic (Coding rules 1, 2, and 4). No other categories apply; while Microsoft technologies (.NET, C#) are used, there is no Azure, AI, ML, DevOps, or Security component. Nothing in the content meets any generic exclusion rules: it's technically focused, sufficiently substantive, and presents a developer tutorial with actionable steps.",
+    "timestamp": "2025-10-22 17:06:28 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=iEMbetxAwvA",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Coding' category because the content focuses on setting up a C# development environment using Godot and Visual Studio Code, installing the .NET SDK, and configuring code-related tools and extensions (Coding rules 1-5). Although Godot is not a Microsoft framework, the tutorial is about enabling Microsoft technologies (C#, .NET, VS Code) as the core development stack, which fits the Coding criteria. No 'DevOps' (not about CI/CD or workflow automation), no 'Azure' (no cloud services involved), no 'Security', 'AI', 'GitHub Copilot', or 'ML' as none of those topics are central or mentioned.",
+    "timestamp": "2025-10-22 17:06:47 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=MmuiwY_tiEo",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Coding category because the video is focused on hands-on development in Godot using C# (Coding rules 1 and 4). Godot project structure, scripting, and scene/node architecture are technical and directly relate to Microsoft development topics. No other category applies since there are no AI, DevOps, Azure, ML, or Security aspects present in the video. All actions are within the scope of game/application coding, not business productivity or non-technical content.",
+    "timestamp": "2025-10-22 17:07:07 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=o4uqehEAu3M",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Content is centered on coding and development workflows using C# within the Godot engine, supported by resources from the .NET and Microsoft developer ecosystem. The main focus is not on AI, DevOps, Azure, ML, or Security, but rather on practical coding, tool usage, and game engine navigation, thus only 'Coding' was assigned. The content heavily emphasizes technical guidance and project setup, aligning with Coding inclusion rules.",
+    "timestamp": "2025-10-22 17:07:25 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=RdciTS7sRhw",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: The video focuses on coding user interfaces in the Godot engine using C# (.NET), which meets Coding category rule 1 (Microsoft programming languages) and rule 2 (Frameworks/tools). While Godot is not a Microsoft product, the entire series is tailored for .NET developers, and C# code is central throughout. No other category qualifies: there is no discussion of AI, DevOps, Azure, ML, or Security per the detailed rules and the summary, chapters, and topics list. The tags were selected to reflect technical terminology used in the content, focusing on game UI programming, C#, Godot, and Microsoft developer tools.",
+    "timestamp": "2025-10-22 17:07:45 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Vav3Ml4z6-8",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the video is focused on Azure Availability Zones, their regional and subscription mappings, and practical implementation using Azure-specific tools (Azure rule 1, Azure rule 5). Coding category was considered but not added since, while a PowerShell script is discussed, the primary focus is operational and architectural mapping of Azure services, not coding patterns or development. No generic exclusions apply—content is in English, of sufficient explanatory length, and tightly focused on Azure technical implementation, not business management or product marketing.",
+    "timestamp": "2025-10-22 17:08:18 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=jBpxG2Fk2jA",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content centers on Azure AI Foundry Local, a Microsoft technology enabling local AI model deployment (AI inclusion rule 1). There is no explicit mention of ML, Coding, DevOps, Azure (beyond being a branded solution), GitHub Copilot, or Security implementations, so only AI is assigned. The video targets practitioners who need privacy and offline capabilities for AI in Microsoft contexts.",
+    "timestamp": "2025-10-22 17:08:36 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/KPa9PE27ESU",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category because the content centers on Azure AI Foundry Local, a Microsoft AI platform for local model execution (AI rule 1). Assigned the 'Azure' category since Azure is explicitly referenced and the solution is part of Microsoft's Azure technologies (Azure rule 1). Did not assign 'ML' since details about technical data science or model-building are not present; did not assign 'Coding', 'DevOps', 'Security', or 'GitHub Copilot' as the content does not directly address those areas. No generic exclusion rules applied.",
+    "timestamp": "2025-10-22 17:08:52 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=N1paWARiUcI",
+    "collection": "videos"
   }
 ]
