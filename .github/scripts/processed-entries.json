@@ -13208,5 +13208,17 @@
     "timestamp": "2025-10-22 19:04:55 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/selecting-the-right-agentic-solution-on-azure-part-2-security/ba-p/4461215"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/open-source/from-karaoke-terminals-to-ai-resumes-the-winners-of-githubs-for-the-love-of-code-challenge/",
+    "timestamp": "2025-10-22 21:04:46 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories due to significant, specific content describing how numerous developers used GitHub Copilot for coding, debugging, and project enhancement (GitHub Copilot inclusion rules 1–6, AI inclusion rules 1/2/4/5/6). Assigned 'Coding' because the article systematically details hands-on projects, toolchains, and technical creativity, with multiple references to programming languages (Python, Rust), frameworks (React, Express, Vite), and hardware setups (Coding inclusion rules 1–5). 'DevOps', 'Azure', 'ML', and 'Security' were not assigned because the focus is on open source, developer experience, and creative coding—there are no prominent Microsoft cloud, security, infra/automation, or ML/data engineering themes. The summary, tags, and content preserve all technical details highlighted in the article."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/upcoming-changes-to-azure-relay-ip-addresses-and-dns-support/ba-p/4463597",
+    "timestamp": "2025-10-22 21:05:20 +00:00",
+    "reason": "Succesfully added: Content qualifies for the Azure category because it is centrally focused on Azure Relay, an Azure cloud service (Azure inclusion rule 1 and 4). The post contains technical guidance for updating network configurations, managing IP ranges, and using PowerShell automation in an Azure context. No other categories are relevant as there is no AI, Coding, DevOps, Security, ML, or GitHub Copilot content. Generic exclusion rules do not apply, as the post is technical, non-promotional, sufficiently detailed, and in English."
   }
 ]
