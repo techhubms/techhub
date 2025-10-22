@@ -7191,5 +7191,17 @@
     "reason": "No categories found: All of the primary content fields ('description', 'content') are either empty or null, and no substantive information about the technical details or purpose of the content is provided. Without actual content or a meaningful description, I cannot determine if any category inclusion rules apply. According to the core workflow, with missing main text and insufficient metadata, exclusion is required, as meaningful category assessment is not possible.",
     "canonical_url": "https://www.youtube.com/shorts/dMVeuOYQ9XQ",
     "timestamp": "2025-10-22 13:51:49 +00:00"
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/emea/features/building-the-future-how-datacenters-are-innovating-with-sustainability-in-mind/",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this is a high-level business and sustainability overview focused on Microsoft's datacenter strategy, growth, and environmental goals without technical implementation details related to Microsoft development, DevOps, AI, ML, Security, Coding, or Azure architectural/developer use. It discusses corporate sustainability initiatives and infrastructure expansion, which falls under the 'Business Strategy and Executive Content' generic exclusion rule. No actionable technical guidance for practitioners is presented.",
+    "timestamp": "2025-10-22 15:04:33 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=IPW5zAnX9Ao",
+    "reason": "No categories found: The content centers on a personal, biographical account from a maintainer (Christian) about his experiences during the Log4Shell crisis. Per the generic exclusion rules (Chapter 3), biographical focus is grounds for exclusion. The description makes it clear the main substance is Christian's personal story, survival, and lessons learned, rather than technical details, step-by-step mitigation, or Microsoft technology implementation. While security is a theme, the absence of technical Microsoft details, code-level solutions, or engineering insights means no categories are assigned.",
+    "timestamp": "2025-10-22 15:04:59 +00:00",
+    "collection": "videos"
   }
 ]

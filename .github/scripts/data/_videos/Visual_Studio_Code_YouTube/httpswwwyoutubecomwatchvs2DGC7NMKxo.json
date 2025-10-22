@@ -1,0 +1,26 @@
+{
+  "Tags": [
+    "beginner",
+    "copilot",
+    "demo",
+    "developer",
+    "github",
+    "githubcopilot",
+    "mcp",
+    "softwaredeveloper",
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "Title": "Add a database in minutes using the Microsoft Learn MCP server and GitHub Copilot",
+  "PubDate": "2025-10-22T14:01:34+00:00",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=s2DGC7NMKxo",
+  "FeedName": "Visual Studio Code YouTube",
+  "Description": "Having many browser tabs open is painful as it's a context switch between docs and IDE. Having up to date dcos is even more important. MCP Learn server for Microsoft Docs solves both of these problems and you can use it in VS Code with GitHub Copilot. Let's solve a real scenario: adding a database to an app in mere minutes and with deployment scripts.\n\n🔎 Chapters: 00:00 Introduction 00:30 Demo - Microsoft Learn MCP Server in VS Code 01:25 Setup and Configuration 02:09 Demo - Adding Postgres to a new application 07:11 In summary 07:56 Wrap\n\n🔗 Link: https://aka.ms/mcp-for-beginners\n\n🎙️ Featuring: Chris Noring\n\n📲 Follow VS Code: \\* X: https://x.com/code \\* Bluesky: https://bsky.app/profile/vscode.dev \\* YouTube: https://youtube.com/code \\* LinkedIn: https://www.linkedin.com/showcase/104107263 \\* GitHub: https://github.com/microsoft/vscode\n\n#vscode #copilot #mcp",
+  "Author": "Visual Studio Code",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Visual Studio Code",
+  "ProcessedDate": "2025-10-22 15:04:02",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+}

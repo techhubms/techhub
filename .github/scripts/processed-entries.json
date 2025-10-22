@@ -13076,5 +13076,17 @@
     "collection": "news",
     "canonical_url": "https://azure.microsoft.com/en-us/blog/the-signals-loop-fine-tuning-for-world-class-ai-apps-and-agents/",
     "timestamp": "2025-10-22 13:55:23 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=s2DGC7NMKxo",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content centers on using GitHub Copilot for code and deployment script generation, matching AI and Copilot inclusion rules. 'Coding' is included due to focus on practical application development and database integration in VS Code, which involves direct coding activities. 'Azure', 'DevOps', 'ML', and 'Security' were not assigned since the video does not discuss specific Azure services, DevOps pipelines, ML/data science, or security implementation. Content is instructional with technical detail, and no generic exclusion rules apply.",
+    "timestamp": "2025-10-22 15:05:23 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/running-a-load-test-within-a-chaos-experiment/ba-p/4463344",
+    "reason": "Succesfully added: Assigned Azure category since the focus is on Azure services: Chaos Studio and Load Testing (Azure rule 1). Assigned DevOps because the article discusses integrating resiliency testing into CI/CD workflows and orchestrating testing processes (DevOps rules 1, 5, 6, and 9). Assigned Security category because the content emphasizes resiliency, fault tolerance, and reliability in the context of cloud infrastructure—core security/stability concerns (Security rules 1, 2, 4, 5, and 9). Did not assign AI, ML, GitHub Copilot, or Coding as the primary focus is not on programming, AI/ML, or code-level work but on engineering reliability and operational practices using Azure services. No generic exclusion rules applied as the content is technical, in English, sufficiently detailed, and relevant.",
+    "timestamp": "2025-10-22 15:05:45 +00:00",
+    "collection": "community"
   }
 ]
