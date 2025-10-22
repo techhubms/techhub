@@ -13088,5 +13088,29 @@
     "reason": "Succesfully added: Assigned Azure category since the focus is on Azure services: Chaos Studio and Load Testing (Azure rule 1). Assigned DevOps because the article discusses integrating resiliency testing into CI/CD workflows and orchestrating testing processes (DevOps rules 1, 5, 6, and 9). Assigned Security category because the content emphasizes resiliency, fault tolerance, and reliability in the context of cloud infrastructure—core security/stability concerns (Security rules 1, 2, 4, 5, and 9). Did not assign AI, ML, GitHub Copilot, or Coding as the primary focus is not on programming, AI/ML, or code-level work but on engineering reliability and operational practices using Azure services. No generic exclusion rules applied as the content is technical, in English, sufficiently detailed, and relevant.",
     "timestamp": "2025-10-22 15:05:45 +00:00",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/onelake-apis-bring-your-apps-and-build-new-ones-with-familiar-blob-and-adls-apis/",
+    "collection": "news",
+    "timestamp": "2025-10-22 16:05:22 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because OneLake APIs are directly tied to Microsoft Azure technologies, supporting Azure Data Lake Storage and Blob Storage APIs (Azure inclusion rules 1 and 2). Assigned the ML category as the focus is on data lake foundation for analytics and machine learning workloads (ML rules 1, 2, 4, and 7), and it discusses engineering-oriented migration and data management for analytics. Did not assign AI—while Fabric supports AI/ML, the content is not about pre-built AI services or custom ML code development—it's about storage and migration. Did not assign Coding, as there is no significant coverage of application-level code or development patterns; sample usage is mentioned but is platform-level integration, not deep developer workflow. All exclusion rules were reviewed, and none applied: the content is technical, substantial, and focused on Azure ecosystem development for analytics and ML."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/research/blog/tell-me-when-building-agents-that-can-wait-monitor-and-act/",
+    "collection": "news",
+    "timestamp": "2025-10-22 16:05:45 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the content focuses on the design, operation, evaluation, and impact of AI agents (SentinelStep in Magentic-UI) developed by Microsoft, with in-depth treatment of LLM agent workflows, AI orchestration, and synthetic benchmarking (AI rule 1, 4). No other categories apply as the article does not detail developer coding aspects, DevOps, ML/data science, Azure-specific deployments, or Microsoft security tooling. The content is not a sales pitch, job discussion, or non-technical/executive piece, so none of the generic exclusion rules apply. The article is technical, in English, and centrally relevant to Microsoft AI technologies."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/introducing-planning-in-visual-studio-public-preview/",
+    "collection": "news",
+    "timestamp": "2025-10-22 16:06:08 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the article discusses advanced Copilot capabilities for planning and workflow, directly relating to Microsoft's AI-driven developer tools (AI rules 1 and 5). Assigned 'GitHub Copilot' since Copilot is the technological centerpiece, and features (like Agent Mode and Planning) are specific to Copilot itself (GitHub Copilot rules 1-4). Assigned 'Coding' because it focuses on structuring, managing, and automating real coding tasks in Visual Studio (Coding rules 4 and 5). Did not assign DevOps, Azure, ML, or Security as the article is centered on code planning/AI integration in the development environment, not deployment, ML engineering, or Microsoft cloud security."
+  },
+  {
+    "canonical_url": "https://github.blog/security/top-security-researcher-shares-their-bug-bounty-process/",
+    "collection": "news",
+    "timestamp": "2025-10-22 16:06:33 +00:00",
+    "reason": "Succesfully added: Assigned Security category because the article centers on software vulnerability research, bug bounty processes, and security best practices in the GitHub ecosystem (Security rules 2, 3, 5, 7, 9). Assigned DevOps because GitHub's bug bounty and security practices are tied to operational aspects of software development and reliability (DevOps rules 2, 5, and 9). Assigned GitHub Copilot because the content highlights security implications of Copilot and similar AI-powered features (GitHub Copilot rule 1, 2 and 3). Did not assign AI, as the emphasis is on security and vulnerability discovery in the context of platforms that include AI tools, rather than direct use or development of AI. Coding and Azure were not assigned; there is no focus on programming techniques or Azure platform technologies."
   }
 ]

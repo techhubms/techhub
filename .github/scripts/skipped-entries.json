@@ -7203,5 +7203,17 @@
     "reason": "No categories found: The content centers on a personal, biographical account from a maintainer (Christian) about his experiences during the Log4Shell crisis. Per the generic exclusion rules (Chapter 3), biographical focus is grounds for exclusion. The description makes it clear the main substance is Christian's personal story, survival, and lessons learned, rather than technical details, step-by-step mitigation, or Microsoft technology implementation. While security is a theme, the absence of technical Microsoft details, code-level solutions, or engineering insights means no categories are assigned.",
     "timestamp": "2025-10-22 15:04:59 +00:00",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/capex-vs-opex-in-cloud-computing-why-it-matters-for-businesses/m-p/4463528#M22279",
+    "collection": "community",
+    "timestamp": "2025-10-22 16:06:49 +00:00",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/follow-the-thread-distributed-tracing-patterns-for-microservices/m-p/4463527#M22278",
+    "collection": "community",
+    "timestamp": "2025-10-22 16:06:49 +00:00",
+    "reason": "Insufficient content length"
   }
 ]
