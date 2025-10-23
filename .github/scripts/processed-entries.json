@@ -13250,5 +13250,23 @@
     "timestamp": "2025-10-23 05:04:38 +00:00",
     "collection": "posts",
     "reason": "Succesfully added: Assigned the 'AI' category because the primary subject is the evolution and lifecycle management of adaptive, intent-driven AI agents, which is central to the article and aligns with AI category inclusion rules 1, 4, and 5. Assigned the 'DevOps' category because the article frames agent management using development lifecycle and governance concepts—ideation, build, testing, deployment, and observation—fitting DevOps rule 5 (CI/CD, deployment strategies), DevOps rule 1 (ALM as process comparable to DevOps), and DevOps rule 6 (automation and monitoring practices). There is no Microsoft-specific technology focus, so Azure, Coding, ML, Security, and GitHub Copilot categories do not apply per inclusion rules and multi-platform content threshold."
+  },
+  {
+    "timestamp": "2025-10-23 07:05:18 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned 'AI' because the article fundamentally focuses on AI-driven code generation and its operational implications (AI rules 1, 4, 5). Included 'GitHub Copilot' because it is explicitly referenced as a primary AI coding tool (GitHub Copilot rule 1, 2), and per CRITICAL requirement, added both 'AI' and 'GitHub Copilot' together. 'DevOps' is assigned due to prominent discussion on reliability, automation, and SRE practices, fitting DevOps category rules (DevOps rules 3, 4, 5, 7). 'Coding' applies as the piece discusses code authoring, generation, duplication, and DevOps engineering, satisfying Coding rule 4. No other categories (e.g., Azure, Security, ML) are included, as there is no substantive Microsoft-specific cloud, security, or ML infrastructure detailed in the content.",
+    "canonical_url": "https://devops.com/the-breakneck-future-of-codegen-why-ai-swe-must-be-matched-with-ai-sre/"
+  },
+  {
+    "timestamp": "2025-10-23 07:05:42 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: The content qualifies for the DevOps category, as it is centered on software delivery practices (nano updates, CI/CD, dependency management, collaboration between engineering and security), directly matching DevOps category rules 3, 4, 5, 6, and 9. Security is also included: the article extensively discusses vulnerability management and secure development, referencing patch management, CVE reduction, and bridging engineering/security, mapping to Security rules 1, 5, and 7. No other categories apply: the article does not focus on Microsoft-specific technologies, programming, or code-level details, nor does it cover AI or ML topics. All inclusion/exclusion rules were followed, and the output is structured per instructions.",
+    "canonical_url": "https://devops.com/why-nano-updates-only-work-if-you-begin-with-the-latest-and-greatest-software/"
+  },
+  {
+    "timestamp": "2025-10-23 07:06:21 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because the content is focused on deploying and integrating large language models and AI using Microsoft tools (AI category rule 1). Assigned Azure because Foundry Local and ONNX Runtime are positioned as Azure/Microsoft ecosystem technologies with substantial Azure alignment (Azure rule 1 and 3). Assigned Coding because the article covers SDK usage across Python, JavaScript/TypeScript, .NET, and Rust, and provides technical code examples, SDK integration, and developer implementation patterns (Coding rules 1, 2, and 5). ML was not assigned because the article is centered on production-ready AI deployment and developer integration with pre-trained models, not custom ML/data pipeline engineering from scratch. DevOps was not assigned because there is no detailed coverage of CI/CD, infrastructure automation, or operations-focused workflows as primary topic. Security was not included as the focus is on privacy and data sovereignty benefits, not security technologies or architecture implementation.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/transform-your-ai-applications-with-local-llm-deployment/ba-p/4462829"
   }
 ]
