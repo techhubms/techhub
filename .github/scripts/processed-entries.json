@@ -13316,5 +13316,11 @@
     "collection": "posts",
     "canonical_url": "https://devops.com/the-silent-technical-debt-why-manual-remediation-is-costing-you-more-than-you-think/",
     "timestamp": "2025-10-23 14:06:39 +00:00"
+  },
+  {
+    "timestamp": "2025-10-23 15:06:09 +00:00",
+    "canonical_url": "https://devops.com/breaking-free-from-rising-observability-costs-with-open-cost-efficient-architectures/",
+    "collection": "posts",
+    "reason": "Succesfully added: Generic exclusion rules do not apply: the content is not biographical, promotional, question-only, negative, too short, off-topic, or business/management focused, nor is it about non-development Microsoft or consumer products. Instead, the main focus is on observability architecture, open source tooling, and cost management for DevOps. While several products and platforms are discussed, Microsoft technologies are not central or specifically detailed (e.g., Azure Monitor, Application Insights, or Azure-native observability are not mentioned), and thus Azure or other Microsoft-specific categories are not included per the multi-platform content threshold (Chapter 2, Multi-Platform Content Threshold). The article squarely fits the DevOps category by discussing modern DevOps practices, open standards (OpenTelemetry), logging, monitoring, pipelines, data engineering, and architecture for observability. It does not qualify for AI, Coding, Azure, ML, Security, or GitHub Copilot under the defined rules, as it does not cover code, ML, Microsoft-specific security, or AI tools in actionable technical detail. Categories assigned: [\"DevOps\"]."
   }
 ]
