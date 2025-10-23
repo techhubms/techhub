@@ -13406,5 +13406,11 @@
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-10-23-managing-roles-and-governance-via-enterprise-teams-is-in-public-preview",
     "reason": "Succesfully added: Categories assigned as follows: 'DevOps' because the content centers on management, governance, permissions, and automation capabilities in GitHub Enterprise, which maps directly to DevOps rule 2 (GitHub DevOps Tools), rule 3 (Team Collaboration/Organization), rule 4 (Development Methodologies), and general platform management. 'Security' is added due to the new Enterprise Security Manager role, centralization of alert and setting management, as well as code and secret scanning features (Security rules 1, 2, and 5). Not assigned 'AI' or 'GitHub Copilot' as the focus is on management of Copilot licenses, not Copilot usage, implementation, or technical details. 'Azure', 'Coding', and 'ML' categories do not apply as there are no significant references to Azure services, code, or data science/ML content."
+  },
+  {
+    "timestamp": "2025-10-23 23:04:16 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/announcing-sponsorship-on-nugetdotorg-for-maintainer-appreciation/",
+    "reason": "Succesfully added: Assigned the Coding category because the content focuses on the NuGet package ecosystem and supporting open source package maintainers, which are fundamental to .NET development and software engineering (Coding rule 3). No other categories were added because the content does not discuss AI, DevOps, Azure services, ML/data science, or security topics. Exclusion rules do not apply as this is not business/productivity, biographical, or non-technical content."
   }
 ]
