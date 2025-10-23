@@ -13244,5 +13244,11 @@
     "timestamp": "2025-10-23 00:10:21 +00:00",
     "reason": "Succesfully added: Assigned AI category because the content centers on building intelligent automation with AI agents using the Microsoft Agent Framework (AI rule 1, 4). Assigned Azure since the framework and related workflows are part of Microsoft's Azure ecosystem (Azure rule 1). Assigned Coding category due to the focus on developer implementation, type-safe architecture, and workflow construction (Coding rules 1 and 4). The content is technical, covers practical usage, and demonstrates integration and orchestration—matching all relevant inclusion criteria. No exclusion rules from Chapter 3 apply; content is sufficiently technical, not biographical, and centers around developer workflows.",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://devops.com/the-developers-guide-to-agentic-ai-the-five-stages-of-agent-lifecycle-management/",
+    "timestamp": "2025-10-23 05:04:38 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the 'AI' category because the primary subject is the evolution and lifecycle management of adaptive, intent-driven AI agents, which is central to the article and aligns with AI category inclusion rules 1, 4, and 5. Assigned the 'DevOps' category because the article frames agent management using development lifecycle and governance concepts—ideation, build, testing, deployment, and observation—fitting DevOps rule 5 (CI/CD, deployment strategies), DevOps rule 1 (ALM as process comparable to DevOps), and DevOps rule 6 (automation and monitoring practices). There is no Microsoft-specific technology focus, so Azure, Coding, ML, Security, and GitHub Copilot categories do not apply per inclusion rules and multi-platform content threshold."
   }
 ]
