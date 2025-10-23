@@ -7245,5 +7245,23 @@
     "canonical_url": "https://www.youtube.com/watch?v=TjBO0bUK4bM",
     "collection": "videos",
     "reason": "No categories found: All generic exclusion rules were checked first. The content focuses on an open source annotation Figma toolkit that supports collaboration between designers, developers, and PMs, specifically improving design-to-development handoff in Figma. The tool is hosted on GitHub and is open source, but the content does not describe any Microsoft technology, product, service, or developer platform. There is no substantive mention of Azure, .NET, Visual Studio, Microsoft AI, GitHub Copilot, or any other relevant Microsoft development solution. While it covers topics relevant to general software development workflow and open source practices on GitHub, the content does not meet the ≥40% threshold for Microsoft technology focus, nor is any Microsoft stack element central to the solution. According to the multi-platform threshold, only content with Microsoft technologies as a core component qualifies. Therefore, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=O54iBAKoGJA",
+    "reason": "No categories found: No categories assigned because the content does not present technical, development, or implementation information about Microsoft technologies, tools, or products. The title and description ('Rubber Duck Thursday!', 'Let's chat about all things GitHub Universe and hang') indicate an informal or non-technical social/community event, lacking any clear technical depth, actionable insights, or educational value regarding Microsoft developer tools. No substantive technical detail is present per the generic exclusion rules.",
+    "timestamp": "2025-10-23 16:07:10 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=pH04UHCD7VE",
+    "reason": "No categories found: All provided fields, including title, description, type, tags, and author information, contain no technical implementation details or substantive technical content about Microsoft technologies. The content is limited to general career advice and non-specific tips for being a great cloud architect. Per the generic exclusion rules (Job-Related Content, Business Strategy and Executive Content, Workplace and Business Focus), content focused on career, personal improvement, or job/career advice is excluded, unless it specifically details engineering architecture, technical decision-making, or hands-on technology implementation. The provided text only offers quick general advice and points to various learning resources/playlists, and does not present any detailed technical walkthroughs or implementations relevant to the predefined categories.",
+    "timestamp": "2025-10-23 16:07:24 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/unlocking-smarter-search-how-to-use-azure-ai-search-azure-openai/m-p/4463827#M22281",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-10-23 16:07:50 +00:00",
+    "collection": "community"
   }
 ]

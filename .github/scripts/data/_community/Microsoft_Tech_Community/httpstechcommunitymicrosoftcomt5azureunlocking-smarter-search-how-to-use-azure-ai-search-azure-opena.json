@@ -1,0 +1,14 @@
+{
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "OutputDir": "_community",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "PubDate": "2025-10-23T16:05:46+00:00",
+  "Tags": [],
+  "FeedName": "Microsoft Tech Community",
+  "Title": "Unlocking Smarter Search How to Use Azure AI Search & Azure OpenAI Service Together",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/unlocking-smarter-search-how-to-use-azure-ai-search-azure-openai/m-p/4463827#M22281",
+  "Description": "In the era of large language models and AI-powered experiences, simply running a keyword search isn’t enough. Users expect conversational, context-aware responses, grounded in real data. That’s where combining Azure’s search infrastructure with generative AI becomes a game-changer.\n\nBy using Azure AI Search as the *retrieval layer* and Azure OpenAI Service as the *generation layer*, you can build applications that understand natural language, fetch relevant documents, and respond with rich, accurate, and contextual answers. In this blog post, we’ll walk through how to achieve that end-to-end, highlight best practices, and give you a blueprint to apply in your own environment.\n\n[https://dellenny.com/unlocking-smarter-search-how-to-use-azure-ai-search-azure-openai-service-together/](https://dellenny.com/unlocking-smarter-search-how-to-use-azure-ai-search-azure-openai-service-together/)",
+  "EnhancedContent": "In the era of large language models and AI-powered experiences, simply running a keyword search isn’t enough. Users expect conversational, context-aware responses, grounded in real data. That’s where combining Azure’s search infrastructure with generative AI becomes a game-changer.\n\nBy using Azure AI Search as the *retrieval layer* and Azure OpenAI Service as the *generation layer*, you can build applications that understand natural language, fetch relevant documents, and respond with rich, accurate, and contextual answers. In this blog post, we’ll walk through how to achieve that end-to-end, highlight best practices, and give you a blueprint to apply in your own environment.\n\n[https://dellenny.com/unlocking-smarter-search-how-to-use-azure-ai-search-azure-openai-service-together/](https://dellenny.com/unlocking-smarter-search-how-to-use-azure-ai-search-azure-openai-service-together/)",
+  "ProcessedDate": "2025-10-23 16:06:13",
+  "Author": "JohnNaguib"
+}
