@@ -7233,5 +7233,11 @@
     "collection": "posts",
     "reason": "No categories found: All content is focused on end-user setup and configuration of Windows 11, such as installing drivers, personalizing UI, privacy settings, and basic built-in security (Windows Defender). There is no technical implementation, programming, development, DevOps, AI, ML, or enterprise architecture content present. This fits under the generic exclusion rules for non-development Microsoft products (see Chapter 3: Non-Development Microsoft Products and Format/Scope Exclusions). Additionally, there is no coverage of any coding, development frameworks, Azure, or technical configuration targeting professional developers or consultants. As a result, no categories are assigned.",
     "canonical_url": "https://dellenny.com/setting-up-windows-11-for-the-first-time-15-things-you-should-do/"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-create-manage-local-vs-microsoft-account-windows-11/",
+    "timestamp": "2025-10-23 10:05:17 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: No categories assigned. The post focuses on end-user account management for Windows 11, covering the differences between local and Microsoft accounts, how to create and switch them, and best practices for privacy and security. It does not involve software development, coding, DevOps, AI, ML, Azure, or security architecture/implementation beyond general end-user recommendations. Although Microsoft accounts are mentioned, the context is consumer account setup and not technical/development topics. This matches the generic exclusion rule: Non-Development Microsoft Products (Windows OS usage, non-coding context)."
   }
 ]

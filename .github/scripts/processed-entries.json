@@ -13286,5 +13286,35 @@
     "collection": "posts",
     "reason": "Succesfully added: Assigned AI category because the post is about using Azure OpenAI Service and building Retrieval-Augmented Generation (RAG) workflows—this matches AI inclusion rules 1 and 4. Assigned Azure category as the solution is built on Azure AI Search and Azure OpenAI Service (Azure rule 1). No Coding or ML categories were added since the post focuses on architectural workflow, configuration, and best practices, not code or ML engineering from scratch. The Security tag is included as an aspect discussed in enterprise deployment, but the content focus does not warrant the Security category by itself. Exclusion rules do not apply; the content is technical, educational, and centrally about Microsoft technologies.",
     "canonical_url": "https://dellenny.com/unlocking-smarter-search-how-to-use-azure-ai-search-azure-openai-service-together/"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the article describes development and use of AI agents and automation, especially via Azure AI Foundry and the Microsoft AI Co-Innovation Lab (AI rule 1 and 5). Assigned Security category because the entire article is about cybersecurity tools, Microsoft Sentinel, Defender XDR, and improving managed detection and response (Security rules 1, 4, 5). Assigned Azure because platform integrations and AI agents are explicitly built with Azure AI services and Microsoft Sentinel/Defender are Azure-based (Azure rule 1 and 3). Coding and DevOps were not assigned as the article focuses on high-level platform capabilities and integrations, not code development or DevOps practices, and there is no evidence of ML/data science building from scratch required for ML category.",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/startups/blog/contraforce-democratizing-cybersecurity-for-the-frontline/",
+    "timestamp": "2025-10-23 14:04:56 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the article centers on the deployment and management of agentic AI within observability platforms, directly matching AI inclusion rules (use of AI agents, policy controls for AI). Assigned DevOps because the context is observability, automation, and operations within DevOps workflows—meeting DevOps inclusion rules (automation, monitoring, operational practices). Included Security because there is significant discussion of identity and access control, zero-trust, data privacy, and policy enforcement, qualifying under Security rules (identity management, cloud security, compliance). No Azure or Microsoft-specific services are central, so Azure, Coding, ML, and GitHub Copilot are not included.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/before-you-go-agentic-top-guardrails-to-safely-deploy-ai-agents-in-observability/",
+    "timestamp": "2025-10-23 14:05:28 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category because the article discusses the role of AI and large language models (LLMs) in log management, parsing, and incident response (AI inclusion rules 1, 4, 5). Assigned 'DevOps' as the content is squarely focused on observability, SRE workflows, and log processing as part of modern cloud native DevOps practices (DevOps inclusion rules 3, 5, 6, 7). No Microsoft-specific technology or product is central or substantially discussed (threshold not met for Azure, Coding, ML, or Security), so those categories were not included.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/opentelemetry-and-ai-are-unlocking-logs-as-the-essential-signal-for-why/",
+    "timestamp": "2025-10-23 14:05:52 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the article focuses extensively on AI-driven automation, AI-first architecture for telemetry, and the role of agentic AI agents (AI rule 1 and 4). Assigned DevOps because the discussion is centered on telemetry, observability, incident response workflow automation, and architectures relevant to DevOps practices (DevOps rules 3, 5, and 7). Did NOT assign Azure, ML, Coding, Security, or GitHub Copilot: no explicit tie to Microsoft platforms, explicit programming, data science/ML, security, or GitHub products. The text is technical, implementation-focused, and directly relevant to both AI and DevOps practitioners.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/the-agentic-ai-driven-future-of-telemetry/",
+    "timestamp": "2025-10-23 14:06:17 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'DevOps' category because the article addresses automation, process improvement, and DevSecOps practices in vulnerability remediation (DevOps inclusion rule 6, 9, and 11). 'Security' is included as the primary topic is managing software vulnerabilities, manual vs. automated remediation, and risk exposure (Security inclusion rules 1, 5, 6, and 8). No content supports 'Azure', 'AI', 'GitHub Copilot', 'Coding', or 'ML' categories. The article explains industry-agnostic organizational process and toolchain issues in a developer and security operations context, fitting DevOps and Security only.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/the-silent-technical-debt-why-manual-remediation-is-costing-you-more-than-you-think/",
+    "timestamp": "2025-10-23 14:06:39 +00:00"
   }
 ]
