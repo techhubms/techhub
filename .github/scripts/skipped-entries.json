@@ -7227,5 +7227,11 @@
     "timestamp": "2025-10-22 19:04:26 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=0Pf41YBedMk"
+  },
+  {
+    "timestamp": "2025-10-23 09:05:29 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: All content is focused on end-user setup and configuration of Windows 11, such as installing drivers, personalizing UI, privacy settings, and basic built-in security (Windows Defender). There is no technical implementation, programming, development, DevOps, AI, ML, or enterprise architecture content present. This fits under the generic exclusion rules for non-development Microsoft products (see Chapter 3: Non-Development Microsoft Products and Format/Scope Exclusions). Additionally, there is no coverage of any coding, development frameworks, Azure, or technical configuration targeting professional developers or consultants. As a result, no categories are assigned.",
+    "canonical_url": "https://dellenny.com/setting-up-windows-11-for-the-first-time-15-things-you-should-do/"
   }
 ]

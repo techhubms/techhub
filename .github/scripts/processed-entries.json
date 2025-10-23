@@ -13274,5 +13274,17 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=eobRfdy8tu4",
     "timestamp": "2025-10-23 08:05:34 +00:00"
+  },
+  {
+    "timestamp": "2025-10-23 09:05:09 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: The content focuses on advanced AI capabilities and orchestration using the Microsoft Agent Framework. Per AI inclusion rules (AI 1, 4, 5), it clearly addresses Microsoft AI products, workflow automation, and provides architectural deep dives. The coding category is warranted as it includes Python code and workflow programming patterns (Coding rule 2). Azure is included due to Azure OpenAI and Azure AI Foundry being presented as first-class inference providers (Azure rule 1). ML is not directly included, as the focus is on orchestration and architecture, not core data science or model training. Security and DevOps are not primary topics. All proposed categories are justified based on explicit technical content.",
+    "canonical_url": "https://devblogs.microsoft.com/semantic-kernel/unlocking-enterprise-ai-complexity-multi-agent-orchestration-with-the-microsoft-agent-framework/"
+  },
+  {
+    "timestamp": "2025-10-23 09:06:00 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned AI category because the post is about using Azure OpenAI Service and building Retrieval-Augmented Generation (RAG) workflows—this matches AI inclusion rules 1 and 4. Assigned Azure category as the solution is built on Azure AI Search and Azure OpenAI Service (Azure rule 1). No Coding or ML categories were added since the post focuses on architectural workflow, configuration, and best practices, not code or ML engineering from scratch. The Security tag is included as an aspect discussed in enterprise deployment, but the content focus does not warrant the Security category by itself. Exclusion rules do not apply; the content is technical, educational, and centrally about Microsoft technologies.",
+    "canonical_url": "https://dellenny.com/unlocking-smarter-search-how-to-use-azure-ai-search-azure-openai-service-together/"
   }
 ]
