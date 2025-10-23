@@ -1,0 +1,18 @@
+{
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=eobRfdy8tu4",
+  "Description": "Welcome to another episode of the #AzureEssentialsShow, in which Thomas Maurer and Clayton Siemens from #MicrosoftAzure dive into the world of multi-agent #AI orchestration. This conversation explores how specialized AI agents can collaborate to solve complex enterprise challenges, moving beyond simple information retrieval to real business impact through coordinated action and automation. From this video you will gain a practical understanding of agentic AI patterns and how they can transform enterprise workflows.\n\nFrom this episode you will learn: • The difference between large language models (LLMs) and small, specialized language models (SLMs) in agentic AI systems, and why specialization matters for enterprise use cases. • Key orchestration patterns for multi-agent systems, including sequential, concurrent, group chat, and hand-off approaches, with real-world examples of each. • How multi-agent orchestration can improve agility, scalability, and governance in enterprise automation, and when to choose these patterns over simpler solutions.\n\nSuggested next steps: • Review Microsoft Learn documentation on AI agent orchestration patterns for deeper technical guidance. • Explore Azure AI Foundry to get hands-on experience with multi-agent systems and see practical implementations • Subscribe to the Azure Essentials Show for future episodes and updates on enterprise AI innovations.\n\nResources • AI agent orchestration patterns https://learn.microsoft.com/azure/architecture/ai-ml/guide/ai-agent-design-patterns • Semantic Kernel Agent Orchestration https://learn.microsoft.com/semantic-kernel/frameworks/agent/agent-orchestration • Blog post: Agent Factory: The new era of agentic AI—common use cases and design patterns • Azure AI Foundry https://ai.azure.com • Explore essential resources! https://azure.com/AzureEssentials\n\nRelated episodes • Build Smarter Agents with Azure AI Search https://aka.ms/AzEssentials/226 • Watch more episodes of the Azure Essentials Show https://aka.ms/AzureEssentialsShow\n\nConnect • Thomas Maurer https://www.linkedin.com/in/thomasmaurer2 • Clayton Siemens https://www.linkedin.com/in/clayton-siemens-3514896\n\nChapters 0:00 Preview 0:16 Introduction 0:56 The what and the why 2:05 Shifting from Knowing to Doing 2:49 Setting up multi-agents 3:30 Teamwork 4:05 Unpacking multi-agent patterns 4:45 Sequential orchestration patterns 5:56 Concurrent orchestration patterns 7:00 Group chat and Handoff patterns 8:00 Recommended next steps",
+  "ProcessedDate": "2025-10-23 08:04:38",
+  "FeedName": "Microsoft Developer YouTube",
+  "PubDate": "2025-10-23T07:00:39+00:00",
+  "Title": "Optimize Complex Workflows Using Multi-Agent Patterns",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Tags": [
+    "AI",
+    "AzureEssentialsShow",
+    "MicrosoftAzure"
+  ],
+  "Author": "Microsoft Developer",
+  "EnhancedContent": null
+}

@@ -13268,5 +13268,11 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned AI category because the content is focused on deploying and integrating large language models and AI using Microsoft tools (AI category rule 1). Assigned Azure because Foundry Local and ONNX Runtime are positioned as Azure/Microsoft ecosystem technologies with substantial Azure alignment (Azure rule 1 and 3). Assigned Coding because the article covers SDK usage across Python, JavaScript/TypeScript, .NET, and Rust, and provides technical code examples, SDK integration, and developer implementation patterns (Coding rules 1, 2, and 5). ML was not assigned because the article is centered on production-ready AI deployment and developer integration with pre-trained models, not custom ML/data pipeline engineering from scratch. DevOps was not assigned because there is no detailed coverage of CI/CD, infrastructure automation, or operations-focused workflows as primary topic. Security was not included as the focus is on privacy and data sovereignty benefits, not security technologies or architecture implementation.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/transform-your-ai-applications-with-local-llm-deployment/ba-p/4462829"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the core focus is on agentic AI orchestration, the difference between LLMs and SLMs, practical agent orchestration, and related design patterns—all matching AI inclusion rules 1 and 5. Assigned Azure because Azure AI Foundry and Semantic Kernel (Microsoft technologies) are core tools discussed, with multiple Azure references (Azure rule 1, 3, 4). Coding category was not included as the main content is about orchestration strategies, not direct code-level development. No evidence of DevOps, ML, Security, or GitHub Copilot content.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=eobRfdy8tu4",
+    "timestamp": "2025-10-23 08:05:34 +00:00"
   }
 ]
