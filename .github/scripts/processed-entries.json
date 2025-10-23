@@ -13382,5 +13382,23 @@
     "canonical_url": "https://devops.com/how-devops-is-evolving-for-the-age-of-intelligent-automation/",
     "reason": "Succesfully added: Assigned AI category because the discussion centers on how AI is embedded in DevOps pipelines, with emphasis on responsible AI, automation, and governance (AI rules 1, 4, and 5). Assigned DevOps category because the entire post is about the evolution of DevOps practices in relation to AI, automation, and sustainable engineering culture (DevOps rules 3, 4, and 9). No other categories were added because while security and governance are discussed, the primary technical focus is on DevOps and AI practices, not on specific security technologies or coding implementations. There is no information specific to Microsoft technology in the content, so Azure, ML, Coding, or Security categories (as Microsoft-specific) do not apply.",
     "timestamp": "2025-10-23 19:06:40 +00:00"
+  },
+  {
+    "reason": "Succesfully added: The 'AI' category is assigned because the content focuses on an AI reasoning agent and discusses integration with large language models as well as AI-driven code analysis (AI rules 1 and 4). 'DevOps' is assigned due to extensive detailing of DevOps workflow automation, performance metrics (DORA), and overall DevOps productivity enhancements (DevOps rules 1, 3, 5, 9). There is no substantive focus on Azure, Coding, Security, ML, or GitHub Copilot specifically, nor are any of the generic exclusion rules triggered.",
+    "timestamp": "2025-10-23 20:04:59 +00:00",
+    "canonical_url": "https://devops.com/opsera-adds-ai-agent-capable-of-analyzing-quality-of-code-generated-by-ai-tools/",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned DevOps category because the core content discusses evolution of DevOps practices, CI/CD, and SDLC in the context of new metrics and workflows (DevOps rules 1, 3, 5). Assigned AI category since there is a substantive focus on integrating artificial intelligence in DevOps workflows, automation, and pipeline governance (AI rules 1, 4, 5). Did not assign other categories as there is no specific focus on Microsoft technologies, coding, ML engineering, Azure, or security technical implementation. Content meets quality and relevance standards (professional, technical focus, not marketing, not negative, not biographical).",
+    "timestamp": "2025-10-23 20:05:17 +00:00",
+    "canonical_url": "https://devops.com/the-new-metrics-of-devops-speed-trust-and-transparency/",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' category because the content is focused on SQL databases in Microsoft Fabric, a cloud service under Azure (Azure rule 1). Included 'ML' category because Microsoft Fabric is positioned as a data analytics and data science platform, and the discussion about performance monitoring features is relevant for data engineering/analytics (ML rule 1 and 4). Not assigned 'AI', 'Security', 'Coding', 'DevOps', or 'GitHub Copilot' categories because the focus is data platform management rather than application development, AI feature usage, or security implementation. The video offers technical databases insights and actionable monitoring guidance, meeting professional clarity and technical accuracy standards.",
+    "timestamp": "2025-10-23 20:05:42 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=UAIic-vzcac",
+    "collection": "videos"
   }
 ]
