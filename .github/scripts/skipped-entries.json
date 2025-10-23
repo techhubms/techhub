@@ -7275,5 +7275,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/rhel-in-place-upgrades-and-azure-update-manager/m-p/4463647#M22280",
     "timestamp": "2025-10-23 17:05:56 +00:00",
     "reason": "No categories found: No categories assigned. This content is primarily a help-seeking/question-only community post, asking for clarification and information about the technical reasons behind the disconnect between Azure Update Manager and RHEL in-place upgrades. According to the generic exclusion rules (Chapter 3: 'Question-Only Content'), content that is mainly asking questions or seeking information without substantive answers or concrete technical solutions should be excluded. The post lacks substantive technical analysis, implementation details, or step-by-step solutions. The main body consists of the user's questions and requests for input from others. Therefore, all categories are excluded."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2025/10/23/human-centered-ai/",
+    "collection": "news",
+    "reason": "No categories found: Content is excluded due to generic exclusion rules under 'Non-Development Microsoft Products.' The entire release covers 'Copilot' features oriented toward general productivity, health, collaboration, and end-user experience—across Edge, Windows, and personal devices. It details features like Groups, connectors to services, health and education use cases, memory/personalization, and a visual agent, all positioned for consumer and productivity audiences. There is no discussion of developer tooling, APIs, code, integration for custom apps, or technical implementation relevant to Microsoft consultants, developers, or technical architects. Content about consumer-facing Copilot, Microsoft 365 Copilot, and general product experience is explicitly excluded by the Copilot Product Distinction and Non-Development Products rules (see Chapter 3).",
+    "timestamp": "2025-10-23 18:05:11 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/jFKgZGAP5-4",
+    "collection": "videos",
+    "reason": "No categories found: All categories excluded due to lack of content: the 'content' field is null, and the provided description centers on a general security wake-up call regarding AI ignorance, without specific technical details or actionable guidance relevant to Microsoft technologies. The focus is on a general threat awareness message within the open source and developer community, not on technical implementation, development methodology, or any specific Microsoft technology or service. According to Generic Exclusion Rules, if there is insufficient substantive content to analyze, no categories should be assigned.",
+    "timestamp": "2025-10-23 18:06:22 +00:00"
   }
 ]
