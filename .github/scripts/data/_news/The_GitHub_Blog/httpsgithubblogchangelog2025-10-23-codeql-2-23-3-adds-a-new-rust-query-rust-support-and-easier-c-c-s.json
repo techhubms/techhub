@@ -1,0 +1,17 @@
+{
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Tags": [
+    "application security",
+    "Improvement"
+  ],
+  "Author": "Allison",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "EnhancedContent": "CodeQL is the static analysis engine behind [GitHub code scanning](https://docs.github.com/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql), which finds and remediates security issues in your code. We’ve recently released [CodeQL 2.23.3](https://codeql.github.com/docs/codeql-overview/codeql-changelog/codeql-cli-2.23.3/), which makes Rust analysis and C/C++ `build mode none` generally available and introduces a new Rust security query alongside other improvements that refine the accuracy of code scanning results.\n\n## Language and framework support\n\n- **Rust**: Rust analysis is now generally available.\n- **C/C++**: `build-mode: none`\nis now generally available, letting you scan C/C++ projects even when a full build isn’t practical.\n\n## Query changes\n\n- **Rust**: Added `rust/insecure-cookie`\n, which flags cookies created without the `Secure` attribute, helping prevent transmission over non-TLS channels.\n- **Go**:\n- `go/request-forgery`\nno longer alerts when user input is a simple type (e.g., a number or boolean), reducing false positives.\n- `go/unvalidated-url-redirection`\nnow treats a `url.URL` struct as tainted when its `Host` field is initialized from untrusted data during struct construction (e.g., `&amp;url.URL{Host: untrusted}` ), improving coverage.\n- `go/unvalidated-url-redirection`\nand `go/request-forgery` shared safe URL modeling was corrected, which may surface additional valid alerts in both queries.\n- **Java/Kotlin**: Fields of objects stored in source arrays (e.g., `MyPojo[]`\n) are now considered tainted when the array itself is a source, increasing data-flow coverage for object field sinks.\n\nFor a full list of changes, please refer to the complete [changelog for version 2.23.3](https://codeql.github.com/docs/codeql-overview/codeql-changelog/codeql-cli-2.23.3/). Every new version of CodeQL is automatically deployed to users of GitHub code scanning on github.com. The new functionality in CodeQL 2.23.3 will also be included in a future GitHub Enterprise Server (GHES) release. If you use an older version of GHES, you can [manually upgrade your CodeQL version](https://docs.github.com/enterprise-server@3.17/admin/managing-code-security/managing-github-advanced-security-for-your-enterprise/configuring-code-scanning-for-your-appliance#configuring-codeql-analysis-on-a-server-without-internet-access).",
+  "Link": "https://github.blog/changelog/2025-10-23-codeql-2-23-3-adds-a-new-rust-query-rust-support-and-easier-c-c-scanning",
+  "FeedName": "The GitHub Blog",
+  "PubDate": "2025-10-23T18:47:31+00:00",
+  "ProcessedDate": "2025-10-23 19:03:39",
+  "Description": "CodeQL is the static analysis engine behind GitHub code scanning, which finds and remediates security issues in your code. We’ve recently released CodeQL 2.23.3, which makes Rust analysis and C/C++…\n\nThe post [CodeQL 2.23.3 adds a new Rust query, Rust support, and easier C/C++ scanning](https://github.blog/changelog/2025-10-23-codeql-2-23-3-adds-a-new-rust-query-rust-support-and-easier-c-c-scanning) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "Title": "CodeQL 2.23.3 adds a new Rust query, Rust support, and easier C/C++ scanning"
+}

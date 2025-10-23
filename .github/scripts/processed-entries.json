@@ -13352,5 +13352,35 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned Azure category because the content is centered on Azure Storage Mover and Azure Blob Storage, fulfilling Azure rule 1 and 4. Assigned AI category because the migration solution enables immediate use of Azure's analytics and AI/ML capabilities for transferred data, matching AI rule 5. Did not assign ML category as the content focuses on migration enabling AI workloads, not on the development or engineering of data science/ML pipelines directly. Other categories like Coding, DevOps, Security, and GitHub Copilot are not applicable as the content does not focus on programming, DevOps pipelines, security implementation, or GitHub Copilot usage. The tags reflect a strong technical focus on Azure migration, cloud storage, and AI enablement.",
     "timestamp": "2025-10-23 18:05:58 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/the-road-to-better-completions-building-a-faster-smarter-github-copilot-with-a-new-custom-model/",
+    "reason": "Succesfully added: Assigned 'AI' because the content discusses advances in AI-enabled code completion, training and evaluation of large language models, and reinforcement learning (AI rule 1 and 4). Assigned 'GitHub Copilot' because the article is focused specifically on Copilot features, model enhancements, and practical outcomes for developers (GitHub Copilot rules 1–3). Did not assign other categories, as the article does not center on coding practices outside Copilot usage, DevOps workflows, or Microsoft cloud platform specifics. No generic exclusion rules apply—the article is technical, AI/developer-focused, and not about business productivity Copilots.",
+    "timestamp": "2025-10-23 19:05:04 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-10-23-codeql-2-23-3-adds-a-new-rust-query-rust-support-and-easier-c-c-scanning",
+    "reason": "Succesfully added: Assigned Security category because CodeQL is a static analysis tool focused on identifying and remediating code security issues, which matches the Security inclusion rules (Security rule 2). Added DevOps because CodeQL is integrated with GitHub code scanning workflows and is deployed as part of CI/CD pipelines, meeting DevOps rule 5 and 6. Azure, AI, GitHub Copilot, ML, and Coding categories were not assigned because the content does not focus on Azure services, AI/ML development, Copilot, or in-depth software coding instruction; the emphasis is on security automation and CI/CD integration, not direct coding tutorials.",
+    "timestamp": "2025-10-23 19:05:26 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-10-23-selected-claude-openai-and-gemini-copilot-models-are-now-deprecated",
+    "reason": "Succesfully added: Assigned the AI category because the content discusses the deprecation and replacement of AI models within GitHub Copilot (AI rule 1). The GitHub Copilot category is also applied, as this exclusively concerns model management and administration for Copilot's developer tool (GitHub Copilot inclusion rules 1–3). No other categories fit, as there is no direct coding, DevOps, security, Azure, or ML content. The content is news, not biographical, promotional, excessively negative, or business/productivity-only, so no generic exclusion rules apply.",
+    "timestamp": "2025-10-23 19:05:43 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/analysis-identifies-10-ai-coding-tool-behaviors-that-ignore-best-software-engineering-practices/",
+    "reason": "Succesfully added: Assigned the AI category due to the article's focus on behaviors of artificial intelligence coding tools (AI rule 1, 4). DevOps is included because the content repeatedly addresses DevOps teams, coding workflows, and security integration (DevOps rules 3, 5, 6). Coding is relevant as the piece analyzes code quality, software engineering practices, and discusses impacts on maintainability and design (Coding rule 4). Security is assigned because the report and analysis focus on potential security vulnerabilities and the importance of integrating security into development processes (Security rules 2, 4, 6). No specific Microsoft products are discussed, so Azure, ML, and GitHub Copilot categories do not apply.",
+    "timestamp": "2025-10-23 19:06:09 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/how-devops-is-evolving-for-the-age-of-intelligent-automation/",
+    "reason": "Succesfully added: Assigned AI category because the discussion centers on how AI is embedded in DevOps pipelines, with emphasis on responsible AI, automation, and governance (AI rules 1, 4, and 5). Assigned DevOps category because the entire post is about the evolution of DevOps practices in relation to AI, automation, and sustainable engineering culture (DevOps rules 3, 4, and 9). No other categories were added because while security and governance are discussed, the primary technical focus is on DevOps and AI practices, not on specific security technologies or coding implementations. There is no information specific to Microsoft technology in the content, so Azure, ML, Coding, or Security categories (as Microsoft-specific) do not apply.",
+    "timestamp": "2025-10-23 19:06:40 +00:00"
   }
 ]

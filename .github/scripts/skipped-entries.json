@@ -7287,5 +7287,11 @@
     "collection": "videos",
     "reason": "No categories found: All categories excluded due to lack of content: the 'content' field is null, and the provided description centers on a general security wake-up call regarding AI ignorance, without specific technical details or actionable guidance relevant to Microsoft technologies. The focus is on a general threat awareness message within the open source and developer community, not on technical implementation, development methodology, or any specific Microsoft technology or service. According to Generic Exclusion Rules, if there is insufficient substantive content to analyze, no categories should be assigned.",
     "timestamp": "2025-10-23 18:06:22 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/harness-adds-vibecoding-tool-to-migrate-databases-within-devops-workflows/",
+    "reason": "No categories found: No categories were assigned because the content does not substantially mention or focus on any Microsoft technologies or platforms. The article revolves around the Harness platform's AI-powered vibecoding tool for automating database migrations within DevOps workflows. There are no references to Azure, Microsoft AI, .NET, Power Platform, or any other Microsoft product or developer tool. According to the multi-platform and centrality rules, Microsoft technologies must comprise at least 40% of the substantive content or be central to the solution; here, Harness is the primary and sole platform discussed.",
+    "timestamp": "2025-10-23 19:06:22 +00:00"
   }
 ]
