@@ -7263,5 +7263,17 @@
     "reason": "Insufficient content length",
     "timestamp": "2025-10-23 16:07:50 +00:00",
     "collection": "community"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blogs.windows.com/msedgedev/2025/10/23/meet-copilot-mode-in-edge-your-ai-browser/",
+    "timestamp": "2025-10-23 17:05:25 +00:00",
+    "reason": "No categories found: All categories are excluded due to the generic exclusion rule for non-development Microsoft products. The content is about the new Copilot Mode in Microsoft Edge, focusing on browser features, personal productivity, and browsing enhancements (such as tab management, voice commands, and user privacy). It does not provide technical implementation details, coding/development topics, or focus on Microsoft developer tools, APIs, or frameworks. Additionally, Copilot in Edge is a business/consumer productivity tool and not a developer-focused Copilot product such as GitHub Copilot or Copilot Studio. Therefore, per the 'Non-Development Microsoft Products' and 'Copilot Product Distinction' exclusion rules, no categories apply."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/rhel-in-place-upgrades-and-azure-update-manager/m-p/4463647#M22280",
+    "timestamp": "2025-10-23 17:05:56 +00:00",
+    "reason": "No categories found: No categories assigned. This content is primarily a help-seeking/question-only community post, asking for clarification and information about the technical reasons behind the disconnect between Azure Update Manager and RHEL in-place upgrades. According to the generic exclusion rules (Chapter 3: 'Question-Only Content'), content that is mainly asking questions or seeking information without substantive answers or concrete technical solutions should be excluded. The post lacks substantive technical analysis, implementation details, or step-by-step solutions. The main body consists of the user's questions and requests for input from others. Therefore, all categories are excluded."
   }
 ]

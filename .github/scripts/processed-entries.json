@@ -13334,5 +13334,11 @@
     "reason": "Succesfully added: Assigned Azure category because the content is centrally about Azure Local and its deployment/architecture (Azure category rule 1 and 4). Assigned DevOps because it discusses process and assessment for operational maturity, reliability, and workflow improvements (DevOps category rules 3, 4, 5, and 7). Security is included since the Well-Architected Framework and the assessment deeply incorporate security principles (Security category rules 2 and 9). No Coding, AI, ML, or GitHub Copilot categories were added as the article does not cover programming, AI model usage, custom ML workloads, or Copilot features.",
     "timestamp": "2025-10-23 16:07:50 +00:00",
     "collection": "community"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/upgrading-to-microsoft-agent-framework-in-your-dotnet-ai-chat-app/",
+    "timestamp": "2025-10-23 17:05:05 +00:00",
+    "reason": "Succesfully added: The content is a technical step-by-step guide focused on upgrading a .NET AI chat application to use the Microsoft Agent Framework. It centers on Microsoft AI technologies (Azure OpenAI, Agent Framework, and .NET 9), fulfilling the AI and Azure category rules (AI rule 1; Azure rule 1). The many C# code examples, use of .NET libraries, dependency injection, and Blazor UI also trigger the Coding category (Coding rules 1, 2, 4). ML is not included as the content is about integrating and orchestrating AI tools using platform services, not about ML engineering or data science pipelines. Security and DevOps categories do not apply, as the post does not discuss security concepts, CI/CD, or operational DevOps practices. Tags were taken from the direct product, language, tool, and architecture terminology present in the text, without generic or non-technical terms."
   }
 ]
