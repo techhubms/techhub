@@ -13226,5 +13226,23 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/securely-accessing-on-premises-data-with-fabric-data-engineering-workloads/",
     "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric is a core Azure-based Microsoft service, and the content addresses its integration and networking features (Azure rule 1, 4, 5). Assigned 'ML' because the focus is on Fabric Data Engineering workloads and Spark compute for advanced analytics, which falls under ML/data engineering per the guidelines (ML rules 1, 2, 4, 5). Assigned 'Security' because private connectivity, approval workflows, and compliance are a major focus, with features like Managed Private Endpoints, admin approvals, and FQDN allowlisting (Security rules 1, 3, 4, 7, 9). Not assigned 'AI' because there is no substantive mention of AI or prebuilt AI services; not assigned 'Coding' due to the content focusing on configuration, networking, and data engineering APIs rather than code structure or programming patterns. DevOps not assigned as the main thrust is secure data connectivity and not CI/CD or deployment tooling.",
     "timestamp": "2025-10-22 22:04:11 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=mwwAz0F4r1E",
+    "timestamp": "2025-10-23 00:09:45 +00:00",
+    "reason": "Succesfully added: Assigned AI category based on significant focus on building agentic AI systems with Semantic Kernel and Small Language Models (AI rules 1, 3, 4). Assigned Coding category as the session covers .NET workflows, C# examples, and practical development guidance (Coding rules 1 and 4). Did not assign ML category, as the emphasis is on integrating SLMs, not custom model development or data science engineering. No generic exclusion rules applied, as the content is technical, substantially Microsoft-focused, and not a sales pitch or biographical piece.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/QCHxTtHmtkU",
+    "timestamp": "2025-10-23 00:10:04 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the Microsoft Agent Framework is for intelligent automation and AI agent orchestration (AI category rule 1 and 4). 'Azure' is included as the framework's automation and deployment are Azure-centric (Azure category rule 1 and 4). 'Coding' qualifies due to developer-centric workflow creation, type-safe architecture, and hands-on demos (Coding rules 1, 2, and 4). All exclusion rules were checked—content is technical, not biographical, not a sales pitch, not negative, and not business/productivity-focused. The language is English and the video targets developers with practical implementation.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=KQ09sMHeFQY",
+    "timestamp": "2025-10-23 00:10:21 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content centers on building intelligent automation with AI agents using the Microsoft Agent Framework (AI rule 1, 4). Assigned Azure since the framework and related workflows are part of Microsoft's Azure ecosystem (Azure rule 1). Assigned Coding category due to the focus on developer implementation, type-safe architecture, and workflow construction (Coding rules 1 and 4). The content is technical, covers practical usage, and demonstrates integration and orchestration—matching all relevant inclusion criteria. No exclusion rules from Chapter 3 apply; content is sufficiently technical, not biographical, and centers around developer workflows.",
+    "collection": "videos"
   }
 ]
