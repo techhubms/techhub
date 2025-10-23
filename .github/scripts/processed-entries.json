@@ -13400,5 +13400,11 @@
     "timestamp": "2025-10-23 20:05:42 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=UAIic-vzcac",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-23 21:04:42 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-10-23-managing-roles-and-governance-via-enterprise-teams-is-in-public-preview",
+    "reason": "Succesfully added: Categories assigned as follows: 'DevOps' because the content centers on management, governance, permissions, and automation capabilities in GitHub Enterprise, which maps directly to DevOps rule 2 (GitHub DevOps Tools), rule 3 (Team Collaboration/Organization), rule 4 (Development Methodologies), and general platform management. 'Security' is added due to the new Enterprise Security Manager role, centralization of alert and setting management, as well as code and secret scanning features (Security rules 1, 2, and 5). Not assigned 'AI' or 'GitHub Copilot' as the focus is on management of Copilot licenses, not Copilot usage, implementation, or technical details. 'Azure', 'Coding', and 'ML' categories do not apply as there are no significant references to Azure services, code, or data science/ML content."
   }
 ]

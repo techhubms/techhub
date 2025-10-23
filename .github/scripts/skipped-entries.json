@@ -7293,5 +7293,11 @@
     "canonical_url": "https://devops.com/harness-adds-vibecoding-tool-to-migrate-databases-within-devops-workflows/",
     "reason": "No categories found: No categories were assigned because the content does not substantially mention or focus on any Microsoft technologies or platforms. The article revolves around the Harness platform's AI-powered vibecoding tool for automating database migrations within DevOps workflows. There are no references to Azure, Microsoft AI, .NET, Power Platform, or any other Microsoft product or developer tool. According to the multi-platform and centrality rules, Microsoft technologies must comprise at least 40% of the substantive content or be central to the solution; here, Harness is the primary and sole platform discussed.",
     "timestamp": "2025-10-23 19:06:22 +00:00"
+  },
+  {
+    "timestamp": "2025-10-23 21:04:57 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure/unable-to-access-internet-from-azure-devops-server-2022-self/m-p/4463896#M314",
+    "reason": "Insufficient content length"
   }
 ]

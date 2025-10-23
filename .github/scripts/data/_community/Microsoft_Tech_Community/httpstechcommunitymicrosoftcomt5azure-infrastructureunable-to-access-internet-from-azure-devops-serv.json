@@ -1,0 +1,14 @@
+{
+  "Title": "Unable to Access Internet from Azure DevOps Server 2022 Self-Hosted Agent Behind Proxy",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-infrastructure/unable-to-access-internet-from-azure-devops-server-2022-self/m-p/4463896#M314",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "OutputDir": "_community",
+  "Description": "I am running **Azure DevOps Server 2022** in an environment that uses a proxy to access the internet. Multiple projects depend on various Node packages. While I can successfully download these packages through a browser using the configured proxy, the issue occurs when running pipelines on a **self-hosted agent**.\n\nThe agent installation completes successfully, but the pipeline fails during execution, seemingly due to lack of internet access.\n\nIs there a way to configure the proxy settings specifically for the **self-hosted agent** so that it can access the internet during pipeline runs?",
+  "Author": "Sohaib555",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "PubDate": "2025-10-23T20:12:48+00:00",
+  "EnhancedContent": "I am running **Azure DevOps Server 2022** in an environment that uses a proxy to access the internet. Multiple projects depend on various Node packages. While I can successfully download these packages through a browser using the configured proxy, the issue occurs when running pipelines on a **self-hosted agent**.\n\nThe agent installation completes successfully, but the pipeline fails during execution, seemingly due to lack of internet access.\n\nIs there a way to configure the proxy settings specifically for the **self-hosted agent** so that it can access the internet during pipeline runs?",
+  "Tags": [],
+  "ProcessedDate": "2025-10-23 21:04:05",
+  "FeedName": "Microsoft Tech Community"
+}
