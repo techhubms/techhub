@@ -13460,5 +13460,17 @@
     "timestamp": "2025-10-24 17:05:52 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-10-23-organization-custom-properties-are-now-available-in-public-preview",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/F8CFwNnr10s",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' category because the presentation discusses agents that enhance developer workflows with advanced AI-powered capabilities (AI rules 1 and 5). Assigned 'Coding' because these agents are designed for developers to improve software development tasks and workflows (Coding rule 4). Did not assign 'DevOps' as the focus is on developer agents, not CI/CD or team methodologies, and no direct reference to Azure or ML was found.",
+    "timestamp": "2025-10-24 18:05:16 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=2A7gO9Tf-Vg",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the AI category because the content discusses agents for developers that utilize AI, specifically mentioning automation of developer tasks, issue resolution, and integration with development tooling (AI rule 1 and 5). There is no evidence of explicit coding tutorials or platform implementation that would justify Coding, DevOps, Azure, ML, or Security categories. The SRE Agent reference points to enhanced developer productivity through AI-driven solutions, not general business productivity, so it does not trigger a generic exclusion.",
+    "timestamp": "2025-10-24 18:05:34 +00:00"
   }
 ]
