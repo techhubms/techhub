@@ -7317,5 +7317,41 @@
     "collection": "news",
     "canonical_url": "https://www.linkedin.com/posts/satyanadella_withgroups-copilot-goes-multiplayer-you-activity-7387173395374825472-QpyC",
     "reason": "No categories found: Content excluded due to generic exclusion rule: The core content discusses 'Copilot Groups' for real-time collaboration in a business and productivity context, specifically referencing Microsoft 365 Copilot and collaboration features for document co-creation, brainstorming, and planning. According to the workflow (Chapter 3: Generic Exclusion Rules and the Copilot Product Distinction), Microsoft 365 Copilot and other business productivity uses of Copilot are to be excluded as non-development Microsoft 365 products. The technical content threshold for developer-focused AI, Coding, or other included topics is not met. This is a high-level announcement about productivity features, not software development, coding, or technical architecture. No technology categories apply."
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/emea/2025/10/the-adecco-group-launches-free-global-ai-learning-initiative-for-jobseekers-in-collaboration-with-microsoft/",
+    "collection": "news",
+    "timestamp": "2025-10-24 16:07:31 +00:00",
+    "reason": "No categories found: Excluded all categories because the content focuses on a global AI learning initiative for jobseekers, which is a business strategy/corporate social responsibility announcement rather than hands-on technical content or implementation details. It does not cover Microsoft technology usage, coding, AI development, Azure, or any of the technical subjects required by the inclusion rules in Chapters 2 and 4. This news item is aimed at democratizing AI skills for general workforce development and does not target a developer or technical practitioner audience. Therefore, by the business strategy, non-development Microsoft products, and workplace focus exclusions specified in Chapter 3, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://dellenny.com/architecture-vs-design-key-differences-explained/",
+    "collection": "posts",
+    "timestamp": "2025-10-24 16:08:36 +00:00",
+    "reason": "No categories found: No categories assigned because the content focuses on comparing the concepts of architecture and design in both general and software contexts, but does not provide actionable technical information related to specific Microsoft technologies, developer tools, or coding practices. There are no references to Microsoft products, development methodologies, or implementation details tied to the target categories (AI, GitHub Copilot, Coding, DevOps, Azure, ML, Security). The post is high-level, conceptual, and does not discuss technology implementation or architecture in a Microsoft ecosystem; therefore, none of the inclusion rules are met."
+  },
+  {
+    "canonical_url": "https://dellenny.com/the-role-of-a-software-architect-in-modern-teams/",
+    "collection": "posts",
+    "timestamp": "2025-10-24 16:08:48 +00:00",
+    "reason": "No categories found: All category inclusion rules require substantial, directly relevant technical content about Microsoft technologies or developer tools. This content discusses the software architect role in general terms, focusing on team dynamics, architectural principles, and cross-functional responsibilities. There is no mention of Microsoft technologies, products, or services, nor any concrete discussion of developer tooling, coding with Microsoft frameworks, DevOps with Microsoft platforms, or AI/ML with Microsoft solutions. The subject matter is industry-agnostic and high-level, centered on organizational roles and skills rather than technical implementation. According to the generic exclusion rules, high-level business strategy, organizational topics, and management/culture guidance—even if for technical teams—are excluded unless they focus specifically on technical leadership with substantial Microsoft implementation details, which this post does not contain."
+  },
+  {
+    "canonical_url": "https://dellenny.com/what-is-software-architecture-a-practical-definition/",
+    "collection": "posts",
+    "timestamp": "2025-10-24 16:09:00 +00:00",
+    "reason": "No categories found: No categories assigned because the content is a general explanation of software architecture concepts with no reference to Microsoft technologies, products, or developer tools. The post does not discuss or demonstrate the use of Microsoft platforms (e.g., Azure, .NET), coding practices with Microsoft tech, or any specific solution development using Microsoft tools. It provides conceptual guidance rather than hands-on, product-centric instruction relevant to the predefined categories."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/g7nnWfyjKHY",
+    "collection": "videos",
+    "timestamp": "2025-10-24 16:09:43 +00:00",
+    "reason": "No categories found: No categories assigned because the content is focused on general programming language comparison (Rust vs C/C++), memory safety, and software security benefits but does not discuss the use of Rust with Microsoft platforms, Azure, or any specific Microsoft developer technologies. It does not cover category inclusion areas such as AI, Azure, DevOps, ML, Coding (in Microsoft's context), or Security (within Microsoft ecosystem), per Chapter 4 category inclusion rules. Content remains general and educational about Rust's value proposition in systems programming."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=FjCnecfUh74",
+    "collection": "videos",
+    "timestamp": "2025-10-24 16:09:58 +00:00",
+    "reason": "No categories found: No categories were assigned. The content introduces Rust, focusing on programming language theory and memory safety, but does not discuss Microsoft-specific technologies, services, frameworks, or show development with Microsoft platforms. There is no mention of .NET, Azure, DevOps, Security, AI, or ML topics, and Rust on its own (without clear Microsoft integration) does not qualify for Coding or any other category per workflow guidelines."
   }
 ]

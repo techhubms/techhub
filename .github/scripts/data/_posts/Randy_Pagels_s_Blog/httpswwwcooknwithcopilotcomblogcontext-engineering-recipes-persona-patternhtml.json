@@ -1,0 +1,14 @@
+{
+  "FeedName": "Randy Pagels's Blog",
+  "Link": "https://www.cooknwithcopilot.com/blog/context-engineering-recipes-persona-pattern.html",
+  "Description": "Guide Copilot with a clear role, switch personas to change tone and focus, and get sharper answers.",
+  "OutputDir": "_posts",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "Tags": [],
+  "Title": "Context Engineering Recipes • The Persona Pattern",
+  "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
+  "PubDate": "2025-10-24T00:00:00+00:00",
+  "ProcessedDate": "2025-10-24 16:04:42",
+  "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Context Engineering Recipes • The Persona Pattern\n\n*Posted on Oct 24, 2025*\n\nUsage\n\nThese short, practical patterns show how you can shape GitHub Copilot’s responses by adjusting the context you provide.\n\nEach “recipe” helps Copilot think, reason, and respond more effectively inside Chat, Edit Mode, or Agent Mode.\n\nToday’s recipe, the Persona Pattern, a simple way to give Copilot a role or perspective so its answers feel more relevant, specialized, and consistent.\n\nProTip\n\n**Set the Scene with a Role**\n\nThe Persona Pattern assigns GitHub Copilot an identity or area of expertise. By doing so, you influence tone, vocabulary, and problem solving approach, so Copilot answers like the right kind of expert for the job.\n\nTry These Approaches\n\n**1️⃣ Developer Persona**\n\nGive Copilot a developer mindset.\n\n`Act as a senior JavaScript developer. Refactor this function for readability and performance.`\n\n*Best for:* Cleanups, modernizing syntax, and improving code quality.\n\n**2️⃣ Reviewer Persona**\n\nHave Copilot take the role of a peer reviewer.\n\n`Act as a code reviewer. Check this function for edge cases and maintainability.`\n\n*Best for:* Catching potential issues before review.\n\n**3️⃣ Tester Persona**\n\nPrompt Copilot to think like a tester.\n\n`Act as a QA engineer. Suggest Playwright tests to verify the login flow.`\n\n*Best for:* Generating test coverage quickly and spotting missing cases.\n\n**4️⃣ Documentation Persona**\n\nUse this role when you need explanations or teaching examples.\n\n`Act as a technical writer. Explain how this API method works with example usage.`\n\n*Best for:* Documentation, onboarding, and training material.\n\nQuick Tip\n\nIf Copilot’s tone or answers start feeling repetitive, switch personas.\n\nA security analyst sees your code differently than a performance engineer, and those shifts can change everything.\n\nQuick Takeaway\n\nThe Persona Pattern is your way to guide GitHub Copilot to think from the right point of view.\n\nThe clearer the role, the sharper the response."
+}

@@ -13430,5 +13430,29 @@
     "reason": "Succesfully added: Assigned only the 'Azure' category because the content is a weekly news update focused entirely on technical changes and feature rollouts across various Azure services. While coding, DevOps, ML, AI, and Security are all mentioned indirectly (such as AKS upgrade, Storage Mover, PostgreSQL scaling, and gpt-4o features), the video's scope is broad Azure news for practitioners rather than an implementation, code tutorial, or engineering deep-dive for those other categories. No generic exclusion rules apply; the video clearly serves Azure architects, developers, and IT professionals with up-to-date technical information.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=I2wFjDrZAPo"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/29208/",
+    "collection": "news",
+    "timestamp": "2025-10-24 16:07:18 +00:00",
+    "reason": "Succesfully added: Categories assigned: Azure, ML, DevOps, and Coding. 'Azure' is included because the entire content centers on Microsoft Fabric, built on Azure and encompassing data services and platform features (Azure rule 1). 'ML' is included due to tutorials on clustering (KMeans, DBSCAN, UMAP), Fabric Data Agents, and real-time analytics, as well as Power BI data engineering and science (ML rules 1, 2, 4). 'DevOps' is included because several articles discuss deployment pipelines, workspace strategies, and Git integration (DevOps rules 1, 5, 6). 'Coding' is included for in-depth coverage of DAX UDFs, automating security with notebooks and APIs, and general fabric-related development (Coding rules 1 and 4). AI was not directly assigned, as custom model training is not featured, but Power BI Copilot is mentioned in a supporting rather than technical integration sense; the focus is on ML/data engineering within Fabric rather than direct AI service usage. Content qualifies on technical depth and relevance. Generic exclusion rules do not apply because all posts are technical, multi-author, English, non-biographical, educational, and Microsoft technology-focused."
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/emea/features/tapping-into-africas-230-million-ai-powered-jobs-opportunity/",
+    "collection": "news",
+    "timestamp": "2025-10-24 16:07:52 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the content centers on AI skilling, digital transformation, and Microsoft’s pivotal role in building AI capacity across Africa—all aligning with AI inclusion Rule 1 and 4. Despite the presence of Microsoft, the article does not provide technical details or in-depth coverage of Azure, Coding, ML, Security, or DevOps, so those categories were not assigned. The article meets quality standards and is not subject to any generic exclusion rules."
+  },
+  {
+    "canonical_url": "https://github.blog/ai-and-ml/generative-ai/how-to-find-install-and-manage-mcp-servers-with-the-github-mcp-registry/",
+    "collection": "news",
+    "timestamp": "2025-10-24 16:08:19 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the content revolves around orchestrating tool access for AI agents (e.g. Copilot) and ties directly to AI-driven development workflows (AI rules 1, 4, 5). 'Coding' is included due to the technical depth on publishing, configuring, and leveraging servers in developer environments (Coding rule 4 and 5). 'DevOps' applies because of detailed sections on automation via GitHub Actions, workflow setups, infrastructure for publishing, and governance for deployments (DevOps rules 2, 5, 6, 11). Did not include 'Azure', 'ML', 'Security', or 'GitHub Copilot' categories since Azure and ML are not directly central, Security is discussed only as a governance/allow-list best-practice (not core security architecture), and GitHub Copilot is referenced as an example—not the core focus. No exclusion rules applied, as the content is technical, quality, and development-focused per the workflow."
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/context-engineering-recipes-persona-pattern.html",
+    "collection": "posts",
+    "timestamp": "2025-10-24 16:09:21 +00:00",
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories. The content sits squarely within prompt engineering for GitHub Copilot (AI rule 2, GitHub Copilot rules 1–4), showing developers how to influence Copilot's responses. All examples and strategies focus on Copilot usage (not business productivity Copilots), hence other categories such as Coding or DevOps do not apply, as the article doesn't directly involve programming implementation or Microsoft infrastructure. The content is technical, actionable, and centers on practical developer tooling."
   }
 ]
