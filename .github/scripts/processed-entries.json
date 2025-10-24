@@ -13424,5 +13424,11 @@
     "timestamp": "2025-10-24 07:06:04 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-for-vs-code-october-update/ba-p/4463365"
+  },
+  {
+    "timestamp": "2025-10-24 15:05:04 +00:00",
+    "reason": "Succesfully added: Assigned only the 'Azure' category because the content is a weekly news update focused entirely on technical changes and feature rollouts across various Azure services. While coding, DevOps, ML, AI, and Security are all mentioned indirectly (such as AKS upgrade, Storage Mover, PostgreSQL scaling, and gpt-4o features), the video's scope is broad Azure news for practitioners rather than an implementation, code tutorial, or engineering deep-dive for those other categories. No generic exclusion rules apply; the video clearly serves Azure architects, developers, and IT professionals with up-to-date technical information.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=I2wFjDrZAPo"
   }
 ]
