@@ -7377,5 +7377,17 @@
     "collection": "posts",
     "canonical_url": "https://devops.com/bmc-brings-opentelemetry-to-mainframes-running-z-os/",
     "reason": "No categories found: No categories assigned. Despite the article discussing OpenTelemetry, observability, DevOps practices, and mainframe integration, it does not feature any Microsoft technologies, platforms, or services. There is no mention of Azure, GitHub, .NET, Entra ID, Power Platform, Microsoft security products, or related tooling. The article focuses exclusively on BMC, OpenTelemetry, and general industry perspectives, without substantial or central Microsoft technology content. Per the multi-platform content threshold and inclusion rules, Microsoft technologies must represent at least 40% of substantive content or be central, which is not the case here."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-10-24 21:04:13 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/luDhaKuzv-M",
+    "reason": "No categories found: Content excluded due to generic exclusion rules—this is a promotional announcement for attending an event (GitHub Universe) virtually. The post lacks substantive technical content and educational value, focusing primarily on instructions for signing up, links to social platforms, and high-level community participation. There are no details about development tools, processes, or Microsoft technologies that would qualify for any inclusion category."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-10-24 21:04:18 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/update-update-azwvdsessionhost-cmdlet/idi-p/4464106",
+    "reason": "Insufficient content length"
   }
 ]

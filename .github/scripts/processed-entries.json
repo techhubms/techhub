@@ -13496,5 +13496,11 @@
     "collection": "posts",
     "canonical_url": "https://devops.com/rewriting-the-rules-of-software-quality-why-agentic-qa-is-the-future-cios-must-champion/",
     "reason": "Succesfully added: Assigned 'AI' because the article focuses primarily on AI-driven agentic QA, discussing how autonomous intelligent agents transform software testing (AI inclusion rule 1 and 4). Assigned 'DevOps' because the piece situates agentic QA within continuous deployment and software lifecycle management, with clear DevOps methodologies and benefits discussed (DevOps inclusion rules 3, 5, and 7). Did not assign other categories since there is no technical detail on specific coding frameworks, Azure services, ML engineering, or Microsoft-specific platforms."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/your-6-step-guide-to-deploying-a-website-with-github-codespaces-and-copilot-agent-mode/",
+    "collection": "news",
+    "timestamp": "2025-10-24 23:04:07 +00:00",
+    "reason": "Succesfully added: Assigned GitHub Copilot and AI categories because the content demonstrates the use of GitHub Copilot's agent mode, which is an AI-powered developer tool (GitHub Copilot and AI inclusion rules 1 and 2). Assigned DevOps because GitHub Codespaces and Pages deployment represent modern DevOps workflows (DevOps rules 2, 5). Assigned Coding because the guide involves repository setup, file editing, and customization of code content (Coding rules 1, 4, 5). No generic exclusions apply."
   }
 ]
