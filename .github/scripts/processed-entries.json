@@ -13472,5 +13472,17 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned the AI category because the content discusses agents for developers that utilize AI, specifically mentioning automation of developer tasks, issue resolution, and integration with development tooling (AI rule 1 and 5). There is no evidence of explicit coding tutorials or platform implementation that would justify Coding, DevOps, Azure, ML, or Security categories. The SRE Agent reference points to enhanced developer productivity through AI-driven solutions, not general business productivity, so it does not trigger a generic exclusion.",
     "timestamp": "2025-10-24 18:05:34 +00:00"
+  },
+  {
+    "timestamp": "2025-10-24 19:05:46 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/pqXzK8MjH2c",
+    "reason": "Succesfully added: Assigned AI category because the content centers on GitHub Copilot's use of Model Context Protocol for connecting AI models to external tools (AI rule 2 and 4). Included GitHub Copilot category because the video is about features and integrations specific to Copilot (GitHub Copilot rules 1, 2, and 6). The title, description, and tags all reference GitHub Copilot and MCP, and there are no generic exclusion rules triggered (video type is not excluded, content is in English, not biographical, not a sales pitch, and is developer-focused).",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-24 19:06:09 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/scaling-azure-functions-python-with-orjson/ba-p/4445780",
+    "reason": "Succesfully added: Assigned Azure category because the central topic is Azure Functions platform and performance optimization using orjson (Azure Inclusion Rule 1, Azure Functions/Python worker focus). Assigned Coding category because it covers Python programming, module integration, and performance engineering techniques (Coding Inclusion Rules 1, 2, and 4). AI and ML were not assigned because the focus is on serialization speed, not AI/model integration. No generic exclusions apply: content is technical, well-explained, English, and of sufficient length.",
+    "collection": "community"
   }
 ]

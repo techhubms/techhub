@@ -1,0 +1,25 @@
+{
+  "Link": "https://www.youtube.com/shorts/pqXzK8MjH2c",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Tags": [
+    "ai",
+    "copilot",
+    "github",
+    "githubcopilot",
+    "mcp",
+    "modelcontextprotocol",
+    "shorts",
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "ProcessedDate": "2025-10-24 19:04:33",
+  "Description": "Learn what Model Context Protocol (MCP) is and how it helps AI models connect to external tools and data through GitHub Copilot.\n\n🔗 Learn more: https://aka.ms/mcp-for-beginners\n\n🎙️ Featuring: Reynald Adolphe (@ReynaldAdolphe)\n\n#ai #mcp #githubcopilot",
+  "FeedName": "Visual Studio Code YouTube",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "PubDate": "2025-10-24T18:20:31+00:00",
+  "Author": "Visual Studio Code",
+  "Title": "What is MCP?"
+}
