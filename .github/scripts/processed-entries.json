@@ -13484,5 +13484,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/scaling-azure-functions-python-with-orjson/ba-p/4445780",
     "reason": "Succesfully added: Assigned Azure category because the central topic is Azure Functions platform and performance optimization using orjson (Azure Inclusion Rule 1, Azure Functions/Python worker focus). Assigned Coding category because it covers Python programming, module integration, and performance engineering techniques (Coding Inclusion Rules 1, 2, and 4). AI and ML were not assigned because the focus is on serialization speed, not AI/model integration. No generic exclusions apply: content is technical, well-explained, English, and of sufficient length.",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-24 20:06:24 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/from-cloud-to-cognitive-infrastructure-how-ai-is-redefining-the-next-frontier-of-sre/",
+    "reason": "Succesfully added: Assigned the AI category because the article deeply discusses artificial intelligence impacts on infrastructure and SRE, as well as hybrid AI/cloud environments (AI inclusion rules 1, 4, and 5). Assigned the DevOps category since the entire focus is on the practice and evolution of site reliability engineering (SRE), which is an essential DevOps discipline (DevOps inclusion rule 3: team collaboration and ways of working; rule 9: developer experience; and coverage of monitoring, orchestration, and CI/CD concepts). No other Microsoft-specific categories (Azure, Coding, etc.) qualify, as the text addresses general industry trends and practices rather than specific Microsoft products, development frameworks, or code-level details."
+  },
+  {
+    "timestamp": "2025-10-24 20:06:44 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/rewriting-the-rules-of-software-quality-why-agentic-qa-is-the-future-cios-must-champion/",
+    "reason": "Succesfully added: Assigned 'AI' because the article focuses primarily on AI-driven agentic QA, discussing how autonomous intelligent agents transform software testing (AI inclusion rule 1 and 4). Assigned 'DevOps' because the piece situates agentic QA within continuous deployment and software lifecycle management, with clear DevOps methodologies and benefits discussed (DevOps inclusion rules 3, 5, and 7). Did not assign other categories since there is no technical detail on specific coding frameworks, Azure services, ML engineering, or Microsoft-specific platforms."
   }
 ]

@@ -7371,5 +7371,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=s2ct4wW6Kbw",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The majority of this video content is a recap of GitHub Universe event promotions (merch collection, virtual pass giveaway) and provides a personal story behind the Log4Shell vulnerability from a maintainer. There is no technical depth in the information provided, nor does it cover any Microsoft technologies, development practices, or hands-on implementation details. The focus is on event announcements, community engagement, and biographical storytelling (Log4j maintainer's perspective), which triggers the 'Biographical Focus', 'Sales Pitches', and 'Lack of Technical Depth' exclusion criteria. Therefore, no categories were assigned.",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-24 20:06:03 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/bmc-brings-opentelemetry-to-mainframes-running-z-os/",
+    "reason": "No categories found: No categories assigned. Despite the article discussing OpenTelemetry, observability, DevOps practices, and mainframe integration, it does not feature any Microsoft technologies, platforms, or services. There is no mention of Azure, GitHub, .NET, Entra ID, Power Platform, Microsoft security products, or related tooling. The article focuses exclusively on BMC, OpenTelemetry, and general industry perspectives, without substantial or central Microsoft technology content. Per the multi-platform content threshold and inclusion rules, Microsoft technologies must represent at least 40% of substantive content or be central, which is not the case here."
   }
 ]
