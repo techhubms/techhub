@@ -13454,5 +13454,11 @@
     "collection": "posts",
     "timestamp": "2025-10-24 16:09:21 +00:00",
     "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories. The content sits squarely within prompt engineering for GitHub Copilot (AI rule 2, GitHub Copilot rules 1–4), showing developers how to influence Copilot's responses. All examples and strategies focus on Copilot usage (not business productivity Copilots), hence other categories such as Coding or DevOps do not apply, as the article doesn't directly involve programming implementation or Microsoft infrastructure. The content is technical, actionable, and centers on practical developer tooling."
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the content is focused on platform governance, policy automation, and management of organizational metadata within GitHub—all relevant to modern DevOps practices (DevOps rules 2, 3, 6, and 7). It details features for streamlining operations, compliance, and security governance. There is no mention of AI, Azure, Coding, ML, Security, or GitHub Copilot, so those categories were not assigned.",
+    "timestamp": "2025-10-24 17:05:52 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-10-23-organization-custom-properties-are-now-available-in-public-preview",
+    "collection": "news"
   }
 ]

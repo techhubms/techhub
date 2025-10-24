@@ -7353,5 +7353,17 @@
     "collection": "videos",
     "timestamp": "2025-10-24 16:09:58 +00:00",
     "reason": "No categories found: No categories were assigned. The content introduces Rust, focusing on programming language theory and memory safety, but does not discuss Microsoft-specific technologies, services, frameworks, or show development with Microsoft platforms. There is no mention of .NET, Azure, DevOps, Security, AI, or ML topics, and Rust on its own (without clear Microsoft integration) does not qualify for Coding or any other category per workflow guidelines."
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-10-24 17:06:07 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/the-role-of-a-software-architect-in-modern-teams/m-p/4464060#M803",
+    "collection": "community"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-10-24 17:06:07 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/what-is-software-architecture-a-practical-definition/m-p/4464058#M802",
+    "collection": "community"
   }
 ]
