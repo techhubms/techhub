@@ -13412,5 +13412,17 @@
     "collection": "news",
     "canonical_url": "https://devblogs.microsoft.com/dotnet/announcing-sponsorship-on-nugetdotorg-for-maintainer-appreciation/",
     "reason": "Succesfully added: Assigned the Coding category because the content focuses on the NuGet package ecosystem and supporting open source package maintainers, which are fundamental to .NET development and software engineering (Coding rule 3). No other categories were added because the content does not discuss AI, DevOps, Azure services, ML/data science, or security topics. Exclusion rules do not apply as this is not business/productivity, biographical, or non-technical content."
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content focuses on AI agent orchestration, agentic patterns, and Microsoft AI technologies (AI rules 1 and 4). Assigned Azure category since enterprise implementation and all recommended patterns and tooling are through Microsoft Azure platforms (Azure rules 1 and 4). Did not assign other categories since the content centers on architectural patterns and orchestration rather than specific coding, ML engineering, DevOps, or security implementations. The discussion is clearly technical, implementation-focused, and qualifies for inclusion.",
+    "timestamp": "2025-10-24 07:05:37 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://www.thomasmaurer.ch/2025/10/optimize-complex-workflows-using-multi-agent-ai-patterns/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content focuses on AI-powered development and integrations (AI rule 1 and 4), including Microsoft Agent Framework and Azure AI Foundry. Assigned GitHub Copilot category since the update heavily features GitHub Copilot Tools integration, aligning with GitHub Copilot rule 1 and 2. Assigned Coding category as the toolkit offers code generation, agent development, and practical programming workflows within Visual Studio Code (Coding rules 2, 4, and 5). The content fulfills multi-category criteria and is centrally focused on Microsoft developer tooling with no exclusion rules triggered.",
+    "timestamp": "2025-10-24 07:06:04 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-for-vs-code-october-update/ba-p/4463365"
   }
 ]

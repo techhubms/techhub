@@ -7299,5 +7299,23 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure/unable-to-access-internet-from-azure-devops-server-2022-self/m-p/4463896#M314",
     "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-10-24 00:08:43 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_clippy-is-back-activity-7387232265421930496-nDAq",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The submission is an announcement/promotion about Clippy's return, lacking substantive technical details, implementation guidance, or actionable information about Microsoft developer technologies. The main body is primarily nostalgic commentary and reactions from commenters, rather than technical analysis or explanation of how Clippy is being integrated or used in a developer or IT context. As such, this is closer to company news or marketing rather than a guide or technical deep-dive, and does not meet the minimum bar for inclusion according to workflow Chapter 3 (Sales Pitches / Promotional Content, Lack of Technical Depth, Non-Development Microsoft Products)."
+  },
+  {
+    "timestamp": "2025-10-24 00:08:56 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_what-i-love-about-the-updates-were-making-activity-7387187832441905152-Abb0",
+    "reason": "No categories found: Content excluded based on generic exclusion rules regarding non-development Microsoft products (see Chapter 3: Generic Exclusion Rules). The post focuses solely on consumer/business productivity features of Copilot Mode in Microsoft Edge, such as tab management, multi-step web actions, shopping, and everyday browsing tasks. There is no coverage of coding, software development, technical implementation, developer tools, API integration, or architecture. According to CRITICAL: Copilot Product Distinction, 'Microsoft Copilot' and Edge Copilot—when featured for general productivity and consumer scenarios—are explicitly excluded from all categories, as they are not developer tools and do not involve technical implementation suitable for Microsoft consultants and developers."
+  },
+  {
+    "timestamp": "2025-10-24 00:09:10 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_withgroups-copilot-goes-multiplayer-you-activity-7387173395374825472-QpyC",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The core content discusses 'Copilot Groups' for real-time collaboration in a business and productivity context, specifically referencing Microsoft 365 Copilot and collaboration features for document co-creation, brainstorming, and planning. According to the workflow (Chapter 3: Generic Exclusion Rules and the Copilot Product Distinction), Microsoft 365 Copilot and other business productivity uses of Copilot are to be excluded as non-development Microsoft 365 products. The technical content threshold for developer-focused AI, Coding, or other included topics is not met. This is a high-level announcement about productivity features, not software development, coding, or technical architecture. No technology categories apply."
   }
 ]
