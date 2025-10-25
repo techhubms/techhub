@@ -7419,5 +7419,11 @@
     "reason": "No categories found: Content excluded due to the generic exclusion rule for Non-English Content. The description is primarily in Spanish, and there is no English-language content provided. According to the generic exclusion rules in Chapter 3, content not primarily in English (<80% English in main text) must be excluded. No categories are assigned.",
     "canonical_url": "https://www.youtube.com/watch?v=hATdZTq2pqk",
     "timestamp": "2025-10-25 13:08:10 +00:00"
+  },
+  {
+    "timestamp": "2025-10-25 17:04:20 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content was excluded because it falls under the Generic Exclusion Rule for 'Sales Pitches' and 'Insufficient Technical Depth.' The main focus is promoting a podcast episode with a high-level discussion about the future of software customization, AI, and open source without providing any detailed technical information or actionable programming guidance. Additionally, the content consists of summary statements, social media links, and general promotion for GitHub and its platforms, without delving into AI implementation, Microsoft technologies, coding practices, or any of the specific technical topics required by the inclusion rules. There is no substantive technical content, tutorial, or code discussion present to warrant assignment to any categories.",
+    "canonical_url": "https://www.youtube.com/shorts/cgahDaKcwxM"
   }
 ]
