@@ -13502,5 +13502,11 @@
     "collection": "news",
     "timestamp": "2025-10-24 23:04:07 +00:00",
     "reason": "Succesfully added: Assigned GitHub Copilot and AI categories because the content demonstrates the use of GitHub Copilot's agent mode, which is an AI-powered developer tool (GitHub Copilot and AI inclusion rules 1 and 2). Assigned DevOps because GitHub Codespaces and Pages deployment represent modern DevOps workflows (DevOps rules 2, 5). Assigned Coding because the guide involves repository setup, file editing, and customization of code content (Coding rules 1, 4, 5). No generic exclusions apply."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the content demonstrates the use of GitHub Copilot and AI agents for codebase assessment, upgrades, and migration (AI rules 1, 2, and 6; GitHub Copilot rules 1-6, plus the critical rule to pair both). Assigned 'DevOps' as the focus includes CI/CD pipeline automation, deployment, and infrastructure as code (DevOps rules 1, 5, 6, 8). Included 'Azure' since the session discusses migration and deployment to Azure (Azure rules 1, 4, 5). Included 'Coding' as modernization covers framework upgrades, dependency resolution, and code-level changes for .NET/Java (Coding rules 1, 2, 4). All included categories directly match rule criteria, and there are no exclusion triggers.",
+    "canonical_url": "https://www.youtube.com/watch?v=a9glyQs6cbE",
+    "timestamp": "2025-10-25 00:09:02 +00:00",
+    "collection": "videos"
   }
 ]
