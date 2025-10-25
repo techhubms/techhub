@@ -13520,5 +13520,11 @@
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the content centers on using GitHub Copilot as a development tool (AI rule 2 and GitHub Copilot rules 1-4). The use of GitHub Copilot for code and database integration qualifies for the 'Coding' category (Coding rule 2 and 4). 'Azure', 'DevOps', 'ML', and 'Security' do not apply as they are not substantially featured or relevant. No generic exclusion rules apply, as the content is technical, in English, and developer-focused.",
     "canonical_url": "https://www.youtube.com/shorts/mnzErLB8KeE",
     "timestamp": "2025-10-25 13:08:29 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the episode discusses the role of AI, specifically mentioning GitHub Copilot, in making development more accessible (AI category rule 2 and 5). Assigned DevOps because the content focuses on developer tools, workflow automation, and open source collaboration within GitHub (DevOps rules 3, 9, and 11). Assigned Coding because the discussion revolves around building scripts, command line apps, browser extensions, and the craft of software development (Coding rules 1, 2, and 4). No exclusion rules applied; content is fully in English, not biographical or sales-focused, and is highly relevant to developers and the Microsoft technology ecosystem through GitHub.",
+    "canonical_url": "https://www.youtube.com/watch?v=08Guz739IZI",
+    "timestamp": "2025-10-25 14:05:38 +00:00",
+    "collection": "videos"
   }
 ]
