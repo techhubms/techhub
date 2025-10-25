@@ -7389,5 +7389,35 @@
     "timestamp": "2025-10-24 21:04:18 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/update-update-azwvdsessionhost-cmdlet/idi-p/4464106",
     "reason": "Insufficient content length"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/complete-guide-to-windows-11-themes-and-wallpapers/",
+    "timestamp": "2025-10-25 09:03:57 +00:00",
+    "reason": "No categories found: All generic exclusion rules were reviewed. This content is an end-user focused guide addressing Windows 11 personalization (themes, wallpapers) with no development, coding, deployment, security, DevOps, AI, ML, or Azure implementation details. It does not address developer practices or technical architecture, and is not aimed at technology practitioners. Per 'Non-Development Microsoft Products' and 'Business vs Technical Content' exclusions, topics that only cover end-user use, tweaking, or personalization of Windows or Microsoft 365 do not qualify for any categories. Therefore, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://dellenny.com/a-deep-dive-into-notepad-and-copilot-in-windows-11/",
+    "collection": "posts",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This article primarily focuses on end-user productivity features in Windows 11 Notepad and Copilot. Copilot discussed here refers to the general Microsoft Copilot consumer/Windows version and productivity tools, not developer tools. According to the rules, Microsoft Copilot (general consumer version), Copilot for Microsoft 365, and business productivity AI are explicitly excluded, as are articles focused on end-user features without development or implementation details. The content does not discuss any development, coding, DevOps, Azure, ML, or Security topics, nor does it focus on developer aspects of Microsoft 365. Therefore, no categories qualify.",
+    "timestamp": "2025-10-25 10:04:15 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-change-taskbar-position-and-icons-in-windows-11/",
+    "collection": "posts",
+    "reason": "No categories found: All generic exclusion rules were applied first as required by the workflow. This content is a user guide for customizing the Windows 11 taskbar, including changing its position, icon alignment, and appearance. The article addresses end-user desktop personalization, not software development, DevOps, coding, AI, ML, Azure, or security implementations. It does not discuss development tools, application programming, Microsoft developer services, or technical architectures relevant to the Tech Hub's categories. No predefined categories apply according to the exclusion rules for non-development Microsoft products and general consumer/business productivity features. Thus, the content is excluded.",
+    "timestamp": "2025-10-25 10:04:28 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-enable-and-customize-dark-mode/",
+    "collection": "posts",
+    "reason": "No categories found: All generic exclusion rules were applied first, per critical workflow sequence in Chapter 2 and Chapter 3. The content is a practical guide on enabling and customizing dark mode across various platforms (Android, iOS/iPadOS, Windows, macOS, web browsers). While Windows is included, the content is not primarily about Microsoft development tools, programming, DevOps, security, ML, AI, or Azure platform development; instead, it instructs on an end-user operating system feature (dark mode). No programming, coding, architecture, or developer technical depth is provided, and the content is not development-focused per Non-Development Microsoft Products exclusion in Chapter 3. Therefore, all categories are excluded as per rules.",
+    "timestamp": "2025-10-25 10:04:40 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to the generic exclusion rule for Non-English Content. The description is primarily in Spanish, and there is no English-language content provided. According to the generic exclusion rules in Chapter 3, content not primarily in English (<80% English in main text) must be excluded. No categories are assigned.",
+    "canonical_url": "https://www.youtube.com/watch?v=hATdZTq2pqk",
+    "timestamp": "2025-10-25 13:08:10 +00:00"
   }
 ]
