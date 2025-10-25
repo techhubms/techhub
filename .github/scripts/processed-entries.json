@@ -13508,5 +13508,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=a9glyQs6cbE",
     "timestamp": "2025-10-25 00:09:02 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-25 02:30:18 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the entire article focuses on AI development workflows, reusability, and workflow automation (AI inclusion rule 5, 4). Assigned 'DevOps' because it discusses CI/CD, pipeline fixing, workflow automation, and references the GitLab DevSecOps Report (DevOps inclusion rules 1, 5). Did not assign Azure, ML, Coding, Security, or GitHub Copilot categories because the content is general and not specific to Microsoft platforms, machine learning frameworks, coding practices, or GitHub-based tools. No generic exclusion rules apply: this is technical, in-depth, English content for practitioners.",
+    "canonical_url": "https://devops.com/dont-reinvent-the-wheel-a-developers-guide-to-ai-reusability/"
   }
 ]
