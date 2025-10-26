@@ -7419,5 +7419,41 @@
     "reason": "No categories found: Content excluded due to the generic exclusion rule for Non-English Content. The description is primarily in Spanish, and there is no English-language content provided. According to the generic exclusion rules in Chapter 3, content not primarily in English (<80% English in main text) must be excluded. No categories are assigned.",
     "canonical_url": "https://www.youtube.com/watch?v=hATdZTq2pqk",
     "timestamp": "2025-10-25 13:08:10 +00:00"
+  },
+  {
+    "timestamp": "2025-10-25 17:04:20 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content was excluded because it falls under the Generic Exclusion Rule for 'Sales Pitches' and 'Insufficient Technical Depth.' The main focus is promoting a podcast episode with a high-level discussion about the future of software customization, AI, and open source without providing any detailed technical information or actionable programming guidance. Additionally, the content consists of summary statements, social media links, and general promotion for GitHub and its platforms, without delving into AI implementation, Microsoft technologies, coding practices, or any of the specific technical topics required by the inclusion rules. There is no substantive technical content, tutorial, or code discussion present to warrant assignment to any categories.",
+    "canonical_url": "https://www.youtube.com/shorts/cgahDaKcwxM"
+  },
+  {
+    "timestamp": "2025-10-26 08:04:39 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: All categories are excluded due to the specific Copilot product rule for business productivity tools: The entire content is about OneDrive’s Copilot as part of the Microsoft 365 Copilot ecosystem, which is clearly identified as a business productivity tool (see description, content: 'Copilot in OneDrive (part of the Microsoft 365 Copilot ecosystem)'). The main focus is enabling and configuring summarization of encrypted and externally shared files with Copilot for Microsoft 365/OneDrive in the context of information workers, not developers. There is no discussion or demonstration of developer-focused tools, APIs, coding, automation, or backend/configuration development. There is no integration or focus on developer Copilot tools (GitHub Copilot, Copilot Studio). The content targets productivity and information governance, which is excluded by both the generic exclusion rules (Non-Development Microsoft Products) and the Copilot Product Distinction rule. Therefore, according to strict instructions in Chapter 3 and the Copilot product guidelines in Chapter 2 and Chapter 4, NO categories are allowed.",
+    "canonical_url": "https://dellenny.com/bypassing-the-no-go-using-onedrives-copilot-for-encrypted-external-document-analysis/"
+  },
+  {
+    "timestamp": "2025-10-26 08:04:52 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: No categories assigned. Although the content discusses core concepts of cloud computing such as scalability, high availability, and disaster recovery, it does not focus on Microsoft-specific technologies or development practices. The only mention of Microsoft (in tags and a single reference to 'Azure' among other providers in one sentence) is not substantial or central. The content equally references AWS, Google Cloud, and Azure at a high level, with no detailed technical information or implementation guidance for any Microsoft product or service. Per multi-platform content threshold and category inclusion rules, Microsoft technology coverage does not meet the required ≥40% or centrality required for inclusion. Therefore, no category applies.",
+    "canonical_url": "https://dellenny.com/cloud-benefits-simplified-scalability-high-availability-and-disaster-recovery/"
+  },
+  {
+    "timestamp": "2025-10-26 08:05:05 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This post is instructional content for end-users on personalizing the Windows 11 UI, specifically moving the Start Menu to the left. It is not development-related, does not cover programming, coding, or Microsoft technical implementation, and instead focuses on end-user customization. As per the Non-Development Microsoft Products exclusion (Chapter 3), content about end-user Windows features or general workstyle customization is not within scope. There are no applicable categories such as Coding, Azure, AI, DevOps, Security, etc., and the content does not have technical depth for consultants or developers.",
+    "canonical_url": "https://dellenny.com/how-to-move-the-start-menu-to-the-left-in-windows-11-like-windows-10-style/"
+  },
+  {
+    "timestamp": "2025-10-26 08:05:17 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: No categories assigned. This content is an overview/comparison of Microsoft 365, Azure, and Dynamics 365 cloud platforms for business decision-making. The primary focus is on clarifying the purpose, features, integration, and use-cases of these Microsoft services from a business and organizational perspective. There are no technical implementation details, no code, and no developer-oriented guidance. As per generic exclusion rules (Business Strategy/Executive Content, Workplace and Business Focus, Non-Development Microsoft Products), such business-oriented platform comparison content falls outside the scope for inclusion.",
+    "canonical_url": "https://dellenny.com/microsoft-365-vs-azure-vs-dynamics-365-whats-the-difference/"
+  },
+  {
+    "timestamp": "2025-10-26 15:04:28 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/MKUKkuhp3oY",
+    "reason": "No categories found: No categories assigned. The content is a short video that recaps the story of the Log4Shell (Log4j) vulnerability and highlights community pressures, open source maintenance, and the GitHub Secure Open Source Fund. However, it does not focus on Microsoft technologies or platforms, nor does it provide technical implementation or development content aligned with any of the specified inclusion categories (AI, GitHub Copilot, Coding, DevOps, Azure, ML, Security). The focus is on the general open-source ecosystem and security community rather than Microsoft-specific technical solutions, so it does not qualify.",
+    "collection": "videos"
   }
 ]

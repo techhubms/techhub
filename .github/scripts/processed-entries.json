@@ -13532,5 +13532,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/byopi-design-your-own-custom-private-ai-search-indexer-with-no/m-p/4464205#M22283",
     "reason": "Succesfully added: Assigned AI category because Azure AI Search is a core component and the article covers hands-on integration and automation (AI Rule 1, 4). Assigned Azure category because Azure Data Factory, Azure Key Vault, private VMs, and extensive Azure architecture details are central and more than 40% of content is Azure-focused (Azure Rules 1, 4, 5). Assigned Security category because of the emphasis on network isolation, private endpoints, and compliance (Security Rules 1, 4, 9). Coding, DevOps, ML, and GitHub Copilot were considered but not assigned: core coding practices are shown as SQL/PowerShell snippets for configuration, not development patterns (Coding rules not met), DevOps category not assigned because the article doesn't focus on CI/CD, source control, or developer collaboration practices. ML not assigned because despite some AI Search discussion, there is no data science or ML engineering focus (ML rules not met).",
     "timestamp": "2025-10-25 16:06:17 +00:00"
+  },
+  {
+    "timestamp": "2025-10-26 23:04:47 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=EXURiXZ-8YU",
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' and 'GitHub Copilot' are included because the session centers on live coding using GitHub Copilot and explicitly references Copilot (AI rules 1, 2, and GitHub Copilot rules 1–4). 'Coding' is included since the event features live programming and developer tools in action (Coding rule 1 and 5). Azure, ML, Security, and DevOps are not included because the description and tags do not reference Azure services, machine learning, security, or development operations topics."
   }
 ]

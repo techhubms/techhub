@@ -1,0 +1,18 @@
+{
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Tags": [
+    "Log4j",
+    "Log4Shell",
+    "OpenSource"
+  ],
+  "Author": "GitHub",
+  "ProcessedDate": "2025-10-26 23:03:45",
+  "FeedName": "GitHub YouTube",
+  "Link": "https://www.youtube.com/shorts/MKUKkuhp3oY",
+  "PubDate": "2025-10-26T14:00:30+00:00",
+  "EnhancedContent": null,
+  "Title": "From Minecraft to global crisis: the Log4Shell story",
+  "Description": "Remember Log4Shell? This short recaps the infamous Log4j vulnerability that shook the digital world, from its discovery via Minecraft to the intense pressure on maintainers like Christian Grobmeier. Learn about the key lessons and how the GitHub Secure Open Source Fund is helping prevent the next crisis.\n\nWatch the full, untold story with Christian: https://www.youtube.com/watch?v=t74ClffSUW0\n\n#Log4Shell #Log4j #OpenSource\n\nStay up-to-date on all things GitHub by connecting with us:\n\nYouTube: https://gh.io/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Insider newsletter: https://resources.github.com/newsletter/ Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github\n\nAbout GitHub It’s where over 100 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "FeedLevelAuthor": "GitHub"
+}
