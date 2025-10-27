@@ -13616,5 +13616,11 @@
     "collection": "news",
     "timestamp": "2025-10-27 19:06:56 +00:00",
     "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-october-2025/"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the central focus is on Azure Kubernetes Service, Azure Day, and multiple Azure-powered demos and sessions (Azure rule 1, 4, 5). Assigned AI category due to recurring focus on AI workloads with Kubernetes, agentic AI tools for troubleshooting, multicluster AI inference, and sessions exploring model deployment and large language models (AI rule 1, 4, 5). Assigned DevOps category owing to hands-on labs, operational, deployment, and troubleshooting best practices with Azure, AKS, GitHub Actions, and Infrastructure as Code tools (DevOps rule 1, 2, 5, 6, 9). Assigned Security category for direct coverage of Kubernetes supply chain security, secure infrastructure, authentication updates, policy agent deep dives, and secure workload orchestration (Security rule 1, 4, 5, 7, 8, 9). All content is in English and surpasses the community post minimum length. There are no generic exclusion triggers.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-azure-at-kubecon-north-america-2025-atlanta-ga-nov-10/ba-p/4464324",
+    "timestamp": "2025-10-27 20:05:47 +00:00"
   }
 ]

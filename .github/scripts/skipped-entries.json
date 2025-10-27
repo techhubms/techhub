@@ -7527,5 +7527,11 @@
     "collection": "community",
     "timestamp": "2025-10-27 19:07:32 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/shared-responsibility-model-in-cloud-computing-simplified/m-p/4464529#M22288"
+  },
+  {
+    "reason": "No categories found: Content excluded due to insufficient substantive content. The 'content' field is null, providing no main text to evaluate. According to the processing rules, only the 'content' field is assessed for category assignment, ignoring navigation and other surrounding elements. Without actual content, it's not possible to determine whether any category inclusion criteria are met, and there is not enough detail to extract meaningful metadata or tags beyond what is already listed. As per the rules in Chapter 2 and 5, and the requirement to rely only on provided content, no categories can be assigned.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/K-wCjkX3bcI",
+    "timestamp": "2025-10-27 20:05:17 +00:00"
   }
 ]
