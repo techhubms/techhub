@@ -7455,5 +7455,29 @@
     "canonical_url": "https://www.youtube.com/shorts/MKUKkuhp3oY",
     "reason": "No categories found: No categories assigned. The content is a short video that recaps the story of the Log4Shell (Log4j) vulnerability and highlights community pressures, open source maintenance, and the GitHub Secure Open Source Fund. However, it does not focus on Microsoft technologies or platforms, nor does it provide technical implementation or development content aligned with any of the specified inclusion categories (AI, GitHub Copilot, Coding, DevOps, Azure, ML, Security). The focus is on the general open-source ecosystem and security community rather than Microsoft-specific technical solutions, so it does not qualify.",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://dellenny.com/data-residency-and-compliance-in-the-microsoft-cloud-microsoft-365-governance-guide/",
+    "reason": "No categories found: No categories assigned because, based on the Generic Exclusion Rules (Chapter 3), this content is primarily focused on compliance, data residency, governance responsibilities, and contractual/legal obligations in Microsoft 365, without technical development, coding, or implementation details relevant to developers or Microsoft technical consultants. While it discusses Microsoft Cloud and features like Multi-Geo and ADR, it is high-level compliance content, not hands-on technical or architecture/development. There are also clear mentions of responsibilities for compliance, legal, and contract teams. Microsoft 365 is included, but only in a compliance/governance context, and not for development/engineering. Therefore, the correct application of the exclusion rules leads to no categories assigned.",
+    "timestamp": "2025-10-27 07:05:41 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-cloud-computing-improves-business-agility-and-the-role-of-microsoft-365/",
+    "reason": "No categories found: Content excluded due to generic exclusion rules—specifically, 'Non-Development Microsoft Products' and 'Business Strategy and Executive Content.' The article focuses on business agility, cloud benefits, and Microsoft 365's role in operational productivity, but it does not provide technical implementation, developer guidance, or architectural specifics pertaining to Microsoft development, coding, DevOps, Azure, AI, ML, or Security. Microsoft 365 is discussed solely from an end-user business productivity and collaboration perspective, not from a developer or technical practitioner angle. No rules for category inclusion are met.",
+    "timestamp": "2025-10-27 07:05:53 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/why-outlook-locks-you-out-after-deleting-thousands-of-emails-and-how-to-fix-it-fast/",
+    "reason": "No categories found: No categories were assigned because the content focuses on end-user troubleshooting for Outlook/Hotmail throttling after bulk email deletion. It discusses account limitations, end-user mailbox management, and practical tips for consumers to restore inbox access. There is no coverage of Microsoft development, coding, security, Azure, AI, DevOps, or technical architecture. Outlook is treated as a business productivity/email tool for end users, not a platform for developer scenarios. This is excluded per the Generic Exclusion Rules for 'Non-Development Microsoft Products' and content focused on end-user product usage.",
+    "timestamp": "2025-10-27 07:06:31 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=lQkaWdWBODI",
+    "reason": "No categories found: No content to process (the 'content' field is null), and the description and title indicate the focus is on building and scaling open source communities and projects like MongoDB, Go, Cobra, and Hugo—none of which are Microsoft technologies or developer platforms. While Visual Studio Code is mentioned, there are no substantive technical details, guidance, or implementation information about Microsoft technologies. Furthermore, based on the generic exclusion rules, a podcast episode discussing an individual's experiences building community (biographical and organizational focus) without detailed technical Microsoft content does not qualify for any categories.",
+    "timestamp": "2025-10-27 07:06:53 +00:00",
+    "collection": "videos"
   }
 ]

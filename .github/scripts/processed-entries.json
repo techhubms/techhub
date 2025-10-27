@@ -13544,5 +13544,11 @@
     "timestamp": "2025-10-27 00:09:27 +00:00",
     "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the event's main focus is live coding demonstrations featuring and discussing GitHub Copilot, which directly fits the GitHub Copilot inclusion rules and always requires AI in addition. Assigned Coding because the central activity is live writing and collaboration on code using developer tools (Visual Studio Code and Copilot), fitting Coding category rules on practical coding and Microsoft developer tool usage. No Azure, DevOps, Security, or ML focus was evident from the title or description.",
     "canonical_url": "https://www.youtube.com/watch?v=pZenafOYtfI"
+  },
+  {
+    "canonical_url": "https://dellenny.com/shared-responsibility-model-in-cloud-computing-simplified/",
+    "reason": "Succesfully added: Assigned 'Azure' category because the entire content explains security principles and operational practices specific to Microsoft Azure, in line with Azure inclusion rules 1 and 5. Assigned 'Security' because the article clearly focuses on security management, best practices, and compliance for Azure workloads, matching Security rules 1 and 4. Did not assign other categories (e.g., Coding, DevOps) as the content is conceptual and practical rather than focused on software development or DevOps workflows, and does not detail coding or CI/CD implementation. All technical detail references Microsoft's cloud security products and frameworks per inclusion criteria.",
+    "timestamp": "2025-10-27 07:06:18 +00:00",
+    "collection": "posts"
   }
 ]
