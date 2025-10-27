@@ -13574,5 +13574,11 @@
     "timestamp": "2025-10-27 10:06:13 +00:00",
     "collection": "posts",
     "canonical_url": "https://www.thomasmaurer.ch/2025/10/azure-local-2510-release-and-new-preview-features/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Azure' category because the primary content is focused on Azure's capacity reservation and sharing features (Azure inclusion rules 1, 4, and 5). There is no code development or programming, so Coding/DevOps/AI/ML/Security categories do not apply. The content is educational, technical, and focused on Azure resource management rather than business strategy, workplace topics, or biographical material. The tags reflect core Azure concepts, products, and cloud architecture relevant to capacity reservations.",
+    "canonical_url": "https://www.youtube.com/watch?v=vxBpbNCLANM",
+    "timestamp": "2025-10-27 15:17:45 +00:00",
+    "collection": "videos"
   }
 ]

@@ -7485,5 +7485,17 @@
     "timestamp": "2025-10-27 10:05:22 +00:00",
     "collection": "posts",
     "canonical_url": "https://devops.com/five-great-devops-job-opportunities-161/"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content is about 3D printing GitHub's mascot Mona the Octocat, which is not related to Microsoft technologies or developer tools covered by the defined categories. There is no discussion of coding, DevOps, AI, Azure, ML, or Security, nor is there any technical implementation pertaining to Microsoft platforms. The content is primarily focused on providing 3D print files for a GitHub mascot, which is outside the scope of the Tech Hub platform's technical focus.",
+    "canonical_url": "https://www.youtube.com/shorts/UYs9s5fzWBA",
+    "timestamp": "2025-10-27 15:17:25 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded because there is no substantive information provided in the input. The 'content' and 'description' fields are both null or empty, and the 'tags' field is also empty. Without any actual text or details about the video's subject matter, it is impossible to determine if any Microsoft technology categories apply. According to processing rules, decisions must be based only on the provided content and not on assumptions from the title alone.",
+    "canonical_url": "https://www.youtube.com/shorts/TYfQ0etSwnY",
+    "timestamp": "2025-10-27 15:18:00 +00:00",
+    "collection": "videos"
   }
 ]
