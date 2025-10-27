@@ -7479,5 +7479,11 @@
     "reason": "No categories found: No content to process (the 'content' field is null), and the description and title indicate the focus is on building and scaling open source communities and projects like MongoDB, Go, Cobra, and Hugo—none of which are Microsoft technologies or developer platforms. While Visual Studio Code is mentioned, there are no substantive technical details, guidance, or implementation information about Microsoft technologies. Furthermore, based on the generic exclusion rules, a podcast episode discussing an individual's experiences building community (biographical and organizational focus) without detailed technical Microsoft content does not qualify for any categories.",
     "timestamp": "2025-10-27 07:06:53 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: All generic exclusion rules must be applied first. This content is primarily a job opportunities report highlighting current DevOps job openings at various companies, including salary ranges and job titles. According to the 'Job-Related Content' exclusion rule, content about job opportunities, hiring, and salary discussions must be excluded regardless of technical proximity. No categories were assigned as this content is labor market/job oriented and does not contain substantive technical guidance, implementation, or development details.",
+    "timestamp": "2025-10-27 10:05:22 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/five-great-devops-job-opportunities-161/"
   }
 ]
