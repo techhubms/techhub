@@ -13550,5 +13550,11 @@
     "reason": "Succesfully added: Assigned 'Azure' category because the entire content explains security principles and operational practices specific to Microsoft Azure, in line with Azure inclusion rules 1 and 5. Assigned 'Security' because the article clearly focuses on security management, best practices, and compliance for Azure workloads, matching Security rules 1 and 4. Did not assign other categories (e.g., Coding, DevOps) as the content is conceptual and practical rather than focused on software development or DevOps workflows, and does not detail coding or CI/CD implementation. All technical detail references Microsoft's cloud security products and frameworks per inclusion criteria.",
     "timestamp": "2025-10-27 07:06:18 +00:00",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/implementing-security-headers-in-azure-app-service-and-azure/ba-p/4464250",
+    "reason": "Succesfully added: Assigned Azure category because the article centers on deploying security practices using Azure App Service and Azure Container Apps (Azure rule 1, 4, and 5). Assigned Security category because it focuses on HTTP security headers, vulnerability mitigation, and safeguards for cloud-hosted applications (Security rules 1, 2, and 9). Did not assign Coding because, while code snippets are shown, the focus is on configuration and platform-specific implementation rather than general software development practices. No generic or exclusion rules apply. The content is substantial, technical, and directly relevant to Azure developers.",
+    "collection": "community",
+    "timestamp": "2025-10-27 08:04:34 +00:00"
   }
 ]
