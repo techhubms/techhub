@@ -13580,5 +13580,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=vxBpbNCLANM",
     "timestamp": "2025-10-27 15:17:45 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because content demonstrates semantic search and vector search with SQL Server 2025, supporting AI features (AI rule 1). Assigned Azure because Azure SQL is referenced as a solution and platform (Azure rules 1 and 4). Assigned ML because the episode involves data ingestion for machine learning and semantic search, which are ML workloads (ML rules 1 and 2). Coding category was not assigned as the content is focused on data platform setup and integration rather than direct coding or framework usage. DevOps and Security were not assigned since the video has no substantial coverage of software lifecycle or security practices.",
+    "timestamp": "2025-10-27 16:08:51 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=WBPFjYLIhsA"
   }
 ]
