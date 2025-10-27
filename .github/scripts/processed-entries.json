@@ -13586,5 +13586,29 @@
     "reason": "Succesfully added: Assigned AI category because content demonstrates semantic search and vector search with SQL Server 2025, supporting AI features (AI rule 1). Assigned Azure because Azure SQL is referenced as a solution and platform (Azure rules 1 and 4). Assigned ML because the episode involves data ingestion for machine learning and semantic search, which are ML workloads (ML rules 1 and 2). Coding category was not assigned as the content is focused on data platform setup and integration rather than direct coding or framework usage. DevOps and Security were not assigned since the video has no substantial coverage of software lifecycle or security practices.",
     "timestamp": "2025-10-27 16:08:51 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=WBPFjYLIhsA"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=u-YQ624i8qE",
+    "timestamp": "2025-10-27 17:08:12 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: The content is a developer-focused recap of GitHub Universe announcements by Visual Studio Code and GitHub staff. The main focus is event coverage, highlights, and practical impacts on developers using GitHub and VS Code. It qualifies for the 'DevOps' category under Inclusion Rule 11 (GitHub content for developers) since it involves workflows and tools central to DevOps practices. There is no explicit focus on GitHub Copilot, AI, or Coding/Programming topics, based on the lack of content details specifying such features or deep programming discussion. If the content contained a substantial segment about GitHub Copilot or AI, those categories would be included, but based on the provided data, DevOps is most appropriate."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/unlock-savings-with-copilot-credit-pre-purchase-plan/ba-p/4464517",
+    "timestamp": "2025-10-27 17:08:36 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'AI' category because Microsoft Copilot Studio is a developer/maker tool for creating AI agents (AI rule 1). 'Azure' is included since plan management and provisioning are performed in the Azure portal (Azure rule 1) and Azure subscriptions are required. 'Coding', 'DevOps', 'ML', and 'Security' categories do not apply because the content focuses on platform usage, billing, and provisioning—not hands-on development, DevOps pipelines, machine learning engineering, or security implementation. 'GitHub Copilot' is not included because this content is unrelated to GitHub Copilot (it covers Copilot Studio, which is governed by different inclusion rules as per the Copilot Product Distinction section)."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/announcing-the-november-2025-innovation-challenge-hackathon/m-p/4464518#M22287",
+    "timestamp": "2025-10-27 17:08:57 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Included the AI category because the hackathon's central activity is solving AI use cases with Microsoft Azure, directly matching AI inclusion rules 1 and 4. Included Azure category since teams are explicitly building solutions on Azure, which is core to the event (Azure rule 1 and 4). Did not include DevOps, Coding, or ML categories since the announcement does not focus on software engineering practices, specific programming, or ML engineering—just the use of AI and Azure in general. Content is technically descriptive, does not violate any generic exclusion rules, and centers Microsoft technologies throughout."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/red-hat-enterprise-linux-software-reservations-now-available/ba-p/4463214",
+    "timestamp": "2025-10-27 17:09:15 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the entire content is focused on Azure platform capabilities and product updates (Azure rule 1: 'Any Azure Service/Technology'). It explains new features for RHEL reservations on Azure, updated billing/pricing, and operational guidance for utilizing RHEL on Azure. No other category fits—there is no coding or DevOps implementation, no explicit ML/AI/security tooling, and no GitHub Copilot or programming framework details. All generic exclusion rules were checked and none applied; the content is technical, English, not biographical, and of sufficient length."
   }
 ]

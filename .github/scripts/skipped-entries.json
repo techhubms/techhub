@@ -7503,5 +7503,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule: The main focus is business productivity-oriented features of Microsoft Copilot, such as new modalities on Windows laptops, group/family collaboration, and the 'Miko' AI character. There are no references to coding, developer tools, ML platforms, or technical implementation for developers. As per the Copilot product distinction (Chapter 2), Microsoft 365 Copilot and general Microsoft Copilot consumer/business productivity features must be excluded—no categories are assigned. Additionally, this post is primarily sharing user experience of productivity features for end-users, not technical practitioners.",
     "timestamp": "2025-10-27 16:08:17 +00:00",
     "canonical_url": "https://www.linkedin.com/posts/satyanadella_so-many-new-copilot-updates-this-month-here-activity-7387547441702772736-vpNd"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/virtual-machine-agent-status-is-not-ready-in-windows-vm/m-p/4464293#M22284",
+    "timestamp": "2025-10-27 17:08:57 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length"
   }
 ]

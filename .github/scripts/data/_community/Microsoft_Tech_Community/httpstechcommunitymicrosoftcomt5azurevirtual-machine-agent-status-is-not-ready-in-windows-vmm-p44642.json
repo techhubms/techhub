@@ -1,0 +1,14 @@
+{
+  "Link": "https://techcommunity.microsoft.com/t5/azure/virtual-machine-agent-status-is-not-ready-in-windows-vm/m-p/4464293#M22284",
+  "Title": "Virtual Machine Agent Status is not Ready in WIndows VM",
+  "FeedName": "Microsoft Tech Community",
+  "Tags": [],
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "EnhancedContent": "not able to log in to the Azure VM. The Serial Console and Run a Command are also not responding Please help to resolve this issue Backup is also not running. No Backup Available",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "ProcessedDate": "2025-10-27 17:07:26",
+  "PubDate": "2025-10-26T16:31:08+00:00",
+  "Description": "not able to log in to the Azure VM. The Serial Console and Run a Command are also not responding Please help to resolve this issue Backup is also not running. No Backup Available",
+  "Author": "mohirafi",
+  "OutputDir": "_community"
+}
