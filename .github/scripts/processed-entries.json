@@ -13622,5 +13622,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-azure-at-kubecon-north-america-2025-atlanta-ga-nov-10/ba-p/4464324",
     "timestamp": "2025-10-27 20:05:47 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/finops-blog/unlock-savings-with-copilot-credit-pre-purchase-plan/ba-p/4464511",
+    "timestamp": "2025-10-27 22:05:04 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because Copilot Studio and Copilot Chat are Microsoft AI tools for creating custom conversational agents and automations (AI rule 1 and rule 5). The content does not focus on GitHub Copilot, so 'GitHub Copilot' is not assigned. It is not 'DevOps', 'Azure', or 'Coding' focused—the primary content is about credit management for using Copilot Studio and Dynamics 365 AI features. Excluded all categories except AI per rules."
   }
 ]

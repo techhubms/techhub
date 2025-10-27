@@ -7533,5 +7533,17 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/K-wCjkX3bcI",
     "timestamp": "2025-10-27 20:05:17 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-10-27 21:04:41 +00:00",
+    "reason": "No categories found: No categories assigned. The content is a promotional sneak peek and event highlights video for GitHub Universe 2025, focusing on fun conference features like a 'hacked Furby army,' 'Iron Man-style glove,' 'playable conference badges,' and a 'build-your-own Copilot station.' There is no substantive technical content, technical implementation, or developer-focused Microsoft technology detail present. The video primarily promotes the event and showcases interesting attractions rather than providing technical education or actionable insight. This triggers the 'sales pitch' and 'promotional content without educational value' generic exclusion rule in Chapter 3, so no categories are assigned.",
+    "canonical_url": "https://www.youtube.com/shorts/38Nmxwc_hFc"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/Jsv15r19IP8",
+    "timestamp": "2025-10-27 22:04:39 +00:00",
+    "reason": "No categories found: No categories assigned because the content is primarily an event promotion and mascot-focused video with no substantive technical content related to Microsoft technology, coding, DevOps, AI, Azure, ML, or Security. The description centers on experiencing the GitHub Universe event with the Octocat mascot and includes social media links and a general overview of GitHub as a platform, but does not present any technical detail, guidance, or developer best practices. This triggers the generic exclusion rule for promotional and non-technical content."
   }
 ]
