@@ -1,0 +1,14 @@
+{
+  "Author": "JohnNaguib",
+  "ProcessedDate": "2025-10-27 19:06:28",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/shared-responsibility-model-in-cloud-computing-simplified/m-p/4464529#M22288",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "EnhancedContent": "As organizations increasingly migrate workloads to the cloud, understanding **who’s responsible for security** becomes crucial. In Microsoft Azure, this clarity comes from the **Shared Responsibility Model** — a foundational concept for secure cloud operations.\n\nLet’s break down what it means and how it works in the Microsoft ecosystem.\n\n[https://dellenny.com/shared-responsibility-model-in-cloud-computing-simplified/](https://dellenny.com/shared-responsibility-model-in-cloud-computing-simplified/)",
+  "OutputDir": "_community",
+  "PubDate": "2025-10-27T16:17:40+00:00",
+  "FeedName": "Microsoft Tech Community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Title": "Shared Responsibility Model in Cloud Computing Simplified",
+  "Description": "As organizations increasingly migrate workloads to the cloud, understanding **who’s responsible for security** becomes crucial. In Microsoft Azure, this clarity comes from the **Shared Responsibility Model** — a foundational concept for secure cloud operations.\n\nLet’s break down what it means and how it works in the Microsoft ecosystem.\n\n[https://dellenny.com/shared-responsibility-model-in-cloud-computing-simplified/](https://dellenny.com/shared-responsibility-model-in-cloud-computing-simplified/)",
+  "Tags": []
+}

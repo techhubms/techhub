@@ -7509,5 +7509,23 @@
     "timestamp": "2025-10-27 17:08:57 +00:00",
     "collection": "community",
     "reason": "Insufficient content length"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-10-27 19:07:20 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure/metered-billing-accelerator/m-p/4464181#M1369"
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the content is a question-only post seeking assistance about abnormal external keyboard issues following an Android OS update. According to the Generic Exclusion Rules (Chapter 3), 'Question-Only Content' must be excluded if it primarily asks for help or reports issues without substantive answers, technical implementation guidance, or a solution present within the body (CRITICAL). The post describes personal observations of keyboard shortcut behaviors when using the Windows app on Android, without providing technical solutions, development guidance, or implementation details related to Microsoft technologies. Therefore, no categories were applied.",
+    "collection": "community",
+    "timestamp": "2025-10-27 19:07:32 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/windows-app-external-keyboard-issues-android-galaxy-s10-ultra/m-p/4463925#M13926"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-10-27 19:07:32 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/shared-responsibility-model-in-cloud-computing-simplified/m-p/4464529#M22288"
   }
 ]

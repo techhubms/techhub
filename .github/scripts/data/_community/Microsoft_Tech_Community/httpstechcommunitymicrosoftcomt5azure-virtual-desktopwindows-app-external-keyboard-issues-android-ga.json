@@ -1,0 +1,14 @@
+{
+  "Author": "Mark7996",
+  "ProcessedDate": "2025-10-27 19:06:28",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/windows-app-external-keyboard-issues-android-galaxy-s10-ultra/m-p/4463925#M13926",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "EnhancedContent": "I am experiencing a few abnormal issues that I'd like to raise for awareness. Not major, as I'm sure I can find workarounds and get used to it but they are inconvenient for me. And I believe this might be related to the Samsung Android One UI 8.0 update that pushed to my tablet earlier this week as that is the biggest change that happened before I started experiencing this.\n\nFor one, I used to be able to press the Cmd button on my external keyboard, by default no special config or setup was needed, and the windows menu would appear when remoted into a machine via the windows app. Now it backs me out of the app and takes me to the Android home screen.\n\nAlso, the control, shift, arrow keys and control z features (for continuous selecting and undoing) do not work as before. It seems that after 2 arrow key presses the text will no longer be selected and the cursor for the arrow key will just move, even if control and shift are still held down. Similarly with control z, I can only undo one item, then with control still held if I press z it will just input the z key over and over.\n\nAny assistance is appreciated. I can provide more clarity if needed.",
+  "OutputDir": "_community",
+  "PubDate": "2025-10-23T23:37:16+00:00",
+  "FeedName": "Microsoft Tech Community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Title": "Windows App External Keyboard Issues, Android Galaxy S10 Ultra Tablet",
+  "Description": "I am experiencing a few abnormal issues that I'd like to raise for awareness. Not major, as I'm sure I can find workarounds and get used to it but they are inconvenient for me. And I believe this might be related to the Samsung Android One UI 8.0 update that pushed to my tablet earlier this week as that is the biggest change that happened before I started experiencing this.\n\nFor one, I used to be able to press the Cmd button on my external keyboard, by default no special config or setup was needed, and the windows menu would appear when remoted into a machine via the windows app. Now it backs me out of the app and takes me to the Android home screen.\n\nAlso, the control, shift, arrow keys and control z features (for continuous selecting and undoing) do not work as before. It seems that after 2 arrow key presses the text will no longer be selected and the cursor for the arrow key will just move, even if control and shift are still held down. Similarly with control z, I can only undo one item, then with control still held if I press z it will just input the z key over and over.\n\nAny assistance is appreciated. I can provide more clarity if needed.",
+  "Tags": []
+}
