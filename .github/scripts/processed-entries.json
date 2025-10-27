@@ -13538,5 +13538,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=EXURiXZ-8YU",
     "reason": "Succesfully added: Categories assigned as follows: 'AI' and 'GitHub Copilot' are included because the session centers on live coding using GitHub Copilot and explicitly references Copilot (AI rules 1, 2, and GitHub Copilot rules 1–4). 'Coding' is included since the event features live programming and developer tools in action (Coding rule 1 and 5). Azure, ML, Security, and DevOps are not included because the description and tags do not reference Azure services, machine learning, security, or development operations topics."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-10-27 00:09:27 +00:00",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the event's main focus is live coding demonstrations featuring and discussing GitHub Copilot, which directly fits the GitHub Copilot inclusion rules and always requires AI in addition. Assigned Coding because the central activity is live writing and collaboration on code using developer tools (Visual Studio Code and Copilot), fitting Coding category rules on practical coding and Microsoft developer tool usage. No Azure, DevOps, Security, or ML focus was evident from the title or description.",
+    "canonical_url": "https://www.youtube.com/watch?v=pZenafOYtfI"
   }
 ]
