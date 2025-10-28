@@ -7635,5 +7635,17 @@
     "timestamp": "2025-10-28 20:05:26 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=P6Va0_KILi4",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_great-to-be-back-at-github-universe-today-activity-7389024818098212864-9_qt",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This post is primarily an event reflection, announcement, and social commentary about attending GitHub Universe, rather than providing technical content, implementation details, or substantive technical discussion relevant to Microsoft technologies. It does not contain educational or technical guidance, does not focus on development, coding, DevOps, AI, ML, Security, or Azure, and does not meet category inclusion rules. It is biographical/event-focused and lacks actionable technical information for consultants or developers.",
+    "timestamp": "2025-10-28 22:04:51 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_super-fun-conversation-with-jordi-hays-and-activity-7389037496279609345-y4a1",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this post is primarily a brief acknowledgment of a conversation at an event (GitHub Universe) and does not contain substantive technical information, architectural insights, or details relevant to Microsoft technology categories. The body of the content is extremely short, social, and lacks any actionable technical depth. Additionally, there is a significant amount of platform boilerplate and responses are mostly reactions rather than meaningful technical discussion. No qualified categories apply.",
+    "timestamp": "2025-10-28 22:05:03 +00:00",
+    "collection": "news"
   }
 ]

@@ -13850,5 +13850,11 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned Azure category due to deep focus on Azure NetApp Files and storage management with Azure services (Azure rule 1, 2, 4, 5). Assigned AI category because the extension leverages AI features for template generation, workload sizing, and integrates with natural language commands (AI rules 1, 3, 4, 5). Assigned Coding because content discusses developer tooling (VS Code), ARM template generation, and integration with Copilot for programming tasks (Coding rules 2, 4, 5). Assigned DevOps due to workflow automation, infrastructure as code, and DevOps practices described (DevOps rules 1, 5, 6, 8, 9). GitHub Copilot appears, but content focuses on integration rather than Copilot-specific functions, so GitHub Copilot category is not included. No generic exclusion rules are triggered as content is technical, substantial, and English.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-cloud-native-development-with-ai-powered-azure/ba-p/4464852"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/sP-SQEE7K-Y",
+    "reason": "Succesfully added: Assigned 'AI' because the primary focus is managing and working with AI agents in development workflows, matching AI inclusion rule 1 and 4. Assigned 'DevOps' because Agent HQ provides workflow management, progress tracking, and code review capabilities within GitHub, addressing DevOps inclusion rules 3, 5, and 9. Did not assign GitHub Copilot because there is no mention or inference of the GitHub Copilot developer tool. Did not assign Coding because there are no specifics about programming languages, code samples, or implementation details. No Azure, ML, or Security categories apply as those topics are not covered.",
+    "timestamp": "2025-10-28 22:05:34 +00:00",
+    "collection": "videos"
   }
 ]
