@@ -13832,5 +13832,11 @@
     "timestamp": "2025-10-28 18:06:52 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=I51wun3OnmQ",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Categories 'AI' and 'Azure' were assigned. The content centers on deploying NVIDIA GB300 NVL72 racks for high-density AI workloads on Microsoft Azure, which qualifies under AI (AI rules 1 and 4) and Azure (Azure rules 1 and 4). There is no code or developer tool focus present, so Coding, DevOps, ML, and Security categories do not apply. The post discusses hardware integration, cooling, and fleet management for advanced AI use cases, with minimal end-user, business, career, or executive content. No generic exclusion rules applied.",
+    "collection": "community",
+    "timestamp": "2025-10-28 19:05:13 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/reimagining-ai-at-scale-nvidia-gb300-nvl72-on-azure/ba-p/4464556"
   }
 ]
