@@ -7587,5 +7587,29 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/tools/writing-cleaner-code-with-github-copilot-suggestions/m-p/4464758#M173",
     "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-10-28 17:08:20 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/government/2025/10/28/how-cities-build-resilient-infrastructure-with-trusted-ai/",
+    "collection": "news",
+    "reason": "No categories found: No categories were assigned because the content fails to provide any substantive technical implementation details about Microsoft technologies. The article's main content is completely missing—there is only a short introductory description and a stock image caption. There is no depth, technical information, code, or architecture related to any Microsoft AI platform or infrastructure solution. Per the quality standards and content rules, content must focus on actionable technical topics with relevant details, not generic high-level themes or pure announcements. Therefore, the content is excluded."
+  },
+  {
+    "timestamp": "2025-10-28 17:13:08 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=xoe4GCMaRPY",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: the content is not primarily in English (description is in Portuguese), which violates the non-English content exclusion rule. Additionally, there is no full content text provided for substantiation. Per Chapter 3: Generic Exclusion Rules, non-English content (<80% English in main text) must be excluded. Also, the subject is not focused on technical implementation of Microsoft technologies but rather on career frameworks. Therefore, no categories are assigned."
+  },
+  {
+    "timestamp": "2025-10-28 17:14:17 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure/how-about-websoft9-application-hosting-platform/m-p/4464698#M1370",
+    "collection": "community",
+    "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-10-28 17:14:17 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/urgent-accidental-deletion-of-microsoft-clarity-project-manual/m-p/4464721#M22291",
+    "collection": "community",
+    "reason": "Insufficient content length"
   }
 ]

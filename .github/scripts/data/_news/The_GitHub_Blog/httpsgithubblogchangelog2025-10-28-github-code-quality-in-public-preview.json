@@ -1,0 +1,19 @@
+{
+  "PubDate": "2025-10-28T15:28:45+00:00",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Title": "GitHub Code Quality in public preview",
+  "Link": "https://github.blog/changelog/2025-10-28-github-code-quality-in-public-preview",
+  "ProcessedDate": "2025-10-28 17:05:04",
+  "EnhancedContent": "GitHub Code Quality is now available in public preview! It turns every pull request into an opportunity to improve. With in-context findings, one-click Copilot fixes, and reliability and maintainability scores, you spend less time chasing nits and more time building. It’s there when you need it most, surfacing quality issues both in the pull request and the backlog so you can fix technical debt on your schedule.\n\n### Who this is for\n\nDevelopers and engineering teams who want in‑context feedback about the quality of their code and an easier way to turn technical debt into reviewable fixes.\n\n### Highlights\n\n- *One-click enablement*: Try GitHub Code Quality quickly and easily.\n- *Actionable findings*: CodeQL-based quality rules detect maintainability and reliability issues in Java, C#, Python, JavaScript, Go, and Ruby.\n- *Reviews in context*: See quality findings directly in the pull request with guidance you can immediately act on.\n- *Track progress with quality scores*: Quality repository view groups findings by rule so you can prioritize fixes, while reliability and maintainability scores summarize their severity to help you target improvements.\n\n### How to try it\n\n1. If your organization has preview features enabled, go to **Settings** &gt; **Code quality** in your repository and enable the feature.\n2. Open a pull request in a supported language and review any inline findings and autofix suggestions.\n3. If you don’t have access yet, ask an organization admin to enable the preview flag for your organization. See more in [our documentation on enabling Code Quality](https://docs.github.com/code-security/code-quality/how-tos/enable-code-quality?utm_source=changelog-docs-gh-code-quality&amp;utm_medium=changelog&amp;utm_campaign=universe25).\n\n### Coming soon\n\n- Organization-level dashboards and enablement to manage code quality at scale.\n- Test coverage metrics to provide actionable quality data.\n- APIs to programmatically fetch code quality data or enable it at scale.\n- Copilot-powered quality recommendations for pull requests to supplement static analysis findings.\n\n### Availability and pricing\n\nGitHub Code Quality is available today for GitHub Enterprise Cloud and Team, but not available on Enterprise Server. It’s free during the preview period, however scans will incur Actions minutes.\n\n### Learn more\n\nCheck out [our GitHub Code Quality documentation](https://docs.github.com/code-security/code-quality/how-tos/enable-code-quality?utm_source=changelog-docs-gh-code-quality&amp;utm_medium=changelog&amp;utm_campaign=universe25).\n\nJoin the discussion and leave feedback on the [Code Quality announcement in the GitHub Community](https://github.com/orgs/community/discussions/177488?utm_source=changelog-community-gh-code-quality&amp;utm_medium=changelog&amp;utm_campaign=universe25)\n\n*Disclaimer: The UI for features in public preview is subject to change.*",
+  "FeedName": "The GitHub Blog",
+  "Description": "GitHub Code Quality is now available in public preview! It turns every pull request into an opportunity to improve. With in-context findings, one-click Copilot fixes, and reliability and maintainability scores,…\n\nThe post [GitHub Code Quality in public preview](https://github.blog/changelog/2025-10-28-github-code-quality-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).",
+  "Tags": [
+    "application security",
+    "platform governance",
+    "Release",
+    "universe25"
+  ],
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}

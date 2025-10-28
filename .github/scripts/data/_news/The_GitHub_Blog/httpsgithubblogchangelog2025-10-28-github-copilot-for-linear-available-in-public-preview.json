@@ -1,0 +1,18 @@
+{
+  "PubDate": "2025-10-28T15:25:36+00:00",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Title": "GitHub Copilot for Linear available in public preview",
+  "Link": "https://github.blog/changelog/2025-10-28-github-copilot-for-linear-available-in-public-preview",
+  "ProcessedDate": "2025-10-28 17:05:04",
+  "EnhancedContent": "You can now assign issues in Linear to Copilot coding agent, our asynchronous, autonomous background agent.\n\nWhen you assign a Linear issue to Copilot, it will:\n\n1. Analyze the issue contents and open a draft pull request.\n2. Work independently in its own ephemeral development environment, powered by GitHub Actions. Within this environment, Copilot can explore your code, make changes, run automated tests and linters, and more.\n3. Stream progress updates back to your Linear activity timeline.\n4. Request a pull request review from you when work is completed.\n\n## Key benefits\n\n- Automate repetitive tasks like bug fixes, refactors, and documentation updates.\n- Reduce manual steps and context switching between Linear and GitHub.\n- Follow your existing review and approval rules for every pull request Copilot creates.\n\n## Get started\n\n- Install the [GitHub Copilot coding agent for Linear app](https://github.com/apps/github-copilot-for-linear?utm_source=changelog-marketplace-cta-ccaintegration-linear&amp;utm_medium=changelog&amp;utm_campaign=universe25) from the GitHub Marketplace. You’ll need organization owner permissions in GitHub and workspace admin privileges in Linear.\n- Review our documentation to learn more about the [integration](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/integrate-coding-agent-with-linear) and [Copilot coding agent](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent).\n\nWe welcome your feedback. Feel free to share your thoughts in the [community discussion](https://github.com/orgs/community/discussions/177494?utm_source=changelog-discussion-post-ccaintegration-linear&amp;utm_medium=changelog&amp;utm_campaign=universe25).",
+  "FeedName": "The GitHub Blog",
+  "Description": "You can now assign issues in Linear to Copilot coding agent, our asynchronous, autonomous background agent. When you assign a Linear issue to Copilot, it will: Analyze the issue contents…\n\nThe post [GitHub Copilot for Linear available in public preview](https://github.blog/changelog/2025-10-28-github-copilot-for-linear-available-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).",
+  "Tags": [
+    "copilot",
+    "Release",
+    "universe25"
+  ],
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}
