@@ -7557,5 +7557,11 @@
     "reason": "No categories found: No categories assigned. The content discusses end-to-end observability, monitoring, and troubleshooting in frontend and backend systems, focusing on general DevOps principles, APM tooling, and practices such as distributed tracing and log aggregation. It references tools like Splunk and middleware.io, OpenTelemetry, and highlights real user monitoring and SLOs, but never once mentions, focuses on, or provides technical details for any Microsoft technologies, services, platforms, or frameworks (Azure, Azure Monitor, Application Insights, .NET, etc.). According to the Multi-Platform Content Threshold, Microsoft technology must be central or at least 40% of the content; here, no Microsoft technology is discussed. Thus, no categories can be applied.",
     "canonical_url": "https://devops.com/end-to-end-visibility-observability-in-frontend-backend-systems/",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-28 10:04:35 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/best-learning-paths-to-master-copilot-skills/",
+    "reason": "No categories found: All categories are excluded due to generic exclusion rules, specifically the 'Non-Development Microsoft Products' rule. The content covers both Microsoft 365 Copilot (primarily a business productivity tool) and GitHub Copilot. However, the article does not focus exclusively or centrally on GitHub Copilot as a developer tool. The majority of the learning path addresses Microsoft 365 Copilot, Copilot for Power Platform, and general productivity/business skill-building, not developer tool usage or technical implementation. According to the 'Copilot Product Distinction' section, if content is about business productivity (Microsoft 365 Copilot, Office Copilot), no categories may be assigned, even if developer tools are also mentioned. The developer aspects mentioned (such as the GitHub Copilot section) are not the main focus or ≥40% of the content, and most actionable tips/paths are about non-development productivity roles. Therefore, no qualifying categories may be assigned."
   }
 ]

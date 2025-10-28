@@ -13670,5 +13670,11 @@
     "reason": "Succesfully added: Assigned 'DevOps' because the content is deeply focused on patch automation within DevOps pipelines, including CI gating, automation, and cultural DevOps practices (DevOps rules 1-6). 'Security' is assigned since the article centers on vulnerability management, CVE scanning, runtime mitigation, SBOM, and securing delivery pipelines (Security rules 1, 2, 4, 5, 6, and 7). Azure DevOps is referenced as a best practice, supporting Microsoft relevance, but the majority of the article is platform-agnostic best practices with concrete Microsoft pipeline links, qualifying under multi-platform guidelines as applicable when Microsoft-related approaches are included (Rule Hierarchy Clarification and Multi-Platform Content Threshold). Excluded Azure, Coding, AI, and ML since there is no deep technical implementation of Microsoft code, infrastructure, AI/ML, or cloud-specific setup.",
     "canonical_url": "https://devops.com/patch-management-is-essential-for-securing-devops/",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://andrewlock.net/understanding-the-worst-dotnet-vulnerability-request-smuggling-and-cve-2025-55315/",
+    "reason": "Succesfully added: Assigned Security category because the content is an in-depth technical exploration of a .NET/ASP.NET Core security vulnerability (Security rules 1, 2, 9). Assigned Coding category because it explains underlying HTTP parsing, provides code samples, and practical .NET implementation contexts (Coding rule 4). The blog is aimed at practitioners, describes threat mechanics, mitigation steps, and has concrete, actionable recommendations for developers. No AI, Azure, DevOps, ML, or GitHub Copilot content detected after full content review.",
+    "timestamp": "2025-10-28 11:04:35 +00:00",
+    "collection": "posts"
   }
 ]
