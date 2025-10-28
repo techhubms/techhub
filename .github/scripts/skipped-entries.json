@@ -7563,5 +7563,11 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/best-learning-paths-to-master-copilot-skills/",
     "reason": "No categories found: All categories are excluded due to generic exclusion rules, specifically the 'Non-Development Microsoft Products' rule. The content covers both Microsoft 365 Copilot (primarily a business productivity tool) and GitHub Copilot. However, the article does not focus exclusively or centrally on GitHub Copilot as a developer tool. The majority of the learning path addresses Microsoft 365 Copilot, Copilot for Power Platform, and general productivity/business skill-building, not developer tool usage or technical implementation. According to the 'Copilot Product Distinction' section, if content is about business productivity (Microsoft 365 Copilot, Office Copilot), no categories may be assigned, even if developer tools are also mentioned. The developer aspects mentioned (such as the GitHub Copilot section) are not the main focus or ≥40% of the content, and most actionable tips/paths are about non-development productivity roles. Therefore, no qualifying categories may be assigned."
+  },
+  {
+    "reason": "No categories found: All categories are excluded due to failing the Generic Exclusion Rules. The content is primarily a personal narrative about attending the GitHub Universe event for the first time (biographical focus exclusion), and contains no substantive technical or educational content about Microsoft technologies, technical implementations, or developer tooling. The description is focused on event attendance, community interaction, and general GitHub promotion rather than technical topics, code, tools, or methodologies. There are also multiple promotional links and no technical depth provided. Therefore, no categories apply.",
+    "collection": "videos",
+    "timestamp": "2025-10-28 13:12:28 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/bvmRmvQC2nk"
   }
 ]
