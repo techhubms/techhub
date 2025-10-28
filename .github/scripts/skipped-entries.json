@@ -7545,5 +7545,17 @@
     "canonical_url": "https://www.youtube.com/shorts/Jsv15r19IP8",
     "timestamp": "2025-10-27 22:04:39 +00:00",
     "reason": "No categories found: No categories assigned because the content is primarily an event promotion and mascot-focused video with no substantive technical content related to Microsoft technology, coding, DevOps, AI, Azure, ML, or Security. The description centers on experiencing the GitHub Universe event with the Octocat mascot and includes social media links and a general overview of GitHub as a platform, but does not present any technical detail, guidance, or developer best practices. This triggers the generic exclusion rule for promotional and non-technical content."
+  },
+  {
+    "timestamp": "2025-10-28 09:05:50 +00:00",
+    "reason": "No categories found: All content focuses on using Microsoft OneNote with Copilot (the AI assistant built into Microsoft 365) to improve note-taking and productivity. According to the workflow's Copilot Product Distinction, 'Copilot for Microsoft 365', 'Microsoft 365 Copilot', 'Office Copilot', and the general version of 'Microsoft Copilot' for business productivity are explicitly excluded as non-development Microsoft 365 products. The article does not cover code development, developer tooling, or technical implementation details but instead focuses on end-user features, productivity, and organizational workflows. Therefore, per the Non-Development Microsoft Products exclusion and Copilot product distinction, no categories are assigned.",
+    "canonical_url": "https://dellenny.com/onenote-copilot-smarter-note-taking-and-organization-with-ai/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-28 09:06:52 +00:00",
+    "reason": "No categories found: No categories assigned. The content discusses end-to-end observability, monitoring, and troubleshooting in frontend and backend systems, focusing on general DevOps principles, APM tooling, and practices such as distributed tracing and log aggregation. It references tools like Splunk and middleware.io, OpenTelemetry, and highlights real user monitoring and SLOs, but never once mentions, focuses on, or provides technical details for any Microsoft technologies, services, platforms, or frameworks (Azure, Azure Monitor, Application Insights, .NET, etc.). According to the Multi-Platform Content Threshold, Microsoft technology must be central or at least 40% of the content; here, no Microsoft technology is discussed. Thus, no categories can be applied.",
+    "canonical_url": "https://devops.com/end-to-end-visibility-observability-in-frontend-backend-systems/",
+    "collection": "posts"
   }
 ]

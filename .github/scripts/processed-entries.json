@@ -13640,5 +13640,35 @@
     "reason": "Succesfully added: Included the AI category because the article focuses on explaining Small Language Models (SLMs) and their technical and practical relevance, with particular reference to Microsoft’s Azure AI Foundry (AI inclusion rule 1, 4, and 6). Did not assign Azure or ML: although Azure AI Foundry is mentioned, the piece does not provide Azure-specific implementation or cloud integration guidance (required for Azure) or go into ML/data science development (required for ML). No Coding or DevOps applies as the article does not address programming practices, code samples, or development workflows, and it is not security-focused. The content is in English, exceeds the word minimum for community content, and is not a sales pitch, biographical, question-only, or negative—none of the generic exclusions apply.",
     "timestamp": "2025-10-28 07:05:41 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-small-language-modes/ba-p/4462827"
+  },
+  {
+    "timestamp": "2025-10-28 09:05:36 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content is centrally focused on the GitHub Copilot Certification Exam, including details about preparation, responsible AI, prompt engineering, and developer workflows. This matches AI inclusion rules (Microsoft AI product, developer use, responsible AI topics) and GitHub Copilot inclusion rules (product-specific exam, features, usage). Coding and other categories were not assigned because, while the context assumes developer skills, the content itself focuses entirely on certification and tool usage rather than programming languages, DevOps practices, broader Azure deployment, data/ML engineering, or security topics. The guide fully meets Tech Hub's technical clarity and professional standards, with technical focus and actionable steps.",
+    "canonical_url": "https://dellenny.com/how-to-register-and-prepare-for-the-github-copilot-exam-step-by-step-guide/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-28 09:06:11 +00:00",
+    "reason": "Succesfully added: Assigned the 'GitHub Copilot' category because the content directly addresses strategies and best practices for using GitHub Copilot (GitHub Copilot inclusion rules 1-4). 'AI' is included as all Copilot content must also have AI per the workflow. 'Coding' is assigned since the article focuses on code quality, refactoring, testing, and development practices important to programmers (Coding inclusion rules 4 and 5). Did not assign DevOps, Azure, ML, or Security as the primary focus is AI-powered code assistance, not deployment, cloud services, data science, or in-depth security implementation.",
+    "canonical_url": "https://dellenny.com/writing-cleaner-code-with-github-copilot-suggestions/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-28 09:06:36 +00:00",
+    "reason": "Succesfully added: Applied only the 'DevOps' category. The article is focused on DevOps operational strategy, incident response, automation, observability, and metric classification in cloud-native and Kubernetes environments. There is significant discussion of tools like Prometheus, ArgoCD, and Grafana, but no substantive focus on Microsoft-specific technologies (Azure, .NET, etc.), AI/ML development, Security, or Coding (per category rules). Thus, none of the other categories apply. Generic exclusion rules do not apply: this is not biographical, sales-oriented, negative, or non-English, and is sufficiently technical and detailed.",
+    "canonical_url": "https://devops.com/a-modern-approach-to-multi-signal-optimization/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-28 09:07:12 +00:00",
+    "reason": "Succesfully added: Only the DevOps category is assigned. The content centers on observability—a key DevOps practice—discussing incident detection, MTTR reduction, shift-left approaches, and platform monitoring. It does not describe specific Microsoft technologies (no substantial Azure, GitHub, or .NET presence), nor does it focus on coding, AI, ML, Azure, or Security implementation per Tech Hub category definitions. Therefore, only 'DevOps' is included per category inclusion rules.",
+    "canonical_url": "https://devops.com/how-observability-improves-user-experience-and-digital-performance/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-28 09:07:36 +00:00",
+    "reason": "Succesfully added: Assigned 'DevOps' because the content is deeply focused on patch automation within DevOps pipelines, including CI gating, automation, and cultural DevOps practices (DevOps rules 1-6). 'Security' is assigned since the article centers on vulnerability management, CVE scanning, runtime mitigation, SBOM, and securing delivery pipelines (Security rules 1, 2, 4, 5, 6, and 7). Azure DevOps is referenced as a best practice, supporting Microsoft relevance, but the majority of the article is platform-agnostic best practices with concrete Microsoft pipeline links, qualifying under multi-platform guidelines as applicable when Microsoft-related approaches are included (Rule Hierarchy Clarification and Multi-Platform Content Threshold). Excluded Azure, Coding, AI, and ML since there is no deep technical implementation of Microsoft code, infrastructure, AI/ML, or cloud-specific setup.",
+    "canonical_url": "https://devops.com/patch-management-is-essential-for-securing-devops/",
+    "collection": "posts"
   }
 ]
