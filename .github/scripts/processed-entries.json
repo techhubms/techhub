@@ -13838,5 +13838,17 @@
     "collection": "community",
     "timestamp": "2025-10-28 19:05:13 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/reimagining-ai-at-scale-nvidia-gb300-nvl72-on-azure/ba-p/4464556"
+  },
+  {
+    "timestamp": "2025-10-28 21:05:27 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'Azure' category because the article centrally discusses Azure Migrate, Azure Local, Azure Arc, and related migration and modernization solutions (Azure inclusion rules 1, 2, 4, 5, and 6). 'DevOps' applies because the content covers migration processes, orchestration via the Azure portal, automation with PowerShell, unified management, and deployment methodologies (DevOps rules 3, 5, and 6). 'Security' is relevant due to focus on governance, compliance (sovereign control, data residency), and secure migration (Security rules 1, 4, and 7). Coding, AI, ML, and GitHub Copilot are not assigned because the content does not address development frameworks, programming, AI/ML, or Copilot. All generic exclusion rules were considered and did not apply; technical implementation is present, and the content is clearly development/infrastructure focused, not biographical, sales, or business-strategy driven.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-migrate-expands-capabilities-to-accelerate-migration-to/ba-p/4464789"
+  },
+  {
+    "timestamp": "2025-10-28 21:05:49 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category due to deep focus on Azure NetApp Files and storage management with Azure services (Azure rule 1, 2, 4, 5). Assigned AI category because the extension leverages AI features for template generation, workload sizing, and integrates with natural language commands (AI rules 1, 3, 4, 5). Assigned Coding because content discusses developer tooling (VS Code), ARM template generation, and integration with Copilot for programming tasks (Coding rules 2, 4, 5). Assigned DevOps due to workflow automation, infrastructure as code, and DevOps practices described (DevOps rules 1, 5, 6, 8, 9). GitHub Copilot appears, but content focuses on integration rather than Copilot-specific functions, so GitHub Copilot category is not included. No generic exclusion rules are triggered as content is technical, substantial, and English.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-cloud-native-development-with-ai-powered-azure/ba-p/4464852"
   }
 ]

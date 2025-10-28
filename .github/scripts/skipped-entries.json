@@ -7629,5 +7629,11 @@
     "timestamp": "2025-10-28 18:06:35 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/kMerQxk_7ks",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is an event keynote announcement focused on product launches, live demos, and general future vision for GitHub. There are no specific technical details about developer tools, coding, DevOps, or Microsoft technologies present in the description. It is primarily an announcement/promotion of an event and does not meet the inclusion requirements for any category (per Generic Exclusion Rules, sales/promo content with no substantive technical detail is excluded).",
+    "timestamp": "2025-10-28 20:05:26 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=P6Va0_KILi4",
+    "collection": "videos"
   }
 ]
