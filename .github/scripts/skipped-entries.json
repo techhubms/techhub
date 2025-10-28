@@ -7611,5 +7611,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/urgent-accidental-deletion-of-microsoft-clarity-project-manual/m-p/4464721#M22291",
     "collection": "community",
     "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: All content centers on Microsoft 365 Copilot, specifically describing new features for Copilot in the Microsoft 365 productivity suite (App Builder, Workflows, Copilot Studio lite as embedded in Microsoft 365 Copilot). According to the CRITICAL Copilot Product Distinction in Chapter 2 and the Non-Development Microsoft Products exclusion rule in Chapter 3, business productivity Copilot (Microsoft 365 Copilot, Copilot for Microsoft 365, Office Copilot) content must be excluded and assigned no categories. There is no focus on developer tooling, code development, or applicable technical architecture outside the end-user productivity workflow; therefore, no categories are assigned.",
+    "timestamp": "2025-10-28 18:05:53 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-365/blog/2025/10/28/microsoft-365-copilot-now-enables-you-to-build-apps-and-workflows/",
+    "collection": "news"
+  },
+  {
+    "reason": "No categories found: All generic exclusion rules were applied first. The content is an announcement of partner awards, focusing on recognizing and celebrating third-party organizations that have collaborated with GitHub. There is no substantial coverage of Microsoft technology implementation, technical development topics, or developer tooling. It is primarily a company news item centered on partnerships, business relationships, and organizational achievements. No technical depth, tutorials, or actionable insights relevant to Microsoft's developer, AI, Azure, Coding, DevOps, ML, or Security categories are present. Therefore, no categories were assigned.",
+    "timestamp": "2025-10-28 18:06:09 +00:00",
+    "canonical_url": "https://github.blog/news-insights/company-news/announcing-the-2025-github-partner-award-winners/",
+    "collection": "news"
+  },
+  {
+    "reason": "No categories found: Excluded all categories due to lack of substantive content. The input contains only a title, author, type, and tags, but no actual content or description to evaluate. According to the workflow rules, categorization decisions must be based on the provided content, not just the title or tags. Without content, it's impossible to determine if this video genuinely covers Microsoft technologies (such as GitHub Copilot, Azure, or AI services) or simply references integrations with OpenAI Codex in a general sense. Therefore, exclusion is required as per the rule: 'Never fabricate information – Base decisions only on provided content.'",
+    "timestamp": "2025-10-28 18:06:35 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/kMerQxk_7ks",
+    "collection": "videos"
   }
 ]

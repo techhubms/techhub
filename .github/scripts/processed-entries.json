@@ -13814,5 +13814,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/overload-to-optimal-tuning-microsoft-fabric-capacity/ba-p/4464639",
     "collection": "community",
     "reason": "Succesfully added: Assigned 'Azure' category because the article deeply addresses Microsoft Fabric, which is an Azure analytics platform, aligning with Azure rule 1 and 4. Assigned 'ML' category due to thorough coverage of cluster tuning, Spark diagnostics, Delta Lake optimizations, and best practices for data engineering at scale, all of which align with ML rule 1, 2, 5, and 6 regarding data engineering for analytics and performance optimization. Not assigned 'AI' because the article does not discuss AI services, AI model integration, or pre-built AI capabilities. Not assigned 'Coding', 'DevOps', 'Security', or 'GitHub Copilot' as there is no direct focus on application/programming practices, DevOps tooling/methodology, security, or GitHub tools. All category choices are based strictly on the content's technical focus, in accordance with the outlined rules."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category due to focus on connecting AI agents with Azure services using the Model Context Protocol (AI inclusion rules 1 and 4). 'Azure' applies as MCP Server is entirely about Azure service orchestration (Azure rule 1). 'DevOps' is included since there's deep CI/CD, Docker, and pipeline integration (DevOps rules 1, 5, 6). 'Coding' applies due to multiple references to developer-facing workflows, IDE integration, and code-driven automation (Coding rules 2, 4, 5). No 'ML' category because, while ML/AI is discussed, this release is about orchestration and agentic automation, not about building custom ML/data science applications. No 'Security' category as security features are present but not the primary focus.",
+    "timestamp": "2025-10-28 18:05:16 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/azure-sdk/announcing-azure-mcp-server-stable-release/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Coding category because the content covers the usage and open sourcing of a Visual Studio Code extension for developer workflows with Microsoft Fabric (Coding rules 1, 2, and 5). Assigned DevOps because of integration with Git, workspace management, and developer tooling (DevOps rules 2, 5, 8, and 9). Assigned Azure because Microsoft Fabric is a major Azure service, with the content emphasizing integration and development for the cloud platform (Azure rules 1 and 4). ML was considered but not added since this announcement is focused on developer tooling and integration rather than specific analytics or data science workloads. AI was not assigned, as this extension is not centered on AI or Copilot development. Security was not assigned, as there is no security-focused implementation or discussion. No generic exclusion rules apply, and the content is technical and developer-focused.",
+    "timestamp": "2025-10-28 18:05:40 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-the-open-source-release-of-microsoft-fabric-extension-for-vs-code/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the video demonstrates the use of OpenAI Codex (AI rule 1) inside Visual Studio Code. Assigned 'GitHub Copilot' because this integration is specifically for users with a GitHub Copilot Pro+ subscription (GitHub Copilot rule 1), and per the prompt, 'GitHub Copilot' always includes 'AI.' Assigned 'Coding' since the focus is on using AI-powered coding features within an IDE (Coding rule 5). The information fits all inclusion rules and no generic exclusion rules apply.",
+    "timestamp": "2025-10-28 18:06:52 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=I51wun3OnmQ",
+    "collection": "videos"
   }
 ]
