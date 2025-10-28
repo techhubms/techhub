@@ -13856,5 +13856,17 @@
     "reason": "Succesfully added: Assigned 'AI' because the primary focus is managing and working with AI agents in development workflows, matching AI inclusion rule 1 and 4. Assigned 'DevOps' because Agent HQ provides workflow management, progress tracking, and code review capabilities within GitHub, addressing DevOps inclusion rules 3, 5, and 9. Did not assign GitHub Copilot because there is no mention or inference of the GitHub Copilot developer tool. Did not assign Coding because there are no specifics about programming languages, code samples, or implementation details. No Azure, ML, or Security categories apply as those topics are not covered.",
     "timestamp": "2025-10-28 22:05:34 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content centers on GitHub Copilot and new AI-powered custom agents (AI rules 1, 2; GitHub Copilot rule 1). Assigned 'Coding' since the article focuses on improving C# and WinForms development practices—core programming tasks—with these agents (Coding rules 1, 4). Did not assign Azure, DevOps, ML, or Security, as the article does not focus on cloud, operational, ML, or security topics.",
+    "timestamp": "2025-10-28 23:05:09 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/introducing-custom-agents-for-dotnet-developers-csharp-expert-winforms-expert/"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the DevOps category because the recap centers on new GitHub platform functionality (Agent HQ, Mission Control, Plan Mode in VS Code, Custom Agents), which are oriented toward team collaboration, workflow automation, and developer productivity (DevOps rules 2, 3, and 9). Did NOT assign 'AI' or 'GitHub Copilot' because the content discusses integrating third-party AI agents in general (not GitHub Copilot specifically), and there's no deep technical detail on AI-specific developer tools or ML/AI engineering (AI rules 2 and 4 not satisfied). 'Coding' is not assigned since content is about platform features rather than language/framework programming. 'Azure', 'Security', and 'ML' categories are not mentioned or implied.",
+    "timestamp": "2025-10-28 23:05:49 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/jH_ub5Trsi4"
   }
 ]
