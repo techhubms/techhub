@@ -7569,5 +7569,23 @@
     "collection": "videos",
     "timestamp": "2025-10-28 13:12:28 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/bvmRmvQC2nk"
+  },
+  {
+    "timestamp": "2025-10-28 15:04:52 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_were-continuing-to-make-copilot-even-more-activity-7388719843178442752-_-RT",
+    "reason": "No categories found: Content is excluded due to generic exclusion rule: it focuses on Microsoft 365 Copilot and Teams Mode, which is categorized as a business productivity offering (non-development Microsoft 365 product) rather than a developer tool. Per Chapter 3 Non-Development Microsoft Products exclusion and CRITICAL: Copilot Product Distinction in Chapter 2, any content about Microsoft 365 Copilot (including Teams integrations for co-creating documents or tasks) must be excluded. No technical development, code, or implementation details are present—only high-level business productivity features are discussed. Therefore, no categories can be assigned."
+  },
+  {
+    "timestamp": "2025-10-28 15:05:10 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/how-to-register-and-prepare-for-the-github-copilot-exam-step-by/m-p/4464759#M174",
+    "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-10-28 15:05:10 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/writing-cleaner-code-with-github-copilot-suggestions/m-p/4464758#M173",
+    "reason": "Insufficient content length"
   }
 ]
