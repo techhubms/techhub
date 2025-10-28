@@ -13676,5 +13676,11 @@
     "reason": "Succesfully added: Assigned Security category because the content is an in-depth technical exploration of a .NET/ASP.NET Core security vulnerability (Security rules 1, 2, 9). Assigned Coding category because it explains underlying HTTP parsing, provides code samples, and practical .NET implementation contexts (Coding rule 4). The blog is aimed at practitioners, describes threat mechanics, mitigation steps, and has concrete, actionable recommendations for developers. No AI, Azure, DevOps, ML, or GitHub Copilot content detected after full content review.",
     "timestamp": "2025-10-28 11:04:35 +00:00",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-28 12:05:55 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/how-to-safely-remove-secrets-from-your-git-history-the-right-way/ba-p/4464722",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned DevOps category because the guide focuses on advanced Git version control operations, workflow coordination, and repository management (DevOps rules 2, 5, 6, 8). Assigned Security category because it centers on removing sensitive information from codebases and preventing security leaks (Security rules 2, 5, 7). Did not assign Azure, AI, ML, GitHub Copilot, or Coding, as the content is not specific to those technologies or practices. Content is well above 200 words and fits quality standards."
   }
 ]
