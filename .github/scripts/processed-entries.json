@@ -13688,5 +13688,11 @@
     "collection": "videos",
     "timestamp": "2025-10-28 13:12:57 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=5K1NiGtUrhw"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content centers on Azure Local, a Microsoft service, and discusses deployment, management, and scenarios (Azure inclusion rules 1 and 4). 'Security' category is assigned due to explicit sections and demos on Azure Defender, management of security postures, and disaster recovery (Security rules 1, 5, 9). Not assigning 'AI' since, while 'AI and inference workloads' are mentioned, there are no technical implementation details, API walkthroughs, or prominent AI focus. 'DevOps', 'ML', 'Coding', and 'GitHub Copilot' do not apply because the content is about infrastructure deployment/management rather than code, pipelines, or ML/data engineering. No generic exclusion rules apply: the content is clearly technical, substantial, in English, not a sales pitch or personal story, and centrally Microsoft-focused.",
+    "collection": "posts",
+    "canonical_url": "https://www.thomasmaurer.ch/2025/10/new-video-azure-local-overview/",
+    "timestamp": "2025-10-28 14:04:44 +00:00"
   }
 ]
