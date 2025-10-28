@@ -13628,5 +13628,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/finops-blog/unlock-savings-with-copilot-credit-pre-purchase-plan/ba-p/4464511",
     "timestamp": "2025-10-27 22:05:04 +00:00",
     "reason": "Succesfully added: Assigned the 'AI' category because Copilot Studio and Copilot Chat are Microsoft AI tools for creating custom conversational agents and automations (AI rule 1 and rule 5). The content does not focus on GitHub Copilot, so 'GitHub Copilot' is not assigned. It is not 'DevOps', 'Azure', or 'Coding' focused—the primary content is about credit management for using Copilot Studio and Dynamics 365 AI features. Excluded all categories except AI per rules."
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Azure category because the content focuses exclusively on optimizing costs within Microsoft Azure using reserved VM instances (Azure inclusion rules 1 and 4). The video is not about coding, AI, ML, DevOps, or Security, so those categories were not assigned. Content is in English, technical, focuses on substantive Azure platform practices, and has sufficient length and depth per the inclusion rules.",
+    "timestamp": "2025-10-28 07:05:17 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=PRGo-RH-sL4"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Included the AI category because the article focuses on explaining Small Language Models (SLMs) and their technical and practical relevance, with particular reference to Microsoft’s Azure AI Foundry (AI inclusion rule 1, 4, and 6). Did not assign Azure or ML: although Azure AI Foundry is mentioned, the piece does not provide Azure-specific implementation or cloud integration guidance (required for Azure) or go into ML/data science development (required for ML). No Coding or DevOps applies as the article does not address programming practices, code samples, or development workflows, and it is not security-focused. The content is in English, exceeds the word minimum for community content, and is not a sales pitch, biographical, question-only, or negative—none of the generic exclusions apply.",
+    "timestamp": "2025-10-28 07:05:41 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-small-language-modes/ba-p/4462827"
   }
 ]

@@ -1,0 +1,16 @@
+{
+  "PubDate": "2025-10-28T07:00:24+00:00",
+  "Author": "Microsoft Developer",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedName": "Microsoft Developer YouTube",
+  "Tags": [
+    "AzureEssentialsShow"
+  ],
+  "EnhancedContent": null,
+  "Description": "In this episode of the #AzureEssentialsShow, Thomas is joined by Priyanshi from Microsoft Azure to explore how organizations can optimize their cloud spending using Azure Reserved Virtual Machine Instances. The discussion covers the fundamentals of reserved instances, practical strategies for leveraging Azure’s recommendations, and key best practices to maximize savings while maintaining performance and scalability.\n\nIn this episode you will learn: • How Azure Reserved VM Instances work and the billing benefits they offer for predictable workloads. • Ways to use Azure Advisor and historical usage data to identify the best reservation options for your environment. • Best practices and common pitfalls to avoid when purchasing and managing reservations, including scope, utilization alerts, and auto-renewal.\n\nSuggested next steps: • Review your organization’s VM usage in Azure and explore reservation recommendations in Azure Advisor or the reservation purchase flow. • Set up RI Utilization Alerts and enable auto-renewal to proactively manage reservation benefits. • Visit Microsoft Learn and watch the recommended video series for step-by-step guidance on purchasing and monitoring Azure reservations.\n\nResources • Video: Manage Azure AI Foundry Provisioned Throughput Reservations https://www.youtube.com/watch?v=o5hCnWfqAzc • Video: Advisor Clinic: Lower costs with Azure Virtual Machine reservations https://www.youtube.com/watch?v=o5hCnWfqAzc • Save with Azure reservations https://learn.microsoft.com/azure/cost-management-billing/reservations • More Essential resources! https://azure.com/AzureEssentials\n\nRelated episodes • More Pricing videos https://aka.ms/AzurePricingVideos • Watch the Azure Essentials Show https://aka.ms/AzureEssentialsShow\n\nConnect • Thomas Maurer https://www.linkedin.com/in/thomasmaurer2 • Priyanshi Mittal https://www.linkedin.com/in/priyanshi90\n\nChapters 0:00 In this episode… 0:25 Introduction 0:55 What are Reserved Instances 1:43 Strictly a billing benefit 2:04 Discount applies to any VM in scope 2:20 Only covers compute cost on Windows VMs 3:00 What about scaling? 4:00 Recommendations based on usage 4:35 Quick demo 5:15 Best practices 6:11 Things to keep in mind 6:51 Get started",
+  "Title": "Optimize Azure Costs with Reserved Instances",
+  "ProcessedDate": "2025-10-28 07:04:23",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=PRGo-RH-sL4"
+}
