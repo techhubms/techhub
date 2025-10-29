@@ -14006,5 +14006,11 @@
     "reason": "Succesfully added: Content is focused on developer-oriented features of the AI Toolkit for Visual Studio Code, specifically highlighting GitHub Copilot as a prompt-based coding enabler for agent development. 'AI' is assigned (AI rule 1 and 4) due to the central usage of Microsoft AI frameworks and Copilot Studio-like development. 'GitHub Copilot' is assigned (GitHub Copilot category rules 1 and 2) as Copilot is a core feature. 'Coding' is included (Coding category rules 2 and 4) due to the technical depth in agent workflow orchestration and code generation within VS Code. No other categories apply as there is no Azure-specific infrastructure, CI/CD/DevOps process configuration, ML/deep learning construction, or explicit security implementation described.",
     "timestamp": "2025-10-29 21:12:35 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/announcing-public-preview-ai-toolkit-for-github-copilot-prompt/ba-p/4465069"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=q1IxyisKcZI",
+    "timestamp": "2025-10-29 23:04:56 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories. The content focuses on how GitHub Copilot (a developer AI tool) and AI-powered development are accelerating software creation, featuring multiple demos and real-world applications. GitHub Copilot is central, as highlighted in multiple sections (e.g., Hacking a Furby, community/hackathon projects, open source demos). The session is not about general business productivity, but centers on code, technical workflows, and developer innovation with Copilot and AI (AI rule 1, 2; GitHub Copilot rule 1-6). No other categories (e.g., Coding, DevOps, Azure, ML, Security) were assigned as the content is broad and focuses on Copilot and AI enablement rather than deep dives into coding techniques, operational workflows, or specific platform/tool/ML implementations."
   }
 ]
