@@ -7653,5 +7653,59 @@
     "reason": "No categories found: No categories assigned. The content is a reaction video featuring attendee responses to general keynote announcements at GitHub Universe and focuses on impressions of features like Agent HQ, Mission Control dashboard, and Plan Mode. There is no substantive technical depth, code walkthrough, or concrete development, coding, DevOps, or AI implementation described. The video centers on summarizing excitement and impressions, making it similar to event coverage or community reactions, which do not meet category inclusion rules for technical content. The content also lacks sufficient coverage of Azure, Microsoft developer tooling, or any of the defined category-linked practices, per workflow requirements in Chapters 2 and 4.",
     "collection": "videos",
     "timestamp": "2025-10-29 07:04:40 +00:00"
+  },
+  {
+    "timestamp": "2025-10-29 14:05:06 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-resource-manager-arm-the-backbone-of-cloud-resource/m-p/4465176#M22295"
+  },
+  {
+    "timestamp": "2025-10-29 14:05:06 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/global-infrastructure-101-understanding-data-centers-regions-and/m-p/4465181#M22298"
+  },
+  {
+    "timestamp": "2025-10-29 14:05:06 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/top-10-azure-services-everyone-should-know-2025-edition/m-p/4465178#M22296"
+  },
+  {
+    "timestamp": "2025-10-29 14:05:06 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/what-is-microsoft-azure-a-beginner-s-guide-to-the-azure/m-p/4465180#M22297"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: All categories are excluded due to the 'Non-Development Microsoft Products' generic exclusion rule. The content is focused on Microsoft 365 Copilot's new App Builder and Workflow features inside M365 Copilot chat. According to the workflow's Copilot product distinction and exclusion list, Microsoft 365 Copilot is considered a business productivity tool, not a developer tool. The content demonstrates creating apps and automating workflows in a general productivity environment, not a development context, with no focus on code, developer APIs, or extensibility for development professionals. Per rule: 'Microsoft 365 Copilot → No categories (excluded as non-development Microsoft 365 product)'. No other technical/developer category applies.",
+    "timestamp": "2025-10-29 21:09:15 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_super-energized-about-this-with-app-builder-activity-7389134911196233728-t8wO"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because the content is focused on personalizing a conference badge (hardware novelty) and not on developer tooling, programming, cloud, or core Microsoft technologies. There are no references to GitHub Copilot, DevOps, Coding, AI, Azure, ML, or Security topics. The video is a quick guide to modify a physical badge, and while it references VS Code and Python, it does so in the context of simple personalization (changing a handle) and not in a way that teaches technical development with Microsoft platforms or code practices. Therefore, none of the inclusion rules across any category apply.",
+    "timestamp": "2025-10-29 21:10:01 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/H3S8LCyOZQA"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded because the 'content' field is null, which means there is no substantive content provided to evaluate against the category inclusion rules. According to the workflow, categorization relies on actual content substance, and without it, no categories can be assigned.",
+    "timestamp": "2025-10-29 21:10:31 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Cb3P7pOFOWE"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because the provided content lacks sufficient information. The description field is empty, the content field is null, and no tags are provided. Without access to the actual content or a meaningful summary in description, there is no way to determine if the video meets any category inclusion criteria or passes the 40% Microsoft technology threshold. Per the workflow, when in doubt or when content information is missing, categories should be left empty.",
+    "timestamp": "2025-10-29 21:11:25 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/jsjOZltEuyc"
+  },
+  {
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-10-29 21:11:48 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/health-state-of-vdiadmin-session-host-is-needs-assistance/m-p/4465098#M13930"
   }
 ]
