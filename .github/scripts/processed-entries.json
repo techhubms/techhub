@@ -13934,5 +13934,11 @@
     "timestamp": "2025-10-29 11:04:32 +00:00",
     "reason": "Succesfully added: Assigned DevOps category because the content centers on selecting and evaluating DevOps service providers and covers best practices for team structure, CI/CD, automation, and infrastructure management (DevOps inclusion rules 1-6, 8, 9). Included Security category because the guide emphasizes security practices such as DevSecOps, vulnerability scanning, compliance checks, and secret management during provider assessment (Security rules 2, 4, 5, 6, 7). No additional categories apply, as there is no Microsoft-specific technical coverage, coding examples, or AI/ML focus.",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-29 13:13:41 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=QnY-D5bdh4Y",
+    "reason": "Succesfully added: Assigned 'Azure' because the migration centers on transitioning user identity management to Microsoft Entra ID, a core Azure cloud identity service (Azure rule 1). Assigned 'Security' because the video emphasizes leveraging Entra ID's enhanced governance and security (Security rule 1 and 2). Did not assign other categories (e.g. Coding, DevOps, AI, ML) because the focus is on identity management, configuration, and migration rather than application development, scripting, or automation. The input did not indicate any coding, automation, or machine learning specifics. Tags chosen reflect technical keywords central to Microsoft cloud identity and migration topics presented.",
+    "collection": "videos"
   }
 ]
