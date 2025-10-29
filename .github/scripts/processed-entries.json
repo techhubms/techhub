@@ -13874,5 +13874,29 @@
     "collection": "videos",
     "timestamp": "2025-10-29 01:32:37 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=3UoDsdemIdA"
+  },
+  {
+    "timestamp": "2025-10-29 05:04:49 +00:00",
+    "reason": "Succesfully added: I assigned the DevOps category based on the primary content focus on DevOps practices, benefits, culture, CI/CD, automation, and relevant tooling (Jenkins, Docker, Kubernetes) as detailed in the content (DevOps rule 1, 2, 4, and 5). No Microsoft-specific technologies or platforms (Azure, .NET, etc.) are substantially addressed (less than threshold for Azure/Coding categories), and there is no significant AI/ML or Security focus. The post contains educational content with practical insights on DevOps implementation, meeting the inclusion criteria for this category. No generic exclusion rules apply.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/7-proven-benefits-of-devops-implementation-in-modern-software-development/"
+  },
+  {
+    "timestamp": "2025-10-29 05:05:10 +00:00",
+    "reason": "Succesfully added: Assigned AI category as the article focuses on GitHub’s Agent HQ platform, which centralizes the management of AI agents in DevOps workflows (AI rule 1 and 4). DevOps category is included because the content details new features for DevOps teams, including CI, branch controls, code reviews, workflow automation, and team collaboration (DevOps rule 1, 5, and 6). Did not assign Coding or GitHub Copilot because, while Copilot plan mode is mentioned, the main focus is on AI agent workflow orchestration rather than direct code development or Copilot usage. No other categories fit the majority of the content.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/github-adds-platform-for-managing-ai-agents-embedded-in-devops-workflows/"
+  },
+  {
+    "timestamp": "2025-10-29 05:05:31 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content centers on AI copilots, automated agents, and their impact on development workflow (AI rule 1 and 4). Security category applies due to detailed analysis of security risks, continuous guardrails, compliance requirements, and frameworks such as NIST and PCI DSS (Security rules 2, 4, 5, and 9). DevOps category is included because the SDLC transformation, automation, guardrails in CI/CD pipelines, and discussion of DevSecOps practices are central to the article (DevOps rules 1, 4, 5, and 6). No Azure-specific Microsoft product or coding tutorial is featured, so those categories are omitted. All decisions are based on how AI is driving security automation and compliance changes in modern software development.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/securing-the-ai-era-how-development-security-and-compliance-must-evolve/"
+  },
+  {
+    "timestamp": "2025-10-29 05:05:51 +00:00",
+    "reason": "Succesfully added: Content qualifies for the AI category because it extensively discusses the impact and use of AI-powered coding tools, referencing rule 1 and rule 4 under AI. The DevOps category is also included because the main focus is on how these AI tools are changing DevOps workflows and pipeline processes, which matches multiple DevOps rules (CI/CD, pipeline automation, team practices). No Coding, Azure, ML, Security, or GitHub Copilot categories were added because the article does not provide Microsoft-specific or code-level implementation, nor does it discuss developer tools/products in those categories directly. The reasoning was based strictly on survey content and topic focus: impact of AI coding tools (not specifically Microsoft, but relevant to Tech Hub audience for workflow insights).",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/survey-surfaces-impact-ai-coding-tools-are-having-on-devops-workflows/"
   }
 ]
