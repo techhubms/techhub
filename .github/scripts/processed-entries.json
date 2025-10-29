@@ -13928,5 +13928,11 @@
     "timestamp": "2025-10-29 08:06:03 +00:00",
     "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the article is an introduction to Microsoft Azure and its main services (Azure rule 1). 'AI' because core Azure AI services (Cognitive Services, Azure OpenAI Service, Azure Machine Learning) are discussed as part of the ecosystem (AI rule 1 and 5). 'DevOps' is included due to the explicit mention of Azure DevOps, GitHub, and Visual Studio for development and CI/CD (DevOps rule 1 and 2). 'Coding' is included as the piece references developer-focused tools and environments (Coding rule 5). 'ML' is included because Azure Machine Learning is covered as part of the offered services (ML rule 1). 'Security' is included based on highlighted security features and Azure's multi-layered protection (Security rule 2 and 4). No generic exclusion rules apply, and the content is sufficiently technical for a beginner-level overview.",
     "canonical_url": "https://dellenny.com/what-is-microsoft-azure-a-beginners-guide-to-the-azure-ecosystem/"
+  },
+  {
+    "canonical_url": "https://devops.com/an-experience-based-guide-to-choosing-the-right-devops-provider-in-2026/",
+    "timestamp": "2025-10-29 11:04:32 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category because the content centers on selecting and evaluating DevOps service providers and covers best practices for team structure, CI/CD, automation, and infrastructure management (DevOps inclusion rules 1-6, 8, 9). Included Security category because the guide emphasizes security practices such as DevSecOps, vulnerability scanning, compliance checks, and secret management during provider assessment (Security rules 2, 4, 5, 6, 7). No additional categories apply, as there is no Microsoft-specific technical coverage, coding examples, or AI/ML focus.",
+    "collection": "posts"
   }
 ]
