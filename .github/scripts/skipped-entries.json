@@ -7647,5 +7647,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule - this post is primarily a brief acknowledgment of a conversation at an event (GitHub Universe) and does not contain substantive technical information, architectural insights, or details relevant to Microsoft technology categories. The body of the content is extremely short, social, and lacks any actionable technical depth. Additionally, there is a significant amount of platform boilerplate and responses are mostly reactions rather than meaningful technical discussion. No qualified categories apply.",
     "timestamp": "2025-10-28 22:05:03 +00:00",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/LYpVfHMetJw",
+    "reason": "No categories found: No categories assigned. The content is a reaction video featuring attendee responses to general keynote announcements at GitHub Universe and focuses on impressions of features like Agent HQ, Mission Control dashboard, and Plan Mode. There is no substantive technical depth, code walkthrough, or concrete development, coding, DevOps, or AI implementation described. The video centers on summarizing excitement and impressions, making it similar to event coverage or community reactions, which do not meet category inclusion rules for technical content. The content also lacks sufficient coverage of Azure, Microsoft developer tooling, or any of the defined category-linked practices, per workflow requirements in Chapters 2 and 4.",
+    "collection": "videos",
+    "timestamp": "2025-10-29 07:04:40 +00:00"
   }
 ]

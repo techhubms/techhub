@@ -13904,5 +13904,29 @@
     "canonical_url": "https://www.youtube.com/watch?v=nSwj2Ma0pnk",
     "reason": "Succesfully added: Assigned the 'DevOps' category because the content focuses on new GitHub platform features—Agent HQ, Mission Control, Plan Mode, Custom Agents—that improve developer workflows, project management, and enterprise controls (DevOps rules 2, 3, and 9). While multiple AI providers are mentioned, there is no specific technical content about Microsoft AI solutions or GitHub Copilot. The announcements center on tooling and developer platform evolution, not coding or explicit AI feature tutorials. No generic exclusion rule applies; the recap has substantive technical content.",
     "collection": "videos"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-29 08:04:58 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category since the entire content focuses on Azure Resource Manager, the primary deployment and management service for Microsoft Azure (Azure inclusion rule 1). Added DevOps because ARM templates, infrastructure as code, RBAC, automation, and best practices for deployment directly relate to DevOps concepts (DevOps rules 2, 5, and 6). Content does not qualify for AI, GitHub Copilot, Coding, ML, or Security as it does not discuss these topics except in the context of Azure resource management and automation.",
+    "canonical_url": "https://dellenny.com/azure-resource-manager-arm-streamline-and-secure-cloud-resource-management/"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-29 08:05:21 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the article provides a thorough technical explanation of Azure's core infrastructure components (data centers, regions, availability zones, geographies), which are central to Azure cloud design (Azure inclusion rule 1 and 5). No other categories apply because the content does not focus on coding practices, DevOps pipelines, AI or ML services, security, or GitHub Copilot. Tags were extracted to reflect infrastructure, architecture, compliance, and best practices themes present throughout the blog post.",
+    "canonical_url": "https://dellenny.com/global-infrastructure-101-understanding-data-centers-regions-availability-zones-in-azure/"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-29 08:05:43 +00:00",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content thoroughly presents core Azure services and their use cases (Azure rule 1). 'DevOps' was included because Azure DevOps, CI/CD, and agile team practices are covered (DevOps rules 1, 3, 5). 'Security' is added due to significant discussion of Azure Active Directory and general security and governance trends (Security rules 1, 4). Coding, ML, AI, and GitHub Copilot categories do not apply, as while the article mentions developer use cases and serverless (Azure Functions, Logic Apps), it does not detail programming practices, AI/ML tooling, or GitHub Copilot. The article is technical, focused on service capabilities, not business strategy or end-user productivity, thus avoiding generic exclusion triggers.",
+    "canonical_url": "https://dellenny.com/top-10-azure-services-everyone-should-know-2025-edition/"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-29 08:06:03 +00:00",
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the article is an introduction to Microsoft Azure and its main services (Azure rule 1). 'AI' because core Azure AI services (Cognitive Services, Azure OpenAI Service, Azure Machine Learning) are discussed as part of the ecosystem (AI rule 1 and 5). 'DevOps' is included due to the explicit mention of Azure DevOps, GitHub, and Visual Studio for development and CI/CD (DevOps rule 1 and 2). 'Coding' is included as the piece references developer-focused tools and environments (Coding rule 5). 'ML' is included because Azure Machine Learning is covered as part of the offered services (ML rule 1). 'Security' is included based on highlighted security features and Azure's multi-layered protection (Security rule 2 and 4). No generic exclusion rules apply, and the content is sufficiently technical for a beginner-level overview.",
+    "canonical_url": "https://dellenny.com/what-is-microsoft-azure-a-beginners-guide-to-the-azure-ecosystem/"
   }
 ]
