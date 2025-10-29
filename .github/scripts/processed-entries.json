@@ -13868,5 +13868,11 @@
     "reason": "Succesfully added: Assigned the DevOps category because the recap centers on new GitHub platform functionality (Agent HQ, Mission Control, Plan Mode in VS Code, Custom Agents), which are oriented toward team collaboration, workflow automation, and developer productivity (DevOps rules 2, 3, and 9). Did NOT assign 'AI' or 'GitHub Copilot' because the content discusses integrating third-party AI agents in general (not GitHub Copilot specifically), and there's no deep technical detail on AI-specific developer tools or ML/AI engineering (AI rules 2 and 4 not satisfied). 'Coding' is not assigned since content is about platform features rather than language/framework programming. 'Azure', 'Security', and 'ML' categories are not mentioned or implied.",
     "timestamp": "2025-10-28 23:05:49 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/jH_ub5Trsi4"
+  },
+  {
+    "reason": "Succesfully added: Applied the 'AI' category because the episode is focused entirely on generative AI techniques—LLM completions, multi-turn chat, RAG, and function calling (AI category rules 1 and 4). Although GitHub Codespaces is mentioned, the primary platform is Java, not a Microsoft language, and no substantial Microsoft-specific coding frameworks/tools (like .NET, C#, Azure-specific APIs) are demonstrated—so 'Coding', 'Azure', or 'DevOps' do not apply. AI techniques demonstrated are general and shown in a way relevant for Java developers, aligning only to the 'AI' category.",
+    "collection": "videos",
+    "timestamp": "2025-10-29 01:32:37 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=3UoDsdemIdA"
   }
 ]
