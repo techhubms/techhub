@@ -13898,5 +13898,11 @@
     "reason": "Succesfully added: Content qualifies for the AI category because it extensively discusses the impact and use of AI-powered coding tools, referencing rule 1 and rule 4 under AI. The DevOps category is also included because the main focus is on how these AI tools are changing DevOps workflows and pipeline processes, which matches multiple DevOps rules (CI/CD, pipeline automation, team practices). No Coding, Azure, ML, Security, or GitHub Copilot categories were added because the article does not provide Microsoft-specific or code-level implementation, nor does it discuss developer tools/products in those categories directly. The reasoning was based strictly on survey content and topic focus: impact of AI coding tools (not specifically Microsoft, but relevant to Tech Hub audience for workflow insights).",
     "collection": "posts",
     "canonical_url": "https://devops.com/survey-surfaces-impact-ai-coding-tools-are-having-on-devops-workflows/"
+  },
+  {
+    "timestamp": "2025-10-29 06:05:18 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=nSwj2Ma0pnk",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the content focuses on new GitHub platform features—Agent HQ, Mission Control, Plan Mode, Custom Agents—that improve developer workflows, project management, and enterprise controls (DevOps rules 2, 3, and 9). While multiple AI providers are mentioned, there is no specific technical content about Microsoft AI solutions or GitHub Copilot. The announcements center on tooling and developer platform evolution, not coding or explicit AI feature tutorials. No generic exclusion rule applies; the recap has substantive technical content.",
+    "collection": "videos"
   }
 ]
