@@ -14018,5 +14018,35 @@
     "canonical_url": "https://www.youtube.com/watch?v=qXx1Ukw3MGs",
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI category because the session centers on responsible AI development, AI safety, and testing of Microsoft's AI products (AI rule 1). Azure category included as Azure AI Content Safety and Azure Search OpenAI Demo are major demonstration platforms (Azure rules 1, 3, 4). Security category assigned due to a primary focus on safety guardrails, filtering, monitoring, and preventing abuse (Security rules 1, 2, 5). Coding and ML were not assigned—while code is mentioned (Codespaces), the focus is on configuration/usage, not software development or ML engineering. GitHub Copilot was not mentioned. All category assignments are supported by detailed session content and demos focusing on Microsoft-centric AI/Cloud security features."
+  },
+  {
+    "timestamp": "2025-10-30 04:04:29 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category because the content focuses on integrating dependency scanning into pull request workflows using tools like GitHub Actions and CLI, which are core DevOps activities (DevOps rules 2, 5, 6). Assigned Security category because Heisenberg is designed to surface risky dependencies and generate SBOMs, directly addressing software supply chain security (Security rules 1, 5, 7). Did not assign other categories as there is no direct Microsoft technology focus, coding language detail, or ML/AI technical implementation. The content avoids generic exclusion criteria—it is not biographical, sales-focused, business-strategy, or non-English, and maintains technical clarity suitable for practitioners.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/appomni-open-sources-heisenberg-tool-to-scan-pull-requests-for-dependencies/"
+  },
+  {
+    "timestamp": "2025-10-30 04:04:51 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category because the entire article is about integrating quantum computing principles with modern CI/CD, DevSecOps, pipelines, and team practices (DevOps inclusion rules 1, 5, 6, 7, 9). Assigned Azure because Azure Quantum is specifically listed as a central platform for quantum CI/CD and deployment, showing Microsoft technology is central to the architecture (>40% threshold met) (Azure rule 1, 4, 5). Assigned AI because of references to quantum-accelerated AI/ML and insights, and because quantum/AI synergy is highlighted as a core benefit and future direction in development (AI rule 5). Did not assign ML because focus is not on ML engineering/data science development but on pipeline readiness and DevOps. Did not assign Security as the article focuses on pipeline security in a general DevSecOps sense, not Microsoft security tooling or identity platforms specifically.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/quantum%e2%80%91ready-cloud-devops-getting-ready-for-quantum-computing-integration/"
+  },
+  {
+    "timestamp": "2025-10-30 04:05:10 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the article discusses the impact of AI-generated code and AI-based security remediation (AI rule 1, 4, 5). Assigned DevOps because the content addresses DevSecOps practices, developer workflows, alert fatigue, and security automation within organizational software development (DevOps rules 3, 4, 5, 6, 9). Assigned Security because it discusses vulnerabilities, security tool usage, and remediation strategies related to AI-generated code (Security rules 2, 5, 6, 7). No Microsoft-specific products are featured, but AI/DevOps/Security categories require only central relevance, not exclusive Microsoft focus. No generic exclusion rules apply as the article is not biographical, question-only, sales-focused, negative, job-related, business-strategy-centric, or non-English.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/survey-surfaces-rising-tide-of-vulnerabilities-in-code-generated-by-ai/"
+  },
+  {
+    "timestamp": "2025-10-30 04:05:42 +00:00",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content is centered on deploying Python 3.14 applications using Azure App Service for Linux, in line with Azure inclusion rule 1 and 4. Assigned the 'Coding' category due to the focus on application development/deployment with Python, a Microsoft-supported runtime on their platform (Coding rule 1 and 4). Did not assign ML or AI because there is no mention of machine learning, data science, or AI features. No Security or DevOps category assigned as the article does not cover security, CI/CD, or operational best practices outside of platform patching; the focus is strictly runtime and app configuration. All generic exclusion rules were checked and do not apply (the post is in English, technical, not biographical, not a sales pitch, and meets community length requirements).",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/python-3-14-is-now-available-on-azure-app-service-for-linux/ba-p/4465404"
+  },
+  {
+    "timestamp": "2025-10-30 04:06:00 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the article focuses on Azure App Service for Linux and discusses changes directly related to Azure cloud platform capabilities (Azure rule 1, 4, and 5). Assigned the Coding category as it details how programming language runtimes (.NET, Python, Node, PHP, Java) and their associated stack changes affect application deployment, updates, and developer workflows (Coding rules 1–4). Other categories were not included because there is no AI, ML, DevOps methodology focus, nor a deep dive into Security concerns. The content is technical, directly about Microsoft developer technology, and does not trigger any generic exclusion rules.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ubuntu-powered-runtimes-on-azure-app-service-for-linux-leaner/ba-p/4465414"
   }
 ]
