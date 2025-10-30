@@ -14096,5 +14096,17 @@
     "canonical_url": "https://www.youtube.com/shorts/oETSqqi4CqU",
     "reason": "Succesfully added: Assigned AI category because the content centers on using GitHub Copilot as an AI coding tool (AI rule 1, 2). Assigned GitHub Copilot category because it discusses specific Copilot functionality and usage (GitHub Copilot inclusion rules 1-4). Assigned Coding category due to the focus on programming, device integration, and hands-on code generation (Coding rules 2, 4). Content promotes a developer tool (Copilot) and practical programming, not business productivity, thus does not meet any exclusion criteria.",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category due to strong emphasis on AI-powered development, agentic workflows, Copilot, and AI tools (AI rules 1, 2, 4, 5, and 6). Assigned GitHub Copilot category because the content repeatedly references Copilot usage, new integrations, and ecosystem impact, including specific usage figures and feature releases (GitHub Copilot rules 1, 2, 3, 4, 6). Assigned Azure because Azure MCP Server, service integration, and deployment on Azure with agentic tools are major topics (Azure rules 1, 3, 4). Assigned Coding as the text discusses developer tools (Visual Studio Code, TypeScript, Python), code workflows, and developer experience (Coding rules 1, 2, 5). Assigned DevOps as the content mentions DevOps themes such as agentic DevOps, deployment to Azure, and workflow automation (DevOps rules 2, 5, 9, 11). Did not assign Security or ML because, while enterprise security and AI/ML are mentioned, there is no substantive technical discussion on these aspects. No generic exclusions applied; the content is entirely in English, not biographical, not a sales pitch, and not question-only or unconstructive.",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/github-universe-2025-where-developer-innovation-took-center-stage/",
+    "timestamp": "2025-10-30 16:05:13 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content addresses RAG pipelines and LLM application development, which falls under Microsoft AI development tooling and usage (AI rule 1, 4, and 5). Assigned Azure category because it shows direct usage and integration of Azure Storage and related authentication (Azure rule 1, 2, 4). Assigned Coding category for code samples, development tutorials, and migration steps for integrating the AzureBlobStorageLoader in Python applications (Coding rules 1, 2, and 4). Did not assign ML because while RAG and LLMs are discussed, the post focuses more on integration and workflow than on custom ML engineering. No generic exclusion rule applies because the content is technical and not about business productivity, career, or non-development Microsoft products.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-langchain-azure-storage-azure-storage-integrations/ba-p/4465268",
+    "timestamp": "2025-10-30 16:06:03 +00:00",
+    "collection": "community"
   }
 ]
