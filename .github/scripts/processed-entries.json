@@ -14132,5 +14132,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=tyiDMlKXLwU",
     "reason": "Succesfully added: Assigned Azure category because the content is centered around Microsoft Fabric and Azure SQL (Azure rule 1, 4). Assigned ML because it demonstrates real-time analytics capabilities and event-driven architectures using streaming data, which aligns with data engineering and analytics development (ML rules 1, 2, 4). Assigned AI because Copilot is used for dashboard generation and query augmentation, which is a developer/maker AI tool (AI rules 1, 5). Assigned Coding because the session teaches use of SQL constructs (queries, windowing, ingestion) to develop event-driven solutions (Coding rule 1, 4). Not assigned GitHub Copilot, Security, or DevOps as these areas are not substantively addressed in the description. The Copilot usage is relevant as a development/maker AI tool, not business-productivity, justifying AI inclusion.",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Categories 'Azure' and 'AI' were assigned. 'Azure' matches because the content focuses extensively on Azure tools for cloud migration, cost management, and pricing (Azure inclusion rules 1, 2, 4, 5). 'AI' is included because Azure AI adoption is a central theme and features like Azure AI Foundry are discussed as cost-optimization enablers for AI workloads (AI inclusion rules 1 and 5). Other categories such as 'DevOps,' 'ML,' or 'Coding' are not directly supported by the content, as there's no discussion of development methods, DevOps practices, ML engineering, or programming details. None of the generic exclusions apply: the post is technical, informative, and not business-strategy-only or product-pitch in nature.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/finops-blog/smarter-cloud-smarter-spend-how-azure-powers-cost-efficient/ba-p/4465687",
+    "timestamp": "2025-10-30 18:05:58 +00:00"
   }
 ]

@@ -7755,5 +7755,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=9TRsiFBnMUg",
     "reason": "No categories found: No categories assigned because the provided content (title, description, tags) lacks sufficient technical detail to determine if any Microsoft technology category applies. The description is a short event recap announcement with no substantive content, technical explanations, or mention of specific developer tooling, technical implementations, or integration details. The lack of actual content or a transcript prevents evaluation for inclusion under any GitHub, Coding, DevOps, or other Microsoft technology categories. Per generic exclusion rules, only content with clear technical substance is eligible.",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: No categories assigned. According to the generic exclusion rules, this news post revolves around end-user productivity and general availability of a mixed reality integration feature for Meta Quest headsets—it focuses on enabling immersive workspaces for daily tasks, not on development, coding, AI, DevOps, ML, Azure, or security implementation. There is no substantial technical development content, code, architecture, or developer-centric details provided. Thus, none of the inclusion rules for AI, Coding, DevOps, Azure, ML, or Security apply. This is a product announcement for end-users and IT, not developers.",
+    "collection": "news",
+    "canonical_url": "https://blogs.windows.com/windowsexperience/2025/10/30/immersive-productivity-with-windows-and-meta-quest-now-generally-available/",
+    "timestamp": "2025-10-30 18:04:58 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories have been assigned because this news update, while rich in feature announcements and hardware launches, does not qualify for the Microsoft development-focused categories specified in the inclusion rules. The post centers on Xbox hardware (ROG Ally), game compatibility, general gaming features, accessories, and user experience improvements. There is no coverage of coding, developer tools, DevOps practices, Microsoft Azure services, AI/ML engineering, or security implementations. Therefore, it is excluded from all categories per core inclusion rules, particularly the Non-Development Microsoft Products and focus on end-user gaming hardware and features, not developer or architect implementation.",
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2025/10/30/xbox-october-update-rog-xbox-ally-available-now/",
+    "timestamp": "2025-10-30 18:05:19 +00:00"
   }
 ]

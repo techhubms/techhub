@@ -1,0 +1,17 @@
+{
+  "Description": "The post [Now available: Mixed Reality Link and the Windows App for Meta Quest](https://blogs.windows.com/windowsexperience/2025/10/30/immersive-productivity-with-windows-and-meta-quest-now-generally-available/) appeared first on [Source](https://news.microsoft.com/source).",
+  "EnhancedContent": "Skip to main content\n\nSkip to main content\n\n[!\\[Site Icon\\](https://blogs.windows.com/wp-content/uploads/sites/2/2021/06/Windows11Icon.png)](https://windows.com/) / Windows Experience Blog\n\n# Immersive productivity with Windows and Meta Quest: Now generally available\n\nWritten By\n\n- [Jonathan Lyons](https://blogs.windows.com/windowsexperience/author/jonathanlyons/)\n\npublished\n\nOctober 30, 2025\n\nWe’re excited to announce that Mixed Reality Link and the Windows App for Meta Quest are now **generally available**, bringing the full power of Windows 11 and Windows 365 to mixed reality headsets. This milestone marks the next step in our journey to redefine productivity in immersive environments:\n\n- **Seamlessly connect** to your local Windows PC or Windows 365 Cloud PC.\n- **Access multiple high-resolution virtual monitors** to boost your productivity whether at home, in the office or on the go.\n- **Block out distractions** in your own private workspace, or take advantage of passthrough and stay connected to the physical world around you.\n\n## **Get started**\n\nWith the [v81 release of Meta’s Horizon OS](https://www.meta.com/blog/horizon-os-v81-update-mixed-reality-link-store-discoverability/), this experience is rolling out to all users without the need for an experimental setting.\n\nConnecting your Meta Quest 3 or 3S headset to Windows is simple and secure. Get started by installing [Mixed Reality Link](https://aka.ms/MRLink) on your Windows 11 PC and then look at your keyboard and tap the “Pair” button to get started. See the [Mixed Reality Link instructions](https://support.microsoft.com/en-us/windows/about-windows-mixed-reality-link-4155d287-182d-4003-b189-b42a4e357fc5) for more information.\n\n## **Feedback**\n\nWe started [Public Preview](https://blogs.windows.com/windowsexperience/2024/12/11/immersive-productivity-with-windows-and-meta-quest/) in December of 2024, and we are so grateful to the community for your excitement and feedback, which we have been incorporating into updates throughout the year. This includes many improvements to connection reliability and the ability to create higher resolution virtual monitors. Please keep the [feedback](https://techcommunity.microsoft.com/category/mixed-reality-link/discussions/mixed-reality-link-discussion) coming and let us know what you’d like to see next!",
+  "Title": "Now available: Mixed Reality Link and the Windows App for Meta Quest",
+  "Author": "stclarke",
+  "Tags": [
+    "Company News",
+    "Mixed reality"
+  ],
+  "ProcessedDate": "2025-10-30 18:03:26",
+  "FeedName": "Microsoft News",
+  "FeedUrl": "https://news.microsoft.com/source/feed/",
+  "OutputDir": "_news",
+  "PubDate": "2025-10-30T17:15:59+00:00",
+  "FeedLevelAuthor": "Source",
+  "Link": "https://blogs.windows.com/windowsexperience/2025/10/30/immersive-productivity-with-windows-and-meta-quest-now-generally-available/"
+}
