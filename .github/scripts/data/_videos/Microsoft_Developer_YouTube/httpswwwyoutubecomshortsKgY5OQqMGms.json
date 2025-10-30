@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "Description": "Imagine assigning a GitHub issue and having Copilot actually fix it for you. Damian Brady explains what the new #GitHubCopilot Coding Agent can do (and why it’s more than just code suggestions).\n\nLearn more: https://msft.it/6057tDNmJ",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Link": "https://www.youtube.com/shorts/KgY5OQqMGms",
+  "PubDate": "2025-10-30T18:08:46+00:00",
+  "Tags": [
+    "GitHubCopilot"
+  ],
+  "FeedName": "Microsoft Developer YouTube",
+  "Author": "Microsoft Developer",
+  "ProcessedDate": "2025-10-30 19:03:40",
+  "Title": "What is GitHub Copilot Coding Agent?"
+}
