@@ -14060,5 +14060,23 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-an-ai-powered-chat-app-in-minutes-with-ai-toolkit/ba-p/4464967",
     "timestamp": "2025-10-30 05:04:39 +00:00"
+  },
+  {
+    "timestamp": "2025-10-30 07:04:35 +00:00",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/building-the-future-together-microsoft-and-nvidia-announce-ai-advancements-at-gtc-dc/",
+    "reason": "Succesfully added: Assigned the AI category because the entire article is about Microsoft AI advances and new AI models/services (AI rule 1). Assigned the Azure category as all solutions—AI Foundry, Azure Local, GPU orchestration, and deployment—are Azure-based (Azure rules 1 and 4). Did not assign ML since there is relatively little focus on custom ML pipeline engineering or detailed data science process, but included tags relevant to ML workloads given the infrastructure context. Content does not qualify for Coding, DevOps, Security, or GitHub Copilot categories, as it focuses on platform capabilities, orchestration, and infrastructure rather than direct code development, DevOps workflows, or security implementation. No generic exclusion rules applied; this is official news with strong technical depth.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-30 07:05:00 +00:00",
+    "canonical_url": "https://dellenny.com/automating-windows-11-virtual-desktop-management-via-scripting-command-line/",
+    "reason": "Succesfully added: Assigned the 'Coding' category due to the article’s deep emphasis on scripting, PowerShell module usage, and command-line automation to control Windows 11’s virtual desktops. All discussed methods—PowerShell, VirtualDesktopCmd, and AutoHotkey—are development- and scripting-focused, involving coding activities for automation. No Azure, DevOps, AI, ML, or Security relevance is present, and content is technical/implementation-focused rather than end-user or business productivity. This matches the Coding category per the workflow.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-30 07:05:38 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/the-complete-guide-to-renewing-an-expired-certificate-in/ba-p/4465444",
+    "reason": "Succesfully added: Assigned the Azure category because Microsoft HPC Pack is an Azure-related solution (Azure rule 1) and the content references Azure integration (Azure High Performance Computing Blog). Assigned Security category because the guide focuses on certificate management—covering secure communications, certificate renewal, and best practices for protecting cluster infrastructure (Security rules 1, 2, 7). Did not assign other categories as the content is specific to cluster admin, PowerShell, and certificate procedures and does not involve coding frameworks, DevOps pipelines, ML/AI processes, or coding beyond administrative scripts.",
+    "collection": "community"
   }
 ]
