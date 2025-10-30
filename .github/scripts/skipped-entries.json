@@ -7725,5 +7725,35 @@
     "collection": "posts",
     "timestamp": "2025-10-30 10:04:49 +00:00",
     "reason": "No categories found: No categories assigned. After reviewing the content, it is primarily a consumer guide on using Windows 11 as a hub for smart home integration. There is no discussion of Microsoft developer tooling, coding, DevOps, Azure, Security, AI, ML, or advanced technical implementation. The content focuses on end-user configuration, device management, and general smart home best practices without technical depth relevant to consultants or developers. This matches the generic exclusion rule for non-development Microsoft products and end-user features: 'Content primarily about workplace culture, office politics, or management issues', 'General business advice or organizational behavior content', and, most specifically, 'Other end-user business applications'. Windows 11 usage for smart home control is not in scope for any predefined category."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-10-30 13:12:49 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This video is primarily an event overview and personal highlights from GitHub Universe 2025, focusing on favorite locations, event swag, and general attendee experience. There is no substantive technical content or detailed discussion of Microsoft technologies, development practices, or product implementation. The mention of 'Maker Space, where you can build your own Copilot' is general and event-oriented, not an educational or technical guide. Most of the content centers around event attractions, personal preferences, and links to GitHub's social media, not actionable technical information. Thus, it does not meet inclusion criteria for any category.",
+    "canonical_url": "https://www.youtube.com/shorts/rYeGf1Knehs"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-10-30 13:13:01 +00:00",
+    "reason": "No categories found: No categories assigned because the content field is null, which means the actual technical substance and details required for assessment are missing. Without the main content, it is impossible to determine whether the material meets the inclusion rules for any Microsoft technology category. Per the workflow, all categorizations must be based on actual substantive content, not just the title or tags. This falls under the guideline to never fabricate or infer content from titles/tags alone. Therefore, content cannot be categorized.",
+    "canonical_url": "https://www.youtube.com/shorts/i77TjX25XIg"
+  },
+  {
+    "timestamp": "2025-10-30 15:05:21 +00:00",
+    "canonical_url": "https://news.xbox.com/en-us/2025/10/28/id-xbox-showcase-october-2025-everything-announced-recap/",
+    "reason": "No categories found: No categories assigned. While the content is a comprehensive news recap focused on indie game announcements, gameplay reveals, and development updates for Xbox, it does not include technical implementation, development architecture, coding practices, or developer tooling as defined in the category inclusion rules. The focus is on upcoming Xbox games and features, aligning with consumer and gaming industry news rather than developer/technical deep dives. Although the article references independent developers, it remains at the level of game announcements rather than discussing game development processes or tools. Per the guidelines, gaming news without significant, actionable development content does not qualify for any Tech Hub categories.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-30 15:05:35 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_just-wrapped-our-earnings-call-and-wanted-activity-7389433821181562880-GnMz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAiKhDQB-ru8nwAqnX07YDIlEA4zdmoRDg8https://www.linkedin.com/posts/satyanadella_just-wrapped-our-earnings-call-and-wanted-activity-7389433821181562880-GnMz?utm_sourc",
+    "reason": "No categories found: Content excluded due to the generic exclusion rule for 'Business Strategy and Executive Content'. The main text is an executive summary of Microsoft's quarterly earnings call by Satya Nadella, focused on high-level strategy, business momentum in AI and Copilots, investment commentary, and organizational milestones. There is no discussion of technical implementation, developer tools, technical architecture, or in-depth coverage of Microsoft technology usage. Therefore, per the explicit rule under 'Business Strategy and Executive Content' and multiple clarifications in the workflow (examples: 'Security Leadership in the Age of Constant Disruption', 'Digital Transformation Strategies for Modern Enterprises'), no technology categories are assigned.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-30 15:06:26 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=9TRsiFBnMUg",
+    "reason": "No categories found: No categories assigned because the provided content (title, description, tags) lacks sufficient technical detail to determine if any Microsoft technology category applies. The description is a short event recap announcement with no substantive content, technical explanations, or mention of specific developer tooling, technical implementations, or integration details. The lack of actual content or a transcript prevents evaluation for inclusion under any GitHub, Coding, DevOps, or other Microsoft technology categories. Per generic exclusion rules, only content with clear technical substance is eligible.",
+    "collection": "videos"
   }
 ]

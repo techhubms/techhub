@@ -14090,5 +14090,11 @@
     "timestamp": "2025-10-30 12:05:34 +00:00",
     "collection": "news",
     "reason": "Succesfully added: Assigned the AI category because the content discusses new AI models, Copilot memories, agentic workflows, and Azure Foundry integration—all centered on AI-assisted development (AI rule 1, 4, 5, 6). Assigned GitHub Copilot because the update contains significant new features and UX for GitHub Copilot in Visual Studio (GitHub Copilot rules 1, 2, 3, 4). Assigned Coding because the content is targeted at developer workflows in Visual Studio and provides coding-standard related features (Coding rule 1, 4, 5). Assigned Azure since there is explicit Azure Foundry integration for bringing custom models (Azure rule 1, 4). Did not assign DevOps, ML, or Security because the primary focus is AI integration and coding tooling, not pipelines, data science, or security-specific features, per inclusion rules."
+  },
+  {
+    "timestamp": "2025-10-30 15:06:12 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/oETSqqi4CqU",
+    "reason": "Succesfully added: Assigned AI category because the content centers on using GitHub Copilot as an AI coding tool (AI rule 1, 2). Assigned GitHub Copilot category because it discusses specific Copilot functionality and usage (GitHub Copilot inclusion rules 1-4). Assigned Coding category due to the focus on programming, device integration, and hands-on code generation (Coding rules 2, 4). Content promotes a developer tool (Copilot) and practical programming, not business productivity, thus does not meet any exclusion criteria.",
+    "collection": "videos"
   }
 ]
