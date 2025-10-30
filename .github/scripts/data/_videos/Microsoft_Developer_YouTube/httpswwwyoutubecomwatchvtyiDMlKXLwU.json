@@ -1,0 +1,22 @@
+{
+  "FeedName": "Microsoft Developer YouTube",
+  "PubDate": "2025-10-30T16:01:35+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Title": "SQL Meets Streaming: Building Event-Driven Apps with Real-Time Intelligence | Data Exposed",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-10-30 17:04:18",
+  "Link": "https://www.youtube.com/watch?v=tyiDMlKXLwU",
+  "Author": "Microsoft Developer",
+  "EnhancedContent": null,
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Description": "In this episode, we’ll show how Fabric Real-Time Intelligence brings streaming into the SQL world. You’ll learn how to use familiar SQL constructs to ingest, transform, and analyze live event data, apply windowing for time-based analytics, and build event-driven applications. We’ll walk through an end-to-end demo featuring rich connectors in RTI, processing real-time data with SQL operator, setting up alerts for instant action, and Copilot-generated dashboards. To wrap up, we’ll explore how to leverage Copilot with Eventhouse KQL queries and Data Agent capabilities.\n\n✅ Chapters: 0:00 Introduction 3:10 Fabric Eventstreams 5:42 Build Real-Time Applications Using SQL 8:00 Demo 11:30 Connect events from many types of sources 13:30 Real-Time AI: CoPilot, Data & Operational Agents\n\n✅ Resources: Fabric Eventstream :https://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/overview?tabs=enhancedcapabilities\n\nRTI end-to-end sample: https://learn.microsoft.com/en-us/fabric/real-time-intelligence/sample-end-to-end\n\nFabric Eventstream end-to-end demo video: https://www.youtube.com/watch?v=mFxlYkfoQZE&t=3s 📌 Let's connect: Twitter - Anna Hoffman, https://twitter.com/AnalyticAnna Twitter - AzureSQL, https://aka.ms/azuresqltw\n\n🔴 Watch even more Data Exposed episodes: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt\n\n#AzureSQL #SQL #LearnSQL"
+}

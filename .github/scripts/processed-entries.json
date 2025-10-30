@@ -14108,5 +14108,29 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-langchain-azure-storage-azure-storage-integrations/ba-p/4465268",
     "timestamp": "2025-10-30 16:06:03 +00:00",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-10-30 17:04:58 +00:00",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2025/10/30/microsoft-techspark-partners-with-titletowntech-and-the-new-jersey-ai-hub-to-accelerate-scientific-discovery/",
+    "reason": "Succesfully added: Assigned AI category because the content centers on the Microsoft Discovery platform—an advanced agentic AI system for accelerating scientific research—and highlights the use of AI innovation in scientific discovery (AI rules 1, 4, 6). Assigned Azure category as the Microsoft Discovery platform is integrated with Azure high-performance computing and is hosted on Microsoft's cloud infrastructure (Azure rule 1). The content does not provide technical implementation/code samples, so Coding and DevOps categories do not apply. ML was considered but not assigned because the article focuses on AI application and scientific collaboration, not data science/analytics engineering (ML rules). Security is not discussed. Generic exclusion rules do not apply. The explanation covers category rationale per the inclusion criteria in Chapter 4.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-10-30 17:05:34 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=DGNAvVn6WwY",
+    "reason": "Succesfully added: Assigned the AI category because the content centers on extending AI applications with the Model Context Protocol (AI rule 1 and 4). Assigned the GitHub Copilot category because GitHub Copilot's agent mode is used for code generation, as explicitly stated (GitHub Copilot rule 1 and 2). Assigned Coding because building the server involves code development in Java and API scaffolding (Coding rule 1, 2, and 4). Did not assign Azure, DevOps, ML, or Security, as there's no focus on Microsoft Azure services, DevOps pipelines, machine learning model development, or security practices.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-30 17:05:57 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=JlzteydCK_Q",
+    "reason": "Succesfully added: Assigned AI category because the content is centered on Microsoft's Agent Framework and AutoGen, both focused on AI agent development (AI inclusion rules 1 and 4). Assigned Azure because the framework and orchestration models are designed for and reference Azure-based solutions (Azure inclusion rule 1). Assigned Coding because the video features code side-by-side, SDK usage, code-focused migration strategies, and programming concepts (Coding inclusion rules 1, 2, and 4). Content does not meet any generic exclusion rules; it is technical, implementation-focused, in English, and directly about Microsoft developer tools and platforms.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-10-30 17:06:17 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=tyiDMlKXLwU",
+    "reason": "Succesfully added: Assigned Azure category because the content is centered around Microsoft Fabric and Azure SQL (Azure rule 1, 4). Assigned ML because it demonstrates real-time analytics capabilities and event-driven architectures using streaming data, which aligns with data engineering and analytics development (ML rules 1, 2, 4). Assigned AI because Copilot is used for dashboard generation and query augmentation, which is a developer/maker AI tool (AI rules 1, 5). Assigned Coding because the session teaches use of SQL constructs (queries, windowing, ingestion) to develop event-driven solutions (Coding rule 1, 4). Not assigned GitHub Copilot, Security, or DevOps as these areas are not substantively addressed in the description. The Copilot usage is relevant as a development/maker AI tool, not business-productivity, justifying AI inclusion.",
+    "collection": "videos"
   }
 ]

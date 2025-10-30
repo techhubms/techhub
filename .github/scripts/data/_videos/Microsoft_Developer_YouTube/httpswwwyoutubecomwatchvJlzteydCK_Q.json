@@ -1,0 +1,22 @@
+{
+  "FeedName": "Microsoft Developer YouTube",
+  "PubDate": "2025-10-30T16:00:39+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Title": "Deep Dive into Microsoft Agent Framework for AutoGen Users",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-10-30 17:04:18",
+  "Link": "https://www.youtube.com/watch?v=JlzteydCK_Q",
+  "Author": "Microsoft Developer",
+  "EnhancedContent": null,
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Description": "On this video we are going to deep dive into Microsoft Agent Framework for AutoGen users. Eric will show a practical migration path. It starts by covering what stays the same and what changes at a glance. Then, it covers model client setup, single‑agent features, MCP Support, Agent-as-a-tool, finally multi‑agent orchestration with concrete code side‑by‑side and so on.\n\nMicrosoft Agent Framework, a new open-source project from Microsoft that converges Semantic Kernel and AutoGen into a single pro-code SDK for building multi-agent systems.\n\nAutoGen is a framework for building AI agents and multi-agent systems using large language models (LLMs). It started as a research project at Microsoft Research and pioneered several concepts in multi-agent orchestration, such as GroupChat and event-driven agent runtime. The project has been a fruitful collaboration of the open-source community and many important features came from external contributors.\n\n✅ Chapters: 00:00 Introduction 02:10 What's Microsoft Agent Framework Recap 03:50 Model Clients 05:16 Single Agent 10:47 Single Agent (Tool Use) 11:14 Single Agent (Streaming) 13:01 MCP Support 13:30 Agent-as-a-Tool 18:17 Key Difference - Conversation State 23:05 Thread & Memory 24:41 Key Difference - Message Types 25:59 User Approval Content type 30:09 Key Difference - Middleware (NEW) 34:38 Multi-Agent Orchestration Patterns 36:18 Key Difference - Programming Model 43:48 Built-in Orchestrations - Sequential 47:42 Built-in Orchestrations - Concurrent 49:02 Built-in Orchestrations - Magentic and Handoff 51:55 Key Difference - GraphFlow vs Workflow 54:16 Key Difference - GraphFlow vs Workflow (Example Sequential + Conditional) 55:20 Key Difference - GraphFlow vs Workflow (Example Fan-out + Join) 59:15 MAF Workflow - Example Targeted Routing (no broadcast) 59:57 Summary of GraphFlow vs Workflow 01:02:04 MAF - Workflow Checkpoints discussion 01:05:45 MAF Dev UI vs Debug UI Tools (AutoGen Studio) 01:08:22 How to Contribute and Getting Started\n\n✅ Resources: Microsoft Agent Framework: Building Blocks for the Next Generation of AI Agents https://youtu.be/AAgdMhftj8w?si=y5q0r5nZXXNPaxqs Microsoft Agent Framework Workflows Explained https://youtu.be/KQ09sMHeFQY?si=yipWWYmxIrebShDy\n\nGet Started with Agent Framework: https://aka.ms/AgentFramework AutoGen MIgration AutoGen to Microsoft Agent Framework Migration Guide | Microsoft Learn Microsoft Agent Framework WorkFlows https://learn.microsoft.com/en-us/agent-framework/user-guide/workflows/core-concepts/overview Learn more about Agent Framework: https://aka.ms/AgentFramework/Docs Announcement Blog: https://aka.ms/AgentFramework/PuPr Watch Sessions on-demand: https://aka.ms/AgentFramework/AIShow\n\nVictor Dibia Blog Posts Series https://www.linkedin.com/posts/dibiavictor\\_multiagentsystems-multiagentbook-activity-7384289105616146433-LuFQ?utm\\_source=share&utm\\_medium=member\\_desktop&rcm=ACoAAAGUAuIBcAPq6XKXTQDQsQcUj49UEXhye40\n\n✅ Let's connect: Jorge Arteiro | https://www.linkedin.com/in/jorgearteiro Elijah Straight | https://www.linkedin.com/in/elijahstraight Eric Zhu | https://www.linkedin.com/in/ekzhu Subscribe to the Open at Microsoft: https://aka.ms/OpenAtMicrosoft\n\nOpen at Microsoft Playlist: https://aka.ms/OpenAtMicrosoftPlaylist\n\n📝Submit Your OSS Project for Open at Microsoft https://aka.ms/OpenAtMsCFP\n\nNew episode on Tuesdays!"
+}
