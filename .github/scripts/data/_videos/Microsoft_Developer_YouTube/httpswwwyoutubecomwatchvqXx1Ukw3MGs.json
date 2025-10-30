@@ -1,0 +1,26 @@
+{
+  "Tags": [
+    "AIEthics",
+    "AIFiltering",
+    "AIGovernance",
+    "AISecurity",
+    "AzureAI",
+    "ContentSafety",
+    "EthicalAI",
+    "GitHubModels",
+    "JavaDevelopment",
+    "ResponsibleAI",
+    "SafeAI"
+  ],
+  "Link": "https://www.youtube.com/watch?v=qXx1Ukw3MGs",
+  "Title": "GenAI for Java Developers 4: Responsible AI",
+  "Author": "Microsoft Developer",
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Developer YouTube",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Description": "In this critical episode, Ayan Gupta is joined by Rory who tackles one of the most important aspects of AI development: building responsibly. Just as you wouldn't want spilled coffee creating a mess, unchecked AI can have serious consequences. This session shows you how to put guardrails in place to ensure your AI applications are safe, fair, and trustworthy.\n\nBuilding on the techniques and applications, this episode demonstrates why responsible AI matters by first showing what happens when safety measures aren't in place. Using an unfiltered local model called Dolphin Mistral, Rory demonstrates how easily uncensored models can be manipulated to produce harmful content, highlighting the critical need for content filtering and safety measures.\n\nYou'll then learn how GitHub Models and Azure AI provide multiple layers of protection. First, you'll explore how content safety filters create \"hard blocks\" that prevent harmful queries from even reaching the model, stopping violence, hate speech, and dangerous instructions before they're processed. Next, you'll see how AI models themselves are trained and red-teamed to \"soft block\" inappropriate requests, refusing to generate harmful content even when prompted.\n\nThe session includes practical demonstrations of Azure AI Content Safety, showing you how to configure custom filtering thresholds for different categories like violence, hate speech, sexual content, and self-harm. You'll see real-time examples of both filtered and refused requests, and learn how to implement these protections in production applications like the Azure Search OpenAI Demo.\n\nResponsible AI isn't optional, it's essential. This session gives you the tools and knowledge to build AI applications that are both powerful and safe. Subscribe to continue learning best practices!\n\nResources: https://aka.ms/JavaAndAIForBeginners https://aka.ms/genaijava\n\n0:00 - Introduction: Why Responsible AI Matters 0:55 - Demonstration: Unfiltered AI Models 1:41 - The Problem with Dolphin Mistral 2:09 - Setting Up Your Codespace 2:42 - GitHub Models Content Safety Features 3:20 - Testing Harmful Content Filters 4:02 - Understanding Hard Blocks vs Soft Blocks 4:44 - Azure AI Content Safety Layers 5:29 - Configuring Custom Filter Thresholds 6:28 - Testing the Azure Search OpenAI Demo 7:21 - Throwing Exceptions for Critical Content 8:00 - Monitoring and Logging in Azure 8:40 - Session Recap: Production Best Practices 9:06 - Wrap-Up and Resources\n\n#ResponsibleAI #AIEthics #AzureAI #ContentSafety #AIGovernance #JavaDevelopment #SafeAI #AISecurity #GitHubModels #EthicalAI #AIFiltering",
+  "PubDate": "2025-10-30T00:01:11+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-10-30 01:31:18"
+}

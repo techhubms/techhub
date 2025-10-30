@@ -14012,5 +14012,11 @@
     "timestamp": "2025-10-29 23:04:56 +00:00",
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI and GitHub Copilot categories. The content focuses on how GitHub Copilot (a developer AI tool) and AI-powered development are accelerating software creation, featuring multiple demos and real-world applications. GitHub Copilot is central, as highlighted in multiple sections (e.g., Hacking a Furby, community/hackathon projects, open source demos). The session is not about general business productivity, but centers on code, technical workflows, and developer innovation with Copilot and AI (AI rule 1, 2; GitHub Copilot rule 1-6). No other categories (e.g., Coding, DevOps, Azure, ML, Security) were assigned as the content is broad and focuses on Copilot and AI enablement rather than deep dives into coding techniques, operational workflows, or specific platform/tool/ML implementations."
+  },
+  {
+    "timestamp": "2025-10-30 01:32:13 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=qXx1Ukw3MGs",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the session centers on responsible AI development, AI safety, and testing of Microsoft's AI products (AI rule 1). Azure category included as Azure AI Content Safety and Azure Search OpenAI Demo are major demonstration platforms (Azure rules 1, 3, 4). Security category assigned due to a primary focus on safety guardrails, filtering, monitoring, and preventing abuse (Security rules 1, 2, 5). Coding and ML were not assigned—while code is mentioned (Codespaces), the focus is on configuration/usage, not software development or ML engineering. GitHub Copilot was not mentioned. All category assignments are supported by detailed session content and demos focusing on Microsoft-centric AI/Cloud security features."
   }
 ]
