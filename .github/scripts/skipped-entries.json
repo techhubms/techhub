@@ -7713,5 +7713,17 @@
     "timestamp": "2025-10-30 08:04:36 +00:00",
     "collection": "posts",
     "canonical_url": "https://dellenny.com/live-captions-in-windows-11-real-time-subtitles-for-videos-and-calls/"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-sync-your-android-phone-with-windows-11-using-phone-link/",
+    "collection": "posts",
+    "timestamp": "2025-10-30 10:04:36 +00:00",
+    "reason": "No categories found: All generic exclusion rules were systematically evaluated. The core content is a how-to guide on using the Phone Link (formerly 'Your Phone') app to sync Android devices with Windows 11 for basic cross-device integration (texts, calls, notifications, and photos). The focus is on end-user setup, features, and troubleshooting with no development context, APIs, programmability, or technical implementation details. There is no mention of programming, coding, DevOps, Azure services, data science/ML, AI/ML, security configuration, or developer customization. Phone Link and its use as described are strictly for consumer productivity and end-user use, not development. Per the 'Non-Development Microsoft Products' exclusion, and because Microsoft 365/Office/consumer Windows/Phone Link features are out of scope unless developer- or IT-pro focused, all categories are excluded."
+  },
+  {
+    "canonical_url": "https://dellenny.com/integrating-windows-11-with-smart-home-devices-a-complete-guide/",
+    "collection": "posts",
+    "timestamp": "2025-10-30 10:04:49 +00:00",
+    "reason": "No categories found: No categories assigned. After reviewing the content, it is primarily a consumer guide on using Windows 11 as a hub for smart home integration. There is no discussion of Microsoft developer tooling, coding, DevOps, Azure, Security, AI, ML, or advanced technical implementation. The content focuses on end-user configuration, device management, and general smart home best practices without technical depth relevant to consultants or developers. This matches the generic exclusion rule for non-development Microsoft products and end-user features: 'Content primarily about workplace culture, office politics, or management issues', 'General business advice or organizational behavior content', and, most specifically, 'Other end-user business applications'. Windows 11 usage for smart home control is not in scope for any predefined category."
   }
 ]
