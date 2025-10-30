@@ -14168,5 +14168,11 @@
     "timestamp": "2025-10-30 20:05:13 +00:00",
     "reason": "Succesfully added: Assigned AI category because the entire article focuses on generative AI threats and risks (AI rule 1, AI rule 4). Assigned Security because primary focus is on cybersecurity risks, mitigation strategies, and Microsoft security products (Security rules 1, 4, 5, and 7). Azure assigned since Microsoft Defender for Cloud, Azure OpenAI deployments, and cloud-native application protection are substantial and central to the solutions and examples provided (Azure rules 1 and 4). All topics discussed are technical, focused on the Microsoft security platform and hands-on mitigation, not executive strategy or business-only content, thus qualifying for inclusion.",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/ai-and-ml/generative-ai/measuring-what-matters-how-offline-evaluation-of-github-mcp-server-works/",
+    "reason": "Succesfully added: Assigned AI category because the article focuses on evaluating how large language models interact with tools through the Model Context Protocol and discusses improvements to workflows for AI models (AI rule 1, 4, 5, and 6). Assigned GitHub Copilot category since the GitHub MCP Server is described as foundational for GitHub Copilot workflows and much of the content references Copilot strategies, tool selection, and integration (GitHub Copilot rules 1, 2, 3, 4, 6, plus the CRITICAL rule to always pair with AI). Assigned DevOps because the entire process described—automated pipeline evaluation, continuous integration, testing for regressions, and iterative delivery—aligns with DevOps practices (DevOps rules 2, 5, 6). Did NOT assign Azure, Coding, ML, or Security because no substantial Azure service usage, specific coding implementation, deep machine learning engineering, or security topics are present in the core content.",
+    "collection": "news",
+    "timestamp": "2025-10-30 22:04:35 +00:00"
   }
 ]
