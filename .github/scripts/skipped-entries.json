@@ -7707,5 +7707,11 @@
     "reason": "Insufficient content length",
     "timestamp": "2025-10-29 21:11:48 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/health-state-of-vdiadmin-session-host-is-needs-assistance/m-p/4465098#M13930"
+  },
+  {
+    "reason": "No categories found: No categories have been assigned because the content is focused on end-user accessibility features in Windows 11, specifically the Live Captions functionality, rather than development, coding, DevOps, AI, ML, Security, or Azure technologies. The article explains how to enable and use captions as an end-user feature, not how to develop, customize, or integrate this capability as a developer or IT professional. Per the exclusion rules in the workflow (Non-Development Microsoft Products; business/end-user features; Office/Windows end-user features), such content is not eligible for any of the predefined categories.",
+    "timestamp": "2025-10-30 08:04:36 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/live-captions-in-windows-11-real-time-subtitles-for-videos-and-calls/"
   }
 ]

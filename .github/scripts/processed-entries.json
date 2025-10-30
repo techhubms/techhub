@@ -14078,5 +14078,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/the-complete-guide-to-renewing-an-expired-certificate-in/ba-p/4465444",
     "reason": "Succesfully added: Assigned the Azure category because Microsoft HPC Pack is an Azure-related solution (Azure rule 1) and the content references Azure integration (Azure High Performance Computing Blog). Assigned Security category because the guide focuses on certificate management—covering secure communications, certificate renewal, and best practices for protecting cluster infrastructure (Security rules 1, 2, 7). Did not assign other categories as the content is specific to cluster admin, PowerShell, and certificate procedures and does not involve coding frameworks, DevOps pipelines, ML/AI processes, or coding beyond administrative scripts.",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the video focuses on Azure services and reservation strategies for Microsoft Fabric, as per Azure category inclusion rule 1. Not assigned ML or AI categories because, while Microsoft Fabric is an analytics platform, this content is operationally focused on purchasing, reservations, and cost management rather than data science, ML, or AI development (see Azure category rule 7; ML requires content addressing analytic engineering, data science, or ML workflows). Not assigned Coding, DevOps, Security, or GitHub Copilot since those topics are not central or discussed in the description. Content fits quality and scope standards: it's an Azure-focused, practitioner-facing resource with clear technical guidance and no generic exclusion triggers.",
+    "timestamp": "2025-10-30 08:05:07 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=B7TUkcCDTOg"
   }
 ]
