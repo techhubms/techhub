@@ -14174,5 +14174,11 @@
     "reason": "Succesfully added: Assigned AI category because the article focuses on evaluating how large language models interact with tools through the Model Context Protocol and discusses improvements to workflows for AI models (AI rule 1, 4, 5, and 6). Assigned GitHub Copilot category since the GitHub MCP Server is described as foundational for GitHub Copilot workflows and much of the content references Copilot strategies, tool selection, and integration (GitHub Copilot rules 1, 2, 3, 4, 6, plus the CRITICAL rule to always pair with AI). Assigned DevOps because the entire process described—automated pipeline evaluation, continuous integration, testing for regressions, and iterative delivery—aligns with DevOps practices (DevOps rules 2, 5, 6). Did NOT assign Azure, Coding, ML, or Security because no substantial Azure service usage, specific coding implementation, deep machine learning engineering, or security topics are present in the core content.",
     "collection": "news",
     "timestamp": "2025-10-30 22:04:35 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=9HEwtaepw1E",
+    "timestamp": "2025-10-30 23:04:39 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the 'GitHub Copilot' category because the video directly features GitHub Copilot as an AI-assisted developer tool (GitHub Copilot Inclusion Rule 1). 'AI' was also mandatory due to the critical rule pairing it with GitHub Copilot whenever assigned. 'Coding' was included because the entire session focuses on coding a 2D game from scratch using developer tools, aligning with Coding rules 1, 2, and 4. Azure, ML, DevOps, and Security categories were not present, as there is no evidence of those services or practices. The content isn't a business productivity overview or non-English content, so generic exclusion rules do not apply."
   }
 ]
