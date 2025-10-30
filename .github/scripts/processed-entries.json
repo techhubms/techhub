@@ -14162,5 +14162,11 @@
     "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content centers around the GitHub Copilot Coding Agent—a developer tool for AI-powered code completion and automation (per AI and GitHub Copilot inclusion rules). The subject is not about business productivity tooling and excludes non-development Copilot products (see Chapter 2 requirements). No other categories are present since there's no specific mention of Azure, Coding frameworks, DevOps, ML, or Security.",
     "collection": "videos",
     "timestamp": "2025-10-30 19:05:24 +00:00"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/10/30/the-5-generative-ai-security-threats-you-need-to-know-about-detailed-in-new-e-book/",
+    "timestamp": "2025-10-30 20:05:13 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the entire article focuses on generative AI threats and risks (AI rule 1, AI rule 4). Assigned Security because primary focus is on cybersecurity risks, mitigation strategies, and Microsoft security products (Security rules 1, 4, 5, and 7). Azure assigned since Microsoft Defender for Cloud, Azure OpenAI deployments, and cloud-native application protection are substantial and central to the solutions and examples provided (Azure rules 1 and 4). All topics discussed are technical, focused on the Microsoft security platform and hands-on mitigation, not executive strategy or business-only content, thus qualifying for inclusion.",
+    "collection": "news"
   }
 ]

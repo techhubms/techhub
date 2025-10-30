@@ -7767,5 +7767,17 @@
     "collection": "news",
     "canonical_url": "https://news.xbox.com/en-us/2025/10/30/xbox-october-update-rog-xbox-ally-available-now/",
     "timestamp": "2025-10-30 18:05:19 +00:00"
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_were-taking-the-next-big-step-with-researcher-activity-7389713560110743552-1TSX",
+    "timestamp": "2025-10-30 20:04:49 +00:00",
+    "reason": "No categories found: Content is excluded due to the generic exclusion rules for non-development Microsoft products (Chapter 3: Generic Exclusion Rules > Non-Development Microsoft Products). The main focus of this post is on the 'Researcher with Computer Use' feature as part of Microsoft 365 Copilot—primarily a business productivity tool rather than a developer or maker tool. There is no substantial discussion about code, developer integration, APIs, architecture, or technical implementation; rather, it describes productivity enhancements, data access, and business reporting within Microsoft 365 Copilot. According to the CRITICAL Copilot Product Distinction, content about Microsoft 365 Copilot and Copilot for Microsoft 365 is strictly excluded. Therefore, no categories were assigned.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=UoVMXLTZf5o",
+    "timestamp": "2025-10-30 20:05:42 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The video is about Microsoft 365 Copilot, a business productivity tool, and showcases how it transforms workflows in apps like Outlook and Word. Per the 'Non-Development Microsoft Products' exclusion, content about Microsoft 365 Copilot, Copilot for Microsoft 365, and business productivity tools—especially when focused on general office productivity, not development—is explicitly excluded and assigned no categories.",
+    "collection": "videos"
   }
 ]
