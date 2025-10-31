@@ -7779,5 +7779,11 @@
     "timestamp": "2025-10-30 20:05:42 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The video is about Microsoft 365 Copilot, a business productivity tool, and showcases how it transforms workflows in apps like Outlook and Word. Per the 'Non-Development Microsoft Products' exclusion, content about Microsoft 365 Copilot, Copilot for Microsoft 365, and business productivity tools—especially when focused on general office productivity, not development—is explicitly excluded and assigned no categories.",
     "collection": "videos"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-10-31 01:32:33 +00:00",
+    "reason": "No categories found: No categories are assigned because the content is centered on AWS technologies and operational experiences with AWS AutoScaling Groups during an AWS us-east-1 outage. There is no substantive Microsoft technology present, and Microsoft is not central or even mentioned in the solution architecture or narrative. According to the multi-platform content threshold and Azure/DevOps category rules, Microsoft technologies must comprise ≥40% of the content or be central to the solution, which is not the case here. Therefore, no categories apply.",
+    "canonical_url": "https://devops.com/anatomy-of-an-outage-our-aws-autoscaling-group-helping-hand-pushed-us-off-the-cliff/"
   }
 ]
