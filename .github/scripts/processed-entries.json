@@ -14288,5 +14288,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=s5GLjE13cUI",
     "timestamp": "2025-10-31 17:10:02 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the article centers on building intelligent applications and using multiple Microsoft AI products and agent frameworks (AI rule 1, 2, 3, 4). GitHub Copilot category was added due to Copilot's central role as a code assistant (GitHub Copilot rules 1, 2, and 4). Coding category applies because it covers code generation, project scaffolding, and practical development workflows with VS Code and AI-powered tools (Coding rules 1, 2, 4, 5). DevOps is relevant due to detailed coverage of CI/CD, deployment automation, SRE automation, and agent-managed operational tasks using Azure and AI agents (DevOps rules 5, 6, 7). Azure is central to hosting, automation, and agentic operations, with specific use of Azure Functions, Azure Container Apps, and Azure AI services (Azure rules 1, 2, 4, 5, 6). No ML or Security categories were assigned as ML-specific engineering, analytics, and security implementation are not major content themes. All categories and tags were assigned per explicit rules and recurring focus areas in the content.",
+    "canonical_url": "https://devblogs.microsoft.com/blog/behind-the-universe-demo-with-vs-code-copilot-and-agent-framework",
+    "timestamp": "2025-10-31 19:09:19 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'Azure' category because the content is centrally about Azure's infrastructure reliability solutions, specifically the AFPD system, which is applied to Azure Compute. 'DevOps' is added because AFPD, Project Flash, scheduled events, and VM Watch are directly related to cloud operational workflows, incident mitigation, health monitoring, and automation—all key DevOps practices. ML is not included because, although machine learning models (A/B, bandit) are mentioned, the content does not describe custom ML engineering but rather usage of built-in platform reliability services. No other categories match the technical focus.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/revolutionizing-reliability-introducing-the-azure-failure/ba-p/4464883",
+    "timestamp": "2025-10-31 19:10:09 +00:00"
   }
 ]

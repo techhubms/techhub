@@ -7809,5 +7809,11 @@
     "canonical_url": "https://dellenny.com/understanding-architectural-layers-in-software-systems/",
     "timestamp": "2025-10-31 17:08:07 +00:00",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-10-31 18:06:04 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the content field is null, meaning there is no substantive content to evaluate. According to the workflow, if the actual technical content is missing or unavailable, it cannot be categorized or processed further.",
+    "canonical_url": "https://www.youtube.com/shorts/S1c7SikAdhY"
   }
 ]
