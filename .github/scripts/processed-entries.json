@@ -14216,5 +14216,17 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned 'Coding' category due to the event's focus on .NET, Visual Studio, and development topics (Coding rules 1, 2, and 5). Assigned 'Azure' category because sessions discuss Azure integration and cloud features (Azure rules 1 and 4). Assigned 'AI' due to explicit coverage of Copilot for Visual Studio and AI-driven development tools (AI rules 1 and 5). Did not add 'GitHub Copilot' since content refers only to Copilot for Visual Studio, which is an AI tool for development, but not GitHub Copilot specifically. Excluded 'DevOps', 'Security', and 'ML' categories as the content does not describe processes, tools, or architectures directly associated with these areas.",
     "timestamp": "2025-10-31 14:04:48 +00:00"
+  },
+  {
+    "timestamp": "2025-10-31 15:04:54 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the content focuses on AI skills development, innovation, and responsible adoption, in partnership with Microsoft (AI inclusion rule 1 and 4). No other categories qualify: there is no technical detail on coding, DevOps, Azure platform usage, ML engineering, or security implementation. The article emphasizes national AI skilling and ecosystem-building rather than technical development or operations. Tags were curated for relevant programs, sectors, and AI-related themes tied to Microsoft involvement and Kenya’s AI strategy.",
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/source/emea/features/kepsa-launches-the-kenya-ai-skilling-alliance-kaisa-a-national-platform-to-accelerate-inclusive-and-responsible-ai-adoption/"
+  },
+  {
+    "timestamp": "2025-10-31 15:05:32 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the session centers on GitHub Copilot Enterprise, custom AI agents, and their capabilities (AI rules 1-2, GitHub Copilot rules 1-2). Assigned 'DevOps' because the core audience consists of enterprise administrators and platform engineering teams focused on governance, operational controls, and SDLC transformation (DevOps rules 3, 5, and 9). Did not assign 'Azure', 'Coding', 'ML', or 'Security' since the explicit technical focus is on administration, governance, and developer experience within GitHub’s platform, without in-depth coverage of Azure services, direct coding patterns, or custom ML workflows.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=7YEi5SoVzNQ"
   }
 ]
