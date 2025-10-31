@@ -14204,5 +14204,11 @@
     "timestamp": "2025-10-31 01:33:14 +00:00",
     "reason": "Succesfully added: Assigned the 'DevOps' category because the article focuses on CI/CD pipelines, DevOps workflows, and security practices within DevOps (DevOps rules 1, 5, and 6). Assigned the 'Security' category as the entire piece centers on encryption, cryptographic migration, vulnerability assessment, and security automation in the face of quantum threats (Security rules 2, 4, 5, 7, 9). No other categories apply as there is no Microsoft-specific technology discussed, nor AI, ML, Coding, or Azure focus. All guidance is in the context of general DevOps and security, not platform-specific implementation.",
     "canonical_url": "https://devops.com/how-to-integrate-quantum-safe-security-into-your-devops-workflow/"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://www.thomasmaurer.ch/2025/10/optimize-azure-costs-with-reserved-instances/",
+    "timestamp": "2025-10-31 13:12:06 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content is focused on practical strategies and best practices for reducing costs in Microsoft Azure, specifically through Reserved VM Instances (Azure inclusion rules 1 and 4). No other category applies, as the episode does not involve development frameworks, AI, ML, DevOps, Security, or coding implementation. The content is entirely in English and not excluded by any generic exclusion rule."
   }
 ]
