@@ -14180,5 +14180,11 @@
     "timestamp": "2025-10-30 23:04:39 +00:00",
     "collection": "videos",
     "reason": "Succesfully added: Assigned the 'GitHub Copilot' category because the video directly features GitHub Copilot as an AI-assisted developer tool (GitHub Copilot Inclusion Rule 1). 'AI' was also mandatory due to the critical rule pairing it with GitHub Copilot whenever assigned. 'Coding' was included because the entire session focuses on coding a 2D game from scratch using developer tools, aligning with Coding rules 1, 2, and 4. Azure, ML, DevOps, and Security categories were not present, as there is no evidence of those services or practices. The content isn't a business productivity overview or non-English content, so generic exclusion rules do not apply."
+  },
+  {
+    "timestamp": "2025-10-31 00:09:44 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the episode focuses on integrating AI client features using MCP, custom AI models like Llama, and GitHub Copilot (AI rules 1, 3, 4). Assigned GitHub Copilot because there is significant discussion and demonstration of using GitHub Copilot with custom MCP tools (GitHub Copilot rules 1-4). Assigned Coding because the tutorial shows how to build and integrate client applications in Java using frameworks, VS Code, and development tools (Coding rules 1, 2, 4, 5). Excluded Azure, DevOps, ML, and Security categories as the content does not focus on cloud infrastructure, data engineering/science, deployment, or security topics.",
+    "canonical_url": "https://www.youtube.com/watch?v=HQQavvdrAA0",
+    "collection": "videos"
   }
 ]
