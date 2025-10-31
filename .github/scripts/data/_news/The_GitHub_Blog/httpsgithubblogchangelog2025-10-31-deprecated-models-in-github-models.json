@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "Title": "Deprecated models in GitHub Models",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2025-10-31 21:04:24",
+  "EnhancedContent": "The following models are now deprecated in GitHub Models. Please transition to the suggested versions to continue using the improved models with enhanced features:\n\n- **Mistral-Nemo** users should transition to [Mistral-small-2503](https://github.com/marketplace/models/azureml-mistral/mistral-small-2503).\n- **Mistral-large-2411** users should transition to [Mistral-medium-2505](https://github.com/marketplace/models/azureml-mistral/mistral-medium-2505).\n\nAlso, **Jais-30b-chat** is no longer be available in GitHub Models.\n\nTo learn more about GitHub Models, [check out the docs](https://docs.github.com/github-models). You can also join our [community discussions](https://github.com/orgs/community/discussions/categories/models?discussions_q=is%3Aopen+category%3AModels+).",
+  "PubDate": "2025-10-31T15:49:41+00:00",
+  "Link": "https://github.blog/changelog/2025-10-31-deprecated-models-in-github-models",
+  "Description": "The following models are now deprecated in GitHub Models. Please transition to the suggested versions to continue using the improved models with enhanced features: Mistral-Nemo users should transition to Mistral-small-2503.…\n\nThe post [Deprecated models in GitHub Models](https://github.blog/changelog/2025-10-31-deprecated-models-in-github-models) appeared first on [The GitHub Blog](https://github.blog).",
+  "Tags": [
+    "ecosystem & accessibility",
+    "Retired"
+  ],
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog"
+}

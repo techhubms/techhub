@@ -14300,5 +14300,17 @@
     "reason": "Succesfully added: Assigned 'Azure' category because the content is centrally about Azure's infrastructure reliability solutions, specifically the AFPD system, which is applied to Azure Compute. 'DevOps' is added because AFPD, Project Flash, scheduled events, and VM Watch are directly related to cloud operational workflows, incident mitigation, health monitoring, and automation—all key DevOps practices. ML is not included because, although machine learning models (A/B, bandit) are mentioned, the content does not describe custom ML engineering but rather usage of built-in platform reliability services. No other categories match the technical focus.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/revolutionizing-reliability-introducing-the-azure-failure/ba-p/4464883",
     "timestamp": "2025-10-31 19:10:09 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the update is about changes to AI models within GitHub Models, focusing on model availability, migration, and technical recommendations (AI inclusion rule 1). There is no explicit connection to GitHub Copilot, so that category was not used. The news does not provide details on coding, DevOps workflows, Azure-specific deployment, ML/data engineering, or security practices, so those categories did not apply. All technical guidance is specific to the domain of AI model usage and lifecycle on GitHub.",
+    "canonical_url": "https://github.blog/changelog/2025-10-31-deprecated-models-in-github-models",
+    "collection": "news",
+    "timestamp": "2025-10-31 21:06:10 +00:00"
+  },
+  {
+    "reason": "Succesfully added: I assigned the 'AI' category because the article discusses Copilot Studio, Microsoft Copilot, conversational AI, and agentic automation on Microsoft platforms (AI inclusion rules 1, 3, 4). The 'Azure' category is included since Azure Logic Apps, Azure Agent Framework, and Microsoft Entra ID are central to the described integration patterns (Azure inclusion rules 1, 4). 'Coding', 'DevOps', 'ML', 'Security', and 'GitHub Copilot' are not applied: there's no technical code development focus, CI/CD methods, ML/data science, security implementation, or GitHub Copilot topics presented. The article clearly surpasses the community minimum word count and is technical, not promotional or general business/productivity content. Copilot Studio is considered a developer/maker tool for AI, so it's in scope for the AI category as per the guidelines.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/agentic-integration-with-sap-servicenow-and-salesforce/ba-p/4466049",
+    "collection": "community",
+    "timestamp": "2025-10-31 21:06:49 +00:00"
   }
 ]
