@@ -7785,5 +7785,11 @@
     "timestamp": "2025-10-31 01:32:33 +00:00",
     "reason": "No categories found: No categories are assigned because the content is centered on AWS technologies and operational experiences with AWS AutoScaling Groups during an AWS us-east-1 outage. There is no substantive Microsoft technology present, and Microsoft is not central or even mentioned in the solution architecture or narrative. According to the multi-platform content threshold and Azure/DevOps category rules, Microsoft technologies must comprise ≥40% of the content or be central to the solution, which is not the case here. Therefore, no categories apply.",
     "canonical_url": "https://devops.com/anatomy-of-an-outage-our-aws-autoscaling-group-helping-hand-pushed-us-off-the-cliff/"
+  },
+  {
+    "timestamp": "2025-10-31 16:04:47 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is a general discussion of software architecture principles and best practices, with no substantive focus on Microsoft technologies or tools. There is no mention of specific Microsoft products, platforms (such as Azure, .NET, Visual Studio, etc.), or development frameworks. Per multi-platform and category inclusion rules, categories are only added when Microsoft technologies are central to the solution or discussed in technical depth (≥40% content). As this article remains technology-neutral and high-level, it does not qualify for any predefined categories.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/why-software-architecture-matters-more-than-ever/"
   }
 ]

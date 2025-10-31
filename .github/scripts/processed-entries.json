@@ -14228,5 +14228,23 @@
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the session centers on GitHub Copilot Enterprise, custom AI agents, and their capabilities (AI rules 1-2, GitHub Copilot rules 1-2). Assigned 'DevOps' because the core audience consists of enterprise administrators and platform engineering teams focused on governance, operational controls, and SDLC transformation (DevOps rules 3, 5, and 9). Did not assign 'Azure', 'Coding', 'ML', or 'Security' since the explicit technical focus is on administration, governance, and developer experience within GitHub’s platform, without in-depth coverage of Azure services, direct coding patterns, or custom ML workflows.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=7YEi5SoVzNQ"
+  },
+  {
+    "timestamp": "2025-10-31 16:05:08 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the post focuses on how to interact with GitHub Copilot, a Microsoft AI developer tool (AI rule 2 and 5). Assigned 'GitHub Copilot' because the entire content discusses prompt techniques for using Copilot (GitHub Copilot rule 1 and 2). Assigned 'Coding' because it covers practical developer workflows, code review, and mentoring using Copilot (Coding rule 4 and 5). Exclusion rules do not apply, as the content is technical, not biographical, sales-oriented, or business productivity-focused.",
+    "collection": "posts",
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/context-engineering-recipes-the-reflection-pattern.html"
+  },
+  {
+    "timestamp": "2025-10-31 16:05:32 +00:00",
+    "reason": "Succesfully added: Categories assigned as follows: Azure (updates focus exclusively on Azure services and features, matching Azure rule 1), DevOps (discussion includes deployment best practices, incidents, and operations—DevOps rules 5, 6, and 7), and ML (noted Azure ML preview feature retirements, aligning with ML rule 1). No generic exclusion rules apply; this is technical and update-focused content, not biographical, job-related, or business strategy. Copilot and AI are not discussed, nor is the content about general Microsoft 365 productivity.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=kdk0Ye47tfE"
+  },
+  {
+    "timestamp": "2025-10-31 16:06:02 +00:00",
+    "reason": "Succesfully added: Included the AI category because the post is centered on building, deploying, and orchestrating AI agents and workflows using Microsoft Agent Framework (AI rules 1, 4, 5). Included the Azure category because it is deeply focused on Azure App Service, Azure AI Foundry, Service Bus, and Cosmos DB for deployment and orchestration (Azure rules 1, 4, 5). Did not add ML, Coding, DevOps, or Security: the main focus is AI agent orchestration and platform service utilization, not building custom ML models, code-intensive programming guidance, or DevOps practices specifically.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-2-build-long-running-ai-agents-on-azure-app-service-with/ba-p/4465825"
   }
 ]
