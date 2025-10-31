@@ -14210,5 +14210,11 @@
     "canonical_url": "https://www.thomasmaurer.ch/2025/10/optimize-azure-costs-with-reserved-instances/",
     "timestamp": "2025-10-31 13:12:06 +00:00",
     "reason": "Succesfully added: Assigned the Azure category because the content is focused on practical strategies and best practices for reducing costs in Microsoft Azure, specifically through Reserved VM Instances (Azure inclusion rules 1 and 4). No other category applies, as the episode does not involve development frameworks, AI, ML, DevOps, Security, or coding implementation. The content is entirely in English and not excluded by any generic exclusion rule."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/join-us-at-net-conf-dive-into-the-future-of-development-with-visual-studio-2026/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'Coding' category due to the event's focus on .NET, Visual Studio, and development topics (Coding rules 1, 2, and 5). Assigned 'Azure' category because sessions discuss Azure integration and cloud features (Azure rules 1 and 4). Assigned 'AI' due to explicit coverage of Copilot for Visual Studio and AI-driven development tools (AI rules 1 and 5). Did not add 'GitHub Copilot' since content refers only to Copilot for Visual Studio, which is an AI tool for development, but not GitHub Copilot specifically. Excluded 'DevOps', 'Security', and 'ML' categories as the content does not describe processes, tools, or architectures directly associated with these areas.",
+    "timestamp": "2025-10-31 14:04:48 +00:00"
   }
 ]
