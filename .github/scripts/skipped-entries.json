@@ -7791,5 +7791,23 @@
     "reason": "No categories found: No categories were assigned because the content is a general discussion of software architecture principles and best practices, with no substantive focus on Microsoft technologies or tools. There is no mention of specific Microsoft products, platforms (such as Azure, .NET, Visual Studio, etc.), or development frameworks. Per multi-platform and category inclusion rules, categories are only added when Microsoft technologies are central to the solution or discussed in technical depth (≥40% content). As this article remains technology-neutral and high-level, it does not qualify for any predefined categories.",
     "collection": "posts",
     "canonical_url": "https://dellenny.com/why-software-architecture-matters-more-than-ever/"
+  },
+  {
+    "reason": "No categories found: This content is excluded because it does not focus on Microsoft technologies or development with Microsoft tools as required by the inclusion rules in Chapter 2 and Chapter 4. The article is a general overview of common software architectural styles (layered, event-driven, microservices, SOA, client-server, microkernel, serverless) and does not discuss implementation, patterns, or practices specific to Microsoft products, platforms, or services (such as Azure, .NET, Power Platform, etc.). Without a strong connection to the Microsoft ecosystem, no predefined categories apply. This matches the multi-platform threshold rule, which requires Microsoft technologies to be central or a primary focus (≥40% of substantive content), which is not the case here.",
+    "canonical_url": "https://dellenny.com/common-architectural-styles-and-when-to-use-them/",
+    "timestamp": "2025-10-31 17:07:40 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: All categories are excluded because the content is a high-level overview of software architecture evolution (monoliths, SOA, microservices, serverless) without any mention or focus on Microsoft technologies, platforms, or products. The text does not reference Azure, .NET, Microsoft cloud, or any specific Microsoft development/deployment tools or services. According to the workflow, content must be at least 40% focused on Microsoft technology or have Microsoft technology central to the solution. Neither the main text, tags, nor descriptions indicate Microsoft-centric content. Therefore, per the Category Inclusion Rules and the Multi-Platform Content Threshold, this article does not qualify for any categories.",
+    "canonical_url": "https://dellenny.com/the-evolution-of-software-architecture-from-monoliths-to-microservices/",
+    "timestamp": "2025-10-31 17:07:53 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: No categories have been assigned because the article 'Understanding Architectural Layers in Software Systems' discusses general software architecture principles and layered architecture patterns without any mention of Microsoft technologies, products, programming languages, or developer tools. There are examples including generic technologies like HTML, React, Hibernate, and generic patterns such as the presentation layer, business logic, and data access, but nothing specific to Microsoft (e.g., .NET, Azure, Visual Studio, GitHub, Microsoft AI services, etc.). According to the workflow, only content centered on Microsoft development products or tools qualifies for categorization. The absence of Microsoft content triggers the Microsoft Content Must Be Central rule from Chapter 2 and fails all relevant inclusion rules from Chapter 4.",
+    "canonical_url": "https://dellenny.com/understanding-architectural-layers-in-software-systems/",
+    "timestamp": "2025-10-31 17:08:07 +00:00",
+    "collection": "posts"
   }
 ]
