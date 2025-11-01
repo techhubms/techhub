@@ -1,0 +1,27 @@
+{
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-11-01 00:09:50",
+  "Link": "https://www.youtube.com/watch?v=9gmp_ADmRuE",
+  "Title": "Modernize Java Apps with AI:  Upgrade & Migrate your Applications",
+  "Tags": [
+    "AIAssisted",
+    "AppModernization",
+    "Azure",
+    "AzureMigration",
+    "CloudMigration",
+    "DevOps",
+    "GitHubCopilot",
+    "Java21",
+    "JavaMigration",
+    "JavaModernization",
+    "JavaUpgrade",
+    "LegacyCode"
+  ],
+  "FeedName": "Microsoft Developer YouTube",
+  "EnhancedContent": null,
+  "Author": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "PubDate": "2025-11-01T00:00:14+00:00",
+  "Description": "In this transformative episode, Ayan Gupta demonstrates how AI is revolutionizing the way we modernize legacy Java applications. Just like updating an old logo while keeping the flavor, modernization is about giving your applications new life without throwing everything away. And now, with GitHub Copilot's new App Modernization tool, this process has become dramatically faster and more reliable.\n\nThis session tackles one of the most painful problems in enterprise development: modernizing legacy Java applications and migrating them to the cloud. Whether you're upgrading your Java runtime, migrating databases, or moving from AWS to Azure, modernization projects traditionally take weeks or months of manual effort, and are prone to errors at every step.\n\nUsing the Asset Manager application as a real-world example (a production-like system running Java 7 with AWS S3, PostgreSQL, RabbitMQ, and Spring Boot), Ayan shows you how the GitHub Copilot App Modernization tool uses agent mode to handle the entire upgrade process. You'll see how it automatically analyzes your project to identify upgrade issues and security vulnerabilities, generates a comprehensive upgrade plan for review, applies changes using tools like OpenRewrite recipes, enters a fix-and-test loop to resolve build errors, and validates security with automated CVE scanning.\n\nThe demonstration upgrades the application from Java 7 to Java 21, fixing deprecated dependencies, updating frameworks, and resolving security vulnerabilities, all through guided AI-assisted steps. You'll also see how the tool identifies cloud readiness issues and begins the migration from AWS services to Azure alternatives.\n\nResources: aka.ms/JavaAndAIForBeginners\n\n0:00 - Introduction: Modernization with AI 0:28 - The Modernization Challenge 1:05 - Introducing Asset Manager Application 1:57 - Why This App Needs Modernization 2:21 - GitHub Copilot App Modernization Tool 2:46 - Running the Assessment Report 3:04 - Understanding Assessment Results 3:36 - Reviewing Java Upgrade Issues 3:55 - Triggering the Upgrade Workflow 4:20 - Reviewing the Upgrade Plan 4:50 - Upgrade Execution and Fix Loops 5:09 - Security Vulnerability Detection 5:42 - Reviewing the Upgrade Summary 6:22 - Running a Fresh Assessment 6:54 - Addressing Cloud Readiness Issues 7:20 - Database Migration from AWS to Azure 8:01 - Reviewing the Migration Plan 8:39 - Migration Execution and Summary 9:14 - Session Recap and Next Steps\n\n#JavaModernization #GitHubCopilot #JavaMigration #CloudMigration #Azure #JavaUpgrade #LegacyCode #AIAssisted #AppModernization #Java21 #DevOps #AzureMigration",
+  "FeedLevelAuthor": "Microsoft Developer"
+}
