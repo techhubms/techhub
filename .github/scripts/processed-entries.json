@@ -14318,5 +14318,11 @@
     "reason": "Succesfully added: Content assigned to AI and GitHub Copilot categories because it directly demonstrates the use of GitHub Copilot's App Modernization tool (AI rule 2 and 1), which is a developer-focused AI-powered assistant. Azure category is included due to migration from AWS to Azure (Azure rule 1 and 4). Coding category applies because it involves upgrading Java code, fixing dependencies, and hands-on development tasks (Coding rule 1, 2, 4). DevOps is included given the process focus—automated assessment, migration, change management, and workflow (DevOps rule 5 and 6). No generic exclusion rules apply (video is in English; content centers on technical modernization and migration processes and not on business productivity or management topics).",
     "timestamp": "2025-11-01 00:10:40 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=9gmp_ADmRuE"
+  },
+  {
+    "timestamp": "2025-11-01 03:23:28 +00:00",
+    "canonical_url": "https://devops.com/how-data-empathy-and-visibility-are-redefining-devops-maturity/",
+    "collection": "posts",
+    "reason": "Succesfully added: The 'DevOps' category applies based on strong emphasis on DevOps practices, team maturity, collaboration, process visibility, and release cycles (DevOps rules 3, 4, 5, 7). The 'AI' category applies since the article references 'AI acceleration', automation, and how these reshape development workflows (AI rule 5). No other Microsoft-specific categories qualify due to the lack of direct Microsoft technology or tool references. The article is primarily technical, passes content quality checks, and exceeds minimum word count for main content."
   }
 ]
