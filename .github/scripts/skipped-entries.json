@@ -7827,5 +7827,23 @@
     "canonical_url": "https://dellenny.com/using-widgets-effectively-in-windows-11/",
     "collection": "posts",
     "timestamp": "2025-11-01 09:05:30 +00:00"
+  },
+  {
+    "timestamp": "2025-11-01 15:04:18 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=IODadNBk0po",
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because, despite discussion of AI, automation, and open source practices, there is no substantive focus on Microsoft-specific technologies as required by the inclusion rules. Electron is an open source project with no indication of Microsoft technology being central or comprising at least 40% of the technical content. The AI component is discussed in the context of community and contribution, not in integration or development with Microsoft AI services. None of the core inclusion category rules (AI, Coding, DevOps, Azure, ML, Security, GitHub Copilot) strictly apply."
+  },
+  {
+    "timestamp": "2025-11-01 15:04:33 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/R8GN5GKrYNc",
+    "collection": "videos",
+    "reason": "No categories found: All category arrays were left empty because the input is missing meaningful content. The 'content' field is null, and both the 'description' and 'tags' fields are empty. Without any substantive content to evaluate, it is impossible to determine whether the material fits any of the defined categories. According to the workflow, only actual, provided content should be assessed—never navigation or meta information. Based on these generic exclusion rules and insufficient information, all categories are excluded."
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the primary focus of the content is moderation and community management in open source projects—specifically the challenge of AI-generated spam in GitHub issues and pull requests. While AI technologies and GitHub are mentioned, the actual substance of the video (based on the title and description) does not address development, coding, DevOps, or the technical implementation/use of Microsoft AI services or GitHub Copilot. There are no details about coding, development tools, technical best practices, or architectural insights. The discussion is about contributing behavior and community engagement, which do not fall under the predefined categories (AI, GitHub Copilot, Coding, DevOps, Azure, ML, Security).",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/bv0eOXQbGFY",
+    "timestamp": "2025-11-01 17:05:10 +00:00"
   }
 ]
