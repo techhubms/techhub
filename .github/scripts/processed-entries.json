@@ -14324,5 +14324,17 @@
     "canonical_url": "https://devops.com/how-data-empathy-and-visibility-are-redefining-devops-maturity/",
     "collection": "posts",
     "reason": "Succesfully added: The 'DevOps' category applies based on strong emphasis on DevOps practices, team maturity, collaboration, process visibility, and release cycles (DevOps rules 3, 4, 5, 7). The 'AI' category applies since the article references 'AI acceleration', automation, and how these reshape development workflows (AI rule 5). No other Microsoft-specific categories qualify due to the lack of direct Microsoft technology or tool references. The article is primarily technical, passes content quality checks, and exceeds minimum word count for main content."
+  },
+  {
+    "reason": "Succesfully added: Content is primarily about an AI-powered coding assistant (Cursor 2.0) and its new Composer AI model and interface. Assigned 'AI' category as the focus is on AI coding models and assistant workflows, fitting AI inclusion rules 1 and 4. Assigned 'Coding' because the tool is fundamentally about code editing and software development (Coding rules 4 and 5). Assigned 'DevOps' because the article discusses parallel agent workflows, infrastructure automation, incident response, and reviews implications for DevOps teams (DevOps rules 3, 5, and 6). Did NOT assign Microsoft-specific categories (Azure, ML, Security, GitHub Copilot) as Microsoft tools are only briefly mentioned in passing—Cursor 2.0 is not a Microsoft technology per se. No generic exclusion rules apply.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/cursor-2-0-brings-faster-ai-coding-and-multi-agent-workflows/",
+    "timestamp": "2025-11-01 04:04:31 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Categories 'AI' and 'DevOps' were assigned because the article centers on the effects of generative AI on software development practices and security workflows (AI rules 1, 4, 5 and DevOps rules 3, 4, 5). The 'Security' category applies since the focus is on the vulnerability and risk implications of AI-driven development and emphasizes DevSecOps practices and security automation within developer workflows (Security rules 2, 5, 6, 9). No Microsoft-specific technologies were discussed, so neither 'Azure' nor 'Coding' nor 'ML' categories apply. The content is technical and focused on engineering process best practices, not business strategy or biographical content, and passes all generic exclusion rules.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/why-developer-discipline-matters-more-than-ever-in-the-ai-era/",
+    "timestamp": "2025-11-01 04:04:50 +00:00"
   }
 ]
