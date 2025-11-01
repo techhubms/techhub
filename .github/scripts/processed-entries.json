@@ -14336,5 +14336,17 @@
     "collection": "posts",
     "canonical_url": "https://devops.com/why-developer-discipline-matters-more-than-ever-in-the-ai-era/",
     "timestamp": "2025-11-01 04:04:50 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the content focuses entirely on explaining the organizational structure of Microsoft Azure resources, covering core Azure governance concepts including Management Groups, Subscriptions, and Resource Groups. This matches Azure inclusion rule 1 and 5 (any Azure service/technology and Azure architecture/best practices). No other categories (AI, Coding, DevOps, ML, Security, GitHub Copilot) are included, as the article does not cover coding, AI, DevOps automation, machine learning, or security implementation, but is purely about cloud resource organization within Azure.",
+    "canonical_url": "https://dellenny.com/how-azure-organizes-resources-subscriptions-resource-groups-and-management-groups-explained/",
+    "collection": "posts",
+    "timestamp": "2025-11-01 09:04:57 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the post centers on how to craft prompts for artificial intelligence tools (AI Inclusion Rule 1 and 4). Assigned 'GitHub Copilot' category since the guide contains specific, substantive advice on using GitHub Copilot, highlighting prompt engineering for Copilot (GitHub Copilot Inclusion Rules 1 and 4). Did not assign 'Coding' since the article focuses on high-level prompt writing for code generation, not implementation of programming concepts or frameworks (Coding Inclusion Rules not met). Did not assign 'DevOps', 'Azure', 'ML', or 'Security' as none of those focus areas are covered. All decisions are based on directly relevant content describing Copilot prompt writing and AI tool optimization.",
+    "canonical_url": "https://dellenny.com/understanding-ai-prompts-writing-better-requests-for-copilot/",
+    "collection": "posts",
+    "timestamp": "2025-11-01 09:05:17 +00:00"
   }
 ]

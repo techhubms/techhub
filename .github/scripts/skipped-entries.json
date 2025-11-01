@@ -7815,5 +7815,17 @@
     "collection": "videos",
     "reason": "No categories found: No categories assigned because the content field is null, meaning there is no substantive content to evaluate. According to the workflow, if the actual technical content is missing or unavailable, it cannot be categorized or processed further.",
     "canonical_url": "https://www.youtube.com/shorts/S1c7SikAdhY"
+  },
+  {
+    "reason": "No categories found: All generic exclusion rules were checked first, per workflow. The content is a thorough, step-by-step user guide for personalizing the Windows 11 lock screen. It focuses on customizing the user experience, visuals, widgets, and minimal system configuration, with advice for both individual and business personalization (branding via lock screen), but it does NOT cover any development, coding, DevOps, AI/ML, security implementation, or advanced technical configuration with Microsoft APIs/SDKs. There is no mention of any programming languages, frameworks, application development, or code, nor does it guide readers in building or integrating with Microsoft platforms from a developer/consultant viewpoint. As per the workflow, articles about end-user features, Windows settings, and user interface personalization (not development/engineering content) are excluded under the \"Non-Development Microsoft Products\" generic exclusion rule. Therefore, no categories are assigned.",
+    "canonical_url": "https://dellenny.com/customizing-the-lock-screen-in-windows-11-a-step-by-step-guide-to-personalize-and-optimize/",
+    "collection": "posts",
+    "timestamp": "2025-11-01 09:04:34 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is a user guide for the Widgets feature in Windows 11, which focuses on end-user productivity, customization, and workflow tips. It does not contain technical development or implementation details related to Microsoft developer tools, coding, Azure, DevOps, AI, ML, or security (per Chapter 4 inclusion rules, Coding Category, Azure Category, and AI Category). There are no instructions for building widgets, developing on Windows, or using Microsoft APIs or SDKs – it is purely an end-user workflow article. This falls under Non-Development Microsoft Products exclusion in Generic Exclusion Rules (Chapter 3), as Windows 11 usage and productivity features do not qualify unless there is a development or technical architecture aspect.",
+    "canonical_url": "https://dellenny.com/using-widgets-effectively-in-windows-11/",
+    "collection": "posts",
+    "timestamp": "2025-11-01 09:05:30 +00:00"
   }
 ]
