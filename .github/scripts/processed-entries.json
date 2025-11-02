@@ -14372,5 +14372,11 @@
     "reason": "Succesfully added: Assigned the Azure category because the entire post is dedicated to Azure platform usage, specifically covering free tier exploration, cost management features, and practical cloud learning on Azure (Azure inclusion rules 1, 4, 5). There is no content about AI, GitHub Copilot, Coding, DevOps, ML, or Security—thus no other categories apply. The post passes all generic inclusion checks: clear technical focus, English language, sufficient length, no biographical content, and not a business/productivity story.",
     "canonical_url": "https://dellenny.com/azure-free-tier-cost-management-learn-azure-without-spending-a-dime/",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=82jciNezDMY",
+    "timestamp": "2025-11-02 14:04:20 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the Copilot CLI brings AI-powered development directly into the terminal (AI rule 1). Added GitHub Copilot category because the content specifically focuses on GitHub Copilot CLI, a developer tool (GitHub Copilot rule 1). Included Coding because the CLI is used to build, debug, and automate code, demonstrating practical usage in terminal-based software development workflows (Coding rules 2 and 4). Exclusion rules for other Copilot products do not apply since Copilot CLI is a developer tool. Azure, DevOps, ML, and Security are not assigned because there is no substantial focus on cloud, deployment, data science, or security aspects."
   }
 ]

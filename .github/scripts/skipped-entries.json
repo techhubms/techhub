@@ -7917,5 +7917,11 @@
     "reason": "No categories found: All categories were excluded due to the generic exclusion rules. The content is a detailed user guide about personalizing the appearance of Windows 11 (changing sounds, cursors, and fonts). It does not contain any development, coding, DevOps, AI, ML, Azure, or security implementation details, nor does it target Microsoft developer tools, frameworks, APIs, or technical architectures. The guide focuses on end-user features and personalization tips, which are explicitly excluded from all categories according to the exclusion rules for non-development Microsoft products and end-user topics.",
     "canonical_url": "https://dellenny.com/personalizing-sounds-cursors-fonts-in-windows-11-a-complete-guide/",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/wfrdXAB_jr4",
+    "timestamp": "2025-11-02 14:04:36 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: All categories excluded as the input does not provide any actual content or a description. Both the 'content' and 'description' fields are null or empty, meaning there is no substantive information to assess for categorization. According to the workflow, categorization must be based only on the provided content, and no assumptions or pattern recognition are allowed. Without content, it is impossible to determine technical topics, relevance, or Microsoft technology focus."
   }
 ]

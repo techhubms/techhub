@@ -1,0 +1,18 @@
+{
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "ProcessedDate": "2025-11-02 14:03:28",
+  "FeedName": "GitHub YouTube",
+  "FeedLevelAuthor": "GitHub",
+  "Title": "Power agentic workflows in your terminal with GitHub Copilot CLI",
+  "Author": "GitHub",
+  "Description": "Transform your terminal into an AI-powered development environment with GitHub Copilot CLI, which brings the same runtime that powers GitHub Copilot coding agent directly to your command line. In this GitHub Universe 2025 demo, discover how you can use Copilot CLI to build, debug, and understand code through natural language interactions. Watch as the team demonstrates real-world terminal-first development workflows invoking a coding agent, while maintaining full transparency and control throughout.\n\nSpeaker: Ryan Hecht, Product Manager, GitHub (Speaker)\n\n#GitHubCopilot #GitHubUniverse #GitHub\n\nWatch more videos from GitHub Universe 2025: https://www.youtube.com/watch?v=P6Va0\\_KILi4&list=PL0lo9MOBetEFKNlPHNouEmVeYeyoyGTXC\n\n— CHAPTERS —\n\n00:00 Welcome: Why the terminal needs an AI assistant 02:34 Demo: Getting started and setting up a new repository 04:46 Demo: Troubleshooting a port conflict 06:24 Demo: Fixing a visual bug using an image reference 08:03 Demo: Using custom agents for accessibility review 09:04 Demo: Finding issues and delegating work to the Copilot agent 11:17 Headless operation for scripting and automation 13:49 How to get started with the Copilot CLI\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 100 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=82jciNezDMY",
+  "Tags": [
+    "GitHub",
+    "GitHubCopilot",
+    "GitHubUniverse"
+  ],
+  "PubDate": "2025-11-02T14:00:11+00:00"
+}
