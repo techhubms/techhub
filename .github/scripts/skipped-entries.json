@@ -7911,5 +7911,11 @@
     "collection": "posts",
     "canonical_url": "https://devops.com/key-not-found-in-data-25/",
     "timestamp": "2025-11-02 09:08:13 +00:00"
+  },
+  {
+    "timestamp": "2025-11-02 10:04:22 +00:00",
+    "reason": "No categories found: All categories were excluded due to the generic exclusion rules. The content is a detailed user guide about personalizing the appearance of Windows 11 (changing sounds, cursors, and fonts). It does not contain any development, coding, DevOps, AI, ML, Azure, or security implementation details, nor does it target Microsoft developer tools, frameworks, APIs, or technical architectures. The guide focuses on end-user features and personalization tips, which are explicitly excluded from all categories according to the exclusion rules for non-development Microsoft products and end-user topics.",
+    "canonical_url": "https://dellenny.com/personalizing-sounds-cursors-fonts-in-windows-11-a-complete-guide/",
+    "collection": "posts"
   }
 ]

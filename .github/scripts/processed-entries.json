@@ -14366,5 +14366,11 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/using-copilot-studio-with-dataverse-a-developers-guide/",
     "timestamp": "2025-11-02 09:06:09 +00:00"
+  },
+  {
+    "timestamp": "2025-11-02 10:04:09 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the entire post is dedicated to Azure platform usage, specifically covering free tier exploration, cost management features, and practical cloud learning on Azure (Azure inclusion rules 1, 4, 5). There is no content about AI, GitHub Copilot, Coding, DevOps, ML, or Security—thus no other categories apply. The post passes all generic inclusion checks: clear technical focus, English language, sufficient length, no biographical content, and not a business/productivity story.",
+    "canonical_url": "https://dellenny.com/azure-free-tier-cost-management-learn-azure-without-spending-a-dime/",
+    "collection": "posts"
   }
 ]
