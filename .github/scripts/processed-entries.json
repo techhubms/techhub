@@ -14378,5 +14378,11 @@
     "timestamp": "2025-11-02 14:04:20 +00:00",
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI category because the Copilot CLI brings AI-powered development directly into the terminal (AI rule 1). Added GitHub Copilot category because the content specifically focuses on GitHub Copilot CLI, a developer tool (GitHub Copilot rule 1). Included Coding because the CLI is used to build, debug, and automate code, demonstrating practical usage in terminal-based software development workflows (Coding rules 2 and 4). Exclusion rules for other Copilot products do not apply since Copilot CLI is a developer tool. Azure, DevOps, ML, and Security are not assigned because there is no substantial focus on cloud, deployment, data science, or security aspects."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-11-02 21:04:08 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=1k2jyvmx3i0",
+    "reason": "Succesfully added: Assigned AI category because the session is about building intelligent agents using Microsoft's Agent Framework, Azure AI Foundry, and covers AI orchestration (AI rules 1, 3, 4, 6). Assigned Azure because Azure AI Foundry is integral to the solution (Azure rule 1, 4). Assigned Coding because it covers technical implementation, frameworks, .NET development, and patterns for real-world agent building (Coding rules 1-4). Did not assign ML since the focus is on AI agents, orchestration, and integration rather than data science pipelines, custom ML model training, or analytics. Security and DevOps did not apply as central topics."
   }
 ]

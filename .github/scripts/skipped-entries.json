@@ -7923,5 +7923,11 @@
     "timestamp": "2025-11-02 14:04:36 +00:00",
     "collection": "videos",
     "reason": "No categories found: All categories excluded as the input does not provide any actual content or a description. Both the 'content' and 'description' fields are null or empty, meaning there is no substantive information to assess for categorization. According to the workflow, categorization must be based only on the provided content, and no assumptions or pattern recognition are allowed. Without content, it is impossible to determine technical topics, relevance, or Microsoft technology focus."
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-11-02 16:04:25 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-free-tier-cost-management-learn-azure-without-spending-a/m-p/4466328#M22301"
   }
 ]
