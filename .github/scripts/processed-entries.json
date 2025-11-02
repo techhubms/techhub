@@ -14360,5 +14360,11 @@
     "timestamp": "2025-11-01 21:05:49 +00:00",
     "reason": "Succesfully added: Assigned 'DevOps' because the event centers on collaborative development, version control, GitHub workflows, and project submissions using GitHub repositories (DevOps rule 2, 9, 11). Assigned 'Coding' because the entire initiative is about building games with code across multiple programming languages and engines, promoting technical development and creativity (Coding rules 1, 2, 4, and 5). Did not assign 'AI' or 'GitHub Copilot' categories because, while Copilot is mentioned, it is suggested as an optional helper, not as a focus or main technology. Did not assign 'Azure', 'ML', or 'Security' as the content lacks substantial Microsoft cloud, data, or security content. Generic exclusion rules do not apply, as the content is technical, game-development focused, in English, and meets quality standards.",
     "canonical_url": "https://github.blog/company/github-game-off-2025-theme-announcement/"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the article centrally covers Copilot Studio (a Microsoft AI development tool) and its integration with Dataverse, providing guidance for building data-driven copilots (AI inclusion rule 1 and 2). Did not assign 'ML', 'DevOps', 'Azure', 'Coding', or 'Security' because the content focuses on low-code AI integration and design, not machine learning engineering, DevOps, general cloud deployment, traditional coding, or security-specific practices. The guide addresses developers/makers, not business productivity users, satisfying the distinction for Copilot Studio versus Microsoft 365 Copilot (CRITICAL Copilot Product Distinction). The majority of content is technical and instructional, meeting the quality standards for inclusion.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/using-copilot-studio-with-dataverse-a-developers-guide/",
+    "timestamp": "2025-11-02 09:06:09 +00:00"
   }
 ]

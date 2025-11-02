@@ -7845,5 +7845,71 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/bv0eOXQbGFY",
     "timestamp": "2025-11-01 17:05:10 +00:00"
+  },
+  {
+    "reason": "No categories found: All categories are excluded due to the 'Non-Development Microsoft Products' exclusion rule under Generic Exclusion Rules. The content is focused entirely on business productivity use of Microsoft Copilot within OneNote for creating personal learning journals—there is no developer tool, software development, coding, architecture, DevOps methodology, AI/ML development, or technical implementation details relevant to developers or consultants. Microsoft 365 Copilot and Copilot for Microsoft 365 are specifically excluded unless they are covered as developer tools (which is not the case here), and OneNote usage here is for general productivity, not development. Therefore, according to Chapter 3, no categories apply.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/create-learning-journals-with-copilot-in-onenote-boost-learning-productivity/",
+    "timestamp": "2025-11-02 09:05:49 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules: The provided content consists primarily of placeholder text ('Key not found in data'), broken or missing article content, and navigation elements, with no substantive technical content relevant to Microsoft technologies or development. There are no details, tutorials, or insights presented that could qualify for any technical category. This matches the criteria for exclusion under the generic rules for missing or non-informative content.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/key-not-found-in-data-16/",
+    "timestamp": "2025-11-02 09:06:22 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The 'content' field contains only error messages ('Key not found in data') and general website/navigation elements, with no substantive technical content about Microsoft technologies or any other topic. There is no relevant information to categorize or extract. This matches the generic exclusion requirement to focus on actual content and exclude pages without meaningful technical details.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/key-not-found-in-data-17/",
+    "timestamp": "2025-11-02 09:06:34 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The post consists solely of an error message ('Key not found in data'), navigation links, image banners, and newsletter sign-up prompts, with no substantive technical content or relevant information about Microsoft technologies. There is no technical information, overview, tutorial, or discussion present, so none of the inclusion rules for any categories apply.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/key-not-found-in-data-18/",
+    "timestamp": "2025-11-02 09:06:46 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The main content consists of 'Key not found in data', with no substantive technical information or discussion of Microsoft technologies. The remainder consists of navigation elements, newsletter signup, social sharing links, and images, none of which contribute meaningful content. There are no technical topics, no relevance to Microsoft technologies, and no actionable substance per the processing rules.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/key-not-found-in-data-19/",
+    "timestamp": "2025-11-02 09:06:58 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The content consists only of boilerplate, navigation, and sharing links, with no substantive technical information or discussion. The main text repeats 'Key not found in data' with no Microsoft technology focus or any qualifying technical material. This falls under content quality exclusions—specifically, content that does not provide technical details, knowledge, or value to practitioners, as outlined in Chapter 3.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/key-not-found-in-data-20/",
+    "timestamp": "2025-11-02 09:07:10 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule—there is no substantive technical content present. Both the title and content state 'Key not found in data,' and the remaining content consists of navigation links, image placeholders, and newsletter prompts. There is no relevant Microsoft technology coverage or technical depth. This matches the 'Focus on actual content' and 'When in doubt, exclude' guidance in Chapter 2, as well as the exclusion of content lacking educational value.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/key-not-found-in-data-21/",
+    "timestamp": "2025-11-02 09:07:23 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule. The main content ('Key not found in data') consists only of an error message and navigation/share elements, with no substantive technical information about any Microsoft technology. There is no actual technical content to categorize. This matches the exclusion requirement to focus on actual content (not navigation/share elements) and avoid empty, error, or placeholder posts.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/key-not-found-in-data-22/",
+    "timestamp": "2025-11-02 09:07:35 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: the main content does not contain any substantive technical material, only placeholder text ('Key not found in data') and site navigation, images, or sharing links. There is no technical explanation, tutorial, or meaningful discussion present. Therefore, no categories can be assigned.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/key-not-found-in-data-23/",
+    "timestamp": "2025-11-02 09:07:46 +00:00"
+  },
+  {
+    "reason": "No categories found: Excluded based on generic exclusion rules. The content titled 'Key not found in data' contains no substantive technical content relevant to Microsoft technologies or any development topic. The content field consists solely of broken links, placeholders, navigation, and newsletter signup information, failing to provide any technical or actionable information. No categories can be assigned as there is no valid content to analyze.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/key-not-found-in-data-24/",
+    "timestamp": "2025-11-02 09:08:01 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules: the content consists of placeholder text with no substantive technical content. The phrase 'Key not found in data' appears to be an error or placeholder, and there is no information about Microsoft technologies, technical solutions, or relevant content. There are no technical details, tutorials, or discussion present. Furthermore, the rest of the content is primarily navigation, newsletter signup, social sharing links, and images, all of which are specifically excluded as per the processing rules.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/key-not-found-in-data-25/",
+    "timestamp": "2025-11-02 09:08:13 +00:00"
   }
 ]
