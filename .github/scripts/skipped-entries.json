@@ -7983,5 +7983,11 @@
     "reason": "Insufficient content length",
     "collection": "community",
     "timestamp": "2025-11-03 18:06:25 +00:00"
+  },
+  {
+    "timestamp": "2025-11-03 19:05:44 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: All input fields except the title and author are empty or null, including 'content' and 'description'. According to the workflow, categorization depends on substantive technical content being present. Without actual content or description, I cannot determine whether the video covers technical implementation details about ValueTask vs Task, whether it focuses on Microsoft's .NET technology, or whether it qualifies for categories such as Coding. Additionally, the tags field is empty. Because there is no content to analyze, I cannot confidently apply any inclusion rules or assign categories. Per the rule, 'If unsure, leave categories array empty,' and 'Never fabricate information,' I must exclude all categories.",
+    "canonical_url": "https://www.youtube.com/shorts/g5Y1LwF5_nk"
   }
 ]

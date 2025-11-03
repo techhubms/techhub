@@ -14462,5 +14462,17 @@
     "reason": "Succesfully added: Categories assigned based on explicit discussion of GitHub Copilot (GitHub Copilot rule 1), the use of AI in deployment (AI rule 1 and 2), Azure resource provisioning and deployment (Azure rules 1 and 4), and DevOps practices like CI/CD automation (DevOps rules 5 and 6). Coding is not assigned since the main focus is on deployment and DevOps processes rather than code-level development. All category assignments are supported by prominent references throughout the description to Copilot, automated deployment, Azure services, and migration workflows.",
     "collection": "videos",
     "timestamp": "2025-11-03 18:06:22 +00:00"
+  },
+  {
+    "timestamp": "2025-11-03 19:04:54 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because the content is centrally about Microsoft’s AI investments, GPU deployments, AI research (AI for Good Lab), responsible AI standards, and the deployment of AI models and services (AI category, rules 1, 4, 5, and 6). Assigned Azure as the content details large-scale capital investments in Microsoft cloud infrastructure (datacenters, GPUs, AI workloads powered by Azure), matching Azure inclusion rules 1, 2, 3, and 4. Did not assign ML—while data and AI infrastructure are discussed, the focus is investments and enablement, not technical data science/ML pipelines or custom model engineering. No Coding, DevOps, Security categories apply; there is no direct coverage of app/code development, deployment practices, or specific security implementations. All category decisions are based strictly on explicit content references per the prompt's inclusion rules.",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2025/11/03/microsofts-15-2-billion-usd-investment-in-the-uae/"
+  },
+  {
+    "timestamp": "2025-11-03 19:05:17 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content specifically discusses GitHub Copilot's agent mode, which is a developer-focused AI tool (GitHub Copilot Inclusion Rules 1 and 2). No other technical implementation, coding, or DevOps process is described, so only these categories are included. Exclusion rules do not apply as the content is technical and governance-focused rather than biographical, sales-related, or business/productivity-focused. The article centers on management of an AI development tool and is therefore directly relevant.",
+    "canonical_url": "https://github.blog/changelog/2025-11-03-github-copilot-policy-now-supports-agent-mode-in-the-ide"
   }
 ]
