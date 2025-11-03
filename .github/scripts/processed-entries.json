@@ -14444,5 +14444,23 @@
     "timestamp": "2025-11-03 17:05:40 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Categories assigned as follows: \"AI\" because the content centers on large-scale inference of Llama2 70B and discusses novel AI hardware accelerations and software stacks (AI rule 1 and 4). \"Azure\" is included as all demonstrations and deployment focus on Microsoft Azure VMs and infrastructure (Azure rule 1, 4, 5). \"ML\" is included because the article covers MLPerf benchmarking, Llama2 model engineering, quantization (FP4), hardware-specific ML optimizations, and guides ML practitioners through replication (ML rules 1, 2, 4, 5, 6, 11). The content is technical, developer/practitioner focused, and does not trigger any generic exclusions."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/11/03/sesameop-novel-backdoor-uses-openai-assistants-api-for-command-and-control/",
+    "reason": "Succesfully added: Assigned the Security category because the article centers on a novel malware threat (SesameOp) analyzed by Microsoft’s Incident Response team, with technical details about attack mechanisms, mitigation, and detection (Security rules 1, 2, 5, 7, 8). Assigned AI because the backdoor’s C2 channel abuse is based on the misuse of the OpenAI Assistants API, with a breakdown of how AI service infrastructure is re-purposed for malicious control (AI rule 1, 4). The content does not qualify for DevOps, Azure, Coding, ML, or GitHub Copilot as there is no focus on development, ML engineering, or Microsoft platform automation. Content is not excluded, as it is an in-depth technical security analysis, not biographical, sales, or business-strategy focused.",
+    "collection": "news",
+    "timestamp": "2025-11-03 18:05:10 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-11-03-control-ai-spending-with-budget-tracking-for-github-ai-tools",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centers on GitHub's AI tools (GitHub Copilot coding agent and GitHub Spark) and new governance features (AI inclusion rule 1). Assigned 'GitHub Copilot' category because it specifically details Copilot's premium request management and budget tracking (GitHub Copilot inclusion rule 1). Coding, DevOps, Azure, ML, and Security categories were not assigned because the content does not directly address code development, software engineering tools, pipeline/deployment, cloud architectures, machine learning engineering, or security practices. All inclusion rules and distinctions were systematically followed.",
+    "collection": "news",
+    "timestamp": "2025-11-03 18:05:32 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=GlEiDHHYCao",
+    "reason": "Succesfully added: Categories assigned based on explicit discussion of GitHub Copilot (GitHub Copilot rule 1), the use of AI in deployment (AI rule 1 and 2), Azure resource provisioning and deployment (Azure rules 1 and 4), and DevOps practices like CI/CD automation (DevOps rules 5 and 6). Coding is not assigned since the main focus is on deployment and DevOps processes rather than code-level development. All category assignments are supported by prominent references throughout the description to Copilot, automated deployment, Azure services, and migration workflows.",
+    "collection": "videos",
+    "timestamp": "2025-11-03 18:06:22 +00:00"
   }
 ]

@@ -7971,5 +7971,17 @@
     "timestamp": "2025-11-03 13:12:56 +00:00",
     "reason": "No categories found: No categories assigned. The content is a celebratory event recap with no technical depth, technical explanations, developer tool guidance, or actionable technical information. It mainly announces growth statistics, community highlights, and provides social media links. There is no substantive detail about GitHub Copilot, AI features, coding practices, DevOps processes, Azure, ML, or security. According to the rules, content that is primarily event promotion or recap without technical implementation details does not qualify for any categories (see Generic Exclusion Rules, sales-pitch/event/announcement exclusion, and focus on actionable, technical content).",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=HJddnaBy6YU",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The content is a promotional and event highlight video for 'GitHub Universe 2025,' primarily focused on community, event atmosphere, and announcements rather than technical implementation or developer-focused tutorials. It lacks substantial technical depth about Microsoft technologies, development practices, tools, or actionable insights as required by the category inclusion rules. This falls under the 'Sales Pitches' and 'Promotional content without educational value' exclusion (Chapter 3: Content Quality Exclusions). Additionally, there is no specific coverage of Microsoft technology details, developer tooling, or technical practices.",
+    "collection": "videos",
+    "timestamp": "2025-11-03 18:05:56 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/determine-destinations-to-which-traffic-is-being-sent-from-azure/m-p/4465812#M22299",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-11-03 18:06:25 +00:00"
   }
 ]

@@ -1,0 +1,27 @@
+{
+  "Author": "Microsoft Developer",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Title": "Modernize Java Apps with AI: Deploy Your Applications to Azure",
+  "FeedName": "Microsoft Developer YouTube",
+  "PubDate": "2025-11-03T17:00:34+00:00",
+  "ProcessedDate": "2025-11-03 18:04:22",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=GlEiDHHYCao",
+  "Tags": [
+    "AIAssisted",
+    "AppModernization",
+    "AzureAppService",
+    "AzureCLI",
+    "AzureDeployment",
+    "AzureSQL",
+    "CloudDeployment",
+    "CloudMigration",
+    "DevOps",
+    "GitHubCopilot",
+    "JavaAzure",
+    "JavaCloud"
+  ],
+  "EnhancedContent": null,
+  "Description": "In this session, host Ayan Gupta demonstrates the final, and often most painful, step: deploying your modernized Java application to the cloud. Just like opening a café takes your coffee from personal to global, deploying to Azure makes your application available to anyone, anywhere on the planet!\n\nBuilding directly on the last session where you upgraded and migrated the Asset Manager application, this episode shows you how the GitHub Copilot App Modernization tool handles cloud deployment with the same AI-powered approach. Traditionally, deployment involves provisioning infrastructure, writing complex YAML files, configuring CI/CD pipelines, and ensuring everything ties together, a process that often takes days or weeks and is where many projects get stuck.\n\nThe App Modernization tool changes everything. You'll see how Copilot scans your entire project to understand its architecture, automatically generates architecture diagrams for review, creates a comprehensive deployment plan, provisions Azure resources using the Azure Developer CLI (azd), and iteratively deploys your application, retrying and adapting when issues occur.\n\nResources: aka.ms/JavaAndAIForBeginners\n\n0:00 - Introduction: From Local to Global 0:35 - Recap: What We've Accomplished So Far 1:11 - The Deployment Challenge 1:44 - Starting the Deployment Workflow 2:11 - Copilot Generates Architecture Diagram 2:46 - Reviewing the Deployment Plan 3:20 - Starting the Azure Deployment 3:48 - Copilot Provisions Azure Resources 4:07 - Deployment Complete: Reviewing in Azure Portal 4:32 - Testing the Deployed Application 5:02 - Application Successfully Running on Azure 5:32 - Session Recap: Complete Modernization Journey 5:55 - Wrap-Up and Resources\n\n#AzureDeployment #GitHubCopilot #JavaAzure #CloudDeployment #AppModernization #AzureAppService #DevOps #AzureCLI #JavaCloud #AIAssisted #CloudMigration #AzureSQL",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+}
