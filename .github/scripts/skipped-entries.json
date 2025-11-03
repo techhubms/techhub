@@ -7989,5 +7989,17 @@
     "collection": "videos",
     "reason": "No categories found: All input fields except the title and author are empty or null, including 'content' and 'description'. According to the workflow, categorization depends on substantive technical content being present. Without actual content or description, I cannot determine whether the video covers technical implementation details about ValueTask vs Task, whether it focuses on Microsoft's .NET technology, or whether it qualifies for categories such as Coding. Additionally, the tags field is empty. Because there is no content to analyze, I cannot confidently apply any inclusion rules or assign categories. Per the rule, 'If unsure, leave categories array empty,' and 'Never fabricate information,' I must exclude all categories.",
     "canonical_url": "https://www.youtube.com/shorts/g5Y1LwF5_nk"
+  },
+  {
+    "reason": "No categories found: Content excluded per generic exclusion rules regarding non-development Microsoft products. While the content discusses interoperability and developer resources for Microsoft 365 and Teams, it does not describe code development, Teams development (such as bots or app development), API usage, or any technical implementation details. The focus is on legal compliance, data portability, and the consolidation of resources rather than hands-on development guidance or technical architecture. Per the rules, announcements about general productivity services or end-user business applications (Microsoft 365 productivity apps, Teams non-development) are excluded unless the content is specifically about development work (e.g., building Teams bots, apps, or extensions).",
+    "timestamp": "2025-11-03 20:06:10 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/blog/restricted-access-to-microsoft-teams-data-via-ews-starts-january-31-2023"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-11-03 20:06:34 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage/azure-sql-access-is-denied-reading-azure-storage-file/m-p/4466565#M576"
   }
 ]

@@ -14474,5 +14474,11 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content specifically discusses GitHub Copilot's agent mode, which is a developer-focused AI tool (GitHub Copilot Inclusion Rules 1 and 2). No other technical implementation, coding, or DevOps process is described, so only these categories are included. Exclusion rules do not apply as the content is technical and governance-focused rather than biographical, sales-related, or business/productivity-focused. The article centers on management of an AI development tool and is therefore directly relevant.",
     "canonical_url": "https://github.blog/changelog/2025-11-03-github-copilot-policy-now-supports-agent-mode-in-the-ide"
+  },
+  {
+    "reason": "Succesfully added: Included the Coding category because the content is a technical troubleshooting discussion focused on .NET runtime dependencies, versioning, and application deployment—all central to Microsoft software development. No other categories (e.g., Azure, AI, ML, DevOps, Security) apply because the issue is purely related to local .NET runtime configuration for a Windows service. The post is not biographical, sales-related, or negative, and is in English with sufficient technical depth. It exceeds the word count minimum for community posts. All decisions align strictly with inclusion and exclusion rules.",
+    "timestamp": "2025-11-03 20:06:56 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/net-runtime/net-runtime-issues-application-not-starting-up/m-p/4466585#M773"
   }
 ]
