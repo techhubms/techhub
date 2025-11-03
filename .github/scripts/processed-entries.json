@@ -14384,5 +14384,11 @@
     "timestamp": "2025-11-02 21:04:08 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=1k2jyvmx3i0",
     "reason": "Succesfully added: Assigned AI category because the session is about building intelligent agents using Microsoft's Agent Framework, Azure AI Foundry, and covers AI orchestration (AI rules 1, 3, 4, 6). Assigned Azure because Azure AI Foundry is integral to the solution (Azure rule 1, 4). Assigned Coding because it covers technical implementation, frameworks, .NET development, and patterns for real-world agent building (Coding rules 1-4). Did not assign ML since the focus is on AI agents, orchestration, and integration rather than data science pipelines, custom ML model training, or analytics. Security and DevOps did not apply as central topics."
+  },
+  {
+    "timestamp": "2025-11-03 09:06:07 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=S9GZWSNOPK8",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on VS Code's Copilot Chat planning agent, which leverages AI for developer workflow enhancement (AI rule 1, 4). Assigned Coding because it's relevant to programming inside VS Code (Coding rule 5). Did not assign 'GitHub Copilot' because while Copilot Chat is mentioned, the focus is on a planning agent and not directly on GitHub Copilot's code completion/chat features. Did not assign other categories as there is no substantive coverage of Azure, DevOps, ML, or Security.",
+    "collection": "videos"
   }
 ]

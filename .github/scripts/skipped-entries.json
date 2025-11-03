@@ -7929,5 +7929,41 @@
     "timestamp": "2025-11-02 16:04:25 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-free-tier-cost-management-learn-azure-without-spending-a/m-p/4466328#M22301"
+  },
+  {
+    "timestamp": "2025-11-02 22:04:29 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/net-runtime/how-to-respond-to-upgrade-assistant-cli-prompts/m-p/4466364#M772",
+    "collection": "community"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-11-03 08:05:46 +00:00",
+    "reason": "No categories found: All categories are excluded due to the 'Non-Development Microsoft Products' exclusion rule outlined in Chapter 3. The article 'Exchange Online Basics – How Email Works in Microsoft 365' is focused on basic setup, administration, and management of Exchange Online as an end-user or IT admin service in Microsoft 365. There is no substantial developer, coding, DevOps, Azure architecture, AI, ML, or security implementation content as defined by the inclusion rules. The content covers user/admin setup, email flow, domain configuration, and general security best practices for Exchange Online, which is a business productivity tool, not a development-focused topic. No SharePoint, Teams, or other extensibility/dev content is present, and there is no substantial technical depth in areas covered by any category.",
+    "canonical_url": "https://dellenny.com/exchange-online-basics-how-email-works-in-microsoft-365/"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-11-03 08:05:59 +00:00",
+    "reason": "No categories found: All content is focused on using SharePoint Online from an organizational and end-user productivity perspective. The article addresses non-development aspects: planning site structures, collaboration, permissions, governance, and best practices for using SharePoint Online as a business tool. There is no mention of SharePoint development, customization, integration with custom solutions, coding, or developer-oriented technical implementation. Per the Generic Exclusion Rules (Chapter 3), content about Microsoft 365 or SharePoint is excluded unless it is development-focused (see sections for Non-Development Microsoft Products and Non-Development Microsoft 365/Office content). Therefore, no categories are assigned.",
+    "canonical_url": "https://dellenny.com/getting-started-with-sharepoint-online-for-collaboration/"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-11-03 08:06:12 +00:00",
+    "reason": "No categories found: No categories assigned due to generic exclusion rules for non-development Microsoft products. The content is an overview of Microsoft 365 Apps for Business and Enterprise, focusing on comparisons of editions, licensing, user limits, business productivity features, pricing, and cloud storage. It does not cover any development, customization, coding, APIs, developer tools, or technical implementation details relevant to Microsoft consultants or developers. According to generic exclusion rules for non-development Microsoft products (Office 365/Microsoft 365, business productivity tools, and general end-user features), this content should not be categorized.",
+    "canonical_url": "https://dellenny.com/introduction-to-microsoft-365-apps-for-business-and-enterprise/"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-11-03 08:06:25 +00:00",
+    "reason": "No categories found: All categories are excluded due to the 'Non-Development Microsoft Products' generic exclusion rule. The content is a general overview of Microsoft 365 subscription plans for individuals, families, and businesses. It discusses features, plan options, and end-user benefits with a focus on productivity, cloud storage, collaboration, and security from a user perspective, rather than covering any development, coding, DevOps, or technical implementation aspects. There is mention of Microsoft Copilot in the context of general AI for productivity within Microsoft 365, but not as a development tool or from an implementation perspective. No sections cover developer APIs, app customization, extension development, Teams/SharePoint/Power BI coding, or any hands-on technical work. The content targets end-users choosing between consumer and business plans, which is explicitly excluded by the workflow (see Non-Development Microsoft Products exclusion and business/productivity content rules).",
+    "canonical_url": "https://dellenny.com/overview-of-microsoft-365-products-and-plans/"
+  },
+  {
+    "timestamp": "2025-11-03 09:05:48 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=BHLcGC0NP88",
+    "reason": "No categories found: Content excluded due to generic exclusion rule. The provided description centers on Hitesh Choudhary’s personal career journey, transition into teaching, startup experiences, and biographical milestones rather than technical implementation details, development practices, or Microsoft technologies. The content focuses on personal anecdotes, motivational themes, and general advice, as indicated by phrases such as 'origin story,' 'acquisition experience,' 'team building,' and 'how to keep coding through all the trends.' There is no substantive technical guidance, developer tool usage with technical depth, or actionable insights related to Microsoft product development or engineering practices. This fits the 'Biographical Focus' exclusion rule, so no categories are assigned.",
+    "collection": "videos"
   }
 ]
