@@ -14390,5 +14390,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=S9GZWSNOPK8",
     "reason": "Succesfully added: Assigned AI category because the content focuses on VS Code's Copilot Chat planning agent, which leverages AI for developer workflow enhancement (AI rule 1, 4). Assigned Coding because it's relevant to programming inside VS Code (Coding rule 5). Did not assign 'GitHub Copilot' because while Copilot Chat is mentioned, the focus is on a planning agent and not directly on GitHub Copilot's code completion/chat features. Did not assign other categories as there is no substantive coverage of Azure, DevOps, ML, or Security.",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows:\n- 'Azure': Microsoft Fabric is an Azure-based enterprise data platform, and the post discusses technical aspects of data fabric, OneLake, security, integration, and analytics, all of which are central Azure features (Azure rule 1, 4, 5, 6, 7).\n- 'AI': The content highlights embedded AI capabilities, agentic AI, Copilot in Fabric, and their roles in data analytics and management, qualifying via AI rules 1, 3, 4, 5, and mention of platform-assisted AI (Copilot, agentic AI).\n- 'ML': Data science, analytics, and business intelligence are repeatedly mentioned as core solution areas, referencing analytical development, ML use, and enterprise analytics, qualifying via ML rules 1, 4, 6. GitHub Copilot is not mentioned, so 'GitHub Copilot' is not included.\nOther categories (Coding, DevOps, Security) are not covered directly; content is focused on analytics, AI integration, and data platform capabilities rather than hands-on coding or DevOps practices. Generic exclusion rules do not apply because the content is technical, implementation-focused, and relevant to Azure and Microsoft data engineering professionals.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-named-a-leader-in-the-forrester-wave-data-fabric-platforms-q4-2025/",
+    "timestamp": "2025-11-03 15:04:56 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: El contenido está principalmente en español, pero más del 80% del texto principal y enlaces clave están en español, lo que cumple con la restricción de idioma. Se incluyen numerosos conceptos y herramientas relacionados con AI y ML de Microsoft como Azure AI Search, Azure AI Content Safety, GitHub Copilot (mencionado junto a flujos MCP y herramientas de agente), MCP y frameworks de Microsoft, cumpliendo los criterios de las categorías AI (por enfoque en modelos, técnicas y servicios de Microsoft), GitHub Copilot (al conectar agentes con Copilot y citarlo como impulsor de LLMs), Azure (al usar Azure AI Search y Content Safety), ML (por la profundidad en pipelines, embeddings, arquitecturas y customización/validación de modelos), y Security (debido a la sección de calidad y seguridad, uso de Azure AI Content Safety, evaluación activa de riesgos y red-teaming con modelos IA, así como riesgos MCP). No se asignaron Coding o DevOps ya que no hay detalle suficiente de codificación específica con tecnologías Microsoft (más allá de AI/ML) ni aspectos de colaboración/automatización. El post supera holgadamente el mínimo de longitud, es técnico y educativo, y carece de exclusiones genéricas.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/python-ia-resumen-y-recursos/ba-p/4465152",
+    "timestamp": "2025-11-03 15:05:43 +00:00",
+    "collection": "community"
   }
 ]

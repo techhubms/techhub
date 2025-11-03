@@ -7965,5 +7965,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=BHLcGC0NP88",
     "reason": "No categories found: Content excluded due to generic exclusion rule. The provided description centers on Hitesh Choudhary’s personal career journey, transition into teaching, startup experiences, and biographical milestones rather than technical implementation details, development practices, or Microsoft technologies. The content focuses on personal anecdotes, motivational themes, and general advice, as indicated by phrases such as 'origin story,' 'acquisition experience,' 'team building,' and 'how to keep coding through all the trends.' There is no substantive technical guidance, developer tool usage with technical depth, or actionable insights related to Microsoft product development or engineering practices. This fits the 'Biographical Focus' exclusion rule, so no categories are assigned.",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/c5hRvqufF3I",
+    "timestamp": "2025-11-03 13:12:56 +00:00",
+    "reason": "No categories found: No categories assigned. The content is a celebratory event recap with no technical depth, technical explanations, developer tool guidance, or actionable technical information. It mainly announces growth statistics, community highlights, and provides social media links. There is no substantive detail about GitHub Copilot, AI features, coding practices, DevOps processes, Azure, ML, or security. According to the rules, content that is primarily event promotion or recap without technical implementation details does not qualify for any categories (see Generic Exclusion Rules, sales-pitch/event/announcement exclusion, and focus on actionable, technical content).",
+    "collection": "videos"
   }
 ]
