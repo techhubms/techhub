@@ -8001,5 +8001,11 @@
     "timestamp": "2025-11-03 20:06:34 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage/azure-sql-access-is-denied-reading-azure-storage-file/m-p/4466565#M576"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/blog/new-developer-resource-page-for-microsoft-365-interoperability-and-data-portability",
+    "reason": "No categories found: No categories were assigned because the content is an announcement about a new developer resource page focused on interoperability and data portability for Microsoft 365 applications. While it references developer tools and APIs, the post does not provide technical depth, practical implementation details, or hands-on coding, DevOps, AI, ML, Azure, or Security topics as required by the inclusion rules for any category. The content is higher-level, emphasizing legal commitments, resource aggregation, and links rather than technical development guidance or step-by-step solutions. According to the workflow's generic exclusion rules, general announcements about organizational/resource partnerships, aggregation, or compliance/legal updates—without substantive technical content—are excluded.",
+    "timestamp": "2025-11-03 21:05:41 +00:00"
   }
 ]

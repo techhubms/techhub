@@ -14480,5 +14480,17 @@
     "timestamp": "2025-11-03 20:06:56 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/net-runtime/net-runtime-issues-application-not-starting-up/m-p/4466585#M773"
+  },
+  {
+    "canonical_url": "https://blogs.windows.com/msedgedev/2025/11/03/microsoft-edge-introduces-passkey-saving-and-syncing-with-microsoft-password-manager/",
+    "collection": "news",
+    "timestamp": "2025-11-03 22:05:05 +00:00",
+    "reason": "Succesfully added: Assigned Security category as the post details the implementation and use of passkeys, a passwordless authentication technology, and discusses security benefits and protections such as encryption and Azure confidential ledger, fitting Security rule 1. Assigned Azure because Azure confidential ledger is core to auditing and transparency. Did not assign AI, Coding, DevOps, GitHub Copilot, or ML since the content is focused on end-user security, authentication protocol implementation, and Microsoft cloud infrastructure integration, not coding, development, AI, or DevOps practices."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-11-03-delegate-ai-controls-management-to-members-of-your-enterprise",
+    "collection": "news",
+    "timestamp": "2025-11-03 22:05:27 +00:00",
+    "reason": "Succesfully added: AI category assigned because the post is centrally about delegating management and governance of AI (and Copilot) features within GitHub Enterprise (AI rules 1, 4, 5). 'GitHub Copilot' category is included since Copilot administration and policy setups are explicitly discussed (GitHub Copilot rules 1, 2). Rule hierarchy notes: Once these categories qualified, only generic exclusions would apply; none triggered—content is technically focused, not business, HR, or biographical. No other categories (such as Coding, DevOps, Azure, Security, ML) are justified, as the content addresses organizational management of AI tools rather than implementation, operations, or code."
   }
 ]

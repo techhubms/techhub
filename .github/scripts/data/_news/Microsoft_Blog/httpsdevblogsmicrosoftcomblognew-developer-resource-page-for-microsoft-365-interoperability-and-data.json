@@ -1,0 +1,16 @@
+{
+  "FeedName": "Microsoft Blog",
+  "PubDate": "2025-11-03T20:00:19+00:00",
+  "Link": "https://devblogs.microsoft.com/blog/new-developer-resource-page-for-microsoft-365-interoperability-and-data-portability",
+  "FeedUrl": "https://devblogs.microsoft.com/feed",
+  "EnhancedContent": "Microsoft has long provided interoperability information, interfaces, and tools to help our vibrant ecosystem of partners integrate their products and services with Microsoft 365 productivity applications. This ecosystem includes communication and collaboration solution providers that compete with Microsoft Teams. Alongside these resources, we have also offered data portability solutions to our customers to allow them to move between services as they see fit.\n\nMicrosoft’s recent agreement with the European Commission formalizes these values into legal commitments. To meet these commitments and help developers and customers make more effective use of the tools we offer, we are now bringing these resources together into a [centralized developer resource page](https://aka.ms/TeamsCompliancePortal) that consolidates interoperability and data portability resources and provides ways for software development companies to provide feedback and request support. You can visit the new resource site now. To learn more about Microsoft’s Commitments to the European Commission, read the [September 12 announcement](https://aka.ms/TeamsCommitments/m365blog).",
+  "Author": "Microsoft Teams team",
+  "Tags": [
+    "Announcement"
+  ],
+  "FeedLevelAuthor": "Microsoft for Developers",
+  "Title": "New developer resource page for Microsoft 365 interoperability and data portability",
+  "Description": "Microsoft has long provided interoperability information, interfaces, and tools to help our vibrant ecosystem of partners integrate their products and services with Microsoft 365 productivity applications. This ecosystem includes communication and collaboration solution providers that compete with Microsoft Teams. Alongside these resources, we have also offered data portability solutions to our customers to allow them to move between services as they see fit. Microsoft’s recent agreement with the European Commission formalizes these values into legal commitments. To meet these commitments and help developers and customers make more […]\n\nThe post [New developer resource page for Microsoft 365 interoperability and data portability](https://devblogs.microsoft.com/blog/new-developer-resource-page-for-microsoft-365-interoperability-and-data-portability) appeared first on [Microsoft for Developers](https://devblogs.microsoft.com).",
+  "ProcessedDate": "2025-11-03 22:02:33",
+  "OutputDir": "_news"
+}
