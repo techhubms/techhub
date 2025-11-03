@@ -14402,5 +14402,35 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/python-ia-resumen-y-recursos/ba-p/4465152",
     "timestamp": "2025-11-03 15:05:43 +00:00",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Applied Azure category because Microsoft Fabric is a core Azure-based data platform (Azure Inclusion Rule 1). Applied ML category because the content describes performing spatial analytics, data engineering, and data science tasks—specifically data enrichment, pattern analysis, clustering, and integration with Power BI for analytics (ML Inclusion Rules 1, 2, 4, 5). Did not assign AI because the main focus is on spatial data analytics, not AI or pre-built AI services. Coding was not assigned as there is no focus on specific programming techniques or frameworks. Security and DevOps are not relevant here.",
+    "collection": "news",
+    "timestamp": "2025-11-03 16:05:14 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/arcgis-geoanalytics-for-microsoft-fabric-spark-generally-available/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric is an Azure-native service and the content deals with Azure-based KQL database architecture and features (Azure rule 1). Assigned 'ML' because the Entity Diagram is designed for managing complex data ingestion, aggregation, and analytics scenarios typical in data engineering and analytics workloads (ML rules 1, 2, 4). Did not assign 'AI', 'Coding', 'DevOps', 'Security', or 'GitHub Copilot' as the article does not mention AI services, code-level development, DevOps practices, security topics, or GitHub Copilot. The article clearly focuses on technical implementation details for Azure-based data solutions.",
+    "collection": "news",
+    "timestamp": "2025-11-03 16:05:33 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/entity-diagram-in-eventhouse-kql-database-preview/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'DevOps' because the content is about updating GitHub Actions workflows, a central DevOps practice (DevOps rules 2, 5). Assigned 'Security' because CodeQL is an application security analysis tool, and the upgrade impacts code scanning and secure DevOps operations (Security rule 2, 6). Did not assign 'Azure' (no Azure services involved), 'AI', 'ML', 'Coding', or 'GitHub Copilot' since the content focuses specifically on GitHub Actions and security tooling management, not coding frameworks or AI development. All assigned categories match the content's depth, platform, and intended audience as per rules.",
+    "collection": "news",
+    "timestamp": "2025-11-03 16:05:58 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-10-28-upcoming-deprecation-of-codeql-action-v3"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the content centers on Azure App Service platform changes involving ASMC (Azure inclusion rule 1). Assigned Security because it discusses certificate issuance, domain validation, and how access restrictions interact with DigiCert's validation process, which directly relate to secure operations and infrastructure (Security inclusion rules 1 and 2). Not assigned to Coding, DevOps, AI, ML, or GitHub Copilot, as the post focuses on configuration, platform mechanics, and security rather than application development, deployment, coding, or AI/ML work.",
+    "collection": "community",
+    "timestamp": "2025-11-03 16:06:36 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/follow-up-to-important-changes-to-app-service-managed/ba-p/4466120"
+  },
+  {
+    "reason": "Succesfully added: Content is a technical community newsletter focused on enterprise integration, automation, and AI on Microsoft Azure using Logic Apps, Azure Functions, API Management, and related services. 'Azure' is included for deep, central coverage of Azure integration platforms. 'AI' is included for multiple articles regarding AI agent workflows, GPT-powered integration, Azure AI Search, and RAG. 'DevOps' is assigned due to recurring themes of CI/CD automation, Bicep, YAML, templates, monitoring, and FinOps. 'Security' is included due to coverage of webhook authentication (with Entra ID), private endpoint configuration, and sensitive data handling. 'Coding' is relevant—coding patterns (.NET, Functions, custom connectors), reusable module creation, rule engines, and extensibility are addressed throughout the newsletter. Content meets multi-platform threshold and does not trigger any exclusion rules.",
+    "collection": "community",
+    "timestamp": "2025-11-03 16:07:05 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-november-2025/ba-p/4466366"
   }
 ]
