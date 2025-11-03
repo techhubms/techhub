@@ -14432,5 +14432,17 @@
     "collection": "community",
     "timestamp": "2025-11-03 16:07:05 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-november-2025/ba-p/4466366"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/ingest-files-into-your-fabric-data-warehouse-using-the-openrowset-function/",
+    "timestamp": "2025-11-03 17:04:56 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the Azure category because Microsoft Fabric Data Warehouse is part of the Azure ecosystem, and the article discusses features related to Azure Storage and OneLake. Assigned ML category because content focuses on ETL/ELT pipelines, schema inference, data transformation, and data warehouse engineering typically mapped to ML/data architecture category (ML rules 1, 2, and 5). No other categories qualified, as there is no coverage of AI features, coding practices, DevOps, security practices, or GitHub Copilot. The decision is supported by detailed focus on data ingestion, schema handling, and transformations in warehouse solutions."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/breaking-the-million-token-barrier-the-technical-achievement-of/ba-p/4466080",
+    "timestamp": "2025-11-03 17:05:40 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Categories assigned as follows: \"AI\" because the content centers on large-scale inference of Llama2 70B and discusses novel AI hardware accelerations and software stacks (AI rule 1 and 4). \"Azure\" is included as all demonstrations and deployment focus on Microsoft Azure VMs and infrastructure (Azure rule 1, 4, 5). \"ML\" is included because the article covers MLPerf benchmarking, Llama2 model engineering, quantization (FP4), hardware-specific ML optimizations, and guides ML practitioners through replication (ML rules 1, 2, 4, 5, 6, 11). The content is technical, developer/practitioner focused, and does not trigger any generic exclusions."
   }
 ]
