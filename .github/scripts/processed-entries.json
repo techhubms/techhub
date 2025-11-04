@@ -14504,5 +14504,23 @@
     "timestamp": "2025-11-04 01:33:03 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=_cqJzFxLorE",
     "collection": "videos"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://www.thomasmaurer.ch/2025/11/azure-local-well-architected-framework-and-review-assessment/",
+    "timestamp": "2025-11-04 08:05:43 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the main content centers on Azure Local, a Microsoft cloud infrastructure solution, and discusses the Azure Well-Architected Framework, Azure Arc, AKS, and associated Azure architecture resources. No other categories (AI, ML, Coding, DevOps, Security) apply as the content is focused on hybrid infrastructure architecture and best practices, not on application coding, AI/ML development, DevOps processes, or security implementation. Followed inclusion rules for Azure (Azure rule 1, 4, 5, 6). No generic exclusion rules triggered."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/low-light-image-enhancer-python-opencv-on-azure-app-service/ba-p/4466837",
+    "timestamp": "2025-11-04 08:06:15 +00:00",
+    "reason": "Succesfully added: Category assignment rationale:\n- Assigned 'Azure' because the solution is deployed to Azure App Service, following Azure deployment steps, and involves Azure-specific tooling (Azure Developer CLI). This fulfills Azure inclusion rule 1 and 4.\n- Assigned 'Coding' since the post focuses on writing and explaining Python code with frameworks (Flask, OpenCV, NumPy) and discusses code-level architectural details (Coding rules 1, 2, and 4). \n- Did not assign 'AI' or 'ML' categories because the image processing technique here uses classic, explainable algorithms, not AI/ML models or machine learning engineering. The enhancements are based on traditional image adjustments, not AI services, ML patterns, or custom models. No DevOps, Security, or GitHub Copilot relevance is present in the content."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/on-device-ai-with-windows-ai-foundry/ba-p/4466236",
+    "timestamp": "2025-11-04 08:06:40 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content focuses entirely on building and running AI models directly on Windows devices, leveraging Microsoft AI technologies and hybrid approaches (AI inclusion rules 1, 4, and 5). The Coding category is included because the article provides code examples, implementation strategies, and developer-centric guidance (Coding inclusion rules 2 and 4). Azure is not primary to architecture (Azure services are mentioned in hybrid scenarios but not as a primary theme), so Azure is not assigned. No generic exclusions apply since this is an instructional, technical article for developers on Microsoft AI tooling."
   }
 ]
