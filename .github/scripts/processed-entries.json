@@ -14606,5 +14606,11 @@
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-11-04-github-copilot-policy-update-for-unconfigured-policies",
     "reason": "Succesfully added: Assigned the 'AI' category because the content is about GitHub Copilot, an AI code assistant (AI rule 2). Assigned the 'GitHub Copilot' category because the content specifically focuses on Copilot’s policy management and configuration (GitHub Copilot category rules 1 and 2). Did not assign other categories as there is no direct coding, DevOps workflow, Azure, ML, or security implementation involved—this is an administrative feature update for the Copilot developer tool."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/powering-distributed-aiml-at-scale-with-azure-and-anyscale/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the primary focus is on distributed AI workloads and infrastructure for machine learning (AI rule 1, 4). Assigned Azure category because all deployment is centered on Azure services, particularly Azure Kubernetes Service (Azure rule 1, 4, 5). Assigned ML category because the article discusses machine learning infrastructure (ML rule 1, 6), distributed training, and scaling ML experiments with Ray and Anyscale. The article does not describe new code patterns or development frameworks directly (Coding), DevOps practices, nor is it primarily about security. Thus, those categories were not included.",
+    "timestamp": "2025-11-04 21:04:56 +00:00"
   }
 ]
