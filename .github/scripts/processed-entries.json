@@ -14540,5 +14540,11 @@
     "reason": "Succesfully added: Assigned the AI category because the article specifically discusses Silk Echo for AI, which utilizes AI-powered automation and copy data management to enhance Azure-based data workflows (AI category rule 1 and rule 5). Assigned the Azure category because the focus is on running Silk's storage platform and Silk Echo entirely on Microsoft Azure, addressing Azure-specific migration and performance topics (Azure category rule 1). Did not assign Coding, ML, DevOps, or Security because there is no coverage of application development, code, data science/ML engineering practices, CI/CD, or security implementation, but rather a focus on infrastructure and AI-assisted data management. The article meets all quality standards—it's technical, solution-focused, and not a sales pitch. Community content is above the length threshold.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/take-data-management-to-the-next-level-with-silk-software/ba-p/4464760"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-the-enhanced-query-diagnostics-in-azure-log/ba-p/4466993",
+    "collection": "community",
+    "timestamp": "2025-11-04 15:06:25 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content is entirely focused on enhancements within Azure Log Analytics (Azure inclusion rule 1 and 4). There is no significant AI, ML, Coding, DevOps, Security, or GitHub Copilot focus. The improvements revolve around monitoring, diagnostics, and query optimization in Azure, which matches the Azure category. Tags prioritize Azure Log Analytics, diagnostics, monitoring, and query performance. No exclusions apply: the content is technical, not biographical, not a sales pitch, not job- or management-related, written in English, and exceeds the word minimum."
   }
 ]
