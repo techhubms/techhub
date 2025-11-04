@@ -14534,5 +14534,11 @@
     "collection": "posts",
     "reason": "Succesfully added: The Coding category was assigned because the article is deeply technical and demonstrates programming patterns using C#, especially for accessing private members and advanced reflection scenarios in the Microsoft .NET ecosystem (Coding rules 1, 2, 4). The content specifically addresses .NET language features and does not center on DevOps, AI, ML, Azure, or Security topics. There is no mention of AI, Azure, DevOps tools, machine learning, or security implementation, so those categories were not included. The content thoroughly explores new coding mechanisms introduced in .NET 10, referencing specific APIs, compiler attributes, and C# code examples throughout.",
     "timestamp": "2025-11-04 11:06:09 +00:00"
+  },
+  {
+    "timestamp": "2025-11-04 14:06:19 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the article specifically discusses Silk Echo for AI, which utilizes AI-powered automation and copy data management to enhance Azure-based data workflows (AI category rule 1 and rule 5). Assigned the Azure category because the focus is on running Silk's storage platform and Silk Echo entirely on Microsoft Azure, addressing Azure-specific migration and performance topics (Azure category rule 1). Did not assign Coding, ML, DevOps, or Security because there is no coverage of application development, code, data science/ML engineering practices, CI/CD, or security implementation, but rather a focus on infrastructure and AI-assisted data management. The article meets all quality standards—it's technical, solution-focused, and not a sales pitch. Community content is above the length threshold.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/take-data-management-to-the-next-level-with-silk-software/ba-p/4464760"
   }
 ]
