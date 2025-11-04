@@ -14546,5 +14546,17 @@
     "collection": "community",
     "timestamp": "2025-11-04 15:06:25 +00:00",
     "reason": "Succesfully added: Assigned the Azure category because the content is entirely focused on enhancements within Azure Log Analytics (Azure inclusion rule 1 and 4). There is no significant AI, ML, Coding, DevOps, Security, or GitHub Copilot focus. The improvements revolve around monitoring, diagnostics, and query optimization in Azure, which matches the Azure category. Tags prioritize Azure Log Analytics, diagnostics, monitoring, and query performance. No exclusions apply: the content is technical, not biographical, not a sales pitch, not job- or management-related, written in English, and exceeds the word minimum."
+  },
+  {
+    "timestamp": "2025-11-04 16:05:58 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_breaking-the-million-token-barrier-activity-7391283043765952512-guP3",
+    "reason": "Succesfully added: Assigned the AI category because the entire focus is on a breakthrough in production-scale AI performance on Microsoft's Azure platform (AI rule 1: Microsoft AI products/services). Assigned the Azure category because the achievement is exclusively about the Azure ND GB300 v GPU infrastructure and its ability to support large-scale AI workloads (Azure rules 1, 4, and 5). Did not include ML, Security, Coding, DevOps, or GitHub Copilot, since the post is about infrastructure performance for AI rather than application-level ML/DS work, security, coding techniques, or DevOps practices. The content is technical, focused on core Microsoft infrastructure, and does not fall under any exclusion rules."
+  },
+  {
+    "timestamp": "2025-11-04 16:06:45 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-3-client-side-multi-agent-orchestration-on-azure-app/ba-p/4466728",
+    "reason": "Succesfully added: Included categories as follows: \n- Assigned AI because the entire article is about orchestrating AI agents, specifically leveraging Microsoft Agent Framework, Azure AI Foundry, and Azure OpenAI Service (AI inclusion rules 1, 4, 5). \n- Assigned Azure due to deep coverage of Azure App Service, Azure Cosmos DB, Azure Service Bus, and Azure AI resources (Azure inclusion rules 1, 2, 4). \n- Assigned Coding since C# development, .NET patterns, code samples, agent workflow orchestration and deployment are central throughout (Coding rules 1, 2, 4, and 5). \nThe post is not focused on data science/model building, ML, DevOps practices (other than as part of architecture), or security implementation, so those categories were not included. The article is highly technical, hands-on, English language, not negative, and not business-strategy/management focused."
   }
 ]
