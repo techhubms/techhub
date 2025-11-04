@@ -8007,5 +8007,29 @@
     "canonical_url": "https://devblogs.microsoft.com/blog/new-developer-resource-page-for-microsoft-365-interoperability-and-data-portability",
     "reason": "No categories found: No categories were assigned because the content is an announcement about a new developer resource page focused on interoperability and data portability for Microsoft 365 applications. While it references developer tools and APIs, the post does not provide technical depth, practical implementation details, or hands-on coding, DevOps, AI, ML, Azure, or Security topics as required by the inclusion rules for any category. The content is higher-level, emphasizing legal commitments, resource aggregation, and links rather than technical development guidance or step-by-step solutions. According to the workflow's generic exclusion rules, general announcements about organizational/resource partnerships, aggregation, or compliance/legal updates—without substantive technical content—are excluded.",
     "timestamp": "2025-11-03 21:05:41 +00:00"
+  },
+  {
+    "timestamp": "2025-11-04 10:05:49 +00:00",
+    "reason": "No categories found: All assigned categories are excluded based on Generic Exclusion Rules in Chapter 3 and the Copilot Product Distinction in Chapter 2: The content is primarily about Microsoft 365 Copilot and Microsoft Viva for employee engagement, which are business productivity/employee experience tools. The article describes how Copilot and Viva are used to enhance communication, feedback, learning, and engagement in the modern workplace, but has no substantial focus on software development, coding, DevOps, security, AI development, ML/data engineering, or related technical implementation. Per explicit rules: Microsoft 365 Copilot is a business productivity tool and should be excluded, even if the 'AI' or 'Copilot' tags are present. Microsoft Viva is not a developer or engineering tool and is excluded unless the focus is on development or technical implementation, which is not the case in this article. Therefore, no categories apply.",
+    "canonical_url": "https://dellenny.com/copilot-viva-empowering-employee-engagement-in-the-modern-workplace/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-04 10:06:03 +00:00",
+    "reason": "No categories found: All categories excluded due to Generic Exclusion Rules. The content focuses on Microsoft 365 Copilot, which is a business productivity tool and not a developer tool, according to the critical distinction outlined in Chapter 2 and detailed in the exclusion list in Chapter 3 (‘Microsoft 365 Copilot → No categories’). The blog provides guidance for educators on teaching AI literacy using Microsoft 365 Copilot and centers on instructional and ethical classroom use, not technical implementation, coding, deployment, or development practices. No Azure, Coding, DevOps, ML, Security, or developer-focused AI technology is featured. There are no in-depth technical details relevant to any of the allowed categories and the Copilot product featured is explicitly disallowed.",
+    "canonical_url": "https://dellenny.com/how-educators-can-teach-ai-literacy-using-copilot/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-04 10:06:17 +00:00",
+    "reason": "No categories found: All categories are excluded because this content primarily focuses on using Microsoft 365 Copilot as an AI-powered meeting assistant within Microsoft Teams, which is classified as a business productivity tool for general work meetings (see Generic Exclusion Rules: Non-Development Microsoft Products and CRITICAL: Copilot Product Distinction). The content centers on prompt strategies and productivity tips for end users, not developer tools, programming, coding, or technical implementation. There is no discussion of code, developer APIs, extensibility, or software architecture. Per the rules, coverage of Microsoft 365 Copilot, Office Copilot, or Copilot for Microsoft 365 is excluded as non-development Microsoft 365 product content.",
+    "canonical_url": "https://dellenny.com/how-to-ask-ai-meeting-assistants-the-right-questions-during-meetings/",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/turn-conversations-into-reports-instantly-with-copilot-in-microsoft-teams/",
+    "collection": "posts",
+    "reason": "No categories found: All categories were excluded due to the Generic Exclusion Rule for Non-Development Microsoft Products. The content is focused on Microsoft 365 Copilot in Microsoft Teams, specifically for creating business productivity reports, summaries, and executive briefings. There is no discussion of code, APIs, development, or technical implementation meant for developers or IT professionals. The main audience is general business users looking to improve reporting and communication workflows with Copilot integrated into Teams. Section headings and main text all address non-development usage—e.g., summarizing meetings, generating reports, handovers, and benefits for business roles. According to the Copilot Product Distinction rules in Chapter 2 and the Non-Development Microsoft Products exclusion, content about 'Microsoft 365 Copilot' or Copilot functionality inside Office apps/Teams for productivity use cases must NOT be assigned any categories.",
+    "timestamp": "2025-11-04 11:06:25 +00:00"
   }
 ]

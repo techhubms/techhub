@@ -14528,5 +14528,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=S6zKiJSwgjE",
     "collection": "videos",
     "timestamp": "2025-11-04 09:05:31 +00:00"
+  },
+  {
+    "canonical_url": "https://andrewlock.net/exploring-dotnet-10-preview-features-9-easier-reflection-with-unsafeaccessortype/",
+    "collection": "posts",
+    "reason": "Succesfully added: The Coding category was assigned because the article is deeply technical and demonstrates programming patterns using C#, especially for accessing private members and advanced reflection scenarios in the Microsoft .NET ecosystem (Coding rules 1, 2, 4). The content specifically addresses .NET language features and does not center on DevOps, AI, ML, Azure, or Security topics. There is no mention of AI, Azure, DevOps tools, machine learning, or security implementation, so those categories were not included. The content thoroughly explores new coding mechanisms introduced in .NET 10, referencing specific APIs, compiler attributes, and C# code examples throughout.",
+    "timestamp": "2025-11-04 11:06:09 +00:00"
   }
 ]
