@@ -14522,5 +14522,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/on-device-ai-with-windows-ai-foundry/ba-p/4466236",
     "timestamp": "2025-11-04 08:06:40 +00:00",
     "reason": "Succesfully added: Assigned AI category because the content focuses entirely on building and running AI models directly on Windows devices, leveraging Microsoft AI technologies and hybrid approaches (AI inclusion rules 1, 4, and 5). The Coding category is included because the article provides code examples, implementation strategies, and developer-centric guidance (Coding inclusion rules 2 and 4). Azure is not primary to architecture (Azure services are mentioned in hybrid scenarios but not as a primary theme), so Azure is not assigned. No generic exclusions apply since this is an instructional, technical article for developers on Microsoft AI tooling."
+  },
+  {
+    "reason": "Succesfully added: The 'AI' category was assigned because the content is dedicated to defining AI agents, their architecture, use cases, and distinctions from chatbots, which matches multiple AI inclusion rules (AI rules 1, 4, and 5). 'Azure' was added since resources, architectural design, and development are clearly Azure-focused, as reflected by the provided links and discussion context (Azure rule 1 and 4). Coding, DevOps, ML, Security, and GitHub Copilot do not apply because the focus is conceptual/architectural rather than on hands-on code, DevOps practices, machine learning engineering, security, or GitHub Copilot development. The content is professional and technical, avoids biographical, negative, career, or business strategy focus, and is presented in English, so no generic exclusions apply.",
+    "canonical_url": "https://www.youtube.com/watch?v=S6zKiJSwgjE",
+    "collection": "videos",
+    "timestamp": "2025-11-04 09:05:31 +00:00"
   }
 ]

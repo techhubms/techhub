@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": null,
+  "Tags": [],
+  "Author": "Microsoft Developer",
+  "PubDate": "2025-11-04T08:00:39+00:00",
+  "Description": "Welcome to the first episode of season six of the Azure Essentials Show series: Armchair Architects. Host David Blank-Edelman is joined as always by Uli Homann CVP at Microsoft, and Eric Charran (@mougue) , Executive Director and at Intuit for the first episode in a season dedicated to exploring AI agents from a cloud solution architect’s perspective. This episode sets the stage by defining what AI agents are, distinguishing them from chatbots, and discussing their growing importance in today’s technology landscape.\n\nResources\n- Agent Factory: Designing the open agentic web stack https://azure.microsoft.com/blog/agent-factory-designing-the-open-agentic-web-stack/\n- Azure Architecture Center\nhttps://learn.microsoft.com/azure/architecture\n- AI architecture design\nhttps://learn.microsoft.com/azure/architecture/ai-ml\n- Get started with AI agent development on Azure\nhttps://learn.microsoft.com/training/modules/ai-agent-fundamentals\n\nRelated Episodes\n- Watch more episodes of Armchair Architects\nhttps://aka.ms/ArmchairArchitects\n- Watch more episodes of the Azure Essentials Show\nhttps://aka.ms/AzureEssentialsShow\n\nConnect\n- David Blank-Edelman https://www.linkedin.com/in/dnblankedelman/\n- Uli Homann https://www.linkedin.com/in/ulrichhomann/\n- Eric Charran https://www.linkedin.com/in/ericcharran/\n\nChapters 0:00 Good news! 0:47 Welcome architects 2:01 What is an agent? 2:43 Empowered to act 4:03 Do agents require LLMs? 5:45 How is an agent different from a chatbot? 6:06 Architectural layers of an agent 7:45 Agents 101 11:35 Handling anomalies 14:42 Where do agents plug in? 16:38 Episode 2: Designing effective AI agents",
+  "ProcessedDate": "2025-11-04 09:04:34",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Link": "https://www.youtube.com/watch?v=S6zKiJSwgjE",
+  "Title": "Armchair Architects: Defining AI Agents and Their Core Traits",
+  "FeedName": "Microsoft Developer YouTube"
+}
