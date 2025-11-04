@@ -14492,5 +14492,11 @@
     "collection": "news",
     "timestamp": "2025-11-03 22:05:27 +00:00",
     "reason": "Succesfully added: AI category assigned because the post is centrally about delegating management and governance of AI (and Copilot) features within GitHub Enterprise (AI rules 1, 4, 5). 'GitHub Copilot' category is included since Copilot administration and policy setups are explicitly discussed (GitHub Copilot rules 1, 2). Rule hierarchy notes: Once these categories qualified, only generic exclusions would apply; none triggered—content is technically focused, not business, HR, or biographical. No other categories (such as Coding, DevOps, Azure, Security, ML) are justified, as the content addresses organizational management of AI tools rather than implementation, operations, or code."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-11-03-manage-budgets-and-track-usage-with-new-billing-api-updates",
+    "timestamp": "2025-11-04 00:10:32 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'DevOps' category because the entire post focuses on API-driven operations for managing billing, budgets, and usage data in GitHub, aligning with DevOps practices around automation, infrastructure and operations (DevOps inclusion rules 2, 6, and 7). Did not assign AI, Coding, Azure, Security, GitHub Copilot, or ML, as there is no mention or technical depth related to those areas. Exclusion rules do not apply: content is technical, sufficiently detailed, developer/operator focused, and in English."
   }
 ]
