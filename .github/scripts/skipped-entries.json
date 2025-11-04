@@ -8037,5 +8037,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=g0G5X8ECXP8",
     "reason": "No categories found: All content fields relevant to the substance of the event (title, description) focus on professional development, certifications, and career growth, which falls under the 'Job-Related Content' and 'Workplace and Business Focus' generic exclusion rules. The technical aspect is minimal and subordinate to the event's focus on career and certification. The summary emphasizes connecting with experts and 'leveling up your data game,' not technical implementation or hands-on architectural/data engineering guidance. As such, per the generic exclusion rules for job-related content and events focused on certifications/career (not technical depth or implementation), no categories are assigned.",
     "timestamp": "2025-11-04 18:07:03 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: the provided information is insufficient for categorization. The content field is null and the description only references a livestream with general phrases ('all the latest on Enterprise Essentials'), without any substantive technical details or focus on Microsoft technology implementations. This does not meet the minimum requirement for actionable, technical information as outlined in the core processing rules and quality standards.",
+    "canonical_url": "https://www.youtube.com/watch?v=3zafVMIzFXE",
+    "timestamp": "2025-11-04 19:06:19 +00:00",
+    "collection": "videos"
   }
 ]

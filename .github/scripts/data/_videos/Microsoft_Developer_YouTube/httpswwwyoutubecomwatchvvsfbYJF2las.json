@@ -1,0 +1,22 @@
+{
+  "Title": "From Building to Fine-Tuning: Coding Agents that Optimize AI Workflows",
+  "Description": "Welcome to another episode of Cozy Kitchen, where AI meets culinary creativity! 🍳🤖 In this special segment, Chef Govind Kamtamneni returns to show us how to go beyond basic templates and build intelligent software engineering agents using AI Foundry, GitHub, and reinforcement learning. From bootstrapping projects to orchestrating multi-agent workflows, this episode is packed with insights for developers looking to level up their AI engineering game. Whether you're just starting with AI templates or exploring advanced fine-tuning techniques, Chef Govind walks us through the tools, platforms, and principles that power modern AI-native development.\n\nWhat You'll Learn:\n\n- How to start AI projects using customizable templates\n- The role of asynchronous software engineering agents\n- Benefits of self-hosting AI Foundry and using SpecKit\n- How to fine-tune models using reinforcement learning and Hugging Face datasets\n- Best practices for multi-agent orchestration and GitHub integration\n- Why understanding first principles and math is key to AI development\nChapters: 00:01 - Getting Started with AI Templates 00:21 - Welcome Back Chef Govind 00:40 - Customizing Templates with AI Foundry 01:57 - Self-Hosting and SpecKit Integration 03:06 - Multi-Agent Software Engineering 04:45 - Long-Running Agents and GitHub Integration 06:03 - Task Breakdown and Parallel Agent Assignment 08:15 - Reinforcement Learning and Fine-Tuning Models 10:09 - Using Hugging Face Datasets for Training 11:52 - Steering Models with Preference Optimization 13:00 - Advice from Chef Govind: Study Math and Read Papers Speakers: Chef Govind Kamtamneni – AI & Software Engineering Expert https://www.linkedin.com/in/thegovind/\n\nJohn Maeda – Host, Cozy AI Kitchen https://www.linkedin.com/in/johnmaeda/\n\nLinks & Resources: 🚀 Explore Azure AI Foundry: https://ai.azure.com/ 🔍 Build AI Solutions with SWE Agents: https://aifoundry.app/ 📝 Clone the repo: https://aka.ms/CAIK-AgentTemplates 📚 Learn about SpecKit: https://speckit.dev 🔍 Discover datasets: https://huggingface.co/datasets ⚡ Azure Machine Learning: https://learn.microsoft.com/azure/machine-learning/ 🎯 Nvidia GPUs on Azure: https://learn.microsoft.com/azure/virtual-machines/nv-series 📺 All Cozy AI Kitchen episodes: https://aka.ms/CAIK-YTPlaylist 🔔 Subscribe for more episodes and developer insights!\n\nHashtags: #AIEngineering #AzureOpenAI #GitHubCopilot #SpecKit #AzureAIFoundry #ReinforcementLearning #MachineLearning #MultiAgentSystems #MicrosoftDeveloper #Azure #HuggingFace #DevOps #CodingWithAI #CozyAIKitchen #LiveDemo #Tutorial",
+  "Link": "https://www.youtube.com/watch?v=vsfbYJF2las",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Author": "Microsoft Developer",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "OutputDir": "_videos",
+  "FeedName": "Microsoft Developer YouTube",
+  "PubDate": "2025-11-04T18:19:47+00:00",
+  "ProcessedDate": "2025-11-04 19:04:45"
+}
