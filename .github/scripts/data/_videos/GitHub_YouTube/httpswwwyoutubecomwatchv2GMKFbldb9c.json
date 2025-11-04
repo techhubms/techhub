@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-11-04 23:05:18",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Link": "https://www.youtube.com/watch?v=2GMKFbldb9c",
+  "EnhancedContent": null,
+  "Description": "Discover the powerful new capabilities of GitHub Copilot in JetBrains IDEs, featuring support for the Model Context Protocol (MCP). Learn about agent mode for autonomous issue management, MCP sampling for model configuration, MCP prompts for enhanced workflow, and MCP elicitation for structured dialogue flows. Experience how these features can streamline your coding process, from planning and implementing tasks to troubleshooting and gathering requirements.\n\n— CHAPTERS —\n\n00:00 Introduction to GitHub Copilot in JetBrains IDEs 00:12 Exploring Agent Mode 00:57 MCP Enhancements: Sampling 01:17 Utilizing MCP Prompts 01:39 Leveraging MCP Servers for Context 02:03 MCP Elicitation: A Deeper Dive 02:31 Conclusion and Final Thoughts\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 100 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "Title": "GitHub Copilot in JetBrains: Demo of MCP and agent mode",
+  "OutputDir": "_videos",
+  "Author": "GitHub",
+  "PubDate": "2025-11-04T22:41:29+00:00",
+  "FeedLevelAuthor": "GitHub",
+  "FeedName": "GitHub YouTube",
+  "Tags": []
+}

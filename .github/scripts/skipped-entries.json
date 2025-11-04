@@ -8043,5 +8043,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=3zafVMIzFXE",
     "timestamp": "2025-11-04 19:06:19 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-04 23:06:27 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_ive-been-using-voice-in-m365-copilot-every-activity-7391573088309534720-sOc0",
+    "collection": "news",
+    "reason": "No categories found: All categories are excluded because the central focus is on Microsoft 365 Copilot voice features, which is explicitly covered by the Non-Development Microsoft Products exclusion in Chapter 3. According to the critical Copilot Product Distinction in Chapter 2 and the Non-Development Products exclusion, content about Microsoft 365 Copilot or Copilot for Microsoft 365 (which includes voice functionality) is not categorized since these are business productivity tools, not developer tools. No technical development, coding, or implementation details relevant to software builders or architects are presented."
   }
 ]

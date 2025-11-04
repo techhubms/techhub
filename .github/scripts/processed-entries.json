@@ -14612,5 +14612,17 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned AI category because the primary focus is on distributed AI workloads and infrastructure for machine learning (AI rule 1, 4). Assigned Azure category because all deployment is centered on Azure services, particularly Azure Kubernetes Service (Azure rule 1, 4, 5). Assigned ML category because the article discusses machine learning infrastructure (ML rule 1, 6), distributed training, and scaling ML experiments with Ray and Anyscale. The article does not describe new code patterns or development frameworks directly (Coding), DevOps practices, nor is it primarily about security. Thus, those categories were not included.",
     "timestamp": "2025-11-04 21:04:56 +00:00"
+  },
+  {
+    "timestamp": "2025-11-04 23:06:13 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/devops/azure-developer-cli-azure-container-apps-dev-to-prod-deployment-with-layered-infrastructure/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category due to the central use of Azure Container Apps, Azure Developer CLI, Azure Container Registry, and multiple Azure services in deployment. Assigned DevOps category because the content focuses on CI/CD patterns, infrastructure as code, environment separation, and real-world pipeline configuration using GitHub Actions (DevOps rules 1, 2, 5, 6). Assigned Coding because the workflow covers containerized application concepts, layered infrastructure configuration in YAML/Bicep, and touches on application logic (Coding rule 4). Did not assign AI, GitHub Copilot, ML, or Security, as these areas are not the primary or substantive focus per the inclusion criteria."
+  },
+  {
+    "timestamp": "2025-11-04 23:07:00 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=2GMKFbldb9c",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the content specifically focuses on GitHub Copilot (a developer tool) and its AI-powered features in JetBrains IDEs (AI rule 2, GitHub Copilot rules 1–4). Coding is included as the video demonstrates workflow enhancements and coding process automation (Coding rule 4). The content does not fit any exclusion rules and is technical, not promotional or biographical."
   }
 ]
