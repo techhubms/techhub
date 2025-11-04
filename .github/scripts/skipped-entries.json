@@ -8031,5 +8031,11 @@
     "collection": "posts",
     "reason": "No categories found: All categories were excluded due to the Generic Exclusion Rule for Non-Development Microsoft Products. The content is focused on Microsoft 365 Copilot in Microsoft Teams, specifically for creating business productivity reports, summaries, and executive briefings. There is no discussion of code, APIs, development, or technical implementation meant for developers or IT professionals. The main audience is general business users looking to improve reporting and communication workflows with Copilot integrated into Teams. Section headings and main text all address non-development usage—e.g., summarizing meetings, generating reports, handovers, and benefits for business roles. According to the Copilot Product Distinction rules in Chapter 2 and the Non-Development Microsoft Products exclusion, content about 'Microsoft 365 Copilot' or Copilot functionality inside Office apps/Teams for productivity use cases must NOT be assigned any categories.",
     "timestamp": "2025-11-04 11:06:25 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=g0G5X8ECXP8",
+    "reason": "No categories found: All content fields relevant to the substance of the event (title, description) focus on professional development, certifications, and career growth, which falls under the 'Job-Related Content' and 'Workplace and Business Focus' generic exclusion rules. The technical aspect is minimal and subordinate to the event's focus on career and certification. The summary emphasizes connecting with experts and 'leveling up your data game,' not technical implementation or hands-on architectural/data engineering guidance. As such, per the generic exclusion rules for job-related content and events focused on certifications/career (not technical depth or implementation), no categories are assigned.",
+    "timestamp": "2025-11-04 18:07:03 +00:00"
   }
 ]

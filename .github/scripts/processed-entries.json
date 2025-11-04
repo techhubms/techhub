@@ -14564,5 +14564,23 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/zero-trust-kubernetes-enforcing-security-multi-tenancy-with/ba-p/4466646",
     "reason": "Succesfully added: Categories assigned based on the following rules: Security (primary focus on Zero Trust, policy enforcement, runtime security, and best practices in Kubernetes and AKS, matching Security rules 1, 2, 4, 5, 6, and 9); Azure (content frequently references Azure Kubernetes Service, Azure Policy, Azure AD, and Azure Defender, aligning with Azure inclusion rules 1, 4, and 6); DevOps (focus on GitOps, policy automation, CI/CD integration, RBAC, and developer workflow practices qualifies for DevOps rules 1, 2, 5, 6, and 9). Coding category is not used, as the sample code is illustrative for policy logic rather than core coding/tutorial content. ML and AI are not central nor covered. All generic exclusion rules were checked and do not apply."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/get-ready-for-dotnet-conf-2025/",
+    "reason": "Succesfully added: Categories assigned are: AI (due to extensive focus on AI-powered development, sessions on agentic development, Microsoft Agent Framework, Copilot innovations, and MCP), GitHub Copilot (explicit mention of Copilot innovations, Copilot-based documentation automation, and AI-powered testing in Visual Studio), Coding (event centers on .NET programming, new C# features, Blazor, MAUI, ASP.NET Core), DevOps (coverage of DevOps practices, GitHub tools, containers, CI/CD, testing, and agile practices), Azure (second-day keynote and deep dives on Azure services, containers, and cloud-native development with Azure), ML (sessions on AI Foundry, agentic AI, and model context protocols, plus AI/ML workflows), Security (sessions on security-first development, using Azure Key Vault, passkeys, and vulnerability management). All assignments made according to category inclusion rules, with evidence referenced for each in the event highlights and agenda.",
+    "timestamp": "2025-11-04 18:05:59 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/creator-improvements-in-the-data-agent/",
+    "reason": "Succesfully added: Assigned 'AI' category because the Data Agent system is fundamentally built on AI-powered logic, such as using few-shot learning examples and LLM validation (AI rule 1 & 4). 'ML' is assigned due to focus on data science workflows, example validation, and iterative improvement typical in ML development (ML rules 1, 2, 5, 6, 9). 'Azure' is included because Microsoft Fabric is an Azure-based service (Azure rules 1, 4), and integration aspects are present throughout. 'Coding' is not assigned since the main post focuses on configuration, validation, and agent management features rather than writing application logic or code development in Microsoft programming languages. 'DevOps' isn't included as CI/CD or deployment practices aren't discussed. 'Security' is not included since no security aspects, such as secrets or identity, are addressed.",
+    "timestamp": "2025-11-04 18:06:32 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=YlbeQkTRbAY",
+    "reason": "Succesfully added: Assigned AI category because the content centers on building and orchestrating intelligent AI agents and agent systems using LangChain4j, GPT-4o Mini, Mistral 3B, and Microsoft-related AI workflows (AI inclusion rule 1, 4, 5). Excluded Coding because the focus is on orchestration, agent design, and platform integration rather than hands-on Java or .NET code tutorials. Excluded Azure because no Azure services are discussed or used directly. Excluded DevOps, ML, Security as there is no relevant focus. The core demonstration is advanced AI application orchestration—hence only 'AI' fits precisely according to inclusion and exclusion rules.",
+    "timestamp": "2025-11-04 18:07:29 +00:00"
   }
 ]
