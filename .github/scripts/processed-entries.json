@@ -14498,5 +14498,11 @@
     "timestamp": "2025-11-04 00:10:32 +00:00",
     "collection": "news",
     "reason": "Succesfully added: Assigned 'DevOps' category because the entire post focuses on API-driven operations for managing billing, budgets, and usage data in GitHub, aligning with DevOps practices around automation, infrastructure and operations (DevOps inclusion rules 2, 6, and 7). Did not assign AI, Coding, Azure, Security, GitHub Copilot, or ML, as there is no mention or technical depth related to those areas. Exclusion rules do not apply: content is technical, sufficiently detailed, developer/operator focused, and in English."
+  },
+  {
+    "reason": "Succesfully added: Added 'AI' due to the focus on AI application development and integration of Azure AI Foundry, OpenAI, and LLMs (AI rules 1, 3, 4). Added 'Azure' for hands-on integration with Azure AI Foundry (Azure rule 1). Added 'Coding' as the video covers Java, Spring Boot, code examples, dependency management, and actual application code (Coding rules 1, 2, 4). Added 'GitHub Copilot' because Copilot is directly mentioned as a tool used for developer productivity (GitHub Copilot rule 1), thus per workflow both AI and GitHub Copilot are included.",
+    "timestamp": "2025-11-04 01:33:03 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=_cqJzFxLorE",
+    "collection": "videos"
   }
 ]
