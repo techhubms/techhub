@@ -14594,5 +14594,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=vsfbYJF2las",
     "timestamp": "2025-11-04 19:06:05 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-04 20:05:37 +00:00",
+    "collection": "news",
+    "canonical_url": "https://microsoft.ai/news/introducing-mai-image-1-debuting-in-the-top-10-on-lmarena/",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content is centered on Microsoft’s new in-house AI image generation model, MAI-Image-1, including its introduction, features, and integration into AI-powered Microsoft products (AI category inclusion rules 1 and 4). There is no technical depth for Coding, DevOps, ML, Azure, Security, or GitHub Copilot, nor does the content pertain to development, data science, DevOps, security, or code-level implementation. The information is technical and product-focused but relevant for practitioners interested in Microsoft's AI capabilities and product integration. No generic exclusion rule applies; the content is not a career story, sales pitch, negative, or outside the target language or scope."
+  },
+  {
+    "timestamp": "2025-11-04 20:05:57 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-11-04-github-copilot-policy-update-for-unconfigured-policies",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content is about GitHub Copilot, an AI code assistant (AI rule 2). Assigned the 'GitHub Copilot' category because the content specifically focuses on Copilot’s policy management and configuration (GitHub Copilot category rules 1 and 2). Did not assign other categories as there is no direct coding, DevOps workflow, Azure, ML, or security implementation involved—this is an administrative feature update for the Copilot developer tool."
   }
 ]
