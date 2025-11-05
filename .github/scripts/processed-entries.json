@@ -14780,5 +14780,17 @@
     "timestamp": "2025-11-05 16:06:17 +00:00",
     "reason": "Succesfully added: Assigned the Azure category because the content is an official announcement specific to Azure Container Instances (Azure category rule 1). It covers technical cloud service enhancements, deployment options, scenarios like data processing and high-performance workloads, and provides direct instructions for Azure integration. No other categories are included because the post focuses on operational improvements and deployment—not deep coding practice, ML engineering, DevOps pipelines, AI service usage, or security-specific context.",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/decoupling-default-semantic-models-for-existing-in-microsoft-fabric/",
+    "timestamp": "2025-11-05 17:05:55 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the ML category because the content centers on Microsoft Fabric's semantic models and addresses hands-on management of data modeling components, which is at the core of analytics engineering and business intelligence within Fabric (ML rule 1: Microsoft Data Science/ML Platform Services; ML rule 4: Advanced Data Analytics/BI Development). No 'Azure' category is included because Microsoft Fabric is not strictly an Azure service. The content does not focus on AI, DevOps, Security, or Coding (development/programming) itself, but instead on higher-level data modeling and management. Tags were chosen to reflect technologies, relevant processes, product names, and the article's technical depth."
+  },
+  {
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/a-developers-guide-to-writing-debugging-reviewing-and-shipping-code-faster-with-github-copilot/",
+    "timestamp": "2025-11-05 17:06:24 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the entire content focuses on how GitHub Copilot (a developer AI tool) has evolved, now offering agent workflows and mission control features (AI rules 1–2, GitHub Copilot rules 1–6). 'Coding' is included since all content demonstrates practical developer workflows, prompt writing, IDE plugins, and code generation (Coding rules 1, 4, 5). 'DevOps' is included due to coverage of code review automation, pull requests, test & workflow automation, and terminal integration (DevOps rules 2, 5, 6, 8). Azure is not assigned since the focus is on GitHub and Copilot, not Azure services. ML and Security are not assigned—ML because the focus is Copilot as an AI-assisted developer workflow (not custom ML engineering), Security because the only mention is code review safety which is general and not deeply technical. Content fully matches the multi-category inclusion logic due to the central focus on GitHub Copilot's role in developer and workflow automation."
   }
 ]

@@ -8097,5 +8097,53 @@
     "timestamp": "2025-11-05 16:06:18 +00:00",
     "reason": "Insufficient content length",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-11-05-npm-security-update-classic-token-creation-disabled-and-granular-token-changes",
+    "timestamp": "2025-11-05 17:06:38 +00:00",
+    "collection": "news",
+    "reason": "No categories found: No categories were assigned because the content is an official news update about npm's token management changes and security improvements, which relate to the npm registry. While the article is posted on The GitHub Blog, the changes discussed do not specifically address Microsoft technologies or developer tooling in the context of Azure, GitHub Copilot, AI, Coding, DevOps, Security (with a Microsoft focus), ML, or Azure categories as defined by the inclusion rules. Although security is discussed, it concerns npm as a platform and its access management, not Microsoft-specific security implementations or tools. Therefore, no categories apply."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-security-basics-network-security-groups-firewalls-and/m-p/4467455#M22304",
+    "timestamp": "2025-11-05 17:06:54 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/copilot-and-viva-empowering-employee-engagement/m-p/4467458#M22307",
+    "timestamp": "2025-11-05 17:06:54 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-microsoft-azure-ensures-data-privacy-and-global-compliance/m-p/4467462#M22310",
+    "timestamp": "2025-11-05 17:06:54 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-to-ask-ai-meeting-assistants-the-right-questions-during/m-p/4467457#M22306",
+    "timestamp": "2025-11-05 17:06:54 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/identity-in-azure-understanding-azure-ad-authentication-and/m-p/4467460#M22309",
+    "timestamp": "2025-11-05 17:06:55 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/shared-responsibility-model-in-azure-explained-with-real/m-p/4467459#M22308",
+    "timestamp": "2025-11-05 17:06:55 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/turn-conversations-into-reports-instantly-with-copilot-in/m-p/4467456#M22305",
+    "timestamp": "2025-11-05 17:06:55 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length"
   }
 ]

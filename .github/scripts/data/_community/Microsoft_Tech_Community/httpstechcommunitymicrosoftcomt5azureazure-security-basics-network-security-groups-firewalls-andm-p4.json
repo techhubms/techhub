@@ -1,0 +1,14 @@
+{
+  "Author": "JohnNaguib",
+  "Tags": [],
+  "Description": "In today’s cloud-first world, securing your network infrastructure is no longer optional — it’s foundational. For organizations using Microsoft Azure, understanding the tools available to protect workloads, control traffic flow, and maintain visibility is essential.\n\nIn this article, we’ll walk through three core pillars of Azure network security:\n\n1. Network Security Groups (NSGs)\n2. Azure Firewall\n3. Microsoft Defender for Cloud\n\nBy the end, you should have a clearer grasp of what each offers, when to use them, and how they complement one another.\n\n[https://dellenny.com/azure-security-basics-network-security-groups-firewalls-and-defender-for-cloud/](https://dellenny.com/azure-security-basics-network-security-groups-firewalls-and-defender-for-cloud/)",
+  "FeedName": "Microsoft Tech Community",
+  "PubDate": "2025-11-05T16:47:59+00:00",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/azure-security-basics-network-security-groups-firewalls-and/m-p/4467455#M22304",
+  "ProcessedDate": "2025-11-05 17:05:21",
+  "Title": "Azure Security Basics Network Security Groups, Firewalls, and Defender for Cloud",
+  "EnhancedContent": "In today’s cloud-first world, securing your network infrastructure is no longer optional — it’s foundational. For organizations using Microsoft Azure, understanding the tools available to protect workloads, control traffic flow, and maintain visibility is essential.\n\nIn this article, we’ll walk through three core pillars of Azure network security:\n\n1. Network Security Groups (NSGs)\n2. Azure Firewall\n3. Microsoft Defender for Cloud\n\nBy the end, you should have a clearer grasp of what each offers, when to use them, and how they complement one another.\n\n[https://dellenny.com/azure-security-basics-network-security-groups-firewalls-and-defender-for-cloud/](https://dellenny.com/azure-security-basics-network-security-groups-firewalls-and-defender-for-cloud/)",
+  "OutputDir": "_community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+}

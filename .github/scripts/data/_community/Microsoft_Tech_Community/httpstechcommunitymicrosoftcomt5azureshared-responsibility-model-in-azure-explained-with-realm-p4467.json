@@ -1,0 +1,14 @@
+{
+  "Author": "JohnNaguib",
+  "Tags": [],
+  "Description": "In today’s cloud-first world, Microsoft Azure is one of the most popular cloud platforms used by organizations globally. While Azure provides a robust infrastructure and wide-ranging services, it is crucial for businesses to understand their responsibilities in maintaining security, compliance, and operational efficiency. This is where the **Shared Responsibility Model in Azure** comes into play.\n\nThe **Shared Responsibility Model** defines the division of security and operational duties between the cloud provider (Azure) and the customer. Understanding this model ensures that organizations know which security measures are handled by Microsoft and which ones they need to manage themselves.\n\n[https://dellenny.com/shared-responsibility-model-in-azure-explained-with-real-examples/](https://dellenny.com/shared-responsibility-model-in-azure-explained-with-real-examples/)",
+  "FeedName": "Microsoft Tech Community",
+  "PubDate": "2025-11-05T16:52:22+00:00",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/shared-responsibility-model-in-azure-explained-with-real/m-p/4467459#M22308",
+  "ProcessedDate": "2025-11-05 17:05:21",
+  "Title": "Shared Responsibility Model in Azure Explained (with Real Examples)",
+  "EnhancedContent": "In today’s cloud-first world, Microsoft Azure is one of the most popular cloud platforms used by organizations globally. While Azure provides a robust infrastructure and wide-ranging services, it is crucial for businesses to understand their responsibilities in maintaining security, compliance, and operational efficiency. This is where the **Shared Responsibility Model in Azure** comes into play.\n\nThe **Shared Responsibility Model** defines the division of security and operational duties between the cloud provider (Azure) and the customer. Understanding this model ensures that organizations know which security measures are handled by Microsoft and which ones they need to manage themselves.\n\n[https://dellenny.com/shared-responsibility-model-in-azure-explained-with-real-examples/](https://dellenny.com/shared-responsibility-model-in-azure-explained-with-real-examples/)",
+  "OutputDir": "_community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+}
