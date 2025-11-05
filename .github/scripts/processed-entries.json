@@ -14636,5 +14636,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-registry-repository-permissions-with-attribute/ba-p/4467182",
     "collection": "community",
     "timestamp": "2025-11-05 01:33:55 +00:00"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-11-05 03:23:48 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-11-03-required-review-by-specific-teams-now-available-in-rulesets",
+    "reason": "Succesfully added: Assigned the DevOps category because the content is about managing collaboration, code review, repository governance, branch protection, and workflow automation within GitHub (DevOps category rule 2, 3, 5, 6, and 11). Not assigned other categories because the announcement does not focus on coding language, AI, ML, Azure, or specific security features—it's about changes to DevOps policy enforcement in GitHub."
   }
 ]
