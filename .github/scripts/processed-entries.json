@@ -14792,5 +14792,35 @@
     "timestamp": "2025-11-05 17:06:24 +00:00",
     "collection": "news",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the entire content focuses on how GitHub Copilot (a developer AI tool) has evolved, now offering agent workflows and mission control features (AI rules 1–2, GitHub Copilot rules 1–6). 'Coding' is included since all content demonstrates practical developer workflows, prompt writing, IDE plugins, and code generation (Coding rules 1, 4, 5). 'DevOps' is included due to coverage of code review automation, pull requests, test & workflow automation, and terminal integration (DevOps rules 2, 5, 6, 8). Azure is not assigned since the focus is on GitHub and Copilot, not Azure services. ML and Security are not assigned—ML because the focus is Copilot as an AI-assisted developer workflow (not custom ML engineering), Security because the only mention is code review safety which is general and not deeply technical. Content fully matches the multi-category inclusion logic due to the central focus on GitHub Copilot's role in developer and workflow automation."
+  },
+  {
+    "reason": "Succesfully added: Categories assigned are AI, Azure, and ML. The event is focused on Microsoft Fabric, Data Engineering, Data Science, and AI, which fits the AI category (AI rule 1 and 5), as well as the ML category due to the emphasis on data science and analytics (ML rules 1 and 4). Azure category is included since Microsoft Fabric is part of the Azure ecosystem and the content centrally features Azure-based learning opportunities (Azure rule 1). GitHub Copilot, Coding, DevOps, and Security do not apply as these areas are not a central focus of the event content.",
+    "collection": "news",
+    "timestamp": "2025-11-05 18:05:12 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/advance-your-career-in-data-ai-with-microsoft-fabric-data-days/"
+  },
+  {
+    "reason": "Succesfully added: Assigned Coding category because the event is focused on .NET development, offering technical sessions and resources to improve coding skills (Coding rule 1: Microsoft Programming Languages, and rule 4: Coding practices with Microsoft technologies). No other categories apply, as the session information is about general coding and not about Azure, AI, DevOps, ML, or Security. Content meets the quality standards and is relevant for Microsoft developer audiences.",
+    "collection": "videos",
+    "timestamp": "2025-11-05 18:05:56 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=qpHAcrAVRBI"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Coding' category because the content describes a software development-focused conference with sessions aimed at helping developers become better .NET practitioners, consistent with Coding inclusion rules. There are no details explicitly about AI, Azure, DevOps, ML, or Security as primary topics in the supplied description. Generic exclusion rules do not apply, as this is not biographical, sales-focused, negative, or non-English content.",
+    "collection": "videos",
+    "timestamp": "2025-11-05 18:06:13 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=YDhJ953D6-U"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the content is focused on Microsoft Fabric SQL Database, a core Azure service, as per Azure rule 1. Assigned Security category because the main topics are Customer-Managed Keys (encryption) and auditing for compliance, which are explicitly covered by Security rules 1, 7, and 9. Content is presented by Microsoft Developer, specifies hands-on demos, and emphasizes technical implementation, not just high-level strategy. No ML, AI, Coding, DevOps, or GitHub Copilot categories are applicable based on the provided description. No generic exclusion rules apply.",
+    "collection": "videos",
+    "timestamp": "2025-11-05 18:06:38 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=dxUsmfYqBAI"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the core topic is developing and running interactive AI workloads using Microsoft technologies, specifically with OpenAI and LangChain4j (AI rules 1 and 4). 'Azure' assigned because Azure Container Apps Dynamic Sessions are the central infrastructure feature (Azure rule 1). 'Coding' assigned because the content centers on integrating Java code, dynamic execution, and practical code examples for implementation (Coding rules 1, 2, and 4). Did not assign 'ML' because the primary focus is application integration and state management, not custom ML engineering. 'DevOps' and 'Security' were not included due to lack of coverage in CI/CD, team practices, or explicit security implementation.",
+    "collection": "videos",
+    "timestamp": "2025-11-05 18:07:00 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=oCNqsEXKnoA"
   }
 ]

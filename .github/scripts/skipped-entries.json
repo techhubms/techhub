@@ -8145,5 +8145,11 @@
     "timestamp": "2025-11-05 17:06:55 +00:00",
     "collection": "community",
     "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The provided description is primarily an event announcement and overview for .NET Conf 2025 - Community Day. It focuses on the format, inclusivity, reach, and engagement of the virtual event (such as live viewers, local events, trivia games, virtual parties, and general statements about learning) but does not provide any substantive technical detail, coding tutorials, technical implementation topics, or focus on Microsoft technology development. There is no mention of specific technologies, tools, frameworks, or technical solutions; therefore, it does not merit any categories under the inclusion rules. Content of this type (event promotion/overview without technical substance) is excluded per the 'Sales Pitches' and 'Business Strategy' exclusion rules.",
+    "collection": "videos",
+    "timestamp": "2025-11-05 18:05:40 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=5Drb6a5beiA"
   }
 ]

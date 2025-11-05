@@ -1,0 +1,27 @@
+{
+  "Description": "In this final episode of the series, Ayan Gupta is joined once more by Brian Benz, who demonstrates Azure Container Apps Dynamic Sessions, a revolutionary way to run AI workloads in containers that maintain state across requests. Imagine shipping someone not just a cup of coffee, but the entire coffee machine in a box so they can keep refilling without starting over. That's exactly what dynamic sessions do for AI!\n\nTraditional containers are ephemeral, once the task completes, everything resets. But with Azure Container Apps Dynamic Sessions, your code execution environment persists, maintaining context and allowing for interactive, stateful AI interactions. Brian shows how he contributed a dynamic sessions tool to LangChain4j, making it incredibly easy to integrate this powerful capability into your Java applications.\n\nThe session demonstrates a complete code execution engine that combines LangChain4j with Azure Container Apps Dynamic Sessions and OpenAI. You'll see how to ask a question (\"If a pizza has radius Z and depth A, what's its volume?\"), have the AI generate Python code to solve it, execute that code in a dynamic session, and return the calculated result. The system can also upload files, download generated content, and maintain a persistent execution environment across multiple requests.\n\nThis session wraps up the entire Java and AI for Beginners series with cutting-edge cloud-native AI patterns. Congratulations on completing this journey!\n\nResources: aka.ms/JavaAndAIForBeginners\n\n0:00 - Introduction: Containers That Keep Running 0:52 - What Are Dynamic Sessions? 1:31 - Introduction to LangChain4j 2:28 - Exploring the LangChain4j Repository 3:00 - Code Execution Engines Overview 3:43 - Demo: Running the Pizza Volume Example 4:41 - Why Use Code Execution Engines? 5:30 - ChatGPT's File Generation Behind the Scenes 6:08 - Viewing the Azure Container Apps Session Pool 6:42 - Testing Code Execution in Azure Portal 8:03 - Running Python Code in the Session 8:33 - Understanding the Integration 9:16 - Accessing OpenAI from Session Pools 9:57 - Reviewing the Example Code 10:52 - LangChain4j Tool Implementation 11:21 - Session Recap and Summary 11:33 - Series Conclusion 12:03 - Final Wrap-Up and Thank You\n\n#DynamicSessions #AzureContainerApps #LangChain4j #CodeExecution #JavaAI #CloudNative #AIWorkloads #ContainerizedAI #OpenAI #StatefulContainers #JavaDevelopment #AIIntegration",
+  "ProcessedDate": "2025-11-05 18:04:38",
+  "Link": "https://www.youtube.com/watch?v=oCNqsEXKnoA",
+  "Tags": [
+    "AIIntegration",
+    "AIWorkloads",
+    "AzureContainerApps",
+    "CloudNative",
+    "CodeExecution",
+    "ContainerizedAI",
+    "DynamicSessions",
+    "JavaAI",
+    "JavaDevelopment",
+    "LangChain4j",
+    "OpenAI",
+    "StatefulContainers"
+  ],
+  "EnhancedContent": null,
+  "PubDate": "2025-11-05T17:01:32+00:00",
+  "OutputDir": "_videos",
+  "FeedName": "Microsoft Developer YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Author": "Microsoft Developer",
+  "Title": "Running GenAI in containers: Dynamic Sessions"
+}
