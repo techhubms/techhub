@@ -1,0 +1,27 @@
+{
+  "FeedLevelAuthor": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Tags": [
+    "AIContainers",
+    "AzureContainerApps",
+    "CUDA",
+    "DockerContainers",
+    "GenerativeAI",
+    "GitHubCopilot",
+    "GPU",
+    "ImageGeneration",
+    "JavaAI",
+    "ONNX",
+    "SpringBoot",
+    "StableDiffusion"
+  ],
+  "Description": "In this episode, Ayan Gupta is joined by Brian Benz, who demonstrates why GPUs are essential for running generative AI at scale. Just like using an electric frother versus whisking milk by hand, GPUs don't just speed things up, they make complex AI workloads practical in production. And Brian shows you exactly how to harness that power!\n\nThis session tackles a real-world challenge: generating images locally using AI without relying on expensive external image services. Brian has built a Spring Boot application that uses Stable Diffusion 1.5 with ONNX Runtime and Nvidia CUDA to create images directly on your machine—or in containers on Azure. The demo generates beautiful watercolor images in about 90 seconds with GPU acceleration versus over 5 minutes on CPU alone.\n\nYou'll learn the architecture behind running GenAI in containers with GPU support. Brian explains the three key components: ONNX (Open Neural Network Exchange) for model interoperability, Stable Diffusion models from Hugging Face's ONNX Community, and SD4J (Stable Diffusion for Java), an Oracle open-source library that provides Java bindings for Stable Diffusion operations. The hardest part? Making sure all the versions of ONNX Runtime, SD4J, and CUDA work together seamlessly.\n\nBrian also reveals his secret weapon: he used GitHub Copilot in agent mode with Claude Sonnet 4.5 to generate much of the integration code, turning what could have been a month-long project into just 2-3 days of work. This is a masterclass in practical AI development—when to use external services versus building your own solutions, and how to leverage GPUs for workloads that demand high performance.\n\nResources: aka.ms/JavaAndAIForBeginners\n\n0:00 - Introduction: GPUs as AI Accelerators 1:03 - Demo Overview: AI Image Generation 1:40 - Starting the Docker Container 2:42 - Demo: Generating a Watercolor Image 3:42 - Understanding Stable Diffusion Process 4:40 - Inference Steps and Image Layers 5:08 - Viewing the Generated Image 5:27 - GPU vs CPU Performance Comparison 6:03 - When to Use This Approach 6:50 - Text Embedding Similarity Demo 7:23 - Architecture: Stable Diffusion Models 8:06 - Understanding ONNX Runtime 8:52 - Downloading Models from Hugging Face 9:28 - SD4J: Stable Diffusion for Java 10:18 - Version Compatibility Challenges 10:50 - Understanding Nvidia CUDA 11:28 - Building with GitHub Copilot 12:10 - Claude Sonnet 4.5 for Code Generation 12:44 - The 753-Line Prompt Strategy 13:22 - Session Recap and Code Repository 13:48 - Wrap-Up and Resources\n\n#GPU #StableDiffusion #AIContainers #JavaAI #ONNX #CUDA #ImageGeneration #DockerContainers #AzureContainerApps #SpringBoot #GitHubCopilot #GenerativeAI",
+  "EnhancedContent": null,
+  "PubDate": "2025-11-05T01:00:52+00:00",
+  "Author": "Microsoft Developer",
+  "FeedName": "Microsoft Developer YouTube",
+  "Link": "https://www.youtube.com/watch?v=XhyTEgA_kBk",
+  "Title": "Running GenAI in containers: GPU",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-11-05 01:32:10"
+}

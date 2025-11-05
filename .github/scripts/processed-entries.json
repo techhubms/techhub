@@ -14624,5 +14624,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=2GMKFbldb9c",
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the content specifically focuses on GitHub Copilot (a developer tool) and its AI-powered features in JetBrains IDEs (AI rule 2, GitHub Copilot rules 1–4). Coding is included as the video demonstrates workflow enhancements and coding process automation (Coding rule 4). The content does not fit any exclusion rules and is technical, not promotional or biographical."
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the main focus is generative AI development, leveraging Stable Diffusion with ONNX Runtime and CUDA (AI rules 1, 4, and 5). Assigned Azure category due to Azure Container Apps and cloud deployment with Microsoft services (Azure rules 1 and 4). Assigned Coding because the session covers hands-on development using Java (Spring Boot), SD4J, and container orchestration (Coding rules 1, 2, and 4). Included ML as the content involves building and deploying custom ML models (Stable Diffusion) and explains model interoperability and architecture (ML rules 1, 2, 6, and 11). Added GitHub Copilot because Copilot (agent mode) was key for code integration (GitHub Copilot rules 1, 2, 4). All decisions are supported by explicit references in the content, including detailed demonstrations and workflow explanations.",
+    "canonical_url": "https://www.youtube.com/watch?v=XhyTEgA_kBk",
+    "collection": "videos",
+    "timestamp": "2025-11-05 01:33:08 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the entire post discusses Azure Container Registry, a core Azure service (Azure rule 1). Assigned Security because the primary focus is implementation of granular access control, least-privilege, zero trust, and permission boundaries in Azure using Microsoft Entra ABAC (Security rules 1, 3, and 9). Assigned DevOps because the use of ABAC is explicitly connected to CI/CD pipelines and runtime workloads (DevOps rules 1, 5, and 6), addressing platform engineering, team workflows, and permission management in a multi-tenant registry. Did not assign ML, AI, Coding, or GitHub Copilot because there is no mention of machine learning, artificial intelligence, direct coding tutorials, or Copilot tools. The content is sufficiently long, technical, and focused per community and general inclusion rules.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-registry-repository-permissions-with-attribute/ba-p/4467182",
+    "collection": "community",
+    "timestamp": "2025-11-05 01:33:55 +00:00"
   }
 ]

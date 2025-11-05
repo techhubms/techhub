@@ -8049,5 +8049,17 @@
     "canonical_url": "https://www.linkedin.com/posts/satyanadella_ive-been-using-voice-in-m365-copilot-every-activity-7391573088309534720-sOc0",
     "collection": "news",
     "reason": "No categories found: All categories are excluded because the central focus is on Microsoft 365 Copilot voice features, which is explicitly covered by the Non-Development Microsoft Products exclusion in Chapter 3. According to the critical Copilot Product Distinction in Chapter 2 and the Non-Development Products exclusion, content about Microsoft 365 Copilot or Copilot for Microsoft 365 (which includes voice functionality) is not categorized since these are business productivity tools, not developer tools. No technical development, coding, or implementation details relevant to software builders or architects are presented."
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: There is insufficient substantive technical content provided. The input contains a brief event description and a link, but no detailed technical content, tutorial, or implementation details. The description focuses on event previews and fun learning activities rather than any technical subject, Microsoft technology, or developer-focused topic. According to processing rules in Chapter 3, content without technical depth or educational value should be excluded.",
+    "canonical_url": "https://www.youtube.com/shorts/fX94ZaIlhfo",
+    "collection": "videos",
+    "timestamp": "2025-11-05 01:33:21 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to missing substantive content. The 'content' field is null, and the description consists only of an event announcement for a Visual Studio Code release livestream without any technical or instructional details. Generic exclusion rule applies: there is no actual technical content to analyze or categorize based on Microsoft technology categories.",
+    "canonical_url": "https://www.youtube.com/watch?v=IdPtTBbYOtw",
+    "collection": "videos",
+    "timestamp": "2025-11-05 01:33:34 +00:00"
   }
 ]
