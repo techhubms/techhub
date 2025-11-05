@@ -14708,5 +14708,11 @@
     "reason": "Succesfully added: Assigned the 'Azure' category because the content is centrally focused on enterprise Azure networking architectures, services (Landing Zone, Azure Firewall, VNets, Azure Monitor/Sentinel), and platform integrations (Azure Load Balancer, Route Server, etc.). Assigned the 'Security' category because the core subject is network security, including enterprise firewall deployment, policy enforcement, segmentation, IDS/IPS, zero trust, compliance, and best practices for both Microsoft-native and third-party solutions. Did not include the DevOps, Coding, AI, ML, or GitHub Copilot categories, as there is no direct focus on software development, DevOps workflows, AI/ML, or Copilot-related tooling.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/deploying-third-party-firewalls-in-azure-landing-zones-design/ba-p/4458972",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-05 10:05:01 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' because the article's main focus is on Azure-specific services: Network Security Groups, Azure Firewall, and Microsoft Defender for Cloud (Azure inclusion rule 1). Assigned 'Security' because all sections detail security tools, best practices, and a defense-in-depth architecture specific to Azure (Security inclusion rules 1, 4, and 9). There is no unrelated business, personal, or non-technical content, and all information is relevant for technical audiences. No generic exclusion rules apply.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/azure-security-basics-network-security-groups-firewalls-and-defender-for-cloud/"
   }
 ]
