@@ -14666,5 +14666,47 @@
     "reason": "Succesfully added: Assigned 'AI' category because the content focuses on the use of artificial intelligence agents to automate observability and debugging operations in a technical platform, per AI inclusion rule 1 and 5. Assigned 'DevOps' category as the new AI agents are designed specifically for DevOps and SRE teams, automating workflows and incident response, directly meeting DevOps inclusion rules 1, 3, and 5. No Azure, Coding, Security, ML, or GitHub Copilot category applies, as neither Azure nor Microsoft-specific technology, direct application programming, security, or ML/AI engineering from scratch (as per ML rules) is central to the article. No generic exclusion rules apply; the post is substantial, technical, and focused on hands-on DevOps tooling and AI usage.",
     "canonical_url": "https://devops.com/observe-adds-two-ai-agents-to-improve-observability/",
     "timestamp": "2025-11-05 06:06:53 +00:00"
+  },
+  {
+    "timestamp": "2025-11-05 07:05:08 +00:00",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the content is a detailed overview of DevOps workflows, practices, and tools, directly matching multiple DevOps inclusion rules (continuous development, integration, deployment, IaC, automated testing, collaboration, and monitoring). Assigned 'Security' because the article explicitly covers DevSecOps principles, security integration (vulnerability scanning, compliance, and secret management) within the DevOps pipeline per Security rules 2, 4, 5, and 6. No other categories apply as the focus is not specifically on Microsoft technologies, coding topics, AI/ML, or Azure; mentions of Microsoft Teams and GitHub Actions are supportive but not central to Microsoft platform usage per the Multi-Platform Content Threshold.",
+    "canonical_url": "https://devops.com/devops-workflow-the-key-elements-and-tools-involved/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-05 07:05:28 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category because the entire article covers the integration of security practices into DevOps workflows, with a focus on CI/CD pipelines, team collaboration, automation, and process improvement (DevOps inclusion rules 1, 3, 5, 6, 9, 10). Assigned Security category because it covers cybersecurity collaboration, best practices, skills for secure development, and threat handling (Security inclusion rules 2, 3, 4, 5, 6, 9). The article provides actionable steps for technical teams and reflects professional depth, not just high-level strategy. No AI, Coding, Azure, or ML categories because there is no substantive Microsoft technology or programming focus, nor discussion of AI/ML or code examples—content is methodology- and practice-oriented.",
+    "canonical_url": "https://devops.com/how-cybersecurity-teams-can-work-better-with-devops/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-05 07:06:10 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the entire article revolves around the integration of AI (primarily AIOps—Artificial Intelligence for IT Operations) into modern IT operations, meeting AI inclusion rules 1, 4, and 5. Assigned 'DevOps' because the piece deeply discusses DevOps cultural and technical foundations, CI/CD, team practices, and how these are evolving (DevOps inclusion rules 3, 4, and 5). Did not assign 'Azure', 'ML', 'Coding', or 'Security' because there is no direct discussion of Microsoft platforms, specific ML technical implementation, code examples, or security services. The article is a high-level technical analysis, not a sales pitch or general business overview, and does not trigger any generic exclusion rules.",
+    "canonical_url": "https://devops.com/is-there-still-a-difference-between-devops-and-aiops/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-05 07:06:34 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the core subject is the use of artificial intelligence in software development and DevOps, meeting AI inclusion rule 1 and 4. Included DevOps due to repeated and direct discussion of AI's transformation of DevOps workflows, software operations, and developer experience (DevOps inclusion rules 1, 3, 4, 5, and 9). Added GitHub Copilot since the article provides a dedicated section on GitHub Copilot as an AI pair programmer, discussing its productivity benefits (GitHub Copilot inclusion rules 1, 2, and 4). Did not assign Coding, Azure, ML, or Security, since the piece is focused on high-level AI-powered development and workflows rather than language/framework details, ML engineering, or Microsoft-specific security/operations topics.",
+    "canonical_url": "https://devops.com/the-ai-powered-evolution-of-software-development/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-05 07:06:55 +00:00",
+    "reason": "Succesfully added: Assigned AI because the core focus is on the risks and behaviors of AI-powered coding tools (AI inclusion rule 1 and 4). Assigned DevOps because the context is secrets sprawl within DevOps workflows, including CI/CD and Kubernetes pipelines (DevOps inclusion rules 3, 5, and 6). Assigned Security because the entire article discusses the security risks of secrets leakage and practical mitigation (Security inclusion rules 1, 2, 4, 5, and 7). No Azure-specific implementations or Microsoft-only technologies are central, so Azure and Coding categories were not added.",
+    "canonical_url": "https://devops.com/your-next-secrets-leak-is-hiding-in-ai-coding-tools/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-05 07:07:31 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because this article is an in-depth technical investigation of Azure HBv5-series VMs, their architecture, performance, and usage for high performance computing, which fits Azure Category inclusion rules 1 (Any Azure Service/Technology), 4 (Azure Development/Deployment), and 5 (Azure Architecture). There are no substantial elements involving AI/ML, coding, DevOps pipelines, or security detailed in the examined content—the article is focused on VM performance/scaling, technical hardware/software characteristics, and operational benchmarking for HPC users. No generic exclusion rules were triggered.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/performance-and-scalability-of-azure-hbv5-series-virtual/ba-p/4467230",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-05 07:08:00 +00:00",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content is centrally focused on enterprise Azure networking architectures, services (Landing Zone, Azure Firewall, VNets, Azure Monitor/Sentinel), and platform integrations (Azure Load Balancer, Route Server, etc.). Assigned the 'Security' category because the core subject is network security, including enterprise firewall deployment, policy enforcement, segmentation, IDS/IPS, zero trust, compliance, and best practices for both Microsoft-native and third-party solutions. Did not include the DevOps, Coding, AI, ML, or GitHub Copilot categories, as there is no direct focus on software development, DevOps workflows, AI/ML, or Copilot-related tooling.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/deploying-third-party-firewalls-in-azure-landing-zones-design/ba-p/4458972",
+    "collection": "community"
   }
 ]

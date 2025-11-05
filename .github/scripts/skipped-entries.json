@@ -8061,5 +8061,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=IdPtTBbYOtw",
     "collection": "videos",
     "timestamp": "2025-11-05 01:33:34 +00:00"
+  },
+  {
+    "timestamp": "2025-11-05 07:05:47 +00:00",
+    "reason": "No categories found: No Microsoft technologies are used or central in the content; all automation, AI, and development references (Cursor.ai, Gemini, Node.js, React, HubSpot MCP) are non-Microsoft. Microsoft technology is not ≥40% nor central to the workflow per multi-platform threshold rules. Therefore, no categories apply. Generic exclusion rules were not triggered because the piece is technical and development-focused, but it does not align with any Microsoft categories.",
+    "canonical_url": "https://devops.com/how-i-automated-my-most-tedious-task-and-unlocked-our-growth-strategy/",
+    "collection": "posts"
   }
 ]
