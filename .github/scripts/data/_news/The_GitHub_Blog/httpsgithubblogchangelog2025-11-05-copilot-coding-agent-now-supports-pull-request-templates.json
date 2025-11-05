@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-05T18:18:54+00:00",
+  "Description": "Copilot coding agent is our asynchronous, autonomous background agent. When Copilot coding agent finishes its work, it updates the body of its pull request with a summary of changes. Now,…\n\nThe post [Copilot coding agent now supports pull request templates](https://github.blog/changelog/2025-11-05-copilot-coding-agent-now-supports-pull-request-templates) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Allison",
+  "ProcessedDate": "2025-11-05 20:03:03",
+  "Link": "https://github.blog/changelog/2025-11-05-copilot-coding-agent-now-supports-pull-request-templates",
+  "OutputDir": "_news",
+  "Title": "Copilot coding agent now supports pull request templates",
+  "FeedName": "The GitHub Blog",
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "EnhancedContent": "Copilot coding agent is our asynchronous, autonomous background agent. When Copilot coding agent finishes its work, it updates the body of its pull request with a summary of changes. Now, Copilot can follow the repository’s pull request template when writing the body.\n\nCreate a [pull request template](https://docs.github.com/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) by adding a file called `pull_request_template.md` to your repository. If your repository includes multiple pull request templates, Copilot will pick the one best suited to the task.\n\nTo learn more about best practices while using coding agent, visit [our coding agent documentation](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent)."
+}

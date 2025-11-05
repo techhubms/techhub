@@ -14840,5 +14840,35 @@
     "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/11/05/securing-critical-infrastructure-why-europes-risk-based-regulations-matter/",
     "reason": "Succesfully added: Assigned the Security category because the article focuses on cybersecurity threats to critical infrastructure, implementation of security controls, compliance with regulations (NIS2, DORA), and Microsoft's approaches to enhancing security posture. The KCIs, risk-based mitigation strategies, and legislation analysis are deeply technical and aimed at security professionals (Security inclusion rule 1, 2, 9, 10). No other categories apply, as the content does not detail programming, DevOps, Azure-specific implementations, or AI/ML technology. No generic exclusion rules apply.",
     "timestamp": "2025-11-05 19:05:23 +00:00"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-11-05 20:04:25 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/research/blog/magentic-marketplace-an-open-source-simulation-environment-for-studying-agentic-markets/",
+    "reason": "Succesfully added: Assigned 'AI' category because the content focuses on advanced autonomous agent development, AI model experimentation (GPT-4, GPT-5, Gemini-2.5-Flash), and implications for agentic markets (AI inclusion rule 1, 4, and 6). Added 'Azure' category because the platform is hosted and integrated with Azure AI and Azure AI Foundry Labs, making Azure technology central as platform infrastructure (Azure category rule 1 and 4). Not tagged as ML because the core emphasis is on agentic system behavior and platform interaction, not on novel ML algorithm or data science pipeline development. Did not assign Coding, DevOps, Security, or ML categories as the content, while technical, does not discuss software engineering practices, deployment, security implementations, or ML training pipelines. Tags reflect AI, agentic simulation, Azure AI, models, protocols, and research context."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-11-05 20:04:52 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-november/",
+    "reason": "Succesfully added: Assigned 'AI' because the content focuses on the integration of AI-powered agents, workflows, and models within Visual Studio (AI rule 1, 5, and 6). Assigned 'GitHub Copilot' since Copilot and Copilot Chat are central throughout (GitHub Copilot rule 1, 2, 3). According to rules, whenever 'GitHub Copilot' category is assigned, 'AI' must also be included. Assigned 'Coding' because the improvements target code authoring, debugging, unit testing, and developer workflows in Visual Studio (Coding rule 4, 5). Did not assign 'Azure', 'DevOps', 'ML', or 'Security' because the content did not discuss those domains specifically. All generic exclusion rules were checked and did not apply."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-11-05 20:05:10 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-11-05-copilot-coding-agent-now-supports-pull-request-templates",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the update is about the Copilot coding agent, which is part of GitHub Copilot and fulfills both rules for these categories. 'DevOps' was added since this capability enhances automation and workflow aspects in software development, specifically relating to pull request and repository management (DevOps rules 3, 5, and 6). Content does not qualify for Coding, Azure, ML, or Security categories, as it does not involve those specific focuses or technical implementations."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-11-05 20:05:27 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-11-05-copilot-coding-agent-supports-organization-custom-instructions",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories: the content discusses new features in the Copilot coding agent (GitHub Copilot rules 1, 2, and 3; AI rule 2) with a focus on configuring AI-powered automation for code tasks. The Copilot coding agent is a developer AI tool, not a business productivity product, qualifying it for both categories according to the Copilot distinction rules. No other category applies as the article focuses specifically on Copilot configuration, not broader coding, DevOps, or Azure usage."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-11-05 20:05:55 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=bIl83DdhWoo",
+    "reason": "Succesfully added: Applied the Coding category because the video centers on Grial—a developer-focused UI toolkit—used with .NET MAUI and Xamarin, both Microsoft development frameworks (Coding rule 1 and 2). No other categories fit since the video primarily discusses UI design and development patterns, not Azure, AI, ML, DevOps, or Security. Verified there were no generic exclusion triggers: the focus is technical and developer-oriented, not biographical, promotional, business, or non-English."
   }
 ]

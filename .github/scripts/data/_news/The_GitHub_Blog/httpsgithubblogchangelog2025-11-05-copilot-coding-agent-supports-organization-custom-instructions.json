@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-05T18:19:03+00:00",
+  "Description": "Copilot coding agent, our asynchronous, autonomous background agent, now supports organization custom instructions. Custom instructions allow you to guide Copilot on how to understand your project as well as how…\n\nThe post [Copilot coding agent supports organization custom instructions](https://github.blog/changelog/2025-11-05-copilot-coding-agent-supports-organization-custom-instructions) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Allison",
+  "ProcessedDate": "2025-11-05 20:03:03",
+  "Link": "https://github.blog/changelog/2025-11-05-copilot-coding-agent-supports-organization-custom-instructions",
+  "OutputDir": "_news",
+  "Title": "Copilot coding agent supports organization custom instructions",
+  "FeedName": "The GitHub Blog",
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "EnhancedContent": "[Copilot coding agent](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent), our asynchronous, autonomous background agent, now supports organization custom instructions.\n\nCustom instructions allow you to guide Copilot on how to understand your project as well as how to build, test, and validate its changes. Now, you can also set default instructions for all coding agent usage across your organization, ensuring a consistent experience across teams.\n\nAlongside organization custom instructions, coding agent continues to support `.github/copilot-instructions.md` , `.github/instructions/**.instructions.md` , `AGENTS.md` , `CLAUDE.md` , and `GEMINI.md` files.\n\nTo learn more, visit [our documentation about custom instructions and other best practices for Copilot coding agent](https://docs.github.com/enterprise-cloud@latest/copilot/tutorials/coding-agent/get-the-best-results)."
+}
