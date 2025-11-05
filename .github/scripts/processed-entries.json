@@ -14714,5 +14714,23 @@
     "reason": "Succesfully added: Assigned 'Azure' because the article's main focus is on Azure-specific services: Network Security Groups, Azure Firewall, and Microsoft Defender for Cloud (Azure inclusion rule 1). Assigned 'Security' because all sections detail security tools, best practices, and a defense-in-depth architecture specific to Azure (Security inclusion rules 1, 4, and 9). There is no unrelated business, personal, or non-technical content, and all information is relevant for technical audiences. No generic exclusion rules apply.",
     "collection": "posts",
     "canonical_url": "https://dellenny.com/azure-security-basics-network-security-groups-firewalls-and-defender-for-cloud/"
+  },
+  {
+    "timestamp": "2025-11-05 11:04:33 +00:00",
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/source/2025/11/05/pantone-and-microsoft-unite-to-enhance-creative-exploration-through-ai/",
+    "reason": "Succesfully added: Assigned the AI category because the focus is on implementing conversational AI solutions and Retrieval-Augmented Generation via Azure OpenAI and Azure AI Foundry (AI rules 1 and 4). Assigned the Azure category because the project is built using Microsoft Azure services, making Azure central to the solution's architecture (Azure rule 1). Coding, DevOps, ML, Security, and GitHub Copilot were not included as the content does not cover programming, CI/CD, custom ML development, operational security, or GitHub-specific topics. The decision is grounded in the technical explanation of integrating AI through Microsoft platforms for creative tool development."
+  },
+  {
+    "timestamp": "2025-11-05 11:05:02 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-microsoft-azure-ensures-data-privacy-and-global-compliance-secure-cloud-solutions/",
+    "reason": "Succesfully added: Assigned 'Azure' because the article is centrally about Microsoft Azure services and infrastructure, as per Azure inclusion rule 1. Included 'Security' because content covers encryption, threat protection (Microsoft Defender for Cloud), compliance (SOC reports, ISO), and privacy controls (compliance certifications, Azure Key Vault, Zero Trust), qualifying under Security inclusion rules 1, 2, 4, 5, and 7. Did not assign AI or ML because although ethical use of AI is mentioned, the main focus is compliance and security, not AI implementation or development. Coding and DevOps were not assigned since there is no focus on software development, code, CI/CD, or team practices."
+  },
+  {
+    "timestamp": "2025-11-05 11:05:23 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/identity-in-azure-understanding-azure-ad-authentication-and-authorization/",
+    "reason": "Succesfully added: Assigned 'Azure' because the content centers on Azure AD—a core Azure service—covering management, usage, and integration (Azure inclusion rule 1). Assigned 'Security' since the focus is on identity, authentication, authorization, and protection practices—matching Security rules for application security in the Microsoft ecosystem. Did not assign AI, ML, Coding, DevOps, or GitHub Copilot because the post does not discuss AI/ML, application code, developer tooling, or DevOps processes. No generic exclusion rules applied; the content is technical, educational, and development/security focused."
   }
 ]
