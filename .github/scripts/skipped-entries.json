@@ -8151,5 +8151,11 @@
     "collection": "videos",
     "timestamp": "2025-11-05 18:05:40 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=5Drb6a5beiA"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-365/blog/2025/11/04/microsoft-offers-in-country-data-processing-to-15-countries-to-strengthen-sovereign-controls-for-microsoft-365-copilot/",
+    "reason": "No categories found: Content is excluded due to generic exclusion rules under 'Non-Development Microsoft Products'. The entire news article concerns the rollout of in-country data processing for Microsoft 365 Copilot interactions, which is classified as a business productivity tool rather than a developer tool according to the workflow's CRITICAL Copilot Product Distinction. No development, coding, architecture, or technical implementation topics for practitioners are discussed; all focus is on data residency, governance, and regulatory options for enterprise end-users. This means none of the inclusion rules for categories apply, and per explicit Microsoft 365 Copilot exclusion mandates, no categories should be assigned.",
+    "timestamp": "2025-11-05 19:04:59 +00:00"
   }
 ]

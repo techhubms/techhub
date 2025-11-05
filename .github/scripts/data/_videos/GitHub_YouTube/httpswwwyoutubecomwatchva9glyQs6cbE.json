@@ -1,0 +1,14 @@
+{
+  "Link": "https://www.youtube.com/watch?v=a9glyQs6cbE",
+  "Author": "GitHub",
+  "Title": "AI & Copilot: Modernizing Applications for the Cloud",
+  "EnhancedContent": null,
+  "Description": "Join Ayan Gupta live as we explore how GitHub Copilot App Modernization helps teams upgrade, migrate, and deploy applications faster than ever. From assessing legacy codebases to modernizing frameworks, applying security fixes, and deploying to Azure — discover how AI-powered agents streamline the entire modernization journey for Java, .NET, and beyond.\n\n🔍 What you’ll learn:\n- Upgrading your applications: Automatically assess codebases, upgrade frameworks, and resolve dependencies with AI-assisted plans\n- Migrating your applications: Move to Azure with confidence using built-in agents that handle configuration, testing, and transformation\n- Deploying your applications: Generate infrastructure as code, automate pipelines, and validate deployments end-to-end",
+  "PubDate": "2025-10-24T23:58:52+00:00",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "GitHub",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Tags": [],
+  "ProcessedDate": "2025-11-05 19:03:46",
+  "FeedName": "GitHub YouTube"
+}

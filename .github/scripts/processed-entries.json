@@ -14822,5 +14822,23 @@
     "collection": "videos",
     "timestamp": "2025-11-05 18:07:00 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=oCNqsEXKnoA"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/copilot-studio-dotnet-wasm/",
+    "reason": "Succesfully added: Assigned the 'AI' category because Copilot Studio is a Microsoft conversational AI platform and the article is focused on how its architecture and performance serve AI agent use cases (AI rules 1, 4, 5). 'Coding' is included because it discusses the .NET runtime, C# code execution, WebAssembly optimizations, developer workflows, and technical implementation details (Coding rules 1, 2, 4, 5). Did not assign 'GitHub Copilot' because the content is about Copilot Studio, not GitHub Copilot, which aligns with the Copilot product distinction. Did not assign 'ML' because, while the platform enables AI/automation, the focus is on application runtime and developer tooling, not custom machine learning or data science engineering. Did not assign 'DevOps,' 'Azure,' or 'Security' since the article’s discussion of build practices and cloud integration is general and not specific to those categories.",
+    "timestamp": "2025-11-05 19:04:19 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2025/11/05/announcing-the-2026-microsoft-techspark-fellows/",
+    "reason": "Succesfully added: Assigned AI category because the content centers on Microsoft's TechSpark Fellows program, which focuses on advancing AI skilling and cloud technology adoption in communities (AI inclusion rules 1 and 5). Did not assign other categories because there is minimal technical implementation detail on Azure, Coding, ML, Security, or DevOps; the focus is on program impact, community-driven AI adoption, and digital skills. Content is not excluded because it does not violate any generic exclusion rules (not biographical, not a sales pitch, not overly negative, not business strategy/executive content, and is in English).",
+    "timestamp": "2025-11-05 19:04:46 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/11/05/securing-critical-infrastructure-why-europes-risk-based-regulations-matter/",
+    "reason": "Succesfully added: Assigned the Security category because the article focuses on cybersecurity threats to critical infrastructure, implementation of security controls, compliance with regulations (NIS2, DORA), and Microsoft's approaches to enhancing security posture. The KCIs, risk-based mitigation strategies, and legislation analysis are deeply technical and aimed at security professionals (Security inclusion rule 1, 2, 9, 10). No other categories apply, as the content does not detail programming, DevOps, Azure-specific implementations, or AI/ML technology. No generic exclusion rules apply.",
+    "timestamp": "2025-11-05 19:05:23 +00:00"
   }
 ]
