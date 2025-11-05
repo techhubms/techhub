@@ -1,0 +1,24 @@
+{
+  "Title": "On .NET Live - On .NET Live | Beyond Chat: Smarter AI Agents in .NET",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Tags": [
+    "Agents",
+    "AI",
+    "demo",
+    "developer",
+    "developercommunity",
+    "dotnet",
+    "dotnetdeveloper",
+    "microsoft",
+    "softwaredeveloper"
+  ],
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "dotnet",
+  "Link": "https://www.youtube.com/watch?v=nKN4QxPcFlA",
+  "Description": "This week, Mark talks us through the challenges of building AiGen, the AI-powered coding assistant for Visual Studio, and what his team learned along the way. Most AI tools are chat-based but AiGen takes a different approach: a single question yields a single, seamlessly integrated code change—like pair programming with an expert who works at lightning speed. We’ll dig into how Mark and the team made that possible in C#, the design and UX decisions that mattered most, and the lessons any developer can apply when bringing AI into their own .NET apps.\n\n🎙️ Featuring: Mark Miller, Frank Boucher, David Pine\n\n#dotnet",
+  "EnhancedContent": null,
+  "PubDate": "2025-11-05T20:28:35+00:00",
+  "FeedName": "DotNet YouTube",
+  "Author": "dotnet",
+  "ProcessedDate": "2025-11-05 21:03:44"
+}

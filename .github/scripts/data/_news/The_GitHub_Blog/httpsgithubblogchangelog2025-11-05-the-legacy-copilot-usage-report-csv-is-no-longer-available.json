@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "copilot",
+    "Retired"
+  ],
+  "Title": "The legacy Copilot usage report CSV is no longer available",
+  "Author": "Allison",
+  "Description": "We’ve retired the legacy Copilot usage report CSV that was previously available to organization administrators under Copilot access settings. Three months ago, the legacy usage report was deprecated in favor…\n\nThe post [The legacy Copilot usage report CSV is no longer available](https://github.blog/changelog/2025-11-05-the-legacy-copilot-usage-report-csv-is-no-longer-available) appeared first on [The GitHub Blog](https://github.blog).",
+  "EnhancedContent": "We’ve retired the legacy Copilot usage report CSV that was previously available to organization administrators under Copilot access settings.\n\nThree months ago, the legacy usage report was deprecated in favor of the new, more granular activity report. In-product notices informed admins of the upcoming retirement.\n\n### What’s changed?\n\n- **Usage report (legacy) removed:** The old CSV download is no longer available for admins from Copilot access settings.\n\n### What stays the same?\n\n- **Activity report (new) remains:** The new activity report provides all the metrics and details of the usage report, plus additional granularity and improvements to export workflow.\n- **No data changes:** All usage data remains available via the activity report.\n\n### What do I need to do?\n\nAdmins should begin using the [Copilot activity report](https://docs.github.com/copilot/how-tos/administer-copilot/download-activity-report) to obtain organization-wide or enterprise-wide Copilot usage data.\n\nIf you have any workflows or automation relying on the legacy report, please update them to reference the activity report endpoints and format.\n\nFor more details on accessing and using the Copilot activity report, see our [activity report docs](https://docs.github.com/copilot/how-tos/administer-copilot/download-activity-report).",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2025-11-05 21:03:07",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "PubDate": "2025-11-05T20:25:52+00:00",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2025-11-05-the-legacy-copilot-usage-report-csv-is-no-longer-available",
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}

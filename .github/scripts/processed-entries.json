@@ -14870,5 +14870,17 @@
     "timestamp": "2025-11-05 20:05:55 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=bIl83DdhWoo",
     "reason": "Succesfully added: Applied the Coding category because the video centers on Grial—a developer-focused UI toolkit—used with .NET MAUI and Xamarin, both Microsoft development frameworks (Coding rule 1 and 2). No other categories fit since the video primarily discusses UI design and development patterns, not Azure, AI, ML, DevOps, or Security. Verified there were no generic exclusion triggers: the focus is technical and developer-oriented, not biographical, promotional, business, or non-English."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-11-05-the-legacy-copilot-usage-report-csv-is-no-longer-available",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content specifically concerns GitHub Copilot administration and reporting (GitHub Copilot inclusion rules 1 and 2, and AI inclusion rule 2). The update is about usage data and admin features, not business productivity. No other categories apply since the content does not address coding, DevOps implementation, Azure, ML, or security aspects.",
+    "timestamp": "2025-11-05 21:04:29 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=nKN4QxPcFlA",
+    "reason": "Succesfully added: Assigned 'AI' category since the core topic is building AiGen, an AI-powered coding assistant for Visual Studio (AI rule 1, 4). Assigned 'Coding' because discussion centers on implementing AI integration in C# and .NET apps (Coding rules 1, 2, 4). No other categories assigned as content does not primarily cover DevOps, Azure, ML, Security, or GitHub Copilot. Tags extracted cover AI, .NET, Visual Studio, and developer tooling aspects.",
+    "timestamp": "2025-11-05 21:04:58 +00:00",
+    "collection": "videos"
   }
 ]
