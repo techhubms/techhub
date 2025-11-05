@@ -14744,5 +14744,17 @@
     "reason": "Succesfully added: Assigned Azure category because the entire article explains Azure cloud service models and focuses on Azure's operational approach (Azure rule 1). Assigned Security category due to detailed explanation of responsibilities for security and compliance within Azure, including network security, encryption, and access management (Security rules 1, 2, 3, and 4). Did not assign DevOps, ML, Coding, AI, or GitHub Copilot categories because the content does not focus on software development, DevOps automation, AI/ML, or coding practices; it is primarily about operational/cloud security responsibilities and best practices.",
     "timestamp": "2025-11-05 12:05:36 +00:00",
     "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because Signing Transparency is an Azure-based cloud service and references Azure Confidential Ledger and other Azure technologies (Azure rule 1). Assigned Security category because the content is entirely about software supply chain security, transparent code signing, Zero Trust, auditability, and cryptographic mechanisms to prevent tampering (Security rules 1, 4, and 9). Not assigning AI, ML, Coding, DevOps, or GitHub Copilot categories – the content is not about AI, ML, explicit development/coding practices, DevOps methodologies, or Copilot usage. No generic exclusion rules applied; the article is technical, English, and highly relevant.",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/enhancing-software-supply-chain-security-with-microsofts-signing-transparency/",
+    "timestamp": "2025-11-05 14:04:56 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because the content focuses heavily on Azure Essentials, Azure architectures, and deployment strategies (Azure rules 1, 4, 5). Added 'DevOps' due to detailed discussion of automation, deployments, and Azure DevOps usage (DevOps rules 1, 5, 6). Included 'Security' because security and governance (Microsoft Defender for Cloud, compliance, backup, disaster recovery) are central to the discussion (Security rules 1, 4, 7, 9). Included 'AI' because the guidance references building resilient AI applications, deploying AI models, and AI innovation on Azure (AI rules 1, 4, 5). Did not assign 'Coding' or 'ML' since there is no code-level development or detailed data science/ML engineering covered. All assigned categories are justified by substantive and central presence in the content.",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/resiliency-in-the-cloud-empowered-by-shared-responsibility-and-azure-essentials/",
+    "timestamp": "2025-11-05 14:05:22 +00:00",
+    "collection": "news"
   }
 ]
