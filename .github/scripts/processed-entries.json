@@ -14756,5 +14756,17 @@
     "canonical_url": "https://azure.microsoft.com/en-us/blog/resiliency-in-the-cloud-empowered-by-shared-responsibility-and-azure-essentials/",
     "timestamp": "2025-11-05 14:05:22 +00:00",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the article continually discusses AI agents, AI security, and features Microsoft AI products (AI rules 1, 4, 6). Security category is included due to the in-depth coverage of cybersecurity risks, Zero Trust, Containment, and Alignment (Security rules 1, 2, 4, 9). Azure is included due to direct discussion of Azure AI Foundry and related Azure-based security governance (Azure rule 1). While Copilot Studio is mentioned, it is in the context of managing AI identities rather than as a developer tool, so Coding and DevOps categories do not apply. ML is not included, as the article focuses on operational AI agent security, not technical ML workflows. No generic exclusion rules apply; the content is technical, not promotional, sufficiently detailed, and primarily in English.",
+    "timestamp": "2025-11-05 15:05:38 +00:00",
+    "canonical_url": "https://blogs.microsoft.com/blog/2025/11/05/beware-of-double-agents-how-ai-can-fortify-or-fracture-your-cybersecurity/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: The content focuses on building, deploying, and managing AI agents using Microsoft Azure and related tools (Azure AI Foundry, Copilot Studio), and repeatedly emphasizes cost efficiency and operational strategies for AI workloads on Azure, matching the 'AI' and 'Azure' inclusion rules. Modules also reference specific engineering and architectural concepts (FinOps, Cloud Adoption Framework, scalable architecture), underlining technical relevance rather than business-only or general productivity content. Exclusion rules for business-only products do not apply, as this is developer/technical guidance, not end-user business productivity. 'Coding', 'ML', 'DevOps', and 'Security' are not assigned as there is no substantive code-level, ML-specific, DevOps/process, or security/identity focus beyond the context of deploying and managing AI solutions on Azure.",
+    "timestamp": "2025-11-05 15:06:32 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/empower-smarter-ai-agent-investments/ba-p/4466010",
+    "collection": "community"
   }
 ]
