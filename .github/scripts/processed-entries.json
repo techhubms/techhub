@@ -14732,5 +14732,17 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/identity-in-azure-understanding-azure-ad-authentication-and-authorization/",
     "reason": "Succesfully added: Assigned 'Azure' because the content centers on Azure AD—a core Azure service—covering management, usage, and integration (Azure inclusion rule 1). Assigned 'Security' since the focus is on identity, authentication, authorization, and protection practices—matching Security rules for application security in the Microsoft ecosystem. Did not assign AI, ML, Coding, DevOps, or GitHub Copilot because the post does not discuss AI/ML, application code, developer tooling, or DevOps processes. No generic exclusion rules applied; the content is technical, educational, and development/security focused."
+  },
+  {
+    "canonical_url": "https://code.visualstudio.com/blogs/2025/11/03/unified-agent-experience",
+    "reason": "Succesfully added: Assigned AI category because the article centers on AI-powered coding agents (AI rule 1), including GitHub Copilot, Copilot CLI, OpenAI Codex, and agents based on models such as GPT-5 and Claude. Assigned GitHub Copilot because Copilot features, integration, and CLI are discussed extensively (GitHub Copilot rule 1-2). Assigned Coding because the focus is on developer workflow, code generation, and integration tools in VS Code (Coding rules 1, 2, and 4). Did not assign Azure, DevOps, ML, or Security as there is no substantive coverage of Azure services, CI/CD, data science, or security practices.",
+    "timestamp": "2025-11-05 12:05:10 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://dellenny.com/shared-responsibility-model-in-azure-explained-with-real-examples/",
+    "reason": "Succesfully added: Assigned Azure category because the entire article explains Azure cloud service models and focuses on Azure's operational approach (Azure rule 1). Assigned Security category due to detailed explanation of responsibilities for security and compliance within Azure, including network security, encryption, and access management (Security rules 1, 2, 3, and 4). Did not assign DevOps, ML, Coding, AI, or GitHub Copilot categories because the content does not focus on software development, DevOps automation, AI/ML, or coding practices; it is primarily about operational/cloud security responsibilities and best practices.",
+    "timestamp": "2025-11-05 12:05:36 +00:00",
+    "collection": "posts"
   }
 ]
