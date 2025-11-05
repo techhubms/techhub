@@ -14642,5 +14642,29 @@
     "timestamp": "2025-11-05 03:23:48 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-11-03-required-review-by-specific-teams-now-available-in-rulesets",
     "reason": "Succesfully added: Assigned the DevOps category because the content is about managing collaboration, code review, repository governance, branch protection, and workflow automation within GitHub (DevOps category rule 2, 3, 5, 6, and 11). Not assigned other categories because the announcement does not focus on coding language, AI, ML, Azure, or specific security features—it's about changes to DevOps policy enforcement in GitHub."
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the 'AI' category because the entire content focuses on AI code assistants, their effect on developer workflows, and supporting industry statistics and case studies (AI rule 1 and 4). Added 'GitHub Copilot' because it is repeatedly referenced as a primary example of an AI assistant for coding (GitHub Copilot rules 1 and 2). The 'DevOps' category was included as the article directly targets developer teams and DevOps organizations, discusses automation, efficiency, and organizational time savings, and appears on a DevOps-centric platform; this meets DevOps inclusion rules 3, 5, and 9. No Coding or Azure-specific technical walkthroughs, nor Security or ML emphasis were found. The article does not trigger any generic exclusion rules as it is technical, focused on developer productivity, and AI code tools rather than business productivity software.",
+    "canonical_url": "https://devops.com/how-ai-code-assistants-can-save-1000-years-of-developer-time/",
+    "timestamp": "2025-11-05 06:05:52 +00:00"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned 'AI' because the article centers on AIOps, blending AI with operational monitoring and automation, matching AI inclusion rules 1, 4, and 5. Assigned 'DevOps' because the content's entire focus is on implementing and integrating AIOps within DevOps processes and pipelines, meeting DevOps rules 3, 5, and 6. No other categories were assigned since there is no significant focus on specific Microsoft platforms, coding practices, Azure services, ML engineering, or security product implementations.",
+    "canonical_url": "https://devops.com/how-aiops-is-revolutionizing-devops-monitoring-in-the-cloud-era/",
+    "timestamp": "2025-11-05 06:06:13 +00:00"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the AI category because the content focuses on enabling AI agents and large language models to interact with APIs using the Model Context Protocol (AI rule 1 and 4). Assigned the DevOps category because the article centers on workflow integration, testing automation, security, and configuration—all core DevOps practices (DevOps rules 1, 3, 4, and 5). Coding, Azure, ML, Security, and GitHub Copilot categories were not assigned because there is no substantial focus on Microsoft-specific technologies, ML/data science pipelines, code development practices, or Copilot/GitHub features. The article is about cross-platform API tooling and protocol support, not directly about Microsoft tech, so Azure-specific or ML/data engineering topics do not apply.",
+    "canonical_url": "https://devops.com/kong-adds-mcp-support-to-tool-for-designing-and-testing-apis/",
+    "timestamp": "2025-11-05 06:06:33 +00:00"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned 'AI' category because the content focuses on the use of artificial intelligence agents to automate observability and debugging operations in a technical platform, per AI inclusion rule 1 and 5. Assigned 'DevOps' category as the new AI agents are designed specifically for DevOps and SRE teams, automating workflows and incident response, directly meeting DevOps inclusion rules 1, 3, and 5. No Azure, Coding, Security, ML, or GitHub Copilot category applies, as neither Azure nor Microsoft-specific technology, direct application programming, security, or ML/AI engineering from scratch (as per ML rules) is central to the article. No generic exclusion rules apply; the post is substantial, technical, and focused on hands-on DevOps tooling and AI usage.",
+    "canonical_url": "https://devops.com/observe-adds-two-ai-agents-to-improve-observability/",
+    "timestamp": "2025-11-05 06:06:53 +00:00"
   }
 ]
