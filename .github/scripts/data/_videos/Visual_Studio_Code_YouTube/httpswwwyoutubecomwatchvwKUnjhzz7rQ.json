@@ -1,0 +1,24 @@
+{
+  "Author": "Visual Studio Code",
+  "Description": "Learn about DocumentDB, an open-source MongoDB-compatible database, and get hands-on with our engine locally. We’ll show how the DocumentDB for VS Code extension lets you connect, browse collections, run MongoDB-compatible queries, manage indexes, and debug faster without leaving your editor.\n\n🔗 Links: DocumentDB website: https://documentdb.io/ DocumentDB repo: https://github.com/documentdb/documentdb Extension: https://aka.ms/DocumentDB/Extension",
+  "Link": "https://www.youtube.com/watch?v=wKUnjhzz7rQ",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Title": "🔴 VS Code Live - Exploring Open Source & the DocumentDB for VS Code Extension",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-11-05 22:04:42",
+  "FeedName": "Visual Studio Code YouTube",
+  "OutputDir": "_videos",
+  "PubDate": "2025-11-05T21:03:53+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Tags": [
+    "beginner",
+    "code",
+    "demo",
+    "developer",
+    "developercommunity",
+    "documentdb",
+    "softwaredeveloper",
+    "visualstudiocode",
+    "vscode"
+  ]
+}

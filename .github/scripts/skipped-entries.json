@@ -8157,5 +8157,11 @@
     "canonical_url": "https://www.microsoft.com/en-us/microsoft-365/blog/2025/11/04/microsoft-offers-in-country-data-processing-to-15-countries-to-strengthen-sovereign-controls-for-microsoft-365-copilot/",
     "reason": "No categories found: Content is excluded due to generic exclusion rules under 'Non-Development Microsoft Products'. The entire news article concerns the rollout of in-country data processing for Microsoft 365 Copilot interactions, which is classified as a business productivity tool rather than a developer tool according to the workflow's CRITICAL Copilot Product Distinction. No development, coding, architecture, or technical implementation topics for practitioners are discussed; all focus is on data residency, governance, and regulatory options for enterprise end-users. This means none of the inclusion rules for categories apply, and per explicit Microsoft 365 Copilot exclusion mandates, no categories should be assigned.",
     "timestamp": "2025-11-05 19:04:59 +00:00"
+  },
+  {
+    "timestamp": "2025-11-05 22:05:55 +00:00",
+    "reason": "No categories found: No categories assigned because the content is about DocumentDB, a non-Microsoft open-source MongoDB-compatible database, which is not a Microsoft technology or service. The video covers DocumentDB and its extension for Visual Studio Code, but DocumentDB is not an Azure Cosmos DB (the Microsoft managed service with MongoDB compatibility) and there is no evidence in the description or tags that Microsoft Azure or related services are being discussed or shown. Visual Studio Code is a Microsoft product, but simply showcasing a third-party or unrelated database tool extension within VS Code does not qualify for Coding or Azure categories unless Microsoft technologies/services are central, per the multi-platform and category inclusion rules. Therefore, all categories are excluded.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=wKUnjhzz7rQ"
   }
 ]
