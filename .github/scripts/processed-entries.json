@@ -14768,5 +14768,17 @@
     "timestamp": "2025-11-05 15:06:32 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/empower-smarter-ai-agent-investments/ba-p/4466010",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=ob-TOPfQmbk",
+    "timestamp": "2025-11-05 16:05:28 +00:00",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot because the session centers on building AI-powered apps and agent workflows with GitHub Copilot, the AI Toolkit, and multi-agent orchestration (AI rules 1 and 2; GitHub Copilot rules 1–4). Assigned Coding for its focus on spec-driven development, code automation, and developer patterns using Microsoft tools (Coding rules 2 and 4). Assigned DevOps because it covers end-to-end deployment, observability, and incident response with operational tools (DevOps rules 3–7). Assigned Azure because deployment and operational aspects rely on Azure AI Foundry, making Azure central to the workflow (Azure rules 1 and 4).",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-larger-container-sizes-on/ba-p/4463863",
+    "timestamp": "2025-11-05 16:06:17 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content is an official announcement specific to Azure Container Instances (Azure category rule 1). It covers technical cloud service enhancements, deployment options, scenarios like data processing and high-performance workloads, and provides direct instructions for Azure integration. No other categories are included because the post focuses on operational improvements and deployment—not deep coding practice, ML engineering, DevOps pipelines, AI service usage, or security-specific context.",
+    "collection": "community"
   }
 ]

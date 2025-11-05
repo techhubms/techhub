@@ -1,0 +1,18 @@
+{
+  "OutputDir": "_videos",
+  "FeedName": "GitHub YouTube",
+  "Author": "GitHub",
+  "PubDate": "2025-11-05T15:01:39+00:00",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-11-05 16:03:58",
+  "Link": "https://www.youtube.com/watch?v=ob-TOPfQmbk",
+  "Tags": [
+    "AI",
+    "GitHub",
+    "GitHubUniverse"
+  ],
+  "Title": "Build apps & agents that scale with VS Code, GitHub Copilot, and Agent Framework",
+  "FeedLevelAuthor": "GitHub",
+  "Description": "In this demo-driven session from GitHub Universe 2025, see how VS Code and the AI Toolkit turn GitHub Copilot into your AI workbench—where chat, tools, and AI agents adapt to your flow. We’ll use Spec Kit to go from spec to working code, then build multi‑agent workflows with the open‑source Agent Framework and deploy to Azure AI Foundry with observability, tracing, and safety built in. From first commit to production, you'll learn patterns to ship secure, scalable intelligent apps and multi‑agent workflows.\n\nSpeakers: Amanda Silver, CVP, Apps & Agents + 1ES GM, Microsoft (Speaker) Rong Lu, Principal Manager, Microsoft (Speaker) Shayne Boyer, Principal Program Manager, Microsoft (Speaker)\n\n— CHAPTERS —\n\n00:00 Welcome: Building an intelligent app from scratch 02:27 Demo: Building an app with spec-driven development using Spec Kit 09:44 Adding intelligence: How to build and automate AI agents 10:44 Demo: Building and orchestrating agents with the AI toolkit 20:09 Solving operations: Managing live site incidents with AI 22:00 Demo: The Azure SRE agent automates incident response 29:15 Conclusion: The shift to developers as orchestrators\n\n#AI #GitHubUniverse #GitHub\n\nWatch more videos from GitHub Universe 2025: https://www.youtube.com/watch?v=P6Va0\\_KILi4&list=PL0lo9MOBetEFKNlPHNouEmVeYeyoyGTXC\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 100 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+}

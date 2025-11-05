@@ -8079,5 +8079,23 @@
     "timestamp": "2025-11-05 15:06:09 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/Nv6QsjXGgdA",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/O438jFFkUGM",
+    "timestamp": "2025-11-05 16:05:42 +00:00",
+    "reason": "No categories found: Content excluded due to insufficient substantive detail for categorization. The content field is null, and both the description and tags are minimal, providing only a general statement about building an AI agent with no technical information, steps, or mention of Microsoft technologies or specific products or services. According to the processing rules, categorization requires enough content to determine technical depth and relevance to Microsoft development topics. Without a meaningful content body or detailed description, no categories can be responsibly assigned.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=M50ICcrFnTY",
+    "timestamp": "2025-11-05 16:05:55 +00:00",
+    "reason": "No categories found: No categories assigned. The content lacks sufficient detail to determine its technical focus. The title and description suggest the video is about building an AI agent, but there is no mention of any specific Microsoft technology, tool, service, or programming framework. According to the inclusion rules, at least one qualifying Microsoft product, service, or developer platform must be substantively featured to qualify for any of the predefined categories. The provided description and tags do not indicate which Microsoft technology (if any) is central, and there is no main content to evaluate. Therefore, categories cannot be assigned.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/a-guide-to-adaptive-cloud-at-microsoft-ignite-2025/ba-p/4466674",
+    "timestamp": "2025-11-05 16:06:18 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community"
   }
 ]
