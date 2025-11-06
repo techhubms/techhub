@@ -14900,5 +14900,11 @@
     "timestamp": "2025-11-06 07:04:54 +00:00",
     "reason": "Succesfully added: Included Azure category because the content focuses on Azure Event Hubs (Azure rules 1 and 4). DevOps category is relevant due to the emphasis on monitoring, alerting, and operational practices (DevOps rules 3, 6, and 7), including automation, observability, and troubleshooting in streaming pipelines. Coding is assigned because of practical code samples (Python, CLI scripts) and SDK usage for lag calculation (Coding rules 1 and 5). No AI or ML category was assigned as the focus is on infrastructure monitoring and consumer offsets rather than data science or AI services. Security category was not applied since the article is strictly about tracking message lag and does not cover authentication, access, or security architecture.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/beyond-basics-tracking-kafka-lag-in-azure-event-hubs/ba-p/4457797"
+  },
+  {
+    "timestamp": "2025-11-06 09:04:31 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/from-code-to-confidence-building-ai-apps-that-earn-user-trust/",
+    "reason": "Succesfully added: Assigned the AI category because the entire article discusses best practices in AI application development, especially around testing, quality assurance, and responsible AI (AI category, rules 1 and 5). Assigned the DevOps category because the content calls out the inadequacy of traditional dev/test workflows and urges continuous, community-driven testing, feedback, metrics, and MLOps (DevOps rules 4, 5, 9). Did not assign Coding, Azure, ML, Security, or GitHub Copilot because there is no direct focus on programming languages, specific Microsoft cloud features, custom ML/data engineering, security implementations, or GitHub Copilot. The focus is on AI application quality, trust, and agile/operational practices, not low-level code or platform specifics."
   }
 ]
