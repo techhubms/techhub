@@ -14990,5 +14990,29 @@
     "canonical_url": "https://www.youtube.com/watch?v=JLCl5lh-tw8",
     "reason": "Succesfully added: Assigned 'AI' category because the event covers building agentic experiences with Microsoft Agent Framework and Azure AI Foundry (AI inclusion rule 1) and general AI automation topics. 'GitHub Copilot' is included because multiple agenda items discuss Copilot features in Visual Studio and Azure (GitHub Copilot inclusion rule 1), and per critical instruction, 'AI' is included with it. 'Azure' is assigned due to Azure migration, App Service Managed Instance, Azure SRE Agent, and Azure AI Foundry (Azure inclusion rule 1). 'Coding' is included as the content focuses on .NET modernization, code upgrades, and developer tooling (Coding rules 1 and 2). 'DevOps' is included due to references to reliability engineering with the Azure SRE Agent and deployment/migration processes (DevOps rules 5 and 7). ML and Security are not assigned; there is no direct reference to data science/ML engineering or explicit security topics. Content is not excluded by any generic exclusion rule; it is professional, technical, and relevant.",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-06 20:04:35 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Security because the update details new features in GitHub secret scanning aimed at improving application and cloud security (Security rules 1, 4, 5, 7). Assigned DevOps because secret scanning is integral to DevOps pipelines, CI/CD, and developer workflows (DevOps rules 2, 5, 6, 7, 8). Assigned Azure because specific Azure secret types are listed as supported; Azure credentials and keys are specifically referenced (Azure rule 1). Did not assign AI, ML, Coding, or GitHub Copilot, as there is no development of AI/ML features, code, or Copilot content present.",
+    "canonical_url": "https://github.blog/changelog/2025-11-04-secret-scanning-now-detects-base64-encoded-secrets"
+  },
+  {
+    "timestamp": "2025-11-06 20:04:52 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: DevOps category assigned because the updates are about GitHub Actions, a DevOps platform (DevOps rule 2 and 5). GitHub Copilot and AI categories are included due to the Copilot coding agent update (GitHub Copilot inclusion rule 1 and 2, and critical Copilot rules). The content covers features relevant to workflow automation, CI/CD, and developer AI tools. No other categories apply as this is not specific to Azure, ML/data science practices, security, or code-level platform details.",
+    "canonical_url": "https://github.blog/changelog/2025-11-06-new-releases-for-github-actions-november-2025"
+  },
+  {
+    "timestamp": "2025-11-06 20:05:21 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned Coding category as the video is focused on Entity Framework 10, a core data access technology for .NET developers (Coding rule 1: Microsoft Programming Languages; Coding rule 2: Microsoft Development Frameworks/Tools). It features discussions by the EF engineering team about new features, development best practices, and Q&A, all of which are technical and relevant for Microsoft-centric development. Other categories like Azure, AI, ML, DevOps, and Security were not included as the content, per description and tags, is focused on EF Core and developer tooling, not broader infrastructure or AI/data science.",
+    "canonical_url": "https://www.youtube.com/watch?v=3Aqd_arD6Vo"
+  },
+  {
+    "timestamp": "2025-11-06 20:05:56 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the content centers on migrating and modernizing VMware workloads using Azure VMware Solution, including deployment and Azure-native integration (Azure inclusion rules 1, 4, 6). Did not assign ML, AI, Coding, DevOps, Security, or GitHub Copilot because there is no reference to software development, AI, ML, operational automation, or security. Tags were extracted based on the main technologies (Azure VMware Solution, VMware), migration strategies, and infrastructure modernization focus. This community post is well above 200 words of substantive content, so word count exclusion does not apply.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-modernize-your-vmware-platform-using-azure-vmware/ba-p/4467872"
   }
 ]

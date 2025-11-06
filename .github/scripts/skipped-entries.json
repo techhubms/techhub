@@ -8211,5 +8211,11 @@
     "reason": "No categories found: No categories assigned. The content is about a personal anecdote from Christian Grobmeier, Log4j maintainer, describing the impact of the Log4Shell vulnerability on Minecraft, specifically focusing on a memorable incident involving his son and his code. There is no substantial technical content regarding Microsoft technologies, GitHub engineering practices, security implementations in the Microsoft ecosystem, or development-related guidance. The main focus is storytelling around the incident, not technical solution or direct Microsoft technology use. Therefore, per exclusion rules (biographical focus and lack of Microsoft-centered technical content), no categories apply.",
     "canonical_url": "https://www.youtube.com/shorts/Busz5mhYa_s",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-06 20:05:34 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: All categories are excluded due to lack of substantive technical content in the provided input. The title and description ('Rubber Duck Thursdays - Let's cowork! Cassidy's back! Hey!' and 'We're going to talk tech and perhaps code something, too!') are extremely vague, do not specify any Microsoft technology, product, or development topic, and do not provide evidence of meeting any category inclusion rules. The content field is null, which further prevents assessment of technical depth, relevant tools, or subject matter. Without clear information about Microsoft-related technologies, frameworks, developer tooling, or substantive technical implementation, this entry does not meet the minimum standards for categorization. Exclusion is based on 'When in doubt, exclude' guidance and the necessity for actual content details.",
+    "canonical_url": "https://www.youtube.com/watch?v=QZGQNEZTZr8"
   }
 ]

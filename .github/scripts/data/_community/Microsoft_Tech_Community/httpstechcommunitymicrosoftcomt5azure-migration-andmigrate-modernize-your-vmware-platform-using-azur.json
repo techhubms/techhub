@@ -1,0 +1,14 @@
+{
+  "Title": "Migrate & Modernize Your VMware Platform Using Azure VMware Solution Gen 2",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-modernize-your-vmware-platform-using-azure-vmware/ba-p/4467872",
+  "FeedName": "Microsoft Tech Community",
+  "EnhancedContent": "## Pre Requisites to Day 2 Operations and Azure Native Service Integration\n\nThis video series by Microsoft Global Blackbelts, Carlos Villuendas ([CarlosV​](javascript:void%280%29)) and Trevor Davis ([tredavis​](javascript:void%280%29)), guides users from configuring prerequisites to deploying, migrating on-premises VMware workloads to Azure VMware Solution, then integrating VMware workloads with Azure Native services for enhanced value.\n\nThese are the first two videos, much more to come, please check back often.\n\nFor requests, leave comments in the notes.\n\nEnjoy!\n\n1 - [Prerequisites](https://youtu.be/xQaA0NBX6eo)\n\n2 - [Deployment](https://youtu.be/DHEmxR-PD2o)\n\nPublished Nov 06, 2025\n\nVersion 1.0\n\n[azure migrate](/tag/azure%20migrate?nodeId=board%3AAzureMigrationBlog)\n\n[azure vmware solution](/tag/azure%20vmware%20solution?nodeId=board%3AAzureMigrationBlog)\n\n[!\\[tredavis&#x27;s avatar\\](https://techcommunity.microsoft.com/t5/s/gxcuf89792/images/dS00MjMwNzUtWUE3SGk0?image-coordinates=0%2C0%2C192%2C192&amp;image-dimensions=50x50)](/users/tredavis/423075) [tredavis](/users/tredavis/423075) ![Icon for Microsoft rank](https://techcommunity.microsoft.com/t5/s/gxcuf89792/images/cmstNC05WEo0blc?image-dimensions=100x16&amp;constrain-image=true)Microsoft\n\nMember of the Azure VMware Solution Black Belt Team\n\n[View Profile](/users/tredavis/423075)\n\n/category/azure/blog/azuremigrationblog [Azure Migration and Modernization Blog](/category/azure/blog/azuremigrationblog) Follow this blog board to get notified when there's new activity",
+  "Description": "This video series by Microsoft Global Blackbelts, Carlos Villuendas ([CarlosV​](javascript:void%280%29)) and Trevor Davis ([tredavis​](javascript:void%280%29)), guides users from configuring prerequisites to deploying, migrating on-premises VMware workloads to Azure VMware Solution, then integrating VMware workloads with Azure Native services for enhanced value.\n\nThese are the first two videos, much more to come, please check back often.\n\nFor requests, leave comments in the notes.\n\nEnjoy!\n\n1 - [Prerequisites](https://youtu.be/xQaA0NBX6eo)\n\n2 - [Deployment](https://youtu.be/DHEmxR-PD2o)",
+  "PubDate": "2025-11-06T19:17:51+00:00",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Tags": [],
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "OutputDir": "_community",
+  "ProcessedDate": "2025-11-06 20:03:59",
+  "Author": "tredavis"
+}
