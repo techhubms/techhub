@@ -14924,5 +14924,29 @@
     "canonical_url": "https://code.visualstudio.com/blogs/2025/11/04/openSourceAIEditorSecondMilestone",
     "collection": "news",
     "reason": "Succesfully added: Assigned 'AI' category because the content centers on AI-assisted development in VS Code, specifically describing open sourcing and technical improvements to AI-driven code suggestions (AI inclusion rules 1 and 4). 'GitHub Copilot' category applies as the entire effort is about consolidating Copilot (particularly Copilot Chat) under a single extension (GitHub Copilot inclusion rule 1). 'Coding' is assigned because the subject matter covers extension development within VS Code and technical implementation of code suggestions (Coding inclusion rules 2 and 5). There is no substantive Azure/cloud or ML/data science focus, nor primary security/devops content. The news is purely technical, fits quality guidelines, and does not trigger any generic exclusion rule."
+  },
+  {
+    "timestamp": "2025-11-06 15:04:44 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the content is a deep, strategic discussion of Microsoft’s approach to advanced artificial intelligence, focusing on Humanist Superintelligence (AI inclusion rules 1, 4, 5, and 6). The article centers on AI alignment, safe development, domain-specific AI systems, and practical AI applications in healthcare, education, and energy—directly involving Microsoft's AI research and product directions. No other categories qualify, as the article is not about technical coding, DevOps, Azure-specific deployments, ML/data science implementation, or security practices; it is a principled technical vision about Microsoft AI. Tags were chosen to reflect terminology, teams, technical concepts, challenges, and prominent individuals discussed in the content.",
+    "canonical_url": "https://microsoft.ai/news/towards-humanist-superintelligence/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-06 15:05:35 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the video discusses the influence of AI on programming languages and developer workflows, meeting AI inclusion rule 5 (high-level AI usage) and AI rule 4 (AI development with Microsoft technologies). Coding was assigned due to extensive discussion of programming languages (TypeScript, Go) and engineering workflows, per Coding rules 1 and 4. DevOps was included as the discussion covers evolving developer workflows, collaboration, and productivity, which aligns with DevOps inclusion rules 3 and 9. Did not assign GitHub Copilot (not mentioned directly), Azure, ML, or Security as there is no focus on those specific technologies or practices.",
+    "canonical_url": "https://www.youtube.com/watch?v=GMWJceUTxuk",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-06 15:06:20 +00:00",
+    "reason": "Succesfully added: The content qualifies for the AI category because it focuses extensively on AI-driven translation with Azure AI Translator, including LLM-based capabilities (AI inclusion rule 1 and 4). The Azure category is assigned since the content revolves around Azure AI services (Azure inclusion rule 1). The Coding category applies due to in-depth TypeScript code samples, API usage explanations, and developer-oriented implementation guidance (Coding rules 1, 2, and 4). The provided sample code, migration tips, and architectural context further reinforce the developer and Azure AI integration focus. No exclusion rules are triggered; this is substantive, technical, and English-language content targeted at Microsoft-centric development.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-adaptive-multilingual-apps-using-typescript-and-azure/ba-p/4465267",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-06 15:06:47 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content is about using a Microsoft AI platform model (Mistral Document AI in Azure AI Foundry) and explains integrating AI capabilities into developer workflows (AI rule 1 and 4). Assigned Azure because Azure AI Foundry is the deployment and integration platform (Azure rule 1 and 4), and privacy/security features reference Azure controls. Assigned Coding because code samples and step-by-step integration using TypeScript are provided (Coding rules 1 and 2). ML category was not assigned because the focus is on using a pre-trained AI model for document understanding, not on building, training, or customizing ML models or pipelines. Other categories were not assigned as there is no direct DevOps, Security, or GitHub Copilot coverage.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlock-structured-ocr-in-typescript-with-mistral-document-ai-on/ba-p/4466039",
+    "collection": "community"
   }
 ]

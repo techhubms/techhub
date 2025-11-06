@@ -8193,5 +8193,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=tT_i1qAkTFA",
     "timestamp": "2025-11-06 13:13:38 +00:00",
     "reason": "No categories found: No categories assigned because the 'content' field is null. Without the main content text, it is not possible to determine the technical depth, context, or ensure that it meets the required standards for categorization. According to the workflow (Chapter 2: 'Never fabricate information' and 'Base decisions only on provided content'), and since the actual substantive material is missing, this entry cannot be categorized."
+  },
+  {
+    "timestamp": "2025-11-06 15:04:57 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is an official news announcement about Microsoft's expansion of a cloud region in Southeast Asia, which focuses on business growth, regional strategy, and market impact rather than technical implementation details. There is no substantial discussion of AI development, cloud platform engineering, technical deployment, or hands-on use of Microsoft technologies for development. The article primarily serves as a business/strategic announcement, thus triggering the 'Business Strategy and Executive Content' and 'Business vs Technical Content' exclusion rules described in Chapter 3.",
+    "canonical_url": "https://news.microsoft.com/source/asia/features/microsoft-to-expand-cloud-region-in-johor-bahru-empowering-southeast-asias-ai-transformation/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-06 15:05:51 +00:00",
+    "reason": "No categories found: No categories assigned because the provided content lacks sufficient detail. The 'content' field is null and the 'description' field is empty, so there is not enough substantive information to determine if the video covers relevant Microsoft technology, coding practices, or development topics as required by inclusion rules. Additionally, there are no tags to provide further context. Per workflow guidance, exclusion applies when the input does not present meaningful content for analysis.",
+    "canonical_url": "https://www.youtube.com/shorts/M634FBOIbno",
+    "collection": "videos"
   }
 ]
