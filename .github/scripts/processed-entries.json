@@ -14960,5 +14960,17 @@
     "collection": "community",
     "timestamp": "2025-11-06 17:07:24 +00:00",
     "reason": "Succesfully added: Categories assigned: Azure (covers Azure Local, Azure Arc, Azure control plane, and management), and Security (focus on Network Security Groups, policy-driven traffic controls, and baseline network security measures). Not assigned to AI, ML, Coding, DevOps, or GitHub Copilot as there is no content on artificial intelligence, machine learning, programming, CI/CD, or code/development toolchains. The explanation in the body and technical details focus squarely on Azure infrastructure management and security, which matches the category inclusion rules."
+  },
+  {
+    "timestamp": "2025-11-06 18:05:16 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the content centers on Microsoft's initiative to train large numbers of students, educators, and government employees in AI skills (AI rules 1, 4, 5, and 6). Although it mentions Copilot workshops and digital transformation, there is no technical depth on Copilot as a developer tool or on code-level AI development, so GitHub Copilot, Coding, DevOps, Azure, ML, and Security categories are not applicable. This is primarily an AI skilling and awareness initiative with a societal/educational focus, not technical implementation.",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2025/11/05/microsoft-elevate-uae-building-a-future-ready-workforce/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-06 18:05:38 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the article centers on implementing PIKE-RAG (an advanced AI technology combining retrieval-augmented generation and domain reasoning), as well as Document Intelligence and OpenAI models (AI inclusion rules 1 and 3). Assigned Azure category due to explicit integration of PIKE-RAG and Document Intelligence with Microsoft Azure and Azure OpenAI services (Azure inclusion rules 1, 3, and 4). Did not assign ML since the focus is on industrial AI solution integration and knowledge retrieval, not data science, analytics engineering, or training custom ML models from scratch. Coding and DevOps were not relevant since no programming, software engineering, or DevOps-focused practices were discussed. Security was not covered in the content.",
+    "canonical_url": "https://www.microsoft.com/en-us/research/blog/when-industry-knowledge-meets-pike-rag-the-innovation-behind-signifys-customer-service-boost/",
+    "collection": "news"
   }
 ]

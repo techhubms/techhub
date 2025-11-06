@@ -8205,5 +8205,11 @@
     "reason": "No categories found: No categories assigned because the provided content lacks sufficient detail. The 'content' field is null and the 'description' field is empty, so there is not enough substantive information to determine if the video covers relevant Microsoft technology, coding practices, or development topics as required by inclusion rules. Additionally, there are no tags to provide further context. Per workflow guidance, exclusion applies when the input does not present meaningful content for analysis.",
     "canonical_url": "https://www.youtube.com/shorts/M634FBOIbno",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-06 18:06:05 +00:00",
+    "reason": "No categories found: No categories assigned. The content is about a personal anecdote from Christian Grobmeier, Log4j maintainer, describing the impact of the Log4Shell vulnerability on Minecraft, specifically focusing on a memorable incident involving his son and his code. There is no substantial technical content regarding Microsoft technologies, GitHub engineering practices, security implementations in the Microsoft ecosystem, or development-related guidance. The main focus is storytelling around the incident, not technical solution or direct Microsoft technology use. Therefore, per exclusion rules (biographical focus and lack of Microsoft-centered technical content), no categories apply.",
+    "canonical_url": "https://www.youtube.com/shorts/Busz5mhYa_s",
+    "collection": "videos"
   }
 ]
