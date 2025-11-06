@@ -8163,5 +8163,23 @@
     "reason": "No categories found: No categories assigned because the content is about DocumentDB, a non-Microsoft open-source MongoDB-compatible database, which is not a Microsoft technology or service. The video covers DocumentDB and its extension for Visual Studio Code, but DocumentDB is not an Azure Cosmos DB (the Microsoft managed service with MongoDB compatibility) and there is no evidence in the description or tags that Microsoft Azure or related services are being discussed or shown. Visual Studio Code is a Microsoft product, but simply showcasing a third-party or unrelated database tool extension within VS Code does not qualify for Coding or Azure categories unless Microsoft technologies/services are central, per the multi-platform and category inclusion rules. Therefore, all categories are excluded.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=wKUnjhzz7rQ"
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the content is about general software architecture documentation best practices and does not substantively reference or focus on any predefined Microsoft technologies or platforms. There is no mention of Azure, .NET, Microsoft development tools, AI/ML services, security products, or DevOps concepts specifically in the Microsoft ecosystem. Content quality is strong and technical, but per workflow Chapter 2 and Category Inclusion Rules, only content centered around Microsoft technologies receives categories. Tags were not extracted since the core technical terms do not match Microsoft products, frameworks, or services.",
+    "timestamp": "2025-11-06 10:05:31 +00:00",
+    "canonical_url": "https://dellenny.com/documenting-software-architecture-best-practices-for-clarity-and-scalability/",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules related to primary focus and technical depth. The article is centered on communication strategies for solution architects when dealing with non-technical stakeholders, such as executives and business analysts. While it discusses concepts like scalability, risk, modularity, and technology stack selection, the content does not provide technical implementation details, hands-on guidance, or in-depth coverage of Microsoft technologies, products, or development tools. It is primarily focused on business communication, presentation techniques, and stakeholder engagement, which aligns with the generic exclusion rules for business strategy, executive guidance, and workplace-focused content. Therefore, no technical categories are assigned.",
+    "timestamp": "2025-11-06 10:05:44 +00:00",
+    "canonical_url": "https://dellenny.com/how-to-communicate-solution-architecture-to-non-technical-stakeholders/",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: Excluded all categories because despite solid technical and architectural detail, the content does not substantially feature any Microsoft technologies, development tools, Azure services, .NET frameworks, or related platforms. It discusses general software architecture and technical debt management practices without reference to Microsoft's products, ecosystems, or developer tools. According to the workflow, only content where Microsoft technologies are central or comprise ≥40% should be categorized. No category inclusion rules apply, and the generic Microsoft threshold is not met.",
+    "timestamp": "2025-11-06 10:05:56 +00:00",
+    "canonical_url": "https://dellenny.com/technical-debt-and-its-solution-understanding-the-architectural-impact/",
+    "collection": "posts"
   }
 ]

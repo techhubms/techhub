@@ -14906,5 +14906,11 @@
     "collection": "posts",
     "canonical_url": "https://devops.com/from-code-to-confidence-building-ai-apps-that-earn-user-trust/",
     "reason": "Succesfully added: Assigned the AI category because the entire article discusses best practices in AI application development, especially around testing, quality assurance, and responsible AI (AI category, rules 1 and 5). Assigned the DevOps category because the content calls out the inadequacy of traditional dev/test workflows and urges continuous, community-driven testing, feedback, metrics, and MLOps (DevOps rules 4, 5, 9). Did not assign Coding, Azure, ML, Security, or GitHub Copilot because there is no direct focus on programming languages, specific Microsoft cloud features, custom ML/data engineering, security implementations, or GitHub Copilot. The focus is on AI application quality, trust, and agile/operational practices, not low-level code or platform specifics."
+  },
+  {
+    "reason": "Succesfully added: Categories were assigned according to the following rules: 'DevOps' because the article addresses architecture, software deployment, scalable cloud hosting, version control, and operational practices (DevOps rules 3-7). 'Security' was included as there is substantial emphasis on architecture-driven security planning, secure coding standards, and security testing (Security rules 1-3 and 10). 'Coding' was added due to coverage of coding practices, back-end frameworks (Spring Boot, ASP.NET Core), and secure code development (Coding rules 1, 2, and 4). No Azure, AI, ML, or GitHub Copilot category was assigned as Microsoft technologies are mentioned only as examples, and not central to the article's technical guidance.",
+    "timestamp": "2025-11-06 10:06:18 +00:00",
+    "canonical_url": "https://devops.com/5-pillars-of-successful-web-app-development/",
+    "collection": "posts"
   }
 ]
