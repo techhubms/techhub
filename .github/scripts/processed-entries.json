@@ -15014,5 +15014,17 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned the Azure category because the content centers on migrating and modernizing VMware workloads using Azure VMware Solution, including deployment and Azure-native integration (Azure inclusion rules 1, 4, 6). Did not assign ML, AI, Coding, DevOps, Security, or GitHub Copilot because there is no reference to software development, AI, ML, operational automation, or security. Tags were extracted based on the main technologies (Azure VMware Solution, VMware), migration strategies, and infrastructure modernization focus. This community post is well above 200 words of substantive content, so word count exclusion does not apply.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-modernize-your-vmware-platform-using-azure-vmware/ba-p/4467872"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-11-06 21:04:34 +00:00",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot-cli-101-how-to-use-github-copilot-from-the-command-line/",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories based on the extensive focus on GitHub Copilot CLI (AI rules 1 and 2; GitHub Copilot rules 1-6). Coding category included because content details coding tasks, code generation, and CLI-based developer workflows (Coding rules 2, 3, and 4). The content covers installation, scripting, workflows, and example prompts—all developer-centric, technical, and focused on Copilot CLI. No generic exclusion rules apply: the content is not biographical, not a sales pitch, not job/business oriented, and is technical, in English, and sufficiently detailed."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-11-06 21:05:11 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/boosting-hybrid-cloud-data-efficiency-for-eda-the-power-of-azure/ba-p/4467790",
+    "reason": "Succesfully added: Content qualifies for the Azure category as it centers on Azure NetApp Files, an Azure service, outlining technical capabilities, setup, integration, and architecture (Azure Rule 1, 2, 4, 5, and 6). The article describes distributed data management for EDA workloads, hybrid cloud solutions, and workflow optimization using Azure services—matching the Azure category’s focus areas. No other category applies, as there is no substantive content on AI, ML, Security, DevOps, Coding, or GitHub Copilot; the main emphasis is on architecture and data infrastructure, not custom code, development frameworks, or security practices."
   }
 ]
