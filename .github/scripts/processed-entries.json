@@ -14894,5 +14894,11 @@
     "reason": "Succesfully added: Assigned the AI category because the content centers on AI-powered agents, agentic AI, and the automation of code generation (AI rules 1 and 5). The DevOps category is included because the article focuses on DevOps team workflows, automation, governance, CI/CD, and cost management in development operations (DevOps rules 1, 3, and 5). Coding category is assigned because the product automates code-related workflows such as refactoring, debugging, and documentation (Coding rules 4 and 5). The article does not meet Azure, Security, or ML inclusion rules as it does not discuss Microsoft-specific platforms, data science, or explicit security features.",
     "collection": "posts",
     "timestamp": "2025-11-06 05:04:24 +00:00"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-11-06 07:04:54 +00:00",
+    "reason": "Succesfully added: Included Azure category because the content focuses on Azure Event Hubs (Azure rules 1 and 4). DevOps category is relevant due to the emphasis on monitoring, alerting, and operational practices (DevOps rules 3, 6, and 7), including automation, observability, and troubleshooting in streaming pipelines. Coding is assigned because of practical code samples (Python, CLI scripts) and SDK usage for lag calculation (Coding rules 1 and 5). No AI or ML category was assigned as the focus is on infrastructure monitoring and consumer offsets rather than data science or AI services. Security category was not applied since the article is strictly about tracking message lag and does not cover authentication, access, or security architecture.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/beyond-basics-tracking-kafka-lag-in-azure-event-hubs/ba-p/4457797"
   }
 ]
