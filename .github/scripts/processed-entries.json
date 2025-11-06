@@ -14972,5 +14972,23 @@
     "reason": "Succesfully added: Assigned AI category because the article centers on implementing PIKE-RAG (an advanced AI technology combining retrieval-augmented generation and domain reasoning), as well as Document Intelligence and OpenAI models (AI inclusion rules 1 and 3). Assigned Azure category due to explicit integration of PIKE-RAG and Document Intelligence with Microsoft Azure and Azure OpenAI services (Azure inclusion rules 1, 3, and 4). Did not assign ML since the focus is on industrial AI solution integration and knowledge retrieval, not data science, analytics engineering, or training custom ML models from scratch. Coding and DevOps were not relevant since no programming, software engineering, or DevOps-focused practices were discussed. Security was not covered in the content.",
     "canonical_url": "https://www.microsoft.com/en-us/research/blog/when-industry-knowledge-meets-pike-rag-the-innovation-behind-signifys-customer-service-boost/",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-06 19:05:17 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/11/06/new-idc-research-highlights-a-major-cloud-security-shift/",
+    "reason": "Succesfully added: Assigned Security category because the main focus is on cloud security threats, trends, and strategies, with detailed discussion of CNAPPs, tool sprawl, incident response, and SOC evolution (Security rules 1, 4, 5, 7, 9). Assigned Azure category due to in-depth coverage of Microsoft Defender for Cloud and unified cloud security solutions, which are core Azure security services (Azure rules 1 and 3). Assigned AI category because of clear coverage of generative and agentic AI technologies in the cloud security context, including how AI is used for threat detection and incident response (AI rules 1, 4, 5). There is no content excluded by generic exclusion rules, and the article is technical, strategic, and solution-focused for practitioners.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-06 19:05:38 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-11-06-improved-onboarding-flow-for-github-projects",
+    "reason": "Succesfully added: Assigned the DevOps category because the content focuses on improvements to project management, workflow automation, and API enhancements within GitHub Projects—a core DevOps tool. No other categories were added because there is no focus on AI, Azure, Coding practices, ML, or Security as defined by the inclusion rules. The improvements described are about project workflows, planning, team coordination, and automation, all aligning with DevOps rules (DevOps 2, 3, 5, and 6).",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-06 19:06:09 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=JLCl5lh-tw8",
+    "reason": "Succesfully added: Assigned 'AI' category because the event covers building agentic experiences with Microsoft Agent Framework and Azure AI Foundry (AI inclusion rule 1) and general AI automation topics. 'GitHub Copilot' is included because multiple agenda items discuss Copilot features in Visual Studio and Azure (GitHub Copilot inclusion rule 1), and per critical instruction, 'AI' is included with it. 'Azure' is assigned due to Azure migration, App Service Managed Instance, Azure SRE Agent, and Azure AI Foundry (Azure inclusion rule 1). 'Coding' is included as the content focuses on .NET modernization, code upgrades, and developer tooling (Coding rules 1 and 2). 'DevOps' is included due to references to reliability engineering with the Azure SRE Agent and deployment/migration processes (DevOps rules 5 and 7). ML and Security are not assigned; there is no direct reference to data science/ML engineering or explicit security topics. Content is not excluded by any generic exclusion rule; it is professional, technical, and relevant.",
+    "collection": "videos"
   }
 ]
