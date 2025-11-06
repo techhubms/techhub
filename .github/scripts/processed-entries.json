@@ -14948,5 +14948,17 @@
     "reason": "Succesfully added: Assigned AI category because the content is about using a Microsoft AI platform model (Mistral Document AI in Azure AI Foundry) and explains integrating AI capabilities into developer workflows (AI rule 1 and 4). Assigned Azure because Azure AI Foundry is the deployment and integration platform (Azure rule 1 and 4), and privacy/security features reference Azure controls. Assigned Coding because code samples and step-by-step integration using TypeScript are provided (Coding rules 1 and 2). ML category was not assigned because the focus is on using a pre-trained AI model for document understanding, not on building, training, or customizing ML models or pipelines. Other categories were not assigned as there is no direct DevOps, Security, or GitHub Copilot coverage.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlock-structured-ocr-in-typescript-with-mistral-document-ai-on/ba-p/4466039",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://github.blog/developer-skills/programming-languages-and-frameworks/typescripts-rise-in-the-ai-era-insights-from-lead-architect-anders-hejlsberg/",
+    "collection": "news",
+    "timestamp": "2025-11-06 17:06:47 +00:00",
+    "reason": "Succesfully added: Assigned 'Coding' category because the article centers on TypeScript as a language, its evolution, developer tooling, and adoption in large-scale codebases (Coding rules 1, 2, and 4). Assigned 'AI' category because it discusses the impact of AI on language choice, TypeScript’s suitability for AI-assisted development, and the Model Context Protocol (AI rules 5 and 6). Did not assign 'GitHub Copilot' as the content references Copilot only as a call to action link, not as a substantive topic. 'DevOps', 'Azure', 'ML', and 'Security' are not addressed in a technical or implementation context. No generic exclusion rules applied."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-general-availability-of-software-defined-networking/ba-p/4467579",
+    "collection": "community",
+    "timestamp": "2025-11-06 17:07:24 +00:00",
+    "reason": "Succesfully added: Categories assigned: Azure (covers Azure Local, Azure Arc, Azure control plane, and management), and Security (focus on Network Security Groups, policy-driven traffic controls, and baseline network security measures). Not assigned to AI, ML, Coding, DevOps, or GitHub Copilot as there is no content on artificial intelligence, machine learning, programming, CI/CD, or code/development toolchains. The explanation in the body and technical details focus squarely on Azure infrastructure management and security, which matches the category inclusion rules."
   }
 ]
