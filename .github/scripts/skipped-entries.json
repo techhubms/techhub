@@ -8181,5 +8181,17 @@
     "timestamp": "2025-11-06 10:05:56 +00:00",
     "canonical_url": "https://dellenny.com/technical-debt-and-its-solution-understanding-the-architectural-impact/",
     "collection": "posts"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content does not meet sufficient category inclusion criteria per workflow. The article discusses the costs and organizational impact of poor solution architecture decisions in general terms, addressing topics like technical debt, performance bottlenecks, integration challenges, and the need for governance frameworks. However, it does NOT specifically reference any Microsoft technologies, platforms, or developer tools, nor does it mention Microsoft solution patterns, products (such as Azure, .NET, Azure DevOps, etc.), or frameworks. Per the inclusion rules, content must substantively discuss Microsoft technologies to qualify. The examples, recommendations, and frameworks (such as TOGAF, domain-driven design, event-driven architecture) are industry-agnostic. Therefore, generic exclusion applies: the subject matter is not specific to Microsoft technologies, platforms, or developer/development practices in the Microsoft ecosystem.",
+    "timestamp": "2025-11-06 11:04:53 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/the-cost-of-poor-solution-architecture-decisions/"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=tT_i1qAkTFA",
+    "timestamp": "2025-11-06 13:13:38 +00:00",
+    "reason": "No categories found: No categories assigned because the 'content' field is null. Without the main content text, it is not possible to determine the technical depth, context, or ensure that it meets the required standards for categorization. According to the workflow (Chapter 2: 'Never fabricate information' and 'Base decisions only on provided content'), and since the actual substantive material is missing, this entry cannot be categorized."
   }
 ]

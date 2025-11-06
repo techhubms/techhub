@@ -14912,5 +14912,11 @@
     "timestamp": "2025-11-06 10:06:18 +00:00",
     "canonical_url": "https://devops.com/5-pillars-of-successful-web-app-development/",
     "collection": "posts"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/driving-roi-with-azure-ai-foundry-and-uipath-intelligent-agents-in-real-world-healthcare-workflows/",
+    "timestamp": "2025-11-06 13:13:09 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the article's primary focus is on Azure AI Foundry, Microsoft's AI platform, and its integration with UiPath (AI inclusion rules 1 and 4). Assigned 'Azure' because the content centers on deploying and operationalizing AI within Azure-based workflows for healthcare (Azure rule 1 and 4). Did not assign 'ML' since there is no detailed description of custom machine learning or data science pipeline engineering (ML rules). Did not assign 'DevOps', 'Coding', 'GitHub Copilot', or 'Security' because there is no substantive content about software development, DevOps, code, or security features. The article is strictly about operationalizing and orchestrating AI-powered automation using Azure and UiPath in healthcare workflows."
   }
 ]
