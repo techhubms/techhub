@@ -8265,5 +8265,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=0ZWxB_4RCck",
     "reason": "No categories found: Content excluded due to generic exclusion rule: The description indicates that this is primarily career advice about getting into the security field, not a technical implementation or development guide. The focus is on 'why the field is massive, man-made, and full of paths to explore' and general advice on curiosity and finding a niche, which aligns with job-related/ career advice and not technical content (see 'Job-Related Content' and 'Workplace and Business Focus' generic exclusion rules in Chapter 3). There is no substantive technical depth or discussion of Microsoft technology implementation.",
     "collection": "videos"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-11-07 19:06:25 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=i6_79RzntEQ",
+    "reason": "No categories found: No categories were assigned because the content is about the development of Ladybird, an independent open source web browser, and does not involve any Microsoft technology, product, or ecosystem. There is no mention of Microsoft developer tools, Azure, GitHub Copilot, or any other qualifying area (AI, Coding, DevOps, ML, Azure, Security) as defined in the inclusion rules. The central focus is on independent browser/engine development, market and architecture discussion—not on Microsoft technologies. According to the multi-platform content threshold, Microsoft technology must be central or at least 40% of substantive content, which is not the case here."
   }
 ]
