@@ -15134,5 +15134,11 @@
     "timestamp": "2025-11-07 19:06:50 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/build-your-microsoft-ignite-schedule-top-sessions-for-it-pros/ba-p/4468165",
     "reason": "Succesfully added: Included 'Azure' because the majority of highlighted sessions are Azure-focused and relate to Azure infrastructure, migration, automation, and management (Azure rules 1, 4, and 5). Included 'AI' because several sessions involve AI-powered migration agents and automation with AI for PowerShell and Azure CLI (AI rules 1 and 4). Included 'Security' due to featured compliance and governance, security in the agentic era, and best practices sessions (Security rules 1, 3, and 4). Did not include 'DevOps', 'ML', 'Coding', or 'GitHub Copilot' because there is no substantial focus on developer workflow, code, or technical ML/data science implementation; content is aimed at IT Pros managing, migrating, and securing infrastructure, not at app development. Generic exclusion rules do not apply as the content is technical, English, and above length/support thresholds for 'community' posts."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'DevOps' category because the content centers on GitHub Actions workflow changes, evaluation of triggers, and recommended updates for CI/CD processes, matching DevOps category inclusion rules 2, 5, and 6. Assigned 'Security' because the purpose of the changes is to reduce critical security vulnerabilities, manage secrets, and align branch protection policies, matching Security rules 2, 5, 6, and 7. The content does not discuss coding, AI, ML, or Azure technologies, so those categories were not included. No generic exclusion rules apply—this is professional, technical news with actionable guidance.",
+    "timestamp": "2025-11-07 20:06:14 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-11-07-actions-pull_request_target-and-environment-branch-protections-changes"
   }
 ]
