@@ -8253,5 +8253,17 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule - this video focuses primarily on leadership strategies, team enablement, and organizational dynamics, even though there are references to AI and automation. The emphasis is on effective leadership, performance, and management approaches (including lessons from military experience), not on technical implementation details of Microsoft developer technologies, practices, or products. Content targeting team strategy and leadership—without technical architecture or tooling depth—falls under 'Workplace and Business Focus' and 'Business Strategy and Executive Content' exclusions.",
     "collection": "videos",
     "timestamp": "2025-11-07 14:04:28 +00:00"
+  },
+  {
+    "timestamp": "2025-11-07 18:05:13 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/ZF_EPPjvGYg",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This is career-oriented content, focusing on how to get into the security field rather than technical implementation details. The description discusses exploring career paths and personal curiosity, not hands-on security development, Microsoft technology implementation, or technical architecture. This triggers the Job-Related Content and Workplace/Business Focus exclusion rules (Chapter 3), so all categories are excluded.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-07 18:05:25 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=0ZWxB_4RCck",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The description indicates that this is primarily career advice about getting into the security field, not a technical implementation or development guide. The focus is on 'why the field is massive, man-made, and full of paths to explore' and general advice on curiosity and finding a niche, which aligns with job-related/ career advice and not technical content (see 'Job-Related Content' and 'Workplace and Business Focus' generic exclusion rules in Chapter 3). There is no substantive technical depth or discussion of Microsoft technology implementation.",
+    "collection": "videos"
   }
 ]

@@ -15110,5 +15110,17 @@
     "collection": "news",
     "timestamp": "2025-11-07 17:05:13 +00:00",
     "reason": "Succesfully added: Assigned the DevOps category because the content addresses core topics such as development workflow, team collaboration, and notification management within GitHub—a widely used DevOps tool (DevOps rule 11). No categories like Coding, AI, or Azure are applicable because the article neither covers code-level details, AI, nor specific Azure services. The article does not trigger any generic exclusion rules, and it does not qualify for GitHub Copilot, Security, or ML categories based on content."
+  },
+  {
+    "timestamp": "2025-11-07 18:04:37 +00:00",
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/context-engineering-recipes-the-refusal-breaker-pattern.html",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' category because the content directly addresses prompt strategies for using Copilot in development contexts (GitHub Copilot rule 1). The 'AI' category is included per instructive rules: any GitHub Copilot content must also receive 'AI'. No other categories fit since the article focuses on prompt engineering, not actual coding, DevOps, Azure, ML, or Security implementations. All content centers on development use of Copilot, not business productivity. The explanation examples and best practices show Copilot usage within developer workflows.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-07 18:04:59 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=1JxLIxbEzxQ",
+    "reason": "Succesfully added: Assigned the DevOps category because the content centers on GitHub-related technical developments, community events, and developer productivity topics, as per the DevOps inclusion rules (GitHub platform features, developer experience, community, team practices). While the episode mentions AI and Octoverse trends, there is no substantive technical deep dive into Microsoft AI services or development with Microsoft coding platforms, so categories like AI, Coding, or Azure do not apply. There is also no code, security, or machine learning content at the technical implementation level. Generic exclusion rules do not apply—the video is technical in focus and not biographical, sales, question-only, business productivity, or too negative.",
+    "collection": "videos"
   }
 ]
