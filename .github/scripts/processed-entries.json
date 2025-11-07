@@ -15068,5 +15068,23 @@
     "reason": "Succesfully added: Assigned the DevOps category as the news post pertains to workflows and tools impacting developers, especially surrounding API usage and integration (DevOps rule 11). The announcement addresses tool retirement and platform changes affecting team practices and automation, but does not focus on Coding, AI, ML, Azure, Security, or GitHub Copilot based on the rules and content. Other categories were not included because the content is centered on API tooling and migration rather than language-specific coding, AI features, or security. No generic exclusion rule applies.",
     "canonical_url": "https://github.blog/changelog/2025-11-07-graphql-explorer-removal-from-api-documentation-on-november-7-2025",
     "timestamp": "2025-11-07 09:05:28 +00:00"
+  },
+  {
+    "timestamp": "2025-11-07 10:05:35 +00:00",
+    "reason": "Succesfully added: The content is primarily a technical guide about debugging and testing Copilot Studio bots. According to the AI category rules (AI rule 1 and 5), Copilot Studio—being a Microsoft developer/maker tool for building conversational AI—is included in the AI category. While the content is in-depth and actionable, it does not focus on traditional coding, DevOps, ML, or Security topics, so those categories were not included. The GitHub Copilot and non-development Copilot product rules do not apply, as Copilot Studio is the clear focus.",
+    "canonical_url": "https://dellenny.com/debugging-and-testing-your-copilot-studio-bots-efficiently/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-07 10:06:11 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category as the exam, Copilot tool, and resources all address artificial intelligence development and responsible AI (AI rule 1, 4, 5). Assigned 'GitHub Copilot' because the content is specifically about using and certifying with GitHub Copilot (GitHub Copilot rules 1-4), and, per instructions, always pairs with 'AI' when Copilot is included. Assigned 'Coding' since the exam covers hands-on development workflows and code usage with Copilot (Coding rules 4, 5). Did not assign 'DevOps', 'Azure', 'ML', or 'Security' as the post does not focus on CI/CD, Azure cloud services, ML engineering, or security practices. All categories included follow explicit category inclusion rules, and no generic exclusion applies as this is technical, educational developer content.",
+    "canonical_url": "https://dellenny.com/free-official-learning-resources-for-the-github-copilot-certification-exam/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-07 10:06:35 +00:00",
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories. The content centers on the GitHub Copilot certification exam, with detailed coverage of Copilot's technical and ethical aspects (AI rule 1, GitHub Copilot rules 1-6). Copilot is treated as a developer tool and the exam involves prompt engineering, responsible AI, privacy, testing, and developer workflows—all relevant to these categories. Coding and DevOps categories were considered but not included, as the content emphasizes conceptual understanding, exam topics, and best practices with Copilot, not general coding tutorials or DevOps-focused workflows. No generic exclusion rules apply—the blog is substantive, technical, not a sales pitch or biographical, and focused on English-language developer/technical implementation.",
+    "canonical_url": "https://dellenny.com/understanding-the-github-copilot-exam-blueprint-skills-measured-topics-covered/",
+    "collection": "posts"
   }
 ]

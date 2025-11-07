@@ -8241,5 +8241,11 @@
     "reason": "No categories found: No categories were assigned because the content lacks substantive technical information. The description and title only briefly state that 'Custom Chat Mode is now called Custom Agents' in VS Code Insiders without providing any technical details, implementation guidance, or educational content. Additionally, there is no full content text provided (content: null), so there is insufficient material to determine technical depth or category fit. Generic exclusion rules require focusing on actual technical content, and in this case, there is none available for categorization.",
     "canonical_url": "https://www.youtube.com/shorts/JOhT9dMNDe4",
     "timestamp": "2025-11-07 09:06:09 +00:00"
+  },
+  {
+    "timestamp": "2025-11-07 10:05:48 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule for Non-Development Microsoft Products: The entire article is focused on using Microsoft 365 Copilot to draft business messages and announcements in Microsoft Teams. This qualifies under the non-development Microsoft 365 Copilot/business productivity exclusion, as it describes Copilot's use for office communication, not for software development, coding, platform engineering, or technical implementation. The article provides tips and workflow guidance for business users and does not detail any code, APIs, development, or architecture scenarios. According to the rules in Chapter 3, Microsoft 365 Copilot and Copilot for Microsoft 365 are excluded as they are business productivity tools, not developer tools.",
+    "canonical_url": "https://dellenny.com/draft-better-messages-announcements-in-microsoft-teams-with-microsoft-copilot/",
+    "collection": "posts"
   }
 ]
