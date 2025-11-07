@@ -15050,5 +15050,17 @@
     "reason": "Succesfully added: Assigned the 'Azure' category because the article focuses on Azure platform services (Azure Firewall, NSG, route tables) and their configuration (Azure rule 1). The 'DevOps' category applies as the content centers on infrastructure as code practices, automation, and team workflows using Terraform (DevOps rules 1, 5, 6). Added 'Security' because firewall and NSG rule management are core aspects of Azure network security operations (Security rules 1, 4). Did not assign 'Coding' since there's no programming language or Microsoft app framework focus, and not 'ML', 'AI', or 'GitHub Copilot' due to lack of related content. Content is sufficiently technical and does not trigger any exclusion rules.",
     "timestamp": "2025-11-07 03:25:58 +00:00",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-07 06:07:28 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=yPlJf5DA5So",
+    "reason": "Succesfully added: Assigned AI category because the video series focuses extensively on teaching developers how to use generative AI (GenAI) and MCP (Microsoft Cloud Platform) in Java applications, including responsible AI and context engineering (AI rules 1, 3, 4, and 5). Assigned Azure category as there are several segments dedicated to deploying to Azure and leveraging Microsoft cloud services (Azure rule 1 and 4). Coding is included because the whole series is fundamentally about Java development, integrating AI at the code level, and modernizing/deploying Java apps (Coding rules 1, 4, and 5). Content is not excluded by generic rules: it is educational, not a sales pitch or career content, and is in English. No other categories (such as ML or Security) apply, as the main focus is AI integration and Azure deployment, not advanced ML engineering or security implementation.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-07 06:07:53 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/troubleshooting-azure-virtual-desktop-sign-in-failures-after/ba-p/4467953",
+    "reason": "Succesfully added: Added the 'Azure' category because the content centers on Azure Virtual Desktop (AVD) and Azure subscription migration (Azure category rule 1). Included the 'Security' category as the post focuses extensively on authentication, identity management using Microsoft Entra ID/Azure AD, Conditional Access policies, and token troubleshooting (Security rules 1, 2, 3, and 4). Did not include 'AI', 'ML', 'DevOps', 'Coding', or 'GitHub Copilot', as the content does not discuss development, AI, machine learning, DevOps practices, or coding. All inclusion and exclusion steps were strictly followed; no generic exclusions apply as the content is in English, technically substantive, and not biographical, a sales pitch, or negative in tone.",
+    "collection": "community"
   }
 ]

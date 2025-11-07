@@ -1,0 +1,25 @@
+{
+  "Link": "https://www.youtube.com/watch?v=yPlJf5DA5So",
+  "Description": "🚀 Ready to bring AI into your Java apps? Learn how to infuse MCP and GenAI, modernize your existing projects, and build AI-powered apps from scratch. Each episode is practical, easy to follow, and made for developers.\n\n👉 Start learning today and see how Java and AI can take your apps to the next level!\n\n01:00 - Intro to Java and AI for Beginners 02:53 - GenAI for Java Developers 1 - Getting started 07:59 - GenAI for Java Developers 2 - Techniques 16:52 - GenAI for Java Developers 3 - Apps 28:39 - GenAI for Java Developers 4 - Responsible AI 37:45 - MCP and Java Apps 1- Building a Server 49:10 - MCP and Java Apps 2 - Building a Client 59:37 - Context Engineering for Java Ecosystem 01:11:47 - Modernize Java Apps with AI 1 - Upgrade & Migrate your Applications 01:22:05 - Modernize Java Apps with AI 2 - Deploy Your Applications to Azure 01:28:01 - Build Intelligent AI Apps 1 - Introduction 01:38:50 - Build Intelligent AI Apps 2 - Build an Agent 01:56:09 - Running GenAI in containers - GPU 02:09:57 - Running GenAI in containers - Dynamic Sessions",
+  "Tags": [
+    "Agent",
+    "AI",
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Java",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Title": "Java and AI for Beginners - Full Series",
+  "PubDate": "2025-11-07T05:01:19+00:00",
+  "OutputDir": "_videos",
+  "Author": "Microsoft Developer",
+  "FeedName": "Microsoft Developer YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "ProcessedDate": "2025-11-07 06:03:27",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Developer"
+}
