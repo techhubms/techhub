@@ -1,0 +1,25 @@
+{
+  "Link": "https://www.youtube.com/watch?v=yUA47dQczE8",
+  "EnhancedContent": null,
+  "PubDate": "2025-11-07T00:42:59+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "FeedName": "GitHub YouTube",
+  "OutputDir": "_videos",
+  "Author": "GitHub",
+  "Title": "Event in Spanish: Jueves de Quack con Gisela Torres",
+  "Description": "Acompáñanos en esta nueva edición de Jueves de Quack donde Gisela Torres @returngis y Andrea Griffiths @acolombiadev discutirán las ultimas novedades de GitHub universe 2025.",
+  "FeedLevelAuthor": "GitHub",
+  "Tags": [
+    "agent",
+    "ai",
+    "copilot",
+    "developer",
+    "devex",
+    "git",
+    "github",
+    "llm",
+    "technology",
+    "universe"
+  ],
+  "ProcessedDate": "2025-11-07 02:31:52"
+}

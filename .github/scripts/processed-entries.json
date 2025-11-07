@@ -15026,5 +15026,23 @@
     "timestamp": "2025-11-06 21:05:11 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/boosting-hybrid-cloud-data-efficiency-for-eda-the-power-of-azure/ba-p/4467790",
     "reason": "Succesfully added: Content qualifies for the Azure category as it centers on Azure NetApp Files, an Azure service, outlining technical capabilities, setup, integration, and architecture (Azure Rule 1, 2, 4, 5, and 6). The article describes distributed data management for EDA workloads, hybrid cloud solutions, and workflow optimization using Azure services—matching the Azure category’s focus areas. No other category applies, as there is no substantive content on AI, ML, Security, DevOps, Coding, or GitHub Copilot; the main emphasis is on architecture and data infrastructure, not custom code, development frameworks, or security practices."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-11-06-pull-request-files-changed-public-preview-and-merge-experience-november-6-updates",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' because the content prominently features Copilot's new capability to group changes within pull requests (GitHub Copilot inclusion rule 1 and 2). 'AI' category is also required alongside GitHub Copilot per workflow rules. 'DevOps' assigned since the post discusses essential DevOps workflows (e.g., batching suggestions, merge queue, CI annotations, code review improvements) as outlined in the DevOps category inclusion rules. Did not assign other categories since the post does not cover coding languages or Azure-specific features, nor does it involve explicit ML or security content.",
+    "timestamp": "2025-11-07 02:32:42 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://devops.com/qovery-adds-multiple-ai-agents-to-devops-automation-platform/",
+    "reason": "Succesfully added: Assigned AI category because the content centers on the implementation of multiple AI agents (AI rule 1, rule 4 and rule 5). Assigned DevOps category since the product and discussion focus on DevOps automation, CI/CD pipeline management, platform engineering, and team operations (DevOps rules 1, 5, and 9). No Microsoft technologies are central, so Azure, Coding, ML, Security, and GitHub Copilot categories are not included. The content is not a sales pitch or biographical (passes generic exclusion rules); it provides technical detail on platform functionality and use cases.",
+    "timestamp": "2025-11-07 02:33:18 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://devops.com/the-most-destructive-cloud-cost-pitfall-discounts-before-optimization/",
+    "reason": "Succesfully added: Content qualifies for the DevOps category. The article centers on cloud cost management through workload optimization and financial engineering collaboration—a core DevOps theme (DevOps rules 3, 4, 5). Kubernetes resource management and FinOps practices are detailed, but no substantial Microsoft-specific technology, Azure, AI, ML, Coding, Security, or GitHub Copilot focus is present, so those categories were not assigned. The tags are technical and reflect the article’s depth: Kubernetes resource allocation, right-sizing, FinOps, infrastructure, and DevOps practices—directly extracted and expanded from content and author tags. No generic exclusions apply.",
+    "timestamp": "2025-11-07 02:33:39 +00:00",
+    "collection": "posts"
   }
 ]

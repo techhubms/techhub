@@ -8217,5 +8217,17 @@
     "collection": "videos",
     "reason": "No categories found: All categories are excluded due to lack of substantive technical content in the provided input. The title and description ('Rubber Duck Thursdays - Let's cowork! Cassidy's back! Hey!' and 'We're going to talk tech and perhaps code something, too!') are extremely vague, do not specify any Microsoft technology, product, or development topic, and do not provide evidence of meeting any category inclusion rules. The content field is null, which further prevents assessment of technical depth, relevant tools, or subject matter. Without clear information about Microsoft-related technologies, frameworks, developer tooling, or substantive technical implementation, this entry does not meet the minimum standards for categorization. Exclusion is based on 'When in doubt, exclude' guidance and the necessity for actual content details.",
     "canonical_url": "https://www.youtube.com/watch?v=QZGQNEZTZr8"
+  },
+  {
+    "canonical_url": "https://devops.com/aws-to-help-fund-open-vsx-registry-hosted-by-eclipse-foundation/",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The article focuses on AWS investment in the infrastructure of the Open VSX Registry (an open source marketplace for Visual Studio Code extensions). It does not specifically cover Microsoft technology implementation, development practices, or technical details related to the use or configuration of Microsoft platforms and services. While Visual Studio Code is mentioned, the content centers on infrastructure funding, open source sustainability, and general industry economics rather than actionable technical information relevant to Microsoft developer consultants. No defined Microsoft technology categories are applicable.",
+    "timestamp": "2025-11-07 02:33:00 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/GNWoW0OnJbM",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The input lacks substantive technical content; the 'description' and 'content' fields are empty. Without main content, there is no way to determine whether the video includes technical details about Microsoft technologies, development practices, or specific relevant categories. According to the workflow, if main content is missing or non-existent, no categories are assigned.",
+    "timestamp": "2025-11-07 02:37:07 +00:00",
+    "collection": "videos"
   }
 ]
