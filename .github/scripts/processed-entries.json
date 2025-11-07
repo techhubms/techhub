@@ -15140,5 +15140,11 @@
     "timestamp": "2025-11-07 20:06:14 +00:00",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-11-07-actions-pull_request_target-and-environment-branch-protections-changes"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-11-05-enterprise-qualifier-is-now-generally-available-in-github-code-search",
+    "collection": "news",
+    "timestamp": "2025-11-07 21:05:13 +00:00",
+    "reason": "Succesfully added: Assigned the DevOps category because the content is about a significant feature addition to GitHub's code search, which is a core DevOps collaboration and code management tool (DevOps rule 11). There is no focus on AI, Coding, Azure, ML, Security, or GitHub Copilot, so those categories were not selected. The content is a news announcement describing technical improvements relevant to developers, DevOps practitioners, and administrators."
   }
 ]
