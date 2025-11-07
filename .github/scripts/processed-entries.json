@@ -15062,5 +15062,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/troubleshooting-azure-virtual-desktop-sign-in-failures-after/ba-p/4467953",
     "reason": "Succesfully added: Added the 'Azure' category because the content centers on Azure Virtual Desktop (AVD) and Azure subscription migration (Azure category rule 1). Included the 'Security' category as the post focuses extensively on authentication, identity management using Microsoft Entra ID/Azure AD, Conditional Access policies, and token troubleshooting (Security rules 1, 2, 3, and 4). Did not include 'AI', 'ML', 'DevOps', 'Coding', or 'GitHub Copilot', as the content does not discuss development, AI, machine learning, DevOps practices, or coding. All inclusion and exclusion steps were strictly followed; no generic exclusions apply as the content is in English, technically substantive, and not biographical, a sales pitch, or negative in tone.",
     "collection": "community"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the DevOps category as the news post pertains to workflows and tools impacting developers, especially surrounding API usage and integration (DevOps rule 11). The announcement addresses tool retirement and platform changes affecting team practices and automation, but does not focus on Coding, AI, ML, Azure, Security, or GitHub Copilot based on the rules and content. Other categories were not included because the content is centered on API tooling and migration rather than language-specific coding, AI features, or security. No generic exclusion rule applies.",
+    "canonical_url": "https://github.blog/changelog/2025-11-07-graphql-explorer-removal-from-api-documentation-on-november-7-2025",
+    "timestamp": "2025-11-07 09:05:28 +00:00"
   }
 ]

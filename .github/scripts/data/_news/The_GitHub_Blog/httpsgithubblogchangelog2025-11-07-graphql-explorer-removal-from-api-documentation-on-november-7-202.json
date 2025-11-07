@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-07T08:00:06+00:00",
+  "Description": "Following the previous announcement notice, we retired GraphQL Explorer. Who this affects This change affects a few users who use the GraphQL Explorer for experimenting with the GitHub GraphQL API.…\n\nThe post [GraphQL Explorer removal from API documentation on November 7, 2025](https://github.blog/changelog/2025-11-07-graphql-explorer-removal-from-api-documentation-on-november-7-2025) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2025-11-07-graphql-explorer-removal-from-api-documentation-on-november-7-2025",
+  "FeedName": "The GitHub Blog",
+  "Tags": [
+    "ecosystem & accessibility",
+    "Retired"
+  ],
+  "Title": "GraphQL Explorer removal from API documentation on November 7, 2025",
+  "Author": "Allison",
+  "EnhancedContent": "Following the [previous announcement notice](https://github.blog/changelog/2025-08-22-graphql-explorer-removal-from-api-documentation-on-november-1-2025/), we retired GraphQL Explorer.\n\n## Who this affects\n\nThis change affects a few users who use the GraphQL Explorer for experimenting with the GitHub GraphQL API. Most users will not need to take any action.\n\n## Why this change matters\n\nWe understand that retiring the Explorer will disrupt the workflow of developers who used it for quick testing or prototyping with the GitHub GraphQL API. Although its overall usage was limited, we know this change is disappointing for users who relied on it.\n\nThe decision to retire the Explorer has not been made lightly and is driven by increasing technical debt, costly ongoing maintenance (especially for security and accessibility), and reliance on third-party libraries we can’t keep compliant.\n\n## What you should do\n\nIf you currently use the GraphQL Explorer, we recommend transitioning to a local development tool for working with the GitHub GraphQL API. Our [updated documentation](https://docs.github.com/graphql/guides/using-graphql-clients) includes guidance on getting started with popular GraphQL clients.\n\n## Learn more\n\nTo learn more about working with the GitHub GraphQL API, see our [GraphQL API documentation](https://docs.github.com/graphql).\n\nHave feedback or questions? Join the conversation in the [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).\n\n*This change supports our ongoing commitment to make GitHub’s APIs faster, more scalable, and easier to use for everyone.*",
+  "ProcessedDate": "2025-11-07 09:04:03",
+  "OutputDir": "_news",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog"
+}

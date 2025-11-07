@@ -8229,5 +8229,17 @@
     "reason": "No categories found: Content excluded due to generic exclusion rules. The input lacks substantive technical content; the 'description' and 'content' fields are empty. Without main content, there is no way to determine whether the video includes technical details about Microsoft technologies, development practices, or specific relevant categories. According to the workflow, if main content is missing or non-existent, no categories are assigned.",
     "timestamp": "2025-11-07 02:37:07 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content is excluded according to the generic exclusion rules. The provided description and title indicate that this is an event conducted in Spanish (see title: 'Event in Spanish' and description: 'Acompáñanos...'). Since the content is not primarily in English, it fails the language and scope exclusions under Chapter 3. Additionally, as the actual event content is not provided, there is insufficient basis to classify this under any Microsoft technology category.",
+    "canonical_url": "https://www.youtube.com/watch?v=yUA47dQczE8",
+    "timestamp": "2025-11-07 09:05:53 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because the content lacks substantive technical information. The description and title only briefly state that 'Custom Chat Mode is now called Custom Agents' in VS Code Insiders without providing any technical details, implementation guidance, or educational content. Additionally, there is no full content text provided (content: null), so there is insufficient material to determine technical depth or category fit. Generic exclusion rules require focusing on actual technical content, and in this case, there is none available for categorization.",
+    "canonical_url": "https://www.youtube.com/shorts/JOhT9dMNDe4",
+    "timestamp": "2025-11-07 09:06:09 +00:00"
   }
 ]
