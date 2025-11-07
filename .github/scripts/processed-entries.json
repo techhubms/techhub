@@ -15044,5 +15044,11 @@
     "reason": "Succesfully added: Content qualifies for the DevOps category. The article centers on cloud cost management through workload optimization and financial engineering collaboration—a core DevOps theme (DevOps rules 3, 4, 5). Kubernetes resource management and FinOps practices are detailed, but no substantial Microsoft-specific technology, Azure, AI, ML, Coding, Security, or GitHub Copilot focus is present, so those categories were not assigned. The tags are technical and reflect the article’s depth: Kubernetes resource allocation, right-sizing, FinOps, infrastructure, and DevOps practices—directly extracted and expanded from content and author tags. No generic exclusions apply.",
     "timestamp": "2025-11-07 02:33:39 +00:00",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/manage-azure-firewall-rules-nsg-rules-using-terraform-resource/ba-p/4467764",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the article focuses on Azure platform services (Azure Firewall, NSG, route tables) and their configuration (Azure rule 1). The 'DevOps' category applies as the content centers on infrastructure as code practices, automation, and team workflows using Terraform (DevOps rules 1, 5, 6). Added 'Security' because firewall and NSG rule management are core aspects of Azure network security operations (Security rules 1, 4). Did not assign 'Coding' since there's no programming language or Microsoft app framework focus, and not 'ML', 'AI', or 'GitHub Copilot' due to lack of related content. Content is sufficiently technical and does not trigger any exclusion rules.",
+    "timestamp": "2025-11-07 03:25:58 +00:00",
+    "collection": "community"
   }
 ]
