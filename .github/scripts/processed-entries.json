@@ -15104,5 +15104,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=hJsR0DOOVnE",
     "collection": "videos",
     "timestamp": "2025-11-07 16:06:58 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-11-07-removing-notifications-for-mentions-in-commit-messages",
+    "collection": "news",
+    "timestamp": "2025-11-07 17:05:13 +00:00",
+    "reason": "Succesfully added: Assigned the DevOps category because the content addresses core topics such as development workflow, team collaboration, and notification management within GitHub—a widely used DevOps tool (DevOps rule 11). No categories like Coding, AI, or Azure are applicable because the article neither covers code-level details, AI, nor specific Azure services. The article does not trigger any generic exclusion rules, and it does not qualify for GitHub Copilot, Security, or ML categories based on content."
   }
 ]
