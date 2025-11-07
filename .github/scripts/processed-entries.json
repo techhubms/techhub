@@ -15086,5 +15086,11 @@
     "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories. The content centers on the GitHub Copilot certification exam, with detailed coverage of Copilot's technical and ethical aspects (AI rule 1, GitHub Copilot rules 1-6). Copilot is treated as a developer tool and the exam involves prompt engineering, responsible AI, privacy, testing, and developer workflows—all relevant to these categories. Coding and DevOps categories were considered but not included, as the content emphasizes conceptual understanding, exam topics, and best practices with Copilot, not general coding tutorials or DevOps-focused workflows. No generic exclusion rules apply—the blog is substantive, technical, not a sales pitch or biographical, and focused on English-language developer/technical implementation.",
     "canonical_url": "https://dellenny.com/understanding-the-github-copilot-exam-blueprint-skills-measured-topics-covered/",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-07 15:04:04 +00:00",
+    "reason": "Succesfully added: Added 'AI' because the article centers on artificial intelligence deployment in Africa, especially Fastagger’s on-device AI technology and its application in practical sectors (AI Category Rule 1, 4, and 5). Added 'Azure' because Microsoft’s support, including technical mentorship and development on Azure AI and GitHub, is highlighted as crucial to Fastagger’s success (Azure Category Rule 1 and 4). Did NOT assign Coding, ML, DevOps, Security, or GitHub Copilot categories, since the content focuses on AI usage and deployment, not hands-on code, ML engineering, DevOps practices, or security/compliance. No generic exclusion rules applied—this piece features concrete technical implementation and Microsoft tools rather than business strategy or biographical narrative.",
+    "canonical_url": "https://news.microsoft.com/source/emea/features/connecting-africa-to-opportunities-by-closing-the-digital-divide/",
+    "collection": "news"
   }
 ]

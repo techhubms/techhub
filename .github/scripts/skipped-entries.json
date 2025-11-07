@@ -8247,5 +8247,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule for Non-Development Microsoft Products: The entire article is focused on using Microsoft 365 Copilot to draft business messages and announcements in Microsoft Teams. This qualifies under the non-development Microsoft 365 Copilot/business productivity exclusion, as it describes Copilot's use for office communication, not for software development, coding, platform engineering, or technical implementation. The article provides tips and workflow guidance for business users and does not detail any code, APIs, development, or architecture scenarios. According to the rules in Chapter 3, Microsoft 365 Copilot and Copilot for Microsoft 365 are excluded as they are business productivity tools, not developer tools.",
     "canonical_url": "https://dellenny.com/draft-better-messages-announcements-in-microsoft-teams-with-microsoft-copilot/",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=qJ-tJ27wYSs",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this video focuses primarily on leadership strategies, team enablement, and organizational dynamics, even though there are references to AI and automation. The emphasis is on effective leadership, performance, and management approaches (including lessons from military experience), not on technical implementation details of Microsoft developer technologies, practices, or products. Content targeting team strategy and leadership—without technical architecture or tooling depth—falls under 'Workplace and Business Focus' and 'Business Strategy and Executive Content' exclusions.",
+    "collection": "videos",
+    "timestamp": "2025-11-07 14:04:28 +00:00"
   }
 ]
