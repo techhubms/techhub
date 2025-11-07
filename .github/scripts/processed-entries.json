@@ -15092,5 +15092,17 @@
     "reason": "Succesfully added: Added 'AI' because the article centers on artificial intelligence deployment in Africa, especially Fastagger’s on-device AI technology and its application in practical sectors (AI Category Rule 1, 4, and 5). Added 'Azure' because Microsoft’s support, including technical mentorship and development on Azure AI and GitHub, is highlighted as crucial to Fastagger’s success (Azure Category Rule 1 and 4). Did NOT assign Coding, ML, DevOps, Security, or GitHub Copilot categories, since the content focuses on AI usage and deployment, not hands-on code, ML engineering, DevOps practices, or security/compliance. No generic exclusion rules applied—this piece features concrete technical implementation and Microsoft tools rather than business strategy or biographical narrative.",
     "canonical_url": "https://news.microsoft.com/source/emea/features/connecting-africa-to-opportunities-by-closing-the-digital-divide/",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content extensively discusses changes in developer workflows related to team collaboration, CI/CD, automation, testing, feature flags, and communication practices—all hallmarks of DevOps (DevOps rules 3, 4, 5, 6, 7, 9, 10). There is no technical focus on AI, Coding, Azure, ML, Security, or GitHub Copilot products, so only DevOps was included. No generic exclusion rules applied since the article is not biographical, not a sales pitch, not negative, and directly addresses technical practices relevant to Microsoft-centric developer communities using GitHub and DevOps methodologies.",
+    "canonical_url": "https://github.blog/news-insights/octoverse/what-986-million-code-pushes-say-about-the-developer-workflow-in-2025/",
+    "collection": "news",
+    "timestamp": "2025-11-07 16:06:24 +00:00"
+  },
+  {
+    "reason": "Succesfully added: The content is a weekly Azure update from a trusted technical source. Assigned 'Azure' due to the direct coverage of Azure services, products, and features (Azure rule 1). 'DevOps' is included because of sections about infrastructure, deployment, monitoring, SSMS integration, and best practices (DevOps rules 1, 5, 6, and 7). 'Coding' is included since developer-focused topics like SSMS GitHub Copilot integration, DocumentDB Kubernetes Operator, code-related platform enhancements, and REST API usage are present (Coding rules 2, 4, 5). 'AI', 'ML', and 'Security' were considered but not assigned—AI and ML are mentioned only peripherally (e.g., Copilot integration in SSMS, but the core focus isn't on code generation or custom AI/ML), and security is not a main focus in the update. The decision is based strictly on the provided description and list of video chapters.",
+    "canonical_url": "https://www.youtube.com/watch?v=hJsR0DOOVnE",
+    "collection": "videos",
+    "timestamp": "2025-11-07 16:06:58 +00:00"
   }
 ]
