@@ -8313,5 +8313,11 @@
     "reason": "Insufficient content length",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/tools/understanding-the-github-copilot-exam-blueprint-skills-measured/m-p/4468272#M179"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/70t8agv8usI",
+    "reason": "No categories found: No categories assigned because the content is a brief highlight/recap video about GitHub Universe 2025 and focuses mainly on event announcements and high-level feature overviews (e.g., Agent HQ, Mission Control) without technical implementation details. There is no substantive technical depth, technical tutorials, developer tool usage, or architectural guidance regarding Microsoft technologies, as required by the inclusion rules. Additionally, the content is not specific to Azure, .NET, GitHub Copilot features, or any of the other category-focused Microsoft development or DevOps topics. Therefore, per core processing rules and inclusion criteria, this video does not qualify.",
+    "collection": "videos",
+    "timestamp": "2025-11-08 15:04:06 +00:00"
   }
 ]
