@@ -15170,5 +15170,11 @@
     "timestamp": "2025-11-08 05:06:31 +00:00",
     "reason": "Succesfully added: Assigned the Azure category because the content is about Azure Container Networking Services and Azure Kubernetes Service (Azure inclusion rule 1). Added DevOps because it focuses on operational monitoring, cost optimization, dynamic configuration, and integrations with observability tooling (DevOps inclusion rules 6 and 7). Did not assign AI, ML, Coding, or Security categories as there is no AI/ML component, no code development focus, and no primary security discussion. The content is technical, English, and substantially above the 200-word minimum, with no exclusion rules triggered.",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-vnet-flow-logs-with-terraform-the-complete-migration-and/ba-p/4468225",
+    "reason": "Succesfully added: Categories assigned as follows: Azure (focuses centrally on Azure services, migration, and policy), Security (covers network traffic logs, threat detection, segmentation validation, and integration with security tools), DevOps (details Infrastructure as Code practices using Terraform, Azure CLI, and policies), and Coding (provides explicit code/CLI examples for Terraform templates and scripting). All content fits category inclusion rules. Generic exclusions do not apply as this is a technical migration/development tutorial, not biographical, sales, or business content.",
+    "collection": "community",
+    "timestamp": "2025-11-08 09:04:48 +00:00"
   }
 ]
