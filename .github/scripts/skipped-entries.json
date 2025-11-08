@@ -8271,5 +8271,47 @@
     "timestamp": "2025-11-07 19:06:25 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=i6_79RzntEQ",
     "reason": "No categories found: No categories were assigned because the content is about the development of Ladybird, an independent open source web browser, and does not involve any Microsoft technology, product, or ecosystem. There is no mention of Microsoft developer tools, Azure, GitHub Copilot, or any other qualifying area (AI, Coding, DevOps, ML, Azure, Security) as defined in the inclusion rules. The central focus is on independent browser/engine development, market and architecture discussion—not on Microsoft technologies. According to the multi-platform content threshold, Microsoft technology must be central or at least 40% of substantive content, which is not the case here."
+  },
+  {
+    "reason": "No categories found: All content categories are excluded according to the generic exclusion rules. The post is focused on enhancing productivity, collaboration, and workflow by integrating Windows 11 with Microsoft 365, describing end-user features like OneDrive, Teams, Outlook, Office apps, and general security rather than technical/development implementation. This falls under 'Non-Development Microsoft Products' exclusion, as it addresses business productivity scenarios (e.g., Microsoft 365 Copilot, Windows Copilot) and end-user capabilities, not coding, DevOps, AI, ML, Security, or infrastructure integration. No developer focus, coding samples, technical architecture, or actionable technical detail for practitioners is present, and the Copilot references are to business productivity tools, which must be excluded. Therefore, per exclusion rules, no categories are assigned.",
+    "canonical_url": "https://dellenny.com/connecting-windows-11-with-microsoft-365-for-better-workflow/",
+    "collection": "posts",
+    "timestamp": "2025-11-08 10:04:31 +00:00"
+  },
+  {
+    "timestamp": "2025-11-08 11:05:23 +00:00",
+    "reason": "No categories found: All categories are excluded based on the Generic Exclusion Rules in Chapter 3. The content focuses on end-user customization of the Windows 11 Start menu, covering personalization, organization, and visual adjustments that have no bearing on software development, coding, DevOps, AI, ML, Azure, Security, or technical architecture. It does not address developer-focused topics, Microsoft programming frameworks, automation, or any backend/service customization. No technical depth or practitioner guidance for a developer or consultant audience is present. It is strictly consumer-level, Windows end-user content about interface personalization, which is specifically excluded under Non-Development Microsoft Products and general end-user business application exclusions.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/10-ways-to-customize-the-start-menu-in-windows-11/"
+  },
+  {
+    "timestamp": "2025-11-08 11:05:35 +00:00",
+    "reason": "No categories found: No categories assigned. The content focuses on end-user customization of Windows 11 through animated wallpapers, using third-party tools like Lively Wallpaper and Wallpaper Engine. It is a general desktop personalization guide for consumers, with no focus on software development, coding, programming practices, Microsoft platform development, DevOps, AI, ML, security, or Azure technical implementation. This type of content aligns with the Non-Development Microsoft Products exclusion, as it covers end-user features and does not provide technical development detail relevant to any predefined categories.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/adding-animated-wallpapers-to-your-desktop-in-windows-11/"
+  },
+  {
+    "timestamp": "2025-11-08 11:05:48 +00:00",
+    "reason": "No categories found: No categories assigned. The content provides tips and hidden settings for multitasking in Windows 11, aimed at improving productivity and user experience. It focuses on end-user features and configuration rather than development, engineering, coding, DevOps, or technical architecture. There is no substantial emphasis on programming, automation, security implementation, Microsoft development tools, AI, or ML. According to the Non-Development Microsoft Products exclusion rule and the focus on end-user/workplace productivity over technical/development content, this does not qualify for any predefined category.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/hidden-settings-that-make-multitasking-easier-in-windows-11/"
+  },
+  {
+    "timestamp": "2025-11-08 11:06:00 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/debugging-and-testing-your-copilot-studio-bots-efficiently/m-p/4468270#M177"
+  },
+  {
+    "timestamp": "2025-11-08 11:06:00 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/free-official-learning-resources-for-the-github-copilot/m-p/4468271#M178"
+  },
+  {
+    "timestamp": "2025-11-08 11:06:01 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/understanding-the-github-copilot-exam-blueprint-skills-measured/m-p/4468272#M179"
   }
 ]

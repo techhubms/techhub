@@ -15176,5 +15176,29 @@
     "reason": "Succesfully added: Categories assigned as follows: Azure (focuses centrally on Azure services, migration, and policy), Security (covers network traffic logs, threat detection, segmentation validation, and integration with security tools), DevOps (details Infrastructure as Code practices using Terraform, Azure CLI, and policies), and Coding (provides explicit code/CLI examples for Terraform templates and scripting). All content fits category inclusion rules. Generic exclusions do not apply as this is a technical migration/development tutorial, not biographical, sales, or business content.",
     "collection": "community",
     "timestamp": "2025-11-08 09:04:48 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the content is entirely focused on Azure Ultra Disk, a core Azure service for high-performance block storage (Azure rules 1 and 4). The post covers new features, technical details, cost optimization, customer implementations, security, and business continuity functionalities related to Azure. No other categories apply; while there are mentions of high-performance workloads (like AI/ML), the primary focus is on storage/service configuration and not direct coding, AI, ML, DevOps, or Security implementation. Generic exclusion rules do not apply; the article is technical, English, news-type, non-biographical, and not a sales pitch.",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/the-new-era-of-azure-ultra-disk-experience-the-next-generation-of-mission-critical-block-storage/",
+    "collection": "news",
+    "timestamp": "2025-11-08 12:07:03 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the central theme is the use of AI and machine learning (AIOps) to automate IT operations, event correlation, anomaly detection, and remediation—all fitting AI category rules (AI rules 1, 4, 5). Assigned the DevOps category as the context is SRE (Site Reliability Engineering), operational monitoring, incident management, automation, and DevOps methodologies (DevOps rules 3, 4, 5, 6). The article is not Microsoft-specific, so Azure, ML, Coding, Security, and GitHub Copilot categories were not assigned. The piece maintains technical depth, covers hands-on applications, and does not trigger any generic exclusion rules.",
+    "canonical_url": "https://devops.com/aiops-for-sre-using-ai-to-reduce-on-call-fatigue-and-improve-reliability/",
+    "collection": "posts",
+    "timestamp": "2025-11-08 12:07:36 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the article primarily discusses DevSecOps practices, continuous integration pipelines, automation, and cross-team collaboration—key elements from DevOps rule 1, 2, 5, and 9. Assigned the Security category because the core focus is on embedding application and software security into development processes, covering vulnerability scanning, security-as-code, cloud/container security, identity, risk management, and security culture—matching Security rules 1-9. Did not assign Azure, AI, ML, or Coding because the article focuses on overarching practices and tools and does not detail implementation of Microsoft-specific products or frameworks. The article is technical, practitioner-oriented, and implementation-focused, with no violation of generic exclusion rules.",
+    "canonical_url": "https://devops.com/devsecops-in-practice-closing-the-gap-between-development-speed-and-security-assurance/",
+    "collection": "posts",
+    "timestamp": "2025-11-08 12:08:00 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the content discusses how Large Language Models and AI coding tools can benefit from frameworks that clarify code structure (AI rule 5 and 6). 'DevOps' is assigned since the article directly addresses DevOps automation, continuous deployment, and reliability (DevOps rules 3, 5, and 9). 'Coding' is included due to the focus on novel software architecture, coding practices, modular design, and code maintainability (Coding rules 1 and 4). No Microsoft-specific technologies are involved, so Azure, ML, and Security categories are not applied.",
+    "canonical_url": "https://devops.com/mit-researchers-propose-a-new-way-to-build-software-that-actually-makes-sense/",
+    "collection": "posts",
+    "timestamp": "2025-11-08 12:08:22 +00:00"
   }
 ]
