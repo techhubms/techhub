@@ -15146,5 +15146,11 @@
     "collection": "news",
     "timestamp": "2025-11-07 21:05:13 +00:00",
     "reason": "Succesfully added: Assigned the DevOps category because the content is about a significant feature addition to GitHub's code search, which is a core DevOps collaboration and code management tool (DevOps rule 11). There is no focus on AI, Coding, Azure, ML, Security, or GitHub Copilot, so those categories were not selected. The content is a news announcement describing technical improvements relevant to developers, DevOps practitioners, and administrators."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-11-08 00:11:10 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/introducing-local-identity-with-azure-key-vault-in-build-2510/ba-p/4467939",
+    "reason": "Succesfully added: Assigned 'Azure' because the content is centrally focused on Azure Key Vault integration and Azure cluster deployment (Azure rule 1 and 4). Assigned 'Security' because it discusses key management with Azure Key Vault, security integration with backup and hardware partners, and secure admin practices (Security rule 1 and 2). Did not assign 'AI', 'ML', 'DevOps', 'Coding', or 'GitHub Copilot' as there are no relevant mentions or focus areas in these categories. Content passes generic exclusion rules—it's substantive, technical, and not biographical, negative, or business/executive-only."
   }
 ]

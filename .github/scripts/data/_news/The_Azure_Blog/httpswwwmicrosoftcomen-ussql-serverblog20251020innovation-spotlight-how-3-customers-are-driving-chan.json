@@ -1,0 +1,17 @@
+{
+  "Link": "https://www.microsoft.com/en-us/sql-server/blog/2025/10/20/innovation-spotlight-how-3-customers-are-driving-change-with-migration-to-azure-sql/",
+  "FeedUrl": "https://azure.microsoft.com/en-us/blog/feed/",
+  "OutputDir": "_news",
+  "PubDate": "2025-10-20T16:00:00+00:00",
+  "Description": "Learn how Microsoft Azure SQL Managed Instance helps organizations move from legacy constraints to a scalable and secure AI-ready foundation.\n\nThe post [Innovation spotlight: How 3 customers are driving change with migration to Azure SQL](https://www.microsoft.com/en-us/sql-server/blog/2025/10/20/innovation-spotlight-how-3-customers-are-driving-change-with-migration-to-azure-sql/) appeared first on [Microsoft Azure Blog](https://azure.microsoft.com/en-us/blog).",
+  "FeedLevelAuthor": "Microsoft Azure Blog",
+  "Author": "Debbi Lyons",
+  "Tags": [
+    "Databases",
+    "Hybrid + multicloud"
+  ],
+  "Title": "Innovation spotlight: How 3 customers are driving change with migration to Azure SQL",
+  "ProcessedDate": "2025-11-08 00:09:02",
+  "FeedName": "The Azure Blog",
+  "EnhancedContent": "PublishedAug 22\n\n4 min read\n\n### [Accelerating SQL Server 2025 momentum: Announcing the first release candidate](https://www.microsoft.com/en-us/sql-server/blog/2025/08/22/accelerating-sql-server-2025-momentum-announcing-the-first-release-candidate/)"
+}
