@@ -15152,5 +15152,11 @@
     "timestamp": "2025-11-08 00:11:10 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/introducing-local-identity-with-azure-key-vault-in-build-2510/ba-p/4467939",
     "reason": "Succesfully added: Assigned 'Azure' because the content is centrally focused on Azure Key Vault integration and Azure cluster deployment (Azure rule 1 and 4). Assigned 'Security' because it discusses key management with Azure Key Vault, security integration with backup and hardware partners, and secure admin practices (Security rule 1 and 2). Did not assign 'AI', 'ML', 'DevOps', 'Coding', or 'GitHub Copilot' as there are no relevant mentions or focus areas in these categories. Content passes generic exclusion rules—it's substantive, technical, and not biographical, negative, or business/executive-only."
+  },
+  {
+    "timestamp": "2025-11-08 01:32:44 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/introducing-ebpf-host-routing-high-performance-ai-networking/ba-p/4468216",
+    "reason": "Succesfully added: Categories were assigned as follows: AI because the article repeatedly references AI-driven workloads and optimizations (AI rule 1 and 4); Azure for deep technical focus on AKS and Azure specific networking (Azure rule 1 & 4); DevOps due to detailed Kubernetes network and deployment practices (DevOps rule 1, 5, 6, and general developer experience); Security because ACNS's safeguards and host-level network policy compliance are substantial parts of the solution (Security rule 1, 2, and 7). All content is highly technical, focused on product implementation and performance with no exclusion triggers from Chapter 3.",
+    "collection": "community"
   }
 ]
