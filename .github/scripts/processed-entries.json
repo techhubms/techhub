@@ -15164,5 +15164,11 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned the 'Azure' category because the content describes new security policies for Azure Kubernetes Service (AKS), a core Azure platform (Azure rules 1, 4, 5). Assigned 'Security' since the core focus is implementing and enforcing network security with L7 policies, least-privilege principles, FQDN-based egress controls, and cluster-wide network enforcement (Security rules 1, 3, 4, 5, 6, 9). Did not assign AI, DevOps, Coding, ML, or GitHub Copilot because the content is strictly about platform-level security policy management and observability rather than development or machine learning tasks. No generic exclusion rules apply.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/layer-7-network-policies-for-aks-now-generally-available-for/ba-p/4467598"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/cut-the-noise-cost-with-container-network-metrics-filtering-in/ba-p/4468221",
+    "timestamp": "2025-11-08 05:06:31 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content is about Azure Container Networking Services and Azure Kubernetes Service (Azure inclusion rule 1). Added DevOps because it focuses on operational monitoring, cost optimization, dynamic configuration, and integrations with observability tooling (DevOps inclusion rules 6 and 7). Did not assign AI, ML, Coding, or Security categories as there is no AI/ML component, no code development focus, and no primary security discussion. The content is technical, English, and substantially above the 200-word minimum, with no exclusion rules triggered.",
+    "collection": "community"
   }
 ]
