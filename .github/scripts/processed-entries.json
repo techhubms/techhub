@@ -15206,5 +15206,11 @@
     "reason": "Succesfully added: Categories assigned based on explicit Microsoft technology usage: 'Azure'—multiple references to Azure Container Apps, Azure Key Vault, and Azure services (Azure rule 1). 'DevOps'—content covers developer experience, configuration management, secret rotation, deployment patterns, and operational aspects of distributed systems (DevOps rules 1, 5, 6, 7). 'Coding'—includes detailed .NET code samples illustrating Dapr integration, pattern examples, and developer workflow (Coding rules 1, 2, 4, 5). No AI or ML category assigned as the content does not focus on AI/ML workloads or use of Microsoft AI services. Security, while mentioned (secrets), focuses operationally rather than as a primary theme, so main category coverage remains Azure, DevOps, and Coding.",
     "collection": "community",
     "timestamp": "2025-11-08 15:04:35 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/extending-layer-2-vxlan-networks-over-layer-3-ip-network/ba-p/4466406",
+    "reason": "Succesfully added: The content is focused on advanced network virtualization using VXLAN for extending Layer-2 overlays across Layer-3 IP networks. The post repeatedly references Azure networking (including internal tags), real-world enterprise and cloud deployments, and guidance that would apply to Azure-centric architectures. As such, it qualifies for the 'Azure' category under Category Inclusion Rule 4 (Azure rule 1 and 5). No other categories were included: while DevOps, Coding, Security, AI, and ML are not directly featured or discussed, the technical focus is on networking architecture, MTU planning, and tunnel resiliency in Azure/cloud environments. The blog avoids business, biographical, and other excluded focuses, and is technical and implementation-oriented.",
+    "timestamp": "2025-11-08 18:06:06 +00:00"
   }
 ]
