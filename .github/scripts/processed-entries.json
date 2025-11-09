@@ -15212,5 +15212,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/extending-layer-2-vxlan-networks-over-layer-3-ip-network/ba-p/4466406",
     "reason": "Succesfully added: The content is focused on advanced network virtualization using VXLAN for extending Layer-2 overlays across Layer-3 IP networks. The post repeatedly references Azure networking (including internal tags), real-world enterprise and cloud deployments, and guidance that would apply to Azure-centric architectures. As such, it qualifies for the 'Azure' category under Category Inclusion Rule 4 (Azure rule 1 and 5). No other categories were included: while DevOps, Coding, Security, AI, and ML are not directly featured or discussed, the technical focus is on networking architecture, MTU planning, and tunnel resiliency in Azure/cloud environments. The blog avoids business, biographical, and other excluded focuses, and is technical and implementation-oriented.",
     "timestamp": "2025-11-08 18:06:06 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Categories 'Azure', 'DevOps', and 'Coding' were assigned. 'Azure' applies because this article centers around deploying Azure resources (Dev Box, Key Vault, Dev Center) and managing them in a Microsoft cloud context (Azure inclusion rule 1, 2, 4). 'DevOps' is included because it covers automation, version control with GitHub, team environment standardization, and uses Infrastructure as Code with Terraform (DevOps rules 1, 5, 6, 8). 'Coding' is included as the content involves infrastructure automation with code (Terraform scripts) and development environment setup for programmers (Coding rule 4). AI, GitHub Copilot, ML, and Security are not assigned as the article does not focus on those areas.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deploying-dev-box-catalogs-and-synchronizing-with-github-using/ba-p/4467739",
+    "timestamp": "2025-11-09 17:05:50 +00:00"
   }
 ]

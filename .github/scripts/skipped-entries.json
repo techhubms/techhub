@@ -8319,5 +8319,35 @@
     "reason": "No categories found: No categories assigned because the content is a brief highlight/recap video about GitHub Universe 2025 and focuses mainly on event announcements and high-level feature overviews (e.g., Agent HQ, Mission Control) without technical implementation details. There is no substantive technical depth, technical tutorials, developer tool usage, or architectural guidance regarding Microsoft technologies, as required by the inclusion rules. Additionally, the content is not specific to Azure, .NET, GitHub Copilot features, or any of the other category-focused Microsoft development or DevOps topics. Therefore, per core processing rules and inclusion criteria, this video does not qualify.",
     "collection": "videos",
     "timestamp": "2025-11-08 15:04:06 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/3ne4cNMZG2U",
+    "timestamp": "2025-11-09 15:05:02 +00:00",
+    "reason": "No categories found: Content excluded because the main content text is completely missing (content field is null), and there is insufficient information in the title, description, or tags to determine technical depth or relevance to any category. Without substantive content to assess, none of the inclusion rules can be applied.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-09 16:05:26 +00:00",
+    "canonical_url": "https://dellenny.com/automating-daily-tasks-with-microsoft-power-automate/",
+    "reason": "No categories found: No categories were assigned because, according to the generic exclusion rules, content about Power Automate for business processes and general workflow automation is considered business productivity/business automation, not development-focused. Power Automate is excluded unless the content explicitly discusses Power Automate development or custom coding (such as advanced scripting, connectors, or app development), which is not the case here. The article is centered on workflow automation for typical office tasks, targeting end users and business professionals rather than developers. Therefore, categories like 'DevOps', 'AI', 'Coding', 'Azure', or 'ML' do not apply.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-09 16:05:39 +00:00",
+    "canonical_url": "https://dellenny.com/how-to-build-and-save-your-own-theme-pack-in-windows-11-a-complete-guide/",
+    "reason": "No categories found: No categories are assigned because the content is a user/developer-focused guide on personalizing and exporting theme packs in Windows 11. It does not discuss any coding, development, DevOps, AI/ML, Azure, security, or GitHub Copilot topics. The article covers consumer-level customization features in the Windows 11 operating system, without technical implementation or programming focus as required by the inclusion rules. None of the generic exclusion rules are triggered, but the content is outside the scope of the predefined technical categories.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-09 16:05:51 +00:00",
+    "canonical_url": "https://dellenny.com/how-to-disable-or-customize-transparency-effects-in-windows-11-full-guide/",
+    "reason": "No categories found: No categories assigned because the content is solely focused on end-user customization of Windows 11's visual appearance via settings and registry edits. It does not involve development, coding, DevOps, AI/ML, Azure, or security topics. Per the Non-Development Microsoft Products exclusion and because the focus is on user-level OS customization (not on software development, scripting, or programming using Microsoft technologies), all technology categories are excluded.",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: No categories are assigned because the content is strictly about Windows 11 end-user personalization (changing desktop and folder icons), which does not meet any category inclusion rules. It does not involve coding, development, DevOps practices, security implementation, AI/ML, or Azure services. There is no technical implementation, tool development, or programming guidance. The post solely addresses UI customization for general users, which is explicitly outside the Tech Hub platform's technical scope as outlined in the generic exclusion rules for non-development Microsoft products and end-user features.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/step-by-step-guide-to-changing-desktop-icons-in-windows-11/",
+    "timestamp": "2025-11-09 17:05:16 +00:00"
   }
 ]
