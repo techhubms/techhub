@@ -15314,5 +15314,11 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned the Azure category because the content is entirely focused on Azure Storage features, specifically the new Priority Replication for Geo Redundant Storage and Object Replication, which fits Azure inclusion rule 1 and 4. No other categories were assigned since there is no focus on coding, AI, DevOps, ML, Security, or GitHub Copilot. Content exceeds the minimum length requirement for community posts, is technical in nature, and contains no generic exclusion triggers.",
     "timestamp": "2025-11-10 21:05:18 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: \n- AI, ML, Azure: Content discusses SQL Server 2025, Azure SQL, and Fabric integrating AI features (vector search, model management, Copilot), data analytics, and cloud services (AI rule 1, Azure rule 1, ML rules 1, 4, 9).\n- Coding: Coverage of developer-centric features (JSON data type, REST API, Copilot coding suggestions) matches Coding rules 1, 2, and 4.\n- Security: Explicit mention of managed identities, security sessions, and data protection aligns with Security rules 1, 2, and 7.\nGitHub Copilot is referenced, but not as a central topic, so 'GitHub Copilot' category not assigned. Generic exclusion rules do not apply: the content is technical, not a sales pitch, biography, or business strategy. All relevant technical and development themes are covered.",
+    "timestamp": "2025-11-10 22:05:33 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/its-time-announcing-the-microsoft-sql-community-conference/"
   }
 ]

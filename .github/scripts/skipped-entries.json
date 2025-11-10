@@ -8397,5 +8397,11 @@
     "reason": "No categories found: All categories are excluded based on the Generic Exclusion Rules relating to job-related content. The provided text is a weekly report listing DevOps job opportunities, focusing on job postings, salaries, and hiring companies. The entire article is centered on career advancement and job openings, not technical implementation or education about Microsoft technologies. According to the exclusion rules (Job-Related Content: job opportunities, hiring, salary, and career advice are all excluded), this content does not qualify for any category regardless of its mention of DevOps roles.",
     "collection": "posts",
     "timestamp": "2025-11-10 19:05:39 +00:00"
+  },
+  {
+    "reason": "No categories found",
+    "timestamp": "2025-11-10 22:06:14 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/agentic-power-for-aks-introducing-the-agentic-cli-in-public/ba-p/4468166"
   }
 ]
