@@ -15302,5 +15302,17 @@
     "reason": "Succesfully added: Assigned the Azure category because the content centers exclusively around Azure cost estimation, tools, and management approaches, directly meeting Azure inclusion rules (Azure rule 1 and 2). AI is not assigned because, although Microsoft Copilot is mentioned, it's framed within the Azure experience (Copilot in Azure) and not as a development tool or the focus of content—no Copilot Studio, GitHub Copilot, or AI engineering topics are presented. Coding, DevOps, ML, Security, and GitHub Copilot are not assigned, as the content neither describes application development, code, DevOps pipelines, ML/data science, nor security processes. The video provides technical guidance on understanding Azure pricing, planning, and optimizing cloud usage, fitting the Azure category as per provided rules.",
     "collection": "videos",
     "timestamp": "2025-11-10 19:06:09 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/your-guide-to-azure-compute-at-microsoft-ignite-2025/ba-p/4468633",
+    "collection": "community",
+    "reason": "Succesfully added: Generic exclusion rules do not apply: the content is technical, not a sales pitch, biographical, or business-only, and exceeds the minimum length for community content. The material focuses on Azure infrastructure, architecture, resiliency, cost optimization, and security, directly aligning with the 'Azure' category (Azure rules 1, 4, 5), and specifically discusses Azure IaaS platform security (Security rule 1, 2, 4, 5). No substantial focus on AI/ML development or DevOps pipelines to warrant those categories. Sessions and labs are described with technical implementation detail, supporting the assigned categories.",
+    "timestamp": "2025-11-10 21:04:56 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/priority-replication-for-geo-redundant-storage-and-object/ba-p/4468607",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the content is entirely focused on Azure Storage features, specifically the new Priority Replication for Geo Redundant Storage and Object Replication, which fits Azure inclusion rule 1 and 4. No other categories were assigned since there is no focus on coding, AI, DevOps, ML, Security, or GitHub Copilot. Content exceeds the minimum length requirement for community posts, is technical in nature, and contains no generic exclusion triggers.",
+    "timestamp": "2025-11-10 21:05:18 +00:00"
   }
 ]
