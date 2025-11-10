@@ -15230,5 +15230,29 @@
     "canonical_url": "https://dellenny.com/how-microsoft-keeps-your-data-safe-in-the-cloud-a-deep-dive-into-cloud-security-practices/",
     "collection": "posts",
     "reason": "Succesfully added: Assigned the Security category because the post deeply covers Microsoft's security architecture, including encryption, identity, threat detection, compliance, and best practices (Security rules 1, 2, 3, 4, 5, 9, 10). Assigned Azure because the cloud offerings (Azure services, Azure Key Vault, and Azure storage) are discussed as foundational to Microsoft’s cloud and security model (Azure rules 1, 4, 5). Did not assign Coding, DevOps, ML, AI, or GitHub Copilot because there is no code, programming guidance, development practice, machine learning, or AI implementation featured. Microsoft 365 is mentioned but only in the context of cloud security (not business productivity), so categories remain Security and Azure."
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content addresses the role of semantic models in enabling generative AI and discusses AI integration with Microsoft platforms (AI rule 1 and 5). Added ML category because it highlights the importance of semantic modeling within business intelligence, data science, and analytics workflows and the use of Microsoft Fabric/Power BI for data-driven and analytics tasks (ML rules 1, 2, 4). Did not assign Azure, Coding, DevOps, Security, or GitHub Copilot because the content does not provide substantial detail or instruction about those technologies or practices. The content focuses primarily on strategic analytics architecture and AI/ML enablement within Microsoft's ecosystem.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-named-leader-and-outperformer-in-the-2025-gigaom-radar-for-semantic-layers-metric-stores/",
+    "timestamp": "2025-11-10 15:04:11 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: The content centers on a new feature in Microsoft Fabric, detailing how Warehouse Snapshots provide consistent, point-in-time data views for analytics, compliance, ML training, and incident management. Assigned 'Azure' because Microsoft Fabric is an Azure-based SaaS analytics platform and the feature discussed is core to its data warehousing. Assigned 'ML' because the article explicitly discusses training ML models on reproducible datasets tied to snapshots, a primary ML workflow. Did not assign 'AI' since the focus is not on AI APIs or pre-built AI capabilities, but data science and ML reproducibility. Coding, DevOps, Security, and GitHub Copilot categories were not applied as none of the relevant inclusion criteria were met.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/warehouse-snapshots-in-microsoft-fabric-freeze-data-unlock-reliable-reporting/",
+    "timestamp": "2025-11-10 15:04:33 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: The Azure category is assigned because the article centers on Azure services, cloud frameworks, Azure Arc, Azure Local, and their role in hybrid, edge, and multicloud scenarios (Azure inclusion rules 1, 4, 5, 6). The AI category is assigned due to repeated mention of AI-powered cloud operations, AI session highlights (such as Copilot in Azure), and the integration of AI into management and observability (AI inclusion rules 1, 4, 5). Security category is included based on strong focus on compliance, governance, resilience, regulatory requirements, and dedicated sections on Microsoft Sovereign Cloud, security sessions, and documentation references (Security inclusion rules 1, 4, 9, 10). Coding, DevOps, ML, and GitHub Copilot are not assigned because the article does not provide specific technical details or guidance on software development, DevOps practices, or custom ML engineering. The explanation references session links, content sections, and overall theme alignment with category rules.",
+    "canonical_url": "https://www.thomasmaurer.ch/2025/11/driving-impact-in-the-era-of-ai-sovereign-cloud-adaptive-cloud-at-microsoft-ignite-2025/",
+    "timestamp": "2025-11-10 15:05:13 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the entire architecture centers around Azure Kubernetes Service (AKS) and integration with Azure PaaS (storage, identity, monitoring, Key Vault). 'DevOps' applies due to comprehensive coverage of CI/CD, GitOps, Helm/Kustomize, build/promotion automation, and operational pipelines. 'Security' is warranted due to deep discussion of RBAC, network security, secrets management (Key Vault), image provenance, Pod Security, and supply chain trust. 'Coding' is included since the hands-on lab includes deployment YAML, CI/CD pipeline snippets, and code for custom HPA/KEDA workers (involving scriptable/programmable workloads). There is no primary AI/ML angle, as the guide doesn't directly address AI workloads, cognitive services, or ML engineering. Content strongly qualifies given its depth, technical focus, and central use of Microsoft Azure technologies.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-enterprise-grade-shared-aks-clusters-a-guide-to-multi/ba-p/4468563",
+    "timestamp": "2025-11-10 15:05:50 +00:00",
+    "collection": "community"
   }
 ]
