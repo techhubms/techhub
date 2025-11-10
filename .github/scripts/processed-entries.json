@@ -15224,5 +15224,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI because the content focuses on VS Code's transformation into an AI-native editor and the integration of AI agents (AI inclusion rule 1). Assigned GitHub Copilot because multiple references to new Copilot features, agent orchestration, and Mission Control in VS Code confirm deep Copilot relevance (GitHub Copilot rule 1 and 2), and per workflow, AI must also be assigned. Assigned Coding because the context is about code editor evolution, workflows, and technical development experience (Coding rules 1, 4, 5). Not assigned Azure, DevOps, ML, or Security as the video does not specifically address those platforms or workloads.",
     "canonical_url": "https://www.youtube.com/watch?v=TaTPDLl0I-Q"
+  },
+  {
+    "timestamp": "2025-11-10 11:04:30 +00:00",
+    "canonical_url": "https://dellenny.com/how-microsoft-keeps-your-data-safe-in-the-cloud-a-deep-dive-into-cloud-security-practices/",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the Security category because the post deeply covers Microsoft's security architecture, including encryption, identity, threat detection, compliance, and best practices (Security rules 1, 2, 3, 4, 5, 9, 10). Assigned Azure because the cloud offerings (Azure services, Azure Key Vault, and Azure storage) are discussed as foundational to Microsoft’s cloud and security model (Azure rules 1, 4, 5). Did not assign Coding, DevOps, ML, AI, or GitHub Copilot because there is no code, programming guidance, development practice, machine learning, or AI implementation featured. Microsoft 365 is mentioned but only in the context of cloud security (not business productivity), so categories remain Security and Azure."
   }
 ]

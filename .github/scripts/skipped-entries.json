@@ -8355,5 +8355,17 @@
     "collection": "posts",
     "reason": "No categories found: No categories are assigned because the content primarily provides an end-user, feature-level overview and comparison of OneDrive Personal and OneDrive for Business, targeting individual and business adoption (i.e., usage, benefits, security features, administrative controls) but without developer, technical implementation, coding, API programming, DevOps, security architecture, or configuration guidance. According to the generic exclusion rules for Non-Development Microsoft Products and Business Productivity Tools, content about Microsoft 365/Office 365 products focused on productivity, storage, deployment/usage, or management—without emphasis on application development, solution architecture, or developer-focused use—must be excluded. There is no development, coding, automation, or technical best practice beyond basic consumer/enterprise IT configuration advice.",
     "canonical_url": "https://dellenny.com/understanding-onedrive-for-business-and-personal-storage/"
+  },
+  {
+    "timestamp": "2025-11-10 11:04:07 +00:00",
+    "canonical_url": "https://dellenny.com/collaboration-scenarios-how-teams-sharepoint-and-onedrive-work-together-for-seamless-productivity/",
+    "collection": "posts",
+    "reason": "No categories found: No categories assigned because the content is focused on end-user features, general business productivity, and collaboration practices within Microsoft 365 (Teams, SharePoint, OneDrive) without a developer, coding, technical architecture, or solution-building perspective. According to the generic exclusion rules for Non-Development Microsoft Products, content centered on business productivity and non-development Microsoft 365 products—such as SharePoint and Teams in an end-user context—must be excluded. There is no technical development, coding, DevOps, AI, ML, Azure, or security implementation described; all focus is on practical day-to-day usage and collaboration. Therefore, this post is excluded."
+  },
+  {
+    "timestamp": "2025-11-10 11:04:44 +00:00",
+    "canonical_url": "https://dellenny.com/microsoft-365-admin-center-overview-for-beginners-a-complete-guide/",
+    "collection": "posts",
+    "reason": "No categories found: No categories are assigned. The content is an overview and beginner's guide to the Microsoft 365 Admin Center, focusing purely on administration and usage of business productivity tools. Per the generic exclusion rules, content about Microsoft 365 and its admin features is excluded unless it has a development focus (such as Microsoft 365 API, automation, custom development, or programmatic access). This post is strictly about platform usage and best practices for non-developer administrators, and there is no substantial technical detail about coding, DevOps, Azure services, security engineering, AI/ML, or software development—just operational tips. Thus, it does not meet category inclusion requirements."
   }
 ]
