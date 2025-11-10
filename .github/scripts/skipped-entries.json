@@ -8367,5 +8367,29 @@
     "canonical_url": "https://dellenny.com/microsoft-365-admin-center-overview-for-beginners-a-complete-guide/",
     "collection": "posts",
     "reason": "No categories found: No categories are assigned. The content is an overview and beginner's guide to the Microsoft 365 Admin Center, focusing purely on administration and usage of business productivity tools. Per the generic exclusion rules, content about Microsoft 365 and its admin features is excluded unless it has a development focus (such as Microsoft 365 API, automation, custom development, or programmatic access). This post is strictly about platform usage and best practices for non-developer administrators, and there is no substantial technical detail about coding, DevOps, Azure services, security engineering, AI/ML, or software development—just operational tips. Thus, it does not meet category inclusion requirements."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/amazing-opportunity-provided-by-microsoft/m-p/4468377#M22311",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-11-10 17:06:06 +00:00",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/cannot-access-my-account-after-code-from-authenticator-app-does/m-p/4468380#M22312",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-11-10 17:06:06 +00:00",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/unable-to-access-azure-portal-with-my-microsoft-account/m-p/4468391#M22313",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-11-10 17:06:06 +00:00",
+    "collection": "community"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-11-10 18:07:29 +00:00",
+    "reason": "No categories found: No categories were assigned because this content mainly discusses the annual Octoverse report's high-level trends, global developer community statistics, and general ecosystem updates with no substantive technical depth or Microsoft technology focus. There is no discussion of specific Microsoft development tools, platforms, or architectures, nor does it detail any development or integration with Microsoft technologies. It is a news-oriented, meta discussion about GitHub usage statistics and global programming trends, which do not qualify for any predefined categories per the inclusion and exclusion rules.",
+    "canonical_url": "https://www.youtube.com/shorts/swA_7bHrsIE"
   }
 ]
