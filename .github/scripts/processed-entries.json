@@ -15284,5 +15284,23 @@
     "timestamp": "2025-11-10 18:07:57 +00:00",
     "reason": "Succesfully added: The article qualifies for the 'AI' category because it details an enterprise conversational AI platform (AgentFlow) leveraging Microsoft AI services including Azure AI Foundry, Azure OpenAI, Semantic Kernel, and multi-agent orchestration (AI rule 1, 3, 4). It also qualifies for the 'Azure' category because Azure services like Cosmos DB, Container Apps, AI Foundry, DiskANN, KEDA, and App Service are central to the architecture (Azure rule 1, 2, 4, 5, 6). There is no in-depth custom ML development (so ML was not assigned), and while the content describes technical architecture and implementation, it focuses more on AI orchestration and cloud engineering, not deep coding practices—thus 'Coding' is not assigned. There is mention of security and compliance but mostly regarding usage of Azure in a compliance context and not the deep specifics of implementing security features or practices, so 'Security' is not a primary category. The content is implementation-focused and avoids sales or biographical bias, fitting the technical and quality standards.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-customer-innovation-blog/staying-in-the-flow-sleekflow-and-azure-turn-customer/ba-p/4467945"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free",
+    "reason": "Succesfully added: Assigned 'AI' because the content details Anthropic AI models used within GitHub Copilot, focusing on model transitions and technical capabilities (AI rule 1). Assigned 'GitHub Copilot' because the entire announcement involves GitHub Copilot model availability, administration, and usage (GitHub Copilot inclusion rule 1). Did not assign other categories as there is no direct programming, DevOps, or Azure content. No generic exclusion rules were triggered.",
+    "collection": "news",
+    "timestamp": "2025-11-10 19:05:05 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-11-10-github-enterprise-cloud-with-data-residency-now-supports-visual-studio-subscriptions",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the content is an announcement about enterprise tooling integration (Visual Studio subscriptions and GitHub Enterprise Cloud), as per DevOps rule 11 for GitHub content (non-Copilot). No Coding category is assigned as the content does not discuss programming languages or code; no Azure, AI, ML, or Security as the focus is on enterprise account management, data residency, and subscription access, not technical security or AI tooling.",
+    "collection": "news",
+    "timestamp": "2025-11-10 19:05:21 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=36bbMNatZHI",
+    "reason": "Succesfully added: Assigned the Azure category because the content centers exclusively around Azure cost estimation, tools, and management approaches, directly meeting Azure inclusion rules (Azure rule 1 and 2). AI is not assigned because, although Microsoft Copilot is mentioned, it's framed within the Azure experience (Copilot in Azure) and not as a development tool or the focus of content—no Copilot Studio, GitHub Copilot, or AI engineering topics are presented. Coding, DevOps, ML, Security, and GitHub Copilot are not assigned, as the content neither describes application development, code, DevOps pipelines, ML/data science, nor security processes. The video provides technical guidance on understanding Azure pricing, planning, and optimizing cloud usage, fitting the Azure category as per provided rules.",
+    "collection": "videos",
+    "timestamp": "2025-11-10 19:06:09 +00:00"
   }
 ]

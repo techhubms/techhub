@@ -1,0 +1,14 @@
+{
+  "PubDate": "2025-11-10T18:23:11+00:00",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-11-10 19:04:29",
+  "Title": "Azure Cost Estimation: Your Strategic Guide to Cloud Pricing",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Tags": [],
+  "FeedName": "Microsoft Developer YouTube",
+  "OutputDir": "_videos",
+  "Description": "In this episode of the Azure Essentials Show, Thomas once again welcomes Britt from Microsoft Azure to tackle the common challenge of understanding and estimating cloud costs. Many users find Azure pricing complex and unpredictable, making it difficult to plan and optimize spending. This episode introduces a practical three-layer framework and essential tools that empower viewers to take control of their Azure pricing journey, moving from confusion to confidence in cost estimation and management.\n\nThree Things You Will Learn\n- How to use the Azure Pricing Calculator and other tools to estimate and manage cloud costs effectively.\n- A three-layer framework for approaching Azure pricing: architecture, configuration, and usage estimation.\n- Ways to leverage Azure Advisor, Cost Management, and Copilot to optimize spending and refine estimates over time.\n\nResources\n- Pricing calculator https://azure.microsoft.com/pricing/calculator\n- Azure Migrate https://azure.microsoft.com/en-us/products/azure-migrate\n- Azure Advisor https://learn.microsoft.com/azure/advisor\n- Azure Monitor https://azure.microsoft.com/products/monitor\n- Microsoft Cost Management https://azure.microsoft.com/products/cost-management\n- Microsoft Copilot in Azure https://learn.microsoft.com/azure/copilot/overview\n- Explore more Essential resources! https://azure.com/AzureEssentials\n\nRelated episodes\n- Azure Cost Estimation: Plan Confidently with the Azure Pricing Calculator https://aka.ms/AzEssentials/231\n- Your Guide to Saving with Azure Hybrid Benefit https://aka.ms/AzEssentials/223\n- Learn more about Azure Pricing https://aka.ms/AzurePricingVideos\n- Watch the Azure Essentials Show https://aka.ms/AzureEssentialsShow\n\nConnect\n- Thomas Maurer https://www.linkedin.com/in/thomasmaurer2\n- Britt Henderson https://www.linkedin.com/in/bleg\n\nChapters 0:00 In this episode … 0:23 Introduction 0:55 Pricing Calculator refresher 1:30 Homeowner analogy 2:42 Pricing factors 3:08 How to approach cost estimation? 4:12 Helpful Tools 4:18 Pricing Calculator 4:46 Azure Migrate 5:03 Azure Advisor 5:18 Azure Monitor 5:19 Microsoft Cost Management 6:08 Microsoft Copilot 7:47 Things to remember 8:45 Resources and next steps",
+  "Link": "https://www.youtube.com/watch?v=36bbMNatZHI",
+  "Author": "Microsoft Developer"
+}

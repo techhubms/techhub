@@ -1,0 +1,17 @@
+{
+  "Title": "Claude Sonnet 3.5 deprecated, Claude Haiku 4.5 available in Copilot Free",
+  "Author": "Allison",
+  "Description": "We have deprecated Claude Sonnet 3.5 across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) as of today, November 10th 2025. As…\n\nThe post [Claude Sonnet 3.5 deprecated, Claude Haiku 4.5 available in Copilot Free](https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedName": "The GitHub Blog",
+  "Tags": [
+    "copilot",
+    "Retired"
+  ],
+  "Link": "https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free",
+  "ProcessedDate": "2025-11-10 19:03:56",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "OutputDir": "_news",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "EnhancedContent": "We have deprecated Claude Sonnet 3.5 across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) as of today, November 10th 2025.\n\nAs part of this change, Claude Haiku 4.5—a significantly stronger model with enhanced coding capabilities—will be available to all Copilot users, including Copilot Free. This ensures continued access to Anthropic’s advanced technology at no cost.\n\n| Model | Deprecation date | Suggested alternative | | --- | --- | --- | | Claude Sonnet 3.5 | 2025-11-10 | Claude Sonnet 4.5 for paid Copilot plans, Claude Haiku 4.5 for Copilot Free |\n\nPlease update your workflows and integrations to use supported models. Copilot Enterprise administrators may need to enable access to alternative models through their model policies in Copilot settings. As an administrator, you can verify availability by checking your individual Copilot settings and confirming that the policy is enabled for the specific model. Once enabled, you’ll see the model in the Copilot Chat model selector in VS Code and on github.com. No action is required to remove the deprecated models.\n\nGitHub Enterprise customers with questions or concerns are encouraged to reach out to their account manager for further assistance.\n\n### Share your feedback\n\nTo learn more about the models available in Copilot, see [our documentation on models](https://docs.github.com/copilot/reference/ai-models/supported-models) and get started with Copilot today.\n\nJoin the [GitHub Community](https://github.com/orgs/community/discussions/categories/copilot-conversations) to share your feedback.",
+  "PubDate": "2025-11-10T17:19:46+00:00"
+}
