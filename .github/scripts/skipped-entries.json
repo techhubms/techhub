@@ -8349,5 +8349,11 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/step-by-step-guide-to-changing-desktop-icons-in-windows-11/",
     "timestamp": "2025-11-09 17:05:16 +00:00"
+  },
+  {
+    "timestamp": "2025-11-10 09:04:48 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: No categories are assigned because the content primarily provides an end-user, feature-level overview and comparison of OneDrive Personal and OneDrive for Business, targeting individual and business adoption (i.e., usage, benefits, security features, administrative controls) but without developer, technical implementation, coding, API programming, DevOps, security architecture, or configuration guidance. According to the generic exclusion rules for Non-Development Microsoft Products and Business Productivity Tools, content about Microsoft 365/Office 365 products focused on productivity, storage, deployment/usage, or management—without emphasis on application development, solution architecture, or developer-focused use—must be excluded. There is no development, coding, automation, or technical best practice beyond basic consumer/enterprise IT configuration advice.",
+    "canonical_url": "https://dellenny.com/understanding-onedrive-for-business-and-personal-storage/"
   }
 ]
