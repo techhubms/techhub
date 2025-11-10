@@ -15320,5 +15320,11 @@
     "timestamp": "2025-11-10 22:05:33 +00:00",
     "collection": "news",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/its-time-announcing-the-microsoft-sql-community-conference/"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-maps-blog/guest-blog-modernizing-your-wpf-app-maps-functionality-with/ba-p/4468755",
+    "reason": "Succesfully added: Applied the Azure category because the content demonstrates in-depth use of Azure Maps (Azure Category rule 1) and discusses migration to Microsoft’s Azure platform for geospatial features. The Coding category is included as the article is focused on practical .NET/WPF desktop application development, including technical integration steps and use of SDKs (Coding rules 1, 2, and 5). AI category is not included as there is only a minor mention of AI-assisted tools and not as a primary focus. Exclusion rules do not apply: the content is technical, in English, not biographical, not a sales pitch, and focused on implementation details for developers.",
+    "timestamp": "2025-11-10 23:05:59 +00:00"
   }
 ]
