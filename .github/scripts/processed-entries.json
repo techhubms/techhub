@@ -15350,5 +15350,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/node-js-24-is-now-available-on-azure-app-service-for-linux/ba-p/4468801",
     "reason": "Succesfully added: Included the Azure category because the content is centered on the new Node.js 24 runtime release specifically for Azure App Service for Linux (Azure inclusion rule 1 and 4). Included the Coding category because the announcement details Node.js and JavaScript features, modern language capabilities, npm, and the test runner—all of which are core programming concerns (Coding inclusion rules 1, 4, and 5). The post contains clear, actionable information for developers looking to build or migrate Node.js apps on Azure. No AI, ML, DevOps, Security, or GitHub Copilot content is present.",
     "timestamp": "2025-11-11 05:05:02 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Included the 'Azure' category because the entire content is focused on Azure Blob Storage, Azure Data Lake Gen2, and Azure Synapse Analytics, matching multiple Azure inclusion rules such as service and management tooling (Azure rule 1 and 2) and architecture patterns (Azure rule 5). Did not include 'ML', 'AI', 'Coding', 'DevOps', or 'Security' because there is no focus on machine learning, AI service usage, developer coding, DevOps practices, or specific security topics—content is oriented around storage data management and inventory reporting. Community content length is well above the 200-word threshold, and no exclusion rules were triggered.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-paas-blog/deriving-expiry-days-and-remaining-retention-days-for-blobs/ba-p/4466586",
+    "collection": "community",
+    "timestamp": "2025-11-11 06:04:24 +00:00"
   }
 ]
