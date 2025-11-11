@@ -15356,5 +15356,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-paas-blog/deriving-expiry-days-and-remaining-retention-days-for-blobs/ba-p/4466586",
     "collection": "community",
     "timestamp": "2025-11-11 06:04:24 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/adaptive-model-selection-in-typescript-with-the-model-router/ba-p/4465192",
+    "reason": "Succesfully added: Categories assigned as follows: AI – the content is centered on using Azure AI Foundry Model Router, a Microsoft artificial intelligence product (AI rule 1). Azure – all guidance is built around Azure AI Foundry service and Azure Monitor (Azure rule 1). Coding – implementation demonstrates TypeScript code for interacting with Azure AI endpoints (Coding rules 1, 2, and 4). No exclusion rules triggered. The subject is technical, focused on developer tasks with detailed how-to sections and code.",
+    "timestamp": "2025-11-11 08:06:19 +00:00"
   }
 ]
