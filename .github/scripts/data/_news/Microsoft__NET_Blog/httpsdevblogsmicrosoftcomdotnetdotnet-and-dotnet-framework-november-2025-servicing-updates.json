@@ -1,0 +1,18 @@
+{
+  "EnhancedContent": "Welcome to our combined .NET servicing updates for November 2025. Let’s get into the latest release of .NET & .NET Framework, here is a quick overview of what’s new in our servicing releases:\n\n## Security improvements\n\n.NET and .NET Framework has been refreshed with the latest update as of November 11, 2025. This update contains non-security fixes.\n\nThis month you will find non-security fixes:\n\n| | .NET 8.0 | .NET 9.0 | | --- | --- | --- | | Release Notes | [8.0.22](https://github.com/dotnet/core/blob/main/release-notes/8.0/8.0.22/8.0.22.md) | [9.0.11](https://github.com/dotnet/core/blob/main/release-notes/9.0/9.0.11/9.0.11.md) | | Installers and binaries | [8.0.22](https://dotnet.microsoft.com/download/dotnet/8.0) | [9.0.11](https://dotnet.microsoft.com/download/dotnet/9.0) | | Container Images | [images](https://mcr.microsoft.com/catalog?search=dotnet/) | [images](https://mcr.microsoft.com/catalog?search=dotnet/) | | Linux packages | [8.0.22](https://github.com/dotnet/core/blob/main/release-notes/8.0/install-linux.md) | [9.0.11](https://github.com/dotnet/core/blob/main/release-notes/9.0/install-linux.md) | | Known Issues | [8.0](https://github.com/dotnet/core/blob/main/release-notes/8.0/known-issues.md) | [9.0](https://github.com/dotnet/core/blob/main/release-notes/9.0/known-issues.md) |\n\n### Release changelogs\n\n- Runtime: [9.0.11](https://github.com/dotnet/runtime/issues?q=milestone%3A9.0.11%20is%3Aclosed%20label%3Aservicing-approved)\n- Aspnetcore: [8.0.22](https://github.com/dotnet/aspnetcore/issues?q=milestone%3A8.0.22%20is%3Aclosed%20label%3Aservicing-approved) | [9.0.11](https://github.com/dotnet/aspnetcore/issues?q=milestone%3A9.0.11%20is%3Aclosed%20label%3Aservicing-approved)\n- SDK: [9.0.11](https://github.com/dotnet/sdk/issues?q=milestone%3A9.0.11%20is%3Aclosed%20label%3Aservicing-approved)\nShare feedback about this release in the [Release feedback issue](https://github.com/dotnet/core/issues/10155).\n\n## .NET Framework November 2025 Updates\n\nThis month, there are no new security or new non-security updates available. For recent .NET Framework servicing updates, be sure to browse our [release notes for .NET Framework](https://learn.microsoft.com/dotnet/framework/release-notes/release-notes) for more details.\n\n## See you next month\n\nThat’s it for this month, make sure you update to the latest service release today.",
+  "Description": "A recap of the latest servicing updates for .NET and .NET Framework for November 2025.\n\nThe post [.NET and .NET Framework November 2025 servicing releases updates](https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-november-2025-servicing-updates/) appeared first on [.NET Blog](https://devblogs.microsoft.com/dotnet).",
+  "PubDate": "2025-11-11T15:30:00+00:00",
+  "Author": "Tara Overfield, Victor Israel-Bolarinwa",
+  "Link": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-november-2025-servicing-updates/",
+  "FeedName": "Microsoft .NET Blog",
+  "Title": ".NET and .NET Framework November 2025 servicing releases updates",
+  "ProcessedDate": "2025-11-11 16:02:56",
+  "OutputDir": "_news",
+  "FeedLevelAuthor": ".NET Blog",
+  "FeedUrl": "https://devblogs.microsoft.com/dotnet/feed/",
+  "Tags": [
+    ".NET",
+    ".NET Framework",
+    "Maintenance & Updates"
+  ]
+}

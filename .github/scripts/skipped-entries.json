@@ -8409,5 +8409,47 @@
     "reason": "No categories found: No categories assigned. The content is about AI-powered search features introduced into Copilot, focusing on user experience improvements, trust, citations, and usability for general consumers. It does not describe AI service development, coding, developer tooling, or implementation for developers—rather, it showcases business productivity and end-user use of Copilot as a search and discovery tool. According to the Copilot Product Distinction rule, general 'Copilot' for productivity, search, and information retrieval is not categorized. There is no substantial coverage of Microsoft developer technologies, AI engineering, coding, security, Azure, DevOps, or ML from an engineering perspective. The main topics are around general usage for information search and consumer-facing improvements, which fall under the generic exclusion rules for consumer/business productivity tools.",
     "collection": "news",
     "canonical_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2025/11/07/bringing-the-best-of-ai-search-to-copilot/"
+  },
+  {
+    "timestamp": "2025-11-11 16:08:13 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/copilot-for-planner-and-to-do-how-ai-automates-task-management/",
+    "reason": "No categories found: All categories excluded due to generic exclusion rules for Non-Development Microsoft Products (Chapter 3). The article is solely about 'Copilot for Planner and To Do,' which is categorized as 'Copilot for Microsoft 365' and thus a business productivity tool, not a developer or maker tool. The content focuses entirely on automating workplace productivity and task management for end users, with no coverage of coding, development, Microsoft 365 development APIs, Teams/SharePoint development, or any developer/Microsoft technical implementation. Per Chapter 3 and the CRITICAL Copilot Product Distinction, Microsoft 365 Copilot and related tools are explicitly excluded, and no categories are to be assigned."
+  },
+  {
+    "timestamp": "2025-11-11 16:08:27 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-azure-active-directory-supports-secure-copilot-access/",
+    "reason": "No categories found: All categories are excluded because the content focuses exclusively on enabling secure access to Microsoft 365 Copilot (business productivity tool, not a developer tool) via Azure Active Directory (now Microsoft Entra). According to the CRITICAL exclusion rules, Copilot for Microsoft 365, Microsoft 365 Copilot, and Office Copilot are not assigned categories—regardless of technical depth—since they are business productivity tools, not developer/maker tools. The Security and Azure categories are not applied because the security implementation details are purely about business productivity (enabling end-user access to Microsoft 365 Copilot) and not about development or coding scenarios. No Coding, DevOps, AI, or ML category applies. See Non-Development Microsoft Products exclusion and CRITICAL Copilot Product Distinction rules."
+  },
+  {
+    "timestamp": "2025-11-11 16:08:40 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-build-effective-copilot-usage-dashboards-in-power-bi/",
+    "reason": "No categories found: All categories were excluded according to the Non-Development Microsoft Products rule in the generic exclusion section. The content focuses on Microsoft 365 Copilot, which is a business productivity tool, and Power BI as a business analytics/dashboard platform, not Power BI development. The entire article describes how to use Power BI to track usage and adoption of Microsoft 365 Copilot, which is explicitly listed under Non-Development Microsoft Products exclusion. There are no details on development, API programming, or technical implementation relating to Microsoft developer tools. All guidance is targeted toward business analysis, adoption monitoring, and organizational reporting, not technical implementation or code development. Therefore, no categories apply."
+  },
+  {
+    "timestamp": "2025-11-11 16:08:54 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/using-microsoft-365-admin-reports-to-track-copilot-adoption/",
+    "reason": "No categories found: No categories were assigned because the content primarily focuses on tracking the adoption of Microsoft 365 Copilot, a business productivity tool, using the Microsoft 365 Admin Center's built-in reporting features. According to the generic exclusion rules (Non-Development Microsoft Products), content about Microsoft 365 Copilot, Copilot for Microsoft 365, or Office Copilot is specifically excluded since they are not developer tools or technical implementation topics, but are business productivity solutions. The article does not cover development, coding, technical architecture, or configuration topics relevant to developers or admins implementing Microsoft technology in a technical context. It is focused on business adoption, monitoring, and end-user productivity analytics. Therefore, according to the workflow, it is excluded from categorization."
+  },
+  {
+    "timestamp": "2025-11-11 16:09:13 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=7ur14xMSzqo",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the description is in Portuguese, with less than 80% English in the main text (Non-English Content exclusion). As per the exclusion rules outlined in Chapter 3, content not primarily in English must be excluded regardless of topic."
+  },
+  {
+    "timestamp": "2025-11-11 16:10:36 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=8S3S5NfoJtw",
+    "reason": "No categories found: All category arrays are left empty due to the following generic exclusion rules being triggered: 1) The content is not primarily in English (<80% English in the main text), as the title and description are written in Portuguese. According to the Non-English Content exclusion, content not primarily in English is excluded regardless of technical merit. No other processing steps are needed."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/tgxFuUO7u88",
+    "timestamp": "2025-11-11 17:04:50 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules—specifically, this video primarily serves as an event overview, focusing on attendee experience and logistics for Microsoft Ignite, rather than technical implementation or deep-dives into Microsoft technologies. There is no substantive technical content described regarding development, coding, architecture, or platform engineering. No categories are assigned."
   }
 ]

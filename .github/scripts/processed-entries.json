@@ -15368,5 +15368,35 @@
     "reason": "Succesfully added: Assigned AI because the content centers on deploying AI solutions, specifically leveraging Microsoft's AI infrastructure (AI rule 1). Assigned Azure because Azure AI Landing Zones are a core Azure architecture tool (Azure rule 1). Assigned DevOps because the episode highlights infrastructure as code deployment strategies and automation (DevOps rules 5 and 6). Assigned Security since governance and security are repeatedly emphasized in the solution (Security rules 2 and 4). The content does not qualify for the Coding or ML categories as it does not focus on development frameworks/languages or custom data science/ML workflows.",
     "collection": "videos",
     "timestamp": "2025-11-11 09:05:52 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://www.thomasmaurer.ch/2025/11/strengthen-server-resilience-windows-recovery-environment-winre-for-windows-server-with-azure-arc/",
+    "timestamp": "2025-11-11 14:05:00 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content is specifically about using Azure Arc and Azure Policy to manage Windows Server environments (Azure inclusion rules 1, 2, 4, and 5). Assigned the Security category because it focuses on improving recovery readiness, minimizing downtime, and enforcing configuration standards via policy, which aligns with security and compliance best practices (Security inclusion rules 1, 4, 7, and 9). Did not assign Coding, DevOps, ML, AI, or GitHub Copilot categories as the content does not focus on development, AI, machine learning, DevOps processes, or coding workflows. There are no generic exclusion triggers present."
+  },
+  {
+    "timestamp": "2025-11-11 16:06:57 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/announcing-dotnet-10/",
+    "reason": "Succesfully added: Assigned AI category because the release integrates multiple AI technologies and frameworks, including Microsoft Agent Framework, Microsoft.Extensions.AI, and Model Context Protocol, enabling AI-powered and agentic applications (AI rules 1, 4, 5). Coding category applies due to in-depth coverage of C#, F#, ASP.NET Core, MAUI, Blazor, and Entity Framework Core—core Microsoft development platforms (Coding rules 1-4). Azure category is assigned because multiple features include Azure-focused tooling and integrations (Azure SQL, Cosmos DB, AppHost orchestration) (Azure rule 1, 4, 6). DevOps is included for coverage of CI/CD tooling, improved project formats (SLNX), containerization, and developer workflow enhancements in Visual Studio 2026, Dev Kit, and SDK (DevOps rules 2, 5, 6, 9). Not classified as Security or ML as its security and ML/analytics content, while present, is not the central technical focus compared to the broader coding, AI, Azure, and DevOps advancements."
+  },
+  {
+    "timestamp": "2025-11-11 16:07:19 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-november-2025-servicing-updates/",
+    "reason": "Succesfully added: Assigned the Coding category because the content focuses on .NET and .NET Framework's maintenance, servicing, and SDK/runtime release notes, which are central to Microsoft development practices (Coding rules 1, 2, and 4). No AI, Azure, DevOps, ML, Security, or GitHub Copilot content is discussed, as the updates are about framework releases and non-security fixes rather than development methodologies or cloud platform specifics."
+  },
+  {
+    "timestamp": "2025-11-11 16:07:52 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blogs.microsoft.com/blog/2025/11/11/bridging-the-ai-divide-how-frontier-firms-are-transforming-business/",
+    "reason": "Succesfully added: Assigned 'AI' category because the article centers on how companies use Microsoft AI technologies, referencing Azure OpenAI, Copilot Studio, and Agentic AI (AI rule 1, 3, 4). Assigned 'Azure' because multiple case studies highlight the centrality of Azure services for AI integration, deployment, and digital twins (Azure rule 1, 3, 4). Did not assign 'ML' because while machine learning is implicit, the content focuses primarily on enabling AI use and business transformation, not on custom ML pipelines or data science engineering. Did not assign 'Coding' or 'DevOps' because the article is strategic/implementation-focused rather than developer hands-on. Security is discussed as a consideration but is not a main focus. No generic exclusion rule applied because the content is technical, not a sales pitch, biography, or executive-only business advice."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2026-is-here-faster-smarter-and-a-hit-with-early-adopters/",
+    "timestamp": "2025-11-11 17:04:21 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because Visual Studio 2026 is described as an AI-native IDE with deeply integrated AI features, including GitHub Copilot and new AI agents for C# and C++ (AI category rule 1 and 2). Assigned 'Coding' because the content centers on development workflows, coding productivity, and support for programming languages and frameworks (.NET, C#, C++), matching Coding category inclusion rules 1, 2, and 4. Did not assign 'DevOps' or 'Azure' as the content does not focus on DevOps tools, CI/CD, infrastructure, or Azure-specific developments. Did not apply exclusion rules, as the content is highly technical, development-focused, not business/productivity-only, and is delivered in English."
   }
 ]
