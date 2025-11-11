@@ -1,0 +1,22 @@
+{
+  "EnhancedContent": null,
+  "Title": "Build AI Agents with Zero Code Using Azure Logic Apps",
+  "FeedName": "Microsoft Developer YouTube",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Description": "In this episode, host Priyanka Vergadia sits down with Rohitha Hewawasam, Engineering Manager for Azure Logic Apps, to explore how developers can build powerful AI agents using a no-code/low-code approach. Discover how Azure Logic Apps and over 1400 enterprise-grade connectors make it easy to integrate AI into your existing systems—without writing a single line of code! Whether you're just starting your AI journey or looking to scale with multi-agent orchestration, this episode is packed with insights, demos, and practical tips to help you get started.\n\n🧠 What You'll Learn:\n\n- How to build AI agents using Azure Logic Apps with no code\n- The role of 1400+ connectors in enterprise integration\n- How to handle authentication, compliance, and network boundaries\n- Using GPT-4 and prompt engineering to drive agent logic\n- Embedding chat clients and integrating with Microsoft Teams & ServiceNow\n- Monitoring and debugging AI agent workflows with built-in transparency tools\n📺 Chapters: 00:05 – Welcome to Sip and Sync: AI Agents with Azure 00:17 – Meet Rohitha: Engineering Manager at Azure Logic Apps 00:50 – No-code AI agent building explained 01:10 – Power of 1400+ connectors for enterprise integration 02:03 – Tackling authentication and compliance challenges 02:28 – Demo: Building a chatbot for Fort Coffee 03:06 – GPT-4 integration and connector setup 04:38 – Live chat client and authentication flow 05:55 – ServiceNow and Teams integration in action 07:10 – Monitoring agent conversations and tool usage 08:09 – Extensibility: From no-code to pro-code 09:09 – Multi-agent orchestration with Logic Apps 10:03 – Final thoughts and getting started\n\n🎙️ Speakers: Rohitha Hewawasam – Engineering Manager, Azure Logic Apps LinkedIn: https://www.linkedin.com/in/rohitha-hewawasam-219b258/ Priyanka Vergadia – Principal Cloud Advocate, Microsoft LinkedIn: https://www.linkedin.com/in/pvergadia/ X (Twitter): https://x.com/pvergadia\n\n🔗 Links & Resources:\n\n🚀 Get started with Azure Logic Apps: https://learn.microsoft.com/azure/logic-apps/ 📝 Build AI agents with Azure OpenAI: https://learn.microsoft.com/azure/ai-services/openai/ ⚡ Explore connectors for Logic Apps: https://learn.microsoft.com/connectors/ 🎯 Learn about ServiceNow integration: https://learn.microsoft.com/connectors/servicenow/ 📚 Microsoft Learn: https://learn.microsoft.com/ All Sip and Sync episodes: https://aka.ms/SipAndSyncPlaylist 📢 Hashtags: #AzureLogicApps #AIAgents #NoCode #LowCode #AzureOpenAI #MicrosoftDeveloper #GPT4 #ServiceNow #TeamsIntegration #CloudComputing #SipAndSync #LiveDemo #DevOps #PromptEngineering #MultiAgentSystems",
+  "OutputDir": "_videos",
+  "PubDate": "2025-11-11T21:47:17+00:00",
+  "Author": "Microsoft Developer",
+  "ProcessedDate": "2025-11-11 22:03:57",
+  "Link": "https://www.youtube.com/watch?v=6YFN25o9jn4",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+}

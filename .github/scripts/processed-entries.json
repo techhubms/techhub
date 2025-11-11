@@ -15440,5 +15440,23 @@
     "reason": "Succesfully added: Assigned the Coding category because the event centers on .NET, a Microsoft development framework, and is focused on technical sessions for developers (Coding rule 1 and 4). There is no substantive information to justify other categories; the description showcases presentations, learning, and developer skills in the .NET ecosystem. No exclusion rules apply as this is not biographical, sales-oriented, workplace culture, or business/productivity tool focused content.",
     "canonical_url": "https://www.youtube.com/watch?v=-c8r2fMi9cg",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the episode focuses on building AI agents using Azure Logic Apps, mentions GPT-4 integration, prompt engineering, and AI agent orchestration (AI inclusion rules 1, 4, and 5). Assigned Azure because all workflows and integrations are specifically built on Azure Logic Apps, a Microsoft Azure service (Azure inclusion rule 1). Did not assign Coding, as the approach is explicitly no-code/low-code and does not discuss traditional programming or .NET development. Did not assign DevOps, ML, or Security because the core focus is on enterprise integration, connectors, and AI workflow orchestration rather than machine learning, DevOps practices, or advanced security/identity management. The explanation references concrete details from the description, especially the use of Azure Logic Apps, connectors, and GPT-4 integration.",
+    "timestamp": "2025-11-11 22:05:31 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=6YFN25o9jn4",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: AI (numerous highlighted sessions focus on AI development, agents, and Copilot Studio, matching AI inclusion rule 1, 3, 4); GitHub Copilot (specific session on Copilot and AI agents—Copilot is a developer tool, not a productivity tool, matching GitHub Copilot inclusion rules); Azure (sessions and event itself are centered on Azure, matching Azure inclusion rule 1); DevOps (CI/CD, GitHub, and deployment pipeline sessions, matching DevOps rules 2, 5, 6); ML (Microsoft Fabric data agent and Lakehouse sessions involve data engineering and analytics, qualifying under ML rule 1 and 2). No generic exclusion rules apply: the post exceeds word count, is not biographical or sales-focused, is educational, in English, and technical with substantive developer relevance. The categories reflect the central focus on Microsoft developer cloud technology.",
+    "timestamp": "2025-11-11 22:05:55 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/build-your-ignite-schedule-top-sessions-for-developers/ba-p/4469064",
+    "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Azure' category because the question directly concerns core Azure services (Function Apps and Key Vault), consistent with Azure rule 1 and 4. Assigned the 'Security' category because controlling access to secrets, use of private endpoints, and managed identities indicate a focus on secure architecture and practices (Security rules 1, 2, and 4). Did not assign 'DevOps' or 'Coding' since the inquiry is specifically about platform configuration/troubleshooting, not development frameworks, code, or CI/CD workflows. The post is a community inquiry seeking troubleshooting help, but it contains detailed technical context and exceeds the 200-word minimum for community content. None of the generic exclusion rules apply.",
+    "timestamp": "2025-11-11 22:06:13 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure/intermittent-access-issue-between-azure-function-app-and-key/m-p/4468948#M316",
+    "collection": "community"
   }
 ]

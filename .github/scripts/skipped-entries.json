@@ -8457,5 +8457,17 @@
     "reason": "No categories found: No categories assigned because the content (video) is biographical in nature, focusing on a personal story from the Log4j maintainer about the Log4Shell crisis and a phone call he received—a clear case of the 'Biographical Focus' generic exclusion rule in Chapter 3. The description describes a personal moment rather than technical implementation, coding practices, Microsoft technologies or developer guidance. There is no substantive technical content relevant to the listed Microsoft technology categories. Therefore, exclusion is required.",
     "canonical_url": "https://www.youtube.com/shorts/dA4zwkXCU6Y",
     "collection": "videos"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-11-11 22:06:14 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/avd-session-host-with-hybrid-join/m-p/4469032#M13938",
+    "collection": "community"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-11-11 22:06:14 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/can-t-setup-mfa-on-azure-personal-account/m-p/4468744#M22315",
+    "collection": "community"
   }
 ]

@@ -1,0 +1,14 @@
+{
+  "Author": "Manan_Choksi",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-infrastructure/intermittent-access-issue-between-azure-function-app-and-key/m-p/4468948#M316",
+  "FeedName": "Microsoft Tech Community",
+  "Title": "Intermittent Access Issue Between Azure Function App and Key Vault (Private Endpoint Enabled)",
+  "EnhancedContent": "We have an Azure Function App configured to retrieve secrets from Azure Key Vault using Managed Identity, following the recommended pattern.\n\nKey details of our setup:\n\n- The Function App is running on a Premium Plan and VNet-integrated.\n- The Key Vault has Public Network Access disabled and uses a Private Endpoint.\n- The Function App accesses Key Vault secrets through Key Vault references in application settings.\n\nWe are intermittently observing issues where the Function App fails to access the Key Vault. Under the **“Diagnose and Solve Problems”** blade, the following error appears:\n\n[ResolveWorkitem] AccessToKeyVaultDenied error while retrieving Key Vault Secret Reference [microsoft](javascript:void%280%29).KeyVault(SecretUri=\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*). Exception: KeyVaultResolver.Common.ReferenceResolverException: Exception of type 'KeyVaultResolver.Common...'\n\nHas anyone encountered this issue or found a reliable way to resolve intermittent connectivity/authentication failures between a Function App and a Key Vault over a private endpoint?",
+  "Tags": [],
+  "PubDate": "2025-11-11T14:08:54+00:00",
+  "OutputDir": "_community",
+  "Description": "We have an Azure Function App configured to retrieve secrets from Azure Key Vault using Managed Identity, following the recommended pattern.\n\nKey details of our setup:\n\n- The Function App is running on a Premium Plan and VNet-integrated.\n- The Key Vault has Public Network Access disabled and uses a Private Endpoint.\n- The Function App accesses Key Vault secrets through Key Vault references in application settings.\n\nWe are intermittently observing issues where the Function App fails to access the Key Vault. Under the **“Diagnose and Solve Problems”** blade, the following error appears:\n\n[ResolveWorkitem] AccessToKeyVaultDenied error while retrieving Key Vault Secret Reference [microsoft](javascript:void%280%29).KeyVault(SecretUri=\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*). Exception: KeyVaultResolver.Common.ReferenceResolverException: Exception of type 'KeyVaultResolver.Common...'\n\nHas anyone encountered this issue or found a reliable way to resolve intermittent connectivity/authentication failures between a Function App and a Key Vault over a private endpoint?",
+  "ProcessedDate": "2025-11-11 22:04:42",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+}
