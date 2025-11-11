@@ -15362,5 +15362,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/adaptive-model-selection-in-typescript-with-the-model-router/ba-p/4465192",
     "reason": "Succesfully added: Categories assigned as follows: AI – the content is centered on using Azure AI Foundry Model Router, a Microsoft artificial intelligence product (AI rule 1). Azure – all guidance is built around Azure AI Foundry service and Azure Monitor (Azure rule 1). Coding – implementation demonstrates TypeScript code for interacting with Azure AI endpoints (Coding rules 1, 2, and 4). No exclusion rules triggered. The subject is technical, focused on developer tasks with detailed how-to sections and code.",
     "timestamp": "2025-11-11 08:06:19 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=8FWdFG55nXw",
+    "reason": "Succesfully added: Assigned AI because the content centers on deploying AI solutions, specifically leveraging Microsoft's AI infrastructure (AI rule 1). Assigned Azure because Azure AI Landing Zones are a core Azure architecture tool (Azure rule 1). Assigned DevOps because the episode highlights infrastructure as code deployment strategies and automation (DevOps rules 5 and 6). Assigned Security since governance and security are repeatedly emphasized in the solution (Security rules 2 and 4). The content does not qualify for the Coding or ML categories as it does not focus on development frameworks/languages or custom data science/ML workflows.",
+    "collection": "videos",
+    "timestamp": "2025-11-11 09:05:52 +00:00"
   }
 ]
