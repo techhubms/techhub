@@ -84,7 +84,8 @@ try {
         )
         
         $currentTerminalSize = Get-SafeTerminalSize
-        $progressBarWidth = [Math]::Max(20, [Math]::Floor($currentTerminalSize.Width))
+        # Cap progress bar width to reasonable maximum (100 chars) to prevent excessive width on large screens
+        $progressBarWidth = [Math]::Min(100, [Math]::Max(20, [Math]::Floor($currentTerminalSize.Width * 0.6)))
         
         if ($Complete) {
             return "█" * $progressBarWidth

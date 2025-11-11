@@ -48,7 +48,7 @@ sudo npm install -g npm-check-updates
 echo "Updating JavaScript test dependencies to latest versions..."
 cd /workspaces/techhub/spec/javascript || cd $(pwd)/spec/javascript
 # Clean node_modules to avoid permission and locking issues
-rm -rf node_modules package-lock.json
+rm -rf node_modules
 # Update all packages to latest versions
 npx npm-check-updates -u
 npm install
@@ -57,7 +57,7 @@ npm install
 echo "Updating E2E test dependencies to latest versions..."
 cd /workspaces/techhub/spec/e2e || cd $(pwd)/spec/e2e
 # Clean node_modules to avoid permission and locking issues
-rm -rf node_modules package-lock.json
+rm -rf node_modules
 # Update all packages to latest versions
 npx npm-check-updates -u
 npm install
@@ -71,10 +71,10 @@ sudo npm install -g playwright@latest
 echo "Installing Playwright system dependencies first..."
 sudo npx -y playwright install-deps
 
-# Install latest Playwright browsers using the global installation
-# This ensures we always get the latest browser versions
-echo "Installing latest Playwright browsers..."
-sudo npx -y playwright@latest install --force
+# Install latest Playwright browsers for the current user (not sudo)
+# This ensures browsers are installed in ~/.cache/ms-playwright where tests can find them
+echo "Installing latest Playwright browsers for current user..."
+npx -y playwright@latest install --force
 
 echo "Latest Playwright browsers and dependencies installed successfully"
 echo "Playwright version: $(npx playwright@latest --version)"

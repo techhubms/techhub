@@ -38,7 +38,8 @@ class YouTube < Liquid::Tag
     # height = tokens[2] if tokens.length > 2 && tokens[2] =~ /^\d+$/
     # Note: Currently not used in iframe output, but available for future enhancement
     
-    "<iframe class=\"youtube\" src=\"https://www.youtube.com/embed/#{id}\" loading=\"lazy\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    # Use youtube-nocookie.com for privacy-enhanced mode (fixes error 153 and improves privacy)
+    "<iframe class=\"youtube\" src=\"https://www.youtube-nocookie.com/embed/#{id}\" loading=\"lazy\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   end
 
   Liquid::Template.register_tag "youtube", self
