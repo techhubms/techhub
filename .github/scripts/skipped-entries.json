@@ -8445,5 +8445,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=8S3S5NfoJtw",
     "reason": "No categories found: All category arrays are left empty due to the following generic exclusion rules being triggered: 1) The content is not primarily in English (<80% English in the main text), as the title and description are written in Portuguese. According to the Non-English Content exclusion, content not primarily in English is excluded regardless of technical merit. No other processing steps are needed."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/tgxFuUO7u88",
+    "timestamp": "2025-11-11 17:04:50 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules—specifically, this video primarily serves as an event overview, focusing on attendee experience and logistics for Microsoft Ignite, rather than technical implementation or deep-dives into Microsoft technologies. There is no substantive technical content described regarding development, coding, architecture, or platform engineering. No categories are assigned."
   }
 ]
