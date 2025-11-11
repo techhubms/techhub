@@ -57,7 +57,7 @@ RSpec.describe YouTube do
       
       expect(result).to include('<iframe')
       expect(result).to include('class="youtube"')
-      expect(result).to include('src="https://www.youtube.com/embed/dQw4w9WgXcQ"')
+      expect(result).to include('src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"')
       expect(result).to include('loading="lazy"')
       expect(result).to include('allowfullscreen')
     end
@@ -84,14 +84,14 @@ RSpec.describe YouTube do
       youtube_tag = create_youtube_tag(different_id)
       result = youtube_tag.render(context)
       
-      expect(result).to include("src=\"https://www.youtube.com/embed/#{different_id}\"")
+      expect(result).to include("src=\"https://www.youtube-nocookie.com/embed/#{different_id}\"")
     end
 
     it 'extracts YouTube ID when width and height are provided' do
       youtube_tag = create_youtube_tag('dQw4w9WgXcQ 560 315')
       result = youtube_tag.render(context)
       
-      expect(result).to include('src="https://www.youtube.com/embed/dQw4w9WgXcQ"')
+      expect(result).to include('src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"')
       expect(result).to include('<iframe')
       expect(result).to include('class="youtube"')
     end
@@ -100,21 +100,21 @@ RSpec.describe YouTube do
       youtube_tag = create_youtube_tag('dQw4w9WgXcQ 560')
       result = youtube_tag.render(context)
       
-      expect(result).to include('src="https://www.youtube.com/embed/dQw4w9WgXcQ"')
+      expect(result).to include('src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"')
     end
 
     it 'ignores extra text after YouTube ID' do
       youtube_tag = create_youtube_tag('dQw4w9WgXcQ some extra text here')
       result = youtube_tag.render(context)
       
-      expect(result).to include('src="https://www.youtube.com/embed/dQw4w9WgXcQ"')
+      expect(result).to include('src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"')
     end
 
     it 'handles multiple spaces between tokens' do
       youtube_tag = create_youtube_tag('dQw4w9WgXcQ    560    315')
       result = youtube_tag.render(context)
       
-      expect(result).to include('src="https://www.youtube.com/embed/dQw4w9WgXcQ"')
+      expect(result).to include('src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"')
     end
   end
 
@@ -126,7 +126,7 @@ RSpec.describe YouTube do
       expect {
         template = Liquid::Template.parse(template_source)
         result = template.render
-        expect(result).to include('youtube.com/embed/dQw4w9WgXcQ')
+        expect(result).to include('youtube-nocookie.com/embed/dQw4w9WgXcQ')
       }.not_to raise_error
     end
 
@@ -136,7 +136,7 @@ RSpec.describe YouTube do
       result = template.render
       
       expect(result).to include('<iframe')
-      expect(result).to include('youtube.com/embed/test123')
+      expect(result).to include('youtube-nocookie.com/embed/test123')
       expect(result).to include('class="youtube"')
     end
 
@@ -146,7 +146,7 @@ RSpec.describe YouTube do
       result = template.render
       
       expect(result).to include('<iframe')
-      expect(result).to include('youtube.com/embed/dQw4w9WgXcQ')
+      expect(result).to include('youtube-nocookie.com/embed/dQw4w9WgXcQ')
       expect(result).to include('class="youtube"')
     end
 
@@ -155,7 +155,7 @@ RSpec.describe YouTube do
       template = Liquid::Template.parse(template_source)
       result = template.render
       
-      expect(result).to include('youtube.com/embed/dQw4w9WgXcQ')
+      expect(result).to include('youtube-nocookie.com/embed/dQw4w9WgXcQ')
     end
   end
 
@@ -189,7 +189,7 @@ RSpec.describe YouTube do
         expect(youtube_tag.instance_variable_get(:@markup)).to eq(id)
         
         result = youtube_tag.render({})
-        expect(result).to include("youtube.com/embed/#{id}")
+        expect(result).to include("youtube-nocookie.com/embed/#{id}")
       end
     end
   end
