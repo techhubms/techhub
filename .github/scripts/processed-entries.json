@@ -15416,5 +15416,17 @@
     "reason": "Succesfully added: Assigned the Azure category because the content exclusively focuses on Azure Migrate and its new wave planning capability (Azure inclusion rule 1 and 4). No other categories were assigned since the article is centered on migration orchestration, planning, and operations within Azure—not on coding, DevOps, ML, AI, or Security. All information presented directly ties back to Azure migration tools, methods, and practical implementation using Azure services. There were no generic exclusion triggers: the article is technical, not biographical, contains sufficient length, and is in English.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-cloud-migration-with-wave-planning-in-azure-migrate/ba-p/4467959",
     "collection": "community"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because the content is a Microsoft-published analysis specifically on global artificial intelligence adoption, focusing on usage patterns, policy implications, and infrastructure (AI inclusion rules 1, 4, 5, and 6). No other technical categories apply because the article is a news/report summary focused on AI diffusion trends, not on development, coding, Azure, security, ML engineering, or DevOps processes.",
+    "timestamp": "2025-11-11 19:04:49 +00:00",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2025/11/10/understanding-global-ai-diffusion/"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on building, orchestrating, and architecting AI agents using Microsoft and open-source AI tools (AI rule 1, 4). Assigned Azure category because it details the use of Azure services—Logic Apps, Power Automate, Azure Functions, Azure AI Foundry—as core components (Azure rules 1, 4). Assigned Coding category as the article deeply discusses SDK-based (code-first) development with Semantic Kernel, Microsoft Agent Framework, and the hybridization of code and workflow (Coding rules 1, 2, 4). ML category was considered but not assigned, as the primary focus is AI agent orchestration rather than custom ML engineering. Other categories like DevOps and Security were not applied as the article does not centrally address DevOps pipelines or security-specific scenarios. No generic or specific exclusions applied—the content is technical, practitioner-focused, and meets length/quality standards.",
+    "timestamp": "2025-11-11 19:05:33 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-ai-agents-workflow-first-vs-code-first-vs-hybrid/ba-p/4466788"
   }
 ]

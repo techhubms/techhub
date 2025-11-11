@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_news",
+  "Author": "stclarke",
+  "FeedName": "Microsoft News",
+  "Link": "https://blogs.microsoft.com/on-the-issues/2025/11/10/understanding-global-ai-diffusion/",
+  "PubDate": "2025-11-11T18:10:45+00:00",
+  "ProcessedDate": "2025-11-11 19:02:56",
+  "FeedUrl": "https://news.microsoft.com/source/feed/",
+  "FeedLevelAuthor": "Source",
+  "Description": "The post [New report: More than 1.2 billion people used AI tools in less than 3 years](https://blogs.microsoft.com/on-the-issues/2025/11/10/understanding-global-ai-diffusion/) appeared first on [Source](https://news.microsoft.com/source).",
+  "EnhancedContent": "![Image of a globe with data scrolling across it.](https://blogs.microsoft.com/wp-content/uploads/sites/5/2025/11/AIDiffusionHeader.jpg)\n\nArtificial intelligence is transforming the way we work, learn, and innovate—and it’s doing so at a pace that surpasses every major technology before it. Microsoft’s inaugural [AI Diffusion Report](https://www.microsoft.com/en-us/research/group/aiei/ai-diffusion/)offers a comprehensive look at how AI adoption is accelerating worldwide, drawing on data from more than 100 countries. In less than three years, more than 1.2 billion people have used AI tools, a rate of adoption faster than the internet, the personal computer, or even the smartphone. This rapid diffusion underscores AI’s potential as a general-purpose technology but also highlights the urgent need to ensure equitable access.\n\nThe report introduces three indices—the AI Frontier Index, the AI Infrastructure Index, and the AI Diffusion Index—to help policymakers, researchers, and industry leaders understand where breakthroughs are happening, where capacity exists to scale, and where AI is being used to improve lives. These insights show that adoption is fastest where connectivity and digital infrastructure are strongest, while nearly four billion people still lack the basics needed to participate in the AI economy. Bridging this gap is essential to avoid deepening global divides.\n\nBeyond the numbers, the report illustrates the need for collaborative action to expand access to digital infrastructure, strengthen skills development, and promote responsible AI policies. By investing in these foundational elements, governments and organizations can unlock AI’s potential for growth and innovation. The data makes clear that speed alone does not guarantee shared prosperity—broad accessibility does.\n\nTo explore the full findings and recommendations, read the [AI Diffusion Report](https://aka.ms/AIDiffusionReport).\n\nTags: [AI](https://blogs.microsoft.com/on-the-issues/tag/ai/), [artificial intelligence](https://blogs.microsoft.com/on-the-issues/tag/artificial-intelligence/), [infrastructure](https://blogs.microsoft.com/on-the-issues/tag/infrastructure/)",
+  "Title": "New report: More than 1.2 billion people used AI tools in less than 3 years",
+  "Tags": [
+    "AI",
+    "Company News"
+  ]
+}

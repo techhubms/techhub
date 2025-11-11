@@ -1,0 +1,14 @@
+{
+  "OutputDir": "_news",
+  "Author": "Microsoft Fabric Blog",
+  "FeedName": "Microsoft Fabric Blog",
+  "Link": "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-october-2025-release/",
+  "PubDate": "2025-10-30T11:21:57+00:00",
+  "ProcessedDate": "2025-11-11 19:02:34",
+  "FeedUrl": "https://blog.fabric.microsoft.com/en-us/blog/feed/",
+  "FeedLevelAuthor": "Microsoft Fabric Blog",
+  "Description": "Here is the October 2025 release of the on-premises data gateway (version 3000.290).",
+  "EnhancedContent": "The October 2025 release of the on-premises data gateway is (version 3000.290).\n\n## Bug Fixes\n\nFixed an issue where the FabricPipelineWorker’s proxy configuration settings were lost after an upgrade.\n\n## Power BI Desktop Compatibility\n\nThis update brings the on-premises data gateway up to date with the October 2025 release of Power BI Desktop.\n\n[Download on-premises data gateway (standard mode)](https://download.microsoft.com/download/d/a/1/da1fddb8-6da8-4f50-b4d0-18019591e182/GatewayInstall-25-10.exe)\n\n[Download on-premises data gateway (personal mode)](https://download.microsoft.com/download/6/0/2/602A459E-E1A3-4FB9-B07F-FC2B60881900/On-premises%20data%20gateway%20%28personal%20mode%29-25-10.exe)\n\nThis version of the gateway will ensure that the reports that you publish to the Power BI Service and refresh via the gateway will go through the same query execution logic/run-time as in the October version of Power BI Desktop. View the data connectivity section of Power BI’s October 2025 feature summary for updates on relevant connectors.\n\n## Thank you!\n\nPlease continue to send us feedback for what new capabilities you’d like to see in the future! You can vote for your favorite feature suggestions at [Ideas](https://ideas.powerbi.com/ideas/).",
+  "Title": "On-premises data gateway October 2025 release",
+  "Tags": []
+}
