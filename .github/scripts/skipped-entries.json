@@ -8403,5 +8403,11 @@
     "timestamp": "2025-11-10 22:06:14 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/agentic-power-for-aks-introducing-the-agentic-cli-in-public/ba-p/4468166"
+  },
+  {
+    "timestamp": "2025-11-11 00:11:02 +00:00",
+    "reason": "No categories found: No categories assigned. The content is about AI-powered search features introduced into Copilot, focusing on user experience improvements, trust, citations, and usability for general consumers. It does not describe AI service development, coding, developer tooling, or implementation for developers—rather, it showcases business productivity and end-user use of Copilot as a search and discovery tool. According to the Copilot Product Distinction rule, general 'Copilot' for productivity, search, and information retrieval is not categorized. There is no substantial coverage of Microsoft developer technologies, AI engineering, coding, security, Azure, DevOps, or ML from an engineering perspective. The main topics are around general usage for information search and consumer-facing improvements, which fall under the generic exclusion rules for consumer/business productivity tools.",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2025/11/07/bringing-the-best-of-ai-search-to-copilot/"
   }
 ]

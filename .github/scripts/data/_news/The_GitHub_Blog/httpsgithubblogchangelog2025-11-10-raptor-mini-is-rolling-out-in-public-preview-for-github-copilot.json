@@ -1,0 +1,17 @@
+{
+  "Author": "Allison",
+  "OutputDir": "_news",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Link": "https://github.blog/changelog/2025-11-10-raptor-mini-is-rolling-out-in-public-preview-for-github-copilot",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "FeedName": "The GitHub Blog",
+  "PubDate": "2025-11-10T16:15:49+00:00",
+  "Description": "Raptor mini, a new experimental model, is now rolling out in GitHub Copilot to Pro, Pro+, and Free plans in Visual Studio Code. You’ll be able to select the model…\n\nThe post [Raptor mini is rolling out in public preview for GitHub Copilot](https://github.blog/changelog/2025-11-10-raptor-mini-is-rolling-out-in-public-preview-for-github-copilot) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "EnhancedContent": "Raptor mini, a new experimental model, is now rolling out in GitHub Copilot to Pro, Pro+, and Free plans in Visual Studio Code.\n\nYou’ll be able to select the model in the Copilot Chat model picker from Visual Studio Code in chat, ask, edit, and agent modes.\n\nRollout will be gradual. Check back soon if you don’t see it yet.\n\n### Learn more\n\nTo explore all models available in GitHub Copilot, see [our documentation on models](https://docs.github.com/copilot/reference/ai-models/supported-models) and get started with Copilot.\n\n### Share your feedback\n\nHave feedback or questions? Join the [community discussion](https://github.com/orgs/community/discussions/categories/copilot-conversations) to share your experiences and tips.",
+  "ProcessedDate": "2025-11-11 00:09:30",
+  "Title": "Raptor mini is rolling out in public preview for GitHub Copilot"
+}
