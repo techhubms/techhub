@@ -15398,5 +15398,23 @@
     "canonical_url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2026-is-here-faster-smarter-and-a-hit-with-early-adopters/",
     "timestamp": "2025-11-11 17:04:21 +00:00",
     "reason": "Succesfully added: Assigned the 'AI' category because Visual Studio 2026 is described as an AI-native IDE with deeply integrated AI features, including GitHub Copilot and new AI agents for C# and C++ (AI category rule 1 and 2). Assigned 'Coding' because the content centers on development workflows, coding productivity, and support for programming languages and frameworks (.NET, C#, C++), matching Coding category inclusion rules 1, 2, and 4. Did not assign 'DevOps' or 'Azure' as the content does not focus on DevOps tools, CI/CD, infrastructure, or Azure-specific developments. Did not apply exclusion rules, as the content is highly technical, development-focused, not business/productivity-only, and is delivered in English."
+  },
+  {
+    "timestamp": "2025-11-11 18:06:11 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category as the content is focused on patch management, administration, and performance of Azure DevOps Server (DevOps rules 1 and 5). Azure category is included because the product is part of the Azure family and patching is done within the Azure ecosystem (Azure rule 1). Security category is included since patches specifically address security (upgrade to SHA-256, unsigned binaries fix), complying with Security rules 1 and 7. No coding or AI/ML categories qualify since there is no developer code or AI/ML focus. Generic exclusion rules do not apply; the article is technical, relevant, and not a sales pitch or business-only content.",
+    "canonical_url": "https://devblogs.microsoft.com/devops/november-patches-for-azure-devops-server-2/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-11 18:07:06 +00:00",
+    "reason": "Succesfully added: Included 'Azure' category because the content centers on Microsoft Azure virtual machines and service improvements (Azure rule 1). Included 'Security' category due to explicit focus on confidential computing, hardware-based VM isolation, and SEV-SNP technology (Security rules 1 and 4). Did not add 'AI', 'ML', 'Coding', 'DevOps', or 'GitHub Copilot' because the content is specifically about infrastructure performance and security, with no coding practice, AI models, machine learning, DevOps, or GitHub Copilot content present. The content meets quality standards and is not excluded by any generic rule: it is technical, substantive, in English, and not a sales pitch or biographical piece.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-confidential-computing/generational-performance-leap-for-azure-confidential-computing/ba-p/4468989",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-11 18:07:27 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content exclusively focuses on Azure Migrate and its new wave planning capability (Azure inclusion rule 1 and 4). No other categories were assigned since the article is centered on migration orchestration, planning, and operations within Azure—not on coding, DevOps, ML, AI, or Security. All information presented directly ties back to Azure migration tools, methods, and practical implementation using Azure services. There were no generic exclusion triggers: the article is technical, not biographical, contains sufficient length, and is in English.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-cloud-migration-with-wave-planning-in-azure-migrate/ba-p/4467959",
+    "collection": "community"
   }
 ]

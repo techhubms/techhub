@@ -8451,5 +8451,11 @@
     "canonical_url": "https://www.youtube.com/shorts/tgxFuUO7u88",
     "timestamp": "2025-11-11 17:04:50 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rules—specifically, this video primarily serves as an event overview, focusing on attendee experience and logistics for Microsoft Ignite, rather than technical implementation or deep-dives into Microsoft technologies. There is no substantive technical content described regarding development, coding, architecture, or platform engineering. No categories are assigned."
+  },
+  {
+    "timestamp": "2025-11-11 18:06:40 +00:00",
+    "reason": "No categories found: No categories assigned because the content (video) is biographical in nature, focusing on a personal story from the Log4j maintainer about the Log4Shell crisis and a phone call he received—a clear case of the 'Biographical Focus' generic exclusion rule in Chapter 3. The description describes a personal moment rather than technical implementation, coding practices, Microsoft technologies or developer guidance. There is no substantive technical content relevant to the listed Microsoft technology categories. Therefore, exclusion is required.",
+    "canonical_url": "https://www.youtube.com/shorts/dA4zwkXCU6Y",
+    "collection": "videos"
   }
 ]
