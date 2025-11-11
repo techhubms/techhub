@@ -15368,5 +15368,11 @@
     "reason": "Succesfully added: Assigned AI because the content centers on deploying AI solutions, specifically leveraging Microsoft's AI infrastructure (AI rule 1). Assigned Azure because Azure AI Landing Zones are a core Azure architecture tool (Azure rule 1). Assigned DevOps because the episode highlights infrastructure as code deployment strategies and automation (DevOps rules 5 and 6). Assigned Security since governance and security are repeatedly emphasized in the solution (Security rules 2 and 4). The content does not qualify for the Coding or ML categories as it does not focus on development frameworks/languages or custom data science/ML workflows.",
     "collection": "videos",
     "timestamp": "2025-11-11 09:05:52 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://www.thomasmaurer.ch/2025/11/strengthen-server-resilience-windows-recovery-environment-winre-for-windows-server-with-azure-arc/",
+    "timestamp": "2025-11-11 14:05:00 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content is specifically about using Azure Arc and Azure Policy to manage Windows Server environments (Azure inclusion rules 1, 2, 4, and 5). Assigned the Security category because it focuses on improving recovery readiness, minimizing downtime, and enforcing configuration standards via policy, which aligns with security and compliance best practices (Security inclusion rules 1, 4, 7, and 9). Did not assign Coding, DevOps, ML, AI, or GitHub Copilot categories as the content does not focus on development, AI, machine learning, DevOps processes, or coding workflows. There are no generic exclusion triggers present."
   }
 ]
