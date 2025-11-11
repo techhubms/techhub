@@ -15428,5 +15428,17 @@
     "reason": "Succesfully added: Assigned AI category because the content focuses on building, orchestrating, and architecting AI agents using Microsoft and open-source AI tools (AI rule 1, 4). Assigned Azure category because it details the use of Azure services—Logic Apps, Power Automate, Azure Functions, Azure AI Foundry—as core components (Azure rules 1, 4). Assigned Coding category as the article deeply discusses SDK-based (code-first) development with Semantic Kernel, Microsoft Agent Framework, and the hybridization of code and workflow (Coding rules 1, 2, 4). ML category was considered but not assigned, as the primary focus is AI agent orchestration rather than custom ML engineering. Other categories like DevOps and Security were not applied as the article does not centrally address DevOps pipelines or security-specific scenarios. No generic or specific exclusions applied—the content is technical, practitioner-focused, and meets length/quality standards.",
     "timestamp": "2025-11-11 19:05:33 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-ai-agents-workflow-first-vs-code-first-vs-hybrid/ba-p/4466788"
+  },
+  {
+    "timestamp": "2025-11-11 20:04:21 +00:00",
+    "reason": "Succesfully added: Included 'GitHub Copilot' and 'AI' categories according to inclusion rules for GitHub Copilot-specific feature announcements (GitHub Copilot Rules 1-4, AI Rule 2). The content is a technical update about a new AI-driven feature in Copilot, focused entirely on development tooling and integration within Visual Studio. No generic exclusion rules apply.",
+    "canonical_url": "https://github.blog/changelog/2025-11-11-auto-model-selection-for-copilot-in-visual-studio-in-public-preview",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-11 20:04:49 +00:00",
+    "reason": "Succesfully added: Assigned the Coding category because the event centers on .NET, a Microsoft development framework, and is focused on technical sessions for developers (Coding rule 1 and 4). There is no substantive information to justify other categories; the description showcases presentations, learning, and developer skills in the .NET ecosystem. No exclusion rules apply as this is not biographical, sales-oriented, workplace culture, or business/productivity tool focused content.",
+    "canonical_url": "https://www.youtube.com/watch?v=-c8r2fMi9cg",
+    "collection": "videos"
   }
 ]
