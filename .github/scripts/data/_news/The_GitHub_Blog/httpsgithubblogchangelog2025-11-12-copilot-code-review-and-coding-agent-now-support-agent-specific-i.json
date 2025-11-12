@@ -1,0 +1,17 @@
+{
+  "EnhancedContent": "You can now craft targeted custom instructions for Copilot code review and Copilot coding agent that don’t apply to other agents. The new `excludeAgent` property for `.instructions.md` custom instructions gives you exact control over when specific instructions apply.\n\n### 🎯 Recap: Customizing Copilot using `instructions.md`\nfiles\n\nYou can already use custom instruction files located in your `.github/instructions` directory to guide Copilot’s behavior for specific areas of your repository.\n\nThe `applyTo` property lets you specify paths or directories with path globs, so your instructions apply where you want them to, and nowhere else. For example, you could create a `models.instructions.md` file which only applies to your models by specifying `applyTo: \"app/models/**/*.rb\"` .\n\n### 🛡️ Introducing agent-specific repository instructions with `excludeAgent`\n\nThe new `excludeAgent` property allows you to control which Copilot agents use a given instructions file:\n\n- Set `excludeAgent: \"code-review\"`\nto hide your instructions file from Copilot code review.\n- Set `excludeAgent: \"coding-agent\"`\nto hide your instructions file from Copilot coding agent.\n\nIf you don’t have an `excludeAgent` property in your frontmatter, your instructions file will be used by all agents.\n\nThis feature ensures you can tailor your guidance for each agent, reducing overlap and allowing you to provide focused, specific instructions.\n\n![Screenshot showing how to specify agent-specific instructions in .instructions.md files.](https://github.com/user-attachments/assets/2abfcfb4-3c6a-422b-8a02-02c923c46ae7)\n\n### 🛠️ Other custom instructions improvements\n\nCopilot code review recently fixed a bug that prevented it from reading certain `*.instructions.md` files.\n\nFor details on creating instructions files, visit the [Copilot instructions documentation](https://docs.github.com/copilot/how-tos/configure-custom-instructions/add-repository-instructions#creating-a-repository-custom-instructions-file).\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/copilot-conversations).",
+  "Author": "Allison",
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "OutputDir": "_news",
+  "Description": "You can now craft targeted custom instructions for Copilot code review and Copilot coding agent that don’t apply to other agents. The new excludeAgent property for .instructions.md custom instructions gives…\n\nThe post [Copilot code review and coding agent now support agent-specific instructions](https://github.blog/changelog/2025-11-12-copilot-code-review-and-coding-agent-now-support-agent-specific-instructions) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2025-11-12-copilot-code-review-and-coding-agent-now-support-agent-specific-instructions",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2025-11-12T21:27:42+00:00",
+  "Title": "Copilot code review and coding agent now support agent-specific instructions",
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "ProcessedDate": "2025-11-12 22:04:11"
+}

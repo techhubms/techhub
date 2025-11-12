@@ -15716,5 +15716,11 @@
     "reason": "Succesfully added: Assigned 'Security' category because the content focuses on protecting cryptographic credentials, secret detection, and improvements to application and repository security (Security rule 1, 2, 7, 8). Assigned 'DevOps' category as secret scanning is a core DevOps and repository operation (DevOps rule 7: monitoring/operations, rule 6: automation, and code security as part of development workflows). Did not assign Coding, AI, Azure, ML, or GitHub Copilot because there is no direct guidance on software development concepts, AI/ML, Azure platform features, or Copilot; the focus is on security tooling for repositories.",
     "canonical_url": "https://github.blog/changelog/2025-11-12-secret-scanning-improves-private-key-detection",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' because content centers specifically on Copilot's agent features and customization (GitHub Copilot Inclusion rule 1, 2, 3). 'AI' category assigned as Copilot is an AI-powered coding assistant (AI rule 2). Detailed Copilot agent behavior, .instructions.md customization, and developer workflow focus qualify the content. 'DevOps' mentioned in tags due to Copilot's role in team workflow automation, but not given as a primary category since the main subject pertains to code agent configuration. All exclusion rules were checked and do not apply.",
+    "timestamp": "2025-11-12 22:05:53 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-11-12-copilot-code-review-and-coding-agent-now-support-agent-specific-instructions"
   }
 ]
