@@ -8469,5 +8469,11 @@
     "timestamp": "2025-11-11 22:06:14 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/can-t-setup-mfa-on-azure-personal-account/m-p/4468744#M22315",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-12 15:05:08 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule. The 'content' field is null (empty) and both 'description' and 'tags' are empty, so there is no substantive content to assess or categorize. Without main content or any meaningful description, this entry does not qualify for further processing or category assignment.",
+    "canonical_url": "https://www.youtube.com/shorts/zPg6CKsidMs"
   }
 ]

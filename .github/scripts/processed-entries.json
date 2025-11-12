@@ -15488,5 +15488,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/real-time-ai-streaming-with-azure-openai-and-signalr/ba-p/4468833",
     "reason": "Succesfully added: Assigned 'AI' because this content is centered around Azure OpenAI integration (AI inclusion rule 1) and streaming AI responses. Assigned 'Azure' due to heavy use of Azure platform components—Azure OpenAI, Azure SignalR Service (Azure rules 1, 4). Assigned 'Coding' because it details .NET, ASP.NET Core, and Angular code, focusing on development and technical implementation (Coding rules 1–5). Assigned 'DevOps' as it addresses deployment, connection management, scaling, and real-time communication best practices relevant to DevOps engineers (DevOps rules 3, 5, 6, and 9). Security aspects are covered but not as the main focus, so 'Security' was not included. All explanations and code examples are technical, with no generic exclusion rules triggered.",
     "timestamp": "2025-11-12 10:06:34 +00:00"
+  },
+  {
+    "timestamp": "2025-11-12 15:04:55 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Content qualifies for AI category due to focused discussion on AI programming tools (Copilot, TypeAgent), Python’s role in AI, and Guido’s thoughts on the future of AI (AI inclusion rules 1, 4, 5). Azure category included because of Microsoft’s cloud-related products and Azure tag presence, linking the conversation to Azure ecosystem (Azure inclusion rule 1, tags). Coding category added based on deep exploration of programming languages (Python, TypeScript), typechecking, Pyright, tooling, and developer best practices (Coding rules 1, 2, 4). Generic exclusions do not apply as content is technically focused, substantial, and developer-oriented.",
+    "canonical_url": "https://www.youtube.com/watch?v=cMRvgR8EpOE"
   }
 ]
