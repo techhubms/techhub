@@ -15524,5 +15524,41 @@
     "timestamp": "2025-11-12 16:09:10 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Assigned Azure category because the entire post focuses on building and deploying Python apps to Azure App Service for Linux (Azure rules 1, 4, and 5). Assigned DevOps due to the strong focus on CI/CD with GitHub Actions, automated deployments, and developer/team workflows (DevOps rules 2, 5, and 9). Assigned Coding because the post describes code-level changes, modern Python project setup with pyproject.toml/setup.py, and related tooling (Coding rules 1, 2, and 4). AI and ML categories were not chosen as the focus is on streamlining deployment for general Python web apps, not AI/ML or custom model engineering. Security is not a focus here. The content is fully in English, is technical, and exceeds community post length requirements. There are no generic exclusion rules triggered."
+  },
+  {
+    "timestamp": "2025-11-12 17:06:05 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/research/blog/mmctagent-enabling-multimodal-reasoning-over-large-video-and-image-collections/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because this news focuses on Microsoft’s multimodal AI agent (AI Rule 1: Microsoft AI Products/Services) and its advanced reasoning techniques. Assigned Azure because MMCTAgent is deployed on Azure AI Foundry Labs and uses Azure AI Search for semantic retrieval (Azure Rule 1, 2, and 4). Other categories (ML, Coding, DevOps, Security, GitHub Copilot) were not assigned: the content does not detail custom ML engineering/analytics, coding frameworks, DevOps methodology, security, or GitHub Copilot. The decision follows the rule hierarchy and prioritizes central Microsoft AI and Azure technology features described in the article."
+  },
+  {
+    "timestamp": "2025-11-12 17:06:30 +00:00",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-copilot-helps-build-the-github-platform/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the core focus is on the integration and use of GitHub Copilot (AI rule 2 & 5). 'GitHub Copilot' category is required when content directly discusses Copilot (GitHub Copilot rule 1), and AI is always included together. 'Coding' applies due to detailed coverage of code contributions, refactoring, bug fixes, and feature development (Coding rules 1-5). 'DevOps' applies due to CI/CD pipeline stability, performance bottlenecks, and collaboration practices between Copilot and human engineers (DevOps rules 1, 5, 9). 'Security' category fits due to Copilot's role in adding security gates and handling sensitive database migrations (Security rules 1, 2, 4, 9). No exclusion rules applied, as content is technical, substantial, and developer-focused."
+  },
+  {
+    "timestamp": "2025-11-12 17:06:55 +00:00",
+    "canonical_url": "https://dellenny.com/how-to-use-the-azure-pricing-calculator-effectively-a-step-by%e2%80%90step-guide/",
+    "collection": "posts",
+    "reason": "Succesfully added: The Azure category was assigned because the guide centers on practical usage of the Azure Pricing Calculator and discusses Azure service configuration, migration planning, and cost management (Azure inclusion rules 1, 4, and 5). No other categories matched—there is no substantial coverage of coding, DevOps, AI, ML, or security beyond Azure cost planning. The tags were carefully extracted for technical depth and relevance to planning and estimation. The tone is professional and down-to-earth, following quality requirements."
+  },
+  {
+    "timestamp": "2025-11-12 17:07:17 +00:00",
+    "canonical_url": "https://dellenny.com/understanding-azure-slas-what-99-9-really-means/",
+    "collection": "posts",
+    "reason": "Succesfully added: The content centers entirely on Azure Service Level Agreements—what they mean for developers, how Azure uptime percentages work, the impact on architecture, and how to improve reliability. This qualifies squarely for the 'Azure' category (Azure rules 1, 5, 6). It is not primarily about coding, DevOps, ML, Security, or AI; those topics are referenced only as supporting practices for uptime, not technical deep dives. No generic exclusion rules apply: the content is technical and educational, in English, with substantial depth and focus on Azure technologies. Tags are selected for technical accuracy and architectural relevance."
+  },
+  {
+    "timestamp": "2025-11-12 17:07:45 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=twQTixBZen8",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content specifically discusses GitHub Copilot build performance features, which per rules should always be tagged with both (AI Rule 2, GitHub Copilot Rule 1). 'Coding' category is included due to the focus on C++ build optimization in Visual Studio (Coding Rule 1 and 2). Content centers on developer tooling and technical implementation, with no generic exclusion triggers met."
+  },
+  {
+    "timestamp": "2025-11-12 17:08:07 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-biztalk-server-2020-cumulative-update-7/ba-p/4469100",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category because the post provides official guidance about migrating BizTalk workloads to Azure Logic Apps (Azure rule 1, 6). Assigned DevOps because it addresses group administration, software upgrade best practices, and deployment strategies relevant to operational management (DevOps rules 4, 5, 6). Assigned Coding since BizTalk Server and associated integration development (particularly with Visual Studio) are developer activities (Coding rule 1, 2, 5). BizTalk is not excluded by generic rules, and the migration to Logic Apps (an Azure service) is a central technical topic. The content is in English, well above length minimum, and has no sales pitch, job, or negative focus."
   }
 ]

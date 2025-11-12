@@ -1,0 +1,14 @@
+{
+  "FeedName": "Microsoft Tech Community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Title": "Azure Governance Tools Policies, Blueprints, and Role-Based Access Control (RBAC)",
+  "OutputDir": "_community",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "ProcessedDate": "2025-11-12 17:05:29",
+  "PubDate": "2025-11-12T16:21:37+00:00",
+  "Tags": [],
+  "Description": "In today’s cloud-driven world, organizations shifting workloads to Microsoft Azure need more than just virtual machines and databases—they need **governance**. Governance provides the framework of rules, standards, and controls that keeps your Azure environment secure, compliant, and cost-efficient.\n\nIn this post, we’ll explore three essential Azure governance tools—**Azure Policy**, **Azure Blueprints**, and **Role-Based Access Control (RBAC)**—how they differ, how they work together, and how you can use them to create a well-governed Azure environment.\n\n[https://dellenny.com/azure-governance-tools-policies-blueprints-and-role-based-access-control-rbac/](https://dellenny.com/azure-governance-tools-policies-blueprints-and-role-based-access-control-rbac/)",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/azure-governance-tools-policies-blueprints-and-role-based-access/m-p/4469353#M22326",
+  "EnhancedContent": "In today’s cloud-driven world, organizations shifting workloads to Microsoft Azure need more than just virtual machines and databases—they need **governance**. Governance provides the framework of rules, standards, and controls that keeps your Azure environment secure, compliant, and cost-efficient.\n\nIn this post, we’ll explore three essential Azure governance tools—**Azure Policy**, **Azure Blueprints**, and **Role-Based Access Control (RBAC)**—how they differ, how they work together, and how you can use them to create a well-governed Azure environment.\n\n[https://dellenny.com/azure-governance-tools-policies-blueprints-and-role-based-access-control-rbac/](https://dellenny.com/azure-governance-tools-policies-blueprints-and-role-based-access-control-rbac/)",
+  "Author": "JohnNaguib"
+}
