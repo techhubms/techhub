@@ -15560,5 +15560,47 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-biztalk-server-2020-cumulative-update-7/ba-p/4469100",
     "collection": "community",
     "reason": "Succesfully added: Assigned Azure category because the post provides official guidance about migrating BizTalk workloads to Azure Logic Apps (Azure rule 1, 6). Assigned DevOps because it addresses group administration, software upgrade best practices, and deployment strategies relevant to operational management (DevOps rules 4, 5, 6). Assigned Coding since BizTalk Server and associated integration development (particularly with Visual Studio) are developer activities (Coding rule 1, 2, 5). BizTalk is not excluded by generic rules, and the migration to Logic Apps (an Azure service) is a central technical topic. The content is in English, well above length minimum, and has no sales pitch, job, or negative focus."
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category because the article centers on the safe, responsible, and empowering use of AI for young people and Microsoft's related initiatives (AI inclusion rule 5 and 6). The entire piece discusses AI-enabled technologies, governance, and digital safety policies as they relate to youth—meeting multiple AI category inclusion criteria. The content does not provide technical implementation or development details for Coding, DevOps, Azure, ML, or Security categories, nor does it describe Microsoft's AI services at a technical depth for those categories. No generic exclusion rules apply: the article is not biographical, not sales-focused, and is a substantial, English-language, technical policy discussion for practitioners and stakeholders.",
+    "timestamp": "2025-11-12 18:06:16 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2025/11/12/uplifting-and-empowering-young-people-for-an-ai-future/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the central focus of the announcement is a purpose-built infrastructure for developing, training, and deploying AI workloads at scale (AI category rule 1, 4, and 5). Assigned 'Azure' because the datacenter's integration and expansion clearly tie directly into the broader Azure cloud footprint, delivering cloud, compute, storage, and platform services (Azure category rule 1, 4, and 5). Coding, DevOps, ML, Security, and GitHub Copilot categories were not assigned because the content does not discuss development practices, DevOps processes, direct ML engineering, or code-level implementation, but rather focuses on platform and infrastructure capabilities. No generic exclusion rules apply, as the post is technical, professional, focused on Microsoft technology, and delivered in English. The title and summary were adjusted to reflect the content’s architectural and developer relevance.",
+    "timestamp": "2025-11-12 18:06:39 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_today-we-announced-our-new-fairwater-datacenter-activity-7394420047294648321-RQ77"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content centers on Copilot's AI-driven features, specifically automatic language model selection (AI rule 2, 1, 5). Assigned GitHub Copilot category as the post is about GitHub Copilot capabilities and features (GitHub Copilot rule 1, 2, 3). Not assigned Coding as the article focuses on product features rather than programming practices. No exclusion rules apply—this is technical product announcement relevant to Copilot development use.",
+    "timestamp": "2025-11-12 18:07:01 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/introducing-copilot-auto-model-selection-preview/"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned:\n- 'AI' because this release centers on expanded use of AI-powered features (notably agents, Copilot Chat, planning agents, tool approval, and automated workflows) and explicitly calls out Copilot/Copilot Chat, which are Microsoft- and GitHub-provided.\n- 'GitHub Copilot' because Copilot extension, Copilot Chat, Copilot CLI, and Copilot-powered features (including inline suggestions and chat unification) are major release themes (GitHub Copilot rules 1, 2, 3, 4, 5, 6—always include AI as well).\n- 'Coding' because the release features a host of enhancements for code authoring, navigation, Python and Pylance updates, code editing, refactoring tools, extension authoring, and algorithmic improvements, all aimed at software development workflows (Coding rules 1, 2, 3, 5).\n- 'DevOps' because of numerous changes related to source control, GitHub PRs, multi-repo workflows, improved graph views, and Git integrations—these directly relate to development operations, CI/CD, and collaboration tools (DevOps rules 2, 5, 9, 11).\nNot assigning Azure, ML, or Security as central themes—the release doesn't focus primarily on Azure cloud/tooling, data engineering, or complex security architectures, though related improvements exist. The update is squarely aimed at enhancing developer and DevOps workflows through significant AI/Copilot integration, agent expansion, and productivity tooling.",
+    "timestamp": "2025-11-12 18:08:44 +00:00",
+    "collection": "news",
+    "canonical_url": "https://code.visualstudio.com/updates/v1_106"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the episode demonstrates Microsoft SQL Server databases in the context of Kubernetes and cloud infrastructure, with Azure featured as a central element (Azure rules 1, 4, and 5). Although Pure Storage is a third-party solution, the workflow and examples are built around Microsoft SQL Server and its integration with cloud-native orchestration, meeting the threshold for Microsoft-centric content. Did not assign Coding or DevOps categories since the primary focus is database provisioning and management workflows, with no explicit code development or CI/CD process described in the provided episode summary.",
+    "timestamp": "2025-11-12 18:09:17 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=FkPyaJo5X08"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content is focused on GitHub Copilot's new C++ code editing tools, in line with category rules for GitHub Copilot content (GitHub Copilot Inclusion Rule 1, AI Rule 2). Included 'Coding' category due to coverage of C++ development and refactoring tools in Visual Studio (Coding Rule 1 and 2). Did not assign other categories as the content does not cover Azure, DevOps, ML, or Security topics.",
+    "timestamp": "2025-11-12 18:09:35 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=PWmLjg0HFT4"
+  },
+  {
+    "reason": "Succesfully added: This content is an Azure blog post announcing query-based metric alerts within Azure Monitor. 'Azure' category applies because it covers Azure service capabilities in detail (Azure rule 1). 'DevOps' category qualifies since the main focus is on cloud monitoring, alerting, and operational resource management for modern DevOps teams (DevOps rules 6 and 7). 'ML' is not assigned because data science or analytics engineering is not the focus, and 'Security' is excluded as no specific security or compliance implementation is detailed. Rules on generic exclusions do not apply as this is technical, informative content focused on platform capabilities—no sales, biography, or business productivity aspects. Tags were extracted based on the many Azure, DevOps, and monitoring technologies and scenarios mentioned.",
+    "timestamp": "2025-11-12 18:10:01 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-public-preview-of-query-based-metric-alerts-in-azure/ba-p/4469290"
   }
 ]
