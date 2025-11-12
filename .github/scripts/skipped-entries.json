@@ -8475,5 +8475,17 @@
     "collection": "videos",
     "reason": "No categories found: Content excluded due to generic exclusion rule. The 'content' field is null (empty) and both 'description' and 'tags' are empty, so there is no substantive content to assess or categorize. Without main content or any meaningful description, this entry does not qualify for further processing or category assignment.",
     "canonical_url": "https://www.youtube.com/shorts/zPg6CKsidMs"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=sZF35ORhSq0",
+    "timestamp": "2025-11-12 16:08:20 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content is excluded due to the generic exclusion rule: Non-English Content. The description and title are primarily in Portuguese (pt-BR), as shown by phrases like 'Toda sexta-feira, ao vivo', 'projetos Open Source brasileiros', 'com suas pessoas mantenedoras', and 'vem conhecer o CloudSim Plus'. According to the workflow, if content is not primarily in English (<80% English in main text), it must be excluded. No categories were assigned."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=TNoYF2d_qIY",
+    "timestamp": "2025-11-12 16:08:32 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: the provided description and title are primarily in Portuguese and less than 80% English, triggering the non-English content exclusion (Generic Exclusion Rules, Language and Scope Exclusions). Additionally, there is no detailed technical content, only an event announcement and introductory context."
   }
 ]
