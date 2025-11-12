@@ -15704,5 +15704,17 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned the Coding category because the session is centered on new programming language features in C# 14, relevant to development in the Microsoft ecosystem (Coding inclusion rule 1). No AI, Azure, DevOps, Security, or ML categories qualify, as the content is specifically about language enhancements and related productivity improvements in C#, with no focus on AI/ML, cloud infrastructure, or security topics. Tags include specific technologies and releases discussed or mentioned in the description, reflecting the session’s technical scope.",
     "timestamp": "2025-11-12 20:11:18 +00:00"
+  },
+  {
+    "timestamp": "2025-11-12 21:04:04 +00:00",
+    "reason": "Succesfully added: Included the 'AI' category based on the primary focus on Azure AI Foundry (AI inclusion rule 1), which is a Microsoft AI platform for building intelligent agents and related tools. 'Azure' is included because all the highlighted content pertains to Azure-based services (Azure inclusion rule 1). Excluded 'Coding,' as the guide focuses on event sessions and tools, not direct code development. 'DevOps,' 'Security,' and 'ML' are not primary themes based on the content reviewed, which is centered on AI agents, orchestration, and platform use rather than hands-on DevOps or ML engineering. No generic exclusion rules applied. Specific session details, focus on developer experience, and Azure AI Foundry's Microsoft context confirm these choices.",
+    "canonical_url": "https://devblogs.microsoft.com/foundry/ignitedevsessions/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-12 21:04:34 +00:00",
+    "reason": "Succesfully added: Assigned 'Security' category because the content focuses on protecting cryptographic credentials, secret detection, and improvements to application and repository security (Security rule 1, 2, 7, 8). Assigned 'DevOps' category as secret scanning is a core DevOps and repository operation (DevOps rule 7: monitoring/operations, rule 6: automation, and code security as part of development workflows). Did not assign Coding, AI, Azure, ML, or GitHub Copilot because there is no direct guidance on software development concepts, AI/ML, Azure platform features, or Copilot; the focus is on security tooling for repositories.",
+    "canonical_url": "https://github.blog/changelog/2025-11-12-secret-scanning-improves-private-key-detection",
+    "collection": "news"
   }
 ]
