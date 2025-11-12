@@ -15476,5 +15476,11 @@
     "canonical_url": "https://devops.com/why-your-slo-dashboard-is-lying-moving-beyond-vanity-metrics-in-production/",
     "timestamp": "2025-11-12 02:33:30 +00:00",
     "reason": "Succesfully added: Assigned the DevOps category because the content is about SLOs, error budgets, service reliability engineering, incident management, and best practices for operational improvement in production systems—matching DevOps Category rules 1, 3, 4, 5, 6, and 11. No other categories apply: there is no substantial Microsoft technology, coding language, AI, ML, Azure, or Security context (checked for each by scanning for Microsoft-specific products and technologies, which are absent). The description and technical depth qualify for knowledge aggregation, and the content is not excluded by any generic exclusion rule (not biographical, not a sales pitch, not negative, not a job/career post, not business strategy/executive content, and has sufficient length and technical detail)."
+  },
+  {
+    "timestamp": "2025-11-12 09:04:45 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the episode focuses on Azure migration and modernization practices (Azure inclusion rule 1 and 4). Assigned DevOps because content details structured cloud deployment sprints, collaboration between Microsoft/partners, and project acceleration methodologies that fit DevOps practices (DevOps inclusion rules 3, 4, 5). Did not assign other categories because there is no technical code, AI, security, or ML implementation described.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=OZYgy2XTuR4"
   }
 ]
