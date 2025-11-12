@@ -15482,5 +15482,11 @@
     "reason": "Succesfully added: Assigned Azure category because the episode focuses on Azure migration and modernization practices (Azure inclusion rule 1 and 4). Assigned DevOps because content details structured cloud deployment sprints, collaboration between Microsoft/partners, and project acceleration methodologies that fit DevOps practices (DevOps inclusion rules 3, 4, 5). Did not assign other categories because there is no technical code, AI, security, or ML implementation described.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=OZYgy2XTuR4"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/real-time-ai-streaming-with-azure-openai-and-signalr/ba-p/4468833",
+    "reason": "Succesfully added: Assigned 'AI' because this content is centered around Azure OpenAI integration (AI inclusion rule 1) and streaming AI responses. Assigned 'Azure' due to heavy use of Azure platform components—Azure OpenAI, Azure SignalR Service (Azure rules 1, 4). Assigned 'Coding' because it details .NET, ASP.NET Core, and Angular code, focusing on development and technical implementation (Coding rules 1–5). Assigned 'DevOps' as it addresses deployment, connection management, scaling, and real-time communication best practices relevant to DevOps engineers (DevOps rules 3, 5, 6, and 9). Security aspects are covered but not as the main focus, so 'Security' was not included. All explanations and code examples are technical, with no generic exclusion rules triggered.",
+    "timestamp": "2025-11-12 10:06:34 +00:00"
   }
 ]
