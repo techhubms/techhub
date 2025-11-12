@@ -1,0 +1,16 @@
+{
+  "Tags": [
+    ".NET"
+  ],
+  "OutputDir": "_videos",
+  "Author": "dotnet",
+  "ProcessedDate": "2025-11-12 23:03:55",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Title": "Aspire: Cloud-Native Development Simplified",
+  "Link": "https://www.youtube.com/watch?v=aXouOsBh4ro",
+  "PubDate": "2025-11-12T22:51:40+00:00",
+  "Description": "Building cloud-native applications shouldn't be complicated. .NET Aspire provides an opinionated framework that simplifies the development of observable, production-ready distributed applications. In this session, discover how .NET Aspire streamlines local development with automatic service discovery, built-in telemetry, and a powerful dashboard for monitoring your applications. Learn how to leverage Aspire's integrations with popular cloud services and databases to build scalable applications faster. Whether you're new to cloud-native development or looking to improve your existing workflows, see why .NET Aspire is transforming how developers build modern distributed applications.\n\n.NET 10 — The most intelligent and unified .NET yet: https://aka.ms/dotnet10/ .NET Aspire 13 — Simplified orchestration for cloud-native apps: https://aka.ms/aspire13/announcement ASP.NET Core 10 — Modern, secure, and full-stack web development: https://aka.ms/asp/dotnet/2025 .NET MAUI 10 — Build beautiful apps on every platform: https://aka.ms/dotnet/maui/2025 C# 14 — A more expressive and productive language: https://aka.ms/csharp14/announcement/2025 F# 10 — Safer, faster, and more functional than ever: https://aka.ms/fsharp10/2025/announcement Visual Studio 2026 — Faster, smarter, and built for the future: https://aka.ms/visualstudio2026/announcement .NET Conf 2025 — A global celebration of .NET innovation: https://aka.ms/dotnotconf2025/recap\n\nConnect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet",
+  "FeedName": "DotNet YouTube"
+}

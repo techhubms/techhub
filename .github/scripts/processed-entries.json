@@ -15722,5 +15722,11 @@
     "timestamp": "2025-11-12 22:05:53 +00:00",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-11-12-copilot-code-review-and-coding-agent-now-support-agent-specific-instructions"
+  },
+  {
+    "reason": "Succesfully added: The content centers on .NET Aspire, a framework for simplifying cloud-native distributed app development. 'Coding' is included for its strong focus on .NET, C#, ASP.NET Core, and related frameworks (Coding rules 1, 2, 5). 'DevOps' is included due to emphasis on observability, telemetry, production readiness, and developer workflows (DevOps rules 3, 5, 7, 9). 'Azure' is included because Aspire integrates with cloud services and the context is Microsoft's cloud ecosystem (Azure rules 1, 4, 5, 6). There is no mention of AI/ML or security-specific content.",
+    "canonical_url": "https://www.youtube.com/watch?v=aXouOsBh4ro",
+    "collection": "videos",
+    "timestamp": "2025-11-12 23:05:10 +00:00"
   }
 ]

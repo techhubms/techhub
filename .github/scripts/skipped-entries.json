@@ -8511,5 +8511,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/understanding-azure-slas-what-99-9-really-means/m-p/4469350#M22323",
     "collection": "community",
     "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this is an event announcement for Microsoft Ignite with no substantive technical content provided. The input includes only a brief promotional description and a link, with no technical topics, implementation details, or Microsoft technology deep dive. Per the 'Sales Pitches' and business/event announcement criteria in Chapter 3, this does not qualify for any categories.",
+    "canonical_url": "https://www.youtube.com/shorts/aZfFNE_xhvU",
+    "collection": "videos",
+    "timestamp": "2025-11-12 23:05:26 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded because the 'content' field is null. According to the workflow, decisions must be based only on the provided content. Without substantive content to analyze, it is not possible to determine if any inclusion rules for categories are met, nor to generate accurate metadata, excerpts, or markdown output.",
+    "canonical_url": "https://www.youtube.com/shorts/_qm5_OBHcUw",
+    "collection": "videos",
+    "timestamp": "2025-11-12 23:05:39 +00:00"
   }
 ]
