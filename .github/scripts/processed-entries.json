@@ -15602,5 +15602,107 @@
     "timestamp": "2025-11-12 18:10:01 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-public-preview-of-query-based-metric-alerts-in-azure/ba-p/4469290"
+  },
+  {
+    "canonical_url": "https://devops.com/bindplane-adds-ability-to-automate-deployment-of-opentelemetry-collectors/",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned 'DevOps' category because the article focuses on DevOps teams managing large-scale OpenTelemetry deployments and automation of telemetry pipelines (DevOps rules 1, 5, 6). There is no substantial Microsoft technology content; OpenTelemetry and Bindplane are platform-agnostic, and the article does not present Azure or other Microsoft products as central. Although 'AI' is discussed as a future direction in observability, the article does not describe actual AI product usage or integration, so 'AI' is not assigned. Other categories (Azure, Coding, Security, ML, GitHub Copilot) do not apply since there is no relevant Microsoft technology, coding, security, or ML engineering focus present.",
+    "timestamp": "2025-11-12 20:05:43 +00:00"
+  },
+  {
+    "canonical_url": "https://devops.com/vibe-coding-vs-spec-driven-development-finding-balance-in-the-ai-era/",
+    "collection": "posts",
+    "reason": "Succesfully added: The article focuses on the impact of generative AI and AI copilots on software development workflows, comparing AI-driven 'vibe coding' with traditional spec-driven methodologies. AI is included as a category because the discussion centers around AI-assisted code generation and its implications; even though AWS is mentioned, AI is a general topic and not tied to a specific Microsoft product. DevOps is included because the piece discusses automation, observability, feedback loops, and the application of DevOps principles in the context of both AI-driven and traditional software development. Coding is not assigned, as there are no code examples or specific Microsoft programming/development techniques discussed. Azure, ML, Security, and GitHub Copilot were not included, as the content is general and not Microsoft-specific, and does not focus on implementation details of those platforms.",
+    "timestamp": "2025-11-12 20:06:04 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=3swFQjBZDUA",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the AI category because the session introduces the Model Context Protocol (MCP), which is an emerging standard for connecting AI assistants to application data and functionality (AI rule 1 and 4). The Coding category is included because it targets .NET developers, demonstrates code-centric integration patterns, and references C#, F#, .NET 10, and related tools (Coding rules 1, 2, and 4). Content does not warrant Azure, DevOps, ML, or Security categories since it does not focus on those Microsoft technology areas. All core exclusion rules were reviewed—this is not business/productivity, career, or management-focused content, nor is it biographical, negative, or lacking technical depth.",
+    "timestamp": "2025-11-12 20:06:33 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=6afeRSFQiw0",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' category because the description specifically highlights 'AI-powered debugging insights' and new AI enhancements in Visual Studio (AI inclusion rule 1 and 5). Assigned 'Coding' category because the content focuses on practical debugging features, code troubleshooting methods, and advanced techniques in Visual Studio, which are central developer tasks in the Microsoft stack (Coding rule 4 and 5). Did not assign 'DevOps', 'Azure', 'ML', or 'Security' because there is no significant coverage of those topics in the provided description. The tags were chosen to reflect both the technical features discussed and specific product versions named. There are no generic exclusion rules triggered.",
+    "timestamp": "2025-11-12 20:06:54 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=6kz3XWCVij0",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned Coding category because the content is focused on .NET MAUI, .NET 10, and Visual Studio—all key Microsoft developer technologies (Coding rule 1 and 2). The primary focus is on new development features, performance, and developer tooling, without significant coverage of Azure, AI, ML, DevOps, or Security topics. The video discusses building native and cross-platform applications using Microsoft programming languages and frameworks, matching the Coding category inclusion rules.",
+    "timestamp": "2025-11-12 20:07:13 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=f0971pImtlw",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'Coding' because the content focuses on advancements in Windows Forms (WinForms) and .NET 10 development, discussing technical features like async/await, modernization, and Windows 11 UI adaptations (Coding rules 1, 2, 4, 5). Assigned 'AI' because there is a strong focus on integrating Microsoft AI Extensions, Semantic Kernel, and especially the use of AI assistance through Copilot (AI rules 1, 3, 4). Assigned 'GitHub Copilot' because the content highlights the new WinForms Expert Agent for GitHub Copilot, showing its direct application for developers (GitHub Copilot rule 1), and per instructions, 'AI' is included when 'GitHub Copilot' is used. 'Azure', 'DevOps', 'ML', and 'Security' categories were not added as none of their inclusion criteria were substantively referenced in the content.",
+    "timestamp": "2025-11-12 20:07:34 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=HLNYCwgk5fU",
+    "collection": "videos",
+    "reason": "Succesfully added: Included 'AI' category because the session focuses on how artificial intelligence is used in .NET diagnostic tooling (AI inclusion rule 1 and 5). Added 'Coding' category because the core context is .NET development, automated debugging, and code optimization (Coding rules 1, 2, and 4). 'Azure', 'DevOps', 'Security', and 'ML' were not added because there is no mention of Azure-specific features, deployment practices, security techniques, or data science/model-building content.",
+    "timestamp": "2025-11-12 20:07:55 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=IJ8s5OvbFdg",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'Coding' because the video covers modern approaches to building Windows applications with .NET, WinUI 3, Windows App SDK, and related coding tools (Coding inclusion rules 1 and 2). There are specific mentions of programming languages and frameworks (e.g., .NET 10, C# 14, F# 10, .NET MAUI, ASP.NET Core 10). AI is referenced in the context of integration but not at a depth sufficient for assigning the AI category. No DevOps, Azure, ML, or Security categories are included, as these topics are only tangentially mentioned or not central to the content. Generic and format exclusion rules do not apply.",
+    "timestamp": "2025-11-12 20:08:17 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=IjDRYqtRkWA",
+    "collection": "videos",
+    "reason": "Succesfully added: The content centers on advanced .NET performance profiling, integrating Visual Studio Profiler, BenchmarkDotNet, and GitHub Copilot. Under the Coding category rules, the focus on Visual Studio, BenchmarkDotNet, and code optimization with .NET/C# qualifies. GitHub Copilot is specifically mentioned in a development context, so, following Category Inclusion Rules for Copilot, both 'GitHub Copilot' and 'Coding' are assigned. The 'AI' category would only apply if there's direct coverage of AI/ML services or tooling, but here Copilot is the only qualifying AI-related tool. No generic exclusion rule is triggered.",
+    "timestamp": "2025-11-12 20:08:38 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=imTARwNQuA4",
+    "collection": "videos",
+    "reason": "Succesfully added: Categories 'AI' and 'GitHub Copilot' were assigned because the session centers on advanced features of GitHub Copilot in Visual Studio, including code suggestions, refactoring, and AI chat, which matches AI rule 2 and GitHub Copilot rule 1. The 'Coding' category applies as the demonstration focuses on developer tools (Visual Studio, .NET, C#), code productivity, and best practices—all outlined under Coding inclusion rules. Azure, DevOps, ML, and Security categories were not assigned as the main focus is on coding productivity and Copilot integration, not infrastructure, data science, or security.",
+    "timestamp": "2025-11-12 20:08:57 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=kbW7qHMBM6A",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'Coding' because the keynote focuses on updates to .NET 10, C# 14, F# 10, and related frameworks/tools (Coding rule 1, 2, 4, 5). 'DevOps' is included due to the mention of .NET Aspire 13 and orchestration features for cloud-native applications (DevOps rule 6, 9). Azure was considered but not included, as Azure is not central or discussed in-depth. No other categories fit based on inclusion rules. Not excluded, as content is technical, targets developers, and meets all quality standards.",
+    "timestamp": "2025-11-12 20:09:17 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=LgUZB_rhyX4",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Coding category because the session is centered on ASP.NET Core updates within .NET 10, focusing on web application and API development (Coding rule 1 and 2). Features like minimal APIs, Blazor, authentication, validation, and performance improvements are all development-focused and pertain to Microsoft programming frameworks and practices. No other categories were added since AI, Azure, ML, DevOps, and Security are not central based on the provided description. The content type is a technical video targeting practitioners.",
+    "timestamp": "2025-11-12 20:09:36 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=N0DzWMkEnzk",
+    "collection": "videos",
+    "reason": "Succesfully added: The content is a technical session focused on integrating AI with .NET using modern libraries and features like Microsoft.Extensions.AI and large language models (AI rule 1, 4, 5). It is hands-on and aimed at developers, demonstrating how to add intelligent features by writing code (Coding rule 1, 4, 5). There is no non-technical or business-only focus, no biographical, sales-pitch, or generic exclusion triggers. .NET, C#, F#, MAUI, and other developer tools are central, and AI integration is the main subject.",
+    "timestamp": "2025-11-12 20:09:58 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=snnULnTWcNM",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Coding category because the content is focused on software development with .NET 10, specifically performance improvements in the runtime, libraries, JIT compiler, and language/tool releases (Coding rules 1, 2, and 4). No other categories apply: Though ASP.NET Core, MAUI, and Visual Studio are mentioned, the focus is on .NET coding practices, not DevOps, Security, AI, or ML implementations. Content is technical, applicable to developers, free of sales pitches or business-only strategy, and does not trigger any generic exclusion rules.",
+    "timestamp": "2025-11-12 20:10:18 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=V_sIYwc9Tvs",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the session focuses on agentic AI systems, agent architectures, reasoning, planning, tool calling, and building intelligent AI agents for complex tasks (AI rules 1, 4, 5). Assigned Coding category because the content discusses how .NET developers can employ frameworks, languages (C#, F#, .NET MAUI), and tools (Visual Studio) to build these AI agents (Coding rules 1, 2, 4). There is no specific mention of Azure, DevOps, Security, ML, or GitHub Copilot, so those categories were not included.",
+    "timestamp": "2025-11-12 20:10:38 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=V0Af7y7aMBE",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'Coding' because the content is about Blazor development in .NET 10 (Coding rule 2: Microsoft development frameworks/tools). Assigned 'Security' because it discusses built-in WebAuthN, passkeys support, and Entra ID authentication scaffolding (Security rule 2: Application security in Microsoft ecosystem and rule 3: Identity and access management). 'Azure', 'AI', 'ML', 'DevOps', and 'GitHub Copilot' were not assigned since the video does not specifically cover Azure services, AI/ML development, DevOps practices, or Copilot tooling.",
+    "timestamp": "2025-11-12 20:10:58 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=xy-HzFp0pbA",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Coding category because the session is centered on new programming language features in C# 14, relevant to development in the Microsoft ecosystem (Coding inclusion rule 1). No AI, Azure, DevOps, Security, or ML categories qualify, as the content is specifically about language enhancements and related productivity improvements in C#, with no focus on AI/ML, cloud infrastructure, or security topics. Tags include specific technologies and releases discussed or mentioned in the description, reflecting the session’s technical scope.",
+    "timestamp": "2025-11-12 20:11:18 +00:00"
   }
 ]
