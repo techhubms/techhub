@@ -15848,5 +15848,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=MQOaBXwRfYo",
     "timestamp": "2025-11-13 16:06:09 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'Azure' because the feature is specific to Azure Policy and Machine Configuration (Azure inclusion rule 1). 'Security' applies due to its focus on security baselines and compliance, using CIS and Microsoft controls (Security inclusion rules 1, 4, 9). 'DevOps' is included because of the policy-as-code workflow, CI/CD integration instructions, use of ARM/Bicep, and configuration automation (DevOps inclusion rules 5, 6, and 10). No exclusion rules apply; community content is well above 200 words and entirely technical. No content fits other categories such as AI, GitHub Copilot, Coding, or ML.",
+    "timestamp": "2025-11-13 17:05:28 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/introducing-customizable-security-baselines-in-azure-policy-and/ba-p/4469678"
   }
 ]
