@@ -15728,5 +15728,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=aXouOsBh4ro",
     "collection": "videos",
     "timestamp": "2025-11-12 23:05:10 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned DevOps category based on the main focus on DevOps platform migration challenges, best practices, methodology, and workflow optimization (DevOps rules 1, 3, 4, 5, 9, 11). Assigned AI category because the survey discusses pressure to introduce AI tools into DevOps pipelines and the impact of AI integration (AI rule 5 and 6). Security category assigned due to emphasis on security integration difficulties, compliance risks, and technical debt arising from post-migration and AI tool adoption (Security rules 1, 3, 4, 7). No Azure/Microsoft-specific coding or cloud focus is present, so those categories were not applied. Content quality and scope meet all inclusion criteria: it's not biographical, not question-only, not promotional, is English, provides technical insights, and is of sufficient length.",
+    "timestamp": "2025-11-13 05:05:40 +00:00",
+    "canonical_url": "https://devops.com/survey-surfaces-multiple-devops-platform-migration-challenges/",
+    "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the post discusses AI Playground, a tool for testing and integrating Small Language Models (SLMs) on Azure App Service (AI inclusion rule 1 and 4). Azure category applies because it involves Azure App Service setup and features (Azure inclusion rules 1, 4, and 6). Coding category is included due to the focus on code integration and developer workflows using C#, Python, and Node.js with code snippets (Coding inclusion rules 1, 2, and 5). No categories were excluded because generic and product-specific exclusion rules do not apply; the content is technical and developer-focused, not business productivity, management, or biographical.",
+    "timestamp": "2025-11-13 05:06:13 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-ai-playground-on-azure-app-service-for-linux/ba-p/4469497",
+    "collection": "community"
   }
 ]
