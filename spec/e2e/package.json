@@ -22,7 +22,7 @@
   "author": "Tech Hub Team",
   "license": "MIT",
   "engines": {
-    "node": ">=20.19.0"
+    "node": ">=20.19.0 <21.0.0"
   },
   "dependencies": {
     "js-yaml": "^4.1.0",

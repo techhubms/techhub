@@ -47,7 +47,7 @@ sudo npm install -g npm-check-updates
 # Update and install Node.js dependencies for JavaScript unit tests (Jest)
 echo "Updating JavaScript test dependencies to latest versions..."
 cd /workspaces/techhub/spec/javascript || cd $(pwd)/spec/javascript
-# Clean node_modules to avoid permission and locking issues
+# Clean node_modules to avoid permission issues
 rm -rf node_modules
 # Update all packages to latest versions
 npx npm-check-updates -u
@@ -56,7 +56,7 @@ npm install
 # Update and install Node.js dependencies for end-to-end tests (Playwright)
 echo "Updating E2E test dependencies to latest versions..."
 cd /workspaces/techhub/spec/e2e || cd $(pwd)/spec/e2e
-# Clean node_modules to avoid permission and locking issues
+# Clean node_modules to avoid permission issues
 rm -rf node_modules
 # Update all packages to latest versions
 npx npm-check-updates -u
