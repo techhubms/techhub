@@ -15818,5 +15818,17 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned 'AI' because Copilot coding agent is an AI developer tool, satisfying AI inclusion rule 2 and 5. Assigned 'GitHub Copilot' because the feature is specifically about managing Copilot coding agent tasks (GitHub Copilot rule 1, 2, and 3). Assigned 'Coding' since the capabilities discussed directly enhance code development workflow in VS Code and involve developer-facing collaboration tools (Coding rules 4 and 5). Content is developer-focused, provides technical detail, and does not violate any generic exclusion rules.",
     "timestamp": "2025-11-13 14:07:15 +00:00"
+  },
+  {
+    "timestamp": "2025-11-13 15:06:35 +00:00",
+    "reason": "Succesfully added: Assigned the Coding category because the content is focused on Visual Studio 2026, a core Microsoft-integrated development environment, and the improvements discussed directly affect programming workflows, IDE customization, and developer tooling (Coding rule 5). The article discusses settings, themes, user experience, and features that support coding and software development. No other category qualifies: although AI capabilities are briefly mentioned, there is no substantive technical detail or focus on AI features, so the AI category was not assigned (AI rules 1 and 5 not triggered). No Azure, DevOps, ML, or Security content is present. Generic exclusion rules do not apply as the content is technical, in English, not biographical, and not a sales pitch.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/a-first-look-at-the-all%e2%80%91new-ux-in-visual-studio-2026/"
+  },
+  {
+    "timestamp": "2025-11-13 15:07:16 +00:00",
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' is included based on extensive discussion of the Microsoft AI Cloud Partner Program and AI’s central role (AI inclusion rules 1 and 5). 'Azure' is included because the Microsoft Cloud, including Azure, is fundamental throughout (Azure rule 1). 'Security' is included due to strong coverage of compliance, data sovereignty, and trusted cloud deployment strategies (Security rules 1, 4, and 9). Coding, DevOps, ML, and GitHub Copilot are not included as there are no development, CI/CD, or ML-engineering specifics in the content. No generic exclusion rules apply because the content is technical, not business or purely executive-focused, and is intended for partners and practitioners.",
+    "collection": "posts",
+    "canonical_url": "https://www.thomasmaurer.ch/2025/11/introducing-the-digital-sovereignty-specialization-for-the-microsoft-ai-cloud-partner-program/"
   }
 ]

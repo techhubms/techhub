@@ -8535,5 +8535,11 @@
     "collection": "news",
     "reason": "No categories found: No categories assigned. The content is a news announcement about a free course from RCSI and Microsoft Ireland focusing on the transformative role of AI in healthcare. The article does not provide any substantive technical detail about specific Microsoft AI products/platforms, frameworks, developer tools, coding, or hands-on implementation. Per processing rules, high-level announcements, industry trends, and market analysis content without technical implementation details are excluded (Generic Exclusion: Business Strategy and Executive Content, no technical depth).",
     "timestamp": "2025-11-13 14:06:51 +00:00"
+  },
+  {
+    "timestamp": "2025-11-13 15:06:04 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The content is a high-level announcement/news item about a national AI upskilling initiative in Brazil, focused on education/training scale and diversity/inclusion (business/strategy scope), not technical implementation or developer-focused content. It lacks substantive technical detail or actionable information about Microsoft developer technologies, AI development, or integration (violating the rule against business strategy and non-technical implementation content).",
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/source/latam/features/ai/microsoft-ai-courses-brazil/?lang=en"
   }
 ]
