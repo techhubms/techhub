@@ -42,11 +42,13 @@ pwsh -Command 'Install-Module Pester -Force -SkipPublisherCheck -MinimumVersion 
 
 # Install npm-check-updates globally for automatic package updates
 echo "Installing npm-check-updates globally..."
-npm install -g npm-check-updates
+sudo npm install -g npm-check-updates
 
 # Update and install Node.js dependencies for JavaScript unit tests (Jest)
 echo "Updating JavaScript test dependencies to latest versions..."
 cd /workspaces/techhub/spec/javascript || cd $(pwd)/spec/javascript
+# Clean node_modules to avoid permission issues
+rm -rf node_modules
 # Update all packages to latest versions
 npx npm-check-updates -u
 npm install
@@ -54,22 +56,24 @@ npm install
 # Update and install Node.js dependencies for end-to-end tests (Playwright)
 echo "Updating E2E test dependencies to latest versions..."
 cd /workspaces/techhub/spec/e2e || cd $(pwd)/spec/e2e
+# Clean node_modules to avoid permission issues
+rm -rf node_modules
 # Update all packages to latest versions
 npx npm-check-updates -u
 npm install
 
 # Install latest Playwright globally to ensure we have the newest version
 echo "Installing latest Playwright globally..."
-npm install -g playwright@latest
+sudo npm install -g playwright@latest
 
 # Install system libraries required by Playwright browsers first
 # This ensures all dependencies are in place before browser installation
 echo "Installing Playwright system dependencies first..."
 sudo npx -y playwright install-deps
 
-# Install latest Playwright browsers using the global installation
-# This ensures we always get the latest browser versions
-echo "Installing latest Playwright browsers..."
+# Install latest Playwright browsers for the current user (not sudo)
+# This ensures browsers are installed in ~/.cache/ms-playwright where tests can find them
+echo "Installing latest Playwright browsers for current user..."
 npx -y playwright@latest install --force
 
 echo "Latest Playwright browsers and dependencies installed successfully"

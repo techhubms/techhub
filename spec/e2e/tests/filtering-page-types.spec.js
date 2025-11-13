@@ -501,7 +501,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
         expectedFilterTypes: ['date', 'tag'],
         testFilters: [
           { selector: '.tag-filter-btn[data-tag*="day"]:not(.disabled), .tag-filter-btn[data-tag*="last"]:not(.disabled)', type: 'date' },
-          { selector: '.tag-filter-btn[data-tag]:not([data-tag*="day"]):not([data-tag*="last"]):not([data-tag*="month"]):not([data-tag="news"]):not([data-tag="posts"]):has(.filter-count)', type: 'tag' }
+          { selector: '.tag-filter-btn[data-tag]:not([data-tag*="day"]):not([data-tag*="last"]):not([data-tag*="month"]):not([data-tag="news"]):not([data-tag="posts"]):not(.hidden-tag-btn):has(.filter-count)', type: 'tag' }
         ]
       }
     ];
@@ -645,7 +645,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
       await navigateAndVerify(page, urlTest.url);
 
       // Find a filter to test with
-      const testFilters = page.locator(urlTest.expectedFilter);
+      const testFilters = page.locator(urlTest.expectedFilter + ':not(.hidden-tag-btn)');
 
       if (await testFilters.count() > 0) {
         const testFilter = testFilters.first();

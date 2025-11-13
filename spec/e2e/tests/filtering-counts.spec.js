@@ -72,7 +72,7 @@ test.describe('Filter Count Accuracy Tests', () => {
     console.log('📊 Initial filter counts:', Object.keys(initialCounts).length, 'filters');
 
     // Apply a tag filter and verify other filter counts update
-    const tagFilters = page.locator('.tag-filter-btn[data-tag]:not([data-tag*="last"]):not([data-tag*="day"]):not([data-tag*="month"]):has(.filter-count)');
+    const tagFilters = page.locator('.tag-filter-btn[data-tag]:not([data-tag*="last"]):not([data-tag*="day"]):not([data-tag*="month"]):not(.hidden-tag-btn):has(.filter-count)');
 
     if (await tagFilters.count() > 0) {
       const firstTagFilter = tagFilters.first();
@@ -213,7 +213,7 @@ test.describe('Filter Count Accuracy Tests', () => {
     await validateDateFilterCounts('(no other filters)');
 
     // Test 2: Date filter counts with tag filter active
-    const tagFilters = page.locator('.tag-filter-btn[data-tag]:not([data-tag*="last"]):not([data-tag*="day"]):not([data-tag*="month"]):has(.filter-count)');
+    const tagFilters = page.locator('.tag-filter-btn[data-tag]:not([data-tag*="last"]):not([data-tag*="day"]):not([data-tag*="month"]):not(.hidden-tag-btn):has(.filter-count)');
 
     if (await tagFilters.count() > 0) {
       const tagFilter = tagFilters.first();
@@ -294,7 +294,7 @@ test.describe('Filter Count Accuracy Tests', () => {
     await verifyAllFilterCounts('(no filters active)');
 
     // Step 2: Apply one tag filter and verify other counts updated
-    const tagFilters = page.locator('.tag-filter-btn[data-tag]:not([data-tag*="last"]):not([data-tag*="day"]):not([data-tag*="month"]):has(.filter-count)');
+    const tagFilters = page.locator('.tag-filter-btn[data-tag]:not([data-tag*="last"]):not([data-tag*="day"]):not([data-tag*="month"]):not(.hidden-tag-btn):has(.filter-count)');
 
     if (await tagFilters.count() > 0) {
       const firstTag = tagFilters.first();

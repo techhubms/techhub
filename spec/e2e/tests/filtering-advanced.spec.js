@@ -23,7 +23,7 @@ test.describe('Advanced Filtering Scenarios', () => {
     // Test sequence: Apply multiple filters → Check states → Clear → Test persistence
 
     // Step 1: Apply multiple tag filters
-    const tagFilters = page.locator('.tag-filter-btn[data-tag]:not([data-tag*="last"]):not([data-tag*="day"]):not([data-tag*="month"]):has(.filter-count)');
+    const tagFilters = page.locator('.tag-filter-btn[data-tag]:not([data-tag*="last"]):not([data-tag*="day"]):not([data-tag*="month"]):not(.hidden-tag-btn):has(.filter-count)');
 
     if (await tagFilters.count() >= 2) {
       const firstTag = tagFilters.first();

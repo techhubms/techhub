@@ -33,8 +33,8 @@ test.describe('RSS Feeds', () => {
       const contentType = response.headers()['content-type'];
       expect(contentType).toMatch(/xml/);
 
-      // Get the page content
-      const content = await page.content();
+      // Get the raw response body (not page.content() which returns DOM)
+      const content = await response.text();
 
       // Verify it's valid Atom XML format
       expect(content).toContain('<?xml version="1.0" encoding="utf-8"?>');

@@ -21,8 +21,11 @@
   ],
   "author": "Tech Hub Team",
   "license": "MIT",
+  "engines": {
+    "node": ">=20.19.0 <21.0.0"
+  },
   "dependencies": {
     "js-yaml": "^4.1.0",
-    "jsdom": "^27.0.1"
+    "jsdom": "^27.1.0"
   }
 }

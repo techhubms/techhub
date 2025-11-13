@@ -20,7 +20,7 @@ test.describe('Core Filtering Functionality', () => {
     const initialPostCount = await getVisiblePostCount(page);
     console.log(`📊 Initial post count: ${initialPostCount}`);
 
-    const tagFilters = page.locator('.tag-filter-btn[data-tag]:not([data-tag*="last"]):not([data-tag*="day"]):not([data-tag*="month"]):has(.filter-count)');
+    const tagFilters = page.locator('.tag-filter-btn[data-tag]:not([data-tag*="last"]):not([data-tag*="day"]):not([data-tag*="month"]):not(.hidden-tag-btn):has(.filter-count)');
     const tagFilterCount = await tagFilters.count();
 
     if (tagFilterCount > 0) {
