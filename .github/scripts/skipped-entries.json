@@ -8553,5 +8553,29 @@
     "collection": "posts",
     "canonical_url": "https://devops.com/the-future-of-observability-predictive-root-cause-analysis-using-ai/",
     "reason": "No categories found: No categories were assigned because the content does not significantly mention or focus on Microsoft technologies or developer tools as required by category inclusion rules. The article discusses observability and predictive root cause analysis using AI in the context of DevOps and distributed systems but references general industry tools (such as Datadog, New Relic, and Kubernetes) rather than Microsoft-specific platforms, services, or solutions. The AI, DevOps, and ML categories require that Microsoft technologies are central to the solution or represent at least 40% of the substantive technical content (Multi-Platform Content Threshold rule, Chapter 2 and Clarifications). Because no Microsoft technology, product, platform, or service (such as Azure, .NET, Microsoft AI, or related development tools) is discussed or used in a central capacity, this post does not qualify for any categories."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=cPs8mMtI-yM",
+    "timestamp": "2025-11-13 20:06:51 +00:00",
+    "reason": "No categories found: Content excluded due to lack of substantive technical information and reliance on an external link. The description simply invites viewers to check out an announcement for a game jam (GitHub Game Off) on an external site, with no actual content, discussion, or technical details present in the input fields. According to the Generic Exclusion Rules, content with insufficient detail or that primarily acts as a pointer to external content without technical substance is excluded."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=TMRYh93nPiU",
+    "timestamp": "2025-11-13 20:07:06 +00:00",
+    "reason": "No categories found: All categories are excluded based on the generic exclusion rules for Non-Development Microsoft Products. The content focuses on Microsoft 365 Copilot, which is considered a business productivity tool and not a developer tool according to the explicit rules in the Copilot Product Distinction section. The description also highlights tuning Copilot for organization-specific productivity using data and workflows, which further confirms its focus on business productivity rather than coding, development, or implementation scenarios."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/UE1jVqz0vnM",
+    "timestamp": "2025-11-13 20:07:19 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is not technical in nature. The video is about how to use Microsoft's Ignite event platform to build an on-demand session playlist, which is an event logistics/how-to topic rather than technical implementation, development, or architectural content. There is no discussion of Microsoft technology from a developer, devops, AI, security, ML, Azure, or coding perspective. All the information points to usage of an event scheduler, and this is excluded under the business strategy/executive and non-development Microsoft products exclusion rules in Chapter 3."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/mouse-click-offset-issue-in-azure-virtual-desktop-app-on-windows/m-p/4469555#M13941",
+    "timestamp": "2025-11-13 20:07:33 +00:00",
+    "reason": "No categories found: Content was excluded due to the 'Question-Only Content' generic exclusion rule. The post mainly asks whether others have experienced a specific issue with Azure Virtual Desktop, seeking known fixes or workarounds, without providing a substantive answer, technical deep dive, or educational content. It does not meet the threshold for an actionable technical solution or tutorial per the workflow's requirements."
   }
 ]
