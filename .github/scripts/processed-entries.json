@@ -15776,5 +15776,23 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-ii-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469576",
     "reason": "Succesfully added: Included Azure category because the core setup, configuration, and deployment is on Azure App Service for Linux (Azure rule 1, 4, 5). Added DevOps since content extensively covers deployment, configuration, monitoring, and operational telemetry practices on Azure (DevOps rules 1, 5, 6, and 7). Included Coding because it details adding OTEL libraries, environment variables, code samples, and provides repo links for code-based/ container-based implementation for multiple languages (.NET, PHP, Node.js, Python), meeting Coding rules 1, 2, and 4. No ML, AI, GitHub Copilot, or Security categories fit as there is no ML engineering, AI service use, dev tools, nor security-specific implementation described."
+  },
+  {
+    "timestamp": "2025-11-13 10:05:39 +00:00",
+    "canonical_url": "https://dellenny.com/architecture-decision-records-adrs-a-lightweight-governance-model-for-software-architecture/",
+    "reason": "Succesfully added: Applied only the DevOps category. The article centers on Architecture Decision Records (ADRs) as a governance and documentation practice in agile and DevOps teams, fulfilling DevOps category rule 4 (development methodologies) and rule 3 (team collaboration/organization). The content references agile, DevOps, version control, and automation in developer workflows but does not detail specific Microsoft products, coding, AI/machine learning, Azure, or security implementations; thus, other categories do not apply. The decision is based on the predominance of governance methodology in technical team processes and explicit mention of DevOps contexts.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-13 10:06:00 +00:00",
+    "canonical_url": "https://dellenny.com/how-to-refactor-legacy-solution-architectures-without-breaking-everything/",
+    "reason": "Succesfully added: I assigned the 'Coding' category because the article provides guidance on refactoring, codebase improvement, and introduces patterns such as Strangler Fig—relevant to developers making code-level architectural changes (Coding rules 1 and 4). 'DevOps' was assigned because of substantial focus on deployment automation, CI/CD pipelines, testing, and monitoring strategies, which are core parts of DevOps (DevOps rules 3, 5, 6). No Microsoft-specific technologies are mentioned, so Azure, AI, ML, GitHub Copilot, or Security categories do not apply. The guidance is platform-agnostic but contains strong technical architectural and DevOps relevance per rule hierarchy.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-13 10:06:40 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Gtbfaei9i94",
+    "reason": "Succesfully added: Assigned AI category because the session focuses on designing and implementing AI agents in applications (AI rule 1, AI rule 4). Assigned Coding category because it's about integrating these agents using C# and .NET, with practical code and development strategies (Coding rules 1, 2, and 4). The session discusses UX, context engineering, and development patterns specifically for building AI into .NET applications, not general productivity or business features. Content also references real-world tools like CodeRush and AiGen, supporting the technical depth and development focus. No Azure or ML categories because there is no mention of specific Azure platform services or data science/ML techniques. No Security or DevOps because those areas aren't addressed in the description.",
+    "collection": "videos"
   }
 ]

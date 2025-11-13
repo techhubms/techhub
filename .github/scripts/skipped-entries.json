@@ -8523,5 +8523,11 @@
     "canonical_url": "https://www.youtube.com/shorts/_qm5_OBHcUw",
     "collection": "videos",
     "timestamp": "2025-11-12 23:05:39 +00:00"
+  },
+  {
+    "timestamp": "2025-11-13 10:06:13 +00:00",
+    "canonical_url": "https://dellenny.com/the-41-view-model-of-architecture-explained-a-complete-guide/",
+    "reason": "No categories found: No categories were assigned because the content is a general, technology-agnostic explanation of the 4+1 View Model of software architecture. It does not specifically address, mention, or demonstrate Microsoft technologies, products, services, development frameworks, or tools. There is no focus on .NET, Azure, GitHub, Power Platform, Microsoft AI/ML platforms, or any other Microsoft ecosystem. Therefore, none of the inclusion rules for 'AI', 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', or 'Security' apply. The content is an architectural education piece not specific to the Microsoft platform.",
+    "collection": "posts"
   }
 ]
