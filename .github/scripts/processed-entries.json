@@ -15812,5 +15812,11 @@
     "timestamp": "2025-11-13 13:16:08 +00:00",
     "collection": "posts",
     "reason": "Succesfully added: Included the 'AI' category as the content centrally discusses the impact of artificial intelligence and large language models (LLMs) on performance testing, fulfilling AI inclusion rules (Microsoft AI usage patterns and industry shifts) even though direct Microsoft product usage isn't specified. Assigned 'DevOps' category because the content focuses extensively on automated quality assurance, continuous integration/deployment, and changes in workflow practices, aligning with core DevOps inclusion criteria (team practices, automation, CI/CD, developer experience). Did not assign other categories, as the article is conceptual/strategic and does not reference specific Microsoft products, coding frameworks, or security practices."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-11-13-manage-copilot-coding-agent-tasks-in-visual-studio-code",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because Copilot coding agent is an AI developer tool, satisfying AI inclusion rule 2 and 5. Assigned 'GitHub Copilot' because the feature is specifically about managing Copilot coding agent tasks (GitHub Copilot rule 1, 2, and 3). Assigned 'Coding' since the capabilities discussed directly enhance code development workflow in VS Code and involve developer-facing collaboration tools (Coding rules 4 and 5). Content is developer-focused, provides technical detail, and does not violate any generic exclusion rules.",
+    "timestamp": "2025-11-13 14:07:15 +00:00"
   }
 ]

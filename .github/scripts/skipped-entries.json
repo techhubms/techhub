@@ -8529,5 +8529,11 @@
     "canonical_url": "https://dellenny.com/the-41-view-model-of-architecture-explained-a-complete-guide/",
     "reason": "No categories found: No categories were assigned because the content is a general, technology-agnostic explanation of the 4+1 View Model of software architecture. It does not specifically address, mention, or demonstrate Microsoft technologies, products, services, development frameworks, or tools. There is no focus on .NET, Azure, GitHub, Power Platform, Microsoft AI/ML platforms, or any other Microsoft ecosystem. Therefore, none of the inclusion rules for 'AI', 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', or 'Security' apply. The content is an architectural education piece not specific to the Microsoft platform.",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/europe/2025/11/11/new-free-course-from-rcsi-explores-the-transformative-role-of-ai-in-healthcare-delivery-in-collaboration-with-microsoft-ireland/",
+    "collection": "news",
+    "reason": "No categories found: No categories assigned. The content is a news announcement about a free course from RCSI and Microsoft Ireland focusing on the transformative role of AI in healthcare. The article does not provide any substantive technical detail about specific Microsoft AI products/platforms, frameworks, developer tools, coding, or hands-on implementation. Per processing rules, high-level announcements, industry trends, and market analysis content without technical implementation details are excluded (Generic Exclusion: Business Strategy and Executive Content, no technical depth).",
+    "timestamp": "2025-11-13 14:06:51 +00:00"
   }
 ]
