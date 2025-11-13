@@ -1,0 +1,24 @@
+{
+  "EnhancedContent": null,
+  "Title": "GitHub Copilot build performance for Windows",
+  "FeedName": "Microsoft Developer YouTube",
+  "Description": "In this episode, we dive into GitHub Copilot build performance for Windows in Visual Studio 2026, now available in Private Preview. Join the waitlist for Private Preview: https://aka.ms/CPP-Agents-Private-Preview\n\nJoin us as we explore how GitHub Copilot leverages MSVC trace capture technology to analyze your builds, identify bottlenecks, and automatically suggest optimizations. From expensive header inclusions to costly template instantiations, these new GitHub Copilot capabilities help you streamline your build process and reclaim valuable development time.",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "ProcessedDate": "2025-11-12 17:04:36",
+  "PubDate": "2025-11-12T16:01:32+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Copilot",
+    "Dev",
+    "Development",
+    "GitHub",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Author": "Microsoft Developer",
+  "Link": "https://www.youtube.com/watch?v=twQTixBZen8",
+  "OutputDir": "_videos"
+}
