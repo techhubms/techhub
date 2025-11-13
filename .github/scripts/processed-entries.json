@@ -15806,5 +15806,11 @@
     "timestamp": "2025-11-13 11:05:42 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-iii-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469589",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://devops.com/ai-driven-performance-testing-a-new-era-for-software-quality/",
+    "timestamp": "2025-11-13 13:16:08 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Included the 'AI' category as the content centrally discusses the impact of artificial intelligence and large language models (LLMs) on performance testing, fulfilling AI inclusion rules (Microsoft AI usage patterns and industry shifts) even though direct Microsoft product usage isn't specified. Assigned 'DevOps' category because the content focuses extensively on automated quality assurance, continuous integration/deployment, and changes in workflow practices, aligning with core DevOps inclusion criteria (team practices, automation, CI/CD, developer experience). Did not assign other categories, as the article is conceptual/strategic and does not reference specific Microsoft products, coding frameworks, or security practices."
   }
 ]
