@@ -15980,5 +15980,23 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/public-preview-introducing-customizable-security-baseline/ba-p/4469678",
     "reason": "Succesfully added: Assigned Azure category because the content centers on integrating security and compliance baselines using Azure Machine Configuration and Azure Policy (Azure rules 1, 4, 5). Assigned Security category since the main focus is on server security, compliance, CIS benchmarks, and governance using Microsoft technologies (Security rules 1, 4, 7, 9). Assigned DevOps category because policy-as-code, CI/CD integration, automation, and configuration management workflows are discussed with concrete tooling and process steps (DevOps rules 5, 6, 10). No other categories qualify; the content is technical and implementation-focused, fitting all inclusion criteria."
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content centers on Microsoft's Aurora, an AI foundation model designed for weather and climate forecasting, supported by detailed information on model training, open-source commitment, and application in scientific and industry domains. No other categories fit since the focus is on AI research and collaboration, rather than coding/software engineering, DevOps, Azure-specific deployment, ML engineering from scratch, or security aspects. Tags were selected based on content themes such as open-source AI, environmental data, and collaboration. Exclusion of categories like Azure, Coding, ML, DevOps, and Security is due to absence of discussion of hands-on software development, deployment practices, in-depth data engineering, operationalization, or security implementation.",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2025/11/13/the-next-phase-of-aurora-open-and-collaborative-ai-for-weather-and-climate-forecasting/",
+    "timestamp": "2025-11-13 19:04:31 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: The 'AI' category is assigned because the content covers the integration of the new GPT-5.1 AI model within Microsoft Copilot Studio, directly addressing AI development as outlined in AI Inclusion Rule 1. 'Copilot Studio' here qualifies as a developer/maker tool (not a general productivity Copilot), matching Chapter 4 AI inclusion criteria. No other categories apply since there is no code or hands-on development, DevOps, ML/data science, Azure infrastructure, or Security focus in the content. Category assignment strictly follows predefined rules from Chapter 4, and all content is technical, focused on AI capabilities in a Microsoft developer tool.",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/available-now-gpt-5-1-in-microsoft-copilot-studio/",
+    "timestamp": "2025-11-13 19:04:48 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the content describes the use of AI, machine learning, and large language models for anomaly detection and investigation (AI rules 1, 4, and 5). Assigned 'Azure' because the technology is built on and integrated with Azure services (Azure rules 1 and 4). Assigned 'DevOps' because the agent enhances operational workflows, automates monitoring and root cause analysis, and integrates with team collaboration practices (DevOps rules 3, 5, 7). Did not assign 'GitHub Copilot' since the focus is on Azure Copilot (not coding assistant), nor 'Coding,' as there is no code-level development focus, nor 'ML,' as custom ML engineering is not a major focus. Content is in English, above minimum length, technical, and does not trigger any generic exclusion rules.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-copilot-observability-agent-intelligent-investigations/ba-p/4467360",
+    "timestamp": "2025-11-13 19:05:31 +00:00",
+    "collection": "community"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "AI",
+    "Company News"
+  ],
+  "FeedUrl": "https://news.microsoft.com/source/feed/",
+  "FeedName": "Microsoft News",
+  "OutputDir": "_news",
+  "Description": "The post [Available now: GPT-5.1 in Microsoft Copilot Studio](https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/available-now-gpt-5-1-in-microsoft-copilot-studio/) appeared first on [Source](https://news.microsoft.com/source).",
+  "ProcessedDate": "2025-11-13 19:03:20",
+  "Author": "stclarke",
+  "Title": "Available now: GPT-5.1 in Microsoft Copilot Studio",
+  "Link": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/available-now-gpt-5-1-in-microsoft-copilot-studio/",
+  "FeedLevelAuthor": "Source",
+  "EnhancedContent": "Today, we are making GPT-5.1 available in Microsoft Copilot Studio, alongside OpenAI’s release. This is available as an experimental model for U.S. customers in early release cycle Power Platform environments. The GPT-5.1 series brings improved adaptability in thinking time in both chat and reasoning.\n\nToday, we are making GPT-5.1 available in [Microsoft Copilot Studio](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio/), alongside OpenAI’s release. This is available as an experimental model for U.S. customers in early release cycle Power Platform environments. The GPT-5.1 series brings improved adaptability in thinking time in both chat and reasoning.\n\n![A screenshot of an agent's model choices, with GPT-5.1 Chat and GPT-5.1 Reasoning highlighted](https://www.microsoft.com/en-us/microsoft-copilot/blog/wp-content/uploads/2025/11/5.1-final-1-scaled.png)\n\nExperimental models give you the opportunity to test cutting-edge capabilities before they reach general availability. You can evaluate performance against your use cases and existing models to prepare for deployment. As experimental models, we recommend using them in non-production scenarios while we complete our evaluation gates. This approach allows you to stay ahead of the curve, experimenting with the latest AI models while we ensure they meet quality standards.\n\nYou can learn more about using the latest models in Copilot Studio [here](https://learn.microsoft.com/microsoft-copilot-studio/authoring-select-agent-model).",
+  "PubDate": "2025-11-13T18:41:10+00:00"
+}
