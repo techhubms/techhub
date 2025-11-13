@@ -1,0 +1,16 @@
+{
+  "PubDate": "2025-11-13T17:40:49+00:00",
+  "ProcessedDate": "2025-11-13 18:04:36",
+  "OutputDir": "_videos",
+  "Description": "Many organizations have valuable .NET applications that need to be modernized for cloud deployment. This session provides a practical roadmap for modernizing existing .NET applications to take advantage of cloud-native architectures and modern development practices. Learn strategies for incrementally updating applications, containerizing legacy workloads, implementing cloud-native patterns, and leveraging Azure services to enhance existing applications. We'll cover tools and techniques that help you assess modernization candidates, plan the migration process, and execute the transformation successfully. Whether you're dealing with .NET Framework applications or older .NET Core versions, discover proven approaches to bring your applications into the modern cloud era.\n\n.NET 10 — The most intelligent and unified .NET yet: https://aka.ms/dotnet10/ .NET Aspire 13 — Simplified orchestration for cloud-native apps: https://aka.ms/aspire13/announcement ASP.NET Core 10 — Modern, secure, and full-stack web development: https://aka.ms/asp/dotnet/2025 .NET MAUI 10 — Build beautiful apps on every platform: https://aka.ms/dotnet/maui/2025 C# 14 — A more expressive and productive language: https://aka.ms/csharp14/announcement/2025 F# 10 — Safer, faster, and more functional than ever: https://aka.ms/fsharp10/2025/announcement Visual Studio 2026 — Faster, smarter, and built for the future: https://aka.ms/visualstudio2026/announcement .NET Conf 2025 — A global celebration of .NET innovation: https://aka.ms/dotnotconf2025/recap\n\nConnect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "Tags": [
+    ".NET"
+  ],
+  "Author": "dotnet",
+  "FeedName": "DotNet YouTube",
+  "Link": "https://www.youtube.com/watch?v=vrxn-y0tFTI",
+  "Title": "Modernizing .NET Applications for the Cloud"
+}

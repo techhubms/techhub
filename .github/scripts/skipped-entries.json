@@ -8547,5 +8547,11 @@
     "canonical_url": "https://www.youtube.com/shorts/pDsbw4k1Nt0",
     "timestamp": "2025-11-13 16:06:24 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-13 18:07:07 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/the-future-of-observability-predictive-root-cause-analysis-using-ai/",
+    "reason": "No categories found: No categories were assigned because the content does not significantly mention or focus on Microsoft technologies or developer tools as required by category inclusion rules. The article discusses observability and predictive root cause analysis using AI in the context of DevOps and distributed systems but references general industry tools (such as Datadog, New Relic, and Kubernetes) rather than Microsoft-specific platforms, services, or solutions. The AI, DevOps, and ML categories require that Microsoft technologies are central to the solution or represent at least 40% of the substantive technical content (Multi-Platform Content Threshold rule, Chapter 2 and Clarifications). Because no Microsoft technology, product, platform, or service (such as Azure, .NET, Microsoft AI, or related development tools) is discussed or used in a central capacity, this post does not qualify for any categories."
   }
 ]
