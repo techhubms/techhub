@@ -39,7 +39,7 @@ class YouTube < Liquid::Tag
     # Note: Currently not used in iframe output, but available for future enhancement
     
     # Use youtube-nocookie.com for privacy-enhanced mode (fixes error 153 and improves privacy)
-    "<iframe class=\"youtube\" referrerpolicy=\strict-origin-when-cross-origin\" src=\"https://www.youtube-nocookie.com/embed/#{id}\" loading=\"lazy\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    "<iframe class=\"youtube\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube-nocookie.com/embed/#{id}\" loading=\"lazy\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   end
 
   Liquid::Template.register_tag "youtube", self
