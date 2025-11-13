@@ -15764,5 +15764,17 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/demystifying-github-copilot-security-controls-easing-concerns/ba-p/4468193",
     "timestamp": "2025-11-13 08:07:32 +00:00"
+  },
+  {
+    "timestamp": "2025-11-13 09:06:24 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/architecture-as-code-what-it-means-and-how-to-apply-it/",
+    "reason": "Succesfully added: DevOps category assigned because the content details integrating architectural definitions with CI/CD pipelines, automation, and governance. Coding category assigned because Architecture as Code involves creating and maintaining machine-readable files (YAML, JSON, DSLs) and version-controlling architecture in code repositories. There is no focus on Microsoft-specific tools, so no Azure, AI, ML, Security, or GitHub Copilot categories. The content is in English and avoids all generic exclusions such as job-related, business strategy, or biographical focus."
+  },
+  {
+    "timestamp": "2025-11-13 09:06:58 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-ii-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469576",
+    "reason": "Succesfully added: Included Azure category because the core setup, configuration, and deployment is on Azure App Service for Linux (Azure rule 1, 4, 5). Added DevOps since content extensively covers deployment, configuration, monitoring, and operational telemetry practices on Azure (DevOps rules 1, 5, 6, and 7). Included Coding because it details adding OTEL libraries, environment variables, code samples, and provides repo links for code-based/ container-based implementation for multiple languages (.NET, PHP, Node.js, Python), meeting Coding rules 1, 2, and 4. No ML, AI, GitHub Copilot, or Security categories fit as there is no ML engineering, AI service use, dev tools, nor security-specific implementation described."
   }
 ]
