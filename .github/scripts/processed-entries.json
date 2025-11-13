@@ -16004,5 +16004,17 @@
     "canonical_url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot",
     "timestamp": "2025-11-13 20:06:24 +00:00",
     "reason": "Succesfully added: Assigned 'AI' because the content is about deploying new OpenAI models (AI rule 1). Assigned 'GitHub Copilot' because the main focus is on their use within Copilot, including features, rollout, and administration (GitHub Copilot rules 1, 2, and 3). No other categories (such as Coding, DevOps, etc.) apply because the article does not cover coding techniques, DevOps processes, specific Azure deployments, ML engineering from scratch, or security. Used input content and product/version mentions to extract technical tags."
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the Coding category because the post focuses on major library updates for OpenAPI.NET—a .NET package used by developers for API documentation and tooling (Coding rule 3: ecosystem packages/libraries; Coding rule 4: coding practices with Microsoft technologies; Coding rule 5: developer tools). No other categories apply, as the focus is on API coding and .NET development with no central AI, ML, Azure, DevOps, or Security feature. There are no generic exclusion criteria triggered—the post is technical, developer-focused, and non-promotional.",
+    "timestamp": "2025-11-13 21:06:17 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/openapi/openapi-net-release-announcements/"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the AI category because the content is focused on building AI agents and agent orchestration (AI rule 1, 4). Assigned the Azure category as it centers on Azure Durable Functions, Azure Functions, and deployment on Azure compute (Azure rule 1, 4). Assigned the Coding category since the article provides practical Python and C# code samples and discusses development workflows (Coding rules 1, 2, 4). No generic exclusion rules apply; content is technical, developer-focused, and not biographical, career-focused, or sales-oriented. Other categories such as DevOps, ML, or Security do not apply here as the core themes are agent development, orchestration, and resilience rather than operational pipelines, data science, or security.",
+    "timestamp": "2025-11-13 21:07:15 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bulletproof-agents-with-the-durable-task-extension-for-microsoft/ba-p/4467122"
   }
 ]

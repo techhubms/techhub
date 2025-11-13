@@ -8577,5 +8577,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/mouse-click-offset-issue-in-azure-virtual-desktop-app-on-windows/m-p/4469555#M13941",
     "timestamp": "2025-11-13 20:07:33 +00:00",
     "reason": "No categories found: Content was excluded due to the 'Question-Only Content' generic exclusion rule. The post mainly asks whether others have experienced a specific issue with Azure Virtual Desktop, seeking known fixes or workarounds, without providing a substantive answer, technical deep dive, or educational content. It does not meet the threshold for an actionable technical solution or tutorial per the workflow's requirements."
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the content is focused on an open-source note-taking application (Joplin) that is not a Microsoft product or technology, as indicated in the title and description. The episode discusses the creator's journey, app features, privacy, plugins, and community, but there is no mention or focus on Microsoft platforms, services, or tools. Since it does not centrally feature Microsoft technology (multi-platform rule) and does not include development content on Microsoft products or services, it fails the 'Microsoft Content Must Be Central' rule and is excluded per core processing rules.",
+    "timestamp": "2025-11-13 21:06:46 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=V0PRW-WIo2A"
   }
 ]
