@@ -15830,5 +15830,23 @@
     "reason": "Succesfully added: Categories assigned as follows: 'AI' is included based on extensive discussion of the Microsoft AI Cloud Partner Program and AI’s central role (AI inclusion rules 1 and 5). 'Azure' is included because the Microsoft Cloud, including Azure, is fundamental throughout (Azure rule 1). 'Security' is included due to strong coverage of compliance, data sovereignty, and trusted cloud deployment strategies (Security rules 1, 4, and 9). Coding, DevOps, ML, and GitHub Copilot are not included as there are no development, CI/CD, or ML-engineering specifics in the content. No generic exclusion rules apply because the content is technical, not business or purely executive-focused, and is intended for partners and practitioners.",
     "collection": "posts",
     "canonical_url": "https://www.thomasmaurer.ch/2025/11/introducing-the-digital-sovereignty-specialization-for-the-microsoft-ai-cloud-partner-program/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the enhancement is focused on GitHub Actions workflow automation and security, fitting DevOps inclusion rules (rule 2 and rule 5). The content discusses improvements to authentication and authorization in CI/CD pipelines, emphasizes attribute-based access control and auditing, and references integrating with services like Azure, all squarely within DevOps practices. Did not assign Azure, Security, or Coding, as the technical focus remains on GitHub Actions platform automation and user access controls, rather than deep Azure implementation details or coding practices.",
+    "canonical_url": "https://github.blog/changelog/2025-11-13-github-actions-oidc-token-claims-now-include-check_run_id",
+    "timestamp": "2025-11-13 16:05:15 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the article deeply analyzes the impact of AI on language choices, developer workflows, and software development trends (AI inclusion rules 4 and 5). Assigned Coding category because it discusses language adoption (TypeScript, Python, Bash), typing, coding practices, and ecosystem choices for developers (Coding rules 1 and 4). Did not assign the GitHub Copilot category, as the primary focus is broader AI-enabled development and language trends, not specific usage or features of GitHub Copilot. Did not assign DevOps, Azure, ML, or Security because the content does not discuss DevOps pipelines, Azure services, machine learning engineering, or security practices. Exclusion rules do not apply, as this is technical content focused on Microsoft-related technologies and AI development.",
+    "canonical_url": "https://github.blog/news-insights/octoverse/typescript-python-and-the-ai-feedback-loop-changing-software-development/",
+    "timestamp": "2025-11-13 16:05:38 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content focuses on how AI is reshaping coding practices, programming language choices, and industry adoption (AI inclusion rules 1 and 4). Assigned Coding category due to direct discussion on programming languages (TypeScript, Python) and evolving coding practices (Coding rule 1). Assigned DevOps category for covering development workflow, team practices, and industry-wide tooling impacts (DevOps rules 9 and 11). GitHub specific discussions justify DevOps inclusion rather than GitHub Copilot, as Copilot is not the primary focus. No other categories fit based on content.",
+    "canonical_url": "https://www.youtube.com/watch?v=MQOaBXwRfYo",
+    "timestamp": "2025-11-13 16:06:09 +00:00",
+    "collection": "videos"
   }
 ]

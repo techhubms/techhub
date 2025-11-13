@@ -1,0 +1,18 @@
+{
+  "OutputDir": "_videos",
+  "FeedName": "GitHub YouTube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "ProcessedDate": "2025-11-13 16:04:32",
+  "Link": "https://www.youtube.com/watch?v=MQOaBXwRfYo",
+  "Tags": [
+    "GitHub",
+    "Octoverse",
+    "SoftwareDevelopment"
+  ],
+  "PubDate": "2025-11-13T15:00:42+00:00",
+  "Author": "GitHub",
+  "Description": "What does the Head of GitHub Next think about the trends shaping software development? Idan Gazit reacts to the key findings from the Octoverse 2025 report, discussing TypeScript's rise, Python's role, and how AI is influencing everything from our coding practices to the very languages we choose.\n\n#Octoverse #SoftwareDevelopment #GitHub\n\nRead the full Octoverse 2025 report: https://gh.io/octoverse\n\n— CHAPTERS —\n\n00:00 - TypeScript overtakes Python & Java 00:42 - Python's role in the AI era 01:17 - How AI is changing the way we code 01:43 - AI's influence on language choice 02:20 - How AI might affect niche languages 03:35 - AI adoption in emerging markets 03:57 - How companies are approaching AI\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 100 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "FeedLevelAuthor": "GitHub",
+  "Title": "The future of coding: Idan Gazit breaks down Octoverse 2025"
+}

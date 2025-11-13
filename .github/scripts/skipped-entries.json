@@ -8541,5 +8541,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rules. The content is a high-level announcement/news item about a national AI upskilling initiative in Brazil, focused on education/training scale and diversity/inclusion (business/strategy scope), not technical implementation or developer-focused content. It lacks substantive technical detail or actionable information about Microsoft developer technologies, AI development, or integration (violating the rule against business strategy and non-technical implementation content).",
     "collection": "news",
     "canonical_url": "https://news.microsoft.com/source/latam/features/ai/microsoft-ai-courses-brazil/?lang=en"
+  },
+  {
+    "reason": "No categories found: All category arrays are left empty because the content provided contains no substantive information. The 'content' field is null, the 'description' field is empty, and there are no tags. Without content or any meaningful description, it is impossible to determine if the material qualifies for any Microsoft technology categories or if it meets quality standards. According to the processing rules, especially the guideline to 'never fabricate information' and 'when in doubt, exclude,' this entry cannot be categorized.",
+    "canonical_url": "https://www.youtube.com/shorts/pDsbw4k1Nt0",
+    "timestamp": "2025-11-13 16:06:24 +00:00",
+    "collection": "videos"
   }
 ]
