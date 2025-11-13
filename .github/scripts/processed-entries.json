@@ -15794,5 +15794,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=Gtbfaei9i94",
     "reason": "Succesfully added: Assigned AI category because the session focuses on designing and implementing AI agents in applications (AI rule 1, AI rule 4). Assigned Coding category because it's about integrating these agents using C# and .NET, with practical code and development strategies (Coding rules 1, 2, and 4). The session discusses UX, context engineering, and development patterns specifically for building AI into .NET applications, not general productivity or business features. Content also references real-world tools like CodeRush and AiGen, supporting the technical depth and development focus. No Azure or ML categories because there is no mention of specific Azure platform services or data science/ML techniques. No Security or DevOps because those areas aren't addressed in the description.",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Coding category because Rx.NET is a Microsoft-supported programming library central to reactive programming and .NET development (Coding Inclusion Rule 3). The session content and description clearly refer to technical topics: updates, development progress, and future version planning for a core framework library. No other categories apply because there's no Azure, AI, ML, DevOps, or Security focus. Generic Exclusion Rules do not apply, as the content is technical, session-based, and not biographical, sales-oriented, negative, or business strategy focused.",
+    "timestamp": "2025-11-13 11:05:10 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=y7Ks_bwSHUg",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned: Azure (core platform is Azure App Service, Azure Monitor is covered), DevOps (involves deployment setup, environment configuration, troubleshooting, and scaling practices), Coding (specific implementation steps for PHP, Python, Node.js, .NET, including startup commands and sample code), Security (since OTEL traces/logs touch on monitoring, service names, env vars, and container security practices). ML and AI not assigned because the content is about application observability and monitoring, not machine learning or AI-powered capabilities. The post qualifies as technical implementation rather than business, biographical, or sales/pitch content, and exceeds community length minimum.",
+    "timestamp": "2025-11-13 11:05:42 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-iii-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469589",
+    "collection": "community"
   }
 ]
