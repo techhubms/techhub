@@ -1,0 +1,14 @@
+{
+  "FeedName": "DotNet YouTube",
+  "PubDate": "2025-11-14T06:00:06+00:00",
+  "ProcessedDate": "2025-11-14 07:05:20",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "dotnet",
+  "Title": "Carbon Aware Computing - Using .NET Open Source libraries for more sustainable applications",
+  "Author": "dotnet",
+  "EnhancedContent": null,
+  "Description": "Modern software development must become climate-friendly and resource-saving. However, we don't have to reinvent the wheel, as Green Software Development design patterns already exist. After the “usual suspects” such as maximizing server utilization, minimizing memory and processor utilization and dynamic scaling, a paradigm shift is needed.\n\nSimilar to the energy transition, the use of resources must be aligned with the supply of resources. This is the principle of carbon aware computing.\n\nOne option is to shift plannable loads (tasks, jobs, batch processes) to times with a high proportion of renewable energy in the power grid (time-shifting).\n\nA different strategy is required for on-demand loads and scaling. Here, the application must adapt the supply and its functionality to the available resources. This process is called demand shaping.\n\nThis talk will show how these patterns can be implemented with Open Source .NET Libraries - on prem, in the cloud with Azure PaaS or in Kubernetes and what options an application has to “shed” the load. We see CarbonAware SDK with life Open Data, Job-Sheduling with Hangfire, Powershell Commandlets for automation, Kubernetes Exporter for KEDA & Prometheus. All aspects will be addressed: How does scaling work, how can you limit it dynamically based on the CO2 intensity of the power grid and where do you get the prediction data from. And the whole thing with lots of live demos.\n\nSession: Carbon Aware Computing - Using .NET Open Source libraries for more sustainable applications\n\nWatch more .NET Conf 2025 videos at https://www.youtube.com/playlist?list=PLdo4fOcmZ0oXtIlvq1tuORUtZqVG-HdCt",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Link": "https://www.youtube.com/watch?v=IqSzmerSXuk",
+  "Tags": []
+}

@@ -16088,5 +16088,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=p_zslgBi06k",
     "collection": "videos",
     "timestamp": "2025-11-14 06:04:41 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=0Z1plDp_rvI",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the session features live demonstrations of using GitHub Copilot as an AI pair programmer for UI testing (AI rules 2 and 5, GitHub Copilot rules 1 and 2). Coding category applies because it addresses test code development and Avalonia programming (Coding rules 3 and 4). DevOps is included because the content focuses on professional testing strategies, automation, and continuous integration aspects (DevOps rules 5 and 9). Azure and ML are not included as there is no mention or focus on Azure/cloud platforms or data science/ML content. Security is not present. All content fits within professional technical depth and does not violate any generic exclusion rules.",
+    "timestamp": "2025-11-14 07:06:34 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=IqSzmerSXuk",
+    "collection": "videos",
+    "reason": "Succesfully added: Categories 'Azure', 'Coding', and 'DevOps' are included. Azure qualifies because the session discusses implementing sustainable computing paradigms within Azure PaaS environments (Azure rule 1, 4, 5). Coding is included due to the focus on .NET development patterns, open source libraries, and code-level solutions such as integrating CarbonAware SDK and Hangfire (Coding rules 1, 2, 4). DevOps is assigned since the talk addresses automation with Powershell, Kubernetes-based scaling with KEDA, dynamic workload management, job scheduling, and CI/CD-style operational best practices (DevOps rules 3, 5, 6, 7). AI and ML do not qualify, since there is no discussion of artificial intelligence or data science solutions; the focus is on sustainability, scheduling, and system adaptation, not on integrating AI/ML capabilities. Security is not assigned, as security or compliance topics are not meaningfully addressed. All assigned categories strictly follow the outlined inclusion rules and reflect the content's technical implementation focus.",
+    "timestamp": "2025-11-14 07:06:55 +00:00"
   }
 ]
