@@ -8613,5 +8613,29 @@
     "canonical_url": "https://www.youtube.com/shorts/caKNPVHedHc",
     "reason": "No categories found: No categories assigned. Content is excluded due to the 'Sales Pitches' generic exclusion rule. The video centers on unboxing a GitHub Copilot-themed desk toy ('Amaze Ball') and contains promotional language encouraging viewers to purchase the item from the GitHub Shop. There is no substantive technical content, educational value, or discussion of GitHub Copilot's developer features. The piece is primarily entertainment and product promotion, not suitable for technical categorization per the workflow.",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/ptBqQvJqaZg",
+    "timestamp": "2025-11-14 16:06:49 +00:00",
+    "reason": "No categories found",
+    "collection": "videos"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-11-14 17:06:45 +00:00",
+    "reason": "No categories found: No categories assigned because the provided content does not contain sufficient substantive technical content or detailed information for analysis. The content consists only of a brief teaser asking a question and referencing an external blog post without any technical explanation, code, or actionable detail in the input description or title. This triggers the generic exclusion rule for 'question-only content' and also lacks enough content to apply any category inclusion rules.",
+    "canonical_url": "https://www.youtube.com/shorts/N9uuwEDWc1M"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-11-14 17:07:27 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/practical-use-cases-writing-refactoring-and-testing-code-with/m-p/4470032#M180"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-11-14 17:07:27 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/prompt-engineering-for-developers-getting-the-best-out-of/m-p/4470033#M181"
   }
 ]

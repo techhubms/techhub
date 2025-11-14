@@ -16172,5 +16172,35 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-virtual-network-manager-azure-virtual-wan/ba-p/4469991",
     "reason": "Succesfully added: Content qualifies for the Azure category because it presents in-depth technical details about Azure Virtual Network Manager and Azure Virtual WAN (Azure rules 1 and 5). It focuses on Azure-specific networking, architecture, troubleshooting, scalability, and operational management. No other inclusion categories (AI, ML, Coding, DevOps, Security) are directly addressed. The article does not contain any Generic Exclusion Rule triggers: it is technical, sufficiently long for community content, in English, does not reference business productivity apps, and clearly focuses on cloud networking within Azure.",
     "collection": "community"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-11-14 17:05:26 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the piece is centered on a Microsoft-driven AI agent (BlueCodeAgent) and discusses AI-based frameworks for code generation and security (AI rule 1 and 4). Assigned Security category because the entire article is about mechanisms for detecting, analyzing, and mitigating security risks arising from AI-driven code generation (Security rules 1, 2, 5, and 9). Coding and Azure categories were not added since the focus is not on coding practice or cloud deployment, but instead on the security and AI layers above model-generated code.",
+    "canonical_url": "https://www.microsoft.com/en-us/research/blog/bluecodeagent-a-blue-teaming-agent-enabled-by-automated-red-teaming-for-codegen-ai/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-11-14 17:05:55 +00:00",
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories. The content centrally discusses GitHub Copilot code review, which is a developer tool using AI assistance (AI rules 1 and 2, GitHub Copilot rules 1 and 2). It gives in-depth guidance on configuring 'copilot-instructions.md', customizing code review automation, and best practices for Copilot as an AI-powered reviewer, fully within Tech Hub's development and AI scope. Excluded 'Coding', as the primary focus is Copilot configuration for code review rather than code writing; no DevOps, Azure, ML, or Security depth is present. All tags are aligned with best practices for technical keywords from the content.",
+    "canonical_url": "https://github.blog/ai-and-ml/unlocking-the-full-power-of-copilot-code-review-master-your-instructions-files/"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-11-14 17:06:32 +00:00",
+    "reason": "Succesfully added: Content is an aggregated technical update covering new Azure features, security, containerization, data, AI enhancements, and Microsoft cloud platform tools. Azure category is included due to extensive coverage of Azure services and updates (Azure rule 1). Security qualifies due to sections on WAF, Firewall, AVNM, and Azure Migrate security (Security rules 1 & 5). Coding and DevOps are included as updates discuss .NET 10, AKS CLI, and infrastructure changes relevant to development and operations (Coding rule 2, DevOps rules 1 & 5). AI is included for GPT-5.1 models and Azure AI infrastructure news (AI rules 1 & 5). The update is not biographical, not primarily negative, contains substantial technical content, is in English, and does not focus on business productivity or non-development Microsoft products, so none of the generic exclusions triggered.",
+    "canonical_url": "https://www.youtube.com/watch?v=zC9pEiIf46k"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-11-14 17:07:02 +00:00",
+    "reason": "Succesfully added: The content centers on a specific security vulnerability, Server-Side Request Forgery (SSRF), identified by a Microsoft security expert as a major concern for cloud and application developers. According to Security Category, rule 2 (application security in Microsoft ecosystem), this qualifies for the 'Security' category. The focus is educational, technical, and directly relevant to security practices for developers. No generic exclusion rules apply; while the exact platforms or code are not deeply discussed, the video is technical, actionable, and targets developer security awareness.",
+    "canonical_url": "https://www.youtube.com/watch?v=7nAp63gv2jE"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-11-14 17:07:26 +00:00",
+    "reason": "Succesfully added: The content is included because it focuses on detailed technical features and implementation of Azure NetApp Files for engineering workloads (Azure rule 1). Security category is present due to discussion of dedicated capacity, quota enforcement, backup, file restores, and compliance-enabling controls (Security rules 1, 4, 7, 9, 10). The AI category applies because the article highlights integration with Azure's AI and machine learning services (AI rule 1), particularly through the Object REST API, as well as AI-ready environments for EDA and HPC. No exclusion rules apply as the article is technical, not biographical, non-promotional, focuses on development-ready Microsoft cloud solutions, and targets practitioners rather than business leadership.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-hpc-and-eda-with-powerful-azure-netapp-files/ba-p/4469739"
   }
 ]
