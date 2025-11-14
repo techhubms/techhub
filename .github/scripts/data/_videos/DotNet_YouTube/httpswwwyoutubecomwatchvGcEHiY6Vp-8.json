@@ -1,0 +1,14 @@
+{
+  "PubDate": "2025-11-14T01:40:06+00:00",
+  "OutputDir": "_videos",
+  "Title": "Matthew Watt Smatterings of F#",
+  "FeedName": "DotNet YouTube",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-11-14 02:33:46",
+  "Description": "You're a C# developer and you love it. .NET is your bread and butter, and rightly so - C# and .NET are awesome! But did you know that .NET is more than just C# (and VB 🙂)?\n\nHave you heard of this little programming language called F#? Maybe you have, and you love it as much as I do. Maybe you have, but you've got C#, so why bother? Maybe you have, and maybe you really like the ideas, but you work in a \"C# shop\" and your team members just can't be convinced. Maybe you've never heard of F# at all!\n\nWhoever you are, I welcome you! In this talk, I hope to address everyone I have described.\n\nIf you love F# as much as I do, you'll be inspired to keep finding ways to scratch that F# itch, however you can!\n\nIf you are a C# fanatic, you'll see that different ways of thinking about programming can help you be better at the things you're already doing...and that there are useful tools outside of our beloved C# 🙂\n\nIf you're a secret F# admirer in a world of C# developers, you'll discover that to use F# effectively, you don't need the title of \"F# developer\" at work, nor do you need to convince everyone on your team that they should convert all their C# to F#. F# lawyers - you can rest!\n\nIn this talk, we're going to look at the ways I use smatterings of F# here and there to scratch my itch - and give back to the community!\n\n- We'll look at my blog and how, though it is primarily Astro, I used F# to build a basic commenting system, as well as some other useful frontend components - all without having to completely convert everything!\n\n- We'll look at some of my open source contributions, which are proof that you don't need to do anything groundbreaking to get started. Bored? See some missing functionality or documentation in a library you use a lot? Get forking!\n\nI hope to see you there!\n\nWatch more .NET Conf 2025 videos at https://www.youtube.com/playlist?list=PLdo4fOcmZ0oXtIlvq1tuORUtZqVG-HdCt",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Link": "https://www.youtube.com/watch?v=GcEHiY6Vp-8",
+  "Tags": [],
+  "Author": "dotnet"
+}

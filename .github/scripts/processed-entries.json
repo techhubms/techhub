@@ -16034,5 +16034,17 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned the Coding category based on content describing technical features in C# from versions 12 through 14, focusing on practical improvements for developers. Although the actual video isn't provided (content is null), the title and description explicitly detail C# language enhancements and habits for coding, matching Coding inclusion rules 1–4. No other categories (such as AI, DevOps, Azure, ML, Security) are referenced. Tags were selected to reflect the technical depth, versions discussed, and developer best practice focus.",
     "timestamp": "2025-11-14 01:31:46 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-11-14 02:35:03 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=GcEHiY6Vp-8",
+    "reason": "Succesfully added: Assigned the 'Coding' category because the talk highlights F# and C#, both Microsoft programming languages, and demonstrates practical coding and development with .NET (Coding rules 1 and 4). No other categories apply, as the focus is not on AI, ML, Azure, DevOps, Security, or GitHub Copilot. The talk is technical and educational—not biographical, sales, or business productivity focused—so it passes all generic exclusions."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-11-14 02:35:21 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=QZsxrDC8hr0",
+    "reason": "Succesfully added: Assigned 'AI' category because the session is focused entirely on practical strategies and techniques for overcoming limitations when integrating AI, aligning with AI category rules 1 and 4. Despite the open-source tools mentioned (AIStoryBuildeers.com and BlazorData.net), there is no evidence in the provided description of focus on coding or .NET-specific implementation, so 'Coding' is not included. The content fits the inclusion criteria for AI but lacks detail for additional categories. No generic exclusion rules apply as the session content is technical, practical, and relevant to AI implementations in applications."
   }
 ]

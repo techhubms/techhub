@@ -1,0 +1,14 @@
+{
+  "PubDate": "2025-11-14T02:00:06+00:00",
+  "OutputDir": "_videos",
+  "Title": "Overcoming the limitations when using AI",
+  "FeedName": "DotNet YouTube",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-11-14 02:33:46",
+  "Description": "Artificial intelligence is inherently imprecise, which poses significant challenges when integrating it into real-world applications. In this session, we’ll explore practical strategies and proven techniques used in actual implementations to mitigate these challenges and harness AI effectively. The following open-source applications are covered: AIStoryBuildeers.com and BlazorData.net.\n\nSession: Overcoming the limitations when using AI Speaker: Michael Washington\n\nWatch more .NET Conf 2025 videos at https://www.youtube.com/playlist?list=PLdo4fOcmZ0oXtIlvq1tuORUtZqVG-HdCt",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Link": "https://www.youtube.com/watch?v=QZsxrDC8hr0",
+  "Tags": [],
+  "Author": "dotnet"
+}
