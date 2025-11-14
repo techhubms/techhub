@@ -16286,5 +16286,17 @@
     "timestamp": "2025-11-14 20:09:36 +00:00",
     "collection": "videos",
     "reason": "Succesfully added: Assigned the Coding category because the content is about advanced .NET code optimization techniques, including code generation, Spans, Vectors, and .NET language features (Coding rules 1, 2, and 4). Assigned the ML category since it focuses on building a high-performance data warehouse (ML rule 1: data platform engineering and high-performance data processing). Did not assign Azure, AI, DevOps, or Security because there is no mention of Microsoft cloud integration, AI/ML frameworks or analytics specifics, deployment pipelines, or security concerns. The content is technical, focused on implementation details, and free from exclusion triggers (no sales pitch, biographical focus, business/productivity tool focus, or negativity)."
+  },
+  {
+    "timestamp": "2025-11-14 21:06:22 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=VIroNVbY0qI",
+    "reason": "Succesfully added: Assigned 'Coding' because the video focuses on constructing a load balancer using Microsoft-supported frameworks (YARP, .NET 10, ASP.NET Core 10) and involves technical implementation (Coding rules 1, 2, 4). Assigned 'DevOps' due to content targeting deployment, routing, and integration of services across multiple clusters and legacy VMs (DevOps rules 1, 3, 5, 6). Did not assign 'Azure' as Azure is not referenced; focus is on Kubernetes, VMs, and container orchestration in a cloud-agnostic context. No AI, Security, or ML aspects are presented. No generic exclusion applies; all content is technical and meets quality standards.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-14 21:06:50 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/join-microsoft-sc25-experience-hpc-and-ai-innovation/ba-p/4467935",
+    "reason": "Succesfully added: Assigned 'AI' because the event and technical sessions prominently focus on AI innovation (AI category rule 1)—including sessions on LoRA fine-tuning, agentic AI, and AI infrastructure. Assigned 'Azure' because most demos, talks, and workshops are centered on Azure cloud services and infrastructure for HPC and AI workloads (Azure category rules 1, 4, and 5). 'ML', 'DevOps', 'Security', 'Coding', and 'GitHub Copilot' are not included: while some sessions touch on data science or automation, the primary emphasis is on HPC/AI solutions and Azure infrastructure rather than hands-on ML coding, DevOps methodology, or specific security implementation per the inclusion rules.",
+    "collection": "community"
   }
 ]
