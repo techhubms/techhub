@@ -16142,5 +16142,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned the Coding category because the video is about adopting and using Nullable Reference Types, a feature of the C# programming language and .NET ecosystem (Coding rules 1 and 4). The focus is on development practices and language features, not on Azure, AI, DevOps, ML, or Security. Other categories were not added since there is no mention of Microsoft cloud, AI, or machine learning components.",
     "canonical_url": "https://www.youtube.com/watch?v=7Sz4heIk_lM"
+  },
+  {
+    "timestamp": "2025-11-14 10:04:54 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=U4_KcjJOxOE",
+    "reason": "Succesfully added: Assigned 'Coding' because the content centers on integrating passkey (WebAuthn) authentication into ASP.NET Core, matching Coding inclusion rules 1 and 4. Assigned 'Security' since it focuses on secure authentication methods, public key cryptography, and phishing-resistant techniques, satisfying Security rules 2, 3, and 7. Content description and title make clear the technical, implementation-oriented focus on Microsoft development technologies.",
+    "collection": "videos"
   }
 ]

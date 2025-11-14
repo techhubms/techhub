@@ -1,0 +1,14 @@
+{
+  "Title": "Going Passwordless - A Practical Guide to Passkeys in ASP.NET Core",
+  "Link": "https://www.youtube.com/watch?v=U4_KcjJOxOE",
+  "Author": "dotnet",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "FeedName": "DotNet YouTube",
+  "Tags": [],
+  "PubDate": "2025-11-14T09:00:06+00:00",
+  "Description": "Passkeys, using the WebAuthn protocol, replace passwords with stronger, simpler, and phishing-resistant authentication using your device's built-in security or a dedicated hardware key.\n\nThis session provides a practical introduction to passkey authentication and its implementation in ASP.NET Core applications. We'll explore the fundamentals of passkeys and the underlying public key cryptography. Then, we'll demonstrate how to integrate passkey authentication into your projects, supporting OS management, password managers (like 1Password), and hardware security keys (like a Yubikey).\n\nJoin this talk if you want to get a thorough understanding of passkeys and the skills to integrate them into your applications.\n\nSession: Going Passwordless - A Practical Guide to Passkeys in ASP.NET Core\n\nWatch more .NET Conf 2025 videos at https://www.youtube.com/playlist?list=PLdo4fOcmZ0oXtIlvq1tuORUtZqVG-HdCt",
+  "ProcessedDate": "2025-11-14 10:03:41",
+  "OutputDir": "_videos"
+}
