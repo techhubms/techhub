@@ -16016,5 +16016,17 @@
     "reason": "Succesfully added: Assigned the AI category because the content is focused on building AI agents and agent orchestration (AI rule 1, 4). Assigned the Azure category as it centers on Azure Durable Functions, Azure Functions, and deployment on Azure compute (Azure rule 1, 4). Assigned the Coding category since the article provides practical Python and C# code samples and discusses development workflows (Coding rules 1, 2, 4). No generic exclusion rules apply; content is technical, developer-focused, and not biographical, career-focused, or sales-oriented. Other categories such as DevOps, ML, or Security do not apply here as the core themes are agent development, orchestration, and resilience rather than operational pipelines, data science, or security.",
     "timestamp": "2025-11-13 21:07:15 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bulletproof-agents-with-the-durable-task-extension-for-microsoft/ba-p/4467122"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-11-13-configure-copilot-coding-agent-as-a-bypass-actor-for-rulesets",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content centers on Copilot coding agent, a developer-focused AI tool (GitHub Copilot and AI inclusion rules 1 and 2). Added 'DevOps' due to the repository governance, branch policies, and automation implications (DevOps inclusion rules 3, 5, and 6). Coding was not assigned as the content describes configuration and governance rather than code patterns or development itself. Rulesets, automation, and agent exemption are all features relevant for DevOps and platform governance. There are no generic exclusion rules triggered.",
+    "collection": "news",
+    "timestamp": "2025-11-14 00:09:34 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=yKhaYLYK4Sg",
+    "reason": "Succesfully added: Assigned AI category because the session centers on designing, integrating, and optimizing AI agents, specifically within C#/.NET (AI rules 1, 4, 5). Assigned Coding because it involves C# development, design patterns, and code assistant implementations (Coding rules 1, 2, 4). Did not assign other categories as there is no focus on DevOps, Azure, ML, or Security according to provided content.",
+    "collection": "videos",
+    "timestamp": "2025-11-14 00:10:04 +00:00"
   }
 ]

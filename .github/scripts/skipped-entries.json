@@ -8583,5 +8583,11 @@
     "reason": "No categories found: No categories assigned because the content is focused on an open-source note-taking application (Joplin) that is not a Microsoft product or technology, as indicated in the title and description. The episode discusses the creator's journey, app features, privacy, plugins, and community, but there is no mention or focus on Microsoft platforms, services, or tools. Since it does not centrally feature Microsoft technology (multi-platform rule) and does not include development content on Microsoft products or services, it fails the 'Microsoft Content Must Be Central' rule and is excluded per core processing rules.",
     "timestamp": "2025-11-13 21:06:46 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=V0PRW-WIo2A"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/ZfmcABG7Mps",
+    "reason": "No categories found: No categories assigned. The content lacks sufficient technical detail to assign appropriate categories. The actual main content is missing (content field is null), and the description only briefly states that Agent Sessions in VS Code boost productivity with local and remote AI Agents, which does not provide enough information on technical implementation, integration, or usage. Without substantive content to analyze, I cannot reliably determine central Microsoft technologies, qualifying AI usage, or coding depth per the inclusion rules. Generic terms like 'boost your productivity' and the short, vague summary without detailed steps or explanations do not meet the minimum for inclusion.",
+    "collection": "videos",
+    "timestamp": "2025-11-14 00:10:21 +00:00"
   }
 ]

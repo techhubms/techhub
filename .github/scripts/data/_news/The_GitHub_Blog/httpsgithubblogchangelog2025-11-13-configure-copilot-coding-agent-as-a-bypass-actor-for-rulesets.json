@@ -1,0 +1,18 @@
+{
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedName": "The GitHub Blog",
+  "Author": "Allison",
+  "Title": "Configure Copilot coding agent as a bypass actor for rulesets",
+  "ProcessedDate": "2025-11-14 00:07:54",
+  "PubDate": "2025-11-13T22:30:49+00:00",
+  "EnhancedContent": "[Rulesets](https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets) allow you to control how different actors can interact with a repository. You can use rulesets to enforce rules like:\n\n- Only allow commits from email addresses that match a certain pattern.\n- Ensure that commit messages follow a specific structure.\n- Require commits to be signed.\n\n[Copilot coding agent](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent) is our asynchronous developer agent that works in the background. It can’t always comply with every rule – for example, it can’t sign commits. When a repository includes rules that the agent can’t comply with, the agent is automatically disabled.\n\nNow, you can unblock usage of the coding agent by [configuring Copilot coding agent as a bypass actor](https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/creating-rulesets-for-a-repository#granting-bypass-permissions-for-your-branch-or-tag-ruleset) for select rulesets. This allows you to exempt Copilot from specific rules without relaxing your requirements for code pushed by humans.\n\nTo learn more about Copilot coding agent, head to [“About GitHub Copilot coding agent”](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent) in the GitHub Docs.",
+  "OutputDir": "_news",
+  "Description": "Rulesets allow you to control how different actors can interact with a repository. You can use rulesets to enforce rules like: Only allow commits from email addresses that match a…\n\nThe post [Configure Copilot coding agent as a bypass actor for rulesets](https://github.blog/changelog/2025-11-13-configure-copilot-coding-agent-as-a-bypass-actor-for-rulesets) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2025-11-13-configure-copilot-coding-agent-as-a-bypass-actor-for-rulesets",
+  "Tags": [
+    "copilot",
+    "Improvement",
+    "platform governance"
+  ],
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}
