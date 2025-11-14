@@ -16154,5 +16154,17 @@
     "reason": "Succesfully added: Assigned the GitHub Copilot category due to detailed coverage of Copilot setup for developers (GitHub Copilot rule 1-5). Assigned AI because Copilot is a developer-focused AI tool and both categories must be set together (AI rule 2). Added DevOps for detailed setup, license management, SSO, and Azure integration (DevOps rules 2, 5, 6, 8). Azure is included due to multiple steps requiring Azure subscription setup (Azure rule 1, 4). Security category is appropriate because of SSO configuration with Microsoft Entra ID, which is a security/identity feature (Security rules 1, 3). Content is not a biographical focus, sales pitch, or negative, does not violate any generic exclusions, and is highly relevant to technical users managing GitHub/Copilot onboarding.",
     "timestamp": "2025-11-14 12:05:20 +00:00",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the integration centers around AI-native automation tools (AI rule 1 and 4) and natural language agentic workflows in the IDE. Assigned Azure because it extensively covers Azure resource management and automation (Azure rule 1, 4, 5). Coding was assigned as the article discusses code and infrastructure generation using developer tools (Coding rule 1, 4, 5). DevOps applies because CI/CD, workflow generation, resource management, and publishing are core focus areas (DevOps rules 1, 5, 6). GitHub Copilot qualifies because enabling and using Copilot for Azure operations and CLI is integral (GitHub Copilot rule 1, 6). Security is included due to explicit reference to secure, enterprise-grade practices when managing Azure resources (Security rule 2, 9). Exclusions for business productivity Copilots do not apply (only GitHub Copilot and developer AI are covered). No generic exclusion rules triggered as content is technical, in-depth, and focused squarely on developer workflows.",
+    "timestamp": "2025-11-14 14:06:33 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/azure-mcp-server-now-built-in-with-visual-studio-2026-a-new-era-for-agentic-workflows/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because this content is deeply focused on Microsoft's Azure platform, covering services like VNET, Application Gateway, Load Balancer, Traffic Manager, DNS, and Front Door per Azure Rule 1, 2, and 5. Assigned DevOps because it covers deployment strategies, cloud infrastructure configuration, DNS, routing, and global scaling—meeting DevOps rules 1, 2, 5, 6, and 8. Security is included as the article discusses NSG configuration, DDoS protection, Private Link, and WAF integration according to Security Rule 1, 5, 7, and 10. Coding is not assigned as there are no direct programming/development aspects; nor ML or AI as there is no reference to data science, ML, or AI technologies. The community content is well above the 200-word minimum with substantive Microsoft technical depth throughout. No exclusion rules apply.",
+    "timestamp": "2025-11-14 14:07:20 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/delivering-web-applications-over-ipv6/ba-p/4469638",
+    "collection": "community"
   }
 ]
