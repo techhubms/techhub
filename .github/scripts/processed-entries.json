@@ -16148,5 +16148,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=U4_KcjJOxOE",
     "reason": "Succesfully added: Assigned 'Coding' because the content centers on integrating passkey (WebAuthn) authentication into ASP.NET Core, matching Coding inclusion rules 1 and 4. Assigned 'Security' since it focuses on secure authentication methods, public key cryptography, and phishing-resistant techniques, satisfying Security rules 2, 3, and 7. Content description and title make clear the technical, implementation-oriented focus on Microsoft development technologies.",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/tutorial-videos-setting-up-github-copilot-for-your-company/",
+    "reason": "Succesfully added: Assigned the GitHub Copilot category due to detailed coverage of Copilot setup for developers (GitHub Copilot rule 1-5). Assigned AI because Copilot is a developer-focused AI tool and both categories must be set together (AI rule 2). Added DevOps for detailed setup, license management, SSO, and Azure integration (DevOps rules 2, 5, 6, 8). Azure is included due to multiple steps requiring Azure subscription setup (Azure rule 1, 4). Security category is appropriate because of SSO configuration with Microsoft Entra ID, which is a security/identity feature (Security rules 1, 3). Content is not a biographical focus, sales pitch, or negative, does not violate any generic exclusions, and is highly relevant to technical users managing GitHub/Copilot onboarding.",
+    "timestamp": "2025-11-14 12:05:20 +00:00",
+    "collection": "news"
   }
 ]
