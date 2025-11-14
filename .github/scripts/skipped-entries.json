@@ -8637,5 +8637,23 @@
     "timestamp": "2025-11-14 17:07:27 +00:00",
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/tools/prompt-engineering-for-developers-getting-the-best-out-of/m-p/4470033#M181"
+  },
+  {
+    "timestamp": "2025-11-14 18:04:45 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This news item is a brief event announcement with no substantive technical details, educational value, or technical implementation described. It functions as a corporate announcement rather than technical content, thus triggering the 'sales pitches' and 'business strategy and executive content' exclusions. Additionally, the actual body of the content is missing or placeholder ('##'), providing no technical depth.",
+    "canonical_url": "https://news.microsoft.com/ignite-2025",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-14 18:05:16 +00:00",
+    "reason": "No categories found: No categories assigned. The input content is about 'Microsoft 365 Copilot', which is a business productivity tool and does NOT qualify for any categories under the workflow's Copilot Product Distinction rules. The content specifically describes Copilot Tuning for Microsoft 365 Copilot and does not involve developer tools, code development, or Microsoft AI platform development. According to the exclusion rules (Non-Development Microsoft Products), business productivity Copilot products must be excluded (see Chapter 3 and the critical Copilot Product Distinction in Chapter 2).",
+    "canonical_url": "https://www.youtube.com/shorts/OOgRdCII0SE",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-14 18:05:18 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/azure-enterprise-scale-landing-zone-building-a-future/m-p/4470064#M807",
+    "collection": "community"
   }
 ]

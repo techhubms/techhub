@@ -1,0 +1,16 @@
+{
+  "Tags": [
+    "dotnet"
+  ],
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=etF5w3Aogh0",
+  "FeedName": "DotNet YouTube",
+  "ProcessedDate": "2025-11-14 20:04:15",
+  "EnhancedContent": null,
+  "Author": "dotnet",
+  "PubDate": "2025-11-14T19:21:22+00:00",
+  "FeedLevelAuthor": "dotnet",
+  "Title": "Efficient Onboarding: Accelerating New Engineer Productivity",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Description": "Organizations often invest heavily in engineering onboarding—only to lose time with manual setups and senior staff dependencies. In this session, I’ll demonstrate how we automated the entire onboarding process using tools like .NET Aspire, Winget configuration, and Visual Studio settings export/import, reducing new‑hire setup time from days to under an hour.\n\n.NET 10 — The most intelligent and unified .NET yet: https://aka.ms/dotnet10/ .NET Aspire 13 — Simplified orchestration for cloud-native apps: https://aka.ms/aspire13/announcement ASP.NET Core 10 — Modern, secure, and full-stack web development: https://aka.ms/asp/dotnet/2025 .NET MAUI 10 — Build beautiful apps on every platform: https://aka.ms/dotnet/maui/2025 C# 14 — A more expressive and productive language: https://aka.ms/csharp14/announcement/2025 F# 10 — Safer, faster, and more functional than ever: https://aka.ms/fsharp10/2025/announcement Visual Studio 2026 — Faster, smarter, and built for the future: https://aka.ms/visualstudio2026/announcement .NET Conf 2025 — A global celebration of .NET innovation: https://aka.ms/dotnotconf2025/recap\n\nConnect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet"
+}

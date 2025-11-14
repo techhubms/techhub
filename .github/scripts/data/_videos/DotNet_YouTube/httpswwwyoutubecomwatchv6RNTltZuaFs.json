@@ -1,0 +1,16 @@
+{
+  "Tags": [
+    "dotnet"
+  ],
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=6RNTltZuaFs",
+  "FeedName": "DotNet YouTube",
+  "ProcessedDate": "2025-11-14 20:04:15",
+  "EnhancedContent": null,
+  "Author": "dotnet",
+  "PubDate": "2025-11-14T19:21:14+00:00",
+  "FeedLevelAuthor": "dotnet",
+  "Title": "Transforming CI Failures into Focused Debugging with Visual Studio Playlists and AI",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Description": "When a CI pipeline fails, developers often waste valuable time sifting through large test suites to identify the tests that need attention. In this session, I’ll introduce a tool I developed that automatically converts .trx test results into Visual Studio .playlist files directly within the CI pipeline. This allows developers to download the .playlist file from the CI pipeline and instantly start debugging locally, running only the tests that failed. A key part of developing this tool involved leveraging AI tools like GitHub Copilot and Microsoft Copilot to accelerate the process. These AI tools helped me quickly understand complex decompiled code, identify key differences between Visual Studio playlist versions, and iterate far faster than I could manually. I’ll demonstrate how AI can assist in the exploration phase, navigate lower-level details, and allow developers to focus on higher-value tasks, such as solving the core problem. By adopting similar AI-assisted workflows, you can speed up your own development, tackle complex problems more efficiently, and boost productivity in your projects.\n\n.NET 10 — The most intelligent and unified .NET yet: https://aka.ms/dotnet10/ .NET Aspire 13 — Simplified orchestration for cloud-native apps: https://aka.ms/aspire13/announcement ASP.NET Core 10 — Modern, secure, and full-stack web development: https://aka.ms/asp/dotnet/2025 .NET MAUI 10 — Build beautiful apps on every platform: https://aka.ms/dotnet/maui/2025 C# 14 — A more expressive and productive language: https://aka.ms/csharp14/announcement/2025 F# 10 — Safer, faster, and more functional than ever: https://aka.ms/fsharp10/2025/announcement Visual Studio 2026 — Faster, smarter, and built for the future: https://aka.ms/visualstudio2026/announcement .NET Conf 2025 — A global celebration of .NET innovation: https://aka.ms/dotnotconf2025/recap Connect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet"
+}
