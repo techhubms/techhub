@@ -16028,5 +16028,11 @@
     "reason": "Succesfully added: Assigned AI category because the session centers on designing, integrating, and optimizing AI agents, specifically within C#/.NET (AI rules 1, 4, 5). Assigned Coding because it involves C# development, design patterns, and code assistant implementations (Coding rules 1, 2, 4). Did not assign other categories as there is no focus on DevOps, Azure, ML, or Security according to provided content.",
     "collection": "videos",
     "timestamp": "2025-11-14 00:10:04 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=yIswUU7lKpk",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Coding category based on content describing technical features in C# from versions 12 through 14, focusing on practical improvements for developers. Although the actual video isn't provided (content is null), the title and description explicitly detail C# language enhancements and habits for coding, matching Coding inclusion rules 1–4. No other categories (such as AI, DevOps, Azure, ML, Security) are referenced. Tags were selected to reflect the technical depth, versions discussed, and developer best practice focus.",
+    "timestamp": "2025-11-14 01:31:46 +00:00"
   }
 ]
