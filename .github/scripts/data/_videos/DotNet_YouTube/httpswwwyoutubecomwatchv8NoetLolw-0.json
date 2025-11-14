@@ -1,0 +1,14 @@
+{
+  "OutputDir": "_videos",
+  "FeedName": "DotNet YouTube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "PubDate": "2025-11-14T04:00:06+00:00",
+  "ProcessedDate": "2025-11-14 05:03:30",
+  "Description": "Tired of your architecture diagrams becoming outdated before they even reach production? In this hands-on session (Level 300), you’ll learn how to turn .NET Aspire AppHost definitions into living documentation —Mermaid diagrams, markdown, and Aspire Dashboard screenshots— powered by GitHub Copilot Chat and the Copilot Coding Agent.\n\nAsk Copilot for an ASCII diagram of the services and resources declared in Aspire.\n\nAutomatically transform it into Mermaid and preview it in VS Code via mcp-mermaid.\n\nDelegate to the Coding Agent the generation of a pull request that updates documentation whenever the architecture changes.\n\nEnrich the markdown with Aspire Dashboard screenshots using Playwright MCP, creating an always up-to-date “source of truth” for your team.\n\nBy the end, you’ll know how to integrate this workflow into your CI/CD pipeline, reduce documentation debt, and deliver a reproducible blueprint for any cloud-native solution built with .NET Aspire. Bring your laptop with .NET 10 Preview installed and get ready to be amazed by Copilot’s speed!\n\nSession: From Architecture to Docs: .NET Aspire Documented with Copilot\n\nWatch more .NET Conf 2025 videos at https://www.youtube.com/playlist?list=PLdo4fOcmZ0oXtIlvq1tuORUtZqVG-HdCt",
+  "FeedLevelAuthor": "dotnet",
+  "Author": "dotnet",
+  "Tags": [],
+  "Link": "https://www.youtube.com/watch?v=8NoetLolw-0",
+  "Title": "From Architecture to Docs: .NET Aspire Documented with Copilot"
+}

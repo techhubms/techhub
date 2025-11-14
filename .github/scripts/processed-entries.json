@@ -16064,5 +16064,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=AEbJzTF03F0",
     "timestamp": "2025-11-14 04:08:05 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the session centrally features the use of GitHub Copilot Chat and Copilot Coding Agent as AI-powered developer tools for automation (AI rule 2 and GitHub Copilot inclusion rules). Added 'Coding' because converting architecture definitions and generating markdown and Mermaid docs is direct developer activity (Coding rules 1, 2, and 4). Added 'DevOps' because automating documentation maintenance, integrating with CI/CD workflows, and pull request automation are all core DevOps practices (DevOps rules 3, 5, 6). No other categories fit based on content focus. No generic exclusion rules apply — the session is technical, developer-oriented, and not business or management focused.",
+    "timestamp": "2025-11-14 05:04:40 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=8NoetLolw-0"
+  },
+  {
+    "reason": "Succesfully added: Assigned Coding category because the session centers on programming architecture and low-level engineering in .NET, per Coding rules 1, 2, and 4. The content focuses on technical implementation: modular engine design, parallel computing patterns (SPMD), and custom memory management, making it squarely relevant for developers. No other categories apply, as there is no Azure, AI, ML, Security, DevOps, or GitHub Copilot content present.",
+    "timestamp": "2025-11-14 05:04:56 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=M98JKrUfyI4"
   }
 ]
