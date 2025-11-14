@@ -16046,5 +16046,17 @@
     "timestamp": "2025-11-14 02:35:21 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=QZsxrDC8hr0",
     "reason": "Succesfully added: Assigned 'AI' category because the session is focused entirely on practical strategies and techniques for overcoming limitations when integrating AI, aligning with AI category rules 1 and 4. Despite the open-source tools mentioned (AIStoryBuildeers.com and BlazorData.net), there is no evidence in the provided description of focus on coding or .NET-specific implementation, so 'Coding' is not included. The content fits the inclusion criteria for AI but lacks detail for additional categories. No generic exclusion rules apply as the session content is technical, practical, and relevant to AI implementations in applications."
+  },
+  {
+    "reason": "Succesfully added: Assigned the Coding category because the content focuses on development practices (integration, orchestration) and technical configuration across different programming languages using Microsoft's .NET Aspire framework. This aligns with the Coding inclusion rules regarding Microsoft development frameworks and cross-language architectures. DevOps category was not assigned as the main focus is on development and integration, not on CI/CD or operational practices. AI, Azure, ML, Security, and GitHub Copilot categories do not apply based on the provided description.",
+    "canonical_url": "https://www.youtube.com/watch?v=FcAi-kqo3ps",
+    "timestamp": "2025-11-14 03:24:39 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Coding category because the content focuses on developing device automation and machine control using .NET, which fits Coding inclusion rules 1 and 4. The primary topics are programming for IoT, hardware integration, and automation using Microsoft technology (specifically .NET). No direct references to Azure, DevOps, AI, ML, or Security technologies means other categories are not assigned.",
+    "canonical_url": "https://www.youtube.com/watch?v=Yi6Uf5DojaU",
+    "timestamp": "2025-11-14 03:24:56 +00:00",
+    "collection": "videos"
   }
 ]
