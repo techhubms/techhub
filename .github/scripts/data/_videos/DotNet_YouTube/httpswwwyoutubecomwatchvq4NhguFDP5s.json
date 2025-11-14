@@ -1,0 +1,14 @@
+{
+  "PubDate": "2025-11-14T07:30:06+00:00",
+  "OutputDir": "_videos",
+  "Author": "dotnet",
+  "Link": "https://www.youtube.com/watch?v=q4NhguFDP5s",
+  "FeedLevelAuthor": "dotnet",
+  "EnhancedContent": null,
+  "Title": "Rolling Your Own SSO A Practical Guide with OpenIddict",
+  "Tags": [],
+  "Description": "Do you manage multiple apps that each duplicate authentication logic and user tables? Rely on an external provider like ADFS that isn’t always reliable? Want the benefits of Entra ID or similar, but can’t use them due to project constraints?\n\nIn this session, I’ll show how I solved these challenges by building a centralized SSO server with OpenIddict. By separating authentication into its own application, we unified logins, eliminated session fragmentation, and simplified developer workflows.\n\nYou’ll learn when rolling your own SSO is the right choice, how to design it with OpenIddict, and best practices for integrating multiple apps. Attendees will leave with a practical blueprint for modern, maintainable authentication.\n\nSession: Rolling Your Own SSO A Practical Guide with OpenIddict Speaker: Dustin Kingen\n\nWatch more .NET Conf 2025 videos at https://www.youtube.com/playlist?list=PLdo4fOcmZ0oXtIlvq1tuORUtZqVG-HdCt",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "ProcessedDate": "2025-11-14 08:05:32",
+  "FeedName": "DotNet YouTube"
+}
