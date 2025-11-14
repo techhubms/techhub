@@ -1,0 +1,14 @@
+{
+  "Author": "dotnet",
+  "EnhancedContent": null,
+  "FeedName": "DotNet YouTube",
+  "PubDate": "2025-11-14T03:30:06+00:00",
+  "Tags": [],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Link": "https://www.youtube.com/watch?v=AEbJzTF03F0",
+  "ProcessedDate": "2025-11-14 04:06:40",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "dotnet",
+  "Description": "How we took our 12-year-old .NET Framework asp.net and windows service application and upgraded it to .NET 9 without rewriting it and continuing to ship during the transition:\n1. modernizing .NET Framework pre-upgrade using .NET standard compatible Microsoft.Extensions.\\* packages\n2. converting supporting libraries to .NET standard and creating a consolidated .NET Framework-only library\n3. Authoring any new projects in .NET 8+ once dependencies are standard\n4. Handling some edge cases using dual compilation for .net framework and .net standard 2.1.\n5. ASP.NET mvc and webapi admin site conversion (with AI assistance)\n6. Final conversion of remaining projects.\n\nSession: .NET Framework 4.8 to .NET 9 Step by Step\n\nWatch more .NET Conf 2025 videos at https://www.youtube.com/playlist?list=PLdo4fOcmZ0oXtIlvq1tuORUtZqVG-HdCt",
+  "Title": ".NET Framework 4.8 to .NET 9 Step by Step"
+}

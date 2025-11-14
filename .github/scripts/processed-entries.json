@@ -16058,5 +16058,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=Yi6Uf5DojaU",
     "timestamp": "2025-11-14 03:24:56 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Coding' category because the session details a technical, step-by-step process for modernizing and migrating an application from .NET Framework 4.8 to .NET 9, focusing on code-level and architectural practices (Coding rules 1, 2, 4). Although 'AI assistance' is mentioned, it's only one aspect of the migration, and there is no detailed focus on Microsoft AI platforms or tools per the AI inclusion rule requirements. There is no explicit Azure, DevOps, ML, or Security content. No generic exclusions apply because the session is technical, English, and not business/productivity or sales-focused.",
+    "canonical_url": "https://www.youtube.com/watch?v=AEbJzTF03F0",
+    "timestamp": "2025-11-14 04:08:05 +00:00",
+    "collection": "videos"
   }
 ]

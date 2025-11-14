@@ -8589,5 +8589,11 @@
     "reason": "No categories found: No categories assigned. The content lacks sufficient technical detail to assign appropriate categories. The actual main content is missing (content field is null), and the description only briefly states that Agent Sessions in VS Code boost productivity with local and remote AI Agents, which does not provide enough information on technical implementation, integration, or usage. Without substantive content to analyze, I cannot reliably determine central Microsoft technologies, qualifying AI usage, or coding depth per the inclusion rules. Generic terms like 'boost your productivity' and the short, vague summary without detailed steps or explanations do not meet the minimum for inclusion.",
     "collection": "videos",
     "timestamp": "2025-11-14 00:10:21 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the content centers on Chronosphere, a third-party observability platform, and its new AI remediation features. There is no substantive coverage or central use of Microsoft technologies (such as Azure, GitHub, or Microsoft developer tools). The article discusses artificial intelligence and DevOps concepts, but not in a Microsoft-specific context, thus failing the ≥40% Microsoft content threshold required for category inclusion. Inclusion rules for AI and DevOps both specify that Microsoft technology must be central to the solution, which is not the case here.",
+    "canonical_url": "https://devops.com/chronosphere-adds-ai-remediation-guidance-to-observability-platform/",
+    "timestamp": "2025-11-14 04:07:40 +00:00",
+    "collection": "posts"
   }
 ]
