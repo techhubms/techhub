@@ -16124,5 +16124,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/mission-agent-possible-your-chance-to-build-solve-and-win-at/ba-p/4467585",
     "reason": "Succesfully added: Content qualifies for the AI category based on category inclusion rule #1, as it is a developer contest focused on designing AI agents and emphasizes model selection, model strengths, and using platforms like GitHub Models Playground (AI rules 1, 3, and 4). Other categories such as Coding, DevOps, Azure, ML, Security do not apply, since the announcement is contest-oriented and does not offer substantive development, deployment, or architectural details about Microsoft Azure, DevOps, or coding frameworks. Content length and format meet minimum requirements for community content. No generic exclusions apply, as the piece is technical, developer-focused, and in English.",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-14 09:05:49 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' because the post centers on using GitHub Copilot, which is a developer AI tool (AI Inclusion Rule 2, GitHub Copilot Inclusion Rules 1–6). Assigned 'Coding' because the content focuses on programming activities (writing, refactoring, testing) in various languages and frameworks (Coding Rule 1, 2, 4). 'DevOps' is included since it discusses DevOps-related scenarios (CI/CD pipelines, DevOps automation) (DevOps Rule 4, 5, 9, 11). Did not assign 'Azure', 'ML', or 'Security' as these topics were not substantively addressed.",
+    "canonical_url": "https://dellenny.com/practical-use-cases-writing-refactoring-and-testing-code-with-github-copilot/"
+  },
+  {
+    "timestamp": "2025-11-14 09:06:10 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned 'AI' category because the article is about interacting with GitHub Copilot, which, per AI inclusion rules 1 and 2, qualifies as Microsoft AI technology focused on developer workflows. Assigned 'GitHub Copilot' category since the article centers on using Copilot and maximizing its features (GitHub Copilot inclusion rules 1-4). Assigned 'Coding' because content addresses technical code-writing practices using developer tools (Coding inclusion rules 4 and 5). No exclusion rules apply, as the content is educational, technical, and focused on Microsoft developer technology. Microsoft 365 Copilot is not discussed, and prompt engineering is targeted strictly to developer coding workflows.",
+    "canonical_url": "https://dellenny.com/prompt-engineering-for-developers-getting-the-best-out-of-copilot/"
+  },
+  {
+    "timestamp": "2025-11-14 09:06:35 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Coding category because the video is about adopting and using Nullable Reference Types, a feature of the C# programming language and .NET ecosystem (Coding rules 1 and 4). The focus is on development practices and language features, not on Azure, AI, DevOps, ML, or Security. Other categories were not added since there is no mention of Microsoft cloud, AI, or machine learning components.",
+    "canonical_url": "https://www.youtube.com/watch?v=7Sz4heIk_lM"
   }
 ]

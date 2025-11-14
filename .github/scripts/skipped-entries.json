@@ -8595,5 +8595,17 @@
     "canonical_url": "https://devops.com/chronosphere-adds-ai-remediation-guidance-to-observability-platform/",
     "timestamp": "2025-11-14 04:07:40 +00:00",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-14 09:05:15 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: This content is excluded based on the generic exclusion rule for Non-Development Microsoft Products (Chapter 3). The entire article focuses on Microsoft 365 Copilot—a business productivity tool—and its usage reporting in Power BI, not on developer tooling or technical implementation. It discusses understanding, visualizing, and managing Copilot usage within Microsoft 365 for organizational adoption and productivity measurement, which are business intelligence and end-user productivity topics. There is no development, coding, integration, customization, or advanced analytics engineering content. According to the CRITICAL: Copilot Product Distinction section of the rules, 'Microsoft 365 Copilot' and 'Copilot for Microsoft 365' are specifically excluded (no categories assigned) as they are not developer tools. While Power BI is used, this article is focused entirely on accessibility of Copilot usage data and reporting for business analysis within Microsoft 365, not on Power BI development or business intelligence development techniques themselves. Therefore, per exclusion rules, no categories are assigned.",
+    "canonical_url": "https://dellenny.com/building-copilot-usage-dashboards-in-power-bi-a-complete-guide/"
+  },
+  {
+    "timestamp": "2025-11-14 09:05:28 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: All categories are excluded due to generic exclusion rules regarding business productivity Copilot products. The content focuses on monitoring security and compliance metrics specifically for 'Microsoft Copilot' within the context of Microsoft 365 and business productivity, not GitHub Copilot or developer-centric use cases. According to the instructions, content about Microsoft 365 Copilot, Copilot for Microsoft 365, or business productivity Copilot tools must not be categorized, regardless of technical depth. The primary focus of this post is organizational security/compliance for business users of M365 Copilot, not developer tool implementation, so it does not qualify for any categories.",
+    "canonical_url": "https://dellenny.com/monitoring-security-and-compliance-metrics-for-copilot-a-complete-human-focused-guide/"
   }
 ]
