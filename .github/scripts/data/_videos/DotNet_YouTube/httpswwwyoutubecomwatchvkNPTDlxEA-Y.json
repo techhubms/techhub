@@ -1,0 +1,14 @@
+{
+  "Tags": [],
+  "PubDate": "2025-11-14T05:30:06+00:00",
+  "Link": "https://www.youtube.com/watch?v=kNPTDlxEA-Y",
+  "ProcessedDate": "2025-11-14 06:03:29",
+  "Description": "John Florio's Italian-English Dictionary was first published in the early 1600s, and while it's a popular resource for translators of Renaissance-period texts it's not kept up with the times! Join me on this journey to bring it into the 21st Century with .NET, a custom vector embeddings model trained with ML.NET, CosmosDb for storage, and Aspire to glue it all together.\n\nSession: Modernizing a 17th Century Italian-English Dictionary\n\nWatch more .NET Conf 2025 videos at https://www.youtube.com/playlist?list=PLdo4fOcmZ0oXtIlvq1tuORUtZqVG-HdCt",
+  "FeedLevelAuthor": "dotnet",
+  "Title": "Modernizing a 17th Century Italian-English Dictionary",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "Author": "dotnet",
+  "FeedName": "DotNet YouTube"
+}

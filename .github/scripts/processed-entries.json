@@ -16076,5 +16076,17 @@
     "timestamp": "2025-11-14 05:04:56 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=M98JKrUfyI4"
+  },
+  {
+    "reason": "Succesfully added: Content qualifies for the Coding category due to heavy use of .NET application development (Coding rules 1 and 2). The ML category is included because of the focus on building and training a custom vector embeddings model using ML.NET (ML rules 1 and 6). Azure is included because CosmosDb (an Azure cloud-native service) is used for storage (Azure rule 1), and the architecture relies on scalable cloud storage and orchestration. No AI category as the use of ML.NET is for traditional ML, not Microsoft's generative AI services. Content is technical and developer-focused.",
+    "canonical_url": "https://www.youtube.com/watch?v=kNPTDlxEA-Y",
+    "collection": "videos",
+    "timestamp": "2025-11-14 06:04:23 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Coding category because the content focuses on .NET Aspire, extensions, and hands-on microservices engineering (Coding rules 1, 2, 4). Assigned DevOps category because it extensively discusses workflows, productivity tooling (F5 experience), onboarding, and collaboration in multi-repo cloud-native engineering (DevOps rules 3, 4, 5, 9). AI, Azure, ML, and Security categories do not apply as the session is about coding and DevOps workflows without explicit focus on AI/ML services, Azure platform specifics, or security topics.",
+    "canonical_url": "https://www.youtube.com/watch?v=p_zslgBi06k",
+    "collection": "videos",
+    "timestamp": "2025-11-14 06:04:41 +00:00"
   }
 ]

@@ -1,0 +1,48 @@
+---
+layout: "post"
+title: "Modernizing a 17th Century Italian-English Dictionary with .NET and ML.NET"
+description: "This session explores how a centuries-old Italian-English dictionary can be brought into the modern era using .NET technologies. The presentation covers building a custom vector embeddings model with ML.NET, utilizing CosmosDb for storage, and orchestrating the solution with Aspire. The speaker showcases the migration, machine learning, and cloud storage components tailored for technical audiences."
+author: "dotnet"
+excerpt_separator: <!--excerpt_end-->
+canonical_url: "https://www.youtube.com/watch?v=kNPTDlxEA-Y"
+viewing_mode: "internal"
+feed_name: "DotNet YouTube"
+feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+date: 2025-11-14 05:30:06 +00:00
+permalink: "/2025-11-14-Modernizing-a-17th-Century-Italian-English-Dictionary-with-NET-and-MLNET.html"
+categories: ["Azure", "Coding", "ML"]
+tags: [".NET", "Application Architecture", "Aspire", "Azure", "Cloud Storage", "Coding", "CosmosDb", "Custom Model Training", "Data Engineering", "Data Migration", "Dictionary Modernization", "Machine Learning", "Microsoft", "ML", "ML.NET", "Renaissance Texts", "Vector Embeddings", "Videos"]
+tags_normalized: ["dotnet", "application architecture", "aspire", "azure", "cloud storage", "coding", "cosmosdb", "custom model training", "data engineering", "data migration", "dictionary modernization", "machine learning", "microsoft", "ml", "mldotnet", "renaissance texts", "vector embeddings", "videos"]
+---
+
+dotnet demonstrates how to modernize a 17th century Italian-English dictionary using .NET, ML.NET for custom embeddings, CosmosDb for storage, and Aspire as the orchestration layer.<!--excerpt_end-->
+
+{% youtube kNPTDlxEA-Y %}
+
+# Modernizing a 17th Century Italian-English Dictionary
+
+In this session, dotnet presents a technical walkthrough of bringing John Florio's Renaissance-era Italian-English dictionary into the 21st century. The approach combines classic text resources with modern Microsoft technologies, demonstrating:
+
+## Key Technologies
+
+- **.NET** for application development and integration.
+- **ML.NET** to train a custom vector embeddings model, enabling intelligent retrieval and translation features for historical text.
+- **CosmosDb** to provide scalable, cloud-native storage for dictionary data and machine learning results.
+- **Aspire** to orchestrate and glue together the various technological components involved in the project.
+
+## Project Steps
+
+1. **Digitization & Ingestion**: The original dictionary text is digitized and analyzed for integration.
+2. **Custom Model Training**: ML.NET is used to create a tailored vector embeddings model, improving translation and lookup performance specifically for Renaissance vocabulary.
+3. **Cloud Storage**: All structured data, vectors, and dictionary entries are stored and indexed in Azure CosmosDb, using cloud-native scalability and querying.
+4. **Application Architecture**: Aspire arranges how these components communicate, supporting robust API endpoints and service integration.
+
+## Modernization Outcomes
+
+- Enhanced accessibility for translators and researchers working with early-modern texts.
+- New capabilities for semantic search and linguistic analysis using recent machine learning techniques.
+- Demonstration of modern software patterns (API, model training, cloud storage) applied to legacy content with Microsoft tools.
+
+---
+
+For more technical talks like this, visit the .NET Conf 2025 playlist: https://www.youtube.com/playlist?list=PLdo4fOcmZ0oXtIlvq1tuORUtZqVG-HdCt
