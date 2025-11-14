@@ -16166,5 +16166,11 @@
     "timestamp": "2025-11-14 14:07:20 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/delivering-web-applications-over-ipv6/ba-p/4469638",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-14 15:07:10 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-virtual-network-manager-azure-virtual-wan/ba-p/4469991",
+    "reason": "Succesfully added: Content qualifies for the Azure category because it presents in-depth technical details about Azure Virtual Network Manager and Azure Virtual WAN (Azure rules 1 and 5). It focuses on Azure-specific networking, architecture, troubleshooting, scalability, and operational management. No other inclusion categories (AI, ML, Coding, DevOps, Security) are directly addressed. The article does not contain any Generic Exclusion Rule triggers: it is technical, sufficiently long for community content, in English, does not reference business productivity apps, and clearly focuses on cloud networking within Azure.",
+    "collection": "community"
   }
 ]

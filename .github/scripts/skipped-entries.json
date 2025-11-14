@@ -8607,5 +8607,11 @@
     "collection": "posts",
     "reason": "No categories found: All categories are excluded due to generic exclusion rules regarding business productivity Copilot products. The content focuses on monitoring security and compliance metrics specifically for 'Microsoft Copilot' within the context of Microsoft 365 and business productivity, not GitHub Copilot or developer-centric use cases. According to the instructions, content about Microsoft 365 Copilot, Copilot for Microsoft 365, or business productivity Copilot tools must not be categorized, regardless of technical depth. The primary focus of this post is organizational security/compliance for business users of M365 Copilot, not developer tool implementation, so it does not qualify for any categories.",
     "canonical_url": "https://dellenny.com/monitoring-security-and-compliance-metrics-for-copilot-a-complete-human-focused-guide/"
+  },
+  {
+    "timestamp": "2025-11-14 15:06:42 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/caKNPVHedHc",
+    "reason": "No categories found: No categories assigned. Content is excluded due to the 'Sales Pitches' generic exclusion rule. The video centers on unboxing a GitHub Copilot-themed desk toy ('Amaze Ball') and contains promotional language encouraging viewers to purchase the item from the GitHub Shop. There is no substantive technical content, educational value, or discussion of GitHub Copilot's developer features. The piece is primarily entertainment and product promotion, not suitable for technical categorization per the workflow.",
+    "collection": "videos"
   }
 ]
