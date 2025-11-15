@@ -16316,5 +16316,11 @@
     "collection": "posts",
     "canonical_url": "https://devops.com/survey-sees-ai-coding-creating-need-for-more-software-engineers/",
     "timestamp": "2025-11-15 05:06:17 +00:00"
+  },
+  {
+    "reason": "Succesfully added: The categories Azure and ML are assigned because the entire guide focuses on optimizing Databricks (a Microsoft Azure service) costs and includes advanced data engineering and machine learning pipeline topics (ML Rule 1, 2, and 6; Azure Rule 1, 4, 5, 7). Coding is included due to the emphasis on best practices for Spark/Python code, cluster configuration, and data engineering workflows (Coding Rule 4 and 5). DevOps applies because the guide covers infrastructure automation (cluster policies, cost observability, tagging), CI/CD practices, and operational alignment (DevOps Rule 6, 7, and 9). No Security or AI categories apply, as there is no direct focus on security implementation or prebuilt/AI-centric Microsoft services.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-cost-optimization-a-practical-guide/ba-p/4470235",
+    "timestamp": "2025-11-15 08:04:34 +00:00",
+    "collection": "community"
   }
 ]
