@@ -16298,5 +16298,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/join-microsoft-sc25-experience-hpc-and-ai-innovation/ba-p/4467935",
     "reason": "Succesfully added: Assigned 'AI' because the event and technical sessions prominently focus on AI innovation (AI category rule 1)—including sessions on LoRA fine-tuning, agentic AI, and AI infrastructure. Assigned 'Azure' because most demos, talks, and workshops are centered on Azure cloud services and infrastructure for HPC and AI workloads (Azure category rules 1, 4, and 5). 'ML', 'DevOps', 'Security', 'Coding', and 'GitHub Copilot' are not included: while some sessions touch on data science or automation, the primary emphasis is on HPC/AI solutions and Azure infrastructure rather than hands-on ML coding, DevOps methodology, or specific security implementation per the inclusion rules.",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'DevOps' category because the article centers around GitOps as a DevOps practice and discusses core delivery pipeline transformation, architectural strategies, and developer culture (DevOps rules 1, 4, 5, and 9). Assigned 'Azure' because Azure is discussed as a critical hybrid cloud platform for scalable GitOps deployments (Azure rule 1, 4, and hybrid/multi-cloud focus). Assigned 'Security' as the article addresses RBAC, secret management (Vault, Sealed Secrets), compliance governance with OPA, and other security-specific practices (Security rules 1, 2, 3, 4, 7, and 9). Did not assign 'Coding' or 'AI' as the technical depth and architectural focus is on delivery, infrastructure, and DevOps rather than code/framework or AI service development. Did not assign 'ML' as the content lacks machine learning/data science technical coverage.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/gitops-in-the-wild-scaling-continuous-delivery-in-hybrid-cloud-environments/",
+    "timestamp": "2025-11-15 05:05:38 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the main focus is on development and integration of artificial intelligence tools (AI inclusion rules 1 and 4). Assigned DevOps category as content discusses workflows, rapid integration, configuration management, repository practices, and developer velocity (DevOps rules 3, 5, 6, and 9). Assigned Security category because the article is centered on credential handling, secret management, and risks associated with secret leaks in AI development (Security inclusion rules 1, 2, and 7). Microsoft technology is mentioned in context of GitHub and developer practices, and generic exclusion rules do not apply since content is deeply technical, centrally focused on practical security, and presented in English without biographical, sales, business, or workplace focus.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/how-hyperconnected-ai-development-creates-a-multi-system-secret-sprawl/",
+    "timestamp": "2025-11-15 05:05:58 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content's main focus is the pervasive impact of AI tooling on software engineering roles, code quality, and development lifecycle (AI inclusion rules 1, 4, and 5). Assigned DevOps because the survey centers on DevSecOps professionals, SDLC practices, and team collaboration/productivity within modern development pipelines (DevOps rules 3, 5, and 9). No Azure, Coding, ML, Security, or GitHub Copilot categories were added because there is no substantive technical detail or implementation guidance specific to these technologies or practices; the discussion is primarily about industry trends and workflow challenges, not about code, cloud, or platform-specific development.",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/survey-sees-ai-coding-creating-need-for-more-software-engineers/",
+    "timestamp": "2025-11-15 05:06:17 +00:00"
   }
 ]
