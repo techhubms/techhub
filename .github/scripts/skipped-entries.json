@@ -8655,5 +8655,17 @@
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/azure-enterprise-scale-landing-zone-building-a-future/m-p/4470064#M807",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-enable-tabs-in-file-explorer-in-windows-11/",
+    "timestamp": "2025-11-15 14:06:07 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: Content excluded because it does not meet inclusion criteria for any Microsoft development or technical architecture categories. The article is a user-focused guide on enabling tabs in Windows 11 File Explorer, which is an end-user feature related to file management and UI, not software development, coding, DevOps, AI, ML, Azure, Security, or GitHub Copilot. The entire guide addresses system updates, feature activation, and user productivity for general Windows users, not Microsoft technical practitioners or developers. This matches 'Non-Development Microsoft Products' and 'General End-User Features' generic exclusion rules in Chapter 3."
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-map-network-drives-in-windows-11-a-complete-step-by-step-guide/",
+    "timestamp": "2025-11-15 14:06:19 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: Excluded all categories as this content focuses on end-user Windows 11 features (how to map network drives), which does not fit any qualifying technical development or engineering category. It does not cover development with Microsoft technologies, coding, DevOps, Azure, ML, Security, AI, or developer tools, but rather provides practical guidance for general users and IT administrators. Per generic exclusion rules, content about using Windows as an end-user, including file management and system features, is not eligible for categorization."
   }
 ]

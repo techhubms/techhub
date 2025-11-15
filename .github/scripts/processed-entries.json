@@ -16322,5 +16322,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-cost-optimization-a-practical-guide/ba-p/4470235",
     "timestamp": "2025-11-15 08:04:34 +00:00",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-15 15:04:17 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on AI agents and how they can assist developers, specifically referencing the Copilot coding agent (AI rule 2 and 4). Assigned GitHub Copilot category because GitHub Copilot is explicitly discussed, including features and workflow (GitHub Copilot rules 1–4). Assigned Coding category because the session covers code modernization, refactoring, and everyday developer workflow using Copilot (Coding rules 4 and 5). Did not assign DevOps, Azure, ML, or Security since these areas were not directly referenced or covered in the content. No generic exclusions applied—the content is technical, substantial, and developer-focused.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=LafpndhNC_E"
   }
 ]
