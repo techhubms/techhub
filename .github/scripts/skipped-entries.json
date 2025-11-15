@@ -8667,5 +8667,17 @@
     "timestamp": "2025-11-15 14:06:19 +00:00",
     "collection": "posts",
     "reason": "No categories found: Excluded all categories as this content focuses on end-user Windows 11 features (how to map network drives), which does not fit any qualifying technical development or engineering category. It does not cover development with Microsoft technologies, coding, DevOps, Azure, ML, Security, AI, or developer tools, but rather provides practical guidance for general users and IT administrators. Per generic exclusion rules, content about using Windows as an end-user, including file management and system features, is not eligible for categorization."
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is an end-user guide for backing up personal files using File History in Windows 11, a general Windows desktop feature. It does not focus on development, coding, DevOps, Azure, AI, Security, ML, or Microsoft developer tools, and does not discuss technical implementation, programming, scripting, or architecture. Based on the inclusion and exclusion rules (Non-Development Microsoft Products), content about using consumer-facing Windows features for backup is excluded, as it is not developer-oriented or focused on Microsoft technologies in a development context.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-use-file-history-for-backup-in-windows-11/",
+    "timestamp": "2025-11-15 17:05:31 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the content focuses on Windows File Recovery, which is an end-user data recovery utility. According to Generic Exclusion Rules and Category Inclusion Rules, this content does not fit into any predefined categories (AI, GitHub Copilot, Coding, DevOps, Azure, ML, Security). It is not developer or IT operations content, nor does it describe programming, DevOps engineering, Azure architecture, security engineering, or ML/AI development—it is instructional material for general Windows users on file recovery. Therefore, all categories are left empty.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/recovering-deleted-files-using-windows-file-recovery/",
+    "timestamp": "2025-11-15 17:05:52 +00:00"
   }
 ]
