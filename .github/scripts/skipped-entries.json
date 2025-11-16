@@ -8679,5 +8679,29 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/recovering-deleted-files-using-windows-file-recovery/",
     "timestamp": "2025-11-15 17:05:52 +00:00"
+  },
+  {
+    "timestamp": "2025-11-16 13:09:13 +00:00",
+    "canonical_url": "https://dellenny.com/free-up-disk-space-in-windows-11-with-storage-sense-disk-cleanup/",
+    "reason": "No categories found: Content does not qualify for any categories because it is focused entirely on Windows 11 built-in maintenance tools (Storage Sense and Disk Cleanup), which are not development-focused or Microsoft developer technologies per the inclusion rules. No Azure, coding, DevOps, AI, ML, Security, or other developer platform features are discussed. The content only covers end-user and IT administration utilities for system cleanup, which are explicitly outside the scope of included categories in the workflow.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-16 13:09:26 +00:00",
+    "canonical_url": "https://dellenny.com/how-to-manage-multiple-monitors-on-windows-11-the-complete-beginners-guide/",
+    "reason": "No categories found: No categories assigned because the content is an end-user tutorial focused on configuring multiple monitors in Windows 11, which is a general Microsoft productivity feature and not related to development, coding, AI, DevOps, ML, Azure, GitHub Copilot, or security topics. The article does not cover programming, scripting, development frameworks, coding practices, DevOps workflows, data/ML engineering, security implementation, or Microsoft developer/platform tools. The only tag present is 'Windows 11,' indicating an end-user focus. Per the Non-Development Microsoft Products and Generic Exclusion Rules, this type of content must be excluded as it is not relevant for the technical/developer categories.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-16 13:09:39 +00:00",
+    "canonical_url": "https://dellenny.com/managing-app-permissions-for-better-privacy-in-windows-11-a-complete-guide/",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The article 'Managing App Permissions for Better Privacy in Windows 11 A Complete Guide' is focused on end-user privacy settings and general system usage in Windows 11, not software development or technical architecture. It does not provide technical implementation details about Microsoft development, system administration, security engineering, or other qualifying categories. The main focus is on guiding everyday users to manage app permissions to protect personal privacy rather than providing advanced technical guidance, development how-tos, or system security architectures relevant to Microsoft consultants or developers. Therefore, no categories are assigned.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-16 13:09:52 +00:00",
+    "canonical_url": "https://dellenny.com/troubleshooting-copilot-errors-fix-not-grounded-permission-issues/",
+    "reason": "No categories found: All categories are excluded due to the 'Non-Development Microsoft Products' generic exclusion rule. The entire content focuses on Microsoft Copilot in the context of Microsoft 365, specifically as a business productivity tool for knowledge workers (document drafting, summarizing chats, automating tasks, surfacing insights). It is not about GitHub Copilot or developer/maker tools. Per the workflow, content about Microsoft 365 Copilot, Copilot for Microsoft 365, or general Copilot for office productivity, support, or troubleshooting falls under non-development products and must be excluded. The focus is on helpdesk/user support for business features, not software development, coding, DevOps, data science/ML, or security engineering.",
+    "collection": "posts"
   }
 ]

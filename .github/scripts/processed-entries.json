@@ -16340,5 +16340,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/public-preview-of-azure-native-dell-powerscale/ba-p/4470120",
     "reason": "Succesfully added: The content qualifies for the 'Azure' category per Azure inclusion rules (Chapter 4) because it details deployment, management, and integration of Dell PowerScale as an Azure Native ISV service. The post focuses on architectural, deployment, and operational aspects of running an enterprise storage solution within Azure, benefiting AI, analytics, and HPC workloads. There is not enough technical depth or code samples for Coding, nor does it describe Data Science/ML workflows in detail for the ML category. No generic exclusion rules apply: the content is in English, sufficiently technical, not a sales pitch, and not focused on workplace/career or business strategy. 'AI', 'DevOps', and 'Security' categories are not central themes; AI is mentioned as a use case, but not described technically or as a main topic. The community post exceeds 200 words of meaningful text.",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-16 15:04:56 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content discusses Copilot's AI-powered code review features (AI rules 1, 2, and 5; GitHub Copilot rules 1 and 2). 'DevOps' was added due to the focus on workflow integration with GitHub Actions and repository automation (DevOps rules 2, 5, and 6). The original video covers technical enhancements relevant to development and teamwork, qualifying it for these categories.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=ikIosF_iiz4"
   }
 ]
