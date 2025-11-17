@@ -16346,5 +16346,11 @@
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content discusses Copilot's AI-powered code review features (AI rules 1, 2, and 5; GitHub Copilot rules 1 and 2). 'DevOps' was added due to the focus on workflow integration with GitHub Actions and repository automation (DevOps rules 2, 5, and 6). The original video covers technical enhancements relevant to development and teamwork, qualifying it for these categories.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=ikIosF_iiz4"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-code-to-cloud-python-driven-microsoft-fabric-deployments/ba-p/4470447",
+    "reason": "Succesfully added: Categories assigned based on substantial technical content: Azure category is included due to the central role of Azure DevOps and Service Principal for orchestration and authentication (Azure rule 1, 4, 5). DevOps is included because CI/CD, pipeline, and deployment practices are core (DevOps rule 1, 5). ML category is included as the solution deals with Microsoft Fabric deployments, Data Pipelines, Lakehouses, and Semantic Models, which are foundational for data analytics and machine learning workloads (ML rules 1, 2, 3, 4). Coding is included because of direct Python scripting and artifact automation (Coding rules 1, 4, 5). No generic exclusion rules applied as content is technical, implementation-focused, and well-structured. Content length exceeds minimum for community type; all product mentions are central and relevant.",
+    "collection": "community",
+    "timestamp": "2025-11-17 07:06:02 +00:00"
   }
 ]
