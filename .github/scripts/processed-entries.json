@@ -16436,5 +16436,29 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-integrate-playwright-mcp-for-ai-driven-test-automation/ba-p/4470372",
     "timestamp": "2025-11-17 18:06:50 +00:00",
     "collection": "community"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-11-17 19:04:38 +00:00",
+    "reason": "Succesfully added: Assigned the Coding category because the article is a technical deep dive into new C# 14 language features and their usage in .NET 10, including new syntax, language constructs, extension members, and detailed code examples. The article neither focuses on DevOps, AI/ML, Azure-specific services, nor security, so those categories were not added (per inclusion rules for each respective category). Content is fully in English, technical, and not excluded by any generic exclusion rules.",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/introducing-csharp-14/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-11-17 19:05:07 +00:00",
+    "reason": "Succesfully added: Assigned Coding category because the entire article focuses on technical developments in the F# language: language syntax improvements, compiler performance, advanced features, and tooling integrations. It discusses new usage patterns and technical implementation details affecting Microsoft developers. No AI, DevOps, Azure, ML, or Security-specific functionality is addressed. News about .NET and Visual Studio is in direct service to F# coding and not about platform or service operations. Exclusion rules for business/productivity, negativity, or non-technical scope do not apply.",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/introducing-fsharp-10/"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-11-17 19:06:41 +00:00",
+    "reason": "Succesfully added: Included the Azure category because the content is focused on Azure CycleCloud and orchestration of workloads within Microsoft's cloud platform (Azure category rule 1). Included the AI category because CycleCloud 8.8 and CCWS 1.2 enhancements specifically target AI workloads—including support for AI job scheduling and GPU use (AI category rules 1 and 4). Did not include Coding, DevOps, ML, or Security because the article does not dive into coding practices, DevOps methodologies, in-depth ML engineering, or security implementations. Instead, it covers operational features and architectural improvements for HPC and AI workload orchestration on Azure.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-cyclecloud-8-8-and-ccws-1-2-at-sc25-and-ignite/ba-p/4468201"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-11-17 19:07:06 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' category as the content focuses on Azure-related Linux services, technical sessions, and migration strategies (Azure rules 1, 4, 5). Assigned 'Security' because of CIS Benchmarks integration, Azure Linux OS Guard, and pod sandboxing features designed for compliance, secure workloads, and risk reduction (Security rules 1, 2, 4). Assigned 'DevOps' because content discusses deployment, modernization, operational governance, and technical sessions on Linux workloads in Azure, including automation and best practices for running containers and managing compliance (DevOps rules 1, 5, 6). 'AI' and 'ML' were not included as the primary focus is infrastructure, security, and DevOps; although one session references AI-driven governance, it is not a core theme of the content.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/linux-on-azure-at-microsoft-ignite-2025-what-s-new-what-to/ba-p/4470685"
   }
 ]

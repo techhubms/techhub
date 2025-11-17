@@ -8763,5 +8763,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-of-the-rabbitmq-connector/ba-p/4470639",
     "timestamp": "2025-11-17 18:06:29 +00:00",
     "collection": "community"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-11-17 19:05:28 +00:00",
+    "reason": "No categories found: No categories assigned because the content is an event announcement focused on upcoming Xbox games and general gaming news. According to the generic exclusion rules (Business Strategy, Non-Development Products), content that centers on consumer product features, gaming events, or entertainment—without substantive technical, development, or Microsoft platform implementation details—does not qualify. There is no discussion of software development, coding, Microsoft technical platforms, AI, security, DevOps, or any category inclusion criteria.",
+    "canonical_url": "https://news.xbox.com/en-us/2025/11/17/xbox-partner-preview-november-2025-announce/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-11-17 19:05:49 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is a product/account management announcement about a billing change for metered GitHub products. It does not provide technical instructions, development best practices, architecture, or technical implementation details for Microsoft developer or IT products. No inclusion rules are met for AI, GitHub Copilot, Coding, DevOps, Azure, ML, or Security categories. Generic exclusion rules for business operations and account management announcements apply.",
+    "canonical_url": "https://github.blog/changelog/2025-11-17-billing-date-standardized-to-the-first-of-the-month-for-self-serve-credit-card-metered-enterprise-customers-now-generally-available"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-11-17 19:06:16 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The content is an event or keynote announcement with no substantive technical content provided (the 'content' field is null). This qualifies for exclusion under Sales Pitches (promotional content without technical depth) and Format and Length Exclusions (missing actual content to process). There is no technical detail, tutorial, or depth to assess for categorization.",
+    "canonical_url": "https://www.youtube.com/watch?v=KyGqXPZSVmI"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "Tags": [
+    "account management",
+    "Improvement"
+  ],
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "EnhancedContent": "Starting **December 1, 2025**, all usage-based GitHub products paid by credit card will be billed on the first of each month. Your billing period will remain the calendar month. No action is needed—this update will happen automatically.\n\nThis applies to metered GitHub products, including:\n\n- GitHub Actions (minutes used, storage)\n- GitHub Codespaces (compute hours, storage)\n- GitHub Packages (storage, data transfer)\n- Advanced Security (scanning and alert usage over free allotments)\n- Copilot Business/Enterprise (metered seat overages)\n- Any additional storage or bandwidth charges\n\nTo help keep you informed, we are placing a banner on the Billing Overview page about this upcoming change.\n\n**Important:** Any payment processed in November, regardless of the payment date, was related to usage in October. The December 1 payment will include all November usage. It is not a duplicate payment.\n\n**Why this change?**\n\n– Get a more predictable, consistent billing schedule.\n\n– Improve billing clarity with a standard payment date.\n\nIf you wish to opt out of this change, you’ll need to switch to invoiced billing. [Contact Sales](https://github.com/contact/sales) for assistance.",
+  "Title": "Billing date standardized to the first of the month for self-serve credit card metered Enterprise customers now generally available",
+  "Description": "Starting December 1, 2025, all usage-based GitHub products paid by credit card will be billed on the first of each month. Your billing period will remain the calendar month. No…\n\nThe post [Billing date standardized to the first of the month for self-serve credit card metered Enterprise customers now generally available](https://github.blog/changelog/2025-11-17-billing-date-standardized-to-the-first-of-the-month-for-self-serve-credit-card-metered-enterprise-customers-now-generally-available) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "ProcessedDate": "2025-11-17 19:02:50",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Link": "https://github.blog/changelog/2025-11-17-billing-date-standardized-to-the-first-of-the-month-for-self-serve-credit-card-metered-enterprise-customers-now-generally-available",
+  "Author": "Allison",
+  "PubDate": "2025-11-17T18:08:50+00:00"
+}
