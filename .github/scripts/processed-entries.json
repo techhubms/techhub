@@ -16358,5 +16358,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=THF85BT8J7c",
     "reason": "Succesfully added: Assigned Coding category based on the focus on Visual Studio Code, a Microsoft developer tool, and its engineering/design for accessibility (Coding rule 5). Content does not qualify for AI, Azure, GitHub Copilot, DevOps, ML, or Security as it centers on development tooling accessibility, not those technologies or methodologies."
+  },
+  {
+    "timestamp": "2025-11-17 09:06:21 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/duplicate-detection-in-logic-app-trigger/ba-p/4470365",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the content focuses on Azure Logic Apps and related services (Azure category rule 1). Assigned the DevOps category since the content details workflow automation, trigger management, run history inspection, and integration best practices (DevOps rules 1, 5, and 6). Coding, AI, ML, Security, and GitHub Copilot were not included as the article does not cover programming language development, AI/ML features, security implementations, or Github/Copilot tooling. The content meets quality requirements and does not trigger any generic exclusion rules."
   }
 ]

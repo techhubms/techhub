@@ -8703,5 +8703,17 @@
     "canonical_url": "https://dellenny.com/troubleshooting-copilot-errors-fix-not-grounded-permission-issues/",
     "reason": "No categories found: All categories are excluded due to the 'Non-Development Microsoft Products' generic exclusion rule. The entire content focuses on Microsoft Copilot in the context of Microsoft 365, specifically as a business productivity tool for knowledge workers (document drafting, summarizing chats, automating tasks, surfacing insights). It is not about GitHub Copilot or developer/maker tools. Per the workflow, content about Microsoft 365 Copilot, Copilot for Microsoft 365, or general Copilot for office productivity, support, or troubleshooting falls under non-development products and must be excluded. The focus is on helpdesk/user support for business features, not software development, coding, DevOps, data science/ML, or security engineering.",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-17 09:05:32 +00:00",
+    "canonical_url": "https://dellenny.com/microsoft-fasttrack-helping-businesses-adopt-the-cloud-effectively/",
+    "collection": "posts",
+    "reason": "No categories found: Content excluded because it focuses on business transformation, organizational change management, and cloud adoption strategy, rather than technical development, implementation, or architecture. The primary focus is high-level guidance for businesses adopting Microsoft Cloud services (e.g., Microsoft 365, Azure, Windows 365, Dynamics 365) via the FastTrack program. It describes planning, adoption frameworks, change management, compliance, and user training resources provided by Microsoft FastTrack. There are no substantive details about development, coding, technical architecture, or Azure implementation specifics. This qualifies as business strategy/executive content without technical implementation detail per Generic Exclusion Rules (Business Strategy and Executive Content, Workplace and Business Focus). Per the Non-Development Microsoft Products rule, general Microsoft 365 adoption is excluded unless specifically about development. Therefore, no categories are assigned."
+  },
+  {
+    "timestamp": "2025-11-17 09:05:46 +00:00",
+    "canonical_url": "https://dellenny.com/privacy-and-compliance-standards-iso-gdpr-hipaa-in-microsoft-365/",
+    "collection": "posts",
+    "reason": "No categories found: No categories assigned. The content is centered on privacy and compliance frameworks (ISO, GDPR, HIPAA) and how Microsoft 365 helps organizations meet these requirements. However, it does not cover technical implementation, development, or architecture. The Microsoft 365 coverage here is limited to built-in administrative tools and compliance capabilities for end-users and IT, not development or engineering aspects. Per Generic Exclusion Rules, business productivity and end-user features of Microsoft 365 (such as compliance suite, DLP, eDiscovery, Purview) do not qualify for any categories unless there is substantial focus on technical implementation or developer extensibility—which is not present here. No developer, DevOps, coding, security architecture, or Azure engineering elements are discussed. This article aims at IT admins or general business readers, triggering exclusion under 'Non-Development Microsoft Products' and 'Business Strategy and Executive Content' exclusions."
   }
 ]
