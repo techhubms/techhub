@@ -16382,5 +16382,11 @@
     "timestamp": "2025-11-17 12:05:18 +00:00",
     "reason": "Succesfully added: Assigned the Azure category as the content is thoroughly focused on Azure Front Door, Azure Traffic Manager, Traffic Shield, and Microsoft Azure cloud networking services (Azure inclusion rule 1 and 4). No other category applies: while resiliency and architecture are discussed, there is no coverage of coding practices, DevOps tools, AI, ML, or security that fits other category inclusion rules. The category assignment aligns precisely with the video’s focus on Azure cloud architecture for high availability.",
     "canonical_url": "https://www.youtube.com/watch?v=ufxFlmjS9dU"
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/2025/11/17/levi-strauss-co-partners-with-microsoft-to-develop-next-gen-superagent/",
+    "timestamp": "2025-11-17 15:04:49 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content centrally covers AI orchestration, Azure AI Foundry, Copilot Studio, and Semantic Kernel (AI rules 1, 3, 4, 5). Included 'Azure' due to the migration of application workloads, cloud foundation, and security agents being built and deployed on Azure (Azure rules 1, 4, 5, 6). 'GitHub Copilot' is referenced as being used by LS&Co.'s developers to accelerate innovation and manage releases (GitHub Copilot rule 1), therefore both 'GitHub Copilot' and 'AI' are assigned together as required. 'Coding' is included since GitHub Copilot is used for development, and Semantic Kernel is being leveraged for intelligent automation (Coding rules 3, 4). 'Security' applies because the solutions include zero-trust models, policy orchestration, and security agents built on Microsoft AI tech (Security rules 1, 4, 7, 9). 'DevOps' and 'ML' were considered but excluded, as the primary focus is not on CI/CD, operations engineering, or custom data science/ML workflows. Microsoft 365 Copilot was mentioned but not as the main focus, so business productivity exclusion does not override the multiple developer/AI integrations that qualify."
   }
 ]

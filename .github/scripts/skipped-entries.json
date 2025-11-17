@@ -8739,5 +8739,11 @@
     "collection": "community",
     "reason": "Insufficient content length",
     "timestamp": "2025-11-17 11:06:29 +00:00"
+  },
+  {
+    "reason": "No categories found: Excluded all categories because the content field is null and the description is empty, which makes it impossible to assess whether the submission meets the relevant technical quality criteria. According to the generic exclusion rules, if there is insufficient substantive content to analyze, no categories can be assigned. In addition, without content, tags, or description, it's not possible to determine if Microsoft development topics are covered as required by inclusion rules.",
+    "timestamp": "2025-11-17 13:13:48 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/XY1QcWh3GJY",
+    "collection": "videos"
   }
 ]
