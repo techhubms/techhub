@@ -16406,5 +16406,35 @@
     "collection": "community",
     "timestamp": "2025-11-17 16:05:41 +00:00",
     "reason": "Succesfully added: Assigned Security category because the content is centrally focused on DDoS attack mitigation using Azure DDoS Protection (Security rule 1, 5, and 9). Assigned Azure because Azure DDoS Protection is both the main service discussed and the platform used (Azure rule 1). Did not assign other categories as content is not about coding, DevOps, AI, ML, or GitHub Copilot. The content is technical and implementation-focused, not a sales pitch or business strategy, and well over 200 words for community content. All generic exclusion checks were satisfied."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category due to the focus on adversarial learning, transformer models, and GPU-accelerated AI-powered threat detection (AI inclusion rules 1, 4, and 5). Assigned 'Security' because content directly concerns practical security implementation, threat detection, and defense systems utilizing Microsoft Security services and adversarial learning (Security inclusion rules 1, 2, and 4). Did not assign other categories as the content does not detail coding, DevOps, Azure-specific, GitHub Copilot, or data science/ML development. The technical focus of the joint research and deployment on Microsoft's and NVIDIA's platforms fits the standards for inclusion.",
+    "canonical_url": "https://techcommunity.microsoft.com/blog/microsoft-security-blog/collaborative-research-by-microsoft-and-nvidia-on-real-time-immunity/4470164",
+    "timestamp": "2025-11-17 18:04:52 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned DevOps category because the content covers repository administration and governance using GitHub in enterprise contexts (DevOps rule 11, governance and team practices). No other categories apply: the content does not discuss Coding, AI, GitHub Copilot, Azure, ML, or Security implementations per the inclusion rules. The technical depth and focus on administrative features for DevOps teams make DevOps the appropriate category.",
+    "canonical_url": "https://github.blog/changelog/2025-11-17-block-repository-administrators-from-installing-github-apps-on-their-own-now-in-public-preview",
+    "timestamp": "2025-11-17 18:05:12 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' because the news is entirely about GitHub Copilot, its usage metrics, and enterprise roles (GitHub Copilot Inclusion rule 1 and 5). Assigned 'AI' because Copilot is an AI-powered developer tool and all content about GitHub Copilot must include 'AI' (AI rule 2). Excluded other categories as there is no mention of coding implementation, Azure, DevOps, ML, or security details.",
+    "canonical_url": "https://github.blog/changelog/2025-11-17-fine-grain-permissions-for-copilot-usage-metrics-now-available",
+    "timestamp": "2025-11-17 18:05:27 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned are DevOps and Coding. DevOps is included due to the focus on repository management, automation, maintenance strategies (`git maintenance`, geometric repacking), and performance benchmarking. Coding is included because the post explores new Git commands, configuration changes, internal optimizations, and scripting capabilities—relevant to development workflows and code management. No Microsoft-specific categories apply; content is not about Azure, AI, ML, Security, or GitHub Copilot, and meets all content quality, format, and scope requirements (written for technical practitioners, not biographical, promotional, or business-focused).",
+    "canonical_url": "https://github.blog/open-source/git/highlights-from-git-2-52/",
+    "timestamp": "2025-11-17 18:05:51 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the content centers on integrating Playwright with the Model Context Protocol (MCP) for AI-powered test generation and adaptive testing workflows, directly meeting AI category rule 1 and 4. Assigned 'Coding' because it involves programming with Playwright in JavaScript, setting up Node.js, and writing/automating test code, qualifying under Coding rules 1, 2, and 4. Did not assign DevOps because the content focuses strictly on coding and AI integration, not on CI/CD, pipelines, or automation/infrastructure practices. 'Azure', 'ML', and 'Security' do not qualify as Azure services, ML engineering, or security implementation are not discussed. Content is technical, in English, well-explained, includes setup steps, and surpasses the community length threshold.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-integrate-playwright-mcp-for-ai-driven-test-automation/ba-p/4470372",
+    "timestamp": "2025-11-17 18:06:50 +00:00",
+    "collection": "community"
   }
 ]

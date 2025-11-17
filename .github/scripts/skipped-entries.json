@@ -8751,5 +8751,17 @@
     "collection": "community",
     "timestamp": "2025-11-17 16:05:41 +00:00",
     "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: Content excluded according to generic exclusion rules: This is a high-level strategic reflection focused on the business impact and value of AI platforms within enterprises, expressed by Satya Nadella and supported by comments from business leaders. The core discussion centers around empowerment, platform shift, enterprise value, and organizational benefits rather than technical implementation, hands-on development, or architecture. There are no substantive technical details about Microsoft AI products, services, programming, development frameworks, or integration specifics. Therefore, this qualifies as executive/business strategy content (see Generic Exclusion Rules - Business Strategy and Executive Content) and does not meet inclusion criteria for any technical categories.",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_ive-been-thinking-a-lot-about-what-the-net-activity-7395523354650243072-LcFg",
+    "timestamp": "2025-11-17 18:04:31 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "No categories found",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-of-the-rabbitmq-connector/ba-p/4470639",
+    "timestamp": "2025-11-17 18:06:29 +00:00",
+    "collection": "community"
   }
 ]

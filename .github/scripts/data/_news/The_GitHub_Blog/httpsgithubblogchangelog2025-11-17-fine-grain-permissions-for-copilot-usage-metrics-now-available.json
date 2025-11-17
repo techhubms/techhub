@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "EnhancedContent": "## What’s new?\n\n**Enterprise role: `View enterprise Copilot metrics`**\n\nYou can now access the **Copilot Usage Metrics APIs and Dashboard** if you are assigned the new enterprise role:\n\n**`View enterprise Copilot metrics`**\n\nThis important expansion means that **all users assigned this role**, not just enterprise admins or billing managers, are empowered to view granular Copilot usage metrics for your enterprise.\n\n## Who can now access Copilot usage metrics?\n\n- **Any user** with the `View enterprise Copilot metrics`\nrole\n- Enterprise admins and billing managers continue to have default access.\n\n## How to get started\n\n1. Ensure you have the `Copilot usage metrics`\npolicy enabled under `AI Controls` &gt; `Copilot` .\n2. Assign your users the new `View enterprise Copilot metrics`\nenterprise role under `People` &gt; `Enterprise roles` .\n3. Advise your newly assigned users to visit the **Copilot Usage Metrics APIs and Dashboard** to begin leveraging insights today.\n\nLearn more about [Copilot usage metrics](https://docs.github.com/en/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2022-11-28).\n\n*Disclaimer: The UI for features in public preview is subject to change.*",
+  "PubDate": "2025-11-17T16:57:55+00:00",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "Title": "Fine-grain permissions for Copilot usage metrics now available",
+  "Link": "https://github.blog/changelog/2025-11-17-fine-grain-permissions-for-copilot-usage-metrics-now-available",
+  "FeedName": "The GitHub Blog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "ProcessedDate": "2025-11-17 18:03:12",
+  "Description": "What’s new? Enterprise role: View enterprise Copilot metrics You can now access the Copilot Usage Metrics APIs and Dashboard if you are assigned the new enterprise role: View enterprise Copilot…\n\nThe post [Fine-grain permissions for Copilot usage metrics now available](https://github.blog/changelog/2025-11-17-fine-grain-permissions-for-copilot-usage-metrics-now-available) appeared first on [The GitHub Blog](https://github.blog)."
+}
