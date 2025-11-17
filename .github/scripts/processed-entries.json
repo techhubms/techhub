@@ -16388,5 +16388,23 @@
     "timestamp": "2025-11-17 15:04:49 +00:00",
     "collection": "news",
     "reason": "Succesfully added: Assigned the 'AI' category because the content centrally covers AI orchestration, Azure AI Foundry, Copilot Studio, and Semantic Kernel (AI rules 1, 3, 4, 5). Included 'Azure' due to the migration of application workloads, cloud foundation, and security agents being built and deployed on Azure (Azure rules 1, 4, 5, 6). 'GitHub Copilot' is referenced as being used by LS&Co.'s developers to accelerate innovation and manage releases (GitHub Copilot rule 1), therefore both 'GitHub Copilot' and 'AI' are assigned together as required. 'Coding' is included since GitHub Copilot is used for development, and Semantic Kernel is being leveraged for intelligent automation (Coding rules 3, 4). 'Security' applies because the solutions include zero-trust models, policy orchestration, and security agents built on Microsoft AI tech (Security rules 1, 4, 7, 9). 'DevOps' and 'ML' were considered but excluded, as the primary focus is not on CI/CD, operations engineering, or custom data science/ML workflows. Microsoft 365 Copilot was mentioned but not as the main focus, so business productivity exclusion does not override the multiple developer/AI integrations that qualify."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-eventhouse-endpoint-for-fabric-data-warehouse-real-time-analytics-unified-architecture/",
+    "collection": "news",
+    "timestamp": "2025-11-17 16:04:42 +00:00",
+    "reason": "Succesfully added: Assigned the ML category because the content concentrates on real-time analytics, data warehousing, and unified querying for time-series, structured, and semi-structured data with Microsoft Fabric—clearly falling under ML rules for advanced data analytics and engineering (ML rules 1, 4). Did not assign AI: there's no mention of model training, platform-based AI features, or integration with Copilot/AI services. Azure category not assigned since the discussed product is specifically Microsoft Fabric (data/analytics platform) rather than a direct Azure service. The content is technical, substantial, strictly focused on product architecture and usage, with no generic exclusion triggers."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=V-sdNfETPYQ",
+    "collection": "videos",
+    "timestamp": "2025-11-17 16:05:18 +00:00",
+    "reason": "Succesfully added: Applied generic exclusion rules first; none matched. The content is technical, focused on continuous AI systems with agentic automation in GitHub, and demonstrates open-source development workflows. Assigned AI category per AI inclusion rule 1 (Microsoft AI, LLMs, agentic architectures) and DevOps category per DevOps inclusion rule 2 and 5 (GitHub Actions, CI/CD workflow automation). Did not assign GitHub Copilot category as the central focus is agentic workflows, not Copilot itself. Coding was not assigned because the focus is on workflow automation rather than detailed programming practices."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/defending-the-cloud-azure-neutralized-a-record-breaking-15-tbps/ba-p/4470422",
+    "collection": "community",
+    "timestamp": "2025-11-17 16:05:41 +00:00",
+    "reason": "Succesfully added: Assigned Security category because the content is centrally focused on DDoS attack mitigation using Azure DDoS Protection (Security rule 1, 5, and 9). Assigned Azure because Azure DDoS Protection is both the main service discussed and the platform used (Azure rule 1). Did not assign other categories as content is not about coding, DevOps, AI, ML, or GitHub Copilot. The content is technical and implementation-focused, not a sales pitch or business strategy, and well over 200 words for community content. All generic exclusion checks were satisfied."
   }
 ]
