@@ -16484,5 +16484,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=umRy69br51E",
     "collection": "videos",
     "reason": "Succesfully added: Categories assigned based on the description and title indicating a focus on best practices for coding with GitHub Copilot in .NET. 'GitHub Copilot' category is included because the session centers on Copilot usage (GitHub Copilot category inclusion rule 1 and 4). 'AI' is included due to the Copilot product (AI rule 2 – always include 'AI' with 'GitHub Copilot'). 'Coding' is also included because the session provides coding best practices within .NET (Coding rule 1). The content is educational, technical, and relevant to developer workflows; no exclusion criteria are triggered."
+  },
+  {
+    "timestamp": "2025-11-17 22:04:52 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content focuses on a new Azure feature (Scheduled Actions) for managing virtual machines at scale, in line with Azure inclusion rules (Azure rule 1 and 4). The content describes a specific resource provider (compute.schedule), how it integrates with Azure VMs, manages cloud infrastructure, and automates operations. Excluded other categories (such as DevOps or Coding) as there is no code, developer framework, or CI/CD focus; the content is strictly about Azure service operation, not about code patterns, DevOps pipelines, ML, security, or AI. The tags were extracted based on technical features, Azure resource provider, VM management at scale, and operational focus.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/handle-scale-for-power-state-operations-using-scheduled-actions/ba-p/4470131"
   }
 ]
