@@ -8,8 +8,8 @@ viewing_mode: "internal"
 date: 2025-11-17 09:00:00 +00:00
 permalink: "/2025-11-17-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: [".NET 10", "AI", "AI Agents", "Azure", "Cloud Native", "Code Review", "Coding", "DevOps", "Enterprise Automation", "GitHub Copilot", "Kubernetes", "Machine Learning", "MCP", "ML", "Observability", "Prompt Engineering", "Roundups", "Security", "Visual Studio"]
-tags_normalized: ["dotnet 10", "ai", "ai agents", "azure", "cloud native", "code review", "coding", "devops", "enterprise automation", "github copilot", "kubernetes", "machine learning", "mcp", "ml", "observability", "prompt engineering", "roundups", "security", "visual studio"]
+tags: [".NET 10", "AI", "AI Agents", "Azure", "Cloud Native", "Code Review", "Coding", "DevOps", "Enterprise Automation", "GitHub Copilot", "Kubernetes", "Machine Learning", "MCP", "ML", "Observability", "Prompt Engineering", "Roundups", "Security", "VS"]
+tags_normalized: ["dotnet 10", "ai", "ai agents", "azure", "cloud native", "code review", "coding", "devops", "enterprise automation", "github copilot", "kubernetes", "machine learning", "mcp", "ml", "observability", "prompt engineering", "roundups", "security", "vs"]
 ---
 
 Welcome to this week’s tech roundup, highlighting how AI-driven tools, cloud advancements, and updated productivity resources are changing the software development experience. Notable releases include extended GitHub Copilot support in Visual Studio 2026, wide deployment of .NET 10 as the new long-term support version, and new features throughout Azure, DevOps, and security platforms. As Copilot agents work more autonomously and AI model controls become more robust, development teams benefit from improved workflow oversight and flexibility. A range of tutorials and architectural changes reinforce that AI is transitioning from an optional addition to an essential part of everyday coding, reviews, and automation tasks.

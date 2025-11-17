@@ -8715,5 +8715,29 @@
     "canonical_url": "https://dellenny.com/privacy-and-compliance-standards-iso-gdpr-hipaa-in-microsoft-365/",
     "collection": "posts",
     "reason": "No categories found: No categories assigned. The content is centered on privacy and compliance frameworks (ISO, GDPR, HIPAA) and how Microsoft 365 helps organizations meet these requirements. However, it does not cover technical implementation, development, or architecture. The Microsoft 365 coverage here is limited to built-in administrative tools and compliance capabilities for end-users and IT, not development or engineering aspects. Per Generic Exclusion Rules, business productivity and end-user features of Microsoft 365 (such as compliance suite, DLP, eDiscovery, Purview) do not qualify for any categories unless there is substantial focus on technical implementation or developer extensibility—which is not present here. No developer, DevOps, coding, security architecture, or Azure engineering elements are discussed. This article aims at IT admins or general business readers, triggering exclusion under 'Non-Development Microsoft Products' and 'Business Strategy and Executive Content' exclusions."
+  },
+  {
+    "canonical_url": "https://dellenny.com/comparing-microsoft-365-to-google-workspace-in-2025-which-productivity-suite-is-right-for-you/",
+    "collection": "posts",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The article primarily compares two business productivity suites—Microsoft 365 and Google Workspace—focusing on business features, collaboration, AI-enabled productivity, security, pricing, and administrative management. It does not provide technical implementation, development-focused content, or discuss coding, development tools, or Microsoft technologies in a developer/architectural context. Per the rules for Non-Development Microsoft Products and Workplace/Business Focus, content about Microsoft 365 as an end-user productivity suite, Copilot business features, and general office/productivity comparisons must be excluded regardless of AI mentions, as it is not relevant to the technical/development categories.",
+    "timestamp": "2025-11-17 11:05:01 +00:00"
+  },
+  {
+    "canonical_url": "https://devops.com/five-great-devops-job-opportunities-164/",
+    "collection": "posts",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this is job-related content primarily focused on job opportunities, hiring announcements, and career advancement for DevOps professionals. The main portion highlights open job postings and the state of the job market, which falls under the 'Job-Related Content' exclusion in Chapter 3. There is no substantive technical implementation detail, architectural discussion, or hands-on developer information regarding Microsoft technologies; thus, no categories qualify.",
+    "timestamp": "2025-11-17 11:05:35 +00:00"
+  },
+  {
+    "canonical_url": "https://devops.com/google-code-wiki-aims-to-solve-documentations-oldest-problem/",
+    "collection": "posts",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The main content discusses Google Code Wiki, an AI-powered documentation tool developed by Google, focusing on its features and Gemini integration. There is no substantive coverage of Microsoft technologies, developer platforms, or services, and Microsoft is not central to the solution. As per the multi-platform threshold, Microsoft technologies must comprise at least 40% of content or be central; here, the focus is entirely on Google's ecosystem. No categories assigned.",
+    "timestamp": "2025-11-17 11:05:50 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/add-search-to-remote-desktop-client-for-windows/idi-p/4470527",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-11-17 11:06:29 +00:00"
   }
 ]

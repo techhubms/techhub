@@ -16364,5 +16364,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/duplicate-detection-in-logic-app-trigger/ba-p/4470365",
     "collection": "community",
     "reason": "Succesfully added: Assigned the Azure category because the content focuses on Azure Logic Apps and related services (Azure category rule 1). Assigned the DevOps category since the content details workflow automation, trigger management, run history inspection, and integration best practices (DevOps rules 1, 5, and 6). Coding, AI, ML, Security, and GitHub Copilot were not included as the article does not cover programming language development, AI/ML features, security implementations, or Github/Copilot tooling. The content meets quality requirements and does not trigger any generic exclusion rules."
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-set-up-basic-security-policies-in-a-microsoft-365-trial-tenant/",
+    "collection": "posts",
+    "reason": "Succesfully added: Content focuses on technical steps for configuring security policies in Microsoft 365 via Azure AD/Entra ID, Conditional Access, Defender for Office 365, and administrative roles. According to the inclusion rules for Security, content qualifies due to its emphasis on secure configuration (Security rules 1, 2, 3, 4, 5, 6, 9, 10). Microsoft 365 here is not end-user business productivity-focused, but a technical guide on security implementation. No Coding, DevOps, Azure, AI, or ML categories apply; this is a direct security configuration tutorial.",
+    "timestamp": "2025-11-17 11:05:22 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/secure-azure-stream-analytics-jobs-in-dedicated-clusters-using/ba-p/4470385",
+    "collection": "community",
+    "reason": "Succesfully added: Included Azure category as the entire workflow is focused on Azure Stream Analytics and Blob Storage (Azure rule 1 and 2). Security category is justified by the use of managed identities, private endpoints, and zero-trust principles (Security rules 1, 3, 4, 7, 9). DevOps is included due to configuration, deployment, and Terraform automation (DevOps rule 5, 6, 9, 11). Coding is included as the configuration involves writing and testing Stream Analytics queries, setting data serialization, and implementation details (Coding rules 1, 4). Content is hands-on, technical, developer/architect-focused, does not trigger any exclusion rules, and is well above the minimum content length.",
+    "timestamp": "2025-11-17 11:06:29 +00:00"
   }
 ]
