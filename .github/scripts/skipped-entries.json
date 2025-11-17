@@ -8781,5 +8781,41 @@
     "timestamp": "2025-11-17 19:06:16 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rule: The content is an event or keynote announcement with no substantive technical content provided (the 'content' field is null). This qualifies for exclusion under Sales Pitches (promotional content without technical depth) and Format and Length Exclusions (missing actual content to process). There is no technical detail, tutorial, or depth to assess for categorization.",
     "canonical_url": "https://www.youtube.com/watch?v=KyGqXPZSVmI"
+  },
+  {
+    "timestamp": "2025-11-17 21:04:49 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=7RnRks0Bg6k",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The provided input does not contain substantive technical content, tutorials, or explanations of Microsoft technologies; instead, it is an event promotion and a collection of social media/connection links, with no actionable information about development, coding, or concrete technical topics. According to the workflow’s rules (focus on actual content, ignore navigation/contact/share elements, exclude promotional or non-informative content), this submission does not qualify for any category."
+  },
+  {
+    "timestamp": "2025-11-17 21:05:01 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=a-RcRMOiQfM",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The provided input lacks substantive technical content: the 'content' field is null, and the description only announces an event ('.NET Conf Student Zone 2025') without technical implementation, educational detail, or any information about Microsoft AI/ML technologies or .NET 10 usage. No development techniques, practical guidance, or technical insights are present. Generic exclusion rules require sufficient main content text to assess technology relevance and depth."
+  },
+  {
+    "timestamp": "2025-11-17 21:05:13 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=K0VFRWKsITI",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The title and description indicate a focus on Microsoft student programs and career pathways, which fall under job-related and career advice exclusions detailed in Chapter 3. There is no substantive technical content or details about Microsoft technologies, development, or implementation. The description only provides social media and resource links, not technical guidance. Therefore, no categories are assigned."
+  },
+  {
+    "timestamp": "2025-11-17 21:05:58 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=QppJRUpxmXI",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded because the main content text is missing (content is null). Without substantive technical material, it is impossible to assess category inclusion, extract tags, or generate structured output. The description primarily contains links to community/social channels and does not provide any meaningful explanation or instructional detail relevant to Microsoft technologies or technical implementation. Per Generic Exclusion Rules, content with insufficient substance must be excluded."
+  },
+  {
+    "timestamp": "2025-11-17 21:06:10 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=RP3lYCF41AM",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - there is no substantial content provided beyond the title, a short description, and social media links. The main 'content' field is null, and what is present does not include any technical implementation details, tutorials, educational material, or actionable developer guidance about Microsoft technologies (as required by the inclusion rules). Therefore, no categories are assigned."
+  },
+  {
+    "timestamp": "2025-11-17 21:06:42 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=7tAxlfpOcJk",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The provided content is a promotional announcement for the Microsoft Ignite keynote event and does not contain any technical depth or substantive information about Microsoft technologies. It lacks meaningful technical content, details about implementation, or developer-focused information and serves primarily as an invitation. According to the exclusion rules under 'Sales Pitches' and low substantive content, no categories are assigned."
   }
 ]

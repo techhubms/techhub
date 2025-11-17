@@ -1,0 +1,17 @@
+{
+  "Title": "Migrating repositories with GitHub-owned blob storage is now generally available",
+  "OutputDir": "_news",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Tags": [
+    "enterprise management tools",
+    "Improvement"
+  ],
+  "EnhancedContent": "You can now migrate repositories to GitHub Enterprise Cloud (GHEC) with GitHub Enterprise Importer (GEI) using GitHub-owned blob storage. You no longer need to provide GEI with shared access keys to a storage account you own to perform repository migrations. Instead, migrations can now be performed by uploading repository archives directly to github.com or ghe.com.\n\nYou can start a repository migration using GitHub-owned storage using the `gh gei` and `gh bbs2gh` command line extensions by passing in the `--use-github-storage` flag.\n\n![Repository migrations using `gh gei --use-github-storage` in the terminal](https://github.com/user-attachments/assets/5da7b312-2c43-4f1e-a6fe-1a92b3db05de)\n\nTo migrate repositories with GitHub-owned blob storage, you can follow our documentation for [migrating repositories from GitHub Enterprise Server to GitHub Enterprise Cloud](https://docs.github.com/enterprise-cloud@latest/migrations/using-github-enterprise-importer/migrating-between-github-products/migrating-repositories-from-github-enterprise-server-to-github-enterprise-cloud) or [migrating repositories from Bitbucket Server to GitHub Enterprise Cloud](https://docs.github.com/enterprise-cloud@latest/migrations/using-github-enterprise-importer/migrating-from-bitbucket-server-to-github-enterprise-cloud/migrating-repositories-from-bitbucket-server-to-github-enterprise-cloud). Interested in migrating your GitLab repositories using GitHub-owned blob storage? Please reach out to our [Expert Services](https://github.com/services) team.",
+  "Author": "Allison",
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "ProcessedDate": "2025-11-17 21:02:56",
+  "PubDate": "2025-11-17T20:36:15+00:00",
+  "Description": "You can now migrate repositories to GitHub Enterprise Cloud (GHEC) with GitHub Enterprise Importer (GEI) using GitHub-owned blob storage. You no longer need to provide GEI with shared access keys…\n\nThe post [Migrating repositories with GitHub-owned blob storage is now generally available](https://github.blog/changelog/2025-11-17-migrating-repositories-with-github-owned-blob-storage-is-now-generally-available) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2025-11-17-migrating-repositories-with-github-owned-blob-storage-is-now-generally-available"
+}
