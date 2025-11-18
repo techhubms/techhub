@@ -17168,5 +17168,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/unlocking-storage-optimizations-smart-tiering-for-blobs-and-adls/ba-p/4469811",
     "reason": "Succesfully added: Assigned the Azure category because the content focuses exclusively on Azure services (Blob Storage, Data Lake Storage) and details new management features, qualifying under Azure inclusion rules 1 (Any Azure Service/Technology), 2 (Azure Management Tools), and 4 (Azure Development/Deployment). No other categories apply as there is no focus on AI, coding practices, DevOps, ML/data science, or security. The content is technical, focused on implementation, and meets all criteria for inclusion. The author’s tags were expanded to ensure deep technical coverage and terminology. Generic exclusion rules do not apply, as the community post is well above the minimum word threshold and contains technical implementation details.",
     "timestamp": "2025-11-18 19:09:29 +00:00"
+  },
+  {
+    "timestamp": "2025-11-18 20:05:35 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the video deeply explores AI-powered voice agents using Azure Speech Services (AI rule 1, 4). Added 'Azure' since multiple Azure cloud services form the core architecture (Azure rule 1, 4, 5). 'ML' included due to the architectural discussion on multi-agent orchestration and language/intent recognition (ML rule 1, 2, 3). 'Coding', 'DevOps', 'Security', and 'GitHub Copilot' categories were not assigned as the content focuses on Azure service integration, orchestration, and ML architecture rather than specific development, deployment, security, or Copilot tooling. No generic exclusion rules applied; content is technical, substantial, and focused on Microsoft platforms.",
+    "canonical_url": "https://www.youtube.com/watch?v=H_uAA5_h40E",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-18 20:05:58 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content describes agentic, AI-powered troubleshooting tools in Azure Copilot, with automatic issue detection and reasoning (AI category rule 1, 4, 5). The DevOps category is included as the agent is directly used for operational diagnostics, troubleshooting, resource management, and automating cluster support workflows in AKS (DevOps rule 5, 6, 7, and 9). Azure category applies as the troubleshooting agents are embedded in Azure Copilot and AKS management, with Azure services and configuration discussed centrally (Azure rule 1, 4, 5). No generic exclusion rules apply; the content is technical, descriptive, and focused on engineering operations.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-advanced-kubernetes-troubleshooting-agent/ba-p/4471066",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-18 20:06:16 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the content is a technical announcement focused on Azure Event Hubs, describing an Azure service feature for large message streaming and cloud messaging (Azure rule 1 and 4). Other categories were not added because the article does not address coding practices, DevOps methodologies, AI/ML, or security aspects. The type is 'community' but easily exceeds the minimum word count, and no generic exclusion rules apply. All technical details are preserved in the markdown output.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/general-availability-large-message-support-in-azure-event-hubs/ba-p/4471094",
+    "collection": "community"
   }
 ]

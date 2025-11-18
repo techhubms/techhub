@@ -8859,5 +8859,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=TUeET4zY95c",
     "collection": "videos",
     "reason": "No categories found: Content excluded due to generic exclusion rule: the provided data does not contain substantive content or technical details—'content' field is null and all other fields only describe an event or announcement without giving concrete implementation, technical demonstrations, or actionable information about Microsoft technologies. According to Chapter 3 Format and Length Exclusions, content lacking meaningful content for processing (such as missing full text or technical details) does not qualify for categorization."
+  },
+  {
+    "timestamp": "2025-11-18 20:05:13 +00:00",
+    "reason": "No categories found: No categories assigned. The content focuses on Cilium, an open source Linux foundation project for cloud-native networking, security, and observability using eBPF. The video covers container networking, Linux kernel capabilities, Cilium's features, deployment, migration, and contributing to the Cilium ecosystem. While it is presented by GitHub and provides information about open source projects and developer communities, there is no substantive technical focus on Microsoft technologies, Azure, GitHub-specific tooling (actions, Copilot, DevOps, etc.), or integration/development strategies related to Microsoft's platform. According to the Multi-Platform Content Threshold, Microsoft technologies must be central to the solution or comprise ≥40% of substantive content, which is not the case here. This triggers exclusion per the Core Processing Rules and Multi-Platform Content Guidelines.",
+    "canonical_url": "https://www.youtube.com/watch?v=Hio_cJjrR-Y",
+    "collection": "videos"
   }
 ]
