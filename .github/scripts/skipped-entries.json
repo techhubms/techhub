@@ -8823,5 +8823,23 @@
     "timestamp": "2025-11-18 13:13:58 +00:00",
     "collection": "videos",
     "reason": "No categories found: Content excluded due to missing 'content' field. The input provides only a very short description without the actual explanatory content required for meaningful categorization. Without substantive text, it is impossible to assess category inclusion per the processing workflow and quality standards."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
+    "reason": "No categories found",
+    "timestamp": "2025-11-18 15:10:16 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/aws-extends-kiro-ai-tool-to-generate-higher-quality-code/",
+    "reason": "No categories found: Content excluded because it does not meet the minimum Microsoft technology threshold required for categorization. The entire article centers on Amazon Web Services (AWS) and its Kiro AI coding tool, with no substantive mention or usage of Microsoft technologies (such as Azure, GitHub, .NET, or related platforms). Per Chapter 2, multi-platform content must feature Microsoft technologies as ≥40% or central to the solution, which is not the case here. Additionally, inclusion rules do not allow categories for AWS-only content.",
+    "timestamp": "2025-11-18 15:10:38 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/spycloud-unveils-top-10-cybersecurity-predictions-poised-to-disrupt-identity-security-in-2026/",
+    "reason": "No categories found: Content excluded because it does not meet category inclusion requirements: The piece is a general cybersecurity industry forecast from SpyCloud about identity threats for 2026, discussing broad cybercrime tactics, AI use in attacks, insider threats, and various trends. It is not technical implementation content, does not focus on Microsoft technologies, nor does it describe hands-on technical architecture, development, or engineering solutions specific to Microsoft platforms as required by category rules. The content also lacks substantive mention of Microsoft products or technical depth relevant for Security or AI categories (e.g., Azure AD, Microsoft Sentinel, Defender, Azure AI, etc.), and thus qualifies as business strategy/industry trend content, which is specifically excluded by Generic Exclusion Rules (see 'Business Strategy and Executive Content', 'Leadership and management guidance focused on business outcomes rather than technical architecture', and 'Industry trends and market analysis without technical implementation details').",
+    "timestamp": "2025-11-18 15:11:54 +00:00"
   }
 ]

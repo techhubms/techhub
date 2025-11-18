@@ -16562,5 +16562,95 @@
     "timestamp": "2025-11-18 13:14:17 +00:00",
     "collection": "videos",
     "reason": "Succesfully added: Assigned Coding category because the video focuses on new features in C# 14 and .NET 10, both core Microsoft programming languages and frameworks (Coding rule 1). No other categories apply, as the content does not reference AI, DevOps, Azure, Security, or ML topics. Generic exclusion rules do not apply since the content is technical, relevant, and not biographical, business, or sales pitch focused (the brief promotional aspect is secondary and the technical focus is dominant)."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/29410/",
+    "reason": "Succesfully added: Assigned AI category because the content discusses building AI solutions, Copilot Studio, and using AI Foundry within Microsoft Fabric (AI category rules 1, 5, 6). Assigned Azure because Microsoft Fabric, OneLake, and Azure AI Foundry are central to the integration (Azure category rules 1, 3, 4). Assigned ML due to emphasis on advanced analytics, intelligent agent development, and data science workflows with SAP and Microsoft Fabric (ML category rules 1, 2, 4, 5, 6). The content is not excluded as it is a technical announcement focusing on enterprise data engineering and AI development, not business productivity or management strategy.",
+    "timestamp": "2025-11-18 15:06:46 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/advancing-data-integration-innovations-in-data-factory-in-ms-fabric-at-ignite-2025/",
+    "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric and Data Factory are deeply integrated Azure services (Azure rule 1 & 4). 'ML' is included due to extensive coverage of analytics, data science, and machine learning integration, including mirroring, AI-powered transformations, and ML orchestration (ML rules 1, 2, 4, 5, 6, 9). 'AI' is added for multiple mentions of AI Function Transforms, Copilot for pipeline automation, and integration with AI services (AI rules 1, 4, 5). Coding is included because content details developer tooling improvements (dbt, Airflow, pipeline migration, scripting tools) and code-centric orchestration (Coding rules 3, 4, 5). All generic exclusion rules were reviewed and none apply: content is technical, not biographical, promotional, question-only, or business strategy-focused, and is suitable for the specified categories.",
+    "timestamp": "2025-11-18 15:07:12 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/elevating-microsoft-fabric-with-new-isv-solutions/",
+    "reason": "Succesfully added: Assigned Azure category because the entire article discusses Microsoft Fabric and OneLake services, central to Azure's data and cloud ecosystem (Azure rule 1). Assigned ML category due to extensive coverage of data analytics, partner-driven data science tools, and development (ML rules 1, 2, 4, 5, 9). Assigned AI category due to numerous AI-related integrations (AI agents, AI-ready data, business intelligence, AI-powered workflows, and partner technologies—AI rules 1, 4, 5). Did not assign Coding, DevOps, Security, or GitHub Copilot as there is no deep dive into application code, development workflows, operational practices, or Microsoft security/identity topics. The focus is on platform integrations, data science, analytics, and AI enablement with Microsoft technologies.",
+    "timestamp": "2025-11-18 15:07:38 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-databases-a-unified-saas-native-experience-for-modern-data-workloads-generally-available/",
+    "reason": "Succesfully added: Included Azure category because Fabric databases are part of Microsoft Fabric, built atop Azure SQL and Cosmos DB (Azure rules 1 and 5). Included ML because the content emphasizes real-time analytics, operational-analytical convergence, Power BI integration, and developer access to machine learning and data science features (ML rules 1, 2, and 4). Included AI because of the focus on native AI optimization (vector search, RAG patterns, Copilot-powered features) and direct integration with Azure OpenAI Service (AI rule 1, 4, and 5). The news is highly technical and implementation-focused, fully meeting quality, technical, and architectural inclusion criteria. There are no generic exclusion triggers.",
+    "timestamp": "2025-11-18 15:08:01 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/from-data-platform-to-intelligence-platform-introducing-microsoft-fabric-iq/",
+    "reason": "Succesfully added: Assigned AI category because the announcement covers agentic AI, semantic business understanding, and autonomous decision-making powered by artificial intelligence (AI inclusion rules 1, 4, and 5). Assigned Azure because Microsoft Fabric, including OneLake and integration with Azure, is central to the platform and its real-time analytics features (Azure inclusion rules 1 and 4). Assigned ML because Fabric IQ involves semantic modeling, advanced analytics, real-time data science, graph analytics, and integration with Power BI models for business intelligence (ML inclusion rules 1, 4, 6, and 9). Did not assign Coding since the announcement does not focus on programming languages or developer code. Did not assign DevOps—while operational and data infrastructure are referenced, the focus is on intelligence and business decision-making, not CI/CD or developer workflow. Did not assign Security because, although governance and security are mentioned, they are not the primary technical focus.",
+    "timestamp": "2025-11-18 15:08:26 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-and-databricks-advancing-openness-and-interoperability-with-onelake/",
+    "reason": "Succesfully added: Categories assigned based on the following rules: 'Azure' was included as the integrations and platform capabilities are built around Azure Databricks and Microsoft OneLake (Azure rules 1 and 5). 'ML' was included because the advanced analytics, lakehouse architecture, and data engineering scenarios directly support Microsoft’s data science/analytics ecosystem (ML rules 1, 2, 3, 4, and 7), referencing data pipelines and analytics workloads, Fabric, and Databricks features. 'AI' was included since the announcement covers use cases such as Copilot Studio, AI Foundry, and data-driven AI solutions built on the unified data architecture (AI rules 1, 3, and 4). No exclusion rules applied, as the news is technical, addresses development/data engineering/analytics, and focuses on Microsoft cloud platforms and integrations.",
+    "timestamp": "2025-11-18 15:08:47 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-and-snowflake-simplified-interoperability-with-no-data-movement/",
+    "reason": "Succesfully added: Included Azure category because the integration centers on Microsoft Fabric, OneLake, and various Azure data services (category rule 1). Included AI category as the update mentions enabling analytics and AI workloads on unified data (AI category rule 1 and 4). Added ML category because the platform improvements also target machine learning and advanced analytics scenarios, with seamless data access for AI/ML workloads (ML rules 1, 2, and 4). Did not include Coding, DevOps, Security, or GitHub Copilot because the content does not describe programming, developer tooling usage, operations practices, or security implementation details. The main focus is on data platform architecture, analytics, and ML/AI enablement through Microsoft services.",
+    "timestamp": "2025-11-18 15:09:08 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/whats-new-for-fabric-data-agents-at-ignite-2025-unlocking-deeper-data-reasoning-and-seamless-ai-interoperability/",
+    "reason": "Succesfully added: Assigned 'AI' because Fabric data agents are interoperable AI agents and the update focuses on advancements in AI reasoning (AI rules 1, 4, 6). Assigned 'Azure' as the core technology platform and because features like Azure AI Search, OneLake, and Fabric Ontology are Azure services (Azure rule 1, 7). Assigned 'ML' due to data agent support for enterprise analytics, ontology context, and reasoning across structured and unstructured data—core data science/ML patterns (ML rules 1, 6, 9). Did not assign 'GitHub Copilot', 'Coding', 'DevOps', or 'Security' as their coverage is indirect; content is about platform agent features, not direct developer/code/DevOps workflows, and only mentions security in access controls.",
+    "timestamp": "2025-11-18 15:09:30 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-onelake-and-the-fabric-platform-more-sources-security-and-capacity-tooling/",
+    "reason": "Succesfully added: AI category was included due to Fabric's role in AI readiness, agent training, and Foundry IQ (AI rule 1, 4, 5); ML category was included because the content describes data estate unification, analytics, mirroring, and tools for building real-time operational and analytics workloads (ML rules 1, 2, 3, 4, 9). Azure was applied due to Fabric’s direct integration with Azure databases and services (Azure rule 1, 4, 7). Security was assigned because of new security controls such as Outbound Access Protection, Customer Managed Keys, governance improvements, and fine-grained access permissions (Security rules 1, 4, 7, 9). I excluded Coding, DevOps, and GitHub Copilot since the content does not cover programming languages, developer tools, code, CI/CD, or team workflows.",
+    "timestamp": "2025-11-18 15:09:55 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/devops-for-genai-toronto-edition-hackathon-unlocking-new-ai-market-opportunities/",
+    "reason": "Succesfully added: Assigned categories based on explicit coverage of generative AI technologies and hands-on development (AI rules 1, 4, 5); DevOps for the focus on lifecycle automation, CI/CD, workflow orchestration, and methods (DevOps rules 1, 5, 6); ML for MLOps pipelines, model management, drift detection, and custom model fine-tuning (ML rules 1, 2, 6, 7); Security for substantial content on AI security, governance, audits, privacy, and compliance (Security rules 1, 4, 6, 9, 10). No generic exclusion rules triggered — content is technical, development-focused, and sufficiently detailed for Tech Hub audiences.",
+    "timestamp": "2025-11-18 15:10:58 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/mydecisive-open-sources-platform-for-processing-opentelemetry-data/",
+    "reason": "Succesfully added: Assigned the DevOps category because the article focuses on OpenTelemetry data collection, filtering, and observability cost management within DevOps/kubernetes contexts, matching DevOps category rules 1 and 5. Azure is not mentioned, nor are there substantive Microsoft-specific technologies or platforms present. AI is discussed only hypothetically, not as part of the actual platform or workflow implemented. ML, Coding, GitHub Copilot, and Security categories are not relevant to this content.",
+    "timestamp": "2025-11-18 15:11:18 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/observability-is-the-next-frontier-of-devops-and-cloud-security/",
+    "reason": "Succesfully added: Assigned DevOps category since the article centers on DevOps practices, team workflows, and the evolution of observability within pipelines (DevOps rules 1, 4, 5, 7). Assigned Security category because security posture management, IAM, compliance, and incident prevention are key themes (Security rules 1, 4, 6, 7, 9, and 10). Did not assign Azure, AI, Coding, ML, or GitHub Copilot, as no Microsoft-specific products, coding implementations, or developer AI tools are discussed directly. Content is practical, technical, and meets quality standards with actionable recommendations.",
+    "timestamp": "2025-11-18 15:11:40 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/the-deterministic-future-of-ai-generated-code/",
+    "reason": "Succesfully added: Assigned the AI category because the content focuses on AI-driven code generation and review, emphasizing impacts, risks, and mitigation strategies (AI rules 1, 4, 5). Assigned DevOps due to prominent discussion of CI pipelines, observability, and workflow changes (DevOps rules 3, 5, 7). Assigned Coding since it covers code review, linters, and programming practices (Coding rules 4, 5). Assigned Security because it addresses DevSecOps, risk mitigation, code correctness, and accountability for system reliability (Security rules 2, 3, 6, 9). No exclusion rules apply—the content is technical, in English, and focuses on implementation rather than business strategy.",
+    "timestamp": "2025-11-18 15:12:15 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://devops.com/the-mlsecops-era-why-devops-teams-must-care-about-prompt-security/",
+    "reason": "Succesfully added: Assigned AI category because the article discusses prompt security in the context of LLMs and AI-driven workflows (AI rule 4 and 5). Assigned DevOps because it focuses on CI/CD pipelines, DevOps team responsibilities, and workflow automation threats (DevOps rules 1, 3, and 5). Assigned Security due to discussion of operational security, prompt injection threats, and MLSecOps practices (Security rules 2, 4, and 6). No Azure-specific technical implementation details, so Azure category was not included. The content is not biographical, promotional, or non-English, and does not trigger any generic exclusion rules.",
+    "timestamp": "2025-11-18 15:12:39 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-agents-are-rewriting-the-app-modernization-playbook/ba-p/4470162",
+    "reason": "Succesfully added: The content qualifies for 'AI' due to its focus on agentic AI features and Copilot automation (AI Category Rule 1, 2, 4). 'GitHub Copilot' is included due to the central role GitHub Copilot plays as a developer tool in both modernization and integration examples (GitHub Copilot Category Rule 1, 2, 3). 'Azure' is assigned for extensive use of Azure services—App Service, AKS, ACA, Azure Database Migration, and Azure Migrate (Azure Category Rule 1, 2, 4). 'Coding' is assigned due to detailed migration support for .NET, Java, and Python applications, code upgrades, frameworks, and automation (Coding Rules 1, 2, 4). 'DevOps' is assigned since content addresses CI/CD automation, portfolio assessment, application containerization, and developer collaboration practices (DevOps Category Rule 1, 5, 6, 9). No generic exclusion rules apply, and content meets all technical, language, and quality requirements.",
+    "timestamp": "2025-11-18 15:13:16 +00:00"
   }
 ]
