@@ -17204,5 +17204,17 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracledatabase-azure-expands-footprint-to-31-regions-and/ba-p/4471109",
     "reason": "Succesfully added: Assigned Azure category as the content centers on Oracle Database@Azure and its deployment across Azure regions, consistent with Azure Inclusion Rule 1. Assigned AI category since multiple features (Oracle Autonomous AI Database, AI Lakehouse, Microsoft Fabric analytics, Copilot Studio AI integration) involve Azure AI services and workflows (AI Inclusion Rules 1, 4, and 5). Assigned Security because of deep technical details regarding Azure Key Vault integration, transparent data encryption, Microsoft Defender, Sentinel, Entra ID, and Purview for governance (Security Inclusion Rules 1, 2, and 3). The content's technical and implementation focus, with updates for practitioners, keeps it inside category scope."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-11-18 23:04:32 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-11-18-github-copilot-cli-new-models-enhanced-code-search-and-better-image-support",
+    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories because the content specifically details updates to the GitHub Copilot CLI—including new AI models, expanded capabilities, and integration improvements (AI rule 2 and 5, GitHub Copilot rule 1). 'Coding' is included because the article focuses on CLI-based tools, code search enhancements, and coding-related workflows (Coding rule 5). The content is not biographical, not a sales pitch, not negative, and does not fall under any generic exclusions. No other categories such as DevOps, Azure, ML, or Security were assigned, as they are not centrally addressed in the content."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-11-18 23:05:25 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/new-portal-experience-for-feature-management/ba-p/4467748",
+    "reason": "Succesfully added: Assigned Azure category because the entire content is centered on Azure App Configuration—a Microsoft Azure service—for feature management. Assigned DevOps because the post is focused on deployment safety, controlled rollouts, canary deployments, and experimentation, which are central DevOps practices. Assigned AI because there are multiple references to AI-focused deployment strategies (such as model version management, LLM-powered features, and switching between AI/rule-based responses), indicating relevance for teams building or deploying AI-powered features. Did not assign ML or Security as the core focus is on feature management, not on data science/ML engineering or Microsoft security technologies."
   }
 ]

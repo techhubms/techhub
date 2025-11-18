@@ -8865,5 +8865,17 @@
     "reason": "No categories found: No categories assigned. The content focuses on Cilium, an open source Linux foundation project for cloud-native networking, security, and observability using eBPF. The video covers container networking, Linux kernel capabilities, Cilium's features, deployment, migration, and contributing to the Cilium ecosystem. While it is presented by GitHub and provides information about open source projects and developer communities, there is no substantive technical focus on Microsoft technologies, Azure, GitHub-specific tooling (actions, Copilot, DevOps, etc.), or integration/development strategies related to Microsoft's platform. According to the Multi-Platform Content Threshold, Microsoft technologies must be central to the solution or comprise ≥40% of substantive content, which is not the case here. This triggers exclusion per the Core Processing Rules and Multi-Platform Content Guidelines.",
     "canonical_url": "https://www.youtube.com/watch?v=Hio_cJjrR-Y",
     "collection": "videos"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-11-18 23:04:57 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=DEXo7X3YXbE",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the description indicates this is an informal, lighthearted live coding stream without any mention of Microsoft technologies, platforms, frameworks, or specific technical implementation details required for category inclusion. There is no substantive content provided (the 'content' field is null), and the description does not reference any Microsoft-related product or relevant technical focus per the inclusion rules."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-11-18 23:05:25 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/remoteapps-opened-in-rdweb-requiring-users-to-hit-quot-show/m-p/4471081#M13946",
+    "reason": "Insufficient content length"
   }
 ]
