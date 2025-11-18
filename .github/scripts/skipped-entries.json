@@ -8841,5 +8841,11 @@
     "canonical_url": "https://devops.com/spycloud-unveils-top-10-cybersecurity-predictions-poised-to-disrupt-identity-security-in-2026/",
     "reason": "No categories found: Content excluded because it does not meet category inclusion requirements: The piece is a general cybersecurity industry forecast from SpyCloud about identity threats for 2026, discussing broad cybercrime tactics, AI use in attacks, insider threats, and various trends. It is not technical implementation content, does not focus on Microsoft technologies, nor does it describe hands-on technical architecture, development, or engineering solutions specific to Microsoft platforms as required by category rules. The content also lacks substantive mention of Microsoft products or technical depth relevant for Security or AI categories (e.g., Azure AD, Microsoft Sentinel, Defender, Azure AI, etc.), and thus qualifies as business strategy/industry trend content, which is specifically excluded by Generic Exclusion Rules (see 'Business Strategy and Executive Content', 'Leadership and management guidance focused on business outcomes rather than technical architecture', and 'Industry trends and market analysis without technical implementation details').",
     "timestamp": "2025-11-18 15:11:54 +00:00"
+  },
+  {
+    "collection": "posts",
+    "reason": "No categories found: Content excluded due to generic exclusion rule — this article is focused entirely on Microsoft 365 Copilot, discussing its deployment and business ROI in productivity scenarios. According to the workflow's CRITICAL Copilot Product Distinction and Non-Development Microsoft Products rules, Microsoft 365 Copilot (and related business productivity Copilot products) must be excluded since they serve business productivity rather than developer or maker scenarios. The content concentrates on workplace productivity, cost savings, employee engagement, and business value, without covering software development or technical implementation for Microsoft platforms. Therefore, no categories are assigned.",
+    "timestamp": "2025-11-18 16:11:11 +00:00",
+    "canonical_url": "https://dellenny.com/how-to-measure-roi-from-copilot-deployment/"
   }
 ]
