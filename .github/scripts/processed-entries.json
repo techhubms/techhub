@@ -16526,5 +16526,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/innovations-and-strengthening-platforms-reliability-through-open/ba-p/4468172",
     "timestamp": "2025-11-18 07:05:22 +00:00",
     "reason": "Succesfully added: Content qualifies for Azure category due to extensive Azure platform development and cloud operations coverage (Azure rule 1, 5, 6). Security category is justified by coverage of kernel updates for secure boot, OP-TEE, CVE analysis, driver reliability, and container integrity (Security rule 1, 5, 7, 9). DevOps category applies because of infrastructure automation (LISA), configuration management with systemd, networking optimizations, and operational best practices (DevOps rule 6, 7, 9). Coding applies due to in-depth kernel engineering, driver patching, and contributions to open-source libraries/tools (Coding rule 2, 4, 5). The article emphasizes technical solutions, not business strategy, end-user products, or negative feedback — meeting all inclusion rules."
+  },
+  {
+    "timestamp": "2025-11-18 08:05:04 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the content revolves around Azure-native features, control planes, and Azure Arc integration (Azure rule 1, 2, 4, and 6); 'Security' because it focuses on CIS Benchmarks, regulatory frameworks, compliance automation, and Microsoft security architecture (Security rule 1, 4, 7, and 9). The post qualifies for both categories due to technical depth in implementation and direct relevance to Microsoft security and compliance tooling. Other categories like DevOps are not central and not assigned because the content is focused on security practice and architecture. Exclusion rules do not apply, as the writing is not biographical, sales-focused, negative, non-English, or job/management-centric, and the word count is well above threshold for community content.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/from-policy-to-practice-built-in-cis-benchmarks-on-azure/ba-p/4467884"
   }
 ]
