@@ -16514,5 +16514,17 @@
     "timestamp": "2025-11-18 06:05:23 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/windows-server-2019-retirement-on-aks-enabled-by-azure-arc/ba-p/4470184",
     "collection": "community"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-add-an-mcp-tool-to-your-azure-foundry-agent-using-dynamic/ba-p/4468844",
+    "timestamp": "2025-11-18 07:04:57 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the tutorial demonstrates extending Azure AI Foundry agents with dynamic MCP-enabled sessions, supporting code execution and agent-tool integration (AI rule 1 and 4). Assigned Azure category since all work is built on Azure Container Apps and involves deploying resources, using ARM templates, and leveraging Azure-specific workflows (Azure rules 1 and 4). Rejected ML, Coding, DevOps, GitHub Copilot, and Security as the content does not directly involve ML/data science engineering, .NET/C#/application code development, CI/CD/deployment, GitHub/Copilot integrations, or Microsoft security practices. The community content meets word count minimum (>200 words of substantive explanation), is technical in nature, and does not trigger any generic exclusion rules."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/innovations-and-strengthening-platforms-reliability-through-open/ba-p/4468172",
+    "timestamp": "2025-11-18 07:05:22 +00:00",
+    "reason": "Succesfully added: Content qualifies for Azure category due to extensive Azure platform development and cloud operations coverage (Azure rule 1, 5, 6). Security category is justified by coverage of kernel updates for secure boot, OP-TEE, CVE analysis, driver reliability, and container integrity (Security rule 1, 5, 7, 9). DevOps category applies because of infrastructure automation (LISA), configuration management with systemd, networking optimizations, and operational best practices (DevOps rule 6, 7, 9). Coding applies due to in-depth kernel engineering, driver patching, and contributions to open-source libraries/tools (Coding rule 2, 4, 5). The article emphasizes technical solutions, not business strategy, end-user products, or negative feedback — meeting all inclusion rules."
   }
 ]
