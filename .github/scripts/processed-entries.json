@@ -17186,5 +17186,23 @@
     "reason": "Succesfully added: Assigned the Azure category because the content is a technical announcement focused on Azure Event Hubs, describing an Azure service feature for large message streaming and cloud messaging (Azure rule 1 and 4). Other categories were not added because the article does not address coding practices, DevOps methodologies, AI/ML, or security aspects. The type is 'community' but easily exceeds the minimum word count, and no generic exclusion rules apply. All technical details are preserved in the markdown output.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/general-availability-large-message-support-in-azure-event-hubs/ba-p/4471094",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-18 22:05:39 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/agentic-applications-on-azure-container-apps-with-microsoft/ba-p/4467601",
+    "reason": "Succesfully added: AI category assigned because the content centers around agentic AI applications, Microsoft Agent Framework, and the integration of telemetry for reasoning and tool usage (AI rules 1, 3, and 4). Azure category assigned as Azure Container Apps is the hosting platform and all deployment/prerequisite steps, monitoring, and integrations are tightly coupled with Azure services (Azure rules 1, 2, 4, and 5). ML, DevOps, Coding, GitHub Copilot, and Security are not assigned: while there is automation and monitoring, the primary focus is application deployment, telemetry, and AI agent integration—not custom ML engineering, advanced DevOps practices, or code-level details. No generic exclusion rules apply, as the content is technical, instructional, and meets quality standards."
+  },
+  {
+    "timestamp": "2025-11-18 22:06:04 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-kubernetes-center-preview-on-azure-portal/ba-p/4471110",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content is centered on Azure services, especially AKS and related Azure Kubernetes management tools (Azure inclusion rule 1). Assigned the 'DevOps' category as the article addresses streamlined cluster operations, unified monitoring, CI/CD-enabling platforms, and workflows that empower platform teams and developers (DevOps rules 1, 5, 6, and 7). Assigned the 'Security' category because Kubernetes Center includes prominent integration with Microsoft Defender for Containers, providing actionable alerts about vulnerabilities and compliance (Security inclusion rules 1 and 5). Did not assign AI, Coding, ML, or GitHub Copilot because the article focuses on platform management, not on code, AI/ML workloads, or coding/developer-specific practices. No generic exclusion rules are triggered as this is a technical infrastructure-focused Azure announcement."
+  },
+  {
+    "timestamp": "2025-11-18 22:06:28 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracledatabase-azure-expands-footprint-to-31-regions-and/ba-p/4471109",
+    "reason": "Succesfully added: Assigned Azure category as the content centers on Oracle Database@Azure and its deployment across Azure regions, consistent with Azure Inclusion Rule 1. Assigned AI category since multiple features (Oracle Autonomous AI Database, AI Lakehouse, Microsoft Fabric analytics, Copilot Studio AI integration) involve Azure AI services and workflows (AI Inclusion Rules 1, 4, and 5). Assigned Security because of deep technical details regarding Azure Key Vault integration, transparent data encryption, Microsoft Defender, Sentinel, Entra ID, and Purview for governance (Security Inclusion Rules 1, 2, and 3). The content's technical and implementation focus, with updates for practitioners, keeps it inside category scope."
   }
 ]
