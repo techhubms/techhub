@@ -16532,5 +16532,23 @@
     "collection": "community",
     "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the content revolves around Azure-native features, control planes, and Azure Arc integration (Azure rule 1, 2, 4, and 6); 'Security' because it focuses on CIS Benchmarks, regulatory frameworks, compliance automation, and Microsoft security architecture (Security rule 1, 4, 7, and 9). The post qualifies for both categories due to technical depth in implementation and direct relevance to Microsoft security and compliance tooling. Other categories like DevOps are not central and not assigned because the content is focused on security practice and architecture. Exclusion rules do not apply, as the writing is not biographical, sales-focused, negative, non-English, or job/management-centric, and the word count is well above threshold for community content.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/from-policy-to-practice-built-in-cis-benchmarks-on-azure/ba-p/4467884"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/moving-the-logic-apps-designer-forward/ba-p/4469835",
+    "timestamp": "2025-11-18 09:04:57 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because this post details Azure Logic Apps—a core Azure service—with deep technical and architectural detail (Azure rule 1, 4, 5). Assigned DevOps as the redesign directly impacts developer workflows, deployment scenarios, versioning, testing, draft/publish cycles, and operator needs (DevOps rules 3, 5, 9). Assigned Coding because the content addresses workflow logic, version control, code view/editor, and developer experience improvements (Coding rules 2, 4, 5). No other categories apply: there's no AI/ML, GitHub Copilot, or dedicated Security content. Generic exclusion rules do not apply as it is technical, implementation-focused, and not biographical, sales, or business-management oriented.",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/assess-security-risks-with-insights-in-azure-migrate/ba-p/4470866",
+    "timestamp": "2025-11-18 09:05:19 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' as the primary content is centered on Azure Migrate, an Azure-native migration tool, and the Azure ecosystem. 'Security' is included because the core topic is identifying and mitigating security risks during cloud migration, using risk assessment methods and integrating with Microsoft Defender for Cloud. Did not assign AI, GitHub Copilot, Coding, ML, or DevOps since there is no substantive coverage of those technologies or practices. Followed all rule hierarchy and category inclusion guidelines.",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-small-language-modes/ba-p/4466170",
+    "timestamp": "2025-11-18 09:05:46 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the content comprehensively discusses the design, deployment, and performance of AI models (SLMs) at the edge, including practical hardware and architectural insights (AI category rule 1, 4, 5). 'Azure' category was added due to the detailed coverage of Azure AI Foundry—a Microsoft platform for deploying and managing AI models at scale (Azure rules 1 and 4). No 'ML' category was assigned since the focus is primarily on deployment/optimization, not custom ML algorithm or model design from scratch. 'Coding', 'DevOps', and 'Security' are not central, as the article does not provide developer code, DevOps pipelines, or security configuration details. Content is technical, meets all quality standards, and avoids all generic exclusion rules.",
+    "collection": "community"
   }
 ]
