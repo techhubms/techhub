@@ -16490,5 +16490,17 @@
     "reason": "Succesfully added: Assigned the Azure category because the content focuses on a new Azure feature (Scheduled Actions) for managing virtual machines at scale, in line with Azure inclusion rules (Azure rule 1 and 4). The content describes a specific resource provider (compute.schedule), how it integrates with Azure VMs, manages cloud infrastructure, and automates operations. Excluded other categories (such as DevOps or Coding) as there is no code, developer framework, or CI/CD focus; the content is strictly about Azure service operation, not about code patterns, DevOps pipelines, ML, security, or AI. The tags were extracted based on technical features, Azure resource provider, VM management at scale, and operational focus.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/handle-scale-for-power-state-operations-using-scheduled-actions/ba-p/4470131"
+  },
+  {
+    "timestamp": "2025-11-18 00:09:36 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-11-17-improved-enterprise-license-consumption-reporting-for-outside-collaborators-now-generally-available",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the DevOps category because the content pertains to process and tooling improvements for collaboration, licensing, and team management within GitHub Enterprise, matching DevOps rules for team structures and DevOps tools (DevOps rules 2 and 3). There is no content about coding, AI, Azure, ML, or security. Exclusion rules do not apply because this is a technical announcement for enterprise management features rather than general business, end-user, or executive content."
+  },
+  {
+    "timestamp": "2025-11-18 00:10:25 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/comprehensive-vm-monitoring-with-opentelemetry-performance/ba-p/4470122",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'Azure' because the content directly focuses on Azure Monitor, Azure VMs, and Arc servers (Azure rule 1, 4, 5). 'DevOps' is assigned because the article covers monitoring, observability, onboarding at scale, dashboarding, and operational alerting, which fit DevOps inclusion points: monitoring/operations, deployment, team practices (DevOps rules 6, 7). Not assigned 'AI', 'ML', 'Security', or 'Coding' because no AI/ML/modeling, security, or code development topics are central. The post is technical, detailed, and targets practitioners. None of the generic exclusion rules apply."
   }
 ]
