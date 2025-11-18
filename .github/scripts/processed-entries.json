@@ -17102,5 +17102,71 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-extension-pack-for-visual-studio-code-ignite-2025/ba-p/4471050",
     "reason": "Succesfully added: Categories assigned as follows:\n- AI: The content centers on building intelligent agentic applications, integrating AI workflows, and using Microsoft's AI development stack (AI rules 1, 4, 5).\n- GitHub Copilot: The extension's capabilities revolve around Copilot-powered code generation, conversion, and debugging (GitHub Copilot rules 1, 2).\n- Coding: Highlights practical coding steps, including code scaffolding, language selection (.NET, Python), and workflow customization (Coding rules 1, 2, 4).\n- Azure: Integration with Foundry (an Azure AI platform) and Azure MCP server extension for cloud deployment (Azure rules 1, 3, 4).\nContent does not trigger any generic exclusion rules: it is technical, English, lacks biographical/sales focus, and is not a business productivity/end-user article. The content also meets length and technical depth standards for community content."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/modernizing-dotnet-with-github-copilot-agent-mode/",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the article centers on GitHub Copilot's agent mode and automation features, per AI rule 2 and GitHub Copilot rules 1-5. Coding applies due to focus on .NET upgrades, framework changes, and build error remediation (Coding rules 1–5). Azure is included as cloud migration and Azure-specific modernization steps are detailed (Azure rules 1, 4, 5). DevOps is included since the content discusses CI/CD pipelines, Git integration, and automated deployment (DevOps rules 1, 5, 9). Security is assigned as the guide covers dependency vulnerability scanning, authentication, and secure identity management (Security rules 2, 3, 5, 10). All included categories are justified by substantial coverage in the stepwise technical guide. No generic exclusion rules triggered.",
+    "timestamp": "2025-11-18 19:05:15 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/enterprise-software/collaboration/level-up-design-to-code-collaboration-with-githubs-open-source-annotation-toolkit/",
+    "reason": "Succesfully added: Assigned DevOps category because the content focuses on collaboration practices, process improvement, and structured workflows between designers and developers—a key DevOps theme as per rules 3, 4, and 9. Assigned Coding because the toolkit is used directly during design handoff for code creation, documentation, and guides developer behavior (Coding rule 4). Did not assign Azure, AI, ML, Security, or GitHub Copilot because the article does not mention those technologies, products, or contexts. The core value is a process/tool for improving development handoff and accessibility, fitting DevOps and Coding best.",
+    "timestamp": "2025-11-18 19:05:48 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-genie-integration-with-copilot-studio-and/ba-p/4471087",
+    "reason": "Succesfully added: Content qualifies for 'AI' due to Copilot Studio (developer platform), Genie conversational analytics, and Microsoft Foundry integrations (AI inclusion rules 1, 2, 3, and 4). 'Azure' included because Azure Databricks and Foundry are central Microsoft cloud services (Azure rule 1; Azure Databricks is the main platform). 'ML' included because Genie enables analytics and natural language queries over enterprise data, supporting data science, machine learning, and BI development workflows (ML rule 1, 2, 4, and 9). The content is technical, integration-focused, and well above minimum length requirements for community posts, with no generic exclusion rules triggered.",
+    "timestamp": "2025-11-18 19:06:27 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/host-remote-mcp-servers-on-azure-functions/ba-p/4471047",
+    "reason": "Succesfully added: Content qualifies for AI because MCP servers extend the capabilities of AI agents and deal with AI tool hosting and agent integration (AI rules 1, 4, 6). Azure category is assigned due to extensive detail on hosting MCP servers using Azure Functions and platform features (Azure rule 1, 4). Coding applies because content explains how to implement, configure, and integrate MCP servers with various programming languages and includes code/configuration examples (Coding rules 1, 2, 4). Security is included because of explicit coverage of authentication, authorization, Microsoft Entra ID, OAuth, and secure deployment protocols for remote-access tools (Security rules 1, 2, 3). All assigned categories and tags are substantiated by concrete descriptive and technical content. No exclusion rules apply—the post is technical, educational, and well above length thresholds.",
+    "timestamp": "2025-11-18 19:06:53 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/agent-loop-new-set-of-ai-features-arrive-in-public-preview/ba-p/4470764",
+    "reason": "Succesfully added: Included the AI category because the content centers on agentic workflows, automation, and integrations using AI models in Logic Apps (AI rules 1, 3, and 4). Assigned Azure category as all features are deployed within Azure Logic Apps and rely heavily on Azure services (Azure rules 1 and 2). Security was assigned due to the focus on document-level authorization via Azure AI Search ACLs and identity management (Security rules 1, 5, and 7). Did not assign DevOps, Coding, ML, or GitHub Copilot categories, as the content does not discuss development frameworks, code-level implementation, or ML engineering/workflows. The post meets the technical depth and relevance for developer audiences per multi-platform and inclusion rules.",
+    "timestamp": "2025-11-18 19:07:19 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-general-availability-of-agent-loop-in-azure-logic/ba-p/4470739",
+    "reason": "Succesfully added: Categories assigned as follows:\n- AI: The core of the announcement is about enabling AI agents, agentic and conversational workflows, and deploying intelligent automation in Azure Logic Apps (AI inclusion rule 1, 4, 5).\n- Azure: Agent Loop operates within Azure Logic Apps and leverages Azure services, connectors, and infrastructure (Azure inclusion rule 1, 4, 5, 6).\n- DevOps: Content describes deployment, CI/CD integration, management pipelines, incident automation and other DevOps practices (DevOps inclusion rule 1, 5, 6, 7).\n- Security: Details enterprise-grade security, On-Behalf-Of authentication, OAuth 2.0, access controls, and document-level security using Microsoft Entra ID and Azure AI Search (Security inclusion rule 1, 3, 7).\n\nCommunity content is much longer than 200 words of explanatory text, and generic exclusion rules do not apply. The content does not focus on biographical, sales, business productivity, or non-English topics. All technical claims, features, and use cases align with platform-focused development, deployment, and security efforts central to Microsoft's Azure ecosystem.",
+    "timestamp": "2025-11-18 19:07:43 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-mcp-server-support-for-logic-apps-agent-loop/ba-p/4470778",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on intelligent agents expanding capabilities using open protocols (AI rule 1, agent/AI workflows). Assigned Azure category due to its foundation in Azure Logic Apps and Azure-hosted managed connectors (Azure rule 1). Did not assign Coding (no programming detail or code focus), ML (no machine learning/data science workflow described), Security (security and authentication discussed, but not central or technical security implementation), DevOps (no process, pipeline, or operations theme present). Content exceeds minimum word count, is technical, and passes all generic exclusion rules.",
+    "timestamp": "2025-11-18 19:08:00 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-public-preview-of-agent-loop-in-azure-logic-apps/ba-p/4471056",
+    "reason": "Succesfully added: Categories assigned: 'AI' because the content centers on Agent Loop (an AI agent workflow capability) and its integration in Logic Apps, fitting AI category rule 1 and 4. 'Azure' assigned because Logic Apps is an Azure service and the article focuses on platform capabilities (Azure rule 1). 'Coding', 'ML', 'DevOps', 'Security', and 'GitHub Copilot' were not assigned: no detailed code implementation, ML model building, DevOps processes, security implementation, or Copilot references are present. All other generic exclusion rules do not apply: post is technical, informative, in English, and well above length requirements for community content.",
+    "timestamp": "2025-11-18 19:08:23 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/enabling-api-key-authentication-for-logic-apps-mcp-servers/ba-p/4470560",
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the content is focused on Azure Logic Apps configuration and management (Azure rule 1); 'Security' since it covers authentication mechanisms and key management (Security rule 2 & 7); 'AI' is also included due to references to AI Foundry and agent framework integration, aligning with AI category rule 1 and 4. Exclusion rules do NOT apply, as content is technical, implementation-focused (not business strategy, career, non-English, or productivity). Community post is sufficiently long and detailed (well over 200 words of explanation).",
+    "timestamp": "2025-11-18 19:08:48 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/reduce-latency-and-enhance-resilience-with-azure-files-zonal/ba-p/4470811",
+    "reason": "Succesfully added: Assigned Azure category because the content discusses new Azure Files storage features, configuration, and deployment (Azure inclusion rule 1, 4, 5). Assigned DevOps because it details architectural choices for workload resilience and storage-compute colocation, relevant to operations and deployment scenarios (DevOps inclusion rule 6, 7, 9). 'Coding', 'AI', 'ML', 'GitHub Copilot', and 'Security' categories were not assigned as the post does not discuss development frameworks, data science, AI technologies, developer tools, or security implementation. Content is technical and focuses on Azure service deployment rather than business strategy or end-user features.",
+    "timestamp": "2025-11-18 19:09:08 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/unlocking-storage-optimizations-smart-tiering-for-blobs-and-adls/ba-p/4469811",
+    "reason": "Succesfully added: Assigned the Azure category because the content focuses exclusively on Azure services (Blob Storage, Data Lake Storage) and details new management features, qualifying under Azure inclusion rules 1 (Any Azure Service/Technology), 2 (Azure Management Tools), and 4 (Azure Development/Deployment). No other categories apply as there is no focus on AI, coding practices, DevOps, ML/data science, or security. The content is technical, focused on implementation, and meets all criteria for inclusion. The author’s tags were expanded to ensure deep technical coverage and terminology. Generic exclusion rules do not apply, as the community post is well above the minimum word threshold and contains technical implementation details.",
+    "timestamp": "2025-11-18 19:09:29 +00:00"
   }
 ]
