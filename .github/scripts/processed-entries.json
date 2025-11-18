@@ -16556,5 +16556,11 @@
     "reason": "Succesfully added: Content was assigned 'Coding' due to the in-depth discussion of .NET development, support lifecycles, and upgrade practices (Coding rule 1 and 4). Assigned 'Security' because of the substantive coverage of vulnerability management, patching, compliance, and specific .NET CVEs like CVE-2025-55315 (Security rules 1, 2, 5, 9). Did not assign other categories as there is no substantive Azure, ML, AI, DevOps workflow, or GitHub Copilot focus. The content is not a sales pitch but an educational guide showing practical technical options; it contains actionable advice and technical demonstration, and does not trigger any generic exclusion rules.",
     "collection": "posts",
     "canonical_url": "https://andrewlock.net/companies-using-dotnet-need-to-suck-it-up-and-pay-for-support/"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=M5BOO35688A",
+    "timestamp": "2025-11-18 13:14:17 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned Coding category because the video focuses on new features in C# 14 and .NET 10, both core Microsoft programming languages and frameworks (Coding rule 1). No other categories apply, as the content does not reference AI, DevOps, Azure, Security, or ML topics. Generic exclusion rules do not apply since the content is technical, relevant, and not biographical, business, or sales pitch focused (the brief promotional aspect is secondary and the technical focus is dominant)."
   }
 ]

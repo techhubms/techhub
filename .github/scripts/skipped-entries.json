@@ -8817,5 +8817,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=7tAxlfpOcJk",
     "collection": "videos",
     "reason": "No categories found: Content excluded due to generic exclusion rule: The provided content is a promotional announcement for the Microsoft Ignite keynote event and does not contain any technical depth or substantive information about Microsoft technologies. It lacks meaningful technical content, details about implementation, or developer-focused information and serves primarily as an invitation. According to the exclusion rules under 'Sales Pitches' and low substantive content, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/_OQgsHOIPVg",
+    "timestamp": "2025-11-18 13:13:58 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to missing 'content' field. The input provides only a very short description without the actual explanatory content required for meaningful categorization. Without substantive text, it is impossible to assess category inclusion per the processing workflow and quality standards."
   }
 ]
