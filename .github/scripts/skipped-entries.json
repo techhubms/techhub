@@ -8847,5 +8847,17 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule — this article is focused entirely on Microsoft 365 Copilot, discussing its deployment and business ROI in productivity scenarios. According to the workflow's CRITICAL Copilot Product Distinction and Non-Development Microsoft Products rules, Microsoft 365 Copilot (and related business productivity Copilot products) must be excluded since they serve business productivity rather than developer or maker scenarios. The content concentrates on workplace productivity, cost savings, employee engagement, and business value, without covering software development or technical implementation for Microsoft platforms. Therefore, no categories are assigned.",
     "timestamp": "2025-11-18 16:11:11 +00:00",
     "canonical_url": "https://dellenny.com/how-to-measure-roi-from-copilot-deployment/"
+  },
+  {
+    "timestamp": "2025-11-18 17:11:16 +00:00",
+    "canonical_url": "https://dellenny.com/ai-terms-explained-for-microsoft-365-users/",
+    "collection": "posts",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this post focuses on Microsoft 365 Copilot and general AI features for business productivity (Word, Excel, Outlook, Teams). According to the workflow, any content about Microsoft 365 Copilot, Copilot for Microsoft 365, or Office Copilot (business productivity tools, not developer tools) must be excluded from categorization. The post is written for business users and describes AI terms for using Copilot with productivity apps, not for technical development or implementation. No categories assigned per Chapter 3 and Chapter 4 rules."
+  },
+  {
+    "timestamp": "2025-11-18 17:11:40 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=TUeET4zY95c",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: the provided data does not contain substantive content or technical details—'content' field is null and all other fields only describe an event or announcement without giving concrete implementation, technical demonstrations, or actionable information about Microsoft technologies. According to Chapter 3 Format and Length Exclusions, content lacking meaningful content for processing (such as missing full text or technical details) does not qualify for categorization."
   }
 ]
