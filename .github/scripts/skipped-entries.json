@@ -8985,5 +8985,35 @@
     "timestamp": "2025-11-19 15:10:16 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=yHBH-JfjLRA"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=E6rCexhEwBA",
+    "timestamp": "2025-11-19 16:06:45 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded because it is not primarily in English, violating the generic exclusion rule for non-English content. The title and description are in Portuguese ([pt-BR]🇧🇷), and no English translation is present. Per the workflow, at least 80% of the main text must be in English. Additionally, some content details indicate a stream format and a focus on a project to help find products online, but without the full main content in English, no categories can be assigned."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=bcFCCDk37ZM",
+    "timestamp": "2025-11-19 16:07:38 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded by generic exclusion rules. Although the session is listed as part of Microsoft Ignite and mentions AI, the core content is focused on partner marketing technology, business growth, and program engagement strategies, rather than technical implementation. The main topics include frictionless marketing programs, smarter insights for business partners, and campaign management. There is no substantive coverage of Microsoft technical development, AI coding, platform engineering, or hands-on integration details. The focus is on business strategy, marketing, and partner enablement (see exclusions: Business Strategy and Executive Content, Workplace and Business Focus, and Non-Development Microsoft Products). Thus, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=Jhr0nmf5QLU",
+    "timestamp": "2025-11-19 16:09:04 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The session focuses on business productivity, organizational collaboration, and integration of Miro with Microsoft business tools, including Microsoft Copilot for document and workspace productivity, which is explicitly excluded by the Copilot product distinction rules for non-development content. There are no substantive technical implementation details about Microsoft development platforms, coding, or developer tooling. Additionally, the material revolves around accelerating decision-making and workspace innovation for knowledge workers, which the workflow identifies as business productivity, not developer tooling or engineering architecture."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=WIW7jUExxfE",
+    "timestamp": "2025-11-19 16:10:34 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: The session primarily focuses on sustainability, energy efficiency, IT management, and emission reduction using Windows and Intune. These are business product features (device management, policy enforcement, power management, cloud-based printing, sustainability reporting), not developer tools or development-focused content (see Non-Development Microsoft Products and Business Strategy exclusions). There is no substantial technical implementation detail relevant to developers or Microsoft consultants building solutions. Intune and Windows usage for general enterprise IT management and sustainability falls under non-development Microsoft products, which are excluded unless the content demonstrates significant development-related topics."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/cBFajwcr8tI",
+    "timestamp": "2025-11-19 16:11:07 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: 'content' field is null, meaning there is no substantive text or technical information to process or categorize. Without the actual content, it's impossible to determine relevance to Microsoft development technologies or to apply category inclusion rules. Per Chapter 3: Format and Length Exclusions, content must be present to qualify."
   }
 ]

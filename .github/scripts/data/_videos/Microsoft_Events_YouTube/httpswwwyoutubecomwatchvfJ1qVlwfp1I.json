@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "MSIgnite",
+    "Unifyyourdataplatform"
+  ],
+  "FeedLevelAuthor": "Microsoft Events",
+  "Link": "https://www.youtube.com/watch?v=fJ1qVlwfp1I",
+  "FeedName": "Microsoft Events YouTube",
+  "Title": "Holistic FinOps for Microsoft Cloud environments | ODSP1404",
+  "PubDate": "2025-11-19T15:21:41+00:00",
+  "Author": "Microsoft Events",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-11-19 16:05:10",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "OutputDir": "_videos",
+  "Description": "This demo showcases Finout’s ability to manage and optimize cloud spend across Azure and services like Kubernetes, Datadog, and OpenAI. It highlights Finout’s unified “MegaBill” view for exploring Azure resources, subscriptions, and tags. The session introduces Virtual Tags for dynamic, rules-based cost allocation and covers shared cost distribution, dashboards, anomaly detection, and alerting—empowering teams to improve Azure cost efficiency.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Alexander Gahrmann 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1404 | English (US) Pre-recorded | Intermediate (200) #MSIgnite, #Unifyyourdataplatform\n\nChapters: 0:00 - Introduction to Organizing Data by Teams or Departments 00:04:36 - Distributing Shared Costs Across Teams and Stakeholders 00:05:18 - Visualizing Cloud Costs, Projections, Showbacks, and Chargebacks 00:06:31 - Integrating Telemetry Data for Unit Economics 00:07:07 - Ensuring Full Cost Allocation and Automated Stakeholder Notifications 00:07:25 - FinOps Support, Closing Remarks, and Conference Invitation"
+}

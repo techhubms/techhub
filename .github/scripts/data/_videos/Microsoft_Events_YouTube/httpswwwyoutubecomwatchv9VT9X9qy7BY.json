@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "MicrosoftAICloudPartnerProgram",
+    "MSIgnite"
+  ],
+  "FeedLevelAuthor": "Microsoft Events",
+  "Link": "https://www.youtube.com/watch?v=9VT9X9qy7BY",
+  "FeedName": "Microsoft Events YouTube",
+  "Title": "Sentinel alert to autonomous action: A guide to controlled AI | ODSP1483",
+  "PubDate": "2025-11-19T15:09:40+00:00",
+  "Author": "Microsoft Events",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-11-19 16:05:10",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "OutputDir": "_videos",
+  "Description": "When a critical alert triggers in Microsoft Sentinel, every second matters. This session shows how to bridge the gap between detection and response with custom Blink micro agents and workflows integrated into Sentinel. Learn a practical framework for AI-driven responses that are fast, safe, controlled, and tailored to your environment.\n\nTo learn more, please check out these resources: \\* https://go.blinkops.com/security-agents-guide 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Joshua Weinick 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1483 | English (US) Pre-recorded | Intermediate (200) #MSIgnite, #MicrosoftAICloudPartnerProgram\n\nChapters: 0:00 - Blink Platform Capabilities: Builder Copilot, Analyst Copilot, AI Agents 00:05:13 - Exploring the Blink workflow editor and integrated tools 00:06:13 - Verification of Microsoft Teams alert message 00:07:35 - Differentiating Large Language Models (LLMs) from Agents 00:10:24 - Agent responsibilities: investigating Sentinel alerts using KQL queries 00:12:39 - Conclusion: expanding automation capabilities beyond Sentinel alerts"
+}

@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "Copilotandagentsatwork",
+    "MSIgnite"
+  ],
+  "FeedLevelAuthor": "Microsoft Events",
+  "Link": "https://www.youtube.com/watch?v=-YopB25sPec",
+  "FeedName": "Microsoft Events YouTube",
+  "Title": "Agentic AI SRE on Azure for faster RCA and resolution | ODSP1410",
+  "PubDate": "2025-11-19T15:13:35+00:00",
+  "Author": "Microsoft Events",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-11-19 16:05:10",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "OutputDir": "_videos",
+  "Description": "Downtime is expensive, and every minute counts when incidents hit. Yet valuable engineering time is lost to troubleshooting, instead of driving design and innovation. NeuBird’s Agentic AI SRE delivers real-time RCA and remediation, while ensuring enterprise-grade security and governance. It correlates telemetry across Azure Monitor, observability tools, and multi-cloud, helping reduce MTTR up to 90%. Join this session to see Hawkeye by NeuBird in action.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* François Martel 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1410 | English (US) Pre-recorded | Intermediate (200) #MSIgnite, #Copilotandagentsatwork\n\nChapters: 0:00 - Challenges with numerous alerts and dashboards creating data overload 00:04:12 - Introduction of Hawkeye – AI SRE agent for autonomous incident response 00:04:22 - Transition from manual IT processes to AI-driven automation 00:07:42 - Viewing incident details and contextual information 00:07:55 - Launching a manual investigation through the dashboard 00:12:28 - Importance of Context Engineering and Data Processing 00:13:03 - Summary: How Hawkeye Addresses Key SRE Challenges"
+}
