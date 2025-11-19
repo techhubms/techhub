@@ -1,0 +1,17 @@
+{
+  "Author": "Microsoft Events",
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "PubDate": "2025-11-19T14:51:59+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Description": "Slalom shows how enterprises can transform the SDLC by giving GitHub Copilot a “memory bank” of project context, standards, and design rules. Learn how context frameworks, Mermaid diagrams, and MCP servers help Copilot deliver code aligned with enterprise practices. We’ll share real-world results, including how one client boosted code quality and consistency through this approach.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Jon Perkins 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1414 | English (US) Pre-recorded | Intermediate (200) #MSIgnite, #Copilotandagentsatwork\n\nChapters: 0:00 - Prototyping Single-Page Applications in React or Angular 00:04:14 - Embedding Enterprise Practices into AI-Driven Code Development 00:06:25 - Integrating with Systems like Jira, Azure DevOps, and Figma 00:06:50 - Introduction to Dynamic Context via MCP 00:08:55 - Introducing Slalom Accelerator for Asynchronous Agentic Workflows 00:10:12 - Introducing the concept of project deliverables aligning humans and GitHub Copilot 00:10:33 - Capturing best practices and coding standards from existing projects",
+  "ProcessedDate": "2025-11-19 15:04:47",
+  "Link": "https://www.youtube.com/watch?v=S7NzOIiqU2E",
+  "Tags": [
+    "Copilotandagentsatwork",
+    "MSIgnite"
+  ],
+  "FeedLevelAuthor": "Microsoft Events",
+  "Title": "Redefining the SDLC with GitHub Copilot and Context-Driven AI | ODSP1414",
+  "FeedName": "Microsoft Events YouTube"
+}

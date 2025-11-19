@@ -17492,5 +17492,71 @@
     "reason": "Succesfully added: Assigned 'Azure' because the content centers around Azure Databricks and its integration with SAP Business Data Cloud, satisfying Azure rule 1. Assigned 'ML' since machine learning topics, model predictions, and analytics engineering use cases are explicitly demonstrated and discussed (ML rules 1, 2, and 6). Assigned 'AI' because actionable insights, automated forecasting, and advanced analytics are enabled via Azure Databricks, which qualifies under AI rules 1, 4, and 5. Omitted other categories as there is no primary focus on coding, DevOps, Security, or GitHub Copilot. The session is technical, avoids business-only focus, and exceeds generic exclusion requirements.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=wsLgjpQZx6U"
+  },
+  {
+    "reason": "Succesfully added: Included AI category due to focus on AI agents like GitHub Copilot transforming development processes (AI rule 1 and 2). Assigned GitHub Copilot category as the session centers on its role in code creation and quality (GitHub Copilot rules 1-4). Assigned DevOps category for discussions about the development workflow, code lifecycle management, and automation (DevOps rules 3-5, 9). Security is included due to coverage of GitHub Advanced Security and security standards (Security rules 1 and 2). Coding is assigned for technical demonstrations and code review aspects (Coding rules 4 and 5). All categories validated by the session content and exclusion rules do not apply.",
+    "timestamp": "2025-11-19 15:05:57 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=Ptach9Ouzj8"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the session focuses extensively on Azure cost management, commitment tools, and reservation strategies (Azure inclusion rules 1 and 4). The content details automation and savings across Azure services using third-party integrations (Archera) and includes a live demo of the tool on Azure. No other categories assigned, as the content does not cover coding practices, AI/ML, DevOps workflows, or security technical depth. Generic exclusion rules do not apply since this is not biographical, negative, business-only, or non-technical content.",
+    "timestamp": "2025-11-19 15:06:19 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=-69mrx_ugJA"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category based on the primary focus on Microsoft AI technologies for automating customer experience, including GPT and generative AI (meets AI inclusion rules 1, 4, and 5). No other technology categories qualify: the content focuses on business outcomes and automation rather than software development, coding, ML engineering, or Azure infrastructural details. The session is not a sales pitch or help-seeking post, does not violate any generic exclusion rules, and targets hands-on practitioners with concrete implementation strategies rather than high-level business strategy.",
+    "timestamp": "2025-11-19 15:06:37 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=4ynkbF7oImM"
+  },
+  {
+    "reason": "Succesfully added: Included Azure category as the session is built around Azure services, Blob Storage, and Microsoft Fabric integration (Azure inclusion rules 1, 4, 5). AI is included because the session discusses Azure OpenAI and AI-driven workflows (AI inclusion rules 1, 4, 5). ML category is assigned due to significant coverage of data lake structuring, analytics, indexing, reporting, and integration flows with SQL, Spark, and KQL engines (ML inclusion rules 1, 2, 3, 4). GitHub Copilot, Coding, DevOps, and Security categories do not apply, as there is no coding, developer tooling, or DevOps/security implementation detail discussed.",
+    "timestamp": "2025-11-19 15:06:56 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=7KXUlnq1tQg"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the session covers Azure Virtual Desktop and Windows 365 migration, central to Microsoft cloud architecture (Azure inclusion rule 1). Assigned Security because it addresses app validation, readiness, operational stability, and automated recovery (Security rule 2, 4, 9). DevOps included for automation, validation pipelines, and continuous improvement practices in migration and deployment (DevOps rule 5, 6, 7). Content is not biographical, promotional, help-seeking, job/career focused, business productivity, or non-English, so no exclusion rules apply.",
+    "timestamp": "2025-11-19 15:07:15 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=8Z0dCQWApg8"
+  },
+  {
+    "reason": "Succesfully added: Content qualifies for the AI category due to its central focus on Microsoft autonomous agent platforms, the Agent Framework, Copilot Studio integration, and AI technical implementation (AI inclusion rules 1, 2, 3, and 4). Azure category included because the session discusses building and deploying agent systems on Azure AI and integration with Azure services (Azure inclusion rules 1 and 4). Coding, DevOps, ML, Security and GitHub Copilot categories were not added since the content does not focus on programming, CI/CD processes, custom ML engineering, developer tools, or security-specific implementation. Generic exclusions do not apply; this session is technical, in English, and not a business/personal/negative/sales pitch.",
+    "timestamp": "2025-11-19 15:07:34 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=DJyIfUQ_OZQ"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content is centered on agentic AI solutions, including the use of Microsoft Foundry for Autonomous Operations and several AI-enabled functionalities (AI inclusion rules 1, 4, and 6). Assigned Azure category because the solution is hosted on Microsoft Azure and integrates Azure services (Azure inclusion rules 1 and 4). Coding, DevOps, ML, Security, and GitHub Copilot categories were not included because the session focuses on AI agents and operational automation rather than hands-on coding or development pipelines, ML engineering, security tooling, or GitHub Copilot usage.",
+    "timestamp": "2025-11-19 15:08:05 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=LO1fQDWt2iI"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category because the session focuses on maximizing Microsoft Defender and Entra ID, both core Microsoft security technologies, and discusses advanced security topics: insider threats, behavior analytics, and threat detection (Security rules 1, 2, 3, 4, and 7). No other categories were assigned since the content does not cover AI, Coding, Azure platform details, DevOps, ML/data science, or GitHub Copilot. The description, tags, and content were derived from the title, description, chapters, and referenced technologies, per output requirements.",
+    "timestamp": "2025-11-19 15:08:23 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=OhXZa5NzJ5Y"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the session centers around GitHub Copilot usage (AI rule 2, GitHub Copilot rule 1), with enterprise context embedding and AI-driven code development. DevOps is included due to integration with Azure DevOps, Jira, and workflow management (DevOps rules 1, 3, 5). Coding is included because the talk covers coding standards, best practices, and SPA prototyping with React/Angular (Coding rules 1, 2, 4). Azure is included for Azure DevOps integration (Azure rule 1). No exclusion rules triggered, as content is technical, professional, and focused on developer tools.",
+    "timestamp": "2025-11-19 15:09:09 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=S7NzOIiqU2E"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the session discusses AI-powered industrial workflows, knowledge graphs, and Copilot integration (AI rule 1, 4, and 5). Assigned Azure category because IRIS Foundry’s operations are built on Microsoft Azure and the session details Azure’s role in data integration and analytics (Azure rule 1, 4, and 5). Did not assign ML—the content focuses on platform-driven AI/data integration rather than custom model development or data science engineering. Did not assign other categories (Coding, DevOps, Security, GitHub Copilot) since the session does not discuss coding implementation, DevOps practices, direct security architecture, or GitHub Copilot features.",
+    "timestamp": "2025-11-19 15:09:41 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=t37ZpdNQmAM"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because the entire session focuses on Azure Cobalt 100 VMs and their central role for migration, modernization, and cloud workloads (Azure rule 1, 4, and 5). Added 'Coding' because the content discusses developer-oriented software optimization, GitHub runners, CI/CD, and integration of technical platforms (Coding rule 2, 5). Included 'AI' due to explicit mention of Databricks for large-scale AI and data workloads, and discussion of AI integration with MCP servers (AI rule 1, 4, 5). Excluded ML because, although data workloads are mentioned, the primary focus is on infrastructure and AI as a platform feature, not custom ML engineering. Generic exclusion rules did not apply: there is no biographical, question-only, sales pitch, job or business strategy content, and the session is in English with substantial technical detail from Microsoft Ignite.",
+    "timestamp": "2025-11-19 15:10:03 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=tyavPF0DUrE"
   }
 ]

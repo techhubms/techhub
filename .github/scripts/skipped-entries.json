@@ -8949,5 +8949,41 @@
     "reason": "No categories found: Content excluded due to generic exclusion rules – the video focuses on internal employee and executive communications at Microsoft, describing communication tools (Viva Engage), workplace culture alignment, and business adoption strategies. Although AI-powered features are mentioned, there is no technical implementation detail, coding, development, or practitioner-based focus according to Generic Exclusion Rules ('Workplace and Business Focus', 'Business Strategy and Executive Content', and 'Non-Development Microsoft Products'). The content is about organizational and business communication rather than technical usage or development of Microsoft technologies.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=PKW_tbbhPH8"
+  },
+  {
+    "reason": "No categories found: Excluded all categories due to generic exclusion rules: The content's main focus is Google's Antigravity IDE, forked from Visual Studio Code, and agentic AI development within Google's ecosystem. While there is brief mention of VS Code and Microsoft in a comparative/judgmental sense, Microsoft's technology is neither central nor does it comprise >=40% of substantive technical content, as required by the Multi-Platform Content Threshold. The article is not about Microsoft AI, Copilot, Azure, or .NET coding methodologies, and instead concentrates on Google's product/technology, its development workflow, and user experience. No Microsoft product development or usage guidance qualifies for any category.",
+    "timestamp": "2025-11-19 15:05:28 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devclass.com/2025/11/19/googles-antigravity-arrives-agentic-ai-development-but-frustrating-for-early-adopters/"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The video focuses on business strategy, digital workplace trends, leadership expectations, and organizational vision with TeamViewer, not on technical implementation of Microsoft developer technologies. According to business strategy and executive content exclusion in Chapter 3, content that emphasizes business process optimization, workplace culture, and executive-level discussion without substantive technical detail must be excluded. No substantive technical coverage of Microsoft services, developer tooling, or product architecture was present in the description or session summary.",
+    "timestamp": "2025-11-19 15:07:47 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=fvkozGSO_wk"
+  },
+  {
+    "reason": "No categories found: No categories assigned due to generic exclusion rules. The content is primarily about a consumer/business-facing modular meeting room system (ClickShare Hub) designed for IT admins and everyday users, focusing on simplifying setup and improving hybrid meeting experiences. Although there is mention of Microsoft platform integration and security features, the primary focus is on hardware usability, meeting room management, and benefits for IT/end users, which falls under excluded workplace/business productivity topics. There is no substantial development, architecture, coding, DevOps, AI, ML, or security engineering covered per the inclusion rules; thus, all categories are excluded.",
+    "timestamp": "2025-11-19 15:08:36 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=QeBnv7z4_n8"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. Although this is from a Microsoft Ignite session and references AI for customer experience with Teradata MCP, the core content is centered on Teradata's proprietary intelligence engine and customer experience transformation. There is no substantive technical detail indicating Microsoft technologies are ≥40% of the solution or central to the architecture; the demo focuses on Teradata’s autonomous systems and only briefly mentions a future feature coming to Microsoft Copilot (which falls under business productivity tools and is specifically excluded per the Copilot rules). The description and chapters do not provide details of Microsoft development technologies, platforms, or code integration, and therefore does not meet category inclusion requirements.",
+    "timestamp": "2025-11-19 15:08:49 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=r1wVaaaT-mI"
+  },
+  {
+    "reason": "No categories found: Excluded all categories per the generic exclusion rules. The content's focus is primarily on patch management and integration of the Action1 Platform with Microsoft Intune, detailing product features, migration, and risk-based remediation. Although Intune is mentioned (which is a Microsoft technology), the session centers on operational endpoint management, device patching, and solution marketing rather than development, coding, or technical implementation aspects. According to the Non-Development Microsoft Products exclusion rule in Chapter 3, Intune is excluded unless the content is development-focused. No coding, architecture, or developer guidance is provided; instead, it's about IT administration and product promotion. Therefore, this does not qualify for any categories.",
+    "timestamp": "2025-11-19 15:09:22 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=SGLHSecM0Ak"
+  },
+  {
+    "reason": "No categories found: All categories are excluded based on the generic exclusion rules and the Copilot product distinction. The video centers on Microsoft Copilot, Copilot Studio, and AI agents, but its primary focus is on business productivity, workflow transformation, change management, and IT leadership strategy in organizations, not developer tools or technical implementation. It describes enabling business workflows, scaling AI adoption, operationalizing agents, and empowering leaders for transformation—all targeting organizational and executive outcomes, not hands-on development. Specifically, Microsoft 365 Copilot and general Copilot for business scenarios are excluded under the non-development Microsoft products rule and business strategy/executive content exclusion. Although Copilot Studio is mentioned, it is referenced here in the context of enterprise automation and workforce AI adoption, rather than actual developer-focused usage or technical how-to. Therefore, all categories are left empty.",
+    "timestamp": "2025-11-19 15:10:16 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=yHBH-JfjLRA"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "Author": "Microsoft Events",
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "PubDate": "2025-11-19T14:44:36+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Description": "App anxiety is real, but it doesn’t have to derail your modernization projects. Between Windows 11 upgrades, SCCM-to-Intune migrations, and the move to AVD/Windows 365, IT teams are under pressure to move fast without breaking things. Manual testing, app conflicts, and downtime make that impossible. This live demo shows how Rimo3 automation flips the script validating apps, accelerating migrations, and keeping your environment stable, evergreen, and future-ready.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-MicrosoftFabricAIDataSolutionsPlan \\* https://www.rimo3.com/book-a-demo \\* https://www.rimo3.com/case-studies 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* James Graham \\* Samit Halvadia 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1481 | English (US) Pre-recorded | Foundational (100) #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Introduction and Overview of Rimo3 Platform 00:02:05 - Explaining the Onboarding Pipeline and Its Stages 00:04:49 - Tracking Application Progress Through Discovery and Baseline Stages 00:07:46 - Overview of Windows Readiness Dashboard for OS Migration Testing 00:08:46 - Overview of Azure Virtual Desktop Testing Approach 00:10:51 - Analyzing Failures with Videos, Screenshots, and Console Output 00:11:57 - Importing Packages Manually or from SCCM 00:15:05 - Using Extend Menu for Application Recovery 00:17:15 - Closing Summary and Preview of Future Deep Dive Videos",
+  "ProcessedDate": "2025-11-19 15:04:47",
+  "Link": "https://www.youtube.com/watch?v=8Z0dCQWApg8",
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ],
+  "FeedLevelAuthor": "Microsoft Events",
+  "Title": "Ditch the fear factor: From app anxiety to automation confidence | ODSP1481",
+  "FeedName": "Microsoft Events YouTube"
+}
