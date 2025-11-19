@@ -17642,5 +17642,23 @@
     "timestamp": "2025-11-19 16:11:30 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Content qualifies for the Azure category because it focuses extensively on Azure Deployment Stacks, Bicep, and ARM resource management (Azure rule 1 and 2). DevOps category assigned because Deployment Stacks relate directly to infrastructure lifecycle, governance, repeatable deployments, and modular architecture—all core DevOps practices (DevOps rules 1, 4, and 6). Tags were extracted according to instructions, focusing on technical terms, Azure services, IaC concepts, governance, and deployment. The content is well above the 200-word minimum for community type and does not trigger any generic exclusion rules."
+  },
+  {
+    "timestamp": "2025-11-19 17:05:06 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-fabric-iq-the-semantic-foundation-for-enterprise-ai/",
+    "reason": "Succesfully added: Categories assigned per rules: AI, since content focuses substantially on Fabric IQ, Ontology, and AI agent integration (AI rule 1, 4, 5); Azure, since Microsoft Fabric is an Azure-based data analytics and enterprise AI platform (Azure rule 1 & 4); ML, because content covers business intelligence, Power BI model reuse, advanced analytics, and development of custom AI agents integrating structured and unstructured data (ML rule 1, 2, 4, 9, 10). No Coding, DevOps, Security, or GitHub Copilot content found. Generic exclusion rules do not apply as this is substantive, technical, English-language, non-business/productivity, and non-biographical content with full technical detail.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-19 17:05:30 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/mirroring-sql-server-postgres-db-cosmos-db-and-updates-to-snowflake-mirroring-now-ga/",
+    "reason": "Succesfully added: Assigned Azure category because content focuses on Microsoft Fabric and OneLake, both Azure-based services, and covers operational data replication from Azure and non-Azure sources. Assigned ML category due to detailed support for analytics, BI, and machine learning downstream use cases (ML rules 1, 2, 4). Assigned AI category because the mirroring functionality enables near real-time AI insights and explicitly mentions AI scenarios, with platform-managed data preparation for AI workloads (AI rule 5 and 1). Did not assign DevOps, Coding, Security, or GitHub Copilot categories, as the content does not cover those focuses.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-19 17:05:57 +00:00",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories/",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the content is about GitHub Copilot's new agentic AI features (AI rule 2, GitHub Copilot rule 1). Assigned 'Coding' because the article provides detailed, actionable technical guidance for code-based workflows and writing agent personas/scripts (Coding rules 4 and 5). Did not assign DevOps because, while there is mention of workflow, the primary focus is agent definitions and development practices and not broader DevOps process or automation. Other categories like Azure, ML, and Security are referenced in agent examples but are not central or detailed enough for inclusion.",
+    "collection": "news"
   }
 ]

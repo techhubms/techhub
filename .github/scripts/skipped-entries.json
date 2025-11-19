@@ -9015,5 +9015,11 @@
     "timestamp": "2025-11-19 16:11:07 +00:00",
     "collection": "videos",
     "reason": "No categories found: Content excluded due to generic exclusion rule: 'content' field is null, meaning there is no substantive text or technical information to process or categorize. Without the actual content, it's impossible to determine relevance to Microsoft development technologies or to apply category inclusion rules. Per Chapter 3: Format and Length Exclusions, content must be present to qualify."
+  },
+  {
+    "timestamp": "2025-11-19 17:06:26 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=QOt4SPB4y7c",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The material focuses exclusively on event logistics, attendee planning, and networking at the Microsoft Ignite conference. There are no substantive technical topics, developer tools, or Microsoft product implementation details present. The session description, chapter breakdowns, and excerpt all center on maximizing event experience and networking rather than on technical architecture or development content. According to the workflow’s generic exclusion rules for business strategy, executive content, workplace focus, and non-technical conference guides, this content does not qualify for any categories.",
+    "collection": "videos"
   }
 ]
