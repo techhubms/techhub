@@ -17264,5 +17264,11 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned Azure category because the architecture centers on Azure networking, private endpoints, and hub–spoke landing zones (Azure inclusion rules 1, 2, 5). Assigned ML category since Microsoft Fabric's role focuses on analytics and data science workloads (ML inclusion rules 1, 2, 3, 4) via Lakehouse, Warehouse, and Spark, all critical for data analytics pipelines. Assigned Security due to the emphasis on private network boundaries, DNS controls, firewalls, managed identities, and Zero-Trust patterns (Security inclusion rules 1, 2, 4, 7, 9). Did not assign AI, Coding, DevOps, or GitHub Copilot categories because content centers on infrastructure, governance, and data pipeline architecture rather than AI service usage, programming, or DevOps processes.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-private-connectivity-for-microsoft-fabric-a-practical/ba-p/4471190"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the session focuses on adopting AI solutions using Azure services, including Foundry Templates and marketplace AI apps, which aligns with AI inclusion rule 1. Assigned 'Azure' because all demos and solutions utilize Azure platforms, services, and tools, matching Azure rule 1. Did not assign 'Coding' because, although there is use of GitHub repositories and Azure Cloud Shell, the session centers on deployment and solution-building via templates and marketplaces, not development-focused code or frameworks. 'DevOps', 'ML', and 'Security' are not central based on the session's emphasis on entry-level AI adoption rather than CI/CD, advanced data science, or security architecture. No generic exclusion rules triggered, as the session is technical, English, sufficiently detailed, and focused on practical implementation for SMBs.",
+    "timestamp": "2025-11-19 06:05:25 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=Kd3KgJx0U1M"
   }
 ]
