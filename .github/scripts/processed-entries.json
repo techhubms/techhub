@@ -17780,5 +17780,23 @@
     "reason": "Succesfully added: Assigned Azure category because content centers around Azure CLI and Azure PowerShell, covering service updates, API changes, and management tooling (Azure rule 1, 4). Assigned Security category due to emphasis on MFA enforcement, CVE mitigations, and claims challenge handling (Security rule 1, 2, 3). Assigned AI category because the new 'What-If' and 'Export Bicep' parameters leverage AI for intelligent preview and template generation (AI rule 1, 5). Assigned DevOps category because content discusses automation, cloud management, breaking changes, release process, and CLI scripting (DevOps rules 1, 5, 6). Assigned Coding due to technical scripting, new modules, and integration practices in CLI/PowerShell (Coding rules 1, 2). All decisions are based solely on technical content about Microsoft cloud automation and developer tooling; there are no exclusion rule triggers.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-and-azure-powershell-ignite-2025-announcement/ba-p/4471182",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-expanded-cdc-support-for-more-sources-destinations/",
+    "reason": "Succesfully added: Assigned 'Azure' category because the content covers Microsoft Fabric Data Factory—a cloud service for data integration, which is part of the Azure ecosystem (Azure rule 1 and 4). Assigned 'ML' (Data) category because the Copy job facilitates data engineering and ingestion workflows central to analytics and data science scenarios, especially with enhancements around CDC and Lakehouse integration (ML rule 1, 2, 3, and 4). Did not assign 'AI', 'Security', 'DevOps', 'Coding', or 'GitHub Copilot' as the content does not focus on those areas. None of the generic exclusion criteria applied as this is official technical content, not biographical, promotional, or business strategy oriented, and is in English.",
+    "collection": "news",
+    "timestamp": "2025-11-19 21:05:01 +00:00"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-truncate-destination-queries-and-multiple-folders/",
+    "reason": "Succesfully added: Assigned Azure category because the feature enhancements are directly for Microsoft Fabric Data Factory, which is a core part of the Azure platform (Azure rule 1). Assigned ML category as the primary focus is on data engineering and ETL processes for analytics workloads, aligning with ML category rules (ML rule 2 and 4). Did not assign AI because none of the features relate to AI or pre-built AI services. Excluded other categories as there is no mention of code, DevOps practices, or security. All content is technical, English, and not biographical, sales, or business strategy-focused.",
+    "collection": "news",
+    "timestamp": "2025-11-19 21:05:23 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-were-making-github-copilot-smarter-with-fewer-tools/",
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' because the post is centered on AI-driven methods, embedding models, and large language models in developer tools (AI rule 1, 3, and 6). 'GitHub Copilot' because the entire article is about GitHub Copilot Chat features, specifically in VS Code (GitHub Copilot rules 1, 2, 3). 'Coding' because it addresses developer workflows in VS Code and tool use within coding environments (Coding rules 4, 5). No 'DevOps', 'Azure', 'ML', or 'Security' assigned: no DevOps/team/collaboration or CI/CD focus; Azure only mentioned as an example (not central or >40% of content); ML only as infrastructure for embeddings/selection, not data science or model development from scratch; Security not covered. No generic exclusion rules apply, and content is highly technical, English, and focused on developer tools.",
+    "collection": "news",
+    "timestamp": "2025-11-19 21:05:55 +00:00"
   }
 ]
