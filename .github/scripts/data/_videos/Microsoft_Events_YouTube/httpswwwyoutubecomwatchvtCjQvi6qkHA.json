@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "InnovatewithAzureAIappsandagents",
+    "MSIgnite"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "OutputDir": "_videos",
+  "Title": "Deliver smart secure and scalable agents with MongoDB on Azure | ODSP1448",
+  "Link": "https://www.youtube.com/watch?v=tCjQvi6qkHA",
+  "EnhancedContent": null,
+  "PubDate": "2025-11-19T11:00:59+00:00",
+  "Description": "In the era of AI-driven innovation, organizations need databases that are flexible and powerful while also being secure and scalable. This session explores how MongoDB empowers to rapidly build, deploy, and manage intelligent applications through the lens of a developer persona. Diving into our integrations with AI Foundry, Microsoft Sentinel, and Azure Landing Zones, we’ll showcase a complete developer journey—from prototype to production—while ensuring security, and operational excellence.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Diana Annie Jenosh 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1448 | English (US) Pre-recorded | Advanced (300) #MSIgnite, #InnovatewithAzureAIappsandagents\n\nChapters: 0:00 - Demo 1 – Car Manual Search: Keyword, Vector, and Hybrid Search 00:04:10 - Image-based car damage cost estimation using claim data 00:05:15 - Planning efficient model evaluation and integration with MongoDB Atlas 00:09:34 - Data Connector Setup Process and Log Ingestion via Azure Functions 00:10:12 - Demo: Deploying MongoDB Atlas Solution via Azure Marketplace 00:13:33 - Overview of multi-region MongoDB Atlas deployment setup using Azure Landing Zone 00:16:31 - Session summary highlighting integration of MongoDB Atlas, AI Foundry, and Azure for secure, scalable AI apps",
+  "FeedLevelAuthor": "Microsoft Events",
+  "ProcessedDate": "2025-11-19 11:04:13",
+  "Author": "Microsoft Events"
+}
