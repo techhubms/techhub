@@ -17276,5 +17276,35 @@
     "canonical_url": "https://www.youtube.com/watch?v=p-0ikIK3-l8",
     "timestamp": "2025-11-19 08:05:07 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Categories assigned based on substantial focus on Azure (Azure rules 1, 4, 5) and implementation of security controls (Security rules 1, 4, 9). The session covers technical approaches to policy management, cross-cloud compliance, and secure-by-design architecture using Azure’s native tools, all indicating strong Azure and Security relevance. No AI, ML, DevOps, Coding, or GitHub Copilot elements are present.",
+    "canonical_url": "https://www.youtube.com/watch?v=dQz01rHnLW0",
+    "timestamp": "2025-11-19 09:05:06 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Azure category because the session is part of Microsoft Ignite, centrally focuses on hybrid and cloud environments, and specifically addresses Active Directory (a Microsoft technology) and Azure (inferred from hybrid/cloud context). While the primary vendor is BlueCat/Micetro, the session directly tackles topics of DNS/DHCP modernization in scenarios highly relevant to Azure networks and hybrid cloud. AI, ML, Coding, DevOps, Security, and GitHub Copilot categories do not apply because the session is operational/network-focused, not covering those aspects.",
+    "canonical_url": "https://www.youtube.com/watch?v=EeaDXQEhy_o",
+    "timestamp": "2025-11-19 09:05:27 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' because the session covers an AI-powered assistant (see chapter 0:00 'AI-Powered Nerdio Copilot Assistant' and description). Assigned 'Azure' due to its focus on Azure Virtual Desktop, Azure management, and related migrations and automation. 'Coding', 'DevOps', 'ML', and 'Security' categories do not apply as the content does not discuss hands-on development, DevOps pipelines, data science, or security implementation. The session focuses on IT platform features and automation for cloud endpoints, aligning with AI and Azure per inclusion rules.",
+    "canonical_url": "https://www.youtube.com/watch?v=J8esrUr6iDQ",
+    "timestamp": "2025-11-19 09:05:47 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on building and deploying AI agents (AI rule 1). Assigned Azure category because Azure Functions and Azure integration are central to the solution (Azure rule 1 and 4). Assigned Coding since the walkthrough involves Python-based interaction and scripting for agent creation (Coding rules 1 and 4). No generic exclusions apply; content is in English, is technical, and targets developer implementation. Security, DevOps, ML, and GitHub Copilot do not directly apply based on provided details.",
+    "canonical_url": "https://www.youtube.com/watch?v=oF5ib8AIVCE",
+    "timestamp": "2025-11-19 09:06:09 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Category 'Security' was assigned because the session exclusively discusses data security, compliance, and policy enforcement, focusing on Microsoft Purview and Netskope integrations (Security rules 1, 4, 7, and 9). No other categories apply because the content is not developer- or coding-focused, does not directly discuss Azure, AI technologies, ML, DevOps, or GitHub Copilot (content is about unified data security architecture and regulatory compliance rather than hands-on development or deployment). All decisions are based on provided session description, agenda, and covered technologies.",
+    "canonical_url": "https://www.youtube.com/watch?v=ogDdTHhDZSE",
+    "timestamp": "2025-11-19 09:06:32 +00:00"
   }
 ]

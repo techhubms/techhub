@@ -8883,5 +8883,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=Xjq0NSBtsjE",
     "timestamp": "2025-11-19 08:05:20 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content focuses on device deployment strategies for mixed-architecture Windows 11 PCs (ARM, Intel, AMD) in enterprise environments. It discusses unified deployment approaches, security, compliance, and OneDeploy tool usage for hardware management. However, per generic exclusion rules (Non-Development Microsoft Products, Format and Scope), device deployment, imaging, and management are not considered core development or DevOps activities in the context of this taxonomy; they pertain to IT administration, not software/app development, DevOps CI/CD, coding, or direct security implementation for development pipelines. No substantial Azure, Coding, DevOps, Security, AI, ML, or GitHub Copilot technical content is present. Copilot+ here refers to device branding, not developer tools or AI platforms; thus, AI or Copilot categories do not apply.",
+    "canonical_url": "https://www.youtube.com/watch?v=TLood2LUGtM",
+    "timestamp": "2025-11-19 09:06:45 +00:00"
   }
 ]

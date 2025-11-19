@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-19T08:41:16+00:00",
+  "Link": "https://www.youtube.com/watch?v=EeaDXQEhy_o",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Author": "Microsoft Events",
+  "FeedName": "Microsoft Events YouTube",
+  "ProcessedDate": "2025-11-19 09:04:10",
+  "Title": "Modernizing DNS/DHCP: Micetro across hybrid and cloud environments | ODSP1424",
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ],
+  "Description": "Application slowdowns, failed logins, and jitter often trace back to DNS. Yet DNS failures are among the hardest to detect. BlueCat’s Intelligent NetOps combines flow and packet analytics with DNS telemetry, giving NetOps and DDI teams a shared view of root causes. Gain insight into how integrated observability and assurance reduce MTTR, automate detection, and resolve DNS-driven outages before they impact users.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Scott Penney 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1424 | English (US) Pre-recorded | Intermediate (200) #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Need for centralized IP address management (IPAM) 00:02:54 - Introduction to Centralized and Secure API Gateway 00:03:35 - Third-Party Integrations via API Gateway (e.g., ServiceNow) 00:08:24 - Introduction to IP Address Management (IPAM) Interface 00:09:39 - Reviewing Active Directory Site Configuration for Wiesbaden 00:12:46 - Introducing Edge Solutions Advanced Resolver for Network Optimization"
+}

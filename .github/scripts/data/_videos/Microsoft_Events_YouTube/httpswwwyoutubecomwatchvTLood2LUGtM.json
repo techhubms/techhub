@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-19T08:22:51+00:00",
+  "Link": "https://www.youtube.com/watch?v=TLood2LUGtM",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Author": "Microsoft Events",
+  "FeedName": "Microsoft Events YouTube",
+  "ProcessedDate": "2025-11-19 09:04:10",
+  "Title": "Deploy ARM and Intel Copilot and PCs with one unified approach | ODSP1513",
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ],
+  "Description": "Enterprises face deployment challenges as ARM-based Copilot+ PCs enter corporate environments alongside traditional Intel devices. Managing mixed architectures often means separate tools, increasing complexity and risk. This demo shows unified deployment across Intel, AMD and ARM delivering identical builds. Watch Windows 11 deploy live to these platforms, maintaining security and compliance. Learn how OneDeploy's multi-architecture approach future-proofs your device deployment strategy.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Daniel Wyness 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1513 | English (US) Pre-recorded | Intermediate (200) #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Expansion of ARM into Laptops and PCs with Windows 11 00:01:20 - Windows 11 on ARM: Familiar Experience with New Architecture 00:02:21 - Limitations of Existing Deployment Solutions for ARM 00:04:49 - Definition and Installation of Native ARM Applications 00:06:09 - Installing multi-architecture build on both devices"
+}

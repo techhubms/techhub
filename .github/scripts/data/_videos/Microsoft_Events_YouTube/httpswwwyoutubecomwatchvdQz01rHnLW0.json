@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-19T08:05:37+00:00",
+  "Link": "https://www.youtube.com/watch?v=dQz01rHnLW0",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Author": "Microsoft Events",
+  "FeedName": "Microsoft Events YouTube",
+  "ProcessedDate": "2025-11-19 09:04:10",
+  "Title": "Building secure-by-design environments with Azure capabilities | ODSP1509",
+  "Tags": [
+    "MSIgnite",
+    "ProtectcloudAIplatformandapps"
+  ],
+  "Description": "Cloud providers deliver powerful security capabilities, yet most organizations struggle to fully leverage them to ensure their environment is secure-by-design. In this session, we’ll explore how to harness the Azure native security controls to accelerate a prevention-first model. Learn how Native brings order to preventive policies across cloud providers, allowing you to safely achieve a secure-by-design environment in minutes.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Gal Gideon Ordo 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1509 | English (US) Pre-recorded | Intermediate (200) #MSIgnite, #ProtectcloudAIplatformandapps\n\nChapters: 0:00 - Experience from AWS Security Hub and Customer Insights 00:01:25 - Defining Cloud Security Standards and Requirements 00:02:40 - Implementing Preventive Policies for Storage Accounts 00:05:41 - Defining a cloud security standard and environment guardrails 00:06:31 - Refining ambiguous and complex requirement statements 00:07:17 - Challenges of translating requirements into Azure policies 00:08:27 - How Native Translates and Simulates Security Intents 00:09:10 - Native Enables Security by Design Across Providers"
+}
