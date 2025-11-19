@@ -17456,5 +17456,41 @@
     "reason": "Succesfully added: Assigned AI category because the Migration Agent leverages AI-driven automation for migration and modernization processes (AI inclusion rule 1, 4). Azure is central to the solution (migration to Azure, Azure Copilot integration, Azure-specific governance), thus Azure category applies (Azure rule 1, 4, 5). DevOps is included because content covers workflow automation, landing zone setup, governance, reducing manual steps, and sequence management—core DevOps activities (DevOps inclusion rules 1, 5, 6, 7). GitHub Copilot is mentioned in one workflow (modernizing applications), but is not the core focus; instead, it references integration, not usage or guidance, so GitHub Copilot category is not assigned. ML is not included because the focus here is automation and migration, not data science or machine learning engineering. Content meets quality and length criteria and is technical/implementation-focused.",
     "collection": "community",
     "timestamp": "2025-11-19 13:20:33 +00:00"
+  },
+  {
+    "timestamp": "2025-11-19 14:05:36 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the session focuses on AI agents used for privacy risk assessment in partnership with Microsoft, in accordance with AI Category Inclusion Rule 1. Assigned Security category since privacy risk assessment and Microsoft Sentinel usage fall under Security Category Rule 1 and 5. Did not assign other categories as coding, DevOps, Azure, ML are not substantively covered in the description. Generic exclusion rules do not apply; content is predominantly technical and session-based, not promotional or business-only.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=1f7LZzGt79Q"
+  },
+  {
+    "timestamp": "2025-11-19 14:05:56 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the session details an AI-powered modernization effort, including AI-driven conversion of legacy COBOL screens (AI rule 1, AI rule 4). Assigned Azure category because the platform architecture and migration are centered on Microsoft's Azure cloud services (Azure rule 1, Azure rule 4). Did not assign Coding category as there is no substantive code-level detail or programming tutorial provided. Did not assign DevOps, ML, Security categories as the session does not focus on CI/CD, machine learning development, or security implementation. Generic exclusion rules do not apply: content is technical, session-based, English, not biographical, not sales-oriented, and centralized on Microsoft technology.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=8An3LobkPxI"
+  },
+  {
+    "timestamp": "2025-11-19 14:06:29 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because this content centers on migration to and implementation of Azure Local—a Microsoft hybrid cloud solution (Azure Rule 1). Azure Arc is also discussed as part of the technical modernization. There's insufficient evidence for DevOps, Coding, ML, AI, or Security focus since the session mainly addresses infrastructure migration and operational changes rather than specific development, AI, or security practices. Content derives from Microsoft Ignite and is not excluded by any generic exclusion rules.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=HcuOtjT6NCc"
+  },
+  {
+    "timestamp": "2025-11-19 14:06:49 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category according to AI rule 1: Content describes Microsoft AI services implemented in a Teams Contact Center—demonstrating specific use cases like IVR, contextual resource suggestions, agent assist, and Power Platform integration, all leveraging Microsoft AI technologies. Did not assign other categories because content focuses on AI applications and integrations, not on custom coding, DevOps, ML engineering, Azure-specific implementation, or security topics. Teams end-user/business features are excluded unless for development (here, the focus is on technical AI integration for customer service and agent empowerment, thus qualifies for 'AI').",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=IggA_sx3LzI"
+  },
+  {
+    "timestamp": "2025-11-19 14:07:09 +00:00",
+    "reason": "Succesfully added: Applied the Generic Exclusion Rules and found none triggered: the content is not biographical, sales-focused, negative, non-English, or business strategy without technical implementation. Content is centrally focused on Microsoft enterprise AI technologies presented at Microsoft Ignite (≥40% Microsoft tech threshold). The key topics—Agentic AI, Small Language Models, orchestration agents, audit automation, and Responsible AI—directly map to AI development and implementation using Microsoft platforms. Thus, only the 'AI' category applies; there's no evidence of hands-on coding, DevOps, Azure product specifics, ML, GitHub Copilot, or explicit security implementation in the provided session summary. Tags were chosen for depth and relevance. The explanation cites the session focus and mapped rules for clarity.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=K9lFKmpeitI"
+  },
+  {
+    "timestamp": "2025-11-19 14:08:05 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' because the content centers around Azure Databricks and its integration with SAP Business Data Cloud, satisfying Azure rule 1. Assigned 'ML' since machine learning topics, model predictions, and analytics engineering use cases are explicitly demonstrated and discussed (ML rules 1, 2, and 6). Assigned 'AI' because actionable insights, automated forecasting, and advanced analytics are enabled via Azure Databricks, which qualifies under AI rules 1, 4, and 5. Omitted other categories as there is no primary focus on coding, DevOps, Security, or GitHub Copilot. The session is technical, avoids business-only focus, and exceeds generic exclusion requirements.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=wsLgjpQZx6U"
   }
 ]

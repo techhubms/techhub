@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_videos",
+  "Tags": [
+    "MSIgnite",
+    "Secureyourdata"
+  ],
+  "Title": "Use AI agents to scale your privacy program | ODSP1518",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Description": "OneTrust is the leading AI-ready governance platform, with 14,000 customers globally. This video describes our work with Microsoft on AI agents for privacy risk assessment and includes both a product demo and an overview of the strategy.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Kevin Jones \\* Ojas Rege 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1518 | English (US) Pre-recorded | Advanced (300) #MSIgnite, #Secureyourdata\n\nChapters: 0:00 - Overview of OneTrust's focus on AI agents for privacy scalability 00:01:27 - Explanation of privacy as a data problem and role of Microsoft Sentinel 00:02:59 - Overview of privacy challenges: documents, regulations, and data 00:04:27 - Agent Processes Uploaded File 00:05:58 - Agent selects and initiates privacy risk assessment 00:07:08 - Pulls information from related inventories and documents",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Link": "https://www.youtube.com/watch?v=1f7LZzGt79Q",
+  "ProcessedDate": "2025-11-19 14:04:42",
+  "Author": "Microsoft Events",
+  "PubDate": "2025-11-19T13:34:12+00:00",
+  "FeedName": "Microsoft Events YouTube",
+  "EnhancedContent": null
+}

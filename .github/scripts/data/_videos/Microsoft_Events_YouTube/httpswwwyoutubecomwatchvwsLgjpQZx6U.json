@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_videos",
+  "Tags": [
+    "MSIgnite",
+    "Unifyyourdataplatform"
+  ],
+  "Title": "Unleashing SAP Databricks on Azure: Modernize analyze and innovate | BRK136",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Description": "SAP Databricks on Azure integrates Databricks Data Intelligence Platform with SAP Business Data Cloud, unifying SAP and external data for advanced analytics, AI, and ML. It enables building intelligent apps and actionable insights using trusted SAP and third-party business data. Available natively on Azure within SAP Business Data Cloud, it offers seamless access without data duplication via Delta Sharing. This session highlights automated forecasting, exploratory analysis, and BI use cases.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-AzureDatabricks\\_TYD 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Anavi Nahar \\* Shanku Niyogi 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK136 | English (US) | Unify your data platform, Azure Databricks, SAP on Azure Breakout | Intermediate (200) #MSIgnite, #Unifyyourdataplatform\n\nChapters: 0:00 - Introduction and Welcome by Anaveena Har from Azure Databricks 00:01:32 - Azure Databricks as a Microsoft First-Party Service 00:05:57 - Opportunity: Leveraging the 80% of Companies Using SAP 00:12:10 - Joint Goals of Microsoft and SAP Partnership 00:14:41 - Live Demo of SAP Business Data Cloud and Data Products 00:24:25 - Analyzing model predictions, feature importance, and residual diagnostics 00:24:40 - Benefits of agents for understanding and joining unfamiliar data sets in SAP Databricks 00:29:16 - Introduction to Delta Sharing for SAP and Azure Data Collaboration 00:33:13 - Demonstration: Power BI Integration with Azure Databricks",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Link": "https://www.youtube.com/watch?v=wsLgjpQZx6U",
+  "ProcessedDate": "2025-11-19 14:04:42",
+  "Author": "Microsoft Events",
+  "PubDate": "2025-11-19T14:03:01+00:00",
+  "FeedName": "Microsoft Events YouTube",
+  "EnhancedContent": null
+}

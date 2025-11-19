@@ -8925,5 +8925,29 @@
     "reason": "No categories found: Content excluded due to generic exclusion rules: this video session focuses on business strategy and maximizing partnership profitability, with topics such as funding opportunities, cross-sell/up-sell tactics, internal usage, and revenue hacks. The session is centered on business advice for Microsoft partners rather than technical implementation or engineering architecture. While it mentions Microsoft technologies and partner tools, there is no substantive coverage of development, coding, data engineering, security architecture, or other technical topics required to qualify for categories. This falls under 'Business Strategy and Executive Content' and 'Workplace and Business Focus' generic exclusion rules.",
     "collection": "videos",
     "timestamp": "2025-11-19 13:16:30 +00:00"
+  },
+  {
+    "timestamp": "2025-11-19 14:06:09 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule—this is a sales pitch and promotional content for Mintlify, focusing on how their platform helps manage AI-native documentation. The description directs users to Mintlify's resources and contact/sales page, and highlights a session from a conference rather than providing substantive technical details or Microsoft-specific implementation guidance. There is insufficient actionable technical content about Microsoft AI products, development tools, or actual integration techniques. Rule: Sales Pitch exclusion applies (Chapter 3).",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=GIp36be-Fb0"
+  },
+  {
+    "timestamp": "2025-11-19 14:07:22 +00:00",
+    "reason": "No categories found: Content excluded under generic exclusion rules. The video is primarily focused on global telephony solutions for Microsoft Teams and telephony operator partnerships (LoopUp) in international markets. It does not provide technical implementation details, development strategies, coding practices, DevOps, AI, ML, or security content. The focus is on enterprise communications modernization, deployment strategies, user adoption, vendor landscape, and end-user advantages rather than software development or technical architecture for Microsoft Teams. According to exclusion rules in Chapter 3, non-development Microsoft product content and business strategy/enterprise rollout topics are not assigned categories.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=NHJBZmuBk0s"
+  },
+  {
+    "timestamp": "2025-11-19 14:07:35 +00:00",
+    "reason": "No categories found: No categories assigned because the content primarily discusses Windows 365 platform improvements, feature updates, user productivity, and integration with general Microsoft ecosystem tools. The session focuses on platform releases, end-user experiences, and business productivity enhancements, rather than development, coding, DevOps, security architecture, AI model building, or technical implementation using Microsoft development tools. Windows 365 is an end-user/business productivity product unless content is specifically about development or technical architecture, which is not demonstrated in the provided description and session breakdown. Therefore, per Generic Exclusion Rules (Non-Development Microsoft Products, Business Productivity Tools), this content is excluded.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=OttyiuhZsTs"
+  },
+  {
+    "timestamp": "2025-11-19 14:07:47 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules – the video focuses on internal employee and executive communications at Microsoft, describing communication tools (Viva Engage), workplace culture alignment, and business adoption strategies. Although AI-powered features are mentioned, there is no technical implementation detail, coding, development, or practitioner-based focus according to Generic Exclusion Rules ('Workplace and Business Focus', 'Business Strategy and Executive Content', and 'Non-Development Microsoft Products'). The content is about organizational and business communication rather than technical usage or development of Microsoft technologies.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=PKW_tbbhPH8"
   }
 ]
