@@ -1,0 +1,17 @@
+{
+  "Link": "https://www.youtube.com/watch?v=dTJD9krRln8",
+  "Title": "Faster time-to-value for app modernization using NeuVantage AI | ODSP1432",
+  "EnhancedContent": null,
+  "PubDate": "2025-11-19T12:53:00+00:00",
+  "ProcessedDate": "2025-11-19 13:13:33",
+  "FeedName": "Microsoft Events YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Author": "Microsoft Events",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Description": "Modernizing enterprise applications often stalls in prolonged assessments, opaque dependencies, and unclear ROI. In this on‑demand Microsoft Ignite session, learn how Simform NeuVantage's AI capabilities compresses the path from discovery to production on Azure. We’ll show how AI‑driven portfolio analysis identifies modernization candidates, recommends the right path (rehost, replatform, refactor), and automates some of the key app modernization tasks using safer AI workflows.\n\nTo learn more, please check out these resources: \\* https://www.simform.com/accelerators/neuvantage/ 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Hiren Dhaduk \\* Matthew Wendel 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1432 | English (US) Pre-recorded | Intermediate (200) #MSIgnite, #Agenticbusinessapplications\n\nChapters: 0:00 - Initiating the New Vantage Assessment Creation 00:03:34 - Cost Savings and Azure Resource Breakdown 00:05:19 - Assessment of Current Infrastructure and Identifying Limitations 00:07:14 - Azure Services Recommendation Summary 00:08:28 - Downloadable Package with Artifacts and Deployment Scripts 00:09:36 - Comprehensive Modernization Capabilities Including Terraform Generation",
+  "Tags": [
+    "Agenticbusinessapplications",
+    "MSIgnite"
+  ],
+  "OutputDir": "_videos"
+}

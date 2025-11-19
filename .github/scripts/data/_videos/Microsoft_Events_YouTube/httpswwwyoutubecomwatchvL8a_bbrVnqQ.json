@@ -1,0 +1,17 @@
+{
+  "Link": "https://www.youtube.com/watch?v=L8a_bbrVnqQ",
+  "Title": "AI-based data discovery and threat detection with Veeam | ODSP1463",
+  "EnhancedContent": null,
+  "PubDate": "2025-11-19T12:44:52+00:00",
+  "ProcessedDate": "2025-11-19 13:13:33",
+  "FeedName": "Microsoft Events YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Author": "Microsoft Events",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Description": "Explore how Veeam Data Cloud for M365 goes far beyond backup, leveraging Azure and Azure AI to interact with your data. These new features offer high-throughput data discovery and Veeam's patent-pending advanced malware and ransomware detection. See a live demo of natural language queries, threat evaluation, and AI-driven management via MCP server. Learn how IT Admins, SOC Leads and CISOs can quickly identify threats and prioritize mitigation- empowering security teams to act faster and smarter.\n\nTo learn more, please check out these resources: \\* https://www.veeam.com/products/veeam-portfolio/data-intelligence.html?ad=menu-products-portfolio-data-resilience 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1463 | English (US) Pre-recorded | Advanced (300) #MSIgnite, #InnovatewithAzureAIappsandagents\n\nChapters: 0:00 - Focus on AI-based data discovery and threat detection 00:02:01 - Making search results actionable for data recovery 00:05:20 - Session Reference: Building Search Engine at Scale on Azure 00:08:54 - Analyzing Signals Like Entropy, File Extensions, and Blast Radius 00:10:36 - Threat Triaging and In-Review State Explanation 00:14:00 - How Model Context Protocol Enables Veeam-Powered Applications 00:16:38 - Enriching threat context using external security and web sources 00:18:01 - Creating a Teams channel for coordinated incident response 00:19:20 - Posting malware report into Teams for collaboration",
+  "Tags": [
+    "InnovatewithAzureAIappsandagents",
+    "MSIgnite"
+  ],
+  "OutputDir": "_videos"
+}

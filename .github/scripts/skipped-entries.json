@@ -8901,5 +8901,29 @@
     "timestamp": "2025-11-19 12:06:17 +00:00",
     "collection": "videos",
     "reason": "No categories found: No categories assigned. The content is an event/session summary for Microsoft Ignite focused on high-level business strategy and the concept of 'agentic enterprise'—how organizations use AI agents to improve workforce efficiency and productivity. There are no technical or implementation details provided about Microsoft AI products, specific Azure services, developer tools, coding, DevOps, ML, or security. The description centers on empowerment, productivity, and organizational outcomes, which falls under the generic exclusion rules for business strategy and executive content (Chapter 3), as well as non-development product focus. Also, the actual technical content is missing, and the video description does not specify technical implementation details, code, or actionable developer/infrastructure information."
+  },
+  {
+    "canonical_url": "https://dellenny.com/stop-guessing-your-guide-to-asking-copilot-questions-about-your-spreadsheets/",
+    "reason": "No categories found: The content centers on using Microsoft 365 Copilot (specifically for Excel) to simplify spreadsheet analysis and prompt engineering for business productivity scenarios. According to the workflow (Chapter 3 Generic Exclusion Rules and the special Copilot Product Distinction chapter), Microsoft 365 Copilot, Copilot for Microsoft 365, and Office Copilot are classified as business productivity tools, not developer tools or technical development platforms. Therefore, any content primarily about business productivity, document creation, and general office work must be excluded and assigned no categories. The content provides conversational and instructional guidance for end-users working with spreadsheets and does not cover development, coding, technical architecture, or developer-focused features with Microsoft technologies. As such, it is unambiguously excluded from all categories per the prompt rules.",
+    "collection": "posts",
+    "timestamp": "2025-11-19 13:15:22 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=8Y38WCctGb4",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The video is primarily focused on Microsoft Copilot in Power Platform, Microsoft 365, and Azure OpenAI, but the central focus is business productivity, automation, and general enterprise solutions. According to the workflow, Microsoft 365 Copilot, Copilot for Microsoft 365, and Power Platform Copilot are business productivity tools, and content about document creation, knowledge management, and business process automation is excluded (see Non-Development Microsoft Products rule and Copilot Product Distinction in Chapter 3 and 4). There is also no substantial developer-focused technical implementation, code development, or in-depth integration of Azure OpenAI or Power Platform that meets the actionable developer or technical content threshold. The video serves more as a high-level overview and demonstration of enterprise productivity solutions, rather than technical guidance for developers. Thus, no categories apply.",
+    "collection": "videos",
+    "timestamp": "2025-11-19 13:16:06 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=9LHWW4aqqag",
+    "reason": "No categories found: Content excluded by generic exclusion rule: The video description is a promotional overview of the O’Reilly learning platform's features and does not provide substantive technical details about Microsoft technologies, developer practices, or implementation. It primarily highlights access to content, certification prep, and collaboration with providers rather than technical tutorials or how-to guides for Microsoft development, AI, cloud, or related category subjects. There is no specific mention of developer-focused Microsoft technology or hands-on content—only general education features and platform capabilities.",
+    "collection": "videos",
+    "timestamp": "2025-11-19 13:16:18 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=ck3X9onXp1M",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: this video session focuses on business strategy and maximizing partnership profitability, with topics such as funding opportunities, cross-sell/up-sell tactics, internal usage, and revenue hacks. The session is centered on business advice for Microsoft partners rather than technical implementation or engineering architecture. While it mentions Microsoft technologies and partner tools, there is no substantive coverage of development, coding, data engineering, security architecture, or other technical topics required to qualify for categories. This falls under 'Business Strategy and Executive Content' and 'Workplace and Business Focus' generic exclusion rules.",
+    "collection": "videos",
+    "timestamp": "2025-11-19 13:16:30 +00:00"
   }
 ]

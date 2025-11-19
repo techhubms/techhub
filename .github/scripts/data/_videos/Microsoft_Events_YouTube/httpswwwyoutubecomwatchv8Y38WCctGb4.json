@@ -1,0 +1,17 @@
+{
+  "Link": "https://www.youtube.com/watch?v=8Y38WCctGb4",
+  "Title": "AI in action: Automating the enterprise with AI agents | ODSP1511",
+  "EnhancedContent": null,
+  "PubDate": "2025-11-19T13:09:22+00:00",
+  "ProcessedDate": "2025-11-19 13:13:33",
+  "FeedName": "Microsoft Events YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Author": "Microsoft Events",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Description": "Join Rackspace as we explore the \"Power of Three\", Microsoft Co-pilot in Power Platform, Microsoft 365, and Azure OpenAI. Through real-world use cases, discover the potential of agent-based solutions, using conversational AI assistants to revolutionize knowledge management, customer service, and business process automation that can integrate, retrieve, and act on data securely from diverse enterprise systems. See Rackspace Intelligent Technology Assistant (RITA) in action.\n\n𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1511 | English (US) Pre-recorded | Intermediate (200) #MSIgnite, #Copilotandagentsatwork\n\nChapters: 0:00 - Introduction to AI in Action Presentation 00:03:54 - Simplifying Routine Administrative Workflows 00:04:03 - Addressing ServiceNow Catalogue Complexity Through LLM Agents 00:05:04 - RITA delivers consistent user assistance across languages 00:07:55 - Introduction to FAIR Program for building custom AI assistants 00:08:01 - Three phases of FAIR approach: Ideate, Incubate, Industrialize",
+  "Tags": [
+    "Copilotandagentsatwork",
+    "MSIgnite"
+  ],
+  "OutputDir": "_videos"
+}
