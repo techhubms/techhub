@@ -1,0 +1,14 @@
+{
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Author": "JohnNaguib",
+  "FeedName": "Microsoft Tech Community",
+  "PubDate": "2025-11-19T18:00:24+00:00",
+  "ProcessedDate": "2025-11-19 18:06:11",
+  "Description": "When working with Microsoft Azure, one of the great advantages is the flexibility it offers for managing cloud resources. Whether you prefer clicking through a visual interface, typing commands into a terminal, or automating scripts, Azure has a tool that fits your style. The three most common ways to interact with Azure are:\n\n[https://dellenny.com/exploring-azure-portal-cli-and-powershell-which-one-should-you-use/](https://dellenny.com/exploring-azure-portal-cli-and-powershell-which-one-should-you-use/)",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/exploring-azure-portal-cli-and-powershell-which-one-should-you/m-p/4471449#M22336",
+  "Title": "Exploring Azure Portal, CLI, and PowerShell — Which One Should You Use?",
+  "Tags": [],
+  "EnhancedContent": "When working with Microsoft Azure, one of the great advantages is the flexibility it offers for managing cloud resources. Whether you prefer clicking through a visual interface, typing commands into a terminal, or automating scripts, Azure has a tool that fits your style. The three most common ways to interact with Azure are:\n\n[https://dellenny.com/exploring-azure-portal-cli-and-powershell-which-one-should-you-use/](https://dellenny.com/exploring-azure-portal-cli-and-powershell-which-one-should-you-use/)",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "OutputDir": "_community"
+}

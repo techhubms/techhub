@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-19T17:09:31+00:00",
+  "FeedName": "Microsoft Events YouTube",
+  "EnhancedContent": null,
+  "Description": "Step into the future of application innovation with Azure AI and autonomous agents. This session explores how intelligent systems can be designed to sense, decide, and act in ways that unlock new levels of adaptability, efficiency, and impact. From apps to agentic workflows, discover real-world strategies for building scalable AI-powered solutions.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Renu Nair \\* Bhargav Parnandi 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1401 | English (US) Pre-recorded | Foundational (100) #MSIgnite, #InnovatewithAzureAIappsandagents\n\nChapters: 0:00 - Role of Microsoft Technologies in Supporting Agentic AI 00:04:00 - Copilot Studio and Integration for Agent Prototyping 00:07:25 - Demo introduction for operational intelligence system 00:11:41 - AI-driven tools enhancing agent efficiency with summarization and recommendations 00:12:20 - Overview of Case 360 architecture on Microsoft Power Platform and Azure AI 00:16:08 - Supporting modules: User validation and Admin configuration 00:18:15 - Integration with Azure AI and autonomous agents for business impact",
+  "Title": "Innovation with AI & Azure Agents | ODSP1401",
+  "Author": "Microsoft Events",
+  "Link": "https://www.youtube.com/watch?v=MV8nhQ3pAqo",
+  "ProcessedDate": "2025-11-19 18:05:07",
+  "FeedLevelAuthor": "Microsoft Events",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Tags": [
+    "InnovatewithAzureAIappsandagents",
+    "MSIgnite"
+  ]
+}

@@ -9021,5 +9021,35 @@
     "canonical_url": "https://www.youtube.com/watch?v=QOt4SPB4y7c",
     "reason": "No categories found: Content excluded due to generic exclusion rule: The material focuses exclusively on event logistics, attendee planning, and networking at the Microsoft Ignite conference. There are no substantive technical topics, developer tools, or Microsoft product implementation details present. The session description, chapter breakdowns, and excerpt all center on maximizing event experience and networking rather than on technical architecture or development content. According to the workflow’s generic exclusion rules for business strategy, executive content, workplace focus, and non-technical conference guides, this content does not qualify for any categories.",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded because it focuses on the social, cultural, and emotional impact of gaming, as revealed in Xbox's 'Culture of Play Report.' The post contains survey findings about gaming's meaning, connection, and influence as a form of entertainment, rather than technical or development-focused content. There are no substantial references to Microsoft development technologies, programming, coding, DevOps, AI/ML, security practices, or related technical implementation. The mention of 'Gaming Copilot' is exploratory, not a developer tool context, and does not meet the inclusion criteria for the AI or GitHub Copilot categories. Microsoft technologies involved are exclusively end-user and business entertainment focused, which are specifically excluded per generic exclusion rules under non-development Microsoft products (Microsoft 365 Copilot, Bing Chat, Xbox as consumer offering, etc.).",
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2025/11/19/xbox-culture-of-play-report-gaming-survey/",
+    "timestamp": "2025-11-19 18:08:06 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The primary focus of this video is on personal lessons learned, community values, and general open source principles following the Log4Shell crisis, rather than technical implementation or Microsoft technologies. While it discusses open source development, it does not provide substantive details on Microsoft platforms, products, or developer tools as required by the category inclusion rules. The content centers on calls for kindness, community, and continuous learning, which aligns with business culture and personal reflection exclusions defined in Chapter 3.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/HdKBtgZhaYk",
+    "timestamp": "2025-11-19 18:08:34 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this is a help-seeking post without substantive technical answers or solutions provided (Question-Only Content exclusion). The main body consists of a user asking if a specific hardware setup is possible with Azure Virtual Desktop, but does not contain technical detail, concrete solution steps, or implementation guidance. Per Chapter 3, question-only content is excluded even if it discusses Microsoft technologies.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/can-i-connect-a-dell-wyse-3040-thin-client-to-an-azure-virtual/m-p/4471377#M22335",
+    "timestamp": "2025-11-19 18:10:42 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/exploring-azure-portal-cli-and-powershell-which-one-should-you/m-p/4471449#M22336",
+    "timestamp": "2025-11-19 18:10:42 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/optimizing-costs-in-azure-practical-tips-for-beginners/m-p/4471450#M22337",
+    "timestamp": "2025-11-19 18:10:42 +00:00"
   }
 ]

@@ -17660,5 +17660,65 @@
     "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories/",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the content is about GitHub Copilot's new agentic AI features (AI rule 2, GitHub Copilot rule 1). Assigned 'Coding' because the article provides detailed, actionable technical guidance for code-based workflows and writing agent personas/scripts (Coding rules 4 and 5). Did not assign DevOps because, while there is mention of workflow, the primary focus is agent definitions and development practices and not broader DevOps process or automation. Other categories like Azure, ML, and Security are referenced in agent examples but are not central or detailed enough for inclusion.",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Included AI category because the post is about developing, deploying, and publishing AI agents using Microsoft Foundry and the Azure Developer CLI AI agent extension (AI rules 1, 4, 5). Assigned Azure because Azure services, provisioning, and deployment are central throughout the workflow (Azure rules 1, 4). Coding is included due to code scaffolding, use of templates, agent definitions, and integration with multiple programming languages (.NET, Python, Java, JavaScript, TypeScript, Coding rules 1, 2, 3, 4). DevOps is relevant since the CLI extension automates provisioning, deployment, container management, CI/CD, and infrastructure as code practices (DevOps rules 1, 2, 5, 6, 9). Security category was considered, but while secure configuration and managed identities are mentioned, the main focus is not security architecture or advanced security use, so Security was not included.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-foundry-agent-extension/",
+    "timestamp": "2025-11-19 18:06:43 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because Cosmos DB and Microsoft Fabric are central Azure services (Azure rule 1). ML category included due to coverage of machine learning workloads, vector indexing, anomaly detection, and recommendation systems (ML rules 1, 2, 6, 9). AI category assigned because article discusses AI-optimized capabilities (DiskANN vector indexing, hybrid search, real-time AI insights) and direct support for AI-ready methods (AI rule 1, 4, 5). Business analytics features relate to technical development and data workflows, not end-user productivity, so generic exclusion rules do not apply.",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-ga-of-cosmos-db-in-microsoft-fabric-and-cosmos-db-mirroring/",
+    "timestamp": "2025-11-19 18:07:09 +00:00"
+  },
+  {
+    "reason": "Succesfully added: The content focuses on Microsoft Fabric technical features (Mirroring, Copy Job, OneLake, Data Factory) supporting SAP data integration, analytics, and AI. Assigned 'Azure' due to central use of Microsoft Fabric (Azure-based service), 'ML' for data engineering, analytics, and enterprise-scale data integration, and 'AI' as mirrored and unified SAP data is specifically described as AI-ready and used for enabling intelligent automation. Did not assign 'Coding' since the content is at the platform/service level rather than code-level guidance. 'DevOps' and 'Security' are not applicable; there is no coverage of deployment, CI/CD, or security architectures. All category and tag choices align with Chapter 4 rules for Azure, ML, and AI content involving Microsoft platforms and enterprise data integration.",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-sap-connectivity-with-mirroring-and-copy-job-in-microsoft-fabric/",
+    "timestamp": "2025-11-19 18:07:32 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Included the AI category because the content is centered on Microsoft’s enterprise AI lifecycle, agent development, Copilot Studio, Foundry IQ, and Fabric IQ, all of which are covered by the AI inclusion rules. Included Security because Microsoft Agent 365 specifically enables security and governance of AI agents, integrating Defender, Entra, Purview, and Foundry Control Plane (Security category rule 1 and 2). Did NOT assign 'GitHub Copilot' since the content strictly focuses on Microsoft Copilot Studio, Work IQ, and Microsoft 365 Copilot (which is business productivity and is typically excluded unless developer focus is present). Did not assign Coding, Azure, DevOps, or ML since there is no technical implementation detail on coding, Azure services, DevOps workflows, or ML engineering. Tags extracted based on major technologies, products, and methodologies mentioned in the content.",
+    "collection": "news",
+    "canonical_url": "https://blogs.microsoft.com/blog/2025/11/18/from-idea-to-deployment-the-complete-lifecycle-of-ai-on-display-at-ignite-2025/",
+    "timestamp": "2025-11-19 18:07:53 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the session content revolves around Brillio's ADAM platform for enterprise AI, focusing on agentic solutions and operational management, matching AI inclusion rules (Chapter 4: AI rule 1 and 4). Generic exclusion rules do not apply: this is not biographical, help-seeking, promotional, negative, or non-English content, nor is it focused on business strategy without technical depth. Although the platform is tech-agnostic, the session is part of Microsoft Ignite and describes integration and solution patterns pertinent to Microsoft-centric AI implementations.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=3Ui1Ol9lXmk",
+    "timestamp": "2025-11-19 18:08:56 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category based on the focus on Azure AI, autonomous agents, and Copilot Studio (AI Rule 1 and 2). Assigned Azure category because session centers on building agentic applications and operational workflows specifically with Azure AI, Power Platform, and associated services (Azure Rule 1 and 4). The content is not about business productivity Copilot, but technical AI platform tools and development workflows. Coding, DevOps, ML, Security categories do not apply as the session is not focused on coding, deployment, data science, or security practices.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=MV8nhQ3pAqo",
+    "timestamp": "2025-11-19 18:09:12 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category because the session is focused on technical implementation of DNS as part of a Zero Trust security strategy, including device-level enforcement for Windows servers and endpoints (Security rules 1, 2, 4, and 9). The session is from a Microsoft technology event, contains detailed technical chapters, and describes operational DNS security architecture within Microsoft environments. No other categories qualify, as content is not about AI platforms, coding practices, DevOps, Azure services directly, or custom ML/data science workloads.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=o847EwaNhgQ",
+    "timestamp": "2025-11-19 18:09:30 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Included 'Azure' because the entire discussion centers on Azure services (Azure SQL Database, Storage Account, Key Vault) and Azure networking features (NSP). 'Security' is included due to the focus on Network Security Perimeter, firewall rules, and perimeter-based resource access control. No other generic exclusion rule applies—content has sufficient technical depth and length, is in English, and is focused on practical implementation and troubleshooting, not business strategy or career advice.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/what-would-be-the-expected-behavior-for-an-nsp/m-p/4471260#M748",
+    "timestamp": "2025-11-19 18:09:51 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the entire content is centered on Azure services, in particular the integration of Pure Storage Cloud with Azure VMs and the Azure VMware Solution (Azure rule 1, 4, and 5). The post remains technical, focusing on storage provisioning, management features, cloud migration, and partner integration. It does not discuss AI, ML, Coding, DevOps, Security, or GitHub Copilot topics, as the content does not touch on those areas directly. No generic exclusions are triggered: the text is sufficiently technical, well above community length requirement, and entirely in English.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/pure-storage-cloud-azure-native-evolves-at-microsoft-ignite/ba-p/4470118",
+    "timestamp": "2025-11-19 18:10:11 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Added the 'Azure' category because the content directly focuses on Azure cloud services, specifically evaluating the support plans offered to technical teams and organizations (Azure inclusion rule 1 and 5). No other category applies as the guide does not include coding, DevOps, AI, ML, Security, or GitHub Copilot content. The focus is on Azure service plan comparison, suitable for technical audiences managing Azure workloads.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-support-plans-compared-choosing-the-right-one-for-your/m-p/4471451#M22338",
+    "timestamp": "2025-11-19 18:10:30 +00:00"
   }
 ]
