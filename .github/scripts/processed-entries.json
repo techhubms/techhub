@@ -17720,5 +17720,23 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-support-plans-compared-choosing-the-right-one-for-your/m-p/4471451#M22338",
     "timestamp": "2025-11-19 18:10:30 +00:00"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/github-copilot-testing-for-dotnet/",
+    "timestamp": "2025-11-19 19:05:22 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category due to the focus on AI-powered unit test generation with GitHub Copilot (AI rule 2, 5). Assigned GitHub Copilot category because the entire article is about GitHub Copilot's new testing extension (GitHub Copilot rules 1-4). Assigned Coding category because the workflow targets C#/.NET development, deals with writing and improving code through automated testing (Coding rules 1, 4, 5). No DevOps, Azure, ML, or Security categories assigned because the content centers solely on source code unit test creation/workflow rather than CI/CD, cloud, data science, or security implementation."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-data-warehouse-goes-all-in-on-enterprises-at-ignite/",
+    "timestamp": "2025-11-19 19:05:50 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category based on the centrality of Microsoft Fabric Data Warehouse, which is part of Microsoft's cloud (Azure) analytics ecosystem (Azure rule 1). Assigned ML category due to multiple features supporting advanced analytics, ETL pipeline management, large-scale data engineering, and BI reporting, which are core aspects of modern data science/data warehouse platforms (ML rules 1, 2, 4, 5, 6). Did not assign AI, Coding, DevOps, Security, or GitHub Copilot categories as the article focuses on platform capabilities for analytics/data management rather than AI, coding, or DevOps workflows. All generic exclusions were evaluated and do not apply."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/gpt-5-freeform-tool-calling-in-typescript-on-azure-ai-foundry/ba-p/4469682",
+    "timestamp": "2025-11-19 19:06:38 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because the content details the use of GPT-5, Azure AI Foundry, and agentic tool calling workflows (AI rules 1, 4, 6). Assigned Azure category because Azure AI Foundry and cloud-based workflow deployment are central (Azure rules 1, 4). ML category is included because the described analytic workflow involves data science, aggregation, and visualization tasks (ML rule 1, 2, 4). Coding is also included due to substantial code (SQL, JavaScript) generation, execution, and developer automation (Coding rules 1, 3, 4, 5). No exclusion criteria are triggered, and Microsoft technology is central (>40%) throughout the workflow."
   }
 ]
