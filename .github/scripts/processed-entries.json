@@ -17306,5 +17306,17 @@
     "reason": "Succesfully added: Category 'Security' was assigned because the session exclusively discusses data security, compliance, and policy enforcement, focusing on Microsoft Purview and Netskope integrations (Security rules 1, 4, 7, and 9). No other categories apply because the content is not developer- or coding-focused, does not directly discuss Azure, AI technologies, ML, DevOps, or GitHub Copilot (content is about unified data security architecture and regulatory compliance rather than hands-on development or deployment). All decisions are based on provided session description, agenda, and covered technologies.",
     "canonical_url": "https://www.youtube.com/watch?v=ogDdTHhDZSE",
     "timestamp": "2025-11-19 09:06:32 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the article centers on AI functions within Microsoft Fabric, detailing usage and configuration of multiple AI-powered features (AI rule 1, 3, 4, 5). Assigned Azure category because Microsoft Fabric is a central Azure-based service and the article discusses integration with Azure OpenAI and AI Foundry (Azure rule 1, 3, 4). Assigned ML category because the functions enable data science and ML workflows (ML rule 1, 2, 9), including embeddings, sentiment analysis, and support for custom models/advanced analytics. Did not assign Coding or DevOps because there is no direct code-level implementation or CI/CD DevOps focus. Security is not discussed. All generic exclusion rules were reviewed (this is technical, English-language, not business/end-user, promotional, or biographical).",
+    "timestamp": "2025-11-19 10:04:34 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/29826/"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category because the feature is part of Azure Monitor Logs (Azure rule 1), with log analytics and monitoring as central Azure services. Assigned Security category because the post discusses new granular role-based access controls, data segregation, row-level filtering, and Attribute-Based Access Control (Security rules 1, 2, 3, and 7). No other categories qualified, as there is no explicit coding, DevOps, AI, ML, or GitHub Copilot content. Content is technical, not promotional, and contains actionable implementation details.",
+    "timestamp": "2025-11-19 10:05:16 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/general-availability-granular-rbac-in-azure-monitor-logs/ba-p/4471299"
   }
 ]
