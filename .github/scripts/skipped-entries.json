@@ -8889,5 +8889,17 @@
     "reason": "No categories found: No categories assigned. The content focuses on device deployment strategies for mixed-architecture Windows 11 PCs (ARM, Intel, AMD) in enterprise environments. It discusses unified deployment approaches, security, compliance, and OneDeploy tool usage for hardware management. However, per generic exclusion rules (Non-Development Microsoft Products, Format and Scope), device deployment, imaging, and management are not considered core development or DevOps activities in the context of this taxonomy; they pertain to IT administration, not software/app development, DevOps CI/CD, coding, or direct security implementation for development pipelines. No substantial Azure, Coding, DevOps, Security, AI, ML, or GitHub Copilot technical content is present. Copilot+ here refers to device branding, not developer tools or AI platforms; thus, AI or Copilot categories do not apply.",
     "canonical_url": "https://www.youtube.com/watch?v=TLood2LUGtM",
     "timestamp": "2025-11-19 09:06:45 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=aXYQGsk5BxY",
+    "timestamp": "2025-11-19 12:05:45 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because the content, based on the title and description, is about 'Autonomous Endpoint Management' (AEM) in ITOps with a focus on automation, patching, and IT operations. There is no explicit mention or detailed discussion of Microsoft technologies, products, or services—such as Azure, Microsoft Entra ID, Defender, Azure DevOps, GitHub, or Microsoft-specific AI/ML tooling. The session is hosted at Microsoft Ignite and presented by an Automox executive, but the content itself revolves around endpoint management strategy, manual patching, and IT challenges at a conceptual level. There is no evidence of hands-on technical implementation, DevOps procedures, security tooling, or developer-facing content using Microsoft technology. According to the multi-platform content threshold, unless Microsoft technology is at least 40% of the solution or referenced centrally—and this is not clear or substantiated from the supplied description—all categories are excluded."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=CoSrlF74VF4",
+    "timestamp": "2025-11-19 12:06:17 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content is an event/session summary for Microsoft Ignite focused on high-level business strategy and the concept of 'agentic enterprise'—how organizations use AI agents to improve workforce efficiency and productivity. There are no technical or implementation details provided about Microsoft AI products, specific Azure services, developer tools, coding, DevOps, ML, or security. The description centers on empowerment, productivity, and organizational outcomes, which falls under the generic exclusion rules for business strategy and executive content (Chapter 3), as well as non-development product focus. Also, the actual technical content is missing, and the video description does not specify technical implementation details, code, or actionable developer/infrastructure information."
   }
 ]

@@ -17324,5 +17324,41 @@
     "reason": "Succesfully added: Content discusses integration of MongoDB Atlas with Azure, including AI components (AI Foundry) and security practices (Microsoft Sentinel), satisfying rules for AI (AI Foundry integration), Azure (central deployment/platform), and Security (Sentinel/log ingestion). The developer journey and technology integration are substantial and central, meeting multi-platform content threshold. Coding and DevOps are not assigned as specific coding/deployment process details are not sufficiently covered. All category assignments are based on explicit session topics and integrations.",
     "timestamp": "2025-11-19 11:05:11 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=tCjQvi6qkHA"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=0PVcB1u_ZV4",
+    "timestamp": "2025-11-19 12:05:31 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Azure category because the session is entirely about Azure Managed Disk storage management (Azure inclusion rule 1 and 2). The talk covers operational best practices and optimization strategies specific to Azure, with actionable technical detail. No AI, Coding, DevOps, ML, Security, or GitHub Copilot topics are present. Content is not excluded by any generic exclusion rule—the event and session are technical, not sales, business strategy, or personal in focus."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=Benn2rBdZwA",
+    "timestamp": "2025-11-19 12:06:03 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content focuses on KPMG Workbench as an AI-driven enterprise platform built with Microsoft technologies (AI rule 1). Discussion of Microsoft Foundry and management of AI agents is central, with no substantial content justifying inclusion of other categories such as Coding, Azure, or DevOps. The session is about leveraging Microsoft-backed AI at scale rather than development or operational specifics."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=ItS-sOm57qg",
+    "timestamp": "2025-11-19 12:06:41 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned Azure category as the content centrally addresses security and authentication within Azure environments (Azure rule 1; substantial Azure content is present including Azure infrastructure, Azure DevOps, Azure authentication). Security category is included since the main focus is on secret and certificate security, privileged access, and applying secure practices (Security rules 1, 2, 5, 9). DevOps is included because integrating secrets with Azure DevOps identities and automation is highlighted (DevOps rules 1, 5, 6). AI, GitHub Copilot, Coding, and ML categories do not apply because there is no content about code development, AI, or ML capabilities. Input comes from an English-language technical session, with substantial technical implementation guidance, so no generic exclusion rules apply."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=LPbKU_rs-P0",
+    "timestamp": "2025-11-19 12:07:01 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Azure category because the entire session centers on running Oracle Database directly within Microsoft Azure, modernizing with Azure services, and leveraging Azure's reliability and infrastructure (Azure category rule 1). Assigned the AI category based on references to 'native Azure AI services', 'Autonomous AI Database', 'AI-driven insights', and introduction of the 'Autonomous AI Lakehouse' (AI category rules 1 and 5). Did not assign ML, Coding, DevOps, Security, or GitHub Copilot because there is no focus on development frameworks, DevOps, developer tools, security configuration, or hands-on code/data science/ML model implementation—the content focuses on cloud modernization and AI-enabled data experiences within Azure."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=OXao8OrGXb4",
+    "timestamp": "2025-11-19 12:07:23 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned Security category because the content focuses on authentication technologies (passkeys, MFA, phishing-resistant security, and credential management) with Microsoft Entra ID and HID, in direct alignment with Security inclusion rules 1, 2, and 3. Assigned Azure category due to the content’s emphasis on leveraging Azure and Entra investments as the foundational context (Azure inclusion rules 1 and 4). The description and session details center around technical security implementation, not business management or culture, so generic exclusions do not apply. No AI, Coding, DevOps, ML, or GitHub Copilot categories, as those topics are not present based on the provided description."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=UZsjChTrC3c",
+    "timestamp": "2025-11-19 12:07:42 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is a core Azure analytics platform and migration projects rely on Azure fundamentals (Azure rule 1, 4, 5). ML category is included as the session addresses data analytics architecture, data quality frameworks, and discusses preparing analytics platforms for future needs (ML rules 1, 2, 3, 4, 5). The use of generative AI to optimize migration planning, execution, and analytics justifies the AI category (AI rules 1 and 5). Copilot, DevOps, Security, and Coding do not apply as these areas are not referenced. The content is not excluded by any generic exclusion rules, as it is in English, technical, and focused on migration and analytics, not business productivity or management. All decisions reference chapter timestamps and summary notes in the description."
   }
 ]

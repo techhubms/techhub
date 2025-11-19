@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ],
+  "PubDate": "2025-11-19T11:53:10+00:00",
+  "Description": "This session explores Microsoft Fabric migrations with a proven approach, key stages, and real-world outcomes. We’ll highlight strategies, best practices, and common pitfalls while showing how generative AI streamlines planning, execution, and optimization to accelerate migration success.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Varun Chawla 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1421 | English (US) Pre-recorded | Intermediate (200) #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Case Study: Retail Customer Data Challenges 00:06:06 - Pilot Implementation and Fabric Evaluation 00:07:19 - Design Options: Medallion vs Data Mesh Approaches 00:11:16 - Ensuring Data Quality with Custom Data Quality Framework 00:14:22 - Preparing Data Analytics Platform for the Future 00:16:11 - Overview of architecture supporting organizational transformation 00:20:09 - Conclusion and contact information for partnership",
+  "Author": "Microsoft Events",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "Link": "https://www.youtube.com/watch?v=UZsjChTrC3c",
+  "ProcessedDate": "2025-11-19 12:04:35",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "FeedName": "Microsoft Events YouTube",
+  "Title": "Key learnings and best practices with Microsoft Fabric migrations | ODSP1421"
+}
