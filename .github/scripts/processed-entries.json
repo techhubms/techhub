@@ -17258,5 +17258,11 @@
     "timestamp": "2025-11-19 03:24:21 +00:00",
     "reason": "Succesfully added: Assigned AI category because NOA relies on multiple specialized AI agents and agent orchestration (AI rules 1, 4, and 6). Assigned Azure category due to deep integration with Azure services, Azure Agent Framework, and Azure-hosted components (Azure rules 1, 4, 5). Assigned ML category because the framework includes machine learning-driven analytics, data unification (Fabric), and agent learning capabilities (ML rules 1, 2, 3, 5). Security is assigned due to detailed governance, access controls, logging, compliance, and identity/security controls described for agent actions and orchestration (Security rules 1, 4, 7, 9). Did NOT assign DevOps because, while there is automation and orchestration, DevOps tools or practices were not the primary focus. Did NOT assign GitHub Copilot because the Copilot integration discussed is specific to Teams/Outlook (business productivity interface for NOA), not GitHub developer tools. The Microsoft 365 Copilot mention is about integration into communication channels (Teams, Outlook), which per rules is excluded from categorization.",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-19 04:05:55 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category because the architecture centers on Azure networking, private endpoints, and hub–spoke landing zones (Azure inclusion rules 1, 2, 5). Assigned ML category since Microsoft Fabric's role focuses on analytics and data science workloads (ML inclusion rules 1, 2, 3, 4) via Lakehouse, Warehouse, and Spark, all critical for data analytics pipelines. Assigned Security due to the emphasis on private network boundaries, DNS controls, firewalls, managed identities, and Zero-Trust patterns (Security inclusion rules 1, 2, 4, 7, 9). Did not assign AI, Coding, DevOps, or GitHub Copilot categories because content centers on infrastructure, governance, and data pipeline architecture rather than AI service usage, programming, or DevOps processes.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-private-connectivity-for-microsoft-fabric-a-practical/ba-p/4471190"
   }
 ]
