@@ -17798,5 +17798,29 @@
     "reason": "Succesfully added: Categories assigned as follows: 'AI' because the post is centered on AI-driven methods, embedding models, and large language models in developer tools (AI rule 1, 3, and 6). 'GitHub Copilot' because the entire article is about GitHub Copilot Chat features, specifically in VS Code (GitHub Copilot rules 1, 2, 3). 'Coding' because it addresses developer workflows in VS Code and tool use within coding environments (Coding rules 4, 5). No 'DevOps', 'Azure', 'ML', or 'Security' assigned: no DevOps/team/collaboration or CI/CD focus; Azure only mentioned as an example (not central or >40% of content); ML only as infrastructure for embeddings/selection, not data science or model development from scratch; Security not covered. No generic exclusion rules apply, and content is highly technical, English, and focused on developer tools.",
     "collection": "news",
     "timestamp": "2025-11-19 21:05:55 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/mirroring-for-sql-server-in-microsoft-fabric-generally-available/",
+    "timestamp": "2025-11-19 22:05:16 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because content discusses Microsoft Fabric, a cloud-based analytics/data platform closely integrated with Azure. Assigned ML category because the mirror capability is directly described as enabling advanced analytics, AI, and data science workflows (ML rule 1, 2, 4). Not assigned AI category, as the content focuses on enabling AI/data science through data platform features, not direct AI service usage. Excluded Coding category because there is no programming and excluded DevOps and Security since there is no mention of infrastructure automation, deployment patterns, or security implementation. Tags include technologies, versions, features, and architecture relevant to the content."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blogs.microsoft.com/blog/2025/11/12/infinite-scale-the-architecture-behind-the-azure-ai-superfactory/",
+    "timestamp": "2025-11-19 22:05:43 +00:00",
+    "reason": "Succesfully added: The content is a Microsoft news post focused on the architecture and technical innovations of the Fairwater Azure AI datacenters. AI and Azure categories were assigned because the post explores Azure AI infrastructure, advanced GPU networking, sustainable cooling and power solutions, and their direct application to large-scale AI workloads (AI inclusion rules 1, 4, and 5; Azure inclusion rules 1, 4, and 5). No Coding, ML, DevOps, Security, or GitHub Copilot categories apply, as the article does not address developer frameworks, code, machine learning pipeline engineering, operational DevOps topics, or security architectures directly. The content is entirely technical and avoids business strategy, biographical, negative, or non-English exclusion triggers."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-ga-of-the-premium-v2-tier-of/ba-p/4471499",
+    "timestamp": "2025-11-19 22:06:39 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the core content is about a major Azure service (Azure API Management) and its new Premium v2 tier features (Azure rule 1, 4, and 5). Assigned Security category because significant focus is given to networking security enhancements, private endpoints, VNet injection/integration, TLS authentication, and custom CA certificates (Security rules 1, 2, 3, 4, 7, and 9). Content does not qualify for other categories: no coding specifics, DevOps process, or AI/ML topics. Generic exclusion rules do not apply; content is technical, English, and focused on implementation details."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/durable-task-extension-for-microsoft-agent-framework-%E3%81%A7/ba-p/4470826",
+    "timestamp": "2025-11-19 22:07:07 +00:00",
+    "reason": "Succesfully added: このコンテンツは、MicrosoftのAI開発プラットフォーム（Agent Framework）、Azure Durable Functionsの連携によるAIエージェント開発について詳細に解説しています。AI、Azure、Codingの各カテゴリに関連する技術紹介・サンプルコード・設計パターン・アーキテクチャが含まれており、具体的なC#およびPython実装例も掲載されています。Azure Durable Functionsの拡張によりAIエージェントの耐久実行・分散・可観測性・デバッグ性などが実現されている点から、「AI」「Azure」「Coding」にカテゴリーを付与しました。ML/Machine Learning要素はコードや設計説明の中心ではないため含めていません。DevOps要素は主にCI/CDやプラクティスではなくアプリ設計・クラウドインフラの自動化なので今回は割愛しています。"
   }
 ]

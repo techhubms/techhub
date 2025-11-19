@@ -9051,5 +9051,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/optimizing-costs-in-azure-practical-tips-for-beginners/m-p/4471450#M22337",
     "timestamp": "2025-11-19 18:10:42 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=KyBemc0hEKo",
+    "timestamp": "2025-11-19 22:06:16 +00:00",
+    "reason": "No categories found: Content is excluded due to generic exclusion rules. The provided description is a high-level event announcement about Microsoft Ignite keynote highlights, mainly focusing on product launches and strategic AI direction (business and executive summary) without any technical implementation details, actionable insights, or developer content. It specifically highlights new offerings like Work IQ, Agent 365, and Agent Factory in a forward-looking, non-technical context. There is no substantive depth on technical architecture, coding, or Microsoft platform usage that meets inclusion criteria."
   }
 ]
