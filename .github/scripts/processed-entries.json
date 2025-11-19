@@ -17270,5 +17270,11 @@
     "timestamp": "2025-11-19 06:05:25 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=Kd3KgJx0U1M"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the session covers Azure-related technologies (Azure Blob Storage, cloud workspace management) and is central to the solution (Azure category rule 1 and 4). Assigned Security category since there is a significant focus on Zero Trust architecture and secure hybrid management with Entra ID, which is Microsoft's identity and access management solution (Security rule 1 and 9). AI, GitHub Copilot, Coding, DevOps, and ML categories were not assigned because the session does not focus on those topics. Content meets quality standards, is primarily technical, and is presented in English. No generic exclusion rules apply.",
+    "canonical_url": "https://www.youtube.com/watch?v=p-0ikIK3-l8",
+    "timestamp": "2025-11-19 08:05:07 +00:00",
+    "collection": "videos"
   }
 ]

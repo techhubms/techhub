@@ -8877,5 +8877,11 @@
     "timestamp": "2025-11-18 23:05:25 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/remoteapps-opened-in-rdweb-requiring-users-to-hit-quot-show/m-p/4471081#M13946",
     "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: All categories are excluded due to generic exclusion rules and specific product categorization requirements. The content is primarily focused on Microsoft 365 migration and governance, which is classified as a non-development Microsoft product (see Non-Development Microsoft Products exclusion). Additionally, while Copilot is mentioned, the context is Copilot for Microsoft 365 in a business productivity and governance scenario (see Chapter 2: Copilot Product Distinction and Microsoft 365 Copilot exclusion). There is no technical implementation or developer tooling focus; the session is about migration tactics, administration, compliance, and governance within Microsoft 365 and associated document/tenant management, which are not development aspects covered by the category inclusion rules.",
+    "canonical_url": "https://www.youtube.com/watch?v=Xjq0NSBtsjE",
+    "timestamp": "2025-11-19 08:05:20 +00:00",
+    "collection": "videos"
   }
 ]

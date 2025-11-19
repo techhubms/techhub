@@ -1,0 +1,17 @@
+{
+  "Author": "Microsoft Events",
+  "Description": "As organizations shift to Entra ID–joined or hybrid environments, traditional Group Policy Preferences no longer apply. Tasks like drive mappings, printers, shortcuts, and registry settings often require complex scripting or limited Intune workarounds, creating gaps in consistency and user experience. Learn how to modernize user environment management and deliver scalable, policy-driven control across cloud workspaces.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Jason Smith 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1466 | English (US) Pre-recorded #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Session Introduction and Overview at Microsoft Ignite 2025 00:03:49 - Adoption Growth of Entra ID and Industry Transition to Zero Trust Hybrid Management 00:14:16 - Overview of ProfileUnity Interface and Features 00:20:15 - Overview of Azure Blob Storage and FlexApp versions 00:22:25 - Generating and reviewing ProfileUnity configuration reports 00:25:19 - ProfileUnity vs Intune: application and policy delivery comparison 00:28:36 - Managing and Synchronizing User Data and Settings 00:32:19 - On-Demand and Offline Capabilities of FlexApp 00:35:55 - Conclusion, Resources, and Community Engagement",
+  "PubDate": "2025-11-19T07:57:38+00:00",
+  "FeedLevelAuthor": "Microsoft Events",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "EnhancedContent": null,
+  "Title": "Entra ID environments: Replacing GPP with ProfileUnity | ODSP1466",
+  "FeedName": "Microsoft Events YouTube",
+  "Link": "https://www.youtube.com/watch?v=p-0ikIK3-l8",
+  "ProcessedDate": "2025-11-19 08:04:13",
+  "OutputDir": "_videos",
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ]
+}
