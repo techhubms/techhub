@@ -17738,5 +17738,47 @@
     "timestamp": "2025-11-19 19:06:38 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Assigned AI category because the content details the use of GPT-5, Azure AI Foundry, and agentic tool calling workflows (AI rules 1, 4, 6). Assigned Azure category because Azure AI Foundry and cloud-based workflow deployment are central (Azure rules 1, 4). ML category is included because the described analytic workflow involves data science, aggregation, and visualization tasks (ML rule 1, 2, 4). Coding is also included due to substantial code (SQL, JavaScript) generation, execution, and developer automation (Coding rules 1, 3, 4, 5). No exclusion criteria are triggered, and Microsoft technology is central (>40%) throughout the workflow."
+  },
+  {
+    "timestamp": "2025-11-19 20:05:41 +00:00",
+    "reason": "Succesfully added: Assigned AI category based on the introduction of Copilot for Data Factory—a developer-oriented, AI-powered expression builder (AI rule 1 & 4). Azure category applies since Data Factory and Fabric are core Azure services and the orchestration, monitoring, and automation features operate within Microsoft's cloud ecosystem (Azure rule 1 & 4). ML category included because pipeline orchestration, Lakehouse maintenance, and Parquet/Delta optimizations are integral to data engineering and analytics workflows, closely aligned with ML/data science platform usage (ML rule 1, 2, and 5). The content is technical, focused on Microsoft technologies, and meets all quality standards.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/igniting-your-pipelines-new-data-factory-features-announced-at-ignite/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-19 20:06:00 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the content focuses on Microsoft Fabric, a core Azure data analytics platform, and details end-to-end integration with Microsoft services (Azure rule 1 and 5). Assigned ML category due to coverage of geospatial data engineering, analysis workflows, use of Spark Notebooks, and large-scale data analytics (ML rules 1, 2, and 4). Assigned AI category because of the embedded AI-powered Arcade Assistant for natural language-driven analysis (AI rule 1 and 4). Power BI and OneLake integration, advanced mapping, and AI/ML features are central, meeting multi-platform inclusion thresholds.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/unlocking-geospatial-intelligence-in-microsoft-fabric-with-esris-arcgis-maps-workload-preview/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-19 20:06:24 +00:00",
+    "reason": "Succesfully added: Assigned DevOps because CodeQL is integral to GitHub code scanning—a core DevOps security automation tool—and the release touches on CI/CD and secure development workflows (DevOps rule 2, 5 & 9). Assigned Security because the content centers on finding and remediating code security vulnerabilities, adding new security-focused queries, and improving static analysis coverage (Security rules 1, 5, 8). Coding was considered but not assigned since the content emphasizes usage and features, not direct coding techniques or developer patterns with Microsoft languages. No generic exclusion rules applied, and content is highly relevant for technical practitioners.",
+    "canonical_url": "https://github.blog/changelog/2025-11-19-codeql-2-23-5-adds-support-for-swift-6-2-new-java-queries-and-improved-analysis-accuracy",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-19 20:06:59 +00:00",
+    "reason": "Succesfully added: I assigned the AI category because the Plan agent in VS Code leverages AI-powered capabilities to assist developers (AI rule 4). Coding is included since the video is focused on organizing development tasks within VS Code, a Microsoft developer tool (Coding rule 5). Copilot is mentioned in the linked documentation, but the focus is on the Plan agent for planning and requirements – not specifically on GitHub Copilot, so 'GitHub Copilot' is not added. Azure and ML are not central, nor is security relevant. Content passes generic exclusion rules: it's in English, has technical depth, focuses on developer workflows, and does not qualify as a sales pitch or biographical content.",
+    "canonical_url": "https://www.youtube.com/watch?v=xR3fuKtWGN0",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-19 20:07:20 +00:00",
+    "reason": "Succesfully added: Categories 'Azure' and 'Security' were assigned because the content describes Azure's MSP, a platform layer innovation focused on increasing Virtual Machine security against metadata-related threats at both configuration and operational levels (Azure rules 1, 4, 5; Security rules 1, 4, 9). The protocol covers IMDS, WireServer, RBAC, zero-trust principles, and attack mitigation, fitting Security inclusion rules for application and infrastructure security. No generic exclusion rules apply: the content is technical, not biographical, sales, question-only, negative, job-related, or business strategy focused, and it is clearly in English and well over the minimum length for community content.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/introducing-metadata-security-protocol-msp-elevating-platform/ba-p/4471204",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-19 20:07:39 +00:00",
+    "reason": "Succesfully added: Assigned AI category because content focuses on agentic systems, agent APIs, and AI model APIs within Azure API Management (AI rule 1 and 4). Assigned Azure because Azure API Management is the central platform (Azure rule 1, 4, 5). Assigned Security category since it discusses secure access, policy enforcement, governance, and observability for agent APIs (Security rule 1, 2, 4). Coding, DevOps, ML, and GitHub Copilot categories did not apply, as the content is not about development frameworks/tools, CI/CD, custom ML workflows, or GitHub products. No generic exclusion rules were triggered. The type is 'community', but the word count and technical focus meet inclusion standards.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/preview-govern-secure-and-observe-a2a-apis-with-azure-api/ba-p/4469800",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-19 20:08:02 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because content centers around Azure CLI and Azure PowerShell, covering service updates, API changes, and management tooling (Azure rule 1, 4). Assigned Security category due to emphasis on MFA enforcement, CVE mitigations, and claims challenge handling (Security rule 1, 2, 3). Assigned AI category because the new 'What-If' and 'Export Bicep' parameters leverage AI for intelligent preview and template generation (AI rule 1, 5). Assigned DevOps category because content discusses automation, cloud management, breaking changes, release process, and CLI scripting (DevOps rules 1, 5, 6). Assigned Coding due to technical scripting, new modules, and integration practices in CLI/PowerShell (Coding rules 1, 2). All decisions are based solely on technical content about Microsoft cloud automation and developer tooling; there are no exclusion rule triggers.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-and-azure-powershell-ignite-2025-announcement/ba-p/4471182",
+    "collection": "community"
   }
 ]
