@@ -18446,5 +18446,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/announcing-azure-dns-security-policy-with-threat-intelligence/ba-p/4470183",
     "collection": "community",
     "reason": "Succesfully added: Categories assigned based on rule alignment: 'Azure' because the content details Azure DNS security policy features and deployment (Azure Rule 1, 4, 5); 'Security' due to its focus on DNS-based attack prevention, threat intelligence feeds, SOC integration, and security policies (Security Rule 1, 4, 5, 9); 'DevOps' because the announcement highlights pipeline integrations, infrastructure as code support (Terraform, ARM, Bicep), and operational automation (DevOps Rule 6, 9, 11). No generic exclusion rules apply—the content is technical, development-focused, and not business/productivity oriented."
+  },
+  {
+    "timestamp": "2025-11-20 22:05:27 +00:00",
+    "reason": "Succesfully added: Assigned ML category because Data Clustering in Microsoft Fabric Data Warehouse is a technical feature focused on enhancing analytics engineering, data modeling, and query performance—core aspects of ML/data engineering rules. The article contains SQL syntax, data warehouse optimization, performance metrics, and analytic best practices for big data. Azure, AI, Coding, Security, DevOps categories are not assigned because content does not focus on those areas (no Azure service emphasis, no AI APIs, no direct coding/developer tool content, and no security or DevOps aspects).",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-data-clustering-in-fabric-data-warehouse-preview/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-20 22:05:49 +00:00",
+    "reason": "Succesfully added: DevOps category assigned because the announcement centers on GitHub Actions, CI/CD workflow optimization, and storage management, directly fitting DevOps inclusion criteria (DevOps rules 2, 5, and 8). Not assigned to 'AI', 'Coding', 'Azure', 'ML', 'Security', or 'GitHub Copilot' categories since the content does not involve AI features, code development specifics, Microsoft cloud services, ML/data science, security-related practices, or Copilot assistant topics. All relevant technical tags extracted per instructions.",
+    "canonical_url": "https://github.blog/changelog/2025-11-20-github-actions-cache-size-can-now-exceed-10-gb-per-repository",
+    "collection": "news"
   }
 ]
