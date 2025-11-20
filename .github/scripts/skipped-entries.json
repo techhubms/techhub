@@ -9177,5 +9177,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-to-move-azure-devops-organization-to-new-organization/m-p/4471761#M22342",
     "reason": "Insufficient content length",
     "timestamp": "2025-11-20 20:10:25 +00:00"
+  },
+  {
+    "timestamp": "2025-11-20 21:06:41 +00:00",
+    "canonical_url": "https://news.xbox.com/en-us/2025/11/20/xbox-partner-preview-november-2025-recap/",
+    "collection": "news",
+    "reason": "No categories found: Content excluded because it does not meet category inclusion rules. This news article is primarily focused on gaming announcements, Xbox platform news, and upcoming third-party/exclusive game releases. There is no substantial technical content related to Microsoft developer tools, AI, Azure, coding, DevOps, ML, or security. All details relate to games, DLC, Xbox features for consumers, and gaming hardware/software, which are outside the scope of predefined categories that focus on technical development, engineering, programming, or technical architecture. Generic exclusions for non-development Microsoft products and consumer applications apply. No applicable categories assigned."
   }
 ]
