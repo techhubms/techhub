@@ -18458,5 +18458,23 @@
     "reason": "Succesfully added: DevOps category assigned because the announcement centers on GitHub Actions, CI/CD workflow optimization, and storage management, directly fitting DevOps inclusion criteria (DevOps rules 2, 5, and 8). Not assigned to 'AI', 'Coding', 'Azure', 'ML', 'Security', or 'GitHub Copilot' categories since the content does not involve AI features, code development specifics, Microsoft cloud services, ML/data science, security-related practices, or Copilot assistant topics. All relevant technical tags extracted per instructions.",
     "canonical_url": "https://github.blog/changelog/2025-11-20-github-actions-cache-size-can-now-exceed-10-gb-per-repository",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content covers enhancements to GitHub’s pull request and code review workflows, which are core aspects of DevOps practices (DevOps inclusion rule 11: GitHub content). No other technical content categories (AI, Azure, Coding, ML, Security) are relevant as the post strictly discusses developer workflow and platform improvements, not coding, AI, or security features.",
+    "timestamp": "2025-11-20 23:05:52 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-11-20-pull-request-files-changed-public-preview-november-20-updates"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Coding' category because the content specifically introduces new Windows features designed to enhance the development experience, including development-focused settings, Git integration, and long path support (Coding rule 5: Microsoft development tools). No other categories such as AI, Azure, DevOps, ML, or Security apply since the focus is on client developer environment improvements rather than backend/cloud, AI, or security technologies.",
+    "timestamp": "2025-11-20 23:06:26 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/QRY2ydmHBYE"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Coding category because the updates (advanced settings, long file path support, and Git integration) directly enhance the Windows developer workflow and developer tooling (Coding rules 4 and 5). Assigned the DevOps category because Git integration in File Explorer facilitates version control and developer collaboration (DevOps rules 2 and 8). Did not assign Azure, AI, ML, or Security as the content is focused on local Windows developer experience and does not mention cloud, AI/ML, or security aspects. No generic exclusion rules were triggered; content is directly relevant to Microsoft development tooling.",
+    "timestamp": "2025-11-20 23:06:42 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=GLVZQ7Tw8i8"
   }
 ]
