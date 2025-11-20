@@ -17852,5 +17852,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=zPvEYmj8Mi4",
     "timestamp": "2025-11-20 00:11:51 +00:00",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/aks-enabled-by-azure-arc-powering-ai-applications-from-cloud-to/ba-p/4471511",
+    "reason": "Succesfully added: Categories were assigned as follows: 'AI' because the post focuses on AI workloads, hybrid AI strategy, AI Foundry Local integration, KAITO, and RAG, meeting AI rules 1, 4, and 5. 'Azure' is assigned due to extensive usage of Azure Kubernetes Service, Azure Arc, and related Azure technologies (Azure rules 1, 4, 5). 'DevOps' qualifies due to deep coverage of Kubernetes operations, hybrid/disconnected management, monitoring, governance, and developer operational workflows (DevOps rules 1, 6, 7). 'ML' is included because the post discusses custom model training, fine-tuning with LoRA/QLoRA, AI/ML model packaging and serving, and GPU enhancements (ML rules 1, 2, 6, 10). 'Security' is added based on focus on secrets encryption, identity federation, and Key Vault integration (Security rules 1, 2, 3, 7). No generic exclusion rules were triggered; content is technical, professional, and product/development focused.",
+    "timestamp": "2025-11-20 01:33:28 +00:00",
+    "collection": "community"
   }
 ]
