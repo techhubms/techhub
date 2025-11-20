@@ -9141,5 +9141,11 @@
     "reason": "No categories found: Content excluded because it is focused on Microsoft 365 Copilot and App Builder, which are categorized as business productivity tools according to Non-Development Microsoft Products exclusion. The session describes creating productivity apps within Microsoft 365 using Copilot, which is a business productivity rather than a developer platform. Although it discusses some technical features such as code generation and governance, it is fundamentally not targeted at code developers or Microsoft technology implementation for developers, but at enabling end-users and administrators to create solutions in a productivity context. This matches the explicit exclusion for 'Microsoft 365 Copilot,' 'Copilot for Microsoft 365,' and end-user business applications in Chapter 3 and the Copilot Product Distinction in Chapter 2.",
     "canonical_url": "https://www.youtube.com/watch?v=X1By9wRcFy8",
     "timestamp": "2025-11-20 15:09:07 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=Dv7J7xM9nKY",
+    "reason": "No categories found: No categories were assigned because the session 'Power agents to scale your frontier workforce with Agent 365' primarily focuses on business productivity, workflow automation, and management of AI agents in the context of Microsoft 365 applications. The content discusses Agent 365 as a unified agent control plane for extending business infrastructure and optimizing productivity, but it does not relate to developer tools (such as GitHub Copilot or Copilot Studio), coding, technical implementation, DevOps practices, Azure development, ML/data engineering, or security architecture. According to the generic exclusion rules, Microsoft 365 Copilot, Copilot for Microsoft 365, Office Copilot, and business productivity-focused agent management solutions are excluded unless focused on development-oriented aspects, which is not shown in the provided description. Therefore, this content qualifies as non-development Microsoft business productivity material, and no categories are assigned.",
+    "timestamp": "2025-11-20 17:10:01 +00:00",
+    "collection": "videos"
   }
 ]

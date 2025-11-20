@@ -1,0 +1,17 @@
+{
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "PubDate": "2025-11-20T16:13:07+00:00",
+  "FeedName": "Microsoft Events YouTube",
+  "OutputDir": "_videos",
+  "Description": "Build, operate, and scale AI agents with Foundry Agent Service. Learn how to author agents, connect tools and data, evaluate performance, and deploy to a secure runtime for production. See how to bring OpenAI API–based projects into Foundry with minimal changes while gaining enterprise-grade governance, observability, and interoperability through the Model Context Protocol and agent-to-agent capabilities.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-agenticsolutions 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Salman Quazi \\* Dan Taylor \\* Travis Wilson 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK201 | English (US) | Innovate with Azure AI apps and agents, Microsoft Foundry Breakout | Advanced (300) #MSIgnite, #InnovatewithAzureAIappsandagents\n\nChapters: 0:00 - Introduction and overview of AI agents as next era of AI development 00:00:30 - Speakers introduction and focus on Foundry Agent Service for developers 00:07:27 - Demo: building a GitHub-connected agent and using managed OAuth 00:14:16 - Running evaluation locally and viewing detailed results in portal 00:15:22 - Demonstrating agent memory and personalization features 00:32:10 - Demonstrating results and integrated tracing through LangGraph 00:33:37 - Recap of Foundry Agent Service power and transition to multi-agent workflows 00:34:43 - Introduction to building a real-world multi-agent bot using workflows and prompt agents 00:43:13 - Demonstration of workflow interaction: ticket creation and automated troubleshooting",
+  "Author": "Microsoft Events",
+  "ProcessedDate": "2025-11-20 17:05:07",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Tags": [
+    "InnovatewithAzureAIappsandagents",
+    "MSIgnite"
+  ],
+  "Title": "AI builder’s guide to agent development in Foundry Agent Service | BRK201",
+  "Link": "https://www.youtube.com/watch?v=7faSLQS501E"
+}

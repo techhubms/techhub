@@ -1,0 +1,17 @@
+{
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "PubDate": "2025-11-20T16:16:49+00:00",
+  "FeedName": "Microsoft Events YouTube",
+  "OutputDir": "_videos",
+  "Description": "AI agents are now a core part of production environments, delivering real impact. Explore how Azure App Platform supports secure, scalable AI agent deployment and lifecycle management. You'll explore how agents use MCP tools and how built-in observability, access controls, and policy enforcement ensure reliable operations. Leave with a clear understanding of how to manage AI agents with governance and performance at scale.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-agenticsolutions 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Devanshi Joshi \\* Nir Mashkowski \\* Jordan Selig \\* Jun Yoshida 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK116 | English (US) Breakout | Intermediate (200) #MSIgnite, #InnovatewithAzureAIappsandagents\n\nChapters: 0:00 - Session Introduction and Overview of 'Apps, Agents, and MCP' at Microsoft Ignite 00:04:12 - Introduction to Fundamentals: Defining Apps, Agents, and Tools 00:11:52 - Demonstration of GitHub Copilot app modernization to upgrade to .NET 10 00:16:18 - Agents perform multiple background operations using content moderation and Open API tools 00:20:19 - Introducing Easy Auth support for MCP servers to enhance authentication and security 00:21:06 - Demo: Connecting to a secure MCP server with authentication in VS Code 00:29:13 - Development of AI maintenance agents using Azure AI Foundry and Agent Framework 00:31:01 - Demo of AI-guided maintenance process for air compressors 00:33:21 - Session summary: AI modernization journey, security focus, and upcoming lab invitation",
+  "Author": "Microsoft Events",
+  "ProcessedDate": "2025-11-20 17:05:07",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Tags": [
+    "InnovatewithAzureAIappsandagents",
+    "MSIgnite"
+  ],
+  "Title": "Apps, agents, and MCP is the AI innovation recipe | BRK116",
+  "Link": "https://www.youtube.com/watch?v=vnJP6xWHhO0"
+}
