@@ -9093,5 +9093,23 @@
     "timestamp": "2025-11-20 11:10:46 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=r5Yl1wXkdP0"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-11-20 12:07:49 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=klSK-75SFbU",
+    "reason": "No categories found: No categories have been assigned because the content is primarily focused on the Microsoft AI Cloud Partner Program’s structure, partner ecosystem investments, and business incentives. While Copilot products and Copilot Studio are mentioned, their discussion is limited to business partner benefits, offers, and specialization within the partner program, not technical implementation, development, or how to build with these tools. The session centers on business enablement, market opportunity, partner growth, incentives, and programmatic details—all of which fall under the generic exclusion rules for business strategy, partnership management, and executive content (see Chapter 3: Generic Exclusion Rules > Business Strategy and Executive Content, Non-Development Microsoft Products). There are no hands-on, technical, or developer-focused implementation details relating to Microsoft AI, Copilot, or Copilot Studio that would qualify under the AI or Coding categories. As required, exclusion is applied per critical workflow."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-11-20 12:08:03 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=s8lP2lKVCXk",
+    "reason": "No categories found: All categories are excluded due to generic exclusion rules. The content centers on 'Dragon Copilot' and AI solutions for nursing and clinical workflow improvements, with a clear focus on healthcare productivity, EHR documentation, and process transformation for nurses. There is no substantive developer, coding, or architectural implementation detail involving Microsoft technologies for developers, and the described tools (Dragon Copilot, EHR AI assistants) are geared toward business/clinical productivity and end-user workflows, not development. Per the CRITICAL Copilot Product Distinction, Copilot discussions centered on productivity (not developer tooling like GitHub Copilot or Copilot Studio) must be excluded. The session also targets clinical practitioners, administrators, and change managers, not software engineers or technical implementers; thus, no categories apply."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-11-20 12:08:35 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=WVLPVHCWKA4",
+    "reason": "No categories found: No categories assigned due to generic exclusion rules. The content is focused on partner enablement, business transformation, global systems integrators, and advisory partners. It discusses Microsoft's business strategy and ecosystem support for partners, not technical implementation, code, or technical deep-dives. The description and session structure reference innovation, growth, methodology alignment, and business model differentiation, which fall under business strategy and executive content exclusions. There is no substantive technical content, hands-on development, or engineering detail that would qualify for any technology category. Content also includes event links and resources aimed at partner programs, reinforcing exclusion as per business and go-to-market focus outlined in the exclusion rules."
   }
 ]
