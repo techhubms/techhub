@@ -17882,5 +17882,11 @@
     "canonical_url": "https://devclass.com/2025/11/20/inside-the-clouds-shift-to-arm-why-hyperscalers-and-the-industry-are-making-the-switch/",
     "reason": "Succesfully added: Azure category assigned because the article features Microsoft Azure's Arm Neoverse-based Cobalt VMs, benchmarks, and migration strategies (Azure rule 1). AI and ML were included based on specific references to LLM inference, ONNX Runtime, ML training (XgBoost), and cloud analytics platforms (AI rule 1, ML rule 1, 2, 9). Coding was added because the article provides developer migration strategies, Arm64 compilation, Kubernetes, GitHub Copilot extensions, and developer onboarding resources (Coding rules 2, 4, 5). The article does not solely report industry trends; it offers technical migration guidance and platform-specific benchmarks relevant to Microsoft consultants and developers.",
     "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content centers around providing AI agents (including GitHub Copilot Agent Mode) with access to legacy APIs using MCP servers (AI rule 1 and 4). Assigned Azure category because the deployment and API exposure processes use Azure Container Apps and Azure API Management (Azure rule 1 and 4). Assigned DevOps category due to instructions for resource provisioning, deployment (CLI automation), and centralized management aspects (DevOps rule 5 and 6). The content is sufficiently technical, focused on implementation, and does not trigger any generic exclusion rules or non-development exclusions. Coding and ML categories were considered but not assigned because while code deployment is discussed, there is no deep dive into code-level logic or ML-specific data engineering.",
+    "timestamp": "2025-11-20 10:06:25 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/exposing-legacy-apis-hosted-on-azure-container-apps-to-ai-agents/ba-p/4470476"
   }
 ]
