@@ -18344,5 +18344,35 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/integrating-azure-devops-with-jira-service-management-real-world/m-p/4471605#M22340",
     "reason": "Succesfully added: Included DevOps category because the entire content focuses on development/support workflow automation, incident management, and integration of work/process tooling between technical teams (DevOps rules 1, 3, 5, and 6). Included Azure category since Azure DevOps is a central platform described in use cases, technical implementation, and solution architecture (Azure rules 1, 4, and 5). Did not include Coding, AI, ML, Security, or GitHub Copilot because the content does not focus on language/framework implementation, AI/ML platforms, or code-level examples, and security is mentioned only at a feature checklist level, not as a main technical topic. All inclusion/exclusion decisions are based on the categorization guidelines and rule hierarchies.",
     "timestamp": "2025-11-20 18:12:06 +00:00"
+  },
+  {
+    "timestamp": "2025-11-20 19:05:07 +00:00",
+    "reason": "Succesfully added: Assigned 'DevOps' because the article centers on architectural evolution and best practices for building and shipping .NET releases, build orchestration, and CI/CD processes (DevOps rule 1, 5, 11). Assigned 'Coding' because much content discusses .NET’s development workflows, repository structure, code flow, and component dependency management (Coding rules 1, 2, 4). Did not assign 'Azure' since Azure services are referenced only as build infrastructure and not central to the technical solution; nor 'Security', as security is discussed only as a contextual challenge, not as a technical focus. 'AI' and 'ML' were not relevant, as no AI/ML implementation or tooling is discussed. The tags prioritize technical depth, process, and .NET-specific build engineering terms.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/reinventing-how-dotnet-builds-and-ships-again/"
+  },
+  {
+    "timestamp": "2025-11-20 19:05:36 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the news discusses Copilot capabilities (AI rule 1) such as natural language to SQL, diagnostics, and code generation. 'Azure' is included since SQL Database in Fabric is based on Azure SQL Database and tightly integrated within Azure platforms (Azure rule 1). 'ML' is appropriate due to discussions of operational and analytical data unification for the 'era of AI' and features targeting data engineering/data science workflows (ML rule 1 and rule 2). 'Coding' is included due to detailed coverage of SQL script authoring, code snippets, query management, and deep developer tooling integration (Coding rules 1, 4, 5). The content does not match any generic exclusion rules and centers on tools and processes relevant to Microsoft consultants and developers.",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/copilot-and-query-editor-in-sql-database-in-fabric-ga-update/"
+  },
+  {
+    "timestamp": "2025-11-20 19:05:58 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the content is focused on Microsoft Fabric, Azure Key Vault, and Cosmos DB features (Azure rules 1 and 2). Assigned ML category as the post centers on data engineering, data architectures, and business logic consolidation within Fabric—these are core aspects of ML/data science with Microsoft platforms (ML rules 1, 2, 3). Assigned Coding category since the primary functionality involves writing and managing reusable Python functions and code samples (Coding rules 1, 2, and 4). Did not assign AI category since features discussed are data engineering and programming, not AI-powered services or integrations.",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-user-data-functions-ignite-2025-edition/"
+  },
+  {
+    "timestamp": "2025-11-20 19:06:19 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the content specifically focuses on Microsoft AI-powered search (Copilot, Bing) and their impact on conversion metrics (AI rule 1, 4, and 5). The article details practical implications for marketers and publishers using Microsoft's AI technology, including tools and structured content optimizations. Other categories—such as 'Azure,' 'ML,' 'Security,' 'Coding,' 'GitHub Copilot,' and 'DevOps'—do not apply since the content does not discuss cloud deployment, machine learning engineering, security, coding practices, developer tools, or DevOps. The inclusion is justified predominately on the centrality of Microsoft AI search technologies to the subject matter.",
+    "collection": "news",
+    "canonical_url": "https://blogs.bing.com/webmaster/November-2025/How-AI-Search-Is-Changing%E2%80%AFthe%E2%80%AFWay%E2%80%AFConversions%E2%80%AFare-Measured"
+  },
+  {
+    "timestamp": "2025-11-20 19:07:15 +00:00",
+    "reason": "Succesfully added: Content centers on Azure networking, specifically routing with VPN Gateway, BGP, and Azure Firewall in a hub-spoke configuration. Azure category was assigned due to detailed Azure service configurations (VPN Gateway, Firewall, Private Resolver) and routing. Security category was assigned because Azure Firewall and enforced inspection rules are central, along with routing for inspection and segmentation (Security rule 1, 2, and 9). Coding, DevOps, ML, and AI categories did not apply: the post does not cover code development, DevOps pipelines/tooling, or data science/AI elements. All generic exclusion rules were checked—none triggered. Community content is above 200 words, is technical, and provides substantive troubleshooting context.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/spoke-hub-hub-traffic-with-vpn-gateway-bgp-and-firewall-issue/m-p/4471878#M750"
   }
 ]

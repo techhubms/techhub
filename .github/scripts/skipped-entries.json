@@ -9165,5 +9165,11 @@
     "canonical_url": "https://www.youtube.com/shorts/O9ZjvFcP1XQ",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The content is a beginner-level tutorial about creating a repository on GitHub and does not cover any Microsoft technologies, platforms, or developer tooling specific to Microsoft as required by the category inclusion rules. Additionally, the material is focused on basic GitHub usage rather than coding, DevOps, or integration with Microsoft stacks, so none of the categories apply.",
     "timestamp": "2025-11-20 18:08:22 +00:00"
+  },
+  {
+    "timestamp": "2025-11-20 19:06:49 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: the primary focus is community coworking and Q&A rather than substantive technical content. The title ('Come with your questions about open source, and let's cowork!') indicates it is an open invitation for attendees to ask questions or discuss open source, without presenting specific technical information, tutorials, or educational material. No actual technical content is provided (content field is null), and the description consists entirely of social media/channel links, not technical details. This falls under the 'Question-Only Content' and 'Help-seeking posts without substantive answers or solutions' exclusion rules. No categories assigned.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=MoVjtpSPwIo"
   }
 ]
