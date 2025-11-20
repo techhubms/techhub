@@ -9057,5 +9057,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=KyBemc0hEKo",
     "timestamp": "2025-11-19 22:06:16 +00:00",
     "reason": "No categories found: Content is excluded due to generic exclusion rules. The provided description is a high-level event announcement about Microsoft Ignite keynote highlights, mainly focusing on product launches and strategic AI direction (business and executive summary) without any technical implementation details, actionable insights, or developer content. It specifically highlights new offerings like Work IQ, Agent 365, and Agent Factory in a forward-looking, non-technical context. There is no substantive depth on technical architecture, coding, or Microsoft platform usage that meets inclusion criteria."
+  },
+  {
+    "timestamp": "2025-11-20 08:06:02 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=QyKiy8ethw0",
+    "reason": "No categories found: Content excluded due to generic exclusion rules—specifically, the primary focus is on business productivity, workplace collaboration, and end-user features of Microsoft Teams, enhanced by AI and Copilot. According to the Non-Development Microsoft Products exclusion, content covering Microsoft 365 Copilot, general Teams productivity features, and Copilot agents for workplace scenarios (chat, meetings, event management) is NOT eligible for any technical development categories. No substantial discussion of Teams development or bot/extensibility frameworks is present. Therefore, no categories are assigned.",
+    "collection": "videos"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Tags": [
+    "MSIgnite",
+    "Secureyourdata"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "ProcessedDate": "2025-11-20 08:04:38",
+  "PubDate": "2025-11-20T07:50:27+00:00",
+  "EnhancedContent": null,
+  "Description": "Use AI to scale deep content analysis both proactively and reactively with Microsoft Purview Data Security Investigations. Learn more about DSI and the robust Purview-Defender integrations, which bring the SOC and data security teams closer together.\n\nDelivered in a silent stage breakout.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-ManageInsiderRisk 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Katerina Athanasiou \\* Christophe Fiessinger \\* Daniel Gawarecki \\* Caroline Lee 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK256 | English (US) Breakout | Advanced (300) #MSIgnite, #Secureyourdata\n\nChapters: 0:00 - Emerging Trends in Data Security and Workforce Challenges 00:03:56 - Introduction of AI-powered Data Security Investigations (DSI) 00:11:14 - Introduction to Embeddings and Intent Mapping 00:11:39 - Vector Search Example: Finding Similar Meanings like Cat and Dog 00:15:00 - Observability and Validation of AI-Detected Risks 00:22:25 - Introduction of Native Integration Between DSI and DSPM 00:29:50 - Applying AI-Suggested and Custom Categories for Risk Assessment 00:35:04 - Transition to Customer Segment and Introduction of Katarina 00:35:26 - Customer Story: Toyota Motor North America Featuring Dan Gorecki",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=SKQyfHBfvpY",
+  "Title": "Enhance data security investigations with Microsoft Purview | BRK256",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Author": "Microsoft Events"
+}

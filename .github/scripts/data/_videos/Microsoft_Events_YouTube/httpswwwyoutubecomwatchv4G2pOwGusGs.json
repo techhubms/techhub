@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Tags": [
+    "ModernizeSecOpswithaunifiedplatform",
+    "MSIgnite"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "ProcessedDate": "2025-11-20 08:04:38",
+  "PubDate": "2025-11-20T07:56:55+00:00",
+  "EnhancedContent": null,
+  "Description": "Explore key insights from the 2025 Microsoft Digital Defense Report, understand evolving legal and regulatory challenges, and gain practical strategies to strengthen resilience, readiness, and cross-team response in a complex threat landscape.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-ProactiveSecurityOps 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Sherrod DeGrippo \\* Crane Hassold \\* Chloé Messdaghi 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK245 | English (US) Breakout | Foundational (100) #MSIgnite, #ModernizeSecOpswithaunifiedplatform\n\nChapters: 0:00 - AI as a New Interface for Data Interaction and Exploitation 00:10:44 - Introduction to BEC and AI as an Attack Tool 00:11:06 - Defining Business Email Compromise (BEC) as Social Engineering 00:14:25 - AI Empowering Individual Threat Actors and Manual vs Automated Tactics 00:26:30 - Regional analysis – U.S., U.K., Germany, and Israel as top targets 00:28:20 - Emerging threat tactics: click-fix and info stealers on the rise 00:33:39 - Leveraging Microsoft’s Scale for Security Insights 00:35:54 - Wrap-Up and Introduction to Microsoft Threat Intelligence Podcast 00:37:00 - Defender Takeaways: Focus on Social Engineering and AI Threat Context",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=4G2pOwGusGs",
+  "Title": "Inside the Threat Landscape: 2025 Digital Defense Report Takeaways | BRK245",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Author": "Microsoft Events"
+}

@@ -17858,5 +17858,23 @@
     "reason": "Succesfully added: Categories were assigned as follows: 'AI' because the post focuses on AI workloads, hybrid AI strategy, AI Foundry Local integration, KAITO, and RAG, meeting AI rules 1, 4, and 5. 'Azure' is assigned due to extensive usage of Azure Kubernetes Service, Azure Arc, and related Azure technologies (Azure rules 1, 4, 5). 'DevOps' qualifies due to deep coverage of Kubernetes operations, hybrid/disconnected management, monitoring, governance, and developer operational workflows (DevOps rules 1, 6, 7). 'ML' is included because the post discusses custom model training, fine-tuning with LoRA/QLoRA, AI/ML model packaging and serving, and GPU enhancements (ML rules 1, 2, 6, 10). 'Security' is added based on focus on secrets encryption, identity federation, and Key Vault integration (Security rules 1, 2, 3, 7). No generic exclusion rules were triggered; content is technical, professional, and product/development focused.",
     "timestamp": "2025-11-20 01:33:28 +00:00",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-20 08:05:30 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=4G2pOwGusGs",
+    "reason": "Succesfully added: Assigned Security category because the main focus is on cybersecurity, threat intelligence, and resilience strategies derived from Microsoft’s Digital Defense Report (Security rules 1, 5, 7, 9). Assigned AI category because significant portions of the session discuss AI as both a defensive and offensive tool in the modern threat landscape, including AI-enabled attacks (AI rules 1, 4, 5). No other categories assigned, as there is no direct coding, DevOps, Azure, ML platform, or GitHub Copilot tool content. The video is primarily a strategic and technical overview targeted at practitioners rather than executive or managerial-only content, qualifying under the outlined inclusion rules.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-20 08:05:49 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=ek-xc4PyCxo",
+    "reason": "Succesfully added: Added AI category due to the focus on Copilot Mode, agentic AI, and browser-based AI productivity as described in the session summary and chapter breakdown (AI rules 1, 4, and 5). Added Security category based on repeated references to enterprise-grade security, product positioning as a secure browser, and coverage of existing data protection features including Purview DLP (Security rules 1, 7, and 10). Did not add other categories since no substantial information on coding, Azure-specific deployment, ML development, DevOps practices, or GitHub Copilot. All content is in English and technical, thus no exclusion rules apply.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-20 08:06:20 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=SKQyfHBfvpY",
+    "reason": "Succesfully added: Assigned the 'AI' category because the session deeply covers AI-powered features in Microsoft Purview Data Security Investigations (AI inclusion rules 1 and 4). Assigned 'Security' because the main topic focuses on data security, SOC processes, and integrations with Microsoft Defender (Security inclusion rules 1, 5, and 7). Did not assign other categories because content is centered on security operations and AI, not coding, DevOps, Azure-specific implementation, or ML engineering. All decisions are based on the session description's clear focus on AI, data security, SOC workflows, and Microsoft Purview.",
+    "collection": "videos"
   }
 ]
