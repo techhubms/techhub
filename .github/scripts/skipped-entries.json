@@ -9147,5 +9147,23 @@
     "reason": "No categories found: No categories were assigned because the session 'Power agents to scale your frontier workforce with Agent 365' primarily focuses on business productivity, workflow automation, and management of AI agents in the context of Microsoft 365 applications. The content discusses Agent 365 as a unified agent control plane for extending business infrastructure and optimizing productivity, but it does not relate to developer tools (such as GitHub Copilot or Copilot Studio), coding, technical implementation, DevOps practices, Azure development, ML/data engineering, or security architecture. According to the generic exclusion rules, Microsoft 365 Copilot, Copilot for Microsoft 365, Office Copilot, and business productivity-focused agent management solutions are excluded unless focused on development-oriented aspects, which is not shown in the provided description. Therefore, this content qualifies as non-development Microsoft business productivity material, and no categories are assigned.",
     "timestamp": "2025-11-20 17:10:01 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2025/11/20/xbox-black-friday-2025-sale-deals/",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This news post is a sales promotion for Xbox products, games, accessories, and related holiday discounts, without substantive technical or development-focused Microsoft content. It is primarily targeted at consumers and gamers, with no educational value or technical depth. Additionally, it heavily features sales pitches ('Save up to 75% on select Xbox games', 'Black Friday deals', 'buy now', 'free engraving') and lacks implementation details, development advice, or technical insights relevant to Microsoft consultants or developers. Thus, it qualifies for the sales pitch exclusion (Generic Exclusion Rule) and does not fit any defined category.",
+    "timestamp": "2025-11-20 18:06:40 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/patterns-vs-anti-patterns-the-architectural-compass/",
+    "reason": "No categories found: No categories assigned. Content is a general overview of architectural patterns and anti-patterns in software development, discussing concepts like Layered Architecture, Microservices, Event-Driven Architecture, Big Ball of Mud, God Object, Spaghetti Code, and Distributed Monolith. However, the article does not reference specific Microsoft technologies, products, or developer tools (such as .NET, Azure, GitHub Copilot, or any Microsoft frameworks), nor does it focus on technical implementation within the Microsoft ecosystem. Generic exclusion and category inclusion rules require central or substantial Microsoft technology presence for categorization, which is not evident here. The focus is on architectural theory and practice, not Microsoft-centric development.",
+    "timestamp": "2025-11-20 18:07:23 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/O9ZjvFcP1XQ",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The content is a beginner-level tutorial about creating a repository on GitHub and does not cover any Microsoft technologies, platforms, or developer tooling specific to Microsoft as required by the category inclusion rules. Additionally, the material is focused on basic GitHub usage rather than coding, DevOps, or integration with Microsoft stacks, so none of the categories apply.",
+    "timestamp": "2025-11-20 18:08:22 +00:00"
   }
 ]
