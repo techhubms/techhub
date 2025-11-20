@@ -9063,5 +9063,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=QyKiy8ethw0",
     "reason": "No categories found: Content excluded due to generic exclusion rules—specifically, the primary focus is on business productivity, workplace collaboration, and end-user features of Microsoft Teams, enhanced by AI and Copilot. According to the Non-Development Microsoft Products exclusion, content covering Microsoft 365 Copilot, general Teams productivity features, and Copilot agents for workplace scenarios (chat, meetings, event management) is NOT eligible for any technical development categories. No substantial discussion of Teams development or bot/extensibility frameworks is present. Therefore, no categories are assigned.",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-20 09:05:38 +00:00",
+    "canonical_url": "https://dellenny.com/common-pitfalls-in-software-architecture-design/",
+    "reason": "No categories found: No categories assigned because the content is focused on general principles of software architecture, pitfalls, and solutions without any reference to Microsoft technologies, frameworks (such as .NET, Azure, DevOps, or Microsoft security products), or developer tools. According to the processing rules, only content with clear Microsoft technology context qualifies for categorization, and multi-platform eligibility requires Microsoft tech to be central (≥40%) to the solution or discussion, which is not evident here. The output provides a structured summary, tags, excerpt, and markdown per Chapter 7, Option A, but the categories array remains empty as required by the rules.",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-20 09:05:50 +00:00",
+    "canonical_url": "https://dellenny.com/unlocking-project-success-why-solution-architecture-reviews-are-your-secret-weapon/",
+    "reason": "No categories found: Content excluded because it does not meet the category inclusion rules: although the article discusses solution architecture reviews in detail, there is no substantive technical coverage of Microsoft technologies, platforms, products, or development tools. The text focuses on general software engineering practices and project management methodologies without reference to Azure, .NET, Power Platform, GitHub, or other Microsoft-specific solutions. This aligns with the explicit guidance to only categorize content where Microsoft technology is central or comprises ≥40% of the substantive content. Additionally, no technical implementation or coding examples tied to the Microsoft ecosystem were present.",
+    "collection": "posts"
   }
 ]

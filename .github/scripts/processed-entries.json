@@ -17876,5 +17876,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=SKQyfHBfvpY",
     "reason": "Succesfully added: Assigned the 'AI' category because the session deeply covers AI-powered features in Microsoft Purview Data Security Investigations (AI inclusion rules 1 and 4). Assigned 'Security' because the main topic focuses on data security, SOC processes, and integrations with Microsoft Defender (Security inclusion rules 1, 5, and 7). Did not assign other categories because content is centered on security operations and AI, not coding, DevOps, Azure-specific implementation, or ML engineering. All decisions are based on the session description's clear focus on AI, data security, SOC workflows, and Microsoft Purview.",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-20 09:06:16 +00:00",
+    "canonical_url": "https://devclass.com/2025/11/20/inside-the-clouds-shift-to-arm-why-hyperscalers-and-the-industry-are-making-the-switch/",
+    "reason": "Succesfully added: Azure category assigned because the article features Microsoft Azure's Arm Neoverse-based Cobalt VMs, benchmarks, and migration strategies (Azure rule 1). AI and ML were included based on specific references to LLM inference, ONNX Runtime, ML training (XgBoost), and cloud analytics platforms (AI rule 1, ML rule 1, 2, 9). Coding was added because the article provides developer migration strategies, Arm64 compilation, Kubernetes, GitHub Copilot extensions, and developer onboarding resources (Coding rules 2, 4, 5). The article does not solely report industry trends; it offers technical migration guidance and platform-specific benchmarks relevant to Microsoft consultants and developers.",
+    "collection": "posts"
   }
 ]
