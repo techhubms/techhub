@@ -1,0 +1,17 @@
+{
+  "Description": "Your identities are under attack. Join experts from Microsoft Entra and Defender to learn how you can streamline collaboration across teams and better protect, detect, and respond to threats targeting your identity fabric.\n\nDelivered in a silent stage breakout.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-ProactiveSecurityOps \\* https://aka.ms/blog/entra 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Eric Sachs \\* Raviv Tamir 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK237 | English (US) Breakout | Intermediate (200) #MSIgnite, #ModernizeSecOpswithaunifiedplatform\n\nChapters: 0:00 - Introduction and welcome by Microsoft security leaders 00:00:18 - Speakers introduce roles in Identity and Threat Protection at Microsoft 00:07:51 - MFA adoption challenges and key statistics from Microsoft Digital Defense report 00:15:26 - Introduction of Microsoft Intra Conditional Access for Zero Trust security 00:19:31 - Extending Microsoft Entra identity fabric across enterprise applications 00:27:47 - Enhancing visibility and faster automation for effective threat protection 00:28:59 - Attackers' movement across identity, cloud, and endpoints 00:29:50 - Correlating user identities across multiple identity providers 00:35:52 - Detailed risk analysis and actionable remediation insights",
+  "Author": "Microsoft Events",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "OutputDir": "_videos",
+  "Title": "Identity Under Siege: Modern ITDR from Microsoft | BRK237",
+  "FeedName": "Microsoft Events YouTube",
+  "ProcessedDate": "2025-11-20 16:04:58",
+  "Link": "https://www.youtube.com/watch?v=J_PKZb6D_VE",
+  "Tags": [
+    "ModernizeSecOpswithaunifiedplatform",
+    "MSIgnite"
+  ],
+  "PubDate": "2025-11-20T15:59:31+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+}
