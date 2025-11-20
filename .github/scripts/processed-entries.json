@@ -17822,5 +17822,35 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/durable-task-extension-for-microsoft-agent-framework-%E3%81%A7/ba-p/4470826",
     "timestamp": "2025-11-19 22:07:07 +00:00",
     "reason": "Succesfully added: このコンテンツは、MicrosoftのAI開発プラットフォーム（Agent Framework）、Azure Durable Functionsの連携によるAIエージェント開発について詳細に解説しています。AI、Azure、Codingの各カテゴリに関連する技術紹介・サンプルコード・設計パターン・アーキテクチャが含まれており、具体的なC#およびPython実装例も掲載されています。Azure Durable Functionsの拡張によりAIエージェントの耐久実行・分散・可観測性・デバッグ性などが実現されている点から、「AI」「Azure」「Coding」にカテゴリーを付与しました。ML/Machine Learning要素はコードや設計説明の中心ではないため含めていません。DevOps要素は主にCI/CDやプラクティスではなくアプリ設計・クラウドインフラの自動化なので今回は割愛しています。"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the video demonstrates building voice AI agents using Azure AI services, including multi-agent orchestration, speech-to-text, and intent recognition (AI rule 1 and 4). Assigned Azure category because Azure services, specifically Azure Communication Services, are integral to both the architecture and telephony integration (Azure rules 1 and 4). Coding, DevOps, ML, Security, and GitHub Copilot categories were not assigned as there is no direct evidence of code-level development practices, CI/CD, custom ML engineering, security implementation, or a focus on GitHub Copilot. The content is clearly technical, focused on implementation, and relevant for developers and architects.",
+    "canonical_url": "https://www.youtube.com/shorts/DYSBNLmtIfc",
+    "timestamp": "2025-11-20 00:10:32 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the video centers on Microsoft Foundry (specifically Azure AI Foundry), which is a Microsoft AI product and platform for building and operating AI solutions (AI Rule 1, 4, 5). Assigned the Azure category because Foundry is inherently integrated with Azure cloud platform and tools (Azure Rule 1, 4, 5). Did not include Coding, DevOps, ML, Security, or GitHub Copilot, as the content is oriented around using the new portal interface for agent/aI project management, not direct code writing, DevOps, ML engineering, or security implementation.",
+    "canonical_url": "https://www.youtube.com/watch?v=BpOAxKzvrPA",
+    "timestamp": "2025-11-20 00:10:53 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content focuses on creating an AI agent using Microsoft Foundry, a Microsoft AI platform (AI rule 1). Assigned Azure category as Microsoft Foundry is an Azure-based AI service (Azure rule 1). Assigned Coding category as the tutorial involves implementing the agent in Python, including code setup and development tasks (Coding rules 1 and 4). Content is a technical walkthrough with actionable steps and does not trigger any generic exclusion rules.",
+    "canonical_url": "https://www.youtube.com/watch?v=fUuTvoDPyzo",
+    "timestamp": "2025-11-20 00:11:13 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: 'AI' because the content consists of interacting with Microsoft Foundry models (AI Category rule 1); 'Azure' since Microsoft Foundry operates as a service within Azure (Azure Category rule 1); 'Coding' because the tutorial uses Python code within Visual Studio Code to interface with the models (Coding Category rules 1 and 2). No generic exclusion rules apply, as the content is technical, focused on development, and centrally features Microsoft technologies.",
+    "canonical_url": "https://www.youtube.com/watch?v=ix0kJMVI0tk",
+    "timestamp": "2025-11-20 00:11:31 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the video focuses on deploying and comparing AI models using the Microsoft Foundry portal, which is part of Azure's AI offerings (AI rule 1, 4, 5). Assigned 'Azure' because Microsoft Foundry is an Azure-based AI service (Azure rule 1, 3). Did not assign 'ML' because the content is about using platform tools to deploy and compare prebuilt models, not custom ML engineering or code-level model building. Did not assign 'Coding' because the transition to code-first workflow is mentioned but not deeply shown as primary content. Excluded 'DevOps', 'GitHub Copilot', and 'Security' as none of their rule triggers were present. All decisions are based on the description and provided chapter markers since main content was unavailable.",
+    "canonical_url": "https://www.youtube.com/watch?v=zPvEYmj8Mi4",
+    "timestamp": "2025-11-20 00:11:51 +00:00",
+    "collection": "videos"
   }
 ]

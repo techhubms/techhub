@@ -1,0 +1,22 @@
+{
+  "EnhancedContent": null,
+  "PubDate": "2025-11-19T23:25:02+00:00",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Author": "Microsoft Developer",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Title": "Building Omnichannel Voice AI Agents with Azure",
+  "Link": "https://www.youtube.com/shorts/DYSBNLmtIfc",
+  "Description": "In this demo-driven session, Pablo Salvador Lopez from the AI GBB team showcases a real-world insurance claim scenario powered by Azure services. Watch as voice agents handle multilingual conversations, intent-based handoffs, and complex workflows—all in real time. We’ll also break down the architecture behind these voice-to-voice agents, including:\n\nAI layer with multi-agent orchestration Speech-to-text and text-to-speech integration Application layer using WebSocket and WebRTC Telephony integration with Azure Communication Services\n\nFull episode: https://aka.ms/SandSEp23",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "ProcessedDate": "2025-11-20 00:09:32",
+  "FeedName": "Microsoft Developer YouTube"
+}
