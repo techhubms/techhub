@@ -18374,5 +18374,59 @@
     "reason": "Succesfully added: Content centers on Azure networking, specifically routing with VPN Gateway, BGP, and Azure Firewall in a hub-spoke configuration. Azure category was assigned due to detailed Azure service configurations (VPN Gateway, Firewall, Private Resolver) and routing. Security category was assigned because Azure Firewall and enforced inspection rules are central, along with routing for inspection and segmentation (Security rule 1, 2, and 9). Coding, DevOps, ML, and AI categories did not apply: the post does not cover code development, DevOps pipelines/tooling, or data science/AI elements. All generic exclusion rules were checked—none triggered. Community content is above 200 words, is technical, and provides substantive troubleshooting context.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/spoke-hub-hub-traffic-with-vpn-gateway-bgp-and-firewall-issue/m-p/4471878#M750"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/dbt-job-in-microsoft-fabric-ship-trustworthy-sql-models-faster-preview/",
+    "reason": "Succesfully added: Assigned the Azure category because Microsoft Fabric is a core Azure platform service, and the integration is squarely within Data Factory, which is part of Azure. Assigned the ML category as the content focuses on large-scale data pipeline orchestration and operationalization of analytics/SQL models, which directly relates to data engineering and analytics development as per ML rules (data science/analytics engineering, pipelines for analytics, and advanced data processing). Did not assign the Coding category as there’s no focus on programming languages or application-level code development. Did not assign the AI category as the announcement does not involve AI or ML model development or integration, but rather orchestration of data transformations. Security and DevOps categories were considered but not assigned: while enterprise security is mentioned (governance, authentication, roles), there’s no substantive technical coverage of security implementation or DevOps tooling/pipelines beyond scheduling and monitoring within Fabric.",
+    "timestamp": "2025-11-20 20:06:48 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/whats-new-with-fabric-activator/",
+    "reason": "Succesfully added: Assigned 'Azure' because Fabric Activator is a core feature of Microsoft Fabric, an Azure-based SaaS analytics platform (Azure inclusion rule 1). Assigned 'ML' category as the update includes automation, Spark job integration, KQL Queryset, and data engineering functions, aligning with ML category rules for ETL/ELT and data engineering for analytics pipelines (ML rules 1, 2, and 5). Excluded 'AI' since no Azure OpenAI, Copilot, or AI-specific service is featured. Excluded 'DevOps' and 'Coding' because the article centers on no-code workflows and operational automation, not software development or CI/CD. Excluded 'Security' as there are no security services or patterns discussed.",
+    "timestamp": "2025-11-20 20:07:10 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/announcing-azure-copilot-agents-and-ai-infrastructure-innovations/",
+    "reason": "Succesfully added: Assigned 'AI' category because the announcement centers on Azure Copilot, AI-powered agents, and major AI infrastructure advancements (AI rules 1 and 5). Assigned 'Azure' because the entire announcement is about Azure technologies and services (Azure rule 1). Added 'DevOps' due to extensive coverage of operational automation, agent-based workflows, and modernization tooling for teams (DevOps rules 3, 5, 9). Included 'Security' because of significant emphasis on new Azure security features (Azure Bastion Secure, Network Security Perimeter, Confidential Computing) and operational security architecture (Security rules 1, 4, 9). Did not add 'GitHub Copilot' as content only briefly mentions it alongside Azure Copilot, without technical focus. 'Coding' and 'ML' categories are not assigned as the content does not deeply address code development practices or core ML/data science engineering.",
+    "timestamp": "2025-11-20 20:07:41 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/azure-at-microsoft-ignite-2025-all-the-intelligent-cloud-news-explained/",
+    "reason": "Succesfully added: Assigned AI category because the article covers in-depth Microsoft AI advancements (AI rule 1), specifically Azure AI infrastructure, agent frameworks, model ecosystem expansion, and agentic tools. Azure category is included since all innovations are built on or for Azure, including infrastructure, databases, and cloud services (Azure rule 1). ML is included as multiple sections focus on data, analytics, ML platforms (e.g., Fabric IQ, HorizonDB, SQL Server 2025)—see ML inclusion rules 1, 2, 4, and 9. Security and DevSecOps are prominent with Defender for Cloud, GitHub Advanced Security integrations, agent governance, and Purview (Security rules 1, 4, 5, and 6). DevOps is assigned due to lifecycle management, agent deployment, CI/CD tool integrations, and the unification of developer and security workflows (DevOps rules 1, 2, 5, 6, and 11). No content triggers generic exclusions—multiple product launches are presented with technical explanation, not as sales pitches, and the article is technically focused rather than business/strategy oriented.",
+    "timestamp": "2025-11-20 20:08:12 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/microsoft-databases-and-microsoft-fabric-your-unified-and-ai-powered-data-estate/",
+    "reason": "Succesfully added: Assigned 'AI' because the entire announcement centers on AI readiness, AI model integration, agents, and making data estates suitable for AI workloads (AI rules 1, 4, 5). 'Azure' included due to centrality of Azure services (Azure rules 1, 4, 5, 6), including DocumentDB, HorizonDB, Cosmos DB, and SQL Server integration. 'ML' applies because the content covers data science enhancements (Fabric IQ semantic models, vector search, AI/ML application building, analytics integration—ML rules 1, 2, 4, 6, 7, 9). 'Coding' is included as many new features are developer-targeted (T-SQL enhancements, integrations with Visual Studio Code, GitHub Copilot, dbt jobs—Coding rules 1, 2, 4, 5). Did not assign 'DevOps' as the primary focus is data platforms, not development/release automation, and 'Security' was not assigned since while security features are mentioned, in-depth security implementation is not the main focus. No generic exclusions applied as the news is technical and development-focused throughout.",
+    "timestamp": "2025-11-20 20:08:40 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/microsoft-foundry-scale-innovation-on-a-modular-interoperable-and-secure-agent-stack/",
+    "reason": "Succesfully added: Assigned the AI category because the entire announcement centers on Microsoft Foundry, an AI agent platform, and includes features like model orchestration, RAG (Retrieval-Augmented Generation), and integration of models from OpenAI, Anthropic, Cohere, etc., directly matching AI inclusion rules (1, 3, 4, 5, 6). Assigned Azure because Foundry is tightly integrated with Azure services including Azure AI Search, Microsoft Fabric, Azure App Service, and enables migration and deployment scenarios specific to Azure (Azure rule 1, 3, 4). Assigned Security due to new Foundry Control Plane capabilities focused on identity, policy, Entra ID, Defender, Purview, and integration with GitHub Advanced Security and Defender for Cloud (Security rules 1, 5, 6, 7). Assigned DevOps because of features relating to production agent deployment, integration and monitoring, developer-focused workflow automation, and collaboration tools (DevOps rules 5, 7, 9) plus integration into infrastructure and CI/CD security operations. Did not assign ML category as the main focus is on agent orchestration/infrastructure, not on custom ML/data science workflows from scratch. No generic exclusion rules applied as content is technical, comprehensive, and squarely developer/practitioner focused.",
+    "timestamp": "2025-11-20 20:09:06 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-11-20-enterprise-bring-your-own-key-byok-for-github-copilot-is-now-in-public-preview",
+    "reason": "Succesfully added: Assigned AI category because the content centers on integration and use of large language models from multiple AI providers (AI rules 1 and 5). Assigned GitHub Copilot because the entire update is focused on enabling new enterprise workflows in GitHub Copilot (GitHub Copilot rules 1-4), and per CRITICAL rule both AI and GitHub Copilot must be present. Included DevOps because the announcement focuses on enterprise administration, organization-level controls, model management, and integration into various development environments (DevOps rules 3, 9, and 11). Coding was not assigned as the content is not about source code authoring or programming practice but about workflow, administration, and tooling enhancements.",
+    "timestamp": "2025-11-20 20:09:26 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-11-20-linter-integration-with-copilot-code-review-now-in-public-preview",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' because the content specifically describes features and workflows of GitHub Copilot code review (GitHub Copilot inclusion rules 1 and 2). 'AI' category is always required with 'GitHub Copilot' per the Copilot rule. Added 'DevOps' because repository rulesets, pull request code review, and static analysis workflows directly relate to DevOps practices (DevOps rules 2, 5, 6). Did not assign Azure or ML: the content is not focused on Azure cloud services or machine learning/data science. Did not assign Coding: while code quality is discussed, it's from the perspective of enabling static analysis tooling in workflows, not about programming techniques or language features.",
+    "timestamp": "2025-11-20 20:09:46 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-college-students-can-claim-free-azure-credits-and-start/m-p/4471767#M22343",
+    "reason": "Succesfully added: The content is centered on the Microsoft Azure for Students program, providing a detailed guide for students to claim free Azure credits and utilize Azure cloud services. This qualifies directly for the Azure category (Azure rule 1: Any Azure Service/Technology, including account setup and cloud resources). AI, ML, and Coding categories are not included as the content discusses service eligibility and access rather than technical implementation, code, or development guidance. Tags focus on Azure, cloud services, and educational technology as described in the content.",
+    "timestamp": "2025-11-20 20:10:25 +00:00"
   }
 ]

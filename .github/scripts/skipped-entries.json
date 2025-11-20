@@ -9171,5 +9171,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule: the primary focus is community coworking and Q&A rather than substantive technical content. The title ('Come with your questions about open source, and let's cowork!') indicates it is an open invitation for attendees to ask questions or discuss open source, without presenting specific technical information, tutorials, or educational material. No actual technical content is provided (content field is null), and the description consists entirely of social media/channel links, not technical details. This falls under the 'Question-Only Content' and 'Help-seeking posts without substantive answers or solutions' exclusion rules. No categories assigned.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=MoVjtpSPwIo"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-to-move-azure-devops-organization-to-new-organization/m-p/4471761#M22342",
+    "reason": "Insufficient content length",
+    "timestamp": "2025-11-20 20:10:25 +00:00"
   }
 ]
