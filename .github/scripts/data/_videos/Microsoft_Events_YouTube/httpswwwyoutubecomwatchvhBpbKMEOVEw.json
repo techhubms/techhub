@@ -1,0 +1,17 @@
+{
+  "Description": "Ride the agent revolution with Microsoft Foundry, the one and only enterprise-ready Agent Factory. See how Foundry empowers you to build, test, and launch intelligent agents in record time, then scale them across your enterprise with bulletproof security and seamless integration. From prototype to leveraging tools, memory, knowledge and multi-agent orchestration, to integrate with Microsoft 365, this session is your shortcut to agentic success.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-agenticsolutions 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Yina Arenas \\* David Feldman \\* Mark Oost \\* Tina Schuman \\* Elijah Straight 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK189 | English (US) | Innovate with Azure AI apps and agents, Microsoft Foundry Breakout | Advanced (300) #MSIgnite, #InnovatewithAzureAIappsandagents\n\nChapters: 0:00 - AI agents as the new operating model for work 00:03:00 - Developer challenges in building agents and Foundry’s role 00:04:53 - Foundry Models Catalog and new supported model providers 00:11:12 - Introduction to new Workflow feature and demo setup 00:16:34 - Citrix using hosted agents to transform enterprise productivity 00:28:02 - Compliance and threat protection through Defender and Purview 00:31:20 - Showcase of enterprise adoption and performance improvements across industries 00:35:37 - Evolving from Chat Experiences to Agentic AI Workflows 00:39:00 - Capgemini Collaboration: Industry-Specific AI Studio Using Foundry",
+  "Author": "Microsoft Events",
+  "Tags": [
+    "InnovatewithAzureAIappsandagents",
+    "MSIgnite"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=hBpbKMEOVEw",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-11-20 15:04:36",
+  "Title": "AI agents in Microsoft Foundry ship fast scale fearlessly | BRK189",
+  "FeedLevelAuthor": "Microsoft Events",
+  "PubDate": "2025-11-20T14:49:27+00:00"
+}

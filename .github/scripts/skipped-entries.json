@@ -9111,5 +9111,35 @@
     "timestamp": "2025-11-20 12:08:35 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=WVLPVHCWKA4",
     "reason": "No categories found: No categories assigned due to generic exclusion rules. The content is focused on partner enablement, business transformation, global systems integrators, and advisory partners. It discusses Microsoft's business strategy and ecosystem support for partners, not technical implementation, code, or technical deep-dives. The description and session structure reference innovation, growth, methodology alignment, and business model differentiation, which fall under business strategy and executive content exclusions. There is no substantive technical content, hands-on development, or engineering detail that would qualify for any technology category. Content also includes event links and resources aimed at partner programs, reinforcing exclusion as per business and go-to-market focus outlined in the exclusion rules."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/3xXkJfH3Hnk",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded because it does not provide substantive information for categorization. The content field is null, there is no actual description, and the tags are empty, so there is no way to assess technical detail or relevance to Microsoft technologies. Per generic exclusion rules (focus on actual content, must base decision on provided input only), I cannot assign categories when content and description are missing.",
+    "timestamp": "2025-11-20 14:05:47 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The main focus is Microsoft 365 Copilot Chat, which per explicit product distinction rules is classified as a business productivity tool and not a developer tool. The content discusses productivity features like session memory, voice, and extensibility aimed at leaders integrating Copilot Chat into their AI strategy for workplace productivity, without substantial developer, coding, or technical implementation focus. Additionally, it highlights organizational strategies and high-level business use rather than technical architecture, further triggering the business strategy and non-development Microsoft products exclusion rule.",
+    "canonical_url": "https://www.youtube.com/watch?v=KZn3daSglfA",
+    "timestamp": "2025-11-20 15:07:31 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the content focuses on Microsoft 365 Copilot, Copilot Chat, agents in Teams, and general business productivity/collaboration scenarios, which are excluded under the Copilot and Non-Development Microsoft Products rules in Chapter 3 and the critical Copilot product distinction. The subject is primarily about enhancing workplace collaboration and document automation for organizations rather than technical development, coding, or developer tools. While Teams, SharePoint, and Copilot are mentioned, the entire content is oriented around business and productivity use cases with no substantive development or technical implementation focus.",
+    "canonical_url": "https://www.youtube.com/watch?v=m4mkiZ9bcrA",
+    "timestamp": "2025-11-20 15:08:02 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content has been excluded due to application of the Generic Exclusion Rules for Non-Development Microsoft Products. The session focuses on Windows 365 Frontline, Cloud PCs, and productivity enhancements for various business scenarios such as manufacturing, retail, and call centers. The main topics are device setup, user experience, IT investment optimization, and end-user scenarios, with no substantive technical coverage of development, coding, deployment, or application engineering. No programming languages, developer frameworks, DevOps methodologies, or developer tools were discussed. The innovations focus is strictly on end-user productivity, device management, and IT operations for business environments, which are excluded from categorization as per the workflow's guidelines.",
+    "canonical_url": "https://www.youtube.com/watch?v=naeftpE1DcI",
+    "timestamp": "2025-11-20 15:08:15 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded because it is focused on Microsoft 365 Copilot and App Builder, which are categorized as business productivity tools according to Non-Development Microsoft Products exclusion. The session describes creating productivity apps within Microsoft 365 using Copilot, which is a business productivity rather than a developer platform. Although it discusses some technical features such as code generation and governance, it is fundamentally not targeted at code developers or Microsoft technology implementation for developers, but at enabling end-users and administrators to create solutions in a productivity context. This matches the explicit exclusion for 'Microsoft 365 Copilot,' 'Copilot for Microsoft 365,' and end-user business applications in Chapter 3 and the Copilot Product Distinction in Chapter 2.",
+    "canonical_url": "https://www.youtube.com/watch?v=X1By9wRcFy8",
+    "timestamp": "2025-11-20 15:09:07 +00:00"
   }
 ]

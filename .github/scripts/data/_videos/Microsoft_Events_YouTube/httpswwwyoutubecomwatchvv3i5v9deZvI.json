@@ -1,0 +1,17 @@
+{
+  "Description": "AI-driven threats and expanding attack surfaces demand new defenses. In this session, see how Defender for Cloud unifies security from code to runtime with posture insights, risk prioritization and workload protection across hybrid and multi-cloud.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-Plan\\_Security16 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Drew Nicholas \\* Greg Schellenberg \\* Oz Wilder 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK266 | English (US) Breakout | Intermediate (200) #MSIgnite, #ProtectcloudAIplatformandapps\n\nChapters: 0:00 - Cloud Expansion Driven by AI Adoption and Emerging Risks 00:03:17 - Shift in Threat Paradigm – Attackers Using AI Autonomy 00:05:21 - Microsoft Defender Platform and Cloud Security Integration 00:12:13 - Adversary Actions and Data Theft from Azure Kubernetes Cluster 00:19:20 - Opening Remarks and Transition to Security Discussion 00:19:27 - Introducing Unified Cloud Security Strategy and Recent AI Attack 00:27:55 - Review of attack detection and transition to prevention focus 00:28:18 - Introducing exposure management for proactive defense 00:35:07 - Session wrap-up, customer engagement, and call to action for product trial",
+  "Author": "Microsoft Events",
+  "Tags": [
+    "MSIgnite",
+    "ProtectcloudAIplatformandapps"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=v3i5v9deZvI",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-11-20 15:04:36",
+  "Title": "Secure what matters with a unified cloud security strategy | BRK266",
+  "FeedLevelAuthor": "Microsoft Events",
+  "PubDate": "2025-11-20T14:36:50+00:00"
+}
