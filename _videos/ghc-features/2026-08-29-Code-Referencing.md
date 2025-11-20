@@ -10,7 +10,7 @@ date: 2026-08-29 09:39:31 +00:00
 permalink: "/2026-08-29-Code-Referencing.html"
 viewing_mode: "internal"
 section: "github-copilot"
-ghes_support: "true"
+ghes_support: "false"
 plans: ["Free"]
 alt-collection: "features"
 tags: ["AI", "GitHub Copilot", "Videos"]

@@ -12,6 +12,8 @@ Because we know it's hard to stay up-to-date with the fast changing world of IT,
 
 <h2>Last 4 Roundups</h2>
 <div class="site-roundups">
+  <p>Weekly curated collections of the latest Microsoft technology news, articles, and updates.</p>
+
   <ul>
     {%- assign sorted_roundups = site.roundups | sort: 'date' | reverse -%}
     {% for roundup in sorted_roundups limit:4 %}
@@ -20,6 +22,8 @@ Because we know it's hard to stay up-to-date with the fast changing world of IT,
       </li>
     {% endfor %}
   </ul>
+
+  <p><a href="https://mailchi.mp/1c8d4b5ea99c/tech-hub" target="_blank">Subscribe to our newsletter</a> to get notified when new roundups are published.</p>
 </div>
 
 <h2>Content per category</h2>

@@ -1,27 +1,27 @@
 ---
 layout: "post"
-title: "Web Search with Bing"
-description: "Search the web directly from your coding environment"
+title: "Copilot Coding Agent in Pull Requests"
+description: "Autonomous agent that can implement entire issues by creating PRs"
 author: "TBD"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: ""
 categories: ["AI", "GitHub Copilot"]
-date: 2026-08-29 09:39:31 +00:00
-permalink: "/2026-08-29-Web-Search-with-Bing.html"
+date: 2026-08-29 09:39:32 +00:00
+permalink: "/2026-08-29-Copilot-Coding-Agent-in-Pull-Requests.html"
 viewing_mode: "internal"
 section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
+ghes_support: "false"
+plans: ["Business"]
 alt-collection: "features"
 tags: ["AI", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "github copilot", "videos"]
 ---
 
-This content demonstrates GitHub Copilot's Web Search with Bing feature. Search the web directly from your coding environment<!--excerpt_end-->
+This content demonstrates GitHub Copilot's Copilot Coding Agent in Pull Requests feature. Autonomous agent that can implement entire issues by creating PRs<!--excerpt_end-->
 
 ## Overview
 
-Search the web directly from your coding environment
+Autonomous agent that can implement entire issues by creating PRs
 
 ## Key Features
 

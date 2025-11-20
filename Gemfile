@@ -35,6 +35,8 @@ gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 gem "parallel", "~> 1.27"
 
+gem "logger"
+
 # Development and testing dependencies
 group :development, :test do
   gem "rspec", "~> 3.12"

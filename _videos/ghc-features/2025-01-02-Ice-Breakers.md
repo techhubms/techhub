@@ -10,7 +10,7 @@ date: 2025-01-02 11:21:13 +00:00
 permalink: "/2025-01-02-Ice-Breakers.html"
 viewing_mode: "internal"
 section: "github-copilot"
-ghes_support: "false"
+ghes_support: "true"
 plans: ["Free"]
 alt-collection: "features"
 tags: ["AI", "Code", "GitHub Copilot", "Templates", "Videos"]
@@ -47,7 +47,3 @@ The Ice Breakers feature analyzes your current development context to provide in
 - **Learning Enhancement**: Discover new patterns and best practices
 - **Error Reduction**: Get assistance with common coding mistakes
 - **Consistency**: Maintain consistent coding standards across projects
-
-## GHES Support
-
-This feature is not currently supported in GitHub Enterprise Server (GHES) environments.

@@ -19,9 +19,13 @@ tags_normalized: ["ai", "code review", "github copilot", "pull request", "videos
 
 This video demonstrates GitHub Copilot's Preview for Copilot Workspace feature. Get a preview of the Copilot Workspace environment for better collaboration.<!--excerpt_end-->
 
+**⚠️ DEPRECATED**: The Copilot Workspace technical preview was sunset on May 30, 2025. This feature is no longer available.
+
 {% youtube N64ozm3x88k %}
 
 ## Overview
+
+**Note**: This feature has been discontinued. The technical preview for Copilot Workspace ended on May 30, 2025.
 
 Get a preview of the Copilot Workspace environment for better collaboration.
 
@@ -47,7 +51,3 @@ The Preview for Copilot Workspace feature analyzes your current development cont
 - **Learning Enhancement**: Discover new patterns and best practices
 - **Error Reduction**: Get assistance with common coding mistakes
 - **Consistency**: Maintain consistent coding standards across projects
-
-## GHES Support
-
-This feature is not currently supported in GitHub Enterprise Server (GHES) environments.

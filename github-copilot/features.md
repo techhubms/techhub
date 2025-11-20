@@ -131,7 +131,7 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
           <div class="video-header">
             <h3>{{ video.title }}</h3>
             <div class="video-icons">
-              {% if video.ghes_support %}
+              {% if video.ghes_support == "true" %}
                 <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
               {% else %}
                 <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
@@ -151,7 +151,7 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
         <div class="video-header">
           <h3>{{ video.title }}</h3>
           <div class="video-icons">
-            {% if video.ghes_support %}
+            {% if video.ghes_support == "true" %}
               <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
             {% else %}
               <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
@@ -190,7 +190,7 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
           <div class="video-header">
             <h3>{{ video.title }}</h3>
             <div class="video-icons">
-              {% if video.ghes_support %}
+              {% if video.ghes_support == "true" %}
                 <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
               {% else %}
                 <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
@@ -210,7 +210,7 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
         <div class="video-header">
           <h3>{{ video.title }}</h3>
           <div class="video-icons">
-            {% if video.ghes_support %}
+            {% if video.ghes_support == "true" %}
               <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
             {% else %}
               <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
@@ -249,7 +249,7 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
           <div class="video-header">
             <h3>{{ video.title }}</h3>
             <div class="video-icons">
-              {% if video.ghes_support %}
+              {% if video.ghes_support == "true" %}
                 <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
               {% else %}
                 <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
@@ -269,9 +269,9 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
         <div class="video-header">
           <h3>{{ video.title }}</h3>
           <div class="video-icons">
-            {% if video.ghes_support %}
+            {% if video.ghes_support == "true" %}
               <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
-            {% else %}
+              {% else %}
               <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
             {% endif %}
           </div>
@@ -285,6 +285,4 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
     </div>
   </div>
 
-</div>
-
-<script src="{{ '/assets/js/features.js' | relative_url }}"></script>
+</div><script src="{{ '/assets/js/features.js' | relative_url }}"></script>

@@ -11,7 +11,7 @@ permalink: "/2024-12-16-Local-In-Editor-Code-Reviews.html"
 viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "false"
-plans: ["Free"]
+plans: ["Pro", "Business"]
 alt-collection: "features"
 tags: ["AI", "Code", "Code Review", "Editing", "GitHub Copilot", "IDE", "Videos"]
 tags_normalized: ["ai", "code", "code review", "editing", "github copilot", "ide", "videos"]
@@ -47,7 +47,3 @@ The Local In-Editor Code Reviews feature analyzes your current development conte
 - **Learning Enhancement**: Discover new patterns and best practices
 - **Error Reduction**: Get assistance with common coding mistakes
 - **Consistency**: Maintain consistent coding standards across projects
-
-## GHES Support
-
-This feature is not currently supported in GitHub Enterprise Server (GHES) environments.

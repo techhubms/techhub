@@ -11,7 +11,7 @@ permalink: "/2024-08-14-CLI-Assistance.html"
 viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"
-plans: ["Free"]
+plans: ["Pro", "Business"]
 alt-collection: "features"
 tags: ["AI", "CLI", "Commands", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "cli", "commands", "github copilot", "videos"]
@@ -47,7 +47,3 @@ The CLI Assistance feature analyzes your current development context to provide 
 - **Learning Enhancement**: Discover new patterns and best practices
 - **Error Reduction**: Get assistance with common coding mistakes
 - **Consistency**: Maintain consistent coding standards across projects
-
-## GHES Support
-
-This feature is fully supported in GitHub Enterprise Server (GHES) environments.

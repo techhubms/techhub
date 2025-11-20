@@ -1,5 +1,5 @@
 ---
-mode: 'agent'
+agent: 'agent'
 description: 'Generate new articles for the XPRT magazines.'
 ---
 
