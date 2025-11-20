@@ -1,0 +1,17 @@
+{
+  "FeedLevelAuthor": "Microsoft Events",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "Author": "Microsoft Events",
+  "Title": "Tools and best practices for migrating VMware environments to Azure | BRK141",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "PubDate": "2025-11-20T10:58:45+00:00",
+  "ProcessedDate": "2025-11-20 11:05:19",
+  "Description": "This session is designed specifically for VMware admins who want to accelerate their cloud journey. You’ll learn how to use Azure Migrate to discover and assess VMware workloads, migrate them into Azure, and then manage them with cloud-native tools. We’ll also compare operations tasks like provisioning VMs, setting up high availability, and monitoring health, between vSphere and Azure, helping you gain confidence in running production workloads in the cloud.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-migrateAVS 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Vikram Bansal \\* Jeff Woolsey 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK141 | English (US) | Migrate and modernize your estate, Azure Arc, Azure VMware Solution (AVS) Breakout | Advanced (300) #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Hybrid Cloud as the Common Strategy 00:10:56 - Design, testing, and validation for smooth transition 00:13:04 - Overview of Azure Migrate capabilities and hybrid options 00:23:42 - Detailed network and process-level connection insights 00:24:09 - Defining and tagging application boundaries for Azure Migrate 00:34:03 - Conclusion: Azure Migrate as an end-to-end migration tool 00:36:19 - Demo overview: managing Azure IaaS VMs securely 00:38:38 - Installing and securing Windows Admin Center without public IPs 00:46:03 - Modernization paths and integration with VMware migration",
+  "Link": "https://www.youtube.com/watch?v=fHha3U_EDkM"
+}

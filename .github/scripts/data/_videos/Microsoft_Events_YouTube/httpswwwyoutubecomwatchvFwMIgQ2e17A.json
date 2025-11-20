@@ -1,0 +1,17 @@
+{
+  "FeedLevelAuthor": "Microsoft Events",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "Author": "Microsoft Events",
+  "Title": "Unifying your data journey: Migrating to Microsoft Fabric | BRK225",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Tags": [
+    "MSIgnite",
+    "Unifyyourdataplatform"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "PubDate": "2025-11-20T10:28:39+00:00",
+  "ProcessedDate": "2025-11-20 11:05:19",
+  "Description": "Modernizing and migrating from Azure Synapse Gen 2 and Azure Data Factory can be complex. Microsoft Fabric streamlines this journey with a seamless migration experience. In this session, discover key migration scenarios, best practices, and how Fabric serves as a single destination for data integration, transformation, and analytics - helping you modernize your data estate while reducing complexity and accelerating time to value.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-MicrosoftFabricDataEngineeringPlan 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Jenny Jiang \\* Mark Kromer \\* Priyanka Langade \\* Pushpendra Nagtode 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK225 | English (US) | Unify your data platform, Microsoft Fabric Breakout | Intermediate (200) #MSIgnite, #Unifyyourdataplatform\n\nChapters: 0:00 - Session opening and welcome to attendees 00:07:11 - Pushpendra from Statsig introduces company's mission and data-driven approach 00:11:48 - Warehouse-Native Product Offering and Fabric Integration 00:24:05 - Fabric Warehouse roadmap and resources shared 00:25:08 - Transition from DW migrations to Spark engineering 00:27:55 - Migration pathways and Synapse to Fabric mapping details 00:36:01 - Introduction to Azure Data Factory and Its Global Impact 00:41:17 - Introduction of Copy Job Feature for Simplified Data Movement 00:45:03 - Cloud Accelerate Factory Program and Migration Support Wrap-up",
+  "Link": "https://www.youtube.com/watch?v=FwMIgQ2e17A"
+}

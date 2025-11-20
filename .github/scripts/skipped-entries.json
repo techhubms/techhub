@@ -9075,5 +9075,23 @@
     "canonical_url": "https://dellenny.com/unlocking-project-success-why-solution-architecture-reviews-are-your-secret-weapon/",
     "reason": "No categories found: Content excluded because it does not meet the category inclusion rules: although the article discusses solution architecture reviews in detail, there is no substantive technical coverage of Microsoft technologies, platforms, products, or development tools. The text focuses on general software engineering practices and project management methodologies without reference to Azure, .NET, Power Platform, GitHub, or other Microsoft-specific solutions. This aligns with the explicit guidance to only categorize content where Microsoft technology is central or comprises ≥40% of the substantive content. Additionally, no technical implementation or coding examples tied to the Microsoft ecosystem were present.",
     "collection": "posts"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: this video is focused primarily on business productivity and business applications (ERP systems) rather than development, coding, or technical implementation. While Dynamics 365 and ERP agent concepts are discussed, the session centers on business transformation, user experience, agents, and process orchestration within ERP, which falls under non-development Microsoft products (see Non-Development Microsoft Products generic exclusion rule). There is no substantial technical depth regarding developer guidance, architecture, or coding practices that would meet inclusion for any categories.",
+    "timestamp": "2025-11-20 11:06:53 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=1pnCTUgroo8"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the focus is primarily on business productivity features and maker experiences with Microsoft Power Platform and Microsoft 365 Copilot. The video emphasizes app building via natural language, AI-assisted planning, and no-code/low-code solutions for enterprise modernization but does not provide substantive coverage of development-focused features or technical implementation for developers. Furthermore, segments such as 'Introducing no-code app creation in M365 Copilot' and 'Creating a custom onboarding experience using prompts and work content' center on business productivity rather than coding, DevOps, or developer tooling. According to the Non-Development Microsoft Products exclusion rule and the Copilot Product Distinction (Chapter 2), content about M365 Copilot and Power Platform business automation is excluded because it addresses general organizational productivity and maker experiences, not developer-centric technical implementation.",
+    "timestamp": "2025-11-20 11:09:12 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=GzQhZR2Gmec"
+  },
+  {
+    "reason": "No categories found: Content is excluded based on generic exclusion rules for non-development Microsoft products. The session focuses on Microsoft 365 Copilot, which is categorized as a business productivity tool, not a developer tool (see Chapter 3: Non-Development Microsoft Products exclusion and Chapter 2: Copilot Product Distinction). The video discusses document creation, chat, meeting recaps, generating presentations, and workflow automation—all centered on productivity and end-user features rather than technical implementation or development. Therefore, no categories are assigned.",
+    "timestamp": "2025-11-20 11:10:46 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=r5Yl1wXkdP0"
   }
 ]
