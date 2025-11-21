@@ -1,0 +1,17 @@
+{
+  "Link": "https://www.youtube.com/watch?v=JxoC8siCf8Y",
+  "Title": "Ship faster. Stress Less. Idea to ops with Azure and GitHub Copilot | BRK109",
+  "FeedName": "Microsoft Events YouTube",
+  "Tags": [
+    "InnovatewithAzureAIappsandagents",
+    "MSIgnite"
+  ],
+  "Author": "Microsoft Events",
+  "Description": "Explore how GitHub Copilot and intelligent agents streamline Azure application development from design to operations. This session covers how the Coding Agent, App Modernization agent, and cloud architecture agent accelerate planning and coding, while GitHub Copilot for Azure and the Azure MCP Server simplify deployment and diagnostics. Learn how the SRE Agent and testing agent extend automation into production and quality assurance, enabling end-to-end DevOps with AI-powered workflows.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-AgenticDevOpsGitHubCopilot \\* https://github.com/features/copilot?utm\\_source=brk109-copilot-features-cta&utm\\_medium=web&utm\\_campaign=ghignite25 \\* https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent?utm\\_source=brk109-docs-coding-agent&utm\\_medium=web&utm\\_campaign=ghignite25 \\* https://github.com/features/copilot/copilot-business?utm\\_source=brk109-cfb-features-cta&utm\\_medium=web&utm\\_campaign=ghignite25 \\* https://github.com/features/copilot/agents?utm\\_source=brk109-agents-features-cta&utm\\_medium=web&utm\\_campaign=ghignite25 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Nir Mashkowski \\* Mandy Whaley 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK109 | English (US) | Innovate with Azure AI apps and agents, GitHub Breakout | Advanced (300) Related Sessions: BRK108 -- https://ignite.microsoft.com/sessions/BRK108?wt.mc\\_id=yt\\_ BRK105 -- https://ignite.microsoft.com/sessions/BRK105?wt.mc\\_id=yt\\_ BRK106 -- https://ignite.microsoft.com/sessions/BRK106?wt.mc\\_id=yt\\_ #MSIgnite, #InnovatewithAzureAIappsandagents\n\nChapters: 0:00 - Introductions and Overview of Azure Dev Tools Team 00:09:21 - Introduction to Spec Kit Constitution Command 00:10:14 - Creating a Constitution in VS Code 00:16:25 - Introducing the Build and Maintain Phase with Coding Agent 00:18:46 - Decision to automate with AI-driven SRE agents 00:19:41 - Shift in goal: from omnipotent agent to human-assisting agent 00:29:26 - Integrating PagerDuty, Azure Container Apps, and Datadog for automated remediation 00:30:29 - Setting up PagerDuty SRE sub agent for controlled incident responses 00:36:16 - GitHub Copilot integration for automated issue resolution and code updates",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "ProcessedDate": "2025-11-21 18:06:25",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "PubDate": "2025-11-21T17:19:32+00:00",
+  "OutputDir": "_videos"
+}

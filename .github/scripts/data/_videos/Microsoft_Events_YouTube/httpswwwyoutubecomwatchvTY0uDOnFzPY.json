@@ -1,0 +1,17 @@
+{
+  "Link": "https://www.youtube.com/watch?v=TY0uDOnFzPY",
+  "Title": "Inside Windows Security from client to cloud | BRK258",
+  "FeedName": "Microsoft Events YouTube",
+  "Tags": [
+    "MSIgnite",
+    "Secureyourdata"
+  ],
+  "Author": "Microsoft Events",
+  "Description": "The latest innovations across Windows—from client to cloud—are designed to improve your security posture and protect users, devices and data. Join this session to learn about the newest security capabilities across Windows 11 and Windows 365 to protect users and data, including features like password and identity management, protecting against malware, hotpatching, hardware updates and more. We will also discuss how Cloud PC devices like Windows 365 Link are changing the game in Windows endpoints.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-SecureDevicesMicrosoftIntune 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Katherine Anderson \\* Katharine Holdsworth \\* Pratik Shah 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK258 | English (US) Breakout | Intermediate (200) Related Sessions: BRK343 -- https://ignite.microsoft.com/sessions/BRK343?wt.mc\\_id=yt\\_ BRK340 -- https://ignite.microsoft.com/sessions/BRK340?wt.mc\\_id=yt\\_ #MSIgnite, #Secureyourdata\n\nChapters: 0:00 - Session Introduction by Katie Anderson 00:03:25 - From Hardware to Cloud: Session Overview 00:10:35 - Introduction of PQC certificate changes and simplified developer integration 00:13:35 - Announcement: Sysmon functionality integrated natively into Windows 00:21:16 - Passkey Integration with Windows Hello for Seamless and Secure Logins 00:22:18 - Introduction to Cloud-Based Windows Security – Handing Over to Pratik 00:26:53 - Announcement of Windows Cloud IO Protection Public Preview 00:36:38 - Demo: Configuring Clipboard Protection for Data Security 00:38:41 - Demonstration of Restricting Copy-Paste between Cloud and Local PCs",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "ProcessedDate": "2025-11-21 18:06:25",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "PubDate": "2025-11-21T17:15:06+00:00",
+  "OutputDir": "_videos"
+}

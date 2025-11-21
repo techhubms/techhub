@@ -9393,5 +9393,23 @@
     "reason": "Insufficient content length",
     "collection": "community",
     "timestamp": "2025-11-21 17:12:49 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the content focuses on Microsoft Dynamics 365 Business Central, which is an ERP and business management product. According to the generic exclusion rules under 'Non-Development Microsoft Products,' content about Dynamics 365 (unless development-focused) is excluded. The session description and chapter breakdown focus on business process automation, capacity scaling, and business application features rather than development, integration coding, or technical solution building. There are no details suggesting code, development practices, or architectural implementation covered, and Copilot is referenced in a business productivity/agentic context, not as a developer tool. Therefore, none of the category inclusion rules apply.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=7BuEcgP6RFI",
+    "timestamp": "2025-11-21 18:09:22 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this content is centered around Microsoft Dragon Copilot, which is a healthcare AI productivity assistant targeted at clinical workflows and care teams. According to the Non-Development Microsoft Products exclusion in Chapter 3, business productivity and end-user AI tools such as Microsoft Dragon Copilot (used for automating healthcare documentation and clinical processes) are NOT developer tools, and do not qualify for any categories. There is no substantive developer, coding, DevOps, Azure, or ML focus in the session description; the content discusses workflow optimization, EHR system integration, and healthcare operational improvements, not technical implementation details relevant for development or technical practitioner audiences.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=Qy55nkTO__Y",
+    "timestamp": "2025-11-21 18:13:05 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/happening-in-the-community/the-net-news-daily-newsletter-for-c-developers/m-p/4472070#M44",
+    "timestamp": "2025-11-21 18:13:55 +00:00"
   }
 ]
