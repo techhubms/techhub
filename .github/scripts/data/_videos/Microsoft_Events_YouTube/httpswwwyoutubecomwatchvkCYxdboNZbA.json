@@ -1,0 +1,17 @@
+{
+  "Author": "Microsoft Events",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Events",
+  "EnhancedContent": null,
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ],
+  "Link": "https://www.youtube.com/watch?v=kCYxdboNZbA",
+  "FeedName": "Microsoft Events YouTube",
+  "PubDate": "2025-11-20T17:22:14+00:00",
+  "Title": "Azure Infrastructure for Cloud Native Solutions | BRK175",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "ProcessedDate": "2025-11-20 18:05:12",
+  "Description": "Cloud-native architectures are transforming app development, and Azure’s infrastructure drives this evolution. This session dives into services that help develop and deploy resilient, scalable cloud-native solutions—with real customer insights and field-tested guidance. Learn how VMSS handles stateless workloads, Azure Storage and Container Networking optimize performance and cost, and how Kubernetes and other OSS thrive on Azure with enterprise-grade reliability.\n\nDelivered in a silent stage breakout.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-migrate 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Aaron Davidson \\* Mario Espinoza \\* Igal Figlin 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK175 | English (US) Breakout | Advanced (300) #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Defining cloud native applications and their key characteristics 00:04:17 - Introduction of Aaron Davidson from Databricks and Databricks’ Azure scale 00:08:49 - Using VMSS Delete Instances API for Atomic Scaling 00:11:15 - Transition to VM Lifecycle Management and Introduction to Sharding 00:16:03 - Adopting Zone-Aligned Architecture for Availability and Predictability 00:19:23 - Introduction to Illumia's Breach Containment Platform and use of Azure infrastructure 00:21:06 - How Azure capabilities support detection, aggregation, scaling, and high availability 00:32:02 - Correlation of Threat Intelligence and MITRE Framework Integration 00:40:02 - Closing Remarks and Audience Q&A Invitation"
+}

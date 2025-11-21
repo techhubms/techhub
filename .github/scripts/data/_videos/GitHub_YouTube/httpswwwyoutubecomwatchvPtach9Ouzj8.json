@@ -1,0 +1,18 @@
+{
+  "Author": "GitHub",
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "PubDate": "2025-11-19T15:00:51+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Description": "At GitHub, we believe software must be secure and of high quality by default. AI agents, like GitHub Copilot, are transforming how applications are created, and this presents an unprecedented opportunity to give them better context about your codebase, security requirements, and coding standards.\n\nIn this session, you'll see how GitHub is making this vision a reality with new capabilities (like GitHub Advanced Security) that span the entire developer workflow, from code creation and code review to code lifecycle management. Teams and AI agents can now move faster while maintaining the highest standards for quality and security. Join us to discover what's next for AI-powered development, and get an exclusive preview of innovations that will change how developers and AI work together to improve both security and quality of your code.\n\nSpeakers: Caro Galvin, Senior Product Manager, GitHub (Speaker) Marcelo Oliveira, VP, Product Management, GitHub (Speaker)\n\n#GitHubCopilot #GitHubUniverse #GitHub\n\n— CHAPTERS —\n\n00:00 Welcome and the racing analogy 06:52 Introducing GitHub Code Quality 07:36 Defining code quality standards 12:46 Demo: Code quality in the pull request 15:20 Demo: Fixing legacy code with AI 19:20 Sneak peek: Organization-level dashboards 21:13 Why GitHub Code Quality is unique\n\nWatch more videos from GitHub Universe 2025: https://www.youtube.com/watch?v=nSwj2Ma0pnk&list=PL0lo9MOBetEFKNlPHNouEmVeYeyoyGTXC\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 100 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "ProcessedDate": "2025-11-19 15:04:26",
+  "Link": "https://www.youtube.com/watch?v=Ptach9Ouzj8",
+  "Tags": [
+    "GitHub",
+    "GitHubCopilot",
+    "GitHubUniverse"
+  ],
+  "FeedLevelAuthor": "GitHub",
+  "Title": "Scaling code quality in the age of AI",
+  "FeedName": "GitHub YouTube"
+}

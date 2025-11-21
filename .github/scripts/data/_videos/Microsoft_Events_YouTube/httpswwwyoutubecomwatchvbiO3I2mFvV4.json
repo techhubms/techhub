@@ -1,0 +1,17 @@
+{
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "PubDate": "2025-11-20T16:42:03+00:00",
+  "FeedName": "Microsoft Events YouTube",
+  "OutputDir": "_videos",
+  "Description": "Learn how Managed Instance on Azure App Service is purpose-built to remove common migration blockers, from file access and custom installers, to system commands, by running legacy ASP.NET apps without code changes. Get proven tactics to accelerate migration, gain higher performance, efficiently scale, and lower TCO. Plus, see how the platform helps to integrate with the Azure AI ecosystem and add AI innovation to your migrated applications.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-AAI\\_TDMApps\\_Plan 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Scott Hunter \\* Gaurav Seth \\* Andrew Westgarth 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK102 | English (US) | Migrate and modernize your estate, Azure App Service Breakout | Advanced (300) #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Introduction to Azure App Service Managed Instance for easy on-prem to cloud migration 00:11:06 - Customer feedback on App Service sandbox limitations 00:11:34 - Announcement of Azure App Service Managed Instance 00:16:37 - Demonstration of using configuration scripts to install dependencies and setup instance 00:18:45 - Selecting container and specifying zip file for setup 00:19:01 - Explaining managed identity for secure communication between App Service and Storage 00:30:01 - Migrating Legacy App to Azure App Service without Code Changes 00:33:59 - Connecting Legacy Inventory API to Agentic Framework via Managed Instance 00:38:50 - Announcements: GitHub Copilot Tools, Public Preview, and Q&A Session",
+  "Author": "Microsoft Events",
+  "ProcessedDate": "2025-11-20 17:05:07",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ],
+  "Title": "Technical deep dive on Managed Instance for App Service | BRK102",
+  "Link": "https://www.youtube.com/watch?v=biO3I2mFvV4"
+}

@@ -1,0 +1,17 @@
+{
+  "ProcessedDate": "2025-11-18 18:04:33",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "Author": "Allison",
+  "OutputDir": "_news",
+  "PubDate": "2025-11-18T17:30:51+00:00",
+  "Title": "Custom agents available in GitHub Copilot for JetBrains, Eclipse, and Xcode now in public preview",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2025-11-18-custom-agents-available-in-github-copilot-for-jetbrains-eclipse-and-xcode-now-in-public-preview",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "Custom agents are now in public preview for JetBrains IDEs, Eclipse, and Xcode, allowing you to package reusable expertise, guardrails, and tool access into AI agents tailored to your project…\n\nThe post [Custom agents available in GitHub Copilot for JetBrains, Eclipse, and Xcode now in public preview](https://github.blog/changelog/2025-11-18-custom-agents-available-in-github-copilot-for-jetbrains-eclipse-and-xcode-now-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).",
+  "EnhancedContent": "[Custom agents](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-custom-agents) are now in public preview for JetBrains IDEs, Eclipse, and Xcode, allowing you to package reusable expertise, guardrails, and tool access into AI agents tailored to your project or organization.\n\n## What’s new\n\nCustom agents bring customization to your chat mode by letting you specify name, description, tools, and models. Create specialized AI agents tailored to your workflows and coding standards in JetBrains, Eclipse, and Xcode. Define agents using Markdown files that specify prompts, so you can pick them up and run in your IDEs quickly.\n\n## Try it out\n\n1. **Update your IDE**: Install the latest Copilot extension for your JetBrains IDE, Eclipse, or Xcode to access the custom agents preview.\n2. **Create a custom agent**: Follow the [custom agents quickstart](https://docs.github.com/copilot/tutorials/customization-library/custom-agents/your-first-custom-agent) and [how-to guide](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents) to generate a starter configuration file describing the agent’s name, description, instructions, knowledge sources, and tool policies.\n3. **Pick the custom agent**: In Copilot Chat, select your custom agent from the list of available agents.\n4. **Test the agent**: Start the conversation under the current custom agent.\n\n## Share your feedback\n\nYour feedback drives our roadmap. Let us know how custom agents are working for you by using the feedback controls in your IDE or through your existing Copilot support channels.\n\n- **In-product feedback**: Use the feedback options within your IDE.\n- **GitHub discussions**: Share your thoughts in the following channels:\n- JetBrains [GitHub Copilot in JetBrains feedback repository](https://github.com/microsoft/copilot-intellij-feedback/issues)\n- Eclipse [GitHub Copilot in Eclipse feedback repository](https://github.com/microsoft/copilot-eclipse-feedback/issues)\n- Xcode [GitHub Copilot in Xcode feedback repository](https://github.com/github/CopilotForXcode/issues)"
+}

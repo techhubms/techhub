@@ -1,0 +1,22 @@
+{
+  "PubDate": "2025-11-18T19:13:32+00:00",
+  "FeedName": "Microsoft Developer YouTube",
+  "Link": "https://www.youtube.com/watch?v=H_uAA5_h40E",
+  "Description": "Welcome to this episode of Sip and Sync with Azure, where we explore how Voice AI Agents can revolutionize customer experiences. In this demo-driven session, Pablo Salvador Lopez from the AI GBB team showcases a real-world insurance claim scenario powered by Azure services. Watch as voice agents handle multilingual conversations, intent-based handoffs, and complex workflows—all in real time. We’ll also break down the architecture behind these voice-to-voice agents, including:\n\n- AI layer with multi-agent orchestration\n- Speech-to-text and text-to-speech integration\n- Application layer using WebSocket and WebRTC\n- Telephony integration with Azure Communication Services\n\nWhether you’re building customer service bots or exploring Voice Live API, this episode gives you the insights and resources to get started.\n\nWhat You’ll Learn ✅ How Azure Speech Services enable real-time multilingual voice interactions ✅ Why multi-agent orchestration is key for specialized tasks ✅ How to integrate voice pipelines using WebSocket and WebRTC ✅ Best practices for building scalable voice-to-voice AI applications ✅ How to use Voice Live API for faster development\n\nChapters 00:00 - Welcome to Sip and Sync: Voice AI Agents 00:23 - Jumping into the Demo: Filing an Insurance Claim 01:05 - Multilingual Interaction: Switching Between English and Spanish 02:20 - Agent Handoff: From Claims to Policy Questions 03:15 - Policy Details and Rental Car Coverage 04:31 - Back to Claims: Starting the Process 06:03 - Gathering Incident Details: Location, Time, and Car Info 07:38 - Claim Summary and Confirmation 09:03 - Wow Moments: Language Detection and Seamless Agent Transfers 10:04 - Architecture Deep Dive: AI, Application, and Telephony Layers 12:04 - Multi-Agent Orchestration and Voice Integration 13:25 - DIY Architecture and Voice Live API 14:18 - Closing Thoughts and How to Get Started 🎙️ Speakers: Pablo Salvador Lopez - Principal Solution Engineer LinkedIn: https://www.linkedin.com/in/pablosalvadorlopez/ Priyanka Vergadia – Principal Cloud Advocate, Microsoft LinkedIn: https://www.linkedin.com/in/pvergadia/ X (Twitter): https://x.com/pvergadia\n\nResources Repo with source code: https://aka.ms/artagentcode 🚀 Try Azure for free: https://aka.ms/AzureFreeTrialYT 📚 Learn more about Azure Speech Services: https://azure.microsoft.com/products/ai-foundry/tools/speech?msockid=1c274b0280816da50d025e2a813b6c77 ⚡ Explore Voice Live API: https://learn.microsoft.com/azure/ai-services/speech-service/voice-live 🎯 Multi-Agent Accelerator: https://github.com/microsoft/Multi-Agent-Custom-Automation-Engine-Solution-Accelerator 🔍 All Sip and Sync episodes: https://aka.ms/SipAndSyncPlaylist\n\nHashtags #Azure #VoiceAI #AzureOpenAI #SpeechServices #AI #MachineLearning #CloudComputing #SipAndSync #AzureCommunicationServices #VoiceLiveAPI #MultiAgentArchitecture #MicrosoftDeveloper",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Title": "Building Omnichannel Voice AI Agents with Azure | Multilingual, Multi-Agent Architecture Explained",
+  "Author": "Microsoft Developer",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "ProcessedDate": "2025-11-18 20:04:09",
+  "EnhancedContent": null
+}

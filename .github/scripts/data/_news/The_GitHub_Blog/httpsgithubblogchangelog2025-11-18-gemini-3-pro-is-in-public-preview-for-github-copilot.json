@@ -1,0 +1,17 @@
+{
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedName": "The GitHub Blog",
+  "OutputDir": "_news",
+  "PubDate": "2025-11-18T16:15:31+00:00",
+  "Title": "Gemini 3 Pro is in public preview for GitHub Copilot",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "ProcessedDate": "2025-11-18 17:03:48",
+  "EnhancedContent": "Gemini 3 Pro, Google’s latest frontier model, is now rolling out and will be available in [GitHub Copilot Pro, Pro+ Business, and Enterprise](https://github.com/features/copilot/plans) subscriptions. Rollout will be gradual. Check back soon if you don’t see it yet.\n\n**How it works**\n\nYou’ll be able to select the model in the Copilot Chat model picker from:\n\n- VS Code in Agent, Plan, Ask, and Edit mode\n- github.com\n- GitHub Mobile iOS and Android\n- GitHub CLI\n\n### **Enabling access**\n\n- **Enterprise and Business plans**: Administrators must enable the Gemini 3 Pro policy in Copilot settings. Once enabled, users in that organization will see Gemini 3 Pro in supported surfaces.\n- **Pro and Pro+ plans**: Enable by selecting the model in the Visual Studio Code picker and confirming the one-time prompt.\n- **Bring your own key**: Select **Manage Models** from the picker, choose Gemini 3 Pro, and enter your API key when prompted.\n\n### **Learn more and share feedback**\n\nTo explore all models available in GitHub Copilot, see our [documentation](https://docs.github.com/copilot/reference/ai-models/supported-models).\n\nJoin the [GitHub Community](https://github.com/orgs/community/discussions/categories/copilot-conversations) to share your feedback.\n\n![social](https://github.com/user-attachments/assets/e57dd6e2-24bf-42e0-abac-b948a5725caa)",
+  "Author": "Allison",
+  "Link": "https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "Gemini 3 Pro, Google’s latest frontier model, is now rolling out and will be available in GitHub Copilot Pro, Pro+ Business, and Enterprise subscriptions. Rollout will be gradual. Check back…\n\nThe post [Gemini 3 Pro is in public preview for GitHub Copilot](https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot) appeared first on [The GitHub Blog](https://github.blog)."
+}

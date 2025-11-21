@@ -1,0 +1,22 @@
+{
+  "EnhancedContent": null,
+  "PubDate": "2025-11-19T23:05:59+00:00",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Author": "Microsoft Developer",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Title": "Chat with Microsoft Foundry models (Python)",
+  "Link": "https://www.youtube.com/watch?v=ix0kJMVI0tk",
+  "Description": "Learn how to chat directly with deployed Microsoft Foundry models using Python in Visual Studio Code.\n\nTry it yourself in Microsoft Foundry: https://ai.azure.com\n\nGet sample code from this episode: https://aka.ms/insideMF/samples\n\nLearn More about Azure AI Foundry Model and Tools announcements at https://aka.ms/model-mondays\n\nJoin the Discord: https://aka.ms/insideMF/discord Hop on Forum: https://aka.ms/insideMF/forum\n\nChapter Markers\n\n00:00 - 00:02 - Introduction 00:03 - 01:06 - Deploy a model 01:07 - 05:38 - Setup environment 05:39 - 07:53 Run code",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "ProcessedDate": "2025-11-20 00:09:32",
+  "FeedName": "Microsoft Developer YouTube"
+}
