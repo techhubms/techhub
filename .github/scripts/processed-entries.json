@@ -19076,5 +19076,11 @@
     "reason": "Succesfully added: Categories assigned as follows: Azure because content focuses on Azure CLI, Azure PowerShell, and Azure resource management (Azure Rule 1). DevOps assigned due to emphasis on deployment workflows, safe change validation, and infrastructure automation practices (DevOps Rule 5, 6). AI category added because it describes behind-the-scenes AI translation from CLI commands to Bicep templates (AI Rule 3). ML category omitted: no data science, analytics, or ML development involved; focus remains on infrastructure automation and preview tooling. Coding is not assigned since no programming language, framework, or code-level development is discussed. All Generic Exclusion Rules checked and none apply: content is technical, English, non-biographical, and sufficiently detailed.",
     "timestamp": "2025-11-21 19:07:14 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-tools-blog/gaining-confidence-with-az-cli-and-az-powershell-introducing/ba-p/4472147"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is a cloud platform service under Azure, and the mirroring workflow is an Azure-native capability (Azure rule 1). Assigned ML category since the content emphasizes optimizing mirrored tables for downstream AI/ML and BI analytics use cases (ML rule 1, 4, and 9). Did not assign AI because the focus is enabling AI/BI usage rather than AI development and does not discuss direct integration or use of Microsoft AI services (AI rule 4). All generic exclusion rules were checked; content is technical, non-biographical, and not business strategy or sales-focused.",
+    "timestamp": "2025-11-21 20:06:30 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/mirroring-uploading-your-csvs-is-now-simpler-than-ever-before/",
+    "collection": "news"
   }
 ]
