@@ -1,0 +1,17 @@
+{
+  "Link": "https://www.youtube.com/watch?v=zOy-tA1Zb0g",
+  "PubDate": "2025-11-21T06:32:50+00:00",
+  "Description": "Discover how the Windows Developer Platform empowers IT decision-makers with enterprise-ready tools. This session offers a comprehensive look at the latest in local AI development, MCP-powered agentic workflows, and modern development tools—empowering enterprises to build intelligent, secure, and scalable solutions across the Windows ecosystem.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-scalecloud 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Alyanna Castillo \\* Aditya Ramnathkar 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK328 | English (US) Breakout | Intermediate (200) #MSIgnite, #ScalewithcloudandAIendpoints\n\nChapters: 0:00 - Introduction and Welcome to Ignite Session on Windows Development 00:00:17 - Speakers Introduce Themselves and Their Roles at Microsoft 00:05:00 - Introduction of Three Core Fundamentals: Agent Connectors, Agent Workspace, and Agent ID 00:11:23 - Partnerships with developers building next-generation AI agents 00:14:05 - Benefits of running AI locally: privacy, performance, cost and offline capabilities 00:19:20 - Customizing AI with Windows APIs, semantic search, and LoRA adapters demo 00:25:00 - Interactive demo and explanation of Foundry Local model execution 00:29:15 - Winget Configuration demo and creating exportable developer environment setup 00:34:46 - Applying configuration—Windows settings updated successfully",
+  "Author": "Microsoft Events",
+  "ProcessedDate": "2025-11-21 07:04:51",
+  "Tags": [
+    "MSIgnite",
+    "ScalewithcloudandAIendpoints"
+  ],
+  "FeedLevelAuthor": "Microsoft Events",
+  "FeedName": "Microsoft Events YouTube",
+  "OutputDir": "_videos",
+  "Title": "Windows Development for Business: Secure, Scalable, & AI-ready | BRK328",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+}

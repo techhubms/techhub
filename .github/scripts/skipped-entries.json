@@ -9183,5 +9183,23 @@
     "canonical_url": "https://news.xbox.com/en-us/2025/11/20/xbox-partner-preview-november-2025-recap/",
     "collection": "news",
     "reason": "No categories found: Content excluded because it does not meet category inclusion rules. This news article is primarily focused on gaming announcements, Xbox platform news, and upcoming third-party/exclusive game releases. There is no substantial technical content related to Microsoft developer tools, AI, Azure, coding, DevOps, ML, or security. All details relate to games, DLC, Xbox features for consumers, and gaming hardware/software, which are outside the scope of predefined categories that focus on technical development, engineering, programming, or technical architecture. Generic exclusions for non-development Microsoft products and consumer applications apply. No applicable categories assigned."
+  },
+  {
+    "timestamp": "2025-11-21 07:05:59 +00:00",
+    "reason": "No categories found: Content excluded based on generic exclusion rules. This video discusses agentic productivity features in Microsoft 365 apps (Word, Excel, PowerPoint, Outlook) and Copilot Chat, which are business productivity tools, not developer tools. The focus is on end-user empowerment and workflow productivity, not development, coding, or technical implementation. Per the 'Non-Development Microsoft Products' exclusion rule and Copilot product distinction, content about Microsoft 365 Copilot, Copilot for Microsoft 365, Office Copilot, and general productivity features is explicitly excluded from all categories.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=VzKARba0d2g"
+  },
+  {
+    "timestamp": "2025-11-21 07:06:11 +00:00",
+    "reason": "No categories found: Excluded all categories due to generic exclusion rules: the content focuses on product design, engineering philosophy, device accessibility, hardware innovation, and general Surface device features. There is no discussion of hands-on development, coding, Microsoft developer tools, AI/ML engineering (beyond mentioning 'AI-powered experiences' in passing), or actionable implementation with Microsoft cloud or technical services from a practitioner/development perspective. The session centers on human-centered hardware and design, product repairability, and consumer/business device use—none qualify for the predefined technical categories. Exclusion aligns with Non-Development Microsoft Product and Business/Productivity exclusion rules in Chapter 3.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=XBp15voriIo"
+  },
+  {
+    "timestamp": "2025-11-21 07:06:24 +00:00",
+    "reason": "No categories found: No categories assigned. Content primarily focuses on Windows 11 as an operating system, its productivity and manageability features, and integrations with Microsoft 365 Copilot (business productivity), as seen in the description and chapter list. The coverage centers on IT leader benefits, operational efficiency, device management, and end-user/workplace productivity features (Copilot for Microsoft 365, Windows Copilot+) rather than developer tools, coding, or technical implementation details. According to generic exclusion rules and Copilot product distinctions, OS end-user/project management content and business-focused Copilot integrations must be excluded. No substantial mention of development-related topics, coding, DevOps, Azure services, or technical architecture implementation. Therefore, all categories are excluded.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=Zk4Auaryigk"
   }
 ]
