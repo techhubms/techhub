@@ -19082,5 +19082,17 @@
     "timestamp": "2025-11-21 20:06:30 +00:00",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/mirroring-uploading-your-csvs-is-now-simpler-than-ever-before/",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=-6RoQm6Wwyo",
+    "collection": "videos",
+    "timestamp": "2025-11-21 21:06:26 +00:00",
+    "reason": "Succesfully added: Content was assigned 'Azure' category because it centers on Azure SQL updates and cloud platform announcements (Azure rule 1). 'ML' category is included because SQL Database integration with Microsoft Fabric directly relates to data engineering and analytics workloads, which fall under ML category rules 1, 3, and 4. Although details on ML workflows are not explicit, Fabric's core use case is analytics/data science, triggering ML inclusion. No Coding, DevOps, AI, or Security categories were added, as content focuses on platform/news and product GA announcements rather than technical implementation or code-centric tutorials. No generic exclusion rules applied; content is Microsoft-focused, technical, and directly relevant for developer and data engineering audiences."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-foundry-control-plane-support-for-logic-apps-agent/ba-p/4472182",
+    "collection": "community",
+    "timestamp": "2025-11-21 21:07:05 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the Foundry Control Plane provides enterprise governance of AI agents (AI inclusion rule 1, 4, 5). Assigned Azure since Logic Apps Agent Loop and Foundry Control Plane are Microsoft Azure services and features (Azure inclusion rule 1, 4, 5). Did not add Coding since the content focuses on platform usage, governance, and operational procedures rather than actual software development or code examples. ML, Security, DevOps, and GitHub Copilot categories are not included because the article does not discuss data science, coded ML implementations, specific security architecture/configuration details, or DevOps toolchains. All content is technical, English, over 200 words, and not excluded by any generic exclusion rule."
   }
 ]

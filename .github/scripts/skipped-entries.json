@@ -9417,5 +9417,11 @@
     "timestamp": "2025-11-21 20:06:44 +00:00",
     "canonical_url": "https://news.xbox.com/en-us/2025/11/21/the-full-screen-experience-is-available-for-xbox-insiders-starting-today/",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/XoOsfrMjYvw",
+    "collection": "videos",
+    "timestamp": "2025-11-21 21:06:40 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: the provided description and tags focus exclusively on Visual Studio Code features for chat-driven file changes, without any mention of Microsoft development frameworks, programming languages, cloud services (e.g., Azure), DevOps processes, AI/ML, or security configuration. The description is solely about an editor feature (checkpoints in VS Code), which does not meet any of the specific inclusion rules for the predefined categories (AI, GitHub Copilot, Coding, DevOps, Azure, ML, Security). The video does not contain any technical information about development with Microsoft technologies, nor does it showcase integration with those technologies. As per the rules, VS Code editor features without Microsoft platform development context are excluded."
   }
 ]
