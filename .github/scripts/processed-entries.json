@@ -18758,5 +18758,29 @@
     "timestamp": "2025-11-21 13:18:11 +00:00",
     "reason": "Succesfully added: Assigned AI category because the core of the session is building AI applications with agentic AI, low-code, and full-code workflows (AI inclusion rules 1 and 4). Assigned Azure category because the C3 Agentic AI Platform is explicitly described as built on Microsoft Azure and uses Microsoft Fabric as the data layer (Azure inclusion rule 1). Assigned Coding category as the session demonstrates application building via Visual Studio Code and code refinement, targeting developers as well as low-code builders (Coding rule 2 and rule 5). The session exceeds the 40% Microsoft technology threshold, focusing on Azure and Fabric, making Microsoft tech central to the solution. No other categories apply, as the main focus is AI application development and integration with Microsoft cloud/data technologies.",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category based on strong focus throughout the content on Microsoft AI products (Azure OpenAI, AI-powered infrastructure, AI skills, and AI-powered solutions as per AI inclusion rules 1 and 4). Assigned Azure because the initiatives discussed are predicated on Microsoft's Azure platform (Azure inclusion rule 1) with local Azure regions, compliance-focused cloud services, and Azure OpenAI-powered government solutions. Coding, DevOps, Security, ML, or GitHub Copilot categories were not assigned as the article does not present in-depth developer, coding, DevOps, security, or custom ML engineering topics or GitHub Copilot usage. The article is not business-productivity focused (which would exclude Microsoft 365 Copilot content), and it qualifies as it provides meaningful technical context rather than just corporate strategy.",
+    "canonical_url": "https://news.microsoft.com/source/asia/2025/11/18/microsoft-announces-landmark-strategic-commitment-to-accelerate-thailands-ai-powered-growth-and-inclusive-innovation/",
+    "collection": "news",
+    "timestamp": "2025-11-21 14:05:33 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because Copilot Studio is a Microsoft maker/developer AI tool (AI Inclusion Rule 1) and the session discusses building and managing AI-powered agents on the Power Platform. Assigned 'Security' because the session explicitly covers strategies for data protection, compliance, governance, monitoring, and operational health within enterprise solutions (Security Inclusion Rules 1, 2, 3, and 4). While development and operations are mentioned, core emphasis remains on security, governance, and AI agents on Power Platform and Copilot Studio, not general coding or Azure-specific details. Input type is 'videos', and there are no generic exclusion rules triggered (content is not biographical, job-related, non-English, or unconstructive).",
+    "canonical_url": "https://www.youtube.com/watch?v=3lIrMl2Y8f0",
+    "collection": "videos",
+    "timestamp": "2025-11-21 14:06:13 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category as the entire session centers on how Microsoft and its partners leverage AI to drive industry innovation (AI rule 1, 4, 5). Assigned Azure because of direct references to Azure-powered solutions and partnerships (Azure rules 1, 4, 6); examples include ServiceNow with Azure and AI agents built on Microsoft cloud services. Did not assign Coding, ML, DevOps, Security, or GitHub Copilot because there is no technical depth into programming, ML engineering, DevOps, or security practices within the session description, and no mention of Copilot developer tools. Content is technically focused and does not trigger any generic exclusion rules.",
+    "canonical_url": "https://www.youtube.com/watch?v=qeRDuU1XnwE",
+    "collection": "videos",
+    "timestamp": "2025-11-21 14:07:27 +00:00"
+  },
+  {
+    "reason": "Succesfully added: The content is based on a Microsoft Ignite session focused on the administration, security, and compliance of AI agents in Microsoft 365 Admin Center. There is extensive discussion of security context (integration with Entra/AD), agent permissions, policy templates, exception monitoring, and risk management. This justifies inclusion of the 'Security' category (Security rules 1, 2, 4, 5, 7, and 9). While AI agents are the operational subject, the content does not detail code development, integration, or custom AI solution architecture—it is administration/support/monitoring from a security perspective. 'AI' category was not assigned because the focus is not on AI development or usage, but rather on IT and security management, in line with the AI category inclusion rules. There is no detailed focus on Coding, DevOps, Azure, or ML. The tags reflect major products, management features, and security/compliance topics discussed in the session.",
+    "canonical_url": "https://www.youtube.com/watch?v=S6JHew4W3Ik",
+    "collection": "videos",
+    "timestamp": "2025-11-21 14:07:46 +00:00"
   }
 ]

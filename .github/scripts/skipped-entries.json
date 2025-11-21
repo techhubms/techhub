@@ -9267,5 +9267,35 @@
     "timestamp": "2025-11-21 13:18:25 +00:00",
     "reason": "No categories found: No categories assigned due to the application of multiple generic exclusion rules. The content description primarily focuses on a discussion about the possible discontinuation of the Nuke open-source project without providing technical implementation details, tutorials, analysis, or educational value related to Microsoft technologies (Coding, DevOps, etc.). The description and title are mainly promotional (mentioning sales, promotions, workshops, and social media) and do not present substantive technical material directly. There is also a lack of main content text to assess technical depth or coverage. Per the workflow, promotional/sales pitch content and content lacking actionable technical substance are excluded according to the Generic Exclusion and Content Quality rules in Chapter 3.",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: No categories assigned due to generic exclusion rules. The content is primarily focused on business strategy and partner incentives within the Microsoft ecosystem (see Non-Development Microsoft Products, Business Strategy and Executive Content, and Workplace and Business Focus generic exclusion rules in Chapter 3). While technologies like Microsoft 365 Copilot, Power Platform, Security, Purview, and Entra are mentioned, the context is business growth, investment, partner revenue, and strategic alignment for partners—not technical implementation, architecture, or development. The video does not provide technical details or actionable guidance for developers or technical practitioners but rather discusses the portfolio, incentives, and business opportunity at a partner/executive level.",
+    "canonical_url": "https://www.youtube.com/watch?v=CBikiOmtL7I",
+    "collection": "videos",
+    "timestamp": "2025-11-21 14:06:27 +00:00"
+  },
+  {
+    "reason": "No categories found: All categories are excluded due to the 'Non-Development Microsoft Products' generic exclusion rule, as the session is focused on business productivity tools like Microsoft 365 Copilot and Copilot Chat, which are not developer tools (Generic Exclusion: Non-Development Microsoft Products, Copilot Product Distinction). The session covers go-to-market (GTM) strategy for partners, monetization, and customer engagement—these are business and sales process topics rather than technical, development, or implementation content relevant to Microsoft practitioners. No substantial technical or development-related details are provided about Microsoft technologies.",
+    "canonical_url": "https://www.youtube.com/watch?v=j_bClqzsom4",
+    "collection": "videos",
+    "timestamp": "2025-11-21 14:06:40 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content, as described, primarily focuses on business opportunity, economic value, and partner enablement for Microsoft's data platform in the AI era. It lacks substantive technical implementation details, specific architecture, code, or hands-on guidance. According to the generic exclusion rules: high-level business strategy, industry trends, market analysis, and content targeting executives or business decision-makers (not practitioners) are excluded. The description highlights partner earnings, economic opportunity, and available resources, but provides no technical depth or actionable technical information needed to qualify for any Microsoft technology category.",
+    "canonical_url": "https://www.youtube.com/watch?v=KWiY8zjzISk",
+    "collection": "videos",
+    "timestamp": "2025-11-21 14:06:52 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content is focused on partner business strategy, sales enablement, marketplace opportunities, and Microsoft channel programs instead of technical content relevant to developers or consultants. The description and chapter breakdown detail strategies for partners to grow business, marketplace economics, and sales collaboration, which all fall under executive/business and sales content, triggering the 'Business Strategy and Executive Content' and 'Workplace and Business Focus' generic exclusion rules in Chapter 3. There is no coverage of specific technical implementation, developer tools, coding, Azure service configuration, DevOps practices, security, ML/data programs, or hands-on AI development.",
+    "canonical_url": "https://www.youtube.com/watch?v=NmgusUF8Hmc",
+    "collection": "videos",
+    "timestamp": "2025-11-21 14:07:05 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories were assigned due to the application of generic exclusion rules. The content is primarily about Microsoft Marketplace as a source for AI-powered business applications and Copilot agents that enhance productivity and business solutions. Specific mentions of Microsoft 365 Copilot, agents within Copilot, and business outcomes indicate a strong focus on business productivity tools rather than technical or developer-oriented implementations. There is no substantive coverage of coding, Azure development, DevOps, security, or ML engineering. Additionally, as per the CRITICAL Copilot Product Distinction, any content primarily about Microsoft 365 Copilot, Copilot for Microsoft 365, or business-focused AI agents (document creation, general office work) must be excluded and assigned no categories, even if AI or Microsoft products are mentioned. Thus, the exclusion is required by the Non-Development Microsoft Products and Copilot Product Distinction rules.",
+    "canonical_url": "https://www.youtube.com/watch?v=UfFRQ54vDpk",
+    "collection": "videos",
+    "timestamp": "2025-11-21 14:07:59 +00:00"
   }
 ]
