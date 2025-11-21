@@ -62,6 +62,7 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
           <li>User management and policies</li>
           <li>Content exclusions</li>
           <li>Audit logs</li>
+          <li>300 premium requests per month</li>
         </ul>
         <div class="tier-link">
           <a href="#videos-pro">View Features →</a>
@@ -92,6 +93,7 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
         <p>Full enterprise features and controls ($39 USD per user per month)</p>
         <ul>
           <li>Everything in Business</li>
+          <li>1000 premium requests per month</li>
           <li>Copilot knowledge bases</li>
           <li>Advanced compliance and security features</li>
           <li>Custom policies and content exclusions</li>
