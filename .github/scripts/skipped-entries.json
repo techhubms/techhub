@@ -9225,5 +9225,17 @@
     "reason": "No categories found: No categories assigned because the content is primarily business-focused, discussing partner profitability, go-to-market strategies, and high-level business opportunities with Microsoft AI and cloud solutions. There is no substantial technical implementation detail, coding, architecture, or actionable technical guidance as required for inclusion (see Generic Exclusion Rules: Business Strategy and Executive Content, and Workplace and Business Focus). The description and session details focus on profitability, strategies, and business growth rather than technical practices, development, or architectural detail with Microsoft technologies.",
     "timestamp": "2025-11-21 11:09:16 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The description and chapter breakdown indicate that this session focuses on high-level AI business strategy, industry transformation, leadership conversations, and organizational impact rather than technical implementation details. The session features marketing and business executives (Corporate Vice President of Industry Marketing, industry leaders), discusses innovations and measurable business impact, and targets cross-industry inspiration for moving from experimentation to impact with AI. There is no substantive developer-focused technical detail, architectural explanation, or any central coverage of Microsoft technology beyond general mentions of 'agentic AI' and organizational outcomes. As per the Business Strategy and Executive Content exclusion rule, as well as the Workplace and Business Focus exclusion, this content is not eligible for categorization.",
+    "collection": "videos",
+    "timestamp": "2025-11-21 12:07:56 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=0Vc8b2h_kQ4"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content is focused on enhancing accessibility within AI-powered learning experiences and Microsoft's skilling strategy, rather than on technical development, implementation, coding, or development tools. It covers how Microsoft creates accessible learning platforms and integrates accessibility content, but does not discuss programming, development methodologies, Azure, ML, DevOps practices, security implementation, or specific developer tools. Additionally, no Microsoft AI developer technologies or frameworks are featured beyond high-level learning/education strategy, and the session details emphasize accessibility, leadership, and human skills rather than technical implementation. As per generic exclusion rules for business strategy, organizational planning, and non-development end-user products, all categories are excluded.",
+    "collection": "videos",
+    "timestamp": "2025-11-21 12:08:49 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=LuJSA_v7NM4"
   }
 ]

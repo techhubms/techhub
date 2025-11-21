@@ -18656,5 +18656,41 @@
     "reason": "Succesfully added: Assigned Security category because the core subject is Data Loss Prevention (DLP), data protection, and policy enforcement using Microsoft Purview, which is explicitly named as a Microsoft security/compliance solution (Security rules 1, 7, 10). Assigned AI category because the session integrates Security Copilot and discusses automated, AI-driven protection in Microsoft Purview (AI rules 1 and 5). The content is not about GitHub Copilot, so GitHub Copilot and Coding categories do not apply. DevOps, Azure, and ML categories do not apply—the focus is security and AI for DLP/governance, not software deployment, coding, or data science. No generic exclusion rule applies since the session is technical, in English, and focused on Microsoft technologies.",
     "timestamp": "2025-11-21 11:09:59 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: The content is an intermediate-level Microsoft Ignite session focusing on industrial engineering using Microsoft technologies. Assigned 'AI' because it explicitly highlights agentic AI, product configuration, and simulation (AI rules 1, 4). Assigned 'Azure' due to repeated key roles of Azure in cloud automation and data management (Azure rule 1, 4). Included 'DevOps' as GitHub is featured for lifecycle and team collaboration, fulfilling DevOps rule 2 and 3. Did not assign 'Coding' or 'ML' since custom development/code and deep analytics are mentioned, but not as central instructional elements. No exclusion criteria applied -- the content is technical, English, and not business/productivity focused.",
+    "collection": "videos",
+    "timestamp": "2025-11-21 12:07:43 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=_kkIFY0G9FE"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content is about building with AI-powered agents, apps, and Microsoft’s AI infrastructure (AI rule 1, 4, 5). Assigned Azure category due to explicit focus on Azure services, Logic Apps, and Microsoft cloud infrastructure (Azure rules 1, 4, 6). Included GitHub Copilot and Coding because the session discusses AI pair programming and developer tooling (GitHub Copilot rule 2, Coding rules 1, 4, 5). Security category is warranted due to Defender integration with GitHub and secure coding practices (Security rules 1, 2). DevOps was included for coverage of developer tools, rapid development, and system integration (DevOps rules 1, 5, 7). The content is clearly technical, aimed at practitioners, and does not trigger any generic exclusion rule.",
+    "collection": "videos",
+    "timestamp": "2025-11-21 12:08:15 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=DBrfh0vOBxY"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because Windows ML is an AI framework and the session details on-device inference, execution providers, and model deployment (AI rule 1, 4, 5). Assigned Coding because it covers developer implementation, setup, and coding practices for app logic using Windows ML (Coding rules 2, 4). Did not assign Azure or ML because there are no direct references to Azure cloud or data science/ML engineering (per category rules).",
+    "collection": "videos",
+    "timestamp": "2025-11-21 12:08:36 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=FxwkjmKJdC0"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the session focuses on deploying and scaling AI agents, agentic systems, and Copilot readiness (AI rules 1, 4, 5, and 6). Assigned Azure category as Azure AI Foundry is a core architectural component throughout the session (Azure rule 1 and 3). Did not assign Coding, ML, DevOps, Security because the discussion centers around high-level AI/agent deployment, integration, and governance rather than deep technical implementation, data science, or security architecture specifics.",
+    "collection": "videos",
+    "timestamp": "2025-11-21 12:09:08 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Ly-QiRuq7cg"
+  },
+  {
+    "reason": "Succesfully added: AI category added due to deep focus on agent development, MCP, and Windows platform AI features (AI rules 1, 4, 5). Security category added for coverage of platform-level security, guardrails, privacy, and Microsoft Defender integration (Security rules 1, 3, 4, 5, 7, 9). Coding category assigned as session targets developers building agents and executing code via MCP and agent connectors (Coding rules 1, 2, 4). Title and description updated for technical clarity. No generic exclusion rules triggered, and Microsoft technologies are central to the solution throughout.",
+    "collection": "videos",
+    "timestamp": "2025-11-21 12:09:27 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=VHKivXdqfeQ"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Azure' category because the session focuses on Azure Kubernetes Service (AKS) and on Azure Linux, aligning with Azure category rule 1 (any Azure service/technology). The 'Security' category is included due to substantial coverage of workload isolation, Integrity Policy Enforcement, SELinux, dm-verity, and other security features in Azure Linux (Security rules 1, 2, and 3). No other categories apply because the presentation does not cover coding specifics, DevOps, AI, ML, or GitHub Copilot. The informational and technical nature aligns fully with the provided rules and input content.",
+    "collection": "videos",
+    "timestamp": "2025-11-21 12:09:46 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=YZJCVtt0bwQ"
   }
 ]
