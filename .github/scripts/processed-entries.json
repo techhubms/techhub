@@ -19046,5 +19046,35 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=TY0uDOnFzPY",
     "timestamp": "2025-11-21 18:13:52 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because Copilot is described as AI-powered (AI rules 1 and 5). Assigned ML category because the context is Microsoft Fabric Data Factory, which is a primary data engineering and analytics platform, and the content focuses on data pipeline error handling—a core part of ML and data engineering workflows (ML rules 1 and 2). Azure category was not assigned because Data Factory now centrally falls under Fabric, not explicitly Azure in the provided text. GitHub Copilot was not assigned, as this is about Fabric’s Copilot, not the GitHub product (CRITICAL Copilot distinction rule). DevOps, Coding, and Security were not assigned because the focus is pipeline error troubleshooting and AI-powered insights rather than deployment, code development, or security implementation.",
+    "timestamp": "2025-11-21 19:05:35 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/ai-powered-troubleshooting-for-fabric-data-pipeline-error-messages/"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category: The content is about Microsoft Fabric, a cloud-native platform under Azure, promoting new Eventstream connectors and real-time integration—Azure inclusion rule 1. Assigned ML category: The connectors enable real-time streaming, CDC ingestion, and analytics/dashboards, which fits ML rule 2 and 4 (data analytics/data pipelines for real-time analytics). Coding and DevOps are not assigned as the focus is on connector configuration and end-to-end streaming, rather than application development or deployment tooling. AI is not assigned—no AI service or framework is described. Security is not assigned—no security features, compliance, or data protection are discussed. Content is substantial, technical, and English-language, with no exclusion rules triggered.",
+    "timestamp": "2025-11-21 19:05:54 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-the-http-and-mongodb-cdc-connectors-for-eventstream-inspired-by-you/"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Security category because the content centers on Microsoft Entra ID, identity governance, multifactor authentication, Zero Trust, and access management, all of which fit Security inclusion rules 1, 2, 3, 4, and 9. Assigned AI category due to discussion of generative AI-driven attacks, AI-based security features, and agentic AI controls (AI rules 1, 4, and 5). No other categories were applied because the post does not focus on coding, DevOps, ML engineering, or Azure operational/development specifics beyond identity management.",
+    "timestamp": "2025-11-21 19:06:15 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/11/21/microsoft-named-a-leader-in-the-gartner-magic-quadrant-for-access-management-for-the-ninth-consecutive-year/"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the episode discusses Gemini 3 Pro model integration with GitHub Copilot (AI rule 2, GitHub Copilot rule 1 and 2). 'DevOps' is included due to technical content about Git (version control) and developer tools (DevOps rules 1 and 8). Did not assign 'Azure' or 'Coding' since Azure is not substantively covered and the coding content is indirect. Did not assign 'ML' or 'Security', as the privacy discussion is project-related and does not describe security engineering topics. The title and description are adjusted for technical clarity.",
+    "timestamp": "2025-11-21 19:06:48 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=wc2y1HS2a4I"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Categories assigned as follows: Azure because content focuses on Azure CLI, Azure PowerShell, and Azure resource management (Azure Rule 1). DevOps assigned due to emphasis on deployment workflows, safe change validation, and infrastructure automation practices (DevOps Rule 5, 6). AI category added because it describes behind-the-scenes AI translation from CLI commands to Bicep templates (AI Rule 3). ML category omitted: no data science, analytics, or ML development involved; focus remains on infrastructure automation and preview tooling. Coding is not assigned since no programming language, framework, or code-level development is discussed. All Generic Exclusion Rules checked and none apply: content is technical, English, non-biographical, and sufficiently detailed.",
+    "timestamp": "2025-11-21 19:07:14 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-tools-blog/gaining-confidence-with-az-cli-and-az-powershell-introducing/ba-p/4472147"
   }
 ]
