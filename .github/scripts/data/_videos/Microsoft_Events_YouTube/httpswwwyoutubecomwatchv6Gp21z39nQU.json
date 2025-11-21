@@ -1,0 +1,17 @@
+{
+  "ProcessedDate": "2025-11-21 16:05:38",
+  "FeedName": "Microsoft Events YouTube",
+  "Author": "Microsoft Events",
+  "Link": "https://www.youtube.com/watch?v=6Gp21z39nQU",
+  "Tags": [
+    "MSIgnite",
+    "Secureyourdata"
+  ],
+  "Description": "In this session, we’ll demystify how to get the most out of Microsoft Purview data security solutions, including real world stories of organizations who have successfully implemented classification, labeling, and DLP and their learnings along the way.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-ManageInsiderRisk \\* https://aka.ms/DataSecurityIgnite2025 \\* https://aka.ms/NewPurviewDSPM 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Nick Caromano \\* Vivian Ma \\* Antonio Maio \\* Aashish Ramdas \\* Scott Whittington 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK255 | English (US) Breakout | Intermediate (200) Related Sessions: BRK252 -- https://ignite.microsoft.com/sessions/BRK252?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPICxWiudj0f2JIlj76YjKPhb LAB548 -- https://ignite.microsoft.com/sessions/LAB548?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPICxWiudj0f2JIlj76YjKPhb BRK253 -- https://ignite.microsoft.com/sessions/BRK253?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPICxWiudj0f2JIlj76YjKPhb THR752 -- https://ignite.microsoft.com/sessions/THR752?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPICxWiudj0f2JIlj76YjKPhb BRK251 -- https://ignite.microsoft.com/sessions/BRK251?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPICxWiudj0f2JIlj76YjKPhb LAB545 -- https://ignite.microsoft.com/sessions/LAB545?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPICxWiudj0f2JIlj76YjKPhb #MSIgnite, #Secureyourdata\n\nChapters: 0:00 - Challenges in building modern data security programs 00:02:13 - Rising data and AI-related security risks 00:02:47 - Overview of Microsoft Purview's latest investments and resources 00:13:02 - User Experience with Label Deployment and Overcoming Resistance 00:17:04 - Guidance on Defining the Right Number of Labels and Label Schema 00:23:14 - Handling Legacy DLP Systems and Framework for Modernization 00:30:00 - Indicators of Successful Data Security Programs 00:31:00 - Importance of User Training and Change Management in DLP Adoption 00:35:25 - Importance of cross-functional collaboration in data security programs",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "OutputDir": "_videos",
+  "Title": "Best practices to maximize Microsoft Purview data security solutions | BRK255",
+  "PubDate": "2025-11-21T15:19:45+00:00"
+}

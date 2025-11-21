@@ -9321,5 +9321,29 @@
     "collection": "videos",
     "reason": "No categories found: No categories assigned. The content centers on the Employee Self-Service (ESS) Agent within Microsoft 365 Copilot and its integration for HR and IT task automation. Per the CRITICAL Copilot Product Distinction, Microsoft 365 Copilot and related business productivity tools (such as general ESS, HR/IT workflow automation, and Copilot for Microsoft 365) are specifically excluded from categorization, regardless of technology depth or integration (see Chapter 3, Non-Development Microsoft Products; Chapter 4, AI Category, Item 1-2; Chapter 6 Copilot edge cases). There are mentions of Copilot Studio, but the focus is on configuring and using ESS within the scope of employee support, not on Copilot Studio as a developer tool, nor any developer-oriented extensibility or custom AI development content. Thus, the session is business productivity focused, not development or engineering, and qualifies for no categories.",
     "timestamp": "2025-11-21 15:10:06 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: All categories are excluded due to the generic exclusion rule on non-development Microsoft products. The session focuses exclusively on Microsoft 365 Copilot agents, connectors, and organizational insights for workforce transformation, agility, and roles/skills management. Per CRITICAL Copilot Product Distinction, Microsoft 365 Copilot and related agents/tools for business productivity are explicitly not included, as they focus on organizational and people insights rather than developer tools or technical implementation. The session does not cover technical development, coding, AI engineering, or implementation of Microsoft developer technologies.",
+    "timestamp": "2025-11-21 16:08:08 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=ebEMBUvIavs"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Excluded all categories due to the generic exclusion rule for Non-Development Microsoft Products. The content centers on customizing Microsoft 365 Copilot for business-specific behaviors using Copilot Tuning, with an emphasis on business productivity (document writing, agent configuration, organizational adaptation) and no-code solutions. The description specifically states 'no coding or data scientists required' and focuses on enabling Copilot to 'talk, think, and work like your organization.' Although Copilot Studio Lite is mentioned, its usage here is in the context of tuning agents for productivity purposes, not developer/maker tool scenarios. Per Copilot Product Distinction rules, Microsoft 365 Copilot, Copilot for Microsoft 365, and similar business productivity tools are fully excluded, regardless of any technical elements. Therefore, no categories are assigned.",
+    "timestamp": "2025-11-21 16:08:20 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=EXzBRK6rAEs"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Excluded all categories due to the generic exclusion rule for Non-Development Microsoft Products. The content focuses entirely on business productivity and Copilot adoption strategies within Microsoft 365 (Microsoft 365 Copilot), targeting user enablement, organizational engagement, and workplace habits—none of which are related to development, coding, or technical implementation with Microsoft technologies (see 'Non-Development Microsoft Products' exclusion rules in Chapter 3 and the Copilot Product Distinction in Chapter 2). The outlined session centers on motivating end-user adoption and usage patterns, not on developer tools or technical architectures.",
+    "timestamp": "2025-11-21 16:08:33 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=HozYtNZ7iEo"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This session focuses primarily on business productivity and sales processes using Microsoft 365 Copilot and Dynamics 365 prebuilt agents, targeting seller efficiency and revenue acceleration rather than technical implementation or developer-focused content. Per Non-Development Microsoft Products exclusion, business productivity tools—including Microsoft 365 Copilot, Copilot for Microsoft 365, and Dynamics 365 usage not focused on development—do not qualify for categorization. The description and session chapters focus on automating sales, lead conversion, and agent deployment from a business perspective, without technical details relevant to developers or technical implementation of Microsoft technologies.",
+    "timestamp": "2025-11-21 16:08:45 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=RXEqB0v6ufk"
   }
 ]
