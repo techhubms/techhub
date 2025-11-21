@@ -1,0 +1,16 @@
+{
+  "FeedLevelAuthor": "Microsoft Events",
+  "Description": "Join us for a quick, high-impact demo showing how Varonis and Microsoft work together to protect sensitive data. See how this integration helps you stay secure, reduce risk, and enable AI driven outcomes—fast.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Brian Vecci 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nSTUDIOSP62 | English (US) Studio | Intermediate (200) #MSIgnite\n\nChapters: 0:00 - Introduction and welcome with Sean from Veronis 00:01:23 - Explanation of Veronis as a data security company and its evolution 00:02:18 - Reference to keynote on frontier enterprise and observability across the AI stack 00:02:46 - Data risk increases with multiple AI agents and diverse data sources 00:04:34 - Transition to demonstration of the new integration in action 00:05:13 - Exploring sensitive data and permissions in Asset Explorer (Salesforce example) 00:07:11 - Land and expand approach for ongoing data monitoring strategy 00:07:45 - Growth of enterprise data landscape and focus on data value 00:08:35 - Complexity of right-sizing permissions across diverse platforms",
+  "Author": "Microsoft Events",
+  "Tags": [
+    "MSIgnite"
+  ],
+  "PubDate": "2025-11-21T12:51:47+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "FeedName": "Microsoft Events YouTube",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=QF3AmEpEabc",
+  "ProcessedDate": "2025-11-21 13:12:33",
+  "EnhancedContent": null,
+  "Title": "Secure the modern enterprise with Varonis and Microsoft in action | STUDIOSP62"
+}

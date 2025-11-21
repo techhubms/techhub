@@ -1,0 +1,17 @@
+{
+  "FeedLevelAuthor": "Microsoft Events",
+  "Description": "Ali Ghodsi, CEO of Databricks, and Scott Guthrie, EVP of Cloud and AI at Microsoft, discuss the plans for deep integration between Azure Databricks and Microsoft OneLake. Learn how unified data access, seamless interoperability, and trusted governance empower organizations to break silos, accelerate AI, and innovate across the Microsoft ecosystem. They’ll also discuss new Azure Databricks integrations being featured at Ignite including SAP Databricks on Azure, Microsoft Copilot Studio, and Microsoft Foundry.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Scott Guthrie 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nSTUDIO53 | English (US) Studio #MSIgnite, #Other\n\nChapters: 0:00 - What is Databricks? – Ali Ghodsi explains data organization, governance, analytics, and AI capabilities integrated with Azure 00:03:05 - Azure Ecosystem Integration – Ali describes how Azure Databricks integrates with Entra and utilizes open data formats 00:03:54 - Overview of seamless AI stack integration including Agent 365, Foundry, and Copilot Studio 00:04:20 - Focus on data privacy and enterprise-level data security 00:04:42 - Major announcement: Integration between Microsoft OneLake and Databricks Unity Catalog 00:07:40 - Introduction to Genie for Table Selection in Unity Catalog 00:09:12 - Interrogating CFO Notes and Financial Documents 00:11:41 - Introducing Agent 365 for digital co-workers in Microsoft 365 00:12:06 - Discussion on current availability of demoed features",
+  "Author": "Microsoft Events",
+  "Tags": [
+    "MSIgnite",
+    "Other"
+  ],
+  "PubDate": "2025-11-21T12:54:50+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "FeedName": "Microsoft Events YouTube",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=5URsKnZOFuM",
+  "ProcessedDate": "2025-11-21 13:12:33",
+  "EnhancedContent": null,
+  "Title": "Databricks and Microsoft announce integrations with OneLake, Foundry, and Copilot | STUDIO53"
+}
