@@ -1,5 +1,5 @@
 ---
-mode: "agent"
+agent: 'agent'
 description: "Step-by-step workflow for safely and precisely executing code and GitHub operations according to strict instructions."
 model: "Claude Sonnet 4.5"
 ---
