@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-21T15:04:28+00:00",
+  "ProcessedDate": "2025-11-21 15:05:36",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Link": "https://www.youtube.com/watch?v=tHnILyOs_8I",
+  "Description": "To stay ahead, organizations need a secure, identity-based foundation for your digital landscape. Learn what Microsoft Entra and Intune bring across the M365 stack to help you reach a Zero Trust security posture with more compliance and control in the era of AI. We’ll dive into top scenarios that bring to life what you need to maximize your Microsoft investment.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-ControlProtectMicrosoftEntra \\* https://aka.ms/blog/entra 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Eric Sachs \\* Maayan Bar-Niv 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK242 | English (US) Breakout | Intermediate (200) Related Sessions: LAB549-R1 -- https://ignite.microsoft.com/sessions/LAB549-R1?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIADodwiOD8zvxIEMW\\_\\_JyjY BRK340 -- https://ignite.microsoft.com/sessions/BRK340?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIADodwiOD8zvxIEMW\\_\\_JyjY LAB549 -- https://ignite.microsoft.com/sessions/LAB549?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIADodwiOD8zvxIEMW\\_\\_JyjY BRK243 -- https://ignite.microsoft.com/sessions/BRK243?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIADodwiOD8zvxIEMW\\_\\_JyjY #MSIgnite, #ModernizeSecOpswithaunifiedplatform\n\nChapters: 0:00 - Agenda: Authentication, Governance, and Defense for AI 00:06:12 - Return to Eric for deeper discussion on authentication in AI-ready organizations 00:13:09 - Phased rollout and automation of conditional access policies 00:14:20 - Detecting redundant and missing conditional access policies 00:21:01 - Demo showcasing Copilot blocking a malicious privilege request 00:23:09 - Launch of EPM visibility dashboard with organizational insights 00:33:29 - Using Conditional Access for Internal and GenAI Applications 00:35:04 - Enhanced GenAI-Specific Network Protections and Detection Capabilities 00:39:35 - New Edge for Business Policy Controls Across Managed Devices",
+  "EnhancedContent": null,
+  "Tags": [
+    "ModernizeSecOpswithaunifiedplatform",
+    "MSIgnite"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "Title": "Top Essentials for an Integrated, AI-Ready Security Foundation​ | BRK242",
+  "Author": "Microsoft Events",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Events"
+}

@@ -18782,5 +18782,59 @@
     "canonical_url": "https://www.youtube.com/watch?v=S6JHew4W3Ik",
     "collection": "videos",
     "timestamp": "2025-11-21 14:07:46 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=3roUCNzZbwU",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'Security' because the entire session is centered on Microsoft Sentinel, a dedicated security operations platform, focusing on SIEM and incident response (Security rules 1, 5, 6, 7, 9). 'Azure' is included because Sentinel is an Azure-native service and much of the session discusses Azure Data Lake and cloud-based security management (Azure rules 1, 7). 'AI' is included due to repeated mention of 'agentic', 'AI-ready', and the use of graph intelligence and automation with AI features (AI rules 1, 4). Excluded other categories because there is no focus on coding, DevOps, GitHub Copilot, or custom ML engineering. No generic exclusion rules apply; content is technical, English, and directly relevant to Microsoft security and cloud technologies.",
+    "timestamp": "2025-11-21 15:06:45 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=aMPfb6TVfA4",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the 'AI' category because the session is focused on Copilot Studio (a Microsoft developer/maker AI tool) and the use of agents leveraging large language models (LLMs) for automation (AI rules 1 and 5). Power Automate is presented in a development-oriented context, but does not meet the specific Coding or DevOps rules, nor does the content focus on Azure architecture or ML engineering; thus, those categories were not assigned. The session is not about productivity Copilots (Microsoft 365 Copilot, etc.), but rather the studio/platform used to build and orchestrate automation agents, which qualifies under the developer tool aspect outlined in the AI category inclusion rules. No generic exclusion rules applied.",
+    "timestamp": "2025-11-21 15:07:23 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=qhEj-1ZolLs",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the session is centrally focused on Azure Virtual Desktop and its management, deployment, and new features (Azure inclusion rule 1 and 4). Assigned 'Security' because multiple session sections cover new B2B access security controls, MFA, secure logins, and identity management (Security rules 1, 2, and 3). Did not assign other categories: There is no focus on application-level coding, DevOps automation, AI/ML, or advanced data science. All generic exclusion criteria were checked and do not apply—the content is technical, English, of sufficient length, and not business-productivity or biographical.",
+    "timestamp": "2025-11-21 15:08:17 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=tcufxS5p1RM",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' because the content centers on AI agents, responsible AI, and the use of Copilot Studio (AI rules 1, 2, 3, 5). Assigned 'Security' because the session focuses on Microsoft Defender, attack surfaces, threat detection, and governance of AI systems (Security rules 1, 2, 4, 5, 9). Did not assign 'Azure' or 'Coding' as the session is primarily about security and governance rather than hands-on development or Azure-specific configurations. No generic exclusion rules apply.",
+    "timestamp": "2025-11-21 15:08:42 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=tHnILyOs_8I",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned Security category because the session centers on building a secure, identity-based foundation with Microsoft Entra and Intune, focusing on Zero Trust, authentication, conditional access, and security dashboards (Security rules 1, 2, 3, 4, 5, 9). Assigned AI because it highlights scenarios and controls specifically for 'AI-ready' organizations, includes discussions on security for GenAI applications, and demonstrates Copilot’s security role (AI rules 1, 5). Azure is not assigned as the focus is on identity, compliance, and security services, not Azure operational or deployment details. Other categories (Coding, DevOps, ML) are not directly addressed. No generic exclusion rules were met.",
+    "timestamp": "2025-11-21 15:09:05 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=U0P_Js91VjQ",
+    "collection": "videos",
+    "reason": "Succesfully added: Applied the Security category because the content focuses on improvements in Windows recovery, resiliency, and integration with security partners and tools outside the Windows kernel. Discussion of device recovery, driver ecosystem security, Intune-driven recovery, and modern enterprise security highlights fit Security rule 1 (Microsoft Security Services) and rule 2 (Application Security in Microsoft Ecosystem). No other categories were assigned because there is no explicit coverage of AI, Azure, DevOps, ML, Coding, or GitHub Copilot. Content does not trigger any generic exclusions (it is technical, substantial, primarily in English, and not biographical, sales, workplace, or business productivity focused).",
+    "timestamp": "2025-11-21 15:09:29 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=uRit_4gcvDM",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned only the 'AI' category. The content focuses on integrating SharePoint with AI-powered agents and Copilot, describing Microsoft AI capabilities and automation features (AI rules 1, 4, 5, 6). Although it references Copilot, the context is about Copilot as a business productivity integration, not as a developer coding tool (see Copilot Product Distinction), so 'GitHub Copilot' and 'Coding' do not apply. No details on .NET, developer frameworks, DevOps, Azure management, ML engineering, or security are present, excluding those categories. The primary focus is demonstrating SharePoint's AI transformation for knowledge management and automation in the Microsoft 365 productivity context, which fits the 'AI' category per the outlined rules.",
+    "timestamp": "2025-11-21 15:09:51 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=X1bYxfpaP9w",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' because the session focuses on AI-driven automation in security operations using intelligent agents and generative AI (AI inclusion rules 1, 5, and 6). Assigned 'Security' because it covers Microsoft Defender, threat response, SOC operation, security analyst roles, and incident response (Security rules 1, 2, 4, 5, and 9). Excluded other categories as the content does not emphasize coding, DevOps, ML pipelines, or specific Azure service implementation; it focuses on SOC automation and AI in security.",
+    "timestamp": "2025-11-21 15:10:32 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=ZUoQE5UJNyk",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' because Security Copilot leverages Microsoft AI-driven agents for automation (AI inclusion rules 1 and 4), and the session shows development and extension of these agents in security operations. Assigned 'Security' because the entire content is focused on SecOps, threat response, identity/device security, and agent orchestration for defense (Security inclusion rules 1, 2, 4, and 5). Did not assign 'Coding' or 'DevOps' since the session primarily focuses on no-code/low-code agent orchestration, automation, and security domain use cases, not developer-centric code or CI/CD workflows.",
+    "timestamp": "2025-11-21 15:10:55 +00:00"
   }
 ]

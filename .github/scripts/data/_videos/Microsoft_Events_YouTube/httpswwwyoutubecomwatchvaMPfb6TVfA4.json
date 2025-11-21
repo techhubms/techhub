@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-21T15:03:04+00:00",
+  "ProcessedDate": "2025-11-21 15:05:36",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Link": "https://www.youtube.com/watch?v=aMPfb6TVfA4",
+  "Description": "Learn how Copilot Studio and Power Automate work together to modernize automation. Explore agent flows and desktop flows (RPA) for scalable, secure solutions. See frameworks for integration, M365 Copilot as an entry point, and real-world demos showing agents and RPA delivering resilient automation for enterprise needs.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-lowcode 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Jonathan Kendall \\* Mustapha Lazrek 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK321 | English (US) Breakout | Intermediate (200) #MSIgnite, #innovatewithlow\n\nChapters: 0:00 - Process Insights: Monitoring Automations with Process Maps and Analytics 00:11:02 - Introduction to Agent Flows as starting point for automation 00:11:39 - Integration and conversion of existing Power Automate cloud flows 00:13:25 - Choosing between agents and flows; orchestration and bi‑directional invocation options 00:23:02 - Goal of demo explained: showcasing potential of LLMs in automation 00:23:38 - Reasoning agent demonstrates UI automation capability 00:34:21 - Cineplex’s Automation Evolution and Integration with Copilot Studio 00:37:29 - Demonstration of Basic Agentic Automation Workflow 00:38:04 - Advanced Example: Purchase Approval with Agent Flow",
+  "EnhancedContent": null,
+  "Tags": [
+    "innovatewithlow",
+    "MSIgnite"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "Title": "From flows to agents: Modernizing with Copilot Studio + Power Automate | BRK321",
+  "Author": "Microsoft Events",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Events"
+}

@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-21T14:44:29+00:00",
+  "ProcessedDate": "2025-11-21 15:05:36",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Link": "https://www.youtube.com/watch?v=3roUCNzZbwU",
+  "Description": "Explore how Microsoft Sentinel’s platform architecture scales security operations and empowers teams with graph intelligence, data lake integration, and agentic workflows - to automate, investigate, and respond with speed and precision.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-MicrosoftSentinelAISecurity \\* https://aka.ms/sentinel/datalake/ignite \\* https://aka.ms/sentinel/graph/ignite \\* https://aka.ms/sentinel/mcp/ignite 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Krishna Kumar Parthasarathy \\* Reena Pathak \\* Evangeline White \\* Scott Woodgate 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK235 | English (US) Breakout | Intermediate (200) Related Sessions: THR748 -- https://ignite.microsoft.com/sessions/THR748?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIADodwiOD8zvxIEMW\\_\\_JyjY THR749 -- https://ignite.microsoft.com/sessions/THR749?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIADodwiOD8zvxIEMW\\_\\_JyjY THR744 -- https://ignite.microsoft.com/sessions/THR744?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIADodwiOD8zvxIEMW\\_\\_JyjY #MSIgnite, #ModernizeSecOpswithaunifiedplatform\n\nChapters: 0:00 - Evolution of Microsoft Sentinel to an agentic AI-ready platform 00:05:05 - Sentinel’s leadership in industry and market recognition 00:08:17 - Transition from SIEM to broader AI security platform with data lake and graph architecture 00:12:17 - Launch of Security Store and partner integrations with Sentinel 00:15:18 - General availability of Sentinel Data Lake and unified data model 00:25:03 - Using KQL Jobs to Hunt Historical Indicators of Compromise 00:27:23 - Centrica’s Mission and Security-Driven Energy Transformation 00:35:54 - Improving case management for integrated cyber defence coordination 00:42:01 - Introduction to custom graphs and enabling organization-specific graph models",
+  "EnhancedContent": null,
+  "Tags": [
+    "ModernizeSecOpswithaunifiedplatform",
+    "MSIgnite"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "Title": "Power agentic defense with Microsoft Sentinel | BRK235",
+  "Author": "Microsoft Events",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Events"
+}

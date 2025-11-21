@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-21T14:31:30+00:00",
+  "ProcessedDate": "2025-11-21 15:05:36",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Link": "https://www.youtube.com/watch?v=vtbT5WIEKvQ",
+  "Description": "Discover how the Employee Self-Service Agent is redefining the future of employee support with a single front door agent for HR and IT tasks. This session includes a product deep dive and live demo for a look into how the agent simplifies employee support, automates workflows, and integrates with systems like ServiceNow, Workday, and SAP SuccessFactors, including seamless agent-to-agent handoffs — reducing ticket volume, boosting employee satisfaction, and streamlining service delivery.\n\nDelivered in a silent stage breakout.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-copilotagents 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Himanath Dasari \\* Swati Gulati \\* Kyle von Haden 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK286 | English (US) Breakout | Intermediate (200) #MSIgnite, #Copilotandagentsatwork\n\nChapters: 0:00 - Introduction and Welcome by Kyle 00:00:46 - Defining the Problem Space for Employee Service Delivery 00:03:00 - Announcement of Employee Self-Service (ESS) Agent in Microsoft 365 Copilot 00:13:02 - Announcement of ADP partnership for enhanced HR and payroll integration 00:15:29 - New collaboration with SAP to integrate Joule agent for HR and payroll insights 00:16:06 - Detailed demo walkthrough: HR admin setting up and customizing ESS in Copilot Studio 00:26:05 - Microsoft’s internal ESS deployment overview by Vinuta 00:28:44 - Phased rollout of ESS to all 200,000 Microsoft employees and expansion with Graph connectors 00:31:09 - ESS expansion to external staff and all Microsoft employees",
+  "EnhancedContent": null,
+  "Tags": [
+    "Copilotandagentsatwork",
+    "MSIgnite"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "Title": "Get HR and IT tasks done faster with the Employee Self-Service Agent | BRK286",
+  "Author": "Microsoft Events",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Events"
+}

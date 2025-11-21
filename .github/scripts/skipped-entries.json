@@ -9297,5 +9297,29 @@
     "canonical_url": "https://www.youtube.com/watch?v=UfFRQ54vDpk",
     "collection": "videos",
     "timestamp": "2025-11-21 14:07:59 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=9TbK5YYMOIg",
+    "collection": "videos",
+    "reason": "No categories found: All assigned categories were excluded based on the generic exclusion rules. The content is centered on Microsoft 365 Copilot adoption in business productivity environments at organizations like Carrier, Mastercard, and Vodafone. It describes strategies for executive buy-in, end-user enablement, measuring adoption with Power BI dashboards, and leadership-driven transformation. There is no substantive focus on software development, coding, Microsoft developer tools, AI engineering, ML pipelines, DevOps, security, or technical implementation of Microsoft platforms. Per Chapter 3 under 'Non-Development Microsoft Products' and the critical Copilot product distinction, Microsoft 365 Copilot is a business productivity tool, not a developer platform, so this content receives no categories.",
+    "timestamp": "2025-11-21 15:06:59 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=dYIfVL-zhx8",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned due to generic exclusion rules. The content is focused on business productivity features in Microsoft 365—specifically Copilot for Microsoft 365, Microsoft 365 Backup, Archive, SharePoint management, and storage cost reduction. The session discusses content governance, lifecycle management, partner solutions, and business continuity, but does not cover developer tooling, development-oriented scenarios, or technical implementation targeted at software development or architecture. According to the Non-Development Microsoft Products exclusion rule and the Copilot Product Distinction rule, Copilot for Microsoft 365 and related business productivity features are excluded from categorization as they are not developer tools or technical implementation content.",
+    "timestamp": "2025-11-21 15:07:37 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=f5_vkoHEXAE",
+    "collection": "videos",
+    "reason": "No categories found: All categories are excluded based on the generic exclusion rules, specifically the 'Non-Development Microsoft Products' and 'Business Productivity Tools' rules. The content centers on Microsoft 365 Copilot's impact on enterprise business processes, customer adoption stories, and business transformation frameworks, not on code development, technical implementation, or developer/maker tooling. While it discusses AI agents in Microsoft 365 Copilot, Copilot for Microsoft 365 and Office Copilot are explicitly excluded from categorization as per the workflow instructions, since they are business productivity tools and not developer products. There is no substantial information on development, coding, DevOps, Azure, ML, or security implementation using Microsoft technologies.",
+    "timestamp": "2025-11-21 15:07:51 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=vtbT5WIEKvQ",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content centers on the Employee Self-Service (ESS) Agent within Microsoft 365 Copilot and its integration for HR and IT task automation. Per the CRITICAL Copilot Product Distinction, Microsoft 365 Copilot and related business productivity tools (such as general ESS, HR/IT workflow automation, and Copilot for Microsoft 365) are specifically excluded from categorization, regardless of technology depth or integration (see Chapter 3, Non-Development Microsoft Products; Chapter 4, AI Category, Item 1-2; Chapter 6 Copilot edge cases). There are mentions of Copilot Studio, but the focus is on configuring and using ESS within the scope of employee support, not on Copilot Studio as a developer tool, nor any developer-oriented extensibility or custom AI development content. Thus, the session is business productivity focused, not development or engineering, and qualifies for no categories.",
+    "timestamp": "2025-11-21 15:10:06 +00:00"
   }
 ]
