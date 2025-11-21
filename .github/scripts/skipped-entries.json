@@ -9345,5 +9345,53 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule: This session focuses primarily on business productivity and sales processes using Microsoft 365 Copilot and Dynamics 365 prebuilt agents, targeting seller efficiency and revenue acceleration rather than technical implementation or developer-focused content. Per Non-Development Microsoft Products exclusion, business productivity tools—including Microsoft 365 Copilot, Copilot for Microsoft 365, and Dynamics 365 usage not focused on development—do not qualify for categorization. The description and session chapters focus on automating sales, lead conversion, and agent deployment from a business perspective, without technical details relevant to developers or technical implementation of Microsoft technologies.",
     "timestamp": "2025-11-21 16:08:45 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=RXEqB0v6ufk"
+  },
+  {
+    "canonical_url": "https://dellenny.com/goodbye-hours-of-chart-making-hello-copilot/",
+    "reason": "No categories found: No categories assigned because the content is exclusively about Microsoft 365 Copilot, a business productivity tool, and not a developer tool. According to the Generic Exclusion Rules (Non-Development Microsoft Products) and the Copilot Product Distinction in Chapter 2, content about 'Microsoft 365 Copilot', 'Copilot for Microsoft 365', 'Office Copilot', and similar products is explicitly excluded, as these are business/office productivity tools and not developer tools or technical implementation content. Although there are some mentions of technical products like Power BI and GitHub Copilot for context, the entire post is focused on the business-user scenario of generating charts with Copilot in Excel, Power BI, and other general productivity tools. There is no content about code development, technical architecture, or developer implementation. Therefore, per the workflow, the correct outcome is no categories assigned.",
+    "collection": "posts",
+    "timestamp": "2025-11-21 17:07:16 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/security-and-compliance-considerations-when-using-copilot-in-enterprise-environments/",
+    "reason": "No categories found: Content excluded under Generic Exclusion Rules as it is focused on Microsoft 365 Copilot, which is a business productivity tool and not a developer tool (see Chapter 3: Non-Development Microsoft Products and CRITICAL: Copilot Product Distinction in Chapter 2). The entire article discusses security, compliance, and end-user guidance for implementing Copilot in enterprise productivity scenarios (email writing, summarizing documents in Microsoft 365, sensitivity labels, DLP, compliance, permissions cleanup, etc.) rather than developer integration, coding tools, or technical implementation details for software engineers. There is no substantial developer-focused or technical implementation content; therefore, assign no categories.",
+    "collection": "posts",
+    "timestamp": "2025-11-21 17:07:29 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=b8VgckebP6k",
+    "reason": "No categories found: No categories assigned. The content is a summary of the Microsoft Ignite keynote and highlights broad announcements such as Work IQ, Agent 365, and Agent Factory but provides no substantive technical detail or depth about development, implementation, or specific Microsoft technologies that fit the inclusion criteria. As the 'content' field is null and the 'description' is high-level and event-focused, it falls under the business strategy/executive content exclusion in Generic Exclusion Rules (business strategy, high-level product launches without technical depth).",
+    "collection": "videos",
+    "timestamp": "2025-11-21 17:09:53 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=J3QHdWAD99I",
+    "reason": "No categories found: All categories were excluded due to generic exclusion rules. The content is centered on Microsoft 365 Copilot and Agent 365, which are business productivity tools and not considered developer tools according to the provided workflow (see Non-Development Microsoft Products exclusion and Copilot Product Distinction). While concepts like security, management, and governance are mentioned, they are in the context of IT administration and end-user productivity tool management, not in the context of development, coding, DevOps, AI engineering, or ML engineering. Therefore, no development-focused Microsoft technology categories apply.",
+    "collection": "videos",
+    "timestamp": "2025-11-21 17:10:30 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=YEo5hTP4sVA",
+    "reason": "No categories found: All categories are excluded due to the generic exclusion rule for non-development Microsoft products. The content focuses on Surface Copilot+ PCs, Windows productivity features, and natural input methods (voice, touch, pen, keyboard) to improve business and team productivity, as described in the title and description. It describes how Copilot and Windows enable teams to innovate, streamline workflows, and maintain productivity, but does not discuss developer tools, code development, or technical implementation details related to coding, DevOps, Azure, ML, AI platforms, or security in the Microsoft developer ecosystem. Copilot in this context refers to general productivity enhancements within Windows and Surface devices, which fall under excluded business productivity and consumer tool scenarios as specified in the workflow's generic exclusion rules.",
+    "collection": "videos",
+    "timestamp": "2025-11-21 17:12:20 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/hyper-v-core-setting-up-a-vlan/m-p/4472107#M22345",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this is a community post primarily asking for help (question-only content) and seeking guidance, without providing substantive technical facts, solutions, or implementation discussion. According to the Question-Only Content exclusion in Chapter 3, posts mainly asking questions or seeking information, without substantive answers or solutions, should be excluded.",
+    "collection": "community",
+    "timestamp": "2025-11-21 17:12:35 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/security-and-compliance-considerations-when-using-copilot-in/m-p/4472118#M184",
+    "reason": "No categories found: All categories were excluded due to the Non-Development Microsoft Products exclusion rule. The content focuses on Copilot for business productivity (helping write emails, summarizing documents, etc.), which falls under Microsoft 365 Copilot, Office Copilot, or Copilot for Microsoft 365. As per the Copilot Product Distinction rules, business productivity Copilot products are explicitly excluded, and security/compliance considerations that do not involve technical implementation with Microsoft security platforms are also out of scope. There is no developer tool, coding, implementation, or Azure focus.",
+    "collection": "community",
+    "timestamp": "2025-11-21 17:12:49 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/turbocharge-your-coding-top-github-copilot-shortcuts-and/m-p/4472117#M183",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2025-11-21 17:12:49 +00:00"
   }
 ]
