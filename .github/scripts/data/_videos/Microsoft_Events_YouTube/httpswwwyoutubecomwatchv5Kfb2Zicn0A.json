@@ -1,0 +1,17 @@
+{
+  "Link": "https://www.youtube.com/watch?v=5Kfb2Zicn0A",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "EnhancedContent": null,
+  "Author": "Microsoft Events",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-11-21 09:04:55",
+  "Tags": [
+    "InnovatewithAzureAIappsandagents",
+    "MSIgnite"
+  ],
+  "Description": "The teams that have strong DevOps practices are the ones best positioned to take advantage of the power of AI. See how you can use GitHub Copilot and AI Agents to bring speed, scale and security across the software development for your organization.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-AgenticDevOpsGitHubCopilot \\* https://github.com/features/copilot?utm\\_source=brk105-copilot-features-cta&utm\\_medium=web&utm\\_campaign=ghignite25 \\* https://github.com/features/copilot?utm\\_source=brk105-copilot-features-cta&utm\\_medium=web&utm\\_campaign=ghignite25 \\* https://github.com/features/copilot/agents?utm\\_source=brk105-agents-features-cta&utm\\_medium=web&utm\\_campaign=ghignite25 \\* https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent?utm\\_source=brk105-docs-coding-agent&utm\\_medium=web&utm\\_campaign=ghignite25 \\* https://github.com/features/copilot/copilot-business 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Mario Rodriguez \\* Luke Hoban 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK105 | English (US) | Innovate with Azure AI apps and agents, GitHub Breakout | Foundational (100) Related Sessions: BRK108 -- https://ignite.microsoft.com/sessions/BRK108?wt.mc\\_id=yt\\_ BRK109 -- https://ignite.microsoft.com/sessions/BRK109?wt.mc\\_id=yt\\_ BRK106 -- https://ignite.microsoft.com/sessions/BRK106?wt.mc\\_id=yt\\_ BRK107 -- https://ignite.microsoft.com/sessions/BRK107?wt.mc\\_id=yt\\_ BRK218 -- https://ignite.microsoft.com/sessions/BRK218?wt.mc\\_id=yt\\_ #MSIgnite, #InnovatewithAzureAIappsandagents\n\nChapters: 0:00 - Impact of coding agents across Microsoft and GitHub, major productivity gains 00:13:09 - Demo introduction showing seamless developer experience across devices 00:13:26 - Demo Introduction and Overview of AI Agents in Software Development 00:17:57 - Introducing GitHub Mission Control for Managing Cloud-Based Agent Tasks 00:22:00 - Automating Code Implementation Feedback and PR Integration with Coding Agents 00:23:17 - Demonstration of SRE agent automatically responding to PagerDuty incidents 00:38:25 - Overview of Copilot Controls and MCP Registry Options 00:38:50 - Vision of GitHub as an Open Collaboration Platform for Humans and Agents 00:42:42 - Questions on Enterprise Deployment, Permissions, and GitHub vs Azure DevOps Future",
+  "Title": "Reimagining software development with GitHub Copilot and AI agents | BRK105",
+  "FeedName": "Microsoft Events YouTube",
+  "FeedLevelAuthor": "Microsoft Events",
+  "PubDate": "2025-11-21T08:24:03+00:00"
+}

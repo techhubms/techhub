@@ -1,0 +1,17 @@
+{
+  "Link": "https://www.youtube.com/watch?v=HjCaHgXezys",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "EnhancedContent": null,
+  "Author": "Microsoft Events",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-11-21 09:04:55",
+  "Tags": [
+    "MSIgnite",
+    "Unifyyourdataplatform"
+  ],
+  "Description": "Frontier firms aiming to build custom agents and foster data rich cultures need a single, unified access point for all their data that everyone can use. This session will explore how Microsoft OneLake can help you connect to any data, anywhere without ETL or data duplication. We'll also show how Fabric users and admins alike can manage and secure that data using tools like the OneLake catalog and OneLake security.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-MicrosoftFabricDataEngineeringPlan 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Dipti Borkar \\* Joshua Caplan \\* Paul Purvis \\* Adi Regev \\* Clay Yeaman 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK221 | English (US) | Unify your data platform, Microsoft Fabric Breakout | Intermediate (200) #MSIgnite, #Unifyyourdataplatform\n\nChapters: 0:00 - Chevron’s Experience: Using One Lake for AI-Ready Data and Shortcuts 00:06:11 - Chevron on Security and Governance Using Lake-Level Access Controls 00:16:16 - Creating Shortcuts from SharePoint and OneDrive Data 00:21:07 - Accessing Fabric Data Through Multiple Endpoints 00:21:22 - Snowflake and Fabric Achieve Bi-Directional Data Sharing 00:24:09 - Handling Both Structured and Unstructured Data in OneLake 00:33:03 - OneLake Catalog Supporting Fabric Items, Search, and Third-party Integrations 00:37:14 - Scale and Adoption of OneLake Catalog Globally 00:40:20 - Live Demo of OneLake Catalog Features for Data Discovery, Governance, and Security",
+  "Title": "Connect to and manage any data anywhere in Microsoft OneLake | BRK221",
+  "FeedName": "Microsoft Events YouTube",
+  "FeedLevelAuthor": "Microsoft Events",
+  "PubDate": "2025-11-21T08:30:17+00:00"
+}

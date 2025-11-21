@@ -1,0 +1,17 @@
+{
+  "Link": "https://www.youtube.com/watch?v=boFoMk9dEVk",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "EnhancedContent": null,
+  "Author": "Microsoft Events",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-11-21 09:04:55",
+  "Tags": [
+    "MSIgnite",
+    "Other"
+  ],
+  "Description": "As AI evolves from passive tools to autonomous agents, the stakes for accessibility and responsibility are rising. Join Jenny Lay-Flurrie, Chief Accessibility Officer, and Natasha Crampton, Chief Responsible AI Officer, to explore how Microsoft is shaping the future of agentic AI, creating systems that are safe, and trustworthy. Drawing on real-world technologies, they'll share how Accessibility and Responsible AI are not just parallel priorities but deeply interconnected imperatives.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Natasha Crampton \\* Jenny Lay-Flurrie 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK402 | English (US) | Other, Accessibility Breakout | Intermediate (200) #MSIgnite, #Other\n\nChapters: 0:00 - Seeing AI: Empowering Users with Visual Impairments 00:13:00 - Identifying key risks in autonomous agentic systems 00:13:15 - AI systems as both tools and weapons: oversight and transparency 00:16:01 - Showcasing Pirate: Python risk identification and AI red teaming 00:31:20 - AI-Powered Alternative Text for Visual Accessibility 00:33:19 - Accessible Code Practices and Developer Tools 00:34:25 - GitHub Accessibility Scanner Integration with Copilot 00:35:11 - Speaker shares personal story about being deaf and accessibility challenges at Microsoft 00:40:00 - Question about data governance and data accuracy management",
+  "Title": "Our Agentic Era: Building Accessible and Responsible AI for Everyone | BRK402",
+  "FeedName": "Microsoft Events YouTube",
+  "FeedLevelAuthor": "Microsoft Events",
+  "PubDate": "2025-11-21T08:09:41+00:00"
+}

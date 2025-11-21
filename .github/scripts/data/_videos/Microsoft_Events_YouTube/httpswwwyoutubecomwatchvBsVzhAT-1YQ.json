@@ -1,0 +1,17 @@
+{
+  "Link": "https://www.youtube.com/watch?v=BsVzhAT-1YQ",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "EnhancedContent": null,
+  "Author": "Microsoft Events",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-11-21 09:04:55",
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ],
+  "Description": "Enterprises are under pressure to modernize infrastructure without disrupting critical operations. In this session, learn how Azure VMware Solution (AVS) enables a seamless, low-risk migration path for VMware workloads—preserving existing investments while unlocking the scale and innovation of Azure. Watch a live migration demo and explore real-world customer success stories that highlight key lessons and best practices. We’ll also dive into enterprise-grade security strategies.\n\nDelivered in a silent stage breakout.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-migrateAVS 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Sundeep Hiranandaney \\* Justin Jakowski 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK157 | English (US) | Migrate and modernize your estate, Azure VMware Solution (AVS) Breakout | Intermediate (200) #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Introduction to Cloud Migration Strategies and Azure Options 00:05:04 - Case Study: Modernization vs Faster Cloud Migration via AVS 00:11:21 - Microsoft’s Deep Engineering Investment in AVS Hardware and Networking 00:15:05 - Case Study: State of Alaska Migrates Entire Data Centers to AVS 00:17:12 - Overview of Migration Targets and Cloud Modernization Paths 00:29:34 - Enhancing Security in Azure VMware Solution with Microsoft Tools 00:33:01 - Benefits of extended security updates for legacy Windows and SQL versions 00:33:36 - HCX migration demo and network considerations 00:42:07 - Next steps: Learn challenges, surveys, and session wrap-up",
+  "Title": "Best practices for migration and security with Azure VMware Solution | BRK157",
+  "FeedName": "Microsoft Events YouTube",
+  "FeedLevelAuthor": "Microsoft Events",
+  "PubDate": "2025-11-21T08:12:56+00:00"
+}

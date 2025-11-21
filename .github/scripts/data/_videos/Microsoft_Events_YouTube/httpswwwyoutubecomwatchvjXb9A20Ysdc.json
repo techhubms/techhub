@@ -1,0 +1,17 @@
+{
+  "Link": "https://www.youtube.com/watch?v=jXb9A20Ysdc",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "EnhancedContent": null,
+  "Author": "Microsoft Events",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-11-21 09:04:55",
+  "Tags": [
+    "MSIgnite",
+    "Unifyyourdataplatform"
+  ],
+  "Description": "Learn how the Premier League transformed decades of match data, editorial content, and video into a real-time, intelligent, personalized fan experience. This session explores how data strategy, AI orchestration, and scalable architecture can elevate engagement across global audiences of the world's most watched league —with actionable lessons from Microsoft and Premier League leaders to apply in your own organization.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-MicrosoftFabricAIDataSolutionsPlan 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Darren Hardman \\* Simon Brown \\* Pedro Gomes \\* Akash Jain 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK227 | English (US) | Unify your data platform, Microsoft Fabric Breakout | Intermediate (200) #MSIgnite, #Unifyyourdataplatform\n\nChapters: 0:00 - Announcement of Microsoft–Premier League Partnership 00:06:02 - Outlook on US Soccer Growth and 2026 World Cup Momentum 00:17:10 - Challenges: Keeping up with AI’s rapid pace while staying true to the competition 00:21:02 - Technical overview of Companion app built with Microsoft Azure and AI tools 00:24:46 - Deep dive into ingesting CMS, video archive, and live sports data from Opta 00:25:11 - Understanding different fan personas and engagement patterns 00:25:57 - Exploring personalization by country, club preference, and user behavior 00:39:30 - API-driven, containerized architecture enabling dynamic scaling and low latency 00:41:04 - Data ingestion patterns for real-time match events and editorial content integration",
+  "Title": "Premier League’s data-driven fan engagement at scale | BRK227",
+  "FeedName": "Microsoft Events YouTube",
+  "FeedLevelAuthor": "Microsoft Events",
+  "PubDate": "2025-11-21T08:26:43+00:00"
+}
