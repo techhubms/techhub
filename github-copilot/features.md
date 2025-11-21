@@ -77,7 +77,7 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
         <ul>
           <li>Everything in Pro</li>
           <li>Access to all models, including Claude Opus 4.1 and more</li>
-          <li>5x more premium requests than Pro to use latest models, with option to buy more</li>
+          <li>1500 Premium Requests per month, with option to buy more</li>
           <li>Access to GitHub Spark</li>
           <li>Codex IDE extension support in VS Code</li>
         </ul>
