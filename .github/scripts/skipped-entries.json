@@ -9207,5 +9207,23 @@
     "canonical_url": "https://www.youtube.com/watch?v=HqrXIgss5UE",
     "reason": "No categories found: Content excluded due to generic exclusion rules focused on Dynamics 365 business applications and Copilot for Microsoft 365 business productivity tools. The description centers on business outcomes, CRM migration strategy, and product adoption rather than technical implementation or development with Microsoft technologies. No details are provided about developer tools, technical architecture, coding practices, or relevant platform engineering, and the session is aimed at business transformation and rapid adoption—not technical or developer audiences per exclusion guidelines in Chapter 3.",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=9NzN6DBZ_Qk",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The main focus is on inspirational stories, hackathons, and innovation programs (Red Bull Basement, Imagine Cup) rather than substantive technical implementation with Microsoft technologies. The description emphasizes student innovation, mentorship, and partnerships between Red Bull, AMD, and Microsoft, but does not include any technical depth, Microsoft technical products, or development practices as required by the inclusion rules. No technical architecture, coding, DevOps, AI/ML, Security, or Azure specifics are present, and the session is not targeted at practitioners but rather at an inspirational, non-technical audience.",
+    "timestamp": "2025-11-21 11:05:55 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=HnWwpLbnw7A",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The content is focused on Microsoft 365 Copilot and related business/industry adoption strategies (see description: 'scale adoption, monetize services, and create reusable IP with M365 Copilot and Agents'). According to the Non-Development Microsoft Products exclusion, Microsoft 365 Copilot and Copilot for Microsoft 365 are categorized as business productivity tools, not developer tools. The session emphasizes business transformation, partner success, monetization, and organizational change rather than technical development or coding. No technical development content or developer platform focus is present. Therefore, no categories apply.",
+    "timestamp": "2025-11-21 11:06:52 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=wJDDktMQ7Ok",
+    "reason": "No categories found: No categories assigned because the content is primarily business-focused, discussing partner profitability, go-to-market strategies, and high-level business opportunities with Microsoft AI and cloud solutions. There is no substantial technical implementation detail, coding, architecture, or actionable technical guidance as required for inclusion (see Generic Exclusion Rules: Business Strategy and Executive Content, and Workplace and Business Focus). The description and session details focus on profitability, strategies, and business growth rather than technical practices, development, or architectural detail with Microsoft technologies.",
+    "timestamp": "2025-11-21 11:09:16 +00:00",
+    "collection": "videos"
   }
 ]

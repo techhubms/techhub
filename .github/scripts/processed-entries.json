@@ -18590,5 +18590,71 @@
     "canonical_url": "https://www.youtube.com/watch?v=yFFMGDNVMZ8",
     "timestamp": "2025-11-21 09:08:24 +00:00",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=4SA8Iu5su6c",
+    "reason": "Succesfully added: Assigned AI category because the session features AI-powered development tools (GitHub Copilot, AI-generated SQL, AI-ready deployments per AI rules 1, 4, and 5). Assigned GitHub Copilot because specific content and demos focus on Copilot's usage in modernization and troubleshooting (GitHub Copilot rule 1). Assigned Coding due to the deep .NET development focus and demonstrations of code upgrades and integration (Coding rules 1, 2, and 4). Assigned Azure category as Azure App Service, Azure Managed Instance, Key Vault, and other Azure services are central (Azure rules 1, 4, 5, 6). Assigned DevOps because the workflow involves modernization pipelines, CI/CD tooling, managed environments, and deployment concerns (DevOps rules 1, 5, 6, 9). Content is technical, targets practitioners, and passes all generic inclusion/exclusion filters.",
+    "timestamp": "2025-11-21 11:05:42 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=AAkFNigV7OM",
+    "reason": "Succesfully added: Assigned 'Azure' because the content is focused on Azure SQL Managed Instance, Azure App Service, and cloud migration (Azure category rules 1-4). Assigned 'AI' because the session emphasizes AI-assisted migration tooling (including Copilot) and the AI-readiness of SQL Server 2025 (AI rule 1, 4, 5). Coding and ML are NOT assigned, as the content does not cover application code, programming practices, or custom data science/ML workflows. DevOps and Security categories are not included as there’s no focus on deployment pipelines, operational practices, or security topics. The content meets all requirements for technical depth, relevance, and quality; none of the generic exclusion rules apply.",
+    "timestamp": "2025-11-21 11:06:17 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=hLBiJZT194A",
+    "reason": "Succesfully added: Assigned 'Azure' because the session deeply covers Azure Policy, resource management, and service grouping within Azure (Azure rule 1 and 4). Assigned 'Security' due to focus on security governance, compliance, and protection of Windows, Linux, and database workloads (Security rules 1, 2, and 4). Assigned 'AI' because Copilot is mentioned in the technical sense (automation for tagging and resource management), and LLM-assisted Azure Policy creation is highlighted, which aligns with the AI inclusion rules (AI rules 1 and 5). Did not assign 'DevOps', 'ML', or 'Coding' since the session does not focus primarily on CI/CD, machine learning/data science engineering, or programming language guidance. No generic exclusion rules applied; the session is technical, not business or biographical.",
+    "timestamp": "2025-11-21 11:06:39 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=QHBc5hh4gKk",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on AI-powered deepfakes and their role in social engineering attacks (AI rules 1, 5, and 6). Assigned Security because the core topic is securing identity and preventing fraud using Microsoft's Verified ID, with emphasis on practical organizational defense (Security rules 1, 3, and 4). Excluded other categories since there is no substantial coverage of development (Coding), DevOps, Azure specifics, GitHub Copilot, or machine learning engineering. Verified the focus is technical and practical, targeting organizational security implementation rather than executive strategy or non-technical overview.",
+    "timestamp": "2025-11-21 11:07:12 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=QQCQyq48USM",
+    "reason": "Succesfully added: Assigned 'AI' because the session centers on Microsoft's AI ecosystem, Trustworthy AI principles, and deployment of AI systems (AI inclusion rules 1, 4, 5, 6). Assigned 'Azure' because Azure AI and Microsoft Foundry are prominent, and implementation examples reference Azure-based workflows (Azure inclusion rules 1, 4). Assigned 'Security' as risk management, secure deployment, and policy governance are core themes (Security inclusion rules 1, 4, 5, 7, 9, 10). Did not assign 'GitHub Copilot' since this is about Copilot Studio and agentic AI; no direct coding or DevOps instruction is present, so 'Coding', 'DevOps', and 'ML' were not added.",
+    "timestamp": "2025-11-21 11:07:33 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=RbVZNijijpo",
+    "reason": "Succesfully added: Assigned 'AI' because the session centers on AI-driven robotics, simulation, digital twins, and synthetic data generation using Microsoft and NVIDIA technologies (AI inclusion rules 1, 4, 5). 'Azure' applies since Microsoft Azure is a core infrastructure component, specifically highlighted in collaboration scenarios, edge deployment (with Azure ARC), and cloud-based simulation (Azure inclusion rules 1, 4, 5). Did not include 'ML' as the primary focus is on AI application and robotics, not on machine learning engineering or analytics. 'DevOps', 'Coding', and 'Security' are not assigned, as continuous integration is discussed but not in depth from a Microsoft developer tooling or code perspective, and security is limited to deployment context only. No generic exclusion rules apply.",
+    "timestamp": "2025-11-21 11:07:56 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=roRh0p1HsYg",
+    "reason": "Succesfully added: Assigned AI category because the session focuses on agentic AI, AI model orchestration, and leveraging Microsoft Azure AI services, satisfying AI category rule 1 (Microsoft AI Products/Services) and AI rule 4 (AI integration with Microsoft platforms). Assigned Azure category because Azure AI platform features centrally in deployment and application of agentic AI solutions (Azure rule 1: Any Azure service/technology, and rule 4: Azure development/deployment). Did not assign other categories because content does not center on software code, DevOps practices, custom ML engineering, or security implementation. No generic exclusions apply since this is technical, English-language, developer-focused session content.",
+    "timestamp": "2025-11-21 11:08:21 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=vuqgC2AiZgY",
+    "reason": "Succesfully added: Assigned Security category because the primary focus is on safeguarding sensitive data with Microsoft Purview, addressing data governance, auditing, and compliance (Security rules 1, 2, and 7). AI category is included because the session discusses the role of AI in both attacks (adversarial behavior) and defensive strategies (AI-driven security tools like Security Copilot), satisfying AI rules 1, 4, and 5. Coding, DevOps, Azure, ML, and GitHub Copilot categories are not assigned because the content does not focus on programming, DevOps workflows, Azure-specific service usage, custom ML engineering, or developer-specific AI tooling. The explanation highlights key segments such as AI misuse examples, the Security Copilot application, and stepwise Purview adoption as directly relevant to the categorized domains.",
+    "timestamp": "2025-11-21 11:08:42 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=wh8xquMkVOE",
+    "reason": "Succesfully added: Assigned the AI category because the session centers on enterprise application of artificial intelligence, discussing how AI agents will progressively operate alongside humans in existing business app environments (AI rules 1, 4, 5, and 6). No Coding, DevOps, Azure, ML, Security, or GitHub Copilot categories applied because the content specifically covers enterprise adoption of AI agents, multi-agent orchestration, workflow transformation, and practical adoption strategies for enterprises, not coding, DevOps, ML engineering, or Microsoft cloud engineering. Tags were derived from the session’s AI adoption themes, demonstration details, and enterprise focus. Excluded all categories except AI per the inclusion rules.",
+    "timestamp": "2025-11-21 11:09:03 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=Zi9oTBjqU70",
+    "reason": "Succesfully added: Assigned 'Azure' because the core subject is Dell’s private/hybrid cloud solutions integrated directly with Azure technologies (Azure rules 1, 4, and 5). Assigned 'Security' because the session highlights cyber resilience, data protection, and built-in security/governance within these Azure-powered solutions (Security rules 1, 7, and 9). Did not assign 'AI'—although AI workloads are mentioned, the focus is on infrastructure readiness rather than direct AI development or usage. No content mapped directly to Coding, DevOps, ML, or GitHub Copilot categories based on the detailed session outline and topics in the description. No generic exclusion rules apply as this is technical, English-language, implementation-focused content aimed at practitioners.",
+    "timestamp": "2025-11-21 11:09:38 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=Zy_kxJSeYGo",
+    "reason": "Succesfully added: Assigned Security category because the core subject is Data Loss Prevention (DLP), data protection, and policy enforcement using Microsoft Purview, which is explicitly named as a Microsoft security/compliance solution (Security rules 1, 7, 10). Assigned AI category because the session integrates Security Copilot and discusses automated, AI-driven protection in Microsoft Purview (AI rules 1 and 5). The content is not about GitHub Copilot, so GitHub Copilot and Coding categories do not apply. DevOps, Azure, and ML categories do not apply—the focus is security and AI for DLP/governance, not software deployment, coding, or data science. No generic exclusion rule applies since the session is technical, in English, and focused on Microsoft technologies.",
+    "timestamp": "2025-11-21 11:09:59 +00:00",
+    "collection": "videos"
   }
 ]

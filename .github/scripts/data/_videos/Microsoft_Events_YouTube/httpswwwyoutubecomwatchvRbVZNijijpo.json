@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_videos",
+  "Tags": [
+    "MicrosoftAICloudPartnerProgram",
+    "MSIgnite"
+  ],
+  "Title": "Accelerate and scale physical AI development with simulation | BRKSP489",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Author": "Microsoft Events",
+  "Description": "Join Wandelbots, Microsoft and NVIDIA for a discussion on the next era of physical AI. Explore how simulations, powered by NVIDIA accelerated computing and accelerated by NVIDIA Omniverse libraries and frameworks, Microsoft Azure, and OpenUSD are rapidly accelerating robotics development. Learn how digital twins, synthetic data generation, and closed-loop data integrations reduce risk, speed up skill acquisition, and ensure robust performance for advanced industrial and AI for robotics.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Teresa Conceicao \\* Ganesh Sivaraman 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRKSP489 | English (US) Breakout | Intermediate (200) #MSIgnite, #MicrosoftAICloudPartnerProgram\n\nChapters: 0:00 - Discussion on training physical AI models to act autonomously in real-world tasks 00:08:22 - NVIDIA’s three-computer approach: simulation, training, and deployment of AI models 00:09:37 - Collaboration between NVIDIA and Microsoft integrating AI infrastructure on Azure 00:11:56 - Simulation as Part of Continuous Integration and Deployment 00:20:09 - Using Azure ARC for Edge Deployment and Security 00:23:35 - Industrial Adoption of Skills-Based Robotics and Hybrid Systems 00:29:05 - Closing Remarks: Live Demos, Digital Twins, and Open Standards Collaboration 00:30:11 - Autonomous Vehicles as Robots and Data Pyramid Concept 00:34:03 - Impact of Agentic AI and Unified Programming Environments in Robotics",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Link": "https://www.youtube.com/watch?v=RbVZNijijpo",
+  "ProcessedDate": "2025-11-21 11:04:44",
+  "PubDate": "2025-11-21T10:21:47+00:00",
+  "FeedName": "Microsoft Events YouTube"
+}

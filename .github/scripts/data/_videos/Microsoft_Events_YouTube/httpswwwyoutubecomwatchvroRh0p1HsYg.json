@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_videos",
+  "Tags": [
+    "Agenticbusinessapplications",
+    "MSIgnite"
+  ],
+  "Title": "From prompt to production: Scale agentic AI with NVIDIA and Azure | BRKSP477",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Author": "Microsoft Events",
+  "Description": "Agentic AI is redefining how enterprises operate—automating complex workflows and unlocking value across business functions. In this session, explore how NVIDIA and Azure are accelerating the development, deployment, and orchestration of agentic AI applications at scale. Learn how NVIDIA’s key offerings such as NVIDIA Nemotron models, NVIDIA NIM, and NVIDIA NeMo Agent Toolkit on Azure AI platform equip organizations to boost innovation and fully realize the promise of agentic AI.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Matheen Raza 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRKSP477 | English (US) Breakout | Intermediate (200) #MSIgnite, #Agenticbusinessapplications\n\nChapters: 0:00 - Explaining NVIDIA’s Role in Software and Accelerated Computing 00:04:29 - Integration of Agentic AI with Microsoft and Industry Partners 00:06:35 - NVIDIA’s Internal Use of Agentic AI for Chip Design (Chip Nemo) 00:09:43 - AI Agents enter global workforce with NVIDIA IQ and Agentic AI Blueprint 00:12:22 - Discussion on agent processing, long-context reasoning, and interaction 00:16:42 - Content Safety and Training Data Transparency 00:17:00 - Model Benchmark Comparisons and Performance Highlights 00:24:37 - Model Customization, Evaluation, and Guardrails 00:29:12 - Video Summarization Demo: Analytics and Safety Monitoring",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Link": "https://www.youtube.com/watch?v=roRh0p1HsYg",
+  "ProcessedDate": "2025-11-21 11:04:44",
+  "PubDate": "2025-11-21T10:20:19+00:00",
+  "FeedName": "Microsoft Events YouTube"
+}
