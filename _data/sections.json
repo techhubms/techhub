@@ -85,6 +85,11 @@
                 "title": "Levels of Enlightenment",
                 "url": "/github-copilot/levels-of-enlightenment.html",
                 "description": "Rob Bos's comprehensive guide to mastering GitHub Copilot through progressive learning stages."
+            },
+            {
+                "title": "The GitHub Copilot Handbook",
+                "url": "/github-copilot/handbook.html",
+                "description": "A practical guide by Rob Bos and Randy Pagels to transforming the software development lifecycle with GitHub Copilot."
             }     
         ]
     },

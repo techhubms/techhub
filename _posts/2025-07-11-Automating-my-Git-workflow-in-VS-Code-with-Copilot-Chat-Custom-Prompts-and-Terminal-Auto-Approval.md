@@ -151,7 +151,7 @@ The Git automation workflow is stored in `.github/prompts/pushall.prompt.md` and
 
 ```md
 ---
-mode: 'agent'
+agent: 'agent'
 description: 'This makes sure all changed files are pushed.'
 ---
 

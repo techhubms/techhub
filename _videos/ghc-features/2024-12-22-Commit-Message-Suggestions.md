@@ -10,7 +10,7 @@ date: 2024-12-22 23:00:22 +00:00
 permalink: "/2024-12-22-Commit-Message-Suggestions.html"
 viewing_mode: "internal"
 section: "github-copilot"
-ghes_support: "false"
+ghes_support: "true"
 plans: ["Free"]
 alt-collection: "features"
 tags: ["AI", "Code", "Git", "GitHub Copilot", "Suggestions", "Videos"]
@@ -47,7 +47,3 @@ The Commit Message Suggestions feature analyzes your current development context
 - **Learning Enhancement**: Discover new patterns and best practices
 - **Error Reduction**: Get assistance with common coding mistakes
 - **Consistency**: Maintain consistent coding standards across projects
-
-## GHES Support
-
-This feature is not currently supported in GitHub Enterprise Server (GHES) environments.

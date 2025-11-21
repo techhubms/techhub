@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Visual Studio Code and GitHub Copilot - What's new in 1.106"
-description: "Fokko Veegens provides a comprehensive walkthrough of Visual Studio Code 1.106, released in November 2025, highlighting significant enhancements like plan-mode for guided feature planning, unified Copilot and CLI agent sessions for seamless handoffs, and safer, smarter tooling with open-sourced inline completions and enhanced trust controls."
+description: "VS Code 1.106 brings major improvements to GitHub Copilot workflows with plan-mode for safer code changes, unified agent sessions across local and cloud environments, and open-sourced inline completions. Fokko Veegens walks through the new features including enhanced trust controls, better terminal integration, and MCP server governance."
 author: "Fokko Veegens"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://www.youtube.com/watch?v=zsCBEVCQ98I"

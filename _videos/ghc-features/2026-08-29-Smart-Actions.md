@@ -1,27 +1,27 @@
 ---
 layout: "post"
-title: "Web Search with Bing"
-description: "Search the web directly from your coding environment"
+title: "Smart Actions"
+description: "AI-suggested workflow improvements and automation ideas"
 author: "TBD"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: ""
 categories: ["AI", "GitHub Copilot"]
-date: 2026-08-29 09:39:31 +00:00
-permalink: "/2026-08-29-Web-Search-with-Bing.html"
+date: 2026-08-29 09:39:32 +00:00
+permalink: "/2026-08-29-Smart-Actions.html"
 viewing_mode: "internal"
 section: "github-copilot"
-ghes_support: "true"
+ghes_support: "false"
 plans: ["Free"]
 alt-collection: "features"
 tags: ["AI", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "github copilot", "videos"]
 ---
 
-This content demonstrates GitHub Copilot's Web Search with Bing feature. Search the web directly from your coding environment<!--excerpt_end-->
+This content demonstrates GitHub Copilot's Smart Actions feature. AI-suggested workflow improvements and automation ideas<!--excerpt_end-->
 
 ## Overview
 
-Search the web directly from your coding environment
+AI-suggested workflow improvements and automation ideas
 
 ## Key Features
 

@@ -47,7 +47,3 @@ The PR Body Generation in WebUI feature analyzes your current development contex
 - **Learning Enhancement**: Discover new patterns and best practices
 - **Error Reduction**: Get assistance with common coding mistakes
 - **Consistency**: Maintain consistent coding standards across projects
-
-## GHES Support
-
-This feature is not currently supported in GitHub Enterprise Server (GHES) environments.

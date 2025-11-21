@@ -1,5 +1,5 @@
 ---
-mode: 'agent'
+agent: 'agent'
 description: 'Add new RSS feed to the RSS feed configuration and processing workflow.'
 ---
 

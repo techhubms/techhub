@@ -1,27 +1,27 @@
 ---
 layout: "post"
-title: "Web Search with Bing"
-description: "Search the web directly from your coding environment"
+title: "Organization-wide Custom Instructions"
+description: "Set coding standards and guidelines applied across entire organization"
 author: "TBD"
 excerpt_separator: <!--excerpt_end-->
 canonical_url: ""
 categories: ["AI", "GitHub Copilot"]
-date: 2026-08-29 09:39:31 +00:00
-permalink: "/2026-08-29-Web-Search-with-Bing.html"
+date: 2026-08-29 09:39:32 +00:00
+permalink: "/2026-08-29-Organization-wide-Custom-Instructions.html"
 viewing_mode: "internal"
 section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
+ghes_support: "false"
+plans: ["Enterprise"]
 alt-collection: "features"
 tags: ["AI", "GitHub Copilot", "Videos"]
 tags_normalized: ["ai", "github copilot", "videos"]
 ---
 
-This content demonstrates GitHub Copilot's Web Search with Bing feature. Search the web directly from your coding environment<!--excerpt_end-->
+This content demonstrates GitHub Copilot's Organization-wide Custom Instructions feature. Set coding standards and guidelines applied across entire organization<!--excerpt_end-->
 
 ## Overview
 
-Search the web directly from your coding environment
+Set coding standards and guidelines applied across entire organization
 
 ## Key Features
 

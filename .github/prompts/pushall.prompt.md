@@ -1,5 +1,5 @@
 ---
-mode: "agent"
+agent: 'agent'
 description: "Step-by-step workflow for safely and precisely executing code and GitHub operations according to strict instructions."
 model: "Claude Sonnet 4.5"
 ---
@@ -240,7 +240,7 @@ model: "Claude Sonnet 4.5"
 
     **CHECKPOINT**: "✅ Step 13 completed successfully. Remote branch synchronization complete. Moving to Step 14."
     
-14. **Synchronize with main branch:** Ensure your branch maintains a clean history by rebasing onto main.
+14. **Synchronize with main branch:** Ensure your branch maintains a clean history by rebasing onto the remote main branch.
 
     Read the `branch.main.hasUpdates` field from the git-changes-analysis.json file in the `.tmp/git-changes-analysis/` directory.
     
@@ -249,8 +249,16 @@ model: "Claude Sonnet 4.5"
     
     **If `branch.main.hasUpdates` is true:**
 
+    First, fetch the latest changes from the remote main branch:
+
     ```pwsh
-    git rebase main
+    git fetch origin main
+    ```
+
+    Then rebase onto the remote main branch (not local main):
+
+    ```pwsh
+    git rebase origin/main
     ```
     
     **CRITICAL**: If the rebase stops for any reason, use the [Branch Rebase Instructions](#branch-rebase-instructions) section below. When you are done rebasing, you must continue with the main workflow steps, starting from the checkpoint in this step.
@@ -433,7 +441,7 @@ These are reusable instructions for rebasing onto any target branch (main, remot
 **Execute Rebase:**
 Use the appropriate rebase command based on your situation:
 
-- For main branch: `git rebase main`
+- For remote main branch: `git fetch origin main` then `git rebase origin/main`
 - For remote branch updates: `git pull --rebase` (already in progress)
 - For continuing interrupted rebase: `git rebase --continue`
 

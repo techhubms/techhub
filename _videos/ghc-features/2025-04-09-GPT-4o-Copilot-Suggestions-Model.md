@@ -47,7 +47,3 @@ The GPT-4o Copilot Suggestions Model feature analyzes your current development c
 - **Learning Enhancement**: Discover new patterns and best practices
 - **Error Reduction**: Get assistance with common coding mistakes
 - **Consistency**: Maintain consistent coding standards across projects
-
-## GHES Support
-
-This feature is fully supported in GitHub Enterprise Server (GHES) environments.

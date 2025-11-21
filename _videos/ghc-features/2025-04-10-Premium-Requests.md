@@ -47,7 +47,3 @@ The Premium Requests feature analyzes your current development context to provid
 - **Learning Enhancement**: Discover new patterns and best practices
 - **Error Reduction**: Get assistance with common coding mistakes
 - **Consistency**: Maintain consistent coding standards across projects
-
-## GHES Support
-
-This feature is fully supported in GitHub Enterprise Server (GHES) environments.

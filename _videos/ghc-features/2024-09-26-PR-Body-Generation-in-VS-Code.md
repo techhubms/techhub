@@ -47,7 +47,3 @@ The PR Body Generation in VS Code feature analyzes your current development cont
 - **Learning Enhancement**: Discover new patterns and best practices
 - **Error Reduction**: Get assistance with common coding mistakes
 - **Consistency**: Maintain consistent coding standards across projects
-
-## GHES Support
-
-This feature is fully supported in GitHub Enterprise Server (GHES) environments.

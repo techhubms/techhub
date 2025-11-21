@@ -10,7 +10,7 @@ date: 2024-12-16 20:42:19 +00:00
 permalink: "/2024-12-16-Multi-Models.html"
 viewing_mode: "internal"
 section: "github-copilot"
-ghes_support: "true"
+ghes_support: "false"
 plans: ["Free"]
 alt-collection: "features"
 tags: ["AI", "GitHub Copilot", "LLM", "Multi Feature", "Videos"]
@@ -47,7 +47,3 @@ The Multi-Models feature analyzes your current development context to provide in
 - **Learning Enhancement**: Discover new patterns and best practices
 - **Error Reduction**: Get assistance with common coding mistakes
 - **Consistency**: Maintain consistent coding standards across projects
-
-## GHES Support
-
-This feature is not currently supported in GitHub Enterprise Server (GHES) environments.

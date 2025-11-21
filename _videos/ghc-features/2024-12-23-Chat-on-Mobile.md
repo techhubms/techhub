@@ -10,7 +10,7 @@ date: 2024-12-23 23:00:10 +00:00
 permalink: "/2024-12-23-Chat-on-Mobile.html"
 viewing_mode: "internal"
 section: "github-copilot"
-ghes_support: "true"
+ghes_support: "false"
 plans: ["Free"]
 alt-collection: "features"
 tags: ["AI", "Chat", "GitHub Copilot", "Mobile", "Pull Request", "Videos"]
@@ -47,7 +47,3 @@ The Chat on Mobile feature analyzes your current development context to provide 
 - **Learning Enhancement**: Discover new patterns and best practices
 - **Error Reduction**: Get assistance with common coding mistakes
 - **Consistency**: Maintain consistent coding standards across projects
-
-## GHES Support
-
-This feature is fully supported in GitHub Enterprise Server (GHES) environments.

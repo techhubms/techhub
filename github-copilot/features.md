@@ -23,7 +23,7 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
         <ul>
           <li>50 agent mode or chat requests per month</li>
           <li>2,000 completions per month</li>
-          <li>Access to Claude 3.5 Sonnet, GPT-4.1, and more</li>
+          <li>Access to Haiku 4.5, GPT-4.1, and more</li>
         </ul>
         <div class="tier-link">
           <a href="#videos-free">View Features →</a>
@@ -34,14 +34,14 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
     <div class="subscription-tiers-container half-width">
       <div class="subscription-section">
         <h2>Pro</h2>
-        <p>Unlimited completions and chats with access to more models</p>
+        <p>Accelerate workflows with GitHub Copilot ($10 USD per month or $100 per year)</p>
         <ul>
           <li>Everything in Free</li>
+          <li>Coding agent</li>
           <li>Unlimited agent mode and chats with GPT-5 mini</li>
           <li>Unlimited code completions</li>
-          <li>Access to code review, Claude Sonnet 4, GPT-5, Gemini 2.5 Pro, and more</li>
-          <li>6x more premium requests than Copilot Free</li>
-          <li>Coding agent (preview)</li>
+          <li>Access to code review, Claude Sonnet 4/4.5, GPT-5, Gemini 2.5 Pro, and more</li>
+          <li>300 premium requests to use latest models, with option to buy more</li>
           <li>Free for verified students, teachers, and maintainers of popular open source projects</li>
         </ul>
         <div class="tier-link">
@@ -62,7 +62,7 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
           <li>User management and policies</li>
           <li>Content exclusions</li>
           <li>Audit logs</li>
-          <li>300 premium requests per user per month</li>
+          <li>300 premium requests per month</li>
         </ul>
         <div class="tier-link">
           <a href="#videos-pro">View Features →</a>
@@ -73,12 +73,13 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
     <div class="subscription-tiers-container half-width">
       <div class="subscription-section">
         <h2>Pro+</h2>
-        <p>Maximum flexibility and model choice ($39 USD per month or $390 per year)</p>
+        <p>Scale with agents and more models ($39 USD per month or $390 per year)</p>
         <ul>
           <li>Everything in Pro</li>
-          <li>Access to all models, including Claude Opus 4.1, o3, and more</li>
-          <li>30x more premium requests than Copilot Free</li>
+          <li>Access to all models, including Claude Opus 4.1 and more</li>
+          <li>1500 Premium Requests per month, with option to buy more</li>
           <li>Access to GitHub Spark</li>
+          <li>Codex IDE extension support in VS Code</li>
         </ul>
         <div class="tier-link">
           <a href="#videos-proplus">View Features →</a>
@@ -92,8 +93,8 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
         <p>Full enterprise features and controls ($39 USD per user per month)</p>
         <ul>
           <li>Everything in Business</li>
+          <li>1000 premium requests per month</li>
           <li>Copilot knowledge bases</li>
-          <li>1,000 premium requests per user per month</li>
           <li>Advanced compliance and security features</li>
           <li>Custom policies and content exclusions</li>
           <li>Enterprise-grade audit logs</li>
@@ -131,7 +132,7 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
           <div class="video-header">
             <h3>{{ video.title }}</h3>
             <div class="video-icons">
-              {% if video.ghes_support %}
+              {% if video.ghes_support == "true" %}
                 <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
               {% else %}
                 <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
@@ -151,7 +152,7 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
         <div class="video-header">
           <h3>{{ video.title }}</h3>
           <div class="video-icons">
-            {% if video.ghes_support %}
+            {% if video.ghes_support == "true" %}
               <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
             {% else %}
               <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
@@ -190,7 +191,7 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
           <div class="video-header">
             <h3>{{ video.title }}</h3>
             <div class="video-icons">
-              {% if video.ghes_support %}
+              {% if video.ghes_support == "true" %}
                 <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
               {% else %}
                 <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
@@ -210,7 +211,7 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
         <div class="video-header">
           <h3>{{ video.title }}</h3>
           <div class="video-icons">
-            {% if video.ghes_support %}
+            {% if video.ghes_support == "true" %}
               <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
             {% else %}
               <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
@@ -249,7 +250,7 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
           <div class="video-header">
             <h3>{{ video.title }}</h3>
             <div class="video-icons">
-              {% if video.ghes_support %}
+              {% if video.ghes_support == "true" %}
                 <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
               {% else %}
                 <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
@@ -269,9 +270,9 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
         <div class="video-header">
           <h3>{{ video.title }}</h3>
           <div class="video-icons">
-            {% if video.ghes_support %}
+            {% if video.ghes_support == "true" %}
               <span class="ghes-icon ghes-supported" title="GHES Supported">✓</span>
-            {% else %}
+              {% else %}
               <span class="ghes-icon ghes-not-supported" title="Not GHES Supported">✕</span>
             {% endif %}
           </div>
@@ -285,6 +286,4 @@ This page provides a comprehensive overview of GitHub Copilot plans as of August
     </div>
   </div>
 
-</div>
-
-<script src="{{ '/assets/js/features.js' | relative_url }}"></script>
+</div><script src="{{ '/assets/js/features.js' | relative_url }}"></script>

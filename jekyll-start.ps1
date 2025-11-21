@@ -48,8 +48,8 @@ try {
     else {
         # Start Jekyll server
         Write-Host "Building and serving Jekyll site..." -ForegroundColor Cyan
-        #$jekyllArgs = @('serve', "--host", "0.0.0.0", "--watch", "--force_polling", "--incremental")
-        $jekyllArgs = @('serve', "--host", "0.0.0.0", "--no-watch")
+        $jekyllArgs = @('serve', "--host", "0.0.0.0", "--watch", "--force_polling", "--incremental")
+        #$jekyllArgs = @('serve', "--host", "0.0.0.0", "--no-watch")
     }
 
     # Build Jekyll command with optional verbose flag
