@@ -18488,5 +18488,59 @@
     "reason": "Succesfully added: Included AI category because the session heavily focuses on local AI development, agentic workflows, and demos of customizing AI with Windows APIs (AI inclusion rules 1, 3, and 5). Coding is included since it demonstrates developer environment configuration, use of Windows APIs, semantic search, and integrates developer tools (Coding inclusion rules 2, 4, and 5). Security is included due to repeated emphasis on privacy, secure application design, and enterprise settings, with specific focus on privacy and secure environments (Security inclusion rule 2 and 7). Did not include Azure or ML—while cloud topics and AI agents are present, no substantive Azure or ML workflows are demonstrated or described in the session outline. Generic exclusion rules do not apply, as the session is technical, English, and development-focused.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=zOy-tA1Zb0g"
+  },
+  {
+    "timestamp": "2025-11-21 08:05:40 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=-LSrJtikrh8",
+    "reason": "Succesfully added: Assigned AI category because the session centers on autonomous AI agents and AI-powered digital labor managed via Microsoft Agent 365 (AI inclusion rule 1 and 4). Security category is included due to sections discussing compliance, authorization, and data access governance (Security inclusion rules 1, 2, and 3). Coding, Azure, DevOps, ML, and GitHub Copilot categories were not added because the content focuses primarily on management of AI agents, enterprise governance, and organizational integration — not on a developer tool, coding practices, or cloud service deployment. No generic exclusion rules applied, as the session is technical, in English, and contains substantial technical depth relevant to Microsoft technologies and enterprise AI management.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-21 08:06:01 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=AAm9mhhrNec",
+    "reason": "Succesfully added: Assigned AI category because the content demonstrates Copilot-driven analytics, natural language exploration, and AI-enabled insights (AI rule 1, 4, 5). Assigned Azure due to integration with Microsoft Fabric and Sentinel, both Azure services (Azure rule 1, 4, 5). Assigned ML because of advanced analytics, anomaly detection, and machine learning applications used in real-time intelligence and data exploration (ML rule 1, 2, 4, 5). Did not assign Coding or DevOps because the session is focused on data, analytics, and operational intelligence rather than application/runtime development or DevOps practices. Did not assign Security because while Sentinel is featured, the focus is on intelligence and analytics rather than security implementation.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-21 08:06:33 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=oG2oJP0fpg0",
+    "reason": "Succesfully added: Assigned the AI category because the session centers on building intelligent, agentic solutions using Copilot Studio—a Microsoft developer/maker tool for AI (AI rule 1 and 2). Financial services use cases and industry context do not exclude the content, as the technical focus is on Microsoft AI platform development, not business operations alone. No other categories (like Coding, Azure, etc.) are appropriate as the session details do not focus on code-level implementation or Azure service deployment.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-21 08:06:52 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=slDdNIQCJBQ",
+    "reason": "Succesfully added: Assigned AI category because session focuses on Foundry IQ, Azure AI Search, agentic RAG, and knowledge retrieval (AI rule 1, 4, and 6). Assigned Azure category as Azure AI Search is a central technology in integration and content orchestration (Azure rules 1, 3, and 4). No Coding, DevOps, ML, or Security categories—session does not focus on programming implementation, DevOps practices, custom ML pipelines, or direct security architecture despite mentioning dynamic security controls. Content meets the Microsoft centrality threshold and is technical, not business/productivity focused.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-21 08:07:10 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=XHcb_XNq9vw",
+    "reason": "Succesfully added: Assigned 'AI' category because the session details practical AI applications for government modernization, citizen engagement, and frontline service delivery (AI inclusion rules 1, 4, 5). Assigned 'Azure' because the solutions are built on Microsoft cloud platforms and address secure, scalable, and compliant government architectures (Azure inclusion rules 1, 4, 6). Excluded other categories since there is no direct technical implementation of GitHub Copilot, Coding, ML, DevOps, or Security. All information is based on session breakdowns and descriptions showing a Microsoft technology focus well above the 40% threshold.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-21 08:07:29 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Y17b0rJ_psk",
+    "reason": "Succesfully added: Assigned AI category due to focus on AI-powered innovation in SQL, GPT-5 integration, semantic search, and vector indexing (AI rules 1, 4, 5). Azure is included because database services like Azure SQL, Azure CosmosDB, and DocumentDB are central and repeatedly highlighted, satisfying Azure rule 1. Assigned ML category as the session covers machine learning workloads, AI-powered data operations (such as embeddings, vector indexing), and Fabric integration relevant to analytics/data science pipelines (ML rules 1, 2, 6). Did not add Coding or DevOps categories: while developer tooling (VS Code) and demos are present, the primary focus is database feature innovation, not programming or CI/CD, and the session does not center on development patterns or deployment practices. Security was not added since security is mentioned but not a main focus. All category decisions follow inclusion rules as defined.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-21 08:07:49 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=YXE880TLsfk",
+    "reason": "Succesfully added: Assigned the AI category because Azure’s Copilot-powered migration agents and AI-powered planning are central themes (AI rule 1, 5). Assigned Azure because the entire session is focused on migration to Azure IaaS and PaaS, covering practical implementation details (Azure rule 1, 4, and 6). Did not assign Coding, ML, Security, DevOps, or GitHub Copilot because there is no substantial coverage of custom coding, ML development, security architectures, software development practices, or GitHub integrations in the description and session overview.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-21 08:08:09 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=yy7M_O_z_wQ",
+    "reason": "Succesfully added: Content qualifies for AI because it centers on Microsoft Fabric IQ applying AI, ontology, and agentic technologies for enterprise scenarios (AI inclusion rules 1, 4, 5). ML is included due to semantic modeling, unified data, analytics, and applications like grid analysis, geospatial insights, and operational automation (ML inclusion rules 1, 2, 4). Azure is included as Microsoft Fabric operates within the Azure ecosystem and this session is a Microsoft event focusing on Azure-integrated services (Azure inclusion rules 1, 3, 5). No generic exclusion rules apply; session is technical, English, not biographical, and development-focused.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-21 08:08:26 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Zaew1UDiOPs",
+    "reason": "Succesfully added: Content assigned both AI and Security categories: AI because it centrally discusses AI agent lifecycle, Foundry, and agent application architecture (AI rules 1, 4, 5); Security because it covers securing agents, identity, data access, policy/governance, and use of Defender and Intra Agent ID (Security rules 1, 3, 4, 5, 7). No generic or category-specific exclusions triggered. This is a technical implementation session, not business/productivity, biographical, or sales pitch content.",
+    "collection": "videos"
   }
 ]

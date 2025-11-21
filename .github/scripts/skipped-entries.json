@@ -9201,5 +9201,11 @@
     "reason": "No categories found: No categories assigned. Content primarily focuses on Windows 11 as an operating system, its productivity and manageability features, and integrations with Microsoft 365 Copilot (business productivity), as seen in the description and chapter list. The coverage centers on IT leader benefits, operational efficiency, device management, and end-user/workplace productivity features (Copilot for Microsoft 365, Windows Copilot+) rather than developer tools, coding, or technical implementation details. According to generic exclusion rules and Copilot product distinctions, OS end-user/project management content and business-focused Copilot integrations must be excluded. No substantial mention of development-related topics, coding, DevOps, Azure services, or technical architecture implementation. Therefore, all categories are excluded.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=Zk4Auaryigk"
+  },
+  {
+    "timestamp": "2025-11-21 08:06:13 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=HqrXIgss5UE",
+    "reason": "No categories found: Content excluded due to generic exclusion rules focused on Dynamics 365 business applications and Copilot for Microsoft 365 business productivity tools. The description centers on business outcomes, CRM migration strategy, and product adoption rather than technical implementation or development with Microsoft technologies. No details are provided about developer tools, technical architecture, coding practices, or relevant platform engineering, and the session is aimed at business transformation and rapid adoption—not technical or developer audiences per exclusion guidelines in Chapter 3.",
+    "collection": "videos"
   }
 ]
