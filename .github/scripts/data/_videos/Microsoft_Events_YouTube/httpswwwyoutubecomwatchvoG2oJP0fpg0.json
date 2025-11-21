@@ -1,0 +1,17 @@
+{
+  "Link": "https://www.youtube.com/watch?v=oG2oJP0fpg0",
+  "Description": "Financial services firms are increasingly building agents with Microsoft technologies, solving the hardest and most important challenges today. Learn how you can use CoPilot Studio to not only build intelligent, agentic solutions that transform customer engagement for financial services industry, but also help you shrink time to market.\n\nTo learn more, please check out these resources: \\* https://www.microsoft.com/en-us/industry/financial-services/microsoft-cloud-for-financial-services \\* https://aka.ms/ignite25-plans-lowcode \\* https://www.microsoft.com/en-us/industry/financial-services/security-compliance-insights \\* https://www.microsoft.com/en-us/industry/blog/financial-services/ \\* https://www.microsoft.com/en-us/microsoft-365-copilot/microsoft-copilot-studio/?msockid=35e352f64bd26356216b41214fd26d98 \\* https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ \\* https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/introducing-model-context-protocol-mcp-in-copilot-studio-simplified-integration-with-ai-apps-and-agents/?msockid=35e352f64bd26356216b41214fd26d98 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Adrian Crockett \\* Jared Lambert \\* Hemanth Sundararaj \\* Adam Wheat 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK366 | English (US) Breakout | Foundational (100) Related Sessions: BRK368 -- https://ignite.microsoft.com/sessions/BRK368?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIA0AMb4vebxyxtQCqrODzMp BRK367 -- https://ignite.microsoft.com/sessions/BRK367?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIA0AMb4vebxyxtQCqrODzMp THR795 -- https://ignite.microsoft.com/sessions/THR795?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIA0AMb4vebxyxtQCqrODzMp #MSIgnite, #Innovatewithlow\n\nChapters: 0:00 - Contextual intelligence and Work IQ example 00:06:23 - Top AI use cases in banking, capital markets, and insurance 00:19:09 - Advanced best practices: model selection, use of sub-agents, and optimization through evals 00:21:01 - Continuous optimization: using sub-agents and eval loops to enhance performance 00:21:13 - Importance of sub-agents and modular problem solving in AI development 00:22:17 - Introduction of Adrian and transition to Edward Jones case study 00:34:09 - Firm-wide rollout of AI assistants tailored to employee workflows 00:36:25 - Connecting Edward Jones data with Morningstar MCP for the demo 00:43:43 - Showcasing the generated diversification alert email and results",
+  "OutputDir": "_videos",
+  "PubDate": "2025-11-21T07:25:32+00:00",
+  "FeedName": "Microsoft Events YouTube",
+  "Tags": [
+    "Innovatewithlow",
+    "MSIgnite"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Author": "Microsoft Events",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "ProcessedDate": "2025-11-21 08:04:45",
+  "Title": "Becoming frontier: Accelerating agentic journeys in financial services | BRK366"
+}

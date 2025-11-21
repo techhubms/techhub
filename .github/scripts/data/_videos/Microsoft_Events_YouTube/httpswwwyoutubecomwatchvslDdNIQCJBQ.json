@@ -1,0 +1,17 @@
+{
+  "Link": "https://www.youtube.com/watch?v=slDdNIQCJBQ",
+  "Description": "Agents need context. How should we connect data to our agents for optimal context? In this session we will introduce Foundry IQ, the knowledge layer for agents, and the latest developments from Azure AI Search and Microsoft Foundry. Learn about multi-source RAG orchestration, retrieval steering, dynamic security controls and agentic RAG.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-agenticsolutions 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Pablo Castro 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK196 | English (US) | Innovate with Azure AI apps and agents, Microsoft Foundry Breakout | Intermediate (200) #MSIgnite, #InnovatewithAzureAIappsandagents\n\nChapters: 0:00 - Goal of Foundry IQ: Connecting AI Applications to Enterprise Data 00:05:01 - Demonstration: Using Foundry IQ Technician Agent 00:09:40 - Active Indexing, Remote Sources, and Data Retrieval Options 00:16:32 - Accessing Knowledge Bases via Azure AI Search 00:21:42 - Identifying software issues and linking GitHub documentation 00:22:55 - Adding steering instructions for refined GitHub issue searches 00:30:15 - Enhancing data indexing through Azure content understanding 00:33:45 - Growing use of agents and need for security controls 00:42:58 - Evaluation methodology and closing remarks on Foundry IQ benefits",
+  "OutputDir": "_videos",
+  "PubDate": "2025-11-21T07:32:34+00:00",
+  "FeedName": "Microsoft Events YouTube",
+  "Tags": [
+    "InnovatewithAzureAIappsandagents",
+    "MSIgnite"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Author": "Microsoft Events",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "ProcessedDate": "2025-11-21 08:04:45",
+  "Title": "Foundry IQ: the future of RAG with knowledge retrieval and AI Search | BRK196"
+}
