@@ -9435,5 +9435,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=T-LTk5PduGM",
     "timestamp": "2025-11-22 00:10:56 +00:00",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://dellenny.com/reclaim-your-attention-how-windows-11-focus-sessions-help-you-stay-productive/",
+    "reason": "No categories found: No categories assigned because the content focuses on end-user productivity features in Windows 11 (Focus Sessions, To Do integration, and Spotify integration for concentration) rather than technical implementation, coding, development frameworks/utilities, DevOps, ML/AI, or security. None of the inclusion rules for 'AI', 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', or 'Security' apply. This is a productivity guide for business/end-user features, not developer or technical practitioner content, and per the Non-Development Microsoft Products exclusion in Chapter 3, such end-user content is not eligible.",
+    "timestamp": "2025-11-22 08:05:35 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/unlock-your-productivity-superpower-a-beginners-guide-to-clipboard-history-and-cloud-clipboard/",
+    "timestamp": "2025-11-22 09:07:16 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: No categories assigned: The content is a beginner’s guide to clipboard history and cloud clipboard productivity features in Windows 11. It is end-user focused, showing how to use basic OS functionality to improve workflow, not technical development, coding, Microsoft platform engineering, or development-related architecture. This falls under the generic exclusion rule for non-development Microsoft products/content (Chapter 3: Non-Development Microsoft Products). There are no substantial technical implementation details, programming, developer tools, or architectural topics that would qualify for any predefined category."
   }
 ]
