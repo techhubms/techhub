@@ -9423,5 +9423,17 @@
     "collection": "videos",
     "timestamp": "2025-11-21 21:06:40 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rule: the provided description and tags focus exclusively on Visual Studio Code features for chat-driven file changes, without any mention of Microsoft development frameworks, programming languages, cloud services (e.g., Azure), DevOps processes, AI/ML, or security configuration. The description is solely about an editor feature (checkpoints in VS Code), which does not meet any of the specific inclusion rules for the predefined categories (AI, GitHub Copilot, Coding, DevOps, Azure, ML, Security). The video does not contain any technical information about development with Microsoft technologies, nor does it showcase integration with those technologies. As per the rules, VS Code editor features without Microsoft platform development context are excluded."
+  },
+  {
+    "reason": "No categories found: Content excluded because it is primarily an event announcement with no substantive technical detail. The provided description focuses on announcing Microsoft Ignite's return and invites users to sign up, but does not include any information about technical topics, Microsoft technologies, implementation guidance, development, or deep product insight. This triggers the Generic Exclusion Rule for Sales Pitches and promotional content without educational value. No categories assigned.",
+    "timestamp": "2025-11-21 22:05:44 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/CZV5YskWHgg"
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the content is a high-level showcase from the Microsoft Ignite keynote, focusing on Mercedes-Benz's adoption of AI for intelligent mobility. The description does not provide substantive technical detail and centers on business innovation rather than technical implementation, development practices, or code-level integration. According to the generic exclusion rules, business strategy and executive content, as well as industry trend presentations lacking technical depth, are excluded. Furthermore, without actual content text, there is no evidence of developer-focused information or technical walkthroughs involving Microsoft technologies.",
+    "canonical_url": "https://www.youtube.com/watch?v=T-LTk5PduGM",
+    "timestamp": "2025-11-22 00:10:56 +00:00",
+    "collection": "videos"
   }
 ]

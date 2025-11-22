@@ -19094,5 +19094,11 @@
     "collection": "community",
     "timestamp": "2025-11-21 21:07:05 +00:00",
     "reason": "Succesfully added: Assigned the AI category because the Foundry Control Plane provides enterprise governance of AI agents (AI inclusion rule 1, 4, 5). Assigned Azure since Logic Apps Agent Loop and Foundry Control Plane are Microsoft Azure services and features (Azure inclusion rule 1, 4, 5). Did not add Coding since the content focuses on platform usage, governance, and operational procedures rather than actual software development or code examples. ML, Security, DevOps, and GitHub Copilot categories are not included because the article does not discuss data science, coded ML implementations, specific security architecture/configuration details, or DevOps toolchains. All content is technical, English, over 200 words, and not excluded by any generic exclusion rule."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-governance-ignite-2025/ba-p/4471112",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the content centers on Azure governance products, including Service Groups, Azure Policy, and machine configuration features (Azure inclusion rules 1, 4, 5). Security category is included based on detailed coverage of policy management, identity-based exemptions, and machine baselines for compliance, which are all directly related to cloud security and regulatory alignment (Security inclusion rules 1, 2, 4, 5, and 10). No generic exclusions apply: the content is technical, in English, and focuses entirely on developer/admin governance solutions in Azure with actionable details and no sales pitches or biographical focus.",
+    "timestamp": "2025-11-22 01:32:37 +00:00"
   }
 ]
