@@ -19112,5 +19112,11 @@
     "timestamp": "2025-11-22 09:07:03 +00:00",
     "collection": "posts",
     "reason": "Succesfully added: Assigned only the Security category because the content comprehensively discusses Microsoft Defender Antivirus and Windows Security features—focusing on practical security configuration and best practices (Security rules 1, 2, and 4). It does not qualify for Coding, DevOps, Azure, AI, ML, or GitHub Copilot categories, as it does not involve development, cloud, AI, machine learning, or DevOps workflows. The content is technical in nature and provides valuable how-to implementation advice, not just general consumer information. The tags selected pertain directly to Windows Security, Defender, protection methods, and update practices. Generic exclusion rules do not apply as this is not sales, biographical, non-English, business/strategy, or workplace/career-focused content."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=w2WRT2eXISU",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the DevOps category because the content centers on large-scale migration from legacy CI/CD tools to GitHub Actions, focusing on workflow modernization, developer experience, and platform unification (DevOps rules 1, 2, 5, 6, and 7). No other categories qualified: GitHub Copilot is not mentioned; AI, Azure, Security, Coding, and ML are not central topics. The video is technical and practice-oriented, does not violate any generic exclusion rules, and is not a sales pitch or biographical content. Migration strategies and lessons make it a valuable DevOps resource.",
+    "timestamp": "2025-11-23 16:06:20 +00:00"
   }
 ]

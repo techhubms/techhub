@@ -9447,5 +9447,23 @@
     "timestamp": "2025-11-22 09:07:16 +00:00",
     "collection": "posts",
     "reason": "No categories found: No categories assigned: The content is a beginner’s guide to clipboard history and cloud clipboard productivity features in Windows 11. It is end-user focused, showing how to use basic OS functionality to improve workflow, not technical development, coding, Microsoft platform engineering, or development-related architecture. This falls under the generic exclusion rule for non-development Microsoft products/content (Chapter 3: Non-Development Microsoft Products). There are no substantial technical implementation details, programming, developer tools, or architectural topics that would qualify for any predefined category."
+  },
+  {
+    "timestamp": "2025-11-22 15:05:44 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/P3Xht3YJUrs",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The content is primarily promotional, focusing on Google Gemini 3 Pro being available in GitHub Copilot and contains minimal technical depth or actionable developer guidance. It announces a new tool/service and directs users to marketing channels (YouTube, Blog, social media), fitting the sales pitch exclusion. The content does not provide substantive technical information on how to use GitHub Copilot or integrate Gemini 3 Pro; it is primarily a promotional video without educational value."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/NNkficHI1KE",
+    "reason": "No categories found: All fields contain either promotional or generic language and lack substantial technical detail. The 'content' field is null, so there is no main body text to analyze. The title ('By the end of this video you WILL BE an expert #vscode #terminal #ai') is not descriptive of technical specifics and employs hyperbolic, marketing-style language. The description is empty. As per Generic Exclusion Rules, content with insufficient technical information or educational depth, especially when content is missing or unavailable for analysis, must be excluded. Without substantive content, it is impossible to determine if any Microsoft technology categories apply.",
+    "collection": "videos",
+    "timestamp": "2025-11-23 04:18:41 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=1fkKwbUd40I",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The description is primarily in Spanish ('Acompáñanos en esta nueva edición de Jueves de Quack...'), which indicates that less than 80% of the content is in English. According to the Non-English Content exclusion under Generic Exclusion Rules in Chapter 3, non-English content is excluded regardless of any categories that might otherwise apply.",
+    "timestamp": "2025-11-23 07:05:35 +00:00"
   }
 ]
