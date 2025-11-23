@@ -19118,5 +19118,17 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned the DevOps category because the content centers on large-scale migration from legacy CI/CD tools to GitHub Actions, focusing on workflow modernization, developer experience, and platform unification (DevOps rules 1, 2, 5, 6, and 7). No other categories qualified: GitHub Copilot is not mentioned; AI, Azure, Security, Coding, and ML are not central topics. The video is technical and practice-oriented, does not violate any generic exclusion rules, and is not a sales pitch or biographical content. Migration strategies and lessons make it a valuable DevOps resource.",
     "timestamp": "2025-11-23 16:06:20 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/configuring-windows-firewall-for-maximum-safety/",
+    "timestamp": "2025-11-23 18:06:33 +00:00",
+    "reason": "Succesfully added: Assigned the 'Security' category because the entire content is focused on configuring, optimizing, and understanding Windows Firewall—a core Microsoft security technology (Security category, rule 1). The blog educates users on defense mechanisms, setting up rules, detection, and protection strategies clearly within the Security inclusion rules. No other categories were assigned since the content does not address coding, Azure, DevOps, AI, ML, or GitHub Copilot; it is purely focused on system and network security configuration.",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/setting-up-ransomware-protection-in-windows-11-a-simple-and-complete-guide/",
+    "timestamp": "2025-11-23 18:07:20 +00:00",
+    "reason": "Succesfully added: Assigned the Security category because the guide focuses on ransomware defense using Windows 11’s integrated tools such as Controlled Folder Access, OneDrive backup, and cloud-based security. It provides step-by-step configuration for these features and explains security best practices. No other categories apply because the content does not involve coding, DevOps, Azure, AI, ML, or GitHub Copilot. The output omits non-technical content, promotional material, and unrelated sections per Chapter 3.",
+    "collection": "posts"
   }
 ]

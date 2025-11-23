@@ -9465,5 +9465,23 @@
     "canonical_url": "https://www.youtube.com/watch?v=1fkKwbUd40I",
     "reason": "No categories found: Content excluded due to generic exclusion rule: The description is primarily in Spanish ('Acompáñanos en esta nueva edición de Jueves de Quack...'), which indicates that less than 80% of the content is in English. According to the Non-English Content exclusion under Generic Exclusion Rules in Chapter 3, non-English content is excluded regardless of any categories that might otherwise apply.",
     "timestamp": "2025-11-23 07:05:35 +00:00"
+  },
+  {
+    "timestamp": "2025-11-23 17:05:10 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/L5BJGEZnLv8",
+    "reason": "No categories found: No categories were assigned because the content is primarily an overview/introduction of Vert, an open source file converter, and does not cover any Microsoft technology, developer tool, or service as required by the inclusion rules. There is no mention of Azure, Microsoft developer tools, .NET, AI/ML, Security, or any DevOps/Coding/Cloud implementation relevant to Microsoft tech. The content is about a browser-based WebAssembly app and focuses on privacy and local file conversion, with no Microsoft platform centrality. Per the workflow, when in doubt or insufficient evidence for category inclusion, categories must not be assigned.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-enable-two-factor-authentication-2fa-in-windows-11/",
+    "timestamp": "2025-11-23 18:06:47 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is an end-user security guide for setting up two-factor authentication (2FA) in Windows 11 via Microsoft Account. The article does not cover development, coding, DevOps, Microsoft security tools in a developer or enterprise configuration context, or advanced implementation details for practitioners. According to the Generic Exclusion Rules under the 'Non-Development Microsoft Products' and 'Security category' guidelines, end-user focused security how-tos (e.g., enabling 2FA for personal use, basic Windows setup) are excluded unless they involve technical architecture or implementation for developers or IT professionals. All technical details here are limited to basic settings guidance for general users, not coding, scripting, DevOps, or professional security solutioning.",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-set-up-parental-controls-with-microsoft-family-safety/",
+    "timestamp": "2025-11-23 18:07:00 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is focused on the end-user setup and parenting features of Microsoft Family Safety, which is a non-development Microsoft product. According to the generic exclusion rules and Non-Development Microsoft Products section, content about parental controls, Family Safety, or end-user configuration without development, programming, or technical architecture is excluded. There is no exploration of APIs, coding, integration, or developer-focused customization, nor does the content address security from an implementation or DevOps angle. This article is strictly user guidance for Microsoft consumer tools. Therefore, none of the categories ('AI', 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', 'Security') apply.",
+    "collection": "posts"
   }
 ]
