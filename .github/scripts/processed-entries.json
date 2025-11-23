@@ -19130,5 +19130,11 @@
     "timestamp": "2025-11-23 18:07:20 +00:00",
     "reason": "Succesfully added: Assigned the Security category because the guide focuses on ransomware defense using Windows 11’s integrated tools such as Controlled Folder Access, OneDrive backup, and cloud-based security. It provides step-by-step configuration for these features and explains security best practices. No other categories apply because the content does not involve coding, DevOps, Azure, AI, ML, or GitHub Copilot. The output omits non-technical content, promotional material, and unrelated sections per Chapter 3.",
     "collection": "posts"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the entire content focuses on a feature within Azure Monitor, fulfilling Azure rule 1 and Azure rule 2. No other categories apply: there is no extensive discussion of coding practices, DevOps methods, AI, ML, or security mechanisms. There is some mention of technologies like Prometheus, OpenTelemetry, and RBAC, but in the context of Azure monitoring. The information is technical, implementation-focused, and designed for Azure practitioners—matching the platform's intent and category inclusion guidelines.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-public-preview-of-query-based-metric-alerts-in-azure/ba-p/4469723",
+    "collection": "community",
+    "timestamp": "2025-11-23 19:05:40 +00:00"
   }
 ]
