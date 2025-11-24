@@ -9555,5 +9555,35 @@
     "canonical_url": "https://www.youtube.com/watch?v=t8Wx6PDYrIQ",
     "collection": "videos",
     "timestamp": "2025-11-24 12:11:25 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/comparing-microsoft-365-apps-for-windows-mac-and-web-which-one-is-right-for-you/",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The article focuses on comparing Microsoft 365 apps across Windows, Mac, and Web platforms as end-user productivity tools, which is explicitly excluded under the Non-Development Microsoft Products rule. There is no substantive coverage of developer tools, development practices, coding, architecture, Microsoft 365 development, or technical implementation details. The content is targeted at general users evaluating productivity and workflow differences, not technical practitioners or developers. Therefore, per chapter 3 exclusions (Non-Development Microsoft Products and Business/Productivity Tools Exclusion), no categories are assigned.",
+    "timestamp": "2025-11-24 13:14:56 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://devclass.com/2025/11/24/googles-chromium-team-decides-it-will-add-jpeg-xl-support-reverses-obsolete-declaration/",
+    "reason": "No categories found: No categories were assigned because the content is focused on web browsers and the adoption of JPEG XL image format in Chromium (the engine behind Chrome and Microsoft Edge). While Edge is a Microsoft product, the main focus is browser-level support for an image format, not Microsoft technologies, developer tools, coding, DevOps, Azure, AI, ML, or Security implementations. Based on the multi-platform threshold, Microsoft technology (Edge) does not comprise ≥40% or constitute a central architecture. The article does not include technical details of using Edge for development, nor does it describe a developer's integration of Microsoft technology in a way that fits any inclusion category. The content also does not relate to GitHub Copilot, Microsoft Azure, coding with Microsoft languages, or any other Microsoft core developer service. It is therefore excluded according to the category rules.",
+    "timestamp": "2025-11-24 13:15:10 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=lOGSP3dNSlk",
+    "reason": "No categories found: Content excluded based on generic exclusion rules and category rules. The video focuses on business productivity, Windows & Microsoft 365 Copilot, and agent-driven workplace innovation for organizations like Levi’s, rather than technical implementation or developer tools. Copilot here refers to Microsoft 365 Copilot (AI assistant for end-user productivity, not GitHub Copilot or Copilot Studio), which is explicitly excluded by Copilot Product Distinction in Chapter 2. The content highlights demos, strategy, and organizational outcomes—consistent with business productivity, digital transformation, and workplace security, not technical hands-on development. No mention of coding, AI development, ML engineering, DevOps, Azure, or Security implementation in a developer context. Therefore, no categories assigned.",
+    "timestamp": "2025-11-24 13:18:36 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=reTXCEyvF58",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The video is executive-focused, targeting business leaders and decision-makers rather than practitioners (business strategy and executive content exclusion). The session centers on organizational transformation, culture, workforce trends, and high-level AI adoption rather than technical implementation or hands-on development with Microsoft technologies. There is no substantive coverage of developer tools, coding, architecture, technical deployment, or Microsoft technical platforms, except at a strategic overview level. As per rules, business strategy and non-technical executive content are excluded.",
+    "timestamp": "2025-11-24 13:19:10 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=UiCtBkC9hgs",
+    "reason": "No categories found: No categories assigned because the content is focused entirely on Microsoft 365 Copilot, which is a business productivity tool and not a developer tool. The session showcases features for work, team collaboration, and business processes—all classic productivity scenarios. According to the workflow's Copilot Product Distinction and Non-Development Microsoft Products exclusion, Copilot for Microsoft 365 content should be excluded unless it is about code or developer usage, which this is not—the session demonstrates document creation, scheduling, and organizational tasks. No technical depth or development-focused implementation is presented, only end-user features.",
+    "timestamp": "2025-11-24 13:19:22 +00:00",
+    "collection": "videos"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "Title": "Build and customize local AI into enterprise apps with Windows AI APIs | BRK331",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-11-24 13:14:14",
+  "PubDate": "2025-11-24T12:06:23+00:00",
+  "Author": "Microsoft Events",
+  "Tags": [
+    "MSIgnite",
+    "ScalewithcloudandAIendpoints"
+  ],
+  "FeedLevelAuthor": "Microsoft Events",
+  "FeedName": "Microsoft Events YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Description": "See how Microsoft Foundry on Windows makes enabling local AI easy on Copilot+ PCs with Windows AI APIs — no cloud, hosting, or ML expertise needed. Use built-in models on Copilot+ PCs like Phi Silica to integrate built-in language and vision capabilities. Enable turnkey features like summarization, rewriting, and image understanding with minimal code. Customize AI models with own proprietary data using LoRA (low rank adapter) fine-tuning and app content search.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-WinAIFoundry 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Connor Al-Joundi \\* Ivan Razumenic 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK331 | English (US) Breakout | Advanced (300) Related Sessions: BRK199 -- https://ignite.microsoft.com/sessions/BRK199?wt.mc\\_id=yt\\_ BRK329 -- https://ignite.microsoft.com/sessions/BRK329?wt.mc\\_id=yt\\_ #MSIgnite, #ScalewithcloudandAIendpoints\n\nChapters: 0:00 - Transition to demonstration scenario: remote manufacturing challenge 00:13:16 - Transition Back to Field Scenario Before Introducing AI Concepts 00:16:45 - Demonstration of RAG in Action for Root Cause Analysis 00:17:47 - Enhancing App Output with Structured Actionable Insights 00:18:24 - Introduction to Low Rank Adaptation (LoRA) for model customization 00:20:20 - Loading and linking LoRA adapter into the inference process 00:30:00 - Teaching Customer-Specific Device Build Instructions via RAG 00:33:28 - Introduction of Performance Improvements in Phi Silica 00:35:12 - Administrative Controls and Enterprise Use of Windows AI APIs",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=0r-ZypiCtFk"
+}

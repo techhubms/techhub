@@ -19520,5 +19520,83 @@
     "canonical_url": "https://www.youtube.com/watch?v=Ze0v1HkIk-o",
     "collection": "videos",
     "timestamp": "2025-11-24 12:11:55 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=_kYXkZxSTHc",
+    "reason": "Succesfully added: Assigned both 'AI' and 'Azure' categories. The description and session outline detail Azure as the primary cloud service enabling secure, real-time device management and scaling. AI is central to the solution, powering beamforming and hearing enhancement features in Nuance Audio's smart eyewear (AI inclusion rule 1 & 4). Coding, DevOps, ML, Security were not directly covered or evidenced in this content, so they were not included. The video centers on Microsoft partnership and technical implementation, meeting the multi-platform threshold (>40% Microsoft tech).",
+    "timestamp": "2025-11-24 13:15:40 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=_rfg-YKhDVE",
+    "reason": "Succesfully added: Assigned the AI category because the session centers on Agent Builder and Copilot Studio, both Microsoft AI development/maker tools (AI rule 1, 2, and 3). Content demonstrates development, orchestration, and integration of custom AI agents for business process automation, consistent with technical AI focus. Did **not** assign GitHub Copilot, Coding, DevOps, Azure, ML, or Security categories—Agent Builder and Copilot Studio are covered under the AI maker tools category, and the demos focus on workflow automation, setup, and security integration rather than coding or DevOps tooling, cloud infrastructure specifics, or ML/data science from scratch. No generic exclusion rules apply, as the content is technical, not biographical, question-only, or business strategy focused.",
+    "timestamp": "2025-11-24 13:16:02 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=-xcNd5ZU0Z8",
+    "reason": "Succesfully added: Categories were assigned as follows: Azure (main platform focus, per Azure rules 1 and 5), Security (session covers confidential container groups, hardware-based security, and network security, per Security rules 1, 2, and 9), and Coding (content explains technical aspects of containers, distributed caches, and event-driven architecture, per Coding rules 2 and 4). No exclusion rules applied since the session is technical, not biographical, non-business strategy, and delivered as an expert developer session at Microsoft Ignite.",
+    "timestamp": "2025-11-24 13:16:23 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=0r-ZypiCtFk",
+    "reason": "Succesfully added: Included AI category because the session explicitly showcases enabling, customizing, and deploying AI features locally on enterprise apps with Windows AI APIs and Foundry. Coding category was also added since it discusses integration with minimal code, model customization (LoRA), and workflows aimed at developers. Did not include Azure, ML, Security, DevOps, or GitHub Copilot, as the focus is on local Windows-based AI rather than cloud services, full ML engineering, security or DevOps pipelines, or Copilot-specific tooling. Tags extracted using product names, technical processes (LoRA, RAG), and enterprise use-cases from the description and session breakdown.",
+    "timestamp": "2025-11-24 13:16:46 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=aosIvPgLug4",
+    "reason": "Succesfully added: The content is categorized as 'AI' because it centers on agentic AI technologies enabling nonprofit operations, specifically multi-agent systems and AI-powered dashboards, in line with AI category rule 1 and 4 (Microsoft AI technologies and integrating AI capabilities). There is no substantive technical focus on Azure, ML, Coding, DevOps, GitHub Copilot, or Security per the inclusion rules. The session is Microsoft Ignite-branded and highlights practical adoption strategies and examples relevant to the AI category.",
+    "timestamp": "2025-11-24 13:17:04 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=dxa_juNDoS4",
+    "reason": "Succesfully added: Categories assigned as follows: AI because session focuses on agentic AI infrastructure and Azure Copilot agent introduction (AI rule 1, 4, 6). Azure assigned due to centrality of Azure services, including Azure Platform, Portal, Kubernetes, and resiliency (Azure rule 1, 5, 6). DevOps assigned for agentic operations, automation, cloud management, and Kubernetes updates (DevOps rule 1, 3, 5, 6). Security and ML assigned for governance, compliance, distributed AI training, and cloud reliability features (Security rule 3, 4, 5; ML rule 1, 2, 9). No generic exclusion rules triggered; session is substantive, technical, and English.",
+    "timestamp": "2025-11-24 13:17:25 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=E7JJ8JLqlf8",
+    "reason": "Succesfully added: Assigned AI category because the session heavily focuses on real-world enterprise solutions built with Microsoft Foundry and Model Context Protocol (MCP) on Windows, which are Microsoft AI development platforms (AI inclusion rules 1, 4, and 6). No other category qualifies because the content does not specifically address coding practices, Azure cloud services outside the AI context, DevOps methodologies, ML development from scratch, or security implementation. The tags draw from technical terminology, platform names, and implementation topics referenced in the description and agenda.",
+    "timestamp": "2025-11-24 13:17:45 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=k3HASRvfpnE",
+    "reason": "Succesfully added: Assigned 'AI' because the session centers on next-generation AI workloads, including agentic and physical AI, multi-modal inference, and simulation, powered by NVIDIA Blackwell and Azure (AI Rule 1, 4, 5). Assigned 'Azure' due to core focus on deploying and optimizing AI on Microsoft Azure (Azure Rule 1, 4, 5). No other categories qualify; GitHub Copilot is not discussed, Coding/DevOps/ML/Security topics are not primary, though security through Confidential Computing is mentioned as an AI-specific Azure feature. Exclusion rules do not apply; this content is technical, session-based, in English, and not business/productivity-focused.",
+    "timestamp": "2025-11-24 13:18:04 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=KnH7FHyEsbE",
+    "reason": "Succesfully added: Added 'Coding' category because the session demonstrates configuration as code and scripting practices (Coding rules 4, 5). Added 'DevOps' since the session centers on configuration management, automation, and process streamlining relevant to IT/developer workflows (DevOps rules 4, 5, 6). Did not add 'AI'—while AI readiness is mentioned, the session's core focus is on configuration and coding, not AI product usage. 'Azure', 'ML', and 'Security' do not apply as no Azure, ML, or security technologies are technically demonstrated or discussed as primary topics. All decisions follow category inclusion rules and multi-platform thresholds, given substantial technical implementation for Windows setup with WinGet and DSC.",
+    "timestamp": "2025-11-24 13:18:23 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=NDdYyolB-PA",
+    "reason": "Succesfully added: Added Azure category due to extensive use of Azure services like AKS, SQL, and Cosmos DB (Azure rule 1). Added Coding because the session discusses transforming legacy codebases, microservice migration, and platform modernization using code (Coding rules 1, 2, and 4). DevOps included for discussions about operationalizing cloud-native architectures, migration, deployment, and resilience (DevOps rule 5 and 6). ML category added due to inclusion of Cosmos DB and data architecture optimizations relevant to modern analytics and scalability (ML rule 1, 3, and 8). AI is not assigned because, while Azure AI apps are mentioned in description, the actual technical details revolve around operationalizing core services; ML fits due to the data, scalability, and modernization focus. Content qualifies as it's technical, not biographical, promotional, or non-English, and meets all inclusion rules without triggering exclusions.",
+    "timestamp": "2025-11-24 13:18:57 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=XDab1_fVntU",
+    "reason": "Succesfully added: The session centers on AI-driven Microsoft Copilot Studio agent creation, LSEG data integration, and productivity enhancements in finance. These align with the AI category (AI Inclusion Rule 1 and 2: Copilot Studio is a developer/maker tool). Copilot for Microsoft 365 is mentioned but only in context of technical agent development, not business productivity, thus falls under AI. The content does not meet exclusion rules—the focus is not on business productivity, job search, or organizational strategy; it is an intermediate technical session for solution building using AI.",
+    "timestamp": "2025-11-24 13:20:53 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=u79quQu4t_s",
+    "reason": "Succesfully added: Assigned Coding category due to focus on C# development practices and class design (Coding rule 1 and 4). No other categories qualify, as the content does not discuss AI tools, Azure, DevOps, ML, or Security. Excluded generic exclusions because content is technical, not biographical, question-only, sales-focused, or negative. Content is primarily a technical best practices discussion for C# developers.",
+    "timestamp": "2025-11-24 13:21:09 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-hl7-connector-for-azure-logic-apps-standard-and/ba-p/4470690",
+    "reason": "Succesfully added: Assigned Azure category because the content is about Azure Logic Apps and technical integration features (Azure rule 1 and 4). The content describes architecture, technical workflows, adapters, and schemas within Azure, which fits the inclusion criteria for Azure. Other categories like AI, Coding, DevOps, ML, GitHub Copilot, and Security are not directly addressed—the focus is healthcare system integration using Azure Logic Apps and HL7, not AI, machine learning, code-level development, security architectures, DevOps methodologies, or GitHub Copilot. Community content length exceeds 200 meaningful words, with no generic exclusion rules triggered.",
+    "timestamp": "2025-11-24 13:21:33 +00:00",
+    "collection": "community"
   }
 ]

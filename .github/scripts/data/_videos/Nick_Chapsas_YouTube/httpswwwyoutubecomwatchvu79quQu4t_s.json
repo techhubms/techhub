@@ -1,0 +1,17 @@
+{
+  "Title": "\"Every Class Should Be Sealed in C#\"",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-11-24 13:14:11",
+  "PubDate": "2025-11-24T12:01:57+00:00",
+  "Author": "Nick Chapsas",
+  "Tags": [
+    "csharp",
+    "dotnet"
+  ],
+  "FeedLevelAuthor": "Nick Chapsas",
+  "FeedName": "Nick Chapsas YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg",
+  "Description": "Get 40% off Dometrain with code BLACKFRIDAY25: https://dometrain.com/?ref=nick-chapsas&promo=youtube&coupon\\_code=BLACKFRIDAY25\n\nHello, everybody. I'm Nick, and in this video, I want to talk about the suggestion of sealing every class in C# and what benefits such a thing might come with.\n\nCheck out my workshops: https://dometrain.com/workshops/\n\nDon't forget to comment, like and subscribe :)\n\nSocial Media: Follow me on GitHub: https://github.com/Elfocrash Follow me on Twitter: https://twitter.com/nickchapsas Connect on LinkedIn: https://www.linkedin.com/in/nick-chapsas\n\n#csharp #dotnet",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=u79quQu4t_s"
+}

@@ -1,0 +1,17 @@
+{
+  "Title": "Windows setup & configuration made fast & easy with WinGet | BRK335",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-11-24 13:14:14",
+  "PubDate": "2025-11-24T12:43:12+00:00",
+  "Author": "Microsoft Events",
+  "Tags": [
+    "MSIgnite",
+    "ScalewithcloudandAIendpoints"
+  ],
+  "FeedLevelAuthor": "Microsoft Events",
+  "FeedName": "Microsoft Events YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Description": "Learn how WinGet is eliminating the toil associated with configuration management. One of the most frustrating experiences for developers and challenges for IT Professionals is getting a Windows environment set up correctly. WinGet now has support for Microsoft Desired State Configuration. The ability to export your configuration makes it easy to get a great starting place to build configuration files to solve problems with getting Windows setup.\n\nDelivered in a silent stage breakout.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-DevExperiences 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Demitrius Nelon 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK335 | English (US) Breakout | Advanced (300) Related Sessions: BRK330 -- https://ignite.microsoft.com/sessions/BRK330?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIDuz0pkVfvDW2wZ1-2BI5oc #MSIgnite, #ScalewithcloudandAIendpoints\n\nChapters: 0:00 - Introduction by Demetrius Nealon, Product Manager at Microsoft 00:03:28 - Latest Release Updates Including Font Management and UI Modernization 00:10:06 - Configuration as Code Deep Dive and Microsoft Desired State Configuration Advances 00:12:01 - AI readiness through command-line interface integration 00:20:00 - Explanation of DSC operations: Get, Set, and Test with schema insights 00:22:34 - Exploring Visual Studio Code configuration and PowerShell gallery resources 00:23:00 - Understanding class-based PowerShell resources and schema details 00:26:30 - Detailed walkthrough of PowerShell configuration installing terminal tools 00:36:00 - Announcement of Winget Studio becoming open source and call for community contributions",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=KnH7FHyEsbE"
+}
