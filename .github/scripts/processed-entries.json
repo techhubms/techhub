@@ -19784,5 +19784,17 @@
     "timestamp": "2025-11-24 20:07:50 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/finops-blog/streamline-analytics-spend-on-microsoft-fabric-with-azure/ba-p/4472670"
+  },
+  {
+    "canonical_url": "https://code.visualstudio.com/updates/v1_107",
+    "timestamp": "2025-11-24 23:05:27 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'Coding' due to extensive updates affecting developer productivity, coding workflow, and editor features (Coding rule 5). Assigned 'AI' because the release directly references AI code actions and Copilot integration (AI rules 1, 2, 5). Assigned 'GitHub Copilot' as new Copilot CLI features, agent sessions, and MCP server integration are intrinsic to the release (GitHub Copilot rules 1-4, and per requirement, always alongside 'AI'). Assigned 'DevOps' as updates improve developer workflows, remote/cloud workspace management, GitHub Actions/Codespaces integration, and compliance enforcement (DevOps rules 2, 5, 6, 9, and 11). Did not assign 'Azure', 'ML', or 'Security' since Azure and ML services are not a focus and while authentication is featured, Security content is a supporting detail not the main topic."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-ncv6-public-preview-the-new-unified-platform-for-converged/ba-p/4472704",
+    "timestamp": "2025-11-24 23:06:10 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because the content discusses supporting and deploying LLM inference, agentic AI, and generative AI workloads on Azure (AI rules 1, 4, and 5). Assigned Azure category because the entire content is centered on new Azure VM infrastructure (Azure rule 1). Did not assign Coding, ML, DevOps, Security, or GitHub Copilot as the focus is on infrastructure capabilities and supported AI/visualization workloads, not hands-on code, developer tooling, DevOps practices, security implementation, or Copilot usage. No generic exclusion rules apply as this is official technical content with substantial technical details, focused on Microsoft Azure technology."
   }
 ]
