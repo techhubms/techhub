@@ -9531,5 +9531,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=N2RaJApWfPQ",
     "timestamp": "2025-11-24 08:10:05 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This session focuses on Copilot Search, semantic search, and Copilot connectors within Microsoft 365 for general productivity and information discovery. Based on the provided description and session details, the core substance centers on non-development Microsoft 365 products and productivity scenarios (e.g., enterprise search, document access, user experience enhancements). According to exclusion rules, business productivity tools—including Microsoft 365 Copilot and related features—are excluded unless the focus is on developer or maker tools, which does not apply here. Although Azure DevOps and Power BI are mentioned, they are referenced in context of objectives viewing and knowledge systems for organizational purposes, not as central technical development topics. The session content does not meet the ≥40% threshold for qualifying Microsoft developer technologies or technical implementation details; thus, no categories are assigned.",
+    "timestamp": "2025-11-24 09:08:22 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=EurzQ4PhVSo",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: No categories assigned due to generic exclusion rule: The content is primarily about Microsoft 365 Copilot integration in business productivity and user collaboration scenarios, focusing on interfaces for seamless work rather than developer or technical implementation details. According to the Copilot Product Distinction rules in Chapter 2 and Non-Development Microsoft Products rules in Chapter 3, Microsoft 365 Copilot and general productivity/office work are strictly excluded, even if technical platforms like Power Apps are mentioned. The session centers on user-side collaboration/workspace features, business apps, and agent-assisted workflows—not on development, coding, or technical architecture for practitioners.",
+    "timestamp": "2025-11-24 09:12:11 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=yLcrJlwh97M",
+    "collection": "videos"
   }
 ]

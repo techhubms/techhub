@@ -1,0 +1,17 @@
+{
+  "Author": "Microsoft Events",
+  "Description": "Resiliency is foundational. Explore how resiliency on Azure enables secure, scalable, AI-ready cloud architectures. Learn to set resilience goals, simulate failures, and orchestrate recovery. See live demos and discover how shared responsibility empowers teams to deliver trusted, resilient outcomes.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-AzureSQLAIDevelopment 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Gargi Banerjee \\* Molina Sharma 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK217 | English (US) Breakout | Advanced (300) #MSIgnite, #InnovatewithAzureAIappsandagents\n\nChapters: 0:00 - The Importance of Trust, Security, and Quality as Core Values 00:09:29 - Resiliency as a Strategic Advantage and Partnership 00:10:25 - Transition to Deep Dive on Azure Resiliency with Gargi Banerjee 00:12:32 - Introducing the Concept and Framework of Resiliency in Azure 00:14:12 - Second Pillar: Infrastructure Resiliency Overview 00:22:27 - Contoso Mart outage highlights need for resiliency solution 00:24:08 - Detailed walkthrough of four-step resiliency journey: view, assess, improve, validate 00:31:55 - VM ready for backup in Recovery Services vault 00:32:26 - Introduction to threat detection for backups",
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Events YouTube",
+  "Tags": [
+    "InnovatewithAzureAIappsandagents",
+    "MSIgnite"
+  ],
+  "OutputDir": "_videos",
+  "Title": "Resilience by design: Secure, scalable, AI-ready cloud with Azure | BRK217",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Link": "https://www.youtube.com/watch?v=EmbrmSr40CA",
+  "PubDate": "2025-11-24T08:20:54+00:00",
+  "ProcessedDate": "2025-11-24 09:06:26",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+}

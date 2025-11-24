@@ -1,0 +1,17 @@
+{
+  "Author": "Microsoft Events",
+  "Description": "Join us for a first look at Visual Studio 2026—blazing fast, beautifully modern, and powered by agentic AI. See how GitHub Copilot and Profiler Agent transform your dev flow with smarter code reviews, guided diagnostics, and enterprise-grade trust. Whether you're building mission-critical apps or scaling across teams, VS2026 delivers the speed, clarity, and confidence you need to ship faster.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-lowcode 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Jon Galloway 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK122 | English (US) Breakout | Intermediate (200) #MSIgnite, #InnovatewithAzureAIappsandagents\n\nChapters: 0:00 - Introduction and session overview 00:04:02 - Positioning Visual Studio 2026 as the premier IDE 00:06:51 - Personalization, theme options, and new settings experience 00:17:00 - Using MCP-integrated tools like Microsoft Learn and NuGet for project insights 00:24:07 - Automated performance recommendations and measurable improvements (16% faster) 00:26:22 - Applying profiling tools to Visual Studio Code to improve loading performance 00:33:50 - Creating modernization plans, editing project upgrade details, and collaboration features 00:34:57 - Executing the upgrade process and using the dashboard 00:40:32 - Visual Studio shifting to a monthly update cycle and channel overview",
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Events YouTube",
+  "Tags": [
+    "InnovatewithAzureAIappsandagents",
+    "MSIgnite"
+  ],
+  "OutputDir": "_videos",
+  "Title": "Visual Studio 2026 is fast, modern, and AI-powered | BRK122",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Link": "https://www.youtube.com/watch?v=xSioblHhYL8",
+  "PubDate": "2025-11-24T08:17:17+00:00",
+  "ProcessedDate": "2025-11-24 09:06:26",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+}

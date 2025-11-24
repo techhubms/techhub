@@ -1,0 +1,18 @@
+{
+  "Author": "Visual Studio Code",
+  "Description": "Pamela and Eleanor dig into the real art of AI‑assisted coding—delegating work to background agents, writing specs that models actually follow, and steering different LLM personalities without superstition. Expect hands‑on tactics with Copilot, GitHub Actions, CLI‑first workflows, and the agents.md standard, plus a peek at Eleanor’s open‑source Ruler project for centralized rules. Come for the model face‑offs, stay for the practical tips: richer prompts, sandboxed evals, and even talking to your computer.\n\nElite AI Assisted Coding: https://elite-ai-assisted-coding.dev/\n\nChapters: 00:00 – Kickoff and intros 02:00 – Why delegate to agentic models 03:55 – Copilot, Actions, and agent tooling 04:50 – Writing specs that stick 06:40 – Evals, sandboxes, and guardrails 11:00 – Model quirks: GPT‑5, Mini, Grok 15:20 – Ruler and agents.md standards 22:45 – Workflows: VS Code, CLI, voice 27:59 – Wrap‑up and where to learn more\n\nSubscribe on your favorite podcast app:\n- Apple Podcasts: https://podcasts.apple.com/us/podcast/id1833924784\n- Spotify: https://open.spotify.com/show/3S2fExHkmbfQwwYw4a56yQ\n- Amazon Music: https://music.amazon.com/podcasts/bd5f1efc-cdae-49c8-8ec7-c9b48b00ce46/vs-code-insiders-podcast\n- Castbox: https://castbox.fm/channel/id6720052?country=us\n- Overcast: https://overcast.fm/itunes1833924784/vs-code-insiders-podcast\n- Pocket Casts: https://pca.st/itunes/1833924784\n- and more: https://www.vscodepodcast.com/subscribe\n\nFollow VS Code: \\* X: https://x.com/code \\* Bluesky: https://bsky.app/profile/vscode.dev \\* YouTube: https://youtube.com/code \\* LinkedIn: https://www.linkedin.com/showcase/104107263 \\* GitHub: https://github.com/microsoft/vscode\n\n#vscode #ai #agents",
+  "EnhancedContent": null,
+  "FeedName": "Visual Studio Code YouTube",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "OutputDir": "_videos",
+  "Title": "Taming AI Assisted Coding Models with Eleanor Berger",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Link": "https://www.youtube.com/watch?v=0x1Y9e6Vh7I",
+  "PubDate": "2025-11-24T08:00:01+00:00",
+  "ProcessedDate": "2025-11-24 09:06:20",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+}
