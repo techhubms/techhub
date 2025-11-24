@@ -1,0 +1,14 @@
+{
+  "Author": "Richard_Hartman",
+  "PubDate": "2025-11-24T14:59:14+00:00",
+  "Description": "Hello! I've only created a **business case** in a simple lab environment using 5 on-prem Hyper-V servers. (*SmartHotelHost* lab from Github) The business case export explains that I'll be saving over $100K annually once fully migrated into Azure after multiple years. (It's only 5 servers!) That said, I've been reluctant to suggest the Business Case tool and steer clients toward the **Azure Migrate Assessment** and **Azure Pricing Calculator** which have proven to be reliable tools.\n\nAnyone have any experience with the business case? Was it accurate?\n\nThanks a bunch!\n\nRich",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-migration-and/can-anyone-attest-to-the-accuracy-of-an-azure-migrate-business/m-p/4472607#M729",
+  "Tags": [],
+  "OutputDir": "_community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "ProcessedDate": "2025-11-24 15:05:06",
+  "FeedName": "Microsoft Tech Community",
+  "Title": "Can anyone attest to the accuracy of an Azure Migrate Business Case?",
+  "EnhancedContent": "Hello!  I've only created a **business case** in a simple lab environment using 5 on-prem Hyper-V servers. (*SmartHotelHost* lab from Github)  The business case export explains that I'll be saving over $100K annually once fully migrated into Azure after multiple years.  (It's only 5 servers!)  That said, I've been reluctant to suggest the Business Case tool and steer clients toward the **Azure Migrate Assessment** and **Azure Pricing Calculator** which have proven to be reliable tools.\n\nAnyone have any experience with the business case?  Was it accurate?\n\nThanks a bunch!\n\nRich"
+}

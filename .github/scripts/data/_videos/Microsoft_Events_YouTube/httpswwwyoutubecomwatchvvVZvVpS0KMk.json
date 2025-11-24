@@ -1,0 +1,16 @@
+{
+  "FeedLevelAuthor": "Microsoft Events",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=vVZvVpS0KMk",
+  "Author": "Microsoft Events",
+  "Description": "Join NVIDIA, Microsoft, and Ansys (part of Synopsys), to learn how digital twins and real-time simulation are powering the future of manufacturing. Discover how Ansys is leveraging NVIDIA accelerated computing, NVIDIA AI and Omniverse™ libraries, Microsoft Azure, and OpenUSD to help manufacturers accelerate time to insight and optimize manufacturing processes and operations.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Teresa Conceicao \\* Ganesh Sivaraman 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nSTUDIOSP64 | English (US) Studio | Foundational (100) #MSIgnite\n\nChapters: 0:00 - Introduction and greeting by Seth Juarez 00:01:47 - Using AI and Azure Cloud for Real-Time Traffic Data Processing 00:01:55 - Optimizing Signal Timing and Future-Proofing Roadway Design 00:02:34 - Visualizing Live City Traffic Data on Interactive 3D Map 00:04:17 - Plans to improve emergency response via real-time incident detection 00:04:29 - Exploring collaboration with Microsoft and NVIDIA 00:04:39 - Use of Azure cloud and NVIDIA DeepStream to rapidly deploy AI models 00:05:01 - Discussion on collaboration and learning from traffic AI projects 00:06:13 - Closing remarks and gratitude for participation",
+  "PubDate": "2025-11-24T14:31:52+00:00",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-11-24 15:05:01",
+  "Tags": [
+    "MSIgnite"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "Title": "Transform manufacturing with digital twins and real-time simulation | STUDIOSP64"
+}

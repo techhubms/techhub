@@ -9633,5 +9633,53 @@
     "collection": "videos",
     "timestamp": "2025-11-24 14:12:11 +00:00",
     "reason": "No categories found: No categories assigned because the content is primarily focused on the positioning and business implementation of Microsoft AI for Dynamics 365 Sales. As per the generic exclusion rules, content about business strategy, sales enablement, partner resources, and business process transformation with Microsoft products is excluded unless it contains technical detail on software development, coding, or implementation architecture. The session description centers around sales function transformation for customers, best practices from partners (HSO, EY, HCL), and resources for sales and partner skilling, with no substantive mention of technical development practices, architecture, coding, Azure, DevOps, ML, AI frameworks, or security implementation. Dynamics 365 content is specifically excluded if focused on business processes or end-user adoption rather than developer or data engineering topics."
+  },
+  {
+    "timestamp": "2025-11-24 15:06:08 +00:00",
+    "reason": "No categories found: Content excluded under generic exclusion rules: The article focuses on business continuity, service level agreements, legal commitments, reliability assurances, and cloud investment justification for Microsoft 365. Although technical products like Exchange Online, Teams, SharePoint, and OneDrive are mentioned, the content does not provide hands-on implementation, coding, development guidance, or technical architecture details. It is targeted at IT decision-makers and business leaders, centering on operational, risk management, and service reliability rather than developer practices, engineering architectures, or technical implementation with Microsoft technologies (see 'Non-Development Microsoft Products' and 'Business Strategy and Executive Content' generic exclusion rules in Chapters 3 and 4).",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/understanding-service-level-agreements-slas-in-microsoft-365/"
+  },
+  {
+    "timestamp": "2025-11-24 15:07:11 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule – this video presents high-level business strategy and executive insights rather than technical implementation details. The focus is on results from a global survey of senior business leaders, organizational AI adoption, and enterprise-wide productivity/innovation impacts. There is no substantive information about development, engineering, technical architecture, or hands-on use of Microsoft AI or developer tools. According to the exclusion rules in Chapter 3, business strategy and executive-focused content without technical depth and implementation must be excluded.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=16bACcoGh0k"
+  },
+  {
+    "timestamp": "2025-11-24 15:08:22 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The focus is primarily on accessibility initiatives, inclusive design, disability representation, and Microsoft's business/product strategy around accessibility, rather than technical development, engineering implementation, or programming details for Microsoft technology stacks. Although there is mention of AI and accessibility innovation, the session centers on discussion and awareness rather than implementation, coding, DevOps, security, or architectural guidance required for any qualifying category. No technical depth is provided for development or architectural use of Microsoft AI services, nor are any coding, DevOps, Azure, ML, or security topics covered from a practitioner viewpoint. Therefore, no categories apply.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=gUEZfM-SA5s"
+  },
+  {
+    "timestamp": "2025-11-24 15:08:35 +00:00",
+    "reason": "No categories found: Excluded all categories due to generic exclusion rules. The content is primarily focused on business productivity and workplace efficiency rather than developer tools or technical implementation. It highlights AI-driven collaboration features using Cisco devices integrated with Microsoft Teams, but does not provide technical details or guidance relevant to developers, coding, DevOps, ML, or Azure architecture. Microsoft Teams integration here is presented from an end-user/business productivity perspective, which is explicitly excluded under the Non-Development Microsoft Products and Workplace/Business Focus exclusions. The video does not discuss coding, architectural patterns, technical implementations, or other qualifying developer-centric topics.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=iYfqF8ZVups"
+  },
+  {
+    "timestamp": "2025-11-24 15:08:48 +00:00",
+    "reason": "No categories found: No categories assigned. The content is a short interview from Microsoft Ignite featuring a speaker from C3 AI discussing Agentic Process Automation, but it does not contain substantive technical content relevant to Microsoft technologies, development, or implementation. Instead, it focuses on high-level enterprise AI solutions provided by C3 AI, future impact of AI, and general value propositions, with statements such as 'See how intelligent, adaptable workflows turn natural language into reliable, context-aware enterprise actions' and 'Discover how end-users can orchestrate fully automated or human-in-the-loop workflows.' There is no coverage of Microsoft-centric technical implementation, coding, architecture, DevOps, or security, nor any AI development using Microsoft platforms. The primary value is promotional/strategic and aimed at business audiences, thus triggering the generic exclusion rule for business strategy and executive-focused content (Chapter 3: Business Strategy and Executive Content, plus Non-Development Microsoft Products).",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=jqi4VhPAa28"
+  },
+  {
+    "timestamp": "2025-11-24 15:09:41 +00:00",
+    "reason": "No categories found: Content does not qualify for any categories due to multiple generic exclusion rules. The main focus is a demonstration by IBM Consulting at Microsoft Ignite, showing how IBM clients use agentic AI, manage silos, and increase productivity. Despite being at a Microsoft event, the technical details center on IBM technology, not Microsoft platforms or services. There is no substantive discussion of Microsoft AI products (Azure OpenAI Service, Copilot Studio developer tool, or Azure AI/Cognitive Services), nor is there a Microsoft technology that is central or comprises ≥40% of the solution. The Copilot agents referenced are business productivity tools (Microsoft 365 Copilot or Copilot for Microsoft 365), which are specifically excluded (Chapter 3 Generic Exclusion: Non-Development Microsoft Products and Chapter 2 Copilot Product Distinction). The focus on workflow automation and productivity improvement, along with the lack of code development or Microsoft-centric technical content, further triggers exclusion rules for business productivity tools. Therefore, no categories are assigned.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=RW3UovSd_tc"
+  },
+  {
+    "timestamp": "2025-11-24 15:10:30 +00:00",
+    "reason": "No categories found: Content excluded because it fails multiple generic exclusion rules. The main focus is on business productivity and strategic partnership between SAP and Microsoft, highlighting integration of AI copilots (Joule and MS Copilot) primarily for business end users and business process transformation. This fits under the business strategy, executive content, and non-development Microsoft products exclusions, as per Chapter 3. The content does not discuss technical implementation, development, coding, or deployment aspects relevant to practitioners, but instead focuses on end-user business scenarios. Microsoft 365 Copilot (and integrations with SAP Joule) are business productivity tools specifically excluded from all developer-related categories.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=wsuud07HJLI"
+  },
+  {
+    "timestamp": "2025-11-24 15:10:33 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/can-anyone-attest-to-the-accuracy-of-an-azure-migrate-business/m-p/4472607#M729"
   }
 ]
