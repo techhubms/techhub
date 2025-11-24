@@ -19712,5 +19712,17 @@
     "reason": "Succesfully added: Content qualifies for AI category because it covers the use of AI (NVIDIA AI, Omniverse libraries) and AI model deployment (AI inclusion rules 1 and 4). It qualifies for Azure because Microsoft Azure cloud is a central technology for deploying solutions (Azure inclusion rule 1). Coding, DevOps, ML, and Security were not assigned as the primary focus is operational simulation and cloud-based AI rather than detailed code implementation, dev practices, data engineering, or security architecture.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=vVZvVpS0KMk"
+  },
+  {
+    "timestamp": "2025-11-24 16:06:02 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/large-string-and-binary-values-in-fabric-data-warehouse-and-sql-analytics-endpoint-for-mirrored-items-general-availability/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the Azure category because the content discusses Microsoft Fabric Data Warehouse, SQL analytics endpoints, Azure SQL Database, and Cosmos DB—all central Azure services—falling under Azure category rule 1. Assigned the ML category as well because the content details advanced data warehousing/data engineering features relevant to analytics, large data handling, and the data platforms used for ML/data science (ML inclusion rule 1 and 2). Did NOT assign AI because while JSON and advanced formats are discussed, there is no content about integrating or building AI solutions. No Coding, DevOps, or Security categories apply, as the content is centered entirely on data engineering, ingestion, and storage. No exclusion rules apply as this is technical news about a Microsoft product feature."
+  },
+  {
+    "timestamp": "2025-11-24 16:07:03 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/clone-a-consumption-logic-app-to-a-standard-workflow/ba-p/4471175",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the content focuses entirely on Azure Logic Apps, an Azure integration service, and discusses migration, features, and modernization within the Azure ecosystem. Coding and DevOps categories are not included, as there is no direct discussion of programming practices, source code, or deployment pipelines—this is a platform feature and migration guide. There are no generic exclusion triggers: the content is technical, not biographical, sales-oriented, job-related, negative, or overly short. The article is in English, and Microsoft technology is clearly central (over 90% of the text)."
   }
 ]

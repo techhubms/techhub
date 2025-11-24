@@ -9681,5 +9681,17 @@
     "reason": "Insufficient content length",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/can-anyone-attest-to-the-accuracy-of-an-azure-migrate-business/m-p/4472607#M729"
+  },
+  {
+    "timestamp": "2025-11-24 16:06:20 +00:00",
+    "canonical_url": "https://github.blog/news-insights/policy-news-and-insights/developers-still-need-the-right-to-challenge-junk-patents/",
+    "collection": "news",
+    "reason": "No categories found: No categories assigned because the content is focused on U.S. patent policy and advocacy for developers' legal rights, not on Microsoft technologies or technical implementation. It discusses proposed changes to inter partes review and their potential effects on developers and startups, but does not address Microsoft technologies, developer tools, coding practices, DevOps, Azure, AI, ML, or security. According to the Generic Exclusion Rule for 'Business Strategy and Executive Content' and the requirement for Microsoft technologies to be central, this content does not qualify."
+  },
+  {
+    "timestamp": "2025-11-24 16:07:03 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/can-i-send-mggraph-traffic-over-service-endpoint-from-azure-vm/m-p/4472425#M22353",
+    "collection": "community",
+    "reason": "Insufficient content length"
   }
 ]

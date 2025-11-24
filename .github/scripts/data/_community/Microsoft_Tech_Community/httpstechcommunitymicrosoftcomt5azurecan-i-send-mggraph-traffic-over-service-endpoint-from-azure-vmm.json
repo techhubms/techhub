@@ -1,0 +1,14 @@
+{
+  "Link": "https://techcommunity.microsoft.com/t5/azure/can-i-send-mggraph-traffic-over-service-endpoint-from-azure-vm/m-p/4472425#M22353",
+  "OutputDir": "_community",
+  "Author": "curious7",
+  "Title": "Can I send MgGraph traffic over Service Endpoint from Azure VM?",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "PubDate": "2025-11-23T20:25:00+00:00",
+  "Tags": [],
+  "Description": "I have a Azure VM which resides on a subnet that has UDR to send all traffic to 0.0.0.0/0 through our firewall which in turn sends the http and https traffic to our proxy. I am having problems executing graph queries on this VM. \"connect-mggraph\" succeeds because \"Microsoft.AzureActiveDirectory\" service endpoint is there on this subnet. But after that query to get a user or anything else throws \"an error occurred\" message. My thinking is that the traffic is not being sent over https/http and thus not being forwarded to our proxy from the firewall. Thus , I want to see if it is possible to send this traffic through a Azure Service Endpoint instead?",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2025-11-24 16:05:23",
+  "EnhancedContent": "I have a Azure VM which resides on a subnet that has UDR to send all traffic to 0.0.0.0/0 through our firewall which in turn sends the http and https traffic to our proxy. I am having problems executing graph queries on this VM. \"connect-mggraph\" succeeds because \"Microsoft.AzureActiveDirectory\" service endpoint is there on this subnet. But after that query to get a user or anything else throws \"an error occurred\" message. My thinking is that the traffic is not being sent over https/http and thus not being forwarded to our proxy from the firewall. Thus , I want to see if it is possible to send this traffic through a Azure Service Endpoint instead?",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node"
+}
