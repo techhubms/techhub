@@ -9513,5 +9513,23 @@
     "canonical_url": "https://www.youtube.com/watch?v=7Lh8X1Yr56o",
     "timestamp": "2025-11-24 07:06:46 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: All categories are excluded due to generic exclusion rules. The session is focused on Microsoft 365 Copilot, which per the explicit exclusion (Non-Development Microsoft Products: Microsoft 365 Copilot, Copilot for Microsoft 365, Office Copilot) is classified as a business productivity tool and NOT a developer tool. All category rules (AI, Security, etc.) explicitly exclude Copilot content related to Microsoft 365 (see AI and Copilot Product Distinction rules). While Microsoft Purview is a security tool, its usage here is strictly in the context of scaling and governing Microsoft 365 Copilot adoption and compliance for business productivity scenarios, not technical implementation or developer-focused guidance. Therefore, no categories apply.",
+    "canonical_url": "https://www.youtube.com/watch?v=8X-FvmnB-n4",
+    "timestamp": "2025-11-24 08:07:28 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content is about Microsoft 365 Copilot and general business productivity (not developer tools), which are specifically excluded by the Non-Development Microsoft Products exclusion rule in the Generic Exclusion Rules. The description and session details focus on business users, productivity, automation benefits, and employee enablement, all centered on Microsoft 365 Copilot, which is a business productivity tool. There is no substantial technical/developer aspect, no Microsoft development platforms, no DevOps, Coding, AI (in a developer context), or Security implementation. The session is part of Microsoft Ignite, but it targets small business empowerment and practical Copilot adoption for business workflows, not software development or technical implementation.",
+    "canonical_url": "https://www.youtube.com/watch?v=c8zpVHtfLZs",
+    "timestamp": "2025-11-24 08:08:24 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content focuses primarily on Microsoft 365 Copilot and Copilot integrations for frontline business workflows, as well as Microsoft 365 administration for frontline worker productivity (see title, description, and session breakdown). Per the Generic Exclusion Rules, any content about Microsoft 365 Copilot, Copilot for Microsoft 365, or Office Copilot is excluded since these are business productivity tools, not developer or code-centric tools. While there are security and management mentions, they are in the context of IT administration and workplace productivity, not technical implementation or development. Therefore, per Non-Development Microsoft Products exclusion and Copilot Product Distinction, the content does not qualify for any categories.",
+    "canonical_url": "https://www.youtube.com/watch?v=N2RaJApWfPQ",
+    "timestamp": "2025-11-24 08:10:05 +00:00",
+    "collection": "videos"
   }
 ]

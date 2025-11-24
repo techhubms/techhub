@@ -1,0 +1,17 @@
+{
+  "FeedName": "Microsoft Events YouTube",
+  "Description": "With cyberattacks on the rise amid the growth of AI applications, having a robust, secure network environment for all your workloads is more essential than ever. Join this session to hear from network security experts on how to improve your security posture through Azure Network Security products including Azure Firewall and Azure DDoS Protection in combination with Microsoft Defender for Cloud. Hear announcements of new capabilities for both and see a live demo of successful DDoS mitigation.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-AAI\\_TDMApps\\_Plan 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Gopal Shankar \\* Anupam Vij 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK166 | English (US) | Migrate and modernize your estate, Microsoft Defender for Cloud Breakout | Advanced (300) #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Defense-in-Depth Approach in Azure Security 00:04:26 - Focus on Network Defense and Security Layers 00:08:51 - Deep Dive: DDoS Protection and Secure-by-Default Mechanisms 00:10:08 - Automatic detection and mitigation of malicious traffic to maintain app performance 00:17:41 - Transition from Internet Protection to Outbound Threats 00:19:18 - Chaining Web Application Firewall with Azure Firewall for Zero-Trust Security 00:23:15 - Advanced Bastion Capabilities: Audit Logging and Session Recording 00:25:48 - Introduction to Microsoft Defender for Cloud 00:31:24 - Introduction to Azure Network Security Hub",
+  "Link": "https://www.youtube.com/watch?v=fjXZx1HrH2g",
+  "FeedLevelAuthor": "Microsoft Events",
+  "ProcessedDate": "2025-11-24 08:05:50",
+  "OutputDir": "_videos",
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ],
+  "PubDate": "2025-11-24T07:38:59+00:00",
+  "EnhancedContent": null,
+  "Author": "Microsoft Events",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Title": "Build secure applications with Defender and Azure Network Security | BRK166"
+}

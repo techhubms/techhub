@@ -1,0 +1,17 @@
+{
+  "FeedName": "Microsoft Events YouTube",
+  "Description": "Enterprise integration is being reimagined. It’s no longer just about connecting systems, but about enabling adaptive, agentic workflows that unify apps, data, and systems. In this session, discover how to modernize integration, migrate from BizTalk, and adopt AI-driven patterns that deliver agility and intelligence. Through customer stories and live demos, see how to bring these workflows to life with Agent Loop in Azure Logic Apps.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-AgenticDevOpsGitHubCopilot 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Pratik Shinde \\* Eric Summers \\* Divya Swarnkar \\* Kent Weare 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK118 | English (US) Breakout | Intermediate (200) #MSIgnite, #InnovatewithAzureAIappsandagents\n\nChapters: 0:00 - Current landscape of integration and role of Logic Apps 00:10:22 - Deploying enterprise agents and scheduling meetings via Logic Apps 00:11:45 - Syncing meeting data and transcripts into Salesforce CRM 00:19:28 - Results: Scalability, cost savings, and performance gains using Logic Apps 00:21:42 - Introduction of Model Context Protocol (MCP) and enterprise integration via Logic Apps 00:28:09 - Detailed review of compliance and onboarding agents, security and access control features 00:31:01 - Agent lists and updates secrets with human approval and audit trail in ServiceNow 00:34:36 - Deploying the same agent into Microsoft Teams for in-app interactions 00:35:32 - Case study: Vertex’s multi-agent system enhancing productivity and compliance",
+  "Link": "https://www.youtube.com/watch?v=JAHevcsT7pQ",
+  "FeedLevelAuthor": "Microsoft Events",
+  "ProcessedDate": "2025-11-24 08:05:50",
+  "OutputDir": "_videos",
+  "Tags": [
+    "InnovatewithAzureAIappsandagents",
+    "MSIgnite"
+  ],
+  "PubDate": "2025-11-24T07:27:04+00:00",
+  "EnhancedContent": null,
+  "Author": "Microsoft Events",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Title": "The future of integration is here and it's agentic | BRK118"
+}

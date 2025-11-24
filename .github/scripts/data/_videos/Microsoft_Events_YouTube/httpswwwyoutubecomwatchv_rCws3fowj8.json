@@ -1,0 +1,17 @@
+{
+  "FeedName": "Microsoft Events YouTube",
+  "Description": "Join this session to learn the best practices and tools to build highly available and scalable agents to tackle critical workloads. As AI agents increasingly drive critical workflows—from frontline operations to executive decision-making—ensuring continuous availability at scale.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-lowcode 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Shivani Pradhan 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK308 | English (US) | Copilot and agents at work, Copilot Agents; Innovate with low-code AI and agents, Dataverse Breakout | Intermediate (200) #MSIgnite, #Innovatewithlow\n\nChapters: 0:00 - Power Platform’s resilience during the Norway Azure outage 00:03:05 - Business risks of outages and importance of continuous operations 00:09:27 - Exploring the Copilot Studio insurance agent environment 00:12:11 - Explaining one-minute delay and data loss during failover 00:12:45 - Warning about responsibility before executing failover 00:26:47 - Introduction of safe and resilient deployment practices 00:30:56 - Monitoring and scaling principles emphasizing observability and automation 00:35:31 - Automation of SSDR via API and Importance of Human Oversight 00:38:19 - Running Compliance Drills and Simulated Production Failover",
+  "Link": "https://www.youtube.com/watch?v=_rCws3fowj8",
+  "FeedLevelAuthor": "Microsoft Events",
+  "ProcessedDate": "2025-11-24 08:05:50",
+  "OutputDir": "_videos",
+  "Tags": [
+    "Innovatewithlow",
+    "MSIgnite"
+  ],
+  "PubDate": "2025-11-24T07:32:17+00:00",
+  "EnhancedContent": null,
+  "Author": "Microsoft Events",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Title": "Best practices for always-on agents to support critical workloads | BRK308"
+}

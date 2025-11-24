@@ -1,0 +1,17 @@
+{
+  "FeedName": "Microsoft Events YouTube",
+  "Description": "This session presents proven security frameworks for private wireless networks, showing how field-tested strategies and AI-powered defenses have cut incidents by 63%, reduced costs, and safeguarded critical infrastructure against advanced cyber threats.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-ProactiveSecurityOps \\* https://www.Microsoft.com/telco \\* https://aka.ms/NokiaNetguardCybersecurity \\* https://aka.ms/Cyberdome\\_RequestADemo 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Krishnan Jagannathan \\* Rick Lievano 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK384 | English (US) Breakout | Intermediate (200) Related Sessions: THR798 -- https://ignite.microsoft.com/sessions/THR798?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIADodwiOD8zvxIEMW\\_\\_JyjY;PLQXpv\\_NQsPIAul6-aQkLsG\\_TH5CMguuxf #MSIgnite, #ModernizeSecOpswithaunifiedplatform\n\nChapters: 0:00 - Krishnan’s introduction and focus on network security domains 00:08:00 - Balancing operational efficiency and network security in distributed architectures 00:09:16 - Credential theft and need for stronger authentication 00:13:11 - Azure-based AI platform supporting telecom security operations 00:16:02 - Role of playbooks and use cases in cyber incident management 00:17:53 - Discussion on telecom provider collaboration and identity management 00:25:27 - AI-driven threat hunting using the CIA diamond model and telco-focused intelligence 00:26:56 - Introduction to 5G security orchestration and demo preview 00:35:16 - Closing remarks on telco security operations and audience Q&A",
+  "Link": "https://www.youtube.com/watch?v=SI6P5ljakrw",
+  "FeedLevelAuthor": "Microsoft Events",
+  "ProcessedDate": "2025-11-24 08:05:50",
+  "OutputDir": "_videos",
+  "Tags": [
+    "ModernizeSecOpswithaunifiedplatform",
+    "MSIgnite"
+  ],
+  "PubDate": "2025-11-24T07:17:15+00:00",
+  "EnhancedContent": null,
+  "Author": "Microsoft Events",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Title": "Securing Private Wireless: From Design to Deployment | BRK384"
+}

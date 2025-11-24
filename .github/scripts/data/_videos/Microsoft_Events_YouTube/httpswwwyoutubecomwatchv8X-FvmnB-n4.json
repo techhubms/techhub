@@ -1,0 +1,17 @@
+{
+  "FeedName": "Microsoft Events YouTube",
+  "Description": "Learn how Microsoft Purview empowers leaders to confidently scale Microsoft 365 Copilot and agents with built-in safeguards that prevent data loss, mitigate insider risks, and ensure responsible use—driving productivity without compromising trust.\n\nDelivered in a silent stage breakout.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-ProtectDataMicrosoftPurview \\* https://aka.ms/S4AI\\_IgniteNews2025 \\* https://learn.microsoft.com/en-us/purview/ai-m365-copilot?view=o365-worldwidehttps://learn.microsoft.com/en-us/purview/ai-m365-copilot?view=o365-worldwide \\* https://learn.microsoft.com/en-us/purview/deploymentmodels/depmod-overview 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Nadia Fortini \\* Erica Toelle 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK257 | English (US) Breakout | Advanced (300) Related Sessions: LAB548 -- https://ignite.microsoft.com/sessions/LAB548?wt.mc\\_id=yt\\_ BRK293 -- https://ignite.microsoft.com/sessions/BRK293?wt.mc\\_id=yt\\_ #MSIgnite, #Secureyourdata\n\nChapters: 0:00 - Key Customer Concerns: Oversharing, Data Loss Prevention, and Governance 00:05:33 - Overview of New Integrated Data Security Posture Management Solution 00:07:01 - Exploring Oversharing Risks and Impact on Copilot Permissions 00:10:56 - Analyzing custom assessment results including overshared items and sensitivity labels 00:11:48 - Introducing new 'Potentially Overshared Items' tab and in-view remediation 00:15:21 - Explanation of current prevention measures for sensitive data interaction with Copilot 00:23:00 - Introduction to data loss prevention for Copilot prompts 00:23:33 - Demonstration of sensitive data detection and blocking in Copilot 00:30:49 - Introduction of new scan settings for on-demand classification",
+  "Link": "https://www.youtube.com/watch?v=8X-FvmnB-n4",
+  "FeedLevelAuthor": "Microsoft Events",
+  "ProcessedDate": "2025-11-24 08:05:50",
+  "OutputDir": "_videos",
+  "Tags": [
+    "MSIgnite",
+    "Secureyourdata"
+  ],
+  "PubDate": "2025-11-24T07:36:38+00:00",
+  "EnhancedContent": null,
+  "Author": "Microsoft Events",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Title": "Drive secure Microsoft 365 Copilot adoption using Microsoft Purview | BRK257"
+}
