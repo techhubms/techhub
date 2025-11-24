@@ -1,0 +1,22 @@
+{
+  "Link": "https://www.youtube.com/watch?v=MYpW7aDbJQM",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedName": "Microsoft Developer YouTube",
+  "Author": "Microsoft Developer",
+  "Title": "Microsoft Foundry Workflows - Pt. 3: Migrate to VS Code Web",
+  "Description": "This video is Part 3 of the Microsoft Foundry Workflows video series.\n\nJoin April as she provides a guided tutorial for how to migrate your Microsoft Foundry workflow to a code-first experience using Visual Studio Code for the Web. Once you have the code for your workflow, you can continue to iterate on your workflow directly in the VS Code editor with the Microsoft Foundry extension. The VS Code web environment is a temporary environment that’s useful for diving directly into modifying your agent workflow for further prototyping.\n\nInterested in migrating to a VS Code local experience? Check out “Pt. 4 - Migrate to VS Code Local” of this video series.\n\nTry it yourself in Microsoft Foundry: https://ai.azure.com\n\nLearn More about Azure AI Foundry Model and Tools announcements at https://aka.ms/model-mondays\n\nJoin the Discord: https://aka.ms/insideMF/discord Hop on Forum: https://aka.ms/insideMF/forum\n\nChapter Markers\n\n00:00 - 00:02 - Introduction 00:03 - 01:07 - Get the workflow code 02:13 - 03:09 - Open workflow code in VS Code for the web 03:10 - 03:40 - Workflow code review 03:41 - 04:54 - Run the workflow code",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "ProcessedDate": "2025-11-24 20:04:34",
+  "EnhancedContent": null,
+  "PubDate": "2025-11-24T19:12:09+00:00"
+}

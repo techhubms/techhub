@@ -19742,5 +19742,47 @@
     "collection": "news",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-copy-job-activity-now-general-available-in-data-factory-pipeline/",
     "timestamp": "2025-11-24 18:06:18 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is an Azure-integrated platform and the solution involves Azure services. Added ML category since it discusses data engineering practices, environment configuration, and Fabric Lakehouse, which are relevant to data science/analytics workflows (ML rules 1 and 6). AI category applies because the example integrates Azure OpenAI Service (AI rule 1), using Microsoft's AI cloud platform. Coding is included because the tutorial provides example code and development workflow for Python User Data Functions in Fabric (Coding rule 1).",
+    "timestamp": "2025-11-24 20:05:14 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/manage-environment-configuration-in-fabric-user-data-functions-with-variable-libraries/"
+  },
+  {
+    "reason": "Succesfully added: The content is centered on the deployment of Claude Opus 4.5 (an AI model) within GitHub Copilot, focusing on development workflow improvements and technical enablement. This qualifies for both 'AI' (Microsoft AI tool integration in a developer context) and 'GitHub Copilot' (news about Copilot features, directly referencing enhancement and practical use). Content does not trigger any exclusion rules, as it is technical, non-biographical, fully focused on developer tooling, and strictly English-language.",
+    "timestamp": "2025-11-24 20:05:36 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-11-24-claude-opus-4-5-is-in-public-preview-for-github-copilot"
+  },
+  {
+    "reason": "Succesfully added: The video centers on creating and managing sequential workflows in Microsoft Foundry using Azure AI infrastructure, directly matching the 'AI' and 'Azure' inclusion rules (AI rule 1 and 5, Azure rule 1 and 3). The workflow orchestration and agent approach are core AI-driven tasks, while project setup and model deployment are Azure platform-specific. No explicit coding/dev experience, so 'Coding' is not assigned. 'DevOps', 'ML', and 'Security' are not covered as the focus is on AI workflows, not deployment pipelines, data science/ML engineering, or security. The content is technical, not business-focused and meets quality standards; there are no generic exclusion triggers.",
+    "timestamp": "2025-11-24 20:06:12 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=AqM5WLq2VtY"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content centers on Microsoft Foundry and Azure AI Foundry workflow development (AI rule 1). Assigned Azure because these services are Azure-hosted (Azure rule 1). Assigned Coding due to the code-first workflow migration and code editing in Visual Studio Code (Coding rule 5). Assigned GitHub Copilot because GitHub Copilot Agent Mode is explicitly used to modify workflow code (GitHub Copilot rules 1 and 2), and per rules, both AI and GitHub Copilot are included together when Copilot is used. Excluded other categories due to lack of direct focus.",
+    "timestamp": "2025-11-24 20:06:29 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=aR7hAbrIlps"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category as the content centers around Microsoft Foundry—a developer tool for agent workflow leveraging Azure AI technologies (AI rule 1 and 4). Assigned Azure category because Microsoft Foundry is part of the Azure AI suite and the workflow involves Azure cloud services (Azure rule 1). Assigned Coding category since the tutorial is focused on extracting workflow code, modifying it, and using a development environment (VS Code Web) for code-first workflow engineering (Coding rule 2 and 5). Excluded other categories as the content does not address DevOps, ML/data science specifics, or security topics.",
+    "timestamp": "2025-11-24 20:06:46 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=MYpW7aDbJQM"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the video focuses on creating AI-powered agents and automating workflows within Microsoft Foundry (AI rule 1 and 4). Assigned Azure category since Microsoft Foundry is part of Azure AI services and the platform used is Azure (Azure rule 1 and 4). Excluded Coding, ML, DevOps, Security, and GitHub Copilot because the content does not cover custom code development, machine learning model engineering, DevOps practices, security implementation, or GitHub Copilot developer workflows. Based reasoning strictly on description details and adherence to rule hierarchy.",
+    "timestamp": "2025-11-24 20:07:03 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=u4ksAXEx0R4"
+  },
+  {
+    "reason": "Succesfully added: Content qualifies for Azure category because it details Azure reservations and uses Azure management tools (Azure inclusion rules 1, 2, 4, 5). The post also qualifies for ML because Microsoft Fabric is a data platform supporting data engineering, machine learning, reporting, and analytics workloads (ML inclusion rules 1, 2, 4). The content is technical, focuses on cloud cost management and platform configuration, and exceeds community length requirements. No generic exclusion rules apply; content is professional, detailed, and actionable.",
+    "timestamp": "2025-11-24 20:07:50 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/finops-blog/streamline-analytics-spend-on-microsoft-fabric-with-azure/ba-p/4472670"
   }
 ]

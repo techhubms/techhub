@@ -9693,5 +9693,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/can-i-send-mggraph-traffic-over-service-endpoint-from-azure-vm/m-p/4472425#M22353",
     "collection": "community",
     "reason": "Insufficient content length"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules—this is a high-level event keynote featuring executive business strategy, organizational planning, and broad market analysis, without substantive technical implementation details. The description focuses on leadership speeches and unveiling of general AI innovations rather than practical development content. No technical depth, development guidance, or Microsoft technology implementation specifics are present. Based on the 'Business Strategy and Executive Content' and 'Workplace and Business Focus' exclusions, no categories are assigned.",
+    "timestamp": "2025-11-24 20:07:17 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=ArcrpiVVSAQ"
+  },
+  {
+    "reason": "No categories found: Content excluded because it does not meet inclusion criteria. The description and title indicate this is a keynote session focused on partner success stories, high-level investments, and announcements related to the Microsoft AI Cloud Partner Program. There is no substantive technical content, implementation guidance, or details on building or integrating with Microsoft technologies. The focus is primarily on business strategy, partnership, and organizational outcomes, which are excluded per generic exclusion rules (Business Strategy and Executive Content, Business Focus, Non-Development Microsoft Products). Additionally, no technical depth, development tooling, or implementation insights are provided. Therefore, no categories apply.",
+    "timestamp": "2025-11-24 20:07:29 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=r0h9ID-uVFM"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "Description": "Claude Opus 4.5, Anthropic’s latest model, is now rolling out in GitHub Copilot. In early testing, Claude Opus 4.5 surpassed internal coding benchmarks while cutting token usage in half, making…\n\nThe post [Claude Opus 4.5 is in public preview for GitHub Copilot](https://github.blog/changelog/2025-11-24-claude-opus-4-5-is-in-public-preview-for-github-copilot) appeared first on [The GitHub Blog](https://github.blog).",
+  "Title": "Claude Opus 4.5 is in public preview for GitHub Copilot",
+  "PubDate": "2025-11-24T18:12:32+00:00",
+  "Author": "Allison",
+  "Link": "https://github.blog/changelog/2025-11-24-claude-opus-4-5-is-in-public-preview-for-github-copilot",
+  "ProcessedDate": "2025-11-24 20:02:52",
+  "OutputDir": "_news",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "EnhancedContent": "Claude Opus 4.5, Anthropic’s latest model, is now rolling out in GitHub Copilot. In early testing, Claude Opus 4.5 surpassed internal coding benchmarks while cutting token usage in half, making this model especially well-suited for accelerating development in professional settings.\n\n### **Availability in GitHub Copilot**\n\nClaude Opus 4.5 will be available to [Copilot Pro, Pro+, Business, and Enterprise](https://github.com/features/copilot/plans?utm_source=changelog-opus-45-copilot-plans-cta&amp;utm_medium=blog&amp;utm_campaign=dec25postuniverse) users, priced at a promotional 1x [premium request multiplier](https://docs.github.com/en/copilot/concepts/billing/copilot-requests#model-multipliers) through December 5, 2025.\n\nYou’ll be able to select the model in the model picker in:\n\n- Copilot Chat in VS Code (Agent, Plan, Ask, and Edit mode)\n- Copilot Chat in github.com\n- Copilot Chat in GitHub Mobile (iOS and Android)\n- Copilot CLI\n\nRollout will be gradual. Check back soon if you don’t see it yet.\n\nDuring the promotional period, Claude Opus 4.5 will also roll out as the default model for Copilot coding agent when enabled.\n\n### **Enabling access**\n\n- **Enterprise & Business plans**: Administrators must enable the Claude Opus 4.5 policy in Copilot settings.\n- **Pro & Pro+ plans**: For users in VS Code, select the model in the model picker and confirm the one-time prompt.\n\n### **Learn more**\n\nTo explore all models available in GitHub Copilot, see our [documentation on models](https://docs.github.com/copilot/reference/ai-models/supported-models) and get started with Copilot.\n\n### **Share your feedback**\n\nJoin the [GitHub Community](https://github.com/orgs/community/discussions/categories/copilot-conversations) to share your feedback.",
+  "FeedName": "The GitHub Blog"
+}
