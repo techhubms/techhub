@@ -9543,5 +9543,11 @@
     "timestamp": "2025-11-24 09:12:11 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=yLcrJlwh97M",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=60Mm0ejQ4CQ",
+    "collection": "videos",
+    "timestamp": "2025-11-24 11:05:46 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The session focuses primarily on business productivity tools (Planner, Teams, Outlook, Copilot Chat) with an emphasis on streamlining workflows, project management, and task automation within business applications. According to the workflow, content centered on Microsoft 365 Copilot, Copilot Chat, Teams, and Planner for productivity (rather than developer tooling or custom development) is not eligible for any categories. None of the discussion involves developer tools, coding, technical architecture, or AI/ML development as defined by the inclusion rules, and all references are to business and project management productivity features rather than technical implementation."
   }
 ]

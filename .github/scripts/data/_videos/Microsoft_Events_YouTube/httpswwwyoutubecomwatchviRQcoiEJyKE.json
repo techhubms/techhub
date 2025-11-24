@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-24T10:32:04+00:00",
+  "Author": "Microsoft Events",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=iRQcoiEJyKE",
+  "ProcessedDate": "2025-11-24 11:04:35",
+  "Tags": [
+    "InnovatewithAzureAIappsandagents",
+    "MSIgnite"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Title": "Intelligent enterprise: Zurich and Toyota share their playbook | BRKSP476",
+  "Description": "AI dominates headlines—but how do we cut through the noise? In this candid session, tech leaders share how they’re navigating AI’s biggest promises and toughest realities. Learn how they balance innovation with responsibility, turn hype into action, and shape the future of work. Expect real challenges, lessons, and defining moments—not just theory.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Brouhon Cédric \\* Tim Stabler \\* Ravi Chandu Ummadisetti 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRKSP476 | English (US) Breakout | Foundational (100) #MSIgnite, #InnovatewithAzureAIappsandagents\n\nChapters: 0:00 - Panel Introductions: Tim Stabler, Ravi, and Eric from Toyota 00:07:43 - Ingestion Pipeline for AI Document Processing 00:12:17 - Toyota’s Enterprise AI Group oversees all use cases via AI Review Board 00:14:06 - Creation of standardized pipelines enabling rapid AI deployment—down to one week 00:26:34 - Addressing Technical Challenges in Data Retrieval and Human Context Modeling 00:30:20 - Handling API Reliability and Live Data Latency Issues 00:30:42 - Creating Metadata to Capture Organizational Ontology (Toyota Language) 00:35:41 - Balancing experimentation with business alignment and cost control 00:44:22 - Handling unstructured data and linking visual cues within files using AI ingestion",
+  "FeedName": "Microsoft Events YouTube",
+  "EnhancedContent": null
+}

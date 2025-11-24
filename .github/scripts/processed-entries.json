@@ -19376,5 +19376,65 @@
     "timestamp": "2025-11-24 09:12:33 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=0x1Y9e6Vh7I",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=6-UKEiqm53c",
+    "collection": "videos",
+    "timestamp": "2025-11-24 11:05:33 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the session centers on optimizing Azure Storage for AI workloads, including training, fine-tuning, and integrating AI frameworks (AI rule 4 and 1). Assigned Azure because all technologies discussed (Blob Storage, Container Storage, AKS, integrations with Ray/KAITO/LangChain) are Azure-specific (Azure rule 1, 4, and 6). Coding is not added, as the focus is on infrastructure, integration, and operations rather than explicit code or Microsoft programming frameworks. ML category is not added since the emphasis is on AI platform integration, data preparation, and workflow rather than custom data science or model engineering. Security is not directly assigned as a main focus, though security practices are discussed; but not as the dominant technical thread. Generic exclusion rules did not apply: the description is technical, English, development-focused, and not business productivity content."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=BbOsfkQRrik",
+    "collection": "videos",
+    "timestamp": "2025-11-24 11:06:05 +00:00",
+    "reason": "Succesfully added: The input centers on technical deployment and use cases of Azure Local, qualifying for the Azure category as per Azure inclusion rule 1 (any Azure service). It also discusses AI-driven business functions and technical support for custom models, NVIDIA integration, and Azure AI Foundry, satisfying multiple criteria for the AI category (AI inclusion rules 1, 4, and 5). No Coding, DevOps, ML, or Security-centric implementation details are present, so only AI and Azure categories apply. The networking and multi-tenancy topics do not delve into DevOps level or security implementation, focusing more on infrastructure overview and architectural benefits."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=dXUy9evg1yo",
+    "collection": "videos",
+    "timestamp": "2025-11-24 11:06:23 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category as the session heavily focuses on Azure OpenAI, Microsoft Foundry, and agent fine-tuning (AI rules 1, 4, 5). 'Azure' is included because Azure OpenAI Service and Foundry are central to the solutions presented (Azure rule 1). 'ML' is included because the session covers model customization, synthetic data generation, and practical aspects of machine learning workflows (ML rules 1, 5, 10). No generic exclusion rules apply; the content is technical, demo-driven, and directly related to Microsoft development platforms."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=ejAZOppy2os",
+    "collection": "videos",
+    "timestamp": "2025-11-24 11:06:45 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the primary topic is agentic AI systems, multi-agent orchestration, and enterprise-scale AI adoption with Microsoft technologies (AI category rules 1, 4, 5). Assigned 'Azure' due to repeated references to migrating IT workloads to the cloud in partnership with Microsoft, implying the use of Azure services (Azure category rules 1, 4, 5). Other categories (GitHub Copilot, DevOps, Coding, ML, Security) are not directly addressed; the session focuses on business value and technical implementation of agentic AI in a Microsoft context, not developer workflow, ML engineering, or security specifics."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=eXwqw2RSen8",
+    "collection": "videos",
+    "timestamp": "2025-11-24 11:07:05 +00:00",
+    "reason": "Succesfully added: Content was assigned both DevOps and Security categories. DevOps qualifies because the session focuses heavily on GitHub governance, CI/CD pipeline components, onboarding, collaboration, and build validation (DevOps rules 2, 3, 5, 10, 11). Security qualifies because it covers policy setup, enforcement, enterprise security configurations, artifact attestations, and compliance (Security rules 1, 2, 4, 5, 7, 8). AI and GitHub Copilot categories were considered, but the main focus is on platform governance rather than AI-powered development. Azure is referenced but not central to the content architecture (does not meet Azure rule 1 for centrality)."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=GkqKMwhadB0",
+    "collection": "videos",
+    "timestamp": "2025-11-24 11:07:25 +00:00",
+    "reason": "Succesfully added: Assigned Security category because the session primarily discusses Lenovo Cybersecurity Services powered by Microsoft Defender, Sentinel, and Security Copilot (Security Rules 1, 5, 9). Azure is included because Azure Stack HCI is central to cloud infrastructure and hybrid cloud architecture (Azure Rules 1, 5, 6). Assigned AI category, as the content focuses on strategic AI adoption and risk mitigation in business transformation and discusses products like Security Copilot (AI Rules 1, 4, 5). No exclusion rules are triggered: the session is technical, not business strategy, biographical, or sales-driven, and focuses on practical implementation for practitioners."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=iRQcoiEJyKE",
+    "collection": "videos",
+    "timestamp": "2025-11-24 11:07:46 +00:00",
+    "reason": "Succesfully added: Categories 'AI' and 'Azure' assigned because the session centers on enterprise AI deployment and challenges, with Microsoft Azure AI products mentioned through tags and the theme of the event (Microsoft Ignite). The topics discussed—such as ingestion pipelines, context modeling, API reliability, standardized deployment, and governance—align with both AI (use of Microsoft AI services/platforms in enterprise scenarios) and Azure (Azure AI-focused applications and best practices). No other category qualifies because the content does not provide deep coding, DevOps, ML engineering, or security detail. Generic exclusion rules do not apply as the content is in English, is technical, and is not biographical, sales, or business/management-only."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=mQHsytPpHmU",
+    "collection": "videos",
+    "timestamp": "2025-11-24 11:08:05 +00:00",
+    "reason": "Succesfully added: Categories assigned based on AI inclusion rule 1 (Microsoft AI product: Azure Speech and Voice Live API) and Azure inclusion rule 1 (Azure Speech is a central Azure service). Content focuses on integrating advanced speech APIs, large language models, and real-time AI agents, clearly qualifying for both AI and Azure categories. No Coding category because the session emphasizes platform capabilities and conceptual workflows rather than code-level implementation. GitHub Copilot, DevOps, ML, and Security do not apply, as session is focused exclusively on Azure Speech and agentic AI features."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=OLKCfSNivXc",
+    "collection": "videos",
+    "timestamp": "2025-11-24 11:08:26 +00:00",
+    "reason": "Succesfully added: Assigned Security category because the session centers on security integration, threat modeling, and unified threat detection using Microsoft and Cisco tools (Security rules 1, 4, 5, 7, 9). Assigned Azure because Azure is the platform for this integration (Azure rules 1, 4, 5, 6). Assigned AI because substantial content addresses AI-driven insights, AI development, and AI-related threat modeling (AI rules 1, 4, 5). No generic exclusion rules applied, and content is technical, focused on implementation rather than business strategy or sales."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=WbFivYJ7_Fo",
+    "collection": "videos",
+    "timestamp": "2025-11-24 11:08:47 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the session is focused on building enterprise AI apps with agentic and generative AI methods using C3 AI Studio, as described in both the session title and description. C3 AI Studio is presented as a developer/maker tool for rapid AI application creation, which matches the AI inclusion rules (developer tool, platform-assisted AI app creation, workflow automation via AI). Azure and other Microsoft cloud services are not directly mentioned or detailed as central components in this content, so Azure/ML categories were not added. Coding, DevOps, and Security are not explicitly addressed beyond platform features and governance, hence not included."
   }
 ]
