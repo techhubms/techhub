@@ -9483,5 +9483,23 @@
     "timestamp": "2025-11-23 18:07:00 +00:00",
     "reason": "No categories found: No categories were assigned because the content is focused on the end-user setup and parenting features of Microsoft Family Safety, which is a non-development Microsoft product. According to the generic exclusion rules and Non-Development Microsoft Products section, content about parental controls, Family Safety, or end-user configuration without development, programming, or technical architecture is excluded. There is no exploration of APIs, coding, integration, or developer-focused customization, nor does the content address security from an implementation or DevOps angle. This article is strictly user guidance for Microsoft consumer tools. Therefore, none of the categories ('AI', 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', 'Security') apply.",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-24 06:06:45 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=0-wWqG2ju10",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The video is focused on business productivity and strategic impact of Copilot and AI agents, specifically how organizations leverage Copilot to drive value and growth. Per the workflow's Copilot Product Distinction, content about Microsoft 365 Copilot, Copilot for Microsoft 365, or other business/consumer productivity Copilot tools must be excluded from categorization. There are no technical implementation details, coding/development guidance, or deep dives into Microsoft developer tools. The focus is on high-level business transformation, customer journeys, and organizational strategy, which are also covered by the business strategy and executive content exclusions.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-24 06:07:15 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=7Vn0EN0hbtw",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this content is primarily focused on business applications (Dynamics 365) and agentic service models for customer service and IT help desk, targeting improvements in service efficiency, CSAT, and compliance. The emphasis is on organizational benefits and use cases in business operations, not technical implementation or development with Microsoft technologies. According to the generic exclusion rules, non-development Dynamics 365 topics and business productivity solutions—such as those covered here—do not qualify for any categories.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-24 06:08:11 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=IXeUNP4mt78",
+    "reason": "No categories found: Excluded all categories because the content is primarily delivered in Japanese, as specified in the description (\"This session will be delivered in Japanese\" and Japanese-language text throughout). According to generic exclusion rules, non-English content (less than 80% in English) does not qualify, regardless of technical depth or subject. Therefore, no categories were assigned.",
+    "collection": "videos"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "FeedName": "Microsoft Events YouTube",
+  "Link": "https://www.youtube.com/watch?v=IXeUNP4mt78",
+  "ProcessedDate": "2025-11-24 06:05:54",
+  "Tags": [
+    "MSIgnite",
+    "Other"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "PubDate": "2025-11-24T04:59:54+00:00",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "Title": "Japan Wrap-up Session [Language: Japanese] | BRK405",
+  "OutputDir": "_videos",
+  "Author": "Microsoft Events",
+  "Description": "本セッションは、日本からご参加の方向けに、Microsoft Igniteの主要なアナウンスについて日本語で解説を行います。ぜひご参加ください。 This session is designed for attendees joining from Japan and will provide Japanese-language explanations of the key announcements made at Microsoft Ignite. Each topic will be covered in depth by subject matter experts, offering detailed insights and context. \\*This session will be delivered in Japanese.\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Yuna Funamoto \\* Tadashi Okazaki 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK405 | Japanese Breakout | Intermediate (200) #MSIgnite, #Other\n\nChapters: 0:00 - Okazaki from Microsoft Japan Opens Keynote with AI Transformation Theme 00:10:50 - Introduction of Copilot and Work IQ – Enhancing Human-AI Collaboration 00:36:00 - Explanation of centralized management of AI agents via Microsoft 365 admin center 00:40:15 - Introduction of Power Platform and Dynamics 365 session by Sakamoto 00:42:00 - Overview of Copilot updates and AI integration in business applications 01:13:17 - Introduction of next segment: Infrastructure and Azure Copilot 01:19:31 - Azure SRE Agent with sub-agent builder and third-party integrations 01:38:22 - Expansion to Third-party Integrations (AWS, Okta, Proofpoint) and Graph-based Attack Path Blocking 01:44:01 - Security for AI: 'Every Role and Every Layer' Concept with New Dashboards and Agent Management"
+}

@@ -1,0 +1,17 @@
+{
+  "FeedName": "Microsoft Events YouTube",
+  "Link": "https://www.youtube.com/watch?v=2H8cvsjJ8ao",
+  "ProcessedDate": "2025-11-24 06:05:54",
+  "Tags": [
+    "MSIgnite",
+    "Secureyourdata"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "PubDate": "2025-11-24T05:10:08+00:00",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "Title": "Protecting your data at speed and scale with AI-powered data security | BRK254",
+  "OutputDir": "_videos",
+  "Author": "Microsoft Events",
+  "Description": "See how Security Copilot empowers data security teams to protect sensitive data faster with less manual effort. Learn about new AI agents in Microsoft Purview that automate tasks and accelerate risk response across your security operations.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-BuildingResilientSecurity 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Tanay Baldua \\* Paige Johnson \\* Arun Kumar 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK254 | English (US) Breakout | Advanced (300) #MSIgnite, #Secureyourdata\n\nChapters: 0:00 - Security Team Challenges: Alert Overload and Staffing Constraints 00:09:21 - Introduction to Live Demo by Arun 00:11:32 - Introducing Lauren and Adi – the security team at Sava 00:14:10 - Adi discovers unusual alerts suggesting data leaks from Project Nebula 00:20:10 - ADI’s workload reduction and alert triage overview 00:20:45 - Three risk types introduced: sensitivity, exfiltration, and policy risk 00:24:20 - Summary of automation benefits and cross-functional alert management 00:33:16 - Policy comparison between ‘Tented Project Leak’ and default email policy 00:37:25 - Six steps review – signal to outcome overview of Java’s workflow"
+}

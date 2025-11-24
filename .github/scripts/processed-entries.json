@@ -19136,5 +19136,41 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-public-preview-of-query-based-metric-alerts-in-azure/ba-p/4469723",
     "collection": "community",
     "timestamp": "2025-11-23 19:05:40 +00:00"
+  },
+  {
+    "timestamp": "2025-11-24 06:07:03 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=2H8cvsjJ8ao",
+    "reason": "Succesfully added: Categories assigned: 'AI' because the content centers on Security Copilot and Microsoft Purview AI agents (AI rule 1, 6), focusing on AI-driven automation for security tasks. 'Security' assigned due to direct relevance to data protection, alert management, policy risks, and incident response in Microsoft ecosystems (Security rules 1, 5, 6, 7). Did not assign 'Azure' because there is no explicit discussion of Azure cloud services or architecture. Ignored generic exclusion rules as the technical depth, Microsoft platform focus, and target audience are all within scope.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-24 06:07:38 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=fotUEeeC_H0",
+    "reason": "Succesfully added: Assigned AI category because the content discusses new AI capabilities (Copilot Chat, natural language management, agentic experiences) within Intune (AI inclusion rules 1, 5). Assigned Security category for detailed coverage on endpoint protection, compliance, vulnerability remediation, and Defender integration (Security rules 1, 5, 7). Did not assign Azure, Coding, ML, DevOps, or GitHub Copilot categories because the content is primarily focused on Intune's endpoint security and AI-driven management features for IT, not on coding, Azure cloud platform services, ML engineering, DevOps practice, or GitHub Copilot developer tools.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-24 06:07:59 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=IB9U8dfyF1w",
+    "reason": "Succesfully added: Assigned the Security category because the content centrally focuses on Microsoft security technologies and managed security services, specifically Defender Experts for XDR, DART, threat intelligence, SOC support, and incident response (Security inclusion rules 1, 4, 5, 7, 9). No other categories apply because the session does not discuss coding, DevOps, AI, ML, or Azure-specific implementation details. The video is technical and solution-focused, not a sales pitch or high-level business strategy, and does not trigger generic exclusion rules.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-24 06:08:30 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=QhnYj80YdrE",
+    "reason": "Succesfully added: Content qualifies for the Security category per Security rule 1, as it focuses on Microsoft Purview, DLP, compliance, and identity protections across Microsoft cloud environments. Assigned Azure category because Purview is positioned as an Azure service and the content discusses protections within Azure, Microsoft 365, and Fabric (Azure rule 1). The session is technical and implementation-focused, with demos and technical terms throughout, and does not trip generic exclusion rules.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-24 06:08:50 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=U43XsJhKMhQ",
+    "reason": "Succesfully added: Assigned Security category due to the strong focus on Windows and Surface device security, secure firmware, Secure Core PCs, and DFCI (Security rules 1, 2, and 9). Assigned Coding category because of in-depth discussion on Rust—a memory-safe programming language—used for driver and firmware development (Coding rules 1, 2, and 4). Content explicitly discusses technical implementation details like windows-drivers-rs, Cargo WDK, and collaborating on open source driver development, meeting inclusion criteria for both categories. AI, Azure, DevOps, GitHub Copilot, and ML categories not assigned as content does not discuss relevant platforms or scenarios for those areas.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-24 06:09:10 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=UsATAOnBmmY",
+    "reason": "Succesfully added: Assigned the Security category because the session centers on Zero Trust security practices, endpoint protection, compliance, and threat prevention with Microsoft Intune, directly matching Security inclusion rules 1, 2, 3, and 4. Intune is a Microsoft security solution for device/application management, and the core content is technical (not business/strategy). While AI readiness is mentioned, the focus is establishing technical prerequisites for secure AI adoption, not building or integrating specific Microsoft AI tools; therefore, AI category does not apply. Azure is not the technical platform in focus, and development/coding, ML, and DevOps are not the primary subjects. No generic exclusion rules were triggered as the content is technical, in English, not biographical, and not business/productivity-focused. The session addresses actionable, technical, and security-related aspects for IT teams using Microsoft Intune.",
+    "collection": "videos"
   }
 ]

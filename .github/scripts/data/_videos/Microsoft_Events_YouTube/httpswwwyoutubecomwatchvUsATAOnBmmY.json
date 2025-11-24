@@ -1,0 +1,17 @@
+{
+  "FeedName": "Microsoft Events YouTube",
+  "Link": "https://www.youtube.com/watch?v=UsATAOnBmmY",
+  "ProcessedDate": "2025-11-24 06:05:54",
+  "Tags": [
+    "MSIgnite",
+    "ScalewithcloudandAIendpoints"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "PubDate": "2025-11-24T04:50:49+00:00",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "Title": "Demystify Zero Trust with Intune: cloud-connected, secure, and AI-ready endpoints | BRK340",
+  "OutputDir": "_videos",
+  "Author": "Microsoft Events",
+  "Description": "Managing endpoints in the cloud is a fundamental piece of the Zero Trust puzzle and of delivering the optimal AI experience for business. In this session, we’ll demystify what that means in practice. See how Microsoft Intune brings Zero Trust to life by connecting device and app management, compliance, and threat protection. We’ll show how cloud-native management establishes a stronger security foundation and enables safe, scalable adoption of AI. Strengthen endpoint protection across Windows, macOS, iOS, and Android—helping IT teams stay ahead of threats while empowering employees to work productively and securely from anywhere.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-scalecloud \\* https://aka.ms/IntuneZeroTrustWorkshop\n\n𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Lior Bela \\* Sangeetha Visweswaran 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK340 | English (US) Breakout | Intermediate (200) Related Sessions: BRK242 -- https://ignite.microsoft.com/sessions/BRK242?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIDuz0pkVfvDW2wZ1-2BI5oc BRK341 -- https://ignite.microsoft.com/sessions/BRK341?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIDuz0pkVfvDW2wZ1-2BI5oc BRK258 -- https://ignite.microsoft.com/sessions/BRK258?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIDuz0pkVfvDW2wZ1-2BI5oc #MSIgnite, #ScalewithcloudandAIendpoints\n\nChapters: 0:00 - Interactive Activity: 'Most Secure Standing' 00:05:35 - Three Zero Trust Principles with Intune Examples 00:07:30 - Introducing the Zero Trust Puzzle Pieces 00:11:36 - Prioritizing Critical Scenarios with Fast Turnaround Times 00:12:46 - Introduction of 'Admin Tasks' Unified Task Management Feature 00:21:27 - Introduction to App Security and Breach Prevention 00:36:00 - Overview of Internal Recovery for remote device restoration after OS failure 00:36:33 - Managing cloud and line-of-business apps with Intune and Windows 365 00:43:11 - Session conclusion with key takeaways, homework, and Zero Trust workshop details"
+}
