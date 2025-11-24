@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-24T12:01:44+00:00",
+  "Description": "Whether you use Ubuntu, RHEL, SLES, or Rocky, deploying Linux on Azure is more than provisioning VMs. Learn to build secure, performant Linux environments using Azure-native tools and partner integrations. See how to streamline image creation, harden workloads, monitor performance, and stay compliant with Azure Monitor, Defender for Linux, PostgreSQL on Azure, and the secure Linux baseline. Whether architect or OSS advocate, this session helps you confidently “train your penguin” for the cloud.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-migrateLinuxPostgreSQL 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Karl Abbott \\* Lachlan Evenson 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK143 | English (US) | Migrate and modernize your estate, Linux Virtual Machines in Azure Breakout | Advanced (300) #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Microsoft’s Open Source Involvement: Contributions across Linux, cloud native, and AI ecosystems 00:10:17 - Demo Introduction: Deploying a customized Red Hat-based image on Azure 00:12:11 - Using existing Red Hat license and deploying the VM 00:13:12 - Verifying deployed VM by connecting via SSH 00:28:56 - Introduction to eBPF and Inspector Gadget for advanced Linux inspection 00:31:09 - Cross-region performance tuning demo and TCP optimization discussion 00:32:42 - Applying tuning configuration files and system optimizations 00:34:07 - Re-run performance test with optimizations showing higher throughput (710 Mbps) 00:37:51 - Summary: Azure support for Linux workloads and performance benefits",
+  "Author": "Microsoft Events",
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "ProcessedDate": "2025-11-24 12:05:00",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=scrkmm03K88",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Title": "Optimizing performance deployments and security for Linux on Azure | BRK143"
+}

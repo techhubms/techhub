@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-24T12:03:52+00:00",
+  "Description": "In the era of AI, empowering your workforce with secure access to AI and agents is essential. Microsoft Entra Suite protects every connection using identity-driven controls, adaptive policies, & AI Gateway, so your organization innovate without compromise.\n\nDelivered in a silent stage breakout.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-ControlProtectMicrosoftEntra \\* https://aka.ms/blog/entra 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Igor Sakhnov \\* Kaitlin Murphy \\* Carmichael Patton 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK260 | English (US) Breakout | Intermediate (200) Related Sessions: BRK265 -- https://ignite.microsoft.com/sessions/BRK265?wt.mc\\_id=yt\\_ LAB544-R2 -- https://ignite.microsoft.com/sessions/LAB544-R2?wt.mc\\_id=yt\\_ COM1020 -- https://ignite.microsoft.com/sessions/COM1020?wt.mc\\_id=yt\\_ LAB544 -- https://ignite.microsoft.com/sessions/LAB544?wt.mc\\_id=yt\\_ THR757 -- https://ignite.microsoft.com/sessions/THR757?wt.mc\\_id=yt\\_ BRK243 -- https://ignite.microsoft.com/sessions/BRK243?wt.mc\\_id=yt\\_ #MSIgnite, #ProtectcloudAIplatformandapps\n\nChapters: 0:00 - AI-driven threat landscape – emergence of AI in both defense and attack vectors 00:06:15 - Example of dynamic session security in real-world use (office to coffee shop scenario) 00:06:59 - Central role of Unified Zero Trust Policy Engine and Continuous Access Evaluation (CAE) 00:12:37 - Migrating workloads with split tunnel VPN and building custom traffic database 00:13:43 - Scaling M365 secure internet access deployment across Microsoft devices 00:16:04 - Introduction of agent identities to manage non-human accounts securely 00:24:09 - Introduction to Access Reviews: Resource vs. User Centric 00:28:02 - Least Privilege and Security Leadership Discussion 00:34:32 - Discussion on MCP (Model, Context, Protocol) and its role in AI agent evolution",
+  "Author": "Microsoft Events",
+  "Tags": [
+    "MSIgnite",
+    "ProtectcloudAIplatformandapps"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "ProcessedDate": "2025-11-24 12:05:00",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=Ze0v1HkIk-o",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Title": "Microsoft Entra Suite: Accelerate Zero Trust and Secure AI Access | BRK260"
+}

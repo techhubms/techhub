@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-24T11:37:46+00:00",
+  "Description": "Enterprise teams are rapidly adopting AI agents to streamline operations and unlock new value. This panel brings together customers and partners to share how they’ve built and scaled AI apps using open frameworks and Azure services. Learn how they’ve tackled real-world production challenges—security, orchestration, reliability—and hear how they overcame blockers to deliver measurable business impact through agentic innovation.\n\nDelivered in a silent stage breakout.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-agenticsolutions 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Mark Austin \\* Luis Héctor Chávez \\* Adam Orentlicher \\* Naga Surendran 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK114 | English (US) Breakout | Intermediate (200) #MSIgnite, #InnovatewithAzureAIappsandagents\n\nChapters: 0:00 - Panel focus on scaling AI agents responsibly with architecture, model choices, governance, and trust 00:12:00 - Human-in-the-loop AI design ensuring expert training and decision oversight 00:15:16 - Shift toward live demos and interactive prototypes over static presentations 00:16:24 - Transition to architectural discussion of AI agent implementation 00:23:33 - Choosing and Evaluating AI Models in Microsoft Foundry 00:24:18 - Multi-Model Strategy: Matching Models to Specific Use Cases 00:37:02 - Architecting systems with autoscaling, fault tolerance, and observability 00:38:07 - GPU scaling complexities and model failover strategies 00:41:27 - Key advice for AI adoption: platform reuse, iterative prototyping, and focusing on outcomes",
+  "Author": "Microsoft Events",
+  "Tags": [
+    "InnovatewithAzureAIappsandagents",
+    "MSIgnite"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "ProcessedDate": "2025-11-24 12:05:00",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=baPvHB27gwY",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Title": "AI agent architectures, pitfalls and real-world business impact | BRK114"
+}

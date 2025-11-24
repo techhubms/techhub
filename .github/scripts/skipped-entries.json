@@ -9549,5 +9549,11 @@
     "collection": "videos",
     "timestamp": "2025-11-24 11:05:46 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rule: The session focuses primarily on business productivity tools (Planner, Teams, Outlook, Copilot Chat) with an emphasis on streamlining workflows, project management, and task automation within business applications. According to the workflow, content centered on Microsoft 365 Copilot, Copilot Chat, Teams, and Planner for productivity (rather than developer tooling or custom development) is not eligible for any categories. None of the discussion involves developer tools, coding, technical architecture, or AI/ML development as defined by the inclusion rules, and all references are to business and project management productivity features rather than technical implementation."
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content focuses on Dell Copilot+ PCs and the Microsoft Copilot ecosystem specifically for business productivity scenarios, such as 'efficiency, battery life, privacy,' 'business productivity,' and Microsoft Copilot services. Per the Generic Exclusion Rules and the Copilot Product Distinction, business/productivity-focused Copilot content (i.e., not GitHub Copilot or developer/maker tools) does not qualify for any categories. There is no substantial focus on developer tooling, coding, DevOps, AI/ML model engineering, or technical implementation for Microsoft developer tools; rather, it centers on end-user productivity enhancement and integration with Dell hardware.",
+    "canonical_url": "https://www.youtube.com/watch?v=t8Wx6PDYrIQ",
+    "collection": "videos",
+    "timestamp": "2025-11-24 12:11:25 +00:00"
   }
 ]

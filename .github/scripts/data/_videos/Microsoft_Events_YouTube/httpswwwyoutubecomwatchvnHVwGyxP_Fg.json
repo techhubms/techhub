@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-24T11:54:01+00:00",
+  "Description": "Learn how to embed AI across your Oracle estate, spanning apps and databases with Oracle Database@Azure. We’ll walk through blueprints that use Microsoft Foundry, Copilot Studio, and Microsoft Fabric to vectorize Oracle data, build task?specific copilots and agents, and operationalize analytics. Hear customer?proven integration patterns, cost considerations, and reliability tips, and leave with a pragmatic adoption roadmap and next?step resources.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-migrate 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Sudhakar Dalavi \\* Venkataraman Ramakrishnan \\* Rajya Laxmi Yellajosyula 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK164 | English (US) | Migrate and modernize your estate, Oracle Database@Azure​ Breakout | Intermediate (200) #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Dual cloud challenges: latency, complexity, compliance, and data silos 00:13:02 - Challenges in Financial Product Design and Data Analysis 00:13:58 - Two-Pronged Solution: Data Unification and AI-Infused Analytics 00:15:57 - Exploring Database Mirroring and Open Mirroring with Oracle 00:22:10 - Discussion on replicating vehicle data into Microsoft Fabric 00:26:44 - Two options for leveraging Oracle data: direct access or Fabric unification 00:30:05 - Demonstration of Maya creating AI agents using GitHub Copilot, Fabric, and Oracle databases 00:34:50 - Maya builds custom Copilot combining structured and unstructured data using Azure AI Search 00:39:45 - Ensuring data security and governance with Microsoft Purview and role-based access",
+  "Author": "Microsoft Events",
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "ProcessedDate": "2025-11-24 12:05:00",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=nHVwGyxP_Fg",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Title": "AI use cases to transform your Oracle workloads in Azure | BRK164"
+}

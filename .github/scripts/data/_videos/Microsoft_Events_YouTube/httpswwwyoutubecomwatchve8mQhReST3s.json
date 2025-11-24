@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-24T12:00:15+00:00",
+  "Description": "Organizations across industries are transforming the way they operate by bringing the power of Azure into their own environments with Azure Local. Discover what’s new with Azure Local, including the latest portfolio enhancements that help organizations modernize operations, meet regulatory requirements, and drive innovation wherever their data and applications live.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-migrate 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Meena Gowdar \\* Mohamed Khalid \\* Dean Paron 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK147 | English (US) Breakout | Advanced (300) #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Session Introduction and Speaker Welcome 00:07:47 - Customer Use Cases and Industry Examples for Azure Local 00:09:32 - Layers of Sovereignty Options and Role of Azure Local in Private Clouds 00:11:18 - Video intro: Microsoft Private Sovereign Cloud for regulated industries 00:22:46 - AI innovations: NVIDIA RTX GPU support and edge AI acceleration 00:33:00 - Azure Local general availability updates: migration, network security, and identity features 00:38:04 - Introduction & Upcoming Azure Local Flexibility Updates 00:38:33 - Overview of GSK and Its Mission in Healthcare 00:43:03 - Why GSK Chose Azure Local for Edge Deployment",
+  "Author": "Microsoft Events",
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "ProcessedDate": "2025-11-24 12:05:00",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=e8mQhReST3s",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Title": "What’s new in Azure Local | BRK147"
+}

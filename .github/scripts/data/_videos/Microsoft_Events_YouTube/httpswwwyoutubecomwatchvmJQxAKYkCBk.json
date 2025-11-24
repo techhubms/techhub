@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-11-24T11:56:18+00:00",
+  "Description": "Windows 11 offers a suite of developer productivity tools designed to accelerate coding workflows and to align with enterprise IT priorities. In this session, you will learn about new experiences coming to WSL, Windows Terminal, and PowerToys boosting productivity. We’ll also cover how these tools are built with security and enterprise-grade manageability in mind—making Windows an enterprise-friendly platform.\n\nDelivered in a silent stage breakout.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-DevExperiences 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Craig Loewen \\* Clint Rutkas 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK330 | English (US) Breakout | Advanced (300) Related Sessions: BRK335 -- https://ignite.microsoft.com/sessions/BRK335?wt.mc\\_id=yt\\_PLQXpv\\_NQsPIDXiR9PcpggZ34mzko\\_-12C;PLQXpv\\_NQsPIDuz0pkVfvDW2wZ1-2BI5oc #MSIgnite, #ScalewithcloudandAIendpoints\n\nChapters: 0:00 - Transition to live demo — showcasing new Windows features for developers 00:05:37 - Introduction of 'Edit' – a new lightweight terminal text editor optimized for speed and large files 00:07:23 - Windows Terminal updates – creating organized profiles and integrating GitHub Copilot commands 00:10:22 - Addressing save issues in Canary build and launching PowerToys via CLI 00:20:38 - Using Foundry Local in Advanced Paste for AI text editing 00:22:55 - Discussion on open-source Windows tools like PowerShell and Terminal 00:25:47 - Overview of new Zero Trust enterprise features for WSL 00:33:13 - Building and Registering an MCP Server in Windows 00:34:13 - Running and Testing MCP Server as an AI Agent",
+  "Author": "Microsoft Events",
+  "Tags": [
+    "MSIgnite",
+    "ScalewithcloudandAIendpoints"
+  ],
+  "FeedName": "Microsoft Events YouTube",
+  "ProcessedDate": "2025-11-24 12:05:00",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=mJQxAKYkCBk",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Title": "Enterprise ready Windows productivity tools for Developers and IT Pros | BRK330"
+}
