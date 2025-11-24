@@ -19172,5 +19172,47 @@
     "canonical_url": "https://www.youtube.com/watch?v=UsATAOnBmmY",
     "reason": "Succesfully added: Assigned the Security category because the session centers on Zero Trust security practices, endpoint protection, compliance, and threat prevention with Microsoft Intune, directly matching Security inclusion rules 1, 2, 3, and 4. Intune is a Microsoft security solution for device/application management, and the core content is technical (not business/strategy). While AI readiness is mentioned, the focus is establishing technical prerequisites for secure AI adoption, not building or integrating specific Microsoft AI tools; therefore, AI category does not apply. Azure is not the technical platform in focus, and development/coding, ML, and DevOps are not the primary subjects. No generic exclusion rules were triggered as the content is technical, in English, not biographical, and not business/productivity-focused. The session addresses actionable, technical, and security-related aspects for IT teams using Microsoft Intune.",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Categories 'AI', 'Azure', and 'ML' assigned based on detailed session focus: the session centers around Azure's AI infrastructure for supercomputing and large model training (AI rule 1, ML rule 1, Azure rule 1). Multiple ML engineering topics (GPU kernels, LLAMA pretraining, GRAC 314B validation) justify 'ML'. Azure is central to the entire content (Azure rule 1). AI is included due to cloud-based model training and infrastructure evolution. Content is technical, not business/strategy, and does not trigger any generic exclusion rule. No Coding, Security, or GitHub Copilot category is relevant; session is not about developer frameworks, security architecture, or Copilot usage.",
+    "canonical_url": "https://www.youtube.com/watch?v=_NRldsqv__w",
+    "timestamp": "2025-11-24 07:06:21 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the session focuses on developing and deploying Edge AI applications with Microsoft Foundry and Foundry Local (AI rule 1, 3, and 5). Assigned Azure category as Azure Arc is a central deployment component (Azure rule 1, 4, and 5). Coding category was not added because the session centers on platform/tool usage and deployment processes rather than code-level implementation. Content qualifies, as it is primarily technical and explains deployment, model management, and workflow automation for developer audiences.",
+    "canonical_url": "https://www.youtube.com/watch?v=b88tJ0hdTSQ",
+    "timestamp": "2025-11-24 07:07:04 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Content is included in the AI category because it focuses on building and integrating agents across Microsoft 365 using AI stacks and the Microsoft Agent Framework (AI inclusion rule 1 and 4). Security is included due to the coverage of governance, compliance, and Microsoft Defender integration for monitoring and security operations (Security inclusion rule 1 and 4). Azure is included because Defender and broader AI stack integration typically leverage Azure-based technologies (Azure inclusion rule 1 and 4). Coding and DevOps categories are not included since the content centers on platform integration and agent framework, rather than hands-on coding tutorials or development lifecycle process specifics.",
+    "canonical_url": "https://www.youtube.com/watch?v=gdi95CKeQL4",
+    "timestamp": "2025-11-24 07:07:21 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Content qualifies for Azure category under Azure rules 1 and 4: It is about Azure Backup, Site Recovery, and protecting workloads. Security category applies under Security rule 1 and rule 5, since Microsoft Defender integration, cyber recovery, threat-aware backups, and compliance objectives are covered. ML, AI, Coding, DevOps, and GitHub Copilot categories do not apply, as the focus is on backup, recovery, and security rather than software development, AI/ML, tooling, or DevOps practices. No generic exclusion rules were triggered—the content is technical, not biographical or sales-oriented, and is appropriate for inclusion.",
+    "canonical_url": "https://www.youtube.com/watch?v=IJDL7c2dHXc",
+    "timestamp": "2025-11-24 07:07:40 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because Copilot Studio is an AI-enabled developer/maker tool, and the session focuses on agent-building, orchestration, and automation (AI rules 1 and 2). Did NOT add 'GitHub Copilot' since the content is about Copilot Studio—not GitHub Copilot (AI and Copilot rule distinction). Other development-focused categories such as Coding, Azure, DevOps, ML, and Security were not included, as the content centers on the platform’s capabilities, agent management, and innovation rather than hands-on coding or infrastructure integration. The presence of real business impact and customer stories is relevant to technical implementation, not purely business productivity, thus qualifying for the AI category.",
+    "canonical_url": "https://www.youtube.com/watch?v=KbsotdOgr5c",
+    "timestamp": "2025-11-24 07:07:59 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because Agent 365 is described as managing assistive and autonomous AI agents and focuses on AI governance and security (AI rules 1, 4, 5). Assigned Security category as the session details conditional access, DLP, Purview Audit, incident investigation, and governance of threats and vulnerabilities (Security rules 1, 2, 3, 5, 7, 9, 10). Coding, Azure, ML, DevOps, and GitHub Copilot were not assigned since the content does not cover development, Azure services, ML workloads, DevOps practices, or GitHub Copilot features.",
+    "canonical_url": "https://www.youtube.com/watch?v=RsCz57M2SMc",
+    "timestamp": "2025-11-24 07:08:16 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the session is focused on responsible operationalization of AI agents using Microsoft Foundry and Azure AI (AI rule 1, 4, and 6). Assigned 'Azure' due to emphasis on Azure AI and integration with Azure platforms (Azure rule 1 and 4). Assigned 'Security' because of coverage of safety, guardrails, PII protection, and compliance features, as well as red teaming and risk mitigation strategies (Security rule 1, 2, 5, and 7). Content is technical, implementation-focused, and meets platform thresholds (Microsoft technology is central). No exclusion rules apply.",
+    "canonical_url": "https://www.youtube.com/watch?v=XjVj_qRwzVg",
+    "timestamp": "2025-11-24 07:08:34 +00:00",
+    "collection": "videos"
   }
 ]

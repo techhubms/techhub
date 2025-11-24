@@ -9501,5 +9501,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=IXeUNP4mt78",
     "reason": "No categories found: Excluded all categories because the content is primarily delivered in Japanese, as specified in the description (\"This session will be delivered in Japanese\" and Japanese-language text throughout). According to generic exclusion rules, non-English content (less than 80% in English) does not qualify, regardless of technical depth or subject. Therefore, no categories were assigned.",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: All categories were excluded based on generic exclusion rules for non-development Microsoft products. The content, as described, focuses on Microsoft 365 Copilot Chat and productivity enhancements for work, including AI chat experiences, GPT-5 integration, and new features for business users. There is no coverage of developer tools, APIs, coding practices, implementation guidance, or technical architecture involving Microsoft developer technologies. The session is centered around business productivity, document creation, workflow improvements, and enterprise use cases — all specifically excluded under category and generic exclusion rules for Microsoft 365 Copilot and similar end-user business tools.",
+    "canonical_url": "https://www.youtube.com/watch?v=1Uz2xceNqnw",
+    "timestamp": "2025-11-24 07:06:34 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content exclusion triggered by the generic exclusion rules for business and non-development Microsoft products. The session centers around Project Opal enabling task-based work automation, focusing on freeing teams from routine busywork and organizational deployment best practices, with no substantive technical depth in Microsoft development, coding, or platform architecture shown within the description. The session exclusively targets productivity improvement and organizational workflow changes (business productivity focus), not technical implementation, coding, AI/ML practices, or Microsoft developer tooling. No coding, architectural, or implementation details for Microsoft technologies are provided, and the only Copilot references relate to productivity agents, not developer tools. Thus, per rule: exclude all categories.",
+    "canonical_url": "https://www.youtube.com/watch?v=7Lh8X1Yr56o",
+    "timestamp": "2025-11-24 07:06:46 +00:00",
+    "collection": "videos"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ],
+  "Author": "Microsoft Events",
+  "FeedName": "Microsoft Events YouTube",
+  "ProcessedDate": "2025-11-24 07:05:27",
+  "Link": "https://www.youtube.com/watch?v=IJDL7c2dHXc",
+  "Description": "Learn how to protect, detect, and rapidly recover your most critical workloads—across Azure VMs, databases, file shares, and cloud native applications like AKS. Modernize backups with secure by default protection and immutable storage, use intelligent signals, and orchestrate clean, at scale restores. We’ll cover threat aware backups, container aware protection, and one click DR to help you recover with confidence while meeting your RPO/RTO goals and compliance needs.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-AAI\\_TDMApps\\_Plan 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Rochak Mittal \\* Rohan Sahini 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK146 | English (US) | Migrate and modernize your estate, Linux Virtual Machines in Azure Breakout | Advanced (300) #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Focus shift to data resiliency and cyber recovery with Azure Backup and Defender integration 00:07:00 - Deep dive begins into data resiliency and cyber recovery for diverse workloads 00:07:57 - Introduction to Infrastructure Service Workload Scenario 00:08:10 - Overview of Two-Tier Application Architecture (Frontend VM and Backend Database) 00:10:52 - Demo Introduction: Two-Tier Application Backup Process 00:16:51 - Importance of Backing Up Containers and Stateless Resources 00:19:16 - Demo Part 1: Kubernetes Cluster Backup via Azure Resiliency 00:22:44 - Cyber Recovery for Unstructured Data and Unified Protection Summary 00:28:42 - Replication Capabilities, RPO, SLA, and Throughput Enhancements",
+  "OutputDir": "_videos",
+  "PubDate": "2025-11-24T06:32:15+00:00",
+  "Title": "Resiliency and recovery with Azure Backup and Site Recovery | BRK146",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "FeedLevelAuthor": "Microsoft Events",
+  "EnhancedContent": null
+}

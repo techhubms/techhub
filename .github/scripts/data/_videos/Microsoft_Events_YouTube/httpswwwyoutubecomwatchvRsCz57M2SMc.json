@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "MSIgnite",
+    "ProtectcloudAIplatformandapps"
+  ],
+  "Author": "Microsoft Events",
+  "FeedName": "Microsoft Events YouTube",
+  "ProcessedDate": "2025-11-24 07:05:27",
+  "Link": "https://www.youtube.com/watch?v=RsCz57M2SMc",
+  "Description": "Confidently activate your AI agent estate with Microsoft Agent 365. Whether an assistive agent or fully autonomous digital worker, learn how Agent 365 provides comprehensive security and governance to help you manage AI access and agent sprawl, prevent data oversharing and leaks, defend against AI threats and vulnerabilities, and comply with AI regulations.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-SecuringAIProtectGovernDefend 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Kim Kischel \\* Joanne Marone \\* Irina Nechaeva \\* Shilpa Ranganathan 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK269 | English (US) Breakout | Foundational (100) #MSIgnite, #ProtectcloudAIplatformandapps\n\nChapters: 0:00 - Irina introduces co-speakers Shilpa and Kim and contextualizes AI agents trend 00:00:52 - Security concerns with AI agents and need for control and oversight 00:13:02 - Protecting agent access with conditional access policies 00:18:10 - Overview of new security challenges with AI agents 00:23:52 - Admin reviews agent activity, DLP matches, and event traceability 00:25:42 - Purview Audit captures all agent interactions ensuring regulatory compliance 00:31:11 - Investigation begins on low-priority collection incident involving an agent 00:35:16 - Exploring security recommendations and remediation steps for AI agents 00:36:21 - Reviewing attack path visualization and potential lateral movement risks",
+  "OutputDir": "_videos",
+  "PubDate": "2025-11-24T06:28:51+00:00",
+  "Title": "Explore Microsoft Agent 365 security and governance capabilities | BRK269",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "FeedLevelAuthor": "Microsoft Events",
+  "EnhancedContent": null
+}
