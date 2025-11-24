@@ -19736,5 +19736,11 @@
     "reason": "Succesfully added: Content qualifies for Azure category due to its focus on Fabric SQL Database, Azure SQL Database, and Azure Data Lake integrations (Azure Rule 1 and 2). Assigned ML category because it describes data analytics, external table abstraction, data ingestion, and real-time analytics (ML rules 1, 2, and 4). AI category added since the post mentions Copilot for generating insights without data ingestion, in line with AI rule 5. Coding, DevOps, Security, and GitHub Copilot are excluded because the content focuses on data platform usage and real-time analytics rather than application code, developer workflows, or security configuration.",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/openrowset-and-external-tables-for-fabric-sql-databases/",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric Data Factory is an Azure-based service and the Copy Job Activity is an Azure technology (Azure rule 1). Assigned 'ML' as Copy Job Activity is core to building ETL and data integration pipelines, which are foundational for analytics and machine learning/data science (ML rule 2), especially given mentions of orchestration, data ingestion, incremental copy, and CDC. Did not assign 'AI,' 'Coding,' 'DevOps,' or 'Security' because the content does not relate to those rules. The content is technical, development-focused, and does not trigger any generic exclusion rules.",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-copy-job-activity-now-general-available-in-data-factory-pipeline/",
+    "timestamp": "2025-11-24 18:06:18 +00:00"
   }
 ]
