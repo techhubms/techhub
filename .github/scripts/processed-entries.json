@@ -19724,5 +19724,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/clone-a-consumption-logic-app-to-a-standard-workflow/ba-p/4471175",
     "collection": "community",
     "reason": "Succesfully added: Assigned the Azure category because the content focuses entirely on Azure Logic Apps, an Azure integration service, and discusses migration, features, and modernization within the Azure ecosystem. Coding and DevOps categories are not included, as there is no direct discussion of programming practices, source code, or deployment pipelines—this is a platform feature and migration guide. There are no generic exclusion triggers: the content is technical, not biographical, sales-oriented, job-related, negative, or overly short. The article is in English, and Microsoft technology is clearly central (over 90% of the text)."
+  },
+  {
+    "timestamp": "2025-11-24 17:06:04 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric and OneLake are Azure services and integration with Azure Blob Storage is discussed (Azure rule 1, 2, 4). Assigned ML and AI categories because the article describes direct support for analytics, BI, machine learning model training, and AI readiness using data in Fabric (ML rules 1, 2, 4, 5; AI rule 1, 4, 5). Assigned Security because of discussion around access governance, compliance (GDPR/audit) checks, enforcement via Microsoft Entra, and secure storage management (Security rules 1, 5, 6, 7, 10). Excluded Coding and DevOps since the article does not involve programming languages, developer workflow, or CI/CD scenarios.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/30438/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-11-24 17:06:28 +00:00",
+    "reason": "Succesfully added: Content qualifies for Azure category due to its focus on Fabric SQL Database, Azure SQL Database, and Azure Data Lake integrations (Azure Rule 1 and 2). Assigned ML category because it describes data analytics, external table abstraction, data ingestion, and real-time analytics (ML rules 1, 2, and 4). AI category added since the post mentions Copilot for generating insights without data ingestion, in line with AI rule 5. Coding, DevOps, Security, and GitHub Copilot are excluded because the content focuses on data platform usage and real-time analytics rather than application code, developer workflows, or security configuration.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/openrowset-and-external-tables-for-fabric-sql-databases/",
+    "collection": "news"
   }
 ]
