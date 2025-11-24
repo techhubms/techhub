@@ -9585,5 +9585,53 @@
     "reason": "No categories found: No categories assigned because the content is focused entirely on Microsoft 365 Copilot, which is a business productivity tool and not a developer tool. The session showcases features for work, team collaboration, and business processes—all classic productivity scenarios. According to the workflow's Copilot Product Distinction and Non-Development Microsoft Products exclusion, Copilot for Microsoft 365 content should be excluded unless it is about code or developer usage, which this is not—the session demonstrates document creation, scheduling, and organizational tasks. No technical depth or development-focused implementation is presented, only end-user features.",
     "timestamp": "2025-11-24 13:19:22 +00:00",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://dellenny.com/using-microsoft-365-on-mobile-devices-effectively/",
+    "collection": "posts",
+    "timestamp": "2025-11-24 14:05:32 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The article focuses on end-user productivity practices with Microsoft 365 on mobile devices (phones and tablets), detailing app usage (Outlook, Teams, Word, Excel, OneNote, SharePoint, OneDrive) for everyday business, student, and professional tasks. It does not cover development, coding, architecture, DevOps, AI, ML, or security implementation topics. As per Non-Development Microsoft Products exclusion, general end-user topics, business productivity, and mobile usage guidance for Microsoft 365 are excluded from all categories."
+  },
+  {
+    "canonical_url": "https://dellenny.com/whats-included-in-microsoft-365-free-trial-and-developer-program/",
+    "collection": "posts",
+    "timestamp": "2025-11-24 14:05:46 +00:00",
+    "reason": "No categories found: Excluded all categories due to generic exclusion rule: the content primarily discusses the Microsoft 365 Free Trial and the Microsoft 365 Developer Program in the context of general productivity, application access, and trying out features before purchase. It does not focus on development topics, technical implementation, or coding guidance using Microsoft technologies. While the Developer Program is mentioned, the article does not provide substantive content about building applications, coding, technical architecture, or Microsoft technology development. The majority of the content compares consumer-facing features (Office apps, storage, Teams) and the advantages of the trial vs. developer account from a non-technical, non-development perspective, which matches the Non-Development Microsoft Products exclusion rule in Chapter 3. No technical detail about building or programming is present, so no categories are assigned."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=A4TSf2O5Ggo",
+    "collection": "videos",
+    "timestamp": "2025-11-24 14:08:18 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This video focuses primarily on business strategy and partner growth opportunities in Europe relating to Microsoft's Sovereign Cloud offerings. The session is centered around regulatory frameworks, market influence, customer concerns, business continuity, and partner specialization. There is no substantial technical implementation detail or developer-oriented content about Microsoft technologies, coding, architecture, development practices, or technical configuration. Instead, the material targets business partners and management audiences, making it ineligible per the 'Business Strategy and Executive Content' and 'Workplace and Business Focus' exclusion rules."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=gHKHcdkLHFM",
+    "collection": "videos",
+    "timestamp": "2025-11-24 14:09:10 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The video is primarily focused on business strategy, partner programs, go-to-market investments, and executive-level partnership opportunities with Dynamics 365 Business Central and AI. It does not provide hands-on technical implementation details, developer guidance, or engineering architecture related to Microsoft development platforms (see Business Strategy and Executive Content exclusion, Non-Development Microsoft Products exclusion, and Workplace/Business Focus exclusion). The inclusion of Copilot features is contextually about enhancing productivity for business users and partner strategy, not developer or maker tools. Therefore, no categories apply."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=KhUP7wHGIBw",
+    "collection": "videos",
+    "timestamp": "2025-11-24 14:09:44 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: The session centers on business strategy, partner enablement, go-to-market guidance, and customer value rather than technical implementation. Although products like Windows 365, Azure Virtual Desktop (AVD), and Intune Suite are mentioned, the focus is on business growth, strategic alignment, and case study outcomes—not on technical, developer-centric content or architectural detail. Numerous references to 'partners', 'service delivery', 'practice evolution', 'go-to-market guidance', and 'customer value' clearly indicate the material targets business decision-makers and organizational strategy, triggering the 'Business Strategy and Executive Content' and 'Workplace and Business Focus' exclusions defined in Chapter 3. No actionable technical how-to, code, or architecture is presented."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=mFI_iWKuwXY",
+    "collection": "videos",
+    "timestamp": "2025-11-24 14:09:56 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this session is focused on Microsoft's support programs for partners, the evolution of support services, and business strategy such as solution partner designations, CSP transitions, and operational improvements. It does not contain substantive technical implementation details relevant to developer, coding, Azure platform, AI, ML, DevOps, or security categories. References to ITSM processes, support operations, certifications, and employee upskilling further emphasize business strategy and partner operations rather than hands-on technical architecture or development content, as specified in the generic exclusion rules for business strategy and workplace/organizational content."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=oGccFgst3JY",
+    "collection": "videos",
+    "timestamp": "2025-11-24 14:11:39 +00:00",
+    "reason": "No categories found: Content excluded because it is primarily focused on business strategy, partner ecosystem development, customer service standards, and authorization requirements for cloud solution providers (CSPs) in Microsoft's partner program. The material revolves around high-level organizational planning, growth investments, business transformation, and distributor collaboration without substantial technical implementation or architecture details regarding Microsoft development, coding, DevOps, AI, ML, Azure, or Security. It does not meet the inclusion criteria for any technical categories, and is specifically excluded by the 'Business Strategy and Executive Content' and 'Workplace and Business Focus' generic exclusion rules."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=r9QGTK54jkA",
+    "collection": "videos",
+    "timestamp": "2025-11-24 14:12:11 +00:00",
+    "reason": "No categories found: No categories assigned because the content is primarily focused on the positioning and business implementation of Microsoft AI for Dynamics 365 Sales. As per the generic exclusion rules, content about business strategy, sales enablement, partner resources, and business process transformation with Microsoft products is excluded unless it contains technical detail on software development, coding, or implementation architecture. The session description centers around sales function transformation for customers, best practices from partners (HSO, EY, HCL), and resources for sales and partner skilling, with no substantive mention of technical development practices, architecture, coding, Azure, DevOps, ML, AI frameworks, or security implementation. Dynamics 365 content is specifically excluded if focused on business processes or end-user adoption rather than developer or data engineering topics."
   }
 ]

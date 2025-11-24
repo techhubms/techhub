@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "ModernizeSecOpswithaunifiedplatform",
+    "MSIgnite"
+  ],
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Events YouTube",
+  "Author": "Microsoft Events",
+  "ProcessedDate": "2025-11-24 14:04:55",
+  "FeedLevelAuthor": "Microsoft Events",
+  "PubDate": "2025-11-24T13:50:45+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=SiF5YDHaw6Y",
+  "Description": "Discover how Security Copilot in Microsoft Defender is redefining SecOps. In this session, we’ll share Copilot’s latest innovations and show how the modern SOC is evolving into an agentic, AI-driven operation. See real-world demos across the SOC lifecycle that highlight how AI and agents deliver measurable outcomes, empower analysts, and close the gap between detection and prevention. Join us to step into the future of defense, where Microsoft enables every organization turn intelligence into action.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-securedata 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Cristina Da Gama \\* Corina Feuerstein 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK1731 | English (US) Breakout | Intermediate (200) #MSIgnite, #ModernizeSecOpswithaunifiedplatform\n\nChapters: 0:00 - Rise of agentic AI usage and impact on future organizational roles 00:01:12 - Progression from assistive AI toward autonomous agentic defense 00:03:27 - Overview of Microsoft's integrated security platform: Sentinel, Defender, and Copilot 00:13:45 - Demonstration of Copilot’s investigation session memory and note creation 00:16:00 - Phishing Triage Agent enters general availability 00:19:55 - Overview of the Threat Intelligence Briefing Agent for tailored daily insights 00:23:29 - Agent Executes Query and Summarizes Results in Natural Language 00:35:39 - Explanation of SCU monthly allocation and pricing structure 00:36:14 - Transition from hourly to monthly SCU allocation model for flexibility",
+  "Title": "Empowering the SOC: Security Copilot and the Rise of Agentic Defense | BRK1731"
+}
