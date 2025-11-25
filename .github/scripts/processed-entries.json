@@ -19796,5 +19796,11 @@
     "timestamp": "2025-11-24 23:06:10 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Assigned AI category because the content discusses supporting and deploying LLM inference, agentic AI, and generative AI workloads on Azure (AI rules 1, 4, and 5). Assigned Azure category because the entire content is centered on new Azure VM infrastructure (Azure rule 1). Did not assign Coding, ML, DevOps, Security, or GitHub Copilot as the focus is on infrastructure capabilities and supported AI/visualization workloads, not hands-on code, developer tooling, DevOps practices, security implementation, or Copilot usage. No generic exclusion rules apply as this is official technical content with substantial technical details, focused on Microsoft Azure technology."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-expanding-observability-and-multi-cloud/ba-p/4472719",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'Azure' because Azure SRE Agent is a Microsoft Azure-native service and the integrations are all either Azure platform offerings or involve management of Azure resources (Azure rule 1, 4, 5). Assigned 'DevOps' because the focus is on observability, incident management, remediation, and operational excellence—core DevOps themes (DevOps rules 1, 3, 5, 6, 7). No 'AI' assigned because, while some partner products and integrations reference AI-powered features (like Dynatrace's Davis AI and PagerDuty AI), the Azure SRE Agent is not positioned here as an AI/ML development or integration platform. No ML, Coding, Security, or GitHub Copilot: there is no focus on code development, ML/data science, security implementation, or GitHub Copilot features. The piece is non-biographical, highly technical, well above the word threshold, and in English, so no generic exclusions applied.",
+    "timestamp": "2025-11-25 00:09:40 +00:00"
   }
 ]
