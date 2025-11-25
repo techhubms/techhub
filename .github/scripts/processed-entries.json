@@ -19808,5 +19808,11 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned Azure category because the content centers on Azure Logic Apps and its workflow automation capabilities (Azure inclusion rule 1). Assigned Coding because the post describes technical implementation steps, including schema validation, integration account setup, and programmatic encoding management (Coding rules 1 and 4). No other categories fit, as the content isn't focused on AI/ML, DevOps, Security, or GitHub Copilot. The input meets the community quality criteria, exceeds 200 meaningful words, and is technical and instructional, not biographical, promotional, or business-centric.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-of-the-xml-parse-and-compose/ba-p/4470825"
+  },
+  {
+    "reason": "Succesfully added: AI category assigned because content centers on building intelligent agents and orchestration using Microsoft's AI platforms, matching AI rules 1 and 4. Azure category assigned due to direct use of Microsoft Foundry—a cloud service—and integration scenarios, satisfying Azure rule 1 and 4. Coding category assigned because developers are guided through workflow YAML export, IDE inspection with VS Code, and the Agent Framework API, directly involving code-centric practices (Coding rules 2, 5). No exclusion rules apply: the content type is 'community', well over the minimum length, focused on technical implementation rather than business productivity or non-development products. Copilot business productivity is not mentioned, and all referenced tools are developer-centric.",
+    "timestamp": "2025-11-25 08:06:23 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-concept-to-code-building-production-ready-multi-agent/ba-p/4472752",
+    "collection": "community"
   }
 ]
