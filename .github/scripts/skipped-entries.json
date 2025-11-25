@@ -9705,5 +9705,11 @@
     "timestamp": "2025-11-24 20:07:29 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=r0h9ID-uVFM"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/bBWPBTUkf44",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The 'content' field is null, which means there is no main content text to analyze. Without substantive content, it's impossible to apply inclusion rules, assign categories, extract technical tags, or provide a summary. Additionally, the title and tags suggest a focus on Google's Gemini AI and general design rather than Microsoft technology, but due to lack of content, generic exclusion applies immediately.",
+    "timestamp": "2025-11-25 02:34:37 +00:00"
   }
 ]
