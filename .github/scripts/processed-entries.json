@@ -19820,5 +19820,11 @@
     "timestamp": "2025-11-25 09:06:30 +00:00",
     "reason": "Succesfully added: Categories assigned as 'AI' and 'GitHub Copilot' because the content focuses on building custom agents to enhance GitHub Copilot (AI rule 2 and GitHub Copilot rules 1 and 2). There is no direct mention of programming language-specific coding (so 'Coding' not included), nor explicit DevOps, Azure, ML, or Security elements. Content is not excluded, as it does not match any generic exclusion rules, and the description centers around technical, developer-focused use of GitHub Copilot extensions.",
     "canonical_url": "https://www.youtube.com/watch?v=-eRjenGV2OM"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Coding category because the content is entirely about .NET runtime internals, host tracing, and diagnostics—directly related to development and troubleshooting with Microsoft technologies (Coding rules 1 and 2). No other category qualifies: it is not about Azure services (Azure), AI/ML (AI/ML), DevOps practices, or Security. The technical depth and focus on .NET boot mechanics and troubleshooting make Coding the only valid assignment.",
+    "collection": "posts",
+    "canonical_url": "https://andrewlock.net/exploring-the-dotnet-boot-process-via-host-tracing/",
+    "timestamp": "2025-11-25 11:05:26 +00:00"
   }
 ]
