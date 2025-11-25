@@ -9891,5 +9891,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=DqoxPIDNWfA",
     "reason": "No categories found: Content excluded due to missing substantive main content. The 'content' field is null, meaning there is no main text to evaluate for technical depth, coverage of Microsoft technologies, or adherence to quality standards. According to the workflow, if the content field does not provide the actual substance of the resource, categorization and further processing cannot be performed. Generic exclusion rules dictate that lack of substantial content results in exclusion.",
     "timestamp": "2025-11-25 19:11:23 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=PLUsiaET0yI",
+    "timestamp": "2025-11-25 23:06:11 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule—this is a business strategy and executive-level keynote targeting broad industry transformation, leadership vision, and high-level innovation themes. The description focuses on unveiling 'the next wave of AI transformation' and 'empowering every human and every organization,' not technical implementation details. Specific technologies, developer topics, or actionable technical guidance are not present. As per 'Business Strategy and Executive Content' and 'Industry trends and market analysis without technical implementation details' exclusions, no categories are assigned."
   }
 ]
