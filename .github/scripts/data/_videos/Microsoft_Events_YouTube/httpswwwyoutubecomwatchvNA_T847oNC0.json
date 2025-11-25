@@ -1,0 +1,17 @@
+{
+  "Description": "Unlock new opportunities by building and publishing agents to the Microsoft 365 Agent Store. This session walks partners through the full development journey, from tool selection to publishing, and shares strategies to drive scale. Discover how to use telemetry and feedback to optimize performance and design impactful agents for broad or enterprise use cases.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-lowcode 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Steven Abrahams \\* Anna Cao \\* Varun Kulkarni 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK312 | English (US) | Copilot and agents at work, Microsoft 365 Copilot, Copilot Agents; Innovate with low-code AI and agents, Copilot Studio Breakout | Advanced (300) #MSIgnite, #Innovatewithlow\n\nChapters: 0:00 - Speakers Introduced: Anna Tao, Steven Abrahams, Varun Kulkarni 00:00:38 - Session Overview: Building Agents with Copilot and Agent Store 00:02:02 - Introduction to Frontier Firms and AI Workflow Transformation 00:12:54 - Introduction of 'UI for AI' and Copilot concept 00:15:55 - Building enterprise-scale agents 00:19:39 - Partner demos: Sophos cybersecurity agent and Moveworks enterprise AI agent 00:22:01 - User updates personal details via HR integration 00:22:47 - Moveworks solution entering validation phase for Agent Store release 00:33:00 - Previewing and testing agents locally to refine performance",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Author": "Microsoft Events",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Title": "How to build and publish your agent to the Agent Store | BRK312",
+  "Link": "https://www.youtube.com/watch?v=NA_T847oNC0",
+  "FeedName": "Microsoft Events YouTube",
+  "Tags": [
+    "Innovatewithlow",
+    "MSIgnite"
+  ],
+  "EnhancedContent": null,
+  "PubDate": "2025-11-25T15:45:37+00:00",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-11-25 16:08:56"
+}

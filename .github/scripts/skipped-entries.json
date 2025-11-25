@@ -9759,5 +9759,29 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=xvwZYUbVW08",
     "reason": "No categories found: Content excluded due to generic exclusion rules - this video focuses on business strategy, partner incentives, organizational planning, and executive-level perspectives aimed at Microsoft’s Asia partners. The majority of the content is about business transformation, AI market trends, organizational engagement, partner profitability, incentives, and leadership topics—not technical implementation or development guidance. There is mention of AI, Microsoft Copilot adoption, and digital transformation, but these discussions are framed around business opportunities and partner alignment rather than technical or hands-on development with Microsoft technologies. This triggers the 'Business Strategy and Executive Content' and 'Workplace and Business Focus' exclusions (Chapter 3), which take precedence over category inclusion."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=QXE5rEVlu20",
+    "timestamp": "2025-11-25 16:12:07 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: All category arrays are left empty because the content is primarily a biographical interview with Guido van Rossum, focusing on the history, naming, community, and future of Python. According to the Generic Exclusion Rules in Chapter 3, biographical content centered on an individual's journey or perspective—without substantial technical depth or Microsoft-specific implementation—is excluded. While there are mentions of AI and Python's popularity, there is no focus on Microsoft technologies, frameworks, or development implementations, nor is there coverage of Python integration with Microsoft platforms. Therefore, no categories apply."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=gsNaarmAqj4",
+    "timestamp": "2025-11-25 16:13:29 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because this content focuses on business productivity tools and capabilities in Microsoft 365 Copilot, which is explicitly excluded per the generic exclusion rules for non-development Microsoft products (see Non-Development Microsoft Products exclusion and Copilot Product Distinction in Chapter 3 and 4). The content describes how end-users and employees can build and deploy work-related agents using Copilot Studio embedded in the Microsoft 365 ecosystem for document generation, workflow automation, and integration into typical office productivity scenarios—none of which are focused on development, AI coding, or integration into developer workflows. While Copilot Studio itself qualifies as a developer/maker tool, the use case here is strictly for end-user agent creation within Microsoft 365 Copilot, not for code development or developer-oriented extensibility. Therefore, per rules, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=mT3OO7VT2n0",
+    "timestamp": "2025-11-25 16:13:42 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to the generic exclusion rule for Non-Development Microsoft Products. The content is primarily about Microsoft 365 Copilot and its Agent Store, focusing on enterprise adoption, IT governance, and agent management for business productivity, not on developer tooling, code, or technical implementation. No substantial coverage of Copilot Studio as a developer or maker tool that would trigger the 'AI' category. According to the workflow (Non-Development Microsoft Products exclusion and Copilot Product Distinction rules), Microsoft 365 Copilot and Copilot for Microsoft 365 are specifically excluded."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=NA_T847oNC0",
+    "timestamp": "2025-11-25 16:13:55 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: All categories are excluded due to generic exclusion rules regarding Non-Development Microsoft Products. The content focuses on building and publishing agents specifically for the Microsoft 365 Agent Store, with references to Microsoft 365 Copilot, Copilot and agents at work, and Copilot Studio. According to the prompt, content about Microsoft 365 Copilot, Copilot for Microsoft 365, or Office Copilot is considered business productivity and not eligible for categorization, unless the focus is on development tooling or code development (which is not clearly established here). Although Copilot Studio is referenced, the central topic is publishing agents for Microsoft 365 usage, which is excluded as business productivity rather than developer tools. There is no clear evidence of code-level development, .NET, or Microsoft development frameworks being the primary focus. Therefore, per Non-Development Microsoft Products exclusion and the critical Copilot categorization distinction, no categories are assigned."
   }
 ]

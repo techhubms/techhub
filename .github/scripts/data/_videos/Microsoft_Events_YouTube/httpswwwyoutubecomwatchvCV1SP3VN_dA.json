@@ -1,0 +1,17 @@
+{
+  "Description": "Discover how organizations can simplify operations and reduce costs with Red Hat OpenShift Virtualization on ARO—running containers and virtual machines together on a unified platform. Then hear from Bradesco, who will share how they are advancing their AI strategy with Microsoft Foundry on ARO, leveraging Microsoft's enterprise-grade AI capabilities to innovate securely and at scale.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-migrateLinuxPostgreSQL 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Phelipi Dal’Olio Santos \\* Mayuri Gupta \\* Campbell Vertesi 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK104 | English (US) | Migrate and modernize your estate, Azure Kubernetes Service (AKS), Azure Red Hat OpenShift (ARO) Breakout | Intermediate (200) #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Discussion on current business challenges — cost, security, and AI adoption 00:02:55 - Azure’s promise: meeting customers where they are with flexibility and innovation 00:17:03 - Key migration considerations: efficiency, hybrid benefits, and MAC deduction 00:18:50 - Demo setup: Cluster admin view with deployed operators for virtualization and migration 00:20:16 - Managing VM lifecycle through YAMLs and configuration tab 00:21:54 - Setting up migration providers and creating migration plans 00:25:53 - Transition to Banco Bradesco AI transformation case study 00:29:57 - Arrow enabling AI Bridge capabilities – multi-model integration across Azure and external partners 00:32:27 - Lessons learned – build with a strong foundation and governance from day one",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Author": "Microsoft Events",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Title": "From VMs and containers to AI apps with Azure Red Hat OpenShift | BRK104",
+  "Link": "https://www.youtube.com/watch?v=CV1SP3VN_dA",
+  "FeedName": "Microsoft Events YouTube",
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ],
+  "EnhancedContent": null,
+  "PubDate": "2025-11-25T15:54:09+00:00",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-11-25 16:08:56"
+}

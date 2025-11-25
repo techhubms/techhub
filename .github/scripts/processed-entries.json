@@ -19880,5 +19880,89 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=z0R6JFHbyPc",
     "reason": "Succesfully added: Assigned Security category due to focus on confidential computing, cryptographic isolation, and data protection (Security rules 1, 2, and 4). Assigned Azure category since all solutions and demonstrations are based on Microsoft Azure (Azure rules 1 and 5). Assigned AI category as session discusses AI workloads secured by confidential computing (AI rule 4 and 5). No generic exclusion rules were triggered; content is not biographical, sales pitch, or business productivity-focused."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/foundry/azure-content-understanding-is-now-generally-available/",
+    "timestamp": "2025-11-25 16:09:47 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centers on the launch and capabilities of Azure Content Understanding, which heavily features generative AI models, integration with Azure AI Search, RAG (retrieval-augmented generation) workflows, and prebuilt multimodal analyzers (AI inclusion rules 1, 3, 4, 5). Assigned 'Azure' due to the deep integration with Azure services like Foundry, Content Understanding, and Azure AI Search (Azure inclusion rules 1, 4). Did not assign 'ML' because, while data extraction and intelligent processing are discussed, custom model building/training and ML workflows are not the primary focus (AI platform or service usage takes priority). Coding, DevOps, Security categories do not apply as there is no emphasis on application code, software engineering patterns, developer workflows, or security implementation. All rules followed per workflow instructions."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/foundry/introducing-memory-in-foundry-agent-service/",
+    "timestamp": "2025-11-25 16:10:12 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because this content focuses on new AI-powered agent capabilities in Microsoft Foundry (AI rule 1: Microsoft AI products/services; Rule 4: AI development with Microsoft technologies). Assigned Azure because Foundry Agent Service runs on Azure and targets Azure-based development (Azure rules 1 and 4). Did NOT assign Coding because while implementation details and code samples are included, the primary emphasis is on AI workflow and architecture. Did NOT assign ML because custom model development or data science engineering is not the focus—the article is about leveraging managed AI features and agent memory. Did NOT assign DevOps or Security because DevOps practices, CI/CD, or security topics are not discussed."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/foundry/introducing-multi-agent-workflows-in-foundry-agent-service/",
+    "timestamp": "2025-11-25 16:10:35 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because the content highlights Microsoft's new agent-based AI orchestration capabilities (AI inclusion rules 1 and 4). Assigned Azure because the underlying services and documentation references are part of Azure AI Foundry (Azure inclusion rules 1 and 3). Coding was not assigned, as the primary focus is orchestration and workflows, not code or developer frameworks themselves. DevOps was not assigned despite CI/CD mentions because the core is on workflow building, not pipeline engineering. ML was not assigned, as the emphasis is on agent orchestration, not data science, ML modeling, or analytics. Security is not assigned because while governance is discussed, there are no details about Microsoft security tooling or architectures."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/foundry/translation-customization-a-developers-guide-to-adaptive-custom-translation/",
+    "timestamp": "2025-11-25 16:11:06 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Categories assigned: \n- 'AI' because AdaptCT leverages large language models (LLMs) like GPT-4o for translation customization, focusing on AI integration (AI inclusion rule 1 and 4).\n- 'Azure' because the solution is provided as part of Microsoft Azure AI services and uses Azure endpoints and services for implementation (Azure inclusion rule 1 and 4).\n- 'Coding' because the article contains practical developer APIs, code walkthroughs, and integration details for working with Microsoft services (Coding inclusion rules 2, 4, and 5). No ML category assigned as the piece is focused on AI/LLM integration and workflow, not data science or model-building. DevOps category not assigned as the core content is about application integration, not CI/CD or infrastructure. Security category not assigned as the post does not address security or compliance."
+  },
+  {
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-githubs-agentic-security-principles-make-our-ai-agents-as-secure-as-possible/",
+    "timestamp": "2025-11-25 16:11:40 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because the content is focused on AI agent development practices and risk mitigation (AI rule 1, 4, 5). 'GitHub Copilot' category is included because the piece centers around Copilot agentic products, features, and security (GitHub Copilot rules 1–4). 'Security' is assigned due to the deep dive on threat models, mitigation controls, and attribution mechanisms (Security rules 1–9). While development and DevOps are discussed as context, the primary focus is agent security, not coding or pipelines, so only AI, GitHub Copilot, and Security categories are present."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=AiFB7jlmZ3E",
+    "timestamp": "2025-11-25 16:12:31 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI because the session focuses on AI-powered agentic workflows for security remediation (AI rule 5) and integration in Microsoft Defender for Cloud. Assigned DevOps because it centers on DevSecOps practices, developer-security collaboration, and coordinated workflows (DevOps rules 3, 5, 6, 7). Assigned Security because of the focus on vulnerability management, runtime prioritization, and Defender for Cloud/GitHub Advanced Security (Security rules 1, 5, 6, 8). No other categories apply as the primary focus is integrating AI, DevOps processes, and security tooling in Microsoft's cloud environment."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=BLQ8XZ5PXF4",
+    "timestamp": "2025-11-25 16:12:55 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Categories assigned based on focus on Copilot Studio as a developer/maker tool enabling the creation of AI agents in the Microsoft ecosystem. The content centers around integration, agent types, Model Context Protocol (MCP), and workflow automation, directly matching AI rule 1 and rule 3 from the AI category. It does not qualify for 'GitHub Copilot' (no references), 'Coding' (focus on low-code/agent configuration, not programming), 'Azure' (not an Azure-focused session), 'DevOps' (no software lifecycle/CI-CD), 'ML' (no custom ML/data science development), or 'Security' (no security implementation details). Copilot Studio is included as an AI/maker tool, while business productivity Copilots are referenced as part of agent deployment targets but not coded or developed in the session itself."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=CV1SP3VN_dA",
+    "timestamp": "2025-11-25 16:13:16 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Added AI category because the session includes the Bradesco case study on advancing AI strategy leveraging Microsoft Foundry on ARO, showcasing enterprise AI capabilities (AI rule 1, 4, 5). Added Azure category as the session focuses on Azure Red Hat OpenShift and Azure cloud infrastructure (Azure rule 1, 4). Did not include Coding, DevOps, ML, or Security, since there is no substantial focus on those aspects beyond platform usage and AI application integration."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=opq5Y3QyXmY",
+    "timestamp": "2025-11-25 16:14:15 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' because the session centers on AI-powered tools and foundational models (AI rule 1, 4). 'GitHub Copilot' is covered specifically as a development tool (GitHub Copilot rules 1, 2), always paired with 'AI'. 'DevOps' is included due to repeated discussion of engineering pipelines, automation, and DevOps transformation (DevOps rule 1, 3, 5). 'Azure' is included as the platform for developer infrastructure and AI application (Azure rule 1, 3, 4). No generic exclusion rules apply, as content is technically substantive and relevant."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=tGbcQZ4WeZ0",
+    "timestamp": "2025-11-25 16:15:47 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the session focuses on building, deploying, and orchestrating agents using Microsoft AI technologies such as Copilot Studio, Foundry, and the Agent Framework (AI category rule 1, 3, and 5). Although Microsoft 365 Copilot is mentioned, it is only referenced as a deployment target (not the focus or about business productivity use), and substantial content centers on the technical aspects of Copilot Studio and Microsoft Foundry for developers and enterprise solutions. No other categories were assigned: Coding is not prominent because the session emphasizes low-code/no-code integration and AI tools over hands-on code, and there is no direct DevOps, Security, Azure, or ML engineering content. Exclusion rules do not apply, as the content does not meet any generic exclusion criteria."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=VcLOXhpd_-A",
+    "timestamp": "2025-11-25 16:16:08 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' category because the session focuses on building intelligent agents with Copilot Studio, integrating AI capabilities (AI rule 1 and 4). 'Copilot Studio' is a Microsoft low-code AI development tool for agents; the session details building and customizing AI agents using Microsoft connectors, APIs, and integrating with Microsoft Graph and Azure AI technologies. No other categories apply because the focus is not on custom coding, DevOps, Azure infra, or ML/data science development, but rather on low-code AI agent creation and integration. Content is technical (not business productivity) and passes all generic exclusion rules."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=vpJKxsolaGc",
+    "timestamp": "2025-11-25 16:16:27 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Content is included under the AI category because it focuses on Copilot Studio (an AI developer/maker tool) and enterprise multi-agent systems leveraging Microsoft AI platforms, aligning with AI inclusion rules (AI Category rules 1 and 5). Although Microsoft 365 Copilot is mentioned, the session centers primarily on Copilot Studio's technical and extensibility features for building and integrating agents, making this a developer/maker/deep technical session, not a business productivity overview. No Coding, DevOps, Azure, ML, or Security categories apply as the primary focus is on AI-driven multi-agent systems, Copilot Studio extensibility, and MCP integrations rather than detailed application coding, Ops workflows, or security implementation."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-local-22h2-clusters-end-of-service-and-feature-degradation/ba-p/4470129",
+    "timestamp": "2025-11-25 16:16:49 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the Azure category because the post concerns Azure Local (Azure Stack HCI) clusters, lifecycle policies, and upgrade procedures, all part of Azure's hybrid/cloud management. Assigned the Security category due to significant emphasis on loss of security updates, risk of exposed vulnerabilities, compliance aspects, and Microsoft stating support risks. Did not assign DevOps, Coding, AI, ML, or GitHub Copilot categories since the article does not address developer practices, coding, AI/ML, or GitHub tooling. All generic exclusion rules were checked and do not apply."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-ai-foundry-agent-service-connector-v2-preview/ba-p/4471082",
+    "timestamp": "2025-11-25 16:17:10 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'AI' category because the core content concerns integration of advanced AI services (AI Foundry Agent) and automating agentic business processes within Azure Logic Apps (AI rule 1, AI rule 4). Assigned 'Azure' because deployment is realized through Azure Logic Apps and targets enterprise Azure integration scenarios (Azure rule 1). Not assigning Coding, DevOps, ML, Security: the focus is on low-code integration, not code development, deployment pipelines, custom ML building, or security implementation. The explanation field includes why both categories were chosen, referencing relevant rules and source content. The community post exceeds the length threshold for inclusion."
   }
 ]

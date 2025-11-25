@@ -1,0 +1,17 @@
+{
+  "Description": "Dive into the evolving multi-agent capabilities in Copilot Studio. Learn how to extend Copilot Studio agents to build scalable, enterprise ready, multi agent systems - with MCP servers and agents from Microsoft Foundry, Fabric Data Agents, the M365 Agents SDK, and A2A.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-lowcode 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Matthew Bolanos \\* Zankar Desai \\* Kendra Springer \\* Ziv Ventura 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK317 | English (US) | Copilot and agents at work, Microsoft 365 Copilot, Copilot Studio, Copilot Agents Breakout | Advanced (300) #MSIgnite, #Innovatewithlow\n\nChapters: 0:00 - Summary and Available MCP Servers Overview 00:10:09 - Challenges in MCP Configuration for Non-Technical Users 00:13:21 - Agent Automatically Flags and Assigns Problematic Results 00:14:14 - Conclusion and Speaker Transition to Matt 00:18:05 - Explaining Agents Without Tools and Adding Subagents 00:19:20 - Demonstration: Policy Expert Agent Responds to Policy Queries 00:20:15 - Adding an External Agent from Outside Copilot Studio 00:25:50 - Transition to protocols discussion and expert insights 00:33:23 - Session wrap-up and invitation to private preview for MCP integration",
+  "FeedLevelAuthor": "Microsoft Events",
+  "Author": "Microsoft Events",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Title": "Building Multi-Agent systems with MCP and Copilot Studio | BRK317",
+  "Link": "https://www.youtube.com/watch?v=vpJKxsolaGc",
+  "FeedName": "Microsoft Events YouTube",
+  "Tags": [
+    "Innovatewithlow",
+    "MSIgnite"
+  ],
+  "EnhancedContent": null,
+  "PubDate": "2025-11-25T15:49:32+00:00",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-11-25 16:08:56"
+}
