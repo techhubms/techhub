@@ -9711,5 +9711,53 @@
     "collection": "videos",
     "reason": "No categories found: Content excluded due to generic exclusion rule: The 'content' field is null, which means there is no main content text to analyze. Without substantive content, it's impossible to apply inclusion rules, assign categories, extract technical tags, or provide a summary. Additionally, the title and tags suggest a focus on Google's Gemini AI and general design rather than Microsoft technology, but due to lack of content, generic exclusion applies immediately.",
     "timestamp": "2025-11-25 02:34:37 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/analyzing-sales-data-with-simple-natural-language-prompts-in-copilot-excel/",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This post focuses on Copilot in Excel, which is part of Microsoft 365 Copilot—classified as a business productivity tool, not a developer tool (see Copilot Product Distinction in Chapter 2 and Non-Development Microsoft Products rules in Chapter 3). The article describes natural language data analysis for business end-users, not developers or technical implementation. No development, coding, AI platform integration, or Microsoft technical architecture topics are covered. Therefore, no categories are assigned.",
+    "timestamp": "2025-11-25 12:06:43 +00:00",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-generate-formulas-using-copilot-in-excel/",
+    "reason": "No categories found: No categories assigned because the content is about Copilot in Microsoft 365, specifically focusing on productivity features in Excel such as formula generation, workflow automation, and data analysis via natural language. According to the workflow (Chapter 2: CRITICAL: Copilot Product Distinction, Chapter 3: Non-Development Microsoft Products exclusion), Copilot in Microsoft 365, Copilot for Microsoft 365, and productivity/business Copilot applications are excluded and not eligible for any technical category, as they are not developer tools and do not focus on development or coding. The content specifically addresses end-user productivity, not development, architecture, or code-related implementation.",
+    "timestamp": "2025-11-25 12:06:56 +00:00",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-25 13:15:37 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=663IEr6aoUw",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The primary focus is business strategy, partner engagement, executive-level initiatives, and organizational recognition. The description highlights enterprise transformation, alignment with Microsoft fiscal priorities, partner awards, market potential, thought leadership, and European investments, rather than technical implementation details. While there are mentions of AI, security, Azure Marketplace, and compliance, these are presented in a business strategy context without substantive technical depth relevant to Microsoft technology categories. Per generic exclusions for business strategy, executive content, and lack of technical implementation, no categories are assigned."
+  },
+  {
+    "timestamp": "2025-11-25 13:16:50 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=E9XSivS59KI",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: The main content centers on Zero Networks, a third-party security solution, and features a demo from a non-Microsoft speaker at a Microsoft event. There are no substantial details about Microsoft security technologies or platform implementation—the content only references Zero Trust in industry context without any actionable Microsoft-specific guidance. Additionally, only the event framework is Microsoft-related rather than the technical content itself. As per rules, Microsoft technologies must be central or constitute at least 40% of the substantive technical content; here, all technical demonstrations are for Zero Networks."
+  },
+  {
+    "timestamp": "2025-11-25 13:17:03 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=kb7UmUrkg3U",
+    "reason": "No categories found: Content excluded based on generic exclusion rules. The video focuses primarily on partner business strategy, regional market analysis, and executive-level collaboration opportunities rather than technical implementation or development with Microsoft technologies. The description and chapter breakdown reference topics like channel markets, partner achievements, commercial models, and market consolidation, but do not include substantive technical detail, coding practices, developer tools, or architectural guidance relevant to any defined categories. As per exclusion rules in Chapter 3, business strategy, partner growth, and executive guidance content without technical depth must be excluded. No categories assigned."
+  },
+  {
+    "timestamp": "2025-11-25 13:17:54 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=U6DmzW-Xf_4",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The content is primarily focused on business strategy, partner go-to-market investments, sales opportunities, and market trends related to Secure AI Productivity CSP in Microsoft 365. There is no substantive technical implementation, development, or architecture detail. It addresses incentives, sales channels, and best practices for scaling a CSP business with Microsoft 365 Copilot (which is a business productivity tool specifically excluded by category rules). No categories are assigned because the content does not meet inclusion criteria for any of the technical categories and is excluded per the business strategy and non-development Microsoft product exclusion rules."
+  },
+  {
+    "timestamp": "2025-11-25 13:18:30 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=XmwKWzNxz7c",
+    "reason": "No categories found: No categories were assigned because the session primarily focuses on telephony infrastructure, carrier network reliability, and voice channel performance for contact centers (Generic Exclusion: Non-Development Microsoft Product). Although there is mention of AI’s role in customer service and call quality integration, the context is about business productivity and contact center operations rather than developer tools or technical implementation with Microsoft technologies. The event is part of Microsoft Ignite but does not provide depth on Microsoft's development platforms or coding practices. The content is centered on solution reliability, enterprise environments, routing, and operational challenges, which fall under business/productivity and infrastructure rather than eligible development categories."
+  },
+  {
+    "timestamp": "2025-11-25 13:18:43 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=xvwZYUbVW08",
+    "reason": "No categories found: Content excluded due to generic exclusion rules - this video focuses on business strategy, partner incentives, organizational planning, and executive-level perspectives aimed at Microsoft’s Asia partners. The majority of the content is about business transformation, AI market trends, organizational engagement, partner profitability, incentives, and leadership topics—not technical implementation or development guidance. There is mention of AI, Microsoft Copilot adoption, and digital transformation, but these discussions are framed around business opportunities and partner alignment rather than technical or hands-on development with Microsoft technologies. This triggers the 'Business Strategy and Executive Content' and 'Workplace and Business Focus' exclusions (Chapter 3), which take precedence over category inclusion."
   }
 ]

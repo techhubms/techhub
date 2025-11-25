@@ -1,0 +1,17 @@
+{
+  "Title": "Advancing Confidential Computing: Bosch, Microsoft Azure, & Intel TDX | ODSP1515",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Tags": [
+    "MSIgnite",
+    "Secureyourdata"
+  ],
+  "Link": "https://www.youtube.com/watch?v=z0R6JFHbyPc",
+  "PubDate": "2025-11-25T12:05:54+00:00",
+  "FeedName": "Microsoft Events YouTube",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-11-25 13:14:06",
+  "Author": "Microsoft Events",
+  "Description": "Join Intel, Microsoft Azure, and Bosch as they explore how TDX empowers secure AI, digital sovereignty, and multi-party analytics—all built on a foundation of verifiable trust. This is more than a technology launch; it’s the beginning of a new era in trusted digital ecosystems.\n\n𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nODSP1515 | English (US) Pre-recorded | Foundational (100) #MSIgnite, #Secureyourdata\n\nChapters: 0:00 - Vikas Bhatia emphasizes Azure's mission of secure enablement 00:01:10 - Confidential VMs providing cryptographic isolation from cloud infrastructure 00:02:04 - Confidential computing enters mainstream cloud adoption 00:02:31 - Driver 1: AI and data collaboration needing verifiable data protection 00:05:07 - Trusted collaboration spaces powered by Kubernetes for enterprise partnerships 00:05:26 - Intel TDX on Azure ensures confidentiality and integrity of digital assets 00:06:26 - Building complex solutions using existing cloud-native and Kubernetes components 00:06:51 - Trusted collaboration spaces enabling secure digital cooperation across industries 00:07:25 - Intel TDX demonstrated in use on Microsoft Azure"
+}

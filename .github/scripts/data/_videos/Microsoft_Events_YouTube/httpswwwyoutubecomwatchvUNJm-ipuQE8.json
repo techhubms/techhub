@@ -1,0 +1,17 @@
+{
+  "Title": "How Levi’s is transforming their IT estate with Azure | BRK156",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Tags": [
+    "Migrateandmodernizeyourestate",
+    "MSIgnite"
+  ],
+  "Link": "https://www.youtube.com/watch?v=UNJm-ipuQE8",
+  "PubDate": "2025-11-25T12:08:40+00:00",
+  "FeedName": "Microsoft Events YouTube",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-11-25 13:14:06",
+  "Author": "Microsoft Events",
+  "Description": "Join us to hear how Levi’s transformed its global IT estate—including Windows Server, SQL Server, SAP, Oracle, and more—through a comprehensive migration and modernization strategy. Learn how they combined data and app modernization with infrastructure re-platforming to unlock agility, scalability, and cost savings. This real-world story will highlight the strategy, lessons learned, and tangible business outcomes that came from taking an end-to-end approach to migration and modernization.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-migrate 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Maria Bledsoe \\* Shawn Harris \\* Michael Womack 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK156 | English (US) | Migrate and modernize your estate, Azure Kubernetes Service (AKS), Windows Server, Azure SQL Breakout | Intermediate (200) #MSIgnite, #Migrateandmodernizeyourestate\n\nChapters: 0:00 - Transition to live presentation with Michael and Sean 00:04:26 - Levi’s history and background of innovation 00:05:15 - Challenges with legacy data centers and decision to move to public cloud 00:12:31 - Beginning the cloud journey and defining keys to success 00:12:59 - Starting small and building internal cloud skills through migration 00:21:06 - Integrating AI into workflows for technicians and engineers 00:23:00 - Lessons learned: grouping applications carefully during migration 00:24:20 - Q&A: Overview of migration scale, team size, and cloud services 00:31:42 - Development of FinOps program to centralize and manage independent customer cloud usage"
+}

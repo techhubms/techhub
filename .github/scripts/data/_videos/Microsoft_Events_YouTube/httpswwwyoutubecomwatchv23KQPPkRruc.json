@@ -1,0 +1,17 @@
+{
+  "Title": "Nasdaq Boardvantage: AI-driven governance on PostgreSQL and Microsoft Foundry | BRK137",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Events",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "Tags": [
+    "MSIgnite",
+    "Unifyyourdataplatform"
+  ],
+  "Link": "https://www.youtube.com/watch?v=23KQPPkRruc",
+  "PubDate": "2025-11-25T12:19:01+00:00",
+  "FeedName": "Microsoft Events YouTube",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2025-11-25 13:14:06",
+  "Author": "Microsoft Events",
+  "Description": "Trusted by nearly half of Fortune 100 companies, Nasdaq Boardvantage powers secure, intelligent board operations. In this deep dive session, explore how Azure Database for PostgreSQL and MySQL, Microsoft Foundry, Azure Kubernetes Service (AKS), and API Management create a resilient architecture that safeguards confidential data while unlocking new agentic AI capabilities.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-MicrosoftFabricAIDataSolutionsPlan 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Charles Feddersen \\* Mohsin Shafqat 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK137 | English (US) | Innovate with Azure AI apps and agents, Azure PostgreSQL, Microsoft Foundry Breakout | Advanced (300) #MSIgnite, #Unifyyourdataplatform\n\nChapters: 0:00 - Overview of NASDAQ Board Vantage using Azure open-source databases 00:09:15 - NASDAQ’s cloud journey and regulatory compliance using Azure 00:12:08 - Benefits of Azure adoption: scalability, reduced infrastructure management, and use of Azure AI Foundry 00:14:26 - Evaluating AI opportunities leads to Smart Document Summarization and AI Meeting Minutes features 00:22:33 - Storing extracted data in PostgreSQL with PG Vector for efficient hybrid search 00:23:09 - Generating finalized meeting minutes by matching agenda sections with relevant data 00:29:29 - Challenges with existing microservices and introduction of fan-in fan-out orchestration approach 00:31:53 - Detailed chat assistant architecture using Azure functions and vector database 00:33:39 - Using Azure AI Foundry and Prompt Flow to address determinism and hallucination challenges"
+}
