@@ -1,0 +1,17 @@
+{
+  "Author": "Microsoft Events",
+  "Tags": [
+    "InnovatewithAzureAIappsandagents",
+    "MSIgnite"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg",
+  "FeedLevelAuthor": "Microsoft Events",
+  "PubDate": "2025-11-25T15:55:32+00:00",
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Events YouTube",
+  "ProcessedDate": "2025-11-25 17:06:27",
+  "Description": "Run open-source AI models of your choice with flexibility—from local environments to cloud deployments using Azure Container Apps and serverless GPUs for fast, cost-efficient inferencing. You will also learn how AKS powers scalable, high-performance LLM operations with fine-tuned control, giving you confidence to deploy your models your way. You’ll leave with a clear path to run custom and OSS models with agility and cost clarity.\n\nTo learn more, please check out these resources: \\* https://aka.ms/ignite25-plans-AIAppsCosmosDB 𝗦𝗽𝗲𝗮𝗸𝗲𝗿𝘀: \\* Mehrdad Abdolghafari \\* Cary Chai \\* Sachi Desai 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻: This is one of many sessions from the Microsoft Ignite 2025 event. View even more sessions on-demand and learn about Microsoft Ignite at https://ignite.microsoft.com\n\nBRK117 | English (US) | Innovate with Azure AI apps and agents, Azure Container Apps, Azure Kubernetes Service (AKS) Breakout | Intermediate (200) #MSIgnite, #InnovatewithAzureAIappsandagents\n\nChapters: 0:00 - Use cases: hybrid model architecture, LLMS agents, data boundary control 00:09:09 - Introduction to GPU-intensive workloads like physics and video processing 00:11:47 - Docker Compose for AI agents and simplified cloud deployment 00:16:00 - Live testing of the dashboard generator and log streaming visualization 00:20:31 - AKS investment areas: scale, security, cost optimization and AI support 00:25:04 - Enhanced workload scheduling and configuration for AI workloads 00:30:25 - Inference traffic management using Gateway API and Ignite demo preview 00:35:11 - RBC’s CI/CD pipeline accelerating secure GPU resource provisioning 00:38:01 - RBC strategy: building Canada’s largest AI farm within compliance boundaries",
+  "OutputDir": "_videos",
+  "Title": "Fast and flexible inference on open-source AI models at scale | BRK117",
+  "Link": "https://www.youtube.com/watch?v=mFG2hiMsR34"
+}

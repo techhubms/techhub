@@ -9783,5 +9783,17 @@
     "timestamp": "2025-11-25 16:13:55 +00:00",
     "collection": "videos",
     "reason": "No categories found: All categories are excluded due to generic exclusion rules regarding Non-Development Microsoft Products. The content focuses on building and publishing agents specifically for the Microsoft 365 Agent Store, with references to Microsoft 365 Copilot, Copilot and agents at work, and Copilot Studio. According to the prompt, content about Microsoft 365 Copilot, Copilot for Microsoft 365, or Office Copilot is considered business productivity and not eligible for categorization, unless the focus is on development tooling or code development (which is not clearly established here). Although Copilot Studio is referenced, the central topic is publishing agents for Microsoft 365 usage, which is excluded as business productivity rather than developer tools. There is no clear evidence of code-level development, .NET, or Microsoft development frameworks being the primary focus. Therefore, per Non-Development Microsoft Products exclusion and the critical Copilot categorization distinction, no categories are assigned."
+  },
+  {
+    "timestamp": "2025-11-25 17:09:03 +00:00",
+    "reason": "No categories found: No categories assigned due to generic exclusion and category inclusion rules. The content primarily focuses on business strategy, customer experience modernization, and partner journeys—specifically mentioning Dynamics 365 Contact Center strategy, Lenovo's modernization journey, and business growth in agentic service. According to the 'Business Strategy and Executive Content' and 'Non-Development Microsoft Products' generic exclusion rules in Chapter 3, content that targets business outcomes, high-level strategy, customer experience, or general business growth without substantial technical implementation details must be excluded. Additionally, Dynamics 365 is not included unless the content is specifically focused on development/technical implementation, which is not evident here. Although chapters mention AI, voice agents, and partner skilling, these are related to deployment and business enablement, not technical development of AI or code. Therefore, no content categories are assigned.",
+    "canonical_url": "https://www.youtube.com/watch?v=doiLwoNGZ6M",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-25 17:10:17 +00:00",
+    "reason": "No categories found: Content excluded because the 'content' field is null. There is no substantive text to analyze or categorize. Without details about the technical subject matter, it's impossible to determine category inclusion or assess quality, as required by the generic exclusion rules (focus on actual content).",
+    "canonical_url": "https://www.youtube.com/shorts/tXPwN7-9_QI",
+    "collection": "videos"
   }
 ]

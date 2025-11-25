@@ -1,0 +1,19 @@
+{
+  "ProcessedDate": "2025-11-25 17:04:17",
+  "PubDate": "2025-11-25T16:09:17+00:00",
+  "OutputDir": "_news",
+  "EnhancedContent": "GitHub code scanning default setup now runs even if your organization has GitHub Actions policies that restrict which workflows can run. In the past, restrictive actions policies could block code scanning default setup from running and reduce your security coverage. With this update, you can limit which GitHub Actions workflows run (e.g., allowing only enterprise-approved workflows), but the code scanning default setup workflow will still run as long as GitHub Actions is enabled.\n\nThe only actions policy that still affects this workflow is `Disable actions` . If GitHub Actions is disabled at the organization or repository level, code scanning default setup will not run.\n\nThis change is now generally available for all GitHub plans and no action is required. It will be coming to Enterprise Server in 3.19.\n\nFor more details, see [the documentation for code scanning default setup](https://docs.github.com/code-security/code-scanning/default-setup).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Link": "https://github.blog/changelog/2025-11-25-code-scanning-default-setup-bypasses-github-actions-policy-blocks",
+  "Description": "GitHub code scanning default setup now runs even if your organization has GitHub Actions policies that restrict which workflows can run. In the past, restrictive actions policies could block code…\n\nThe post [Code scanning default setup bypasses GitHub Actions policy blocks](https://github.blog/changelog/2025-11-25-code-scanning-default-setup-bypasses-github-actions-policy-blocks) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedName": "The GitHub Blog",
+  "Author": "Allison",
+  "Title": "Code scanning default setup bypasses GitHub Actions policy blocks",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Tags": [
+    "actions",
+    "application security",
+    "Improvement",
+    "platform governance"
+  ]
+}
