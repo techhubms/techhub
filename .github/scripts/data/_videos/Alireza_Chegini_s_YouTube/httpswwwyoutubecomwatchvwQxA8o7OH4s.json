@@ -1,0 +1,18 @@
+{
+  "Author": "Alireza Chegini | AI Skills for Your Career",
+  "Description": "👥 Join our Skool community for learning support and access to my video templates and source code! 👇 https://www.skool.com/cac-ai-studio\n\nIn this step-by-step tutorial, I show you how to build a powerful AI agent that automatically qualifies your campaign leads using n8n, OpenAI, and Google Sheets — all with zero coding required.\n\nYou'll learn how to collect lead submissions, qualify them based on your custom criteria, generate explanations, and even draft personalized follow-up emails — all in one streamlined, intelligent automation.\n\n🧠 What You’ll Learn\n\nHow to collect lead data via Google Forms Use Google Sheets to store and process submissions Build a no-code AI agent in n8n Use system and user prompts to qualify leads Generate automated email drafts for follow-up Update Google Sheets with qualification results, explanations, and messages BONUS: How to make your flow fully automated with triggers\n\n📖 Chapters 00:00 Intro – The problem with manual lead review 01:42 What this AI agent can do 02:50 Setting up the lead form with Google Forms 04:30 Building the flow in n8n (Google Sheets + triggers) 06:25 Writing the system prompt for lead qualification 08:10 Creating the OpenAI qualification logic 10:30 Adding an explanation and follow-up email draft 12:20 Updating the lead sheet with results 14:00 End-to-end test run 15:45 Wrap-up\n\n📑 Useful Links: Sign up for n8n Cloud: https://n8n.partnerlinks.io/5hjhurn7kbpf\n\n🙏 Support My Channel: Buy me a coffee ☕ : https://coff.ee/alirezachegini\n\n#n8n #openai #aiagents\n\nBackground Music: • 🍂 [https://www.youtube.com/watch?v=Q7HjxOAU5Kc]\n\n🔔 Hit the bell icon to stay notified of future AI automation tutorials!",
+  "Link": "https://www.youtube.com/watch?v=wQxA8o7OH4s",
+  "FeedLevelAuthor": "Alireza Chegini | AI Skills for Your Career",
+  "FeedName": "Alireza Chegini's YouTube",
+  "OutputDir": "_videos",
+  "Title": "Easy Way To Use AI For Campaign Leads! (NO CODE, STEP BY STEP)",
+  "EnhancedContent": null,
+  "PubDate": "2025-06-02T18:28:56+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA",
+  "ProcessedDate": "2025-11-25 19:05:34",
+  "Tags": [
+    "aiagents",
+    "n8n",
+    "openai"
+  ]
+}

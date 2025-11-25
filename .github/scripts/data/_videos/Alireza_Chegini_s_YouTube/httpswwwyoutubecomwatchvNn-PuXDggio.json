@@ -1,0 +1,29 @@
+{
+  "Author": "Alireza Chegini | AI Skills for Your Career",
+  "Description": "🔗 Join my Skool community: https://www.skool.com/cac-ai-studio 👉 Download Template: https://cacaistudio.gumroad.com/l/bwuca\n\nIn this video, discover how to manage your Gmail inbox using an AI agent created with N8n. This N8n tutorial will guide you through the process of setting up workflow automation to classify and respond to emails. See how to harness the power of AI automation to streamline your email management, making it easier than ever to stay on top of your inbox.\n\n📑Useful Links:Sign up for n8n Cloud: https://n8n.partnerlinks.io/5hjhurn7kbpf\n\n🙏 Support My Channel: Buy me a coffee ☕ : https://coff.ee/alirezacheginiBackground\n\nUsing n8n and AI tools like OpenAI, we’ll set up an inbox manager that can: • Detect important emails based on predefined context • Classify them by category • Send reply, save draft and label messages automatically https://www.youtube.com/watch?v=21HSDwtkHNk How to classify emails https://www.youtube.com/watch?v=ugUf-4mkbog How to Set Up Google Credentials https://www.youtube.com/watch?v=4sCfXu5l86o How to build an AI Chatbot with Telegram https://www.youtube.com/watch?v=DepEUQr-I\\_Y&t=1s How To Set Up A Paid OpenAI API Account to use ChatGPT API and OpenAI API Products ⸻\n\n⏱ Chapters 00:00 Introduction 04:24 Branch 1: Detect & Handle Invoices 12:04 Branch 2: Handle High-Priority Emails 15:57 Branch 3: Customer Support Auto-Replies 19:21 Wrap-Up and Final Thoughts\n\n⸻ ✅ Tools used: n8n (automation) OpenAI (email analysis) Gmail API ⸻\n\nMusic: • 🍂 [https://www.youtube.com/watch?v=Q7HjxOAU5Kc] 🔔 Hit the bell icon to stay notified of future AI automation tutorials!",
+  "Link": "https://www.youtube.com/watch?v=Nn-PuXDggio",
+  "FeedLevelAuthor": "Alireza Chegini | AI Skills for Your Career",
+  "FeedName": "Alireza Chegini's YouTube",
+  "OutputDir": "_videos",
+  "Title": "How I Made Gmail Manage Itself With AI! (NoCode)",
+  "EnhancedContent": null,
+  "PubDate": "2025-08-06T13:00:47+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA",
+  "ProcessedDate": "2025-11-25 19:05:34",
+  "Tags": [
+    "ai",
+    "gmail how to organise emails",
+    "n8n",
+    "n8n agent",
+    "n8n ai agent",
+    "n8n classify",
+    "n8n email agent",
+    "n8n gmail reply",
+    "n8n gmail send email",
+    "n8n send email",
+    "n8n telegram ai agent",
+    "n8n telegram bot",
+    "n8n tutorial",
+    "n8n tutorial for beginners"
+  ]
+}

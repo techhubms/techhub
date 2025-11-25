@@ -1,0 +1,18 @@
+{
+  "Author": "Alireza Chegini | AI Skills for Your Career",
+  "Description": "👥 Join our Skool community for learning support and access to my video templates and source code! 👇 https://www.skool.com/cac-ai-studio\n\nIn this tutorial, see how to create an agent to process email messages, using AI for email management to automatically classify and label them. This workflow automation ensures emails are sorted into appropriate folders, saving time and preventing missed important messages. Improve your email productivity with this powerful agent.\n\nTired of a cluttered inbox? This automation automatically:\n\nReads incoming Gmail messages Classifies them using AI Assigns them to custom folders like:\n\nWith smart categorization powered by OpenAI’s text classifier and n8n’s automation engine, this agent saves hours and ensures you never miss an important email again.\n\n🌟 What You’ll Learn\n\nHow to connect n8n to Gmail How to use OpenAI to classify emails Creating custom label logic Automatically labeling and organizing your inbox\n\n📖 Chapters 00:00 Intro – The email chaos problem 01:12 Project overview and setup goals 02:45 Connecting Gmail to n8n 04:30 Creating a classification prompt for OpenAI 06:10 Building the classification flow 08:00 Creating the label logic 09:40 Updating Gmail with label results 11:30 Full test run & classification accuracy 13:15 How to customize categories 14:20 Final thoughts & next steps\n\n📑 Useful Links: Sign up for n8n Cloud: https://n8n.partnerlinks.io/5hjhurn7kbpf Buy me a coffee ☕ : https://coff.ee/alirezachegini\n\n#n8n #aiagent #openai\n\n🔧 Tools Used n8n (no-code automation) Gmail integration OpenAI text classification Custom labels with descriptions\n\n👨‍💻 Perfect for: Productivity geeks, small businesses, busy professionals, and anyone overwhelmed by email!\n\n📣 Support the Channel Like 👍, Comment 💬, and Subscribe 🔔 for more AI-powered productivity hacks and workflow tutorials.\n\nBackground Music: • 🍂 [https://www.youtube.com/watch?v=Q7HjxOAU5Kc]",
+  "Link": "https://www.youtube.com/watch?v=21HSDwtkHNk",
+  "FeedLevelAuthor": "Alireza Chegini | AI Skills for Your Career",
+  "FeedName": "Alireza Chegini's YouTube",
+  "OutputDir": "_videos",
+  "Title": "How I Made My Email Sort Itself In Minutes!",
+  "EnhancedContent": null,
+  "PubDate": "2025-06-04T19:00:03+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA",
+  "ProcessedDate": "2025-11-25 19:05:34",
+  "Tags": [
+    "aiagent",
+    "n8n",
+    "openai"
+  ]
+}

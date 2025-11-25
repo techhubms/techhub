@@ -1,0 +1,27 @@
+{
+  "Author": "Alireza Chegini | AI Skills for Your Career",
+  "Description": "🔗 Join my Skool community https://www.skool.com/cac-ai-studio 👉 Download Template: https://cacaistudio.gumroad.com/l/wdeoq\n\nIf you're looking to build an automation or you need an AI automation, book a call down below, and let's see if I can help you out with that: 👇 https://calendly.com/alireza-chegini/discovery-call\n\nIn this video, learn how to use n8n for n8n web scraping of LinkedIn profiles, extracting valuable data such as names and job titles. This n8n tutorial shows you how to create a workflow to gather linkedin data, providing a solid foundation for lead generation. Boost your B2B lead generation with this powerful technique! 📌 Chapters 00:00 Intro – Why scrape LinkedIn with n8n 00:36 What the output looks like (profiles with title, link, summary) 01:05 Using Google Custom Search API to fetch LinkedIn data 01:50 How to enable Custom Search API + credentials 02:30 Creating your Programmable Search Engine 03:00 Start configuring the n8n workflow 04:15 Setting page limits for pagination 05:00 Extracting results into JSON 06:00 Sending data to Google Sheets 07:15 Adding a delay to avoid hitting rate limits 08:00 Final result – leads in a spreadsheet 09:14 Outro – Subscribe for more workflows\n\n📑 Useful Links: Sign up for n8n Cloud: https://n8n.partnerlinks.io/5hjhurn7kbpf Buy me a coffee ☕ : https://coff.ee/alirezachegini\n\nBackground Music: • 🍂 [https://www.youtube.com/watch?v=Q7HjxOAU5Kc] #n8n #aiagents #linkedinscraper #linkedinmarketing #scraping\n\n👍 Like the video if it helped you 💬 Leave your questions in the comments 🔔 Subscribe to follow more AI + automation tutorials",
+  "Link": "https://www.youtube.com/watch?v=0u9JyUeHyoI",
+  "FeedLevelAuthor": "Alireza Chegini | AI Skills for Your Career",
+  "FeedName": "Alireza Chegini's YouTube",
+  "OutputDir": "_videos",
+  "Title": "How I Scraped LinkedIn Profiles With n8n In Minutes!",
+  "EnhancedContent": null,
+  "PubDate": "2025-06-14T10:45:21+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA",
+  "ProcessedDate": "2025-11-25 19:05:34",
+  "Tags": [
+    "business leads",
+    "data scraping from linkedin",
+    "extract linkedin data",
+    "how to scrape linkedin",
+    "linkedin",
+    "linkedin leads",
+    "linkedin profile",
+    "linkedin profile scraper",
+    "linkedin scraper",
+    "scrape data from linkedin",
+    "scrape linkedin data",
+    "scrape linkedin profiles"
+  ]
+}

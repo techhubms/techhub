@@ -9801,5 +9801,95 @@
     "reason": "No categories found: All category arrays are empty because the content is focused on Microsoft 365 Copilot in Excel, which is explicitly excluded per CRITICAL Copilot Product Distinction rules and Non-Development Microsoft Products exclusion (Chapter 3). Although Copilot for Excel is described as an AI-powered assistant, it is a business productivity tool for end users (document creation, data analysis, reporting) and not a developer tool. No development, coding, DevOps, Azure, ML, or security implementation details are present, so no categories qualify. The title, content, tags, and description all focus on end-user productivity features, not development tooling.",
     "collection": "posts",
     "timestamp": "2025-11-25 18:05:56 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2025/11/24/xbox-crocs-jibbitz/",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The article is an announcement about a collaboration between Xbox and Crocs for gaming-themed shoes and related merchandise. It is primarily a consumer product launch and does not contain substantive technical information or implementation details about Microsoft technologies, development, coding, AI, security, or other qualifying categories. There is no technical depth, architecture discussion, or developer content. This is strictly a business partnership and product news story aimed at the general gaming audience, so all category assignments are excluded as per business/productivity and non-development products exclusion rules in Chapter 3.",
+    "timestamp": "2025-11-25 19:06:19 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/healthcare/2025/11/24/driving-a-unified-ai-experience-at-rsna-2025-microsoft-dragon-copilot-expands-to-radiologists-transforming-the-reporting-workflow/",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: The post is about 'Microsoft Dragon Copilot', which is an AI-powered business productivity tool aimed at improving reporting workflows for radiologists. According to the critical Copilot product distinction rules, content about business productivity Copilot tools (such as Microsoft 365 Copilot, Copilot for Microsoft 365, Office Copilot, Dragon Copilot, etc.) must not be assigned any categories, regardless of technical implementation. There is no substantive discussion of coding, development, infrastructure, or implementation for developers, only business workflow enhancement within healthcare. Therefore, no categories were assigned.",
+    "timestamp": "2025-11-25 19:06:55 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/-zMcqDgQ65Y",
+    "reason": "No categories found: Content excluded because the 'content' field is null, meaning there is no substantive material to analyze or categorize. Without a main text, description, or any technical details, none of the category inclusion rules can be applied. According to the core processing rules, only actual content should be considered, and in this case, there is no content to process. Therefore, no categories can be assigned.",
+    "timestamp": "2025-11-25 19:07:59 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/DdtiTLBaFv0",
+    "reason": "No categories found: Content excluded due to generic exclusion rule. The submission has a null 'content' field and only contains a brief description about agentic AI workflows, ChromaDB, and Langflow in the context of data handling and workflow automation. There is no substantive technical content about Microsoft technologies, nor is there any reference to Microsoft services, products, or platforms. The central technologies (ChromaDB, Langflow, agentic RAG, and n8n) are not Microsoft offerings and do not meet the multi-platform threshold for inclusion. Therefore, no categories apply.",
+    "timestamp": "2025-11-25 19:08:11 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=0u9JyUeHyoI",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The primary focus is on scraping LinkedIn profiles and using n8n and Google Custom Search API, which are not Microsoft technologies. No substantial content on Microsoft AI, Azure, DevOps, Coding, ML, GitHub Copilot, or Security. The tags and description further reinforce the lack of direct Microsoft relevance. The video is centered on lead generation and business data extraction from LinkedIn using n8n, and does not cover Microsoft technical implementations or products. Per chapter 2, when in doubt, exclude.",
+    "timestamp": "2025-11-25 19:08:23 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=4sCfXu5l86o",
+    "reason": "No categories found: Content does not qualify for any categories due to generic exclusion rules. The primary technologies discussed are n8n (an open-source workflow automation tool), Telegram (messaging platform), and OpenAI. There is no substantial coverage of Microsoft technologies; neither Azure OpenAI Service nor any Microsoft-specific AI, coding, DevOps, ML, Security, or Azure products/services are featured or central to the automation solution in the title, description, or provided content. The AI functionality is powered via OpenAI, but not with Microsoft AI products. Accordingly, per the 'Microsoft Technologies Must Be Central' rule (Multi-Platform Content Threshold; Chapter 2), and since content does not meet any inclusion criteria for Microsoft-driven categories, no categories are assigned.",
+    "timestamp": "2025-11-25 19:08:52 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=5TDki5D6jS0",
+    "reason": "No categories found: No categories assigned because the content is primarily about building AI agents using n8n and Ollama (open source tools) and general workflow automation. There is no substantive use of Microsoft technologies or platforms (such as Azure, GitHub, Microsoft AI services, Power Platform, or Microsoft development frameworks), and the video focuses on n8n's automation and integration capabilities with open source LLMs and tools. The tags and description reinforce this, referencing n8n, Docker, Ollama, and various AI agent concepts, without any reference to Microsoft-specific products, platforms, or developer tools. According to the multi-platform threshold guideline, Microsoft technologies must be ≥40% or central; here, they are absent, so chapter 3 generic exclusion rules apply for non-Microsoft focused content.",
+    "timestamp": "2025-11-25 19:09:05 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=C15kYd5AwfE",
+    "reason": "No categories found: No categories assigned due to generic exclusion rules. The content is primarily a video tutorial about setting up AI automation using n8n (an open-source workflow tool), MCP (Model Context Protocol), and Docker Desktop. There is no substantive use of Microsoft technologies presented in the description or available metadata (no Azure, no Microsoft AI services, no Power Platform, no GitHub, no .NET, etc.). The tags, title, and description all refer to open-source automation, NoCode solutions, and third-party tools. While 'MCP' and 'AI automation' are mentioned, they do not refer to Microsoft AI platforms or frameworks. Thus, Microsoft technology does not meet the >=40% threshold nor is central to the solution per the Multi-Platform Content Threshold. Additionally, the content promotes calls and community not related to Microsoft development. Therefore, all categories are excluded.",
+    "timestamp": "2025-11-25 19:09:17 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=cWd6QCuuWDo",
+    "reason": "No categories found: Content excluded due to multiple generic exclusion rules: (1) The content primarily features the automation of job proposal writing for Upwork, targeting freelancers and job hunters for job applications, which falls under the 'Job-Related Content' exclusion (career advice, job opportunities, and workplace-related automation are excluded). (2) The main value proposition is automating business/career workflows (writing proposals and Google Docs for Upwork applications), not a technical implementation or developer-focused solution. (3) Although OpenAI and automation platforms are mentioned, their usage is non-developmental and directed toward business productivity rather than Microsoft platform development. Therefore, no categories are assigned.",
+    "timestamp": "2025-11-25 19:09:29 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=Nn-PuXDggio",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - although the title and description mention AI automation and OpenAI, the focus of the content is on using n8n (a third-party workflow automation tool) for Gmail inbox management and automation, which is not a Microsoft technology. The main workflow uses Gmail, OpenAI, and n8n, and does not integrate any Microsoft products or platforms. Therefore, none of the predefined Microsoft categories can be applied. According to Chapter 2, Microsoft technologies must be central to the solution (≥40% substantive content or core architecture), which does not apply here. As a result, the categories array is left empty.",
+    "timestamp": "2025-11-25 19:10:02 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=rpFh7WD3SUU",
+    "reason": "No categories found: No categories were assigned because the content does not meet inclusion criteria for any Microsoft technology categories. The video is focused on BrowserAct, a general-purpose, no-code web scraping tool powered by AI, and targets general users such as marketers and operations managers. There is no mention of Microsoft technologies, development with Microsoft frameworks, Azure, GitHub Copilot, or any specific Microsoft AI/ML platforms. The content is tool-centric and oriented toward business productivity and automation, not technical development or engineering with Microsoft products. Generic exclusion rules also apply due to the promotional nature and lack of substantive technical depth related to Microsoft's ecosystem.",
+    "timestamp": "2025-11-25 19:10:14 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=ugUf-4mkbog",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: The tutorial does not reference any Microsoft technologies, products, platforms, or tools. The entire content is focused on Google services (Sheets, Drive, Gmail, Docs) and n8n workflow automation, with no substantive input or relevance to Microsoft development or cloud ecosystems. There are no indications that Microsoft technologies comprise any part of the solution, which is required per the Multi-Platform Content Threshold. All categories are excluded accordingly.",
+    "timestamp": "2025-11-25 19:10:26 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=WMk8MBBFMG4",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The provided content is a video overview explaining 'retrieval augmented generation' (RAG) at a high level for beginners and general viewers, focusing on what RAG is and its advantages over standard LLMs. There is no substantial technical depth regarding Microsoft technologies, no mention of implementing RAG using Microsoft platforms or tools, and no Microsoft-specific terminology in the excerpt, description, or tags. While links reference a Udemy course on 'RAG Agentic AI on Azure', the video itself is not focused on Microsoft solutions as required by the workflow's multi-platform threshold. It primarily serves as an introductory explainer rather than a technical implementation resource connected to Microsoft's ecosystem, so no categories are assigned.",
+    "timestamp": "2025-11-25 19:10:58 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=wQxA8o7OH4s",
+    "reason": "No categories found: Content does not qualify for any categories. The main tutorial uses OpenAI in automation workflows for lead qualification, but the core solution centers around n8n (a third-party automation platform) and Google tools with zero coding required. The integration is a no-code business automation pattern, not Microsoft technology or developer tooling. OpenAI here is used in a consumer/business automation context, and no Microsoft AI platform (Azure OpenAI, Azure AI Studio, Copilot Studio, Azure services, etc.) is featured or central. Per generic exclusion rules, this is non-development business automation content and does not focus on coding or implementing Microsoft developer technologies.",
+    "timestamp": "2025-11-25 19:11:10 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=DqoxPIDNWfA",
+    "reason": "No categories found: Content excluded due to missing substantive main content. The 'content' field is null, meaning there is no main text to evaluate for technical depth, coverage of Microsoft technologies, or adherence to quality standards. According to the workflow, if the content field does not provide the actual substance of the resource, categorization and further processing cannot be performed. Generic exclusion rules dictate that lack of substantial content results in exclusion.",
+    "timestamp": "2025-11-25 19:11:23 +00:00"
   }
 ]

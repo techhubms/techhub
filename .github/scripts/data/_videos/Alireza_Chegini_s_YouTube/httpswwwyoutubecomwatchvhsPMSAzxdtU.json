@@ -1,0 +1,29 @@
+{
+  "Author": "Alireza Chegini | AI Skills for Your Career",
+  "Description": "🔗 Join my Skool community: https://www.skool.com/cac-ai-studio\n\nIf you're looking to build an automation or you need an AI automation, book a call down below, and let's see if I can help you out with that: 👇 https://calendly.com/alireza-chegini/discovery-call\n\nIn this video, you'll learn how to use generative AI models for free, sidestepping the need for paid APIs. This tutorial demonstrates using AI tools by downloading and setting up a local AI toolkit on your computer. This method is great for anyone experimenting with AI art and other AI tools.\n\nI show you how to run powerful generative AI agents locally on your machine—completely free. No subscriptions. No token costs.\n\nUsing LM Studio to run models like LLaMA and n8n to build chat workflows, you'll learn how to: ✅ Install and use LM Studio on Windows/Mac/Linux ✅ Download and run local models (LLaMA, Mistral, and more) ✅ Connect LM Studio to n8n via local API ✅ Build a chat agent in n8n ✅ Add memory to your agent so it remembers conversations ✅ Avoid paid tools while experimenting and learning AI\n\nThis is the perfect setup for anyone looking to learn AI agents, build proof-of-concepts, or just explore generative AI without burning cash.\n\n🔗 Chapters 00:00 Intro – Why go local? 01:08 Install LM Studio on your machine 04:00 Overview of LM Studio interface 06:30 Download and run a local model (LLaMA example) 09:00 Testing the model directly inside LM Studio 12:30 Install and run n8n using Docker 14:00 Create your first workflow with an AI agent 16:30 Connect n8n to LM Studio with a local API 19:00 Test the local agent 20:30 Add memory to your AI agent 23:00 Final thoughts and next steps Donwload Tools: LM Studio: https://lmstudio.ai n8n: https://n8n.io\n\n🙏 Support My Channel: Buy me a coffee ☕ : https://coff.ee/alirezachegini\n\nBackground Music: • 🍂 [https://www.youtube.com/watch?v=Q7HjxOAU5Kc]\n\n#LocalLLM #n8n #LMStudio #DeepSeek #OpenSourceAI #AIautomation #RunLLMLocally #NoCodeAI #Llama #AIagents #SelfHostedAI #OpenAIalternative #DockerNetworking #n8ntutorial #aiautomation 🔔 Hit the bell icon to stay notified of future AI automation tutorials!",
+  "Link": "https://www.youtube.com/watch?v=hsPMSAzxdtU",
+  "FeedLevelAuthor": "Alireza Chegini | AI Skills for Your Career",
+  "FeedName": "Alireza Chegini's YouTube",
+  "OutputDir": "_videos",
+  "Title": "Stop Paying For AI Tools And Start Using This Now!",
+  "EnhancedContent": null,
+  "PubDate": "2025-07-02T16:01:27+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA",
+  "ProcessedDate": "2025-11-25 19:05:34",
+  "Tags": [
+    "AIagents",
+    "AIautomation",
+    "DeepSeek",
+    "DockerNetworking",
+    "Llama",
+    "LMStudio",
+    "LocalLLM",
+    "n8n",
+    "n8ntutorial",
+    "NoCodeAI",
+    "OpenAIalternative",
+    "OpenSourceAI",
+    "RunLLMLocally",
+    "SelfHostedAI"
+  ]
+}

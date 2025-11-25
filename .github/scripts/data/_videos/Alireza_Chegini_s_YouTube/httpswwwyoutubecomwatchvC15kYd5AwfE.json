@@ -1,0 +1,24 @@
+{
+  "Author": "Alireza Chegini | AI Skills for Your Career",
+  "Description": "🔗 Join my Skool community: https://www.skool.com/cac-ai-studio\n\nIf you're looking to build an automation or you need an AI automation, book a call down below, and let's see if I can help you out with that: 👇 https://calendly.com/alireza-chegini/discovery-call\n\nIn this video, learn how to set up the MCP Model Context Protocol using a free local version of n8n. This n8n workflow tutorial will show you how to create an MCP client. The video also demonstrates using Docker Desktop to run n8n locally, making it easy to test and build new AI agents.\n\n🧠 What You’ll Learn • What is MCP (Model Context Protocol) and why it matters • How to run n8n locally with Docker • How to install & use MCP community nodes • Setting up an AI Agent that connects to external tools • Integrating Brave Search API via MCP • Adding memory to your agent • Creating MCP workflows that run without writing code\n\n📖 Chapters 00:00 Intro – What we’re building (n8n + MCP + Docker) 01:25 What is MCP and why it matters for agents 04:18 Installing and running n8n with Docker 07:45 Overview of the MCP community node in n8n 10:10 Setting up your n8n workflow from scratch 13:35 Connecting OpenAI model 16:00 Adding MCP to the agent 18:22 Using Brave Search API with MCP 21:40 How the system prompt and context flows work 25:05 Adding memory and improving agent quality 28:12 Testing the full pipeline (n8n + MCP + Search + Memory) 31:30 Wrap-up and next steps for smarter workflows 🙏 Support My Channel:Buy me a coffee ☕ : https://coff.ee/alirezachegini\n\nBackground Music: • 🍂 [https://www.youtube.com/watch?v=Q7HjxOAU5Kc]\n\n#n8n #n8ntutorial #Docker #MCP #AutomationTutorial #NoCode #OpenSourceTools #WorkflowAutomation #devtools\n\n🔔 Hit the bell icon to stay notified of future AI automation tutorials!",
+  "Link": "https://www.youtube.com/watch?v=C15kYd5AwfE",
+  "FeedLevelAuthor": "Alireza Chegini | AI Skills for Your Career",
+  "FeedName": "Alireza Chegini's YouTube",
+  "OutputDir": "_videos",
+  "Title": "Zero-Cost n8n + MCP with Docker 🔥| Smarter Agents in Minutes!",
+  "EnhancedContent": null,
+  "PubDate": "2025-07-19T18:18:40+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA",
+  "ProcessedDate": "2025-11-25 19:05:34",
+  "Tags": [
+    "AutomationTutorial",
+    "devtools",
+    "Docker",
+    "MCP",
+    "n8n",
+    "n8ntutorial",
+    "NoCode",
+    "OpenSourceTools",
+    "WorkflowAutomation"
+  ]
+}

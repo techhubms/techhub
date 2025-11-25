@@ -1,0 +1,27 @@
+{
+  "Author": "Alireza Chegini | AI Skills for Your Career",
+  "Description": "🔗 Join AI Studio to easily & quickly build AI agents & automations:: https://www.skool.com/cac-ai-studio\n\n🔗If you want an automation/agent built in your business - book a call: https://calendly.com/alireza-chegini/discovery-call 🚀 Want to build your first AI agent without writing a single line of code? In this step-by-step beginner tutorial, I show you exactly how to create, test, and manage your very first AI agent using Azure AI Foundry — in less than 20 minutes!\n\n✅ What you’ll learn in this video: • How to set up an Azure AI Foundry account • How to create a new agent from scratch • How to give your agent instructions and personality • How to add private knowledge (PDF upload & RAG-style Q&A) • How to monitor your agent’s performance • How to clean up your resources and avoid surprise Azure bills\n\n00:00 - What You’ll Learn 00:21 - Azure AI Foundry Introduction 00:58 - Setting Up Azure AI Foundry 01:44 - Creating a New AI Agent Project 04:35 - Deploying Your First Agent 05:04 - Customizing Agent Behavior & Settings 07:27 - Testing Your Agent Live 09:54 - Writing Agent Instructions 11:40 - Adding Knowledge (PDF Upload for RAG) 13:08 - Talking to Your Document (PDF Q&A) 14:37 - Monitoring & Observability Dashboard 17:11 - Cleaning Up Your Azure Resources 20:03 - Final Recap & Next Steps 🙏 Buy me a coffee ☕ : https://coff.ee/alirezachegini\n\n🔗 Azure AI Foundry: https://ai.azure.com/ Background Music: • 🍂 [https://www.youtube.com/watch?v=Q7HjxOAU5Kc]\n\n🔔 Hit the bell icon to stay notified of future AI automation tutorials! #ai #automation #n8n",
+  "Link": "https://www.youtube.com/watch?v=WFgGGl5C4PI",
+  "FeedLevelAuthor": "Alireza Chegini | AI Skills for Your Career",
+  "FeedName": "Alireza Chegini's YouTube",
+  "OutputDir": "_videos",
+  "Title": "Build Your FIRST AI Agent in Minutes with Azure AI Foundry",
+  "EnhancedContent": null,
+  "PubDate": "2025-11-10T15:21:11+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA",
+  "ProcessedDate": "2025-11-25 19:05:34",
+  "Tags": [
+    "ai agent",
+    "ai agent tutorial",
+    "ai agents",
+    "ai agents explained",
+    "ai foundry azure",
+    "ai foundry tutorial",
+    "ai research",
+    "azure ai foundry",
+    "azure rag chatbot",
+    "build rag chatbot",
+    "chat with your data",
+    "how to build ai agent"
+  ]
+}

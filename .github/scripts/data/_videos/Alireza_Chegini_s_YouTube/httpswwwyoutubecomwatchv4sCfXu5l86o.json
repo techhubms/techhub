@@ -1,0 +1,18 @@
+{
+  "Author": "Alireza Chegini | AI Skills for Your Career",
+  "Description": "🔗 Join my Skool community: https://www.skool.com/cac-ai-studio\n\nIf you're looking to build an automation or you need an AI automation, book a call down below, and let's see if I can help you out with that: 👇 https://calendly.com/alireza-chegini/discovery-call\n\nIn this video, discover how to integrate n8n with Telegram to create a functional chatbot. This n8n tutorial shows you how to connect Telegram with your n8n workflow automation, allowing you to send and receive messages seamlessly. Learn how to leverage the Telegram API to build an interactive n8n telegram bot.\n\n📑 Useful Links: Sign up for n8n Cloud: https://n8n.partnerlinks.io/5hjhurn7kbpf\n\n🙏 Support My Channel: Buy me a coffee ☕ : https://coff.ee/alirezachegini\n\nYou’ll learn how to: ✅ Set up your Telegram Bot step-by-step ✅ Connect it to n8n for real-time conversations ✅ Add an AI layer using OpenAI ✅ Add memory to your chatbot\n\n🧠 Chapters: 00:00 Intro 00:52 What We’re Building 02:10 Create a Telegram Bot 04:15 Get the Telegram Token 05:32 Setup n8n Telegram Trigger 08:00 Build the Chat Flow 10:45 Connect to OpenAI 13:20 Add Memory 15:10 Test the Chatbot 17:00 Configure AI Agent output to Telegram 20:00 Wrap-Up\n\n#n8n #telegram #aiagents Background Music: • 🍂 [https://www.youtube.com/watch?v=Q7HjxOAU5Kc]\n\n🔔 Hit the bell icon to stay notified of future AI automation tutorials!",
+  "Link": "https://www.youtube.com/watch?v=4sCfXu5l86o",
+  "FeedLevelAuthor": "Alireza Chegini | AI Skills for Your Career",
+  "FeedName": "Alireza Chegini's YouTube",
+  "OutputDir": "_videos",
+  "Title": "Build an AI Chatbot With Telegram and n8n in Minutes!",
+  "EnhancedContent": null,
+  "PubDate": "2025-07-28T20:02:26+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA",
+  "ProcessedDate": "2025-11-25 19:05:34",
+  "Tags": [
+    "aiagents",
+    "n8n",
+    "telegram"
+  ]
+}

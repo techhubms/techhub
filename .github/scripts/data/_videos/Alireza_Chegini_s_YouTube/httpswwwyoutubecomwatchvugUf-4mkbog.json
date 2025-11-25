@@ -1,0 +1,19 @@
+{
+  "Author": "Alireza Chegini | AI Skills for Your Career",
+  "Description": "🔗 Join my Skool community: https://www.skool.com/cac-ai-studio\n\nIn this video, discover how to set up Google credentials for services like Google Sheets and Gmail within n8n. This tutorial will guide you through the process of Google OAuth setup and api authentication, ensuring your n8n workflow is secure. Learn how to navigate the Google Cloud Console to properly configure your Google credentials, and learn about authentication.\n\n📑 Useful Links: Sign up for n8n Cloud: https://n8n.partnerlinks.io/5hjhurn7kbpf\n\n🙏 Support My Channel: Buy me a coffee ☕ : https://coff.ee/alirezachegini\n\nIn this step-by-step tutorial, you’ll learn how to correctly set up Google Credentials for your n8n workflows — whether you’re working with: • 📄 Google Sheets • 📁 Google Drive • 📧 Gmail • 📝 Google Docs\n\nWe’ll walk through: ✅ Importance of Credentials ✅ Configuring Google Cloud Console ✅ Enabling the right APIs ✅ Avoiding common permission errors ✅ Testing the connection inside n8n\n\nBackground Music: • 🍂 [https://www.youtube.com/watch?v=Q7HjxOAU5Kc]\n\n#n8ntutorial #n8nautomation #beginnerfriendly #aiautomation\n\n🔔 Hit the bell icon to stay notified of future AI automation tutorials!",
+  "Link": "https://www.youtube.com/watch?v=ugUf-4mkbog",
+  "FeedLevelAuthor": "Alireza Chegini | AI Skills for Your Career",
+  "FeedName": "Alireza Chegini's YouTube",
+  "OutputDir": "_videos",
+  "Title": "How To Easily Set Up Google Credentials in n8n!",
+  "EnhancedContent": null,
+  "PubDate": "2025-07-25T13:54:50+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA",
+  "ProcessedDate": "2025-11-25 19:05:34",
+  "Tags": [
+    "aiautomation",
+    "beginnerfriendly",
+    "n8nautomation",
+    "n8ntutorial"
+  ]
+}
