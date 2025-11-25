@@ -9795,5 +9795,11 @@
     "reason": "No categories found: Content excluded because the 'content' field is null. There is no substantive text to analyze or categorize. Without details about the technical subject matter, it's impossible to determine category inclusion or assess quality, as required by the generic exclusion rules (focus on actual content).",
     "canonical_url": "https://www.youtube.com/shorts/tXPwN7-9_QI",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://dellenny.com/step-by-step-your-first-data-analysis-with-copilot-in-excel/",
+    "reason": "No categories found: All category arrays are empty because the content is focused on Microsoft 365 Copilot in Excel, which is explicitly excluded per CRITICAL Copilot Product Distinction rules and Non-Development Microsoft Products exclusion (Chapter 3). Although Copilot for Excel is described as an AI-powered assistant, it is a business productivity tool for end users (document creation, data analysis, reporting) and not a developer tool. No development, coding, DevOps, Azure, ML, or security implementation details are present, so no categories qualify. The title, content, tags, and description all focus on end-user productivity features, not development tooling.",
+    "collection": "posts",
+    "timestamp": "2025-11-25 18:05:56 +00:00"
   }
 ]

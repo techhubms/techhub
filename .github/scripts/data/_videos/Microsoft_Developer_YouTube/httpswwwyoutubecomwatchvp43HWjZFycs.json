@@ -1,0 +1,22 @@
+{
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Developer YouTube",
+  "PubDate": "2025-11-25T17:24:34+00:00",
+  "Description": "AI code editors are becoming popular because they let developers write code much faster than before. But they don’t always get it right on the first try, especially with distributed, microservices-based applications running in the cloud. That means the usefulness of AI-generated code often depends on the quality of feedback you give it. The closer your testing environment is to the real thing, the better the feedback, and the more confident you can be that the code actually works.\n\nIn this episode, we’ll look at how mirrord, an open-source tool that lets developers run local code inside a Kubernetes cluster without deploying, makes it possible to test AI-generated code in a realistic environment, without the slow feedback cycles of CI pipelines or staging deployments.\n\n✅ Chapters: 00:00 Introduction 03:04 Current AI development Workflow 05:43 What's the proposed development workflow 08:16 Testing AI generated code in a realistic environment 09:20 How does mirrord work? 13:07 What does mirrord enable? 14:37 mirrord demo 26:46 What's next and How to get started\n\n✅ Resources: mirrord https://metalbear.com/mirrord/ Source code https://github.com/metalbear-co/mirrord Azure mirrord Blog: https://blog.aks.azure.com/2024/12/04/mirrord-on-aks Debugging Apps on AKS with mirrord https://youtu.be/0tf65d5rn1Y 📌 Let's connect: Jorge Arteiro | https://www.linkedin.com/in/jorgearteiro Arsh Sharma | https://www.linkedin.com/in/arsh4/ Subscribe to the Open at Microsoft: https://aka.ms/OpenAtMicrosoft\n\nOpen at Microsoft Playlist: https://aka.ms/OpenAtMicrosoftPlaylist\n\n📝Submit Your OSS Project for Open at Microsoft https://aka.ms/OpenAtMsCFP\n\nNew episode on Tuesdays!",
+  "OutputDir": "_videos",
+  "Author": "Microsoft Developer",
+  "Title": "AI-Assisted Development with mirrord",
+  "ProcessedDate": "2025-11-25 18:05:11",
+  "Link": "https://www.youtube.com/watch?v=p43HWjZFycs",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+}

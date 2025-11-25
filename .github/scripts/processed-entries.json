@@ -20018,5 +20018,23 @@
     "reason": "Succesfully added: Category assignment follows inclusion rules: Azure category is included due to frequent references to Azure services (Azure Container Registry, AKS, Azure customers, service mesh infrastructure). Security is included because of supply chain security, artifact signing, policy enforcement, and integration with Azure’s security tooling (Notary Project, OPA Gatekeeper). DevOps is included due to CI/CD integration, patching workflows, project management, infrastructure automation, and policy management. AI and ML are included due to technical discussions of containerd AI model workflows, GPU support for AI workloads, and OCI artifacts management (which includes AI/ML models). The content is technically in-depth and focused on development and operational aspects of Microsoft cloud-native technologies in open source collaboration. All generic exclusion rules were checked: content is technical, well above minimum length, not biographical, and not focused on sales, non-English, business strategy, or general workplace topics.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/project-pavilion-presence-at-kubecon-na-2025/ba-p/4472904",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://devclass.com/2025/11/25/microsoft-visual-studio-shifts-to-annual-releases-raising-cost-concerns/",
+    "reason": "Succesfully added: Assigned 'Coding' because the content centers on Visual Studio, MSVC, and their release/lifecycle as core Microsoft developer tools (Coding rule 5). 'DevOps' applies due to discussions of release management, support lifecycles, build tool decoupling, and update cadence (DevOps rules 5 and 6). Did not assign 'AI' because Copilot is mentioned only as a driver for update frequency, not as a focus, nor does the article detail Copilot features or use cases. Did not assign 'Azure', 'ML', or 'Security' as none are substantively discussed. Ruled out generic exclusions after reviewing for length, focus, negative language, or irrelevance; content is technical, detailed, and fits inclusion rules.",
+    "collection": "posts",
+    "timestamp": "2025-11-25 18:06:17 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=p43HWjZFycs",
+    "reason": "Succesfully added: Content qualifies for AI category because it focuses on improving AI-assisted code development workflows and testing (AI rules 1, 4). Azure category is assigned due to integration and demos with Azure Kubernetes Service (Azure rule 1). Coding is included since the video addresses developer workflows and debugging (Coding rule 4). DevOps category applies because the workflow involves CI pipelines, deployment, and testing in Kubernetes environments (DevOps rules 5, 6). Generic exclusions do not apply as the content is not biographical, sales-focused, negative, or non-English; and sufficiently technical and substantive.",
+    "collection": "videos",
+    "timestamp": "2025-11-25 18:06:46 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=uRL3_PMFM7Q",
+    "reason": "Succesfully added: Assigned Azure category because the session addresses Microsoft Fabric SQL Database and Azure integrations (Azure rule 1 and 4). Added ML category because Fabric/Power BI are part of the Microsoft Data/ML Platform and the content focuses on data engineering and analytics (ML rules 1, 2, and 9). Included Coding because the episode covers GraphQL schema definitions, API integration, and authentication (Coding rules 1, 4, and 5). No generic exclusion rules applied: the biographical section is peripheral and does not dominate the technical content.",
+    "collection": "videos",
+    "timestamp": "2025-11-25 18:07:05 +00:00"
   }
 ]

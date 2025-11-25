@@ -1,0 +1,22 @@
+{
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "EnhancedContent": null,
+  "FeedName": "Microsoft Developer YouTube",
+  "PubDate": "2025-11-25T17:20:49+00:00",
+  "Description": "Learn how to expose your Fabric SQL Database through a GraphQL API. This session covers setup, schema generation, and query execution, showing how GraphQL can simplify data access. We’ll walk through authentication, and integration options for building a modern, data-driven app on Fabric. ✅ Chapters: 0:00 Introduction 1:20 Scenario 2:45 Using GraphQL with Fabric SQL Database 5:50 Demo 14:00 Getting started\n\n✅ Resources: Links: https://learn.microsoft.com/en-us/fabric/data-engineering/api-graphql-overview https://learn.microsoft.com/en-us/fabric/data-engineering/api-graphql-limits https://learn.microsoft.com/en-us/fabric/data-engineering/graphql-source-control-and-deployment Learning Path: https://learn.microsoft.com/en-us/training/modules/get-started-with-graphql-microsoft-fabric/\n\n✅ About Nicky van Vroenhoven: Nicky van Vroenhoven is a BI professional focused at the Microsoft stack and a Data Platform MVP. He mainly works with Power BI, Power Platform and T-SQL. Nicky started working with SQL Server and SSIS in 2005 in the DWH space, and later moved from Power Pivot to Power BI. After working 10 years in BI-consultancy jobs in several industries and companies, he worked for 5 years as a Power BI Administrator at a wealth management bank, and he is currently working as Unit Lead Fabric/Power BI at Powerdobs in The Netherlands. Nicky has spoken at several User Groups and conferences including SQL Saturday Events, the Power BI World Tour, SQLBits and the Fabric Community Conferences. In addition he enjoys tweeting and blogging about topics like Power BI and Power Platform at https://nickyvv.com. In his spare time Nicky likes to go running, play chess or try to improve his Rubik's cube record. He is also a husband, father of 3 and a (former) ballroom dancer.\n\n✅ About MVPs: Microsoft Most Valuable Professionals, or MVPs, are technology experts who passionately share their knowledge with the community. They are always on the \"bleeding edge\" and have an unstoppable urge to get their hands on new, exciting technologies. They have very deep knowledge of Microsoft products and services, while also being able to bring together diverse platforms, products and solutions, to solve real world problems. MVPs make up a global community of over 4,000 technical experts and community leaders across 90 countries/regions and are driven by their passion, community spirit, and quest for knowledge. Above all and in addition to their amazing technical abilities, MVPs are always willing to help others - that's what sets them apart. Learn more: https://aka.ms/mvpprogram\n\n📌 Let's connect: Twitter: Anna Hoffman, https://twitter.com/AnalyticAnna Twitter: AzureSQL, https://aka.ms/azuresqltw\n\n🔴 To watch other MVP Edition episodes, see our playlist: https://aka.ms/dataexposedmvps To check out even more Data Exposed episodes, see our playlist: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt\n\n#AzureSQL #SQLServer",
+  "OutputDir": "_videos",
+  "Author": "Microsoft Developer",
+  "Title": "How to use GraphQL with Fabric SQL Database | Data Exposed: MVP Edition",
+  "ProcessedDate": "2025-11-25 18:05:11",
+  "Link": "https://www.youtube.com/watch?v=uRL3_PMFM7Q",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+}
