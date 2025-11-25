@@ -288,5 +288,10 @@
     "name": "Microsoft VisualStudio Blog",
     "outputDir": "_news",
     "url": "https://devblogs.microsoft.com/visualstudio/feed/"
+  },
+  {
+    "name": "Alireza Chegini's YouTube",
+    "outputDir": "_videos",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA"
   }
 ]
