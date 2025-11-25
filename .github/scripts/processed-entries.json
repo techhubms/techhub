@@ -20084,5 +20084,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=MqNgGkXJ5bc",
     "reason": "Succesfully added: Assigned Security category because the content focuses entirely on Microsoft Purview and Data Security Posture Management, which are Microsoft security services (Security rule 1). Assigned AI category because the session highlights 'AI-powered agents' as central to DSPM's protection capabilities (AI rule 1 and 5). Exclusion rules do not apply because this is a technical, English-language video from Microsoft Ignite focused on actionable enterprise security solutions, not business strategy, end-user features, or workplace/career content.",
     "timestamp": "2025-11-25 19:11:44 +00:00"
+  },
+  {
+    "timestamp": "2025-11-25 22:06:27 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the content focuses on empowering agents and agentic applications using Microsoft Foundry, which is an AI-driven developer platform (AI rule 1 and 4). Assigned the Azure category since Azure Logic Apps services are central to the solution and technical implementation (Azure rule 1 and 4). Assigned Coding because developers need to configure, register, and utilize Logic Apps connectors as tools, which involves technical solution assembly and potentially custom logic (Coding rule 4). Did not assign DevOps, Security, or ML categories since the content doesn't cover DevOps processes, security implementations, or data science/analytics; it is centered on integration and agent tooling for developers.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/%EF%B8%8Fpublic-preview-azure-logic-apps-connectors-as-mcp-tools-in/ba-p/4473062"
   }
 ]
