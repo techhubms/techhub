@@ -9987,5 +9987,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=zZ_e9FllzCw",
     "reason": "No categories found: Content excluded due to generic exclusion rules: The description and title indicate this session is focused on business strategy, partner engagement, organizational priorities, and transformation with Small and Medium Businesses. There is no evidence of technical implementation, development, coding, or Microsoft technical architecture. The content spotlights partner recognition, leadership, and actionable business next steps, which falls under Business Strategy and Executive Content exclusion and Workplace and Business Focus exclusion. The session is also associated with Microsoft Ignite, but the described content does not address specific technical or development topics required for category inclusion."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=matmvydKkmM",
+    "timestamp": "2025-11-26 22:06:14 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: This video is primarily focused on how Microsoft 365 Copilot integrates with Power Apps in business application scenarios, emphasizing productivity, collaboration, and employee workflow enhancement. The use of Microsoft 365 Copilot marks it as a business productivity tool, which falls under the explicit non-development products exclusion in Chapter 3. The description highlights usage patterns and interfaces for end-users rather than technical implementation, coding, or development-related content. There are no clear indications of developer-focused topics, configuration, architecture, or technical depth involving Microsoft technologies in a way that qualifies for the 'AI,' 'Coding,' 'Azure,' 'DevOps,' 'ML,' or 'Security' categories. The references to form automation and agent setup walkthroughs appear to be demonstrations of business process enhancement, not developer/architectural guidance. Per Copilot product distinction rules, all business productivity Copilot content is excluded."
   }
 ]

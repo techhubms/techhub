@@ -20294,5 +20294,17 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/best-practices-for-migrating-cots-applications-to-microsoft/ba-p/4473323",
     "reason": "Succesfully added: Assigned 'Azure' category because the entire content revolves around migrating applications to Microsoft Azure using Azure-specific services and frameworks (Azure rules 1, 4, 5, and 6). Assigned 'Security' because the content covers security best practices, including use of Microsoft Entra ID for identity, Microsoft Sentinel for monitoring, governance controls, and disaster recovery readiness (Security rules 1, 2, 4, 5, and 7). Did not assign Coding, DevOps, AI, ML, or GitHub Copilot, as there is no direct coverage of programming frameworks, code development, developer tooling, CI/CD, AI features, ML engineering, or GitHub Copilot-related topics. Content is technical, actionable, and in English, fully meeting content quality standards."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=j1xslVn_dMU",
+    "timestamp": "2025-11-26 22:06:00 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the AI category because the session is centered on Copilot Studio as a low-code, developer/maker tool for building agents and orchestrating generative AI workflows (AI rule 1). Content details agent development, technical enhancements, governance, testing, and automation which fall under technical implementation of Microsoft's AI offerings. Did NOT assign GitHub Copilot, Coding, DevOps, Azure, ML, or Security because the focus is on Copilot Studio (not GitHub Copilot), low-code agent creation rather than code-level development or DevOps tooling, and the content does not cover Azure infrastructure, ML engineering, or security topics. Content is not business productivity/end-user Copilot; it is technical and relevant to developers/makers."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=MWid8VX6PZ4",
+    "timestamp": "2025-11-26 22:06:32 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the session centers on AI infrastructure updates (AI rule 1: Microsoft AI Products/Services), hardware-software codesign, and agent orchestration for advanced AI scenarios. Assigned Azure category due to the deep dive into Azure platform capabilities, specialized VMs, networking, and datacenter technologies (Azure rule 1: Any Azure Service/Technology, Azure rule 4: Azure development practices). Did not assign ML, Coding, Security, DevOps, or GitHub Copilot since the content focuses on infrastructure and platform, not code development, machine learning model engineering, or security implementation. Not excluded by any generic exclusion rules, even with brief Copilot mentions, since the main technical focus is infrastructure for AI workloads, not end-user productivity features."
   }
 ]
