@@ -9903,5 +9903,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rules. The video centers on managing updates for Windows using Autopatch, hotpatch, and reporting functionality, which are IT administrative topics. It does not focus on development, coding, DevOps engineering, or developer tools. Additionally, while the description mentions 'agentic OS' and 'manage AI capabilities for Windows,' there is no substantive technical detail or hands-on implementation for Microsoft developer platforms, AI development practices, or coding integrations. Thus, none of the category inclusion rules for AI, Coding, DevOps, Azure, ML, Security, or GitHub Copilot qualify. Per exclusion rules, general IT management, update deployment, and device operations (non-development focus) do not receive categories.",
     "timestamp": "2025-11-26 01:34:26 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-26 11:06:14 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=BFNS95be8g4",
+    "reason": "No categories found: Content is excluded due to generic exclusion rules. The video focuses on business strategy, partner engagement, organizational agility, and executive-level initiatives for Microsoft partners in the Small and Medium Enterprise sector, as seen in the session description and chapter breakdown. The material targets leadership and business development rather than technical practitioners and lacks substantive technical implementation, development, or engineering details related to Microsoft technologies. This aligns with the exclusion rules for business strategy and executive content, as well as non-development Microsoft product promotion. No categories apply."
   }
 ]

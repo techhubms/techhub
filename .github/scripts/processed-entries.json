@@ -20156,5 +20156,29 @@
     "timestamp": "2025-11-26 09:06:20 +00:00",
     "canonical_url": "https://dellenny.com/understanding-azure-ad-tenants-users-groups-and-roles-a-practical-guide/",
     "collection": "posts"
+  },
+  {
+    "timestamp": "2025-11-26 11:05:53 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://roadtoalm.com/2025/11/26/dont-let-ai-optimize-the-wrong-30/",
+    "reason": "Succesfully added: Assigned the 'AI' category because the article critically analyzes the role of AI in software development, especially tools aimed at developers' productivity (AI inclusion rule 5 and 6). Assigned 'DevOps' category because the discussion covers the end-to-end SDLC, mentioning CI pipelines, testing, documentation, security alerts, workflow automation, and developer productivity—all core to the definition of DevOps (DevOps rules 3, 5, and 9). Did not assign 'Coding', 'Azure', or 'Security' since no Microsoft-specific technology, programming language, or platform is central or detailed in the discussion, and the focus is on process rather than technical implementation."
+  },
+  {
+    "timestamp": "2025-11-26 11:06:34 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=KZ5ePLtasAQ",
+    "reason": "Succesfully added: Assigned DevOps category because the session centers on DevOps principles within the Power Platform, specifically discussing ALM, source control, deployments, monitoring, and pipeline practices (DevOps rules 1, 2, 5, 6, 7). Assigned AI category because the session explicitly references low-code AI and agent capabilities, plus Copilot Studio, which is a Microsoft developer/maker AI tool (AI rule 1 and 3). Did not assign Azure, Coding, ML, or Security categories, as the central focus is on Power Platform DevOps practices and AI agent integration, not coding practices, direct cloud infrastructure, or security implementation. All content is technical, development-oriented, and intended for a practitioner audience."
+  },
+  {
+    "timestamp": "2025-11-26 11:06:56 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=l2_Dnh1a2IY",
+    "reason": "Succesfully added: Assigned Security category as the session centers on Microsoft security products (Sentinel, Purview, Entra, Intune, Defender) and addresses enterprise security challenges (Security inclusion rule 1). Azure category applies because Azure is featured via Entra ID/Active Directory and the Azure partner context (Azure rule 1). AI category included since the content discusses integrating security into AI solutions and 'Microsoft AI Cloud Partner Program' is prominent, aligning with AI category rule 1. Did not assign DevOps or Coding since the primary focus is security sales, GTM strategy, and product suite rather than technical implementation or development practices. Content is educational, not biographical, promotional, nor does it violate any generic exclusion rules; the language is professional and technically focused."
+  },
+  {
+    "timestamp": "2025-11-26 11:07:16 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=z6gIaCYmvos",
+    "reason": "Succesfully added: Assigned the AI category based on the session's focus on building agents (AI-powered automation tools) for Microsoft 365 Copilot via the Agents Toolkit, SDK, and Copilot APIs, fitting AI inclusion rule 1 and 4. Did not add GitHub Copilot since the session is about business Copilot extensibility, not developer Copilot; Coding was not added as the primary focus is on low-code configuration and integration. Excluded other categories as the talk does not cover classic coding or DevOps tooling, isn’t about Azure or ML-specific engineering, and while security/compliance is a use case, it is not the technical focus. Session passes content quality and relevance rules."
   }
 ]
