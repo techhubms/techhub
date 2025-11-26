@@ -20138,5 +20138,11 @@
     "reason": "Succesfully added: Content was assigned AI and ML categories because the session centers on Microsoft Fabric's AI-powered analytics capabilities, Power BI integration, and empowering business teams with machine learning driven insights (AI rule 1, ML rule 1 and 4). While the language contains business empowerment themes, the technical focus is on implementing AI/ML technologies in the Microsoft ecosystem, qualifying for inclusion. Azure category not assigned because the focus is on Fabric and cloud-based analytics, not classic Azure platform services. Coding and DevOps were excluded due to lack of explicit development or operations content.",
     "timestamp": "2025-11-26 01:34:14 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category due to the central focus on Azure Container Apps and Azure Functions (Azure rules 1, 4, 5). Coding category is included because the article revolves around implementing code within Azure Functions, discussing triggers, bindings, and orchestration (Coding rules 1, 4, 5). ML is assigned because there is explicit coverage of ML inference workloads, GPU support, and AI workloads (ML rules 1, 3, 4, 9). AI category is added because of discussion on AI/ML inference and leveraging ACA for compute-intensive AI scenarios (AI rules 1, 4, 5). DevOps category is applicable since there is mention of CI/CD agent runners, deployment management features (multi-revisions, blue/green), and scalability, which are all core DevOps practices (DevOps rules 1, 5, 6, 9). No generic exclusions apply as this content is technical, substantive, and entirely in English.",
+    "timestamp": "2025-11-26 05:06:08 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-on-azure-container-apps-the-unified-platform-for/ba-p/4467698"
   }
 ]
