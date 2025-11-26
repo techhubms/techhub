@@ -300,7 +300,10 @@ try {
                 $endTime = Get-Date  # Force exit from outer loop
                 break
             }
-            Start-Sleep -Milliseconds 10  # Much shorter sleep intervals
+            # Only sleep if we haven't exceeded the time limit
+            if ((Get-Date) -lt $endTime) {
+                Start-Sleep -Milliseconds 10  # Much shorter sleep intervals
+            }
         }
         
         if ($script:Aborted -or (Get-Date) -ge $endTime) { break }
