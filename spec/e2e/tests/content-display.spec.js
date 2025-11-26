@@ -1,7 +1,5 @@
 const { test, expect } = require('@playwright/test');
 const {
-  getExpectedLatestContent,
-  getLatestFileFromCollection,
   getLatestFileFromCollectionByCategory,
   SECTIONS,
   navigateAndVerify,
@@ -25,7 +23,7 @@ test.describe('Latest Content Display', () => {
     // Check for roundups section instead of "Latest of everything" (which doesn't exist on homepage)
     const roundupsSection = page.locator('h2:text("Last 4 Roundups")');
     await expect(roundupsSection).toBeVisible();
-    
+
     // Check that roundups are displayed
     const roundupItems = page.locator('.site-roundups li');
     const roundupCount = await roundupItems.count();
@@ -96,15 +94,15 @@ test.describe('Latest Content Display', () => {
     await expect(titleElement).toBeVisible();
     const displayedTitle = await titleElement.textContent();
     const cleanDisplayedTitle = displayedTitle?.trim() || '';
-    
+
     console.log(`✅ First ${collectionTitle.toLowerCase()} item is visible: "${cleanDisplayedTitle}"`);
-    
+
     // Verify that the displayed title is not empty (content exists)
     expect(cleanDisplayedTitle.length).toBeGreaterThan(0);
   }
 
   // Dynamic tests for all sections and collections based on sections.json
-  Object.entries(SECTIONS).forEach(([sectionKey, sectionConfig]) => {
+  Object.entries(SECTIONS).forEach(([_sectionKey, sectionConfig]) => {
     const sectionTitle = sectionConfig.title;
     const sectionCategory = sectionConfig.category;
 
