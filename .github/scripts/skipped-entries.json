@@ -9927,5 +9927,11 @@
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/understanding-azure-ad-tenants-users-groups-and-roles-a/m-p/4473259#M812",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-26 17:06:18 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content description recounts a personal experience ('the dawning realization' of the Log4Shell crisis by a Log4j maintainer), focusing on the emotional and community impact of a major open-source vulnerability, not technical implementation, remediation, or development with Microsoft technologies. It primarily documents the maintainer's perspective and crisis awareness rather than presenting hands-on development with Microsoft tools or platforms, or discussing technical practices relevant to any defined category. No evidence of Coding, DevOps, Security (Microsoft-specific), AI, Azure, GitHub Copilot, or ML content, and the core is a high-level recount of events and open source impact. This qualifies as biographical/personal-content exclusion under the generic exclusion rules.",
+    "canonical_url": "https://www.youtube.com/shorts/5ALgu0n4R5s"
   }
 ]

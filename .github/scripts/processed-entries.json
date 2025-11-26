@@ -20216,5 +20216,17 @@
     "reason": "Succesfully added: Assigned 'AI' category due to extensive use of Copilot Vision, AI-powered agent workflows, and discussions around model management (AI inclusion rules 1, 3, 4, 5). Added 'GitHub Copilot' because Copilot Vision and other Copilot features are featured tools (GitHub Copilot inclusion rules 1, 2, 3, and CRITICAL: always assign AI and GitHub Copilot together for Copilot content). Assigned 'Coding' since the tutorial focuses on app development, code deployment, debugging, and integration with developer tools in VS Code (Coding rules 1, 2, and 5). Did not assign 'Azure', 'DevOps', 'ML', or 'Security' because there are no references to those services, practices, or platforms in the provided content.",
     "canonical_url": "https://www.youtube.com/watch?v=5NxGqnTazR8",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-26 17:05:46 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the ML category because this update is focused on Power BI's on-premises data gateway, which supports business intelligence and analytics workloads (ML Rule 1 and 4). Power BI is included for BI development and data integration scenarios. Not categorized as AI because it does not deal with AI APIs or pre-built AI services. No Azure, Coding, Security, or DevOps categories apply as there is no mention of these subjects in the content.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-november-2025-release/"
+  },
+  {
+    "timestamp": "2025-11-26 17:06:38 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' due to direct discussion of AI integration and AI-enabled tooling in SQL Server 2025 (AI rules 1, 4). 'Azure' is assigned because content covers Azure-related integrations (Arc and Fabric) and provides Azure learning resources (Azure rules 1, 6). 'ML' is included due to vector support, AI-related features, and data analytics/ML platform integrations (ML rules 1, 2, 8). 'Coding' applies as the video discusses new SQL programming features (REGEX, JSON type, GraphQL/REST endpoint support), which involve development practices (Coding rule 1, 2, 4). Not assigning 'DevOps' or 'Security' as they are not core discussion points in the content.",
+    "canonical_url": "https://www.youtube.com/watch?v=45I_m50kInE"
   }
 ]
