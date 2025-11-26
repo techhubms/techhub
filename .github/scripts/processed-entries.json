@@ -20306,5 +20306,17 @@
     "timestamp": "2025-11-26 22:06:32 +00:00",
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI category because the session centers on AI infrastructure updates (AI rule 1: Microsoft AI Products/Services), hardware-software codesign, and agent orchestration for advanced AI scenarios. Assigned Azure category due to the deep dive into Azure platform capabilities, specialized VMs, networking, and datacenter technologies (Azure rule 1: Any Azure Service/Technology, Azure rule 4: Azure development practices). Did not assign ML, Coding, Security, DevOps, or GitHub Copilot since the content focuses on infrastructure and platform, not code development, machine learning model engineering, or security implementation. Not excluded by any generic exclusion rules, even with brief Copilot mentions, since the main technical focus is infrastructure for AI workloads, not end-user productivity features."
+  },
+  {
+    "timestamp": "2025-11-26 23:05:49 +00:00",
+    "reason": "Succesfully added: Content qualifies for Azure category (Azure rule 1) as it is entirely focused on Azure Databricks service design, deployment, and networking. ML category applies (ML rule 1, 2, 4, 5) because Databricks is used for advanced analytics and machine learning, with explicit references to ETL and ML workloads, pipeline design, and data engineering. Security category qualifies (Security rules 1, 2, 4, 5, 6, 9) due to repeated coverage of firewall, VNet, NSGs, private endpoints, access controls, Secure Cluster Connectivity, least privilege, compliance, and secure architecture. Copilot, AI, and Coding categories are NOT assigned since the content is focused on architecture, data/ML, and security, without code samples or GitHub/Microsoft AI tool integration.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/guide-for-architecting-azure-databricks-design-to-deployment/ba-p/4473095"
+  },
+  {
+    "timestamp": "2025-11-26 23:06:08 +00:00",
+    "reason": "Succesfully added: Content qualifies for AI category due to substantial coverage of Azure AI services, AI Skills Navigator, and integration of AI skilling (AI rules 1, 4, and 6). Azure is central through labs, certification, and skilling platforms (Azure rule 1, 4, 5). Coding is included since developer learning journeys, GitHub Copilot, hands-on labs, and technical skill-building are a primary focus (Coding rules 4, 5). No generic exclusions triggered: content is technical, in English, not biographical, not sales-focused, and exceeds minimum word threshold for community. Tags prioritized technical depth and Microsoft technology/platform references.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/azure-skilling-at-microsoft-ignite-2025/ba-p/4472678"
   }
 ]
