@@ -20180,5 +20180,23 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=z6gIaCYmvos",
     "reason": "Succesfully added: Assigned the AI category based on the session's focus on building agents (AI-powered automation tools) for Microsoft 365 Copilot via the Agents Toolkit, SDK, and Copilot APIs, fitting AI inclusion rule 1 and 4. Did not add GitHub Copilot since the session is about business Copilot extensibility, not developer Copilot; Coding was not added as the primary focus is on low-code configuration and integration. Excluded other categories as the talk does not cover classic coding or DevOps tooling, isn’t about Azure or ML-specific engineering, and while security/compliance is a use case, it is not the technical focus. Session passes content quality and relevance rules."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-11-25-copilot-agent-sessions-from-external-apps-are-now-available-on-github-mobile-for-android",
+    "timestamp": "2025-11-26 12:06:20 +00:00",
+    "reason": "Succesfully added: Assigned GitHub Copilot category because the update introduces a new Copilot agent session feature in GitHub Mobile (GitHub Copilot Inclusion Rule 1). Assigned AI category as Copilot is an AI-powered developer tool (AI Inclusion Rule 2). The content focuses on developer workflow automation, which is relevant to both Copilot and AI categories. No other categories apply as the announcement centers specifically around Copilot agent sessions and GitHub Mobile integration, without direct focus on coding, Azure, DevOps, ML, or Security."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-implement-azure-ad-conditional-access-policies-step-by-step/",
+    "timestamp": "2025-11-26 12:06:49 +00:00",
+    "reason": "Succesfully added: Assigned Security category because the content is focused on Azure AD (Microsoft Entra ID) Conditional Access, which is a security technology (Security rule 1, 2, and 9). Assigned Azure category since the entire guide revolves around configuring policies within Azure/Microsoft Entra ID (Azure rule 1 and 4). No other categories were assigned because the content does not delve into coding practices, DevOps, AI/ML features, or GitHub-specific workflows. All technical details, best practices, and configuration steps make this a clear technical implementation guide rather than high-level strategy or business productivity content."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/managing-azure-ad-identity-protection-detecting-and-mitigating-risky-sign-ins/",
+    "timestamp": "2025-11-26 12:07:10 +00:00",
+    "reason": "Succesfully added: Assigned Security category because the entire article centers on identity protection, threat detection, risk mitigation, and security strategies using Microsoft technologies (Security rule 1, 2, 3, 4, and 5). Assigned Azure category as it specifically discusses Azure AD Identity Protection, Conditional Access, and integrations with Azure security services (Azure rules 1 and 4). Did not assign other categories since the primary focus is security management rather than coding, AI development, DevOps, or ML/data engineering. Microsoft Defender integration references are relevant in the security context as specified in the rules."
   }
 ]
