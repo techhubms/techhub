@@ -20198,5 +20198,11 @@
     "canonical_url": "https://dellenny.com/managing-azure-ad-identity-protection-detecting-and-mitigating-risky-sign-ins/",
     "timestamp": "2025-11-26 12:07:10 +00:00",
     "reason": "Succesfully added: Assigned Security category because the entire article centers on identity protection, threat detection, risk mitigation, and security strategies using Microsoft technologies (Security rule 1, 2, 3, 4, and 5). Assigned Azure category as it specifically discusses Azure AD Identity Protection, Conditional Access, and integrations with Azure security services (Azure rules 1 and 4). Did not assign other categories since the primary focus is security management rather than coding, AI development, DevOps, or ML/data engineering. Microsoft Defender integration references are relevant in the security context as specified in the rules."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/source/asia/features/micro-degree-macro-impact-how-ai-is-transforming-skilling-in-india/",
+    "timestamp": "2025-11-26 15:05:49 +00:00",
+    "reason": "Succesfully added: Content qualifies for the AI category because it centers on Microsoft-backed AI skilling, micro-degree programs, and workforce transformation focused on technical AI capabilities in India (AI inclusion rules 1, 4, 5, 6). Although some business/economic context appears, the core of the article details technical education and skills training with Microsoft's AI platforms and initiatives. As per generic exclusion rules, there is no predominant biographical/talent profile, no unconstructive negativity, and the piece is detailed, technical, and English-language. No other categories fit, as DevOps, Coding, Azure, ML, or Security are not central to this content."
   }
 ]
