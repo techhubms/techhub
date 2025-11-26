@@ -20228,5 +20228,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned 'AI' due to direct discussion of AI integration and AI-enabled tooling in SQL Server 2025 (AI rules 1, 4). 'Azure' is assigned because content covers Azure-related integrations (Arc and Fabric) and provides Azure learning resources (Azure rules 1, 6). 'ML' is included due to vector support, AI-related features, and data analytics/ML platform integrations (ML rules 1, 2, 8). 'Coding' applies as the video discusses new SQL programming features (REGEX, JSON type, GraphQL/REST endpoint support), which involve development practices (Coding rule 1, 2, 4). Not assigning 'DevOps' or 'Security' as they are not core discussion points in the content.",
     "canonical_url": "https://www.youtube.com/watch?v=45I_m50kInE"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=UQRAs0k978k",
+    "timestamp": "2025-11-26 18:07:10 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' because the session focuses on using native Azure services for backup, reliability, and workload protection (Azure inclusion rules 1, 4, and 5). Assigned 'Security' due to coverage of cyber resiliency, threat detection, immutability, and ransomware protection with Microsoft tools (Security inclusion rules 1, 5, and 7). Did not assign 'ML', 'AI', 'Coding', 'DevOps', or 'GitHub Copilot' as the content is not focused on those development or AI topics. Content is technical, in English, and not excluded by any generic rule."
   }
 ]
