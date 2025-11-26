@@ -9927,5 +9927,29 @@
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/understanding-azure-ad-tenants-users-groups-and-roles-a/m-p/4473259#M812",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-26 17:06:18 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content description recounts a personal experience ('the dawning realization' of the Log4Shell crisis by a Log4j maintainer), focusing on the emotional and community impact of a major open-source vulnerability, not technical implementation, remediation, or development with Microsoft technologies. It primarily documents the maintainer's perspective and crisis awareness rather than presenting hands-on development with Microsoft tools or platforms, or discussing technical practices relevant to any defined category. No evidence of Coding, DevOps, Security (Microsoft-specific), AI, Azure, GitHub Copilot, or ML content, and the core is a high-level recount of events and open source impact. This qualifies as biographical/personal-content exclusion under the generic exclusion rules.",
+    "canonical_url": "https://www.youtube.com/shorts/5ALgu0n4R5s"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blogs.windows.com/msedgedev/2025/11/25/shop-smarter-with-copilot-in-edge-this-holiday-season/",
+    "timestamp": "2025-11-26 18:06:04 +00:00",
+    "reason": "No categories found: No categories assigned because the content is focused on Microsoft Copilot in Edge as a consumer productivity tool, not a developer tool or development-focused product. Per the Generic Exclusion Rules and Copilot Product Distinction in the prompt, business productivity and consumer Copilot tools such as Copilot in Edge, Microsoft 365 Copilot, or Bing Chat are explicitly excluded. The post describes shopping assistance, price tracking, and cashback features for end-users, not technical or development topics. None of the technical/developer category rules are triggered. Therefore, all categories are empty and content is excluded."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2025/11/26/xbox-cloud-gaming-expansion-india-brazil-argentina-countries/",
+    "timestamp": "2025-11-26 18:06:16 +00:00",
+    "reason": "No categories found: All categories were excluded because the content is focused on product availability, feature expansion, and user experience updates for Xbox Cloud Gaming (primarily a consumer gaming service), not Microsoft developer tools, programming, DevOps, Azure services, AI, ML, or security topics. It does not contain technical implementation details, code, or architecture relevant to any of the inclusion rules. Additionally, gaming end-user content is not included under any category per instructions."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=O9s3-VXNi94",
+    "timestamp": "2025-11-26 18:06:48 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: Non-English Content. The title and description are primarily in Portuguese ([ptBR], 'Open Source Friday', 'O Open Source Friday desta sexta vai ser um pouco diferente!', etc.), which means the content is not primarily in English and violates the Non-English Content exclusion in Chapter 3. No categories assigned."
   }
 ]
