@@ -20108,5 +20108,35 @@
     "reason": "Succesfully added: Assigned 'Security' because the session heavily focuses on secure access, Zero Trust, conditional access, identity management, lifecycle management, and agent governance, all within the Microsoft Entra ecosystem (Security rules 1, 3, 4, 9). 'AI' was assigned because the session deals with managing identity, authentication, and security for AI agents, discusses AI risk management, and introduces protections like prompt injection protection (AI rules 1, 4, 5). Exclusion rules do not apply as the content is substantive, technical, and aligned with platform and engineering practitioner needs.",
     "timestamp": "2025-11-26 00:11:22 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=ptMM56u6Ay0"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=16_x7e0d_SY",
+    "reason": "Succesfully added: Assigned 'AI' because GitHub Copilot agents are AI developer tools (AI rule 2 and 1). Included 'GitHub Copilot' since the session's focus is Copilot features and agent deployment (GitHub Copilot rules 1, 2, and 4), and per CRITICAL Copilot workflow, both AI and GitHub Copilot must always be present together. 'DevOps' was assigned because content addresses governance, scalable rollout, organization-wide deployment, and automation of development tasks using agents (DevOps rules 1, 3, 5, and 6). 'Coding' was added since the session demonstrates agent-driven development and integration within developer tools like VS Code and CLI (Coding rules 1, 2, and 5). No generic exclusions triggered—content is technical, not biographical, in English, and focused on practical implementation for practitioners.",
+    "timestamp": "2025-11-26 01:33:08 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=e-DX_w9Kdps",
+    "reason": "Succesfully added: Assigned Azure category because the session centers on Azure Networking advancements (Azure inclusion rule 1 and 5). Added Security category due to coverage of network security architecture and enhancements (Security inclusion rules 1, 4, and 9). The presentation is technical, focused on networking principles, connectivity, and security for cloud infrastructure. The content does not trigger any generic exclusion rules; it is not business strategy, sales pitch, or non-English, and it details technical implementation.",
+    "timestamp": "2025-11-26 01:33:24 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=Jejnhz9ZwD8",
+    "reason": "Succesfully added: Assigned Azure category because the session centers on monitoring and managing Azure Kubernetes Service (AKS), fulfilling Azure category inclusion rule 1. DevOps category is included based on deep coverage of cluster monitoring, management practices, operational workflows, tooling, and a focus on developer operations, satisfying DevOps category rules 3, 6, and 7. AI/ML/Coding/Security categories do not apply as the content does not focus on those aspects. Multiple open source tools are relevant, but Azure and DevOps are the core. No generic exclusions applied.",
+    "timestamp": "2025-11-26 01:33:41 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=nJk-O5DQzkI",
+    "reason": "Succesfully added: Assigned Azure category because the session focuses on solutions delivered via the Azure platform (Azure rule 1 and 4). Added AI category due to direct references to 'AI-powered optimization' as a feature of Apptio on Azure (AI rule 1 and 4). Did not assign other categories (Coding, DevOps, ML, Security, GitHub Copilot) as the description and tags do not indicate specific technical depth in those areas, nor hands-on developer/coding or security content. The session centers on operational efficiency and cloud management, specifically leveraging Microsoft's Azure and AI capabilities for enterprise IT.",
+    "timestamp": "2025-11-26 01:33:57 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=O4grrA_xqhc",
+    "reason": "Succesfully added: Content was assigned AI and ML categories because the session centers on Microsoft Fabric's AI-powered analytics capabilities, Power BI integration, and empowering business teams with machine learning driven insights (AI rule 1, ML rule 1 and 4). While the language contains business empowerment themes, the technical focus is on implementing AI/ML technologies in the Microsoft ecosystem, qualifying for inclusion. Azure category not assigned because the focus is on Fabric and cloud-based analytics, not classic Azure platform services. Coding and DevOps were excluded due to lack of explicit development or operations content.",
+    "timestamp": "2025-11-26 01:34:14 +00:00",
+    "collection": "videos"
   }
 ]
