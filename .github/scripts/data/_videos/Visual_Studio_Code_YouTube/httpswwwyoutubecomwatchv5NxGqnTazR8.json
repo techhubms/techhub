@@ -1,0 +1,26 @@
+{
+  "Author": "Visual Studio Code",
+  "PubDate": "2025-11-26T15:00:12+00:00",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "ProcessedDate": "2025-11-26 16:04:44",
+  "FeedName": "Visual Studio Code YouTube",
+  "Link": "https://www.youtube.com/watch?v=5NxGqnTazR8",
+  "Description": "Build a full app to budget & learn finance in VS Code using Agent Mode, Copilot Vision, MCP, BYOK, custom agents and more. Watch me go from spreadsheet → working app → GitHub issues in minutes.\n\n🔎 Chapters: 00:00 Intro 00:30 Getting Started with Agent Mode 01:38 Demo - Copilot Vison and Ask Mode 04:55 Debugging with Agent Mode and Copilot Vision 07:35 Document with comments 08:40 Chat Participants 10:20 Custom Agents 14:45 Source Control 16:15 Add a MCP server 19:30 Simple Browser 20:35 Manage Models 21:39 Thank you!\n\n🔗 Links: Docs: https://aka.ms/AEA-Mode Chat Participants: https://aka.ms/ChatParticipants\n\n🎙️ Featuring: Reynald Adolphe (@ReynaldADolphe)\n\n📲 Follow VS Code: \\* X: https://x.com/code \\* Bluesky: https://bsky.app/profile/vscode.dev \\* YouTube: https://youtube.com/code \\* LinkedIn: https://www.linkedin.com/showcase/104107263 \\* GitHub: https://github.com/microsoft/vscode\n\n#vscode #agentmode #mcp",
+  "Tags": [
+    "agentmode",
+    "customvision",
+    "demo",
+    "developer",
+    "mcp",
+    "microsoft",
+    "softwaredeveloper",
+    "tutorial",
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Title": "The Ultimate Agent Mode Tutorial: Vision, MCP, Custom Agents & More!",
+  "OutputDir": "_videos",
+  "EnhancedContent": null
+}

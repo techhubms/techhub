@@ -20204,5 +20204,17 @@
     "canonical_url": "https://news.microsoft.com/source/asia/features/micro-degree-macro-impact-how-ai-is-transforming-skilling-in-india/",
     "timestamp": "2025-11-26 15:05:49 +00:00",
     "reason": "Succesfully added: Content qualifies for the AI category because it centers on Microsoft-backed AI skilling, micro-degree programs, and workforce transformation focused on technical AI capabilities in India (AI inclusion rules 1, 4, 5, 6). Although some business/economic context appears, the core of the article details technical education and skills training with Microsoft's AI platforms and initiatives. As per generic exclusion rules, there is no predominant biographical/talent profile, no unconstructive negativity, and the piece is detailed, technical, and English-language. No other categories fit, as DevOps, Coding, Azure, ML, or Security are not central to this content."
+  },
+  {
+    "timestamp": "2025-11-26 16:06:15 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category because the talk is entirely focused on using GitHub Actions for workflow automation, CI/CD, security, dependency management, and operational best practices (DevOps rules 2, 3, 5, and 9). Did not assign 'Coding,' 'AI,' or 'ML' because the content centers on process automation and developer operations, not programming concepts or artificial intelligence. No generic exclusions apply as the video is technical, substantive, and relevant.",
+    "canonical_url": "https://www.youtube.com/watch?v=2p1D29zJdBI",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-11-26 16:06:42 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category due to extensive use of Copilot Vision, AI-powered agent workflows, and discussions around model management (AI inclusion rules 1, 3, 4, 5). Added 'GitHub Copilot' because Copilot Vision and other Copilot features are featured tools (GitHub Copilot inclusion rules 1, 2, 3, and CRITICAL: always assign AI and GitHub Copilot together for Copilot content). Assigned 'Coding' since the tutorial focuses on app development, code deployment, debugging, and integration with developer tools in VS Code (Coding rules 1, 2, and 5). Did not assign 'Azure', 'DevOps', 'ML', or 'Security' because there are no references to those services, practices, or platforms in the provided content.",
+    "canonical_url": "https://www.youtube.com/watch?v=5NxGqnTazR8",
+    "collection": "videos"
   }
 ]

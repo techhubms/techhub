@@ -9909,5 +9909,23 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=BFNS95be8g4",
     "reason": "No categories found: Content is excluded due to generic exclusion rules. The video focuses on business strategy, partner engagement, organizational agility, and executive-level initiatives for Microsoft partners in the Small and Medium Enterprise sector, as seen in the session description and chapter breakdown. The material targets leadership and business development rather than technical practitioners and lacks substantive technical implementation, development, or engineering details related to Microsoft technologies. This aligns with the exclusion rules for business strategy and executive content, as well as non-development Microsoft product promotion. No categories apply."
+  },
+  {
+    "timestamp": "2025-11-26 16:06:44 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/how-to-implement-azure-ad-conditional-access-policies-step-by/m-p/4473258#M811",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-26 16:06:45 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/managing-azure-ad-identity-protection-detecting-and-mitigating/m-p/4473257#M810",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-26 16:06:45 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/understanding-azure-ad-tenants-users-groups-and-roles-a/m-p/4473259#M812",
+    "collection": "community"
   }
 ]

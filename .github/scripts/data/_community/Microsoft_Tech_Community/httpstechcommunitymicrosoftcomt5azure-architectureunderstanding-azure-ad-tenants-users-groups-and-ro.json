@@ -1,0 +1,14 @@
+{
+  "FeedName": "Microsoft Tech Community",
+  "Description": "As cloud adoption continues to shape modern IT infrastructures, Microsoft Azure Active Directory (Azure AD)—now part of Microsoft Entra ID—has become one of the most essential identity and access management (IAM) solutions for organizations. Whether you’re setting up a brand-new cloud environment or managing a hybrid workforce, understanding how Azure AD tenants, users, groups, and roles work is fundamental to keeping your environment secure, organized, and scalable.\n\nThis guide breaks down each of these components in simple, practical terms, helping you gain the confidence to manage Azure identity services effectively.\n\n[https://dellenny.com/understanding-azure-ad-tenants-users-groups-and-roles-a-practical-guide/](https://dellenny.com/understanding-azure-ad-tenants-users-groups-and-roles-a-practical-guide/)",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-architecture/understanding-azure-ad-tenants-users-groups-and-roles-a/m-p/4473259#M812",
+  "OutputDir": "_community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "PubDate": "2025-11-26T15:52:55+00:00",
+  "Tags": [],
+  "Author": "JohnNaguib",
+  "EnhancedContent": "As cloud adoption continues to shape modern IT infrastructures, Microsoft Azure Active Directory (Azure AD)—now part of Microsoft Entra ID—has become one of the most essential identity and access management (IAM) solutions for organizations. Whether you’re setting up a brand-new cloud environment or managing a hybrid workforce, understanding how Azure AD tenants, users, groups, and roles work is fundamental to keeping your environment secure, organized, and scalable.\n\nThis guide breaks down each of these components in simple, practical terms, helping you gain the confidence to manage Azure identity services effectively.\n\n[https://dellenny.com/understanding-azure-ad-tenants-users-groups-and-roles-a-practical-guide/](https://dellenny.com/understanding-azure-ad-tenants-users-groups-and-roles-a-practical-guide/)",
+  "Title": "Understanding Azure AD Tenants, Users, Groups, and Roles: A Practical Guide",
+  "ProcessedDate": "2025-11-26 16:05:24",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+}
