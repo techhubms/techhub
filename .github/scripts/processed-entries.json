@@ -20102,5 +20102,11 @@
     "canonical_url": "https://devblogs.microsoft.com/blog/manage-containers-the-easy-way-copilot-vs-code",
     "timestamp": "2025-11-25 23:05:30 +00:00",
     "reason": "Succesfully added: Assigned 'GitHub Copilot' category because the article is about Copilot integration within VS Code (GitHub Copilot rule 1 and 2). Per rules, 'AI' is also assigned whenever 'GitHub Copilot' is present. Assigned 'Coding' because usage centers on developer workflow, code-centric tasks, and integration with VS Code (Coding rule 5). 'DevOps', 'Azure', 'ML', and 'Security' were not added as there is no mention of Azure cloud, CI/CD pipeline implementation, machine learning, or security specifics. The article fits all content inclusion requirements and does not trigger any generic exclusion rules."
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'Security' because the session heavily focuses on secure access, Zero Trust, conditional access, identity management, lifecycle management, and agent governance, all within the Microsoft Entra ecosystem (Security rules 1, 3, 4, 9). 'AI' was assigned because the session deals with managing identity, authentication, and security for AI agents, discusses AI risk management, and introduces protections like prompt injection protection (AI rules 1, 4, 5). Exclusion rules do not apply as the content is substantive, technical, and aligned with platform and engineering practitioner needs.",
+    "timestamp": "2025-11-26 00:11:22 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=ptMM56u6Ay0"
   }
 ]
