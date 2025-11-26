@@ -60,7 +60,7 @@ The book includes understanding adoption strategies and the learning curve invol
 
 **Rob Bos** is a Microsoft MVP, GitHub Star, and trainer focused on DevOps, GitHub Actions, and team enablement. He empowers teams to work smarter with GitHub tools, automating processes, improving security, and driving value delivery through practical, hands-on learning. Rob speaks at conferences worldwide and shares his insights through blogs, courses, and workshops.
 
-**Randy Pagels** is a Principal Trainer at Xebia USA and a former Microsoft veteran with over 17 years of experience. He designs and delivers hands-on GitHub Copilot, Actions, and AI training. Randy is known for his engaging teaching style, practical scenarios, and commitment to helping teams scale AI adoption confidently and effectively. He also speaks at developer conferences and industry events throughout the year.
+**Randy Pagels** is a Microsoft MVP and Principal Trainer at Xebia USA, with over 17 years at Microsoft. He delivers hands-on training on GitHub topics from Copilot and Advanced Security to Prompt Engineering and beyond. Known for his engaging style and practical focus, Randy helps teams confidently adopt AI-driven development practices through real-world scenarios, interactive workshops, and scalable learning formats.
 
 ## Why Read This Book
 
