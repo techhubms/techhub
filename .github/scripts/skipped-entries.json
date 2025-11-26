@@ -9951,5 +9951,41 @@
     "canonical_url": "https://www.youtube.com/watch?v=O9s3-VXNi94",
     "timestamp": "2025-11-26 18:06:48 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rule: Non-English Content. The title and description are primarily in Portuguese ([ptBR], 'Open Source Friday', 'O Open Source Friday desta sexta vai ser um pouco diferente!', etc.), which means the content is not primarily in English and violates the Non-English Content exclusion in Chapter 3. No categories assigned."
+  },
+  {
+    "timestamp": "2025-11-26 21:06:11 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=7Abnhqs7Fqk",
+    "reason": "No categories found: Content excluded by generic exclusion rule: This material is high-level partner and business strategy content focused on Microsoft's leadership, partner engagement, recognition, initiatives, and alignment with fiscal priorities. It provides no technical implementation details or hands-on guidance related to Microsoft technologies. Descriptive phrases such as 'empowering partners,' 'drive enterprise customer transformation,' 'align with FY26 priorities,' and 'actionable next steps to deepen engagement and fuel growth' indicate a focus on organizational strategy rather than technical architecture or practitioner development. The session is part of Microsoft Ignite, but the information provided is clearly executive/strategy-focused, not technical, and does not qualify for any technology category under the workflow."
+  },
+  {
+    "timestamp": "2025-11-26 21:07:16 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=JE1i95e2nIk",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This video is focused on the Microsoft AI Cloud Partner Program, which covers business strategy, partner incentives, co-selling, onboarding, and go-to-market efforts. There is no substantive technical implementation, coding, architecture, or development focus. According to the rules in Chapter 3, business strategy, executive content, and partner enablement without technical depth must be excluded. The description emphasizes program evolution, growth, and incentives, which are all categorized as business and partnership content rather than technical implementation."
+  },
+  {
+    "timestamp": "2025-11-26 21:07:48 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=KfPKCHFvzQE",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The provided description focuses on business strategy, partner opportunities, co-selling investments, and market growth in Microsoft solutions, without substantial technical implementation details or practitioner-focused technical depth. This aligns with the exclusion of business strategy and executive-focused content according to Chapter 3 rules. Additionally, there is no technical information, code, or architecture discussed in the session description."
+  },
+  {
+    "timestamp": "2025-11-26 21:08:18 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=pArFDv2YARM",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The provided description is focused on high-level business strategy and executive content, discussing business transformation, strategic investments, and partner growth through Azure. It lacks substantive technical implementation details about Microsoft technologies, programming, or architecture. According to Chapter 3 exclusions ('Business Strategy and Executive Content'), this qualifies as business/partner strategy rather than technical content suitable for categorization."
+  },
+  {
+    "timestamp": "2025-11-26 21:08:31 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=vDX1WiuNaBU",
+    "reason": "No categories found: Content excluded based on generic exclusion rules. The description and title indicate a focus on business strategy, partner go-to-market alignment, customer impact, and scaling transformation across business functions with Copilot and agents. The session highlights partner collaboration, alignment with Microsoft's business strategy, GTM investments, sales, audit services, and operational model transformation rather than technical implementation. Microsoft 365 Copilot and Copilot for enterprises are referenced as productivity/business transformation tools and not developer or maker tools (see Non-Development Microsoft Products and Business Strategy and Executive Content exclusions; Copilot Product Distinction rules). There are no substantive technical development, coding, or architecture details about Microsoft technologies. Therefore, no categories are assigned."
+  },
+  {
+    "timestamp": "2025-11-26 21:08:43 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=zZ_e9FllzCw",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: The description and title indicate this session is focused on business strategy, partner engagement, organizational priorities, and transformation with Small and Medium Businesses. There is no evidence of technical implementation, development, coding, or Microsoft technical architecture. The content spotlights partner recognition, leadership, and actionable business next steps, which falls under Business Strategy and Executive Content exclusion and Workplace and Business Focus exclusion. The session is also associated with Microsoft Ignite, but the described content does not address specific technical or development topics required for category inclusion."
   }
 ]
