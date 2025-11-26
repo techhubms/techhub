@@ -20252,5 +20252,47 @@
     "collection": "community",
     "timestamp": "2025-11-26 19:06:25 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/observability-for-the-age-of-generative-ai/ba-p/4473307"
+  },
+  {
+    "timestamp": "2025-11-26 21:05:27 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-day-on-agentic-modernization-coming-soon/",
+    "reason": "Succesfully added: Assigned AI category because the event’s agenda includes sessions on AI agent integration, agentic frameworks, and Azure AI-powered tooling (AI rule 1, 3, 4). Assigned Azure category due to numerous Azure services featured, such as Azure App Service Managed Instance, Azure MCP, Azure Redis, Azure SQL (Azure rule 1, 2, 6). Assigned Coding category since the sessions are focused on modernizing .NET app code, using Visual Studio, integrating frameworks, and demonstrating technical patterns (Coding rules 1, 2, 4, 5). Assigned DevOps because content covers DevOps workflows, performance monitoring with SRE agents, and IaC strategies (DevOps rule 1, 3, 5, 6, 7). Included GitHub Copilot due to both its prominent mention and a dedicated session on using Copilot as a developer assistant (GitHub Copilot rule 1, 2, with critical note for also assigning AI category). Security was included owing to sessions on secure agent deployment for Azure SQL/Redis platforms, data protection, and monitoring (Security rule 1, 2, 7, 9). No generic exclusion rules apply: content is technical, implementation-focused, and ad-free event announcement for practitioners."
+  },
+  {
+    "timestamp": "2025-11-26 21:06:28 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=a5zof3lPOBE",
+    "reason": "Succesfully added: Assigned the AI category based on the session's clear focus on AI technologies and agents integrated with Microsoft's Power Platform (AI Inclusion Rule 1 and 4). The session discusses using AI-powered low-code development to modernize and scale business solutions. Coding and ML categories were not assigned because the content does not describe specific programming languages, ML architectures, or code-level development that meets those rules. The use of Power Platform and integration of AI agents fits AI but not DevOps, Azure, ML, or Security by their definitions. General exclusion rules do not apply since the content is technical, focused on practitioner solutions, and is in English. The excerpt and tags are generated to reflect the session’s focus on AI, Power Platform, and partner-driven innovation."
+  },
+  {
+    "timestamp": "2025-11-26 21:06:45 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=G29pCOwteb4",
+    "reason": "Succesfully added: Assigned AI category based on content discussing AI-powered real-time simulation, digital twins, and integration with NVIDIA AI libraries, as per AI inclusion rule 1 and 4. Assigned Azure category because multiple session segments explicitly reference using Azure Cloud for real-time traffic data processing, rapid AI model deployment, and as a key integration platform (Azure rule 1 and 4). Did not assign ML (content mostly focuses on using AI platforms and pre-built models rather than custom ML engineering) or DevOps/Coding/Security (no significant coverage of these practices). Generic exclusion rules do not apply: the session is technical, not biographical, sales-focused, negative, or non-English, and it meets quality standards for event content."
+  },
+  {
+    "timestamp": "2025-11-26 21:07:03 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=ih-2UjQGwZw",
+    "reason": "Succesfully added: Assigned AI category because the content centers around Microsoft Vision AI and real-time analytics for urban safety (AI rule 1, 4). Assigned Azure because the solution leverages Microsoft's cloud infrastructure for data unification and processing (Azure rule 1, 4, 5). Did not include Coding, DevOps, ML, Security categories, as the session focuses on solution integration, analytics, and simulation rather than development, deployment pipelines, machine learning engineering, or security implementation. Content is technical and implementation-focused, not a sales pitch or business strategy, and meets all inclusion and exclusion criteria."
+  },
+  {
+    "timestamp": "2025-11-26 21:07:36 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=jkOS0hlWIcw",
+    "reason": "Succesfully added: Assigned the Azure category because the session centers on Azure managed database solutions and partner pitching (Azure rule 1, 2, 5, 6). Assigned AI because the session highlights using Azure databases for AI workloads and references Microsoft's AI platform (AI rule 1, 5). Assigned ML because it mentions analytics and AI-driven solutions, which fall under advanced data analytics and ML workloads (ML rule 1, 4, 9). Content is a technical session for partners, not a business-only pitch, and discusses practical use cases and migration, qualifying it for technical categories."
+  },
+  {
+    "timestamp": "2025-11-26 21:08:06 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=kV3yjDYC8Hg",
+    "reason": "Succesfully added: Content qualifies for 'AI' because the session focuses directly on AI, discussing trust, auditing, and governance (AI rules 1, 4, and 5). 'Azure' is included due to references to 'Azure AI' apps/agents and connection to Microsoft Ignite, which features Azure-based solutions (Azure rules 1 and 4). Coding, ML, DevOps, GitHub Copilot, and Security categories are not included because the content does not engage directly in programming practices, ML engineering, DevOps processes, Copilot-specific tooling, or security architecture. The content meets quality standards: it's not biographical, not a sales pitch, not negative, and centrally discusses Microsoft technologies."
+  },
+  {
+    "timestamp": "2025-11-26 21:09:08 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/best-practices-for-migrating-cots-applications-to-microsoft/ba-p/4473323",
+    "reason": "Succesfully added: Assigned 'Azure' category because the entire content revolves around migrating applications to Microsoft Azure using Azure-specific services and frameworks (Azure rules 1, 4, 5, and 6). Assigned 'Security' because the content covers security best practices, including use of Microsoft Entra ID for identity, Microsoft Sentinel for monitoring, governance controls, and disaster recovery readiness (Security rules 1, 2, 4, 5, and 7). Did not assign Coding, DevOps, AI, ML, or GitHub Copilot, as there is no direct coverage of programming frameworks, code development, developer tooling, CI/CD, AI features, ML engineering, or GitHub Copilot-related topics. Content is technical, actionable, and in English, fully meeting content quality standards."
   }
 ]
