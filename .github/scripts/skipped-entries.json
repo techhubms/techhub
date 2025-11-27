@@ -10029,5 +10029,23 @@
     "timestamp": "2025-11-27 16:05:36 +00:00",
     "reason": "No categories found: Excluded all categories because the content is a general, conceptual comparison of solution architecture and software architecture with no substantive mention or focus on Microsoft technologies. It does not discuss Microsoft-specific frameworks, products, tooling, or cloud platforms as per category inclusion rules. Also, both the main text and tags do not contain references to Azure, .NET, Power Platform, or any other Microsoft-service or technical implementation details required for Coding, DevOps, Security, Azure, AI, or ML categories. According to the rule that Microsoft technology must be central or at least 40% of substantive content for inclusion, and since no Microsoft implementation or architecture is covered, no categories apply.",
     "collection": "posts"
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the content, while exploring solution architecture and governance thoroughly, does not specifically discuss Microsoft technologies, platforms, development tools, or coding practices as required by the inclusion rules. Although principles like cloud-first and zero-trust security are mentioned, there are no substantive details about Microsoft products (e.g., Azure, .NET), AI, ML, DevOps, or developer-focused Security topics. Generic exclusion rules do not apply since the post is technical and implementation-focused, but the required category linkage to Microsoft technology is missing. Tags were provided to enhance search/discovery as allowed when categories are empty.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/governance-in-solution-architecture-why-it-matters-and-how-to-get-it-right/",
+    "timestamp": "2025-11-27 17:06:24 +00:00"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules—this blog post is focused on general responsibilities and role description of a Solution Architect, addressing leadership, communication, business needs translation, and architectural strategy. While Microsoft Azure and related technologies are mentioned as examples, the discussion is high-level and platform-agnostic, and does not provide technical depth, implementation details, or hands-on guidance about Microsoft products or development practices. It does not qualify for any Microsoft technical categories defined (AI, Coding, DevOps, Azure, ML, Security) per the workflow rules. The content is primarily business strategy/role description and does not meet criteria for technical implementation.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/the-core-responsibilities-of-a-solution-architect/",
+    "timestamp": "2025-11-27 17:06:36 +00:00"
+  },
+  {
+    "reason": "No categories found: Excluded all categories due to generic exclusion rules. The content is a short feature announcement lacking substantive technical depth or developer-focused implementation details. It primarily advertises a new user interface feature for GitHub pull requests and includes promotional language (\"Check it out and let us know what you think!\"), generic calls-to-action, and marketing links. There is no technical tutorial, development practice, coding example, or actionable detail relating to Microsoft technologies, developer tools, or relevant architectures. According to Chapter 3 Content Quality Exclusions, announcement/sales-pitch style content without technical depth is excluded. Additionally, the content provided is mainly promotional and informational rather than educational or developer-focused.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/Z90tRzk84RM",
+    "timestamp": "2025-11-27 17:06:58 +00:00"
   }
 ]

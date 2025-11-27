@@ -20336,5 +20336,11 @@
     "timestamp": "2025-11-27 16:06:23 +00:00",
     "reason": "Succesfully added: This content qualifies for the Azure category as it centers on running, integrating, and securing SAP workloads on Microsoft Azure (Azure rule 1, 4, and 5). The AI category is included due to in-depth coverage of Azure OpenAI, AI Search, Cognitive Services, and the application of AI to SAP use cases (AI rules 1, 4, and 5). ML is also assigned because of comprehensive guidance on integrating SAP with Microsoft Fabric, Azure ML, and building data pipelines, analytics, and machine learning solutions (ML rules 1, 2, 4, 5, 6, and 9). Security is included based on detailed technical guidance around Defender for Cloud, Sentinel, Entra ID, Azure Firewall, Key Vault, and Zero Trust for SAP landscapes (Security rules 1, 4, 5, 7, and 9). No generic exclusion rules apply: the content is technical, in English, not biographical or sales-focused, and exceeds the length threshold for community posts.",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned both AI and GitHub Copilot categories: the content introduces the GitHub Copilot coding agent and its AI-based functionality inside Slack (AI rule 1 and GitHub Copilot rule 1). Copilot is being used as a developer tool for code generation and pull requests, not as a general productivity or business product, fitting the strict distinction required by Copilot rules. No other categories apply because there are no details about coding languages, DevOps processes, or Azure-related content.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=l37u8FrdhY0",
+    "timestamp": "2025-11-27 17:07:15 +00:00"
   }
 ]
