@@ -1,5 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const {
+  getExpectedLatestContent,
+  getLatestFileFromCollection,
   getLatestFileFromCollectionByCategory,
   SECTIONS,
   navigateAndVerify,
@@ -99,6 +101,30 @@ test.describe('Latest Content Display', () => {
 
     // Verify that the displayed title is not empty (content exists)
     expect(cleanDisplayedTitle.length).toBeGreaterThan(0);
+
+    // Conditional assertion: If helper found a latest item, verify it appears on the page
+    // Note: We don't enforce it's in first position because Jekyll's server-side rendering
+    // may apply different sorting/filtering logic (e.g., "20 + same-day" limiting)
+    // than our filesystem-based helper, but it should be present somewhere on the page.
+    if (expectedLatest && expectedLatest.title) {
+      const cleanExpectedTitle = expectedLatest.title.trim();
+      console.log(`🔍 Checking if expected latest item is present: "${cleanExpectedTitle}"`);
+
+      // Check if the expected title appears anywhere in the displayed items
+      const allTitles = await items.locator('.navigation-post-title').allTextContents();
+      const titleFound = allTitles.some(title => title.trim() === cleanExpectedTitle);
+
+      if (titleFound) {
+        console.log(`✅ Expected latest item found on page`);
+      } else {
+        console.log(`❌ Expected latest item not found on page.`);
+        console.log(`   Expected: "${cleanExpectedTitle}"`);
+        console.log(`   Available titles:`, allTitles.slice(0, 3).map(t => `"${t.trim()}"`));
+      }
+
+      // Hard assertion: filesystem helper should match server-side rendering exactly
+      expect(titleFound).toBe(true);
+    }
   }
 
   // Dynamic tests for all sections and collections based on sections.json

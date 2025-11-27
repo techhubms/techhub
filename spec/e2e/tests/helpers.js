@@ -72,6 +72,124 @@ function loadSectionsConfig() {
 const SECTIONS = loadSectionsConfig();
 
 /**
+ * Get the latest file from a Jekyll collection directory
+ * Applies 7-day recency filter to match server-side rendering logic
+ * @param {string} collectionPath - Path to the collection directory (e.g., '_posts', '_news')
+ * @returns {Object} - Object with filename, date, and parsed front matter
+ */
+async function getLatestFileFromCollection(collectionPath) {
+  const projectRoot = getProjectRoot();
+  const fullPath = path.join(projectRoot, collectionPath);
+
+  try {
+    if (!fs.existsSync(fullPath)) {
+      console.warn(`Collection directory not found: ${fullPath}`);
+      return null;
+    }
+
+    const files = fs.readdirSync(fullPath);
+    const markdownFiles = files.filter(file => file.endsWith('.md'));
+
+    if (markdownFiles.length === 0) {
+      console.warn(`No markdown files found in: ${fullPath}`);
+      return null;
+    }
+
+    // Calculate 7-day cutoff date and current date (matching server-side logic)
+    const now = new Date();
+    now.setHours(0, 0, 0, 0); // Normalize to midnight for comparison
+    const cutoffDate = new Date(now.getTime() - (7 * 24 * 60 * 60 * 1000));
+    cutoffDate.setHours(0, 0, 0, 0); // Normalize to midnight
+
+    // Parse all files to get dates and filter by recency
+    const recentFiles = [];
+
+    for (const file of markdownFiles) {
+      const filePath = path.join(fullPath, file);
+      const content = fs.readFileSync(filePath, 'utf8');
+
+      // Parse front matter
+      const frontMatterMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+      const frontMatter = {};
+
+      if (frontMatterMatch) {
+        const frontMatterText = frontMatterMatch[1];
+
+        // Parse title - handle both quoted and unquoted titles properly
+        let titleMatch = frontMatterText.match(/^title:\s*"([^"]*)"$/m);
+        if (!titleMatch) {
+          titleMatch = frontMatterText.match(/^title:\s*'([^']*)'$/m);
+        }
+        if (!titleMatch) {
+          titleMatch = frontMatterText.match(/^title:\s*(.+?)$/m);
+        }
+        if (titleMatch) {
+          frontMatter.title = titleMatch[1].trim();
+        }
+
+        // Parse date from front matter
+        const dateMatch = frontMatterText.match(/^date:\s*(.+?)$/m);
+        if (dateMatch) {
+          frontMatter.date = new Date(dateMatch[1].trim());
+        } else {
+          // Fallback to filename date
+          frontMatter.date = new Date(file.substring(0, 10));
+        }
+
+        // Parse tags if they exist
+        const tagsMatch = frontMatterText.match(/^tags:\s*\[(.*)\]$/m);
+        if (tagsMatch) {
+          frontMatter.tags = tagsMatch[1].split(',').map(tag => tag.trim().replace(/["']/g, ''));
+        }
+      } else {
+        // No front matter, use filename date
+        frontMatter.date = new Date(file.substring(0, 10));
+      }
+
+      // Normalize date to midnight for accurate comparison (matching server-side logic)
+      const normalizedDate = new Date(frontMatter.date);
+      normalizedDate.setHours(0, 0, 0, 0);
+
+      // Apply 7-day recency filter and exclude future dates (matching server-side logic)
+      if (normalizedDate >= cutoffDate && normalizedDate <= now) {
+        // Generate title from filename if not in front matter
+        if (!frontMatter.title) {
+          frontMatter.title = file
+            .substring(11) // Remove date prefix
+            .replace('.md', '')
+            .replace(/-/g, ' ')
+            .replace(/\b\w/g, l => l.toUpperCase());
+        }
+
+        frontMatter.filename = file;
+        frontMatter.path = filePath;
+        recentFiles.push(frontMatter);
+      }
+    }
+
+    // Sort by actual date (newest first) and return the latest
+    recentFiles.sort((a, b) => b.date - a.date);
+
+    if (recentFiles.length > 0) {
+      const latest = recentFiles[0];
+      return {
+        filename: latest.filename,
+        date: latest.date.toISOString().split('T')[0], // Format as YYYY-MM-DD
+        title: latest.title,
+        tags: latest.tags || [],
+        path: latest.path
+      };
+    }
+
+    console.log(`No recent files (within 7 days) found in: ${fullPath}`);
+    return null;
+  } catch (error) {
+    console.warn(`Could not read collection ${collectionPath}:`, error.message);
+    return null;
+  }
+}
+
+/**
  * Get the latest file from a Jekyll collection directory filtered by category
  * @param {string} collectionPath - Path to the collection directory (e.g., '_posts', '_news')
  * @param {string} category - Category to filter by (e.g., 'AI', 'GitHub Copilot')
@@ -103,6 +221,12 @@ async function getLatestFileFromCollectionByCategory(collectionPath, category) {
       const dateB = b.substring(0, 10);
       return dateB.localeCompare(dateA); // Newest first
     });
+
+    // Calculate current date for future date filtering (matching server-side logic)
+    const now = new Date();
+    now.setHours(0, 0, 0, 0); // Normalize to midnight for comparison
+    const cutoffDate = new Date(now.getTime() - (7 * 24 * 60 * 60 * 1000));
+    cutoffDate.setHours(0, 0, 0, 0); // Normalize to midnight
 
     // Parse all files to get actual dates and filter by category
     const categoryFiles = [];
@@ -152,8 +276,13 @@ async function getLatestFileFromCollectionByCategory(collectionPath, category) {
         }
       }
 
-      // Check if this file matches the category
-      if (frontMatter.categories && frontMatter.categories.includes(category)) {
+      // Normalize date to midnight for accurate comparison (matching server-side logic)
+      const normalizedDate = new Date(frontMatter.date);
+      normalizedDate.setHours(0, 0, 0, 0);
+
+      // Check if this file matches the category and is within date range (7 days back, no future dates)
+      if (frontMatter.categories && frontMatter.categories.includes(category) &&
+          normalizedDate >= cutoffDate && normalizedDate <= now) {
         // Generate title from filename if not in front matter
         if (!frontMatter.title) {
           frontMatter.title = file
@@ -193,84 +322,8 @@ async function getLatestFileFromCollectionByCategory(collectionPath, category) {
 }
 
 /**
- * Get the latest file from a Jekyll collection directory
- * @param {string} collectionPath - Path to the collection directory (e.g., '_posts', '_news')
- * @returns {Object} - Object with filename, date, and parsed front matter
- */
-async function getLatestFileFromCollection(collectionPath) {
-  const fullPath = path.join('/workspaces/techhub', collectionPath);
-
-  try {
-    const files = fs.readdirSync(fullPath);
-    const markdownFiles = files.filter(file => file.endsWith('.md'));
-
-    if (markdownFiles.length === 0) {
-      return null;
-    }
-
-    // Sort files by date (filename format: YYYY-MM-DD-title.md)
-    const sortedFiles = markdownFiles.sort((a, b) => {
-      const dateA = a.substring(0, 10); // Extract YYYY-MM-DD
-      const dateB = b.substring(0, 10);
-      return dateB.localeCompare(dateA); // Newest first
-    });
-
-    const latestFile = sortedFiles[0];
-    const fileDate = latestFile.substring(0, 10);
-
-    // Read the file content to get front matter
-    const filePath = path.join(fullPath, latestFile);
-    const content = fs.readFileSync(filePath, 'utf8');
-
-    // Parse front matter (basic parsing)
-    const frontMatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
-    const frontMatter = {};
-
-    if (frontMatterMatch) {
-      const frontMatterText = frontMatterMatch[1];
-      // Parse title - handle both quoted and unquoted titles properly
-      let titleMatch = frontMatterText.match(/^title:\s*"([^"]*)"/m);
-      if (!titleMatch) {
-        titleMatch = frontMatterText.match(/^title:\s*'([^']*)'/m);
-      }
-      if (!titleMatch) {
-        titleMatch = frontMatterText.match(/^title:\s*(.+?)$/m);
-      }
-      if (titleMatch) {
-        frontMatter.title = titleMatch[1].trim();
-      }
-
-      // Parse tags if they exist
-      const tagsMatch = frontMatterText.match(/^tags:\s*\[(.*?)\]/m);
-      if (tagsMatch) {
-        frontMatter.tags = tagsMatch[1].split(',').map(tag => tag.trim().replace(/["']/g, ''));
-      }
-    }
-
-    // Generate title from filename if not in front matter
-    if (!frontMatter.title) {
-      frontMatter.title = latestFile
-        .substring(11) // Remove date prefix
-        .replace('.md', '')
-        .replace(/-/g, ' ')
-        .replace(/\b\w/g, l => l.toUpperCase());
-    }
-
-    return {
-      filename: latestFile,
-      date: fileDate,
-      title: frontMatter.title,
-      tags: frontMatter.tags || [],
-      path: filePath
-    };
-  } catch (error) {
-    console.warn(`Could not read collection ${collectionPath}:`, error.message);
-    return null;
-  }
-}
-
-/**
  * Get expected latest content for each collection
+ * Uses 7-day recency filter to match server-side rendering logic
  * @returns {Object} - Object with collection names as keys and latest file info as values
  */
 async function getExpectedLatestContent() {
@@ -284,12 +337,12 @@ async function getExpectedLatestContent() {
   };
 
   // Log the expected content for debugging
-  console.log('📂 Expected Latest Content:');
+  console.log('📂 Expected Latest Content (with 7-day recency filter):');
   Object.entries(collections).forEach(([collection, info]) => {
     if (info) {
       console.log(`  ${collection}: ${info.title} (${info.date})`);
     } else {
-      console.log(`  ${collection}: No content found`);
+      console.log(`  ${collection}: No recent content found (within 7 days)`);
     }
   });
 
