@@ -9999,5 +9999,35 @@
     "collection": "news",
     "reason": "API call retries failed: All API call retries failed - no response received",
     "canonical_url": "https://devblogs.microsoft.com/all-things-azure/visualizing-github-audit-log-in-microsoft-defender/"
+  },
+  {
+    "timestamp": "2025-11-27 11:05:19 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: No Microsoft technologies, services, platforms, or developer tools are mentioned in the main content relating to the rejected AI-generated pull request for OCaml. The content focuses on Anthropic’s Claude Code, OCaml development practices, and general open source community reactions. While broader issues of AI in development are discussed, the only Microsoft-related elements are indirect references to industry trends and two minor links in unrelated news sidebar, which do not contribute substantively to the technical core. Per the strict multi-platform rule, Microsoft technologies are not central (well below the 40% threshold), and no category inclusion rules are triggered. Therefore, all categories are excluded.",
+    "canonical_url": "https://devclass.com/2025/11/27/ocaml-maintainers-reject-massive-ai-generated-pull-request/"
+  },
+  {
+    "reason": "No categories found: Generic exclusion rule applied. The core technical focus of the article is on the migration of the Zig programming language repository from GitHub to Codeberg, with GitHub referenced mainly in terms of CI/CD reliability, UI performance, and unwanted AI features. While Microsoft is mentioned as GitHub's parent company and its move to the CoreAI division is noted, the technical depth is primarily about challenges with GitHub and AI policies—not substantive usage or development of Microsoft technologies. There is no central coverage of Microsoft products, platforms, or technologies that fits the inclusion threshold. Per multi-platform content threshold and exclusion rules, categories like 'Azure', 'Coding', 'DevOps', 'AI', and 'Security' are not applicable—the article is primarily comparative and policy-focused with technical complaints, but does not provide actionable Microsoft technology guidance, code practice, or architectural patterns.",
+    "collection": "posts",
+    "timestamp": "2025-11-27 13:14:57 +00:00",
+    "canonical_url": "https://devclass.com/2025/11/27/zig-project-ditches-github-for-codeberg-but-move-could-be-costly/"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the 'content' field is null, providing no substantive text to evaluate. Without actual content, it's impossible to assess technical depth, category inclusion, or compliance with processing rules. Therefore, no categories can be assigned.",
+    "collection": "videos",
+    "timestamp": "2025-11-27 13:15:23 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/65x01_3ILD0"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/KurVz062iw4",
+    "collection": "videos",
+    "reason": "No categories found: No sufficient content was provided to perform categorization. The content field is null, and there is no description or tags containing technical detail. Without access to the main content or summary, it's not possible to determine if the content meets the threshold for any Microsoft technology categories as outlined in the rules. Following the rule to 'when in doubt, exclude' and only use information from the provided fields, all categories are excluded.",
+    "timestamp": "2025-11-27 15:06:17 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/what-is-solution-architecture-and-how-does-it-differ-from-software-architecture/",
+    "timestamp": "2025-11-27 16:05:36 +00:00",
+    "reason": "No categories found: Excluded all categories because the content is a general, conceptual comparison of solution architecture and software architecture with no substantive mention or focus on Microsoft technologies. It does not discuss Microsoft-specific frameworks, products, tooling, or cloud platforms as per category inclusion rules. Also, both the main text and tags do not contain references to Azure, .NET, Power Platform, or any other Microsoft-service or technical implementation details required for Coding, DevOps, Security, Azure, AI, or ML categories. According to the rule that Microsoft technology must be central or at least 40% of substantive content for inclusion, and since no Microsoft implementation or architecture is covered, no categories apply.",
+    "collection": "posts"
   }
 ]

@@ -20330,5 +20330,11 @@
     "collection": "community",
     "reason": "Succesfully added: Content is categorized under AI because it primarily focuses on accessible options for deploying AI solutions, leveraging Azure AI Foundry and Azure partner integrations (AI category rules 1, 3, 4). Azure category is also included because Azure is the foundational platform used for all deployment patterns discussed (Azure rules 1, 4, 5). Content is not primarily about custom ML engineering, so ML is not assigned. DevOps is mentioned, but only in Azure's developer positioning, not as a process or tool focus, so the DevOps category is excluded. Coding is not assigned as development work here relies mostly on platform templates and configuration, not deep code or framework focus. No generic exclusion rules apply: content is technical, in-depth, in English, and not a sales pitch or business/strategy focused.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlocking-your-first-ai-solution-on-azure-practical-paths-for/ba-p/4472327"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/transforming-sap-for-the-intelligent-enterprise-with-azure/ba-p/4473309",
+    "timestamp": "2025-11-27 16:06:23 +00:00",
+    "reason": "Succesfully added: This content qualifies for the Azure category as it centers on running, integrating, and securing SAP workloads on Microsoft Azure (Azure rule 1, 4, and 5). The AI category is included due to in-depth coverage of Azure OpenAI, AI Search, Cognitive Services, and the application of AI to SAP use cases (AI rules 1, 4, and 5). ML is also assigned because of comprehensive guidance on integrating SAP with Microsoft Fabric, Azure ML, and building data pipelines, analytics, and machine learning solutions (ML rules 1, 2, 4, 5, 6, and 9). Security is included based on detailed technical guidance around Defender for Cloud, Sentinel, Entra ID, Azure Firewall, Key Vault, and Zero Trust for SAP landscapes (Security rules 1, 4, 5, 7, and 9). No generic exclusion rules apply: the content is technical, in English, not biographical or sales-focused, and exceeds the length threshold for community posts.",
+    "collection": "community"
   }
 ]
