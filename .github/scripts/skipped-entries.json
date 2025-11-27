@@ -9927,5 +9927,77 @@
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/understanding-azure-ad-tenants-users-groups-and-roles-a/m-p/4473259#M812",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-11-26 17:06:18 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content description recounts a personal experience ('the dawning realization' of the Log4Shell crisis by a Log4j maintainer), focusing on the emotional and community impact of a major open-source vulnerability, not technical implementation, remediation, or development with Microsoft technologies. It primarily documents the maintainer's perspective and crisis awareness rather than presenting hands-on development with Microsoft tools or platforms, or discussing technical practices relevant to any defined category. No evidence of Coding, DevOps, Security (Microsoft-specific), AI, Azure, GitHub Copilot, or ML content, and the core is a high-level recount of events and open source impact. This qualifies as biographical/personal-content exclusion under the generic exclusion rules.",
+    "canonical_url": "https://www.youtube.com/shorts/5ALgu0n4R5s"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blogs.windows.com/msedgedev/2025/11/25/shop-smarter-with-copilot-in-edge-this-holiday-season/",
+    "timestamp": "2025-11-26 18:06:04 +00:00",
+    "reason": "No categories found: No categories assigned because the content is focused on Microsoft Copilot in Edge as a consumer productivity tool, not a developer tool or development-focused product. Per the Generic Exclusion Rules and Copilot Product Distinction in the prompt, business productivity and consumer Copilot tools such as Copilot in Edge, Microsoft 365 Copilot, or Bing Chat are explicitly excluded. The post describes shopping assistance, price tracking, and cashback features for end-users, not technical or development topics. None of the technical/developer category rules are triggered. Therefore, all categories are empty and content is excluded."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2025/11/26/xbox-cloud-gaming-expansion-india-brazil-argentina-countries/",
+    "timestamp": "2025-11-26 18:06:16 +00:00",
+    "reason": "No categories found: All categories were excluded because the content is focused on product availability, feature expansion, and user experience updates for Xbox Cloud Gaming (primarily a consumer gaming service), not Microsoft developer tools, programming, DevOps, Azure services, AI, ML, or security topics. It does not contain technical implementation details, code, or architecture relevant to any of the inclusion rules. Additionally, gaming end-user content is not included under any category per instructions."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=O9s3-VXNi94",
+    "timestamp": "2025-11-26 18:06:48 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: Non-English Content. The title and description are primarily in Portuguese ([ptBR], 'Open Source Friday', 'O Open Source Friday desta sexta vai ser um pouco diferente!', etc.), which means the content is not primarily in English and violates the Non-English Content exclusion in Chapter 3. No categories assigned."
+  },
+  {
+    "timestamp": "2025-11-26 21:06:11 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=7Abnhqs7Fqk",
+    "reason": "No categories found: Content excluded by generic exclusion rule: This material is high-level partner and business strategy content focused on Microsoft's leadership, partner engagement, recognition, initiatives, and alignment with fiscal priorities. It provides no technical implementation details or hands-on guidance related to Microsoft technologies. Descriptive phrases such as 'empowering partners,' 'drive enterprise customer transformation,' 'align with FY26 priorities,' and 'actionable next steps to deepen engagement and fuel growth' indicate a focus on organizational strategy rather than technical architecture or practitioner development. The session is part of Microsoft Ignite, but the information provided is clearly executive/strategy-focused, not technical, and does not qualify for any technology category under the workflow."
+  },
+  {
+    "timestamp": "2025-11-26 21:07:16 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=JE1i95e2nIk",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This video is focused on the Microsoft AI Cloud Partner Program, which covers business strategy, partner incentives, co-selling, onboarding, and go-to-market efforts. There is no substantive technical implementation, coding, architecture, or development focus. According to the rules in Chapter 3, business strategy, executive content, and partner enablement without technical depth must be excluded. The description emphasizes program evolution, growth, and incentives, which are all categorized as business and partnership content rather than technical implementation."
+  },
+  {
+    "timestamp": "2025-11-26 21:07:48 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=KfPKCHFvzQE",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The provided description focuses on business strategy, partner opportunities, co-selling investments, and market growth in Microsoft solutions, without substantial technical implementation details or practitioner-focused technical depth. This aligns with the exclusion of business strategy and executive-focused content according to Chapter 3 rules. Additionally, there is no technical information, code, or architecture discussed in the session description."
+  },
+  {
+    "timestamp": "2025-11-26 21:08:18 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=pArFDv2YARM",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The provided description is focused on high-level business strategy and executive content, discussing business transformation, strategic investments, and partner growth through Azure. It lacks substantive technical implementation details about Microsoft technologies, programming, or architecture. According to Chapter 3 exclusions ('Business Strategy and Executive Content'), this qualifies as business/partner strategy rather than technical content suitable for categorization."
+  },
+  {
+    "timestamp": "2025-11-26 21:08:31 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=vDX1WiuNaBU",
+    "reason": "No categories found: Content excluded based on generic exclusion rules. The description and title indicate a focus on business strategy, partner go-to-market alignment, customer impact, and scaling transformation across business functions with Copilot and agents. The session highlights partner collaboration, alignment with Microsoft's business strategy, GTM investments, sales, audit services, and operational model transformation rather than technical implementation. Microsoft 365 Copilot and Copilot for enterprises are referenced as productivity/business transformation tools and not developer or maker tools (see Non-Development Microsoft Products and Business Strategy and Executive Content exclusions; Copilot Product Distinction rules). There are no substantive technical development, coding, or architecture details about Microsoft technologies. Therefore, no categories are assigned."
+  },
+  {
+    "timestamp": "2025-11-26 21:08:43 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=zZ_e9FllzCw",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: The description and title indicate this session is focused on business strategy, partner engagement, organizational priorities, and transformation with Small and Medium Businesses. There is no evidence of technical implementation, development, coding, or Microsoft technical architecture. The content spotlights partner recognition, leadership, and actionable business next steps, which falls under Business Strategy and Executive Content exclusion and Workplace and Business Focus exclusion. The session is also associated with Microsoft Ignite, but the described content does not address specific technical or development topics required for category inclusion."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=matmvydKkmM",
+    "timestamp": "2025-11-26 22:06:14 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: This video is primarily focused on how Microsoft 365 Copilot integrates with Power Apps in business application scenarios, emphasizing productivity, collaboration, and employee workflow enhancement. The use of Microsoft 365 Copilot marks it as a business productivity tool, which falls under the explicit non-development products exclusion in Chapter 3. The description highlights usage patterns and interfaces for end-users rather than technical implementation, coding, or development-related content. There are no clear indications of developer-focused topics, configuration, architecture, or technical depth involving Microsoft technologies in a way that qualifies for the 'AI,' 'Coding,' 'Azure,' 'DevOps,' 'ML,' or 'Security' categories. The references to form automation and agent setup walkthroughs appear to be demonstrations of business process enhancement, not developer/architectural guidance. Per Copilot product distinction rules, all business productivity Copilot content is excluded."
+  },
+  {
+    "timestamp": "2025-11-27 08:09:59 +00:00",
+    "collection": "news",
+    "reason": "API call retries failed: All API call retries failed - no response received",
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/visualizing-github-audit-log-in-microsoft-defender/"
   }
 ]

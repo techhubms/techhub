@@ -1,0 +1,27 @@
+{
+  "Title": ".NET Day on Agentic Modernization Coming Soon",
+  "PubDate": "2025-11-26T21:00:00+00:00",
+  "ProcessedDate": "2025-11-26 21:02:36",
+  "FeedUrl": "https://devblogs.microsoft.com/dotnet/feed/",
+  "OutputDir": "_news",
+  "FeedLevelAuthor": ".NET Blog",
+  "FeedName": "Microsoft .NET Blog",
+  "Author": "Matt Soucoup",
+  "Link": "https://devblogs.microsoft.com/dotnet/dotnet-day-on-agentic-modernization-coming-soon/",
+  "EnhancedContent": "Join us on December 9, 2025 between 9AM-1PM Pacific for [.NET Day of Agentic Modernization](https://aka.ms/dotnet/agentic-mod)! This is a free, one-day virtual event focused on the latest tooling, techniques, and guidance for modernizing your .NET applications. Whether you’re upgrading legacy code, preparing for cloud workloads, or exploring how AI and agentic patterns fit into your architecture, this event will show you what’s possible with today’s tooling while keeping reliability, security, and developer control front and center. Buckle up because we’ll be demo heavy and you can get your questions answered live!\n\n[![.NET Day on Agentic Modernization event banner](https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2025/11/AgMod-banner.webp)](https://aka.ms/dotnet/agentic-mod)\n\n## Agenda\n\nWe have 8 great sessions throughout the event that will be broadcast live. Tune in and get your questions answered from the presenters!\n\n🚀 **Choose Your Modernization Adventure with GitHub Copilot** with Brady Gaster – See how GitHub Copilot and Visual Studio speed app modernization- upgrading code, fixing dependencies, and guiding secure, cloud-ready migrations into Azure.\n\n⚙️ **Agentic DevOps: Enhancing .NET Web Apps with Azure MCP** with Yun Jung Choi – Learn how AI-powered tooling and Azure MCP streamline .NET app development-code, storage, SQL, and IaC workflows-with faster, smarter Azure-ready delivery.\n\n🛡️ **Performance Guardrails: Azure SRE Agent Protecting Your .NET Apps from Regression** with Deepthi Chelupati and Shamir Abdul Aziz – Learn how Azure SRE Agent auto-detects .NET performance regressions, triggers safe rollbacks, and protects SLAs with intelligent monitoring and diagnostics.\n\n☁️ **No‑Code Modernization for ASP.NET with Managed Instance on Azure App Service** with Andrew Westgarth and Gaurav Seth – See how Azure App Service Managed Instance removes ASP.NET migration blockers-enabling fast modernization, better performance, lower TCO, and integration with modern agentic workflows.\n\n🤖 **Modernization Made Simple: Building Agentic Solutions in .NET** with Bruno Capuano – Learn how to add the Agent Framework to existing .NET apps – unlocking multi-agent collaboration, memory, and tool orchestration with practical, fast-start guidance.\n\n💪 **Bulletproof Agents with the Durable Task Extension for Microsoft Agent Framework** with Chris Gillum and Thiago Almeida – See how the Durable Extension for the Microsoft Agent Framework brings durable, distributed, deterministic, and debuggable AI agents to Azure—enabling reliable, scalable, production-ready agentic workflows.\n\n🔐 **Securely Unleash AI Agents on Azure SQL and SQL Server** with Davide Mauri – Learn how to let AI agents work safely with Azure SQL – enforcing strict security, least-privilege access, and schema-aware techniques that prevent data leaks and query errors.\n\n⚡ **Secure and Smart AI Agents Powered by Azure Redis** with Catherine Wang – See how Azure Redis powers secure, streamlined data access for .NET agentic apps – using MCP, Redis-backed tools, and modern security patterns to simplify development.\n\n## Tune in\n\nDon’t miss this opportunity to get practical, real-world guidance on modernizing .NET applications for Azure, AI, and agentic patterns. Mark your calendars and get ready for .NET Day on Agentic Modernization!\n\n[Register for .NET Day on Agentic Modernization](https://aka.ms/dotnet/agentic-mod)",
+  "Tags": [
+    ".NET",
+    "agent framework",
+    "agentic modernization",
+    "AI",
+    "AI agents",
+    "Azure",
+    "Cloud Native",
+    "Events",
+    "GitHub Actions",
+    "GitHub Copilot",
+    "Lifecycle",
+    "modernization"
+  ],
+  "Description": "Join us live on December 9 to explore the newest, most practical ways to modernize your .NET apps with Azure, AI, and powerful agentic tooling.\n\nThe post [.NET Day on Agentic Modernization Coming Soon](https://devblogs.microsoft.com/dotnet/dotnet-day-on-agentic-modernization-coming-soon/) appeared first on [.NET Blog](https://devblogs.microsoft.com/dotnet)."
+}
