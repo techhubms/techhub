@@ -20342,5 +20342,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=l37u8FrdhY0",
     "timestamp": "2025-11-27 17:07:15 +00:00"
+  },
+  {
+    "timestamp": "2025-11-27 19:05:57 +00:00",
+    "canonical_url": "https://www.thomasmaurer.ch/2025/11/__trashed/",
+    "reason": "Succesfully added: Included the AI and Azure categories. The content focuses on Azure AI Landing Zones—a Microsoft-provided solution for architecting, deploying, and managing AI workloads (AI rule 1, 4, 5; Azure rule 1, 4, 5). The text discusses governance, automation, and scalable deployments specifically for AI on Azure. There is no mention of software coding, DevOps, security-specific implementation, or hands-on ML/data science engineering, so Coding, DevOps, Security, and ML were not added. The content fits technical content guidelines, is not business-focused or biographical, and does not trigger any generic exclusion rules.",
+    "collection": "posts"
   }
 ]
