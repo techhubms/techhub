@@ -20318,5 +20318,17 @@
     "reason": "Succesfully added: Content qualifies for AI category due to substantial coverage of Azure AI services, AI Skills Navigator, and integration of AI skilling (AI rules 1, 4, and 6). Azure is central through labs, certification, and skilling platforms (Azure rule 1, 4, 5). Coding is included since developer learning journeys, GitHub Copilot, hands-on labs, and technical skill-building are a primary focus (Coding rules 4, 5). No generic exclusions triggered: content is technical, in English, not biographical, not sales-focused, and exceeds minimum word threshold for community. Tags prioritized technical depth and Microsoft technology/platform references.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/azure-skilling-at-microsoft-ignite-2025/ba-p/4472678"
+  },
+  {
+    "timestamp": "2025-11-27 08:10:59 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: The content qualifies for the 'Coding' category based on .NET background processing, code samples, and use of .NET/C# features (Coding rules 1, 2, and 4). 'Azure' is assigned since the pattern and examples align with cloud-native architectures and the original tags/community context connects to Azure (Azure rule 4); while not focused on a specific Azure service, BackgroundService and hosted tasks are closely associated with cloud and Azure deployment scenarios. No 'DevOps', 'AI', 'ML', 'Security', or 'GitHub Copilot' categories apply as there's no coverage of those domains or products.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/background-tasks-in-net/ba-p/4472341"
+  },
+  {
+    "timestamp": "2025-11-27 08:11:22 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Content is categorized under AI because it primarily focuses on accessible options for deploying AI solutions, leveraging Azure AI Foundry and Azure partner integrations (AI category rules 1, 3, 4). Azure category is also included because Azure is the foundational platform used for all deployment patterns discussed (Azure rules 1, 4, 5). Content is not primarily about custom ML engineering, so ML is not assigned. DevOps is mentioned, but only in Azure's developer positioning, not as a process or tool focus, so the DevOps category is excluded. Coding is not assigned as development work here relies mostly on platform templates and configuration, not deep code or framework focus. No generic exclusion rules apply: content is technical, in-depth, in English, and not a sales pitch or business/strategy focused.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlocking-your-first-ai-solution-on-azure-practical-paths-for/ba-p/4472327"
   }
 ]

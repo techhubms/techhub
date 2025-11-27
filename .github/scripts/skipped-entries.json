@@ -9993,5 +9993,11 @@
     "timestamp": "2025-11-26 22:06:14 +00:00",
     "collection": "videos",
     "reason": "No categories found: Content excluded due to generic exclusion rules: This video is primarily focused on how Microsoft 365 Copilot integrates with Power Apps in business application scenarios, emphasizing productivity, collaboration, and employee workflow enhancement. The use of Microsoft 365 Copilot marks it as a business productivity tool, which falls under the explicit non-development products exclusion in Chapter 3. The description highlights usage patterns and interfaces for end-users rather than technical implementation, coding, or development-related content. There are no clear indications of developer-focused topics, configuration, architecture, or technical depth involving Microsoft technologies in a way that qualifies for the 'AI,' 'Coding,' 'Azure,' 'DevOps,' 'ML,' or 'Security' categories. The references to form automation and agent setup walkthroughs appear to be demonstrations of business process enhancement, not developer/architectural guidance. Per Copilot product distinction rules, all business productivity Copilot content is excluded."
+  },
+  {
+    "timestamp": "2025-11-27 08:09:59 +00:00",
+    "collection": "news",
+    "reason": "API call retries failed: All API call retries failed - no response received",
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/visualizing-github-audit-log-in-microsoft-defender/"
   }
 ]
