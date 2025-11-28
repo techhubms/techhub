@@ -20360,5 +20360,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-service-ai-scenarios-complete-sample-with-ai-foundry/ba-p/4473142",
     "timestamp": "2025-11-28 11:05:44 +00:00"
+  },
+  {
+    "canonical_url": "https://roadtoalm.com/2025/11/28/english-as-the-new-programming-language/",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned AI category due to the focus on AI-powered development tools such as GitHub Copilot and ChatGPT (AI inclusion rule 2 and 6). Assigned GitHub Copilot category because the article discusses its role as a developer assistant for code generation, making code accessible via natural language inputs (GitHub Copilot rules 1-4). Assigned Coding category since the content addresses how coding practices and developer skills evolve with natural language and AI tools (Coding rules 1, 4, 5). Did not assign other categories since the discussion centers on AI-driven tooling and programming practices, not DevOps, Azure, ML/Data, or Security specifics.",
+    "timestamp": "2025-11-28 15:05:59 +00:00"
   }
 ]

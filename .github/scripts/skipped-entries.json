@@ -10053,5 +10053,23 @@
     "canonical_url": "https://www.youtube.com/shorts/p8utnSbgSZk",
     "timestamp": "2025-11-28 03:24:46 +00:00",
     "reason": "No categories found: Content excluded under generic exclusion rules: the main 'content' field is null, so there is no substantive text to review for technical merit or category assignment. The title and description are extremely brief, containing only a hashtag and general terms like 'Install MCP servers in your workspace,' without any technical details or context indicating which Microsoft technologies or developer topics are covered. Without content, we cannot evaluate inclusion rules for categories such as Coding, Azure, AI, etc. Additionally, the available information consists almost entirely of tags and a non-informative title, which falls under the exclusion for low-substance or minimal posts."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/news-insights/company-news/the-ultimate-gift-guide-for-the-developer-in-your-life/",
+    "timestamp": "2025-11-28 13:13:30 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this post is a sales pitch focused on gift items from the GitHub Shop. It concentrates on merchandise, apparel, and accessories, with no substantial technical or educational information about Microsoft technologies or developer tooling. According to the 'Sales Pitches' exclusion rule and 'Content Quality Exclusions' in Chapter 3, promotional content without technical depth is not eligible for categorization. Additionally, references to developer culture are thematic only and do not convey actionable technical knowledge."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/q-RtVi3yNXM",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the input contains no substantive content. The 'content' field is null and both 'description' and 'tags' fields are empty, so there is no technical information to process or qualify for Microsoft technology categories.",
+    "timestamp": "2025-11-28 15:06:21 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=R38EVyZk57A",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded because the 'content' field is null and the available description consists entirely of promotional material, social media links, and generic video instructions (like comment, subscribe) without any substantive technical content. The snippet mentioning adding a new feature in C# is too vague and does not provide enough detail to confirm adherence to any inclusion rule. Generic exclusion rules, specifically lack of substantive technical content, are triggered.",
+    "timestamp": "2025-11-28 15:06:33 +00:00"
   }
 ]
