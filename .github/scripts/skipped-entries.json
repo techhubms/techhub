@@ -10047,5 +10047,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/Z90tRzk84RM",
     "timestamp": "2025-11-27 17:06:58 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/p8utnSbgSZk",
+    "timestamp": "2025-11-28 03:24:46 +00:00",
+    "reason": "No categories found: Content excluded under generic exclusion rules: the main 'content' field is null, so there is no substantive text to review for technical merit or category assignment. The title and description are extremely brief, containing only a hashtag and general terms like 'Install MCP servers in your workspace,' without any technical details or context indicating which Microsoft technologies or developer topics are covered. Without content, we cannot evaluate inclusion rules for categories such as Coding, Azure, AI, etc. Additionally, the available information consists almost entirely of tags and a non-informative title, which falls under the exclusion for low-substance or minimal posts."
   }
 ]
