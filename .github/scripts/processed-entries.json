@@ -20354,5 +20354,11 @@
     "timestamp": "2025-11-28 10:06:19 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/upcoming-live-stream-building-ai-agents-with-the-ai-toolkit/ba-p/4473350"
+  },
+  {
+    "reason": "Succesfully added: Content qualifies for AI category due to detailed guidance and production code for Azure AI Foundry (AI inclusion rules 1 and 4). Azure category is assigned because the solution is built and deployed on Azure App Service and uses Azure resources (Azure rule 1). Coding category is justified because the integration steps involve Python, Flask, code samples, dependency management, and extending app functionality (Coding rules 1, 4, and 5). Security is included because managed identity, RBAC, Microsoft Defender, and secure configuration steps are specifically covered (Security rules 1, 7, 10). No generic exclusions apply; content is deeply technical, English, not a sales pitch or biographical, well above length minimum, and focused on engineering implementation.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-service-ai-scenarios-complete-sample-with-ai-foundry/ba-p/4473142",
+    "timestamp": "2025-11-28 11:05:44 +00:00"
   }
 ]
