@@ -20372,5 +20372,17 @@
     "reason": "Succesfully added: Assigned the DevOps category because the video covers version control practices (DevOps rule 8) and repository organization essential for collaborative software development. The content is focused on technical implementation and best practices for Git and GitHub, without crossing into Coding, AI, ML, Azure, Security, or GitHub Copilot-specific topics. There are no generic exclusion rule triggers: no sales pitch, biographical focus, or business strategy content. The technical depth and target audience are directly aligned with the DevOps inclusion criteria.",
     "timestamp": "2025-11-28 16:05:53 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/0qdRS3xYwIY"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-november-2025/",
+    "timestamp": "2025-11-28 17:05:15 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned ML category as several featured blog posts and videos focus on data engineering, data warehousing, and data science topics using Microsoft Fabric (ML rule 1,2,3,4). Assigned Azure category due to content covering Azure Tenants for platform architecture (Azure rule 1,5,6). Assigned Coding owing to developer-oriented tutorials (Power BI DAX, Power Query M, GraphQL, Row Level Security via Entra ID group expansion) fitting Coding rules 1, 4. Did not assign AI, DevOps, or Security since these topics are mentioned only peripherally and not central in the current spotlight edition. Generic exclusion rules did not apply: the content is technically focused, multi-author, substantive, and does not fall into biographic, sales-pitch, language, or business strategy exclusions."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=HxO4aWyHmdE",
+    "timestamp": "2025-11-28 17:05:55 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Content qualifies for multiple categories. 'Azure' is assigned because the update details a range of Azure cloud services and enhancements (Azure rules 1, 4, 5). 'DevOps' is included due to coverage on infrastructure tools such as Azure Functions custom handlers and Azure Load Testing (DevOps rules 1, 5, 6). 'Coding' is assigned for updates like Regex in T-SQL, Azure Functions configuration, and programming-related improvements (Coding rules 1, 4). 'ML' is included for Azure Machine Learning low-priority VM retirement and Claude Opus 4.5 in Foundry (ML rules 1, 9). No generic exclusion rules applied; content is technical, update-focused, and centrally features Microsoft technologies."
   }
 ]
