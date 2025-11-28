@@ -20366,5 +20366,11 @@
     "collection": "posts",
     "reason": "Succesfully added: Assigned AI category due to the focus on AI-powered development tools such as GitHub Copilot and ChatGPT (AI inclusion rule 2 and 6). Assigned GitHub Copilot category because the article discusses its role as a developer assistant for code generation, making code accessible via natural language inputs (GitHub Copilot rules 1-4). Assigned Coding category since the content addresses how coding practices and developer skills evolve with natural language and AI tools (Coding rules 1, 4, 5). Did not assign other categories since the discussion centers on AI-driven tooling and programming practices, not DevOps, Azure, ML/Data, or Security specifics.",
     "timestamp": "2025-11-28 15:05:59 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the DevOps category because the video covers version control practices (DevOps rule 8) and repository organization essential for collaborative software development. The content is focused on technical implementation and best practices for Git and GitHub, without crossing into Coding, AI, ML, Azure, Security, or GitHub Copilot-specific topics. There are no generic exclusion rule triggers: no sales pitch, biographical focus, or business strategy content. The technical depth and target audience are directly aligned with the DevOps inclusion criteria.",
+    "timestamp": "2025-11-28 16:05:53 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/0qdRS3xYwIY"
   }
 ]
