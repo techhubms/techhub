@@ -20402,5 +20402,11 @@
     "canonical_url": "https://dellenny.com/the-evolution-of-conversational-ai-in-microsofts-ecosystem/",
     "collection": "posts",
     "timestamp": "2025-11-28 18:07:02 +00:00"
+  },
+  {
+    "timestamp": "2025-11-28 19:05:12 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=EXEtRc8oQ7E",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on building LLM-based (AI-powered) applications and developer training around this topic. Security category included due to emphasis on secure coding practices and risk mitigation in the context of AI. Coding category included as the episode discusses engineering and code-level decisions to build secure applications. Exclusion rules do not apply since the core is technical, educational, and development-focused, with Microsoft-relevant technologies (GitHub) strongly represented."
   }
 ]
