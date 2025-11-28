@@ -20408,5 +20408,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=EXEtRc8oQ7E",
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI category because the content focuses on building LLM-based (AI-powered) applications and developer training around this topic. Security category included due to emphasis on secure coding practices and risk mitigation in the context of AI. Coding category included as the episode discusses engineering and code-level decisions to build secure applications. Exclusion rules do not apply since the core is technical, educational, and development-focused, with Microsoft-relevant technologies (GitHub) strongly represented."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/context-engineering-recipes-the-cognitive-verifier-pattern.html",
+    "timestamp": "2025-11-28 20:05:33 +00:00",
+    "reason": "Succesfully added: Assigned the 'GitHub Copilot' category because the content exclusively focuses on Copilot usage strategies (GitHub Copilot inclusion rule 1) and practical prompt engineering applied to Copilot (rules 2, 3, and 4). Added the 'AI' category because the guidance relates to AI-powered developer tools (AI rule 2 and 5). No other categories applied as content does not cover coding practices beyond prompt engineering, nor does it involve Azure, DevOps, ML, or Security topics."
   }
 ]
