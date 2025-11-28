@@ -20384,5 +20384,23 @@
     "timestamp": "2025-11-28 17:05:55 +00:00",
     "collection": "videos",
     "reason": "Succesfully added: Content qualifies for multiple categories. 'Azure' is assigned because the update details a range of Azure cloud services and enhancements (Azure rules 1, 4, 5). 'DevOps' is included due to coverage on infrastructure tools such as Azure Functions custom handlers and Azure Load Testing (DevOps rules 1, 5, 6). 'Coding' is assigned for updates like Regex in T-SQL, Azure Functions configuration, and programming-related improvements (Coding rules 1, 4). 'ML' is included for Azure Machine Learning low-priority VM retirement and Claude Opus 4.5 in Foundry (ML rules 1, 9). No generic exclusion rules applied; content is technical, update-focused, and centrally features Microsoft technologies."
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the central topic is Microsoft Copilot Studio—a developer/maker tool for building AI-powered conversational bots (AI rule 1) with explicit mention of features like integration with Azure OpenAI Service and LLM capabilities. Although M365 Copilot is mentioned in the tags, the post focuses on Copilot Studio (which is a low-code developer/automation tool, not a productivity Copilot), and discusses development/technical aspects, satisfying the inclusion criteria for AI. The content does not qualify for Coding or DevOps (no material on code, frameworks, pipelines, or operations), nor ML (no custom model development or data analytics). Azure is not the architectural center, but rather a component via OpenAI integration, and Security aspects are only briefly touched for compliance, not as implementation. Thus, only AI is assigned.",
+    "canonical_url": "https://dellenny.com/comparing-copilot-studio-with-dialogflow-and-ibm-watson-assistant-which-conversational-ai-platform-is-best-in-2025/",
+    "collection": "posts",
+    "timestamp": "2025-11-28 18:06:16 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Categories 'AI' and 'GitHub Copilot' were assigned. 'GitHub Copilot' is the central technology discussed, focusing exclusively on its usage in developer workflows (GitHub Copilot rule 1). 'AI' is included per the rule that GitHub Copilot content must always be categorized as both 'AI' and 'GitHub Copilot' (AI rule 2). Other categories (Coding, Azure, etc.) were not added because the content, while technical and Python-focused, does not specifically address Microsoft's development platforms, tools, or Azure services—it instead emphasizes general productivity with Copilot in Python. The explanation section demonstrates compliance with all relevant rules and confirms no exclusion rules apply.",
+    "canonical_url": "https://dellenny.com/github-copilot-for-python-real-world-coding-scenarios-practical-examples/",
+    "collection": "posts",
+    "timestamp": "2025-11-28 18:06:38 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the core focus is on the evolution and technical strategy of conversational AI within Microsoft's ecosystem, matching AI inclusion rules (AI rule 1, Microsoft AI history and strategic initiatives; AI rule 4, use of Microsoft platforms for AI development; AI rule 5, business and platform implications). Did not assign other categories: 'GitHub Copilot' is discussed only in a passing example (not in-depth or as the primary content), so per coding rules, it does not qualify. No explicit technical code, architecture, or detailed Azure implementation guides are provided, so Coding, Azure, DevOps, ML, and Security are not directly addressed. Microsoft 365 Copilot and Copilot for Microsoft 365 are mentioned, but per the Copilot Product Distinction, these types do not trigger category inclusion unless focused on developer tooling, which is not the main subject here—the narrative is about Microsoft's AI evolution and ecosystem strategy.",
+    "canonical_url": "https://dellenny.com/the-evolution-of-conversational-ai-in-microsofts-ecosystem/",
+    "collection": "posts",
+    "timestamp": "2025-11-28 18:07:02 +00:00"
   }
 ]
