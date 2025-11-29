@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "**Tomas Herceg** lives in Prague, Czech Republic, and runs a software consulting company called **RIGANTI**.\n\nHe has been doing .NET development since the time of .NET Framework 1.0. He got his first **Microsoft MVP** award in 2009, and for a couple of years, he was also a **Microsoft Regional Director**. He is also running **Update Conference**, a company that organizes developer events focused on .NET, cloud, and security. Many people might also know him because of his recent book about modernizing .NET web applications.\n\nTomas’s open-source journey started in 2014 when he had the idea of creating a framework that lets you build web apps with just C# and HTML. He made a simple prototype, published it on GitHub, and demoed it in one of his conference sessions. Surprisingly, the next day someone submitted a pull request. He contacted that person, and they decided to continue working on the idea and see what happens.\n\nThat is how the **DotVVM** project started. Tomas and his team have been contributing to it for more than 10 years, adding hundreds of features, tests, and documentation pages. Over the years, more people have been helping with the development. They use the framework intensively at RIGANTI and are committed to its long-term sustainability. Therefore, they built a bunch of commercial extensions and components for DotVVM, which helps them secure funding for future improvements to the open-source framework.\n\n**DotVVM** is an opinionated framework that enables building web apps using the Model-View-ViewModel (MVVM) approach with just C# and HTML. It requires only about 56kB of JavaScript on the client, and it can be used to build feature-rich UI interfaces. The framework supports both ASP.NET Core and classic ASP.NET, providing an easy way to incrementally modernize ASP.NET Web Forms applications. DotVVM comes with 30+ built-in components, and there is also an extension for Visual Studio and Visual Studio Code.\n\n**Links:** [https://github.com/riganti/dotvvm](https://github.com/riganti/dotvvm) [https://tomasherceg.com](https://tomasherceg.com) [https://modernizationbook.com](https://modernizationbook.com)",
+  "Description": "Tomas Herceg lives in Prague, Czech Republic, and runs a software consulting company called RIGANTI.He has been doing .NET development since the time of .NET Framework 1.0.",
+  "PubDate": "2025-11-29T13:41:25+00:00",
+  "ProcessedDate": "2025-11-29 14:03:54",
+  "Author": ".NET Foundation News and Blog",
+  "Link": "https://dotnetfoundation.org/news-events/detail/member-spotlight-tomas-herceg",
+  "FeedUrl": "https://dotnetfoundation.org/feeds/blog",
+  "Title": "Member Spotlight: Tomas Herceg",
+  "OutputDir": "_posts",
+  "FeedName": ".NET Foundation's Blog",
+  "FeedLevelAuthor": ".NET Foundation News and Blog",
+  "Tags": []
+}

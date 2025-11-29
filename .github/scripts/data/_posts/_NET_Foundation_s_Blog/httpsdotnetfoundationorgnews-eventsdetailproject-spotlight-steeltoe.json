@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "**Steeltoe** provides a collection of libraries that helps users build production-grade cloud-native applications using externalized configuration, service discovery, distributed tracing, application management, and more.\n\n**Steeltoe is proven:** Trusted by developers all over the world, delivering delightful experiences to millions of end-users every day, with contributions from VMware, Microsoft, and more.\n\n**Steeltoe is flexible:** Its comprehensive extensions and third-party libraries let developers build almost any web application imaginable—whether cloud-scale microservices or heavyweight enterprise applications.\n\n**Steeltoe is productive:** Steeltoe builds on .NET runtime libraries, provides the necessary glue code, and supports many of Spring Cloud’s libraries, patterns, and templates.\n\n**Steeltoe is fast:** Developer productivity is one of Steeltoe's superpowers. Start a new project in seconds with the Steeltoe Initializr at start.steeltoe.io.\n\n**Steeltoe is secure:** Steeltoe remediates security issues quickly and responsibly, monitors dependencies, and provides industry-standard security integrations.\n\n**Steeltoe is supportive:** Its global, diverse community offers guides, tutorials, videos, support, and access to the development team on Slack.\n\n### What Steeltoe Can Do\n\n- **Microservices:** Production-grade features with independently evolvable services.\n- **Cloud:** Your code, any cloud—connect and scale your services.\n- **Web Apps:** Fast, secure, responsive applications connected to any data store.\n\n**Link:** [https://steeltoe.io/](https://steeltoe.io/)",
+  "Description": "Steeltoe provides a collection of libraries that helps users build production-grade cloud-native applications using externalized configuration, service discovery, distributed tracing, application management, and more.",
+  "PubDate": "2025-11-29T13:46:22+00:00",
+  "ProcessedDate": "2025-11-29 14:03:54",
+  "Author": ".NET Foundation News and Blog",
+  "Link": "https://dotnetfoundation.org/news-events/detail/project-spotlight-steeltoe",
+  "FeedUrl": "https://dotnetfoundation.org/feeds/blog",
+  "Title": "Project Spotlight: Steeltoe",
+  "OutputDir": "_posts",
+  "FeedName": ".NET Foundation's Blog",
+  "FeedLevelAuthor": ".NET Foundation News and Blog",
+  "Tags": []
+}

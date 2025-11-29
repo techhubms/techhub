@@ -10071,5 +10071,17 @@
     "collection": "videos",
     "reason": "No categories found: Content excluded because the 'content' field is null and the available description consists entirely of promotional material, social media links, and generic video instructions (like comment, subscribe) without any substantive technical content. The snippet mentioning adding a new feature in C# is too vague and does not provide enough detail to confirm adherence to any inclusion rule. Generic exclusion rules, specifically lack of substantive technical content, are triggered.",
     "timestamp": "2025-11-28 15:06:33 +00:00"
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-do-i-manage-app-permissions-in-windows-11/",
+    "timestamp": "2025-11-29 11:05:00 +00:00",
+    "reason": "No categories found: No categories assigned because the content is about managing privacy and app permissions in Windows 11, which focuses on user privacy and settings usage rather than development, coding, security architecture, DevOps, AI, ML, or Azure-specific technical implementation. It does not discuss application development, programming, deployment, or Microsoft developer technologies; instead, it instructs end-users on protecting personal information and configuring system privacy—meeting the 'Non-Development Microsoft Products' generic exclusion rule for Windows end-user features. No technical engineering, code samples, or developer-focused material is provided."
+  },
+  {
+    "canonical_url": "https://dotnetfoundation.org/news-events/detail/member-spotlight-tomas-herceg",
+    "collection": "posts",
+    "reason": "No categories found: The content is excluded due to the generic exclusion rule for biographical focus. The main content centers on Tomas Herceg's career, achievements, and personal journey, including his early experience, awards, conference organization, open-source journey, and company activities. Although DotVVM and .NET development are mentioned, the primary focus is on spotlighting the individual, not providing substantive technical implementation guidance or hands-on knowledge. This matches the 'Biographical Focus' exclusion in Chapter 3.",
+    "timestamp": "2025-11-29 14:05:03 +00:00"
   }
 ]

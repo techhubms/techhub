@@ -20426,5 +20426,11 @@
     "reason": "Succesfully added: Categories assigned based on technical depth: 'Azure' for use of several Azure platform features (Vault, networking, endpoints), 'Security' for focus on isolation, encryption, RBAC, managed identities, and compliance, and 'DevOps' for backup/restore procedures, automation with Bicep/Terraform, and operational considerations. No ML, AI, Coding, or GitHub Copilot content. Generic exclusion rules do not apply—post is technical, sufficiently lengthy, and entirely focused on secure Azure service implementation.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-confidential-computing/securing-confidential-vm-backups-with-azure-recovery-services/ba-p/4458965",
     "timestamp": "2025-11-29 09:05:50 +00:00"
+  },
+  {
+    "canonical_url": "https://dotnetfoundation.org/news-events/detail/project-spotlight-steeltoe",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the Coding category because Steeltoe is a set of .NET libraries intended for development and code-focused solutions (Coding rule 1 and 2). The content emphasizes programming, microservices architecture, developer productivity, and integration with .NET and Spring Cloud, but does not focus on Azure, AI, ML, DevOps, or Security as primary topics. There is mention of security integrations but only as a feature, not as the main theme, so the Security category does not apply. No other categories are relevant based on the provided content.",
+    "timestamp": "2025-11-29 14:05:20 +00:00"
   }
 ]
