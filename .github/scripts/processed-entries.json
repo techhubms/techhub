@@ -20420,5 +20420,11 @@
     "collection": "posts",
     "reason": "Succesfully added: Categories assigned as follows: Azure category due to heavy usage of Azure services, CLI, and Trusted Signing (Azure rule 1 and 4). DevOps category is included because the guide specifically integrates signing into CI/CD workflows using GitHub Actions (DevOps rule 5). Coding category added because there is use of the dotnet sign tool, scripting, and .NET code signing (Coding rules 2 and 5). Security category assigned due to detailed code signing certificate usage, digital signatures, and Windows SmartScreen reputation (Security rules 1, 2, and 9). 'AI' and 'GitHub Copilot' are not included since Copilot is only mentioned as an incidental assistant and not a technical topic of the post (AI and GitHub Copilot inclusion rules). All decisions and tags follow extraction priorities as outlined in prompt.",
     "canonical_url": "https://www.hanselman.com/blog/automatically-signing-a-windows-exe-with-azure-trusted-signing-dotnet-sign-and-github-actions"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Categories assigned based on technical depth: 'Azure' for use of several Azure platform features (Vault, networking, endpoints), 'Security' for focus on isolation, encryption, RBAC, managed identities, and compliance, and 'DevOps' for backup/restore procedures, automation with Bicep/Terraform, and operational considerations. No ML, AI, Coding, or GitHub Copilot content. Generic exclusion rules do not apply—post is technical, sufficiently lengthy, and entirely focused on secure Azure service implementation.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-confidential-computing/securing-confidential-vm-backups-with-azure-recovery-services/ba-p/4458965",
+    "timestamp": "2025-11-29 09:05:50 +00:00"
   }
 ]
