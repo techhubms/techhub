@@ -1,0 +1,18 @@
+{
+  "OutputDir": "_videos",
+  "FeedName": "GitHub YouTube",
+  "Author": "GitHub",
+  "PubDate": "2025-11-29T15:00:51+00:00",
+  "ProcessedDate": "2025-11-29 16:04:34",
+  "Tags": [
+    "GitHub",
+    "GitHubCopilot",
+    "GitHubUniverse"
+  ],
+  "Description": "The year of the agent ushered in vibe coding — asking an AI agent like GitHub Copilot to build and going with the flow. But too often we’re Icarus with a keyboard and flying too close to the sun. Agents can overwrite files, expose API keys, or hallucinate broken flows. In this GitHub Universe 2025 talk, Rizel will explain how the Model Context Protocol (MCP) adds structure and context, helping developers avoid these pitfalls. Using GitHub’s MCP server, she will demo safer prompt engineering, better AI observability, and how to keep the vibes high and the bugs low.\n\nSpeaker: Rizel Scarlett, Tech Lead of Open Source Developer Relations, Block (Speaker)\n\n#GitHubCopilot #GitHubUniverse #GitHub\n\n— CHAPTERS —\n\n00:00 Introduction to responsible vibe coding 01:27 Defining vibe coding versus vibe engineering 03:33 Three principles for responsible AI coding 04:00 Power: Selecting the right LLM capabilities 05:10 Context: Why AI needs specific details 07:11 Introduction to Model Context Protocol (MCP) 07:51 Exploring the GitHub MCP server capabilities 08:58 Demo: Creating GitHub issues with Goose and MCP 10:00 Demo: Visualizing team workloads with MCP UI 11:25 Control: Staying engaged with Agent Client Protocol 13:28 Conclusion: You are the pilot\n\nWatch more videos from GitHub Universe 2025: https://www.youtube.com/watch?v=q1IxyisKcZI&list=PL0lo9MOBetEFKNlPHNouEmVeYeyoyGTXC\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 100 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "Title": "How to vibe code responsibly (with a little help from MCPs)",
+  "Link": "https://www.youtube.com/watch?v=PvdptUZ3XeU",
+  "FeedLevelAuthor": "GitHub",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "EnhancedContent": null
+}

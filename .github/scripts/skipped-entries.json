@@ -10083,5 +10083,11 @@
     "collection": "posts",
     "reason": "No categories found: The content is excluded due to the generic exclusion rule for biographical focus. The main content centers on Tomas Herceg's career, achievements, and personal journey, including his early experience, awards, conference organization, open-source journey, and company activities. Although DotVVM and .NET development are mentioned, the primary focus is on spotlighting the individual, not providing substantive technical implementation guidance or hands-on knowledge. This matches the 'Biographical Focus' exclusion in Chapter 3.",
     "timestamp": "2025-11-29 14:05:03 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/zWo6IqAfehE",
+    "reason": "No categories found: Content excluded due to generic exclusion rule. The 'content' field is null, meaning there is no substantive content present for evaluation. Without content, it is impossible to determine technical depth, applicability to predefined Microsoft categories, or adherence to quality standards. According to the workflow, exclusion rules apply when content is missing or insufficient for processing.",
+    "timestamp": "2025-11-29 15:05:12 +00:00",
+    "collection": "videos"
   }
 ]

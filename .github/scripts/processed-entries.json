@@ -20432,5 +20432,11 @@
     "collection": "posts",
     "reason": "Succesfully added: Assigned the Coding category because Steeltoe is a set of .NET libraries intended for development and code-focused solutions (Coding rule 1 and 2). The content emphasizes programming, microservices architecture, developer productivity, and integration with .NET and Spring Cloud, but does not focus on Azure, AI, ML, DevOps, or Security as primary topics. There is mention of security integrations but only as a feature, not as the main theme, so the Security category does not apply. No other categories are relevant based on the provided content.",
     "timestamp": "2025-11-29 14:05:20 +00:00"
+  },
+  {
+    "timestamp": "2025-11-29 16:05:36 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Content qualifies for categories 'AI', 'GitHub Copilot', and 'Coding'. 'AI' category is assigned because the session focuses on AI agents like Copilot and MCP (AI rules 1 and 2), addressing prompt engineering and agent oversight. 'GitHub Copilot' is included since it is a developer tool discussed directly (GitHub Copilot rules 1-4) and 'Coding' applies due to the focus on programming practices, safer code generation, and control in software development (Coding rules 4 and 5). Generic exclusion rules do not apply, as the content is technical, developer-focused, and entirely in English.",
+    "canonical_url": "https://www.youtube.com/watch?v=PvdptUZ3XeU"
   }
 ]
