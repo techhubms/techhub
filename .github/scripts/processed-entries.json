@@ -20414,5 +20414,11 @@
     "canonical_url": "https://www.cooknwithcopilot.com/blog/context-engineering-recipes-the-cognitive-verifier-pattern.html",
     "timestamp": "2025-11-28 20:05:33 +00:00",
     "reason": "Succesfully added: Assigned the 'GitHub Copilot' category because the content exclusively focuses on Copilot usage strategies (GitHub Copilot inclusion rule 1) and practical prompt engineering applied to Copilot (rules 2, 3, and 4). Added the 'AI' category because the guidance relates to AI-powered developer tools (AI rule 2 and 5). No other categories applied as content does not cover coding practices beyond prompt engineering, nor does it involve Azure, DevOps, ML, or Security topics."
+  },
+  {
+    "timestamp": "2025-11-29 00:10:19 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Categories assigned as follows: Azure category due to heavy usage of Azure services, CLI, and Trusted Signing (Azure rule 1 and 4). DevOps category is included because the guide specifically integrates signing into CI/CD workflows using GitHub Actions (DevOps rule 5). Coding category added because there is use of the dotnet sign tool, scripting, and .NET code signing (Coding rules 2 and 5). Security category assigned due to detailed code signing certificate usage, digital signatures, and Windows SmartScreen reputation (Security rules 1, 2, and 9). 'AI' and 'GitHub Copilot' are not included since Copilot is only mentioned as an incidental assistant and not a technical topic of the post (AI and GitHub Copilot inclusion rules). All decisions and tags follow extraction priorities as outlined in prompt.",
+    "canonical_url": "https://www.hanselman.com/blog/automatically-signing-a-windows-exe-with-azure-trusted-signing-dotnet-sign-and-github-actions"
   }
 ]
