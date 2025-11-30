@@ -20444,5 +20444,11 @@
     "timestamp": "2025-11-30 10:06:05 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/common-misconceptions-when-running-locally-vs-deploying-to-azure/ba-p/4473938"
+  },
+  {
+    "timestamp": "2025-11-30 16:05:54 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=LwqUp4Dc1mQ",
+    "reason": "Succesfully added: Assigned 'AI' because the demo showcases AI agent capabilities (AI Inclusion Rule 1, 4) and prompt engineering (AI Rule 5). Assigned 'GitHub Copilot' because Copilot agent mode and its integration are key features (GitHub Copilot Rule 1, 2, 3). Assigned 'Coding' since VS Code integration and workflow automation are demonstrated from a developer perspective (Coding Rule 2, 5). Content is strongly developer-focused, avoids generic exclusions, and does not contain business or non-technical elements."
   }
 ]

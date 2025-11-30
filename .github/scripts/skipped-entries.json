@@ -10089,5 +10089,29 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule. The 'content' field is null, meaning there is no substantive content present for evaluation. Without content, it is impossible to determine technical depth, applicability to predefined Microsoft categories, or adherence to quality standards. According to the workflow, exclusion rules apply when content is missing or insufficient for processing.",
     "timestamp": "2025-11-29 15:05:12 +00:00",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded based on generic exclusion rules: this blog post is focused on Windows 11 telemetry as it impacts general users, emphasizing privacy, settings, user experience improvements, and security from an end-user perspective. It does not cover technical implementation, development, or architecture relevant to Microsoft developers or consultants. There are no technical deep-dives, coding practices, DevOps workflows, Azure integration, or development tool usage. The article is oriented toward end-users and general awareness, not practitioner-focused technical content. Therefore, it does not qualify for any predefined categories.",
+    "canonical_url": "https://dellenny.com/telemetry-in-windows-11-what-it-is-and-why-it-matters-for-your-pc/",
+    "timestamp": "2025-11-30 11:05:29 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: Content excluded because the input lacks substantive content—there is no description and the content field is null. According to generic exclusion rules, without an actual content body to evaluate, it's impossible to determine category inclusion, extract metadata, or provide a meaningful summary or excerpt.",
+    "timestamp": "2025-11-30 15:05:19 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/PrNvqBFdsuA"
+  },
+  {
+    "timestamp": "2025-11-30 16:06:01 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/github-copilot-for-python-real-world-coding-scenarios-practical/m-p/4473990#M185",
+    "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-11-30 16:06:01 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/tools/the-evolution-of-conversational-ai-in-microsoft-s-ecosystem/m-p/4473991#M186",
+    "reason": "Insufficient content length"
   }
 ]

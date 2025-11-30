@@ -1,0 +1,18 @@
+{
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "Author": "GitHub",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Link": "https://www.youtube.com/watch?v=LwqUp4Dc1mQ",
+  "Description": "Discover the power of agent extensibility with a live demonstration of the GitHub MCP Server. This demo will showcase how to set up Copilot agent mode to seamlessly interact with GitHub directly from VS Code. We'll highlight key MCP tools, effective prompt engineering, and the agent-to-agent capabilities that unlock powerful multi-step workflows through natural language. See firsthand how the GitHub MCP Server redefines collaboration between humans, AI and GitHub.\n\nSpeakers: Sam Morrow, Senior Software Engineer, GitHub (Speaker) Toby Padilla, Principal Product Manager, GitHub (Speaker)\n\n#MCP #GitHubUniverse #GitHub\n\n— CHAPTERS —\n\n00:00 Introduction 01:50 What is the Model Context Protocol? 03:23 Installing the GitHub MCP server in VS Code 05:18 Using prompts to automate GitHub tasks 06:40 Generating visual summaries and Mermaid charts 09:21 Integrating with the Copilot coding agent 14:14 Exploring the GitHub MCP registry\n\nWatch more videos from GitHub Universe 2025: https://www.youtube.com/watch?v=nSwj2Ma0pnk&list=PL0lo9MOBetEFKNlPHNouEmVeYeyoyGTXC\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 100 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "FeedLevelAuthor": "GitHub",
+  "ProcessedDate": "2025-11-30 16:04:36",
+  "Title": "Extending AI Agents: A live demo of the GitHub MCP Server",
+  "Tags": [
+    "GitHub",
+    "GitHubUniverse",
+    "MCP"
+  ],
+  "FeedName": "GitHub YouTube",
+  "PubDate": "2025-11-30T15:00:40+00:00"
+}
