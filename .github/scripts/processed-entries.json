@@ -20438,5 +20438,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Content qualifies for categories 'AI', 'GitHub Copilot', and 'Coding'. 'AI' category is assigned because the session focuses on AI agents like Copilot and MCP (AI rules 1 and 2), addressing prompt engineering and agent oversight. 'GitHub Copilot' is included since it is a developer tool discussed directly (GitHub Copilot rules 1-4) and 'Coding' applies due to the focus on programming practices, safer code generation, and control in software development (Coding rules 4 and 5). Generic exclusion rules do not apply, as the content is technical, developer-focused, and entirely in English.",
     "canonical_url": "https://www.youtube.com/watch?v=PvdptUZ3XeU"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the entire article revolves around troubleshooting deployments to Azure Linux-based Web Apps (Azure rule 1, 4, 5). Assigned AI category as many examples focus on Python AI-related packages (e.g., scikit-learn, numpy) and troubleshooting their compatibility (AI rule 4, 5). Assigned DevOps category since the content covers deployment practices, environment configuration, build-time error diagnosis, and continuous delivery concepts (DevOps rules 1, 5, 6). Assigned Coding category because it provides code samples, discusses Python package management, and offers developer-facing troubleshooting advice (Coding rules 1, 4, 5). Generic exclusion rules do not apply: content is technical and problem-focused, not biographical or business-oriented, and meets length/quality requirements for community type.",
+    "timestamp": "2025-11-30 10:06:05 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/common-misconceptions-when-running-locally-vs-deploying-to-azure/ba-p/4473938"
   }
 ]
