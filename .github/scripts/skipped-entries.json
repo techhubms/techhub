@@ -10119,5 +10119,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=FWT4iRQgy9E",
     "reason": "No categories found: Content excluded due to generic exclusion rules. The description makes clear that the video is primarily biographical, focusing on Navin Reddy's personal journey from starting a YouTube side hustle to becoming a full-time educator and content creator. It covers career transitions, diversity, and general advice for developers, but does not include substantive technical content about Microsoft technologies or implementation details. Rule: Biographical Focus exclusion in Chapter 3.",
     "timestamp": "2025-12-01 15:06:46 +00:00"
+  },
+  {
+    "timestamp": "2025-12-01 16:07:17 +00:00",
+    "collection": "community",
+    "reason": "No categories found: Content excluded based on generic exclusion rules. The post is a basic help-seeking question about Uniswap support channels and clarifies the meaning of a 'Uniswap number.' There is no substantive technical content, tutorial, or Microsoft technology focus. It is primarily informational with minimal explanatory text, failing to meet the category inclusion threshold for any Microsoft-related topic (see Generic Exclusion: Question-Only Content, and lack of Microsoft centrality).",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/is-uniswap-support/m-p/4473650#M813"
   }
 ]

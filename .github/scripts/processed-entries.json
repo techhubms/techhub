@@ -20474,5 +20474,29 @@
     "canonical_url": "https://news.microsoft.com/source/2025/12/01/national-4-h-council-and-microsoft-extend-10m-partnership-to-expand-ai-education-for-rural-youth-and-educators/",
     "reason": "Succesfully added: Applied the generic exclusion rules first and no exclusion criteria were triggered; the content is neither biographical, sales pitch, nor focused on business strategy. The central subject is Microsoft-powered AI education initiatives, qualifying immediately for the 'AI' category per AI inclusion rule 1 (Microsoft AI products/services and AI-powered learning using Minecraft Education). No development-specific details (coding, Azure, ML, DevOps, Security) are present or sufficiently detailed to qualify for other categories. The tags reflect key technical terms and program names, with no generic or non-technical tags. The explanation is based on strict adherence to workflow, rule sequence, and category definitions.",
     "timestamp": "2025-12-01 15:06:09 +00:00"
+  },
+  {
+    "timestamp": "2025-12-01 16:06:00 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Included Azure category because Microsoft Fabric is a cloud analytics platform built on Azure, and the on-premises data gateway is part of Azure's integration stack (Azure rule 1 and 2). Security is assigned as the article focuses heavily on secure access, zero-trust identity, identity-based authentication (Microsoft Entra ID) and maintaining strong network boundaries (Security rule 1, 2, and 9). ML category is included because Fabric is positioned as a unified analytics/data science platform and the context is providing analytics-driven experiences—covered under ML rule 1 and 2. AI and GitHub Copilot are not relevant since the content does not cover AI platform usage or developer coding tools. Coding and DevOps are not included as there is no direct code or development workflow guidance. Generic exclusion rules do not apply; technical depth and Microsoft technology centrality are met.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/securely-access-vpc-protected-amazon-s3-buckets-in-microsoft-fabric-with-entra-integration-preview/"
+  },
+  {
+    "timestamp": "2025-12-01 16:06:36 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the content details an AI-powered workflow utilizing GitHub Copilot (AI rule 1). Assigned GitHub Copilot because the Copilot coding agent is at the core of the update (GitHub Copilot rule 1). Assigned DevOps because this integration automates development workflows and issue management, central to DevOps practices (DevOps rules 3, 5, and 9).",
+    "canonical_url": "https://www.youtube.com/watch?v=dI4H5ZyYOx0"
+  },
+  {
+    "timestamp": "2025-12-01 16:06:59 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the AI category because substantial sections cover Copilot Studio, responsible AI, LLMs, AI agent creation, and AI adoption (AI rules 1, 3, and 4). Azure was included because key services like Entra ID (Azure AD), Purview, and Defender XDR are central to technical implementation (Azure rules 1 and Security rules 1), and learning and administration are within Azure cloud context. Security is assigned due to coverage of zero trust architecture, Defender XDR, identity management, Purview for data protection, and other Microsoft security tools (Security rules 1, 2, 4, and 7). Did not assign GitHub Copilot, Coding, DevOps, or ML categories, as content is not focused on GitHub Copilot, developer coding practices, DevOps methodologies, or in-depth ML/data science implementation. Exclusion rules do not trigger since content is technical, in English, not biographical or sales-focused, and centered on Microsoft cloud technologies.",
+    "canonical_url": "https://www.youtube.com/watch?v=DUydgD7SkEo"
+  },
+  {
+    "timestamp": "2025-12-01 16:07:42 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Categories were assigned as follows: Azure (central to all Logic Apps, Service Bus, API Management, connectors, and BizTalk modernization), AI (Featured Foundry updates, AI agent orchestration, Semantic Kernel/LangChain, multi-agent workflows, and AI-powered integrations), Coding (numerous mentions of workflow design, integration patterns, debugging, XML/XPath, and local development), DevOps (automation, connector setup, orchestration, deployment/migration scenarios, API management, and developer tooling), Security (Entra ID/OAuth, API key authentication, secure agent workflows, compliance tie-ins for healthcare/Hl7 and enterprise tool integration).\nThe newsletter is well over the 200-word minimum for community content and contains actionable, technical Microsoft content focused on development and integration, not biographical, business, or sales pitch material. No generic exclusion rules apply.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-december-2025/ba-p/4474048"
   }
 ]
