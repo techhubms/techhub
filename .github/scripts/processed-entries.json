@@ -20498,5 +20498,23 @@
     "collection": "community",
     "reason": "Succesfully added: Categories were assigned as follows: Azure (central to all Logic Apps, Service Bus, API Management, connectors, and BizTalk modernization), AI (Featured Foundry updates, AI agent orchestration, Semantic Kernel/LangChain, multi-agent workflows, and AI-powered integrations), Coding (numerous mentions of workflow design, integration patterns, debugging, XML/XPath, and local development), DevOps (automation, connector setup, orchestration, deployment/migration scenarios, API management, and developer tooling), Security (Entra ID/OAuth, API key authentication, secure agent workflows, compliance tie-ins for healthcare/Hl7 and enterprise tool integration).\nThe newsletter is well over the 200-word minimum for community content and contains actionable, technical Microsoft content focused on development and integration, not biographical, business, or sales pitch material. No generic exclusion rules apply.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-december-2025/ba-p/4474048"
+  },
+  {
+    "timestamp": "2025-12-01 17:07:00 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-replicate-data-from-dataverse-through-fabric-to-multiple-destinations/",
+    "reason": "Succesfully added: Assigned 'Azure' category because Microsoft Fabric is a centralized Azure SaaS offering, and this content deeply involves Azure-native technologies like Data Factory and Azure SQL Database (Azure inclusion rule 1, 4, 5). Assigned 'ML' category because the workflow is data engineering for analytics and data pipelines (ML inclusion rules 1, 2, 3, 7), and involves orchestrating ingestion, ETL/ELT, and syncing data across Microsoft analytics/data science platforms. AI is not assigned as no pre-built AI services or model-driven integrations are described. Coding is not included as there is no code development, frameworks, or programming language focus. DevOps is not assigned, as the focus is on data pipeline, not CI/CD or deployment processes. Security is not a major theme in this content."
+  },
+  {
+    "timestamp": "2025-12-01 17:07:23 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/upgrade-msvc-improve-c-build-performance-and-refactor-c-code-with-github-copilot/",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' category because the content centrally introduces new Copilot features for developers (GitHub Copilot Inclusion Rule 1). 'AI' is also included as per critical requirement—every GitHub Copilot assignment must also have the AI category. 'Coding' is included because the enhancements focus on programming tasks: C++ refactoring, build performance, and editing support (Coding Rules 1, 2, 4, 5). 'DevOps,' 'Azure,' 'ML,' and 'Security' are not included as there is no substantive content covering pipelines, cloud, data science, or security automation. Content is not excluded by any generic exclusion rules; it's technical, developer-focused, and not biographical, negative, job-related, sales, or business-productivity oriented."
+  },
+  {
+    "timestamp": "2025-12-01 17:07:49 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-to-orchestrate-agents-using-mission-control/",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content is entirely focused on orchestrating and supervising Copilot coding agents using mission control (AI rule 2 and GitHub Copilot rule 1). Added 'Coding' since the post provides actionable guidance for developers on code review, prompt design, agent persona management, and code generation—all core coding tasks (Coding rule 4 and 5). Did not include DevOps, Azure, ML, or Security, because while the post references developer collaboration and process, its primary focus is agent orchestration and prompt best practices for Copilot, not broader CI/CD, cloud, ML, or security topics."
   }
 ]

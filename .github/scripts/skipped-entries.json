@@ -10125,5 +10125,11 @@
     "collection": "community",
     "reason": "No categories found: Content excluded based on generic exclusion rules. The post is a basic help-seeking question about Uniswap support channels and clarifies the meaning of a 'Uniswap number.' There is no substantive technical content, tutorial, or Microsoft technology focus. It is primarily informational with minimal explanatory text, failing to meet the category inclusion threshold for any Microsoft-related topic (see Generic Exclusion: Question-Only Content, and lack of Microsoft centrality).",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/is-uniswap-support/m-p/4473650#M813"
+  },
+  {
+    "timestamp": "2025-12-01 17:08:09 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/what-is-the-compliance-manager-secure-score-in-microsoft-365/",
+    "reason": "No categories found: Content is excluded under the 'Non-Development Microsoft Products' generic exclusion rule. While the article discusses Microsoft 365 Compliance Manager Secure Score, it is focused on compliance, regulatory features, and high-level organizational processes within Microsoft 365, which are business/productivity capabilities. There is no evident technical implementation detail, development, or hands-on configuration beyond what end users or compliance officers would do. Per generic exclusion under Chapter 3, compliance processes, end-user business productivity topics, and general admin tooling in Microsoft 365 (not implementation from an engineering/development/devops/coding/security perspective) are excluded. No categories apply."
   }
 ]
