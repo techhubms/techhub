@@ -1,0 +1,14 @@
+{
+  "OutputDir": "_videos",
+  "Author": "Microsoft Developer",
+  "Link": "https://www.youtube.com/watch?v=aor0BCCEkks",
+  "Tags": [],
+  "FeedName": "Microsoft Developer YouTube",
+  "Title": "Reimagine migration: Agentic platform landing zone with Azure Migrate",
+  "EnhancedContent": null,
+  "Description": "Migrating workloads to Azure is often complex and prone to manual errors, leading to inconsistent environments and compliance risks. This episode of the Azure Essentials Show introduces Azure Migrate’s automated, agentic approach to Azure Landing Zone deployment, showing how guided migration ensures every workload inherits a secure, compliant foundation built on Microsoft’s best practices. Join Thomas and Shiva for expert insights and a practical demo, to learn how to modernize confidently and maximize your cloud investment.\n\nResources\n- Sign Up for Azure Migrate Previews https:aka.ms/AzureMigratePrivatePreview\n- Master Azure Essentials https://azure.microsoft.com/solutions/azure-essentials?wt.mc\\_id=aetechcommunity\\_acomcta\\_blog\\_azuremktg\n- Explore essential resources! https://azure.com/AzureEssentials\n\nRelated episodes\n- Azure Migration Benefits and Essential Guidance https://aka.ms/AzEssentials/191\n- Watch more episodes of the Azure Essentials Show https://aka.ms/AzureEssentialsShow\n\nConnect\n- Thomas Maurer https://www.linkedin.com/in/thomasmaurer2\n- Shiva Shastri https://www.linkedin.com/in/shivakumarshastri\n\nChapters 00:00 In this episode 00:16 Introduction 00:55 Typical migration challenges 02:02 Even successful migrations have challenges 02:20 Platform landing zones defined 03:38 The agentic approach 04:20 A guided experience 05:25 Demo video 09:22 Next steps and resources",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "ProcessedDate": "2025-12-01 09:06:42",
+  "PubDate": "2025-12-01T08:00:07+00:00"
+}
