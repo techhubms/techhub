@@ -10113,5 +10113,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/tools/the-evolution-of-conversational-ai-in-microsoft-s-ecosystem/m-p/4473991#M186",
     "reason": "Insufficient content length"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=FWT4iRQgy9E",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The description makes clear that the video is primarily biographical, focusing on Navin Reddy's personal journey from starting a YouTube side hustle to becoming a full-time educator and content creator. It covers career transitions, diversity, and general advice for developers, but does not include substantive technical content about Microsoft technologies or implementation details. Rule: Biographical Focus exclusion in Chapter 3.",
+    "timestamp": "2025-12-01 15:06:46 +00:00"
   }
 ]

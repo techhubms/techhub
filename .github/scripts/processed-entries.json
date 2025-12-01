@@ -20468,5 +20468,11 @@
     "reason": "Succesfully added: Assigned Azure category because the article focuses centrally on Azure services—specifically Azure Migrate and Azure Landing Zones (Azure rule 1, 4, 5, 6). DevOps is included due to coverage of automation, platform architecture, governance, and infrastructure-as-code (DevOps rules 1, 6, 9). Security is included given the emphasis on identity, compliance, guardrails, and policy enforcement for secure cloud migrations (Security rules 1, 2, 3, 4, 9). No generic exclusion rules applied as the content is technical, English, migration-focused, and not biographical or negative, nor a business or sales pitch.",
     "canonical_url": "https://www.thomasmaurer.ch/2025/12/reimagine-migration-agentic-platform-landing-zone-with-azure-migrate/",
     "timestamp": "2025-12-01 14:06:19 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/source/2025/12/01/national-4-h-council-and-microsoft-extend-10m-partnership-to-expand-ai-education-for-rural-youth-and-educators/",
+    "reason": "Succesfully added: Applied the generic exclusion rules first and no exclusion criteria were triggered; the content is neither biographical, sales pitch, nor focused on business strategy. The central subject is Microsoft-powered AI education initiatives, qualifying immediately for the 'AI' category per AI inclusion rule 1 (Microsoft AI products/services and AI-powered learning using Minecraft Education). No development-specific details (coding, Azure, ML, DevOps, Security) are present or sufficiently detailed to qualify for other categories. The tags reflect key technical terms and program names, with no generic or non-technical tags. The explanation is based on strict adherence to workflow, rule sequence, and category definitions.",
+    "timestamp": "2025-12-01 15:06:09 +00:00"
   }
 ]
