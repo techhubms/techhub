@@ -1,460 +1,542 @@
 ---
 layout: "post"
-title: "Ignite 2025: Updates in Agentic AI, Cloud, Developer Tools, and Security"
-description: "This week’s tech roundup covers the recent announcements from Microsoft Ignite 2025, focusing on developments in agentic AI, automation for developers, and secure cloud modernization. Notable updates feature new GitHub Copilot capabilities, expanded AI and ML workflows using Microsoft Foundry and Azure, enhanced cloud-native tools, and new approaches to secure, scalable enterprise IT. Security, compliance, and resilient architectures are highlighted as Microsoft and its partners outline improved, adaptive, and reliable technology platforms."
+title: "Agentic AI, Cloud Updates, and Enterprise Automation: Highlights from Microsoft Ignite"
+description: "This technology roundup covers the ongoing development of agentic AI platforms, expanded Azure and Copilot integrations, and advances in enterprise automation announced at Microsoft Ignite 2025. Updates include enhancements to multi-agent orchestration, responsible AI governance, improved Azure infrastructure, DevSecOps automation, modern ML workflows, and cross-cloud security. New tools, models, and frameworks are converging for developer, security, and automation teams, supporting a move from prototypes to scalable, compliant AI adoption throughout organizations."
 author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-12-01 09:00:00 +00:00
 permalink: "/2025-12-01-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
-tags: ["Agentic AI", "AI", "Automation", "Azure", "Cloud Native", "Coding", "Confidential Computing", "Data Platform", "Developer Productivity", "Device Security", "DevOps", "Enterprise Migration", "GitHub Copilot", "Low Code", "Machine Learning", "Microsoft Foundry", "ML", "Observability", "Power Platform", "Roundups", "Security", "VS", "Zero Trust"]
-tags_normalized: ["agentic ai", "ai", "automation", "azure", "cloud native", "coding", "confidential computing", "data platform", "developer productivity", "device security", "devops", "enterprise migration", "github copilot", "low code", "machine learning", "microsoft foundry", "ml", "observability", "power platform", "roundups", "security", "vs", "zero trust"]
+tags: ["Agentic Automation", "AI", "Azure", "Cloud Computing", "Coding", "Copilot Studio", "Data Engineering", "DevOps", "GitHub Copilot", "Hybrid Cloud", "Identity Management", "Microsoft Ignite", "ML", "Model Governance", "Multi Agent Systems", "Power Platform", "Roundups", "Security", "VS"]
+tags_normalized: ["agentic automation", "ai", "azure", "cloud computing", "coding", "copilot studio", "data engineering", "devops", "github copilot", "hybrid cloud", "identity management", "microsoft ignite", "ml", "model governance", "multi agent systems", "power platform", "roundups", "security", "vs"]
 ---
 
-Welcome to this week’s roundup, highlighting the latest technology shifts introduced at Ignite 2025. This collection covers updates transforming how organizations and developers approach automation, infrastructure, and secure integration of AI agents in daily operations. The themes this week are practical automation, built-in security, and the smooth alignment of AI with operational platforms. Key subjects include no-code Copilot workflows, large-scale Azure supercomputing, reliable DevOps automation, confidential computing, and Zero Trust solutions.
+Welcome to the weekly tech roundup, where we're focusing on agentic AI, cloud modernization, and security improvements following Microsoft Ignite 2025. The latest updates across the Microsoft stack are changing how businesses approach development, operations, data engineering, and cybersecurity at scale. With new features in GitHub Copilot—including multi-agent automation and natural language programming—plus next-generation AI infrastructure in Azure and unified analytics through Fabric, this week marks a shift from experimenting with new technology to deploying stable, operational platforms.
 
-With a focus on agent-powered platforms, Microsoft and its partners unveiled enhanced features: GitHub Copilot now offers advanced model selection, agentic AI and ML support expand to local and cloud via Foundry and Azure, and hybrid solutions improve deployment options with unified cloud-native tools. Security is always at the core, supported by new features like confidential computing, agent lifecycle governance, and AI-based protections at both hardware and application levels. Explore the detailed coverage below, with technical context and actionable guides for architects, engineers, and IT decision-makers planning the next phase of intelligent and robust technology.<!--excerpt_end-->
+Security, governance, and modernization are present throughout, with organizations accelerating production-ready agentic workflows and resilient cloud architectures. Updates to DevOps tools, developer platforms, and low-code extensions provide more options for orchestrating workflows and automating tasks. Machine learning and AI teams now access scalable and secure deployment pipelines. The ongoing trends highlight smarter automation, integrated developer experiences, and expanded AI capabilities for the entire tech stack. Explore the sections below for resources, guides, and updates on intelligent, secure, and efficient solutions.<!--excerpt_end-->
 
 ## This Week's Overview
 
 - [GitHub Copilot](#github-copilot)
-  - [GitHub Copilot AI Models and Integration](#github-copilot-ai-models-and-integration)
-  - [Copilot in the Visual Studio Family](#copilot-in-the-visual-studio-family)
-  - [Copilot in Microsoft Foundry and Code-First Workflows](#copilot-in-microsoft-foundry-and-code-first-workflows)
-  - [Low-Code Agent Building and Automation with Copilot Studio](#low-code-agent-building-and-automation-with-copilot-studio)
-  - [Advanced AI-Assisted Coding Models and Custom Copilot Agents](#advanced-ai-assisted-coding-models-and-custom-copilot-agents)
-  - [Responsible and Sustainable Software with Copilot and Agentic DevOps](#responsible-and-sustainable-software-with-copilot-and-agentic-devops)
+  - [Extending GitHub Copilot with AI Agents, Agent Mode, and Model Context Protocol (MCP)](#extending-github-copilot-with-ai-agents-agent-mode-and-model-context-protocol-mcp)
+  - [Security, Governance, and Responsible Use of Copilot Agents](#security-governance-and-responsible-use-of-copilot-agents)
+  - [Advancements in Copilot Models and Platform Integrations](#advancements-in-copilot-models-and-platform-integrations)
+  - [Copilot in Visual Studio and VS Code: Next-Gen Productivity and AI-First Workflows](#copilot-in-visual-studio-and-vs-code-next-gen-productivity-and-ai-first-workflows)
+  - [Low-Code AI Automation and Copilot Studio Roadmap](#low-code-ai-automation-and-copilot-studio-roadmap)
+  - [Practical Implementation: Guides and Tutorials for Python, DevOps, and Workflow Migration](#practical-implementation-guides-and-tutorials-for-python-devops-and-workflow-migration)
+  - [Natural Language Programming and the Evolution of Developer Collaboration](#natural-language-programming-and-the-evolution-of-developer-collaboration)
 - [AI](#ai)
-  - [Microsoft Foundry and Edge/Enterprise AI Workflows](#microsoft-foundry-and-edgeenterprise-ai-workflows)
-  - [AI Infrastructure and Platform Integration on Azure](#ai-infrastructure-and-platform-integration-on-azure)
-  - [Agentic AI and Automation with Copilot Studio and Power Platform](#agentic-ai-and-automation-with-copilot-studio-and-power-platform)
-  - [Specialized AI Use Cases: Industry, Supply Chain, and Domain Solutions](#specialized-ai-use-cases-industry-supply-chain-and-domain-solutions)
-  - [Azure Speech, Voice, and Conversational AI](#azure-speech-voice-and-conversational-ai)
-  - [AI Developer Workflow and Code Integration](#ai-developer-workflow-and-code-integration)
+  - [Microsoft Foundry: Multi-Agent Orchestration and Agent Memory](#microsoft-foundry-multi-agent-orchestration-and-agent-memory)
+  - [Enhanced Observability and Governance for AI Workloads](#enhanced-observability-and-governance-for-ai-workloads)
+  - [Advanced Model Integration and AI Infrastructure](#advanced-model-integration-and-ai-infrastructure)
+  - [Copilot Studio and Agent-Driven Automation](#copilot-studio-and-agent-driven-automation)
+  - [AI-Driven Automation in the Microsoft Ecosystem](#ai-driven-automation-in-the-microsoft-ecosystem)
+  - [Azure-Powered AI Integration and Deployment](#azure-powered-ai-integration-and-deployment)
+  - [AI Agents and Knowledge Integration for the Enterprise](#ai-agents-and-knowledge-integration-for-the-enterprise)
+  - [AI Observability, Automation, and Security in Industry Solutions](#ai-observability-automation-and-security-in-industry-solutions)
+  - [AI Models, Multimodality, and Platform Comparisons](#ai-models-multimodality-and-platform-comparisons)
   - [Other AI News](#other-ai-news)
 - [ML](#ml)
-  - [Microsoft Foundry and AI Agent Fine-Tuning](#microsoft-foundry-and-ai-agent-fine-tuning)
-  - [Azure Databricks: Unified Data and AI Ecosystem](#azure-databricks-unified-data-and-ai-ecosystem)
-  - [Pushing the Boundaries: Azure AI Supercomputing Infrastructure](#pushing-the-boundaries-azure-ai-supercomputing-infrastructure)
+  - [Azure Databricks and Microsoft Foundry: Unified AI Development](#azure-databricks-and-microsoft-foundry-unified-ai-development)
+  - [Microsoft Fabric: Data Engineering, Connectivity, and Real-Time Personalization](#microsoft-fabric-data-engineering-connectivity-and-real-time-personalization)
+  - [Power BI and Hybrid Data Infrastructure: Gateway and Connector Updates](#power-bi-and-hybrid-data-infrastructure-gateway-and-connector-updates)
 - [Azure](#azure)
-  - [Azure Cloud Native Development and Compute Innovations](#azure-cloud-native-development-and-compute-innovations)
-  - [Observability, Automation, and Operational Resilience](#observability-automation-and-operational-resilience)
-  - [Data Platform Updates: Microsoft Fabric, SQL, and Data Integration](#data-platform-updates-microsoft-fabric-sql-and-data-integration)
-  - [Edge and Hybrid AI: Azure Local, Deployment Automation, and Lenovo Partnership](#edge-and-hybrid-ai-azure-local-deployment-automation-and-lenovo-partnership)
-  - [Logic Apps, Integration, and Workflow Automation](#logic-apps-integration-and-workflow-automation)
-  - [Resiliency, Backup, and Secure Cloud Architecture](#resiliency-backup-and-secure-cloud-architecture)
-  - [Modernization, Migration, and Partner Solutions](#modernization-migration-and-partner-solutions)
-  - [Azure IaaS, Infrastructure Optimization, and Cost Management](#azure-iaas-infrastructure-optimization-and-cost-management)
-  - [Security, AI Governance, and Endpoint Management](#security-ai-governance-and-endpoint-management)
+  - [Azure AI and High-Performance Compute Infrastructure](#azure-ai-and-high-performance-compute-infrastructure)
+  - [Resilient Azure Cloud Architectures and Backup](#resilient-azure-cloud-architectures-and-backup)
+  - [AI Model Deployment and Scaling on Azure](#ai-model-deployment-and-scaling-on-azure)
+  - [Azure Logic Apps and Integration Advancements](#azure-logic-apps-and-integration-advancements)
+  - [Azure Compute, Containers, and Serverless Workflows](#azure-compute-containers-and-serverless-workflows)
+  - [Microsoft Fabric and Data Platform Integration](#microsoft-fabric-and-data-platform-integration)
+  - [Azure IaaS, Networking, and Cost Optimization](#azure-iaas-networking-and-cost-optimization)
+  - [Enterprise Migration, Modernization, and Case Studies](#enterprise-migration-modernization-and-case-studies)
+  - [Data Security, Resilience, and Recovery](#data-security-resilience-and-recovery)
+  - [Developer Tooling, Management, and SDK Enhancements](#developer-tooling-management-and-sdk-enhancements)
   - [Other Azure News](#other-azure-news)
 - [Coding](#coding)
-  - [Modern IDEs and the Windows Developer Experience](#modern-ides-and-the-windows-developer-experience)
-  - [.NET Diagnostics and C# Design Discipline](#net-diagnostics-and-c-design-discipline)
+  - [Visual Studio 2026 and New Update Cadence](#visual-studio-2026-and-new-update-cadence)
+  - [.NET Modernization, Agentic Tooling, and Cloud-Native Ecosystem](#net-modernization-agentic-tooling-and-cloud-native-ecosystem)
+  - [Developer Productivity Tools on Windows 11](#developer-productivity-tools-on-windows-11)
+  - [C# Design Practices: When to Seal Classes](#c-design-practices-when-to-seal-classes)
+  - [Python’s Ongoing Strengths and AI Integration](#pythons-ongoing-strengths-and-ai-integration)
 - [DevOps](#devops)
-  - [WinGet and Desired State Configuration Integration](#winget-and-desired-state-configuration-integration)
+  - [GitHub Actions and Dependabot Ecosystem Improvements](#github-actions-and-dependabot-ecosystem-improvements)
+  - [Configuration and Environment Management on Windows](#configuration-and-environment-management-on-windows)
+  - [DevOps for Microsoft Power Platform Solutions](#devops-for-microsoft-power-platform-solutions)
+  - [Other DevOps News](#other-devops-news)
 - [Security](#security)
-  - [Advancements in Confidential Computing and Memory-Safe Platform Security](#advancements-in-confidential-computing-and-memory-safe-platform-security)
-  - [Securing Agentic AI: Lifecycle, Governance, and Risk Management](#securing-agentic-ai-lifecycle-governance-and-risk-management)
-  - [Security Copilot, SOC Automation, and Microsoft Defender Ecosystem](#security-copilot-soc-automation-and-microsoft-defender-ecosystem)
-  - [Microsoft Purview and Enterprise Data Security](#microsoft-purview-and-enterprise-data-security)
-  - [Identity, Zero Trust, and Cross-Platform Security](#identity-zero-trust-and-cross-platform-security)
-  - [Integrated SOC Visibility, Threat Intelligence, and Third-Party Security Partnerships](#integrated-soc-visibility-threat-intelligence-and-third-party-security-partnerships)
+  - [GitHub Security and DevSecOps](#github-security-and-devsecops)
+  - [AI Security, Agent Lifecycle, and Security Copilot](#ai-security-agent-lifecycle-and-security-copilot)
+  - [Microsoft Defender for Cloud and Azure Security](#microsoft-defender-for-cloud-and-azure-security)
+  - [Microsoft Purview Data Security and Governance](#microsoft-purview-data-security-and-governance)
+  - [Microsoft Entra and Identity/Access Management Security](#microsoft-entra-and-identityaccess-management-security)
+  - [Autonomous SOC and Security Operations](#autonomous-soc-and-security-operations)
+  - [Microsoft Purview and Compliance, Data Protection](#microsoft-purview-and-compliance-data-protection)
   - [Other Security News](#other-security-news)
 
 ## GitHub Copilot
 
-This week, GitHub Copilot introduces updated AI models, workflow enhancements, and more automation tools for developers. These developments expand on recent improvements around model management, Visual Studio 2026 integration, and responsible practices for agent-based development. The latest features include support for Anthropic’s newest model, enhanced low-code controls in Copilot Studio, and strategies to ensure responsible use of agentic AI in software projects. Community events and step-by-step tutorials provide developers with more ways to tailor Copilot inside tools like VS Code. These changes highlight Copilot’s adaptability for enterprise-scale environments, local code projects, and specific automation needs.
+This week's GitHub Copilot updates highlighted improved integrations, deeper agent-driven automation, and immediate extensibility designed for evolving development workflows. Copilot now includes additional AI model controls, enhanced security measures, and new guides for working with agent mode and custom workflows. Its use now spans cloud and mobile apps, including platforms such as Slack, marking a further shift toward natural language interfaces and AI presence across all stages of software creation. Community events and Ignite 2025 have broadened Copilot’s momentum through previews and solutions for development, operations, and security, all built on an expanding ecosystem.
 
-### GitHub Copilot AI Models and Integration
+### Extending GitHub Copilot with AI Agents, Agent Mode, and Model Context Protocol (MCP)
 
-Continuing last week’s launch of new model controls and previews, GitHub Copilot now offers a public preview of Anthropic’s Claude Opus 4.5 for users on Pro, Pro+, Business, and Enterprise subscriptions. Users can pick Claude Opus 4.5 in Copilot Chat across supported platforms, giving more model flexibility, better coding suggestions, and reduced token costs. Admins for enterprises get new policy settings to manage access, building on last week’s updates for organizational oversight. The release is rolling out in stages and user feedback is being collected to shape future features and model support.
+Teams are moving past initial agent architecture and MCP setup, bringing Copilot agents into daily workflows. Adoption of MCP, first discussed with .NET and VS Code, is bolstered by guides showing how to implement custom agents in DevOps and code workflows. Sessions at Ignite 2025 and GitHub Universe demonstrated the process for both initial setup and ongoing governance, including how to shift between manual and automated agent roles. Customization and bring-your-own-key options are becoming standard, and multi-agent collaboration is now widely available in platforms that bring together Copilot Vision, Agent Mode, and MCP server.
+
+- [Safe and Scalable DevOps with GitHub Copilot AI Agents]({{ "/2025-11-26-Safe-and-Scalable-DevOps-with-GitHub-Copilot-AI-Agents.html" | relative_url }})
+- [Extending AI Agents: Live Demo of GitHub MCP Server Integration]({{ "/2025-11-30-Extending-AI-Agents-Live-Demo-of-GitHub-MCP-Server-Integration.html" | relative_url }})
+- [Building Custom Agents for Copilot on Rubber Duck Thursdays]({{ "/2025-11-25-Building-Custom-Agents-for-Copilot-on-Rubber-Duck-Thursdays.html" | relative_url }})
+- [Building Finance Apps in VS Code with Agent Mode, Copilot Vision, and MCP]({{ "/2025-11-26-Building-Finance-Apps-in-VS-Code-with-Agent-Mode-Copilot-Vision-and-MCP.html" | relative_url }})
+- [Responsible Vibe Coding with GitHub Copilot and Model Context Protocol]({{ "/2025-11-29-Responsible-Vibe-Coding-with-GitHub-Copilot-and-Model-Context-Protocol.html" | relative_url }})
+- [Taming AI Assisted Coding Models with Eleanor Berger]({{ "/2025-11-24-Taming-AI-Assisted-Coding-Models-with-Eleanor-Berger.html" | relative_url }})
+
+### Security, Governance, and Responsible Use of Copilot Agents
+
+Building on last week’s updates for organizational controls and compliance, the current focus is on frameworks and community standards for responsible use of AI agents. Security practices now include restricted agent networking, better visibility of agent actions, and PR gating that integrates human review, supporting more secure and auditable automation. Current architecture models connect directly to customization options like `.instructions.md` and bypass settings, and community practices now emphasize responsible deployment of agents throughout development teams.
+
+- [How GitHub’s Agentic Security Principles Make Copilot AI Agents Secure](https://github.blog/ai-and-ml/github-copilot/how-githubs-agentic-security-principles-make-our-ai-agents-as-secure-as-possible/)
+- [Responsible Vibe Coding with GitHub Copilot and Model Context Protocol]({{ "/2025-11-29-Responsible-Vibe-Coding-with-GitHub-Copilot-and-Model-Context-Protocol.html" | relative_url }})
+- [Building and Deploying Responsible Agentic AI with Microsoft Copilot]({{ "/2025-11-24-Building-and-Deploying-Responsible-Agentic-AI-with-Microsoft-Copilot.html" | relative_url }})
+
+### Advancements in Copilot Models and Platform Integrations
+
+Ongoing AI model improvements continue with the preview release of Claude Opus 4.5 for GitHub Copilot, expanding support while retaining compatibility with previous models. Users from earlier previews can now try Opus 4.5 for coding and chat. Copilot extends into new platforms like Slack and Android, broadening adaptability from core editor and web integrations to context-aware experiences in messaging and mobile.
 
 - [Claude Opus 4.5 Public Preview Launches for GitHub Copilot](https://github.blog/changelog/2025-11-24-claude-opus-4-5-is-in-public-preview-for-github-copilot)
+- [Using GitHub Copilot Coding Agent in Slack]({{ "/2025-11-27-Using-GitHub-Copilot-Coding-Agent-in-Slack.html" | relative_url }})
+- [Copilot Agent Sessions from External Apps Now Available on GitHub Mobile for Android](https://github.blog/changelog/2025-11-25-copilot-agent-sessions-from-external-apps-are-now-available-on-github-mobile-for-android)
 
-### Copilot in the Visual Studio Family
+### Copilot in Visual Studio and VS Code: Next-Gen Productivity and AI-First Workflows
 
-After last week’s updates on Visual Studio 2026 and Copilot-driven workflows, Ignite 2025 featured deeper Copilot integration for smarter code suggestions and improved review experiences. The new Profiler Agent for diagnostics continues the trend of embedding Copilot features into daily development, helping individuals and teams boost productivity. Ongoing monthly updates and interface improvements make sure Copilot aligns with the latest .NET and business requirements, keeping pace with prior Visual Studio releases.
+Improvements in Visual Studio 2026 and VS Code further establish them as environments centered on AI-first workflows. Recent upgrades—including agentic AI and personalized code review in VS, as well as natural language Docker management in VS Code—enhance productivity and build on Copilot Chat and Agent HQ. Monthly IDE updates, a new trend in software development, bring steady progress in diagnostics and collaboration, supporting ongoing workflow innovation for developers.
 
 - [First Look at Visual Studio 2026: Fast, Modern, and AI-Powered]({{ "/2025-11-24-First-Look-at-Visual-Studio-2026-Fast-Modern-and-AI-Powered.html" | relative_url }})
+- [Effortless Container Management with GitHub Copilot and VS Code](https://devblogs.microsoft.com/blog/manage-containers-the-easy-way-copilot-vs-code)
 
-### Copilot in Microsoft Foundry and Code-First Workflows
+### Low-Code AI Automation and Copilot Studio Roadmap
 
-Building on last week’s spotlight on Agent Mode in VS Code, this week provides a detailed guide for moving Microsoft Foundry workflows into a code-first editing environment. The Model Mondays tutorial series continues, with stepwise instructions for configuring, editing, and testing workflows powered by AI. This underlines Copilot’s local agent features, continuing its commitment to code-first, self-managed AI development—an approach highlighted in prior news and tutorials on workflow improvement.
-
-- [Microsoft Foundry Workflows: Migrating to Code-First Development in VS Code]({{ "/2025-11-24-Microsoft-Foundry-Workflows-Migrating-to-Code-First-Development-in-VS-Code.html" | relative_url }})
-
-### Low-Code Agent Building and Automation with Copilot Studio
-
-Copilot Studio’s progress, highlighted last week with expanded no-code options, continued at Ignite 2025 with the announcement of an embedded builder and a more flexible enterprise platform. These updates add advanced knowledge base management, automated workflow testing, and deeper links to Microsoft 365 Copilot. Earlier case studies on automation are still useful as new sessions focus on deploying agent flows in larger environments with an emphasis on security, credential management, and transparent operations—supporting broader business automation.
-
-Ignite sessions also explored automation and workflow expansion using Copilot Studio, emphasizing security and scalability for both individual and organizational use. These resources outline best practices for integrating Copilot Studio across platforms, meeting ongoing needs for governance and real-world deployment of complex agent flows.
+Copilot Studio continues to evolve as Ignite reveals new low-code features for agent orchestration. Enterprise debugging, flexible evaluation, and better knowledge base integration build on earlier efforts to simplify onboarding and configuration. Case studies from the community illustrate Copilot Studio’s practical adoption in automation and virtualized computing, highlighting progress toward scaling up low-code AI automation in organizations.
 
 - [Copilot Studio Innovations and Roadmap: Building Low-Code AI Agents (BRK313)]({{ "/2025-11-24-Copilot-Studio-Innovations-and-Roadmap-Building-Low-Code-AI-Agents-BRK313.html" | relative_url }})
 - [Automation in Copilot Studio: Agent Flows and Computer Use]({{ "/2025-11-25-Automation-in-Copilot-Studio-Agent-Flows-and-Computer-Use.html" | relative_url }})
 
-### Advanced AI-Assisted Coding Models and Custom Copilot Agents
+### Practical Implementation: Guides and Tutorials for Python, DevOps, and Workflow Migration
 
-Furthering recent discussions on extensibility, this week’s live sessions focus on orchestrating Copilot models and setting up advanced agent workflows in VS Code. Using new standards like agents.md and tools such as Ruler, developers now have clearer options for delegating tasks like coding and evaluation. Recent tutorials on prompt engineering, command line tools, and voice integrations build on past guides, keeping Copilot customizable and shaped by the development community. Showcases for building custom agents highlight Copilot’s flexibility for specific workflows in various areas.
+New tutorials expand on language-specific and DevOps use cases, picking up the context engineering and workflow modernization themes from previous weeks. Earlier guides focused on .NET, Godot, and Avalonia; now, resources for Python and sustainable CI/CD are being introduced, highlighting Copilot’s flexibility and adoption in green software. Copilot’s Agent Mode and workflow migration bridge the move from graphical interfaces to code-first development, supporting organizations that want fully scriptable AI-driven workflows.
 
-- [Taming AI Assisted Coding Models with Eleanor Berger]({{ "/2025-11-24-Taming-AI-Assisted-Coding-Models-with-Eleanor-Berger.html" | relative_url }})
-- [Building Custom Agents for Copilot on Rubber Duck Thursdays]({{ "/2025-11-25-Building-Custom-Agents-for-Copilot-on-Rubber-Duck-Thursdays.html" | relative_url }})
-
-### Responsible and Sustainable Software with Copilot and Agentic DevOps
-
-Guidance around responsible AI remains a steady theme, as Ignite sessions this week featured experts from Cognizant and Microsoft on managing agentic AI and scaling Copilot responsibly within organizations. Discussions covered how to build more sustainable software, connecting with previous conversations about measurable green workflows. Developers can find new tools and resources for driving ethical and sustainability-focused Copilot adoption in their projects.
-
-- [Building and Deploying Responsible Agentic AI with Microsoft Copilot]({{ "/2025-11-24-Building-and-Deploying-Responsible-Agentic-AI-with-Microsoft-Copilot.html" | relative_url }})
+- [GitHub Copilot for Python: Real-World Coding Scenarios and Practical Examples](https://dellenny.com/github-copilot-for-python-real-world-coding-scenarios-practical-examples/)
 - [Building Sustainable Software with Agentic DevOps and GitHub Copilot]({{ "/2025-11-24-Building-Sustainable-Software-with-Agentic-DevOps-and-GitHub-Copilot.html" | relative_url }})
+- [Microsoft Foundry Workflows: Migrating to Code-First Development in VS Code]({{ "/2025-11-24-Microsoft-Foundry-Workflows-Migrating-to-Code-First-Development-in-VS-Code.html" | relative_url }})
+
+### Natural Language Programming and the Evolution of Developer Collaboration
+
+Recent analysis continues a trend toward natural language interfaces in coding, expanding on previous coverage of prompt-driven development. Normalizing English as a programming interface is lowering barriers for team collaboration and bridging the gap between specification and implementation. Copilot’s integration into collaborative tools is helping organizations adopt prompt-centric workflows instead of traditional code-centric ones.
+
+- [English as the New Programming Language: Natural Language in Software Development](https://roadtoalm.com/2025/11/28/english-as-the-new-programming-language/)
 
 ## AI
 
-AI news this week includes applied updates, technical explorations, and confirmation of value in practical deployments, all centered on making intelligent solutions easier to roll out in cloud, edge, or enterprise situations. Ignite 2025 delivered new agent frameworks, infrastructure ready for AI, and reference architectures to address current business challenges. Developers now have access to updated guidance, stronger governance, and improved tools, with key session content on Microsoft Foundry, Azure, and automation.
+Updates this week bring broader enterprise AI capabilities to the Microsoft ecosystem and partner platforms, focusing on agentic architectures, new tools for orchestration and monitoring, and a transition toward reliable production AI managed at scale. Developers and IT teams now receive multi-agent orchestration, improved models, end-to-end monitoring, and actionable cloud-to-edge tutorials. Automation and knowledge management features are being integrated across infrastructure, with Microsoft Ignite emphasizing the progression from AI experimentation to measurable enterprise results.
 
-### Microsoft Foundry and Edge/Enterprise AI Workflows
+### Microsoft Foundry: Multi-Agent Orchestration and Agent Memory
 
-Continuing last week’s developments, Microsoft Foundry now further supports cloud and edge workflows by introducing deployment guides for Foundry Local and Android integration. This shift puts AI closer to where data lives, supporting the flexible, hybrid scenarios discussed previously.
+Microsoft Foundry continues to develop its multi-agent workflows, with new previews of Workflow Builder, support for YAML definitions, and Power Fx extensibility for both low-code and advanced developers. Observability features add detailed tracing, monitoring, and compliance insights for agent actions.
 
-Live sessions pick up on earlier coverage of agent coordination and tool-rich agent frameworks, expanding into GitOps and ORAS-based pipelines, as well as real-world demos on cluster management and staged deployments. Security, lifecycle controls, and collaboration with Microsoft Defender continue to progress, as does the use of multi-tenant solutions highlighted before.
+The AI Toolkit for VS Code further connects developer tools to Foundry’s agentic platforms, continuing recent integration with Copilot and Semantic Kernel. Copilot’s code suggestions and evaluation logic help bring together AI-driven workflows with agent orchestration. Real-world case studies—from legal automation to composable banking—demonstrate the move from concept development to enterprise use.
 
-Wider local AI support for Phi Silica and Copilot+ PCs is in place, including Windows AI API learning sessions. Tutorials on techniques like LoRA tuning, RAG, and admin controls further support the enterprise trend toward accessible, flexible AI. Use cases span industries like healthcare and analytics, underlining practical results from these developments.
+Foundry Agent Service now supports native user context memory, making personalization across sessions simpler and reducing implementation complexity. Expanded documentation and Ignite sessions strengthen Foundry’s position as a scalable, compliant deployment path for AI agents—tying technical best practices to operations governance.
 
-- [Building and Shipping Edge AI Apps with Microsoft Foundry]({{ "/2025-11-24-Building-and-Shipping-Edge-AI-Apps-with-Microsoft-Foundry.html" | relative_url }})
-- [Integrating Local AI in Enterprise Apps with Windows AI APIs and Microsoft Foundry]({{ "/2025-11-24-Integrating-Local-AI-in-Enterprise-Apps-with-Windows-AI-APIs-and-Microsoft-Foundry.html" | relative_url }})
+- [Introducing Multi-Agent Workflows in Foundry Agent Service](https://devblogs.microsoft.com/foundry/introducing-multi-agent-workflows-in-foundry-agent-service/)
+- [Introducing Memory in Foundry Agent Service](https://devblogs.microsoft.com/foundry/introducing-memory-in-foundry-agent-service/)
 - [From Concept to Code: Building Production-Ready Multi-Agent Systems with Microsoft Foundry](https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-concept-to-code-building-production-ready-multi-agent/ba-p/4472752)
 - [Microsoft Foundry Workflows - Pt. 1: Creating a Sequential Multi-Agent Workflow]({{ "/2025-11-24-Microsoft-Foundry-Workflows-Pt-1-Creating-a-Sequential-Multi-Agent-Workflow.html" | relative_url }})
 - [Creating Multi-Agent Workflows in Microsoft Foundry: Adding Agents with Tools]({{ "/2025-11-24-Creating-Multi-Agent-Workflows-in-Microsoft-Foundry-Adding-Agents-with-Tools.html" | relative_url }})
 - [Migrating Microsoft Foundry Workflows to VS Code Web]({{ "/2025-11-24-Migrating-Microsoft-Foundry-Workflows-to-VS-Code-Web.html" | relative_url }})
-- [Building Autonomous Enterprise Agents with Reasoning in Microsoft Foundry]({{ "/2025-11-24-Building-Autonomous-Enterprise-Agents-with-Reasoning-in-Microsoft-Foundry.html" | relative_url }})
-- [Building Microsoft Agent Framework Solutions for Microsoft 365 with AI Integration]({{ "/2025-11-24-Building-Microsoft-Agent-Framework-Solutions-for-Microsoft-365-with-AI-Integration.html" | relative_url }})
-- [Agentic AI for Creatives: Microsoft Foundry and Data Solutions at Ignite]({{ "/2025-11-25-Agentic-AI-for-Creatives-Microsoft-Foundry-and-Data-Solutions-at-Ignite.html" | relative_url }})
-- [Panel: Real-World Architectures and Lessons from Scaling AI Agents on Azure]({{ "/2025-11-24-Panel-Real-World-Architectures-and-Lessons-from-Scaling-AI-Agents-on-Azure.html" | relative_url }})
-- [AI Enterprise Value: Real-World Applications with Microsoft Foundry and MCP]({{ "/2025-11-24-AI-Enterprise-Value-Real-World-Applications-with-Microsoft-Foundry-and-MCP.html" | relative_url }})
+
+### Enhanced Observability and Governance for AI Workloads
+
+Azure Monitor’s integration with AI Foundry enables unified dashboards, improved filtering, and purpose-built AI visualizations for monitoring generative and LLM applications. Low-code telemetry interfaces reduce the need for custom instrumentation, aligning with ongoing demand for simple observability. Enhanced governance in Foundry’s Agent Control Plane reflects enterprise-ready compliance and operational control priorities, empowering teams with detailed deployment insights.
+
+- [End-to-End Observability for Generative AI: Azure Monitor and AI Foundry Integration](https://techcommunity.microsoft.com/t5/azure-observability-blog/observability-for-the-age-of-generative-ai/ba-p/4473307)
+- [Building Trustworthy and Auditable AI Systems: Practical Strategies from Microsoft Ignite 2025]({{ "/2025-11-26-Building-Trustworthy-and-Auditable-AI-Systems-Practical-Strategies-from-Microsoft-Ignite-2025.html" | relative_url }})
 - [Foundry Control Plane: Managing AI Agents at Scale]({{ "/2025-11-24-Foundry-Control-Plane-Managing-AI-Agents-at-Scale.html" | relative_url }})
 
-### AI Infrastructure and Platform Integration on Azure
+### Advanced Model Integration and AI Infrastructure
 
-Expanding last week’s highlights of Azure’s Fairwater AI and core infrastructure, this week focuses on new NVIDIA Blackwell cluster deployments and progress in confidential computing. Detailed technical topics include advanced networking like NVLink and new RTX Pro 6000 features for robotics and simulation, following on from earlier discussions. Omniverse digital twin workflows are explored deeply, with examples for various industries.
+Anthropic’s Claude Opus 4.5 is now publicly previewed for Microsoft Foundry, Copilot paid plans, and Copilot Studio, enhancing model choice and performance for coding and agent tasks. Azure’s general availability of GB300 clusters enables large-scale operational deployment for multi-billion parameter models. Updated technical guides cover model tuning and troubleshooting, continuing a focus on actionable instructions for ML engineers. Foundry Local and Azure Arc keep hybrid and edge deployment accessible, following last week’s emphasis on flexible infrastructure.
 
-Practical tutorials continue themes of real-time AI streaming, flexible model routing, and system reliability. Demonstrations show how open-source tools such as Ray, KAITO, and LangChain work together with Azure’s managed pipeline services, matching the earlier move toward hybrid, automated workflows. New Oracle Database@Azure integrations now include step-by-step guides for secure, unified AI search, and Copilot Studio and Purview play ongoing roles for governance and security.
+- [Introducing Anthropic’s Claude Opus 4.5 in Microsoft Foundry for Enterprise AI Development](https://azure.microsoft.com/en-us/blog/introducing-claude-opus-4-5-in-microsoft-foundry/)
+- [Pushing Limits of Supercomputing Innovation on Azure AI Infrastructure]({{ "/2025-11-24-Pushing-Limits-of-Supercomputing-Innovation-on-Azure-AI-Infrastructure.html" | relative_url }})
+- [Building and Shipping Edge AI Apps with Microsoft Foundry]({{ "/2025-11-24-Building-and-Shipping-Edge-AI-Apps-with-Microsoft-Foundry.html" | relative_url }})
 
-- [Power Next-Generation AI Workloads with NVIDIA Blackwell on Azure]({{ "/2025-11-24-Power-Next-Generation-AI-Workloads-with-NVIDIA-Blackwell-on-Azure.html" | relative_url }})
-- [Running AI on Azure Storage: Fast, Secure, and Scalable]({{ "/2025-11-24-Running-AI-on-Azure-Storage-Fast-Secure-and-Scalable.html" | relative_url }})
-- [Embedding AI in Oracle Workloads with Oracle Database@Azure and Microsoft Fabric]({{ "/2025-11-24-Embedding-AI-in-Oracle-Workloads-with-Oracle-DatabaseAzure-and-Microsoft-Fabric.html" | relative_url }})
-- [AI-Driven Governance for Nasdaq Boardvantage with Azure PostgreSQL and Microsoft Foundry]({{ "/2025-11-25-AI-Driven-Governance-for-Nasdaq-Boardvantage-with-Azure-PostgreSQL-and-Microsoft-Foundry.html" | relative_url }})
+### Copilot Studio and Agent-Driven Automation
 
-### Agentic AI and Automation with Copilot Studio and Power Platform
+Copilot Studio’s development roadmap brings new support for agent design and orchestration, covering quick setup options and advanced controls. Tutorials on composite agent patterns and integration with Foundry and Fabric Data Agents provide actionable guidance for building robust automation solutions. Always-on agent architecture best practices further reliability, echoing last week’s monitoring focus.
 
-Expanding on last week’s focus on automation, this week delivers concrete steps and best practices for lead qualification, sales automation, and workflow reliability in Copilot Studio—all closely linked with the Power Platform.
-
-Guidance covers always-on agent deployment, failover, and monitoring for consistent operation. New features in Power Apps and Power Pages, as well as improvements to RPA and AI integration, reinforce the rapid implementation of low-code AI solutions for evolving business processes.
-
-- [Microsoft Ignite: Agents at Work and Copilot Studio for Business Process Automation]({{ "/2025-11-24-Microsoft-Ignite-Agents-at-Work-and-Copilot-Studio-for-Business-Process-Automation.html" | relative_url }})
-- [Advancements in Power Platform: AI, Automation, and Secure Integrations]({{ "/2025-11-24-Advancements-in-Power-Platform-AI-Automation-and-Secure-Integrations.html" | relative_url }})
+- [Copilot Studio Innovations and Roadmap: Building Agents and Future Features (BRK313)]({{ "/2025-11-26-Copilot-Studio-Innovations-and-Roadmap-Building-Agents-and-Future-Features-BRK313.html" | relative_url }})
+- [Building Multi-Agent Systems with MCP and Copilot Studio]({{ "/2025-11-25-Building-Multi-Agent-Systems-with-MCP-and-Copilot-Studio.html" | relative_url }})
+- [Deep Dive into AI Tools in Copilot Studio: Building Agents for Microsoft 365]({{ "/2025-11-25-Deep-Dive-into-AI-Tools-in-Copilot-Studio-Building-Agents-for-Microsoft-365.html" | relative_url }})
 - [Best Practices for Always-On AI Agents Using Copilot Studio and Power Platform]({{ "/2025-11-24-Best-Practices-for-Always-On-AI-Agents-Using-Copilot-Studio-and-Power-Platform.html" | relative_url }})
+- [Microsoft Ignite: Agents at Work and Copilot Studio for Business Process Automation]({{ "/2025-11-24-Microsoft-Ignite-Agents-at-Work-and-Copilot-Studio-for-Business-Process-Automation.html" | relative_url }})
 
-### Specialized AI Use Cases: Industry, Supply Chain, and Domain Solutions
+### AI-Driven Automation in the Microsoft Ecosystem
 
-At Ignite, multiple industry case studies continue the pattern of enterprise-scale agentic AI adoption. This includes projects at Kraft Heinz, Toyota, and Zurich, focused on real deployment of digital twins, and the use of SQL Server embeddings and ERP tools for process automation. These guides provide steps for applying advanced orchestration strategies in real settings, moving theory into successful practice.
+Platforms such as IQ Stack, Work IQ, and Fabric IQ are now established as key automation solutions. Entra Agent IDs support more granular auditing, while autonomous agents integrate with Office and Teams. Expanded no-code and low-code agent tooling advances operational automation and memory management, continuing previous trends in agentic workflow improvement. Community case studies focus on compliance, technical scaling, and organizational adoption.
 
-- [Optimizing Manufacturing at Kraft Heinz with AI, Azure Arc, and Microsoft Foundry]({{ "/2025-11-25-Optimizing-Manufacturing-at-Kraft-Heinz-with-AI-Azure-Arc-and-Microsoft-Foundry.html" | relative_url }})
-- [Reinventing Manufacturing with Digital Twin: AI-Powered Advances]({{ "/2025-11-24-Reinventing-Manufacturing-with-Digital-Twin-AI-Powered-Advances.html" | relative_url }})
-- [Transforming Manufacturing with Digital Twins and Real-Time Simulation Featuring Azure and NVIDIA AI]({{ "/2025-11-24-Transforming-Manufacturing-with-Digital-Twins-and-Real-Time-Simulation-Featuring-Azure-and-NVIDIA-AI.html" | relative_url }})
-- [Drive Growth, Profitability and Resilience with Agentic Supply Chains]({{ "/2025-11-24-Drive-Growth-Profitability-and-Resilience-with-Agentic-Supply-Chains.html" | relative_url }})
-- [Zurich and Toyota’s Playbook for Enterprise AI Innovation]({{ "/2025-11-24-Zurich-and-Toyotas-Playbook-for-Enterprise-AI-Innovation.html" | relative_url }})
-- [ERP Transformation with AI: Building Autonomous Agents (Microsoft Ignite 2025 Session PBRK361)]({{ "/2025-11-24-ERP-Transformation-with-AI-Building-Autonomous-Agents-Microsoft-Ignite-2025-Session-PBRK361.html" | relative_url }})
-- [Powering Financial Workflows with AI: Microsoft and LSEG Partnership at Ignite]({{ "/2025-11-24-Powering-Financial-Workflows-with-AI-Microsoft-and-LSEG-Partnership-at-Ignite.html" | relative_url }})
-- [Build Secure Agentic AI Apps with SQL Server 2025]({{ "/2025-11-24-Build-Secure-Agentic-AI-Apps-with-SQL-Server-2025.html" | relative_url }})
-- [Partners and Agentic AI: Transforming Energy and Resources at Microsoft Ignite]({{ "/2025-11-24-Partners-and-Agentic-AI-Transforming-Energy-and-Resources-at-Microsoft-Ignite.html" | relative_url }})
-- [Transforming Enterprise Workflows with C3 AI Agentic Process Automation]({{ "/2025-11-24-Transforming-Enterprise-Workflows-with-C3-AI-Agentic-Process-Automation.html" | relative_url }})
+- [Microsoft Ignite 2025: The Dawn of the AI-Agent Era](https://dellenny.com/microsoft-ignite-2025-the-dawn-of-the-ai-agent-era/)
+- [Inside Microsoft's AI Transformation Across the Software Lifecycle]({{ "/2025-11-25-Inside-Microsofts-AI-Transformation-Across-the-Software-Lifecycle.html" | relative_url }})
+- [AI Enterprise Value: Real-World Applications with Microsoft Foundry and MCP]({{ "/2025-11-24-AI-Enterprise-Value-Real-World-Applications-with-Microsoft-Foundry-and-MCP.html" | relative_url }})
+
+### Azure-Powered AI Integration and Deployment
+
+Recent updates to Azure AI integration and deployment offer practical guidance for embedding Foundry intelligence in Python Flask apps, building on .NET and App Services content. Step-by-step tutorials for deploying multi-agent, hybrid, and edge orchestration solutions support organizations transitioning from experimentation to scalable production-use. Security considerations remain central to these deployment guides.
+
+- [Azure App Service AI Scenarios: Complete Sample with AI Foundry Integration](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-service-ai-scenarios-complete-sample-with-ai-foundry/ba-p/4473142)
+- [Unlocking Your First AI Solution on Azure: Practical Paths for Developers](https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlocking-your-first-ai-solution-on-azure-practical-paths-for/ba-p/4472327)
+- [Build AI Apps Fast with GitHub and Microsoft Foundry in Action (MS Ignite BRK110)]({{ "/2025-11-24-Build-AI-Apps-Fast-with-GitHub-and-Microsoft-Foundry-in-Action-MS-Ignite-BRK110.html" | relative_url }})
+- [Panel: Real-World Architectures and Lessons from Scaling AI Agents on Azure]({{ "/2025-11-24-Panel-Real-World-Architectures-and-Lessons-from-Scaling-AI-Agents-on-Azure.html" | relative_url }})
+
+### AI Agents and Knowledge Integration for the Enterprise
+
+Guides now detail how to extend Copilot with additional sources, authentication, and workflow orchestration, providing practical methods for both low-code and advanced coding teams. New sessions bridge SDK usage and robust QA practices. Industry articles offer deeper analysis for sectors such as procurement, insurance, and analytics, continuing recent coverage in agent framework and interoperability.
+
+- [Building Agents for Microsoft 365 Copilot with the Agents Toolkit – Ignite BRK319]({{ "/2025-11-26-Building-Agents-for-Microsoft-365-Copilot-with-the-Agents-Toolkit-Ignite-BRK319.html" | relative_url }})
+- [Building Agents with Copilot Studio and Microsoft Foundry]({{ "/2025-11-25-Building-Agents-with-Copilot-Studio-and-Microsoft-Foundry.html" | relative_url }})
+- [Building the Most Intelligent Agents with the Latest Knowledge Sources]({{ "/2025-11-25-Building-the-Most-Intelligent-Agents-with-the-Latest-Knowledge-Sources.html" | relative_url }})
 - [Building Enterprise AI Apps with C3 Agentic AI Platform at Microsoft Ignite]({{ "/2025-11-24-Building-Enterprise-AI-Apps-with-C3-Agentic-AI-Platform-at-Microsoft-Ignite.html" | relative_url }})
+- [Building Microsoft Agent Framework Solutions for Microsoft 365 with AI Integration]({{ "/2025-11-24-Building-Microsoft-Agent-Framework-Solutions-for-Microsoft-365-with-AI-Integration.html" | relative_url }})
+
+### AI Observability, Automation, and Security in Industry Solutions
+
+Recent articles focus on compliance, security automation, and hybrid/multicloud orchestration, providing practical guides for developers working in regulated or large-scale environments. Migration and deployment guides reinforce a hands-on approach for teams moving AI projects into production.
+
+- [AI-Driven Governance for Nasdaq Boardvantage with Azure PostgreSQL and Microsoft Foundry]({{ "/2025-11-25-AI-Driven-Governance-for-Nasdaq-Boardvantage-with-Azure-PostgreSQL-and-Microsoft-Foundry.html" | relative_url }})
+- [What's New in Microsoft Intune: AI-Driven Endpoint Security and IT Empowerment]({{ "/2025-11-24-Whats-New-in-Microsoft-Intune-AI-Driven-Endpoint-Security-and-IT-Empowerment.html" | relative_url }})
+- [Optimizing Manufacturing at Kraft Heinz with AI, Azure Arc, and Microsoft Foundry]({{ "/2025-11-25-Optimizing-Manufacturing-at-Kraft-Heinz-with-AI-Azure-Arc-and-Microsoft-Foundry.html" | relative_url }})
 - [Real Stories of AI Transformation in Local Government]({{ "/2025-11-24-Real-Stories-of-AI-Transformation-in-Local-Government.html" | relative_url }})
-- [AI-Powered Industry Solutions at Microsoft Ignite 2025: Capgemini's Multi-Channel Knowledge Innovations]({{ "/2025-11-24-AI-Powered-Industry-Solutions-at-Microsoft-Ignite-2025-Capgeminis-Multi-Channel-Knowledge-Innovations.html" | relative_url }})
-- [Innovate with AI at Enterprise Scale: Microsoft Ignite Session BRK410]({{ "/2025-11-24-Innovate-with-AI-at-Enterprise-Scale-Microsoft-Ignite-Session-BRK410.html" | relative_url }})
-- [Impiger’s AI-First Enterprise Transformation at Microsoft Ignite]({{ "/2025-11-25-Impigers-AI-First-Enterprise-Transformation-at-Microsoft-Ignite.html" | relative_url }})
 
-### Azure Speech, Voice, and Conversational AI
+### AI Models, Multimodality, and Platform Comparisons
 
-Azure Speech and Voice Live API are now generally available. This extension, originating from recent updates, enables real-time, context-aware conversational AI with new features such as enhanced model selection and HD neural voice support that covers over 100 languages. These improvements support tasks like live translation in healthcare and customer service, following the roadmap originally presented in previous updates.
+Azure Speech’s Voice Live API and LLM Speech API are now available for adaptive voice features and live transcription, while Azure Content Understanding in Foundry supports document automation. Comparative platform articles help teams evaluate conversational AI solutions, building on previous assessments of Copilot Studio, Dialogflow, and Watson Assistant.
 
 - [Building Agentic Apps with Azure Speech and Voice Live API]({{ "/2025-11-24-Building-Agentic-Apps-with-Azure-Speech-and-Voice-Live-API.html" | relative_url }})
-
-### AI Developer Workflow and Code Integration
-
-Workflow integration continues to improve, with new resources covering GitHub, Foundry, and VS Code Web. The focus is on stepwise guides for migrating code, automating pipelines, and managing agent packaging for Azure deployments, following ongoing discussions around CI/CD and AI prototyping.
-
-Configuration-as-code tutorials reinforce the code-first approach, equipping teams with reliable methods for traceable AI-powered automation.
-
-- [Build AI Apps Fast with GitHub and Microsoft Foundry in Action (MS Ignite BRK110)]({{ "/2025-11-24-Build-AI-Apps-Fast-with-GitHub-and-Microsoft-Foundry-in-Action-MS-Ignite-BRK110.html" | relative_url }})
+- [Azure Content Understanding Now Generally Available in Foundry Tools](https://devblogs.microsoft.com/foundry/azure-content-understanding-is-now-generally-available/)
+- [Comparing Copilot Studio, Dialogflow, and IBM Watson Assistant: 2025 Conversational AI Platforms](https://dellenny.com/comparing-copilot-studio-with-dialogflow-and-ibm-watson-assistant-which-conversational-ai-platform-is-best-in-2025/)
 
 ### Other AI News
 
-C3 AI Studio continues to evolve, offering practical guides for both low-code and code-first app development, focusing on deployment, ontology building, and monitoring. The community forums show strong collaboration, connecting GitHub and the Microsoft AI ecosystem for enterprise-ready knowledge management.
+Tooling updates include a new AI Foundry Agent Service Connector for Logic Apps, offering improved automation and document flow options. Recent deployment and edge guides reflect the transition from prototyping to production highlighted last week.
 
-- [Building Enterprise AI Apps with C3 Agentic AI Platform at Microsoft Ignite]({{ "/2025-11-24-Building-Enterprise-AI-Apps-with-C3-Agentic-AI-Platform-at-Microsoft-Ignite.html" | relative_url }})
-- [AI-Powered Industry Solutions at Microsoft Ignite 2025: Capgemini's Multi-Channel Knowledge Innovations]({{ "/2025-11-24-AI-Powered-Industry-Solutions-at-Microsoft-Ignite-2025-Capgeminis-Multi-Channel-Knowledge-Innovations.html" | relative_url }})
-- [Transforming Enterprise Workflows with C3 AI Agentic Process Automation]({{ "/2025-11-24-Transforming-Enterprise-Workflows-with-C3-AI-Agentic-Process-Automation.html" | relative_url }})
+Security and compliance remain essential, with updates centering on agent memory privacy, policy vetting, and risk management. Live sessions and resources support explainable, traceable AI deployments.
+
+Migration guides illustrate real transitions, such as adapting Foundry workflows for VS Code Web and customizing translation solutions with AdaptCT.
+
+- [Announcing AI Foundry Agent Service Connector v2 (Preview)](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-ai-foundry-agent-service-connector-v2-preview/ba-p/4471082)
+- [Building AI Agents with Microsoft AI Toolkit & Foundry: Live Stream Walkthrough](https://techcommunity.microsoft.com/t5/microsoft-developer-community/upcoming-live-stream-building-ai-agents-with-the-ai-toolkit/ba-p/4473350)
+- [AI-Assisted Development Workflow with mirrord and Azure Kubernetes]({{ "/2025-11-25-AI-Assisted-Development-Workflow-with-mirrord-and-Azure-Kubernetes.html" | relative_url }})
+
+Security and compliance features emphasize agent memory privacy and policy enforcement for explainable and responsibly monitored deployments. Frameworks and sessions support regulated use.
+
+- [Building Trustworthy and Auditable AI Systems: Practical Strategies from Microsoft Ignite 2025]({{ "/2025-11-26-Building-Trustworthy-and-Auditable-AI-Systems-Practical-Strategies-from-Microsoft-Ignite-2025.html" | relative_url }})
+- [Foundry Control Plane: Managing AI Agents at Scale]({{ "/2025-11-24-Foundry-Control-Plane-Managing-AI-Agents-at-Scale.html" | relative_url }})
+
+Technical resources—for adaptation and migration—help developers move rapidly from prototypes to production using Microsoft’s platform tools.
+
+- [Translation Customization: A Developer’s Guide to Adaptive Custom Translation with Microsoft Foundry](https://devblogs.microsoft.com/foundry/translation-customization-a-developers-guide-to-adaptive-custom-translation/)
+- [Migrating Microsoft Foundry Workflows to VS Code Web]({{ "/2025-11-24-Migrating-Microsoft-Foundry-Workflows-to-VS-Code-Web.html" | relative_url }})
 
 ## ML
 
-At Ignite, machine learning updates centered on developer efficiency and fine-tuning at scale. This week’s coverage spotlights unified infrastructure, data platform improvements, and production agent guidance, all reinforcing the pattern toward integrated AI solutions, tuned models, and enterprise scaling within Azure.
+Microsoft’s ML ecosystem continued expanding, focusing on unified platforms, scalable development, and better data connectivity for cloud and hybrid environments. Developers now have access to new agent building tools, stronger data analysis and governance, and smooth Java integration with Spark. Ongoing improvements support collaboration, real-time analytics, and secure workflow transitions from experimentation to production.
 
-### Microsoft Foundry and AI Agent Fine-Tuning
+### Azure Databricks and Microsoft Foundry: Unified AI Development
 
-Furthering last week’s focus on custom workflows and model integration, Microsoft Foundry’s recent session covers all steps for producing and deploying tuned AI for real-world applications. This builds on Microsoft’s goal of making advanced ML techniques more widely available.
+Azure Databricks is now the central hub for analytics and AI, integrating Power BI, Power Apps, and Microsoft Foundry. This continues previous work on open-source models, agentic .NET workflows, and persistent cloud ML architectures. Case studies highlight advanced analytics with Genie orchestrating AI agents and Knowledge Assistant handling unstructured data. The updated Databricks Connector improves workflow efficiency and reflects last week’s emphasis on workflow modernization and vector storage. Genie offers integrated monitoring, removing the need for external oversight tools.
 
-The session highlights Azure OpenAI and open-source models, with concrete examples using GPT-5 and O4 Mini. Synthetic data generation from Swagger specs also features heavily, supporting the need for robust training sets. Demos show how multiple agents collaborate to create, test, and improve synthetic data, increasing system reliability and business flexibility.
+Unity Catalog remains the foundation for asset management and compliance and is evolving with Multi-Agent Supervisor model for secure governance.
 
-The ‘Navigator’ scenario illustrates how Foundry-powered agents process millions of contracts per day, underlining measurable benefits for both technical teams and leadership. Covered topics include model selection, API integration, and production deployment strategies, directly supporting earlier work in orchestration and ML.NET. For Azure or local teams, these guides bring ML workflows to greater maturity and scale.
-
-- [AI Fine-Tuning in Microsoft Foundry: Building Production-Ready Agents]({{ "/2025-11-24-AI-Fine-Tuning-in-Microsoft-Foundry-Building-Production-Ready-Agents.html" | relative_url }})
-
-### Azure Databricks: Unified Data and AI Ecosystem
-
-Azure Databricks was featured as a unified analytics solution with extended integration in this week’s news. Tutorials cover new agent tools, such as Genie for rapid creation, Knowledge Assistant for management, and Multi-Agent Supervisor for routing—further supporting persistent workflow state and semantic data practices discussed previously.
-
-The Databricks Connector, now improved for Power BI and Microsoft Apps, supports real-time data integration and workflow automation. The update to Databricks’ security tools—highlighted by Unity Catalog—matches the ongoing enterprise push for monitoring and compliance. Demonstrations, like EyeFi, reinforce Databricks’ expanding use in large organizations.
+Hands-on agent fine-tuning is now supported in Microsoft Foundry for both Azure OpenAI and open-source models, with synthetic data generation enabling scalable customization. The Navigator demo (for contract analysis) illustrates deployment at scale. Best practices for GPT-5, O4 Mini, and multi-agent orchestration reinforce the broader move from experimenting to modular, enterprise-grade workflows.
 
 - [Accelerate Data and AI Transformation with Azure Databricks]({{ "/2025-11-24-Accelerate-Data-and-AI-Transformation-with-Azure-Databricks.html" | relative_url }})
+- [AI Fine-Tuning in Microsoft Foundry: Building Production-Ready Agents]({{ "/2025-11-24-AI-Fine-Tuning-in-Microsoft-Foundry-Building-Production-Ready-Agents.html" | relative_url }})
 
-### Pushing the Boundaries: Azure AI Supercomputing Infrastructure
+### Microsoft Fabric: Data Engineering, Connectivity, and Real-Time Personalization
 
-This week’s coverage dives into Azure’s updated supercomputing resources, with a focus on validating multi-billion parameter models using new GPU hardware (GB200/300, H100), advanced networking, and storage—building on past improvements in compute capacity.
+Updates to Microsoft Fabric include a public preview JDBC Driver for secure, fast connections between Java applications and Spark SQL, furthering last week’s focus on pipeline and ML integration. Features such as Azure Entra authentication, HikariCP compatibility, and better performance optimize data connections for modern streaming and open-format environments. The Premier League case study showcases scalable fan engagement via unified data pipelines. Documentation highlights how to simplify pipelines and boost performance using enterprise tools.
 
-Methodology guides for system inspection, performance tuning, and validation follow last week’s narrative around reliability and Azure’s blend of open source and built-in tooling. New GB300 GPUs expand capacity for growing models, and case studies (such as LLAMA and GRAC 314B) show Azure’s evolving capability for deployment and operations at scale.
+- [Enterprise-Grade JDBC Driver for Microsoft Fabric Data Engineering Preview](https://blog.fabric.microsoft.com/en-US/blog/microsoft-jdbc-driver-for-microsoft-fabric-data-engineering-preview/)
+- [Premier League’s Data-Driven Fan Engagement at Scale]({{ "/2025-11-26-Premier-Leagues-Data-Driven-Fan-Engagement-at-Scale.html" | relative_url }})
 
-- [Pushing Limits of Supercomputing Innovation on Azure AI Infrastructure]({{ "/2025-11-24-Pushing-Limits-of-Supercomputing-Innovation-on-Azure-AI-Infrastructure.html" | relative_url }})
+### Power BI and Hybrid Data Infrastructure: Gateway and Connector Updates
+
+Power BI’s November 2025 On-premises Data Gateway update improves desktop compatibility and supports smoother transitions between cloud and hybrid analytics, addressing known issues with remote/local pipeline alignment. Ongoing connector updates and community outreach demonstrate Microsoft’s steady commitment to modernizing hybrid analytics infrastructure, benefitting developers handling growing ML workloads.
+
+- [On-premises Data Gateway November 2025 Release Now Available](https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-november-2025-release/)
 
 ## Azure
 
-Azure’s newest releases maintain ongoing investment in cloud-native tools, AI-enhanced platforms, and modernization support. Ignite 2025 sessions illustrate Azure’s aim for easier multi-cloud deployment, real-time analytics, robust design, and secure hybrid integration. Updated features, public previews, and migration guides confirm the platform’s focus on scalable, intelligent workloads.
+Azure’s latest developments focus on AI infrastructure, container and serverless platforms, resilient architectures, and improved developer productivity. Microsoft Ignite and regular ecosystem updates offer technical insights on high-performance computing, new service previews, monitoring advances, and cost control. Major case studies and hands-on tutorials remain central, as developer workflows stay a top priority.
 
-### Azure Cloud Native Development and Compute Innovations
+### Azure AI and High-Performance Compute Infrastructure
 
-Azure’s latest cycle builds on familiar themes—greater scalability and cross-platform capability. Multi-cloud management via Container Instances and improved serverless containers reinforce Azure’s pattern of accessible orchestration, extending the direction found in previous work such as the RADIUS project.
+Azure now supports high-performance compute and scalable AI infrastructure with ND GB200/GB300 VMs and NVIDIA Grace Blackwell chips, meeting the needs of advanced AI workloads with throughput over 860,000 tokens/sec for LLAMA 70B. Recent VM updates feature advanced networking, cooling, and power optimization. Azure's agentic workflows and productivity integrations are progressing, offering developers concrete options to automate and modernize enterprise processes.
 
-Advancements in eBPF-based networking and confidential container groups offer secured, fast workload isolation, matching compliance features discussed recently.
+- [Azure AI Infrastructure Updates for High-Performance Workloads]({{ "/2025-11-26-Azure-AI-Infrastructure-Updates-for-High-Performance-Workloads.html" | relative_url }})
 
-The public preview of Azure NCv6 GPU VMs boosts AI infrastructure, emphasizing support for visual and simulation workloads that tie back to the push toward efficient, multi-modal cloud operations. The DADS V7, V4L, and Cobalt 200 compute upgrades improve elasticity and reliability, reflecting feedback from recent user benchmarking efforts.
+### Resilient Azure Cloud Architectures and Backup
 
-- [Cloud Native Innovations with Mark Russinovich: Ignite 2025 Breakout]({{ "/2025-11-24-Cloud-Native-Innovations-with-Mark-Russinovich-Ignite-2025-Breakout.html" | relative_url }})
+Guides and demos emphasize resilient cloud architectures and improved disaster recovery using Azure Backup with threat detection, immutable storage, and new reliability tools for VMs, databases, and containers. The Azure SRE Agent provides deeper observability and streamlines multi-cloud/hybrid incident management, supporting quicker diagnostics and centralized logging.
+
+- [Architecting Resilient Applications with Azure Backup and Reliability Features]({{ "/2025-11-26-Architecting-Resilient-Applications-with-Azure-Backup-and-Reliability-Features.html" | relative_url }})
+- [Azure SRE Agent: Enhancing Observability and Multi-Cloud Incident Management](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-expanding-observability-and-multi-cloud/ba-p/4472719)
+
+### AI Model Deployment and Scaling on Azure
+
+Azure released hands-on guides for deploying open-source LLMs and agents using hybrid patterns—leveraging Docker Compose, serverless GPU offerings, and optimized AKS clusters. Technical case studies such as the Royal Bank of Canada highlight scalable and secure components, supporting a move toward reproducible, cost-efficient production AI.
+
+- [Fast and Flexible Inference for Open-Source AI Models at Scale with Azure]({{ "/2025-11-25-Fast-and-Flexible-Inference-for-Open-Source-AI-Models-at-Scale-with-Azure.html" | relative_url }})
+
+### Azure Logic Apps and Integration Advancements
+
+New Logic Apps connectors, now available as MCP tools for Foundry, enable code-free integration for agentic workflows with platforms like SAP, Dynamics, and Salesforce. The HL7 connector preview supports smoother healthcare integration, and migration resources update Logic Apps for better speed and governance. The newly available XML Operations connector streamlines cloud-native XML processing for BizTalk migration.
+
+- [Azure Logic Apps Connectors Now Available as MCP Tools in Microsoft Foundry](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/%EF%B8%8Fpublic-preview-azure-logic-apps-connectors-as-mcp-tools-in/ba-p/4473062)
+- [Clone a Consumption Logic App to a Standard Workflow](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/clone-a-consumption-logic-app-to-a-standard-workflow/ba-p/4471175)
+- [Announcing Public Preview: HL7 Connector for Azure Logic Apps (Standard & Hybrid)](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-hl7-connector-for-azure-logic-apps-standard-and/ba-p/4470690)
+- [General Availability of XML Parse and Compose Actions for Azure Logic Apps](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-of-the-xml-parse-and-compose/ba-p/4470825)
+- [The Future of Integration: Agentic Workflows and AI-Driven Patterns with Azure Logic Apps]({{ "/2025-11-24-The-Future-of-Integration-Agentic-Workflows-and-AI-Driven-Patterns-with-Azure-Logic-Apps.html" | relative_url }})
+
+### Azure Compute, Containers, and Serverless Workflows
+
+Service previews such as NCv6 VMs (with NVIDIA RTX PRO 6000 Blackwell GPUs) support modern scenarios in AI inference and content generation. Updates to CPUs, confidential computing, and unified deployment documentation for Functions and Azure Container Apps make modular APIs and serverless workflows more accessible. Durable Functions and Dapr integration extend microservices options for data pipelines and automation.
+
 - [Azure NCv6 Public Preview: Unified Platform for Converged AI & Visual Computing](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-ncv6-public-preview-the-new-unified-platform-for-converged/ba-p/4472704)
 - [Powering Modern Cloud Workloads with Azure Compute]({{ "/2025-11-24-Powering-Modern-Cloud-Workloads-with-Azure-Compute.html" | relative_url }})
+- [Azure Functions on Azure Container Apps: The Unified Platform for Event-Driven and Finite Workloads](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-on-azure-container-apps-the-unified-platform-for/ba-p/4467698)
 
-### Observability, Automation, and Operational Resilience
+### Microsoft Fabric and Data Platform Integration
 
-Azure SRE Agent expands last week’s observability guidance, adding support for metrics across clouds. New integrations with external monitoring and MCP server capabilities support OpenTelemetry-based metrics for a variety of languages, reinforcing the standardization drive.
+Fabric eliminates ETL bottlenecks with in-place analytics for multi-cloud backup, now supporting large object data types and real-time external queries in SQL databases. Expanded pipeline automation, virtualization, and GraphQL support show general availability for core platform features. Tutorials and community highlights address configuration management and pipeline orchestration.
 
-Collaborative incident response features, like integration with PagerDuty and Hawkeye, increase operational resilience—ongoing themes in Azure’s diagnostic improvements.
-
-Copilot now works within Azure Monitor, providing live insights for cost and troubleshooting—an extension of last week’s new dashboards and query options. Support for Grafana and Prompt QL moves workflows closer to real-time for distributed Kubernetes environments.
-
-- [Azure SRE Agent: Enhancing Observability and Multi-Cloud Incident Management](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-expanding-observability-and-multi-cloud/ba-p/4472719)
-- [Unlock Cloud-Scale Observability and Optimization with Azure Monitor]({{ "/2025-11-24-Unlock-Cloud-Scale-Observability-and-Optimization-with-Azure-Monitor.html" | relative_url }})
-
-### Data Platform Updates: Microsoft Fabric, SQL, and Data Integration
-
-Microsoft Fabric continues to build out its analytics platform, with hands-on demos and new features like in-place analytics for cloud backups and expanded OneLake support. General availability of Copy Job Activity and Data Virtualization for SQL are among several orchestration and compliance updates. Support for large object types, variable libraries, and improved workflow automation now caters to developer requests, as reflected in recent simplification efforts.
-
-Logic Apps now process XML directly, aiding legacy-to-cloud modernization as explored previously.
-
-- [SQL Database in Microsoft Fabric: Unified Platform for AI Apps and Analytics]({{ "/2025-11-24-SQL-Database-in-Microsoft-Fabric-Unified-Platform-for-AI-Apps-and-Analytics.html" | relative_url }})
-- [Copy Job Activity Now Generally Available in Microsoft Fabric Data Factory Pipelines](https://blog.fabric.microsoft.com/en-US/blog/announcing-copy-job-activity-now-general-available-in-data-factory-pipeline/)
-- [Data Virtualization and External Tables in Fabric SQL Databases (Preview)](https://blog.fabric.microsoft.com/en-US/blog/openrowset-and-external-tables-for-fabric-sql-databases/)
-- [Large Object Data Support in Microsoft Fabric Data Warehouse and SQL Analytics Endpoint](https://blog.fabric.microsoft.com/en-US/blog/large-string-and-binary-values-in-fabric-data-warehouse-and-sql-analytics-endpoint-for-mirrored-items-general-availability/)
-- [Managing Environment Configuration in Microsoft Fabric with Variable Libraries](https://blog.fabric.microsoft.com/en-US/blog/manage-environment-configuration-in-fabric-user-data-functions-with-variable-libraries/)
 - [Querying Database Backups in Microsoft Fabric: In-Place Analytics Without ETL](https://blog.fabric.microsoft.com/en-US/blog/30438/)
-- [General Availability of XML Parse and Compose Actions for Azure Logic Apps](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-of-the-xml-parse-and-compose/ba-p/4470825)
+- [Large Object Data Support in Microsoft Fabric Data Warehouse and SQL Analytics Endpoint](https://blog.fabric.microsoft.com/en-US/blog/large-string-and-binary-values-in-fabric-data-warehouse-and-sql-analytics-endpoint-for-mirrored-items-general-availability/)
+- [Data Virtualization and External Tables in Fabric SQL Databases (Preview)](https://blog.fabric.microsoft.com/en-US/blog/openrowset-and-external-tables-for-fabric-sql-databases/)
+- [Copy Job Activity Now Generally Available in Microsoft Fabric Data Factory Pipelines](https://blog.fabric.microsoft.com/en-US/blog/announcing-copy-job-activity-now-general-available-in-data-factory-pipeline/)
+- [Integrating GraphQL APIs with Fabric SQL Databases]({{ "/2025-11-25-Integrating-GraphQL-APIs-with-Fabric-SQL-Databases.html" | relative_url }})
+- [Managing Environment Configuration in Microsoft Fabric with Variable Libraries](https://blog.fabric.microsoft.com/en-US/blog/manage-environment-configuration-in-fabric-user-data-functions-with-variable-libraries/)
+- [Fabric Influencers Spotlight: Highlights from the Microsoft Fabric Community, November 2025](https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-november-2025/)
 
-### Edge and Hybrid AI: Azure Local, Deployment Automation, and Lenovo Partnership
+### Azure IaaS, Networking, and Cost Optimization
 
-Hybrid and regulated cloud options expand further, with Microsoft introducing Private Sovereign Cloud, NVIDIA RTX acceleration, and integrated partner solutions. Case studies with Lenovo and LOCA illustrate fast, automated deployment supporting data sovereignty, building on last week’s modernization examples.
+Recent enhancements include Azure Boost for faster VM performance, distributed storage for AI workloads, and cost-cutting storage provisioning. New features such as Compute Fleet, Ultra Disk, and gateway upgrades improve global network reliability. Smart tiering and instant resource scaling streamline transitions, with Power BI integration supporting monitoring and spending control.
 
-Orchestration for AKS, migration, and custom model deployment all support practical multi-environment event-driven design.
+- [Azure IaaS Best Practices to Enhance Performance and Scale]({{ "/2025-11-24-Azure-IaaS-Best-Practices-to-Enhance-Performance-and-Scale.html" | relative_url }})
+- [Driving Efficiency and Cost Optimization for Azure IaaS Deployments]({{ "/2025-11-24-Driving-Efficiency-and-Cost-Optimization-for-Azure-IaaS-Deployments.html" | relative_url }})
+- [Azure Networking Innovations for Scalable and Secure Cloud Transformations]({{ "/2025-11-26-Azure-Networking-Innovations-for-Scalable-and-Secure-Cloud-Transformations.html" | relative_url }})
+- [Drive Cost Efficiency and Elevate Azure ROI with Strategic Architecture | BRK216]({{ "/2025-11-24-Drive-Cost-Efficiency-and-Elevate-Azure-ROI-with-Strategic-Architecture-BRK216.html" | relative_url }})
 
-- [What’s New in Azure Local: Portfolio Enhancements & Edge AI Innovations]({{ "/2025-11-24-Whats-New-in-Azure-Local-Portfolio-Enhancements-and-Edge-AI-Innovations.html" | relative_url }})
-- [Simplifying Azure Local Deployments with Lenovo ThinkAgile MX and LOCA]({{ "/2025-11-24-Simplifying-Azure-Local-Deployments-with-Lenovo-ThinkAgile-MX-and-LOCA.html" | relative_url }})
-- [Powering Hybrid AI with Azure Local and Lenovo: Ignite 2025 Deep Dive]({{ "/2025-11-24-Powering-Hybrid-AI-with-Azure-Local-and-Lenovo-Ignite-2025-Deep-Dive.html" | relative_url }})
+### Enterprise Migration, Modernization, and Case Studies
 
-### Logic Apps, Integration, and Workflow Automation
+Case studies provide strategies for migration and modernization, including Sam’s Club’s move to multi-region microservices and Levi’s global cloud migration. Documentation now covers best practices for legacy app migration, hybrid integration, and phased modernization using Azure VMware Solution. Additional resources address financial services and SAP deployment, sharing lessons and practical methods.
 
-Logic Apps further develop agentic workflow patterns, extending the Model Context Protocol (MCP) highlighted last week. Guides for HL7 and BizTalk migration support teams in updating old processes to modern, cloud-based flows.
+- [Sam’s Club: Modernizing Retail Mission-Critical Apps with Azure]({{ "/2025-11-24-Sams-Club-Modernizing-Retail-Mission-Critical-Apps-with-Azure.html" | relative_url }})
+- [Levi’s Global IT Transformation: Migration and Modernization with Azure]({{ "/2025-11-25-Levis-Global-IT-Transformation-Migration-and-Modernization-with-Azure.html" | relative_url }})
+- [Best Practices for Migrating COTS Applications to Microsoft Azure](https://techcommunity.microsoft.com/t5/azure-migration-and/best-practices-for-migrating-cots-applications-to-microsoft/ba-p/4473323)
+- [Modernize on-premises VMware environments with Azure VMware Solution]({{ "/2025-11-24-Modernize-on-premises-VMware-environments-with-Azure-VMware-Solution.html" | relative_url }})
+- [Migration Lessons from Microsoft Federal's RISE with SAP Deployment]({{ "/2025-11-24-Migration-Lessons-from-Microsoft-Federals-RISE-with-SAP-Deployment.html" | relative_url }})
+- [Accelerating Migration and Modernization in Financial Services with Microsoft Cloud Accelerate Factory]({{ "/2025-11-24-Accelerating-Migration-and-Modernization-in-Financial-Services-with-Microsoft-Cloud-Accelerate-Factory.html" | relative_url }})
+- [Migration & Modernization Strategies for Partners: Azure-Focused Growth at MS Ignite 2025]({{ "/2025-11-25-Migration-and-Modernization-Strategies-for-Partners-Azure-Focused-Growth-at-MS-Ignite-2025.html" | relative_url }})
 
-Features for cloning workflows and upgrading support ongoing modernization work, making transitions manageable and less risky. Demonstrations confirm Azure’s focus on developer-centered integration and tool improvement.
+### Data Security, Resilience, and Recovery
 
-- [The Future of Integration: Agentic Workflows and AI-Driven Patterns with Azure Logic Apps]({{ "/2025-11-24-The-Future-of-Integration-Agentic-Workflows-and-AI-Driven-Patterns-with-Azure-Logic-Apps.html" | relative_url }})
-- [Announcing Public Preview: HL7 Connector for Azure Logic Apps (Standard & Hybrid)](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-hl7-connector-for-azure-logic-apps-standard-and/ba-p/4470690)
-- [Clone a Consumption Logic App to a Standard Workflow](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/clone-a-consumption-logic-app-to-a-standard-workflow/ba-p/4471175)
-
-### Resiliency, Backup, and Secure Cloud Architecture
-
-The “resilience by design” approach continues, providing updated frameworks for secure architectures and backup best practices. New guides for VM, Kubernetes, and microservice protection use Azure Recovery Services, Defender automation, and immutable storage to address shared responsibility and rapid response—building on established priorities.
+New guides cover Recovery Services vault setup, immutable backup options, and AKS/VM/file share disaster recovery. Demonstrations showcase enhanced backup and compliance integrations with Defender and Sentinel.
 
 - [Resilience by Design: Secure, Scalable, AI-Ready Cloud with Azure]({{ "/2025-11-24-Resilience-by-Design-Secure-Scalable-AI-Ready-Cloud-with-Azure.html" | relative_url }})
 - [Resiliency and Recovery with Azure Backup and Site Recovery]({{ "/2025-11-24-Resiliency-and-Recovery-with-Azure-Backup-and-Site-Recovery.html" | relative_url }})
 
-### Modernization, Migration, and Partner Solutions
+### Developer Tooling, Management, and SDK Enhancements
 
-Modernization remains a strong topic, with session guides on retail, finance, and public sector migration following last week’s best practices. These updates further Azure’s support for organizations planning IT renewals using AI-powered platforms and detailed adoption guidance.
+The Azure SDK’s November 2025 release brings upgrades across Storage, Identity, Cosmos DB, and agent libraries. Managed identities for AKS, error and failover improvements, and new .NET, Java, and Python libraries streamline agentic development. Azure Monitor unlocks Copilot-driven troubleshooting, cost optimization, and carbon analytics. Infrastructure updates boost developer productivity and observability.
 
-- [Sam’s Club: Modernizing Retail Mission-Critical Apps with Azure]({{ "/2025-11-24-Sams-Club-Modernizing-Retail-Mission-Critical-Apps-with-Azure.html" | relative_url }})
-- [Levi’s Global IT Transformation: Migration and Modernization with Azure]({{ "/2025-11-25-Levis-Global-IT-Transformation-Migration-and-Modernization-with-Azure.html" | relative_url }})
-- [Migration Lessons from Microsoft Federal's RISE with SAP Deployment]({{ "/2025-11-24-Migration-Lessons-from-Microsoft-Federals-RISE-with-SAP-Deployment.html" | relative_url }})
-- [Modernize on-premises VMware environments with Azure VMware Solution]({{ "/2025-11-24-Modernize-on-premises-VMware-environments-with-Azure-VMware-Solution.html" | relative_url }})
-- [Accelerating Migration and Modernization in Financial Services with Microsoft Cloud Accelerate Factory]({{ "/2025-11-24-Accelerating-Migration-and-Modernization-in-Financial-Services-with-Microsoft-Cloud-Accelerate-Factory.html" | relative_url }})
-- [Migration & Modernization Strategies for Partners: Azure-Focused Growth at MS Ignite 2025]({{ "/2025-11-25-Migration-and-Modernization-Strategies-for-Partners-Azure-Focused-Growth-at-MS-Ignite-2025.html" | relative_url }})
-
-### Azure IaaS, Infrastructure Optimization, and Cost Management
-
-Optimization continues to be a focus, with new advice for Azure IaaS using Azure Boost, Compute Fleet, Ultra Disk, and blob storage tiering strategies. Networking upgrades and scaling for App Gateway and ExpressRoute are ongoing, supporting a transition to more cost-effective and higher-performance operations.
-
-Updated resources link back to Copilot’s cost and reservation management, giving practical steps for reducing spend on infrastructure.
-
-- [Azure IaaS Best Practices to Enhance Performance and Scale]({{ "/2025-11-24-Azure-IaaS-Best-Practices-to-Enhance-Performance-and-Scale.html" | relative_url }})
-- [Driving Efficiency and Cost Optimization for Azure IaaS Deployments]({{ "/2025-11-24-Driving-Efficiency-and-Cost-Optimization-for-Azure-IaaS-Deployments.html" | relative_url }})
-- [Drive Cost Efficiency and Elevate Azure ROI with Strategic Architecture | BRK216]({{ "/2025-11-24-Drive-Cost-Efficiency-and-Elevate-Azure-ROI-with-Strategic-Architecture-BRK216.html" | relative_url }})
-- [Optimizing Data Analytics Costs with Azure Reservations for Microsoft Fabric](https://techcommunity.microsoft.com/t5/finops-blog/streamline-analytics-spend-on-microsoft-fabric-with-azure/ba-p/4472670)
-
-### Security, AI Governance, and Endpoint Management
-
-Improved security policies, integrated device management, and AI governance build on last week’s new baselines and detection features. Intune, Defender for Cloud, and new endpoint management options allow for streamlined policy enforcement and automation.
-
-Guides for API Management in Copilot and other AI scenarios continue to support secure and traceable integration, reflecting recent efforts to build stronger governance structures.
-
-- [What's New in Microsoft Intune: AI-Driven Endpoint Security and IT Empowerment]({{ "/2025-11-24-Whats-New-in-Microsoft-Intune-AI-Driven-Endpoint-Security-and-IT-Empowerment.html" | relative_url }})
-- [Govern AI Agents with Azure API Management: Secure, Monitor, and Scale AI Workloads]({{ "/2025-11-24-Govern-AI-Agents-with-Azure-API-Management-Secure-Monitor-and-Scale-AI-Workloads.html" | relative_url }})
+- [Azure SDK November 2025 Release: Storage, Identity, Cosmos DB, and New Libraries](https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-november-2025/)
+- [Unlock Cloud-Scale Observability and Optimization with Azure Monitor]({{ "/2025-11-24-Unlock-Cloud-Scale-Observability-and-Optimization-with-Azure-Monitor.html" | relative_url }})
+- [Scale Smarter: Azure Infrastructure for the Agentic Era]({{ "/2025-11-24-Scale-Smarter-Azure-Infrastructure-for-the-Agentic-Era.html" | relative_url }})
+- [SQL Server 2025 Top Ten Features]({{ "/2025-11-26-SQL-Server-2025-Top-Ten-Features.html" | relative_url }})
 
 ### Other Azure News
 
-Updates this week address optimized Linux deployments, eBPF instrumentation, and improved image security, offering practical guides for sysadmins working on Azure deployments.
+Security guides for Databricks workspaces detail best practices for architecture and networking. Tutorials address Python AI app deployment, agent governance with API Management, and optimizing AI on Azure Storage. Technical deep-dives by Mark Russinovich and updates from KubeCon NA explore open-source container, eBPF networking, and Project Pavilion.
 
+Azure expands in Indonesia Central, with new innovations for automation, edge AI, and VMware modernization. Tutorials cover Azure AD tenant management, Kubernetes monitoring, Linux performance, digital twins, smart retail, and skilling/certification for cloud and AI.
+
+- [Architecting and Deploying Secure Azure Databricks Workspaces: Design, Network, and Access Best Practices](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/guide-for-architecting-azure-databricks-design-to-deployment/ba-p/4473095)
+- [Troubleshooting Azure Linux Web App Deployment: Compatibility, Environment Variables, and Memory](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/common-misconceptions-when-running-locally-vs-deploying-to-azure/ba-p/4473938)
+- [Govern AI Agents with Azure API Management: Secure, Monitor, and Scale AI Workloads]({{ "/2025-11-24-Govern-AI-Agents-with-Azure-API-Management-Secure-Monitor-and-Scale-AI-Workloads.html" | relative_url }})
+- [Running AI on Azure Storage: Fast, Secure, and Scalable]({{ "/2025-11-24-Running-AI-on-Azure-Storage-Fast-Secure-and-Scalable.html" | relative_url }})
+- [Cloud Native Innovations with Mark Russinovich: Ignite 2025 Breakout]({{ "/2025-11-24-Cloud-Native-Innovations-with-Mark-Russinovich-Ignite-2025-Breakout.html" | relative_url }})
+- [Microsoft's Project Pavilion Presence at KubeCon NA 2025: Supporting Open Source in Cloud Native Ecosystems](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/project-pavilion-presence-at-kubecon-na-2025/ba-p/4472904)
+- [Microsoft Expands AI and Cloud Services in Indonesia Central Region](https://news.microsoft.com/source/asia/2025/11/25/microsoft-expands-ai-infrastructure-and-cloud-services-in-indonesia-empowering-more-organizations-to-innovate-locally/)
+- [Azure Local 22H2 Clusters: End of Service and Required Upgrade Actions](https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-local-22h2-clusters-end-of-service-and-feature-degradation/ba-p/4470129)
+- [What’s New in Azure Local: Portfolio Enhancements & Edge AI Innovations]({{ "/2025-11-24-Whats-New-in-Azure-Local-Portfolio-Enhancements-and-Edge-AI-Innovations.html" | relative_url }})
+- [Simplifying Azure Local Deployments with Lenovo ThinkAgile MX and LOCA]({{ "/2025-11-24-Simplifying-Azure-Local-Deployments-with-Lenovo-ThinkAgile-MX-and-LOCA.html" | relative_url }})
+- [Powering Hybrid AI with Azure Local and Lenovo: Ignite 2025 Deep Dive]({{ "/2025-11-24-Powering-Hybrid-AI-with-Azure-Local-and-Lenovo-Ignite-2025-Deep-Dive.html" | relative_url }})
+- [Understanding Azure AD Tenants, Users, Groups, and Roles: A Practical Guide](https://dellenny.com/understanding-azure-ad-tenants-users-groups-and-roles-a-practical-guide/)
+- [Modernizing Kubernetes Monitoring with Drasi, Inspektor Gadget, and Headlamp on Azure]({{ "/2025-11-26-Modernizing-Kubernetes-Monitoring-with-Drasi-Inspektor-Gadget-and-Headlamp-on-Azure.html" | relative_url }})
 - [Optimizing Linux Deployments: Performance and Security on Azure]({{ "/2025-11-24-Optimizing-Linux-Deployments-Performance-and-Security-on-Azure.html" | relative_url }})
-
-Advances in agentic platforms, including Copilot and AKS Automatic features, further automate compliance and improve developer experience.
-
-- [Scale Smarter: Azure Infrastructure for the Agentic Era]({{ "/2025-11-24-Scale-Smarter-Azure-Infrastructure-for-the-Agentic-Era.html" | relative_url }})
-
-Ongoing integration with Citrix Cloud builds on last week’s coverage of workplace modernization and hybrid optimization for remote work environments.
-
-- [Optimizing Azure Investments with Citrix: Security, Cost, and Experience]({{ "/2025-11-24-Optimizing-Azure-Investments-with-Citrix-Security-Cost-and-Experience.html" | relative_url }})
-
-A historical session featuring Mark Russinovich and Scott Hanselman explores computing from Altair 8800 to Azure, illustrating the ongoing context of platform modernization.
-
-- [Connecting Computing Eras: From Altair 8800 to Azure Cloud Architecture]({{ "/2025-11-25-Connecting-Computing-Eras-From-Altair-8800-to-Azure-Cloud-Architecture.html" | relative_url }})
-
-Updates on IoT devices and retail showcase Azure’s evolving role in secure analytics and smart device management.
-
+- [Transforming Manufacturing with Digital Twins and Real-Time Simulation Featuring Azure and NVIDIA AI]({{ "/2025-11-24-Transforming-Manufacturing-with-Digital-Twins-and-Real-Time-Simulation-Featuring-Azure-and-NVIDIA-AI.html" | relative_url }})
+- [Transform Manufacturing with Digital Twins and Real-Time Simulation | Microsoft Ignite 2025]({{ "/2025-11-26-Transform-Manufacturing-with-Digital-Twins-and-Real-Time-Simulation-Microsoft-Ignite-2025.html" | relative_url }})
 - [Scaling Innovation in Smart Eyewear and Connected Retail with Azure and AI]({{ "/2025-11-24-Scaling-Innovation-in-Smart-Eyewear-and-Connected-Retail-with-Azure-and-AI.html" | relative_url }})
+- [Azure Skilling at Microsoft Ignite 2025: Elevate Your Cloud and AI Expertise](https://techcommunity.microsoft.com/t5/microsoft-developer-community/azure-skilling-at-microsoft-ignite-2025/ba-p/4472678)
+- [Build Smarter with Azure AI Landing Zones: Your Blueprint for Scalable, Secure AI Solutions](https://www.thomasmaurer.ch/2025/11/__trashed/)
+- [Optimizing Data Analytics Costs with Azure Reservations for Microsoft Fabric](https://techcommunity.microsoft.com/t5/finops-blog/streamline-analytics-spend-on-microsoft-fabric-with-azure/ba-p/4472670)
+- [Optimizing Azure Investments with Citrix: Security, Cost, and Experience]({{ "/2025-11-24-Optimizing-Azure-Investments-with-Citrix-Security-Cost-and-Experience.html" | relative_url }})
+- [Connecting Computing Eras: From Altair 8800 to Azure Cloud Architecture]({{ "/2025-11-25-Connecting-Computing-Eras-From-Altair-8800-to-Azure-Cloud-Architecture.html" | relative_url }})
+- [From VMs and Containers to AI Apps with Azure Red Hat OpenShift]({{ "/2025-11-25-From-VMs-and-Containers-to-AI-Apps-with-Azure-Red-Hat-OpenShift.html" | relative_url }})
+- [SQL Database in Microsoft Fabric: Unified Platform for AI Apps and Analytics]({{ "/2025-11-24-SQL-Database-in-Microsoft-Fabric-Unified-Platform-for-AI-Apps-and-Analytics.html" | relative_url }})
 
 ## Coding
 
-This week in Coding covers improved developer tools, new integrations, and best practices for creating sturdy applications. Updates range across IDE enhancements, built-in AI support, and pragmatic architecture advice. With ongoing improvements in Visual Studio 2026 and the Windows 11 developer suite, Microsoft continues to streamline iteration, boost security, and expand AI’s role in everyday coding. In-depth articles on .NET startup routines and sound C# class design reinforce the move toward maintainable, high-quality code in the Microsoft ecosystem.
+Coding updates this week covered platform management, best practices, and language improvements. Changes in Visual Studio and Windows simplify continuous delivery and AI integration. The community discussed C# and Python design guidelines, with interviews and guides focusing on maintainability and performance.
 
-### Modern IDEs and the Windows Developer Experience
+### Visual Studio 2026 and New Update Cadence
 
-Following Visual Studio 2026’s launch last week, more detail is available on how monthly updates let developers manage innovation and stability by choosing between Insiders, Stable, and LTS channels. Major components like .NET and C++ compilers are now modular, supporting independent updates—an advance from prior .NET improvements.
-
-Copilot is integrated further in Visual Studio 2026, including independent Copilot updates for up-to-date AI coding support. This addresses developer needs for fast adaptation to evolving features.
-
-Windows 11’s toolkit also grows: PowerToys and Windows Terminal now add enhanced security and automation, featuring Copilot in Terminal and new command line tools, as recently previewed. The new 'Edit' terminal utility and MCP Server deployment as AI agent underline Microsoft’s ongoing support for seamless automation and Azure integration.
+Microsoft has implemented changes to Visual Studio 2026, introducing monthly updates and a Modern Support Lifecycle that aligns releases with the annual .NET schedule. This makes IDE management, build tools, and licensing more predictable and easier to upgrade, minimizing risks and supporting current features. Copilot integration is now permanent and always up-to-date. Licensing updates—including annual renewals—have sparked community discussion around costs, while the Community Edition remains free for eligible users. New release channels follow a SaaS approach. Security and compliance are emphasized, encouraging upgrades from outdated compilers.
 
 - [Visual Studio 2026: Modern IDE with Monthly Updates and Flexible Build Tools](https://devblogs.microsoft.com/visualstudio/visual-studio-built-for-the-speed-of-modern-development/)
+- [Microsoft Visual Studio Update Cycle: Annual Releases and Developer Reactions](https://devclass.com/2025/11/25/microsoft-visual-studio-shifts-to-annual-releases-raising-cost-concerns/)
+
+### .NET Modernization, Agentic Tooling, and Cloud-Native Ecosystem
+
+Following the general availability of .NET 10, .NET continues its move toward agentic modernization and cloud-native resilience. .NET Day introduces new guidance for app modernization, AI tooling, and orchestrated workflows such as Durable Task Extension and multi-agent orchestration. Practices for reliable background processing and exponential backoff support safe backend handling and scaling. Coverage of the .NET boot process and Steeltoe’s cloud pattern adoption gives detailed insight into app startup, tracing, and Spring Cloud-style service integration.
+
+- [.NET Day: Modernize Apps with Azure, AI, and Agentic Tooling](https://devblogs.microsoft.com/dotnet/dotnet-day-on-agentic-modernization-coming-soon/)
+- [Building Reliable Background Processing with .NET BackgroundService and Exponential Backoff](https://techcommunity.microsoft.com/t5/microsoft-developer-community/background-tasks-in-net/ba-p/4472341)
+- [Exploring the .NET Boot Process via Host Tracing](https://andrewlock.net/exploring-the-dotnet-boot-process-via-host-tracing/)
+- [Project Spotlight: Steeltoe – Building Cloud-Native .NET Applications](https://dotnetfoundation.org/news-events/detail/project-spotlight-steeltoe)
+
+### Developer Productivity Tools on Windows 11
+
+Windows 11’s updated developer stack brings WSL improvements and Zero Trust security, boosting development experiences across platforms. New features like ‘Edit’ and Copilot integration in Terminal streamline coding and troubleshooting. PowerToys, now featuring local AI-powered paste, supports rapid automation. Better security and extensibility in PowerShell and Terminal let developers customize their environments to be AI-ready and compliant. Integration demos connect multi-agent development and cloud-native deployment on Windows.
+
 - [Windows 11 Developer Productivity Tools: WSL, Terminal, PowerToys & Enterprise Security]({{ "/2025-11-24-Windows-11-Developer-Productivity-Tools-WSL-Terminal-PowerToys-and-Enterprise-Security.html" | relative_url }})
 
-### .NET Diagnostics and C# Design Discipline
+### C# Design Practices: When to Seal Classes
 
-.NET internals and diagnostics remain a focus, with Andrew Lock’s exploration of the .NET boot sequence complementing previous guides on startup and hosting.
+C# maintainability advice recommends sealing classes unless inheritance is necessary, improving code safety and performance—matching current best practices for reducing technical debt in APIs and architectures. Framework base types may remain unsealed as needed for extensibility.
 
-Nick Chapsas’ summary on default class sealing practices supports conversations about code maintainability and extensibility, emphasizing the default use of sealed classes and clear extension points—topical as teams seek more robust design approaches.
-
-- [Exploring the .NET Boot Process via Host Tracing](https://andrewlock.net/exploring-the-dotnet-boot-process-via-host-tracing/)
 - [Every Class Should Be Sealed in C#]({{ "/2025-11-24-Every-Class-Should-Be-Sealed-in-C.html" | relative_url }})
+
+### Python’s Ongoing Strengths and AI Integration
+
+Guido van Rossum’s latest interview discusses Python's readability, continued growth, and its integration with ML and AI tools such as Copilot and LLMs. Insights reinforce Python as reliable and adaptable for both simple and advanced development, confirming its consistent value in the evolving data and AI landscape.
+
+- [Python’s Enduring Appeal: Readability, AI, and Insights from Guido van Rossum](https://github.blog/developer-skills/programming-languages-and-frameworks/why-developers-still-flock-to-python-guido-van-rossum-on-readability-ai-and-the-future-of-programming/)
 
 ## DevOps
 
-DevOps continues to enhance configuration management and automated setup for Windows, building on last week’s emphasis on code-based infrastructure for smoother developer workflows. The goal remains consistency, simple onboarding, and flexible extension across environments.
+DevOps updates this week strengthened automation, configuration, and environment management. GitHub and Microsoft released features to make dependency management and workflow orchestration more robust. Emphasis on foundational practices and new resources supports both experienced and new teams building reliable pipelines.
 
-### WinGet and Desired State Configuration Integration
+### GitHub Actions and Dependabot Ecosystem Improvements
 
-This week’s milestone announcement is the integration of Desired State Configuration (DSC) with WinGet, featuring code-driven setup for Windows machines. Teams can now automate app configuration and policy enforcement, reducing repetitive tasks and ensuring consistent environments for developers and production teams. This matches the trend toward policy-driven automation described before.
+GitHub’s latest Actions update lets organizations assign custom labels for Dependabot jobs, supporting more precise targeting and secure compliance. Runner group scoping allows placement control and keeps workflows compatible. A guide illustrates five workflow automation techniques with Actions, covering CI/CD, security checks, artifact management, and workflow templates.
 
-Guides now show how to export and reuse configuration templates, making standard set-up easy. The updates fit with ongoing patterns for onboarding, compliance, and policy-driven automation now built directly into Windows.
+- [Custom Labels Configuration for Dependabot Jobs with GitHub Actions Runners](https://github.blog/changelog/2025-11-25-custom-labels-configuration-option-for-dependabot-self-hosted-and-larger-github-hosted-actions-runners-now-generally-available-at-the-organization-level)
+- [Five Techniques to Automate Workflows Using GitHub Actions]({{ "/2025-11-26-Five-Techniques-to-Automate-Workflows-Using-GitHub-Actions.html" | relative_url }})
 
-Additional improvements include interface updates, advanced font handling, new command line features, and PowerShell integration. WinGet Studio, an open community portal, now assists with plugin sharing and customization—expanding community input and evolution found in previous DevOps news.
+### Configuration and Environment Management on Windows
 
-These updates provide faster onboarding and reliable setup for both development and IT teams, strengthening the open, adaptable nature of modern DevOps on Windows.
+WinGet and Desired State Configuration are highlighted for making Windows setup easier and more consistent. This approach reduces manual configuration, enables sharable scripts, and creates enforceable environments. WinGet Studio is now open source, encouraging community contributions.
 
 - [Fast and Easy Windows Setup & Configuration with WinGet and Desired State Configuration]({{ "/2025-11-24-Fast-and-Easy-Windows-Setup-and-Configuration-with-WinGet-and-Desired-State-Configuration.html" | relative_url }})
 
+### DevOps for Microsoft Power Platform Solutions
+
+DevOps best practices extend to Power Platform, with new tools and patterns enhancing ALM for low-code and AI apps. Improved deployments, integrated source control, and upgraded pipeline templates offer better governance and traceability for lifecycle automation. Power Platform Monitor now supports advanced multi-canvas and Copilot Studio integrations.
+
+- [Deploying and Operating Power Platform Solutions with DevOps]({{ "/2025-11-26-Deploying-and-Operating-Power-Platform-Solutions-with-DevOps.html" | relative_url }})
+
+### Other DevOps News
+
+A new guide explains setting up `.gitignore` files to keep repos clean—removing system files, build artifacts, and other unnecessary data. Gitignore.io usage is covered for reliable hygiene and preventing sensitive information leaks.
+
+- [Understanding .gitignore: Keeping Your Git Repository Clean]({{ "/2025-11-28-Understanding-gitignore-Keeping-Your-Git-Repository-Clean.html" | relative_url }})
+
 ## Security
 
-Security news this week features new AI-powered protections for cloud, endpoints, and collaboration, with a focus on governance and operational agility. Ignite 2025 delivered sessions and resources on secure agentic AI, confidential computing, automated SOC, and broad partnerships. Updates in memory-safe platform hardware, managed agent lifecycle, and practical incident response are supported by more tools for hardening devices, data, and drivers.
+Security topics this week covered improvements in cloud security, identity management, integrated AI defense, and developer security practices. Ignite 2025 announcements provide hands-on demos and general availability for new policy enforcement and automation tools. Key areas include AI-enhanced DevSecOps, policy automation, and resources for incident response.
 
-### Advancements in Confidential Computing and Memory-Safe Platform Security
+### GitHub Security and DevSecOps
 
-Extending last week’s progress in custom baselines and memory safety, Azure has now implemented deeper Intel Trusted Domain Extensions (TDX) in collaboration with Bosch and Intel, providing stronger isolation for high-assurance workloads.
+GitHub now supports better baseline management and secret detection, including reporting leaked secrets in unlisted gists and enabling default vulnerability scans. Security maturity features such as assignable secret alerts and campaign management are live. Azure Trusted Signing and dotnet sign automation make Windows code signing easier, streamlining secure build and deployment pipelines.
 
-Microsoft continues to move system code to Rust for firmware and drivers, with new ecosystem support through windows-drivers-rs and Cargo WDK. Secure Core PC and enhanced DFCI control also get newly updated deployment tools for IT.
+- [Enterprise Security and Governance on GitHub: Best Practices from Ignite 2025]({{ "/2025-11-24-Enterprise-Security-and-Governance-on-GitHub-Best-Practices-from-Ignite-2025.html" | relative_url }})
+- [GitHub Now Reports Leaked Secrets in Unlisted Gists to Scanning Partners](https://github.blog/changelog/2025-11-25-secrets-in-unlisted-github-gists-are-now-reported-to-secret-scanning-partners)
+- [GitHub Code Scanning Default Setup Bypasses Restrictive Actions Policies](https://github.blog/changelog/2025-11-25-code-scanning-default-setup-bypasses-github-actions-policy-blocks)
+- [Secret Scanning Alert Assignees and Security Campaigns Now Available in GitHub](https://github.blog/changelog/2025-11-25-secret-scanning-alert-assignees-security-campaigns-are-generally-available)
+- [Automatically Signing Windows Executables with Azure Trusted Signing, dotnet sign, and GitHub Actions](https://www.hanselman.com/blog/automatically-signing-a-windows-exe-with-azure-trusted-signing-dotnet-sign-and-github-actions)
+- [Secure Code to Cloud with AI-Infused DevSecOps]({{ "/2025-11-25-Secure-Code-to-Cloud-with-AI-Infused-DevSecOps.html" | relative_url }})
 
-- [Advancing Confidential Computing: Bosch, Microsoft Azure, & Intel TDX]({{ "/2025-11-25-Advancing-Confidential-Computing-Bosch-Microsoft-Azure-and-Intel-TDX.html" | relative_url }})
-- [Advancing Windows Device Security with Surface Innovation and Memory-Safe Rust Drivers]({{ "/2025-11-24-Advancing-Windows-Device-Security-with-Surface-Innovation-and-Memory-Safe-Rust-Drivers.html" | relative_url }})
+### AI Security, Agent Lifecycle, and Security Copilot
 
-### Securing Agentic AI: Lifecycle, Governance, and Risk Management
+Security for AI and agentic workflows is evolving, with new frameworks for prompt injection defense, supply chain protection, and compliance checks. Security Copilot now offers triage and threat intelligence agents as part of standard SOC operations. These features help protect agent deployments, manage sprawl, and enforce compliance—following ongoing organizational security priorities.
 
-This week’s updates highlight new tools for threat modeling and governance in agentic AI, directly addressing risks like prompt injection and memory tampering previously discussed.
-
-Microsoft Agent 365 builds on centralized audit trails, conditional access, and DLP, as well as enhancements in Defender, Purview, and Entra for fine-grained monitoring of AI workflows, continuing the push for clear oversight and risk controls.
-
-- [Building Secure AI Agents with Microsoft’s Security Stack]({{ "/2025-11-24-Building-Secure-AI-Agents-with-Microsofts-Security-Stack.html" | relative_url }})
-- [Explore Microsoft Agent 365 Security and Governance Capabilities]({{ "/2025-11-24-Explore-Microsoft-Agent-365-Security-and-Governance-Capabilities.html" | relative_url }})
 - [Securing AI at Scale: Microsoft’s Latest Innovations in Agent, App, and Data Protection]({{ "/2025-11-24-Securing-AI-at-Scale-Microsofts-Latest-Innovations-in-Agent-App-and-Data-Protection.html" | relative_url }})
-- [Leading with Trust: Building & Deploying Agents in a Regulated World]({{ "/2025-11-24-Leading-with-Trust-Building-and-Deploying-Agents-in-a-Regulated-World.html" | relative_url }})
-
-### Security Copilot, SOC Automation, and Microsoft Defender Ecosystem
-
-Security Copilot introduces agent-based automation for SOC teams, including persistent threat memory and daily briefings. The new Security Compute Unit provides a clearer cost and access model to support these changes.
-
-Microsoft Sentinel’s updates on analytics and cross-system coverage assist with centralizing monitoring efforts. Defender for Cloud continues progress with AI-driven attack detection, expanding on previous themes of dashboard integration and proactive protection.
-
-- [Security Copilot: Empowering Security Teams with AI at Microsoft Ignite 2025]({{ "/2025-11-24-Security-Copilot-Empowering-Security-Teams-with-AI-at-Microsoft-Ignite-2025.html" | relative_url }})
 - [Empowering the SOC: Security Copilot and the Rise of Agentic Defense]({{ "/2025-11-24-Empowering-the-SOC-Security-Copilot-and-the-Rise-of-Agentic-Defense.html" | relative_url }})
-- [Amplifying SecOps Practices with Microsoft Sentinel and Unified Platform]({{ "/2025-11-24-Amplifying-SecOps-Practices-with-Microsoft-Sentinel-and-Unified-Platform.html" | relative_url }})
-- [Build Secure Applications with Defender and Azure Network Security]({{ "/2025-11-24-Build-Secure-Applications-with-Defender-and-Azure-Network-Security.html" | relative_url }})
+- [AI-Powered Data Security with Security Copilot and Microsoft Purview]({{ "/2025-11-24-AI-Powered-Data-Security-with-Security-Copilot-and-Microsoft-Purview.html" | relative_url }})
+- [Leading with Trust: Building & Deploying Agents in a Regulated World]({{ "/2025-11-24-Leading-with-Trust-Building-and-Deploying-Agents-in-a-Regulated-World.html" | relative_url }})
+- [Explore Microsoft Agent 365 Security and Governance Capabilities]({{ "/2025-11-24-Explore-Microsoft-Agent-365-Security-and-Governance-Capabilities.html" | relative_url }})
+- [Building Secure AI Agents with Microsoft’s Security Stack]({{ "/2025-11-24-Building-Secure-AI-Agents-with-Microsofts-Security-Stack.html" | relative_url }})
+- [Security Copilot: Empowering Security Teams with AI at Microsoft Ignite 2025]({{ "/2025-11-24-Security-Copilot-Empowering-Security-Teams-with-AI-at-Microsoft-Ignite-2025.html" | relative_url }})
+- [Secure Code Game: Empowering Safer LLM-Based Applications]({{ "/2025-11-28-Secure-Code-Game-Empowering-Safer-LLM-Based-Applications.html" | relative_url }})
+
+### Microsoft Defender for Cloud and Azure Security
+
+Defender for Cloud now includes AI-powered defense features, automated response options, and stronger integrations with GitHub and runtime code scanning. Updates to Bastion, firewall, and logging improve compliance and permissions management across environments.
+
 - [AI-powered Defense Strategies for Cloud Workloads with Microsoft Defender]({{ "/2025-11-24-AI-powered-Defense-Strategies-for-Cloud-Workloads-with-Microsoft-Defender.html" | relative_url }})
+- [Build Secure Applications with Defender and Azure Network Security]({{ "/2025-11-24-Build-Secure-Applications-with-Defender-and-Azure-Network-Security.html" | relative_url }})
+- [Accelerating Secure Cloud and AI Migrations with Microsoft Defender for Cloud]({{ "/2025-11-25-Accelerating-Secure-Cloud-and-AI-Migrations-with-Microsoft-Defender-for-Cloud.html" | relative_url }})
 
-### Microsoft Purview and Enterprise Data Security
+### Microsoft Purview Data Security and Governance
 
-Expanded Microsoft Purview features continue to focus on data security and compliance, supporting organizations as they incorporate Copilot and generative AI into operations. Features like DSPM, automated labeling, and alert fatigue reduction are included, showing how AI can reduce manual effort and speed up compliance work.
+Microsoft Purview’s DSPM now brings AI-driven automation and deeper cloud integration, providing better auto-labeling, compliance management, and analytics across environments. API/SDK enhancements encourage workflow customization, with Secure-by-Design initiatives supporting compliant architecture.
 
-Case studies reinforce that automation tools and adaptive policy management are delivering measurable gains, moving from recent pilot phases into everyday use.
-
+- [Beyond Visibility: Microsoft Purview Data Security Posture Management]({{ "/2025-11-25-Beyond-Visibility-Microsoft-Purview-Data-Security-Posture-Management.html" | relative_url }})
 - [Securing Data Across Microsoft Environments with Microsoft Purview]({{ "/2025-11-24-Securing-Data-Across-Microsoft-Environments-with-Microsoft-Purview.html" | relative_url }})
 - [Secure-by-Design Transformation: PwC and Microsoft Purview Enhancing Data Security]({{ "/2025-11-24-Secure-by-Design-Transformation-PwC-and-Microsoft-Purview-Enhancing-Data-Security.html" | relative_url }})
-- [AI-Powered Data Security with Security Copilot and Microsoft Purview]({{ "/2025-11-24-AI-Powered-Data-Security-with-Security-Copilot-and-Microsoft-Purview.html" | relative_url }})
 
-### Identity, Zero Trust, and Cross-Platform Security
+### Microsoft Entra and Identity/Access Management Security
 
-Microsoft Entra and Intune lead ongoing Zero Trust efforts by adding adaptive access and security policies shaped by AI, echoing advances discussed in authentication and device management. The new Intune capabilities bolster risk identification and support secure AI adoption across infrastructures.
+Entra (formerly Azure AD) introduces Agent ID for unique agent lifecycle management and supports improved Conditional Access, risk detection, MFA, and SIEM integration. Step-by-step guides and practical advice continue to support evolving identity and policy management.
 
+- [Microsoft Entra: What's New in Secure Access on the AI Frontier]({{ "/2025-11-25-Microsoft-Entra-Whats-New-in-Secure-Access-on-the-AI-Frontier.html" | relative_url }})
 - [Accelerating Zero Trust and Securing AI Access with Microsoft Entra Suite]({{ "/2025-11-24-Accelerating-Zero-Trust-and-Securing-AI-Access-with-Microsoft-Entra-Suite.html" | relative_url }})
-- [Demystifying Zero Trust Endpoint Management with Microsoft Intune]({{ "/2025-11-24-Demystifying-Zero-Trust-Endpoint-Management-with-Microsoft-Intune.html" | relative_url }})
+- [How to Implement Azure AD Conditional Access Policies Step-by-Step](https://dellenny.com/how-to-implement-azure-ad-conditional-access-policies-step-by-step/)
+- [Managing Azure AD Identity Protection: Detecting and Mitigating Risky Sign-ins](https://dellenny.com/managing-azure-ad-identity-protection-detecting-and-mitigating-risky-sign-ins/)
 
-### Integrated SOC Visibility, Threat Intelligence, and Third-Party Security Partnerships
+### Autonomous SOC and Security Operations
 
-Strategic partnerships with solutions like Lumen Defender and Cisco on Azure add new joint telemetry and SOC visibility, enriching detection and operational awareness as seen in past security updates.
+Defender Experts and Sentinel now drive automated triage and incident response, scaling up to 75% automation for SOC workflows. Sentinel adds enterprise graph and attack disruption for better predictive security.
 
-- [Lumen Defender and Microsoft Security: Enhancing SOC Threat Detection and Response]({{ "/2025-11-24-Lumen-Defender-and-Microsoft-Security-Enhancing-SOC-Threat-Detection-and-Response.html" | relative_url }})
-- [Unified Digital Resilience: Integrating Cisco and Microsoft Security on Azure]({{ "/2025-11-24-Unified-Digital-Resilience-Integrating-Cisco-and-Microsoft-Security-on-Azure.html" | relative_url }})
+- [Charting the Future of SOC: Human and AI Collaboration for Better Security](https://techcommunity.microsoft.com/blog/microsoftsecurityexperts/charting-the-future-of-soc-human-and-ai-collaboration-for-better-security/4470688)
+- [Amplifying SecOps Practices with Microsoft Sentinel and Unified Platform]({{ "/2025-11-24-Amplifying-SecOps-Practices-with-Microsoft-Sentinel-and-Unified-Platform.html" | relative_url }})
+- [Microsoft Security Experts: Enhancing Your SOC with Managed XDR and Incident Response]({{ "/2025-11-24-Microsoft-Security-Experts-Enhancing-Your-SOC-with-Managed-XDR-and-Incident-Response.html" | relative_url }})
+
+### Microsoft Purview and Compliance, Data Protection
+
+Purview Compliance Manager and Regulatory Navigator now support automated AI compliance, including prompt DLP and policy rollout for Copilot. Sessions emphasize hands-on strategies to keep pace with regulatory changes such as the EU AI Act.
+
+- [Leading with Trust: Building & Deploying Agents in a Regulated World]({{ "/2025-11-24-Leading-with-Trust-Building-and-Deploying-Agents-in-a-Regulated-World.html" | relative_url }})
+- [Securing Data Across Microsoft Environments with Microsoft Purview]({{ "/2025-11-24-Securing-Data-Across-Microsoft-Environments-with-Microsoft-Purview.html" | relative_url }})
 
 ### Other Security News
 
-Expanded managed security services such as Defender Experts for XDR and incident response teams build on last week’s detailed coverage. Updates promote best practices for threat detection, patch management, and resilient operations.
+Security for Windows and device firmware is evolving with adoption of Rust drivers and new protective features on Surface devices. Community updates highlight cyber resilience, identity protection, and AI-driven incident response across hybrid clouds. Intel TDX with Azure delivers confidential computing for secure collaboration. Guides cover resilient VM backup, private wireless/5G security, SOC automation with Lumen Defender, and cross-Ecosystem analytics using Cisco and Microsoft’s security stack. Intune demos explain endpoint management and policy enforcement.
 
-Updates for GitHub’s DevSecOps automation cover essentials like policy administration and package validation, supporting Copilot and agent workflows at scale.
-
-Cloud security features for telco and wireless environments follow the established direction of enhanced authentication and orchestration. Commvault SHIFT now brings additional AI-powered data resilience and Zero Trust integration for Microsoft platforms.
-
-- [Microsoft Security Experts: Enhancing Your SOC with Managed XDR and Incident Response]({{ "/2025-11-24-Microsoft-Security-Experts-Enhancing-Your-SOC-with-Managed-XDR-and-Incident-Response.html" | relative_url }})
-- [Enterprise Security and Governance on GitHub: Best Practices from Ignite 2025]({{ "/2025-11-24-Enterprise-Security-and-Governance-on-GitHub-Best-Practices-from-Ignite-2025.html" | relative_url }})
-- [Securing Private Wireless: From Design to Deployment]({{ "/2025-11-24-Securing-Private-Wireless-From-Design-to-Deployment.html" | relative_url }})
+- [Advancing Windows Device Security with Surface Innovation and Memory-Safe Rust Drivers]({{ "/2025-11-24-Advancing-Windows-Device-Security-with-Surface-Innovation-and-Memory-Safe-Rust-Drivers.html" | relative_url }})
 - [Commvault SHIFT Virtual: AI and Cyber Resilience Insights for Microsoft Identity and Cloud](https://www.thomasmaurer.ch/2025/11/commvault-shift-virtual-a-new-era-of-ai-driven-cyber-resilience-on-demand/)
+- [Advancing Confidential Computing: Bosch, Microsoft Azure, & Intel TDX]({{ "/2025-11-25-Advancing-Confidential-Computing-Bosch-Microsoft-Azure-and-Intel-TDX.html" | relative_url }})
+- [Securing Azure Confidential VM Backups with Recovery Services Vault and Private Endpoints](https://techcommunity.microsoft.com/t5/azure-confidential-computing/securing-confidential-vm-backups-with-azure-recovery-services/ba-p/4458965)
+- [Securing Private Wireless: From Design to Deployment]({{ "/2025-11-24-Securing-Private-Wireless-From-Design-to-Deployment.html" | relative_url }})
+- [Lumen Defender and Microsoft Security: Enhancing SOC Threat Detection and Response]({{ "/2025-11-24-Lumen-Defender-and-Microsoft-Security-Enhancing-SOC-Threat-Detection-and-Response.html" | relative_url }})
+- [Unified Digital Resilience: Integrating Cisco and Microsoft Security on Azure]({{ "/2025-11-24-Unified-Digital-Resilience-Integrating-Cisco-and-Microsoft-Security-on-Azure.html" | relative_url }})
+- [Demystifying Zero Trust Endpoint Management with Microsoft Intune]({{ "/2025-11-24-Demystifying-Zero-Trust-Endpoint-Management-with-Microsoft-Intune.html" | relative_url }})
