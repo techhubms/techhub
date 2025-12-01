@@ -20534,5 +20534,11 @@
     "collection": "videos",
     "timestamp": "2025-12-01 19:09:54 +00:00",
     "reason": "Succesfully added: Assigned Coding category because the content focuses on developer tooling—specifically how Visual Studio Code supports MCP workflows, including installation, server management, and troubleshooting (Coding rules 2 and 5). No substantive detail about AI, Azure, or other categories was present, and the content is technical and hands-on, not promotional or business-focused. MCP is treated as a development platform within the Microsoft ecosystem. Generic exclusion rules did not apply as content is technical, non-biographical, sufficiently detailed, and in English."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faster-azure-functions-python-with-uvloop/ba-p/4455323",
+    "timestamp": "2025-12-01 20:06:19 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Included Azure category per Azure Inclusion Rule 1, as the entire article revolves around Azure Functions changes and performance testing. Included Coding category per Coding Rule 1 and 2, since this is developer-facing content discussing Python event loop integration, async practices, and benefits to Python code/application performance. No categories like AI, Security, ML, DevOps, or GitHub Copilot were applicable as there is no coverage of those themes. The article meets content quality and length standards and is technical, with no exclusion rules applying."
   }
 ]
