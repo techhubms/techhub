@@ -1,0 +1,22 @@
+{
+  "Author": "Microsoft Developer",
+  "Title": "AI Toolkit + GitHub Copilot - Pt. 2:  Model Recommendations",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "PubDate": "2025-12-01T21:00:21+00:00",
+  "FeedName": "Microsoft Developer YouTube",
+  "ProcessedDate": "2025-12-01 22:04:33",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Link": "https://www.youtube.com/watch?v=hVDGQG1mw88",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Description": "This video is Part 2 of the AI Toolkit + GitHub Copilot video series. This video is part of the GitHub Copilot + AI Toolkit Pet Planner workshop. View the repo and instructions: https://aka.ms/AIToolkit/workshop\n\nJoin April as she demonstrates how to use Copilot in Agent mode to recommend language models for an agent. Copilot analyzes any given scenario and leverages AI Toolkit tools to guide developers in choosing the ideal language model for their agent.\n\nInstall the AI Toolkit: https://aka.ms/AIToolkit Setup your Microsoft Foundry project: https://ai.azure.com\n\nLearn More about Microsoft Foundry Model and Tools announcements at https://aka.ms/model-mondays\n\nJoin the Discord: https://aka.ms/insideMF/discord Hop on Forum: https://aka.ms/insideMF/forum\n\nChapter Markers\n\n00:00 - 00:02 - Introduction 00:03 - 03:17 - Ask Copilot for a model recommendation 03:18 - 05:07 - Deploy models from the Model Catalog 05:08 - 12:24 - Test and compare models in the Model Playground 12:25 - 13:29 - Delete a model deployment",
+  "EnhancedContent": null,
+  "OutputDir": "_videos"
+}

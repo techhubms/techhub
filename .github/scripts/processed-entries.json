@@ -20546,5 +20546,53 @@
     "timestamp": "2025-12-01 21:05:36 +00:00",
     "canonical_url": "https://devblogs.microsoft.com/blog/join-the-oss-ai-summit-building-with-langchain-event",
     "reason": "Succesfully added: Assigned AI category as the event is centered on agent design, orchestration, and practical implementation using Microsoft AI services (AI rule 1, 4, 5, 6). Assigned Azure because core projects and all engineering demos leverage Azure infrastructure, Azure OpenAI, Azure Functions, Azure Container Apps, and Cosmos DB (Azure rule 1, 4, 6, 7). ML not assigned, as the focus is agent orchestration and applied AI, not on data science or custom model training. Coding and DevOps categories were not assigned since the summit content, while technical, is not focused on Microsoft development frameworks or DevOps processes, but rather on AI agent system design and cloud orchestration. Security was not assigned as security topics or products are not explicitly addressed in this content."
+  },
+  {
+    "reason": "Succesfully added: Assigned DevOps category because the content revolves around repository administration and governance within GitHub, which is a core DevOps practice (DevOps rules 2, 3, 5, 9). Assigned Security category because the change improves app installation security, reduces unauthorized actions, and helps with compliance (Security rules 1, 4, 5, 9). GitHub Apps, repo administration, and governance management fall squarely under these two categories. No other categories are appropriate as the content is not code, AI, Azure, or ML-focused.",
+    "canonical_url": "https://github.blog/changelog/2025-12-01-block-repository-admins-from-installing-github-apps-now-generally-available",
+    "timestamp": "2025-12-01 22:05:14 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the video centers on using AI Toolkit and integrating AI-powered agent development (AI inclusion rules 1 and 4). Added 'GitHub Copilot' since GitHub Copilot usage and configuration is a central focus (GitHub Copilot inclusion rule 1), and both categories are assigned together as required. Included the 'Azure' category because setup and authentication to Azure services is covered (Azure inclusion rule 1). 'Coding' is included as the entire session revolves around environment setup for coding agents and integrating Copilot in development (Coding inclusion rule 5). Content is clearly for technical, developer-oriented setup and does not trigger any generic exclusion rules.",
+    "canonical_url": "https://www.youtube.com/watch?v=4KcpgQlFa58",
+    "timestamp": "2025-12-01 22:05:53 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the core focus is developing an AI agent using Microsoft's AI Toolkit and Foundry platform (AI rule 1 and 4). Assigned the GitHub Copilot category because GitHub Copilot is part of the workshop (GitHub Copilot rule 1), and per instructions, AI and GitHub Copilot must both be present if one is assigned. Azure is included due to integration with Microsoft Foundry (Foundry is Azure-based) and setup instructions at ai.azure.com (Azure rule 1). Did not assign Coding since the content centers on agent setup and integration rather than specific language or framework coding. DevOps, ML, and Security categories were not assigned as these aspects were not central. No generic exclusion rules applied.",
+    "canonical_url": "https://www.youtube.com/watch?v=6Dvfn2lfTnU",
+    "timestamp": "2025-12-01 22:06:12 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the video focuses on agent creation using Microsoft's AI Toolkit and AI concepts (AI inclusion rule 1 and 4). 'GitHub Copilot' is included because it is used in conjunction with the AI Toolkit for developer assistance and code refinement (GitHub Copilot inclusion rules 1 and 4), and, per CRITICAL requirement, 'AI' is included alongside 'GitHub Copilot.' The 'Coding' category applies because the core of the content is generating, refining, and running code (Coding inclusion rules 2 and 4). 'Azure' is referenced in setup links and Foundry, but not central to the workflow described in the video, so only included in tags, not in categories. No generic exclusion rules apply.",
+    "canonical_url": "https://www.youtube.com/watch?v=bKFp2w2O6fM",
+    "timestamp": "2025-12-01 22:06:31 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: The content qualifies for the categories 'AI', 'GitHub Copilot', and 'Azure'. 'AI' is included since the main focus is on model recommendation, deployment, and evaluation with Microsoft's AI Toolkit and related Azure resources (AI inclusion rules 1 and 4). 'GitHub Copilot' is assigned because the workshop specifically demonstrates Copilot's Agent mode and how it assists with developer workflows (GitHub Copilot inclusion rules 1 and 2), and per the rules, whenever 'GitHub Copilot' is included, 'AI' must also be included. 'Azure' is assigned because model deployment and project setup use Azure-based services, including Microsoft Foundry (Azure inclusion rules 1 and 4). 'Coding', 'DevOps', 'ML', and 'Security' are not included as the content does not cover hands-on coding, CI/CD practices, data science/ML engineering, or security implementation. Generic exclusions do not apply as the video is technical, educational, and developer-focused.",
+    "canonical_url": "https://www.youtube.com/watch?v=hVDGQG1mw88",
+    "timestamp": "2025-12-01 22:06:50 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the video focuses on AI evaluation workflows using Microsoft AI Toolkit and AI agents (AI rule 1, 4). Assigned GitHub Copilot category as Copilot is used extensively for scripting and workflow assistance (GitHub Copilot rule 1, 2, 4), and by rule must also assign AI category when GitHub Copilot is present. Assigned Azure category because resources and project setup use Azure services (Azure rule 1, 4). Assigned Coding category because the video involves creating scripts, datasets, and hands-on technical procedures within a developer context (Coding rule 4, 5). No exclusion rules apply since this is hands-on technical content directly involving Microsoft developer tools and platforms.",
+    "canonical_url": "https://www.youtube.com/watch?v=i_245SwkBAI",
+    "timestamp": "2025-12-01 22:07:11 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content centers on using Microsoft's AI Toolkit and Copilot for building and observing AI agents (AI inclusion rules 1 and 4). Assigned GitHub Copilot category because GitHub Copilot is featured as a coding assistant and agent tool (GitHub Copilot inclusion rule 1). Both are treated per the explicit Copilot product rules, which distinguish developer Copilot from business productivity Copilots. Did not assign Coding or Azure, as the video focuses on AI agent configuration and tracing rather than coding practices or Azure service management directly.",
+    "canonical_url": "https://www.youtube.com/watch?v=Rcjcf6HkrD8",
+    "timestamp": "2025-12-01 22:07:29 +00:00",
+    "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' category because the content focuses extensively on Azure Functions and its execution environment for Python (Azure rules 1 and 4). Assigned 'Coding' because it covers the implementation and inner workings of async event loops, relevant Python code, and benchmark methodology for Python workloads (Coding rules 1, 2, and 4). Did not assign 'DevOps' as the main discussion is runtime and code-level performance, not CI/CD or team practices. Did not add 'AI', 'ML', 'Security', or 'GitHub Copilot' since the piece strictly covers performance and runtime optimization in the Azure Functions Python environment.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faster-python-on-azure-functions-with-uvloop/ba-p/4455323",
+    "timestamp": "2025-12-01 22:07:56 +00:00",
+    "collection": "community"
   }
 ]

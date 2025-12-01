@@ -1,0 +1,22 @@
+{
+  "Author": "Microsoft Developer",
+  "Title": "AI Toolkit + GitHub Copilot - Pt. 4:  Generate Agent Code",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "PubDate": "2025-12-01T21:00:26+00:00",
+  "FeedName": "Microsoft Developer YouTube",
+  "ProcessedDate": "2025-12-01 22:04:33",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Link": "https://www.youtube.com/watch?v=bKFp2w2O6fM",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Description": "This video is Part 4 of the AI Toolkit + GitHub Copilot video series. This video is part of the GitHub Copilot + AI Toolkit Pet Planner workshop. View the repo and instructions: https://aka.ms/AIToolkit/workshop\n\nJoin April as she transitions from creating an agent in the AI Toolkit’s Agent Builder to generating the code for the agent. Once the code is generated, April shows you how to set up your local environment to run the agent code. With the agent code, developers can continue refining their agent with additional logic and leverage Copilot for assistance.\n\nInstall the AI Toolkit: https://aka.ms/AIToolkit Setup your Microsoft Foundry project: https://ai.azure.com\n\nLearn More about Microsoft Foundry Model and Tools announcements at https://aka.ms/model-mondays\n\nJoin the Discord: https://aka.ms/insideMF/discord Hop on Forum: https://aka.ms/insideMF/forum\n\nChapter Markers\n\n00:00 - 00:02 - Introduction 00:03 - 01:20 - Generate the agent code 01:21 - 03:06 - Review the agent code 03:07 - 04:33 - Set up environment to run the agent code 04:34 - 11:36 - Run the agent code",
+  "EnhancedContent": null,
+  "OutputDir": "_videos"
+}
