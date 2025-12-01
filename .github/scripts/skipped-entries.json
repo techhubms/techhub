@@ -10131,5 +10131,29 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/what-is-the-compliance-manager-secure-score-in-microsoft-365/",
     "reason": "No categories found: Content is excluded under the 'Non-Development Microsoft Products' generic exclusion rule. While the article discusses Microsoft 365 Compliance Manager Secure Score, it is focused on compliance, regulatory features, and high-level organizational processes within Microsoft 365, which are business/productivity capabilities. There is no evident technical implementation detail, development, or hands-on configuration beyond what end users or compliance officers would do. Per generic exclusion under Chapter 3, compliance processes, end-user business productivity topics, and general admin tooling in Microsoft 365 (not implementation from an engineering/development/devops/coding/security perspective) are excluded. No categories apply."
+  },
+  {
+    "canonical_url": "https://blogs.windows.com/windowsexperience/2025/12/01/unwrap-joy-this-holiday-with-this-years-microsoft-holiday-sweaters/",
+    "collection": "news",
+    "timestamp": "2025-12-01 19:08:39 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this is primarily a promotional announcement about Microsoft-themed holiday sweaters, focusing on company culture, nostalgia, and merchandise rather than technical details or development-oriented Microsoft technologies. There is no substantive coverage of any technical Microsoft product, development practices, or engineering architecture. The post centers on celebrating Microsoft history and offering products for sale, which fits the 'Sales Pitches,' 'Workplace and Business Focus,' and 'Business Strategy and Executive Content' generic exclusion criteria."
+  },
+  {
+    "canonical_url": "https://news.xbox.com/en-us/2025/12/01/xbox-accessories-holiday-gift-guide-designed-for-xbox/",
+    "collection": "news",
+    "timestamp": "2025-12-01 19:08:52 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: This article is primarily a holiday gift guide recommending gaming accessories for Xbox consoles and handhelds. It focuses on purchasing options, product features, and company news rather than technical implementation, development, or Microsoft platform engineering. The main text is a curated product sales summary with promotional links and minimal technical depth, fitting the 'Sales Pitches' exclusion (Chapter 3) and lacking substantive technical content per workflow rules. No Microsoft development, coding, DevOps, AI/ML, or security topics are covered, so no categories apply."
+  },
+  {
+    "canonical_url": "https://devclass.com/2025/12/01/aws-debuts-lambda-managed-instances-on-ec2-more-control-lower-cost-for-high-volume-users/",
+    "collection": "posts",
+    "timestamp": "2025-12-01 19:09:14 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is entirely focused on AWS technologies (Lambda, EC2, EKS, etc.) and general cloud development, without any substantial mention or technical details related to Microsoft technologies. According to the multi-platform content threshold, Microsoft technologies must comprise at least 40% of the substantive content or be central to the solution; in this case, they are absent. Additionally, all described solutions, product updates, and technical assessments pertain to AWS rather than Microsoft or its ecosystem."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/BtexWL2mZTY",
+    "collection": "videos",
+    "timestamp": "2025-12-01 19:09:39 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: the provided input does not contain substantive content or details (content field is null), which makes it impossible to assess category inclusion. There is neither technical depth nor enough information about Microsoft technologies, coding practices, AI features, or development tools beyond a vague mention of a 'Language Models editor'. Per workflow, exclusion applies if main content details are missing or if information is too minimal to apply category rules."
   }
 ]

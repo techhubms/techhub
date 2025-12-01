@@ -1,0 +1,18 @@
+{
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Author": "Visual Studio Code",
+  "Title": "Tooling support for MCP in Visual Studio Code #ai #mcp",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "OutputDir": "_videos",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "EnhancedContent": null,
+  "FeedName": "Visual Studio Code YouTube",
+  "ProcessedDate": "2025-12-01 19:07:44",
+  "Link": "https://www.youtube.com/shorts/TGICP4NS5tc",
+  "Description": "in this video, we will show the different ways tooling helps you with MCP. We will show, installing from registry, adding a server from command palette, logging for troubleshooting and how to call tools #python #mcp #vscode #tooling\n\nhttps://aka.ms/mcp-for-beginners",
+  "PubDate": "2025-12-01T18:00:38+00:00"
+}
