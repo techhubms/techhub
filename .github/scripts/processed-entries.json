@@ -20450,5 +20450,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=LwqUp4Dc1mQ",
     "reason": "Succesfully added: Assigned 'AI' because the demo showcases AI agent capabilities (AI Inclusion Rule 1, 4) and prompt engineering (AI Rule 5). Assigned 'GitHub Copilot' because Copilot agent mode and its integration are key features (GitHub Copilot Rule 1, 2, 3). Assigned 'Coding' since VS Code integration and workflow automation are demonstrated from a developer perspective (Coding Rule 2, 5). Content is strongly developer-focused, avoids generic exclusions, and does not contain business or non-technical elements."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=aor0BCCEkks",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'Azure' category as the episode is centered on Azure migration tools and cloud adoption (Azure rule 1 & 4). Assigned 'DevOps' because automated, guided deployment of Landing Zones involves cloud automation, infrastructure as code, and operational efficiency (DevOps rules 5 & 6). 'Security' is included because Azure Landing Zones are specifically described as ensuring secure and compliant workload foundations (Security rules 1, 4, and 9). There is no Coding or AI/ML focus, as there are no programming, development, or AI-specific details in the description. All exclusion criteria were reviewed and did not apply.",
+    "timestamp": "2025-12-01 09:07:44 +00:00"
   }
 ]
