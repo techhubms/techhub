@@ -20540,5 +20540,11 @@
     "timestamp": "2025-12-01 20:06:19 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Included Azure category per Azure Inclusion Rule 1, as the entire article revolves around Azure Functions changes and performance testing. Included Coding category per Coding Rule 1 and 2, since this is developer-facing content discussing Python event loop integration, async practices, and benefits to Python code/application performance. No categories like AI, Security, ML, DevOps, or GitHub Copilot were applicable as there is no coverage of those themes. The article meets content quality and length standards and is technical, with no exclusion rules applying."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-01 21:05:36 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/blog/join-the-oss-ai-summit-building-with-langchain-event",
+    "reason": "Succesfully added: Assigned AI category as the event is centered on agent design, orchestration, and practical implementation using Microsoft AI services (AI rule 1, 4, 5, 6). Assigned Azure because core projects and all engineering demos leverage Azure infrastructure, Azure OpenAI, Azure Functions, Azure Container Apps, and Cosmos DB (Azure rule 1, 4, 6, 7). ML not assigned, as the focus is agent orchestration and applied AI, not on data science or custom model training. Coding and DevOps categories were not assigned since the summit content, while technical, is not focused on Microsoft development frameworks or DevOps processes, but rather on AI agent system design and cloud orchestration. Security was not assigned as security topics or products are not explicitly addressed in this content."
   }
 ]
