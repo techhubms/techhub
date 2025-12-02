@@ -10173,5 +10173,29 @@
     "collection": "videos",
     "reason": "No categories found: No categories were assigned because the content appears to be non-technical and potentially personal or biographical. The title 'Dobbies having fun in the snow!' does not indicate any Microsoft technology focus or technical subject matter, and there is no content provided. Additionally, there is no description, tags, or technical information present. Per the generic exclusion rules, content that is primarily personal, biographical, or lacking substantive technical detail must be excluded.",
     "canonical_url": "https://www.youtube.com/watch?v=-ptuV9tpeN8"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The post focuses on automating email-to-task workflows in Outlook using Microsoft Copilot, specifically referencing Microsoft 365 Copilot for productivity tasks (email management, task creation, calendar integration). As per Copilot Product Distinction rules, content about Microsoft 365 Copilot is considered a business productivity tool and not a developer tool, and therefore must be excluded from all categories. No technical development, coding, DevOps, Azure, ML, or security implementation details are present; the focus is on end-user productivity and business workflow automation.",
+    "canonical_url": "https://dellenny.com/how-do-i-automatically-convert-emails-to-tasks-in-outlook-using-copilot/",
+    "timestamp": "2025-12-02 17:07:51 +00:00",
+    "collection": "posts"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This is primarily high-level business strategy and executive content, focusing on 'innovation at the pace of AI' and collaboration between Adobe and Microsoft. The description does not indicate any technical implementation details, developer guidance, or actionable content about Microsoft development technologies. Lacks sufficient depth related to AI, Coding, Azure, ML, DevOps, Security, or technical product integration per exclusion rules in Chapters 3 and 4.",
+    "canonical_url": "https://www.youtube.com/watch?v=SNqs5zHv7KE",
+    "timestamp": "2025-12-02 17:08:17 +00:00",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-12-02 18:06:44 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/open-source/maintainers/the-local-first-rebellion-how-home-assistant-became-the-most-important-project-in-your-house/",
+    "reason": "No categories found: No categories are assigned because the content primarily focuses on the Home Assistant open source project, its architecture, governance, and community-driven development—not on Microsoft technologies or platforms. Although there are passing mentions of AI models and Copilot CLI, they are not central; Copilot CLI is referenced in a closing promotional suggestion, not as a main technical focus. The majority of the article is dedicated to open-source home automation fundamentals, distributed runtime engineering, and privacy, none of which meet the threshold for including 'AI', 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', or 'Security' categories. No Microsoft technology is substantially featured or core to the solution, consistent with exclusion rules and multi-platform content guidelines."
+  },
+  {
+    "timestamp": "2025-12-02 18:07:17 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=9YoLWl0q1YY",
+    "reason": "No categories found: No categories assigned. Although this is content from the Visual Studio Code team, the available description only mentions a live event about release demos with no substantive technical detail. The content field is null, providing no basis for in-depth category assignment. As per the workflow, without sufficient technical information, topics, or technical depth on Microsoft technologies beyond a general release note live stream, the inclusion criteria for categories like Coding, DevOps, or Azure are not met. The description only advertises a live demo event without specifying any development, architecture, or implementation details, and does not meet category inclusion standards."
   }
 ]

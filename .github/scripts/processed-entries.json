@@ -20642,5 +20642,17 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI category because the content demonstrates GitHub Copilot's AI-driven review automation (AI rule 2 and 4). Added GitHub Copilot because the focus is on Copilot's code review feature, as a developer tool (GitHub Copilot rule 1). Included Coding since the video covers code review, pull requests, and integration with code analysis tools like CodeQL (Coding rule 4). No other categories apply since Azure, DevOps, ML, and Security are not substantively addressed.",
     "canonical_url": "https://www.youtube.com/watch?v=8hyvYP5PCks"
+  },
+  {
+    "timestamp": "2025-12-02 18:05:43 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/blog/securing-sensitive-mobile-operations-with-device-bound-request-signing",
+    "reason": "Succesfully added: Assigned the Security category because the content focuses on advanced mobile security architecture, specifically device-bound request signing and related cryptographic protections. The article covers threat modeling (STRIDE), authentication gaps, and implementation guidance for securing backend APIs and mobile applications—all directly within the scope of Security category inclusion rules. It does not cover general coding, DevOps, Azure, AI, or ML practices, so those categories are not included."
+  },
+  {
+    "timestamp": "2025-12-02 18:06:20 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/typescript/progress-on-typescript-7-december-2025/",
+    "reason": "Succesfully added: Assigned the 'Coding' category only. The entire content is focused on the development, features, architecture, migration, and technical roadmap of the TypeScript compiler and language service. TypeScript is a Microsoft-created language and toolchain that runs on many platforms. However, it is not exclusive to or centrally about any specific Microsoft cloud service (Azure), DevOps product, AI platform, or security solution. There is no content here about AI, DevOps, Azure, ML, or Security. The primary discussion is compiler and editor technology, which falls squarely under the 'Coding' category per the coding inclusion rules. The content did not trigger any generic exclusion rules. Tags reflect the technical focus, product version, tools, architecture, and migration aspects presented."
   }
 ]
