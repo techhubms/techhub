@@ -20672,5 +20672,17 @@
     "timestamp": "2025-12-02 20:05:51 +00:00",
     "collection": "news",
     "reason": "Succesfully added: Included Security category due to detailed focus on secret scanning, detection of private keys, tokens, and improvements to credential validation (Security rule 1, 2, 5, 7). Assigned Azure category because new patterns cover Azure secrets and Microsoft-specific keys (Azure rule 1, Azure provider patterns). Added DevOps because GitHub secret scanning is a core practice in CI/CD pipelines and development workflows (DevOps rule 5, 6, 11). Did not assign AI, Coding, ML, or GitHub Copilot categories as the content is about security tooling—not AI, Copilot, or direct code development."
+  },
+  {
+    "timestamp": "2025-12-02 21:05:44 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: The content's main focus is exposing materialized data views using Microsoft Fabric's GraphQL API and Lakehouse features. Assigned 'Azure' because Microsoft Fabric is an Azure-based platform (Azure rule 1). Assigned 'ML' because the Lakehouse features and materialized views focus on analytical engineering, aggregation, and data modeling (ML rules 1, 2, 3, 4). Assigned 'Coding' because it includes Spark SQL code, API schema editing, and GraphQL query authoring (Coding rules 2, 4). Did not assign 'AI' as the content does not cover pre-built AI services or machine learning beyond analytics/engineering. No DevOps or Security aspects are present.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/exposing-lakehouse-materialized-views-to-applications-in-minutes-with-graphql-apis-in-microsoft-fabric/"
+  },
+  {
+    "timestamp": "2025-12-02 21:06:28 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the central topic is Microsoft Foundry, an AI-native application platform (AI rule 1), and the session is focused on AI agent creation and deployment. Assigned Azure category because Microsoft Foundry and Azure AI are prominently featured (Azure rule 1). Did not add Coding or ML because, while there is a code demonstration, the focus is more on platform capabilities for AI agents than technical app/code development practices or deep machine learning engineering. Did not add Security or DevOps because the main governance and management features discussed are specific to AI policy, not general security or DevOps topics.",
+    "canonical_url": "https://www.youtube.com/watch?v=ThGXQlnS8Lo"
   }
 ]
