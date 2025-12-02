@@ -20654,5 +20654,11 @@
     "collection": "news",
     "canonical_url": "https://devblogs.microsoft.com/typescript/progress-on-typescript-7-december-2025/",
     "reason": "Succesfully added: Assigned the 'Coding' category only. The entire content is focused on the development, features, architecture, migration, and technical roadmap of the TypeScript compiler and language service. TypeScript is a Microsoft-created language and toolchain that runs on many platforms. However, it is not exclusive to or centrally about any specific Microsoft cloud service (Azure), DevOps product, AI platform, or security solution. There is no content here about AI, DevOps, Azure, ML, or Security. The primary discussion is compiler and editor technology, which falls squarely under the 'Coding' category per the coding inclusion rules. The content did not trigger any generic exclusion rules. Tags reflect the technical focus, product version, tools, architecture, and migration aspects presented."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-02 19:06:44 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/12/02/how-to-build-forward-thinking-cybersecurity-teams-for-tomorrow/",
+    "reason": "Succesfully added: Assigned 'AI' category based on the content's deep focus on the impact of AI technologies—such as AI-powered phishing, malware, and defense strategies—on the cybersecurity landscape (AI rule 1, 4, and 5). Assigned 'Security' category because the article is centered on organizational security practice, cyberthreats, defensive strategies, Microsoft security tools, and security leadership (Security rules 1, 2, and 3). Did not assign other categories (e.g., Coding, DevOps, Azure, ML) as the material is not directly about programming, DevOps methods, cloud architecture, or machine learning implementation details, but covers AI and security from a talent and organizational perspective. Generic exclusion rules did not apply, as content is not biographical, negative, or non-technical in nature."
   }
 ]

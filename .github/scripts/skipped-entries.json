@@ -10197,5 +10197,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=9YoLWl0q1YY",
     "reason": "No categories found: No categories assigned. Although this is content from the Visual Studio Code team, the available description only mentions a live event about release demos with no substantive technical detail. The content field is null, providing no basis for in-depth category assignment. As per the workflow, without sufficient technical information, topics, or technical depth on Microsoft technologies beyond a general release note live stream, the inclusion criteria for categories like Coding, DevOps, or Azure are not met. The description only advertises a live demo event without specifying any development, architecture, or implementation details, and does not meet category inclusion standards."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-02 19:07:22 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/eQWxLZTg-wE",
+    "reason": "No categories found: Content excluded due to insufficient substantive content. The 'content' field is null, and the description is too short, lacking technical depth and detail required for categorization. According to the workflow, categorization cannot proceed without substantial technical content. No qualifying categories are assigned."
   }
 ]
