@@ -20684,5 +20684,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI category because the central topic is Microsoft Foundry, an AI-native application platform (AI rule 1), and the session is focused on AI agent creation and deployment. Assigned Azure category because Microsoft Foundry and Azure AI are prominently featured (Azure rule 1). Did not add Coding or ML because, while there is a code demonstration, the focus is more on platform capabilities for AI agents than technical app/code development practices or deep machine learning engineering. Did not add Security or DevOps because the main governance and management features discussed are specific to AI policy, not general security or DevOps topics.",
     "canonical_url": "https://www.youtube.com/watch?v=ThGXQlnS8Lo"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/scaling-azure-compute-for-performance/ba-p/4474662",
+    "timestamp": "2025-12-02 22:05:56 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the entire content centers on Azure infrastructure advances (Azure rule 1, 4, 5). Assigned AI because features directly support AI/ML workloads, including inference and training with GPU/NVMe and large container sizes (AI rule 1, 4, 5). Assigned DevOps due to automation, scale-out, VMSS Instance Mix, and operational best practices (DevOps rules 1, 5, 8). Assigned Security due to coverage of Azure Compute Gallery’s Soft Delete, ZRS, compliance, and the emphasis on resiliency and secure operations (Security rules 1, 9). Categories like Coding and ML were not assigned as there is no direct code, programming, or custom ML framework engineering focus—content is about infrastructure features and deployment best practices supporting those workloads."
   }
 ]
