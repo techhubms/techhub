@@ -20612,5 +20612,11 @@
     "reason": "Succesfully added: Assigned Azure category because content specifically addresses reliability, architecture, SLA mathematics, and operational patterns for Azure cloud services (Azure App Service, Azure SQL Database, Azure Storage) and architectures (Azure rule 1, 4, 5). Assigned DevOps because the guide goes deep into deployment, operational excellence, incident response, observability, governance, configuration management, and reliability engineering—all core DevOps concepts (DevOps rules 3, 5, 7, 8). Not Coding, ML, Security, AI, or GitHub Copilot—no specific coverage or technical depth on those topics. Community content exceeds 200-word minimum and is highly substantive. No exclusion rules apply.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/cloud-as-a-war-against-entropy/ba-p/4474111"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/claude-code-microsoft-foundry-enterprise-ai-coding-agent-setup/",
+    "timestamp": "2025-12-02 02:34:59 +00:00",
+    "reason": "Succesfully added: AI category assigned for deep integration and usage of Claude Code with Microsoft Foundry, which is a Microsoft AI solution (AI rule 1 and 4). Azure category assigned because Foundry is explicitly an Azure-based service and requires Azure resource setup (Azure rule 1, 4). DevOps category is included due to the step-by-step automation workflows utilizing GitHub Actions for CI/CD and test generation (DevOps rule 5, 6, 9, 11). Coding category included due to extensive use of tooling (CLI, VS Code, project configuration), Python SDKs, and implementation/code patterns (Coding rule 1, 2, 5). Security category is assigned due to authentication via Entra ID (Azure AD), discussion on role-based access, credentials management, and monitoring (Security rule 1, 3, 7, 9). No exclusion rules were triggered as content is technical, not biographical, sales-focused, or business productivity oriented, and Microsoft technologies are entirely central.",
+    "collection": "news"
   }
 ]
