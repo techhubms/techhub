@@ -10161,5 +10161,17 @@
     "timestamp": "2025-12-01 20:05:50 +00:00",
     "collection": "videos",
     "reason": "No categories found: All category arrays left empty due to violating a generic exclusion rule. The content description indicates this is focused on a business/productivity vision for healthcare using AI, but does not provide any substantive technical details, implementation guidance, or developer/maker content regarding Microsoft AI services. Instead, it presents a high-level collaboration and vision-sharing segment from a Microsoft Ignite keynote, with emphasis on potential outcomes ('faster care', 'deeper connections'). This matches the business strategy and executive content exclusion (Chapter 3: Business Strategy and Executive Content) because it centers on vision, organizational future, and industry trends without technical implementation details. No evidence of hands-on engineering, coding, or Microsoft AI service integration is mentioned. Therefore, all categories are excluded."
+  },
+  {
+    "timestamp": "2025-12-02 15:05:51 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: No categories were assigned because the core substance of the content is about AWS Transform tools facilitating migration FROM Microsoft SQL Server and .NET TO AWS (Aurora PostgreSQL, EC2), not TO Microsoft technologies. Based on multi-platform content rules in Chapter 2 and edge case clarifications in Chapter 6, migration content only qualifies when moving TO Microsoft technologies, not AWAY from them. The article discusses AWS’s modernization approach, references Microsoft technologies (SQL Server, .NET Framework), but does not provide substantive technical detail about Microsoft products nor position Microsoft technology as central to the solution. Generic exclusion rule for multi-platform content applies.",
+    "canonical_url": "https://devclass.com/2025/12/02/aws-transform-revamp-uses-ai-to-shift-applications-from-microsofts-sql-server/"
+  },
+  {
+    "timestamp": "2025-12-02 15:06:32 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because the content appears to be non-technical and potentially personal or biographical. The title 'Dobbies having fun in the snow!' does not indicate any Microsoft technology focus or technical subject matter, and there is no content provided. Additionally, there is no description, tags, or technical information present. Per the generic exclusion rules, content that is primarily personal, biographical, or lacking substantive technical detail must be excluded.",
+    "canonical_url": "https://www.youtube.com/watch?v=-ptuV9tpeN8"
   }
 ]

@@ -20636,5 +20636,11 @@
     "collection": "posts",
     "canonical_url": "https://www.thomasmaurer.ch/2025/12/manage-azure-local-updates/",
     "reason": "Succesfully added: Assigned Azure category because the content focuses exclusively on managing and updating Azure Local instances using the Azure Portal (Azure rule 1 and 4). Azure Local is an Azure family product for hybrid and edge deployments. Best practices and workflows for update management, monitoring, and extension updates are all Azure-centric. No other categories apply since the content does not delve into coding, DevOps, direct ML, AI, or security engineering details. The content qualifies as technical, actionable guidance for IT professionals and architects working in Microsoft Azure environments, and matches the inclusion standards for Azure-focused content."
+  },
+  {
+    "timestamp": "2025-12-02 15:06:18 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the content demonstrates GitHub Copilot's AI-driven review automation (AI rule 2 and 4). Added GitHub Copilot because the focus is on Copilot's code review feature, as a developer tool (GitHub Copilot rule 1). Included Coding since the video covers code review, pull requests, and integration with code analysis tools like CodeQL (Coding rule 4). No other categories apply since Azure, DevOps, ML, and Security are not substantively addressed.",
+    "canonical_url": "https://www.youtube.com/watch?v=8hyvYP5PCks"
   }
 ]
