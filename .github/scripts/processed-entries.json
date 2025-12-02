@@ -20660,5 +20660,17 @@
     "timestamp": "2025-12-02 19:06:44 +00:00",
     "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/12/02/how-to-build-forward-thinking-cybersecurity-teams-for-tomorrow/",
     "reason": "Succesfully added: Assigned 'AI' category based on the content's deep focus on the impact of AI technologies—such as AI-powered phishing, malware, and defense strategies—on the cybersecurity landscape (AI rule 1, 4, and 5). Assigned 'Security' category because the article is centered on organizational security practice, cyberthreats, defensive strategies, Microsoft security tools, and security leadership (Security rules 1, 2, and 3). Did not assign other categories (e.g., Coding, DevOps, Azure, ML) as the material is not directly about programming, DevOps methods, cloud architecture, or machine learning implementation details, but covers AI and security from a talent and organizational perspective. Generic exclusion rules did not apply, as content is not biographical, negative, or non-technical in nature."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/delegate-the-analysis-not-the-performance/",
+    "timestamp": "2025-12-02 20:05:29 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the Copilot Profiler Agent uses AI to analyze performance and provide actionable insights (AI rules 1 and 4). Assigned GitHub Copilot because the tool deeply integrates Copilot's capabilities (GitHub Copilot rules 1, 2, and 4), and per Categorical Rules, Copilot developer tools always require both categories. Assigned Coding because the article centers on .NET development, code benchmarks, refactoring best practices, and optimization in C# (Coding rules 1, 2, 4, and 5). Did not assign DevOps, Azure, ML, or Security because content is focused on application coding, benchmarking, and use of local tooling—not on workflow automation, cloud services, ML/data science, or security practices."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-12-02-secret-scanning-updates-november-2025",
+    "timestamp": "2025-12-02 20:05:51 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Included Security category due to detailed focus on secret scanning, detection of private keys, tokens, and improvements to credential validation (Security rule 1, 2, 5, 7). Assigned Azure category because new patterns cover Azure secrets and Microsoft-specific keys (Azure rule 1, Azure provider patterns). Added DevOps because GitHub secret scanning is a core practice in CI/CD pipelines and development workflows (DevOps rule 5, 6, 11). Did not assign AI, Coding, ML, or GitHub Copilot categories as the content is about security tooling—not AI, Copilot, or direct code development."
   }
 ]
