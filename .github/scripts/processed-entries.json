@@ -20606,5 +20606,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-general-availability-of-ai-rag-connectors-in-logic/ba-p/4474337",
     "collection": "community",
     "reason": "Succesfully added: Included 'AI' category due to central focus on Azure OpenAI Service, semantic search, document intelligence, and RAG workflows (AI inclusion rules 1, 4, 5). Included 'Azure' category as the content is about Azure Logic Apps and associated Azure AI services (Azure inclusion rule 1). Did not add 'ML' as the content relates to AI platform usage rather than custom model development or data science. No Coding or DevOps categories as there are no code examples, framework usage, CI/CD, or developer tool topics. Security is not included as there is no discussion of security services or practices. Applied the Rule Hierarchy: once qualifying for AI and Azure, exclusion rules for other categories (except generic exclusions) no longer applied, but none of the generic exclusions were triggered."
+  },
+  {
+    "timestamp": "2025-12-02 01:33:32 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because content specifically addresses reliability, architecture, SLA mathematics, and operational patterns for Azure cloud services (Azure App Service, Azure SQL Database, Azure Storage) and architectures (Azure rule 1, 4, 5). Assigned DevOps because the guide goes deep into deployment, operational excellence, incident response, observability, governance, configuration management, and reliability engineering—all core DevOps concepts (DevOps rules 3, 5, 7, 8). Not Coding, ML, Security, AI, or GitHub Copilot—no specific coverage or technical depth on those topics. Community content exceeds 200-word minimum and is highly substantive. No exclusion rules apply.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/cloud-as-a-war-against-entropy/ba-p/4474111"
   }
 ]
