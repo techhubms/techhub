@@ -20630,5 +20630,11 @@
     "collection": "posts",
     "timestamp": "2025-12-02 11:05:52 +00:00",
     "canonical_url": "https://andrewlock.net/recent-updates-to-netescapaades-enumgenerators/"
+  },
+  {
+    "timestamp": "2025-12-02 13:16:19 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://www.thomasmaurer.ch/2025/12/manage-azure-local-updates/",
+    "reason": "Succesfully added: Assigned Azure category because the content focuses exclusively on managing and updating Azure Local instances using the Azure Portal (Azure rule 1 and 4). Azure Local is an Azure family product for hybrid and edge deployments. Best practices and workflows for update management, monitoring, and extension updates are all Azure-centric. No other categories apply since the content does not delve into coding, DevOps, direct ML, AI, or security engineering details. The content qualifies as technical, actionable guidance for IT professionals and architects working in Microsoft Azure environments, and matches the inclusion standards for Azure-focused content."
   }
 ]
