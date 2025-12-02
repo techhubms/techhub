@@ -20624,5 +20624,11 @@
     "timestamp": "2025-12-02 08:06:33 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=te_om7KPb8k"
+  },
+  {
+    "reason": "Succesfully added: Included Coding category because the content deeply discusses .NET source generator implementation, enum method extension, C# code examples, performance with enums, and Roslyn analyzers—all fitting the Coding inclusion rules (Microsoft programming languages and development frameworks/tools). Did not assign AI, Azure, DevOps, ML, Security, or GitHub Copilot categories as none of those technologies/services are central to the content. Content is substantial, English, not biographical, sales pitch, or negative, and fits technical quality standards.",
+    "collection": "posts",
+    "timestamp": "2025-12-02 11:05:52 +00:00",
+    "canonical_url": "https://andrewlock.net/recent-updates-to-netescapaades-enumgenerators/"
   }
 ]
