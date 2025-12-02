@@ -20618,5 +20618,11 @@
     "timestamp": "2025-12-02 02:34:59 +00:00",
     "reason": "Succesfully added: AI category assigned for deep integration and usage of Claude Code with Microsoft Foundry, which is a Microsoft AI solution (AI rule 1 and 4). Azure category assigned because Foundry is explicitly an Azure-based service and requires Azure resource setup (Azure rule 1, 4). DevOps category is included due to the step-by-step automation workflows utilizing GitHub Actions for CI/CD and test generation (DevOps rule 5, 6, 9, 11). Coding category included due to extensive use of tooling (CLI, VS Code, project configuration), Python SDKs, and implementation/code patterns (Coding rule 1, 2, 5). Security category is assigned due to authentication via Entra ID (Azure AD), discussion on role-based access, credentials management, and monitoring (Security rule 1, 3, 7, 9). No exclusion rules were triggered as content is technical, not biographical, sales-focused, or business productivity oriented, and Microsoft technologies are entirely central.",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the content focuses on agentic AI governance, monitoring, and responsible deployment, addressing several parts of the AI inclusion rules (Microsoft AI products/services, responsible AI behavior, Copilot Studio is mentioned). 'Azure' is included as the show and resources are part of the Azure Essentials series, and specific Azure links are provided. 'Security' is assigned due to significant focus on agent observability, identity, entitlements, governance, and security frameworks (Security rules 3, 4, 5, and 9). 'ML' was not included because the primary focus is not machine learning engineering or data science, but rather governance and operationalization of AI agents. No generic exclusion rules apply.",
+    "timestamp": "2025-12-02 08:06:33 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=te_om7KPb8k"
   }
 ]

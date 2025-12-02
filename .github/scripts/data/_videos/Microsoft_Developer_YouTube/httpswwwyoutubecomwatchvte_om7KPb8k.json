@@ -1,0 +1,16 @@
+{
+  "Description": "In this episode of Armchair Architects, part of the Azure Essentials Show, Uli, Eric, and David explore the unique challenges and considerations of governing AI agents, emphasizing how agent governance differs from traditional microservices. The discussion covers the importance of observability, evaluation, and identity in agent operations, and highlights the need for new monitoring strategies to ensure responsible, efficient, and secure deployment of AI agents within enterprise environments.\n\nThree things you will learn\n- How agent governance requires different approaches than microservice governance, focusing on cognitive monitoring and reasoning transparency.\n- The role of observability and evaluation in both design-time and execution-time phases, including the use of guardrails and evaluators to ensure responsible AI behavior.\n- The significance of agent identity and model routing, and how these impact security, entitlements, and operational flexibility.\n\nRecommended next steps\n- Assess your current governance models and adapt them to address the unique requirements of AI agents, especially around observability and evaluation.\n- Implement robust monitoring for agent cognition, tool interactions, and memory management to ensure responsible and efficient operations.\n- Prepare to integrate agent identity and model routing into your security and entitlement frameworks as you scale agent deployments.\n\nResources\n- Key concepts - Copilot Studio security and governance https://learn.microsoft.com/microsoft-copilot-studio/security-and-governance\n- Implement agentic AI safeguards https://learn.microsoft.com/azure/well-architected/ai/responsible-ai#implement-agentic-ai-safeguards\n- Microsoft Purview https://learn.microsoft.com/purview\n\nRelated Episodes\n- Watch more episodes of Armchair Architects https://aka.ms/ArmchairArchitects\n- Watch more episodes of the Azure Essentials Show https://aka.ms/AzureEssentialsShow\n\nConnect\n- David Blank-Edelman https://www.linkedin.com/in/dnblankedelman/\n- Uli Homann https://www.linkedin.com/in/ulrichhomann/\n- Eric Charran https://www.linkedin.com/in/ericcharran/\n\nChapters 00:00 Introduction 01:05 Governing agents is not like governing microservices 02:32 Observability is needed 04:03 Think guardrails not absolutes 05:59 Identity driven 06:46 Who's asking & who's answering 07:35 Dimensions of monitoring 10:24 Performance and cost of ownership 11:03 More layers of monitoring 12:55 Performance evaluations 14:35 What's in the next episode?",
+  "FeedName": "Microsoft Developer YouTube",
+  "EnhancedContent": null,
+  "Title": "Armchair Architects: Governance Strategies for AI Agents",
+  "ProcessedDate": "2025-12-02 08:05:34",
+  "Tags": [
+    "implement"
+  ],
+  "Author": "Microsoft Developer",
+  "Link": "https://www.youtube.com/watch?v=te_om7KPb8k",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "PubDate": "2025-12-02T08:01:12+00:00"
+}
