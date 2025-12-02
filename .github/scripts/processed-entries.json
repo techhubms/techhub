@@ -20594,5 +20594,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faster-python-on-azure-functions-with-uvloop/ba-p/4455323",
     "timestamp": "2025-12-01 22:07:56 +00:00",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-12-02 00:10:43 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-01-copilot-spaces-public-spaces-and-code-view-support",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the updates concern Copilot Spaces, a feature of GitHub Copilot which is a developer-oriented coding assistant (AI Category rule 2, GitHub Copilot rules 1 and 2). 'DevOps' category is included as the update enhances developer workflows, collaboration, and integration within GitHub (DevOps rules 3, 9, and 11). No exclusion rules applied since the content is technical, development-focused, and not promotional, biographical, negative, or non-English. Microsoft technology is central as Copilot Spaces is a GitHub feature, and GitHub is a Microsoft subsidiary."
+  },
+  {
+    "timestamp": "2025-12-02 00:11:23 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-general-availability-of-ai-rag-connectors-in-logic/ba-p/4474337",
+    "collection": "community",
+    "reason": "Succesfully added: Included 'AI' category due to central focus on Azure OpenAI Service, semantic search, document intelligence, and RAG workflows (AI inclusion rules 1, 4, 5). Included 'Azure' category as the content is about Azure Logic Apps and associated Azure AI services (Azure inclusion rule 1). Did not add 'ML' as the content relates to AI platform usage rather than custom model development or data science. No Coding or DevOps categories as there are no code examples, framework usage, CI/CD, or developer tool topics. Security is not included as there is no discussion of security services or practices. Applied the Rule Hierarchy: once qualifying for AI and Azure, exclusion rules for other categories (except generic exclusions) no longer applied, but none of the generic exclusions were triggered."
   }
 ]
