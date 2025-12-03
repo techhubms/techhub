@@ -1,0 +1,18 @@
+{
+  "ProcessedDate": "2025-12-03 20:03:03",
+  "Author": "Allison",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "EnhancedContent": "You can now assign issues to Copilot using both GraphQL and the REST API. You can also configure the target repository, base branch, custom instructions, and custom agents.\n\n## GraphQL support\n\nYou can assign issues to Copilot using the following mutations:\n\n- [`updateIssue`](https://docs.github.com/graphql/reference/mutations#updateissue)\n- [`createIssue`](https://docs.github.com/graphql/reference/mutations#createissue)\n- [`addAssigneesToAssignable`](https://docs.github.com/graphql/reference/mutations#addassigneestoassignable)\n- [`replaceActorsForAssignable`](https://docs.github.com/graphql/reference/mutations#replaceactorsforassignable)\n\nAll requests must include this header:\n\n``` GraphQL-Features: issues_copilot_assignment_api_support\n\n```\n\n## REST API support\n\nYou can also assign issues to Copilot via the following REST API endpoints:\n\n- [Add assignees to an issue](https://docs.github.com/rest/issues/assignees?apiVersion=2022-11-28#add-assignees-to-an-issue)\n- [Create an issue](https://docs.github.com/rest/issues/issues?apiVersion=2022-11-28#create-an-issue)\n- [Update an issue](https://docs.github.com/rest/issues/issues?apiVersion=2022-11-28#update-an-issue)\n\nJoin the [community discussion](https://github.com/orgs/community/discussions/173575) to share your feedback or learn more in [our documentation on assigning issues to Copilot](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/create-a-pr).",
+  "Link": "https://github.blog/changelog/2025-12-03-assign-issues-to-copilot-using-the-api",
+  "Description": "You can now assign issues to Copilot using both GraphQL and the REST API. You can also configure the target repository, base branch, custom instructions, and custom agents. GraphQL support…\n\nThe post [Assign issues to Copilot using the API](https://github.blog/changelog/2025-12-03-assign-issues-to-copilot-using-the-api) appeared first on [The GitHub Blog](https://github.blog).",
+  "Tags": [
+    "copilot",
+    "Improvement",
+    "projects & issues"
+  ],
+  "FeedName": "The GitHub Blog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Title": "Assign issues to Copilot using the API",
+  "OutputDir": "_news",
+  "PubDate": "2025-12-03T19:21:25+00:00"
+}

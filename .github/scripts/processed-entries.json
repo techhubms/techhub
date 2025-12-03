@@ -20804,5 +20804,29 @@
     "collection": "videos",
     "timestamp": "2025-12-03 19:07:31 +00:00",
     "reason": "Succesfully added: Content qualifies for the AI category due to integration and usage of GitHub Copilot CLI (AI rule 2). 'GitHub Copilot' is assigned since the video focuses explicitly on Copilot CLI features (GitHub Copilot rules 1, 2, and 4). Coding category is included because the video demonstrates developer-focused CLI tools and workflows (Coding rule 5). The content is technical, developer-focused, uses Visual Studio Code and CLI tools, and is not a business productivity or excluded Microsoft 365 Copilot product. No generic exclusion rules apply."
+  },
+  {
+    "timestamp": "2025-12-03 20:05:38 +00:00",
+    "reason": "Succesfully added: Assigned AI because Foundry MCP Server and Microsoft Foundry are core Azure AI services, enabling agent and model development (AI rule 1, 4, 6). Assigned Azure due to prominent use of Azure cloud, Entra ID, and cloud deployment scenarios (Azure rule 1, 4, 5). Assigned Security because the post details authentication with Entra ID, RBAC, OAuth 2.0, and conditional access (Security rules 1, 3, 4, 5, 7). Assigned Coding because the content covers developer workflows using Visual Studio, VS Code, and GitHub Copilot (Coding rule 5), agent scripting, and model integration. GitHub Copilot is mentioned as part of the tooling, but not as the core subject, so only Coding is included (not the Copilot category). Content is entirely technical, focused on developer tasks, and meets quality standards.",
+    "canonical_url": "https://devblogs.microsoft.com/foundry/announcing-foundry-mcp-server-preview-speeding-up-ai-dev-with-microsoft-foundry/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-03 20:06:08 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' category because Microsoft OneLake and Fabric are Azure-based analytics platforms, with integration of cloud storage services (Azure rule 1 and 4). Assigned 'ML' category because the content discusses AI-powered transforms, document indexing for AI knowledge, and integration with notebooks and Power BI for analytics/data workflows (ML rule 1, 4, 9). Did not assign 'AI' because the focus is enabling AI/ML transforms within analytics pipelines rather than developing or directly using AI platforms/services, and there is no substantive code-level or developer-facing AI tooling. Excluded 'Coding', 'Security', 'DevOps', and 'GitHub Copilot'—content is not about programming, security implementation, DevOps workflows, or GitHub Copilot. Content is technical and about Microsoft platforms, not biographical, business strategy, or non-English, and passes all generic exclusion rules.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/turning-everyday-documents-from-sharepoint-and-onedrive-into-analytics-ready-data-with-onelake-shortcuts/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-03 20:06:32 +00:00",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the update relates directly to GitHub Copilot, a developer tool using AI (per Category Inclusion Rules AI 2 and GitHub Copilot 1). DevOps is included as this update addresses workflow and automation enhancements (DevOps rules 5 and 9). Coding was not assigned because the content is focused on issue assignment automation, not code development or programming techniques.",
+    "canonical_url": "https://github.blog/changelog/2025-12-03-assign-issues-to-copilot-using-the-api",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-03 20:06:49 +00:00",
+    "reason": "Succesfully added: Content qualifies for 'AI' because it introduces Claude Opus 4.5, an AI model integrated into GitHub Copilot (AI rule 1). 'GitHub Copilot' category is added because the post describes its usage and configuration within Copilot, following inclusion rules for Copilot as a developer tool (GitHub Copilot rules 1-4). Although it mentions various IDEs, the main focus is on enabling a new AI model in a developer tool context, not business productivity. No exclusion rules apply.",
+    "canonical_url": "https://github.blog/changelog/2025-12-03-claude-opus-4-5-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse",
+    "collection": "news"
   }
 ]
