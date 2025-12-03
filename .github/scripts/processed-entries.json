@@ -20720,5 +20720,11 @@
     "timestamp": "2025-12-03 05:06:13 +00:00",
     "reason": "Succesfully added: Assigned the Azure category because all content focuses on Azure Resource Graph API capabilities, a service within Azure (Azure category rule 1). The announcement covers API improvements, usage, and resource management specifically for Azure, but does not focus on coding patterns (no actual code development), DevOps practices, ML/data engineering, Security, or AI service integration, so those categories are excluded. Tags were chosen to capture technical depth, covering relevant Azure features, API mechanics, and operational considerations. No exclusion rules apply since the post is technical, implementation-focused, and meets community content length requirements.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-general-availability-for-azure-resource-graph-arg-get/ba-p/4474188"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content repeatedly emphasizes Azure Networking's support for large-scale AI workloads, infrastructure for distributed GPU clusters, and features optimized for AI data movement (AI rule 1 and 5). Assigned Azure category because all main technologies and features discussed are Azure-specific (Azure rules 1, 4, and 5). Assigned Security category because of specific coverage of new security features such as DNS Security Policy, JWT validation in Application Gateway, Private Link improvements, and forced tunneling in VWAN (Security rules 1 and 4). Did not assign DevOps or Coding because the focus is on infrastructure, networking, and platform features rather than development or CI/CD processes. ML category was not assigned as there is no in-depth discussion of data science/ML engineering or analytics platforms—the discussion of AI is at the infrastructure and workload-enablement layer.",
+    "timestamp": "2025-12-03 09:07:08 +00:00",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/unlocking-the-future-azure-networking-updates-on-security-reliability-and-high-availability-2/",
+    "collection": "news"
   }
 ]
