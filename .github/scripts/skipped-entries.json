@@ -10209,5 +10209,17 @@
     "collection": "news",
     "reason": "No categories found: Content excluded due to generic exclusion rule: this is a press release about Microsoft's quarterly dividend for shareholders, which is a financial and corporate announcement. It does not contain substantive technical content or discussions of Microsoft developer or cloud technologies. Per the Generic Exclusion Rules (Section 'Business Strategy and Executive Content'), business and investor-related news without technical implementation details should be excluded. The announcement is purely corporate/financial in scope and does not qualify for any technology categories.",
     "canonical_url": "https://news.microsoft.com/source/2025/12/02/microsoft-announces-quarterly-dividend-27/"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The provided text is extremely brief and lacks substantive technical detail, focusing primarily on a general news headline and a citizen-centric digital transformation theme. It does not include concrete information about Microsoft technologies, AI platform implementations, or technical content. There is no educational value, actionable insights, or technical specificity as required for inclusion. Therefore, no categories are assigned.",
+    "timestamp": "2025-12-03 15:06:10 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/emea/features/bolzano-digital-renaissance-citizens-first-ai/",
+    "collection": "news"
+  },
+  {
+    "reason": "No categories found: No categories were added because, according to the exclusion rules, Microsoft technologies are not central to this content. While AI coding and runtime tooling are discussed, none of the predefined Microsoft-focused categories (AI, Coding, DevOps, Azure, ML, Security, GitHub Copilot) apply. The article centers on Bun, Anthropic, and Claude Code—none are Microsoft products or platforms. Microsoft technologies are only mentioned tangentially (e.g. SQL Server in a linked unrelated article) and do not comprise ≥40% of the substantive content, nor are they central to the technical discussion. Therefore, the categories array is left empty.",
+    "timestamp": "2025-12-03 15:07:07 +00:00",
+    "canonical_url": "https://devclass.com/2025/12/03/bun-javascript-runtime-acquired-by-anthropic-tying-its-future-to-ai-coding/",
+    "collection": "posts"
   }
 ]
