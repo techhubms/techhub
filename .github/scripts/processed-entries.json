@@ -20732,5 +20732,11 @@
     "reason": "Succesfully added: Categories 'AI' and 'GitHub Copilot' are included because the stream explicitly focuses on exploring GitHub Copilot custom agents and instructions, which aligns with the AI and GitHub Copilot category rules. There is no indication of coding examples in another programming language or platform, so no additional categories apply. Exclusion rules do not trigger as the content is relevant, technical, and focused on developer tools.",
     "canonical_url": "https://www.youtube.com/watch?v=X9jbNK1006E",
     "timestamp": "2025-12-03 10:06:15 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/automating-hpc-workflows-with-copilot-agents/ba-p/4472610",
+    "timestamp": "2025-12-03 11:05:36 +00:00",
+    "reason": "Succesfully added: Applied the AI category because Copilot Agents are described as AI-powered automation tools for HPC scripting, fitting AI Category Rule 1 and 4. Did not apply GitHub Copilot category because the content does not reference GitHub Copilot, but rather AI Copilot Agents in HPC context (Copilot Studio/Agents as developer/maker tool per AI Category Rule 1). Other categories such as Azure, Coding, DevOps, Security, and ML are not applicable—there is no specific Microsoft Azure service, coding language detail, DevOps workflow, security practices, nor explicit machine learning/data science engineering present. The core content is about AI-driven workflow automation in HPC environments, not about Microsoft-specific cloud services or developer frameworks. Also considered generic exclusion rules: this is substantial technical content, focused on practical workflow automation, with no biographical or sales pitch focus, and in English."
   }
 ]
