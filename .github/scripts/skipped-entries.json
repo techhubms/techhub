@@ -10203,5 +10203,11 @@
     "timestamp": "2025-12-02 19:07:22 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/eQWxLZTg-wE",
     "reason": "No categories found: Content excluded due to insufficient substantive content. The 'content' field is null, and the description is too short, lacking technical depth and detail required for categorization. According to the workflow, categorization cannot proceed without substantial technical content. No qualifying categories are assigned."
+  },
+  {
+    "timestamp": "2025-12-02 23:05:33 +00:00",
+    "collection": "news",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: this is a press release about Microsoft's quarterly dividend for shareholders, which is a financial and corporate announcement. It does not contain substantive technical content or discussions of Microsoft developer or cloud technologies. Per the Generic Exclusion Rules (Section 'Business Strategy and Executive Content'), business and investor-related news without technical implementation details should be excluded. The announcement is purely corporate/financial in scope and does not qualify for any technology categories.",
+    "canonical_url": "https://news.microsoft.com/source/2025/12/02/microsoft-announces-quarterly-dividend-27/"
   }
 ]
