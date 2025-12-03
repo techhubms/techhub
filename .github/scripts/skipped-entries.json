@@ -10221,5 +10221,11 @@
     "timestamp": "2025-12-03 15:07:07 +00:00",
     "canonical_url": "https://devclass.com/2025/12/03/bun-javascript-runtime-acquired-by-anthropic-tying-its-future-to-ai-coding/",
     "collection": "posts"
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-12-03 17:07:39 +00:00",
+    "canonical_url": "https://dellenny.com/using-copilot-in-loop-components-for-seamless-collaboration/",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The content focuses on using Microsoft 365 Copilot and Copilot for Microsoft 365, which are classified as business productivity tools and explicitly excluded per Non-Development Microsoft Products (Generic Exclusion Rules) and the CRITICAL Copilot Product Distinction in Chapter 2. The entire article centers on collaboration and productivity for end-users in Microsoft Loop, Teams, Outlook, and Word, with no development, coding, or implementation focus. No qualifying categories can be assigned."
   }
 ]

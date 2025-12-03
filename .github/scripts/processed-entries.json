@@ -20786,5 +20786,11 @@
     "timestamp": "2025-12-03 16:09:08 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=boviC841YWs",
     "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-03 17:07:19 +00:00",
+    "canonical_url": "https://github.blog/news-insights/product-news/your-stack-your-rules-introducing-custom-agents-in-github-copilot-for-observability-iac-and-security/",
+    "reason": "Succesfully added: Assigned 'AI' category because the article revolves around AI automation through GitHub Copilot and its agents (AI category rule 2). Assigned 'GitHub Copilot' because the entire piece is about Copilot agents and usage (GitHub Copilot rules 1-4). Assigned 'DevOps' due to the broad coverage of workflow automation, CI/CD, observability, and incident response via partner agents (DevOps rules 2, 3, 5). Assigned 'Security' because several agents focus on security (JFrog, StackHawk, IAM) and secure workflows (Security rules 1, 2, 5). Assigned 'Coding' because these agents support and automate code-related activities, including infrastructure as code, migration scripts, documentation, and code review (Coding rules 4, 5). Did not assign 'Azure' or 'ML' since the article does not specifically address Azure or advanced ML/data science topics."
   }
 ]
