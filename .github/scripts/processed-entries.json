@@ -20696,5 +20696,11 @@
     "collection": "community",
     "reason": "Succesfully added: Categories are assigned as follows: Azure (multiple references to Azure Databricks services, direct use of Azure), ML (serverless workspaces focus on analytics and data science workloads, supporting large data projects and Python/SQL compute), AI (content describes user scenarios involving AI projects and highlights AI as a major use case), Security (discussion of network security, egress policies, Unity Catalog governance, and data protection). No generic exclusion rules were triggered: the post is technical, over 200 words, written in English, and not a sales pitch or biographical. Category inclusion rules for Azure, ML, AI, and Security are satisfied due to detailed feature explanations around cloud infrastructure, managed analytics/AI workloads, and secure data governance.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/serverless-workspaces-are-live-in-azure-databricks/ba-p/4474712"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the session focuses on agentic UIs (agent-based, AI-driven interfaces) and features an expert from CopilotKit, which is associated with AI tooling. Assigned 'Coding' since the content is a developer-focused ASP.NET Community Standup covering Blazor and .NET programming concepts, as indicated by terms like 'demo', 'dotnet', 'developer', and 'softwaredeveloper'. Did not assign 'Azure', 'DevOps', 'Security', 'ML', or 'GitHub Copilot', as these topics are not mentioned or inferred from the title, tags, or description. No generic exclusion rules apply.",
+    "timestamp": "2025-12-03 01:33:33 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=4CrxcdNbRFY"
   }
 ]
