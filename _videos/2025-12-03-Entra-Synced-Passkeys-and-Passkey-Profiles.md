@@ -1,0 +1,91 @@
+---
+layout: "post"
+title: "Entra Synced Passkeys and Passkey Profiles"
+description: "This video explores the capabilities of synced passkeys within Microsoft Entra ID, demonstrating how device-bound and cloud-synced passkeys operate. The walkthrough covers passkey policies, practical usage, and user choice when deploying passkeys for identity management in the Azure ecosystem. Examples and provided resources help viewers apply best practices around passkey synchronization and security."
+author: "John Savill's Technical Training"
+excerpt_separator: <!--excerpt_end-->
+canonical_url: "https://www.youtube.com/watch?v=e0FPn-gJeO4"
+viewing_mode: "internal"
+feed_name: "John Savill's Technical Training"
+feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+date: 2025-12-03 13:07:04 +00:00
+permalink: "/2025-12-03-Entra-Synced-Passkeys-and-Passkey-Profiles.html"
+categories: ["Azure", "Security"]
+tags: ["Apple Icloud Keychain", "Authentication", "Azure", "Azure Cloud", "Azure Identity", "Cloud", "Cloud Synced Passkey", "Device Bound Passkey", "Digital Identity", "Entra Id", "Google Password Manager", "Identity", "Identity Management", "Microsoft", "Microsoft Azure", "Passkey Policies", "Passkeys", "Policy Management", "Security", "Synced Credentials", "Videos"]
+tags_normalized: ["apple icloud keychain", "authentication", "azure", "azure cloud", "azure identity", "cloud", "cloud synced passkey", "device bound passkey", "digital identity", "entra id", "google password manager", "identity", "identity management", "microsoft", "microsoft azure", "passkey policies", "passkeys", "policy management", "security", "synced credentials", "videos"]
+---
+
+John Savill's Technical Training presents a practical guide to managing synced passkeys and passkey profiles in Microsoft Entra ID, focusing on identity protection and Azure integration.<!--excerpt_end-->
+
+{% youtube e0FPn-gJeO4 %}
+
+# Entra Synced Passkeys and Passkey Profiles
+
+**Author:** John Savill's Technical Training  
+
+## Introduction
+
+Discover how to leverage device-bound and synced passkeys with Entra ID for secure identity management in the Azure cloud. This guide provides a breakdown of passkey fundamentals, synchronization options, policy enforcement, and user experience.
+
+**Reference Links:**  
+
+- [Synced Passkeys Whiteboard](https://github.com/johnthebrit/RandomStuff/raw/master/Whiteboards/SyncedPasskeys.jpg)  
+- [Azure Learning Path](https://learn.onboardtoazure.com)  
+- [Certification Materials](https://github.com/johnthebrit/CertificationMaterials)  
+
+---
+
+## Passkey 101
+
+Passkeys are modern authentication credentials that combine security with convenience. They can be bound to a specific device for extra security or synced across multiple devices via the cloud.
+
+### Device Bound Passkeys
+
+- Stored and used exclusively on a single device
+- Useful for additional security where device control is critical
+
+### Synced Passkeys
+
+- Stored in the cloud, accessible from multiple devices
+- Improve mobility and user flexibility
+- Integration with Microsoft Entra ID provides enterprise-grade identity protections within Azure
+
+---
+
+## Passkey Policies
+
+- Azure admin can enforce policies dictating how passkeys are used and managed across the environment
+- Policy options include requiring device-bound passkeys, allowing cloud-synced passkeys, and setting user access rules
+
+---
+
+## User Choice
+
+- Users may choose which passkey configuration suits their operational requirements
+- Azure identity management features enable tailored approaches for each user or group based on policy
+
+---
+
+## Practical Guidance
+
+- For step-by-step visuals, see the [Whiteboard Diagram](https://github.com/johnthebrit/RandomStuff/raw/master/Whiteboards/SyncedPasskeys.jpg)
+- Leverage Entra ID integration with Azure for streamlined identity protection
+- For additional Azure-related learning and certification resources, explore the provided links
+
+---
+
+## Summary
+
+By utilizing passkey profiles and synchronized credentials, organizations get robust, user-friendly identity management using Microsoft Entra ID in Azure. Policy management offers flexibility for device or cloud-centric security needs.
+
+---
+
+## Additional Resources
+
+- [Weekly Azure Update Playlist](https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks)
+- [DevOps Master Class](https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq)
+- [PowerShell Master Class](https://youtube.com/playlist?list=PLlVtbbG169nFq_hR7FcMYg32xsSAObuq8)
+
+---
+
+For questions not covered, see John Savill’s [FAQ](https://savilltech.com/faq).

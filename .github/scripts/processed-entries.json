@@ -20738,5 +20738,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/automating-hpc-workflows-with-copilot-agents/ba-p/4472610",
     "timestamp": "2025-12-03 11:05:36 +00:00",
     "reason": "Succesfully added: Applied the AI category because Copilot Agents are described as AI-powered automation tools for HPC scripting, fitting AI Category Rule 1 and 4. Did not apply GitHub Copilot category because the content does not reference GitHub Copilot, but rather AI Copilot Agents in HPC context (Copilot Studio/Agents as developer/maker tool per AI Category Rule 1). Other categories such as Azure, Coding, DevOps, Security, and ML are not applicable—there is no specific Microsoft Azure service, coding language detail, DevOps workflow, security practices, nor explicit machine learning/data science engineering present. The core content is about AI-driven workflow automation in HPC environments, not about Microsoft-specific cloud services or developer frameworks. Also considered generic exclusion rules: this is substantial technical content, focused on practical workflow automation, with no biographical or sales pitch focus, and in English."
+  },
+  {
+    "timestamp": "2025-12-03 13:16:29 +00:00",
+    "reason": "Succesfully added: Assigned Security category because the content is centered on identity management and passkey authentication, which falls under Security rule 1 and 2. Assigned Azure category because the context and implementation use Microsoft Entra ID and Azure cloud services (Azure rule 1 and 4). Excluded all other categories since the video does not cover AI, ML, Coding, DevOps, or GitHub Copilot. The title, description, excerpt, and tags were extracted and formulated with focus on synced passkeys, identity, and Azure, following tagging and summary instructions.",
+    "canonical_url": "https://www.youtube.com/watch?v=e0FPn-gJeO4",
+    "collection": "videos"
   }
 ]
