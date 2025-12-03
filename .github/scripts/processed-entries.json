@@ -20828,5 +20828,23 @@
     "reason": "Succesfully added: Content qualifies for 'AI' because it introduces Claude Opus 4.5, an AI model integrated into GitHub Copilot (AI rule 1). 'GitHub Copilot' category is added because the post describes its usage and configuration within Copilot, following inclusion rules for Copilot as a developer tool (GitHub Copilot rules 1-4). Although it mentions various IDEs, the main focus is on enabling a new AI model in a developer tool context, not business productivity. No exclusion rules apply.",
     "canonical_url": "https://github.blog/changelog/2025-12-03-claude-opus-4-5-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse",
     "collection": "news"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the AI category because Copilot Studio is a Microsoft developer/maker tool for building AI-powered agents (AI inclusion rule 1). Content focuses on Copilot Studio's technical features, agent orchestration, debugging, governance, and integration with generative AI, not general business productivity Copilot. Did not assign 'Coding' because there is no direct software engineering (code-level) detail apparent in the session overview. Did not assign 'DevOps', 'Azure', 'ML', or 'Security' since the content does not focus on deployment pipelines, Azure resource management, machine learning development, or security. Excluded categories about business-productivity Copilots per Copilot product distinction rules.",
+    "timestamp": "2025-12-03 22:06:06 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=6sI5jrNVz70"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' category because the session focuses on building intelligent agents using Copilot Studio, which is a Microsoft developer/maker AI tool (AI Inclusion Rule 1). Content describes technical integration of knowledge sources, agent workflow, and connections to Microsoft Graph, Azure AI Search, and Active Directory, supporting AI and low-code agent development. Did not assign 'GitHub Copilot' because the content is about Copilot Studio (not GitHub Copilot). Did not assign 'Coding', 'Azure', 'ML', 'DevOps', or 'Security' because the main topics are low-code agent development and AI integrations, not custom code, Azure-specific services, ML engineering, DevOps practices, or security implementation—the focus is agent enablement and knowledge source integration via Copilot Studio.",
+    "timestamp": "2025-12-03 22:06:27 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=mY2qaeYN_CQ"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned Azure category because Azure Arc is a core Azure service extending cloud management to hybrid and multi-cloud scenarios (Azure category rule 1 and 4). DevOps is included because the session focuses on management, operational consistency, and deployment practices across cloud and datacenter environments (DevOps category rules 3, 5, and 6). Security is added due to prominent mentions of governance, security, and compliance across heterogeneous environments (Security category rules 1, 4, and 5). Exclusion rules do not apply as the video is technical, development/migration focused, and meets the Microsoft-centric threshold.",
+    "timestamp": "2025-12-03 22:06:48 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=rQBFAKJ-Ea8"
   }
 ]
