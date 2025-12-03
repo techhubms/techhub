@@ -20702,5 +20702,11 @@
     "timestamp": "2025-12-03 01:33:33 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=4CrxcdNbRFY"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-12-02-github-enterprise-server-3-19-release-candidate-is-now-available",
+    "timestamp": "2025-12-03 02:35:44 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category as the content centers on repository management, policy enforcement, workflow enhancements, and process automation—all core DevOps practices (DevOps rules 2, 5, 6, 8, 11). Security category is included due to features like SHA pinning for actions, cipher suite customization, and policy controls that directly strengthen system security (Security rules 2, 7). Azure or AI are not assigned as the focus is on GitHub Enterprise Server technical improvements, not on Azure, AI, ML, or code-level programming."
   }
 ]
