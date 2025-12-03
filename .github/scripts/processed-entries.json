@@ -20708,5 +20708,11 @@
     "canonical_url": "https://github.blog/changelog/2025-12-02-github-enterprise-server-3-19-release-candidate-is-now-available",
     "timestamp": "2025-12-03 02:35:44 +00:00",
     "reason": "Succesfully added: Assigned DevOps category as the content centers on repository management, policy enforcement, workflow enhancements, and process automation—all core DevOps practices (DevOps rules 2, 5, 6, 8, 11). Security category is included due to features like SHA pinning for actions, cipher suite customization, and policy controls that directly strengthen system security (Security rules 2, 7). Azure or AI are not assigned as the focus is on GitHub Enterprise Server technical improvements, not on Azure, AI, ML, or code-level programming."
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the event is centrally focused on Microsoft's AI technologies, including Azure AI, agentic workflows, and Foundry (AI rules 1, 3, and 4). Assigned Azure because Azure is a core focus of technical sessions (Azure rules 1, 4, and 5). Assigned GitHub Copilot since 'GitHub Copilot Coding Agent' is a named session topic, requiring both 'AI' and 'GitHub Copilot' by rule (GitHub Copilot rule 1; AI required with Copilot). Assigned Coding as the event covers building, code improvement, and app modernization using VS Code and Visual Studio (Coding rules 1, 2, and 4). Assigned DevOps because sessions include 'Agentic DevOps', 'Azure SRE Agent', and workflow automation (DevOps rules 1, 3, and 5). No generic exclusion rules apply as the post is a technical event announcement for developers, not business/productivity/end-user content.",
+    "timestamp": "2025-12-03 03:28:01 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/foundry/ai-dev-days-december-2025/",
+    "collection": "news"
   }
 ]
