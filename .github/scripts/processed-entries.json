@@ -20714,5 +20714,11 @@
     "timestamp": "2025-12-03 03:28:01 +00:00",
     "canonical_url": "https://devblogs.microsoft.com/foundry/ai-dev-days-december-2025/",
     "collection": "news"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-12-03 05:06:13 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because all content focuses on Azure Resource Graph API capabilities, a service within Azure (Azure category rule 1). The announcement covers API improvements, usage, and resource management specifically for Azure, but does not focus on coding patterns (no actual code development), DevOps practices, ML/data engineering, Security, or AI service integration, so those categories are excluded. Tags were chosen to capture technical depth, covering relevant Azure features, API mechanics, and operational considerations. No exclusion rules apply since the post is technical, implementation-focused, and meets community content length requirements.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-general-availability-for-azure-resource-graph-arg-get/ba-p/4474188"
   }
 ]
