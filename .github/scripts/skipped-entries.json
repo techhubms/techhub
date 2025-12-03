@@ -10227,5 +10227,29 @@
     "timestamp": "2025-12-03 17:07:39 +00:00",
     "canonical_url": "https://dellenny.com/using-copilot-in-loop-components-for-seamless-collaboration/",
     "reason": "No categories found: Content excluded due to generic exclusion rule: The content focuses on using Microsoft 365 Copilot and Copilot for Microsoft 365, which are classified as business productivity tools and explicitly excluded per Non-Development Microsoft Products (Generic Exclusion Rules) and the CRITICAL Copilot Product Distinction in Chapter 2. The entire article centers on collaboration and productivity for end-users in Microsoft Loop, Teams, Outlook, and Word, with no development, coding, or implementation focus. No qualifying categories can be assigned."
+  },
+  {
+    "canonical_url": "https://news.xbox.com/en-us/2025/12/03/clair-obscur-expedition-33-game-pass-biggest-launch/",
+    "collection": "news",
+    "timestamp": "2025-12-03 18:05:57 +00:00",
+    "reason": "No categories found: No categories assigned because the content is focused on a game (Clair Obscur: Expedition 33) launch and user engagement on Xbox Game Pass, which falls under general gaming and entertainment. There is no substantive technical or developer-focused discussion of Microsoft technologies, platforms, coding, AI, ML, DevOps, or security practices. The article covers game features, user base, and developer/interview commentary, rather than technical implementation, game development, or platform engineering. This aligns with the Generic Exclusion Rule for Non-Development Microsoft Products and end-user applications."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/ozXxkXQQhVM",
+    "collection": "videos",
+    "timestamp": "2025-12-03 18:06:29 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule. The video is a personal story recounting the moment Christian Grobmeier, a Log4j maintainer, discovered the Log4Shell vulnerability. The description is primarily biographical and focuses on Grobmeier's experience during the event, fitting the 'Biographical Focus' exclusion. There is no substantive technical content about Microsoft technologies, products, or developer implementation, and thus none of the inclusion category criteria are met."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/healthcare/2025/12/03/future-proofing-healthcare-cybersecurity-what-every-leader-should-know/",
+    "collection": "news",
+    "timestamp": "2025-12-03 19:06:33 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The main focus is on business strategy and executive decision-making, specifically leadership empowerment and workforce enablement with AI agents in retail, consumer goods, and healthcare sectors. The article lacks technical implementation details and is targeted at executives/managers rather than practitioners (see Generic Exclusion Rules for 'Business Strategy and Executive Content' and 'Workplace and Business Focus')."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-365/blog/2025/12/02/microsoft-365-copilot-business-the-future-of-work-for-small-businesses/",
+    "collection": "news",
+    "timestamp": "2025-12-03 19:06:47 +00:00",
+    "reason": "No categories found: Content is excluded due to generic exclusion rules regarding Non-Development Microsoft Products. The main topic centers on Microsoft 365 Copilot Business, which is specifically called out as a business productivity tool—not a developer product—in the workflow rules (see Chapter 3: Generic Exclusion Rules and CRITICAL: Copilot Product Distinction). All substantive sections focus on improving business workflows, document creation, Microsoft 365 application usage (Word, Excel, PowerPoint, Outlook, Teams), licensing/pricing for SMBs, and operational efficiency for small businesses—not technical implementation, coding, development, or architecture for Microsoft technologies. Although the content mentions AI and Microsoft Defender/Purview, these are described in the context of general business productivity, security for end-users, and compliance at an organizational level, not technical development or integration. No qualifying category inclusion rules are met (AI, Coding, Azure, ML, DevOps, Security) because all qualifying categories explicitly exclude Copilot for Microsoft 365, Office Copilot, and general business/consumer productivity tools. Therefore, NO categories have been assigned."
   }
 ]

@@ -1,0 +1,18 @@
+{
+  "ProcessedDate": "2025-12-03 19:05:11",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Link": "https://www.youtube.com/shorts/vYuuCiAYOP4",
+  "OutputDir": "_videos",
+  "Description": "One MCP server can turn GitHub Copilot CLI into a superpower! Go from basic terminal chat to instant codebase symbol extraction, deep package documentation research, and real AST-powered code search (tree-sitter, not regex!). In under 3 minutes you’ll learn how to get setup with kit-dev MCP + live demos of the features you can use every single day. If you code, you need to try this out.\n\nGitHub Copilot CLI: https://aka.ms/gh-copilot-cli kit-dev MCP Server: https://kit-mcp.cased.com",
+  "FeedName": "Visual Studio Code YouTube",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "PubDate": "2025-12-03T18:01:15+00:00",
+  "Author": "Visual Studio Code",
+  "EnhancedContent": null,
+  "Title": "One MCP Server Changed How I Use GitHub Copilot  #ai #mcp"
+}
