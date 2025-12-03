@@ -20756,5 +20756,35 @@
     "timestamp": "2025-12-03 15:06:39 +00:00",
     "canonical_url": "https://devblogs.microsoft.com/visualstudio/why-changing-keyboard-shortcuts-in-visual-studio-isnt-as-simple-as-it-seems/",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: The 'AI' category was assigned because the article deeply explores using AI agents—in particular, within engineering and developer productivity workflows (AI category rule 1 and 4), and draws from Microsoft-specific AI adoption (AI category rule 6). 'GitHub Copilot' was considered but not assigned, as the core content is about broader AI agent orchestration and frameworks, not deeply focused on GitHub Copilot's features or ecosystem. Coding, Azure, Security, DevOps, and ML categories were not assigned because the primary focus is on collaboration frameworks for AI agents in complex tasks, rather than specific technical implementation in those domains. The example migration uses the Entra SDK, but the article highlights process and mindset over implementation details. Tags were chosen primarily for relevance to AI collaboration, frameworks, and the engineering transformation context discussed.",
+    "timestamp": "2025-12-03 16:07:25 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/engineering-at-microsoft/the-interaction-changes-everything-treating-ai-agents-as-collaborators-not-automation/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because Microsoft Fabric is an Azure-based data analytics platform and the content directly addresses deployment challenges and solutions within it (Azure rule 1, 4, 5). Assigned 'ML' because deployment of data warehouses and analytical SQL endpoints in Fabric pertains to advanced analytics/data engineering and overlaps with data-science-focused infrastructure (ML rules 1, 2, 5, and 6). Assigned 'DevOps' as the content is directly about deployment pipelines, automation, dependency management, and CI/CD-style workflow (DevOps rules 1, 5, 6). Did not assign 'AI' (no focus on AI models/services), 'Security' (no security/identity focus), 'Coding' (focus is on deployment and orchestration, not on application authoring or programming).",
+    "timestamp": "2025-12-03 16:07:51 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/bridging-the-gap-automate-warehouse-sql-endpoint-deployment-in-microsoft-fabric/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the entire initiative is focused on teaching AI concepts and literacy using Microsoft platforms (AI inclusion rules 1, 4). Assigned Coding category because each featured activity (Minecraft, MakeCode, Visual Studio Code for Education) involves students writing code, coding with AI prompts, and designing algorithms (Coding rules 1, 4, 5). Did not assign categories like Azure, ML, DevOps, Security, or GitHub Copilot as the content does not focus on those domains. Content is technical, educational, and targets foundational AI/coding skills, fitting quality standards and not triggering any exclusion rules.",
+    "timestamp": "2025-12-03 16:08:11 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/education/blog/2025/12/unlock-ai-learning-with-hour-of-ai-for-computer-science-education-week/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because Visual Studio 2026 heavily features AI-driven improvements, Copilot integrations, and automated development tools (AI rules 1, 5). Added 'GitHub Copilot' as all the described Copilot features and Cloud Agent use are Copilot-related (GitHub Copilot rules 1, 2, 3). Included 'Coding' due to the emphasis on developer workflows, in-editor code actions, automation of coding tasks, and other programming-focused improvements (Coding rules 1, 4, 5). No other categories fit since Azure, DevOps, ML, or Security content are not present.",
+    "timestamp": "2025-12-03 16:08:33 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/visual-studio-november-update-visual-studio-2026-cloud-agent-preview-and-more/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' because the video focuses on administering GitHub Copilot agents and related AI capabilities (GitHub Copilot inclusion rules 1, 2, 3; AI rule 1). Added 'DevOps' due to significant focus on administrative governance, access management, and workflows relevant to team operations (DevOps rules 3, 5, 9). Included 'Security' based on the emphasis on audit logging, access control, and compliance (Security rules 1, 3, 5), as these are central to secure operations. The content does not trigger any generic exclusion rules and thoroughly addresses the governance and security of GitHub Copilot in an enterprise context.",
+    "timestamp": "2025-12-03 16:09:08 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=boviC841YWs",
+    "collection": "videos"
   }
 ]
