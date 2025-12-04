@@ -10329,5 +10329,11 @@
     "timestamp": "2025-12-04 19:06:43 +00:00",
     "canonical_url": "https://blogs.windows.com/windowsdeveloper/2025/12/03/announcing-the-microsoft-store-awards-2025-winners/",
     "collection": "news"
+  },
+  {
+    "reason": "No categories found: Content excluded because it does not meet the content categorization requirements for Tech Hub. The article focuses on AWS re:Invent 2025, with core topics centered on AWS innovations in Agentic AI, DevOps, cloud-native, and platform engineering. While there is strong coverage of DevOps, cloud-native methodologies, and platform engineering, the content is entirely centered on AWS technologies and industry trends, with no substantive Microsoft technology coverage (Microsoft tech is not ≥40% or central to the solution). Generic exclusion rule for multi-platform content applies: content about non-Microsoft platforms (AWS) with no substantial Microsoft technical detail should be excluded. No categories assigned.",
+    "timestamp": "2025-12-04 21:06:07 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://devops.com/reinvent-proves-it-devops-isnt-dead-cloud-native-isnt-fading-and-platform-engineering-isnt-a-fad/"
   }
 ]

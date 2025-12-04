@@ -20966,5 +20966,17 @@
     "timestamp": "2025-12-04 19:07:26 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-12-04-openais-gpt-5-1-codex-max-is-now-in-public-preview-for-github-copilot",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Included AI category because the guide centers on GitHub Copilot, an AI coding assistant, and Copilot Spaces (AI rule 2, 4, and 6). Included GitHub Copilot category as the entire content is about Copilot features and workflow (GitHub Copilot rules 1-4). Included Coding category since the workflow directly impacts and automates coding/debugging practices (Coding rule 4). Exclusion rules are not triggered as the content is technical, focused on developer tools, and not a sales pitch or business productivity tool.",
+    "timestamp": "2025-12-04 21:05:48 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-spaces-to-debug-issues-faster/"
+  },
+  {
+    "reason": "Succesfully added: The content is an in-depth technical case study of a Microsoft-sponsored analytics and AI capstone, focusing on designing, optimizing, and deploying a KPI-driven tiering architecture using clustering (Ward, K-Means, etc.), Azure data/analytics services, ML techniques (CatBoost, XGBoost), and LLM-powered interactive tooling. It covers the operational implementation and backend architecture using FastAPI, OpenAI API, and Azure. All main category inclusion rules are met: ML for custom data science pipeline/model building and evaluation (ML rule 1), Azure for usage of Synapse and Stream Analytics plus data workflows (Azure rule 1), and AI for the LLM assistant and KPI alignment (AI rules 1, 4, and 5). The core focus is technical and operational, not business strategy, and the content far exceeds minimum length/technical threshold for community entries. There are no exclusion triggers. Copilot, DevOps, Coding, and Security categories do not apply, as the content revolves around AI/ML, Azure data, and operational analytics—not code, developer tools, or security topics.",
+    "timestamp": "2025-12-04 21:06:47 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/architecting-the-next-generation-customer-tiering-system/ba-p/4475326"
   }
 ]
