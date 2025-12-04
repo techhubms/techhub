@@ -1,0 +1,19 @@
+{
+  "Title": "Open Source Friday: Open Source Friday Exploring Unlsoth",
+  "PubDate": "2025-12-03T22:30:59+00:00",
+  "ProcessedDate": "2025-12-04 00:10:30",
+  "Link": "https://www.youtube.com/watch?v=sHHsOfIwfBY",
+  "FeedName": "GitHub YouTube",
+  "Tags": [
+    "AI",
+    "GitHubAccelerator",
+    "OpenSourceFriday",
+    "Unsloth"
+  ],
+  "Description": "This week on Open Source Friday we'll sit down with Daniel Han and Michael Han, the minds behind Unsloth - an open source project redefining how developers fine-tune AI models. Unsloth accelerates training 2–5x faster while using up to 70–90% less VRAM, making custom AI models accessible to everyone. You can check them out at:\n\nWebsite: unsloth.ai GitHub: github.com/unslothai/unsloth\n\nJoin us in celebrating projects like Unsloth that push the boundaries of open source AI innovation! #OpenSourceFriday #AI #Unsloth #GitHubAccelerator",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "GitHub",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Author": "GitHub",
+  "EnhancedContent": null
+}

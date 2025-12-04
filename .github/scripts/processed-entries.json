@@ -20846,5 +20846,17 @@
     "reason": "Succesfully added: Assigned Azure category because Azure Arc is a core Azure service extending cloud management to hybrid and multi-cloud scenarios (Azure category rule 1 and 4). DevOps is included because the session focuses on management, operational consistency, and deployment practices across cloud and datacenter environments (DevOps category rules 3, 5, and 6). Security is added due to prominent mentions of governance, security, and compliance across heterogeneous environments (Security category rules 1, 4, and 5). Exclusion rules do not apply as the video is technical, development/migration focused, and meets the Microsoft-centric threshold.",
     "timestamp": "2025-12-03 22:06:48 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=rQBFAKJ-Ea8"
+  },
+  {
+    "canonical_url": "https://code.visualstudio.com/blogs/2025/12/03/introducing-vs-code-insiders-podcast",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the Coding category because the podcast directly covers the development and engineering behind Visual Studio Code, a key Microsoft development tool, and discusses topics like new features, AI in coding, accessibility engineering, and open source practices—all fitting Coding category rule 2 and 4. DevOps, Azure, AI, ML, Security were considered but not included, as the primary focus is on software engineering, developer workflows, and product development within VS Code, not on Azure-specific topics, DevOps pipelines, security implementation, or ML/data science engineering. AI is discussed, but as a feature within VS Code, not as a central technology or Microsoft AI product/service, which means it does not meet AI category rules. No generic exclusion rules apply as the content is technical, in English, and focuses on coding topics.",
+    "timestamp": "2025-12-04 00:11:34 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/beyond-the-chat-window-how-change-driven-architecture-enables/ba-p/4475026",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the AI category because the entire article focuses on new AI paradigms (ambient agents), their architecture, and practical implementation. While Microsoft services (Cosmos DB, EventHub, potentially Azure) are referenced as sources/topics, the text does not involve substantial Azure development, configuration, or deployment—not enough for the Azure category (Azure technologies aren't central, just compatible data sources). DevOps, ML, Coding, Security, and GitHub Copilot did not qualify since the technical content is about AI architectural patterns, change detection, and automated event-driven responses—not code implementation, ML pipelines, or DevOps methodology. AI category is supported by the focus on autonomous agent design and integration with tools like LangChain, Drasi, and the broader event-driven AI landscape. All categorization decisions are directly referenced from the content, with links and examples illustrating the architectural focus.",
+    "timestamp": "2025-12-04 00:12:30 +00:00"
   }
 ]

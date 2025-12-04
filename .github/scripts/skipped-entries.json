@@ -10251,5 +10251,17 @@
     "collection": "news",
     "timestamp": "2025-12-03 19:06:47 +00:00",
     "reason": "No categories found: Content is excluded due to generic exclusion rules regarding Non-Development Microsoft Products. The main topic centers on Microsoft 365 Copilot Business, which is specifically called out as a business productivity tool—not a developer product—in the workflow rules (see Chapter 3: Generic Exclusion Rules and CRITICAL: Copilot Product Distinction). All substantive sections focus on improving business workflows, document creation, Microsoft 365 application usage (Word, Excel, PowerPoint, Outlook, Teams), licensing/pricing for SMBs, and operational efficiency for small businesses—not technical implementation, coding, development, or architecture for Microsoft technologies. Although the content mentions AI and Microsoft Defender/Purview, these are described in the context of general business productivity, security for end-users, and compliance at an organizational level, not technical development or integration. No qualifying category inclusion rules are met (AI, Coding, Azure, ML, DevOps, Security) because all qualifying categories explicitly exclude Copilot for Microsoft 365, Office Copilot, and general business/consumer productivity tools. Therefore, NO categories have been assigned."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=sHHsOfIwfBY",
+    "timestamp": "2025-12-03 23:05:40 +00:00",
+    "reason": "No categories found: No categories have been assigned because the content does not provide sufficient evidence of central Microsoft technology involvement or development. The video focuses on Unsloth, an open source project for accelerating AI model fine-tuning, with no mention in the title or description of Microsoft technologies, platforms, or development tools. The description highlights general AI innovation and open source, and while GitHub is mentioned as a platform hosting the project, there is no indication of specific Microsoft technologies (such as Azure, Azure ML, .NET, or GitHub Copilot) being discussed or implemented. According to the processing rules, GitHub-hosted projects only qualify if the content is about GitHub Copilot, DevOps automation features, or where Microsoft technology is central to the solution (≥40%). As there are no Microsoft technology details or development implementation mentioned, the content does not qualify for any of the predefined categories.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=d7MFLW-_Lkw",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to lack of substantive technical content: The description only mentions that Irina Dominte discusses 'patterns in messaging systems' on a .NET Live video, but no details, technical depth, or main content are provided in the input. The 'content' field is null, so there is no technical material to evaluate, summarize, or categorize. Per the workflow, categorization requires access to the primary instructional content, which is not present in this input.",
+    "timestamp": "2025-12-04 00:12:00 +00:00"
   }
 ]
