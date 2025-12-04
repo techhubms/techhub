@@ -1,0 +1,22 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Description": "Medical professionals often spend too much time on manual documentation, limiting patient interaction. The AI-powered Medical Voice Agent lets clinicians dictate notes while AI extracts key details like symptoms, medications, and next steps. This structured data is instantly added to a Model-Driven App, improving accuracy and reducing errors. A built-in text-based Copilot summarizes past visits and prompts follow-ups, such as reminders about previously mentioned medications.\n\nTogether, these AI agents streamline workflows and support safer, more efficient patient care.\n\n✅ Chapters: 00:00 Introduction 01:59 Problem statement and business value impact 04:52 Solution design 08:57 Demo of AI Voice agent 05:20 Demo of conversational agent 15:39 Solution components explained 21:57 Questions and answers 24:18 Outro\n\n✅ Resources: LinkedIn profile - https://www.linkedin.com/in/jeevarajankumar Blog - https://crmindian.com",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=gAmgPEj7JoU",
+  "FeedName": "Microsoft Developer YouTube",
+  "EnhancedContent": null,
+  "Title": "How AI Voice Agents Transform Medical Documentation in Real Time",
+  "Author": "Microsoft Developer",
+  "PubDate": "2025-12-04T00:00:52+00:00",
+  "ProcessedDate": "2025-12-04 01:33:09"
+}

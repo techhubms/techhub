@@ -1,0 +1,25 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Tags": [
+    "AI",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "GPT",
+    "GPT5",
+    "microsoft",
+    "python",
+    "softwaredevelopers"
+  ],
+  "Description": "Day 2 is all about Azure, GitHub and using AI to make your coding better. Topics will include Agent HQ, VS Code, Visual Studio 2026, GitHub Copilot Coding Agent, and app modernization. Join us for highlights from Microsoft Ignite and GitHub Universe 2025 and a hands-on lab to grow your skills with the latest AI developer tools.",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=GCLYC5d7kpI",
+  "FeedName": "Microsoft Developer YouTube",
+  "EnhancedContent": null,
+  "Title": "AI Dev Days: Using AI to Enhance Developer Productivity",
+  "Author": "Microsoft Developer",
+  "PubDate": "2025-12-04T01:07:13+00:00",
+  "ProcessedDate": "2025-12-04 01:33:09"
+}

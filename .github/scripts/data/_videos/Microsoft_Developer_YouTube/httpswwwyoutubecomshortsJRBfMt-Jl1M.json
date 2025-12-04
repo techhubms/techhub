@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Tags": [
+    "OneDevQuestion",
+    "VSCode"
+  ],
+  "Description": "Curious where to begin with agents? In this #OneDevQuestion, Govind Kamtamneni reveals why most developers already have everything they need, and where to look if you're ready to level up.\n\nCheck out #VSCode: https://msft.it/6051tdiaW",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/shorts/JRBfMt-Jl1M",
+  "FeedName": "Microsoft Developer YouTube",
+  "EnhancedContent": null,
+  "Title": "How do I get started with agents?",
+  "Author": "Microsoft Developer",
+  "PubDate": "2025-12-04T00:59:49+00:00",
+  "ProcessedDate": "2025-12-04 01:33:09"
+}

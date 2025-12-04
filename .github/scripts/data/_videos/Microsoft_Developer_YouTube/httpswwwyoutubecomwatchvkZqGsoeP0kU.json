@@ -1,0 +1,25 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Tags": [
+    "AI",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "GPT",
+    "GPT5",
+    "microsoft",
+    "python",
+    "softwaredevelopers"
+  ],
+  "Description": "The first day of AI Dev Days is all about Azure, GitHub and building AI applications. Topics will include Agentic DevOps, Azure SRE Agent, Microsoft Foundry, MCP, and Models. Join us for highlights from Microsoft Ignite and GitHub Universe 2025 and a hands-on lab to help you put the latest product features into practice right away.",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=kZqGsoeP0kU",
+  "FeedName": "Microsoft Developer YouTube",
+  "EnhancedContent": null,
+  "Title": "AI Dev Days: Building AI Applications",
+  "Author": "Microsoft Developer",
+  "PubDate": "2025-12-04T01:05:19+00:00",
+  "ProcessedDate": "2025-12-04 01:33:09"
+}

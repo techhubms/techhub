@@ -20858,5 +20858,29 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned the AI category because the entire article focuses on new AI paradigms (ambient agents), their architecture, and practical implementation. While Microsoft services (Cosmos DB, EventHub, potentially Azure) are referenced as sources/topics, the text does not involve substantial Azure development, configuration, or deployment—not enough for the Azure category (Azure technologies aren't central, just compatible data sources). DevOps, ML, Coding, Security, and GitHub Copilot did not qualify since the technical content is about AI architectural patterns, change detection, and automated event-driven responses—not code implementation, ML pipelines, or DevOps methodology. AI category is supported by the focus on autonomous agent design and integration with tools like LangChain, Drasi, and the broader event-driven AI landscape. All categorization decisions are directly referenced from the content, with links and examples illustrating the architectural focus.",
     "timestamp": "2025-12-04 00:12:30 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the article centers on Microsoft's AI platform (Mistral Large 3 in Azure Foundry) as outlined in AI rules 1, 4, and 6. Assigned Azure category due to the focus on Azure services, deployment, integration, and Microsoft Foundry (Azure rules 1 and 4). Did NOT assign Coding, ML, Security, DevOps, or GitHub Copilot: there is no in-depth programming guidance, ML engineering, security implementation, DevOps pipeline discussion, or Copilot content. No generic exclusion rules triggered; the input is technical, English-language, and focuses on Microsoft technologies.",
+    "timestamp": "2025-12-04 01:33:49 +00:00",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/introducing-mistral-large-3-in-microsoft-foundry-open-capable-and-ready-for-production-workloads/"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because this video demonstrates an application of artificial intelligence (Medical Voice Agent and Copilot summarization) as per AI category rule 1. Azure is referenced in tags and context, but the core content revolves around AI capabilities integrated into clinical workflows with Microsoft Model-Driven Apps, not the Azure platform specifically; thus, Azure is included as a tag (supporting technology), not a category. No Coding, ML, DevOps, or Security topics are substantively covered. The content focuses on technical implementation rather than generic medical or business strategy.",
+    "timestamp": "2025-12-04 01:34:45 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=gAmgPEj7JoU"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the AI category due to the focus on AI-powered developer tools (mentions GitHub Copilot, Agent HQ, GPT, and GPT-5). Assigned GitHub Copilot category because Copilot is specifically highlighted as a coding agent (GitHub Copilot rule 1). Assigned Azure category since Azure is a major part of the event and hands-on labs (Azure rule 1). Assigned Coding category for the focus on development tools (VS Code, Visual Studio), coding labs, and app modernization (Coding rules 1 and 4). The content is not excluded by any generic exclusion rules as it is technical and developer-focused.",
+    "timestamp": "2025-12-04 01:35:06 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=GCLYC5d7kpI"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' because the main topic is AI application development with Azure and GitHub (AI rules 1, 4, and 5). Assigned 'Azure' because Azure services and agents are central to the workflow (Azure rule 1). Included 'DevOps' due to Agentic DevOps and SRE content (DevOps rule 1, 4, and related integration practices). Content is practitioner-focused with hands-on labs and demos specifically for software development, satisfying all inclusion rules for these categories.",
+    "timestamp": "2025-12-04 01:35:23 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=kZqGsoeP0kU"
   }
 ]

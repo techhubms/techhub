@@ -10263,5 +10263,17 @@
     "collection": "videos",
     "reason": "No categories found: Content excluded due to lack of substantive technical content: The description only mentions that Irina Dominte discusses 'patterns in messaging systems' on a .NET Live video, but no details, technical depth, or main content are provided in the input. The 'content' field is null, so there is no technical material to evaluate, summarize, or categorize. Per the workflow, categorization requires access to the primary instructional content, which is not present in this input.",
     "timestamp": "2025-12-04 00:12:00 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: the provided input is extremely brief, consists only of a teaser (<60 words), and is promotional in nature. It does not contain substantive technical content, actionable implementation details, or educational value regarding Microsoft technologies. The format is a short video description, lacking technical depth or details as required by the categorization workflow. As per the quality exclusions in Chapter 3, short or teaser content without meaningful explanation is excluded.",
+    "timestamp": "2025-12-04 01:34:27 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/JRBfMt-Jl1M"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - insufficient substantive technical detail to categorize. The video description is promotional, lacks technical implementation specifics, and does not provide meaningful explanation about Microsoft technologies. The content appears to be a high-level, introductory statement without actionable technical information, code, or step-by-step guidance. Per exclusion rules under content quality and sales pitch criteria, as well as lack of main content provided, all categories are excluded.",
+    "timestamp": "2025-12-04 01:35:36 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=ZYBomtp4ac0"
   }
 ]
