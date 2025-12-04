@@ -10281,5 +10281,23 @@
     "canonical_url": "https://www.youtube.com/shorts/9_AkR0bQzX0",
     "reason": "No categories found: Content was excluded due to insufficient information for category assignment. The provided fields lack a substantive description and main content text. There is no detailed information about the specific AI tools, integration with Microsoft technologies, or technical depth. The title and tags only reference Visual Studio Code (VS Code) and generic AI productivity tips, but provide no evidence of developer tools like GitHub Copilot or specific Microsoft AI services. As per the rules, when content is missing or insufficient to establish technical details or inclusion criteria, no categories should be assigned.",
     "timestamp": "2025-12-04 12:06:43 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=heECotJnO-E",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the content is primarily in Portuguese, as indicated by the title '[Brazilian Stream 🇧🇷]' and the majority of the description text being in Portuguese. According to the Non-English Content exclusion rule (Chapter 3), content that is not primarily in English (<80% English in main text) must be excluded.",
+    "collection": "videos",
+    "timestamp": "2025-12-04 14:06:05 +00:00"
+  },
+  {
+    "reason": "No categories found: All categories excluded due to generic exclusion rule for non-development Microsoft products: The content is primarily about Microsoft 365 Copilot and Copilot Insights for business productivity and organizational collaboration, rather than development practices or technical implementation. It focuses on connecting SharePoint data to Copilot Insights to deliver actionable business intelligence to end users, discusses licensing, security permissions, business use cases, and end-user adoption. Per rules under 'Non-Development Microsoft Products' and the CRITICAL Copilot Product Distinction, Microsoft 365 Copilot, Copilot Insights, and general SharePoint usage (not development) are explicitly excluded from categorization. The content does not cover development, coding, AI engineering, or technical architecture implementation. Reference: Generic Exclusion Rules, Non-Development Microsoft Products, and Copilot Distinction sections.",
+    "canonical_url": "https://dellenny.com/connecting-sharepoint-data-to-copilot-insights-a-complete-guide-to-smarter-collaboration/",
+    "collection": "posts",
+    "timestamp": "2025-12-04 15:05:46 +00:00"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-12-04 16:08:17 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure/container-on-app-service-keeps-getting-stopped-and-terminated/m-p/4475184#M1385"
   }
 ]

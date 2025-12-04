@@ -20888,5 +20888,41 @@
     "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories because the article centers on GitHub Copilot Chat and its AI-powered new feature (AI rule 2, GitHub Copilot rule 1). The core workflow, limitations, and instructions directly relate to developers leveraging Copilot Chat for coding (not general productivity). Exclusion rules do not apply, as the content is technical, developer-focused, and discusses Copilot's developer assistant capabilities.",
     "collection": "news",
     "timestamp": "2025-12-04 13:17:04 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories because the content explains configuration and enforcement of MCP registries specifically for GitHub Copilot integration (GitHub Copilot Inclusion rules 1, 3, 4; AI Inclusion rules 1, 2, 4), with a focus on enterprise Copilot setup. Assigned Azure because Azure API Center is the primary platform for the solution architecture (Azure Inclusion rules 1, 4, 5). Assigned DevOps because the process includes operationalizing registry setup, configuring developer tooling, and enforcing policies across the GitHub/Copilot/VS Code toolchain (DevOps Inclusion rules 3, 4, 9, 11). Coding, ML, and Security were not assigned because there is no code development, ML/analytics engineering, or security/identity technical focus present. There were no generic exclusion triggers present—the post is highly technical, implementation-focused, and satisfies the minimum content length/quality requirements.",
+    "timestamp": "2025-12-04 16:06:05 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/locking-down-mcp-create-a-private-registry-on-azure-api-center-and-enforce-it-in-github-copilot-and-vs-code/"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category as Microsoft Fabric is a modern Azure service, and the post focuses on cloud data workflows between Fabric and BigQuery (Azure rule 1 and 4). Assigned ML category because the feature directly concerns data engineering, replication, and analytics scenarios that are foundational to ML/analytics on Microsoft platforms (ML rules 1, 2, and 8). Did not assign AI (no mention of AI/ML APIs, inference, or LLMs), Security, Coding, DevOps, or GitHub Copilot categories as no related technical topics are covered. Content fits output requirements, is sufficiently technical, and is not excluded by any generic exclusion rule.",
+    "timestamp": "2025-12-04 16:06:31 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-staging-for-mirroring-for-google-bigquery-in-microsoft-fabricmirroring-for-gbq-staging-blog/"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content discusses integrating OneLake with Azure AI Foundry Knowledge for AI workloads (AI inclusion rule 1 and 4). Assigned Azure category since OneLake and Azure services are the core technologies discussed (Azure inclusion rules 1 and 4). Assigned ML because it highlights analytics, knowledge indexing, and enterprise machine learning use cases using Microsoft data platforms (ML inclusion rules 1, 4, and 9). The content is not focused on coding or DevOps, and doesn't explicitly discuss security implementation details, so Coding, DevOps, and Security categories were not included.",
+    "timestamp": "2025-12-04 16:06:51 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/unlocking-enterprise-ai-seamless-integration-of-onelake-files-in-microsoft-foundry-knowledge/"
+  },
+  {
+    "reason": "Succesfully added: Assigned only the DevOps category. The video centers on GitHub Code Quality features designed to improve repository health and automate fixes, which aligns with DevOps category rule 11 (GitHub content) and rules 3-5 (team practices, CI/CD, and operational excellence). There is no mentioning of AI, ML, Azure, Security, or explicit programming framework use, so those categories are not assigned. The focus is on repository and process health rather than direct code authoring or Microsoft platform specifics.",
+    "timestamp": "2025-12-04 16:07:32 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=dlgYCpQI_lU"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the video is focused on evaluating and selecting among multiple AI models for coding tasks, specifically via GitHub Models, following AI Category rule 3 (Microsoft AI Frameworks/Tools) and rule 5 (AI usage and selection). GitHub Copilot was NOT assigned because the content is about choosing among a broad set of AI models for code, not specifically about GitHub Copilot's features, integrations, or usage (no Copilot-specific focus was mentioned in the description). Coding category was not assigned because the content is centered on evaluating model responses to prompts, not on programming with Microsoft technologies or frameworks.",
+    "timestamp": "2025-12-04 16:07:54 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/u7sEMJTIQCw"
+  },
+  {
+    "reason": "Succesfully added: Content was assigned the AI category because it focuses on evaluating and comparing AI models (including GitHub Models) for developer use (AI rules 1 and 3). Although GitHub is mentioned, there is no evidence the content discusses GitHub Copilot specifically, nor does it detail source code or workflow automation, so Coding, DevOps, and GitHub Copilot categories were not assigned. The content is technical and directly serves developer decision-making for AI model use, rather than business productivity or executive strategy; thus, no generic exclusion rules applied.",
+    "timestamp": "2025-12-04 16:08:13 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=5eCkVjQM9XA"
   }
 ]
