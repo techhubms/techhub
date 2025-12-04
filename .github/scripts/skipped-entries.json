@@ -10311,5 +10311,17 @@
     "collection": "community",
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/issue-with-avd-user-profile-fslogix-not-recreating/m-p/4475237#M13952"
+  },
+  {
+    "collection": "news",
+    "reason": "No categories found: All generic exclusion rules were checked first. The content primarily covers improvements to GitHub's notification handling regarding spam accounts and repositories, focusing on quality-of-life enhancements for notifications and clearer counts. There is no coverage of developer tools, coding, CI/CD, DevOps, AI, security, or other technical implementation details related to Microsoft technologies. It does not discuss GitHub Actions, GitHub Copilot, or any development tool workflows. The subject is an end-user experience update about notifications, which qualifies as a non-development product and general feature improvement. According to the generic exclusion rules for business productivity, collaboration, and non-development product features, this content should be excluded and assigned no categories.",
+    "timestamp": "2025-12-04 18:06:51 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-04-notifications-triggered-by-spam-accounts-are-now-correctly-hidden"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Generic exclusion rule triggered: Content description and title indicate a conversational/interview format ('chatting with Dalia Abo Sheasha') focused on discussion topics rather than technical depth, without substantive educational content about Microsoft technologies or implementation details. No content field provided, and no technical summary is available to assess possible inclusion. Therefore, no categories are assigned per workflow chapter 3.",
+    "timestamp": "2025-12-04 18:07:20 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=sUUjzVtXrfo"
   }
 ]

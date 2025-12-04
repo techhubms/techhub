@@ -20936,5 +20936,17 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned the Coding category because the video centers on .NET 10 and .NET MAUI, which are core Microsoft development frameworks (Coding rules 1 and 2). No other categories fit, as there is no significant mention of Azure, AI, DevOps, ML, Security, or GitHub Copilot. The content is community and news-focused, but highlights technical releases and developer experience around .NET MAUI.",
     "canonical_url": "https://www.youtube.com/watch?v=LuA4WbZY7tw"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric Data Factory is an Azure service and the news covers Azure-based pipeline orchestration (Azure rule 1 and 4). Assigned ML category because the content focuses on notebook execution within data pipelines—a core activity in machine learning and data science workflows (ML rule 1 and 2). Assigned Security category due to the emphasis on Service Principal and Workspace Identity for secure authentication, central identity management, and governance within enterprise production environments (Security rule 1, 3, and 4). No categories were excluded, as all content is technical and relevant to implementation.",
+    "timestamp": "2025-12-04 18:06:16 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/run-notebooks-in-pipelines-with-service-principal-or-workspace-identity/"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Categories assigned per rules: 'AI' and 'GitHub Copilot' because content centers on GitHub Copilot developer tools, including new AI-powered features and actions for developers (AI rules 1-6, GitHub Copilot rules 1-6). 'Coding' added because the details involve code generation, refactoring, and developer workflows in Visual Studio (Coding rule 1 and 4). Exclusion rules do not apply, as the news is technical, development-focused, English, and not biographical, negative, or promotional. No DevOps, Azure, ML, or Security features are highlighted.",
+    "timestamp": "2025-12-04 18:06:38 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-03-github-copilot-in-visual-studio-november-update"
   }
 ]
