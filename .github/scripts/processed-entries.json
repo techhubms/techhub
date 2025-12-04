@@ -20948,5 +20948,23 @@
     "reason": "Succesfully added: Categories assigned per rules: 'AI' and 'GitHub Copilot' because content centers on GitHub Copilot developer tools, including new AI-powered features and actions for developers (AI rules 1-6, GitHub Copilot rules 1-6). 'Coding' added because the details involve code generation, refactoring, and developer workflows in Visual Studio (Coding rule 1 and 4). Exclusion rules do not apply, as the news is technical, development-focused, English, and not biographical, negative, or promotional. No DevOps, Azure, ML, or Security features are highlighted.",
     "timestamp": "2025-12-04 18:06:38 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-12-03-github-copilot-in-visual-studio-november-update"
+  },
+  {
+    "reason": "Succesfully added: Content qualifies for categories: AI (multiple AI feature launches, Microsoft Agent Framework, AI-powered development, Copilot Studio, MCP), GitHub Copilot (modernization and testing, integration inside Visual Studio 2026), Coding (C# 14, F# 10, ASP.NET Core, .NET MAUI, Blazor, code upgrades), DevOps (CI/CD, testing platforms, container optimizations, community DevOps practices, Azure), Azure (dedicated Azure keynote, Azure Functions, cloud-native, migration sessions), ML (agent development, MCP SDK, AI Foundry), Security (security best practices, cryptography upgrades, security partners, passkey support, security investigations). Recap covers all qualifying areas for Microsoft technical development based on category rules.",
+    "timestamp": "2025-12-04 19:06:19 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-recap/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category because the content is focused on practical security strategies, including technical security controls such as identity management, patching, endpoint protection, and advanced practices (security rules 1-10). Assigned Azure category because Azure-specific solutions and Microsoft technologies (Entra ID, Intune, Defender, Azure Front Door) are highlighted in implementation recommendations and linked throughout. Did not assign AI, ML, Coding, DevOps, or GitHub Copilot as none of those development-specific topics are substantially covered; the focus is security implementation and architecture for practitioners. Content meets length, language, and relevance requirements and is not biographical, promotional, or business-executive strategy without technical depth.",
+    "timestamp": "2025-12-04 19:07:05 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/12/04/cybersecurity-strategies-to-prioritize-now/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category because the content focuses on a new AI model, GPT-5.1-Codex-Max, within the GitHub Copilot ecosystem (AI rule 1, 2, and 6). Assigned the 'GitHub Copilot' category because the article is specifically about GitHub Copilot capabilities and model integration (GitHub Copilot rules 1 and 2). Excluded other categories (Coding, DevOps, Azure, ML, Security) because the article does not contain code samples, development how-tos, DevOps processes, Azure-specific implementations, or ML/data science engineering beyond the announcement of AI features. No generic exclusion rules apply.",
+    "timestamp": "2025-12-04 19:07:26 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-04-openais-gpt-5-1-codex-max-is-now-in-public-preview-for-github-copilot",
+    "collection": "news"
   }
 ]

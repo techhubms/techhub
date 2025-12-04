@@ -10323,5 +10323,11 @@
     "reason": "No categories found: Generic exclusion rule triggered: Content description and title indicate a conversational/interview format ('chatting with Dalia Abo Sheasha') focused on discussion topics rather than technical depth, without substantive educational content about Microsoft technologies or implementation details. No content field provided, and no technical summary is available to assess possible inclusion. Therefore, no categories are assigned per workflow chapter 3.",
     "timestamp": "2025-12-04 18:07:20 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=sUUjzVtXrfo"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules: This is primarily an awards announcement honoring applications in the Microsoft Store. The post focuses on recognizing top consumer productivity, creativity, business, music, game, and educational apps, rather than providing substantive technical, development, or implementation details on Microsoft technologies, platforms, or developer tools. It lacks actionable how-to or architectural guidance, technical deep-dives, or code-level discussions. No Microsoft developer technology or service is central to the content, and it does not meet category inclusion rules for AI, Coding, DevOps, Azure, ML, Security, or GitHub Copilot. The announcement targets general users and app developers in a celebratory and promotional manner, not technical professionals seeking implementation knowledge.",
+    "timestamp": "2025-12-04 19:06:43 +00:00",
+    "canonical_url": "https://blogs.windows.com/windowsdeveloper/2025/12/03/announcing-the-microsoft-store-awards-2025-winners/",
+    "collection": "news"
   }
 ]

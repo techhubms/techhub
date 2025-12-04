@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "Description": "GPT-5.1-Codex-Max is now rolling out in public preview in GitHub Copilot. Availability in GitHub Copilot OpenAI’s GPT-5.1-Codex-Max will be available to Copilot Pro, Pro+, Business, and Enterprise. You’ll be able…\n\nThe post [OpenAI’s GPT-5.1-Codex-Max is now in public preview for GitHub Copilot](https://github.blog/changelog/2025-12-04-openais-gpt-5-1-codex-max-is-now-in-public-preview-for-github-copilot) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Link": "https://github.blog/changelog/2025-12-04-openais-gpt-5-1-codex-max-is-now-in-public-preview-for-github-copilot",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Author": "Allison",
+  "Title": "OpenAI’s GPT-5.1-Codex-Max is now in public preview for GitHub Copilot",
+  "PubDate": "2025-12-04T16:47:03+00:00",
+  "OutputDir": "_news",
+  "ProcessedDate": "2025-12-04 19:03:37",
+  "EnhancedContent": "GPT-5.1-Codex-Max is now rolling out in public preview in GitHub Copilot.\n\n### Availability in GitHub Copilot\n\nOpenAI’s GPT-5.1-Codex-Max will be available to Copilot Pro, Pro+, Business, and Enterprise.\n\nYou’ll be able to select the model in the Copilot Chat model picker from:\n\n- Visual Studio Code in all modes: chat, ask, edit, agent\n- Copilot Chat in github.com\n- Copilot Chat in GitHub Mobile (iOS and Android)\n- Copilot CLI\n\nRollout will be gradual. If you don’t see the new models yet, check back soon.\n\n### Enabling access\n\n- **Enterprise and Business plans**: Administrators must enable the GPT-5.1-Codex-Max policy in Copilot settings. Once enabled, users in that organization will see the respective model in the Copilot Chat model picker.\n- **Pro and Pro+ plans**: Users can enable the model by selecting it in the model picker and confirming the one-time prompt.\n- **Bring your own key**: Select **Manage Models** from the picker, choose GPT-5.1-Codex-Max, and enter your API key when prompted.\n\n### Learn more\n\nTo explore all models available in GitHub Copilot, see [our documentation on models](https://docs.github.com/copilot/reference/ai-models/supported-models?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels) and get started with Copilot.\n\n### Share your feedback\n\nJoin the [GitHub Community](https://github.com/orgs/community/discussions/categories/copilot-conversations?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels) to share your feedback.",
+  "FeedName": "The GitHub Blog"
+}
