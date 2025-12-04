@@ -1,0 +1,22 @@
+{
+  "FeedLevelAuthor": "Microsoft Developer",
+  "ProcessedDate": "2025-12-04 22:04:13",
+  "Title": "What's new in SSMS 22 GA | Data Exposed",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Link": "https://www.youtube.com/watch?v=MCKjBrvX68M",
+  "PubDate": "2025-12-04T21:00:34+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedName": "Microsoft Developer YouTube",
+  "Description": "In November 2025, just one year after SSMS 21 preview was released, the SSMS team released the GA version of SSMS 22. In this episode, we'll learn more about what's new in SSMS 22, why SSMS had such a busy year, and what's next for SSMS.\n\n✅ Chapters: 0:00 Introduction 1:00 SQL Server Management Studio - 1 Year Recap 2:10 Installing SSMS versions side-by-side 2:30 Adding workloads to SSMS 3:07 What's new in SSMS 22 5:33 Demo 8:40 What's new\n\n✅ Resources: Download and install SSMS 22: https://learn.microsoft.com/ssms/install/install SSMS 22 release notes: https://learn.microsoft.com/ssms/release-notes-22 SSMS roadmap: https://learn.microsoft.com/ssms/roadmap System requirements: https://learn.microsoft.com/ssms/system-requirements Feedback site: https://developercommunity.microsoft.com/SSMS SSMS 22 GA blog post: https://techcommunity.microsoft.com/blog/sqlserver/sql-server-management-studio-ssms-22-is-now-generally-available-ga/4469003\n\n📌 Let's connect: Twitter - Anna Hoffman, https://twitter.com/AnalyticAnna Twitter - AzureSQL, https://aka.ms/azuresqltw\n\n🔴 Watch even more Data Exposed episodes: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt\n\n#AzureSQL #SQL #LearnSQL",
+  "Author": "Microsoft Developer"
+}
