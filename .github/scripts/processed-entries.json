@@ -20924,5 +20924,17 @@
     "timestamp": "2025-12-04 16:08:13 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=5eCkVjQM9XA"
+  },
+  {
+    "timestamp": "2025-12-04 17:08:25 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Security category because the main focus is on new and improved C# security queries and static analysis for application security (Security rules 1 and 2). DevOps is included due to the code scanning and automated security analysis within CI/CD environments (DevOps rules 2, 5, 9). Coding is included because the update addresses language-specific queries and static code analysis for programming languages including C# (Coding rules 1, 2, and 4). Azure and AI categories do not apply as Azure or Microsoft AI is not substantively featured. ML does not apply because there is no machine learning or analytics engineering context.",
+    "canonical_url": "https://github.blog/changelog/2025-12-04-codeql-2-23-6-adds-swift-6-2-1-and-new-c-security-queries"
+  },
+  {
+    "timestamp": "2025-12-04 17:08:59 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Coding category because the video centers on .NET 10 and .NET MAUI, which are core Microsoft development frameworks (Coding rules 1 and 2). No other categories fit, as there is no significant mention of Azure, AI, DevOps, ML, Security, or GitHub Copilot. The content is community and news-focused, but highlights technical releases and developer experience around .NET MAUI.",
+    "canonical_url": "https://www.youtube.com/watch?v=LuA4WbZY7tw"
   }
 ]

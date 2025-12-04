@@ -1,0 +1,14 @@
+{
+  "OutputDir": "_community",
+  "EnhancedContent": "Hi all,\n\nWe have a user who has repeatedly reported that their settings and favorites are not loading in AVD. To troubleshoot, we deleted the user’s FSLogix profile from our storage account to allow it to recreate automatically. However, the profile is not being recreated.\n\nWe are operating in a hybrid environment, and the user is part of a group assigned the **Storage File Data SMB Share Elevated Contributor** role.\n\nFrom the profile logs, we found the following error:\n\nFindFile failed for path: \\\\&lt;redacted&gt;.file.core.windows.net\\userprofiles\\&lt;redacted&gt;\\Profile\\*.VHD (Account restrictions are preventing this user from signing in. For example: blank passwords aren't allowed, sign-in times are limited, or a policy restriction has been enforced.)\n\nWhat are some likely causes and additional troubleshooting steps we should take?",
+  "FeedName": "Microsoft Tech Community",
+  "Description": "Hi all,\n\nWe have a user who has repeatedly reported that their settings and favorites are not loading in AVD. To troubleshoot, we deleted the user’s FSLogix profile from our storage account to allow it to recreate automatically. However, the profile is not being recreated.\n\nWe are operating in a hybrid environment, and the user is part of a group assigned the **Storage File Data SMB Share Elevated Contributor** role.\n\nFrom the profile logs, we found the following error:\n\nFindFile failed for path: \\\\.file.core.windows.net\\userprofiles\\\\Profile\\*.VHD (Account restrictions are preventing this user from signing in. For example: blank passwords aren't allowed, sign-in times are limited, or a policy restriction has been enforced.)\n\nWhat are some likely causes and additional troubleshooting steps we should take?",
+  "PubDate": "2025-12-04T15:49:07+00:00",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Title": "Issue with AVD User Profile – FSLogix Not Recreating",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/issue-with-avd-user-profile-fslogix-not-recreating/m-p/4475237#M13952",
+  "Author": "seanbachiller03",
+  "ProcessedDate": "2025-12-04 17:07:32",
+  "Tags": []
+}

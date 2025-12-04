@@ -10299,5 +10299,17 @@
     "timestamp": "2025-12-04 16:08:17 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure/container-on-app-service-keeps-getting-stopped-and-terminated/m-p/4475184#M1385"
+  },
+  {
+    "timestamp": "2025-12-04 17:08:00 +00:00",
+    "collection": "news",
+    "reason": "No categories found: All categories are excluded because the central content discusses Microsoft 365 Copilot within the context of Excel and productivity scenarios. According to the Copilot Product Distinction and Non-Development Microsoft Products exclusion rules, business productivity tools such as Microsoft 365 Copilot and Copilot for Microsoft 365 do NOT qualify for any categories, as they are not developer tools nor do they focus on coding, DevOps, AI engineering, security, or Azure development. The post describes using Copilot Agent Mode as an end-user productivity feature rather than a development or technical integration scenario. No technical implementation, development, or architectural aspects are discussed.",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_with-theexcelworld-championship-underway-activity-7402362298297716736-D8hp"
+  },
+  {
+    "timestamp": "2025-12-04 17:09:07 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/issue-with-avd-user-profile-fslogix-not-recreating/m-p/4475237#M13952"
   }
 ]
