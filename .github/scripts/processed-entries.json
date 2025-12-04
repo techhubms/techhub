@@ -20882,5 +20882,11 @@
     "reason": "Succesfully added: Assigned 'AI' because the main topic is AI application development with Azure and GitHub (AI rules 1, 4, and 5). Assigned 'Azure' because Azure services and agents are central to the workflow (Azure rule 1). Included 'DevOps' due to Agentic DevOps and SRE content (DevOps rule 1, 4, and related integration practices). Content is practitioner-focused with hands-on labs and demos specifically for software development, satisfying all inclusion rules for these categories.",
     "timestamp": "2025-12-04 01:35:23 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=kZqGsoeP0kU"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/unlocking-the-power-of-web-with-copilot-chats-new-url-context/",
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories because the article centers on GitHub Copilot Chat and its AI-powered new feature (AI rule 2, GitHub Copilot rule 1). The core workflow, limitations, and instructions directly relate to developers leveraging Copilot Chat for coding (not general productivity). Exclusion rules do not apply, as the content is technical, developer-focused, and discusses Copilot's developer assistant capabilities.",
+    "collection": "news",
+    "timestamp": "2025-12-04 13:17:04 +00:00"
   }
 ]

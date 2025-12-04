@@ -10275,5 +10275,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule - insufficient substantive technical detail to categorize. The video description is promotional, lacks technical implementation specifics, and does not provide meaningful explanation about Microsoft technologies. The content appears to be a high-level, introductory statement without actionable technical information, code, or step-by-step guidance. Per exclusion rules under content quality and sales pitch criteria, as well as lack of main content provided, all categories are excluded.",
     "timestamp": "2025-12-04 01:35:36 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=ZYBomtp4ac0"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/9_AkR0bQzX0",
+    "reason": "No categories found: Content was excluded due to insufficient information for category assignment. The provided fields lack a substantive description and main content text. There is no detailed information about the specific AI tools, integration with Microsoft technologies, or technical depth. The title and tags only reference Visual Studio Code (VS Code) and generic AI productivity tips, but provide no evidence of developer tools like GitHub Copilot or specific Microsoft AI services. As per the rules, when content is missing or insufficient to establish technical details or inclusion criteria, no categories should be assigned.",
+    "timestamp": "2025-12-04 12:06:43 +00:00"
   }
 ]
