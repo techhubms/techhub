@@ -10335,5 +10335,11 @@
     "timestamp": "2025-12-04 21:06:07 +00:00",
     "collection": "posts",
     "canonical_url": "https://devops.com/reinvent-proves-it-devops-isnt-dead-cloud-native-isnt-fading-and-platform-engineering-isnt-a-fad/"
+  },
+  {
+    "timestamp": "2025-12-05 00:10:56 +00:00",
+    "reason": "No categories found: No categories assigned. After applying the Generic Exclusion Rules (Chapter 3), the content does not meet the inclusion thresholds: Microsoft technologies are not central to the main story. The article discusses Akamai's acquisition of Fermyon for WebAssembly serverless functions, with primary focus on Akamai, Fermyon, Wasmtime, and Cloudflare. Microsoft is only mentioned peripherally in reference to languages supported by Wasmtime (e.g., C#), but there is no substantive Microsoft technology, Azure service, or development implementation involved. There are no technical details, tutorials, solutions, or development scenarios focused on Microsoft platforms or services. Therefore, per the 'Microsoft Content Must Be Central' rule and multi-platform guidelines (Chapter 2 and 6), this content is excluded.",
+    "collection": "posts",
+    "canonical_url": "https://devclass.com/2025/12/04/akamai-acquires-fermyon-for-wasm-based-serverless-functions-a-possible-answer-to-cloudflare-workers/"
   }
 ]
