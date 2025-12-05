@@ -21008,5 +21008,11 @@
     "reason": "Succesfully added: Assigned the Coding category because the content delves deeply into .NET programming concepts—specifically the mechanics, patterns, and best practices for using CancellationToken and CancellationTokenSource, async programming, and thread safety in C# (see Coding inclusion rules 1, 2, and 4). The episode is developer-oriented and highly technical. No other categories apply, as there is no substantial AI, DevOps, Azure, ML, or Security focus. The content meets quality and technical depth standards, is in English, and is not a sales pitch, biographical, or job-related.",
     "collection": "videos",
     "timestamp": "2025-12-05 01:33:49 +00:00"
+  },
+  {
+    "timestamp": "2025-12-05 06:05:57 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the content centers on Azure SRE Agent, Azure-native tools, and service integrations (Azure inclusion rules 1, 2, and 4). Assigned DevOps due to operational automation, incident response, and team workflows (DevOps rules 1, 3, 5). Assigned Security since scheduled tasks include security posture checks, compliance drift detection, and automated remediation using Azure tools (Security rules 1, 2, 5). ML and AI categories were not assigned because the agent primarily utilizes automation and analysis, not ML engineering or explicit AI service usage. Community content well exceeds the 200-word minimum and contains deep technical value, fulfilling all inclusion criteria.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/proactive-monitoring-made-simple-with-azure-sre-agent/ba-p/4471205",
+    "collection": "community"
   }
 ]
