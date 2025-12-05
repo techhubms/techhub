@@ -21062,5 +21062,11 @@
     "collection": "news",
     "reason": "Succesfully added: Included the Security category because the content centers on Microsoft Defender for Office 365, email security, security automation, and threat detection—all direct matches for Security inclusion rules. Assigned AI because the article details Microsoft's use of agentic AI in phishing detection, automated grading, and triage (AI rule 1 and 4). Did not add Coding, DevOps, Azure, ML, or GitHub Copilot because the piece focuses on product capabilities, operational security improvements, and defensive technology with no coverage of development patterns, coding practices, DevOps pipelines, Azure infrastructure, or custom ML engineering.",
     "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/12/05/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-email-security/"
+  },
+  {
+    "reason": "Succesfully added: The content qualifies for both 'GitHub Copilot' and 'AI' categories per Chapter 4 because it describes features and metrics for GitHub Copilot (a developer AI tool), specifically focusing on code generation insights and usage analytics for enterprises. It does not trigger any generic exclusions; it's technical, clear, and describes new feature usage in a developer/administrator context. Coding and other categories do not apply because the focus is on usage metrics and dashboard features rather than code implementation or DevOps processes.",
+    "canonical_url": "https://github.blog/changelog/2025-12-05-track-copilot-code-generation-metrics-in-a-dashboard",
+    "timestamp": "2025-12-05 23:05:38 +00:00",
+    "collection": "news"
   }
 ]
