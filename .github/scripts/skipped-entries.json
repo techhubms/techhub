@@ -10341,5 +10341,17 @@
     "reason": "No categories found: No categories assigned. After applying the Generic Exclusion Rules (Chapter 3), the content does not meet the inclusion thresholds: Microsoft technologies are not central to the main story. The article discusses Akamai's acquisition of Fermyon for WebAssembly serverless functions, with primary focus on Akamai, Fermyon, Wasmtime, and Cloudflare. Microsoft is only mentioned peripherally in reference to languages supported by Wasmtime (e.g., C#), but there is no substantive Microsoft technology, Azure service, or development implementation involved. There are no technical details, tutorials, solutions, or development scenarios focused on Microsoft platforms or services. Therefore, per the 'Microsoft Content Must Be Central' rule and multi-platform guidelines (Chapter 2 and 6), this content is excluded.",
     "collection": "posts",
     "canonical_url": "https://devclass.com/2025/12/04/akamai-acquires-fermyon-for-wasm-based-serverless-functions-a-possible-answer-to-cloudflare-workers/"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because, after reviewing the content, none of the predefined categories apply. While Microsoft is mentioned in the context of open sourcing Zork, this is not directly about Azure, coding, AI, ML, DevOps, Security, or GitHub Copilot. The GitHub Actions cache note is a minor update and does not constitute technical depth or a guide. Most items are general tech news, not focused on Microsoft developer technologies or implementation details as required by inclusion rules. Thus, the categories array is left empty in accordance with the decision hierarchy.",
+    "canonical_url": "https://www.youtube.com/watch?v=B7t0XvHk2rI",
+    "timestamp": "2025-12-05 16:05:59 +00:00"
+  },
+  {
+    "reason": "No categories found: All categories were excluded according to the generic exclusion rules for non-development Microsoft products. The article discusses 'Copilot in Microsoft Edge', which is classified as a consumer productivity tool (business productivity, general office work) according to the workflow. It describes using Copilot to summarize articles, draft emails, automate browser workflows, generate marketing copy, and work with Microsoft 365 files from Edge, but it does not focus on technical implementation or developer tools like GitHub Copilot or Copilot Studio. Rules in Chapter 2 and Chapter 3 specify: exclude 'Microsoft 365 Copilot', 'Copilot for Microsoft 365', 'Office Copilot', and general 'Microsoft Copilot' (consumer product) content and do not assign categories, even if general AI or automation is mentioned. The content does not describe technical APIs, developer integration, or programming solution details but is about productivity use cases for end users. References to code explanation and developer workflows are generic, oriented towards productivity in Edge, not technical tool development or programming-focused solutions. Therefore, no categories qualify.",
+    "canonical_url": "https://dellenny.com/how-to-use-copilot-in-microsoft-edge-for-web-based-workflows/",
+    "collection": "posts",
+    "timestamp": "2025-12-05 17:05:32 +00:00"
   }
 ]
