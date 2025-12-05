@@ -21026,5 +21026,29 @@
     "canonical_url": "https://www.youtube.com/watch?v=Fe0M4Xxi1O8",
     "collection": "videos",
     "timestamp": "2025-12-05 17:06:03 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category as the content centrally discusses Azure offerings and hybrid cloud solutions (Azure rule 1). Assigned AI and ML due to references to Azure OpenAI Service and adoption of AI-powered platforms by customers, such as Bradesco and Symend (AI rules 1, 4, 6; ML rules 1, 6). DevOps category is included due to automation, operational agility, platform management, and collaborative development practices highlighted through Azure Red Hat OpenShift and Ansible Automation Platform (DevOps rules 1, 6, 7). Security is included because of detailed mentions of confidential containers, governance, compliance, and security features in Azure environments (Security rules 1, 4, 5, 7, 9). The content does not trigger any generic exclusion rules—it is technical, implementation-focused, and superior in quality.",
+    "timestamp": "2025-12-05 18:05:54 +00:00",
+    "collection": "news",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/a-decade-of-open-innovation-celebrating-10-years-of-microsoft-and-red-hat-partnership/"
+  },
+  {
+    "reason": "Succesfully added: Included the Azure category due to detailed coverage of Azure Network services, infrastructure, and product updates (Azure inclusion rules 1, 4, 5). Assigned AI because the article emphasizes Azure’s role in supporting AI workloads, distributed GPU clusters, and cloud transformation driven by AI (AI rules 1, 4, and 5). Security assigned because of extensive updates and new features for DNS Security, Private Link, WAF, Application Gateway JWT validation, and secure connectivity (Security inclusion rules 1, 2, 3, 4, 7, 9). Did not add DevOps, Coding, ML or GitHub Copilot categories because the piece does not cover development pipelines, coding patterns, ML engineering, or GitHub Copilot tooling. No generic exclusion rules triggered; the content is technical, informative, and focused on Microsoft products.",
+    "timestamp": "2025-12-05 18:06:17 +00:00",
+    "collection": "news",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/azure-networking-updates-on-security-reliability-and-high-availability/"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category as the article details AI-powered innovations, including generative AI and edge AI workloads on Azure and integrations with Microsoft Fabric and Azure IoT (AI rules 1 and 4). Assigned Azure category since all content is about Azure services, regions, and infrastructure (Azure rules 1 and 4). Assigned ML category due to detailed coverage of real-time analytics, advanced data processing, integrations with Fabric IQ, Digital Twin, and use cases in manufacturing and healthcare (ML rules 1, 4, and 9). Assigned Security because it covers compliance, data sovereignty, encryption, identity management, and operational resilience using Azure Key Vault, X.509 certificates, Entra ID, and governance tooling (Security rules 1, 3, 4, 5, and 7). Content meets threshold for Microsoft-centric substance and focuses on technical platform features, not business strategy or end-user Office productivity, so generic exclusions do not apply.",
+    "timestamp": "2025-12-05 18:06:38 +00:00",
+    "collection": "news",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/new-options-for-ai-powered-innovation-resiliency-and-control-with-microsoft-azure/"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because all winning projects featured development of intelligent agents, orchestration, and Azure cognitive services (AI Inclusion Rules 1, 4, 5). Assigned Azure category because the hackathon's technical focus is using Azure AI and cloud capabilities (Azure Inclusion Rules 1, 4). Assigned Coding category because content centers on developer teams building and programming multi-agent solutions, including orchestration, automation, and AI APIs (Coding Inclusion Rules 3, 4, 5). Community content exceeds the 200-word minimum and provides substantive technical details.",
+    "timestamp": "2025-12-05 18:07:21 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/the-november-innovation-challenge-winning-teams/m-p/4475579#M22360"
   }
 ]
