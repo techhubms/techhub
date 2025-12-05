@@ -1,0 +1,17 @@
+{
+  "Description": "You can now use up to 25 inputs on workflows triggered via the workflow\\_dispatch trigger. The previous limit was 10 which was challenging for the community. This new limit gives…\n\nThe post [Actions workflow dispatch workflows now support 25 inputs](https://github.blog/changelog/2025-12-04-actions-workflow-dispatch-workflows-now-support-25-inputs) appeared first on [The GitHub Blog](https://github.blog).",
+  "ProcessedDate": "2025-12-05 01:30:21",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2025-12-04-actions-workflow-dispatch-workflows-now-support-25-inputs",
+  "Title": "Actions workflow dispatch workflows now support 25 inputs",
+  "FeedName": "The GitHub Blog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Tags": [
+    "actions",
+    "Improvement"
+  ],
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Author": "Allison",
+  "PubDate": "2025-12-04T19:58:47+00:00",
+  "EnhancedContent": "You can now use up to 25 inputs on workflows triggered via the `workflow_dispatch` trigger.\n\nThe previous limit was 10 which was [challenging for the community](https://github.com/orgs/community/discussions/8774). This new limit gives you more flexibility when triggering workflows manually or via API and removes the need for workarounds such as consolidating multiple inputs into a single JSON string."
+}

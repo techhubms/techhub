@@ -1,0 +1,25 @@
+{
+  "PubDate": "2025-12-05T00:20:57+00:00",
+  "Description": "Scott and Stephen are back with another episode of Deep .NET, this time tackling Cancellation Tokens. From the early days of .NET’s “violent” thread aborts to today’s cooperative cancellation model, they explore how tokens provide a safe, composable way to stop work you no longer need. Stephen walks through the evolution from APM and EPM patterns, explains why explicit token passing beats ambient scopes, and shows how cancellation propagates through async calls. Along the way, they dig into cancellation token sources, registration callbacks, and even the role of volatile in multi-threaded code. If you’ve ever wondered how to gracefully cancel tasks without wasting resources, this episode is for you.\n\n⌚ Chapters: 00:00:00 Introduction, banter, and setup for Deep .NET episode 00:03:15 Why cancellation matters: performance and avoiding wasted work 00:07:42 Early .NET approaches: thread aborts and their problems 00:12:10 Evolution of async patterns: APM and EPM without cancellation 00:17:25 BackgroundWorker and early cancellation mechanisms 00:21:40 Composition challenges and the need for a shared token model 00:25:30 Introduction of CancellationToken and cooperative cancellation 00:30:55 Passing tokens explicitly vs. ambient scopes 00:36:20 How cancellation propagates through async methods 00:41:05 Leaf operations, registration callbacks, and prompt cancellation 00:46:50 CancellationTokenSource: producing and linking tokens 00:52:15 Separation of observing vs. requesting cancellation 00:57:30 Implementation details: polling, register, and throw helpers 01:02:40 Why volatile matters in multi-threaded cancellation checks 01:08:10 Lock-free programming, visibility, and compiler optimizations 01:12:45 Wrapping up insights on cooperative cancellation in .NET\n\n🔗 Docs: https://learn.microsoft.com/dotnet/standard/threading/cancellation-in-managed-threads\n\n🎙️ Featuring: Scott Hanselman and Stephen Toub\n\n📲 Connect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet",
+  "ProcessedDate": "2025-12-05 01:32:22",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "dotnet",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=h1GvSPaRQ-U",
+  "Author": "dotnet",
+  "Tags": [
+    ".NET",
+    "cancellationtokens",
+    "demo",
+    "dotnet",
+    "dotnetdeveloper",
+    "microsoft",
+    "scotthanselman",
+    "softwaredeveloper",
+    "stephentoub",
+    "tokens"
+  ],
+  "FeedName": "DotNet YouTube",
+  "Title": "Cancellation Tokens with Stephen Toub",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+}
