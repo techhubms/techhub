@@ -21050,5 +21050,11 @@
     "timestamp": "2025-12-05 18:07:21 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/the-november-innovation-challenge-winning-teams/m-p/4475579#M22360"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/blog/join-us-for-ai-devdays",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the entire event centers on AI development, agentic workflows, and Microsoft AI tools (AI rule 1, 4, 5, 6). GitHub Copilot category is included because several sessions—especially day 2—focus directly on GitHub Copilot CLI, agent integration, developer productivity, and hands-on workshops dedicating substantial coverage (GitHub Copilot rules 1-4). Azure category is warranted since the content and hands-on labs heavily feature Azure AI Foundry, agent deployment, Aspire, and cloud-based development (Azure rules 1, 4, 5). DevOps is assigned due to sessions on CI/CD pipelines, cloud architecture agent, SRE agent, unified workflow orchestration, and end-to-end development operations using DevOps practices and tools (DevOps rules 1, 5, 7, 9, 11). Coding is included given the emphasis on building agents, developer tools (VS Code, Visual Studio), code scripting/automation, language features, and hands-on programming labs (Coding rules 1, 2, 5). No generic exclusion rules apply; neither biographical, sales pitch, non-English, nor business-only content is present. The content is entirely in English, focuses squarely on technical implementation for developers, and exceeds thresholds for Microsoft technology focus.",
+    "timestamp": "2025-12-05 20:05:09 +00:00"
   }
 ]
