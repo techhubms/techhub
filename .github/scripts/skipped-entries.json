@@ -10353,5 +10353,11 @@
     "canonical_url": "https://dellenny.com/how-to-use-copilot-in-microsoft-edge-for-web-based-workflows/",
     "collection": "posts",
     "timestamp": "2025-12-05 17:05:32 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/y0u1MqW4rPU",
+    "timestamp": "2025-12-06 15:05:32 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content is a news update about Anthropic and OpenAI proposing standard UIs for MCP (Model Chat Protocol), with a mention of a community-led extension for interactive UIs. Microsoft technologies are not explicitly discussed, referenced, or shown as central to the solution. MCP, Anthropic, and OpenAI are not Microsoft-specific, and the inclusion of 'MCP' and 'OpenAI' tags does not meet the multi-platform inclusion threshold for Microsoft. There are no actionable details about Microsoft products, frameworks, or developer implementation using the Microsoft ecosystem. Therefore, based on the inclusion criteria and multi-platform content rules, this content does not qualify for any categories."
   }
 ]
