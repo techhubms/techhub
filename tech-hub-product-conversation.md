@@ -2,6 +2,7 @@
 
 **Date:** Early 2025  
 **Participants:**
+
 - **Matthijs** - Product Owner
 - **Reinier** - Developer
 
