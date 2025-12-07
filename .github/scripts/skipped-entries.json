@@ -10365,5 +10365,11 @@
     "collection": "posts",
     "canonical_url": "https://dellenny.com/fixing-wi-fi-connection-problems-easily-on-windows-11/",
     "reason": "No categories found: No categories assigned because the content does not focus on development, coding, Microsoft development frameworks, DevOps, AI, ML, Azure cloud platform, or security implementation—it's a troubleshooting guide for end-users using Windows 11's Wi-Fi. According to the generic exclusion rules (Non-Development Microsoft Products), guides about operating system usage, device troubleshooting, or general consumer/end-user support are excluded unless they relate specifically to developer tools, frameworks, or technical implementation. There is no substantial content about programming, development, or technical architecture. Therefore, this post is excluded under 'Non-Development Microsoft Products.'"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules – it is focused on personal achievement and product reverse engineering for Apple AirPods, with the main technical effort revolving around Android and Apple technologies rather than Microsoft platforms. The description is primarily biographical (‘high school student who reverse-engineered Apple AirPods’) and centers on a non-Microsoft open-source project (LibrePods), not fitting any Microsoft technology or developer tooling category. No aspect of the content discusses Microsoft products, services, or development frameworks, therefore no categories are assigned.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/GE0u27ctIfM",
+    "timestamp": "2025-12-07 15:05:46 +00:00"
   }
 ]
