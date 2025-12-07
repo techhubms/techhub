@@ -242,6 +242,11 @@ function Invoke-AiApiCall {
         try {
             $responseJson = $response.Content | ConvertFrom-Json
             $contentString = $responseJson.choices[0].message.content
+            
+            # Repair invalid JSON escape sequences from AI responses (e.g., \s, \d, \w)
+            # AI models sometimes generate invalid escapes that break ConvertFrom-Json
+            $contentString = Repair-JsonResponse -JsonString $contentString
+            
             return $contentString
         }
         catch {
