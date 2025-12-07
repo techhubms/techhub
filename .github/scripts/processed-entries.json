@@ -21068,5 +21068,11 @@
     "canonical_url": "https://github.blog/changelog/2025-12-05-track-copilot-code-generation-metrics-in-a-dashboard",
     "timestamp": "2025-12-05 23:05:38 +00:00",
     "collection": "news"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category because the content is fundamentally focused on Microsoft Azure platform services, including Azure Databricks, Azure Monitor, Azure Activity Logs, and Virtual Network Flow Logs (Azure rules 1, 2, 4, 5, 6). Assigned ML category because much of the observability, data quality monitoring, and workload optimization apply to machine learning pipelines and data science use cases in Databricks (ML rules 1, 2, 3, 4, 5, 6, 9). Assigned DevOps because content covers best practices for logging, monitoring, incident response, resource tagging, and operational reliability which maps directly to DevOps methodologies (DevOps rules 1, 4, 5, 6, 7, 8). Excluded AI category since the content is focused on data engineering, infrastructure monitoring, and ML—not on pre-built AI services or Copilot products. Excluded Coding, Security, and GitHub Copilot because the article does not include software engineering patterns, code implementation, direct security architecture, nor Copilot developer tooling.",
+    "timestamp": "2025-12-07 10:06:34 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/end-to-end-observability-for-azure-databricks-from/ba-p/4475692"
   }
 ]

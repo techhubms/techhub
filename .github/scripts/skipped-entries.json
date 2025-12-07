@@ -10353,5 +10353,17 @@
     "canonical_url": "https://dellenny.com/how-to-use-copilot-in-microsoft-edge-for-web-based-workflows/",
     "collection": "posts",
     "timestamp": "2025-12-05 17:05:32 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/y0u1MqW4rPU",
+    "timestamp": "2025-12-06 15:05:32 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content is a news update about Anthropic and OpenAI proposing standard UIs for MCP (Model Chat Protocol), with a mention of a community-led extension for interactive UIs. Microsoft technologies are not explicitly discussed, referenced, or shown as central to the solution. MCP, Anthropic, and OpenAI are not Microsoft-specific, and the inclusion of 'MCP' and 'OpenAI' tags does not meet the multi-platform inclusion threshold for Microsoft. There are no actionable details about Microsoft products, frameworks, or developer implementation using the Microsoft ecosystem. Therefore, based on the inclusion criteria and multi-platform content rules, this content does not qualify for any categories."
+  },
+  {
+    "timestamp": "2025-12-06 19:05:17 +00:00",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/fixing-wi-fi-connection-problems-easily-on-windows-11/",
+    "reason": "No categories found: No categories assigned because the content does not focus on development, coding, Microsoft development frameworks, DevOps, AI, ML, Azure cloud platform, or security implementation—it's a troubleshooting guide for end-users using Windows 11's Wi-Fi. According to the generic exclusion rules (Non-Development Microsoft Products), guides about operating system usage, device troubleshooting, or general consumer/end-user support are excluded unless they relate specifically to developer tools, frameworks, or technical implementation. There is no substantial content about programming, development, or technical architecture. Therefore, this post is excluded under 'Non-Development Microsoft Products.'"
   }
 ]
