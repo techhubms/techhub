@@ -10383,5 +10383,11 @@
     "canonical_url": "https://dellenny.com/how-to-ask-copilot-to-improve-tone-and-clarity-in-microsoft-word/",
     "reason": "No categories found: Content excluded under generic exclusion rules: The post focuses on Microsoft 365 Copilot in Microsoft Word, which is a business productivity tool and not a developer tool (see Copilot Product Distinction and Non-Development Microsoft Products exclusion). The main theme centers on editing and improving document tone and clarity for business and academic writing, not development, coding, or technical architecture. Although tags include AI and Artificial Intelligence, Copilot in Microsoft Word as described is strictly for productivity, not code development or technical implementation—therefore no categories are assigned.",
     "timestamp": "2025-12-08 15:06:00 +00:00"
+  },
+  {
+    "timestamp": "2025-12-08 17:07:24 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The article is focused on a business executive's experience and productivity enhancements using Microsoft 365 Copilot, which is classified under 'business productivity tools' and specifically excluded per the Copilot Product Distinction rule in Chapter 2. The content centers on leadership, organizational agility, and workplace productivity rather than technical implementation, development, or coding. There are no substantial details about Microsoft technology development, engineering practice, or technical solution architecture. Therefore, all categories are excluded.",
+    "canonical_url": "https://news.microsoft.com/source/asia/features/singtel-singapore-ceo-uses-microsoft-365-copilot-to-unlock-ideas-and-land-big-fish/",
+    "collection": "news"
   }
 ]

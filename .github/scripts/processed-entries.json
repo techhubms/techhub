@@ -21110,5 +21110,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/data-mapper-test-executor-a-new-addition-to-logic-apps-standard/ba-p/4472440",
     "timestamp": "2025-12-08 16:05:56 +00:00",
     "reason": "Succesfully added: Categories 'Azure', 'Coding', and 'DevOps' are assigned based on multiple inclusion rules: the core focus is on Azure Logic Apps Standard workflows (Azure rule 1), automated test framework setup and sample test code (Coding rules 1, 2, 4, and 5), and CI/CD style validation and unit testing processes (DevOps rules 5, 8, 9). The article offers detailed implementation instructions, technical code samples, and coverage of SDK-driven test automation but does not qualify for 'AI', 'ML', 'Security', or 'GitHub Copilot' categories under the strict inclusion definitions. No generic exclusion rules apply."
+  },
+  {
+    "timestamp": "2025-12-08 17:07:10 +00:00",
+    "reason": "Succesfully added: Assigned ML category because Anomaly Detector is a machine learning tool used for anomaly detection in analytics workloads (ML rule 1, 4). Assigned Azure category because Microsoft Fabric integrates with Azure, and usage metrics appear in Azure billing reports (Azure rule 1, 2, 4). Did not assign AI because the article does not discuss pre-built AI APIs, AI prompt engineering, or Copilot features (AI category rules). Did not assign Coding, DevOps, or Security because the content focuses on operational usage and billing, not software development, deployment, or security implementation.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/billing-for-anomaly-detector-in-real-time-intelligence/",
+    "collection": "news"
   }
 ]
