@@ -21104,5 +21104,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/applying-devops-principles-on-lean-infrastructure-lessons-from/m-p/4476015#M22362",
     "reason": "Succesfully added: Categories 'Azure' and 'DevOps' are assigned. The author provides a detailed account of DevOps practices (DevOps rules 1, 3, 4, 5, 6, 7) and plans a migration to Azure, describing specific Azure services (Azure rules 1, 2, 4, 5, 6). The post is community type and exceeds the 200-word threshold for community content, with technical depth and actionable discussion. No generic exclusion rule applies. Coding, AI, ML, or Security are not assigned because the main focus is DevOps principles and Azure migration architecture rather than coding, AI features, ML workflows, or security deep-dives.",
     "timestamp": "2025-12-08 15:06:41 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/data-mapper-test-executor-a-new-addition-to-logic-apps-standard/ba-p/4472440",
+    "timestamp": "2025-12-08 16:05:56 +00:00",
+    "reason": "Succesfully added: Categories 'Azure', 'Coding', and 'DevOps' are assigned based on multiple inclusion rules: the core focus is on Azure Logic Apps Standard workflows (Azure rule 1), automated test framework setup and sample test code (Coding rules 1, 2, 4, and 5), and CI/CD style validation and unit testing processes (DevOps rules 5, 8, 9). The article offers detailed implementation instructions, technical code samples, and coverage of SDK-driven test automation but does not qualify for 'AI', 'ML', 'Security', or 'GitHub Copilot' categories under the strict inclusion definitions. No generic exclusion rules apply."
   }
 ]
