@@ -21164,5 +21164,17 @@
     "reason": "Succesfully added: Assigned AI category because the article centers on AI's role in transforming developer workflows, including agentic and orchestration practices (AI rules 1, 4, 5). Selected GitHub Copilot because its usage is extensively discussed, including the statistic that 80% of new GitHub developers use Copilot and references to Copilot coding agents (GitHub Copilot rules 1, 2, 5). Assigned Coding because the content addresses how developers code with AI and shift their practices—discussing programming languages (TypeScript), IDEs, and implementation strategies (Coding rules 1, 4, 5). None of the generic exclusions apply; the article maintains professional clarity and technical depth without veering into business strategy, sales pitch, or biographical focus.",
     "collection": "news",
     "canonical_url": "https://github.blog/news-insights/octoverse/the-new-identity-of-a-developer-what-changes-and-what-doesnt-in-the-ai-era/"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/microsoft-learn-mcp-server-elevates-development/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because the MCP server improves Copilot by injecting real-time documentation into its AI-powered coding suggestions (AI rule 1). 'GitHub Copilot' was assigned because the article specifically focuses on enhancing and integrating Copilot (GitHub Copilot rules 1-6), and per the workflow, AI and Copilot must both be present. 'Coding' applies because the examples, integration, and benefits all target the .NET/C# and Microsoft developer audience (Coding rules 1, 2, and 4). Categories such as 'Azure', 'DevOps', 'ML', and 'Security' do not directly apply based on content focus, which centers on general coding with Copilot and MCP server and not those domains.",
+    "timestamp": "2025-12-08 20:05:39 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-to-modernise-a-microsoft-access-database-forms-vba-to-node/ba-p/4473504",
+    "collection": "community",
+    "reason": "Succesfully added: Categories assigned as follows:\n\n- 'AI' and 'GitHub Copilot': The content deeply integrates GitHub Copilot for code migration, prompt engineering, prompt-driven automation, and AI-assisted refactoring (AI Inclusion Rule 2 & 5; GitHub Copilot Rule 1).\n- 'Coding': Strong focus on code migration from VBA to Node.js, API development, test automation, and constraint/script refactoring (Coding Inclusion Rule 1, 2, 4, 5).\n- 'DevOps': Introduction of Liquibase for change management, automated deployment, and use of database migration tools (DevOps rules 5 & 6).\n- 'Azure': Migration workflows involve SQL Server, Azure SQL Database, and the use of Microsoft server-side technologies (Azure rules 1 & 3).\n\nExcluded 'ML' because, while there is significant automation, there is no focus on machine learning or analytics logic; the role of AI here relates to development automation via Copilot, not to data science or ML engineering. Security is not covered as a primary axis; the content focuses on modernization architecture and coding, not security hardening or specific security services implementation.",
+    "timestamp": "2025-12-08 20:06:44 +00:00"
   }
 ]
