@@ -21176,5 +21176,11 @@
     "collection": "community",
     "reason": "Succesfully added: Categories assigned as follows:\n\n- 'AI' and 'GitHub Copilot': The content deeply integrates GitHub Copilot for code migration, prompt engineering, prompt-driven automation, and AI-assisted refactoring (AI Inclusion Rule 2 & 5; GitHub Copilot Rule 1).\n- 'Coding': Strong focus on code migration from VBA to Node.js, API development, test automation, and constraint/script refactoring (Coding Inclusion Rule 1, 2, 4, 5).\n- 'DevOps': Introduction of Liquibase for change management, automated deployment, and use of database migration tools (DevOps rules 5 & 6).\n- 'Azure': Migration workflows involve SQL Server, Azure SQL Database, and the use of Microsoft server-side technologies (Azure rules 1 & 3).\n\nExcluded 'ML' because, while there is significant automation, there is no focus on machine learning or analytics logic; the role of AI here relates to development automation via Copilot, not to data science or ML engineering. Security is not covered as a primary axis; the content focuses on modernization architecture and coding, not security hardening or specific security services implementation.",
     "timestamp": "2025-12-08 20:06:44 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category based on the focus on large-scale team management, access control, and governance within the GitHub platform, aligning with DevOps rules 2 (GitHub DevOps Tools), 3 (Team Collaboration/Organization), and 9 (Developer Experience). There is no mention of coding, AI/ML, Azure, or security; thus, those categories do not apply. The news content clearly targets organizational and access management for DevOps teams, not business productivity or executive strategy.",
+    "collection": "news",
+    "timestamp": "2025-12-08 21:05:10 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-08-enterprise-teams-product-limits-increased-by-over-10x"
   }
 ]

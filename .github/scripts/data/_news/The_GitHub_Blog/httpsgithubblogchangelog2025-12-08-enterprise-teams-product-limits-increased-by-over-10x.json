@@ -1,0 +1,17 @@
+{
+  "Link": "https://github.blog/changelog/2025-12-08-enterprise-teams-product-limits-increased-by-over-10x",
+  "Author": "Allison",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2025-12-08 21:02:41",
+  "EnhancedContent": "The enterprise teams public preview now supports the creation and management of larger teams.\n\nThe new limits are:\n\n- Up to **2,500 enterprise teams** can now be created per enterprise (increased from 100).\n- Each enterprise team can now include up to **5,000 users** (increased from 500).\n- Enterprise teams remain assignable across up to **1,000 organizations** per enterprise.\n\nThese increased limits empower enterprises to manage user access, governance, and Copilot licensing at scale.\n\nEnterprise teams is currently available in public preview for Enterprise Cloud customers and is expected to be a preview feature to Enterprise Server customers in release 3.20.\n\nTo learn more, see our [documentation about Enterprise Teams](https://docs.github.com/enterprise-cloud@latest/admin/concepts/enterprise-fundamentals/teams-in-an-enterprise).\n\n*Disclaimer: The UI for features in public preview is subject to change.*",
+  "Title": "Enterprise teams product limits increased by over 10x",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "The enterprise teams public preview now supports the creation and management of larger teams. The new limits are: Up to 2,500 enterprise teams can now be created per enterprise (increased…\n\nThe post [Enterprise teams product limits increased by over 10x](https://github.blog/changelog/2025-12-08-enterprise-teams-product-limits-increased-by-over-10x) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "OutputDir": "_news",
+  "PubDate": "2025-12-08T19:40:44+00:00",
+  "Tags": [
+    "enterprise management tools",
+    "Improvement"
+  ]
+}

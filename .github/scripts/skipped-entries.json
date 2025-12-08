@@ -10395,5 +10395,11 @@
     "reason": "No categories found: No categories assigned. Content focuses exclusively on AWS, Rust, Go, and Kotlin technology choices and performance comparisons at AWS re:Invent. There is no substantive discussion or mention of Microsoft technologies, products, platforms, or development tools. According to the workflow rules (Multi-Platform Content Threshold), Microsoft technologies must comprise at least 40% of substantive content or be central to the solution. None of the qualifying Microsoft technologies or categories were present in the content.",
     "canonical_url": "https://devclass.com/2025/12/08/aws-shows-rust-love-at-reinvent-10-times-faster-than-kotlin-one-tenth-the-latency-of-go/",
     "collection": "posts"
+  },
+  {
+    "reason": "No categories found: No categories assigned because the provided content is an event highlight summary without substantive technical details. The description is primarily promotional and focuses on the energy and community aspects of Microsoft Ignite, mentioning broad themes (AI, cloud, security) without presenting any technical implementation, educational value, or actionable insights. According to the generic exclusion rules, content that is official event/announcement, promotional in tone, and lacking technical depth or hands-on detail is excluded. Additionally, since the 'content' field is null and the description does not present details about Microsoft technology implementation, development, or architecture, no inclusion rules can apply.",
+    "collection": "videos",
+    "timestamp": "2025-12-08 21:05:44 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/Qp8Qjp5KIlU"
   }
 ]
