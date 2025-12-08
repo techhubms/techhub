@@ -21152,5 +21152,17 @@
     "reason": "Succesfully added: Assigned 'AI' because the content focuses on agentic AI, Microsoft Foundry's AI agent platform, and related autonomous agent technologies (AI rule 1, 4, 5, and 6). Assigned 'Azure' as Microsoft Foundry is tightly integrated with Azure AI and the platform is discussed as a PaaS solution on Azure (Azure rule 1, 4). Did not assign Coding or DevOps because while agent building/deployment is discussed, there is no substantive code, programming languages, or DevOps process detail. Excluded ML because the focus is not on data science or custom ML engineering, but on building with platform-provided AI capabilities. Security was not assigned as security is only referenced at a platform-feature level, not as a primary technical implementation topic.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/exploring-the-future-of-ai-agents-with-microsoft-foundry/ba-p/4476107",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-12-08 19:05:24 +00:00",
+    "reason": "Succesfully added: Assigned Coding category because the article is focused on networking improvements, API enhancements, and code-level changes in the .NET ecosystem (Coding rule 1, 2, 4). Assigned Security category due to the coverage of TLS 1.3 support, cipher suite negotiation, and certificate validation updates (Security rule 1, 2, 9). Other categories like Azure, AI, DevOps, ML, and GitHub Copilot do not apply based on the content. All exclusion rules were checked and do not trigger; content is technical, substantial, and focused on developer-relevant features.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-10-networking-improvements/"
+  },
+  {
+    "timestamp": "2025-12-08 19:06:06 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the article centers on AI's role in transforming developer workflows, including agentic and orchestration practices (AI rules 1, 4, 5). Selected GitHub Copilot because its usage is extensively discussed, including the statistic that 80% of new GitHub developers use Copilot and references to Copilot coding agents (GitHub Copilot rules 1, 2, 5). Assigned Coding because the content addresses how developers code with AI and shift their practices—discussing programming languages (TypeScript), IDEs, and implementation strategies (Coding rules 1, 4, 5). None of the generic exclusions apply; the article maintains professional clarity and technical depth without veering into business strategy, sales pitch, or biographical focus.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/news-insights/octoverse/the-new-identity-of-a-developer-what-changes-and-what-doesnt-in-the-ai-era/"
   }
 ]
