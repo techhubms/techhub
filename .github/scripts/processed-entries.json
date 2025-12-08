@@ -21092,5 +21092,11 @@
     "reason": "Succesfully added: AI category assigned because the content focuses on building retrieval-augmented AI agents using Foundry IQ, Azure AI Search, and the Microsoft Agent Framework (AI rule 1, 4, 5). Azure category assigned due to direct usage of Azure AI Search and Azure OpenAI services (Azure rule 1, 3). Coding was included as the guide contains Python code samples and describes developer implementation steps (Coding rules 1, 2, 5). All qualifying content is technical, implementation-focused, and provides specific guidance for developers building AI solutions with Microsoft technologies.",
     "timestamp": "2025-12-08 10:05:30 +00:00",
     "canonical_url": "https://devblogs.microsoft.com/foundry/foundry-iq-agent-framework-integration/"
+  },
+  {
+    "timestamp": "2025-12-08 13:17:16 +00:00",
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned the Security category because Remote Desktop setup and security configuration are central to the content (Security rule 2: Application Security, Security rule 1: Microsoft Security Services). Although the article focuses on feature setup and user access, substantial portions are dedicated to authentication, firewall settings, network security (VPN), and best practices. Azure/cloud, AI, ML, Coding, and DevOps categories were not assigned because the content does not cover those services or development practices. All generic exclusion rules were checked and did not apply: the content is technical, not biographical, not sales-focused, not negative, and not business/productivity-only. Windows 11 is a Microsoft platform, and Remote Desktop is a technical feature directly tied to system administration and security.",
+    "canonical_url": "https://dellenny.com/how-to-set-up-remote-desktop-on-windows-11-a-beginners-guide/"
   }
 ]
