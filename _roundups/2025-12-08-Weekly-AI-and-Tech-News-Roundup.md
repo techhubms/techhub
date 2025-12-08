@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "GitHub Copilot Updates, Agent Tools, .NET 10 Release, and Azure Developments"
-description: "This week’s summary features new GitHub Copilot enhancements, expanded agent features, deeper IDE support, and improved project management. Microsoft's AI platform and agentic ecosystem added tools for developer workflows and cloud management. Updated releases like .NET 10, advancements in TypeScript, and Azure updates strengthen capabilities for developer productivity, automation, and governance. Security teams gain improved scanning and authentication, rounding out a week with new releases across the software engineering landscape."
+description: "GitHub Copilot Custom Agents bring DevOps and security automation with markdown-based definitions and vendor integrations. .NET 10 releases with support until 2028, featuring performance improvements and post-quantum cryptography. Microsoft Foundry expands MCP platform with improved agent orchestration and multi-cloud deployment capabilities."
 author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
@@ -12,9 +12,7 @@ tags: [".NET 10", "Agent Framework", "AI", "AI Agents", "Automation", "Azure", "
 tags_normalized: ["dotnet 10", "agent framework", "ai", "ai agents", "automation", "azure", "cloud native", "coding", "devops", "enterprise ai", "github copilot", "governance", "machine learning", "microsoft azure", "microsoft fabric", "ml", "openai", "roundups", "security", "typescript", "vs"]
 ---
 
-Welcome to this week’s technology roundup. New tooling for developers, agent-based AI solutions, and cloud platform updates were the primary focus. GitHub Copilot was updated with custom agents, closer IDE integration, and improved project management tools, making everyday development and team collaboration more practical. The changes provide better transparency, automation, and easier governance for individuals and organizations, showing Copilot’s continued role in coding workflows.
-
-Microsoft expanded agent-driven AI offerings, including Foundry, MCP, and additional LangChain integrations. These tools give teams more options for orchestration, evaluation, and deployment of AI agents across on-premises and multi-cloud environments. Developers have more practical guides, events, and agent-based programming methods, while IT administrators get new monitoring, governance, and responsible AI controls. Key releases like .NET 10 and Visual Studio 2026 offer a modern, multi-language foundation, with current updates to TypeScript, security scanning, and Azure infrastructure supporting productivity and operational reliability. The articles below provide a detailed view of the week’s updates shaping cloud-native, AI-powered, and secure software engineering.<!--excerpt_end-->
+This week's biggest updates include GitHub Copilot Custom Agents bringing DevOps and security automation to workflows with markdown-based definitions and vendor integrations like PagerDuty and JFrog, .NET 10's release at .NET Conf 2025 with support until 2028 featuring performance improvements and post-quantum cryptography, and Microsoft Foundry's expanded MCP platform with improved agent orchestration, compliance monitoring, and multi-cloud deployment capabilities. These three developments represent major shifts in AI-powered development tools, enterprise application frameworks, and intelligent agent ecosystems.<!--excerpt_end-->
 
 ## This Week's Overview
 
