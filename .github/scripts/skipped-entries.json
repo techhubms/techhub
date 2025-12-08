@@ -10371,5 +10371,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/GE0u27ctIfM",
     "timestamp": "2025-12-07 15:05:46 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=J1pQGcut2b0",
+    "timestamp": "2025-12-08 02:36:55 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Excluded all categories due to generic exclusion rules. The content is a demonstration of the Microsoft Marketplace, focused on showcasing how it provides AI apps, agents, and cloud solutions for business acceleration. However, there is no substantive technical detail related to development, developer tools, or implementation; it is broadly descriptive and aimed at discovery and deployment for business use. It fits the sales pitch and business productivity exclusion criteria, as there is no technical depth or developer-specific guidance. Also, the AI category does not apply, as the reference to AI apps and agents is from a catalog/marketplace perspective, not technical integration or development. No qualifying technical content means no categories are assigned."
   }
 ]
