@@ -21080,5 +21080,11 @@
     "reason": "Succesfully added: Assigned AI category because the content describes integration with OpenAI Codex, Copilot CLI, and agent features related to AI development (AI rule 1, 4). Assigned Coding category since the focus is on development workflows and VS Code tooling (Coding rules 2, 5). Did not assign 'GitHub Copilot' because the main Copilot integration referenced is Copilot CLI, not GitHub Copilot as an IDE plugin; did not assign Azure, ML, DevOps, or Security because those topics are not substantively featured in the video. No exclusion rules were triggered: the content is technical, developer-focused, and sufficiently detailed.",
     "canonical_url": "https://www.youtube.com/watch?v=Qfnod4Sw0gY",
     "timestamp": "2025-12-07 16:05:05 +00:00"
+  },
+  {
+    "timestamp": "2025-12-08 08:05:49 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=gjKq4KMEYkI",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the episode focuses on AI models in VS Code and discusses evaluation, fine-tuning, and AI-assisted development (AI rules 1, 2, and 4). Added GitHub Copilot because Raptor Mini is an AI model specifically rolled out for Copilot (GitHub Copilot rules 1 and 2), and the episode addresses its integration with VS Code. Assigned Coding category because the podcast discusses coding workflows, developer experience, and choosing AI models for software development (Coding rules 4 and 5). Exclusion rules don't apply, as this is a technical, developer-focused episode in English with no sales pitch, negativity, or non-development product focus."
   }
 ]
