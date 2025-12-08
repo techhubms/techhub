@@ -21116,5 +21116,41 @@
     "reason": "Succesfully added: Assigned ML category because Anomaly Detector is a machine learning tool used for anomaly detection in analytics workloads (ML rule 1, 4). Assigned Azure category because Microsoft Fabric integrates with Azure, and usage metrics appear in Azure billing reports (Azure rule 1, 2, 4). Did not assign AI because the article does not discuss pre-built AI APIs, AI prompt engineering, or Copilot features (AI category rules). Did not assign Coding, DevOps, or Security because the content focuses on operational usage and billing, not software development, deployment, or security implementation.",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/billing-for-anomaly-detector-in-real-time-intelligence/",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-08 18:06:28 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content is centered on building and deploying AI agent backends using Model Context Protocol (MCP) and the Anthropic MCP SDK, which are AI agent technologies provided by Microsoft and partners (AI inclusion rules 1, 3, 4, and 6). Assigned Azure category because the article is focused entirely on deploying MCP servers to Azure Functions, with step-by-step configuration and infrastructure-as-code guidance (Azure inclusion rules 1, 4, 5). Assigned Coding category because the process requires code-level configuration, adjustments to Node.js/TypeScript projects, code examples, and developer tools (Coding rules 1, 2, and 4). Not assigned GitHub Copilot, as Copilot is used as an automation/coding assistant rather than being the focus of the content. Excluded ML, DevOps, and Security as these are not central; the article primarily covers AI-enabled backend hosting and coding on Azure Functions.",
+    "canonical_url": "https://devblogs.microsoft.com/blog/host-your-node-js-mcp-server-on-azure-functions-in-3-simple-steps",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-08 18:06:56 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' category because Microsoft Fabric and OneLake are core Azure analytics/data services (Azure rule 1). Assigned 'Security' category because the article's primary focus is on access control, role-based security, schema-level permissions, and governance, which are central themes of the Security category (Security rules 1, 3, 4, 7, 9). Did not assign ML or AI: the article is not about analytics methodologies, machine learning, or AI; it focuses on platform-level governance. Did not assign Coding or DevOps, as the content details architecture and permissions, not code or CI/CD. The content is technical, implementation-focused, in English, and not business-only or sales-focused, so no exclusion rules apply.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/31267/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-08 18:07:23 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the event directly focuses on AI development (AI rules 1, 4, and 5), covering Microsoft Foundry, agents, and AI dev workflows. Added GitHub Copilot category due to extensive sessions and workshops focused on Copilot and Copilot CLI (GitHub Copilot rules 1–4), with content clearly about Copilot as a developer tool. Assigned Azure category since many sessions involve application deployment, Azure AI Foundry, and Azure integration (Azure rules 1, 3, and 4). Coding category applies given the consistent focus on development technologies, programming workflows with Copilot, VS Code, and agentic systems (Coding rules 1, 4, and 5). DevOps qualifies due to agent-powered deployment, SRE tooling, CI/CD, and productivity enhancements (DevOps rules 2, 5, and 9). Security and ML categories were reviewed but not assigned because the content, while discussing enterprise and productivity aspects, doesn't focus on security implementation or deep ML practice per the outlined rules. Generic exclusion rules do not apply, as the content is technical, event-focused, and development-oriented.",
+    "canonical_url": "https://developer.microsoft.com/blog/join-us-for-ai-devdays",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-08 18:07:45 +00:00",
+    "reason": "Succesfully added: Assigned the Security category because the content is entirely focused on Microsoft's security services, incident response, and cyber resilience efforts in collaboration with Beazley (Security inclusion rules 1, 2, 5, 7, and 9). The main topics are the integration of incident response, cyber insurance, and legal support specifically through Microsoft products and services. No other categories apply, as the content does not include DevOps, Coding, Azure, AI, ML, or GitHub Copilot-specific development or deployment details. Tags were derived from the key topics, named services, partner names, and cybersecurity concepts discussed.",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/12/08/stronger-together-new-beazley-collaboration-enhances-cyber-resilience/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-08 18:08:35 +00:00",
+    "reason": "Succesfully added: I assigned the 'AI' category because the content discusses the role and challenges of AI in open source, specifically referencing how AI is maintained and integrated in community projects (AI category rule 4 and 5). 'DevOps' was added as the report and discussion broadly cover open source development, collaboration practices, and team/community organization (DevOps rules 3 and 9). Content does not focus exclusively on code (not 'Coding'); there is no mention of Azure, ML engineering, or security specifics.",
+    "canonical_url": "https://www.youtube.com/watch?v=jV570EFcC9o",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2025-12-08 18:09:06 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the content focuses on agentic AI, Microsoft Foundry's AI agent platform, and related autonomous agent technologies (AI rule 1, 4, 5, and 6). Assigned 'Azure' as Microsoft Foundry is tightly integrated with Azure AI and the platform is discussed as a PaaS solution on Azure (Azure rule 1, 4). Did not assign Coding or DevOps because while agent building/deployment is discussed, there is no substantive code, programming languages, or DevOps process detail. Excluded ML because the focus is not on data science or custom ML engineering, but on building with platform-provided AI capabilities. Security was not assigned as security is only referenced at a platform-feature level, not as a primary technical implementation topic.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/exploring-the-future-of-ai-agents-with-microsoft-foundry/ba-p/4476107",
+    "collection": "community"
   }
 ]

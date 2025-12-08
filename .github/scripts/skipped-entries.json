@@ -10389,5 +10389,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rules. The article is focused on a business executive's experience and productivity enhancements using Microsoft 365 Copilot, which is classified under 'business productivity tools' and specifically excluded per the Copilot Product Distinction rule in Chapter 2. The content centers on leadership, organizational agility, and workplace productivity rather than technical implementation, development, or coding. There are no substantial details about Microsoft technology development, engineering practice, or technical solution architecture. Therefore, all categories are excluded.",
     "canonical_url": "https://news.microsoft.com/source/asia/features/singtel-singapore-ceo-uses-microsoft-365-copilot-to-unlock-ideas-and-land-big-fish/",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-08 18:08:08 +00:00",
+    "reason": "No categories found: No categories assigned. Content focuses exclusively on AWS, Rust, Go, and Kotlin technology choices and performance comparisons at AWS re:Invent. There is no substantive discussion or mention of Microsoft technologies, products, platforms, or development tools. According to the workflow rules (Multi-Platform Content Threshold), Microsoft technologies must comprise at least 40% of substantive content or be central to the solution. None of the qualifying Microsoft technologies or categories were present in the content.",
+    "canonical_url": "https://devclass.com/2025/12/08/aws-shows-rust-love-at-reinvent-10-times-faster-than-kotlin-one-tenth-the-latency-of-go/",
+    "collection": "posts"
   }
 ]
