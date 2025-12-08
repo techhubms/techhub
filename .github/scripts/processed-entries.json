@@ -21182,5 +21182,11 @@
     "collection": "news",
     "timestamp": "2025-12-08 21:05:10 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-12-08-enterprise-teams-product-limits-increased-by-over-10x"
+  },
+  {
+    "reason": "Succesfully added: Assigned the AI category because the content is focused on Microsoft’s agentic AI platforms (Foundry, Copilot Studio) and new intelligence layers (Work IQ, Fabric IQ, Foundry IQ), consistent with AI rule 1 and rule 4. Assigned Azure because plan purchasing and Service usage pivots around Azure tools/platforms and the article repeatedly references Azure-centric procurement and products, aligning with Azure rule 1. Did NOT assign Copilot or ML because although Copilot Studio is mentioned, Copilot for business productivity is excluded under critical Copilot product distinction rules and this content is not focused on Copilot developer tooling or custom ML engineering. Did NOT assign DevOps, Coding, Security, or ML due to lack of substantive developer, operations, or security implementation details beyond high-level platform coverage. Generic exclusion rules do not apply because the content is technical, not business-only, and the length is well over threshold for community content.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/finops-blog/microsoft-agent-pre-purchase-plan-one-unified-path-to-scale-ai/ba-p/4476052",
+    "collection": "community",
+    "timestamp": "2025-12-08 22:05:43 +00:00"
   }
 ]
