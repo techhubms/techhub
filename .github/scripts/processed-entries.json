@@ -21188,5 +21188,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/finops-blog/microsoft-agent-pre-purchase-plan-one-unified-path-to-scale-ai/ba-p/4476052",
     "collection": "community",
     "timestamp": "2025-12-08 22:05:43 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-12-08-model-picker-for-copilot-coding-agent-for-copilot-pro-and-pro-subscribers",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content is focused entirely on new features for GitHub Copilot's coding agent and AI model selection (AI inclusion rule 1 and 2, GitHub Copilot inclusion rule 1 and 2). Content is about Copilot as a developer tool, not Microsoft 365 Copilot or business productivity, fulfilling the requirement for developer-focused AI tooling. Coding and DevOps categories were not assigned because the update specifically concerns AI model selection within Copilot and does not cover programming, code structure, or DevOps practices directly.",
+    "timestamp": "2025-12-08 23:06:34 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/never-explain-context-twice-introducing-azure-sre-agent-memory/ba-p/4473059",
+    "reason": "Succesfully added: Categories assigned based on inclusion rules: 'AI' is included because the Azure SRE Agent leverages AI for operations (AI rule 1); 'Azure' applies as the product is an Azure service (Azure rule 1); and 'DevOps' is relevant due to its focus on site reliability engineering, operational workflows, and automation (DevOps rules 3, 5, 6, 11). No generic exclusion rules apply—the content is technical, development-focused, and not biographical, sales, business-only, or non-English.",
+    "timestamp": "2025-12-08 23:07:21 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-forum-2026-updates/ba-p/4476227",
+    "reason": "Succesfully added: Assigned the Azure category because the content is about Azure Arc Server Forum, which is an Azure service for server management across hybrid, multicloud, and edge environments (Azure inclusion rule 1, 4, and 6). There is no substantial focus on AI, ML, Coding, DevOps, Security, or GitHub Copilot. The content is not a sales pitch, biographical, negative, or business/executive focused, and exceeds the minimum length for community content. Tags reflect the main technologies and forum topics described in the announcement.",
+    "timestamp": "2025-12-08 23:07:40 +00:00"
   }
 ]
