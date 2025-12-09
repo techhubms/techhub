@@ -21242,5 +21242,11 @@
     "collection": "posts",
     "canonical_url": "https://andrewlock.net/trying-out-the-zed-editor-on-windows-for-dotnet-and-markdown/",
     "timestamp": "2025-12-09 11:06:30 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the post discusses Azure Session Host Configuration and management, and Custom Script Extensions in an Azure context (Azure rule 1, 4, 5). Assigned Security category because the author raises specific concerns about credential exposure, authentication, and secure secret management (Security rules 1, 2, and 7). Did not assign other categories because the topic is focused on operational configuration and secure deployment, not coding, DevOps practices, or AI/ML. All technical details were preserved, per instructions for community posts exceeding 200 words.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/more-security-around-using-custom-script-extensions-and-session/idi-p/4476426",
+    "collection": "community",
+    "timestamp": "2025-12-09 13:17:30 +00:00"
   }
 ]

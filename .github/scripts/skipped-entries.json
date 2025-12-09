@@ -10401,5 +10401,11 @@
     "collection": "videos",
     "timestamp": "2025-12-08 21:05:44 +00:00",
     "canonical_url": "https://www.youtube.com/shorts/Qp8Qjp5KIlU"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this video is primarily an announcement and sales pitch for SharpIDE and a promotion for a discount code. It lacks technical depth, actionable information, or educational value related to Microsoft technologies. The focus is on introducing a product, not explaining implementation or technical concepts. Per the 'Sales Pitches' exclusion rule, content that announces tools without substantive technical details is excluded.",
+    "timestamp": "2025-12-09 12:07:07 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=h5C7zB2nbrc"
   }
 ]
