@@ -21314,5 +21314,23 @@
     "timestamp": "2025-12-09 17:09:15 +00:00",
     "reason": "Succesfully added: The content qualifies for the AI category because it focuses on connecting AI applications and agents via Logic Apps and the Model Context Protocol, matching AI rule 1 and 4. The Azure category applies since all implementations are on Microsoft Azure (Azure rule 1, 4, 6). No additional categories qualify due to lack of direct coding, ML, DevOps, or explicit security focus. All processed tags reflect technical depth and content focus. The walkthrough and linked documentation ensure it passes quality standards and is highly relevant to technical practitioners.",
     "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-09 18:06:21 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/blog/jsts-modernizer-preview",
+    "reason": "Succesfully added: The content centers on a new AI-powered tool for Visual Studio Code Insiders that assists developers in modernizing JavaScript/TypeScript codebases. The tool uses GitHub Copilot, so both 'AI' and 'GitHub Copilot' categories qualify based on AI inclusion rules 1 and 2, and GitHub Copilot rules 1 and 2. Coding is also assigned because it involves programming practices in JS/TS, dependency management, and automated code fixes (Coding rules 1, 4, and 5). The content is technical, hands-on, and focuses on development implementation, meeting all standards for inclusion."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-09 18:06:48 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2025/12/09/the-era-of-agentic-business-applications-arrives-at-convergence-2025/",
+    "reason": "Succesfully added: The primary focus is on Microsoft-powered agentic business applications and generative AI, particularly through Dynamics 365, Copilot Studio, Microsoft Fabric, and partner-built agents. The article thoroughly explores how AI agents and orchestration platforms are redefining business operations, actioning processes autonomously, and integrating data across the Microsoft enterprise stack. Copilot Studio is addressed specifically as a developer/maker AI tool, which qualifies under the AI category. Although Microsoft 365 Copilot is mentioned, the predominant context remains technical (agent creation, automation, and integration), not general business productivity; however, no additional categories (such as Coding, Azure, ML, Security, DevOps) are assigned due to the lack of direct coverage in those areas. Generic exclusion rules do not apply, as the content is not biographical, sales-oriented, negative, non-English, or business-only without technical depth."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-09 18:07:10 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/12/09/changing-the-physics-of-cyber-defense/",
+    "reason": "Succesfully added: Added Security category because the article focuses on cyber defense, attack graphs, hygiene, and best practices with Microsoft technologies (Security rule 1, 2, 9). Added AI category as the text discusses how advanced AI systems help detect threats, analyze graphs, and augment human defense capabilities (AI rule 1, 4, 5, 6). Added Azure category since Azure Data Explorer and Kusto Query Language are referenced as central Microsoft technologies for security data analysis (Azure rule 1, 2, 5). Ignored any exclusion rules since the blog is highly technical, English, and provides practical implementation advice for practitioners. Tags were extracted according to technical focus and tools specifically referenced throughout the article."
   }
 ]
