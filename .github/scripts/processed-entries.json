@@ -21332,5 +21332,35 @@
     "timestamp": "2025-12-09 18:07:10 +00:00",
     "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/12/09/changing-the-physics-of-cyber-defense/",
     "reason": "Succesfully added: Added Security category because the article focuses on cyber defense, attack graphs, hygiene, and best practices with Microsoft technologies (Security rule 1, 2, 9). Added AI category as the text discusses how advanced AI systems help detect threats, analyze graphs, and augment human defense capabilities (AI rule 1, 4, 5, 6). Added Azure category since Azure Data Explorer and Kusto Query Language are referenced as central Microsoft technologies for security data analysis (Azure rule 1, 2, 5). Ignored any exclusion rules since the blog is highly technical, English, and provides practical implementation advice for practitioners. Tags were extracted according to technical focus and tools specifically referenced throughout the article."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-09 19:06:43 +00:00",
+    "reason": "Succesfully added: Assigned the Coding category as the content is focused on development practices related to .NET MAUI, C# interfaces, dependency injection, and architectural patterns, in accordance with Chapter 4 Coding rules (1, 2, 4, 5). No other categories apply because the content does not address DevOps, AI, ML, Azure, Security, or GitHub Copilot. The post is entirely technical and platform-agnostic but firmly developer-focused, and there are no generic exclusions triggered.",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/cross-platform-billing-dotnet-maui/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-09 19:07:04 +00:00",
+    "reason": "Succesfully added: Included the Coding category only. The post centers on .NET and .NET Framework servicing releases, covering non-security developer-focused updates, changelogs, and upgrade resources for .NET 10.0 components (Runtime, SDK, ASP.NET Core, WinForms, Entity Framework Core, etc.), aligning with Coding inclusion rules for Microsoft languages, frameworks, libraries, and programming practices. No AI, DevOps, Security, ML, or Azure features were discussed or focused on. No generic exclusion rules applied, as the post is technical, not biographical, commercial, negative, job-related, or non-English.",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-december-2025-servicing-updates/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-09 19:07:32 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the content centers on Azure Container Apps and uses Azure Developer CLI throughout (Azure rules 1 and 4). Assigned DevOps because it discusses deployment strategies, CI/CD automation, infrastructure-as-code (Bicep), and workflow orchestration with GitHub Actions (DevOps rules 1, 2, 5, 6). Assigned Coding due to the inclusion of CLI commands, integration of Python sample app, Docker workflow, and references to code/configuration management practices (Coding rule 5). AI and ML categories were not assigned, as the content does not cover AI/ML integration or development. Security is not a focus. All category assignments follow the inclusion rules, and no generic exclusion rules apply.",
+    "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-blue-green-aca-deployment/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-09 19:08:00 +00:00",
+    "reason": "Succesfully added: The content qualifies for the 'AI' category according to Chapter 4, AI rule 1: The entire article discusses Microsoft's use of AI to accelerate research in spatial proteomics (enabling new analysis methods for cancer discovery). There is no mention of specific development, coding, or Azure implementation details beyond the application of AI as an enabling technology, so categories like 'ML', 'Azure', or 'Coding' do not apply. The primary focus is biomedical AI research and its scientific impact, not business productivity or non-technical leadership, so generic exclusion rules do not apply. All information is in English, with clear technical depth.",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_ai-generated-population-scale-is-changing-activity-7404189540757831680-VtoO"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-09 19:09:03 +00:00",
+    "reason": "Succesfully added: Assigned AI because the session focuses on building agentic AI features (AI rules 1, 4, 5), with detailed coverage of Azure AI Foundry, Prompt Flow, smart document summarization, and chat assistants. Assigned Azure due to extensive usage of Azure services: PostgreSQL, AKS, API Management, and Azure Functions (Azure rules 1, 4, 5). Assigned ML because the solution incorporates real-world data science (document summarization, hybrid search, PG Vector) and custom ML pipeline elements (ML rules 1, 2, 4, 10). Assigned Security because the solution is for confidential board governance, emphasizes regulatory compliance, secure architecture, data protection, and introduces relevant security tools (Security rules 1, 4, 7, and regulatory focus per description). All assignments are based upon explicit content references describing architectural design and implementation for a technical practitioner audience.",
+    "canonical_url": "https://www.youtube.com/watch?v=BkOcPQntsk4"
   }
 ]

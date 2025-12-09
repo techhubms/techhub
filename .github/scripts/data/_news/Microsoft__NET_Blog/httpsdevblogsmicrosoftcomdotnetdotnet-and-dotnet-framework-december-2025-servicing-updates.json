@@ -1,0 +1,18 @@
+{
+  "ProcessedDate": "2025-12-09 19:02:51",
+  "FeedName": "Microsoft .NET Blog",
+  "Author": ".NET Team, Tara Overfield",
+  "Title": ".NET and .NET Framework December 2025 servicing releases updates",
+  "Description": "A recap of the latest servicing updates for .NET and .NET Framework for December 2025.\n\nThe post [.NET and .NET Framework December 2025 servicing releases updates](https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-december-2025-servicing-updates/) appeared first on [.NET Blog](https://devblogs.microsoft.com/dotnet).",
+  "PubDate": "2025-12-09T18:48:25+00:00",
+  "OutputDir": "_news",
+  "FeedLevelAuthor": ".NET Blog",
+  "FeedUrl": "https://devblogs.microsoft.com/dotnet/feed/",
+  "Tags": [
+    ".NET",
+    ".NET Framework",
+    "Maintenance & Updates"
+  ],
+  "Link": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-december-2025-servicing-updates/",
+  "EnhancedContent": "Welcome to our combined .NET servicing updates for December 2025. Let’s get into the latest release of .NET & .NET Framework, here is a quick overview of what’s new in our servicing releases:\n\n## Update Overview\n\n.NET and .NET Framework has been refreshed with the latest update as of December 09, 2025. This update contains non-security fixes.\n\nThis month you will find the following non-security fixes:\n\n| | .NET 10.0 | | --- | --- | | Release Notes | [10.0.1](https://github.com/dotnet/core/blob/main/release-notes/10.0/10.0.1/10.0.1.md) | | Installers and binaries | [10.0.1](https://dotnet.microsoft.com/download/dotnet/10.0) | | Container Images | [images](https://mcr.microsoft.com/catalog?search=dotnet/) | | Linux packages | [10.0.1](https://github.com/dotnet/core/blob/main/release-notes/10.0/install-linux.md) | | Known Issues | [10.0](https://github.com/dotnet/core/blob/main/release-notes/10.0/known-issues.md) |\n\n### Release changelogs\n\n- Runtime: [10.0.1](https://github.com/dotnet/runtime/issues?q=milestone%3A10.0.1%20is%3Aclosed%20label%3Aservicing-approved)\n- Aspnetcore: [10.0.1](https://github.com/dotnet/aspnetcore/issues?q=milestone%3A10.0.1%20is%3Aclosed%20label%3Aservicing-approved)\n- SDK: [10.0.1](https://github.com/dotnet/sdk/issues?q=milestone%3A10.0.1%20is%3Aclosed%20label%3Aservicing-approved)\n- WinForms: [10.0.1](https://github.com/dotnet/winforms/issues?q=state%3Aclosed%20label%3Aservicing-approved%20milestone%3A%22.NET%2010.0%22%20label%3A%22%3Aboom%3A%20regression-preview%22)\n- Entity Framework Core: [10.0.1](https://github.com/dotnet/efcore/issues?q=state%3Aclosed%20label%3AServicing-approved%20milestone%3A10.0.1)\n- Dotnet: [10.0.1](https://github.com/dotnet/dotnet/issues?q=state%3Aclosed%20label%3AServicing-approved%20milestone%3A10.0.1)\nShare feedback about this release in the [Release feedback issue](https://github.com/dotnet/core/issues/10188).\n\n## .NET Framework December 2025 Updates\n\nThis month, there are no new security or new non-security updates available. For recent .NET Framework servicing updates, be sure to browse our [release notes for .NET Framework](https://learn.microsoft.com/dotnet/framework/release-notes/release-notes) for more details.\n\n## See you next month\n\nThat’s it for this month, make sure you update to the latest service release today."
+}

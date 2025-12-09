@@ -10419,5 +10419,11 @@
     "timestamp": "2025-12-09 17:08:47 +00:00",
     "reason": "No categories found: No categories were assigned because the core content is about JetBrains' IDEs (Fleet and Air) and related agentic AI tools, not Microsoft technologies. While the article references VS Code (a Microsoft product) as competitive context and mentions Microsoft's pivot towards AI in developer tooling, the Microsoft technology is not central or comprises ≥40% of substantive content as required by the multi-platform content threshold rules in Chapter 2. There is no technical detail, tutorial, or substantive guidance on Microsoft products or development. The category inclusion rules cannot be triggered, and generic exclusion (focus not on Microsoft developer technologies) applies.",
     "collection": "posts"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-09 19:08:14 +00:00",
+    "reason": "No categories found: This content is excluded according to the Generic Exclusion Rules in Chapter 3. The news post primarily announces a high-level business investment and strategic partnership between Microsoft and the government of India. It focuses on corporate-level commitments, investment figures, organizational ambition, and national AI strategy, but does not provide any technical implementation details, engineering practices, or hands-on information relevant for practitioners. There is no discussion of specific Microsoft products, services, their architectural design, deployment, or use cases for developers or consultants. The content falls squarely under the 'Business Strategy and Executive Content' and 'Industry trends and market analysis without technical implementation details' exclusion: it targets executives and the general public, not technical audiences, and lacks actionable technical substance. Therefore, no categories are assigned.",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_thank-you-pm-narendra-modi-ji-for-an-inspiring-activity-7404143489170472960-523t"
   }
 ]
