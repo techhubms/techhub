@@ -1,0 +1,14 @@
+{
+  "Title": "Rubber Duck Thursdays - Let's build down tech debt",
+  "ProcessedDate": "2025-12-09 14:05:28",
+  "Link": "https://www.youtube.com/watch?v=OgFacJ6lIBc",
+  "PubDate": "2025-12-09T13:22:36+00:00",
+  "Description": "Join us for Rubber Duck Thursdays! A lighthearted and informal stream where we live code on some projects.\n\nLast week, we explored using GitHub Copilot custom agents to help author our GitHub Action workflows. This week, we'll continue exploring custom agents and how we can use them to address tech debt.",
+  "FeedName": "GitHub YouTube",
+  "Author": "GitHub",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "Tags": [],
+  "FeedLevelAuthor": "GitHub"
+}

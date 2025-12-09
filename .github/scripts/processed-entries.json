@@ -21248,5 +21248,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/more-security-around-using-custom-script-extensions-and-session/idi-p/4476426",
     "collection": "community",
     "timestamp": "2025-12-09 13:17:30 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the description specifically mentions using GitHub Copilot custom agents, which qualifies under AI Inclusion Rule 2 (GitHub Copilot content) and AI Inclusion Rule 1 (Microsoft AI product). 'DevOps' category is assigned because the stream involves authoring GitHub Action workflows (DevOps Inclusion Rule 2 and 5: workflows, CI/CD/automation). Coding was not assigned because there is no direct detail about specific programming languages or frameworks in the description, and the focus is on workflows and automation. Content is eligible as it is in English, not biographical, not negative, and not a sales pitch.",
+    "timestamp": "2025-12-09 14:06:42 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=OgFacJ6lIBc"
   }
 ]
