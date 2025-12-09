@@ -1,0 +1,17 @@
+{
+  "PubDate": "2025-12-09T20:39:17+00:00",
+  "FeedName": "Microsoft DevOps Blog",
+  "Tags": [
+    "Azure DevOps Server",
+    "Releases"
+  ],
+  "ProcessedDate": "2025-12-09 21:03:22",
+  "FeedUrl": "https://devblogs.microsoft.com/devops/feed/",
+  "Title": "Announcing Azure DevOps Server General Availability",
+  "OutputDir": "_news",
+  "Author": "Gloridel Morales",
+  "Link": "https://devblogs.microsoft.com/devops/announcing-azure-devops-server-general-availability/",
+  "FeedLevelAuthor": "Azure DevOps Blog",
+  "EnhancedContent": "We’re thrilled to announce that Azure DevOps Server is now generally available (GA)! This release marks the transition from the [Release Candidate](https://devblogs.microsoft.com/devops/announcing-the-new-azure-devops-server-rc-release/) (RC) phase to full production readiness, delivering enterprise-grade DevOps capabilities for organizations that prefer self-hosted solutions.\n\nYou can upgrade directly from Azure DevOps Server RC or any supported version of Team Foundation Server (TFS 2015 and newer). Head over to the [release notes](https://learn.microsoft.com/azure/devops/server/release-notes/azuredevopsserver?view=azure-devops-server) for a complete breakdown of changes included with this release.\n\n> >\n> **Note:** Team Foundation Server 2015 reached the end of Extended Support on October 14, 2025. We strongly recommend upgrading to Azure DevOps Server to maintain security and compliance.\n> >\n\nHere are some key links:\n\n- [Azure DevOps Server ISO](https://go.microsoft.com/fwlink/?LinkId=2330654)\n- [Azure DevOps Server Web Install](https://go.microsoft.com/fwlink/?LinkId=2330549)\n- [Release Notes](https://learn.microsoft.com/azure/devops/server/release-notes/azuredevopsserver?view=azure-devops-server)\n- [Download Azure DevOps Server](https://learn.microsoft.com/azure/devops/server/download/azuredevopsserver?view=azure-devops#download-the-latest-release)\n- [Azure DevOps Server requirements and compatibility](https://learn.microsoft.com/azure/devops/server/requirements?view=azure-devops-2022&amp;viewFallbackFrom=azure-devops&amp;branch=releasenotes%2FAzureDevOpsServer2020)\n- [Installation documentation](https://learn.microsoft.com/azure/devops/server/install/get-started?view=azure-devops&amp;branch=releasenotes%2FAzureDevOpsServer2020)\n\nWe’d love for you to install this release and provide any feedback at [Developer Community](https://developercommunity.visualstudio.com/AzureDevOpsServerTFS).",
+  "Description": "We’re thrilled to announce that Azure DevOps Server is now generally available (GA)! This release marks the transition from the Release Candidate (RC) phase to full production readiness, delivering enterprise-grade DevOps capabilities for organizations that prefer self-hosted solutions. You can upgrade directly from Azure DevOps Server RC or any supported version of Team Foundation Server […]\n\nThe post [Announcing Azure DevOps Server General Availability](https://devblogs.microsoft.com/devops/announcing-azure-devops-server-general-availability/) appeared first on [Azure DevOps Blog](https://devblogs.microsoft.com/devops)."
+}
