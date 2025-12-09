@@ -1,0 +1,17 @@
+{
+  "Description": "Continuing the supply chain security theme of continually improving our package ecosystem support, Go projects will now see more complete and accurate transitive dependency trees in their dependency graphs and…\n\nThe post [Dependabot-based dependency graphs for Go](https://github.blog/changelog/2025-12-09-dependabot-dgs-for-go) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Allison",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "EnhancedContent": "Continuing the supply chain security theme of continually improving our package ecosystem support, Go projects will now see more complete and accurate transitive dependency trees in their dependency graphs and Software Bill of Materials (SBOMs).\n\nSince Go resolves dependency versions dynamically, getting an accurate picture of a project’s dependencies cannot rely on static parsing. Now, when a commit updates a project’s `go.mod` , GitHub runs a new type of Dependabot job that builds a dependency snapshot and uploads it to the Dependency Submission API.\n\nThis approach is similar to dependency autosubmission for other ecosystems, but it will not incur charges for actions minutes. It can also access organization-wide configurations for private registries you’ve set up for Dependabot.\n\nFor more information, see [Configuring the dependency graph](https://docs.github.com/code-security/supply-chain-security/understanding-your-software-supply-chain/configuring-the-dependency-graph).",
+  "FeedName": "The GitHub Blog",
+  "OutputDir": "_news",
+  "ProcessedDate": "2025-12-09 17:04:08",
+  "Link": "https://github.blog/changelog/2025-12-09-dependabot-dgs-for-go",
+  "PubDate": "2025-12-09T15:54:48+00:00",
+  "Title": "Dependabot-based dependency graphs for Go",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Tags": [
+    "Improvement",
+    "supply chain security"
+  ]
+}

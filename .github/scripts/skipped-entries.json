@@ -10407,5 +10407,17 @@
     "timestamp": "2025-12-09 12:07:07 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=h5C7zB2nbrc"
+  },
+  {
+    "canonical_url": "https://dellenny.com/microsoft-teams-admin-center-a-beginners-guide/",
+    "timestamp": "2025-12-09 17:08:34 +00:00",
+    "reason": "No categories found: No categories are assigned because the content is primarily focused on the administration and configuration of Microsoft Teams in Microsoft 365. The article covers features of the Microsoft Teams Admin Center relevant to IT administration, user management, role-based access, policies, and device management for collaboration. According to the 'Non-Development Microsoft Products' exclusion rule in Chapter 3, content focused on general administration, end-user management, or business productivity in Microsoft 365 and Teams—without substantial development, coding, or technical implementation details (such as custom app development, bots, or integration code)—should be excluded from categorization. There is no code, developer tooling, architecture, or programming focus in this content. Therefore, the categories array is left empty per exclusion rules.",
+    "collection": "posts"
+  },
+  {
+    "canonical_url": "https://devclass.com/2025/12/09/jetbrains-abandons-fleet-ide-pins-hopes-on-forthcoming-air-agentic-development-tool/",
+    "timestamp": "2025-12-09 17:08:47 +00:00",
+    "reason": "No categories found: No categories were assigned because the core content is about JetBrains' IDEs (Fleet and Air) and related agentic AI tools, not Microsoft technologies. While the article references VS Code (a Microsoft product) as competitive context and mentions Microsoft's pivot towards AI in developer tooling, the Microsoft technology is not central or comprises ≥40% of substantive content as required by the multi-platform content threshold rules in Chapter 2. There is no technical detail, tutorial, or substantive guidance on Microsoft products or development. The category inclusion rules cannot be triggered, and generic exclusion (focus not on Microsoft developer technologies) applies.",
+    "collection": "posts"
   }
 ]

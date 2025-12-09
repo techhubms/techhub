@@ -21284,5 +21284,35 @@
     "collection": "community",
     "reason": "Succesfully added: Content qualifies for the Azure category because it involves authentication configuration via Entra ID (Azure AD) and Azure's Power Platform admin center and concepts (Azure inclusion rule 1, 2, 4, 5). Coding also applies as the post includes .NET code snippets, discusses service client usage, and focuses on application integration (Coding rules 1, 2, 4, 5). Security and DevOps categories do not apply as the primary focus is authentication setup—not secure architecture guidance or CI/CD/process automation. ML and AI do not apply as there is no discussion of data science or AI/ML development.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/connect-net-4-6-2-to-dataverse-using-the-dataverse-plugin/m-p/4476310#M682"
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/asia/2025/12/09/microsoft-invests-us17-5-billion-in-india-to-drive-ai-diffusion-at-population-scale/",
+    "timestamp": "2025-12-09 17:07:12 +00:00",
+    "reason": "Succesfully added: Included 'AI' because the core focus is enabling AI infrastructure, skilling, and adoption both in public platforms and at population scale (AI rules 1, 4, 5). Included 'Azure' since the infrastructure, platform integrations, and cloud region expansion all revolve around Azure services (Azure rules 1, 2, 4, 5). Excluded other categories as there is no substantive content on development/coding practices, DevOps, ML data science engineering, security implementations, or GitHub Copilot developer tools. Content is technical, implementation/adoption-focused, and not primarily business executive or productivity tool content, passing generic exclusion rules.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/ai-and-ml/generative-ai/speed-is-nothing-without-control-how-to-keep-quality-high-in-the-ai-era/",
+    "timestamp": "2025-12-09 17:07:38 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the article discusses AI tools in software development workflows (AI inclusion rule 1). Assigned 'GitHub Copilot' because Copilot features and agents are central to the discussion (GitHub Copilot rules 1–4), including IDE and pull request code review. Assigned 'Coding' because the entire focus is on software engineering, code quality, and development practices (Coding rules 1–5). Did not assign DevOps, Azure, ML, or Security because there is no substantial content on deployment, cloud, data engineering, or security implementation. All categories assigned precisely per workflow sequence.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-12-09-dependabot-dgs-for-go",
+    "timestamp": "2025-12-09 17:07:55 +00:00",
+    "reason": "Succesfully added: Assigned DevOps because the content discusses tooling (Dependabot, dependency graph) and operational security improvements within the software supply chain (DevOps rule 2 and 5). Assigned Security because supply chain security is central (Security rule 1). Did not assign Coding, AI, ML, or Azure because the focus is on security tooling and integration, not direct application coding or use of Microsoft services or AI features.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-12-09-npm-classic-tokens-revoked-session-based-auth-and-cli-token-management-now-available",
+    "timestamp": "2025-12-09 17:08:14 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category because the content focuses on changes in authentication workflows, token management, and security practices relevant to development and CI/CD processes (DevOps rules 1, 5, 6, and 9). Assigned Security category due to enforcement of 2FA, token revocation, and the general security hardening initiative (Security rules 1, 5, and 7). No other categories qualify—as there is no coverage of specific Microsoft technologies, coding, AI, ML, or Azure.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=9z7x0u99J9s",
+    "timestamp": "2025-12-09 17:09:15 +00:00",
+    "reason": "Succesfully added: The content qualifies for the AI category because it focuses on connecting AI applications and agents via Logic Apps and the Model Context Protocol, matching AI rule 1 and 4. The Azure category applies since all implementations are on Microsoft Azure (Azure rule 1, 4, 6). No additional categories qualify due to lack of direct coding, ML, DevOps, or explicit security focus. All processed tags reflect technical depth and content focus. The walkthrough and linked documentation ensure it passes quality standards and is highly relevant to technical practitioners.",
+    "collection": "videos"
   }
 ]

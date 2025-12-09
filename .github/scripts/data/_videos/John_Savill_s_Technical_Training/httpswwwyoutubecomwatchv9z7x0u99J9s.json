@@ -1,0 +1,25 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ",
+  "Author": "John Savill's Technical Training",
+  "EnhancedContent": null,
+  "PubDate": "2025-12-09T16:58:26+00:00",
+  "Description": "A walkthrough of using Logic App connectors and your own workflows as MCP Server tools for your AI apps and agents!\n\n🔎 Looking for content on a particular topic? Search the channel. If I have something it will be there! 🤔 Due to the channel growth and number of people wanting help I no longer can answer or even read questions and they will just stay in the moderation queue never to be seen so please post questions to other sites like Reddit, Microsoft Community Hub etc.\n\n▬▬▬▬▬▬ C H A P T E R S ⏰ ▬▬▬▬▬▬ 00:00 - Introduction 00:13 - Logic App overview 03:33 - AI apps and tools 05:53 - Logic Apps as tools for AI 09:23 - Bookmark 16:18 - Foundry Logic App instance 17:14 - Workflows created 17:58 - Type of Logic App needed 20:34 - Multiple MCP servers per Logic App 21:29 - Authentication 22:32 - How the MCP is working 23:57 - Using my MCP server from an agent 27:02 - Using your workflows 29:43 - Summary 30:19 - Close\n\n▬▬▬▬▬▬ K E Y L I N K S 🔗 ▬▬▬▬▬▬ ► Whiteboard: 🔗 https://github.com/johnthebrit/RandomStuff/raw/master/Whiteboards/LogicAppsandMCP.png ► MS docs: 🔗 https://learn.microsoft.com/azure/logic-apps/set-up-model-context-protocol-server-standard\n\n▬▬▬▬▬▬ Want to learn more? 🚀 ▬▬▬▬▬▬ 📖 Recommended Learning Path for Azure 🔗 https://learn.onboardtoazure.com 🥇 Certification Content Repository 🔗 https://github.com/johnthebrit/CertificationMaterials 📅 Weekly Azure Update 🔗 https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks ☁ Azure Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY ⚙ DevOps Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq 💻 PowerShell Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFq\\_hR7FcMYg32xsSAObuq8 🎓 Certification Cram Videos 🔗 https://youtube.com/playlist?list=PLlVtbbG169nHz2qfLvPsAz9CnnXofhmcA 🧠 Mentoring Content 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGHxNkSWB0PjzZHwZ0BkXZZ ❔ Questions? Maybe I answered it in my FAQ 🔗 https://savilltech.com/faq 👕 Cure Childhood Cancer Charity T-Shirt Channel Store 🔗 https://johns-t-shirts-store.creator-spring.com/\n\n👂 Enable the subtitles and from there you can translate to your native language via the auto-translate feature in settings! https://youtu.be/v5b53-PgEmI for a demo of using this feature.\n\nSUBSCRIBE ✅ https://www.youtube.com/channel/UCpIn7ox7j7bH\\_OFj7tYouOQ?sub\\_confirmation=1\n\n#microsoft #azure #AI #mcpserver #johnsavillstechnicaltraining #onboardtoazure",
+  "Link": "https://www.youtube.com/watch?v=9z7x0u99J9s",
+  "Tags": [
+    "agents",
+    "ai",
+    "azure",
+    "azure cloud",
+    "cloud",
+    "logic apps",
+    "MCP",
+    "microsoft",
+    "microsoft azure",
+    "tools"
+  ],
+  "FeedLevelAuthor": "John Savill's Technical Training",
+  "FeedName": "John Savill's Technical Training",
+  "Title": "Using Logic Apps as MCP Servers for your AI Application",
+  "ProcessedDate": "2025-12-09 17:06:23",
+  "OutputDir": "_videos"
+}

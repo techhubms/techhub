@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Author": "dotnet",
+  "EnhancedContent": null,
+  "PubDate": "2025-10-23T03:55:17+00:00",
+  "Description": ".NET Day on Agentic Modernization shows how to modernize faster, ship more reliably, and build agentic apps—all with .NET. Learn how GitHub Copilot app modernization in Visual Studio accelerates .NET upgrades and Azure migration, how to rehost hard-to-change apps on Azure App Service Managed Instance, boost reliability with Azure SRE Agent, and build agentic experiences using the Microsoft Agent Framework with Azure AI Foundry. Plus, see how GitHub Copilot for Azure (via Azure MCP) automates Azure development tasks.\n\nConnect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet",
+  "Link": "https://www.youtube.com/watch?v=JLCl5lh-tw8",
+  "Tags": [
+    ".NET"
+  ],
+  "FeedLevelAuthor": "dotnet",
+  "FeedName": "DotNet YouTube",
+  "Title": ".NET Day on Agentic Modernization",
+  "ProcessedDate": "2025-12-09 17:06:19",
+  "OutputDir": "_videos"
+}
