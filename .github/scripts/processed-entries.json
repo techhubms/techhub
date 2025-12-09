@@ -21206,5 +21206,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-forum-2026-updates/ba-p/4476227",
     "reason": "Succesfully added: Assigned the Azure category because the content is about Azure Arc Server Forum, which is an Azure service for server management across hybrid, multicloud, and edge environments (Azure inclusion rule 1, 4, and 6). There is no substantial focus on AI, ML, Coding, DevOps, Security, or GitHub Copilot. The content is not a sales pitch, biographical, negative, or business/executive focused, and exceeds the minimum length for community content. Tags reflect the main technologies and forum topics described in the announcement.",
     "timestamp": "2025-12-08 23:07:40 +00:00"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: Assigned Coding category: The content centers on diagnosing and solving a C#/.NET filesystem error using detailed code samples, core .NET APIs (Directory.GetFiles, EnumerationOptions, FileAttributes), and exception handling. The main thrust is tackling real-world directory browsing errors in a developer context—not business applications, AI, DevOps, Azure, ML, or security specialties. Tags reflect essential technical concepts from the tutorial. No generic exclusion rules apply: author’s career journey is not the focus, there's substantial technical content, the language is English, and no sales, business, or job-related content is present. Coding category inclusion is justified by direct alignment with .NET file system and error handling best practices.",
+    "canonical_url": "https://weblog.west-wind.com/posts/2025/Dec/08/What-the-heck-is-a-nul-path-and-why-is-it-breaking-my-Directory-Files-Lookup",
+    "timestamp": "2025-12-09 01:33:59 +00:00"
   }
 ]
