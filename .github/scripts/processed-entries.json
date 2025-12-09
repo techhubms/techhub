@@ -21362,5 +21362,11 @@
     "timestamp": "2025-12-09 19:09:03 +00:00",
     "reason": "Succesfully added: Assigned AI because the session focuses on building agentic AI features (AI rules 1, 4, 5), with detailed coverage of Azure AI Foundry, Prompt Flow, smart document summarization, and chat assistants. Assigned Azure due to extensive usage of Azure services: PostgreSQL, AKS, API Management, and Azure Functions (Azure rules 1, 4, 5). Assigned ML because the solution incorporates real-world data science (document summarization, hybrid search, PG Vector) and custom ML pipeline elements (ML rules 1, 2, 4, 10). Assigned Security because the solution is for confidential board governance, emphasizes regulatory compliance, secure architecture, data protection, and introduces relevant security tools (Security rules 1, 4, 7, and regulatory focus per description). All assignments are based upon explicit content references describing architectural design and implementation for a technical practitioner audience.",
     "canonical_url": "https://www.youtube.com/watch?v=BkOcPQntsk4"
+  },
+  {
+    "timestamp": "2025-12-09 20:06:17 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category due to coverage of machine learning-powered graphics features like neural rendering and Auto Super Resolution, which use AI upscaling (AI inclusion rules 1 and 5). Coding applies because the content addresses game development workflows (Agility SDK, Prism emulator) and developer-facing features (Coding rule 4). Azure applies because of references to Microsoft's cloud ecosystem and developer tools, and broad coverage of OS-centric features (Azure rule 1 general). ML is included due to neural rendering preview and Shader Model 6.9, which involve ML models integrated in the graphics pipeline (ML rules 1, 3, 9). Security is added because of emphasis on anti-cheat integration, TPM 2.0, VBS, Secure Boot, and hardware trust features for competitive gaming (Security rule 1, 7, 9). Direct references to these Microsoft technologies and developer-focused improvements meet the Microsoft content threshold (>40% central Microsoft tech focus).",
+    "canonical_url": "https://blogs.windows.com/windowsexperience/2025/12/09/windows-pc-gaming-in-2025-handheld-innovation-arm-progress-and-directx-advances/"
   }
 ]
