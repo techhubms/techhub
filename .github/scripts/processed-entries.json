@@ -21236,5 +21236,11 @@
     "collection": "community",
     "reason": "Succesfully added: Included Azure category because all content revolves around Microsoft Fabric (Azure rule 1) and its lakehouse platform, pipelines, and orchestration features. Included ML category as the data quality validations directly support analytics and machine learning readiness for downstream business intelligence and ML model development (ML rules 1, 2, 4, 9). Did not include AI category since the primary focus is on data engineering and data quality validation, not direct usage of Microsoft AI APIs or platforms; AI readiness is an outcome but not the technical focus. Satisfies multi-platform and technical depth criteria: Microsoft Fabric is central with Great Expectations as a direct integration. Content is actionable, detailed, and meets knowledge-sharing standards (no exclusions triggered).",
     "timestamp": "2025-12-09 09:07:48 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Coding category because the post is centered around technical evaluation of code editors (Zed and VS Code) for .NET (C#) and Markdown development, including configuration, extension management, and practical developer workflows, satisfying Coding category inclusion rules 1, 2, and 4. No other categories assigned as there is no substantial focus on Azure services, DevOps processes, AI, ML, or Microsoft security products. The post is non-biographical, contains technical depth, and does not trigger any generic exclusion rules.",
+    "collection": "posts",
+    "canonical_url": "https://andrewlock.net/trying-out-the-zed-editor-on-windows-for-dotnet-and-markdown/",
+    "timestamp": "2025-12-09 11:06:30 +00:00"
   }
 ]
