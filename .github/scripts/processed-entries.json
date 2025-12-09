@@ -21380,5 +21380,29 @@
     "reason": "Succesfully added: AI category assigned because MCP is directly tied to connecting LLMs and AI agentic tools, with a strong focus on AI-powered development (AI rule 1, 4, and 5). GitHub Copilot category assigned because Copilot is cited multiple times as a platform using MCP for AI agents, and the article discusses agent-authored pull requests and integrations (GitHub Copilot rule 1, 2, and 5). DevOps category assigned due to detailed mention of CI/CD workflows, orchestration, and distributed infrastructure relevant to developer operations (DevOps rules 3, 5, 6, and 9). Coding category included because the content delves deeply into developer workflow, code integration patterns, standards, and agent frameworks (Coding rule 4 and 5). Did not assign Azure, ML, or Security as the focus is on protocol/tooling standardization, agentic AI, and workflow integration, not specific Microsoft cloud, ML, or security implementations.",
     "collection": "news",
     "timestamp": "2025-12-09 21:07:05 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned ML category because Microsoft Fabric primarily serves as an analytics/data engineering platform and the Extensibility Toolkit is focused on building and validating partner workloads (ML rule 1, 2, and 3), which are technical extensions for analytics/DataOps scenarios. Assigned Azure category since Fabric is a cloud-based platform within the Azure ecosystem and all toolkit-related publishing and validation activities are inherently Azure platform operations (Azure rule 1 and 4). AI was considered but not included since the announcement does not specifically cover AI services or developer-oriented AI workloads; focus remains on extensibility and integration for analytics workloads.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-toolkit-publishing-workloads-announcements/",
+    "collection": "news",
+    "timestamp": "2025-12-09 22:06:27 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the article explicitly discusses AI-powered features, integration of AI agents, and the intelligence layer (AI rule 1, 4, 5). Assigned Azure category due to its coverage of Azure Event Hubs, Stream Analytics, Data Explorer, and deep Azure service integration (Azure rule 1, 2, 4, 6). Assigned ML category due to significant emphasis on analytics, anomaly detection, modeling, and predictive analytics supported by Fabric and IQ (ML rule 1, 2, 4, 6, 9). Did not assign Coding, DevOps, or Security because the content does not focus on programming techniques, DevOps practices, or security implementations. Applied all category rules step-by-step after verifying that generic exclusion rules do NOT apply.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-real-time-intelligence-a-leader-in-the-2025-forrester-streaming-data-wave/",
+    "collection": "news",
+    "timestamp": "2025-12-09 22:06:48 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category because the core focus is defense against a major supply chain attack leveraging Microsoft Defender and Azure security services (Security rules 1–10). Assigned DevOps because the attack and mitigation center on CI/CD pipelines, developer environments, and supply chain automation (DevOps rules 1, 5, 6, 8). Assigned Azure because Microsoft Defender for Cloud, Azure Key Vault, and related Azure security integrations are essential for both analysis and mitigation (Azure rules 1, 4, 5, 6). No ML, AI, or Coding categories: the content is about security analysis, supply chain detection, and DevOps pipelines, not code-level development, machine learning, or AI platform usage.",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/12/09/shai-hulud-2-0-guidance-for-detecting-investigating-and-defending-against-the-supply-chain-attack/",
+    "collection": "news",
+    "timestamp": "2025-12-09 22:07:11 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Content qualifies for the AI category because it discusses the Model Context Protocol (MCP), an open standard for connecting AI models to developer tools and workflows (AI rule 1, 4, 6). Although GitHub, Microsoft, and OpenAI are featured, MCP itself is not a Microsoft-only technology and no central coding, DevOps, ML, or Security implementation details are present. Azure/ML/Coding categories were not assigned because the focus is on open AI standards and community process rather than Microsoft-specific development or ML engineering. Generic exclusions do not apply, as the video is substantial, non-biographical, and technical in nature.",
+    "canonical_url": "https://www.youtube.com/watch?v=DBaFFYyUSl8",
+    "collection": "videos",
+    "timestamp": "2025-12-09 22:07:47 +00:00"
   }
 ]
