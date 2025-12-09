@@ -21254,5 +21254,11 @@
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the description specifically mentions using GitHub Copilot custom agents, which qualifies under AI Inclusion Rule 2 (GitHub Copilot content) and AI Inclusion Rule 1 (Microsoft AI product). 'DevOps' category is assigned because the stream involves authoring GitHub Action workflows (DevOps Inclusion Rule 2 and 5: workflows, CI/CD/automation). Coding was not assigned because there is no direct detail about specific programming languages or frameworks in the description, and the focus is on workflows and automation. Content is eligible as it is in English, not biographical, not negative, and not a sales pitch.",
     "timestamp": "2025-12-09 14:06:42 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=OgFacJ6lIBc"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because the content is centered on artificial intelligence’s impact on farming and water management (AI Category Rule 1 and 5). Did not assign Azure, ML, or other categories since the text does not specify Microsoft cloud platforms, ML engineering, or specific Microsoft services beyond AI. The content qualifies as it describes substantial technology-driven change, not a business/productivity tool or biographical post.",
+    "canonical_url": "https://news.microsoft.com/source/latam/features/ai/data-driven-farming-chile/?lang=en",
+    "timestamp": "2025-12-09 15:06:13 +00:00"
   }
 ]
