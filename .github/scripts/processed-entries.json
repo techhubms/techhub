@@ -21260,5 +21260,29 @@
     "reason": "Succesfully added: Assigned the AI category because the content is centered on artificial intelligence’s impact on farming and water management (AI Category Rule 1 and 5). Did not assign Azure, ML, or other categories since the text does not specify Microsoft cloud platforms, ML engineering, or specific Microsoft services beyond AI. The content qualifies as it describes substantial technology-driven change, not a business/productivity tool or biographical post.",
     "canonical_url": "https://news.microsoft.com/source/latam/features/ai/data-driven-farming-chile/?lang=en",
     "timestamp": "2025-12-09 15:06:13 +00:00"
+  },
+  {
+    "timestamp": "2025-12-09 16:06:08 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because the article details ML- and AI-driven predictive resource provisioning within Microsoft Fabric (AI rule 1, 4, and 5). Assigned Azure because Microsoft Fabric is a key Azure-based analytics platform, and the service uses Azure Data Explorer and Cosmos DB (Azure rule 1 and 2). Assigned ML because of the technical deep dive into machine learning time-series forecasting, model architecture, and optimization algorithms for provisioning (ML rules 1, 2, and 3). Did not assign Coding or DevOps because the focus is on system architecture and ML-driven resource management, not code implementation or CI/CD practices. Did not assign Security as there is no dedicated security or identity management content.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/how-fabric-makes-spark-notebook-feel-instant-proactive-resource-provisioning-for-scalable-data-science-data-engineering/"
+  },
+  {
+    "timestamp": "2025-12-09 16:06:50 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centers on an AI-powered agent for product change management, explicitly built with Microsoft Copilot Studio (AI rule 1 and 2). Did not assign the 'GitHub Copilot' category since the product referenced is Copilot Studio (AI maker tool). Content is not about coding, DevOps, Azure, ML, or Security—there are no indications of code implementation, development frameworks, operational pipelines, or security aspects. The focus is specifically on AI-driven process automation via Copilot Studio, as described in both the description and title.",
+    "canonical_url": "https://www.youtube.com/watch?v=tyV3Yn5hsKw"
+  },
+  {
+    "timestamp": "2025-12-09 16:07:14 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'Azure' because the entire post is about deploying and securing automation in Azure Session Host configurations (Azure rule 1). Assigned 'Security' because the core concern is the security of script distribution and authentication mechanisms in Azure (Security rules 1 and 2). Did not assign 'Coding', 'DevOps', 'AI', 'GitHub Copilot', or 'ML' because there is no code-level guidance, no developer frameworks discussed, no DevOps process, and no AI/data science content. This content meets the word-count threshold for community content and passes all quality/generic exclusion rules.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/custom-script-extensions-and-session-host-configuration/m-p/4476435#M13956"
+  },
+  {
+    "timestamp": "2025-12-09 16:07:39 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Content qualifies for the Azure category because it involves authentication configuration via Entra ID (Azure AD) and Azure's Power Platform admin center and concepts (Azure inclusion rule 1, 2, 4, 5). Coding also applies as the post includes .NET code snippets, discusses service client usage, and focuses on application integration (Coding rules 1, 2, 4, 5). Security and DevOps categories do not apply as the primary focus is authentication setup—not secure architecture guidance or CI/CD/process automation. ML and AI do not apply as there is no discussion of data science or AI/ML development.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/connect-net-4-6-2-to-dataverse-using-the-dataverse-plugin/m-p/4476310#M682"
   }
 ]
