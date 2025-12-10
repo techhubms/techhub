@@ -21506,5 +21506,17 @@
     "timestamp": "2025-12-10 20:06:58 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-12-10-github-spark-improvements-dpa-coverage-dedicated-sku",
     "reason": "Succesfully added: The content focuses on updates to GitHub Spark—a developer AI tool powered by GitHub Copilot. It describes new features relevant to admins (billing, SKU, repository settings) and developers (visual quality, app generation improvements). It qualifies for the 'GitHub Copilot' category due to the repeated context of Copilot-powered features and for the 'AI' category, per rules covering AI development with Microsoft technologies (AI rule 2). No other categories are applicable as there is no in-depth content on Azure, Coding, DevOps, ML, or Security."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/the-evolution-of-sql-server-integration-services-ssis-ssis-2025-generally-available/",
+    "collection": "news",
+    "timestamp": "2025-12-10 21:05:51 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because SSIS 2025 supports Azure Data Factory, Fabric integration, and cloud-related ETL workflows (Azure rules 1-6). Assigned ML category because the content focuses on advanced analytics, data warehousing, Lakehouse integration, and change data capture—all central to Microsoft’s modern analytics/data science platforms (ML rules 1, 2, 4, 7). Assigned Security because of detailed coverage of new enterprise security features (Strict Encryption, TLS 1.3, Entra ID authentication) and compliance considerations in SSIS 2025 and Fabric (Security rules 1-3, 7, 9). Did not assign Coding, DevOps, or AI because the article does not discuss programming practices, developer tooling, AI platform integration, or development methodology. Content provides deep technical implementation details central to Microsoft technology and meets the >40% threshold for Azure/Microsoft solutions."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-12-10-auto-model-selection-is-generally-available-in-github-copilot-in-visual-studio-code",
+    "collection": "news",
+    "timestamp": "2025-12-10 21:06:13 +00:00",
+    "reason": "Succesfully added: Assigned both AI and GitHub Copilot categories because the content is specifically about GitHub Copilot (developer tool per Chapter 4 GitHub Copilot rule 1) and describes a new feature for dynamically selecting AI models (AI rule 2 and 5). The announcement details technical aspects such as model routing, billing, and user/admin controls, so only the developer-oriented Copilot product categories are used. No generic exclusion rules apply."
   }
 ]
