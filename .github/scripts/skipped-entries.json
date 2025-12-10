@@ -10431,5 +10431,17 @@
     "collection": "videos",
     "timestamp": "2025-12-10 05:06:11 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rules: The content lacks a substantive description or main text (content is null), tags are empty, and the title suggests a generic productivity tip rather than technical depth or actionable information involving Microsoft technologies. There is no evidence of qualifying technical details, development focus, or educational value. Per the rules, when there is insufficient main content, and the topic centers on general productivity without technical explanation, no categories are assigned."
+  },
+  {
+    "timestamp": "2025-12-10 15:07:02 +00:00",
+    "canonical_url": "https://microsoft.ai/news/its-about-time-the-copilot-usage-report-2025/",
+    "reason": "No categories found: All categories are excluded based on the generic exclusion rules. This content, 'It’s about time: The Copilot Usage Report 2025', analyzes the usage patterns of Copilot (likely referring to Microsoft Copilot or Copilot for Microsoft 365) in day-to-day consumer and personal productivity scenarios, such as health tips, relationship advice, entertainment, and general well-being. According to the workflow, any content about business productivity or consumer Copilot products (Microsoft 365 Copilot, Copilot for Microsoft 365, Office Copilot, Bing Chat, and the general Microsoft Copilot) must be excluded. There are no details about GitHub Copilot, Copilot Studio, coding, development, or technical implementation—this report is centered on how end users interact with Copilot, not how developers build with or for it. Thus, per the Non-Development Microsoft Products and Copilot Product Distinction exclusions (Chapter 3 and 4), no categories are applied.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-10 15:07:15 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/asia/features/jobs-security-skills-how-indias-giant-database-is-helping-over-300-million-informal-workers-step-up-with-ai/",
+    "reason": "No categories found: Content excluded because it violates the 'Business Strategy and Executive Content' and 'Workplace and Business Focus' generic exclusion rules from Chapter 3. The article primarily discusses macroeconomic and social topics—India's workforce, employment, job security, and upskilling—rather than technical implementation or hands-on development with Microsoft technologies. There is no detailed description of technical architecture, development, or engineering processes relating to Microsoft AI services. This is business/social impact content, not technical practitioner guidance.",
+    "collection": "news"
   }
 ]

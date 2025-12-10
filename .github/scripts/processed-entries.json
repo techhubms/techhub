@@ -21458,5 +21458,23 @@
     "canonical_url": "https://github.blog/changelog/2025-12-09-repository-custom-properties-graphql-api-and-url-type",
     "collection": "news",
     "reason": "Succesfully added: Assigned DevOps category because the update is about repository management, automation, and platform governance using GitHub (DevOps rules 2, 11). No other category applies: while Azure Kubernetes Fleet is mentioned, Azure technology is not central, and there are no coding, AI, ML, or security implementation details. Generic exclusion rules do not apply as the content is technical and focused on DevOps workflows, not business productivity or non-technical topics."
+  },
+  {
+    "timestamp": "2025-12-10 15:07:42 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_jobs-security-skills-how-indias-giant-activity-7404408432293969921-BJHX",
+    "reason": "Succesfully added: Included 'AI' because the post centrally discusses the adoption and transformative impact of Microsoft's AI technologies in India, as well as specific AI implementations (AI inclusion rules 1, 4, 5). 'Azure' is included because the commentary and technical details cite Azure's cloud-based security, privacy, and scalability as foundational to the government-scale solution (Azure inclusion rules 1, 2, 4). Other categories (e.g., ML, Security, Coding, DevOps) are not added because the discussion remains at the architectural and impact level, rather than technical development, data science, or security implementation specifics. Generic exclusion rules do not apply; this is not primarily biographical, not sales, not negative-only, not business/leadership strategy nor consumer Microsoft product-focused.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-10 15:08:09 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/streamlining-your-git-workflow-with-visual-studio-2026/",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' because Copilot features (Code Review and Chat) are used for automated suggestions and security checks, satisfying GitHub Copilot rules 1-4 and AI rules 1-2. Assigned 'DevOps' because much of the workflow involves source control, PRs, code reviews, and integration with Azure DevOps ticketing (DevOps rules 2, 3, 5, 8). Assigned 'Coding' due to references to bug fixing in C#, working with .NET code, and code-level problem solving using Visual Studio tools (Coding rules 1, 2, and 4). Did not assign 'Azure' as the content focuses on developer tools and process, not Azure service usage or deployment. No ML or Security category, as any security actions are generic prompts, not specific security service implementation.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-10 15:08:34 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-10-the-github-mcp-server-adds-support-for-tool-specific-configuration-and-more",
+    "reason": "Succesfully added: Assigned AI category because the GitHub MCP Server is used in AI-powered GitHub workflows and focuses on context window reduction for LLMs (AI rule 1, 4, 5). Assigned DevOps because the content targets automation, workflow configuration, and integration relevant to DevOps pipelines (DevOps rules 2, 3, 6). Assigned Security because it highlights prompt injection mitigation, Lockdown mode for untrusted contributors, and other security enhancements (Security rules 1, 5, 7, 8). Did not assign GitHub Copilot because this update is about the MCP Server and not specifically about GitHub Copilot features or usage. Coding and ML were not assigned as the article is not about core programming or data science/model-building.",
+    "collection": "news"
   }
 ]
