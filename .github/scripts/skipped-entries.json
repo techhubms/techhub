@@ -10443,5 +10443,11 @@
     "canonical_url": "https://news.microsoft.com/source/asia/features/jobs-security-skills-how-indias-giant-database-is-helping-over-300-million-informal-workers-step-up-with-ai/",
     "reason": "No categories found: Content excluded because it violates the 'Business Strategy and Executive Content' and 'Workplace and Business Focus' generic exclusion rules from Chapter 3. The article primarily discusses macroeconomic and social topics—India's workforce, employment, job security, and upskilling—rather than technical implementation or hands-on development with Microsoft technologies. There is no detailed description of technical architecture, development, or engineering processes relating to Microsoft AI services. This is business/social impact content, not technical practitioner guidance.",
     "collection": "news"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=gCFWwr-eiLU",
+    "timestamp": "2025-12-10 16:06:06 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the description and title indicate this content is in Portuguese (pt-BR🇧🇷), not primarily in English. According to the Non-English Content exclusion rule in Chapter 3, content not primarily in English (<80%) must be excluded. Additionally, the content does not specify any Microsoft technology, product, or category qualifying per inclusion rules."
   }
 ]

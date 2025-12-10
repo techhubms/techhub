@@ -21476,5 +21476,11 @@
     "canonical_url": "https://github.blog/changelog/2025-12-10-the-github-mcp-server-adds-support-for-tool-specific-configuration-and-more",
     "reason": "Succesfully added: Assigned AI category because the GitHub MCP Server is used in AI-powered GitHub workflows and focuses on context window reduction for LLMs (AI rule 1, 4, 5). Assigned DevOps because the content targets automation, workflow configuration, and integration relevant to DevOps pipelines (DevOps rules 2, 3, 6). Assigned Security because it highlights prompt injection mitigation, Lockdown mode for untrusted contributors, and other security enhancements (Security rules 1, 5, 7, 8). Did not assign GitHub Copilot because this update is about the MCP Server and not specifically about GitHub Copilot features or usage. Coding and ML were not assigned as the article is not about core programming or data science/model-building.",
     "collection": "news"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/lakehouse-schemas-generally-available/",
+    "timestamp": "2025-12-10 16:05:33 +00:00",
+    "reason": "Succesfully added: Content focuses entirely on Microsoft Fabric lakehouses, which are Azure-based data engineering tools for analytics workloads. The article discusses new schema capabilities, Spark integration, data management, and interoperability—central themes for ML/data engineering. Assigned 'Azure' category (covers Microsoft Fabric) and 'ML' category (lakehouses are primarily for analytics/data science/ML use cases per ML category rules 1, 2, 5). Coding, DevOps, and Security categories were not assigned due to lack of focus on development, automation, or security implementation. AI category not assigned, as this article does not describe use of AI services or Copilot products."
   }
 ]
