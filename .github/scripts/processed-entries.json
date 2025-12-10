@@ -21524,5 +21524,47 @@
     "reason": "Succesfully added: Included 'GitHub Copilot' category because the content explicitly demonstrates code review and smarter coding with GitHub Copilot in VS Code (GitHub Copilot rule 1, 2). 'AI' category was also assigned, per the critical requirement, as any GitHub Copilot content must include 'AI'. 'Coding' was added because the video highlights code review, agent-managed tasks, and productivity improvements within a developer environment (Coding rules 1, 4, 5). No Azure, DevOps, ML, or Security content was present. Generic exclusion rules do not apply: content is technical, not biographical, business-focused, or sales-oriented; it's in English and aimed at developers.",
     "timestamp": "2025-12-10 22:05:55 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=PAgLzv1Lp1o"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-10 23:05:45 +00:00",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/microsofts-commitment-to-supporting-cloud-infrastructure-demand-in-the-united-states/",
+    "reason": "Succesfully added: Assigned 'Azure' category because the content is centrally focused on Azure cloud infrastructure, datacenter expansions, and platform capabilities in the United States (Azure inclusion rules 1, 4, 5). Assigned 'AI' category because the article repeatedly emphasizes that these infrastructure expansions directly support Azure AI services, advanced AI workloads, and AI supercomputing (AI inclusion rules 1, 4, and 6). Did not assign 'Coding', 'DevOps', 'ML', or 'Security' since there is no in-depth focus on software development, DevOps practices, data science, ML engineering, or specific implementation of security features—these topics are mentioned only at a high level or in the context of infrastructure. No generic exclusions apply as the content is technical, relevant, and centers on Microsoft technology."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-10 23:06:24 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=7nQCRRYp44k",
+    "reason": "Succesfully added: Assigned the AI category because the content explicitly focuses on developing AI applications with insights into app flow and token usage (AI rule 1, AI rule 4). Assigned Azure because Aspire integrates with Azure and Azure services are promoted (Azure rule 1, Azure rule 4). Coding or DevOps were not assigned, as the content highlights orchestration, app flow, and integration features rather than specific coding practices or DevOps pipelines. No generic exclusion rules apply; the video is in English, not biographical, sales-focused, or negative. The content meets multi-platform thresholds as Microsoft and Azure are central."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-10 23:06:43 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=fPSHFYyN-Do",
+    "reason": "Succesfully added: Assigned 'AI' because the content centers on AI-driven tools and agents for development (AI inclusion rules 1 and 4). Assigned 'GitHub Copilot' because there's a direct focus on GitHub Copilot and its integration with Azure (GitHub Copilot rules 1 and 2). 'Azure' is assigned due to end-to-end Azure service usage (Azure inclusion rules 1 and 4). 'DevOps' is covered through automation in deployment, diagnostics, and operations, as well as SRE and testing agents (DevOps rules 3, 5, 7, 9, 10). 'Coding' is assigned since the content discusses code generation and developer workflows (Coding inclusion rules 1 and 4)."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-10 23:07:01 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=LnzvpisAkcs",
+    "reason": "Succesfully added: Assigned 'AI' category because the session centers on building, orchestrating, and managing intelligent agents using Microsoft Foundry, a Microsoft AI product (AI rules 1 and 4). Assigned 'Azure' category as the content promotes Azure platform usage through trial signups, and Foundry is positioned as an Azure-based enterprise solution (Azure rules 1 and 4). Did not assign 'ML' because there is no mention of custom model development or advanced data science workflows—emphasis is on AI orchestration and management. 'DevOps' and 'Coding' are not assigned as the primary focus is modular AI workflows and management, not source code or deployment pipelines. Excluded 'GitHub Copilot' and 'Security' as these are not explicitly referenced within the content."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-10 23:07:19 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=OE8waNlgeAk",
+    "reason": "Succesfully added: Assigned AI category because content centers on building and deploying AI agents with Microsoft's AI Toolkit and Copilot (AI rule 1, 2, 3, 4). Assigned GitHub Copilot category because Copilot features and integration are a primary focus (GitHub Copilot rule 1, 2, 3). Assigned Azure category because the deployment targets Azure (Azure rule 1, 4). Assigned Coding category because it involves building, instrumenting, and tracing code (Coding rule 4, 5). No exclusion rules apply as content is technical, development-focused, and in English."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-10 23:07:37 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=PWELkVJbb7Y",
+    "reason": "Succesfully added: Assigned AI category because MCP (Microsoft Copilot Platform) is an AI technology enabling agentic workflows (AI inclusion rule 1, 4, 5). Assigned Azure category due to explicit references to Azure and the session's focus on cloud-enabled, enterprise AI solutions (Azure inclusion rule 1 and cloud integration context). Did not assign Coding, DevOps, ML, Security, or GitHub Copilot categories since the content focuses on platform integration, AI agents, and server packaging/integration rather than code, DevOps process, ML technical engineering, or explicit security implementation. No generic exclusion rules applied—content is technical, development-focused, English, and not promotional or biographical."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-10 23:08:11 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=v1Q7rEE3StM",
+    "reason": "Succesfully added: Assigned the AI category because the content focuses on multi-agent AI systems and orchestration using Microsoft Foundry, Semantic Kernel, and AutoGen (AI inclusion rule 1 and 3). Assigned Azure because deployment, governance, and scalability occur using Microsoft Foundry on Azure (Azure inclusion rule 1, 4). 'Coding' and 'DevOps' categories were not assigned as the video centers on system architecture and orchestration rather than direct code or pipeline implementation. ML and Security were not assigned since there's no explicit mention of data science, ML engineering, or security-specific themes."
   }
 ]

@@ -10461,5 +10461,17 @@
     "canonical_url": "https://news.xbox.com/en-us/2025/12/09/xbox-indie-selects-demo-fest-starts-now/",
     "reason": "No categories found: All content is focused on promoting a gaming event (ID@Xbox Indie Selects Demo Fest) which is oriented toward gamers and players, not developers, consultants, or technical implementation. The content describes new indie games, game demos, and Xbox platform features for consumers, but contains no technical depth about Microsoft developer tools, Azure, AI, Coding, DevOps, ML, or Security. This is strictly a consumer-focused announcement and is excluded by generic exclusion rules for non-development Microsoft products and consumer apps, as well as business strategy/company news that lack technical implementation details.",
     "timestamp": "2025-12-10 18:06:17 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-10 23:07:52 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=tVlY1HBiD0k",
+    "reason": "No categories found: All categories excluded due to the application of generic exclusion rules: the provided content is solely a welcome message for an event (AI Dev Days) with no substantive technical details, tutorials, or educational material about Microsoft technologies. It contains only event links, sign-up instructions, and an invitation to participate in a lab or Discord channel, rather than technical implementation or development guidance. As per Format and Length Exclusions, links and event announcements without technical depth are excluded. No categories apply."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-10 23:08:23 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Wt1-u8wD_Xs",
+    "reason": "No categories found: No content is provided in the input ('content' is null and 'description' is empty), making it impossible to apply category inclusion rules or determine technical depth. According to the workflow's core processing rules, if there's insufficient information to make a categorization decision, all categories must be excluded. Additionally, the generic exclusion rule regarding missing substantive content applies."
   }
 ]

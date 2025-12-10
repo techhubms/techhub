@@ -1,0 +1,24 @@
+{
+  "Author": "Microsoft Developer",
+  "PubDate": "2025-12-10T22:07:54+00:00",
+  "FeedName": "Microsoft Developer YouTube",
+  "Tags": [
+    "AI",
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "developer",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=7nQCRRYp44k",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "ProcessedDate": "2025-12-10 23:04:59",
+  "EnhancedContent": null,
+  "Title": "Aspire for AI Applications",
+  "Description": "Orchestrate front ends, APIs, containers, and databases effortlessly—no rewrites, no limits. Extend Aspire to power any project. When building AI applications developers need insights into their apps flow, token usage, and more. Join David & Damian as they show off the latest Aspire features that streamline AI app development.\n\nJoin the conversation on the Microsoft Foundry Discord: https://aka.ms/AIDevDays/Discord Sign up for an Azure Free Trial: https://aka.ms/AzureFreeTrialYT Get hands-on with today's MCP lab repo: https://aka.ms/AIDevDays/LabDay1 Catch up on-demand: https://aka.ms/AIDevDays/OnDemand"
+}
