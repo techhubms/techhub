@@ -1,0 +1,24 @@
+{
+  "FeedLevelAuthor": "Visual Studio Code",
+  "ProcessedDate": "2025-12-10 22:04:46",
+  "Title": "Agent HQ for VS Code: Local, Cloud and Background agents",
+  "Link": "https://www.youtube.com/watch?v=PAgLzv1Lp1o",
+  "Tags": [
+    "agenthq",
+    "agentmode",
+    "agents",
+    "demo",
+    "developer",
+    "microsoft",
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Description": "Agent HQ just got a major upgrade in VS Code! Agent HQ is your single view to kick off, monitor, and review agent sessions for local, background, and cloud agents all at once - so you can seamlessly delegate tasks to the best-suited agent. With a unified agent experience in the Chat view, you can track every agent session, review code changes, and build smarter with GitHub Copilot in VS Code.\n\n🔎 Chapters: TBD 00:00 Intro 00:29 Local agents 01:34 Cloud agents 01:54 Background agents 02:50 In summary\n\n🔗 Link: VS Code release notes: aka.ms/VSCodeRelease\n\n🎙️ Featuring: Kyle Daigle (@kdaigle)\n\n#vscode #agents",
+  "EnhancedContent": null,
+  "PubDate": "2025-12-10T21:01:49+00:00",
+  "FeedName": "Visual Studio Code YouTube",
+  "OutputDir": "_videos",
+  "Author": "Visual Studio Code"
+}

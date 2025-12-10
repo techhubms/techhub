@@ -21518,5 +21518,11 @@
     "collection": "news",
     "timestamp": "2025-12-10 21:06:13 +00:00",
     "reason": "Succesfully added: Assigned both AI and GitHub Copilot categories because the content is specifically about GitHub Copilot (developer tool per Chapter 4 GitHub Copilot rule 1) and describes a new feature for dynamically selecting AI models (AI rule 2 and 5). The announcement details technical aspects such as model routing, billing, and user/admin controls, so only the developer-oriented Copilot product categories are used. No generic exclusion rules apply."
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Included 'GitHub Copilot' category because the content explicitly demonstrates code review and smarter coding with GitHub Copilot in VS Code (GitHub Copilot rule 1, 2). 'AI' category was also assigned, per the critical requirement, as any GitHub Copilot content must include 'AI'. 'Coding' was added because the video highlights code review, agent-managed tasks, and productivity improvements within a developer environment (Coding rules 1, 4, 5). No Azure, DevOps, ML, or Security content was present. Generic exclusion rules do not apply: content is technical, not biographical, business-focused, or sales-oriented; it's in English and aimed at developers.",
+    "timestamp": "2025-12-10 22:05:55 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=PAgLzv1Lp1o"
   }
 ]
