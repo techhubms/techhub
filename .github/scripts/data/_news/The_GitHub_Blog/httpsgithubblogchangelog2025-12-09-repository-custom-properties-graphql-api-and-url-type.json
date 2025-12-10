@@ -1,0 +1,18 @@
+{
+  "EnhancedContent": "We’ve added two new capabilities to GitHub custom repository properties that make it easier to organize and manage repositories at scale.\n\n### Manage custom properties via GraphQL\n\nYou can now manage custom repository properties using the GraphQL API. This gives you programmatic access to create, update, and delete custom properties with your existing workflows and automation tools.\n\nTo learn more, see [the GraphQL API documentation for custom properties](https://docs.github.com/en/graphql/reference). **Note:** there is a delay in publishing GraphQL documentation and may take 24 hours to go live.\n\n### New URL property type\n\n![The GitHub \"New property\" interface showing the configuration for a custom property named \"AzureK8Fleet\" with the type set to URL. The form includes a default value linking directly to the Microsoft Azure Kubernetes Fleet portal.](https://github.com/user-attachments/assets/fb05d0b9-2093-4cc5-8d1e-f761bb75da5a)\n\nCustom repository properties now support a `URL` type with built-in validation. This makes it easier for admins to attach relevant resources to repositories like runbooks, monitoring dashboards, or external documentation without worrying about invalid URLs.\n\nWhen you create a `URL` property, GitHub automatically validates that values are properly formatted URLs, ensuring consistency across your organization.\n\nFor more information, see [our documentation about managing custom repository properties](https://docs.github.com/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization).\n\nShare your feedback in our [community discussion](https://gh.io/props-gql-url-discussion).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedName": "The GitHub Blog",
+  "Author": "Allison",
+  "Tags": [
+    "enterprise management tools",
+    "Improvement",
+    "platform governance"
+  ],
+  "Description": "We’ve added two new capabilities to GitHub custom repository properties that make it easier to organize and manage repositories at scale. Manage custom properties via GraphQL You can now manage…\n\nThe post [Repository custom properties: GraphQL API and URL type](https://github.blog/changelog/2025-12-09-repository-custom-properties-graphql-api-and-url-type) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "ProcessedDate": "2025-12-10 06:03:14",
+  "Title": "Repository custom properties: GraphQL API and URL type",
+  "PubDate": "2025-12-10T05:27:55+00:00",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2025-12-09-repository-custom-properties-graphql-api-and-url-type"
+}

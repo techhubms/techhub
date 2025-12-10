@@ -21452,5 +21452,11 @@
     "reason": "Succesfully added: Assigned Azure category since the content is focused on Azure App Service and Managed Instance (Azure Inclusion Rule 1). Assigned Coding category because it centers on ASP.NET apps and developer migration strategies (Coding Inclusion rules 1, 2, and 4). Did not assign AI or ML categories since the modernization and integration with agentic workflows is discussed in a general sense without detailing AI implementation. Content is not excluded by any generic exclusion rules; it's technical, in English, substantial, and free of job, business, and sales pitch focus.",
     "timestamp": "2025-12-10 00:13:48 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-12-10 06:05:48 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-09-repository-custom-properties-graphql-api-and-url-type",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned DevOps category because the update is about repository management, automation, and platform governance using GitHub (DevOps rules 2, 11). No other category applies: while Azure Kubernetes Fleet is mentioned, Azure technology is not central, and there are no coding, AI, ML, or security implementation details. Generic exclusion rules do not apply as the content is technical and focused on DevOps workflows, not business productivity or non-technical topics."
   }
 ]
