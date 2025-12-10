@@ -21500,5 +21500,11 @@
     "timestamp": "2025-12-10 19:06:30 +00:00",
     "reason": "Succesfully added: Assigned Security category because the content centrally discusses Microsoft Defender for Office 365, email threat detection, layered defenses, benchmarking of SEG and ICES vendors, and post-delivery remediation—all aligning with Security inclusion rules (rules 1, 5, 7, and 9). Other categories were not assigned since the content does not focus on coding, DevOps, Azure-specific architectures, AI, ML, or GitHub Copilot. The content is technically detailed and intended for security practitioners, fully meeting inclusion requirements without triggering any generic exclusion rules.",
     "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/12/10/clarity-in-complexity-new-insights-for-transparent-email-security/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-10 20:06:58 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-10-github-spark-improvements-dpa-coverage-dedicated-sku",
+    "reason": "Succesfully added: The content focuses on updates to GitHub Spark—a developer AI tool powered by GitHub Copilot. It describes new features relevant to admins (billing, SKU, repository settings) and developers (visual quality, app generation improvements). It qualifies for the 'GitHub Copilot' category due to the repeated context of Copilot-powered features and for the 'AI' category, per rules covering AI development with Microsoft technologies (AI rule 2). No other categories are applicable as there is no in-depth content on Azure, Coding, DevOps, ML, or Security."
   }
 ]
