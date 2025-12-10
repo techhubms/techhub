@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Author": "dotnet",
+  "Description": "Deploying AI agents in production-ready environments means tackling challenges most frameworks leave to developers: managing agent sessions, handling failures gracefully, scaling across distributed systems, and ensuring observability. In this session, you’ll learn how the Durable Extension for Microsoft Agent Framework addresses these challenges with four core value props:\n\nDurability – agents can survive process failures Distributed – scale agent executions across many machines Determinism – predictable, repeatable agentic workflows Debuggability – debug agents with familiar debugging tools and practices\n\nWe’ll explore real-world patterns such as stateful agent loops, multi-agent workflows, human-in-the-loop interactions, and long-running tool calls, all running serverlessly on Azure.\n\n✅ Resources: Learn more: https://aka.ms/agentic-modernization Get started: https://aka.ms/AzureFreeTrialYT\n\nConnect with .NET: Blog: https://aka.ms/dotnet/blog Twitter: https://aka.ms/dotnet/twitter TikTok: https://aka.ms/dotnet/tiktok Mastodon: https://aka.ms/dotnet/mastodon LinkedIn: https://aka.ms/dotnet/linkedin Facebook: https://aka.ms/dotnet/facebook Docs: https://learn.microsoft.com/dotnet Forums: https://aka.ms/dotnet/forums 🙋‍♀️Q&A: https://aka.ms/dotnet-qa 👨‍🎓Microsoft Learn: https://aka.ms/learndotnet\n\n#dotnet",
+  "ProcessedDate": "2025-12-10 00:10:50",
+  "EnhancedContent": null,
+  "Title": "Bulletproof Agents with the Durable Task Extension for Microsoft Agent Framework",
+  "FeedName": "DotNet YouTube",
+  "OutputDir": "_videos",
+  "Tags": [
+    ".NET"
+  ],
+  "PubDate": "2025-12-10T00:00:52+00:00",
+  "FeedLevelAuthor": "dotnet",
+  "Link": "https://www.youtube.com/watch?v=_UhRNW6HL6Y"
+}

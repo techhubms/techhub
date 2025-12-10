@@ -21404,5 +21404,53 @@
     "canonical_url": "https://www.youtube.com/watch?v=DBaFFYyUSl8",
     "collection": "videos",
     "timestamp": "2025-12-09 22:07:47 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=_UhRNW6HL6Y",
+    "reason": "Succesfully added: Assigned AI category because the content describes agentic workflows and Durable Task Extension for Microsoft Agent Framework, which is used for AI agents (AI Inclusion Rule 1 and 4). Assigned Azure category, as demonstrations leverage Azure's serverless infrastructure and deployment (Azure Rule 1, 4, and 5). Assigned Coding category since the session covers agent development, stateful .NET agent loops, debugging, and distributed workflows (Coding Rule 1 and 5). Content meets quality and relevance rules, with detailed technical discussion and no exclusion rules triggered.",
+    "timestamp": "2025-12-10 00:11:48 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=Kx_6SB-mhgg",
+    "reason": "Succesfully added: Applied Azure category because the session focuses on Azure SRE Agent, Application Insights, and cloud-based reliability features (Azure rule 1, 4). Assigned DevOps category since the content addresses incident response, automated rollbacks, health checks, and integration with team alerts, which are core DevOps practices (DevOps rules 3, 5, 6, 7). Assigned Coding category as the session involves instrumenting ASP.NET Core code, developing custom sub-agents, and hands-on code integrations (Coding rules 1, 2, 4). The content is developer-oriented, not biographical, sales-focused, or business productivity, and does not trigger any generic exclusion rules.",
+    "timestamp": "2025-12-10 00:12:05 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=SpEHo-Wwzyg",
+    "reason": "Succesfully added: Assigned AI category because content centers on building AI agents and LLMs (AI rules 1, 4). Assigned Azure category due to extensive use of Azure Redis and Azure-specific security features (Azure rules 1, 4, 5). Added Coding because the session is for .NET development and agentic app patterns (Coding rules 1, 4). Security included for coverage of security enhancements and authentication roles in Redis (Security rules 1, 2, 7). Used input title and description as basis, structured tags per technical depth. Excluded DevOps and ML categories since main focus is AI agent development, application security, and .NET integration, not deployment pipelines or data science/ML engineering.",
+    "timestamp": "2025-12-10 00:12:22 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=SXo5EaXNJl0",
+    "reason": "Succesfully added: The content qualifies for multiple categories: AI and GitHub Copilot because it directly discusses GitHub Copilot’s AI-powered features in code modernization (AI rule 2, GitHub Copilot rule 1). Coding is included for its focus on upgrading application code and dependencies (Coding rule 1 and 2). Azure is included since the modernization process involves migration to Azure and extending apps into the cloud (Azure rule 1 and 4). DevOps is assigned because the content encompasses modernization workflows, team development processes, and integration of cloud infrastructure (DevOps rules 3, 5, and 9). Generic exclusion rules do not apply here; the content is technical, demo-focused, and not biographical, business strategy, or sales pitch.",
+    "timestamp": "2025-12-10 00:12:38 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=t3Y3Kg4BU3w",
+    "reason": "Succesfully added: Assigned AI category because the session is focused on enabling AI agents to interact with enterprise data (AI rule 1 and 4). Security category justified by detailed coverage of risk management, data protection, and least-privilege access strategies (Security rules 1, 2, 4, 9). Azure category included due to substantial focus on Azure SQL Database (Azure rules 1, 4). ML category applies because AI agent interaction with databases involves complex schema understanding and error reduction, relevant to ML/data science engineering (ML rules 2, 6). Content is technical, not business/workplace focused, and does not trigger any generic exclusion rules.",
+    "timestamp": "2025-12-10 00:12:54 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=V5ATFFuxYUo",
+    "reason": "Succesfully added: Assigned AI category because the content discusses AI-driven development and workflow modernization using Microsoft technologies (AI rule 4). Assigned Azure category since Azure Storage, SQL Database, Azure MCP server, and resource integration are covered (Azure rules 1, 4). DevOps category is included due to the focus on infrastructure-as-code, workflow automation, and deployment practices (DevOps rules 1, 5, 6). Coding category was added as the session involves .NET web app development and integration within Visual Studio (Coding rules 1, 4, 5). No exclusion rules applied, as content is technical, sufficiently detailed, and focused on developer practices with Microsoft technologies.",
+    "timestamp": "2025-12-10 00:13:11 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=xFi_MtLlYpk",
+    "reason": "Succesfully added: Assigned AI category as the content discusses building agentic (AI-driven) solutions and integrating AI agent features into .NET applications, satisfying AI inclusion rule 4. Assigned Coding category because the session focuses on .NET architecture, programming practices, and integration of a technical framework, fulfilling Coding inclusion rule 1. Azure is referenced only as a link for trial purposes and is not central to the technical walkthrough, so the Azure category is not assigned.",
+    "timestamp": "2025-12-10 00:13:31 +00:00",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=ZtHjLHwgy68",
+    "reason": "Succesfully added: Assigned Azure category since the content is focused on Azure App Service and Managed Instance (Azure Inclusion Rule 1). Assigned Coding category because it centers on ASP.NET apps and developer migration strategies (Coding Inclusion rules 1, 2, and 4). Did not assign AI or ML categories since the modernization and integration with agentic workflows is discussed in a general sense without detailing AI implementation. Content is not excluded by any generic exclusion rules; it's technical, in English, substantial, and free of job, business, and sales pitch focus.",
+    "timestamp": "2025-12-10 00:13:48 +00:00",
+    "collection": "videos"
   }
 ]
