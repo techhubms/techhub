@@ -10455,5 +10455,11 @@
     "collection": "community",
     "timestamp": "2025-12-10 17:08:24 +00:00",
     "reason": "Insufficient content length"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2025/12/09/xbox-indie-selects-demo-fest-starts-now/",
+    "reason": "No categories found: All content is focused on promoting a gaming event (ID@Xbox Indie Selects Demo Fest) which is oriented toward gamers and players, not developers, consultants, or technical implementation. The content describes new indie games, game demos, and Xbox platform features for consumers, but contains no technical depth about Microsoft developer tools, Azure, AI, Coding, DevOps, ML, or Security. This is strictly a consumer-focused announcement and is excluded by generic exclusion rules for non-development Microsoft products and consumer apps, as well as business strategy/company news that lack technical implementation details.",
+    "timestamp": "2025-12-10 18:06:17 +00:00"
   }
 ]
