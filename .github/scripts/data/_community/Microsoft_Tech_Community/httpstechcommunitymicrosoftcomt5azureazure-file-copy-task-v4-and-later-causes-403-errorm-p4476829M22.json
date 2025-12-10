@@ -1,0 +1,14 @@
+{
+  "Tags": [],
+  "Description": "I've configured a release pipeline in ADO which copies some files to a Storage Account. Using Azure File copy task version 6 consistently fails with a 403 error.\n\n>\n> RESPONSE Status: 403 This request is not authorized to perform this operation using this permission.\n>\n\nAfter much wasted time checking IP restrictions, checking access and recreating service connections I tried using an earlier version of the task that some other pipelines which do the same thing were using. I found that using version 4 or later of the file copy task causes the issue. Setting the task version to 3 works.\n\nAre there any known issues around this?",
+  "Author": "LouisT",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Title": "Azure File copy task v4 and later causes 403 error",
+  "EnhancedContent": "I've configured a release pipeline in ADO which copies some files to a Storage Account. Using Azure File copy task version 6 consistently fails with a 403 error.\n\n>\n> RESPONSE Status: 403 This request is not authorized to perform this operation using this permission.\n>\n\nAfter much wasted time checking IP restrictions, checking access and recreating service connections I tried using an earlier version of the task that some other pipelines which do the same thing were using. I found that using version 4 or later of the file copy task causes the issue. Setting the task version to 3 works.\n\nAre there any known issues around this?",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "PubDate": "2025-12-10T14:07:49+00:00",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2025-12-10 17:07:21",
+  "OutputDir": "_community",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/azure-file-copy-task-v4-and-later-causes-403-error/m-p/4476829#M22371"
+}

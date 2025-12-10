@@ -21482,5 +21482,11 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/lakehouse-schemas-generally-available/",
     "timestamp": "2025-12-10 16:05:33 +00:00",
     "reason": "Succesfully added: Content focuses entirely on Microsoft Fabric lakehouses, which are Azure-based data engineering tools for analytics workloads. The article discusses new schema capabilities, Spark integration, data management, and interoperability—central themes for ML/data engineering. Assigned 'Azure' category (covers Microsoft Fabric) and 'ML' category (lakehouses are primarily for analytics/data science/ML use cases per ML category rules 1, 2, 5). Coding, DevOps, and Security categories were not assigned due to lack of focus on development, automation, or security implementation. AI category not assigned, as this article does not describe use of AI services or Copilot products."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-12-10-github-enterprise-server-3-19-is-now-generally-available",
+    "collection": "news",
+    "timestamp": "2025-12-10 17:08:00 +00:00",
+    "reason": "Succesfully added: Content qualifies for DevOps category based on focus on deployment efficiency, workflow automation, repository management, and development operations processes (DevOps rule 1, 3, 5). Security category applies due to features like SHA pinning, blocking actions, cipher suite configuration, and policy enforcement to strengthen code and workflow security (Security rules 1, 2, 3, 4, 7). Coding, AI, ML, Azure, and GitHub Copilot categories do not apply, as content focuses on DevOps/admin features of GitHub Enterprise Server rather than coding practices, AI integration, ML workloads, or Microsoft cloud technologies."
   }
 ]

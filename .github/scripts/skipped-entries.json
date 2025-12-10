@@ -10449,5 +10449,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=gCFWwr-eiLU",
     "timestamp": "2025-12-10 16:06:06 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rule - the description and title indicate this content is in Portuguese (pt-BR🇧🇷), not primarily in English. According to the Non-English Content exclusion rule in Chapter 3, content not primarily in English (<80%) must be excluded. Additionally, the content does not specify any Microsoft technology, product, or category qualifying per inclusion rules."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-file-copy-task-v4-and-later-causes-403-error/m-p/4476829#M22371",
+    "collection": "community",
+    "timestamp": "2025-12-10 17:08:24 +00:00",
+    "reason": "Insufficient content length"
   }
 ]
