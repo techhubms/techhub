@@ -1,0 +1,24 @@
+{
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "Author": "Microsoft Developer",
+  "FeedName": "Microsoft Developer YouTube",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Link": "https://www.youtube.com/watch?v=sCv_noSKIBw",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Title": "Supercharge your apps w/ OpenAI: Secure auth, Azure integration and MCP agents",
+  "ProcessedDate": "2025-12-11 00:10:00",
+  "Description": "Discover how to unlock the full potential of AI in your apps using the official OpenAI libraries for .NET, Python, JavaScript, Java and Go. In this session, we’ll go beyond the basics and dive into modern, enterprise-ready practices for integrating AI securely and efficiently. We’ll start by clarifying the relationship between OpenAI, Azure OpenAI, and Azure AI Foundry Models. We will help you understand when to use each and how they complement one another in enterprise scenarios. From there, you’ll learn how to transition from traditional API key-based authentication to a robust, token-based approach using Microsoft Entra ID—ensuring compliance and scalability for your organization. Finally, we’ll explore how to call Model Context Protocol (MCP) tools directly from the OpenAI library, enabling your agentic apps to leverage external tools and data sources seamlessly. Whether you’re building intelligent assistants, automating workflows, or enhancing user experiences, this session will equip you with the knowledge and code samples to get started today.\n\nJoin the conversation on the Microsoft Foundry Discord: https://aka.ms/AIDevDays/Discord Sign up for an Azure Free Trial: https://aka.ms/AzureFreeTrialYT Get hands-on with today's MCP lab repo: https://aka.ms/AIDevDays/LabDay1 Catch up on-demand: https://aka.ms/AIDevDays/OnDemand",
+  "PubDate": "2025-12-10T23:42:25+00:00",
+  "Tags": [
+    "AI",
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Developer",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ]
+}
