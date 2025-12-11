@@ -21590,5 +21590,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=jcDhtVZONb4",
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI category due to focus on Microsoft Foundry Agent Service, which is part of Azure AI platform (AI rule 1 and AI rule 3). Assigned Azure category because the content integrates Microsoft Azure services and MCP (Azure rule 1 and 4), and links to Azure-specific resources. No Coding category applied since the description does not detail language or framework code development. Excluded ML because the content centers on agent construction with pre-built AI features (AI vs ML distinction)."
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the 'Azure' category since the entire article is focused on Azure Container Apps and resource management (Azure Inclusion Rule 1 and 4). No other categories fit: there is no AI, ML, Coding (no code/tutorials), DevOps (focus is not on CI/CD or workflow/process), Security (no mention of identity, security, or compliance). Tags are drawn from technical terms such as product names, concepts discussed (workload profiles, autoscaling, etc.), and Azure infrastructure features. Content meets quality standards: clear technical content, no exclusion rules triggered, community post is well over 200 words.",
+    "timestamp": "2025-12-11 06:06:04 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/capacity-planning-with-azure-container-apps-workload-profiles/ba-p/4477085"
   }
 ]
