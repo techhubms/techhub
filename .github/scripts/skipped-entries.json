@@ -10491,5 +10491,11 @@
     "timestamp": "2025-12-11 18:06:19 +00:00",
     "reason": "No categories found: No categories were assigned because the content is an announcement about personalization features and new themes in the Microsoft Store for Windows, which focus on end-user customization and consumer experience, not on technical development, coding, Microsoft platform architecture, or developer tools. The content does not mention any qualifying Microsoft technologies or developer-centric features such as AI, coding frameworks, DevOps practices, or security architecture. This falls under the 'Non-Development Microsoft Products' generic exclusion rule (Chapter 3), as it centers on consumer-facing personalization rather than technical implementation or development guidance.",
     "collection": "news"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The description and title clearly show this is a promotional or community engagement event focusing on social interaction ('Come cowork and chat with Cassidy and Kedasha on the GitHub team and ask your questions!'), rather than substantive technical content related to Microsoft technologies. The absence of any technical description or detail further supports the exclusion. This qualifies as 'question-only content' and 'community engagement' without technical depth, and does not fit any inclusion categories.",
+    "canonical_url": "https://www.youtube.com/watch?v=35poA93sVVA",
+    "timestamp": "2025-12-11 19:08:48 +00:00"
   }
 ]

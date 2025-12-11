@@ -21656,5 +21656,23 @@
     "timestamp": "2025-12-11 18:06:45 +00:00",
     "reason": "Succesfully added: Assigned the DevOps category because the article centers on CI/CD, automation, workflow improvements, platform architecture, and community collaboration around GitHub Actions (DevOps rule 2, 5, 6, 8). Azure, AI, ML, Coding, Security categories were not included because content does not cover Microsoft-specific cloud, AI, coding patterns, machine learning, or security implementations. Although GitHub Actions is relevant within the Microsoft ecosystem, this article focuses entirely on GitHub's platform-side DevOps improvements, not Azure cloud services or their integration. All decisions follow chapter 4 category inclusion rules and multi-platform guidelines for Microsoft-centric content.",
     "collection": "news"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'Security' category because the article focuses on a cyberattack involving compromised identities, remote access attacks, and Microsoft security technologies (Security rule 1, 2, 3, 4, 5, and 9). 'Azure' category was added as the response leverages Azure-based security analysis tools (Cosmic, Arctic, Entra ID, Defender for Cloud apps) and Active Directory integrations (Azure rule 1, 4, and 5). Excluded other categories because the content does not focus on coding practices, AI, ML, DevOps, or GitHub Copilot. Rebranding rules were followed when referencing Azure AD as Entra ID. All content qualifies according to inclusion/exclusion hierarchy and does not trigger any generic exclusions.",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/12/11/imposter-for-hire-how-fake-people-can-gain-very-real-access/",
+    "timestamp": "2025-12-11 19:08:17 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric and SQL database are being utilized as Azure services (Azure rule 1). Assigned ML category because the content focuses on data engineering, integration, sample architectures, and end-to-end data solutions for analytics workflows, which fits under Microsoft Fabric's data/analytics scope (ML rules 1, 2, and 4). No other categories qualified since the focus is database architecture, data platform integration, and analytics—not coding, AI, DevOps, GitHub Copilot, or Security. Determined relevance from the description, resource links, and references to Microsoft’s data platform ecosystem.",
+    "canonical_url": "https://www.youtube.com/watch?v=Lt63g-NeqBM",
+    "timestamp": "2025-12-11 19:09:08 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'AI' category because the core subject is Azure Copilot's Storage Migration Solutions Advisor, which delivers conversational, AI-powered recommendations for data migration (AI rule 1, 4, 5). Assigned 'Azure' because the workflow, tools, and recommended solutions are based on Azure services and the migration targets are Azure storage technologies (Azure rule 1, 4, 6). Did not assign other categories—no code-level details or developer frameworks, ML focus, or explicit security implementation is present. The content is well above the minimum length for community and is not biographical, negative, or promotional, and is primarily technical and instructional.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/transforming-data-migration-using-azure-copilot/ba-p/4476610",
+    "timestamp": "2025-12-11 19:09:32 +00:00"
   }
 ]
