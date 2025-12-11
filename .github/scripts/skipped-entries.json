@@ -10485,5 +10485,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule. The input lacks substantive technical content about Microsoft technologies or development topics; it primarily consists of social media links, promotional statements about GitHub, and meta information. There is no main text, tutorial, technical guide, or actionable coding/developer information present. This matches the sales pitch and lack of educational value exclusions in the workflow.",
     "collection": "videos",
     "timestamp": "2025-12-11 17:10:38 +00:00"
+  },
+  {
+    "canonical_url": "https://blogs.windows.com/windowsexperience/2025/12/11/your-pc-your-personality-new-themes-in-store-for-you/",
+    "timestamp": "2025-12-11 18:06:19 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is an announcement about personalization features and new themes in the Microsoft Store for Windows, which focus on end-user customization and consumer experience, not on technical development, coding, Microsoft platform architecture, or developer tools. The content does not mention any qualifying Microsoft technologies or developer-centric features such as AI, coding frameworks, DevOps practices, or security architecture. This falls under the 'Non-Development Microsoft Products' generic exclusion rule (Chapter 3), as it centers on consumer-facing personalization rather than technical implementation or development guidance.",
+    "collection": "news"
   }
 ]
