@@ -1,0 +1,47 @@
+---
+layout: "post"
+title: "Swiggy's Real-Time Data Processing with Microsoft Fabric"
+description: "This news post highlights how Swiggy leverages Microsoft Fabric to process billions of data points in near real time, driving innovations in operational convenience for millions of users. The use case demonstrates large-scale streaming data analysis and the strategic role of data architecture in enabling actionable insights and transforming digital logistics. While technical implementation details are not deep, Microsoft Fabric's central role in stream processing and enterprise-scale analytics is clearly established."
+author: "stclarke"
+excerpt_separator: <!--excerpt_end-->
+canonical_url: "https://www.linkedin.com/posts/satyanadella_real-time-intelligence-how-indias-swiggy-activity-7404753089972535299-0NPA"
+viewing_mode: "external"
+feed_name: "Microsoft News"
+feed_url: "https://news.microsoft.com/source/feed/"
+date: 2025-12-11 04:10:00 +00:00
+permalink: "/2025-12-11-Swiggys-Real-Time-Data-Processing-with-Microsoft-Fabric.html"
+categories: ["Azure", "ML"]
+tags: ["Azure", "Azure Data", "Batch Processing", "Big Data", "Cloud Data", "Company News", "Data Architecture", "Data Platform", "Digital Logistics", "Enterprise Analytics", "Innovation", "LinkedIn Post", "Microsoft Fabric", "ML", "Near Real Time", "News", "Operational Intelligence", "Real Time Data Processing", "Streaming Analytics", "Swiggy"]
+tags_normalized: ["azure", "azure data", "batch processing", "big data", "cloud data", "company news", "data architecture", "data platform", "digital logistics", "enterprise analytics", "innovation", "linkedin post", "microsoft fabric", "ml", "near real time", "news", "operational intelligence", "real time data processing", "streaming analytics", "swiggy"]
+---
+
+stclarke reports on how Swiggy uses Microsoft Fabric to process streaming data in near real time, enabling new capabilities in convenience delivery for millions of users.<!--excerpt_end-->
+
+# Swiggy's Real-Time Data Processing with Microsoft Fabric
+
+Swiggy, a leading convenience platform in India, is utilizing Microsoft Fabric to handle billions of data points in near real time. By leveraging Fabric's capabilities, Swiggy can ingest, analyze, and act on large volumes of operational and user data, supporting innovations in logistics and customer experience.
+
+## Key Use Case
+
+- **Processing Scale:** Swiggy deals with billions of data points from transactions, logistics, and user interactions.
+- **Near Real-Time Analytics:** Microsoft Fabric enables Swiggy to transform raw data into actionable insights within seconds.
+- **Operational Impact:** Improvements in routing, inventory, supply chain management, and delivery efficiency are being unlocked.
+
+## Strategic Architecture
+
+- **Unified Compute Fabric:** Swiggy's use of Microsoft Fabric goes beyond traditional enterprise tools, making real-time intelligence an infrastructure-level capability.
+- **Data-Driven Decisions:** Operators and strategists leverage live analytics to improve execution, refine strategies, and support population-scale logistics.
+
+## Industry Implications
+
+- Sets a precedent for large-scale, cloud-based data processing in India's tech sector
+- Demonstrates how digital infrastructure becomes a competitive advantage at enterprise and national levels
+
+## References and More Information
+
+- [Original LinkedIn post by Satya Nadella](https://www.linkedin.com/posts/satyanadella_real-time-intelligence-how-indias-swiggy-activity-7404753089972535299-0NPA)
+- [Further coverage by Microsoft Source](https://news.microsoft.com/source/asia/features/real-time-intelligence-how-indias-swiggy-serves-millions-with-microsoft-fabric/)
+
+*Note: Technical implementation specifics are limited in the news post but the role of Microsoft Fabric in scalable, real-time analytics is clearly central to the solution.*
+
+This post appeared first on "Microsoft News". [Read the entire article here](https://www.linkedin.com/posts/satyanadella_real-time-intelligence-how-indias-swiggy-activity-7404753089972535299-0NPA)
