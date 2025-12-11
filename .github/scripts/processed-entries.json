@@ -21626,5 +21626,11 @@
     "collection": "news",
     "reason": "Succesfully added: Content qualifies for AI because it details multi-model AI orchestration, LM council patterns, and agentic reasoning frameworks (AI Inclusion Rule 1, 4, 5). Azure is assigned due to explicit Azure environment deployment and infrastructure use (Azure Rule 1). Coding is included due to workflow automation with branches, PRs, GitHub Codespaces, and direct development practices (Coding Inclusion Rules 2, 4, 5). Copilot is mentioned as a future integration, but the actual implementation focuses on developer and AI integration. No exclusion rules apply, as the content is technical, implementation-driven, and has detailed architecture and process descriptions.",
     "canonical_url": "https://www.linkedin.com/posts/satyanadella_was-fun-to-be-at-a-dev-event-in-bengaluru-activity-7404820776195043329-A5vB"
+  },
+  {
+    "reason": "Succesfully added: Included the AI category because the update centers on integrating AI agents and features like Agent HQ, which are part of Microsoft's AI-assisted development ecosystem (AI rule 1 and 5). GitHub Copilot is directly referenced as the new standard for AI code completion and is a developer tool (GitHub Copilot rules 1 and 2); as such, both 'AI' and 'GitHub Copilot' categories are assigned together. The Coding category applies due to the deep focus on programming with VS Code, TypeScript 7, and changes to code completion workflows (Coding rules 1-5). No Azure, DevOps, ML, or Security categories are included as Azure services and core ML/data topics are not central, and security considerations are limited to configuration warnings.",
+    "timestamp": "2025-12-11 16:07:03 +00:00",
+    "canonical_url": "https://devclass.com/2025/12/11/vs-code-update-brings-agent-overload-typescript-7-preview-and-the-end-of-intellicode/",
+    "collection": "posts"
   }
 ]

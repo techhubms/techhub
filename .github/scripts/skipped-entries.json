@@ -10473,5 +10473,11 @@
     "timestamp": "2025-12-10 23:08:23 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=Wt1-u8wD_Xs",
     "reason": "No categories found: No content is provided in the input ('content' is null and 'description' is empty), making it impossible to apply category inclusion rules or determine technical depth. According to the workflow's core processing rules, if there's insufficient information to make a categorization decision, all categories must be excluded. Additionally, the generic exclusion rule regarding missing substantive content applies."
+  },
+  {
+    "reason": "No categories found: No categories were assigned because, while the content concerns a Microsoft virtualization product (Hyper-V), it does not fit any of the predefined categories. It is a community question seeking troubleshooting help rather than containing substantive technical education or guidance (Generic Exclusion Rule: Question-Only Content). As per the workflow, question-only posts (where the main purpose is seeking help, not providing implementation, tutorial, or deep dive) are excluded from categorization.",
+    "timestamp": "2025-12-11 16:07:39 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-stack/issue-with-hyper-v-vm-on-tagged-vlan-traffic-reaches-local-hosts/m-p/4477220#M293",
+    "collection": "community"
   }
 ]

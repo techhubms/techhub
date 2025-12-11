@@ -1,0 +1,14 @@
+{
+  "Title": "Issue with Hyper-V VM on Tagged VLAN – Traffic Reaches Local Hosts but Not External Networks",
+  "PubDate": "2025-12-11T12:31:28+00:00",
+  "OutputDir": "_community",
+  "Author": "PieroB83",
+  "Description": "Hi everyone, I’m having an issue getting a Hyper-V VM to work correctly when using a tagged VLAN interface.\n\nI have a test VM configured with a trunk port and a tagged VLAN.\n\nHere is the configuration I’m using:\n\nSet-VMNetworkAdapterVlan -VMName \"testvlan\" -Trunk -NativeVlanId 2 -AllowedVlanIdList \"4\"\n\nThe strange part is this:\n\nWhen the VM is on VLAN 4 (tagged), it can reach other resources on the same VLAN as long as those resources are running on the same Hyper-V host.\n\nBut if the target resource is outside the Hyper-V host, the VM cannot reach it at all.\n\nThe hardware vendor has already ruled out any issue with the top-of-rack switches interconnecting the hosts.\n\nIf I reconfigure the VM’s network adapter in access mode on the same VLAN, then all traffic works normally and the VM can reach resources outside the host without any problem.\n\nSo it seems that traffic leaves the host correctly only when the adapter is in access mode, not when using a trunk with VLAN tagging. Has anyone seen this behavior before or has suggestions on what to check next?",
+  "ProcessedDate": "2025-12-11 16:06:14",
+  "EnhancedContent": "Hi everyone, I’m having an issue getting a Hyper-V VM to work correctly when using a tagged VLAN interface.\n\nI have a test VM configured with a trunk port and a tagged VLAN.\n\nHere is the configuration I’m using:\n\nSet-VMNetworkAdapterVlan -VMName \"testvlan\" -Trunk -NativeVlanId 2 -AllowedVlanIdList \"4\"\n\nThe strange part is this:\n\nWhen the VM is on VLAN 4 (tagged), it can reach other resources on the same VLAN as long as those resources are running on the same Hyper-V host.\n\nBut if the target resource is outside the Hyper-V host, the VM cannot reach it at all.\n\nThe hardware vendor has already ruled out any issue with the top-of-rack switches interconnecting the hosts.\n\nIf I reconfigure the VM’s network adapter in access mode on the same VLAN, then all traffic works normally and the VM can reach resources outside the host without any problem.\n\nSo it seems that traffic leaves the host correctly only when the adapter is in access mode, not when using a trunk with VLAN tagging. Has anyone seen this behavior before or has suggestions on what to check next?",
+  "Tags": [],
+  "FeedName": "Microsoft Tech Community",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-stack/issue-with-hyper-v-vm-on-tagged-vlan-traffic-reaches-local-hosts/m-p/4477220#M293",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node"
+}
