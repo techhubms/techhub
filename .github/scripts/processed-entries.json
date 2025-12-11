@@ -21596,5 +21596,11 @@
     "reason": "Succesfully added: Assigned the 'Azure' category since the entire article is focused on Azure Container Apps and resource management (Azure Inclusion Rule 1 and 4). No other categories fit: there is no AI, ML, Coding (no code/tutorials), DevOps (focus is not on CI/CD or workflow/process), Security (no mention of identity, security, or compliance). Tags are drawn from technical terms such as product names, concepts discussed (workload profiles, autoscaling, etc.), and Azure infrastructure features. Content meets quality standards: clear technical content, no exclusion rules triggered, community post is well over 200 words.",
     "timestamp": "2025-12-11 06:06:04 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/capacity-planning-with-azure-container-apps-workload-profiles/ba-p/4477085"
+  },
+  {
+    "canonical_url": "https://devops.com/malicious-vs-code-extensions-take-screenshots-steal-info/",
+    "collection": "posts",
+    "timestamp": "2025-12-11 09:08:07 +00:00",
+    "reason": "Succesfully added: Assigned Security because the article provides an in-depth technical analysis of how malicious VS Code extensions exploited developers, covering malware mechanisms, DLL hijacking, and infostealer payloads (Security rules 1, 2, 5, 9). Assigned DevOps because the focus is on risks to software supply chains and code repositories like GitHub and npm, which are central to DevOps practices (DevOps rules 2, 5, 7, and 'Team Collaboration/Organization'). Content does not qualify for AI, Coding, Azure, ML, or GitHub Copilot as it does not teach development, focus on Microsoft cloud services, or showcase ML/data workflows. The malicious 'AI assistant' is discussed as a lure rather than as a technical AI application, so AI and GitHub Copilot are not included."
   }
 ]
