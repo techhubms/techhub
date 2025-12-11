@@ -10503,5 +10503,35 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule - the provided content is a short video description promoting the Open WebUI project, but there is no substantive technical detail focused on Microsoft technologies or platforms. It generally introduces Open WebUI, an open-source, self-hosted AI platform, but does not demonstrate or mention integration, deployment, or development practices with Microsoft Azure, GitHub Copilot, or any other Microsoft ecosystem services. The Microsoft content threshold is not met (Chapter 2), and the inclusion rules for 'AI' require Microsoft product usage or development, which is not present in the description. Therefore, no categories were assigned.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=Ly3T8sHvWyc"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to lack of substantive content. The input consists only of a keynote opener announcement and a list of promotional/community links, without any actual technical information, topics, or implementation details. According to the workflow, only actual content should be used for categorization, and this submission does not contain any main content (the 'content' field is null). Therefore, none of the inclusion rules can be applied.",
+    "timestamp": "2025-12-11 23:06:26 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=FVPjg513eww"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: All categories excluded because the submission lacks substantive technical content ('content' field is null), and the 'description' only includes a high-level topic (the evolution of .NET) and a collection of links to official .NET channels. There are no technical implementation details, code, or educational value beyond mentioning .NET's evolution, so this fails the minimum standard for technical content required for any category under the inclusion rules. Per Chapter 2 and 4, focus must be on actual educational content (not just social/media channel promotion or general commentary), and per Chapter 3, focus on content depth over announcements or promotional material.",
+    "timestamp": "2025-12-11 23:06:39 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=RtkYCw-_8oE"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule—biographical focus. The description indicates the video is primarily about a cultural change within the .NET team and improvement of performance, featuring high-level leaders discussing team focus and product direction. There are no technical implementation details, how-to guidance, or in-depth discussion of engineering architecture or coding. The central topic is leadership/organizational culture, which falls under the business/workplace exclusion rules in Chapter 3.",
+    "timestamp": "2025-12-11 23:06:51 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=SWTuE4G2KVc"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned due to generic exclusion rule. The content field is null, meaning there is no substantive technical material to analyze. Additionally, the description primarily refers to a video interview/discussion on open sourcing .NET and community contributions, but does not include sufficient technical detail or developer-focused implementation information. The content as provided cannot be evaluated for category inclusion (such as Coding) without more information, so per 'When in doubt, exclude' and focus on actual content rules, no categories can be assigned.",
+    "timestamp": "2025-12-11 23:07:04 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Uk70fmcwhPE"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The primary focus is biographical/appreciation, thanking Scott Guthrie for his support in open sourcing .NET, without substantive technical detail, tutorial, or architectural discussion. The content is a gratitude/acknowledgement message and does not feature any technical implementation, coding, or Microsoft technology instruction as required by category inclusion rules. This fits the 'Biographical Focus' exclusion criteria in Chapter 3.",
+    "timestamp": "2025-12-11 23:07:16 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=znUW4PYaXqg"
   }
 ]
