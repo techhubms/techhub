@@ -10479,5 +10479,11 @@
     "timestamp": "2025-12-11 16:07:39 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-stack/issue-with-hyper-v-vm-on-tagged-vlan-traffic-reaches-local-hosts/m-p/4477220#M293",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=-v8Pd25zytE",
+    "reason": "No categories found: Content excluded due to generic exclusion rule. The input lacks substantive technical content about Microsoft technologies or development topics; it primarily consists of social media links, promotional statements about GitHub, and meta information. There is no main text, tutorial, technical guide, or actionable coding/developer information present. This matches the sales pitch and lack of educational value exclusions in the workflow.",
+    "collection": "videos",
+    "timestamp": "2025-12-11 17:10:38 +00:00"
   }
 ]

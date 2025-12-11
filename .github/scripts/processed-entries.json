@@ -21632,5 +21632,23 @@
     "timestamp": "2025-12-11 16:07:03 +00:00",
     "canonical_url": "https://devclass.com/2025/12/11/vs-code-update-brings-agent-overload-typescript-7-preview-and-the-end-of-intellicode/",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/blog/making-windows-terminal-awesome-with-github-copilot-cli",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' category because the content is centered around using GitHub Copilot CLI for developer workflows (GitHub Copilot rules 1–4). Assigned 'AI' because GitHub Copilot CLI leverages AI-driven code completion and command assistance (AI rule 2). Assigned 'Coding' because it's about command-line development, terminal customization, PowerShell usage, and integrating CLI tools (Coding rules 4 and 5). No other categories qualify—the focus is not on Azure, DevOps practices, ML, or security implementation.",
+    "collection": "news",
+    "timestamp": "2025-12-11 17:09:23 +00:00"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/variable-library-support-in-notebook-now-generally-available/",
+    "reason": "Succesfully added: Assigned ML category because the content revolves around data engineering, Spark settings, and notebook development in Microsoft Fabric—all key aspects of ML/data science engineering (ML rules 1, 2). Assigned Azure category since Fabric is a core Azure service (Azure rule 1), and both resources and development flows reference Azure environments. Assigned DevOps category because of multiple references to CI/CD, configuration management, automation, and Service Principal authentication (DevOps rules 5, 6, 9). Assigned Coding category since the notebook focuses on programmatic variable access, APIs, and code integration (Coding rules 2, 4). Exclusion rules do not apply as technical implementation and Microsoft technologies are central throughout.",
+    "collection": "news",
+    "timestamp": "2025-12-11 17:09:46 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-12-11-repository-dashboard-find-search-and-save-queries-in-preview",
+    "reason": "Succesfully added: Assigned the 'DevOps' category since the repository dashboard focuses on collaborative workflow management, repository organization, and developer tools—all central DevOps themes (DevOps rules 3, 9, 10, and GitHub content rule 11). No other category applies; it does not specifically cover coding, AI, ML, Azure, or security technical depth. Content is technical news, not biographical, promotional, or business strategy focused, so none of the generic exclusions apply. Tags were chosen based on features described (search, filtering, queries, collaboration) and central workflow concepts.",
+    "collection": "news",
+    "timestamp": "2025-12-11 17:10:09 +00:00"
   }
 ]
