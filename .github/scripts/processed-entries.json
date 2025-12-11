@@ -21578,5 +21578,17 @@
     "timestamp": "2025-12-11 00:11:19 +00:00",
     "reason": "Succesfully added: Assigned AI category as the session centers on leveraging OpenAI, Azure OpenAI, and Azure AI Foundry (AI category rules 1 and 4). Assigned Azure category based on coverage of Azure OpenAI and Azure AI Foundry, plus enterprise Azure integration concepts (Azure rule 1). Coding category added due to focus on practical integration with code samples in multiple languages (.NET, Python, JavaScript, Java, Go) (Coding rules 1, 2, and 4). Security category included because of in-depth discussion on secure, token-based authentication via Microsoft Entra ID (Security category rules 1 and 3). All categories are supported by the description and content focus on technical implementation.",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-12-11 01:34:08 +00:00",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/actioning-agentic-ai-5-ways-to-build-with-news-from-microsoft-ignite-2025/",
+    "collection": "news",
+    "reason": "Succesfully added: Included AI category due to extensive focus on AI models (Foundry, Claude, GPT), agentic platforms, and semantic intelligence (AI rule 1, 3, 4, 5). Included Azure because every major feature (Foundry, HorizonDB, Copilot, hardware) is a central Azure cloud innovation (Azure rules 1, 3, 4, 5, 6). ML applies for HorizonDB vector indexes, semantic search, and Fabric IQ’s analytics/data science functionality (ML rules 1, 2, 3, 4, 6, 9). Coding is relevant through developer tool integrations, VS Code extensions, migration techniques, and application patterns (Coding rules 1, 2, 3, 4). DevOps is supported by Copilot’s automation features and agentic migration, deployment, and operational workflows (DevOps rules 1, 5, 6). Security applies due to Azure security hardware (Boost DPU, Integrated HSM), compliance mechanisms, and RBAC in Copilot (Security rules 1, 5, 7, 9). Generic exclusions do not apply, and categories were systematically assigned per explicit inclusion criteria."
+  },
+  {
+    "timestamp": "2025-12-11 01:34:45 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=jcDhtVZONb4",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category due to focus on Microsoft Foundry Agent Service, which is part of Azure AI platform (AI rule 1 and AI rule 3). Assigned Azure category because the content integrates Microsoft Azure services and MCP (Azure rule 1 and 4), and links to Azure-specific resources. No Coding category applied since the description does not detail language or framework code development. Excluded ML because the content centers on agent construction with pre-built AI features (AI vs ML distinction)."
   }
 ]
