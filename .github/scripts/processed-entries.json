@@ -21674,5 +21674,29 @@
     "reason": "Succesfully added: Assigned 'AI' category because the core subject is Azure Copilot's Storage Migration Solutions Advisor, which delivers conversational, AI-powered recommendations for data migration (AI rule 1, 4, 5). Assigned 'Azure' because the workflow, tools, and recommended solutions are based on Azure services and the migration targets are Azure storage technologies (Azure rule 1, 4, 6). Did not assign other categories—no code-level details or developer frameworks, ML focus, or explicit security implementation is present. The content is well above the minimum length for community and is not biographical, negative, or promotional, and is primarily technical and instructional.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/transforming-data-migration-using-azure-copilot/ba-p/4476610",
     "timestamp": "2025-12-11 19:09:32 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is positioned as an Azure-based, unified cloud data platform, and its services like OneLake and Data Factory are central to Azure's cloud offerings (Azure rule 1, 2, 4). 'ML' category applies because of the strong focus on analytics, data engineering, real-time intelligence, and enabling AI/ML workloads (ML rules 1, 2, 4, 7). 'AI' category is included due to repeated reference to AI-powered analytics, unlocking AI, and Microsoft Fabric as an AI-driven platform (AI rule 1, 4, 5). No Coding or DevOps categories assigned since the article does not discuss framework-level code, developer experience, or DevOps practices. Security is not included as there is no coverage of security tooling or concerns. No generic exclusion rules apply: the content is not biographical, a sales pitch, negative, or business-only focused, and is technical in nature.",
+    "timestamp": "2025-12-11 20:06:54 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-recognized-as-a-leader-in-the-2025-gartner-magic-quadrant-for-data-integration-tools-2/"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category because the content centers on GPT-5.2, an AI model developed by OpenAI, and its integration across Microsoft’s tools (AI inclusion rule 1, 4, 5). 'GitHub Copilot' was assigned because the post and several comments specifically highlight the new model’s capabilities, impact, and rollout in GitHub Copilot (GitHub Copilot inclusion rules 1, 2, and 3). Did NOT assign Coding as there is no technical/code walkthrough, and use cases around coding are mentioned only at a high level. Did NOT assign Azure, ML, DevOps, or Security since those areas are only indirectly referenced, not focusing on their implementation details. Several comments criticize Copilot in the productivity context, but multi-category inclusion is justified by the prominence of GitHub Copilot developer content. Most content (excluding a few critical comments) meets quality and relevance standards; negativity is present in only one comment, so the negativity exclusion does NOT trigger.",
+    "timestamp": "2025-12-11 20:07:17 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_super-excited-about-gpt-52-from-our-partners-activity-7404949433819463680-VyMD"
+  },
+  {
+    "reason": "Succesfully added: Content focuses on the integration of OpenAI’s GPT-5.2 model with GitHub Copilot, a developer tool, and details technical access and platform availability (AI rule 1, GitHub Copilot rule 1). This justifies both 'AI' and 'GitHub Copilot' categories. No other categories are assigned, as the article does not discuss direct coding, DevOps, Azure, ML, or security practices. The reasoning excludes business productivity contexts (Microsoft 365 Copilot), consistent with the Copilot product distinction rule.",
+    "timestamp": "2025-12-11 20:07:39 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-12-11-openais-gpt-5-2-is-now-in-public-preview-for-github-copilot"
+  },
+  {
+    "reason": "Succesfully added: The content covers a new GitHub Discussions feature for repository administration and official community engagement, fitting the DevOps category (DevOps rules: team collaboration, developer experience, and GitHub usage). The Coding, AI, Azure, ML, Security, and GitHub Copilot categories were not assigned because the content is not about code, AI, Azure services, ML, or security implementation. All generic exclusion checks were unnecessary as none applied. Tags focus on technical aspects relevant to GitHub Discussions, administration, and security.",
+    "timestamp": "2025-12-11 20:07:56 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-12-11-post-as-admin-now-available-in-github-discussions"
   }
 ]

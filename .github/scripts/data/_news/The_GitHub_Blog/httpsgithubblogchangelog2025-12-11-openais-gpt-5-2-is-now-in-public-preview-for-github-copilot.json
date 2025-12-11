@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Author": "Allison",
+  "EnhancedContent": "GPT-5.2, OpenAI’s newest model focused on long context and front-end UI generation, will be available to Copilot Pro, Pro+, Business, and Enterprise.\n\n### Availability in GitHub Copilot\n\nOpenAI GPT-5.2 will be available to Copilot Pro, Pro+, Business, and Enterprise.\n\nYou’ll be able to select the model in the Copilot model picker from any of the following:\n\n- Visual Studio Code in all modes: chat, ask, edit, agent\n- Copilot Chat in github.com\n- GitHub Mobile (iOS and Android)\n- Copilot CLI\n\nRollout will be gradual. If you don’t see the new models yet, check back soon.\n\n### Enabling access\n\n- **Enterprise and Business plans**: Administrators must enable the OpenAI GPT-5.2 in Copilot settings. Once enabled, users in that organization will see the respective model in the Copilot model picker.\n- **Pro and Pro+ plans**: Users can enable the model by selecting it in the model picker and confirming the one-time prompt.\n- **Bring your own key**: Within Visual Studio Code, select **Manage Models** from the picker, choose **OpenAI GPT-5.2**, and enter your API key when prompted.\n\n### Learn more\n\nTo explore all models available in GitHub Copilot, see [our documentation on models](https://docs.github.com/copilot/reference/ai-models/supported-models?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels) and get started with Copilot.\n\n### Share your feedback\n\nJoin the [GitHub Community](https://github.com/orgs/community/discussions/categories/copilot-conversations?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels) to share your feedback.",
+  "ProcessedDate": "2025-12-11 20:03:52",
+  "PubDate": "2025-12-11T16:07:42+00:00",
+  "Title": "OpenAI’s GPT-5.2 is now in public preview for GitHub Copilot",
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2025-12-11-openais-gpt-5-2-is-now-in-public-preview-for-github-copilot",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "Description": "GPT-5.2, OpenAI’s newest model focused on long context and front-end UI generation, will be available to Copilot Pro, Pro+, Business, and Enterprise. Availability in GitHub Copilot OpenAI GPT-5.2 will be…\n\nThe post [OpenAI’s GPT-5.2 is now in public preview for GitHub Copilot](https://github.blog/changelog/2025-12-11-openais-gpt-5-2-is-now-in-public-preview-for-github-copilot) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "OutputDir": "_news"
+}
