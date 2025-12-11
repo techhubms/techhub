@@ -21698,5 +21698,17 @@
     "timestamp": "2025-12-11 20:07:56 +00:00",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-12-11-post-as-admin-now-available-in-github-discussions"
+  },
+  {
+    "timestamp": "2025-12-11 22:06:10 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content discusses GitHub Copilot and AI-driven development tools (AI rule 2 and 4). Assigned GitHub Copilot because the video specifically mentions its use in development (GitHub Copilot rule 1). Assigned Coding because the content focuses on spec-driven development and developer tool usage (Coding rules 2 and 4). No DevOps, Azure, ML, or Security categories were assigned because the video's primary focus is on development methodology and tooling, not deployment operations, data science, or security-specific topics.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=VfBLlAN5zdQ"
+  },
+  {
+    "timestamp": "2025-12-11 22:06:36 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the update centers on Azure Managed Prometheus and Azure Monitor (Azure rule 1, 2, 4, 5). Assigned the DevOps category because the content covers observability, metric collection, integration with Prometheus exporters, workflows suitable for infrastructure and operations, and alerting practices (DevOps rule 5, 6, 7). Did not assign AI (the offering supports AI/HPC monitoring with GPUs but is not directly an AI/ML technology itself), nor ML, Coding, Security, or GitHub Copilot, as there is no coverage of those topics. All generic exclusion checks (such as language, relevance, length, job/biographical/advice focus) were passed; substantive, technical content is provided.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/private-preview-azure-managed-prometheus-on-vm-vmss/ba-p/4473472"
   }
 ]

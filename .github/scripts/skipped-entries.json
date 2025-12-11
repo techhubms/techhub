@@ -10497,5 +10497,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rules. The description and title clearly show this is a promotional or community engagement event focusing on social interaction ('Come cowork and chat with Cassidy and Kedasha on the GitHub team and ask your questions!'), rather than substantive technical content related to Microsoft technologies. The absence of any technical description or detail further supports the exclusion. This qualifies as 'question-only content' and 'community engagement' without technical depth, and does not fit any inclusion categories.",
     "canonical_url": "https://www.youtube.com/watch?v=35poA93sVVA",
     "timestamp": "2025-12-11 19:08:48 +00:00"
+  },
+  {
+    "timestamp": "2025-12-11 22:05:49 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the provided content is a short video description promoting the Open WebUI project, but there is no substantive technical detail focused on Microsoft technologies or platforms. It generally introduces Open WebUI, an open-source, self-hosted AI platform, but does not demonstrate or mention integration, deployment, or development practices with Microsoft Azure, GitHub Copilot, or any other Microsoft ecosystem services. The Microsoft content threshold is not met (Chapter 2), and the inclusion rules for 'AI' require Microsoft product usage or development, which is not present in the description. Therefore, no categories were assigned.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=Ly3T8sHvWyc"
   }
 ]
