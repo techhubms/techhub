@@ -21602,5 +21602,11 @@
     "collection": "posts",
     "timestamp": "2025-12-11 09:08:07 +00:00",
     "reason": "Succesfully added: Assigned Security because the article provides an in-depth technical analysis of how malicious VS Code extensions exploited developers, covering malware mechanisms, DLL hijacking, and infostealer payloads (Security rules 1, 2, 5, 9). Assigned DevOps because the focus is on risks to software supply chains and code repositories like GitHub and npm, which are central to DevOps practices (DevOps rules 2, 5, 7, and 'Team Collaboration/Organization'). Content does not qualify for AI, Coding, Azure, ML, or GitHub Copilot as it does not teach development, focus on Microsoft cloud services, or showcase ML/data workflows. The malicious 'AI assistant' is discussed as a lure rather than as a technical AI application, so AI and GitHub Copilot are not included."
+  },
+  {
+    "reason": "Succesfully added: Assigned only the 'AI' category. The main content is about the effects of AI tools—especially generative AI—on the software development process, referencing industry research and best practices (AI category, rules 1, 4, and 5). There is no substantial focus on Microsoft technologies, coding with Microsoft-specific languages/tools, or DevOps with Microsoft platforms, so 'Azure', 'DevOps', 'Coding', 'ML', 'GitHub Copilot', and 'Security' are not included. Key exclusion: While Microsoft is peripherally mentioned in some comparison content in the link farm and surrounding site elements, it is not central to the analysis or findings presented. The majority of content is research-focused around AI in software development generally.",
+    "canonical_url": "https://devclass.com/2025/12/11/research-ai-can-help-or-hinder-software-development-and-old-style-best-practices-make-the-difference/",
+    "collection": "posts",
+    "timestamp": "2025-12-11 12:06:24 +00:00"
   }
 ]
