@@ -21776,5 +21776,23 @@
     "reason": "Succesfully added: Assigned the Azure category because the video centers around multiple Azure service updates, including retirements, compliance changes, new features, and product releases (Azure Batch, App Gateway, Azure Files, Azure Databricks, Azure Sphere OS). No other categories were assigned, as the content does not deeply cover AI (mention of GPT-5.2 is brief), ML, DevOps practices, Coding, Security engineering, or GitHub Copilot topics. The video is primarily news and updates focused on Azure. Generic exclusion rules do not apply, as the content delivers technical updates for practitioners.",
     "canonical_url": "https://www.youtube.com/watch?v=tYKS34Wgf1w",
     "timestamp": "2025-12-12 17:05:36 +00:00"
+  },
+  {
+    "timestamp": "2025-12-12 18:07:01 +00:00",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-adding-reinforcement-learning-to-ai-agents-without-code-rewrites/",
+    "reason": "Succesfully added: Assigned the AI category because the content centers on Agent Lightning, a Microsoft-developed open-source framework for RL-enabling AI agents, matching the AI inclusion rules (specifically, Microsoft AI research, product introduction, and AI development with Microsoft technology). No other categories are added: while agent systems may involve coding, this post has a broader technical focus on framework architecture and reinforcement learning methodology, rather than step-by-step coding or platform-specific setup. There is no DevOps, Azure, ML (data science), or Security focus in the content. The technical tags were extracted by prioritizing product names, domains, algorithms, frameworks, and use cases explicitly covered in the text."
+  },
+  {
+    "timestamp": "2025-12-12 18:07:55 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/key-considerations-for-modernizing-and-migrating-custom/ba-p/4476580",
+    "reason": "Succesfully added: Assigned 'Azure' because the content centers on Microsoft Azure migration and modernization tools, services, and best practices (Azure inclusion rule 1). Assigned 'Security' due to coverage of security architecture, managed identities, Key Vault, Defender for Cloud, and Sentinel (Security rules 1, 2, 4, 5, 6, 7, 9). Assigned 'DevOps' for detailed discussion of Azure DevOps Pipelines, GitHub Actions, CI/CD, infrastructure as code tools, and related deployment practices (DevOps rules 1, 2, 5, 6). Assigned 'AI' because of extensive coverage of AI-driven migration, Azure AI services, and use of Copilot for modernization (AI rules 1, 4, 5, 6). Assigned 'GitHub Copilot' as it describes Copilot's role in code modernization; also included 'AI' per AI category rules (GitHub Copilot rule 1, and AI rule 2). Excluded 'Coding' and 'ML' because the focus is on application and cloud migration strategy rather than hands-on coding tutorials or in-depth ML engineering; AI/ML are discussed in integration and operations rather than custom model/data science development."
+  },
+  {
+    "timestamp": "2025-12-12 18:08:17 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-upskilling-framework-level-3-building/ba-p/4477472",
+    "reason": "Succesfully added: Included the AI category because the session is directly focused on AI upskilling, agentic workflows, and Microsoft AI frameworks (AI rule 1, 4, 5). Included Azure because Microsoft Foundry, Agentic Framework, and other Azure-hosted solutions are central to the demos and technical implementation (Azure rule 1, 4). Did not add Coding, DevOps, ML, Security, or GitHub Copilot because the content's main focus is on AI concepts, implementation frameworks, and upskilling strategy—not hands-on code, DevOps processes, ML engineering specifics, or security details. The session is technical, developer-targeted, and references practical demos using Microsoft technology; facts are substantiated using the provided content."
   }
 ]
