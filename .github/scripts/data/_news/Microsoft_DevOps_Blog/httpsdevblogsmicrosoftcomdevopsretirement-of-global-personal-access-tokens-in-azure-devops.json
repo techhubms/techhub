@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://devblogs.microsoft.com/devops/feed/",
+  "Author": "Angel Wong",
+  "FeedName": "Microsoft DevOps Blog",
+  "EnhancedContent": "In the new year, we’ll be retiring the **Global Personal Access Token (PAT) type** in Azure DevOps.\n\nGlobal PATs allow users to authenticate across all accessible organizations. While this can feel convenient, a single credential with broad reach creates a concentrated security risk — especially as a user’s access footprint grows. This level of privilege becomes an attractive target for bad actors, making global tokens unsuitable for today’s security‑conscious environments.\n\n[![global pat image](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoMAAAFYAQMAAAASsWS8AAAAA1BMVEXW1taWrGEgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAMklEQVR4nO3BMQEAAADCoPVPbQo/oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHgYbjAAAXCtPvEAAAAASUVORK5CYII=)](https://devblogs.microsoft.com/devops/wp-content/uploads/sites/6/2025/12/global-pat.webp)\n\nSetting clear boundaries around high‑impact credentials is one of the most effective ways to prevent large‑scale breaches. As part of Microsoft’s broader security strategy, we are moving away from global, full‑scoped PATs and enforcing organizational‑level policies that limit token power. We strongly recommend transitioning to **short‑lived, Microsoft Entra–backed authentication**, which offers modern protections such as improved token governance, stronger identity controls, and reduced risk of credential exposure.\n\nThese changes reflect real‑world learnings that we have already applied to improve the security posture across Microsoft and many Azure DevOps customers.\n\n### Key Dates\n\n- **March 15, 2026** – Creation of new global PATs and regeneration of existing global PATs will be blocked.\n- **December 1, 2026** – All existing global PATs will be fully decommissioned. Tokens will stop working after this date.\n\n### Recommended Actions\n\nIf any of your current workflows rely on global PATs, we encourage you to begin planning your transition now. Options include:\n\n- Splitting authentication across individual Azure DevOps organizations, or\n- Adopting **Entra‑based, short‑lived authentication** in place of PATs.\n\nUsers with active global PATs will receive additional guidance via email to support a successful migration.",
+  "Link": "https://devblogs.microsoft.com/devops/retirement-of-global-personal-access-tokens-in-azure-devops/",
+  "PubDate": "2025-12-12T14:15:06+00:00",
+  "Description": "In the new year, we’ll be retiring the Global Personal Access Token (PAT) type in Azure DevOps. Global PATs allow users to authenticate across all accessible organizations. While this can feel convenient, a single credential with broad reach creates a concentrated security risk — especially as a user’s access footprint grows. This level of privilege […]\n\nThe post [Retirement of Global Personal Access Tokens in Azure DevOps](https://devblogs.microsoft.com/devops/retirement-of-global-personal-access-tokens-in-azure-devops/) appeared first on [Azure DevOps Blog](https://devblogs.microsoft.com/devops).",
+  "Title": "Retirement of Global Personal Access Tokens in Azure DevOps",
+  "Tags": [
+    "DevOps",
+    "PATs"
+  ],
+  "FeedLevelAuthor": "Azure DevOps Blog",
+  "ProcessedDate": "2025-12-12 15:03:10",
+  "OutputDir": "_news"
+}

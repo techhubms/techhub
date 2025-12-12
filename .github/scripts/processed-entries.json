@@ -21752,5 +21752,23 @@
     "timestamp": "2025-12-12 14:07:00 +00:00",
     "reason": "Succesfully added: Categories assigned based on the central topics: 'AI' is warranted because the post discusses large-scale deployment of Microsoft AI technologies including OpenAI (AI rule 1, 4, 6). 'Azure' is included due to explicit mention of Microsoft Azure powering the solution (Azure rule 1, 4). 'Security' is justified by the discussions around cybercrime, financial fraud, and law enforcement use cases (Security rules 1, 4, 5, 7, 9). There is no focus on Coding, DevOps, ML, or GitHub Copilot. The collaborative nature and operational focus ensure this is more than a business/executive announcement, meeting the technical and public-sector implementation threshold.",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-12 15:05:41 +00:00",
+    "reason": "Succesfully added: Added DevOps category because the news concerns Azure DevOps service authentication (DevOps rule 1). Security category is included as the change is motivated by reducing risk and improving identity management (Security rules 1, 3). Azure category is assigned since Azure DevOps is a core Azure service (Azure rule 1). The content discusses token management, organizational boundaries, and urges migration to Microsoft Entra-backed authentication, directly reflecting technical DevOps and security implementation. No generic exclusion rules apply as the post is not biographical, not a sales pitch, not negative, and entirely in English. It targets technical users responsible for DevOps workflows, not executives or business managers.",
+    "canonical_url": "https://devblogs.microsoft.com/devops/retirement-of-global-personal-access-tokens-in-azure-devops/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-12 15:06:05 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category because the update centers on GitHub Actions runners—including required upgrades, CI/CD reliability, and developer automation (DevOps rules 2, 5, 6). Assigned Azure category because network diagnostics specifically relate to runners using Azure VNET injection (Azure rule 1). Excluded AI, ML, Coding, Security, and GitHub Copilot categories because the content does not discuss those Microsoft technologies or contexts as per inclusion rules. Generic exclusion rules did not apply.",
+    "canonical_url": "https://github.blog/changelog/2025-12-12-better-diagnostics-for-vnet-injected-runners-and-required-self-hosted-runner-upgrades",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-12 15:06:39 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the video explicitly discusses the impact and developer sentiment around GitHub Copilot, an AI-powered developer tool (AI rules 1-2, GitHub Copilot rules 1, 2, 4). Also assigned 'DevOps' since the content covers team processes, onboarding, and organizational developer practices, which fall under DevOps rule 3 and 9. Did not assign 'Coding' because there is no discussion of code-level techniques, languages, or frameworks. Did not assign 'Azure', 'ML', or 'Security' as these topics are not substantively covered.",
+    "canonical_url": "https://www.youtube.com/watch?v=riTyEDJdpEw",
+    "collection": "videos"
   }
 ]
