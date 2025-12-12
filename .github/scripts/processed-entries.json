@@ -21740,5 +21740,11 @@
     "reason": "Succesfully added: Assigned the DevOps category based on content focused on improvements to developer workflows, version control, code review processes, and collaboration tools in GitHub. No Coding, Azure, AI, ML, or Security categories apply since there is no programming, Microsoft cloud/AI services, data science, or security implementation discussed. Content type is news with technical depth, focused on workflow enhancements for development teams.",
     "timestamp": "2025-12-12 03:32:09 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-12-11-review-commit-by-commit-improved-filtering-and-more-in-the-pull-request-files-changed-public-preview"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/",
+    "timestamp": "2025-12-12 04:15:42 +00:00",
+    "reason": "Succesfully added: Applied the AI category because the content is centered on GPT-5.2, a Microsoft AI product deployed through Azure Foundry, with a focus on AI model capabilities, development use cases, and enterprise integration (AI rules 1 and 5). The Azure category is included since Microsoft Foundry runs on Azure and Azure is described as the foundational platform (Azure rules 1 and 4). Coding and ML categories were considered but not assigned, as the article speaks to code generation and ML models at an architectural level, not hands-on code development or custom ML engineering. Exclusion rules do not apply as this is clearly technical content focused on Microsoft technology and AI development."
   }
 ]
