@@ -21722,5 +21722,11 @@
     "reason": "Succesfully added: Assigned AI category because the content focuses on leveraging AI agents, specifically GitHub Copilot Cloud Agent, for code modernization (AI inclusion rule 1 and 2). Assigned GitHub Copilot because the session demonstrates and discusses features of GitHub Copilot in a developer context (GitHub Copilot inclusion rules 1 and 2). Assigned Coding because the session is about code modernization, refactoring, and development practices with Microsoft tools (Coding inclusion rules 3 and 4). Azure is referenced as a resource, but not central to the main technical focus, so not included as a core category. No generic exclusion rules apply because the content is technical, implementation-focused, and addresses developer workflows.",
     "timestamp": "2025-12-11 23:07:57 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=gaejtW5dKsY"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' category because the video centers on GitHub Copilot, an AI-powered development tool (per AI category rule 2). 'GitHub Copilot' category is included since Copilot is explicitly the main tool discussed (GitHub Copilot inclusion rules 1 and 2). 'Coding' is assigned as the focus is practical development—shipping code, product creation, workflow optimization—in developer environments (Coding category rules 1, 2, and 4). No exclusion rules apply: the content is technical, in English, not biographical, and not business productivity-focused. The provided description makes clear this is not a sales pitch or executive summary but a genuine practitioner walkthrough.",
+    "timestamp": "2025-12-12 00:12:02 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=g658oC4nuMQ",
+    "collection": "videos"
   }
 ]
