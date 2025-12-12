@@ -21800,5 +21800,23 @@
     "canonical_url": "https://www.youtube.com/shorts/0vjkCXWebe4",
     "collection": "videos",
     "timestamp": "2025-12-12 19:06:53 +00:00"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-12-12-gemini-3-pro-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse",
+    "reason": "Succesfully added: Included 'AI' category because the content is centered on the rollout of a new AI model (Gemini 3 Pro) used within GitHub Copilot, which fits AI rule 1. Included 'GitHub Copilot' because the feature is specifically integrated into GitHub Copilot, satisfying GitHub Copilot rule 1 and 2. Did not include other categories as the announcement is not about coding patterns, DevOps, Azure, ML, or security. The news is technical, relevant to developer tooling, and not excluded by any generic exclusion rule.",
+    "timestamp": "2025-12-12 21:06:14 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/news-insights/policy-news-and-insights/the-future-of-ai-powered-software-optimization-and-how-it-can-help-your-team/",
+    "reason": "Succesfully added: Assigned AI category because the article focuses on AI-enabled developer tooling, LLM-powered automation, and agentic workflows (AI inclusion rules 1 and 4). Assigned DevOps because of detailed coverage of workflow automation, CI/CD, GitHub Actions, and infrastructure/process improvements (DevOps rules 2, 5, 6, and 9). Assigned Coding because the practice centers on automated code improvements, quality, and performance (Coding rules 4 and 5). Did not assign Azure or ML categories, as Microsoft cloud services and data science/ML engineering are not the primary focus, though Microsoft repositories are referenced. No Security category, as security is not a principal theme.",
+    "timestamp": "2025-12-12 21:06:38 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=fXDaDGKoGg0",
+    "reason": "Succesfully added: Assigned DevOps due to content showing agent management, automation, and workflow orchestration in VS Code, which aligns with DevOps rules for developer tooling and operational workflows. Coding is included because the session explores developer-centric features and task management within a programming tool (Visual Studio Code). Azure is added because the content references managing cloud agents and integration with Azure (Azure rule 1, 4), and Azure resources are promoted in the video description. No AI category is included, as there is no direct focus on Microsoft AI services or frameworks in the provided description.",
+    "timestamp": "2025-12-12 21:07:19 +00:00",
+    "collection": "videos"
   }
 ]
