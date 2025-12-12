@@ -21794,5 +21794,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-upskilling-framework-level-3-building/ba-p/4477472",
     "reason": "Succesfully added: Included the AI category because the session is directly focused on AI upskilling, agentic workflows, and Microsoft AI frameworks (AI rule 1, 4, 5). Included Azure because Microsoft Foundry, Agentic Framework, and other Azure-hosted solutions are central to the demos and technical implementation (Azure rule 1, 4). Did not add Coding, DevOps, ML, Security, or GitHub Copilot because the content's main focus is on AI concepts, implementation frameworks, and upskilling strategy—not hands-on code, DevOps processes, ML engineering specifics, or security details. The session is technical, developer-targeted, and references practical demos using Microsoft technology; facts are substantiated using the provided content."
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category because the video focuses on best practices for security modeling within the Microsoft ecosystem, specifically emphasizing the importance of storytelling in threat and risk assessment (Security rules 2 and 9). There were no other qualifying categories, as the content does not address technical implementation, coding, DevOps, Azure, AI, or ML. No generic exclusion rules applied as the video is educational, in English, and is not sales, biographical, or executive-focused content.",
+    "canonical_url": "https://www.youtube.com/shorts/0vjkCXWebe4",
+    "collection": "videos",
+    "timestamp": "2025-12-12 19:06:53 +00:00"
   }
 ]

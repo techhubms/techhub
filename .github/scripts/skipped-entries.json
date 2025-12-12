@@ -10581,5 +10581,11 @@
     "collection": "news",
     "canonical_url": "https://news.xbox.com/en-us/2025/12/11/the-game-awards-2025-recap-every-winner-and-xbox-reveal/",
     "reason": "No categories found: No categories were assigned because the content is an industry news summary about award nominations and winners, game reveals, and overall achievements at The Game Awards. It does not contain technical detail, guidance, or developer-focused content pertaining to Microsoft technology implementation. Categories like 'Coding', 'DevOps', 'Azure', 'ML', 'AI', or 'Security' do not apply as per the processing rules, since the content pertains to gaming news and product announcements without developer or implementation depth."
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the content focuses on a high-level discussion about the importance of storytelling in security modeling rather than specific technical implementation, development, configuration, or engineering using Microsoft technologies. The description indicates a conceptual approach to security culture, not detailed technical guidance, code, or product usage (per Generic Exclusion Rules: business strategy/executive and workplace/culture focus). With no substantive content available beyond the description, there is also insufficient technical detail to qualify for Security or other categories.",
+    "canonical_url": "https://www.youtube.com/watch?v=6gnX5lqHJ-k",
+    "collection": "videos",
+    "timestamp": "2025-12-12 19:07:06 +00:00"
   }
 ]

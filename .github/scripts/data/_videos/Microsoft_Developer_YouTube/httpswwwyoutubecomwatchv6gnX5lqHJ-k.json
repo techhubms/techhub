@@ -1,0 +1,16 @@
+{
+  "Link": "https://www.youtube.com/watch?v=6gnX5lqHJ-k",
+  "FeedName": "Microsoft Developer YouTube",
+  "PubDate": "2025-12-12T18:38:01+00:00",
+  "OutputDir": "_videos",
+  "Tags": [
+    "OneDevQuestion"
+  ],
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Author": "Microsoft Developer",
+  "ProcessedDate": "2025-12-12 19:05:52",
+  "Description": "Security modeling isn’t just threat trees and crypto talk. Michael Howard explains why the stories behind real incidents might matter more than the theory itself. Turns out, the way we tell what happened can change how teams understand risk… and what they do about it.\n\nSecurity blog: https://msft.it/6057tY6bf\n\n#OneDevQuestion",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Title": "Why is storytelling important when doing security modeling?"
+}
