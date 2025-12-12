@@ -21746,5 +21746,11 @@
     "canonical_url": "https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/",
     "timestamp": "2025-12-12 04:15:42 +00:00",
     "reason": "Succesfully added: Applied the AI category because the content is centered on GPT-5.2, a Microsoft AI product deployed through Azure Foundry, with a focus on AI model capabilities, development use cases, and enterprise integration (AI rules 1 and 5). The Azure category is included since Microsoft Foundry runs on Azure and Azure is described as the foundational platform (Azure rules 1 and 4). Coding and ML categories were considered but not assigned, as the article speaks to code generation and ML models at an architectural level, not hands-on code development or custom ML engineering. Exclusion rules do not apply as this is clearly technical content focused on Microsoft technology and AI development."
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_a-race-against-time-maharashtra-police-get-activity-7405143430328258560-Bzph",
+    "timestamp": "2025-12-12 14:07:00 +00:00",
+    "reason": "Succesfully added: Categories assigned based on the central topics: 'AI' is warranted because the post discusses large-scale deployment of Microsoft AI technologies including OpenAI (AI rule 1, 4, 6). 'Azure' is included due to explicit mention of Microsoft Azure powering the solution (Azure rule 1, 4). 'Security' is justified by the discussions around cybercrime, financial fraud, and law enforcement use cases (Security rules 1, 4, 5, 7, 9). There is no focus on Coding, DevOps, ML, or GitHub Copilot. The collaborative nature and operational focus ensure this is more than a business/executive announcement, meeting the technical and public-sector implementation threshold.",
+    "collection": "news"
   }
 ]

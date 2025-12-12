@@ -10533,5 +10533,41 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule: The primary focus is biographical/appreciation, thanking Scott Guthrie for his support in open sourcing .NET, without substantive technical detail, tutorial, or architectural discussion. The content is a gratitude/acknowledgement message and does not feature any technical implementation, coding, or Microsoft technology instruction as required by category inclusion rules. This fits the 'Biographical Focus' exclusion criteria in Chapter 3.",
     "timestamp": "2025-12-11 23:07:16 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=znUW4PYaXqg"
+  },
+  {
+    "timestamp": "2025-12-12 06:06:13 +00:00",
+    "reason": "No categories found: No categories have been assigned because the content is primarily high-level, focusing on industry trends, market analysis, and developer population growth in India as reported by GitHub's Octoverse. According to Generic Exclusion Rules (Chapter 3), industry trend and market analysis content without technical implementation detail or hands-on technical depth is excluded. The video description and chapter listing indicate discussion around demographics, diversity, and ecosystem growth, but do not reference technical implementation topics or Microsoft-specific technology usage required for category inclusion per Chapter 2 and Chapter 4. Thus, no categories apply.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=aa3GrqEhj2Q"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This news post focuses exclusively on price adjustments for Microsoft's Commercial Cloud services, detailing local currency price drops. There is no substantive technical, development, or implementation content—no architecture, coding, DevOps, security, or cloud usage guidance. The post is purely a pricing/business announcement targeting customers and partners, without technical depth or developer/practitioner relevance. This matches the 'Business Strategy and Executive Content' and 'Non-Development Microsoft Products' generic exclusion rules in Chapter 3.",
+    "canonical_url": "https://news.microsoft.com/source/2025/12/11/local-currency-price-adjustments-for-microsofts-commercial-cloud-2/",
+    "timestamp": "2025-12-12 08:06:45 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://dellenny.com/understanding-teams-policies-messaging-meetings-calling-complete-guide/",
+    "timestamp": "2025-12-12 09:07:42 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: Excluded all categories due to generic exclusion rules regarding non-development Microsoft products. The content focuses purely on administrative and end-user policy management for Microsoft Teams—covering messaging, meetings, and calling policies from an IT admin and organizational compliance perspective. There is no mention of Teams development (e.g., bot creation, custom apps, SDK usage, or extensibility), no developer tooling, code, or development practices, nor any integration with development frameworks or APIs. According to the Non-Development Microsoft Products exclusion in Chapter 3 and the clarifications for Microsoft 365/Teams content (Chapter 6), only Teams development and extensibility content qualifies; general configuration and policy administration does not."
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-run-windows-11-smoothly-on-a-5-or-7-year-old-laptop-pc/",
+    "timestamp": "2025-12-12 12:06:11 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: All content focuses on end-user system optimization, hardware upgrades, and tuning Windows 11 for aging consumer devices without any development, coding, DevOps, AI, ML, Azure, or security implementation aspects. There are no technical details related to Microsoft development platforms, programming, or developer-focused topics. The article provides guidance for general users on improving the performance of Windows 11, which falls under non-development Microsoft products (generic exclusion rule: non-development Microsoft products and end-user features). Therefore, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/Tw3l74DJ35s",
+    "timestamp": "2025-12-12 12:06:38 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The provided input lacks substantive technical content ('content' is null and 'description' is empty), so there is insufficient information to categorize. Additionally, based on the title, this appears to be a very short video clip (possibly a social media post or highlight) discussing a favorite way to use Copilot, without any technical depth or details. Per generic exclusion rules, content with minimal text, lack of substantial explanation, or missing main content does not qualify for any categories."
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/asia/features/a-race-against-time-maharashtra-police-get-an-ai-copilot-to-fight-cybercrime/",
+    "timestamp": "2025-12-12 14:06:38 +00:00",
+    "reason": "No categories found: Content excluded under generic exclusion rules. The news item provides only a title, a one-sentence description, an image, and author attribution, with no substantive technical content, actionable information, or meaningful detail. There is no discussion of technologies, implementation, technical architecture, Microsoft platforms, or developer/IT practitioner relevance. It consists entirely of an announcement with no technical depth or educational value, thus triggering the sales pitch/content quality exclusion. This is also lacking any details required to assess category inclusion.",
+    "collection": "news"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "Title": "Local currency price adjustments for Microsoft’s Commercial Cloud",
+  "Author": "ryon",
+  "Link": "https://news.microsoft.com/source/2025/12/11/local-currency-price-adjustments-for-microsofts-commercial-cloud-2/",
+  "ProcessedDate": "2025-12-12 14:04:00",
+  "FeedName": "Microsoft News",
+  "FeedUrl": "https://news.microsoft.com/source/feed/",
+  "Description": "The post [Local currency price adjustments for Microsoft’s Commercial Cloud](https://news.microsoft.com/source/2025/12/11/local-currency-price-adjustments-for-microsofts-commercial-cloud-2/) appeared first on [Source](https://news.microsoft.com/source).",
+  "Tags": [
+    "Cloud",
+    "Company News"
+  ],
+  "FeedLevelAuthor": "Source",
+  "OutputDir": "_news",
+  "PubDate": "2025-12-12T06:59:58+00:00",
+  "EnhancedContent": "Effective February 1, 2026, Microsoft will be adjusting prices for its Commercial Cloud services to more closely align with global levels in the following currencies: Swiss franc (CHF), Danish krone (DKK), euro (EUR), Norwegian krone (NOK) and Swedish krona (SEK). This ensures that customers across different geographies and currencies will experience consistent pricing regionally. No on-premises software pricing will be adjusted.\n\n| **Pricing Currency** | **Cloud % Adjustment**1 | **On-Prem % Adjustment** | | --- | --- | --- | | Swiss franc (CHF) | -9.5% | None | | Danish krone (DKK) | -7.4% | None | | Euro (EUR) | -7.4% | None | | Norwegian krone (NOK) | -7.2% | None | | Swedish krona (SEK) | -13.5% | None |\n\n*1Percentage changes for individual SKUs might vary slightly from these percentages due to pricing calculations and rounding rules*.\n\nThe Microsoft Cloud continues to be competitively priced, underscoring our unwavering dedication to helping customers and partners thrive. We continue to invest in technologies that enable innovation, reduce operational costs, improve performance and efficiency and support robust security frameworks that organizations around the globe depend on."
+}
