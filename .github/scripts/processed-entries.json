@@ -21770,5 +21770,11 @@
     "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the video explicitly discusses the impact and developer sentiment around GitHub Copilot, an AI-powered developer tool (AI rules 1-2, GitHub Copilot rules 1, 2, 4). Also assigned 'DevOps' since the content covers team processes, onboarding, and organizational developer practices, which fall under DevOps rule 3 and 9. Did not assign 'Coding' because there is no discussion of code-level techniques, languages, or frameworks. Did not assign 'Azure', 'ML', or 'Security' as these topics are not substantively covered.",
     "canonical_url": "https://www.youtube.com/watch?v=riTyEDJdpEw",
     "collection": "videos"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Azure category because the video centers around multiple Azure service updates, including retirements, compliance changes, new features, and product releases (Azure Batch, App Gateway, Azure Files, Azure Databricks, Azure Sphere OS). No other categories were assigned, as the content does not deeply cover AI (mention of GPT-5.2 is brief), ML, DevOps practices, Coding, Security engineering, or GitHub Copilot topics. The video is primarily news and updates focused on Azure. Generic exclusion rules do not apply, as the content delivers technical updates for practitioners.",
+    "canonical_url": "https://www.youtube.com/watch?v=tYKS34Wgf1w",
+    "timestamp": "2025-12-12 17:05:36 +00:00"
   }
 ]

@@ -10569,5 +10569,11 @@
     "timestamp": "2025-12-12 14:06:38 +00:00",
     "reason": "No categories found: Content excluded under generic exclusion rules. The news item provides only a title, a one-sentence description, an image, and author attribution, with no substantive technical content, actionable information, or meaningful detail. There is no discussion of technologies, implementation, technical architecture, Microsoft platforms, or developer/IT practitioner relevance. It consists entirely of an announcement with no technical depth or educational value, thus triggering the sales pitch/content quality exclusion. This is also lacking any details required to assess category inclusion.",
     "collection": "news"
+  },
+  {
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/paas-resource-metrics-using-azure-data-collection-rule-to-log/m-p/4477437#M22374",
+    "timestamp": "2025-12-12 17:05:43 +00:00"
   }
 ]
