@@ -10587,5 +10587,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=6gnX5lqHJ-k",
     "collection": "videos",
     "timestamp": "2025-12-12 19:07:06 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-13 00:11:15 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=uBw1Q0L6qwU",
+    "reason": "No categories found: The content is excluded due to the generic exclusion rule on business strategy and executive content. The description indicates a focus on senior leaders, optimizing engineering investments, leadership challenges, ROI measurement, and business-alignment of metrics. While it mentions AI and engineering pipelines, the main focus is on high-level organizational strategy and executive decision-making rather than technical implementation or hands-on developer guidance. Therefore, per generic exclusion (Business Strategy and Executive Content), no categories are assigned."
   }
 ]

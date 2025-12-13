@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2025-12-13 00:10:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=uBw1Q0L6qwU",
+  "Title": "Transforming Engineering Leadership with AI and Metrics",
+  "OutputDir": "_videos",
+  "FeedName": "GitHub YouTube",
+  "Tags": [],
+  "FeedLevelAuthor": "GitHub",
+  "Description": "Join GitHub's Andrea Griffiths and Jeff Keyes, Field CTO at Allstacks, to explore how the Intelligence Engine and AI-powered deep research agents help senior leaders optimize engineering investments and improve project predictability. We break down why most AI adoption falls short (hint: it's not just about code generation), address real challenges like watermelon projects, and discuss how to measure what actually matters: alignment and ROI. Learn how to speak the language of business, move beyond vanity metrics and dashboards, and use data-driven insights to eliminate bottlenecks across your entire development pipeline.",
+  "Author": "GitHub",
+  "PubDate": "2025-12-12T23:00:04+00:00"
+}

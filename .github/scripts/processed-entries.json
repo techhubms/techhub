@@ -21818,5 +21818,11 @@
     "reason": "Succesfully added: Assigned DevOps due to content showing agent management, automation, and workflow orchestration in VS Code, which aligns with DevOps rules for developer tooling and operational workflows. Coding is included because the session explores developer-centric features and task management within a programming tool (Visual Studio Code). Azure is added because the content references managing cloud agents and integration with Azure (Azure rule 1, 4), and Azure resources are promoted in the video description. No AI category is included, as there is no direct focus on Microsoft AI services or frameworks in the provided description.",
     "timestamp": "2025-12-12 21:07:19 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-13 00:11:02 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=qzZTCPiXJtY",
+    "reason": "Succesfully added: Assigned AI category because content features a custom Copilot with educational and assistive functionalities (AI rule 1, custom Copilot for development/learning). Assigned Azure category due to cloud hosting and integration into the Microsoft tech stack (Azure rule 1). Assigned Coding category since the platform involves ASP.NET Blazor development, .NET, and Q# programming (Coding rules 1 and 2). Did not assign 'GitHub Copilot' because this references a custom Copilot, not the GitHub product. ML is not central, and Security/DevOps are not substantive in this context."
   }
 ]
