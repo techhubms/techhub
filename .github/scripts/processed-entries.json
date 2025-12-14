@@ -21824,5 +21824,11 @@
     "timestamp": "2025-12-13 00:11:02 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=qzZTCPiXJtY",
     "reason": "Succesfully added: Assigned AI category because content features a custom Copilot with educational and assistive functionalities (AI rule 1, custom Copilot for development/learning). Assigned Azure category due to cloud hosting and integration into the Microsoft tech stack (Azure rule 1). Assigned Coding category since the platform involves ASP.NET Blazor development, .NET, and Q# programming (Coding rules 1 and 2). Did not assign 'GitHub Copilot' because this references a custom Copilot, not the GitHub product. ML is not central, and Security/DevOps are not substantive in this context."
+  },
+  {
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/no-code-ai-how-non-developers-can-build-smart-chatbots-with-copilot-studio-2/",
+    "timestamp": "2025-12-14 13:12:15 +00:00",
+    "reason": "Succesfully added: Category 'AI' is assigned because the article is about Copilot Studio, a Microsoft product used to create AI-powered chatbots, specifically via a no-code platform (AI inclusion rules 1 and 2). Copilot Studio is a developer/maker tool (not a business productivity Copilot), so it matches the AI category but does not qualify for 'GitHub Copilot' (which is specifically GitHub's coding assistant). 'Coding' is not included because the process is targeted at non-developers using visual/no-code tools rather than programming with languages/frameworks (Coding inclusion rules do not apply). 'Azure' is not directly assigned, since although integration with Azure AI services is mentioned, the substantive focus is Copilot Studio's platform and workflow. The content is sufficiently technical and instructional, therefore none of the generic exclusion rules apply."
   }
 ]
