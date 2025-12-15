@@ -21866,5 +21866,29 @@
     "collection": "news",
     "timestamp": "2025-12-15 17:08:36 +00:00",
     "reason": "Succesfully added: Content is Microsoft-published technical news about Microsoft Fabric Environment performance upgrades, centered on developer and data engineering workflows. Assigned 'Azure' because Microsoft Fabric is a cloud platform service for data/analytics workloads (Azure rule 1), and assigned 'ML' because the content details improvements for Apache Spark sessions and Python library management—integral to ML/data engineering work (ML rules 1, 2, and 8). No 'AI' category: no mention of AI platforms or developer tooling. No 'Coding': while packages and environments are discussed, direct software development patterns are not the focus. No 'DevOps': although deployment speed is mentioned, pipeline or CI/CD is not central. No 'Security': no security/topic coverage."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-15 18:06:43 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/ff80HElVHAI",
+    "reason": "Succesfully added: Assigned AI category because the content is centered on Azure AI Foundry, a Microsoft AI development platform (AI inclusion rule 1 and 4). Assigned Azure category since Azure AI Foundry is an Azure service (Azure inclusion rule 1). Coding and ML categories were not assigned due to a lack of explicit code-level details or data science/ML engineering focus in the provided description. No generic exclusion rules were triggered—the content is technical and developer-oriented, not business/productivity, biographical, or job-related."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-15 18:07:00 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=LJzNNR8nFlI",
+    "reason": "Succesfully added: Assigned 'DevOps' because the episode focuses on CI/CD practices (DevOps rules 5 and 6) for SQL databases using Azure DevOps. Assigned 'Azure' because all tools and deployment strategies center on the Azure ecosystem (Azure rules 1 and 4). Did not assign ML since the focus is operational deployment of SQL databases, not data science/ML pipelines. Excluded 'AI', 'GitHub Copilot', 'Coding', and 'Security' as the content does not address those technologies or contexts. No generic exclusion rules applied; the content is instructional, technical, and development-focused."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-15 18:07:16 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=yZgC1KhfSxo",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on Azure AI Foundry (AI rule 1). Assigned Azure category because Azure AI Foundry is a service provided under Microsoft Azure (Azure rule 1). Did not assign ML or Coding categories because the description centers around getting started with model selection and agent building, not custom ML engineering or detailed coding practices. The focus is on onboarding to Azure AI Foundry for developers, consistent with inclusion rules for AI and Azure."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-12-15 18:07:39 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/secure-seamless-access-using-managed-identities-with-azure-files/ba-p/4477565",
+    "reason": "Succesfully added: The content centers around the technical implementation and benefits of Managed Identities for secure access to Azure Files SMB. The Azure category was applied based on extensive discussion of Azure services and infrastructure (Azure rule 1, 4). Security was applied due to Zero Trust principles, RBAC enforcement, compliance mandates, and general focus on secure authentication (Security rules 1, 3, 9). DevOps was added since the article specifically covers CI/CD pipelines, artifact storage, and build agent scenarios central to DevOps practices (DevOps rule 5). Coding category was not assigned because the content does not contain code samples or programming guidance, focusing instead on configuration, security, and DevOps integrations."
   }
 ]
