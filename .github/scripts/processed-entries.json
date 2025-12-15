@@ -21830,5 +21830,11 @@
     "canonical_url": "https://dellenny.com/no-code-ai-how-non-developers-can-build-smart-chatbots-with-copilot-studio-2/",
     "timestamp": "2025-12-14 13:12:15 +00:00",
     "reason": "Succesfully added: Category 'AI' is assigned because the article is about Copilot Studio, a Microsoft product used to create AI-powered chatbots, specifically via a no-code platform (AI inclusion rules 1 and 2). Copilot Studio is a developer/maker tool (not a business productivity Copilot), so it matches the AI category but does not qualify for 'GitHub Copilot' (which is specifically GitHub's coding assistant). 'Coding' is not included because the process is targeted at non-developers using visual/no-code tools rather than programming with languages/frameworks (Coding inclusion rules do not apply). 'Azure' is not directly assigned, since although integration with Azure AI services is mentioned, the substantive focus is Copilot Studio's platform and workflow. The content is sufficiently technical and instructional, therefore none of the generic exclusion rules apply."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/industry-wide-certificate-changes-impacting-azure-app-service/ba-p/4477924",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category because the changes are specific to Azure App Service certificates and configuration (Azure rule 1). Assigned Security category since the entire post centers on TLS, certificate management, client authentication, EKU, and related compliance/security standards (Security rules 1, 2, 4, 7, and 9). Did not assign other categories because content does not directly address DevOps, ML, Coding, AI, or GitHub Copilot. Content is well over 200 words of explanatory detail, written in English, and does not meet any generic exclusion rules.",
+    "timestamp": "2025-12-15 11:06:27 +00:00"
   }
 ]
