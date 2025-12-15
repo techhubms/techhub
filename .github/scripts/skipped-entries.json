@@ -10593,5 +10593,11 @@
     "timestamp": "2025-12-13 00:11:15 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=uBw1Q0L6qwU",
     "reason": "No categories found: The content is excluded due to the generic exclusion rule on business strategy and executive content. The description indicates a focus on senior leaders, optimizing engineering investments, leadership challenges, ROI measurement, and business-alignment of metrics. While it mentions AI and engineering pipelines, the main focus is on high-level organizational strategy and executive decision-making rather than technical implementation or hands-on developer guidance. Therefore, per generic exclusion (Business Strategy and Executive Content), no categories are assigned."
+  },
+  {
+    "canonical_url": "https://dellenny.com/integrating-copilot-in-microsoft-teams-channels-and-projects-a-step-by-step-guide/",
+    "timestamp": "2025-12-15 13:18:19 +00:00",
+    "collection": "posts",
+    "reason": "No categories found: No categories assigned because the content is entirely focused on Microsoft 365 Copilot (business productivity tool) integrated within Microsoft Teams, which falls under the 'Non-Development Microsoft Products' generic exclusion rule. The content does not discuss any development, coding, or developer/maker Copilot products. It describes end-user features such as drafting, summarizing, project management, and everyday collaboration benefits within Teams—all of which are explicitly excluded from category assignment according to rules in Chapter 3 and the 'Copilot Product Distinction' in Chapter 2. There is no technical implementation, development, or coding focus that would warrant inclusion in any categories."
   }
 ]

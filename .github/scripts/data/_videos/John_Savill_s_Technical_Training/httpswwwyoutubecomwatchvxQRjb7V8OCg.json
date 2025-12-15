@@ -1,0 +1,25 @@
+{
+  "ProcessedDate": "2025-12-15 13:17:30",
+  "FeedName": "John Savill's Technical Training",
+  "Author": "John Savill's Technical Training",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ",
+  "Tags": [
+    "agents",
+    "ai",
+    "azure",
+    "azure cloud",
+    "cloud",
+    "generative AI",
+    "LLM",
+    "microsoft",
+    "microsoft azure",
+    "SLM"
+  ],
+  "PubDate": "2025-12-15T12:57:07+00:00",
+  "Link": "https://www.youtube.com/watch?v=xQRjb7V8OCg",
+  "Title": "Using Foundry's Model Router to Simplify Optimal AI Model Selection",
+  "Description": "A walkthrough of Microsoft Foundry's Model Router to make it easy to pick the most optimal AI model in your AI applications and agents.\n\n🔎 Looking for content on a particular topic? Search the channel. If I have something it will be there! 🤔 Due to the channel growth and number of people wanting help I no longer can answer or even read questions and they will just stay in the moderation queue never to be seen so please post questions to other sites like Reddit, Microsoft Community Hub etc.\n\n▬▬▬▬▬▬ C H A P T E R S ⏰ ▬▬▬▬▬▬ 00:00 - Introduction 00:08 - Model dimensions 02:33 - Picking the right model 04:55 - Model router 06:54 - Routing methods 08:39 - Deployment 10:31 - Backend models 13:11 - How it fits together 13:59 - Trying it out 17:24 - Summary 17:55 - Close\n\n▬▬▬▬▬▬ K E Y L I N K S 🔗 ▬▬▬▬▬▬ ► Whiteboard: 🔗 https://github.com/johnthebrit/RandomStuff/raw/master/Whiteboards/ModelRouter.png ► MS docs: 🔗 https://learn.microsoft.com/azure/ai-foundry/openai/concepts/model-router?view=foundry&preserve-view=true\n\n▬▬▬▬▬▬ Want to learn more? 🚀 ▬▬▬▬▬▬ 📖 Recommended Learning Path for Azure 🔗 https://learn.onboardtoazure.com 🥇 Certification Content Repository 🔗 https://github.com/johnthebrit/CertificationMaterials 📅 Weekly Azure Update 🔗 https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks ☁ Azure Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY ⚙ DevOps Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq 💻 PowerShell Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFq\\_hR7FcMYg32xsSAObuq8 🎓 Certification Cram Videos 🔗 https://youtube.com/playlist?list=PLlVtbbG169nHz2qfLvPsAz9CnnXofhmcA 🧠 Mentoring Content 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGHxNkSWB0PjzZHwZ0BkXZZ ❔ Questions? Maybe I answered it in my FAQ 🔗 https://savilltech.com/faq 👕 Cure Childhood Cancer Charity T-Shirt Channel Store 🔗 https://johns-t-shirts-store.creator-spring.com/\n\n👂 Enable the subtitles and from there you can translate to your native language via the auto-translate feature in settings! https://youtu.be/v5b53-PgEmI for a demo of using this feature.\n\nSUBSCRIBE ✅ https://www.youtube.com/channel/UCpIn7ox7j7bH\\_OFj7tYouOQ?sub\\_confirmation=1\n\n#microsoft #azure #AI #LLM #johnsavillstechnicaltraining #onboardtoazure",
+  "FeedLevelAuthor": "John Savill's Technical Training",
+  "EnhancedContent": null
+}
