@@ -21854,5 +21854,11 @@
     "reason": "Succesfully added: Assigned the 'Azure' category because the content exclusively focuses on Azure Functions, Azure Data Factory, Azure Storage, and Durable Functions, clearly meeting Azure category rule 1 and 4. Added 'ML' because the discussion centers around large-scale ETL/data engineering pipeline design (ML rule 2 and 5), which is integral to analytics and data management workflows typically covered by ML engineering. Included 'Coding' since the post explains practical implementation, architectural design patterns, and technical trade-offs in a serverless Microsoft environment (Coding rule 4). Content is a technical knowledge share, clearly exceeds community length requirements, and does not violate any generic exclusion rules.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/design-pattern-handling-race-conditions-and-state-in-serverless/m-p/4477664#M820"
+  },
+  {
+    "timestamp": "2025-12-15 16:06:46 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-runtime-2-0-experimental-public-preview/",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is an Azure-centric platform for data engineering and analytics (Azure rule 1). Assigned ML category as content focuses on enabling data science workloads with Spark and Delta Lake, and discusses infrastructure-level support for machine learning/data science (ML rules 1, 2, 3, and 6). Did not assign AI because although Spark/Delta Lake support ML workloads, the article does not discuss AI or Microsoft-provided AI services directly. Coding was not added because there is no code-level or framework-specific implementation detail. Other categories do not apply as per the content and rules."
   }
 ]

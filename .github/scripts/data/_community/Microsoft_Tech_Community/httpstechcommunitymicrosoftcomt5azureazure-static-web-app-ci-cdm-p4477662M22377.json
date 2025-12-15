@@ -1,0 +1,14 @@
+{
+  "OutputDir": "_community",
+  "Description": "Hi everyone! I know this is a silly question, but I want to ask why, after connecting my Azure Static Web App to my GitHub and it would connect the Git Workflow, the commit would fail. Although, I haven't finished setting up some other resources yet, and I just connected my StatWebApp URL to my Azure Maps, there are other resources that I still need to deploy, and I still need to properly wire the backend to my Azure AI Services. Thanks in advance!",
+  "ProcessedDate": "2025-12-15 16:06:14",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/azure-static-web-app-ci-cd/m-p/4477662#M22377",
+  "Tags": [],
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Author": "sharmerika",
+  "Title": "Azure Static Web App CI/CD",
+  "PubDate": "2025-12-13T11:48:25+00:00",
+  "EnhancedContent": "Hi everyone! I know this is a silly question, but I want to ask why, after connecting my Azure Static Web App to my GitHub and it would connect the Git Workflow, the commit would fail. Although, I haven't finished setting up some other resources yet, and I just connected my StatWebApp URL to my Azure Maps, there are other resources that I still need to deploy, and I still need to properly wire the backend to my Azure AI Services. Thanks in advance!",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "FeedName": "Microsoft Tech Community"
+}

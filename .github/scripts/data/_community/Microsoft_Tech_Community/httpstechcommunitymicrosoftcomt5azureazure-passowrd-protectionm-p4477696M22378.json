@@ -1,0 +1,14 @@
+{
+  "OutputDir": "_community",
+  "Description": "We have a hybrid Azure infrastructure with an AD Connector installed on-prem and configured for PTA. We installed the password protection server and registered it with the Azure tenant, then deployed the DC agent on all domain controllers. Both the proxy and agents are operational. We published a few banned words to block in case anyone uses them. For testing, I changed my password to include one of the banned words. To my surprise, I was able to change the password. I checked the corresponding logon server, and the DC event viewer showed that the password was validated, but the banned word was in the password list that Azure set to enforce. Why is it not blocking the change?",
+  "ProcessedDate": "2025-12-15 16:06:14",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/azure-passowrd-protection/m-p/4477696#M22378",
+  "Tags": [],
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Author": "azuser",
+  "Title": "Azure passowrd protection",
+  "PubDate": "2025-12-13T18:17:14+00:00",
+  "EnhancedContent": "We have a hybrid Azure infrastructure with an AD Connector installed on-prem and configured for PTA. We installed the password protection server and registered it with the Azure tenant, then deployed the DC agent on all domain controllers. Both the proxy and agents are operational. We published a few banned words to block in case anyone uses them. For testing, I changed my password to include one of the banned words. To my surprise, I was able to change the password. I checked the corresponding logon server, and the DC event viewer showed that the password was validated, but the banned word was in the password list that Azure set to enforce. Why is it not blocking the change?",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "FeedName": "Microsoft Tech Community"
+}

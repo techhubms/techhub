@@ -10617,5 +10617,17 @@
     "reason": "Insufficient content length",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/it-appears-and-error-that-does-not-exist/m-p/4477641#M683"
+  },
+  {
+    "timestamp": "2025-12-15 16:07:16 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-passowrd-protection/m-p/4477696#M22378",
+    "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2025-12-15 16:07:16 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/azure-static-web-app-ci-cd/m-p/4477662#M22377",
+    "reason": "Insufficient content length"
   }
 ]
