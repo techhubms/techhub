@@ -21914,5 +21914,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/message-brokers-as-the-cornerstone-of-the-next-generation-of/ba-p/4478088",
     "timestamp": "2025-12-15 19:09:24 +00:00",
     "reason": "Succesfully added: Assigned AI because the post discusses agentic AI architectures and orchestration patterns (AI rule 4, main focus is building AI backends, distributed AI coordination). Assigned Azure since Azure Service Bus is central to technical solution, repeatedly referenced for messaging and orchestration (Azure rule 1). Did not assign DevOps, Coding, Security, or ML: the post is about architectural orchestration and infrastructure, not code implementation, developer tools, security controls, or machine learning engineering. All exclusion rules checked—content is technical, sufficiently long, and focuses on developer-oriented scenarios, not business productivity or non-development tools."
+  },
+  {
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the core subject is Oracle Database@Azure and its integration into the Azure platform (Azure rule 1). 'AI' included since the content describes making Oracle workloads AI-ready, leveraging Copilot Studio and Microsoft Foundry, and enabling AI-driven environments (AI rules 1, 3, and 5). 'Security' is assigned due to coverage of Sentinel, Defender, encryption, integrated key management, and compliance for secure, regulated operations (Security rules 1, 4, and 7). No Coding or DevOps assigned because there is no technical development or CI/CD process detail. 'ML' is not included as there is no focus on data science/analytics engineering. The content meets community length/format requirements and is primarily in English, with no generic exclusion rules applying.",
+    "timestamp": "2025-12-15 20:06:45 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-hits-the-road-with-oracle-ai-world-tour-2026/ba-p/4477598"
   }
 ]
