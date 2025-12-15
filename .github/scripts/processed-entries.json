@@ -21920,5 +21920,23 @@
     "timestamp": "2025-12-15 20:06:45 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-hits-the-road-with-oracle-ai-world-tour-2026/ba-p/4477598"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Security category because the content revolves around a serious vulnerability and mitigation steps using Microsoft Defender, MDVM, and Azure WAF (Security rule 1, 4, 5). Assigned Azure category due to direct recommendations for Azure Defender, App Service, Azure Web Application Firewall, Defender for Cloud, and Azure CLI integration (Azure rule 1, 5). Did NOT assign Coding, DevOps, AI, ML categories because there is no deep coverage of software development practices, DevOps pipelines, machine learning, or artificial intelligence related to Microsoft platforms. The main focus is vulnerability detection, threat assessment, and operational security response. Tags were extracted based on product names, threat vectors, affected technologies, cloud and container security terms, and detection/response techniques as outlined in Chapter 7.",
+    "timestamp": "2025-12-15 21:06:34 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because the pipeline features Azure OpenAI Service and AI Search (AI category rule 1: Microsoft AI Products/Services). Assigned Azure category since main technologies are Azure Document Intelligence and Azure AI Search (Azure category rule 1). ML category included because the framework details document processing workflows involving ML labeling and metrics-driven data analysis (ML category rule 1: Microsoft Data Science/ML Platform Services and rule 2: Data Science/Analytics Engineering). Content is substantive, highly technical, and written in English. Does not qualify for exclusion under any generic rules.",
+    "timestamp": "2025-12-15 21:07:35 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/from-large-semi-structured-docs-to-actionable-data-in-depth/ba-p/4474060"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Content qualifies for multiple categories. Assigned Azure because Azure NetApp Files is the central technology discussed (Azure inclusion rule 1). Assigned AI because the VS Code extension delivers AI-powered automation (AI rule 1, key capabilities, and workflow). Assigned DevOps due to workflow automation, resource optimization, and IDE-based infrastructure management (DevOps rules 1, 4, 5, and 8). Assigned Coding because the workflow takes place within VS Code and involves developer-focused tasks and ARM templates (Coding rules 2, 4, and 5). Content is highly technical, centered on Microsoft technologies, well over 200 words, and does not trigger any exclusion rules.",
+    "timestamp": "2025-12-15 21:07:56 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/streamline-azure-netapp-files-management-right-from-your-ide/ba-p/4478122"
   }
 ]

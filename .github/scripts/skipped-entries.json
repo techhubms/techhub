@@ -10635,5 +10635,11 @@
     "collection": "community",
     "timestamp": "2025-12-15 17:09:05 +00:00",
     "reason": "Insufficient content length"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the content is not primarily about Microsoft technologies. The video is focused on using git and configuring git aliases, which is a platform-agnostic tool rather than a Microsoft-specific tool or service. The description and tags reference general developer workflow, git configuration, and productivity tips, but do not mention Azure DevOps, GitHub Actions, Visual Studio, or any other Microsoft ecosystem integration. Per the category inclusion rules and multi-platform content threshold, Microsoft technologies must be central or comprise ≥40% of substantive content, which is not met based on the provided information.",
+    "timestamp": "2025-12-15 21:07:07 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/Q3Mj_MM0uDU"
   }
 ]
