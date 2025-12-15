@@ -21890,5 +21890,29 @@
     "timestamp": "2025-12-15 18:07:39 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-storage-blog/secure-seamless-access-using-managed-identities-with-azure-files/ba-p/4477565",
     "reason": "Succesfully added: The content centers around the technical implementation and benefits of Managed Identities for secure access to Azure Files SMB. The Azure category was applied based on extensive discussion of Azure services and infrastructure (Azure rule 1, 4). Security was applied due to Zero Trust principles, RBAC enforcement, compliance mandates, and general focus on secure authentication (Security rules 1, 3, 9). DevOps was added since the article specifically covers CI/CD pipelines, artifact storage, and build agent scenarios central to DevOps practices (DevOps rule 5). Coding category was not assigned because the content does not contain code samples or programming guidance, focusing instead on configuration, security, and DevOps integrations."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/how-to-build-ios-widgets-with-dotnet-maui/",
+    "timestamp": "2025-12-15 19:07:38 +00:00",
+    "reason": "Succesfully added: Assigned Coding category as the core content focuses on engineering development of iOS widgets with .NET MAUI and Swift, covering project setup, code integration, cross-platform architecture, and hands-on technical implementation. No other categories (e.g. AI, Azure, ML, DevOps, Security) are discussed in depth, and the widget is treated as a developer feature rather than a business productivity tool. All categories are evaluated per chapter 4. No generic exclusion rules apply; the content is technical, in-depth, non-biographical, and English."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/understanding-operations-agent-capacity-consumption-usage-reporting-and-billing/",
+    "timestamp": "2025-12-15 19:08:11 +00:00",
+    "reason": "Succesfully added: Included AI because Copilot in Fabric and autonomous reasoning features rely on large language models and Microsoft's AI platform (AI rules 1, 4, 5). Included Azure because Microsoft Fabric is a cloud-native Azure platform and capacity/billing integrates with Azure infrastructure (Azure rules 1, 4, 5). Included ML as the operational agents utilize and meter AI/ML reasoning, data monitoring, summarization, and inference (ML rules 1, 2, 9). Did not include DevOps or Coding categories as content focuses on cloud services, monitoring, usage, and billing rather than coding practices or DevOps pipelines. Exclusion rules do not apply; content is technical, not business or end-user focused, and goes into substantial product architecture detail."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://techcommunity.microsoft.com/blog/microsoft-security-blog/microsoft-named-an-overall-leader-in-kuppingercole-leadership-compass-for-genera/4478093",
+    "timestamp": "2025-12-15 19:08:34 +00:00",
+    "reason": "Succesfully added: Content qualifies for both AI and Security categories. The AI category is assigned because the post is focused on Microsoft's generative AI solutions, defense mechanisms, and security governance across AI agents and infrastructure (AI rules 1, 4, and 6). The Security category is added due to the detailed focus on security mechanisms, compliance, identity protection, data loss prevention, and product-specific security offerings such as Microsoft Entra, Defender, and Purview (Security rules 1, 2, 9, and 10). The guidance section is written for technical leaders (CISOs) and provides actionable advice for building secure AI systems, meeting the standard of technical architectural implementation. The post is neither biographical, a sales pitch, nor focused on business productivity tools, meeting all generic content quality inclusion requirements."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/message-brokers-as-the-cornerstone-of-the-next-generation-of/ba-p/4478088",
+    "timestamp": "2025-12-15 19:09:24 +00:00",
+    "reason": "Succesfully added: Assigned AI because the post discusses agentic AI architectures and orchestration patterns (AI rule 4, main focus is building AI backends, distributed AI coordination). Assigned Azure since Azure Service Bus is central to technical solution, repeatedly referenced for messaging and orchestration (Azure rule 1). Did not assign DevOps, Coding, Security, or ML: the post is about architectural orchestration and infrastructure, not code implementation, developer tools, security controls, or machine learning engineering. All exclusion rules checked—content is technical, sufficiently long, and focuses on developer-oriented scenarios, not business productivity or non-development tools."
   }
 ]
