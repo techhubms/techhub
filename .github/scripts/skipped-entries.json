@@ -10599,5 +10599,23 @@
     "timestamp": "2025-12-15 13:18:19 +00:00",
     "collection": "posts",
     "reason": "No categories found: No categories assigned because the content is entirely focused on Microsoft 365 Copilot (business productivity tool) integrated within Microsoft Teams, which falls under the 'Non-Development Microsoft Products' generic exclusion rule. The content does not discuss any development, coding, or developer/maker Copilot products. It describes end-user features such as drafting, summarizing, project management, and everyday collaboration benefits within Teams—all of which are explicitly excluded from category assignment according to rules in Chapter 3 and the 'Copilot Product Distinction' in Chapter 2. There is no technical implementation, development, or coding focus that would warrant inclusion in any categories."
+  },
+  {
+    "timestamp": "2025-12-15 14:07:11 +00:00",
+    "reason": "No categories found: No categories assigned because the content is about the adoption of the Rust programming language in the Linux kernel, not Microsoft technologies. It does not feature Microsoft developer tools, platforms, or services, nor does it discuss integration with Microsoft ecosystem technologies. None of the category inclusion rules (AI, GitHub Copilot, Coding, DevOps, Azure, ML, Security) refer to Rust or Linux development unless used specifically in a Microsoft context, which this article does not. None of the multi-platform Microsoft technology threshold or integration scenarios are met, as Microsoft's role is wholly absent. The content does not trigger any generic exclusion rules but lacks qualification for any Microsoft-specific category.",
+    "canonical_url": "https://devclass.com/2025/12/15/rust-boosted-by-permanent-adoption-for-linux-kernel-code/",
+    "collection": "posts"
+  },
+  {
+    "timestamp": "2025-12-15 15:09:08 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/%E7%BD%91%E7%BB%9C%E8%85%BE%E9%BE%99%E5%85%AC%E5%8F%B8%E6%B8%B8%E6%88%8F%E7%BD%91%E5%9D%80%E6%98%AF%E5%A4%9A%E5%B0%91-%E5%A8%81yangu-8797/idi-p/4478001"
+  },
+  {
+    "timestamp": "2025-12-15 15:09:08 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/web-development/it-appears-and-error-that-does-not-exist/m-p/4477641#M683"
   }
 ]

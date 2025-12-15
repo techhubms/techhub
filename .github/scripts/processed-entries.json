@@ -21842,5 +21842,17 @@
     "timestamp": "2025-12-15 13:18:49 +00:00",
     "collection": "videos",
     "reason": "Succesfully added: Categories assigned as follows: 'AI' because the core focus is on Microsoft Azure Foundry's Model Router, which is specifically for AI model selection and orchestration (AI category inclusion rules 1 and 5). 'Azure' because the Model Router is a Microsoft Azure service and the deployment/integration steps revolve around Azure tools (Azure category inclusion rules 1, 3, 4). No 'Coding', 'DevOps', or 'ML' categories were included since the content centers on model selection and routing within Azure AI infrastructure rather than hands-on code development, ML algorithm engineering, or DevOps workflows. 'GitHub Copilot' and 'Security' are not referenced. Generic exclusion rules do not apply because the content is technical, in English, and focused on Microsoft AI and Azure services."
+  },
+  {
+    "timestamp": "2025-12-15 15:08:21 +00:00",
+    "reason": "Succesfully added: Assigned 'DevOps' because the article offers a detailed look into how Microsoft uses internal workflows (Azure DevOps) for ticket tracking, prioritization, and delivery (DevOps rule 1 and 2), and discusses team collaboration (DevOps rule 3). Assigned 'Coding' since the feedback system directly impacts coding productivity and experience for Visual Studio users (Coding rule 5), and many discussed issues are central to the coding workflow. Did not assign AI, Azure, ML, Security, or GitHub Copilot since the content does not focus on those areas or technologies. No generic exclusion rule applies—the piece is technical, not biographical, business, or sales-focused.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/behind-the-scenes-of-the-visual-studio-feedback-system/"
+  },
+  {
+    "timestamp": "2025-12-15 15:09:07 +00:00",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content exclusively focuses on Azure Functions, Azure Data Factory, Azure Storage, and Durable Functions, clearly meeting Azure category rule 1 and 4. Added 'ML' because the discussion centers around large-scale ETL/data engineering pipeline design (ML rule 2 and 5), which is integral to analytics and data management workflows typically covered by ML engineering. Included 'Coding' since the post explains practical implementation, architectural design patterns, and technical trade-offs in a serverless Microsoft environment (Coding rule 4). Content is a technical knowledge share, clearly exceeds community length requirements, and does not violate any generic exclusion rules.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture/design-pattern-handling-race-conditions-and-state-in-serverless/m-p/4477664#M820"
   }
 ]
