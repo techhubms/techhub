@@ -1,0 +1,14 @@
+{
+  "Link": "https://techcommunity.microsoft.com/t5/azure/how-to-troubleshoot-if-a-cookie-is-being-sent-to-application/m-p/4477728#M22379",
+  "Author": "curious7",
+  "EnhancedContent": "I have a rule on WAF policy associated with application gateway with a rule (set as topmost rule) to allow traffic if a particular cookie is sent with the request. But we are seeing some requests that are not hitting that rule and instead hitting different rule and thus getting blocked. My thinking is that the cookie is not being sent by the application in that request, although the developer says that it should be sent with each request. How can I log enough detail on application gateway to see if a cookie was really sent with the request that was blocked or not.",
+  "Title": "How to troubleshoot if a cookie is being sent to application gateway with each and every request",
+  "Description": "I have a rule on WAF policy associated with application gateway with a rule (set as topmost rule) to allow traffic if a particular cookie is sent with the request. But we are seeing some requests that are not hitting that rule and instead hitting different rule and thus getting blocked. My thinking is that the cookie is not being sent by the application in that request, although the developer says that it should be sent with each request. How can I log enough detail on application gateway to see if a cookie was really sent with the request that was blocked or not.",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2025-12-15 17:08:04",
+  "PubDate": "2025-12-14T06:12:05+00:00",
+  "OutputDir": "_community",
+  "Tags": []
+}

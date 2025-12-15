@@ -21860,5 +21860,11 @@
     "collection": "news",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-runtime-2-0-experimental-public-preview/",
     "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is an Azure-centric platform for data engineering and analytics (Azure rule 1). Assigned ML category as content focuses on enabling data science workloads with Spark and Delta Lake, and discusses infrastructure-level support for machine learning/data science (ML rules 1, 2, 3, and 6). Did not assign AI because although Spark/Delta Lake support ML workloads, the article does not discuss AI or Microsoft-provided AI services directly. Coding was not added because there is no code-level or framework-specific implementation detail. Other categories do not apply as per the content and rules."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-environment-library-management-performance-improvement/",
+    "collection": "news",
+    "timestamp": "2025-12-15 17:08:36 +00:00",
+    "reason": "Succesfully added: Content is Microsoft-published technical news about Microsoft Fabric Environment performance upgrades, centered on developer and data engineering workflows. Assigned 'Azure' because Microsoft Fabric is a cloud platform service for data/analytics workloads (Azure rule 1), and assigned 'ML' because the content details improvements for Apache Spark sessions and Python library management—integral to ML/data engineering work (ML rules 1, 2, and 8). No 'AI' category: no mention of AI platforms or developer tooling. No 'Coding': while packages and environments are discussed, direct software development patterns are not the focus. No 'DevOps': although deployment speed is mentioned, pipeline or CI/CD is not central. No 'Security': no security/topic coverage."
   }
 ]
