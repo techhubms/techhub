@@ -85,7 +85,7 @@ npm install -g @github/copilot
 ```json
 {
   "type": "copilot",
-  "template": "  {{ .Premium.Percent.Gauge }} ",
+  "template": "  {{ premium.percent.gauge }} ",
   "cache": { "duration": "5m", "strategy": "session" },
   "properties": { "http_timeout": 1000 }
 }
