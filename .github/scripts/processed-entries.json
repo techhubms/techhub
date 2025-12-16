@@ -21944,5 +21944,11 @@
     "timestamp": "2025-12-16 03:34:04 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=N7MZdRjDD4c",
     "collection": "videos"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-16 09:08:54 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=pwtY8O_YvSI",
+    "reason": "Succesfully added: Assigned AI category as the episode discusses AI agents and their architectures, referencing agent-specific protocols and Microsoft agent frameworks (AI rule 1, 4, 5). Assigned Azure category because solutions, protocols, and frameworks referenced are built on Azure or tied to Microsoft cloud services (Azure rule 1, 4, 5). Assigned Security category due to focus on agent identity management, governance, secure integration, least privilege, and monitoring practices (Security rules 1, 2, 4). Did not assign Coding, ML, DevOps, or GitHub Copilot categories, as content does not provide code-level or DevOps practices, does not focus on custom data science/ML techniques, nor on GitHub Copilot use."
   }
 ]
