@@ -21986,5 +21986,17 @@
     "canonical_url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2026-debugging-with-copilot/",
     "collection": "news",
     "reason": "Succesfully added: Assigned the AI and GitHub Copilot categories because the content describes multiple GitHub Copilot-powered features integrated into Visual Studio 2026—specifically Copilot analysis in exception handling, Copilot Chat, and Debug with Copilot (AI category rules 1 and 2, GitHub Copilot rules 1-6). Assigned Coding because it centers on the debugging experience for developers using Visual Studio (Coding rule 5). Although Visual Studio is a Microsoft development tool, there is no significant focus on DevOps, Azure, ML, or Security; the main themes are debugging, Copilot integration, and code inspection within the IDE."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-16 16:06:24 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content centers on AI-powered workflow automation within Dataflow Gen2 (AI rule 1 and 4). Added Azure category since Microsoft Fabric is a cloud-based platform, and Dataflow Gen2 operates as part of Azure-hosted services (Azure rule 1). Included ML category because the content describes using AI for data transformation, including advanced analytics like classification and sentiment analysis (ML rule 1, 4, 6). Excluded other categories because there is no focus on coding implementation, DevOps practices, or security aspects.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/from-simple-prompts-to-complex-insights-ai-expands-the-boundaries-of-data-transformation/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-16 16:06:47 +00:00",
+    "reason": "Succesfully added: Assigned AI category as the recap covers Copilot availability, the launch of AI functions, and integration of generative AI (AI rules 1, 4, 5). Assigned Azure since Fabric is built atop Azure services, with private links, data protection, and migration from Azure Synapse and Azure Data Factory (Azure rules 1, 4, 5, 6). ML assigned due to focus on data science, analytics engineering, AI functions, and workload migration (ML rules 1-4). Security is included for coverage of Outbound Access Protection, private networking, and role-based access (Security rules 1, 2, 7, 9). DevOps added due to developer tooling with Fabric CLI, CI/CD, Terraform, and deployment automation (DevOps rules 2, 5, 6, 9). Coding is included for IDE enhancements, Copilot coding capabilities, and pro-code developer experience (Coding rules 1, 5). All categories are supported by relevant technical advancements, developer workflows, and integration across the Microsoft ecosystem.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-2025-holiday-recap-unified-data-an-ai-innovation/"
   }
 ]
