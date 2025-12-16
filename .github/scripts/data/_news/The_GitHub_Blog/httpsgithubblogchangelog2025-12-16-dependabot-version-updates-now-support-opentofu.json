@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "Developers can now use Dependabot to automatically keep their OpenTofu dependencies up to date. For projects that use OpenTofu, Dependabot version updates can now ensure dependencies stay current with the…\n\nThe post [Dependabot version updates now support OpenTofu](https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-opentofu) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Allison",
+  "PubDate": "2025-12-16T16:44:18+00:00",
+  "OutputDir": "_news",
+  "ProcessedDate": "2025-12-16 17:06:24",
+  "Tags": [
+    "Release",
+    "supply chain security"
+  ],
+  "Link": "https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-opentofu",
+  "EnhancedContent": "Developers can now use Dependabot to automatically keep their OpenTofu dependencies up to date. For projects that use OpenTofu, Dependabot version updates can now ensure dependencies stay current with the latest releases.\n\n- Engage with [the Dependabot open source community](https://github.com/dependabot/dependabot-core/discussions/13087) on the topic of OpenTofu support.\n- Learn more in [our Dependabot version updates documentation](https://docs.github.com/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates).\n- Learn more about [OpenTofu](https://opentofu.org/).",
+  "Title": "Dependabot version updates now support OpenTofu"
+}

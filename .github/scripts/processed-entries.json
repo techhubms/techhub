@@ -21998,5 +21998,53 @@
     "timestamp": "2025-12-16 16:06:47 +00:00",
     "reason": "Succesfully added: Assigned AI category as the recap covers Copilot availability, the launch of AI functions, and integration of generative AI (AI rules 1, 4, 5). Assigned Azure since Fabric is built atop Azure services, with private links, data protection, and migration from Azure Synapse and Azure Data Factory (Azure rules 1, 4, 5, 6). ML assigned due to focus on data science, analytics engineering, AI functions, and workload migration (ML rules 1-4). Security is included for coverage of Outbound Access Protection, private networking, and role-based access (Security rules 1, 2, 7, 9). DevOps added due to developer tooling with Fabric CLI, CI/CD, Terraform, and deployment automation (DevOps rules 2, 5, 6, 9). Coding is included for IDE enhancements, Copilot coding capabilities, and pro-code developer experience (Coding rules 1, 5). All categories are supported by relevant technical advancements, developer workflows, and integration across the Microsoft ecosystem.",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-2025-holiday-recap-unified-data-an-ai-innovation/"
+  },
+  {
+    "timestamp": "2025-12-16 17:09:25 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/sql-telemetry-intelligence-how-we-built-a-petabyte-scale-data-platform-with-fabric/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category because Fabric is a major Microsoft Azure data platform and the solution leverages core Azure services (Azure Data Explorer, Event Hub, AKS, etc.), as per Azure inclusion rule 1 and 2. Assigned ML category because the article covers data engineering, ETL at scale, anomaly detection, and dimensional modeling used for analytics, which aligns with ML rule 2 (data engineering for analytics and ML) and rule 4 (advanced data analytics/BI development). Assigned Coding category due to significant custom engineering work, Spark code, and development patterns described (Coding rules 1–4). Assigned DevOps because of substantial coverage of CI/CD automation, GitOps deployment, parallelized regression testing, and workflow orchestration for cloud data engineering (DevOps rules 5, 6, and 11). Did not assign AI or Security as the article mentions future AI/ML work but does not provide current AI platform or security implementation details."
+  },
+  {
+    "timestamp": "2025-12-16 17:09:47 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-16-conda-ecosystem-support-for-dependabot-now-generally-available",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned DevOps category as the content focuses on dependency management automation and supply chain security, specifically leveraging Dependabot on GitHub—a development operations tooling platform (DevOps rule 2). Coding or Azure categories were not added since the article does not focus on coding practices or Microsoft Azure technologies, and there is no content about AI, ML, Security architecture, or GitHub Copilot. The tags were selected to emphasize technical topic coverage (Conda, Python, Dependabot, supply chain security, automated updates, and CI practices) according to output guidance."
+  },
+  {
+    "timestamp": "2025-12-16 17:10:04 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-16-dependabot-security-updates-now-support-uv",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned DevOps category because the content directly covers automated dependency management and workflow automation with GitHub (DevOps rules 2, 5, and 6). Assigned Security because Dependabot is a tool for security alerting and vulnerability remediation in code supply chains (Security rules 5, 8). Coding was not included because the content discusses tool usage, not programming or code development. AI, Azure, ML, and GitHub Copilot are not relevant to the topic."
+  },
+  {
+    "timestamp": "2025-12-16 17:10:23 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-bazel",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned only the DevOps category. The content is an official announcement about Dependabot adding support for Bazel dependency management, which directly binds to CI/CD practices and automation workflows, satisfying DevOps rule 2 (Automation), DevOps rule 5 (CI/CD and Deployment), and rule 9 (Developer Experience). There is no technical detail regarding Microsoft technologies, Azure, Coding (no programming examples or frameworks), AI, ML, or Security beyond dependency management. Thus, only DevOps applies according to inclusion rules and decision hierarchy."
+  },
+  {
+    "timestamp": "2025-12-16 17:10:39 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-julia",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the content is about automated dependency management with Dependabot, a GitHub tool used in CI/CD and DevOps workflows (DevOps rule 2 and 5). 'Coding' was not added because the article focuses on tools and automation rather than programming practices or languages. 'Security' was not included because while supply chain security is mentioned, the main focus is dependency automation, not explicit security implementation. No other category applies."
+  },
+  {
+    "timestamp": "2025-12-16 17:10:56 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-opentofu",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned DevOps category because Dependabot is a DevOps automation tool for dependency management (DevOps rule 2: GitHub DevOps tools, and DevOps rule 6: Infrastructure and Automation). The content does not focus on AI, Coding, Azure, ML, or Security as primary categories, though supply chain security is mentioned. Tags emphasize technical tools and practices. No generic exclusion rule applies—the content is a technical announcement directly relevant to DevOps practices with GitHub."
+  },
+  {
+    "timestamp": "2025-12-16 17:11:13 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-16-track-organization-copilot-usage",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content provides guidance on accessing and managing usage metrics specifically for GitHub Copilot, which is a developer AI tool (AI category rule 2, GitHub Copilot category rules 1 and 2). The content focuses entirely on Copilot from an administrative and usage reporting perspective, with technical instructions for enabling necessary settings and API access. There is no reference to business productivity Copilots, and no generic exclusion rules apply."
+  },
+  {
+    "timestamp": "2025-12-16 17:11:55 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=2EJR1xhTtBs",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' because the episode features AI-assisted development with GitHub Copilot and agent instructions (AI rule 1 and 2). 'GitHub Copilot' is included due to in-depth discussion and live demonstration of Copilot's code completion and automation (GitHub Copilot rule 1-4), and per workflow, 'AI' must be included when GitHub Copilot is present. Assigned 'Coding' as the content revolves around .NET development, coding best practices, and feature implementation (Coding rule 1, 2, and 4). Assigned 'Azure' because Microsoft Azure is featured in the tags and ecosystem context, aligning with cloud-based workflows, though less central than the other topics (Azure rule 1, 4). Assigned 'DevOps' since CI/CD automation with Copilot is demonstrated and discussed (DevOps rule 5, 6). Did not assign 'ML' or 'Security' as there is no substantive mention of ML/data science or detailed security implementation in the description."
   }
 ]

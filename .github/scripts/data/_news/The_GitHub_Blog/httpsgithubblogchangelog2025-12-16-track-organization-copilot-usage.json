@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "You can now access your organization’s Copilot usage metrics via the Copilot usage APIs. The APIs contain reports with aggregated and user-specific metrics, including usage statistics for various Copilot features,…\n\nThe post [Track organization Copilot usage](https://github.blog/changelog/2025-12-16-track-organization-copilot-usage) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Allison",
+  "PubDate": "2025-12-16T15:08:56+00:00",
+  "OutputDir": "_news",
+  "ProcessedDate": "2025-12-16 17:06:24",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "Link": "https://github.blog/changelog/2025-12-16-track-organization-copilot-usage",
+  "EnhancedContent": "You can now access your organization’s Copilot usage metrics via [the Copilot usage APIs](https://docs.github.com/en/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2022-11-28#get-copilot-organization-usage-metrics-for-a-specific-day).\n\nThe APIs contain reports with aggregated and user-specific metrics, including usage statistics for various Copilot features, user engagement data, and feature adoption metrics.\n\nTo see these metrics, the **Copilot usage metrics** policy must be enabled.\n\n- To enable this setting for an enterprise account, go to the [Enterprises page](https://github.com/settings/enterprises), select your enterprise, and click on the **AI Controls** tab. In the left sidebar, select **Copilot**, and scroll down to **Metrics**. Select **Enabled everywhere**.\n- To enable this setting for a standalone organization account, go to [the Organization page](https://github.com/settings/organizations), select your organization, and click on the **Settings** tab. In the left sidebar, select **Copilot** &gt; **Policies**. Scroll down to **Features** &gt; **Copilot usage metrics**. Select **Enabled**.\n\nOrganization owners and users with an organization custom role that has the `View Organization Copilot Metrics` permission can access the API.\n\nTo learn more, see [our documentation](https://docs.github.com/en/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2022-11-28#get-copilot-organization-usage-metrics-for-a-specific-day).",
+  "Title": "Track organization Copilot usage"
+}

@@ -10647,5 +10647,11 @@
     "timestamp": "2025-12-16 16:07:11 +00:00",
     "reason": "No categories found: No categories assigned because the content is primarily focused on Microsoft Teams product usage, permissions, privacy configuration, and management features for business communication rather than development, coding, DevOps, security engineering, or technical architecture (Non-Development Microsoft Products rule under Generic Exclusion Rules, Chapter 3). The article does not discuss Teams development (such as bots, APIs, or apps). There is no substantial technical implementation, code, or developer-focused material. Therefore, none of the predefined categories apply.",
     "canonical_url": "https://dellenny.com/how-to-manage-teams-permissions-and-privacy-settings/"
+  },
+  {
+    "timestamp": "2025-12-16 17:09:01 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-the-fabric-extensibility-toolkit-contest/",
+    "collection": "news",
+    "reason": "No categories found: No categories assigned. This content primarily announces a community contest for the Fabric Extensibility Toolkit, focusing on inviting submissions and providing event details. It does not offer technical guidance, implementation detail, or development insight into Microsoft Fabric, extensibility, or related development practices. There is no substantial technical content, tutorial, or hands-on description. Per generic exclusion rules, 'Sales Pitches' and event announcements without educational/technical depth are excluded. Therefore, all categories are omitted."
   }
 ]
