@@ -21950,5 +21950,17 @@
     "timestamp": "2025-12-16 09:08:54 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=pwtY8O_YvSI",
     "reason": "Succesfully added: Assigned AI category as the episode discusses AI agents and their architectures, referencing agent-specific protocols and Microsoft agent frameworks (AI rule 1, 4, 5). Assigned Azure category because solutions, protocols, and frameworks referenced are built on Azure or tied to Microsoft cloud services (Azure rule 1, 4, 5). Assigned Security category due to focus on agent identity management, governance, secure integration, least privilege, and monitoring practices (Security rules 1, 2, 4). Did not assign Coding, ML, DevOps, or GitHub Copilot categories, as content does not provide code-level or DevOps practices, does not focus on custom data science/ML techniques, nor on GitHub Copilot use."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2025-12-16 11:06:13 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-16-more-accurate-copilot-autofix-usage-metrics-on-security-overview",
+    "reason": "Succesfully added: The main focus is on metric improvements for Copilot Autofix usage in remediating CodeQL alerts, which directly involves GitHub Copilot as a developer tool (GitHub Copilot category, rule 1). Because this is about Copilot's automated vulnerability remediation, 'AI' is also assigned per the rule requiring both AI and GitHub Copilot (AI rule 2). The content enhances security visibility and discusses CodeQL alerts and remediation, qualifying for 'Security' (Security rules 1 and 5). No exclusion rules apply, and categories were assigned in accordance with inclusion rules."
+  },
+  {
+    "collection": "posts",
+    "timestamp": "2025-12-16 11:06:40 +00:00",
+    "canonical_url": "https://andrewlock.net/creating-a-dotnet-profiler-using-csharp-with-silhouette/",
+    "reason": "Succesfully added: Content is strongly development-focused, explaining technical profiling APIs, code samples in C#, use of the Silhouette library, and setup of the profiling infrastructure. It qualifies for the Coding category due to deep .NET programming details and project/code implementation (Coding rules 1, 2, 4). No Azure, ML, AI, DevOps, Security, or GitHub Copilot content is present, as the post centers on custom .NET CLR profiling in a managed development environment using C# and .NET Core. Generic exclusions do not apply: the content is not biographical, sales, negative, or business strategy-focused."
   }
 ]
