@@ -21962,5 +21962,11 @@
     "timestamp": "2025-12-16 11:06:40 +00:00",
     "canonical_url": "https://andrewlock.net/creating-a-dotnet-profiler-using-csharp-with-silhouette/",
     "reason": "Succesfully added: Content is strongly development-focused, explaining technical profiling APIs, code samples in C#, use of the Silhouette library, and setup of the profiling infrastructure. It qualifies for the Coding category due to deep .NET programming details and project/code implementation (Coding rules 1, 2, 4). No Azure, ML, AI, DevOps, Security, or GitHub Copilot content is present, as the post centers on custom .NET CLR profiling in a managed development environment using C# and .NET Core. Generic exclusions do not apply: the content is not biographical, sales, negative, or business strategy-focused."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-12-16-code-scanning-alert-assignees-are-now-generally-available",
+    "reason": "Succesfully added: Content qualifies for Security category due to its focus on security vulnerability management and remediation using GitHub features (Security inclusion rules 1 and 5). DevOps category is included because this feature integrates workflow automation and promotes team collaboration (DevOps inclusion rules 2, 3, and 5). GitHub Copilot is mentioned as a coding agent automating fixes, so both GitHub Copilot and AI categories are included per the specific Copilot product rules and AI inclusion rules 2. All category assignments based on direct mentions and centrality of these technologies in the described feature.",
+    "collection": "news",
+    "timestamp": "2025-12-16 12:07:15 +00:00"
   }
 ]
