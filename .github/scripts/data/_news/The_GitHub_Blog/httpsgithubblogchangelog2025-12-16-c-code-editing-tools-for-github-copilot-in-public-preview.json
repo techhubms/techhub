@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2025-12-16 22:02:50",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "PubDate": "2025-12-16T18:28:30+00:00",
+  "FeedName": "The GitHub Blog",
+  "OutputDir": "_news",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "Author": "Allison",
+  "Title": "C++ code editing tools for GitHub Copilot in public preview",
+  "Link": "https://github.blog/changelog/2025-12-16-c-code-editing-tools-for-github-copilot-in-public-preview",
+  "EnhancedContent": "C++ code editing tools for GitHub Copilot are now in public preview in the latest Visual Studio 2026 Insiders release. These tools extend Copilot’s ability to understand and modify C++ code at scale by providing deep symbol awareness for reliable multi-file editing support.\n\nThe C++ code editing tools provide rich semantic data for any symbol in your project, enabling Copilot agent mode to\n\n- View all references across a codebase.\n- Understand symbol type, declaration, scope, and other metadata.\n- Visualize class inheritance hierarchies.\n- Trace function call chains.\n\n## How to get started\n\n1. Open your C++ project in Visual Studio 2026 Insiders.\n2. Go to **Tools** &gt; **Options**, **GitHub** &gt; **Copilot** and enable the C++ code editing tools\n\na. You may need to close and reopen your solution after enabling\n3. Open Copilot Chat and use the **Tools** icon to enable the specific C++ tools.\n\n![The C++ code editing tools that GitHub Copilot can call in Visual Studio's agent mode, including get_Symbol_references, get_symbol_info, and other C++ language service operations](https://github.com/user-attachments/assets/19c78848-466f-4bac-be64-08347ef1eb68)\n\nGitHub Copilot can then call upon these tools to provide more accurate and context-aware code suggestions, making your coding experience smoother and more efficient. For example, these tools can help you make updates across all instances of a function if you are adding new functionality or updating parameters.\n\n![An example of C++ code editing tools helping out a prompt by getting relevant symbol information and references](https://github.com/user-attachments/assets/3b98c50c-38a6-4d35-88de-15c394cb1c1c)\n\nFor best results, use a model optimized for tool calling and provide clear, specific prompts with explicit symbols when possible.\n\n## Tell us your feedback\n\nTo submit feedback, please report problems or suggest improvements through the Visual Studio feedback icon.\n\n![Visual Studio feedback icon with a pull down menu showing options for submitting bug reports and suggestions](https://github.com/user-attachments/assets/b9738f4b-7bfd-47a6-8c0d-9b8e911f847d)",
+  "Description": "C++ code editing tools for GitHub Copilot are now in public preview in the latest Visual Studio 2026 Insiders release. These tools extend Copilot’s ability to understand and modify C++…\n\nThe post [C++ code editing tools for GitHub Copilot in public preview](https://github.blog/changelog/2025-12-16-c-code-editing-tools-for-github-copilot-in-public-preview) appeared first on [The GitHub Blog](https://github.blog)."
+}
