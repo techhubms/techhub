@@ -21974,5 +21974,11 @@
     "collection": "posts",
     "reason": "Succesfully added: Applied Generic Exclusion Rules first and determined none trigger: content is a technical review, not biographical, sales/promotional, or negative-only (though negative feedback is present, it does not meet 3+ criteria for exclusion). Coding category assigned since Cursor is a developer tool (VS Code fork), and the article discusses integration and debugging features relevant to coding workflows. AI category included because Cursor specializes in AI-assisted coding and all features revolve around AI agent interactions per AI rules 1 and 4. No Microsoft technology is central (Cursor only forks VS Code, with no Microsoft services or frameworks), so Azure, DevOps, ML, Security categories were not assigned. Tags were chosen to reflect all relevant technical topics discussed. The explanation references specific rules, direct content context, and careful assessment based on the workflow.",
     "timestamp": "2025-12-16 13:18:02 +00:00"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/devops/github-copilot-for-azure-boards/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned DevOps category because the article describes Azure Boards and GitHub workflow integration, focusing on work item automation and pull request management (DevOps rules 1, 5, and 7). Assigned AI and GitHub Copilot categories because content is centrally about GitHub Copilot, a developer-focused AI coding agent (AI rule 2 and GitHub Copilot rule 1); per Copilot rules, both AI and GitHub Copilot categories are required together. Assigned Azure because Azure Boards (part of Azure DevOps) and GitHub repo integration are central to the solution (Azure rule 1). The content does not trigger any generic exclusion and stays strictly technical.",
+    "timestamp": "2025-12-16 14:07:07 +00:00"
   }
 ]
