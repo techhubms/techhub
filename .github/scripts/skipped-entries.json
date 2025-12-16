@@ -10671,5 +10671,17 @@
     "timestamp": "2025-12-16 18:07:40 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/microsoft-avd-client-support-for-teams-camera-backgrounds/idi-p/4478437",
     "collection": "community"
+  },
+  {
+    "timestamp": "2025-12-16 20:05:53 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This is primarily a retrospective and nostalgic look at Microsoft history, focused on anecdotes, product launches, and personal stories from longtime employees. While technical products and features are mentioned (e.g., Windows 95, Snipping Tool), the content does not provide substantive technical implementation, developer guidance, or educational depth related to Microsoft development, coding, DevOps, AI, Azure, ML, or Security. The focus is on human stories, corporate culture, and the evolution of products, not on hands-on technical practices or actionable developer insights. This falls under the 'Biographical Focus' and 'Workplace and Business Focus' exclusions outlined in Chapter 3.",
+    "canonical_url": "https://www.youtube.com/watch?v=1fjCS-p0MNQ"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/U1K6UWuztWU",
+    "reason": "No categories found: No categories assigned because the provided content ('content' field) is null. Without substantive content, it is impossible to determine if any category inclusion rules apply based on technical depth, Microsoft technology usage, or developer relevance. Per guidelines, if there is insufficient substantive content, no categories are to be assigned.",
+    "timestamp": "2025-12-16 21:07:09 +00:00",
+    "collection": "videos"
   }
 ]

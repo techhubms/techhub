@@ -22064,5 +22064,11 @@
     "timestamp": "2025-12-16 19:07:27 +00:00",
     "reason": "Succesfully added: Assigned 'Azure' due to substantial details about Azure Community Gallery support, Azure VM utils, Fedora-on-Azure enhancements, and Azure Linux team alignment (Azure rules 1, 4, 6). Assigned 'Security' for contributions improving Secure Boot, artifact signing with Sigul, and infrastructure for trusted workloads (Security rules 1, 4, 9). Assigned 'DevOps' due to cloud automation, image validation/testing, collaboration workflows, and infrastructure modernization (DevOps rules 1, 5, 6). Did not assign 'Coding' or 'AI/ML' as the focus is on infrastructure, cloud images, and security engineering—not programming frameworks, AI platforms, or custom ML. All content is technical, excludes biographical, sales, or business-only content, and is more than 200 words. Microsoft technologies are central rather than peripheral, meeting all multi-platform content requirements.",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=lQrr1M7AeiY",
+    "reason": "Succesfully added: Assigned both AI and GitHub Copilot categories. The content is entirely focused on new capabilities and centralized agent management in GitHub Copilot, a developer-centric AI tool (AI rule 2; GitHub Copilot category rules 1–4). The video includes demos of Copilot features, real-time agent steering, and code management. There is no business productivity, Microsoft 365 Copilot, or non-developer orientation. No other category applies because the content is strictly about managing Copilot functionality (not about coding practices, DevOps, or security).",
+    "timestamp": "2025-12-16 21:06:54 +00:00",
+    "collection": "videos"
   }
 ]

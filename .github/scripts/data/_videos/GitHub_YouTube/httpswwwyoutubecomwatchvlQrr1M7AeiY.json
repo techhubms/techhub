@@ -1,0 +1,18 @@
+{
+  "PubDate": "2025-12-16T20:49:53+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "FeedLevelAuthor": "GitHub",
+  "Description": "In this episode of GitHub Checkout, Andrea Griffiths talks with Senior Product Manager Ellie Bennett about the new \"Mission Control\" view for GitHub Copilot. Learn how to centrally manage, steer, and monitor all your coding agent tasks in one place. Ellie demonstrates how to use real-time steering to correct Copilot mid-task and how to seamlessly jump from the web to VS Code.\n\n#MissionControl #GitHubCopilot #GitHub\n\n— CHAPTERS —\n\n00:00 - Introduction to mission control 00:21 - What is the mission control view? 00:53 - How to start a task (agents panel) 01:36 - Understanding session logs and diffs 02:22 - Demo: real-time steering 03:44 - Opening tasks in VS Code 04:07 - Using custom agents 04:24 - Mobile to web workflow 04:38 - Productivity gains and roadmap 05:15 - Future plans for Mission Control 06:16 - How to try it today 06:57 - Summary\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 100 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "Title": "Manage all Copilot agents in one place with Mission Control | GitHub Checkout",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-12-16 21:05:54",
+  "OutputDir": "_videos",
+  "Tags": [
+    "GitHub",
+    "GitHubCopilot",
+    "MissionControl"
+  ],
+  "FeedName": "GitHub YouTube",
+  "Author": "GitHub",
+  "Link": "https://www.youtube.com/watch?v=lQrr1M7AeiY"
+}
