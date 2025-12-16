@@ -82,6 +82,7 @@ npm install -g @github/copilot
 
 - In Oh My Posh v28.1.0+, add the Copilot segment to show premium and chat quota:
 
+{% raw %}
 ```json
 {
   "type": "copilot",
@@ -90,6 +91,7 @@ npm install -g @github/copilot
   "properties": { "http_timeout": 1000 }
 }
 ```
+{% endraw %}
 
 - Authenticate with `oh-my-posh auth copilot` to enable stats.
 
