@@ -22046,5 +22046,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=2EJR1xhTtBs",
     "collection": "videos",
     "reason": "Succesfully added: Assigned 'AI' because the episode features AI-assisted development with GitHub Copilot and agent instructions (AI rule 1 and 2). 'GitHub Copilot' is included due to in-depth discussion and live demonstration of Copilot's code completion and automation (GitHub Copilot rule 1-4), and per workflow, 'AI' must be included when GitHub Copilot is present. Assigned 'Coding' as the content revolves around .NET development, coding best practices, and feature implementation (Coding rule 1, 2, and 4). Assigned 'Azure' because Microsoft Azure is featured in the tags and ecosystem context, aligning with cloud-based workflows, though less central than the other topics (Azure rule 1, 4). Assigned 'DevOps' since CI/CD automation with Copilot is demonstrated and discussed (DevOps rule 5, 6). Did not assign 'ML' or 'Security' as there is no substantive mention of ML/data science or detailed security implementation in the description."
+  },
+  {
+    "reason": "Succesfully added: Assigned DevOps category because the content discusses updates to GitHub Actions runner pricing, platform investment, and scalability—all key DevOps practices (DevOps rules 2, 5, 6, 9, 11). Did not assign other categories as the post does not address Microsoft product development, coding specifics, AI/ML, security, or Azure platforms. Tags extracted reflect the main technical themes: GitHub Actions, runners, pricing, DevOps methodologies, autoscaling, billing, and migration, following tag extraction guidelines. No generic exclusion rules apply since the news post contains substantive technical and operational information for practitioners.",
+    "timestamp": "2025-12-16 18:06:51 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-16-coming-soon-simpler-pricing-and-a-better-experience-for-github-actions",
+    "collection": "news"
   }
 ]

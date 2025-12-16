@@ -1,0 +1,17 @@
+{
+  "Title": "Coming soon: Simpler pricing and a better experience for GitHub Actions",
+  "Link": "https://github.blog/changelog/2025-12-16-coming-soon-simpler-pricing-and-a-better-experience-for-github-actions",
+  "EnhancedContent": "On **January 1, 2026**, GitHub will **reduce the price of GitHub-hosted runners by up to 39%** [depending on the machine type used](https://docs.github.com/billing/reference/actions-runner-pricing). The free usage minute quotas will remain the same.\n\nOn **March 1, 2026,** GitHub will introduce a new **$0.002 per minute GitHub Actions cloud platform charge** that will apply to self-hosted runner usage. Any usage subject to this charge will count toward the minutes included in your plan, as explained in [our GitHub Actions billing documentation](https://docs.github.com/billing/concepts/product-billing/github-actions#free-use-of-github-actions).\n\nRunner usage in public repositories will **remain free.** There will be no changes in price structure for GitHub Enterprise Server customers.\n\n### Deeper investment in the Actions self-hosted experience\n\nWe are increasing our investment into our self-hosted experience to ensure that we can provide autoscaling for scenarios beyond just Linux containers. This will include new approaches to scaling, new platform support, Windows support, and more as we move through the next 12 months.\n\nFor more details about the product investments we’re making in Actions, please visit our [Executive Insights page](https://resources.github.com/actions/2026-pricing-changes-for-github-actions).\n\n### Recommended resources\n\n- For answers to common questions about this change, see the FAQ in our [post on GitHub’s Executive Insights page](https://resources.github.com/actions/2026-pricing-changes-for-github-actions).\n- See the [GitHub Actions runner pricing documentation](https://docs.github.com/billing/reference/actions-runner-pricing) for the new GitHub-hosted runner rates effective January 1, 2026.\n- For more details on upcoming GitHub Actions releases, see the [GitHub public roadmap](https://github.com/orgs/github/projects/4247).\n- For help estimating your expected Actions usage cost, use the newly updated [Actions pricing calculator](https://github.com/pricing/calculator#actions).\n- If you are interested in moving existing self-hosted runner usage to GitHub-hosted runners, see the [SHR to GHR migration guide](https://docs.github.com/actions/tutorials/migrate-to-github-runners) in our documentation.",
+  "Description": "On January 1, 2026, GitHub will reduce the price of GitHub-hosted runners by up to 39% depending on the machine type used. The free usage minute quotas will remain the…\n\nThe post [Coming soon: Simpler pricing and a better experience for GitHub Actions](https://github.blog/changelog/2025-12-16-coming-soon-simpler-pricing-and-a-better-experience-for-github-actions) appeared first on [The GitHub Blog](https://github.blog).",
+  "PubDate": "2025-12-16T16:41:43+00:00",
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "Tags": [
+    "actions",
+    "Release"
+  ],
+  "ProcessedDate": "2025-12-16 18:03:18"
+}

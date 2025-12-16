@@ -10653,5 +10653,23 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/announcing-the-fabric-extensibility-toolkit-contest/",
     "collection": "news",
     "reason": "No categories found: No categories assigned. This content primarily announces a community contest for the Fabric Extensibility Toolkit, focusing on inviting submissions and providing event details. It does not offer technical guidance, implementation detail, or development insight into Microsoft Fabric, extensibility, or related development practices. There is no substantial technical content, tutorial, or hands-on description. Per generic exclusion rules, 'Sales Pitches' and event announcements without educational/technical depth are excluded. Therefore, all categories are omitted."
+  },
+  {
+    "reason": "No categories found: No categories assigned because substantive technical content is missing: 'content' field is null, and the description is only a teaser about a discussion, without technical implementation details or meaningful information about Microsoft technologies, coding, or development best practices. According to generic exclusion rules, content lacking technical depth or actionable insights should not be categorized.",
+    "timestamp": "2025-12-16 18:07:24 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/5e7RU26doiA",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: All categories were excluded because the input does not contain substantive technical content, implementation details, or actionable information. The description only raises a high-level question about the relevance of low-code in the age of AI and references a possible opinion or discussion by Scott Durow. It provides no technical detail, tutorial, code sample, or in-depth Microsoft technology content. According to the generic exclusion rules, question-only or opinion-based promotional content without meaningful technical depth does not qualify. There is also no actual content field provided, making it impossible to preserve technical accuracy or detail.",
+    "timestamp": "2025-12-16 18:07:36 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=tbB9BnoUNLM",
+    "collection": "videos"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2025-12-16 18:07:40 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/microsoft-avd-client-support-for-teams-camera-backgrounds/idi-p/4478437",
+    "collection": "community"
   }
 ]
