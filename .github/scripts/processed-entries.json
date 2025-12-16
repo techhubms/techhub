@@ -22082,5 +22082,17 @@
     "canonical_url": "https://github.blog/changelog/2025-12-16-enterprise-governance-and-policy-improvements-for-secret-scanning-now-generally-available",
     "collection": "news",
     "timestamp": "2025-12-16 22:06:00 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-16 23:05:48 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=a7jj0PvvGMk",
+    "reason": "Succesfully added: Assigned the Coding category because the content focuses on new features and development experience improvements in Visual Studio Code, a Microsoft coding tool (Coding rule 5). No other categories were added as there is no mention of DevOps, Azure, AI, ML, Security, or GitHub Copilot. The video is relevant for developers working with Microsoft technologies and editors."
+  },
+  {
+    "collection": "community",
+    "timestamp": "2025-12-16 23:06:09 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-virtual-desktop-pooled-sessions-ending-unexpectedly-and/m-p/4478548#M13967",
+    "reason": "Succesfully added: Assigned the Azure category, as the content focuses on troubleshooting and best practices within the Azure Virtual Desktop (AVD) environment (Azure inclusion rule 1). The discussion centers on Azure service operations, user session management, and FSLogix integration, all within Azure-hosted infrastructure. Coding, DevOps, AI, ML, Security, or GitHub Copilot categories were not chosen, as the post is about infrastructure management and user session troubleshooting, not software development, automated pipelines, AI, or security implementations. The post exceeds the minimum length for community content and does not trigger any generic exclusion rules."
   }
 ]
