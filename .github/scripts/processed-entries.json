@@ -21980,5 +21980,11 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned DevOps category because the article describes Azure Boards and GitHub workflow integration, focusing on work item automation and pull request management (DevOps rules 1, 5, and 7). Assigned AI and GitHub Copilot categories because content is centrally about GitHub Copilot, a developer-focused AI coding agent (AI rule 2 and GitHub Copilot rule 1); per Copilot rules, both AI and GitHub Copilot categories are required together. Assigned Azure because Azure Boards (part of Azure DevOps) and GitHub repo integration are central to the solution (Azure rule 1). The content does not trigger any generic exclusion and stays strictly technical.",
     "timestamp": "2025-12-16 14:07:07 +00:00"
+  },
+  {
+    "timestamp": "2025-12-16 15:06:25 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2026-debugging-with-copilot/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI and GitHub Copilot categories because the content describes multiple GitHub Copilot-powered features integrated into Visual Studio 2026—specifically Copilot analysis in exception handling, Copilot Chat, and Debug with Copilot (AI category rules 1 and 2, GitHub Copilot rules 1-6). Assigned Coding because it centers on the debugging experience for developers using Visual Studio (Coding rule 5). Although Visual Studio is a Microsoft development tool, there is no significant focus on DevOps, Azure, ML, or Security; the main themes are debugging, Copilot integration, and code inspection within the IDE."
   }
 ]
