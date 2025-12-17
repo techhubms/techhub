@@ -22106,5 +22106,11 @@
     "canonical_url": "https://devclass.com/2025/12/17/github-to-charge-for-self-hosted-runners-from-march-2026/",
     "timestamp": "2025-12-17 12:07:09 +00:00",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/microsoft-biztalk-server-product-lifecycle-update/ba-p/4478559",
+    "reason": "Succesfully added: Categories 'Azure' and 'DevOps' were assigned. 'Azure' is justified as the announcement centrally features Azure Logic Apps and Azure Integration Services as successors to BizTalk Server (Azure rules 1, 4, 5, 6). 'DevOps' is included because the content describes modern DevOps tooling, infrastructure-as-code (ARM/Bicep), and best practices for integration modernization and migration (DevOps rules 3, 5, 6, 9). 'AI' is not assigned, as AI-driven features are mentioned but not as a primary focus. 'Coding', 'ML', and 'Security' do not apply since the content does not go into application-level code, ML/data science, or security-specific implementations.",
+    "collection": "community",
+    "timestamp": "2025-12-17 15:06:28 +00:00"
   }
 ]

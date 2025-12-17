@@ -10683,5 +10683,11 @@
     "reason": "No categories found: No categories assigned because the provided content ('content' field) is null. Without substantive content, it is impossible to determine if any category inclusion rules apply based on technical depth, Microsoft technology usage, or developer relevance. Per guidelines, if there is insufficient substantive content, no categories are to be assigned.",
     "timestamp": "2025-12-16 21:07:09 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-17 13:17:18 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=re80VvDuNgA",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the content is primarily an announcement/promotion for a lighthearted, informal coding stream (Rubber Duck Thursdays) without any substantive technical detail or Microsoft technology focus. There are no details in the title, description, or provided tags about the technologies involved, specific projects, or technical implementation, making it ineligible for any categories. No actionable technical content is present, and thus it cannot be categorized per workflow requirements."
   }
 ]
