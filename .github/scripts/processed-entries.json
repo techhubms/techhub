@@ -22100,5 +22100,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/json-structure-a-json-schema-language-you-ll-love/ba-p/4476852",
     "collection": "community",
     "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the article addresses Azure messaging technologies including Service Bus, Event Hubs, Event Grid, and discusses schema management within Microsoft Fabric (Azure rule 1, 4, 5). 'Coding' is assigned due to substantial discussion of developer-facing schema design, type systems, code generation, and language integrations (Coding rules 4 and 5). 'ML', 'AI', 'DevOps', and 'Security' are not included since the article focuses on data modeling, schema tooling, and messaging—not on machine learning, AI services, DevOps, or security practices. No generic exclusions apply: content is technical, not biographical, sales, or career-focused, and is well above the community content minimum word count."
+  },
+  {
+    "reason": "Succesfully added: Applied the DevOps category because the primary focus is on GitHub Actions pricing (Category: DevOps rule 2) and the impact on continuous integration and workflow automation for development teams. The content covers DevOps tooling, infrastructure choices, CI/CD, workflow management, and the developer experience with GitHub Actions. No Azure, AI, Coding, ML, Security, or GitHub Copilot-specific elements are present, so those categories were not assigned. The article contains clear technical depth and analysis but does not qualify for exclusion under any Generic Exclusion Rules.",
+    "canonical_url": "https://devclass.com/2025/12/17/github-to-charge-for-self-hosted-runners-from-march-2026/",
+    "timestamp": "2025-12-17 12:07:09 +00:00",
+    "collection": "posts"
   }
 ]
