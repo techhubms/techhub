@@ -22142,5 +22142,17 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/announcing-general-availability-of-geo-replication-for-azure/ba-p/4413164",
     "timestamp": "2025-12-17 17:10:13 +00:00"
+  },
+  {
+    "timestamp": "2025-12-17 18:06:12 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-17-copilot-code-review-now-available-for-organization-members-without-a-license",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories. The entire post centers on GitHub Copilot's new code review feature rollout (AI Rule 1 and GitHub Copilot Rule 1-4), explicitly mentioning expanded Copilot-powered automated code review (AI, developer tool context). No Coding, Azure, ML, DevOps, or Security categories were assigned because the content strictly addresses GitHub Copilot's product functionality, access, billing, and organization policy—not the mechanics of coding, DevOps practice, cloud deployment, data science workflows, or security implementation."
+  },
+  {
+    "timestamp": "2025-12-17 18:06:55 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-monthly-forum-recap-november-2025/ba-p/4478127",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content focuses on Azure Arc, Operations Center, Essential Machine Management, Azure Policy, Azure Monitor, and Log Analytics (Azure inclusion rules 1, 4, and 5). Assigned 'Security' because CIS Baseline Compliance, security baselines, recommendations from Azure Advisor, and policy controls are discussed (Security rules 1 and 2). No other categories apply: Coding, DevOps, ML, AI, and GitHub Copilot are not directly addressed. Exclusion rules do not apply as content is technical, sufficiently detailed, and not biographical, sales-oriented, or business-only focused."
   }
 ]
