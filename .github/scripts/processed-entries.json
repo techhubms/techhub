@@ -22178,5 +22178,17 @@
     "timestamp": "2025-12-17 19:08:22 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-12-17-gpt-5-2-is-now-generally-available-in-github-copilot",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-17 23:06:19 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-policy-required-actions-for-docker-content-trust/ba-p/4478951",
+    "reason": "Succesfully added: Assigned the Azure category because the content is centered on Azure Container Registry (Azure rule 1) and details API/property changes in the platform. Security is included due to the focus on secure container practices, policy compliance, and impacts on organizational governance (Security rules 1, 3, 4, 5). DevOps is included because content is directly relevant to managing policies and deployment processes within Azure (DevOps rules 1, 5, 6). Coding, AI, ML, and GitHub Copilot categories do not apply, as there are no topics on code development, AI, custom ML, or Copilot features. No generic exclusion rules are triggered; the content is technical, actionable, primarily in English, and not focused on business or workplace culture."
+  },
+  {
+    "timestamp": "2025-12-17 23:06:41 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/event-driven-to-change-driven-low-cost-dependency-inversion/ba-p/4478948",
+    "reason": "Succesfully added: No generic exclusion rules applied: content is highly technical, not biographical, not a sales pitch, not negative-only, in English, and well above the 200-word minimum for community content. While no single Microsoft technology dominates, Azure SQL and Cosmos DB are referenced as key examples (over the 40% substantive threshold for considering Microsoft tech central per Chapter 2 and edge case re: comparable platforms). The focus is on distributed systems/databases integration, with Azure and Cosmos DB featured as core backends for Drasi’s continuous queries and reactive projections. No AI, ML, Security, GitHub Copilot, Coding, or DevOps content: there is no material on Microsoft programming, ML/data pipelines, secure development, DevOps methodology, or specific Azure DevOps/GitHub/AI tools. Categories are therefore limited to 'Azure', capturing the Microsoft-relevant cloud/data integration aspects."
   }
 ]
