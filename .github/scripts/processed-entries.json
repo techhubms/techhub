@@ -22112,5 +22112,35 @@
     "reason": "Succesfully added: Categories 'Azure' and 'DevOps' were assigned. 'Azure' is justified as the announcement centrally features Azure Logic Apps and Azure Integration Services as successors to BizTalk Server (Azure rules 1, 4, 5, 6). 'DevOps' is included because the content describes modern DevOps tooling, infrastructure-as-code (ARM/Bicep), and best practices for integration modernization and migration (DevOps rules 3, 5, 6, 9). 'AI' is not assigned, as AI-driven features are mentioned but not as a primary focus. 'Coding', 'ML', and 'Security' do not apply since the content does not go into application-level code, ML/data science, or security-specific implementations.",
     "collection": "community",
     "timestamp": "2025-12-17 15:06:28 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Added 'GitHub Copilot' and 'AI' categories because the content is centered on new GitHub Copilot integration features in GitHub Docs (GitHub Copilot inclusion rule 1, AI rule 2). The content is about a developer tooling feature and not business productivity, so Microsoft 365 Copilot exclusion does not apply. Other categories like Coding, Azure, DevOps, ML, and Security do not apply, as the update focuses on Copilot prompt integration in documentation, not on coding practices, operations, or security.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-12-17-dynamic-copilot-prompts-on-github-docs",
+    "timestamp": "2025-12-17 17:08:25 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content is specifically about the release of a new AI model option (Gemini 3 Flash) in GitHub Copilot, a developer tool (AI rule 1, GitHub Copilot rule 1). The article covers feature availability, activation steps, and relevant technical settings for software development environments, which fits the scope for both categories. No generic exclusion rules applied, as the content is technical, not biographical or sales-focused, and directly relevant to Microsoft-contracted tools for developers.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-12-17-gemini-3-flash-is-now-in-public-preview-for-github-copilot",
+    "timestamp": "2025-12-17 17:08:43 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Security category because the post provides a technical step-by-step guide to implementing, configuring, and managing Microsoft Purview Sensitivity Labels in Microsoft Teams to protect data, enforce compliance, and secure access (Security rules 1, 2, 4, 7, 9, 10). The article focuses on technical administration and use of security-related features (not simply business/organizational guidance or general productivity). Did not assign Coding, DevOps, AI, Azure, or ML categories as the content does not contain programming, software development, DevOps pipelines, AI model integration, or advanced Azure cloud solution topics. SharePoint and OneDrive are discussed in context of Teams security integration, not as primary development platforms.",
+    "collection": "posts",
+    "canonical_url": "https://dellenny.com/how-to-use-sensitivity-labels-in-microsoft-teams-step-by-step-guide/",
+    "timestamp": "2025-12-17 17:09:12 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category as the video focuses on building AI-ready SQL schemas (AI rules 1, 4, 5) using GitHub Copilot and semantic search. GitHub Copilot is assigned due to in-depth discussion and demo (GitHub Copilot rules 1–4), and Coding because of detailed SQL development, schema evolution, and integration with tooling (Coding rule 4). Azure category applies because of the direct use of Azure SQL, Visual Studio Code, and Microsoft SQL Server as development platforms (Azure rule 1). The decision is based solely on the content, description, and provided context, which all focus on technical implementations, developer workflows, and integrating AI with Microsoft platforms. No exclusion rules were triggered.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=Sd-3KpSNJzo",
+    "timestamp": "2025-12-17 17:09:49 +00:00"
+  },
+  {
+    "reason": "Succesfully added: The content qualifies for the Azure category because it is focused on a technical feature (Geo-Replication) of Azure Service Bus, covering implementation details, architectural concepts, and operational scenarios (Azure inclusion rules 1, 4, 5). It does not fit AI, ML, Coding, DevOps, Security, or GitHub Copilot categories as the article does not cover code, development frameworks, DevOps pipelines, security services, or AI/ML-specific content. The content is well above the minimum length and contains substantive technical detail. No generic exclusion rules trigger, as it is technical, not biographical, not a sales pitch, not negative, and is entirely in English.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/announcing-general-availability-of-geo-replication-for-azure/ba-p/4413164",
+    "timestamp": "2025-12-17 17:10:13 +00:00"
   }
 ]
