@@ -22094,5 +22094,11 @@
     "timestamp": "2025-12-16 23:06:09 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-virtual-desktop-pooled-sessions-ending-unexpectedly-and/m-p/4478548#M13967",
     "reason": "Succesfully added: Assigned the Azure category, as the content focuses on troubleshooting and best practices within the Azure Virtual Desktop (AVD) environment (Azure inclusion rule 1). The discussion centers on Azure service operations, user session management, and FSLogix integration, all within Azure-hosted infrastructure. Coding, DevOps, AI, ML, Security, or GitHub Copilot categories were not chosen, as the post is about infrastructure management and user session troubleshooting, not software development, automated pipelines, AI, or security implementations. The post exceeds the minimum length for community content and does not trigger any generic exclusion rules."
+  },
+  {
+    "timestamp": "2025-12-17 08:06:43 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/json-structure-a-json-schema-language-you-ll-love/ba-p/4476852",
+    "collection": "community",
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the article addresses Azure messaging technologies including Service Bus, Event Hubs, Event Grid, and discusses schema management within Microsoft Fabric (Azure rule 1, 4, 5). 'Coding' is assigned due to substantial discussion of developer-facing schema design, type systems, code generation, and language integrations (Coding rules 4 and 5). 'ML', 'AI', 'DevOps', and 'Security' are not included since the article focuses on data modeling, schema tooling, and messaging—not on machine learning, AI services, DevOps, or security practices. No generic exclusions apply: content is technical, not biographical, sales, or career-focused, and is well above the community content minimum word count."
   }
 ]
