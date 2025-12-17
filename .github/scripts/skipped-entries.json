@@ -10689,5 +10689,23 @@
     "timestamp": "2025-12-17 13:17:18 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=re80VvDuNgA",
     "reason": "No categories found: Content excluded due to generic exclusion rule - the content is primarily an announcement/promotion for a lighthearted, informal coding stream (Rubber Duck Thursdays) without any substantive technical detail or Microsoft technology focus. There are no details in the title, description, or provided tags about the technologies involved, specific projects, or technical implementation, making it ineligible for any categories. No actionable technical content is present, and thus it cannot be categorized per workflow requirements."
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The article primarily focuses on parental guidance and family safety features for Xbox gaming, including account setup, parental controls, screen time management, and family settings. It is directed at parents and guardians seeking to create a safe and fun gaming environment for children, not technical professionals. There is no substantial content about development, coding, Microsoft technical platforms, or technical implementation. Additionally, this falls under the 'Non-Development Microsoft Products' exclusion—consumer product guidance for Xbox, not Xbox development. No categories apply.",
+    "timestamp": "2025-12-17 19:07:03 +00:00",
+    "canonical_url": "https://news.xbox.com/en-us/2025/12/17/xbox-family-settings-holiday-2025/",
+    "collection": "news"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The provided content description is extremely high-level and lacks substantive technical details about Microsoft technologies, development practices, or implementation specifics. It only references a quick look at File Explorer and version control integration, without clarifying if this involves GitHub, Azure DevOps, or other core Microsoft developer tools. 'File Explorer' is a Windows end-user feature and, by itself, does not meet inclusion criteria for developer, DevOps, or coding categories. The description does not indicate a focus on technical practices, tool usage, or programming (Coding), nor does it qualify under DevOps (which requires substantial discussion of CI/CD, GitHub, Azure DevOps, etc.). AI, ML, Azure, Security, and GitHub Copilot are not mentioned or implied. Without the main content text or evidence of development- or DevOps-focused implementation, the video does not qualify for any category per exclusion-first rules.",
+    "timestamp": "2025-12-17 19:08:55 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/_P0QR3oCSZM",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Excluded all categories due to not enough substantive technical content in the provided input. The description and title indicate this is a high-level overview video about File Explorer and basic version control concepts, with no evidence of technical depth, development-specific tools, or programming-focused details. The lack of a concrete content field further prevents assessment of details required to qualify for Coding, DevOps, or other categories. This content does not mention any Microsoft development technologies, developer workflows, or implementation guidance that satisfy category inclusion rules.",
+    "timestamp": "2025-12-17 19:09:07 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=A0-1kpoJ4wI",
+    "collection": "videos"
   }
 ]

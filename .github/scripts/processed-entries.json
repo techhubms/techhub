@@ -22154,5 +22154,29 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-monthly-forum-recap-november-2025/ba-p/4478127",
     "collection": "community",
     "reason": "Succesfully added: Assigned the 'Azure' category because the content focuses on Azure Arc, Operations Center, Essential Machine Management, Azure Policy, Azure Monitor, and Log Analytics (Azure inclusion rules 1, 4, and 5). Assigned 'Security' because CIS Baseline Compliance, security baselines, recommendations from Azure Advisor, and policy controls are discussed (Security rules 1 and 2). No other categories apply: Coding, DevOps, ML, AI, and GitHub Copilot are not directly addressed. Exclusion rules do not apply as content is technical, sufficiently detailed, and not biographical, sales-oriented, or business-only focused."
+  },
+  {
+    "reason": "Succesfully added: The 'Security' category is assigned because the content focuses on access security, identity management, Zero Trust, and addresses threat mitigation using Microsoft security solutions (Security rule 1, 2, 3, 4, 9). The 'Azure' category is included since Microsoft Entra is an Azure-based identity and network access solution (Azure rule 1). The 'AI' category is also applied, as the article discusses how AI advances are changing the threat landscape and how unified security approaches address AI-driven attacks (AI rule 5, 6). No exclusionary rules apply, as this is a technical, implementation-focused article targeting security practitioners.",
+    "timestamp": "2025-12-17 19:07:25 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/12/17/access-fabric-a-modern-approach-to-identity-and-network-access/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories because the content is specifically focused on AI-powered functionalities (GPT-5.1 and GPT-5.1-Codex) available through GitHub Copilot, in line with the AI and GitHub Copilot inclusion rules (AI rules 1, 2, and 6; Copilot rules 1 and 2). The announcement is from an official source and details availability and access for developer-related environments; there are no generic exclusion triggers. Non-development Copilot products are not discussed—instead, this is about code development tools.",
+    "timestamp": "2025-12-17 19:07:46 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'AI' category because the content focuses on the release and enablement of a new AI model (GPT-5.1-Codex-Max) within GitHub Copilot (AI inclusion rule 1, 2). Assigned 'GitHub Copilot' category because the content is specifically about new functionality and access within GitHub Copilot across its tiers and integrations (GitHub Copilot inclusion rule 1, 2, and 3). No other categories apply as the content does not address pure coding, DevOps, Azure, ML, or Security implementation topics.",
+    "timestamp": "2025-12-17 19:08:04 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-17-gpt-5-1-codex-max-is-now-generally-available-in-github-copilot",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' because the content focuses on the release of a new AI model in GitHub Copilot, specifically its use as a developer tool (GitHub Copilot Inclusion Rules 1, 2, and 3). 'AI' is included per the rule to always pair these when GitHub Copilot-related content qualifies. 'Coding', 'DevOps', 'Azure', 'ML', and 'Security' were not added, as the announcement centers on AI capabilities and access/enablement in Copilot, not code examples, deployment, or security. Generic exclusions do not apply, as the content is technical and focused on developer tools.",
+    "timestamp": "2025-12-17 19:08:22 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-17-gpt-5-2-is-now-generally-available-in-github-copilot",
+    "collection": "news"
   }
 ]
