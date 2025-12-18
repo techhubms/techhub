@@ -1,0 +1,20 @@
+{
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw",
+  "Description": "Cooper implemented Microsoft Dragon Copilot, an AI assistant for clinical workflow and integrated with their Epic EHR that streamlines documentation, automates tasks, and surfaces information, boosting efficiency, satisfaction, and patient care.\n\nLearn More: https://msft.it/6052tmeOg\n\n#Microsoft #DragonCopilot #EHR",
+  "PubDate": "2025-12-18T13:00:13+00:00",
+  "Link": "https://www.youtube.com/watch?v=7mFPeG3ogl8",
+  "FeedName": "Microsoft Cloud YouTube",
+  "Author": "Microsoft Cloud",
+  "OutputDir": "_videos",
+  "Tags": [
+    "ambient listening",
+    "clinical documentation",
+    "Dragon Copilot",
+    "EHR",
+    "Microsoft"
+  ],
+  "ProcessedDate": "2025-12-18 13:16:13",
+  "FeedLevelAuthor": "Microsoft Cloud",
+  "Title": "Cooper University Health Care enhances patient care with Microsoft Dragon Copilot"
+}

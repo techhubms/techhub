@@ -1,0 +1,28 @@
+{
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Description": "Join Gwen and Marlene from Python on Azure for an end-of-year conversation with Microsoft's entire Python advocacy team! We discuss: ✨ Favorite Python trends and changes from 2025 📚 Learning resources that helped us grow this year 🤔 How we actually learn and stay current 🎯 What we're excited to explore in 2026 Perfect for: Python developers, cloud engineers, and anyone reflecting on their 2025 learning journey or planning for 2026.\n\n⌚ Chapters: 00:00 Welcome and Intros 06:47 On today's episode 07:10 Favorite Python trends of 2025 10:58 Biggest hurdles 16:12 AI wins for 2025 18:52 Favorite learning resources 29:25 What are we looking forward to for 2026 aka \"nerd hobbies\" 😄 37:54 Thank you for joining! 38:14 Wrap\n\n🔗 Links: https://www.fluentpython.com/ https://effectivepython.com/ https://huyenchip.com/books/ https://aka.ms/pythonai/resources https://pycoders.com/ https://hamel.dev/ https://simonwillison.net/ https://talkpython.fm/ https://www.anthropic.com/engineering https://www.pragmaticengineer.com/\n\n🎙️ Featuring: Gwyneth Peña-Siguenza, Marlene Mhangami, Pamela Fox, Sara Kaiser, Renee Noble, Anthony Shaw",
+  "PubDate": "2025-12-18T13:00:35+00:00",
+  "Link": "https://www.youtube.com/watch?v=FiAH8Lh1pxM",
+  "FeedName": "Microsoft Developer YouTube",
+  "Author": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "Development",
+    "Microsoft",
+    "python",
+    "softwaredeveloper",
+    "Tech",
+    "Technology",
+    "yearinreview"
+  ],
+  "ProcessedDate": "2025-12-18 13:16:15",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Title": "Microsoft's Python Team 2025 Year in Review: Trends, Learning & What's Next"
+}

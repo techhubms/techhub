@@ -10707,5 +10707,17 @@
     "timestamp": "2025-12-17 19:09:07 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=A0-1kpoJ4wI",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2025-12-18 11:06:22 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/Zn08aLOKmTY",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. The title 'Is software engineering still in demand? With Sajjaad Khader' suggests the video primarily discusses career trends and demand in the software engineering industry rather than providing substantive technical content on Microsoft technologies. There is no description or content provided to counter this impression. This type of content falls under the 'Job-Related Content' and possibly 'Business Strategy and Executive Content' exclusions, as it likely covers career advice, industry trends, or workplace demand rather than technical implementation or development topics. Therefore, no categories are assigned."
+  },
+  {
+    "timestamp": "2025-12-18 13:17:11 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: the content focuses on Microsoft Dragon Copilot for clinical documentation and healthcare workflow, which is a business productivity/healthcare tool and not a development-focused or technical implementation topic. As per the rules, non-development Microsoft products such as Dragon Copilot (for healthcare, documentation, and clinical workflows) are excluded unless the content specifically addresses development or integration aspects, which is not indicated here. Therefore, no categories qualify.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=7mFPeG3ogl8"
   }
 ]
