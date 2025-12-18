@@ -10749,5 +10749,11 @@
     "collection": "news",
     "canonical_url": "https://www.microsoft.com/en-us/industry/blog/financial-services/2025/12/18/ai-transformation-in-financial-services-5-predictors-for-success-in-2026/",
     "reason": "No categories found: Content excluded under generic exclusion rules related to business strategy and executive content. The main title and description ('AI transformation in financial services: 5 predictors for success in 2026') make it clear this piece is focused on high-level future business trends and strategic predictors for organizational success, not technical implementation details or developer-oriented content. There is no substantive technical detail in the body—just references to global partnerships and events, not to specific Microsoft developer technologies, implementation guidance, or hands-on use. This fits Chapter 3 exclusion for 'Business Strategy and Executive Content' and does not qualify for any technical category."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=mGTWMJ7JHNs",
+    "reason": "No categories found: Content excluded due to Generic Exclusion Rule (Question-Only Content and Biographical Focus). The description indicates this is an open-ended coworking/chat session with a GitHub developer advocate primarily there to answer questions, not substantive technical content about Microsoft technologies (e.g., 'chat with you about your questions, and maybe even build a thing or two!'). There is no indication of structured tutorial, technical depth, or coverage of Microsoft-specific development or tooling, and no concrete technical topic is mentioned. The absence of content further confirms there is not enough information to assign categories.",
+    "collection": "videos",
+    "timestamp": "2025-12-18 20:06:13 +00:00"
   }
 ]

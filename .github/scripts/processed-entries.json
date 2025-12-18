@@ -22292,5 +22292,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-reliable-ai-travel-agents-with-the-durable-task/ba-p/4478913",
     "reason": "Succesfully added: Categories assigned: 'AI' due to the focus on orchestrating Azure OpenAI-powered agents with Microsoft's Agent Framework and Durable Task Extension (AI rules 1, 3, 4, 5), 'Azure' as Azure Functions, Azure Static Web Apps, and Azure Blob Storage are central to both hosting and orchestration (Azure rules 1, 4, 5), and 'Coding' because of C# and Python sample implementation, detailed orchestration logic, and code-first approach (Coding rules 1, 2, 4, 5). Content is technical, implementation-focused, and not primarily biographical, commercial, or business/productivity oriented. No generic exclusion rules apply as content is substantive, clearly above the community content length threshold, and is not sales, job, or management focused."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-12-18-github-copilot-now-supports-agent-skills",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the entire content describes a functionality enhancement within GitHub Copilot, a developer AI coding tool (AI rule 2; GitHub Copilot rule 1). Added 'Coding' because Agent Skills are described as folders containing instructions and scripts that alter or automate the software development process, which directly involves coding practices with Microsoft developer tooling (Coding rule 4; features span across Copilot CLI and Visual Studio Code). Did not assign other categories as there is no focus on DevOps pipelines, Azure-specific services, ML/data engineering, or security implementation.",
+    "collection": "news",
+    "timestamp": "2025-12-18 20:05:44 +00:00"
   }
 ]
