@@ -22214,5 +22214,23 @@
     "timestamp": "2025-12-18 15:06:02 +00:00",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-12-18-copilot-code-review-preview-features-now-supported-in-github-enterprise-cloud-with-data-residency"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the post primarily discusses Azure SQL, Azure SQL Managed Instance, and Azure platform features (Azure rule 1, 4, 5). Assigned ML category due to extensive updates around data analytics, vector data types, AI/ML functions, and integration in Fabric SQL and SQL Server (ML rules 1, 2, 4, 10). Assigned AI category because of several direct mentions of AI features, Copilot integration (developer features), and AI-powered SQL functions (AI rules 1, 5). Assigned Coding due to deep coverage of developer tooling such as SSMS, VS Code extension, drivers, and SQL project updates (Coding rules 1, 2, 5). Did not assign Security as, although there are security updates, the content does not focus primarily on security implementation details but rather features across the SQL landscape. Content is technical and highly relevant for Azure, ML, AI, and Coding categories, not excluded by any generic exclusion rules.",
+    "timestamp": "2025-12-18 16:06:46 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/2025-year-in-review-whats-new-across-sql-server-azure-sql-and-sql-database-in-fabric/"
+  },
+  {
+    "reason": "Succesfully added: Azure category assigned because this article details a feature of Microsoft Fabric Data Warehouse, which is part of the Azure platform (Azure rule 1). ML (data/analytics) category assigned per ML rule 1 and 4, as content focuses on SQL-based analytics/reporting in a data warehouse context—common data engineering and analytics engineering tasks. Did not assign AI, Coding, DevOps, GitHub Copilot, or Security since the content is not related to those categories. No generic exclusions triggered as the content is technical, detailed, English, and not business or end-user productivity focused.",
+    "timestamp": "2025-12-18 16:07:07 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/date_bucket-function-in-fabric-data-warehouse/"
+  },
+  {
+    "reason": "Succesfully added: Assigned Azure category because the on-premises data gateway is a Microsoft data integration service used for cloud/on-premises hybrid scenarios and is tightly integrated with Azure and Microsoft Fabric (Azure rule 1 and 4). Assigned ML category since the update also discusses technical features relating to Power BI Desktop compatibility, serving analytics/data engineering and business intelligence workloads (ML rule 1 and 4). Did not assign Coding, DevOps, AI, Security, or GitHub Copilot categories, as the content is not code-focused, does not involve developer tools, and is not primarily about AI or security features.",
+    "timestamp": "2025-12-18 16:07:26 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-december-2025-release/"
   }
 ]

@@ -10725,5 +10725,11 @@
     "timestamp": "2025-12-18 15:06:33 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=6wpTmWgSkCA"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This is a high-level business/organizational narrative with no substantive technical depth or actionable technical implementation details. The provided content consists of a title, a featured image, a few keywords ('AI', 'Digital Transformation', 'Security'), and a brief mention that Osaka hospital improved workflows after a ransomware attack. There is no technical discussion of solutions, Microsoft technologies, or implementation specifics required by category inclusion rules. This matches the 'Business Strategy and Executive Content' exclusion and does not qualify for any category.",
+    "timestamp": "2025-12-18 16:07:39 +00:00",
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/source/asia/features/after-crippling-ransomware-attack-osaka-hospital-embraces-cyber-safety-smoother-workflows/"
   }
 ]
