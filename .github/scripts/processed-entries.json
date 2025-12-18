@@ -22208,5 +22208,11 @@
     "reason": "Succesfully added: Assigned AI category because the content focuses on integrating AI-powered protocols (MCP) into the development workflow (AI inclusion rule 1 and 4). Assigned Coding because it centers around practical development tasks and tool integrations within Visual Studio Code (Coding inclusion rules 2 and 5). MCP is presented as a developer-facing protocol for AI-assisted workflows, not a business productivity feature. No other generic exclusion criteria were triggered; the content is technical in scope and intended for developers.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=lHWKy2GFWi0"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories. The content centers on GitHub Copilot code review features (GitHub Copilot rule 1 and 2), including agentic and AI-powered enhancements for developer workflows (AI rule 1, 2, and 4). It does not fit Coding, Azure, ML, DevOps, or Security as the content is focused on AI-driven code review tooling in GitHub, not general coding practices, data science, security, or Azure-specific solutions.",
+    "timestamp": "2025-12-18 15:06:02 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-12-18-copilot-code-review-preview-features-now-supported-in-github-enterprise-cloud-with-data-residency"
   }
 ]

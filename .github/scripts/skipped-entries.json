@@ -10719,5 +10719,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule: the content focuses on Microsoft Dragon Copilot for clinical documentation and healthcare workflow, which is a business productivity/healthcare tool and not a development-focused or technical implementation topic. As per the rules, non-development Microsoft products such as Dragon Copilot (for healthcare, documentation, and clinical workflows) are excluded unless the content specifically addresses development or integration aspects, which is not indicated here. Therefore, no categories qualify.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=7mFPeG3ogl8"
+  },
+  {
+    "reason": "No categories found: No categories assigned. Generic exclusion rules apply: the content description focuses on high-level business strategy and the future of retail, centering on how Microsoft is shaping the retail industry and enabling retailers and brands to address opportunities and challenges. There are no substantive technical implementation details, development practices, coding, or specific Microsoft developer/engineering tools or services discussed. Therefore, it is excluded based on the business strategy and executive content exclusion rule.",
+    "timestamp": "2025-12-18 15:06:33 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=6wpTmWgSkCA"
   }
 ]
