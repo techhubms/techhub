@@ -1,0 +1,18 @@
+{
+  "Link": "https://github.blog/changelog/2025-12-18-assigning-github-copilot-to-an-issue-now-adds-you-as-an-assignee",
+  "Title": "Assigning GitHub Copilot to an issue now adds you as an assignee",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Author": "Allison",
+  "EnhancedContent": "When you assign an issue to Copilot, you’ll now automatically be added as an assignee yourself. This makes it easier to track your work using filters like `assignee:@me` and understand who is working on an issue.\n\n## Share your feedback\n\nJoin the [community discussion](https://github.com/orgs/community/discussions/173575) to share your feedback or learn more in [our documentation on assigning issues to Copilot](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/create-a-pr).\n\n*Disclaimer: The UI for features in public preview is subject to change.*",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Description": "When you assign an issue to Copilot, you’ll now automatically be added as an assignee yourself. This makes it easier to track your work using filters like assignee:@me and understand…\n\nThe post [Assigning GitHub Copilot to an issue now adds you as an assignee](https://github.blog/changelog/2025-12-18-assigning-github-copilot-to-an-issue-now-adds-you-as-an-assignee) appeared first on [The GitHub Blog](https://github.blog).",
+  "PubDate": "2025-12-18T17:46:17+00:00",
+  "FeedName": "The GitHub Blog",
+  "OutputDir": "_news",
+  "Tags": [
+    "copilot",
+    "Improvement",
+    "projects & issues"
+  ],
+  "ProcessedDate": "2025-12-18 18:03:40"
+}

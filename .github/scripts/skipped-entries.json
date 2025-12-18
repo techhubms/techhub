@@ -10737,5 +10737,11 @@
     "collection": "posts",
     "timestamp": "2025-12-18 17:09:33 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rules: The main body of the provided content is comprised almost entirely of navigation links, site branding, social links, and references to other news articles. There is no substantial technical content or analysis on Microsoft technologies, products, or development practices. The only potentially relevant technical article ('Docker Hardened Images now free, devs give cautious welcome') is about Docker and does not focus on Microsoft technologies. None of the provided text meets the minimum technical or content relevancy criteria for categorization."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2025/12/18/xbox-bethesda-blizzard-activision-king-2025-games-thank-you/",
+    "timestamp": "2025-12-18 18:06:54 +00:00",
+    "reason": "No categories found: All categories were excluded due to the generic exclusion rules. This article is a company news post reflecting on the year in Xbox gaming and expressing gratitude to players, but it does not contain technical depth, developer content, implementation details, or educational material about Microsoft technologies or development. The content is centered on game releases, community engagement, and upcoming features targeted at gaming audiences and consumers, not developers or technical practitioners. As such, it is excluded under the business/product content and non-development product exclusions. There is no substantial technical implementation detail, coding guidance, architecture, or developer-focused Azure/AI/ML/Security/DevOps tooling described. Therefore, no categories apply."
   }
 ]

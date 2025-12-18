@@ -22250,5 +22250,35 @@
     "collection": "news",
     "timestamp": "2025-12-18 17:09:13 +00:00",
     "reason": "Succesfully added: Assigned the DevOps category because this update directly affects the team management and collaboration features within GitHub, which are central to DevOps practices (DevOps inclusion rules 2, 3, and 9). No other categories apply, as this is not an AI, Coding, Azure, ML, or Security change. The content is focused on operational and workflow aspects for developers and team administrators using GitHub. None of the generic exclusion rules apply here."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/how-to-connect-microsoft-fabric-to-azure-devops-using-service-principal/",
+    "timestamp": "2025-12-18 18:06:39 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category because the content is focused on CI/CD pipelines, Git integration, and Azure DevOps automation (DevOps rules 1, 5, 6). Assigned Azure because integration is with Azure DevOps and specifically references connecting Fabric to Azure DevOps repositories (Azure rule 1). Assigned ML category because Microsoft Fabric is a data analytics and data science platform, and the integration enables engineering workflows for those workloads (ML rules 1, 2, 7). Did not assign AI or Security because the content is not focused on AI capabilities or specific security/identity management implementations, but on workflow and platform integration."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2025/12/18/new-microsoft-e-book-3-reasons-point-solutions-are-holding-you-back/",
+    "timestamp": "2025-12-18 18:08:27 +00:00",
+    "reason": "Succesfully added: Assigned Security category as the content focuses on cybersecurity solutions, discusses detection, response, exposure management, and Microsoft Defender/Sentinel (Security rules 1, 4, 5, 9). AI category is included because the article details how AI transforms security operations, features Security Copilot, and talks about AI-powered guidance, analytics, and automation (AI rule 1, 4, 5). Azure category is added since Microsoft security platforms such as Defender and Sentinel are Azure-based services and discussions involve cloud-based security (Azure rule 1). The content is not biographical, promotional, or business-strategy focused; generic and category-specific inclusion/exclusion rules have all been followed."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-12-18-assigning-github-copilot-to-an-issue-now-adds-you-as-an-assignee",
+    "timestamp": "2025-12-18 18:08:47 +00:00",
+    "reason": "Succesfully added: Assigned GitHub Copilot and AI categories because the content is specifically about GitHub Copilot's enhanced functionality (GitHub Copilot rules 1 and 2; AI rule 2). Assigned DevOps category because the feature directly affects project and issue management workflows, which are core DevOps practices (DevOps rule 3 and 5). The content describes an incremental improvement to team tracking and collaboration in software development, meeting all inclusion criteria and does not trigger any generic exclusion rules."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-12-18-github-advanced-security-trials-now-available-for-more-github-enterprise-customers",
+    "timestamp": "2025-12-18 18:09:03 +00:00",
+    "reason": "Succesfully added: Assigned 'DevOps' because GitHub Advanced Security is part of the GitHub Enterprise toolchain geared toward DevOps and security automation (DevOps rule 2, 11). Assigned 'Security' because the announcement focuses on code and secret protection capabilities (Security rule 1, 2, 7). Azure and other Microsoft service categories do not apply as this update is specific to GitHub Enterprise features. No generic exclusion rules were triggered."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-12-18-github-enterprise-cloud-data-residency-in-japan-is-generally-available",
+    "timestamp": "2025-12-18 18:09:21 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category because GitHub Enterprise Cloud is a comprehensive DevOps platform and the content highlights DevOps workflows (DevOps rule 2 and 11). Assigned Azure category because the product is explicitly powered by Microsoft Azure, which underpins the platform (Azure rule 2 and 4). Assigned Security because the ability to specify data residency addresses compliance and regulatory requirements, a key part of security in the enterprise context (Security rules 1, 4, and 5). Did not assign AI, Coding, GitHub Copilot, or ML, as the content does not cover those topics."
   }
 ]
