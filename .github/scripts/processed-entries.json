@@ -22280,5 +22280,17 @@
     "canonical_url": "https://github.blog/changelog/2025-12-18-github-enterprise-cloud-data-residency-in-japan-is-generally-available",
     "timestamp": "2025-12-18 18:09:21 +00:00",
     "reason": "Succesfully added: Assigned DevOps category because GitHub Enterprise Cloud is a comprehensive DevOps platform and the content highlights DevOps workflows (DevOps rule 2 and 11). Assigned Azure category because the product is explicitly powered by Microsoft Azure, which underpins the platform (Azure rule 2 and 4). Assigned Security because the ability to specify data residency addresses compliance and regulatory requirements, a key part of security in the enterprise context (Security rules 1, 4, and 5). Did not assign AI, Coding, GitHub Copilot, or ML, as the content does not cover those topics."
+  },
+  {
+    "timestamp": "2025-12-18 19:06:44 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/ai-coding-agents-domain-specific-languages/",
+    "reason": "Succesfully added: Assigned 'AI' because the article centers on AI coding agents and how they function with DSLs, with several references to Copilot and mitigation strategies (AI rules 1, 4). 'GitHub Copilot' is included because multiple sections analyze Copilot’s strengths and weaknesses, plus configuration (GitHub Copilot inclusion rule 1, 2, 3). 'Coding' applies due to focus on coding practices, code completion, and domain language syntax rules (Coding rule 4). 'Azure' is included because a significant section and concrete example use Azure Bicep, VS Code extensions, and Microsoft's MCP server (Azure rules 1, 2). All categories are assigned according to explicit content focus and rule hierarchy; the article is highly technical, educational, and free from generic exclusions."
+  },
+  {
+    "timestamp": "2025-12-18 19:08:00 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-reliable-ai-travel-agents-with-the-durable-task/ba-p/4478913",
+    "reason": "Succesfully added: Categories assigned: 'AI' due to the focus on orchestrating Azure OpenAI-powered agents with Microsoft's Agent Framework and Durable Task Extension (AI rules 1, 3, 4, 5), 'Azure' as Azure Functions, Azure Static Web Apps, and Azure Blob Storage are central to both hosting and orchestration (Azure rules 1, 4, 5), and 'Coding' because of C# and Python sample implementation, detailed orchestration logic, and code-first approach (Coding rules 1, 2, 4, 5). Content is technical, implementation-focused, and not primarily biographical, commercial, or business/productivity oriented. No generic exclusion rules apply as content is substantive, clearly above the community content length threshold, and is not sales, job, or management focused."
   }
 ]
