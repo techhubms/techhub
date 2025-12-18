@@ -22304,5 +22304,11 @@
     "timestamp": "2025-12-18 21:06:45 +00:00",
     "canonical_url": "https://github.blog/changelog/2025-12-18-claude-opus-4-5-is-now-generally-available-in-github-copilot",
     "collection": "news"
+  },
+  {
+    "timestamp": "2025-12-18 22:05:28 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/run-spark-job-definitions-in-pipelines-with-service-principal-or-workspace-identity/",
+    "reason": "Succesfully added: Assigned the Azure category as the article focuses on a Microsoft Fabric Data Factory pipeline—a cloud-based Azure data integration service (Azure rule 1). Assigned ML because Spark jobs and notebook automation are core data engineering and ML workflow technologies (ML rules 1, 2, 3). Assigned Security because the content is centered around implementing secure authentication strategies in production pipelines, using Service Principal and Workspace Identity (Security rules 1, 3, 4)."
   }
 ]
