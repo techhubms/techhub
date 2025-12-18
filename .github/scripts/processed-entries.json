@@ -22232,5 +22232,23 @@
     "timestamp": "2025-12-18 16:07:26 +00:00",
     "collection": "news",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-december-2025-release/"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-eventstream-sql-operator-your-tool-kit-to-real-time-data-processing-in-fabric-real-time-intelligence/",
+    "collection": "news",
+    "timestamp": "2025-12-18 17:08:35 +00:00",
+    "reason": "Succesfully added: Assigned Azure category as the post covers Fabric Eventstream, which is a Microsoft Fabric (Azure family) service and extensively discusses integration with Azure Stream Analytics (Azure inclusion rules 1 and 6). Assigned ML category because the use cases focus on real-time analytics, anomaly detection, metric aggregation, and rolling averages, which fit the definition of data engineering and analytics (ML inclusion rules 2, 4, and 5). Did not assign AI because there is no mention of AI-specific services, large language models, or prebuilt Microsoft AI platforms; the focus remains on SQL-driven stream analytics and real-time data engineering rather than AI service integration. Did not assign Coding as the content is focused on SQL-based stream processing (not general app development or .NET coding practices), and not DevOps or Security because it is not focused on infrastructure automation or security practices."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-12-18-enterprise-level-pull-request-activity-metrics-now-in-public-preview",
+    "collection": "news",
+    "timestamp": "2025-12-18 17:08:57 +00:00",
+    "reason": "Succesfully added: Assigned GitHub Copilot category because the content is focused on enterprise usage metrics for GitHub Copilot (GitHub Copilot inclusion rule 1). Assigned AI because GitHub Copilot requires both (GitHub Copilot rule, AI rule 2). Assigned DevOps because the metrics relate directly to pull request workflows, developer productivity, and organizational process insights (DevOps inclusion rules 3, 9, and analytics/metrics coverage). Not assigned Coding, Azure, ML, or Security since the content is about workflow analytics, not about code-level, cloud, or security/ML work."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2025-12-18-teams-management-now-moved-to-settings",
+    "collection": "news",
+    "timestamp": "2025-12-18 17:09:13 +00:00",
+    "reason": "Succesfully added: Assigned the DevOps category because this update directly affects the team management and collaboration features within GitHub, which are central to DevOps practices (DevOps inclusion rules 2, 3, and 9). No other categories apply, as this is not an AI, Coding, Azure, ML, or Security change. The content is focused on operational and workflow aspects for developers and team administrators using GitHub. None of the generic exclusion rules apply here."
   }
 ]
