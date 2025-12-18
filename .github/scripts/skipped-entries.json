@@ -10755,5 +10755,17 @@
     "reason": "No categories found: Content excluded due to Generic Exclusion Rule (Question-Only Content and Biographical Focus). The description indicates this is an open-ended coworking/chat session with a GitHub developer advocate primarily there to answer questions, not substantive technical content about Microsoft technologies (e.g., 'chat with you about your questions, and maybe even build a thing or two!'). There is no indication of structured tutorial, technical depth, or coverage of Microsoft-specific development or tooling, and no concrete technical topic is mentioned. The absence of content further confirms there is not enough information to assign categories.",
     "collection": "videos",
     "timestamp": "2025-12-18 20:06:13 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content is a high-level video discussing general trends about developers’ evolving relationship with AI, rather than providing substantive technical detail on Microsoft technologies, developer tools, or specific implementations. There are no references to GitHub Copilot, Azure, or particular Microsoft products/services in the description, nor to concrete development methodologies, architectures, or hands-on practices. The content is broad in nature, focusing on mindset and role changes, which aligns more with industry/role commentary and does not meet the technical depth or specificity required for inclusion.",
+    "timestamp": "2025-12-18 21:07:15 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/B345wIc9AqM",
+    "collection": "videos"
+  },
+  {
+    "reason": "No categories found: No categories were assigned because the input content field is null, meaning there is no substantive content to analyze. According to the workflow, only the fields provided in the input should be used, and when the main content is absent or missing, there is no technical depth or detail to justify inclusion in any Microsoft technology category. The description does not mention any specific Microsoft technology, service, product, or framework—E2B is described as open source infrastructure for AI-powered agents, but there is no evidence from the description or tags that Microsoft platforms or technologies are involved or central to the solution (Multi-Platform Content Threshold and Core Processing Rules). Therefore, all categories are excluded.",
+    "timestamp": "2025-12-18 21:07:28 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=iWWNK_dJKU4",
+    "collection": "videos"
   }
 ]

@@ -22298,5 +22298,11 @@
     "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the entire content describes a functionality enhancement within GitHub Copilot, a developer AI coding tool (AI rule 2; GitHub Copilot rule 1). Added 'Coding' because Agent Skills are described as folders containing instructions and scripts that alter or automate the software development process, which directly involves coding practices with Microsoft developer tooling (Coding rule 4; features span across Copilot CLI and Visual Studio Code). Did not assign other categories as there is no focus on DevOps pipelines, Azure-specific services, ML/data engineering, or security implementation.",
     "collection": "news",
     "timestamp": "2025-12-18 20:05:44 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned both 'AI' and 'GitHub Copilot' categories because the content specifically announces a new AI model (Claude Opus 4.5) now available in GitHub Copilot, which is a developer tool (AI rule 1, GitHub Copilot rule 1). The announcement covers how to enable and use the new AI model across various supported IDEs with GitHub Copilot Chat. No other categories apply as the article does not focus on coding patterns, DevOps processes, Azure-specific details, ML engineering, or security implementation.",
+    "timestamp": "2025-12-18 21:06:45 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-18-claude-opus-4-5-is-now-generally-available-in-github-copilot",
+    "collection": "news"
   }
 ]
