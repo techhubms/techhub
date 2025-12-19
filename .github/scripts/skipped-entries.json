@@ -10767,5 +10767,11 @@
     "timestamp": "2025-12-18 21:07:28 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=iWWNK_dJKU4",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/asia/2025/12/18/becoming-equal-in-the-digital-era-edi-suwanto-a-visually-impaired-microsoft-elevate-educator-shares-how-ai-can-become-a-force-for-inclusion-for-the-disability-community/",
+    "collection": "news",
+    "timestamp": "2025-12-19 15:07:03 +00:00",
+    "reason": "No categories found: Content is excluded due to generic exclusion rules regarding non-development Microsoft products. The main focus is on Microsoft 365 Copilot—a business productivity tool excluded per Copilot Product Distinction and Non-Development Microsoft Products (Chapter 3). The article centers on AI for workplace and daily life accessibility, not technical development, coding, or specific implementation for developers. No developer or technical implementation instructions are provided. While Microsoft Elevate and inclusivity are highlighted, the core topic concerns end-user and community uses rather than development or technical solution-building. Therefore, no categories are assigned."
   }
 ]

@@ -22352,5 +22352,17 @@
     "reason": "Succesfully added: The 'GitHub Copilot' and 'AI' categories are assigned because the article thoroughly discusses prompt engineering patterns to enhance coding with GitHub Copilot—a developer-focused AI tool (GitHub Copilot rules 1-4, AI rule 2). The 'Coding' category is also included since the patterns directly impact programming workflow and code review processes (Coding rules 4 and 5). Exclusion rules do not apply since this is not personal, sales, or business strategy content and maintains a technical, practitioner-oriented focus.",
     "timestamp": "2025-12-19 14:05:56 +00:00",
     "collection": "posts"
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/asia/2025/12/19/nz-north-one-year-on-building-the-foundations-of-new-zealands-ai-future/",
+    "collection": "news",
+    "timestamp": "2025-12-19 15:07:24 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the core focus is on Microsoft's hyperscale cloud region's role in enabling AI innovation across New Zealand (AI rule 1 and rule 4). Assigned Azure category because the entire piece centers on the Azure datacenter region and related Azure cloud technologies (Azure rules 1 and 4). Did not assign Coding, ML, DevOps, or Security because the article discusses high-level AI adoption, digital skills development, and transformational case studies without technical details on development, machine learning, security, or DevOps implementation. The content is technical and implementation-focused enough for these categories, avoids generic exclusion triggers, and references specific Azure and AI services and their impact."
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/emea/2025/12/microsoft-empowers-350000-more-nigerians-with-ai-skills/",
+    "collection": "news",
+    "timestamp": "2025-12-19 15:07:43 +00:00",
+    "reason": "Succesfully added: The 'AI' category is assigned because the content centers on Microsoft's delivery of AI skills training to Nigerian leaders, developers, and users (AI inclusion rules 1, 4, 5, and 6). No other categories qualify: while developer and DevOps skills are discussed, the main focus is large-scale AI literacy and empowerment, not deep programming, DevOps, or Azure implementation. The article does not provide technical specifics on coding, DevOps pipelines, AI model development, or Microsoft platform engineering, so additional technical categories are not applied. The inclusion decision is based on clear references throughout to AI skills, digital literacy, upskilling, and leadership initiatives from Microsoft."
   }
 ]
