@@ -22382,5 +22382,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-how-to-build-mcp-servers-with-python-and-azure/ba-p/4479402",
     "collection": "community",
     "reason": "Succesfully added: Assigned AI category because the content focuses on implementing and extending AI agents with Model Context Protocol (AI rules 1 and 4). Assigned Azure because deployment and production use are through Azure Container Apps and Azure Functions (Azure rules 1 and 4). Assigned Coding for substantial Python development with FastMCP, integration with frameworks, and samples (Coding rules 1, 2, and 4). Security is included due to extensive discussion on implementing authentication with Microsoft Entra (Security rules 1, 3, and 4). No exclusion rules triggered—the content is technical, educational, and meets community minimum length. GitHub Copilot is mentioned as a consumer of the MCP server, but the focus is not on Copilot usage itself, so the 'GitHub Copilot' category does not apply."
+  },
+  {
+    "timestamp": "2025-12-19 18:06:23 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-12-19-copilot-memory-early-access-for-pro-and-pro",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories. The news is centered on a new feature for GitHub Copilot (developer coding assistant), fulfilling the GitHub Copilot inclusion rules and also the AI category (AI rule 1 and 2). No other categories are included because the post does not discuss traditional programming, DevOps, Azure, ML/data science, or security topics. The Copilot product featured here is the developer-focused tool, not a business productivity Copilot, aligning with the required distinctions. No generic exclusion rules apply."
+  },
+  {
+    "timestamp": "2025-12-19 18:06:56 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=C-Rn-8MbXtA",
+    "reason": "Succesfully added: Assigned the Coding category because the content centers on technical discussions of ASP.NET Core's server and API roadmap as it applies to .NET 11, which falls under Coding inclusion rules (Microsoft frameworks, development, API design, backend server development). No other categories apply: there is no AI, GitHub Copilot, DevOps, Azure, ML, or Security focus according to the content description, tags, and title. The content is not excluded since it is a technical roadmap video and not subject to generic exclusion rules."
   }
 ]

@@ -10773,5 +10773,11 @@
     "collection": "news",
     "timestamp": "2025-12-19 15:07:03 +00:00",
     "reason": "No categories found: Content is excluded due to generic exclusion rules regarding non-development Microsoft products. The main focus is on Microsoft 365 Copilot—a business productivity tool excluded per Copilot Product Distinction and Non-Development Microsoft Products (Chapter 3). The article centers on AI for workplace and daily life accessibility, not technical development, coding, or specific implementation for developers. No developer or technical implementation instructions are provided. While Microsoft Elevate and inclusivity are highlighted, the core topic concerns end-user and community uses rather than development or technical solution-building. Therefore, no categories are assigned."
+  },
+  {
+    "timestamp": "2025-12-19 18:07:09 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=5sa58eNiglM",
+    "reason": "No categories found: All categories are excluded due to the Generic Exclusion Rule: The content is primarily biographical, focusing on Quincy Larson's personal journey (former school director to nonprofit founder) and the history and impact of freeCodeCamp. While there is mention of technical topics such as machine learning and coding in an AI-powered landscape, the actual content overview centers on the story, philosophy, social impact, and career advice, rather than technical implementation or hands-on Microsoft technology. There is no substantive coverage of Microsoft products or services, programming with Microsoft tools, or detailed technical guidance. Thus, per Chapter 3 (Biographical Focus, Non-Development Products, and Business/Workplace Focus exclusion), no categories apply."
   }
 ]
