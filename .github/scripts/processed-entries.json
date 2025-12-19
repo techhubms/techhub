@@ -22364,5 +22364,23 @@
     "collection": "news",
     "timestamp": "2025-12-19 15:07:43 +00:00",
     "reason": "Succesfully added: The 'AI' category is assigned because the content centers on Microsoft's delivery of AI skills training to Nigerian leaders, developers, and users (AI inclusion rules 1, 4, 5, and 6). No other categories qualify: while developer and DevOps skills are discussed, the main focus is large-scale AI literacy and empowerment, not deep programming, DevOps, or Azure implementation. The article does not provide technical specifics on coding, DevOps pipelines, AI model development, or Microsoft platform engineering, so additional technical categories are not applied. The inclusion decision is based on clear references throughout to AI skills, digital literacy, upskilling, and leadership initiatives from Microsoft."
+  },
+  {
+    "timestamp": "2025-12-19 16:05:57 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-december-2025/",
+    "collection": "news",
+    "reason": "Succesfully added: Multiple featured items in this edition provide technical details on Microsoft Fabric development, deployment, analytics, and integration topics. 'Azure' and 'ML' categories are assigned because Microsoft Fabric is an Azure-based analytics/Data+AI platform and most listed blogs and videos focus on data science/engineering. The 'DevOps' category is included due to the featured content on Azure DevOps pipelines and CI/CD deployment for Fabric systems. The 'Coding' category applies due to coverage of DAX, SQL, advanced integration (especially in Power BI, Data Engineering, and Data Science-focused sections), and programming practices highlighted in MVP and Super User contributions. No AI-specific content (e.g., Azure OpenAI Service, Copilot Studio, or GitHub Copilot) is directly featured, so 'AI' and 'GitHub Copilot' categories are not included. Security is not the primary focus for any item. Content avoids generic exclusions, is technical, and aligns with the inclusion rules."
+  },
+  {
+    "timestamp": "2025-12-19 16:06:40 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=mk6vwol-Za0",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned Azure category because the core of the video covers multiple Azure platform updates (Azure category rules 1, 4, 5). Assigned AI category due to updates on GPT-image-1.5 and Azure AI voice model improvements (AI category rule 1). Assigned Security category based on detailed mention of advanced ransomware protection for ANF, which fits Microsoft Security Services (Security rule 1). Did not assign DevOps, Coding, ML, or GitHub Copilot as there are no substantial technical implementations or hands-on development coverage for those categories in the description or tags. The Christmas song element is context/entertainment and does not impact categorization."
+  },
+  {
+    "timestamp": "2025-12-19 16:07:07 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-how-to-build-mcp-servers-with-python-and-azure/ba-p/4479402",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on implementing and extending AI agents with Model Context Protocol (AI rules 1 and 4). Assigned Azure because deployment and production use are through Azure Container Apps and Azure Functions (Azure rules 1 and 4). Assigned Coding for substantial Python development with FastMCP, integration with frameworks, and samples (Coding rules 1, 2, and 4). Security is included due to extensive discussion on implementing authentication with Microsoft Entra (Security rules 1, 3, and 4). No exclusion rules triggered—the content is technical, educational, and meets community minimum length. GitHub Copilot is mentioned as a consumer of the MCP server, but the focus is not on Copilot usage itself, so the 'GitHub Copilot' category does not apply."
   }
 ]
