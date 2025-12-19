@@ -22400,5 +22400,11 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned 'DevOps' because the content focuses on Azure DevOps enhancements and project management workflows (DevOps rules 1 and 3). Assigned 'Security' as the feature addresses tracking and managing security vulnerabilities through alerts and integration with GitHub Advanced Security (Security rules 1, 2, 5). 'Azure' is also relevant due to centrality of Azure DevOps and Azure services (Azure rules 1 and 4). The article does not qualify for AI, ML, Coding, or GitHub Copilot as it discusses workflow integration for security alerts, not AI, machine learning, or software coding implementation.",
     "timestamp": "2025-12-19 19:05:26 +00:00"
+  },
+  {
+    "timestamp": "2025-12-19 20:06:36 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-december-2025/",
+    "reason": "Succesfully added: Assigned 'Azure' category because the entire post is focused on the Azure Developer CLI, integration with Azure services, and related tooling (Azure category rule 1, 2, 4). Assigned 'DevOps' because of detailed CI/CD, Azure Pipelines, automation, and deployment topics (DevOps rules 1, 2, 5, 6). Assigned 'Coding' for CLI enhancements, extension authoring, and support for multiple languages (Coding rules 2, 4, 5). Assigned 'AI' because of the introduction and continued support for Foundry (which evolved from Azure AI Foundry) and mention of AI agent extensions (AI rule 1, 5). Did not assign 'ML' as no custom data science/analytics engineering is described. Did not assign 'Security' as there are no security-focused features or practices discussed. Content does not trigger any generic exclusion rules—the post is technical, implementation-focused, in English, and meets all inclusion requirements."
   }
 ]
