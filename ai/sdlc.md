@@ -6,19 +6,6 @@ category: "AI"
 page-name: "sdlc"
 ---
 
-<script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ 
-        startOnLoad: true,
-        theme: 'dark',
-        securityLevel: 'loose',
-        flowchart: {
-            htmlLabels: true,
-            curve: 'basis'
-        }
-    });
-</script>
-
 <div class="sdlc-container">
     <div class="sdlc-intro">
         <p>The Software Development Life Cycle (SDLC) is a structured framework that guides teams through creating high-quality software efficiently. Each phase builds upon the previous, with clear handovers ensuring smooth transitions. AI enhances every phase—from analyzing requirements to predicting system failures.</p>
@@ -35,7 +22,7 @@ page-name: "sdlc"
                 <span>Handovers</span>
             </div>
         </div>
-        <button class="sdlc-expand-all-btn" onclick="sdlcToggleAll()">Expand/Collapse All</button>
+        <button class="sdlc-expand-all-btn" type="button">Expand/Collapse All</button>
     </div>
 
     <div class="sdlc-diagram-section">
@@ -83,7 +70,7 @@ page-name: "sdlc"
         <div class="sdlc-info-panel">
             <!-- Planning Step -->
             <div class="sdlc-step-card" id="sdlc-card-planning">
-                <div class="sdlc-card-header" onclick="sdlcToggleCard(this)">
+                <div class="sdlc-card-header">
                     <span>📋 Planning</span>
                     <span class="sdlc-card-icon">▼</span>
                 </div>
@@ -118,7 +105,7 @@ page-name: "sdlc"
 
             <!-- Handover 1 -->
             <div class="sdlc-handover-card" id="sdlc-card-handover1">
-                <div class="sdlc-card-header" onclick="sdlcToggleCard(this)">
+                <div class="sdlc-card-header">
                     <span>Planning → Design</span>
                     <span class="sdlc-card-icon">▼</span>
                 </div>
@@ -144,7 +131,7 @@ page-name: "sdlc"
 
             <!-- Design Step -->
             <div class="sdlc-step-card" id="sdlc-card-design">
-                <div class="sdlc-card-header" onclick="sdlcToggleCard(this)">
+                <div class="sdlc-card-header">
                     <span>🎨 Design</span>
                     <span class="sdlc-card-icon">▼</span>
                 </div>
@@ -179,7 +166,7 @@ page-name: "sdlc"
 
             <!-- Handover 2 -->
             <div class="sdlc-handover-card" id="sdlc-card-handover2">
-                <div class="sdlc-card-header" onclick="sdlcToggleCard(this)">
+                <div class="sdlc-card-header">
                     <span>Design → Implementation</span>
                     <span class="sdlc-card-icon">▼</span>
                 </div>
@@ -205,7 +192,7 @@ page-name: "sdlc"
 
             <!-- Implementation Step -->
             <div class="sdlc-step-card" id="sdlc-card-implementation">
-                <div class="sdlc-card-header" onclick="sdlcToggleCard(this)">
+                <div class="sdlc-card-header">
                     <span>⚙️ Implementation</span>
                     <span class="sdlc-card-icon">▼</span>
                 </div>
@@ -246,7 +233,7 @@ page-name: "sdlc"
 
             <!-- Handover 3 -->
             <div class="sdlc-handover-card" id="sdlc-card-handover3">
-                <div class="sdlc-card-header" onclick="sdlcToggleCard(this)">
+                <div class="sdlc-card-header">
                     <span>Implementation → Testing</span>
                     <span class="sdlc-card-icon">▼</span>
                 </div>
@@ -272,7 +259,7 @@ page-name: "sdlc"
 
             <!-- Testing Step -->
             <div class="sdlc-step-card" id="sdlc-card-testing">
-                <div class="sdlc-card-header" onclick="sdlcToggleCard(this)">
+                <div class="sdlc-card-header">
                     <span>🧪 Testing</span>
                     <span class="sdlc-card-icon">▼</span>
                 </div>
@@ -308,7 +295,7 @@ page-name: "sdlc"
 
             <!-- Handover 4 -->
             <div class="sdlc-handover-card" id="sdlc-card-handover4">
-                <div class="sdlc-card-header" onclick="sdlcToggleCard(this)">
+                <div class="sdlc-card-header">
                     <span>Testing → Deployment</span>
                     <span class="sdlc-card-icon">▼</span>
                 </div>
@@ -334,7 +321,7 @@ page-name: "sdlc"
 
             <!-- Deployment Step -->
             <div class="sdlc-step-card" id="sdlc-card-deployment">
-                <div class="sdlc-card-header" onclick="sdlcToggleCard(this)">
+                <div class="sdlc-card-header">
                     <span>🚀 Deployment</span>
                     <span class="sdlc-card-icon">▼</span>
                 </div>
@@ -370,7 +357,7 @@ page-name: "sdlc"
 
             <!-- Handover 5 -->
             <div class="sdlc-handover-card" id="sdlc-card-handover5">
-                <div class="sdlc-card-header" onclick="sdlcToggleCard(this)">
+                <div class="sdlc-card-header">
                     <span>Deployment → Maintenance</span>
                     <span class="sdlc-card-icon">▼</span>
                 </div>
@@ -396,7 +383,7 @@ page-name: "sdlc"
 
             <!-- Maintenance Step -->
             <div class="sdlc-step-card" id="sdlc-card-maintenance">
-                <div class="sdlc-card-header" onclick="sdlcToggleCard(this)">
+                <div class="sdlc-card-header">
                     <span>🔧 Maintenance</span>
                     <span class="sdlc-card-icon">▼</span>
                 </div>
@@ -439,7 +426,7 @@ page-name: "sdlc"
 
     <!-- Benefits Section -->
     <div class="sdlc-section-card" id="sdlc-card-benefits">
-        <div class="sdlc-card-header" onclick="sdlcToggleCard(this)">
+        <div class="sdlc-card-header">
             <span>✓ Benefits of a Structured SDLC</span>
             <span class="sdlc-card-icon">▼</span>
         </div>
@@ -493,7 +480,7 @@ page-name: "sdlc"
 
     <!-- Challenges Section -->
     <div class="sdlc-section-card" id="sdlc-card-challenges">
-        <div class="sdlc-card-header" onclick="sdlcToggleCard(this)">
+        <div class="sdlc-card-header">
             <span>⚠️ Common Challenges</span>
             <span class="sdlc-card-icon">▼</span>
         </div>
@@ -521,7 +508,7 @@ page-name: "sdlc"
 
     <!-- Methodologies Section -->
     <div class="sdlc-section-card" id="sdlc-card-methodologies">
-        <div class="sdlc-card-header" onclick="sdlcToggleCard(this)">
+        <div class="sdlc-card-header">
             <span>📋 SDLC and Development Methodologies</span>
             <span class="sdlc-card-icon">▼</span>
         </div>
@@ -641,121 +628,5 @@ page-name: "sdlc"
     </div>
 </div>
 
-<script>
-    function sdlcToggleCard(header) {
-        const content = header.nextElementSibling;
-        const icon = header.querySelector('.sdlc-card-icon');
-        
-        content.classList.toggle('expanded');
-        icon.classList.toggle('expanded');
-    }
-
-    function sdlcToggleAll() {
-        const allContents = document.querySelectorAll('.sdlc-card-content');
-        const allIcons = document.querySelectorAll('.sdlc-card-icon');
-        const isAnyExpanded = Array.from(allContents).some(content => content.classList.contains('expanded'));
-        
-        if (isAnyExpanded) {
-            allContents.forEach(content => content.classList.remove('expanded'));
-            allIcons.forEach(icon => icon.classList.remove('expanded'));
-        } else {
-            allContents.forEach(content => content.classList.add('expanded'));
-            allIcons.forEach(icon => icon.classList.add('expanded'));
-        }
-    }
-
-    function sdlcOpenCard(cardId) {
-        const card = document.getElementById('sdlc-card-' + cardId);
-        if (card) {
-            const content = card.querySelector('.sdlc-card-content');
-            const icon = card.querySelector('.sdlc-card-icon');
-            
-            content.classList.toggle('expanded');
-            icon.classList.toggle('expanded');
-            
-            if (content.classList.contains('expanded')) {
-                card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                card.style.boxShadow = '0 0 20px rgba(88, 166, 255, 0.5)';
-                setTimeout(() => {
-                    card.style.boxShadow = '';
-                }, 2000);
-            }
-        }
-    }
-
-    // Functions for Mermaid diagram clicks
-    window.sdlcOpenCardPlanning = function() { sdlcOpenCard('planning'); };
-    window.sdlcOpenCardDesign = function() { sdlcOpenCard('design'); };
-    window.sdlcOpenCardImplementation = function() { sdlcOpenCard('implementation'); };
-    window.sdlcOpenCardTesting = function() { sdlcOpenCard('testing'); };
-    window.sdlcOpenCardDeployment = function() { sdlcOpenCard('deployment'); };
-    window.sdlcOpenCardMaintenance = function() { sdlcOpenCard('maintenance'); };
-    
-    // Functions for handover cards
-    window.sdlcOpenCardHandover1 = function() { sdlcOpenCard('handover1'); };
-    window.sdlcOpenCardHandover2 = function() { sdlcOpenCard('handover2'); };
-    window.sdlcOpenCardHandover3 = function() { sdlcOpenCard('handover3'); };
-    window.sdlcOpenCardHandover4 = function() { sdlcOpenCard('handover4'); };
-    window.sdlcOpenCardHandover5 = function() { sdlcOpenCard('handover5'); };
-
-    // Make handover lines clickable after Mermaid renders
-    window.addEventListener('load', function() {
-        setTimeout(function() {
-            const svg = document.querySelector('.sdlc-mermaid svg');
-            if (svg) {
-                const allPaths = svg.querySelectorAll('path.flowchart-link');
-                const handoverHandlers = [
-                    sdlcOpenCardHandover1,
-                    sdlcOpenCardHandover2,
-                    sdlcOpenCardHandover3,
-                    sdlcOpenCardHandover4,
-                    sdlcOpenCardHandover5
-                ];
-                
-                let handoverIndex = 0;
-                
-                allPaths.forEach((path) => {
-                    // Skip if we already have all 5 handovers
-                    if (handoverIndex >= handoverHandlers.length) {
-                        return;
-                    }
-                    
-                    // Skip dashed lines (feedback line)
-                    const strokeDasharray = path.getAttribute('stroke-dasharray');
-                    if (strokeDasharray && strokeDasharray !== 'none' && strokeDasharray !== '0') {
-                        return;
-                    }
-                    
-                    const stroke = path.getAttribute('stroke');
-                    const style = path.getAttribute('style');
-
-                    if ((stroke && stroke.includes('#cccccc')) || 
-                        (style && (style.includes('#cccccc') || style.includes('rgb(204, 204, 204)'))) ||
-                        (path.style.stroke && path.style.stroke.includes('#cccccc'))) {
-                        
-                        const parent = path.closest('g.edgePath') || path.parentElement;
-                        const handler = handoverHandlers[handoverIndex];
-                        
-                        const clickHandler = function(e) {
-                            e.stopPropagation();
-                            e.preventDefault();
-                            handler();
-                        };
-                        
-                        path.style.cursor = 'pointer';
-                        path.style.pointerEvents = 'stroke';
-                        path.addEventListener('click', clickHandler);
-                        
-                        if (parent) {
-                            parent.style.cursor = 'pointer';
-                            parent.style.pointerEvents = 'all';
-                            parent.addEventListener('click', clickHandler);
-                        }
-                        
-                        handoverIndex++;
-                    }
-                });
-            }
-        }, 1000);
-    });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js" defer></script>
+<script src="{{ '/assets/js/sdlc.js' | relative_url }}" defer></script>
