@@ -7,6 +7,7 @@
 // =============================================================================
 
 // SDLC Phase Colors - Distinct colors for each development phase
+$sdlc-ideation-color: #f9a825;        // Amber/Yellow
 $sdlc-planning-color: #1976d2;        // Blue
 $sdlc-design-color: #7b1fa2;          // Purple
 $sdlc-implementation-color: #388e3c;  // Green
@@ -17,6 +18,7 @@ $sdlc-handover-color: #ffffff;        // White (for cards and legend)
 $sdlc-handover-line-color: #cccccc;   // Light gray (for diagram lines)
 
 // Light background variants for cards
+$sdlc-ideation-bg: #fff9c4;
 $sdlc-planning-bg: #e3f2fd;
 $sdlc-design-bg: #f3e5f5;
 $sdlc-implementation-bg: #e8f5e9;
@@ -46,72 +48,6 @@ $sdlc-maintenance-bg: #e0f2f1;
 }
 
 // =============================================================================
-// Legend
-// =============================================================================
-
-.sdlc-legend {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  padding: 15px;
-  background: rgba(colors.$darker-navy, 0.5);
-  border-radius: 6px;
-  border: 1px solid rgba(colors.$light-gray, 0.2);
-}
-
-.sdlc-legend-items {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 0;
-}
-
-.sdlc-legend-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-}
-
-.sdlc-legend-box {
-  width: 20px;
-  height: 20px;
-  border-radius: 3px;
-}
-
-.sdlc-legend-step {
-  background: linear-gradient(135deg, 
-    $sdlc-planning-color 0%,
-    $sdlc-design-color 16.67%,
-    $sdlc-implementation-color 33.33%,
-    $sdlc-testing-color 50%,
-    $sdlc-deployment-color 66.67%,
-    $sdlc-maintenance-color 83.33%,
-    $sdlc-planning-color 100%
-  );
-}
-
-.sdlc-legend-handover {
-  background: $sdlc-handover-color;
-}
-
-.sdlc-expand-all-btn {
-  padding: 8px 16px;
-  background: colors.$medium-blue;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background 0.2s ease;
-  
-  &:hover {
-    background: colors.$bright-blue;
-  }
-}
-
-// =============================================================================
 // Diagram Section
 // =============================================================================
 
@@ -121,53 +57,8 @@ $sdlc-maintenance-bg: #e0f2f1;
   margin-top: 10px;
 }
 
-.sdlc-mermaid-container {
-  flex: 0.4;
-  min-width: 320px;
-  max-width: 400px;
-}
-
-.sdlc-mermaid {
-  background-color: rgba(colors.$darker-navy, 0.3);
-  padding: 20px;
-  border-radius: 4px;
-  border: 1px solid rgba(colors.$light-gray, 0.2);
-  
-  // Mermaid diagram text styling
-  .mermaid {
-    // Ensure node text is black for readability on colored backgrounds
-    .nodeLabel,
-    .node .label,
-    .node text,
-    .cluster-label,
-    span.nodeLabel {
-      color: #000000 !important;
-      fill: #000000 !important;
-    }
-    
-    // Ensure text containers are properly positioned
-    .node foreignObject {
-      overflow: visible;
-      
-      > div {
-        background: transparent !important;
-        position: relative;
-        z-index: 10;
-      }
-    }
-    
-    // Fix potential layering issues with node backgrounds
-    .node rect,
-    .node polygon,
-    .node circle,
-    .node ellipse {
-      z-index: 1;
-    }
-  }
-}
-
 .sdlc-info-panel {
-  flex: 1.6;
+  flex: 1;
   min-width: 400px;
 }
 
@@ -226,6 +117,153 @@ $sdlc-maintenance-bg: #e0f2f1;
 }
 
 // =============================================================================
+// Phase Block Styles (Simplified Structure)
+// =============================================================================
+
+.sdlc-phases {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.sdlc-phase-block {
+  background: rgba(colors.$darker-navy, 0.5);
+  border: 1px solid rgba(colors.$light-gray, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.sdlc-phase-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(colors.$darker-navy, 0.3);
+  border-bottom: 1px solid rgba(colors.$light-gray, 0.1);
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease;
+  position: relative;
+  
+  &:hover {
+    background: rgba(colors.$darker-navy, 0.5);
+  }
+  
+  h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: colors.$white;
+    flex: 1;
+    
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.sdlc-phase-toggle {
+  font-size: 16px;
+  color: colors.$lighter-gray;
+  transition: transform 0.25s ease;
+  
+  &.expanded {
+    transform: rotate(180deg);
+  }
+}
+
+.sdlc-phase-icon {
+  font-size: 24px;
+}
+
+.sdlc-phase-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.3s ease;
+  padding: 0 20px;
+  
+  &.expanded {
+    max-height: 3000px;
+    padding: 20px;
+  }
+}
+
+// Phase-specific border colors for blocks
+.sdlc-phase-ideation {
+  border-left: 4px solid $sdlc-ideation-color;
+  
+  .sdlc-phase-header {
+    background: rgba($sdlc-ideation-color, 0.1);
+  }
+}
+
+.sdlc-phase-planning {
+  border-left: 4px solid $sdlc-planning-color;
+  
+  .sdlc-phase-header {
+    background: rgba($sdlc-planning-color, 0.1);
+  }
+}
+
+.sdlc-phase-design {
+  border-left: 4px solid $sdlc-design-color;
+  
+  .sdlc-phase-header {
+    background: rgba($sdlc-design-color, 0.1);
+  }
+}
+
+.sdlc-phase-implementation {
+  border-left: 4px solid $sdlc-implementation-color;
+  
+  .sdlc-phase-header {
+    background: rgba($sdlc-implementation-color, 0.1);
+  }
+}
+
+.sdlc-phase-testing {
+  border-left: 4px solid $sdlc-testing-color;
+  
+  .sdlc-phase-header {
+    background: rgba($sdlc-testing-color, 0.1);
+  }
+}
+
+.sdlc-phase-deployment {
+  border-left: 4px solid $sdlc-deployment-color;
+  
+  .sdlc-phase-header {
+    background: rgba($sdlc-deployment-color, 0.1);
+  }
+}
+
+.sdlc-phase-maintenance {
+  border-left: 4px solid $sdlc-maintenance-color;
+  
+  .sdlc-phase-header {
+    background: rgba($sdlc-maintenance-color, 0.1);
+  }
+}
+
+// Handover section within phase blocks
+.sdlc-handover-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed rgba(colors.$light-gray, 0.3);
+}
+
+.sdlc-handover-header {
+  font-weight: 600;
+  color: colors.$bright-blue;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+// =============================================================================
 // Card Header and Content
 // =============================================================================
 
@@ -276,21 +314,55 @@ $sdlc-maintenance-bg: #e0f2f1;
 // =============================================================================
 
 .sdlc-info-section {
-  margin-bottom: 12px;
+  margin-bottom: 24px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .sdlc-info-label {
-  font-weight: 600;
-  color: colors.$lighter-gray;
-  font-size: 12px;
+  font-weight: 700;
+  color: colors.$bright-blue;
+  font-size: 15px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 5px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(colors.$bright-blue, 0.2);
 }
 
 .sdlc-info-text {
   color: colors.$light-gray;
-  line-height: 1.6;
+  line-height: 1.7;
+  
+  h4 {
+    color: colors.$lighter-gray;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 16px 0 8px 0;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  p {
+    margin: 0 0 12px 0;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  ul {
+    margin: 8px 0;
+    padding-left: 20px;
+    
+    li {
+      margin-bottom: 6px;
+    }
+  }
 }
 
 // =============================================================================
@@ -384,14 +456,51 @@ $sdlc-maintenance-bg: #e0f2f1;
 .sdlc-benefit-card {
   display: flex;
   gap: 12px;
-  padding: 15px;
+  padding: 18px;
   background: rgba($sdlc-implementation-color, 0.1);
   border-radius: 6px;
   border: 1px solid rgba($sdlc-implementation-color, 0.3);
   
+  > div {
+    flex: 1;
+  }
+  
   strong {
     display: block;
     color: color.adjust($sdlc-implementation-color, $lightness: 20%);
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  p {
+    margin: 0 0 12px 0;
+    color: colors.$light-gray;
+    line-height: 1.6;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  h4 {
+    color: colors.$lighter-gray;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 14px 0 6px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  ul {
+    margin: 0 0 10px 0;
+    padding-left: 18px;
+    
+    li {
+      color: colors.$light-gray;
+      margin-bottom: 4px;
+      line-height: 1.5;
+      font-size: 14px;
+    }
   }
 }
 
@@ -618,21 +727,11 @@ $sdlc-maintenance-bg: #e0f2f1;
     flex-direction: column;
   }
   
-  .sdlc-mermaid-container {
-    max-width: 100%;
-    min-width: auto;
-  }
-  
   .sdlc-info-panel {
     min-width: auto;
   }
   
   .sdlc-handover-card {
     max-width: 100%;
-  }
-  
-  .sdlc-legend {
-    flex-direction: column;
-    gap: 15px;
   }
 }

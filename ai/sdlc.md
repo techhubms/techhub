@@ -8,108 +8,173 @@ page-name: "sdlc"
 
 <div class="sdlc-container">
     <div class="sdlc-intro">
-        <p>The Software Development Life Cycle (SDLC) is a structured framework that guides teams through creating high-quality software efficiently. Each phase builds upon the previous, with clear handovers ensuring smooth transitions. AI enhances every phase—from analyzing requirements to predicting system failures.</p>
-    </div>
-    
-    <div class="sdlc-legend">
-        <div class="sdlc-legend-items">
-            <div class="sdlc-legend-item">
-                <div class="sdlc-legend-box sdlc-legend-step"></div>
-                <span>Process Steps</span>
-            </div>
-            <div class="sdlc-legend-item">
-                <div class="sdlc-legend-box sdlc-legend-handover"></div>
-                <span>Handovers</span>
-            </div>
-        </div>
-        <button class="sdlc-expand-all-btn" type="button">Expand/Collapse All</button>
+        <p>The Software Development Life Cycle (SDLC) is a structured framework that guides teams through creating high-quality software efficiently. Each phase builds upon the previous, with clear handovers ensuring smooth transitions. AI enhances every phase—from rapid prototyping to predicting system failures—transforming how every team member works, not just developers.</p>
     </div>
 
-    <div class="sdlc-diagram-section">
-        <div class="sdlc-mermaid-container">
-            <div class="sdlc-mermaid">
-                <div class="mermaid">
-                    graph TD
-                        Planning["📋 Planning"]
-                        Design["🎨 Design"]
-                        Implementation["⚙️ Implementation"]
-                        Testing["🧪 Testing"]
-                        Deployment["🚀 Deployment"]
-                        Maintenance["🔧 Maintenance"]
-                        
-                        Planning -->|" "| Design
-                        Design -->|" "| Implementation
-                        Implementation -->|" "| Testing
-                        Testing -->|" "| Deployment
-                        Deployment -->|" "| Maintenance
-                        Maintenance -.->|Feedback| Planning
-                        
-                        click Planning sdlcOpenCardPlanning
-                        click Design sdlcOpenCardDesign
-                        click Implementation sdlcOpenCardImplementation
-                        click Testing sdlcOpenCardTesting
-                        click Deployment sdlcOpenCardDeployment
-                        click Maintenance sdlcOpenCardMaintenance
-                        
-                        linkStyle 0 stroke:#cccccc,stroke-width:3px
-                        linkStyle 1 stroke:#cccccc,stroke-width:3px
-                        linkStyle 2 stroke:#cccccc,stroke-width:3px
-                        linkStyle 3 stroke:#cccccc,stroke-width:3px
-                        linkStyle 4 stroke:#cccccc,stroke-width:3px
-                        
-                        style Planning fill:#e3f2fd,stroke:#1976d2,stroke-width:3px,cursor:pointer
-                        style Design fill:#f3e5f5,stroke:#7b1fa2,stroke-width:3px,cursor:pointer
-                        style Implementation fill:#e8f5e9,stroke:#388e3c,stroke-width:3px,cursor:pointer
-                        style Testing fill:#fff3e0,stroke:#f57c00,stroke-width:3px,cursor:pointer
-                        style Deployment fill:#fce4ec,stroke:#c2185b,stroke-width:3px,cursor:pointer
-                        style Maintenance fill:#e0f2f1,stroke:#00796b,stroke-width:3px,cursor:pointer
+    <!-- Preconditions Section -->
+    <div class="sdlc-section-card" id="sdlc-card-preconditions">
+        <div class="sdlc-card-header">
+            <span>🎯 Preconditions for AI-Augmented Development</span>
+            <span class="sdlc-card-icon">▼</span>
+        </div>
+        <div class="sdlc-card-content">
+            <p>Before AI can consistently deliver high-quality output across the SDLC, these four foundational elements must be in place:</p>
+            <div class="sdlc-benefits-grid">
+                <div class="sdlc-benefit-card">
+                    <span class="sdlc-benefit-icon">📝</span>
+                    <div>
+                        <strong>Clear Requirements</strong>
+                        <p>Define functional and technical requirements with precision and completeness. AI performs best when it understands exactly what you're trying to achieve.</p>
+                        <h4>What to do:</h4>
+                        <ul>
+                            <li>Write detailed user stories with specific acceptance criteria</li>
+                            <li>Document constraints, edge cases, and non-functional requirements</li>
+                            <li>Include examples of expected inputs and outputs</li>
+                            <li>Define what success looks like before starting</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <p>Instead of "add user authentication", specify "implement OAuth 2.0 authentication with GitHub and Microsoft providers, supporting session management with 24-hour token expiry, and including MFA for admin users."</p>
+                    </div>
+                </div>
+                <div class="sdlc-benefit-card">
+                    <span class="sdlc-benefit-icon">💬</span>
+                    <div>
+                        <strong>Effective Prompts</strong>
+                        <p>Craft clear, detailed requests that guide AI toward your intended outcome. Good prompts bridge the gap between your vision and AI's capabilities.</p>
+                        <h4>What to do:</h4>
+                        <ul>
+                            <li>Start with a clear objective and context</li>
+                            <li>Break complex tasks into smaller, focused requests</li>
+                            <li>Include relevant code snippets, patterns, or examples</li>
+                            <li>Iterate and refine prompts based on AI responses</li>
+                            <li>Save successful prompts for reuse across the team</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <p>Instead of "write a login function", use "Create a C# login method for ASP.NET Core using Identity that validates email format, checks for account lockout after 5 failed attempts, and logs authentication events using Serilog."</p>
+                    </div>
+                </div>
+                <div class="sdlc-benefit-card">
+                    <span class="sdlc-benefit-icon">📏</span>
+                    <div>
+                        <strong>AI Rules & Standards</strong>
+                        <p>Establish consistent patterns, conventions, and quality standards that AI must follow. This ensures AI-generated code integrates seamlessly with your existing codebase.</p>
+                        <h4>What to do:</h4>
+                        <ul>
+                            <li>Create AI instruction files (like .github/copilot-instructions.md)</li>
+                            <li>Define naming conventions, code style, and architecture patterns</li>
+                            <li>Specify preferred libraries, frameworks, and approaches</li>
+                            <li>Document anti-patterns and practices to avoid</li>
+                            <li>Keep AI rules updated as your codebase evolves</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <p>Document rules like "Use repository pattern for data access", "All public methods require XML documentation", "Use async/await for I/O operations", and "Follow vertical slice architecture for new features."</p>
+                    </div>
+                </div>
+                <div class="sdlc-benefit-card">
+                    <span class="sdlc-benefit-icon">🤖</span>
+                    <div>
+                        <strong>Capable AI Models</strong>
+                        <p>Select the right AI model for each task. Different tasks require different capabilities—match the model to the complexity and nature of the work.</p>
+                        <h4>What to do:</h4>
+                        <ul>
+                            <li>Use advanced models (GPT-4, Claude) for complex reasoning and architecture</li>
+                            <li>Use faster models for simple completions and refactoring</li>
+                            <li>Consider specialized models for specific domains (security, testing)</li>
+                            <li>Evaluate cost vs. quality tradeoffs for high-volume tasks</li>
+                            <li>Test different models and track which perform best for your use cases</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <p>Use GPT-4 for generating complex business logic and architectural decisions, but use a faster model like GPT-3.5 for generating boilerplate code, documentation, or simple unit tests.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sdlc-phases">
+        <!-- Ideation Phase -->
+        <div class="sdlc-phase-block sdlc-phase-ideation" id="sdlc-phase-ideation">
+            <div class="sdlc-phase-header" onclick="togglePhase(this)">
+                <span class="sdlc-phase-icon">💡</span>
+                <h2>Ideation</h2>
+                <span class="sdlc-phase-toggle">▼</span>
+            </div>
+            <div class="sdlc-phase-content">
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">What</div>
+                    <div class="sdlc-info-text">Explore ideas through rapid prototyping, brainstorming sessions, and creative experimentation. This phase focuses on generating and validating concepts before committing to formal requirements, helping teams discover what's possible and what resonates with users.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">How</div>
+                    <div class="sdlc-info-text">Run brainstorming workshops, create quick throwaway prototypes, conduct user interviews and surveys, sketch wireframes, build proof-of-concepts, and test assumptions with minimal investment. Fail fast and iterate quickly.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">AI Enhancement</div>
+                    <div class="sdlc-info-text">AI transforms ideation from a purely creative exercise into a data-informed discovery process. <strong>For developers</strong>, AI generates functional prototypes from natural language descriptions, creates UI mockups instantly, suggests feature combinations based on technical feasibility, and explores design alternatives at unprecedented speed. <strong>For Product Owners</strong>, AI analyzes market trends using retrieval-augmented generation (RAG) to surface emerging opportunities, competitive gaps, and user pain points from vast data sources. AI serves as a brainstorming partner, helping refine rough ideas into structured feature proposals with potential unique selling points. <strong>For Scrum Masters</strong>, AI helps document ideation sessions, synthesize diverse stakeholder inputs into coherent themes, and identify dependencies or risks in proposed concepts early.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Best Practices</div>
+                    <div class="sdlc-info-text">Embrace experimentation without fear of failure. Keep prototypes lightweight and disposable. Focus on learning rather than building production-ready code. Involve diverse stakeholders early. Document insights and decisions for the planning phase.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Tools</div>
+                    <div class="sdlc-tools-list">
+                        <span class="sdlc-tool-tag">GitHub Spark</span>
+                        <span class="sdlc-tool-tag">GitHub Copilot</span>
+                        <span class="sdlc-tool-tag">Figma</span>
+                        <span class="sdlc-tool-tag">Miro</span>
+                        <span class="sdlc-tool-tag">Microsoft Whiteboard</span>
+                    </div>
+                </div>
+                <div class="sdlc-handover-section">
+                    <div class="sdlc-handover-header">Handover to Planning</div>
+                    <div class="sdlc-info-section">
+                        <div class="sdlc-info-label">Deliverables</div>
+                        <div class="sdlc-info-text">Validated concept prototypes, user feedback summaries, feasibility assessments, initial feature ideas, and documented learnings from experimentation.</div>
+                    </div>
+                    <div class="sdlc-info-section">
+                        <div class="sdlc-info-label">Process</div>
+                        <div class="sdlc-info-text">Present prototype demos to stakeholders, share user research findings, discuss technical feasibility insights, and align on which concepts to pursue in formal planning.</div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="sdlc-info-panel">
-            <!-- Planning Step -->
-            <div class="sdlc-step-card" id="sdlc-card-planning">
-                <div class="sdlc-card-header">
-                    <span>📋 Planning</span>
-                    <span class="sdlc-card-icon">▼</span>
-                </div>
-                <div class="sdlc-card-content">
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">What</div>
-                        <div class="sdlc-info-text">Gather and analyze requirements from stakeholders, define project scope, establish timelines, and create a comprehensive roadmap. This phase determines the project's technical, operational, and economic feasibility.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">How</div>
-                        <div class="sdlc-info-text">Conduct stakeholder interviews, gather functional and non-functional requirements, perform feasibility analysis, define acceptance criteria, and create user stories with clear definitions of done.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">AI Enhancement</div>
-                        <div class="sdlc-info-text">AI analyzes customer feedback and user data to extract actionable insights, helps identify requirement patterns, suggests acceptance criteria based on similar projects, and assists in writing user stories.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Agile Practices</div>
-                        <div class="sdlc-info-text">Organize requirements into a prioritized product backlog, break work into sprint-sized increments, and use iterative planning to adapt to changing needs.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Tools</div>
-                        <div class="sdlc-tools-list">
-                            <span class="sdlc-tool-tag">Azure DevOps Boards</span>
-                            <span class="sdlc-tool-tag">GitHub Projects</span>
-                            <span class="sdlc-tool-tag">Microsoft Planner</span>
-                            <span class="sdlc-tool-tag">GitHub Copilot</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- Planning Phase -->
+        <div class="sdlc-phase-block sdlc-phase-planning" id="sdlc-phase-planning">
+            <div class="sdlc-phase-header" onclick="togglePhase(this)">
+                <span class="sdlc-phase-icon">📋</span>
+                <h2>Planning</h2>
+                <span class="sdlc-phase-toggle">▼</span>
             </div>
-
-            <!-- Handover 1 -->
-            <div class="sdlc-handover-card" id="sdlc-card-handover1">
-                <div class="sdlc-card-header">
-                    <span>Planning → Design</span>
-                    <span class="sdlc-card-icon">▼</span>
+            <div class="sdlc-phase-content">
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">What</div>
+                    <div class="sdlc-info-text">Gather and analyze requirements from stakeholders, define project scope, establish timelines, and create a comprehensive roadmap. This phase determines the project's technical, operational, and economic feasibility.</div>
                 </div>
-                <div class="sdlc-card-content">
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">How</div>
+                    <div class="sdlc-info-text">Conduct stakeholder interviews, gather functional and non-functional requirements, perform feasibility analysis, define acceptance criteria, and create user stories with clear definitions of done.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">AI Enhancement</div>
+                    <div class="sdlc-info-text">AI revolutionizes requirements gathering by transforming how teams capture, structure, and validate what they need to build. <strong>For developers</strong>, AI analyzes requirement documents to identify ambiguities, contradictions, and missing edge cases before implementation begins. AI generates technical specifications from business requirements and suggests acceptance criteria based on similar projects. <strong>For Product Owners</strong>, AI is a game-changer: it transforms raw stakeholder inputs—meeting notes, emails, feedback—into structured requirements documents. AI generates comprehensive user stories with acceptance criteria, creates Product Requirements Documents (PRDs), and helps prioritize backlogs based on business value and dependencies. AI can also generate visual mockups and interface descriptions from textual requirements. <strong>For Scrum Masters</strong>, AI assists in breaking epics into sprint-sized user stories, estimates story points based on historical data, identifies potential blockers, and ensures requirements are clear enough for the team to estimate and commit to.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Agile Practices</div>
+                    <div class="sdlc-info-text">Organize requirements into a prioritized product backlog, break work into sprint-sized increments, and use iterative planning to adapt to changing needs.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Tools</div>
+                    <div class="sdlc-tools-list">
+                        <span class="sdlc-tool-tag">Azure DevOps Boards</span>
+                        <span class="sdlc-tool-tag">GitHub Projects</span>
+                        <span class="sdlc-tool-tag">Microsoft Planner</span>
+                        <span class="sdlc-tool-tag">GitHub Copilot</span>
+                    </div>
+                </div>
+                <div class="sdlc-handover-section">
+                    <div class="sdlc-handover-header">Handover to Design</div>
                     <div class="sdlc-info-section">
                         <div class="sdlc-info-label">Deliverables</div>
                         <div class="sdlc-info-text">Approved requirements document, user stories with acceptance criteria, prioritized product backlog, technical constraints, and compliance requirements.</div>
@@ -128,49 +193,43 @@ page-name: "sdlc"
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Design Step -->
-            <div class="sdlc-step-card" id="sdlc-card-design">
-                <div class="sdlc-card-header">
-                    <span>🎨 Design</span>
-                    <span class="sdlc-card-icon">▼</span>
-                </div>
-                <div class="sdlc-card-content">
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">What</div>
-                        <div class="sdlc-info-text">Create system architecture, define data models, design user interfaces, and establish technical specifications that translate requirements into a detailed blueprint for development.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">How</div>
-                        <div class="sdlc-info-text">Develop high-level and detailed architecture diagrams, create wireframes and interactive prototypes, define API contracts, establish coding standards, and conduct design reviews with stakeholders.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">AI Enhancement</div>
-                        <div class="sdlc-info-text">AI generates architecture diagrams, suggests design patterns based on requirements, creates code scaffolding from specifications, and helps identify potential scalability or security concerns early.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Best Practices</div>
-                        <div class="sdlc-info-text">Design for modularity and reusability, consider security requirements from the start, plan for testability, and document architectural decisions and their rationale.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Tools</div>
-                        <div class="sdlc-tools-list">
-                            <span class="sdlc-tool-tag">Figma</span>
-                            <span class="sdlc-tool-tag">Azure Architecture Center</span>
-                            <span class="sdlc-tool-tag">Microsoft Visio</span>
-                            <span class="sdlc-tool-tag">GitHub Copilot</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- Design Phase -->
+        <div class="sdlc-phase-block sdlc-phase-design" id="sdlc-phase-design">
+            <div class="sdlc-phase-header" onclick="togglePhase(this)">
+                <span class="sdlc-phase-icon">🎨</span>
+                <h2>Design</h2>
+                <span class="sdlc-phase-toggle">▼</span>
             </div>
-
-            <!-- Handover 2 -->
-            <div class="sdlc-handover-card" id="sdlc-card-handover2">
-                <div class="sdlc-card-header">
-                    <span>Design → Implementation</span>
-                    <span class="sdlc-card-icon">▼</span>
+            <div class="sdlc-phase-content">
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">What</div>
+                    <div class="sdlc-info-text">Create system architecture, define data models, design user interfaces, and establish technical specifications that translate requirements into a detailed blueprint for development.</div>
                 </div>
-                <div class="sdlc-card-content">
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">How</div>
+                    <div class="sdlc-info-text">Develop high-level and detailed architecture diagrams, create wireframes and interactive prototypes, define API contracts, establish coding standards, and conduct design reviews with stakeholders.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">AI Enhancement</div>
+                    <div class="sdlc-info-text">AI accelerates the translation of requirements into technical blueprints. <strong>For developers and architects</strong>, AI generates architecture diagrams from requirements, suggests optimal design patterns based on scalability needs, creates database schemas, and produces code scaffolding from specifications. AI identifies potential security vulnerabilities and scalability concerns during design review, before any code is written. It can also generate API contracts and interface definitions. <strong>For Product Owners</strong>, AI creates visual representations of user journeys and system flows, making technical designs accessible for review and validation against business needs. <strong>For Scrum Masters</strong>, AI helps estimate design complexity, identifies technical debt risks in proposed architectures, and ensures design decisions are documented for team reference.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Best Practices</div>
+                    <div class="sdlc-info-text">Design for modularity and reusability, consider security requirements from the start, plan for testability, and document architectural decisions and their rationale.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Tools</div>
+                    <div class="sdlc-tools-list">
+                        <span class="sdlc-tool-tag">Figma</span>
+                        <span class="sdlc-tool-tag">Azure Architecture Center</span>
+                        <span class="sdlc-tool-tag">Microsoft Visio</span>
+                        <span class="sdlc-tool-tag">GitHub Copilot</span>
+                    </div>
+                </div>
+                <div class="sdlc-handover-section">
+                    <div class="sdlc-handover-header">Handover to Implementation</div>
                     <div class="sdlc-info-section">
                         <div class="sdlc-info-label">Deliverables</div>
                         <div class="sdlc-info-text">System architecture diagrams, API specifications, database schemas, UI mockups, coding standards, and development environment setup instructions.</div>
@@ -189,55 +248,49 @@ page-name: "sdlc"
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Implementation Step -->
-            <div class="sdlc-step-card" id="sdlc-card-implementation">
-                <div class="sdlc-card-header">
-                    <span>⚙️ Implementation</span>
-                    <span class="sdlc-card-icon">▼</span>
-                </div>
-                <div class="sdlc-card-content">
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">What</div>
-                        <div class="sdlc-info-text">Write, review, and integrate code to build the software according to design specifications. This phase transforms the blueprint into a functional product.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">How</div>
-                        <div class="sdlc-info-text">Develop in iterative sprints, use feature branches and pull requests, conduct code reviews, maintain continuous integration pipelines, and follow coding standards.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">AI Enhancement</div>
-                        <div class="sdlc-info-text">AI provides real-time code suggestions and autocompletion, generates boilerplate code, assists with debugging, explains complex code segments, and helps refactor for better performance.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Version Control Best Practices</div>
-                        <div class="sdlc-info-text">Write clear, descriptive commit messages. Test code before committing. Use branches for features and fixes. Review changes before merging. Pull changes frequently to stay current.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Code Review Process</div>
-                        <div class="sdlc-info-text">Prepare and understand changes before review. Request reviews via pull requests. Provide constructive feedback on logic, security, and maintainability. Discuss disagreements collaboratively. Approve and merge when ready.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Tools</div>
-                        <div class="sdlc-tools-list">
-                            <span class="sdlc-tool-tag">Visual Studio Code</span>
-                            <span class="sdlc-tool-tag">Visual Studio</span>
-                            <span class="sdlc-tool-tag">GitHub Copilot</span>
-                            <span class="sdlc-tool-tag">GitHub</span>
-                            <span class="sdlc-tool-tag">Git</span>
-                            <span class="sdlc-tool-tag">.NET</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- Implementation Phase -->
+        <div class="sdlc-phase-block sdlc-phase-implementation" id="sdlc-phase-implementation">
+            <div class="sdlc-phase-header" onclick="togglePhase(this)">
+                <span class="sdlc-phase-icon">⚙️</span>
+                <h2>Implementation</h2>
+                <span class="sdlc-phase-toggle">▼</span>
             </div>
-
-            <!-- Handover 3 -->
-            <div class="sdlc-handover-card" id="sdlc-card-handover3">
-                <div class="sdlc-card-header">
-                    <span>Implementation → Testing</span>
-                    <span class="sdlc-card-icon">▼</span>
+            <div class="sdlc-phase-content">
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">What</div>
+                    <div class="sdlc-info-text">Write, review, and integrate code to build the software according to design specifications. This phase transforms the blueprint into a functional product.</div>
                 </div>
-                <div class="sdlc-card-content">
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">How</div>
+                    <div class="sdlc-info-text">Develop in iterative sprints, use feature branches and pull requests, conduct code reviews, maintain continuous integration pipelines, and follow coding standards.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">AI Enhancement</div>
+                    <div class="sdlc-info-text">AI transforms coding from a purely manual craft into an augmented collaboration between human expertise and machine capability. <strong>For developers</strong>, AI provides real-time code suggestions and intelligent autocompletion, generates boilerplate code and repetitive patterns, assists with debugging by explaining errors and suggesting fixes, translates code between languages, and helps refactor for better performance and maintainability. AI can generate entire functions from natural language descriptions and explain complex legacy code. The key to consistent AI-generated code lies in combining clear requirements, well-crafted prompts, and AI coding rules that define standards and conventions. <strong>For Product Owners</strong>, AI-generated documentation and code summaries make it easier to understand technical progress without deep diving into code. <strong>For Scrum Masters</strong>, AI can summarize pull request changes, highlight potential merge conflicts, and track code review bottlenecks across the team.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Version Control Best Practices</div>
+                    <div class="sdlc-info-text">Write clear, descriptive commit messages. Test code before committing. Use branches for features and fixes. Review changes before merging. Pull changes frequently to stay current.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Code Review Process</div>
+                    <div class="sdlc-info-text">Prepare and understand changes before review. Request reviews via pull requests. Provide constructive feedback on logic, security, and maintainability. Discuss disagreements collaboratively. Approve and merge when ready.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Tools</div>
+                    <div class="sdlc-tools-list">
+                        <span class="sdlc-tool-tag">Visual Studio Code</span>
+                        <span class="sdlc-tool-tag">Visual Studio</span>
+                        <span class="sdlc-tool-tag">GitHub Copilot</span>
+                        <span class="sdlc-tool-tag">GitHub</span>
+                        <span class="sdlc-tool-tag">Git</span>
+                        <span class="sdlc-tool-tag">.NET</span>
+                    </div>
+                </div>
+                <div class="sdlc-handover-section">
+                    <div class="sdlc-handover-header">Handover to Testing</div>
                     <div class="sdlc-info-section">
                         <div class="sdlc-info-label">Deliverables</div>
                         <div class="sdlc-info-text">Completed code with unit tests passing, test environment deployment, test cases mapped to requirements, and known issues documentation.</div>
@@ -256,50 +309,44 @@ page-name: "sdlc"
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Testing Step -->
-            <div class="sdlc-step-card" id="sdlc-card-testing">
-                <div class="sdlc-card-header">
-                    <span>🧪 Testing</span>
-                    <span class="sdlc-card-icon">▼</span>
-                </div>
-                <div class="sdlc-card-content">
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">What</div>
-                        <div class="sdlc-info-text">Verify functionality, identify defects, validate security, and ensure the software meets quality standards and user requirements before release.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Testing Types</div>
-                        <div class="sdlc-info-text"><strong>Unit Testing:</strong> Test individual components in isolation. <strong>Integration Testing:</strong> Verify components work together. <strong>Functional Testing:</strong> Validate against requirements. <strong>Regression Testing:</strong> Ensure changes don't break existing features. <strong>User Acceptance Testing:</strong> End-users validate the system. <strong>Security Testing:</strong> Identify vulnerabilities. <strong>Performance Testing:</strong> Validate under load conditions.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">AI Enhancement</div>
-                        <div class="sdlc-info-text">AI auto-generates test cases from code and requirements, predicts high-risk areas for focused testing, identifies patterns in bug reports, and suggests test coverage improvements.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Best Practices</div>
-                        <div class="sdlc-info-text">Start testing early in the development cycle. Write comprehensive test cases covering edge cases. Automate repetitive tests. Prioritize security testing. Document and track all defects. Re-test after fixes.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Tools</div>
-                        <div class="sdlc-tools-list">
-                            <span class="sdlc-tool-tag">MSTest / xUnit</span>
-                            <span class="sdlc-tool-tag">Playwright</span>
-                            <span class="sdlc-tool-tag">Azure Load Testing</span>
-                            <span class="sdlc-tool-tag">GitHub Advanced Security</span>
-                            <span class="sdlc-tool-tag">GitHub Actions</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- Testing Phase -->
+        <div class="sdlc-phase-block sdlc-phase-testing" id="sdlc-phase-testing">
+            <div class="sdlc-phase-header" onclick="togglePhase(this)">
+                <span class="sdlc-phase-icon">🧪</span>
+                <h2>Testing</h2>
+                <span class="sdlc-phase-toggle">▼</span>
             </div>
-
-            <!-- Handover 4 -->
-            <div class="sdlc-handover-card" id="sdlc-card-handover4">
-                <div class="sdlc-card-header">
-                    <span>Testing → Deployment</span>
-                    <span class="sdlc-card-icon">▼</span>
+            <div class="sdlc-phase-content">
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">What</div>
+                    <div class="sdlc-info-text">Verify functionality, identify defects, validate security, and ensure the software meets quality standards and user requirements before release.</div>
                 </div>
-                <div class="sdlc-card-content">
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Testing Types</div>
+                    <div class="sdlc-info-text"><strong>Unit Testing:</strong> Test individual components in isolation. <strong>Integration Testing:</strong> Verify components work together. <strong>Functional Testing:</strong> Validate against requirements. <strong>Regression Testing:</strong> Ensure changes don't break existing features. <strong>User Acceptance Testing:</strong> End-users validate the system. <strong>Security Testing:</strong> Identify vulnerabilities. <strong>Performance Testing:</strong> Validate under load conditions.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">AI Enhancement</div>
+                    <div class="sdlc-info-text">AI dramatically expands test coverage while reducing manual effort. <strong>For developers and QA engineers</strong>, AI auto-generates unit tests, integration tests, and end-to-end test cases directly from code and requirements. AI identifies high-risk areas that need focused testing, suggests edge cases that humans often miss, and predicts where bugs are most likely to occur based on code complexity and change frequency. AI analyzes patterns in bug reports to prevent similar issues and continuously improves test coverage recommendations. <strong>For Product Owners</strong>, AI generates test scenarios from acceptance criteria, ensuring business requirements are validated automatically. AI can also translate user stories into executable test cases. <strong>For Scrum Masters</strong>, AI tracks test coverage trends, identifies testing bottlenecks, and predicts which stories carry higher quality risks based on historical defect patterns.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Best Practices</div>
+                    <div class="sdlc-info-text">Start testing early in the development cycle. Write comprehensive test cases covering edge cases. Automate repetitive tests. Prioritize security testing. Document and track all defects. Re-test after fixes.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Tools</div>
+                    <div class="sdlc-tools-list">
+                        <span class="sdlc-tool-tag">MSTest / xUnit</span>
+                        <span class="sdlc-tool-tag">Playwright</span>
+                        <span class="sdlc-tool-tag">Azure Load Testing</span>
+                        <span class="sdlc-tool-tag">GitHub Advanced Security</span>
+                        <span class="sdlc-tool-tag">GitHub Actions</span>
+                    </div>
+                </div>
+                <div class="sdlc-handover-section">
+                    <div class="sdlc-handover-header">Handover to Deployment</div>
                     <div class="sdlc-info-section">
                         <div class="sdlc-info-label">Deliverables</div>
                         <div class="sdlc-info-text">Test reports with all critical tests passing, security scan results, performance test validation, UAT sign-off, and release notes.</div>
@@ -318,50 +365,44 @@ page-name: "sdlc"
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Deployment Step -->
-            <div class="sdlc-step-card" id="sdlc-card-deployment">
-                <div class="sdlc-card-header">
-                    <span>🚀 Deployment</span>
-                    <span class="sdlc-card-icon">▼</span>
-                </div>
-                <div class="sdlc-card-content">
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">What</div>
-                        <div class="sdlc-info-text">Release the software to production environments, configure infrastructure, and make the application available to end users with minimal disruption.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">How</div>
-                        <div class="sdlc-info-text">Use automated CI/CD pipelines, implement blue-green or canary deployment strategies, maintain rollback procedures, and monitor deployment health in real-time.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">AI Enhancement</div>
-                        <div class="sdlc-info-text">AI predicts optimal deployment timing, monitors rollout health, detects anomalies during deployment, and suggests rollback triggers based on historical patterns.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">DevOps Integration</div>
-                        <div class="sdlc-info-text">Continuous Delivery ensures code is always in a deployable state. Continuous Deployment automates releases to production. Infrastructure as Code manages environments consistently. Feature flags enable gradual rollouts.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Tools</div>
-                        <div class="sdlc-tools-list">
-                            <span class="sdlc-tool-tag">Azure App Service</span>
-                            <span class="sdlc-tool-tag">Azure Kubernetes Service</span>
-                            <span class="sdlc-tool-tag">GitHub Actions</span>
-                            <span class="sdlc-tool-tag">Azure Bicep</span>
-                            <span class="sdlc-tool-tag">Azure DevOps Pipelines</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- Deployment Phase -->
+        <div class="sdlc-phase-block sdlc-phase-deployment" id="sdlc-phase-deployment">
+            <div class="sdlc-phase-header" onclick="togglePhase(this)">
+                <span class="sdlc-phase-icon">🚀</span>
+                <h2>Deployment</h2>
+                <span class="sdlc-phase-toggle">▼</span>
             </div>
-
-            <!-- Handover 5 -->
-            <div class="sdlc-handover-card" id="sdlc-card-handover5">
-                <div class="sdlc-card-header">
-                    <span>Deployment → Maintenance</span>
-                    <span class="sdlc-card-icon">▼</span>
+            <div class="sdlc-phase-content">
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">What</div>
+                    <div class="sdlc-info-text">Release the software to production environments, configure infrastructure, and make the application available to end users with minimal disruption.</div>
                 </div>
-                <div class="sdlc-card-content">
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">How</div>
+                    <div class="sdlc-info-text">Use automated CI/CD pipelines, implement blue-green or canary deployment strategies, maintain rollback procedures, and monitor deployment health in real-time.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">AI Enhancement</div>
+                    <div class="sdlc-info-text">AI makes deployments safer and more predictable by learning from historical patterns. <strong>For DevOps engineers and developers</strong>, AI predicts optimal deployment timing based on historical success rates, system load, and team availability. During rollouts, AI monitors real-time health metrics and automatically detects anomalies that might indicate problems. AI suggests rollback triggers before issues escalate and can even automate rollback decisions based on predefined thresholds. AI also helps generate and maintain Infrastructure as Code templates. <strong>For Product Owners</strong>, AI provides deployment risk assessments and predicted user impact, enabling informed go/no-go decisions. AI can generate release notes and change summaries for stakeholder communication. <strong>For Scrum Masters</strong>, AI tracks deployment frequency, failure rates, and mean time to recovery—key metrics for continuous improvement discussions and retrospectives.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">DevOps Integration</div>
+                    <div class="sdlc-info-text">Continuous Delivery ensures code is always in a deployable state. Continuous Deployment automates releases to production. Infrastructure as Code manages environments consistently. Feature flags enable gradual rollouts.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Tools</div>
+                    <div class="sdlc-tools-list">
+                        <span class="sdlc-tool-tag">Azure App Service</span>
+                        <span class="sdlc-tool-tag">Azure Kubernetes Service</span>
+                        <span class="sdlc-tool-tag">GitHub Actions</span>
+                        <span class="sdlc-tool-tag">Azure Bicep</span>
+                        <span class="sdlc-tool-tag">Azure DevOps Pipelines</span>
+                    </div>
+                </div>
+                <div class="sdlc-handover-section">
+                    <div class="sdlc-handover-header">Handover to Maintenance</div>
                     <div class="sdlc-info-section">
                         <div class="sdlc-info-label">Deliverables</div>
                         <div class="sdlc-info-text">Operations runbook, monitoring dashboards configured, on-call escalation procedures, and support documentation with troubleshooting guides.</div>
@@ -380,39 +421,40 @@ page-name: "sdlc"
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Maintenance Step -->
-            <div class="sdlc-step-card" id="sdlc-card-maintenance">
-                <div class="sdlc-card-header">
-                    <span>🔧 Maintenance</span>
-                    <span class="sdlc-card-icon">▼</span>
+        <!-- Maintenance Phase -->
+        <div class="sdlc-phase-block sdlc-phase-maintenance" id="sdlc-phase-maintenance">
+            <div class="sdlc-phase-header" onclick="togglePhase(this)">
+                <span class="sdlc-phase-icon">🔧</span>
+                <h2>Maintenance</h2>
+                <span class="sdlc-phase-toggle">▼</span>
+            </div>
+            <div class="sdlc-phase-content">
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">What</div>
+                    <div class="sdlc-info-text">Monitor system health, fix bugs, apply security patches, optimize performance, and gather user feedback to drive continuous improvement and future iterations.</div>
                 </div>
-                <div class="sdlc-card-content">
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">What</div>
-                        <div class="sdlc-info-text">Monitor system health, fix bugs, apply security patches, optimize performance, and gather user feedback to drive continuous improvement and future iterations.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">How</div>
-                        <div class="sdlc-info-text">Implement proactive monitoring and alerting, establish incident response procedures, analyze user feedback systematically, and maintain documentation for operational knowledge.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">AI Enhancement</div>
-                        <div class="sdlc-info-text">AI detects system anomalies before they become incidents, predicts potential failures based on patterns, analyzes logs for root cause identification, and helps prioritize issues by impact.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Continuous Feedback Loop</div>
-                        <div class="sdlc-info-text">User feedback and operational insights flow back to the Planning phase, enabling iterative improvements. This creates a cycle where each release informs the next development iteration.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Tools</div>
-                        <div class="sdlc-tools-list">
-                            <span class="sdlc-tool-tag">Azure Monitor</span>
-                            <span class="sdlc-tool-tag">Application Insights</span>
-                            <span class="sdlc-tool-tag">GitHub Issues</span>
-                            <span class="sdlc-tool-tag">Azure DevOps Boards</span>
-                            <span class="sdlc-tool-tag">Microsoft Teams</span>
-                        </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">How</div>
+                    <div class="sdlc-info-text">Implement proactive monitoring and alerting, establish incident response procedures, analyze user feedback systematically, and maintain documentation for operational knowledge.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">AI Enhancement</div>
+                    <div class="sdlc-info-text">AI shifts maintenance from reactive firefighting to proactive prevention. <strong>For developers and operations teams</strong>, AI detects system anomalies before they become user-facing incidents, predicts potential failures based on patterns in metrics, logs, and traces. AI performs intelligent log analysis to identify root causes faster and correlates issues across distributed systems. AI helps prioritize bug fixes and technical debt based on user impact and system risk. <strong>For Product Owners</strong>, AI analyzes user feedback and usage patterns to surface feature requests and pain points, directly informing the next ideation cycle. AI can summarize user sentiment trends and identify which issues affect the most users. <strong>For Scrum Masters</strong>, AI provides insights into team capacity for maintenance versus new development, identifies recurring issues that might indicate systemic problems, and helps balance bug fixes against feature work in sprint planning.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Continuous Feedback Loop</div>
+                    <div class="sdlc-info-text">User feedback and operational insights flow back to the Ideation phase, enabling iterative improvements. This creates a cycle where each release informs the next development iteration.</div>
+                </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Tools</div>
+                    <div class="sdlc-tools-list">
+                        <span class="sdlc-tool-tag">Azure Monitor</span>
+                        <span class="sdlc-tool-tag">Application Insights</span>
+                        <span class="sdlc-tool-tag">GitHub Issues</span>
+                        <span class="sdlc-tool-tag">Azure DevOps Boards</span>
+                        <span class="sdlc-tool-tag">Microsoft Teams</span>
                     </div>
                 </div>
             </div>
@@ -628,5 +670,17 @@ page-name: "sdlc"
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js" defer></script>
-<script src="{{ '/assets/js/sdlc.js' | relative_url }}" defer></script>
+<script>
+function togglePhase(header) {
+    const content = header.nextElementSibling;
+    const toggle = header.querySelector('.sdlc-phase-toggle');
+    
+    content.classList.toggle('expanded');
+    toggle.classList.toggle('expanded');
+}
+
+// Initialize: all phases collapsed by default
+document.addEventListener('DOMContentLoaded', function() {
+    // Phase blocks start collapsed (no expanded class by default)
+});
+</script>

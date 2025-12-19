@@ -129,6 +129,11 @@
                 "url": "/ai/community.html",
                 "collection":"community",
                 "description": "Community announcements, discussions, magazines and insights related to AI."
+            },
+            {
+                "title": "SDLC",
+                "url": "/ai/sdlc.html",
+                "description": "Resources on how GitHub Copilot and AI in general are transforming the Software Development Life Cycle (SDLC)."
             }
         ]
     },
@@ -242,6 +247,11 @@
         "image": "/assets/section-backgrounds/devops.jpg",
         "category": "DevOps",
         "collections": [
+            {
+                "title": "DX, SPACE & DORA",
+                "url": "/devops/dx-space.html",
+                "description": "Understanding developer experience frameworks: DORA metrics, SPACE framework, and DevEx for measuring and improving team effectiveness."
+            },
             {
                 "title": "News",
                 "url": "/devops/news.html",
