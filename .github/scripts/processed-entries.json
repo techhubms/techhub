@@ -22346,5 +22346,11 @@
     "reason": "Succesfully added: Assigned the AI category because the article focuses on Microsoft's innovation in AI platforms (AI rule 1, coverage of Microsoft AI products and frameworks such as Microsoft Foundry). Also assigned the Azure category because Microsoft Foundry and its services are built on and deeply integrated with Azure (Azure rule 1). Did not assign Coding, DevOps, ML, Security, or GitHub Copilot categories as the article focuses on platform-level features, architecture, and organizational impact rather than code-level tutorials, operational pipelines, classic ML/data science engineering, or security/compliance implementations.",
     "timestamp": "2025-12-19 08:06:20 +00:00",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/context-engineering-recipes-recap.html",
+    "reason": "Succesfully added: The 'GitHub Copilot' and 'AI' categories are assigned because the article thoroughly discusses prompt engineering patterns to enhance coding with GitHub Copilot—a developer-focused AI tool (GitHub Copilot rules 1-4, AI rule 2). The 'Coding' category is also included since the patterns directly impact programming workflow and code review processes (Coding rules 4 and 5). Exclusion rules do not apply since this is not personal, sales, or business strategy content and maintains a technical, practitioner-oriented focus.",
+    "timestamp": "2025-12-19 14:05:56 +00:00",
+    "collection": "posts"
   }
 ]
