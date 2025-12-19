@@ -22340,5 +22340,11 @@
     "reason": "Succesfully added: Assigned AI category because the content extensively covers Microsoft's AI platform updates (AI rules 1, 4, 5, and 6) including agent frameworks, Foundry Tools, and multi-agent orchestration. Assigned Azure because Foundry and all related services are tightly integrated with Azure and rely on Azure management, deployment, networking, and security (Azure rule 1, 4, 5). Assigned ML because of detailed coverage of model development, fine-tuning, data science features, and reinforcement learning for LLMs (ML rules 1, 3, 4, 6, and 10). Security applies due to frequent focus on governance, identity, VNETs, Key Vault integration, guardrails, Zero Trust, compliance, and monitoring (Security rules 1, 4, 5, 7, 9, and 10). Coding is included because the platform enables SDK-based agent and model development, supports code-first workflow customization, and integrates with developer tools (Coding rules 1, 2, and 4). No generic exclusion rules applied as content is technical, in English, non-biographical, and not focused on business strategy or consumer productivity.",
     "collection": "news",
     "canonical_url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-oct-nov-2025/"
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-gartner-magic-quadrant-for-ai-application-development-platforms/",
+    "reason": "Succesfully added: Assigned the AI category because the article focuses on Microsoft's innovation in AI platforms (AI rule 1, coverage of Microsoft AI products and frameworks such as Microsoft Foundry). Also assigned the Azure category because Microsoft Foundry and its services are built on and deeply integrated with Azure (Azure rule 1). Did not assign Coding, DevOps, ML, Security, or GitHub Copilot categories as the article focuses on platform-level features, architecture, and organizational impact rather than code-level tutorials, operational pipelines, classic ML/data science engineering, or security/compliance implementations.",
+    "timestamp": "2025-12-19 08:06:20 +00:00",
+    "collection": "news"
   }
 ]
