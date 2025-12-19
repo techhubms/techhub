@@ -102,11 +102,6 @@
         "category": "AI",
         "collections": [
             {
-                "title": "A(i) to Z",
-                "url": "/ai/ai-to-z.html",
-                "description": "A starting point for learning about AI."
-            },
-            {
                 "title": "News",
                 "url": "/ai/news.html",
                 "collection":"news",
@@ -129,6 +124,11 @@
                 "url": "/ai/community.html",
                 "collection":"community",
                 "description": "Community announcements, discussions, magazines and insights related to AI."
+            },
+            {
+                "title": "A(i) to Z",
+                "url": "/ai/ai-to-z.html",
+                "description": "A starting point for learning about AI."
             },
             {
                 "title": "SDLC",
@@ -248,11 +248,6 @@
         "category": "DevOps",
         "collections": [
             {
-                "title": "DX, SPACE & DORA",
-                "url": "/devops/dx-space.html",
-                "description": "Understanding developer experience frameworks: DORA metrics, SPACE framework, and DevEx for measuring and improving team effectiveness."
-            },
-            {
                 "title": "News",
                 "url": "/devops/news.html",
                 "collection": "news",
@@ -275,6 +270,11 @@
                 "url": "/devops/community.html",
                 "collection": "community",
                 "description": "Community discussions about DevOps."
+            },
+            {
+                "title": "DX, SPACE & DORA",
+                "url": "/devops/dx-space.html",
+                "description": "Understanding developer experience frameworks: DORA metrics, SPACE framework, and DevEx for measuring and improving team effectiveness."
             }
         ]
     },

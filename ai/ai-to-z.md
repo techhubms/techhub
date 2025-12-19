@@ -49,10 +49,12 @@ This page is designed to be a starting point for learning about AI.
   - [Azure AI services](#azure-ai-services)
   - [Languages & SDKs](#languages--sdks)
   - [Semantic Kernel](#semantic-kernel)
+  - [Microsoft Agent Framework](#microsoft-agent-framework)
 - [Want to know more?](#want-to-know-more)
 - [Conclusion](#conclusion)
 
-## History
+<details id="history">
+<summary><strong>History</strong></summary>
 
 Some fun history facts about AI, showing how long AI has been around and how it has evolved over time:
 
@@ -66,10 +68,13 @@ Some fun history facts about AI, showing how long AI has been around and how it 
 - 2020: OpenAI released GPT-3, a significant advancement in natural language processing.
 - 2023: OpenAI released GPT-4, further enhancing capabilities in language understanding and generation.
 - 2023: Anthropic introduced the first Claude models, bringing Constitutional AI to mainstream use.
-- 2025: GPT-5 family models became broadly available across tooling and platforms.
-- 2025: Anthropic released the latest Claude generation (Claude 4.1 Opus) across APIs and products.
+- 2024-present: Multimodal and tool-using LLMs became common across developer tools and products.
+- 2024-present: Agentic patterns (tool calling, workflows, multi-agent collaboration) and interoperability protocols accelerated adoption.
 
-## ML vs AI vs GenAI
+</details>
+
+<details id="ml-vs-ai-vs-genai">
+<summary><strong>ML vs AI vs GenAI</strong></summary>
 
 Understanding the relationship between these three concepts is essential for anyone starting their AI journey.
 
@@ -89,7 +94,10 @@ These different approaches can be combined or used independently depending on th
 
 **Generative AI (GenAI)** is a specific type of AI that can create new content - text, images, code, music, or other types of data. When you ask ChatGPT to write a story or use DALL-E to create an image, you're using generative AI. GenAI models learn patterns from existing content and use that knowledge to generate new, original content that follows similar patterns.
 
-## GenAI part 1
+</details>
+
+<details id="genai-part-1">
+<summary><strong>GenAI part 1</strong></summary>
 
 ### Introduction
 
@@ -220,7 +228,7 @@ Data storage locations depend on the provider and service tier. Consumer service
 Most providers offer ways to limit data collection, though the options vary. Some allow you to delete conversation history, others provide settings to prevent data from being used for model training.
 
 **How does Azure OpenAI differ from using OpenAI directly?**
-Azure OpenAI provides the same models as OpenAI but with enterprise-grade security, compliance certifications, integration with other Azure services, and guarantees that your data won't be used to train models. It's designed for organizations with strict data governance requirements.
+Azure OpenAI provides access to many OpenAI models through Azure, with Azure-native identity, networking, and governance features. Model availability and versions can differ by region and over time. Azure OpenAI states it doesn't use customer data to retrain foundation models; see the [Azure OpenAI data, privacy, and security guide](https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/data-privacy).
 
 **How does GitHub Models relate to GitHub Copilot?**
 GitHub Models is a development platform that gives developers access to various AI models for building applications, while GitHub Copilot is a specific AI coding assistant. Think of GitHub Models as a toolbox for AI development, and Copilot as one specific tool that helps with coding. [GitHub Models](https://docs.github.com/en/github-models/about-github-models) provides model catalogs, prompt management, and evaluation tools for developers.
@@ -446,6 +454,70 @@ This mathematical representation allows AI models to understand that "vehicle" r
 
 During inference, the model doesn't "think" the way humans do. Instead, it performs billions of mathematical calculations to predict the most likely next word, then the word after that, building responses token by token based on the patterns it learned during training.
 
+#### Next-token prediction: How LLMs generate text
+
+The core mechanism behind all modern LLMs is remarkably simple in concept: **next-token prediction**. Given a sequence of tokens, the model predicts what token is most likely to come next.
+
+```mermaid
+graph LR
+    subgraph Input["Input Sequence"]
+        T1["The"]
+        T2["dog"]
+        T3["..."]
+    end
+    
+    subgraph LLM["Language Model"]
+        P["Neural Network<br/>Billions of Parameters"]
+    end
+    
+    subgraph Output["Probability Distribution"]
+        O1["barks → 32%"]
+        O2["runs → 18%"]
+        O3["sleeps → 12%"]
+        O4["jumped → 8%"]
+        O5["... → other"]
+    end
+    
+    T1 --> P
+    T2 --> P
+    T3 --> P
+    P --> O1
+    P --> O2
+    P --> O3
+    P --> O4
+    P --> O5
+    
+    style O1 fill:#90EE90
+```
+
+For example, given the input **"The dog..."**, the model calculates probability scores for every token in its vocabulary:
+
+- "barks" might get 32% probability
+- "runs" might get 18%
+- "sleeps" might get 12%
+- And thousands of other possibilities with smaller probabilities
+
+The model then samples from this distribution (or picks the highest probability, depending on settings) and appends that token to the sequence. This process repeats: now with "The dog barks", it predicts the next token, and so on until a complete response is generated.
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant LLM as Language Model
+    participant Response
+    
+    User->>LLM: "The dog"
+    LLM->>LLM: Predict next token
+    LLM->>Response: "barks" (highest prob)
+    LLM->>LLM: Predict next: "The dog barks"
+    LLM->>Response: "loudly"
+    LLM->>LLM: Predict next: "The dog barks loudly"
+    LLM->>Response: "at"
+    LLM->>LLM: Continue until complete...
+    Response->>User: "The dog barks loudly at the mailman."
+```
+
+This autoregressive generation is why models can produce coherent, contextually appropriate text—each new token is conditioned on everything that came before it.
+
 **Alignment: making models follow principles (Constitutional AI)**
 As models get stronger, we also need them to behave safely and predictably. "Alignment" is the process of shaping model behavior to follow clear rules and values, not just statistics from the training data. A practical approach you’ll see in modern systems is Constitutional AI (popularized by Anthropic): the model uses a short, written set of principles (a “constitution”) to critique and improve its own answers.
 
@@ -505,7 +577,10 @@ For a comprehensive deep dive into how these concepts work together, [Andrej Kar
 
 Tip: keep these concepts practical. As you design a use case, tie terms like “context,” “embeddings,” and “attention” to concrete trade-offs: latency, accuracy, token cost, and guardrails.
 
-## GenAI part 2
+</details>
+
+<details id="genai-part-2">
+<summary><strong>GenAI part 2</strong></summary>
 
 ### Function calling
 
@@ -573,11 +648,18 @@ MCP and OpenAI function calling serve similar purposes but work at different lev
 Think of function calling as the language AI models use to request external actions, while MCP is the standardized postal service that delivers those requests to the right destinations.
 
 **Security considerations:**
-Current MCP implementations have limited security features, but improvements are coming:
+MCP is a protocol, not a deployment model. The security properties you get depend on the transport you use (for example, local stdio vs HTTP) and how you deploy the server.
 
-- **OAuth support** is in development ([draft specification](https://modelcontextprotocol.io/specification/draft/basic/authorization))
-- **Temporary solutions** like [Auth0 & Cloudflare](https://auth0.com/blog/secure-and-deploy-remote-mcp-servers-with-auth0-and-cloudflare/) provide security for remote MCP servers
-- **Server isolation** and central registries are being developed to improve security
+- Authorization is optional in MCP. Some servers expose tools without any built-in auth, while others can be deployed behind an identity-aware gateway.
+- For HTTP-based transports, the MCP specification describes an OAuth 2.1-based authorization approach (see the [authorization specification](https://modelcontextprotocol.io/specification/draft/basic/authorization)). Support varies by server and client.
+- For local stdio servers, the HTTP authorization spec does not apply; credentials typically come from the local environment or configuration rather than interactive OAuth flows.
+
+If you want to use MCP in production, focus on controls that are independent of any single server implementation:
+
+- Put MCP servers behind authentication and authorization you control (gateway, reverse proxy, or platform-native identity)
+- Apply least privilege to tool scopes and downstream API permissions
+- Isolate servers (and their credentials) per environment and, when needed, per tenant/user
+- Log and audit tool invocations, and treat tool outputs as untrusted input
 
 **Risks to consider:**
 
@@ -850,20 +932,24 @@ What changes:
 - Interfaces become intent‑first rather than page‑first
 - Sites describe actions and data in machine‑readable ways so agents can help
 - Results include sources, links, and artifacts you can reuse
-- NLWeb becomes to MCP/A2A what HTML is to HTTP - the semantic layer for agent-web communication
 
-**Implementation Details**: NLWeb is an open-source framework that simplifies building conversational interfaces for websites. It natively supports MCP (Model Context Protocol) and leverages Schema.org and RSS formats used by over 100 million websites. The [GitHub repository](https://github.com/nlweb-ai/NLWeb) provides a Python implementation with comprehensive documentation, featuring REST API protocols, LLM connectors, and support for major vector stores (Qdrant, Azure AI Search, Elasticsearch, Postgres).
+Some projects describe this as an “agent-native” layer for the web, similar to how HTML+HTTP enabled browsers. If you want a concrete example, the NLWeb project itself frames the idea in relation to MCP (and mentions A2A as an emerging direction).
+
+**Implementation details (one example, not a standard)**: [NLWeb](https://github.com/nlweb-ai/NLWeb) is an open-source project that aims to simplify building conversational interfaces for websites. It describes using semi-structured formats (like Schema.org and RSS) as inputs, indexing content into a vector store for semantic retrieval, and exposing capabilities via MCP so AI clients can call tools against the site.
 
 #### llms.txt
 
-Like robots.txt for crawlers, llms.txt is a simple convention that tells AI systems how to use your content. You publish a text or markdown file at a predictable path with guidance for large language models: what content is allowed, preferred source files, update cadence, and licensing. This helps AI systems find authoritative content and respect usage rules.
+Like robots.txt for crawlers, `llms.txt` is a proposed convention for publishing an LLM-friendly index of a site. The idea is to put a markdown file at a predictable path (typically `/llms.txt`) that points to the most useful pages and documents, with a short summary and an optional section for “nice to have” links.
 
 - Spec and guidance: [llms.txt](https://llmstxt.org/)
 - Example: [GoFastMCP llms.txt](https://gofastmcp.com/llms-full.txt)
 
-The bottom line: AI turns websites and data stores into conversational surfaces. By adding llms.txt, semantic search, and you make your content discoverable to both people and agents and easier to cite and reuse.
+The bottom line: AI turns websites and data stores into conversational surfaces. By adding `llms.txt` and shipping semantic search (or at least clean, machine-readable structure plus stable URLs), you make your content easier for both people and agents to discover, cite, and reuse.
 
-## Inspiration
+</details>
+
+<details id="inspiration">
+<summary><strong>Inspiration</strong></summary>
 
 What can you actually *build* with AI? Beyond the corporate feature lists, here's what developers are creating right now, and what you could build next.
 
@@ -936,7 +1022,13 @@ You don't need to train models from scratch. Use pre-trained models through APIs
 **Learn by Doing**
 The best way to understand AI capabilities is to build something. Follow the linked tutorials, modify the examples, and see what happens when you change parameters or combine different approaches.
 
-## Integrating AI into your applications
+**Use an AI-native SDLC**
+If you're shipping AI features, treat prompts, evaluations, and guardrails as first-class artifacts and build them into your delivery process. The [AI Native SDLC](/ai/sdlc.html) page breaks this down phase by phase.
+
+</details>
+
+<details id="integrating-ai-into-your-applications">
+<summary><strong>Integrating AI into your applications</strong></summary>
 
 ### Tools and IDEs
 
@@ -1158,7 +1250,7 @@ Most programming languages have robust SDKs and libraries for AI development, ma
 **Language and framework compatibility matrix:**
 
 | Language | OpenAI | Azure AI | LangChain | Semantic Kernel | MCP |
-|----------|--------|----------|-----------|-----------------|-----|
+| -------- | ------ | -------- | --------- | --------------- | --- |
 | Python | ✅ | ✅ | ✅ | ✅ | ✅ |
 | JavaScript/TypeScript | ✅ | ✅ | ✅ | ❌ | ✅ |
 | C#/.NET | ✅ | ✅ | ❌ | ✅ | ✅ |
@@ -1177,6 +1269,8 @@ Most programming languages have robust SDKs and libraries for AI development, ma
 - [Connecting to a Local MCP Server Using Microsoft.Extensions.AI](https://www.youtube.com/watch?v=iYHh5n-6ez4)
 
 ### Semantic Kernel
+
+Semantic Kernel remains a useful SDK for working with LLMs and orchestrating prompts, tools, and workflows in application code. Microsoft also highlights Microsoft Agent Framework for building agentic systems that need higher-level orchestration and enterprise-ready patterns.
 
 **What is Semantic Kernel?**
 Semantic Kernel is Microsoft's open-source AI orchestration framework designed to help developers integrate AI models with conventional programming languages like C#, Python, and Java. It acts as a middle layer that connects AI models with your application logic, external APIs, and data sources.
@@ -1215,6 +1309,120 @@ Semantic Kernel is Microsoft's open-source AI orchestration framework designed t
 
 Think of Semantic Kernel as a comprehensive toolkit that can incorporate both function calling and MCP servers within a larger application architecture.
 
+**More information:**
+
+- [Semantic Kernel documentation](https://learn.microsoft.com/en-us/semantic-kernel/)
+- [Semantic Kernel GitHub repository](https://github.com/microsoft/semantic-kernel)
+- [Semantic Kernel and Microsoft.Extensions.AI: Better Together, Part 2](https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-and-microsoft-extensions-ai-better-together-part-2/)
+- [Migration guide from Semantic Kernel to Agent Framework](https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-semantic-kernel)
+
+### Microsoft Agent Framework
+
+**What is Microsoft Agent Framework?**
+Microsoft Agent Framework is Microsoft's comprehensive multi-language framework for building, orchestrating, and deploying AI agents.
+
+Depending on your stack and requirements, it can complement or replace lower-level orchestration libraries. For new .NET applications that need agentic and multi-agent capabilities, Microsoft's .NET AI ecosystem guidance points to Microsoft Agent Framework as the recommended framework (see the [Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview)).
+
+**Why was it created?**
+The framework addresses the growing complexity of building AI agent systems by providing:
+
+- **Unified platform**: One framework for both Python and .NET (previously split between AutoGen and Semantic Kernel)
+- **Enterprise-grade features**: Built-in support for security, compliance, and scalability
+- **Modern architecture**: Graph-based workflows, middleware systems, and built-in observability
+- **Deep Microsoft integration**: Native support for Azure AI Foundry, Copilot Studio, and other Microsoft services
+
+```mermaid
+graph TB
+    subgraph "Microsoft Agent Framework"
+        direction TB
+        AF["Agent Framework Core"]
+        
+        subgraph "Languages"
+            PY["Python"]
+            NET[".NET / C#"]
+        end
+        
+        subgraph "Key Features"
+            WF["Graph-based Workflows"]
+            MW["Middleware System"]
+            OT["OpenTelemetry Observability"]
+            DUI["DevUI for Development"]
+        end
+        
+        subgraph "Integrations"
+            AZ["Azure AI Foundry"]
+            CS["Copilot Studio"]
+            A2A["A2A Protocol"]
+        end
+    end
+    
+    AF --> PY
+    AF --> NET
+    AF --> WF
+    AF --> MW
+    AF --> OT
+    AF --> DUI
+    AF --> AZ
+    AF --> CS
+    AF --> A2A
+```
+
+**Key capabilities:**
+
+- **Graph-based Workflows**: Connect agents and deterministic functions using data flows with streaming, checkpointing, human-in-the-loop, and time-travel capabilities
+- **Multiple Agent Providers**: Support for various LLM providers including Azure OpenAI, OpenAI, and others
+- **Middleware System**: Flexible request/response processing, exception handling, and custom pipelines
+- **Observability**: Built-in OpenTelemetry integration for distributed tracing, monitoring, and debugging
+- **DevUI**: Interactive developer UI for agent development, testing, and debugging workflows
+
+**Quick start (Python):**
+
+```python
+# pip install agent-framework --pre
+from agent_framework.azure import AzureOpenAIResponsesClient
+from azure.identity import AzureCliCredential
+
+agent = AzureOpenAIResponsesClient(
+    credential=AzureCliCredential(),
+).create_agent(
+    name="AssistantBot",
+    instructions="You are a helpful assistant.",
+)
+
+response = await agent.run("How can I help you today?")
+```
+
+**Quick start (.NET):**
+
+```csharp
+// dotnet add package Microsoft.Agents.AI.OpenAI --prerelease
+using OpenAI;
+
+var agent = new OpenAIClient("<apikey>")
+    .GetOpenAIResponseClient("gpt-4o-mini")
+    .CreateAIAgent(name: "AssistantBot", instructions: "You are a helpful assistant.");
+
+Console.WriteLine(await agent.RunAsync("How can I help you today?"));
+```
+
+**When should I use Agent Framework vs Semantic Kernel?**
+
+| Scenario | Recommendation |
+| -------- | -------------- |
+| New project, can wait for GA | Start with Agent Framework |
+| Existing Semantic Kernel project | Continue with SK, plan migration |
+| Need features only in Agent Framework | Use Agent Framework (preview) |
+| Must ship immediately with stability | Use Semantic Kernel |
+| Learning AI development | Both are good starting points |
+
+**More information:**
+
+- [Microsoft Agent Framework documentation](https://learn.microsoft.com/en-us/agent-framework/)
+- [Agent Framework GitHub repository](https://github.com/microsoft/agent-framework)
+- [Semantic Kernel and Microsoft Agent Framework announcement](https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-and-microsoft-agent-framework/)
+- [Introducing Microsoft Agent Framework blog post](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/)
+- [Agent Framework introduction video (30 min)](https://www.youtube.com/watch?v=AAgdMhftj8w)
+
 #### Semantic Kernel FAQ
 
 **Adding Azure OpenAI vs OpenAI in C# - what are the differences?**
@@ -1245,7 +1453,10 @@ Current limitations and areas of active development:
 - [Building Multi-Agent AI Solutions Using Semantic Kernel and the A2A Protocol](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/building-multi-agent-ai-solutions-using-semantic-kernel-and-the-a2a-protocol/4273899)
 - [Microsoft's Agentic Frameworks: AutoGen and Semantic Kernel](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/microsofts-agentic-frameworks-autogen-and-semantic-kernel/4292949)
 
-## Want to know more?
+</details>
+
+<details id="want-to-know-more">
+<summary><strong>Want to know more?</strong></summary>
 
 ### Learning resources
 
@@ -1269,7 +1480,10 @@ Current limitations and areas of active development:
 - Build a small application using Azure OpenAI or GitHub Models
 - Join AI communities and forums to learn from others' experiences
 
-## Conclusion
+</details>
+
+<details id="conclusion">
+<summary><strong>Conclusion</strong></summary>
 
 The AI landscape is rapidly evolving, but the foundational concepts covered in this guide provide a solid starting point for understanding and working with AI technologies. Whether you're a complete beginner or someone with existing technical experience, the key to success with AI is hands-on experimentation and continuous learning.
 
@@ -1289,3 +1503,5 @@ The AI landscape is rapidly evolving, but the foundational concepts covered in t
 4. **Learn continuously**: Follow AI developments and adapt your approach as new tools and techniques emerge
 
 Remember that AI is a tool to enhance human capabilities, not replace human judgment. The most successful AI implementations combine the efficiency of AI with human expertise, creativity, and oversight. As you explore the possibilities, focus on how AI can help you and your organization work more effectively while maintaining the quality and ethics that matter to your users and stakeholders.
+
+</details>
