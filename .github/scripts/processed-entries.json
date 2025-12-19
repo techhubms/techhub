@@ -22334,5 +22334,11 @@
     "timestamp": "2025-12-19 02:38:37 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Assigned 'Azure' category as the primary subject is Azure Front Door, a Microsoft cloud service (Azure rule 1). Included 'DevOps' because the article deals with configuration management, deployment pipelines, recovery objectives, safe deployment practices, and operational safeguards (DevOps rules 4, 5, 7). 'Security' is included due to detailed discussion of Web Application Firewall, DDoS protection, isolation mechanisms, and secure configuration management (Security rules 1, 2, 3, 4, 7, 9). Coding, ML, AI, and GitHub Copilot are not assigned, as there is no code development, no AI/ML engineering, and no GitHub Copilot content. The submission is not excluded by generic rules as it is technical, well-written, and covers a relevant Microsoft cloud topic."
+  },
+  {
+    "timestamp": "2025-12-19 05:06:33 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the content extensively covers Microsoft's AI platform updates (AI rules 1, 4, 5, and 6) including agent frameworks, Foundry Tools, and multi-agent orchestration. Assigned Azure because Foundry and all related services are tightly integrated with Azure and rely on Azure management, deployment, networking, and security (Azure rule 1, 4, 5). Assigned ML because of detailed coverage of model development, fine-tuning, data science features, and reinforcement learning for LLMs (ML rules 1, 3, 4, 6, and 10). Security applies due to frequent focus on governance, identity, VNETs, Key Vault integration, guardrails, Zero Trust, compliance, and monitoring (Security rules 1, 4, 5, 7, 9, and 10). Coding is included because the platform enables SDK-based agent and model development, supports code-first workflow customization, and integrates with developer tools (Coding rules 1, 2, and 4). No generic exclusion rules applied as content is technical, in English, non-biographical, and not focused on business strategy or consumer productivity.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-oct-nov-2025/"
   }
 ]
