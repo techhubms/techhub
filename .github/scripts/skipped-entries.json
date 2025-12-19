@@ -10779,5 +10779,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=5sa58eNiglM",
     "reason": "No categories found: All categories are excluded due to the Generic Exclusion Rule: The content is primarily biographical, focusing on Quincy Larson's personal journey (former school director to nonprofit founder) and the history and impact of freeCodeCamp. While there is mention of technical topics such as machine learning and coding in an AI-powered landscape, the actual content overview centers on the story, philosophy, social impact, and career advice, rather than technical implementation or hands-on Microsoft technology. There is no substantive coverage of Microsoft products or services, programming with Microsoft tools, or detailed technical guidance. Thus, per Chapter 3 (Biographical Focus, Non-Development Products, and Business/Workplace Focus exclusion), no categories apply."
+  },
+  {
+    "canonical_url": "https://blogs.windows.com/windowsdeveloper/2025/12/18/2025-in-review-how-we-elevated-the-microsoft-store-experience/",
+    "collection": "news",
+    "reason": "No categories found: No categories were assigned because the content is primarily an end-of-year review about customer experience improvements, new app catalog features, and usability enhancements in the Microsoft Store. It spotlights new products and UI aspects, but does not focus on technical implementation, programming, development, DevOps, AI/ML engineering, Azure services configuration, coding practices, security architecture, or other developer-oriented topics. It also specifically highlights consumer and productivity features, and not developer APIs or app publishing guidance for the Microsoft Store. No section qualifies for the AI category as descriptions of AI relate to user-facing Store features (not app/code integration), and the segment about Copilot relates only to business productivity (which is excluded). Therefore, according to the processing workflow and all category inclusion/exclusion rules, this content does not qualify for any technical categories.",
+    "timestamp": "2025-12-19 19:05:41 +00:00"
   }
 ]

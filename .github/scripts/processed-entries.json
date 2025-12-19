@@ -22394,5 +22394,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=C-Rn-8MbXtA",
     "reason": "Succesfully added: Assigned the Coding category because the content centers on technical discussions of ASP.NET Core's server and API roadmap as it applies to .NET 11, which falls under Coding inclusion rules (Microsoft frameworks, development, API design, backend server development). No other categories apply: there is no AI, GitHub Copilot, DevOps, Azure, ML, or Security focus according to the content description, tags, and title. The content is not excluded since it is a technical roadmap video and not subject to generic exclusion rules."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/devops/work-item-linking-for-advanced-security-alerts-now-available/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'DevOps' because the content focuses on Azure DevOps enhancements and project management workflows (DevOps rules 1 and 3). Assigned 'Security' as the feature addresses tracking and managing security vulnerabilities through alerts and integration with GitHub Advanced Security (Security rules 1, 2, 5). 'Azure' is also relevant due to centrality of Azure DevOps and Azure services (Azure rules 1 and 4). The article does not qualify for AI, ML, Coding, or GitHub Copilot as it discusses workflow integration for security alerts, not AI, machine learning, or software coding implementation.",
+    "timestamp": "2025-12-19 19:05:26 +00:00"
   }
 ]
