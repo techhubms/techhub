@@ -22418,5 +22418,11 @@
     "reason": "Succesfully added: Categories assigned: \n- 'GitHub Copilot' because the post is entirely focused on the use and features of GitHub Copilot, specifically the Coding Agent (GitHub Copilot Inclusion Rule 1-6). \n- 'AI' because Copilot Coding Agent leverages AI to automate coding tasks (AI Inclusion Rule 2, 3, 4). \n- 'Coding' because the post details how Copilot can be used for writing, reviewing, refactoring code, and workflow automation on a codebase (Coding Rule 4, 5). \n- 'DevOps' because it illustrates automation of GitHub Actions workflows, workflow monitoring, and continuous integration scenarios (DevOps Rule 2, 5). \nNo exclusion rules from Chapter 3 are triggered, and generic content (shares, navigation, etc) is ignored as instructed.",
     "canonical_url": "https://devopsjournal.io/blog/2025/12/20/Copilot-Agent-example",
     "timestamp": "2025-12-20 14:06:16 +00:00"
+  },
+  {
+    "timestamp": "2025-12-20 16:05:49 +00:00",
+    "reason": "Succesfully added: The content explains automating on-call incident runbook execution using Azure SRE Agent, a tool that combines AI and automation for DevOps and SRE workflows. It covers Azure service setup, AI-driven workflows, role assignment, automation practices, and platform-agnostic execution. 'AI' category applies as the Azure SRE Agent leverages AI/automation for diagnostic tasks (AI inclusion rule 1, 4). 'Azure' category applies due to extensive use of Azure platform and services like Azure Monitor, Log Analytics, App Insights, az CLI (Azure rule 1, 2, 4, 5). 'DevOps' category applies since this is fundamentally about incident response automation, on-call workflows, and operational best practices (DevOps rule 3, 5, 7, 9). Coding and ML categories do not apply; there is no code-level development or machine learning workflow involved. Community type is long enough (well over 200 words), and none of the generic exclusion rules apply. No sales pitch or business-only focus was detected, and the technical substance is strong. Tags reflect the technical themes and specific Microsoft/Azure tools mentioned.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/stop-running-runbooks-at-3-am-let-azure-sre-agent-do-your-on/ba-p/4479811",
+    "collection": "community"
   }
 ]
