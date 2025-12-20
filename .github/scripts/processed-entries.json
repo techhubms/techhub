@@ -22412,5 +22412,11 @@
     "reason": "Succesfully added: Assigned DevOps category because the feature impacts development workflows, review processes, and team collaboration around security alerts (DevOps rules 3, 4). Assigned Security category because the feature addresses vulnerability management, supply chain security, and audit/compliance in a development context (Security rules 1, 4, 5, 6). No other categories fit—the content does not discuss coding, ML, AI, GitHub Copilot, or Azure. The primary focus is development-process security governance within GitHub.",
     "canonical_url": "https://github.blog/changelog/2025-12-19-you-can-now-require-reviews-before-closing-dependabot-alerts-with-delegated-alert-dismissal",
     "collection": "news"
+  },
+  {
+    "collection": "posts",
+    "reason": "Succesfully added: Categories assigned: \n- 'GitHub Copilot' because the post is entirely focused on the use and features of GitHub Copilot, specifically the Coding Agent (GitHub Copilot Inclusion Rule 1-6). \n- 'AI' because Copilot Coding Agent leverages AI to automate coding tasks (AI Inclusion Rule 2, 3, 4). \n- 'Coding' because the post details how Copilot can be used for writing, reviewing, refactoring code, and workflow automation on a codebase (Coding Rule 4, 5). \n- 'DevOps' because it illustrates automation of GitHub Actions workflows, workflow monitoring, and continuous integration scenarios (DevOps Rule 2, 5). \nNo exclusion rules from Chapter 3 are triggered, and generic content (shares, navigation, etc) is ignored as instructed.",
+    "canonical_url": "https://devopsjournal.io/blog/2025/12/20/Copilot-Agent-example",
+    "timestamp": "2025-12-20 14:06:16 +00:00"
   }
 ]

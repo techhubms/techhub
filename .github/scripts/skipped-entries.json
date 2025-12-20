@@ -10785,5 +10785,11 @@
     "collection": "news",
     "reason": "No categories found: No categories were assigned because the content is primarily an end-of-year review about customer experience improvements, new app catalog features, and usability enhancements in the Microsoft Store. It spotlights new products and UI aspects, but does not focus on technical implementation, programming, development, DevOps, AI/ML engineering, Azure services configuration, coding practices, security architecture, or other developer-oriented topics. It also specifically highlights consumer and productivity features, and not developer APIs or app publishing guidance for the Microsoft Store. No section qualifies for the AI category as descriptions of AI relate to user-facing Store features (not app/code integration), and the segment about Copilot relates only to business productivity (which is excluded). Therefore, according to the processing workflow and all category inclusion/exclusion rules, this content does not qualify for any technical categories.",
     "timestamp": "2025-12-19 19:05:41 +00:00"
+  },
+  {
+    "timestamp": "2025-12-20 12:06:09 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - there is no substantive technical content available to evaluate. The description ('I'm so sorry ;-)') provides no technical details, and the content field is null. As per the workflow, content with insufficient or missing main text is excluded (focus on actual content; if none present, exclude).",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=fpPkHxf_jQQ"
   }
 ]
