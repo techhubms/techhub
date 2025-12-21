@@ -22436,5 +22436,11 @@
     "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories due to the discussion of GPT 5.2's integration into GitHub Copilot (GitHub Copilot and AI inclusion rules). Assigned 'Security' because of detailed reporting on the React2Shell vulnerability and its potential impact on the React ecosystem (Security inclusion rule 2, 8). Did not assign other categories as Azure, coding, DevOps, or ML were not a primary focus in the described content.",
     "timestamp": "2025-12-21 15:06:16 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=uNIZQpyQlys"
+  },
+  {
+    "timestamp": "2025-12-21 17:06:34 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the discussion is focused on Azure Storage Account replication, regional redundancy, storage SKUs, and migration logistics, all of which fall under Azure rules 1 and 4. Other categories like Coding, AI, DevOps, ML, Security, and GitHub Copilot don't apply as there is no focus on application-level code, AI/ML development, CI/CD, or security engineering per respective inclusion rules. The user is asking implementation and architecture questions about Azure infrastructure rather than sharing code, building pipelines, or discussing developer-specific tools. The explanation about downtime, migration methods (Portal vs IaC), and Azure regional limitations are all central to the Azure platform.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/understanding-storage-account-replication-downtime/m-p/4479787#M22386"
   }
 ]
