@@ -22424,5 +22424,17 @@
     "reason": "Succesfully added: The content explains automating on-call incident runbook execution using Azure SRE Agent, a tool that combines AI and automation for DevOps and SRE workflows. It covers Azure service setup, AI-driven workflows, role assignment, automation practices, and platform-agnostic execution. 'AI' category applies as the Azure SRE Agent leverages AI/automation for diagnostic tasks (AI inclusion rule 1, 4). 'Azure' category applies due to extensive use of Azure platform and services like Azure Monitor, Log Analytics, App Insights, az CLI (Azure rule 1, 2, 4, 5). 'DevOps' category applies since this is fundamentally about incident response automation, on-call workflows, and operational best practices (DevOps rule 3, 5, 7, 9). Coding and ML categories do not apply; there is no code-level development or machine learning workflow involved. Community type is long enough (well over 200 words), and none of the generic exclusion rules apply. No sales pitch or business-only focus was detected, and the technical substance is strong. Tags reflect the technical themes and specific Microsoft/Azure tools mentioned.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/stop-running-runbooks-at-3-am-let-azure-sre-agent-do-your-on/ba-p/4479811",
     "collection": "community"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' category based on the focus on AI tool adoption (AI rule 1, GitHub Copilot). Included 'GitHub Copilot' category because the content centers on usage statistics, impact, and the concept of 'AI fluency' regarding GitHub Copilot (GitHub Copilot rule 1 and 2). Did not assign Coding, DevOps, Azure, ML, or Security categories because the content does not go into technical development details, DevOps practices, Azure specifics, machine learning engineering, or security implementation—its focus is on AI adoption and changing developer skills.",
+    "timestamp": "2025-12-21 15:05:58 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/EZBU4zCCaoM"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories due to the discussion of GPT 5.2's integration into GitHub Copilot (GitHub Copilot and AI inclusion rules). Assigned 'Security' because of detailed reporting on the React2Shell vulnerability and its potential impact on the React ecosystem (Security inclusion rule 2, 8). Did not assign other categories as Azure, coding, DevOps, or ML were not a primary focus in the described content.",
+    "timestamp": "2025-12-21 15:06:16 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=uNIZQpyQlys"
   }
 ]
