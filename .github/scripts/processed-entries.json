@@ -22454,5 +22454,11 @@
     "timestamp": "2025-12-22 13:16:21 +00:00",
     "collection": "news",
     "canonical_url": "https://devblogs.microsoft.com/devops/the-new-test-run-hub-is-going-generally-available/"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/how-ai-fixed-my-procrastination/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because the article centers on using AI technologies, specifically Copilot and AI agent features in Visual Studio (AI rule 1 and 3). Assigned 'GitHub Copilot' because much of the workflow and automation relied directly on Copilot features, including prompt-based code generation and chat (GitHub Copilot rules 1, 2, 3, and 4). Included 'Coding' because projects involved .NET, language service creation, extension development, and working with code in Visual Studio (Coding rule 1 and 2). Included 'DevOps' for coverage of automated CI/CD pipelines with GitHub Actions and NuGet package publishing (DevOps rules 2, 5, and 6). Did not assign 'Azure', 'ML', or 'Security' as there is no direct substantive use of those technologies beyond agent/AI productivity tools. All generic exclusion rules (biographical focus, negativity, etc.) do not apply—while some personal reflection is present, the article is predominantly technical, practical, and implementation-focused.",
+    "timestamp": "2025-12-22 15:07:07 +00:00"
   }
 ]
