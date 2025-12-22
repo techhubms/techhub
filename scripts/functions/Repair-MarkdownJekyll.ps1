@@ -52,7 +52,7 @@ function Repair-MarkdownJekyll {
     # These keys have special handling or should remain unquoted for proper Jekyll processing
     $frontmatterSkipKeys = @('excerpt_separator', 'tags', 'categories', 'date')
 
-    $processedFile = Join-Path (Get-SourceRoot) ".github/scripts/processed-entries.json"
+    $processedFile = Join-Path (Get-SourceRoot) "_data/processed-entries.json"
     
     $processed = @()
     if ($processedFile -and (Test-Path $processedFile)) {

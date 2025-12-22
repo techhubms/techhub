@@ -5,7 +5,7 @@ Describe "Invoke-ProcessWithAiModel" {
     BeforeAll {
         . "$PSScriptRoot/Initialize-BeforeAll.ps1"
 
-        $script:TestScriptsPath = Join-Path $script:TempPath ".github/scripts"
+        $script:TestScriptsPath = Join-Path $script:TempPath "scripts"
         $script:TestSystemMessagePath = Join-Path $script:TestScriptsPath "system-message.md"
         $script:TestSkippedEntriesPath = Join-Path $script:TestScriptsPath "skipped-entries.json"
         

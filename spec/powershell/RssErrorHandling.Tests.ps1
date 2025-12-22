@@ -5,7 +5,7 @@ Describe "RSS Error Handling Integration" {
     BeforeAll {
         . "$PSScriptRoot/Initialize-BeforeAll.ps1"
 
-        $script:TestScriptsPath = Join-Path $script:TempPath ".github/scripts"
+        $script:TestScriptsPath = Join-Path $script:TempPath "scripts"
         $script:TestSkippedEntriesPath = Join-Path $script:TestScriptsPath "skipped-entries.json"
         
         # Create test directories

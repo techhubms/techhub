@@ -209,15 +209,15 @@ function Get-RoundupFileInfo {
 $isRunningFromScriptDirectory = ($WorkspaceDirectory -eq $PSScriptRoot)
 
 if ($isRunningFromScriptDirectory) {
-    # Running from the script's directory (.github/scripts)
-    $WorkspaceRoot = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
+    # Running from the script's directory (scripts/)
+    $WorkspaceRoot = Split-Path $PSScriptRoot -Parent
 }
 else {
     # Running from workspace root
     $WorkspaceRoot = $WorkspaceDirectory
 }
 
-$scriptsDirectory = Join-Path $WorkspaceRoot ".github" "scripts"
+$scriptsDirectory = Join-Path $WorkspaceRoot "scripts"
 $functionsPath = Join-Path $scriptsDirectory "functions"
 
 # Import Write-ErrorDetails first (for error handling), then all others sorted alphabetically

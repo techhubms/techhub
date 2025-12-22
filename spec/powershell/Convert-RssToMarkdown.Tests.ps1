@@ -6,7 +6,7 @@ Describe "Convert-RssToMarkdown" {
     BeforeAll {
         . "$PSScriptRoot/Initialize-BeforeAll.ps1"
 
-        $script:TestScriptsPath = Join-Path $script:TempPath ".github/scripts"
+        $script:TestScriptsPath = Join-Path $script:TempPath "scripts"
         $script:TestOutputDir = Join-Path $script:TempPath "_posts"
         $script:TestCommunityOutputDir = Join-Path $script:TempPath "_community"
         $script:TestAiResultsDir = Join-Path $script:TestScriptsPath "ai-results"

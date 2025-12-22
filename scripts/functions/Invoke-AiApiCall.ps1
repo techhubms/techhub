@@ -165,7 +165,7 @@ function Invoke-AiApiCall {
                         else {
                             # For longer rate limits, save to file and return error as before
                             $sourceRoot = Get-SourceRoot
-                            $scriptsPath = Join-Path $sourceRoot ".github/scripts"
+                            $scriptsPath = Join-Path $sourceRoot "scripts"
                             $rateLimitEndDatePath = Join-Path $scriptsPath "rate-limit-enddate.json"
                             $endDate = (Get-Date).AddSeconds([int]$rateLimitSeconds)
                             $json = @{ endDate = $endDate.ToString("o") } | ConvertTo-Json

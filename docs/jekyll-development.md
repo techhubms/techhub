@@ -85,7 +85,7 @@ sass:
 
 **Recommended Jekyll Server Management:**
 
-1. **Use `/workspaces/techhub/jekyll-start.ps1` to start or restart Jekyll**
+1. **Use `/workspaces/techhub/scripts/jekyll-start.ps1` to start or restart Jekyll**
    - This script automatically stops any running Jekyll servers before starting a new one
    - Includes proper cleanup and configuration for development
    - Use when you need a fresh Jekyll restart for plugin/data changes
@@ -93,7 +93,7 @@ sass:
    - CRITICAL: Startup time can take as long as 2-3 minutes, do NOT interrupt it with any commands or you will break the startup sequence.
    - CRITICAL: When startup is complete, do NOT use curl or other web commands to check if the server is running. If the output says Jekyll is started, it is running.
 
-2. **Use `/workspaces/techhub/jekyll-stop.ps1` to stop Jekyll servers**
+2. **Use `/workspaces/techhub/scripts/jekyll-stop.ps1` to stop Jekyll servers**
    - Safe way to stop running Jekyll processes
    - Use when you need to stop Jekyll without restarting
 
@@ -121,23 +121,23 @@ sass:
 ```powershell
 # Start or restart Jekyll (automatically stops existing servers)
 
-pwsh /workspaces/techhub/jekyll-start.ps1
+pwsh /workspaces/techhub/scripts/jekyll-start.ps1
 
 # Start with verbose output for debugging
 
-pwsh /workspaces/techhub/jekyll-start.ps1 -VerboseOutput
+pwsh /workspaces/techhub/scripts/jekyll-start.ps1 -VerboseOutput
 
 # Fast restart (skip stop and clean for quicker iteration)
 
-pwsh /workspaces/techhub/jekyll-start.ps1 -SkipStop -SkipClean
+pwsh /workspaces/techhub/scripts/jekyll-start.ps1 -SkipStop -SkipClean
 
 # Build site only without serving (fastest for debugging)
 
-pwsh /workspaces/techhub/jekyll-start.ps1 -SkipStop -SkipClean -BuildInsteadOfServe
+pwsh /workspaces/techhub/scripts/jekyll-start.ps1 -SkipStop -SkipClean -BuildInsteadOfServe
 
 # Stop Jekyll server
 
-pwsh /workspaces/techhub/jekyll-stop.ps1
+pwsh /workspaces/techhub/scripts/jekyll-stop.ps1
 ```
 
 ### Debugging Without Server
@@ -169,7 +169,7 @@ pwsh /workspaces/techhub/jekyll-stop.ps1
 For the fastest possible debug build when iterating on code changes, use all parameters together:
 
 ```powershell
-pwsh /workspaces/techhub/jekyll-start.ps1 -SkipStop -SkipClean -BuildInsteadOfServe -VerboseOutput
+pwsh /workspaces/techhub/scripts/jekyll-start.ps1 -SkipStop -SkipClean -BuildInsteadOfServe -VerboseOutput
 ```
 
 This combination:
@@ -550,7 +550,7 @@ Get-Content "_data/sections.json" | ConvertFrom-Json
 **Verbose Build for Debugging**:
 
 ```powershell
-pwsh /workspaces/techhub/jekyll-start.ps1 -SkipStop -SkipClean -BuildInsteadOfServe -VerboseOutput
+pwsh /workspaces/techhub/scripts/jekyll-start.ps1 -SkipStop -SkipClean -BuildInsteadOfServe -VerboseOutput
 ```
 
 **Check Tag Enhancement**:

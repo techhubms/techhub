@@ -45,7 +45,7 @@ Get the Tech Hub running in just a few minutes using containers.
 3. **Start the Site**:
 
    ```powershell
-   pwsh /workspaces/techhub/jekyll-start.ps1
+   pwsh /workspaces/techhub/scripts/jekyll-start.ps1
    ```
 
 4. **Access the Site**: Open browser to `http://localhost:4000`
@@ -56,7 +56,7 @@ Get the Tech Hub running in just a few minutes using containers.
 2. **Start the Site**:
 
    ```powershell
-   pwsh /workspaces/techhub/jekyll-start.ps1
+   pwsh /workspaces/techhub/scripts/jekyll-start.ps1
    ```
 
 3. **Access the Site**: Codespace will provide a URL, usually accessible through the "Ports" panel

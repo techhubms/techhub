@@ -2,7 +2,7 @@ function Test-RateLimitInEffect {
     param()
     
     $sourceRoot = Get-SourceRoot
-    $scriptsPath = Join-Path $sourceRoot ".github/scripts"
+    $scriptsPath = Join-Path $sourceRoot "scripts"
     $rateLimitEndDatePath = Join-Path $scriptsPath "rate-limit-enddate.json"
     
     if (Test-Path $rateLimitEndDatePath) {

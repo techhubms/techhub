@@ -173,7 +173,7 @@
 
 **Reinier:** Let me ask about RSS feed configuration. How do we add new feeds?
 
-**Matthijs:** Two ways. There's a `/new-rss-feeds` GitHub Copilot command that makes it easy. Or manually edit `.github/scripts/rss-feeds.json` - add an object with name, URL, output directory, category, and enabled flag.
+**Matthijs:** Two ways. There's a `/new-rss-feeds` GitHub Copilot command that makes it easy. Or manually edit `_data/rss-feeds.json` - add an object with name, URL, output directory, category, and enabled flag.
 
 **Reinier:** What RSS feed sources are we starting with?
 
@@ -285,7 +285,7 @@
 
 **Reinier:** What about the tag enhancement process specifically?
 
-**Matthijs:** PowerShell functions in `.github/scripts/functions/` directory. `Get-FilteredTags` normalizes common tag variations, adds related technology tags based on content analysis. For example, if content mentions "VS Code," it adds "Visual Studio Code" tag. If it mentions "Copilot," it adds both "GitHub Copilot" and "AI."
+**Matthijs:** PowerShell functions in `scripts/functions/` directory. `Get-FilteredTags` normalizes common tag variations, adds related technology tags based on content analysis. For example, if content mentions "VS Code," it adds "Visual Studio Code" tag. If it mentions "Copilot," it adds both "GitHub Copilot" and "AI."
 
 **Reinier:** This runs after AI processing?
 

@@ -16,7 +16,7 @@ function Invoke-ProcessWithAiModel {
     )
 
     $sourceRoot = Get-SourceRoot
-    $scriptsPath = Join-Path $sourceRoot ".github/scripts"
+    $scriptsPath = Join-Path $sourceRoot "scripts"
     $systemMessagePath = Join-Path $scriptsPath "system-message.md"
     $systemMessage = Get-Content -Path $systemMessagePath -Raw
 

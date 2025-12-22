@@ -13,7 +13,7 @@ You are helping to add new RSS feeds to the site's automated content processing 
 
 ## RSS Feed Configuration
 
-RSS feeds are configured in `.github/scripts/rss-feeds.json`. Each feed entry contains:
+RSS feeds are configured in `_data/rss-feeds.json`. Each feed entry contains:
 
 - **name**: The name of the feed source (e.g., "The GitHub Blog", "Microsoft DevBlog")
 - **outputDir**: The target directory for processed articles (e.g., "_news", "_posts", "_videos")
@@ -21,7 +21,7 @@ RSS feeds are configured in `.github/scripts/rss-feeds.json`. Each feed entry co
 
 ## Valid Output Directories
 
-See the Content Collections section in `.github/copilot-instructions.md` for details on available collections and their purposes and directory names.
+See the Content Collections section in `AGENTS.md` for details on available collections and their purposes and directory names.
 
 ## Adding New RSS Feeds
 
@@ -58,7 +58,7 @@ When a user asks to add RSS feeds:
 1. **Ask for feed details**: URL, content type, and source name
 2. **Validate the feed**: Check if the URL is accessible and returns RSS/Atom content
 3. **Choose output directory**: Based on content type and existing patterns
-4. **Update the configuration**: Add the new feed(s) to `.github/scripts/rss-feeds.json`
+4. **Update the configuration**: Add the new feed(s) to `_data/rss-feeds.json`
 5. **Confirm the addition**: Show the user what was added and explain the next steps
 
 ## Important Notes
