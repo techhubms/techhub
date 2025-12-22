@@ -22466,5 +22466,11 @@
     "reason": "Succesfully added: Assigned DevOps category because this announcement focuses on managing organizational workflows and permissions in GitHub (DevOps rules 2, 3, and 11). Added Security category since the change strengthens governance and security policy enforcement over app requests, making it relevant for Security (Security rules 2 and 3). Did not assign other categories since the post does not cover Azure, AI, Coding, or ML topics or tools.",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2025-12-22-control-who-can-request-apps-for-your-organization"
+  },
+  {
+    "reason": "Succesfully added: The video focuses on a built-in feature of Visual Studio Code (Simple Browser), a Microsoft developer tool, satisfying Coding category rule 5. It also references using AI within this workflow, meeting AI category rule 5 (high-level AI usage inside a Microsoft product). No Azure, ML, DevOps, Security, or GitHub Copilot content was identified, so those categories were not assigned.",
+    "timestamp": "2025-12-22 17:06:27 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=OqzC9b3ueX0",
+    "collection": "videos"
   }
 ]
