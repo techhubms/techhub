@@ -34,23 +34,23 @@
 
 .EXAMPLE
     # Local usage - Validate the infrastructure template
-    ./.github/scripts/Deploy-Infrastructure.ps1 -Mode validate
+    ./scripts/Deploy-Infrastructure.ps1 -Mode validate
 
 .EXAMPLE
     # Local usage - See what would be deployed
-    ./.github/scripts/Deploy-Infrastructure.ps1 -Mode whatif
+    ./scripts/Deploy-Infrastructure.ps1 -Mode whatif
 
 .EXAMPLE
     # Local usage - Deploy to a specific subscription
-    ./.github/scripts/Deploy-Infrastructure.ps1 -Mode deploy -SubscriptionId "your-sub-id"
+    ./scripts/Deploy-Infrastructure.ps1 -Mode deploy -SubscriptionId "your-sub-id"
 
 .EXAMPLE
     # GitHub Actions usage - Deploy with environment variables
-    pwsh ./.github/scripts/Deploy-Infrastructure.ps1 -Mode deploy -SkipLogin -SkipConfirmation -VerboseOutput
+    pwsh ./scripts/Deploy-Infrastructure.ps1 -Mode deploy -SkipLogin -SkipConfirmation -VerboseOutput
 
 .EXAMPLE
     # Validate with custom parameters file
-    ./.github/scripts/Deploy-Infrastructure.ps1 -Mode validate -EnvironmentFile "./infra/parameters.test.json"
+    ./scripts/Deploy-Infrastructure.ps1 -Mode validate -EnvironmentFile "./infra/parameters.test.json"
 #>
 
 param(

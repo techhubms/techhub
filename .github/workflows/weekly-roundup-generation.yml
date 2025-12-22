@@ -140,7 +140,7 @@ jobs:
           Set-Location $env:GITHUB_WORKSPACE
           
           # Run the roundup generation script with default parameters
-          & .github/scripts/iterative-roundup-generation.ps1 `
+          & scripts/iterative-roundup-generation.ps1 `
             -Token "${{ secrets.AZURE_AI_KEY }}" `
             -Model "gpt-4.1" `
             -Endpoint "https://oai-techhub.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview" `

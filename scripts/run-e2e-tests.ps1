@@ -38,7 +38,7 @@ function Get-Environment {
 
 function Get-ProjectRoot {
     # Load Get-SourceRoot function if available
-    $sourceRootPath = Join-Path $PSScriptRoot ".github/scripts/functions/Get-SourceRoot.ps1"
+    $sourceRootPath = Join-Path $PSScriptRoot "functions/Get-SourceRoot.ps1"
     if (Test-Path $sourceRootPath) {
         . $sourceRootPath
         return Get-SourceRoot

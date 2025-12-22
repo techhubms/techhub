@@ -80,7 +80,7 @@ $functionsPath = if ($WorkspaceDirectory -eq $PSScriptRoot) {
 }
 else {
     # Running from workspace root
-    Join-Path $WorkspaceDirectory ".github/scripts/functions"
+    Join-Path $WorkspaceDirectory "scripts/functions"
 }
 
 # Import Write-ErrorDetails first (for error handling), then all others sorted alphabetically
@@ -94,7 +94,7 @@ try {
     Write-Host "🔄 Starting RSS data processing..."
     
     $sourceRoot = Get-SourceRoot
-    $dataDir = Join-Path $sourceRoot ".github/scripts/data"
+    $dataDir = Join-Path $sourceRoot "_data/rss-cache"
     
     if (-not (Test-Path $dataDir)) {
         Write-Host "⚠️ Data directory not found: $dataDir"

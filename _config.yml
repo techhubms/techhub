@@ -84,6 +84,8 @@ exclude:
   - "docs/"
   - "spec/"
   - "test-results/"
+  - "scripts/"
+  - "rss/"
 
   # Exclude specific markdown files that aren't part of the site
   - "README.md"

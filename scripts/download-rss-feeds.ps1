@@ -39,7 +39,7 @@ $functionsPath = if ($WorkspaceDirectory -eq $PSScriptRoot) {
 }
 else {
     # Running from workspace root
-    Join-Path $WorkspaceDirectory ".github/scripts/functions"
+    Join-Path $WorkspaceDirectory "scripts/functions"
 }
 
 . (Join-Path $functionsPath "Write-ErrorDetails.ps1")
@@ -52,8 +52,8 @@ try {
     Write-Host "📡 Starting RSS feed download..."
     
     $sourceRoot = Get-SourceRoot
-    $feedsPath = Join-Path $sourceRoot ".github/scripts/rss-feeds.json"
-    $dataDir = Join-Path $sourceRoot ".github/scripts/data"
+    $feedsPath = Join-Path $sourceRoot "_data/rss-feeds.json"
+    $dataDir = Join-Path $sourceRoot "_data/rss-cache"
 
     if (-not (Test-Path $feedsPath)) {
         throw "Feeds file not found: $feedsPath"

@@ -40,7 +40,7 @@ $functionsPath = if ($WorkspaceDirectory -eq $PSScriptRoot) {
 }
 else {
     # Running from workspace root
-    Join-Path $WorkspaceDirectory ".github/scripts/functions"
+    Join-Path $WorkspaceDirectory "scripts/functions"
 }
 
 # Import Write-ErrorDetails first (for error handling), then all others sorted alphabetically

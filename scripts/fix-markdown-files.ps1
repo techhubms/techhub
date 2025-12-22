@@ -12,16 +12,16 @@
     When running in GitHub Actions, this should be set to the GitHub workspace path.
 .EXAMPLE
     # Process all markdown files in the repository
-    pwsh .github/scripts/fix-markdown-files.ps1
+    pwsh scripts/fix-markdown-files.ps1
 .EXAMPLE
     # Process a specific file
-    pwsh .github/scripts/fix-markdown-files.ps1 -FilePath "docs/javascript-guidelines.md"
+    pwsh scripts/fix-markdown-files.ps1 -FilePath "docs/javascript-guidelines.md"
 .EXAMPLE
     # Process a file with full path
-    pwsh .github/scripts/fix-markdown-files.ps1 -FilePath "_posts/2025-01-01-example-post.md"
+    pwsh scripts/fix-markdown-files.ps1 -FilePath "_posts/2025-01-01-example-post.md"
 .EXAMPLE
     # Run from GitHub Actions with workspace directory
-    pwsh .github/scripts/fix-markdown-files.ps1 -WorkspaceDirectory ${{ github.workspace }}
+    pwsh scripts/fix-markdown-files.ps1 -WorkspaceDirectory ${{ github.workspace }}
 #>
 param(
     [Parameter(Mandatory = $false)]
@@ -40,7 +40,7 @@ $functionsPath = if ($WorkspaceDirectory -eq $PSScriptRoot) {
     Join-Path $PSScriptRoot "functions"
 } else {
     # Running from workspace root
-    Join-Path $WorkspaceDirectory ".github/scripts/functions"
+    Join-Path $WorkspaceDirectory "scripts/functions"
 }
 
 . (Join-Path $functionsPath "Write-ErrorDetails.ps1")

@@ -54,7 +54,7 @@ function Get-Environment {
 
 function Get-ProjectRoot {
     # Load Get-SourceRoot function if available
-    $sourceRootPath = Join-Path $PSScriptRoot ".github/scripts/functions/Get-SourceRoot.ps1"
+    $sourceRootPath = Join-Path $PSScriptRoot "functions/Get-SourceRoot.ps1"
     if (Test-Path $sourceRootPath) {
         . $sourceRootPath
         return Get-SourceRoot
@@ -231,7 +231,7 @@ function Invoke-PowerShellTests {
     # Configure code coverage if requested
     if ($TestArgs["CodeCoverage"]) {
         # Make code coverage path relative to project root
-        $coveragePath = Join-Path $projectRoot ".github/scripts/functions/*.ps1"
+        $coveragePath = Join-Path $projectRoot "scripts/functions/*.ps1"
         if (Test-Path (Split-Path $coveragePath -Parent)) {
             $pesterConfig.CodeCoverage.Enabled = $true
             $pesterConfig.CodeCoverage.Path = @($coveragePath)
@@ -357,7 +357,7 @@ function Invoke-PowerShellTestsRunner() {
         
         # Add code coverage if requested
         if ($Coverage) {
-            $coveragePath = Join-Path $projectRoot ".github/scripts/functions/*.ps1"
+            $coveragePath = Join-Path $projectRoot "scripts/functions/*.ps1"
             $testArgs.CodeCoverage = $coveragePath
             Write-ColoredOutput "📊 Code coverage analysis enabled: $coveragePath" $Yellow
         }

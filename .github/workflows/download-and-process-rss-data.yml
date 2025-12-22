@@ -73,11 +73,11 @@ jobs:
           # Define RSS-managed file patterns to filter changed files
           # Note: rss-feeds.json is excluded - production version should always be leading
           RSS_PATTERNS=(
-            ".github/scripts/rate-limit-enddate.json"
-            ".github/scripts/processed-entries.json" 
-            ".github/scripts/skipped-entries.json"
-            ".github/scripts/data/*/*/*.json"
-            ".github/scripts/airesults/*.json"
+            "_data/rate-limit-enddate.json"
+            "_data/processed-entries.json" 
+            "_data/skipped-entries.json"
+            "_data/rss-cache/*/*/*.json"
+            "_data/airesults/*.json"
             "_*/*.md"
           )
           
@@ -179,7 +179,7 @@ jobs:
           Install-Module HtmlToMarkdown -AcceptLicense -Force
           
           try {
-            & "${{ github.workspace }}/.github/scripts/download-rss-feeds.ps1" -WorkspaceDirectory "${{ github.workspace }}"
+            & "${{ github.workspace }}/scripts/download-rss-feeds.ps1" -WorkspaceDirectory "${{ github.workspace }}"
             Write-Host "✅ RSS feed download completed"
           } catch {
             Write-Host "❌ RSS feed download failed"
@@ -212,7 +212,7 @@ jobs:
           Write-Host "🔄 Starting RSS data processing..."
           
           try {
-            & "${{ github.workspace }}/.github/scripts/process-rss-to-markdown.ps1" `
+            & "${{ github.workspace }}/scripts/process-rss-to-markdown.ps1" `
               "${{ github.repository }}" `
               "$env:TOKEN" `
               -WorkspaceDirectory "${{ github.workspace }}" `
@@ -249,7 +249,7 @@ jobs:
           Write-Host "🔄 Starting markdown file fixes..."
           
           try {
-            & "${{ github.workspace }}/.github/scripts/fix-markdown-files.ps1" -WorkspaceDirectory "${{ github.workspace }}"
+            & "${{ github.workspace }}/scripts/fix-markdown-files.ps1" -WorkspaceDirectory "${{ github.workspace }}"
             Write-Host "✅ Markdown file fixes completed"
           } catch {
             Write-Host "❌ Markdown file fixes failed"
@@ -305,11 +305,11 @@ jobs:
             # Define RSS-managed file patterns (same as backup step)
             # Note: rss-feeds.json is excluded - production version should always be leading
             RSS_PATTERNS=(
-              ".github/scripts/rate-limit-enddate.json"
-              ".github/scripts/processed-entries.json" 
-              ".github/scripts/skipped-entries.json"
-              ".github/scripts/data/*.json"
-              ".github/scripts/airesults/*.json"
+              "_data/rate-limit-enddate.json"
+              "_data/processed-entries.json" 
+              "_data/skipped-entries.json"
+              "_data/rss-cache/*.json"
+              "_data/airesults/*.json"
               "_*/*.md"
             )
             
