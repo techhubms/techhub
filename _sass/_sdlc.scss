@@ -123,7 +123,7 @@ $sdlc-maintenance-bg: #e0f2f1;
 .sdlc-phases {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   margin-top: 20px;
 }
 
@@ -136,7 +136,7 @@ $sdlc-maintenance-bg: #e0f2f1;
 }
 
 .sdlc-phase-header {
-  padding: 20px;
+  padding: 15px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -153,7 +153,7 @@ $sdlc-maintenance-bg: #e0f2f1;
   
   h2 {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: colors.$white;
     flex: 1;
@@ -175,7 +175,7 @@ $sdlc-maintenance-bg: #e0f2f1;
 }
 
 .sdlc-phase-icon {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .sdlc-phase-content {
@@ -383,6 +383,20 @@ $sdlc-maintenance-bg: #e0f2f1;
   border-radius: 12px;
   font-size: 13px;
   border: 1px solid rgba(colors.$medium-blue, 0.3);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  
+  &:hover {
+    background: rgba(colors.$medium-blue, 0.35);
+    border-color: rgba(colors.$bright-blue, 0.5);
+    color: colors.$white;
+    transform: translateY(-1px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
 }
 
 // =============================================================================
@@ -392,6 +406,11 @@ $sdlc-maintenance-bg: #e0f2f1;
 .sdlc-section-card {
   background: rgba(colors.$darker-navy, 0.5);
   border-left: 4px solid colors.$medium-gray;
+  margin-bottom: 15px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
   
   .sdlc-card-header {
     font-size: 18px;
@@ -433,6 +452,15 @@ $sdlc-maintenance-bg: #e0f2f1;
       display: none;
     }
   }
+}
+
+.sdlc-section-intro {
+  text-align: center;
+  color: colors.$medium-gray;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-top: 0;
+  padding: 0 20px;
 }
 
 // =============================================================================

@@ -31,6 +31,28 @@
     return isNowExpanded;
   }
 
+  function togglePhaseHeader(header) {
+    if (!header) {
+      return false;
+    }
+
+    const content = header.nextElementSibling;
+    if (!content) {
+      return false;
+    }
+
+    const toggle = header.querySelector('.sdlc-phase-toggle');
+
+    const isNowExpanded = !content.classList.contains('expanded');
+
+    content.classList.toggle('expanded', isNowExpanded);
+    if (toggle) {
+      toggle.classList.toggle('expanded', isNowExpanded);
+    }
+
+    return isNowExpanded;
+  }
+
   function setAllCardsExpanded(doc, expanded) {
     if (!doc) {
       return;
@@ -167,12 +189,17 @@
     }
 
     doc.addEventListener('click', (event) => {
-      const header = event.target.closest('.sdlc-card-header');
-      if (!header) {
+      const cardHeader = event.target.closest('.sdlc-card-header');
+      if (cardHeader) {
+        toggleCardHeader(cardHeader);
         return;
       }
 
-      toggleCardHeader(header);
+      const phaseHeader = event.target.closest('.sdlc-phase-header');
+      if (phaseHeader) {
+        togglePhaseHeader(phaseHeader);
+        return;
+      }
     });
   }
 
@@ -180,7 +207,8 @@
     init,
     openCard,
     toggleAll,
-    toggleCardHeader
+    toggleCardHeader,
+    togglePhaseHeader
   };
 
   if (typeof module !== 'undefined' && module.exports) {

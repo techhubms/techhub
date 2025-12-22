@@ -12,49 +12,18 @@ This page is designed to be a starting point for learning about AI.
 - Suitable for beginners and those with some experience.
 - Each section builds on concepts from previous sections, so it's best read sequentially.
 
-## Table of Contents
+**Table of Contents:**
 
 - [History](#history)
 - [ML vs AI vs GenAI](#ml-vs-ai-vs-genai)
-- [GenAI part 1](#genai-part-1)
-  - [Introduction](#introduction)
-  - [Vendors](#vendors)
-  - [Models](#models)
-  - [Providers](#providers)
-  - [Prompts & messages](#prompts--messages)
-  - [Tokens & Tokenization](#tokens--tokenization)
-  - [Costs](#costs)
-  - [Problems with models](#problems-with-models)
-  - [When not to use AI](#when-not-to-use-ai)
-  - [Societal impacts and risks](#societal-impacts-and-risks)
-  - [Fine-tuning a model](#fine-tuning-a-model)
-  - [How AI models actually work](#how-ai-models-actually-work)
-  - [Advanced concepts](#advanced-concepts)
-- [GenAI part 2](#genai-part-2)
-  - [Function calling](#function-calling)
-  - [Model Context Protocol (MCP)](#model-context-protocol-mcp)
-  - [Retrieval Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
-  - [Agents & Agentic AI](#agents--agentic-ai)
-  - [Multi-agent solutions](#multi-agent-solutions)
-  - [Scaling AI implementations](#scaling-ai-implementations)
-  - [The AI-native web: NLWeb, llms.txt, and semantic search](#the-ai-native-web-nlweb-llmstxt-and-semantic-search)
+- [GenAI basics](#genai-basics)
+- [GenAI advanced](#genai-advanced)
 - [Inspiration](#inspiration)
-  - [Where You Find AI Today](#where-you-find-ai-today)
-  - [Real Projects You Can Build Today](#real-projects-you-can-build-today)
-  - [Beyond Chat: AI as Infrastructure](#beyond-chat-ai-as-infrastructure)
-  - [Where to Start Building](#where-to-start-building)
 - [Integrating AI into your applications](#integrating-ai-into-your-applications)
-  - [Tools and IDEs](#tools-and-ides)
-  - [Copilot](#copilot)
-  - [Azure AI services](#azure-ai-services)
-  - [Languages & SDKs](#languages--sdks)
-  - [Semantic Kernel](#semantic-kernel)
-  - [Microsoft Agent Framework](#microsoft-agent-framework)
 - [Want to know more?](#want-to-know-more)
 - [Conclusion](#conclusion)
 
-<details id="history">
-<summary><strong>History</strong></summary>
+## History
 
 Some fun history facts about AI, showing how long AI has been around and how it has evolved over time:
 
@@ -68,13 +37,13 @@ Some fun history facts about AI, showing how long AI has been around and how it 
 - 2020: OpenAI released GPT-3, a significant advancement in natural language processing.
 - 2023: OpenAI released GPT-4, further enhancing capabilities in language understanding and generation.
 - 2023: Anthropic introduced the first Claude models, bringing Constitutional AI to mainstream use.
-- 2024-present: Multimodal and tool-using LLMs became common across developer tools and products.
-- 2024-present: Agentic patterns (tool calling, workflows, multi-agent collaboration) and interoperability protocols accelerated adoption.
+- 2024: Multimodal and tool-using LLMs became common across developer tools and products.
+- 2024: Claude 3.5 Sonnet set new benchmarks for coding assistance; reasoning models like o1 emerged.
+- 2025: Agentic patterns (tool calling, workflows, multi-agent collaboration) and interoperability protocols (MCP, A2A) accelerated adoption.
+- 2025: GPT-4.1 and Claude 4 raised the bar for complex reasoning and extended context capabilities.
+- 2025: OpenAI released GPT-5 with enhanced reasoning and multimodal capabilities.
 
-</details>
-
-<details id="ml-vs-ai-vs-genai">
-<summary><strong>ML vs AI vs GenAI</strong></summary>
+## ML vs AI vs GenAI
 
 Understanding the relationship between these three concepts is essential for anyone starting their AI journey.
 
@@ -94,10 +63,7 @@ These different approaches can be combined or used independently depending on th
 
 **Generative AI (GenAI)** is a specific type of AI that can create new content - text, images, code, music, or other types of data. When you ask ChatGPT to write a story or use DALL-E to create an image, you're using generative AI. GenAI models learn patterns from existing content and use that knowledge to generate new, original content that follows similar patterns.
 
-</details>
-
-<details id="genai-part-1">
-<summary><strong>GenAI part 1</strong></summary>
+## GenAI basics
 
 ### Introduction
 
@@ -113,7 +79,7 @@ Beyond text-focused language models, the NLP field has expanded to encompass var
 
 - **Diffusion models** (such as DALL-E, Stable Diffusion, and Midjourney) generate images from text descriptions
 - **Speech recognition models** (like Whisper) convert spoken words into written text
-- **Music generation models** (such as AIVA) create original musical compositions
+- **Music generation models** (such as Suno, Udio) create original musical compositions
 - **Multimodal models** (like GPT-4o) can work seamlessly with multiple types of input and output - text, images, audio, and video
 
 This diversity of model types reflects the broader evolution of AI from simple text processing to comprehensive understanding and generation across multiple forms of human communication and creative expression.
@@ -157,22 +123,27 @@ A **model** is the actual AI system that has been trained to perform specific ta
 
 **Large Language Models (LLMs):**
 
-- **GPT series** (3.5, 4, 4o, 5): OpenAI's flagship models for text generation and reasoning
-- **Claude** (4.1 Opus, Sonnet, Haiku): Anthropic's models focused on helpful, harmless, and honest interactions
+- **GPT series** (4, 4o, 4.1, 5): OpenAI's flagship models for text generation and reasoning
+- **Claude** (3.5 Sonnet, 4 Sonnet, 4 Opus): Anthropic's models focused on helpful, harmless, and honest interactions
 - **Gemini** (Flash, Pro): Google's multimodal models that can process text, images, and other data
-- **Grok**: X (formerly Twitter)'s conversational AI model
+- **Grok**: xAI's conversational AI model with real-time information access
 
 **Small Language Models (SLMs):**
 
-- **Phi**: Microsoft's efficient models designed to run on smaller devices
-- **Smol**: Compact models optimized for specific tasks
+- **Phi-4**: Microsoft's efficient model designed to run on smaller devices with strong reasoning capabilities
+- **Gemma 2/3**: Google's compact open models optimized for efficiency
 
 **Specialized Models:**
 
-- **DALL-E, Stable Diffusion, Midjourney**: Image generation models (diffusion models)
+- **DALL-E, Stable Diffusion, Midjourney, Flux**: Image generation models (diffusion models)
 - **Whisper**: Speech-to-text conversion model
-- **AIVA**: Music composition model
-- **GPT-4o/4o mini**: Multimodal models that handle text, images, audio, and video
+- **Suno, Udio**: Music generation models
+
+**Multimodal Models:**
+
+- **GPT-4o, GPT-4.1, GPT-5**: OpenAI models handling text, images, audio, and video
+- **Gemini**: Google's multimodal models (also listed above under LLMs)
+- **Claude 4 Opus**: Anthropic's multimodal model with vision capabilities
 
 #### Models FAQ
 
@@ -322,6 +293,86 @@ Different models use different tokenization methods, so you can't directly trans
 - [Maximize Your ROI for Azure OpenAI: Pricing, Deployment, and Cost Optimization Strategies](https://devblogs.microsoft.com/azure-ai/maximize-your-roi-for-azure-openai-pricing-deployment-and-cost-optimization-strategies/)
 - [Introducing Deep Research in Azure AI Foundry Agent Service](https://devblogs.microsoft.com/azure-ai/introducing-deep-research-in-azure-ai-foundry-agent-service/)
 
+### How AI models actually work
+
+Before diving into advanced concepts, it's essential to understand the foundational building blocks that make AI possible. At its core, AI models work by converting human concepts into mathematical representations that computers can process and manipulate.
+
+**Vectors and embeddings: How AI understands meaning**
+Everything an AI processes—words, images, concepts—gets converted into **vectors**, which are simply lists of numbers. Think of a vector as a precise coordinate in multi-dimensional space that captures the essence of what something means.
+
+**Embeddings** are sophisticated vectors that capture semantic meaning. When an AI learns that "dog" and "puppy" are related, it places their embeddings close together in this mathematical space. Similarly, "king" minus "man" plus "woman" might land near "queen"—the model has learned relationships between concepts through the geometric arrangement of their embeddings.
+
+This mathematical representation allows AI models to understand that "vehicle" relates to both "car" and "bicycle," even if those specific connections weren't explicitly taught. The model discovers these relationships by observing patterns in how words appear together across millions of examples.
+
+**From embeddings to responses: The inference process**
+**Inference** is what happens when you send a prompt to an AI model and receive a response. The model converts your words into embeddings, processes those mathematical representations through its neural network, and converts the results back into human-readable text.
+
+During inference, the model doesn't "think" the way humans do. Instead, it performs billions of mathematical calculations to predict the most likely next word, then the word after that, building responses token by token based on the patterns it learned during training.
+
+#### Next-token prediction: How LLMs generate text
+
+The core mechanism behind all modern LLMs is remarkably simple in concept: **next-token prediction**. Given a sequence of tokens, the model predicts what token is most likely to come next.
+
+```mermaid
+graph LR
+    subgraph Input["Input Sequence"]
+        T1["The"]
+        T2["dog"]
+        T3["..."]
+    end
+    
+    subgraph LLM["Language Model"]
+        P["Neural Network<br/>Billions of Parameters"]
+    end
+    
+    subgraph Output["Probability Distribution"]
+        O1["barks → 32%"]
+        O2["runs → 18%"]
+        O3["sleeps → 12%"]
+        O4["jumped → 8%"]
+        O5["... → other"]
+    end
+    
+    T1 --> P
+    T2 --> P
+    T3 --> P
+    P --> O1
+    P --> O2
+    P --> O3
+    P --> O4
+    P --> O5
+    
+    style O1 fill:#90EE90
+```
+
+For example, given the input **"The dog..."**, the model calculates probability scores for every token in its vocabulary:
+
+- "barks" might get 32% probability
+- "runs" might get 18%
+- "sleeps" might get 12%
+- And thousands of other possibilities with smaller probabilities
+
+The model then samples from this distribution (or picks the highest probability, depending on settings) and appends that token to the sequence. This process repeats: now with "The dog barks", it predicts the next token, and so on until a complete response is generated.
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant LLM as Language Model
+    participant Response
+    
+    User->>LLM: "The dog"
+    LLM->>LLM: Predict next token
+    LLM->>Response: "barks" (highest prob)
+    LLM->>LLM: Predict next: "The dog barks"
+    LLM->>Response: "loudly"
+    LLM->>LLM: Predict next: "The dog barks loudly"
+    LLM->>Response: "at"
+    LLM->>LLM: Continue until complete...
+    Response->>User: "The dog barks loudly at the mailman."
+```
+
+This autoregressive generation is why models can produce coherent, contextually appropriate text—each new token is conditioned on everything that came before it.
+
 ### Costs
 
 Understanding AI costs helps you make informed decisions about which models and approaches to use for different tasks.
@@ -410,6 +461,7 @@ AI’s benefits come with human and environmental costs that show up across soci
 
 See also: [Is AI the Right Solution? Part 2: Applying the Framework and Navigating Ethical Risks](https://hiddedesmet.com/ai-project-validation-framework-part2).
 
+## GenAI advanced
 ### Fine-tuning a model
 
 Fine-tuning involves adjusting model behavior and output to better match your specific needs. While full model retraining requires significant resources, you can influence model behavior through several techniques:
@@ -437,109 +489,6 @@ These settings work together - you might use low temperature and low Top P for c
 - [Enhancing Conversational Agents with Azure AI Language: CLU and Custom Question Answering](https://devblogs.microsoft.com/azure-ai/enhancing-conversational-agents-with-azure-ai-language-clu-and-custom-question-answering/)
 - [What's New in Azure AI Foundry | July 2025](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/what%E2%80%99s-new-in-azure-ai-foundry-finetuning-july-2025/4438850)
 - [OpenAI's Open‑Source Model: gpt‑oss on Azure AI Foundry and Windows AI Foundry](https://www.microsoft.com/en-us/ai/open-source-ai-models)
-
-### How AI models actually work
-
-Before diving into advanced concepts, it's essential to understand the foundational building blocks that make AI possible. At its core, AI models work by converting human concepts into mathematical representations that computers can process and manipulate.
-
-**Vectors and embeddings: How AI understands meaning**
-Everything an AI processes—words, images, concepts—gets converted into **vectors**, which are simply lists of numbers. Think of a vector as a precise coordinate in multi-dimensional space that captures the essence of what something means.
-
-**Embeddings** are sophisticated vectors that capture semantic meaning. When an AI learns that "dog" and "puppy" are related, it places their embeddings close together in this mathematical space. Similarly, "king" minus "man" plus "woman" might land near "queen"—the model has learned relationships between concepts through the geometric arrangement of their embeddings.
-
-This mathematical representation allows AI models to understand that "vehicle" relates to both "car" and "bicycle," even if those specific connections weren't explicitly taught. The model discovers these relationships by observing patterns in how words appear together across millions of examples.
-
-**From embeddings to responses: The inference process**
-**Inference** is what happens when you send a prompt to an AI model and receive a response. The model converts your words into embeddings, processes those mathematical representations through its neural network, and converts the results back into human-readable text.
-
-During inference, the model doesn't "think" the way humans do. Instead, it performs billions of mathematical calculations to predict the most likely next word, then the word after that, building responses token by token based on the patterns it learned during training.
-
-#### Next-token prediction: How LLMs generate text
-
-The core mechanism behind all modern LLMs is remarkably simple in concept: **next-token prediction**. Given a sequence of tokens, the model predicts what token is most likely to come next.
-
-```mermaid
-graph LR
-    subgraph Input["Input Sequence"]
-        T1["The"]
-        T2["dog"]
-        T3["..."]
-    end
-    
-    subgraph LLM["Language Model"]
-        P["Neural Network<br/>Billions of Parameters"]
-    end
-    
-    subgraph Output["Probability Distribution"]
-        O1["barks → 32%"]
-        O2["runs → 18%"]
-        O3["sleeps → 12%"]
-        O4["jumped → 8%"]
-        O5["... → other"]
-    end
-    
-    T1 --> P
-    T2 --> P
-    T3 --> P
-    P --> O1
-    P --> O2
-    P --> O3
-    P --> O4
-    P --> O5
-    
-    style O1 fill:#90EE90
-```
-
-For example, given the input **"The dog..."**, the model calculates probability scores for every token in its vocabulary:
-
-- "barks" might get 32% probability
-- "runs" might get 18%
-- "sleeps" might get 12%
-- And thousands of other possibilities with smaller probabilities
-
-The model then samples from this distribution (or picks the highest probability, depending on settings) and appends that token to the sequence. This process repeats: now with "The dog barks", it predicts the next token, and so on until a complete response is generated.
-
-```mermaid
-sequenceDiagram
-    participant User
-    participant LLM as Language Model
-    participant Response
-    
-    User->>LLM: "The dog"
-    LLM->>LLM: Predict next token
-    LLM->>Response: "barks" (highest prob)
-    LLM->>LLM: Predict next: "The dog barks"
-    LLM->>Response: "loudly"
-    LLM->>LLM: Predict next: "The dog barks loudly"
-    LLM->>Response: "at"
-    LLM->>LLM: Continue until complete...
-    Response->>User: "The dog barks loudly at the mailman."
-```
-
-This autoregressive generation is why models can produce coherent, contextually appropriate text—each new token is conditioned on everything that came before it.
-
-**Alignment: making models follow principles (Constitutional AI)**
-As models get stronger, we also need them to behave safely and predictably. "Alignment" is the process of shaping model behavior to follow clear rules and values, not just statistics from the training data. A practical approach you’ll see in modern systems is Constitutional AI (popularized by Anthropic): the model uses a short, written set of principles (a “constitution”) to critique and improve its own answers.
-
-How this works in practice:
-
-- Draft: the model produces an initial answer.
-- Self‑critique: it reviews that answer against the constitution (e.g., be helpful and honest, avoid facilitating harm, acknowledge uncertainty).
-- Revise: it edits the answer to better follow the principles.
-- Preference training (RLAIF): training then favors these revised answers using reinforcement learning from AI feedback, reducing dependence on large human‑labeled datasets.
-
-Why this helps
-
-- Principles are explicit and auditable.
-- Scales alignment with fewer human labels.
-- Produces more consistent “helpful, harmless, honest” behavior.
-
-Limits to keep in mind
-
-- Only as good as the chosen principles (they can be incomplete or biased) and may lead to over‑refusal in edge cases.
-- Not a substitute for factual grounding—use retrieval (RAG) and tools for accuracy and citations.
-
-Example principle: “Avoid providing instructions that meaningfully facilitate wrongdoing.” During self‑critique, the model removes or reframes such content before replying.
 
 ### Advanced concepts
 
@@ -575,12 +524,31 @@ For a comprehensive deep dive into how these concepts work together, [Andrej Kar
 - [Optimizing Large-Scale AI Performance with Pretraining Validation on a Single Azure ND GB200 v6](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimizing-large-scale-ai-performance-with-pretraining/ba-p/4445273)
 - [Benchmarking Llama 3.1 8B AI Inference on Azure ND-H100-v5 with vLLM](https://techcommunity.microsoft.com/blog/educator-developer-blog/benchmarking-llama-3-1-8b-ai-inference-on-azure-nd-h100-v5-with-vllm/4440725)
 
+#### Alignment: making models follow principles (Constitutional AI)
+
+As models get stronger, we also need them to behave safely and predictably. "Alignment" is the process of shaping model behavior to follow clear rules and values, not just statistics from the training data. A practical approach you'll see in modern systems is Constitutional AI (popularized by Anthropic): the model uses a short, written set of principles (a "constitution") to critique and improve its own answers.
+
+How this works in practice:
+
+- Draft: the model produces an initial answer.
+- Self-critique: it reviews that answer against the constitution (e.g., be helpful and honest, avoid facilitating harm, acknowledge uncertainty).
+- Revise: it edits the answer to better follow the principles.
+- Preference training (RLAIF): training then favors these revised answers using reinforcement learning from AI feedback, reducing dependence on large human-labeled datasets.
+
+Why this helps
+
+- Principles are explicit and auditable.
+- Scales alignment with fewer human labels.
+- Produces more consistent "helpful, harmless, honest" behavior.
+
+Limits to keep in mind
+
+- Only as good as the chosen principles (they can be incomplete or biased) and may lead to over-refusal in edge cases.
+- Not a substitute for factual grounding—use retrieval (RAG) and tools for accuracy and citations.
+
+Example principle: "Avoid providing instructions that meaningfully facilitate wrongdoing." During self-critique, the model removes or reframes such content before replying.
+
 Tip: keep these concepts practical. As you design a use case, tie terms like “context,” “embeddings,” and “attention” to concrete trade-offs: latency, accuracy, token cost, and guardrails.
-
-</details>
-
-<details id="genai-part-2">
-<summary><strong>GenAI part 2</strong></summary>
 
 ### Function calling
 
@@ -946,10 +914,7 @@ Like robots.txt for crawlers, `llms.txt` is a proposed convention for publishing
 
 The bottom line: AI turns websites and data stores into conversational surfaces. By adding `llms.txt` and shipping semantic search (or at least clean, machine-readable structure plus stable URLs), you make your content easier for both people and agents to discover, cite, and reuse.
 
-</details>
-
-<details id="inspiration">
-<summary><strong>Inspiration</strong></summary>
+## Inspiration
 
 What can you actually *build* with AI? Beyond the corporate feature lists, here's what developers are creating right now, and what you could build next.
 
@@ -1025,10 +990,7 @@ The best way to understand AI capabilities is to build something. Follow the lin
 **Use an AI-native SDLC**
 If you're shipping AI features, treat prompts, evaluations, and guardrails as first-class artifacts and build them into your delivery process. The [AI Native SDLC](/ai/sdlc.html) page breaks this down phase by phase.
 
-</details>
-
-<details id="integrating-ai-into-your-applications">
-<summary><strong>Integrating AI into your applications</strong></summary>
+## Integrating AI into your applications
 
 ### Tools and IDEs
 
@@ -1157,7 +1119,7 @@ A unified platform for building, evaluating, and deploying AI applications. AI F
 **Azure OpenAI**
 Enterprise-grade access to OpenAI models with additional security and compliance features:
 
-- **Same models as OpenAI**: GPT-4, GPT-3.5, DALL-E, and other OpenAI models
+- **Same models as OpenAI**: GPT-4, GPT-4o, GPT-4.1, GPT-5, DALL-E, and other OpenAI models
 - **Enterprise security**: Enhanced security controls and data protection
 - **Regional deployment**: Choose where your data is processed
 - **Integration**: Works seamlessly with other Azure services
@@ -1399,7 +1361,7 @@ response = await agent.run("How can I help you today?")
 using OpenAI;
 
 var agent = new OpenAIClient("<apikey>")
-    .GetOpenAIResponseClient("gpt-4o-mini")
+    .GetOpenAIResponseClient("gpt-4.1-mini")
     .CreateAIAgent(name: "AssistantBot", instructions: "You are a helpful assistant.");
 
 Console.WriteLine(await agent.RunAsync("How can I help you today?"));
@@ -1453,10 +1415,7 @@ Current limitations and areas of active development:
 - [Building Multi-Agent AI Solutions Using Semantic Kernel and the A2A Protocol](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/building-multi-agent-ai-solutions-using-semantic-kernel-and-the-a2a-protocol/4273899)
 - [Microsoft's Agentic Frameworks: AutoGen and Semantic Kernel](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/microsofts-agentic-frameworks-autogen-and-semantic-kernel/4292949)
 
-</details>
-
-<details id="want-to-know-more">
-<summary><strong>Want to know more?</strong></summary>
+## Want to know more?
 
 ### Learning resources
 
@@ -1480,11 +1439,7 @@ Current limitations and areas of active development:
 - Build a small application using Azure OpenAI or GitHub Models
 - Join AI communities and forums to learn from others' experiences
 
-</details>
-
-<details id="conclusion">
-<summary><strong>Conclusion</strong></summary>
-
+## Conclusion
 The AI landscape is rapidly evolving, but the foundational concepts covered in this guide provide a solid starting point for understanding and working with AI technologies. Whether you're a complete beginner or someone with existing technical experience, the key to success with AI is hands-on experimentation and continuous learning.
 
 **Key takeaways from this guide:**
@@ -1504,4 +1459,3 @@ The AI landscape is rapidly evolving, but the foundational concepts covered in t
 
 Remember that AI is a tool to enhance human capabilities, not replace human judgment. The most successful AI implementations combine the efficiency of AI with human expertise, creativity, and oversight. As you explore the possibilities, focus on how AI can help you and your organization work more effectively while maintaining the quality and ethics that matter to your users and stakeholders.
 
-</details>
