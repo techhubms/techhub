@@ -1,0 +1,21 @@
+{
+  "PubDate": "2025-12-22T13:06:01+00:00",
+  "FeedUrl": "https://devblogs.microsoft.com/devops/feed/",
+  "EnhancedContent": "Delivering high-quality software requires clarity, speed, and collaboration. That’s why we introduced the New [Test Run Hub](https://learn.microsoft.com/en-us/azure/devops/test/test-runs?view=azure-devops) in Azure Test Plans. A modern, streamlined experience designed to make test execution and analysis fast and intuitive.\n\nAnd we’re excited to announce that this experience is moving to General Availability (GA) for the Azure DevOps Services throughout January 2026.\n\n## Why the New Test Run Hub?\n\nThe new hub centralizes test execution for both manual and automated runs, giving teams:\n\n- Real-Time Visibility: Instantly monitor test progress and quality trends to catch regressions before they impact your release.\n- Comprehensive Analytics: Dive into historical data with built-in dashboards that break down results by outcome, priority, configuration, and failure type.\n- Effortless Management: Use powerful filters such as timeline, run type, pipeline, and more, to find exactly what you need. Customize your view with persistent search and column visibility settings.\n- Rich Collaboration: Add screenshots, logs, and artifacts directly to test runs. Link results to work items and collaborate with markdown-enabled comments.\n- Programmatic Power: Possible to manage test runs via the Azure DevOps REST API for more advanced automations and integrations.\n- Attachment Improvements: Expanded preview capabilities and ability to delete attachments.\n- User-Specific Filters: Your filters’ preferences now persist across your sessions.\n\n## Your Feedback Matters\n\nBased on your feedback, we’ve made several improvements ahead of General Availability (GA):\n\n- Enhanced search and identification of test runs: You can now search by Test Run ID or Run Title, and look up past runs within any 90-day timeframe.\n- More details at a glance: The hub’s landing page now shows additionally Run Title, Last Updated Date, and Owner information for all your runs.\n- Inline screenshot preview: Captured test step screenshots are seen directly in each test step.\n\nWe’re committed to continuous improvement. Share your ideas and report issues through the [Azure DevOps Developer Community](https://developercommunity.visualstudio.com/AzureDevOps).\n\n## GA Transition Timeline\n\nThroughout January 2026 all organizations will be automatically transitioned to the new Test Run Hub experience. And after GA, the old (and now legacy) Test Run Hub will be retired and access to it will be discontinued.\n\n## Thank You!\n\nA big thank you for your support and collaboration the last months. The new Test Run Hub is here to help you ship faster, reduce risks, and deliver quality with confidence.",
+  "Tags": [
+    "Agile",
+    "Azure Test Plans",
+    "DevOps",
+    "Test",
+    "Test Points",
+    "Test Runs"
+  ],
+  "OutputDir": "_news",
+  "Link": "https://devblogs.microsoft.com/devops/the-new-test-run-hub-is-going-generally-available/",
+  "Author": "Panagiotis Liaros",
+  "FeedName": "Microsoft DevOps Blog",
+  "Description": "Delivering high-quality software requires clarity, speed, and collaboration. That’s why we introduced the New Test Run Hub in Azure Test Plans. A modern, streamlined experience designed to make test execution and analysis fast and intuitive. And we’re excited to announce that this experience is moving to General Availability (GA) for the Azure DevOps Services throughout […]\n\nThe post [The New Test Run Hub is Going Generally Available!](https://devblogs.microsoft.com/devops/the-new-test-run-hub-is-going-generally-available/) appeared first on [Azure DevOps Blog](https://devblogs.microsoft.com/devops).",
+  "Title": "The New Test Run Hub is Going Generally Available!",
+  "FeedLevelAuthor": "Azure DevOps Blog",
+  "ProcessedDate": "2025-12-22 13:12:54"
+}

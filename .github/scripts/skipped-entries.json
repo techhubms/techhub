@@ -10797,5 +10797,11 @@
     "canonical_url": "https://www.youtube.com/shorts/c8YMOwhpfiA",
     "collection": "videos",
     "reason": "No categories found: Content excluded due to generic exclusion rule - the content focuses on a personal anecdote and small moment of pride influencing the time delay on the Snipping Tool, as indicated by the description. There is no evidence of technical implementation, architectural detail, or substantive Microsoft development content per the exclusion rules. This falls under biographical/personal story content, which is excluded by the 'Biographical Focus' quality exclusion category."
+  },
+  {
+    "reason": "No categories found: No categories assigned because the content focuses on Microsoft 365 Copilot, which is classified as a business productivity tool according to the Copilot Product Distinction rules (Chapter 2, Business Productivity Tools Exclusion). The article highlights the use, governance, and security implications of M365 Copilot with SharePoint and Teams for enterprise knowledge and compliance, but does not discuss GitHub Copilot, Copilot Studio, or developer tool integrations. Additionally, the implementation focus is on permissions, governance, agent architecture for end-user/business productivity scenarios, not software development, DevOps, coding, AI, ML, Azure, or Security from a technical/engineering standpoint. This matches the explicit Non-Development Microsoft Products exclusion in Chapter 3.",
+    "timestamp": "2025-12-22 11:05:28 +00:00",
+    "canonical_url": "https://dellenny.com/the-agentic-intranet-securing-and-scaling-m365-copilot-with-sharepoint-teams/",
+    "collection": "posts"
   }
 ]

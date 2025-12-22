@@ -22448,5 +22448,11 @@
     "timestamp": "2025-12-22 10:05:55 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=RM5LjmqKryA"
+  },
+  {
+    "reason": "Succesfully added: Assigned DevOps category because the content is centered around Azure Test Plans (DevOps tools) and test management workflows within Azure DevOps Services (DevOps rules 1, 2, 3, 5). Assigned Azure category because it specifically describes a feature of Azure DevOps, a Microsoft cloud offering (Azure rule 1). Did not assign Coding or AI, as the announcement is focused on test management/process improvements, not on application code development or AI features. ML and Security do not apply, as there is no content about data science, machine learning, or security practices.",
+    "timestamp": "2025-12-22 13:16:21 +00:00",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/devops/the-new-test-run-hub-is-going-generally-available/"
   }
 ]
