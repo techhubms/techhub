@@ -10809,5 +10809,11 @@
     "collection": "community",
     "reason": "Insufficient content length",
     "timestamp": "2025-12-22 15:07:31 +00:00"
+  },
+  {
+    "timestamp": "2025-12-22 16:06:11 +00:00",
+    "reason": "No categories found: Content is excluded based on the CRITICAL Copilot Product Distinction rule. The main subject is an update to the general Microsoft Copilot product with a holiday-themed personality feature, discussed as part of user experience and design thinking. There is no focus on developer or maker tools like GitHub Copilot or Copilot Studio, and the content centers on user experience in a business productivity context. According to the Non-Development Microsoft Products exclusion, general-purpose Copilot, Copilot for Microsoft 365, and related productivity features are excluded from all categories. There is also no substantive technical detail about developer topics, coding, AI engineering, Azure, or advanced implementation that would qualify for other categories.",
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_we-are-bringing-a-little-holiday-cheer-to-activity-7407893451763113984-rrSK"
   }
 ]

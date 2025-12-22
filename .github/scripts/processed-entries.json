@@ -22460,5 +22460,11 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned 'AI' category because the article centers on using AI technologies, specifically Copilot and AI agent features in Visual Studio (AI rule 1 and 3). Assigned 'GitHub Copilot' because much of the workflow and automation relied directly on Copilot features, including prompt-based code generation and chat (GitHub Copilot rules 1, 2, 3, and 4). Included 'Coding' because projects involved .NET, language service creation, extension development, and working with code in Visual Studio (Coding rule 1 and 2). Included 'DevOps' for coverage of automated CI/CD pipelines with GitHub Actions and NuGet package publishing (DevOps rules 2, 5, and 6). Did not assign 'Azure', 'ML', or 'Security' as there is no direct substantive use of those technologies beyond agent/AI productivity tools. All generic exclusion rules (biographical focus, negativity, etc.) do not apply—while some personal reflection is present, the article is predominantly technical, practical, and implementation-focused.",
     "timestamp": "2025-12-22 15:07:07 +00:00"
+  },
+  {
+    "timestamp": "2025-12-22 16:06:37 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category because this announcement focuses on managing organizational workflows and permissions in GitHub (DevOps rules 2, 3, and 11). Added Security category since the change strengthens governance and security policy enforcement over app requests, making it relevant for Security (Security rules 2 and 3). Did not assign other categories since the post does not cover Azure, AI, Coding, or ML topics or tools.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-12-22-control-who-can-request-apps-for-your-organization"
   }
 ]
