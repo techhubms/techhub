@@ -8,7 +8,7 @@ applyTo: "**/*.md"
 
 ## Automated Processing
 
-The repository includes a PowerShell script (`pwsh /workspaces/techhub/.github/scripts/fix-markdown-files.ps1`) that automatically fixes common markdown and frontmatter issues including:
+The repository includes a PowerShell script (`pwsh /workspaces/techhub/scripts/fix-markdown-files.ps1`) that automatically fixes common markdown and frontmatter issues including:
 
 - Date format standardization
 - Frontmatter quoting consistency
@@ -22,11 +22,11 @@ The repository includes a PowerShell script (`pwsh /workspaces/techhub/.github/s
 ```powershell
 # Process all markdown files in the repository
 
-pwsh /workspaces/techhub/.github/scripts/fix-markdown-files.ps1
+pwsh /workspaces/techhub/scripts/fix-markdown-files.ps1
 
 # Process a specific file only
 
-pwsh /workspaces/techhub/.github/scripts/fix-markdown-files.ps1 -FilePath "docs/javascript-guidelines.md"
+pwsh /workspaces/techhub/scripts/fix-markdown-files.ps1 -FilePath "docs/javascript-guidelines.md"
 ```
 
 **CRITICAL**: Do not automatically run this script!

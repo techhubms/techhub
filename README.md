@@ -65,7 +65,8 @@ Get the Tech Hub running in just a few minutes using containers.
 
 - If you just want to add content, read [docs/content-management.md](docs/content-management.md)
 - For complete documentation organization and structure, see [docs/documentation-guidelines.md](docs/documentation-guidelines.md)
-- For AI agents working on this repository, read [`.github/copilot-instructions.md`](.github/copilot-instructions.md)
+- For AI agents working on this repository, read [`AGENTS.md`](AGENTS.md) for project overview and domain-specific guidance
+- For comprehensive documentation, explore the [`docs/`](docs/) directory
 
 ## Contributing
 

@@ -34,7 +34,7 @@ RSS feeds are accessible in two ways:
 
 ## Feed Configuration
 
-RSS feeds are configured in `.github/scripts/rss-feeds.json`:
+RSS feeds are configured in `_data/rss-feeds.json`:
 
 ```json
 {
@@ -72,7 +72,7 @@ RSS feeds are configured in `.github/scripts/rss-feeds.json`:
 
 ### Manual Addition
 
-1. Edit `.github/scripts/rss-feeds.json`
+1. Edit `_data/rss-feeds.json`
 2. Add new feed object to the feeds array
 3. Validate JSON format
 4. Commit changes
@@ -369,7 +369,7 @@ After RSS processing, the PowerShell tag system (see [Filtering System](filterin
 
 - **`complete-rss-workflow.ps1`**: Main orchestration script that handles the complete RSS workflow
 - **`Get-FilteredTags.ps1`**: Tag enhancement and normalization
-- Supporting functions in `.github/scripts/functions/` directory
+- Supporting functions in `scripts/functions/` directory
 
 ### Execution
 

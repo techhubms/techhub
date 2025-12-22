@@ -205,7 +205,7 @@ Describe "Function-Name" {
 
 **Initialize-BeforeAll.ps1**: Contains common setup logic that runs once per `Describe` block:
 
-- Function loading from `.github/scripts/functions/`
+- Function loading from `scripts/functions/`
 - Common variable initialization
 - Mock setup that applies to all tests
 - Error handling configuration

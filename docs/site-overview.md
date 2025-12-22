@@ -238,7 +238,7 @@ There is one for each collection:
 - **`_site/`**: Generated site output (ignored in git)
 - **`test-results/`**: Test execution results
 - **`.tmp/`**: Temporary directory for development scripts and intermediate files
-- **`.github/scripts/`**: Production automation scripts
+- **`scripts/`**: Production automation scripts
 - **`.github/workflows/`**: GitHub Actions workflow definitions
 - **`.github/prompts/`**: Custom reusable prompt files
 - **`docs/`**: All technical documentation

@@ -6,7 +6,7 @@ This document defines the documentation structure, hierarchy, and content placem
 
 **CRITICAL**: Whenever code changes any behavior, you MUST update the relevant documentation files to reflect those changes. This requirement applies to all contributors and to Copilot automation. Never leave documentation out of sync with the codebase. If you are unsure which documentation files to update, review the documentation index and ask for clarification.
 
-**CRITICAL**: When creating or updating documentation, always update this file and the `.github/coding-instructions.md` file to include new content or make existing content up-to-date.
+**CRITICAL**: When creating or updating documentation, always update this file to include new content or make existing content up-to-date. For code-specific domain guidance, update the relevant AGENTS.md file in the appropriate directory.
 
 The documentation follows a hierarchical approach designed to:
 
@@ -23,16 +23,113 @@ Key principles:
 - Avoid duplication across documentation files
 - Keep the amount of levels to a maximum of 3, so #, ## and ###
 
+## Documentation Structure
+
+The Tech Hub uses a two-tier documentation system:
+
+### 1. AGENTS.md Files (Domain-Specific)
+
+Located in each major directory, AGENTS.md files provide focused guidance for AI assistants working in specific domains:
+
+- **`AGENTS.md`** (root): General project overview and navigation to domain-specific agents
+- **`scripts/AGENTS.md`**: PowerShell development and automation scripts
+- **`_plugins/AGENTS.md`**: Jekyll Ruby plugin development
+- **`assets/js/AGENTS.md`**: JavaScript client-side development
+- **`_sass/AGENTS.md`**: SCSS styling and CSS architecture
+- **`rss/AGENTS.md`**: RSS feed management and syndication
+- **`docs/AGENTS.md`**: Documentation guidelines and maintenance
+- **`spec/AGENTS.md`**: Testing strategies and frameworks
+
+**Purpose**: Action-oriented, domain-specific guidance with critical rules and patterns for daily development work.
+
+### 2. Documentation Files (Comprehensive Reference)
+
+Located in `docs/`, these files provide complete technical details:
+
+#### Foundation Files
+
+- **`docs/documentation-guidelines.md`**: Documentation structure and hierarchy (this file)
+- **`docs/terminology.md`**: Definitions, concepts, and basic understanding
+- **`docs/site-overview.md`**: High-level architecture and system structure
+- **Purpose**: Establish fundamental understanding before diving into specifics
+
+#### Functionality-Oriented Files
+
+- **`docs/filtering-system.md`**: Complete implementation of date and tag filtering systems
+- **`docs/datetime-processing.md`**: Date handling, timezone configuration, and custom date filters
+- **`docs/content-management.md`**: Content creation, organization, and lifecycle management
+- **`docs/rss-feeds.md`**: RSS feed integration and automated content processing
+- **`docs/testing-guidelines.md`**: Testing strategy, frameworks, and organization
+- **Purpose**: Explain **what** the system does and **how** it works
+
+#### Task-Oriented Files
+
+- **`docs/plugins.md`**: Creating and maintaining Jekyll plugins
+- **`docs/jekyll-development.md`**: Jekyll-specific development patterns and practices
+- **`docs/github-token-setup.md`**: GitHub token configuration and authentication setup
+- **Purpose**: Explain **how to do** specific development tasks
+
+#### Language-Oriented Files
+
+- **`docs/javascript-guidelines.md`**: JavaScript development standards and patterns
+- **`docs/powershell-guidelines.md`**: PowerShell scripting conventions
+- **`docs/ruby-guidelines.md`**: Ruby development standards and best practices
+- **`docs/markdown-guidelines.md`**: Markdown formatting and content standards
+- **`docs/frontend-guidelines.md`**: Frontend development standards and practices
+- **`docs/writing-style-guidelines.md`**: Content writing style and tone guidelines
+- **Purpose**: Language-specific syntax, conventions, and best practices
+
+#### Performance and Optimization
+
+- **`docs/performance-guidelines.md`**: Optimization strategies and performance considerations
+
+## Documentation vs AGENTS.md
+
+| Aspect | Documentation (`docs/*.md`) | AGENTS.md Files |
+|--------|---------------------------|----------------|
+| **Purpose** | Comprehensive reference | Action-oriented guidance |
+| **Audience** | Humans and AI | AI assistants primarily |
+| **Scope** | Complete feature coverage | Domain-specific focus |
+| **Detail Level** | In-depth explanations | Critical rules and patterns |
+| **Content** | Historical context, architecture | Current best practices |
+| **Updates** | When features change | When development patterns change |
+
+### When to Update Each
+
+**Update Documentation** when:
+- Feature specifications change
+- Architecture evolves
+- New components added
+- Historical context needed
+
+**Update AGENTS.md** when:
+- Development patterns change
+- Critical rules added
+- Common errors identified
+- Domain-specific guidance needed
+
 ## Documentation Hierarchy
 
 When creating or updating documentation, follow this strict hierarchy to ensure content is placed in the most appropriate location. **Always check files in this order** and place content where it best fits according to the file's purpose:
 
 ### 1. Generic AI Instructions
 
-- **`.github/copilot-instructions.md`**: Only for generic AI model instructions that apply universally
-- **Not for**: Specific implementation details, project-specific guidance, or technical procedures
+- **`AGENTS.md`** (root): Only for high-level project overview and navigation to domain agents
+- **Not for**: Specific implementation details or technical procedures
 
-### 2. Foundation Files
+### 2. Domain-Specific Agent Instructions
+
+Check the appropriate domain AGENTS.md file for action-oriented, development-focused content:
+
+- PowerShell development → `scripts/AGENTS.md`
+- Ruby plugins → `_plugins/AGENTS.md`
+- JavaScript → `assets/js/AGENTS.md`
+- SCSS styling → `_sass/AGENTS.md`
+- RSS feeds → `rss/AGENTS.md`
+- Documentation → `docs/AGENTS.md`
+- Testing → `spec/AGENTS.md`
+
+### 3. Foundation Files
 
 - **`docs/documentation-guidelines.md`**: Documentation structure, hierarchy, and content placement rules
 - **`docs/terminology.md`**: Definitions, concepts, and basic understanding
@@ -91,7 +188,7 @@ When creating or updating documentation, follow this strict hierarchy to ensure 
 
 #### ❌ **Incorrect Placements**
 
-- **Plugin implementation details** → `copilot-instructions.md` (too specific for generic instructions)
+- **Plugin implementation details** → `AGENTS.md` (root) (too generic, should be in `_plugins/AGENTS.md`)
 - **JavaScript code examples** → `docs/site-overview.md` (wrong level of detail)
 - **Specific API usage** → `docs/terminology.md` (too detailed for foundation)
 
