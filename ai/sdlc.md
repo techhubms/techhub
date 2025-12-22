@@ -1,14 +1,16 @@
 ---
 layout: "page"
-title: "AI Native SDLC"
+title: "AI SDLC"
 description: "A comprehensive guide to the Software Development Life Cycle with AI enhancements at every phase."
 category: "AI"
-page-name: "sdlc"
+page-name: "ai-sdlc"
 ---
 
 <div class="sdlc-container">
     <div class="sdlc-intro">
         <p>The Software Development Life Cycle (SDLC) is a structured framework that guides teams through creating high-quality software efficiently. Each phase builds upon the previous, with clear handovers ensuring smooth transitions. AI enhances every phase—from rapid prototyping to predicting system failures—transforming how every team member works, not just developers.</p>
+        <br/>
+        <p>Engineers typically spend only about two hours per day writing code—the rest involves requirements engineering, architectural work, documentation, and meetings. AI's value extends far beyond code generation: it helps with all these activities, enabling teams to focus on <strong>delivering value to end users</strong> rather than just producing more lines of code.</p>
     </div>
 
     <div class="sdlc-phases">
@@ -84,6 +86,7 @@ page-name: "sdlc"
                         <a href="https://github.com/features/copilot" target="_blank" class="sdlc-tool-tag">GitHub Copilot</a>
                         <a href="https://githubnext.com/projects/github-spark" target="_blank" class="sdlc-tool-tag">GitHub Spark</a>
                         <a href="https://github.com/features/issues" target="_blank" class="sdlc-tool-tag">GitHub Issues</a>
+                        <a href="https://github.com/github/github-mcp-server" target="_blank" class="sdlc-tool-tag">GitHub MCP</a>
                         <a href="https://github.com/microsoft/azure-devops-mcp" target="_blank" class="sdlc-tool-tag">Azure DevOps MCP</a>
                     </div>
                 </div>
@@ -200,6 +203,7 @@ page-name: "sdlc"
                         <a href="https://docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent-to-work-on-tasks" target="_blank" class="sdlc-tool-tag">GitHub Copilot Coding Agent</a>
                         <a href="https://github.com/features/codespaces" target="_blank" class="sdlc-tool-tag">GitHub Codespaces</a>
                         <a href="https://github.com/github/github-mcp-server" target="_blank" class="sdlc-tool-tag">GitHub MCP</a>
+                        <a href="https://github.com/microsoft/azure-devops-mcp" target="_blank" class="sdlc-tool-tag">Azure DevOps MCP</a>
                     </div>
                 </div>
                 <div class="sdlc-info-section">
@@ -267,6 +271,7 @@ page-name: "sdlc"
                         <a href="https://docs.github.com/en/code-security/dependabot" target="_blank" class="sdlc-tool-tag">Dependabot</a>
                         <a href="https://learn.microsoft.com/en-us/azure/defender-for-cloud/" target="_blank" class="sdlc-tool-tag">Microsoft Defender for Cloud</a>
                         <a href="https://github.com/executeautomation/mcp-playwright" target="_blank" class="sdlc-tool-tag">Playwright MCP</a>
+                        <a href="https://github.com/github/github-mcp-server" target="_blank" class="sdlc-tool-tag">GitHub MCP</a>
                         <a href="https://github.com/microsoft/azure-devops-mcp" target="_blank" class="sdlc-tool-tag">Azure DevOps MCP</a>
                     </div>
                 </div>
@@ -492,6 +497,27 @@ page-name: "sdlc"
         </div>
     </div>
 
+    <!-- DevOps Foundation -->
+    <div class="sdlc-section-card" id="sdlc-card-foundation">
+        <div class="sdlc-card-header">
+            <span>🏗️ DevOps Foundation</span>
+            <span class="sdlc-card-icon">▼</span>
+        </div>
+        <div class="sdlc-card-content">
+            <p>AI amplifies your existing practices—it cannot replace a solid DevOps foundation. Teams must have testing, CI/CD, and automation fundamentals in place before expecting consistent gains from AI-augmented development.</p>
+            <h4>What to do:</h4>
+            <ul>
+                <li>Establish comprehensive test coverage (unit, integration, end-to-end)</li>
+                <li>Implement CI/CD pipelines for automated builds and deployments</li>
+                <li>Use Infrastructure as Code for consistent environments</li>
+                <li>Set up monitoring and alerting for production systems</li>
+                <li>Allocate dedicated time (e.g., 10% per sprint) for technical debt reduction</li>
+            </ul>
+            <h4>Why it matters:</h4>
+            <p>Only when these fundamentals are in place can teams roll out changes faster with <strong>trust</strong> that their deployments work as intended. AI excels at helping teams build this foundation—generating tests, pipelines, and infrastructure configurations—giving teams time to address the technical debt often pushed to the bottom of the backlog.</p>
+        </div>
+    </div>
+
     <!-- Additional Information Section -->
     <div class="sdlc-additional-info-section">
         <h2>Additional Information</h2>
@@ -547,7 +573,68 @@ page-name: "sdlc"
                         <p>Feedback loops from maintenance inform future iterations, creating a learning organization.</p>
                     </div>
                 </div>
+                <div class="sdlc-benefit-card">
+                    <span class="sdlc-benefit-icon">✓</span>
+                    <div>
+                        <strong>Engineer as Orchestrator</strong>
+                        <p>Engineers evolve from writing all code to orchestrating AI agents, focusing on architecture, quality, and ensuring trust in the system.</p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Measuring & Feedback Section -->
+    <div class="sdlc-section-card" id="sdlc-card-measuring-feedback">
+        <div class="sdlc-card-header">
+            <span>📈 Measuring & Feedback</span>
+            <span class="sdlc-card-icon">▼</span>
+        </div>
+        <div class="sdlc-card-content">
+            <p>AI changes the speed of delivery, but it does not automatically improve outcomes. Use a small set of metrics as <strong>trend signals</strong> (outcomes over output), and pair them with qualitative feedback so teams do not game the number instead of improving the result.</p>
+
+            <p><strong>See also:</strong> <a href="{{ '/devops/dx-space' | relative_url }}">DX, SPACE &amp; DORA</a> for definitions and guidance on using these frameworks well.</p>
+
+            <div class="sdlc-benefits-grid">
+                <div class="sdlc-benefit-card">
+                    <span class="sdlc-benefit-icon">📦</span>
+                    <div>
+                        <strong>DORA (DevOps Research and Assessment)</strong>
+                        <p>Track deployment frequency, lead time for changes, time to restore service, and change failure rate. These metrics show whether speed and stability improve together rather than becoming trade-offs.</p>
+                    </div>
+                </div>
+
+                <div class="sdlc-benefit-card">
+                    <span class="sdlc-benefit-icon">🧭</span>
+                    <div>
+                        <strong>SPACE (Productivity Signals)</strong>
+                        <p>A multi-dimensional view of productivity (GitHub + Microsoft Research) that includes satisfaction, collaboration, and overall effectiveness. This helps avoid reducing “productivity” to activity or output volume.</p>
+                    </div>
+                </div>
+
+                <div class="sdlc-benefit-card">
+                    <span class="sdlc-benefit-icon">🛠️</span>
+                    <div>
+                        <strong>DevEx (DX)</strong>
+                        <p>Measure friction and flow: onboarding time, local setup reliability, build/test speed, cognitive load, and tool quality. Improvements here often unlock sustained delivery gains.</p>
+                    </div>
+                </div>
+
+                <div class="sdlc-benefit-card">
+                    <span class="sdlc-benefit-icon">🧪</span>
+                    <div>
+                        <strong>Guardrails (Quality + Security)</strong>
+                        <p>Add a few “do not regress” checks such as test pass rate, escaped defects, vulnerability findings, and incident trends. AI-assisted changes should be easier to ship and easier to trust.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h4>How to use this in practice</h4>
+            <ul>
+                <li>Review DORA trends per service or team on a regular cadence (e.g., monthly), and discuss changes in retrospectives.</li>
+                <li>Run lightweight DX and satisfaction checks (short surveys + a few operational signals like CI times) and prioritize the biggest sources of friction.</li>
+                <li>When you adopt a new AI workflow (agentic PRs, test generation, prompt standards), treat it like any other change: define success criteria, measure, then iterate.</li>
+            </ul>
         </div>
     </div>
 
@@ -574,6 +661,10 @@ page-name: "sdlc"
                 <div class="sdlc-challenge-item">
                     <strong>Testing Bottlenecks</strong>
                     <p>Testing becomes a blocker late in the cycle. Shift-left by integrating testing earlier and automating where possible.</p>
+                </div>
+                <div class="sdlc-challenge-item">
+                    <strong>Uncritical AI Acceptance</strong>
+                    <p>Blindly accepting AI suggestions without review leads to bugs and unintended changes. Always review, test, and validate AI-generated code before committing.</p>
                 </div>
             </div>
         </div>

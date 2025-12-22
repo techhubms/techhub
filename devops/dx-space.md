@@ -6,8 +6,6 @@ category: "DevOps"
 page-name: "dx-space"
 ---
 
-<link rel="stylesheet" href="/assets/css/dx-space.css">
-
 <div class="dx-container">
     <div class="dx-intro">
         <p>For years, organizations focused solely on boosting developer productivity to accelerate business outcomes. However, measuring productivity with simple metrics like "lines of code" or "story points" often led to unintended consequences: burnout, gaming the metrics, and decreased retention. Modern frameworks like <strong>DORA</strong>, <strong>SPACE</strong>, and <strong>DevEx (DX)</strong> offer a more holistic approach to understanding and improving how software teams work.</p>

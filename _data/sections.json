@@ -126,12 +126,22 @@
                 "description": "Community announcements, discussions, magazines and insights related to AI."
             },
             {
-                "title": "A(i) to Z",
-                "url": "/ai/ai-to-z.html",
-                "description": "A starting point for learning about AI."
+                "title": "GenAI Basics",
+                "url": "/ai/genai-basics.html",
+                "description": "Foundational concepts for understanding Generative AI, from history to modern implementations."
             },
             {
-                "title": "SDLC",
+                "title": "GenAI Advanced",
+                "url": "/ai/genai-advanced.html",
+                "description": "A deeper dive into how modern AI models work and the building blocks behind agents, tools, and retrieval."
+            },
+            {
+                "title": "GenAI Applied",
+                "url": "/ai/genai-applied.html",
+                "description": "Practical ways to apply GenAI, from development workflows to product integration, plus resources to keep learning."
+            },
+            {
+                "title": "AI SDLC",
                 "url": "/ai/sdlc.html",
                 "description": "Resources on how GitHub Copilot and AI in general are transforming the Software Development Life Cycle (SDLC)."
             }
@@ -170,7 +180,46 @@
                 "description": "Community announcements, discussions, magazines and insights related to machine learning development and data science."
             }
         ]
-    },    
+    },
+    "devops": {
+        "title": "DevOps",
+        "description": "Transform your development lifecycle with proven DevOps methodologies. Explore automation, collaboration tools, CI/CD pipelines, and agile practices that streamline software delivery.",
+        "url": "/devops",
+        "section": "devops",
+        "image": "/assets/section-backgrounds/devops.jpg",
+        "category": "DevOps",
+        "collections": [
+            {
+                "title": "News",
+                "url": "/devops/news.html",
+                "collection": "news",
+                "description": "Latest DevOps news and updates from Microsoft and the community."
+            },
+            {
+                "title": "Blogs",
+                "url": "/devops/posts.html",
+                "collection": "posts",
+                "description": "Curated blog posts about DevOps practices, tools, and methodologies."
+            },
+            {
+                "title": "Videos",
+                "url": "/devops/videos.html",
+                "collection": "videos",
+                "description": "Educational videos covering DevOps tools, practices, and case studies."
+            },
+            {
+                "title": "Community",
+                "url": "/devops/community.html",
+                "collection": "community",
+                "description": "Community discussions about DevOps."
+            },
+            {
+                "title": "DX, SPACE & DORA",
+                "url": "/devops/dx-space.html",
+                "description": "Understanding developer experience frameworks: DORA metrics, SPACE framework, and DevEx for measuring and improving team effectiveness."
+            }
+        ]
+    },        
     "azure": {
         "title": "Azure",
         "description": "Navigate Microsoft's cloud universe. From infrastructure essentials to advanced deployment strategies, find the resources you need to build and scale on Azure.",
@@ -239,45 +288,6 @@
             }
         ]
     },    
-    "devops": {
-        "title": "DevOps",
-        "description": "Transform your development lifecycle with proven DevOps methodologies. Explore automation, collaboration tools, CI/CD pipelines, and agile practices that streamline software delivery.",
-        "url": "/devops",
-        "section": "devops",
-        "image": "/assets/section-backgrounds/devops.jpg",
-        "category": "DevOps",
-        "collections": [
-            {
-                "title": "News",
-                "url": "/devops/news.html",
-                "collection": "news",
-                "description": "Latest DevOps news and updates from Microsoft and the community."
-            },
-            {
-                "title": "Blogs",
-                "url": "/devops/posts.html",
-                "collection": "posts",
-                "description": "Curated blog posts about DevOps practices, tools, and methodologies."
-            },
-            {
-                "title": "Videos",
-                "url": "/devops/videos.html",
-                "collection": "videos",
-                "description": "Educational videos covering DevOps tools, practices, and case studies."
-            },
-            {
-                "title": "Community",
-                "url": "/devops/community.html",
-                "collection": "community",
-                "description": "Community discussions about DevOps."
-            },
-            {
-                "title": "DX, SPACE & DORA",
-                "url": "/devops/dx-space.html",
-                "description": "Understanding developer experience frameworks: DORA metrics, SPACE framework, and DevEx for measuring and improving team effectiveness."
-            }
-        ]
-    },
     "security": {
         "title": "Security",
         "description": "Navigate Microsoft's comprehensive security landscape. From identity management to threat protection, discover the tools and practices that keep your organization secure.",
