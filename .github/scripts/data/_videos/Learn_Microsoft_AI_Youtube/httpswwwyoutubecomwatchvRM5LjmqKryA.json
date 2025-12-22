@@ -1,0 +1,14 @@
+{
+  "FeedLevelAuthor": "Learn Microsoft AI",
+  "Tags": [],
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=RM5LjmqKryA",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA",
+  "PubDate": "2025-12-22T09:14:22+00:00",
+  "FeedName": "Learn Microsoft AI Youtube",
+  "Description": "Join this channel to get access to perks: https://www.youtube.com/channel/UCQf\\_yRJpsfyEiWWpt1MZ6vA/join\n\nLinkedin : https://www.linkedin.com/in/rvinothrajendran/ github : https://github.com/rvinothrajendran Buy me a Coffee : https://buymeacoffee.com/vinothrajendran\n\nIn this video, we explain what Microsoft Agent Framework is, why it was created, and how it relates to Semantic Kernel and AutoGen. Microsoft Agent Framework is an open-source AI development kit for building LLM-powered agents and multi-agent workflows using .NET and Python. It is the direct successor to Semantic Kernel and AutoGen, built by the same teams to unify and extend their capabilities. What This Video Covers What Agent Framework is and how it’s structured How AI agents use large language models, tools, and MCP servers to perform real actions How workflows enable graph-based, multi-agent orchestration with checkpointing and human-in-the-loop support Why Microsoft combined Semantic Kernel’s enterprise features with AutoGen’s agent abstractions How Agent Framework becomes a single, production-ready foundation for modern AI agent systems Why Another Agent Framework? AutoGen made it easy to build and experiment with multi-agent systems, while Semantic Kernel focused on enterprise needs like state management, type safety, telemetry, and broad model support. Agent Framework brings these together—and adds explicit workflows and robust state management for long-running and real-world scenarios.",
+  "Author": "Learn Microsoft AI",
+  "Title": "What Is Microsoft Agent Framework & Why Another Agent Framework?",
+  "EnhancedContent": null,
+  "ProcessedDate": "2025-12-22 10:04:45"
+}

@@ -10791,5 +10791,11 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule - there is no substantive technical content available to evaluate. The description ('I'm so sorry ;-)') provides no technical details, and the content field is null. As per the workflow, content with insufficient or missing main text is excluded (focus on actual content; if none present, exclude).",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=fpPkHxf_jQQ"
+  },
+  {
+    "timestamp": "2025-12-21 20:06:26 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/c8YMOwhpfiA",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the content focuses on a personal anecdote and small moment of pride influencing the time delay on the Snipping Tool, as indicated by the description. There is no evidence of technical implementation, architectural detail, or substantive Microsoft development content per the exclusion rules. This falls under biographical/personal story content, which is excluded by the 'Biographical Focus' quality exclusion category."
   }
 ]
