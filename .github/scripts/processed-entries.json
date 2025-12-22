@@ -22477,5 +22477,11 @@
     "collection": "videos",
     "timestamp": "2025-12-22 20:06:20 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=Pi57sH7iuKY"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content specifically discusses improvements to GitHub Actions workflow pages, which is a core DevOps tool and relates directly to CI/CD pipeline management (DevOps inclusion rule 2 and 5). There is no coverage of Coding, AI, Azure, ML, Security, or GitHub Copilot. Content is technical, focuses on practitioner use, and follows all inclusion rules without triggering any generic exclusions.",
+    "timestamp": "2025-12-22 23:05:49 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-22-improved-performance-for-github-actions-workflows-page",
+    "collection": "news"
   }
 ]
