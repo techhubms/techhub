@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_news",
+  "PubDate": "2025-12-19T17:05:54+00:00",
+  "FeedLevelAuthor": "Archive: 2025 - GitHub Changelog",
+  "Link": "https://github.blog/changelog/2025-12-19-copilot-memory-early-access-for-pro-and-pro",
+  "Description": "Copilot Memory is now available in early access for GitHub Copilot Pro and Pro+ users, with support in Copilot Coding Agent and Copilot Code Review. Copilot Memory Copilot Memory enables…\n\nThe post [Copilot Memory early access for Pro and Pro+](https://github.blog/changelog/2025-12-19-copilot-memory-early-access-for-pro-and-pro) appeared first on [The GitHub Blog](https://github.blog).",
+  "Title": "Copilot Memory early access for Pro and Pro+",
+  "EnhancedContent": "Copilot Memory is now available in early access for GitHub Copilot Pro and Pro+ users, with support in Copilot Coding Agent and Copilot Code Review.\n\n## Copilot Memory\n\nCopilot Memory enables agents to learn from your codebase. Over time, Copilot builds a repository-specific memory by capturing key insights about your codebase and using them to improve how agents assist you. This shared context helps Copilot perform better across coding and code review workflows.\n\n### Get started today\n\nCopilot Pro and Pro+ users can enable Copilot Memory by navigating to **Settings &gt; Copilot** and turning on **Copilot Memory**.\n\n### Share your feedback\n\nWe’re continuing to evolve Copilot Memory and plan to bring it to more plans in the future. To share feedback or join the discussion, visit the [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "FeedName": "The GitHub Blog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2025-12-19 18:03:11",
+  "Author": "Allison"
+}
