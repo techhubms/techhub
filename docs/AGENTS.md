@@ -8,23 +8,19 @@ You are a documentation specialist for the Tech Hub project. This directory cont
 
 ```text
 docs/
+├── AGENTS.md                   # Documentation guidelines (this file)
 ├── content-management.md       # Content creation and organization
 ├── datetime-processing.md      # Date handling and timezone configuration
 ├── documentation-guidelines.md # Documentation structure and hierarchy
 ├── filtering-system.md         # Tag-based filtering implementation
-├── frontend-guidelines.md      # Frontend development standards
 ├── github-token-setup.md       # GitHub token configuration
-├── javascript-guidelines.md    # JavaScript development standards
 ├── jekyll-development.md       # Jekyll-specific patterns
-├── markdown-guidelines.md      # Markdown formatting for AI models
-├── performance-guidelines.md   # Performance optimization strategies
-├── plugins.md                  # Jekyll plugin development
-├── powershell-guidelines.md    # PowerShell syntax and standards
+├── markdown-guidelines.md      # Markdown structure for AI models
+├── performance-guidelines.md   # Performance optimization
+├── plugins.md                  # Jekyll plugin architecture
 ├── rss-feeds.md               # RSS feed processing
-├── ruby-guidelines.md          # Ruby development standards
 ├── site-overview.md            # Site structure overview
-├── terminology.md              # Project vocabulary and concepts
-├── testing-guidelines.md       # Testing strategy and frameworks
+├── terminology.md              # Project vocabulary
 └── writing-style-guidelines.md # Content writing standards
 ```
 
@@ -129,22 +125,6 @@ For more details, see [filtering-system.md](filtering-system.md).
 - Pre-calculated relationships
 - Client-side filtering
 - Performance optimization
-
-### Testing Guidelines
-
-**[testing-guidelines.md](testing-guidelines.md)** - Testing strategy:
-- Test pyramid structure
-- Framework selection (Pester, Jest, RSpec, Playwright)
-- Critical testing rules
-- Test organization
-
-### Jekyll Development
-
-**[jekyll-development.md](jekyll-development.md)** - Jekyll-specific patterns:
-- Build process
-- Plugin development
-- Liquid templates
-- Performance considerations
 
 ### Content Management
 
@@ -335,8 +315,7 @@ Documentation and AGENTS.md files serve different purposes:
 
 ### Development
 
-- Language-specific AGENTS.md files for code examples
-- [testing-guidelines.md](testing-guidelines.md) for test coverage
+- Domain-specific AGENTS.md files for code-specific guidance (see root AGENTS.md for navigation)
 
 ## Never Do
 

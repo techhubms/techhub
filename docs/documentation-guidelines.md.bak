@@ -180,6 +180,7 @@ For specific implementation details, see [Jekyll Development](jekyll-development
 
 # Good: Cross-reference with purpose
 
+Testing procedures are covered in [Testing Guidelines](testing-guidelines.md).
 
 # Bad: Vague reference
 
@@ -194,6 +195,7 @@ This file references another file that references back to this file.
 
 ### Consistent Naming
 
+- Use **kebab-case** for all documentation files: `testing-guidelines.md`
 - Use **descriptive names** that clearly indicate content: `content-management.md` not `content.md`
 - Use **specific suffixes** when appropriate: `-guidelines.md`, `-development.md`
 
@@ -319,6 +321,7 @@ For the current documentation index structure, see the [Directory Structure](#di
 - **[plugins.md](plugins.md)** - *Complete plugin architecture and development guide*
 - **[filtering-system.md](filtering-system.md)** - *Tag and date filtering implementation*
 - **[datetime-processing.md](datetime-processing.md)** - *Date handling, timezone configuration, and custom date filters*
+- **[testing-guidelines.md](testing-guidelines.md)** - *Ruby unit tests and Playwright end-to-end testing*
 
 ### 📝 Content & Management
 
@@ -328,6 +331,10 @@ For the current documentation index structure, see the [Directory Structure](#di
 ### ⚡ Performance & Standards
 
 - **[performance-guidelines.md](performance-guidelines.md)** - *Performance optimization and best practices*
+- **[javascript-guidelines.md](javascript-guidelines.md)** - *JavaScript development standards*
+- **[powershell-guidelines.md](powershell-guidelines.md)** - *PowerShell scripting conventions*
+- **[ruby-guidelines.md](ruby-guidelines.md)** - *Ruby development and Jekyll plugin standards*
+- **[frontend-guidelines.md](frontend-guidelines.md)** - *Frontend development, CSS standards, and E2E testing*
 - **[writing-style-guidelines.md](writing-style-guidelines.md)** - *Writing tone, style, and language standards*
 
 ### 🤖 AI & Development Tools
@@ -345,8 +352,13 @@ For the current documentation index structure, see the [Directory Structure](#di
 | **plugins.md** | Plugin system and development | Creating or modifying site functionality |
 | **filtering-system.md** | Tag/date filtering implementation | Working with content filtering |
 | **datetime-processing.md** | Date handling, timezone configuration, and custom date filters | Working with dates and timezone processing |
+| **testing-guidelines.md** | Ruby unit tests and Playwright end-to-end testing | Running tests and writing new tests |
 | **content-management.md** | Content creation workflows | Adding and managing content |
 | **markdown-guidelines.md** | Markdown formatting standards | Writing and formatting content |
 | **writing-style-guidelines.md** | Writing tone, style, and language standards | Creating any written content |
 | **performance-guidelines.md** | Performance optimization rules | Optimizing site performance |
+| **javascript-guidelines.md** | JavaScript development standards | Client-side development |
+| **powershell-guidelines.md** | PowerShell scripting standards | Automation and scripting |
+| **ruby-guidelines.md** | Ruby development and Jekyll plugin standards | Ruby/Jekyll plugin development |
+| **frontend-guidelines.md** | Frontend development, CSS standards, and E2E testing | Frontend development and testing |
 | **rss-feeds.md** | RSS feed management | Managing automated content |

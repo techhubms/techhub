@@ -63,10 +63,36 @@ Get the Tech Hub running in just a few minutes using containers.
 
 ## Documentation
 
-- If you just want to add content, read [docs/content-management.md](docs/content-management.md)
-- For complete documentation organization and structure, see [docs/documentation-guidelines.md](docs/documentation-guidelines.md)
-- For AI agents working on this repository, read [`AGENTS.md`](AGENTS.md) for project overview and domain-specific guidance
-- For comprehensive documentation, explore the [`docs/`](docs/) directory
+### For Developers and AI Agents
+
+The repository uses domain-specific AGENTS.md files for action-oriented development guidance:
+
+- **[AGENTS.md](AGENTS.md)** - Project overview and navigation to domain-specific agents
+- **[scripts/AGENTS.md](scripts/AGENTS.md)** - PowerShell development and automation scripts
+- **[_plugins/AGENTS.md](_plugins/AGENTS.md)** - Jekyll Ruby plugin development
+- **[assets/js/AGENTS.md](assets/js/AGENTS.md)** - JavaScript client-side development
+- **[_sass/AGENTS.md](_sass/AGENTS.md)** - SCSS styling and CSS architecture
+- **[rss/AGENTS.md](rss/AGENTS.md)** - RSS feed management and syndication
+- **[docs/AGENTS.md](docs/AGENTS.md)** - Documentation guidelines and maintenance
+- **[spec/AGENTS.md](spec/AGENTS.md)** - Testing strategies and frameworks
+
+### Comprehensive Documentation
+
+For architectural details, design decisions, and complete specifications:
+
+- **[docs/content-management.md](docs/content-management.md)** - Content creation and organization
+- **[docs/documentation-guidelines.md](docs/documentation-guidelines.md)** - Documentation structure and hierarchy
+- **[docs/filtering-system.md](docs/filtering-system.md)** - Complete filtering system architecture
+- **[docs/datetime-processing.md](docs/datetime-processing.md)** - Date handling and timezone configuration
+- **[docs/jekyll-development.md](docs/jekyll-development.md)** - Jekyll-specific development patterns
+- **[docs/plugins.md](docs/plugins.md)** - Jekyll plugin architecture and implementation
+- **[docs/rss-feeds.md](docs/rss-feeds.md)** - RSS feed integration and processing
+- **[docs/site-overview.md](docs/site-overview.md)** - Comprehensive site structure overview
+- **[docs/terminology.md](docs/terminology.md)** - Project vocabulary and concepts
+- **[docs/performance-guidelines.md](docs/performance-guidelines.md)** - Performance optimization strategies
+- **[docs/markdown-guidelines.md](docs/markdown-guidelines.md)** - Markdown formatting for AI models
+- **[docs/writing-style-guidelines.md](docs/writing-style-guidelines.md)** - Content writing standards
+- **[docs/github-token-setup.md](docs/github-token-setup.md)** - GitHub token configuration
 
 ## Contributing
 
