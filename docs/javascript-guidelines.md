@@ -1,353 +1,89 @@
 # JavaScript Development Guidelines
 
-This file contains all JavaScript-specific development guidelines for the Tech Hub site. For comprehensive development patterns, see [Documentation Guidelines](documentation-guidelines.md).
+This document provides comprehensive reference material for JavaScript development in the Tech Hub site. For action-oriented guidance and critical rules, see [assets/js/AGENTS.md](../assets/js/AGENTS.md).
 
-## Core JavaScript Principles
+## Overview
 
-### Server-Side First Architecture
+The Tech Hub uses vanilla ES6+ JavaScript for client-side functionality. JavaScript enhances server-rendered content with real-time filtering, search, and navigation features while maintaining a server-first architecture.
 
-**Critical Rule**: JavaScript must never render initial page content (exception: assets/js/sections.js only)
+For detailed implementation patterns and code examples, refer to [assets/js/AGENTS.md](../assets/js/AGENTS.md).
 
-**Correct Approach**:
+## Architecture Principles
 
-1. Jekyll/Liquid renders all initial content server-side
-2. JavaScript adds event listeners and interactivity
-3. JavaScript responds to user interactions
-4. Content is immediately visible and functional
+### Server-Side First
 
-**Examples**:
+**Critical Rule**: JavaScript must never render initial page content (exception: `assets/js/sections.js` only for navigation state).
 
-```javascript
-// ✅ CORRECT: Enhance existing server-rendered content
-document.querySelectorAll('.tag-filter-btn').forEach(btn => {
-  btn.addEventListener('click', handleFilterClick);
-});
+Jekyll/Liquid renders all initial content server-side. JavaScript adds:
+1. Event listeners and interactivity
+2. Real-time filtering without page reload
+3. State management in URL parameters
+4. Search functionality
 
-// ❌ WRONG: Create content on page load
-window.addEventListener('load', () => {
-  createFilterButtons(); // This should be done server-side!
-});
-```
-
-**The assets/js/sections.js Exception**:
-
-- Only `assets/js/sections.js` may modify content on initial load
-- It handles section collections state based on URL parameters
-- This is necessary for proper navigation highlighting
-- All other JavaScript must wait for user interaction
-
-### JavaScript Enhancement Process
-
-1. **Data Extraction**: Read embedded data from server-rendered HTML
-2. **Event Listeners**: Add click handlers to server-rendered buttons  
-3. **Real-Time Filtering**: Show/hide content without page reload
-4. **State Management**: Maintain filter state and URL parameters
-
-### File Structure and Assets
-
-**Critical File: `assets/js/sections.js`**
-
-This is the ONLY exception to the "no initial content creation" rule:
-
-- **Purpose**: Handles section collections activation based on URL parameters
-- **Scope**: Only modifies section collections state on page load
-- **Restriction**: All other JavaScript must wait for user interaction
-
-**File organization principles:**
+### File Organization
 
 ```text
 assets/js/
-├── sections.js       # Exception - can run on page load
-└── filters.js     # Complete filtering functionality with mode-based logic
+├── sections.js    # Navigation state (runs on page load)
+├── filters.js     # Tag-based filtering system
+├── features.js    # Feature sections interactivity
+└── logo-manager.js # Logo variant management
 ```
 
-## Filtering System Implementation
+## Filtering System Architecture
 
-For comprehensive filtering system details, see [Filtering System](filtering-system.md).
+For complete implementation details, see [filtering-system.md](filtering-system.md) and [assets/js/AGENTS.md](../assets/js/AGENTS.md).
 
-### Key JavaScript Functions
+### Pre-Calculated Relationships
 
-The filtering system uses a unified tag-based approach with these core functions:
+The filtering system uses server-side pre-calculated tag relationships for performance:
 
-- `executeFilterToggle()`: Handle all tag filter interactions (sections, collections, content tags)
-- `updateDisplay()`: Update content visibility and filter counts in real-time
-- `updateURL()`: Preserve filter state in browser URL for bookmarking
-- `handleTextSearchInput()`: Process real-time text search with debounced input
-- `passesTextSearch()`: Filter content based on search query matching
+- **Tag Relationships**: Server maps which posts match each tag
+- **Date Mappings**: Server calculates date ranges at build time
+- **Client Lookups**: JavaScript performs fast array lookups without recalculation
 
-### Filter Interaction Flow
+This architecture ensures filtering remains performant even with hundreds of posts.
 
-```javascript
-User clicks tag → JavaScript filters content → DOM updated → URL updated
-User types search → Debounced input → Text filter applied → Display updated
+### Text Search with Debouncing
+
+Text search provides real-time content filtering with a 300ms debounce delay to prevent excessive updates during typing. Content is pre-indexed during page load for fast matching.
+
+## Performance Considerations
+
+### DOM Manipulation
+
+- Show/hide existing elements (no re-rendering)
+- Use event delegation for minimal listeners
+- Cache DOM queries
+- Minimize reflows and repaints
+
+### Mobile Optimization
+
+- Touch-friendly target sizes
+- Handle both mouse and touch events
+- Optimize for mobile performance
+- Test on various devices and browsers
+
+## Testing
+
+For JavaScript testing patterns, see [spec/AGENTS.md](../spec/AGENTS.md).
+
+Tests use Jest with jsdom for unit testing client-side logic without browser dependencies:
+
+```bash
+# Run JavaScript tests
+./scripts/run-javascript-tests.ps1
+
+# With coverage
+npm test -- --coverage
 ```
 
-### Unified Tag Filter Implementation
+## Resources
 
-**All Filter Types (Using Pre-Calculated Relationships):**
-
-```javascript
-function executeFilterToggle(tag, filterType) {
-    if (filterType === 'date') {
-        // Handle exclusive date filter logic
-        if (window.activeFilters.has(tag)) {
-            window.activeFilters.delete(tag);
-        } else {
-            // Clear other date filters and activate this one
-            window.dateFilters.forEach(filter => {
-                window.activeFilters.delete(filter);
-            });
-            window.activeFilters.add(tag);
-        }
-    } else {
-        // Handle inclusive tag filters (sections, collections, content tags)
-        if (window.activeFilters.has(tag)) {
-            window.activeFilters.delete(tag);
-        } else {
-            window.activeFilters.add(tag);
-        }
-    }
-    
-    updateDisplay();
-    updateURL();
-}
-```
-
-**Date Filtering with Pre-Calculated Mappings:**
-
-```javascript
-function isWithinDateFilter(postIndex, dateFilter) {
-    // Use pre-calculated date filter mappings for ultra-fast lookups
-    return window.dateFilterMappings[dateFilter].has(postIndex);
-}
-```
-
-### Unified Tag-Based Architecture
-
-**Implementation**: Uses pre-calculated server-side tag relationships for consistent, fast filtering:
-
-```javascript
-// Server generates tag relationships, JavaScript uses them directly
-const relatedPostIndices = window.tagRelationships[tag];
-const isMatch = relatedPostIndices.includes(postIndex);
-```
-
-**Examples of tag-based filtering (all work the same way)**:
-
-- Section tags: "ai", "github copilot"
-- Collection tags: "news", "posts", "videos", "community"
-- Content tags: "azure", "visual studio code", "machine learning"
-
-**Subset matching examples**:
-
-- Selecting "ai" shows: "ai", "generative ai", "azure ai", "ai agents"
-- Selecting "visual studio" shows: "visual studio", "visual studio code", "visual studio 2022"
-- Selecting "azure" shows: "azure", "azure devops", "azure ai", "azure functions"
-
-**Unified approach benefits**:
-
-```javascript
-// All filter types use the same logic - no special cases needed
-function checkFilterForCurrentMode(postIndex, filters) {
-    return filters.every(filter => {
-        return window.tagRelationships[filter] &&
-               window.tagRelationships[filter].includes(postIndex);
-    });
-}
-```
-
-### Text Search Implementation
-
-**Real-Time Text Search with Debouncing**:
-
-Text search provides immediate content filtering based on user input while maintaining performance through debounced updates:
-
-```javascript
-function handleTextSearchInput(event) {
-    if (window.isUpdating) return;
-    
-    const query = event.target.value.trim();
-    window.textSearchQuery = query;
-    
-    // Debounce search to avoid excessive filtering
-    clearTimeout(window.textSearchTimeout);
-    window.textSearchTimeout = setTimeout(() => {
-        updateDisplay();
-        updateURL();
-    }, 300); // 300ms debounce delay
-}
-```
-
-**Content Indexing for Fast Search**:
-
-Content is pre-indexed during page load to enable fast real-time search:
-
-```javascript
-// Pre-extract searchable content from all posts
-window.cachedPosts = Array.from(postElements).map((el, index) => {
-    let content = '';
-    
-    // Index title, description, meta info, and tags
-    content += titleElement.textContent.toLowerCase() + ' ';
-    content += descElement.textContent.toLowerCase() + ' ';
-    content += metaElement.textContent.toLowerCase() + ' ';
-    content += el.getAttribute('data-tags').toLowerCase() + ' ';
-    
-    return {
-        el: el,
-        index: index,
-        content: content.trim()  // Pre-indexed for fast search
-    };
-});
-```
-
-**Search Filter Logic**:
-
-```javascript
-function passesTextSearch(cachedPost) {
-    if (!window.textSearchQuery) return true;
-    
-    const query = window.textSearchQuery.toLowerCase();
-    return cachedPost.content.includes(query);
-}
-```
-
-**Integration with Filter System**:
-
-Text search works additively with date and tag filters:
-
-```javascript
-function updateDisplay() {
-    window.cachedPosts.forEach(post => {
-        const passesModeFilter = checkFilterForCurrentMode(post.index, filters);
-        const passesDateFilter = checkDateFilter(post.index);
-        const passesTextFilter = passesTextSearch(post);
-        
-        const isVisible = passesModeFilter && passesDateFilter && passesTextFilter;
-        post.el.style.display = isVisible ? '' : 'none';
-    });
-}
-```
-
-**URL Parameter Management**:
-
-Text search terms are preserved in URL parameters for bookmarking and sharing:
-
-```javascript
-function updateURL() {
-    const url = new URL(window.location);
-    
-    // Preserve search query in URL
-    if (window.textSearchQuery && window.textSearchQuery.trim()) {
-        url.searchParams.set('search', window.textSearchQuery.trim());
-    } else {
-        url.searchParams.delete('search');
-    }
-    
-    window.history.replaceState({}, '', url);
-}
-```
-
-### Date Filter Button Logic and Error Handling
-
-**Client-Side Date Filter Count Calculation**:
-
-Date filter counts (e.g., "Today", "Last 3 days") are always recalculated client-side in JavaScript, using the user's local timezone. This ensures that date-based filtering reflects the user's actual day, not the server's timezone.
-
-**Rules for Hiding/Disabling Date Filter Buttons**:
-
-- Date filter buttons are only hidden if there are truly zero posts for that date range in the user's timezone (not just due to tag filters)
-- If a date filter has zero posts due to active tag filters, the button remains visible (with a count of 0), so users can see the effect of their selections
-- This logic applies to all date filter buttons, not just "Today"
-
-**Error Handling**:
-
-- Always handle edge cases where filter data may be missing, malformed, or incomplete
-- Gracefully degrade if required data is not present (e.g., show a warning, do not throw unhandled exceptions)
-- Add tests for error handling and edge cases to ensure robust behavior
-
-## Performance and Mobile Optimization
-
-### DOM Manipulation Best Practices
-
-**Performance Optimization**:
-
-- **DOM Manipulation**: Show/hide existing elements (no re-rendering)
-- **Event Delegation**: Use minimal event listeners for better performance
-- **Debounced Updates**: Prevent excessive recalculations during rapid user interactions
-- **Minimize client-side JavaScript execution**: Move heavy processing to server-side when possible
-- **Optimize JavaScript queries**: Use efficient DOM selectors and caching
-- **Monitor memory usage**: Check for memory leaks in long-running sessions
-
-**Data Embedding**:
-
-JavaScript relies on server-embedded data:
-
-```javascript
-// Check if window.currentFilterData is properly set
-console.log(window.currentFilterData);
-```
-
-**Critical Requirements**:
-
-- Verify server-rendered HTML structure
-- Test event delegation setup
-- Ensure data attributes are properly set on content elements
-
-### Mobile and Touch Considerations
-
-**Touch Events**:
-
-- **Handle both mouse and touch events appropriately**: Ensure compatibility across all devices
-- **Touch-friendly interfaces**: Consider touch target sizes and interaction patterns
-
-**Mobile Performance**:
-
-- **Optimize JavaScript for mobile devices**: Minimize processing overhead
-- **Test on mobile networks**: Ensure acceptable performance on slower connections
-- **Touch optimization**: Ensure touch interactions are responsive
-- **Cross-browser compatibility**: Test across different browsers and versions
-- **Mobile browsers**: Verify touch interactions work properly on mobile browsers
-
-### Performance Monitoring
-
-**Real-time Performance Monitoring**:
-
-```javascript
-// Monitor JavaScript performance
-console.time('filter-operation');
-// ... filtering logic
-console.timeEnd('filter-operation');
-
-// Check memory usage
-console.log('Memory usage:', performance.memory);
-```
-
-**Production Performance Monitoring**:
-
-```javascript
-// Monitor filter performance
-function performanceAwareFilter(filterFunction) {
-    console.time('filter-operation');
-    filterFunction();
-    console.timeEnd('filter-operation');
-    
-    // Check memory usage if available
-    if (performance.memory) {
-        console.log('Memory usage:', {
-            used: Math.round(performance.memory.usedJSHeapSize / 1048576) + ' MB',
-            total: Math.round(performance.memory.totalJSHeapSize / 1048576) + ' MB'
-        });
-    }
-}
-
-// Usage
-performanceAwareFilter(() => executeFilterToggle('ai', 'tag'));
-```
-
-## Error Handling and Debugging
-
-### Common JavaScript Issues
+- [assets/js/AGENTS.md](../assets/js/AGENTS.md) - Action-oriented JavaScript development guidance
+- [filtering-system.md](filtering-system.md) - Complete filtering system architecture
+- [spec/AGENTS.md](../spec/AGENTS.md) - Testing strategy and patterns
+- [performance-guidelines.md](performance-guidelines.md) - Performance optimization strategies
 
 **Symptom**: Filters not working or console errors
 
