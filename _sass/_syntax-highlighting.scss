@@ -4,11 +4,11 @@
  * Syntax highlighting styles
  */
 .highlight {
-  // background: #fff;
+  background: #fff;
   margin-bottom: settings.$spacing-unit;
 
   .highlighter-rouge & {
-    // background: #eef;
+    background: #eef;
   }
 
   .c {
@@ -59,13 +59,13 @@
 
   // Comment.Special
   .gd {
-    // color: #000;
+    color: #000;
     background-color: #fdd
   }
 
   // Generic.Deleted
   .gd .x {
-    // color: #000;
+    color: #000;
     background-color: #faa
   }
 
@@ -86,13 +86,13 @@
 
   // Generic.Heading
   .gi {
-    // color: #000;
+    color: #000;
     background-color: #dfd
   }
 
   // Generic.Inserted
   .gi .x {
-    // color: #000;
+    color: #000;
     background-color: #afa
   }
 
