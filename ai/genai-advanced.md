@@ -28,8 +28,9 @@ Related pages:
 10. [Retrieval Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
 11. [Agents and agentic AI](#agents-and-agentic-ai)
 12. [Multi-agent solutions](#multi-agent-solutions)
-13. [Scaling AI implementations](#scaling-ai-implementations)
-14. [The AI-native web: NLWeb, llms.txt, and semantic search](#the-ai-native-web-nlweb-llmstxt-and-semantic-search)
+13. [Observability: Monitoring and evaluating AI applications](#observability-monitoring-and-evaluating-ai-applications)
+14. [Scaling AI implementations](#scaling-ai-implementations)
+15. [The AI-native web: NLWeb, llms.txt, and semantic search](#the-ai-native-web-nlweb-llmstxt-and-semantic-search)
 
 ## Vectors and embeddings: How AI understands meaning
 
@@ -67,7 +68,7 @@ graph LR
 
 ## From embeddings to responses: The inference process
 
-**Inference** is what happens when you send a prompt to an AI model and receive a response. The model converts your words into embeddings, processes those mathematical representations through its neural network, and converts the results back into human-readable text.
+Inference is what happens when you send a prompt to an AI model and receive a response. The model converts your words into embeddings, processes those mathematical representations through its neural network, and converts the results back into human-readable text.
 
 During inference, the model doesn't "think" the way humans do. Instead, it performs billions of mathematical calculations to predict the most likely next word, then the word after that, building responses token by token based on the patterns it learned during training.
 
@@ -77,45 +78,50 @@ Now that we understand how AI models represent and process information, we can e
 
 ### The foundation of learning
 
-A **neural network** mimics how biological brains process information through interconnected nodes. Each connection has a **weight**—a number that determines how much influence one piece of information has on another. During training, the model adjusts billions of these weights to improve its predictions.
+A neural network mimics how biological brains process information through interconnected nodes. Each connection has a *weight*—a number that determines how much influence one piece of information has on another. During training, the model adjusts billions of these weights to improve its predictions.
 
 ### Transformers: A revolutionary architecture
 
-Modern language models use **transformers**, a revolutionary architecture that changed how AI understands language. Unlike earlier approaches that processed text sequentially (word by word), transformers can examine entire passages simultaneously and understand relationships between any words, regardless of how far apart they appear.
+Modern language models use transformers, a revolutionary architecture that changed how AI understands language. Unlike earlier approaches that processed text sequentially (word by word), transformers can examine entire passages simultaneously and understand relationships between any words, regardless of how far apart they appear.
 
 ## Attention mechanism
 
-The breakthrough innovation in transformers is the **attention mechanism**. When generating each word, the model can "attend to" or focus on the most relevant parts of the input, just as you might reread key phrases when writing a response to a complex question.
+The breakthrough innovation in transformers is the attention mechanism. When generating each word, the model can "attend to" or focus on the most relevant parts of the input, just as you might reread key phrases when writing a response to a complex question.
 
 For example, when translating "The cat that was sleeping on the mat was orange," the attention mechanism helps the model understand that "orange" describes "cat," not "mat," even though other words appear between them.
 
 ## Context windows and model parameters
 
+These core concepts determine what a model can do and how it behaves. Understanding them helps you choose the right model and configuration for your needs.
+
 ### Parameters and model capability
 
-The **parameters** in a model (the adjustable weights we mentioned) directly impact capability. GPT-3 has 175 billion parameters, while some newer models have over a trillion. More parameters generally mean better understanding of nuanced language patterns, though they also require more computational resources.
+The parameters in a model (the adjustable weights we mentioned) directly impact capability. GPT-3 has 175 billion parameters, while some newer models have over a trillion. More parameters generally mean better understanding of nuanced language patterns, though they also require more computational resources.
 
 ### Context windows
 
-**Context windows** determine how much information a model can consider at once. Larger context windows allow models to maintain coherence across longer conversations and documents, but they also increase computational costs and processing time.
+Context windows determine how much information a model can consider at once. Larger context windows allow models to maintain coherence across longer conversations and documents, but they also increase computational costs and processing time.
 
 ### Training data and knowledge cutoff
 
-The **training data** (billions of web pages, books, and articles) shapes what the model knows. The **cut-off date** represents the latest information in this training data, which is why models can't discuss events that happened after their training completed.
+The training data (billions of web pages, books, and articles) shapes what the model knows. The *cut-off date* represents the latest information in this training data, which is why models can't discuss events that happened after their training completed.
 
 ### Practical implications: Balancing trade-offs
 
 Every advanced feature involves trade-offs. Larger context windows enable more sophisticated reasoning but increase latency and costs. Higher-parameter models provide better quality but require more computational resources. Understanding these trade-offs helps you choose the right model configuration for your specific needs.
 
-When designing applications, consider how **vocabulary size** (the tokens a model understands), **temperature settings** (creativity vs. consistency), and **seed values** (reproducibility) align with your goals for latency, accuracy, cost, and reliability.
+When designing applications, consider how *vocabulary size* (the tokens a model understands), *temperature settings* (creativity vs. consistency), and *seed values* (reproducibility) align with your goals for latency, accuracy, cost, and reliability.
 
 For a comprehensive deep dive into how these concepts work together, [Andrej Karpathy's tutorial on building ChatGPT from scratch](https://www.youtube.com/watch?v=kCc8FmEb1nY) provides an excellent technical foundation.
 
-More information:
-
-- [Microsoft Releases Dion: A New Scalable Optimizer for Training AI Models](https://techcommunity.microsoft.com/blog/educator-developer-blog/microsoft-releases-dion-a-new-scalable-optimizer-for-training-ai-models/4500124)
-- [Optimizing Large-Scale AI Performance with Pretraining Validation on a Single Azure ND GB200 v6](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimizing-large-scale-ai-performance-with-pretraining/ba-p/4445273)
-- [Benchmarking Llama 3.1 8B AI Inference on Azure ND-H100-v5 with vLLM](https://techcommunity.microsoft.com/blog/educator-developer-blog/benchmarking-llama-3-1-8b-ai-inference-on-azure-nd-h100-v5-with-vllm/4440725)
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://techcommunity.microsoft.com/blog/educator-developer-blog/microsoft-releases-dion-a-new-scalable-optimizer-for-training-ai-models/4500124">Microsoft Releases Dion: A New Scalable Optimizer for Training AI Models</a></li>
+    <li><a href="https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimizing-large-scale-ai-performance-with-pretraining/ba-p/4445273">Optimizing Large-Scale AI Performance with Pretraining Validation on a Single Azure ND GB200 v6</a></li>
+    <li><a href="https://techcommunity.microsoft.com/blog/educator-developer-blog/benchmarking-llama-3-1-8b-ai-inference-on-azure-nd-h100-v5-with-vllm/4440725">Benchmarking Llama 3.1 8B AI Inference on Azure ND-H100-v5 with vLLM</a></li>
+  </ul>
+</div>
 
 ## Alignment: making models follow principles
 
@@ -125,25 +131,27 @@ As models get stronger, we also need them to behave safely and predictably. "Ali
 
 A practical approach you'll see in modern systems is Constitutional AI (popularized by Anthropic): the model uses a short, written set of principles (a "constitution") to critique and improve its own answers.
 
-How this works in practice:
+#### How this works in practice
 
 - Draft: the model produces an initial answer.
 - Self-critique: it reviews that answer against the constitution (e.g., be helpful and honest, avoid facilitating harm, acknowledge uncertainty).
 - Revise: it edits the answer to better follow the principles.
 - Preference training (RLAIF): training then favors these revised answers using reinforcement learning from AI feedback, reducing dependence on large human-labeled datasets.
 
-Why this helps
+#### Why this helps
 
 - Principles are explicit and auditable.
 - Scales alignment with fewer human labels.
 - Produces more consistent "helpful, harmless, honest" behavior.
 
-Limits to keep in mind
+#### Limits to keep in mind
 
 - Only as good as the chosen principles (they can be incomplete or biased) and may lead to over-refusal in edge cases.
 - Not a substitute for factual grounding—use retrieval (RAG) and tools for accuracy and citations.
 
-Example principle: "Avoid providing instructions that meaningfully facilitate wrongdoing." During self-critique, the model removes or reframes such content before replying.
+#### Example principle
+
+"Avoid providing instructions that meaningfully facilitate wrongdoing." During self-critique, the model removes or reframes such content before replying.
 
 Tip: keep these concepts practical. As you design a use case, tie terms like "context," "embeddings," and "attention" to concrete trade-offs: latency, accuracy, token cost, and guardrails.
 
@@ -151,17 +159,20 @@ Tip: keep these concepts practical. As you design a use case, tie terms like "co
 
 Fine-tuning involves adjusting model behavior and output to better match your specific needs. While full model retraining requires significant resources, you can influence model behavior through several techniques:
 
-**Grounding**
+### Grounding
+
 Grounding provides the AI with specific, factual information to base its responses on. Instead of relying on the model's training data, you supply current, accurate information within your prompt. For example, when asking about company policies, include the actual policy text in your prompt rather than assuming the model knows current details.
 
-**Temperature**
+### Temperature
+
 Temperature controls how creative or predictable the AI's responses are:
 
 - **Low temperature (0.0-0.3)**: More focused and consistent responses, good for factual tasks
 - **Medium temperature (0.4-0.7)**: Balanced creativity and consistency, suitable for most general tasks
 - **High temperature (0.8-1.0)**: More creative and varied responses, useful for brainstorming or creative writing
 
-**Top P (nucleus sampling)**
+### Top P (nucleus sampling)
+
 Top P determines how many alternative words the model considers when generating each token:
 
 - **Low Top P (0.1-0.5)**: More focused responses using only the most likely word choices
@@ -169,17 +180,20 @@ Top P determines how many alternative words the model considers when generating 
 
 These settings work together - you might use low temperature and low Top P for consistent, factual responses, or high temperature and high Top P for creative brainstorming sessions.
 
-More information:
-
-- [Enhancing Conversational Agents with Azure AI Language: CLU and Custom Question Answering](https://devblogs.microsoft.com/azure-ai/enhancing-conversational-agents-with-azure-ai-language-clu-and-custom-question-answering/)
-- [What's New in Azure AI Foundry - July 2025](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/what%E2%80%99s-new-in-azure-ai-foundry-finetuning-july-2025/4438850)
-- [OpenAI's Open-Source Model: gpt-oss on Azure AI Foundry and Windows AI Foundry](https://www.microsoft.com/en-us/ai/open-source-ai-models)
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://devblogs.microsoft.com/azure-ai/enhancing-conversational-agents-with-azure-ai-language-clu-and-custom-question-answering/">Enhancing Conversational Agents with Azure AI Language: CLU and Custom Question Answering</a></li>
+    <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/what%E2%80%99s-new-in-azure-ai-foundry-finetuning-july-2025/4438850">What's New in Azure AI Foundry - July 2025</a></li>
+    <li><a href="https://www.microsoft.com/en-us/ai/open-source-ai-models">OpenAI's Open-Source Model: gpt-oss on Azure AI Foundry and Windows AI Foundry</a></li>
+  </ul>
+</div>
 
 ## Function calling
 
-**Function calling** allows AI models to use external tools and services during their responses. Instead of only generating text, the model can call predefined functions to perform specific actions like checking the weather, calculating mathematical expressions, or retrieving current information from databases.
+Function calling allows AI models to use external tools and services during their responses. Instead of only generating text, the model can call predefined functions to perform specific actions like checking the weather, calculating mathematical expressions, or retrieving current information from databases.
 
-How it works:
+### How it works
 
 1. You define functions with clear descriptions of what they do and what parameters they need
 2. The AI model analyzes your prompt and determines if any functions would help answer your question
@@ -192,15 +206,11 @@ sequenceDiagram
     participant AI as AI Model
     participant Function
     
-    User->>AI: "How long does it take to fly from New York to Los Angeles?"
+    User->>AI: How long does it take to fly from New York to Los Angeles?
     AI->>AI: Analyzes prompt
-    AI->>Function: get_flight_duration("JFK", "LAX", true)
-    Function->>AI: "6 hours 30 minutes including one layover"
-    AI->>User: "The flight from New York to Los Angeles takes about 6 hours and 30 minutes, including one layover."
-    
-    style User fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
-    style AI fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
-    style Function fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    AI->>Function: get_flight_duration(JFK, LAX, true)
+    Function->>AI: 6 hours 30 minutes including one layover
+    AI->>User: The flight from New York to Los Angeles takes about 6 hours and 30 minutes, including one layover.
 ```
 
 Example function definition:
@@ -219,32 +229,42 @@ Model: Calls get_flight_duration("JFK", "LAX", true)
 Function returns: "6 hours 30 minutes including one layover"
 ```
 
-How the model matches functions to prompts:
+### How the model matches functions to prompts
 
 Models use the function descriptions and parameter details to understand when a function is relevant. They look for keywords, context clues, and the type of information being requested. The better your function descriptions, the more accurately the model will know when and how to use them.
 
-Benefits:
+### Benefits
 
 - Access to real-time information
 - Ability to perform precise calculations
 - Integration with external systems and databases
 - More accurate and up-to-date responses
 
-More information:
-
-- [Connecting to a Local MCP Server Using Microsoft.Extensions.AI](https://www.youtube.com/watch?v=iYHh5n-6ez4)
-- [Model Context Protocol Development Best Practices](https://www.youtube.com/watch?v=W56H9W7x-ao)
-- [Building AI Agents with Ease: Function Calling in VS Code AI Toolkit](https://techcommunity.microsoft.com/t5/educator-developer-blog/building-ai-agents-with-ease-function-calling-in-vs-code-ai/ba-p/4442637)
-- [Unlocking GPT-5's Freeform Tool Calling in Azure AI Foundry](https://devblogs.microsoft.com/foundry/unlocking-gpt-5s-freeform-tool-calling-a-new-era-of-seamless-integration/)
-- [General Availability of the Responses API in Azure AI Foundry](https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/general-availability-of-the-responses-api-in-azure-ai-foundry/ba-p/4234701)
-- [Let's Learn Model Context Protocol with JavaScript and TypeScript](https://www.youtube.com/watch?v=AKjW94vQZkc)
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=iYHh5n-6ez4">Connecting to a Local MCP Server Using Microsoft.Extensions.AI</a></li>
+    <li><a href="https://www.youtube.com/watch?v=W56H9W7x-ao">Model Context Protocol Development Best Practices</a></li>
+    <li><a href="https://techcommunity.microsoft.com/t5/educator-developer-blog/building-ai-agents-with-ease-function-calling-in-vs-code-ai/ba-p/4442637">Building AI Agents with Ease: Function Calling in VS Code AI Toolkit</a></li>
+    <li><a href="https://devblogs.microsoft.com/foundry/unlocking-gpt-5s-freeform-tool-calling-a-new-era-of-seamless-integration/">Unlocking GPT-5's Freeform Tool Calling in Azure AI Foundry</a></li>
+    <li><a href="https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/general-availability-of-the-responses-api-in-azure-ai-foundry/ba-p/4234701">General Availability of the Responses API in Azure AI Foundry</a></li>
+    <li><a href="https://www.youtube.com/watch?v=AKjW94vQZkc">Let's Learn Model Context Protocol with JavaScript and TypeScript</a></li>
+  </ul>
+</div>
 
 ## Model Context Protocol (MCP)
 
-**What is MCP and what problem does it solve?**
-Model Context Protocol is an open standard that enables AI models to securely connect to external data sources and tools. Before MCP, each AI application had to build custom integrations for every service they wanted to connect to. MCP creates a standardized way for AI models to access external resources, making it easier to build AI applications that can interact with real-world systems.
+Model Context Protocol is an open standard that enables AI models to securely connect to external data sources and tools. It creates a standardized way for AI models to access external resources, making it easier to build AI applications that can interact with real-world systems.
 
-Key components:
+### What problem does it solve?
+
+MCP addresses two key challenges:
+
+**Integration fragmentation**: Before MCP, each AI application had to build custom integrations for every service they wanted to connect to. MCP provides a common protocol, so a single MCP server can work with any compatible AI host.
+
+**Knowledge cut-off limitations**: AI models are trained on data up to a specific date and can't access information beyond that point. MCP servers can provide real-time access to current data—stock prices, weather, documentation, database records—allowing models to give accurate, up-to-date responses without retraining. This complements RAG approaches by standardizing how models connect to live data sources.
+
+### Key components
 
 - **Host**: The application that contains the AI model (like your IDE, chat application, or development environment)
 - **Client**: The component that communicates with MCP servers on behalf of the AI model
@@ -281,7 +301,8 @@ graph TB
     style API fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
 ```
 
-**How does it relate to OpenAI function calling?**
+### How does it relate to OpenAI function calling?
+
 MCP and OpenAI function calling serve similar purposes but work at different levels:
 
 - **Function calling** is a feature within specific AI models that allows them to call predefined functions
@@ -289,7 +310,8 @@ MCP and OpenAI function calling serve similar purposes but work at different lev
 
 Think of function calling as the language AI models use to request external actions, while MCP is the standardized postal service that delivers those requests to the right destinations.
 
-**Security considerations:**
+### Security considerations
+
 MCP is a protocol, not a deployment model. The security properties you get depend on the transport you use (for example, local stdio vs HTTP) and how you deploy the server.
 
 - Authorization is optional in MCP. Some servers expose tools without any built-in auth, while others can be deployed behind an identity-aware gateway.
@@ -303,32 +325,41 @@ If you want to use MCP in production, focus on controls that are independent of 
 - Isolate servers (and their credentials) per environment and, when needed, per tenant/user
 - Log and audit tool invocations, and treat tool outputs as untrusted input
 
-**Risks to consider:**
+Regardless of these controls, there are always risks to consider
 
 - MCP servers can access external systems, so proper security and access controls are essential
 - Always validate and sanitize data from external sources
 - Consider the privacy implications of connecting AI models to sensitive data sources
 
-Learning resources:
+### Learning resources
 
 - [MCP course on Hugging Face](https://huggingface.co/learn/mcp-course/unit0/introduction) provides comprehensive training
 - Microsoft is working on enhanced MCP support with better security features
 
-More information:
-
-- [Connecting to a Local MCP Server Using Microsoft.Extensions.AI](https://www.youtube.com/watch?v=iYHh5n-6ez4)
-- [Model Context Protocol Development Best Practices](https://www.youtube.com/watch?v=W56H9W7x-ao)
-- [Let's Learn Model Context Protocol with JavaScript and TypeScript](https://www.youtube.com/watch?v=AKjW94vQZkc)
-- [Building AI Agents with Semantic Kernel, MCP Servers, and Python](https://www.youtube.com/watch?v=vfIwpctNbv4)
-- [Agent Factory: Building Your First AI Agent with Azure AI Foundry](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-building-your-first-ai-agent-with-azure-ai-foundry/4295871)
-- [Zero Trust Agents: Adding Identity and Access to Multi-Agent Workflows](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/zero-trust-agents-adding-identity-and-access-to-multi-agent-workflows/4273932)
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=iYHh5n-6ez4">Connecting to a Local MCP Server Using Microsoft.Extensions.AI</a></li>
+    <li><a href="https://www.youtube.com/watch?v=W56H9W7x-ao">Model Context Protocol Development Best Practices</a></li>
+    <li><a href="https://www.youtube.com/watch?v=AKjW94vQZkc">Let's Learn Model Context Protocol with JavaScript and TypeScript</a></li>
+    <li><a href="https://www.youtube.com/watch?v=vfIwpctNbv4">Building AI Agents with Semantic Kernel, MCP Servers, and Python</a></li>
+    <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-building-your-first-ai-agent-with-azure-ai-foundry/4295871">Agent Factory: Building Your First AI Agent with Azure AI Foundry</a></li>
+    <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/zero-trust-agents-adding-identity-and-access-to-multi-agent-workflows/4273932">Zero Trust Agents: Adding Identity and Access to Multi-Agent Workflows</a></li>
+  </ul>
+</div>
 
 ## Retrieval Augmented Generation (RAG)
 
-**What is RAG and why is it important?**
 Retrieval Augmented Generation combines the power of AI language models with access to specific, up-to-date information from external sources. Instead of relying solely on the AI's training data (which has a cut-off date), RAG allows the model to retrieve relevant information from documents, databases, or knowledge bases in real-time and use that information to generate more accurate responses.
 
-How RAG works:
+### Why is it important?
+
+- Provides access to current information beyond the model's training cut-off
+- Allows AI to work with your specific company data and documents
+- Reduces hallucinations by grounding responses in factual sources
+- Enables AI to cite sources and provide verifiable information
+
+### How RAG works
 
 1. Your question is processed to understand what information is needed
 2. A search system finds relevant documents or data from your knowledge base
@@ -365,51 +396,50 @@ graph TB
     style Response fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
 ```
 
-Why RAG is valuable:
+### How does RAG differ from MCP and function calling?
 
-- Provides access to current information beyond the model's training cut-off
-- Allows AI to work with your specific company data and documents
-- Reduces hallucinations by grounding responses in factual sources
-- Enables AI to cite sources and provide verifiable information
+RAG is primarily about retrieving and using information from documents and knowledge bases. It's focused on finding relevant text or data to inform the AI's response.
 
-**How does it differ from MCP and function calling?**
+MCP provides a standardized protocol for AI models to connect to various external services and tools, which could include RAG systems but also databases, APIs, and other services.
 
-**RAG** is primarily about retrieving and using information from documents and knowledge bases. It's focused on finding relevant text or data to inform the AI's response.
+Function calling is the mechanism AI models use to invoke specific operations, which could include RAG searches, MCP server interactions, or direct API calls.
 
-**MCP** provides a standardized protocol for AI models to connect to various external services and tools, which could include RAG systems but also databases, APIs, and other services.
+### When to use each approach
 
-**Function calling** is the mechanism AI models use to invoke specific operations, which could include RAG searches, MCP server interactions, or direct API calls.
-
-When to use each approach:
-
-**Use RAG when:**
+#### Use RAG when
 
 - You need AI to answer questions about specific documents or knowledge bases
 - You want responses grounded in verifiable sources
 - You're dealing with information that changes frequently
 - You need to work with proprietary or domain-specific content
 
-**Use MCP when:**
+#### Use MCP when
 
 - You need standardized connections to multiple external services
-n- You want to build reusable integrations across different AI applications
+- You want to build reusable integrations across different AI applications
 - You need secure, protocol-based access to external resources
 
-**Use function calling when:**
+#### Use function calling when
 
 - You need the AI to perform specific actions (calculations, API calls, data operations)
 - You want direct control over what external services the AI can access
 - You're building custom integrations for specific use cases
 
-More information:
-
-- [Retrieval-Augmented Generation (RAG) in Azure AI: A Step-by-Step Guide](https://dellenny.com/retrieval-augmented-generation-rag-in-azure-ai-a-step-by-step-guide/)
-- [Evaluating GPT-5 Models for RAG on Azure AI Foundry](https://techcommunity.microsoft.com/blog/educator-developer-blog/evaluating-gpt-5-models-for-rag-on-azure-ai-foundry/4392693)
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://dellenny.com/retrieval-augmented-generation-rag-in-azure-ai-a-step-by-step-guide/">Retrieval-Augmented Generation (RAG) in Azure AI: A Step-by-Step Guide</a></li>
+    <li><a href="https://techcommunity.microsoft.com/blog/educator-developer-blog/evaluating-gpt-5-models-for-rag-on-azure-ai-foundry/4392693">Evaluating GPT-5 Models for RAG on Azure AI Foundry</a></li>
+  </ul>
+</div>
 
 ## Agents and agentic AI
 
-**What makes something an agent?**
-An AI agent is a system that can autonomously perform tasks, make decisions, and interact with external environments to achieve specific goals. Unlike simple AI models that respond to individual prompts, agents can:
+An AI agent is a system that can autonomously perform tasks, make decisions, and interact with external environments to achieve specific goals. Unlike simple AI models that respond to individual prompts, agents can plan multi-step tasks, use tools and external services, learn from feedback, operate with some degree of independence, and maintain context across multiple interactions.
+
+### What makes something an agent?
+
+Agents exhibit these key capabilities:
 
 - Plan multi-step tasks
 - Use tools and external services
@@ -417,7 +447,8 @@ An AI agent is a system that can autonomously perform tasks, make decisions, and
 - Operate with some degree of independence
 - Maintain context across multiple interactions
 
-**Is there a formal definition or interface?**
+### Is there a formal definition or interface?
+
 While there's no single universal definition, most AI agents share common characteristics:
 
 - **Autonomy**: Can operate without constant human intervention
@@ -426,14 +457,16 @@ While there's no single universal definition, most AI agents share common charac
 - **Tool use**: Can access and utilize external resources
 - **Planning**: Can break down complex tasks into manageable steps
 
-**What's the difference compared to MCP servers?**
-**MCP servers** provide specific services and tools that AI models can access through a standardized protocol. They're typically focused on particular functions (like database access or file management).
+### What's the difference compared to MCP servers?
 
-**AI agents** use tools and services (potentially including MCP servers) to accomplish broader goals. An agent might use multiple MCP servers, APIs, and other resources to complete complex, multi-step tasks.
+MCP servers provide specific services and tools that AI models can access through a standardized protocol. They're typically focused on particular functions (like database access or file management).
+
+AI agents use tools and services (potentially including MCP servers) to accomplish broader goals. An agent might use multiple MCP servers, APIs, and other resources to complete complex, multi-step tasks.
 
 Think of MCP servers as specialized tools in a workshop, while AI agents are the skilled craftspeople who use those tools to complete projects.
 
-**What does "agentic" mean?**
+### What does "agentic" mean?
+
 "Agentic" describes AI systems that exhibit agent-like behaviors - the ability to act independently, make decisions, and pursue goals with minimal human oversight. Agentic AI can:
 
 - Take initiative to solve problems
@@ -442,21 +475,24 @@ Think of MCP servers as specialized tools in a workshop, while AI agents are the
 - Work toward long-term objectives
 - Coordinate with other systems or agents
 
-Examples of agentic AI:
+### Examples of agentic AI
 
 - **Personal assistants** that can book appointments, send emails, and manage schedules
 - **Code assistants** that can analyze codebases, identify issues, and implement fixes
 - **Research agents** that can gather information from multiple sources and synthesize findings
 - **Customer service agents** that can resolve issues across multiple systems and departments
 
-More information:
-
-- [Introducing Microsoft Discovery: An Agentic AI Platform for Scientific Research](https://www.youtube.com/watch?v=k3S4lPbUWng)
-- [Designing and Creating Agentic AI Systems on Azure](https://www.techug.com/designing-and-creating-agentic-ai-in-azure/)
-- [Agent Factory: Enterprise Patterns and Best Practices for Agentic AI with Azure AI Foundry Agent Service](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/4296074)
-- [Building a multi-agent system with Semantic Kernel](https://geekodon.com/building-a-multi-agent-system-with-semantic-kernel/)
-- [Build Biosensing AI-Native Apps on Azure with BCI, AI Foundry, and Agents Service](https://azure.microsoft.com/en-us/blog/build-biosensing-ai-native-apps-on-azure-with-bci-ai-foundry-and-agents-service/)
-- [Unlocking Innovation with Azure AI Foundry Agent Service](https://johnnaguib.substack.com/p/unlocking-innovation-with-azure-ai)
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=k3S4lPbUWng">Introducing Microsoft Discovery: An Agentic AI Platform for Scientific Research</a></li>
+    <li><a href="https://www.techug.com/designing-and-creating-agentic-ai-in-azure/">Designing and Creating Agentic AI Systems on Azure</a></li>
+    <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/4296074">Agent Factory: Enterprise Patterns and Best Practices for Agentic AI with Azure AI Foundry Agent Service</a></li>
+    <li><a href="https://geekodon.com/building-a-multi-agent-system-with-semantic-kernel/">Building a multi-agent system with Semantic Kernel</a></li>
+    <li><a href="https://azure.microsoft.com/en-us/blog/build-biosensing-ai-native-apps-on-azure-with-bci-ai-foundry-and-agents-service/">Build Biosensing AI-Native Apps on Azure with BCI, AI Foundry, and Agents Service</a></li>
+    <li><a href="https://johnnaguib.substack.com/p/unlocking-innovation-with-azure-ai">Unlocking Innovation with Azure AI Foundry Agent Service</a></li>
+  </ul>
+</div>
 
 ## Multi-agent solutions
 
@@ -503,29 +539,19 @@ graph TB
 - Evaluation closes the feedback loop: define success criteria, measure outcomes, and feed results back into the process.
 - Across the system, observability and provenance matter: log handoffs, tool calls, and sources. Keep cost and latency in check by parallelizing independent work and capping tokens and turns.
 
-### Coordination models
+### Orchestration patterns
 
-Coordination models describe how control and data move between agents. There isn’t a single model. In practice, you combine three choices:
+Multi-agent coordination combines three design choices: **control** (who decides), **topology** (how work is scheduled), and **state sharing** (how agents exchange context). Microsoft Agent Framework provides pre-built patterns that encode these choices:
 
-- Control pattern: who decides and in what order:
-  - Orchestrator–worker (also called planner/router): a single coordinator chooses the next agent and enforces sequence.
-  - Decentralized/peer: agents trigger or negotiate with each other without a central coordinator.
+| Pattern | Control | Topology | Best for |
+| ------- | ------- | -------- | -------- |
+| **Concurrent** | Orchestrator broadcasts to all | Parallel fan-out/fan-in | Parallel analysis, ensemble decisions, independent subtasks |
+| **Sequential** | Orchestrator chains agents | Serial pipeline | Step-by-step workflows, multi-stage processing |
+| **Group Chat** | Manager selects speakers | Collaborative rounds | Iterative refinement, content review, collaborative problem-solving |
+| **Handoff** | Dynamic peer delegation | Context-driven routing | Escalation, fallback, expert handoff scenarios |
+| **Magentic** | Adaptive coordination | Complex collaboration | Generalist multi-agent tasks inspired by MagenticOne |
 
-- Execution topology: how the work is scheduled:
-  - Serial/pipeline: dependent steps run one after another.
-  - Parallel fan-out/fan-in: independent subtasks run concurrently and merge when all are done.
-
-- State sharing: how agents exchange context:
-  - Shared memory/blackboard: agents post and read structured artifacts (IDs, summaries, links) from a common store.
-  - Direct messages: agents hand artifacts to specific peers.
-
-How these relate:
-
-- Orchestrator–worker is about control. You can still run fan-out/fan-in or a serial pipeline under an orchestrator. The orchestrator decides who acts when.
-- Fan-out/fan-in is about topology. It pairs with either centralized (orchestrator) or decentralized control.
-- Shared memory is about state. It works with both approaches to persist intermediate artifacts without over-sharing raw context.
-
-These building blocks scale from small workflows to complex pipelines without changing the mental model.
+These patterns compose: a sequential pipeline might include a group chat step for review, or a handoff pattern might delegate to concurrent sub-agents. State flows as compact artifacts (IDs, summaries, links) via shared memory or direct messages—choose based on whether agents need a common workspace or point-to-point handoffs.
 
 ### MCP and A2A in the architecture
 
@@ -537,7 +563,7 @@ A2A (agent-to-agent) covers how agents talk to each other: structured messages a
 
 ACP is an emerging specification that aims to standardize A2A message formats and interaction patterns.
 
-Together: MCP connects agents to the outside world. A2A connects agents to each other. MCP keeps tool access consistent, and A2A keeps collaboration predictable.
+Together: MCP connects agents to the outside world. A2A connects agents to each other. MCP keeps tool access consistent, and ACP keeps collaboration predictable.
 
 ### When to adopt multi-agent designs
 
@@ -551,24 +577,112 @@ Bound execution with token/turn caps and clear exit conditions.
 
 Capture the trail: log every handoff and tool call, including sources, for traceability. Finally, build an evaluation harness that exercises end-to-end scenarios so you can quantify quality, prevent regressions, and iterate safely.
 
-More information:
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://devblogs.microsoft.com/blog/designing-multi-agent-intelligence">Designing Multi-Agent Intelligence (Microsoft DevBlogs)</a></li>
+    <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/4296074">Agent Factory: Enterprise Patterns and Best Practices for Agentic AI with Azure AI Foundry</a></li>
+    <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/zero-trust-agents-adding-identity-and-access-to-multi-agent-workflows/4273932">Zero Trust Agents: Adding Identity and Access to Multi-Agent Workflows</a></li>
+    <li><a href="https://geekodon.com/building-a-multi-agent-system-with-semantic-kernel/">Building a multi-agent system with Semantic Kernel</a></li>
+    <li><a href="https://www.youtube.com/watch?v=IMcDEvXRBkY">Choosing Between MCP and A2A for AI Applications</a></li>
+    <li><a href="https://www.youtube.com/watch?v=s8xJTAu5icM">Ctrl Shift — MCP & A2A: Why Business Leaders Should Care</a></li>
+    <li><a href="https://www.youtube.com/watch?v=X-Dh9R3Opn8">Using Agentic Protocols (MCP, A2A, and NLWeb)</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/agent-framework/user-guide/workflows/orchestrations/overview">Microsoft Agent Framework Orchestrations</a></li>
+  </ul>
+</div>
 
-- Articles
-  - [Designing Multi-Agent Intelligence (Microsoft DevBlogs)](https://devblogs.microsoft.com/blog/designing-multi-agent-intelligence)
-  - [Agent Factory: Enterprise Patterns and Best Practices for Agentic AI with Azure AI Foundry](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/4296074)
-  - [Zero Trust Agents: Adding Identity and Access to Multi-Agent Workflows](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/zero-trust-agents-adding-identity-and-access-to-multi-agent-workflows/4273932)
-  - [Building a multi-agent system with Semantic Kernel](https://geekodon.com/building-a-multi-agent-system-with-semantic-kernel/)
+## Observability: Monitoring and evaluating AI applications
 
-- Videos
-  - [Choosing Between MCP and A2A for AI Applications](https://www.youtube.com/watch?v=IMcDEvXRBkY)
-  - [Ctrl Shift — MCP & A2A: Why Business Leaders Should Care](https://www.youtube.com/watch?v=s8xJTAu5icM)
-  - [Using Agentic Protocols (MCP, A2A, and NLWeb)](https://www.youtube.com/watch?v=X-Dh9R3Opn8)
+AI observability refers to the ability to monitor, understand, and troubleshoot AI systems throughout their lifecycle. It involves collecting and analyzing signals such as evaluation metrics, logs, traces, and model outputs to gain visibility into performance, quality, safety, and operational health.
+
+Without rigorous assessment and monitoring, AI systems can produce content that's fabricated, irrelevant, harmful, or vulnerable to security exploits. Observability capabilities measure both the frequency and severity of risks in AI outputs.
+
+### The three stages of GenAIOps evaluation
+
+Evaluation isn't just a checkpoint—it's the foundation of quality and trust in AI applications. GenAIOps uses three evaluation stages:
+
+```mermaid
+flowchart LR
+    subgraph Stage1["1. Model Selection"]
+        Compare["Compare models\non benchmarks"]
+        Quality["Quality, safety,\ntask performance"]
+    end
+    
+    subgraph Stage2["2. Preproduction"]
+        Test["Test with\nevaluation datasets"]
+        Edge["Identify edge cases\nand measure metrics"]
+    end
+    
+    subgraph Stage3["3. Production"]
+        Monitor["Continuous\nmonitoring"]
+        Alert["Alerts and\nscheduled evaluation"]
+    end
+    
+    Stage1 --> Stage2 --> Stage3
+    
+    style Compare fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Quality fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Test fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Edge fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Monitor fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Alert fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+```
+
+#### Stage 1: Base model selection
+
+Before building your application, compare different models based on quality/accuracy, task performance, ethical considerations, and safety profile. Use benchmarks to compare models on public datasets or your own data.
+
+#### Stage 2: Preproduction evaluation
+
+Before deploying to production, thoroughly test with evaluation datasets that simulate realistic user interactions. This stage involves identifying edge cases, assessing robustness, and measuring key metrics like task adherence, groundedness, relevance, and safety.
+
+Tools for preproduction include bringing your own test data, using simulators to generate test queries, and running AI red teaming to simulate adversarial attacks.
+
+#### Stage 3: Post-production monitoring
+
+After deployment, continuous monitoring ensures your AI application maintains quality in real-world conditions:
+
+- **Operational metrics**: Regular measurement of latency, throughput, and error rates
+- **Continuous evaluation**: Quality and safety evaluation of production traffic at a sampled rate
+- **Scheduled evaluation**: Periodic testing with fixed datasets to detect drift
+- **Alerts**: Notifications when evaluation results drop below thresholds
+
+### Types of evaluators
+
+Evaluators are specialized tools that measure quality, safety, and reliability of AI responses:
+
+| Category | Evaluators | Purpose |
+| -------- | ---------- | ------- |
+| **General quality** | Coherence, Fluency, QA | Measure logical consistency, readability, and overall quality |
+| **RAG quality** | Groundedness, Relevance, Retrieval | Measure how well responses use retrieved context |
+| **Textual similarity** | F1 Score, BLEU, ROUGE, METEOR | Compare outputs against ground truth |
+| **Safety and security** | Hate/Unfairness, Sexual, Violence, Self-Harm, Protected Materials | Identify harmful or inappropriate content |
+| **Agent-specific** | Task Adherence, Task Completion, Tool Call Accuracy | Measure agent behavior and tool use quality |
+
+### Building observability into your system
+
+Effective observability requires:
+
+- **Tracing**: Capture detailed telemetry from your application including prompts, responses, tool calls, and timing
+- **Dashboards**: Visualize key metrics like token consumption, latency, exceptions, and quality scores
+- **Alerting**: Set up proactive notifications when metrics degrade or harmful outputs occur
+- **Logging**: Record interactions for debugging, auditing, and compliance
+
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/observability">Observability in generative AI (Microsoft Learn)</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/evaluate-generative-ai-app">Evaluate generative AI apps using Microsoft Foundry</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/training/modules/evaluate-models-azure-ai-studio/">Evaluate generative AI performance in Microsoft Foundry portal (Training)</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators">Agent evaluators documentation</a></li>
+  </ul>
+</div>
 
 ## Scaling AI implementations
 
-**Scaled GenAI** refers to deploying generative AI solutions across entire organizations or large user bases. This requires considerations around infrastructure, cost management, quality control, security, and governance. Companies implementing scaled GenAI need to think about how to maintain consistency, manage costs, and ensure responsible use across thousands of users and use cases.
+Scaled GenAI refers to deploying generative AI solutions across entire organizations or large user bases. This requires considerations around infrastructure, cost management, quality control, security, and governance. Companies implementing scaled GenAI need to think about how to maintain consistency, manage costs, and ensure responsible use across thousands of users and use cases.
 
-Key considerations for scaling AI:
+### Key considerations for scaling AI
 
 - **Infrastructure planning**: Ensuring adequate computational resources and network capacity
 - **Cost management**: Monitoring and optimizing AI usage costs across the organization
@@ -581,7 +695,7 @@ Key considerations for scaling AI:
 
 An AI CCoE is a cross-functional hub that accelerates safe, consistent, and cost-effective AI adoption at scale by centralizing strategy, governance, platforms, and skills.
 
-What it does:
+#### What it does
 
 - Strategic guidance: enterprise AI vision, roadmaps, business case/ROI models
 - Governance and standards: responsible AI policy, risk and compliance controls, audit processes
@@ -589,7 +703,7 @@ What it does:
 - Knowledge sharing: best practices, communities of practice, reuse catalogs
 - Talent development: training paths, certification, mentorship
 
-Lean structure (typical core roles):
+#### Lean structure (typical core roles)
 
 - Director (strategy and executive alignment)
 - Technical lead (architecture and platform)
@@ -597,19 +711,19 @@ Lean structure (typical core roles):
 - Ethics/compliance officer (responsible AI, legal)
 - Program manager (portfolio and delivery)
 
-Operating model (lightweight but enforced):
+#### Operating model (lightweight but enforced)
 
 - Intake and prioritization: clear request template and value/risk scoring
 - Standard lifecycle: quality gates for data, evals, security, and responsible-AI checks
 - Support and operations: monitoring, incident handling, cost/perf optimization
 
-Phased rollout (fastest path to impact):
+#### Phased rollout (fastest path to impact)
 
 - Phase 1: Foundation (3 months) — team, inventory, initial policy, comms
 - Phase 2: Pilots (3–6 months) — 2–3 business-value pilots on the shared platform
 - Phase 3: Scale (6–9 months) — replicate patterns, expand governance and literacy
 
-Measure what matters (sample KPIs):
+#### Measure what matters (sample KPIs)
 
 - Time to production (target 3–6 months), component reuse rate (≥60%)
 - Model quality/compliance (≥90% production-ready, incident reduction)
@@ -631,15 +745,17 @@ Traditional search matches exact words. Semantic search matches meaning using em
 
 NLWeb refers to patterns that make the web conversational by default. Pages expose capabilities (search, lookup, actions) as structured affordances that AI agents can call. Content is organized as artifacts with clear identifiers and metadata. Users ask for outcomes (“Find the latest pricing and compare to last quarter”), and the site resolves the request through tools and data rather than forcing step-by-step navigation.
 
-What changes:
+#### What changes
 
 - Interfaces become intent-first rather than page-first
 - Sites describe actions and data in machine-readable ways so agents can help
 - Results include sources, links, and artifacts you can reuse
 
-Some projects describe this as an “agent-native” layer for the web, similar to how HTML+HTTP enabled browsers. If you want a concrete example, the NLWeb project itself frames the idea in relation to MCP (and mentions A2A as an emerging direction).
+Some projects describe this as an "agent-native" layer for the web, similar to how HTML+HTTP enabled browsers. If you want a concrete example, the NLWeb project itself frames the idea in relation to MCP (and mentions A2A as an emerging direction).
 
-Implementation details (one example, not a standard): [NLWeb](https://github.com/nlweb-ai/NLWeb) is an open-source project that aims to simplify building conversational interfaces for websites. It describes using semi-structured formats (like Schema.org and RSS) as inputs, indexing content into a vector store for semantic retrieval, and exposing capabilities via MCP so AI clients can call tools against the site.
+#### Implementation details
+
+[NLWeb](https://github.com/nlweb-ai/NLWeb) is an open-source project that aims to simplify building conversational interfaces for websites. It describes using semi-structured formats (like Schema.org and RSS) as inputs, indexing content into a vector store for semantic retrieval, and exposing capabilities via MCP so AI clients can call tools against the site.
 
 ### llms.txt
 
@@ -652,7 +768,7 @@ The bottom line: AI turns websites and data stores into conversational surfaces.
 
 ---
 
-<div class="page-nav-box page-nav-box--pink">
+<div class="page-nav-box page-nav-box--blue">
   <h3>💡 Ready to Build Real Applications?</h3>
   <p>Put your advanced knowledge into practice! Learn how to integrate GenAI into real-world applications and workflows.</p>
   <a href="/ai/genai-applied.html">Continue to GenAI Applied →</a>

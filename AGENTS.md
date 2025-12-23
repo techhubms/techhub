@@ -16,7 +16,7 @@ Tech Hub is a Jekyll-based static site for Microsoft technology content, featuri
   - JavaScript: Jest with jsdom
   - PowerShell: Pester v5
   - E2E: Playwright
-- **AI Integration**: Azure OpenAI / GitHub Models
+- **AI Integration**: Azure OpenAI
 - **CI/CD**: GitHub Actions
 
 ## Repository Structure
@@ -37,6 +37,43 @@ Tech Hub is a Jekyll-based static site for Microsoft technology content, featuri
 ```
 
 ## Critical Development Rules
+
+### CRITICAL: Mandatory Reading by Domain
+
+**Before making ANY changes, read the domain-specific AGENTS.md file first.** These files contain essential patterns, color palettes, naming conventions, and constraints that MUST be followed.
+
+| Change Type | Read First | Why It's Critical |
+| ----------- | ---------- | ----------------- |
+| Styling, CSS, SCSS, colors, layout, visual appearance | [_sass/AGENTS.md](_sass/AGENTS.md) | Contains site color palette, spacing variables, component patterns |
+| Client-side JavaScript, DOM manipulation, event handling | [assets/js/AGENTS.md](assets/js/AGENTS.md) | Module architecture, initialization patterns, performance rules |
+| PowerShell scripts, automation, RSS processing | [scripts/AGENTS.md](scripts/AGENTS.md) | Script patterns, error handling, path conventions |
+| Jekyll plugins, Ruby, page generation | [_plugins/AGENTS.md](_plugins/AGENTS.md) | Plugin architecture, Liquid integration patterns |
+| RSS feeds, feed configuration | [rss/AGENTS.md](rss/AGENTS.md) | Feed structure, caching rules |
+| Tests (any language) | [spec/AGENTS.md](spec/AGENTS.md) | Test organization, framework-specific patterns |
+| Documentation | [docs/AGENTS.md](docs/AGENTS.md) | Writing standards, file organization |
+
+**Failure to read domain AGENTS.md files results in:**
+
+- Using wrong colors/styles that don't match the site theme
+- Breaking established patterns and conventions
+- Creating inconsistent code that requires rework
+
+### CRITICAL: Documentation Reference by Topic
+
+**Before making ANY changes, first consult these docs when working on specific features or areas.** These documents provide in-depth explanations of architecture, functionality, patterns, and best practices.
+
+| Topic | Read This | When To Use |
+| ----- | --------- | ----------- |
+| Site structure, sections, collections | [site-overview.md](docs/site-overview.md) | Adding sections, understanding URL patterns, modifying collections |
+| Content creation, RSS feeds, AI processing | [content-management.md](docs/content-management.md) | Adding content, configuring RSS sources, understanding AI transformation |
+| Jekyll patterns, Liquid, layouts | [jekyll-development.md](docs/jekyll-development.md) | Working with templates, includes, front matter |
+| Tag filtering, filter UI | [filtering-system.md](docs/filtering-system.md) | Modifying filter behavior, adding filter types |
+| Dates, timezones, scheduling | [datetime-processing.md](docs/datetime-processing.md) | Any date/time operations, scheduling content |
+| Project vocabulary | [terminology.md](docs/terminology.md) | Understanding project-specific terms |
+| Writing content | [writing-style-guidelines.md](docs/writing-style-guidelines.md) | Creating or editing user-facing content |
+| Markdown formatting | [markdown-guidelines.md](docs/markdown-guidelines.md) | Formatting markdown files correctly |
+| Performance optimization | [performance-guidelines.md](docs/performance-guidelines.md) | Optimizing load times, reducing bundle size |
+| Documentation structure | [documentation-guidelines.md](docs/documentation-guidelines.md) | Writing or updating documentation |
 
 ### Code Quality
 
@@ -75,6 +112,16 @@ Tech Hub is a Jekyll-based static site for Microsoft technology content, featuri
 - Install workspace dependencies in `.devcontainer/post-create.sh`
 - Check `.github/workflows/` when updating post-create script
 - Never install dependencies in PowerShell scripts or other runtime contexts
+
+### Never Do
+
+- Never invent or fabricate information
+- Never use unverifiable content
+- Never leave documentation out of sync with code
+- Never add wrapper methods in production code just for tests
+- Never make code backwards compatible unless explicitly requested
+- Never add comments describing what you changed
+- Never start responses with "Sure!" or "You're right!"
 
 ## Key Concepts
 
@@ -125,38 +172,3 @@ Automated hourly RSS downloads with AI-powered content transformation. See [cont
 ```
 
 For domain-specific commands, see the relevant AGENTS.md file.
-
-## Resources
-
-### Domain-Specific AGENTS.md Files
-
-- [scripts/AGENTS.md](scripts/AGENTS.md) - PowerShell development
-- [_plugins/AGENTS.md](_plugins/AGENTS.md) - Jekyll Ruby plugins
-- [assets/js/AGENTS.md](assets/js/AGENTS.md) - Client-side JavaScript
-- [_sass/AGENTS.md](_sass/AGENTS.md) - SCSS styling
-- [rss/AGENTS.md](rss/AGENTS.md) - RSS feed management
-- [docs/AGENTS.md](docs/AGENTS.md) - Documentation guidelines
-- [spec/AGENTS.md](spec/AGENTS.md) - Testing strategies
-
-### Documentation
-
-- [site-overview.md](docs/site-overview.md) - Site architecture and structure
-- [content-management.md](docs/content-management.md) - Content creation and RSS processing
-- [jekyll-development.md](docs/jekyll-development.md) - Jekyll-specific patterns
-- [filtering-system.md](docs/filtering-system.md) - Filtering implementation
-- [datetime-processing.md](docs/datetime-processing.md) - Date and timezone handling
-- [terminology.md](docs/terminology.md) - Project vocabulary
-- [writing-style-guidelines.md](docs/writing-style-guidelines.md) - Content writing standards
-- [markdown-guidelines.md](docs/markdown-guidelines.md) - Markdown formatting
-- [performance-guidelines.md](docs/performance-guidelines.md) - Performance optimization
-- [documentation-guidelines.md](docs/documentation-guidelines.md) - Documentation structure
-
-## Never Do
-
-- Never invent or fabricate information
-- Never use unverifiable content
-- Never leave documentation out of sync with code
-- Never add wrapper methods in production code just for tests
-- Never make code backwards compatible unless explicitly requested
-- Never add comments describing what you changed
-- Never start responses with "Sure!" or "You're right!"

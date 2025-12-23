@@ -137,17 +137,17 @@
 }
 
 .page-nav-box--purple {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, colors.$darker-navy 0%, colors.$medium-purple 100%);
 
     a {
-        color: #667eea;
+        color: colors.$medium-purple;
     }
 }
 
-.page-nav-box--pink {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+.page-nav-box--blue {
+    background: linear-gradient(135deg, colors.$darker-navy 0%, colors.$medium-blue 100%);
 
     a {
-        color: #f5576c;
+        color: colors.$medium-blue;
     }
 }

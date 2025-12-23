@@ -1,7 +1,3 @@
----
-applyTo: "**/*.md"
----
-
 # Instructions for AI models when generating markdown files
 
 **CRITICAL**: Always follow the writing style guidelines in [writing-style-guidelines.md](writing-style-guidelines.md) for tone, language, and content standards.
