@@ -52,7 +52,7 @@
 - Never leave comments that describe what changed or what you did, for example 'All filtering is now tag-based (no more mode-specific configs needed)'.
 
 - Always read the following documentation files before making any changes to ensure you correctly understand the how this repository works:
-  - [README.md](../README.md): Repository introduction, quick start guide, and entry point to all other documentation
+  - [README.md](../docs/README.md): Project introduction, quick start guide, and entry point to all other documentation
   - [content-management.md](../docs/content-management.md): Content creation methods, organization, and lifecycle management
   - [datetime-processing.md](../docs/datetime-processing.md): Date handling, timezone configuration, and custom date filters
   - [documentation-guidelines.md](../docs/documentation-guidelines.md): Documentation structure, hierarchy, and content placement rules
