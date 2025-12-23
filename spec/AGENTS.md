@@ -542,12 +542,6 @@ npx playwright test --trace on
 npx playwright show-trace trace.zip
 ```
 
-## Resources
-
-- [scripts/AGENTS.md](../scripts/AGENTS.md) - PowerShell development
-- [assets/js/AGENTS.md](../assets/js/AGENTS.md) - JavaScript development
-- [_plugins/AGENTS.md](../_plugins/AGENTS.md) - Ruby plugin development
-
 ## Never Do
 
 - Never duplicate production logic in tests

@@ -489,12 +489,6 @@ bundle exec rspec --format documentation
 |--------|---------|-------|
 | `generate_all_filters` | Generate unified filter data | `{{ items \| generate_all_filters: mode, sections, ... }}` |
 
-## Resources
-
-- [datetime-processing.md](../docs/datetime-processing.md) - Date handling details
-- [jekyll-development.md](../docs/jekyll-development.md) - Jekyll operational patterns
-- [spec/AGENTS.md](../spec/AGENTS.md) - Testing strategy and RSpec patterns
-
 ## Never Do
 
 - Never modify files directly in `_site/` (Jekyll overwrites on build)

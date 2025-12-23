@@ -542,11 +542,6 @@ Variables must be imported before they're used:
 ❌ settings.scss    - Will be compiled as separate CSS file
 ```
 
-## Resources
-
-- [performance-guidelines.md](../docs/performance-guidelines.md) - Performance optimization
-- [assets/js/AGENTS.md](../assets/js/AGENTS.md) - JavaScript development (for client-side interactions)
-
 ## Never Do
 
 - Never create SCSS files without underscore prefix in `_sass/`

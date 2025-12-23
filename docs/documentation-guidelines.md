@@ -114,7 +114,7 @@ Check the appropriate domain AGENTS.md file for action-oriented, development-foc
 - **`docs/site-overview.md`**: High-level architecture and system structure
 - **Purpose**: Establish fundamental understanding before diving into specifics
 
-### 3. Functionality-Oriented Files
+### 4. Functionality-Oriented Files
 
 - **`docs/filtering-system.md`**: Complete implementation of date and tag filtering systems
 - **`docs/datetime-processing.md`**: Date handling, timezone configuration, and custom date filters
@@ -308,3 +308,5 @@ For the current documentation index structure, see the [Directory Structure](#di
 | **datetime-processing.md** | Date handling, timezone configuration, and custom date filters | Working with dates and timezone processing |
 | **content-management.md** | Content creation workflows and RSS feed processing | Adding and managing content |
 | **markdown-guidelines.md** | Markdown formatting standards | Writing and formatting content |
+| **performance-guidelines.md** | Performance optimization strategies | Optimizing site performance |
+| **writing-style-guidelines.md** | Writing tone, style, and language standards | Creating authentic content |

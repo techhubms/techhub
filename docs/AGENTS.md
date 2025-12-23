@@ -289,23 +289,6 @@ For detailed guidelines on where to place documentation content, see [documentat
 - **JavaScript date code** → `assets/js/AGENTS.md`
 - **Ruby date code** → `_plugins/AGENTS.md`
 
-## Resources
-
-### Style Guides
-
-- [writing-style-guidelines.md](writing-style-guidelines.md) - Writing standards
-- [markdown-guidelines.md](markdown-guidelines.md) - Markdown formatting
-- [documentation-guidelines.md](documentation-guidelines.md) - Doc structure
-
-### Technical References
-
-- [terminology.md](terminology.md) - Vocabulary reference
-- [site-overview.md](site-overview.md) - Architecture overview
-
-### Development
-
-- Domain-specific AGENTS.md files for code-specific guidance (see root AGENTS.md for navigation)
-
 ## Never Do
 
 - Never let documentation diverge from code

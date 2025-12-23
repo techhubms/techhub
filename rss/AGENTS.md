@@ -270,9 +270,8 @@ Add feed links to site `<head>`:
 3. Verify closing tags match opening tags
 4. Ensure proper XML declaration
 
-## Resources
+## External Resources
 
-- [Jekyll RSS Feeds Guide](https://jekyllrb.com/tutorials/convert-site-to-jekyll/#10-rss-feed)
 - [RSS 2.0 Specification](https://www.rssboard.org/rss-specification)
 - [W3C Feed Validator](https://validator.w3.org/feed/)
 

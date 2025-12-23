@@ -130,14 +130,13 @@ $dx-practices-color: #c2185b;     // Pink
 }
 
 .dx-card-content {
-  max-height: 0;
+  display: none;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
   padding: 0 24px;
   background: rgba(colors.$darkest-navy, 0.3);
   
   &.expanded {
-    max-height: 5000px;
+    display: block;
     padding: 20px 24px 30px;
   }
 }

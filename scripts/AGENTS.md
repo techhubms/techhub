@@ -308,11 +308,6 @@ param(
 - **Skipped Entries**: `scripts/data/skipped-entries.json`
 - **RSS Cache**: `scripts/data/rss-cache/`
 
-## Resources
-
-- [content-management.md](../docs/content-management.md) - RSS processing documentation
-- [spec/AGENTS.md](../spec/AGENTS.md) - Testing strategy and Pester patterns
-
 ## Never Do
 
 - Never use backslashes for escaping

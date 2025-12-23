@@ -546,13 +546,6 @@ const now = new Date(); // Uses client timezone inconsistently
 - Numeric data attributes: `data-days="3"` or `data-epoch="1721541345"`
 - Epoch timestamp calculations in JavaScript
 
-## Resources
-
-- [filtering-system.md](../docs/filtering-system.md) - Filtering implementation details
-- [datetime-processing.md](../docs/datetime-processing.md) - Date and timezone configuration
-- [performance-guidelines.md](../docs/performance-guidelines.md) - Performance optimization
-- [spec/AGENTS.md](../spec/AGENTS.md) - Testing strategy and Jest patterns
-
 ## Never Do
 
 - Never render initial content with JavaScript (except sections.js)
