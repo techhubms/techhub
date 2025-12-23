@@ -1,7 +1,6 @@
 const { test, expect } = require('@playwright/test');
 const {
-  navigateAndVerify,
-  setupErrorTracking
+  navigateAndVerify
 } = require('./helpers.js');
 
 test.describe('Alt-Collection Tab Highlighting', () => {

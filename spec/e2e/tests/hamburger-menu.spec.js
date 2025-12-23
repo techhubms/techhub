@@ -21,7 +21,7 @@ test.describe('Hamburger Menu Navigation', () => {
     await expect(hamburgerButton).toBeEnabled();
 
     // Record initial navigation state
-    const initialNavLinks = await page.locator('a[href*="/ai"], a[href*="/github-copilot"]').count();
+    await page.locator('a[href*="/ai"], a[href*="/github-copilot"]').count();
     const initialVisibleLinks = await page.locator('a[href*="/ai"]:visible, a[href*="/github-copilot"]:visible').count();
 
     // Click to open menu and verify it actually opens

@@ -1,10 +1,9 @@
 const { test, expect } = require('@playwright/test');
 const {
-  TEST_CONFIG,
   SECTIONS,
   navigateAndVerify,
-  setupErrorTracking,
-  verifyNavigationLink
+  verifyNavigationLink,
+  setupErrorTracking
 } = require('./helpers.js');
 
 test.describe('Section Navigation', () => {
@@ -95,7 +94,7 @@ test.describe('Section Navigation', () => {
 
     aiCollectionUrls.forEach(url => {
       test(`should load ${url} successfully`, async ({ page }) => {
-        const result = await navigateAndVerify(page, url, {
+        await navigateAndVerify(page, url, {
           expectTitle: true,
           checkErrors: true,
           checkPerformance: true
@@ -119,7 +118,7 @@ test.describe('Section Navigation', () => {
         if (url.includes('/news.html') || url.includes('/posts.html') || url.includes('/community.html')) {
           // Should have posts or articles
           const articles = page.locator('article, .navigation-post-square, .news-item, .community-item');
-          const articleCount = await articles.count();
+          await articles.count();
           // May be 0 if no content exists yet, but structure should be there
           const contentContainer = page.locator('.posts-container, .news-container, .community-container, main');
           await expect(contentContainer.first()).toBeVisible();
@@ -134,12 +133,12 @@ test.describe('Section Navigation', () => {
       '/github-copilot/levels-of-enlightenment.html',
       '/github-copilot/news.html',
       '/github-copilot/posts.html',
-      '/github-copilot/community.html',
+      '/github-copilot/community.html'
     ];
 
     githubCopilotCollectionUrls.forEach(url => {
       test(`should load ${url} successfully`, async ({ page }) => {
-        const result = await navigateAndVerify(page, url, {
+        await navigateAndVerify(page, url, {
           expectTitle: true,
           checkErrors: true,
           checkPerformance: true
@@ -163,7 +162,7 @@ test.describe('Section Navigation', () => {
         if (url.includes('/news.html') || url.includes('/posts.html') || url.includes('/community.html')) {
           // Should have posts or articles structure
           const articles = page.locator('article, .navigation-post-square, .news-item, .community-item');
-          const articleCount = await articles.count();
+          await articles.count();
           // May be 0 if no content exists yet, but structure should be there
           const contentContainer = page.locator('.posts-container, .news-container, .community-container, main');
           await expect(contentContainer.first()).toBeVisible();

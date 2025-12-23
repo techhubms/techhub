@@ -83,9 +83,8 @@ test.describe('Performance and Accessibility', () => {
    * Test accessibility features for a page
    * @param {Page} page - Playwright page object
    * @param {string} url - URL to test
-   * @param {string} name - Name for logging
    */
-  async function testPageAccessibility(page, url, name) {
+  async function testPageAccessibility(page, url) {
     await navigateAndVerify(page, url);
 
     // Check for proper semantic elements
@@ -155,7 +154,7 @@ test.describe('Performance and Accessibility', () => {
     // Check that text is visible against backgrounds
     // Use :visible selector to only get visible elements
     const visibleTextElements = page.locator('p:visible, h1:visible, h2:visible, h3:visible, h4:visible, h5:visible, h6:visible, a:visible, span:visible').first();
-    
+
     if (await visibleTextElements.count() > 0) {
       await expect(visibleTextElements).toBeVisible();
 

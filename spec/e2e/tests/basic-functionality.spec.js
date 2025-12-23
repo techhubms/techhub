@@ -1,9 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const {
-  TEST_CONFIG,
   navigateAndVerify,
   setViewportSize,
-  setupErrorTracking,
   checkNoHorizontalScrollbar,
   verifyNavigationLink
 } = require('./helpers.js');
