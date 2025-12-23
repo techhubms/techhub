@@ -22472,5 +22472,28 @@
     "timestamp": "2025-12-22 17:06:27 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=OqzC9b3ueX0",
     "collection": "videos"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-22 20:06:20 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Pi57sH7iuKY"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content specifically discusses improvements to GitHub Actions workflow pages, which is a core DevOps tool and relates directly to CI/CD pipeline management (DevOps inclusion rule 2 and 5). There is no coverage of Coding, AI, Azure, ML, Security, or GitHub Copilot. Content is technical, focuses on practitioner use, and follows all inclusion rules without triggering any generic exclusions.",
+    "timestamp": "2025-12-22 23:05:49 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-22-improved-performance-for-github-actions-workflows-page",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/fix-it-before-they-feel-it-higher-reliability-with-proactive/ba-p/4480444",
+    "timestamp": "2025-12-23 00:12:07 +00:00",
+    "reason": "Succesfully added: Categories Azure, AI, DevOps, and Coding are included because the content centers on Azure SRE Agent (Azure rule 1), leverages AI/autonomous logic for detection and remediation (AI rule 1, 4), automates operations and integrates DevOps practices (DevOps rules 1, 5, 6), and includes deployment, code, and .NET platform implementation details (Coding rules 1 and 2). Security and ML are not included since security, compliance, or custom data science/analytics are not substantive aspects in the article.",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://github.blog/open-source/maintainers/5-podcast-episodes-to-help-you-build-with-confidence-in-2026/",
+    "reason": "Succesfully added: Assigned AI category because multiple sections focus on AI tooling, including discussion of the Model Context Protocol (AI rule 1 and 5). DevOps is included due to emphasis on open source development, community, contributors, sustainability, and developer workflow themes (DevOps rules 3, 4, 9, and 11). Coding is assigned due to coverage of developer skills, trends (like TypeScript and AI-assisted development), and tools for software builders (Coding rules 1, 4, and 5). Did not assign Azure, ML, or Security since the content discusses AI, open source, and developer tools at a platform/industry level but does not focus on specific Azure services, ML engineering, or security implementation. No generic exclusion rules are triggered.",
+    "collection": "news",
+    "timestamp": "2025-12-23 01:35:08 +00:00"
   }
 ]

@@ -10815,5 +10815,17 @@
     "reason": "No categories found: Content is excluded based on the CRITICAL Copilot Product Distinction rule. The main subject is an update to the general Microsoft Copilot product with a holiday-themed personality feature, discussed as part of user experience and design thinking. There is no focus on developer or maker tools like GitHub Copilot or Copilot Studio, and the content centers on user experience in a business productivity context. According to the Non-Development Microsoft Products exclusion, general-purpose Copilot, Copilot for Microsoft 365, and related productivity features are excluded from all categories. There is also no substantive technical detail about developer topics, coding, AI engineering, Azure, or advanced implementation that would qualify for other categories.",
     "collection": "news",
     "canonical_url": "https://www.linkedin.com/posts/satyanadella_we-are-bringing-a-little-holiday-cheer-to-activity-7407893451763113984-rrSK"
+  },
+  {
+    "canonical_url": "https://news.xbox.com/en-us/2025/12/19/getting-started-with-xbox-cloud-gaming/",
+    "reason": "No categories found: All categories are excluded due to generic exclusion rules for non-development Microsoft products. The content is primarily an end-user guide for Xbox Cloud Gaming, targeting gamers and consumers rather than developers or IT professionals. It provides instructions on accessing and using cloud gaming via Xbox Game Pass subscriptions across multiple platforms, but does not cover any development, coding, DevOps, AI, ML, architecture, deployment, security, or other technical implementation topics relevant to the Tech Hub audience. Neither the description nor the main body of content refer to APIs, SDKs, integration, code, or platform engineering. Therefore, per the generic exclusion rules for non-development Microsoft products (games, business productivity, and consumer services), no categories apply.",
+    "timestamp": "2025-12-22 18:05:38 +00:00",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/open-source/maintainers/this-years-most-influential-open-source-projects/",
+    "timestamp": "2025-12-23 00:11:21 +00:00",
+    "reason": "No categories found: No categories have been assigned. While the content centers on significant open source projects and community at GitHub Universe, it does not focus on technical implementation, coding, DevOps, AI/ML, Azure, Security, or GitHub Copilot as per category inclusion rules. The article highlights projects, maintainers, and community impact without in-depth technical walkthroughs or Microsoft-centric development, thus not qualifying for any specific category.",
+    "collection": "news"
   }
 ]
