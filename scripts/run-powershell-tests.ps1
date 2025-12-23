@@ -231,7 +231,7 @@ function Invoke-PowerShellTests {
     # Configure code coverage if requested
     if ($TestArgs["CodeCoverage"]) {
         # Make code coverage path relative to project root
-        $coveragePath = Join-Path $projectRoot "scripts/functions/*.ps1"
+        $coveragePath = Join-Path $projectRoot "scripts/content-processing/functions/*.ps1"
         if (Test-Path (Split-Path $coveragePath -Parent)) {
             $pesterConfig.CodeCoverage.Enabled = $true
             $pesterConfig.CodeCoverage.Path = @($coveragePath)
@@ -357,7 +357,7 @@ function Invoke-PowerShellTestsRunner() {
         
         # Add code coverage if requested
         if ($Coverage) {
-            $coveragePath = Join-Path $projectRoot "scripts/functions/*.ps1"
+            $coveragePath = Join-Path $projectRoot "scripts/content-processing/functions/*.ps1"
             $testArgs.CodeCoverage = $coveragePath
             Write-ColoredOutput "📊 Code coverage analysis enabled: $coveragePath" $Yellow
         }

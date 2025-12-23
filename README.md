@@ -81,18 +81,15 @@ The repository uses domain-specific AGENTS.md files for action-oriented developm
 For architectural details, design decisions, and complete specifications:
 
 - **[docs/content-management.md](docs/content-management.md)** - Content creation and organization
+- **[docs/datetime-processing.md](docs/datetime-processing.md)** - Date handling and timezone configuration
 - **[docs/documentation-guidelines.md](docs/documentation-guidelines.md)** - Documentation structure and hierarchy
 - **[docs/filtering-system.md](docs/filtering-system.md)** - Complete filtering system architecture
-- **[docs/datetime-processing.md](docs/datetime-processing.md)** - Date handling and timezone configuration
 - **[docs/jekyll-development.md](docs/jekyll-development.md)** - Jekyll-specific development patterns
-- **[docs/plugins.md](docs/plugins.md)** - Jekyll plugin architecture and implementation
-- **[docs/rss-feeds.md](docs/rss-feeds.md)** - RSS feed integration and processing
+- **[docs/markdown-guidelines.md](docs/markdown-guidelines.md)** - Markdown formatting for AI models
+- **[docs/performance-guidelines.md](docs/performance-guidelines.md)** - Performance optimization strategies
 - **[docs/site-overview.md](docs/site-overview.md)** - Comprehensive site structure overview
 - **[docs/terminology.md](docs/terminology.md)** - Project vocabulary and concepts
-- **[docs/performance-guidelines.md](docs/performance-guidelines.md)** - Performance optimization strategies
-- **[docs/markdown-guidelines.md](docs/markdown-guidelines.md)** - Markdown formatting for AI models
 - **[docs/writing-style-guidelines.md](docs/writing-style-guidelines.md)** - Content writing standards
-- **[docs/github-token-setup.md](docs/github-token-setup.md)** - GitHub token configuration
 
 ## Contributing
 

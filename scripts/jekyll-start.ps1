@@ -26,7 +26,7 @@ if ($unknownParameters) {
 try {
     if (-not $SkipStop) {
         # Stop existing Jekyll processes using separate script
-        & "./jekyll-stop.ps1"
+        & "./scripts/jekyll-stop.ps1"
     }
     
     if (-not $SkipClean) {

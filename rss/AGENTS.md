@@ -199,29 +199,6 @@ Use [W3C Feed Validator](https://validator.w3.org/feed/):
 </item>
 ```
 
-## Automation
-
-### RSS Processing Workflow
-
-The Tech Hub uses automated RSS processing:
-
-1. **Download**: `scripts/download-rss-feeds.ps1` fetches external feeds
-2. **Transform**: `scripts/process-rss-to-markdown.ps1` converts to markdown
-3. **Build**: Jekyll generates RSS XML files for syndication
-4. **Publish**: Feeds available at `/rss/*.xml`
-
-### Configuration
-
-External feed sources configured in `_data/rss-feeds.json`:
-
-```json
-{
-  "name": "Feed Name",
-  "url": "https://example.com/feed.xml",
-  "outputDir": "_posts"
-}
-```
-
 ## Performance Considerations
 
 ### Item Limits
@@ -270,26 +247,6 @@ Add feed links to site `<head>`:
 - Monitor feed validator for issues
 - Update feed descriptions when site changes
 
-## Common Feed Reader Compatibility
-
-### Feedly
-
-- Supports RSS 2.0 ✓
-- Requires valid XML ✓
-- Honors item limits ✓
-- Displays categories as tags ✓
-
-### NewsBlur
-
-- Supports RSS 2.0 ✓
-- Requires proper date formatting ✓
-- Shows full descriptions ✓
-
-### Outlook
-
-- Basic RSS 2.0 support ✓
-- Limited category support ⚠️
-
 ## Troubleshooting
 
 ### Feed Not Appearing
@@ -315,7 +272,6 @@ Add feed links to site `<head>`:
 
 ## Resources
 
-- [rss-feeds.md](../docs/rss-feeds.md) - RSS processing documentation
 - [Jekyll RSS Feeds Guide](https://jekyllrb.com/tutorials/convert-site-to-jekyll/#10-rss-feed)
 - [RSS 2.0 Specification](https://www.rssboard.org/rss-specification)
 - [W3C Feed Validator](https://validator.w3.org/feed/)

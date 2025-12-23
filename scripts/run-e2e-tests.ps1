@@ -218,7 +218,7 @@ function Start-Jekyll {
     }
     
     # Use script variables for paths
-    $jekyllScript = Join-Path $script:rootDir "jekyll-start.ps1"
+    $jekyllScript = Join-Path $script:rootDir "scripts/jekyll-start.ps1"
     
     # Ensure Jekyll script exists
     if (-not (Test-Path $jekyllScript)) {
@@ -309,7 +309,9 @@ function Test-BrowsersInstalled {
             $chromiumPath = Join-Path $playwrightCache $dir
             $executablePaths = @(
                 "chrome-linux/chrome",
-                "chrome-linux/headless_shell", 
+                "chrome-linux64/chrome",
+                "chrome-linux/headless_shell",
+                "chrome-linux64/headless_shell",
                 "chrome-win/chrome.exe",
                 "chrome-mac/Chromium.app/Contents/MacOS/Chromium"
             )

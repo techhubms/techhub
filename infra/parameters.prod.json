@@ -8,29 +8,8 @@
     "location": {
       "value": "westeurope"
     },
-    "sqlDatabaseTier": {
-      "value": "Standard"
-    },
-    "sqlDatabaseSku": {
-      "value": "S3"
-    },
-    "maxSizeBytes": {
-      "value": 268435456000
-    },
-    "sqlAdminUsername": {
-      "value": "sqladmin"
-    },
-    "sqlAdminPassword": {
-      "value": "REPLACE_WITH_SECURE_PASSWORD"
-    },
     "environment": {
       "value": "prod"
-    },
-    "enableAdvancedThreatProtection": {
-      "value": true
-    },
-    "backupRetentionDays": {
-      "value": 35
     },
     "repositoryUrl": {
       "value": "https://github.com/techhubms/techhub"

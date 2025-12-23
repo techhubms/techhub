@@ -14,9 +14,6 @@ on:
         description: 'End date (YYYY-MM-DD) - optional, defaults to last Sunday'
         required: false
         type: string
-  # uncomment for testing in a branch
-  # push:
-    # paths: .github/workflows/weekly-roundup-generation.yml
 
 permissions:
   contents: write
@@ -140,7 +137,7 @@ jobs:
           Set-Location $env:GITHUB_WORKSPACE
           
           # Run the roundup generation script with default parameters
-          & scripts/iterative-roundup-generation.ps1 `
+          & scripts/content-processing/iterative-roundup-generation.ps1 `
             -Token "${{ secrets.AZURE_AI_KEY }}" `
             -Model "gpt-4.1" `
             -Endpoint "https://oai-techhub.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview" `

@@ -35,6 +35,11 @@ echo "  node: $(ls -la /usr/local/bin/node)"
 echo "  npm: $(ls -la /usr/local/bin/npm)"
 echo "  npx: $(ls -la /usr/local/bin/npx)"
 
+# Update npm to the latest version
+echo "Updating npm to latest version..."
+npm install -g npm@latest
+echo "npm version: $(npm --version)"
+
 # Install PowerShell modules required for the project
 echo "Installing PowerShell modules..."
 pwsh -Command 'Install-Module HtmlToMarkdown -AcceptLicense -Force'
@@ -79,95 +84,27 @@ npx -y playwright@latest install --force
 echo "Latest Playwright browsers and dependencies installed successfully"
 echo "Playwright version: $(npx playwright@latest --version)"
 
-# Add Ruby user gem bin directory to PATH for bundler availability
-echo "Setting up Ruby bundler PATH..."
-if command -v ruby >/dev/null 2>&1; then
-    RUBY_VERSION=$(ruby -e "puts RbConfig::CONFIG['ruby_version']" 2>/dev/null)
-    if [ -n "$RUBY_VERSION" ]; then
-        USER_GEM_BIN="$HOME/.local/share/gem/ruby/$RUBY_VERSION/bin"
-        
-        # Check if bundler exists in user gem directory
-        if [ -f "$USER_GEM_BIN/bundle" ]; then
-            # Add to bashrc for permanent PATH modification
-            if ! grep -q "$USER_GEM_BIN" "$HOME/.bashrc" 2>/dev/null; then
-                echo "export PATH=\"$USER_GEM_BIN:\$PATH\"" >> "$HOME/.bashrc"
-                echo "✅ Added Ruby user gem bin directory to PATH: $USER_GEM_BIN"
-            else
-                echo "✅ Ruby user gem bin directory already in PATH"
-            fi
-            
-            # Add to current session PATH
-            export PATH="$USER_GEM_BIN:$PATH"
-        else
-            echo "ℹ️  Bundler not found in user gem directory, will be available after gem installation"
-        fi
-    else
-        echo "⚠️  Could not detect Ruby version"
-    fi
-else
-    echo "⚠️  Ruby not found, skipping bundler PATH setup"
-fi
+# Ruby is provided by the Jekyll base image - install gems from Gemfile
+echo "Verifying Ruby installation..."
+echo "Ruby version: $(ruby --version)"
+echo "Bundler version: $(bundle --version)"
+echo "Jekyll version: $(jekyll --version)"
 
-# Update .NET workloads
-echo "Updating .NET workloads..."
-sudo dotnet workload update
+# Change back to workspace root and install Ruby gems
+echo "Installing Ruby gems from Gemfile..."
+cd /workspaces/techhub || cd $(pwd)
+bundle install
 
-# Install Entity Framework Core tools
-echo "Installing Entity Framework Core tools..."
-dotnet tool install --global dotnet-ef
-
-# Add .NET tools to PATH for current and future sessions
-echo "Setting up .NET tools PATH..."
-if ! grep -q "/home/vscode/.dotnet/tools" /home/vscode/.bashrc 2>/dev/null; then
-    echo 'export PATH="$PATH:/home/vscode/.dotnet/tools"' >> /home/vscode/.bashrc
-    echo "✅ Added .NET tools to PATH"
-else
-    echo "✅ .NET tools already in PATH"
-fi
-
-# Add to current session PATH
-export PATH="$PATH:/home/vscode/.dotnet/tools"
-
-# Install Bicep CLI
-echo "Installing Bicep CLI..."
-# Download and install the latest Bicep CLI
-curl -Lo bicep https://github.com/Azure/bicep/releases/latest/download/bicep-linux-x64
-chmod +x ./bicep
-sudo mv ./bicep /usr/local/bin/bicep
-
-# Try to install Bicep via Azure CLI, but handle failures gracefully
-echo "Attempting to install Bicep via Azure CLI..."
-if az bicep install 2>/dev/null; then
-    echo "Azure CLI Bicep installation succeeded"
-    
-    # Check if the Azure CLI Bicep installation is valid
-    if [ -f "/home/vscode/.azure/bin/bicep" ]; then
-        # Check if the file is not empty and has the right format
-        if [ -s "/home/vscode/.azure/bin/bicep" ] && file "/home/vscode/.azure/bin/bicep" | grep -q "ELF.*executable"; then
-            echo "Azure CLI Bicep installation is valid"
-            chmod +x /home/vscode/.azure/bin/bicep
-        else
-            echo "Azure CLI Bicep installation is corrupted, removing it..."
-            rm -f /home/vscode/.azure/bin/bicep
-            echo "Will use system Bicep instead"
-        fi
-    fi
-else
-    echo "Azure CLI Bicep installation failed (this is normal if not logged in)"
-    echo "Will use system Bicep installation"
-fi
-
-# Verify Bicep installation
-echo "System Bicep version: $(bicep --version)"
-echo "Azure CLI Bicep check: $(az bicep version 2>/dev/null || echo 'Using system Bicep (recommended)')"
-
-# Install Azure Developer CLI (azd)
-echo "Installing Azure Developer CLI (azd)..."
-curl -fsSL https://aka.ms/install-azd.sh | bash
+# Verify Bicep and Azure Developer CLI installations (installed via devcontainer features)
+echo "Verifying Azure CLI tools..."
+echo "Bicep version: $(az bicep version 2>/dev/null || bicep --version 2>/dev/null || echo 'Not installed')"
+echo "Azure Developer CLI version: $(azd version 2>/dev/null || echo 'Not installed')"
 
 # Set up Azure CLI completion
 echo "Setting up Azure CLI completion..."
-echo 'source /etc/bash_completion.d/azure-cli' >> /home/vscode/.bashrc
+if [ -f /etc/bash_completion.d/azure-cli ]; then
+    echo 'source /etc/bash_completion.d/azure-cli' >> /home/vscode/.bashrc
+fi
 
 echo ""
 echo "=================================="

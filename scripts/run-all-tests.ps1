@@ -16,6 +16,10 @@ $ErrorActionPreference = "Stop"
 $ProgressPreference = 'SilentlyContinue'
 Set-StrictMode -Version Latest
 
+# Ensure we run from the scripts directory
+$scriptDir = $PSScriptRoot
+Push-Location $scriptDir
+
 # Colors for output
 $Red = "`e[31m"
 $Green = "`e[32m"
@@ -236,7 +240,11 @@ try {
     }
     
 } catch {
+    Pop-Location
     Write-ColoredOutput "💥 An error occurred during test execution: $($_.Exception.Message)" $Red
     Write-ColoredOutput "Stack trace: $($_.Exception.StackTrace)" $Red
     exit 1
+}
+finally {
+    Pop-Location
 }

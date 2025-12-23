@@ -4,29 +4,6 @@ param baseName string
 @description('Azure region where resources will be deployed')
 param location string
 
-@description('SQL Database service tier')
-@allowed([
-  'Basic'
-  'Standard'
-  'Premium'
-  'GeneralPurpose'
-  'BusinessCritical'
-])
-param sqlDatabaseTier string
-
-@description('SQL Database performance level/SKU name')
-param sqlDatabaseSku string
-
-@description('Maximum size of the database in bytes (default: 250GB)')
-param maxSizeBytes int
-
-@description('Admin username for SQL Server')
-param sqlAdminUsername string
-
-@description('Admin password for SQL Server')
-@secure()
-param sqlAdminPassword string
-
 @description('Environment suffix for resource naming')
 @allowed([
   'dev'
@@ -35,12 +12,6 @@ param sqlAdminPassword string
 ])
 param environment string
 
-@description('Enable Advanced Threat Protection')
-param enableAdvancedThreatProtection bool
-
-@description('Configure backup retention in days (1-35 for Basic/Standard, 1-35 for Premium/Business Critical)')
-param backupRetentionDays int
-
 @description('GitHub repository URL for Static Web Apps deployment')
 param repositoryUrl string
 
@@ -48,128 +19,7 @@ param repositoryUrl string
 param repositoryBranch string
 
 // Variables for consistent naming following "abbreviation-name-environment" pattern
-var sqlServerName = 'sql-${baseName}-${environment}'
-var sqlDatabaseName = 'sqldb-${baseName}-${environment}'
-var keyVaultName = 'kv-${baseName}-${environment}'
 var staticWebAppName = 'stapp-${baseName}-${environment}'
-
-// SQL Server resource
-resource sqlServer 'Microsoft.Sql/servers@2023-05-01-preview' = {
-  name: sqlServerName
-  location: 'northeurope'
-  properties: {
-    administratorLogin: sqlAdminUsername
-    administratorLoginPassword: sqlAdminPassword
-    version: '12.0'
-    minimalTlsVersion: '1.2'
-    publicNetworkAccess: 'Enabled'
-    restrictOutboundNetworkAccess: 'Disabled'
-  }
-  
-  identity: {
-    type: 'SystemAssigned'
-  }
-
-  tags: {
-    Environment: environment
-    Project: baseName
-    ResourceType: 'Database'
-  }
-}
-
-// SQL Database resource
-resource sqlDatabase 'Microsoft.Sql/servers/databases@2023-05-01-preview' = {
-  parent: sqlServer
-  name: sqlDatabaseName
-  location: 'northeurope'
-  sku: {
-    name: sqlDatabaseSku
-    tier: sqlDatabaseTier
-  }
-  properties: {
-    collation: 'SQL_Latin1_General_CP1_CI_AS'
-    maxSizeBytes: maxSizeBytes
-    catalogCollation: 'SQL_Latin1_General_CP1_CI_AS'
-    zoneRedundant: false
-    readScale: 'Disabled'
-    requestedBackupStorageRedundancy: 'Local'
-    isLedgerOn: false
-    
-    // Optimize for expected workload (1K-100K rows)
-    autoPauseDelay: sqlDatabaseTier == 'GeneralPurpose' ? 60 : null
-    minCapacity: sqlDatabaseTier == 'GeneralPurpose' ? json('0.5') : null
-  }
-
-  tags: {
-    Environment: environment
-    Project: baseName
-    ResourceType: 'Database'
-  }
-}
-
-// Configure backup retention
-resource backupShortTermRetention 'Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies@2023-05-01-preview' = {
-  parent: sqlDatabase
-  name: 'default'
-  properties: {
-    retentionDays: backupRetentionDays
-  }
-}
-
-// Firewall rule to allow Azure services
-resource allowAzureServices 'Microsoft.Sql/servers/firewallRules@2023-05-01-preview' = {
-  parent: sqlServer
-  name: 'AllowAzureServices'
-  properties: {
-    startIpAddress: '0.0.0.0'
-    endIpAddress: '0.0.0.0'
-  }
-}
-
-// Advanced Threat Protection (optional)
-resource advancedThreatProtection 'Microsoft.Sql/servers/advancedThreatProtectionSettings@2023-05-01-preview' = if (enableAdvancedThreatProtection) {
-  parent: sqlServer
-  name: 'Default'
-  properties: {
-    state: 'Enabled'
-  }
-}
-
-// Key Vault for storing connection strings (optional but recommended)
-resource keyVault 'Microsoft.KeyVault/vaults@2023-07-01' = {
-  name: keyVaultName
-  location: location
-  properties: {
-    sku: {
-      family: 'A'
-      name: 'standard'
-    }
-    tenantId: subscription().tenantId
-    accessPolicies: []
-    enabledForDeployment: false
-    enabledForDiskEncryption: false
-    enabledForTemplateDeployment: true
-    enableSoftDelete: true
-    softDeleteRetentionInDays: 7
-    enableRbacAuthorization: true
-    publicNetworkAccess: 'Enabled'
-  }
-
-  tags: {
-    Environment: environment
-    Project: baseName
-    ResourceType: 'Security'
-  }
-}
-
-// Store connection string in Key Vault
-resource connectionStringSecret 'Microsoft.KeyVault/vaults/secrets@2023-07-01' = {
-  parent: keyVault
-  name: '${baseName}-sql-connection-string'
-  properties: {
-    value: 'Server=tcp:${sqlServer.properties.fullyQualifiedDomainName},1433;Initial Catalog=${sqlDatabaseName};Persist Security Info=False;User ID=${sqlAdminUsername};Password=${sqlAdminPassword};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
-  }
-}
 
 // Static Web Apps resource for Jekyll site
 resource staticWebApp 'Microsoft.Web/staticSites@2023-01-01' = {
@@ -201,13 +51,6 @@ resource staticWebApp 'Microsoft.Web/staticSites@2023-01-01' = {
 }
 
 // Outputs
-output sqlServerName string = sqlServer.name
-output sqlServerFqdn string = sqlServer.properties.fullyQualifiedDomainName
-output sqlDatabaseName string = sqlDatabase.name
-output connectionStringSecretName string = connectionStringSecret.name
-output keyVaultName string = keyVault.name
-output sqlServerResourceId string = sqlServer.id
-output sqlDatabaseResourceId string = sqlDatabase.id
 output staticWebAppName string = staticWebApp.name
 output staticWebAppUrl string = staticWebApp.properties.defaultHostname
 output staticWebAppId string = staticWebApp.id

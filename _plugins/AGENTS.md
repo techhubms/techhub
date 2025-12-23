@@ -84,9 +84,17 @@ _plugins/
 # Sort by date (newest first)
 {{ site.posts | sort_by_date }}
 
-# Limit with same-day grouping
+# Limit with same-day grouping (collection-aware)
 {{ site.posts | limit_with_same_day: 10 }}
 ```
+
+**limit_with_same_day Filter**: Applies server-side content limiting with collection-aware rule plus 7-day recency filter:
+
+- **7-day recency filter**: Excludes all items older than 7 days from current date
+- **Collection grouping**: Groups remaining items by collection first
+- **Configurable per-collection limiting**: Applies "N + same-day" rule to each collection independently (default N=20)
+- **Fair representation**: Ensures fair representation across all collections
+- **Sorted results**: Returns merged results sorted by date (newest first)
 
 **Dependency**: Uses `date_utils.rb` for shared functionality.
 
@@ -184,64 +192,88 @@ end
 Liquid::Template.register_tag('your_tag', Jekyll::YourTag)
 ```
 
-## Testing Standards
+## Liquid Template Development
 
-### Framework
+### Core Principles
 
-Use **RSpec** for all Jekyll plugin testing.
+**Keep Templates Simple**: Liquid templates should focus on rendering, not complex logic.
 
-### Test File Structure
+**Preferred Architecture Order**:
+1. **Plugins**: Complex data processing, page generation, data aggregation
+2. **Filters**: Data transformation and formatting operations  
+3. **Liquid Templates**: Simple rendering logic only
 
-```text
-spec/
-└── _plugins/
-    └── [plugin_name]_spec.rb
+**Benefits**:
+- **Performance**: Ruby plugins are faster than complex Liquid logic
+- **Maintainability**: Centralized logic in dedicated plugin files
+- **Testability**: Plugins can be unit tested independently
+- **Readability**: Templates remain clean and focused on presentation
+
+### Essential Liquid Patterns
+
+#### Configuration-Driven Development
+
+**Always use dynamic, configuration-driven approaches**:
+
+```liquid
+<!-- ✅ CORRECT: Dynamic sections -->
+{% for section in site.data.sections %}
+  {% assign section_data = section[1] %}
+  {% assign category = section_data.category %}
+{% endfor %}
+
+<!-- ❌ WRONG: Hardcoded sections -->
+{% if page.categories contains "AI" %}
 ```
 
-### Test Pattern
+#### Jekyll Data Access
 
-```ruby
-require 'spec_helper'
+**⚠️ CRITICAL JEKYLL CONVENTION**: All data files in `_data` directory are accessed via `site.data.filename` (without the `.json` extension).
 
-RSpec.describe Jekyll::YourFilterName do
-  include Jekyll::YourFilterName
-  
-  describe '#filter_method' do
-    context 'with valid input' do
-      it 'processes input correctly' do
-        result = filter_method('test-input')
-        expect(result).to eq('expected-output')
-      end
-    end
-    
-    context 'with invalid input' do
-      it 'handles errors gracefully' do
-        expect { filter_method(nil) }.to raise_error(ArgumentError)
-      end
-    end
-    
-    context 'edge cases' do
-      it 'handles empty strings' do
-        result = filter_method('')
-        expect(result).to eq('')
-      end
-    end
-  end
-end
+```liquid
+<!-- ✅ CORRECT patterns -->
+{{ site.data.sections }}
+{{ site.data.all_tags }}
+{{ site.data.category_tags }}
+
+<!-- ❌ WRONG patterns -->
+{{ site.sections }}
+{{ site.all_tags }}
 ```
 
-### Critical Testing Rules
+#### Include Data Passing
 
-**CRITICAL**: Test real plugin implementation, never duplicate logic
-**CRITICAL**: Mock Jekyll site objects and external dependencies only
-**CRITICAL**: Test actual Liquid template rendering when relevant
-**CRITICAL**: Verify plugin behavior in Jekyll build lifecycle
+When data is explicitly passed to included files:
+
+```liquid
+{%- include posts.html posts=limited_posts -%}
+{%- include filters.html posts=posts collection_type=page.collection -%}
+```
+
+Access in includes using the `include.` prefix: `include.posts`, `include.collection_type`
+
+### Formatting Requirements
+
+- Add proper indentation wherever possible
+- Never place conditions and actions on the same line
+
+```liquid
+{%- comment -%} ❌ BAD {%- endcomment -%}
+{% if true %} then dosomething {% else %} bla {% endif %}
+
+{%- comment -%} ✅ GOOD {%- endcomment -%}
+{%- if condition -%}
+  {%- assign result = value -%}
+{%- else -%}
+  {%- assign result = alternative -%}
+{%- endif -%}
+```
 
 ## Date Handling
 
 ### Timezone Configuration
 
-**Critical**: All dates use `Europe/Brussels` timezone (CET/CEST).
+**Critical**: All dates use `Europe/Brussels` timezone (CET/CEST) as configured in `_config.yml`.
 
 **Date Utils Module** (`date_utils.rb`):
 
@@ -258,17 +290,58 @@ module Jekyll
 end
 ```
 
-### Date Filter Usage
+### Timezone Consistency in Plugins
 
-```liquid
-<!-- Convert post date to epoch -->
-{{ post.date | to_epoch }}
+All Ruby plugins must use consistent date processing:
 
-<!-- Sort posts by date -->
-{{ site.posts | sort_by_date }}
+```ruby
+# Correct: Use DateUtils for consistent processing
+current_time = DateUtils.now_epoch()
 
-<!-- Filter to items with dates in last 7 days -->
-{{ site.posts | limit_with_same_day: 10 }}
+# Correct: Parse dates using DateUtils methods
+parsed_epoch = DateUtils.date_to_epoch(date_string)
+
+# Correct: Normalize to midnight Brussels time
+midnight_epoch = DateUtils.normalize_to_midnight(date_input)
+```
+
+### Testing Date Functions
+
+Test date filters with timezone awareness:
+
+```ruby
+describe DateUtils do
+  before do
+    Time.zone = 'Europe/Brussels'
+  end
+  
+  it 'converts dates to epoch correctly' do
+    date = '2025-01-01'
+    expected = Time.zone.parse(date).to_i
+    expect(DateUtils.to_epoch(date)).to eq(expected)
+  end
+end
+```
+
+## Testing Standards
+
+Use **RSpec** for all Jekyll plugin testing. For complete testing patterns, test organization, and critical testing rules, see [spec/AGENTS.md](../spec/AGENTS.md).
+
+### Test File Location
+
+```text
+spec/_plugins/
+└── [plugin_name]_spec.rb
+```
+
+### Running RSpec Tests
+
+```bash
+# All plugin tests
+./scripts/run-plugin-tests.ps1
+
+# Specific file
+bundle exec rspec spec/_plugins/date_filters_spec.rb
 ```
 
 ## Page Generation
@@ -388,12 +461,39 @@ bundle exec rspec spec/_plugins/date_filters_spec.rb
 bundle exec rspec --format documentation
 ```
 
+## Complete Filter Reference
+
+### Date Filters (from date_filters.rb)
+
+| Filter | Purpose | Usage |
+|--------|---------|-------|
+| `to_epoch` | Convert date to Unix timestamp | `{{ post.date \| to_epoch }}` |
+| `date_to_epoch` | Convert date to epoch (Brussels timezone) | `{{ post.date \| date_to_epoch }}` |
+| `now_epoch` | Get current timestamp | `{{ '' \| now_epoch }}` |
+| `normalize_date_format` | Fix timezone format issues | `{{ raw_date \| normalize_date_format }}` |
+| `normalize_to_midnight` | Normalize time to midnight | `{{ item.date \| normalize_to_midnight }}` |
+| `with_dates` | Filter items with valid dates | `{{ site.documents \| with_dates }}` |
+| `sort_by_date` | Sort items by date | `{{ site.posts \| sort_by_date }}` |
+| `limit_with_same_day` | Apply "N + same-day" rule per collection | `{{ posts \| limit_with_same_day }}` |
+
+### String Filters (from string_filters.rb)
+
+| Filter | Purpose | Usage |
+|--------|---------|-------|
+| `regex_match` | Check string against regex | `{{ string \| regex_match: pattern }}` |
+| `is_letters_and_hyphen_only` | Validate section names | `{{ section \| is_letters_and_hyphen_only }}` |
+
+### Tag Filters (from tag_filters.rb)
+
+| Filter | Purpose | Usage |
+|--------|---------|-------|
+| `generate_all_filters` | Generate unified filter data | `{{ items \| generate_all_filters: mode, sections, ... }}` |
+
 ## Resources
 
-- [plugins.md](../docs/plugins.md) - Complete plugin documentation
 - [datetime-processing.md](../docs/datetime-processing.md) - Date handling details
-- [jekyll-development.md](../docs/jekyll-development.md) - Jekyll patterns
-- [testing-guidelines.md](../docs/testing-guidelines.md) - Testing strategy
+- [jekyll-development.md](../docs/jekyll-development.md) - Jekyll operational patterns
+- [spec/AGENTS.md](../spec/AGENTS.md) - Testing strategy and RSpec patterns
 
 ## Never Do
 

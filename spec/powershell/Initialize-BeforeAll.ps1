@@ -1,4 +1,4 @@
-$functionsPath = Join-Path $PSScriptRoot "../../scripts/functions"
+$functionsPath = Join-Path $PSScriptRoot "../../scripts/content-processing/functions"
 
 . (Join-Path $functionsPath "Write-ErrorDetails.ps1")
     

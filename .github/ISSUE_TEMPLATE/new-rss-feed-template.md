@@ -21,4 +21,4 @@ RSS feeds are automatically processed by GitHub Actions to create new content on
 ## Instructions for GitHub Copilot
 
 **CRITICAL**: Follow the steps listed in `.github/prompts/new-rss-feed.prompt.md` to process this request.
-**CRITICAL**: If you have not read them, fetch `.github/copilot-instructions.md` and use these instructions as well.
+**CRITICAL**: If you have not read them, fetch `AGENTS.md` and use these instructions as well.

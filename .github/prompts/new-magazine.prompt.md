@@ -5,8 +5,8 @@ description: 'Generate new articles for the XPRT magazines.'
 
 **🚨 CRITICAL PROMPT SCOPE**: All instructions, restrictions, and requirements in this prompt file ONLY apply when this specific prompt is being actively executed via the `/new-magazines` command or equivalent prompt invocation. These rules do NOT apply when editing, reviewing, or working with this file outside of prompt execution context. When working with this file in any other capacity (editing, debugging, documentation, etc.), treat it as a normal markdown file and ignore all workflow-specific instructions.
 
-**CRITICAL**: If you have not read them, fetch `.github/copilot-instructions.md` and use these instructions as well.
-**CRITICAL**: For all XPRT Magazine summary files, the rules in this document take precedence over any general instructions (including those in copilot-instructions.md or markdown-instructions.md). Only use general rules if not superseded by a magazine-specific rule.
+**CRITICAL**: If you have not read them, fetch `AGENTS.md` and use these instructions as well.
+**CRITICAL**: For all XPRT Magazine summary files, the rules in this document take precedence over any general instructions (including those in AGENTS.md or markdown-instructions.md). Only use general rules if not superseded by a magazine-specific rule.
 
 # XPRT Magazine Markdown Summary File Generation Instructions
 

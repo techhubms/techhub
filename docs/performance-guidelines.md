@@ -1,211 +1,110 @@
 # Performance Guidelines
 
-## Performance Optimization Overview
+Performance optimization for Tech Hub follows a server-side-first architecture where all content is rendered during the Jekyll build, and JavaScript only enhances interactivity after page load.
 
-### Core Performance Principles
+## Core Principles
 
-#### Performance-First Architecture
+1. **Server-side first** - All content must be rendered server-side for initial page load
+2. **Client-side performance is paramount** - After initial render, all interactions must be responsive
+3. **Never sacrifice functionality** - Don't reduce content amount or visual elements for performance
+4. **Server-side can be slower** - Build-time processing can take longer if it benefits the client
+5. **JavaScript enhances, never creates** - Initial content must never depend on JavaScript
 
-- **Server-side rendering before JavaScript enhancement**: All content must load and be functional before JavaScript executes
-- **Client-side performance is paramount after initial render**: Optimize for post-load interactions and responsiveness
-- **Follow content limiting rules for performance**: Limit initial content loads to maintain fast page loading (see [Filtering System](filtering-system.md))
+### The Server-Side First Rule
 
-### Server-Side Performance Optimizations
+All visible content must be fully rendered server-side by Jekyll/Liquid. Users must see complete, functional content immediately upon page load. This ensures optimal SEO, performance, and accessibility.
 
-#### Content Limiting Strategy
+**The ONLY exception**: `assets/js/sections.js` is allowed to modify section collections state on page load based on URL parameters. All other JavaScript must wait for user interaction.
 
-- **Server-side Content Limiting**: Implemented via filtering system to reduce processing load (see [Filtering System](filtering-system.md))
-- **Limited Dataset Processing**: Reduces server processing load during Jekyll builds
-- **Pre-calculated Counts**: Tag counts computed during build, not runtime
-- **Efficient Data Structures**: Use JSON lookup tables for fast data access
+## Server-Side Optimizations
 
-#### Jekyll Build Optimizations
+### Jekyll Build Performance
 
-- **Cache expensive calculations**: Store computed values to avoid repeated processing
+Server-side processing happens during the Jekyll build. Liquid code (between `{%` or `{%-` tags) runs once when the website is built, not in the browser.
 
-### Client-Side Performance Optimizations
+**Optimization strategies:**
 
-For comprehensive JavaScript performance guidelines, see [JavaScript Guidelines](javascript-guidelines.md).
+- **Cache expensive calculations** - Store computed values to avoid repeated processing
+- **Pre-calculate counts** - Tag counts are computed during build, not runtime
+- **Use efficient data structures** - JSON lookup tables enable fast data access
+- **Limit dataset processing** - Use the [Filtering System](filtering-system.md) to reduce processing load
 
-#### General Client-Side Principles
+### Data Passing in Templates
 
-- **Progressive Enhancement**: JavaScript enhances server-rendered content
-- **Graceful Degradation**: Ensure functionality without JavaScript
-- **Monitor memory usage**: Check for memory leaks in long-running sessions
+When data is passed to included files, access it using the `include.` prefix:
 
-### Performance Testing Requirements
+```liquid
+{% include component.html tags=page.tags posts=site.posts %}
+```
 
-#### Mobile Performance Testing
+Reference as `include.tags` and `include.posts` within the included file.
 
-- **Mobile Performance**: Test loading speeds on mobile networks
-- **Network conditions**: Verify performance across various connection speeds
-- **Touch optimization**: Ensure touch interactions are responsive
+## Client-Side Optimizations
 
-#### Browser Performance
+For comprehensive JavaScript guidelines, see [assets/js/AGENTS.md](../assets/js/AGENTS.md).
 
-- **Browser Testing**: Test across different browsers and versions for consistent performance
-- **JavaScript execution monitoring**: Track client-side performance impact
-- **Performance profiling**: Use browser dev tools to identify bottlenecks
+### Progressive Enhancement
 
-### Image and Asset Optimization
+JavaScript enhances server-rendered content rather than creating it:
 
-#### Image Performance
+- Ensure core functionality works without JavaScript
+- Monitor memory usage for leaks in long-running sessions
+- Load core functionality first, then enhance progressively
 
-- **Lazy Loading**: Load content as needed to improve initial page performance
-- **Format Optimization**: Use modern image formats when supported
-- **Responsive Images**: Implement proper srcset and sizes attributes
+### Image and Asset Performance
 
-#### Asset Loading
+- **Lazy loading** - Load images as needed to improve initial page performance
+- **Modern formats** - Use WebP and other modern image formats when supported
+- **Responsive images** - Implement proper `srcset` and `sizes` attributes
+- **Asset bundling** - Optimize file loading to reduce HTTP requests
 
-- **Progressive Enhancement**: Load core functionality first, enhance progressively
-- **Asset bundling**: Optimize file loading for reduced HTTP requests
+## Testing Requirements
 
-### Performance Troubleshooting
+### Mobile Performance
 
-#### Common Performance Issues
+- Test loading speeds on mobile networks and various connection speeds
+- Ensure touch interactions are responsive
+- Verify performance standards are met on mobile devices
 
-**Symptom**: Slow filtering or page loading
+### Browser Performance
 
-**Common Causes**:
+- Test across different browsers and versions
+- Track JavaScript execution times
+- Use browser dev tools to profile and identify bottlenecks
+
+## Troubleshooting
+
+### Slow Filtering or Page Loading
+
+**Common causes:**
 
 - Too much client-side processing
-- Inefficient DOM queries  
+- Inefficient DOM queries
 - Large datasets without optimization
 
-**Solutions**:
+**Solutions:**
 
 1. Move processing to server-side (Liquid)
 2. Optimize JavaScript queries
 3. Implement proper caching
 4. Use content limiting rules correctly (see [Filtering System](filtering-system.md))
 
-#### Performance Monitoring
+### Performance Monitoring
 
-- **Monitor client-side performance**: Keep an eye on JavaScript execution times
-- **Track loading metrics**: Measure page load times across different devices
-- **Identify bottlenecks**: Use performance profiling tools to find slow operations
+- Monitor JavaScript execution times
+- Measure page load times across devices
+- Use profiling tools to find slow operations
+- Ensure code changes don't regress performance
 
-### Critical Performance Requirements
+## Related Documentation
 
-- **Prioritize client-side performance**: After initial server-side render, all interactions must be responsive
-- **Cache expensive calculations**: Store computed values to avoid repeated processing
-- **Optimize for mobile**: Ensure performance standards are met on mobile devices
-- **Maintain performance during updates**: Ensure code changes don't impact site performance
+- **JavaScript guidelines**: [assets/js/AGENTS.md](../assets/js/AGENTS.md)
+- **Liquid template formatting**: [_plugins/AGENTS.md](../_plugins/AGENTS.md#formatting-requirements)
+- **Filtering system**: [filtering-system.md](filtering-system.md)
 
-## Performance Priorities
+### Jekyll Official Documentation
 
-**Core Principles:**
-
-1. **Server-side first**: All content must be rendered server-side for initial page load (exception: assets/js/sections.js only)
-2. **Client-side performance is paramount** after initial render
-3. **Never sacrifice functionality, content amount, or visual elements**
-4. **Server-side processing can be slower** if it benefits the client
-5. **Optimize for user experience over build time**
-6. **JavaScript enhances, never creates initial content**
-
-**Requirements:**
-
-- Content must never be rendered or altered by JavaScript on initial page load.
-- All visible content must be fully rendered server-side by Jekyll/Liquid
-- Users must see complete, functional content immediately upon page load
-- JavaScript should only enhance interactivity, never create initial content
-- This ensures optimal SEO, performance, and accessibility
-
-**The ONLY Exception:**
-
-- `assets/js/sections.js` - Allowed to modify section collections state on page load
-- This file handles section collections activation based on URL parameters
-- All other JavaScript must wait for user interaction
-
-## Code Quality Standards
-
-### Liquid Template Processing
-
-**Critical Understanding**: Liquid code (between `{%` or `{%-` tags) is executed server-side during the Jekyll build process only. This means:
-
-- Liquid code runs once when the website is built
-- It does NOT run in the browser
-- Server-side code can be slower if it improves client performance
-- Focus on client-side performance without sacrificing functionality
-
-### JavaScript Guidelines
-
-#### Server-Side First Principle
-
-**Rule**: JavaScript must never render initial page content (exception: assets/js/sections.js only)
-
-**Correct Approach:**
-
-1. Jekyll/Liquid renders all initial content server-side
-2. JavaScript adds event listeners and interactivity
-3. JavaScript responds to user interactions
-4. Content is immediately visible and functional
-
-**Examples:**
-
-```javascript
-// ✅ CORRECT: Enhance existing server-rendered content
-document.querySelectorAll('.tag-filter-btn').forEach(btn => {
-  btn.addEventListener('click', handleFilterClick);
-});
-
-// ❌ WRONG: Create content on page load
-window.addEventListener('load', () => {
-  createFilterButtons(); // This should be done server-side!
-});
-```
-
-**The assets/js/sections.js Exception:**
-
-- Only `assets/js/sections.js` may modify content on initial load
-- It handles section collections state based on URL parameters
-- This is necessary for proper navigation highlighting
-- All other JavaScript must wait for user interaction
-
-For comprehensive JavaScript performance guidelines, see [JavaScript Guidelines](javascript-guidelines.md).
-
-### Formatting Requirements
-
-- Add proper indentation wherever possible
-- Never place conditions and actions on the same line
-- **Bad**:
-
-  ```liquid
-  {% if true %} then dosomething {% else %} bla {% endif %}
-  ```
-
-- **Good**:
-
-  ```liquid
-  {%- if condition -%}
-    {%- assign result = value -%}
-  {%- else -%}
-    {%- assign result = alternative -%}
-  {%- endif -%}
-  ```
-
-### Data Passing Conventions
-
-When data is explicitly passed to included files:
-
-- Access it using the `include.` prefix
-- Example: If passing `tags` and `posts`, reference them as `include.tags` and `include.posts`
-
-### Content Types
-
-Articles are written in Markdown but can contain:
-
-- Liquid template code
-- HTML
-- CSS  
-- JavaScript
-- Mixed content types
-
-## Jekyll Documentation References
-
-When working with Jekyll/Liquid, reference these official documentation sources:
-
-- **Liquid Syntax**: [Jekyll Liquid Documentation](https://jekyllrb.com/docs/liquid/)
-- **Includes**: [Jekyll Includes Documentation](https://jekyllrb.com/docs/includes/)
-- **Front Matter**: [Jekyll Front Matter Documentation](https://jekyllrb.com/docs/front-matter/)
-- **Variables**: [Jekyll Variables Documentation](https://jekyllrb.com/docs/variables/)
+- [Liquid Syntax](https://jekyllrb.com/docs/liquid/)
+- [Includes](https://jekyllrb.com/docs/includes/)
+- [Front Matter](https://jekyllrb.com/docs/front-matter/)
+- [Variables](https://jekyllrb.com/docs/variables/)

@@ -22,6 +22,38 @@ $Yellow = "`e[33m"
 $Blue = "`e[34m"
 $Reset = "`e[0m"
 
+function Get-ProjectRoot {
+    # Load Get-SourceRoot function if available
+    $sourceRootPath = Join-Path $PSScriptRoot "functions/Get-SourceRoot.ps1"
+    if (Test-Path $sourceRootPath) {
+        . $sourceRootPath
+        return Get-SourceRoot
+    }
+    
+    # Fallback logic
+    if ($env:GITHUB_WORKSPACE) {
+        return $env:GITHUB_WORKSPACE
+    }
+    
+    # Search upward for repository indicators
+    $currentPath = $PSScriptRoot
+    while ($currentPath -and $currentPath -ne [System.IO.Path]::GetPathRoot($currentPath)) {
+        if (Test-Path (Join-Path $currentPath ".git")) {
+            return $currentPath
+        }
+        if (Test-Path (Join-Path $currentPath "_config.yml")) {
+            return $currentPath
+        }
+        $currentPath = Split-Path $currentPath -Parent
+    }
+    
+    # Ultimate fallback
+    return $PSScriptRoot
+}
+
+# Get project root directory and change to it
+$script:rootDir = Get-ProjectRoot
+
 function Invoke-WithRetry {
     param(
         [ScriptBlock]$Command,
@@ -87,9 +119,15 @@ function Test-BundlerInstalled {
             }
         }
         
-        # Check for user-local bundler installation
-        $userGemBin = "$env:HOME/.local/share/gem/ruby/3.2.0/bin"
-        if (Test-Path "$userGemBin/bundle") {
+        # Check for user-local bundler installation (dynamically detect Ruby version)
+        $rubyVersion = ruby -e "puts RbConfig::CONFIG['ruby_version']" 2>$null
+        if ($rubyVersion) {
+            $userGemBin = "$env:HOME/.local/share/gem/ruby/$rubyVersion/bin"
+        } else {
+            # Fallback to common version patterns
+            $userGemBin = Get-ChildItem "$env:HOME/.local/share/gem/ruby/*/bin" -Directory -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty FullName
+        }
+        if ($userGemBin -and (Test-Path "$userGemBin/bundle")) {
             # Add to PATH for this session
             $env:PATH = "$userGemBin" + [System.IO.Path]::PathSeparator + $env:PATH
             Write-ColoredOutput "✅ Found user-local bundler, added to PATH" $Green
@@ -200,6 +238,9 @@ function Test-RSpecInstalled {
 function Invoke-PluginTestsRunner {
     # Main execution
     try {
+        # Change to project root directory
+        Set-Location $script:rootDir
+        
         Write-ColoredOutput "Tech Hub Ruby Plugin Test Runner" $Blue
         Write-ColoredOutput "======================================" $Blue
         Write-ColoredOutput "" $Reset

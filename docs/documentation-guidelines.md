@@ -2,26 +2,9 @@
 
 This document defines the documentation structure, hierarchy, and content placement guidelines for the Tech Hub project.
 
-## Documentation Philosophy
+For documentation philosophy, principles, and maintenance procedures, see [docs/AGENTS.md](AGENTS.md).
 
-**CRITICAL**: Whenever code changes any behavior, you MUST update the relevant documentation files to reflect those changes. This requirement applies to all contributors and to Copilot automation. Never leave documentation out of sync with the codebase. If you are unsure which documentation files to update, review the documentation index and ask for clarification.
-
-**CRITICAL**: When creating or updating documentation, always update this file to include new content or make existing content up-to-date. For code-specific domain guidance, update the relevant AGENTS.md file in the appropriate directory.
-
-The documentation follows a hierarchical approach designed to:
-
-- **Minimize duplication**: Content appears in one authoritative location
-- **Maximize discoverability**: Clear navigation paths and cross-references
-- **Optimize for different needs**: AI models first, human developers second
-- **Maintain consistency**: Standardized formatting and reference patterns
-
-Key principles:
-
-- Follow the established documentation hierarchy (Foundation → Functionality → Task → Language → Performance)
-- Place content in the most specific applicable file
-- Use cross-references to connect related information
-- Avoid duplication across documentation files
-- Keep the amount of levels to a maximum of 3, so #, ## and ###
+**Key Hierarchy**: Foundation → Functionality → Task → Language → Performance
 
 ## Documentation Structure
 
@@ -57,15 +40,13 @@ Located in `docs/`, these files provide complete technical details:
 
 - **`docs/filtering-system.md`**: Complete implementation of date and tag filtering systems
 - **`docs/datetime-processing.md`**: Date handling, timezone configuration, and custom date filters
-- **`docs/content-management.md`**: Content creation, organization, and lifecycle management
-- **`docs/rss-feeds.md`**: RSS feed integration and automated content processing
+- **`docs/content-management.md`**: Content creation, organization, lifecycle management, and RSS feed processing
 - **Purpose**: Explain **what** the system does and **how** it works
 
 #### Task-Oriented Files
 
-- **`docs/plugins.md`**: Creating and maintaining Jekyll plugins
 - **`docs/jekyll-development.md`**: Jekyll-specific development patterns and practices
-- **`docs/github-token-setup.md`**: GitHub token configuration and authentication setup
+- **`_plugins/AGENTS.md`**: Plugin development guidelines and patterns
 - **Purpose**: Explain **how to do** specific development tasks
 
 #### Content Standards
@@ -81,7 +62,7 @@ Located in `docs/`, these files provide complete technical details:
 ## Documentation vs AGENTS.md
 
 | Aspect | Documentation (`docs/*.md`) | AGENTS.md Files |
-|--------|---------------------------|----------------|
+| ------ | --------------------------- | --------------- |
 | **Purpose** | Comprehensive reference | Action-oriented guidance |
 | **Audience** | Humans and AI | AI assistants primarily |
 | **Scope** | Complete feature coverage | Domain-specific focus |
@@ -92,12 +73,14 @@ Located in `docs/`, these files provide complete technical details:
 ### When to Update Each
 
 **Update Documentation** when:
+
 - Feature specifications change
 - Architecture evolves
 - New components added
 - Historical context needed
 
 **Update AGENTS.md** when:
+
 - Development patterns change
 - Critical rules added
 - Common errors identified
@@ -135,8 +118,8 @@ Check the appropriate domain AGENTS.md file for action-oriented, development-foc
 
 - **`docs/filtering-system.md`**: Complete implementation of date and tag filtering systems
 - **`docs/datetime-processing.md`**: Date handling, timezone configuration, and custom date filters
-- **`docs/content-management.md`**: Content creation, organization, and lifecycle management
-- **`docs/rss-feeds.md`**: RSS feed integration and automated content processing
+- **`docs/content-management.md`**: Content creation, organization, lifecycle management, and RSS feed processing
+
 ## Content Placement Strategy
 
 ### Before Adding New Content
@@ -152,7 +135,7 @@ Check the appropriate domain AGENTS.md file for action-oriented, development-foc
 
 - **Tag filtering logic** → `docs/filtering-system.md` (functionality-oriented)
 - **Date and timezone processing** → `docs/datetime-processing.md` (functionality-oriented)
-- **How to create a plugin** → `docs/plugins.md` (task-oriented)
+- **How to create a plugin** → `_plugins/AGENTS.md` (domain-specific)
 - **Development patterns** → Domain-specific `AGENTS.md` files
 - **Basic site concepts** → `docs/terminology.md` (foundation)
 
@@ -168,7 +151,7 @@ Check the appropriate domain AGENTS.md file for action-oriented, development-foc
 
 - **Always reference more detailed files** from higher-level files
 - **Use consistent linking format**: Use standard markdown link syntax with square brackets and parentheses
-- **Provide context** when referencing: Example - "See [Plugins documentation](plugins.md) for implementation details"
+- **Provide context** when referencing: Example - "See [_plugins/AGENTS.md](../_plugins/AGENTS.md) for implementation details"
 - **Avoid circular references** - maintain clear hierarchy flow
 
 ### Reference Patterns
@@ -199,23 +182,7 @@ This file references another file that references back to this file.
 
 ### Directory Structure
 
-```text
-docs/
-├── AGENTS.md                   # Documentation guidelines for this directory
-├── terminology.md               # Foundation: Definitions and concepts
-├── site-overview.md            # Foundation: Architecture overview
-├── documentation-guidelines.md # Foundation: Documentation structure (this file)
-├── content-management.md       # Functionality: Content workflows
-├── datetime-processing.md      # Functionality: Date and timezone handling
-├── filtering-system.md         # Functionality: Filtering implementation
-├── rss-feeds.md               # Functionality: RSS processing
-├── plugins.md                 # Task: Plugin development
-├── jekyll-development.md      # Task: Jekyll development
-├── markdown-guidelines.md     # Language: Markdown standards
-├── writing-style-guidelines.md # Language: Content writing standards
-├── performance-guidelines.md  # Performance: Optimization strategies
-└── github-token-setup.md      # Task: GitHub token configuration
-```
+For the complete documentation file list and descriptions, see [docs/AGENTS.md](AGENTS.md#documentation-files).
 
 For framework-specific development guidelines (PowerShell, JavaScript, Ruby, etc.), see the respective AGENTS.md files in each directory.
 
@@ -316,7 +283,6 @@ For the current documentation index structure, see the [Directory Structure](#di
 ### 🛠️ Development & Technical
 
 - **[jekyll-development.md](jekyll-development.md)** - *Jekyll patterns, Liquid templating, development setup*
-- **[plugins.md](plugins.md)** - *Complete plugin architecture and development guide*
 - **[filtering-system.md](filtering-system.md)** - *Tag and date filtering implementation*
 - **[datetime-processing.md](datetime-processing.md)** - *Date handling, timezone configuration, and custom date filters*
 
@@ -330,10 +296,6 @@ For the current documentation index structure, see the [Directory Structure](#di
 - **[performance-guidelines.md](performance-guidelines.md)** - *Performance optimization and best practices*
 - **[writing-style-guidelines.md](writing-style-guidelines.md)** - *Writing tone, style, and language standards*
 
-### 🤖 AI & Development Tools
-
-- **[rss-feeds.md](rss-feeds.md)** - *RSS feed configuration and management*
-
 ## File Descriptions
 
 | File | Purpose | When to Read |
@@ -342,11 +304,7 @@ For the current documentation index structure, see the [Directory Structure](#di
 | **terminology.md** | Definitions and basic concepts | Understanding the system fundamentals |
 | **site-overview.md** | High-level architecture and structure | Getting oriented with the site |
 | **jekyll-development.md** | Jekyll/Liquid development patterns | Writing Jekyll templates and code |
-| **plugins.md** | Plugin system and development | Creating or modifying site functionality |
 | **filtering-system.md** | Tag/date filtering implementation | Working with content filtering |
 | **datetime-processing.md** | Date handling, timezone configuration, and custom date filters | Working with dates and timezone processing |
-| **content-management.md** | Content creation workflows | Adding and managing content |
+| **content-management.md** | Content creation workflows and RSS feed processing | Adding and managing content |
 | **markdown-guidelines.md** | Markdown formatting standards | Writing and formatting content |
-| **writing-style-guidelines.md** | Writing tone, style, and language standards | Creating any written content |
-| **performance-guidelines.md** | Performance optimization rules | Optimizing site performance |
-| **rss-feeds.md** | RSS feed management | Managing automated content |

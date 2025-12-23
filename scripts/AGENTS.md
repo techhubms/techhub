@@ -9,21 +9,40 @@ You are a PowerShell development specialist working with the Tech Hub's automati
 - **PowerShell**: 7+ (cross-platform)
 - **Testing Framework**: Pester v5
 - **Key Modules**: HtmlToMarkdown, Az (Azure), Playwright
-- **AI Integration**: Azure OpenAI, GitHub Models
+- **AI Integration**: Azure AI Foundry
 
 ## Directory Structure
 
 ```text
 scripts/
-├── *.ps1                    # Main automation scripts
-├── functions/               # Reusable PowerShell functions
-│   ├── Get-SourceRoot.ps1  # Repository root detection
-│   ├── Convert-RssToMarkdown.ps1
-│   ├── Invoke-AiApiCall.ps1
-│   └── ...                 # Other utility functions
-└── templates/              # Markdown content templates
-    ├── template-generic.md
-    └── template-videos.md
+├── jekyll-start.ps1         # Start Jekyll development server
+├── jekyll-stop.ps1          # Stop Jekyll development server
+├── run-all-tests.ps1        # Run all test suites
+├── run-e2e-tests.ps1        # Playwright end-to-end tests
+├── run-javascript-tests.ps1 # Jest JavaScript tests
+├── run-plugin-tests.ps1     # RSpec Ruby plugin tests
+├── run-powershell-tests.ps1 # Pester PowerShell tests
+├── Deploy-Infrastructure.ps1 # Azure Static Web App deployment
+├── data/                    # Script data files
+│   ├── rss-feeds.json       # RSS feed configuration
+│   ├── processed-entries.json
+│   ├── skipped-entries.json
+│   └── rss-cache/           # Downloaded RSS data
+└── content-processing/      # Content generation scripts
+    ├── download-rss-feeds.ps1
+    ├── process-rss-to-markdown.ps1
+    ├── fix-markdown-files.ps1
+    ├── iterative-roundup-generation.ps1
+    ├── detect-repository-content-issues.ps1
+    ├── system-message.md
+    ├── functions/           # Reusable PowerShell functions
+    │   ├── Get-SourceRoot.ps1
+    │   ├── Convert-RssToMarkdown.ps1
+    │   ├── Invoke-AiApiCall.ps1
+    │   └── ...
+    └── templates/           # Markdown content templates
+        ├── template-generic.md
+        └── template-videos.md
 ```
 
 ## PowerShell Syntax Rules
@@ -81,7 +100,7 @@ Set-StrictMode -Version Latest
 
 ### Function Paths Pattern
 
-All scripts must handle two execution contexts:
+Content processing scripts must handle two execution contexts:
 
 ```powershell
 # Determine the correct functions path
@@ -91,7 +110,7 @@ $functionsPath = if ($WorkspaceDirectory -eq $PSScriptRoot) {
 }
 else {
     # Running from workspace root (e.g., GitHub Actions)
-    Join-Path $WorkspaceDirectory "scripts/functions"
+    Join-Path $WorkspaceDirectory "scripts/content-processing/functions"
 }
 ```
 
@@ -117,12 +136,11 @@ catch {
 
 ## Key Scripts
 
-### RSS Processing
+### Content Processing (in `content-processing/`)
 
 **download-rss-feeds.ps1**
 - Downloads RSS feeds from configured sources
-- Saves structured data to `_data/rss-cache/`
-- Uses Playwright for Reddit content extraction
+- Saves structured data to `scripts/data/rss-cache/`
 - Tracks processed entries to avoid duplicates
 
 **process-rss-to-markdown.ps1**
@@ -135,6 +153,11 @@ catch {
 - Repairs markdown formatting issues
 - Fixes frontmatter structure
 - Validates Jekyll compatibility
+
+**iterative-roundup-generation.ps1**
+- AI-powered weekly roundup generation
+- Multi-step iteration with validation
+- Combines content from multiple sources
 
 ### Infrastructure
 
@@ -172,11 +195,9 @@ catch {
 
 ## PowerShell Testing Standards
 
-### Framework
+Use **Pester v5** for all PowerShell testing. For complete testing patterns, test organization, and critical testing rules, see [spec/AGENTS.md](../spec/AGENTS.md).
 
-Use **Pester v5** for all PowerShell testing.
-
-### Test File Structure
+### Test File Location
 
 ```text
 spec/powershell/
@@ -186,47 +207,18 @@ spec/powershell/
 └── test-data/                  # Test data files
 ```
 
-### Test Pattern
+### Running Pester Tests
 
-```powershell
-Describe "Function-Name" {
-    BeforeAll {
-        . "$PSScriptRoot/Initialize-BeforeAll.ps1"
-        # Custom setup here
-    }
+```bash
+# All PowerShell tests
+./scripts/run-powershell-tests.ps1
 
-    BeforeEach {
-        . "$PSScriptRoot/Initialize-BeforeEach.ps1"
-        # Custom reset here
-    }
-    
-    Context "Parameter Validation" {
-        It "Should throw when required parameter is null" {
-            { Function-Name -Parameter $null } | Should -Throw "*Parameter cannot be null*"
-        }
-    }
-    
-    Context "Core Functionality" {
-        It "Should process valid input correctly" {
-            # Arrange
-            $input = @("test-value")
-            
-            # Act
-            $result = Function-Name -Parameter $input
-            
-            # Assert
-            $result | Should -Contain "expected-value"
-        }
-    }
-}
+# Specific test file
+./scripts/run-powershell-tests.ps1 -TestPath "spec/powershell/Convert-RssToMarkdown.Tests.ps1"
+
+# With coverage
+./scripts/run-powershell-tests.ps1 -Coverage
 ```
-
-### Critical Testing Rules
-
-**CRITICAL**: ALWAYS test the real implementation—never duplicate production logic in tests
-**CRITICAL**: ONLY mock/stub external dependencies and input data
-**CRITICAL**: NEVER copy production code into test files
-**CRITICAL**: Remove tests if production function is no longer used
 
 ## Common Functions
 
@@ -283,39 +275,43 @@ param(
 ### From Repository Root
 
 ```powershell
-# RSS processing
-./scripts/download-rss-feeds.ps1 -WorkspaceDirectory .
-./scripts/process-rss-to-markdown.ps1 "owner/repo" "token" -WorkspaceDirectory .
+# Content processing
+./scripts/content-processing/download-rss-feeds.ps1 -WorkspaceDirectory .
+./scripts/content-processing/process-rss-to-markdown.ps1 "owner/repo" "token" -WorkspaceDirectory .
 
 # Testing
 ./scripts/run-powershell-tests.ps1
 ./scripts/run-all-tests.ps1
 
 # Infrastructure
-./scripts/Deploy-Infrastructure.ps1 -Mode validate
+./infra/Deploy-Infrastructure.ps1 -Mode validate
 ```
 
 ### From GitHub Actions
 
 ```yaml
-- name: Run Script
+- name: Run Content Processing
   shell: pwsh
   run: |
-    ./scripts/script-name.ps1 -WorkspaceDirectory "${{ github.workspace }}"
+    ./scripts/content-processing/download-rss-feeds.ps1 -WorkspaceDirectory "${{ github.workspace }}"
+
+- name: Run Tests
+  shell: pwsh
+  run: |
+    ./scripts/run-powershell-tests.ps1
 ```
 
 ## Data File Locations
 
-- **RSS Feeds Config**: `_data/rss-feeds.json`
-- **Processed Entries**: `_data/processed-entries.json`
-- **Skipped Entries**: `_data/skipped-entries.json`
-- **RSS Cache**: `_data/rss-cache/`
+- **RSS Feeds Config**: `scripts/data/rss-feeds.json`
+- **Processed Entries**: `scripts/data/processed-entries.json`
+- **Skipped Entries**: `scripts/data/skipped-entries.json`
+- **RSS Cache**: `scripts/data/rss-cache/`
 
 ## Resources
 
-- [powershell-guidelines.md](../docs/powershell-guidelines.md) - Complete PowerShell standards
-- [rss-feeds.md](../docs/rss-feeds.md) - RSS processing documentation
-- [testing-guidelines.md](../docs/testing-guidelines.md) - Testing strategy
+- [content-management.md](../docs/content-management.md) - RSS processing documentation
+- [spec/AGENTS.md](../spec/AGENTS.md) - Testing strategy and Pester patterns
 
 ## Never Do
 

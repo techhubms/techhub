@@ -544,8 +544,8 @@ Variables must be imported before they're used:
 
 ## Resources
 
-- [frontend-guidelines.md](../docs/frontend-guidelines.md) - Complete frontend standards
 - [performance-guidelines.md](../docs/performance-guidelines.md) - Performance optimization
+- [assets/js/AGENTS.md](../assets/js/AGENTS.md) - JavaScript development (for client-side interactions)
 
 ## Never Do
 

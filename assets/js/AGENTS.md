@@ -434,12 +434,124 @@ npm test -- --coverage
 npm test -- --watch
 ```
 
+## Date and Timezone Handling
+
+### Critical Rule: No Relative Dates in Static Sites
+
+**🚨 CRITICAL**: Jekyll sites are built once and contain static HTML. Relative dates in data attributes used for filtering logic must NEVER be hardcoded.
+
+**Static Site Date Processing Requirements**:
+- **Convert to Epoch Immediately**: All dates must be converted to Unix epoch timestamps
+- **Client-Side Calculations**: Use epoch timestamps for all relative date calculations
+- **No Hardcoded Relative Dates**: Never use text like "last 3 days" in data attributes
+- **Dynamic Calculation**: Calculate relative dates at runtime using current epoch vs stored epoch
+
+### What Is Allowed vs Not Allowed
+
+**✅ ALLOWED (Display Text)**:
+- Button labels: `<button>Last 3 days</button>`
+- Headings: `<h1>Last 3 days</h1>`
+- Dynamic display text calculated at runtime
+
+**❌ NOT ALLOWED (Data Attributes for Filtering)**:
+- Text in data attributes: `data-date="last 3 days"`
+- JavaScript parsing text strings for filtering logic
+
+**✅ REQUIRED (Filtering Logic)**:
+- Numeric data attributes: `data-days="3"` or `data-epoch="1721541345"`
+- Epoch timestamp calculations in JavaScript
+
+### HTML Data Attribute Patterns
+
+```html
+<!-- ✅ CORRECT: Epoch timestamps for dynamic calculation -->
+<li class="post-item" data-epoch="1721541345">item title</li>
+
+<!-- ✅ CORRECT: Human-readable button with numeric data -->
+<button data-days="3" class="date-filter-btn">Last 3 days</button>
+
+<!-- ❌ WRONG: Text in data attributes -->
+<li class="post-item" data-date="last 3 days">item title</li>
+<button data-filter="last 3 days">Last 3 days</button>
+```
+
+### Critical Pattern: Epoch-Based Calculations
+
+All client-side date filtering must use epoch timestamps for consistency with the static site architecture.
+
+**Why Epoch Timestamps Are Required:**
+
+- Jekyll sites are built once and contain static HTML
+- Relative dates in data attributes (like "last 3 days") would become stale
+- Epoch timestamps enable dynamic calculation at runtime
+- Server generates epoch from Brussels timezone; client uses `Date.now()` for UTC epoch
+
+### Date Filter Implementation
+
+```javascript
+// ✅ CORRECT: Epoch-based date filtering with visitor's local timezone
+function isWithinDateFilter(postEpoch, days) {
+  const now = new Date();
+  const today = new Date(now);
+  today.setHours(0, 0, 0, 0);
+  const todayStart = Math.floor(today.getTime() / 1000);
+  
+  if (days === 0) {
+    // Today only
+    const todayEnd = todayStart + 86399;
+    return postEpoch >= todayStart && postEpoch <= todayEnd;
+  } else {
+    // "Last N days" means today + (N-1) days back
+    const daysInSeconds = (days - 1) * 86400;
+    const cutoffEpoch = todayStart - daysInSeconds;
+    return postEpoch >= cutoffEpoch;
+  }
+}
+
+// ✅ CORRECT: Dynamic relative date display
+function formatRelativeDate(postEpoch) {
+  const now = Math.floor(Date.now() / 1000);
+  const daysAgo = Math.floor((now - postEpoch) / 86400);
+  return `${daysAgo} days ago`;
+}
+```
+
+### Timezone Consistency
+
+```javascript
+// ✅ CORRECT: Use epoch timestamps with visitor's local timezone for better UX
+const postEpoch = parseInt(element.dataset.epoch);
+const now = new Date();
+const today = new Date(now);
+today.setHours(0, 0, 0, 0);
+const todayStart = Math.floor(today.getTime() / 1000);
+
+// ❌ WRONG: Mixing timezone formats
+const postDate = new Date(element.dataset.date);
+const now = new Date(); // Uses client timezone inconsistently
+```
+
+### Data Attribute Requirements
+
+**✅ ALLOWED (Display Text)**:
+- Button labels: `<button>Last 3 days</button>`
+- Headings: `<h1>Last 3 days</h1>`
+- Dynamic display text calculated at runtime
+
+**❌ NOT ALLOWED (Data Attributes for Filtering)**:
+- Text in data attributes: `data-date="last 3 days"`
+- JavaScript parsing text strings for filtering logic
+
+**✅ REQUIRED (Filtering Logic)**:
+- Numeric data attributes: `data-days="3"` or `data-epoch="1721541345"`
+- Epoch timestamp calculations in JavaScript
+
 ## Resources
 
-- [javascript-guidelines.md](../docs/javascript-guidelines.md) - Complete JavaScript standards
 - [filtering-system.md](../docs/filtering-system.md) - Filtering implementation details
+- [datetime-processing.md](../docs/datetime-processing.md) - Date and timezone configuration
 - [performance-guidelines.md](../docs/performance-guidelines.md) - Performance optimization
-- [testing-guidelines.md](../docs/testing-guidelines.md) - Testing strategy
+- [spec/AGENTS.md](../spec/AGENTS.md) - Testing strategy and Jest patterns
 
 ## Never Do
 

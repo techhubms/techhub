@@ -182,7 +182,7 @@ This combination:
 
 ## Custom Plugins and Extensions
 
-The site uses custom Jekyll plugins to extend functionality and keep Liquid templates simple and fast. For complete plugin documentation, implementation details, and development guidelines, see [Plugins](plugins.md).
+The site uses custom Jekyll plugins to extend functionality and keep Liquid templates simple and fast. For complete plugin documentation, implementation details, and development guidelines, see [_plugins/AGENTS.md](../_plugins/AGENTS.md).
 
 ### Jekyll Development Philosophy
 
@@ -214,6 +214,8 @@ _plugins/
 └── youtube.rb              # YouTube embed functionality
 ```
 
+For detailed filter reference and implementation patterns, see [_plugins/AGENTS.md](../_plugins/AGENTS.md).
+
 ### Development Approach Examples
 
 #### Example: Preferred Development Approach
@@ -240,67 +242,32 @@ _plugins/
 ### Development Considerations
 
 - **Restart Requirement**: Jekyll must be restarted after plugin modifications
-- **Plugin Priority**: Plugins execute in priority-based order (see [Plugins](plugins.md))
+- **Plugin Priority**: Plugins execute in priority-based order (see [_plugins/AGENTS.md](../_plugins/AGENTS.md))
 - **Data Generation**: Tag-related changes require full restart for data file regeneration
 - **Filter Performance**: Custom filters should be optimized for repeated use
 
 ## Liquid Template Development
 
-### Core Principles
-
-**Keep Templates Simple**: Liquid templates should focus on rendering, not complex logic.
-
-**Use Available Filters**: The site provides custom filters for common operations (detailed in [Plugins](plugins.md)):
-
-- **Date Operations**: `date_to_epoch`, `now_epoch`, `to_epoch`
-- **Content Management**: `limit_with_same_day` for performance optimization
-- **Tag Processing**: Custom tag normalization and processing filters
+For Liquid template development patterns, formatting requirements, and the preferred architecture approach, see [_plugins/AGENTS.md](../_plugins/AGENTS.md#liquid-template-development).
 
 ### Essential Liquid Patterns
 
-#### Configuration-Driven Development
+For configuration-driven development, data access patterns, and include data passing, see [_plugins/AGENTS.md](../_plugins/AGENTS.md#essential-liquid-patterns).
 
-**Always use dynamic, configuration-driven approaches**:
-
-```liquid
-<!-- ✅ CORRECT: Dynamic sections -->
-{% for section in site.data.sections %}
-  {% assign section_data = section[1] %}
-  {% assign category = section_data.category %}
-{% endfor %}
-
-<!-- ❌ WRONG: Hardcoded sections -->
-{% if page.categories contains "AI" %}
-```
-
-**Key Principle**: Never hardcode sections or categories. Always use `site.data.sections` for section data.
-
-#### Jekyll Data Access Patterns
-
-**Correct data access patterns**:
-
-```liquid
-<!-- ✅ CORRECT patterns -->
-{{ site.data.sections }}
-{{ site.data.all_tags }}
-{{ site.data.category_tags }}
-
-<!-- ❌ WRONG patterns -->
-{{ site.sections }}
-{{ site.all_tags }}
-{{ site.category_tags }}
-```
-
-**Remember**: The `site.data.` prefix is mandatory for accessing Jekyll data files.
-
-#### Date and Timezone Handling
+### Date and Timezone Handling
 
 **Critical Timezone Requirements**:
 
 - All date processing must use `Europe/Brussels` timezone consistently
 - Use custom filters for date operations instead of complex Liquid logic
+- The timezone is configured in `_config.yml`: `timezone: Europe/Brussels`
 
-For comprehensive date and timezone processing guidelines, see [Date and Timezone Processing](datetime-processing.md).
+**Available Date Filters**:
+
+- `date_to_epoch`: Converts any date to Unix epoch timestamp
+- `now_epoch`: Gets current date as epoch timestamp (use with any input like `''`)
+- `to_epoch`: Direct date-to-epoch conversion without formatting
+- `limit_with_same_day`: Applies content limiting rule to content arrays
 
 **Standard Date Conversion Pattern**:
 
@@ -312,88 +279,15 @@ For comprehensive date and timezone processing guidelines, see [Date and Timezon
 {%- endif -%}
 ```
 
-#### Data Access Patterns
-
-**Site Configuration**:
+**Content Limiting with Date Boundaries**:
 
 ```liquid
-{%- comment -%} Access site structure {%- endcomment -%}
-{%- for section in site.data.sections -%}
-  {%- assign section_data = section[1] -%}
-  {{ section_data.title }}
-{%- endfor -%}
+{%- comment -%} Apply content limiting rule to content -%}
+{%- assign sorted_items = site.posts | sort: 'date' | reverse -%}
+{%- assign limited_items = sorted_items | limit_with_same_day -%}
 ```
 
-**Tag Data Access**:
-
-```liquid
-{%- comment -%} Access tag data {%- endcomment -%}
-{%- assign tags = site.data.category_tags[collection_type][category] -%}
-```
-
-#### Include Data Passing
-
-When data is explicitly passed to included files:
-
-```liquid
-{%- include posts.html posts=limited_posts -%}
-{%- include filters.html posts=posts collection_type=page.collection -%}
-```
-
-Access in includes using the `include.` prefix: `include.posts`, `include.collection_type`
-
-### Template Processing Architecture
-
-**Purpose**: Jekyll templates enable modular, reusable content generation that separates presentation from data processing. Templates allow the same layout and filtering logic to be applied across different content types and sections while maintaining consistency.
-
-**Why Templates Are Essential**:
-
-- **Modularity**: Break complex pages into manageable, reusable components
-- **Consistency**: Ensure uniform presentation across all pages
-- **Maintainability**: Update one template to change multiple pages
-- **Dynamic Content**: Generate pages based on data and configuration
-- **Performance**: Server-side rendering provides fast initial page loads
-
-**Template Hierarchy Example**:
-
-```liquid
-<!-- _layouts/default.html - Base layout -->
-<!DOCTYPE html>
-<html>
-<head>
-  {% include head.html %}
-</head>
-<body>
-  {% include header.html %}
-  <main>
-    {{ content }}
-  </main>
-  {% include footer.html %}
-</body>
-</html>
-
-<!-- _includes/section-index.html - Page structure -->
-{%- assign limited_posts = posts | limit_with_same_day -%}
-{% include filters.html posts=limited_posts collection_type=page.collection %}
-{% include posts.html posts=limited_posts %}
-
-<!-- _includes/filters.html - Filter generation -->
-{%- assign tags = site.data.category_tags[collection_type][category] -%}
-{%- for tag in tags -%}
-  <button class="tag-filter" data-tag="{{ tag.normalized }}">
-    {{ tag.display }} ({{ tag.count }})
-  </button>
-{%- endfor -%}
-```
-
-**Template Data Flow**:
-
-1. **Layout Templates**: Provide overall page structure and meta information
-2. **Include Templates**: Handle specific functionality like filtering and content display
-3. **Data Injection**: Templates receive data from Jekyll plugins and site configuration
-4. **Dynamic Generation**: Templates adapt based on page type and content collection
-
-**Note**: For complete tag flow and template processing details, see [Filtering System](filtering-system.md#tag-flow-pipeline).
+**Global Date Variable**: `now_epoch` is available globally on all pages via Jekyll hooks, set during build.
 
 ### Available Global Variables
 
@@ -488,7 +382,7 @@ Access in includes using the `include.` prefix: `include.posts`, `include.collec
 
 ### Jekyll Plugin Integration
 
-**Plugin Usage in Development**: For detailed plugin information, see [Plugins](plugins.md).
+**Plugin Usage in Development**: For detailed plugin information, see [_plugins/AGENTS.md](../_plugins/AGENTS.md).
 
 **Key Performance Principles**:
 

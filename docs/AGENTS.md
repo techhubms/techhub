@@ -9,22 +9,23 @@ You are a documentation specialist for the Tech Hub project. This directory cont
 ```text
 docs/
 ├── AGENTS.md                   # Documentation guidelines (this file)
-├── content-management.md       # Content creation and organization
+├── content-management.md       # Content creation, organization, and RSS processing
 ├── datetime-processing.md      # Date handling and timezone configuration
 ├── documentation-guidelines.md # Documentation structure and hierarchy
 ├── filtering-system.md         # Tag-based filtering implementation
-├── github-token-setup.md       # GitHub token configuration
 ├── jekyll-development.md       # Jekyll-specific patterns
 ├── markdown-guidelines.md      # Markdown structure for AI models
 ├── performance-guidelines.md   # Performance optimization
-├── plugins.md                  # Jekyll plugin architecture
-├── rss-feeds.md               # RSS feed processing
 ├── site-overview.md            # Site structure overview
 ├── terminology.md              # Project vocabulary
 └── writing-style-guidelines.md # Content writing standards
 ```
 
 ## Documentation Philosophy
+
+**CRITICAL**: Whenever code changes any behavior, you MUST update the relevant documentation files to reflect those changes. Never leave documentation out of sync with the codebase.
+
+**CRITICAL**: When creating or updating documentation, update [documentation-guidelines.md](documentation-guidelines.md) to include new content. For code-specific domain guidance, update the relevant AGENTS.md file in the appropriate directory.
 
 ### Audience
 
@@ -42,6 +43,9 @@ Documentation serves multiple audiences:
 - **Clarity**: Use clear, concise language
 - **Examples**: Include practical code examples
 - **Maintenance**: Keep in sync with codebase
+- **Minimize duplication**: Content appears in one authoritative location
+- **Cross-references**: Use links to connect related information
+- **Heading levels**: Maximum 3 levels (#, ##, ###)
 
 ## Documentation Standards
 
@@ -273,32 +277,17 @@ Test code examples periodically:
 - Ruby: Execute in IRB
 - Liquid: Test in Jekyll templates
 
-## Integration with AGENTS.md
+## Content Placement
 
-Documentation and AGENTS.md files serve different purposes:
+For detailed guidelines on where to place documentation content, see [documentation-guidelines.md](documentation-guidelines.md).
 
-**Documentation** (`docs/*.md`):
-- Comprehensive technical details
-- Historical context
-- Complete feature coverage
-- Human-readable reference
+**Quick Reference**:
 
-**AGENTS.md**:
-- Focused on specific domains
-- Action-oriented guidance
-- Critical rules and patterns
-- AI assistant instructions
-
-### Division of Content
-
-| Content Type | Location | Purpose |
-|--------------|----------|---------|
-| Complete feature spec | `docs/` | Full details |
-| Development patterns | `AGENTS.md` | Quick reference |
-| Architecture overview | `docs/` | Understanding |
-| Critical rules | `AGENTS.md` | Prevent errors |
-| Historical decisions | `docs/` | Context |
-| Current best practices | `AGENTS.md` | Daily use |
+- **Generic rules** stay in `docs/`
+- **Language-specific code** goes to domain AGENTS.md files
+- **Date/timezone concepts** → `docs/datetime-processing.md`
+- **JavaScript date code** → `assets/js/AGENTS.md`
+- **Ruby date code** → `_plugins/AGENTS.md`
 
 ## Resources
 

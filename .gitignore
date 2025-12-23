@@ -6,7 +6,7 @@ _site/
 .bundle/
 vendor/
 Gemfile.lock
-.github/scripts/execute-with-token.ps1
+scripts/content-processing/execute-with-token.ps1
 .tmp/
 .logs/
 **/node_modules/

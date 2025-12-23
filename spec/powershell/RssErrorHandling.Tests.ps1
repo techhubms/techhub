@@ -6,10 +6,12 @@ Describe "RSS Error Handling Integration" {
         . "$PSScriptRoot/Initialize-BeforeAll.ps1"
 
         $script:TestScriptsPath = Join-Path $script:TempPath "scripts"
-        $script:TestSkippedEntriesPath = Join-Path $script:TestScriptsPath "skipped-entries.json"
+        $script:TestDataPath = Join-Path $script:TempPath "_data"
+        $script:TestSkippedEntriesPath = Join-Path $script:TestDataPath "skipped-entries.json"
         
         # Create test directories
         New-Item -Path $script:TestScriptsPath -ItemType Directory -Force | Out-Null
+        New-Item -Path $script:TestDataPath -ItemType Directory -Force | Out-Null
         
         # Create empty tracking files
         Set-Content -Path $script:TestSkippedEntriesPath -Value "[]"
@@ -20,6 +22,7 @@ Describe "RSS Error Handling Integration" {
         
         # Recreate test directories and files after cleanup
         New-Item -Path $script:TestScriptsPath -ItemType Directory -Force | Out-Null
+        New-Item -Path $script:TestDataPath -ItemType Directory -Force | Out-Null
         Set-Content -Path $script:TestSkippedEntriesPath -Value "[]"
     }
     

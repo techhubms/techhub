@@ -32,7 +32,7 @@ jobs:
     - name: Deploy Infrastructure
       shell: pwsh
       run: |
-        pwsh ./scripts/Deploy-Infrastructure.ps1 `
+        pwsh ./infra/Deploy-Infrastructure.ps1 `
           -Mode "${{ github.event.inputs.mode }}" `
           -SkipLogin `
           -SkipConfirmation

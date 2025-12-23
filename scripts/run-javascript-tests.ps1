@@ -16,7 +16,8 @@ $ProgressPreference = 'SilentlyContinue'
 Set-StrictMode -Version Latest
 
 # Define script-level variables
-$script:rootDir = $PSScriptRoot
+$script:scriptDir = $PSScriptRoot
+$script:rootDir = Split-Path -Parent $script:scriptDir
 $script:jsTestDir = Join-Path $script:rootDir "spec/javascript"
 
 # Colors for output

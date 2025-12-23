@@ -544,10 +544,9 @@ npx playwright show-trace trace.zip
 
 ## Resources
 
-- [testing-guidelines.md](../docs/testing-guidelines.md) - Complete strategy
-- [powershell-guidelines.md](../docs/powershell-guidelines.md) - PowerShell standards
-- [javascript-guidelines.md](../docs/javascript-guidelines.md) - JavaScript standards
-- [plugins.md](../docs/plugins.md) - Ruby plugin testing
+- [scripts/AGENTS.md](../scripts/AGENTS.md) - PowerShell development
+- [assets/js/AGENTS.md](../assets/js/AGENTS.md) - JavaScript development
+- [_plugins/AGENTS.md](../_plugins/AGENTS.md) - Ruby plugin development
 
 ## Never Do
 

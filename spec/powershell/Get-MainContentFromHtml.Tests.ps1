@@ -367,42 +367,8 @@ Describe "Get-MainContentFromHtml" {
         }
     }
 
-    Context "Reddit Processing" {
-        It "Should return empty string when no post-content divs found (not throw)" {
-            # Arrange
-            $testHtml = "<html><body>Reddit content without proper post-content divs</body></html>"
-            $testUrl = "https://www.reddit.com/test"
-            
-            # Act
-            $result = Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl
-            
-            # Assert
-            $result | Should -Be ""
-        }
-        
-        It "Should extract content from divs with post-content IDs" {
-            # Arrange
-            $testHtml = @"
-<html><body>
-<div id="t3_123-post-rtjson-content">
-<p>Main post content here</p>
-</div>
-<div id="t1_456-post-rtjson-content">
-<p>Comment content here</p>
-</div>
-</body></html>
-"@
-            $testUrl = "https://www.reddit.com/r/test/comments/123/test-post/"
-            
-            # Act
-            $result = Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl
-            
-            # Assert
-            $result | Should -Not -BeNullOrEmpty
-            $result | Should -Match "Main post content here"
-            $result | Should -Match "Comment content here"
-        }
-    }
+    # Note: Reddit-specific processing was removed - Reddit URLs now fall through to default handling
+    # which returns the original HTML unchanged.
 
     Context "YouTube Processing" {
         It "Should throw not implemented error for www.youtube.com" {
@@ -1152,63 +1118,6 @@ Describe "Get-MainContentFromHtml" {
         }
     }
 
-    Context "Reddit Special Case Handling" {
-        It "Should return empty string for Reddit when no content found (not throw)" {
-            # Arrange
-            $testHtml = "<html><body>Reddit content without post-content divs</body></html>"
-            $testUrl = "https://www.reddit.com/r/test/empty-content"
-            
-            # Act
-            $result = Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl
-            
-            # Assert
-            $result | Should -Be ""
-        }
-
-        It "Should handle Reddit content with empty post-content divs" {
-            # Arrange
-            $testHtml = @"
-<html><body>
-<div id="t3_123-post-rtjson-content">
-</div>
-<div id="t1_456-post-rtjson-content">
-   
-</div>
-</body></html>
-"@
-            $testUrl = "https://www.reddit.com/r/test/empty-divs"
-            
-            # Act
-            $result = Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl
-            
-            # Assert
-            $result | Should -Be ""
-        }
-
-        It "Should extract Reddit content with mixed empty and non-empty divs" {
-            # Arrange
-            $testHtml = @"
-<html><body>
-<div id="t3_123-post-rtjson-content">
-<p>Valid post content</p>
-</div>
-<div id="t1_456-post-rtjson-content">
-   
-</div>
-<div id="t1_789-post-rtjson-content">
-<p>Valid comment content</p>
-</div>
-</body></html>
-"@
-            $testUrl = "https://www.reddit.com/r/test/mixed-content"
-            
-            # Act
-            $result = Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl
-            
-            # Assert
-            $result | Should -Not -BeNullOrEmpty
-            $result | Should -Match "Valid post content"
-            $result | Should -Match "Valid comment content"
-        }
-    }
+    # Note: Reddit-specific processing was removed - Reddit URLs now fall through to default handling
+    # which returns the original HTML unchanged. See "Default Processing" context for coverage.
 }
