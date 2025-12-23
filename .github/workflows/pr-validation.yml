@@ -101,7 +101,7 @@ jobs:
       - name: Run all tests
         run: |
           echo "🧪 Running comprehensive test suite..."
-          pwsh -File run-all-tests.ps1
+          pwsh -File scripts/run-all-tests.ps1
           echo "✅ All tests passed!"
 
       - name: Validate Jekyll build
@@ -235,5 +235,5 @@ jobs:
             echo "- 🎉 This PR is ready for review!" >> $GITHUB_STEP_SUMMARY
           else
             echo "- 🔧 Please address the failing checks above" >> $GITHUB_STEP_SUMMARY
-            echo "- 📖 See [testing guidelines](docs/testing-guidelines.md) for help" >> $GITHUB_STEP_SUMMARY
+            echo "- 📖 See [testing documentation](spec/AGENTS.md) for help" >> $GITHUB_STEP_SUMMARY
           fi

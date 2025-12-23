@@ -3,7 +3,15 @@
 
   <div class="wrapper">
     <p class="author">Created with ❤️ by Reinier van Maanen</p>
-    <p class="rss-subscribe"><a href="{{ "/feed.xml" | relative_url }}">Subscribe via RSS</a></p>
+    <p class="rss-subscribe"><a href="{{ "/rss/feed.xml" | relative_url }}">Subscribe via RSS</a></p>
   </div>
 
 </footer>
+
+<button class="back-to-top" aria-label="Back to top" title="Back to top">
+  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+    <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+  </svg>
+  <span>Back to top</span>
+</button>
+<script src="{{ '/assets/js/back-to-top.js' | relative_url }}"></script>

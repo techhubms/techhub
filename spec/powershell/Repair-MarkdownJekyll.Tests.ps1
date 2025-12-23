@@ -9,7 +9,7 @@ Describe "Repair-MarkdownJekyll" {
         # Create subdirectories for different test scenarios
         New-Item -ItemType Directory -Path (Join-Path $script:TempPath "_posts") -Force | Out-Null
         New-Item -ItemType Directory -Path (Join-Path $script:TempPath "_news") -Force | Out-Null
-        New-Item -ItemType Directory -Path (Join-Path $script:TempPath ".github/scripts") -Force | Out-Null
+        New-Item -ItemType Directory -Path (Join-Path $script:TempPath "scripts/data") -Force | Out-Null
     }
     
     BeforeEach {
@@ -18,7 +18,7 @@ Describe "Repair-MarkdownJekyll" {
         # Recreate subdirectories for each test
         New-Item -ItemType Directory -Path (Join-Path $script:TempPath "_posts") -Force | Out-Null
         New-Item -ItemType Directory -Path (Join-Path $script:TempPath "_news") -Force | Out-Null
-        New-Item -ItemType Directory -Path (Join-Path $script:TempPath ".github/scripts") -Force | Out-Null
+        New-Item -ItemType Directory -Path (Join-Path $script:TempPath "scripts/data") -Force | Out-Null
     }
     
     Context "Parameter Validation" {
@@ -366,7 +366,7 @@ Test content
             
             Repair-MarkdownJekyll -FilePath $testFile
             
-            $processedFile = Join-Path $script:TempPath ".github/scripts/processed-entries.json"
+            $processedFile = Join-Path $script:TempPath "scripts/data/processed-entries.json"
             $processedFile | Should -Exist
             
             $processed = Get-Content $processedFile | ConvertFrom-Json

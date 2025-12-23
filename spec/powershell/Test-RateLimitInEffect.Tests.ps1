@@ -5,7 +5,7 @@ Describe "Test-RateLimitInEffect" {
     BeforeAll {
         . "$PSScriptRoot/Initialize-BeforeAll.ps1"
         
-        $script:TestScriptsPath = Join-Path $script:TempPath ".github/scripts"
+        $script:TestScriptsPath = Join-Path $script:TempPath "scripts"
     }
     
     BeforeEach {

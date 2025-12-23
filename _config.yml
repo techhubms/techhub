@@ -53,6 +53,10 @@ compress_html:
   ignore:
     envs: []
 
+# Include files/folders that would normally be excluded
+include:
+  - rss/
+
 # Exclude unwanted files and directories (Jekyll includes everything else by default)
 exclude:
   # All dotfiles and dot directories (covers .git, .github, .vscode, .devcontainer, etc.)
@@ -84,6 +88,7 @@ exclude:
   - "docs/"
   - "spec/"
   - "test-results/"
+  - "scripts/"
 
   # Exclude specific markdown files that aren't part of the site
   - "README.md"
@@ -91,6 +96,8 @@ exclude:
   - "CONTRIBUTING.md"
   - "SECURITY.md"
   - "LICENSE*"
+  - "AGENTS.md"
+  - "**/AGENTS.md"
   
   # Scripts and configuration
   - "*.ps1"

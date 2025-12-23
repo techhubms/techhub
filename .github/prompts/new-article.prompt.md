@@ -5,7 +5,7 @@ description: 'Generate new articles in this website from a URL.'
 
 **🚨 CRITICAL PROMPT SCOPE**: All instructions, restrictions, and requirements in this prompt file ONLY apply when this specific prompt is being actively executed via the `/new-article` command or equivalent prompt invocation. These rules do NOT apply when editing, reviewing, or working with this file outside of prompt execution context. When working with this file in any other capacity (editing, debugging, documentation, etc.), treat it as a normal markdown file and ignore all workflow-specific instructions.
 
-**CRITICAL**: If you have not read them, fetch `.github/copilot-instructions.md` and use these instructions as well.
+**CRITICAL**: If you have not read them, fetch `AGENTS.md` and use these instructions as well.
 
 # New Article Generation from URL Instructions
 

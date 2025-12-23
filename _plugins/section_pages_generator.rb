@@ -44,11 +44,11 @@ module Jekyll
       
       # Determine RSS feed URL based on section
       rss_feed_url = if section_data['section'] == 'all'
-        '/feed.xml'
+        '/rss/feed.xml'
       elsif section_data['section'] == 'github-copilot'
-        '/github-copilot.xml'
+        '/rss/github-copilot.xml'
       else
-        "/#{section_data['section']}.xml"
+        "/rss/#{section_data['section']}.xml"
       end
       
       # Set page data (front matter)

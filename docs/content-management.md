@@ -71,11 +71,9 @@ Visual Studio Code update videos are managed through a special collection struct
 
 ### 5. Automated RSS Content Creation
 
-The site automatically processes RSS feeds:
+The site automatically processes RSS feeds from Microsoft and technology sources. This system combines automated feed processing with AI-powered content categorization.
 
-- **Scheduled Processing**: GitHub Actions check for new content periodically
-- **AI Categorization**: Content is automatically categorized and tagged
-- **Automatic Publishing**: New content appears without manual intervention
+For full details on the RSS processing pipeline, see the [RSS Feed Processing](#rss-feed-processing) section below.
 
 ## Publishing Content
 
@@ -125,8 +123,6 @@ This script automatically fixes formatting, dates, frontmatter, and other common
 
 ## Alternative Collection Tab Highlighting
 
-### Overview
-
 The `alt-collection` frontmatter field allows content items to highlight a different collection tab in the navigation bar than their default collection would suggest. This is particularly useful for specialized subcollections like GitHub Copilot Features and Visual Studio Code Updates.
 
 ### How It Works
@@ -170,3 +166,150 @@ End-to-end tests verify that the correct tabs are highlighted for:
 - Collection pages themselves
 
 Tests are located in `spec/e2e/tests/alt-collection-highlighting.spec.js`.
+
+## RSS Feed Processing
+
+The Tech Hub automatically processes RSS feeds from Microsoft and technology sources to keep content current. This system combines automated feed processing with AI-powered content categorization and runs hourly via GitHub Actions.
+
+### Feed Configuration
+
+RSS feeds are configured in `scripts/data/rss-feeds.json`:
+
+```json
+{
+  "feeds": [
+    {
+      "name": "Microsoft AI Blog",
+      "url": "https://blogs.microsoft.com/ai/feed/",
+      "output_dir": "_news",
+      "category": "AI",
+      "enabled": true
+    }
+  ]
+}
+```
+
+**Required Fields**:
+
+- **name**: Human-readable feed identifier
+- **url**: RSS or Atom feed URL
+- **output_dir**: Target collection directory (`_news`, `_posts`, etc.)
+- **category**: Primary category ("AI" or "GitHub Copilot")
+
+**Optional Fields**:
+
+- **enabled**: Boolean to enable/disable feed (default: true)
+- **max_items**: Maximum items per processing run (default: 10)
+
+### Adding New Feeds
+
+**Using GitHub Copilot**:
+
+```text
+/new-rss-feeds
+```
+
+**Manual Addition**:
+
+1. Edit `scripts/data/rss-feeds.json`
+2. Add new feed object to the feeds array
+3. Validate JSON format
+4. Commit changes
+
+### Processing Pipeline
+
+The RSS processing system uses per-entry content fetching and Azure AI Foundry integration:
+
+```text
+RSS Download → Per-Entry Content Fetching → AI Analysis (Azure AI Foundry) → Content Creation → Tag Enhancement → Commit
+```
+
+**Download Phase**:
+
+- **Individual JSON Files**: Each RSS entry is saved as a separate JSON file in structured directories
+- **Content Enrichment**: Actual web content is fetched and stored alongside RSS metadata
+- **Rate-Limited Fetching**: Individual URL fetching with rate limiting between requests
+
+**Content Fetching Strategy**:
+
+1. **YouTube Videos**: Metadata processing without content fetching
+2. **Other URLs**: Individual HTTP requests with 10-second rate limiting
+3. **Error Handling**: Graceful degradation when content fetching fails
+
+### Azure AI Foundry Integration
+
+The system uses Azure AI Foundry for content processing:
+
+- **Endpoint**: `https://<resource>.services.ai.azure.com/models/chat/completions`
+- **Authentication**: Azure API Key
+- **Models**: Deployment names configured in Azure resource
+- **Rate Limiting**: 15-second delays between API calls
+
+**Configuration Example**:
+
+```powershell
+./scripts/content-processing/process-rss-to-markdown.ps1 "owner/repo" "api_key123" -Endpoint "https://myresource.services.ai.azure.com/models/chat/completions" -Model "gpt-4.1"
+```
+
+### Branch Strategy
+
+The RSS processing workflow uses a two-branch strategy:
+
+- **rss-updates branch**: All RSS processing occurs here (JSON files, AI analysis, markdown creation)
+- **main branch**: Updated only when new markdown content is published
+
+**Key Behavior**: If RSS processing only updates tracking data (JSON files), changes remain on rss-updates branch. Main branch is updated only with new/modified markdown files.
+
+### AI Content Analysis
+
+The system analyzes RSS content using comprehensive categorization rules:
+
+**Exclusion Rules** (Take Precedence):
+
+- Biographical content, question-only posts, short posts (<200 words)
+- Sales pitches, non-English content, job postings
+- Non-development Microsoft business products
+
+**Inclusion Categories**:
+
+- **Microsoft AI**: Azure OpenAI, Copilot services, AI Foundry, Semantic Kernel
+- **GitHub Copilot**: All Copilot editions, features, integrations (always includes AI)
+- **Coding**: Microsoft languages (C#, F#, TypeScript), .NET ecosystem
+- **DevOps**: Azure DevOps, GitHub Actions, CI/CD, monitoring
+- **Azure**: All Azure services, ARM/Bicep templates, cloud architecture
+
+### Content Output
+
+Each RSS item creates a markdown file with:
+
+- AI-generated excerpt and summary
+- Proper categorization and tagging
+- Canonical URL to original source
+- Standardized front matter (see [Markdown Guidelines](markdown-guidelines.md))
+
+### Processing Scripts
+
+**Core Scripts**:
+
+- **`scripts/content-processing/download-rss-feeds.ps1`**: Downloads RSS feeds and saves entries as JSON files
+- **`scripts/content-processing/process-rss-to-markdown.ps1`**: Processes JSON entries through AI to create markdown files
+- **`scripts/content-processing/functions/Get-FilteredTags.ps1`**: Tag enhancement and normalization
+
+**Execution**:
+
+- **Automated**: Every hour via GitHub Actions (scheduled workflow)
+- **Manual**: Can be triggered through GitHub Actions interface
+- **Local**: Available for development testing
+
+### Error Handling
+
+**Common Issues**:
+
+- **Feed Unavailability**: Automatic retry logic for temporary outages
+- **Network Issues**: Built-in retry mechanisms with exponential backoff
+- **API Limitations**: Respects rate limits and manages quotas for Azure AI Foundry
+- **Content Fetching Failures**: Graceful degradation when individual URL content cannot be fetched
+
+### Automatic Deployment
+
+When RSS workflow commits markdown files to main branch, Azure Static Web App deployment is automatically triggered via workflow dispatch. New content appears on the live site within minutes.

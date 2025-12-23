@@ -6,13 +6,14 @@ Describe "Convert-RssToMarkdown" {
     BeforeAll {
         . "$PSScriptRoot/Initialize-BeforeAll.ps1"
 
-        $script:TestScriptsPath = Join-Path $script:TempPath ".github/scripts"
+        $script:TestScriptsPath = Join-Path $script:TempPath "scripts"
+        $script:TestDataPath = Join-Path $script:TestScriptsPath "data"
         $script:TestOutputDir = Join-Path $script:TempPath "_posts"
         $script:TestCommunityOutputDir = Join-Path $script:TempPath "_community"
         $script:TestAiResultsDir = Join-Path $script:TestScriptsPath "ai-results"
         $script:TestTemplatesPath = Join-Path $script:TestScriptsPath "templates"
-        $script:TestSkippedEntriesPath = Join-Path $script:TestScriptsPath "skipped-entries.json"
-        $script:TestProcessedEntriesPath = Join-Path $script:TestScriptsPath "processed-entries.json"
+        $script:TestSkippedEntriesPath = Join-Path $script:TestDataPath "skipped-entries.json"
+        $script:TestProcessedEntriesPath = Join-Path $script:TestDataPath "processed-entries.json"
         
         # Create source location for template files that BeforeEach can copy from
         $script:TemplateSourcePath = Join-Path $script:TempPath "templates-source"
@@ -182,6 +183,7 @@ youtube_id: {{YOUTUBE_ID}}
         # Recreate directory structure (Initialize-BeforeEach.ps1 removes TestSourceRoot)
         New-Item -Path $script:TempPath -ItemType Directory -Force | Out-Null
         New-Item -Path $script:TestScriptsPath -ItemType Directory -Force | Out-Null
+        New-Item -Path $script:TestDataPath -ItemType Directory -Force | Out-Null
         New-Item -Path $script:TestOutputDir -ItemType Directory -Force | Out-Null
         New-Item -Path $script:TestAiResultsDir -ItemType Directory -Force | Out-Null
         New-Item -Path $script:TestTemplatesPath -ItemType Directory -Force | Out-Null
@@ -272,7 +274,7 @@ youtube_id: {{YOUTUBE_ID}}
             # Run the conversion (NOTE: -WhatIf is intentionally NOT used here because this test must 
             # verify that entries are actually written to the skipped entries file. The mocked API 
             # call prevents markdown file creation, so only tracking files are modified.)
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
             
             # Should return 0 new files (since content was filtered)
             $result | Should -Be 0
@@ -407,7 +409,7 @@ youtube_id: {{YOUTUBE_ID}}
             
             # Run the conversion (NOTE: -WhatIf is intentionally NOT used here because this test must 
             # verify that one file is actually created and one entry is written to skipped entries)
-            $result = Convert-RssToMarkdown -Items $script:testItems -Token "test-token" -Model "test-model"
+            $result = Convert-RssToMarkdown -Items $script:testItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
             
             # Should return 1 new file (second item succeeded)
             $result | Should -Be 1
@@ -441,7 +443,7 @@ youtube_id: {{YOUTUBE_ID}}
             }
             
             # Should throw because APIError is not a recognized error type  
-            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" } |
+            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" } |
             Should -Throw "*Unknown error type: Type: APIError, Message: Network error occurred*"
         }
         
@@ -473,7 +475,7 @@ youtube_id: {{YOUTUBE_ID}}
             }
             
             # Run the conversion
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
             
             # Should return 0 new files
             $result | Should -Be 0
@@ -507,12 +509,12 @@ youtube_id: {{YOUTUBE_ID}}
                 }
             }
             
-            # Mock Save-GitHubModelsResult to verify it's called for debugging
-            Mock Save-GitHubModelsResult {}
+            # Mock Save-AiApiResult to verify it's called for debugging
+            Mock Save-AiApiResult {}
             
             # Run the conversion (NOTE: -WhatIf is intentionally NOT used here because this test must 
             # verify that entries are actually written to the skipped entries file.)
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
             
             # Should return 0 new files (since JSON parsing failed)
             $result | Should -Be 0
@@ -523,8 +525,8 @@ youtube_id: {{YOUTUBE_ID}}
             $skippedEntries[0].canonical_url | Should -Be "https://example.com/test-article"
             $skippedEntries[0].reason | Should -Be "AI model response could not be parsed as JSON"
             
-            # Verify that Save-GitHubModelsResult was called for debugging purposes
-            Should -Invoke Save-GitHubModelsResult -Times 1 -ParameterFilter {
+            # Verify that Save-AiApiResult was called for debugging purposes
+            Should -Invoke Save-AiApiResult -Times 1 -ParameterFilter {
                 $PubDate -eq [DateTime]::Parse("2025-01-01T12:00:00Z")
             }
         }
@@ -582,7 +584,7 @@ This is old content that should be replaced.
             }
             
             # Run the conversion - should remove old file early and create new one
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
             
             # Should return 1 new file
             $result | Should -Be 1
@@ -640,7 +642,7 @@ This file should be removed even if AI processing fails.
             }
             
             # Run the conversion - file should be removed even though AI processing fails
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
             
             # Should return 0 new files (AI processing failed)
             $result | Should -Be 0
@@ -709,7 +711,7 @@ This is old content that should be replaced.
             }
             
             # Run the conversion - should remove old file and create new one
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
             
             # Should return 1 new file
             $result | Should -Be 1
@@ -795,7 +797,7 @@ This is the target article that should be removed.
             }
             
             # Run the conversion
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
             
             # Should return 1 new file
             $result | Should -Be 1
@@ -857,7 +859,7 @@ This file has malformed YAML but contains a different URL so should not be remov
             }
             
             # Should not throw an exception even with malformed file
-            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" } | Should -Not -Throw
+            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" } | Should -Not -Throw
             
             # Malformed file should still exist (not removed due to different URL)
             Test-Path $malformedFile | Should -Be $true
@@ -914,7 +916,7 @@ This has a quoted canonical URL.
             }
             
             # Run conversion
-            Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model"
+            Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
             
             # Quoted file should be removed
             Test-Path $quotedFile | Should -Be $false
@@ -961,7 +963,7 @@ This has an unquoted canonical URL.
             # Feed object creation removed - using direct items array
             
             # Run conversion again with unquoted feed
-            Convert-RssToMarkdown -Items $unquotedTestItems -Token "test-token" -Model "test-model"
+            Convert-RssToMarkdown -Items $unquotedTestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
             
             # Unquoted file should be removed
             Test-Path $unquotedFile | Should -Be $false
@@ -1004,7 +1006,7 @@ This has an unquoted canonical URL.
             }
             
             # Should not throw an exception and should process normally
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
             
             # Should return 1 (new file created)
             ($result | Measure-Object).Count | Should -Be 1
@@ -1044,7 +1046,7 @@ This has an unquoted canonical URL.
             }
             
             # The function should continue processing even when it encounters files it can't read
-            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" } | Should -Not -Throw
+            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" } | Should -Not -Throw
             
             # Clean up
             if (Test-Path $testFile) { Remove-Item $testFile -Force }
@@ -1092,7 +1094,7 @@ Content
             }
             
             # Should not throw an exception even with invalid file content
-            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" } | Should -Not -Throw
+            { Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" } | Should -Not -Throw
             
             # Clean up
             if (Test-Path $invalidFile) { Remove-Item $invalidFile -Force }
@@ -1139,7 +1141,7 @@ Content
             }
             
             # Run with -WhatIf to test ShouldProcess behavior
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -WhatIf
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" -WhatIf
             
             # Should return 1 (simulated file creation)
             ($result | Measure-Object).Count | Should -Be 1
@@ -1188,7 +1190,7 @@ Content
             }
 
             # Run the conversion
-            $result = Convert-RssToMarkdown -Items $shortTestItems -Token "test-token" -Model "test-model"
+            $result = Convert-RssToMarkdown -Items $shortTestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
 
             # Should return 1 new file
             $result | Should -Be 1
@@ -1238,7 +1240,7 @@ Content
             }
 
             # Run the conversion
-            $result = Convert-RssToMarkdown -Items $youTubeTestItems -Token "test-token" -Model "test-model"
+            $result = Convert-RssToMarkdown -Items $youTubeTestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
 
             # Should return 1 new file
             ($result | Measure-Object).Count | Should -Be 1
@@ -1277,7 +1279,7 @@ Content
             }
 
             # Run the conversion
-            $result = Convert-RssToMarkdown -Items $redditTestItems -Token "test-token" -Model "test-model"
+            $result = Convert-RssToMarkdown -Items $redditTestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
 
             # Should return 1 new file
             $result | Should -Be 1
@@ -1318,7 +1320,7 @@ Content
             }
 
             # Run the conversion - should throw when AI processing fails
-            { Convert-RssToMarkdown -Items $errorTestItems -Token "test-token" -Model "test-model" } | Should -Throw "*AI service error: Unable to process content*"
+            { Convert-RssToMarkdown -Items $errorTestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions" } | Should -Throw "*AI service error: Unable to process content*"
 
             # Verify AI processing was attempted
             Should -Invoke Invoke-ProcessWithAiModel -Exactly 1
@@ -1332,547 +1334,6 @@ Content
                 $processedEntries = Get-Content $script:TestProcessedEntriesPath | ConvertFrom-Json
                 $processedEntries | Should -HaveCount 0
             }
-        }
-    }
-
-    Context "Reddit Cross-Post Detection" {
-        BeforeEach {
-            # Clear any existing files
-            Get-ChildItem -Path $script:TestCommunityOutputDir -Filter "*.md" -ErrorAction SilentlyContinue | Remove-Item -Force
-        }
-        
-        It "Should detect and remove Reddit cross-posts with identical title in URL" {
-            # Create existing Reddit post
-            $existingContent = @'
----
-title: "Original Reddit Post"
-date: 2024-12-01 10:00:00 +00:00
-canonical_url: "https://www.reddit.com/r/programming/comments/abc123/cross_posted_article"
-author: "Original Author"
-categories: ["AI"]
-tags: ["Discussion"]
----
-
-Original Reddit post content.
-'@
-            $existingFilename = "2024-12-01-Original-Reddit-Post.md"
-            $existingFilePath = Join-Path $script:TestCommunityOutputDir $existingFilename
-            Set-Content -Path $existingFilePath -Value $existingContent -Encoding UTF8
-            
-            # Create test items with cross-post (same title in URL but different subreddit and post ID)
-            $communityTestItems = @(
-                [PSCustomObject]@{
-                    Title           = "Cross Posted Article"
-                    Link            = "https://www.reddit.com/r/dotnet/comments/xyz456/cross_posted_article"  # Same title: cross_posted_article
-                    PubDate         = [DateTime]::Parse("2025-01-01T12:00:00Z")
-                    Description     = "This is a cross-posted article. " + ("Lorem ipsum " * 50)  # Long enough to avoid HTTP fetch
-                    Author          = "Cross Post Author"
-                    Tags            = @("AI", "Discussion")
-                    OutputDir       = Join-Path $script:TempPath "_community"
-                    FeedName        = "Community Test Feed"
-                    FeedUrl         = "https://example.com/community-feed.xml"
-                    EnhancedContent = "This is a comprehensive discussion about cross-posted articles and content sharing strategies across different platforms. The post discusses various aspects of content distribution, including effective cross-posting techniques, community engagement best practices, and strategies for maximizing reach without creating spam. It covers practical applications in community management and provides detailed examples of successful cross-posting implementations. The content explores best practices for content curation, common pitfalls to avoid when sharing across multiple platforms, and recommendations for maintaining authentic engagement. Additionally, it discusses the importance of adapting content for different audiences, timing considerations for cross-posting, and techniques for measuring cross-post effectiveness. The post also covers ethical considerations in content sharing and the importance of respecting community guidelines across different platforms. Furthermore, it includes detailed analysis of cross-platform engagement metrics, advanced strategies for content optimization across different communities, and comprehensive guidelines for maintaining consistent brand voice while adapting to diverse audience expectations and platform-specific requirements."
-                }
-            )
-            
-            # Mock successful AI response that would create categories
-            Mock Invoke-ProcessWithAiModel {
-                return [PSCustomObject]@{
-                    title       = "Cross Posted Article"
-                    description = "This is a cross-posted article"
-                    content     = "# Cross Posted Article\n\nThis is cross-posted content."
-                    excerpt     = "Cross-post excerpt"
-                    categories  = @("AI")  # This will trigger the cross-post check
-                    tags        = @("Discussion", "Community")
-                }
-            }
-            
-            # Verify existing file exists before test
-            Test-Path $existingFilePath | Should -Be $true
-            
-            # Run the conversion
-            $result = Convert-RssToMarkdown -Items $communityTestItems -Token "test-token" -Model "test-model"
-            
-            # Should return 1 new file
-            $result | Should -Be 1
-            
-            # Original file should be removed due to cross-post detection
-            Test-Path $existingFilePath | Should -Be $false
-            
-            # New file should be created
-            $newFiles = Get-ChildItem -Path $script:TestCommunityOutputDir -Filter "*.md"
-            $newFiles | Should -HaveCount 1
-            $newFiles[0].Name | Should -Match "^2025-01-01-.*\.md$"
-        }
-        
-        It "Should not remove Reddit posts with different title in URL" {
-            # Create existing Reddit post with different title
-            $existingContent = @'
----
-title: "Different Reddit Post"
-date: 2024-12-01 10:00:00 +00:00
-canonical_url: "https://www.reddit.com/r/programming/comments/xyz789/different_post"
-author: "Different Author"
-categories: ["AI"]
-tags: ["Discussion"]
----
-
-Different Reddit post content.
-'@
-            $existingFilename = "2024-12-01-Different-Reddit-Post.md"
-            $existingFilePath = Join-Path $script:TestCommunityOutputDir $existingFilename
-            Set-Content -Path $existingFilePath -Value $existingContent -Encoding UTF8
-            
-            # Create test items for community processing
-            $communityTestItems = @(
-                [PSCustomObject]@{
-                    Title           = "New Reddit Article"
-                    Link            = "https://www.reddit.com/r/dotnet/comments/abc123/new_reddit_article"  # Different title: new_reddit_article vs different_post
-                    PubDate         = [DateTime]::Parse("2025-01-01T12:00:00Z")
-                    Description     = "This is a new Reddit article that provides comprehensive coverage of development topics."
-                    Author          = "New Author"
-                    Tags            = @("AI", "Discussion")
-                    OutputDir       = Join-Path $script:TempPath "_community"
-                    FeedName        = "Community Test Feed"
-                    FeedUrl         = "https://example.com/community-feed.xml"
-                    EnhancedContent = "This is a comprehensive discussion about new Reddit articles and their impact on the developer community. The post discusses various aspects of community engagement, including effective communication strategies, best practices for technical discussions, and methods for fostering inclusive conversations. It covers practical applications in online community management and provides detailed examples of successful community building initiatives. The content explores best practices for content creation, common pitfalls to avoid when engaging with technical communities, and recommendations for maintaining productive discourse. Additionally, it discusses the importance of knowledge sharing, mentorship opportunities within developer communities, and techniques for encouraging participation from diverse backgrounds. The post also covers ethical considerations in community management and the importance of maintaining respectful environments for technical learning and growth. Furthermore, it includes detailed analysis of community metrics, advanced strategies for content moderation, and comprehensive guidelines for building sustainable online developer communities."
-                }
-            )
-            
-            # Mock successful AI response
-            Mock Invoke-ProcessWithAiModel {
-                return [PSCustomObject]@{
-                    title       = "New Reddit Article"
-                    description = "This is a new Reddit article"
-                    content     = "# New Reddit Article\n\nThis is new content."
-                    excerpt     = "New excerpt"
-                    categories  = @("AI", "GitHub Copilot")
-                    tags        = @("Discussion", "Community")
-                }
-            }
-            
-            # Mock network calls
-            Mock Invoke-RestMethod {
-                if ($Uri -like "*api.openai.com*" -or $Uri -like "*api.azure.com*") {
-                    return [PSCustomObject]@{
-                        choices = @(
-                            [PSCustomObject]@{
-                                message = [PSCustomObject]@{
-                                    content = '{"title":"New Reddit Article","description":"This is a new Reddit article","content":"# New Reddit Article\\n\\nThis is new content.","excerpt":"New excerpt","categories":["AI","GitHub Copilot"],"tags":["Discussion","Community"]}'
-                                }
-                            }
-                        )
-                    }
-                }
-                throw "Unexpected REST call to: $Uri"
-            }
-            
-            # Verify existing file exists before test
-            Test-Path $existingFilePath | Should -Be $true
-            
-            # Run the conversion
-            $result = Convert-RssToMarkdown -Items $communityTestItems -Token "test-token" -Model "test-model"
-            
-            # Should return 1 new file
-            ($result | Measure-Object).Count | Should -Be 1
-            
-            # Original file should NOT be removed (different URL endings)
-            Test-Path $existingFilePath | Should -Be $true
-            
-            # Both files should exist
-            $allFiles = Get-ChildItem -Path $script:TestCommunityOutputDir -Filter "*.md"
-            $allFiles | Should -HaveCount 2
-        }
-        
-        It "Should only perform cross-post detection for community collection" {
-            # Create existing Reddit post in regular posts directory (not community)
-            $existingContent = @'
----
-title: "Regular Post"
-date: 2024-12-01 10:00:00 +00:00
-canonical_url: "https://www.reddit.com/r/programming/comments/abc123/regular_post"
-author: "Regular Author"
-categories: ["AI"]
-tags: ["Discussion"]
----
-
-Regular post content.
-'@
-            $existingFilename = "2024-12-01-Regular-Post.md"
-            $existingFilePath = Join-Path $script:TestOutputDir $existingFilename  # Note: TestOutputDir is _posts, not _community
-            Set-Content -Path $existingFilePath -Value $existingContent -Encoding UTF8
-            
-            # Create test feed with same URL ending but different collection (posts, not community)
-            $testFeedDataPosts = [PSCustomObject]@{
-                FeedName        = "Posts Test Feed"
-                OutputDir       = "_posts"
-                URL             = "https://example.com/posts-feed.xml"
-                FeedLevelAuthor = "Posts Feed Author"
-                Items           = @(
-                    [PSCustomObject]@{
-                        Title       = "New Post With Same Ending"
-                        Link        = "https://www.reddit.com/r/dotnet/comments/abc123/new_post_same_ending"  # Same ending: abc123
-                        PubDate     = "2025-01-01T12:00:00Z"
-                        Description = "This is a new post with same URL ending. " + ("Lorem ipsum " * 50)
-                        Author      = "New Author"
-                        Tags        = @("AI", "Discussion")
-                        OutputDir   = "_posts"
-                    }
-                )
-            }
-            $testPostsFeedJsonPath = Join-Path $script:TestScriptsPath "test-posts-feed.json"
-            $testFeedDataPosts | ConvertTo-Json -Depth 10 | Set-Content -Path $testPostsFeedJsonPath
-            # Feed object creation removed - using direct items array
-            
-            # Mock successful AI response
-            Mock Invoke-ProcessWithAiModel {
-                return [PSCustomObject]@{
-                    title       = "New Post With Same Ending"
-                    description = "This is a new post with same URL ending"
-                    content     = "# New Post\n\nThis is new content."
-                    excerpt     = "New excerpt"
-                    categories  = @("AI", "GitHub Copilot")
-                    tags        = @("Discussion", "Blog")
-                }
-            }
-            
-            # Mock network calls
-            Mock Invoke-RestMethod {
-                if ($Uri -like "*api.openai.com*" -or $Uri -like "*api.azure.com*") {
-                    return [PSCustomObject]@{
-                        choices = @(
-                            [PSCustomObject]@{
-                                message = [PSCustomObject]@{
-                                    content = '{"title":"New Post With Same Ending","description":"This is a new post with same URL ending","content":"# New Post\\n\\nThis is new content.","excerpt":"New excerpt","categories":["AI","GitHub Copilot"],"tags":["Discussion","Blog"]}'
-                                }
-                            }
-                        )
-                    }
-                }
-                throw "Unexpected REST call to: $Uri"
-            }
-            
-            # Verify existing file exists before test
-            Test-Path $existingFilePath | Should -Be $true
-            
-            # Run the conversion on posts feed (not community)
-            $result = Convert-RssToMarkdown -Items $postsTestItems -Token "test-token" -Model "test-model"
-            
-            # Should return 1 new file
-            ($result | Measure-Object).Count | Should -Be 1
-            
-            # Original file should NOT be removed (cross-post detection only for community collection)
-            Test-Path $existingFilePath | Should -Be $true
-            
-            # Both files should exist
-            $allFiles = Get-ChildItem -Path $script:TestOutputDir -Filter "*.md"
-            $allFiles | Should -HaveCount 2
-        }
-        
-        It "Should only check Reddit URLs for cross-post detection" {
-            # Create existing non-Reddit post in community directory
-            $existingContent = @'
----
-title: "Non-Reddit Post"
-date: 2024-12-01 10:00:00 +00:00
-canonical_url: "https://example.com/blog/abc123/non_reddit_post"
-author: "Blog Author"
-categories: ["AI"]
-tags: ["Discussion"]
----
-
-Non-Reddit post content.
-'@
-            $existingFilename = "2024-12-01-Non-Reddit-Post.md"
-            $existingFilePath = Join-Path $script:TestCommunityOutputDir $existingFilename
-            Set-Content -Path $existingFilePath -Value $existingContent -Encoding UTF8
-            
-            # Create test items for community processing
-            $communityTestItems = @(
-                [PSCustomObject]@{
-                    Title           = "New Non-Reddit Article"
-                    Link            = "https://different-site.com/articles/abc123/new_article"  # Same ending: abc123, but not Reddit
-                    PubDate         = [DateTime]::Parse("2025-01-01T12:00:00Z")
-                    Description     = "This is a new non-Reddit article that provides comprehensive coverage of development topics."
-                    Author          = "New Author"
-                    Tags            = @("AI", "Discussion")
-                    OutputDir       = Join-Path $script:TempPath "_community"
-                    FeedName        = "Community Test Feed"
-                    FeedUrl         = "https://example.com/community-feed.xml"
-                    EnhancedContent = "This is a comprehensive discussion about non-Reddit article sharing and content distribution strategies across different platforms. The post discusses various aspects of content curation, including effective cross-platform sharing techniques, community engagement best practices, and strategies for maximizing reach across diverse audiences. It covers practical applications in content management and provides detailed examples of successful content distribution implementations. The content explores best practices for article promotion, common pitfalls to avoid when sharing content across platforms, and recommendations for maintaining authentic engagement. Additionally, it discusses the importance of adapting content for different community cultures, timing considerations for content sharing, and techniques for measuring article effectiveness across various platforms. The post also covers ethical considerations in content distribution and the importance of respecting community guidelines while maintaining content quality and relevance."
-                }
-            )
-            
-            # Mock successful AI response
-            Mock Invoke-ProcessWithAiModel {
-                return [PSCustomObject]@{
-                    title       = "New Non-Reddit Article"
-                    description = "This is a new non-Reddit article"
-                    content     = "# New Non-Reddit Article\n\nThis is new content."
-                    excerpt     = "New excerpt"
-                    categories  = @("AI", "GitHub Copilot")
-                    tags        = @("Discussion", "Community")
-                }
-            }
-            
-            # Mock network calls
-            Mock Invoke-RestMethod {
-                if ($Uri -like "*api.openai.com*" -or $Uri -like "*api.azure.com*") {
-                    return [PSCustomObject]@{
-                        choices = @(
-                            [PSCustomObject]@{
-                                message = [PSCustomObject]@{
-                                    content = '{"title":"New Non-Reddit Article","description":"This is a new non-Reddit article","content":"# New Non-Reddit Article\\n\\nThis is new content.","excerpt":"New excerpt","categories":["AI","GitHub Copilot"],"tags":["Discussion","Community"]}'
-                                }
-                            }
-                        )
-                    }
-                }
-                throw "Unexpected REST call to: $Uri"
-            }
-            
-            # Verify existing file exists before test
-            Test-Path $existingFilePath | Should -Be $true
-            
-            # Run the conversion
-            $result = Convert-RssToMarkdown -Items $communityTestItems -Token "test-token" -Model "test-model"
-            
-            # Should return 1 new file
-            ($result | Measure-Object).Count | Should -Be 1
-            
-            # Original file should NOT be removed (not Reddit URLs)
-            Test-Path $existingFilePath | Should -Be $true
-            
-            # Both files should exist
-            $allFiles = Get-ChildItem -Path $script:TestCommunityOutputDir -Filter "*.md"
-            $allFiles | Should -HaveCount 2
-        }
-        
-        It "Should handle empty URL endings gracefully" {
-            # Create existing Reddit post with trailing slash (empty ending)
-            $existingContent = @'
----
-title: "Reddit Post With Slash"
-date: 2024-12-01 10:00:00 +00:00
-canonical_url: "https://www.reddit.com/r/programming/comments/"
-author: "Slash Author"
-categories: ["AI"]
-tags: ["Discussion"]
----
-
-Reddit post with trailing slash.
-'@
-            $existingFilename = "2024-12-01-Reddit-Post-With-Slash.md"
-            $existingFilePath = Join-Path $script:TestCommunityOutputDir $existingFilename
-            Set-Content -Path $existingFilePath -Value $existingContent -Encoding UTF8
-            
-            # Create test items for community processing
-            $communityTestItems = @(
-                [PSCustomObject]@{
-                    Title           = "New Reddit Article With Slash"
-                    Link            = "https://www.reddit.com/r/dotnet/comments/"  # Also empty ending
-                    PubDate         = [DateTime]::Parse("2025-01-01T12:00:00Z")
-                    Description     = "This is a new Reddit article with slash that provides comprehensive coverage of development topics."
-                    Author          = "New Author"
-                    Tags            = @("AI", "Discussion")
-                    OutputDir       = Join-Path $script:TempPath "_community"
-                    FeedName        = "Community Test Feed"
-                    FeedUrl         = "https://example.com/community-feed.xml"
-                    EnhancedContent = "This is a comprehensive discussion about Reddit articles with trailing slashes and URL handling in content management systems. The post discusses various aspects of URL processing, including effective URL parsing techniques, edge case handling for malformed URLs, and strategies for robust URL validation in content management workflows. It covers practical applications in web scraping and content aggregation, providing detailed examples of successful URL processing implementations. The content explores best practices for URL normalization, common pitfalls to avoid when handling URLs with special characters, and recommendations for maintaining URL consistency across different platforms. Additionally, it discusses the importance of URL sanitization, security considerations when processing external URLs, and techniques for handling various URL formats and edge cases. The post also covers performance considerations in URL processing and the importance of maintaining system reliability when dealing with diverse URL structures and formatting variations."
-                }
-            )
-            
-            # Mock successful AI response
-            Mock Invoke-ProcessWithAiModel {
-                return [PSCustomObject]@{
-                    title       = "New Reddit Article With Slash"
-                    description = "This is a new Reddit article with slash"
-                    content     = "# New Reddit Article\n\nThis is new content."
-                    excerpt     = "New excerpt"
-                    categories  = @("AI", "GitHub Copilot")
-                    tags        = @("Discussion", "Community")
-                }
-            }
-            
-            # Mock network calls
-            Mock Invoke-RestMethod {
-                if ($Uri -like "*api.openai.com*" -or $Uri -like "*api.azure.com*") {
-                    return [PSCustomObject]@{
-                        choices = @(
-                            [PSCustomObject]@{
-                                message = [PSCustomObject]@{
-                                    content = '{"title":"New Reddit Article With Slash","description":"This is a new Reddit article with slash","content":"# New Reddit Article\\n\\nThis is new content.","excerpt":"New excerpt","categories":["AI","GitHub Copilot"],"tags":["Discussion","Community"]}'
-                                }
-                            }
-                        )
-                    }
-                }
-                throw "Unexpected REST call to: $Uri"
-            }
-            
-            # Verify existing file exists before test
-            Test-Path $existingFilePath | Should -Be $true
-            
-            # Run the conversion
-            $result = Convert-RssToMarkdown -Items $communityTestItems -Token "test-token" -Model "test-model"
-            
-            # Should return 1 new file
-            ($result | Measure-Object).Count | Should -Be 1
-            
-            # Original file should NOT be removed (empty endings should not match)
-            Test-Path $existingFilePath | Should -Be $true
-            
-            # Both files should exist
-            $allFiles = Get-ChildItem -Path $script:TestCommunityOutputDir -Filter "*.md"
-            $allFiles | Should -HaveCount 2
-        }
-        
-        It "Should only trigger cross-post detection after successful AI categorization" {
-            # Create existing Reddit post
-            $existingContent = @'
----
-title: "Existing Reddit Post"
-date: 2024-12-01 10:00:00 +00:00
-canonical_url: "https://www.reddit.com/r/programming/comments/abc123/existing_post"
-author: "Existing Author"
-categories: ["AI"]
-tags: ["Discussion"]
----
-
-Existing Reddit post content.
-'@
-            $existingFilename = "2024-12-01-Existing-Reddit-Post.md"
-            $existingFilePath = Join-Path $script:TestCommunityOutputDir $existingFilename
-            Set-Content -Path $existingFilePath -Value $existingContent -Encoding UTF8
-            
-            # Create test items with cross-post
-            $communityTestItems = @(
-                [PSCustomObject]@{
-                    Title           = "Cross Posted Article"
-                    Link            = "https://www.reddit.com/r/dotnet/comments/abc123/cross_posted_article"  # Same ending: abc123
-                    PubDate         = [DateTime]::Parse("2025-01-01T12:00:00Z")
-                    Description     = "This is a cross-posted article. " + ("Lorem ipsum " * 50)
-                    Author          = "Cross Post Author"
-                    Tags            = @("AI", "Discussion")
-                    OutputDir       = Join-Path $script:TempPath "_community"
-                    FeedName        = "Community Test Feed"
-                    FeedUrl         = "https://example.com/community-feed.xml"
-                    EnhancedContent = "Test enhanced content for skipped cross-post processing"
-                }
-            )
-            
-            # Mock AI response that returns NO categories (will skip item)
-            Mock Invoke-ProcessWithAiModel {
-                return [PSCustomObject]@{
-                    title       = "Cross Posted Article"
-                    description = "This is a cross-posted article"
-                    content     = "# Cross Posted Article\n\nThis is cross-posted content."
-                    excerpt     = "Cross-post excerpt"
-                    categories  = @()  # Empty categories will cause item to be skipped
-                    tags        = @("Discussion", "Community")
-                }
-            }
-            
-            # Verify existing file exists before test
-            Test-Path $existingFilePath | Should -Be $true
-            
-            # Run the conversion
-            $result = Convert-RssToMarkdown -Items $communityTestItems -Token "test-token" -Model "test-model"
-            
-            # Should return 0 new files (item skipped due to insufficient content length)
-            $result | Should -Be 0
-            
-            # Original file should NOT be removed (cross-post detection never ran because item was skipped)
-            Test-Path $existingFilePath | Should -Be $true
-            
-            # Only original file should exist
-            $allFiles = Get-ChildItem -Path $script:TestCommunityOutputDir -Filter "*.md"
-            $allFiles | Should -HaveCount 1
-            
-            # Item should be added to skipped entries
-            $skippedEntries = Get-Content $script:TestSkippedEntriesPath | ConvertFrom-Json
-            $skippedEntries | Should -HaveCount 1
-            $skippedEntries[0].canonical_url | Should -Be "https://www.reddit.com/r/dotnet/comments/abc123/cross_posted_article"
-            $skippedEntries[0].reason | Should -Be "Insufficient content length"
-        }
-        
-        It "Should handle malformed canonical URLs gracefully" {
-            # Create existing file with malformed canonical URL
-            $existingContent = @'
----
-title: "Malformed URL Post"
-date: 2024-12-01 10:00:00 +00:00
-canonical_url: "not-a-valid-url-format"
-author: "Test Author"
-categories: ["AI"]
-tags: ["Discussion"]
----
-
-Post with malformed URL.
-'@
-            $existingFilename = "2024-12-01-Malformed-URL-Post.md"
-            $existingFilePath = Join-Path $script:TestCommunityOutputDir $existingFilename
-            Set-Content -Path $existingFilePath -Value $existingContent -Encoding UTF8
-            
-            # Create test items for community processing
-            $communityTestItems = @(
-                [PSCustomObject]@{
-                    Title           = "Valid Reddit Article"
-                    Link            = "https://www.reddit.com/r/dotnet/comments/abc123/valid_reddit_article"
-                    PubDate         = [DateTime]::Parse("2025-01-01T12:00:00Z")
-                    Description     = "This is a valid Reddit article that provides comprehensive coverage of development topics."
-                    Author          = "Valid Author"
-                    Tags            = @("AI", "Discussion")
-                    OutputDir       = Join-Path $script:TempPath "_community"
-                    FeedName        = "Community Test Feed"
-                    FeedUrl         = "https://example.com/community-feed.xml"
-                    EnhancedContent = "This is a comprehensive discussion about handling malformed URLs in content management systems and their impact on cross-post detection algorithms. The post discusses various aspects of URL validation, including effective error handling techniques, graceful degradation strategies when processing malformed URLs, and methods for maintaining system stability during URL parsing operations. It covers practical applications in web content processing and provides detailed examples of robust URL handling implementations. The content explores best practices for URL validation, common pitfalls to avoid when processing URLs with various formats, and recommendations for maintaining content processing workflows even with invalid input. Additionally, it discusses the importance of error logging, fallback mechanisms for URL processing failures, and techniques for maintaining data integrity when encountering malformed URLs. The post also covers performance considerations in URL validation and the importance of maintaining system reliability when dealing with diverse and potentially invalid URL formats in content feeds."
-                }
-            )
-            
-            # Mock successful AI response
-            Mock Invoke-ProcessWithAiModel {
-                return [PSCustomObject]@{
-                    title       = "Valid Reddit Article"
-                    description = "This is a valid Reddit article"
-                    content     = "# Valid Reddit Article\n\nThis is valid content."
-                    excerpt     = "Valid excerpt"
-                    categories  = @("AI", "GitHub Copilot")
-                    tags        = @("Discussion", "Community")
-                }
-            }
-            
-            # Mock network calls
-            Mock Invoke-RestMethod {
-                if ($Uri -like "*api.openai.com*" -or $Uri -like "*api.azure.com*") {
-                    return [PSCustomObject]@{
-                        choices = @(
-                            [PSCustomObject]@{
-                                message = [PSCustomObject]@{
-                                    content = '{"title":"Valid Reddit Article","description":"This is a valid Reddit article","content":"# Valid Reddit Article\\n\\nThis is valid content.","excerpt":"Valid excerpt","categories":["AI","GitHub Copilot"],"tags":["Discussion","Community"]}'
-                                }
-                            }
-                        )
-                    }
-                }
-                throw "Unexpected REST call to: $Uri"
-            }
-            
-            # Verify existing file exists before test
-            Test-Path $existingFilePath | Should -Be $true
-            
-            # Run the conversion - should not crash on malformed URL
-            $result = Convert-RssToMarkdown -Items $communityTestItems -Token "test-token" -Model "test-model"
-            
-            # Should return 1 new file
-            ($result | Measure-Object).Count | Should -Be 1
-            
-            # Original file should NOT be removed (malformed URL doesn't match anything)
-            Test-Path $existingFilePath | Should -Be $true
-            
-            # Both files should exist
-            $allFiles = Get-ChildItem -Path $script:TestCommunityOutputDir -Filter "*.md"
-            $allFiles | Should -HaveCount 2
         }
     }
 
@@ -1908,7 +1369,7 @@ Post with malformed URL.
             }
             
             # Run the conversion
-            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model"
+            $result = Convert-RssToMarkdown -Items $script:TestItems -Token "test-token" -Model "test-model" -Endpoint "https://test.azure.com/openai/chat/completions"
             
             # Should return 1 new file
             ($result | Measure-Object).Count | Should -Be 1

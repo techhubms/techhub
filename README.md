@@ -45,7 +45,7 @@ Get the Tech Hub running in just a few minutes using containers.
 3. **Start the Site**:
 
    ```powershell
-   pwsh /workspaces/techhub/jekyll-start.ps1
+   pwsh /workspaces/techhub/scripts/jekyll-start.ps1
    ```
 
 4. **Access the Site**: Open browser to `http://localhost:4000`
@@ -56,16 +56,26 @@ Get the Tech Hub running in just a few minutes using containers.
 2. **Start the Site**:
 
    ```powershell
-   pwsh /workspaces/techhub/jekyll-start.ps1
+   pwsh /workspaces/techhub/scripts/jekyll-start.ps1
    ```
 
 3. **Access the Site**: Codespace will provide a URL, usually accessible through the "Ports" panel
 
 ## Documentation
 
-- If you just want to add content, read [docs/content-management.md](docs/content-management.md)
-- For complete documentation organization and structure, see [docs/documentation-guidelines.md](docs/documentation-guidelines.md)
-- For AI agents working on this repository, read [`.github/copilot-instructions.md`](.github/copilot-instructions.md)
+### Development & AI Agents
+
+For comprehensive development guides, architecture, and AI agent instructions, please refer to **[AGENTS.md](AGENTS.md)**.
+
+This file serves as the primary entry point for understanding the codebase, development standards, and domain-specific guidelines.
+
+### Architecture & Guides
+
+Detailed documentation is available in the **[docs/](docs/)** directory. Key starting points include:
+
+- **[Site Overview](docs/site-overview.md)**: Architecture and structure
+- **[Content Management](docs/content-management.md)**: Creating content and RSS processing
+- **[Documentation Guidelines](docs/documentation-guidelines.md)**: Structure and hierarchy
 
 ## Contributing
 

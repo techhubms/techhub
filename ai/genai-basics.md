@@ -69,9 +69,16 @@ graph LR
     style D fill:#4caf50,color:#1a1a2e,stroke:#4caf50
 ```
 
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://en.wikipedia.org/wiki/History_of_artificial_intelligence">History of artificial intelligence (Wikipedia)</a></li>
+  </ul>
+</div>
+
 ## ML vs AI vs GenAI
 
-Understanding the relationship between these three concepts is essential for anyone starting their AI journey.
+Understanding the relationship between these three concepts is essential for anyone starting their AI journey. While often used interchangeably, they represent distinct but nested domains—each building upon the other.
 
 ```mermaid
 graph TB
@@ -89,9 +96,13 @@ graph TB
     style GenAI fill:#f9a825,color:#1a1a2e,stroke:#f9a825
 ```
 
-**Machine Learning (ML)** is a method of data analysis where computers learn to identify patterns in data without being explicitly programmed for each task. Think of it as teaching a computer to recognize cats in photos by showing it thousands of cat pictures, rather than writing specific code that says "a cat has pointed ears, whiskers, and four legs."
+### Machine Learning
 
-**Artificial Intelligence (AI)** is a broader field that includes machine learning but also encompasses other approaches to creating intelligent systems. AI aims to create machines that can perform tasks that typically require human intelligence, such as reasoning, learning, planning, and understanding language.
+Machine Learning (ML) is a method of data analysis where computers learn to identify patterns in data without being explicitly programmed for each task. Think of it as teaching a computer to recognize cats in photos by showing it thousands of cat pictures, rather than writing specific code that says "a cat has pointed ears, whiskers, and four legs."
+
+### Artificial Intelligence
+
+Artificial Intelligence (AI) is a broader field that includes machine learning but also encompasses other approaches to creating intelligent systems. AI aims to create machines that can perform tasks that typically require human intelligence, such as reasoning, learning, planning, and understanding language.
 
 Machine learning is one approach within the AI toolkit, but AI also includes:
 
@@ -103,17 +114,31 @@ Machine learning is one approach within the AI toolkit, but AI also includes:
 
 These different approaches can be combined or used independently depending on the problem being solved.
 
-**Generative AI (GenAI)** is a specific type of AI that can create new content - text, images, code, music, or other types of data. When you ask ChatGPT to write a story or use DALL-E to create an image, you're using generative AI. GenAI models learn patterns from existing content and use that knowledge to generate new, original content that follows similar patterns.
+### Generative AI
+
+Generative AI (GenAI) is a specific type of AI that can create new content - text, images, code, music, or other types of data. When you ask ChatGPT to write a story or use DALL-E to create an image, you're using generative AI. GenAI models learn patterns from existing content and use that knowledge to generate new, original content that follows similar patterns.
 
 ## About Generative AI
 
-Understanding Generative AI begins with **Natural Language Processing (NLP)**, the foundational branch of AI that enables computers to understand, interpret, and generate human language. NLP represents a major breakthrough in human-computer interaction - instead of requiring users to learn programming languages or use specific commands, it allows people to interact with computers using natural human language, speaking or typing as they would to another person.
+Generative AI encompasses a range of technologies that can create new content—text, images, code, audio, and more. This section explores the foundational concepts, from natural language processing to the different types of models powering today's AI applications.
+
+### Natural Language Processing
+
+Understanding Generative AI begins with Natural Language Processing (NLP), the foundational branch of AI that enables computers to understand, interpret, and generate human language. NLP represents a major breakthrough in human-computer interaction - instead of requiring users to learn programming languages or use specific commands, it allows people to interact with computers using natural human language, speaking or typing as they would to another person.
+
+### Language models
 
 Within the broad field of NLP, modern AI systems primarily rely on language models - sophisticated AI systems that learn from vast amounts of text to understand and generate human-like responses. These language models come in different sizes and capabilities, each designed for specific use cases and computational requirements.
 
-**Large Language Models (LLMs)** represent the current pinnacle of NLP technology. These AI systems are trained on enormous datasets containing billions of text examples from books, articles, websites, and other written sources. Through this training, they learn intricate patterns in how humans use language and develop the ability to generate remarkably human-like text responses. Popular examples include GPT-4, Claude, and Gemini. LLMs typically contain billions of parameters (the internal "settings" the AI adjusts during learning) and require significant computational resources to operate effectively.
+### Large Language Models (LLMs)
 
-**Small Language Models (SLMs)** serve the same fundamental purpose as their larger counterparts but prioritize efficiency and accessibility. These models are trained on more focused datasets and contain fewer parameters, making them suitable for running on local devices like smartphones, laptops, or edge computing environments. Examples include Microsoft's Phi models and various specialized versions optimized for specific tasks or industries.
+Large Language Models (LLMs) represent the current pinnacle of NLP technology. These AI systems are trained on enormous datasets containing billions of text examples from books, articles, websites, and other written sources. Through this training, they learn intricate patterns in how humans use language and develop the ability to generate remarkably human-like text responses. Popular examples include GPT-4, Claude, and Gemini. LLMs typically contain billions of parameters (the internal "settings" the AI adjusts during learning) and require significant computational resources to operate effectively.
+
+### Small Language Models (SLMs)
+
+Small Language Models (SLMs) serve the same fundamental purpose as their larger counterparts but prioritize efficiency and accessibility. These models are trained on more focused datasets and contain fewer parameters, making them suitable for running on local devices like smartphones, laptops, or edge computing environments. Examples include Microsoft's Phi models and various specialized versions optimized for specific tasks or industries.
+
+### Specialized model types
 
 Beyond text-focused language models, the NLP field has expanded to encompass various specialized model types that work with different forms of content:
 
@@ -179,7 +204,7 @@ graph LR
     style Consumer fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
 ```
 
-**Major AI vendors include:**
+### Major AI vendors
 
 - **OpenAI**: Creator of the GPT series and DALL-E, known for ChatGPT and pioneering conversational AI
 - **Google**: Develops Gemini models and provides AI services through Google Cloud
@@ -187,69 +212,82 @@ graph LR
 - **Microsoft**: Partners with OpenAI and develops its own models while integrating AI across its product suite
 - **Hugging Face**: Acts as a platform for sharing and hosting AI models, both open-source and commercial
 
-**What vendors do:**
+### What vendors do
+
 Vendors serve as the bridge between the complex world of AI model development and practical applications. They handle the enormous costs and technical challenges of training models, then make these models available through user-friendly interfaces and APIs. This allows developers and businesses to use sophisticated AI without needing to understand the underlying mathematics or infrastructure.
 
-**Key differences between vendors:**
+### Key differences between vendors
 
-- **Research focus**: Some prioritize cutting-edge capabilities, others emphasize safety and reliability
-- **Business models**: Some offer free tiers with paid upgrades, others are enterprise-focused
-- **Specializations**: Different vendors excel in text, images, code, or multimodal applications
-- **Accessibility**: Some focus on easy-to-use consumer interfaces, others provide developer tools and APIs
-- **Data policies**: Vendors differ in how they handle user data and model training
+- *Research focus*: Some prioritize cutting-edge capabilities, others emphasize safety and reliability
+- *Business models*: Some offer free tiers with paid upgrades, others are enterprise-focused
+- *Specializations*: Different vendors excel in text, images, code, or multimodal applications
+- *Accessibility*: Some focus on easy-to-use consumer interfaces, others provide developer tools and APIs
+- *Data policies*: Vendors differ in how they handle user data and model training
+
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure">Azure OpenAI and Microsoft Foundry models</a></li>
+    <li><a href="https://huggingface.co/models">Hugging Face model hub</a></li>
+    <li><a href="https://platform.openai.com/docs/models">OpenAI models documentation</a></li>
+  </ul>
+</div>
 
 ## Models
 
-A **model** is the actual AI system that has been trained to perform specific tasks. Think of it as a specialized brain that has learned patterns from data and can apply that knowledge to new situations.
+A model is the actual AI system that has been trained to perform specific tasks. Think of it as a specialized brain that has learned patterns from data and can apply that knowledge to new situations.
 
-**Key characteristics that differentiate models:**
+### Key characteristics that differentiate models
 
-- **Training date**: When the model was trained affects what information it knows
-- **Cut-off date**: The latest date of information the model was trained on
-- **Size**: Larger models generally have more capabilities but require more computational resources
-- **Vendor**: Different companies create models with different strengths and focuses
-- **Specialization**: Some models excel at specific tasks like coding, creative writing, or analysis
+- *Training date*: When the model was trained affects what information it knows
+- *Cut-off date*: The latest date of information the model was trained on
+- *Size*: Larger models generally have more capabilities but require more computational resources
+- *Vendor*: Different companies create models with different strengths and focuses
+- *Specialization*: Some models excel at specific tasks like coding, creative writing, or analysis
 
-**Current popular models include:**
-
-**Large Language Models (LLMs):**
+### Current popular models
 
 - **GPT series** (4, 4o, 4.1, 5): OpenAI's flagship models for text generation and reasoning
 - **Claude** (3.5 Sonnet, 4 Sonnet, 4 Opus): Anthropic's models focused on helpful, harmless, and honest interactions
 - **Gemini** (Flash, Pro): Google's multimodal models that can process text, images, and other data
 - **Grok**: xAI's conversational AI model with real-time information access
-
-**Small Language Models (SLMs):**
-
 - **Phi-4**: Microsoft's efficient model designed to run on smaller devices with strong reasoning capabilities
 - **Gemma 2/3**: Google's compact open models optimized for efficiency
 
-**Specialized Models:**
+#### Specialized Models
 
 - **DALL-E, Stable Diffusion, Midjourney, Flux**: Image generation models (diffusion models)
 - **Whisper**: Speech-to-text conversion model
 - **Suno, Udio**: Music generation models
 
-**Multimodal Models:**
+#### Multimodal Models
 
 - **GPT-4o, GPT-4.1, GPT-5**: OpenAI models handling text, images, audio, and video
 - **Gemini**: Google's multimodal models (also listed above under LLMs)
 - **Claude 4 Opus**: Anthropic's multimodal model with vision capabilities
 
-### Models FAQ
+<div class="faq-block">
+  <div class="faq-block__header">❓ Models FAQ</div>
+  <div class="faq-block__question">What is a GPT and why are not all models GPT?</div>
+  <div class="faq-block__answer">GPT stands for "Generative Pre-trained Transformer." It's a specific architecture developed by OpenAI. Not all models use this architecture - companies develop different approaches to achieve similar goals. Think of it like cars: not all cars are Toyotas, even though they all serve the same basic purpose of transportation.</div>
+  <div class="faq-block__question">What does multimodal mean and how can I use it?</div>
+  <div class="faq-block__answer">Multimodal models can understand and generate multiple types of content - not just text, but also images, audio, and video. For example, you can upload an image to GPT-4o and ask it to describe what it sees, or ask it to create an image based on your description. This makes interactions more natural and expands what you can accomplish with AI.</div>
+  <div class="faq-block__question">Why not train a model every month or week to keep it up-to-date?</div>
+  <div class="faq-block__answer">Training large AI models requires enormous computational resources, costs millions of dollars, and takes weeks or months to complete. The process involves analyzing billions of text examples and adjusting trillions of parameters. Additionally, frequent retraining could make models less stable and reliable. Instead, vendors typically release new versions periodically with updated knowledge and improved capabilities.</div>
+</div>
 
-**What is a GPT and why are not all models GPT?**
-GPT stands for "Generative Pre-trained Transformer." It's a specific architecture developed by OpenAI. Not all models use this architecture - companies develop different approaches to achieve similar goals. Think of it like cars: not all cars are Toyotas, even though they all serve the same basic purpose of transportation.
-
-**What does multimodal mean and how can I use it?**
-Multimodal models can understand and generate multiple types of content - not just text, but also images, audio, and video. For example, you can upload an image to GPT-4o and ask it to describe what it sees, or ask it to create an image based on your description. This makes interactions more natural and expands what you can accomplish with AI.
-
-**Why not train a model every month or week to keep it up-to-date?**
-Training large AI models requires enormous computational resources, costs millions of dollars, and takes weeks or months to complete. The process involves analyzing billions of text examples and adjusting trillions of parameters. Additionally, frequent retraining could make models less stable and reliable. Instead, vendors typically release new versions periodically with updated knowledge and improved capabilities.
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure">Foundry Models: GPT-5, GPT-4.1, o-series, and more</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/model-versions">Azure OpenAI model versions</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/foundry-models-overview">Explore Foundry Models</a></li>
+  </ul>
+</div>
 
 ## Providers
 
-**Providers** are services that host AI models and make them accessible to users and developers. While vendors create the models, providers handle the infrastructure needed to run them at scale and make them available through APIs, web interfaces, or applications.
+Providers are services that host AI models and make them accessible to users and developers. While vendors create the models, providers handle the infrastructure needed to run them at scale and make them available through APIs, web interfaces, or applications.
 
 ```mermaid
 graph LR
@@ -264,16 +302,16 @@ graph LR
     style Models fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
 ```
 
-**Technical components of hosted AI services include:**
+### Technical components of hosted AI services
 
-- **Proxy**: Routes requests to available model instances and manages traffic
-- **Load balancer**: Distributes requests across multiple servers to ensure reliable performance
-- **Content filter**: Screens inputs and outputs to prevent harmful or inappropriate content
-- **Rate limiting**: Controls how many requests users can make to prevent abuse
-- **Authentication**: Manages user access and API keys
-- **Monitoring**: Tracks usage, performance, and costs
+- *Proxy*: Routes requests to available model instances and manages traffic
+- *Load balancer*: Distributes requests across multiple servers to ensure reliable performance
+- *Content filter*: Screens inputs and outputs to prevent harmful or inappropriate content
+- *Rate limiting*: Controls how many requests users can make to prevent abuse
+- *Authentication*: Manages user access and API keys
+- *Monitoring*: Tracks usage, performance, and costs
 
-**Major hosted providers:**
+### Major hosted providers
 
 - **OpenAI**: Direct access to GPT models through their API and ChatGPT interface
 - **Google Cloud**: Hosts Gemini and other Google AI models
@@ -283,7 +321,7 @@ graph LR
 - **Hugging Face**: Platform for both open-source and commercial models
 - **Anthropic**: Direct access to Claude models
 
-**Self-hosting options:**
+### Self-hosting options
 
 For organizations that need complete control over their AI infrastructure, self-hosting is possible:
 
@@ -291,59 +329,106 @@ For organizations that need complete control over their AI infrastructure, self-
 - **Ollama**: User-friendly tool for running models locally
 - **Hugging Face Transformers**: Library for deploying models on your own hardware
 
-### Providers FAQ
+### Why models refuse certain requests
 
-**Do all hosted solutions use my data?**
-Data usage policies vary significantly between providers. Some use conversation data to improve their models (with user consent), while others, particularly enterprise-focused services, commit to not using customer data for training. Always check the specific terms of service and privacy policies.
+You may notice that AI models sometimes decline to answer questions or refuse to generate certain content. This is by design.
 
-**Where is my data stored?**
-Data storage locations depend on the provider and service tier. Consumer services might store data globally, while enterprise services often allow you to specify geographic regions for compliance with local regulations like GDPR.
+During training, model providers shape how models behave through a process called *alignment*. One common approach is Constitutional AI: the model learns to critique its own responses against a set of principles (like "be helpful but avoid harm") and revise them before responding. This happens during training, not at runtime.
 
-**Can I opt-out of data collection?**
-Most providers offer ways to limit data collection, though the options vary. Some allow you to delete conversation history, others provide settings to prevent data from being used for model training.
+On top of alignment, providers add *content filters* that screen inputs and outputs in real-time. These filters catch harmful requests that slip past the model's built-in guardrails.
 
-**How does Azure OpenAI differ from using OpenAI directly?**
-Azure OpenAI provides access to many OpenAI models through Azure, with Azure-native identity, networking, and governance features. Model availability and versions can differ by region and over time. Azure OpenAI states it doesn't use customer data to retrain foundation models; see the [Azure OpenAI data, privacy, and security guide](https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/data-privacy).
+As an application developer, you don't control the model's alignment—that's baked in by the provider. But you can:
 
-**How does GitHub Models relate to GitHub Copilot?**
-GitHub Models is a development platform that gives developers access to various AI models for building applications, while GitHub Copilot is a specific AI coding assistant. Think of GitHub Models as a toolbox for AI development, and Copilot as one specific tool that helps with coding. [GitHub Models](https://docs.github.com/en/github-models/about-github-models) provides model catalogs, prompt management, and evaluation tools for developers.
+- Choose models with appropriate safety properties for your use case
+- Add your own content filtering layer
+- Use system prompts to guide behavior within the model's boundaries
+- Implement human review for sensitive outputs
+
+<div class="faq-block">
+  <div class="faq-block__header">❓ Providers FAQ</div>
+  <div class="faq-block__question">Do all hosted solutions use my data?</div>
+  <div class="faq-block__answer">Data usage policies vary significantly between providers. Some use conversation data to improve their models (with user consent), while others, particularly enterprise-focused services, commit to not using customer data for training. Always check the specific terms of service and privacy policies.</div>
+  <div class="faq-block__question">Where is my data stored?</div>
+  <div class="faq-block__answer">Data storage locations depend on the provider and service tier. Consumer services might store data globally, while enterprise services often allow you to specify geographic regions for compliance with local regulations like GDPR.</div>
+  <div class="faq-block__question">Can I opt-out of data collection?</div>
+  <div class="faq-block__answer">Most providers offer ways to limit data collection, though the options vary. Some allow you to delete conversation history, others provide settings to prevent data from being used for model training.</div>
+  <div class="faq-block__question">How does Azure OpenAI differ from using OpenAI directly?</div>
+  <div class="faq-block__answer">Azure OpenAI provides access to many OpenAI models through Azure, with Azure-native identity, networking, and governance features. Model availability and versions can differ by region and over time. Azure OpenAI states it doesn't use customer data to retrain foundation models; see the <a href="https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/data-privacy">Azure OpenAI data, privacy, and security guide</a>.</div>
+  <div class="faq-block__question">How does GitHub Models relate to GitHub Copilot?</div>
+  <div class="faq-block__answer">GitHub Models is a development platform that gives developers access to various AI models for building applications, while GitHub Copilot is a specific AI coding assistant. Think of GitHub Models as a toolbox for AI development, and Copilot as one specific tool that helps with coding. <a href="https://docs.github.com/en/github-models/about-github-models">GitHub Models</a> provides model catalogs, prompt management, and evaluation tools for developers.</div>
+</div>
+
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/develop/sdk-overview">Microsoft Foundry SDKs and Endpoints</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/data-privacy">Azure OpenAI data, privacy, and security</a></li>
+    <li><a href="https://docs.github.com/en/github-models/about-github-models">About GitHub Models</a></li>
+  </ul>
+</div>
 
 ## Prompts & messages
 
-**Prompts** are the instructions or questions you give to an AI model, while **messages** are the individual communications in a conversation between you and the AI. Understanding how to structure these effectively is key to getting good results from AI systems.
+Prompts are the instructions or questions you give to an AI model, while messages are the individual communications in a conversation between you and the AI. Understanding how to structure these effectively is key to getting good results from AI systems.
 
-**Types of prompts and messages:**
+### Types of prompts and messages
 
-- **User prompt**: Your question, instruction, or request to the AI
-- **System prompt**: Background instructions that set the AI's behavior, role, or constraints (often hidden from users)
-- **Assistant message**: The AI's response to your prompt
-  - **Suggestions**: When the AI offers multiple options or approaches
-  - **Completions**: When the AI finishes or continues text you've started
+- *User prompt*: Your question, instruction, or request to the AI
+- *System prompt*: Background instructions that set the AI's behavior, role, or constraints (often hidden from users)
+- *Assistant message*: The AI's response to your prompt
+  - *Suggestions*: When the AI offers multiple options or approaches
+  - *Completions*: When the AI finishes or continues text you've started
 
-**Prompt engineering** is the practice of crafting effective prompts to get better results from AI models. Different techniques work better for different types of tasks:
+### Prompt engineering
 
-**Prompt techniques:**
+Prompt engineering is the practice of crafting effective prompts to get better results from AI models. Different techniques work better for different types of tasks:
 
-- **Zero-shot prompts**: Ask the AI to perform a task without providing examples
-  - Example: "Summarize this article in three bullet points."
-  
-- **Few-shot prompts**: Provide a few examples of the desired input-output pattern
-  - Example: "Translate these phrases. English: Hello → Spanish: Hola. English: Thank you → Spanish: Gracias. English: Good morning → Spanish: ?"
-  
-- **Chain of thought prompts**: Ask the AI to show its reasoning process
-  - Example: "Solve this math problem step by step, showing your work."
+### Prompt techniques
 
-**Reusable prompts** are templates or standardized instructions that you can use repeatedly for similar tasks. These save time and ensure consistency. For example, you might create a standard prompt for code reviews or document summaries that includes specific criteria and formatting instructions.
+#### Zero-shot prompts
 
-**More information:**
+Zero-shot prompts ask the AI to perform a task without providing examples:
 
-- [Craft Prompts That Get Copilot to Deliver What You Need](https://randypagels.com/blog/prompt-engineering-for-github-copilot-part-1-introduction-prompt-engineering-and-prompts-that-get-copilot-to-deliver-what-you-need/)
-- [Best Prompt Engineering Tools (2025) for Building and Debugging LLM Agents](https://www.reddit.com/r/AI_Agents/comments/1mc4q9i/best_prompt_engineering_tools_2025_for_building/)
-- [Go from Prompt to Playback: Sora Video Generation in Azure AI Foundry's Video Playground](https://devblogs.microsoft.com/azure-ai/go-from-prompt-to-playback-with-sora-from-azure-openai-in-the-video-playground-in-azure-ai-foundry/)
+- "Summarize this article in three bullet points."
+- "Classify this email as spam or not spam."
+- "Write a professional response to this customer complaint."
+- "Extract the main topics from this document."
+
+#### Few-shot prompts
+
+Few-shot prompts provide a few examples of the desired input-output pattern:
+
+- "Translate these phrases. English: Hello → Spanish: Hola. English: Thank you → Spanish: Gracias. English: Good morning → Spanish: ?"
+- "Sentiment: 'Great product!' → Positive. Sentiment: 'Terrible service' → Negative. Sentiment: 'It was okay' → ?"
+- "Format: john.doe@company.com → John Doe (Company). Format: jane.smith@startup.io → ?"
+- "Bug type: 'App crashes on login' → Authentication. Bug type: 'Slow page load' → Performance. Bug type: 'Button not clickable' → ?"
+
+#### Chain of thought prompts
+
+Chain of thought prompts ask the AI to show its reasoning process:
+
+- "Solve this math problem step by step, showing your work."
+- "Analyze this code for potential bugs. Walk through each line and explain what could go wrong."
+- "Evaluate the pros and cons of each option, then recommend the best approach."
+- "Debug this error by explaining what each part of the error message means and what might have caused it."
+
+### Reusable prompts
+
+Reusable prompts are templates or standardized instructions that you can use repeatedly for similar tasks. These save time and ensure consistency. For example, you might create a standard prompt for code reviews or document summaries that includes specific criteria and formatting instructions.
+
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/prompt-engineering">Prompt engineering techniques (Microsoft Learn)</a></li>
+    <li><a href="https://randypagels.com/blog/prompt-engineering-for-github-copilot-part-1-introduction-prompt-engineering-and-prompts-that-get-copilot-to-deliver-what-you-need/">Craft Prompts That Get Copilot to Deliver What You Need</a></li>
+    <li><a href="https://www.reddit.com/r/AI_Agents/comments/1mc4q9i/best_prompt_engineering_tools_2025_for_building/">Best Prompt Engineering Tools (2025) for Building and Debugging LLM Agents</a></li>
+    <li><a href="https://devblogs.microsoft.com/azure-ai/go-from-prompt-to-playback-with-sora-from-azure-openai-in-the-video-playground-in-azure-ai-foundry/">Go from Prompt to Playback: Sora Video Generation in Microsoft Foundry's Video Playground</a></li>
+  </ul>
+</div>
 
 ## Tokens & Tokenization
 
-**Tokens** are the basic units that AI models use to process text. Think of them as the "words" that the AI actually understands, though they don't always match human words exactly.
+Tokens are the basic units that AI models use to process text. Think of them as the "words" that the AI actually understands, though they don't always match human words exactly.
 
 ```mermaid
 graph LR
@@ -378,7 +463,8 @@ graph LR
     style ID6 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
 ```
 
-**How tokenization works:**
+### How tokenization works
+
 When you send text to an AI model, it first breaks your message into tokens. This process, called tokenization, splits text into manageable pieces. A token might be:
 
 - A whole word (like "hello")
@@ -386,53 +472,60 @@ When you send text to an AI model, it first breaks your message into tokens. Thi
 - A punctuation mark
 - A space or special character
 
-**How many tokens are in a message?**
+### How many tokens are in a message?
+
 As a rough guide, 1 token equals about 0.75 English words. So 100 words would be approximately 133 tokens. However, this varies based on:
 
 - Language (non-English text often uses more tokens)
 - Technical terms and proper nouns
 - Punctuation and formatting
 
-**Why is this important?**
+### Why is this important?
+
 Tokens directly affect:
 
-- **Cost**: Most AI services charge per token processed
-- **Speed**: More tokens mean longer processing time
-- **Limits**: Models have maximum token limits for conversations
+- *Cost*: Most AI services charge per token processed
+- *Speed*: More tokens mean longer processing time
+- *Limits*: Models have maximum token limits for conversations
 
-**Token limits and what happens when you exceed them:**
+### Token limits and what happens when you exceed them
+
 Every model has a maximum context window (total tokens it can process at once). When you exceed this limit:
 
 - The model might truncate older parts of the conversation
 - You might get an error message
 - The quality of responses may decrease
 
-**What to do when hitting token limits:**
+### What to do when hitting token limits
 
 - Summarize earlier parts of long conversations
 - Break complex tasks into smaller pieces
 - Use more concise language in your prompts
 - Start a new conversation if context becomes too long
 
-**Switching between tokenizers:**
-Different models use different tokenization methods, so you can't directly transfer token counts between models. What takes 100 tokens in one model might take 90 or 110 in another.
+### Switching between tokenizers
 
-**Tokenization differences between content types:**
+Different models use different tokenization methods, so you can't directly transfer token counts between models.
 
-- **Text**: Broken into word parts and punctuation
-- **Images**: Converted into fixed-size "image tokens" representing visual information
-- **Audio**: Processed into time-based segments representing sound patterns
-- **Code**: Often tokenized similar to text but may handle syntax differently
+### Tokenization differences between content types
 
-**More information:**
+- *Text*: Broken into word parts and punctuation
+- *Images*: Converted into fixed-size "image tokens" representing visual information
+- *Audio*: Processed into time-based segments representing sound patterns
+- *Code*: Often tokenized similar to text but may handle syntax differently
 
-- [GPT-5 Launches in Azure AI Foundry: New Era for AI Apps, Agents and Developers](https://devblogs.microsoft.com/azure-ai/gpt-5-launches-in-azure-ai-foundry-new-era-for-ai-apps-agents-and-developers/)
-- [Maximize Your ROI for Azure OpenAI: Pricing, Deployment, and Cost Optimization Strategies](https://devblogs.microsoft.com/azure-ai/maximize-your-roi-for-azure-openai-pricing-deployment-and-cost-optimization-strategies/)
-- [Introducing Deep Research in Azure AI Foundry Agent Service](https://devblogs.microsoft.com/azure-ai/introducing-deep-research-in-azure-ai-foundry-agent-service/)
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://devblogs.microsoft.com/azure-ai/gpt-5-launches-in-azure-ai-foundry-new-era-for-ai-apps-agents-and-developers/">GPT-5 Launches in Microsoft Foundry: New Era for AI Apps, Agents and Developers</a></li>
+    <li><a href="https://devblogs.microsoft.com/azure-ai/maximize-your-roi-for-azure-openai-pricing-deployment-and-cost-optimization-strategies/">Maximize Your ROI for Azure OpenAI: Pricing, Deployment, and Cost Optimization Strategies</a></li>
+    <li><a href="https://devblogs.microsoft.com/azure-ai/introducing-deep-research-in-azure-ai-foundry-agent-service/">Introducing Deep Research in Microsoft Foundry Agent Service</a></li>
+  </ul>
+</div>
 
 ## Next-token prediction: How LLMs generate text
 
-The core mechanism behind all modern LLMs is remarkably simple in concept: **next-token prediction**. Given a sequence of tokens, the model predicts what token is most likely to come next.
+The core mechanism behind all modern LLMs is remarkably simple in concept: next-token prediction. Given a sequence of tokens, the model predicts what token is most likely to come next.
 
 ```mermaid
 graph LR
@@ -495,15 +588,15 @@ graph TB
     style Cost fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
 ```
 
-**Cost factors:**
+### Cost factors
 
-**Context**: The amount of information the model needs to consider affects cost. This includes your current message plus any conversation history or background information (system prompts).
+*Context*: The amount of information the model needs to consider affects cost. This includes your current message plus any conversation history or background information (system prompts).
 
-**Chat history**: Longer conversations cost more because the model processes the entire conversation context with each new message. If you have a 50-message conversation, the model reviews all previous messages to understand context when responding to message 51.
+*Chat history*: Longer conversations cost more because the model processes the entire conversation context with each new message. If you have a 50-message conversation, the model reviews all previous messages to understand context when responding to message 51.
 
-**Prompts**: More detailed and longer prompts cost more to process, but they often produce better results. Finding the right balance between prompt detail and cost is important for regular use.
+*Prompts*: More detailed and longer prompts cost more to process, but they often produce better results. Finding the right balance between prompt detail and cost is important for regular use.
 
-**Cost optimization strategies:**
+### Cost optimization strategies
 
 - Keep conversations focused and avoid unnecessary context
 - Use smaller, more efficient models for simple tasks
@@ -511,7 +604,7 @@ graph TB
 - Consider using summarization to reduce context length in long conversations
 - Clear conversation history when starting new topics that don't require previous context
 
-**Token math and practical examples:**
+### Token math and practical examples
 
 - Basic formula: total_cost ≈ (input_tokens × input_rate) + (output_tokens × output_rate). Rates differ per provider and model. Always check the provider's pricing page.
 - Estimating tokens: a quick rule-of-thumb is 1 token ≈ 0.75 English words (see [Tokens & Tokenization](#tokens--tokenization)).
@@ -521,11 +614,20 @@ graph TB
   - Image analysis: some multimodal models charge per "image token" in addition to text tokens. Budget for both when sending images plus captions.
   - Long chats: token usage grows with history. Without trimming, costs can rise linearly per turn and you risk context-window truncation.
 
-**How token limits tie to failure modes:**
+### How token limits tie to failure modes
 
 - Truncation: when the context window is exceeded, earlier messages may be dropped. The model can "forget" critical instructions or facts.
 - Lost grounding: if retrieved citations or data are pushed out of context, the model may revert to guesses (hallucinations).
 - Incomplete tools loop: long tool results + long chat history can crowd out system prompts or tool specs, degrading tool-use accuracy. Prefer structured summaries between steps.
+
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://devblogs.microsoft.com/azure-ai/maximize-your-roi-for-azure-openai-pricing-deployment-and-cost-optimization-strategies/">Maximize Your ROI for Azure OpenAI: Pricing, Deployment, and Cost Optimization</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/deployment-types">Azure OpenAI deployment types</a></li>
+    <li><a href="https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/">Azure OpenAI pricing</a></li>
+  </ul>
+</div>
 
 ## Problems with models
 
@@ -565,16 +667,20 @@ graph LR
     style HITL fill:#4caf50,color:#fff,stroke:#4caf50
 ```
 
-**Hallucinations**
+### Hallucinations
+
 AI models sometimes generate information that sounds confident and plausible but is factually incorrect. This happens because models predict what text should come next based on patterns they learned, rather than accessing a database of facts. Always verify important information, especially dates, statistics, and specific claims.
 
-**Input-poisoning**
+### Input-poisoning
+
 Malicious users might try to manipulate AI responses by including hidden instructions or misleading information in their prompts. Well-designed systems include protections against this, but it's important to be aware that AI responses can be influenced by how questions are framed.
 
-**Jailbreaking**
+### Jailbreaking
+
 This refers to attempts to bypass an AI's safety guidelines or restrictions through clever prompting techniques. While providers work to prevent this, it highlights the importance of not relying solely on AI systems for content moderation or safety-critical decisions.
 
-**Why AI struggles with calculations and counting**
+### Why AI struggles with calculations and counting
+
 Language models are designed to predict text patterns, not perform precise mathematical operations. They might correctly handle simple arithmetic they've seen many times in training data, but they're not calculators. For reliable mathematical results:
 
 - Use dedicated calculation tools
@@ -583,8 +689,18 @@ Language models are designed to predict text patterns, not perform precise mathe
 
 When you need precise calculations or counting, consider using AI to generate code for a calculator or spreadsheet rather than asking for direct numerical results.
 
-**Human-in-the-loop (HITL) approaches**
-Given these limitations, many organizations implement Human-in-the-loop (HITL) systems where humans remain involved in AI decision-making processes. Instead of fully automated AI systems, HITL approaches include human oversight, validation, or intervention at key points. For example, an AI might flag potentially problematic content, but a human reviews and makes the final decision about whether to remove it. This approach helps mitigate risks while still benefiting from AI's efficiency and capabilities.
+### Human-in-the-loop (HITL) approaches
+
+Given these limitations, many organizations implement Human-in-the-loop systems where humans remain involved in AI decision-making processes. Instead of fully automated AI systems, HITL approaches include human oversight, validation, or intervention at key points. For example, an AI might flag potentially problematic content, but a human reviews and makes the final decision about whether to remove it. This approach helps mitigate risks while still benefiting from AI's efficiency and capabilities.
+
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection">Prompt injection and jailbreak detection</a></li>
+    <li><a href="https://ai.azure.com/explore/contentsafety">Azure AI Content Safety</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/transparency-note">Azure OpenAI transparency note</a></li>
+  </ul>
+</div>
 
 ## When not to use AI
 
@@ -597,6 +713,14 @@ Use the right tool for the job. Prefer non-AI or AI-assisted approaches for:
 - Legal, medical, or financial decisions without human review. Keep a human in the loop for final approval.
 
 When in doubt, let AI help draft, explain, and prototype, but keep calculators, compilers, search, and databases as the "source of truth."
+
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://hiddedesmet.com/ai-project-validation-framework-part2">Is AI the Right Solution? Applying the Framework and Navigating Ethical Risks</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/transparency-note#limitations">Azure OpenAI limitations</a></li>
+  </ul>
+</div>
 
 ## Societal impacts and risks
 
@@ -612,5 +736,22 @@ AI's benefits come with human and environmental costs that show up across societ
 - Security and misuse: prompt injection, data poisoning, model extraction, and jailbreaks; voice‑clone fraud, large‑scale phishing, and code generation that lowers the bar for cyberattacks.
 
 See also: [Is AI the Right Solution? Part 2: Applying the Framework and Navigating Ethical Risks](https://hiddedesmet.com/ai-project-validation-framework-part2).
+
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://theconversation.com/long-hours-and-low-wages-the-human-labour-powering-ais-development-217038">Long hours and low wages: The human labour powering AI's development</a></li>
+    <li><a href="https://www.theguardian.com/technology/article/2024/jul/06/mercy-anita-african-workers-ai-artificial-intelligence-exploitation-feeding-machine">Hidden exploitation in AI data labeling</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/transparency-note">Azure OpenAI responsible AI transparency note</a></li>
+  </ul>
+</div>
+
+---
+
+<div class="page-nav-box page-nav-box--purple">
+  <h3>🚀 Ready for Advanced Concepts?</h3>
+  <p>You've mastered the fundamentals! Dive deeper into advanced GenAI techniques, architectures, and implementation patterns.</p>
+  <a href="/ai/genai-advanced.html">Continue to GenAI Advanced →</a>
+</div>
 
 <script type="module" src="{{ '/assets/js/mermaid-page.js' | relative_url }}"></script>
