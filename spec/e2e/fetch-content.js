@@ -71,7 +71,7 @@ if (!urls.length) {
         // Wait a bit more for dynamic content to load
         try {
           await page.waitForTimeout(2000); // Fixed 2 second wait for content
-        } catch (e) {
+        } catch {
           // Continue even if this times out
         }
 

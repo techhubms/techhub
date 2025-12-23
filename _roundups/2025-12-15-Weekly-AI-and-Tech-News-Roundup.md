@@ -12,9 +12,8 @@ tags: ["Agentic AI", "AI", "AI Agents", "Application Modernization", "Azure", "C
 tags_normalized: ["agentic ai", "ai", "ai agents", "application modernization", "azure", "cislashcd", "cloud automation", "coding", "developer productivity", "devops", "github copilot", "machine learning", "microsoft fabric", "ml", "openai gpt 5dot2", "roundups", "security", "supply chain security", "vs code"]
 ---
 
-Welcome to this week’s technology roundup. This edition covers progress in intelligent, secure, and connected development environments. GitHub Copilot introduced a range of improvements, including public previews of new AI models—OpenAI’s GPT-5.2, Claude Opus, and Gemini 3 Pro—alongside expanded options for model selection and deeper agent workflows across CLI and cloud. Updates in Visual Studio Code, Azure, and enterprise platforms bring new tutorials and features, highlighting Copilot’s increasing role in legacy app updates, DevOps, and education.
 
-Microsoft and its partners expanded capabilities in AI platforms with more agentic workflows, persistent memory, and the introduction of the Model Context Protocol at the Linux Foundation, supporting interoperability for advanced AI toolchains. Organizations gained new guidance for best practices, evolving procurement options, and additional automation tools for business processes and data migration. Security and DevOps topics this week address practical approaches to supply chain risks, credential management, and endpoint security, making sure that ongoing innovation is balanced with attention to operational reliability and compliance. Read on for a detailed look at how connected, AI-powered workflows are shaping developer experience, productivity, and sustained modernization.<!--excerpt_end-->
+Welcome to this week's technology roundup covering progress in intelligent, secure, and connected development environments. GitHub Copilot introduced public previews of new AI models—OpenAI's GPT-5.2, Claude Opus, and Gemini 3 Pro—alongside expanded model selection and deeper agent workflows. Microsoft expanded AI platform capabilities with agentic workflows, persistent memory, and the Model Context Protocol joining the Linux Foundation for better interoperability. Security and DevOps coverage addresses supply chain risks, credential management, and endpoint security.<!--excerpt_end-->
 
 ## This Week's Overview
 
@@ -66,7 +65,7 @@ Microsoft and its partners expanded capabilities in AI platforms with more agent
 
 ## GitHub Copilot
 
-GitHub Copilot received updates this week that improve model selection, support for agent workflows, and integration with IDEs and command line tools. The Copilot ecosystem expanded with new management features and educational resources, helping teams take advantage of Copilot in both simple and advanced scenarios, and showing practical uses for tasks like legacy app updates and streamlined Git workflows.
+GitHub Copilot received updates this week that improve model selection, support for agent workflows, and integration with IDEs and command line tools. The ecosystem expanded with new management features and educational resources for tasks like legacy app updates and streamlined Git workflows.
 
 ### GitHub Copilot: AI Model Expansion and Selection
 
@@ -133,7 +132,7 @@ Educational initiatives such as quantum computing learning with Copilot agents, 
 
 ## AI
 
-The AI segment this week spotlights integration within Microsoft’s ecosystem. Improvements in agentic AI platforms, the broad GPT-5.2 rollout, new open standards for agent orchestration, and fresh enterprise automation and compliance capabilities now provide more flexibility and interoperability. Developers and researchers received new resources, covering best practices, productivity workflows, and team dynamics in software engineering.
+The AI segment this week spotlights integration within Microsoft's ecosystem, including improvements in agentic AI platforms, the broad GPT-5.2 rollout, and new open standards for agent orchestration. Developers received new resources covering best practices, productivity workflows, and team dynamics.
 
 ### Microsoft Foundry and Agentic AI Platforms
 
@@ -216,7 +215,7 @@ Research this week from Atlassian, Google DORA, and LaunchDarkly reinforces the 
 
 ## ML
 
-Updates in ML this week delivered more productive workflows and better data quality, especially for large-scale and enterprise deployments. Microsoft improved ML engineering, pipeline automation, and operational tooling, with Spark and agent frameworks now offering improved features for data engineers and scientists.
+Updates in ML this week delivered more productive workflows and better data quality for large-scale and enterprise deployments. Microsoft improved ML engineering, pipeline automation, and operational tooling with Spark and agent frameworks.
 
 ### Microsoft Fabric Ecosystem: Engineering, Data Quality, and Automation
 
@@ -249,7 +248,7 @@ GigaTIME, a spatial proteomics platform, lets scientists use machine learning on
 
 ## Azure
 
-This week, Azure published updates and general availability announcements aimed at simplifying developer workflows in cloud-native, analytics, and modernization projects. Improvements include new data services, deployment capabilities, migration advice, and better integration for unified analytics and automation across the Microsoft ecosystem.
+This week, Azure published updates and general availability announcements aimed at simplifying developer workflows in cloud-native, analytics, and modernization projects. Improvements include new data services, deployment capabilities, and better integration for unified analytics and automation.
 
 ### Microsoft Fabric and SQL Data Platform
 
@@ -331,7 +330,7 @@ The Cloud Accelerate Factory program expands its hands-on support for Azure migr
 
 ## Coding
 
-This week’s updates in software development cover .NET networking changes, cross-platform in-app billing, innovations in PC gaming, new tools in Visual Studio Code, and enhancements for developer error handling and maintainability.
+This week's updates cover .NET networking changes, cross-platform in-app billing, innovations in PC gaming, and new tools in Visual Studio Code for developer error handling and maintainability.
 
 ### .NET 10 Platform Developments and Servicing Updates
 
@@ -367,7 +366,7 @@ Andrew Lock reviews the new Zed editor, offering .NET and Markdown developers al
 
 ## DevOps
 
-DevOps updates this week emphasize secure and scalable environments. Updates from GitHub, Azure, and Visual Studio Code include new tools to manage complex automation and infrastructure for large teams, with case studies and guides for best practice adoption.
+DevOps updates this week emphasize secure and scalable environments with new tools from GitHub, Azure, and Visual Studio Code to manage complex automation and infrastructure for large teams.
 
 ### GitHub Platform and Workflow Enhancements
 
@@ -408,7 +407,7 @@ Recent posts and guides highlight best practices for orchestrating pipelines wit
 
 ## Security
 
-Updates in security span new authentication methods, improvements in supply chain risk management, endpoint security guidance, and permission management strategies. Development platforms now require updated credentials, while guides this week support teams in securing infrastructure and AI-powered automation.
+Updates in security span new authentication methods, improvements in supply chain risk management, endpoint security guidance, and permission management strategies. Development platforms now require updated credentials while guides support teams in securing infrastructure.
 
 ### npm Authentication, Supply Chain, and IDE Attack Surface
 

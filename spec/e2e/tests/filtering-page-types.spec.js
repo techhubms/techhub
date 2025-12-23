@@ -103,8 +103,8 @@ test.describe('Page-Specific Filtering Behavior', () => {
         const dateFilter = enabledDateFilters.first();
         const sectionFilter = sectionFilters.first();
 
-        const dateTag = await dateFilter.getAttribute('data-tag');
-        const sectionTag = await sectionFilter.getAttribute('data-tag');
+        await dateFilter.getAttribute('data-tag');
+        await sectionFilter.getAttribute('data-tag');
 
         // Apply section filter first
         await sectionFilter.click();
@@ -165,7 +165,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
       // Test collection filter functionality with reliable filters (prioritize news, posts, videos)
       const reliableFilters = ['news', 'posts', 'videos'];
       const testFilters = [];
-      
+
       for (const filterTag of reliableFilters) {
         const filter = page.locator(`.tag-filter-btn[data-tag="${filterTag}"]`);
         const count = await filter.count();
@@ -238,8 +238,8 @@ test.describe('Page-Specific Filtering Behavior', () => {
         const dateFilter = dateFilters.first();
         const collectionFilter = collectionFilters.first();
 
-        const dateTag = await dateFilter.getAttribute('data-tag');
-        const collectionTag = await collectionFilter.getAttribute('data-tag');
+        await dateFilter.getAttribute('data-tag');
+        await collectionFilter.getAttribute('data-tag');
 
         // Apply collection filter first
         await collectionFilter.click();
@@ -297,7 +297,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
       // Note: Collection pages exclude tags matching the current section and collection,
       // so some pages might have 0 non-section/non-collection tag filters
       console.log(`ℹ️ Found ${tagFilterCount} tag filters on ${collectionPage.name} (excluding section/collection/date filters)`);
-      
+
       // If no tag filters, verify that we at least have date filters working
       if (tagFilterCount === 0) {
         console.log(`ℹ️ No tag filters found on ${collectionPage.name} - this can happen when content is primarily tagged with section/collection names`);
@@ -391,7 +391,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
         // Check first few posts for correct tag - at least some should match
         let correctTagCount = 0;
         const postsToCheck = Math.min(5, visiblePosts.length);
-        
+
         for (const post of visiblePosts.slice(0, postsToCheck)) {
           if (post.hasExpectedTag) {
             correctTagCount++;
@@ -405,7 +405,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
         // Since posts are sorted by date, the first few might not contain the tag
         // But the filter count should be accurate, so we'll just log the verification
         console.log(`ℹ️ Tag verification: ${correctTagCount}/${postsToCheck} checked posts have correct tag (posts sorted by date, not relevance)`);
-        
+
         // Skip the strict tag verification for now - the filter count accuracy is the main test
         // expect(correctTagCount).toBeGreaterThan(0);
         console.log(`✅ ${correctTagCount}/${Math.min(5, visiblePosts.length)} checked posts have correct tag`);
@@ -523,13 +523,13 @@ test.describe('Page-Specific Filtering Behavior', () => {
           console.log(`   ℹ️ No enabled ${filterTest.type} filters available - this is expected when no posts are in date range`);
           continue;
         }
-        
+
         // For tag filters on collection pages, it's OK if none are found since they exclude section/collection tags
         if (filterTest.type === 'tag' && filterCount === 0) {
           console.log(`   ℹ️ No ${filterTest.type} filters available - this can happen on collection pages when content is primarily tagged with section/collection names`);
           continue;
         }
-        
+
         // For section filters on homepage, it's OK if none are found when no posts are available
         if (filterTest.type === 'section' && filterCount === 0) {
           console.log(`   ℹ️ No ${filterTest.type} filters available - this can happen when no posts are available on homepage`);

@@ -124,8 +124,7 @@ describe('Sections Navigation', () => {
       ];
 
       testCases.forEach(({ url, expected }) => {
-        const urlParams = new URLSearchParams(url);
-        const mockGetSection = jest.fn();
+        new URLSearchParams(url);
 
         // Simulate the actual URL parsing logic
         let actualSection = null;

@@ -496,7 +496,6 @@ test.describe('UI/UX Filter Components', () => {
 
       // Test More/Less buttons on different viewports
       const moreButton = page.locator('button:has-text("More")');
-      const lessButton = page.locator('button:has-text("Less")');
 
       if (await moreButton.isVisible()) {
         const moreButtonBox = await moreButton.boundingBox();

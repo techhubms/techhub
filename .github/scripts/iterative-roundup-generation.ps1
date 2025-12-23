@@ -713,7 +713,7 @@ ROLE: You are an expert content editor creating compelling weekly tech roundup s
 RESPONSE FORMAT:
 Return the complete content for the SINGLE section provided with:
 - Main section header (##)
-- Comprehensive narrative section introduction
+- Introduction that flows as an ongoing narrative
 - Topic subsection headers (###)  
 - Detailed narrative content incorporating article information, ending with links
 - Article links in list format at the END of each topic section
@@ -724,11 +724,11 @@ The section should follow this pattern:
 ```markdown
 ## [Section Name]
 
-[Comprehensive section introduction that flows as an ongoing narrative, explaining the major themes and developments in this area this week]
+[Introduction that flows as an ongoing narrative, explaining the major themes and developments in this area this week]
 
 ### [Topic Theme 1]
 
-[Detailed narrative content about the developments, incorporating key details from the articles and explaining their significance. Write as flowing narrative that tells the story of what happened, ending with the source links.]
+[Detailed content about the developments, incorporating key details from the articles and explaining their significance. Write as flowing narrative that tells the story of what happened, ending with the source links.]
 
 - [Theme 1 Article 1](link)
 - [Theme 1 Article 2](link)
@@ -737,7 +737,7 @@ The section should follow this pattern:
 
 ### [Topic Theme 2]
 
-[Another detailed narrative section that flows directly into content, ending with links]
+[Another detailed narrative section that flows nicely into the content, ending with links]
 
 - [Theme 2 Article 1](link)
 - [Theme 2 Article 2](link)
@@ -762,21 +762,18 @@ Additional noteworthy developments include migration guidance and troubleshootin
 ```
 
 CRITICAL SECTION INTRODUCTION GUIDELINES:
-- Create flowing narrative introductions that tell the story of the week's developments
+- Create flowing narrative introductions (1-3 sentences) that tell the story of the week's developments in this section
 - Explain what's new or changed this week in clear, direct language as an ongoing story
 - Connect multiple topics within the section when relevant
-- Use narrative phrases like "This week brought...", "Several developments emerged...", "The community saw..."
 - Reference progression when you can identify it from the articles
-- Focus on practical impact and create a sense of continuity
-- Provide comprehensive context without length restrictions
 
 CRITICAL TOPIC CONTENT GUIDELINES:
-- Write detailed narrative content that incorporates key information from the article summaries
+- Write detailed content about the developments, incorporating key information from the article summaries
 - Tell the story of what happened and why it matters, flowing directly into content
 - Include specific technical details, version numbers, and practical implications
 - End each topic section with the relevant article links
 - No separate introductory paragraph - dive straight into the narrative content
-- Focus on concrete benefits and real-world applications
+- Focus on concrete benefits and usage for developers and real-world applications
 
 CRITICAL TOPIC GROUPING STRATEGY:
 
@@ -1546,10 +1543,9 @@ CRITICAL: These are what the 4 fields should contain:
 - Title: Create an engaging, informative title that reflects the week's main themes. Do NOT include the date in the title. MAX LENGTH is 70 characters!
 - Tags: Array of 10-15 relevant technology tags from the content
 - Description: Write a 2-3 sentence summary of the week's key developments
-- Introduction: Create a compelling 2-3 paragraph introduction that:
+- Introduction: Create a compelling 1 paragraph introduction (2-4 sentences) that:
   * Welcomes readers to the roundup
   * Highlights the week's most significant developments
-  * Provides context for the stories that follow
   * Sets up the narrative flow
 
 CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the complete metadata requested.

@@ -1,7 +1,6 @@
 const { test, expect } = require('@playwright/test');
 const {
   getVisiblePostCount,
-  waitForFilteringComplete,
   navigateAndVerify,
   TEST_URLS
 } = require('./helpers.js');
@@ -210,7 +209,7 @@ test.describe('Server-Side Requirements - Critical Foundation Tests', () => {
       if (pageType.url === '/') {
         console.log(`ℹ️ Homepage (${pageType.name}) does not have filtering - this is expected behavior`);
         expect(filterAnalysis.totalFilters).toBe(0);
-        console.log(`✅ No filters on homepage as expected`);
+        console.log('✅ No filters on homepage as expected');
         continue;
       }
 
