@@ -16,12 +16,12 @@ Related pages:
 
 ## Table of Contents
 
-1. [Inspiration](#inspiration)
+1. [Introduction](#introduction)
 2. [Integrating AI into Your Applications](#integrating-ai-into-your-applications)
 3. [Want to Know More?](#want-to-know-more)
 4. [Conclusion](#conclusion)
 
-## Inspiration
+## Introduction
 
 What can you actually build with AI? Beyond feature lists, this page collects practical patterns and project ideas that you can implement and iterate on.
 
@@ -111,6 +111,56 @@ Most practical integrations come down to three layers:
 - **Experience**: how users interact (chat, inline suggestions, forms, copilots)
 - **Orchestration**: prompts, tool use, retrieval, evaluations, and guardrails
 - **Data and systems**: your sources of truth (docs, DBs, APIs) and authorization
+
+```mermaid
+graph TB
+    subgraph Experience["Experience Layer"]
+        Chat["Chat Interface"]
+        Inline["Inline Suggestions"]
+        Forms["Form Assistance"]
+        Copilot["Copilot Features"]
+    end
+    
+    subgraph Orchestration["Orchestration Layer"]
+        Prompts["Prompt Engineering"]
+        Tools["Tool/Function Calling"]
+        RAG["RAG & Retrieval"]
+        Guards["Guardrails & Eval"]
+    end
+    
+    subgraph Data["Data & Systems Layer"]
+        Docs[("Documentation")]
+        DB[("Databases")]
+        APIs["External APIs"]
+        Auth["Authorization"]
+    end
+    
+    Chat --> Prompts
+    Inline --> Prompts
+    Forms --> Prompts
+    Copilot --> Prompts
+    
+    Prompts --> Docs
+    Tools --> DB
+    RAG --> Docs
+    Guards --> APIs
+    Tools --> APIs
+    RAG --> DB
+    Prompts --> Auth
+    
+    style Chat fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Inline fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Forms fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Copilot fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Prompts fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Tools fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style RAG fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Guards fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Docs fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style DB fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style APIs fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Auth fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+```
 
 ### Tools and IDEs
 
@@ -295,3 +345,5 @@ GenAI becomes useful when it sits inside real workflows, uses trusted context, a
 1. Try existing tools (GitHub Copilot, Microsoft Copilot) to build intuition.
 2. Pick one workflow you know well and improve one step with a prototype.
 3. Add basic evaluation before you scale usage.
+
+<script src="{{ '/assets/js/mermaid-page.js' | relative_url }}"></script>

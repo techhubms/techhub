@@ -50,12 +50,8 @@ page-name: "ai-sdlc"
                     </div>
                 </div>
                 <div class="sdlc-info-section">
-                    <div class="sdlc-info-label">Deliverables</div>
-                    <div class="sdlc-info-text">Validated concept prototypes, user feedback summaries, feasibility assessments, initial feature ideas, and documented learnings from experimentation.</div>
-                </div>
-                <div class="sdlc-info-section">
                     <div class="sdlc-info-label">Handover to Planning</div>
-                    <div class="sdlc-info-text">Present prototype demos to stakeholders, share user research findings, discuss technical feasibility insights, and align on which concepts to pursue in formal planning.</div>
+                    <div class="sdlc-info-text">Present prototype demos to stakeholders, share user research findings, discuss technical feasibility insights, and align on which concepts to pursue in formal planning. Deliver validated concept prototypes, user feedback summaries, feasibility assessments, initial feature ideas, and documented learnings from experimentation.</div>
                 </div>
                 <div class="sdlc-info-section">
                     <div class="sdlc-info-label">Best Practices</div>
@@ -102,19 +98,12 @@ page-name: "ai-sdlc"
                         <p><strong>For Scrum Masters</strong>, AI assists in breaking epics into sprint-sized user stories, estimates story points based on historical data, identifies potential blockers, and ensures requirements are clear enough for the team to estimate and commit to.</p>
                     </div>
                 </div>
-                <div class="sdlc-handover-section">
-                    <div class="sdlc-handover-header">Handover to Design</div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Deliverables</div>
-                        <div class="sdlc-info-text">Approved requirements document, user stories with acceptance criteria, prioritized product backlog, technical constraints, and compliance requirements.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Process</div>
-                        <div class="sdlc-info-text">Conduct requirements review meeting with design team, obtain stakeholder sign-off, and ensure all questions are documented and answered before design begins.</div>
-                    </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Handover to Design</div>
+                    <div class="sdlc-info-text">Conduct requirements review meeting with design team, obtain stakeholder sign-off, and ensure all questions are documented and answered before design begins. Deliver approved requirements document, user stories with acceptance criteria, prioritized product backlog, technical constraints, and compliance requirements.</div>
                 </div>
                 <div class="sdlc-info-section">
-                    <div class="sdlc-info-label">Agile Practices</div>
+                    <div class="sdlc-info-label">Best Practices</div>
                     <div class="sdlc-info-text">Organize requirements into a prioritized product backlog, break work into sprint-sized increments, and use iterative planning to adapt to changing needs.</div>
                 </div>
             </div>
@@ -156,22 +145,9 @@ page-name: "ai-sdlc"
                         <p><strong>For Scrum Masters</strong>, AI helps estimate design complexity, identifies technical debt risks in proposed architectures, and ensures design decisions are documented for team reference.</p>
                     </div>
                 </div>
-                <div class="sdlc-handover-section">
-                    <div class="sdlc-handover-header">Handover to Implementation</div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Deliverables</div>
-                        <div class="sdlc-info-text">System architecture diagrams, API specifications, database schemas, UI mockups, coding standards, and development environment setup instructions.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Process</div>
-                        <div class="sdlc-info-text">Design handoff meeting with development team, walkthrough of architecture decisions, establish version control branching strategy, and set up initial repository structure.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">AI Tools</div>
-                        <div class="sdlc-tools-list">
-                            <a href="https://github.com/features/issues" target="_blank" class="sdlc-tool-tag">GitHub Issues</a>
-                        </div>
-                    </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Handover to Implementation</div>
+                    <div class="sdlc-info-text">Design handoff meeting with development team, walkthrough of architecture decisions, establish version control branching strategy, and set up initial repository structure. Deliver system architecture diagrams, API specifications, database schemas, UI mockups, coding standards, and development environment setup instructions.</div>
                 </div>
                 <div class="sdlc-info-section">
                     <div class="sdlc-info-label">Best Practices</div>
@@ -218,30 +194,13 @@ page-name: "ai-sdlc"
                         <p><strong>For Scrum Masters</strong>, AI can summarize pull request changes, highlight potential merge conflicts, and track code review bottlenecks across the team.</p>
                     </div>
                 </div>
-                <div class="sdlc-handover-section">
-                    <div class="sdlc-handover-header">Handover to Testing</div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Deliverables</div>
-                        <div class="sdlc-info-text">Completed code with unit tests passing, test environment deployment, test cases mapped to requirements, and known issues documentation.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Process</div>
-                        <div class="sdlc-info-text">Feature demonstration to QA team, test environment verification, review test plan coverage, and establish defect tracking workflow.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">AI Tools</div>
-                        <div class="sdlc-tools-list">
-                            <a href="https://docs.github.com/en/copilot/using-github-copilot/code-review" target="_blank" class="sdlc-tool-tag">GitHub Copilot Code Review</a>
-                        </div>
-                    </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Handover to Testing</div>
+                    <div class="sdlc-info-text">Feature demonstration to QA team, test environment verification, review test plan coverage, and establish defect tracking workflow. Deliver completed code with unit tests passing, test environment deployment, test cases mapped to requirements, and known issues documentation.</div>
                 </div>
                 <div class="sdlc-info-section">
-                    <div class="sdlc-info-label">Version Control Best Practices</div>
-                    <div class="sdlc-info-text">Write clear, descriptive commit messages. Test code before committing. Use branches for features and fixes. Review changes before merging. Pull changes frequently to stay current.</div>
-                </div>
-                <div class="sdlc-info-section">
-                    <div class="sdlc-info-label">Code Review Process</div>
-                    <div class="sdlc-info-text">Prepare and understand changes before review. Request reviews via pull requests. Provide constructive feedback on logic, security, and maintainability. Discuss disagreements collaboratively. Approve and merge when ready.</div>
+                    <div class="sdlc-info-label">Best Practices</div>
+                    <div class="sdlc-info-text">Write clear, descriptive commit messages. Test code before committing. Use branches for features and fixes. Review changes before merging. Pull changes frequently to stay current. Prepare and understand changes before review. Request reviews via pull requests. Provide constructive feedback on logic, security, and maintainability. Discuss disagreements collaboratively. Approve and merge when ready.</div>
                 </div>
             </div>
         </div>
@@ -287,16 +246,9 @@ page-name: "ai-sdlc"
                         <p><strong>For Scrum Masters</strong>, AI tracks test coverage trends, identifies testing bottlenecks, and predicts which stories carry higher quality risks based on historical defect patterns.</p>
                     </div>
                 </div>
-                <div class="sdlc-handover-section">
-                    <div class="sdlc-handover-header">Handover to Deployment</div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Deliverables</div>
-                        <div class="sdlc-info-text">Test reports with all critical tests passing, security scan results, performance test validation, UAT sign-off, and release notes.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Process</div>
-                        <div class="sdlc-info-text">Go/no-go decision meeting, final stakeholder approval, deployment checklist verification, and rollback plan confirmation.</div>
-                    </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Handover to Deployment</div>
+                    <div class="sdlc-info-text">Go/no-go decision meeting, final stakeholder approval, deployment checklist verification, and rollback plan confirmation. Deliver test reports with all critical tests passing, security scan results, performance test validation, UAT sign-off, and release notes.</div>
                 </div>
                 <div class="sdlc-info-section">
                     <div class="sdlc-info-label">Best Practices</div>
@@ -342,19 +294,12 @@ page-name: "ai-sdlc"
                         <p><strong>For Scrum Masters</strong>, AI tracks deployment frequency, failure rates, and mean time to recovery—key metrics for continuous improvement discussions and retrospectives.</p>
                     </div>
                 </div>
-                <div class="sdlc-handover-section">
-                    <div class="sdlc-handover-header">Handover to Maintenance</div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Deliverables</div>
-                        <div class="sdlc-info-text">Operations runbook, monitoring dashboards configured, on-call escalation procedures, and support documentation with troubleshooting guides.</div>
-                    </div>
-                    <div class="sdlc-info-section">
-                        <div class="sdlc-info-label">Process</div>
-                        <div class="sdlc-info-text">Knowledge transfer sessions with support team, handover of administrative access, alert threshold configuration, and incident response drill.</div>
-                    </div>
+                <div class="sdlc-info-section">
+                    <div class="sdlc-info-label">Handover to Maintenance</div>
+                    <div class="sdlc-info-text">Knowledge transfer sessions with support team, handover of administrative access, alert threshold configuration, and incident response drill. Deliver operations runbook, monitoring dashboards configured, on-call escalation procedures, and support documentation with troubleshooting guides.</div>
                 </div>
                 <div class="sdlc-info-section">
-                    <div class="sdlc-info-label">DevOps Integration</div>
+                    <div class="sdlc-info-label">Best Practices</div>
                     <div class="sdlc-info-text">Continuous Delivery ensures code is always in a deployable state. Continuous Deployment automates releases to production. Infrastructure as Code manages environments consistently. Feature flags enable gradual rollouts.</div>
                 </div>
             </div>
@@ -400,7 +345,7 @@ page-name: "ai-sdlc"
                     </div>
                 </div>
                 <div class="sdlc-info-section">
-                    <div class="sdlc-info-label">Continuous Feedback Loop</div>
+                    <div class="sdlc-info-label">Best Practices</div>
                     <div class="sdlc-info-text">User feedback and operational insights flow back to the Ideation phase, enabling iterative improvements. This creates a cycle where each release informs the next development iteration.</div>
                 </div>
             </div>

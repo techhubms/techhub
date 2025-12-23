@@ -16,22 +16,22 @@ Related pages:
 
 ## Table of Contents
 
-1. [How AI models actually work](#how-ai-models-actually-work)
-2. [Fine-tuning a model](#fine-tuning-a-model)
-3. [Advanced concepts](#advanced-concepts)
-4. [Function calling](#function-calling)
-5. [Model Context Protocol (MCP)](#model-context-protocol-mcp)
-6. [Retrieval Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
-7. [Agents and agentic AI](#agents-and-agentic-ai)
-8. [Multi-agent solutions](#multi-agent-solutions)
-9. [Scaling AI implementations](#scaling-ai-implementations)
-10. [The AI-native web: NLWeb, llms.txt, and semantic search](#the-ai-native-web-nlweb-llmstxt-and-semantic-search)
+1. [Vectors and embeddings: How AI understands meaning](#vectors-and-embeddings-how-ai-understands-meaning)
+2. [From embeddings to responses: The inference process](#from-embeddings-to-responses-the-inference-process)
+3. [Neural networks and transformers](#neural-networks-and-transformers)
+4. [Attention mechanism](#attention-mechanism)
+5. [Context windows and model parameters](#context-windows-and-model-parameters)
+6. [Alignment: making models follow principles](#alignment-making-models-follow-principles)
+7. [Fine-tuning a model](#fine-tuning-a-model)
+8. [Function calling](#function-calling)
+9. [Model Context Protocol (MCP)](#model-context-protocol-mcp)
+10. [Retrieval Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
+11. [Agents and agentic AI](#agents-and-agentic-ai)
+12. [Multi-agent solutions](#multi-agent-solutions)
+13. [Scaling AI implementations](#scaling-ai-implementations)
+14. [The AI-native web: NLWeb, llms.txt, and semantic search](#the-ai-native-web-nlweb-llmstxt-and-semantic-search)
 
-## How AI models actually work
-
-Before diving into advanced concepts, it's essential to understand the foundational building blocks that make AI possible. At its core, AI models work by converting human concepts into mathematical representations that computers can process and manipulate.
-
-### Vectors and embeddings: How AI understands meaning
+## Vectors and embeddings: How AI understands meaning
 
 Everything an AI processes—words, images, concepts—gets converted into **vectors**, which are simply lists of numbers. Think of a vector as a precise coordinate in multi-dimensional space that captures the essence of what something means.
 
@@ -39,11 +39,113 @@ Everything an AI processes—words, images, concepts—gets converted into **vec
 
 This mathematical representation allows AI models to understand that "vehicle" relates to both "car" and "bicycle," even if those specific connections weren't explicitly taught. The model discovers these relationships by observing patterns in how words appear together across millions of examples.
 
-### From embeddings to responses: The inference process
+```mermaid
+graph LR
+    Word1["Word: 'dog'"]
+    Word2["Word: 'puppy'"]
+    Word3["Word: 'car'"]
+    Vec1["Vector: [0.2, 0.8, 0.3, ...]"]
+    Vec2["Vector: [0.19, 0.82, 0.28, ...]"]
+    Vec3["Vector: [0.7, 0.1, 0.9, ...]"]
+    Space["Multi-dimensional space where semantic relationships are captured by proximity"]
+    
+    Word1 --> Vec1
+    Word2 --> Vec2
+    Word3 --> Vec3
+    Vec1 --> Space
+    Vec2 --> Space
+    Vec3 --> Space
+    
+    style Word1 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Word2 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Word3 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Vec1 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Vec2 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Vec3 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Space fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+```
+
+## From embeddings to responses: The inference process
 
 **Inference** is what happens when you send a prompt to an AI model and receive a response. The model converts your words into embeddings, processes those mathematical representations through its neural network, and converts the results back into human-readable text.
 
 During inference, the model doesn't "think" the way humans do. Instead, it performs billions of mathematical calculations to predict the most likely next word, then the word after that, building responses token by token based on the patterns it learned during training.
+
+## Neural networks and transformers
+
+Now that we understand how AI models represent and process information, we can explore the sophisticated mechanisms that make modern AI so powerful.
+
+### The foundation of learning
+
+A **neural network** mimics how biological brains process information through interconnected nodes. Each connection has a **weight**—a number that determines how much influence one piece of information has on another. During training, the model adjusts billions of these weights to improve its predictions.
+
+### Transformers: A revolutionary architecture
+
+Modern language models use **transformers**, a revolutionary architecture that changed how AI understands language. Unlike earlier approaches that processed text sequentially (word by word), transformers can examine entire passages simultaneously and understand relationships between any words, regardless of how far apart they appear.
+
+## Attention mechanism
+
+The breakthrough innovation in transformers is the **attention mechanism**. When generating each word, the model can "attend to" or focus on the most relevant parts of the input, just as you might reread key phrases when writing a response to a complex question.
+
+For example, when translating "The cat that was sleeping on the mat was orange," the attention mechanism helps the model understand that "orange" describes "cat," not "mat," even though other words appear between them.
+
+## Context windows and model parameters
+
+### Parameters and model capability
+
+The **parameters** in a model (the adjustable weights we mentioned) directly impact capability. GPT-3 has 175 billion parameters, while some newer models have over a trillion. More parameters generally mean better understanding of nuanced language patterns, though they also require more computational resources.
+
+### Context windows
+
+**Context windows** determine how much information a model can consider at once. Larger context windows allow models to maintain coherence across longer conversations and documents, but they also increase computational costs and processing time.
+
+### Training data and knowledge cutoff
+
+The **training data** (billions of web pages, books, and articles) shapes what the model knows. The **cut-off date** represents the latest information in this training data, which is why models can't discuss events that happened after their training completed.
+
+### Practical implications: Balancing trade-offs
+
+Every advanced feature involves trade-offs. Larger context windows enable more sophisticated reasoning but increase latency and costs. Higher-parameter models provide better quality but require more computational resources. Understanding these trade-offs helps you choose the right model configuration for your specific needs.
+
+When designing applications, consider how **vocabulary size** (the tokens a model understands), **temperature settings** (creativity vs. consistency), and **seed values** (reproducibility) align with your goals for latency, accuracy, cost, and reliability.
+
+For a comprehensive deep dive into how these concepts work together, [Andrej Karpathy's tutorial on building ChatGPT from scratch](https://www.youtube.com/watch?v=kCc8FmEb1nY) provides an excellent technical foundation.
+
+More information:
+
+- [Microsoft Releases Dion: A New Scalable Optimizer for Training AI Models](https://techcommunity.microsoft.com/blog/educator-developer-blog/microsoft-releases-dion-a-new-scalable-optimizer-for-training-ai-models/4500124)
+- [Optimizing Large-Scale AI Performance with Pretraining Validation on a Single Azure ND GB200 v6](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimizing-large-scale-ai-performance-with-pretraining/ba-p/4445273)
+- [Benchmarking Llama 3.1 8B AI Inference on Azure ND-H100-v5 with vLLM](https://techcommunity.microsoft.com/blog/educator-developer-blog/benchmarking-llama-3-1-8b-ai-inference-on-azure-nd-h100-v5-with-vllm/4440725)
+
+## Alignment: making models follow principles
+
+As models get stronger, we also need them to behave safely and predictably. "Alignment" is the process of shaping model behavior to follow clear rules and values, not just statistics from the training data.
+
+### Constitutional AI
+
+A practical approach you'll see in modern systems is Constitutional AI (popularized by Anthropic): the model uses a short, written set of principles (a "constitution") to critique and improve its own answers.
+
+How this works in practice:
+
+- Draft: the model produces an initial answer.
+- Self-critique: it reviews that answer against the constitution (e.g., be helpful and honest, avoid facilitating harm, acknowledge uncertainty).
+- Revise: it edits the answer to better follow the principles.
+- Preference training (RLAIF): training then favors these revised answers using reinforcement learning from AI feedback, reducing dependence on large human-labeled datasets.
+
+Why this helps
+
+- Principles are explicit and auditable.
+- Scales alignment with fewer human labels.
+- Produces more consistent "helpful, harmless, honest" behavior.
+
+Limits to keep in mind
+
+- Only as good as the chosen principles (they can be incomplete or biased) and may lead to over-refusal in edge cases.
+- Not a substitute for factual grounding—use retrieval (RAG) and tools for accuracy and citations.
+
+Example principle: "Avoid providing instructions that meaningfully facilitate wrongdoing." During self-critique, the model removes or reframes such content before replying.
+
+Tip: keep these concepts practical. As you design a use case, tie terms like "context," "embeddings," and "attention" to concrete trade-offs: latency, accuracy, token cost, and guardrails.
 
 ## Fine-tuning a model
 
@@ -70,68 +172,8 @@ These settings work together - you might use low temperature and low Top P for c
 More information:
 
 - [Enhancing Conversational Agents with Azure AI Language: CLU and Custom Question Answering](https://devblogs.microsoft.com/azure-ai/enhancing-conversational-agents-with-azure-ai-language-clu-and-custom-question-answering/)
-- [What's New in Azure AI Foundry | July 2025](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/what%E2%80%99s-new-in-azure-ai-foundry-finetuning-july-2025/4438850)
+- [What's New in Azure AI Foundry - July 2025](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/what%E2%80%99s-new-in-azure-ai-foundry-finetuning-july-2025/4438850)
 - [OpenAI's Open-Source Model: gpt-oss on Azure AI Foundry and Windows AI Foundry](https://www.microsoft.com/en-us/ai/open-source-ai-models)
-
-## Advanced concepts
-
-Now that we understand how AI models represent and process information, we can explore the sophisticated mechanisms that make modern AI so powerful.
-
-**Neural networks: The foundation of learning**
-A **neural network** mimics how biological brains process information through interconnected nodes. Each connection has a **weight**—a number that determines how much influence one piece of information has on another. During training, the model adjusts billions of these weights to improve its predictions.
-
-Modern language models use **transformers**, a revolutionary architecture that changed how AI understands language. Unlike earlier approaches that processed text sequentially (word by word), transformers can examine entire passages simultaneously and understand relationships between any words, regardless of how far apart they appear.
-
-**Attention: Focusing on what matters**
-The breakthrough innovation in transformers is the **attention mechanism**. When generating each word, the model can "attend to" or focus on the most relevant parts of the input, just as you might reread key phrases when writing a response to a complex question.
-
-For example, when translating "The cat that was sleeping on the mat was orange," the attention mechanism helps the model understand that "orange" describes "cat," not "mat," even though other words appear between them.
-
-**Scale and capability: Parameters, context, and training**
-The **parameters** in a model (the adjustable weights we mentioned) directly impact capability. GPT-3 has 175 billion parameters, while some newer models have over a trillion. More parameters generally mean better understanding of nuanced language patterns, though they also require more computational resources.
-
-**Context windows** determine how much information a model can consider at once. Larger context windows allow models to maintain coherence across longer conversations and documents, but they also increase computational costs and processing time.
-
-The **training data** (billions of web pages, books, and articles) shapes what the model knows. The **cut-off date** represents the latest information in this training data, which is why models can't discuss events that happened after their training completed.
-
-**Practical implications: Balancing trade-offs**
-Every advanced feature involves trade-offs. Larger context windows enable more sophisticated reasoning but increase latency and costs. Higher-parameter models provide better quality but require more computational resources. Understanding these trade-offs helps you choose the right model configuration for your specific needs.
-
-When designing applications, consider how **vocabulary size** (the tokens a model understands), **temperature settings** (creativity vs. consistency), and **seed values** (reproducibility) align with your goals for latency, accuracy, cost, and reliability.
-
-For a comprehensive deep dive into how these concepts work together, [Andrej Karpathy's tutorial on building ChatGPT from scratch](https://www.youtube.com/watch?v=kCc8FmEb1nY) provides an excellent technical foundation.
-
-More information:
-
-- [Microsoft Releases Dion: A New Scalable Optimizer for Training AI Models](https://techcommunity.microsoft.com/blog/educator-developer-blog/microsoft-releases-dion-a-new-scalable-optimizer-for-training-ai-models/4500124)
-- [Optimizing Large-Scale AI Performance with Pretraining Validation on a Single Azure ND GB200 v6](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimizing-large-scale-ai-performance-with-pretraining/ba-p/4445273)
-- [Benchmarking Llama 3.1 8B AI Inference on Azure ND-H100-v5 with vLLM](https://techcommunity.microsoft.com/blog/educator-developer-blog/benchmarking-llama-3-1-8b-ai-inference-on-azure-nd-h100-v5-with-vllm/4440725)
-
-### Alignment: making models follow principles (Constitutional AI)
-
-As models get stronger, we also need them to behave safely and predictably. "Alignment" is the process of shaping model behavior to follow clear rules and values, not just statistics from the training data. A practical approach you'll see in modern systems is Constitutional AI (popularized by Anthropic): the model uses a short, written set of principles (a "constitution") to critique and improve its own answers.
-
-How this works in practice:
-
-- Draft: the model produces an initial answer.
-- Self-critique: it reviews that answer against the constitution (e.g., be helpful and honest, avoid facilitating harm, acknowledge uncertainty).
-- Revise: it edits the answer to better follow the principles.
-- Preference training (RLAIF): training then favors these revised answers using reinforcement learning from AI feedback, reducing dependence on large human-labeled datasets.
-
-Why this helps
-
-- Principles are explicit and auditable.
-- Scales alignment with fewer human labels.
-- Produces more consistent "helpful, harmless, honest" behavior.
-
-Limits to keep in mind
-
-- Only as good as the chosen principles (they can be incomplete or biased) and may lead to over-refusal in edge cases.
-- Not a substitute for factual grounding—use retrieval (RAG) and tools for accuracy and citations.
-
-Example principle: "Avoid providing instructions that meaningfully facilitate wrongdoing." During self-critique, the model removes or reframes such content before replying.
-
-Tip: keep these concepts practical. As you design a use case, tie terms like “context,” “embeddings,” and “attention” to concrete trade-offs: latency, accuracy, token cost, and guardrails.
 
 ## Function calling
 
@@ -143,6 +185,23 @@ How it works:
 2. The AI model analyzes your prompt and determines if any functions would help answer your question
 3. The model calls the appropriate function with the right parameters
 4. The function returns results, which the model incorporates into its response
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant AI as AI Model
+    participant Function
+    
+    User->>AI: "How long does it take to fly from New York to Los Angeles?"
+    AI->>AI: Analyzes prompt
+    AI->>Function: get_flight_duration("JFK", "LAX", true)
+    Function->>AI: "6 hours 30 minutes including one layover"
+    AI->>User: "The flight from New York to Los Angeles takes about 6 hours and 30 minutes, including one layover."
+    
+    style User fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style AI fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Function fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+```
 
 Example function definition:
 
@@ -161,6 +220,7 @@ Function returns: "6 hours 30 minutes including one layover"
 ```
 
 How the model matches functions to prompts:
+
 Models use the function descriptions and parameter details to understand when a function is relevant. They look for keywords, context clues, and the type of information being requested. The better your function descriptions, the more accurately the model will know when and how to use them.
 
 Benefits:
@@ -189,6 +249,37 @@ Key components:
 - **Host**: The application that contains the AI model (like your IDE, chat application, or development environment)
 - **Client**: The component that communicates with MCP servers on behalf of the AI model
 - **Server**: The service that provides access to external resources like databases, APIs, or file systems
+
+```mermaid
+graph TB
+    Host["Host Application<br/>(VS Code, Claude Desktop,<br/>Custom App)"]
+    Client["MCP Client<br/>(Protocol Handler)"]
+    
+    Server1["MCP Server:<br/>Database Access"]
+    Server2["MCP Server:<br/>File System"]
+    Server3["MCP Server:<br/>External APIs"]
+    
+    DB[("Database")]
+    FS[("Files")]
+    API[("APIs")]
+    
+    Host --> Client
+    Client --> Server1
+    Client --> Server2
+    Client --> Server3
+    Server1 --> DB
+    Server2 --> FS
+    Server3 --> API
+    
+    style Host fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Client fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Server1 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Server2 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Server3 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style DB fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style FS fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style API fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+```
 
 **How does it relate to OpenAI function calling?**
 MCP and OpenAI function calling serve similar purposes but work at different levels:
@@ -243,6 +334,36 @@ How RAG works:
 2. A search system finds relevant documents or data from your knowledge base
 3. The retrieved information is combined with your original question
 4. The AI model generates a response based on both your question and the retrieved information
+
+```mermaid
+graph TB
+    User["User Query:<br/>'What is our refund policy?'"]
+    Embed["Convert to<br/>Vector Embedding"]
+    Search["Vector Search<br/>in Knowledge Base"]
+    KB[("Knowledge Base<br/>Docs, Policies,<br/>FAQs")]
+    Results["Retrieve Relevant<br/>Documents"]
+    Combine["Combine Query +<br/>Retrieved Context"]
+    LLM["LLM Generates<br/>Response"]
+    Response["'Our refund policy allows...<br/>Source: Policy Doc v2.3'"]
+    
+    User --> Embed
+    Embed --> Search
+    Search --> KB
+    KB --> Results
+    Results --> Combine
+    User --> Combine
+    Combine --> LLM
+    LLM --> Response
+    
+    style User fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Embed fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Search fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style KB fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Results fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Combine fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style LLM fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Response fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+```
 
 Why RAG is valuable:
 
@@ -344,6 +465,38 @@ Multi-agent intelligence views your application as a team: each agent brings a s
 ### Core principles
 
 Effective multi-agent systems start by breaking work into bounded subtasks with crisp objectives. Those subtasks are then assigned to specialized agents: one excels at retrieval, another at planning, a third at coding, and a fourth at review. An orchestrator (or router) selects which agent should act next and, where possible, makes that choice deterministically so runs are reproducible.
+
+```mermaid
+graph TB
+    User["User Request:<br/>'Build a feature with tests'"]
+    Orch["Orchestrator<br/>(Routes tasks to agents)"]
+    
+    Plan["Planning Agent<br/>(Breaks down task)"]
+    Code["Coding Agent<br/>(Implements solution)"]
+    Review["Review Agent<br/>(Checks quality)"]
+    Test["Testing Agent<br/>(Writes tests)"]
+    
+    Result["Complete Solution<br/>with Tests"]
+    
+    User --> Orch
+    Orch --> Plan
+    Plan --> Orch
+    Orch --> Code
+    Code --> Orch
+    Orch --> Test
+    Test --> Orch
+    Orch --> Review
+    Review --> Orch
+    Orch --> Result
+    
+    style User fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Orch fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Plan fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Code fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Review fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Test fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+    style Result fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6
+```
 
 - Information flows as compact artifacts (file identifiers, summaries, and links), so context stays short and handoffs remain explicit.
 - Guardrails (least-privilege identities, policy checks, and explicit stop conditions) keep loops in check and scope contained.
@@ -496,3 +649,5 @@ Like robots.txt for crawlers, `llms.txt` is a proposed convention for publishing
 - Example: [GoFastMCP llms.txt](https://gofastmcp.com/llms-full.txt)
 
 The bottom line: AI turns websites and data stores into conversational surfaces. By adding `llms.txt` and shipping semantic search (or at least clean, machine-readable structure plus stable URLs), you make your content easier for both people and agents to discover, cite, and reuse.
+
+<script src="{{ '/assets/js/mermaid-page.js' | relative_url }}"></script>
