@@ -99,3 +99,55 @@
     color: colors.$light-gray;
     contain: layout style;
 }
+
+// Page progression navigation boxes
+.page-nav-box {
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    h3 {
+        color: white;
+        margin-top: 0;
+        font-size: 1.5rem;
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    a {
+        display: inline-block;
+        background: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: transform 0.2s;
+
+        @media (hover: hover) {
+            &:hover {
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
+
+.page-nav-box--purple {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+    a {
+        color: #667eea;
+    }
+}
+
+.page-nav-box--pink {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+
+    a {
+        color: #f5576c;
+    }
+}

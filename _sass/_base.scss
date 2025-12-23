@@ -303,12 +303,22 @@ pre {
   }
 }
 
-.highlight {
+// Syntax highlighting container - only style the outer div, not nested pre
+div.highlight {
   background-color: rgba(colors.$bright-purple, 0.1);
   border: 1px solid rgba(colors.$bright-purple, 0.2);
   border-radius: 8px;
   padding: 8px 12px;
   contain: layout style;
+  
+  // Remove duplicate styling from nested pre.highlight
+  > pre.highlight {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 0;
+  }
 }
 
 /**

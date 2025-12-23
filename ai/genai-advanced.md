@@ -650,4 +650,12 @@ Like robots.txt for crawlers, `llms.txt` is a proposed convention for publishing
 
 The bottom line: AI turns websites and data stores into conversational surfaces. By adding `llms.txt` and shipping semantic search (or at least clean, machine-readable structure plus stable URLs), you make your content easier for both people and agents to discover, cite, and reuse.
 
+---
+
+<div class="page-nav-box page-nav-box--pink">
+  <h3>💡 Ready to Build Real Applications?</h3>
+  <p>Put your advanced knowledge into practice! Learn how to integrate GenAI into real-world applications and workflows.</p>
+  <a href="/ai/genai-applied.html">Continue to GenAI Applied →</a>
+</div>
+
 <script src="{{ '/assets/js/mermaid-page.js' | relative_url }}"></script>

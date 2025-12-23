@@ -101,7 +101,7 @@ jobs:
       - name: Run all tests
         run: |
           echo "🧪 Running comprehensive test suite..."
-          pwsh -File run-all-tests.ps1
+          pwsh -File scripts/run-all-tests.ps1
           echo "✅ All tests passed!"
 
       - name: Validate Jekyll build

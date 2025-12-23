@@ -613,4 +613,12 @@ AI's benefits come with human and environmental costs that show up across societ
 
 See also: [Is AI the Right Solution? Part 2: Applying the Framework and Navigating Ethical Risks](https://hiddedesmet.com/ai-project-validation-framework-part2).
 
+---
+
+<div class="page-nav-box page-nav-box--purple">
+  <h3>🚀 Ready for Advanced Concepts?</h3>
+  <p>You've mastered the fundamentals! Dive deeper into advanced GenAI techniques, architectures, and implementation patterns.</p>
+  <a href="/ai/genai-advanced.html">Continue to GenAI Advanced →</a>
+</div>
+
 <script type="module" src="{{ '/assets/js/mermaid-page.js' | relative_url }}"></script>
