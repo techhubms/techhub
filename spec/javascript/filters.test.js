@@ -1,15 +1,13 @@
 
-const { updateDateButtonCountsAndState, initDOMCache, updateDisplay } = require('../../assets/js/filters');
+const { initDOMCache, updateDisplay } = require('../../assets/js/filters');
 
 /**
  * Tag Filter Core Logic Unit Tests
  * Tests the core filtering functionality of filters.js without browser dependencies
  */
 describe('Date Filter Button Visibility Rules', () => {
-  let originalCachedDateButtons;
-  let originalCachedCountSpans;
+  let dateButton;
 
-  let dateButton, countSpan;
   beforeEach(() => {
     // Set up DOM for initDOMCache to work
     document.body.innerHTML = `
@@ -26,7 +24,6 @@ describe('Date Filter Button Visibility Rules', () => {
     initDOMCache();
     // Get references for assertions
     dateButton = document.querySelector('.date-filter-btn');
-    countSpan = dateButton.querySelector('.filter-count');
   });
   afterEach(() => {
     document.body.innerHTML = '';
@@ -79,13 +76,13 @@ describe('Date Filter Button Visibility Rules', () => {
 });
 
 describe('Tag Filter Core Logic', () => {
-  let filterData, tagRelationships, dateConfig;
+  let filterData, tagRelationships;
 
   beforeEach(() => {
     // Set up mock data for each test
     filterData = createMockFilterData();
     tagRelationships = createMockTagRelationships();
-    dateConfig = createMockDateConfig();
+    createMockDateConfig();
 
     // Reset global state
     global.window.currentFilterData = filterData;
@@ -324,7 +321,7 @@ describe('Tag Filter Core Logic', () => {
       // Given the mock data, count posts for each tag
       const tagCounts = {};
 
-      filterData.forEach((item, index) => {
+      filterData.forEach(item => {
         item.tags.forEach(tag => {
           if (!tagCounts[tag]) tagCounts[tag] = 0;
           tagCounts[tag]++;
@@ -415,7 +412,7 @@ describe('Tag Filter Core Logic', () => {
         'undefined-tag': undefined
       };
 
-      Object.entries(malformedRelationships).forEach(([tag, indices]) => {
+      Object.entries(malformedRelationships).forEach(([_tag, indices]) => {
         if (indices && Array.isArray(indices)) {
           expect(indices.every(i => typeof i === 'number')).toBe(true);
         } else {

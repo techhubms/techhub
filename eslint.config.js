@@ -1,4 +1,11 @@
 export default [
+    // Ignore third-party libraries
+    {
+        ignores: [
+            'src/techhub.webapp/techhub.webapp.Web/wwwroot/lib/**/*',
+            'node_modules/**/*'
+        ]
+    },
     // Browser/Client-side JavaScript files
     {
         files: ["assets/js/**/*.js"],

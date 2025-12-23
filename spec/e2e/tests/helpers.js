@@ -647,7 +647,6 @@ async function testFilterToggle(page, filterInfo, options = {}) {
   // Get initial state
   const initialVisiblePosts = await getVisiblePostCount(page);
   const initialPosts = verifyContent ? await page.locator('[data-post-title]').allTextContents() : [];
-  const initialUrl = page.url();
 
   // Apply filter
   await filterInfo.click();
@@ -732,7 +731,6 @@ async function verifyNavigationLink(page, linkSelector, expectedHref, options = 
   expect(href).toContain(expectedHref);
 
   if (clickAndVerify) {
-    const initialUrl = page.url();
     await link.click();
 
     // Verify navigation occurred

@@ -1,7 +1,5 @@
 const { test, expect } = require('@playwright/test');
 const {
-  getExpectedLatestContent,
-  getLatestFileFromCollection,
   getLatestFileFromCollectionByCategory,
   SECTIONS,
   navigateAndVerify,
@@ -115,11 +113,11 @@ test.describe('Latest Content Display', () => {
       const titleFound = allTitles.some(title => title.trim() === cleanExpectedTitle);
 
       if (titleFound) {
-        console.log(`✅ Expected latest item found on page`);
+        console.log('✅ Expected latest item found on page');
       } else {
-        console.log(`❌ Expected latest item not found on page.`);
+        console.log('❌ Expected latest item not found on page.');
         console.log(`   Expected: "${cleanExpectedTitle}"`);
-        console.log(`   Available titles:`, allTitles.slice(0, 3).map(t => `"${t.trim()}"`));
+        console.log('   Available titles:', allTitles.slice(0, 3).map(t => `"${t.trim()}"`));
       }
 
       // Hard assertion: filesystem helper should match server-side rendering exactly
