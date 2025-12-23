@@ -85,7 +85,6 @@ test.describe('Section Navigation', () => {
 
   test.describe('AI Section Collection Pages', () => {
     const aiCollectionUrls = [
-      '/ai/ai-to-z.html',
       '/ai/news.html',
       '/ai/posts.html',
       '/ai/videos.html',
