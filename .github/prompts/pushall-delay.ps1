@@ -303,8 +303,9 @@ try {
             # Only sleep if we haven't exceeded the time limit
             if ((Get-Date) -lt $endTime) {
                 Start-Sleep -Milliseconds 10  # Much shorter sleep intervals
+            } else {
+                break
             }
-        }
         
         if ($script:Aborted -or (Get-Date) -ge $endTime) { break }
     }
