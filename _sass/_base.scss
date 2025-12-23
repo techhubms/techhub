@@ -269,7 +269,6 @@ code {
   background-color: rgba(colors.$bright-purple, 0.1);
   border: 1px solid rgba(colors.$bright-purple, 0.2);
   border-radius: 8px;
-  color: colors.$light-gray;
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: pre-wrap;
@@ -285,14 +284,16 @@ code {
 }
 
 pre {
-  padding: 8px 12px;
+  padding: 0;
   overflow-x: auto;
+  background: none;
+  border: none;
 
   >code {
     background: none;
     border: none;
     border-radius: 0;
-    color: inherit;
+    padding: 0;
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: pre-wrap;
@@ -303,7 +304,10 @@ pre {
 }
 
 .highlight {
-  background: transparent;
+  background-color: rgba(colors.$bright-purple, 0.1);
+  border: 1px solid rgba(colors.$bright-purple, 0.2);
+  border-radius: 8px;
+  padding: 8px 12px;
   contain: layout style;
 }
 

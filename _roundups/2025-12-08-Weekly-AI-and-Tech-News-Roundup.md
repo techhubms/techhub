@@ -283,7 +283,6 @@ A new guide provides details on using Azure Databricks' logging and system table
 - [End-to-End Observability for Azure Databricks: Infrastructure and Application Logging Strategies](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/end-to-end-observability-for-azure-databricks-from/ba-p/4475692)
 - [Cloud as a War Against Entropy: Practical Reliability Patterns for Azure Architects](https://techcommunity.microsoft.com/t5/azure-architecture-blog/cloud-as-a-war-against-entropy/ba-p/4474111)
 - [Reimagine Migration: Agentic Platform Landing Zone with Azure Migrate]({{ "/2025-12-01-Reimagine-Migration-Agentic-Platform-Landing-Zone-with-Azure-Migrate.html" | relative_url }})
-- [Reimagine Migration: Agentic Platform Landing Zone with Azure Migrate](https://www.thomasmaurer.ch/2025/12/reimagine-migration-agentic-platform-landing-zone-with-azure-migrate/)
 - [Migrating from Amazon API Gateway to Azure API Management: Technical Guide](https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-from-amazon-api-gateway-to-azure-api-management/ba-p/4471524)
 
 ### Azure Arc, Hybrid, and Local Infrastructure

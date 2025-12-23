@@ -91,7 +91,7 @@ test.describe('Advanced Filtering Scenarios', () => {
       }
 
       if (dateFilter) {
-        const dateFilterName = await dateFilter.getAttribute('data-tag');
+        await dateFilter.getAttribute('data-tag');
 
         console.log('📅 Step 2: Adding date filter');
         await dateFilter.click();
@@ -199,7 +199,7 @@ test.describe('Advanced Filtering Scenarios', () => {
                 counts[tag] = count;
               }
             }
-          } catch (error) {
+          } catch {
             // Skip filters that timeout or error - don't log to reduce noise
             continue;
           }
