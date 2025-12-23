@@ -22454,5 +22454,46 @@
     "timestamp": "2025-12-22 13:16:21 +00:00",
     "collection": "news",
     "canonical_url": "https://devblogs.microsoft.com/devops/the-new-test-run-hub-is-going-generally-available/"
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/how-ai-fixed-my-procrastination/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because the article centers on using AI technologies, specifically Copilot and AI agent features in Visual Studio (AI rule 1 and 3). Assigned 'GitHub Copilot' because much of the workflow and automation relied directly on Copilot features, including prompt-based code generation and chat (GitHub Copilot rules 1, 2, 3, and 4). Included 'Coding' because projects involved .NET, language service creation, extension development, and working with code in Visual Studio (Coding rule 1 and 2). Included 'DevOps' for coverage of automated CI/CD pipelines with GitHub Actions and NuGet package publishing (DevOps rules 2, 5, and 6). Did not assign 'Azure', 'ML', or 'Security' as there is no direct substantive use of those technologies beyond agent/AI productivity tools. All generic exclusion rules (biographical focus, negativity, etc.) do not apply—while some personal reflection is present, the article is predominantly technical, practical, and implementation-focused.",
+    "timestamp": "2025-12-22 15:07:07 +00:00"
+  },
+  {
+    "timestamp": "2025-12-22 16:06:37 +00:00",
+    "reason": "Succesfully added: Assigned DevOps category because this announcement focuses on managing organizational workflows and permissions in GitHub (DevOps rules 2, 3, and 11). Added Security category since the change strengthens governance and security policy enforcement over app requests, making it relevant for Security (Security rules 2 and 3). Did not assign other categories since the post does not cover Azure, AI, Coding, or ML topics or tools.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2025-12-22-control-who-can-request-apps-for-your-organization"
+  },
+  {
+    "reason": "Succesfully added: The video focuses on a built-in feature of Visual Studio Code (Simple Browser), a Microsoft developer tool, satisfying Coding category rule 5. It also references using AI within this workflow, meeting AI category rule 5 (high-level AI usage inside a Microsoft product). No Azure, ML, DevOps, Security, or GitHub Copilot content was identified, so those categories were not assigned.",
+    "timestamp": "2025-12-22 17:06:27 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=OqzC9b3ueX0",
+    "collection": "videos"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2025-12-22 20:06:20 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=Pi57sH7iuKY"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the content specifically discusses improvements to GitHub Actions workflow pages, which is a core DevOps tool and relates directly to CI/CD pipeline management (DevOps inclusion rule 2 and 5). There is no coverage of Coding, AI, Azure, ML, Security, or GitHub Copilot. Content is technical, focuses on practitioner use, and follows all inclusion rules without triggering any generic exclusions.",
+    "timestamp": "2025-12-22 23:05:49 +00:00",
+    "canonical_url": "https://github.blog/changelog/2025-12-22-improved-performance-for-github-actions-workflows-page",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/fix-it-before-they-feel-it-higher-reliability-with-proactive/ba-p/4480444",
+    "timestamp": "2025-12-23 00:12:07 +00:00",
+    "reason": "Succesfully added: Categories Azure, AI, DevOps, and Coding are included because the content centers on Azure SRE Agent (Azure rule 1), leverages AI/autonomous logic for detection and remediation (AI rule 1, 4), automates operations and integrates DevOps practices (DevOps rules 1, 5, 6), and includes deployment, code, and .NET platform implementation details (Coding rules 1 and 2). Security and ML are not included since security, compliance, or custom data science/analytics are not substantive aspects in the article.",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://github.blog/open-source/maintainers/5-podcast-episodes-to-help-you-build-with-confidence-in-2026/",
+    "reason": "Succesfully added: Assigned AI category because multiple sections focus on AI tooling, including discussion of the Model Context Protocol (AI rule 1 and 5). DevOps is included due to emphasis on open source development, community, contributors, sustainability, and developer workflow themes (DevOps rules 3, 4, 9, and 11). Coding is assigned due to coverage of developer skills, trends (like TypeScript and AI-assisted development), and tools for software builders (Coding rules 1, 4, and 5). Did not assign Azure, ML, or Security since the content discusses AI, open source, and developer tools at a platform/industry level but does not focus on specific Azure services, ML engineering, or security implementation. No generic exclusion rules are triggered.",
+    "collection": "news",
+    "timestamp": "2025-12-23 01:35:08 +00:00"
   }
 ]
