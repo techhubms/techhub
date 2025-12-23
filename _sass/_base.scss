@@ -519,10 +519,11 @@ table {
 
 /**
  * Back to Top Button
+ * Positioned at the bottom of the viewport
  */
 .back-to-top {
   position: fixed;
-  bottom: 2rem;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   padding: 0.625rem 1.25rem;
@@ -533,7 +534,7 @@ table {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s ease, visibility 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease, background 0.2s ease;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -550,7 +551,6 @@ table {
 
   &:hover {
     background: colors.$medium-blue;
-    transform: translateX(-50%) translateY(-2px);
   }
 
   &:focus {
@@ -564,7 +564,6 @@ table {
   }
 
   @media (max-width: settings.$on-mobile) {
-    bottom: 1rem;
     padding: 0.5rem 1rem;
     font-size: 0.8125rem;
   }

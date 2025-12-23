@@ -69,6 +69,13 @@ graph LR
     style D fill:#4caf50,color:#1a1a2e,stroke:#4caf50
 ```
 
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://en.wikipedia.org/wiki/History_of_artificial_intelligence">History of artificial intelligence (Wikipedia)</a></li>
+  </ul>
+</div>
+
 ## ML vs AI vs GenAI
 
 Understanding the relationship between these three concepts is essential for anyone starting their AI journey. While often used interchangeably, they represent distinct but nested domains—each building upon the other.
@@ -217,6 +224,15 @@ Vendors serve as the bridge between the complex world of AI model development an
 - *Accessibility*: Some focus on easy-to-use consumer interfaces, others provide developer tools and APIs
 - *Data policies*: Vendors differ in how they handle user data and model training
 
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure">Azure OpenAI and Microsoft Foundry models</a></li>
+    <li><a href="https://huggingface.co/models">Hugging Face model hub</a></li>
+    <li><a href="https://platform.openai.com/docs/models">OpenAI models documentation</a></li>
+  </ul>
+</div>
+
 ## Models
 
 A model is the actual AI system that has been trained to perform specific tasks. Think of it as a specialized brain that has learned patterns from data and can apply that knowledge to new situations.
@@ -258,6 +274,15 @@ A model is the actual AI system that has been trained to perform specific tasks.
   <div class="faq-block__answer">Multimodal models can understand and generate multiple types of content - not just text, but also images, audio, and video. For example, you can upload an image to GPT-4o and ask it to describe what it sees, or ask it to create an image based on your description. This makes interactions more natural and expands what you can accomplish with AI.</div>
   <div class="faq-block__question">Why not train a model every month or week to keep it up-to-date?</div>
   <div class="faq-block__answer">Training large AI models requires enormous computational resources, costs millions of dollars, and takes weeks or months to complete. The process involves analyzing billions of text examples and adjusting trillions of parameters. Additionally, frequent retraining could make models less stable and reliable. Instead, vendors typically release new versions periodically with updated knowledge and improved capabilities.</div>
+</div>
+
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure">Foundry Models: GPT-5, GPT-4.1, o-series, and more</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/model-versions">Azure OpenAI model versions</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/foundry-models-overview">Explore Foundry Models</a></li>
+  </ul>
 </div>
 
 ## Providers
@@ -333,6 +358,15 @@ As an application developer, you don't control the model's alignment—that's ba
   <div class="faq-block__answer">GitHub Models is a development platform that gives developers access to various AI models for building applications, while GitHub Copilot is a specific AI coding assistant. Think of GitHub Models as a toolbox for AI development, and Copilot as one specific tool that helps with coding. <a href="https://docs.github.com/en/github-models/about-github-models">GitHub Models</a> provides model catalogs, prompt management, and evaluation tools for developers.</div>
 </div>
 
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/develop/sdk-overview">Microsoft Foundry SDKs and Endpoints</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/data-privacy">Azure OpenAI data, privacy, and security</a></li>
+    <li><a href="https://docs.github.com/en/github-models/about-github-models">About GitHub Models</a></li>
+  </ul>
+</div>
+
 ## Prompts & messages
 
 Prompts are the instructions or questions you give to an AI model, while messages are the individual communications in a conversation between you and the AI. Understanding how to structure these effectively is key to getting good results from AI systems.
@@ -385,6 +419,7 @@ Reusable prompts are templates or standardized instructions that you can use rep
 <div class="more-info">
   <div class="more-info__header">📚 More information</div>
   <ul>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/prompt-engineering">Prompt engineering techniques (Microsoft Learn)</a></li>
     <li><a href="https://randypagels.com/blog/prompt-engineering-for-github-copilot-part-1-introduction-prompt-engineering-and-prompts-that-get-copilot-to-deliver-what-you-need/">Craft Prompts That Get Copilot to Deliver What You Need</a></li>
     <li><a href="https://www.reddit.com/r/AI_Agents/comments/1mc4q9i/best_prompt_engineering_tools_2025_for_building/">Best Prompt Engineering Tools (2025) for Building and Debugging LLM Agents</a></li>
     <li><a href="https://devblogs.microsoft.com/azure-ai/go-from-prompt-to-playback-with-sora-from-azure-openai-in-the-video-playground-in-azure-ai-foundry/">Go from Prompt to Playback: Sora Video Generation in Microsoft Foundry's Video Playground</a></li>
@@ -585,6 +620,15 @@ graph TB
 - Lost grounding: if retrieved citations or data are pushed out of context, the model may revert to guesses (hallucinations).
 - Incomplete tools loop: long tool results + long chat history can crowd out system prompts or tool specs, degrading tool-use accuracy. Prefer structured summaries between steps.
 
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://devblogs.microsoft.com/azure-ai/maximize-your-roi-for-azure-openai-pricing-deployment-and-cost-optimization-strategies/">Maximize Your ROI for Azure OpenAI: Pricing, Deployment, and Cost Optimization</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/deployment-types">Azure OpenAI deployment types</a></li>
+    <li><a href="https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/">Azure OpenAI pricing</a></li>
+  </ul>
+</div>
+
 ## Problems with models
 
 Understanding the limitations of AI models helps you use them more effectively and avoid common pitfalls.
@@ -649,6 +693,15 @@ When you need precise calculations or counting, consider using AI to generate co
 
 Given these limitations, many organizations implement Human-in-the-loop systems where humans remain involved in AI decision-making processes. Instead of fully automated AI systems, HITL approaches include human oversight, validation, or intervention at key points. For example, an AI might flag potentially problematic content, but a human reviews and makes the final decision about whether to remove it. This approach helps mitigate risks while still benefiting from AI's efficiency and capabilities.
 
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection">Prompt injection and jailbreak detection</a></li>
+    <li><a href="https://ai.azure.com/explore/contentsafety">Azure AI Content Safety</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/transparency-note">Azure OpenAI transparency note</a></li>
+  </ul>
+</div>
+
 ## When not to use AI
 
 Use the right tool for the job. Prefer non-AI or AI-assisted approaches for:
@@ -660,6 +713,14 @@ Use the right tool for the job. Prefer non-AI or AI-assisted approaches for:
 - Legal, medical, or financial decisions without human review. Keep a human in the loop for final approval.
 
 When in doubt, let AI help draft, explain, and prototype, but keep calculators, compilers, search, and databases as the "source of truth."
+
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://hiddedesmet.com/ai-project-validation-framework-part2">Is AI the Right Solution? Applying the Framework and Navigating Ethical Risks</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/transparency-note#limitations">Azure OpenAI limitations</a></li>
+  </ul>
+</div>
 
 ## Societal impacts and risks
 
@@ -675,6 +736,15 @@ AI's benefits come with human and environmental costs that show up across societ
 - Security and misuse: prompt injection, data poisoning, model extraction, and jailbreaks; voice‑clone fraud, large‑scale phishing, and code generation that lowers the bar for cyberattacks.
 
 See also: [Is AI the Right Solution? Part 2: Applying the Framework and Navigating Ethical Risks](https://hiddedesmet.com/ai-project-validation-framework-part2).
+
+<div class="more-info">
+  <div class="more-info__header">📚 More information</div>
+  <ul>
+    <li><a href="https://theconversation.com/long-hours-and-low-wages-the-human-labour-powering-ais-development-217038">Long hours and low wages: The human labour powering AI's development</a></li>
+    <li><a href="https://www.theguardian.com/technology/article/2024/jul/06/mercy-anita-african-workers-ai-artificial-intelligence-exploitation-feeding-machine">Hidden exploitation in AI data labeling</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/transparency-note">Azure OpenAI responsible AI transparency note</a></li>
+  </ul>
+</div>
 
 ---
 

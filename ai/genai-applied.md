@@ -206,6 +206,7 @@ This enables background work on routine tasks while you focus on higher-value ac
   <div class="more-info__header">📚 More information</div>
   <ul>
     <li><a href="https://docs.github.com/en/copilot">GitHub Copilot documentation</a></li>
+    <li><a href="https://www.cooknwithcopilot.com/blog/context-engineering-recipes-recap.html">Cook'n with Copilot: Context Engineering Recipes Recap</a></li>
     <li><a href="https://www.youtube.com/watch?v=vgPl6sK6rQo">What's new with the GitHub Copilot coding agent: A look at the updates</a></li>
     <li><a href="https://cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html">Copilot vs Chat: Sidekick Showdown - When to Use Each Coding Sidekick</a></li>
     <li><a href="https://www.youtube.com/watch?v=xWA0xYttWMo">Modernizing Legacy COBOL to Cloud with GitHub Copilot</a></li>
@@ -251,6 +252,7 @@ For many applications, you can start with Azure OpenAI or Microsoft Foundry, the
   <div class="more-info__header">📚 More information</div>
   <ul>
     <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-azure-ai-foundry">What is Microsoft Foundry?</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/training/modules/prepare-azure-ai-development/">Plan and prepare to develop AI solutions on Azure</a></li>
     <li><a href="https://www.youtube.com/watch?v=2L4cSig9Y4Y">Azure Update: 20th June 2025</a></li>
     <li><a href="https://www.youtube.com/watch?v=-8sH0QFhvkQ">Azure Updates: August 2025 Highlights</a></li>
     <li><a href="https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-july-2025/">What's New in Microsoft Foundry: July 2025 Releases and Updates</a></li>
@@ -412,6 +414,7 @@ Microsoft Foundry provides managed long-term memory that enables agents to retai
     <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/agents/concepts/tool-catalog">Foundry Tools catalog</a></li>
     <li><a href="https://learn.microsoft.com/en-us/agent-framework/user-guide/workflows/orchestrations/overview">Microsoft Agent Framework Orchestrations</a></li>
     <li><a href="https://techcommunity.microsoft.com/blog/azuredevcommunityblog/from-concept-to-code-building-production-ready-multi-agent-systems-with-microsof/4472752">From Concept to Code: Building Production-Ready Multi-Agent Systems</a></li>
+    <li><a href="https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-mcp-from-our-free-livestream-series-in-december/ba-p/4474729">Learn MCP from our Free Livestream Series in December</a></li>
     <li><a href="https://devblogs.microsoft.com/blog/designing-multi-agent-intelligence">Designing Multi-Agent Intelligence</a></li>
     <li><a href="https://microsoft.github.io/ai-agents-for-beginners/08-multi-agent/">Multi-Agent Design Patterns (AI Agents for Beginners)</a></li>
   </ul>
