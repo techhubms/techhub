@@ -231,15 +231,10 @@ A model is the actual AI system that has been trained to perform specific tasks.
 
 ### Current popular models
 
-#### Large Language Models (LLMs)
-
 - **GPT series** (4, 4o, 4.1, 5): OpenAI's flagship models for text generation and reasoning
 - **Claude** (3.5 Sonnet, 4 Sonnet, 4 Opus): Anthropic's models focused on helpful, harmless, and honest interactions
 - **Gemini** (Flash, Pro): Google's multimodal models that can process text, images, and other data
 - **Grok**: xAI's conversational AI model with real-time information access
-
-#### Small Language Models (SLMs)
-
 - **Phi-4**: Microsoft's efficient model designed to run on smaller devices with strong reasoning capabilities
 - **Gemma 2/3**: Google's compact open models optimized for efficiency
 
@@ -309,6 +304,21 @@ For organizations that need complete control over their AI infrastructure, self-
 - **Ollama**: User-friendly tool for running models locally
 - **Hugging Face Transformers**: Library for deploying models on your own hardware
 
+### Why models refuse certain requests
+
+You may notice that AI models sometimes decline to answer questions or refuse to generate certain content. This is by design.
+
+During training, model providers shape how models behave through a process called *alignment*. One common approach is Constitutional AI: the model learns to critique its own responses against a set of principles (like "be helpful but avoid harm") and revise them before responding. This happens during training, not at runtime.
+
+On top of alignment, providers add *content filters* that screen inputs and outputs in real-time. These filters catch harmful requests that slip past the model's built-in guardrails.
+
+As an application developer, you don't control the model's alignment—that's baked in by the provider. But you can:
+
+- Choose models with appropriate safety properties for your use case
+- Add your own content filtering layer
+- Use system prompts to guide behavior within the model's boundaries
+- Implement human review for sensitive outputs
+
 <div class="faq-block">
   <div class="faq-block__header">❓ Providers FAQ</div>
   <div class="faq-block__question">Do all hosted solutions use my data?</div>
@@ -377,7 +387,7 @@ Reusable prompts are templates or standardized instructions that you can use rep
   <ul>
     <li><a href="https://randypagels.com/blog/prompt-engineering-for-github-copilot-part-1-introduction-prompt-engineering-and-prompts-that-get-copilot-to-deliver-what-you-need/">Craft Prompts That Get Copilot to Deliver What You Need</a></li>
     <li><a href="https://www.reddit.com/r/AI_Agents/comments/1mc4q9i/best_prompt_engineering_tools_2025_for_building/">Best Prompt Engineering Tools (2025) for Building and Debugging LLM Agents</a></li>
-    <li><a href="https://devblogs.microsoft.com/azure-ai/go-from-prompt-to-playback-with-sora-from-azure-openai-in-the-video-playground-in-azure-ai-foundry/">Go from Prompt to Playback: Sora Video Generation in Azure AI Foundry's Video Playground</a></li>
+    <li><a href="https://devblogs.microsoft.com/azure-ai/go-from-prompt-to-playback-with-sora-from-azure-openai-in-the-video-playground-in-azure-ai-foundry/">Go from Prompt to Playback: Sora Video Generation in Microsoft Foundry's Video Playground</a></li>
   </ul>
 </div>
 
@@ -472,9 +482,9 @@ Different models use different tokenization methods, so you can't directly trans
 <div class="more-info">
   <div class="more-info__header">📚 More information</div>
   <ul>
-    <li><a href="https://devblogs.microsoft.com/azure-ai/gpt-5-launches-in-azure-ai-foundry-new-era-for-ai-apps-agents-and-developers/">GPT-5 Launches in Azure AI Foundry: New Era for AI Apps, Agents and Developers</a></li>
+    <li><a href="https://devblogs.microsoft.com/azure-ai/gpt-5-launches-in-azure-ai-foundry-new-era-for-ai-apps-agents-and-developers/">GPT-5 Launches in Microsoft Foundry: New Era for AI Apps, Agents and Developers</a></li>
     <li><a href="https://devblogs.microsoft.com/azure-ai/maximize-your-roi-for-azure-openai-pricing-deployment-and-cost-optimization-strategies/">Maximize Your ROI for Azure OpenAI: Pricing, Deployment, and Cost Optimization Strategies</a></li>
-    <li><a href="https://devblogs.microsoft.com/azure-ai/introducing-deep-research-in-azure-ai-foundry-agent-service/">Introducing Deep Research in Azure AI Foundry Agent Service</a></li>
+    <li><a href="https://devblogs.microsoft.com/azure-ai/introducing-deep-research-in-azure-ai-foundry-agent-service/">Introducing Deep Research in Microsoft Foundry Agent Service</a></li>
   </ul>
 </div>
 

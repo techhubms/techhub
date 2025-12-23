@@ -443,13 +443,14 @@ table {
     padding: 10px 14px;
     text-align: left;
     border-bottom: 1px solid rgba(colors.$light-gray, 0.08);
+    font-size: 1em;
   }
 
   th {
     background: rgba(colors.$darker-navy, 0.8);
     color: colors.$light-gray;
     font-weight: 600;
-    font-size: 0.85em;
+    font-size: 1.05em;
   }
 
   // Responsive table
@@ -513,5 +514,58 @@ table {
     .profile-content {
       text-align: left;
     }
+  }
+}
+
+/**
+ * Back to Top Button
+ */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.625rem 1.25rem;
+  border-radius: 2rem;
+  border: none;
+  background: rgba(colors.$darker-navy, 0.9);
+  color: colors.$light-gray;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    background: colors.$medium-blue;
+    transform: translateX(-50%) translateY(-2px);
+  }
+
+  &:focus {
+    outline: 2px solid colors.$bright-blue;
+    outline-offset: 2px;
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (max-width: settings.$on-mobile) {
+    bottom: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
   }
 }

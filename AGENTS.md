@@ -83,6 +83,37 @@ Tech Hub is a Jekyll-based static site for Microsoft technology content, featuri
 - Use meaningful variable names and proper error handling
 - Prefer clarity over cleverness
 
+### CRITICAL: Tool Calling Priority
+
+**Always prefer higher-level tools over lower-level alternatives.** Follow this priority order:
+
+1. **MCP tools** (highest priority): Use MCP server tools first if available
+2. **Built-in tools**: Use VS Code / agent built-in tools if no MCP tool exists
+3. **Command-line tools** (lowest priority): Use CLI tools only as a last resort
+
+**Examples:**
+
+| Task | Prefer | Avoid |
+| ---- | ------ | ----- |
+| GitHub operations | MCP GitHub tools, built-in GitHub tools | `gh` CLI |
+| Text replacement | Built-in `replace_string_in_file` | `sed`, PowerShell string manipulation |
+| File search | Built-in `grep_search`, `file_search` | `grep`, `find` |
+| Reading files | Built-in `read_file` | `cat`, `Get-Content` |
+
+**When command-line is acceptable:**
+
+- Complex multi-step operations that would require many tool calls
+- Operations not supported by MCP or built-in tools
+
+**Scripts are a last resort:**
+
+- Only use scripts for genuinely complicated logic that cannot be expressed with tool calls
+- Simple operations like text replacement, file reading, or searches should NEVER use scripts
+- If a script IS required, it MUST be a PowerShell script (`.ps1`)
+- **ALWAYS** place temporary scripts in `/tmp/`
+- Clean up temporary scripts after use
+- Never create temporary files in the repository root or working directories
+
 ### Path References
 
 - Workspace root in devcontainer: `/workspaces/techhub/`

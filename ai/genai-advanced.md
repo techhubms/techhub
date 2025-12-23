@@ -21,16 +21,14 @@ Related pages:
 3. [Neural networks and transformers](#neural-networks-and-transformers)
 4. [Attention mechanism](#attention-mechanism)
 5. [Context windows and model parameters](#context-windows-and-model-parameters)
-6. [Alignment: making models follow principles](#alignment-making-models-follow-principles)
-7. [Fine-tuning a model](#fine-tuning-a-model)
-8. [Function calling](#function-calling)
-9. [Model Context Protocol (MCP)](#model-context-protocol-mcp)
-10. [Retrieval Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
-11. [Agents and agentic AI](#agents-and-agentic-ai)
-12. [Multi-agent solutions](#multi-agent-solutions)
-13. [Observability: Monitoring and evaluating AI applications](#observability-monitoring-and-evaluating-ai-applications)
-14. [Scaling AI implementations](#scaling-ai-implementations)
-15. [The AI-native web: NLWeb, llms.txt, and semantic search](#the-ai-native-web-nlweb-llmstxt-and-semantic-search)
+6. [Fine-tuning a model](#fine-tuning-a-model)
+7. [Function calling](#function-calling)
+8. [Model Context Protocol (MCP)](#model-context-protocol-mcp)
+9. [Retrieval Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
+10. [Agents and agentic AI](#agents-and-agentic-ai)
+11. [Multi-agent solutions](#multi-agent-solutions)
+12. [Observability: Monitoring and evaluating AI applications](#observability-monitoring-and-evaluating-ai-applications)
+13. [Scaling AI implementations](#scaling-ai-implementations)
 
 ## Vectors and embeddings: How AI understands meaning
 
@@ -123,38 +121,6 @@ For a comprehensive deep dive into how these concepts work together, [Andrej Kar
   </ul>
 </div>
 
-## Alignment: making models follow principles
-
-As models get stronger, we also need them to behave safely and predictably. "Alignment" is the process of shaping model behavior to follow clear rules and values, not just statistics from the training data.
-
-### Constitutional AI
-
-A practical approach you'll see in modern systems is Constitutional AI (popularized by Anthropic): the model uses a short, written set of principles (a "constitution") to critique and improve its own answers.
-
-#### How this works in practice
-
-- Draft: the model produces an initial answer.
-- Self-critique: it reviews that answer against the constitution (e.g., be helpful and honest, avoid facilitating harm, acknowledge uncertainty).
-- Revise: it edits the answer to better follow the principles.
-- Preference training (RLAIF): training then favors these revised answers using reinforcement learning from AI feedback, reducing dependence on large human-labeled datasets.
-
-#### Why this helps
-
-- Principles are explicit and auditable.
-- Scales alignment with fewer human labels.
-- Produces more consistent "helpful, harmless, honest" behavior.
-
-#### Limits to keep in mind
-
-- Only as good as the chosen principles (they can be incomplete or biased) and may lead to over-refusal in edge cases.
-- Not a substitute for factual grounding—use retrieval (RAG) and tools for accuracy and citations.
-
-#### Example principle
-
-"Avoid providing instructions that meaningfully facilitate wrongdoing." During self-critique, the model removes or reframes such content before replying.
-
-Tip: keep these concepts practical. As you design a use case, tie terms like "context," "embeddings," and "attention" to concrete trade-offs: latency, accuracy, token cost, and guardrails.
-
 ## Fine-tuning a model
 
 Fine-tuning involves adjusting model behavior and output to better match your specific needs. While full model retraining requires significant resources, you can influence model behavior through several techniques:
@@ -184,8 +150,8 @@ These settings work together - you might use low temperature and low Top P for c
   <div class="more-info__header">📚 More information</div>
   <ul>
     <li><a href="https://devblogs.microsoft.com/azure-ai/enhancing-conversational-agents-with-azure-ai-language-clu-and-custom-question-answering/">Enhancing Conversational Agents with Azure AI Language: CLU and Custom Question Answering</a></li>
-    <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/what%E2%80%99s-new-in-azure-ai-foundry-finetuning-july-2025/4438850">What's New in Azure AI Foundry - July 2025</a></li>
-    <li><a href="https://www.microsoft.com/en-us/ai/open-source-ai-models">OpenAI's Open-Source Model: gpt-oss on Azure AI Foundry and Windows AI Foundry</a></li>
+    <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/what%E2%80%99s-new-in-azure-ai-foundry-finetuning-july-2025/4438850">What's New in Microsoft Foundry Fine-tuning - July 2025</a></li>
+    <li><a href="https://www.microsoft.com/en-us/ai/open-source-ai-models">OpenAI's Open-Source Model: gpt-oss on Microsoft Foundry and Windows AI Foundry</a></li>
   </ul>
 </div>
 
@@ -246,8 +212,8 @@ Models use the function descriptions and parameter details to understand when a 
     <li><a href="https://www.youtube.com/watch?v=iYHh5n-6ez4">Connecting to a Local MCP Server Using Microsoft.Extensions.AI</a></li>
     <li><a href="https://www.youtube.com/watch?v=W56H9W7x-ao">Model Context Protocol Development Best Practices</a></li>
     <li><a href="https://techcommunity.microsoft.com/t5/educator-developer-blog/building-ai-agents-with-ease-function-calling-in-vs-code-ai/ba-p/4442637">Building AI Agents with Ease: Function Calling in VS Code AI Toolkit</a></li>
-    <li><a href="https://devblogs.microsoft.com/foundry/unlocking-gpt-5s-freeform-tool-calling-a-new-era-of-seamless-integration/">Unlocking GPT-5's Freeform Tool Calling in Azure AI Foundry</a></li>
-    <li><a href="https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/general-availability-of-the-responses-api-in-azure-ai-foundry/ba-p/4234701">General Availability of the Responses API in Azure AI Foundry</a></li>
+    <li><a href="https://devblogs.microsoft.com/foundry/unlocking-gpt-5s-freeform-tool-calling-a-new-era-of-seamless-integration/">Unlocking GPT-5's Freeform Tool Calling in Microsoft Foundry</a></li>
+    <li><a href="https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/general-availability-of-the-responses-api-in-azure-ai-foundry/ba-p/4234701">General Availability of the Responses API in Microsoft Foundry</a></li>
     <li><a href="https://www.youtube.com/watch?v=AKjW94vQZkc">Let's Learn Model Context Protocol with JavaScript and TypeScript</a></li>
   </ul>
 </div>
@@ -343,7 +309,7 @@ Regardless of these controls, there are always risks to consider
     <li><a href="https://www.youtube.com/watch?v=W56H9W7x-ao">Model Context Protocol Development Best Practices</a></li>
     <li><a href="https://www.youtube.com/watch?v=AKjW94vQZkc">Let's Learn Model Context Protocol with JavaScript and TypeScript</a></li>
     <li><a href="https://www.youtube.com/watch?v=vfIwpctNbv4">Building AI Agents with Semantic Kernel, MCP Servers, and Python</a></li>
-    <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-building-your-first-ai-agent-with-azure-ai-foundry/4295871">Agent Factory: Building Your First AI Agent with Azure AI Foundry</a></li>
+    <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-building-your-first-ai-agent-with-azure-ai-foundry/4295871">Agent Factory: Building Your First AI Agent with Microsoft Foundry</a></li>
     <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/zero-trust-agents-adding-identity-and-access-to-multi-agent-workflows/4273932">Zero Trust Agents: Adding Identity and Access to Multi-Agent Workflows</a></li>
   </ul>
 </div>
@@ -429,7 +395,7 @@ Function calling is the mechanism AI models use to invoke specific operations, w
   <div class="more-info__header">📚 More information</div>
   <ul>
     <li><a href="https://dellenny.com/retrieval-augmented-generation-rag-in-azure-ai-a-step-by-step-guide/">Retrieval-Augmented Generation (RAG) in Azure AI: A Step-by-Step Guide</a></li>
-    <li><a href="https://techcommunity.microsoft.com/blog/educator-developer-blog/evaluating-gpt-5-models-for-rag-on-azure-ai-foundry/4392693">Evaluating GPT-5 Models for RAG on Azure AI Foundry</a></li>
+    <li><a href="https://techcommunity.microsoft.com/blog/educator-developer-blog/evaluating-gpt-5-models-for-rag-on-azure-ai-foundry/4392693">Evaluating GPT-5 Models for RAG on Microsoft Foundry</a></li>
   </ul>
 </div>
 
@@ -487,10 +453,10 @@ Think of MCP servers as specialized tools in a workshop, while AI agents are the
   <ul>
     <li><a href="https://www.youtube.com/watch?v=k3S4lPbUWng">Introducing Microsoft Discovery: An Agentic AI Platform for Scientific Research</a></li>
     <li><a href="https://www.techug.com/designing-and-creating-agentic-ai-in-azure/">Designing and Creating Agentic AI Systems on Azure</a></li>
-    <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/4296074">Agent Factory: Enterprise Patterns and Best Practices for Agentic AI with Azure AI Foundry Agent Service</a></li>
+    <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/4296074">Agent Factory: Enterprise Patterns and Best Practices for Agentic AI with Microsoft Foundry Agent Service</a></li>
     <li><a href="https://geekodon.com/building-a-multi-agent-system-with-semantic-kernel/">Building a multi-agent system with Semantic Kernel</a></li>
     <li><a href="https://azure.microsoft.com/en-us/blog/build-biosensing-ai-native-apps-on-azure-with-bci-ai-foundry-and-agents-service/">Build Biosensing AI-Native Apps on Azure with BCI, AI Foundry, and Agents Service</a></li>
-    <li><a href="https://johnnaguib.substack.com/p/unlocking-innovation-with-azure-ai">Unlocking Innovation with Azure AI Foundry Agent Service</a></li>
+    <li><a href="https://johnnaguib.substack.com/p/unlocking-innovation-with-azure-ai">Unlocking Innovation with Microsoft Foundry Agent Service</a></li>
   </ul>
 </div>
 
@@ -581,7 +547,7 @@ Capture the trail: log every handoff and tool call, including sources, for trace
   <div class="more-info__header">📚 More information</div>
   <ul>
     <li><a href="https://devblogs.microsoft.com/blog/designing-multi-agent-intelligence">Designing Multi-Agent Intelligence (Microsoft DevBlogs)</a></li>
-    <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/4296074">Agent Factory: Enterprise Patterns and Best Practices for Agentic AI with Azure AI Foundry</a></li>
+    <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/4296074">Agent Factory: Enterprise Patterns and Best Practices for Agentic AI with Microsoft Foundry</a></li>
     <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/zero-trust-agents-adding-identity-and-access-to-multi-agent-workflows/4273932">Zero Trust Agents: Adding Identity and Access to Multi-Agent Workflows</a></li>
     <li><a href="https://geekodon.com/building-a-multi-agent-system-with-semantic-kernel/">Building a multi-agent system with Semantic Kernel</a></li>
     <li><a href="https://www.youtube.com/watch?v=IMcDEvXRBkY">Choosing Between MCP and A2A for AI Applications</a></li>
@@ -733,40 +699,8 @@ Tip: Pair the CCoE with centralized platforms (for consistency and cost control)
 
 See: [Building a Center of Excellence for AI: A Strategic Roadmap for Enterprise Adoption](https://hiddedesmet.com/creating-ccoe-for-ai).
 
-## The AI-native web: NLWeb, llms.txt, and semantic search
-
-AI is changing how we navigate websites and data. Instead of clicking through menus and forms, we’ll increasingly describe what we want in natural language. Sites and apps will respond by resolving intent, pulling the right data, and assembling answers with sources. Three related ideas are emerging that make this possible:
-
-### Semantic search (and why it matters)
-
-Traditional search matches exact words. Semantic search matches meaning using embeddings (numeric representations of text, images, or other data). This lets users ask questions in their own words and still find the right content. In practice, semantic search powers Retrieval-Augmented Generation (RAG), site search that understands synonyms and context, and cross-type discovery (e.g., “the video that explains streaming tokens”).
-
-### NLWeb (natural-language web)
-
-NLWeb refers to patterns that make the web conversational by default. Pages expose capabilities (search, lookup, actions) as structured affordances that AI agents can call. Content is organized as artifacts with clear identifiers and metadata. Users ask for outcomes (“Find the latest pricing and compare to last quarter”), and the site resolves the request through tools and data rather than forcing step-by-step navigation.
-
-#### What changes
-
-- Interfaces become intent-first rather than page-first
-- Sites describe actions and data in machine-readable ways so agents can help
-- Results include sources, links, and artifacts you can reuse
-
-Some projects describe this as an "agent-native" layer for the web, similar to how HTML+HTTP enabled browsers. If you want a concrete example, the NLWeb project itself frames the idea in relation to MCP (and mentions A2A as an emerging direction).
-
-#### Implementation details
-
-[NLWeb](https://github.com/nlweb-ai/NLWeb) is an open-source project that aims to simplify building conversational interfaces for websites. It describes using semi-structured formats (like Schema.org and RSS) as inputs, indexing content into a vector store for semantic retrieval, and exposing capabilities via MCP so AI clients can call tools against the site.
-
-### llms.txt
-
-Like robots.txt for crawlers, `llms.txt` is a proposed convention for publishing an LLM-friendly index of a site. The idea is to put a markdown file at a predictable path (typically `/llms.txt`) that points to the most useful pages and documents, with a short summary and an optional section for “nice to have” links.
-
-- Spec and guidance: [llms.txt](https://llmstxt.org/)
-- Example: [GoFastMCP llms.txt](https://gofastmcp.com/llms-full.txt)
-
-The bottom line: AI turns websites and data stores into conversational surfaces. By adding `llms.txt` and shipping semantic search (or at least clean, machine-readable structure plus stable URLs), you make your content easier for both people and agents to discover, cite, and reuse.
-
 ---
+
 
 <div class="page-nav-box page-nav-box--blue">
   <h3>💡 Ready to Build Real Applications?</h3>

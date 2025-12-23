@@ -139,22 +139,26 @@ catch {
 ### Content Processing (in `content-processing/`)
 
 **download-rss-feeds.ps1**
+
 - Downloads RSS feeds from configured sources
 - Saves structured data to `scripts/data/rss-cache/`
 - Tracks processed entries to avoid duplicates
 
 **process-rss-to-markdown.ps1**
+
 - Converts RSS data to markdown content files
 - AI-powered content transformation and summarization
 - Collection-aware prioritization
 - Rate limit handling for AI APIs
 
 **fix-markdown-files.ps1**
+
 - Repairs markdown formatting issues
 - Fixes frontmatter structure
 - Validates Jekyll compatibility
 
 **iterative-roundup-generation.ps1**
+
 - AI-powered weekly roundup generation
 - Multi-step iteration with validation
 - Combines content from multiple sources
@@ -162,6 +166,7 @@ catch {
 ### Infrastructure
 
 **Deploy-Infrastructure.ps1**
+
 - Azure infrastructure deployment via Bicep
 - Three modes: validate, whatif, deploy
 - Environment-specific parameters
@@ -170,26 +175,31 @@ catch {
 ### Testing
 
 **run-powershell-tests.ps1**
+
 - Pester v5 test execution
 - Code coverage analysis
 - Detailed or minimal output modes
 - Test filtering capabilities
 
 **run-javascript-tests.ps1**
+
 - Jest test execution for client-side code
 - Coverage reporting
 - Watch mode support
 
 **run-plugin-tests.ps1**
+
 - RSpec tests for Jekyll plugins
 - Integration test support
 
 **run-e2e-tests.ps1**
+
 - Playwright end-to-end tests
 - Multi-browser support
 - Screenshot and trace capture
 
 **run-all-tests.ps1**
+
 - Orchestrates all test suites
 - Comprehensive validation
 
