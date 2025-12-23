@@ -39,6 +39,7 @@ async function renderMermaidDiagrams() {
         const mermaid = mermaidModule.default ?? mermaidModule;
 
         if (!mermaid || typeof mermaid.initialize !== 'function') {
+            // eslint-disable-next-line no-console
             console.warn('Mermaid module loaded but API was unexpected.');
             return;
         }
@@ -93,6 +94,7 @@ async function renderMermaidDiagrams() {
             await mermaid.run({ nodes: mermaidNodes });
         }
     } catch (error) {
+        // eslint-disable-next-line no-console
         console.warn('Failed to render Mermaid diagrams:', error);
     }
 }
