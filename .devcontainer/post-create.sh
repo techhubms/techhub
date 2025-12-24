@@ -49,6 +49,11 @@ pwsh -Command 'Install-Module Pester -Force -SkipPublisherCheck -MinimumVersion 
 echo "Installing npm-check-updates globally..."
 sudo npm install -g npm-check-updates
 
+# Install ESLint globally for JavaScript/TypeScript linting
+echo "Installing ESLint globally..."
+sudo npm install -g eslint
+echo "ESLint version: $(eslint --version)"
+
 # Update and install Node.js dependencies for JavaScript unit tests (Jest)
 echo "Updating JavaScript test dependencies to latest versions..."
 cd /workspaces/techhub/spec/javascript || cd $(pwd)/spec/javascript

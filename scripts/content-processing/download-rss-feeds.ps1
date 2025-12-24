@@ -39,7 +39,7 @@ $functionsPath = if ($WorkspaceDirectory -eq $PSScriptRoot) {
 }
 else {
     # Running from workspace root
-    Join-Path $WorkspaceDirectory "scripts/functions"
+    Join-Path $WorkspaceDirectory "scripts/content-processing/functions"
 }
 
 . (Join-Path $functionsPath "Write-ErrorDetails.ps1")

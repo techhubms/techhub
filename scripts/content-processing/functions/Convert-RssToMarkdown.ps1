@@ -18,7 +18,7 @@ function Convert-RssToMarkdown {
     $sourceRoot = Get-SourceRoot
 
     # Determine template based on output directory
-    $scriptsPath = Join-Path $sourceRoot "scripts"
+    $scriptsPath = Join-Path $sourceRoot "scripts" "content-processing"
     $templateDir = Join-Path $scriptsPath "templates"
     $videoTemplatePath = Join-Path $templateDir "template-videos.md"
     $genericTemplatePath = Join-Path $templateDir "template-generic.md"

@@ -1,6 +1,6 @@
 # Writing Style Guidelines
 
-This document defines the writing style and tone requirements for all content in the Tech Hub, including documentation, articles, descriptions, and user-facing text.
+This document defines the writing style and tone requirements for all content in the Tech Hub. These guidelines apply to all output: code comments, documentation, chat responses, generated content, articles, descriptions, and user-facing text.
 
 ## Core Writing Principles
 
@@ -16,24 +16,42 @@ This document defines the writing style and tone requirements for all content in
 - **Clear, professional English**: Write for international audiences with varying English proficiency
 - **Concise and actionable**: Every sentence should serve a purpose
 - **Active voice preferred**: "The system processes data" instead of "Data is processed by the system"
-- **Consistent terminology**: Use the same terms throughout all documentation (see [Terminology](terminology.md))
+- **Consistent terminology**: Use the same terms throughout (see [terminology.md](terminology.md))
+
+### Character and Typography Standards
+
+**Use plain ASCII characters for consistency and to avoid encoding issues.**
+
+| Use This | Not This | Why |
+| -------- | -------- | --- |
+| `-` (hyphen) | `—` (em-dash) or `–` (en-dash) | ASCII compatibility, searchability |
+| `"` (straight quotes) | `"` `"` (curly quotes) | Prevents encoding mismatches |
+| `'` (straight apostrophe) | `'` `'` (curly apostrophes) | Consistent rendering |
+| `...` (three periods) | `…` (ellipsis character) | Easier to type and match |
+
+**Punctuation rules:**
+
+- **Use parentheses for asides**: Write `GitHub Actions (the CI/CD platform) is popular` instead of using em-dashes
+- **Minimize semicolons**: Use periods and start new sentences instead - semicolons can make text feel formal and choppy
+- **Avoid excessive parentheses**: Incorporate information into the main sentence flow when possible
+
+**Example:**
+
+- Good: `Everything an AI processes (words, images, concepts) gets converted into vectors, which are simply lists of numbers that capture meaning.`
+- Avoid: `Everything an AI processes—words, images, concepts—gets converted into vectors. Which are simply lists of numbers; they capture meaning.`
+
+**Rationale**: Plain ASCII characters are easier to search, replace, and process programmatically. Special Unicode characters can cause issues with text matching tools and may render inconsistently across different systems.
 
 ### Punctuation and Sentence Flow
 
-- **Prefer flowing sentences**: Create smooth, readable prose that connects ideas naturally
-- **Limit em dashes (—)**: Use sparingly for emphasis or to set off important information. When used, maintain consistency throughout the document
-- **Minimize semicolons (;)**: Use periods and start new sentences instead. Semicolons can make text feel formal and choppy
-- **Reduce parenthetical statements (...)**: Incorporate information into the main sentence flow when possible. Excessive parentheses interrupt reading flow
-- **Use commas for clarity**: Connect related ideas with commas and coordinating conjunctions rather than breaking into choppy fragments
-- **Maintain consistent punctuation patterns**: If using em dashes for explanatory content in one section, use them consistently for similar content throughout
+Create smooth, readable prose that connects ideas naturally. Aim for sentences that guide readers forward without unnecessary stops or interruptions. Good writing flows like conversation - each sentence leads logically to the next.
 
-**Examples:**
+**Techniques for flowing prose:**
 
-✅ **Good flowing sentences**:
-> Everything an AI processes—words, images, concepts—gets converted into vectors, which are simply lists of numbers that capture meaning.
-
-❌ **Choppy with mixed punctuation**:
-> Everything an AI processes (words, images, concepts) gets converted into vectors. Which are simply lists of numbers; they capture meaning.
+- **Connect related ideas**: Use commas with coordinating conjunctions (and, but, so) rather than breaking into separate sentences
+- **Vary sentence length**: Mix shorter declarative sentences with longer explanatory ones to create rhythm
+- **Use transitional phrases sparingly**: Words like "however" and "therefore" work best at the start of paragraphs, not every sentence
+- **Lead with the main point**: Put the most important information first, then add supporting details
 
 ## Specific Guidelines for AI Models
 
@@ -49,7 +67,8 @@ This document defines the writing style and tone requirements for all content in
 ### Positive Patterns to Embrace
 
 - **Direct statements**: Start with the main point: "GitHub Copilot suggests code completions" not "GitHub Copilot offers innovative code completion capabilities"
-- **Specific benefits**: Use measurable outcomes: "reduces coding time by 30%" not "significantly improves productivity"
+- **Specific benefits**: Use measurable outcomes: "reduces coding time by 30%" not "significantly improves productivity", but only if you have data to back it up
+- **Concrete examples**: Illustrate points with real scenarios: "You can filter issues by label using the dropdown" not "offers advanced filtering options"
 - **Active voice**: "The system processes data" not "Data is processed by the system"
 - **Human-centered language**: Focus on what users can do, not what technology enables
 
