@@ -10827,5 +10827,35 @@
     "timestamp": "2025-12-23 00:11:21 +00:00",
     "reason": "No categories found: No categories have been assigned. While the content centers on significant open source projects and community at GitHub Universe, it does not focus on technical implementation, coding, DevOps, AI/ML, Azure, Security, or GitHub Copilot as per category inclusion rules. The article highlights projects, maintainers, and community impact without in-depth technical walkthroughs or Microsoft-centric development, thus not qualifying for any specific category.",
     "collection": "news"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the content focuses on an open source Python application for Formula 1 telemetry visualization and replay, built and hosted on GitHub. While GitHub is mentioned, there is no substantive Microsoft technology involvement and the project itself centers on Formula 1 rather than Microsoft platforms or developer technologies. The video is a general GitHub project spotlight rather than a technical showcase of Microsoft development, Azure, or qualifying tools. Generic exclusion rules do not apply, but none of the category inclusion criteria are met.",
+    "canonical_url": "https://www.youtube.com/shorts/lCBq-2dBbAY",
+    "timestamp": "2025-12-24 09:19:57 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded according to generic exclusion rules. The title and description indicate a biographical focus ('Larry Osterman's Badge Story'), and there is no substantive technical content. The content consists of a personal workplace anecdote rather than technical topics or guidance related to Microsoft technologies or development. Additionally, the main resource is a link to a collection of stories, reinforcing that it is part of a personal or organizational storytelling campaign, not a technical guide or educational material.",
+    "canonical_url": "https://www.youtube.com/shorts/aVENiPIjRg0",
+    "timestamp": "2025-12-24 09:20:12 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rules: the 'content' field is null, which means there is no substantive content to analyze and categorize. Without any main body text, technical explanation, or actionable insights, it cannot qualify for any category as per workflow rules in Chapter 3 (Format and Length Exclusions).",
+    "canonical_url": "https://www.youtube.com/shorts/oq7FwaZ3XCg",
+    "timestamp": "2025-12-24 09:20:26 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Content excluded according to generic exclusion rules: The main content ('content') field is null, meaning there is no substantive technical content to analyze. Additionally, the description and title reference a feature update for Git stashes in Visual Studio Code but do not provide any technical depth, tutorial material, or meaningful details. Per the workflow, all processing steps require sufficient actual content to enable categorization and metadata extraction. With no content provided, it is excluded.",
+    "canonical_url": "https://www.youtube.com/shorts/VlkqsUuw9l8",
+    "timestamp": "2025-12-24 09:20:38 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-virtual-desktop-not-functioning/m-p/4480528#M13976",
+    "timestamp": "2025-12-24 09:21:57 +00:00"
   }
 ]

@@ -22495,5 +22495,41 @@
     "reason": "Succesfully added: Assigned AI category because multiple sections focus on AI tooling, including discussion of the Model Context Protocol (AI rule 1 and 5). DevOps is included due to emphasis on open source development, community, contributors, sustainability, and developer workflow themes (DevOps rules 3, 4, 9, and 11). Coding is assigned due to coverage of developer skills, trends (like TypeScript and AI-assisted development), and tools for software builders (Coding rules 1, 4, and 5). Did not assign Azure, ML, or Security since the content discusses AI, open source, and developer tools at a platform/industry level but does not focus on specific Azure services, ML engineering, or security implementation. No generic exclusion rules are triggered.",
     "collection": "news",
     "timestamp": "2025-12-23 01:35:08 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Included Security category because the article focuses extensively on supply chain threats, credential compromise, malware campaigns, and actionable steps for hardening developer workflows. DevOps category applies due to guidance on CI/CD, publication pipelines, branch protection, automation, and deployment practices. Azure/Microsoft is referenced for trusted publishing and security best practices (NuGet mentions), but is not central enough to justify the Azure category. No rules qualified for AI, ML, Coding, or GitHub Copilot categories. All decisions are made based on rules in Chapters 3 and 4 and content analysis.",
+    "canonical_url": "https://github.blog/security/supply-chain-security/strengthening-supply-chain-security-preparing-for-the-next-malware-campaign/",
+    "timestamp": "2025-12-24 09:19:29 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Content assigned 'AI' due to repeated discussion of AI capabilities (Copilot Universe, Agent Mode, prompt engineering). 'GitHub Copilot' category added because of explicit focus on Copilot releases and integrations. 'Coding' included because the content centers on programming workflow enhancements in Visual Studio Code. Excluded categories such as 'DevOps', 'Azure', 'ML', and 'Security' since relevant rules do not match the main topics covered. All decisions justified by category inclusion rules and content references.",
+    "canonical_url": "https://www.youtube.com/watch?v=JilqJR1aZLs",
+    "timestamp": "2025-12-24 09:20:55 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on AI-enhanced load test authoring and AI-powered recommendations (AI rule 1 and 4). Azure category applies since Azure Load Testing is the principal service discussed (Azure rule 1). DevOps is included because the topic covers automated performance testing, scalable load test execution, and workflow integration relevant to DevOps practices (DevOps rules 1, 5, and 6). Coding category wasn't added since direct application code development is not the focus. ML and Security do not apply as there's no material on data science/ML engineering or security implementation. The community post exceeds 200 words of substantive content, and all generic exclusion checks (biographical, sales pitch, language, job/business focus) do not trigger.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-assisted-load-test-authoring-in-azure-load-testing/ba-p/4480652",
+    "timestamp": "2025-12-24 09:21:14 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because the SRE Agent described is using agentic automation that relies on AI-driven decision-making, classification, and workflow orchestration (AI category rule 4 and 5). Assigned DevOps because content focuses on integrating ticketing (GitHub, PagerDuty), workflow automation, and best practices for support/incident management—core DevOps concepts (DevOps rules 3–6, 9). Assigned Azure because the agent is created and orchestrated through the Azure portal (Azure rules 1 and 4), and all automation leverages Azure infrastructure. Did not assign Coding since there are no code samples, language-level frameworks, or developer-level programming instructions. Did not assign Security or ML—issue triage is operational, not security or data science-focused. Content is technical, step-by-step, and well above the minimum community content length. No generic exclusion rules apply.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/extend-sre-agent-with-mcp-build-an-agentic-workflow-to-triage/ba-p/4480710",
+    "timestamp": "2025-12-24 09:21:35 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned AI category because the content focuses on ChatGPT apps, conversational AI interaction, and MCP server integration (AI rule 4 and 5). Assigned Azure category as it extensively demonstrates hosting MCP servers using Azure Functions, covering deployment, infrastructure, and authentication (Azure rule 1 and 4). Assigned Coding category because the tutorial includes Python code, architecture guidance, and CLI usage for developers (Coding rule 1 and 4). All exclusion rules were reviewed; none are triggered. Content is technical, educational, written primarily in English, and developer-focused.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/host-chatgpt-apps-on-azure-functions/ba-p/4480696",
+    "timestamp": "2025-12-24 09:21:57 +00:00"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned 'Azure' because the content centers around using Azure Key Vault and Databricks (Azure rule 1 and 4). Assigned 'Security' due to confidential credential management, secure retrieval, and explicit guidance on reducing exposure (Security rule 1, 2, 7, 9). Added 'ML' because Databricks is a Microsoft data engineering/analytics platform, commonly used for ML workflows, and secure connection string retrieval is essential for data pipelines and compute (ML rule 1, 2, 5). Did not assign 'Coding' because although some Python code is shown, the main focus is on secure setup and integration rather than application or code-level logic. 'DevOps' was not assigned as the article does not discuss deployment pipelines, automation or broader team practices.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/data-security-azure-key-vault-in-data-bricks/ba-p/4479785",
+    "timestamp": "2025-12-24 09:22:15 +00:00"
   }
 ]

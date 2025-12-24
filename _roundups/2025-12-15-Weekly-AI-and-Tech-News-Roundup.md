@@ -12,7 +12,6 @@ tags: ["Agentic AI", "AI", "AI Agents", "Application Modernization", "Azure", "C
 tags_normalized: ["agentic ai", "ai", "ai agents", "application modernization", "azure", "cislashcd", "cloud automation", "coding", "developer productivity", "devops", "github copilot", "machine learning", "microsoft fabric", "ml", "openai gpt 5dot2", "roundups", "security", "supply chain security", "vs code"]
 ---
 
-
 Welcome to this week's technology roundup covering progress in intelligent, secure, and connected development environments. GitHub Copilot introduced public previews of new AI models—OpenAI's GPT-5.2, Claude Opus, and Gemini 3 Pro—alongside expanded model selection and deeper agent workflows. Microsoft expanded AI platform capabilities with agentic workflows, persistent memory, and the Model Context Protocol joining the Linux Foundation for better interoperability. Security and DevOps coverage addresses supply chain risks, credential management, and endpoint security.<!--excerpt_end-->
 
 ## This Week's Overview

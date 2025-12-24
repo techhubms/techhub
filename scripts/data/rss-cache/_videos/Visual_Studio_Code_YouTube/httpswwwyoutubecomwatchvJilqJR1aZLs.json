@@ -1,0 +1,18 @@
+{
+  "EnhancedContent": null,
+  "FeedName": "Visual Studio Code YouTube",
+  "OutputDir": "_videos",
+  "Author": "Visual Studio Code",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "PubDate": "2025-12-23T08:00:28+00:00",
+  "Title": "VS Code - 2025 Wrapped with Burke Holland and Pierce Boggan",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "ProcessedDate": "2025-12-24 09:17:51",
+  "Description": "Burke and Pierce sit down to review a full year of releases, surprises, partnerships, and AI goodies in VS Code from 2025!\n\nChapters: 00:00 Intro & why this year matters 01:00 Copilot Free & Universe: the acceleration moment 06:00 Agent Mode arrives (autonomous tools + loops) 10:00 March: MCP + BYOK (extensibility & model choice) 16:00 April: Prompt files (slash commands) & multi‑window chat 19:00 May: Cloud Agent + PR workflow (parallelizing work; abundance) 24:00 Open source Copilot Chat + terminal safety/sandboxing 28:00 July/Aug: Worktrees, checkpoints & Auto Mode (foundation + smart routing) 33:00 Sep/Oct: Plan Mode, Subagents, MCP Gallery & Codex integration 38:00 Nov/Dec: Background agents, unified view & Agent skills 42:00 Closing, community thanks\n\nSubscribe on your favorite podcast app:\n- Apple Podcasts: https://podcasts.apple.com/us/podcast/id1833924784\n- Spotify: https://open.spotify.com/show/3S2fExHkmbfQwwYw4a56yQ\n- Amazon Music: https://music.amazon.com/podcasts/bd5f1efc-cdae-49c8-8ec7-c9b48b00ce46/vs-code-insiders-podcast\n- Castbox: https://castbox.fm/channel/id6720052?country=us\n- Overcast: https://overcast.fm/itunes1833924784/vs-code-insiders-podcast\n- Pocket Casts: https://pca.st/itunes/1833924784\n- and more: https://www.vscodepodcast.com/subscribe\n\nFollow VS Code: \\* X: https://x.com/code \\* Bluesky: https://bsky.app/profile/vscode.dev \\* YouTube: https://youtube.com/code \\* LinkedIn: https://www.linkedin.com/showcase/104107263 \\* GitHub: https://github.com/microsoft/vscode\n\n#vscode #ai #githubcopilot",
+  "Link": "https://www.youtube.com/watch?v=JilqJR1aZLs",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+}

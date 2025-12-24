@@ -1,0 +1,14 @@
+{
+  "FeedName": "Microsoft Tech Community",
+  "Tags": [],
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Description": "Hi, we are experiencing issues with the Azure Desktop Client. Users are able to login, but no desktops appear and there's no user information displayed either. It was working fine yesterday.\n\n![]() This is what it looks like now.",
+  "PubDate": "2025-12-23T08:39:02+00:00",
+  "OutputDir": "_community",
+  "EnhancedContent": "Hi, we are experiencing issues with the Azure Desktop Client. Users are able to login, but no desktops appear and there's no user information displayed either. It was working fine yesterday.\n\nThis is what it looks like now.",
+  "Title": "Azure Virtual Desktop not functioning",
+  "Author": "RebeccaBroos",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-virtual-desktop-not-functioning/m-p/4480528#M13976",
+  "ProcessedDate": "2025-12-24 09:18:50"
+}
