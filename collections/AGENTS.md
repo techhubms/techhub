@@ -1,5 +1,8 @@
 # Collections Management Guide
 
+> **AI CONTEXT**: This is a **LEAF** context file for the `collections/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
+> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+
 **CRITICAL**: Before creating or editing ANY content in this directory, you MUST read these files:
 
 1. **[writing-style-guidelines.md](writing-style-guidelines.md)** - Tone, voice, language standards, and writing quality requirements
@@ -7,16 +10,34 @@
 
 These documents contain essential guidance that applies to ALL content creation and editing work.
 
+## When to Use This Guide
+
+**Read this file when**:
+
+- Creating new content items (news, videos, posts, etc.)
+- Editing existing collection content
+- Understanding frontmatter requirements
+- Working with special collection types (alt-collection)
+- Managing content structure and organization
+
+**Related Documentation**:
+
+- Writing style → [writing-style-guidelines.md](writing-style-guidelines.md)
+- Markdown formatting → [markdown-guidelines.md](markdown-guidelines.md)
+- Content workflows → [docs/content-management.md](../docs/content-management.md)
+- RSS processing → [rss/AGENTS.md](../rss/AGENTS.md)
+
 ## Collections Structure
 
 This directory contains the content collections for the Tech Hub site. Each collection represents a specific content type with its own processing rules:
 
 - **_community**: Community-sourced content and discussions
-- **_events**: Official events and meetups
 - **_news**: Official product updates and announcements
 - **_posts**: Blog posts and articles
 - **_roundups**: Curated weekly content summaries
 - **_videos**: Educational and informational video content
+  - **_videos/ghc-features/**: GitHub Copilot features (requires `alt-collection: "features"`, `plans: []`, `ghes_support` in frontmatter)
+  - **_videos/vscode-updates/**: VS Code updates (requires `alt-collection: "vscode-updates"` in frontmatter)
 
 ## Content Organization
 
@@ -83,7 +104,7 @@ John Smith introduces the latest updates to GitHub Copilot, including new featur
 **Viewing Modes:**
 
 - `"internal"`: Self-contained content displayed fully on site (videos, roundups)
-- `"external"`: Content linking to original sources (news, posts, community, events)
+- `"external"`: Content linking to original sources (news, posts, community)
 
 **Layout Types:**
 

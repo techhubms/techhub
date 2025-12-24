@@ -1,5 +1,8 @@
 # Documentation Management Guide
 
+> **AI CONTEXT**: This is a **LEAF** context file for the `docs/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
+> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+
 ## Purpose
 
 **GOAL**: Keep this folder MINIMAL - only **2 core functional documentation files**:
@@ -10,8 +13,9 @@
 These are the ONLY truly framework-agnostic functional files that explain WHAT the system does, not HOW to build it.
 
 **All other content is located elsewhere**:
+
 - Development patterns → Domain-specific AGENTS.md files
-- Framework commands/patterns → `.github/agents/` (jekyll.md for current framework)
+- Framework commands/patterns → `.github/agents/` (fullstack.md for current framework)
 - Writing/quality standards → `collections/AGENTS.md`, `collections/markdown-guidelines.md`, `collections/writing-style-guidelines.md`
 - Terminology/architecture → Root `AGENTS.md` (Site Terminology and Repository Structure sections)
 - Technical how-tos → Appropriate AGENTS.md files
@@ -32,9 +36,9 @@ This folder contains ONLY the 2 framework-agnostic functional documentation file
 
 - **Terminology** → Root `AGENTS.md` (Site Terminology section)
 - **Architecture/Overview** → Root `AGENTS.md` (Repository Structure section)
-- **Jekyll development** → `.github/agents/jekyll.md` (framework-specific)
-- **Date/timezone handling** → Root `AGENTS.md` (Timezone & Date Handling section) + `.github/agents/jekyll.md` (implementation)
-- **Performance guidelines** → Root `AGENTS.md` (Performance Architecture section) + `.github/agents/jekyll.md` (implementation)
+- **Full-stack development** → `.github/agents/fullstack.md` (framework-specific)
+- **Date/timezone handling** → Root `AGENTS.md` (Timezone & Date Handling section) + `.github/agents/fullstack.md` (implementation)
+- **Performance guidelines** → Root `AGENTS.md` (Performance Architecture section) + `.github/agents/fullstack.md` (implementation)
 - **Markdown formatting** → `collections/markdown-guidelines.md` (content writing)
 - **Writing style** → `collections/writing-style-guidelines.md` (content writing)
 
@@ -66,12 +70,12 @@ Located in each major directory, AGENTS.md files provide focused guidance for AI
 
 Located in `.github/agents/`, these custom agents provide framework-specific development guidance:
 
-- **`jekyll.md`** (current): Jekyll static site generation, Liquid templating, Ruby plugins, server management
+- **`fullstack.md`** (current): Jekyll static site generation, Liquid templating, Ruby plugins, JavaScript enhancements, PowerShell automation, comprehensive testing
 - **`dotnet.md`** (future): .NET/Blazor development, C# patterns, ASP.NET Core, server management
 
 **Purpose**: Complete framework-specific how-to guides for working with the current tech stack. These files are entirely framework-dependent and will be replaced during migration.
 
-**Usage**: Use `@jekyll` custom agent for Jekyll development, `@dotnet` for .NET development (future).
+**Usage**: Use `@fullstack` custom agent for full-stack development, `@dotnet` for .NET development (future).
 
 ### 3. Documentation Files (Framework-Agnostic Functional Documentation)
 
@@ -84,19 +88,23 @@ Located in `docs/`, these files explain how the system works, independent of imp
 ### Functional Documentation (in docs/)
 
 **Framework-Agnostic Functional Documentation**:
+
 - **[`filtering-system.md`](filtering-system.md)** - Tag and date filtering logic and behavior
 - **[`content-management.md`](content-management.md)** - Content workflows and RSS processing
 
 ### Related Documentation (Other Locations)
 
 **Development Guidance** (in AGENTS.md files):
+
 - **[Root `AGENTS.md`](../AGENTS.md)** - Generic principles, architecture, terminology, performance, timezone handling
 - **Domain-specific AGENTS.md** - See root `AGENTS.md` for complete list
 
 **Framework-Specific** (in `.github/agents/`):
-- **[`.github/agents/jekyll.md`](../.github/agents/jekyll.md)** - Jekyll development, Liquid templating, Ruby plugins, server management
+
+- **[`.github/agents/fullstack.md`](../.github/agents/fullstack.md)** - Jekyll development, Liquid templating, Ruby plugins, JavaScript, PowerShell, testing
 
 **Content Writing** (in `collections/`):
+
 - **[`collections/AGENTS.md`](../collections/AGENTS.md)** - Content management overview and requirements
 - **[`collections/markdown-guidelines.md`](../collections/markdown-guidelines.md)** - Markdown formatting standards
 - **[`collections/writing-style-guidelines.md`](../collections/writing-style-guidelines.md)** - Writing tone and style standards
@@ -116,7 +124,7 @@ When adding documentation, place it in the most specific appropriate location:
 
 - **Complete framework-specific guidance** for the current tech stack
 - Server management, build processes, templating, framework best practices, tech specific implementations of the generic development principles mentioned in root `AGENTS.md`
-- **Current**: `jekyll.md` (Jekyll, Ruby, Liquid)
+- **Current**: `fullstack.md` (Jekyll, Ruby, Liquid, JavaScript, PowerShell, Testing)
 - **Future**: `dotnet.md` (C#, Blazor, ASP.NET Core)
 - **Migration impact**: Complete replacement - no content carries over
 
@@ -143,7 +151,7 @@ When adding documentation, place it in the most specific appropriate location:
 
 - Terminology/concepts → Root `AGENTS.md` (Site Terminology section)
 - Architecture/overview → Root `AGENTS.md` or `docs/AGENTS.md`
-- Framework patterns → `.github/agents/jekyll.md` or `.github/agents/dotnet.md`
+- Framework patterns → `.github/agents/fullstack.md` or `.github/agents/dotnet.md`
 - Development guidance → Domain-specific AGENTS.md files
 - Writing standards → `collections/AGENTS.md`
 - Quality standards → `docs/AGENTS.md` (this file)
@@ -162,17 +170,19 @@ When adding documentation, place it in the most specific appropriate location:
 #### ✅ **Correct Placements**
 
 **Functional Documentation (docs/ - ONLY 2 files)**:
+
 - **How tag filtering works** → `docs/filtering-system.md` (system functionality)
 - **How date filtering works** → `docs/filtering-system.md` (system functionality)
 - **Content workflow process** → `docs/content-management.md` (system functionality)
 - **RSS feed processing** → `docs/content-management.md` (system functionality)
 
 **Development Guidance (AGENTS.md files)**:
+
 - **Site terminology** → Root `AGENTS.md` (already has Site Terminology section)
 - **Architecture overview** → Root `AGENTS.md` (Repository Structure section)
 - **Generic performance principles** → Root `AGENTS.md` (Performance Architecture section)
 - **Timezone handling rules** → Root `AGENTS.md` (Timezone & Date Handling section)
-- **Jekyll Liquid patterns** → `.github/agents/jekyll.md` (framework-specific)
+- **Jekyll Liquid patterns** → `.github/agents/fullstack.md` (framework-specific)
 - **Blazor component patterns** → `.github/agents/dotnet.md` (future, framework-specific)
 - **JavaScript code patterns** → `assets/js/AGENTS.md` (domain-specific)
 - **PowerShell script patterns** → `scripts/AGENTS.md` (domain-specific)
@@ -183,7 +193,7 @@ When adding documentation, place it in the most specific appropriate location:
 
 - **Terminology/concepts** → `docs/` (belongs in root `AGENTS.md`)
 - **Architecture overview** → `docs/` (belongs in root `AGENTS.md`)
-- **Jekyll-specific patterns** → `docs/` or root `AGENTS.md` (belongs in `.github/agents/jekyll.md`)
+- **Jekyll-specific patterns** → `docs/` or root `AGENTS.md` (belongs in `.github/agents/fullstack.md`)
 - **Writing standards** → `docs/` (belongs in `collections/markdown-guidelines.md` or `collections/writing-style-guidelines.md`)
 - **Code examples** → `docs/` (belongs in AGENTS.md files)
 - **Development how-tos** → `docs/` (belongs in AGENTS.md files)
@@ -244,11 +254,13 @@ Each functional documentation file should explain:
 
 ### Writing Standards
 
-**For content files** (news, posts, videos, community, events, roundups in `collections/`):
+**For content files** (news, posts, videos, community, roundups in `collections/`):
+
 - Follow [../collections/writing-style-guidelines.md](../collections/writing-style-guidelines.md) for tone, voice, and language standards
 - Follow [../collections/markdown-guidelines.md](../collections/markdown-guidelines.md) for markdown formatting and structure
 
 **For documentation files** (in `docs/`):
+
 - Follow [../collections/writing-style-guidelines.md](../collections/writing-style-guidelines.md) for technical documentation writing
 - Use consistent terminology from root [AGENTS.md](../AGENTS.md) (Site Terminology section)
 - Prefer active voice and concise explanations

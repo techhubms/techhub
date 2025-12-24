@@ -23,9 +23,7 @@ collections:
   videos:
     output: true    
   community:
-    output: true       
-  events:
-    output: true 
+    output: true
   roundups: # Special one that isn't shown in a specific section but rather on the homepage
     output: true
 

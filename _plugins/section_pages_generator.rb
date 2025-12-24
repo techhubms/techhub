@@ -139,9 +139,7 @@ module Jekyll
         {%- if page.category != "All" -%}
           {%- assign items = items | where_exp: "item", "item.categories contains page.category" -%}
         {%- endif -%}
-        {%- if page.collection != "events" -%}
-          {%- assign items = items | where_exp: "item", "item.date <= site.time" -%}
-        {%- endif -%}
+        {%- assign items = items | where_exp: "item", "item.date <= site.time" -%}
 
         {% include filters.html items=items index_tag_mode="tags" section=page.section %}
         {% include posts.html section=page.section items=items %}

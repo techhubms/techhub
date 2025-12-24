@@ -1,5 +1,8 @@
 # Testing Agent
 
+> **AI CONTEXT**: This is a **LEAF** context file for the `spec/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
+> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+
 ## Overview
 
 You are a testing specialist for the Tech Hub project. This directory contains all automated tests across multiple frameworks, implementing a comprehensive testing pyramid strategy.
@@ -8,9 +11,11 @@ You are a testing specialist for the Tech Hub project. This directory contains a
 
 - **PowerShell**: Pester v5
 - **JavaScript**: Jest with jsdom
-- **Ruby**: RSpec
+- **Ruby**: RSpec 3.13+
 - **E2E**: Playwright
 - **CI**: GitHub Actions
+- **Node.js**: 22+
+- **Ruby**: 3.2+
 
 ## Directory Structure
 
@@ -27,7 +32,7 @@ spec/
 │   ├── Initialize-BeforeAll.ps1
 │   ├── Initialize-BeforeEach.ps1
 │   └── test-data/
-└── _plugins/               # RSpec integration tests
+└── plugins/                # RSpec integration tests
     └── *_spec.rb
 ```
 

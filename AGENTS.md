@@ -1,6 +1,175 @@
-# Tech Hub Development Guide
+# Tech Hub Documentation Guide
 
-> **For Jekyll-specific development**: Use the `@jekyll` custom agent or see [.github/agents/jekyll.md](.github/agents/jekyll.md)
+> **AI CONTEXT**: This is the **ROOT** context file. It defines global architecture, principles, and rules. When working in a specific domain (e.g., `scripts/`, `_plugins/`), **ALSO** read the `AGENTS.md` file in that directory.
+
+> **CRITICAL**: For ALL framework-specific development (Jekyll, Ruby, JavaScript, PowerShell, testing), use the **`@fullstack` agent** - see [.github/agents/fullstack.md](.github/agents/fullstack.md)
+
+## Project Knowledge
+
+The Tech Hub is a static technical content hub with configuration-driven section and collection management. All framework-specific implementation details are handled by the `@fullstack` agent.
+
+**Core Directories**:
+
+- `collections/` - Content files (`_news/`, `_videos/`, `_community/`, `_posts/`, `_roundups/`)
+- `_data/sections.json` - Single source of truth for site structure
+- `docs/` - Framework-agnostic functional documentation
+- `.github/agents/` - Framework-specific development agents
+- Domain-specific directories - See Documentation Structure below for complete map
+
+## Documentation Structure
+
+### Overview
+
+The Tech Hub uses a three-tier documentation system:
+
+1. **This file (AGENTS.md)**: High-level principles, architecture, and navigation
+2. **Domain-Specific AGENTS.md**: Development patterns for specific code areas
+3. **Custom Agents**: Framework-specific implementation guides
+4. **Functional Docs**: What the system does (not how to code it)
+
+### Complete Documentation Map
+
+**Custom Agents** (in `.github/agents/`):
+
+- **[fullstack.md](.github/agents/fullstack.md)** - `@fullstack` agent for Jekyll, Liquid, Ruby plugins, JavaScript, PowerShell, testing, server management
+
+**Domain-Specific AGENTS.md Files**:
+
+- **[_plugins/AGENTS.md](_plugins/AGENTS.md)** - Ruby build plugins and extensions
+- **[assets/js/AGENTS.md](assets/js/AGENTS.md)** - JavaScript client-side development patterns
+- **[_sass/AGENTS.md](_sass/AGENTS.md)** - SCSS styling and CSS architecture
+- **[scripts/AGENTS.md](scripts/AGENTS.md)** - PowerShell automation scripts
+- **[rss/AGENTS.md](rss/AGENTS.md)** - RSS feed generation
+- **[docs/AGENTS.md](docs/AGENTS.md)** - Documentation maintenance guidelines
+- **[collections/AGENTS.md](collections/AGENTS.md)** - Content creation and management
+- **[spec/AGENTS.md](spec/AGENTS.md)** - Testing strategies across all frameworks
+
+**Functional Documentation** (in `docs/`):
+
+- **[filtering-system.md](docs/filtering-system.md)** - How tag and date filtering works
+- **[content-management.md](docs/content-management.md)** - Content workflows and RSS processing
+
+**Content Guidelines** (in `collections/`):
+
+- **[markdown-guidelines.md](collections/markdown-guidelines.md)** - Markdown formatting rules
+- **[writing-style-guidelines.md](collections/writing-style-guidelines.md)** - Writing tone and style
+
+### When to Use Each Documentation Type
+
+**Use This File (Root AGENTS.md)** for:
+
+- High-level architecture and principles
+- Performance and timezone standards
+- Repository structure overview
+- Cross-cutting concerns
+- Navigation to other docs
+
+**Use `@fullstack` Agent** for:
+
+- Jekyll server management
+- Liquid templating patterns
+- Ruby plugin development
+- JavaScript implementation
+- PowerShell scripting
+- Testing commands and strategies
+- Framework-specific how-tos
+
+**Use Domain-Specific AGENTS.md** for:
+
+- Code patterns in specific areas
+- Before editing files in that domain
+- Language-specific best practices
+- Domain-specific rules and examples
+
+**Use Functional Docs** for:
+
+- Understanding system behavior
+- Feature specifications
+- Business logic documentation
+
+### Quick Reference Guide
+
+**Working on JavaScript?**
+
+1. Read [assets/js/AGENTS.md](assets/js/AGENTS.md)
+2. See `@fullstack` agent for testing
+
+**Working on Ruby plugins?**
+
+1. Read [_plugins/AGENTS.md](_plugins/AGENTS.md)
+2. See `@fullstack` agent for Jekyll specifics
+
+**Working on PowerShell scripts?**
+
+1. Read [scripts/AGENTS.md](scripts/AGENTS.md)
+2. See `@fullstack` agent for testing
+
+**Working on content?**
+
+1. Read [collections/AGENTS.md](collections/AGENTS.md)
+2. Follow [markdown-guidelines.md](collections/markdown-guidelines.md)
+3. Follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
+
+**Working on Jekyll templates?**
+
+1. Use `@fullstack` agent
+2. Read [_plugins/AGENTS.md](_plugins/AGENTS.md) for plugin patterns
+
+**Working on styles?**
+
+1. Read [_sass/AGENTS.md](_sass/AGENTS.md)
+
+**Working on tests?**
+
+1. Read [spec/AGENTS.md](spec/AGENTS.md)
+2. See `@fullstack` agent for test commands
+
+**Understanding system behavior?**
+
+1. Read [docs/filtering-system.md](docs/filtering-system.md) for filtering
+2. Read [docs/content-management.md](docs/content-management.md) for content workflows
+
+## Boundaries
+
+### ✅ Always Do
+
+- **Use `@fullstack` agent for framework tasks**: Jekyll server, Liquid templates, plugins, build system, testing
+- **Check for errors after editing files**: Use `get_errors` tool on files you modified to check for VS Code diagnostics (markdown linting, ESLint, RuboCop, etc.) and fix all issues
+- **Run tests after modifying code**: CRITICAL - After ANY code changes (Ruby, JavaScript, PowerShell, templates), you MUST run the appropriate test suites. See the AGENTS.md files in each subdirectory for specific testing commands (e.g., `_plugins/AGENTS.md`, `assets/js/AGENTS.md`, `scripts/AGENTS.md`). Documentation-only changes do not require testing.
+- **Fix linter issues**: Always resolve all linting errors and warnings, EXCEPT when the issue is in an intentional bad example in documentation (e.g., fenced code blocks without language specifiers showing anti-patterns)
+- **Use MCP tools over CLI**: Prefer Playwright MCP, GitHub MCP, context7 MCP
+- **Read domain-specific AGENTS.md files**: Before editing any code in that domain
+- **Store temp files in `.tmp/`**: Never in repository root or working directories
+- **Follow timezone standards**: `Europe/Brussels` for all date operations
+- **Use configuration-driven design**: Update `_data/sections.json`, not hardcoded values
+- **Server-side render all content**: Initial page load must show complete content
+- **Add tests for new functionality**: Use according to `spec/AGENTS.md`
+- **Follow markdown guidelines**: See `collections/markdown-guidelines.md` and `collections/writing-style-guidelines.md`
+
+### ⚠️ Ask First
+
+- **Framework configuration changes**: Consult `@fullstack` agent before modifying build system or Jekyll config
+- **Breaking changes to public APIs**: Changes that affect existing functionality
+- **Adding new dependencies**: To `Gemfile`, `package.json`, or any config
+- **Cross-domain changes**: Modifications affecting multiple areas (Ruby + JS + content)
+- **Significant refactoring**: That touches many files or core architecture
+
+### 🚫 Never Do
+
+- **Never commit secrets or API keys**: Check all files before committing
+- **Never modify generated directories**: `_site/`, `node_modules/`, `.tmp/` (except for temp files)
+- **Never use backslashes for escaping in PowerShell**: Always use backticks (`)
+- **Never create content without frontmatter**: All markdown must have proper YAML front matter
+- **Never hardcode section/collection data**: Always use `_data/sections.json`
+- **Never let JavaScript create initial content**: Server-side render everything, JS only enhances
+- **Never invent or fabricate information**: Only use verified, accurate content
+- **Never add wrapper methods just for tests**: Test real implementation
+- **Never make code backwards compatible unless requested**: Prefer clean, modern code
+- **Never add comments describing what changed**: Code should be self-documenting
+- **Never start responses with "Sure!" or "You're right!"**: Be direct and professional
+- **Never use emojis unless explicitly requested**: Keep communication professional
+- **Never leave files incomplete or broken**: Ensure all changes are complete
+- **Never assume UTC**: Always use configured timezone (`Europe/Brussels`)
 
 ## Core Development Principles
 
@@ -69,19 +238,17 @@ All visible content must be fully rendered server-side by the build system. User
 - Server-side and client-side date handling must be synchronized
 - Never assume UTC - always use configured timezone
 
+**Implementation Details**:
+
+- Jekyll/Ruby: See [.github/agents/fullstack.md](.github/agents/fullstack.md) for server-side patterns
+- Ruby Plugins: See [_plugins/AGENTS.md](_plugins/AGENTS.md) for plugin-specific handling
+- JavaScript: See [assets/js/AGENTS.md](assets/js/AGENTS.md) for client-side patterns
+
 **Benefits**: Prevents date/time bugs, ensures consistent behavior across all systems, simplifies date comparisons.
 
-### Tool Priority Hierarchy
+### Tool Usage
 
-**CRITICAL**: Always prefer higher-level abstractions over lower-level alternatives.
-
-**Priority Order**:
-
-1. **MCP tools** (highest priority) - Use Model Context Protocol server tools first
-2. **Built-in tools** - Use IDE/agent built-in tools if no MCP tool exists  
-3. **Command-line tools** (last resort) - Use CLI only when no higher-level tool available
-
-**Rationale**: Higher-level tools provide better error handling, validation, and integration.
+**CRITICAL**: Always prefer higher-level tools (MCP > Built-in > CLI). See complete tool calling strategy in [AI Assistant Guidelines](#ai-assistant-guidelines) section below.
 
 ## Repository Structure
 
@@ -123,7 +290,6 @@ All visible content must be fully rendered server-side by the build system. User
   - `_videos/` - Video content and tutorials
     - `_videos/ghc-features/` - GitHub Copilot feature demos (special frontmatter required)
   - `_community/` - Microsoft Tech Community posts and community-sourced content
-  - `_events/` - Official events and community meetups
   - `_posts/` - Blog posts and technical articles
   - `_roundups/` - Curated weekly content summaries
 
@@ -156,32 +322,9 @@ All visible content must be fully rendered server-side by the build system. User
 **Configuration**:
 
 - **`_data/sections.json`** - Single source of truth for sections and collections
-- **`_config.yml`** - Build system configuration (framework-specific)
+- **`_config.yml`** - Build system configuration (see [.github/agents/fullstack.md](.github/agents/fullstack.md) for framework-specific details)
 
-### Domain-Specific AGENTS.md Files
-
-**CRITICAL**: Read the domain-specific `AGENTS.md` file for the area you're modifying:
-
-- **`_plugins/AGENTS.md`** - Build plugins and extensions (Ruby for Jekyll)
-- **`assets/js/AGENTS.md`** - Client-side JavaScript development
-- **`_sass/AGENTS.md`** - Styling and CSS architecture
-- **`scripts/AGENTS.md`** - Automation and build scripts (PowerShell)
-- **`rss/AGENTS.md`** - Feed management and RSS generation
-- **`docs/AGENTS.md`** - Documentation maintenance guidelines
-- **`collections/AGENTS.md`** - Content creation and management
-- **`spec/AGENTS.md`** - Testing strategies and frameworks
-
-**For Content Writers**: When creating or editing content (news, videos, posts, community, events, roundups):
-
-1. **ALWAYS read first**: [`collections/AGENTS.md`](collections/AGENTS.md) for content management requirements
-2. **Writing standards**: [`collections/writing-style-guidelines.md`](collections/writing-style-guidelines.md) for tone, voice, and language
-3. **Formatting rules**: [`collections/markdown-guidelines.md`](collections/markdown-guidelines.md) for structure and frontmatter
-
-### Documentation Location
-
-- **Functional documentation**: See `docs/` directory for framework-agnostic system documentation
-- **Development guidance**: See domain-specific `AGENTS.md` files for code patterns and rules
-- **Framework-specific**: See `.github/agents/` for framework development guides
+> **See "Documentation Structure" section above for complete documentation map and navigation guide**
 
 ## Development Workflow
 
@@ -194,8 +337,9 @@ All visible content must be fully rendered server-side by the build system. User
 1. **Create a step-by-step plan** before making changes
 2. **Explain the plan** to validate approach before proceeding
 3. **Read domain AGENTS.md files** before modifying code
-4. **Follow tool priority hierarchy** (MCP → Built-in → CLI)
-5. **Continue working** until the task is complete before ending your turn
+4. **Follow tool calling strategy** (see [Tool Calling Strategy](#tool-calling-strategy) below: MCP → Built-in → CLI)
+5. **After making changes**: Use `get_errors` tool on modified files to check for VS Code diagnostics and fix all issues
+6. **Continue working** until the task is complete before ending your turn
 
 ## AI Assistant Guidelines
 
@@ -458,7 +602,7 @@ Quality requirements across all code.
 
 Domain-specific custom agents provide specialized guidance:
 
-- **Jekyll Development**: Use `@jekyll` agent for templating, build process, and server management
+- **Full-Stack Development**: Use `@fullstack` agent for ALL Jekyll, Liquid templating, server management, plugins, build system, testing, and framework-specific development - see [.github/agents/fullstack.md](.github/agents/fullstack.md)
 
 ## Site Terminology
 
@@ -473,7 +617,7 @@ Domain-specific custom agents provide specialized guidance:
 
 **Collections**: Content types that represent different formats within sections.
 
-- **Purpose**: Organize content by format and purpose (news, videos, community, events, blogs, roundups)
+- **Purpose**: Organize content by format and purpose (news, videos, community, blogs, roundups)
 - **Configuration**: Defined in framework configuration (e.g., Jekyll's `_config.yml`), associated with sections via `_data/sections.json`
 - **Technical**: Each collection has its own directory, can be marked as custom (manually created) or auto-generated
 - **Properties**: Collections with output enabled generate individual pages for each item
@@ -496,11 +640,12 @@ Domain-specific custom agents provide specialized guidance:
 ### Content Types
 
 - **News**: Official product updates and announcements
-- **Videos**: Educational and informational video content
+- **Videos**: Educational and informational video content (may include special subfolders with `alt-collection` frontmatter)
 - **Community**: Community-sourced content and discussions
-- **Events**: Official events and meetups
 - **Blogs**: Blog posts and articles
 - **Roundups**: Curated weekly content summaries
+
+**Alt-Collection**: Optional frontmatter field for content organized in subfolders (e.g., `_videos/ghc-features/`, `_videos/vscode-updates/`) that need special categorization beyond their parent collection.
 
 ### Filtering Systems
 

@@ -5,12 +5,24 @@ Also handle URL parameters: ?section=ai
 {%- endcomment -%}
 
 {%- assign current_section = "" -%}
+{%- assign section_in_url_path = false -%}
 {%- assign url_parts = page.url | split: '/' | where_exp: 'part', 'part != ""' -%}
 {%- if url_parts.size >= 1 -%}
   {%- assign possible_section = url_parts[0] -%}
   {%- assign is_valid_section = possible_section | is_letters_and_hyphen_only -%}
   {%- if is_valid_section -%}
-    {%- assign current_section = possible_section -%}
+    {%- comment -%} Validate that this is an actual section defined in sections.json {%- endcomment -%}
+    {%- assign section_exists = false -%}
+    {%- for section_data in site.data.sections -%}
+      {%- if section_data[1].section == possible_section -%}
+        {%- assign section_exists = true -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if section_exists -%}
+      {%- assign current_section = possible_section -%}
+      {%- assign section_in_url_path = true -%}
+    {%- endif -%}
   {%- endif -%}
 {%- endif -%}
 
@@ -185,7 +197,8 @@ Also handle URL parameters: ?section=ai
   }
 </script>
 
-{%- if current_section == '' and isHomepage == false -%}
+{%- comment -%} Load sections.js when section was not found in URL path, allowing query params to override {%- endcomment -%}
+{%- if section_in_url_path == false and isHomepage == false -%}
 <script src="{{ '/assets/js/sections.js' | relative_url }}"></script>
 <script>
   if (document.readyState === 'loading') {

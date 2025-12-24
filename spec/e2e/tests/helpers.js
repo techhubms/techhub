@@ -332,7 +332,6 @@ async function getExpectedLatestContent() {
     news: await getLatestFileFromCollection('_news'),
     community: await getLatestFileFromCollection('_community'),
     videos: await getLatestFileFromCollection('_videos'),
-    events: await getLatestFileFromCollection('_events'),
     roundups: await getLatestFileFromCollection('_roundups')
   };
 

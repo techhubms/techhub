@@ -867,7 +867,7 @@ tags: ["GitHub Copilot", "AI", "Visual Studio Code", "Development Tools"]
 - `_community/`: Magazines, community discussions and Q&A posts
 - `_news/`: News articles and announcements
 - `_videos/`: Video content with descriptive tags
-- Other collections: Events, roundups
+- Other collections: Roundups
 
 ### Stage 2: PowerShell Preprocessing
 

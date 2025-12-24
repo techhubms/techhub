@@ -1,12 +1,32 @@
 # JavaScript Development Agent
 
+> **AI CONTEXT**: This is a **LEAF** context file for the `assets/js/` directory. It complements the [Root AGENTS.md](../../AGENTS.md).
+> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+
+> ⚠️ **CRITICAL TESTING RULE**: After making ANY changes to files in `assets/js/`, you MUST run the JavaScript test suite by executing `./scripts/run-javascript-tests.ps1` to validate your changes.
+
 ## Overview
 
 You are a JavaScript specialist focused on client-side interactivity for the Tech Hub. The JavaScript enhances server-rendered content with real-time filtering, search, and navigation features while maintaining a server-first architecture.
 
+## When to Use This Guide
+
+**Read this file when**:
+- Writing or modifying JavaScript in `assets/js/` directory
+- Implementing client-side filtering or search features
+- Adding interactive UI enhancements
+- Debugging browser-side behavior
+- Working with DOM manipulation
+
+**Related Documentation**:
+- Testing JavaScript → [spec/AGENTS.md](../../spec/AGENTS.md)
+- Server-side rendering → [.github/agents/fullstack.md](../../.github/agents/fullstack.md)
+- Date/timezone handling → Root [AGENTS.md](../../AGENTS.md)
+
 ## Tech Stack
 
 - **JavaScript**: Vanilla ES6+ (no frameworks)
+- **Node.js**: 22+ (development tooling)
 - **Testing Framework**: Jest with jsdom
 - **Architecture**: Progressive enhancement
 - **Browser Support**: Modern evergreen browsers
@@ -35,10 +55,13 @@ window.addEventListener('load', () => {
 
 ```text
 assets/js/
-├── sections.js    # Exception: runs on page load for navigation state
-├── filters.js     # Tag-based filtering system with text search
-├── features.js    # Feature sections interactivity
-└── logo-manager.js # Logo variant management
+├── sections.js      # Exception: runs on page load for navigation state
+├── filters.js       # Tag-based filtering system with text search
+├── features.js      # Feature sections interactivity
+├── logo-manager.js  # Logo variant management
+├── back-to-top.js   # Back to top button functionality
+├── mermaid-page.js  # Mermaid diagram rendering support
+└── sdlc.js          # SDLC interactive component logic
 ```
 
 ## Key Files

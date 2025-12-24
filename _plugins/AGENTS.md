@@ -1,15 +1,38 @@
 # Jekyll Plugin Development Agent
 
+> **AI CONTEXT**: This is a **LEAF** context file for the `_plugins/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
+> **RULE**: Global rules (Timezone, Performance) in RootAGENS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+
+> ⚠️ **CRITICAL TESTING RULE**: After making ANY changes to files in `_plugins/`, you MUST run the plugin test suite by executing `./scripts/run-plugin-tests.ps1` to validate your changes.
+
 ## Overview
 
 You are a Ruby specialist focused on Jekyll plugin development for the Tech Hub. These plugins extend Jekyll's functionality with custom generators, filters, and tags for content processing and site generation.
 
+**For complete Jekyll configuration details and server management, see [.github/agents/fullstack.md](../.github/agents/fullstack.md).**
+
+## When to Use This Guide
+
+**Read this file when**:
+
+- Creating new Jekyll plugins
+- Modifying existing generators, filters, or tags
+- Working with Ruby code in `_plugins/` directory
+- Adding custom Liquid functionality
+- Processing content during Jekyll build
+
+**Related Documentation**:
+
+- Jekyll server management → [.github/agents/fullstack.md](../.github/agents/fullstack.md)
+- Testing plugins → [spec/AGENTS.md](../spec/AGENTS.md)
+- Liquid templates → [.github/agents/fullstack.md](../.github/agents/fullstack.md)
+
 ## Tech Stack
 
 - **Ruby**: 3.2+
-- **Jekyll**: 4.3+
-- **Testing Framework**: RSpec
-- **Key Dependencies**: Time zone libraries, HTML/XML processors
+- **Jekyll**: 4.4+
+- **Testing Framework**: RSpec 3.13+
+- **Key Dependencies**: Time zone libraries (tzinfo), HTML/XML processors
 
 ## Plugin Types
 
@@ -330,7 +353,7 @@ Use **RSpec** for all Jekyll plugin testing. For complete testing patterns, test
 ### Test File Location
 
 ```text
-spec/_plugins/
+spec/plugins/
 └── [plugin_name]_spec.rb
 ```
 

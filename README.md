@@ -7,7 +7,7 @@ Welcome to the Tech Hub ([tech.hub.ms](https://tech.hub.ms)) - an automated cont
 The Tech Hub provides:
 
 - **Automated Content Aggregation**: RSS feed processing with AI-powered categorization
-- **Dynamic Sections**: Multiple technology hubs including AI, GitHub Copilot, ML, Azure, Coding, DevOps, and Security
+- **Dynamic Sections**: Configuration-driven hubs defined in `_data/sections.json` (e.g., AI, GitHub Copilot, Azure, .NET)
 - **Advanced Filtering**: Tag-based and date-based content filtering
 - **Multiple Content Types**: News, blogs, videos, community discussions
 
@@ -68,6 +68,8 @@ Get the Tech Hub running in just a few minutes using containers.
 For comprehensive development guides, architecture, and AI agent instructions, please refer to **[AGENTS.md](AGENTS.md)**.
 
 This file serves as the primary entry point for understanding the codebase, development standards, and domain-specific guidelines.
+
+**Custom Agents**: Use the `@fullstack` agent for all Jekyll, Liquid templating, Ruby plugins, JavaScript, PowerShell, and testing work. See [.github/agents/fullstack.md](.github/agents/fullstack.md) for details.
 
 ### Functional Documentation
 
