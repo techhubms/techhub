@@ -4,41 +4,41 @@
 
 **GOAL**: Keep this folder MINIMAL - only **2 core functional documentation files**:
 
-1. **`filtering-system.md`** - How filtering works (tag and date filtering logic)
-2. **`content-management.md`** - Content workflows and RSS processing
+1. **[`filtering-system.md`](filtering-system.md)** - How filtering works (tag and date filtering logic)
+2. **[`content-management.md`](content-management.md)** - Content workflows and RSS processing
 
 These are the ONLY truly framework-agnostic functional files that explain WHAT the system does, not HOW to build it.
 
-**All other content belongs elsewhere**:
+**All other content is located elsewhere**:
 - Development patterns → Domain-specific AGENTS.md files
-- Framework commands/patterns → `.github/agents/` (jekyll.md, dotnet.md)
-- Writing/quality standards → `collections/AGENTS.md` or this file
-- Terminology/architecture → Root `AGENTS.md` or this file
+- Framework commands/patterns → `.github/agents/` (jekyll.md for current framework)
+- Writing/quality standards → `collections/AGENTS.md`, `collections/markdown-guidelines.md`, `collections/writing-style-guidelines.md`
+- Terminology/architecture → Root `AGENTS.md` (Site Terminology and Repository Structure sections)
 - Technical how-tos → Appropriate AGENTS.md files
 
-## Migration Context & Strategy
+## Migration Context
 
 **Current**: Jekyll static site generator (Ruby, Liquid templates)
 **Future**: C# / .NET webapp with Blazor
 
-**docs/ Folder Strategy - Keep ONLY 2 Files**:
+**docs/ Folder Current State**:
 
-### Files to KEEP (Functional Documentation)
+This folder contains ONLY the 2 framework-agnostic functional documentation files:
 
-✅ **`filtering-system.md`** - Filtering logic (framework-agnostic)
-✅ **`content-management.md`** - Content workflows and RSS (framework-agnostic)
+✅ **`filtering-system.md`** - Tag and date filtering logic and behavior
+✅ **`content-management.md`** - Content workflows and RSS processing
 
-### Files to MOVE (Technical/Non-Functional/Generic)
+**Other documentation has been distributed to appropriate locations**:
 
-❌ **`terminology.md`** → Move to **root `AGENTS.md`** (Site Terminology section already exists)
-❌ **`site-overview.md`** → Move to **root `AGENTS.md`** or **`docs/AGENTS.md`** (architectural overview)
-❌ **`jekyll-development.md`** → Move to **`.github/agents/jekyll.md`** (framework-specific)
-❌ **`datetime-processing.md`** → Move to **`.github/agents/jekyll.md`** (framework-specific)
-❌ **`performance-guidelines.md`** → Move to **root `AGENTS.md`** or **`.github/agents/jekyll.md`** (development guidance)
-❌ **`markdown-guidelines.md`** → Move to **`collections/AGENTS.md`** (content writing)
-❌ **`writing-style-guidelines.md`** → Move to **`collections/AGENTS.md`** (content writing)
+- **Terminology** → Root `AGENTS.md` (Site Terminology section)
+- **Architecture/Overview** → Root `AGENTS.md` (Repository Structure section)
+- **Jekyll development** → `.github/agents/jekyll.md` (framework-specific)
+- **Date/timezone handling** → Root `AGENTS.md` (Timezone & Date Handling section) + `.github/agents/jekyll.md` (implementation)
+- **Performance guidelines** → Root `AGENTS.md` (Performance Architecture section) + `.github/agents/jekyll.md` (implementation)
+- **Markdown formatting** → `collections/markdown-guidelines.md` (content writing)
+- **Writing style** → `collections/writing-style-guidelines.md` (content writing)
 
-**Rationale**: Only files that explain system functionality (not development, not writing, not architecture) stay in docs/.
+**Rationale**: Only files that explain system functionality (not development, not writing, not architecture) remain in docs/.
 
 ## Tech Hub Documentation Structure
 
@@ -81,26 +81,25 @@ Located in `docs/`, these files explain how the system works, independent of imp
 
 ## Documentation Files (Current State)
 
-### ✅ Files to KEEP (Final State)
+### Functional Documentation (in docs/)
 
 **Framework-Agnostic Functional Documentation**:
-- **`filtering-system.md`** - Tag and date filtering logic and behavior
-- **`content-management.md`** - Content workflows and RSS processing
+- **[`filtering-system.md`](filtering-system.md)** - Tag and date filtering logic and behavior
+- **[`content-management.md`](content-management.md)** - Content workflows and RSS processing
 
-### ❌ Files to MOVE (Temporary - Will Be Migrated)
+### Related Documentation (Other Locations)
 
-**Generic/Architectural** (→ root `AGENTS.md` or `docs/AGENTS.md`):
-- **`terminology.md`** - System vocabulary and concepts
-- **`site-overview.md`** - Architecture and system structure
+**Development Guidance** (in AGENTS.md files):
+- **[Root `AGENTS.md`](../AGENTS.md)** - Generic principles, architecture, terminology, performance, timezone handling
+- **Domain-specific AGENTS.md** - See root `AGENTS.md` for complete list
 
-**Framework-Specific** (→ `.github/agents/jekyll.md`):
-- **`jekyll-development.md`** - Jekyll-specific patterns
-- **`datetime-processing.md`** - Date handling in Jekyll
-- **`performance-guidelines.md`** - Optimization for Jekyll stack
+**Framework-Specific** (in `.github/agents/`):
+- **[`.github/agents/jekyll.md`](../.github/agents/jekyll.md)** - Jekyll development, Liquid templating, Ruby plugins, server management
 
-**Content Writing** (→ `collections/AGENTS.md`):
-- **`markdown-guidelines.md`** - Markdown formatting standards
-- **`writing-style-guidelines.md`** - Writing tone and style standards
+**Content Writing** (in `collections/`):
+- **[`collections/AGENTS.md`](../collections/AGENTS.md)** - Content management overview and requirements
+- **[`collections/markdown-guidelines.md`](../collections/markdown-guidelines.md)** - Markdown formatting standards
+- **[`collections/writing-style-guidelines.md`](../collections/writing-style-guidelines.md)** - Writing tone and style standards
 
 ## Content Placement Hierarchy
 
@@ -183,13 +182,14 @@ When adding documentation, place it in the most specific appropriate location:
 #### ❌ **Incorrect Placements**
 
 - **Terminology/concepts** → `docs/` (belongs in root `AGENTS.md`)
-- **Architecture overview** → `docs/` (belongs in root `AGENTS.md` or `docs/AGENTS.md`)
-- **Jekyll-specific patterns** → `docs/` (belongs in `.github/agents/jekyll.md`)
-- **Writing standards** → `docs/` (belongs in `collections/AGENTS.md`)
+- **Architecture overview** → `docs/` (belongs in root `AGENTS.md`)
+- **Jekyll-specific patterns** → `docs/` or root `AGENTS.md` (belongs in `.github/agents/jekyll.md`)
+- **Writing standards** → `docs/` (belongs in `collections/markdown-guidelines.md` or `collections/writing-style-guidelines.md`)
 - **Code examples** → `docs/` (belongs in AGENTS.md files)
 - **Development how-tos** → `docs/` (belongs in AGENTS.md files)
 - **Build plugin code** → Root `AGENTS.md` (belongs in `_plugins/AGENTS.md`)
 - **Domain-specific patterns** → Framework agents (domain ≠ framework)
+- **Content formatting** → `docs/` (belongs in `collections/markdown-guidelines.md`)
 
 ## When to Update Documentation Types
 
@@ -249,8 +249,8 @@ Each functional documentation file should explain:
 - Follow [../collections/markdown-guidelines.md](../collections/markdown-guidelines.md) for markdown formatting and structure
 
 **For documentation files** (in `docs/`):
-- Follow [writing-style-guidelines.md](writing-style-guidelines.md) for technical documentation writing
-- Use consistent terminology from [terminology.md](terminology.md)
+- Follow [../collections/writing-style-guidelines.md](../collections/writing-style-guidelines.md) for technical documentation writing
+- Use consistent terminology from root [AGENTS.md](../AGENTS.md) (Site Terminology section)
 - Prefer active voice and concise explanations
 - Test all code examples before including them
 

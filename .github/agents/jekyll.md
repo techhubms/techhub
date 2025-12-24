@@ -595,24 +595,23 @@ Liquid::Template.register_filter(Jekyll::CustomFilters)
 - Enable `-VerboseOutput` for debugging build issues
 - Use incremental builds during development
 
-For comprehensive performance guidelines, see [docs/performance-guidelines.md](docs/performance-guidelines.md).
+For comprehensive performance principles, see the Performance Architecture section in the root [AGENTS.md](../../AGENTS.md).
 
 ## Related Documentation
 
-**Jekyll-Specific:**
+**Framework-Agnostic Functional Documentation:**
 
-- [docs/jekyll-development.md](docs/jekyll-development.md) - Comprehensive Jekyll development patterns
-- [docs/datetime-processing.md](docs/datetime-processing.md) - Date/timezone handling details
-- [docs/filtering-system.md](docs/filtering-system.md) - Tag filtering implementation
+- [docs/filtering-system.md](../../docs/filtering-system.md) - Tag filtering implementation and logic
+- [docs/content-management.md](../../docs/content-management.md) - Content workflows and RSS processing
 
-**Domain-Specific:**
+**Domain-Specific Development Guides:**
 
-- [_plugins/AGENTS.md](_plugins/AGENTS.md) - Ruby plugin development rules
-- [_sass/AGENTS.md](_sass/AGENTS.md) - SCSS/CSS styling rules
-- [assets/js/AGENTS.md](assets/js/AGENTS.md) - JavaScript development rules
-- [scripts/AGENTS.md](scripts/AGENTS.md) - PowerShell automation rules
+- [_plugins/AGENTS.md](../../_plugins/AGENTS.md) - Ruby plugin development rules
+- [_sass/AGENTS.md](../../_sass/AGENTS.md) - SCSS/CSS styling rules
+- [assets/js/AGENTS.md](../../assets/js/AGENTS.md) - JavaScript development rules
+- [scripts/AGENTS.md](../../scripts/AGENTS.md) - PowerShell automation rules
 
-**General:**
+**General Architecture and Principles:**
 
-- [docs/site-overview.md](docs/site-overview.md) - High-level architecture
-- [docs/performance-guidelines.md](docs/performance-guidelines.md) - Optimization strategies
+- [Root AGENTS.md](../../AGENTS.md) - Architecture, performance, timezone handling, and core principles
+- [docs/AGENTS.md](../../docs/AGENTS.md) - Documentation guidelines and maintenance

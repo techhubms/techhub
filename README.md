@@ -34,7 +34,7 @@ Get the Tech Hub running in just a few minutes using containers.
 1. **Open in VS Code**:
 
    ```bash
-   code /path/to/tech
+   code /path/to/repo
    ```
 
 2. **Reopen in Container**:
@@ -69,13 +69,21 @@ For comprehensive development guides, architecture, and AI agent instructions, p
 
 This file serves as the primary entry point for understanding the codebase, development standards, and domain-specific guidelines.
 
-### Architecture & Guides
+### Functional Documentation
 
-Detailed documentation is available in the **[docs/](docs/)** directory. Key starting points include:
+Framework-agnostic functional documentation is available in the **[docs/](docs/)** directory:
 
-- **[Site Overview](docs/site-overview.md)**: Architecture and structure
+- **[Filtering System](docs/filtering-system.md)**: Tag and date filtering logic
 - **[Content Management](docs/content-management.md)**: Creating content and RSS processing
-- **[Documentation Guidelines](docs/documentation-guidelines.md)**: Structure and hierarchy
+- **[Documentation Guidelines](docs/AGENTS.md)**: Documentation structure and maintenance
+
+### Content Writing
+
+For content creation and writing guidelines:
+
+- **[Collections Guide](collections/AGENTS.md)**: Content management overview
+- **[Markdown Guidelines](collections/markdown-guidelines.md)**: Formatting and structure standards
+- **[Writing Style Guide](collections/writing-style-guidelines.md)**: Tone and style standards
 
 ## Contributing
 
@@ -100,10 +108,11 @@ For commercial partnerships or sponsorship opportunities, please contact [Reinie
 
 For questions or issues:
 
-1. Check the relevant documentation in the [docs/](docs/) folder
-2. Look at existing content files for examples
-3. Report problems via GitHub Issues
-4. Contact Reinier van Maanen or Rob Bos
+1. Check the [AGENTS.md](AGENTS.md) file for development guidance
+2. Review the [docs/](docs/) folder for functional documentation
+3. Look at existing content files for examples
+4. Report problems via GitHub Issues
+5. Contact Reinier van Maanen or Rob Bos
 
 ## License
 

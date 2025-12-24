@@ -20,15 +20,15 @@ This command will:
 - Automatically extract and process the content
 - Generate appropriate frontmatter and structure
 - Create the markdown file in the correct location
-- Apply proper formatting according to [Markdown Guidelines](markdown-guidelines.md)
+- Apply proper formatting according to [Markdown Guidelines](../collections/markdown-guidelines.md)
 
 ### 2. Manual File Creation
 
 For direct file creation:
 
-1. **Choose Content Type**: Select the appropriate collection directory (see [Site Overview](site-overview.md) for complete list with descriptions)
+1. **Choose Content Type**: Select the appropriate collection directory (see root [AGENTS.md](../AGENTS.md) Site Terminology section for complete list with descriptions)
 2. **Create the File**: Use naming convention `YYYY-MM-DD-title-slug.md`
-3. **Add Content**: Follow the structure and formatting rules in [Markdown Guidelines](markdown-guidelines.md)
+3. **Add Content**: Follow the structure and formatting rules in [Markdown Guidelines](../collections/markdown-guidelines.md)
 
 ### 3. GitHub Copilot Features Content
 
@@ -93,16 +93,16 @@ This command will:
 
 For detailed information about site structure and terminology, see:
 
-- [Site Overview](site-overview.md)
-- [Site Terminology](terminology.md)
+- [Root AGENTS.md](../AGENTS.md) - Site Terminology and Repository Structure sections
+- [Collections Guide](../collections/AGENTS.md) - Content management overview
 
 ## Troubleshooting
 
 ### Common Issues
 
-- **Missing Frontmatter**: Check requirements in [Markdown Guidelines](markdown-guidelines.md)
+- **Missing Frontmatter**: Check requirements in [Markdown Guidelines](../collections/markdown-guidelines.md)
 - **File Naming**: Use `YYYY-MM-DD-title.md` pattern
-- **Categories/Tags**: Verify against site configuration in [Site Overview](site-overview.md)
+- **Categories/Tags**: Verify against site configuration in root [AGENTS.md](../AGENTS.md) Site Terminology section
 - **Date Formats**: Use ISO 8601 format: `YYYY-MM-DD HH:MM:SS +00:00`
 
 ### Repair Tools
