@@ -1,6 +1,87 @@
-# Filtering System Implementation Guidelines
+# Filtering System
 
-This document provides detailed implementation guidelines for the date and tag filtering system. For basic concepts and terminology, see [Site Terminology](terminology.md). For date handling and timezone configuration, see [Date and Timezone Processing](datetime-processing.md).
+This document explains how the Tech Hub filtering system works to help users discover content.
+
+## Filtering System Overview
+
+The Tech Hub uses multiple filtering mechanisms that work together to help users find relevant content:
+
+### Date Filters
+
+**What it does**: Client-side filtering that narrows content by publication date ranges.
+
+**Purpose**: Helps users find recent content or content from specific time periods.
+
+**How it works**:
+- Filter items by date ranges (e.g., "Last 30 days", "Last 6 months")
+- Dynamically update displayed content without page reload
+- Combine with other filters for refined searches
+
+**Implementation**: JavaScript-based filtering using date metadata from item front matter.
+
+### Section Tag Filters
+
+**What it does**: Client-side tag filtering on the root index page that allows users to filter by main site sections.
+
+**Purpose**: Enables users to focus on content from specific topical areas (AI vs GitHub Copilot).
+
+**How it works**:
+- Filter items using normalized section tags ("ai", "github copilot")
+- Available only on the main index page (/)
+- Uses the same tag matching logic as all other filters
+- Dynamic content updates based on selected section tags
+- Implements subset matching for tag-based filtering
+
+**Implementation**: JavaScript-based using pre-calculated tag relationships from server-side generation.
+
+### Collection Tag Filters
+
+**What it does**: Client-side tag filtering on section index pages that filters by content type.
+
+**Purpose**: Enables users to focus on specific content formats (News, Videos, Community) within a section.
+
+**How it works**:
+- Filter items using normalized collection tags ("news", "posts", "videos")
+- Available only on section index pages (/ai, /github-copilot)
+- Uses the same tag matching logic as all other filters
+- Each collection type corresponds to a normalized tag
+- Dynamic content updates based on selected collection tags
+
+**Implementation**: JavaScript-based using pre-calculated tag relationships from server-side generation.
+
+### Content Tag Filters
+
+**What it does**: Client-side tag filtering on collection pages that filters by keywords and topics.
+
+**Purpose**: Enables users to find content related to specific technologies, concepts, or themes.
+
+**How it works**:
+- Filter items using normalized content tags from front matter
+- Support multiple tag selection for intersection filtering (AND logic)
+- Available only on individual collection pages
+- Uses the same tag matching logic as all other filters
+- Implements subset matching for tag-based content discovery
+
+**Implementation**: JavaScript-based using pre-calculated tag relationships from server-side generation.
+
+### Text Search Filter
+
+**What it does**: Client-side real-time text search functionality.
+
+**Purpose**: Enables users to quickly find content by searching across titles, descriptions, metadata, and tags using free-form text input.
+
+**How it works**:
+- Real-time filtering as user types with debounced input (300ms delay)
+- Searches across multiple content areas: titles, descriptions, author info, and tags
+- Case-insensitive and partial word matching
+- Works alongside date and tag filters using AND logic
+- URL parameter persistence for bookmarking search results
+- Dedicated clear button for immediate search reset
+- Keyboard shortcuts (Escape key) for quick clearing
+
+**Implementation**: JavaScript-based using pre-indexed content strings generated during page load.
+
+**Integration**: Text search enhances the filtering system by allowing users to combine structured filtering (dates, tags) with unstructured search (keywords).
 
 ## Server-Side Content Limiting: "20 + Same-Day" Rule
 

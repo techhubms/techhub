@@ -330,6 +330,38 @@ describe('Filter System', () => {
 
 ## Performance Considerations
 
+### Core Performance Guidelines
+
+**Progressive Enhancement**:
+- Ensure core functionality works without JavaScript
+- Load core functionality first, then enhance progressively
+- Monitor memory usage for leaks in long-running sessions
+- Never create initial content with JavaScript (server-rendered only)
+
+**Image and Asset Performance**:
+- **Lazy loading** - Load images as needed to improve initial page performance
+- **Modern formats** - Use WebP and other modern image formats when supported
+- **Responsive images** - Implement proper `srcset` and `sizes` attributes
+- **Asset bundling** - Optimize file loading to reduce HTTP requests
+
+**Testing Requirements**:
+
+**Mobile Performance**:
+- Test loading speeds on mobile networks and various connection speeds
+- Ensure touch interactions are responsive
+- Verify performance standards are met on mobile devices
+
+**Browser Performance**:
+- Test across different browsers and versions
+- Track JavaScript execution times
+- Use browser dev tools to profile and identify bottlenecks
+
+**Performance Monitoring**:
+- Monitor JavaScript execution times
+- Measure page load times across devices
+- Use profiling tools to find slow operations
+- Ensure code changes don't regress performance
+
 ### Minimize Reflows
 
 ```javascript
@@ -373,6 +405,21 @@ function updateDisplay() {
   });
 }
 ```
+
+### Troubleshooting Slow Filtering or Page Loading
+
+**Common causes**:
+- Too much client-side processing
+- Inefficient DOM queries
+- Large datasets without optimization
+
+**Solutions**:
+1. Move processing to server-side (build time)
+2. Optimize JavaScript queries and cache DOM elements
+3. Implement proper caching strategies
+4. Use content limiting rules correctly
+5. Minimize DOM queries and batch updates
+6. Use debouncing for expensive operations (300ms default)
 
 ## Common Patterns
 

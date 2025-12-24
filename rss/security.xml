@@ -1,10 +1,11 @@
 ---
 layout: null
+permalink: /security/feed.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.title | xml_escape }} - Security</title>
-  <link href="{{ site.url }}{{ site.baseurl }}/security.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ site.url }}{{ site.baseurl }}/security/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="{{ site.url }}{{ site.baseurl }}/security" rel="alternate" type="text/html"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ site.url }}{{ site.baseurl }}/security</id>

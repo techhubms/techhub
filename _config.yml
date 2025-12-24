@@ -13,6 +13,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Collections directory - all collections are stored in /collections
+collections_dir: collections
+
 # Define all additional collections (the posts collection is default)
 collections:
   news:

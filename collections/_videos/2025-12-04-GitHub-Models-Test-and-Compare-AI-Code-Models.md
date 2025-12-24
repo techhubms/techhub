@@ -1,0 +1,52 @@
+---
+layout: "post"
+title: "GitHub Models: Test and Compare AI Code Models"
+description: "Damian Brady from Microsoft Developer introduces GitHub Models, a tool designed to help developers test, compare, and evaluate over 40 different AI models to find the best fit for coding workflows. The video covers practical approaches to AI model selection for development scenarios."
+author: "Microsoft Developer"
+excerpt_separator: <!--excerpt_end-->
+canonical_url: "https://www.youtube.com/shorts/u7sEMJTIQCw"
+viewing_mode: "internal"
+feed_name: "Microsoft Developer YouTube"
+feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+date: 2025-12-04 16:00:27 +00:00
+permalink: "/videos/2025-12-04-GitHub-Models-Test-and-Compare-AI-Code-Models.html"
+categories: ["AI"]
+tags: ["AI", "AI Comparison", "AI For Developers", "AI Integration", "AI Models", "AIForDevelopers", "Code Generation", "Coding Assistant", "Developer Tools", "GitHub Models", "GitHubModels", "Machine Learning", "Microsoft Developer", "Model Evaluation", "Model Testing", "Prompt Engineering", "Software Development", "Videos"]
+tags_normalized: ["ai", "ai comparison", "ai for developers", "ai integration", "ai models", "aifordevelopers", "code generation", "coding assistant", "developer tools", "github models", "githubmodels", "machine learning", "microsoft developer", "model evaluation", "model testing", "prompt engineering", "software development", "videos"]
+---
+
+Microsoft Developer’s Damian Brady presents GitHub Models, showing developers how to systematically test and compare 40+ AI models for code generation and developer productivity.<!--excerpt_end-->
+
+{% youtube u7sEMJTIQCw %}
+
+# What is GitHub Models?
+
+Presented by Damian Brady | Microsoft Developer
+
+GitHub Models is a platform that empowers developers to evaluate, compare, and select from over 40 AI models specifically for code-related tasks. Rather than guessing which model might fit your coding needs, you can test them against your own prompts—and see which one gives the best results.
+
+## Key Features
+
+- **Model Comparison:** Easily compare responses from more than 40 AI models side-by-side.
+- **Prompt Evaluation:** Test your own prompts to see which model provides the most relevant or useful output for your development workflow.
+- **Time Savings:** Eliminate the trial-and-error guesswork of picking an AI model for code generation, completion, or refactoring.
+
+## How It Works
+
+1. **Pick a Task** – Decide what you want to accomplish (e.g., code completion, code generation, answering a code question).
+2. **Enter Your Prompt** – Provide a sample coding prompt or scenario for the models to tackle.
+3. **Evaluate Responses** – Review how each model performs on your prompt.
+
+With GitHub Models, you directly see which large language models excel (or struggle) in your scenario—whether you’re working in Python, C#, JavaScript, or other languages.
+
+## Why Use GitHub Models?
+
+- Avoids making blind decisions about which model to integrate.
+- Empowers data-driven selection for AI-powered development tools.
+- Opens the door to customized coding workflows powered by the best available AI models.
+
+## Learn More
+
+For more details, visit: [GitHub Models](https://msft.it/6059tdiCF)
+
+---
