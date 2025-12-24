@@ -765,7 +765,6 @@ Return a JSON object with only this field:
 #### Example A: Content with Categories
 
 ```json
-
 {
   "title": "Getting Started with Azure OpenAI Service in C#",
   "description": "A comprehensive guide showing developers how to integrate Azure OpenAI Service into C# applications, covering authentication, API calls, and response handling using Microsoft's cloud-based AI platform.",
@@ -775,15 +774,12 @@ Return a JSON object with only this field:
   "content": "# Getting Started with Azure OpenAI Service in C#\n\nThis tutorial demonstrates how to integrate Azure OpenAI Service into C# applications...",
   "explanation": "Assigned AI category because content focuses on Azure OpenAI Service (AI rule 1). Assigned Azure category because it covers Azure service usage (Azure rule 1). Assigned Coding category because it involves C# development and API integration (Coding rules 1 and 2)."
 }
-
 ```
 
 #### Example B: Content without Categories
 
 ```json
-
 {
   "explanation": "Content excluded due to generic exclusion rule - this is biographical content focusing primarily on a single individual's career journey rather than technical content about Microsoft technologies."
 }
-
 ```

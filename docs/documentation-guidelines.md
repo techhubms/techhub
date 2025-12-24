@@ -163,7 +163,6 @@ For specific implementation details, see [Jekyll Development](jekyll-development
 
 # Good: Cross-reference with purpose
 
-
 # Bad: Vague reference
 
 See other docs for more info.
