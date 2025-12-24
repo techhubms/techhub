@@ -64,16 +64,15 @@ Tech Hub is a Jekyll-based static site for Microsoft technology content, featuri
 
 | Topic | Read This | When To Use |
 | ----- | --------- | ----------- |
-| Site structure, sections, collections | [site-overview.md](docs/site-overview.md) | Adding sections, understanding URL patterns, modifying collections |
-| Content creation, RSS feeds, AI processing | [content-management.md](docs/content-management.md) | Adding content, configuring RSS sources, understanding AI transformation |
-| Jekyll patterns, Liquid, layouts | [jekyll-development.md](docs/jekyll-development.md) | Working with templates, includes, front matter |
-| Tag filtering, filter UI | [filtering-system.md](docs/filtering-system.md) | Modifying filter behavior, adding filter types |
-| Dates, timezones, scheduling | [datetime-processing.md](docs/datetime-processing.md) | Any date/time operations, scheduling content |
-| Project vocabulary | [terminology.md](docs/terminology.md) | Understanding project-specific terms |
-| Writing content | [writing-style-guidelines.md](docs/writing-style-guidelines.md) | Creating or editing user-facing content |
-| Markdown formatting | [markdown-guidelines.md](docs/markdown-guidelines.md) | Formatting markdown files correctly |
-| Performance optimization | [performance-guidelines.md](docs/performance-guidelines.md) | Optimizing load times, reducing bundle size |
-| Documentation structure | [documentation-guidelines.md](docs/documentation-guidelines.md) | Writing or updating documentation |
+| Site structure, sections, collections | [site-overview.md](docs/site-overview.md) | Adding or modifying sections, understanding URL patterns, working with collections, changing navigation structure, adding RSS feeds |
+| Content creation, RSS feeds, AI processing | [content-management.md](docs/content-management.md) | Creating content manually or via GitHub Copilot commands, configuring RSS sources, understanding the AI transformation pipeline, managing GitHub Copilot features videos |
+| Jekyll patterns, Liquid, layouts | [jekyll-development.md](docs/jekyll-development.md) | Writing Liquid templates, working with includes and layouts, debugging Jekyll builds, understanding plugin integration, managing Jekyll server |
+| Tag filtering, filter UI, filter counts | [filtering-system.md](docs/filtering-system.md) | Modifying filter behavior, understanding the "20 + same-day" rule, working with tag relationships, debugging filter count issues, implementing text search |
+| Dates, timezones, scheduling | [datetime-processing.md](docs/datetime-processing.md) | Any date/time operations, fixing timezone issues, working with epoch timestamps, scheduling content publication |
+| Project vocabulary, concept definitions | [terminology.md](docs/terminology.md) | Understanding project-specific terms like sections vs collections, clarifying the difference between "post" and "blog", learning filter terminology |
+| Markdown structure, frontmatter | [markdown-guidelines.md](docs/markdown-guidelines.md) | Creating or editing any markdown file, setting up frontmatter fields, understanding content structure rules, fixing formatting issues |
+| Performance optimization | [performance-guidelines.md](docs/performance-guidelines.md) | Optimizing page load times, reducing JavaScript bundle size, improving server-side rendering, debugging slow pages |
+| Documentation organization | [documentation-guidelines.md](docs/documentation-guidelines.md) | Writing or updating documentation, understanding the docs hierarchy, deciding where new documentation belongs |
 
 ### Code Quality
 
@@ -82,6 +81,10 @@ Tech Hub is a Jekyll-based static site for Microsoft technology content, featuri
 - Follow existing patterns and conventions in each language
 - Use meaningful variable names and proper error handling
 - Prefer clarity over cleverness
+
+### CRITICAL: Writing Style Guidelines
+
+**Always read and follow [writing-style-guidelines.md](docs/writing-style-guidelines.md) for ALL output.** This includes code comments, documentation, chat responses, and generated content. The guidelines define tone, voice, language standards, and character/typography rules that apply universally.
 
 ### CRITICAL: Tool Calling Priority
 

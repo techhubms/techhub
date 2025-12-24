@@ -8,7 +8,10 @@ function Get-MarkdownFiles {
         [string[]]$IncludeDirectoryPatterns = @(),
         
         [Parameter(Mandatory = $false)]
-        [string[]]$ExcludeDirectoryPatterns = @('node_modules/*', '.git/*', 'spec/*', 'vendor/*', '_site/*')
+        [string[]]$ExcludeDirectoryPatterns = @('node_modules/*', '.git/*', 'spec/*', 'vendor/*', '_site/*'),
+        
+        [Parameter(Mandatory = $false)]
+        [string[]]$ExcludeFilePatterns = @('*/AGENTS.md', 'AGENTS.md')
     )
 
     $allFiles = Get-ChildItem -Path $Root -Recurse -File -Filter '*.md'
@@ -31,17 +34,29 @@ function Get-MarkdownFiles {
     }
     
     # Apply exclude filtering if patterns are provided
-    if ($ExcludeDirectoryPatterns.Count -gt 0) {
+    if ($ExcludeDirectoryPatterns.Count -gt 0 -or $ExcludeFilePatterns.Count -gt 0) {
         $filteredFiles = $filteredFiles | Where-Object { 
             $shouldExclude = $false
             $relativePath = $_.FullName.Substring($Root.Length).TrimStart('\', '/')
             
+            # Check directory patterns
             foreach ($pattern in $ExcludeDirectoryPatterns) {
                 if ($relativePath -like $pattern) {
                     $shouldExclude = $true
                     break
                 }
             }
+            
+            # Check file patterns if not already excluded
+            if (-not $shouldExclude) {
+                foreach ($pattern in $ExcludeFilePatterns) {
+                    if ($relativePath -like $pattern) {
+                        $shouldExclude = $true
+                        break
+                    }
+                }
+            }
+            
             return -not $shouldExclude
         }
     }
@@ -61,6 +76,9 @@ function Get-MarkdownFiles {
     }
     if ($ExcludeDirectoryPatterns.Count -gt 0) {
         $statusParts += "excluding directories matching: $($ExcludeDirectoryPatterns -join ', ')"
+    }
+    if ($ExcludeFilePatterns.Count -gt 0) {
+        $statusParts += "excluding files matching: $($ExcludeFilePatterns -join ', ')"
     }
     
     if ($statusParts.Count -gt 0) {

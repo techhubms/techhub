@@ -308,7 +308,7 @@ jobs:
               "scripts/rate-limit-enddate.json"
               "scripts/data/processed-entries.json" 
               "scripts/data/skipped-entries.json"
-              "scripts/data/rss-cache/*.json"
+              "scripts/data/rss-cache/*/*/*.json"
               "scripts/data/airesults/*.json"
               "_*/*.md"
             )

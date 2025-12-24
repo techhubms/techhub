@@ -8,6 +8,7 @@
       "version": "latest",
       "installBicep": true
     },
+    "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/azure/azure-dev/azd:0": {}
   },
   "forwardPorts": [
@@ -44,24 +45,51 @@
         "humao.rest-client"
       ],
       "settings": {
-        "chat.agent.enabled": true, // Enable Agent mode for autonomous task completion (becoming default)
-        "chat.agent.maxRequests": 100, // Increase max requests for Agent mode to handle complex tasks
-        "github.copilot.chat.codeGeneration.useInstructionFiles": true, // Use custom instruction files for code generation
-        "github.copilot.chat.newWorkspace.useContext7": true, // Enable Context7 integration for documentation
-        "github.copilot.chat.runCommand.enabled": true, // Allow executing VS Code commands from Copilot Chat
-        "github.copilot.chat.virtualTools.threshold": 128, // Set virtual tools threshold for agent mode
-        "github.copilot.nextEditSuggestions.enabled": true, // Enable predictive editing suggestions based on context
-        "githubPullRequests.codingAgent.uiIntegration": true, // Enable Copilot Coding Agent UI integration
-        "jest.jestCommandLine": "npm test --prefix spec/javascript", // Jest command for running JavaScript tests
-        "jest.rootPath": "spec/javascript", // Root path for Jest test discovery
-        "playwright.reuseBrowser": true, // Reuse browser instances across Playwright tests for performance
-        "playwright.showTrace": true, // Show Playwright trace viewer after test runs
-        "powershell.debugging.createTemporaryIntegratedConsole": true, // Create temporary console for debugging sessions
-        "powershell.integratedConsole.showOnStartup": false, // Don't show PowerShell console on startup
-        "remote.autoForwardPortsFallback": 0, // Disable automatic port forwarding fallback
-        "search.searchView.semanticSearchBehavior": "auto", // Enable automatic semantic search for better search results
-        "terminal.integrated.defaultProfile.linux": "pwsh", // Use PowerShell as default terminal on Linux
-        "workbench.secondarySideBar.defaultVisibility": "maximized", // Show secondary sidebar maximized by default
+        // ==================== GitHub Copilot Settings ====================
+        // Agent mode (default: true in VS Code 1.99+, increased limit)
+        "chat.agent.maxRequests": 100,
+        
+        // Experimental Agent Features
+        "chat.agent.thinking.collapsedTools": "off", // Show tool call details expanded
+        "chat.agentSessionsViewLocation": "view", // Enable dedicated Chat Sessions view
+        "chat.customAgentInSubagent.enabled": true, // Enable custom agents with subagents
+        "chat.tools.terminal.blockDetectedFileWrites": "never", // Don't block file writes in workspace
+        "chat.useAgentSkills": true, // Enable agent skills support
+        "chat.useNestedAgentsMdFiles": true, // Enable AGENTS.md in subfolders
+
+        // Experimental Chat Features  
+        "chat.emptyState.history.enabled": true, // Show recent history in empty chat
+        "chat.math.enabled": true, // Enable KaTeX math rendering
+        "chat.sendElementsToChat.enabled": true, // Send browser elements to chat
+        "chat.viewTitle.enabled": true, // Show chat session title in header
+        
+        // Experimental Copilot Features
+        "github.copilot.chat.agent.thinkingTool": true, // Enable thinking tool for agents
+        "github.copilot.chat.cli.customAgents.enabled": true, // Enable custom agents from GitHub background agent sessions
+        "github.copilot.chat.codesearch.enabled": true, // Auto-discover files with #codebase
+        "github.copilot.chat.edits.newNotebook.enabled": true, // Enable notebook tool in edit mode
+        "github.copilot.chat.edits.suggestRelatedFilesFromGitHistory": true, // Git history suggestions
+        "github.copilot.chat.editor.temporalContext.enabled": true, // Include recent files in inline chat
+        "github.copilot.chat.generateTests.codeLens": true, // Show test generation CodeLens
+        "github.copilot.chat.notebook.followCellExecution.enabled": true, // Follow cell execution
+        "github.copilot.chat.scopeSelection": true, // Prompt for symbol scope with /explain
+        "notebook.experimental.generate": true, // Enable Generate action for notebook cells
+        
+        // Experimental Inline Chat Features
+        "inlineChat.lineEmptyHint": true, // Show hint on empty lines
+        
+        // Search Features (Preview)
+        "search.searchView.keywordSuggestions": true, // Show keyword suggestions
+        "search.searchView.semanticSearchBehavior": "auto", // Run semantic search automatically
+        
+        // ==================== Extension Settings ====================
+        "githubPullRequests.codingAgent.uiIntegration": true,
+        "jest.jestCommandLine": "npm test --prefix spec/javascript",
+        "jest.rootPath": "spec/javascript",
+        "playwright.reuseBrowser": true,
+        "playwright.showTrace": true,
+        "powershell.integratedConsole.showOnStartup": false,
+        "terminal.integrated.defaultProfile.linux": "pwsh",
         
         "files.associations": {
           "*.ps1": "powershell",
@@ -144,6 +172,7 @@
           "file": true,
           "find": true,
           "free": true,
+          "gh": true,
           "git": true,
           "grep": true,
           "head": true,

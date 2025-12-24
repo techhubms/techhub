@@ -12,10 +12,7 @@ tags: ["AI", "Automation", "Azure", "Cloud Computing", "Code Review", "Coding", 
 tags_normalized: ["ai", "automation", "azure", "cloud computing", "code review", "coding", "data engineering", "dependabot", "devops", "github copilot", "machine learning", "microsoft fabric", "ml", "orchestration", "prompt engineering", "roundups", "security", "vs code"]
 ---
 
-Welcome to the weekly technology news summary, where new updates are shaping software development, DevOps practices, and platform security. GitHub Copilot launches a series of tools and integrations—highlighted by new GPT and Claude models, automation workflows, Agent Skills, Mission Control, improvements for real-time code review, and cross-platform context management. Copilot’s trajectory from a code completion tool to a broad developer platform is now more visible, with prompt design and AI literacy becoming key skills for development teams.
-
-Microsoft introduces new agent-based AI frameworks through Azure AI Foundry, along with open orchestration tools and secure, scalable approaches for enterprise AI. Microsoft Fabric’s machine learning workflows benefit from an improved runtime and security-first enhancements. Azure delivers a range of infrastructure and governance updates, enhancing performance, networking, DevOps, and data engineering tools. Security remains a major focus, as teams manage vulnerabilities like React2Shell and adopt new resilience controls. As VS Code and .NET bring updated workflows and DevOps platforms adjust cost and integration models, developers and organizations are better prepared to use AI in their workflows—securely and effectively. Explore the most relevant stories for your team this week.<!--excerpt_end-->
-
+This week's biggest news: GitHub Copilot adds GPT-5.2, Claude Opus 4.5, and Gemini 3 Flash models alongside new Agent Skills and Mission Control for workflow automation. Microsoft Azure AI Foundry expands its agentic AI ecosystem with hosted agents and the Model Router going GA. On the security front, teams are responding to the React2Shell vulnerability (CVE-2025-55182) affecting Next.js workloads, while GitHub Actions announces pricing changes for self-hosted runners starting March 2026.<!--excerpt_end-->
 ## This Week's Overview
 
 - [GitHub Copilot](#github-copilot)
@@ -63,7 +60,7 @@ Microsoft introduces new agent-based AI frameworks through Azure AI Foundry, alo
 
 ## GitHub Copilot
 
-GitHub Copilot introduced additional features this week, expanding its model choices and workflow tools to better serve development teams. OpenAI’s newest GPT models are now generally available, enhancing Copilot’s context-aware assistance across several IDEs. New rollouts include Agent Skills and a Mission Control dashboard, which extend Copilot’s usefulness for workflow automation and team customization. These improvements make Copilot more relevant for code review, issue tracking, and security tasks, reflecting its ongoing shift toward a complete developer productivity solution.
+GitHub Copilot expands with new AI models (GPT-5.2, Claude Opus 4.5, Gemini 3 Flash), Agent Skills for reusable workflows, and Mission Control for managing automated agents—continuing its evolution into a complete developer productivity platform.
 
 ### AI Model Releases and Chat Model Availability
 
@@ -142,7 +139,7 @@ When users assign GitHub Copilot to an issue, they are now added as an assignee,
 
 ## AI
 
-Microsoft is rolling out new options for building, orchestrating, and scaling AI agents. Azure AI Foundry adds open-source runtime, managed hosting, and developer guides to support a range of projects. Microsoft Fabric extends automation, insight into agent activity, and lower-code options for data transformation—reinforcing efforts to streamline enterprise AI development and operations.
+Azure AI Foundry expands with hosted agents, Model Router GA, and broader LLM support including Claude, Sora 2, and Mistral. Microsoft Fabric adds AI-powered data transformation capabilities in Dataflow Gen2.
 
 ### Azure AI Foundry and the Expanding Agentic AI Ecosystem
 
@@ -175,7 +172,7 @@ Microsoft Fabric updates make agent consumption and billing reports more transpa
 
 ## ML
 
-Machine learning on Microsoft Fabric benefits from quicker turnaround, more reliable orchestration options, and easier evaluation for document AI pipelines. New features boost large-scale analytics and streamline adoption for enterprise users.
+Fabric Runtime 2.0 debuts with Apache Spark 4.0, while environment library management runs 2.5x faster and Python Spark sessions start 70% quicker.
 
 ### Microsoft Fabric ML Platform Advances
 
@@ -199,7 +196,7 @@ A practical guide outlines deploying and evaluating document AI workflows with A
 
 ## Azure
 
-Azure’s latest updates reinforce reliability, data management, modern migration pathways, and governance. Infrastructure improvements, end-of-life advisories, developer tooling, and messaging features are central themes.
+Azure networking gains 400 Gbps ExpressRoute and improved VPN Gateway throughput, while Azure Service Bus Premium adds geo-replication GA. BizTalk Server end-of-support (2030) prompts migration guidance to Logic Apps.
 
 ### Azure Networking, Resiliency, and Security Enhancements
 
@@ -264,7 +261,7 @@ Developers can now manage Azure NetApp Files from VS Code using an extension wit
 
 ## Coding
 
-Developer-focused platforms rolled out updated workspace experiences, expanded roadmaps, and improved diagnostics. VS Code and Cursor Editor offered fresh productivity features, and .NET teams gained new widgets guidance and transparent roadmap planning.
+VS Code 1.107 launches inline chat editing and persistent local agents. ASP.NET Core kicks off .NET 11 planning with community input opportunities.
 
 ### .NET Development: Cross-Platform Widgets and ASP.NET Core Roadmaps
 
@@ -290,7 +287,7 @@ A new guide details profiling the .NET CLR using C# and Silhouette, removing the
 
 ## DevOps
 
-The week brings cost model updates, dependency coverage improvements, workflow automation, and CI/CD integrations—addressing developer feedback and team needs.
+GitHub Actions will charge for self-hosted runners starting March 2026 ($0.002/min on private repos). Dependabot adds support for Conda, OpenTofu, Julia, and Bazel ecosystems.
 
 ### GitHub Actions Self-Hosted Runners: Pricing Changes, Roadmap, and Community Impact
 
@@ -331,7 +328,7 @@ GitHub Teams administration is now consolidated under the 'Settings → Teams' m
 
 ## Security
 
-Security updates include actionable guidance for vulnerability management, improved dependency workflows, more options for compliance, and identity lifecycle changes—as well as strategies for evolving cloud access.
+React2Shell (CVE-2025-55182) affects Next.js/Node.js workloads—Microsoft provides Defender and Azure WAF mitigation guidance. GitHub expands Dependabot with uv support and requires peer review for alert dismissals.
 
 ### React2Shell Vulnerability Response Across Microsoft Defender and Azure
 

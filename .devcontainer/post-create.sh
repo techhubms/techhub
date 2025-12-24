@@ -49,6 +49,11 @@ pwsh -Command 'Install-Module Pester -Force -SkipPublisherCheck -MinimumVersion 
 echo "Installing npm-check-updates globally..."
 sudo npm install -g npm-check-updates
 
+# Install ESLint globally for JavaScript/TypeScript linting
+echo "Installing ESLint globally..."
+sudo npm install -g eslint
+echo "ESLint version: $(eslint --version)"
+
 # Update and install Node.js dependencies for JavaScript unit tests (Jest)
 echo "Updating JavaScript test dependencies to latest versions..."
 cd /workspaces/techhub/spec/javascript || cd $(pwd)/spec/javascript
@@ -76,10 +81,10 @@ sudo npm install -g playwright@latest
 echo "Installing Playwright system dependencies first..."
 sudo npx -y playwright install-deps
 
-# Install latest Playwright browsers for the current user (not sudo)
+# Install only chromium browser for Playwright (as configured in playwright.config.js)
 # This ensures browsers are installed in ~/.cache/ms-playwright where tests can find them
-echo "Installing latest Playwright browsers for current user..."
-npx -y playwright@latest install --force
+echo "Installing Playwright chromium browser for current user..."
+npx -y playwright@latest install chromium --force
 
 echo "Latest Playwright browsers and dependencies installed successfully"
 echo "Playwright version: $(npx playwright@latest --version)"
