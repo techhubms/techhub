@@ -11,7 +11,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-seo-tag
-  - jekyll-sitemap
+  # - jekyll-sitemap  # Temporarily disabled due to permalink Hash issue
 
 # Collections directory - all collections are stored in /collections
 collections_dir: collections

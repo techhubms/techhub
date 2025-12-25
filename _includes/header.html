@@ -154,29 +154,32 @@ Also handle URL parameters: ?section=ai
 </header>
 
 <div class="site-subheader">
-  <div id="section-collections-home" class="section-collections {% unless isHomepage %} hidden{% endunless %}"></div>
-
-    {%- comment -%} Default fallback collections: show section links when no specific section is determined {%- endcomment -%}
-    <div id="section-collections-default" class="section-collections hidden">
-    </div>
-
+  {%- comment -%} Homepage: special empty subheader {%- endcomment -%}
+  {%- if isHomepage -%}
+    <div id="section-collections-home" class="section-collections"></div>
+  {%- else -%}
+    {%- comment -%} Non-homepage: render all section subnavigations, hide them via CSS {%- endcomment -%}
     {%- for section_data in site.data.sections -%}
-      {%- assign section_hidden_class = '' -%}
-      {%- if current_section == '' or current_section != section_data[1].section -%}
-       {%- assign section_hidden_class = ' hidden' -%}
+      {%- comment -%} Determine if this section should be visible {%- endcomment -%}
+      {%- assign is_visible = false -%}
+      {%- if current_section == section_data[1].section -%}
+        {%- assign is_visible = true -%}
       {%- endif -%}
-      <div id="section-collections-{{ section_data[1].section }}" class="section-collections {{ section_hidden_class }}">
+      
+      <div id="section-collections-{{ section_data[1].section }}" 
+           class="section-collections{% unless is_visible %} hidden{% endunless %}"
+           data-section="{{ section_data[1].section }}">
         {%- for collection_data in section_data[1].collections -%}
           {%- assign is_active = false -%}
           {%- if collection_data.collection and current_collection == collection_data.collection -%}
             {%- assign is_active = true -%}
           {%- elsif collection_data.collection == null or collection_data.collection == '' -%}
-            {%- comment -%} For non-standard collections (like Features, VS Code Updates), match by URL path component {%- endcomment -%}
+            {%- comment -%} For custom pages (like Features, VS Code Updates), match by URL {%- endcomment -%}
             {%- assign collection_url_path = collection_data.url | relative_url -%}
             {%- if page.url == collection_url_path -%}
               {%- assign is_active = true -%}
             {%- elsif current_collection != "" -%}
-              {%- comment -%} Check if URL contains the current_collection identifier (e.g., "features" or "vscode-updates") {%- endcomment -%}
+              {%- comment -%} Check if URL contains the current_collection identifier {%- endcomment -%}
               {%- if collection_url_path contains current_collection -%}
                 {%- assign is_active = true -%}
               {%- endif -%}
@@ -186,6 +189,7 @@ Also handle URL parameters: ?section=ai
         {%- endfor -%}
       </div>
     {%- endfor -%}
+  {%- endif -%}
 </div>
 
 <script src="{{ '/assets/js/logo-manager.js' | relative_url }}"></script>
@@ -197,8 +201,8 @@ Also handle URL parameters: ?section=ai
   }
 </script>
 
-{%- comment -%} Load sections.js when section was not found in URL path, allowing query params to override {%- endcomment -%}
-{%- if section_in_url_path == false and isHomepage == false -%}
+{%- comment -%} Load sections.js for pages without a section, allowing query params to determine section {%- endcomment -%}
+{%- if current_section == "" and isHomepage == false -%}
 <script src="{{ '/assets/js/sections.js' | relative_url }}"></script>
 <script>
   if (document.readyState === 'loading') {

@@ -19,12 +19,29 @@ describe('Sections Navigation', () => {
       class: 'hidden'
     });
 
+    // Mock document.querySelectorAll for hiding all sections
+    global.document.querySelectorAll = jest.fn((selector) => {
+      if (selector === '.section-collections') {
+        return [
+          createMockElement('div', { id: 'section-collections-ai', class: '' }),
+          createMockElement('div', { id: 'section-collections-github-copilot', class: '' }),
+          createMockElement('div', { id: 'section-collections-ml', class: '' })
+        ];
+      }
+      if (selector === '[id^="section-nav-"]') {
+        return [
+          createMockElement('div', { id: 'section-nav-ai', class: '' }),
+          createMockElement('div', { id: 'section-nav-github-copilot', class: '' }),
+          createMockElement('div', { id: 'section-nav-ml', class: '' })
+        ];
+      }
+      return [];
+    });
+
     // Mock document.getElementById
     global.document.getElementById = jest.fn((id) => {
       if (id === 'section-nav-ai') return mockSectionNav;
       if (id === 'section-collections-ai') return mockSectionCollections;
-      if (id === 'section-nav-default') return createMockElement('div', { id: 'section-nav-default' });
-      if (id === 'section-collections-default') return createMockElement('div', { id: 'section-collections-default', class: 'hidden' });
       return null;
     });
 
@@ -41,16 +58,54 @@ describe('Sections Navigation', () => {
   });
 
   describe('showSectionCollections Function', () => {
-    test('should activate section when explicitly provided', () => {
+    test('should hide all sections and show only the specified one', () => {
+      // Create mock elements that will be returned by querySelectorAll
+      const mockCollections = [
+        createMockElement('div', { id: 'section-collections-ai', class: '' }),
+        createMockElement('div', { id: 'section-collections-github-copilot', class: '' }),
+        createMockElement('div', { id: 'section-collections-ml', class: '' })
+      ];
+      
+      const mockNavLinks = [
+        createMockElement('div', { id: 'section-nav-ai', class: '' }),
+        createMockElement('div', { id: 'section-nav-github-copilot', class: '' }),
+        createMockElement('div', { id: 'section-nav-ml', class: '' })
+      ];
+      
+      // Mock querySelectorAll to return our mock elements
+      global.document.querySelectorAll = jest.fn((selector) => {
+        if (selector === '.section-collections') {
+          return mockCollections;
+        }
+        if (selector === '[id^="section-nav-"]') {
+          return mockNavLinks;
+        }
+        return [];
+      });
+      
       const result = showSectionCollections('ai');
 
-      expect(mockSectionNav.classList.add).toHaveBeenCalledWith('active');
+      // Should hide all section-collections divs
+      mockCollections.forEach(div => {
+        expect(div.classList.add).toHaveBeenCalledWith('hidden');
+      });
+
+      // Should remove 'active' from all nav links
+      mockNavLinks.forEach(link => {
+        expect(link.classList.remove).toHaveBeenCalledWith('active');
+      });
+
+      // Should show the target section's collections
       expect(mockSectionCollections.classList.remove).toHaveBeenCalledWith('hidden');
+      
+      // Should activate the target section's nav link
+      expect(mockSectionNav.classList.add).toHaveBeenCalledWith('active');
+      
       expect(result).toBe('ai');
     });
 
     test('should use URL parameter when no section provided', () => {
-      // Mock URL with section parameter (avoid setting location.search directly)
+      // Mock URL with section parameter
       global.URLSearchParams = jest.fn().mockImplementation(() => ({
         get: (key) => key === 'section' ? 'ai' : null
       }));
@@ -62,18 +117,15 @@ describe('Sections Navigation', () => {
       expect(result).toBe('ai');
     });
 
-    test('should default to "default" section when no parameter', () => {
+    test('should return null when no section specified and no URL parameter', () => {
       // Mock URL without section parameter
-      global.window.location.search = '';
       global.URLSearchParams = jest.fn().mockImplementation(() => ({
         get: () => null
       }));
 
       const result = showSectionCollections();
 
-      expect(global.document.getElementById).toHaveBeenCalledWith('section-nav-default');
-      expect(global.document.getElementById).toHaveBeenCalledWith('section-collections-default');
-      expect(result).toBe('default');
+      expect(result).toBeNull();
     });
 
     test('should handle missing DOM elements gracefully', () => {
