@@ -35,7 +35,7 @@ The Tech Hub uses a three-tier documentation system:
 
 **Domain-Specific AGENTS.md Files**:
 
-- **[_plugins/AGENTS.md](_plugins/AGENTS.md)** - Ruby build plugins and extensions
+- **[_plugins/AGENTS.md](_plugins/AGENTS.md)** - Build plugins and extensions
 - **[assets/js/AGENTS.md](assets/js/AGENTS.md)** - JavaScript client-side development patterns
 - **[_sass/AGENTS.md](_sass/AGENTS.md)** - SCSS styling and CSS architecture
 - **[scripts/AGENTS.md](scripts/AGENTS.md)** - PowerShell automation scripts
@@ -66,9 +66,9 @@ The Tech Hub uses a three-tier documentation system:
 
 **Use `@fullstack` Agent** for:
 
-- Jekyll server management
-- Liquid templating patterns
-- Ruby plugin development
+- Server management and deployment
+- Templating and view patterns
+- Build plugin development
 - JavaScript implementation
 - PowerShell scripting
 - Testing commands and strategies
@@ -94,10 +94,10 @@ The Tech Hub uses a three-tier documentation system:
 1. Read [assets/js/AGENTS.md](assets/js/AGENTS.md)
 2. See `@fullstack` agent for testing
 
-**Working on Ruby plugins?**
+**Working on build plugins?**
 
 1. Read [_plugins/AGENTS.md](_plugins/AGENTS.md)
-2. See `@fullstack` agent for Jekyll specifics
+2. See `@fullstack` agent for framework specifics
 
 **Working on PowerShell scripts?**
 
@@ -110,7 +110,7 @@ The Tech Hub uses a three-tier documentation system:
 2. Follow [markdown-guidelines.md](collections/markdown-guidelines.md)
 3. Follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
 
-**Working on Jekyll templates?**
+**Working on templates?**
 
 1. Use `@fullstack` agent
 2. Read [_plugins/AGENTS.md](_plugins/AGENTS.md) for plugin patterns
