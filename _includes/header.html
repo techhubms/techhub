@@ -156,16 +156,13 @@ Also handle URL parameters: ?section=ai
 <div class="site-subheader">
   <div id="section-collections-home" class="section-collections {% unless isHomepage %} hidden{% endunless %}"></div>
 
-    {%- comment -%} Default fallback collections: show section links when no specific section is determined {%- endcomment -%}
-    <div id="section-collections-default" class="section-collections hidden">
+    {%- comment -%} Default fallback: shown when no specific section is determined server-side {%- endcomment -%}
+    <div id="section-collections-default" class="section-collections{% unless current_section == '' %} hidden{% endunless %}">
     </div>
 
+    {%- comment -%} Render all section subnavigations - all hidden when no section in URL {%- endcomment -%}
     {%- for section_data in site.data.sections -%}
-      {%- assign section_hidden_class = '' -%}
-      {%- if current_section == '' or current_section != section_data[1].section -%}
-       {%- assign section_hidden_class = ' hidden' -%}
-      {%- endif -%}
-      <div id="section-collections-{{ section_data[1].section }}" class="section-collections {{ section_hidden_class }}">
+      <div id="section-collections-{{ section_data[1].section }}" class="section-collections{% if current_section == '' or current_section != section_data[1].section %} hidden{% endif %}">
         {%- for collection_data in section_data[1].collections -%}
           {%- assign is_active = false -%}
           {%- if collection_data.collection and current_collection == collection_data.collection -%}

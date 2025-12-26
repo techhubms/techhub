@@ -55,7 +55,7 @@ You are a full-stack development expert for the Tech Hub project, specializing i
 **Key Directories**:
 
 - `_plugins/` - Ruby build extensions (READ: `_plugins/AGENTS.md`)
-- `_includes/`, `_layouts/` - Liquid templates
+- `_includes/`, `_layouts/` - Liquid templates (READ: `_includes/AGENTS.md`)
 - `assets/js/` - Client-side JavaScript (READ: `assets/js/AGENTS.md`)
 - `_sass/` - Stylesheets (READ: `_sass/AGENTS.md`)
 - `scripts/` - PowerShell automation (READ: `scripts/AGENTS.md`)
@@ -74,7 +74,42 @@ You are a full-stack development expert for the Tech Hub project, specializing i
 
 ### Jekyll Server Management
 
+**CRITICAL Terminal Management - READ THIS FIRST**:
+
+⚠️ **NEVER EVER run any command in a terminal where Jekyll is starting or running!**
+
+**THE ONLY CORRECT WORKFLOW**:
+
+1. **Start Jekyll** in current terminal with `isBackground: true`:
+   ```
+   run_in_terminal(command: "pwsh ./scripts/jekyll-start.ps1", isBackground: true)
+   ```
+2. **IMMEDIATELY STOP using that terminal** - Jekyll is now starting in the background
+3. **ALL subsequent commands** MUST be in a DIFFERENT terminal:
+   ```
+   run_in_terminal(command: "your-next-command", isBackground: false)
+   ```
+   This creates a NEW terminal automatically
+4. **Never go back to the Jekyll terminal** until you need to stop Jekyll
+
+**What NOT to do** (these will interrupt Jekyll):
+- ❌ Running `run_in_terminal` commands without specifying a new terminal after starting Jekyll
+- ❌ Running commands in the same PowerShell session where Jekyll is running
+- ❌ Checking Jekyll output by running commands in its terminal
+- ❌ Using `get_terminal_output` on the Jekyll terminal (this is OK, but don't run NEW commands there)
+
+**How to check Jekyll status**:
+- ✅ Use `get_terminal_output(id: "jekyll-terminal-id")` to READ output (doesn't interrupt)
+- ❌ Don't run Sleep commands or other commands in the Jekyll terminal
+
+**Starting Jekyll**:
+
 ```powershell
+# STEP 1: Start Jekyll in background (this terminal is now RESERVED for Jekyll)
+pwsh ./scripts/jekyll-start.ps1
+
+# STEP 2: All other commands go in NEW terminals automatically created by run_in_terminal
+
 # Start/restart (auto-stops existing servers)
 pwsh ./scripts/jekyll-start.ps1
 
@@ -90,6 +125,14 @@ pwsh ./scripts/jekyll-start.ps1 -SkipStop -SkipClean -BuildInsteadOfServe
 # Stop server
 pwsh ./scripts/jekyll-stop.ps1
 ```
+
+**Workflow Example for AI Agents**:
+
+1. Start Jekyll in background terminal: `run_in_terminal` with `isBackground: true`
+2. Open new terminal for commands: Use separate `run_in_terminal` calls
+3. Wait for Jekyll to finish starting (check background terminal output)
+4. Execute debugging/testing commands in another terminal, possibly the one you were working in but NOT in the Jekyll terminal
+5. Never touch the Jekyll terminal until you need to stop it
 
 ### Testing Commands
 
@@ -232,6 +275,46 @@ bundle exec rspec
 
 # Run all tests (Ruby, JavaScript, PowerShell, Playwright)
 ./scripts/run-all-tests.ps1
+```
+
+### Monitoring Jekyll Rebuilds
+
+**CRITICAL**: After editing files, Jekyll must regenerate affected pages before changes are visible. This process can take 60+ seconds.
+
+**How to Monitor Rebuild Progress:**
+
+1. Watch the terminal where Jekyll server is running
+2. Look for messages like:
+   ```
+   Regenerating: 1 file(s) changed at 2025-01-23 14:30:45
+                 _includes/header.html
+   ```
+3. Wait for completion message:
+   ```
+   ...done in 62.345678 seconds.
+   ```
+
+**Common Rebuild Triggers:**
+
+- **Template changes** (`_includes/`, `_layouts/`): Regenerates ALL pages using that template (can take 60+ seconds)
+- **JavaScript/CSS changes** (`assets/`): Fast rebuild (few seconds)
+- **Plugin changes** (`_plugins/`): Requires full server restart
+- **Data file changes** (`_data/`): May regenerate all pages (can take 60+ seconds)
+- **Content changes** (`collections/`): Regenerates affected pages only
+
+**Important Rules:**
+
+- ⚠️ **ALWAYS wait for "...done in X seconds"** before testing changes
+- ⚠️ **Plugin changes require server restart**, not just rebuild
+- ⚠️ **Browser cache can hide changes** - use hard refresh (Ctrl+Shift+R)
+- ✅ **Terminal output is the source of truth** for rebuild status
+
+**Example Terminal Output:**
+
+```
+Regenerating: 1 file(s) changed at 2025-01-23 14:30:45
+              _includes/header.html
+                    ...done in 62.345678 seconds.
 ```
 
 ## Jekyll Development Standards
@@ -548,7 +631,7 @@ pwsh /workspaces/techhub/scripts/jekyll-start.ps1 -SkipStop -SkipClean -BuildIns
 
 **Startup Detection:**
 
-- CRITICAL: Wait until you see `Server running` in terminal output (can take 2-3 minutes)
+- CRITICAL: Wait until you see `Server running...` in terminal output (can take 2-3 minutes). In the meantime there will be no server available and hardly any terminal output.
 - Do NOT interrupt startup sequence with commands or curl requests
 - Do NOT use curl to check if server is running - trust the terminal output
 

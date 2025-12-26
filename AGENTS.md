@@ -35,7 +35,8 @@ The Tech Hub uses a three-tier documentation system:
 
 **Domain-Specific AGENTS.md Files**:
 
-- **[_plugins/AGENTS.md](_plugins/AGENTS.md)** - Ruby build plugins and extensions
+- **[_plugins/AGENTS.md](_plugins/AGENTS.md)** - Jekyll plugins and extensions
+- **[_includes/AGENTS.md](_includes/AGENTS.md)** - Liquid templates and includes
 - **[assets/js/AGENTS.md](assets/js/AGENTS.md)** - JavaScript client-side development patterns
 - **[_sass/AGENTS.md](_sass/AGENTS.md)** - SCSS styling and CSS architecture
 - **[scripts/AGENTS.md](scripts/AGENTS.md)** - PowerShell automation scripts
@@ -66,9 +67,10 @@ The Tech Hub uses a three-tier documentation system:
 
 **Use `@fullstack` Agent** for:
 
-- Jekyll server management
-- Liquid templating patterns
-- Ruby plugin development
+- Server management and deployment
+- Local development and testing
+- Templating and view patterns
+- Jekyll plugin development
 - JavaScript implementation
 - PowerShell scripting
 - Testing commands and strategies
@@ -94,10 +96,10 @@ The Tech Hub uses a three-tier documentation system:
 1. Read [assets/js/AGENTS.md](assets/js/AGENTS.md)
 2. See `@fullstack` agent for testing
 
-**Working on Ruby plugins?**
+**Working on Jekyll plugins?**
 
 1. Read [_plugins/AGENTS.md](_plugins/AGENTS.md)
-2. See `@fullstack` agent for Jekyll specifics
+2. See `@fullstack` agent for framework specifics
 
 **Working on PowerShell scripts?**
 
@@ -110,10 +112,15 @@ The Tech Hub uses a three-tier documentation system:
 2. Follow [markdown-guidelines.md](collections/markdown-guidelines.md)
 3. Follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
 
-**Working on Jekyll templates?**
+**Working on templates?**
 
 1. Use `@fullstack` agent
 2. Read [_plugins/AGENTS.md](_plugins/AGENTS.md) for plugin patterns
+
+**Working on includes/layouts?**
+
+1. Read [_includes/AGENTS.md](_includes/AGENTS.md)
+2. Use `@fullstack` agent for framework specifics
 
 **Working on styles?**
 
@@ -133,7 +140,7 @@ The Tech Hub uses a three-tier documentation system:
 
 ### ✅ Always Do
 
-- **Use `@fullstack` agent for framework tasks**: Jekyll server, Liquid templates, plugins, build system, testing
+- **Use `@fullstack` agent for development tasks**: Server management, templating, plugins, build system, coding, testing
 - **Check for errors after editing files**: Use `get_errors` tool on files you modified to check for VS Code diagnostics (markdown linting, ESLint, RuboCop, etc.) and fix all issues
 - **Run tests after modifying code**: CRITICAL - After ANY code changes (Ruby, JavaScript, PowerShell, templates), you MUST run the appropriate test suites. See the AGENTS.md files in each subdirectory for specific testing commands (e.g., `_plugins/AGENTS.md`, `assets/js/AGENTS.md`, `scripts/AGENTS.md`). Documentation-only changes do not require testing.
 - **Fix linter issues**: Always resolve all linting errors and warnings, EXCEPT when the issue is in an intentional bad example in documentation (e.g., fenced code blocks without language specifiers showing anti-patterns)
@@ -148,9 +155,11 @@ The Tech Hub uses a three-tier documentation system:
 
 ### ⚠️ Ask First
 
-- **Framework configuration changes**: Consult `@fullstack` agent before modifying build system or Jekyll config
+- **Website configuration changes**: Consult `@fullstack` agent before modifying build system or configuration
 - **Breaking changes to public APIs**: Changes that affect existing functionality
-- **Adding new dependencies**: To `Gemfile`, `package.json`, or any config
+- **Adding new dependencies**: To dependency management files or any config
+- **Cross-domain changes**: Modifications affecting multiple areas
+- **Significant refactoring**: That touches many files or core architecture
 - **Cross-domain changes**: Modifications affecting multiple areas (Ruby + JS + content)
 - **Significant refactoring**: That touches many files or core architecture
 
@@ -204,6 +213,55 @@ All visible content must be fully rendered server-side by the build system. User
 - Load core functionality first, then enhance progressively
 - Monitor memory usage for leaks in long-running sessions
 
+**Image and Asset Performance**:
+
+- Use lazy loading for large images to improve initial page performance
+- Implement responsive images with proper sizing attributes
+- Use modern image formats when supported
+- Optimize asset bundling to reduce HTTP requests
+
+**Mobile and Cross-Browser Performance**:
+
+- Test loading speeds on mobile networks and various connection speeds
+- Ensure touch interactions are responsive
+- Test across different browsers and versions
+- Use profiling tools to identify and fix bottlenecks
+- Verify performance standards are met across all target devices
+
+### Accessibility Standards
+
+**Critical Accessibility Requirements**:
+
+All user interface components and interactions must be accessible to users with disabilities following WCAG 2.1 Level AA standards.
+
+**Keyboard Navigation**:
+
+- All interactive elements must be keyboard accessible
+- Implement proper focus states with visible indicators
+- Support standard keyboard shortcuts and navigation patterns
+- Ensure logical tab order through interactive content
+
+**Visual Accessibility**:
+
+- Maintain color contrast ratios of at least 4.5:1 for normal text (WCAG AA)
+- Maintain color contrast ratios of at least 3:1 for large text and UI components
+- Never rely solely on color to convey information
+- Provide text alternatives for images and non-text content
+
+**Screen Reader Support**:
+
+- Use semantic HTML elements appropriately
+- Provide descriptive ARIA labels where needed
+- Ensure all interactive controls have accessible names
+- Test with screen readers to verify accessibility
+
+**Testing Requirements**:
+
+- Test with keyboard-only navigation
+- Verify screen reader compatibility
+- Check color contrast with automated tools
+- Ensure responsive design works with text scaling and zoom
+
 ### Configuration-Driven Development
 
 **Never Hardcode Values**:
@@ -240,8 +298,8 @@ All visible content must be fully rendered server-side by the build system. User
 
 **Implementation Details**:
 
-- Jekyll/Ruby: See [.github/agents/fullstack.md](.github/agents/fullstack.md) for server-side patterns
-- Ruby Plugins: See [_plugins/AGENTS.md](_plugins/AGENTS.md) for plugin-specific handling
+- Server-side: See [.github/agents/fullstack.md](.github/agents/fullstack.md) for server-side patterns
+- Jekyll plugins: See [_plugins/AGENTS.md](_plugins/AGENTS.md) for plugin-specific handling
 - JavaScript: See [assets/js/AGENTS.md](assets/js/AGENTS.md) for client-side patterns
 
 **Benefits**: Prevents date/time bugs, ensures consistent behavior across all systems, simplifies date comparisons.
@@ -264,14 +322,16 @@ All visible content must be fully rendered server-side by the build system. User
 - Organized into multiple topic areas (AI, GitHub Copilot, Azure, ML, .NET, DevOps, Security)
 - Each section contains index page, RSS feed, collections, and optional custom pages
 - Configuration-driven via `_data/sections.json` (single source of truth)
-- Auto-generated pages via build plugins for consistency
+- Auto-generated pages via Jekyll plugins for consistency
+
+> **See [_includes/AGENTS.md](_includes/AGENTS.md) for detailed section subnavigation behavior documentation**
 
 **Data Flow**:
 
 1. Content added to collection directories (`_news/`, `_videos/`, etc.)
 2. `_data/sections.json` defines which collections appear in which sections  
 3. Build system reads configuration and creates pages
-4. Generated pages use `site.data.sections` for navigation and display
+4. Generated pages use configuration data for navigation and display
 
 **Key Architectural Principles**:
 
@@ -293,10 +353,10 @@ All visible content must be fully rendered server-side by the build system. User
   - `_posts/` - Blog posts and technical articles
   - `_roundups/` - Curated weekly content summaries
 
-**Code & Templates** (framework-specific):
+**Code & Templates** (framework-specific - see [.github/agents/fullstack.md](.github/agents/fullstack.md) for details):
 
-- **`_includes/`** - Reusable template components
-- **`_layouts/`** - Page layout templates
+- **`_includes/`** - Reusable template components (see [_includes/AGENTS.md](_includes/AGENTS.md))
+- **`_layouts/`** - Page layout templates (see [_includes/AGENTS.md](_includes/AGENTS.md))
 - **`_plugins/`** - Build system plugins and extensions
 - **`_sass/`** - Stylesheet organization
 - **`assets/`** - Static assets (images, CSS, JS)
@@ -322,7 +382,7 @@ All visible content must be fully rendered server-side by the build system. User
 **Configuration**:
 
 - **`_data/sections.json`** - Single source of truth for sections and collections
-- **`_config.yml`** - Build system configuration (see [.github/agents/fullstack.md](.github/agents/fullstack.md) for framework-specific details)
+- Build system configuration file - See [.github/agents/fullstack.md](.github/agents/fullstack.md) for framework-specific details
 
 > **See "Documentation Structure" section above for complete documentation map and navigation guide**
 
@@ -576,7 +636,7 @@ Quality requirements across all code.
 
 #### Testing Requirements
 
-- Test frameworks: RSpec (Ruby), Jest (JavaScript), Pester (PowerShell), Playwright (E2E)
+- Use appropriate testing frameworks for each language (see [spec/AGENTS.md](spec/AGENTS.md) for current frameworks)
 - Run tests before committing changes
 - See [spec/AGENTS.md](spec/AGENTS.md) for comprehensive testing strategy
 - Add tests when creating or changing functionality
@@ -618,6 +678,9 @@ Domain-specific custom agents provide specialized guidance:
 **Collections**: Content types that represent different formats within sections.
 
 - **Purpose**: Organize content by format and purpose (news, videos, community, blogs, roundups)
+- **Configuration**: Defined in build system configuration, associated with sections via `_data/sections.json`
+- **Technical**: Each collection has its own directory, can be marked as custom (manually created) or auto-generated
+- **Properties**: Collections with output enabled generate individual pages for each item
 - **Configuration**: Defined in framework configuration (e.g., Jekyll's `_config.yml`), associated with sections via `_data/sections.json`
 - **Technical**: Each collection has its own directory, can be marked as custom (manually created) or auto-generated
 - **Properties**: Collections with output enabled generate individual pages for each item

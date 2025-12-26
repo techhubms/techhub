@@ -81,10 +81,10 @@ sudo npm install -g playwright@latest
 echo "Installing Playwright system dependencies first..."
 sudo npx -y playwright install-deps
 
-# Install only chromium browser for Playwright (as configured in playwright.config.js)
+# Install browsers for Playwright (chromium for tests, chrome for MCP)
 # This ensures browsers are installed in ~/.cache/ms-playwright where tests can find them
-echo "Installing Playwright chromium browser for current user..."
-npx -y playwright@latest install chromium --force
+echo "Installing Playwright browsers for current user..."
+npx -y playwright@latest install chromium chrome --force
 
 echo "Latest Playwright browsers and dependencies installed successfully"
 echo "Playwright version: $(npx playwright@latest --version)"

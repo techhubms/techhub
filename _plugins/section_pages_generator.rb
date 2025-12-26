@@ -52,7 +52,7 @@ module Jekyll
       page.data['title'] = section_data['title']
       page.data['description'] = section_data['description']
       page.data['rss_feed'] = rss_feed_url
-      page.data['permalink'] = "/#{section_data['section']}.html"
+      page.data['permalink'] = "/#{section_data['section']}/"
       
       # Set page content
       page.content = generate_section_index_content(section_data)
