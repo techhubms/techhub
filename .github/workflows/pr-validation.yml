@@ -114,11 +114,11 @@ jobs:
         run: |
           echo "🔗 Checking for obvious broken internal links..."
           # Basic check for common broken link patterns
-          if grep -r "href=\"\"" _posts/ _news/ _videos/ _roundups/ _events/ _community/ 2>/dev/null; then
-            echo "❌ Found empty href attributes"
+          if grep -r "href=\"\"" _posts/ _news/ _videos/ _roundups/ _community/ 2>/dev/null; then
+            echo "Error: Found empty href attributes"
             exit 1
           fi
-          if grep -r "href=\"#\"" _posts/ _news/ _videos/ _roundups/ _events/ _community/ 2>/dev/null; then
+          if grep -r "href=\"#\"" _posts/ _news/ _videos/ _roundups/ _community/ 2>/dev/null; then
             echo "⚠️ Found placeholder href=\"#\" - please verify these are intentional"
           fi
           echo "✅ Basic link validation passed!"

@@ -20,7 +20,6 @@ function Get-ViewingModes {
         "_posts"     = "external"
         "_news"      = "external"
         "_community" = "external"
-        "_events"    = "internal"
         "_roundups"  = "internal"
     }
 }

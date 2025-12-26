@@ -30,12 +30,6 @@
                 "url": "/all/community.html",
                 "collection": "community",
                 "description": "Community announcements, discussions, magazines and insights."
-            },
-            {
-                "title": "Events",
-                "url": "/all/events.html",
-                "collection": "events",
-                "description": "All events and presentations across every section."
             }
         ]
     },

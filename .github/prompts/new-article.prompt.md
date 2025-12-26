@@ -20,7 +20,6 @@ Follow these steps and rules for best results:
   - Blog: `_posts`
   - Video: `_videos`
   - Community: `_community`
-  - Events: `_events`
 
 # Step 2: Gather data
 

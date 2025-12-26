@@ -13,6 +13,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Collections directory - all collections are stored in /collections
+collections_dir: collections
+
 # Define all additional collections (the posts collection is default)
 collections:
   news:
@@ -20,9 +23,7 @@ collections:
   videos:
     output: true    
   community:
-    output: true       
-  events:
-    output: true 
+    output: true
   roundups: # Special one that isn't shown in a specific section but rather on the homepage
     output: true
 
@@ -62,6 +63,8 @@ exclude:
   # All dotfiles and dot directories (covers .git, .github, .vscode, .devcontainer, etc.)
   - ".*"
   - ".*/"
+  - ".*/*"
+  - ".*/**/"
   
   # Development and build artifacts
   - "node_modules/"

@@ -82,12 +82,7 @@
   {
     "name": "Zure Data & AI Blog",
     "outputDir": "_posts",
-    "url": "https://zure.com/category/blog/feed/?tag=dataai"
-  },
-  {
-    "name": "DevOps Blog",
-    "outputDir": "_posts",
-    "url": "https://devops.com/feed/"
+    "url": "https://zure.com/blog/rss.xml"
   },
   {
     "name": "Arrested DevOps",

@@ -7,11 +7,12 @@ Describe "Convert-RssToMarkdown" {
         . "$PSScriptRoot/Initialize-BeforeAll.ps1"
 
         $script:TestScriptsPath = Join-Path $script:TempPath "scripts"
+        $script:TestContentProcessingPath = Join-Path $script:TestScriptsPath "content-processing"
         $script:TestDataPath = Join-Path $script:TestScriptsPath "data"
         $script:TestOutputDir = Join-Path $script:TempPath "_posts"
         $script:TestCommunityOutputDir = Join-Path $script:TempPath "_community"
         $script:TestAiResultsDir = Join-Path $script:TestScriptsPath "ai-results"
-        $script:TestTemplatesPath = Join-Path $script:TestScriptsPath "templates"
+        $script:TestTemplatesPath = Join-Path $script:TestContentProcessingPath "templates"
         $script:TestSkippedEntriesPath = Join-Path $script:TestDataPath "skipped-entries.json"
         $script:TestProcessedEntriesPath = Join-Path $script:TestDataPath "processed-entries.json"
         
@@ -183,6 +184,7 @@ youtube_id: {{YOUTUBE_ID}}
         # Recreate directory structure (Initialize-BeforeEach.ps1 removes TestSourceRoot)
         New-Item -Path $script:TempPath -ItemType Directory -Force | Out-Null
         New-Item -Path $script:TestScriptsPath -ItemType Directory -Force | Out-Null
+        New-Item -Path $script:TestContentProcessingPath -ItemType Directory -Force | Out-Null
         New-Item -Path $script:TestDataPath -ItemType Directory -Force | Out-Null
         New-Item -Path $script:TestOutputDir -ItemType Directory -Force | Out-Null
         New-Item -Path $script:TestAiResultsDir -ItemType Directory -Force | Out-Null

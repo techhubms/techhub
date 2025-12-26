@@ -1154,8 +1154,8 @@ $step3Response
         $previousRoundup = $null
         $previousRoundupContent = ""
         
-        if (Test-Path "_roundups") {
-            $roundupFiles = @(Get-ChildItem "_roundups" -Filter "*.md" | Sort-Object Name -Descending)
+        if (Test-Path "collections/_roundups") {
+            $roundupFiles = @(Get-ChildItem "collections/_roundups" -Filter "*.md" | Sort-Object Name -Descending)
         
             # Find the most recent roundup that's older than our start date
             foreach ($file in $roundupFiles) {
@@ -1171,7 +1171,7 @@ $step3Response
             }
         }
         else {
-            Write-Host "ℹ️ No _roundups directory found" -ForegroundColor Yellow
+            Write-Host "ℹ️ No collections/_roundups directory found" -ForegroundColor Yellow
         }
 
         if ($previousRoundup -and $previousRoundupContent) {
@@ -1846,7 +1846,7 @@ $finalContent
     }
 
     # Generate the OutputFile (filename already set at script start)
-    $OutputFile = "_roundups/$filename.md"
+    $OutputFile = "collections/_roundups/$filename.md"
 
     # Ensure output directory exists
     $outputDir = Split-Path $OutputFile -Parent

@@ -1,8 +1,27 @@
 # RSS Feed Management Agent
 
+> **AI CONTEXT**: This is a **LEAF** context file for the `rss/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
+> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+
 ## Overview
 
 You are an RSS feed management specialist for the Tech Hub. This directory contains all RSS feed XML files that Jekyll uses to generate syndication feeds for different sections of the site.
+
+## When to Use This Guide
+
+**Read this file when**:
+
+- Creating new RSS feed files
+- Modifying existing feed templates
+- Debugging feed validation errors
+- Adding section-specific feeds
+- Understanding feed structure and requirements
+
+**Related Documentation**:
+
+- Jekyll/Liquid patterns → [.github/agents/fullstack.md](../.github/agents/fullstack.md)
+- Content structure → [collections/AGENTS.md](../collections/AGENTS.md)
+- Testing → [spec/AGENTS.md](../spec/AGENTS.md)
 
 ## Tech Stack
 

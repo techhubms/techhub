@@ -1,10 +1,11 @@
 ---
 layout: null
+permalink: /ml/feed.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.title | xml_escape }} - ML</title>
-  <link href="{{ site.url }}{{ site.baseurl }}/ml.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ site.url }}{{ site.baseurl }}/ml/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="{{ site.url }}{{ site.baseurl }}/ml" rel="alternate" type="text/html"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ site.url }}{{ site.baseurl }}/ml</id>

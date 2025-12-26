@@ -1,0 +1,74 @@
+---
+layout: "post"
+title: "Automation in Copilot Studio: Agent Flows and Computer Use"
+description: "This session from Microsoft Ignite 2025 explores how developers and makers can use Copilot Studio to orchestrate end-to-end automation through agent flows and computer use agents. It covers practical techniques for integrating Copilot Studio with various apps, sites, and desktop environments, leveraging Microsoft security and governance, scaling automation, and utilizing features like Cloud PC Pool integration and built-in credential stores. Real-world customer stories from Uber and Virgin Money illustrate AI-powered automation in action."
+author: "Microsoft Events"
+excerpt_separator: <!--excerpt_end-->
+canonical_url: "https://www.youtube.com/watch?v=D01Rxi_twCg"
+viewing_mode: "internal"
+feed_name: "Microsoft Events YouTube"
+feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+date: 2025-11-25 12:09:28 +00:00
+permalink: "/videos/2025-11-25-Automation-in-Copilot-Studio-Agent-Flows-and-Computer-Use.html"
+categories: ["AI"]
+tags: ["Agent Flows", "AI", "Automation", "Automation in Copilot Studio: Agent Flows And Computer Use | BRK320", "BRK320", "Cloud PC Pool", "Computer Use Agents", "Copilot And Agents At Work:copilot Agents", "Copilot And Agents At Work:copilot Studio", "Copilot Studio", "Credential Store", "Customer Success", "Demo", "Enterprise Automation", "F5n1", "Governance", "Ignite", "Innovate With Low Code AI And Agents", "Low Code", "Microsoft", "Microsoft Ignite", "Microsoft Security", "Ms Ignite", "Msft Ignite", "Nationwide Insurance", "Power Automate", "Uber", "Videos", "Virgin Money", "Windows 365"]
+tags_normalized: ["agent flows", "ai", "automation", "automation in copilot studio agent flows and computer use pipe brk320", "brk320", "cloud pc pool", "computer use agents", "copilot and agents at workcopilot agents", "copilot and agents at workcopilot studio", "copilot studio", "credential store", "customer success", "demo", "enterprise automation", "f5n1", "governance", "ignite", "innovate with low code ai and agents", "low code", "microsoft", "microsoft ignite", "microsoft security", "ms ignite", "msft ignite", "nationwide insurance", "power automate", "uber", "videos", "virgin money", "windows 365"]
+---
+
+Microsoft Events hosts a session on using Copilot Studio for automation, featuring agent flows, computer use agents, security, and real-world enterprise demos. Delivered by Jose Luis Fernandez and Heather Orta-Olmo.<!--excerpt_end-->
+
+{% youtube D01Rxi_twCg %}
+
+# Automation in Copilot Studio: Agent Flows and Computer Use
+
+Presented by Jose Luis Fernandez and Heather Orta-Olmo at Microsoft Ignite 2025.
+
+## Overview
+
+This session demonstrates how Copilot Studio empowers users to build sophisticated automation solutions using agent flows and computer use agents (CUA). Attendees will learn to:
+
+- Build solutions automating tasks across apps, sites, and desktops
+- Integrate with secured workflows via Microsoft security and governance frameworks
+- Confidently scale automation initiatives from pilot to enterprise-wide use
+
+## Key Topics
+
+- **Customer Success Stories**: How Uber and Virgin Money leveraged AI automations for business efficiency
+- **Security and Credentials**: Best practices in managing credentials and configuring machine access for automation
+- **Cloud PC Pool Integration**: Seamless automation with Windows 365 environments, announced new integration
+- **Built-In Credential Store**: Streamlining secure credential management in Copilot Studio
+- **Agent Flows**: Introduction to agent flows, intelligent approvals, and information request actions
+- **Flow Interface Updates**: Latest enhancements in automation interface
+- **Enterprise Automation Demo**: Nationwide insurance claim automation walkthrough
+
+## Getting Started
+
+Explore tools and resources to begin using Copilot Studio and building agent flows for customized automation at scale:
+
+- [Microsoft Ignite On-demand Sessions](https://ignite.microsoft.com)
+- [Low-Code AI and Agentic Automation Resources](https://aka.ms/ignite25-plans-lowcode)
+
+## Chapters Guide
+
+- Customer Success Stories (Uber, Virgin Money)
+- Security and machine configuration for automated workflows
+- Cloud PC Pool integration
+- Built-in credential store introduction
+- Transition to agent flows for enterprise automation
+- Intelligent approval and information request use cases
+- Demo: Nationwide insurance claim automation
+- Getting started with Copilot Studio and agent flows
+
+## Technical Focus
+
+- Designed for intermediate audience (level 200)
+- Emphasizes low-code automation with AI and enterprises' integration needs
+- Covers practical implementation steps and best practices
+
+## Speakers
+
+- Jose Luis Fernandez
+- Heather Orta-Olmo
+
+---
+For more resources and on-demand content from Microsoft Ignite 2025, visit [ignite.microsoft.com](https://ignite.microsoft.com).

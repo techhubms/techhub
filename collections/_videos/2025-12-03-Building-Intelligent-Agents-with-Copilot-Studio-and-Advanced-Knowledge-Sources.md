@@ -1,0 +1,60 @@
+---
+layout: "post"
+title: "Building Intelligent Agents with Copilot Studio and Advanced Knowledge Sources"
+description: "This session from Microsoft Ignite 2025 explores how developers and makers can leverage Copilot Studio to build intelligent agents, integrating a wide range of knowledge sources, connectors, APIs, and MCP servers. The session covers practical techniques for document filtering and structured data analysis, personalized agent responses, integration with Microsoft Graph, Azure AI Search, and Active Directory, and real-world examples including agent workflow automation and visualization creation. Participants will learn how Copilot Studio empowers agent development using low-code and native Microsoft integrations."
+author: "Microsoft Events"
+excerpt_separator: <!--excerpt_end-->
+canonical_url: "https://www.youtube.com/watch?v=mY2qaeYN_CQ"
+viewing_mode: "internal"
+feed_name: "Microsoft Events YouTube"
+feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+date: 2025-12-03 21:30:48 +00:00
+permalink: "/videos/2025-12-03-Building-Intelligent-Agents-with-Copilot-Studio-and-Advanced-Knowledge-Sources.html"
+categories: ["AI"]
+tags: ["Active Directory", "Agent Development", "AI", "Azure AI Search", "BRK318", "Building The Most Intelligent Agents With The Latest Knowledge Sources | BRK318", "Copilot Agents", "Copilot And Agents At Work:copilot Agents", "Copilot And Agents At Work:copilot Studio", "Copilot Studio", "Data Integration", "Document Filtering", "F5n1", "Ignite", "Innovate With Low Code AI And Agents", "Knowledge Source Integration", "Low Code AI", "MCP Servers", "Microsoft", "Microsoft Graph", "Microsoft Ignite", "Ms Ignite", "Msft Ignite", "Personalized Responses", "Session BRK318", "Videos", "Visualization", "Workflow Automation"]
+tags_normalized: ["active directory", "agent development", "ai", "azure ai search", "brk318", "building the most intelligent agents with the latest knowledge sources pipe brk318", "copilot agents", "copilot and agents at workcopilot agents", "copilot and agents at workcopilot studio", "copilot studio", "data integration", "document filtering", "f5n1", "ignite", "innovate with low code ai and agents", "knowledge source integration", "low code ai", "mcp servers", "microsoft", "microsoft graph", "microsoft ignite", "ms ignite", "msft ignite", "personalized responses", "session brk318", "videos", "visualization", "workflow automation"]
+---
+
+Microsoft Events hosts an in-depth Ignite 2025 session showcasing how Copilot Studio enables the creation of intelligent agents by integrating powerful Microsoft knowledge sources and workflow automation. Speakers include Anjli Chaudhry, Eli Coon, Hardik Modi, and Nick Taylor.<!--excerpt_end-->
+
+{% youtube mY2qaeYN_CQ %}
+
+# Building Intelligent Agents with Copilot Studio and Advanced Knowledge Sources
+
+**Speakers:** Anjli Chaudhry, Eli Coon, Hardik Modi, Nick Taylor  
+**Event:** Microsoft Ignite 2025 – Session BRK318
+
+Copilot Studio now provides developers and solution builders with the ability to create highly intelligent agents by leveraging a comprehensive range of integrated knowledge sources and low-code tooling. This session demonstrates practical approaches and architectures that enable agents to:
+
+- **Integrate with Native Knowledge Sources:** Seamlessly connect to a variety of data and document repositories using built-in connectors and APIs.
+- **Leverage MCP Servers:** Utilize Microsoft Cloud Platform (MCP) servers for agent authentication, coordination, and workflow execution.
+- **Document Filtering and Data Extraction:** Extract relevant information from documents and perform structured data analysis using built-in tools and scripts.
+- **Utilize Context for Personalization:** Improve user experience by tailoring agent responses based on end-user context and input.
+- **Work with Real-World Data:** Example use cases include creating visualizations from Excel data, generating insights from premium/membership data, and integrating with external data sources.
+- **Agent Quality and Reliability:** Address challenges such as handling complex or unstructured data, evaluate agent accuracy, and ensure quality responses through evaluation techniques (evals).
+- **Architecture Highlight:** Features integration with Microsoft Graph, Azure AI Search, and Active Directory, as shown in the ‘Genie’ agent example from Gilead Sciences.
+
+## Key Session Highlights
+
+### 1. Guest Speaker Case Study
+
+Nick Taylor from Gilead Sciences presents the ‘Genie’ agent's architecture, demonstrating integration with Microsoft Graph, Azure AI Search, and Active Directory for enhanced data access and secure operations.
+
+### 2. Practical Workflow Examples
+
+- **Document Filtering:** Techniques for extracting pertinent data from large document sets for agent use.
+- **Structured Data Analysis:** Using scripts and tools to systematically analyze and act upon structured datasets.
+- **Visualization:** Generating actionable visualizations from Excel and membership data queried through the agent.
+
+### 3. Best Practices in Agent Development
+
+- Implementing native integrations and authentication
+- Ensuring workflow automation across services
+- Handling evaluation and quality for robust intelligent agents
+
+## Resources and Further Learning
+
+- [Low-code AI and agents documentation](https://aka.ms/ignite25-plans-lowcode)
+- [Microsoft Ignite On-demand Sessions](https://ignite.microsoft.com)
+
+**Session Tags:** #MSIgnite #CopilotStudio #AgentDevelopment #LowCodeAI

@@ -202,7 +202,150 @@ Describe "Get-MainContentFromHtml" {
     }
 
     Context "Microsoft News Processing" {
-        It "Should throw error when no section with mssrc-block-content-block class exists" {
+        It "Should extract content from article tag with itemscope and itemtype" {
+            # Arrange
+            $testHtml = @"
+<html>
+<body>
+    <header>Site header</header>
+    <main id="main-content" class="pb-200v">
+        <article itemscope itemtype="https://schema.org/Article">
+            <header>
+                <h1>Can AI learn the language of biology?</h1>
+                <time datetime="2025-12-19">Dec 19, 2025</time>
+            </header>
+            <div class="article-content">
+                <p>This is the main content of the Microsoft News article.</p>
+                <h2>Section Heading</h2>
+                <p>More detailed content about the topic.</p>
+                <ul>
+                    <li>Point one</li>
+                    <li>Point two</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+    <footer>Footer content</footer>
+</body>
+</html>
+"@
+            $testUrl = "https://news.microsoft.com/signal/articles/can-ai-learn-the-language-of-biology"
+            
+            # Act
+            $result = Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl
+            
+            # Assert
+            $result | Should -Not -BeNullOrEmpty
+            $result | Should -Match "Can AI learn the language of biology"
+            $result | Should -Match "main content of the Microsoft News article"
+            $result | Should -Match "Section Heading"
+            $result | Should -Match "Point one"
+            $result | Should -Not -Match "Site header"
+            $result | Should -Not -Match "Footer content"
+        }
+
+        It "Should extract content from article with itemscope on unlocked.microsoft.com" {
+            # Arrange
+            $testHtml = @"
+<html>
+<body>
+    <header>Navigation</header>
+    <article itemscope itemtype="https://schema.org/Article">
+        <h1>Stewards of their environment</h1>
+        <p>The Kakuma refugee camp's mapping system gets an upgrade.</p>
+        <p>Thanks to the hands-on involvement of its residents.</p>
+    </article>
+    <aside>Related stories</aside>
+</body>
+</html>
+"@
+            $testUrl = "https://unlocked.microsoft.com/kakuma/"
+            
+            # Act
+            $result = Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl
+            
+            # Assert
+            $result | Should -Not -BeNullOrEmpty
+            $result | Should -Match "Stewards of their environment"
+            $result | Should -Match "Kakuma refugee camp"
+            $result | Should -Match "hands-on involvement"
+            $result | Should -Not -Match "Navigation"
+            $result | Should -Not -Match "Related stories"
+        }
+
+        It "Should handle article with itemscope and other attributes" {
+            # Arrange
+            $testHtml = @"
+<html>
+<body>
+    <article class="post-content" id="main-article" itemscope itemtype="https://schema.org/Article" data-analytics="true">
+        <h2>Article with Multiple Attributes</h2>
+        <p>Content from article with itemscope and other attributes.</p>
+    </article>
+</body>
+</html>
+"@
+            $testUrl = "https://news.microsoft.com/multi-attribute-article"
+            
+            # Act
+            $result = Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl
+            
+            # Assert
+            $result | Should -Not -BeNullOrEmpty
+            $result | Should -Match "Article with Multiple Attributes"
+            $result | Should -Match "itemscope and other attributes"
+        }
+
+        It "Should throw error when article with itemscope content is empty" {
+            # Arrange
+            $testHtml = @"
+<html>
+<body>
+    <article itemscope itemtype="https://schema.org/Article">
+    </article>
+</body>
+</html>
+"@
+            $testUrl = "https://news.microsoft.com/empty-article"
+            
+            # Act & Assert
+            { Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl } | Should -Throw "*main content extraction from HTML did not result in any content*"
+        }
+
+        It "Should prefer article with itemscope over other patterns" {
+            # Arrange
+            $testHtml = @"
+<html>
+<body>
+    <article itemscope itemtype="https://schema.org/Article">
+        <h2>Article Content</h2>
+        <p>This should be extracted as article has highest priority.</p>
+    </article>
+    <section class="mssrc-block-content-block">
+        <h2>Section Content</h2>
+        <p>This should not be extracted.</p>
+    </section>
+    <div class="entry-content">
+        <h2>Div Content</h2>
+        <p>This should also not be extracted.</p>
+    </div>
+</body>
+</html>
+"@
+            $testUrl = "https://news.microsoft.com/pattern-priority"
+            
+            # Act
+            $result = Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl
+            
+            # Assert
+            $result | Should -Not -BeNullOrEmpty
+            $result | Should -Match "Article Content"
+            $result | Should -Match "article has highest priority"
+            $result | Should -Not -Match "Section Content"
+            $result | Should -Not -Match "Div Content"
+        }
+        
+        It "Should throw error when no section with mssrc-block-content-block class exists and no article" {
             # Arrange
             $testHtml = "<html><body>Microsoft news content without required section</body></html>"
             $testUrl = "https://news.microsoft.com/test"
