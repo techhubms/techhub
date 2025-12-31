@@ -244,6 +244,37 @@ Describe "Get-MainContentFromHtml" {
             $result | Should -Not -Match "Footer content"
         }
 
+        It "Should extract content from article with itemtype and itemscope in reverse order" {
+            # Arrange
+            $testHtml = @"
+<html>
+<body>
+    <header>Site header</header>
+    <main>
+        <article itemtype="https://schema.org/NewsArticle" itemscope>
+            <h1>Reversed Attributes Article</h1>
+            <p>Content with reversed attribute order.</p>
+            <p>This tests that the pattern matching works regardless of attribute sequence.</p>
+        </article>
+    </main>
+    <footer>Footer content</footer>
+</body>
+</html>
+"@
+            $testUrl = "https://news.microsoft.com/reversed-test/"
+            
+            # Act
+            $result = Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl
+            
+            # Assert
+            $result | Should -Not -BeNullOrEmpty
+            $result | Should -Match "Reversed Attributes Article"
+            $result | Should -Match "Content with reversed attribute order"
+            $result | Should -Match "regardless of attribute sequence"
+            $result | Should -Not -Match "Site header"
+            $result | Should -Not -Match "Footer content"
+        }
+
         It "Should extract content from article with itemscope on unlocked.microsoft.com" {
             # Arrange
             $testHtml = @"

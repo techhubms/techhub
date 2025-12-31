@@ -65,7 +65,7 @@ function Get-MainContentFromHtml {
                 # Try different patterns in order of specificity (content-specific patterns beat generic semantic ones)
                 $patterns = @(
                     # Highest priority: Semantic HTML elements with specific identifiers
-                    @{ Pattern = '<article[^>]*\s+itemscope[^>]*\s+itemtype[^>]*>'; TagName = "article"; Name = "article with itemscope/itemtype (news.microsoft.com, unlocked.microsoft.com)" },
+                    @{ Pattern = '<article(?=[^>]*\sitemscope\b)(?=[^>]*\sitemtype\b)[^>]*>'; TagName = "article"; Name = "article with itemscope/itemtype (news.microsoft.com, unlocked.microsoft.com)" },
                     @{ Pattern = '<article[^>]*\s+id="post-[^"]*"[^>]*>'; TagName = "article"; Name = "article with post id" },
                     @{ Pattern = '<section[^>]*\s+class="[^"]*mssrc-block-content-block[^"]*"[^>]*>'; TagName = "section"; Name = "mssrc-block-content-block section" },
                     

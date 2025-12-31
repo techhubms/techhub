@@ -199,47 +199,32 @@ function Start-Jekyll {
         return $false
     }
     
-    # Start Jekyll in background with correct working directory
+    # Call jekyll-start.ps1 directly and wait for it to complete
+    # The script has built-in polling (up to 3 minutes) and will exit when Jekyll is ready
     try {
-        Start-Process -FilePath "pwsh" -ArgumentList $jekyllScript -WorkingDirectory $script:rootDir -NoNewWindow
+        $originalLocation = Get-Location
+        Set-Location $script:rootDir
+        
+        Write-ColoredOutput "Executing: $jekyllScript" $Yellow
+        & $jekyllScript
+        
+        $exitCode = $LASTEXITCODE
+        Set-Location $originalLocation
+        
+        if ($exitCode -eq 0) {
+            Write-ColoredOutput "✅ Jekyll server is ready and accessible" $Green
+            return $true
+        }
+        else {
+            Write-ColoredOutput "❌ Jekyll startup script failed with exit code: $exitCode" $Red
+            Write-ColoredOutput "💡 Check if Jekyll dependencies are properly installed" $Yellow
+            Write-ColoredOutput "💡 Try running manually: ./scripts/jekyll-start.ps1" $Yellow
+            return $false
+        }
     }
     catch {
-        Write-ColoredOutput "❌ Failed to start Jekyll process: $($_.Exception.Message)" $Red
-        return $false
-    }
-    
-    # Wait for Jekyll to start with extended timeout
-    $timeout = 300  # Extended timeout for slower systems - Jekyll can take up to 2-3 minutes
-    $elapsed = 0
-    
-    Write-ColoredOutput "Waiting for Jekyll server to start (timeout: ${timeout}s)..." $Yellow
-    
-    while (-not (Test-JekyllRunning -Cleanup).IsRunning -and $elapsed -lt $timeout) {
-        Start-Sleep -Seconds 2
-        $elapsed += 2
-        Write-Host "." -NoNewline
-        
-        # Check every 10 seconds if Jekyll process might have failed
-        if ($elapsed % 10 -eq 0) {
-            Write-Host ""
-            Write-ColoredOutput "Still waiting... ($elapsed/${timeout}s)" $Yellow
-        }
-    }
-    
-    Write-Host ""
-    
-    $jekyllStatus = Test-JekyllRunning -Cleanup
-    if ($jekyllStatus.IsRunning) {
-        Write-ColoredOutput "✅ Jekyll server is running on port 4000 (Method: $($jekyllStatus.Method))" $Green
-        if ($jekyllStatus.Pid) {
-            Write-ColoredOutput "   PID: $($jekyllStatus.Pid)" $Yellow
-        }
-        return $true
-    }
-    else {
-        Write-ColoredOutput "❌ Failed to start Jekyll server within $timeout seconds" $Red
-        Write-ColoredOutput "💡 Check if Jekyll dependencies are properly installed" $Yellow
-        Write-ColoredOutput "💡 Try running manually: ./jekyll-start.ps1" $Yellow
+        Set-Location $originalLocation
+        Write-ColoredOutput "❌ Failed to execute Jekyll startup script: $($_.Exception.Message)" $Red
         return $false
     }
 }
@@ -503,10 +488,16 @@ function Invoke-EndToEndTestsRunner {
         Write-ColoredOutput "🔍 Checking Jekyll server status..." $Yellow
         $jekyllStatus = Test-JekyllRunning -Cleanup
         if (-not $jekyllStatus.IsRunning) {
-            Write-ColoredOutput "❌ Jekyll server is not running" $Red
-            Write-ColoredOutput "💡 Please start Jekyll manually first: ./scripts/jekyll-start.ps1" $Yellow
-            Write-ColoredOutput "💡 Wait for the server to become accessible, then run E2E tests" $Yellow
-            exit 1
+            Write-ColoredOutput "⚠️  Jekyll server is not running" $Yellow
+            Write-ColoredOutput "🚀 Starting Jekyll server..." $Blue
+            
+            if (-not (Start-Jekyll)) {
+                Write-ColoredOutput "❌ Failed to start Jekyll server" $Red
+                Write-ColoredOutput "💡 Please start Jekyll manually: ./scripts/jekyll-start.ps1" $Yellow
+                exit 1
+            }
+            
+            Write-ColoredOutput "✅ Jekyll server started successfully" $Green
         }
         else {
             Write-ColoredOutput "✅ Jekyll server is already running and accessible at http://localhost:4000 (Method: $($jekyllStatus.Method))" $Green
