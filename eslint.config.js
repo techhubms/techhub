@@ -83,7 +83,7 @@ export default [
     },
     // Playwright E2E test files (run in browser context)
     {
-        files: ["spec/e2e/tests/**/*.js", "spec/e2e/tests/*.js"],
+        files: ["spec/e2e/tests/**/*.js", "spec/e2e/tests/*.js", "spec/e2e/_site/tests/**/*.js", "spec/e2e/_site/tests/*.js"],
         languageOptions: {
             ecmaVersion: 2022,
             sourceType: "script",

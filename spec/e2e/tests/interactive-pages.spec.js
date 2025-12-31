@@ -26,7 +26,7 @@ test.describe('Interactive Pages', () => {
       // Find all phase blocks
       const phaseBlocks = page.locator('.sdlc-phase-block');
       const phaseCount = await phaseBlocks.count();
-      
+
       // Verify there are phase blocks
       expect(phaseCount).toBeGreaterThan(0);
 
@@ -38,20 +38,20 @@ test.describe('Interactive Pages', () => {
 
         // Verify header is visible and clickable
         await expect(firstPhaseHeader).toBeVisible();
-        
+
         // Get initial state (might be expanded or collapsed)
-        const initialDisplay = await firstPhaseContent.evaluate(el => 
+        const initialDisplay = await firstPhaseContent.evaluate(el =>
           window.getComputedStyle(el).display
         );
 
         // Click to toggle
         await firstPhaseHeader.click();
-        
+
         // Wait for animation
         await page.waitForTimeout(400);
 
         // Verify state changed
-        const newDisplay = await firstPhaseContent.evaluate(el => 
+        const newDisplay = await firstPhaseContent.evaluate(el =>
           window.getComputedStyle(el).display
         );
 
@@ -77,15 +77,15 @@ test.describe('Interactive Pages', () => {
         if (hasCollapseBtn) {
           await collapseAllBtn.first().click();
           await page.waitForTimeout(400);
-          
+
           // Verify phases are collapsed
           const phaseContents = page.locator('.sdlc-phase-content');
           const contentCount = await phaseContents.count();
-          
+
           if (contentCount > 0) {
             // Check if at least some are hidden/collapsed
             const firstContent = phaseContents.first();
-            const display = await firstContent.evaluate(el => 
+            const display = await firstContent.evaluate(el =>
               window.getComputedStyle(el).display
             );
             // Display should be 'none' when collapsed
@@ -96,14 +96,14 @@ test.describe('Interactive Pages', () => {
         if (hasExpandBtn) {
           await expandAllBtn.first().click();
           await page.waitForTimeout(400);
-          
+
           // Verify phases are expanded
           const phaseContents = page.locator('.sdlc-phase-content');
           const contentCount = await phaseContents.count();
-          
+
           if (contentCount > 0) {
             const firstContent = phaseContents.first();
-            const display = await firstContent.evaluate(el => 
+            const display = await firstContent.evaluate(el =>
               window.getComputedStyle(el).display
             );
             // Display should be visible when expanded
@@ -121,11 +121,11 @@ test.describe('Interactive Pages', () => {
 
       // Look for Mermaid diagram container
       const mermaidDiagram = page.locator('.mermaid, pre.mermaid, [data-mermaid]');
-      
+
       if (await mermaidDiagram.count() > 0) {
         // Wait for Mermaid to render
         await page.waitForTimeout(1000);
-        
+
         // Verify diagram is visible
         await expect(mermaidDiagram.first()).toBeVisible();
       }
@@ -155,7 +155,7 @@ test.describe('Interactive Pages', () => {
       // Find all section cards
       const sectionCards = page.locator('.dx-section-card');
       const cardCount = await sectionCards.count();
-      
+
       // Verify there are section cards
       expect(cardCount).toBeGreaterThan(0);
 
@@ -167,20 +167,20 @@ test.describe('Interactive Pages', () => {
 
         // Verify header is visible and clickable
         await expect(firstCardHeader).toBeVisible();
-        
+
         // Get initial state
-        const initialDisplay = await firstCardContent.evaluate(el => 
+        const initialDisplay = await firstCardContent.evaluate(el =>
           window.getComputedStyle(el).display
         );
 
         // Click to toggle
         await firstCardHeader.click();
-        
+
         // Wait for animation
         await page.waitForTimeout(400);
 
         // Verify state changed
-        const newDisplay = await firstCardContent.evaluate(el => 
+        const newDisplay = await firstCardContent.evaluate(el =>
           window.getComputedStyle(el).display
         );
 
@@ -196,7 +196,7 @@ test.describe('Interactive Pages', () => {
 
       // Look for key sections mentioned in the title
       const pageContent = await page.textContent('body');
-      
+
       // Verify mentions of key frameworks
       expect(pageContent).toContain('DORA');
       expect(pageContent).toContain('SPACE');
@@ -227,18 +227,18 @@ test.describe('Interactive Pages', () => {
       // Look for Mermaid diagram containers
       const mermaidDiagrams = page.locator('.mermaid, pre.mermaid, [data-mermaid]');
       const diagramCount = await mermaidDiagrams.count();
-      
+
       if (diagramCount > 0) {
         // Wait for Mermaid to render
         await page.waitForTimeout(1500);
-        
+
         // Verify at least one diagram is visible
         await expect(mermaidDiagrams.first()).toBeVisible();
-        
+
         // Verify diagrams contain SVG elements (rendered output)
         const firstDiagram = mermaidDiagrams.first();
         const hasSvg = await firstDiagram.locator('svg').count() > 0;
-        
+
         // If SVG exists, it means Mermaid rendered successfully
         if (hasSvg) {
           await expect(firstDiagram.locator('svg')).toBeVisible();
@@ -260,10 +260,10 @@ test.describe('Interactive Pages', () => {
         // Click first TOC link
         const firstLink = tocLinks.first();
         const href = await firstLink.getAttribute('href');
-        
+
         if (href && href.length > 1) {
           await firstLink.click();
-          
+
           // Verify URL updated with hash
           await expect(page).toHaveURL(new RegExp(href.replace('#', '.*#')));
         }
@@ -295,18 +295,18 @@ test.describe('Interactive Pages', () => {
       // Look for Mermaid diagram containers
       const mermaidDiagrams = page.locator('.mermaid, pre.mermaid, [data-mermaid]');
       const diagramCount = await mermaidDiagrams.count();
-      
+
       if (diagramCount > 0) {
         // Wait for Mermaid to render
         await page.waitForTimeout(1500);
-        
+
         // Verify at least one diagram is visible
         await expect(mermaidDiagrams.first()).toBeVisible();
-        
+
         // Verify diagrams contain SVG elements (rendered output)
         const firstDiagram = mermaidDiagrams.first();
         const hasSvg = await firstDiagram.locator('svg').count() > 0;
-        
+
         if (hasSvg) {
           await expect(firstDiagram.locator('svg')).toBeVisible();
         }
@@ -327,10 +327,10 @@ test.describe('Interactive Pages', () => {
         // Click first TOC link
         const firstLink = tocLinks.first();
         const href = await firstLink.getAttribute('href');
-        
+
         if (href && href.length > 1) {
           await firstLink.click();
-          
+
           // Verify URL updated with hash
           await expect(page).toHaveURL(new RegExp(href.replace('#', '.*#')));
         }
@@ -362,18 +362,18 @@ test.describe('Interactive Pages', () => {
       // Look for Mermaid diagram containers
       const mermaidDiagrams = page.locator('.mermaid, pre.mermaid, [data-mermaid]');
       const diagramCount = await mermaidDiagrams.count();
-      
+
       if (diagramCount > 0) {
         // Wait for Mermaid to render
         await page.waitForTimeout(1500);
-        
+
         // Verify at least one diagram is visible
         await expect(mermaidDiagrams.first()).toBeVisible();
-        
+
         // Verify diagrams contain SVG elements (rendered output)
         const firstDiagram = mermaidDiagrams.first();
         const hasSvg = await firstDiagram.locator('svg').count() > 0;
-        
+
         if (hasSvg) {
           await expect(firstDiagram.locator('svg')).toBeVisible();
         }
@@ -394,10 +394,10 @@ test.describe('Interactive Pages', () => {
         // Click first TOC link
         const firstLink = tocLinks.first();
         const href = await firstLink.getAttribute('href');
-        
+
         if (href && href.length > 1) {
           await firstLink.click();
-          
+
           // Verify URL updated with hash
           await expect(page).toHaveURL(new RegExp(href.replace('#', '.*#')));
         }

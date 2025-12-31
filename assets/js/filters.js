@@ -387,8 +387,8 @@ function passesTextSearch(cachedPost) {
     const query = window.textSearchQuery.toLowerCase();
 
     // Use pre-cached content from the cached item object
-    if (cachedPost && cacheditem.content) {
-        return cacheditem.content.includes(query);
+    if (cachedPost && cachedPost.content) {
+        return cachedPost.content.includes(query);
     }
 
     return false;
