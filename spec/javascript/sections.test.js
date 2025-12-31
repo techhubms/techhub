@@ -71,9 +71,12 @@ describe('Sections Navigation', () => {
 
       const result = showSectionCollections();
 
-      expect(global.document.getElementById).toHaveBeenCalledWith('section-nav-default');
-      expect(global.document.getElementById).toHaveBeenCalledWith('section-collections-default');
+      // When no section and no URL parameter, function returns early without DOM manipulation
+      // This preserves server-side rendering
       expect(result).toBe('default');
+
+      // Should NOT call getElementById since it returns early
+      expect(global.document.getElementById).not.toHaveBeenCalled();
     });
 
     test('should handle missing DOM elements gracefully', () => {
