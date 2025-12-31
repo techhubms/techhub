@@ -82,6 +82,13 @@ try {
         if ($order) { $order } else { 60 }
     }
 
+    # Load processed and skipped entries tracking
+    $dataPath = Join-Path $sourceRoot "scripts/data"
+    $skippedEntriesPath = Join-Path $dataPath "skipped-entries.json"
+    $processedEntriesPath = Join-Path $dataPath "processed-entries.json"
+    $skippedEntries = Get-SkippedEntries -SkippedEntriesPath $skippedEntriesPath
+    $processedEntries = Get-ProcessedEntries -ProcessedEntriesPath $processedEntriesPath
+
     # Track all current feed items to identify files for removal
     $allCurrentItems = @{}
     $outputTypes = @{}
@@ -149,9 +156,17 @@ try {
                 # Track this item as current
                 $allCurrentItems[$itemFilePath] = $true
 
+                # Check if item is in skipped or processed entries
+                $isSkipped = $skippedEntries | Where-Object { $_.canonical_url -eq $item.Link }
+                $isProcessed = $processedEntries | Where-Object { $_.canonical_url -eq $item.Link }
+
                 # Check if file needs processing
                 $needsProcessing = $false
-                if (-not (Test-Path $itemFilePath)) {
+                if ($isSkipped -or $isProcessed) {
+                    # Skip items that are in skipped-entries.json or processed-entries.json
+                    $needsProcessing = $false
+                }
+                elseif (-not (Test-Path $itemFilePath)) {
                     $needsProcessing = $true
                 }
                 else {
