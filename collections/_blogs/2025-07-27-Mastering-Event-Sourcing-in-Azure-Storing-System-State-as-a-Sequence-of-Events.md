@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-07-27 11:22:04 +00:00
 permalink: "/blogs/2025-07-27-Mastering-Event-Sourcing-in-Azure-Storing-System-State-as-a-Sequence-of-Events.html"
 categories: ["Azure", "Coding"]
-tags: ["Application Insights", "Architecture", "Auditability", "Azure", "Azure Blob Storage", "Azure Cosmos DB", "Azure Event Grid", "Azure Event Hubs", "Azure Functions", "Azure Service Bus", "Cloud Native", "Coding", "CQRS", "Distributed Systems", "Event Sourcing", "Event Store", "Immutable Events", "Microservices", "Posts", "Projections", "Scalability", "Solution Architecture", "State Management"]
-tags_normalized: ["application insights", "architecture", "auditability", "azure", "azure blob storage", "azure cosmos db", "azure event grid", "azure event hubs", "azure functions", "azure service bus", "cloud native", "coding", "cqrs", "distributed systems", "event sourcing", "event store", "immutable events", "microservices", "posts", "projections", "scalability", "solution architecture", "state management"]
+tags: ["Application Insights", "Architecture", "Auditability", "Azure", "Azure Blob Storage", "Azure Cosmos DB", "Azure Event Grid", "Azure Event Hubs", "Azure Functions", "Azure Service Bus", "Cloud Native", "Coding", "CQRS", "Distributed Systems", "Event Sourcing", "Event Store", "Immutable Events", "Microservices", "Blogs", "Projections", "Scalability", "Solution Architecture", "State Management"]
+tags_normalized: ["application insights", "architecture", "auditability", "azure", "azure blob storage", "azure cosmos db", "azure event grid", "azure event hubs", "azure functions", "azure service bus", "cloud native", "coding", "cqrs", "distributed systems", "event sourcing", "event store", "immutable events", "microservices", "blogs", "projections", "scalability", "solution architecture", "state management"]
 ---
 
 Dellenny explores the Event Sourcing architectural pattern on Microsoft Azure, offering developers guidance on storing system state as events and utilizing Azure’s cloud services for scalable, maintainable solutions.<!--excerpt_end-->

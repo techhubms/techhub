@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-08-08 10:18:44 +00:00
 permalink: "/blogs/2025-08-08-Beginners-Guide-to-Microsoft-Copilot-Studio-Features-Uses-and-Getting-Started.html"
 categories: ["AI"]
-tags: ["AI", "AI Chatbots", "Azure AI", "Bot Development", "Conversational AI", "Copilot", "Dynamics 365", "Enterprise Security", "Generative AI", "Integration", "Low Code Development", "Microsoft Copilot Studio", "Microsoft Teams", "Natural Language", "Plugin Development", "Posts", "Power Platform", "SharePoint"]
-tags_normalized: ["ai", "ai chatbots", "azure ai", "bot development", "conversational ai", "copilot", "dynamics 365", "enterprise security", "generative ai", "integration", "low code development", "microsoft copilot studio", "microsoft teams", "natural language", "plugin development", "posts", "power platform", "sharepoint"]
+tags: ["AI", "AI Chatbots", "Azure AI", "Bot Development", "Conversational AI", "Copilot", "Dynamics 365", "Enterprise Security", "Generative AI", "Integration", "Low Code Development", "Microsoft Copilot Studio", "Microsoft Teams", "Natural Language", "Plugin Development", "Blogs", "Power Platform", "SharePoint"]
+tags_normalized: ["ai", "ai chatbots", "azure ai", "bot development", "conversational ai", "copilot", "dynamics 365", "enterprise security", "generative ai", "integration", "low code development", "microsoft copilot studio", "microsoft teams", "natural language", "plugin development", "blogs", "power platform", "sharepoint"]
 ---
 
 Dellenny introduces Microsoft Copilot Studio, providing a clear overview of this low-code AI development tool for beginners looking to create and deploy intelligent copilots and chatbots without deep coding expertise.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-09-04 13:48:28 +00:00
 permalink: "/blogs/2025-09-04-Troubleshooting-SharePoint-Search-Result-Issues.html"
 categories: ["Coding"]
-tags: ["Coding", "Crawling", "Indexing", "Managed Properties", "Metadata", "Microsoft 365", "Microsoft Search", "Office 365", "PnP Modern Search", "Posts", "Search Customization", "Search Schema", "Search Troubleshooting", "SharePoint", "SharePoint Search", "User Training"]
-tags_normalized: ["coding", "crawling", "indexing", "managed properties", "metadata", "microsoft 365", "microsoft search", "office 365", "pnp modern search", "posts", "search customization", "search schema", "search troubleshooting", "sharepoint", "sharepoint search", "user training"]
+tags: ["Coding", "Crawling", "Indexing", "Managed Properties", "Metadata", "Microsoft 365", "Microsoft Search", "Office 365", "PnP Modern Search", "Blogs", "Search Customization", "Search Schema", "Search Troubleshooting", "SharePoint", "SharePoint Search", "User Training"]
+tags_normalized: ["coding", "crawling", "indexing", "managed properties", "metadata", "microsoft 365", "microsoft search", "office 365", "pnp modern search", "blogs", "search customization", "search schema", "search troubleshooting", "sharepoint", "sharepoint search", "user training"]
 ---
 
 Dellenny provides a practical guide on how to diagnose and resolve issues with SharePoint search, offering actionable steps and highlighting key features for administrators and power users.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-11-05 10:05:40 +00:00
 permalink: "/blogs/2025-11-05-How-Microsoft-Azure-Ensures-Data-Privacy-and-Global-Compliance.html"
 categories: ["Azure", "Security"]
-tags: ["Audit", "Azure", "Azure Compliance Manager", "Azure Key Vault", "Cloud Governance", "Cloud Security", "Compliance", "Compliance Certifications", "Data Privacy", "Data Residency", "Data Sovereignty", "Encryption", "FedRAMP", "GDPR", "HIPAA", "ISO 27001", "Microsoft Azure", "Microsoft Defender For Cloud", "Microsoft Purview", "Posts", "Secure Cloud", "Security", "Zero Trust"]
-tags_normalized: ["audit", "azure", "azure compliance manager", "azure key vault", "cloud governance", "cloud security", "compliance", "compliance certifications", "data privacy", "data residency", "data sovereignty", "encryption", "fedramp", "gdpr", "hipaa", "iso 27001", "microsoft azure", "microsoft defender for cloud", "microsoft purview", "posts", "secure cloud", "security", "zero trust"]
+tags: ["Audit", "Azure", "Azure Compliance Manager", "Azure Key Vault", "Cloud Governance", "Cloud Security", "Compliance", "Compliance Certifications", "Data Privacy", "Data Residency", "Data Sovereignty", "Encryption", "FedRAMP", "GDPR", "HIPAA", "ISO 27001", "Microsoft Azure", "Microsoft Defender For Cloud", "Microsoft Purview", "Blogs", "Secure Cloud", "Security", "Zero Trust"]
+tags_normalized: ["audit", "azure", "azure compliance manager", "azure key vault", "cloud governance", "cloud security", "compliance", "compliance certifications", "data privacy", "data residency", "data sovereignty", "encryption", "fedramp", "gdpr", "hipaa", "iso 27001", "microsoft azure", "microsoft defender for cloud", "microsoft purview", "blogs", "secure cloud", "security", "zero trust"]
 ---
 
 Dellenny reviews how Microsoft Azure delivers enterprise-grade data privacy and global compliance, outlining core security practices, regional controls, and powerful governance tools for organizations with strict regulatory needs.<!--excerpt_end-->

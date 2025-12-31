@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-08-26 13:55:02 +00:00
 permalink: "/blogs/2025-08-26-The-EUs-Cyber-Resilience-Act-Redefining-Secure-Software-Development.html"
 categories: ["DevOps", "Security"]
-tags: ["Compliance", "Cyber Resilience Act", "DevOps", "DevSecOps", "ENISA", "EU", "EU Regulations", "Incident Reporting", "Open Source", "Patch Management", "Posts", "Risk Analysis", "SBOM", "Secure Software Development", "Security", "Security By Design", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Software Lifecycle", "Software Updates", "Techstrong Council", "Vulnerability Management"]
-tags_normalized: ["compliance", "cyber resilience act", "devops", "devsecops", "enisa", "eu", "eu regulations", "incident reporting", "open source", "patch management", "posts", "risk analysis", "sbom", "secure software development", "security", "security by design", "social facebook", "social linkedin", "social x", "software development", "software lifecycle", "software updates", "techstrong council", "vulnerability management"]
+tags: ["Compliance", "Cyber Resilience Act", "DevOps", "DevSecOps", "ENISA", "EU", "EU Regulations", "Incident Reporting", "Open Source", "Patch Management", "Blogs", "Risk Analysis", "SBOM", "Secure Software Development", "Security", "Security By Design", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Software Lifecycle", "Software Updates", "Techstrong Council", "Vulnerability Management"]
+tags_normalized: ["compliance", "cyber resilience act", "devops", "devsecops", "enisa", "eu", "eu regulations", "incident reporting", "open source", "patch management", "blogs", "risk analysis", "sbom", "secure software development", "security", "security by design", "social facebook", "social linkedin", "social x", "software development", "software lifecycle", "software updates", "techstrong council", "vulnerability management"]
 ---
 
 Thabang Mashologu discusses the transformative impact of the EU’s Cyber Resilience Act on software development practices, outlining core security and compliance requirements for DevOps and security teams.<!--excerpt_end-->

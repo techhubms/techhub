@@ -254,7 +254,7 @@ Each functional documentation file should explain:
 
 ### Writing Standards
 
-**For content files** (news, posts, videos, community, roundups in `collections/`):
+**For content files** (news, blogs, videos, community, roundups in `collections/`):
 
 - Follow [../collections/writing-style-guidelines.md](../collections/writing-style-guidelines.md) for tone, voice, and language standards
 - Follow [../collections/markdown-guidelines.md](../collections/markdown-guidelines.md) for markdown formatting and structure

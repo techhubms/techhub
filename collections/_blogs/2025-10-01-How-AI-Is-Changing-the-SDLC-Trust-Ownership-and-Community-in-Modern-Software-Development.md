@@ -11,8 +11,8 @@ feed_url: "https://www.arresteddevops.com/episode/index.xml"
 date: 2025-10-01 13:36:13 +00:00
 permalink: "/blogs/2025-10-01-How-AI-Is-Changing-the-SDLC-Trust-Ownership-and-Community-in-Modern-Software-Development.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "AI Fluency", "AI Integration", "AI Validation", "Best Practices", "Blue Green Deployments", "Code Ownership", "Community Learning", "Continuous Delivery", "DevOps", "DevOps Transformation", "Guardrails", "LLM", "Non Deterministic Systems", "Platform Engineering", "Posts", "Software Development Lifecycle"]
-tags_normalized: ["ai", "ai agents", "ai fluency", "ai integration", "ai validation", "best practices", "blue green deployments", "code ownership", "community learning", "continuous delivery", "devops", "devops transformation", "guardrails", "llm", "non deterministic systems", "platform engineering", "posts", "software development lifecycle"]
+tags: ["AI", "AI Agents", "AI Fluency", "AI Integration", "AI Validation", "Best Practices", "Blue Green Deployments", "Code Ownership", "Community Learning", "Continuous Delivery", "DevOps", "DevOps Transformation", "Guardrails", "LLM", "Non Deterministic Systems", "Platform Engineering", "Blogs", "Software Development Lifecycle"]
+tags_normalized: ["ai", "ai agents", "ai fluency", "ai integration", "ai validation", "best practices", "blue green deployments", "code ownership", "community learning", "continuous delivery", "devops", "devops transformation", "guardrails", "llm", "non deterministic systems", "platform engineering", "blogs", "software development lifecycle"]
 ---
 
 Matty Stratton hosts a discussion with Hannah Foxwell and Robert Werner on how AI is reshaping the software development lifecycle. They examine trust, code ownership, and the importance of community and best practices in adopting AI for DevOps.<!--excerpt_end-->

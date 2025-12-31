@@ -85,7 +85,7 @@ mcp_context7_get-library-docs(context7CompatibleLibraryID: "/jekyll/jekyll", top
 **Key Documentation Areas** (available at https://jekyllrb.com/docs/):
 
 - **Pages**: Page creation, frontmatter, permalinks
-- **Posts**: Blogs, drafts, categories, tags
+- **Posts**: Content items, drafts, categories, tags
 - **Collections**: Custom content types, configuration
 - **Data Files**: YAML, JSON, CSV data usage
 - **Assets**: Managing CSS, JavaScript, images
@@ -106,7 +106,7 @@ mcp_context7_get-library-docs(context7CompatibleLibraryID: "/jekyll/jekyll", top
 - When working with Liquid templating logic
 - When modifying plugins or creating new ones
 - When questions about Jekyll configuration arise
-- When implementing collections, pages, or posts functionality
+- When implementing collections, pages, or content items (aka posts) functionality
 
 **Benefits**:
 
@@ -420,10 +420,10 @@ Always derive sections, collections, categories from configuration files.
 **Standard Date Conversion Pattern:**
 
 ```liquid
-{%- assign post_epoch = post.date | date_to_epoch -%}
+{%- assign item_epoch = item.date | date_to_epoch -%}
 {%- comment -%} now_epoch is available globally via Jekyll hooks -%}
-{%- if post_epoch >= now_epoch -%}
-  <!-- Future or current post -->
+{%- if item_epoch >= now_epoch -%}
+  <!-- Future or current item -->
 {%- endif -%}
 ```
 
@@ -622,7 +622,7 @@ Reference as `include.tags` and `include.blogs` within the included file.
 {%- comment -%} "post" variable = any collection item -%}
 {%- for post in filtered_articles -%}
   {%- comment -%} "post-title" CSS class = works for any content type -%}
-  <div class="post-title">{{ post.title }}</div>
+  <div class="post-title">{{ item.title }}</div>
 {%- endfor -%}
 ```
 
@@ -634,7 +634,7 @@ Reference as `include.tags` and `include.blogs` within the included file.
 {%- comment -%} "post" variable = any collection item -%}
 {%- for post in filtered_articles -%}
   {%- comment -%} "post-title" CSS class = works for any content type -%}
-  <div class="post-title">{{ post.title }}</div>
+  <div class="post-title">{{ item.title }}</div>
 {%- endfor -%}
 ```
 
@@ -687,14 +687,14 @@ pwsh /workspaces/techhub/scripts/jekyll-start.ps1 -SkipStop -SkipClean -BuildIns
 ```liquid
 {%- comment -%} ✅ Good - efficient, clean, uses filters -%}
 {%- assign current_epoch = '' | now_epoch -%}
-{%- assign filtered_blogs = site.blogs | where_exp: "post", "post.date | date_to_epoch >= current_epoch" -%}
+{%- assign filtered_blogs = site.blogs | where_exp: "post", "item.date | date_to_epoch >= current_epoch" -%}
 {%- assign limited_blogs = filtered_blogs | limit_with_same_day: 20 -%}
 
-{%- for post in limited_blogs -%}
+{%- for blog in limited_blogs -%}
   <article>
-    <h2>{{ post.title }}</h2>
-    <time datetime="{{ post.date | date_to_xmlschema }}">
-      {{ post.date | date: "%B %d, %Y" }}
+    <h2>{{ blog.title }}</h2>
+    <time datetime="{{ blog.date | date_to_xmlschema }}">
+      {{ blog.date | date: "%B %d, %Y" }}
     </time>
   </article>
 {%- endfor -%}
@@ -707,10 +707,10 @@ pwsh /workspaces/techhub/scripts/jekyll-start.ps1 -SkipStop -SkipClean -BuildIns
 {%- assign now = site.time | date: "%s" -%}
 {%- assign count = 0 -%}
 {%- for post in site.blogs -%}
-  {%- assign post_time = post.date | date: "%s" -%}
+  {%- assign post_time = item.date | date: "%s" -%}
   {%- if post_time >= now and count < 20 -%}
     {%- assign count = count | plus: 1 -%}
-    <article>{{ post.title }}</article>
+    <article>{{ item.title }}</article>
   {%- endif -%}
 {%- endfor -%}
 ```

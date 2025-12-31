@@ -14,7 +14,7 @@ function Get-FrontmatterDate {
     System.DateTime
     
     .EXAMPLE
-    $content = Get-Content "post.md" -Raw
+    $content = Get-Content "item.md" -Raw
     $date = Get-FrontmatterDate -Content $content
     #>
     

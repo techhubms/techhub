@@ -371,7 +371,7 @@ Describe "Get-FilteredTags" {
     }
     
     Context "Integration with Real Data" {
-        It "Should process typical blog post tags correctly" {
+        It "Should process typical blogs tags correctly" {
             $typicalTags = @(
                 "github-copilot",
                 "azure-ai", 

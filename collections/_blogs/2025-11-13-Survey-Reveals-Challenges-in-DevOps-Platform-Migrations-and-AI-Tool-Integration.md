@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-11-13 02:44:52 +00:00
 permalink: "/blogs/2025-11-13-Survey-Reveals-Challenges-in-DevOps-Platform-Migrations-and-AI-Tool-Integration.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Tool Integration", "Cloudbees", "Compliance", "Developer Productivity", "DevOps", "Enterprise IT", "Platform Engineering", "Platform Migration", "Posts", "Real Time Analytics", "Security", "Security Integrations", "Social Facebook", "Social LinkedIn", "Social X", "Survey", "Tool Sprawl", "Workflow Optimization"]
-tags_normalized: ["ai", "ai tool integration", "cloudbees", "compliance", "developer productivity", "devops", "enterprise it", "platform engineering", "platform migration", "posts", "real time analytics", "security", "security integrations", "social facebook", "social linkedin", "social x", "survey", "tool sprawl", "workflow optimization"]
+tags: ["AI", "AI Tool Integration", "Cloudbees", "Compliance", "Developer Productivity", "DevOps", "Enterprise IT", "Platform Engineering", "Platform Migration", "Blogs", "Real Time Analytics", "Security", "Security Integrations", "Social Facebook", "Social LinkedIn", "Social X", "Survey", "Tool Sprawl", "Workflow Optimization"]
+tags_normalized: ["ai", "ai tool integration", "cloudbees", "compliance", "developer productivity", "devops", "enterprise it", "platform engineering", "platform migration", "blogs", "real time analytics", "security", "security integrations", "social facebook", "social linkedin", "social x", "survey", "tool sprawl", "workflow optimization"]
 ---
 
 Mike Vizard discusses a survey of enterprise technology leaders, exploring the real-world difficulties of DevOps platform migrations, the risks of AI integration without review, and the impact on developer morale and security.<!--excerpt_end-->

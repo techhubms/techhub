@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-09-12 14:37:28 +00:00
 permalink: "/blogs/2025-09-12-Bringing-Trust-and-Governance-to-AI-Driven-DevOps.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "AI Driven DevOps", "AI Governance", "AI Integration", "DevOps", "DevOps Tooling", "DevOps Transformation", "Governance", "ITSM", "JFrog", "JFrog Swampup", "NVIDIA", "Panel Discussion", "Posts", "Productivity", "Resilience", "ServiceNow", "Software Supply Chain", "Traceability", "Video Interviews"]
-tags_normalized: ["ai", "ai agents", "ai driven devops", "ai governance", "ai integration", "devops", "devops tooling", "devops transformation", "governance", "itsm", "jfrog", "jfrog swampup", "nvidia", "panel discussion", "posts", "productivity", "resilience", "servicenow", "software supply chain", "traceability", "video interviews"]
+tags: ["AI", "AI Agents", "AI Driven DevOps", "AI Governance", "AI Integration", "DevOps", "DevOps Tooling", "DevOps Transformation", "Governance", "ITSM", "JFrog", "JFrog Swampup", "NVIDIA", "Panel Discussion", "Blogs", "Productivity", "Resilience", "ServiceNow", "Software Supply Chain", "Traceability", "Video Interviews"]
+tags_normalized: ["ai", "ai agents", "ai driven devops", "ai governance", "ai integration", "devops", "devops tooling", "devops transformation", "governance", "itsm", "jfrog", "jfrog swampup", "nvidia", "panel discussion", "blogs", "productivity", "resilience", "servicenow", "software supply chain", "traceability", "video interviews"]
 ---
 
 Alan Shimel shares perspectives from industry leaders on how organizations are building trust and governance into AI-driven DevOps transformations, with a focus on productivity, security, and strategic alignment.<!--excerpt_end-->

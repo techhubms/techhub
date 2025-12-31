@@ -11,8 +11,8 @@ feed_url: "https://www.thomasmaurer.ch/feed/"
 date: 2025-07-30 09:37:46 +00:00
 permalink: "/blogs/2025-07-30-Design-AI-Workloads-with-the-Azure-Well-Architected-Framework.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "AI Workloads", "Assessment Tools", "Azure", "Azure Essentials Show", "Azure PaaS", "Azure SaaS", "Azure Well Architected Framework", "Cloud", "Cloud Architecture", "Cost Optimization", "Ethical AI", "Microsoft", "Microsoft Azure", "Model Decay", "Operational Excellence", "Performance Efficiency", "Posts", "Reliability", "Thomas Maurer", "Well Architected Framework"]
-tags_normalized: ["ai", "ai workloads", "assessment tools", "azure", "azure essentials show", "azure paas", "azure saas", "azure well architected framework", "cloud", "cloud architecture", "cost optimization", "ethical ai", "microsoft", "microsoft azure", "model decay", "operational excellence", "performance efficiency", "posts", "reliability", "thomas maurer", "well architected framework"]
+tags: ["AI", "AI Workloads", "Assessment Tools", "Azure", "Azure Essentials Show", "Azure PaaS", "Azure SaaS", "Azure Well Architected Framework", "Cloud", "Cloud Architecture", "Cost Optimization", "Ethical AI", "Microsoft", "Microsoft Azure", "Model Decay", "Operational Excellence", "Performance Efficiency", "Blogs", "Reliability", "Thomas Maurer", "Well Architected Framework"]
+tags_normalized: ["ai", "ai workloads", "assessment tools", "azure", "azure essentials show", "azure paas", "azure saas", "azure well architected framework", "cloud", "cloud architecture", "cost optimization", "ethical ai", "microsoft", "microsoft azure", "model decay", "operational excellence", "performance efficiency", "blogs", "reliability", "thomas maurer", "well architected framework"]
 ---
 
 In this post, Thomas Maurer discusses a recent Azure Essentials Show episode featuring Clayton Siemens, focusing on best practices for designing AI workloads on Azure using the Well-Architected Framework.<!--excerpt_end-->

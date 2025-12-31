@@ -11,8 +11,8 @@ feed_name: "Jesse Swart's Blog"
 feed_url: "https://blog.jesseswart.nl/index.xml"
 date: 2024-06-24 14:06:14 +00:00
 permalink: "/blogs/2024-06-24-TDD-with-GitHub-Copilot-in-Python.html"
-tags: ["AI", "Coding", "GitHub Copilot", "Personal Finance", "Posts", "Python", "TDD", "Testing"]
-tags_normalized: ["ai", "coding", "github copilot", "personal finance", "posts", "python", "tdd", "testing"]
+tags: ["AI", "Coding", "GitHub Copilot", "Personal Finance", "Blogs", "Python", "TDD", "Testing"]
+tags_normalized: ["ai", "coding", "github copilot", "personal finance", "blogs", "python", "tdd", "testing"]
 ---
 
 In this article, Jesse Swart shares insights into trying out Test-Driven Development (TDD) in Python, leveraging GitHub Copilot as an assistant. <!--excerpt_end--> Jesse, though experienced with Python coding, had not practiced TDD in Python before. To test Copilot's capabilities in aiding TDD, Jesse decided to build a personal finance administration system, a topic with which they already had some familiarity.

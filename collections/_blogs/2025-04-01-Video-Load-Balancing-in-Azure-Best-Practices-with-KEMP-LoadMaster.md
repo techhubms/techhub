@@ -11,8 +11,8 @@ feed_url: "https://www.thomasmaurer.ch/feed/"
 date: 2025-04-01 12:18:55 +00:00
 permalink: "/blogs/2025-04-01-Video-Load-Balancing-in-Azure-Best-Practices-with-KEMP-LoadMaster.html"
 categories: ["Azure"]
-tags: ["Azure", "Cloud", "Cloud Architecture", "Cloud Computing", "Hybrid Cloud", "KEMP", "KEMP LoadMaster", "Load Balancing", "Loadmaster", "Microsoft", "Microsoft Azure", "Networking", "On Premises", "Posts", "Progress"]
-tags_normalized: ["azure", "cloud", "cloud architecture", "cloud computing", "hybrid cloud", "kemp", "kemp loadmaster", "load balancing", "loadmaster", "microsoft", "microsoft azure", "networking", "on premises", "posts", "progress"]
+tags: ["Azure", "Cloud", "Cloud Architecture", "Cloud Computing", "Hybrid Cloud", "KEMP", "KEMP LoadMaster", "Load Balancing", "Loadmaster", "Microsoft", "Microsoft Azure", "Networking", "On Premises", "Blogs", "Progress"]
+tags_normalized: ["azure", "cloud", "cloud architecture", "cloud computing", "hybrid cloud", "kemp", "kemp loadmaster", "load balancing", "loadmaster", "microsoft", "microsoft azure", "networking", "on premises", "blogs", "progress"]
 ---
 
 In this post, Thomas Maurer speaks with Kurt Jung from Progress about load balancing strategies in Azure using KEMP LoadMaster. Their conversation provides practical guidance for cloud, hybrid, and on-premises network architectures.<!--excerpt_end-->

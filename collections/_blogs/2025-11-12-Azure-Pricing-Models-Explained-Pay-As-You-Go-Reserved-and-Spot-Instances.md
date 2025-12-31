@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-11-12 15:56:44 +00:00
 permalink: "/blogs/2025-11-12-Azure-Pricing-Models-Explained-Pay-As-You-Go-Reserved-and-Spot-Instances.html"
 categories: ["Azure"]
-tags: ["Azure", "Azure Advisor", "Azure Cost Management", "Azure Pricing", "Budget Management", "Cloud Billing", "Cloud Computing", "Cloud Resource Management", "Cost Optimization", "Hybrid Cloud", "Pay as You Go", "Posts", "Reserved Instances", "Spot Instances", "VM Sizing", "Workload Planning"]
-tags_normalized: ["azure", "azure advisor", "azure cost management", "azure pricing", "budget management", "cloud billing", "cloud computing", "cloud resource management", "cost optimization", "hybrid cloud", "pay as you go", "posts", "reserved instances", "spot instances", "vm sizing", "workload planning"]
+tags: ["Azure", "Azure Advisor", "Azure Cost Management", "Azure Pricing", "Budget Management", "Cloud Billing", "Cloud Computing", "Cloud Resource Management", "Cost Optimization", "Hybrid Cloud", "Pay as You Go", "Blogs", "Reserved Instances", "Spot Instances", "VM Sizing", "Workload Planning"]
+tags_normalized: ["azure", "azure advisor", "azure cost management", "azure pricing", "budget management", "cloud billing", "cloud computing", "cloud resource management", "cost optimization", "hybrid cloud", "pay as you go", "blogs", "reserved instances", "spot instances", "vm sizing", "workload planning"]
 ---
 
 Dellenny explains the differences between Pay-As-You-Go, Reserved, and Spot Instances on Azure, empowering readers to optimize cloud costs based on workload demands.<!--excerpt_end-->

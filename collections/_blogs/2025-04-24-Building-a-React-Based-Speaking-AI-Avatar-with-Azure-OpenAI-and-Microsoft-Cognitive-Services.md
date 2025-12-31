@@ -11,8 +11,8 @@ feed_url: "https://harrybin.de/rss.xml"
 date: 2025-04-24 22:00:00 +00:00
 permalink: "/blogs/2025-04-24-Building-a-React-Based-Speaking-AI-Avatar-with-Azure-OpenAI-and-Microsoft-Cognitive-Services.html"
 categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AnimationMixer", "Avatar", "Azure", "Azure OpenAI", "Coding", "GLTFLoader", "Lip Syncing", "Microsoft Cognitive Services", "Posts", "React", "React Three Fiber", "Speech Integration", "Speech SDK", "SSML", "Three.js", "Viseme", "WebRTC"]
-tags_normalized: ["ai", "animationmixer", "avatar", "azure", "azure openai", "coding", "gltfloader", "lip syncing", "microsoft cognitive services", "posts", "react", "react three fiber", "speech integration", "speech sdk", "ssml", "threedotjs", "viseme", "webrtc"]
+tags: ["AI", "AnimationMixer", "Avatar", "Azure", "Azure OpenAI", "Coding", "GLTFLoader", "Lip Syncing", "Microsoft Cognitive Services", "Blogs", "React", "React Three Fiber", "Speech Integration", "Speech SDK", "SSML", "Three.js", "Viseme", "WebRTC"]
+tags_normalized: ["ai", "animationmixer", "avatar", "azure", "azure openai", "coding", "gltfloader", "lip syncing", "microsoft cognitive services", "blogs", "react", "react three fiber", "speech integration", "speech sdk", "ssml", "threedotjs", "viseme", "webrtc"]
 ---
 
 In this detailed guide, Harald Binkle demonstrates how to build a React-based AI avatar UI. The tutorial covers integrating Azure OpenAI, Microsoft Cognitive Services, and implementing avatar lip-syncing for truly interactive AI conversations.<!--excerpt_end-->

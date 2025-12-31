@@ -11,8 +11,8 @@ feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-10-17 00:00:00 +00:00
 permalink: "/blogs/2025-10-17-Treat-Your-AI-Prompts-Like-Code.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".prompt.md", "AI", "AI Prompts", "Coding", "Copilot Chat", "Copilot Instructions.md", "Development Workflow", "DevOps", "Git", "GitHub Copilot", "Posts", "Prompt Documentation", "Prompt Engineering", "Prompt Review", "Pull Requests", "Team Collaboration", "Version Control"]
-tags_normalized: ["dotpromptdotmd", "ai", "ai prompts", "coding", "copilot chat", "copilot instructionsdotmd", "development workflow", "devops", "git", "github copilot", "posts", "prompt documentation", "prompt engineering", "prompt review", "pull requests", "team collaboration", "version control"]
+tags: [".prompt.md", "AI", "AI Prompts", "Coding", "Copilot Chat", "Copilot Instructions.md", "Development Workflow", "DevOps", "Git", "GitHub Copilot", "Blogs", "Prompt Documentation", "Prompt Engineering", "Prompt Review", "Pull Requests", "Team Collaboration", "Version Control"]
+tags_normalized: ["dotpromptdotmd", "ai", "ai prompts", "coding", "copilot chat", "copilot instructionsdotmd", "development workflow", "devops", "git", "github copilot", "blogs", "prompt documentation", "prompt engineering", "prompt review", "pull requests", "team collaboration", "version control"]
 ---
 
 Randy Pagels explains why developers should manage AI prompts like code—using Git, code reviews, and clear documentation for continuous improvement.<!--excerpt_end-->

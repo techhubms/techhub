@@ -11,8 +11,8 @@ feed_url: "https://khalidabuhakmeh.com/feed.xml"
 date: 2025-02-11 00:00:00 +00:00
 permalink: "/blogs/2025-02-11-Handling-Large-Cookies-in-ASPNET-Core-with-ChunkingCookieManager.html"
 categories: ["Coding"]
-tags: [".NET", "ASP.NET", "ASP.NET Core", "ChunkingCookieManager", "Coding", "CookieOptions", "Cookies", "Cookies Size Limit", "HTTP", "HttpContext", "ICookieManager", "Minimal APIs", "Posts", "Session Management", "Web Development"]
-tags_normalized: ["dotnet", "aspdotnet", "aspdotnet core", "chunkingcookiemanager", "coding", "cookieoptions", "cookies", "cookies size limit", "http", "httpcontext", "icookiemanager", "minimal apis", "posts", "session management", "web development"]
+tags: [".NET", "ASP.NET", "ASP.NET Core", "ChunkingCookieManager", "Coding", "CookieOptions", "Cookies", "Cookies Size Limit", "HTTP", "HttpContext", "ICookieManager", "Minimal APIs", "Blogs", "Session Management", "Web Development"]
+tags_normalized: ["dotnet", "aspdotnet", "aspdotnet core", "chunkingcookiemanager", "coding", "cookieoptions", "cookies", "cookies size limit", "http", "httpcontext", "icookiemanager", "minimal apis", "blogs", "session management", "web development"]
 ---
 
 Khalid Abuhakmeh discusses practical cookie management in ASP.NET Core, focusing on overcoming size limitations using the ChunkingCookieManager. This guide is ideal for developers confronted with storing substantial session data securely and efficiently.<!--excerpt_end-->

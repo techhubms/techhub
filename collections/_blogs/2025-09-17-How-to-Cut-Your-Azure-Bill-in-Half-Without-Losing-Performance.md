@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-09-17 10:19:24 +00:00
 permalink: "/blogs/2025-09-17-How-to-Cut-Your-Azure-Bill-in-Half-Without-Losing-Performance.html"
 categories: ["Azure"]
-tags: ["Azure", "Azure Advisor", "Azure Automation", "Azure Blob Storage", "Azure Cost Management", "Azure Monitor", "Budgets And Alerts", "Cloud Cost Optimization", "Dev/Test Environments", "Hybrid Benefit", "Lifecycle Management", "Logic Apps", "Posts", "Reserved Instances", "Resource Tagging", "Savings Plans", "Virtual Machines"]
-tags_normalized: ["azure", "azure advisor", "azure automation", "azure blob storage", "azure cost management", "azure monitor", "budgets and alerts", "cloud cost optimization", "devslashtest environments", "hybrid benefit", "lifecycle management", "logic apps", "posts", "reserved instances", "resource tagging", "savings plans", "virtual machines"]
+tags: ["Azure", "Azure Advisor", "Azure Automation", "Azure Blob Storage", "Azure Cost Management", "Azure Monitor", "Budgets And Alerts", "Cloud Cost Optimization", "Dev/Test Environments", "Hybrid Benefit", "Lifecycle Management", "Logic Apps", "Blogs", "Reserved Instances", "Resource Tagging", "Savings Plans", "Virtual Machines"]
+tags_normalized: ["azure", "azure advisor", "azure automation", "azure blob storage", "azure cost management", "azure monitor", "budgets and alerts", "cloud cost optimization", "devslashtest environments", "hybrid benefit", "lifecycle management", "logic apps", "blogs", "reserved instances", "resource tagging", "savings plans", "virtual machines"]
 ---
 
 Dellenny offers a detailed, step-by-step breakdown of proven techniques for cutting Azure cloud bills by up to 50%—without sacrificing workload performance—using in-built Azure tools and hands-on cost management best practices.<!--excerpt_end-->

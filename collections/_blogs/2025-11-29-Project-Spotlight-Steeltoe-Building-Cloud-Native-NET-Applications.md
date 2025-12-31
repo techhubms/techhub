@@ -11,8 +11,8 @@ feed_url: "https://dotnetfoundation.org/feeds/blog"
 date: 2025-11-29 13:46:22 +00:00
 permalink: "/blogs/2025-11-29-Project-Spotlight-Steeltoe-Building-Cloud-Native-NET-Applications.html"
 categories: ["Coding"]
-tags: [".NET", "Application Management", "Cloud Native", "Coding", "Distributed Tracing", "Enterprise Applications", "Externalized Configuration", "Microservices", "Posts", "Productivity Tools", "Service Discovery", "Spring Cloud", "Steeltoe", "Web Applications"]
-tags_normalized: ["dotnet", "application management", "cloud native", "coding", "distributed tracing", "enterprise applications", "externalized configuration", "microservices", "posts", "productivity tools", "service discovery", "spring cloud", "steeltoe", "web applications"]
+tags: [".NET", "Application Management", "Cloud Native", "Coding", "Distributed Tracing", "Enterprise Applications", "Externalized Configuration", "Microservices", "Blogs", "Productivity Tools", "Service Discovery", "Spring Cloud", "Steeltoe", "Web Applications"]
+tags_normalized: ["dotnet", "application management", "cloud native", "coding", "distributed tracing", "enterprise applications", "externalized configuration", "microservices", "blogs", "productivity tools", "service discovery", "spring cloud", "steeltoe", "web applications"]
 ---
 
 .NET Foundation News and Blog introduces Steeltoe, a robust toolkit for .NET developers focused on building secure, scalable, cloud-native applications and microservices.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-10-21 09:48:21 +00:00
 permalink: "/blogs/2025-10-21-What-Is-the-GitHub-Copilot-Certification-and-Why-It-Matters-for-Developers.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Certification", "Copilot Features", "Developer Skills", "Digital Badges", "Enterprise Readiness", "Exam Preparation", "GitHib Copilot", "GitHub Copilot", "GitHub Copilot Certification", "Microsoft", "Posts", "Privacy in AI", "Prompt Engineering", "Responsible AI", "Software Development", "Workflow Efficiency"]
-tags_normalized: ["ai", "ai certification", "copilot features", "developer skills", "digital badges", "enterprise readiness", "exam preparation", "githib copilot", "github copilot", "github copilot certification", "microsoft", "posts", "privacy in ai", "prompt engineering", "responsible ai", "software development", "workflow efficiency"]
+tags: ["AI", "AI Certification", "Copilot Features", "Developer Skills", "Digital Badges", "Enterprise Readiness", "Exam Preparation", "GitHib Copilot", "GitHub Copilot", "GitHub Copilot Certification", "Microsoft", "Blogs", "Privacy in AI", "Prompt Engineering", "Responsible AI", "Software Development", "Workflow Efficiency"]
+tags_normalized: ["ai", "ai certification", "copilot features", "developer skills", "digital badges", "enterprise readiness", "exam preparation", "githib copilot", "github copilot", "github copilot certification", "microsoft", "blogs", "privacy in ai", "prompt engineering", "responsible ai", "software development", "workflow efficiency"]
 ---
 
 Dellenny explains the GitHub Copilot Certification, detailing its importance for developers, the skills it covers, and steps for effective exam preparation.<!--excerpt_end-->

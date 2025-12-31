@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-12-14 11:19:02 +00:00
 permalink: "/blogs/2025-12-14-No-Code-AI-How-Non-Developers-Can-Build-Smart-Chatbots-with-Copilot-Studio.html"
 categories: ["AI"]
-tags: ["AI", "AI Chatbot Design", "Azure AI Services", "Bot Deployment", "Business Automation", "Chatbots", "Conversational AI", "Copilot", "Copilot Studio", "Dataverse", "Generative AI", "Microsoft 365 Integration", "Microsoft Copilot Studio", "No Code AI", "Posts", "Power Platform", "User Experience", "Visual Flow Builder"]
-tags_normalized: ["ai", "ai chatbot design", "azure ai services", "bot deployment", "business automation", "chatbots", "conversational ai", "copilot", "copilot studio", "dataverse", "generative ai", "microsoft 365 integration", "microsoft copilot studio", "no code ai", "posts", "power platform", "user experience", "visual flow builder"]
+tags: ["AI", "AI Chatbot Design", "Azure AI Services", "Bot Deployment", "Business Automation", "Chatbots", "Conversational AI", "Copilot", "Copilot Studio", "Dataverse", "Generative AI", "Microsoft 365 Integration", "Microsoft Copilot Studio", "No Code AI", "Blogs", "Power Platform", "User Experience", "Visual Flow Builder"]
+tags_normalized: ["ai", "ai chatbot design", "azure ai services", "bot deployment", "business automation", "chatbots", "conversational ai", "copilot", "copilot studio", "dataverse", "generative ai", "microsoft 365 integration", "microsoft copilot studio", "no code ai", "blogs", "power platform", "user experience", "visual flow builder"]
 ---
 
 John Edward offers a practical, non-technical guide on building intelligent chatbots with Microsoft Copilot Studio, empowering non-developers to leverage no-code AI and create business-ready copilots.<!--excerpt_end-->

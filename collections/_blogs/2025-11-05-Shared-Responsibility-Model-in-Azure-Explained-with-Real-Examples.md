@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-11-05 11:06:55 +00:00
 permalink: "/blogs/2025-11-05-Shared-Responsibility-Model-in-Azure-Explained-with-Real-Examples.html"
 categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Active Directory", "Azure Key Vault", "Cloud Security", "Compliance", "Data Governance", "IaaS", "Identity And Access Management", "Microsoft 365", "Network Security", "Operational Responsibility", "PaaS", "Posts", "SaaS", "Security", "Security Best Practices", "Shared Responsibility Model"]
-tags_normalized: ["azure", "azure active directory", "azure key vault", "cloud security", "compliance", "data governance", "iaas", "identity and access management", "microsoft 365", "network security", "operational responsibility", "paas", "posts", "saas", "security", "security best practices", "shared responsibility model"]
+tags: ["Azure", "Azure Active Directory", "Azure Key Vault", "Cloud Security", "Compliance", "Data Governance", "IaaS", "Identity And Access Management", "Microsoft 365", "Network Security", "Operational Responsibility", "PaaS", "Blogs", "SaaS", "Security", "Security Best Practices", "Shared Responsibility Model"]
+tags_normalized: ["azure", "azure active directory", "azure key vault", "cloud security", "compliance", "data governance", "iaas", "identity and access management", "microsoft 365", "network security", "operational responsibility", "paas", "blogs", "saas", "security", "security best practices", "shared responsibility model"]
 ---
 
 Dellenny discusses the Shared Responsibility Model in Azure, illustrating how security roles are divided between Microsoft and the customer, with practical real-world examples and clear advice.<!--excerpt_end-->

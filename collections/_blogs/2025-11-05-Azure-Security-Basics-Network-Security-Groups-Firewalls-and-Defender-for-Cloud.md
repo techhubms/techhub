@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-11-05 09:26:10 +00:00
 permalink: "/blogs/2025-11-05-Azure-Security-Basics-Network-Security-Groups-Firewalls-and-Defender-for-Cloud.html"
 categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Firewall", "Azure Monitor", "Cloud Architecture", "Cloud Security", "Defense in Depth", "Firewall Policies", "Incident Response", "Just in Time Access", "Log Analytics", "Microsoft Defender For Cloud", "Network Security Group", "NSG", "Posts", "Security", "Security Auditing", "Security Posture Management", "Security Recommendations", "Threat Intelligence", "Virtual Networks", "Zero Trust"]
-tags_normalized: ["azure", "azure firewall", "azure monitor", "cloud architecture", "cloud security", "defense in depth", "firewall policies", "incident response", "just in time access", "log analytics", "microsoft defender for cloud", "network security group", "nsg", "posts", "security", "security auditing", "security posture management", "security recommendations", "threat intelligence", "virtual networks", "zero trust"]
+tags: ["Azure", "Azure Firewall", "Azure Monitor", "Cloud Architecture", "Cloud Security", "Defense in Depth", "Firewall Policies", "Incident Response", "Just in Time Access", "Log Analytics", "Microsoft Defender For Cloud", "Network Security Group", "NSG", "Blogs", "Security", "Security Auditing", "Security Posture Management", "Security Recommendations", "Threat Intelligence", "Virtual Networks", "Zero Trust"]
+tags_normalized: ["azure", "azure firewall", "azure monitor", "cloud architecture", "cloud security", "defense in depth", "firewall policies", "incident response", "just in time access", "log analytics", "microsoft defender for cloud", "network security group", "nsg", "blogs", "security", "security auditing", "security posture management", "security recommendations", "threat intelligence", "virtual networks", "zero trust"]
 ---
 
 Dellenny provides a practitioner-focused walkthrough on securing Azure networks using Network Security Groups, Azure Firewall, and Defender for Cloud, outlining practical strategies and best practices for cloud security.<!--excerpt_end-->

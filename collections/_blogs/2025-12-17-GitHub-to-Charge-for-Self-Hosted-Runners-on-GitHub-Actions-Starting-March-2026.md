@@ -11,8 +11,8 @@ feed_url: "https://devclass.com/feed/"
 date: 2025-12-17 11:55:59 +00:00
 permalink: "/blogs/2025-12-17-GitHub-to-Charge-for-Self-Hosted-Runners-on-GitHub-Actions-Starting-March-2026.html"
 categories: ["DevOps"]
-tags: ["Actions Data Stream", "Actions Runner Controller", "CI/CD", "Cloud Infrastructure", "Continuous Integration", "Depot", "Developer Tooling", "Development", "DevOps", "GitHub", "GitHub Actions", "GitHub Enterprise Server", "Microsoft", "Posts", "Pricing Change", "Self Hosted Runners", "Workflow Automation"]
-tags_normalized: ["actions data stream", "actions runner controller", "cislashcd", "cloud infrastructure", "continuous integration", "depot", "developer tooling", "development", "devops", "github", "github actions", "github enterprise server", "microsoft", "posts", "pricing change", "self hosted runners", "workflow automation"]
+tags: ["Actions Data Stream", "Actions Runner Controller", "CI/CD", "Cloud Infrastructure", "Continuous Integration", "Depot", "Developer Tooling", "Development", "DevOps", "GitHub", "GitHub Actions", "GitHub Enterprise Server", "Microsoft", "Blogs", "Pricing Change", "Self Hosted Runners", "Workflow Automation"]
+tags_normalized: ["actions data stream", "actions runner controller", "cislashcd", "cloud infrastructure", "continuous integration", "depot", "developer tooling", "development", "devops", "github", "github actions", "github enterprise server", "microsoft", "blogs", "pricing change", "self hosted runners", "workflow automation"]
 ---
 
 Tim Anderson examines GitHub's decision to introduce per-minute fees for self-hosted runners used with GitHub Actions starting March 2026, and discusses the developer community's reactions and the wider DevOps ecosystem.<!--excerpt_end-->

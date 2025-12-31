@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-11-12 19:24:36 +00:00
 permalink: "/blogs/2025-11-12-Vibe-Coding-vs-Spec-Driven-Development-Finding-Balance-in-the-AI-Era.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Copilots", "Automation", "AWS", "Code Review", "Development Workflow", "DevOps", "Feedback Loops", "Generative AI", "Observability", "Posts", "Quality Assurance", "Software Engineering", "Spec Driven Development", "Technical Debt", "Vibe Coding", "Video Interviews"]
-tags_normalized: ["ai", "ai copilots", "automation", "aws", "code review", "development workflow", "devops", "feedback loops", "generative ai", "observability", "posts", "quality assurance", "software engineering", "spec driven development", "technical debt", "vibe coding", "video interviews"]
+tags: ["AI", "AI Copilots", "Automation", "AWS", "Code Review", "Development Workflow", "DevOps", "Feedback Loops", "Generative AI", "Observability", "Blogs", "Quality Assurance", "Software Engineering", "Spec Driven Development", "Technical Debt", "Vibe Coding", "Video Interviews"]
+tags_normalized: ["ai", "ai copilots", "automation", "aws", "code review", "development workflow", "devops", "feedback loops", "generative ai", "observability", "blogs", "quality assurance", "software engineering", "spec driven development", "technical debt", "vibe coding", "video interviews"]
 ---
 
 Alan Shimel presents an overview of David Yanacek’s perspective on vibe coding versus spec-driven development, examining how generative AI, DevOps automation, and structured engineering can be balanced in modern software projects.<!--excerpt_end-->

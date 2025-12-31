@@ -11,8 +11,8 @@ feed_url: "https://feeds.feedburner.com/rickstrahl"
 date: 2025-02-22 08:09:36 +00:00
 permalink: "/blogs/2025-02-22-Retrieving-Images-from-the-Clipboard-Reliably-in-WPF-Revisited.html"
 categories: ["Coding"]
-tags: [".NET", "Bitmap", "C#", "Clipboard", "Coding", "ImageSource", "Interop", "Markdown Monster", "MemoryStream", "Performance", "PixelFormat", "Posts", "Transparency", "UI Development", "Windows", "Windows Forms", "WPF"]
-tags_normalized: ["dotnet", "bitmap", "csharp", "clipboard", "coding", "imagesource", "interop", "markdown monster", "memorystream", "performance", "pixelformat", "posts", "transparency", "ui development", "windows", "windows forms", "wpf"]
+tags: [".NET", "Bitmap", "C#", "Clipboard", "Coding", "ImageSource", "Interop", "Markdown Monster", "MemoryStream", "Performance", "PixelFormat", "Blogs", "Transparency", "UI Development", "Windows", "Windows Forms", "WPF"]
+tags_normalized: ["dotnet", "bitmap", "csharp", "clipboard", "coding", "imagesource", "interop", "markdown monster", "memorystream", "performance", "pixelformat", "blogs", "transparency", "ui development", "windows", "windows forms", "wpf"]
 ---
 
 In this post, Rick Strahl reviews the long-standing problems with image data retrieval from the Windows clipboard in WPF, and demonstrates robust solutions using intermediary bitmaps and pixel format fixes. He includes code samples and performance notes for developers working with UI image handling.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://jessehouwing.net/rss/"
 date: 2025-04-16 15:50:33 +00:00
 permalink: "/blogs/2025-04-16-How-to-Create-GitHub-Issue-Hierarchies-via-the-API-REST-and-GraphQL-Approaches.html"
 categories: ["DevOps"]
-tags: ["Automation", "CLI", "DevOps", "GitHub", "GitHub API", "GitHub Issues", "GitHub Projects", "GraphQL", "Issue Hierarchies", "Posts", "PowerShell", "Projects", "REST API"]
-tags_normalized: ["automation", "cli", "devops", "github", "github api", "github issues", "github projects", "graphql", "issue hierarchies", "posts", "powershell", "projects", "rest api"]
+tags: ["Automation", "CLI", "DevOps", "GitHub", "GitHub API", "GitHub Issues", "GitHub Projects", "GraphQL", "Issue Hierarchies", "Blogs", "PowerShell", "Projects", "REST API"]
+tags_normalized: ["automation", "cli", "devops", "github", "github api", "github issues", "github projects", "graphql", "issue hierarchies", "blogs", "powershell", "projects", "rest api"]
 ---
 
 In this technical walkthrough, Jesse Houwing explains how to automate the new parent-child hierarchy feature in GitHub Issues using REST and GraphQL APIs, along with CLI scripting tips.<!--excerpt_end-->
@@ -82,8 +82,8 @@ feed_url: https://jessehouwing.net/rss/
 date: 2025-04-16 15:50:33 +00:00
 permalink: "2025-04-16-How-to-Create-GitHub-Issue-Hierarchies-via-the-API-REST-and-GraphQL-Approaches.html"
 categories: ["DevOps"]
-tags: ["Automation", "CLI", "DevOps", "GitHub", "GitHub API", "GitHub Issues", "GitHub Projects", "GraphQL", "Issue Hierarchies", "Posts", "PowerShell", "Projects", "REST API"]
-tags_normalized: [["automation", "cli", "devops", "github", "github api", "github issues", "github projects", "graphql", "issue hierarchies", "posts", "powershell", "projects", "rest api"]]
+tags: ["Automation", "CLI", "DevOps", "GitHub", "GitHub API", "GitHub Issues", "GitHub Projects", "GraphQL", "Issue Hierarchies", "Blogs", "PowerShell", "Projects", "REST API"]
+tags_normalized: [["automation", "cli", "devops", "github", "github api", "github issues", "github projects", "graphql", "issue hierarchies", "blogs", "powershell", "projects", "rest api"]]
 ---
 
 In this technical walkthrough, Jesse Houwing explains how to automate the new parent-child hierarchy feature in GitHub Issues using REST and GraphQL APIs, along with CLI scripting tips.<!--excerpt_end-->

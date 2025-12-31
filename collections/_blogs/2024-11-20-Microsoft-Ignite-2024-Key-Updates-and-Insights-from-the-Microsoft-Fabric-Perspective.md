@@ -11,8 +11,8 @@ feed_url: "https://zure.com/category/blog/feed/?tag=dataai"
 date: 2024-11-20 06:19:29 +00:00
 permalink: "/blogs/2024-11-20-Microsoft-Ignite-2024-Key-Updates-and-Insights-from-the-Microsoft-Fabric-Perspective.html"
 categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Skills", "Azure", "CI/CD", "Copilot", "Data & AI", "Data Integration", "Data Platform", "Ignite", "Lakehouse", "Microsoft Fabric", "ML", "OneLake", "Open Mirroring", "Posts", "Real Time Intelligence", "Semantic Models", "Streaming Data"]
-tags_normalized: ["ai", "ai skills", "azure", "cislashcd", "copilot", "data and ai", "data integration", "data platform", "ignite", "lakehouse", "microsoft fabric", "ml", "onelake", "open mirroring", "posts", "real time intelligence", "semantic models", "streaming data"]
+tags: ["AI", "AI Skills", "Azure", "CI/CD", "Copilot", "Data & AI", "Data Integration", "Data Platform", "Ignite", "Lakehouse", "Microsoft Fabric", "ML", "OneLake", "Open Mirroring", "Blogs", "Real Time Intelligence", "Semantic Models", "Streaming Data"]
+tags_normalized: ["ai", "ai skills", "azure", "cislashcd", "copilot", "data and ai", "data integration", "data platform", "ignite", "lakehouse", "microsoft fabric", "ml", "onelake", "open mirroring", "blogs", "real time intelligence", "semantic models", "streaming data"]
 ---
 
 In this article, Samu Niemelä highlights the most significant Microsoft Fabric announcements from Ignite 2024, providing detailed insights for data and AI practitioners.<!--excerpt_end-->

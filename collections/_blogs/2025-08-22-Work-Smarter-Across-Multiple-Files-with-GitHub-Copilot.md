@@ -11,8 +11,8 @@ feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-08-22 00:00:00 +00:00
 permalink: "/blogs/2025-08-22-Work-Smarter-Across-Multiple-Files-with-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Authentication", "Code Navigation", "Code Refactoring", "Copilot Chat", "Cross File Editing", "Developer Workflow", "Edit Mode", "GitHub Copilot", "Multi File Context", "Posts", "Project Structure", "Testing"]
-tags_normalized: ["agent mode", "ai", "authentication", "code navigation", "code refactoring", "copilot chat", "cross file editing", "developer workflow", "edit mode", "github copilot", "multi file context", "posts", "project structure", "testing"]
+tags: ["Agent Mode", "AI", "Authentication", "Code Navigation", "Code Refactoring", "Copilot Chat", "Cross File Editing", "Developer Workflow", "Edit Mode", "GitHub Copilot", "Multi File Context", "Blogs", "Project Structure", "Testing"]
+tags_normalized: ["agent mode", "ai", "authentication", "code navigation", "code refactoring", "copilot chat", "cross file editing", "developer workflow", "edit mode", "github copilot", "multi file context", "blogs", "project structure", "testing"]
 ---
 
 Randy Pagels explains how to leverage GitHub Copilot’s multi-file context abilities to connect logic, refactor code, and reason across entire projects for smarter development.<!--excerpt_end-->

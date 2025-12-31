@@ -11,8 +11,8 @@ feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-05-13 09:00:00 +00:00
 permalink: "/blogs/2025-05-13-Building-a-Website-Aware-Chatbot-with-the-NET-AI-Chat-Web-App-Template.html"
 categories: ["AI", "Coding"]
-tags: [".NET", ".NET Core", "AI", "AngleSharp", "ASP.NET Core", "Aspire", "Chatbot", "Cite Answers", "Coding", "IIngestionSource", "LLM", "Microsoft.Extensions.AI.Templates", "OpenAI", "Posts", "Retrieval Augmented Generation", "Semantic Kernel", "Textify", "Vector Embeddings", "Web Scraping"]
-tags_normalized: ["dotnet", "dotnet core", "ai", "anglesharp", "aspdotnet core", "aspire", "chatbot", "cite answers", "coding", "iingestionsource", "llm", "microsoftdotextensionsdotaidottemplates", "openai", "posts", "retrieval augmented generation", "semantic kernel", "textify", "vector embeddings", "web scraping"]
+tags: [".NET", ".NET Core", "AI", "AngleSharp", "ASP.NET Core", "Aspire", "Chatbot", "Cite Answers", "Coding", "IIngestionSource", "LLM", "Microsoft.Extensions.AI.Templates", "OpenAI", "Blogs", "Retrieval Augmented Generation", "Semantic Kernel", "Textify", "Vector Embeddings", "Web Scraping"]
+tags_normalized: ["dotnet", "dotnet core", "ai", "anglesharp", "aspdotnet core", "aspire", "chatbot", "cite answers", "coding", "iingestionsource", "llm", "microsoftdotextensionsdotaidottemplates", "openai", "blogs", "retrieval augmented generation", "semantic kernel", "textify", "vector embeddings", "web scraping"]
 ---
 
 Andrew Lock guides readers through extending the .NET AI Chat Web App template to build a chatbot that understands website content and answers with citations. The post includes code examples, insights, and performance observations.<!--excerpt_end-->

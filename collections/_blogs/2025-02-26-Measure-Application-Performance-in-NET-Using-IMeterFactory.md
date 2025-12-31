@@ -11,8 +11,8 @@ feed_url: "https://code-maze.com/feed/"
 date: 2025-02-26 08:47:52 +00:00
 permalink: "/blogs/2025-02-26-Measure-Application-Performance-in-NET-Using-IMeterFactory.html"
 categories: ["Coding"]
-tags: [".NET", ".NET Counters", "ASP.NET Core", "C#", "Coding", "Dependency Injection", "IMeterFactory", "MetricCollector", "Metrics", "Performance", "Performance Monitoring", "Posts", "Swagger UI", "System.Diagnostics.Metrics", "Testing", "Web API"]
-tags_normalized: ["dotnet", "dotnet counters", "aspdotnet core", "csharp", "coding", "dependency injection", "imeterfactory", "metriccollector", "metrics", "performance", "performance monitoring", "posts", "swagger ui", "systemdotdiagnosticsdotmetrics", "testing", "web api"]
+tags: [".NET", ".NET Counters", "ASP.NET Core", "C#", "Coding", "Dependency Injection", "IMeterFactory", "MetricCollector", "Metrics", "Performance", "Performance Monitoring", "Blogs", "Swagger UI", "System.Diagnostics.Metrics", "Testing", "Web API"]
+tags_normalized: ["dotnet", "dotnet counters", "aspdotnet core", "csharp", "coding", "dependency injection", "imeterfactory", "metriccollector", "metrics", "performance", "performance monitoring", "blogs", "swagger ui", "systemdotdiagnosticsdotmetrics", "testing", "web api"]
 ---
 
 Authored by Muhammed Saleem, this article explores practical techniques for integrating and utilizing IMeterFactory to measure and optimize application performance in .NET, focusing on metrics collection and monitoring within ASP.NET Core applications.<!--excerpt_end-->

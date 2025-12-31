@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-07-23 08:34:05 +00:00
 permalink: "/blogs/2025-07-23-Scalability-Patterns-in-the-Cloud-AWS-and-Azure-Approaches.html"
 categories: ["Azure"]
-tags: ["App Service Plan", "Application Gateway", "Architecture", "Architecture Patterns", "Auto Scaling", "Azure", "Azure Functions", "Azure Load Balancer", "Cloud Scalability", "Horizontal Scaling", "Load Leveling", "Posts", "Queue Storage", "Serverless", "Service Bus", "Solution Architecture", "Virtual Machine Scale Sets"]
-tags_normalized: ["app service plan", "application gateway", "architecture", "architecture patterns", "auto scaling", "azure", "azure functions", "azure load balancer", "cloud scalability", "horizontal scaling", "load leveling", "posts", "queue storage", "serverless", "service bus", "solution architecture", "virtual machine scale sets"]
+tags: ["App Service Plan", "Application Gateway", "Architecture", "Architecture Patterns", "Auto Scaling", "Azure", "Azure Functions", "Azure Load Balancer", "Cloud Scalability", "Horizontal Scaling", "Load Leveling", "Blogs", "Queue Storage", "Serverless", "Service Bus", "Solution Architecture", "Virtual Machine Scale Sets"]
+tags_normalized: ["app service plan", "application gateway", "architecture", "architecture patterns", "auto scaling", "azure", "azure functions", "azure load balancer", "cloud scalability", "horizontal scaling", "load leveling", "blogs", "queue storage", "serverless", "service bus", "solution architecture", "virtual machine scale sets"]
 ---
 
 Dellenny outlines cloud scalability patterns—horizontal scaling, auto-scaling, and queue-based load leveling—showing how to implement each using Microsoft Azure services, with practical advice for technical readers.<!--excerpt_end-->

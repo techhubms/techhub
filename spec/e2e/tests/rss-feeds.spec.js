@@ -7,15 +7,15 @@ const {
 test.describe('RSS Feeds', () => {
 
   const rssFeeds = [
-    { name: 'Everything', url: '/rss/feed.xml', section: 'all' },
-    { name: 'AI', url: '/rss/ai.xml', section: 'ai' },
-    { name: 'GitHub Copilot', url: '/rss/github-copilot.xml', section: 'github-copilot' },
-    { name: 'ML', url: '/rss/ml.xml', section: 'ml' },
-    { name: 'Azure', url: '/rss/azure.xml', section: 'azure' },
-    { name: 'Coding', url: '/rss/coding.xml', section: 'coding' },
-    { name: 'DevOps', url: '/rss/devops.xml', section: 'devops' },
-    { name: 'Security', url: '/rss/security.xml', section: 'security' },
-    { name: 'Roundups', url: '/rss/roundups.xml', section: 'roundups' }
+    { name: 'Everything', url: '/feed.xml', section: 'all' },
+    { name: 'AI', url: '/ai/feed.xml', section: 'ai' },
+    { name: 'GitHub Copilot', url: '/github-copilot/feed.xml', section: 'github-copilot' },
+    { name: 'ML', url: '/ml/feed.xml', section: 'ml' },
+    { name: 'Azure', url: '/azure/feed.xml', section: 'azure' },
+    { name: 'Coding', url: '/coding/feed.xml', section: 'coding' },
+    { name: 'DevOps', url: '/devops/feed.xml', section: 'devops' },
+    { name: 'Security', url: '/security/feed.xml', section: 'security' },
+    { name: 'Roundups', url: '/roundups/feed.xml', section: 'roundups' }
   ];
 
   for (const feed of rssFeeds) {
@@ -138,7 +138,7 @@ test.describe('RSS Feeds', () => {
     });
 
     // Verify footer RSS link is present
-    const footerRssLink = page.locator('footer a[href="/rss/feed.xml"]');
+    const footerRssLink = page.locator('footer a[href="/all/feed.xml"]');
     await expect(footerRssLink).toBeVisible();
 
     // Verify the link text

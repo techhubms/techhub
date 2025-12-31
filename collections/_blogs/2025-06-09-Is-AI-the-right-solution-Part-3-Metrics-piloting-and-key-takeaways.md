@@ -11,8 +11,8 @@ feed_url: "https://hiddedesmet.com/feed.xml"
 date: 2025-06-09 08:00:00 +00:00
 permalink: "/blogs/2025-06-09-Is-AI-the-right-solution-Part-3-Metrics-piloting-and-key-takeaways.html"
 categories: ["AI"]
-tags: ["AI", "Business Alignment", "Ethical AI", "IASA", "Iteration", "KPIs", "Metrics", "Pilot Projects", "Piloting", "Posts", "Project Validation", "ROI", "Series", "Success Metrics"]
-tags_normalized: ["ai", "business alignment", "ethical ai", "iasa", "iteration", "kpis", "metrics", "pilot projects", "piloting", "posts", "project validation", "roi", "series", "success metrics"]
+tags: ["AI", "Business Alignment", "Ethical AI", "IASA", "Iteration", "KPIs", "Metrics", "Pilot Projects", "Piloting", "Blogs", "Project Validation", "ROI", "Series", "Success Metrics"]
+tags_normalized: ["ai", "business alignment", "ethical ai", "iasa", "iteration", "kpis", "metrics", "pilot projects", "piloting", "blogs", "project validation", "roi", "series", "success metrics"]
 ---
 
 In this concluding article, Hidde de Smet guides readers through defining success metrics, piloting, and essential learnings for effective and responsible AI project implementation.<!--excerpt_end-->

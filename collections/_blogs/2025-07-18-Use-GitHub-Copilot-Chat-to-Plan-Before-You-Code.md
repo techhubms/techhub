@@ -11,8 +11,8 @@ feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-07-18 00:00:00 +00:00
 permalink: "/blogs/2025-07-18-Use-GitHub-Copilot-Chat-to-Plan-Before-You-Code.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Code Design", "Code Outline", "Coding Workflow", "Copilot Chat", "Developer Productivity", "Developer Tools", "Edge Cases", "GitHub Copilot", "JavaScript", "Logic Structure", "Pair Programming", "Planning Prompts", "Posts", "Prompt Engineering", "Software Planning"]
-tags_normalized: ["ai", "code design", "code outline", "coding workflow", "copilot chat", "developer productivity", "developer tools", "edge cases", "github copilot", "javascript", "logic structure", "pair programming", "planning prompts", "posts", "prompt engineering", "software planning"]
+tags: ["AI", "Code Design", "Code Outline", "Coding Workflow", "Copilot Chat", "Developer Productivity", "Developer Tools", "Edge Cases", "GitHub Copilot", "JavaScript", "Logic Structure", "Pair Programming", "Planning Prompts", "Blogs", "Prompt Engineering", "Software Planning"]
+tags_normalized: ["ai", "code design", "code outline", "coding workflow", "copilot chat", "developer productivity", "developer tools", "edge cases", "github copilot", "javascript", "logic structure", "pair programming", "planning prompts", "blogs", "prompt engineering", "software planning"]
 ---
 
 Randy Pagels demonstrates how GitHub Copilot Chat can act as a planning companion for developers, helping clarify structure and logic before starting code.<!--excerpt_end-->

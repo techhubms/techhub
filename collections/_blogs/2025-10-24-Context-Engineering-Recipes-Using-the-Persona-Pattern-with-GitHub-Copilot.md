@@ -11,8 +11,8 @@ feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-10-24 00:00:00 +00:00
 permalink: "/blogs/2025-10-24-Context-Engineering-Recipes-Using-the-Persona-Pattern-with-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Code Review", "Context Engineering", "Developer Tools", "Development Workflow", "Documentation", "GitHub Copilot", "Persona Pattern", "Posts", "Programming Productivity", "Prompt Engineering", "Testing"]
-tags_normalized: ["ai", "ai assistant", "code review", "context engineering", "developer tools", "development workflow", "documentation", "github copilot", "persona pattern", "posts", "programming productivity", "prompt engineering", "testing"]
+tags: ["AI", "AI Assistant", "Code Review", "Context Engineering", "Developer Tools", "Development Workflow", "Documentation", "GitHub Copilot", "Persona Pattern", "Blogs", "Programming Productivity", "Prompt Engineering", "Testing"]
+tags_normalized: ["ai", "ai assistant", "code review", "context engineering", "developer tools", "development workflow", "documentation", "github copilot", "persona pattern", "blogs", "programming productivity", "prompt engineering", "testing"]
 ---
 
 Randy Pagels shares actionable strategies for guiding GitHub Copilot using the Persona Pattern, helping developers customize Copilot's role and improve answer quality.<!--excerpt_end-->

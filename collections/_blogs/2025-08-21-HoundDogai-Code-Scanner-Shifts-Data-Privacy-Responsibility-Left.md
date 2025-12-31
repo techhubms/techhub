@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-08-21 14:00:40 +00:00
 permalink: "/blogs/2025-08-21-HoundDogai-Code-Scanner-Shifts-Data-Privacy-Responsibility-Left.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Integration", "AI Security", "Audit Reporting", "CI/CD", "Code Scanning", "Compliance", "Data Loss Prevention", "Data Privacy", "DevOps", "DevSecOps", "Eclipse", "GDPR", "HoundDog.ai", "JetBrains", "LLM Security", "PHI", "PIA", "PII", "Posts", "Privacy By Design", "Security", "Shift Left", "Social Facebook", "Social LinkedIn", "Social X", "Static Code Analysis", "VS Code"]
-tags_normalized: ["ai", "ai integration", "ai security", "audit reporting", "cislashcd", "code scanning", "compliance", "data loss prevention", "data privacy", "devops", "devsecops", "eclipse", "gdpr", "hounddogdotai", "jetbrains", "llm security", "phi", "pia", "pii", "posts", "privacy by design", "security", "shift left", "social facebook", "social linkedin", "social x", "static code analysis", "vs code"]
+tags: ["AI", "AI Integration", "AI Security", "Audit Reporting", "CI/CD", "Code Scanning", "Compliance", "Data Loss Prevention", "Data Privacy", "DevOps", "DevSecOps", "Eclipse", "GDPR", "HoundDog.ai", "JetBrains", "LLM Security", "PHI", "PIA", "PII", "Blogs", "Privacy By Design", "Security", "Shift Left", "Social Facebook", "Social LinkedIn", "Social X", "Static Code Analysis", "VS Code"]
+tags_normalized: ["ai", "ai integration", "ai security", "audit reporting", "cislashcd", "code scanning", "compliance", "data loss prevention", "data privacy", "devops", "devsecops", "eclipse", "gdpr", "hounddogdotai", "jetbrains", "llm security", "phi", "pia", "pii", "blogs", "privacy by design", "security", "shift left", "social facebook", "social linkedin", "social x", "static code analysis", "vs code"]
 ---
 
 Mike Vizard covers the general availability of HoundDog.ai, a static code scanner built to help DevSecOps and privacy teams manage sensitive data within AI development workflows.<!--excerpt_end-->

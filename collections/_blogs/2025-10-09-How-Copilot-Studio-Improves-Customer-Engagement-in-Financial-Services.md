@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-10-09 07:16:46 +00:00
 permalink: "/blogs/2025-10-09-How-Copilot-Studio-Improves-Customer-Engagement-in-Financial-Services.html"
 categories: ["AI"]
-tags: ["AI", "Automation", "Chatbots", "Compliance", "Conversational Agents", "Copilot", "Copilot Studio", "Customer Engagement", "Data Privacy", "Financial Services", "KYC", "Low Code", "Microsoft", "No Code", "Personalization", "Posts", "Power Platform"]
-tags_normalized: ["ai", "automation", "chatbots", "compliance", "conversational agents", "copilot", "copilot studio", "customer engagement", "data privacy", "financial services", "kyc", "low code", "microsoft", "no code", "personalization", "posts", "power platform"]
+tags: ["AI", "Automation", "Chatbots", "Compliance", "Conversational Agents", "Copilot", "Copilot Studio", "Customer Engagement", "Data Privacy", "Financial Services", "KYC", "Low Code", "Microsoft", "No Code", "Personalization", "Blogs", "Power Platform"]
+tags_normalized: ["ai", "automation", "chatbots", "compliance", "conversational agents", "copilot", "copilot studio", "customer engagement", "data privacy", "financial services", "kyc", "low code", "microsoft", "no code", "personalization", "blogs", "power platform"]
 ---
 
 Dellenny explains how Microsoft Copilot Studio allows financial organizations to improve customer engagement with custom AI agents, discussing core benefits, challenges, and practical best practices.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-08-25 15:19:02 +00:00
 permalink: "/blogs/2025-08-25-John-Willis-The-True-North-of-DevOps-and-DevSecOps.html"
 categories: ["DevOps", "Security"]
-tags: ["Automation", "Behavioral Change", "CAMS", "Continuous Improvement", "Culture", "DASP", "DevOps", "DevSecOps", "John Willis", "Measurement", "Posts", "Security", "Security Ownership", "Security Patterns", "Sharing", "Social Facebook", "Social LinkedIn", "Social X", "Software Development"]
-tags_normalized: ["automation", "behavioral change", "cams", "continuous improvement", "culture", "dasp", "devops", "devsecops", "john willis", "measurement", "posts", "security", "security ownership", "security patterns", "sharing", "social facebook", "social linkedin", "social x", "software development"]
+tags: ["Automation", "Behavioral Change", "CAMS", "Continuous Improvement", "Culture", "DASP", "DevOps", "DevSecOps", "John Willis", "Measurement", "Blogs", "Security", "Security Ownership", "Security Patterns", "Sharing", "Social Facebook", "Social LinkedIn", "Social X", "Software Development"]
+tags_normalized: ["automation", "behavioral change", "cams", "continuous improvement", "culture", "dasp", "devops", "devsecops", "john willis", "measurement", "blogs", "security", "security ownership", "security patterns", "sharing", "social facebook", "social linkedin", "social x", "software development"]
 ---
 
 Alan Shimel highlights the impact of John Willis on the DevOps and DevSecOps communities, focusing on foundational frameworks and the cultural shift required for security and collaboration.<!--excerpt_end-->

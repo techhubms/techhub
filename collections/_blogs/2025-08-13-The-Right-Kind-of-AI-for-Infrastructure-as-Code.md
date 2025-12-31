@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-08-13 16:33:28 +00:00
 permalink: "/blogs/2025-08-13-The-Right-Kind-of-AI-for-Infrastructure-as-Code.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["Agentic AI", "AI", "AI in DevOps", "Alert Fatigue", "CIS", "Cloud", "Cloud Compliance", "Cloud Security", "Contributed Content", "DevOps", "DevOps Automation", "IaC", "Merge Requests", "NIST", "Platform Engineering", "Policy as Code", "Posts", "Remediation Tools", "Security", "Security Automation", "Security Remediation", "Social Facebook", "Social LinkedIn", "Social X"]
-tags_normalized: ["agentic ai", "ai", "ai in devops", "alert fatigue", "cis", "cloud", "cloud compliance", "cloud security", "contributed content", "devops", "devops automation", "iac", "merge requests", "nist", "platform engineering", "policy as code", "posts", "remediation tools", "security", "security automation", "security remediation", "social facebook", "social linkedin", "social x"]
+tags: ["Agentic AI", "AI", "AI in DevOps", "Alert Fatigue", "CIS", "Cloud", "Cloud Compliance", "Cloud Security", "Contributed Content", "DevOps", "DevOps Automation", "IaC", "Merge Requests", "NIST", "Platform Engineering", "Policy as Code", "Blogs", "Remediation Tools", "Security", "Security Automation", "Security Remediation", "Social Facebook", "Social LinkedIn", "Social X"]
+tags_normalized: ["agentic ai", "ai", "ai in devops", "alert fatigue", "cis", "cloud", "cloud compliance", "cloud security", "contributed content", "devops", "devops automation", "iac", "merge requests", "nist", "platform engineering", "policy as code", "blogs", "remediation tools", "security", "security automation", "security remediation", "social facebook", "social linkedin", "social x"]
 ---
 
 Ian Amit explores how AI can be effectively applied to Infrastructure as Code, highlighting crucial gaps in current cloud security tools and explaining what attributes make AI truly valuable for DevOps and security teams.<!--excerpt_end-->

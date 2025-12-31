@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-09-30 15:59:01 +00:00
 permalink: "/blogs/2025-09-30-Survey-Reveals-DevOps-Bottlenecks-Created-by-AI-Generated-Code.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Adoption", "AI Generated Code", "AI Tools", "Code", "Continuous Delivery", "DevOps", "Governance", "Harness", "Large Language Models", "Pipeline Automation", "Posts", "Production Incidents", "Productivity", "Sdlc", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Software Engineering", "Software Vulnerabilities", "Survey"]
-tags_normalized: ["ai", "ai adoption", "ai generated code", "ai tools", "code", "continuous delivery", "devops", "governance", "harness", "large language models", "pipeline automation", "posts", "production incidents", "productivity", "sdlc", "social facebook", "social linkedin", "social x", "software delivery", "software engineering", "software vulnerabilities", "survey"]
+tags: ["AI", "AI Adoption", "AI Generated Code", "AI Tools", "Code", "Continuous Delivery", "DevOps", "Governance", "Harness", "Large Language Models", "Pipeline Automation", "Blogs", "Production Incidents", "Productivity", "Sdlc", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Software Engineering", "Software Vulnerabilities", "Survey"]
+tags_normalized: ["ai", "ai adoption", "ai generated code", "ai tools", "code", "continuous delivery", "devops", "governance", "harness", "large language models", "pipeline automation", "blogs", "production incidents", "productivity", "sdlc", "social facebook", "social linkedin", "social x", "software delivery", "software engineering", "software vulnerabilities", "survey"]
 ---
 
 Mike Vizard presents findings from a survey showing that AI code generation is speeding up development but also introducing new DevOps challenges, from downstream incidents to security concerns.<!--excerpt_end-->

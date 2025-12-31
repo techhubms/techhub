@@ -11,8 +11,8 @@ feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-03-28 00:00:00 +00:00
 permalink: "/blogs/2025-03-28-Modernize-Legacy-Code-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "API Updates", "Async/await", "Code Cleanup", "Code Modernization", "Coding", "Copilot Chat", "Copilot Edit", "GitHub Copilot", "JavaScript", "Legacy Code", "Posts", "Python", "React Hooks", "Refactoring", "Software Maintenance", "SQL"]
-tags_normalized: ["ai", "api updates", "asyncslashawait", "code cleanup", "code modernization", "coding", "copilot chat", "copilot edit", "github copilot", "javascript", "legacy code", "posts", "python", "react hooks", "refactoring", "software maintenance", "sql"]
+tags: ["AI", "API Updates", "Async/await", "Code Cleanup", "Code Modernization", "Coding", "Copilot Chat", "Copilot Edit", "GitHub Copilot", "JavaScript", "Legacy Code", "Blogs", "Python", "React Hooks", "Refactoring", "Software Maintenance", "SQL"]
+tags_normalized: ["ai", "api updates", "asyncslashawait", "code cleanup", "code modernization", "coding", "copilot chat", "copilot edit", "github copilot", "javascript", "legacy code", "blogs", "python", "react hooks", "refactoring", "software maintenance", "sql"]
 ---
 
 Randy Pagels explains how to leverage GitHub Copilot to update and refactor legacy codebases, offering actionable prompts and stepwise workflows for modernizing outdated software.<!--excerpt_end-->

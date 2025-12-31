@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-10-28 08:42:12 +00:00
 permalink: "/blogs/2025-10-28-Writing-Cleaner-Code-with-GitHub-Copilot-Suggestions.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Best Practices", "Clean Code", "Code Quality", "Code Review", "Code Suggestions", "Coding", "Developer Productivity", "GitHib Copilot", "GitHub Copilot", "Maintainability", "Posts", "Refactoring", "Software Development", "Test Generation"]
-tags_normalized: ["ai", "ai assisted development", "best practices", "clean code", "code quality", "code review", "code suggestions", "coding", "developer productivity", "githib copilot", "github copilot", "maintainability", "posts", "refactoring", "software development", "test generation"]
+tags: ["AI", "AI Assisted Development", "Best Practices", "Clean Code", "Code Quality", "Code Review", "Code Suggestions", "Coding", "Developer Productivity", "GitHib Copilot", "GitHub Copilot", "Maintainability", "Blogs", "Refactoring", "Software Development", "Test Generation"]
+tags_normalized: ["ai", "ai assisted development", "best practices", "clean code", "code quality", "code review", "code suggestions", "coding", "developer productivity", "githib copilot", "github copilot", "maintainability", "blogs", "refactoring", "software development", "test generation"]
 ---
 
 Dellenny shares actionable strategies for using GitHub Copilot to write cleaner, more maintainable code, highlighting best practices, pitfalls, and how AI-powered suggestions can enhance your software development workflow.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-10-23 19:33:45 +00:00
 permalink: "/blogs/2025-10-23-The-New-Metrics-of-DevOps-Speed-Trust-and-Transparency.html"
 categories: ["AI", "DevOps"]
-tags: ["Agentic Development", "AI", "Automation", "CI/CD", "DevOps", "Governance", "Infrastructure", "JFrog Swampup", "Observability", "Posts", "Release Velocity", "Risk Management", "Sdlc", "Software Development Lifecycle", "Video Interviews"]
-tags_normalized: ["agentic development", "ai", "automation", "cislashcd", "devops", "governance", "infrastructure", "jfrog swampup", "observability", "posts", "release velocity", "risk management", "sdlc", "software development lifecycle", "video interviews"]
+tags: ["Agentic Development", "AI", "Automation", "CI/CD", "DevOps", "Governance", "Infrastructure", "JFrog Swampup", "Observability", "Blogs", "Release Velocity", "Risk Management", "Sdlc", "Software Development Lifecycle", "Video Interviews"]
+tags_normalized: ["agentic development", "ai", "automation", "cislashcd", "devops", "governance", "infrastructure", "jfrog swampup", "observability", "blogs", "release velocity", "risk management", "sdlc", "software development lifecycle", "video interviews"]
 ---
 
 Alan Shimel discusses with Aman Sardana and Vijay Kumar Soni the evolving role of AI in DevOps at swampUP 2025, focusing on how metrics like speed, trust, and transparency are reshaping modern software delivery pipelines.<!--excerpt_end-->

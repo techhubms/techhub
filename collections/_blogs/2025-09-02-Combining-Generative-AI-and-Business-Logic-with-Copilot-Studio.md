@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-09-02 07:40:09 +00:00
 permalink: "/blogs/2025-09-02-Combining-Generative-AI-and-Business-Logic-with-Copilot-Studio.html"
 categories: ["AI"]
-tags: ["AI", "AI Assistant", "API Integration", "Business Logic", "Conversational AI", "Copilot", "Copilot Studio", "Data Connectors", "Digital Transformation", "Enterprise AI", "Enterprise Data", "Generative AI", "Low Code", "Microsoft", "Natural Language Processing", "Posts", "Power Automate", "Workflow Automation"]
-tags_normalized: ["ai", "ai assistant", "api integration", "business logic", "conversational ai", "copilot", "copilot studio", "data connectors", "digital transformation", "enterprise ai", "enterprise data", "generative ai", "low code", "microsoft", "natural language processing", "posts", "power automate", "workflow automation"]
+tags: ["AI", "AI Assistant", "API Integration", "Business Logic", "Conversational AI", "Copilot", "Copilot Studio", "Data Connectors", "Digital Transformation", "Enterprise AI", "Enterprise Data", "Generative AI", "Low Code", "Microsoft", "Natural Language Processing", "Blogs", "Power Automate", "Workflow Automation"]
+tags_normalized: ["ai", "ai assistant", "api integration", "business logic", "conversational ai", "copilot", "copilot studio", "data connectors", "digital transformation", "enterprise ai", "enterprise data", "generative ai", "low code", "microsoft", "natural language processing", "blogs", "power automate", "workflow automation"]
 ---
 
 Dellenny outlines how Copilot Studio enables enterprises to unite generative AI and business logic, empowering the design of intelligent, compliant copilots for real-world workflows.<!--excerpt_end-->

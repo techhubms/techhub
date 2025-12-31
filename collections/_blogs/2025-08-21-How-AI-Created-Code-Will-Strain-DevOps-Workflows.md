@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-08-21 16:30:04 +00:00
 permalink: "/blogs/2025-08-21-How-AI-Created-Code-Will-Strain-DevOps-Workflows.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Adoption", "AI Code Generation", "Automation", "CI/CD", "CI/CD Pipelines", "Continuous Deployment", "Continuous Integration", "DevOps", "DevOps Workflows", "Governance", "Infrastructure Management", "Pipeline Scalability", "Pipeline Templates", "Platform Engineering", "Posts", "Software Delivery", "Test Generation", "Troubleshooting", "Video Interviews"]
-tags_normalized: ["ai", "ai adoption", "ai code generation", "automation", "cislashcd", "cislashcd pipelines", "continuous deployment", "continuous integration", "devops", "devops workflows", "governance", "infrastructure management", "pipeline scalability", "pipeline templates", "platform engineering", "posts", "software delivery", "test generation", "troubleshooting", "video interviews"]
+tags: ["AI", "AI Adoption", "AI Code Generation", "Automation", "CI/CD", "CI/CD Pipelines", "Continuous Deployment", "Continuous Integration", "DevOps", "DevOps Workflows", "Governance", "Infrastructure Management", "Pipeline Scalability", "Pipeline Templates", "Platform Engineering", "Blogs", "Software Delivery", "Test Generation", "Troubleshooting", "Video Interviews"]
+tags_normalized: ["ai", "ai adoption", "ai code generation", "automation", "cislashcd", "cislashcd pipelines", "continuous deployment", "continuous integration", "devops", "devops workflows", "governance", "infrastructure management", "pipeline scalability", "pipeline templates", "platform engineering", "blogs", "software delivery", "test generation", "troubleshooting", "video interviews"]
 ---
 
 Mike Vizard shares insights from Nick Durkin on how the increasing reliance on AI-generated code impacts DevOps workflows, highlighting necessary pipeline changes and the importance of modern engineering governance.<!--excerpt_end-->

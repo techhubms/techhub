@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-09-19 14:51:16 +00:00
 permalink: "/blogs/2025-09-19-AI-Driven-Security-and-Automation-in-Modern-DevOps-Insights-from-JFrog-swampUP-2025.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["Agentic Repositories", "AI", "AI Agents", "AI in DevOps", "Automation", "Compliance", "Continuous Delivery", "DevOps", "DevOps Security", "Governance", "JFrog AppTrust", "JFrog Fly", "JFrog Swampup", "MCP", "Posts", "Production Systems", "Release Velocity", "Security", "Software Delivery", "Software Supply Chain", "Traceability", "Video Interviews"]
-tags_normalized: ["agentic repositories", "ai", "ai agents", "ai in devops", "automation", "compliance", "continuous delivery", "devops", "devops security", "governance", "jfrog apptrust", "jfrog fly", "jfrog swampup", "mcp", "posts", "production systems", "release velocity", "security", "software delivery", "software supply chain", "traceability", "video interviews"]
+tags: ["Agentic Repositories", "AI", "AI Agents", "AI in DevOps", "Automation", "Compliance", "Continuous Delivery", "DevOps", "DevOps Security", "Governance", "JFrog AppTrust", "JFrog Fly", "JFrog Swampup", "MCP", "Blogs", "Production Systems", "Release Velocity", "Security", "Software Delivery", "Software Supply Chain", "Traceability", "Video Interviews"]
+tags_normalized: ["agentic repositories", "ai", "ai agents", "ai in devops", "automation", "compliance", "continuous delivery", "devops", "devops security", "governance", "jfrog apptrust", "jfrog fly", "jfrog swampup", "mcp", "blogs", "production systems", "release velocity", "security", "software delivery", "software supply chain", "traceability", "video interviews"]
 ---
 
 Alan Shimel interviews JFrog CTO Yoav Landman at swampUP 2025, exploring how AI, automation, and governance features like AppTrust and Fly are transforming secure software delivery.<!--excerpt_end-->

@@ -328,7 +328,7 @@ async function getLatestFileFromCollectionByCategory(collectionPath, category) {
  */
 async function getExpectedLatestContent() {
   const collections = {
-    posts: await getLatestFileFromCollection('_blogs'),
+    blogs: await getLatestFileFromCollection('_blogs'),
     news: await getLatestFileFromCollection('_news'),
     community: await getLatestFileFromCollection('_community'),
     videos: await getLatestFileFromCollection('_videos'),

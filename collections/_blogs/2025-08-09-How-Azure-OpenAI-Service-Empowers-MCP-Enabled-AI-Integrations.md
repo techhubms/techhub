@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-08-09 06:58:28 +00:00
 permalink: "/blogs/2025-08-09-How-Azure-OpenAI-Service-Empowers-MCP-Enabled-AI-Integrations.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "AI Agent", "AI Integration", "AKS", "API Management", "Authentication", "Azure", "Azure AI Studio", "Azure Functions", "Azure Monitor", "Azure OpenAI Service", "Enterprise Security", "Entra ID", "JSON RPC", "LLM", "MCP", "MCP Server", "Microsoft 365 Integration", "Microsoft Purview", "Posts", "Role Based Access"]
-tags_normalized: ["ai", "ai agent", "ai integration", "aks", "api management", "authentication", "azure", "azure ai studio", "azure functions", "azure monitor", "azure openai service", "enterprise security", "entra id", "json rpc", "llm", "mcp", "mcp server", "microsoft 365 integration", "microsoft purview", "posts", "role based access"]
+tags: ["AI", "AI Agent", "AI Integration", "AKS", "API Management", "Authentication", "Azure", "Azure AI Studio", "Azure Functions", "Azure Monitor", "Azure OpenAI Service", "Enterprise Security", "Entra ID", "JSON RPC", "LLM", "MCP", "MCP Server", "Microsoft 365 Integration", "Microsoft Purview", "Blogs", "Role Based Access"]
+tags_normalized: ["ai", "ai agent", "ai integration", "aks", "api management", "authentication", "azure", "azure ai studio", "azure functions", "azure monitor", "azure openai service", "enterprise security", "entra id", "json rpc", "llm", "mcp", "mcp server", "microsoft 365 integration", "microsoft purview", "blogs", "role based access"]
 ---
 
 Dellenny explores how the Model Context Protocol (MCP) revolutionizes AI integrations and demonstrates Microsoft Azure’s leading role in secure, scalable MCP adoption for enterprise AI workflows.<!--excerpt_end-->

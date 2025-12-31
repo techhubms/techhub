@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-10-21 13:00:47 +00:00
 permalink: "/blogs/2025-10-21-SonarSweep-Improving-AI-Generated-Code-Quality-and-Security.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Code Quality", "AI Code Review", "AI Code Security", "AI Generated Code", "AI Model Training", "Bug Reduction", "Code Vulnerabilities", "Cybersecurity", "Cybersecurity in AI", "DevOps", "Devsecops", "Large Language Models", "Posts", "Reinforcement Learning", "Secure Coding", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Sonar Platform", "SonarSweep"]
-tags_normalized: ["ai", "ai code quality", "ai code review", "ai code security", "ai generated code", "ai model training", "bug reduction", "code vulnerabilities", "cybersecurity", "cybersecurity in ai", "devops", "devsecops", "large language models", "posts", "reinforcement learning", "secure coding", "security", "social facebook", "social linkedin", "social x", "software development", "sonar platform", "sonarsweep"]
+tags: ["AI", "AI Code Quality", "AI Code Review", "AI Code Security", "AI Generated Code", "AI Model Training", "Bug Reduction", "Code Vulnerabilities", "Cybersecurity", "Cybersecurity in AI", "DevOps", "Devsecops", "Large Language Models", "Blogs", "Reinforcement Learning", "Secure Coding", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Sonar Platform", "SonarSweep"]
+tags_normalized: ["ai", "ai code quality", "ai code review", "ai code security", "ai generated code", "ai model training", "bug reduction", "code vulnerabilities", "cybersecurity", "cybersecurity in ai", "devops", "devsecops", "large language models", "blogs", "reinforcement learning", "secure coding", "security", "social facebook", "social linkedin", "social x", "software development", "sonar platform", "sonarsweep"]
 ---
 
 Mike Vizard discusses how Sonar’s SonarSweep service helps AI development teams reduce bugs and vulnerabilities in AI-generated code, offering actionable insights for DevOps and security professionals.<!--excerpt_end-->

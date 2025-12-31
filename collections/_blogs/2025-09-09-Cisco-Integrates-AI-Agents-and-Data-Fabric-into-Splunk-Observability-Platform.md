@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-09-09 18:32:20 +00:00
 permalink: "/blogs/2025-09-09-Cisco-Integrates-AI-Agents-and-Data-Fabric-into-Splunk-Observability-Platform.html"
 categories: ["AI", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Agents", "AI Automation", "APM", "Business Insights", "Cisco", "Cisco Data Fabric", "DevOps", "Digital Experience Analytics", "IT Monitoring", "Large Language Models", "LLMs", "Observability", "OpenTelemetry", "Posts", "Social Facebook", "Social LinkedIn", "Social X", "Splunk", "Splunk Observability", "ThousandEyes"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "ai automation", "apm", "business insights", "cisco", "cisco data fabric", "devops", "digital experience analytics", "it monitoring", "large language models", "llms", "observability", "opentelemetry", "posts", "social facebook", "social linkedin", "social x", "splunk", "splunk observability", "thousandeyes"]
+tags: ["Agentic AI", "AI", "AI Agents", "AI Automation", "APM", "Business Insights", "Cisco", "Cisco Data Fabric", "DevOps", "Digital Experience Analytics", "IT Monitoring", "Large Language Models", "LLMs", "Observability", "OpenTelemetry", "Blogs", "Social Facebook", "Social LinkedIn", "Social X", "Splunk", "Splunk Observability", "ThousandEyes"]
+tags_normalized: ["agentic ai", "ai", "ai agents", "ai automation", "apm", "business insights", "cisco", "cisco data fabric", "devops", "digital experience analytics", "it monitoring", "large language models", "llms", "observability", "opentelemetry", "blogs", "social facebook", "social linkedin", "social x", "splunk", "splunk observability", "thousandeyes"]
 ---
 
 Mike Vizard examines Cisco’s integration of agentic AI features and Data Fabric into its Splunk Observability platform, presenting a deeper look at how these capabilities automate IT monitoring and analysis.<!--excerpt_end-->

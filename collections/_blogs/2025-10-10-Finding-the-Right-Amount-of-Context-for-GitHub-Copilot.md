@@ -11,8 +11,8 @@ feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-10-10 00:00:00 +00:00
 permalink: "/blogs/2025-10-10-Finding-the-Right-Amount-of-Context-for-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Tools", "Best Practices", "Code Assistance", "Code Context", "Code Refactoring", "Copilot Agent Mode", "Copilot Chat", "Copilot Edits", "Copilot Sidebar", "Developer Productivity", "GitHub Copilot", "Posts", "VS Code"]
-tags_normalized: ["ai", "ai tools", "best practices", "code assistance", "code context", "code refactoring", "copilot agent mode", "copilot chat", "copilot edits", "copilot sidebar", "developer productivity", "github copilot", "posts", "vs code"]
+tags: ["AI", "AI Tools", "Best Practices", "Code Assistance", "Code Context", "Code Refactoring", "Copilot Agent Mode", "Copilot Chat", "Copilot Edits", "Copilot Sidebar", "Developer Productivity", "GitHub Copilot", "Blogs", "VS Code"]
+tags_normalized: ["ai", "ai tools", "best practices", "code assistance", "code context", "code refactoring", "copilot agent mode", "copilot chat", "copilot edits", "copilot sidebar", "developer productivity", "github copilot", "blogs", "vs code"]
 ---
 
 Randy Pagels explains how to provide optimal code context to GitHub Copilot for effective assistance, offering practical tips for each Copilot feature.<!--excerpt_end-->

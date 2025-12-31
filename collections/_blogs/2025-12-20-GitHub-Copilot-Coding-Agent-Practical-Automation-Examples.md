@@ -11,8 +11,8 @@ feed_url: "https://devopsjournal.io/blog/atom.xml"
 date: 2025-12-20 00:00:00 +00:00
 permalink: "/blogs/2025-12-20-GitHub-Copilot-Coding-Agent-Practical-Automation-Examples.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "Cloud Agents", "Coding", "Continuous Integration", "Copilot Chat", "Developer Tools", "DevOps", "DevOps Automation", "GitHub Actions", "GitHub Copilot", "GitHub Copilot Coding Agent", "GitHub UI", "Posts", "Private MCP Registry", "Prompt Engineering", "Repository Management", "Security Model", "VS Code", "Workflow Automation"]
-tags_normalized: ["ai", "automation", "cloud agents", "coding", "continuous integration", "copilot chat", "developer tools", "devops", "devops automation", "github actions", "github copilot", "github copilot coding agent", "github ui", "posts", "private mcp registry", "prompt engineering", "repository management", "security model", "vs code", "workflow automation"]
+tags: ["AI", "Automation", "Cloud Agents", "Coding", "Continuous Integration", "Copilot Chat", "Developer Tools", "DevOps", "DevOps Automation", "GitHub Actions", "GitHub Copilot", "GitHub Copilot Coding Agent", "GitHub UI", "Blogs", "Private MCP Registry", "Prompt Engineering", "Repository Management", "Security Model", "VS Code", "Workflow Automation"]
+tags_normalized: ["ai", "automation", "cloud agents", "coding", "continuous integration", "copilot chat", "developer tools", "devops", "devops automation", "github actions", "github copilot", "github copilot coding agent", "github ui", "blogs", "private mcp registry", "prompt engineering", "repository management", "security model", "vs code", "workflow automation"]
 ---
 
 Rob Bos demonstrates hands-on techniques for using the GitHub Copilot Coding Agent to automate real development tasks, highlighting workflow automation, practical prompts, and DevOps best practices.<!--excerpt_end-->

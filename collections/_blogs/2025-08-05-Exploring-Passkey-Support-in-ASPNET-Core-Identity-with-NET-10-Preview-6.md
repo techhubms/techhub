@@ -11,8 +11,8 @@ feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-08-05 10:00:00 +00:00
 permalink: "/blogs/2025-08-05-Exploring-Passkey-Support-in-ASPNET-Core-Identity-with-NET-10-Preview-6.html"
 categories: ["Coding", "Security"]
-tags: [".NET 10", "ASP.NET Core", "ASP.NET Core Identity", "Blazor", "Coding", "EF Core", "FIDO2", "JavaScript Integration", "Microsoft Identity", "Passkey", "Passwordless Authentication", "Posts", "Security", "Template Changes", "User Authentication", "WebAuthn"]
-tags_normalized: ["dotnet 10", "aspdotnet core", "aspdotnet core identity", "blazor", "coding", "ef core", "fido2", "javascript integration", "microsoft identity", "passkey", "passwordless authentication", "posts", "security", "template changes", "user authentication", "webauthn"]
+tags: [".NET 10", "ASP.NET Core", "ASP.NET Core Identity", "Blazor", "Coding", "EF Core", "FIDO2", "JavaScript Integration", "Microsoft Identity", "Passkey", "Passwordless Authentication", "Blogs", "Security", "Template Changes", "User Authentication", "WebAuthn"]
+tags_normalized: ["dotnet 10", "aspdotnet core", "aspdotnet core identity", "blazor", "coding", "ef core", "fido2", "javascript integration", "microsoft identity", "passkey", "passwordless authentication", "blogs", "security", "template changes", "user authentication", "webauthn"]
 ---
 
 In this comprehensive post, Andrew Lock examines the new passkey support introduced in ASP.NET Core Identity and the Blazor Web App template as part of .NET 10 preview 6, explaining both user and implementation perspectives.<!--excerpt_end-->

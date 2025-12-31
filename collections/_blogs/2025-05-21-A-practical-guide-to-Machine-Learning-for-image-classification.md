@@ -11,8 +11,8 @@ feed_url: "https://hiddedesmet.com/feed.xml"
 date: 2025-05-21 07:00:00 +00:00
 permalink: "/blogs/2025-05-21-A-Practical-Guide-to-Machine-Learning-for-Image-Classification.html"
 categories: ["AI"]
-tags: ["AI", "Convolutional Neural Networks", "Data Augmentation", "Data Preparation", "Docker", "Experiment Tracking", "Flask", "IASA", "Image Classification", "Keras", "Machine Learning", "Model Deployment", "Posts", "Supervised Learning", "TensorFlow", "Transfer Learning"]
-tags_normalized: ["ai", "convolutional neural networks", "data augmentation", "data preparation", "docker", "experiment tracking", "flask", "iasa", "image classification", "keras", "machine learning", "model deployment", "posts", "supervised learning", "tensorflow", "transfer learning"]
+tags: ["AI", "Convolutional Neural Networks", "Data Augmentation", "Data Preparation", "Docker", "Experiment Tracking", "Flask", "IASA", "Image Classification", "Keras", "Machine Learning", "Model Deployment", "Blogs", "Supervised Learning", "TensorFlow", "Transfer Learning"]
+tags_normalized: ["ai", "convolutional neural networks", "data augmentation", "data preparation", "docker", "experiment tracking", "flask", "iasa", "image classification", "keras", "machine learning", "model deployment", "blogs", "supervised learning", "tensorflow", "transfer learning"]
 ---
 
 Written by Hidde de Smet, this detailed guide walks readers through each stage of building and deploying an image classification solution using machine learning, covering both conceptual and practical considerations.<!--excerpt_end-->

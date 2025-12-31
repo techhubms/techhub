@@ -11,8 +11,8 @@ feed_url: "https://www.thomasmaurer.ch/feed/"
 date: 2025-04-28 13:56:14 +00:00
 permalink: "/blogs/2025-04-28-Speaking-at-the-Windows-Server-Summit-2025-Modernizing-Server-Management-with-Azure-Arc.html"
 categories: ["Azure"]
-tags: ["Azure", "Azure Adaptive Cloud", "Azure Arc", "Cloud", "Cloud Technology", "Connectivity", "Event", "Hybrid Cloud", "Hyper V", "Microsoft", "Microsoft Azure", "Posts", "SCCM Modernization", "Server Management", "Speaking", "Thomas Maurer", "Windows", "Windows Server", "Windows Server Summit"]
-tags_normalized: ["azure", "azure adaptive cloud", "azure arc", "cloud", "cloud technology", "connectivity", "event", "hybrid cloud", "hyper v", "microsoft", "microsoft azure", "posts", "sccm modernization", "server management", "speaking", "thomas maurer", "windows", "windows server", "windows server summit"]
+tags: ["Azure", "Azure Adaptive Cloud", "Azure Arc", "Cloud", "Cloud Technology", "Connectivity", "Event", "Hybrid Cloud", "Hyper V", "Microsoft", "Microsoft Azure", "Blogs", "SCCM Modernization", "Server Management", "Speaking", "Thomas Maurer", "Windows", "Windows Server", "Windows Server Summit"]
+tags_normalized: ["azure", "azure adaptive cloud", "azure arc", "cloud", "cloud technology", "connectivity", "event", "hybrid cloud", "hyper v", "microsoft", "microsoft azure", "blogs", "sccm modernization", "server management", "speaking", "thomas maurer", "windows", "windows server", "windows server summit"]
 ---
 
 Thomas Maurer shares his involvement as a featured speaker at the Windows Server Summit 2025, where he will discuss modern server management using Azure Arc and hybrid cloud strategies.<!--excerpt_end-->

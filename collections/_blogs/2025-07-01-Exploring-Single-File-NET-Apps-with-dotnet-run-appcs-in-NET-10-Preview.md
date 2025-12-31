@@ -11,8 +11,8 @@ feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-07-01 10:00:00 +00:00
 permalink: "/blogs/2025-07-01-Exploring-Single-File-NET-Apps-with-dotnet-run-appcs-in-NET-10-Preview.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET Publish", ".NET Run", ".NET Script", "Aspire AppHost", "C#", "C# Scripting", "CLI", "Coding", "MSBuild", "NuGet Packages", "Posts", "Project SDK", "Shebang", "Single File Programs", "VS Code"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet publish", "dotnet run", "dotnet script", "aspire apphost", "csharp", "csharp scripting", "cli", "coding", "msbuild", "nuget packages", "posts", "project sdk", "shebang", "single file programs", "vs code"]
+tags: [".NET", ".NET 10", ".NET Publish", ".NET Run", ".NET Script", "Aspire AppHost", "C#", "C# Scripting", "CLI", "Coding", "MSBuild", "NuGet Packages", "Blogs", "Project SDK", "Shebang", "Single File Programs", "VS Code"]
+tags_normalized: ["dotnet", "dotnet 10", "dotnet publish", "dotnet run", "dotnet script", "aspire apphost", "csharp", "csharp scripting", "cli", "coding", "msbuild", "nuget packages", "blogs", "project sdk", "shebang", "single file programs", "vs code"]
 ---
 
 Andrew Lock introduces and examines the new single-file .NET run experience in .NET 10, highlighting its features, scenarios, and emerging enhancements that simplify C# development.<!--excerpt_end-->

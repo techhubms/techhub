@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-10-08 07:25:16 +00:00
 permalink: "/blogs/2025-10-08-5-Azure-Mistakes-That-Are-Costing-Businesses-Thousands.html"
 categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Advisor", "Azure Automation", "Azure Budgets", "Billing", "Cloud Monitoring", "Cost Governance", "Cost Management", "Cost Optimization", "Data Egress", "DevOps", "FinOps", "Posts", "Reserved Instances", "Resource Management", "Savings Plans", "Tagging Policy"]
-tags_normalized: ["azure", "azure advisor", "azure automation", "azure budgets", "billing", "cloud monitoring", "cost governance", "cost management", "cost optimization", "data egress", "devops", "finops", "posts", "reserved instances", "resource management", "savings plans", "tagging policy"]
+tags: ["Azure", "Azure Advisor", "Azure Automation", "Azure Budgets", "Billing", "Cloud Monitoring", "Cost Governance", "Cost Management", "Cost Optimization", "Data Egress", "DevOps", "FinOps", "Blogs", "Reserved Instances", "Resource Management", "Savings Plans", "Tagging Policy"]
+tags_normalized: ["azure", "azure advisor", "azure automation", "azure budgets", "billing", "cloud monitoring", "cost governance", "cost management", "cost optimization", "data egress", "devops", "finops", "blogs", "reserved instances", "resource management", "savings plans", "tagging policy"]
 ---
 
 Dellenny provides actionable guidance on avoiding common Microsoft Azure cost pitfalls, detailing fixes for each and empowering technical teams to optimize their cloud spending.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-07-30 12:34:17 +00:00
 permalink: "/blogs/2025-07-30-Shove-Left-Dumping-Downstream-Tasks-Onto-Developers-A-Recipe-for-Failure.html"
 categories: ["DevOps", "Security"]
-tags: ["Business Of DevOps", "Change Developer", "Collaboration", "Contributed Content", "Database", "Developer Burnout", "DevOps", "DevSecOps", "Doin' DevOps", "Downstream Tasks", "Efficiency", "Posts", "Project Failure", "Security", "Shift Left", "Shove Left", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Systemic Change"]
-tags_normalized: ["business of devops", "change developer", "collaboration", "contributed content", "database", "developer burnout", "devops", "devsecops", "doin devops", "downstream tasks", "efficiency", "posts", "project failure", "security", "shift left", "shove left", "social facebook", "social linkedin", "social x", "software development", "systemic change"]
+tags: ["Business Of DevOps", "Change Developer", "Collaboration", "Contributed Content", "Database", "Developer Burnout", "DevOps", "DevSecOps", "Doin' DevOps", "Downstream Tasks", "Efficiency", "Blogs", "Project Failure", "Security", "Shift Left", "Shove Left", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Systemic Change"]
+tags_normalized: ["business of devops", "change developer", "collaboration", "contributed content", "database", "developer burnout", "devops", "devsecops", "doin devops", "downstream tasks", "efficiency", "blogs", "project failure", "security", "shift left", "shove left", "social facebook", "social linkedin", "social x", "software development", "systemic change"]
 ---
 
 Author Peter Pickerill warns against the 'Shove Left' anti-pattern in DevOps, illustrating how offloading tasks onto developers without real change can harm teams and outcomes.<!--excerpt_end-->

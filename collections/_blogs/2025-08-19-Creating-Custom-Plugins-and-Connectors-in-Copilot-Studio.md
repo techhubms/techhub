@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-08-19 14:52:34 +00:00
 permalink: "/blogs/2025-08-19-Creating-Custom-Plugins-and-Connectors-in-Copilot-Studio.html"
 categories: ["AI"]
-tags: ["AI", "AI Integration", "API Authentication", "Automation", "Copilot", "Copilot Extensions", "Copilot Studio", "Custom Connectors", "Custom Plugins", "Enterprise Integration", "Microsoft", "Node.js", "OpenAPI", "Plugin Schema", "Posts", "Python", "Workflow"]
-tags_normalized: ["ai", "ai integration", "api authentication", "automation", "copilot", "copilot extensions", "copilot studio", "custom connectors", "custom plugins", "enterprise integration", "microsoft", "nodedotjs", "openapi", "plugin schema", "posts", "python", "workflow"]
+tags: ["AI", "AI Integration", "API Authentication", "Automation", "Copilot", "Copilot Extensions", "Copilot Studio", "Custom Connectors", "Custom Plugins", "Enterprise Integration", "Microsoft", "Node.js", "OpenAPI", "Plugin Schema", "Blogs", "Python", "Workflow"]
+tags_normalized: ["ai", "ai integration", "api authentication", "automation", "copilot", "copilot extensions", "copilot studio", "custom connectors", "custom plugins", "enterprise integration", "microsoft", "nodedotjs", "openapi", "plugin schema", "blogs", "python", "workflow"]
 ---
 
 Dellenny explains how to develop custom plugins and connectors in Copilot Studio, guiding developers through schema definition, integration best practices, and secure deployment of AI-driven copilots.<!--excerpt_end-->

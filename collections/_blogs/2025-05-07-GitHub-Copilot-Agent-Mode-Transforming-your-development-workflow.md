@@ -11,8 +11,8 @@ feed_url: "https://hiddedesmet.com/feed.xml"
 date: 2025-05-07 07:00:00 +00:00
 permalink: "/blogs/2025-05-07-GitHub-Copilot-Agent-Mode-Transforming-your-development-workflow.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Code Completion", "Context Aware Assistance", "Debugging", "Development", "GitHub Copilot", "IDE", "Interactive Learning", "Natural Language Interaction", "Pair Programming", "Posts", "Programming Assistant"]
-tags_normalized: ["agent mode", "ai", "code completion", "context aware assistance", "debugging", "development", "github copilot", "ide", "interactive learning", "natural language interaction", "pair programming", "posts", "programming assistant"]
+tags: ["Agent Mode", "AI", "Code Completion", "Context Aware Assistance", "Debugging", "Development", "GitHub Copilot", "IDE", "Interactive Learning", "Natural Language Interaction", "Pair Programming", "Blogs", "Programming Assistant"]
+tags_normalized: ["agent mode", "ai", "code completion", "context aware assistance", "debugging", "development", "github copilot", "ide", "interactive learning", "natural language interaction", "pair programming", "blogs", "programming assistant"]
 ---
 
 Written by Hidde de Smet, this article explores GitHub Copilot's Agent Mode, highlighting how it transforms the coding workflow by supporting natural conversations, interactive problem-solving, and step-by-step guidance directly within your development environment.<!--excerpt_end-->

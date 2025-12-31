@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-11-06 17:16:24 +00:00
 permalink: "/blogs/2025-11-06-Qovery-Introduces-AI-Agents-to-Enhance-DevOps-Automation.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agent", "Automation", "CI/CD", "Claude LLM", "DevOps", "DevOps Automation", "DevSecOps", "Environment Provisioning", "FinOps", "Infrastructure Operations", "Natural Language Processing", "Pipeline Management", "Platform Engineering", "Posts", "Qovery", "Role Based Permissions", "Social Facebook", "Social LinkedIn", "Social X", "Workflow Optimization"]
-tags_normalized: ["ai", "ai agent", "automation", "cislashcd", "claude llm", "devops", "devops automation", "devsecops", "environment provisioning", "finops", "infrastructure operations", "natural language processing", "pipeline management", "platform engineering", "posts", "qovery", "role based permissions", "social facebook", "social linkedin", "social x", "workflow optimization"]
+tags: ["AI", "AI Agent", "Automation", "CI/CD", "Claude LLM", "DevOps", "DevOps Automation", "DevSecOps", "Environment Provisioning", "FinOps", "Infrastructure Operations", "Natural Language Processing", "Pipeline Management", "Platform Engineering", "Blogs", "Qovery", "Role Based Permissions", "Social Facebook", "Social LinkedIn", "Social X", "Workflow Optimization"]
+tags_normalized: ["ai", "ai agent", "automation", "cislashcd", "claude llm", "devops", "devops automation", "devsecops", "environment provisioning", "finops", "infrastructure operations", "natural language processing", "pipeline management", "platform engineering", "blogs", "qovery", "role based permissions", "social facebook", "social linkedin", "social x", "workflow optimization"]
 ---
 
 Mike Vizard details how Qovery's new AI agents, including the DevOps Copilot suite, help automate and optimize DevOps workflows, aiming to minimize manual effort for teams.<!--excerpt_end-->

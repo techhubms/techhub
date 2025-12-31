@@ -11,8 +11,8 @@ feed_url: "https://jessehouwing.net/rss/"
 date: 2025-06-10 15:08:58 +00:00
 permalink: "/blogs/2025-06-10-How-to-Authenticate-Connect-MgGraph-Using-OIDC-in-GitHub-Actions.html"
 categories: ["Azure", "DevOps", "Security"]
-tags: ["Access Token", "Automation", "Azure", "Azure Entra ID", "DevOps", "GitHub", "GitHub Actions", "Microsoft Graph", "OIDC", "Posts", "PowerShell", "Security"]
-tags_normalized: ["access token", "automation", "azure", "azure entra id", "devops", "github", "github actions", "microsoft graph", "oidc", "posts", "powershell", "security"]
+tags: ["Access Token", "Automation", "Azure", "Azure Entra ID", "DevOps", "GitHub", "GitHub Actions", "Microsoft Graph", "OIDC", "Blogs", "PowerShell", "Security"]
+tags_normalized: ["access token", "automation", "azure", "azure entra id", "devops", "github", "github actions", "microsoft graph", "oidc", "blogs", "powershell", "security"]
 ---
 
 Jesse Houwing walks through authenticating maintenance PowerShell scripts to Microsoft Graph in GitHub Actions, using OpenID Connect and Azure CLI, for improved security and automation.<!--excerpt_end-->

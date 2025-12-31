@@ -11,8 +11,8 @@ feed_url: "https://khalidabuhakmeh.com/feed.xml"
 date: 2024-08-20 00:00:00 +00:00
 permalink: "/blogs/2024-08-20-Enhancing-Htmx-Confirmation-Dialogs-with-SweetAlert-for-Better-UX.html"
 categories: ["Coding"]
-tags: ["ASP.NET", "Client Side Scripting", "Coding", "Confirmation Dialog", "Event Handling", "Evt.preventdefault", "Htmx", "JavaScript", "Posts", "SweetAlert", "User Interaction", "Web UX"]
-tags_normalized: ["aspdotnet", "client side scripting", "coding", "confirmation dialog", "event handling", "evtdotpreventdefault", "htmx", "javascript", "posts", "sweetalert", "user interaction", "web ux"]
+tags: ["ASP.NET", "Client Side Scripting", "Coding", "Confirmation Dialog", "Event Handling", "Evt.preventdefault", "Htmx", "JavaScript", "Blogs", "SweetAlert", "User Interaction", "Web UX"]
+tags_normalized: ["aspdotnet", "client side scripting", "coding", "confirmation dialog", "event handling", "evtdotpreventdefault", "htmx", "javascript", "blogs", "sweetalert", "user interaction", "web ux"]
 ---
 
 Khalid Abuhakmeh explains how to enhance destructive operation confirmations in web apps by intercepting Htmx events and displaying user-friendly SweetAlert dialogs instead of native browser confirms.<!--excerpt_end-->

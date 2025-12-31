@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-08-25 16:04:13 +00:00
 permalink: "/blogs/2025-08-25-Retrieval-Augmented-Generation-RAG-in-Azure-AI-A-Step-by-Step-Guide.html"
 categories: ["AI", "Azure"]
-tags: [".NET", "AI", "AI Studio", "Authentication", "Azure", "Azure AI", "Azure AI Content Understanding", "Azure AI Foundry", "Azure AI Search", "Azure Monitor", "Azure OpenAI Service", "Blob Storage", "Document Intelligence", "GPT 4", "Indexing", "Node.js", "Posts", "Prompt Engineering", "Python", "RAG", "RBAC", "Retrieval Augmented Generation", "SDK", "Semantic Ranking", "Vector Search"]
-tags_normalized: ["dotnet", "ai", "ai studio", "authentication", "azure", "azure ai", "azure ai content understanding", "azure ai foundry", "azure ai search", "azure monitor", "azure openai service", "blob storage", "document intelligence", "gpt 4", "indexing", "nodedotjs", "posts", "prompt engineering", "python", "rag", "rbac", "retrieval augmented generation", "sdk", "semantic ranking", "vector search"]
+tags: [".NET", "AI", "AI Studio", "Authentication", "Azure", "Azure AI", "Azure AI Content Understanding", "Azure AI Foundry", "Azure AI Search", "Azure Monitor", "Azure OpenAI Service", "Blob Storage", "Document Intelligence", "GPT 4", "Indexing", "Node.js", "Blogs", "Prompt Engineering", "Python", "RAG", "RBAC", "Retrieval Augmented Generation", "SDK", "Semantic Ranking", "Vector Search"]
+tags_normalized: ["dotnet", "ai", "ai studio", "authentication", "azure", "azure ai", "azure ai content understanding", "azure ai foundry", "azure ai search", "azure monitor", "azure openai service", "blob storage", "document intelligence", "gpt 4", "indexing", "nodedotjs", "blogs", "prompt engineering", "python", "rag", "rbac", "retrieval augmented generation", "sdk", "semantic ranking", "vector search"]
 ---
 
 Dellenny presents a hands-on step-by-step guide to building Retrieval-Augmented Generation (RAG) solutions with Azure AI, offering practical advice and architectural insights for developers and architects.<!--excerpt_end-->

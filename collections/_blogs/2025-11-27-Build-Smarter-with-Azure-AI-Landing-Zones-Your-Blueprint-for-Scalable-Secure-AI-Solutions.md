@@ -11,8 +11,8 @@ feed_url: "https://www.thomasmaurer.ch/feed/"
 date: 2025-11-27 18:21:50 +00:00
 permalink: "/blogs/2025-11-27-Build-Smarter-with-Azure-AI-Landing-Zones-Your-Blueprint-for-Scalable-Secure-AI-Solutions.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Azure AI", "Azure AI Landing Zones", "Azure Essentials Show", "Cloud", "Cloud Architecture", "Cloud Best Practices", "Deployment Automation", "Enterprise AI", "Governance", "IaC", "Identity Management", "Landing Zones", "LLM Workloads", "Microsoft", "Microsoft Azure", "ML Pipelines", "Modular Architecture", "Posts", "Scalable Solutions"]
-tags_normalized: ["ai", "azure", "azure ai", "azure ai landing zones", "azure essentials show", "cloud", "cloud architecture", "cloud best practices", "deployment automation", "enterprise ai", "governance", "iac", "identity management", "landing zones", "llm workloads", "microsoft", "microsoft azure", "ml pipelines", "modular architecture", "posts", "scalable solutions"]
+tags: ["AI", "Azure", "Azure AI", "Azure AI Landing Zones", "Azure Essentials Show", "Cloud", "Cloud Architecture", "Cloud Best Practices", "Deployment Automation", "Enterprise AI", "Governance", "IaC", "Identity Management", "Landing Zones", "LLM Workloads", "Microsoft", "Microsoft Azure", "ML Pipelines", "Modular Architecture", "Blogs", "Scalable Solutions"]
+tags_normalized: ["ai", "azure", "azure ai", "azure ai landing zones", "azure essentials show", "cloud", "cloud architecture", "cloud best practices", "deployment automation", "enterprise ai", "governance", "iac", "identity management", "landing zones", "llm workloads", "microsoft", "microsoft azure", "ml pipelines", "modular architecture", "blogs", "scalable solutions"]
 ---
 
 Thomas Maurer discusses with Microsoft Azure engineers how Azure AI Landing Zones give organizations a strong blueprint for secure, scalable AI deployments. The post shares key challenges in AI adoption and provides hands-on guidance and resources.<!--excerpt_end-->

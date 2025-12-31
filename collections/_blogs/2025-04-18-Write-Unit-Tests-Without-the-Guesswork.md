@@ -11,8 +11,8 @@ feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-04-18 00:00:00 +00:00
 permalink: "/blogs/2025-04-18-Write-Unit-Tests-Without-the-Guesswork.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Tools", "Automated Testing", "Code Quality", "Coding", "Developer Productivity", "Edge Cases", "GitHub Copilot", "Java", "JavaScript", "Jest", "JUnit", "Posts", "Pytest", "Python", "Test Automation", "Test Coverage", "Unit Testing"]
-tags_normalized: ["ai", "ai tools", "automated testing", "code quality", "coding", "developer productivity", "edge cases", "github copilot", "java", "javascript", "jest", "junit", "posts", "pytest", "python", "test automation", "test coverage", "unit testing"]
+tags: ["AI", "AI Tools", "Automated Testing", "Code Quality", "Coding", "Developer Productivity", "Edge Cases", "GitHub Copilot", "Java", "JavaScript", "Jest", "JUnit", "Blogs", "Pytest", "Python", "Test Automation", "Test Coverage", "Unit Testing"]
+tags_normalized: ["ai", "ai tools", "automated testing", "code quality", "coding", "developer productivity", "edge cases", "github copilot", "java", "javascript", "jest", "junit", "blogs", "pytest", "python", "test automation", "test coverage", "unit testing"]
 ---
 
 Randy Pagels demonstrates how to use GitHub Copilot to quickly generate meaningful unit tests, helping developers in Python, JavaScript, and Java improve test coverage with AI-powered suggestions.<!--excerpt_end-->

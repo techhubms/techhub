@@ -111,21 +111,6 @@ exclude:
   # Other unwanted files
   - "*.log"
 
-# Performance-oriented defaults
-defaults:
-  - scope:
-      path: ""
-      type: "blogs"
-    values:
-      layout: "post"
-      comments: false # Disable comments for faster loading
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-      comments: false
-
 minima:
   date_format: "%Y-%m-%d"   
 

@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-09-30 08:03:16 +00:00
 permalink: "/blogs/2025-09-30-Documenting-Architecture-Using-AI-From-Painful-Chore-to-Strategic-Advantage.html"
 categories: ["AI"]
-tags: ["ADR Automation", "AI", "AI in Documentation", "Architecture", "Architecture Automation", "C4 Model", "CI/CD", "Engineering Productivity", "LangChain", "LLM", "PlantUML", "Posts", "Software Architecture", "Solution Architecture", "Structurizr", "System Diagrams"]
-tags_normalized: ["adr automation", "ai", "ai in documentation", "architecture", "architecture automation", "c4 model", "cislashcd", "engineering productivity", "langchain", "llm", "plantuml", "posts", "software architecture", "solution architecture", "structurizr", "system diagrams"]
+tags: ["ADR Automation", "AI", "AI in Documentation", "Architecture", "Architecture Automation", "C4 Model", "CI/CD", "Engineering Productivity", "LangChain", "LLM", "PlantUML", "Blogs", "Software Architecture", "Solution Architecture", "Structurizr", "System Diagrams"]
+tags_normalized: ["adr automation", "ai", "ai in documentation", "architecture", "architecture automation", "c4 model", "cislashcd", "engineering productivity", "langchain", "llm", "plantuml", "blogs", "software architecture", "solution architecture", "structurizr", "system diagrams"]
 ---
 
 Dellenny explains how AI tools—including those integrated with Microsoft platforms—can automate and improve software architecture documentation, making it more accurate, useful, and strategic for engineering teams.<!--excerpt_end-->

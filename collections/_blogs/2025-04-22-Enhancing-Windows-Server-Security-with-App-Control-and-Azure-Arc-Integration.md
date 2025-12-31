@@ -11,8 +11,8 @@ feed_url: "https://www.thomasmaurer.ch/feed/"
 date: 2025-04-22 13:50:08 +00:00
 permalink: "/blogs/2025-04-22-Enhancing-Windows-Server-Security-with-App-Control-and-Azure-Arc-Integration.html"
 categories: ["Azure", "Security"]
-tags: ["App Control", "Application Whitelisting", "AppLocker", "Azure", "Azure Arc", "Azure Management", "Azure Monitor", "Centralized Governance", "Cloud Security", "Compliance", "Edge Security", "Hybrid Cloud", "Microsoft", "Microsoft Azure", "Posts", "PowerShell", "Security", "Securtiy", "Windows Server"]
-tags_normalized: ["app control", "application whitelisting", "applocker", "azure", "azure arc", "azure management", "azure monitor", "centralized governance", "cloud security", "compliance", "edge security", "hybrid cloud", "microsoft", "microsoft azure", "posts", "powershell", "security", "securtiy", "windows server"]
+tags: ["App Control", "Application Whitelisting", "AppLocker", "Azure", "Azure Arc", "Azure Management", "Azure Monitor", "Centralized Governance", "Cloud Security", "Compliance", "Edge Security", "Hybrid Cloud", "Microsoft", "Microsoft Azure", "Blogs", "PowerShell", "Security", "Securtiy", "Windows Server"]
+tags_normalized: ["app control", "application whitelisting", "applocker", "azure", "azure arc", "azure management", "azure monitor", "centralized governance", "cloud security", "compliance", "edge security", "hybrid cloud", "microsoft", "microsoft azure", "blogs", "powershell", "security", "securtiy", "windows server"]
 ---
 
 In this post, Thomas Maurer teams up with Carlos Mayol Berral to explore practical strategies for securing Windows Server environments using App Control and centralized management via Azure Arc.<!--excerpt_end-->

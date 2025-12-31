@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-10-15 14:01:27 +00:00
 permalink: "/blogs/2025-10-15-Survey-Reveals-Rapid-AI-Adoption-to-Strengthen-DevSecOps-Practices.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Adoption", "Application Security", "Audit", "Automation", "CDN", "Compliance", "DevOps", "DevSecOps", "False Positives", "Fastly", "Integration", "Logging", "Posts", "Remediation", "Sandboxing", "Security", "Security Tooling", "Social Facebook", "Social LinkedIn", "Social X", "Vulnerability Detection"]
-tags_normalized: ["ai", "ai adoption", "application security", "audit", "automation", "cdn", "compliance", "devops", "devsecops", "false positives", "fastly", "integration", "logging", "posts", "remediation", "sandboxing", "security", "security tooling", "social facebook", "social linkedin", "social x", "vulnerability detection"]
+tags: ["AI", "AI Adoption", "Application Security", "Audit", "Automation", "CDN", "Compliance", "DevOps", "DevSecOps", "False Positives", "Fastly", "Integration", "Logging", "Blogs", "Remediation", "Sandboxing", "Security", "Security Tooling", "Social Facebook", "Social LinkedIn", "Social X", "Vulnerability Detection"]
+tags_normalized: ["ai", "ai adoption", "application security", "audit", "automation", "cdn", "compliance", "devops", "devsecops", "false positives", "fastly", "integration", "logging", "blogs", "remediation", "sandboxing", "security", "security tooling", "social facebook", "social linkedin", "social x", "vulnerability detection"]
 ---
 
 Mike Vizard summarizes a Fastly survey showing rapid AI adoption for DevSecOps, detailing the integration level, trust factors, and challenges as organizations automate application security.<!--excerpt_end-->

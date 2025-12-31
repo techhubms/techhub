@@ -11,8 +11,8 @@ feed_url: "https://feeds.feedburner.com/rickstrahl"
 date: 2025-04-19 08:35:43 +00:00
 permalink: "/blogs/2025-04-19-The-Strong-ARM-of-NET-Building-Desktop-Apps-for-x64-and-Arm64-Deployment.html"
 categories: ["Coding"]
-tags: [".NET", ".NET Launcher", "AnyCPU", "Application Deployment", "Application Installer", "Arm64", "Build Configuration", "Coding", "Cross Platform", "Markdown Monster", "Native Binaries", "Posts", "Windows", "Windows Desktop", "WPF", "X64"]
-tags_normalized: ["dotnet", "dotnet launcher", "anycpu", "application deployment", "application installer", "arm64", "build configuration", "coding", "cross platform", "markdown monster", "native binaries", "posts", "windows", "windows desktop", "wpf", "x64"]
+tags: [".NET", ".NET Launcher", "AnyCPU", "Application Deployment", "Application Installer", "Arm64", "Build Configuration", "Coding", "Cross Platform", "Markdown Monster", "Native Binaries", "Blogs", "Windows", "Windows Desktop", "WPF", "X64"]
+tags_normalized: ["dotnet", "dotnet launcher", "anycpu", "application deployment", "application installer", "arm64", "build configuration", "coding", "cross platform", "markdown monster", "native binaries", "blogs", "windows", "windows desktop", "wpf", "x64"]
 ---
 
 In this detailed post, Rick Strahl outlines the key challenges and solutions for deploying .NET Windows Desktop apps that run natively on both x64 and Arm64 platforms, with specific insights from developments on Markdown Monster.<!--excerpt_end-->

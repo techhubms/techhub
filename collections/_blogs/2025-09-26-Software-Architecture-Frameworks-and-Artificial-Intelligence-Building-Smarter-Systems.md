@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-09-26 16:33:15 +00:00
 permalink: "/blogs/2025-09-26-Software-Architecture-Frameworks-and-Artificial-Intelligence-Building-Smarter-Systems.html"
 categories: ["AI"]
-tags: ["AI", "AI Governance", "Architecture", "Architecture Frameworks", "C4 Model", "Continuous Deployment", "Data Mesh", "Ethics in AI", "Event Driven Architecture", "Hybrid Cloud", "Microservices", "MLOps", "Model Lifecycle Management", "Posts", "Scalability", "Self Healing Systems", "Software Architecture", "Solution Architecture", "TOGAF", "Zachman Framework"]
-tags_normalized: ["ai", "ai governance", "architecture", "architecture frameworks", "c4 model", "continuous deployment", "data mesh", "ethics in ai", "event driven architecture", "hybrid cloud", "microservices", "mlops", "model lifecycle management", "posts", "scalability", "self healing systems", "software architecture", "solution architecture", "togaf", "zachman framework"]
+tags: ["AI", "AI Governance", "Architecture", "Architecture Frameworks", "C4 Model", "Continuous Deployment", "Data Mesh", "Ethics in AI", "Event Driven Architecture", "Hybrid Cloud", "Microservices", "MLOps", "Model Lifecycle Management", "Blogs", "Scalability", "Self Healing Systems", "Software Architecture", "Solution Architecture", "TOGAF", "Zachman Framework"]
+tags_normalized: ["ai", "ai governance", "architecture", "architecture frameworks", "c4 model", "continuous deployment", "data mesh", "ethics in ai", "event driven architecture", "hybrid cloud", "microservices", "mlops", "model lifecycle management", "blogs", "scalability", "self healing systems", "software architecture", "solution architecture", "togaf", "zachman framework"]
 ---
 
 Dellenny investigates how the emergence of AI is driving new software architecture frameworks and transforming conventional system design, offering practical insights for technical teams and architects.<!--excerpt_end-->

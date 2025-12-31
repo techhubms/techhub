@@ -11,8 +11,8 @@ feed_url: "https://devclass.com/feed/"
 date: 2025-07-03 14:48:30 +00:00
 permalink: "/blogs/2025-07-03-Security-Risks-from-Deleted-GitHub-Commits-Admin-Access-to-Istio-Exposed.html"
 categories: ["DevOps", "Security"]
-tags: ["Credential Leaks", "DevOps", "DevOps Security", "DevSecOps", "GH Archive", "Git", "Git Filter Repo", "GitHub", "Infosec", "Istio", "Kubernetes", "Personal Access Token", "Posts", "Repository Hygiene", "Secret Management", "Security", "Service Mesh", "Source Control", "Token Revocation", "Truffle Security"]
-tags_normalized: ["credential leaks", "devops", "devops security", "devsecops", "gh archive", "git", "git filter repo", "github", "infosec", "istio", "kubernetes", "personal access token", "posts", "repository hygiene", "secret management", "security", "service mesh", "source control", "token revocation", "truffle security"]
+tags: ["Credential Leaks", "DevOps", "DevOps Security", "DevSecOps", "GH Archive", "Git", "Git Filter Repo", "GitHub", "Infosec", "Istio", "Kubernetes", "Personal Access Token", "Blogs", "Repository Hygiene", "Secret Management", "Security", "Service Mesh", "Source Control", "Token Revocation", "Truffle Security"]
+tags_normalized: ["credential leaks", "devops", "devops security", "devsecops", "gh archive", "git", "git filter repo", "github", "infosec", "istio", "kubernetes", "personal access token", "blogs", "repository hygiene", "secret management", "security", "service mesh", "source control", "token revocation", "truffle security"]
 ---
 
 Tim Anderson's article explores how lingering commit history on GitHub enabled a researcher to find secrets—including admin tokens for Istio—highlighting security risks and mitigation strategies for developers.<!--excerpt_end-->

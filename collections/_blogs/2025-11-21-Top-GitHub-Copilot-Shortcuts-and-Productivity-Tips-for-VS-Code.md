@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-11-21 15:39:36 +00:00
 permalink: "/blogs/2025-11-21-Top-GitHub-Copilot-Shortcuts-and-Productivity-Tips-for-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Pair Programming", "Code Review", "Coding", "Contextual AI", "Copilot Agent Mode", "Copilot Chat", "Copilot Inline Suggestions", "Copilot Slash Commands", "Developer Productivity", "GitHib Copilot", "GitHub Copilot", "Keyboard Shortcuts", "Posts", "Programming Tools", "Prompt Engineering", "Software Development", "VS Code"]
-tags_normalized: ["ai", "ai pair programming", "code review", "coding", "contextual ai", "copilot agent mode", "copilot chat", "copilot inline suggestions", "copilot slash commands", "developer productivity", "githib copilot", "github copilot", "keyboard shortcuts", "posts", "programming tools", "prompt engineering", "software development", "vs code"]
+tags: ["AI", "AI Pair Programming", "Code Review", "Coding", "Contextual AI", "Copilot Agent Mode", "Copilot Chat", "Copilot Inline Suggestions", "Copilot Slash Commands", "Developer Productivity", "GitHib Copilot", "GitHub Copilot", "Keyboard Shortcuts", "Blogs", "Programming Tools", "Prompt Engineering", "Software Development", "VS Code"]
+tags_normalized: ["ai", "ai pair programming", "code review", "coding", "contextual ai", "copilot agent mode", "copilot chat", "copilot inline suggestions", "copilot slash commands", "developer productivity", "githib copilot", "github copilot", "keyboard shortcuts", "blogs", "programming tools", "prompt engineering", "software development", "vs code"]
 ---
 
 John Edward shares actionable GitHub Copilot shortcuts and productivity techniques for Visual Studio Code, helping developers use Copilot more effectively.<!--excerpt_end-->

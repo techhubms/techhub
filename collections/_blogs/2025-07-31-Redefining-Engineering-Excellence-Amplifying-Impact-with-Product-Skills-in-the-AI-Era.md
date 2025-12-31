@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-07-31 09:53:03 +00:00
 permalink: "/blogs/2025-07-31-Redefining-Engineering-Excellence-Amplifying-Impact-with-Product-Skills-in-the-AI-Era.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "Automation", "Business Of DevOps", "Business Value", "Contributed Content", "DevOps", "Engineering Leadership", "Innovation", "Leadership", "OKRs", "Posts", "Product Mindset", "Product Strategy", "Product Thinking", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering", "User Experience"]
-tags_normalized: ["ai", "automation", "business of devops", "business value", "contributed content", "devops", "engineering leadership", "innovation", "leadership", "okrs", "posts", "product mindset", "product strategy", "product thinking", "social facebook", "social linkedin", "social x", "software engineering", "user experience"]
+tags: ["AI", "Automation", "Business Of DevOps", "Business Value", "Contributed Content", "DevOps", "Engineering Leadership", "Innovation", "Leadership", "OKRs", "Blogs", "Product Mindset", "Product Strategy", "Product Thinking", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering", "User Experience"]
+tags_normalized: ["ai", "automation", "business of devops", "business value", "contributed content", "devops", "engineering leadership", "innovation", "leadership", "okrs", "blogs", "product mindset", "product strategy", "product thinking", "social facebook", "social linkedin", "social x", "software engineering", "user experience"]
 ---
 
 In this article, Maryna Rybalko discusses how AI is redefining the software engineering landscape. She highlights the importance of product thinking and outlines key skills engineers should develop to thrive and lead in the era of AI-powered DevOps.<!--excerpt_end-->

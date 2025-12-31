@@ -11,8 +11,8 @@ feed_url: "https://khalidabuhakmeh.com/feed.xml"
 date: 2024-09-24 00:00:00 +00:00
 permalink: "/blogs/2024-09-24-How-to-Reliably-Test-Htmx-Applications-with-Playwright-in-C.html"
 categories: ["Coding", "DevOps"]
-tags: ["ASP.NET Core", "C#", "Coding", "DevOps", "Frontend Testing", "Htmx", "Integration Testing", "JavaScript Events", "Playwright", "Posts", "Test Automation", "Test Synchronization", "Web Testing"]
-tags_normalized: ["aspdotnet core", "csharp", "coding", "devops", "frontend testing", "htmx", "integration testing", "javascript events", "playwright", "posts", "test automation", "test synchronization", "web testing"]
+tags: ["ASP.NET Core", "C#", "Coding", "DevOps", "Frontend Testing", "Htmx", "Integration Testing", "JavaScript Events", "Playwright", "Blogs", "Test Automation", "Test Synchronization", "Web Testing"]
+tags_normalized: ["aspdotnet core", "csharp", "coding", "devops", "frontend testing", "htmx", "integration testing", "javascript events", "playwright", "blogs", "test automation", "test synchronization", "web testing"]
 ---
 
 In this post, Khalid Abuhakmeh introduces a seamless technique for automating tests in Htmx-powered ASP.NET Core applications using Playwright, ensuring stable and reliable results.<!--excerpt_end-->

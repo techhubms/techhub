@@ -11,8 +11,8 @@ feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-09-09 10:00:00 +00:00
 permalink: "/blogs/2025-09-09-Packaging-Self-Contained-and-Native-AOT-NET-Tools-for-NuGet-NET-10-Preview.html"
 categories: ["Coding"]
-tags: [".NET 10", ".NET Tools", "AOT", "C#", "Coding", "Cross Platform Deployment", "Microsoft.Data.Sqlite", "Microsoft.NET.Sdk", "Native AOT", "Native Dependencies", "NuGet", "Package Size Optimization", "Posts", "PublishTrimmed", "SDK Limitations", "SDK Preview", "Self Contained Packaging", "Spectre.Console"]
-tags_normalized: ["dotnet 10", "dotnet tools", "aot", "csharp", "coding", "cross platform deployment", "microsoftdotdatadotsqlite", "microsoftdotnetdotsdk", "native aot", "native dependencies", "nuget", "package size optimization", "posts", "publishtrimmed", "sdk limitations", "sdk preview", "self contained packaging", "spectredotconsole"]
+tags: [".NET 10", ".NET Tools", "AOT", "C#", "Coding", "Cross Platform Deployment", "Microsoft.Data.Sqlite", "Microsoft.NET.Sdk", "Native AOT", "Native Dependencies", "NuGet", "Package Size Optimization", "Blogs", "PublishTrimmed", "SDK Limitations", "SDK Preview", "Self Contained Packaging", "Spectre.Console"]
+tags_normalized: ["dotnet 10", "dotnet tools", "aot", "csharp", "coding", "cross platform deployment", "microsoftdotdatadotsqlite", "microsoftdotnetdotsdk", "native aot", "native dependencies", "nuget", "package size optimization", "blogs", "publishtrimmed", "sdk limitations", "sdk preview", "self contained packaging", "spectredotconsole"]
 ---
 
 Andrew Lock details how .NET 10 preview improves .NET tool packaging for NuGet with new self-contained and native AOT deployment options, uncovering benefits, limitations, and practical tips for developers.<!--excerpt_end-->

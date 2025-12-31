@@ -11,8 +11,8 @@ feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-09-16 10:00:00 +00:00
 permalink: "/blogs/2025-09-16-Supporting-Platform-Specific-NET-Tools-on-Older-SDKs-NET-10-Preview-Deep-Dive.html"
 categories: ["Coding"]
-tags: [".csproj", ".NET 10", ".NET Core", ".NET SDK", "Andrew Lock", "AOT", "Coding", "Compatibility", "Datadog", "DotnetToolSettings.xml", "Framework Dependent", "Multi Targeting", "Native AOT", "Netcoreapp3.1", "NuGet", "Performance", "Platform Specific Tools", "Posts", "Self Contained Deployment", "Tool Packaging"]
-tags_normalized: ["dotcsproj", "dotnet 10", "dotnet core", "dotnet sdk", "andrew lock", "aot", "coding", "compatibility", "datadog", "dotnettoolsettingsdotxml", "framework dependent", "multi targeting", "native aot", "netcoreapp3dot1", "nuget", "performance", "platform specific tools", "posts", "self contained deployment", "tool packaging"]
+tags: [".csproj", ".NET 10", ".NET Core", ".NET SDK", "Andrew Lock", "AOT", "Coding", "Compatibility", "Datadog", "DotnetToolSettings.xml", "Framework Dependent", "Multi Targeting", "Native AOT", "Netcoreapp3.1", "NuGet", "Performance", "Platform Specific Tools", "Blogs", "Self Contained Deployment", "Tool Packaging"]
+tags_normalized: ["dotcsproj", "dotnet 10", "dotnet core", "dotnet sdk", "andrew lock", "aot", "coding", "compatibility", "datadog", "dotnettoolsettingsdotxml", "framework dependent", "multi targeting", "native aot", "netcoreapp3dot1", "nuget", "performance", "platform specific tools", "blogs", "self contained deployment", "tool packaging"]
 ---
 
 Andrew Lock provides a thorough guide on leveraging the new .NET 10 platform-specific tool features, highlighting technical strategies and trade-offs for maintaining compatibility with older .NET SDKs.<!--excerpt_end-->

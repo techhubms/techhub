@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-09-04 17:51:34 +00:00
 permalink: "/blogs/2025-09-04-Report-ChatGPT-5-Coding-Gains-Come-at-a-Higher-Cost.html"
 categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Coding Tools", "ChatGPT", "ChatGPT 5", "Code Generation", "Coding", "Concurrency Bugs", "Control Flow Bugs", "Cost Analysis", "DevOps", "Java Tasks", "LLM Evaluation", "Maintenance Challenges", "OpenAI", "Posts", "Productivity Tradeoffs", "Reasoning Capabilities", "Security Vulnerabilities", "Social Facebook", "Social LinkedIn", "Social X", "Sonar Report"]
-tags_normalized: ["ai", "ai coding tools", "chatgpt", "chatgpt 5", "code generation", "coding", "concurrency bugs", "control flow bugs", "cost analysis", "devops", "java tasks", "llm evaluation", "maintenance challenges", "openai", "posts", "productivity tradeoffs", "reasoning capabilities", "security vulnerabilities", "social facebook", "social linkedin", "social x", "sonar report"]
+tags: ["AI", "AI Coding Tools", "ChatGPT", "ChatGPT 5", "Code Generation", "Coding", "Concurrency Bugs", "Control Flow Bugs", "Cost Analysis", "DevOps", "Java Tasks", "LLM Evaluation", "Maintenance Challenges", "OpenAI", "Blogs", "Productivity Tradeoffs", "Reasoning Capabilities", "Security Vulnerabilities", "Social Facebook", "Social LinkedIn", "Social X", "Sonar Report"]
+tags_normalized: ["ai", "ai coding tools", "chatgpt", "chatgpt 5", "code generation", "coding", "concurrency bugs", "control flow bugs", "cost analysis", "devops", "java tasks", "llm evaluation", "maintenance challenges", "openai", "blogs", "productivity tradeoffs", "reasoning capabilities", "security vulnerabilities", "social facebook", "social linkedin", "social x", "sonar report"]
 ---
 
 Mike Vizard explores Sonar's findings on ChatGPT-5, describing how improvements in AI-powered code generation affect cost, vulnerability profiles, and developer maintenance in modern software teams.<!--excerpt_end-->

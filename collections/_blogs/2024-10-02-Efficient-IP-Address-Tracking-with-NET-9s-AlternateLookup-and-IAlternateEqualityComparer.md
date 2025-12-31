@@ -11,8 +11,8 @@ feed_url: "https://www.stevejgordon.co.uk/feed"
 date: 2024-10-02 08:58:07 +00:00
 permalink: "/blogs/2024-10-02-Efficient-IP-Address-Tracking-with-NET-9s-AlternateLookup-and-IAlternateEqualityComparer.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 9", "AlternateLookup", "C#", "C# 13", "Coding", "Collections", "Dictionary", "Equality Comparer", "IAlternateEqualityComparer", "IPAddress Tracking", "Low Allocation", "Performance", "Posts", "ReadOnlyMemory", "ReadOnlySpan", "Span", "Stackalloc"]
-tags_normalized: ["dotnet", "dotnet 9", "alternatelookup", "csharp", "csharp 13", "coding", "collections", "dictionary", "equality comparer", "ialternateequalitycomparer", "ipaddress tracking", "low allocation", "performance", "posts", "readonlymemory", "readonlyspan", "span", "stackalloc"]
+tags: [".NET", ".NET 9", "AlternateLookup", "C#", "C# 13", "Coding", "Collections", "Dictionary", "Equality Comparer", "IAlternateEqualityComparer", "IPAddress Tracking", "Low Allocation", "Performance", "Blogs", "ReadOnlyMemory", "ReadOnlySpan", "Span", "Stackalloc"]
+tags_normalized: ["dotnet", "dotnet 9", "alternatelookup", "csharp", "csharp 13", "coding", "collections", "dictionary", "equality comparer", "ialternateequalitycomparer", "ipaddress tracking", "low allocation", "performance", "blogs", "readonlymemory", "readonlyspan", "span", "stackalloc"]
 ---
 
 In this in-depth article, Steve Gordon demonstrates enhancements in .NET 9 and C# 13 collections, focusing on building an efficient, low-allocation dictionary for IP address tracking using AlternateLookup and custom equality comparers.<!--excerpt_end-->

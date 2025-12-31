@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-07-30 11:54:54 +00:00
 permalink: "/blogs/2025-07-30-Observability-in-Retail-How-to-Monitor-and-Manage-Interactive-Kiosk-Fleets.html"
 categories: ["DevOps"]
-tags: ["Business Of DevOps", "Centralized Observability", "Contributed Content", "Customer Experience", "Customer Experience Technology", "DevOps", "Distributed Systems", "Kiosk Monitoring", "Observability", "Observability in DevOps", "Outage Prevention", "Posts", "Proactive Monitoring", "Retail Kiosk Monitoring", "Retail Kiosks", "Social Facebook", "Social LinkedIn", "Social X", "Telemetry"]
-tags_normalized: ["business of devops", "centralized observability", "contributed content", "customer experience", "customer experience technology", "devops", "distributed systems", "kiosk monitoring", "observability", "observability in devops", "outage prevention", "posts", "proactive monitoring", "retail kiosk monitoring", "retail kiosks", "social facebook", "social linkedin", "social x", "telemetry"]
+tags: ["Business Of DevOps", "Centralized Observability", "Contributed Content", "Customer Experience", "Customer Experience Technology", "DevOps", "Distributed Systems", "Kiosk Monitoring", "Observability", "Observability in DevOps", "Outage Prevention", "Blogs", "Proactive Monitoring", "Retail Kiosk Monitoring", "Retail Kiosks", "Social Facebook", "Social LinkedIn", "Social X", "Telemetry"]
+tags_normalized: ["business of devops", "centralized observability", "contributed content", "customer experience", "customer experience technology", "devops", "distributed systems", "kiosk monitoring", "observability", "observability in devops", "outage prevention", "blogs", "proactive monitoring", "retail kiosk monitoring", "retail kiosks", "social facebook", "social linkedin", "social x", "telemetry"]
 ---
 
 In this article, Cheryl Lesniak discusses the unique observability and monitoring requirements for managing interactive kiosk fleets at scale in the retail sector.<!--excerpt_end-->

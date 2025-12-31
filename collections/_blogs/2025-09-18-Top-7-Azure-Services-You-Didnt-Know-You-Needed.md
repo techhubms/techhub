@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-09-18 10:55:59 +00:00
 permalink: "/blogs/2025-09-18-Top-7-Azure-Services-You-Didnt-Know-You-Needed.html"
 categories: ["Azure", "Security"]
-tags: ["Application Insights", "Azure", "Azure App Configuration", "Azure Bastion", "Azure Chaos Studio", "Azure Cognitive Search", "Azure Logic Apps", "Azure Monitor", "Azure Sentinel", "Chaos Engineering", "Cloud Automation", "Cloud Security", "DevOps Tools", "Feature Flags", "Microsoft Azure", "Observability", "Posts", "RDP", "Resilience Testing", "Security", "SIEM", "Workflow Automation"]
-tags_normalized: ["application insights", "azure", "azure app configuration", "azure bastion", "azure chaos studio", "azure cognitive search", "azure logic apps", "azure monitor", "azure sentinel", "chaos engineering", "cloud automation", "cloud security", "devops tools", "feature flags", "microsoft azure", "observability", "posts", "rdp", "resilience testing", "security", "siem", "workflow automation"]
+tags: ["Application Insights", "Azure", "Azure App Configuration", "Azure Bastion", "Azure Chaos Studio", "Azure Cognitive Search", "Azure Logic Apps", "Azure Monitor", "Azure Sentinel", "Chaos Engineering", "Cloud Automation", "Cloud Security", "DevOps Tools", "Feature Flags", "Microsoft Azure", "Observability", "Blogs", "RDP", "Resilience Testing", "Security", "SIEM", "Workflow Automation"]
+tags_normalized: ["application insights", "azure", "azure app configuration", "azure bastion", "azure chaos studio", "azure cognitive search", "azure logic apps", "azure monitor", "azure sentinel", "chaos engineering", "cloud automation", "cloud security", "devops tools", "feature flags", "microsoft azure", "observability", "blogs", "rdp", "resilience testing", "security", "siem", "workflow automation"]
 ---
 
 Dellenny highlights seven under-the-radar Azure services that can transform your cloud strategy, from enhanced security with Sentinel to automation with Logic Apps.<!--excerpt_end-->

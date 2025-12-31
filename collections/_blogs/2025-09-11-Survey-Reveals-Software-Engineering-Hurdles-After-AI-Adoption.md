@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-09-11 20:01:09 +00:00
 permalink: "/blogs/2025-09-11-Survey-Reveals-Software-Engineering-Hurdles-After-AI-Adoption.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Adoption", "AI Strategy", "Application Development", "Automation", "Data Security", "DevOps", "Engineering Metrics", "Performance Monitoring", "Posts", "Productivity", "Quality Assurance", "Sdlc", "Skill Development", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering", "System Architecture", "Technical Debt", "Uplevel"]
-tags_normalized: ["ai", "ai adoption", "ai strategy", "application development", "automation", "data security", "devops", "engineering metrics", "performance monitoring", "posts", "productivity", "quality assurance", "sdlc", "skill development", "social facebook", "social linkedin", "social x", "software engineering", "system architecture", "technical debt", "uplevel"]
+tags: ["AI", "AI Adoption", "AI Strategy", "Application Development", "Automation", "Data Security", "DevOps", "Engineering Metrics", "Performance Monitoring", "Blogs", "Productivity", "Quality Assurance", "Sdlc", "Skill Development", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering", "System Architecture", "Technical Debt", "Uplevel"]
+tags_normalized: ["ai", "ai adoption", "ai strategy", "application development", "automation", "data security", "devops", "engineering metrics", "performance monitoring", "blogs", "productivity", "quality assurance", "sdlc", "skill development", "social facebook", "social linkedin", "social x", "software engineering", "system architecture", "technical debt", "uplevel"]
 ---
 
 Mike Vizard explores survey results from engineering leaders on AI adoption impacts, highlighting the ongoing DevOps and software engineering challenges organizations face.<!--excerpt_end-->

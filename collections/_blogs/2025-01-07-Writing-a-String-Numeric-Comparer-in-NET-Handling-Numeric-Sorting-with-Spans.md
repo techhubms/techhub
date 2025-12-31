@@ -11,8 +11,8 @@ feed_url: "https://khalidabuhakmeh.com/feed.xml"
 date: 2025-01-07 00:00:00 +00:00
 permalink: "/blogs/2025-01-07-Writing-a-String-Numeric-Comparer-in-NET-Handling-Numeric-Sorting-with-Spans.html"
 categories: ["Coding"]
-tags: [".NET", "Alphanumeric Ordering", "C#", "Coding", "Data Structures", "IComparer", "Numeric Comparer", "Posts", "Software Development", "Sorting", "Span APIs", "String Manipulation"]
-tags_normalized: ["dotnet", "alphanumeric ordering", "csharp", "coding", "data structures", "icomparer", "numeric comparer", "posts", "software development", "sorting", "span apis", "string manipulation"]
+tags: [".NET", "Alphanumeric Ordering", "C#", "Coding", "Data Structures", "IComparer", "Numeric Comparer", "Blogs", "Software Development", "Sorting", "Span APIs", "String Manipulation"]
+tags_normalized: ["dotnet", "alphanumeric ordering", "csharp", "coding", "data structures", "icomparer", "numeric comparer", "blogs", "software development", "sorting", "span apis", "string manipulation"]
 ---
 
 In this post, Khalid Abuhakmeh explores building a numeric string comparer in .NET using modern C# features like Span APIs. He shares practical code, discusses challenges, and offers guidance for developers handling complex sorting scenarios.<!--excerpt_end-->

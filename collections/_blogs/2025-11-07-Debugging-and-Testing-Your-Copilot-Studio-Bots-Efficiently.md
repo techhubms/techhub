@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-11-07 09:52:36 +00:00
 permalink: "/blogs/2025-11-07-Debugging-and-Testing-Your-Copilot-Studio-Bots-Efficiently.html"
 categories: ["AI"]
-tags: ["AI", "Application Insights", "Bot Testing", "Chatbot Development", "Conversational AI", "Copilot", "Copilot Studio", "Custom Connectors", "Debugging", "Error Handling", "Generative AI", "Microsoft", "Posts", "Telemetry", "Test Automation", "Topic Flow", "Variable Logic", "Workflow"]
-tags_normalized: ["ai", "application insights", "bot testing", "chatbot development", "conversational ai", "copilot", "copilot studio", "custom connectors", "debugging", "error handling", "generative ai", "microsoft", "posts", "telemetry", "test automation", "topic flow", "variable logic", "workflow"]
+tags: ["AI", "Application Insights", "Bot Testing", "Chatbot Development", "Conversational AI", "Copilot", "Copilot Studio", "Custom Connectors", "Debugging", "Error Handling", "Generative AI", "Microsoft", "Blogs", "Telemetry", "Test Automation", "Topic Flow", "Variable Logic", "Workflow"]
+tags_normalized: ["ai", "application insights", "bot testing", "chatbot development", "conversational ai", "copilot", "copilot studio", "custom connectors", "debugging", "error handling", "generative ai", "microsoft", "blogs", "telemetry", "test automation", "topic flow", "variable logic", "workflow"]
 ---
 
 Dellenny walks through practical strategies and best practices for efficiently debugging and testing bots built with Copilot Studio, offering valuable advice for conversational AI developers.<!--excerpt_end-->

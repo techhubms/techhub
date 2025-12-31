@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-11-19 09:57:36 +00:00
 permalink: "/blogs/2025-11-19-Azure-Support-Plans-Compared-Choosing-the-Right-One-for-Your-Organization.html"
 categories: ["Azure"]
-tags: ["Azure", "Basic Support", "Cloud Architecture", "Cloud Migration", "Cloud Operations", "Cloud Support", "Developer Support", "Enterprise IT", "Incident Response", "Microsoft Azure", "Operational Best Practices", "Posts", "Premier Support", "Production Workloads", "Professional Direct", "Service Levels", "Standard Support", "Support Plans", "Technical Guidance"]
-tags_normalized: ["azure", "basic support", "cloud architecture", "cloud migration", "cloud operations", "cloud support", "developer support", "enterprise it", "incident response", "microsoft azure", "operational best practices", "posts", "premier support", "production workloads", "professional direct", "service levels", "standard support", "support plans", "technical guidance"]
+tags: ["Azure", "Basic Support", "Cloud Architecture", "Cloud Migration", "Cloud Operations", "Cloud Support", "Developer Support", "Enterprise IT", "Incident Response", "Microsoft Azure", "Operational Best Practices", "Blogs", "Premier Support", "Production Workloads", "Professional Direct", "Service Levels", "Standard Support", "Support Plans", "Technical Guidance"]
+tags_normalized: ["azure", "basic support", "cloud architecture", "cloud migration", "cloud operations", "cloud support", "developer support", "enterprise it", "incident response", "microsoft azure", "operational best practices", "blogs", "premier support", "production workloads", "professional direct", "service levels", "standard support", "support plans", "technical guidance"]
 ---
 
 John Edward delivers a practical overview of Azure’s support plans, comparing features and suitability to help organizations select the right level of Microsoft’s cloud support.<!--excerpt_end-->

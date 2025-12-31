@@ -11,8 +11,8 @@ feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-04-29 09:00:00 +00:00
 permalink: "/blogs/2025-04-29-Implementing-a-Pooled-Dependency-Injection-Lifetime-in-ASPNET-Core.html"
 categories: ["Coding"]
-tags: [".NET Core", "ASP.NET Core", "Coding", "DbContext Pooling", "Dependency Injection", "IResettableService", "Performance", "Pooled Services", "Posts", "Scoped Services", "Service Lifetimes", "Singleton Services"]
-tags_normalized: ["dotnet core", "aspdotnet core", "coding", "dbcontext pooling", "dependency injection", "iresettableservice", "performance", "pooled services", "posts", "scoped services", "service lifetimes", "singleton services"]
+tags: [".NET Core", "ASP.NET Core", "Coding", "DbContext Pooling", "Dependency Injection", "IResettableService", "Performance", "Pooled Services", "Blogs", "Scoped Services", "Service Lifetimes", "Singleton Services"]
+tags_normalized: ["dotnet core", "aspdotnet core", "coding", "dbcontext pooling", "dependency injection", "iresettableservice", "performance", "pooled services", "blogs", "scoped services", "service lifetimes", "singleton services"]
 ---
 
 In this in-depth post, Andrew Lock explores how to create a pooled dependency injection lifetime in ASP.NET Core, discussing design choices, implementation details, and broader implications.<!--excerpt_end-->

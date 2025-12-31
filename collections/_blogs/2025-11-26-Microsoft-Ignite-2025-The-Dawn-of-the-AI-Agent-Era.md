@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-11-26 08:32:12 +00:00
 permalink: "/blogs/2025-11-26-Microsoft-Ignite-2025-The-Dawn-of-the-AI-Agent-Era.html"
 categories: ["AI", "Azure", "ML", "Security"]
-tags: ["Agent 365", "AI", "AI Agents", "Automation", "Azure", "Compliance", "Copilot", "Cybersecurity", "Data Intelligence", "Enterprise AI", "Entra Agent ID", "Excel", "Fabric IQ", "Governance", "IQ Stack", "Microsoft Foundry", "Microsoft General", "Microsoft Ignite", "ML", "Posts", "PowerPoint", "Security", "Teams", "Word"]
-tags_normalized: ["agent 365", "ai", "ai agents", "automation", "azure", "compliance", "copilot", "cybersecurity", "data intelligence", "enterprise ai", "entra agent id", "excel", "fabric iq", "governance", "iq stack", "microsoft foundry", "microsoft general", "microsoft ignite", "ml", "posts", "powerpoint", "security", "teams", "word"]
+tags: ["Agent 365", "AI", "AI Agents", "Automation", "Azure", "Compliance", "Copilot", "Cybersecurity", "Data Intelligence", "Enterprise AI", "Entra Agent ID", "Excel", "Fabric IQ", "Governance", "IQ Stack", "Microsoft Foundry", "Microsoft General", "Microsoft Ignite", "ML", "Blogs", "PowerPoint", "Security", "Teams", "Word"]
+tags_normalized: ["agent 365", "ai", "ai agents", "automation", "azure", "compliance", "copilot", "cybersecurity", "data intelligence", "enterprise ai", "entra agent id", "excel", "fabric iq", "governance", "iq stack", "microsoft foundry", "microsoft general", "microsoft ignite", "ml", "blogs", "powerpoint", "security", "teams", "word"]
 ---
 
 John Edward summarizes the technical innovations unveiled at Microsoft Ignite 2025, highlighting AI agents, enterprise governance, and robust security features that are redefining the Microsoft ecosystem.<!--excerpt_end-->

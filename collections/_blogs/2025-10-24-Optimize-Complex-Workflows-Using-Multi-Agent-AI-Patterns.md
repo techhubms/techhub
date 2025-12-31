@@ -11,8 +11,8 @@ feed_url: "https://www.thomasmaurer.ch/feed/"
 date: 2025-10-24 06:54:19 +00:00
 permalink: "/blogs/2025-10-24-Optimize-Complex-Workflows-Using-Multi-Agent-AI-Patterns.html"
 categories: ["AI", "Azure"]
-tags: [".ai Agent Orchestration", "Agent Patterns", "Agentic AI", "AI", "AI Orchestration", "Azure", "Azure AI Foundry", "Azure Essentials Show", "Cloud", "Cloud AI", "Enterprise Automation", "Large Language Models", "LLM", "Microsoft", "Microsoft Azure", "Model Specialization", "Multi Agent AI", "Posts", "Semantic Kernel", "SLM", "Thomas Maurer", "Workflow Optimization"]
-tags_normalized: ["dotai agent orchestration", "agent patterns", "agentic ai", "ai", "ai orchestration", "azure", "azure ai foundry", "azure essentials show", "cloud", "cloud ai", "enterprise automation", "large language models", "llm", "microsoft", "microsoft azure", "model specialization", "multi agent ai", "posts", "semantic kernel", "slm", "thomas maurer", "workflow optimization"]
+tags: [".ai Agent Orchestration", "Agent Patterns", "Agentic AI", "AI", "AI Orchestration", "Azure", "Azure AI Foundry", "Azure Essentials Show", "Cloud", "Cloud AI", "Enterprise Automation", "Large Language Models", "LLM", "Microsoft", "Microsoft Azure", "Model Specialization", "Multi Agent AI", "Blogs", "Semantic Kernel", "SLM", "Thomas Maurer", "Workflow Optimization"]
+tags_normalized: ["dotai agent orchestration", "agent patterns", "agentic ai", "ai", "ai orchestration", "azure", "azure ai foundry", "azure essentials show", "cloud", "cloud ai", "enterprise automation", "large language models", "llm", "microsoft", "microsoft azure", "model specialization", "multi agent ai", "blogs", "semantic kernel", "slm", "thomas maurer", "workflow optimization"]
 ---
 
 Thomas Maurer presents an in-depth look at multi-agent AI orchestration for enterprise workflows, with insights from Clayton Siemens. Learn how Microsoft Azure’s AI capabilities help optimize business processes.<!--excerpt_end-->

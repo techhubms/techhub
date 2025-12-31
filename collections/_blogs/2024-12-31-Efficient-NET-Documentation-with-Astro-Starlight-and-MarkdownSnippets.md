@@ -11,8 +11,8 @@ feed_url: "https://khalidabuhakmeh.com/feed.xml"
 date: 2024-12-31 00:00:00 +00:00
 permalink: "/blogs/2024-12-31-Efficient-NET-Documentation-with-Astro-Starlight-and-MarkdownSnippets.html"
 categories: ["Coding"]
-tags: [".NET", ".NET CLI", "Astro", "C#", "Code Samples", "Coding", "Documentation Automation", "JavaScript", "MarkdownSnippets", "Posts", "Starlight", "Technical Documentation", "Tooling"]
-tags_normalized: ["dotnet", "dotnet cli", "astro", "csharp", "code samples", "coding", "documentation automation", "javascript", "markdownsnippets", "posts", "starlight", "technical documentation", "tooling"]
+tags: [".NET", ".NET CLI", "Astro", "C#", "Code Samples", "Coding", "Documentation Automation", "JavaScript", "MarkdownSnippets", "Blogs", "Starlight", "Technical Documentation", "Tooling"]
+tags_normalized: ["dotnet", "dotnet cli", "astro", "csharp", "code samples", "coding", "documentation automation", "javascript", "markdownsnippets", "blogs", "starlight", "technical documentation", "tooling"]
 ---
 
 Khalid Abuhakmeh explains how developers can use Astro's Starlight in combination with the MarkdownSnippets tool to maintain accurate and up-to-date .NET documentation with live code samples.<!--excerpt_end-->

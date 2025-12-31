@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-09-16 08:49:07 +00:00
 permalink: "/blogs/2025-09-16-Centralized-Logging-in-Azure-Proven-Observability-Patterns-for-Modern-Apps.html"
 categories: ["Azure"]
-tags: ["AKS", "Application Insights", "Architecture", "Azure", "Azure App Service", "Azure Arc", "Azure Event Hubs", "Azure Functions", "Azure Monitor", "Centralized Logging", "Distributed Systems", "Fluent Bit", "Hybrid Cloud", "Infrastructure Monitoring", "KQL", "Kusto Query Language", "Log Analytics Workspace", "Observability", "Posts", "Solution Architecture", "Stream Analytics"]
-tags_normalized: ["aks", "application insights", "architecture", "azure", "azure app service", "azure arc", "azure event hubs", "azure functions", "azure monitor", "centralized logging", "distributed systems", "fluent bit", "hybrid cloud", "infrastructure monitoring", "kql", "kusto query language", "log analytics workspace", "observability", "posts", "solution architecture", "stream analytics"]
+tags: ["AKS", "Application Insights", "Architecture", "Azure", "Azure App Service", "Azure Arc", "Azure Event Hubs", "Azure Functions", "Azure Monitor", "Centralized Logging", "Distributed Systems", "Fluent Bit", "Hybrid Cloud", "Infrastructure Monitoring", "KQL", "Kusto Query Language", "Log Analytics Workspace", "Observability", "Blogs", "Solution Architecture", "Stream Analytics"]
+tags_normalized: ["aks", "application insights", "architecture", "azure", "azure app service", "azure arc", "azure event hubs", "azure functions", "azure monitor", "centralized logging", "distributed systems", "fluent bit", "hybrid cloud", "infrastructure monitoring", "kql", "kusto query language", "log analytics workspace", "observability", "blogs", "solution architecture", "stream analytics"]
 ---
 
 Dellenny explores centralized logging strategies in Microsoft Azure, guiding readers through core architectures, key Azure observability services, and actionable best practices for achieving unified monitoring in distributed application environments.<!--excerpt_end-->

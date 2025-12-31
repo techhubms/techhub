@@ -11,8 +11,8 @@ feed_url: "https://jessehouwing.net/rss/"
 date: 2025-09-02 21:05:46 +00:00
 permalink: "/blogs/2025-09-02-Mitigating-GitHub-Actions-Supply-Chain-Attacks-Lessons-from-the-nx-Project-Hack.html"
 categories: ["DevOps", "Security"]
-tags: ["Advanced Security Code Scanning", "Branch Policies", "CI/CD", "Dependabot", "DevOps", "Environment Secrets", "GitHub", "GitHub Actions", "GitHub Token", "npm", "Permission Management", "Posts", "Repository Secrets", "Secret Management", "Security", "StepSecurity", "Supply Chain Security", "Workflow Security", "YAML"]
-tags_normalized: ["advanced security code scanning", "branch policies", "cislashcd", "dependabot", "devops", "environment secrets", "github", "github actions", "github token", "npm", "permission management", "posts", "repository secrets", "secret management", "security", "stepsecurity", "supply chain security", "workflow security", "yaml"]
+tags: ["Advanced Security Code Scanning", "Branch Policies", "CI/CD", "Dependabot", "DevOps", "Environment Secrets", "GitHub", "GitHub Actions", "GitHub Token", "npm", "Permission Management", "Blogs", "Repository Secrets", "Secret Management", "Security", "StepSecurity", "Supply Chain Security", "Workflow Security", "YAML"]
+tags_normalized: ["advanced security code scanning", "branch policies", "cislashcd", "dependabot", "devops", "environment secrets", "github", "github actions", "github token", "npm", "permission management", "blogs", "repository secrets", "secret management", "security", "stepsecurity", "supply chain security", "workflow security", "yaml"]
 ---
 
 Jesse Houwing examines the nx supply chain attack in detail, explaining how GitHub Actions misconfigurations led to leaked secrets and how to secure CI/CD workflows with actionable security best practices.<!--excerpt_end-->

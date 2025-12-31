@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-08-01 18:10:17 +00:00
 permalink: "/blogs/2025-08-01-Supercharge-Your-Debugging-with-Remote-Tools-for-Microsoft-Edge.html"
 categories: ["Coding"]
-tags: ["Chromium", "Coding", "Cross Device Debugging", "DevTools", "Edge", "Edge DevTools Protocol", "HoloLens", "IoT Development", "Microsoft Edge", "Microsoft General", "Posts", "Remote Debugging", "Remote Tools", "Security Best Practices", "Virtual Machines", "Web Development", "WebView2", "Windows 10", "Windows 11", "Xbox Development"]
-tags_normalized: ["chromium", "coding", "cross device debugging", "devtools", "edge", "edge devtools protocol", "hololens", "iot development", "microsoft edge", "microsoft general", "posts", "remote debugging", "remote tools", "security best practices", "virtual machines", "web development", "webview2", "windows 10", "windows 11", "xbox development"]
+tags: ["Chromium", "Coding", "Cross Device Debugging", "DevTools", "Edge", "Edge DevTools Protocol", "HoloLens", "IoT Development", "Microsoft Edge", "Microsoft General", "Blogs", "Remote Debugging", "Remote Tools", "Security Best Practices", "Virtual Machines", "Web Development", "WebView2", "Windows 10", "Windows 11", "Xbox Development"]
+tags_normalized: ["chromium", "coding", "cross device debugging", "devtools", "edge", "edge devtools protocol", "hololens", "iot development", "microsoft edge", "microsoft general", "blogs", "remote debugging", "remote tools", "security best practices", "virtual machines", "web development", "webview2", "windows 10", "windows 11", "xbox development"]
 ---
 
 Dellenny introduces Remote Tools for Microsoft Edge, showing developers how to set up and use remote debugging across devices like IoT, Xbox, and virtual machines.<!--excerpt_end-->

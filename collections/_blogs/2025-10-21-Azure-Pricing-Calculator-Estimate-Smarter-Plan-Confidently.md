@@ -11,8 +11,8 @@ feed_url: "https://www.thomasmaurer.ch/feed/"
 date: 2025-10-21 08:34:59 +00:00
 permalink: "/blogs/2025-10-21-Azure-Pricing-Calculator-Estimate-Smarter-Plan-Confidently.html"
 categories: ["Azure"]
-tags: ["Azure", "Azure Essentials Show", "Azure Management", "Azure Pricing Calculator", "Azure Workloads", "Budgeting", "Cloud", "Cloud Cost Estimation", "Cloud Optimization", "Collaboration", "Cost Planning", "Microsoft", "Microsoft Azure", "Posts", "Pricing Calculator", "Pricing Tool", "Resource Estimation", "Scenario Modeling", "Thomas Maurer", "Video"]
-tags_normalized: ["azure", "azure essentials show", "azure management", "azure pricing calculator", "azure workloads", "budgeting", "cloud", "cloud cost estimation", "cloud optimization", "collaboration", "cost planning", "microsoft", "microsoft azure", "posts", "pricing calculator", "pricing tool", "resource estimation", "scenario modeling", "thomas maurer", "video"]
+tags: ["Azure", "Azure Essentials Show", "Azure Management", "Azure Pricing Calculator", "Azure Workloads", "Budgeting", "Cloud", "Cloud Cost Estimation", "Cloud Optimization", "Collaboration", "Cost Planning", "Microsoft", "Microsoft Azure", "Blogs", "Pricing Calculator", "Pricing Tool", "Resource Estimation", "Scenario Modeling", "Thomas Maurer", "Video"]
+tags_normalized: ["azure", "azure essentials show", "azure management", "azure pricing calculator", "azure workloads", "budgeting", "cloud", "cloud cost estimation", "cloud optimization", "collaboration", "cost planning", "microsoft", "microsoft azure", "blogs", "pricing calculator", "pricing tool", "resource estimation", "scenario modeling", "thomas maurer", "video"]
 ---
 
 In this Azure Essentials Show episode, Thomas Maurer guides readers through advanced use of the Azure Pricing Calculator with insights from Britt Henderson, focusing on how to confidently estimate and manage Azure costs.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-11-14 08:54:01 +00:00
 permalink: "/blogs/2025-11-14-Practical-Use-Cases-Writing-Refactoring-and-Testing-Code-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "CI/CD", "Code Refactoring", "Code Review", "Coding", "Coding Productivity", "DevOps", "DevOps Automation", "Flask", "GitHub Copilot", "JavaScript", "Pair Programming", "Posts", "Python", "Software Development", "Testing Best Practices", "Unit Testing", "Web Development"]
-tags_normalized: ["ai", "ai coding assistant", "cislashcd", "code refactoring", "code review", "coding", "coding productivity", "devops", "devops automation", "flask", "github copilot", "javascript", "pair programming", "posts", "python", "software development", "testing best practices", "unit testing", "web development"]
+tags: ["AI", "AI Coding Assistant", "CI/CD", "Code Refactoring", "Code Review", "Coding", "Coding Productivity", "DevOps", "DevOps Automation", "Flask", "GitHub Copilot", "JavaScript", "Pair Programming", "Blogs", "Python", "Software Development", "Testing Best Practices", "Unit Testing", "Web Development"]
+tags_normalized: ["ai", "ai coding assistant", "cislashcd", "code refactoring", "code review", "coding", "coding productivity", "devops", "devops automation", "flask", "github copilot", "javascript", "pair programming", "blogs", "python", "software development", "testing best practices", "unit testing", "web development"]
 ---
 
 Dellenny shares actionable insights on how developers can use GitHub Copilot for writing, refactoring, and testing code, highlighting its impact on coding workflows and productivity.<!--excerpt_end-->

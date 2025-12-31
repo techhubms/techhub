@@ -731,17 +731,17 @@ The site provides RSS feeds for all sections and collections:
 **Section RSS Feeds** (all content with that category):
 
 - Everything: `/feed.xml` - All content across all sections
-- AI: `/ai.xml` - AI-related content
-- GitHub Copilot: `/github-copilot.xml` - GitHub Copilot content
-- ML: `/ml.xml` - Machine learning content
-- Azure: `/azure.xml` - Azure cloud platform content
-- Coding: `/coding.xml` - .NET and coding content
-- DevOps: `/devops.xml` - DevOps and automation content
-- Security: `/security.xml` - Security content
+- AI: `/ai/feed.xml` - AI-related content
+- GitHub Copilot: `/github-copilot/feed.xml` - GitHub Copilot content
+- ML: `/ml/feed.xml` - Machine learning content
+- Azure: `/azure/feed.xml` - Azure cloud platform content
+- Coding: `/coding/feed.xml` - .NET and coding content
+- DevOps: `/devops/feed.xml` - DevOps and automation content
+- Security: `/security/feed.xml` - Security content
 
 **Collection RSS Feeds**:
 
-- Roundups: `/roundups.xml` - Weekly content roundups
+- Roundups: `/roundups/feed.xml` - Weekly content roundups
 
 **Access**:
 

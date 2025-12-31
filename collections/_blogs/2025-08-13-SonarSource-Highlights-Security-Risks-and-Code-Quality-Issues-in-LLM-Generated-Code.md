@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-08-13 13:43:07 +00:00
 permalink: "/blogs/2025-08-13-SonarSource-Highlights-Security-Risks-and-Code-Quality-Issues-in-LLM-Generated-Code.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Coding Tools", "Analysis", "Business Of DevOps", "Claude Sonnet 4", "Code Quality", "Code Review", "Code Smells", "DevOps", "DevSecOps", "GPT 4o", "Hard Coded Credentials", "Java", "Large Language Models", "Llama 3.2", "LLMs", "Messy Code", "Path Traversal", "Posts", "Security", "Security Vulnerabilities", "Social Facebook", "Social LinkedIn", "Social X", "SonarSource", "Technical Debt"]
-tags_normalized: ["ai", "ai coding tools", "analysis", "business of devops", "claude sonnet 4", "code quality", "code review", "code smells", "devops", "devsecops", "gpt 4o", "hard coded credentials", "java", "large language models", "llama 3dot2", "llms", "messy code", "path traversal", "posts", "security", "security vulnerabilities", "social facebook", "social linkedin", "social x", "sonarsource", "technical debt"]
+tags: ["AI", "AI Coding Tools", "Analysis", "Business Of DevOps", "Claude Sonnet 4", "Code Quality", "Code Review", "Code Smells", "DevOps", "DevSecOps", "GPT 4o", "Hard Coded Credentials", "Java", "Large Language Models", "Llama 3.2", "LLMs", "Messy Code", "Path Traversal", "Blogs", "Security", "Security Vulnerabilities", "Social Facebook", "Social LinkedIn", "Social X", "SonarSource", "Technical Debt"]
+tags_normalized: ["ai", "ai coding tools", "analysis", "business of devops", "claude sonnet 4", "code quality", "code review", "code smells", "devops", "devsecops", "gpt 4o", "hard coded credentials", "java", "large language models", "llama 3dot2", "llms", "messy code", "path traversal", "blogs", "security", "security vulnerabilities", "social facebook", "social linkedin", "social x", "sonarsource", "technical debt"]
 ---
 
 Mike Vizard summarizes SonarSource's analysis of LLM-generated code, revealing frequent security vulnerabilities and long-term code quality issues. The article urges DevOps teams to be vigilant when leveraging AI coding tools.<!--excerpt_end-->

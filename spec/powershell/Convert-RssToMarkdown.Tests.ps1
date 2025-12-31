@@ -126,13 +126,13 @@ Describe "Convert-RssToMarkdown" {
             }
         )
         
-        $script:postsTestItems = @(
+        $script:blogsTestItems = @(
             [PSCustomObject]@{
-                Title           = "Posts Article"
-                Link            = "https://example.com/posts-article"
+                Title           = "Blogs Article"
+                Link            = "https://example.com/blogs-article"
                 PubDate         = [DateTime]::Parse("2025-01-01T12:00:00Z")
-                Description     = "This is a posts article. " + ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. " * 10)
-                Author          = "Posts Author"
+                Description     = "This is a blogs article. " + ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. " * 10)
+                Author          = "Blogs Author"
                 Tags            = @("Blogs", "Testing")
                 OutputDir       = $script:TestOutputDir
                 FeedName        = "Test Feed"

@@ -11,8 +11,8 @@ feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-09-23 10:00:00 +00:00
 permalink: "/blogs/2025-09-23-Building-sleep-pc-A-NET-Native-AOT-Tool-for-Automating-Windows-Sleep.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET 8", ".NET Core", "AOT", "C#", "Coding", "Command Line Parsing", "Command Line Tool", "ConsoleAppFramework", "Csproj", "DllImport", "Native AOT", "NuGet", "P/Invoke", "PackAsTool", "Posts", "SetSuspendState", "Source Generators", "Task.Delay", "Win32 API", "Windows"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet 8", "dotnet core", "aot", "csharp", "coding", "command line parsing", "command line tool", "consoleappframework", "csproj", "dllimport", "native aot", "nuget", "pslashinvoke", "packastool", "posts", "setsuspendstate", "source generators", "taskdotdelay", "win32 api", "windows"]
+tags: [".NET", ".NET 10", ".NET 8", ".NET Core", "AOT", "C#", "Coding", "Command Line Parsing", "Command Line Tool", "ConsoleAppFramework", "Csproj", "DllImport", "Native AOT", "NuGet", "P/Invoke", "PackAsTool", "Blogs", "SetSuspendState", "Source Generators", "Task.Delay", "Win32 API", "Windows"]
+tags_normalized: ["dotnet", "dotnet 10", "dotnet 8", "dotnet core", "aot", "csharp", "coding", "command line parsing", "command line tool", "consoleappframework", "csproj", "dllimport", "native aot", "nuget", "pslashinvoke", "packastool", "blogs", "setsuspendstate", "source generators", "taskdotdelay", "win32 api", "windows"]
 ---
 
 Andrew Lock details the development of 'sleep-pc,' a native AOT .NET tool for putting Windows PCs to sleep after a timeout, highlighting his approach, toolchain choices, and packaging for NuGet.<!--excerpt_end-->

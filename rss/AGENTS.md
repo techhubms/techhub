@@ -58,7 +58,7 @@ layout: null
     <title>{{ site.title }} - Section Name</title>
     <description>{{ site.description }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ site.url }}{{ site.baseurl }}/rss/section.xml" 
+    <atom:link href="{{ site.url }}{{ site.baseurl }}/section/feed.xml" 
                rel="self" 
                type="application/rss+xml"/>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
@@ -165,8 +165,9 @@ Use RFC 822 date format for RSS compatibility:
 ./scripts/jekyll-start.ps1
 
 # Access feeds at:
-# http://localhost:4000/rss/feed.xml
-# http://localhost:4000/rss/ai.xml
+# http://localhost:4000/feed.xml (Everything)
+# http://localhost:4000/ai/feed.xml
+# http://localhost:4000/github-copilot/feed.xml
 # etc.
 ```
 
@@ -256,7 +257,7 @@ Add feed links to site `<head>`:
 ```html
 <link rel="alternate" type="application/rss+xml" 
       title="RSS Feed" 
-      href="{{ site.url }}/rss/feed.xml" />
+      href="{{ site.url }}/feed.xml" />
 ```
 
 ### Maintenance

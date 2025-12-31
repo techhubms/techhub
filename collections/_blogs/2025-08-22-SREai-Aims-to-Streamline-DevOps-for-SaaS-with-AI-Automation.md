@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-08-22 19:50:26 +00:00
 permalink: "/blogs/2025-08-22-SREai-Aims-to-Streamline-DevOps-for-SaaS-with-AI-Automation.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Powered DevOps", "AI Tools", "Application Monitoring", "Continuous Integration", "DevOps", "DevOps Automation", "IT Governance", "Low Code", "Low Code/No Code", "No Code Development", "Platform Integration", "Posts", "SaaS", "SaaS Deployment", "Social Facebook", "Social LinkedIn", "Social X", "Software Deployment", "SRE.ai", "Tooling Sprawl", "Workflow Automation"]
-tags_normalized: ["ai", "ai powered devops", "ai tools", "application monitoring", "continuous integration", "devops", "devops automation", "it governance", "low code", "low codeslashno code", "no code development", "platform integration", "posts", "saas", "saas deployment", "social facebook", "social linkedin", "social x", "software deployment", "sredotai", "tooling sprawl", "workflow automation"]
+tags: ["AI", "AI Powered DevOps", "AI Tools", "Application Monitoring", "Continuous Integration", "DevOps", "DevOps Automation", "IT Governance", "Low Code", "Low Code/No Code", "No Code Development", "Platform Integration", "Blogs", "SaaS", "SaaS Deployment", "Social Facebook", "Social LinkedIn", "Social X", "Software Deployment", "SRE.ai", "Tooling Sprawl", "Workflow Automation"]
+tags_normalized: ["ai", "ai powered devops", "ai tools", "application monitoring", "continuous integration", "devops", "devops automation", "it governance", "low code", "low codeslashno code", "no code development", "platform integration", "blogs", "saas", "saas deployment", "social facebook", "social linkedin", "social x", "software deployment", "sredotai", "tooling sprawl", "workflow automation"]
 ---
 
 Mike Vizard examines how SRE.ai is building a unified, AI-driven DevOps platform for managing and automating the deployment of custom software across multiple SaaS ecosystems.<!--excerpt_end-->

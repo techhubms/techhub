@@ -11,8 +11,8 @@ feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-07-18 00:00:00 +00:00
 permalink: "/blogs/2025-07-18-Use-GitHub-Copilot-Chat-to-Plan-Your-Software-Before-Coding.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Code Planning", "Coding", "Developer Productivity", "Edge Cases", "GitHub Copilot", "GitHub Copilot Chat", "JavaScript", "Logic Structuring", "Pair Programming", "Posts", "Software Architecture", "Software Design"]
-tags_normalized: ["ai", "ai assisted development", "code planning", "coding", "developer productivity", "edge cases", "github copilot", "github copilot chat", "javascript", "logic structuring", "pair programming", "posts", "software architecture", "software design"]
+tags: ["AI", "AI Assisted Development", "Code Planning", "Coding", "Developer Productivity", "Edge Cases", "GitHub Copilot", "GitHub Copilot Chat", "JavaScript", "Logic Structuring", "Pair Programming", "Blogs", "Software Architecture", "Software Design"]
+tags_normalized: ["ai", "ai assisted development", "code planning", "coding", "developer productivity", "edge cases", "github copilot", "github copilot chat", "javascript", "logic structuring", "pair programming", "blogs", "software architecture", "software design"]
 ---
 
 Randy Pagels discusses how developers can use GitHub Copilot Chat as a planning assistant to outline software logic and structure features before implementing any code.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-10-10 20:18:35 +00:00
 permalink: "/blogs/2025-10-10-Technical-Debt-Make-Developers-Happier-Now-or-Pay-More-Later.html"
 categories: ["AI", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Agents", "Automation", "CI/CD", "Code Quality", "Continuous Integration", "Contributed Content", "Developer Experience", "DevOps", "DevOps Culture", "DX", "DX Champion", "Engineering Productivity", "Innovation", "Posts", "Social Facebook", "Social LinkedIn", "Social X", "Software Development Practices", "Team Morale", "Technical Debt"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "automation", "cislashcd", "code quality", "continuous integration", "contributed content", "developer experience", "devops", "devops culture", "dx", "dx champion", "engineering productivity", "innovation", "posts", "social facebook", "social linkedin", "social x", "software development practices", "team morale", "technical debt"]
+tags: ["Agentic AI", "AI", "AI Agents", "Automation", "CI/CD", "Code Quality", "Continuous Integration", "Contributed Content", "Developer Experience", "DevOps", "DevOps Culture", "DX", "DX Champion", "Engineering Productivity", "Innovation", "Blogs", "Social Facebook", "Social LinkedIn", "Social X", "Software Development Practices", "Team Morale", "Technical Debt"]
+tags_normalized: ["agentic ai", "ai", "ai agents", "automation", "cislashcd", "code quality", "continuous integration", "contributed content", "developer experience", "devops", "devops culture", "dx", "dx champion", "engineering productivity", "innovation", "blogs", "social facebook", "social linkedin", "social x", "software development practices", "team morale", "technical debt"]
 ---
 
 Ernesto Tagwerker examines how organizations manage technical debt, highlighting the influence of developer experience and the role of AI and DevOps practices in keeping teams productive and innovative.<!--excerpt_end-->

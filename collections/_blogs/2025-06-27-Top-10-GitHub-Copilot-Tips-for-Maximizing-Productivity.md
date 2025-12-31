@@ -11,8 +11,8 @@ feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-06-27 00:00:00 +00:00
 permalink: "/blogs/2025-06-27-Top-10-GitHub-Copilot-Tips-for-Maximizing-Productivity.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Code Review", "Coding Best Practices", "Copilot Chat", "Developer Productivity", "Documentation", "GitHub Copilot", "Posts", "Prompt Engineering", "Pull Requests", "Refactoring", "Test Generation", "Type Hints", "VS Code"]
-tags_normalized: ["ai", "code review", "coding best practices", "copilot chat", "developer productivity", "documentation", "github copilot", "posts", "prompt engineering", "pull requests", "refactoring", "test generation", "type hints", "vs code"]
+tags: ["AI", "Code Review", "Coding Best Practices", "Copilot Chat", "Developer Productivity", "Documentation", "GitHub Copilot", "Blogs", "Prompt Engineering", "Pull Requests", "Refactoring", "Test Generation", "Type Hints", "VS Code"]
+tags_normalized: ["ai", "code review", "coding best practices", "copilot chat", "developer productivity", "documentation", "github copilot", "blogs", "prompt engineering", "pull requests", "refactoring", "test generation", "type hints", "vs code"]
 ---
 
 In this guide, Randy Pagels shares his top tips for getting the most out of GitHub Copilot, focusing on practical application, code quality, and time-saving techniques.<!--excerpt_end-->

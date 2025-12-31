@@ -11,8 +11,8 @@ feed_url: "https://www.thomasmaurer.ch/feed/"
 date: 2025-11-24 08:29:00 +00:00
 permalink: "/blogs/2025-11-24-Commvault-SHIFT-Virtual-AI-and-Cyber-Resilience-Insights-for-Microsoft-Identity-and-Cloud.html"
 categories: ["AI", "Security"]
-tags: ["Active Directory Recovery", "AI", "AI Driven Security", "AI Governance", "Cloud Unity Platform", "Commvault", "Commvault Shift", "Cyber Recovery", "Cyber Resilience", "Hybrid Cloud Security", "Identity Protection", "Incident Response", "Microsoft Entra ID", "Posts", "Proactive Recovery", "Sanjay Mirchandani", "Security", "Shift Virtual", "Threat Scan", "Virtual Event", "Virtualization", "Zero Trust IAM"]
-tags_normalized: ["active directory recovery", "ai", "ai driven security", "ai governance", "cloud unity platform", "commvault", "commvault shift", "cyber recovery", "cyber resilience", "hybrid cloud security", "identity protection", "incident response", "microsoft entra id", "posts", "proactive recovery", "sanjay mirchandani", "security", "shift virtual", "threat scan", "virtual event", "virtualization", "zero trust iam"]
+tags: ["Active Directory Recovery", "AI", "AI Driven Security", "AI Governance", "Cloud Unity Platform", "Commvault", "Commvault Shift", "Cyber Recovery", "Cyber Resilience", "Hybrid Cloud Security", "Identity Protection", "Incident Response", "Microsoft Entra ID", "Blogs", "Proactive Recovery", "Sanjay Mirchandani", "Security", "Shift Virtual", "Threat Scan", "Virtual Event", "Virtualization", "Zero Trust IAM"]
+tags_normalized: ["active directory recovery", "ai", "ai driven security", "ai governance", "cloud unity platform", "commvault", "commvault shift", "cyber recovery", "cyber resilience", "hybrid cloud security", "identity protection", "incident response", "microsoft entra id", "blogs", "proactive recovery", "sanjay mirchandani", "security", "shift virtual", "threat scan", "virtual event", "virtualization", "zero trust iam"]
 ---
 
 Thomas Maurer explores best practices and platform updates from Commvault SHIFT 2025, emphasizing AI-powered resilience and security for Microsoft identity systems like AD and Entra ID.<!--excerpt_end-->

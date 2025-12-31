@@ -11,8 +11,8 @@ feed_url: "https://devopsjournal.io/blog/atom.xml"
 date: 2024-10-30 00:00:00 +00:00
 permalink: "/blogs/2024-10-30-GitHub-Universe-2024-Successfully-Scaling-GitHub-Copilot-to-Thousands-of-Developers.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Conference", "Copilot Adoption", "Developer Tooling", "DevOps", "GitHub", "GitHub Copilot", "GitHub Universe", "Organizational Implementation", "Posts", "Scalability", "Slides"]
-tags_normalized: ["ai", "conference", "copilot adoption", "developer tooling", "devops", "github", "github copilot", "github universe", "organizational implementation", "posts", "scalability", "slides"]
+tags: ["AI", "Conference", "Copilot Adoption", "Developer Tooling", "DevOps", "GitHub", "GitHub Copilot", "GitHub Universe", "Organizational Implementation", "Blogs", "Scalability", "Slides"]
+tags_normalized: ["ai", "conference", "copilot adoption", "developer tooling", "devops", "github", "github copilot", "github universe", "organizational implementation", "blogs", "scalability", "slides"]
 ---
 
 In this session recap, Rob Bos discusses strategies for scaling GitHub Copilot to thousands of developers, as presented at GitHub Universe 2024. The post includes a recorded session and slides.<!--excerpt_end-->

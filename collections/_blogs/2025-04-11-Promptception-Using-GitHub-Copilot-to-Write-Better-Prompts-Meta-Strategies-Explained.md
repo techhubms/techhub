@@ -11,8 +11,8 @@ feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-04-11 00:00:00 +00:00
 permalink: "/blogs/2025-04-11-Promptception-Using-GitHub-Copilot-to-Write-Better-Prompts-Meta-Strategies-Explained.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Code Review", "Copilot Agent Mode", "Copilot Chat", "Copilot Edit", "Developer Productivity", "GitHub Copilot", "Playwright", "Posts", "Prompt Engineering", "Prompt Optimization", "README Generation"]
-tags_normalized: ["ai", "code review", "copilot agent mode", "copilot chat", "copilot edit", "developer productivity", "github copilot", "playwright", "posts", "prompt engineering", "prompt optimization", "readme generation"]
+tags: ["AI", "Code Review", "Copilot Agent Mode", "Copilot Chat", "Copilot Edit", "Developer Productivity", "GitHub Copilot", "Playwright", "Blogs", "Prompt Engineering", "Prompt Optimization", "README Generation"]
+tags_normalized: ["ai", "code review", "copilot agent mode", "copilot chat", "copilot edit", "developer productivity", "github copilot", "playwright", "blogs", "prompt engineering", "prompt optimization", "readme generation"]
 ---
 
 In this post, Randy Pagels introduces 'Promptception'—the process of leveraging GitHub Copilot to craft better prompts for Copilot itself. Learn strategies to enhance prompt effectiveness using Chat, Edit, and Agent Modes.<!--excerpt_end-->

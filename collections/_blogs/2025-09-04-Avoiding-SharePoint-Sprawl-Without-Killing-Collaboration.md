@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-09-04 13:53:43 +00:00
 permalink: "/blogs/2025-09-04-Avoiding-SharePoint-Sprawl-Without-Killing-Collaboration.html"
 categories: ["Coding"]
-tags: ["Automation", "Coding", "Collaboration", "Content Archiving", "IT Governance", "Lifecycle Management", "Metadata Tagging", "Microsoft 365", "Naming Conventions", "Posts", "SharePoint", "SharePoint Governance", "Site Templates"]
-tags_normalized: ["automation", "coding", "collaboration", "content archiving", "it governance", "lifecycle management", "metadata tagging", "microsoft 365", "naming conventions", "posts", "sharepoint", "sharepoint governance", "site templates"]
+tags: ["Automation", "Coding", "Collaboration", "Content Archiving", "IT Governance", "Lifecycle Management", "Metadata Tagging", "Microsoft 365", "Naming Conventions", "Blogs", "SharePoint", "SharePoint Governance", "Site Templates"]
+tags_normalized: ["automation", "coding", "collaboration", "content archiving", "it governance", "lifecycle management", "metadata tagging", "microsoft 365", "naming conventions", "blogs", "sharepoint", "sharepoint governance", "site templates"]
 ---
 
 Dellenny provides actionable strategies to prevent SharePoint sprawl, balancing collaboration and governance for organizations using Microsoft 365.<!--excerpt_end-->

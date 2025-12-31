@@ -11,8 +11,8 @@ feed_url: "https://harrybin.de/rss.xml"
 date: 2025-10-10 22:00:00 +00:00
 permalink: "/blogs/2025-10-10-Building-Buzzword-Bingo-with-GitHub-Spark-Copilot-and-Modern-Dev-Tools.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Powered Development", "Automation", "Bingo Game", "Codespaces", "Coding", "Continuous Deployment", "Copilot Coding Agent", "Dependency Management", "DevOps", "GitHub Actions", "GitHub Copilot", "GitHub Pages", "GitHub Spark", "Posts", "Rapid Prototyping", "React", "TypeScript", "Web Development"]
-tags_normalized: ["ai", "ai powered development", "automation", "bingo game", "codespaces", "coding", "continuous deployment", "copilot coding agent", "dependency management", "devops", "github actions", "github copilot", "github pages", "github spark", "posts", "rapid prototyping", "react", "typescript", "web development"]
+tags: ["AI", "AI Powered Development", "Automation", "Bingo Game", "Codespaces", "Coding", "Continuous Deployment", "Copilot Coding Agent", "Dependency Management", "DevOps", "GitHub Actions", "GitHub Copilot", "GitHub Pages", "GitHub Spark", "Blogs", "Rapid Prototyping", "React", "TypeScript", "Web Development"]
+tags_normalized: ["ai", "ai powered development", "automation", "bingo game", "codespaces", "coding", "continuous deployment", "copilot coding agent", "dependency management", "devops", "github actions", "github copilot", "github pages", "github spark", "blogs", "rapid prototyping", "react", "typescript", "web development"]
 ---
 
 Harald Binkle explores building a modern Buzzword Bingo app in 15 minutes using GitHub Spark’s AI-driven development tools, Copilot integration, and automated deployments, outlining real-world lessons for developers.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-11-07 09:47:43 +00:00
 permalink: "/blogs/2025-11-07-Free-and-Official-Learning-Resources-for-the-GitHub-Copilot-Certification-Exam.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Development", "Certification Resources", "Code Testing", "Coding", "Copilot Certification", "Data Privacy", "Developers", "Exam Preparation", "GitHub Copilot", "GitHub Documentation", "Microsoft Learn", "Posts", "Practice Assessment", "Prompt Engineering", "Responsible AI", "Software Development"]
-tags_normalized: ["ai", "ai development", "certification resources", "code testing", "coding", "copilot certification", "data privacy", "developers", "exam preparation", "github copilot", "github documentation", "microsoft learn", "posts", "practice assessment", "prompt engineering", "responsible ai", "software development"]
+tags: ["AI", "AI Development", "Certification Resources", "Code Testing", "Coding", "Copilot Certification", "Data Privacy", "Developers", "Exam Preparation", "GitHub Copilot", "GitHub Documentation", "Microsoft Learn", "Blogs", "Practice Assessment", "Prompt Engineering", "Responsible AI", "Software Development"]
+tags_normalized: ["ai", "ai development", "certification resources", "code testing", "coding", "copilot certification", "data privacy", "developers", "exam preparation", "github copilot", "github documentation", "microsoft learn", "blogs", "practice assessment", "prompt engineering", "responsible ai", "software development"]
 ---
 
 Dellenny outlines free, official study materials for the GitHub Copilot Certification Exam, guiding developers through Microsoft Learn modules, documentation, and community tips for mastering responsible AI and AI-assisted coding.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://roadtoalm.com/feed/"
 date: 2025-06-18 07:18:00 +00:00
 permalink: "/blogs/2025-06-18-Startup-Engineering-Culture-in-Action.html"
 categories: ["DevOps"]
-tags: ["Architecture", "Atlas", "DevOps", "Engineering Culture", "Lead Podcast", "Lean Processes", "Ownership", "Posts", "Prioritization", "Product Focus", "Scaling", "Software Development", "Startups", "Team Structure", "Trust"]
-tags_normalized: ["architecture", "atlas", "devops", "engineering culture", "lead podcast", "lean processes", "ownership", "posts", "prioritization", "product focus", "scaling", "software development", "startups", "team structure", "trust"]
+tags: ["Architecture", "Atlas", "DevOps", "Engineering Culture", "Lead Podcast", "Lean Processes", "Ownership", "Blogs", "Prioritization", "Product Focus", "Scaling", "Software Development", "Startups", "Team Structure", "Trust"]
+tags_normalized: ["architecture", "atlas", "devops", "engineering culture", "lead podcast", "lean processes", "ownership", "blogs", "prioritization", "product focus", "scaling", "software development", "startups", "team structure", "trust"]
 ---
 
 In this blog post, Rene van Osnabrugge distills lessons on startup engineering culture from the LEAD podcast, with a focus on lean processes, trust, and DevOps principles.<!--excerpt_end-->

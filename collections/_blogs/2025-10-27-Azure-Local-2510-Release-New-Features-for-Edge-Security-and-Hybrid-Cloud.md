@@ -11,8 +11,8 @@ feed_url: "https://www.thomasmaurer.ch/feed/"
 date: 2025-10-27 09:05:14 +00:00
 permalink: "/blogs/2025-10-27-Azure-Local-2510-Release-New-Features-for-Edge-Security-and-Hybrid-Cloud.html"
 categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Arc", "Azure Local", "Cloud", "Deployment", "Edge Computing", "Hybrid Cloud", "Microsoft", "Microsoft Azure", "Network Security Groups", "Posts", "Rack Aware Cluster", "SDN", "Security", "Security Updates", "Sovereign Cloud", "Trusted VM", "Virtualization", "Well Architected Framework"]
-tags_normalized: ["azure", "azure arc", "azure local", "cloud", "deployment", "edge computing", "hybrid cloud", "microsoft", "microsoft azure", "network security groups", "posts", "rack aware cluster", "sdn", "security", "security updates", "sovereign cloud", "trusted vm", "virtualization", "well architected framework"]
+tags: ["Azure", "Azure Arc", "Azure Local", "Cloud", "Deployment", "Edge Computing", "Hybrid Cloud", "Microsoft", "Microsoft Azure", "Network Security Groups", "Blogs", "Rack Aware Cluster", "SDN", "Security", "Security Updates", "Sovereign Cloud", "Trusted VM", "Virtualization", "Well Architected Framework"]
+tags_normalized: ["azure", "azure arc", "azure local", "cloud", "deployment", "edge computing", "hybrid cloud", "microsoft", "microsoft azure", "network security groups", "blogs", "rack aware cluster", "sdn", "security", "security updates", "sovereign cloud", "trusted vm", "virtualization", "well architected framework"]
 ---
 
 Thomas Maurer details the Azure Local 2510 release, covering new security and deployment features for edge and hybrid cloud environments. The post is especially useful for architects and IT professionals working with Microsoft Azure Local.<!--excerpt_end-->

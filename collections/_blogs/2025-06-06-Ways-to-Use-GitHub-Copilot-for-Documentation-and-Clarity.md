@@ -11,8 +11,8 @@ feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-06-06 00:00:00 +00:00
 permalink: "/blogs/2025-06-06-Ways-to-Use-GitHub-Copilot-for-Documentation-and-Clarity.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "API Documentation", "Chain Of Thought Prompting", "Code Clarity", "Code Explanations", "Coding", "Commit Messages", "Copilot Chat", "Developer Productivity", "Docstrings", "Documentation", "GitHub Copilot", "Inline Comments", "Posts", "Slash Commands", "Technical Writing", "Usage Examples", "XML Documentation"]
-tags_normalized: ["ai", "api documentation", "chain of thought prompting", "code clarity", "code explanations", "coding", "commit messages", "copilot chat", "developer productivity", "docstrings", "documentation", "github copilot", "inline comments", "posts", "slash commands", "technical writing", "usage examples", "xml documentation"]
+tags: ["AI", "API Documentation", "Chain Of Thought Prompting", "Code Clarity", "Code Explanations", "Coding", "Commit Messages", "Copilot Chat", "Developer Productivity", "Docstrings", "Documentation", "GitHub Copilot", "Inline Comments", "Blogs", "Slash Commands", "Technical Writing", "Usage Examples", "XML Documentation"]
+tags_normalized: ["ai", "api documentation", "chain of thought prompting", "code clarity", "code explanations", "coding", "commit messages", "copilot chat", "developer productivity", "docstrings", "documentation", "github copilot", "inline comments", "blogs", "slash commands", "technical writing", "usage examples", "xml documentation"]
 ---
 
 Randy Pagels shares actionable ways developers can use GitHub Copilot to automate and improve documentation, clarifying code and enhancing team productivity.<!--excerpt_end-->

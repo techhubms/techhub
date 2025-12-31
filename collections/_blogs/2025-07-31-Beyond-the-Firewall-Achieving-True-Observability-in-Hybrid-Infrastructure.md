@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-07-31 05:00:01 +00:00
 permalink: "/blogs/2025-07-31-Beyond-the-Firewall-Achieving-True-Observability-in-Hybrid-Infrastructure.html"
 categories: ["DevOps", "Security"]
-tags: ["Business Of DevOps", "Contributed Content", "Data Collection", "DevOps", "DevSecOps", "Hybrid Infrastructure", "Internet Performance Monitoring", "Internet Performance Monitoring (ipm)", "IPM", "Monitoring Tools", "Observability", "Posts", "RUM", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Synthetic Monitoring"]
-tags_normalized: ["business of devops", "contributed content", "data collection", "devops", "devsecops", "hybrid infrastructure", "internet performance monitoring", "internet performance monitoring ipm", "ipm", "monitoring tools", "observability", "posts", "rum", "security", "social facebook", "social linkedin", "social x", "synthetic monitoring"]
+tags: ["Business Of DevOps", "Contributed Content", "Data Collection", "DevOps", "DevSecOps", "Hybrid Infrastructure", "Internet Performance Monitoring", "Internet Performance Monitoring (ipm)", "IPM", "Monitoring Tools", "Observability", "Blogs", "RUM", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Synthetic Monitoring"]
+tags_normalized: ["business of devops", "contributed content", "data collection", "devops", "devsecops", "hybrid infrastructure", "internet performance monitoring", "internet performance monitoring ipm", "ipm", "monitoring tools", "observability", "blogs", "rum", "security", "social facebook", "social linkedin", "social x", "synthetic monitoring"]
 ---
 
 In this article, Gerardo Dada outlines why true observability is vital in today's hybrid infrastructures. He examines tools and practices enabling DevOps teams to monitor complex environments.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-10-29 16:08:25 +00:00
 permalink: "/blogs/2025-10-29-AppOmni-Open-Sources-Heisenberg-Tool-for-Dependency-Scanning-in-PRs.html"
 categories: ["DevOps", "Security"]
-tags: ["AppOmni", "CI/CD", "CLI Tools", "Dependency Scanning", "Development Best Practices", "DevOps", "DevSecOps", "GitHub Actions", "Go Workflows", "Heisenberg", "JavaScript Workflows", "Open Source Security", "Posts", "Pull Request Security", "Python Workflows", "SBoM", "Secure Coding", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Bill Of Materials", "Supply Chain Security"]
-tags_normalized: ["appomni", "cislashcd", "cli tools", "dependency scanning", "development best practices", "devops", "devsecops", "github actions", "go workflows", "heisenberg", "javascript workflows", "open source security", "posts", "pull request security", "python workflows", "sbom", "secure coding", "security", "social facebook", "social linkedin", "social x", "software bill of materials", "supply chain security"]
+tags: ["AppOmni", "CI/CD", "CLI Tools", "Dependency Scanning", "Development Best Practices", "DevOps", "DevSecOps", "GitHub Actions", "Go Workflows", "Heisenberg", "JavaScript Workflows", "Open Source Security", "Blogs", "Pull Request Security", "Python Workflows", "SBoM", "Secure Coding", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Bill Of Materials", "Supply Chain Security"]
+tags_normalized: ["appomni", "cislashcd", "cli tools", "dependency scanning", "development best practices", "devops", "devsecops", "github actions", "go workflows", "heisenberg", "javascript workflows", "open source security", "blogs", "pull request security", "python workflows", "sbom", "secure coding", "security", "social facebook", "social linkedin", "social x", "software bill of materials", "supply chain security"]
 ---
 
 Mike Vizard discusses AppOmni's Heisenberg, an open source tool that automatically scans pull requests for risky dependencies and generates real-time SBOMs, supporting better security practices for developers and DevSecOps teams.<!--excerpt_end-->

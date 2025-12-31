@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-08-02 09:49:32 +00:00
 permalink: "/blogs/2025-08-02-How-GitHub-Copilots-New-Memory-Feature-Changes-Your-Coding-Experience.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Pair Programmer", "Code Completion", "Code Context", "Code Personalization", "Code Suggestions", "Coding Style Preferences", "Copilot", "Copilot Memory Feature", "Developer Productivity", "GitHub Copilot", "IDE Integration", "Machine Learning", "Personalized Coding", "Posts", "Privacy Controls", "User Data Management", "Workflow Automation"]
-tags_normalized: ["ai", "ai pair programmer", "code completion", "code context", "code personalization", "code suggestions", "coding style preferences", "copilot", "copilot memory feature", "developer productivity", "github copilot", "ide integration", "machine learning", "personalized coding", "posts", "privacy controls", "user data management", "workflow automation"]
+tags: ["AI", "AI Pair Programmer", "Code Completion", "Code Context", "Code Personalization", "Code Suggestions", "Coding Style Preferences", "Copilot", "Copilot Memory Feature", "Developer Productivity", "GitHub Copilot", "IDE Integration", "Machine Learning", "Personalized Coding", "Blogs", "Privacy Controls", "User Data Management", "Workflow Automation"]
+tags_normalized: ["ai", "ai pair programmer", "code completion", "code context", "code personalization", "code suggestions", "coding style preferences", "copilot", "copilot memory feature", "developer productivity", "github copilot", "ide integration", "machine learning", "personalized coding", "blogs", "privacy controls", "user data management", "workflow automation"]
 ---
 
 Dellenny explains how GitHub Copilot's new memory feature allows the AI assistant to remember your coding preferences and history, offering more personalized code suggestions and giving users transparency and control over their stored data.<!--excerpt_end-->

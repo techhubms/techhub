@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-10-29 07:37:59 +00:00
 permalink: "/blogs/2025-10-29-Global-Infrastructure-101-Understanding-Data-Centers-Regions-and-Availability-Zones-in-Azure.html"
 categories: ["Azure"]
-tags: ["Availability Zones", "Azure", "Azure Regions", "Cloud Architecture", "Cloud Best Practices", "Cloud Resilience", "Cloud Scalability", "Compliance", "Data Centers", "Disaster Recovery", "Geography", "High Availability", "Latency", "Microsoft Cloud", "Posts", "Resource Deployment"]
-tags_normalized: ["availability zones", "azure", "azure regions", "cloud architecture", "cloud best practices", "cloud resilience", "cloud scalability", "compliance", "data centers", "disaster recovery", "geography", "high availability", "latency", "microsoft cloud", "posts", "resource deployment"]
+tags: ["Availability Zones", "Azure", "Azure Regions", "Cloud Architecture", "Cloud Best Practices", "Cloud Resilience", "Cloud Scalability", "Compliance", "Data Centers", "Disaster Recovery", "Geography", "High Availability", "Latency", "Microsoft Cloud", "Blogs", "Resource Deployment"]
+tags_normalized: ["availability zones", "azure", "azure regions", "cloud architecture", "cloud best practices", "cloud resilience", "cloud scalability", "compliance", "data centers", "disaster recovery", "geography", "high availability", "latency", "microsoft cloud", "blogs", "resource deployment"]
 ---
 
 Dellenny provides a clear overview of Azure's infrastructure, explaining how data centers, regions, and availability zones are structured to support resilience and compliance in cloud solutions.<!--excerpt_end-->

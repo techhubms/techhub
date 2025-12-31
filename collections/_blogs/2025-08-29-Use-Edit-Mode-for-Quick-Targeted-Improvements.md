@@ -11,8 +11,8 @@ feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-08-29 00:00:00 +00:00
 permalink: "/blogs/2025-08-29-Use-Edit-Mode-for-Quick-Targeted-Improvements.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Pair Programmer", "Async/Await", "Automation", "Code Quality", "Code Refactoring", "Coding", "Coding Style", "Copilot Edit Mode", "Developer Productivity", "Error Handling", "GitHub Copilot", "JavaScript", "Modern Best Practices", "Posts", "Programming Tools", "Software Engineering"]
-tags_normalized: ["agent mode", "ai", "ai pair programmer", "asyncslashawait", "automation", "code quality", "code refactoring", "coding", "coding style", "copilot edit mode", "developer productivity", "error handling", "github copilot", "javascript", "modern best practices", "posts", "programming tools", "software engineering"]
+tags: ["Agent Mode", "AI", "AI Pair Programmer", "Async/Await", "Automation", "Code Quality", "Code Refactoring", "Coding", "Coding Style", "Copilot Edit Mode", "Developer Productivity", "Error Handling", "GitHub Copilot", "JavaScript", "Modern Best Practices", "Blogs", "Programming Tools", "Software Engineering"]
+tags_normalized: ["agent mode", "ai", "ai pair programmer", "asyncslashawait", "automation", "code quality", "code refactoring", "coding", "coding style", "copilot edit mode", "developer productivity", "error handling", "github copilot", "javascript", "modern best practices", "blogs", "programming tools", "software engineering"]
 ---
 
 Randy Pagels explains how developers can leverage GitHub Copilot's Edit Mode for fast, targeted improvements to code bases, demonstrating features such as simplifying logic, matching styles, and automating error handling using AI-driven prompts.<!--excerpt_end-->

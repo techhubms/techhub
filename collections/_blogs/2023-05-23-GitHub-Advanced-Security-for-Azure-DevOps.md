@@ -11,8 +11,8 @@ feed_name: "Rob Bos' Blog"
 feed_url: "https://devopsjournal.io/blog/atom.xml"
 date: 2023-05-23 00:00:00 +00:00
 permalink: "/blogs/2023-05-23-GitHub-Advanced-Security-for-Azure-DevOps.html"
-tags: ["Azure", "Azure DevOps", "Code Scanning", "CodeQL", "Dependency Scanning", "DevOps", "DevSecOps", "GitHub Advanced Security", "Microsoft Build", "Pipeline Security", "Posts", "Secret Scanning", "Security", "Security Automation"]
-tags_normalized: ["azure", "azure devops", "code scanning", "codeql", "dependency scanning", "devops", "devsecops", "github advanced security", "microsoft build", "pipeline security", "posts", "secret scanning", "security", "security automation"]
+tags: ["Azure", "Azure DevOps", "Code Scanning", "CodeQL", "Dependency Scanning", "DevOps", "DevSecOps", "GitHub Advanced Security", "Microsoft Build", "Pipeline Security", "Blogs", "Secret Scanning", "Security", "Security Automation"]
+tags_normalized: ["azure", "azure devops", "code scanning", "codeql", "dependency scanning", "devops", "devsecops", "github advanced security", "microsoft build", "pipeline security", "blogs", "secret scanning", "security", "security automation"]
 ---
 
 In this article, Rob Bos explores the public preview of GitHub Advanced Security (GHAS) features recently introduced to Azure DevOps, as announced at Microsoft Build 2023, and shares firsthand experiences and key distinctions compared to GitHub's native implementation.

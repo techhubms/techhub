@@ -11,8 +11,8 @@ feed_url: "https://roadtoalm.com/feed/"
 date: 2025-06-27 07:05:44 +00:00
 permalink: "/blogs/2025-06-27-Growing-a-DevOps-Mindset.html"
 categories: ["DevOps"]
-tags: ["ADKAR", "Collaboration", "Continuous Improvement", "DevOps", "Engineering Culture", "Fixed Mindset", "Growth Mindset", "Lead Podcast", "Mindset", "Organizational Change", "Personal Development", "Podcast", "Posts", "Self Improvement", "Success", "Team Dynamics", "Trust", "Uncategorized"]
-tags_normalized: ["adkar", "collaboration", "continuous improvement", "devops", "engineering culture", "fixed mindset", "growth mindset", "lead podcast", "mindset", "organizational change", "personal development", "podcast", "posts", "self improvement", "success", "team dynamics", "trust", "uncategorized"]
+tags: ["ADKAR", "Collaboration", "Continuous Improvement", "DevOps", "Engineering Culture", "Fixed Mindset", "Growth Mindset", "Lead Podcast", "Mindset", "Organizational Change", "Personal Development", "Podcast", "Blogs", "Self Improvement", "Success", "Team Dynamics", "Trust", "Uncategorized"]
+tags_normalized: ["adkar", "collaboration", "continuous improvement", "devops", "engineering culture", "fixed mindset", "growth mindset", "lead podcast", "mindset", "organizational change", "personal development", "podcast", "blogs", "self improvement", "success", "team dynamics", "trust", "uncategorized"]
 ---
 
 In this post, Rene van Osnabrugge draws on LEAD podcast insights to examine the cultural and psychological shifts necessary for nurturing a true DevOps mindset in engineering organizations.<!--excerpt_end-->

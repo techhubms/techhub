@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-11-21 16:03:25 +00:00
 permalink: "/blogs/2025-11-21-Your-Guide-to-Debugging-and-Reviewing-Copilot-Generated-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot", "Security"]
-tags: ["AI", "AI Coding Assistant", "Authentication", "Authorization", "Automated Testing", "Code Review", "Coding", "Debugging", "GitHib Copilot", "GitHub Copilot", "Input Validation", "Linters", "Posts", "Prompt Engineering", "Sanity Check", "Security", "Security Best Practices", "Software Development", "Static Analysis", "Test Driven Development", "Unit Tests"]
-tags_normalized: ["ai", "ai coding assistant", "authentication", "authorization", "automated testing", "code review", "coding", "debugging", "githib copilot", "github copilot", "input validation", "linters", "posts", "prompt engineering", "sanity check", "security", "security best practices", "software development", "static analysis", "test driven development", "unit tests"]
+tags: ["AI", "AI Coding Assistant", "Authentication", "Authorization", "Automated Testing", "Code Review", "Coding", "Debugging", "GitHib Copilot", "GitHub Copilot", "Input Validation", "Linters", "Blogs", "Prompt Engineering", "Sanity Check", "Security", "Security Best Practices", "Software Development", "Static Analysis", "Test Driven Development", "Unit Tests"]
+tags_normalized: ["ai", "ai coding assistant", "authentication", "authorization", "automated testing", "code review", "coding", "debugging", "githib copilot", "github copilot", "input validation", "linters", "blogs", "prompt engineering", "sanity check", "security", "security best practices", "software development", "static analysis", "test driven development", "unit tests"]
 ---
 
 John Edward offers an in-depth guide to debugging and reviewing code produced by GitHub Copilot, providing practical strategies for ensuring code quality and security in AI-augmented development.<!--excerpt_end-->

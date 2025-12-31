@@ -11,8 +11,8 @@ feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-05-16 00:00:00 +00:00
 permalink: "/blogs/2025-05-16-Write-Better-Commit-Messages-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Tools", "Best Practices", "Code Change Summaries", "Coding", "Commit Messages", "Conventional Commits", "Copilot Chat", "Developer Workflow", "GitHub Copilot", "Posts", "PR Descriptions", "Tab Completion", "VS Code"]
-tags_normalized: ["ai", "ai tools", "best practices", "code change summaries", "coding", "commit messages", "conventional commits", "copilot chat", "developer workflow", "github copilot", "posts", "pr descriptions", "tab completion", "vs code"]
+tags: ["AI", "AI Tools", "Best Practices", "Code Change Summaries", "Coding", "Commit Messages", "Conventional Commits", "Copilot Chat", "Developer Workflow", "GitHub Copilot", "Blogs", "PR Descriptions", "Tab Completion", "VS Code"]
+tags_normalized: ["ai", "ai tools", "best practices", "code change summaries", "coding", "commit messages", "conventional commits", "copilot chat", "developer workflow", "github copilot", "blogs", "pr descriptions", "tab completion", "vs code"]
 ---
 
 Randy Pagels outlines practical strategies for using GitHub Copilot to write effective commit messages, focusing on tips developers can immediately apply to improve code documentation and collaboration.<!--excerpt_end-->

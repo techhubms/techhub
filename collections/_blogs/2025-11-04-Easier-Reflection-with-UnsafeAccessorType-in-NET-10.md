@@ -11,8 +11,8 @@ feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-11-04 10:00:00 +00:00
 permalink: "/blogs/2025-11-04-Easier-Reflection-with-UnsafeAccessorType-in-NET-10.html"
 categories: ["Coding"]
-tags: [".NET 10", ".NET 8", ".NET 9", "Access Modifiers", "APIs", "C#", "Coding", "Field Access", "Generics", "Internal Classes", "Method Access", "Performance", "Posts", "Private Members", "Reflection", "System.Reflection", "UnsafeAccessor", "UnsafeAccessorType"]
-tags_normalized: ["dotnet 10", "dotnet 8", "dotnet 9", "access modifiers", "apis", "csharp", "coding", "field access", "generics", "internal classes", "method access", "performance", "posts", "private members", "reflection", "systemdotreflection", "unsafeaccessor", "unsafeaccessortype"]
+tags: [".NET 10", ".NET 8", ".NET 9", "Access Modifiers", "APIs", "C#", "Coding", "Field Access", "Generics", "Internal Classes", "Method Access", "Performance", "Blogs", "Private Members", "Reflection", "System.Reflection", "UnsafeAccessor", "UnsafeAccessorType"]
+tags_normalized: ["dotnet 10", "dotnet 8", "dotnet 9", "access modifiers", "apis", "csharp", "coding", "field access", "generics", "internal classes", "method access", "performance", "blogs", "private members", "reflection", "systemdotreflection", "unsafeaccessor", "unsafeaccessortype"]
 ---
 
 Andrew Lock demonstrates improvements to the [UnsafeAccessor] mechanism in .NET 10, focusing on how [UnsafeAccessorType] enables accessing private fields and methods for types without direct references.<!--excerpt_end-->

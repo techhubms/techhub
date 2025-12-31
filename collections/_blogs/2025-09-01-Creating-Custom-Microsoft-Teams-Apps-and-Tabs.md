@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-09-01 08:33:00 +00:00
 permalink: "/blogs/2025-09-01-Creating-Custom-Microsoft-Teams-Apps-and-Tabs.html"
 categories: ["Coding"]
-tags: ["Angular", "App Manifest", "Authentication", "Azure Active Directory", "C#", "Coding", "Custom Teams Apps", "Microsoft 365", "Microsoft Teams", "MSAL", "Node.js", "Posts", "Power Apps", "Power Automate", "React", "Teams", "Teams Tab Development", "Teams Toolkit", "VS Code", "Web Development"]
-tags_normalized: ["angular", "app manifest", "authentication", "azure active directory", "csharp", "coding", "custom teams apps", "microsoft 365", "microsoft teams", "msal", "nodedotjs", "posts", "power apps", "power automate", "react", "teams", "teams tab development", "teams toolkit", "vs code", "web development"]
+tags: ["Angular", "App Manifest", "Authentication", "Azure Active Directory", "C#", "Coding", "Custom Teams Apps", "Microsoft 365", "Microsoft Teams", "MSAL", "Node.js", "Blogs", "Power Apps", "Power Automate", "React", "Teams", "Teams Tab Development", "Teams Toolkit", "VS Code", "Web Development"]
+tags_normalized: ["angular", "app manifest", "authentication", "azure active directory", "csharp", "coding", "custom teams apps", "microsoft 365", "microsoft teams", "msal", "nodedotjs", "blogs", "power apps", "power automate", "react", "teams", "teams tab development", "teams toolkit", "vs code", "web development"]
 ---
 
 Dellenny details how developers can build custom Microsoft Teams apps and tabs, covering low-code options and full-stack development using Teams Toolkit and Azure AD authentication.<!--excerpt_end-->

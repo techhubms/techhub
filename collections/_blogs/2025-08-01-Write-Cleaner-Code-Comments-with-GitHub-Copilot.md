@@ -11,8 +11,8 @@ feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-08-01 00:00:00 +00:00
 permalink: "/blogs/2025-08-01-Write-Cleaner-Code-Comments-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Assisted Development", "Code Comments", "Code Readability", "Code Review", "Coding", "Coding Best Practices", "Copilot Chat", "Developer Productivity", "Docstrings", "Documentation", "Edit Mode", "GitHub Copilot", "Inline Comments", "Posts"]
-tags_normalized: ["agent mode", "ai", "ai assisted development", "code comments", "code readability", "code review", "coding", "coding best practices", "copilot chat", "developer productivity", "docstrings", "documentation", "edit mode", "github copilot", "inline comments", "posts"]
+tags: ["Agent Mode", "AI", "AI Assisted Development", "Code Comments", "Code Readability", "Code Review", "Coding", "Coding Best Practices", "Copilot Chat", "Developer Productivity", "Docstrings", "Documentation", "Edit Mode", "GitHub Copilot", "Inline Comments", "Blogs"]
+tags_normalized: ["agent mode", "ai", "ai assisted development", "code comments", "code readability", "code review", "coding", "coding best practices", "copilot chat", "developer productivity", "docstrings", "documentation", "edit mode", "github copilot", "inline comments", "blogs"]
 ---
 
 Randy Pagels outlines effective ways for developers to use GitHub Copilot to generate clearer code comments, making code more maintainable and accessible for teams.<!--excerpt_end-->

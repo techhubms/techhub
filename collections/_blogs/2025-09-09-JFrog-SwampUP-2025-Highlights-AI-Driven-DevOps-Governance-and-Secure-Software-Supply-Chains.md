@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-09-09 15:02:04 +00:00
 permalink: "/blogs/2025-09-09-JFrog-SwampUP-2025-Highlights-AI-Driven-DevOps-Governance-and-Secure-Software-Supply-Chains.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["Agentic Repository", "AI", "AI Catalog", "AI Models", "AppTrust", "Artifact Management", "Automation", "Compliance", "DevGovOps", "DevOps", "Evidence Ecosystem", "Governance", "JFrog", "JFrog Swampup", "Posts", "Release Management", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Supply Chain Security", "SwampUP"]
-tags_normalized: ["agentic repository", "ai", "ai catalog", "ai models", "apptrust", "artifact management", "automation", "compliance", "devgovops", "devops", "evidence ecosystem", "governance", "jfrog", "jfrog swampup", "posts", "release management", "security", "social facebook", "social linkedin", "social x", "software delivery", "supply chain security", "swampup"]
+tags: ["Agentic Repository", "AI", "AI Catalog", "AI Models", "AppTrust", "Artifact Management", "Automation", "Compliance", "DevGovOps", "DevOps", "Evidence Ecosystem", "Governance", "JFrog", "JFrog Swampup", "Blogs", "Release Management", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Supply Chain Security", "SwampUP"]
+tags_normalized: ["agentic repository", "ai", "ai catalog", "ai models", "apptrust", "artifact management", "automation", "compliance", "devgovops", "devops", "evidence ecosystem", "governance", "jfrog", "jfrog swampup", "blogs", "release management", "security", "social facebook", "social linkedin", "social x", "software delivery", "supply chain security", "swampup"]
 ---
 
 Alan Shimel explores major developments from JFrog’s SwampUP 2025, examining how AI, DevOps automation, and enterprise governance are converging to transform software supply chains.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-09-26 16:20:05 +00:00
 permalink: "/blogs/2025-09-26-MLOps-at-Scale-How-Community-Is-Driving-AI-Into-Production.html"
 categories: ["AI", "DevOps", "ML"]
-tags: ["AI", "AI Operations", "Best Practices", "CI/CD", "Community Of Practice", "DevOps", "Generative AI", "Governance", "JFrog Swampup", "Machine Learning", "ML", "MLOps", "Model Deployment", "Model Monitoring", "Observability", "Posts", "Production Workloads", "Scaling AI", "Technical Debt", "Video Interviews"]
-tags_normalized: ["ai", "ai operations", "best practices", "cislashcd", "community of practice", "devops", "generative ai", "governance", "jfrog swampup", "machine learning", "ml", "mlops", "model deployment", "model monitoring", "observability", "posts", "production workloads", "scaling ai", "technical debt", "video interviews"]
+tags: ["AI", "AI Operations", "Best Practices", "CI/CD", "Community Of Practice", "DevOps", "Generative AI", "Governance", "JFrog Swampup", "Machine Learning", "ML", "MLOps", "Model Deployment", "Model Monitoring", "Observability", "Blogs", "Production Workloads", "Scaling AI", "Technical Debt", "Video Interviews"]
+tags_normalized: ["ai", "ai operations", "best practices", "cislashcd", "community of practice", "devops", "generative ai", "governance", "jfrog swampup", "machine learning", "ml", "mlops", "model deployment", "model monitoring", "observability", "blogs", "production workloads", "scaling ai", "technical debt", "video interviews"]
 ---
 
 Alan Shimel interviews Demetrios Brinkmann, founder of the MLOps Community, about the challenges and solutions for bringing AI from research into production, focusing on community-driven best practices and the operational complexities of modern AI systems.<!--excerpt_end-->

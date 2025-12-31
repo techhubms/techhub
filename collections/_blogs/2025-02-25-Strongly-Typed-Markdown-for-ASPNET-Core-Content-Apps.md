@@ -11,8 +11,8 @@ feed_url: "https://khalidabuhakmeh.com/feed.xml"
 date: 2025-02-25 00:00:00 +00:00
 permalink: "/blogs/2025-02-25-Strongly-Typed-Markdown-for-ASPNET-Core-Content-Apps.html"
 categories: ["Coding"]
-tags: ["ASP.NET", "ASP.NET Core", "C#", "Coding", "Content Management", "Markdig", "Markdown", "Metadata", "Posts", "Razor Pages", "Strongly Typed Objects", "YAML", "YamlDotNet"]
-tags_normalized: ["aspdotnet", "aspdotnet core", "csharp", "coding", "content management", "markdig", "markdown", "metadata", "posts", "razor pages", "strongly typed objects", "yaml", "yamldotnet"]
+tags: ["ASP.NET", "ASP.NET Core", "C#", "Coding", "Content Management", "Markdig", "Markdown", "Metadata", "Blogs", "Razor Pages", "Strongly Typed Objects", "YAML", "YamlDotNet"]
+tags_normalized: ["aspdotnet", "aspdotnet core", "csharp", "coding", "content management", "markdig", "markdown", "metadata", "blogs", "razor pages", "strongly typed objects", "yaml", "yamldotnet"]
 ---
 
 In this post, Khalid Abuhakmeh guides developers through building strongly-typed content management solutions by parsing Markdown with YAML frontmatter into C# objects for ASP.NET Core apps.<!--excerpt_end-->

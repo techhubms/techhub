@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-08-16 08:22:07 +00:00
 permalink: "/blogs/2025-08-16-Copilot-Studio-vs-Power-Virtual-Agents-Whats-Changed.html"
 categories: ["AI"]
-tags: ["Agent Workflows", "AI", "Automation", "Azure Integration", "Bots", "Chatbots", "Computer Use", "Conversational AI", "Copilot", "Copilot Studio", "Data Integration", "Deployment Channels", "Generative AI", "GPT Based Models", "Licensing", "Low Code Platforms", "Microsoft", "Microsoft 365 Integration", "Natural Language Understanding", "Orchestration", "Posts", "Power Virtual Agents"]
-tags_normalized: ["agent workflows", "ai", "automation", "azure integration", "bots", "chatbots", "computer use", "conversational ai", "copilot", "copilot studio", "data integration", "deployment channels", "generative ai", "gpt based models", "licensing", "low code platforms", "microsoft", "microsoft 365 integration", "natural language understanding", "orchestration", "posts", "power virtual agents"]
+tags: ["Agent Workflows", "AI", "Automation", "Azure Integration", "Bots", "Chatbots", "Computer Use", "Conversational AI", "Copilot", "Copilot Studio", "Data Integration", "Deployment Channels", "Generative AI", "GPT Based Models", "Licensing", "Low Code Platforms", "Microsoft", "Microsoft 365 Integration", "Natural Language Understanding", "Orchestration", "Blogs", "Power Virtual Agents"]
+tags_normalized: ["agent workflows", "ai", "automation", "azure integration", "bots", "chatbots", "computer use", "conversational ai", "copilot", "copilot studio", "data integration", "deployment channels", "generative ai", "gpt based models", "licensing", "low code platforms", "microsoft", "microsoft 365 integration", "natural language understanding", "orchestration", "blogs", "power virtual agents"]
 ---
 
 Dellenny explains the transition from Power Virtual Agents to Copilot Studio, highlighting expanded AI features, deployment options, and automation capabilities that benefit both existing and new users.<!--excerpt_end-->

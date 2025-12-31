@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-08-05 19:37:15 +00:00
 permalink: "/blogs/2025-08-05-Survey-Shows-AI-Drives-Massive-Economic-Gains-in-Software-Development.html"
 categories: ["AI", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Adoption", "AI Governance", "Application Development", "Business Growth", "C Level Executives", "Cybersecurity", "Developer Productivity", "DevOps", "DevOps Pipelines", "Gitlab", "Human AI Partnership", "Posts", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Software Innovation"]
-tags_normalized: ["agentic ai", "ai", "ai adoption", "ai governance", "application development", "business growth", "c level executives", "cybersecurity", "developer productivity", "devops", "devops pipelines", "gitlab", "human ai partnership", "posts", "social facebook", "social linkedin", "social x", "software development", "software innovation"]
+tags: ["Agentic AI", "AI", "AI Adoption", "AI Governance", "Application Development", "Business Growth", "C Level Executives", "Cybersecurity", "Developer Productivity", "DevOps", "DevOps Pipelines", "Gitlab", "Human AI Partnership", "Blogs", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Software Innovation"]
+tags_normalized: ["agentic ai", "ai", "ai adoption", "ai governance", "application development", "business growth", "c level executives", "cybersecurity", "developer productivity", "devops", "devops pipelines", "gitlab", "human ai partnership", "blogs", "social facebook", "social linkedin", "social x", "software development", "software innovation"]
 ---
 
 Written by Mike Vizard, this article explores a Harris Poll survey revealing how AI adoption is transforming software development, boosting productivity, creating economic value, and presenting new challenges for organizations.<!--excerpt_end-->

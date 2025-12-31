@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-09-11 13:51:39 +00:00
 permalink: "/blogs/2025-09-11-Warp-Integrates-AI-Coding-Agents-into-CLI-for-Enhanced-Developer-Feedback.html"
 categories: ["AI", "Coding", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Coding Tools", "AI Integration", "CLI", "Code Generation", "Code Review", "Coding", "Command Line Interface", "Developer Tools", "Development Workflow", "DevOps", "Feedback Loop", "LLMs", "Posts", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering", "Warp"]
-tags_normalized: ["agentic ai", "ai", "ai coding tools", "ai integration", "cli", "code generation", "code review", "coding", "command line interface", "developer tools", "development workflow", "devops", "feedback loop", "llms", "posts", "social facebook", "social linkedin", "social x", "software engineering", "warp"]
+tags: ["Agentic AI", "AI", "AI Coding Tools", "AI Integration", "CLI", "Code Generation", "Code Review", "Coding", "Command Line Interface", "Developer Tools", "Development Workflow", "DevOps", "Feedback Loop", "LLMs", "Blogs", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering", "Warp"]
+tags_normalized: ["agentic ai", "ai", "ai coding tools", "ai integration", "cli", "code generation", "code review", "coding", "command line interface", "developer tools", "development workflow", "devops", "feedback loop", "llms", "blogs", "social facebook", "social linkedin", "social x", "software engineering", "warp"]
 ---
 
 Mike Vizard details how Warp embeds artificial intelligence agents directly into the CLI, offering developers and DevOps engineers expanded control and a tighter feedback loop for AI-powered code generation.<!--excerpt_end-->

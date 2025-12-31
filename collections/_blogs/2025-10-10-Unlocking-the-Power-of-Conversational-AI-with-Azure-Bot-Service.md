@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-10-10 14:06:46 +00:00
 permalink: "/blogs/2025-10-10-Unlocking-the-Power-of-Conversational-AI-with-Azure-Bot-Service.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Azure Application Insights", "Azure Bot Service", "Azure Cognitive Services", "Azure OpenAI Service", "Bot Framework Composer", "Bot Framework SDK", "Chatbot Development", "Compliance", "Conversational AI", "Enterprise Security", "LUIS", "Microsoft Azure", "Microsoft Teams", "Natural Language Processing", "Omnichannel Bots", "Posts"]
-tags_normalized: ["ai", "azure", "azure application insights", "azure bot service", "azure cognitive services", "azure openai service", "bot framework composer", "bot framework sdk", "chatbot development", "compliance", "conversational ai", "enterprise security", "luis", "microsoft azure", "microsoft teams", "natural language processing", "omnichannel bots", "posts"]
+tags: ["AI", "Azure", "Azure Application Insights", "Azure Bot Service", "Azure Cognitive Services", "Azure OpenAI Service", "Bot Framework Composer", "Bot Framework SDK", "Chatbot Development", "Compliance", "Conversational AI", "Enterprise Security", "LUIS", "Microsoft Azure", "Microsoft Teams", "Natural Language Processing", "Omnichannel Bots", "Blogs"]
+tags_normalized: ["ai", "azure", "azure application insights", "azure bot service", "azure cognitive services", "azure openai service", "bot framework composer", "bot framework sdk", "chatbot development", "compliance", "conversational ai", "enterprise security", "luis", "microsoft azure", "microsoft teams", "natural language processing", "omnichannel bots", "blogs"]
 ---
 
 Dellenny presents a practical guide to building conversational AI solutions with Azure Bot Service, detailing architecture, AI integrations, security, and industry use cases.<!--excerpt_end-->

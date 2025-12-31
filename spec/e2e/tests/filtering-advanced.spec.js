@@ -444,8 +444,8 @@ test.describe('Advanced Filtering Scenarios', () => {
           const items = document.querySelectorAll('.navigation-item-square:not([style*="display: none"])');
           const results = [];
 
-          for (const post of posts) {
-            const tagsAttr = post.dataset.tags || '';
+          for (const item of items) {
+            const tagsAttr = item.dataset.tags || '';
             const tags = tagsAttr.split(',').map(t => t.trim());
 
             // Check if any tag matches the subset pattern
@@ -466,13 +466,13 @@ test.describe('Advanced Filtering Scenarios', () => {
         let allPostsMatch = true;
         console.log(`📊 Found ${visiblePosts.length} visible posts after applying "${test.filter}" filter`);
 
-        for (const post of visiblePosts.slice(0, 5)) { // Check first 5 posts
-          if (!post.hasExpectedMatch) {
-            console.log(`❌ Post "${post.title}" visible but doesn't match subset pattern for "${test.filter}"`);
-            console.log(`   Tags: [${post.tags.join(', ')}]`);
+        for (const item of visiblePosts.slice(0, 5)) { // Check first 5 posts
+          if (!item.hasExpectedMatch) {
+            console.log(`❌ Post "${item.title}" visible but doesn't match subset pattern for "${test.filter}"`);
+            console.log(`   Tags: [${item.tags.join(', ')}]`);
             allPostsMatch = false;
           } else {
-            console.log(`✅ Post "${post.title}" correctly matches subset pattern`);
+            console.log(`✅ Post "${item.title}" correctly matches subset pattern`);
           }
         }
 

@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-10-23 18:56:50 +00:00
 permalink: "/blogs/2025-10-23-How-DevOps-Is-Evolving-for-the-Age-of-Intelligent-Automation.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Governance", "AI Observability", "Automation", "Compliance", "DevOps", "Digital Transformation", "Engineering Culture", "IDP", "Machine Learning", "Model Lifecycle Management", "Posts", "Responsible AI", "Software Delivery", "Video Interviews"]
-tags_normalized: ["ai", "ai governance", "ai observability", "automation", "compliance", "devops", "digital transformation", "engineering culture", "idp", "machine learning", "model lifecycle management", "posts", "responsible ai", "software delivery", "video interviews"]
+tags: ["AI", "AI Governance", "AI Observability", "Automation", "Compliance", "DevOps", "Digital Transformation", "Engineering Culture", "IDP", "Machine Learning", "Model Lifecycle Management", "Blogs", "Responsible AI", "Software Delivery", "Video Interviews"]
+tags_normalized: ["ai", "ai governance", "ai observability", "automation", "compliance", "devops", "digital transformation", "engineering culture", "idp", "machine learning", "model lifecycle management", "blogs", "responsible ai", "software delivery", "video interviews"]
 ---
 
 Alan Shimel interviews Vishal Raina and Shibashis Mishra about the evolution of DevOps in the age of intelligent automation, emphasizing responsible AI, governance, and sustainable software delivery.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-03-21 00:00:00 +00:00
 permalink: "/blogs/2025-03-21-Ask-Better-Questions-Get-Better-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Pair Programming", "Best Practices", "Code Quality", "Coding", "Coding Assistance", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "Posts", "Prompt Engineering", "Question Clarity", "Software Development"]
-tags_normalized: ["ai", "ai pair programming", "best practices", "code quality", "coding", "coding assistance", "copilot chat", "developer productivity", "github copilot", "posts", "prompt engineering", "question clarity", "software development"]
+tags: ["AI", "AI Pair Programming", "Best Practices", "Code Quality", "Coding", "Coding Assistance", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "Blogs", "Prompt Engineering", "Question Clarity", "Software Development"]
+tags_normalized: ["ai", "ai pair programming", "best practices", "code quality", "coding", "coding assistance", "copilot chat", "developer productivity", "github copilot", "blogs", "prompt engineering", "question clarity", "software development"]
 ---
 
 Randy Pagels shares actionable strategies for using GitHub Copilot more effectively by improving the questions you ask, including real-world examples and prompt optimization tips.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-08-06 19:42:40 +00:00
 permalink: "/blogs/2025-08-06-PlayerZero-Introduces-AI-Driven-Code-Simulation-with-CodeSim.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI in Software Development", "AI Testing Tools", "Application Development", "Bug Analysis", "Code Simulation", "CodeSim", "Continuous Improvement", "DevOps", "DevOps Automation", "Generative AI", "Platform Engineering", "PlayerZero", "Posts", "Sim 1 AI Model", "Social Facebook", "Social LinkedIn", "Social X", "Software Quality", "Software Testing"]
-tags_normalized: ["ai", "ai in software development", "ai testing tools", "application development", "bug analysis", "code simulation", "codesim", "continuous improvement", "devops", "devops automation", "generative ai", "platform engineering", "playerzero", "posts", "sim 1 ai model", "social facebook", "social linkedin", "social x", "software quality", "software testing"]
+tags: ["AI", "AI in Software Development", "AI Testing Tools", "Application Development", "Bug Analysis", "Code Simulation", "CodeSim", "Continuous Improvement", "DevOps", "DevOps Automation", "Generative AI", "Platform Engineering", "PlayerZero", "Blogs", "Sim 1 AI Model", "Social Facebook", "Social LinkedIn", "Social X", "Software Quality", "Software Testing"]
+tags_normalized: ["ai", "ai in software development", "ai testing tools", "application development", "bug analysis", "code simulation", "codesim", "continuous improvement", "devops", "devops automation", "generative ai", "platform engineering", "playerzero", "blogs", "sim 1 ai model", "social facebook", "social linkedin", "social x", "software quality", "software testing"]
 ---
 
 Mike Vizard discusses PlayerZero's new CodeSim feature, which uses AI to simulate and analyze code, empowering DevOps teams to proactively address challenges in AI-driven software development.<!--excerpt_end-->

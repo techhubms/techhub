@@ -11,8 +11,8 @@ feed_name: "Jesse Swart's Blog"
 feed_url: "https://blog.jesseswart.nl/index.xml"
 date: 2024-06-21 07:51:32 +00:00
 permalink: "/blogs/2024-06-21-Quickly-Consume-External-APIs-with-GitHub-Copilot.html"
-tags: ["AI", "API Documentation", "API Integration", "Coding", "Developer Tools", "GitHub Copilot", "OpenWeather", "Posts"]
-tags_normalized: ["ai", "api documentation", "api integration", "coding", "developer tools", "github copilot", "openweather", "posts"]
+tags: ["AI", "API Documentation", "API Integration", "Coding", "Developer Tools", "GitHub Copilot", "OpenWeather", "Blogs"]
+tags_normalized: ["ai", "api documentation", "api integration", "coding", "developer tools", "github copilot", "openweather", "blogs"]
 ---
 
 In this article, Jesse Swart's Blog explores how developers can leverage GitHub Copilot to work with external APIs, especially when SDKs or OpenAPI specifications are missing. <!--excerpt_end--> Handling APIs with only documentation (and no formal SDKs or specs) can be a challenge, but tools like GitHub Copilot can greatly simplify the process.

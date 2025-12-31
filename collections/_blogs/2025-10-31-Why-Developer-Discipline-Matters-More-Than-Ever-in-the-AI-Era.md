@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-10-31 14:53:20 +00:00
 permalink: "/blogs/2025-10-31-Why-Developer-Discipline-Matters-More-Than-Ever-in-the-AI-Era.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Assistants", "Automated Testing", "Dependency Scanning", "Developer Workflows", "DevOps", "Devsecops", "Generative AI", "LLMs", "Posts", "Real Time Monitoring", "Security", "Security Automation", "Snyk", "Software Security", "Supply Chain Risk", "Vibecoding", "Video Interviews", "Vulnerability Detection"]
-tags_normalized: ["ai", "ai assistants", "automated testing", "dependency scanning", "developer workflows", "devops", "devsecops", "generative ai", "llms", "posts", "real time monitoring", "security", "security automation", "snyk", "software security", "supply chain risk", "vibecoding", "video interviews", "vulnerability detection"]
+tags: ["AI", "AI Assistants", "Automated Testing", "Dependency Scanning", "Developer Workflows", "DevOps", "Devsecops", "Generative AI", "LLMs", "Blogs", "Real Time Monitoring", "Security", "Security Automation", "Snyk", "Software Security", "Supply Chain Risk", "Vibecoding", "Video Interviews", "Vulnerability Detection"]
+tags_normalized: ["ai", "ai assistants", "automated testing", "dependency scanning", "developer workflows", "devops", "devsecops", "generative ai", "llms", "blogs", "real time monitoring", "security", "security automation", "snyk", "software security", "supply chain risk", "vibecoding", "video interviews", "vulnerability detection"]
 ---
 
 Mike Vizard reports on Snyk CTO Danny Allan's warning regarding software security challenges posed by AI-powered coding, explaining why developer discipline and security integration are critical.<!--excerpt_end-->

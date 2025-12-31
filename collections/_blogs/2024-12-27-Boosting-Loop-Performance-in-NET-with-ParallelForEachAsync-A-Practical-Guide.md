@@ -11,8 +11,8 @@ feed_url: "https://feeds.feedburner.com/rickstrahl"
 date: 2024-12-27 23:37:19 +00:00
 permalink: "/blogs/2024-12-27-Boosting-Loop-Performance-in-NET-with-ParallelForEachAsync-A-Practical-Guide.html"
 categories: ["Coding"]
-tags: [".NET", "Asynchronous Programming", "C#", "Coding", "HTTP Requests", "IO Bound Operations", "Markdown Monster", "Parallel.ForEachAsync", "Performance Optimization", "Posts", "Task.WhenAll", "Thread Safety", "TPL Dataflow", "WPF"]
-tags_normalized: ["dotnet", "asynchronous programming", "csharp", "coding", "http requests", "io bound operations", "markdown monster", "paralleldotforeachasync", "performance optimization", "posts", "taskdotwhenall", "thread safety", "tpl dataflow", "wpf"]
+tags: [".NET", "Asynchronous Programming", "C#", "Coding", "HTTP Requests", "IO Bound Operations", "Markdown Monster", "Parallel.ForEachAsync", "Performance Optimization", "Blogs", "Task.WhenAll", "Thread Safety", "TPL Dataflow", "WPF"]
+tags_normalized: ["dotnet", "asynchronous programming", "csharp", "coding", "http requests", "io bound operations", "markdown monster", "paralleldotforeachasync", "performance optimization", "blogs", "taskdotwhenall", "thread safety", "tpl dataflow", "wpf"]
 ---
 
 Rick Strahl explores using Parallel.ForEachAsync in .NET to significantly improve the performance of link validation in Markdown Monster by parallelizing HTTP operations. This article walks through before-and-after implementations, practical code, performance data, and key caveats.<!--excerpt_end-->

@@ -41,7 +41,7 @@ The Tech Hub uses multiple filtering mechanisms that work together to help users
 **Purpose**: Enables users to focus on specific content formats (News, Videos, Community) within a section.
 
 **How it works**:
-- Filter items using normalized collection tags ("news", "posts", "videos")
+- Filter items using normalized collection tags ("news", "blogs", "videos")
 - Available only on section index pages (/ai, /github-copilot)
 - Uses the same tag matching logic as all other filters
 - Each collection type corresponds to a normalized tag
@@ -232,7 +232,7 @@ The filtering system operates with three types of filters that work together to 
 The filtering system now uses a unified tag-based approach where all filter types (sections, collections, and content tags) are implemented as normalized tags with subset matching:
 
 - **Sections as Tags**: "AI" and "GitHub Copilot" sections are treated as tags
-- **Collections as Tags**: "News", "Posts", "Videos", etc. are treated as tags  
+- **Collections as Tags**: "News", "Blogs", "Videos", etc. are treated as tags  
 - **Content Tags**: Traditional content tags like "Azure", "Visual Studio", etc.
 
 **Subset Matching Logic**: Selecting a tag shows content with:
@@ -286,7 +286,7 @@ The text search functionality provides real-time content filtering based on user
 ```javascript
 // Pre-extracted content for fast text search
 const content = titleText + ' ' + descriptionText + ' ' + metaText + ' ' + tagData;
-cachedPost.content = content.toLowerCase().trim();
+cachedItem.content = content.toLowerCase().trim();
 ```
 
 **Search Processing**: The `passesTextSearch()` function handles real-time filtering:
@@ -295,7 +295,7 @@ cachedPost.content = content.toLowerCase().trim();
 function passesTextSearch(cachedPost) {
     if (!window.textSearchQuery) return true;
     const query = window.textSearchQuery.toLowerCase();
-    return cachedPost.content.includes(query);
+    return cachedItem.content.includes(query);
 }
 ```
 
@@ -651,11 +651,11 @@ The Tech Hub implements three distinct filtering modes based on page hierarchy, 
 
 - **URLs**: '/ai' and '/github-copilot' (section index pages)
 - **Date Filters**: "Last 3 days", "Last 30 days", etc.
-- **Collection Tag Filters**: Filter by content types within the section (News, Posts, Videos, Community, etc.) - implemented as tags
+- **Collection Tag Filters**: Filter by content types within the section (News, Blogs, Videos, Community, etc.) - implemented as tags
 - **Data Source**: `site.data.sections` configuration for collections within each section
 - **Filtering Logic**: Uses normalized tag matching on collection tags
 - **Behavior**: Shows mixed content from multiple collections within the section, allowing users to filter by content type
-- **Implementation**: Filters by collection type tags (news, posts, videos, community, etc.) within the current section
+- **Implementation**: Filters by collection type tags (news, blogs, videos, community, etc.) within the current section
 - **Expected Behavior**: Shows both date filters and collection tag filters when sufficient content diversity exists across collections
 
 ### Collection Pages: Date + Content Tag Filters

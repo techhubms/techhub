@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-09-22 09:11:05 +00:00
 permalink: "/blogs/2025-09-22-Azure-AI-Studio-and-AI-Foundry-Microsofts-Generative-AI-Platform-Explained.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "AI Platform", "Azure", "Azure AI Foundry", "Azure AI Studio", "Compliance", "Enterprise AI", "Fine Tuning", "Generative AI", "GPT 4o", "Large Language Models", "LLM", "Microsoft Azure", "Model Catalog", "Model Deployment", "Monitoring", "Multimodal Models", "Phi 3", "Posts", "Prompt Engineering", "RAG", "Responsible AI"]
-tags_normalized: ["ai", "ai platform", "azure", "azure ai foundry", "azure ai studio", "compliance", "enterprise ai", "fine tuning", "generative ai", "gpt 4o", "large language models", "llm", "microsoft azure", "model catalog", "model deployment", "monitoring", "multimodal models", "phi 3", "posts", "prompt engineering", "rag", "responsible ai"]
+tags: ["AI", "AI Platform", "Azure", "Azure AI Foundry", "Azure AI Studio", "Compliance", "Enterprise AI", "Fine Tuning", "Generative AI", "GPT 4o", "Large Language Models", "LLM", "Microsoft Azure", "Model Catalog", "Model Deployment", "Monitoring", "Multimodal Models", "Phi 3", "Blogs", "Prompt Engineering", "RAG", "Responsible AI"]
+tags_normalized: ["ai", "ai platform", "azure", "azure ai foundry", "azure ai studio", "compliance", "enterprise ai", "fine tuning", "generative ai", "gpt 4o", "large language models", "llm", "microsoft azure", "model catalog", "model deployment", "monitoring", "multimodal models", "phi 3", "blogs", "prompt engineering", "rag", "responsible ai"]
 ---
 
 Dellenny explores Microsoft’s Azure AI Studio and AI Foundry, detailing how these platforms empower developers and organizations to create, customize, and scale enterprise-grade generative AI solutions with security and flexibility.<!--excerpt_end-->

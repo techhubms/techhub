@@ -80,6 +80,7 @@ _plugins/
 **Output**: In-memory Jekyll pages (no files written to disk)
 
 **Key Features**:
+
 - Configuration-driven page generation
 - Uses `Jekyll::PageWithoutAFile` for runtime page creation
 - Comprehensive error handling
@@ -93,10 +94,10 @@ _plugins/
 
 ```ruby
 # Convert to Unix epoch timestamp
-{{ post.date | to_epoch }}
+{{ item.date | to_epoch }}
 
 # Convert with Europe/Brussels timezone
-{{ post.date | date_to_epoch }}
+{{ item.date | date_to_epoch }}
 
 # Get current timestamp
 {{ '' | now_epoch }}
@@ -129,10 +130,11 @@ _plugins/
 
 ```ruby
 # Extract and normalize tags from frontmatter
-{{ post.tags | extract_tags }}
+{{ item.tags | extract_tags }}
 ```
 
 **Features**:
+
 - Tag normalization (lowercase, hyphenated)
 - Duplicate removal
 - Validation and sanitization
@@ -222,11 +224,13 @@ Liquid::Template.register_tag('your_tag', Jekyll::YourTag)
 **Keep Templates Simple**: Liquid templates should focus on rendering, not complex logic.
 
 **Preferred Architecture Order**:
+
 1. **Plugins**: Complex data processing, page generation, data aggregation
 2. **Filters**: Data transformation and formatting operations  
 3. **Liquid Templates**: Simple rendering logic only
 
 **Benefits**:
+
 - **Performance**: Ruby plugins are faster than complex Liquid logic
 - **Maintainability**: Centralized logic in dedicated plugin files
 - **Testability**: Plugins can be unit tested independently
@@ -496,7 +500,7 @@ bundle exec rspec --format documentation
 | `normalize_date_format` | Fix timezone format issues | `{{ raw_date \| normalize_date_format }}` |
 | `normalize_to_midnight` | Normalize time to midnight | `{{ item.date \| normalize_to_midnight }}` |
 | `with_dates` | Filter items with valid dates | `{{ site.documents \| with_dates }}` |
-| `sort_by_date` | Sort items by date | `{{ site.blogs | sort_by_date }}` |
+| `sort_by_date` | Sort items by date | `{{ site.blogs \| sort_by_date }}` |
 | `limit_with_same_day` | Apply "N + same-day" rule per collection | `{{ blogs \| limit_with_same_day }}` |
 
 ### String Filters (from string_filters.rb)

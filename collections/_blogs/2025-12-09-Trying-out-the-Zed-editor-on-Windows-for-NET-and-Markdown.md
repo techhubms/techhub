@@ -11,8 +11,8 @@ feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-12-09 10:00:00 +00:00
 permalink: "/blogs/2025-12-09-Trying-out-the-Zed-editor-on-Windows-for-NET-and-Markdown.html"
 categories: ["Coding"]
-tags: [".NET", "C#", "Coding", "Customization", "Developer Tools", "Editor Comparison", "Extensions", "IDE", "IDEs", "Keyboard Shortcuts", "Markdown", "OmniSharp", "Posts", "Syntax Highlighting", "VS Code", "Windows", "Zed Editor"]
-tags_normalized: ["dotnet", "csharp", "coding", "customization", "developer tools", "editor comparison", "extensions", "ide", "ides", "keyboard shortcuts", "markdown", "omnisharp", "posts", "syntax highlighting", "vs code", "windows", "zed editor"]
+tags: [".NET", "C#", "Coding", "Customization", "Developer Tools", "Editor Comparison", "Extensions", "IDE", "IDEs", "Keyboard Shortcuts", "Markdown", "OmniSharp", "Blogs", "Syntax Highlighting", "VS Code", "Windows", "Zed Editor"]
+tags_normalized: ["dotnet", "csharp", "coding", "customization", "developer tools", "editor comparison", "extensions", "ide", "ides", "keyboard shortcuts", "markdown", "omnisharp", "blogs", "syntax highlighting", "vs code", "windows", "zed editor"]
 ---
 
 Andrew Lock explores whether the Zed editor on Windows can replace VS Code for .NET and Markdown editing, sharing his installation experience, setup tips, feature comparisons, and impressions.<!--excerpt_end-->

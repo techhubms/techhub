@@ -74,12 +74,12 @@ test.describe('Page-Specific Filtering Behavior', () => {
 
       // Check first few posts for correct section
       let correctSectionCount = 0;
-      for (const post of visiblePosts.slice(0, Math.min(5, visiblePosts.length))) {
-        if (post.hasExpectedSection) {
+      for (const item of visiblePosts.slice(0, Math.min(5, visiblePosts.length))) {
+        if (item.hasExpectedSection) {
           correctSectionCount++;
         } else {
-          console.log(`⚠️ Post "${post.title}" visible but doesn't belong to section "${sectionTag}"`);
-          console.log(`   Tags: [${post.tags.join(', ')}]`);
+          console.log(`⚠️ Post "${item.title}" visible but doesn't belong to section "${sectionTag}"`);
+          console.log(`   Tags: [${item.tags.join(', ')}]`);
         }
       }
 
@@ -162,7 +162,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
       expect(sectionFilterCount).toBe(0);
       console.log(`✅ Correctly no section filters on ${sectionPage.name} (uses collection filters instead)`);
 
-      // Test collection filter functionality with reliable filters (prioritize news, posts, videos)
+      // Test collection filter functionality with reliable filters (prioritize news, blogs, videos)
       const reliableFilters = ['news', 'blogs', 'videos'];
       const testFilters = [];
 
@@ -214,12 +214,12 @@ test.describe('Page-Specific Filtering Behavior', () => {
 
         // Check first few posts for correct collection
         let correctCollectionCount = 0;
-        for (const post of visiblePosts.slice(0, Math.min(5, visiblePosts.length))) {
-          if (post.isCorrect) {
+        for (const item of visiblePosts.slice(0, Math.min(5, visiblePosts.length))) {
+          if (item.isCorrect) {
             correctCollectionCount++;
           } else {
-            console.log(`⚠️ Post "${post.title}" doesn't have collection tag "${post.expectedCollection}"`);
-            console.log(`   Tags: [${post.tags.join(', ')}]`);
+            console.log(`⚠️ Post "${item.title}" doesn't have collection tag "${item.expectedCollection}"`);
+            console.log(`   Tags: [${item.tags.join(', ')}]`);
           }
         }
 

@@ -11,8 +11,8 @@ feed_url: "https://devclass.com/feed/"
 date: 2025-11-20 14:36:31 +00:00
 permalink: "/blogs/2025-11-20-Migrating-NET-Framework-Apps-with-GitHub-Copilot-in-Visual-Studio-Developer-Feedback-and-Licensing-Changes.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: [".NET", ".NET Core", ".NET Framework", "AI", "AI Development", "App Modernization", "Azure", "Azure App Service", "C#", "Cloud Hosting", "Coding", "Copilot", "Copilot Chat", "Cross Platform", "Developer Tools", "Development", "GitHub", "GitHub Copilot", "Legacy Applications", "Licensing", "Managed Instance", "Migrations", "Posts", "Upgrade Assistant", "VS", "Windows"]
-tags_normalized: ["dotnet", "dotnet core", "dotnet framework", "ai", "ai development", "app modernization", "azure", "azure app service", "csharp", "cloud hosting", "coding", "copilot", "copilot chat", "cross platform", "developer tools", "development", "github", "github copilot", "legacy applications", "licensing", "managed instance", "migrations", "posts", "upgrade assistant", "vs", "windows"]
+tags: [".NET", ".NET Core", ".NET Framework", "AI", "AI Development", "App Modernization", "Azure", "Azure App Service", "C#", "Cloud Hosting", "Coding", "Copilot", "Copilot Chat", "Cross Platform", "Developer Tools", "Development", "GitHub", "GitHub Copilot", "Legacy Applications", "Licensing", "Managed Instance", "Migrations", "Blogs", "Upgrade Assistant", "VS", "Windows"]
+tags_normalized: ["dotnet", "dotnet core", "dotnet framework", "ai", "ai development", "app modernization", "azure", "azure app service", "csharp", "cloud hosting", "coding", "copilot", "copilot chat", "cross platform", "developer tools", "development", "github", "github copilot", "legacy applications", "licensing", "managed instance", "migrations", "blogs", "upgrade assistant", "vs", "windows"]
 ---
 
 Tim Anderson explores the migration of .NET Framework applications to modern .NET using GitHub Copilot in Visual Studio, detailing developer reactions, licensing changes, and technical hurdles.<!--excerpt_end-->

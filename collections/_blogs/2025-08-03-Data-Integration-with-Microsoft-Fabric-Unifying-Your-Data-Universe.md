@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-08-03 08:17:00 +00:00
 permalink: "/blogs/2025-08-03-Data-Integration-with-Microsoft-Fabric-Unifying-Your-Data-Universe.html"
 categories: ["Azure", "ML"]
-tags: ["Architecture", "Azure", "Azure Data Factory", "Data Activator", "Data Engineering", "Data Governance", "Data Integration", "Data Lake", "Data Pipelines", "Dataflows Gen2", "Delta Lake", "ETL", "Event Streams", "Fabric", "Microsoft Fabric", "Microsoft Purview", "ML", "OneLake", "Posts", "Power BI", "Real Time Data", "Synapse Data Engineering"]
-tags_normalized: ["architecture", "azure", "azure data factory", "data activator", "data engineering", "data governance", "data integration", "data lake", "data pipelines", "dataflows gen2", "delta lake", "etl", "event streams", "fabric", "microsoft fabric", "microsoft purview", "ml", "onelake", "posts", "power bi", "real time data", "synapse data engineering"]
+tags: ["Architecture", "Azure", "Azure Data Factory", "Data Activator", "Data Engineering", "Data Governance", "Data Integration", "Data Lake", "Data Pipelines", "Dataflows Gen2", "Delta Lake", "ETL", "Event Streams", "Fabric", "Microsoft Fabric", "Microsoft Purview", "ML", "OneLake", "Blogs", "Power BI", "Real Time Data", "Synapse Data Engineering"]
+tags_normalized: ["architecture", "azure", "azure data factory", "data activator", "data engineering", "data governance", "data integration", "data lake", "data pipelines", "dataflows gen2", "delta lake", "etl", "event streams", "fabric", "microsoft fabric", "microsoft purview", "ml", "onelake", "blogs", "power bi", "real time data", "synapse data engineering"]
 ---
 
 Dellenny discusses how Microsoft Fabric streamlines data integration across cloud and on-premises systems, detailing features like Dataflows Gen2, integrated Azure Data Factory, and real-time event processing within a unified analytics platform.<!--excerpt_end-->

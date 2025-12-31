@@ -11,8 +11,8 @@ feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-08-08 00:00:00 +00:00
 permalink: "/blogs/2025-08-08-Find-and-Fix-Typos-Faster-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Automated Refactoring", "Best Practices", "Code Quality", "Code Review", "Coding", "Copilot Agent Mode", "Copilot Chat", "Copilot Edit Mode", "Debugging", "Developer Productivity", "Function Naming", "GitHub Copilot", "Naming Conventions", "Posts", "Typo Detection", "Variable Names"]
-tags_normalized: ["ai", "automated refactoring", "best practices", "code quality", "code review", "coding", "copilot agent mode", "copilot chat", "copilot edit mode", "debugging", "developer productivity", "function naming", "github copilot", "naming conventions", "posts", "typo detection", "variable names"]
+tags: ["AI", "Automated Refactoring", "Best Practices", "Code Quality", "Code Review", "Coding", "Copilot Agent Mode", "Copilot Chat", "Copilot Edit Mode", "Debugging", "Developer Productivity", "Function Naming", "GitHub Copilot", "Naming Conventions", "Blogs", "Typo Detection", "Variable Names"]
+tags_normalized: ["ai", "automated refactoring", "best practices", "code quality", "code review", "coding", "copilot agent mode", "copilot chat", "copilot edit mode", "debugging", "developer productivity", "function naming", "github copilot", "naming conventions", "blogs", "typo detection", "variable names"]
 ---
 
 Randy Pagels demonstrates how GitHub Copilot can accelerate typo detection and correction in code, offering practical guidance on proofing, editing, and standardizing naming before you commit.<!--excerpt_end-->

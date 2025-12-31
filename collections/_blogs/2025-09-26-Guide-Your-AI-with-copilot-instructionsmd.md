@@ -11,8 +11,8 @@ feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-09-26 00:00:00 +00:00
 permalink: "/blogs/2025-09-26-Guide-Your-AI-with-copilot-instructionsmd.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Async/await", "Code Consistency", "Coding", "Copilot Instructions.md", "Developer Productivity", "Documentation Standards", "GitHub Copilot", "JavaScript", "JSDoc", "Naming Conventions", "Posts", "Project Style Guides", "React", "Repository Configuration", "Security Best Practices", "Style Automation", "Test Frameworks"]
-tags_normalized: ["ai", "asyncslashawait", "code consistency", "coding", "copilot instructionsdotmd", "developer productivity", "documentation standards", "github copilot", "javascript", "jsdoc", "naming conventions", "posts", "project style guides", "react", "repository configuration", "security best practices", "style automation", "test frameworks"]
+tags: ["AI", "Async/await", "Code Consistency", "Coding", "Copilot Instructions.md", "Developer Productivity", "Documentation Standards", "GitHub Copilot", "JavaScript", "JSDoc", "Naming Conventions", "Blogs", "Project Style Guides", "React", "Repository Configuration", "Security Best Practices", "Style Automation", "Test Frameworks"]
+tags_normalized: ["ai", "asyncslashawait", "code consistency", "coding", "copilot instructionsdotmd", "developer productivity", "documentation standards", "github copilot", "javascript", "jsdoc", "naming conventions", "blogs", "project style guides", "react", "repository configuration", "security best practices", "style automation", "test frameworks"]
 ---
 
 Randy Pagels explains how to use the copilot-instructions.md file to set project-wide rules for GitHub Copilot, helping teams achieve consistency and safer code generation.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-08-14 13:00:36 +00:00
 permalink: "/blogs/2025-08-14-Sentry-Integrates-MCP-Server-Monitoring-into-APM-Platform-for-AI-Workflows.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Applications", "API Monitoring", "APM", "Application Layer Protocol", "Application Performance Monitoring", "Autonomous AI Agents", "Business Of DevOps", "Cybersecurity", "Debugging", "DevOps", "DevSecOps", "JavaScript SDK", "MCP", "MCP Server Monitoring", "Observability", "Posts", "Security", "Sentry", "Social Facebook", "Social LinkedIn", "Social X", "Workflow Automation"]
-tags_normalized: ["ai", "ai applications", "api monitoring", "apm", "application layer protocol", "application performance monitoring", "autonomous ai agents", "business of devops", "cybersecurity", "debugging", "devops", "devsecops", "javascript sdk", "mcp", "mcp server monitoring", "observability", "posts", "security", "sentry", "social facebook", "social linkedin", "social x", "workflow automation"]
+tags: ["AI", "AI Applications", "API Monitoring", "APM", "Application Layer Protocol", "Application Performance Monitoring", "Autonomous AI Agents", "Business Of DevOps", "Cybersecurity", "Debugging", "DevOps", "DevSecOps", "JavaScript SDK", "MCP", "MCP Server Monitoring", "Observability", "Blogs", "Security", "Sentry", "Social Facebook", "Social LinkedIn", "Social X", "Workflow Automation"]
+tags_normalized: ["ai", "ai applications", "api monitoring", "apm", "application layer protocol", "application performance monitoring", "autonomous ai agents", "business of devops", "cybersecurity", "debugging", "devops", "devsecops", "javascript sdk", "mcp", "mcp server monitoring", "observability", "blogs", "security", "sentry", "social facebook", "social linkedin", "social x", "workflow automation"]
 ---
 
 Mike Vizard outlines the technical and operational impact of Sentry's new MCP server monitoring tool, emphasizing its importance for DevOps and AI engineering teams tasked with building, debugging, and securing modern AI applications.<!--excerpt_end-->

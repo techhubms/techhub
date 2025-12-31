@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-09-15 07:34:16 +00:00
 permalink: "/blogs/2025-09-15-Multi-Turn-Conversations-and-Context-Management-in-Copilot-Studio.html"
 categories: ["AI"]
-tags: ["Agent Handoff", "AI", "Best Practices", "Context Management", "Context Windows", "Conversation Design", "Copilot", "Copilot Studio", "Dataverse", "Flows", "Generative AI", "Global Variables", "Microsoft", "Multi Turn Conversation", "Natural Language", "Posts", "Prompt Engineering", "Session Memory", "Topics", "Variables"]
-tags_normalized: ["agent handoff", "ai", "best practices", "context management", "context windows", "conversation design", "copilot", "copilot studio", "dataverse", "flows", "generative ai", "global variables", "microsoft", "multi turn conversation", "natural language", "posts", "prompt engineering", "session memory", "topics", "variables"]
+tags: ["Agent Handoff", "AI", "Best Practices", "Context Management", "Context Windows", "Conversation Design", "Copilot", "Copilot Studio", "Dataverse", "Flows", "Generative AI", "Global Variables", "Microsoft", "Multi Turn Conversation", "Natural Language", "Blogs", "Prompt Engineering", "Session Memory", "Topics", "Variables"]
+tags_normalized: ["agent handoff", "ai", "best practices", "context management", "context windows", "conversation design", "copilot", "copilot studio", "dataverse", "flows", "generative ai", "global variables", "microsoft", "multi turn conversation", "natural language", "blogs", "prompt engineering", "session memory", "topics", "variables"]
 ---
 
 Dellenny explains how Copilot Studio handles multi-turn conversations and context management, outlining techniques for building more natural, efficient AI-powered agents.<!--excerpt_end-->

@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 **Filter Types**:
 
 1. **Section filters** - High-level category filtering
-2. **Collection filters** - Content type filtering (posts, news, videos)
+2. **Collection filters** - Content type filtering (blogs, news, videos)
 3. **Content tag filters** - Fine-grained topic filtering
 4. **Date filters** - Exclusive time period filtering
 5. **Text search** - Real-time content search
@@ -235,7 +235,7 @@ The filtering system uses pre-calculated tag relationships embedded by Jekyll:
 <!-- Server renders this -->
 <div data-tags="ai,azure,machine-learning" 
      data-section="ai"
-     data-collection="posts">
+     data-collection="blogs">
   Content here
 </div>
 ```

@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-09-10 07:32:19 +00:00
 permalink: "/blogs/2025-09-10-Riding-in-Tandem-Unlocking-the-Sidecar-Pattern-in-Azure-Microservices.html"
 categories: ["Azure", "DevOps"]
-tags: ["AKS", "Application Insights", "Architecture", "Azure", "Azure Container Apps", "Azure Monitor", "Azure Service Fabric", "Cloud Native", "Configuration", "Cross Cutting Concerns", "Dapr", "DevOps", "Envoy", "Fluent Bit", "Logging", "Logstash", "Microservices", "Monitoring", "Posts", "Proxy", "Sidecar Pattern", "Solution Architecture"]
-tags_normalized: ["aks", "application insights", "architecture", "azure", "azure container apps", "azure monitor", "azure service fabric", "cloud native", "configuration", "cross cutting concerns", "dapr", "devops", "envoy", "fluent bit", "logging", "logstash", "microservices", "monitoring", "posts", "proxy", "sidecar pattern", "solution architecture"]
+tags: ["AKS", "Application Insights", "Architecture", "Azure", "Azure Container Apps", "Azure Monitor", "Azure Service Fabric", "Cloud Native", "Configuration", "Cross Cutting Concerns", "Dapr", "DevOps", "Envoy", "Fluent Bit", "Logging", "Logstash", "Microservices", "Monitoring", "Blogs", "Proxy", "Sidecar Pattern", "Solution Architecture"]
+tags_normalized: ["aks", "application insights", "architecture", "azure", "azure container apps", "azure monitor", "azure service fabric", "cloud native", "configuration", "cross cutting concerns", "dapr", "devops", "envoy", "fluent bit", "logging", "logstash", "microservices", "monitoring", "blogs", "proxy", "sidecar pattern", "solution architecture"]
 ---
 
 Dellenny explores how Azure services help developers implement the sidecar pattern in microservices architectures, emphasizing techniques that enhance logging, monitoring, and manage cross-cutting concerns.<!--excerpt_end-->

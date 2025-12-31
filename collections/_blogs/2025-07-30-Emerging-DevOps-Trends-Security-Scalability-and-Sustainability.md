@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-07-30 10:46:10 +00:00
 permalink: "/blogs/2025-07-30-Emerging-DevOps-Trends-Security-Scalability-and-Sustainability.html"
 categories: ["DevOps", "Security"]
-tags: ["Application Modernization", "Business Of DevOps", "Contributed Content", "Development Practices", "DevOps", "DevOps Trends", "Devsecops", "JFrog Platform", "Posts", "Scalability", "Scalability in DevOps", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Sustainability", "Sustainability in DevOps"]
-tags_normalized: ["application modernization", "business of devops", "contributed content", "development practices", "devops", "devops trends", "devsecops", "jfrog platform", "posts", "scalability", "scalability in devops", "security", "social facebook", "social linkedin", "social x", "software development", "sustainability", "sustainability in devops"]
+tags: ["Application Modernization", "Business Of DevOps", "Contributed Content", "Development Practices", "DevOps", "DevOps Trends", "Devsecops", "JFrog Platform", "Blogs", "Scalability", "Scalability in DevOps", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Sustainability", "Sustainability in DevOps"]
+tags_normalized: ["application modernization", "business of devops", "contributed content", "development practices", "devops", "devops trends", "devsecops", "jfrog platform", "blogs", "scalability", "scalability in devops", "security", "social facebook", "social linkedin", "social x", "software development", "sustainability", "sustainability in devops"]
 ---
 
 Harikrishna Kundariya explores key trends in the DevOps landscape, addressing how security, scalability, and sustainability are influencing modern development practices.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://devclass.com/feed/"
 date: 2025-07-02 16:00:20 +00:00
 permalink: "/blogs/2025-07-02-Microsoft-Previews-MCP-Tool-for-SQL-Server-Enhancing-AI-Driven-Database-Interaction.html"
 categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "AI", "AI Agents", "AI/ML", "Azure", "Azure SQL", "Claude Desktop", "Cloud Data", "Coding", "Database Automation", "Database Development", "Databases", "Development", "Entra ID", "Gemini CLI", "Mcp", "Microsoft", "Mysql", "Natural Language Database", "Node.js", "Open Source", "Postgresql", "Posts", "Schema Management", "SQL AI", "SQL Server", "SQL Tools"]
-tags_normalized: ["dotnet", "ai", "ai agents", "aislashml", "azure", "azure sql", "claude desktop", "cloud data", "coding", "database automation", "database development", "databases", "development", "entra id", "gemini cli", "mcp", "microsoft", "mysql", "natural language database", "nodedotjs", "open source", "postgresql", "posts", "schema management", "sql ai", "sql server", "sql tools"]
+tags: [".NET", "AI", "AI Agents", "AI/ML", "Azure", "Azure SQL", "Claude Desktop", "Cloud Data", "Coding", "Database Automation", "Database Development", "Databases", "Development", "Entra ID", "Gemini CLI", "Mcp", "Microsoft", "Mysql", "Natural Language Database", "Node.js", "Open Source", "Postgresql", "Blogs", "Schema Management", "SQL AI", "SQL Server", "SQL Tools"]
+tags_normalized: ["dotnet", "ai", "ai agents", "aislashml", "azure", "azure sql", "claude desktop", "cloud data", "coding", "database automation", "database development", "databases", "development", "entra id", "gemini cli", "mcp", "microsoft", "mysql", "natural language database", "nodedotjs", "open source", "postgresql", "blogs", "schema management", "sql ai", "sql server", "sql tools"]
 ---
 
 Tim Anderson analyzes Microsoft's MCP tool for SQL Server, highlighting its AI-powered capabilities, practical frustrations, and integration with Node.js, .NET, and Azure SQL for developers.<!--excerpt_end-->

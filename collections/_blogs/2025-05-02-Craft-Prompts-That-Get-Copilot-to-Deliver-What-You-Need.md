@@ -11,8 +11,8 @@ feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-05-02 00:00:00 +00:00
 permalink: "/blogs/2025-05-02-Craft-Prompts-That-Get-Copilot-to-Deliver-What-You-Need.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Code Generation", "Contextual Prompting", "Debugging Copilot", "Developer Productivity", "GitHub Copilot", "Large Language Models", "Persona Based Prompts", "Posts", "Prompt Engineering", "Structured Prompt", "Workflow Automation"]
-tags_normalized: ["ai", "code generation", "contextual prompting", "debugging copilot", "developer productivity", "github copilot", "large language models", "persona based prompts", "posts", "prompt engineering", "structured prompt", "workflow automation"]
+tags: ["AI", "Code Generation", "Contextual Prompting", "Debugging Copilot", "Developer Productivity", "GitHub Copilot", "Large Language Models", "Persona Based Prompts", "Blogs", "Prompt Engineering", "Structured Prompt", "Workflow Automation"]
+tags_normalized: ["ai", "code generation", "contextual prompting", "debugging copilot", "developer productivity", "github copilot", "large language models", "persona based prompts", "blogs", "prompt engineering", "structured prompt", "workflow automation"]
 ---
 
 Randy Pagels shares techniques for writing prompts that help GitHub Copilot generate more accurate and relevant code. This guide covers structured prompting, providing context, and iterative refinement for best results.<!--excerpt_end-->

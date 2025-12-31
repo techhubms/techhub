@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-10-12 08:10:44 +00:00
 permalink: "/blogs/2025-10-12-Building-an-Azure-Enterprise-Scale-Landing-Zone-Foundation-for-Cloud-Governance.html"
 categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Active Directory", "Azure DevOps", "Azure Landing Zone", "Azure Monitor", "Azure Policy", "Azure Security Center", "Bicep", "CI/CD", "Cloud Adoption Framework", "Cloud Security", "Cost Optimization", "Defender For Cloud", "DevOps", "Enterprise Architecture", "Governance", "IaC", "Management Groups", "Networking", "Posts", "Role Based Access Control", "Security", "Terraform"]
-tags_normalized: ["azure", "azure active directory", "azure devops", "azure landing zone", "azure monitor", "azure policy", "azure security center", "bicep", "cislashcd", "cloud adoption framework", "cloud security", "cost optimization", "defender for cloud", "devops", "enterprise architecture", "governance", "iac", "management groups", "networking", "posts", "role based access control", "security", "terraform"]
+tags: ["Azure", "Azure Active Directory", "Azure DevOps", "Azure Landing Zone", "Azure Monitor", "Azure Policy", "Azure Security Center", "Bicep", "CI/CD", "Cloud Adoption Framework", "Cloud Security", "Cost Optimization", "Defender For Cloud", "DevOps", "Enterprise Architecture", "Governance", "IaC", "Management Groups", "Networking", "Blogs", "Role Based Access Control", "Security", "Terraform"]
+tags_normalized: ["azure", "azure active directory", "azure devops", "azure landing zone", "azure monitor", "azure policy", "azure security center", "bicep", "cislashcd", "cloud adoption framework", "cloud security", "cost optimization", "defender for cloud", "devops", "enterprise architecture", "governance", "iac", "management groups", "networking", "blogs", "role based access control", "security", "terraform"]
 ---
 
 Dellenny explains how to establish a robust, future-ready Azure foundation with Enterprise-Scale Landing Zones, highlighting essential practices and tools for security, governance, and scalable cloud operations.<!--excerpt_end-->

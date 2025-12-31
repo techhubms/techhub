@@ -11,8 +11,8 @@ feed_url: "https://www.thomasmaurer.ch/feed/"
 date: 2025-05-07 10:44:34 +00:00
 permalink: "/blogs/2025-05-07-Video-Build-a-Well-Architected-SaaS-Solution-on-Microsoft-Azure.html"
 categories: ["Azure"]
-tags: ["Azure", "Azure Essentials Show", "Cloud", "Cloud Computing", "Cost Optimization", "ISV", "Microsoft", "Microsoft Azure", "Operational Excellence", "Performance Efficiency", "Posts", "Reliability", "SaaS", "Thomas Maurer", "Well Architected", "Well Architected Framework"]
-tags_normalized: ["azure", "azure essentials show", "cloud", "cloud computing", "cost optimization", "isv", "microsoft", "microsoft azure", "operational excellence", "performance efficiency", "posts", "reliability", "saas", "thomas maurer", "well architected", "well architected framework"]
+tags: ["Azure", "Azure Essentials Show", "Cloud", "Cloud Computing", "Cost Optimization", "ISV", "Microsoft", "Microsoft Azure", "Operational Excellence", "Performance Efficiency", "Blogs", "Reliability", "SaaS", "Thomas Maurer", "Well Architected", "Well Architected Framework"]
+tags_normalized: ["azure", "azure essentials show", "cloud", "cloud computing", "cost optimization", "isv", "microsoft", "microsoft azure", "operational excellence", "performance efficiency", "blogs", "reliability", "saas", "thomas maurer", "well architected", "well architected framework"]
 ---
 
 In this blog post, Thomas Maurer, together with Sergio Navar and John Downs, explores how to architect SaaS solutions on Azure using the Microsoft Well-Architected Framework. Key pillars such as security, cost optimization, and reliability are discussed in detail.<!--excerpt_end-->

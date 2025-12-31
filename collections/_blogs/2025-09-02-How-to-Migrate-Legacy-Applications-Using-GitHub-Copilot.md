@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-09-02 09:26:06 +00:00
 permalink: "/blogs/2025-09-02-How-to-Migrate-Legacy-Applications-Using-GitHub-Copilot.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET Modernization", "AI", "AI Pair Programming", "Application Modernization", "Architecture", "CI/CD", "Coding", "Developer Productivity", "DevOps", "GitHub Copilot", "Incremental Migration", "Legacy Migration", "Posts", "Python Migration", "Refactoring", "Software Development", "Solution Architecture", "Unit Testing", "VS Code"]
-tags_normalized: ["dotnet modernization", "ai", "ai pair programming", "application modernization", "architecture", "cislashcd", "coding", "developer productivity", "devops", "github copilot", "incremental migration", "legacy migration", "posts", "python migration", "refactoring", "software development", "solution architecture", "unit testing", "vs code"]
+tags: [".NET Modernization", "AI", "AI Pair Programming", "Application Modernization", "Architecture", "CI/CD", "Coding", "Developer Productivity", "DevOps", "GitHub Copilot", "Incremental Migration", "Legacy Migration", "Blogs", "Python Migration", "Refactoring", "Software Development", "Solution Architecture", "Unit Testing", "VS Code"]
+tags_normalized: ["dotnet modernization", "ai", "ai pair programming", "application modernization", "architecture", "cislashcd", "coding", "developer productivity", "devops", "github copilot", "incremental migration", "legacy migration", "blogs", "python migration", "refactoring", "software development", "solution architecture", "unit testing", "vs code"]
 ---
 
 Dellenny presents a practical guide to using GitHub Copilot as an AI-powered assistant for migrating legacy software, focusing on efficient code refactoring and modernization workflows.<!--excerpt_end-->

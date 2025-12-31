@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-09-15 07:41:15 +00:00
 permalink: "/blogs/2025-09-15-How-MCP-Works-in-Microsofts-AI-Ecosystem.html"
 categories: ["AI", "Azure", "Coding"]
-tags: ["Agentic Web", "AI", "AI Agent", "AI Governance", "AI Integration", "APIs", "Azure", "Azure AI Foundry", "C# SDK", "Coding", "Copilot Studio", "Dynamics 365", "General", "MCP", "Microsoft AI", "Open Standards", "Posts", "Semantic Kernel", "Tool Standardization"]
-tags_normalized: ["agentic web", "ai", "ai agent", "ai governance", "ai integration", "apis", "azure", "azure ai foundry", "csharp sdk", "coding", "copilot studio", "dynamics 365", "general", "mcp", "microsoft ai", "open standards", "posts", "semantic kernel", "tool standardization"]
+tags: ["Agentic Web", "AI", "AI Agent", "AI Governance", "AI Integration", "APIs", "Azure", "Azure AI Foundry", "C# SDK", "Coding", "Copilot Studio", "Dynamics 365", "General", "MCP", "Microsoft AI", "Open Standards", "Blogs", "Semantic Kernel", "Tool Standardization"]
+tags_normalized: ["agentic web", "ai", "ai agent", "ai governance", "ai integration", "apis", "azure", "azure ai foundry", "csharp sdk", "coding", "copilot studio", "dynamics 365", "general", "mcp", "microsoft ai", "open standards", "blogs", "semantic kernel", "tool standardization"]
 ---
 
 Dellenny dives deep into Microsoft’s use of the Model Context Protocol (MCP), showing how this open standard powers AI agent integration in Copilot Studio, Azure AI Foundry, Dynamics 365, and beyond.<!--excerpt_end-->

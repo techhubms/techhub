@@ -11,8 +11,8 @@ feed_url: "https://medium.com/feed/@davidfowl"
 date: 2025-05-11 19:33:22 +00:00
 permalink: "/blogs/2025-05-11-Intent-vs-Mechanics-The-Power-of-Abstraction-in-Aspire.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["App Service", "Aspire", "Azure", "Azure Key Vault", "Bicep", "Cloud Development", "Code Abstraction", "Coding", "Container Apps", "Developer Workflow", "DevOps", "Distributed Applications", "Docker Compose", "Environment Configuration", "IaC", "Local Development", "Managed Identity", "Posts", "Secret Management", "Security", "Software Development"]
-tags_normalized: ["app service", "aspire", "azure", "azure key vault", "bicep", "cloud development", "code abstraction", "coding", "container apps", "developer workflow", "devops", "distributed applications", "docker compose", "environment configuration", "iac", "local development", "managed identity", "posts", "secret management", "security", "software development"]
+tags: ["App Service", "Aspire", "Azure", "Azure Key Vault", "Bicep", "Cloud Development", "Code Abstraction", "Coding", "Container Apps", "Developer Workflow", "DevOps", "Distributed Applications", "Docker Compose", "Environment Configuration", "IaC", "Local Development", "Managed Identity", "Blogs", "Secret Management", "Security", "Software Development"]
+tags_normalized: ["app service", "aspire", "azure", "azure key vault", "bicep", "cloud development", "code abstraction", "coding", "container apps", "developer workflow", "devops", "distributed applications", "docker compose", "environment configuration", "iac", "local development", "managed identity", "blogs", "secret management", "security", "software development"]
 ---
 
 In this article, David Fowler explores how Aspire simplifies application development by abstracting environment-specific details, allowing developers to focus on intent, especially when managing secrets via Azure Key Vault.<!--excerpt_end-->

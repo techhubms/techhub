@@ -11,8 +11,8 @@ feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-09-12 00:00:00 +00:00
 permalink: "/blogs/2025-09-12-Multi-File-Edits-Made-Simple.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Async/Await", "Automation", "Code Consistency", "Code Review", "Coding", "Copilot Edits", "Developer Tools", "Diff Preview", "ES Modules", "GitHub Copilot", "Modernization", "Multi File Editing", "Node.js", "Posts", "Programming Productivity", "Project Wide Changes", "Refactoring"]
-tags_normalized: ["ai", "asyncslashawait", "automation", "code consistency", "code review", "coding", "copilot edits", "developer tools", "diff preview", "es modules", "github copilot", "modernization", "multi file editing", "nodedotjs", "posts", "programming productivity", "project wide changes", "refactoring"]
+tags: ["AI", "Async/Await", "Automation", "Code Consistency", "Code Review", "Coding", "Copilot Edits", "Developer Tools", "Diff Preview", "ES Modules", "GitHub Copilot", "Modernization", "Multi File Editing", "Node.js", "Blogs", "Programming Productivity", "Project Wide Changes", "Refactoring"]
+tags_normalized: ["ai", "asyncslashawait", "automation", "code consistency", "code review", "coding", "copilot edits", "developer tools", "diff preview", "es modules", "github copilot", "modernization", "multi file editing", "nodedotjs", "blogs", "programming productivity", "project wide changes", "refactoring"]
 ---
 
 Randy Pagels explains how to use GitHub Copilot’s multi-file edits feature to refactor, update, and modernize your codebase efficiently—all while retaining developer control.<!--excerpt_end-->

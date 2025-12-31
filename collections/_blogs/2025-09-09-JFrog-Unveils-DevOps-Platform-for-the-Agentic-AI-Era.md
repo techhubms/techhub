@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-09-09 16:15:32 +00:00
 permalink: "/blogs/2025-09-09-JFrog-Unveils-DevOps-Platform-for-the-Agentic-AI-Era.html"
 categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agentic AI", "AI", "AI Agents", "Anthropic", "CI/CD", "DevOps", "DevOps Platform", "GitHub Copilot", "Governance", "GRC", "Jfrog", "JFrog SwampUP", "JFry", "MCP", "NVIDIA Nemotron", "Posts", "Risk Management", "Secure Model Registry", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "SwampUP", "Vulnerability Remediation", "Xray Code Analysis"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "anthropic", "cislashcd", "devops", "devops platform", "github copilot", "governance", "grc", "jfrog", "jfrog swampup", "jfry", "mcp", "nvidia nemotron", "posts", "risk management", "secure model registry", "security", "social facebook", "social linkedin", "social x", "software supply chain", "swampup", "vulnerability remediation", "xray code analysis"]
+tags: ["Agentic AI", "AI", "AI Agents", "Anthropic", "CI/CD", "DevOps", "DevOps Platform", "GitHub Copilot", "Governance", "GRC", "Jfrog", "JFrog SwampUP", "JFry", "MCP", "NVIDIA Nemotron", "Blogs", "Risk Management", "Secure Model Registry", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "SwampUP", "Vulnerability Remediation", "Xray Code Analysis"]
+tags_normalized: ["agentic ai", "ai", "ai agents", "anthropic", "cislashcd", "devops", "devops platform", "github copilot", "governance", "grc", "jfrog", "jfrog swampup", "jfry", "mcp", "nvidia nemotron", "blogs", "risk management", "secure model registry", "security", "social facebook", "social linkedin", "social x", "software supply chain", "swampup", "vulnerability remediation", "xray code analysis"]
 ---
 
 Mike Vizard details JFrog’s launch of a new DevOps platform designed for the agentic AI era, outlining how the JFry platform supports AI agent integration and workflow governance for modern development teams.<!--excerpt_end-->

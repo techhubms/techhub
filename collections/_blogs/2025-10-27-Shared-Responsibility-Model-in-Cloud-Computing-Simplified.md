@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-10-27 06:41:21 +00:00
 permalink: "/blogs/2025-10-27-Shared-Responsibility-Model-in-Cloud-Computing-Simplified.html"
 categories: ["Azure", "Security"]
-tags: ["Azure", "Azure App Service", "Azure Key Vault", "Azure Security", "Azure Security Center", "Azure SQL Database", "Cloud Security", "Compliance", "Data Encryption", "Defender For Cloud", "GDPR", "HIPAA", "IaaS", "Microsoft 365", "Microsoft 365 Certified: Fundamentals", "Microsoft Azure", "PaaS", "Posts", "RBAC", "Role Based Access Control", "SaaS", "Security", "Security Best Practices", "Shared Responsibility Model"]
-tags_normalized: ["azure", "azure app service", "azure key vault", "azure security", "azure security center", "azure sql database", "cloud security", "compliance", "data encryption", "defender for cloud", "gdpr", "hipaa", "iaas", "microsoft 365", "microsoft 365 certified fundamentals", "microsoft azure", "paas", "posts", "rbac", "role based access control", "saas", "security", "security best practices", "shared responsibility model"]
+tags: ["Azure", "Azure App Service", "Azure Key Vault", "Azure Security", "Azure Security Center", "Azure SQL Database", "Cloud Security", "Compliance", "Data Encryption", "Defender For Cloud", "GDPR", "HIPAA", "IaaS", "Microsoft 365", "Microsoft 365 Certified: Fundamentals", "Microsoft Azure", "PaaS", "Blogs", "RBAC", "Role Based Access Control", "SaaS", "Security", "Security Best Practices", "Shared Responsibility Model"]
+tags_normalized: ["azure", "azure app service", "azure key vault", "azure security", "azure security center", "azure sql database", "cloud security", "compliance", "data encryption", "defender for cloud", "gdpr", "hipaa", "iaas", "microsoft 365", "microsoft 365 certified fundamentals", "microsoft azure", "paas", "blogs", "rbac", "role based access control", "saas", "security", "security best practices", "shared responsibility model"]
 ---
 
 Dellenny offers a straightforward breakdown of the Shared Responsibility Model in Microsoft Azure, clarifying which security tasks belong to Microsoft and which to cloud customers.<!--excerpt_end-->

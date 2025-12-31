@@ -11,8 +11,8 @@ feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-11-25 10:00:00 +00:00
 permalink: "/blogs/2025-11-25-Exploring-the-NET-Boot-Process-via-Host-Tracing.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET CLI", ".NET Core", ".NET Muxer", "Apphost", "BCL", "Coding", "Context Switches", "CoreCLR", "Dependency Resolution", "Deps.json", "Diagnostics", "Environment Variables", "Global.json", "Hostfxr", "Hostpolicy.dll", "Logging", "Posts", "Runtimeconfig.json", "SDK", "TPA", "Trusted Platform Assemblies"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet cli", "dotnet core", "dotnet muxer", "apphost", "bcl", "coding", "context switches", "coreclr", "dependency resolution", "depsdotjson", "diagnostics", "environment variables", "globaldotjson", "hostfxr", "hostpolicydotdll", "logging", "posts", "runtimeconfigdotjson", "sdk", "tpa", "trusted platform assemblies"]
+tags: [".NET", ".NET 10", ".NET CLI", ".NET Core", ".NET Muxer", "Apphost", "BCL", "Coding", "Context Switches", "CoreCLR", "Dependency Resolution", "Deps.json", "Diagnostics", "Environment Variables", "Global.json", "Hostfxr", "Hostpolicy.dll", "Logging", "Blogs", "Runtimeconfig.json", "SDK", "TPA", "Trusted Platform Assemblies"]
+tags_normalized: ["dotnet", "dotnet 10", "dotnet cli", "dotnet core", "dotnet muxer", "apphost", "bcl", "coding", "context switches", "coreclr", "dependency resolution", "depsdotjson", "diagnostics", "environment variables", "globaldotjson", "hostfxr", "hostpolicydotdll", "logging", "blogs", "runtimeconfigdotjson", "sdk", "tpa", "trusted platform assemblies"]
 ---
 
 Andrew Lock provides a technical walkthrough exploring .NET's boot process using host tracing, offering developers step-by-step insights into muxer, hostfxr, and hostpolicy.dll components.<!--excerpt_end-->

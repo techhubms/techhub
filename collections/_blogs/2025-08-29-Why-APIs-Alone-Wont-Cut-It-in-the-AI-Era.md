@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-08-29 16:03:12 +00:00
 permalink: "/blogs/2025-08-29-Why-APIs-Alone-Wont-Cut-It-in-the-AI-Era.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Integration", "API Lifecycle", "API Security", "API Standardization", "APIs", "Automation", "CodeGlide.ai", "DevOps", "Enterprise AI", "GitHub", "Large Language Models", "MCP", "Posts", "Upsera", "Video Interviews"]
-tags_normalized: ["ai", "ai integration", "api lifecycle", "api security", "api standardization", "apis", "automation", "codeglidedotai", "devops", "enterprise ai", "github", "large language models", "mcp", "posts", "upsera", "video interviews"]
+tags: ["AI", "AI Integration", "API Lifecycle", "API Security", "API Standardization", "APIs", "Automation", "CodeGlide.ai", "DevOps", "Enterprise AI", "GitHub", "Large Language Models", "MCP", "Blogs", "Upsera", "Video Interviews"]
+tags_normalized: ["ai", "ai integration", "api lifecycle", "api security", "api standardization", "apis", "automation", "codeglidedotai", "devops", "enterprise ai", "github", "large language models", "mcp", "blogs", "upsera", "video interviews"]
 ---
 
 Alan Shimel explores, through an interview with Kumar Chivukula, why traditional APIs fall short for AI-era needs and how the Model Context Protocol may redefine enterprise API strategies.<!--excerpt_end-->

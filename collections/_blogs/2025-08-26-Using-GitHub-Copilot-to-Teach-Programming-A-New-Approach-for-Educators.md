@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-08-26 15:10:17 +00:00
 permalink: "/blogs/2025-08-26-Using-GitHub-Copilot-to-Teach-Programming-A-New-Approach-for-Educators.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["Academic Integrity", "AI", "AI in Education", "Code Assistance", "Coding Pedagogy", "Computer Science Teaching", "Critical Code Review", "GitHub Copilot", "Learning Tools", "Pair Programming", "Posts", "Programming Education", "Programming Fundamentals", "Software Development", "Tech in Classrooms"]
-tags_normalized: ["academic integrity", "ai", "ai in education", "code assistance", "coding pedagogy", "computer science teaching", "critical code review", "github copilot", "learning tools", "pair programming", "posts", "programming education", "programming fundamentals", "software development", "tech in classrooms"]
+tags: ["Academic Integrity", "AI", "AI in Education", "Code Assistance", "Coding Pedagogy", "Computer Science Teaching", "Critical Code Review", "GitHub Copilot", "Learning Tools", "Pair Programming", "Blogs", "Programming Education", "Programming Fundamentals", "Software Development", "Tech in Classrooms"]
+tags_normalized: ["academic integrity", "ai", "ai in education", "code assistance", "coding pedagogy", "computer science teaching", "critical code review", "github copilot", "learning tools", "pair programming", "blogs", "programming education", "programming fundamentals", "software development", "tech in classrooms"]
 ---
 
 Dellenny discusses the use of GitHub Copilot as an educational tool, examining its benefits, challenges, and strategies for effective integration into programming classrooms.<!--excerpt_end-->

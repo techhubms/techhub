@@ -11,8 +11,8 @@ feed_url: "https://roadtoalm.com/feed/"
 date: 2025-06-05 08:31:00 +00:00
 permalink: "/blogs/2025-06-05-Developer-Experience-More-Than-a-Buzzword.html"
 categories: ["DevOps"]
-tags: ["AI", "Developer Experience", "Developer Portal", "Developer Productivity", "DevOps", "DevX", "Discoverability", "Documentation", "Engineering Culture", "Generative AI", "Lead Podcast", "Measurement", "Posts", "Team Topologies", "Tooling", "Uncategorized"]
-tags_normalized: ["ai", "developer experience", "developer portal", "developer productivity", "devops", "devx", "discoverability", "documentation", "engineering culture", "generative ai", "lead podcast", "measurement", "posts", "team topologies", "tooling", "uncategorized"]
+tags: ["AI", "Developer Experience", "Developer Portal", "Developer Productivity", "DevOps", "DevX", "Discoverability", "Documentation", "Engineering Culture", "Generative AI", "Lead Podcast", "Measurement", "Blogs", "Team Topologies", "Tooling", "Uncategorized"]
+tags_normalized: ["ai", "developer experience", "developer portal", "developer productivity", "devops", "devx", "discoverability", "documentation", "engineering culture", "generative ai", "lead podcast", "measurement", "blogs", "team topologies", "tooling", "uncategorized"]
 ---
 
 In this post, Rene van Osnabrugge shares stories and lessons from the LEAD podcast, delving into the realities and evolving practices of developer experience and engineering culture.<!--excerpt_end-->

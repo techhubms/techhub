@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-08-29 16:16:47 +00:00
 permalink: "/blogs/2025-08-29-Bringing-Order-to-Chaotic-Software-Engineering-Workflows.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI in Software Development", "Application Development", "Citizen Developers", "Development Culture", "DevOps", "DevOps Practices", "Low Code Tools", "Posts", "Process Improvement", "Software Engineering", "Team Productivity", "Tempo", "Video Interviews", "Workflow Optimization"]
-tags_normalized: ["ai", "ai in software development", "application development", "citizen developers", "development culture", "devops", "devops practices", "low code tools", "posts", "process improvement", "software engineering", "team productivity", "tempo", "video interviews", "workflow optimization"]
+tags: ["AI", "AI in Software Development", "Application Development", "Citizen Developers", "Development Culture", "DevOps", "DevOps Practices", "Low Code Tools", "Blogs", "Process Improvement", "Software Engineering", "Team Productivity", "Tempo", "Video Interviews", "Workflow Optimization"]
+tags_normalized: ["ai", "ai in software development", "application development", "citizen developers", "development culture", "devops", "devops practices", "low code tools", "blogs", "process improvement", "software engineering", "team productivity", "tempo", "video interviews", "workflow optimization"]
 ---
 
 Mike Vizard shares Shannon Mason's perspective on addressing chaos in software engineering workflows, detailing the nuanced impact of AI, the growth of low-code development, and actionable strategies for developers and teams.<!--excerpt_end-->

@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-10-28 08:45:55 +00:00
 permalink: "/blogs/2025-10-28-How-to-Register-and-Prepare-for-the-GitHub-Copilot-Certification-Exam.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Certification Exam", "Coding Skills", "Copilot Features", "Debugging", "Developer Workflow", "Exam Preparation", "GitHib Copilot", "GitHub Copilot", "GitHub Copilot Certification", "Microsoft Learn", "Posts", "Privacy", "Professional Certification", "Prompt Engineering", "Remote Proctoring", "Responsible AI", "Technical Assessment"]
-tags_normalized: ["ai", "ai assisted development", "certification exam", "coding skills", "copilot features", "debugging", "developer workflow", "exam preparation", "githib copilot", "github copilot", "github copilot certification", "microsoft learn", "posts", "privacy", "professional certification", "prompt engineering", "remote proctoring", "responsible ai", "technical assessment"]
+tags: ["AI", "AI Assisted Development", "Certification Exam", "Coding Skills", "Copilot Features", "Debugging", "Developer Workflow", "Exam Preparation", "GitHib Copilot", "GitHub Copilot", "GitHub Copilot Certification", "Microsoft Learn", "Blogs", "Privacy", "Professional Certification", "Prompt Engineering", "Remote Proctoring", "Responsible AI", "Technical Assessment"]
+tags_normalized: ["ai", "ai assisted development", "certification exam", "coding skills", "copilot features", "debugging", "developer workflow", "exam preparation", "githib copilot", "github copilot", "github copilot certification", "microsoft learn", "blogs", "privacy", "professional certification", "prompt engineering", "remote proctoring", "responsible ai", "technical assessment"]
 ---
 
 Dellenny provides an in-depth step-by-step guide to registering, preparing for, and succeeding in the GitHub Copilot Certification Exam, ideal for developers seeking to validate their AI-powered coding expertise.<!--excerpt_end-->

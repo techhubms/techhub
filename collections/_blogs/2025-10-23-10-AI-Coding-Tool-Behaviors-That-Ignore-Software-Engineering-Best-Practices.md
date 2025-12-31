@@ -11,8 +11,8 @@ feed_url: "https://devops.com/feed/"
 date: 2025-10-23 17:51:27 +00:00
 permalink: "/blogs/2025-10-23-10-AI-Coding-Tool-Behaviors-That-Ignore-Software-Engineering-Best-Practices.html"
 categories: ["AI", "Coding", "DevOps", "Security"]
-tags: ["AI", "AI Coding Tools", "Anti Patterns", "Application Security", "Automation", "Best Practices", "Code Quality", "Code Review", "Coding", "Continuous Integration", "DevOps", "Open Source", "OX Security", "Posts", "Security", "Security Vulnerabilities", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering", "Unit Testing"]
-tags_normalized: ["ai", "ai coding tools", "anti patterns", "application security", "automation", "best practices", "code quality", "code review", "coding", "continuous integration", "devops", "open source", "ox security", "posts", "security", "security vulnerabilities", "social facebook", "social linkedin", "social x", "software engineering", "unit testing"]
+tags: ["AI", "AI Coding Tools", "Anti Patterns", "Application Security", "Automation", "Best Practices", "Code Quality", "Code Review", "Coding", "Continuous Integration", "DevOps", "Open Source", "OX Security", "Blogs", "Security", "Security Vulnerabilities", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering", "Unit Testing"]
+tags_normalized: ["ai", "ai coding tools", "anti patterns", "application security", "automation", "best practices", "code quality", "code review", "coding", "continuous integration", "devops", "open source", "ox security", "blogs", "security", "security vulnerabilities", "social facebook", "social linkedin", "social x", "software engineering", "unit testing"]
 ---
 
 Mike Vizard examines a report by Ox Security highlighting ten problematic behaviors exhibited by AI coding tools, focusing on their impact on software quality and DevOps security workflows.<!--excerpt_end-->

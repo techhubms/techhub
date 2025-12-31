@@ -11,8 +11,8 @@ feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-10-22 10:00:00 +00:00
 permalink: "/blogs/2025-10-22-Adding-Metadata-to-Fallback-Endpoints-in-ASPNET-Core.html"
 categories: ["Coding"]
-tags: [".NET 6", ".NET Core", "AllowAnonymous", "ASP.NET Core", "Authorization", "Coding", "Endpoint Metadata", "Fallback Endpoints", "MapFallback", "MapFallbackToController", "MapFallbackToPage", "Middleware", "Minimal APIs", "MVC", "Posts", "Razor Pages", "RequireAuthorization", "Routing"]
-tags_normalized: ["dotnet 6", "dotnet core", "allowanonymous", "aspdotnet core", "authorization", "coding", "endpoint metadata", "fallback endpoints", "mapfallback", "mapfallbacktocontroller", "mapfallbacktopage", "middleware", "minimal apis", "mvc", "posts", "razor pages", "requireauthorization", "routing"]
+tags: [".NET 6", ".NET Core", "AllowAnonymous", "ASP.NET Core", "Authorization", "Coding", "Endpoint Metadata", "Fallback Endpoints", "MapFallback", "MapFallbackToController", "MapFallbackToPage", "Middleware", "Minimal APIs", "MVC", "Blogs", "Razor Pages", "RequireAuthorization", "Routing"]
+tags_normalized: ["dotnet 6", "dotnet core", "allowanonymous", "aspdotnet core", "authorization", "coding", "endpoint metadata", "fallback endpoints", "mapfallback", "mapfallbacktocontroller", "mapfallbacktopage", "middleware", "minimal apis", "mvc", "blogs", "razor pages", "requireauthorization", "routing"]
 ---
 
 Andrew Lock delves into the quirks of applying metadata to fallback endpoints in ASP.NET Core, providing guidance on best practices for minimal APIs, MVC, and Razor Pages.<!--excerpt_end-->

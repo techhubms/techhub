@@ -11,8 +11,8 @@ feed_url: "https://dellenny.com/feed/"
 date: 2025-07-23 11:04:36 +00:00
 permalink: "/blogs/2025-07-23-Building-Resilient-Applications-Availability-and-Resilience-Patterns-in-AWS-and-Azure.html"
 categories: ["Azure", "Coding"]
-tags: [".NET", "Application Insights", "Architecture", "AWS", "Azure", "Azure Front Door", "Azure Load Balancer", "Azure Monitor", "Azure SQL Database", "Azure Traffic Manager", "Circuit Breaker", "Cloud Architecture", "Cloud Patterns", "Coding", "Failover Pattern", "High Availability", "Polly", "Posts", "Resilience", "Retry Policy", "Solution Architecture"]
-tags_normalized: ["dotnet", "application insights", "architecture", "aws", "azure", "azure front door", "azure load balancer", "azure monitor", "azure sql database", "azure traffic manager", "circuit breaker", "cloud architecture", "cloud patterns", "coding", "failover pattern", "high availability", "polly", "posts", "resilience", "retry policy", "solution architecture"]
+tags: [".NET", "Application Insights", "Architecture", "AWS", "Azure", "Azure Front Door", "Azure Load Balancer", "Azure Monitor", "Azure SQL Database", "Azure Traffic Manager", "Circuit Breaker", "Cloud Architecture", "Cloud Patterns", "Coding", "Failover Pattern", "High Availability", "Polly", "Blogs", "Resilience", "Retry Policy", "Solution Architecture"]
+tags_normalized: ["dotnet", "application insights", "architecture", "aws", "azure", "azure front door", "azure load balancer", "azure monitor", "azure sql database", "azure traffic manager", "circuit breaker", "cloud architecture", "cloud patterns", "coding", "failover pattern", "high availability", "polly", "blogs", "resilience", "retry policy", "solution architecture"]
 ---
 
 Dellenny details key cloud resilience and availability patterns, comparing their implementation between AWS and Microsoft Azure. Readers discover practical Azure tools and strategies for building robust applications capable of weathering system failures.<!--excerpt_end-->
