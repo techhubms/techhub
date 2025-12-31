@@ -165,6 +165,51 @@ _plugins/
 
 **Output**: Responsive iframe with 16:9 aspect ratio container.
 
+### sitemap_generator.rb
+
+**Purpose**: Generate `sitemap.xml` and `robots.txt` after Jekyll builds the site.
+
+**How It Works**:
+
+- Uses Jekyll's `:post_write` hook to run AFTER Jekyll finishes writing all files
+- Generates `sitemap.xml` with URLs for all pages (excludes collection documents)
+- Generates `robots.txt` pointing to the sitemap
+- Files persist after build because hook runs after Jekyll's write phase
+
+**What Gets Included**:
+
+- ✅ Page files (section indexes, collection pages, custom pages)
+- ❌ Collection documents (individual posts, videos, news items, etc.)
+- ❌ Files with extensions: `.xml`, `.json`, `.txt`, `.pdf`
+- ❌ `/404.html` page
+- ❌ Any page with `sitemap: false` in frontmatter
+
+**Features**:
+
+- XML escapes special characters in URLs (`&`, `<`, `>`, `"`, `'`)
+- Deduplicates URLs automatically
+- Respects `baseurl` configuration
+- Logs generation progress and file sizes
+
+**Technical Architecture**:
+
+Uses Jekyll::Hooks instead of Generator class because:
+
+- Generators run during build time and files may get cleaned up
+- `:post_write` hook runs AFTER Jekyll completes writing, ensuring file persistence
+- No StaticFile registration needed (files are written directly to `_site/`)
+
+**Manual Exclusion**:
+
+Add `sitemap: false` to frontmatter of any page you want to exclude:
+
+```yaml
+---
+title: Private Page
+sitemap: false
+---
+```
+
 ## Ruby Development Standards
 
 ### Module Structure

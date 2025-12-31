@@ -129,11 +129,10 @@ test.describe('Page-Specific Filtering Behavior', () => {
     }
   });
 
-  // Test 2: Section Index Pages (No Filters)
-  test.skip('should provide collection filters on section index pages', async ({ page }) => {
-    // Skipped: Section index pages (/ai/, /github-copilot/, etc.) don't have filters
-    // Only collection pages (/ai/news.html, /ai/blogs.html) have filters
-    // The /all/ section is special and does have collection filters (tested above)
+  // Test 2: Section Index Pages (Collection Filters Present)
+  test('should provide collection filters on section index pages', async ({ page }) => {
+    // Section index pages (/ai/, /github-copilot/, etc.) have collection filters
+    // This shows content from all collections within that section category
     const sectionPages = [
       { url: TEST_URLS.sectionIndexes.find(p => p.section === 'ai').url, name: 'AI Section Index', section: 'ai' },
       { url: TEST_URLS.sectionIndexes.find(p => p.section === 'github-copilot').url, name: 'GitHub Copilot Section Index', section: 'github-copilot' }

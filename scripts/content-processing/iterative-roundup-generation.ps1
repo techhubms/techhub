@@ -1860,7 +1860,7 @@ $finalContent
     # Format the created file using the fix-markdown-files script
     Write-Host "🔧 Formatting the created roundup file..."
     try {
-        $fixScriptPath = Join-Path $scriptsDirectory "fix-markdown-files.ps1"
+        $fixScriptPath = Join-Path $contentProcessingDirectory "fix-markdown-files.ps1"
         if (Test-Path $fixScriptPath) {
             & $fixScriptPath -FilePath $OutputFile
             Write-Host "✅ File formatting completed"
