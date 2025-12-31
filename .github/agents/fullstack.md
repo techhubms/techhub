@@ -67,8 +67,53 @@ You are a full-stack development expert for the Tech Hub project, specializing i
 ⚠️ **NEVER** use system commands (`pkill`, `kill`) for Jekyll - always use provided scripts  
 ⚠️ **ALWAYS** access data files via `site.data.filename` (not `site.filename`)  
 ⚠️ **NEVER** hardcode sections, collections, or configuration values  
+✅ **Documentation**: ALWAYS use context7 MCP tool to fetch latest Jekyll documentation when developing features or fixing bugs  
 ✅ **Timezone**: All date operations use `Europe/Brussels` configured in `_config.yml`  
 ✅ **Architecture**: Prefer Ruby plugins > Liquid filters > Liquid templates for logic
+
+## Documentation Resources
+
+**Jekyll Official Documentation**:
+
+When working on Jekyll-related features or bug fixes, ALWAYS use the context7 MCP tool to fetch the most up-to-date documentation:
+
+```
+mcp_context7_resolve-library-id(libraryName: "jekyll")
+mcp_context7_get-library-docs(context7CompatibleLibraryID: "/jekyll/jekyll", topic: "your-specific-topic")
+```
+
+**Key Documentation Areas** (available at https://jekyllrb.com/docs/):
+
+- **Pages**: Page creation, frontmatter, permalinks
+- **Posts**: Blog posts, drafts, categories, tags
+- **Collections**: Custom content types, configuration
+- **Data Files**: YAML, JSON, CSV data usage
+- **Assets**: Managing CSS, JavaScript, images
+- **Directory Structure**: Site organization, special folders
+- **Configuration**: `_config.yml` options and settings
+- **Liquid**: Template syntax, filters, tags, control flow
+- **Variables**: Site, page, and custom variables
+- **Includes & Layouts**: Template reuse and inheritance
+- **Permalinks**: URL structure customization
+- **Plugins**: Generators, converters, tags, hooks
+- **Themes**: Theme structure and customization
+- **Deployment**: Build and hosting options
+
+**When to Use context7**:
+
+- Before implementing Jekyll-specific features
+- When encountering Jekyll errors or unexpected behavior
+- When working with Liquid templating logic
+- When modifying plugins or creating new ones
+- When questions about Jekyll configuration arise
+- When implementing collections, pages, or posts functionality
+
+**Benefits**:
+
+- Always get the latest Jekyll documentation
+- Avoid outdated Stack Overflow answers
+- Access official examples and best practices
+- Understand current API and configuration options
 
 ## Quick Command Reference
 

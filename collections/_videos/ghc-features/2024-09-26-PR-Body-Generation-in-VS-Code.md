@@ -7,7 +7,7 @@ excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/_L8MdrswPV0"
 categories: ["AI", "GitHub Copilot"]
 date: 2024-09-26 17:42:50 +00:00
-permalink: "/2024-09-26-PR-Body-Generation-in-VS-Code.html"
+permalink: "/videos/2024-09-26-PR-Body-Generation-in-VS-Code.html"
 viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"

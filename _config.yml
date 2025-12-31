@@ -63,8 +63,6 @@ exclude:
   # All dotfiles and dot directories (covers .git, .github, .vscode, .devcontainer, etc.)
   - ".*"
   - ".*/"
-  - ".*/*"
-  - ".*/**/"
   
   # Development and build artifacts
   - "node_modules/"
@@ -101,6 +99,7 @@ exclude:
   - "LICENSE*"
   - "AGENTS.md"
   - "**/AGENTS.md"
+  - "**/*-guidelines.md"
   
   # Scripts and configuration
   - "*.ps1"

@@ -146,7 +146,7 @@ The Tech Hub uses a three-tier documentation system:
 - **Fix linter issues**: Always resolve all linting errors and warnings, EXCEPT when the issue is in an intentional bad example in documentation (e.g., fenced code blocks without language specifiers showing anti-patterns)
 - **Use MCP tools over CLI**: Prefer Playwright MCP, GitHub MCP, context7 MCP
 - **Read domain-specific AGENTS.md files**: Before editing any code in that domain
-- **Store temp files in `.tmp/`**: Never in repository root or working directories
+- **Store temp files in `.tmp/`**: ALL temporary or one-time use scripts MUST go in `.tmp/` directory. ONLY place scripts in `scripts/` directory if they are permanent, reusable tools that are part of the project infrastructure (e.g., build scripts, deployment scripts, test runners). If you're creating a script to solve an immediate task or perform a one-time operation, it belongs in `.tmp/`. Never place temporary files in repository root, working directories, or permanent project directories like `scripts/`.
 - **Follow timezone standards**: `Europe/Brussels` for all date operations
 - **Use configuration-driven design**: Update `_data/sections.json`, not hardcoded values
 - **Server-side render all content**: Initial page load must show complete content

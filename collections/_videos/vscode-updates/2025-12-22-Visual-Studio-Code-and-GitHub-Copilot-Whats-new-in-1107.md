@@ -8,7 +8,7 @@ canonical_url: "https://www.youtube.com/watch?v=Pi57sH7iuKY"
 viewing_mode: "internal"
 youtube_id: "Pi57sH7iuKY"
 date: 2025-12-22 18:00:00 +00:00
-permalink: "/2025-12-22-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1107.html"
+permalink: "/videos/2025-12-22-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1107.html"
 categories: ["AI", "GitHub Copilot"]
 section: "github-copilot"
 alt-collection: "vscode-updates"

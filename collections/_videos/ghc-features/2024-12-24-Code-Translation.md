@@ -7,7 +7,7 @@ excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/UfQGauPcAgE"
 categories: ["AI", "GitHub Copilot"]
 date: 2024-12-24 07:39:09 +00:00
-permalink: "/2024-12-24-Code-Translation.html"
+permalink: "/videos/2024-12-24-Code-Translation.html"
 viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"

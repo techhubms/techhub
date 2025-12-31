@@ -7,7 +7,7 @@ excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/m6XBVRXfFN8"
 categories: ["AI", "Azure", "GitHub Copilot"]
 date: 2025-04-26 20:44:28 +00:00
-permalink: "/2025-04-26-MCP-with-Azure-and-GitHub.html"
+permalink: "/videos/2025-04-26-MCP-with-Azure-and-GitHub.html"
 viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"
