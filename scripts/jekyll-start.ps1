@@ -111,14 +111,13 @@ try {
         $allArgs = $jekyllArgs -join " "
         $command = "bundle exec jekyll $allArgs"
         
-        # Ensure parent directories exist for log and PID files
+        # Get directory paths for log and PID files
         $logDir = Split-Path $logFile -Parent
-        if (-not (Test-Path $logDir)) {
-            New-Item -ItemType Directory -Path $logDir -Force | Out-Null
-        }
+        $pidDir = Split-Path $pidFile -Parent
         
-        # Start Jekyll as a detached process using bash, redirect output and save PID
-        $bashCommand = "nohup $command > '$logFile' 2>&1 & echo `$! > '$pidFile'"
+        # Start Jekyll as a detached process using bash
+        # Create directories in bash to ensure they exist when writing files
+        $bashCommand = "mkdir -p '$logDir' '$pidDir' && nohup $command > '$logFile' 2>&1 & echo `$! > '$pidFile'"
         bash -c $bashCommand
         
         # Give it a moment to start and read PID
