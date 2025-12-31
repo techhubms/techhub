@@ -49,6 +49,12 @@ function Get-ContentFromUrl {
             $webRequest.Headers.Add("Accept-Language", "en-US,en;q=0.9")
             $webRequest.Headers.Add("Accept-Encoding", "gzip, deflate")
             $webRequest.AutomaticDecompression = [System.Net.DecompressionMethods]::GZip -bor [System.Net.DecompressionMethods]::Deflate
+            
+            # Enable automatic redirect following (handles 301, 302, 307, 308)
+            if ($webRequest -is [System.Net.HttpWebRequest]) {
+                $webRequest.AllowAutoRedirect = $true
+                $webRequest.MaximumAutomaticRedirections = 10
+            }
             $response = $webRequest.GetResponse()
 
             if ($response.StatusCode -ne 200) {

@@ -335,6 +335,7 @@ try {
 
         # Get collection priority order and collect all files (exclude roundups)
         $collectionPriorityOrder = Get-CollectionPriorityOrder
+        $collectionsBasePath = Join-Path $WorkspaceRoot "collections"
 
         foreach ($collectionDir in $collectionPriorityOrder.Keys) {
             # Skip the roundups collection to avoid including previous roundups
@@ -342,10 +343,11 @@ try {
                 continue
             }
             
-            if (Test-Path $collectionDir) {
+            $fullCollectionPath = Join-Path $collectionsBasePath $collectionDir
+            if (Test-Path $fullCollectionPath) {
                 Write-Host "Scanning $collectionDir..."
                 
-                $files = @(Get-ChildItem $collectionDir -Filter "*.md" -Recurse)
+                $files = @(Get-ChildItem $fullCollectionPath -Filter "*.md" -Recurse)
                 
                 foreach ($file in $files) {
                     # Extract date from filename (format: YYYY-MM-DD-title.md)

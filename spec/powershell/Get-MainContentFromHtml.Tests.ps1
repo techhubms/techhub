@@ -72,13 +72,13 @@ Describe "Get-MainContentFromHtml" {
             $result | Should -Be $expected
         }
         
-        It "Should throw when GitHub blog nested HTML structure is missing" {
+        It "Should throw when GitHub blog content is missing" {
             # Arrange
-            $testHtml = "<html><body>Regular content without nested structure</body></html>"
+            $testHtml = "<html><body>Regular content without post__content section or nested structure</body></html>"
             $testUrl = "https://github.blog/test"
             
             # Act & Assert
-            { Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl } | Should -Throw "*nested <html><body> structure*"
+            { Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl } | Should -Throw "*content not found*"
         }
         
         It "Should throw when GitHub blog nested content is empty" {
@@ -582,13 +582,14 @@ Describe "Get-MainContentFromHtml" {
     }
 
     Context "Error Handling" {
-        It "Should throw Write-Error with proper message when processing fails" {
+        It "Should throw with proper message when processing fails" {
             # Arrange
             $testHtml = "<html><body>Invalid GitHub blog structure</body></html>"
             $testUrl = "https://github.blog/test-error"
             
             # Act & Assert
-            { Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl } | Should -Throw "*Error processing HTML from https://github.blog/test-error*"
+            # Should throw the specific error about content not found
+            { Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl } | Should -Throw "*content not found*"
         }
     }
 
@@ -599,7 +600,7 @@ Describe "Get-MainContentFromHtml" {
             $testUrl = "http://github.blog/test"  # HTTP instead of HTTPS
             
             # Act & Assert
-            { Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl } | Should -Throw "*nested <html><body> structure*"
+            { Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl } | Should -Throw "*content not found*"
         }
         
         It "Should handle URLs with ports" {
@@ -608,7 +609,7 @@ Describe "Get-MainContentFromHtml" {
             $testUrl = "https://github.blog:443/test"
             
             # Act & Assert
-            { Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl } | Should -Throw "*nested <html><body> structure*"
+            { Get-MainContentFromHtml -InputHtml $testHtml -SourceUrl $testUrl } | Should -Throw "*content not found*"
         }
         
         It "Should handle URLs with query parameters" {

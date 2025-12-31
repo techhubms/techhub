@@ -43,7 +43,17 @@ function Get-MainContentFromHtml {
                 # GitHub Blog processing
                 Write-Verbose "Processing GitHub Blog HTML from: $SourceUrl"
                 
-                # GitHub Blog has a nested HTML structure with the main content inside a second <html><body> block
+                # Try new pattern first (current GitHub Blog structure as of Dec 2025)
+                # Pattern: <section class="... post__content ...">
+                $postContentPattern = '<section[^>]*\bpost__content\b[^>]*>'
+                $balancedContent = Get-BalancedHtmlContent -InputHtml $InputHtml -TagName "section" -TagPattern $postContentPattern
+                
+                if (-not [string]::IsNullOrWhiteSpace($balancedContent)) {
+                    Write-Verbose "Successfully extracted GitHub Blog content using post__content section pattern ($(($balancedContent.Length)) characters)"
+                    return $balancedContent
+                }
+                
+                # Fallback to legacy nested HTML structure (pre-Dec 2025)
                 # Look for the pattern: <!DOCTYPE html PUBLIC...><html><body>...content...</body></html>
                 $nestedHtmlPattern = '<!DOCTYPE html PUBLIC[^>]*>\s*<html>\s*<body>(.*?)</body>\s*</html>'
                 $nestedMatch = [regex]::Match($InputHtml, $nestedHtmlPattern, [Text.RegularExpressions.RegexOptions]::Singleline)
@@ -53,13 +63,14 @@ function Get-MainContentFromHtml {
                     if ([string]::IsNullOrWhiteSpace($extractedContent)) {
                         throw "GitHub Blog nested content is empty"
                     }
+                    Write-Verbose "Successfully extracted GitHub Blog content using legacy nested HTML pattern ($(($extractedContent.Length)) characters)"
                     return $extractedContent
-                } else {
-                    throw "GitHub Blog nested HTML content not found - expected nested <html><body> structure"
                 }
+                
+                throw "GitHub Blog content not found - tried post__content section and nested HTML patterns"
             }
             "\.microsoft\.com$" {
-                # All Microsoft domains processing (including devblogs.microsoft.com)
+                # All Microsoft domains processing (including devblogs.microsoft.com, partner.microsoft.com)
                 Write-Verbose "Processing Microsoft site HTML from: $SourceUrl"
                 
                 # Try different patterns in order of specificity (content-specific patterns beat generic semantic ones)
@@ -70,6 +81,7 @@ function Get-MainContentFromHtml {
                     @{ Pattern = '<section[^>]*\s+class="[^"]*mssrc-block-content-block[^"]*"[^>]*>'; TagName = "section"; Name = "mssrc-block-content-block section" },
                     
                     # High priority: Content-specific classes (editorial intent)
+                    @{ Pattern = '<div[^>]*\s+class="[^"]*article-main-content[^"]*"[^>]*>'; TagName = "div"; Name = "article-main-content class (partner.microsoft.com)" },
                     @{ Pattern = '<div[^>]*\s+class="[^"]*blog-content[^"]*"[^>]*>'; TagName = "div"; Name = "blog-content class component" },
                     @{ Pattern = '<div[^>]*\s+class="[^"]*entry-content[^"]*"[^>]*>'; TagName = "div"; Name = "entry-content class" },
                     @{ Pattern = '<div[^>]*\s+class="[^"]*blog-post-content[^"]*"[^>]*>'; TagName = "div"; Name = "blog-post-content class" },
