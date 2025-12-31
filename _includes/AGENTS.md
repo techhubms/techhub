@@ -32,7 +32,7 @@ The subnavigation bar (`site-subheader`) displays links to collections and custo
 
 1. **Section in URL** (e.g., `/ai/`, `/coding/`): Shows ONLY that section's subnavigation
 2. **No section in URL** (e.g., `/videos/item.html`): Shows default subnavigation (empty), ALL section subnavigations are hidden
-3. **Homepage**: Shows its own dedicated subnavigation (`section-collections-home`)
+3. **Homepage**: Shows it the default navigation (empty), ALL section subnavigations are hidden
 
 ### Client-Side Enhancement (`assets/js/sections.js`)
 

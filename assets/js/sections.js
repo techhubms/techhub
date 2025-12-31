@@ -13,9 +13,13 @@ function showSectionCollections(section) {
     // Hide all section collections first
     const allCollections = document.querySelectorAll('.section-collections');
     allCollections.forEach(div => {
-        if (div.id !== 'section-collections-home') {
-            div.classList.add('hidden');
-        }
+        div.classList.add('hidden');
+    });
+
+    // Remove active class from all section navigation items first
+    const allSectionNavs = document.querySelectorAll('.site-nav .page-link.regular');
+    allSectionNavs.forEach(nav => {
+        nav.classList.remove('active');
     });
 
     // Show the selected section navigation
