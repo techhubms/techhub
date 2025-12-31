@@ -131,13 +131,13 @@ RSpec.describe Jekyll::TagFilters do
         'tag_counts' => {
           'news' => 35,
           'videos' => 20,
-          'posts' => 15,
+          'blogs' => 15,
           'community' => 10
         },
         'tag_mapping' => {
           'news' => 'News',
           'videos' => 'Videos',
-          'posts' => 'Posts',
+          'blogs' => 'Blogs',
           'community' => 'Community'
         }
       }
@@ -150,7 +150,7 @@ RSpec.describe Jekyll::TagFilters do
         'collections' => [
           { 'collection' => 'news' },
           { 'collection' => 'videos' },
-          { 'collection' => 'posts' }
+          { 'collection' => 'blogs' }
           # Note: community is not in this section's collections
         ]
       }
@@ -186,7 +186,7 @@ RSpec.describe Jekyll::TagFilters do
       expect(filter_tester).to receive(:generate_button_list) do |filter_data, max_limit, top_count|
         expect(filter_data).to have_key('news')
         expect(filter_data).to have_key('videos')
-        expect(filter_data).to have_key('posts')
+        expect(filter_data).to have_key('blogs')
         expect(filter_data).not_to have_key('community') # Not in section collections
         []
       end
@@ -198,7 +198,7 @@ RSpec.describe Jekyll::TagFilters do
       expect(filter_tester).to receive(:generate_button_list) do |filter_data, max_limit, top_count|
         expect(filter_data['news']['count']).to eq(35)
         expect(filter_data['videos']['count']).to eq(20)
-        expect(filter_data['posts']['count']).to eq(15)
+        expect(filter_data['blogs']['count']).to eq(15)
         []
       end
       
@@ -221,7 +221,7 @@ RSpec.describe Jekyll::TagFilters do
     
     it 'calls generate_button_list with correct parameters' do
       expect(filter_tester).to receive(:generate_button_list).with(
-        hash_including('news', 'videos', 'posts'),
+        hash_including('news', 'videos', 'blogs'),
         100, # max_tag_limit
         30   # top_tag_count
       )

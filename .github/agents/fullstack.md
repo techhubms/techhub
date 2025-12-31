@@ -85,7 +85,7 @@ mcp_context7_get-library-docs(context7CompatibleLibraryID: "/jekyll/jekyll", top
 **Key Documentation Areas** (available at https://jekyllrb.com/docs/):
 
 - **Pages**: Page creation, frontmatter, permalinks
-- **Posts**: Blog posts, drafts, categories, tags
+- **Posts**: Blogs, drafts, categories, tags
 - **Collections**: Custom content types, configuration
 - **Data Files**: YAML, JSON, CSV data usage
 - **Assets**: Managing CSS, JavaScript, images
@@ -158,14 +158,14 @@ pwsh ./scripts/jekyll-start.ps1
 # Start/restart (auto-stops existing servers)
 pwsh ./scripts/jekyll-start.ps1
 
+# Force clean for when site structure has changed or strange issues occur, removes _site/ folder
+pwsh ./scripts/jekyll-start.ps1 -ForceClean
+
 # Debug with verbose output
 pwsh ./scripts/jekyll-start.ps1 -VerboseOutput
 
-# Fast iteration (skip cleanup)  
-pwsh ./scripts/jekyll-start.ps1 -SkipStop -SkipClean
-
 # Build only (fastest debugging - NO server)
-pwsh ./scripts/jekyll-start.ps1 -SkipStop -SkipClean -BuildInsteadOfServe
+pwsh ./scripts/jekyll-start.ps1 -BuildInsteadOfServe
 
 # Stop server
 pwsh ./scripts/jekyll-stop.ps1
@@ -262,7 +262,7 @@ sass:
       "url": "/",
       "category": "",
       "image": "assets/section-backgrounds/everything.jpg",
-      "collections": ["news", "videos", "community", "posts", "roundups"]
+      "collections": ["news", "videos", "community", "blogs", "roundups"]
     },
     {
       "title": "AI",
@@ -270,7 +270,7 @@ sass:
       "url": "/ai/",
       "category": "AI",
       "image": "assets/section-backgrounds/ai.jpg",
-      "collections": ["news", "videos", "community", "posts"]
+      "collections": ["news", "videos", "community", "blogs"]
     }
     // Additional sections: GitHub Copilot, ML, Azure, Coding (.NET), DevOps, Security
   ]
@@ -297,7 +297,7 @@ sass:
 - **News** (`_news/`) - Official product announcements
 - **Videos** (`_videos/`) - Video content and tutorials
 - **Community** (`_community/`) - Microsoft Tech Community posts
-- **Posts** (`_posts/`) - Blog posts and articles
+- **blogs** (`_blogs/`) - Blogs
 - **Roundups** (`_roundups/`) - Weekly content summaries
 
 **Collection Configuration Rules**:
@@ -431,11 +431,11 @@ Always derive sections, collections, categories from configuration files.
 
 ```liquid
 {%- comment -%} Pass data to included files -%}
-{% include component.html tags=page.tags posts=site.posts %}
+{% include component.html tags=page.tags blogs=site.blogs %}
 
 {%- comment -%} Access in the included file with include. prefix -%}
 {{ include.tags }}
-{{ include.posts }}
+{{ include.blogs }}
 ```
 
 ### Jekyll Filters
@@ -589,10 +589,10 @@ Liquid code (between `{%` or `{%-` tags) runs once when the website is built. Th
 When data is passed to included files, access it using the `include.` prefix:
 
 ```liquid
-{% include component.html tags=page.tags posts=site.posts %}
+{% include component.html tags=page.tags blogs=site.blogs %}
 ```
 
-Reference as `include.tags` and `include.posts` within the included file.
+Reference as `include.tags` and `include.blogs` within the included file.
 
 **Performance Monitoring**:
 
@@ -606,15 +606,15 @@ Reference as `include.tags` and `include.posts` within the included file.
 
 **CRITICAL Terminology**:
 
-- **`site.posts`**: Jekyll collection containing ONLY blogs (in `_posts/` folder)
-- **"Blog"**: Refers specifically to content in the `_posts/` folder (`site.posts` collection)
+- **`site.blogs`**: Jekyll collection containing ONLY blogs (in `_blogs/` folder)
+- **"Blog"**: Refers specifically to content in the `_blogs/` folder (`site.blogs` collection)
 - **"Item"**: General term for any content from any collection (news, videos, blogs, etc.)
 - **"Article"**: Same meaning as Item. Prefer "Item" over "Article"!
-- **"Post" in variables**: Usually refers to ANY collection item, not just blogs from `site.posts`
+- **"Post" in variables**: Usually refers to ANY collection item, not just blogs from `site.blogs`
 - **"Post" in CSS classes**: Styles ANY collection content, not just blogs
 - **"Post" in functions**: Processes ANY collection content, not just blogs
 
-**Why This Matters**: Variables named "post" and CSS classes with "post" are generic terms that apply to ALL content types, not just the `site.posts` collection.
+**Why This Matters**: Variables named "post" and CSS classes with "post" are generic terms that apply to ALL content types, not just the `site.blogs` collection.
 
 **Understanding Variable Naming**:
 
@@ -626,7 +626,7 @@ Reference as `include.tags` and `include.posts` within the included file.
 {%- endfor -%}
 ```
 
-**Key Point**: When you see "post" in code, verify what collection is actually being processed. Check context to determine if it's truly blogs from `site.posts` or generic items from any collection.
+**Key Point**: When you see "post" in code, verify what collection is actually being processed. Check context to determine if it's truly blogs from `site.blogs` or generic items from any collection.
 
 **Example**:
 
@@ -644,7 +644,7 @@ Reference as `include.tags` and `include.posts` within the included file.
 - `videos` - Video content and tutorials  
 - `community` - Microsoft Tech Community posts
 - `events` - Official events and meetups
-- `posts` - Blog posts and articles (in `_posts/` folder)
+- `blogs` - Blogs (in `_blogs/` folder)
 - `roundups` - Weekly curated summaries
 
 **Special Video Subfolders**:
@@ -687,10 +687,10 @@ pwsh /workspaces/techhub/scripts/jekyll-start.ps1 -SkipStop -SkipClean -BuildIns
 ```liquid
 {%- comment -%} ✅ Good - efficient, clean, uses filters -%}
 {%- assign current_epoch = '' | now_epoch -%}
-{%- assign filtered_posts = site.posts | where_exp: "post", "post.date | date_to_epoch >= current_epoch" -%}
-{%- assign limited_posts = filtered_posts | limit_with_same_day: 20 -%}
+{%- assign filtered_blogs = site.blogs | where_exp: "post", "post.date | date_to_epoch >= current_epoch" -%}
+{%- assign limited_blogs = filtered_blogs | limit_with_same_day: 20 -%}
 
-{%- for post in limited_posts -%}
+{%- for post in limited_blogs -%}
   <article>
     <h2>{{ post.title }}</h2>
     <time datetime="{{ post.date | date_to_xmlschema }}">
@@ -706,7 +706,7 @@ pwsh /workspaces/techhub/scripts/jekyll-start.ps1 -SkipStop -SkipClean -BuildIns
 {%- comment -%} ❌ Bad - complex logic in template, hardcoded values -%}
 {%- assign now = site.time | date: "%s" -%}
 {%- assign count = 0 -%}
-{%- for post in site.posts -%}
+{%- for post in site.blogs -%}
   {%- assign post_time = post.date | date: "%s" -%}
   {%- if post_time >= now and count < 20 -%}
     {%- assign count = count | plus: 1 -%}

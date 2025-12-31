@@ -40,7 +40,7 @@ _sass/                          # SCSS partial files (compiled by Jekyll)
 ├── _filters.scss               # Filter UI components
 ├── _layout.scss                # Overall page layout
 ├── _navigation-collections.scss # Collection navigation
-├── _navigation-posts.scss      # Post navigation
+├── _navigation-items.scss      # Item navigation
 ├── _navigation-sections.scss   # Section navigation
 ├── _navigation.scss            # Main navigation bar
 ├── _settings.scss              # Global variables and settings

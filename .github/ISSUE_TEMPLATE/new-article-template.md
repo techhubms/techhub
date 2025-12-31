@@ -1,6 +1,6 @@
 ---
 name: New Article Template
-about: Create a new article, blog post, video, or other type of content
+about: Create a new article, blog, video, or other type of content
 title: New article for website
 labels: 'content'
 assignees: ''
@@ -16,7 +16,7 @@ Please fill out the following information:
 ## Explanation for the issuer on the content types
 
 - **News**: Official announcements and product updates from Microsoft and other technology sources
-- **Blog**: Blog posts and technical articles with in-depth analysis or tutorials
+- **Blog**: Blogs and technical articles with in-depth analysis or tutorials
 - **Video**: YouTube content and video tutorials (provide YouTube URL)
 - **Community**: Community announcements, discussions, magazines and insights
 

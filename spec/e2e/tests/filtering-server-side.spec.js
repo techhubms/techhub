@@ -128,8 +128,8 @@ test.describe('Server-Side Requirements - Critical Foundation Tests', () => {
 
       // Get content analysis
       const contentAnalysis = await page.evaluate(() => {
-        const allItems = document.querySelectorAll('.navigation-post-square');
-        const visibleItems = document.querySelectorAll('.navigation-post-square:not([style*="display: none"])');
+        const allItems = document.querySelectorAll('.navigation-item-square');
+        const visibleItems = document.querySelectorAll('.navigation-item-square:not([style*="display: none"])');
 
         // Analyze dates of visible items
         const visibleDates = Array.from(visibleItems).map(item => {
@@ -197,8 +197,8 @@ test.describe('Server-Side Requirements - Critical Foundation Tests', () => {
         return {
           dateFilters: document.querySelectorAll('.tag-filter-btn[data-tag*="day"], .tag-filter-btn[data-tag*="last"], .tag-filter-btn[data-tag*="month"]').length,
           sectionFilters: document.querySelectorAll('.tag-filter-btn[data-tag="ai"], .tag-filter-btn[data-tag="github copilot"]').length,
-          collectionFilters: document.querySelectorAll('.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="posts"], .tag-filter-btn[data-tag="videos"], .tag-filter-btn[data-tag="community"]').length,
-          tagFilters: document.querySelectorAll('.tag-filter-btn[data-tag]:not([data-tag*="last"]):not([data-tag*="day"]):not([data-tag*="month"]):not([data-tag="ai"]):not([data-tag="github copilot"]):not([data-tag="news"]):not([data-tag="posts"]):not([data-tag="videos"]):not([data-tag="community"])').length,
+          collectionFilters: document.querySelectorAll('.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="blogs"], .tag-filter-btn[data-tag="videos"], .tag-filter-btn[data-tag="community"]').length,
+          tagFilters: document.querySelectorAll('.tag-filter-btn[data-tag]:not([data-tag*="last"]):not([data-tag*="day"]):not([data-tag*="month"]):not([data-tag="ai"]):not([data-tag="github copilot"]):not([data-tag="news"]):not([data-tag="blogs"]):not([data-tag="videos"]):not([data-tag="community"])').length,
           totalFilters: document.querySelectorAll('.tag-filter-btn[data-tag]').length
         };
       });

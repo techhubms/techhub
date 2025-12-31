@@ -6,7 +6,7 @@
   "Description": "Generate comprehensive test cases that actually catch bugs and document your code's behavior.",
   "Title": "Write Unit Tests Without the Guesswork",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/write-unit-tests-without-the-guesswork.html",
   "Tags": [],

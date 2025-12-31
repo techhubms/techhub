@@ -150,12 +150,12 @@ Describe "Get-FilteredTags" {
         }
         
         It "Should normalize complex tags correctly" {
-            $result = Get-FilteredTags -Tags @("Visual Studio Code Extension", "Infrastructure as Code") -Categories @("Development") -Collection "posts"
+            $result = Get-FilteredTags -Tags @("Visual Studio Code Extension", "Infrastructure as Code") -Categories @("Development") -Collection "blogs"
             
             $result.tags_normalized | Should -Contain "visual studio code extension"
             $result.tags_normalized | Should -Contain "iac"
             $result.tags_normalized | Should -Contain "development"
-            $result.tags_normalized | Should -Contain "posts"
+            $result.tags_normalized | Should -Contain "blogs"
         }
     }
     
@@ -180,7 +180,7 @@ Describe "Get-FilteredTags" {
         }
         
         It "Should handle special characters in tags" {
-            $result = Get-FilteredTags -Tags @("C#/.NET", "AI & ML", "API's") -Categories @("Programming") -Collection "posts"
+            $result = Get-FilteredTags -Tags @("C#/.NET", "AI & ML", "API's") -Categories @("Programming") -Collection "blogs"
             
             # Verify the function handles special characters appropriately
             $result.tags | Should -Not -BeNullOrEmpty
@@ -199,7 +199,7 @@ Describe "Get-FilteredTags" {
         It "Should filter out 3-character hex color codes" {
             $tagsWithColors = @("fff", "000", "abc", "AI", "Technology")
             
-            $result = Get-FilteredTags -Tags $tagsWithColors -Categories @("AI") -Collection "posts"
+            $result = Get-FilteredTags -Tags $tagsWithColors -Categories @("AI") -Collection "blogs"
             
             # Should filter out hex color codes
             $result.tags | Should -Not -Contain "fff"
@@ -214,7 +214,7 @@ Describe "Get-FilteredTags" {
         It "Should filter out 6-character hex color codes" {
             $tagsWithColors = @("2196f3", "4caf50", "9c27b0", "ffcdd2", "AI Adoption", "Business Value")
             
-            $result = Get-FilteredTags -Tags $tagsWithColors -Categories @("AI") -Collection "posts"
+            $result = Get-FilteredTags -Tags $tagsWithColors -Categories @("AI") -Collection "blogs"
             
             # Should filter out hex color codes
             $result.tags | Should -Not -Contain "2196f3"
@@ -230,7 +230,7 @@ Describe "Get-FilteredTags" {
         It "Should keep tags that contain hex characters but are not pure hex codes" {
             $mixedTags = @("abc123def", "AI4All", "H2O", "C2G", "AI")
             
-            $result = Get-FilteredTags -Tags $mixedTags -Categories @("AI") -Collection "posts"
+            $result = Get-FilteredTags -Tags $mixedTags -Categories @("AI") -Collection "blogs"
             
             # Should keep tags that aren't pure hex (wrong length or contain non-hex chars)
             $result.tags | Should -Contain "abc123def"  # Too long (9 chars)
@@ -243,7 +243,7 @@ Describe "Get-FilteredTags" {
         It "Should handle mixed case hex codes" {
             $mixedCaseTags = @("AbC", "GHI123", "2196F3", "AI", "GitHub")
             
-            $result = Get-FilteredTags -Tags $mixedCaseTags -Categories @("AI") -Collection "posts"
+            $result = Get-FilteredTags -Tags $mixedCaseTags -Categories @("AI") -Collection "blogs"
             
             # Should filter out mixed case hex codes
             $result.tags | Should -Not -Contain "AbC"     # 3-char hex (mixed case)
@@ -263,10 +263,10 @@ Describe "Get-FilteredTags" {
                 "CCoE KPI", "Cross Functional Teams", "D1c4e9", "Data Governance", "E1f5fe", 
                 "E3f2fd", "E8f5e8", "Enterprise AI", "F1f8e9", "F3e5f5", "Fce4ec", "Ff9800", 
                 "Ffcdd2", "Ffebee", "Fff", "Fff3e0", "Governance", "MLOps", "Operational Excellence", 
-                "Organizational Change", "Posts", "Risk Management"
+                "Organizational Change", "Blogs", "Risk Management"
             )
             
-            $result = Get-FilteredTags -Tags $problematicTags -Categories @("AI") -Collection "posts"
+            $result = Get-FilteredTags -Tags $problematicTags -Categories @("AI") -Collection "blogs"
             
             # Should filter out all the hex color codes (both 3 and 6 character)
             $hexCodes = @("2196f3", "4caf50", "9c27b0", "Bbdefb", "C8e6c9", "D1c4e9", "E1f5fe", 
@@ -281,7 +281,7 @@ Describe "Get-FilteredTags" {
             $legitimateTags = @("AI", "AI Adoption", "AI Center Of Excellence", "AI Strategy", 
                 "AI Talent", "Business Value", "Ccoe", "CCoE KPI", "Cross Functional Teams", 
                 "Data Governance", "Enterprise AI", "Governance", "MLOps", 
-                "Operational Excellence", "Organizational Change", "Posts", "Risk Management")
+                "Operational Excellence", "Organizational Change", "Blogs", "Risk Management")
             
             foreach ($legitTag in $legitimateTags) {
                 $result.tags | Should -Contain $legitTag -Because "Legitimate tag '$legitTag' should be preserved"
@@ -293,7 +293,7 @@ Describe "Get-FilteredTags" {
         It "Should split tags on semicolons" {
             $tagsWithSemicolons = @("AI;Machine Learning", "Azure;Cloud", "Single Tag")
             
-            $result = Get-FilteredTags -Tags $tagsWithSemicolons -Categories @("AI") -Collection "posts"
+            $result = Get-FilteredTags -Tags $tagsWithSemicolons -Categories @("AI") -Collection "blogs"
             
             # Should have split the semicolon-separated tags
             $result.tags | Should -Contain "AI"
@@ -301,13 +301,13 @@ Describe "Get-FilteredTags" {
             $result.tags | Should -Contain "Azure"
             $result.tags | Should -Contain "Cloud"
             $result.tags | Should -Contain "Single Tag"
-            $result.tags | Should -Contain "Posts"
+            $result.tags | Should -Contain "Blogs"
         }
         
         It "Should split tags on commas" {
             $tagsWithCommas = @("Python,JavaScript", "Data Science,Analytics", "Solo Tag")
             
-            $result = Get-FilteredTags -Tags $tagsWithCommas -Categories @("AI") -Collection "posts"
+            $result = Get-FilteredTags -Tags $tagsWithCommas -Categories @("AI") -Collection "blogs"
             
             # Should have split the comma-separated tags
             $result.tags | Should -Contain "Python"
@@ -316,13 +316,13 @@ Describe "Get-FilteredTags" {
             $result.tags | Should -Contain "Analytics"
             $result.tags | Should -Contain "Solo Tag"
             $result.tags | Should -Contain "AI"
-            $result.tags | Should -Contain "Posts"
+            $result.tags | Should -Contain "Blogs"
         }
         
         It "Should split tags on both semicolons and commas in same tag" {
             $mixedSeparators = @("AI;ML,Deep Learning", "Azure,AWS;GCP")
             
-            $result = Get-FilteredTags -Tags $mixedSeparators -Categories @("Technology") -Collection "posts"
+            $result = Get-FilteredTags -Tags $mixedSeparators -Categories @("Technology") -Collection "blogs"
             
             # Should have split all separators
             $result.tags | Should -Contain "AI"
@@ -332,13 +332,13 @@ Describe "Get-FilteredTags" {
             $result.tags | Should -Contain "AWS"
             $result.tags | Should -Contain "GCP"
             $result.tags | Should -Contain "Technology"
-            $result.tags | Should -Contain "Posts"
+            $result.tags | Should -Contain "Blogs"
         }
         
         It "Should handle empty values after splitting" {
             $tagsWithEmptyValues = @("AI;;ML", "Azure,", ";Cloud", ",Data")
             
-            $result = Get-FilteredTags -Tags $tagsWithEmptyValues -Categories @("Technology") -Collection "posts"
+            $result = Get-FilteredTags -Tags $tagsWithEmptyValues -Categories @("Technology") -Collection "blogs"
             
             # Should filter out empty values but keep valid ones
             $result.tags | Should -Contain "AI"
@@ -347,7 +347,7 @@ Describe "Get-FilteredTags" {
             $result.tags | Should -Contain "Cloud"
             $result.tags | Should -Contain "ML"
             $result.tags | Should -Contain "Technology"
-            $result.tags | Should -Contain "Posts"
+            $result.tags | Should -Contain "Blogs"
             
             # Should not contain empty strings
             $result.tags | Should -Not -Contain ""
@@ -356,7 +356,7 @@ Describe "Get-FilteredTags" {
         It "Should trim whitespace around split values" {
             $tagsWithWhitespace = @("AI ; Machine Learning", "Azure , Cloud Computing", " Data Science; Analytics ")
             
-            $result = Get-FilteredTags -Tags $tagsWithWhitespace -Categories @("Technology") -Collection "posts"
+            $result = Get-FilteredTags -Tags $tagsWithWhitespace -Categories @("Technology") -Collection "blogs"
             
             # Should have properly trimmed all values
             $result.tags | Should -Contain "AI"
@@ -366,7 +366,7 @@ Describe "Get-FilteredTags" {
             $result.tags | Should -Contain "Data Science"
             $result.tags | Should -Contain "Analytics"
             $result.tags | Should -Contain "Technology"
-            $result.tags | Should -Contain "Posts"
+            $result.tags | Should -Contain "Blogs"
         }
     }
     
@@ -380,7 +380,7 @@ Describe "Get-FilteredTags" {
                 "infrastructure-as-code"
             )
             
-            $result = Get-FilteredTags -Tags $typicalTags -Categories @("AI", "Development") -Collection "posts"
+            $result = Get-FilteredTags -Tags $typicalTags -Categories @("AI", "Development") -Collection "blogs"
             
             $result.tags | Should -Contain "GitHub Copilot"
             $result.tags | Should -Contain "Azure AI"
@@ -389,7 +389,7 @@ Describe "Get-FilteredTags" {
             $result.tags | Should -Contain "IaC"
             $result.tags | Should -Contain "AI"
             $result.tags | Should -Contain "Development"
-            $result.tags | Should -Contain "Posts"
+            $result.tags | Should -Contain "Blogs"
         }
     }
 }

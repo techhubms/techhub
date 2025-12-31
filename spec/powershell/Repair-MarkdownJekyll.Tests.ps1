@@ -7,7 +7,7 @@ Describe "Repair-MarkdownJekyll" {
         . "$PSScriptRoot/Initialize-BeforeAll.ps1"
         
         # Create subdirectories for different test scenarios
-        New-Item -ItemType Directory -Path (Join-Path $script:TempPath "_posts") -Force | Out-Null
+        New-Item -ItemType Directory -Path (Join-Path $script:TempPath "_blogs") -Force | Out-Null
         New-Item -ItemType Directory -Path (Join-Path $script:TempPath "_news") -Force | Out-Null
         New-Item -ItemType Directory -Path (Join-Path $script:TempPath "scripts/data") -Force | Out-Null
     }
@@ -16,7 +16,7 @@ Describe "Repair-MarkdownJekyll" {
         . "$PSScriptRoot/Initialize-BeforeEach.ps1"
 
         # Recreate subdirectories for each test
-        New-Item -ItemType Directory -Path (Join-Path $script:TempPath "_posts") -Force | Out-Null
+        New-Item -ItemType Directory -Path (Join-Path $script:TempPath "_blogs") -Force | Out-Null
         New-Item -ItemType Directory -Path (Join-Path $script:TempPath "_news") -Force | Out-Null
         New-Item -ItemType Directory -Path (Join-Path $script:TempPath "scripts/data") -Force | Out-Null
     }
@@ -33,7 +33,7 @@ Describe "Repair-MarkdownJekyll" {
     
     Context "Category Validation" {
         It "Should require at least one category" {
-            $testFile = Join-Path $script:TempPath "_posts/no-categories.md"
+            $testFile = Join-Path $script:TempPath "_blogs/no-categories.md"
             $testContent = @"
 ---
 layout: post
@@ -47,7 +47,7 @@ Test content
         }
         
         It "Should handle multiple categories properly" {
-            $testFile = Join-Path $script:TempPath "_posts/multi-categories.md"
+            $testFile = Join-Path $script:TempPath "_blogs/multi-categories.md"
             $testContent = @"
 ---
 layout: post
@@ -65,7 +65,7 @@ Test content
         }
         
         It "Should handle single category in array format" {
-            $testFile = Join-Path $script:TempPath "_posts/single-category.md"
+            $testFile = Join-Path $script:TempPath "_blogs/single-category.md"
             $testContent = @"
 ---
 layout: post
@@ -85,7 +85,7 @@ Test content
     
     Context "Frontmatter Processing" {
         It "Should properly format frontmatter values using Format-FrontMatterValue" {
-            $testFile = Join-Path $script:TempPath "_posts/test.md"
+            $testFile = Join-Path $script:TempPath "_blogs/test.md"
             $testContent = @"
 ---
 layout: post
@@ -107,7 +107,7 @@ Test content
         }
         
         It "Should not quote frontmatter skip keys (excerpt_separator, tags, categories, date)" {
-            $testFile = Join-Path $script:TempPath "_posts/2025-01-01-test.md"
+            $testFile = Join-Path $script:TempPath "_blogs/2025-01-01-test.md"
             $testContent = @"
 ---
 layout: post
@@ -131,7 +131,7 @@ Test content
         }
         
         It "Should add viewing_mode when missing" {
-            $testFile = Join-Path $script:TempPath "_posts/test-no-layout.md"
+            $testFile = Join-Path $script:TempPath "_blogs/test-no-layout.md"
             $testContent = @"
 ---
 layout: post
@@ -149,7 +149,7 @@ Test content
         }
         
         It "Should update viewing_mode when different" {
-            $testFile = Join-Path $script:TempPath "_posts/test-viewing-mode.md"
+            $testFile = Join-Path $script:TempPath "_blogs/test-viewing-mode.md"
             $testContent = @"
 ---
 layout: post
@@ -170,7 +170,7 @@ Test content
     
     Context "Tag Processing" {
         It "Should process tags using Get-FilteredTags and Format-FrontMatterValue" {
-            $testFile = Join-Path $script:TempPath "_posts/test.md"
+            $testFile = Join-Path $script:TempPath "_blogs/test.md"
             $testContent = @"
 ---
 layout: post
@@ -191,7 +191,7 @@ Test content
         }
         
         It "Should convert multi-line tags to array format" {
-            $testFile = Join-Path $script:TempPath "_posts/test.md"
+            $testFile = Join-Path $script:TempPath "_blogs/test.md"
             $testContent = @"
 ---
 layout: post
@@ -214,7 +214,7 @@ Test content
         }
         
         It "Should not add empty tags when no tags provided" {
-            $testFile = Join-Path $script:TempPath "_posts/test.md"
+            $testFile = Join-Path $script:TempPath "_blogs/test.md"
             $testContent = @"
 ---
 layout: post
@@ -234,7 +234,7 @@ Test content
     
     Context "Date Format Repair" {
         It "Should convert YYYY-MM-DD to full datetime format" {
-            $testFile = Join-Path $script:TempPath "_posts/2025-01-01-date-test.md"
+            $testFile = Join-Path $script:TempPath "_blogs/2025-01-01-date-test.md"
             $testContent = @"
 ---
 layout: post
@@ -253,7 +253,7 @@ Test content
         }
         
         It "Should fix timezone format from +0000 to +00:00" {
-            $testFile = Join-Path $script:TempPath "_posts/2025-01-01-timezone-test.md"
+            $testFile = Join-Path $script:TempPath "_blogs/2025-01-01-timezone-test.md"
             $testContent = @"
 ---
 layout: post
@@ -272,7 +272,7 @@ Test content
         }
         
         It "Should leave correct date format unchanged" {
-            $testFile = Join-Path $script:TempPath "_posts/2025-01-01-correct-date.md"
+            $testFile = Join-Path $script:TempPath "_blogs/2025-01-01-correct-date.md"
             $testContent = @"
 ---
 layout: post
@@ -293,7 +293,7 @@ Test content
     
     Context "Multi-line YAML List Conversion" {
         It "Should convert multi-line categories to array format" {
-            $testFile = Join-Path $script:TempPath "_posts/test.md"
+            $testFile = Join-Path $script:TempPath "_blogs/test.md"
             $testContent = @"
 ---
 layout: post
@@ -323,7 +323,7 @@ Test content
         }
         
         It "Should handle other multi-line lists using Format-FrontMatterValue" {
-            $testFile = Join-Path $script:TempPath "_posts/test.md"
+            $testFile = Join-Path $script:TempPath "_blogs/test.md"
             $testContent = @"
 ---
 layout: post
@@ -352,7 +352,7 @@ Test content
             # Mock Get-SourceRoot to return test temp path
             Mock Get-SourceRoot { return $script:TempPath }
             
-            $testFile = Join-Path $script:TempPath "_posts/test.md"
+            $testFile = Join-Path $script:TempPath "_blogs/test.md"
             $testContent = @"
 ---
 layout: post
@@ -377,7 +377,7 @@ Test content
     
     Context "Filename and Permalink Processing" {
         It "Should update permalink for layout post files" {
-            $testFile = Join-Path $script:TempPath "_posts/2025-01-01-old-title.md"
+            $testFile = Join-Path $script:TempPath "_blogs/2025-01-01-old-title.md"
             $testContent = @"
 ---
 layout: post
@@ -396,7 +396,7 @@ Test content
         }
         
         It "Should rename file to match date in frontmatter" {
-            $testFile = Join-Path $script:TempPath "_posts/wrong-date-title.md"
+            $testFile = Join-Path $script:TempPath "_blogs/wrong-date-title.md"
             $testContent = @"
 ---
 layout: post
@@ -410,7 +410,7 @@ Test content
             
             Repair-MarkdownJekyll -FilePath $testFile
             
-            $expectedFile = Join-Path $script:TempPath "_posts/2025-01-01-wrong-date-title.md"
+            $expectedFile = Join-Path $script:TempPath "_blogs/2025-01-01-wrong-date-title.md"
             $expectedFile | Should -Exist
             $testFile | Should -Not -Exist
         }
@@ -418,7 +418,7 @@ Test content
     
     Context "Frontmatter Cleanup" {
         It "Should remove blank lines from frontmatter" {
-            $testFile = Join-Path $script:TempPath "_posts/test.md"
+            $testFile = Join-Path $script:TempPath "_blogs/test.md"
             $testContent = @"
 ---
 layout: post
@@ -442,7 +442,7 @@ Test content
         }
         
         It "Should detect duplicate frontmatter keys" {
-            $testFile = Join-Path $script:TempPath "_posts/test.md"
+            $testFile = Join-Path $script:TempPath "_blogs/test.md"
             $testContent = @"
 ---
 layout: post
@@ -460,7 +460,7 @@ Test content
     
     Context "Multi-line Value Processing" {
         It "Should handle multi-line values using Format-FrontMatterValue" {
-            $testFile = Join-Path $script:TempPath "_posts/test.md"
+            $testFile = Join-Path $script:TempPath "_blogs/test.md"
             $testContent = @"
 ---
 layout: post
@@ -483,14 +483,14 @@ Test content
     
     Context "Edge Cases and Error Handling" {
         It "Should handle empty files gracefully" {
-            $testFile = Join-Path $script:TempPath "_posts/empty.md"
+            $testFile = Join-Path $script:TempPath "_blogs/empty.md"
             Set-Content -Path $testFile -Value ""
             
             { Repair-MarkdownJekyll -FilePath $testFile } | Should -Throw "*empty or cannot be read*"
         }
         
         It "Should handle files without frontmatter" {
-            $testFile = Join-Path $script:TempPath "_posts/no-fm.md"
+            $testFile = Join-Path $script:TempPath "_blogs/no-fm.md"
             $testContent = @"
 # Just a heading
 
@@ -502,7 +502,7 @@ Some content without frontmatter.
         }
         
         It "Should handle malformed frontmatter gracefully" {
-            $testFile = Join-Path $script:TempPath "_posts/malformed.md"
+            $testFile = Join-Path $script:TempPath "_blogs/malformed.md"
             $testContent = @"
 ---
 layout: post
@@ -521,8 +521,8 @@ Test content
     Context "File Processing Results" {
         It "Should report fixed files count correctly" {
             # Create multiple files that need fixing
-            $testFile1 = Join-Path $script:TempPath "_posts/test1.md"
-            $testFile2 = Join-Path $script:TempPath "_posts/test2.md"
+            $testFile1 = Join-Path $script:TempPath "_blogs/test1.md"
+            $testFile2 = Join-Path $script:TempPath "_blogs/test2.md"
             
             $testContent = @"
 ---

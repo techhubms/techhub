@@ -6,7 +6,7 @@
   "Description": "Transform vague comments into clear, meaningful documentation that actually helps your future self.",
   "Title": "Write Cleaner Code Comments with GitHub Copilot",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/write-cleaner-code-comments-with-github-copilot.html",
   "Tags": [],

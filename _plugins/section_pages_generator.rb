@@ -125,7 +125,7 @@ module Jekyll
           {%- else -%}
             {% include filters.html items=items index_tag_mode="collections" section=page.section %}
           {%- endif -%}
-          {% include posts.html section=page.section items=items %}
+          {% include items.html section=page.section items=items %}
         </div>
       CONTENT
     end
@@ -142,7 +142,7 @@ module Jekyll
         {%- assign items = items | where_exp: "item", "item.date <= site.time" -%}
 
         {% include filters.html items=items index_tag_mode="tags" section=page.section %}
-        {% include posts.html section=page.section items=items %}
+        {% include items.html section=page.section items=items %}
       CONTENT
     end
   end

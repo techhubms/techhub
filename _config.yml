@@ -16,14 +16,16 @@ plugins:
 # Collections directory - all collections are stored in /collections
 collections_dir: collections
 
-# Define all additional collections (the posts collection is default)
+# Define all additional collections (the default posts collection is not used)
 collections:
+  blogs:
+    output: false
   news:
-    output: true
+    output: false
   videos:
     output: true    
   community:
-    output: true
+    output: false
   roundups: # Special one that isn't shown in a specific section but rather on the homepage
     output: true
 
@@ -113,7 +115,7 @@ exclude:
 defaults:
   - scope:
       path: ""
-      type: "posts"
+      type: "blogs"
     values:
       layout: "post"
       comments: false # Disable comments for faster loading
@@ -134,9 +136,9 @@ liquid:
   strict_variables: false # Performance optimization - avoid build failures on undefined vars
 
 # Jekyll performance optimizations
-future: true      # Do process future-dated posts
-show_drafts: false # Don't process draft posts
-unpublished: false # Don't process unpublished posts
+future: true      # Do process future-dated content
+show_drafts: false # Don't process draft content
+unpublished: false # Don't process unpublished content
 safe: false        # Allow plugins for better performance
 incremental: false # Disable incremental builds for consistency
 profile: false     # Disable profiling unless debugging

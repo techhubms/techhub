@@ -12,5 +12,5 @@
   "Link": "https://andrewlock.net/fixing-an-old-dotnet-core-native-library-loading-issue-on-alpine/",
   "FeedName": "Andrew Lock's Blog",
   "Author": "Andrew Lock",
-  "OutputDir": "_posts"
+  "OutputDir": "_blogs"
 }

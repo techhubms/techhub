@@ -4,7 +4,7 @@
   "FeedUrl": "https://andrewlock.net/rss.xml",
   "FeedLevelAuthor": "Andrew Lock | .NET Escapades",
   "ProcessedDate": "2025-12-02 11:04:24",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Title": "Recent updates to NetEscapades.EnumGenerators: [EnumMember] support, analyzers, and bug fixes",
   "Tags": [
     ".NET Core",

@@ -7,7 +7,7 @@
   "Author": "randy.pagels@xebia.com (Randy Pagels)",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "ProcessedDate": "2025-11-28 20:04:18",
   "Description": "Ask Copilot to clarify your request first so you get cleaner, more accurate answers instead of rushed code.",
   "PubDate": "2025-11-21T00:00:00+00:00"

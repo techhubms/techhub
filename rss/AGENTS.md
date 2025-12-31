@@ -65,15 +65,15 @@ layout: null
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     
-    {% for post in site.posts limit:20 %}
-    {% if post.tags contains 'section-tag' %}
+    {% for item in site.blogs limit:20 %}
+    {% if item.tags contains 'section-tag' %}
     <item>
-      <title>{{ post.title | xml_escape }}</title>
-      <description>{{ post.excerpt | xml_escape }}</description>
-      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-      <link>{{ site.url }}{{ post.url }}</link>
-      <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-      {% for tag in post.tags %}
+      <title>{{ item.title | xml_escape }}</title>
+      <description>{{ item.excerpt | xml_escape }}</description>
+      <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
+      <link>{{ site.url }}{{ item.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ item.url }}</guid>
+      {% for tag in item.tags %}
       <category>{{ tag | xml_escape }}</category>
       {% endfor %}
     </item>
@@ -96,9 +96,9 @@ layout: null
 Filter items by section tags:
 
 ```liquid
-{% for post in site.posts limit:20 %}
-{% if post.tags contains 'ai' %}
-  <!-- Include this post -->
+{% for item in site.blogs limit:20 %}
+{% if item.tags contains 'ai' %}
+  <!-- Include this item -->
 {% endif %}
 {% endfor %}
 ```
@@ -108,8 +108,8 @@ Filter items by section tags:
 **Always escape user content** to prevent XML errors:
 
 ```liquid
-<title>{{ post.title | xml_escape }}</title>
-<description>{{ post.excerpt | xml_escape }}</description>
+<title>{{ item.title | xml_escape }}</title>
+<description>{{ item.excerpt | xml_escape }}</description>
 <category>{{ tag | xml_escape }}</category>
 ```
 
@@ -118,7 +118,7 @@ Filter items by section tags:
 Use RFC 822 date format for RSS compatibility:
 
 ```liquid
-<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+<pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
 ```
 
 ### URLs
@@ -126,8 +126,8 @@ Use RFC 822 date format for RSS compatibility:
 **Always use absolute URLs** in RSS feeds:
 
 ```liquid
-<link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
-<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+<link>{{ site.url }}{{ site.baseurl }}{{ item.url }}</link>
+<guid isPermaLink="true">{{ site.url }}{{ item.url }}</guid>
 ```
 
 ## Feed Types
@@ -224,10 +224,10 @@ Use [W3C Feed Validator](https://validator.w3.org/feed/):
 
 ```liquid
 <!-- ✅ CORRECT: Limit items -->
-{% for post in site.posts limit:20 %}
+{% for post in site.blogs limit:20 %}
 
 <!-- ❌ WRONG: No limit (thousands of items!) -->
-{% for post in site.posts %}
+{% for post in site.blogs %}
 ```
 
 ### Caching

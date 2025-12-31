@@ -15,7 +15,7 @@ This directory contains reusable Liquid template components that are included in
 - `header.html` - Site header and navigation including section subnavigation
 - `footer.html` - Site footer with links and copyright
 - `filters.html` - Tag and date filtering UI components
-- `posts.html` - Content item display and listing
+- `items.html` - Content item display and listing
 - `google-analytics.html` - Analytics tracking code
 
 **`_layouts/`** - Page layout templates:
@@ -74,11 +74,11 @@ The subnavigation bar (`site-subheader`) displays links to collections and custo
 
 ```liquid
 {%- comment -%} Pass data to included files -%}
-{% include component.html tags=page.tags posts=site.posts %}
+{% include component.html tags=page.tags blogs=site.blogs %}
 
 {%- comment -%} Access in the included file with include. prefix -%}
 {{ include.tags }}
-{{ include.posts }}
+{{ include.blogs }}
 ```
 
 ### Configuration-Driven Design
@@ -126,7 +126,7 @@ Always derive sections, collections, categories from `_data/sections.json`.
 
 ```liquid
 {%- assign current_epoch = '' | now_epoch -%}
-{%- assign filtered_posts = site.posts | where_exp: "post", "post.date | date_to_epoch >= current_epoch" -%}
+{%- assign filtered_blogs = site.blogs | where_exp: "item", "item.date | date_to_epoch >= current_epoch" -%}
 ```
 
 ## Testing

@@ -91,8 +91,8 @@ The Tech Hub uses multiple filtering mechanisms that work together to help users
 
 ### What It Does
 
-1. **Load exactly 20 posts** from the sorted content (newest first)
-2. **Plus any additional posts from the same day** as the 20th post
+1. **Load exactly 20 items** from the sorted content (newest first)
+2. **Plus any additional items from the same day** as the 20th item
 3. **Ensures complete daily coverage** so users never miss content from "today"
 4. **Applied server-side during Jekyll build** before any client-side filtering
 
@@ -109,14 +109,14 @@ The Tech Hub uses multiple filtering mechanisms that work together to help users
 **Example Scenario**:
 
 ```text
-Post 1-19: Various dates
-Post 20: July 15, 2025
-Post 21: July 15, 2025  ← Included (same day as 20th)
-Post 22: July 15, 2025  ← Included (same day as 20th)
-Post 23: July 14, 2025  ← NOT included (different day)
+Item 1-19: Various dates
+Item 20: July 15, 2025
+Item 21: July 15, 2025  ← Included (same day as 20th)
+Item 22: July 15, 2025  ← Included (same day as 20th)
+Item 23: July 14, 2025  ← NOT included (different day)
 ```
 
-**Result**: Page shows 22 posts (20 + 2 same-day posts), ensuring complete July 15th coverage.
+**Result**: Page shows 22 items (20 + 2 same-day items), ensuring complete July 15th coverage.
 
 ### Why This Rule Exists
 
@@ -191,10 +191,10 @@ Post 23: July 14, 2025  ← NOT included (different day)
 Current Date: July 20, 2025
 Cutoff Date: July 13, 2025 (7 days ago)
 
-Post from July 21, 2025  ← Included (recent)
-Post from July 14, 2025  ← Included (within 7 days)
-Post from July 12, 2025  ← Excluded (older than 7 days)
-Post from July 10, 2025  ← Excluded (older than 7 days)
+Item from July 21, 2025  ← Included (recent)
+Item from July 14, 2025  ← Included (within 7 days)
+Item from July 12, 2025  ← Excluded (older than 7 days)
+Item from July 10, 2025  ← Excluded (older than 7 days)
 ```
 
 **Benefits**:
@@ -266,8 +266,8 @@ The text search functionality provides real-time content filtering based on user
 
 **Search Scope**: Text search indexes and searches across multiple content areas:
 
-- **Post titles**: Full title text content
-- **Post descriptions**: Meta descriptions and excerpts  
+- **Item titles**: Full title text content
+- **Item descriptions**: Meta descriptions and excerpts  
 - **Author and meta information**: Author names, publication dates, and metadata
 - **Tags and categories**: All associated tags and category data
 
@@ -660,7 +660,7 @@ The Tech Hub implements three distinct filtering modes based on page hierarchy, 
 
 ### Collection Pages: Date + Content Tag Filters
 
-- **URLs**: '/ai/news.html', '/github-copilot/posts.html', etc. (individual collection pages)
+- **URLs**: '/ai/news.html', '/github-copilot/blogs.html', etc. (individual collection pages)
 - **Date Filters**: "Last 3 days", "Last 30 days", etc.
 - **Content Tag Filters**: Filter by content tags (AI, Azure, Visual Studio, etc.) - traditional content tags
 - **Data Source**: Pre-calculated tag relationships from `generate_all_filters` filter
@@ -863,7 +863,7 @@ tags: ["GitHub Copilot", "AI", "Visual Studio Code", "Development Tools"]
 
 **Tag Source Locations**:
 
-- `_posts/`: Blog posts with tags in frontmatter
+- `_blogs/`: Blogs with tags in frontmatter
 - `_community/`: Magazines, community discussions and Q&A posts
 - `_news/`: News articles and announcements
 - `_videos/`: Video content with descriptive tags
@@ -920,9 +920,9 @@ Tag data is processed dynamically by the `tag_filters.rb` plugin, which provides
    - Coordinates overall page structure for section index pages
    - Filters content by section category using `site.documents | where: "categories", section_data.category`
    - Applies "20 + Same-Day" limiting rule via `limit_with_same_day` filter
-   - Delegates to `posts.html` for content display and filtering
+   - Delegates to `items.html` for content display and filtering
 
-2. **Content Display and Filter Coordination**: `_includes/posts.html`
+2. **Content Display and Filter Coordination**: `_includes/items.html`
    - Receives items from parent templates
    - Sorts and processes content items
    - Calculates oldest item date for filter generation
@@ -951,7 +951,7 @@ Tag data is processed dynamically by the `tag_filters.rb` plugin, which provides
 **Key Liquid Filters Used**:
 
 ```liquid
-{%- assign limited_posts = posts | limit_with_same_day -%}
+{%- assign limited_blogs = posts | limit_with_same_day -%}
 {%- assign filter_results = items | generate_all_filters: index_tag_mode, site.data.sections, section, category, collection, site.tag_filter -%}
 {%- assign tag_filter_data = filter_results.tag_filter_data -%}
 {%- assign tag_relationships = filter_results.tag_relationships -%}

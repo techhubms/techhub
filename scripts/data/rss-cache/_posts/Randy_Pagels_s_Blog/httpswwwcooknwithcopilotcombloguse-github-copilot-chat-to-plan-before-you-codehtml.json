@@ -6,7 +6,7 @@
   "Description": "Stop jumping straight into code - let Copilot Chat help you think through architecture and design first.",
   "Title": "Use GitHub Copilot Chat to Plan Before You Code",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/use-github-copilot-chat-to-plan-before-you-code.html",
   "Tags": [],

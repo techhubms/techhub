@@ -3,7 +3,7 @@
     "CSS",
     "Html"
   ],
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedLevelAuthor": "Rick Strahl's Web Log",
   "ProcessedDate": "2025-08-05 14:25:42",
   "FeedUrl": "https://feeds.feedburner.com/rickstrahl",

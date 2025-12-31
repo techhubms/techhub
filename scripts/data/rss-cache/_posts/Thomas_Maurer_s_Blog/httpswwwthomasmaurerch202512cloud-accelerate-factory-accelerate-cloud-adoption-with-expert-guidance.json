@@ -4,7 +4,7 @@
   "FeedLevelAuthor": "Thomas Maurer",
   "FeedName": "Thomas Maurer's Blog",
   "FeedUrl": "https://www.thomasmaurer.ch/feed/",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Title": "Cloud Accelerate Factory – Accelerate Cloud Adoption with Expert Guidance",
   "Tags": [
     "Azure",

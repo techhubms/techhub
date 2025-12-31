@@ -6,7 +6,7 @@
   "Description": "Master the art of asking Copilot the right questions to get code that actually solves your problems.",
   "Title": "Ask Better Questions, Get Better Code",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/ask-better-questions-get-better-code.html",
   "Tags": [],

@@ -6,7 +6,7 @@
   "Description": "Beat the blank file syndrome with techniques to kickstart any new code file or project.",
   "Title": "Start New Files Faster with GitHub Copilot",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/start-new-files-faster-with-github-copilot.html",
   "Tags": [],

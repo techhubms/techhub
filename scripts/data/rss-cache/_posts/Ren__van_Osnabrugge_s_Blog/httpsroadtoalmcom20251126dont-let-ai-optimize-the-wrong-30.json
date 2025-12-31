@@ -1,5 +1,5 @@
 {
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Description": "There’s a strange pattern emerging in the way companies talk about AI and software development. Almost every conversation focuses on how AI can help developers write code faster. That sounds compelling at first glance. After all, developers spend a lot of time writing code, so anything that speeds that up must be a win. But […]",
   "Tags": [
     "ai",

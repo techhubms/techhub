@@ -3,7 +3,7 @@
 [CmdletBinding()]
 param(
     [switch]$SkipStop,
-    [switch]$SkipClean,
+    [switch]$ForceClean,
     [switch]$BuildInsteadOfServe,
     [switch]$VerboseOutput
 )
@@ -14,7 +14,7 @@ Set-StrictMode -Version Latest
 
 # Validate that no unknown parameters were passed
 $boundParameters = $PSBoundParameters.Keys
-$validParameters = @('SkipStop', 'SkipClean', 'BuildInsteadOfServe', 'VerboseOutput')
+$validParameters = @('SkipStop', 'ForceClean', 'BuildInsteadOfServe', 'VerboseOutput')
 $unknownParameters = $boundParameters | Where-Object { $_ -notin $validParameters }
 
 if ($unknownParameters) {
@@ -29,7 +29,7 @@ try {
         & "./scripts/jekyll-stop.ps1"
     }
     
-    if (-not $SkipClean) {
+    if ($ForceClean) {
         # Clean Jekyll
         Write-Host "Cleaning Jekyll cache..." -ForegroundColor Yellow
         & bundle exec jekyll clean
@@ -49,7 +49,6 @@ try {
         # Start Jekyll server
         Write-Host "Building and serving Jekyll site..." -ForegroundColor Cyan
         $jekyllArgs = @('serve', "--host", "0.0.0.0", "--watch", "--force_polling", "--incremental")
-        #$jekyllArgs = @('serve', "--host", "0.0.0.0", "--no-watch")
     }
 
     # Build Jekyll command with optional verbose flag

@@ -1,7 +1,7 @@
 {
   "ProcessedDate": "2025-10-12 02:29:29",
   "FeedUrl": "https://dotnetfoundation.org/feeds/blog",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Tags": [],
   "FeedName": ".NET Foundation's Blog",
   "Author": ".NET Foundation News and Blog",

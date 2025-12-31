@@ -11,7 +11,7 @@
   ],
   "Link": "https://jessehouwing.net/github-actions-learnings-from-the-recent-nx-hack/",
   "FeedUrl": "https://jessehouwing.net/rss/",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Title": "GitHub Actions learnings from the recent nx hack",
   "Description": "You may have seen recent reporting around the compromise of the nx project. A malicious version of their package was published to npmjs which subsequently published GitHub tokens, crypto wallets and other sensitive materials of 1000s of users.",
   "Author": "Jesse Houwing"

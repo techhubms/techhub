@@ -10,7 +10,7 @@ The Tech Hub is a static technical content hub with configuration-driven section
 
 **Core Directories**:
 
-- `collections/` - Content files (`_news/`, `_videos/`, `_community/`, `_posts/`, `_roundups/`)
+- `collections/` - Content files (`_news/`, `_videos/`, `_community/`, `_blogs/`, `_roundups/`)
 - `_data/sections.json` - Single source of truth for site structure
 - `docs/` - Framework-agnostic functional documentation
 - `.github/agents/` - Framework-specific development agents
@@ -350,7 +350,7 @@ All user interface components and interactions must be accessible to users with 
   - `_videos/` - Video content and tutorials
     - `_videos/ghc-features/` - GitHub Copilot feature demos (special frontmatter required)
   - `_community/` - Microsoft Tech Community posts and community-sourced content
-  - `_posts/` - Blog posts and technical articles
+  - `_blogs/` - Blogs and technical articles
   - `_roundups/` - Curated weekly content summaries
 
 **Code & Templates** (framework-specific - see [.github/agents/fullstack.md](.github/agents/fullstack.md) for details):
@@ -687,8 +687,8 @@ Domain-specific custom agents provide specialized guidance:
 
 **Items**: Individual pieces of content within collections.
 
-- **Definition**: Actual content users consume (articles, videos, announcements, blog posts)
-- **Terminology Note**: "Item" is the preferred term, but "Article" and "Post" are also used in code/documentation to refer to content (note: "Post" in variables does NOT specifically mean blogs from `_posts/`)
+- **Definition**: Actual content users consume (articles, videos, announcements, Blogs)
+- **Terminology Note**: "Item" is the preferred term, but "Article" and "Post" are also used in code/documentation to refer to content (note: "Post" in variables does NOT specifically mean blogs from `_blogs/`)
 - **Structure**: Markdown files with YAML front matter containing metadata (title, date, author, categories, tags) and content body
 - **Processing**: Items are processed by the build system and can be listed on collection pages, filtered by date/tags/categories, displayed on section index pages, and included in RSS feeds
 
@@ -705,7 +705,7 @@ Domain-specific custom agents provide specialized guidance:
 - **News**: Official product updates and announcements
 - **Videos**: Educational and informational video content (may include special subfolders with `alt-collection` frontmatter)
 - **Community**: Community-sourced content and discussions
-- **Blogs**: Blog posts and articles
+- **Blogs**: Blogs
 - **Roundups**: Curated weekly content summaries
 
 **Alt-Collection**: Optional frontmatter field for content organized in subfolders (e.g., `_videos/ghc-features/`, `_videos/vscode-updates/`) that need special categorization beyond their parent collection.

@@ -17,7 +17,7 @@ Follow these steps and rules for best results:
 
 - Ask the user for the content type and URL if it is not provided. Valid types and their target directories:
   - News: `_news`
-  - Blog: `_posts`
+  - Blog: `_blogs`
   - Video: `_videos`
   - Community: `_community`
 

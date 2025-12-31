@@ -6,7 +6,7 @@
   "Description": "Polish code fast with Copilot Edit Mode, simplify logic, match style, and add error handling with a single prompt.",
   "Title": "Use Edit Mode for Quick, Targeted Improvements",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html",
   "Tags": [],

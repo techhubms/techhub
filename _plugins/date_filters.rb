@@ -39,7 +39,7 @@ module Jekyll
     end
     
     # Sort items by date (newest first by default)
-    # Usage: {{ site.posts | sort_by_date }} or {{ site.posts | sort_by_date: 'asc' }}
+    # Usage: {{ site.blogs | sort_by_date }} or {{ site.blogs | sort_by_date: 'asc' }}
     def sort_by_date(items, direction = 'desc')
       return [] if items.nil? || !items.respond_to?(:sort)
       
@@ -51,8 +51,8 @@ module Jekyll
     # This ensures that if one collection has many items published quickly,
     # other collections still get representation in the final result.
     # Also excludes items older than 30 days.
-    # Usage: {{ site.posts | limit_with_same_day }}
-    # Usage: {{ site.posts | limit_with_same_day: 5 }}
+    # Usage: {{ site.blogs | limit_with_same_day }}
+    # Usage: {{ site.blogs | limit_with_same_day: 5 }}
     def limit_with_same_day(items, limit = 20)
       return [] if items.nil? || !items.respond_to?(:size) || items.size == 0
       

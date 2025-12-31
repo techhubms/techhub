@@ -125,9 +125,9 @@ test.describe('Basic Site Functionality', () => {
       { url: '/ai/', name: 'AI Section' },
       { url: '/github-copilot/', name: 'GitHub Copilot Section' },
       { url: '/ai/news.html', name: 'AI News' },
-      { url: '/ai/posts.html', name: 'AI Posts' },
+      { url: '/ai/blogs.html', name: 'AI Blogs' },
       { url: '/github-copilot/news.html', name: 'Copilot News' },
-      { url: '/github-copilot/posts.html', name: 'Copilot Posts' }
+      { url: '/github-copilot/blogs.html', name: 'Copilot Blogs' }
     ];
 
     for (const { url, name } of pagesToTest) {

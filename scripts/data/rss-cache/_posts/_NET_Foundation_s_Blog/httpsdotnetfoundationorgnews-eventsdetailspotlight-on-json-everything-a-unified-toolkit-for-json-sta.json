@@ -1,7 +1,7 @@
 {
   "Title": "Spotlight on JSON Everything: A Unified Toolkit for JSON Standards in .NET",
   "FeedName": ".NET Foundation's Blog",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Tags": [],
   "ProcessedDate": "2025-08-05 17:17:09",
   "Description": "JSON Everything is a fast, open-source .NET library for JSON Schema, Patch, Path, Pointer, and Logic—modular, standards-compliant, and built for modern .NET apps. Simplify your JSON workflows today.",

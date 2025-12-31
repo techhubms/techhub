@@ -1,7 +1,7 @@
 {
   "Title": "Making Software Like LEGO: How Aspire Brings the Pieces Together",
   "FeedName": "David Fowler's Blog",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Tags": [
     "aspire",
     "cloud-computing",

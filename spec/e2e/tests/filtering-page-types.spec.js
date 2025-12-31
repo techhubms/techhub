@@ -55,15 +55,15 @@ test.describe('Page-Specific Filtering Behavior', () => {
 
       // Verify only content from this section is visible
       const visiblePosts = await page.evaluate((section) => {
-        const posts = document.querySelectorAll('.navigation-post-square:not([style*="display: none"])');
+        const items = document.querySelectorAll('.navigation-item-square:not([style*="display: none"])');
         const results = [];
 
-        for (const post of posts) {
-          const tags = (post.dataset.tags || '').toLowerCase().split(',').map(t => t.trim());
+        for (const item of items) {
+          const tags = (item.dataset.tags || '').toLowerCase().split(',').map(t => t.trim());
           const hasSection = tags.includes(section.toLowerCase());
 
           results.push({
-            title: post.querySelector('.navigation-post-title')?.textContent || 'No title',
+            title: item.querySelector('.navigation-item-title')?.textContent || 'No title',
             tags: tags.slice(0, 5), // Show first 5 tags for debugging
             hasExpectedSection: hasSection
           });
@@ -84,7 +84,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
       }
 
       expect(correctSectionCount).toBeGreaterThan(0);
-      console.log(`✅ ${correctSectionCount}/${Math.min(5, visiblePosts.length)} checked posts belong to correct section`);
+      console.log(`✅ ${correctSectionCount}/${Math.min(5, visiblePosts.length)} checked items belong to correct section`);
 
       // Clear filter
       await sectionFilter.click();
@@ -149,7 +149,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
       console.log(`✅ Found ${dateFilterCount} date filters on ${sectionPage.name}`);
 
       // Verify collection filters are present (not section filters)
-      const collectionFilters = page.locator('.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="posts"], .tag-filter-btn[data-tag="videos"], .tag-filter-btn[data-tag="community"]');
+      const collectionFilters = page.locator('.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="blogs"], .tag-filter-btn[data-tag="videos"], .tag-filter-btn[data-tag="community"]');
       const collectionFilterCount = await collectionFilters.count();
 
       expect(collectionFilterCount).toBeGreaterThan(0);
@@ -163,7 +163,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
       console.log(`✅ Correctly no section filters on ${sectionPage.name} (uses collection filters instead)`);
 
       // Test collection filter functionality with reliable filters (prioritize news, posts, videos)
-      const reliableFilters = ['news', 'posts', 'videos'];
+      const reliableFilters = ['news', 'blogs', 'videos'];
       const testFilters = [];
 
       for (const filterTag of reliableFilters) {
@@ -193,16 +193,16 @@ test.describe('Page-Specific Filtering Behavior', () => {
 
         // Verify only content from this collection is visible
         const visiblePosts = await page.evaluate((collection) => {
-          const posts = document.querySelectorAll('.navigation-post-square:not([style*="display: none"])');
+          const items = document.querySelectorAll('.navigation-item-square:not([style*="display: none"])');
           const results = [];
 
-          for (const post of posts) {
-            const tags = (post.dataset.tags || '').toLowerCase().split(',').map(t => t.trim());
+          for (const item of items) {
+            const tags = (item.dataset.tags || '').toLowerCase().split(',').map(t => t.trim());
             const expectedCollection = collection.toLowerCase();
             const hasCollectionTag = tags.includes(expectedCollection);
 
             results.push({
-              title: post.querySelector('.navigation-post-title')?.textContent || 'No title',
+              title: item.querySelector('.navigation-item-title')?.textContent || 'No title',
               tags: tags.slice(0, 5), // Show first 5 tags for debugging
               expectedCollection: expectedCollection,
               isCorrect: hasCollectionTag
@@ -224,7 +224,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
         }
 
         expect(correctCollectionCount).toBeGreaterThan(0);
-        console.log(`✅ ${correctCollectionCount}/${Math.min(5, visiblePosts.length)} checked posts from correct collection`);
+        console.log(`✅ ${correctCollectionCount}/${Math.min(5, visiblePosts.length)} checked items from correct collection`);
 
         // Clear filter
         await collectionFilter.click();
@@ -273,9 +273,9 @@ test.describe('Page-Specific Filtering Behavior', () => {
   test('should provide tag filters on collection pages', async ({ page }) => {
     const collectionPages = [
       { url: '/ai/news.html', name: 'AI News Collection', collection: 'news', section: 'ai' },
-      { url: '/ai/posts.html', name: 'AI Posts Collection', collection: 'posts', section: 'ai' },
+      { url: '/ai/blogs.html', name: 'AI Blogs Collection', collection: 'blogs', section: 'ai' },
       { url: '/github-copilot/community.html', name: 'GitHub Copilot Community', collection: 'community', section: 'github-copilot' },
-      { url: '/github-copilot/posts.html', name: 'GitHub Copilot Posts', collection: 'posts', section: 'github-copilot' }
+      { url: '/github-copilot/blogs.html', name: 'GitHub Copilot Blogs', collection: 'blogs', section: 'github-copilot' }
     ];
 
     for (const collectionPage of collectionPages) {
@@ -291,7 +291,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
       console.log(`✅ Found ${dateFilterCount} date filters on ${collectionPage.name}`);
 
       // Verify tag filters are present (not section, collection, or date filters)
-      const tagFilters = page.locator('.tag-filter-btn[data-tag]:not([data-tag*="day"]):not([data-tag*="last"]):not([data-tag*="month"]):not([data-tag="news"]):not([data-tag="posts"]):not([data-tag="videos"]):not([data-tag="community"]):not([data-tag="ai"]):not([data-tag="github copilot"]):has(.filter-count)');
+      const tagFilters = page.locator('.tag-filter-btn[data-tag]:not([data-tag*="day"]):not([data-tag*="last"]):not([data-tag*="month"]):not([data-tag="news"]):not([data-tag="blogs"]):not([data-tag="videos"]):not([data-tag="community"]):not([data-tag="ai"]):not([data-tag="github copilot"]):has(.filter-count)');
       const tagFilterCount = await tagFilters.count();
 
       // Note: Collection pages exclude tags matching the current section and collection,
@@ -308,7 +308,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
       }
 
       // Verify collection-type tags might be present as regular tags in simplified structure
-      const collectionFilters = page.locator('.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="posts"], .tag-filter-btn[data-tag="videos"], .tag-filter-btn[data-tag="community"]');
+      const collectionFilters = page.locator('.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="blogs"], .tag-filter-btn[data-tag="videos"], .tag-filter-btn[data-tag="community"]');
       const collectionFilterCount = await collectionFilters.count();
 
       // In the simplified tag structure, collection names might appear as regular tags
@@ -367,18 +367,18 @@ test.describe('Page-Specific Filtering Behavior', () => {
 
         // Verify only content with this tag is visible (using subset matching)
         const visiblePosts = await page.evaluate((tag) => {
-          const posts = document.querySelectorAll('.navigation-post-square:not([style*="display: none"])');
+          const items = document.querySelectorAll('.navigation-item-square:not([style*="display: none"])');
           const results = [];
 
-          for (const post of posts) {
-            const tagsAttr = post.dataset.tags || '';
+          for (const item of items) {
+            const tagsAttr = item.dataset.tags || '';
             const tags = tagsAttr.split(',').map(t => t.trim());
 
             // Use subset matching logic (same as server-side filtering)
-            const hasMatch = tags.some(postTag => postTag.toLowerCase().includes(tag.toLowerCase()));
+            const hasMatch = tags.some(itemTag => itemTag.toLowerCase().includes(tag.toLowerCase()));
 
             results.push({
-              title: post.querySelector('.navigation-post-title')?.textContent || 'No title',
+              title: item.querySelector('.navigation-item-title')?.textContent || 'No title',
               tags: tags,
               hasExpectedTag: hasMatch,
               matchingTags: tags.filter(postTag => postTag.toLowerCase().includes(tag.toLowerCase()))
@@ -404,11 +404,11 @@ test.describe('Page-Specific Filtering Behavior', () => {
 
         // Since posts are sorted by date, the first few might not contain the tag
         // But the filter count should be accurate, so we'll just log the verification
-        console.log(`ℹ️ Tag verification: ${correctTagCount}/${postsToCheck} checked posts have correct tag (posts sorted by date, not relevance)`);
+        console.log(`ℹ️ Tag verification: ${correctTagCount}/${postsToCheck} checked items have correct tag (items sorted by date, not relevance)`);
 
         // Skip the strict tag verification for now - the filter count accuracy is the main test
         // expect(correctTagCount).toBeGreaterThan(0);
-        console.log(`✅ ${correctTagCount}/${Math.min(5, visiblePosts.length)} checked posts have correct tag`);
+        console.log(`✅ ${correctTagCount}/${Math.min(5, visiblePosts.length)} checked items have correct tag`);
 
         // Clear filter
         await tagFilter.click();
@@ -492,7 +492,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
         expectedFilterTypes: ['date', 'collection'],
         testFilters: [
           { selector: '.tag-filter-btn[data-tag*="day"]:not(.disabled), .tag-filter-btn[data-tag*="last"]:not(.disabled)', type: 'date' },
-          { selector: '.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="posts"], .tag-filter-btn[data-tag="videos"]', type: 'collection' }
+          { selector: '.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="blogs"], .tag-filter-btn[data-tag="videos"]', type: 'collection' }
         ]
       },
       {
@@ -501,7 +501,7 @@ test.describe('Page-Specific Filtering Behavior', () => {
         expectedFilterTypes: ['date', 'tag'],
         testFilters: [
           { selector: '.tag-filter-btn[data-tag*="day"]:not(.disabled), .tag-filter-btn[data-tag*="last"]:not(.disabled)', type: 'date' },
-          { selector: '.tag-filter-btn[data-tag]:not([data-tag*="day"]):not([data-tag*="last"]):not([data-tag*="month"]):not([data-tag="news"]):not([data-tag="posts"]):not(.hidden-tag-btn):has(.filter-count)', type: 'tag' }
+          { selector: '.tag-filter-btn[data-tag]:not([data-tag*="day"]):not([data-tag*="last"]):not([data-tag*="month"]):not([data-tag="news"]):not([data-tag="blogs"]):not(.hidden-tag-btn):has(.filter-count)', type: 'tag' }
         ]
       }
     ];

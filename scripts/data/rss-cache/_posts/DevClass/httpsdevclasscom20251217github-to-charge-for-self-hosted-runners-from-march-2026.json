@@ -18,5 +18,5 @@
   "FeedName": "DevClass",
   "FeedUrl": "https://devclass.com/feed/",
   "FeedLevelAuthor": "DEVCLASS",
-  "OutputDir": "_posts"
+  "OutputDir": "_blogs"
 }

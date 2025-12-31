@@ -538,8 +538,8 @@ Resources to continue your GenAI learning journey, from structured courses to ha
   <div class="more-info__header">📚 More from this site</div>
   <ul>
     <li><a href="/ai/videos.html">AI-focused videos and tutorials</a></li>
-    <li><a href="/ai/posts.html">Blog posts about AI implementation</a></li>
-    <li><a href="/all/posts.html">Microsoft and Azure updates</a></li>
+    <li><a href="/ai/blogs.html">Blogs about AI implementation</a></li>
+    <li><a href="/all/blogs.html">Microsoft and Azure updates</a></li>
   </ul>
 </div>
 

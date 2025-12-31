@@ -193,7 +193,7 @@ RSS feeds are configured in `scripts/data/rss-feeds.json`:
 
 - **name**: Human-readable feed identifier
 - **url**: RSS or Atom feed URL
-- **output_dir**: Target collection directory (`_news`, `_posts`, etc.)
+- **output_dir**: Target collection directory (`_news`, `_blogs`, etc.)
 - **category**: Primary category ("AI" or "GitHub Copilot")
 
 **Optional Fields**:

@@ -1,7 +1,7 @@
 {
   "Title": "Taming Manifest Sprawl with Aspire",
   "FeedName": "David Fowler's Blog",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Tags": [
     "cloud-native",
     "docker",

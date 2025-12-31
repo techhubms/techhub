@@ -1,7 +1,7 @@
 {
   "Title": "GitHub Copilot Custom Chat Modes",
   "FeedName": "Harald Binkle's blog",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Tags": [],
   "ProcessedDate": "2025-08-05 17:17:08",
   "Description": "Learn how to create custom chat modes in VS Code for GitHub Copilot to enhance your workflow in large, complex projects with specialized AI configurations.",

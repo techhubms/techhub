@@ -2,7 +2,7 @@
   "FeedName": "Randy Pagels's Blog",
   "Link": "https://www.cooknwithcopilot.com/blog/context-engineering-recipes-persona-pattern.html",
   "Description": "Guide Copilot with a clear role, switch personas to change tone and focus, and get sharper answers.",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
   "Author": "randy.pagels@xebia.com (Randy Pagels)",
   "Tags": [],

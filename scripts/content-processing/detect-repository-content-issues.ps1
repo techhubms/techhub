@@ -12,7 +12,7 @@ Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""
 
 # Get all markdown files from content directories
-$contentDirs = @("collections/_news", "collections/_posts", "collections/_videos", "collections/_community", "collections/_roundups")
+$contentDirs = @("collections/_news", "collections/_blogs", "collections/_videos", "collections/_community", "collections/_roundups")
 
 # Filter out excluded directories
 if ($ExcludeDirectories.Count -gt 0) {

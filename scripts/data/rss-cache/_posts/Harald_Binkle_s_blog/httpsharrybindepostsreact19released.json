@@ -1,7 +1,7 @@
 {
   "Title": "React 19 Released - Time to Upgrade?",
   "FeedName": "Harald Binkle's blog",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Tags": [],
   "ProcessedDate": "2025-08-05 17:17:08",
   "Description": "React 19 has been released for over a month now. Many third-party libraries and components support it, so it's time to consider using it for your projects.",

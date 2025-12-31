@@ -33,7 +33,7 @@ This directory contains the content collections for the Tech Hub site. Each coll
 
 - **_community**: Community-sourced content and discussions
 - **_news**: Official product updates and announcements
-- **_posts**: Blog posts and articles
+- **_blogs**: Blogs
 - **_roundups**: Curated weekly content summaries
 - **_videos**: Educational and informational video content
   - **_videos/ghc-features/**: GitHub Copilot features (requires `alt-collection: "features"`, `plans: []`, `ghes_support` in frontmatter)
@@ -108,12 +108,12 @@ John Smith introduces the latest updates to GitHub Copilot, including new featur
 
 **Layout Types:**
 
-- `layout: "post"`: For collection files (`_news`, `_videos`, `_posts`, etc.)
+- `layout: "post"`: For collection files (`_news`, `_videos`, `_blogs`, etc.)
 - `layout: "page"`: For section directory files (in `/ai`, `/github-copilot`, etc.)
 
 **Page Field:**
 
-- Automatically set based on directory: `_posts` → `"blogs"`, `_news` → `"news"`, `_videos` → `"videos"`, etc.
+- Automatically set based on directory: `_blogs` → `"blogs"`, `_news` → `"news"`, `_videos` → `"videos"`, etc.
 
 **Automated Processing:**
 

@@ -402,7 +402,7 @@ Executes in order:
 ```text
 spec/powershell/test-data/
 ├── sample-feed.json
-├── sample-post.md
+├── sample-item.md
 └── test-config.json
 ```
 
@@ -423,9 +423,9 @@ beforeEach(() => {
 Use RSpec `let` blocks:
 
 ```ruby
-let(:sample_post) do
+let(:sample_blog) do
   {
-    'title' => 'Test Post',
+    'title' => 'Test Item',
     'date' => Time.now,
     'tags' => ['ai', 'azure']
   }

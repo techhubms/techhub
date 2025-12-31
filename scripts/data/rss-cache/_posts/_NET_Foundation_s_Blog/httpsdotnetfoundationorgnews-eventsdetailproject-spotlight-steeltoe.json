@@ -7,7 +7,7 @@
   "Link": "https://dotnetfoundation.org/news-events/detail/project-spotlight-steeltoe",
   "FeedUrl": "https://dotnetfoundation.org/feeds/blog",
   "Title": "Project Spotlight: Steeltoe",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedName": ".NET Foundation's Blog",
   "FeedLevelAuthor": ".NET Foundation News and Blog",
   "Tags": []

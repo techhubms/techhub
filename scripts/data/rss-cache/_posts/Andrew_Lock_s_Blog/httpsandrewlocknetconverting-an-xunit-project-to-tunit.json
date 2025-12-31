@@ -3,7 +3,7 @@
   "FeedName": "Andrew Lock's Blog",
   "FeedLevelAuthor": "Andrew Lock | .NET Escapades",
   "Description": "In this post I discuss the new TUnit testing framework, why I ported one of my libraries to use it instead of xUnit and related issues I had to deal with",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Tags": [
     ".NET Core",
     "Testing"

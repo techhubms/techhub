@@ -46,7 +46,7 @@ While following these instructions carefully is important, minor formatting issu
 
 **Field-Specific Rules:**
 
-- `layout`: Set to `post` for content files (those in collection folders like `_posts`, `_news`, `_community`, etc.). Set to `page` for section directory files (those in `/ai`, `/github-copilot`, etc.)
+- `layout`: Set to `post` for content files (those in collection folders like `_blogs`, `_news`, `_community`, etc.). Set to `page` for section directory files (those in `/ai`, `/github-copilot`, etc.)
 - `title`: Extract from the article or ask the user if not clear
 - `description`: Write a concise summary of the article's main points and topics (max 100 words). Do not start with phrases like "In this article" or similar
 - `author`: Extract from the article or ask the user if not clear. **For YouTube videos, always use the actual presenter/demonstrator as the author, not the channel owner**. If there is no presenter/demonstrator, use the channel owner.
@@ -58,7 +58,7 @@ While following these instructions carefully is important, minor formatting issu
 - `feed_name`: Use provided feed name. Omit if not provided
 - `feed_url`: Use provided feed url. Omit if not provided
 - `permalink`: Is `/filename.html`. Replace `.md` with `.html` from the filename. The section is the target directory, without an underscore (e.g. `roundups`, `news`, `videos`, etc)
-- `page`: Automatically set based on directory structure. For `_posts` directory, use `"blogs"`. For other directories, use the directory name without underscore (e.g., `_news` becomes `"news"`, `_videos` becomes `"videos"`)
+- `page`: Automatically set based on directory structure. For `_blogs` directory, use `"blogs"`. For other directories, use the directory name without underscore (e.g., `_news` becomes `"news"`, `_videos` becomes `"videos"`)
 - `viewing_mode`: Determines how content is displayed on the site:
   - `"internal"`: Self-contained content displayed fully on site (videos, roundups)
   - `"external"`: Content that links to original sources (news, posts, community, etc)

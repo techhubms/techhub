@@ -104,7 +104,7 @@ global.createMockFilterData = () => [
     epoch: Math.floor(Date.now() / 1000) - 86400, // Yesterday
     tags: ['azure', 'dotnet', 'development'],
     categories: ['ai'],
-    collection: 'posts'
+    collection: 'blogs'
   },
   {
     epoch: Math.floor(Date.now() / 1000) - 604800, // Week ago

@@ -1,7 +1,7 @@
 {
   "FeedUrl": "https://dellenny.com/feed/",
   "Link": "https://dellenny.com/how-to-manage-teams-permissions-and-privacy-settings/",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Tags": [
     "Microsoft 365",
     "Microsoft Teams"

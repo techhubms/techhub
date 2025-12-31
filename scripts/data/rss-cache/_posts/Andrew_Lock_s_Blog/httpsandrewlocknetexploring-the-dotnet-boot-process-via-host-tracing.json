@@ -14,5 +14,5 @@
   "Author": "Andrew Lock",
   "Description": "In this post we enable host tracing and use that to understand how a .NET app boots up via the dotnet muxer, hostfxr, and hostpolicy.dll",
   "FeedUrl": "https://andrewlock.net/rss.xml",
-  "OutputDir": "_posts"
+  "OutputDir": "_blogs"
 }

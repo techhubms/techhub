@@ -105,10 +105,10 @@ _plugins/
 {{ site.documents | with_dates }}
 
 # Sort by date (newest first)
-{{ site.posts | sort_by_date }}
+{{ site.blogs | sort_by_date }}
 
 # Limit with same-day grouping (collection-aware)
-{{ site.posts | limit_with_same_day: 10 }}
+{{ site.blogs | limit_with_same_day: 10 }}
 ```
 
 **limit_with_same_day Filter**: Applies server-side content limiting with collection-aware rule plus 7-day recency filter:
@@ -269,11 +269,11 @@ Liquid::Template.register_tag('your_tag', Jekyll::YourTag)
 When data is explicitly passed to included files:
 
 ```liquid
-{%- include posts.html posts=limited_posts -%}
-{%- include filters.html posts=posts collection_type=page.collection -%}
+{%- include blogs.html blogs=limited_blogs -%}
+{%- include filters.html blogs=blogs collection_type=page.collection -%}
 ```
 
-Access in includes using the `include.` prefix: `include.posts`, `include.collection_type`
+Access in includes using the `include.` prefix: `include.blogs`, `include.collection_type`
 
 ### Formatting Requirements
 
@@ -442,7 +442,7 @@ def generate(site)
   sections_data = site.data['sections']
   
   # Access collections
-  posts = site.collections['posts']
+  blogs = site.collections['blogs']
   
   # Get all documents
   all_docs = site.documents
@@ -490,14 +490,14 @@ bundle exec rspec --format documentation
 
 | Filter | Purpose | Usage |
 |--------|---------|-------|
-| `to_epoch` | Convert date to Unix timestamp | `{{ post.date \| to_epoch }}` |
-| `date_to_epoch` | Convert date to epoch (Brussels timezone) | `{{ post.date \| date_to_epoch }}` |
+| `to_epoch` | Convert date to Unix timestamp | `{{ item.date \| to_epoch }}` |
+| `date_to_epoch` | Convert date to epoch (Brussels timezone) | `{{ item.date \| date_to_epoch }}` |
 | `now_epoch` | Get current timestamp | `{{ '' \| now_epoch }}` |
 | `normalize_date_format` | Fix timezone format issues | `{{ raw_date \| normalize_date_format }}` |
 | `normalize_to_midnight` | Normalize time to midnight | `{{ item.date \| normalize_to_midnight }}` |
 | `with_dates` | Filter items with valid dates | `{{ site.documents \| with_dates }}` |
-| `sort_by_date` | Sort items by date | `{{ site.posts \| sort_by_date }}` |
-| `limit_with_same_day` | Apply "N + same-day" rule per collection | `{{ posts \| limit_with_same_day }}` |
+| `sort_by_date` | Sort items by date | `{{ site.blogs | sort_by_date }}` |
+| `limit_with_same_day` | Apply "N + same-day" rule per collection | `{{ blogs \| limit_with_same_day }}` |
 
 ### String Filters (from string_filters.rb)
 

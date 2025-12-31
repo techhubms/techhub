@@ -86,7 +86,7 @@ test.describe('Section Navigation', () => {
   test.describe('AI Section Collection Pages', () => {
     const aiCollectionUrls = [
       '/ai/news.html',
-      '/ai/posts.html',
+      '/ai/blogs.html',
       '/ai/videos.html',
       '/ai/community.html'
     ];
@@ -114,12 +114,12 @@ test.describe('Section Navigation', () => {
         expect(mainText.trim().length).toBeGreaterThan(50); // Page should have substantial content
 
         // If this is a collection page, verify it has collection-specific content
-        if (url.includes('/news.html') || url.includes('/posts.html') || url.includes('/community.html')) {
+        if (url.includes('/news.html') || url.includes('/blogs.html') || url.includes('/community.html')) {
           // Should have posts or articles
-          const articles = page.locator('article, .navigation-post-square, .news-item, .community-item');
+          const articles = page.locator('article, .navigation-item-square, .news-item, .community-item');
           await articles.count();
           // May be 0 if no content exists yet, but structure should be there
-          const contentContainer = page.locator('.posts-container, .news-container, .community-container, main');
+          const contentContainer = page.locator('.blogs-container, .news-container, .community-container, main');
           await expect(contentContainer.first()).toBeVisible();
         }
       });
@@ -131,7 +131,7 @@ test.describe('Section Navigation', () => {
       '/github-copilot/features.html',
       '/github-copilot/levels-of-enlightenment.html',
       '/github-copilot/news.html',
-      '/github-copilot/posts.html',
+      '/github-copilot/blogs.html',
       '/github-copilot/community.html'
     ];
 
@@ -158,12 +158,12 @@ test.describe('Section Navigation', () => {
         expect(mainText.trim().length).toBeGreaterThan(50); // Page should have substantial content
 
         // If this is a collection page, verify it has collection-specific content
-        if (url.includes('/news.html') || url.includes('/posts.html') || url.includes('/community.html')) {
-          // Should have posts or articles structure
-          const articles = page.locator('article, .navigation-post-square, .news-item, .community-item');
+        if (url.includes('/news.html') || url.includes('/blogs.html') || url.includes('/community.html')) {
+          // Should have collection items or articles structure
+          const articles = page.locator('article, .navigation-item-square, .news-item, .community-item');
           await articles.count();
           // May be 0 if no content exists yet, but structure should be there
-          const contentContainer = page.locator('.posts-container, .news-container, .community-container, main');
+          const contentContainer = page.locator('.blogs-container, .news-container, .community-container, main');
           await expect(contentContainer.first()).toBeVisible();
         }
 

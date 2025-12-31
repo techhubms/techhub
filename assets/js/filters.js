@@ -92,26 +92,26 @@ function initializeDOM() {
 // Initialize DOM cache
 function initDOMCache() {
     if (!window.cachedPosts) {
-        const postElements = document.querySelectorAll('.navigation-post-square');
+        const itemElements = document.querySelectorAll('.navigation-item-square');
 
-        window.cachedPosts = Array.from(postElements).map((el, index) => {
+        window.cachedPosts = Array.from(itemElements).map((el, index) => {
             // Extract content for text search
             let content = '';
 
             // Get title content
-            const titleElement = el.querySelector('.navigation-post-title');
+            const titleElement = el.querySelector('.navigation-item-title');
             if (titleElement) {
                 content += titleElement.textContent.toLowerCase() + ' ';
             }
 
             // Get description content
-            const descElement = el.querySelector('.navigation-post-desc');
+            const descElement = el.querySelector('.navigation-item-desc');
             if (descElement) {
                 content += descElement.textContent.toLowerCase() + ' ';
             }
 
             // Get meta content (author, date, etc.)
-            const metaElement = el.querySelector('.navigation-post-meta-info');
+            const metaElement = el.querySelector('.navigation-item-meta-info');
             if (metaElement) {
                 content += metaElement.textContent.toLowerCase() + ' ';
             }

@@ -75,7 +75,7 @@ test.describe('Latest Content Display', () => {
     console.log(`📍 Navigated to ${collectionUrl}`);
 
     // Should have items
-    const items = page.locator('.navigation-post-square');
+    const items = page.locator('.navigation-item-square');
     const itemCount = await items.count();
     console.log(`📋 Found ${itemCount} ${collectionTitle.toLowerCase()} items on page`);
     expect(itemCount).toBeGreaterThan(0);
@@ -86,11 +86,11 @@ test.describe('Latest Content Display', () => {
       shouldHaveTitle: true,
       shouldHaveLink: true,
       shouldBeVisible: true,
-      titleSelector: '.navigation-post-title'
+      titleSelector: '.navigation-item-title'
     });
 
     // Get the title of the first displayed item
-    const titleElement = firstItem.locator('.navigation-post-title');
+    const titleElement = firstItem.locator('.navigation-item-title');
     await expect(titleElement).toBeVisible();
     const displayedTitle = await titleElement.textContent();
     const cleanDisplayedTitle = displayedTitle?.trim() || '';
@@ -109,7 +109,7 @@ test.describe('Latest Content Display', () => {
       console.log(`🔍 Checking if expected latest item is present: "${cleanExpectedTitle}"`);
 
       // Check if the expected title appears anywhere in the displayed items
-      const allTitles = await items.locator('.navigation-post-title').allTextContents();
+      const allTitles = await items.locator('.navigation-item-title').allTextContents();
       const titleFound = allTitles.some(title => title.trim() === cleanExpectedTitle);
 
       if (titleFound) {

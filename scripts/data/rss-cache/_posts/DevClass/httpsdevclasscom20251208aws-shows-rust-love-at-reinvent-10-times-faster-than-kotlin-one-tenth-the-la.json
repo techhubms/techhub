@@ -1,5 +1,5 @@
 {
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedLevelAuthor": "DEVCLASS",
   "Description": "At its re:Invent conference in Las Vegas last week, AWS described how it now uses Rust by default […]",
   "ProcessedDate": "2025-12-08 18:05:22",

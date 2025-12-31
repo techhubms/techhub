@@ -6,7 +6,7 @@
   "Description": "Solve one of programming's hardest problems with AI-powered naming suggestions that actually make sense.",
   "Title": "Let Copilot Help You Name Things",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/let-copilot-help-you-name-things.html",
   "Tags": [],
