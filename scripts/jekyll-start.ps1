@@ -78,16 +78,7 @@ try {
     else {
         # Start Jekyll server
         Write-Host "Building and serving Jekyll site..." -ForegroundColor Cyan
-        
-        # In CI environments, run in foreground for better logging and reliability
-        if ($env:GITHUB_ACTIONS -eq "true" -or $env:CI -eq "true") {
-            Write-Host "CI environment detected - running Jekyll in foreground" -ForegroundColor Yellow
-            $jekyllArgs = @('serve', "--host", "0.0.0.0")
-        }
-        else {
-            # Local development - run in background
-            $jekyllArgs = @('serve', "--host", "0.0.0.0", "--watch", "--force_polling", "--incremental")
-        }
+        $jekyllArgs = @('serve', "--host", "0.0.0.0", "--watch", "--force_polling", "--incremental")
     }
 
     # Build Jekyll command with optional verbose flag
@@ -100,13 +91,7 @@ try {
         # For build-only mode, run in foreground
         & bundle exec jekyll @jekyllArgs
     }
-    elseif ($env:GITHUB_ACTIONS -eq "true" -or $env:CI -eq "true") {
-        # In CI environments, run in foreground (no background process needed)
-        Write-Host "Running Jekyll in foreground for CI environment..." -ForegroundColor Cyan
-        & bundle exec jekyll @jekyllArgs
-    }
     else {
-        # Local development - run in background with polling
         # Get paths from helper
         $paths = Get-JekyllPaths
         $logFile = $paths.LogFile

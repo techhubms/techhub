@@ -17,8 +17,7 @@ $ErrorActionPreference = "Stop"
 $ProgressPreference = 'SilentlyContinue'
 Set-StrictMode -Version Latest
 
-# Load shared Jekyll helper functions
-. (Join-Path $PSScriptRoot "jekyll-helpers.ps1")
+
 
 # Detect environment and configure accordingly
 function Get-Environment {
@@ -88,6 +87,36 @@ if ($IsWindows -or ($PSVersionTable.Platform -eq "Win32NT")) {
     $Yellow = "`e[33m"
     $Blue = "`e[34m"
     $Reset = "`e[0m"
+}
+
+function Test-JekyllRunning {
+    try {
+        # Cross-platform port checking
+        if ($script:environment -eq "Windows") {
+            # Windows: use netstat
+            $result = netstat -an | Select-String ":4000.*LISTENING"
+            return $null -ne $result
+        } else {
+            # Linux/macOS: use netstat or ss
+            if (Get-Command ss -ErrorAction SilentlyContinue) {
+                $result = ss -tlnp 2>/dev/null | grep ":4000"
+                return $null -ne $result
+            } else {
+                $result = netstat -tlnp 2>/dev/null | grep ":4000"
+                return $null -ne $result
+            }
+        }
+    }
+    catch {
+        # Fallback: try to make a simple HTTP request
+        try {
+            $response = Invoke-WebRequest -Uri "http://localhost:4000" -TimeoutSec 2 -ErrorAction SilentlyContinue
+            return $response.StatusCode -eq 200
+        }
+        catch {
+            return $false
+        }
+    }
 }
 
 function Invoke-WithRetry {
@@ -190,42 +219,106 @@ function Start-Jekyll {
         return $false
     }
     
-    # Use script variables for paths
-    $jekyllScript = Join-Path $script:rootDir "scripts/jekyll-start.ps1"
-    
-    # Ensure Jekyll script exists
-    if (-not (Test-Path $jekyllScript)) {
-        Write-ColoredOutput "❌ Jekyll startup script not found: $jekyllScript" $Red
-        return $false
-    }
-    
-    # Call jekyll-start.ps1 directly and wait for it to complete
-    # The script has built-in polling (up to 3 minutes) and will exit when Jekyll is ready
-    try {
-        $originalLocation = Get-Location
-        Set-Location $script:rootDir
+    # Different approach for CI vs local
+    if ($script:environment -eq "GitHubActions") {
+        # CI: Start Jekyll directly in background without jekyll-start.ps1
+        Write-ColoredOutput "CI environment detected - starting Jekyll directly..." $Yellow
         
-        Write-ColoredOutput "Executing: $jekyllScript" $Yellow
-        & $jekyllScript
-        
-        $exitCode = $LASTEXITCODE
-        Set-Location $originalLocation
-        
-        if ($exitCode -eq 0) {
-            Write-ColoredOutput "✅ Jekyll server is ready and accessible" $Green
-            return $true
+        try {
+            Set-Location $script:rootDir
+            
+            # Start Jekyll in background - simple and direct
+            Write-ColoredOutput "Starting: bundle exec jekyll serve --host 0.0.0.0" $Yellow
+            
+            $null = Start-Job -ScriptBlock {
+                param($rootPath)
+                Set-Location $rootPath
+                bundle exec jekyll serve --host 0.0.0.0
+            } -ArgumentList $script:rootDir
+            
+            # Poll for Jekyll to become ready
+            $timeout = 180
+            $elapsed = 0
+            
+            Write-ColoredOutput "⏱️  Polling for Jekyll to become ready (timeout: ${timeout}s)..." $Yellow
+            
+            while (-not (Test-JekyllRunning) -and $elapsed -lt $timeout) {
+                Start-Sleep -Seconds 2
+                $elapsed += 2
+                Write-Host "." -NoNewline
+                
+                if ($elapsed % 10 -eq 0 -and $elapsed -lt $timeout) {
+                    Write-Host ""
+                    Write-ColoredOutput "Still waiting... ($elapsed/${timeout}s)" $Yellow
+                }
+            }
+            
+            Write-Host ""
+            
+            if (Test-JekyllRunning) {
+                Write-ColoredOutput "✅ Jekyll server is ready on port 4000" $Green
+                return $true
+            }
+            else {
+                Write-ColoredOutput "❌ Jekyll did not become ready within $timeout seconds" $Red
+                return $false
+            }
         }
-        else {
-            Write-ColoredOutput "❌ Jekyll startup script failed with exit code: $exitCode" $Red
-            Write-ColoredOutput "💡 Check if Jekyll dependencies are properly installed" $Yellow
-            Write-ColoredOutput "💡 Try running manually: ./scripts/jekyll-start.ps1" $Yellow
+        catch {
+            Write-ColoredOutput "❌ Failed to start Jekyll: $($_.Exception.Message)" $Red
             return $false
         }
     }
-    catch {
-        Set-Location $originalLocation
-        Write-ColoredOutput "❌ Failed to execute Jekyll startup script: $($_.Exception.Message)" $Red
-        return $false
+    else {
+        # Local: Use jekyll-start.ps1 with all the fancy features
+        $jekyllScript = Join-Path $script:rootDir "scripts/jekyll-start.ps1"
+        
+        if (-not (Test-Path $jekyllScript)) {
+            Write-ColoredOutput "❌ Jekyll startup script not found: $jekyllScript" $Red
+            return $false
+        }
+        
+        try {
+            Write-ColoredOutput "Local environment - using jekyll-start.ps1 with all features..." $Yellow
+            
+            # Start Jekyll in background with correct working directory
+            Start-Process -FilePath "pwsh" -ArgumentList $jekyllScript -WorkingDirectory $script:rootDir -NoNewWindow
+            
+            # Wait for Jekyll to start with extended timeout
+            $timeout = 300  # Extended timeout for slower systems - Jekyll can take up to 2-3 minutes
+            $elapsed = 0
+            
+            Write-ColoredOutput "Waiting for Jekyll server to start (timeout: ${timeout}s)..." $Yellow
+            
+            while (-not (Test-JekyllRunning) -and $elapsed -lt $timeout) {
+                Start-Sleep -Seconds 2
+                $elapsed += 2
+                Write-Host "." -NoNewline
+                
+                # Check every 10 seconds if Jekyll process might have failed
+                if ($elapsed % 10 -eq 0) {
+                    Write-Host ""
+                    Write-ColoredOutput "Still waiting... ($elapsed/${timeout}s)" $Yellow
+                }
+            }
+            
+            Write-Host ""
+            
+            if (Test-JekyllRunning) {
+                Write-ColoredOutput "✅ Jekyll server is running on port 4000" $Green
+                return $true
+            }
+            else {
+                Write-ColoredOutput "❌ Failed to start Jekyll server within $timeout seconds" $Red
+                Write-ColoredOutput "💡 Check if Jekyll dependencies are properly installed" $Yellow
+                Write-ColoredOutput "💡 Try running manually: ./scripts/jekyll-start.ps1" $Yellow
+                return $false
+            }
+        }
+        catch {
+            Write-ColoredOutput "❌ Failed to start Jekyll process: $($_.Exception.Message)" $Red
+            return $false
+        }
     }
 }
 
@@ -484,26 +577,21 @@ function Invoke-EndToEndTestsRunner {
             Write-ColoredOutput "✅ Browser environment ready for testing" $Green
         }
         
-        # Check if Jekyll is running via HTTP
+        # Check if Jekyll is running
         Write-ColoredOutput "🔍 Checking Jekyll server status..." $Yellow
-        $jekyllStatus = Test-JekyllRunning -Cleanup
-        if (-not $jekyllStatus.IsRunning) {
+        if (-not (Test-JekyllRunning)) {
             Write-ColoredOutput "⚠️  Jekyll server is not running" $Yellow
             Write-ColoredOutput "🚀 Starting Jekyll server..." $Blue
             
             if (-not (Start-Jekyll)) {
                 Write-ColoredOutput "❌ Failed to start Jekyll server" $Red
-                Write-ColoredOutput "💡 Please start Jekyll manually: ./scripts/jekyll-start.ps1" $Yellow
                 exit 1
             }
             
             Write-ColoredOutput "✅ Jekyll server started successfully" $Green
         }
         else {
-            Write-ColoredOutput "✅ Jekyll server is already running and accessible at http://localhost:4000 (Method: $($jekyllStatus.Method))" $Green
-            if ($jekyllStatus.Pid) {
-                Write-ColoredOutput "   PID: $($jekyllStatus.Pid)" $Yellow
-            }
+            Write-ColoredOutput "✅ Jekyll server is already running on port 4000" $Green
         }
         
         # Build test arguments
