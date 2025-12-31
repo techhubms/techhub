@@ -82,15 +82,15 @@ VS Code 1.106 continues to serve as an “AI-integrated” editor, featuring Cop
 Guides this week address Godot prototyping, Avalonia UI test automation, playlist-based debugging, and .NET workflow automation. Updates to C++ editing and build analysis showcase Copilot’s multi-agent capabilities—responding to the progress seen with JetBrains and Visual Studio agents last week.
 
 - [Visual Studio 2026: Faster Performance and AI-Driven Developer Tools Now Available](https://devblogs.microsoft.com/visualstudio/visual-studio-2026-is-here-faster-smarter-and-a-hit-with-early-adopters/)
-- [AI-Powered Development with GitHub Copilot in Visual Studio]({{ "/2025-11-12-AI-Powered-Development-with-GitHub-Copilot-in-Visual-Studio.html" | relative_url }})
+- [AI-Powered Development with GitHub Copilot in Visual Studio]({{ "/videos/2025-11-12-AI-Powered-Development-with-GitHub-Copilot-in-Visual-Studio.html" | relative_url }})
 - [Visual Studio Code October 2025 Release (v1.106): New AI Agents, Copilot Chat, Terminal IntelliSense & More](https://code.visualstudio.com/updates/v1_106)
-- [Visual Studio Code and GitHub Copilot - What's new in 1.106]({{ "/2025-11-15-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1106.html" | relative_url }})
-- [Godot for C# Developers: Leveraging AI and GitHub Copilot for Prototyping]({{ "/2025-11-14-Godot-for-C-Developers-Leveraging-AI-and-GitHub-Copilot-for-Prototyping.html" | relative_url }})
-- [Building Rock-Solid Avalonia Apps: A Guide to Headless Testing with AI Assistance]({{ "/2025-11-14-Building-Rock-Solid-Avalonia-Apps-A-Guide-to-Headless-Testing-with-AI-Assistance.html" | relative_url }})
-- [Transforming CI Failures into Focused Debugging with Visual Studio Playlists and AI]({{ "/2025-11-14-Transforming-CI-Failures-into-Focused-Debugging-with-Visual-Studio-Playlists-and-AI.html" | relative_url }})
-- [AI-Powered Development with GitHub Copilot in Visual Studio]({{ "/2025-11-12-AI-Powered-Development-with-GitHub-Copilot-in-Visual-Studio.html" | relative_url }})
-- [Refactor C++ Code with C++ Code Editing Tools for GitHub Copilot in Visual Studio]({{ "/2025-11-12-Refactor-C-Code-with-C-Code-Editing-Tools-for-GitHub-Copilot-in-Visual-Studio.html" | relative_url }})
-- [GitHub Copilot Build Performance Analysis in Visual Studio 2026]({{ "/2025-11-12-GitHub-Copilot-Build-Performance-Analysis-in-Visual-Studio-2026.html" | relative_url }})
+- [Visual Studio Code and GitHub Copilot - What's new in 1.106]({{ "/videos/2025-11-15-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1106.html" | relative_url }})
+- [Godot for C# Developers: Leveraging AI and GitHub Copilot for Prototyping]({{ "/videos/2025-11-14-Godot-for-C-Developers-Leveraging-AI-and-GitHub-Copilot-for-Prototyping.html" | relative_url }})
+- [Building Rock-Solid Avalonia Apps: A Guide to Headless Testing with AI Assistance]({{ "/videos/2025-11-14-Building-Rock-Solid-Avalonia-Apps-A-Guide-to-Headless-Testing-with-AI-Assistance.html" | relative_url }})
+- [Transforming CI Failures into Focused Debugging with Visual Studio Playlists and AI]({{ "/videos/2025-11-14-Transforming-CI-Failures-into-Focused-Debugging-with-Visual-Studio-Playlists-and-AI.html" | relative_url }})
+- [AI-Powered Development with GitHub Copilot in Visual Studio]({{ "/videos/2025-11-12-AI-Powered-Development-with-GitHub-Copilot-in-Visual-Studio.html" | relative_url }})
+- [Refactor C++ Code with C++ Code Editing Tools for GitHub Copilot in Visual Studio]({{ "/videos/2025-11-12-Refactor-C-Code-with-C-Code-Editing-Tools-for-GitHub-Copilot-in-Visual-Studio.html" | relative_url }})
+- [GitHub Copilot Build Performance Analysis in Visual Studio 2026]({{ "/videos/2025-11-12-GitHub-Copilot-Build-Performance-Analysis-in-Visual-Studio-2026.html" | relative_url }})
 
 ### GitHub Copilot Agent Architecture and Workflow Automation
 
@@ -98,8 +98,8 @@ Recent updates in Copilot agents follow last week’s advances in agent modes, C
 
 Setting up Copilot agents as bypass actors for GitHub rulesets brings stricter policy enforcement, while updates to `.instructions.md` and the new `excludeAgent` setting allow for more detailed customization and enhanced compliance.
 
-- [VS Code as an AI-Native Editor: Insights from GitHub Universe 2025]({{ "/2025-11-10-VS-Code-as-an-AI-Native-Editor-Insights-from-GitHub-Universe-2025.html" | relative_url }})
-- [Tackling Your Tech Debt with Copilot Coding Agent]({{ "/2025-11-15-Tackling-Your-Tech-Debt-with-Copilot-Coding-Agent.html" | relative_url }})
+- [VS Code as an AI-Native Editor: Insights from GitHub Universe 2025]({{ "/videos/2025-11-10-VS-Code-as-an-AI-Native-Editor-Insights-from-GitHub-Universe-2025.html" | relative_url }})
+- [Tackling Your Tech Debt with Copilot Coding Agent]({{ "/videos/2025-11-15-Tackling-Your-Tech-Debt-with-Copilot-Coding-Agent.html" | relative_url }})
 - [Manage Copilot Coding Agent Tasks in Visual Studio Code](https://github.blog/changelog/2025-11-13-manage-copilot-coding-agent-tasks-in-visual-studio-code)
 - [How to Configure Copilot Coding Agent as a Bypass Actor for GitHub Rulesets](https://github.blog/changelog/2025-11-13-configure-copilot-coding-agent-as-a-bypass-actor-for-rulesets)
 - [Agent-Specific Custom Instructions Now Supported in Copilot Code Review and Coding Agent](https://github.blog/changelog/2025-11-12-copilot-code-review-and-coding-agent-now-support-agent-specific-instructions)
@@ -118,7 +118,7 @@ Building on last week’s additions to admin controls over AI models, Copilot no
 
 Extending the recent improvements in code review automation, Copilot now features integration with CodeQL for smarter pull request suggestions, combining AI-driven insights with manual instructions. Agent handoff, GitHub Actions automation, and expanded organization-level review settings represent ongoing progress in code quality management. Support for agent-specific review instructions supports customized workflows.
 
-- [What's New with GitHub Copilot Code Review: CodeQL, Agents & More]({{ "/2025-11-16-Whats-New-with-GitHub-Copilot-Code-Review-CodeQL-Agents-and-More.html" | relative_url }})
+- [What's New with GitHub Copilot Code Review: CodeQL, Agents & More]({{ "/videos/2025-11-16-Whats-New-with-GitHub-Copilot-Code-Review-CodeQL-Agents-and-More.html" | relative_url }})
 - [Mastering Copilot Code Review: Writing Effective Instructions Files](https://github.blog/ai-and-ml/unlocking-the-full-power-of-copilot-code-review-master-your-instructions-files/)
 - [Agent-Specific Custom Instructions Now Supported in Copilot Code Review and Coding Agent](https://github.blog/changelog/2025-11-12-copilot-code-review-and-coding-agent-now-support-agent-specific-instructions)
 
@@ -126,8 +126,8 @@ Extending the recent improvements in code review automation, Copilot now feature
 
 Copilot now extends its automation skills to .NET, C#, and desktop environments. Agents support platforms like Windows Forms and .NET Aspire, continuing progress from Java and alluding to the wider role of multi-agent orchestration in modern workflows. New guides show how Copilot assists with architectural documentation and .NET modernization, supporting the wider move towards “living documentation” and cloud-native approaches for .NET teams.
 
-- [What's New in Windows Forms: Modern Enhancements and AI Integration]({{ "/2025-11-12-Whats-New-in-Windows-Forms-Modern-Enhancements-and-AI-Integration.html" | relative_url }})
-- [Automating .NET Aspire Architecture Documentation with GitHub Copilot]({{ "/2025-11-14-Automating-NET-Aspire-Architecture-Documentation-with-GitHub-Copilot.html" | relative_url }})
+- [What's New in Windows Forms: Modern Enhancements and AI Integration]({{ "/videos/2025-11-12-Whats-New-in-Windows-Forms-Modern-Enhancements-and-AI-Integration.html" | relative_url }})
+- [Automating .NET Aspire Architecture Documentation with GitHub Copilot]({{ "/videos/2025-11-14-Automating-NET-Aspire-Architecture-Documentation-with-GitHub-Copilot.html" | relative_url }})
 
 ### Enterprise, Security, and Administration
 
@@ -144,9 +144,9 @@ Case studies on internal Copilot usage at GitHub demonstrate productivity improv
 
 - [Prompt Engineering Techniques for Developers Using GitHub Copilot](https://dellenny.com/prompt-engineering-for-developers-getting-the-best-out-of-copilot/)
 - [Practical Use Cases: Writing, Refactoring, and Testing Code with GitHub Copilot](https://dellenny.com/practical-use-cases-writing-refactoring-and-testing-code-with-github-copilot/)
-- [Transforming GitHub Copilot Metrics into Business Value]({{ "/2025-11-10-Transforming-GitHub-Copilot-Metrics-into-Business-Value.html" | relative_url }})
+- [Transforming GitHub Copilot Metrics into Business Value]({{ "/videos/2025-11-10-Transforming-GitHub-Copilot-Metrics-into-Business-Value.html" | relative_url }})
 - [How Copilot Helps Build the GitHub Platform](https://github.blog/ai-and-ml/github-copilot/how-copilot-helps-build-the-github-platform/)
-- [Your codebase, your rules: Customizing Copilot with context engineering]({{ "/2025-11-12-Your-codebase-your-rules-Customizing-Copilot-with-context-engineering.html" | relative_url }})
+- [Your codebase, your rules: Customizing Copilot with context engineering]({{ "/videos/2025-11-12-Your-codebase-your-rules-Customizing-Copilot-with-context-engineering.html" | relative_url }})
 
 ## AI
 
@@ -170,23 +170,23 @@ SleekFlow’s deployment example illustrates Azure’s support for secure and ra
 
 This week emphasizes .NET’s expanded support for AI, with updated abstractions, model management utilities, and design patterns provided by Semantic Kernel and Agent Framework. New releases in .NET 10, ASP.NET Core 10, MAUI 10, C# 14, and F# 10 showcase continued evolution in AI integration for language and tooling. Tutorials build on last week’s best practices, focusing on agentic structures, search, reasoning, and improved user experience in .NET. Visual Studio 2026 diagnostics and testing tools extend workflow validation paired with AI-enhanced feedback.
 
-- [Building Intelligent Apps with .NET]({{ "/2025-11-12-Building-Intelligent-Apps-with-NET.html" | relative_url }})
-- [AI Foundry for .NET Developers]({{ "/2025-11-13-AI-Foundry-for-NET-Developers.html" | relative_url }})
-- [Practical AI Applications for Improved User Experience with .NET]({{ "/2025-11-14-Practical-AI-Applications-for-Improved-User-Experience-with-NET.html" | relative_url }})
-- [.NET Diagnostic Tooling with AI]({{ "/2025-11-12-NET-Diagnostic-Tooling-with-AI.html" | relative_url }})
-- [AI-Powered Testing in Visual Studio]({{ "/2025-11-13-AI-Powered-Testing-in-Visual-Studio.html" | relative_url }})
-- [Understanding Agentic Development for .NET Developers]({{ "/2025-11-12-Understanding-Agentic-Development-for-NET-Developers.html" | relative_url }})
-- [Overcoming the limitations when using AI]({{ "/2025-11-14-Overcoming-the-limitations-when-using-AI.html" | relative_url }})
-- [Architecting an AI-Powered Sales Dashboard with .NET MAUI and Azure OpenAI]({{ "/2025-11-14-Architecting-an-AI-Powered-Sales-Dashboard-with-NET-MAUI-and-Azure-OpenAI.html" | relative_url }})
-- [Designing Seamless AI Agents with C#: One Question, One Answer Approach]({{ "/2025-11-13-Designing-Seamless-AI-Agents-with-C-One-Question-One-Answer-Approach.html" | relative_url }})
-- [Designing Seamless AI Agents with C#: One Question, One Answer Model]({{ "/2025-11-13-Designing-Seamless-AI-Agents-with-C-One-Question-One-Answer-Model.html" | relative_url }})
+- [Building Intelligent Apps with .NET]({{ "/videos/2025-11-12-Building-Intelligent-Apps-with-NET.html" | relative_url }})
+- [AI Foundry for .NET Developers]({{ "/videos/2025-11-13-AI-Foundry-for-NET-Developers.html" | relative_url }})
+- [Practical AI Applications for Improved User Experience with .NET]({{ "/videos/2025-11-14-Practical-AI-Applications-for-Improved-User-Experience-with-NET.html" | relative_url }})
+- [.NET Diagnostic Tooling with AI]({{ "/videos/2025-11-12-NET-Diagnostic-Tooling-with-AI.html" | relative_url }})
+- [AI-Powered Testing in Visual Studio]({{ "/videos/2025-11-13-AI-Powered-Testing-in-Visual-Studio.html" | relative_url }})
+- [Understanding Agentic Development for .NET Developers]({{ "/videos/2025-11-12-Understanding-Agentic-Development-for-NET-Developers.html" | relative_url }})
+- [Overcoming the limitations when using AI]({{ "/videos/2025-11-14-Overcoming-the-limitations-when-using-AI.html" | relative_url }})
+- [Architecting an AI-Powered Sales Dashboard with .NET MAUI and Azure OpenAI]({{ "/videos/2025-11-14-Architecting-an-AI-Powered-Sales-Dashboard-with-NET-MAUI-and-Azure-OpenAI.html" | relative_url }})
+- [Designing Seamless AI Agents with C#: One Question, One Answer Approach]({{ "/videos/2025-11-13-Designing-Seamless-AI-Agents-with-C-One-Question-One-Answer-Approach.html" | relative_url }})
+- [Designing Seamless AI Agents with C#: One Question, One Answer Model]({{ "/videos/2025-11-13-Designing-Seamless-AI-Agents-with-C-One-Question-One-Answer-Model.html" | relative_url }})
 
 ### Model Context Protocol (MCP) and Multimodal AI Agent Frameworks
 
 Adoption of MCP frameworks for .NET, Java, and JetBrains continues to grow, with new resources confirming MCP’s importance for agent context-sharing and interoperability. The MMCTAgent’s Planner–Critic model further enhances multimodal AI agent reasoning—building on themes from earlier editions about plugin architectures and Azure AI Foundry.
 
-- [Model Context Protocol (MCP) for .NET Developers]({{ "/2025-11-12-Model-Context-Protocol-MCP-for-NET-Developers.html" | relative_url }})
-- [5 Things You Need to Know About Model Context Protocol (MCP)]({{ "/2025-11-15-5-Things-You-Need-to-Know-About-Model-Context-Protocol-MCP.html" | relative_url }})
+- [Model Context Protocol (MCP) for .NET Developers]({{ "/videos/2025-11-12-Model-Context-Protocol-MCP-for-NET-Developers.html" | relative_url }})
+- [5 Things You Need to Know About Model Context Protocol (MCP)]({{ "/videos/2025-11-15-5-Things-You-Need-to-Know-About-Model-Context-Protocol-MCP.html" | relative_url }})
 - [MMCTAgent: Microsoft’s Multimodal Critical Thinking Agent for Image and Video Reasoning](https://www.microsoft.com/en-us/research/blog/mmctagent-enabling-multimodal-reasoning-over-large-video-and-image-collections/)
 
 ### AI Agent Design and Automation Workflows
@@ -194,8 +194,8 @@ Adoption of MCP frameworks for .NET, Java, and JetBrains continues to grow, with
 Agent and workflow design resources this week delve into practical comparisons between code-first, workflow-first, and hybrid solutions for enterprise automation. The expansion of no-code agent development through Azure Logic Apps brings AI capabilities to a wider audience. Knowledge-sharing continues through Mission Agent Possible and Ignite sessions.
 
 - [Workflow-First, Code-First, and Hybrid AI Agent Design: Approaches for Enterprise Automation](https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-ai-agents-workflow-first-vs-code-first-vs-hybrid/ba-p/4466788)
-- [Build AI Agents with Zero Code Using Azure Logic Apps]({{ "/2025-11-11-Build-AI-Agents-with-Zero-Code-Using-Azure-Logic-Apps.html" | relative_url }})
-- [Designing Effective AI Agents: Insights from Armchair Architects]({{ "/2025-11-13-Designing-Effective-AI-Agents-Insights-from-Armchair-Architects.html" | relative_url }})
+- [Build AI Agents with Zero Code Using Azure Logic Apps]({{ "/videos/2025-11-11-Build-AI-Agents-with-Zero-Code-Using-Azure-Logic-Apps.html" | relative_url }})
+- [Designing Effective AI Agents: Insights from Armchair Architects]({{ "/videos/2025-11-13-Designing-Effective-AI-Agents-Insights-from-Armchair-Architects.html" | relative_url }})
 - [Mission Agent Possible: Developer AI Agent Competition at Microsoft Ignite 2025](https://techcommunity.microsoft.com/t5/microsoft-developer-community/mission-agent-possible-your-chance-to-build-solve-and-win-at/ba-p/4467585)
 - [Build Custom AI Copilots Using Microsoft Copilot Studio and Oracle Database@Azure](https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/build-your-own-custom-copilots-with-microsoft-copilot-studio-and/ba-p/4468211)
 - [Developer-Focused Azure AI Foundry Sessions at Microsoft Ignite 2025](https://devblogs.microsoft.com/foundry/ignitedevsessions/)
@@ -204,7 +204,7 @@ Agent and workflow design resources this week delve into practical comparisons b
 
 Building from data on programming languages and development trends, TypeScript’s increase in usage over Python and Java is attributed to the benefits of static typing, which supports safer and more automated workflows. Team surveys emphasize that relying solely on “vibe coding” introduces risks unless balanced with solid DevOps practices and engineering discipline, maintaining a regular theme of responsible and productive AI integration.
 
-- [How AI and TypeScript Are Shaping the Future of Software Development: Insights from GitHub Octoverse 2025]({{ "/2025-11-13-How-AI-and-TypeScript-Are-Shaping-the-Future-of-Software-Development-Insights-from-GitHub-Octoverse-2025.html" | relative_url }})
+- [How AI and TypeScript Are Shaping the Future of Software Development: Insights from GitHub Octoverse 2025]({{ "/videos/2025-11-13-How-AI-and-TypeScript-Are-Shaping-the-Future-of-Software-Development-Insights-from-GitHub-Octoverse-2025.html" | relative_url }})
 - [How AI Is Shaping Language Trends in Software Development: Insights from GitHub Next](https://github.blog/news-insights/octoverse/typescript-python-and-the-ai-feedback-loop-changing-software-development/)
 - [How AI Coding Is Shaping Software Engineering and DevOps Roles](https://devops.com/survey-sees-ai-coding-creating-need-for-more-software-engineers/)
 - [Vibe Coding vs. Spec-Driven Development: Finding Balance in the AI Era](https://devops.com/vibe-coding-vs-spec-driven-development-finding-balance-in-the-ai-era/)
@@ -236,13 +236,13 @@ Microsoft debuted the Aurora project to expand access to climate and weather mod
 
 Detailed coverage of .NET Aspire, Redis, and the Microsoft Agent Framework shows how to build robust, scalable agent systems. Redis enables semantic caching, vector storage, and management of session state, aligning with the trend toward persistent, distributed agent architectures. All updates utilize the new features in .NET 10, C# 14, F# 10, and Visual Studio 2026, reinforcing the focus on modular and multi-agent workflow strategies.
 
-- [Build Smarter Agents with Redis, .NET Aspire, and Microsoft Agent Framework]({{ "/2025-11-13-Build-Smarter-Agents-with-Redis-NET-Aspire-and-Microsoft-Agent-Framework.html" | relative_url }})
+- [Build Smarter Agents with Redis, .NET Aspire, and Microsoft Agent Framework]({{ "/videos/2025-11-13-Build-Smarter-Agents-with-Redis-NET-Aspire-and-Microsoft-Agent-Framework.html" | relative_url }})
 
 ### Modernizing Historical Datasets with ML.NET and Azure
 
 ML.NET and Azure CosmosDb are used this week to modernize a 17th-century Italian-English dictionary. Developers leverage current .NET and ML.NET features for processing legacy data—including custom vector embeddings and scalable cloud storage. These updates enable robust semantic search and reliable API endpoints, demonstrating practical uses of Microsoft’s ML tools in both research and preservation settings.
 
-- [Modernizing a 17th Century Italian-English Dictionary with .NET and ML.NET]({{ "/2025-11-14-Modernizing-a-17th-Century-Italian-English-Dictionary-with-NET-and-MLNET.html" | relative_url }})
+- [Modernizing a 17th Century Italian-English Dictionary with .NET and ML.NET]({{ "/videos/2025-11-14-Modernizing-a-17th-Century-Italian-English-Dictionary-with-NET-and-MLNET.html" | relative_url }})
 
 ## Azure
 
@@ -254,11 +254,11 @@ Recent updates reinforce .NET and Azure integration, with new guides for Aspire 
 
 The focus on updating legacy .NET workloads carries into this week, using efficient migration strategies and new mesh patterns for API scalability. The built-in Model Context Protocol (MCP) support with Visual Studio 2026 deepens the connection between DevOps and developer experience. Azure App Service brings improved pipeline integration, diagnostics, and security features for .NET teams.
 
-- [Azure Keynote: Cloud Innovation with .NET]({{ "/2025-11-13-Azure-Keynote-Cloud-Innovation-with-NET.html" | relative_url }})
-- [Modernizing .NET Applications for the Cloud]({{ "/2025-11-13-Modernizing-NET-Applications-for-the-Cloud.html" | relative_url }})
-- [Building Remote MCP Servers with .NET and Azure]({{ "/2025-11-13-Building-Remote-MCP-Servers-with-NET-and-Azure.html" | relative_url }})
+- [Azure Keynote: Cloud Innovation with .NET]({{ "/videos/2025-11-13-Azure-Keynote-Cloud-Innovation-with-NET.html" | relative_url }})
+- [Modernizing .NET Applications for the Cloud]({{ "/videos/2025-11-13-Modernizing-NET-Applications-for-the-Cloud.html" | relative_url }})
+- [Building Remote MCP Servers with .NET and Azure]({{ "/videos/2025-11-13-Building-Remote-MCP-Servers-with-NET-and-Azure.html" | relative_url }})
 - [Azure MCP Server Now Built-In with Visual Studio 2026: Agentic Cloud Automation for Developers](https://devblogs.microsoft.com/visualstudio/azure-mcp-server-now-built-in-with-visual-studio-2026-a-new-era-for-agentic-workflows/)
-- [What's New in Azure App Service for .NET Developers]({{ "/2025-11-13-Whats-New-in-Azure-App-Service-for-NET-Developers.html" | relative_url }})
+- [What's New in Azure App Service for .NET Developers]({{ "/videos/2025-11-13-Whats-New-in-Azure-App-Service-for-NET-Developers.html" | relative_url }})
 
 ### Azure Kubernetes Service (AKS), Networking, and Container Platform Advances
 
@@ -297,7 +297,7 @@ Databricks cost optimization content provides practical guidance for resource ma
 
 - [Azure Databricks Cost Optimization: A Practical Guide](https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-cost-optimization-a-practical-guide/ba-p/4470235)
 - [Migrate or Modernize Applications Using Azure Migrate: New Features and Application-Aware Approaches](https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-or-modernize-your-applications-using-azure-migrate/ba-p/4468587)
-- [Azure Cost Estimation: Practical Strategies and Tools Explained]({{ "/2025-11-10-Azure-Cost-Estimation-Practical-Strategies-and-Tools-Explained.html" | relative_url }})
+- [Azure Cost Estimation: Practical Strategies and Tools Explained]({{ "/videos/2025-11-10-Azure-Cost-Estimation-Practical-Strategies-and-Tools-Explained.html" | relative_url }})
 - [Azure Pricing Models Explained: Pay-As-You-Go, Reserved, and Spot Instances](https://dellenny.com/azure-pricing-models-explained-pay-as-you-go-reserved-and-spot-instances/)
 - [Using the Azure Pricing Calculator for Accurate Cloud Cost Estimates](https://dellenny.com/how-to-use-the-azure-pricing-calculator-effectively-a-step-by%e2%80%90step-guide/)
 
@@ -308,7 +308,7 @@ Latest platform news includes Node.js 24 LTS on Azure App Service, new deploymen
 - [Node.js 24 Now Available on Azure App Service for Linux](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/node-js-24-is-now-available-on-azure-app-service-for-linux/ba/p/4468801)
 - [What’s New for Python on Azure App Service for Linux: pyproject.toml, uv, and Modern Deployments](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-for-python-on-app-service-for-linux-pyproject-toml-uv/ba-p/4468903)
 - [Accelerating HPC and EDA Innovation with Azure NetApp Files Enhancements](https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-hpc-and-eda-with-powerful-azure-netapp-files/ba-p/4469739)
-- [Azure Update - 14th November 2025]({{ "/2025-11-14-Azure-Update-14th-November-2025.html" | relative_url }})
+- [Azure Update - 14th November 2025]({{ "/videos/2025-11-14-Azure-Update-14th-November-2025.html" | relative_url }})
 
 ### Event Highlights: Ignite 2025, Conferences, and Learning Resources
 
@@ -323,7 +323,7 @@ Event coverage this week expands on previous Ignite previews, featuring guides f
 Automation, platform modernization, and migration planning remain in focus, with tools and resources designed to make transitioning to Azure approachable. Security, compliance, and troubleshooting features—such as WinRE for Azure Arc and SLAs—reinforce platform improvements and readiness for resilient deployments.
 
 - [Announcing BizTalk Server 2020 Cumulative Update 7: Platform Support and Upgrade Guidance](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-biztalk-server-2020-cumulative-update-7/ba/p/4469100)
-- [Provisioning SQL Server 2025 Databases to Kubernetes with Pure Storage Snapshots]({{ "/2025-11-12-Provisioning-SQL-Server-2025-Databases-to-Kubernetes-with-Pure-Storage-Snapshots.html" | relative_url }})
+- [Provisioning SQL Server 2025 Databases to Kubernetes with Pure Storage Snapshots]({{ "/videos/2025-11-12-Provisioning-SQL-Server-2025-Databases-to-Kubernetes-with-Pure-Storage-Snapshots.html" | relative_url }})
 - [Modernizing WPF Map Functionality with Azure Maps: A Practical Migration Path](https://techcommunity.microsoft.com/t5/azure-maps-blog/guest-blog-modernizing-your-wpf-app-maps-functionality-with/ba/p/4468755)
 - [Strengthen Server Resilience: Enabling WinRE for Windows Server with Azure Arc](https://www.thomasmaurer.ch/2025/11/strengthen-server-resilience-windows-recovery-environment-winre-for-windows-server-with-azure-arc/)
 - [Migrate or Modernize Applications Using Azure Migrate: New Features and Application-Aware Approaches](https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-or-modernize-your-applications-using-azure-migrate/ba-p/4468587)
@@ -332,8 +332,8 @@ Automation, platform modernization, and migration planning remain in focus, with
 - [Understanding Azure SLAs: What 99.9% Really Means](https://dellenny.com/understanding-azure-slas-what-99-9-really-means/)
 - [Azure Governance Tools: Policies, Blueprints, and RBAC Explained](https://dellenny.com/azure-governance-tools-policies-blueprints-and-role-based-access-control-rbac/)
 - [Intermittent Access Issue: Azure Function App Fails to Retrieve Key Vault Secrets via Private Endpoint](https://techcommunity.microsoft.com/t5/azure-infrastructure/intermittent-access-issue-between-azure-function-app-and-key/m-p/4468948#M316)
-- [Deploying AI Solutions with Azure AI Landing Zones]({{ "/2025-11-11-Deploying-AI-Solutions-with-Azure-AI-Landing-Zones.html" | relative_url }})
-- [Top 5 Cloud Design Principles for Architects]({{ "/2025-11-10-Top-5-Cloud-Design-Principles-for-Architects.html" | relative_url }})
+- [Deploying AI Solutions with Azure AI Landing Zones]({{ "/videos/2025-11-11-Deploying-AI-Solutions-with-Azure-AI-Landing-Zones.html" | relative_url }})
+- [Top 5 Cloud Design Principles for Architects]({{ "/videos/2025-11-10-Top-5-Cloud-Design-Principles-for-Architects.html" | relative_url }})
 - [Microsoft Announces Fairwater Datacenter: Building an AI Superfactory with Azure](https://www.linkedin.com/posts/satyanadella_today-we-announced-our-new-fairwater-datacenter-activity-7394420047294648321-RQ77)
 - [Sovereign and Adaptive Cloud: Microsoft Ignite 2025 Highlights](https://www.thomasmaurer.ch/2025/11/driving-impact-in-the-era-of-ai-sovereign-cloud-adaptive-cloud-at-microsoft-ignite-2025/)
 - [Join Microsoft at SC25: HPC and AI Innovations in St. Louis](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/join-microsoft-sc25-experience-hpc-and-ai-innovation/ba-p/4467935)
@@ -349,71 +349,71 @@ The .NET 10 release marks the new long-term support baseline through 2028, unify
 Blazor and ASP.NET Core updates—plus OpenAPI 3.1 and improved authentication—continue the push toward modern web capabilities. .NET Aspire strengthens orchestration and Azure deployment options, while Visual Studio 2026 and the enhanced CLI increase productivity and workflow efficiency.
 
 - [Announcing .NET 10: A Major Release for Modern, Productive, and AI-Powered Development](https://devblogs.microsoft.com/dotnet/announcing-dotnet-10/)
-- [.NET 10 Migration and New Features for Enterprise Blazor Applications]({{ "/2025-11-14-NET-10-Migration-and-New-Features-for-Enterprise-Blazor-Applications.html" | relative_url }})
-- [Generating Full-Stack .NET Apps with Uno Platform and AI]({{ "/2025-11-14-Generating-Full-Stack-NET-Apps-with-Uno-Platform-and-AI.html" | relative_url }})
-- [.NET Framework 4.8 to .NET 9 Step by Step Migration Guide]({{ "/2025-11-14-NET-Framework-48-to-NET-9-Step-by-Step-Migration-Guide.html" | relative_url }})
-- [What's New in NuGet: Security, AI, and Modern Package Management for .NET]({{ "/2025-11-13-Whats-New-in-NuGet-Security-AI-and-Modern-Package-Management-for-NET.html" | relative_url }})
-- [Welcome to .NET 10 & Visual Studio 2026!]({{ "/2025-11-12-Welcome-to-NET-10-and-Visual-Studio-2026.html" | relative_url }})
-- [Performance Improvements in .NET 10]({{ "/2025-11-12-Performance-Improvements-in-NET-10.html" | relative_url }})
-- [Build Better Web Apps with Blazor in .NET 10]({{ "/2025-11-12-Build-Better-Web-Apps-with-Blazor-in-NET-10.html" | relative_url }})
-- [Modern C# Features to Enhance Your Coding Habits]({{ "/2025-11-14-Modern-C-Features-to-Enhance-Your-Coding-Habits.html" | relative_url }})
-- [What's New in C# 14]({{ "/2025-11-12-Whats-New-in-C-14.html" | relative_url }})
-- [What's New in ASP.NET Core for .NET 10]({{ "/2025-11-12-Whats-New-in-ASPNET-Core-for-NET-10.html" | relative_url }})
-- [What's New in Containers for .NET 10]({{ "/2025-11-13-Whats-New-in-Containers-for-NET-10.html" | relative_url }})
-- [What's New in .NET MAUI]({{ "/2025-11-12-Whats-New-in-NET-MAUI.html" | relative_url }})
-- [Clean Architecture with ASP.NET Core 10]({{ "/2025-11-14-Clean-Architecture-with-ASPNET-Core-10.html" | relative_url }})
-- [Ship Faster with .NET MAUI: Real-World Pitfalls and Solutions]({{ "/2025-11-14-Ship-Faster-with-NET-MAUI-Real-World-Pitfalls-and-Solutions.html" | relative_url }})
-- [Modern Windows Development with .NET]({{ "/2025-11-12-Modern-Windows-Development-with-NET.html" | relative_url }})
-- [New dotnet test Experience with Microsoft.Testing.Platform]({{ "/2025-11-13-New-dotnet-test-Experience-with-MicrosoftTestingPlatform.html" | relative_url }})
-- [DataMountain: .NET Data Warehousing That Beats C++ Performance]({{ "/2025-11-14-DataMountain-NET-Data-Warehousing-That-Beats-C-Performance.html" | relative_url }})
+- [.NET 10 Migration and New Features for Enterprise Blazor Applications]({{ "/videos/2025-11-14-NET-10-Migration-and-New-Features-for-Enterprise-Blazor-Applications.html" | relative_url }})
+- [Generating Full-Stack .NET Apps with Uno Platform and AI]({{ "/videos/2025-11-14-Generating-Full-Stack-NET-Apps-with-Uno-Platform-and-AI.html" | relative_url }})
+- [.NET Framework 4.8 to .NET 9 Step by Step Migration Guide]({{ "/videos/2025-11-14-NET-Framework-48-to-NET-9-Step-by-Step-Migration-Guide.html" | relative_url }})
+- [What's New in NuGet: Security, AI, and Modern Package Management for .NET]({{ "/videos/2025-11-13-Whats-New-in-NuGet-Security-AI-and-Modern-Package-Management-for-NET.html" | relative_url }})
+- [Welcome to .NET 10 & Visual Studio 2026!]({{ "/videos/2025-11-12-Welcome-to-NET-10-and-Visual-Studio-2026.html" | relative_url }})
+- [Performance Improvements in .NET 10]({{ "/videos/2025-11-12-Performance-Improvements-in-NET-10.html" | relative_url }})
+- [Build Better Web Apps with Blazor in .NET 10]({{ "/videos/2025-11-12-Build-Better-Web-Apps-with-Blazor-in-NET-10.html" | relative_url }})
+- [Modern C# Features to Enhance Your Coding Habits]({{ "/videos/2025-11-14-Modern-C-Features-to-Enhance-Your-Coding-Habits.html" | relative_url }})
+- [What's New in C# 14]({{ "/videos/2025-11-12-Whats-New-in-C-14.html" | relative_url }})
+- [What's New in ASP.NET Core for .NET 10]({{ "/videos/2025-11-12-Whats-New-in-ASPNET-Core-for-NET-10.html" | relative_url }})
+- [What's New in Containers for .NET 10]({{ "/videos/2025-11-13-Whats-New-in-Containers-for-NET-10.html" | relative_url }})
+- [What's New in .NET MAUI]({{ "/videos/2025-11-12-Whats-New-in-NET-MAUI.html" | relative_url }})
+- [Clean Architecture with ASP.NET Core 10]({{ "/videos/2025-11-14-Clean-Architecture-with-ASPNET-Core-10.html" | relative_url }})
+- [Ship Faster with .NET MAUI: Real-World Pitfalls and Solutions]({{ "/videos/2025-11-14-Ship-Faster-with-NET-MAUI-Real-World-Pitfalls-and-Solutions.html" | relative_url }})
+- [Modern Windows Development with .NET]({{ "/videos/2025-11-12-Modern-Windows-Development-with-NET.html" | relative_url }})
+- [New dotnet test Experience with Microsoft.Testing.Platform]({{ "/videos/2025-11-13-New-dotnet-test-Experience-with-MicrosoftTestingPlatform.html" | relative_url }})
+- [DataMountain: .NET Data Warehousing That Beats C++ Performance]({{ "/videos/2025-11-14-DataMountain-NET-Data-Warehousing-That-Beats-C-Performance.html" | relative_url }})
 - [OpenAPI.NET v2 & v3 Major Release: The Biggest Update Ever](https://devblogs.microsoft.com/openapi/openapi-net-release-announcements/)
-- [Simplifying .NET with 'dotnet run file.cs']({{ "/2025-11-13-Simplifying-NET-with-dotnet-run-filecs.html" | relative_url }})
+- [Simplifying .NET with 'dotnet run file.cs']({{ "/videos/2025-11-13-Simplifying-NET-with-dotnet-run-filecs.html" | relative_url }})
 - [.NET and .NET Framework November 2025 Servicing Releases Updates](https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-november-2025-servicing-updates/)
 
 ### .NET Aspire: Cloud-Native Orchestration and Distributed Workflows
 
 Aspire remains central for .NET orchestration, with enhanced documentation and cross-language compatibility in hybrid environments. Updated resources detail configuration for Python, Node.js, and non-.NET applications, keeping modular and multi-team architectures in focus. New resources, dashboards, and onboarding solutions support multi-repo and enterprise scenarios.
 
-- [Simplifying Cloud-Native Development with .NET Aspire]({{ "/2025-11-12-Simplifying-Cloud-Native-Development-with-NET-Aspire.html" | relative_url }})
-- [Taking .NET out of .NET Aspire: Working with Non-.NET Applications]({{ "/2025-11-14-Taking-NET-out-of-NET-Aspire-Working-with-Non-NET-Applications.html" | relative_url }})
-- [Deep Dive: Extending and Customizing Aspire]({{ "/2025-11-13-Deep-Dive-Extending-and-Customizing-Aspire.html" | relative_url }})
-- [Aspire Unplugged: David Fowler Discusses .NET Aspire’s Vision and Future]({{ "/2025-11-13-Aspire-Unplugged-David-Fowler-Discusses-NET-Aspires-Vision-and-Future.html" | relative_url }})
-- [Windows 365 Meets .NET Aspire: Boosting Multi-Repo Microservice Productivity]({{ "/2025-11-14-Windows-365-Meets-NET-Aspire-Boosting-Multi-Repo-Microservice-Productivity.html" | relative_url }})
+- [Simplifying Cloud-Native Development with .NET Aspire]({{ "/videos/2025-11-12-Simplifying-Cloud-Native-Development-with-NET-Aspire.html" | relative_url }})
+- [Taking .NET out of .NET Aspire: Working with Non-.NET Applications]({{ "/videos/2025-11-14-Taking-NET-out-of-NET-Aspire-Working-with-Non-NET-Applications.html" | relative_url }})
+- [Deep Dive: Extending and Customizing Aspire]({{ "/videos/2025-11-13-Deep-Dive-Extending-and-Customizing-Aspire.html" | relative_url }})
+- [Aspire Unplugged: David Fowler Discusses .NET Aspire’s Vision and Future]({{ "/videos/2025-11-13-Aspire-Unplugged-David-Fowler-Discusses-NET-Aspires-Vision-and-Future.html" | relative_url }})
+- [Windows 365 Meets .NET Aspire: Boosting Multi-Repo Microservice Productivity]({{ "/videos/2025-11-14-Windows-365-Meets-NET-Aspire-Boosting-Multi-Repo-Microservice-Productivity.html" | relative_url }})
 
 ### Visual Studio 2026 and Developer Productivity Tools
 
 The Visual Studio 2026 preview introduces a new user experience, accessibility improvements, and expanded customization options, reinforcing the focus on productivity. Integrated AI features and support for .NET 10 enhance debugging and profiling tools for practical application.
 
 - [A First Look at the Refreshed UX in Visual Studio 2026](https://devblogs.microsoft.com/visualstudio/a-first-look-at-the-all%e2%80%91new-ux-in-visual-studio-2026/)
-- [Visual Studio Debugger: Advanced Techniques]({{ "/2025-11-12-Visual-Studio-Debugger-Advanced-Techniques.html" | relative_url }})
-- [Real-World .NET Profiling with Visual Studio]({{ "/2025-11-12-Real-World-NET-Profiling-with-Visual-Studio.html" | relative_url }})
+- [Visual Studio Debugger: Advanced Techniques]({{ "/videos/2025-11-12-Visual-Studio-Debugger-Advanced-Techniques.html" | relative_url }})
+- [Real-World .NET Profiling with Visual Studio]({{ "/videos/2025-11-12-Real-World-NET-Profiling-with-Visual-Studio.html" | relative_url }})
 
 ### AI, Automation, and API Integration in .NET
 
 AI workflow guidance and MCP/api integration themes continue this week, with practical tutorials for retrofitting APIs, using MCP via NuGet, and enhancing productivity through scripting. These updates expand prototyping and automation efforts highlighted previously.
 
-- [Enhancing Existing .NET REST APIs with Model Creation Protocol (MCP) and AI]({{ "/2025-11-14-Enhancing-Existing-NET-REST-APIs-with-Model-Creation-Protocol-MCP-and-AI.html" | relative_url }})
-- [What's New in NuGet: Security, AI, and Modern Package Management for .NET]({{ "/2025-11-13-Whats-New-in-NuGet-Security-AI-and-Modern-Package-Management-for-NET.html" | relative_url }})
-- [Simplifying .NET with 'dotnet run file.cs']({{ "/2025-11-13-Simplifying-NET-with-dotnet-run-filecs.html" | relative_url }})
+- [Enhancing Existing .NET REST APIs with Model Creation Protocol (MCP) and AI]({{ "/videos/2025-11-14-Enhancing-Existing-NET-REST-APIs-with-Model-Creation-Protocol-MCP-and-AI.html" | relative_url }})
+- [What's New in NuGet: Security, AI, and Modern Package Management for .NET]({{ "/videos/2025-11-13-Whats-New-in-NuGet-Security-AI-and-Modern-Package-Management-for-NET.html" | relative_url }})
+- [Simplifying .NET with 'dotnet run file.cs']({{ "/videos/2025-11-13-Simplifying-NET-with-dotnet-run-filecs.html" | relative_url }})
 
 ### Other Coding News
 
 .NET Community Toolkits and the latest MAUI/Windows releases integrate the new .NET launches. Coverage on decision records, Rx.NET status, and performance frameworks (DataMountain, terrain simulation) stays relevant for modular, high-performance engineering. Sustainability and real-world learning feature with topics like MAUI troubleshooting, carbon-aware computing, F# adoption, and IoT solutions with Raspberry Pi. .NET Foundation status and open source initiatives remain visible.
 
-- [Exploring the .NET Community Toolkits: MAUI, Windows, and More]({{ "/2025-11-14-Exploring-the-NET-Community-Toolkits-MAUI-Windows-and-More.html" | relative_url }})
-- [Decision Records: Understanding Why Those Decisions Were Made in .NET]({{ "/2025-11-14-Decision-Records-Understanding-Why-Those-Decisions-Were-Made-in-NET.html" | relative_url }})
-- [Rx.NET Status and Roadmap Overview]({{ "/2025-11-13-RxNET-Status-and-Roadmap-Overview.html" | relative_url }})
-- [DataMountain: .NET Data Warehousing That Beats C++ Performance]({{ "/2025-11-14-DataMountain-NET-Data-Warehousing-That-Beats-C-Performance.html" | relative_url }})
-- [High-Performance Terrain Simulations in .NET]({{ "/2025-11-14-High-Performance-Terrain-Simulations-in-NET.html" | relative_url }})
-- [Ship Faster with .NET MAUI: Real-World Pitfalls and Solutions]({{ "/2025-11-14-Ship-Faster-with-NET-MAUI-Real-World-Pitfalls-and-Solutions.html" | relative_url }})
-- [Carbon Aware Computing with .NET Open Source Libraries for Sustainable Applications]({{ "/2025-11-14-Carbon-Aware-Computing-with-NET-Open-Source-Libraries-for-Sustainable-Applications.html" | relative_url }})
-- [Smatterings of F#: Integrating F# in a C#-Focused World]({{ "/2025-11-14-Smatterings-of-F-Integrating-F-in-a-C-Focused-World.html" | relative_url }})
-- [Understanding Nullable Reference Types in .NET]({{ "/2025-11-14-Understanding-Nullable-Reference-Types-in-NET.html" | relative_url }})
-- [Building Modern CLI Apps in .NET: Libraries, Patterns, and Packaging]({{ "/2025-11-14-Building-Modern-CLI-Apps-in-NET-Libraries-Patterns-and-Packaging.html" | relative_url }})
-- [Real-World .NET Profiling with Visual Studio]({{ "/2025-11-12-Real-World-NET-Profiling-with-Visual-Studio.html" | relative_url }})
-- [If .NET Brewed Beer: IoT Brewing Automation with Raspberry Pi]({{ "/2025-11-14-If-NET-Brewed-Beer-IoT-Brewing-Automation-with-Raspberry-Pi.html" | relative_url }})
-- [The Future of Python and AI with Guido van Rossum]({{ "/2025-11-12-The-Future-of-Python-and-AI-with-Guido-van-Rossum.html" | relative_url }})
-- [State of the .NET Foundation and Advances in .NET Open Source]({{ "/2025-11-14-State-of-the-NET-Foundation-and-Advances-in-NET-Open-Source.html" | relative_url }})
+- [Exploring the .NET Community Toolkits: MAUI, Windows, and More]({{ "/videos/2025-11-14-Exploring-the-NET-Community-Toolkits-MAUI-Windows-and-More.html" | relative_url }})
+- [Decision Records: Understanding Why Those Decisions Were Made in .NET]({{ "/videos/2025-11-14-Decision-Records-Understanding-Why-Those-Decisions-Were-Made-in-NET.html" | relative_url }})
+- [Rx.NET Status and Roadmap Overview]({{ "/videos/2025-11-13-RxNET-Status-and-Roadmap-Overview.html" | relative_url }})
+- [DataMountain: .NET Data Warehousing That Beats C++ Performance]({{ "/videos/2025-11-14-DataMountain-NET-Data-Warehousing-That-Beats-C-Performance.html" | relative_url }})
+- [High-Performance Terrain Simulations in .NET]({{ "/videos/2025-11-14-High-Performance-Terrain-Simulations-in-NET.html" | relative_url }})
+- [Ship Faster with .NET MAUI: Real-World Pitfalls and Solutions]({{ "/videos/2025-11-14-Ship-Faster-with-NET-MAUI-Real-World-Pitfalls-and-Solutions.html" | relative_url }})
+- [Carbon Aware Computing with .NET Open Source Libraries for Sustainable Applications]({{ "/videos/2025-11-14-Carbon-Aware-Computing-with-NET-Open-Source-Libraries-for-Sustainable-Applications.html" | relative_url }})
+- [Smatterings of F#: Integrating F# in a C#-Focused World]({{ "/videos/2025-11-14-Smatterings-of-F-Integrating-F-in-a-C-Focused-World.html" | relative_url }})
+- [Understanding Nullable Reference Types in .NET]({{ "/videos/2025-11-14-Understanding-Nullable-Reference-Types-in-NET.html" | relative_url }})
+- [Building Modern CLI Apps in .NET: Libraries, Patterns, and Packaging]({{ "/videos/2025-11-14-Building-Modern-CLI-Apps-in-NET-Libraries-Patterns-and-Packaging.html" | relative_url }})
+- [Real-World .NET Profiling with Visual Studio]({{ "/videos/2025-11-12-Real-World-NET-Profiling-with-Visual-Studio.html" | relative_url }})
+- [If .NET Brewed Beer: IoT Brewing Automation with Raspberry Pi]({{ "/videos/2025-11-14-If-NET-Brewed-Beer-IoT-Brewing-Automation-with-Raspberry-Pi.html" | relative_url }})
+- [The Future of Python and AI with Guido van Rossum]({{ "/videos/2025-11-12-The-Future-of-Python-and-AI-with-Guido-van-Rossum.html" | relative_url }})
+- [State of the .NET Foundation and Advances in .NET Open Source]({{ "/videos/2025-11-14-State-of-the-NET-Foundation-and-Advances-in-NET-Open-Source.html" | relative_url }})
 
 ## DevOps
 
@@ -431,16 +431,16 @@ Guidance moves beyond legacy SLO metrics, encouraging dashboards that tie perfor
 Articles highlight multi-cloud adoption with advanced GitOps—featuring tools like ArgoCD, Flux, and policy-as-code—to meet regulatory requirements. Developers can now use Cake SDK to orchestrate GitHub Actions pipelines in C#, offering alternatives to YAML/JSON. Additions to OIDC token claims for GitHub Actions further strengthen security by enabling more granular identity controls.
 
 - [Scaling GitOps for Continuous Delivery in Hybrid and Multi-Cloud Environments](https://devops.com/gitops-in-the-wild-scaling-continuous-delivery-in-hybrid-cloud-environments/)
-- [Orchestrating GitHub Actions Pipelines in C# with Cake SDK]({{ "/2025-11-14-Orchestrating-GitHub-Actions-Pipelines-in-C-with-Cake-SDK.html" | relative_url }})
+- [Orchestrating GitHub Actions Pipelines in C# with Cake SDK]({{ "/videos/2025-11-14-Orchestrating-GitHub-Actions-Pipelines-in-C-with-Cake-SDK.html" | relative_url }})
 - [GitHub Actions OIDC Token Claims Now Include check_run_id](https://github.blog/changelog/2025-11-13-github-actions-oidc-token-claims-now-include-check_run_id)
 
 ### Hybrid Cloud Load Balancing and Modernization with Microsoft Technologies
 
 Practical advice covers load balancing across Kubernetes, containers, and virtual machines, including detailed YARP setup for authentication and multicluster routing. Steps for safely refactoring legacy environments are shared, and new onboarding automation with Aspire and Visual Studio aims to streamline compliance and reduce ramp-up time.
 
-- [Multicluster Load Balancing with YARP: From Kubernetes to Legacy Containers]({{ "/2025-11-14-Multicluster-Load-Balancing-with-YARP-From-Kubernetes-to-Legacy-Containers.html" | relative_url }})
+- [Multicluster Load Balancing with YARP: From Kubernetes to Legacy Containers]({{ "/videos/2025-11-14-Multicluster-Load-Balancing-with-YARP-From-Kubernetes-to-Legacy-Containers.html" | relative_url }})
 - [How to Refactor Legacy Solution Architectures Without Breaking Everything](https://dellenny.com/how-to-refactor-legacy-solution-architectures-without-breaking-everything/)
-- [Automating Engineer Onboarding with .NET Aspire and Visual Studio]({{ "/2025-11-14-Automating-Engineer-Onboarding-with-NET-Aspire-and-Visual-Studio.html" | relative_url }})
+- [Automating Engineer Onboarding with .NET Aspire and Visual Studio]({{ "/videos/2025-11-14-Automating-Engineer-Onboarding-with-NET-Aspire-and-Visual-Studio.html" | relative_url }})
 
 ### Observability and Telemetry Automation
 
@@ -504,15 +504,15 @@ JFrog now supports detection of AI-generated code and Shadow AI, making it easie
 
 A review of .NET security case studies provides detailed examples of common weaknesses and offers up-to-date patterns using .NET 10, Aspire, ASP.NET Core, and Visual Studio 2026. Further resources examine Microsoft’s security model, with specific advice on encryption, identity, monitoring, and compliance—delivering clear, actionable recommendations for developers and architects.
 
-- [A Year in .NET Security: Lessons from MSRC Cases (2024–2025)]({{ "/2025-11-13-A-Year-in-NET-Security-Lessons-from-MSRC-Cases-20242025.html" | relative_url }})
+- [A Year in .NET Security: Lessons from MSRC Cases (2024–2025)]({{ "/videos/2025-11-13-A-Year-in-NET-Security-Lessons-from-MSRC-Cases-20242025.html" | relative_url }})
 - [How Microsoft Keeps Your Data Safe in the Cloud – A Deep Dive into Cloud Security Practices](https://dellenny.com/how-microsoft-keeps-your-data-safe-in-the-cloud-a-deep-dive-into-cloud-security-practices/)
 
 ### Authentication Modernization with Passkeys and SSO
 
 Resources show how to add WebAuthn/passkey authentication options (Windows Hello, TouchID, hardware security keys) into ASP.NET Core, along with custom SSO guides using OpenIddict for improved central identity management. These updates simplify and modernize authentication approaches for business and enterprise development.
 
-- [Going Passwordless: Implementing Passkeys in ASP.NET Core]({{ "/2025-11-14-Going-Passwordless-Implementing-Passkeys-in-ASPNET-Core.html" | relative_url }})
-- [Rolling Your Own SSO: Centralized Authentication with OpenIddict]({{ "/2025-11-14-Rolling-Your-Own-SSO-Centralized-Authentication-with-OpenIddict.html" | relative_url }})
+- [Going Passwordless: Implementing Passkeys in ASP.NET Core]({{ "/videos/2025-11-14-Going-Passwordless-Implementing-Passkeys-in-ASPNET-Core.html" | relative_url }})
+- [Rolling Your Own SSO: Centralized Authentication with OpenIddict]({{ "/videos/2025-11-14-Rolling-Your-Own-SSO-Centralized-Authentication-with-OpenIddict.html" | relative_url }})
 
 ### Other Security News
 
@@ -526,4 +526,4 @@ Microsoft’s latest Secure Future Initiative progress report details changes in
 
 Coverage of server-side request forgery (SSRF) examines mechanics, risks, and practical steps to limit the attack surface, continuing the focus on up-to-date threat analysis and real-world defense strategies.
 
-- [Why Server-Side Request Forgery (SSRF) Is a Top Cloud Security Concern]({{ "/2025-11-14-Why-Server-Side-Request-Forgery-SSRF-Is-a-Top-Cloud-Security-Concern.html" | relative_url }})
+- [Why Server-Side Request Forgery (SSRF) Is a Top Cloud Security Concern]({{ "/videos/2025-11-14-Why-Server-Side-Request-Forgery-SSRF-Is-a-Top-Cloud-Security-Concern.html" | relative_url }})

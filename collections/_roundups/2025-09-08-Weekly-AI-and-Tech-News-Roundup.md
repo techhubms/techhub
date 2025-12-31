@@ -67,7 +67,7 @@ The remote GitHub MCP Server has moved to general availability, featuring standa
 
 Centralized automation, robust authentication, and policy-based team collaboration enhance resource management, following the ongoing move toward scalable coding and agent workflows.
 
-- [A First Look at the New Copilot Agents Panel on GitHub]({{ "/2025-09-01-A-First-Look-at-the-New-Copilot-Agents-Panel-on-GitHub.html" | relative_url }})
+- [A First Look at the New Copilot Agents Panel on GitHub]({{ "/videos/2025-09-01-A-First-Look-at-the-New-Copilot-Agents-Panel-on-GitHub.html" | relative_url }})
 - [Remote GitHub MCP Server Now Generally Available](https://github.blog/changelog/2025-09-04-remote-github-mcp-server-is-now-generally-available)
 - [How to Debug a Web App Using Playwright MCP and GitHub Copilot](https://github.blog/ai-and-ml/github-copilot/how-to-debug-a-web-app-with-playwright-mcp-and-github-copilot/)
 - [Building Smarter AI Tool Interactions with MCP Elicitation](https://github.blog/ai-and-ml/github-copilot/building-smarter-interactions-with-mcp-elicitation-from-clunky-tool-calls-to-seamless-user-experiences/)
@@ -81,8 +81,8 @@ New documentation covers tasks like identifying gaps in unit test coverage, auto
 By adopting agent-driven processes, teams can minimize repetitive tasks, address legacy code, and coordinate remote updates—mirroring recent trends in robust automation.
 
 - [Automating .NET Development with GitHub Copilot Coding Agent](https://devblogs.microsoft.com/dotnet/copilot-coding-agent-dotnet/)
-- [What's New with the GitHub Copilot Coding Agent]({{ "/2025-09-05-Whats-New-with-the-GitHub-Copilot-Coding-Agent.html" | relative_url }})
-- [From Issue to PR: Asynchronously Develop with GitHub Copilot Coding Agent]({{ "/2025-09-05-From-Issue-to-PR-Asynchronously-Develop-with-GitHub-Copilot-Coding-Agent.html" | relative_url }})
+- [What's New with the GitHub Copilot Coding Agent]({{ "/videos/2025-09-05-Whats-New-with-the-GitHub-Copilot-Coding-Agent.html" | relative_url }})
+- [From Issue to PR: Asynchronously Develop with GitHub Copilot Coding Agent]({{ "/videos/2025-09-05-From-Issue-to-PR-Asynchronously-Develop-with-GitHub-Copilot-Coding-Agent.html" | relative_url }})
 
 ### Copilot in IDEs: Visual Studio and Eclipse Enhancements
 
@@ -92,7 +92,7 @@ Eclipse has added support for custom instructions, enhanced APIs, and image cont
 
 - [Make Sense of Your Output Window with Copilot in Visual Studio](https://devblogs.microsoft.com/visualstudio/make-sense-of-your-output-window-with-copilot/)
 - [Boost Your Copilot Collaboration with Reusable Prompt Files](https://devblogs.microsoft.com/visualstudio/boost-your-copilot-collaboration-with-reusable-prompt-files/)
-- [Turning GitHub Copilot Prompts into Executable Files in VS Code]({{ "/2025-09-06-Turning-GitHub-Copilot-Prompts-into-Executable-Files-in-VS-Code.html" | relative_url }})
+- [Turning GitHub Copilot Prompts into Executable Files in VS Code]({{ "/videos/2025-09-06-Turning-GitHub-Copilot-Prompts-into-Executable-Files-in-VS-Code.html" | relative_url }})
 - [New Features in GitHub Copilot for Eclipse Empower Developer Experience](https://github.blog/changelog/2025-09-05-new-features-in-github-copilot-in-eclipse)
 
 ### Code Review and Customization: Instructions at Scale
@@ -126,7 +126,7 @@ Copilot is being used more often for migrating legacy and enterprise systems, wi
 
 Copilot’s suggestions support planning and executing modernization projects, in line with earlier updates.
 
-- [Modernizing Legacy COBOL to Cloud with GitHub Copilot]({{ "/2025-09-06-Modernizing-Legacy-COBOL-to-Cloud-with-GitHub-Copilot.html" | relative_url }})
+- [Modernizing Legacy COBOL to Cloud with GitHub Copilot]({{ "/videos/2025-09-06-Modernizing-Legacy-COBOL-to-Cloud-with-GitHub-Copilot.html" | relative_url }})
 - [How to Migrate Legacy Applications Using GitHub Copilot](https://dellenny.com/how-to-migrate-legacy-applications-using-github-copilot/)
 
 ### Developer Education and Onboarding
@@ -137,7 +137,7 @@ Additional topics such as RegEx validation and conducting Agent Mode code review
 
 - [Top 10 Things You Can Do with GitHub Copilot as a New Developer](https://dellenny.com/top-10-things-you-can-do-with-github-copilot-as-a-new-developer-2/)
 - [Using GitHub Copilot Chat to Write Better Regex Patterns](https://cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html)
-- [How to Get the Most Out of Your AI with Vibe Coding]({{ "/2025-09-02-How-to-Get-the-Most-Out-of-Your-AI-with-Vibe-Coding.html" | relative_url }})
+- [How to Get the Most Out of Your AI with Vibe Coding]({{ "/videos/2025-09-02-How-to-Get-the-Most-Out-of-Your-AI-with-Vibe-Coding.html" | relative_url }})
 
 ## AI
 
@@ -153,7 +153,7 @@ Building on previous coverage of multi-agent orchestration and RAG workflows, Fo
 - [Agent Factory: From Prototype to Production—Developer Tools and Rapid Agent Development](https://azure.microsoft.com/en-us/blog/agent-factory-from-prototype-to-production-developer-tools-and-rapid-agent-development/)
 - [Build a Smart Shopping AI Agent with Memory Using Azure AI Foundry Agent Service](https://techcommunity.microsoft.com/t5/microsoft-developer-community/build-a-smart-shopping-ai-agent-with-memory-using-the-azure-ai/ba-p/4450348)
 - [Build Multi-Agent AI Systems on Azure App Service](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-multi-agent-ai-systems-on-azure-app-service/ba-p/4451373)
-- [Context Window: 3 Azure AI Foundry Community Questions Answered]({{ "/2025-09-02-Context-Window-3-Azure-AI-Foundry-Community-Questions-Answered.html" | relative_url }})
+- [Context Window: 3 Azure AI Foundry Community Questions Answered]({{ "/videos/2025-09-02-Context-Window-3-Azure-AI-Foundry-Community-Questions-Answered.html" | relative_url }})
 
 ### Microsoft Copilot Studio: Workflow Automation and Generative Logic
 
@@ -161,7 +161,7 @@ Copilot Studio now supports agent-to-agent collaboration for modular HR and IT o
 
 Building on enterprise automation and orchestration topics from last week, Copilot Studio now securely connects business logic with generative AI. Its architecture separates intent processing from compliance enforcement by using plugins, role-based access, and data loss prevention. Walkthroughs include CRM, ERP, and retail use cases, illustrating practical automation and strategies for scaling.
 
-- [Agent-to-Agent Collaboration in Copilot Studio]({{ "/2025-09-03-Agent-to-Agent-Collaboration-in-Copilot-Studio.html" | relative_url }})
+- [Agent-to-Agent Collaboration in Copilot Studio]({{ "/videos/2025-09-03-Agent-to-Agent-Collaboration-in-Copilot-Studio.html" | relative_url }})
 - [Combining Generative AI and Business Logic with Copilot Studio](https://dellenny.com/combining-generative-ai-and-business-logic-with-copilot-studio/)
 - [Automating Retail Customer Service with Copilot Studio](https://dellenny.com/how-retail-businesses-are-automating-customer-service-with-copilot-studio/)
 
@@ -184,7 +184,7 @@ Tying in with previous stories on GraphRAG and best practices, these materials h
 
 An October livestream series (in Spanish) guides Python developers through generative AI, agent architectures, MCP workflows, and demos. Sessions include Q&A and access to a Discord community.
 
-- [Context Engineering for AI Agents]({{ "/2025-09-04-Context-Engineering-for-AI-Agents.html" | relative_url }})
+- [Context Engineering for AI Agents]({{ "/videos/2025-09-04-Context-Engineering-for-AI-Agents.html" | relative_url }})
 - [Level Up Your Python Game with Generative AI: Free Livestream Series](https://techcommunity.microsoft.com/t5/microsoft-developer-community/level-up-your-python-game-with-generative-ai-free-livestream/ba-p/4450646)
 
 ### The Reality of AI-Augmented Coding
@@ -226,7 +226,7 @@ The Schema Registry (preview) for Fabric Eventstreams enforces Avro-based contra
 - [What’s New in Fabric Warehouse: August 2025 Recap](https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-august-2025/)
 - [Introducing Schema Registry for Type-Safe Pipelines in Microsoft Fabric Eventstreams](https://blog.fabric.microsoft.com/en-US/blog/schema-registry-creating-type-safe-pipelines-using-schemas-and-eventstreams-preview/)
 - [Accelerating Data Ingestion from SQL to Fabric with Fast Copy in Dataflow](https://blog.fabric.microsoft.com/en-US/blog/accelerating-data-movement-by-using-fast-copy-to-unlock-performance-and-efficiency-during-data-ingestion-from-sql-database-in-fabric/)
-- [SQL Database in Fabric: What's New and Improved (Data Exposed Public Preview)]({{ "/2025-09-04-SQL-Database-in-Fabric-Whats-New-and-Improved-Data-Exposed-Public-Preview.html" | relative_url }})
+- [SQL Database in Fabric: What's New and Improved (Data Exposed Public Preview)]({{ "/videos/2025-09-04-SQL-Database-in-Fabric-Whats-New-and-Improved-Data-Exposed-Public-Preview.html" | relative_url }})
 
 ### Azure App Service: New Premium Hosting, Self-Service Scaling, and Platform Extensibility
 
@@ -260,7 +260,7 @@ The Logic Apps Aviators Newsletter for September 2025 highlights the latest impr
 These updates continue recent advancements in scalable automation, hybrid cloud integration, and developer tooling for cloud-connected business processes.
 
 - [Logic Apps Aviators Newsletter – September 25, 2025](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-september-25/ba-p/4450195)
-- [Azure Update - 5th September 2025]({{ "/2025-09-05-Azure-Update-5th-September-2025.html" | relative_url }})
+- [Azure Update - 5th September 2025]({{ "/videos/2025-09-05-Azure-Update-5th-September-2025.html" | relative_url }})
 
 ### Azure VMware Solution, Service Discovery, and Migration Guidance
 
@@ -308,8 +308,8 @@ The Blazor Internship Demo Fest highlights a new media component and improved na
 .NET MAUI’s Community Standup introduces Release Candidate 1, improved iPhone support, and new cross-platform features, with practical recommendations for mobile app delivery. Q&A and hands-on content help developers adapt to changing mobile targets—building on prior updates to release cycles and architectural patterns.
 
 - [Using and Authoring .NET Tools: Multi-Targeting, CI, and Best Practices](https://andrewlock.net/using-and-authoring-dotnet-tools/)
-- [Blazor Internship Demo Fest: New Components and Enhanced Navigation]({{ "/2025-09-04-Blazor-Internship-Demo-Fest-New-Components-and-Enhanced-Navigation.html" | relative_url }})
-- [.NET MAUI Community Standup: Release Candidates, iPhone Support, and Updates]({{ "/2025-09-04-NET-MAUI-Community-Standup-Release-Candidates-iPhone-Support-and-Updates.html" | relative_url }})
+- [Blazor Internship Demo Fest: New Components and Enhanced Navigation]({{ "/videos/2025-09-04-Blazor-Internship-Demo-Fest-New-Components-and-Enhanced-Navigation.html" | relative_url }})
+- [.NET MAUI Community Standup: Release Candidates, iPhone Support, and Updates]({{ "/videos/2025-09-04-NET-MAUI-Community-Standup-Release-Candidates-iPhone-Support-and-Updates.html" | relative_url }})
 
 ### VS Code and MCP: Workflow Automation and AI Integration
 
@@ -317,7 +317,7 @@ Reflecting last week’s work with MCP and Playwright, VS Code now has native MC
 
 Kent C. Dodds explains how automation, including authentication to AI coding support, fits into everyday development—demonstrating the shift from initial protocol configuration to stable production usage.
 
-- [Building an MCP Inside VS Code and Exploring AI's Impact with Kent C. Dodds]({{ "/2025-09-01-Building-an-MCP-Inside-VS-Code-and-Exploring-AIs-Impact-with-Kent-C-Dodds.html" | relative_url }})
+- [Building an MCP Inside VS Code and Exploring AI's Impact with Kent C. Dodds]({{ "/videos/2025-09-01-Building-an-MCP-Inside-VS-Code-and-Exploring-AIs-Impact-with-Kent-C-Dodds.html" | relative_url }})
 
 ## DevOps
 
@@ -366,7 +366,7 @@ Azure’s infrastructure security continues to get new features and certificatio
 
 Azure Linux 3.0 has received Level 1 CIS Benchmark certification for AKS node pools, supporting baseline compliance and easier audits, picking up on recent OS security improvements.
 
-- [Securely Managing Kubernetes Secrets with Secrets Store CSI Driver and Azure Key Vault](/2025-09-02-Securely-Managing-Kubernetes-Secrets-with-Secrets-Store-CSI-Driver-and-Azure-Key-Vault.html)
+- [Securely Managing Kubernetes Secrets with Secrets Store CSI Driver and Azure Key Vault](/videos/2025-09-02-Securely-Managing-Kubernetes-Secrets-with-Secrets-Store-CSI-Driver-and-Azure-Key-Vault.html)
 - [Securing Cloud Shell Access to Azure Kubernetes Service (AKS)](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/securing-cloud-shell-access-to-aks/ba-p/4450299)
 - [Azure Linux 3.0 Achieves Level 1 CIS Benchmark Certification](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-3-0-achieves-level-1-cis-benchmark-certification/ba-p/4450410)
 
@@ -392,8 +392,8 @@ A beginner’s guide to Entra ID introduces identity management as a security fo
 
 - [GA: Enhanced Audit in Azure Security Baseline for Linux](https://techcommunity.microsoft.com/t5/azure-governance-and-management/ga-enhanced-audit-in-azure-security-baseline-for-linux/ba-p/4446170)
 - [Azure Mandatory Multifactor Authentication: Phase 2 Launches October 2025](https://azure.microsoft.com/en-us/blog/azure-mandatory-multifactor-authentication-phase-2-starting-in-october-2025/)
-- [Beginners Guide to Entra ID](/2025-09-01-Beginners-Guide-to-Entra-ID.html)
-- [Zero Trust Workshop: Implementing Microsoft's Security Framework](/2025-09-03-Zero-Trust-Workshop-Implementing-Microsofts-Security-Framework.html)
+- [Beginners Guide to Entra ID](/videos/2025-09-01-Beginners-Guide-to-Entra-ID.html)
+- [Zero Trust Workshop: Implementing Microsoft's Security Framework](/videos/2025-09-03-Zero-Trust-Workshop-Implementing-Microsofts-Security-Framework.html)
 
 ### Code Scanning and Data Exfiltration Security in Developer Platforms
 
@@ -408,4 +408,4 @@ Microsoft Fabric now offers Workspace Outbound Access Protection (OAP) for Spark
 
 A newly published guide helps teams understand threat modeling for application security, offering checklists and actionable methods for every level of project maturity. This complements previous discussions about vulnerability management and secure development.
 
-- [Understanding Threat Modeling for Application Security](/2025-09-05-Understanding-Threat-Modeling-for-Application-Security.html)
+- [Understanding Threat Modeling for Application Security](/videos/2025-09-05-Understanding-Threat-Modeling-for-Application-Security.html)

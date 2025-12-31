@@ -7,7 +7,7 @@ excerpt_separator: <!--excerpt_end-->
 download-url: "https://the.download.url/for/the/magazine"
 viewing_mode: "external"
 date: 2025-01-01 00:00:00 +00:00
-permalink: "/2025-01-01-XPRT-Magazine-XX.html"
+permalink: "/community/2025-01-01-XPRT-Magazine-XX.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [A, Comma, Seperated, List, Of, Tags, Based, On, The, Contents, Of, The, Magazine, Spaces In A Tag, Are, Not Forbidden]
 tags_normalized: [a, comma, seperated, list, of, tags, based, on, the, contents, of, the, magazine, spaces in a tag, are, not forbidden]

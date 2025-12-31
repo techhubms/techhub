@@ -40,7 +40,7 @@ function Repair-MarkdownJekyll {
         }
     }
     else {
-        $markdownFiles = Get-MarkdownFiles -Root $Path -IncludeDirectoryPatterns @('_*', 'ai', 'github-copilot')
+        $markdownFiles = Get-MarkdownFiles -Root $Path -IncludeDirectoryPatterns @('collections/*', 'sections/*')
     }
 
     # Validate that we have files to process

@@ -83,7 +83,7 @@ A new demo shows .NET developers orchestrating multiple AI agents within a Blazo
 
 Microsoft’s upcoming ‘MCP Dev Days’ will dive deep into the Model Context Protocol, covering live IDE integrations, secure agent server construction, and rapid onboarding. MCP’s standardization will bring uniformity, secure onboarding, and easier model swapping, benefiting both enterprise and open-source projects.
 
-- [Orchestrating AI Agents in Blazor Using Microsoft Semantic Kernel]({{ "/2025-06-30-Orchestrating-AI-Agents-in-Blazor-Using-Microsoft-Semantic-Kernel.html" | relative_url }})
+- [Orchestrating AI Agents in Blazor Using Microsoft Semantic Kernel]({{ "/videos/2025-06-30-Orchestrating-AI-Agents-in-Blazor-Using-Microsoft-Semantic-Kernel.html" | relative_url }})
 - [Join Us for MCP Dev Days – July 29-30: Deep Dive into the Model Context Protocol](https://devblogs.microsoft.com/blog/join-us-for-mcp-dev-days-july-29-30)
 
 ### Evolving .NET AI Support and Local AI Workflows
@@ -92,7 +92,7 @@ The .NET AI Community Standup covered new AI/ML features in .NET 9, especially n
 
 Bruno Capuano’s guide to generating AltText in C# using local Ollama models illustrates practical, privacy-preserving AI running off the dev’s own machine. Leveraging ‘dotnet run app.cs’ for lightweight scripting, this workflow enables fast, offline, and compliant accessibility automation.
 
-- [.NET AI Community Standup - AI in .NET - What’s New, What’s Next]({{ "/2025-07-03-NET-AI-Community-Standup-AI-in-NET-Whats-New-Whats-Next.html" | relative_url }})
+- [.NET AI Community Standup - AI in .NET - What’s New, What’s Next]({{ "/videos/2025-07-03-NET-AI-Community-Standup-AI-in-NET-Whats-New-Whats-Next.html" | relative_url }})
 - [Local AI + .NET: Generate AltText with C# Scripts and Ollama](https://devblogs.microsoft.com/dotnet/alttext-generator-csharp-local-models/)
 
 ### Global AI Initiatives and Impact
@@ -111,7 +111,7 @@ July’s Azure Updates span secure hybrid deployments (Azure App Service on Stac
 
 Azure AI Foundry’s GA Agent Service (now with MCP support) simplifies model integration and agent deployment, introduces new foundation models (with advanced reasoning, video, and lightweight variants), and enables unified agent lifecycle management with improved SDKs and VS Code tooling. The release bolsters deployability, safety, and compliance for regulated AI scenarios.
 
-- [Azure Updates: Key Announcements for July 2025]({{ "/2025-07-04-Azure-Updates-Key-Announcements-for-July-2025.html" | relative_url }})
+- [Azure Updates: Key Announcements for July 2025]({{ "/videos/2025-07-04-Azure-Updates-Key-Announcements-for-July-2025.html" | relative_url }})
 - [What’s New in Azure AI Foundry: June 2025 Major Model Releases, Agent Service GA, and Developer Tools](https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-june-2025/)
 
 ### Performance, Extensibility, and Workflow Automation
@@ -120,7 +120,7 @@ Recent performance improvements in Azure Files—including metadata caching, SMB
 
 The Azure Developer CLI (azd) extensions framework (alpha) introduces modular, scriptable command add-ons for CI/CD, DevOps, and AI, supporting personalized and reusable CLI workflows. Open extensibility signals a move toward richer, community-driven automation and integrations.
 
-- [Azure Files Performance Upgrade]({{ "/2025-06-30-Azure-Files-Performance-Upgrade.html" | relative_url }})
+- [Azure Files Performance Upgrade]({{ "/videos/2025-06-30-Azure-Files-Performance-Upgrade.html" | relative_url }})
 - [Exploring Azure Developer CLI (azd) Extensions: Customizing Your Azure Development Workflow](https://devblogs.microsoft.com/azure-sdk/azd-extension-framework/)
 
 ### Secure, Scalable AI and Cloud-Native Data
@@ -153,7 +153,7 @@ The Azure SDK’s June 2025 update brought cross-language leaps: GA for stateful
 
 Through the .NET MAUI standup, Beth Massi and David Ortinau demonstrate how Blazor web apps can be rapidly adapted for native mobile platforms with full device feature access, while Azure AI Foundry tooling streamlines embedding AI. Community-driven resources and best practices further empower web/mobile/AI hybrid programming.
 
-- [.NET MAUI Community Standup - Blazor for Mobile with AI? Here's how.]({{ "/2025-07-04-NET-MAUI-Community-Standup-Blazor-for-Mobile-with-AI-Heres-how.html" | relative_url }})
+- [.NET MAUI Community Standup - Blazor for Mobile with AI? Here's how.]({{ "/videos/2025-07-04-NET-MAUI-Community-Standup-Blazor-for-Mobile-with-AI-Heres-how.html" | relative_url }})
 
 ## Security
 

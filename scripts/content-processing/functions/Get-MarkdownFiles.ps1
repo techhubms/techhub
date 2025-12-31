@@ -14,11 +14,11 @@ function Get-MarkdownFiles {
         [string[]]$ExcludeFilePatterns = @('*/AGENTS.md', 'AGENTS.md')
     )
 
-    $allFiles = Get-ChildItem -Path $Root -Recurse -File -Filter '*.md'
+    $allFiles = @(Get-ChildItem -Path $Root -Recurse -File -Filter '*.md')
     
     # Apply include filtering first if patterns are provided
     if ($IncludeDirectoryPatterns.Count -gt 0) {
-        $filteredFiles = $allFiles | Where-Object { 
+        $filteredFiles = @($allFiles | Where-Object { 
             $shouldInclude = $false
             $relativePath = $_.FullName.Substring($Root.Length).TrimStart('\', '/')
             foreach ($pattern in $IncludeDirectoryPatterns) {
@@ -28,14 +28,14 @@ function Get-MarkdownFiles {
                 }
             }
             return $shouldInclude
-        }
+        })
     } else {
-        $filteredFiles = $allFiles
+        $filteredFiles = @($allFiles)
     }
     
     # Apply exclude filtering if patterns are provided
     if ($ExcludeDirectoryPatterns.Count -gt 0 -or $ExcludeFilePatterns.Count -gt 0) {
-        $filteredFiles = $filteredFiles | Where-Object { 
+        $filteredFiles = @($filteredFiles | Where-Object { 
             $shouldExclude = $false
             $relativePath = $_.FullName.Substring($Root.Length).TrimStart('\', '/')
             
@@ -58,7 +58,7 @@ function Get-MarkdownFiles {
             }
             
             return -not $shouldExclude
-        }
+        })
     }
     
     # Log directory breakdown after filtering

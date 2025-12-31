@@ -108,10 +108,10 @@ MCP server extensions for VS Code provide faster documentation and quick databas
 A new GitHub Copilot Certification article reinforces responsible use, privacy, and test automation, extending earlier discussions on training, community education, and actual feature usage in development.
 
 - [Context Engineering Recipes: Using the Persona Pattern with GitHub Copilot](https://www.cooknwithcopilot.com/blog/context-engineering-recipes-persona-pattern.html)
-- [AI & GitHub Copilot: Modernizing Legacy Apps for the Cloud]({{ "/2025-10-24-AI-and-GitHub-Copilot-Modernizing-Legacy-Apps-for-the-Cloud.html" | relative_url }})
-- [Rapid Database Integration in VS Code with Microsoft Learn MCP Server and GitHub Copilot]({{ "/2025-10-22-Rapid-Database-Integration-in-VS-Code-with-Microsoft-Learn-MCP-Server-and-GitHub-Copilot.html" | relative_url }})
-- [Adding a Database to Your App with GitHub Copilot and Microsoft Docs MCP Server]({{ "/2025-10-25-Adding-a-Database-to-Your-App-with-GitHub-Copilot-and-Microsoft-Docs-MCP-Server.html" | relative_url }})
-- [What is Model Context Protocol (MCP) in GitHub Copilot?]({{ "/2025-10-24-What-is-Model-Context-Protocol-MCP-in-GitHub-Copilot.html" | relative_url }})
+- [AI & GitHub Copilot: Modernizing Legacy Apps for the Cloud]({{ "/videos/2025-10-24-AI-and-GitHub-Copilot-Modernizing-Legacy-Apps-for-the-Cloud.html" | relative_url }})
+- [Rapid Database Integration in VS Code with Microsoft Learn MCP Server and GitHub Copilot]({{ "/videos/2025-10-22-Rapid-Database-Integration-in-VS-Code-with-Microsoft-Learn-MCP-Server-and-GitHub-Copilot.html" | relative_url }})
+- [Adding a Database to Your App with GitHub Copilot and Microsoft Docs MCP Server]({{ "/videos/2025-10-25-Adding-a-Database-to-Your-App-with-GitHub-Copilot-and-Microsoft-Docs-MCP-Server.html" | relative_url }})
+- [What is Model Context Protocol (MCP) in GitHub Copilot?]({{ "/videos/2025-10-24-What-is-Model-Context-Protocol-MCP-in-GitHub-Copilot.html" | relative_url }})
 - [What Is the GitHub Copilot Certification and Why It Matters for Developers](https://dellenny.com/what-is-the-github-copilot-certification-and-why-it-matters-for-developers/)
 
 ### Copilot in Live Coding, Community, and Creative Use Cases
@@ -120,10 +120,10 @@ GitHub Universe and the ‘For the Love of Code’ hackathon highlighted Copilot
 
 Showcases of open-source projects using Copilot demonstrated both accessibility and unique deployment scenarios, following last week’s ‘No Bark’ case study. Tutorials on building a DJ app illustrated Copilot’s value for creative coding and prompt-driven experiments.
 
-- [VS Code Live Coding with GitHub Copilot at GitHub Universe]({{ "/2025-10-23-VS-Code-Live-Coding-with-GitHub-Copilot-at-GitHub-Universe.html" | relative_url }})
-- [VS Code Live at GitHub Universe: Live Coding with Copilot]({{ "/2025-10-23-VS-Code-Live-at-GitHub-Universe-Live-Coding-with-Copilot.html" | relative_url }})
+- [VS Code Live Coding with GitHub Copilot at GitHub Universe]({{ "/videos/2025-10-23-VS-Code-Live-Coding-with-GitHub-Copilot-at-GitHub-Universe.html" | relative_url }})
+- [VS Code Live at GitHub Universe: Live Coding with Copilot]({{ "/videos/2025-10-23-VS-Code-Live-at-GitHub-Universe-Live-Coding-with-Copilot.html" | relative_url }})
 - [For the Love of Code: GitHub Hackathon Winners Showcase Creative Projects with Copilot](https://github.blog/open-source/from-karaoke-terminals-to-ai-resumes-the-winners-of-githubs-for-the-love-of-code-challenge/)
-- [Live-Coding a DJ App with VS Code and GitHub Copilot]({{ "/2025-10-21-Live-Coding-a-DJ-App-with-VS-Code-and-GitHub-Copilot.html" | relative_url }})
+- [Live-Coding a DJ App with VS Code and GitHub Copilot]({{ "/videos/2025-10-21-Live-Coding-a-DJ-App-with-VS-Code-and-GitHub-Copilot.html" | relative_url }})
 
 ### Contextual AI and Copilot Highlights in Documentation
 
@@ -131,7 +131,7 @@ Copilot Highlights in Microsoft Learn documentation are refining delivery method
 
 Tutorials for maintaining community health files now include Copilot-supported automation for ongoing compliance and iterative updating. These enhancements help to reduce manual maintenance and improve prompt strategies for better context assistance.
 
-- [AI-Powered Enhancements in Microsoft Learn Developer Docs with Copilot Highlights]({{ "/2025-10-21-AI-Powered-Enhancements-in-Microsoft-Learn-Developer-Docs-with-Copilot-Highlights.html" | relative_url }})
+- [AI-Powered Enhancements in Microsoft Learn Developer Docs with Copilot Highlights]({{ "/videos/2025-10-21-AI-Powered-Enhancements-in-Microsoft-Learn-Developer-Docs-with-Copilot-Highlights.html" | relative_url }})
 - [Streamline Community Health Files with AI and GitHub Copilot](https://github.blog/ai-and-ml/github-copilot/how-to-update-community-health-files-with-ai/)
 
 ### Advanced Usage, Education, and Developer Adaptation
@@ -140,7 +140,7 @@ New education and advanced usage guides build on last week's podcast discussions
 
 Reviews of how Copilot affects software engineer and student workflows extend last week’s focus on AI agents, productivity, and project speed using MCP and Copilot CLI. Automatic documentation, test creation, and code review for large codebases continue to be central, promoting updates in curriculum and organizational adoption as Copilot gains traction.
 
-- [Mastering Chat Modes in VS Code with Burke Holland]({{ "/2025-10-20-Mastering-Chat-Modes-in-VS-Code-with-Burke-Holland.html" | relative_url }})
+- [Mastering Chat Modes in VS Code with Burke Holland]({{ "/videos/2025-10-20-Mastering-Chat-Modes-in-VS-Code-with-Burke-Holland.html" | relative_url }})
 - [How Software Engineers and Students Use AI to Move Faster than Ever (without breaking things)](https://devops.com/how-software-engineers-and-students-use-ai-to-move-faster-than-ever-without-breaking-things/)
 - [Your 6-Step Guide to Deploying a Website with GitHub Codespaces and Copilot Agent Mode](https://devblogs.microsoft.com/all-things-azure/your-6-step-guide-to-deploying-a-website-with-github-codespaces-and-copilot-agent-mode/)
 
@@ -155,13 +155,13 @@ Advancing last week’s discussion of MCP and agent-based workflows, Agent Frame
 Multi-agent coordination with MCP and audit features carry forward the open-source registry approach for enterprise adoption. New SentinelStep and SentinelBench tools are maturing agent lifecycle and reliability standards for sustained workloads.
 
 - [Upgrading to Microsoft Agent Framework in Your .NET AI Chat App](https://devblogs.microsoft.com/dotnet/upgrading-to-microsoft-agent-framework-in-your-dotnet-ai-chat-app/)
-- [.NET AI Community Standup: Microsoft Agent Framework Workflows & Migration]({{ "/2025-10-20-NET-AI-Community-Standup-Microsoft-Agent-Framework-Workflows-and-Migration.html" | relative_url }})
+- [.NET AI Community Standup: Microsoft Agent Framework Workflows & Migration]({{ "/videos/2025-10-20-NET-AI-Community-Standup-Microsoft-Agent-Framework-Workflows-and-Migration.html" | relative_url }})
 - [Multi-Agent Orchestration in Enterprise AI with Microsoft Agent Framework](https://devblogs.microsoft.com/semantic-kernel/unlocking-enterprise-ai-complexity-multi-agent-orchestration-with-the-microsoft-agent-framework/)
 - [Build Long-Running AI Agents on Azure App Service with Microsoft Agent Framework](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-long-running-ai-agents-on-azure-app-service-with-microsoft/ba-p/4463159)
 - [Orchestrating Multi-Agent Intelligence with Microsoft Agent Framework and MCP](https://techcommunity.microsoft.com/t5/microsoft-developer-community/orchestrating-multi-agent-intelligence-mcp-driven-patterns-in/ba-p/4462150)
 - [Building Persistent Monitoring Agents with SentinelStep in Magentic-UI](https://www.microsoft.com/en-us/research/blog/tell-me-when-building-agents-that-can-wait-monitor-and-act/)
-- [Microsoft Agent Framework WorkFlows Explained]({{ "/2025-10-22-Microsoft-Agent-Framework-WorkFlows-Explained.html" | relative_url }})
-- [Microsoft Agent Framework Workflows: Deep Dive and Advanced Concepts]({{ "/2025-10-22-Microsoft-Agent-Framework-Workflows-Deep-Dive-and-Advanced-Concepts.html" | relative_url }})
+- [Microsoft Agent Framework WorkFlows Explained]({{ "/videos/2025-10-22-Microsoft-Agent-Framework-WorkFlows-Explained.html" | relative_url }})
+- [Microsoft Agent Framework Workflows: Deep Dive and Advanced Concepts]({{ "/videos/2025-10-22-Microsoft-Agent-Framework-Workflows-Deep-Dive-and-Advanced-Concepts.html" | relative_url }})
 
 ### Adaptive AI: Signals Loops, Agentic Lifecycle, and Fine-Tuning in Azure AI Foundry
 
@@ -182,8 +182,8 @@ Azure AI Foundry Local advances last week's toolkit discussion, offering local a
 SDKs designed for multiple frameworks, support for low-latency inference, and GPU acceleration tutorials continue last week’s focus on automation and container hosting. These features expand agentic AI intelligence to edge and on-prem infrastructure.
 
 - [A Developer’s Guide to Edge AI with Microsoft Foundry Local](https://techcommunity.microsoft.com/t5/microsoft-developer-community/transform-your-ai-applications-with-local-llm-deployment/ba-p/4462829)
-- [Understanding Azure AI Foundry Local: On-Premises AI for Privacy and Security]({{ "/2025-10-22-Understanding-Azure-AI-Foundry-Local-On-Premises-AI-for-Privacy-and-Security.html" | relative_url }})
-- [What is Azure AI Foundry Local?]({{ "/2025-10-22-What-is-Azure-AI-Foundry-Local.html" | relative_url }})
+- [Understanding Azure AI Foundry Local: On-Premises AI for Privacy and Security]({{ "/videos/2025-10-22-Understanding-Azure-AI-Foundry-Local-On-Premises-AI-for-Privacy-and-Security.html" | relative_url }})
+- [What is Azure AI Foundry Local?]({{ "/videos/2025-10-22-What-is-Azure-AI-Foundry-Local.html" | relative_url }})
 
 ### Retrieval-Augmented Generation and Hybrid Search: Building Smarter Enterprise Applications
 
@@ -205,20 +205,20 @@ Articles focus on authentication, CI/CD automation, and allowlist management, bu
 
 Open source agent extensions and developer automation continue the series of updates related to Copilot Studio and developer-tier guides. The SRE Agent and community modules keep building out the ecosystem with flexible, modular AI developer tools—a shift begun last week. New extensions make it easier to increase productivity and adapt to workflow changes.
 
-- [Advancements in Developer Agents: Task Automation and Open Source Extensions]({{ "/2025-10-24-Advancements-in-Developer-Agents-Task-Automation-and-Open-Source-Extensions.html" | relative_url }})
-- [Agents for Developers: Latest Advancements in Developer Productivity]({{ "/2025-10-24-Agents-for-Developers-Latest-Advancements-in-Developer-Productivity.html" | relative_url }})
+- [Advancements in Developer Agents: Task Automation and Open Source Extensions]({{ "/videos/2025-10-24-Advancements-in-Developer-Agents-Task-Automation-and-Open-Source-Extensions.html" | relative_url }})
+- [Agents for Developers: Latest Advancements in Developer Productivity]({{ "/videos/2025-10-24-Agents-for-Developers-Latest-Advancements-in-Developer-Productivity.html" | relative_url }})
 
 ### Small Language Models and Local Agentic Workflows in .NET
 
 New tutorials on small language models in .NET expand last week’s focus on agent orchestration and autonomous workflows built with Semantic Kernel. Step-by-step articles provide code samples for embedding retrieval-augmented generation and agentic patterns locally, transitioning from theory to actionable implementation.
 
-- [Building Agentic AI Systems in .NET with Local SLMs]({{ "/2025-10-22-Building-Agentic-AI-Systems-in-NET-with-Local-SLMs.html" | relative_url }})
+- [Building Agentic AI Systems in .NET with Local SLMs]({{ "/videos/2025-10-22-Building-Agentic-AI-Systems-in-NET-with-Local-SLMs.html" | relative_url }})
 
 ### Multi-Agent Orchestration: Patterns and Practical Integration with Azure AI Foundry
 
 Azure Essentials guides advance last week’s coverage of modular orchestration frameworks, now introducing reusable patterns and advanced integration options. The move from concepts to practical cloud-native multi-agent governance is supported with actionable resources.
 
-- [Optimize Complex Workflows with Multi-Agent AI Patterns in Azure]({{ "/2025-10-23-Optimize-Complex-Workflows-with-Multi-Agent-AI-Patterns-in-Azure.html" | relative_url }})
+- [Optimize Complex Workflows with Multi-Agent AI Patterns in Azure]({{ "/videos/2025-10-23-Optimize-Complex-Workflows-with-Multi-Agent-AI-Patterns-in-Azure.html" | relative_url }})
 - [Optimize Complex Workflows Using Multi-Agent AI Patterns](https://www.thomasmaurer.ch/2025/10/optimize-complex-workflows-using-multi-agent-ai-patterns/)
 
 ### Microsoft Copilot Studio: Expanded Customization, Automation, Integration
@@ -239,7 +239,7 @@ Progress in code security and validation for AI-generated output builds on last 
 Workflow modularity and reuse continue to stand out, following last week’s cataloging focus. New guides present strategies for versioning, repeatable design, and future agentic interfaces in web development—helping teams achieve operational efficiency and plan durable projects.
 
 - [Don’t Reinvent the Wheel: A Developer’s Guide to AI Reusability](https://devops.com/dont-reinvent-the-wheel-a-developers-guide-to-ai-reusability/)
-- [The Future of Web Development with AI Integration]({{ "/2025-10-21-The-Future-of-Web-Development-with-AI-Integration.html" | relative_url }})
+- [The Future of Web Development with AI Integration]({{ "/videos/2025-10-21-The-Future-of-Web-Development-with-AI-Integration.html" | relative_url }})
 
 ### AI, Cloud, and Security for Startups: Ignite 2025 Conference
 
@@ -297,7 +297,7 @@ Community highlights continue to bring attention to MVPs and new tutorials, sust
 
 - [Unlock Real-Time Intelligence with the Eventhouse Endpoint for Lakehouse](https://blog.fabric.microsoft.com/en-US/blog/unlock-real-time-intelligence-with-the-eventhouse-endpoint-for-lakehouse/)
 - [External Data Materialization Strategies in Fabric Data Warehouse](https://blog.fabric.microsoft.com/en-US/blog/external-data-materialization-in-fabric-data-warehouse/)
-- [Enhanced Performance Dashboard for SQL Databases in Microsoft Fabric]({{ "/2025-10-23-Enhanced-Performance-Dashboard-for-SQL-Databases-in-Microsoft-Fabric.html" | relative_url }})
+- [Enhanced Performance Dashboard for SQL Databases in Microsoft Fabric]({{ "/videos/2025-10-23-Enhanced-Performance-Dashboard-for-SQL-Databases-in-Microsoft-Fabric.html" | relative_url }})
 - [Fabric Influencers Spotlight October 2025: Microsoft Fabric Community Highlights](https://blog.fabric.microsoft.com/en-US/blog/29208/)
 
 ### Microsoft Fabric Data Engineering: Secure Connectivity and API Compatibility
@@ -345,12 +345,12 @@ New security tools and hybrid features help administrators audit and enable Wind
 - [Fully Managed Cloud-to-Cloud Transfers with Azure Storage Mover](https://azure.microsoft.com/en-us/blog/fully-managed-cloud-to-cloud-transfers-with-azure-storage-mover/)
 - [Step-by-Step: Using Copy Job to Move Data Across Tenants in Fabric Data Factory](https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-copy-data-across-tenants-using-copy-job-in-fabric-data-factory/)
 - [Optimize Azure Local Deployments with the Well-Architected Review Assessment](https://techcommunity.microsoft.com/t5/azure-architecture-blog/optimize-azure-local-using-insights-from-a-well-architected/ba-p/4458433)
-- [Understanding Azure Availability Zone Mappings for Subscriptions]({{ "/2025-10-22-Understanding-Azure-Availability-Zone-Mappings-for-Subscriptions.html" | relative_url }})
-- [Azure Managed Redis Deep Dive]({{ "/2025-10-20-Azure-Managed-Redis-Deep-Dive.html" | relative_url }})
+- [Understanding Azure Availability Zone Mappings for Subscriptions]({{ "/videos/2025-10-22-Understanding-Azure-Availability-Zone-Mappings-for-Subscriptions.html" | relative_url }})
+- [Azure Managed Redis Deep Dive]({{ "/videos/2025-10-20-Azure-Managed-Redis-Deep-Dive.html" | relative_url }})
 - [Azure Pricing Calculator: Estimate Smarter, Plan Confidently](https://www.thomasmaurer.ch/2025/10/azure-pricing-calculator-estimate-smarter-plan-confidently/)
 - [Driving Change with Migration to Azure SQL Managed Instance](https://www.microsoft.com/en-us/sql-server/blog/2025/10/20/innovation-spotlight-how-3-customers-are-driving-change-with-migration-to-azure-sql/)
 - [Capacity Usage Now Enabled for Test Capability in Fabric User Data Functions](https://blog.fabric.microsoft.com/en-US/blog/capacity-usage-enabled-date-for-test-capability-in-user-data-functions/)
-- [Azure Weekly Update: Python 3.13 Functions, AKS Linux 3.0, Storage Mover, and More (24th October 2025)]({{ "/2025-10-24-Azure-Weekly-Update-Python-313-Functions-AKS-Linux-30-Storage-Mover-and-More-24th-October-2025.html" | relative_url }})
+- [Azure Weekly Update: Python 3.13 Functions, AKS Linux 3.0, Storage Mover, and More (24th October 2025)]({{ "/videos/2025-10-24-Azure-Weekly-Update-Python-313-Functions-AKS-Linux-30-Storage-Mover-and-More-24th-October-2025.html" | relative_url }})
 
 ## Coding
 
@@ -364,15 +364,15 @@ Additional material on CSG nodes assists with 3D game development. Beginners hav
 
 Core guides reinforce onboarding, covering player controls, user interfaces, and C# scripting integration. Tutorials on scripting basics—input mapping, movement, lifecycle methods, inspector variables, and debugging in VS Code—reflect last week's focus on tool improvement and step-by-step learning.
 
-- [Building Responsive UI in Godot C# with Control Nodes]({{ "/2025-10-22-Building-Responsive-UI-in-Godot-C-with-Control-Nodes.html" | relative_url }})
-- [Interactions in Godot C#: Handling Player Input with Signals and Collision Detection]({{ "/2025-10-22-Interactions-in-Godot-C-Handling-Player-Input-with-Signals-and-Collision-Detection.html" | relative_url }})
-- [Prototyping Game Environments in Godot C# with CSG Nodes]({{ "/2025-10-22-Prototyping-Game-Environments-in-Godot-C-with-CSG-Nodes.html" | relative_url }})
-- [Scenes and Nodes - The Core Building Blocks in Godot with C# (Part 4 of 9)]({{ "/2025-10-22-Scenes-and-Nodes-The-Core-Building-Blocks-in-Godot-with-C-Part-4-of-9.html" | relative_url }})
-- [Installing Godot with .NET and Setting Up VS Code for C# Game Development]({{ "/2025-10-22-Installing-Godot-with-NET-and-Setting-Up-VS-Code-for-C-Game-Development.html" | relative_url }})
-- [Introduction to Game Development with C# in Godot: Beginner Essentials]({{ "/2025-10-22-Introduction-to-Game-Development-with-C-in-Godot-Beginner-Essentials.html" | relative_url }})
-- [Scripting Basics in Godot: Writing and Attaching C# Scripts (Part 5 of 9)]({{ "/2025-10-22-Scripting-Basics-in-Godot-Writing-and-Attaching-C-Scripts-Part-5-of-9.html" | relative_url }})
-- [Engine Overview: Navigating the Godot Editor with C# (Part 3 of 9)]({{ "/2025-10-22-Engine-Overview-Navigating-the-Godot-Editor-with-C-Part-3-of-9.html" | relative_url }})
-- [Debugging Godot C# Games with Visual Studio Code (Godot Series, Part 6)]({{ "/2025-10-22-Debugging-Godot-C-Games-with-Visual-Studio-Code-Godot-Series-Part-6.html" | relative_url }})
+- [Building Responsive UI in Godot C# with Control Nodes]({{ "/videos/2025-10-22-Building-Responsive-UI-in-Godot-C-with-Control-Nodes.html" | relative_url }})
+- [Interactions in Godot C#: Handling Player Input with Signals and Collision Detection]({{ "/videos/2025-10-22-Interactions-in-Godot-C-Handling-Player-Input-with-Signals-and-Collision-Detection.html" | relative_url }})
+- [Prototyping Game Environments in Godot C# with CSG Nodes]({{ "/videos/2025-10-22-Prototyping-Game-Environments-in-Godot-C-with-CSG-Nodes.html" | relative_url }})
+- [Scenes and Nodes - The Core Building Blocks in Godot with C# (Part 4 of 9)]({{ "/videos/2025-10-22-Scenes-and-Nodes-The-Core-Building-Blocks-in-Godot-with-C-Part-4-of-9.html" | relative_url }})
+- [Installing Godot with .NET and Setting Up VS Code for C# Game Development]({{ "/videos/2025-10-22-Installing-Godot-with-NET-and-Setting-Up-VS-Code-for-C-Game-Development.html" | relative_url }})
+- [Introduction to Game Development with C# in Godot: Beginner Essentials]({{ "/videos/2025-10-22-Introduction-to-Game-Development-with-C-in-Godot-Beginner-Essentials.html" | relative_url }})
+- [Scripting Basics in Godot: Writing and Attaching C# Scripts (Part 5 of 9)]({{ "/videos/2025-10-22-Scripting-Basics-in-Godot-Writing-and-Attaching-C-Scripts-Part-5-of-9.html" | relative_url }})
+- [Engine Overview: Navigating the Godot Editor with C# (Part 3 of 9)]({{ "/videos/2025-10-22-Engine-Overview-Navigating-the-Godot-Editor-with-C-Part-3-of-9.html" | relative_url }})
+- [Debugging Godot C# Games with Visual Studio Code (Godot Series, Part 6)]({{ "/videos/2025-10-22-Debugging-Godot-C-Games-with-Visual-Studio-Code-Godot-Series-Part-6.html" | relative_url }})
 
 ### .NET Ecosystem: Migration, Sponsorship, and Caching
 
@@ -396,7 +396,7 @@ Updates in security and routing include new guides on adding metadata to ASP.NET
 
 Developer stories and DIY toolmaking continue from last week, highlighted by a GitHub Podcast discussing motivations for building custom utilities and Copilot’s role in supporting those efforts. The episode extends coverage on workflow personalization, toolchain improvement, and script development.
 
-- [Building Tools and the Future of DIY Development: GitHub Podcast Episode 3]({{ "/2025-10-25-Building-Tools-and-the-Future-of-DIY-Development-GitHub-Podcast-Episode-3.html" | relative_url }})
+- [Building Tools and the Future of DIY Development: GitHub Podcast Episode 3]({{ "/videos/2025-10-25-Building-Tools-and-the-Future-of-DIY-Development-GitHub-Podcast-Episode-3.html" | relative_url }})
 
 ## DevOps
 
@@ -465,7 +465,7 @@ Log4Shell continues to be a central issue. Deep analysis shows the technical det
 A video interview with Log4j’s Christian Grobmeier adds perspective, sharing crisis details and team challenges. Topics covered include the importance of education, funding, trust, and governance, as well as the emerging relationship between AI and security. These resources offer meaningful insights for anyone facing zero-day exploits in open ecosystems.
 
 - [Inside the Log4Shell Breach: Lessons in Open Source Security and Sustainability](https://github.blog/open-source/inside-the-breach-that-broke-the-internet-the-untold-story-of-log4shell/)
-- [The Untold Story of Log4j and Log4Shell: Inside the Crisis with Christian Grobmeier]({{ "/2025-10-20-The-Untold-Story-of-Log4j-and-Log4Shell-Inside-the-Crisis-with-Christian-Grobmeier.html" | relative_url }})
+- [The Untold Story of Log4j and Log4Shell: Inside the Crisis with Christian Grobmeier]({{ "/videos/2025-10-20-The-Untold-Story-of-Log4j-and-Log4Shell-Inside-the-Crisis-with-Christian-Grobmeier.html" | relative_url }})
 
 ### Security Analysis and Automation in Enterprise Azure Workloads
 
@@ -502,6 +502,6 @@ Microsoft Security Store enters public preview, unifying security software provi
 
 - [Harden Your Identity Defense with Microsoft Defender and Entra: Enhanced ITDR and Unified Insights](https://www.microsoft.com/en-us/security/blog/2025/10/23/harden-your-identity-defense-with-improved-protection-deeper-correlation-and-richer-context/)
 - [Implementing Row and Column Level Security for Spark in OneLake](https://blog.fabric.microsoft.com/en-US/blog/how-spark-supports-onelake-security-with-row-and-column-level-security-policies/)
-- [ASP.NET Community Standup: Understanding the MCP Authorization Flow]({{ "/2025-10-21-ASPNET-Community-Standup-Understanding-the-MCP-Authorization-Flow.html" | relative_url }})
+- [ASP.NET Community Standup: Understanding the MCP Authorization Flow]({{ "/videos/2025-10-21-ASPNET-Community-Standup-Understanding-the-MCP-Authorization-Flow.html" | relative_url }})
 - [Cycode Unveils AI Tool and Platform Detection for Application Security Teams](https://devops.com/cycode-previews-ability-to-identify-ai-tools-and-platforms-used-to-write-code/)
 - [The New Microsoft Security Store: Unifying Partners and Innovation for Stronger Security](https://www.microsoft.com/en-us/security/blog/2025/10/21/the-new-microsoft-security-store-unites-partners-and-innovation/)

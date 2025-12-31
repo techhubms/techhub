@@ -196,7 +196,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/"
 date: 2025-03-17 15:00:10 +00:00
-permalink: "/2025-03-17-Introducing-automatic-documentation-comment-generation-in-Visual-Studio.html"
+permalink: "/news/2025-03-17-Introducing-automatic-documentation-comment-generation-in-Visual-Studio.html"
 tags: ["AI", "Code Comments", "Developer Tools", "Docs", "Documentation", "GitHub Copilot", "News", "Productivity", "Visual Studio"]
 tags_normalized: ["ai", "code comments", "developer tools", "docs", "documentation", "github copilot", "news", "productivity", "visual studio"]
 ---

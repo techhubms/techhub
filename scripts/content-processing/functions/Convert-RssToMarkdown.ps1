@@ -281,6 +281,14 @@ function Convert-RssToMarkdown {
 
             # Create the file
             $filePath = Join-Path $item.OutputDir $filename
+            
+            # Ensure OutputDir is relative to source root (convert _news to collections/_news)
+            if ($item.OutputDir -match '^_(.+)$') {
+                $collectionName = $matches[1]
+                $fullOutputDir = Join-Path $sourceRoot "collections" "_$collectionName"
+                $filePath = Join-Path $fullOutputDir $filename
+            }
+            
             if ($PSCmdlet.ShouldProcess($filePath, "Save markdown file")) {
                 # Save content
                 Set-Content -Path $filePath -Value $markdownContent -Encoding UTF8 -Force

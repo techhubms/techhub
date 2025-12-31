@@ -81,6 +81,7 @@ function Get-MainContentFromHtml {
                     @{ Pattern = '<section[^>]*\s+class="[^"]*mssrc-block-content-block[^"]*"[^>]*>'; TagName = "section"; Name = "mssrc-block-content-block section" },
                     
                     # High priority: Content-specific classes (editorial intent)
+                    @{ Pattern = '<div[^>]*\s+class="[^"]*page-content[^"]*"[^>]*>'; TagName = "div"; Name = "page-content class (unlocked.microsoft.com)" },
                     @{ Pattern = '<div[^>]*\s+class="[^"]*article-main-content[^"]*"[^>]*>'; TagName = "div"; Name = "article-main-content class (partner.microsoft.com)" },
                     @{ Pattern = '<div[^>]*\s+class="[^"]*blog-content[^"]*"[^>]*>'; TagName = "div"; Name = "blog-content class component" },
                     @{ Pattern = '<div[^>]*\s+class="[^"]*entry-content[^"]*"[^>]*>'; TagName = "div"; Name = "entry-content class" },
