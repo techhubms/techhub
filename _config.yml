@@ -12,6 +12,10 @@ theme: minima
 plugins:
   - jekyll-seo-tag
 
+# Disable jekyll-feed (included by minima theme)
+disable:
+  - jekyll-feed
+
 # Collections directory - all collections are stored in /collections
 collections_dir: collections
 
