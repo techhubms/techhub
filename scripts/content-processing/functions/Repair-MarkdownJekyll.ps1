@@ -40,7 +40,7 @@ function Repair-MarkdownJekyll {
         }
     }
     else {
-        $markdownFiles = Get-MarkdownFiles -Root $Path -IncludeDirectoryPatterns @('collections/*', 'sections/*')
+        $markdownFiles = Get-MarkdownFiles -Root $Path -IncludeDirectoryPatterns @('collections/*', 'sections/*') -ExcludeFilePatterns @('*/AGENTS.md', 'AGENTS.md', 'collections/*.md')
     }
 
     # Validate that we have files to process

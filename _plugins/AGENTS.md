@@ -112,9 +112,9 @@ _plugins/
 {{ site.blogs | limit_with_same_day: 10 }}
 ```
 
-**limit_with_same_day Filter**: Applies server-side content limiting with collection-aware rule plus 7-day recency filter:
+**limit_with_same_day Filter**: Applies server-side content limiting with collection-aware rule plus 30-day recency filter:
 
-- **7-day recency filter**: Excludes all items older than 7 days from current date
+- **30-day recency filter**: Excludes all items older than 30 days from current date
 - **Collection grouping**: Groups remaining items by collection first
 - **Configurable per-collection limiting**: Applies "N + same-day" rule to each collection independently (default N=20)
 - **Fair representation**: Ensures fair representation across all collections

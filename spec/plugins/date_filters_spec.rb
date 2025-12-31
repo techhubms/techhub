@@ -269,20 +269,20 @@ RSpec.describe Jekyll::DateFilters do
       expect(filter_tester.limit_with_same_day([])).to eq([])
     end
 
-    it 'excludes items older than 7 days' do
+    it 'excludes items older than 30 days' do
       allow(DateUtils).to receive(:now_epoch).and_return(Time.parse('2025-01-15 00:00:00').to_i)
       
       recent_items = [
         { 'date' => '2025-01-15', 'collection' => 'news' }, # Today
         { 'date' => '2025-01-14', 'collection' => 'news' }, # 1 day ago
-        { 'date' => '2025-01-09', 'collection' => 'news' }, # 6 days ago
-        { 'date' => '2025-01-08', 'collection' => 'news' }, # 7 days ago (boundary)
+        { 'date' => '2024-12-20', 'collection' => 'news' }, # 26 days ago
+        { 'date' => '2024-12-16', 'collection' => 'news' }, # 30 days ago (boundary)
       ]
       
       old_items = [
-        { 'date' => '2025-01-07', 'collection' => 'news' }, # 8 days ago (should be excluded)
-        { 'date' => '2025-01-01', 'collection' => 'news' }, # 14 days ago (should be excluded)
-        { 'date' => '2024-12-01', 'collection' => 'news' }, # Very old (should be excluded)
+        { 'date' => '2024-12-15', 'collection' => 'news' }, # 31 days ago (should be excluded)
+        { 'date' => '2024-12-01', 'collection' => 'news' }, # 45 days ago (should be excluded)
+        { 'date' => '2024-11-01', 'collection' => 'news' }, # Very old (should be excluded)
       ]
       
       all_items = recent_items + old_items
@@ -301,10 +301,10 @@ RSpec.describe Jekyll::DateFilters do
       
       result = filter_tester.limit_with_same_day(all_items)
       
-      # Should only include items from the last 7 days
+      # Should only include items from the last 30 days
       expect(result.length).to eq(4) # All recent items
       result_dates = result.map { |item| item['date'] }.sort
-      expect(result_dates).to eq(['2025-01-08', '2025-01-09', '2025-01-14', '2025-01-15'])
+      expect(result_dates).to eq(['2024-12-16', '2024-12-20', '2025-01-14', '2025-01-15'])
     end
 
     context 'with multiple collections' do
@@ -341,7 +341,7 @@ RSpec.describe Jekyll::DateFilters do
           end
         end
         
-        # Mock 7-day filtering to return current epoch time and properly handle recency
+        # Mock 30-day filtering to return current epoch time and properly handle recency
         current_epoch = Time.now.to_i
         
         allow(DateUtils).to receive(:now_epoch).and_return(current_epoch)

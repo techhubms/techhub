@@ -793,7 +793,7 @@ module Jekyll
 
 
     # Calculate count of items within a date range
-    # Usage: {{ items | count_items_in_date_range: 7 }} (last 7 days)
+    # Usage: {{ items | count_items_in_date_range: 30 }} (last 30 days)
     # Usage: {{ items | count_items_in_date_range: 0 }} (today only)
     def count_items_in_date_range(items, days)
       return 0 if items.nil? || !items.respond_to?(:count)
