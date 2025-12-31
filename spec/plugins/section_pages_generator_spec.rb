@@ -38,9 +38,9 @@ RSpec.describe Jekyll::SectionPagesGenerator do
             'description' => 'Latest AI news'
           },
           {
-            'title' => 'Posts',
-            'collection' => 'posts',
-            'description' => 'AI blog posts'
+            'title' => 'Blogs',
+            'collection' => 'blogs',
+            'description' => 'AI Blogs'
           },
           {
             'title' => 'A(i) to Z',
@@ -115,7 +115,7 @@ RSpec.describe Jekyll::SectionPagesGenerator do
       
       expect(content).to include('Dynamic collection page')
       expect(content).to include('include filters.html')
-      expect(content).to include('include posts.html')
+      expect(content).to include('include items.html')
     end
   end
 
@@ -129,12 +129,12 @@ RSpec.describe Jekyll::SectionPagesGenerator do
       expect(site.pages.length).to be >= initial_page_count + 2
       
       # Check that section index pages have the expected data
-      ai_page = site.pages.find { |page| page.data['section'] == 'ai' && page.name == 'index.md' }
+      ai_page = site.pages.find { |page| page.data['section'] == 'ai' && page.name == 'ai.html' }
       expect(ai_page).not_to be_nil
       expect(ai_page.data['layout']).to eq('home')
       expect(ai_page.data['title']).to eq('AI')
       
-      copilot_page = site.pages.find { |page| page.data['section'] == 'github-copilot' && page.name == 'index.md' }
+      copilot_page = site.pages.find { |page| page.data['section'] == 'github-copilot' && page.name == 'github-copilot.html' }
       expect(copilot_page).not_to be_nil
       expect(copilot_page.data['layout']).to eq('home')
       expect(copilot_page.data['title']).to eq('GitHub Copilot')
@@ -162,12 +162,12 @@ RSpec.describe Jekyll::SectionPagesGenerator do
       expect(news_page.data['layout']).to eq('page')
       expect(news_page.data['title']).to eq('News')
       
-      # Should generate posts page for AI section (has collection field)
-      posts_page = nil
+      # Should generate blogs page for AI section (has collection field)
+      blogs_page = nil
       site.pages.each do |page|
         begin
-          if page.data['section'] == 'ai' && page.data['collection'] == 'posts'
-            posts_page = page
+          if page.data['section'] == 'ai' && page.data['collection'] == 'blogs'
+            blogs_page = page
             break
           end
         rescue ArgumentError
@@ -175,9 +175,9 @@ RSpec.describe Jekyll::SectionPagesGenerator do
           next
         end
       end
-      expect(posts_page).not_to be_nil
-      expect(posts_page.data['layout']).to eq('page')
-      expect(posts_page.data['title']).to eq('Posts')
+      expect(blogs_page).not_to be_nil
+      expect(blogs_page.data['layout']).to eq('page')
+      expect(blogs_page.data['title']).to eq('Blogs')
       
       # Should generate community page for GitHub Copilot section (has collection field)
       community_page = nil
@@ -311,7 +311,7 @@ RSpec.describe Jekyll::SectionPagesGenerator do
       content = generator.send(:generate_collection_page_content, section_data, collection_data)
       
       expect(content).to include('section=page.section')
-      expect(content).to include('{% include posts.html')
+      expect(content).to include('{% include items.html')
     end
 
     it 'sets correct index_tag_mode for collection pages' do
@@ -333,14 +333,14 @@ RSpec.describe Jekyll::SectionPagesGenerator do
       
       # Check that index pages are created with correct names
       ai_index = nil
-      site.pages.each { |page| ai_index = page if page.data['section'] == 'ai' && page.name == 'index.md' }
+      site.pages.each { |page| ai_index = page if page.data['section'] == 'ai' && page.name == 'ai.html' }
       expect(ai_index).not_to be_nil
-      expect(ai_index.name).to eq('index.md')
+      expect(ai_index.name).to eq('ai.html')
       
       copilot_index = nil
-      site.pages.each { |page| copilot_index = page if page.data['section'] == 'github-copilot' && page.name == 'index.md' }
+      site.pages.each { |page| copilot_index = page if page.data['section'] == 'github-copilot' && page.name == 'github-copilot.html' }
       expect(copilot_index).not_to be_nil
-      expect(copilot_index.name).to eq('index.md')
+      expect(copilot_index.name).to eq('github-copilot.html')
     end
 
     it 'generates correct file paths for collection pages' do
@@ -362,11 +362,11 @@ RSpec.describe Jekyll::SectionPagesGenerator do
       expect(ai_news).not_to be_nil
       expect(ai_news.name).to eq('news.html')
       
-      ai_posts = nil
+      ai_blogs = nil
       site.pages.each do |page|
         begin
-          if page.data['section'] == 'ai' && page.data['collection'] == 'posts'
-            ai_posts = page
+          if page.data['section'] == 'ai' && page.data['collection'] == 'blogs'
+            ai_blogs = page
             break
           end
         rescue ArgumentError
@@ -374,8 +374,8 @@ RSpec.describe Jekyll::SectionPagesGenerator do
           next
         end
       end
-      expect(ai_posts).not_to be_nil
-      expect(ai_posts.name).to eq('posts.html')
+      expect(ai_blogs).not_to be_nil
+      expect(ai_blogs.name).to eq('blogs.html')
       
       copilot_community = nil
       site.pages.each do |page|
@@ -406,11 +406,11 @@ RSpec.describe Jekyll::SectionPagesGenerator do
       
       # Check that page was created for special characters section
       special_page = nil
-      site.pages.each { |page| special_page = page if page.data['section'] == 'special-chars_section' && page.name == 'index.md' }
+      site.pages.each { |page| special_page = page if page.data['section'] == 'special-chars_section' && page.name == 'special-chars_section.html' }
       expect(special_page).not_to be_nil
       expect(special_page.data['title']).to eq('Special Section')
       expect(special_page.data['section']).to eq('special-chars_section')
-      expect(special_page.name).to eq('index.md')
+      expect(special_page.name).to eq('special-chars_section.html')
     end
   end
 
@@ -426,7 +426,7 @@ RSpec.describe Jekyll::SectionPagesGenerator do
             'category' => 'Complex',
             'collections' => [
               { 'title' => 'News', 'collection' => 'news', 'description' => 'News items' },
-              { 'title' => 'Posts', 'collection' => 'posts', 'description' => 'Blog posts' },
+              { 'title' => 'Blogs', 'collection' => 'blogs', 'description' => 'Blogs' },
               { 'title' => 'Videos', 'collection' => 'videos', 'description' => 'Video content' },
               { 'title' => 'Community', 'collection' => 'community', 'description' => 'Community content' },
               { 'title' => 'Custom Page', 'description' => 'A custom page without collection' }
@@ -442,12 +442,12 @@ RSpec.describe Jekyll::SectionPagesGenerator do
         
         # Should generate index page
         index_page = nil
-        site.pages.each { |page| index_page = page if page.data['section'] == 'complex-section' && page.name == 'index.md' }
+        site.pages.each { |page| index_page = page if page.data['section'] == 'complex-section' && page.name == 'complex-section.html' }
         expect(index_page).not_to be_nil
         expect(index_page.data['title']).to eq('Complex Section with Many Collections')
         
         # Should generate collection pages (those with 'collection' field)
-        ['news', 'posts', 'videos', 'community'].each do |collection|
+        ['news', 'blogs', 'videos', 'community'].each do |collection|
           collection_page = nil
           site.pages.each do |page|
             begin
@@ -516,7 +516,7 @@ RSpec.describe Jekyll::SectionPagesGenerator do
         
         # Should generate index page for the section
         index_page = nil
-        site.pages.each { |page| index_page = page if page.data['section'] == 'problematic' && page.name == 'index.md' }
+        site.pages.each { |page| index_page = page if page.data['section'] == 'problematic' && page.name == 'problematic.html' }
         expect(index_page).not_to be_nil
         
         # Should only generate page for valid collection (has 'collection' field)
@@ -576,7 +576,7 @@ RSpec.describe Jekyll::SectionPagesGenerator do
             'category' => "Category #{i}",
             'collections' => [
               { 'title' => 'News', 'collection' => 'news' },
-              { 'title' => 'Posts', 'collection' => 'posts' }
+              { 'title' => 'Blogs', 'collection' => 'blogs' }
             ]
           }
         end
@@ -592,7 +592,7 @@ RSpec.describe Jekyll::SectionPagesGenerator do
         
         # Verify we have the expected number of index pages
         index_pages = []
-        site.pages.each { |page| index_pages << page if page.name == 'index.md' }
+        site.pages.each { |page| index_pages << page if page.name.end_with?('.html') && page.data['section'] && page.data['layout'] == 'home' }
         expect(index_pages.length).to eq(50)
         
         # Verify we have the expected number of collection pages
@@ -624,7 +624,7 @@ RSpec.describe Jekyll::SectionPagesGenerator do
       expect(site.pages.length).to be > initial_page_count
       
       # Check that we have section index pages by looking for pages with section data
-      section_pages = site.pages.select { |page| page.name == 'index.md' && page.data['section'] }
+      section_pages = site.pages.select { |page| page.name.end_with?('.html') && page.data['section'] && page.data['layout'] == 'home' }
       expect(section_pages.length).to be > 0
       
       # Check that pages have proper frontmatter
@@ -639,7 +639,7 @@ RSpec.describe Jekyll::SectionPagesGenerator do
       generator.generate(site)
       
       # Find a section page by section and name instead of URL
-      section_page = site.pages.find { |page| page.data['section'] == 'ai' && page.name == 'index.md' }
+      section_page = site.pages.find { |page| page.data['section'] == 'ai' && page.name == 'ai.html' }
       expect(section_page).not_to be_nil
       
       # Verify page structure

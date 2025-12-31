@@ -1,7 +1,7 @@
 {
   "Title": "Bridging the Gap: The Future of Aspire",
   "FeedName": "David Fowler's Blog",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Tags": [
     "aspire",
     "cloud-native",

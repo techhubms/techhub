@@ -6,7 +6,7 @@
   "Description": "Copilot’s multi-file edits let you refactor, modernize imports, and stay consistent across your project in one flow.",
   "Title": "Multi-File Edits Made Simple",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/multi-file-edits-made-simple.html",
   "Tags": [],

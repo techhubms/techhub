@@ -4,7 +4,7 @@
   "ProcessedDate": "2025-11-07 18:03:32",
   "Description": "When Copilot refuses, reframe the request so it can help safely instead of saying no.",
   "Author": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
   "Title": "Context Engineering Recipes • The Refusal Breaker Pattern",
   "FeedName": "Randy Pagels's Blog",

@@ -171,7 +171,7 @@ test.describe('Advanced Filtering Scenarios', () => {
       { url: TEST_URLS.sectionIndexes.find(p => p.section === 'ai').url, name: 'AI Section Index', expectedFilters: ['date', 'collection'] },
       { url: TEST_URLS.sectionIndexes.find(p => p.section === 'github-copilot').url, name: 'GitHub Copilot Section Index', expectedFilters: ['date', 'collection'] },
       { url: '/ai/news.html', name: 'AI News Collection', expectedFilters: ['date', 'tag'] },
-      { url: '/ai/posts.html', name: 'AI Posts Collection', expectedFilters: ['date', 'tag'] },
+      { url: '/ai/blogs.html', name: 'AI Blogs Collection', expectedFilters: ['date', 'tag'] },
       { url: '/github-copilot/community.html', name: 'GitHub Copilot Community', expectedFilters: ['date', 'tag'] }
     ];
 
@@ -282,7 +282,7 @@ test.describe('Advanced Filtering Scenarios', () => {
       if (testPage.expectedFilters.includes('section')) {
         nonDateFilters = page.locator('.tag-filter-btn[data-tag="ai"], .tag-filter-btn[data-tag="github copilot"]');
       } else if (testPage.expectedFilters.includes('collection')) {
-        nonDateFilters = page.locator('.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="posts"], .tag-filter-btn[data-tag="videos"], .tag-filter-btn[data-tag="community"]');
+        nonDateFilters = page.locator('.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="blogs"], .tag-filter-btn[data-tag="videos"], .tag-filter-btn[data-tag="community"]');
       } else {
         nonDateFilters = page.locator('.tag-filter-btn[data-tag]:not([data-tag*="last"]):not([data-tag*="day"]):not([data-tag*="month"]):has(.filter-count):not(.hidden-tag-btn)');
       }
@@ -441,11 +441,11 @@ test.describe('Advanced Filtering Scenarios', () => {
 
         // Check which posts are visible and verify their tags contain subset matches
         const visiblePosts = await page.evaluate((testFilter) => {
-          const posts = document.querySelectorAll('.navigation-post-square:not([style*="display: none"])');
+          const items = document.querySelectorAll('.navigation-item-square:not([style*="display: none"])');
           const results = [];
 
-          for (const post of posts) {
-            const tagsAttr = post.dataset.tags || '';
+          for (const item of items) {
+            const tagsAttr = item.dataset.tags || '';
             const tags = tagsAttr.split(',').map(t => t.trim());
 
             // Check if any tag matches the subset pattern
@@ -453,7 +453,7 @@ test.describe('Advanced Filtering Scenarios', () => {
             const hasMatch = tags.some(tag => regex.test(tag));
 
             results.push({
-              title: post.querySelector('.navigation-post-title')?.textContent || 'No title',
+              title: item.querySelector('.navigation-item-title')?.textContent || 'No title',
               tags: tags,
               hasExpectedMatch: hasMatch
             });
@@ -466,13 +466,13 @@ test.describe('Advanced Filtering Scenarios', () => {
         let allPostsMatch = true;
         console.log(`📊 Found ${visiblePosts.length} visible posts after applying "${test.filter}" filter`);
 
-        for (const post of visiblePosts.slice(0, 5)) { // Check first 5 posts
-          if (!post.hasExpectedMatch) {
-            console.log(`❌ Post "${post.title}" visible but doesn't match subset pattern for "${test.filter}"`);
-            console.log(`   Tags: [${post.tags.join(', ')}]`);
+        for (const item of visiblePosts.slice(0, 5)) { // Check first 5 posts
+          if (!item.hasExpectedMatch) {
+            console.log(`❌ Post "${item.title}" visible but doesn't match subset pattern for "${test.filter}"`);
+            console.log(`   Tags: [${item.tags.join(', ')}]`);
             allPostsMatch = false;
           } else {
-            console.log(`✅ Post "${post.title}" correctly matches subset pattern`);
+            console.log(`✅ Post "${item.title}" correctly matches subset pattern`);
           }
         }
 

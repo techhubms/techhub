@@ -11,13 +11,13 @@ module.exports = defineConfig({
   testIgnore: '**/node_modules/**',
 
   /* Run tests in files in parallel */
-  fullyParallel: false, // Changed to false for better debugging
+  fullyParallel: false, // Keep false to run tests within a file sequentially
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
-  /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  /* Use 5 workers for parallel test execution (files run in parallel, tests within files run sequentially) */
+  workers: process.env.CI ? 1 : 5,
   /* Stop on first failure for faster debugging */
   maxFailures: process.env.CI ? 5 : 1,
 

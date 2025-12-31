@@ -31,22 +31,22 @@
   },
   {
     "name": "Rob Bos' Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://devopsjournal.io/blog/atom.xml"
   },
   {
     "name": "Hidde de Smet's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://hiddedesmet.com/feed.xml"
   },
   {
     "name": "Jesse Houwing's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://jessehouwing.net/rss/"
   },
   {
     "name": "Jesse Swart's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://blog.jesseswart.nl/index.xml"
   },
   {
@@ -71,27 +71,22 @@
   },
   {
     "name": "Harald Binkle's blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://harrybin.de/rss.xml"
   },
   {
     "name": "Reinier van Maanen's blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://r-vm.com/feed.xml"
   },
   {
     "name": "Zure Data & AI Blog",
-    "outputDir": "_posts",
-    "url": "https://zure.com/category/blog/feed/?tag=dataai"
-  },
-  {
-    "name": "DevOps Blog",
-    "outputDir": "_posts",
-    "url": "https://devops.com/feed/"
+    "outputDir": "_blogs",
+    "url": "https://zure.com/blog/rss.xml"
   },
   {
     "name": "Arrested DevOps",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://www.arresteddevops.com/episode/index.xml"
   },
   {
@@ -116,7 +111,7 @@
   },
   {
     "name": "Randy Pagels's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://www.cooknwithcopilot.com/rss.xml"
   },
   {
@@ -161,12 +156,12 @@
   },
   {
     "name": "Scott Hanselman's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://www.hanselman.com/blog/SyndicationService.asmx/GetRss"
   },
   {
     "name": "Andrew Lock's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://andrewlock.net/rss.xml"
   },
   {
@@ -176,27 +171,27 @@
   },
   {
     "name": "David Fowler's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://medium.com/feed/@davidfowl"
   },
   {
     "name": "Steve Gordon's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://www.stevejgordon.co.uk/feed"
   },
   {
     "name": "Rick Strahl's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://feeds.feedburner.com/rickstrahl"
   },
   {
     "name": "Khalid Abuhakmeh's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://khalidabuhakmeh.com/feed.xml"
   },
   {
     "name": "Code Maze Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://code-maze.com/feed/"
   },
   {
@@ -221,7 +216,7 @@
   },
   {
     "name": "Thomas Maurer's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://www.thomasmaurer.ch/feed/"
   },
   {
@@ -251,32 +246,32 @@
   },
   {
     "name": ".NET Foundation's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://dotnetfoundation.org/feeds/blog"
   },
   {
     "name": "René van Osnabrugge's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://roadtoalm.com/feed/"
   },
   {
     "name": "Michiel van Oudheusden's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://mindbyte.nl/feed.xml"
   },
   {
     "name": "Dellenny's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://dellenny.com/feed/"
   },
   {
     "name": "DevClass",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://devclass.com/feed/"
   },
   {
     "name": "Spindev's Blog",
-    "outputDir": "_posts",
+    "outputDir": "_blogs",
     "url": "https://spindev.net/index.xml"
   },
   {

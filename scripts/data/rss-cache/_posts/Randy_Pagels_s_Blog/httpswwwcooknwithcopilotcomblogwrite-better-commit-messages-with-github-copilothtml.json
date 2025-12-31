@@ -6,7 +6,7 @@
   "Description": "Craft clear, informative commit messages that tell the story of your code changes.",
   "Title": "Write Better Commit Messages with GitHub Copilot",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/write-better-commit-messages-with-github-copilot.html",
   "Tags": [],

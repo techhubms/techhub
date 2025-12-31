@@ -7,7 +7,7 @@
   "Link": "https://dotnetfoundation.org/news-events/detail/member-spotlight-tomas-herceg",
   "FeedUrl": "https://dotnetfoundation.org/feeds/blog",
   "Title": "Member Spotlight: Tomas Herceg",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedName": ".NET Foundation's Blog",
   "FeedLevelAuthor": ".NET Foundation News and Blog",
   "Tags": []

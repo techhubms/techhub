@@ -711,7 +711,7 @@ module Jekyll
         raise "Items must be a non-empty array."
       end
       
-      # Sort items by date (newest first) to match DOM rendering order in posts.html
+      # Sort items by date (newest first) to match DOM rendering order in items.html
       # This ensures JavaScript data has the same order as the DOM elements
       sorted_items = items.sort_by { |item| 
         begin

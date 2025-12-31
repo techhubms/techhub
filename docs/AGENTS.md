@@ -1,301 +1,366 @@
-# Documentation Agent
+# Documentation Management Guide
 
-## Overview
+> **AI CONTEXT**: This is a **LEAF** context file for the `docs/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
+> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
 
-You are a documentation specialist for the Tech Hub project. This directory contains comprehensive technical documentation covering all aspects of the site architecture, development practices, and operational procedures.
+## Purpose
 
-## Documentation Files
+**GOAL**: Keep this folder MINIMAL - only **2 core functional documentation files**:
 
-```text
-docs/
-├── AGENTS.md                   # Documentation guidelines (this file)
-├── content-management.md       # Content creation, organization, and RSS processing
-├── datetime-processing.md      # Date handling and timezone configuration
-├── documentation-guidelines.md # Documentation structure and hierarchy
-├── filtering-system.md         # Tag-based filtering implementation
-├── jekyll-development.md       # Jekyll-specific patterns
-├── markdown-guidelines.md      # Markdown structure for AI models
-├── performance-guidelines.md   # Performance optimization
-├── site-overview.md            # Site structure overview
-├── terminology.md              # Project vocabulary
-└── writing-style-guidelines.md # Content writing standards
-```
+1. **[`filtering-system.md`](filtering-system.md)** - How filtering works (tag and date filtering logic)
+2. **[`content-management.md`](content-management.md)** - Content workflows and RSS processing
 
-## Documentation Philosophy
+These are the ONLY truly framework-agnostic functional files that explain WHAT the system does, not HOW to build it.
 
-**CRITICAL**: Whenever code changes any behavior, you MUST update the relevant documentation files to reflect those changes. Never leave documentation out of sync with the codebase.
+**All other content is located elsewhere**:
 
-**CRITICAL**: When creating or updating documentation, update [documentation-guidelines.md](documentation-guidelines.md) to include new content. For code-specific domain guidance, update the relevant AGENTS.md file in the appropriate directory.
+- Development patterns → Domain-specific AGENTS.md files
+- Framework commands/patterns → `.github/agents/` (fullstack.md for current framework)
+- Writing/quality standards → `collections/AGENTS.md`, `collections/markdown-guidelines.md`, `collections/writing-style-guidelines.md`
+- Terminology/architecture → Root `AGENTS.md` (Site Terminology and Repository Structure sections)
+- Technical how-tos → Appropriate AGENTS.md files
 
-### Audience
+## Migration Context
 
-Documentation serves multiple audiences:
+**Current**: Jekyll static site generator (Ruby, Liquid templates)
+**Future**: C# / .NET webapp with Blazor
 
-1. **Developers** - Contributing to the codebase
-2. **AI Assistants** - Understanding project structure
-3. **Content Creators** - Adding articles and posts
-4. **DevOps Engineers** - Managing infrastructure
+**docs/ Folder Current State**:
 
-### Principles
+This folder contains ONLY the 2 framework-agnostic functional documentation files:
 
-- **Accuracy**: Always reflect actual implementation
-- **Completeness**: Cover all aspects of topic
-- **Clarity**: Use clear, concise language
-- **Examples**: Include practical code examples
-- **Maintenance**: Keep in sync with codebase
-- **Minimize duplication**: Content appears in one authoritative location
-- **Cross-references**: Use links to connect related information
-- **Heading levels**: Maximum 3 levels (#, ##, ###)
+✅ **`filtering-system.md`** - Tag and date filtering logic and behavior
+✅ **`content-management.md`** - Content workflows and RSS processing
+
+**Other documentation has been distributed to appropriate locations**:
+
+- **Terminology** → Root `AGENTS.md` (Site Terminology section)
+- **Architecture/Overview** → Root `AGENTS.md` (Repository Structure section)
+- **Full-stack development** → `.github/agents/fullstack.md` (framework-specific)
+- **Date/timezone handling** → Root `AGENTS.md` (Timezone & Date Handling section) + `.github/agents/fullstack.md` (implementation)
+- **Performance guidelines** → Root `AGENTS.md` (Performance Architecture section) + `.github/agents/fullstack.md` (implementation)
+- **Markdown formatting** → `collections/markdown-guidelines.md` (content writing)
+- **Writing style** → `collections/writing-style-guidelines.md` (content writing)
+
+**Rationale**: Only files that explain system functionality (not development, not writing, not architecture) remain in docs/.
+
+## Tech Hub Documentation Structure
+
+The Tech Hub uses a two-tier documentation system:
+
+### 1. AGENTS.md Files (Domain-Specific Development Guidance)
+
+Located in each major directory, AGENTS.md files provide focused guidance for AI assistants working in specific code domains:
+
+- **`AGENTS.md`** (root): Generic development principles, performance rules, timezone handling, repository navigation
+- **`scripts/AGENTS.md`**: PowerShell development and automation scripts
+- **`_plugins/AGENTS.md`**: Build plugins and extensions (currently Ruby for Jekyll; will change to C# for .NET)
+- **`assets/js/AGENTS.md`**: JavaScript client-side development
+- **`_sass/AGENTS.md`**: Styling and CSS architecture (currently SCSS; may change to CSS-in-JS for Blazor)
+- **`rss/AGENTS.md`**: RSS feed generation and management
+- **`docs/AGENTS.md`**: Documentation guidelines and maintenance (this file)
+- **`spec/AGENTS.md`**: Testing strategies and frameworks
+- **`collections/AGENTS.md`**: Content creation and management
+
+**Purpose**: Domain-specific development patterns, critical rules, and code standards. These files may need updates during framework migration but maintain domain focus.
+
+**Key Distinction**: Domain-specific (code patterns for a specific area) vs Framework-specific (patterns for Jekyll/Ruby or .NET/C#).
+
+### 2. Framework Agent Files (Framework-Specific Development Guidance)
+
+Located in `.github/agents/`, these custom agents provide framework-specific development guidance:
+
+- **`fullstack.md`** (current): Jekyll static site generation, Liquid templating, Ruby plugins, JavaScript enhancements, PowerShell automation, comprehensive testing
+- **`dotnet.md`** (future): .NET/Blazor development, C# patterns, ASP.NET Core, server management
+
+**Purpose**: Complete framework-specific how-to guides for working with the current tech stack. These files are entirely framework-dependent and will be replaced during migration.
+
+**Usage**: Use `@fullstack` custom agent for full-stack development, `@dotnet` for .NET development (future).
+
+### 3. Documentation Files (Framework-Agnostic Functional Documentation)
+
+Located in `docs/`, these files explain how the system works, independent of implementation:
+
+**Purpose**: Explain WHAT the system does and WHY, not HOW TO CODE it.
+
+## Documentation Files (Current State)
+
+### Functional Documentation (in docs/)
+
+**Framework-Agnostic Functional Documentation**:
+
+- **[`filtering-system.md`](filtering-system.md)** - Tag and date filtering logic and behavior
+- **[`content-management.md`](content-management.md)** - Content workflows and RSS processing
+
+### Related Documentation (Other Locations)
+
+**Development Guidance** (in AGENTS.md files):
+
+- **[Root `AGENTS.md`](../AGENTS.md)** - Generic principles, architecture, terminology, performance, timezone handling
+- **Domain-specific AGENTS.md** - See root `AGENTS.md` for complete list
+
+**Framework-Specific** (in `.github/agents/`):
+
+- **[`.github/agents/fullstack.md`](../.github/agents/fullstack.md)** - Jekyll development, Liquid templating, Ruby plugins, JavaScript, PowerShell, testing
+
+**Content Writing** (in `collections/`):
+
+- **[`collections/AGENTS.md`](../collections/AGENTS.md)** - Content management overview and requirements
+- **[`collections/markdown-guidelines.md`](../collections/markdown-guidelines.md)** - Markdown formatting standards
+- **[`collections/writing-style-guidelines.md`](../collections/writing-style-guidelines.md)** - Writing tone and style standards
+
+## Content Placement Hierarchy
+
+When adding documentation, place it in the most specific appropriate location:
+
+### 1. Root AGENTS.md
+
+- High-level project overview and navigation
+- Generic, framework-agnostic development principles
+- Repository structure and organization
+- **Not for**: Specific implementation details
+
+### 2. Framework Agent Files (`.github/agents/`)
+
+- **Complete framework-specific guidance** for the current tech stack
+- Server management, build processes, templating, framework best practices, tech specific implementations of the generic development principles mentioned in root `AGENTS.md`
+- **Current**: `fullstack.md` (Jekyll, Ruby, Liquid, JavaScript, PowerShell, Testing)
+- **Future**: `dotnet.md` (C#, Blazor, ASP.NET Core)
+- **Migration impact**: Complete replacement - no content carries over
+
+### 3. Domain-Specific AGENTS.md Files
+
+- **Development patterns for specific code domains** (not frameworks)
+- Examples: JavaScript patterns, PowerShell patterns, styling patterns
+- See root `AGENTS.md` for complete list and when to read them
+- **Migration impact**: May need updates for new framework but maintain domain focus
+  - `_plugins/AGENTS.md`: Ruby → C# (same purpose: build plugins)
+  - `assets/js/AGENTS.md`: JavaScript patterns (likely unchanged)
+  - `_sass/AGENTS.md`: SCSS → CSS-in-JS or Blazor styling (same purpose: styling)
+
+### 4. Functional Documentation (`docs/`)
+
+**CRITICAL**: Keep MINIMAL - only 2 files for pure functional documentation.
+
+**ONLY these files belong here**:
+
+- **`filtering-system.md`** - How filtering works (logic, behavior, rules)
+- **`content-management.md`** - How content is managed (workflows, RSS processing)
+
+**Everything else goes elsewhere**:
+
+- Terminology/concepts → Root `AGENTS.md` (Site Terminology section)
+- Architecture/overview → Root `AGENTS.md` or `docs/AGENTS.md`
+- Framework patterns → `.github/agents/fullstack.md` or `.github/agents/dotnet.md`
+- Development guidance → Domain-specific AGENTS.md files
+- Writing standards → `collections/AGENTS.md`
+- Quality standards → `docs/AGENTS.md` (this file)
+
+## Content Placement Strategy
+
+### Before Adding New Content
+
+1. **Check existing files in hierarchy order** - Don't duplicate existing information
+2. **Choose the most specific applicable file** - More specific files take precedence
+3. **Reference related files** - Use cross-references to maintain connections
+4. **Avoid fragmentation** - Keep related concepts together
+
+### Examples of Proper Placement
+
+#### ✅ **Correct Placements**
+
+**Functional Documentation (docs/ - ONLY 2 files)**:
+
+- **How tag filtering works** → `docs/filtering-system.md` (system functionality)
+- **How date filtering works** → `docs/filtering-system.md` (system functionality)
+- **Content workflow process** → `docs/content-management.md` (system functionality)
+- **RSS feed processing** → `docs/content-management.md` (system functionality)
+
+**Development Guidance (AGENTS.md files)**:
+
+- **Site terminology** → Root `AGENTS.md` (already has Site Terminology section)
+- **Architecture overview** → Root `AGENTS.md` (Repository Structure section)
+- **Generic performance principles** → Root `AGENTS.md` (Performance Architecture section)
+- **Timezone handling rules** → Root `AGENTS.md` (Timezone & Date Handling section)
+- **Jekyll Liquid patterns** → `.github/agents/fullstack.md` (framework-specific)
+- **Blazor component patterns** → `.github/agents/dotnet.md` (future, framework-specific)
+- **JavaScript code patterns** → `assets/js/AGENTS.md` (domain-specific)
+- **PowerShell script patterns** → `scripts/AGENTS.md` (domain-specific)
+- **Markdown formatting** → `collections/AGENTS.md` (content writing)
+- **Writing style** → `collections/AGENTS.md` (content writing)
+
+#### ❌ **Incorrect Placements**
+
+- **Terminology/concepts** → `docs/` (belongs in root `AGENTS.md`)
+- **Architecture overview** → `docs/` (belongs in root `AGENTS.md`)
+- **Jekyll-specific patterns** → `docs/` or root `AGENTS.md` (belongs in `.github/agents/fullstack.md`)
+- **Writing standards** → `docs/` (belongs in `collections/markdown-guidelines.md` or `collections/writing-style-guidelines.md`)
+- **Code examples** → `docs/` (belongs in AGENTS.md files)
+- **Development how-tos** → `docs/` (belongs in AGENTS.md files)
+- **Build plugin code** → Root `AGENTS.md` (belongs in `_plugins/AGENTS.md`)
+- **Domain-specific patterns** → Framework agents (domain ≠ framework)
+- **Content formatting** → `docs/` (belongs in `collections/markdown-guidelines.md`)
+
+## When to Update Documentation Types
+
+**Update Documentation** (`docs/*.md`) when:
+
+- Feature specifications change
+- System architecture evolves
+- New functional components added
+- Conceptual explanations needed
+
+**Update AGENTS.md files** when:
+
+- Development patterns change
+- Critical rules added for a domain
+- Common errors identified
+- Domain-specific guidance needed
+
+**Update Framework Agents** (`.github/agents/`) when:
+
+- Framework-specific commands change
+- Tech stack best practices evolve
+- Framework versions update
+
+## Documentation Maintenance
+
+**CRITICAL**: Keep documentation synchronized with system behavior.
+
+### When to Update
+
+1. **Functional changes** - How the system works
+2. **Architecture changes** - System structure
+3. **New features** - Additional capabilities
+4. **Concept changes** - Terminology or definitions
+
+### Update Checklist
+
+- [ ] Accuracy: Matches current system behavior
+- [ ] Framework-agnostic: Applies regardless of tech stack (for core docs)
+- [ ] Clear concepts: Explains WHAT and WHY, not just HOW TO CODE
+- [ ] Cross-references: Links still valid
+- [ ] Terminology: Consistent with terminology.md
 
 ## Documentation Standards
 
-### File Structure
+Each functional documentation file should explain:
 
-Each documentation file should follow this structure:
+- **What**: What the system does
+- **Why**: Why it works this way  
+- **How**: High-level workflow (framework-agnostic)
+
+## Documentation Quality Standards
+
+### Writing Standards
+
+**For content files** (news, blogs, videos, community, roundups in `collections/`):
+
+- Follow [../collections/writing-style-guidelines.md](../collections/writing-style-guidelines.md) for tone, voice, and language standards
+- Follow [../collections/markdown-guidelines.md](../collections/markdown-guidelines.md) for markdown formatting and structure
+
+**For documentation files** (in `docs/`):
+
+- Follow [../collections/writing-style-guidelines.md](../collections/writing-style-guidelines.md) for technical documentation writing
+- Use consistent terminology from root [AGENTS.md](../AGENTS.md) (Site Terminology section)
+- Prefer active voice and concise explanations
+- Test all code examples before including them
+
+### Technical Accuracy
+
+- **Test all code examples** before including them
+- **Verify all links** work correctly
+- **Update screenshots** when UI changes
+- **Maintain consistency** with actual implementation
+
+### Accessibility
+
+- **Descriptive link text** rather than "click here"
+- **Alt text for images** when they convey important information
+- **Logical heading structure** for screen readers
+- **Clear table headers** when using tables
+
+### Content Organization
+
+**Standard File Structure**:
 
 ```markdown
 # Title
 
-Brief overview paragraph explaining the topic.
+Brief description of what this document covers.
 
-## Section 1
+## Overview
 
-Content with examples and explanations.
+High-level summary of the topic.
 
-### Subsection
+## Main Sections
 
-More detailed information.
+### Subsection 1
 
-## Section 2
+Content organized logically.
+```
 
-Additional topics.
+**Heading Guidelines**:
 
-## Resources
+- Use **descriptive headings** that clearly indicate content
+- Follow **logical hierarchy**: H1 → H2 → H3 → H4
+- Avoid **duplicate headings** within the same file
+- Use **consistent formatting**: Title case for main headings
 
-Links to related documentation.
+### Cross-Referencing
+
+**Linking Standards**:
+
+- **Always reference more detailed files** from higher-level files
+- **Use standard markdown link syntax**: `[link text](path/to/file.md)`
+- **Provide context** when referencing: "See [file](path.md) for implementation details"
+- **Avoid circular references** - maintain clear hierarchy flow
+
+**Good Reference Patterns**:
+
+```markdown
+# ✅ Good: Contextual reference
+For specific implementation details, see [Development Guide](dev-guide.md).
+
+# ❌ Bad: Vague reference
+See other docs for more info.
+```
+
+### File Naming
+
+- Use **descriptive names**: `content-management.md` not `content.md`
+- Use **specific suffixes** when appropriate: `-guidelines.md`, `-overview.md`
+- Use **lowercase with hyphens**: `my-document.md` not `My_Document.md`
+
+## Documentation Index Maintenance
+
+### Adding New Documentation Files
+
+1. **Add new files** to the appropriate section in this file with brief descriptions
+2. **Update file purposes** to reflect current content
+3. **Maintain recommended reading order** for new users
+4. **Cross-reference** related files appropriately
+
+### Regular Reviews
+
+- **Quarterly reviews** of all documentation for accuracy
+- **Update cross-references** when files are added or restructured
+- **Remove outdated content** that no longer applies
+- **Consolidate** fragmented information when appropriate
+
+### Version Control
+
+- **Commit documentation changes** with descriptive messages
+- **Review documentation updates** as part of code review process
+- **Track documentation debt** in issues when updates are needed
 
 ## Never Do
 
-Anti-patterns and common mistakes to avoid.
-```
-
-### Writing Style
-
-Follow [writing-style-guidelines.md](writing-style-guidelines.md):
-
-- Use active voice
-- Be concise and direct
-- Use present tense for current features
-- Include code examples
-- Use consistent terminology (see [terminology.md](terminology.md))
-
-### Code Examples
-
-```markdown
-<!-- Use syntax highlighting -->
-```javascript
-// ✅ CORRECT: Good example with comments
-const result = processData(input);
-```
-
-```javascript
-// ❌ WRONG: Anti-pattern with explanation
-var data = undefined; // Never use var or undefined
-```
-```
-
-### Cross-References
-
-Link related documentation:
-
-```markdown
-For more details, see [filtering-system.md](filtering-system.md).
-```
-
-## Key Documentation Files
-
-### Site Overview
-
-**[site-overview.md](site-overview.md)** - Comprehensive site structure:
-- Collections and sections
-- Content organization
-- Navigation structure
-- Data files
-
-### Filtering System
-
-**[filtering-system.md](filtering-system.md)** - Complete filtering implementation:
-- Tag-based architecture
-- Pre-calculated relationships
-- Client-side filtering
-- Performance optimization
-
-### Content Management
-
-**[content-management.md](content-management.md)** - Content lifecycle:
-- Creating content
-- Frontmatter structure
-- Collection organization
-- Publication workflow
-
-## Documentation Maintenance
-
-### When to Update
-
-Update documentation when:
-
-1. **Code changes** - Behavior modifications
-2. **New features** - Additional functionality
-3. **Deprecations** - Removing old features
-4. **Bug fixes** - Correcting documented behavior
-5. **Architecture changes** - Structural modifications
-
-### Update Process
-
-1. Identify affected documentation files
-2. Update relevant sections
-3. Verify cross-references still valid
-4. Test code examples still work
-5. Commit with descriptive message
-
-### Review Checklist
-
-- [ ] Accuracy: Reflects current implementation
-- [ ] Completeness: Covers all aspects
-- [ ] Examples: Code examples tested
-- [ ] Links: Cross-references valid
-- [ ] Style: Follows writing guidelines
-- [ ] Terminology: Consistent vocabulary
-
-## Common Documentation Patterns
-
-### Feature Documentation
-
-```markdown
-## Feature Name
-
-**Purpose**: Brief description of what this feature does.
-
-**Location**: `path/to/implementation`
-
-**Key Concepts**:
-- Concept 1
-- Concept 2
-
-### Usage
-
-```language
-// Example code
-```
-
-### Configuration
-
-Explain configuration options.
-
-### Best Practices
-
-List recommended approaches.
-
-## Never Do
-
-Anti-patterns to avoid.
-```
-
-### API Documentation
-
-```markdown
-### Function Name
-
-**Purpose**: What it does
-
-**Parameters**:
-- `param1` (type): Description
-- `param2` (type): Description
-
-**Returns**: Return value description
-
-**Example**:
-
-```language
-result = functionName(param1, param2);
-```
-
-**Throws**: Error conditions
-```
-
-### Process Documentation
-
-```markdown
-## Process Name
-
-**Overview**: What this process accomplishes.
-
-**Steps**:
-
-1. **Step 1**: Action description
-   ```bash
-   # Command example
-   ```
-
-2. **Step 2**: Next action
-   ```bash
-   # Command example
-   ```
-
-**Expected Output**:
-
-Describe successful completion.
-
-**Troubleshooting**:
-
-Common issues and solutions.
-```
-
-## Documentation Tools
-
-### Markdown Linting
-
-Follow guidelines in [markdown-guidelines.md](markdown-guidelines.md):
-- Use ATX-style headers (`#` not underlines)
-- Consistent list formatting
-- Code blocks with language tags
-- No trailing whitespace
-
-### Link Validation
-
-Verify internal links:
-```bash
-# Check for broken links
-grep -r "\[.*\](.*.md)" docs/
-```
-
-### Example Testing
-
-Test code examples periodically:
-- PowerShell: Run examples in scripts
-- JavaScript: Test in browser console
-- Ruby: Execute in IRB
-- Liquid: Test in Jekyll templates
-
-## Content Placement
-
-For detailed guidelines on where to place documentation content, see [documentation-guidelines.md](documentation-guidelines.md).
-
-**Quick Reference**:
-
-- **Generic rules** stay in `docs/`
-- **Language-specific code** goes to domain AGENTS.md files
-- **Date/timezone concepts** → `docs/datetime-processing.md`
-- **JavaScript date code** → `assets/js/AGENTS.md`
-- **Ruby date code** → `_plugins/AGENTS.md`
-
-## Never Do
-
-- Never let documentation diverge from code
-- Never use outdated examples
-- Never skip cross-reference updates
-- Never assume readers know context
-- Never use vague language ("might", "probably")
-- Never include untested code examples
-- Never duplicate content (link instead)
-- Never use relative dates ("last week", "recently")
+- Mix framework-specific implementation details with functional documentation
+- Document HOW TO CODE in docs/ files (belongs in AGENTS.md files)
+- Include framework-specific code examples in core documentation
+- Assume a specific tech stack in framework-agnostic docs
+- Use vague language ("might", "probably", "should")
+- Duplicate content from other files (link instead)
+- Place domain-specific patterns in root AGENTS.md (use domain-specific AGENTS.md)
+- Hardcode file lists or examples (reference dynamic sources)

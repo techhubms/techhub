@@ -1,7 +1,7 @@
 {
   "Link": "https://www.arresteddevops.com/digging-into-security/",
   "ProcessedDate": "2025-08-29 10:12:36",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Tags": [],
   "Title": "Digging Into Security With Kat Cosgrove",
   "Description": "Kat Cosgrove is back to talk about everyone’s favorite party topic: security. From container vulnerabilities to the chaos of patching, Matty and Kat dig into why “never not hot” feels like security’s permanent brand. Tune in for equal parts practical insight and DevOps-flavored sarcasm.",

@@ -1,6 +1,6 @@
 {
   "Description": "In the world of software architecture, we don’t use confusing diagrams; we use Patterns and Anti-Patterns. These aren’t just abstract concepts—they are the accumulated experience and results of decades of software engineering. They are your architectural compass, guiding you toward robust, elegant solutions and steering you away from common pitfalls that lead to disasters. Understanding… [Patterns vs. Anti-Patterns: The Architectural Compass](https://dellenny.com/patterns-vs-anti-patterns-the-architectural-compass/)\n\nThe post [Patterns vs. Anti-Patterns: The Architectural Compass](https://dellenny.com/patterns-vs-anti-patterns-the-architectural-compass/) appeared first on [Dellenny](https://dellenny.com).",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Link": "https://dellenny.com/patterns-vs-anti-patterns-the-architectural-compass/",
   "FeedLevelAuthor": "Dellenny",
   "Title": "Patterns vs. Anti-Patterns: The Architectural Compass",

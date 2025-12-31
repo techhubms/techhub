@@ -14,7 +14,7 @@ function Get-CanonicalUrl {
     System.String or $null
     
     .EXAMPLE
-    $content = Get-Content "post.md" -Raw
+    $content = Get-Content "item.md" -Raw
     $url = Get-CanonicalUrl -Content $content
     #>
     

@@ -13,7 +13,7 @@ test.describe('UI/UX Filter Components', () => {
   test('should expand and collapse tag filters with More/Less buttons', async ({ page }) => {
     const testPages = [
       { url: '/ai/news.html', name: 'AI News Collection' },
-      { url: '/ai/posts.html', name: 'AI Posts Collection' },
+      { url: '/ai/blogs.html', name: 'AI Blogs Collection' },
       { url: '/github-copilot/community.html', name: 'GitHub Copilot Community' }
     ];
 

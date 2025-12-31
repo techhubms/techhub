@@ -18,7 +18,7 @@
   "FeedUrl": "https://r-vm.com/feed.xml",
   "Author": "Reinier van Maanen",
   "Link": "https://r-vm.com/new-website-tech-hub-ms.html",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedLevelAuthor": "Reinier van Maanen",
   "Title": "New website: tech.hub.ms"
 }

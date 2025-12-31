@@ -3,7 +3,7 @@
     ".NET 10",
     "C#"
   ],
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedLevelAuthor": "Andrew Lock | .NET Escapades",
   "ProcessedDate": "2025-08-05 14:29:47",
   "FeedUrl": "https://andrewlock.net/rss.xml",

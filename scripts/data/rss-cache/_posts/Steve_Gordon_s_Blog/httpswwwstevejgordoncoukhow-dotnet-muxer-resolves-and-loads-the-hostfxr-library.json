@@ -8,7 +8,7 @@
     "muxer",
     "runtime"
   ],
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedLevelAuthor": "Steve Gordon – Code with Steve",
   "ProcessedDate": "2025-08-05 14:30:43",
   "FeedUrl": "https://www.stevejgordon.co.uk/feed",

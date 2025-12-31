@@ -15,9 +15,9 @@
             },
             {
                 "title": "Blogs",
-                "url": "/all/posts.html",
-                "collection": "posts",
-                "description": "All blog posts and articles across every section."
+                "url": "/all/blogs.html",
+                "collection": "blogs",
+                "description": "All blogs across every section."
             },
             {
                 "title": "Videos",
@@ -30,12 +30,6 @@
                 "url": "/all/community.html",
                 "collection": "community",
                 "description": "Community announcements, discussions, magazines and insights."
-            },
-            {
-                "title": "Events",
-                "url": "/all/events.html",
-                "collection": "events",
-                "description": "All events and presentations across every section."
             }
         ]
     },
@@ -55,8 +49,8 @@
             },
             {
                 "title": "Blogs",
-                "url": "/github-copilot/posts.html",
-                "collection":"posts",
+                "url": "/github-copilot/blogs.html",
+                "collection":"blogs",
                 "description": "A collection of blogs that are worth your while."
             },
             {
@@ -109,8 +103,8 @@
             },
             {
                 "title": "Blogs",
-                "url": "/ai/posts.html",
-                "collection":"posts",
+                "url": "/ai/blogs.html",
+                "collection":"blogs",
                 "description": "Blogs that are a must-read to keep up-to-date."
             },
             {
@@ -163,8 +157,8 @@
             },
             {
                 "title": "Blogs",
-                "url": "/ml/posts.html",
-                "collection": "posts",
+                "url": "/ml/blogs.html",
+                "collection": "blogs",
                 "description": "In-depth articles about ML model development, data science workflows, and advanced analytics techniques."
             },
             {
@@ -197,9 +191,9 @@
             },
             {
                 "title": "Blogs",
-                "url": "/devops/posts.html",
-                "collection": "posts",
-                "description": "Curated blog posts about DevOps practices, tools, and methodologies."
+                "url": "/devops/blogs.html",
+                "collection": "blogs",
+                "description": "Curated blogs about DevOps practices, tools, and methodologies."
             },
             {
                 "title": "Videos",
@@ -236,9 +230,9 @@
             },
             {
                 "title": "Blogs",
-                "url": "/azure/posts.html",
-                "collection": "posts",
-                "description": "Curated blog posts about Azure development and best practices."
+                "url": "/azure/blogs.html",
+                "collection": "blogs",
+                "description": "Curated blogs about Azure development and best practices."
             },
             {
                 "title": "Videos",
@@ -270,9 +264,9 @@
             },
             {
                 "title": "Blogs",
-                "url": "/coding/posts.html",
-                "collection": "posts",
-                "description": "Curated blog posts about .NET development, best practices, and coding techniques."
+                "url": "/coding/blogs.html",
+                "collection": "blogs",
+                "description": "Curated blogs about .NET development, best practices, and coding techniques."
             },
             {
                 "title": "Videos",
@@ -304,9 +298,9 @@
             },
             {
                 "title": "Blogs",
-                "url": "/security/posts.html",
-                "collection": "posts",
-                "description": "Curated blog posts about Microsoft security solutions and best practices."
+                "url": "/security/blogs.html",
+                "collection": "blogs",
+                "description": "Curated blogs about Microsoft security solutions and best practices."
             },
             {
                 "title": "Videos",

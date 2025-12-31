@@ -1,0 +1,91 @@
+@use "colors";
+@use "settings";
+@use "navigation";
+
+// Items boxes - individual collection items (news, videos, blogs, etc.)
+$items-grid-desktop: 2; // 2 items side by side on desktop
+$items-grid-mobile: 1; // 1 item per row on mobile
+
+// Items grid (Individual collection items for navigation)
+.navigation-items-grid {
+    @extend .nav-grid-base;
+
+    @media (min-width: settings.$navigation-breakpoint) {
+        grid-template-columns: repeat($items-grid-desktop, 1fr);
+    }
+
+    @media (max-width: #{settings.$navigation-breakpoint - 1px}) {
+        grid-template-columns: repeat($items-grid-mobile, 1fr);
+    }
+}
+
+.navigation-item-square {
+    @extend .nav-square-base;
+
+    // Visual styling (using base navigation pattern)
+    background: rgba(colors.$medium-blue, 0.10);
+
+    .navigation-item-title {
+        @extend .nav-title-base;
+        // Item-specific title styling
+        color: colors.$bright-blue;
+        font-size: 16px;
+        font-weight: normal;
+
+        // Visited state for items
+        .navigation-item-square:visited & {
+            color: colors.$bright-purple;
+        }
+    }
+
+    .navigation-item-desc {
+        @extend .nav-desc-base;
+        // Item-specific description styling
+        margin-bottom: 20px;
+    }
+
+    // Item metadata positioning
+    .navigation-item-meta-info {
+        color: #888;
+        font-size: 12px;
+        position: absolute;
+        bottom: 7px;
+        left: 15px;
+        right: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        contain: layout;
+    }
+
+    .navigation-item-meta-value.left {
+        justify-self: start;
+        text-align: left;
+    }
+
+    .navigation-item-meta-value.right {
+        justify-self: end;
+        text-align: right;
+    }
+
+    // Visual styling for content
+    .navigation-item-content {
+        @extend .nav-content;
+
+        // Item-specific content layout
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            // Visual styling on hover (consistent with collections)
+            background: rgba(colors.$medium-blue, 0.18);
+            box-shadow: 0 8px 25px rgba(colors.$medium-blue, 0.18);
+        }
+    }
+
+    @media (max-width: settings.$on-mobile) {
+        will-change: auto;
+    }
+}

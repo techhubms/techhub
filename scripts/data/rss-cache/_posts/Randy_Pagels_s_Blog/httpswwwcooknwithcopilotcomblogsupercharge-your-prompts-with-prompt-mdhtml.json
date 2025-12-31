@@ -5,7 +5,7 @@
   "Link": "https://www.cooknwithcopilot.com/blog/supercharge-your-prompts-with-prompt-md.html",
   "Title": "Supercharge Your Prompts with .prompt.md",
   "Author": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Tags": [],
   "Description": "Store reusable prompts in .prompt.md so Copilot can load them on demand and keep your workflow consistent.",

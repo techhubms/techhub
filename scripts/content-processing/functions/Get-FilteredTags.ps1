@@ -56,7 +56,7 @@ function Get-FilteredTags {
     
     $allKnownCollections = @(
         'News', 
-        'Posts', 
+        'Blogs', 
         'Videos', 
         'Community', 
         'Events', 
@@ -359,8 +359,8 @@ function Get-FilteredTags {
     }
 
     $filterWords = @(
-        'Blog',
-        'Blogs',
+        'Post',
+        'Posts',
         'Update',
         'Updates',
         'Announcement',

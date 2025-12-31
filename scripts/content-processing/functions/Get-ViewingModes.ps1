@@ -17,10 +17,9 @@ function Get-ViewingModes {
     
     return @{
         "_videos"    = "internal"
-        "_posts"     = "external"
+        "_blogs"     = "external"
         "_news"      = "external"
         "_community" = "external"
-        "_events"    = "internal"
         "_roundups"  = "internal"
     }
 }

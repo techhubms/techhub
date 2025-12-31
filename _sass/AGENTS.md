@@ -1,8 +1,27 @@
 # SCSS Styling Agent
 
+> **AI CONTEXT**: This is a **LEAF** context file for the `_sass/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
+> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+
 ## Overview
 
 You are a styling specialist focused on the Tech Hub's SCSS (Sass) architecture. The styling system uses modular SCSS files compiled by Jekyll, with the main entry point in `assets/css/main.scss`.
+
+## When to Use This Guide
+
+**Read this file when**:
+
+- Writing or modifying SCSS files in `_sass/` directory
+- Creating new UI components or layouts
+- Updating color schemes or design tokens
+- Implementing responsive design patterns
+- Debugging style-related issues
+
+**Related Documentation**:
+
+- Jekyll compilation → [.github/agents/fullstack.md](../.github/agents/fullstack.md)
+- JavaScript interactions → [assets/js/AGENTS.md](../assets/js/AGENTS.md)
+- Testing → [spec/AGENTS.md](../spec/AGENTS.md)
 
 ## Tech Stack
 
@@ -21,7 +40,7 @@ _sass/                          # SCSS partial files (compiled by Jekyll)
 ├── _filters.scss               # Filter UI components
 ├── _layout.scss                # Overall page layout
 ├── _navigation-collections.scss # Collection navigation
-├── _navigation-posts.scss      # Post navigation
+├── _navigation-items.scss      # Item navigation
 ├── _navigation-sections.scss   # Section navigation
 ├── _navigation.scss            # Main navigation bar
 ├── _settings.scss              # Global variables and settings

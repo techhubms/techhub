@@ -7,7 +7,7 @@ test.describe('Alt-Collection Tab Highlighting', () => {
   test.describe('VS Code Updates Videos', () => {
     test('should highlight Visual Studio Code Updates tab for vscode-updates video', async ({ page }) => {
       // Navigate to a VS Code Updates video
-      await navigateAndVerify(page, '/2025-08-21-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1103.html', {
+      await navigateAndVerify(page, '/videos/2025-08-21-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1103.html', {
         expectTitle: true,
         checkErrors: true,
         checkPerformance: true
@@ -40,7 +40,7 @@ test.describe('Alt-Collection Tab Highlighting', () => {
 
     test('should highlight Visual Studio Code Updates tab for another vscode-updates video', async ({ page }) => {
       // Navigate to another VS Code Updates video
-      await navigateAndVerify(page, '/2025-10-16-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1105.html', {
+      await navigateAndVerify(page, '/videos/2025-10-16-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1105.html', {
         expectTitle: true,
         checkErrors: true,
         checkPerformance: true
@@ -66,7 +66,7 @@ test.describe('Alt-Collection Tab Highlighting', () => {
   test.describe('GitHub Copilot Features Videos', () => {
     test('should highlight Features tab for ghc-features video', async ({ page }) => {
       // Navigate to a GitHub Copilot Features video
-      await navigateAndVerify(page, '/2025-04-09-Next-Edit-Suggestions.html', {
+      await navigateAndVerify(page, '/videos/2025-04-09-Next-Edit-Suggestions.html', {
         expectTitle: true,
         checkErrors: true,
         checkPerformance: true
@@ -99,7 +99,7 @@ test.describe('Alt-Collection Tab Highlighting', () => {
 
     test('should highlight Features tab for another ghc-features video', async ({ page }) => {
       // Navigate to another GitHub Copilot Features video
-      await navigateAndVerify(page, '/2025-04-15-Agent-Mode.html', {
+      await navigateAndVerify(page, '/videos/2025-04-15-Agent-Mode.html', {
         expectTitle: true,
         checkErrors: true,
         checkPerformance: true
@@ -123,7 +123,7 @@ test.describe('Alt-Collection Tab Highlighting', () => {
 
     test('should highlight Features tab for third ghc-features video', async ({ page }) => {
       // Navigate to a third GitHub Copilot Features video to ensure consistency
-      await navigateAndVerify(page, '/2025-05-02-Bring-Your-Own-LLM.html', {
+      await navigateAndVerify(page, '/videos/2025-05-02-Bring-Your-Own-LLM.html', {
         expectTitle: true,
         checkErrors: true,
         checkPerformance: true
@@ -149,7 +149,7 @@ test.describe('Alt-Collection Tab Highlighting', () => {
   test.describe('Regular Videos (Control)', () => {
     test('should highlight Videos tab for regular GitHub Copilot video', async ({ page }) => {
       // Navigate to a regular GitHub Copilot video (not in ghc-features or vscode-updates)
-      await navigateAndVerify(page, '/2025-08-16-GPT-5-Now-Available-in-GitHub-Copilot-Advanced-Features-and-How-to-Enable.html', {
+      await navigateAndVerify(page, '/videos/2025-08-16-GPT-5-Now-Available-in-GitHub-Copilot-Advanced-Features-and-How-to-Enable.html', {
         expectTitle: true,
         checkErrors: true,
         checkPerformance: true

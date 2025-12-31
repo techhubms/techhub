@@ -429,7 +429,7 @@ describe('Tag Filter Core Logic', () => {
         epoch: Math.floor(Date.now() / 1000) - (i * 3600), // Posts every hour going back
         tags: [`tag-${i % 10}`, 'common-tag'],
         categories: ['test'],
-        collection: 'posts'
+        collection: 'blogs'
       }));
 
       // Test that operations complete in reasonable time

@@ -6,7 +6,7 @@
   "Description": "Use Copilot Chat to write, explain, and test regex patterns, so you spend less time guessing and more time shipping.",
   "Title": "Draft Smarter Regex Without the Headaches",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html",
   "Tags": [],

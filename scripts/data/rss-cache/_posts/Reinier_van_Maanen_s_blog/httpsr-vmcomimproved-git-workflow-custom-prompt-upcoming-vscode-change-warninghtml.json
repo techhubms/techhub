@@ -1,7 +1,7 @@
 {
   "Title": "Improved Git Workflow Custom Prompt & Upcoming VS Code change warning",
   "FeedName": "Reinier van Maanen's blog",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Tags": [
     "AI",
     "Automation",

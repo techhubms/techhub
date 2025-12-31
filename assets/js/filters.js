@@ -5,14 +5,14 @@
 window.activeFilters = new Set();
 window.collapsedTagsVisible = false;
 window.isUpdating = false; // Centralized mutex for all filter operations (accessible globally)
-window.dateFilterMappings = {}; // Pre-calculated date filter mappings (dateFilter -> Set of post indices) - set by initializeTagFilter
+window.dateFilterMappings = {}; // Pre-calculated date filter mappings (dateFilter -> Set of item indices) - set by initializeTagFilter
 window.dateFilterConfig = {}; // Date filter configuration from Jekyll - set by initializeTagFilter
 window.tagRelationships = {}; // Tag relationships for optimized filtering (tag -> item indices mapping) - set by initializeTagFilter
 window.cachedCountSpans = new Map(); // Cache for filter button count span elements (tag -> DOM element mapping)
 window.dateFilters = []; // Array of date filter labels
-window.currentFilterData = []; // Array of post data from Jekyll
+window.currentFilterData = []; // Array of item data from Jekyll
 window.textSearchQuery = ''; // Current text search query
-window.cachedPosts = null;
+window.cachedItems = null;
 window.cachedDateButtons = null;
 window.cachedNonDateButtons = null;
 window.cachedHiddenTagButtons = null;
@@ -91,27 +91,27 @@ function initializeDOM() {
 
 // Initialize DOM cache
 function initDOMCache() {
-    if (!window.cachedPosts) {
-        const postElements = document.querySelectorAll('.navigation-post-square');
+    if (!window.cachedItems) {
+        const itemElements = document.querySelectorAll('.navigation-item-square');
 
-        window.cachedPosts = Array.from(postElements).map((el, index) => {
+        window.cachedItems = Array.from(itemElements).map((el, index) => {
             // Extract content for text search
             let content = '';
 
             // Get title content
-            const titleElement = el.querySelector('.navigation-post-title');
+            const titleElement = el.querySelector('.navigation-item-title');
             if (titleElement) {
                 content += titleElement.textContent.toLowerCase() + ' ';
             }
 
             // Get description content
-            const descElement = el.querySelector('.navigation-post-desc');
+            const descElement = el.querySelector('.navigation-item-desc');
             if (descElement) {
                 content += descElement.textContent.toLowerCase() + ' ';
             }
 
             // Get meta content (author, date, etc.)
-            const metaElement = el.querySelector('.navigation-post-meta-info');
+            const metaElement = el.querySelector('.navigation-item-meta-info');
             if (metaElement) {
                 content += metaElement.textContent.toLowerCase() + ' ';
             }
@@ -161,7 +161,7 @@ function initDOMCache() {
     }
 }
 
-// Pre-calculate date filter mappings for all posts
+// Pre-calculate date filter mappings for all items
 function preCalculateDateFilters(filterData) {
     window.dateFilterMappings = {};
 
@@ -386,7 +386,7 @@ function passesTextSearch(cachedPost) {
 
     const query = window.textSearchQuery.toLowerCase();
 
-    // Use pre-cached content from the cached post object
+    // Use pre-cached content from the cached item object
     if (cachedPost && cachedPost.content) {
         return cachedPost.content.includes(query);
     }
@@ -411,11 +411,11 @@ function updateDisplay(initialPageLoad = false) {
     }
 
     const visibilityUpdates = [];
-    const visiblePosts = [];
+    const visibleItems = [];
 
-    for (let i = 0; i < window.cachedPosts.length; i++) {
-        const post = window.cachedPosts[i];
-        const postData = window.currentFilterData[i];
+    for (let i = 0; i < window.cachedItems.length; i++) {
+        const item = window.cachedItems[i];
+        const itemData = window.currentFilterData[i];
 
         let isVisible;
 
@@ -425,15 +425,15 @@ function updateDisplay(initialPageLoad = false) {
         } else {
             const passesModeFilter = modeFilters.length === 0 || checkFilterForCurrentMode(i, modeFilters);
             const passesDateFilter = !activeDateFilter || isWithinDateFilter(i, activeDateFilter);
-            const passesTextFilter = passesTextSearch(post);
+            const passesTextFilter = passesTextSearch(item);
             isVisible = passesModeFilter && passesDateFilter && passesTextFilter;
         }
 
-        visibilityUpdates.push({ element: post.el, visible: isVisible });
+        visibilityUpdates.push({ element: item.el, visible: isVisible });
 
         if (isVisible) {
-            // Store visible posts for optimized button counting
-            visiblePosts.push({ post, postData });
+            // Store visible items for optimized button counting
+            visibleItems.push({ item, itemData });
         }
     }
 
@@ -442,7 +442,7 @@ function updateDisplay(initialPageLoad = false) {
         element.style.display = visible ? '' : 'none';
     });
 
-    updateNonDateButtonsCountsAndState(visiblePosts);
+    updateNonDateButtonsCountsAndState(visibleItems);
 
     // Efficiently update date button counts using pre-calculated mappings
     updateDateButtonCountsAndState();
@@ -516,7 +516,7 @@ function updateDateButtonCountsAndState() {
             // Check mode filters
             const passesModeFilter = modeFilters.length === 0 || checkFilterForCurrentMode(index, modeFilters);
 
-            const passesTextFilter = !window.textSearchQuery || passesTextSearch(window.cachedPosts[index]);
+            const passesTextFilter = !window.textSearchQuery || passesTextSearch(window.cachedItems[index]);
 
             return passesModeFilter && passesTextFilter;
         }).length;
@@ -540,10 +540,10 @@ function updateDateButtonCountsAndState() {
 }
 
 // Unified button state updates using mode configuration (non-date buttons only)
-function updateNonDateButtonsCountsAndState(visiblePosts) {
+function updateNonDateButtonsCountsAndState(visibleItems) {
     // Use cached non-date filter buttons only
 
-    // Use pre-calculated visiblePosts instead of recalculating
+    // Use pre-calculated visibleItems instead of recalculating
     window.cachedNonDateButtons.forEach(btn => {
         const tag = btn.getAttribute('data-tag');
         if (!tag) return;
@@ -554,8 +554,8 @@ function updateNonDateButtonsCountsAndState(visiblePosts) {
             // Use pre-calculated mappings from server - works for all filter modes
             const relatedPostIndices = window.tagRelationships[tag];
             count = relatedPostIndices.filter(index => {
-                // Only count if this post is currently visible (handles any combination of date + mode filters)
-                return visiblePosts.some(({ post }) => post.index === index);
+                // Only count if this item is currently visible (handles any combination of date + mode filters)
+                return visibleItems.some(({ item }) => item.index === index);
             }).length;
         } else {
             count = 0;
@@ -690,7 +690,7 @@ function checkFilterForCurrentMode(postIndex, filters) {
     if (window.tagRelationships && Object.keys(window.tagRelationships).length > 0) {
         // For all tag filtering, ALL selected filters must match (AND logic)
         return filters.every(filter => {
-            // Check if this post's index is in the tag relationship mapping for this filter
+            // Check if this item's index is in the tag relationship mapping for this filter
             return window.tagRelationships[filter] &&
                 window.tagRelationships[filter].includes(postIndex);
         });
@@ -713,7 +713,7 @@ window.initializeTagFilter = initializeTagFilter;
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
     // Test-only function to reset caches
     function resetCaches() {
-        window.cachedPosts = null;
+        window.cachedItems = null;
         window.cachedDateButtons = null;
         window.cachedNonDateButtons = null;
         window.cachedHiddenTagButtons = null;

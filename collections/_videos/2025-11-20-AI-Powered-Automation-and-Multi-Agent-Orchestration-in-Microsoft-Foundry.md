@@ -1,0 +1,79 @@
+---
+layout: "post"
+title: "AI-Powered Automation and Multi-Agent Orchestration in Microsoft Foundry"
+description: "This expert-level session from Microsoft Ignite 2025 dives into designing and orchestrating multi-agent systems using Microsoft Foundry. The presentation covers the transition from single-agent prototypes to ensemble orchestration with the Foundry Agent Framework, leveraging Semantic Kernel and AutoGen, as well as integrations with LangGraph and OpenAI Agents SDK. Topics include shared state, human-in-the-loop processes, A2A activity protocol, Purview governance, and OpenTelemetry-based observability, with practical insights and policy enforcement for deploying governed, secure agents at scale."
+author: "Microsoft Events"
+excerpt_separator: <!--excerpt_end-->
+canonical_url: "https://www.youtube.com/watch?v=U20tVialbao"
+viewing_mode: "internal"
+feed_name: "Microsoft Events YouTube"
+feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+date: 2025-11-20 15:47:30 +00:00
+permalink: "/videos/2025-11-20-AI-Powered-Automation-and-Multi-Agent-Orchestration-in-Microsoft-Foundry.html"
+categories: ["AI", "Azure", "ML", "Security"]
+tags: ["Activity Protocol", "Agent Framework", "Agent Orchestration", "AI", "AutoGen", "Azure", "Azure AI", "Azure Purview", "Containerized Agents", "Data Governance", "GitHub Copilot", "GitHub Copilot Extensions", "Human in The Loop", "InnovatewithAzureAIappsandagents", "LangGraph", "MCP Toolchains", "Microsoft Foundry", "ML", "MSIgnite", "Multi Agent Systems", "OpenAI Agents SDK", "OpenTelemetry", "Policy Middleware", "Secure Deployment", "Security", "Semantic Kernel", "Videos", "VS"]
+tags_normalized: ["activity protocol", "agent framework", "agent orchestration", "ai", "autogen", "azure", "azure ai", "azure purview", "containerized agents", "data governance", "github copilot", "github copilot extensions", "human in the loop", "innovatewithazureaiappsandagents", "langgraph", "mcp toolchains", "microsoft foundry", "ml", "msignite", "multi agent systems", "openai agents sdk", "opentelemetry", "policy middleware", "secure deployment", "security", "semantic kernel", "videos", "vs"]
+---
+
+Microsoft Events presents a deep dive session on multi-agent orchestration and automation in Microsoft Foundry, featuring Christof Gebhart, Shawn Henry, Tina Manghnani, and Mark Wallace. Learn about scaling from single agent prototypes to secure, governed, and observable fleets, leveraging Semantic Kernel, AutoGen, and Azure AI.<!--excerpt_end-->
+
+{% youtube U20tVialbao %}
+
+# AI-Powered Automation and Multi-Agent Orchestration in Microsoft Foundry
+
+**Presented by:** Christof Gebhart, Shawn Henry, Tina Manghnani, Mark Wallace  
+**Event:** Microsoft Ignite 2025, Session BRK197  
+
+## Overview
+
+This session explores the journey from single-agent prototypes to orchestrated, policy-governed multi-agent systems using Microsoft Foundry. Attendees will learn best practices and advanced strategies for architecting, deploying, and managing AI agents at scale with strong focus on governance, monitoring, and human-in-the-loop design.
+
+## Key Topics Covered
+
+- **Foundry Agent Framework (Semantic Kernel + AutoGen):**
+  - Framework for rapidly building and managing AI agents with robust orchestration capabilities
+  - Leverages existing AI development tools such as Semantic Kernel and AutoGen
+- **Fleet-Level Orchestration:**
+  - Techniques for scaling agent deployments and coordinating multiple agents in an ecosystem
+  - Integrating shared state and agent-to-agent (A2A) activity protocols
+- **Human-in-the-Loop Automation:**
+  - Incorporating manual decision steps and validations in automated workflows
+- **Cross-Framework Compatibility:**
+  - Integrating external agent frameworks like LangGraph and OpenAI Agents SDK for greater flexibility
+- **Containerized, Governed, Observable Agents:**
+  - Deploying agents as containers for scalability and manageability
+  - Utilizing OpenTelemetry (OpenTel) for observability and monitoring of agent activity
+- **Security and Governance with Microsoft Purview:**
+  - Integration with Microsoft Purview enabling policy enforcement and data governance
+  - Demonstration of Purview policy middleware for secure agent workflows
+  - Techniques for detecting and handling sensitive data (e.g., credit cards, SSNs)
+- **Development Tooling and Migration:**
+  - GitHub Copilot extensions for agent code migration and development boosts within Visual Studio
+  - MCP toolchains for managing complex multi-agent environments
+- **Practical Demonstrations:**
+  - Setting up AZD Templates and Environment for Foundry-based projects
+  - Real-world examples including BMW's multi-agent ecosystem
+
+## Session Structure
+
+- **Introduction:** Framing AI-powered automation and multi-agent trends
+- **Impact Case:** BMW’s large-scale deployment
+- **Lessons Learned:** Insights from Microsoft and its partners, frequent development challenges
+- **Workflow Deep Dive:** Integrating Foundry’s agent orchestration with shared state and framework plug-ins
+- **Security & Governance:** Data protection with Purview middleware and real-time sensitive data analysis
+- **Tools Walkthrough:** Using Copilot extensions, Visual Studio tools, and AZD for rapid adoption
+
+## Resources and Further Learning
+
+- [Ignite 2025 Agentic Solutions](https://aka.ms/ignite25-plans-agenticsolutions)
+- On-demand sessions at [Microsoft Ignite](https://ignite.microsoft.com)
+
+## Speakers
+
+- Christof Gebhart
+- Shawn Henry
+- Tina Manghnani
+- Mark Wallace
+
+---
+This session is recommended for AI developers, architects, and platform engineers aiming to securely orchestrate, observe, and govern fleets of AI agents in the Azure ecosystem.

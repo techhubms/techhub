@@ -1,12 +1,32 @@
 # JavaScript Development Agent
 
+> **AI CONTEXT**: This is a **LEAF** context file for the `assets/js/` directory. It complements the [Root AGENTS.md](../../AGENTS.md).
+> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+
+> ⚠️ **CRITICAL TESTING RULE**: After making ANY changes to files in `assets/js/`, you MUST run the JavaScript test suite by executing `./scripts/run-javascript-tests.ps1` to validate your changes.
+
 ## Overview
 
 You are a JavaScript specialist focused on client-side interactivity for the Tech Hub. The JavaScript enhances server-rendered content with real-time filtering, search, and navigation features while maintaining a server-first architecture.
 
+## When to Use This Guide
+
+**Read this file when**:
+- Writing or modifying JavaScript in `assets/js/` directory
+- Implementing client-side filtering or search features
+- Adding interactive UI enhancements
+- Debugging browser-side behavior
+- Working with DOM manipulation
+
+**Related Documentation**:
+- Testing JavaScript → [spec/AGENTS.md](../../spec/AGENTS.md)
+- Server-side rendering → [.github/agents/fullstack.md](../../.github/agents/fullstack.md)
+- Date/timezone handling → Root [AGENTS.md](../../AGENTS.md)
+
 ## Tech Stack
 
 - **JavaScript**: Vanilla ES6+ (no frameworks)
+- **Node.js**: 22+ (development tooling)
 - **Testing Framework**: Jest with jsdom
 - **Architecture**: Progressive enhancement
 - **Browser Support**: Modern evergreen browsers
@@ -35,10 +55,13 @@ window.addEventListener('load', () => {
 
 ```text
 assets/js/
-├── sections.js    # Exception: runs on page load for navigation state
-├── filters.js     # Tag-based filtering system with text search
-├── features.js    # Feature sections interactivity
-└── logo-manager.js # Logo variant management
+├── sections.js      # Exception: runs on page load for navigation state
+├── filters.js       # Tag-based filtering system with text search
+├── features.js      # Feature sections interactivity
+├── logo-manager.js  # Logo variant management
+├── back-to-top.js   # Back to top button functionality
+├── mermaid-page.js  # Mermaid diagram rendering support
+└── sdlc.js          # SDLC interactive component logic
 ```
 
 ## Key Files
@@ -81,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 **Filter Types**:
 
 1. **Section filters** - High-level category filtering
-2. **Collection filters** - Content type filtering (posts, news, videos)
+2. **Collection filters** - Content type filtering (blogs, news, videos)
 3. **Content tag filters** - Fine-grained topic filtering
 4. **Date filters** - Exclusive time period filtering
 5. **Text search** - Real-time content search
@@ -212,7 +235,7 @@ The filtering system uses pre-calculated tag relationships embedded by Jekyll:
 <!-- Server renders this -->
 <div data-tags="ai,azure,machine-learning" 
      data-section="ai"
-     data-collection="posts">
+     data-collection="blogs">
   Content here
 </div>
 ```
@@ -330,6 +353,38 @@ describe('Filter System', () => {
 
 ## Performance Considerations
 
+### Core Performance Guidelines
+
+**Progressive Enhancement**:
+- Ensure core functionality works without JavaScript
+- Load core functionality first, then enhance progressively
+- Monitor memory usage for leaks in long-running sessions
+- Never create initial content with JavaScript (server-rendered only)
+
+**Image and Asset Performance**:
+- **Lazy loading** - Load images as needed to improve initial page performance
+- **Modern formats** - Use WebP and other modern image formats when supported
+- **Responsive images** - Implement proper `srcset` and `sizes` attributes
+- **Asset bundling** - Optimize file loading to reduce HTTP requests
+
+**Testing Requirements**:
+
+**Mobile Performance**:
+- Test loading speeds on mobile networks and various connection speeds
+- Ensure touch interactions are responsive
+- Verify performance standards are met on mobile devices
+
+**Browser Performance**:
+- Test across different browsers and versions
+- Track JavaScript execution times
+- Use browser dev tools to profile and identify bottlenecks
+
+**Performance Monitoring**:
+- Monitor JavaScript execution times
+- Measure page load times across devices
+- Use profiling tools to find slow operations
+- Ensure code changes don't regress performance
+
 ### Minimize Reflows
 
 ```javascript
@@ -373,6 +428,21 @@ function updateDisplay() {
   });
 }
 ```
+
+### Troubleshooting Slow Filtering or Page Loading
+
+**Common causes**:
+- Too much client-side processing
+- Inefficient DOM queries
+- Large datasets without optimization
+
+**Solutions**:
+1. Move processing to server-side (build time)
+2. Optimize JavaScript queries and cache DOM elements
+3. Implement proper caching strategies
+4. Use content limiting rules correctly
+5. Minimize DOM queries and batch updates
+6. Use debouncing for expensive operations (300ms default)
 
 ## Common Patterns
 

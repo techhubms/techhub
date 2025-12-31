@@ -4,7 +4,7 @@ Downloads RSS feeds and saves them to structured data directories with content f
 
 .DESCRIPTION
 Downloads RSS feeds from configured sources and saves them in a structured format:
-- One directory per output type (e.g., _news, _posts)
+- One directory per output type (e.g., _news, _blogs)
 - One subdirectory per feed within each output type
 - One JSON file per feed item
 Each item includes enhanced content fetched using Playwright (for Reddit) or direct HTTP (for others).

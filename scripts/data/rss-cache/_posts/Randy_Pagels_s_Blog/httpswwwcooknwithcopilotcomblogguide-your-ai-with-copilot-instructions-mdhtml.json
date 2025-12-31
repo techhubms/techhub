@@ -6,7 +6,7 @@
   "Description": "Define project rules once in copilot-instructions.md and Copilot will follow them for names, docs, and safer patterns.",
   "Title": "Guide Your AI with copilot-instructions.md",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/guide-your-ai-with-copilot-instructions-md.html",
   "Tags": [],

@@ -6,7 +6,7 @@
   "Description": "Generate comprehensive documentation, README files, and inline comments that actually make sense.",
   "Title": "Ways to Use GitHub Copilot for Documentation & Clarity",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/ways-to-use-github-copilot-for-documentation-clarity.html",
   "Tags": [],

@@ -12,7 +12,7 @@
     "windows"
   ],
   "Link": "https://www.mindbyte.nl/2025/06/02/dynamic-iis-server-deployments-github-actions.html",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "PubDate": "2025-06-01T22:00:00+00:00",
   "FeedName": "Michiel van Oudheusden's Blog",
   "FeedLevelAuthor": "Michiel van Oudheusden",

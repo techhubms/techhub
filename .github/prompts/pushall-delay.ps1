@@ -306,6 +306,7 @@ try {
             } else {
                 break
             }
+        }
         
         if ($script:Aborted -or (Get-Date) -ge $endTime) { break }
     }

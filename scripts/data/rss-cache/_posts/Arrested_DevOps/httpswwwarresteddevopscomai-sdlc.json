@@ -5,7 +5,7 @@
   "Link": "https://www.arresteddevops.com/ai-sdlc/",
   "Title": "How AI Is Changing the SDLC With Hannah Foxwell and Robert Werner",
   "Author": "Arrested DevOps",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.arresteddevops.com/episode/index.xml",
   "Tags": [],
   "Description": "The software industry is experiencing another seismic shift. After decades of agile transformations, cloud migrations, and DevOps revolutions, we're now navigating the integration of AI into the software development lifecycle. But this time feels different—the pace is faster, the technology less mature, and the stakes feel higher. Matty Stratton sat down with Hannah Foxwell and Robert Werner to explore what this transformation means for developers, operations teams, and the organizations they serve.",

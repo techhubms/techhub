@@ -6,7 +6,7 @@
   "Description": "Turn legacy spaghetti code into clean, maintainable solutions with targeted refactoring prompts.",
   "Title": "Refactor Messy Code in Seconds with GitHub Copilot",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/refactor-messy-code-in-seconds-with-github-copilot.html",
   "Tags": [],

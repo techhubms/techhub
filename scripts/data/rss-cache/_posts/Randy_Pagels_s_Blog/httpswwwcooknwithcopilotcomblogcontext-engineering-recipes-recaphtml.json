@@ -1,7 +1,7 @@
 {
   "Author": "randy.pagels@xebia.com (Randy Pagels)",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Title": "Cook’n with GitHub Copilot: Context Engineering Recipes • The Recap",
   "ProcessedDate": "2025-12-19 14:04:48",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",

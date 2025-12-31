@@ -7,15 +7,15 @@ const {
 test.describe('RSS Feeds', () => {
 
   const rssFeeds = [
-    { name: 'Everything', url: '/rss/feed.xml', section: 'all' },
-    { name: 'AI', url: '/rss/ai.xml', section: 'ai' },
-    { name: 'GitHub Copilot', url: '/rss/github-copilot.xml', section: 'github-copilot' },
-    { name: 'ML', url: '/rss/ml.xml', section: 'ml' },
-    { name: 'Azure', url: '/rss/azure.xml', section: 'azure' },
-    { name: 'Coding', url: '/rss/coding.xml', section: 'coding' },
-    { name: 'DevOps', url: '/rss/devops.xml', section: 'devops' },
-    { name: 'Security', url: '/rss/security.xml', section: 'security' },
-    { name: 'Roundups', url: '/rss/roundups.xml', section: 'roundups' }
+    { name: 'Everything', url: '/all/feed.xml', section: 'all' },
+    { name: 'AI', url: '/ai/feed.xml', section: 'ai' },
+    { name: 'GitHub Copilot', url: '/github-copilot/feed.xml', section: 'github-copilot' },
+    { name: 'ML', url: '/ml/feed.xml', section: 'ml' },
+    { name: 'Azure', url: '/azure/feed.xml', section: 'azure' },
+    { name: 'Coding', url: '/coding/feed.xml', section: 'coding' },
+    { name: 'DevOps', url: '/devops/feed.xml', section: 'devops' },
+    { name: 'Security', url: '/security/feed.xml', section: 'security' },
+    { name: 'Roundups', url: '/roundups/feed.xml', section: 'roundups' }
   ];
 
   for (const feed of rssFeeds) {
@@ -38,11 +38,13 @@ test.describe('RSS Feeds', () => {
 
       // Verify it's valid Atom XML format
       expect(content).toContain('<?xml version="1.0" encoding="utf-8"?>');
-      expect(content).toContain('<feed xmlns="http://www.w3.org/2005/Atom">');
+      // Allow for optional space before closing > in feed tag (Jekyll adds this)
+      expect(content).toMatch(/<feed xmlns="http:\/\/www\.w3\.org\/2005\/Atom"\s*>/);
       expect(content).toContain('</feed>');
 
       // Verify required Atom feed elements
-      expect(content).toContain('<title>');
+      // Title may have attributes like type="html"
+      expect(content).toMatch(/<title[\s>]/);
       expect(content).toContain('<link');
       expect(content).toContain('<updated>');
       expect(content).toContain('<id>');
@@ -58,11 +60,11 @@ test.describe('RSS Feeds', () => {
       console.log(`✓ ${feed.name} RSS feed is valid and accessible at ${feed.url}`);
     });
 
-    // Test RSS icon link on section pages (skip for roundups which doesn't have a section page)
-    if (feed.section !== 'roundups') {
+    // Test RSS icon link on section pages (skip for roundups and all/Everything which don't have RSS icons)
+    if (feed.section !== 'roundups' && feed.section !== 'all') {
       test(`should have RSS icon link on ${feed.name} section page`, async ({ page }) => {
         // Navigate to the section page
-        const sectionUrl = feed.section === 'all' ? '/all' : `/${feed.section}`;
+        const sectionUrl = `/${feed.section}`;
         await navigateAndVerify(page, sectionUrl, {
           expectTitle: true,
           checkErrors: true
@@ -138,7 +140,7 @@ test.describe('RSS Feeds', () => {
     });
 
     // Verify footer RSS link is present
-    const footerRssLink = page.locator('footer a[href="/rss/feed.xml"]');
+    const footerRssLink = page.locator('footer a[href="/all/feed.xml"]');
     await expect(footerRssLink).toBeVisible();
 
     // Verify the link text

@@ -6,7 +6,7 @@
   "Description": "Eliminate boring, repetitive coding tasks by teaching Copilot to recognize and replicate patterns.",
   "Title": "Automate Repetitive Code with GitHub Copilot",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/automate-repetitive-code-with-github-copilot.html",
   "Tags": [],

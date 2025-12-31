@@ -6,7 +6,7 @@
   "Description": "Discover when to use inline Copilot suggestions vs. when to fire up Chat for deeper conversations.",
   "Title": "Copilot vs. Chat: Sidekick Showdown",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html",
   "Tags": [],

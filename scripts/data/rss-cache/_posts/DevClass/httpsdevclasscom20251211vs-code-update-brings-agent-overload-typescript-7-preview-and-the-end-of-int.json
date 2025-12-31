@@ -1,7 +1,7 @@
 {
   "Title": "VS Code update brings agent overload, TypeScript 7 preview, and the end of IntelliCode",
   "PubDate": "2025-12-11T15:20:03+00:00",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Author": "Tim Anderson",
   "Description": "Microsoft has updated Visual Studio Code (VS Code), the most popular programmer’s editor, with Agent HQ alongside numerous […]",
   "ProcessedDate": "2025-12-11 16:05:18",

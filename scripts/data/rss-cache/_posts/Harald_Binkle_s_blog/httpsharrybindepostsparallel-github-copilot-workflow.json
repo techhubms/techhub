@@ -5,7 +5,7 @@
   "Description": "Discover how to break free from the sequential developer workflow and use GitHub Copilot, Copilot CLI and the coding agent to run multiple independent tasks in parallel—boosting your productivity and speeding up project delivery.",
   "FeedName": "Harald Binkle's blog",
   "PubDate": "2025-10-01T23:51:00+00:00",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Link": "https://harrybin.de/posts/parallel-github-copilot-workflow/",
   "Tags": [],
   "FeedUrl": "https://harrybin.de/rss.xml",

@@ -74,7 +74,7 @@ const SECTIONS = loadSectionsConfig();
 /**
  * Get the latest file from a Jekyll collection directory
  * Applies 7-day recency filter to match server-side rendering logic
- * @param {string} collectionPath - Path to the collection directory (e.g., '_posts', '_news')
+ * @param {string} collectionPath - Path to the collection directory (e.g., '_blogs', '_news')
  * @returns {Object} - Object with filename, date, and parsed front matter
  */
 async function getLatestFileFromCollection(collectionPath) {
@@ -191,7 +191,7 @@ async function getLatestFileFromCollection(collectionPath) {
 
 /**
  * Get the latest file from a Jekyll collection directory filtered by category
- * @param {string} collectionPath - Path to the collection directory (e.g., '_posts', '_news')
+ * @param {string} collectionPath - Path to the collection directory (e.g., '_blogs', '_news')
  * @param {string} category - Category to filter by (e.g., 'AI', 'GitHub Copilot')
  * @returns {Object} - Object with filename, date, and parsed front matter
  */
@@ -328,11 +328,10 @@ async function getLatestFileFromCollectionByCategory(collectionPath, category) {
  */
 async function getExpectedLatestContent() {
   const collections = {
-    posts: await getLatestFileFromCollection('_posts'),
+    blogs: await getLatestFileFromCollection('_blogs'),
     news: await getLatestFileFromCollection('_news'),
     community: await getLatestFileFromCollection('_community'),
     videos: await getLatestFileFromCollection('_videos'),
-    events: await getLatestFileFromCollection('_events'),
     roundups: await getLatestFileFromCollection('_roundups')
   };
 
@@ -410,10 +409,10 @@ async function getFilterCounts(page) {
 
 async function getVisiblePostCount(page) {
   return await page.evaluate(() => {
-    const posts = document.querySelectorAll('.navigation-post-square');
+    const items = document.querySelectorAll('.navigation-item-square');
     let visibleCount = 0;
-    posts.forEach(post => {
-      const style = window.getComputedStyle(post);
+    items.forEach(item => {
+      const style = window.getComputedStyle(item);
       if (style.display !== 'none') {
         visibleCount++;
       }

@@ -6,7 +6,7 @@
   "Description": "Copilot’s multi-file context helps you connect controllers, models, and tests without losing track of relationships.",
   "Title": "Work Smarter Across Multiple Files",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/work-smarter-across-multiple-files.html",
   "Tags": [],

@@ -1,7 +1,7 @@
 {
   "Title": "Microsoft Ignite 2024: Key updates from Microsoft Fabric perspective",
   "FeedName": "Zure Data & AI Blog",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Tags": [
     "Blog",
     "Data&AI"

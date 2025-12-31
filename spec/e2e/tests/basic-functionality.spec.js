@@ -70,15 +70,15 @@ test.describe('Basic Site Functionality', () => {
     await page.goto('/');
 
     // Find RSS link and verify it exists
-    const rssLink = page.locator('a[href="/rss/feed.xml"]');
+    const rssLink = page.locator('a[href="/all/feed.xml"]');
     await expect(rssLink).toBeVisible();
     await expect(rssLink).toBeEnabled();
 
     const href = await rssLink.getAttribute('href');
-    expect(href).toBe('/rss/feed.xml');
+    expect(href).toBe('/all/feed.xml');
 
     // Test that RSS feed actually exists and is valid
-    const response = await page.request.get('/rss/feed.xml');
+    const response = await page.request.get('/all/feed.xml');
     expect(response.status()).toBe(200);
 
     const content = await response.text();
@@ -112,7 +112,7 @@ test.describe('Basic Site Functionality', () => {
     await rssLink.click();
 
     // Should navigate to the RSS feed
-    await expect(page).toHaveURL('/rss/feed.xml');
+    await expect(page).toHaveURL('/all/feed.xml');
 
     // Verify the RSS content is displayed (check for actual content since XML declarations are stripped from textContent)
     const pageContent = await page.textContent('body');
@@ -125,9 +125,9 @@ test.describe('Basic Site Functionality', () => {
       { url: '/ai/', name: 'AI Section' },
       { url: '/github-copilot/', name: 'GitHub Copilot Section' },
       { url: '/ai/news.html', name: 'AI News' },
-      { url: '/ai/posts.html', name: 'AI Posts' },
+      { url: '/ai/blogs.html', name: 'AI Blogs' },
       { url: '/github-copilot/news.html', name: 'Copilot News' },
-      { url: '/github-copilot/posts.html', name: 'Copilot Posts' }
+      { url: '/github-copilot/blogs.html', name: 'Copilot Blogs' }
     ];
 
     for (const { url, name } of pagesToTest) {

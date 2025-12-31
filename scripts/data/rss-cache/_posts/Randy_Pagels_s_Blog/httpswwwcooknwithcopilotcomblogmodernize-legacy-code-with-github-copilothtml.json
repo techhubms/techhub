@@ -6,7 +6,7 @@
   "Description": "Breathe new life into old codebases by gradually updating patterns and practices with Copilot's help.",
   "Title": "Modernize Legacy Code with GitHub Copilot",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/modernize-legacy-code-with-github-copilot.html",
   "Tags": [],

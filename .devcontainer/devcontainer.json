@@ -78,10 +78,6 @@
         // Experimental Inline Chat Features
         "inlineChat.lineEmptyHint": true, // Show hint on empty lines
         
-        // Search Features (Preview)
-        "search.searchView.keywordSuggestions": true, // Show keyword suggestions
-        "search.searchView.semanticSearchBehavior": "auto", // Run semantic search automatically
-        
         // ==================== Extension Settings ====================
         "githubPullRequests.codingAgent.uiIntegration": true,
         "jest.jestCommandLine": "npm test --prefix spec/javascript",

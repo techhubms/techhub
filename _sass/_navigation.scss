@@ -5,7 +5,7 @@
 .nav-grid-base {
     display: grid;
     gap: settings.$spacing-unit;
-    margin: 0 auto 10px auto;
+    margin: 10px auto 10px auto;
     justify-content: center;
     contain: layout;
 }

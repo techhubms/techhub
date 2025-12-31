@@ -1,6 +1,6 @@
 {
   "FeedUrl": "https://devclass.com/feed/",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedName": "DevClass",
   "Description": "Docker has made its catalog of hardened images – designed to run common runtimes on a secure and […]",
   "FeedLevelAuthor": "DEVCLASS",

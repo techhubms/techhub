@@ -1,15 +1,38 @@
 # Jekyll Plugin Development Agent
 
+> **AI CONTEXT**: This is a **LEAF** context file for the `_plugins/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
+> **RULE**: Global rules (Timezone, Performance) in RootAGENS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+
+> ⚠️ **CRITICAL TESTING RULE**: After making ANY changes to files in `_plugins/`, you MUST run the plugin test suite by executing `./scripts/run-plugin-tests.ps1` to validate your changes.
+
 ## Overview
 
 You are a Ruby specialist focused on Jekyll plugin development for the Tech Hub. These plugins extend Jekyll's functionality with custom generators, filters, and tags for content processing and site generation.
 
+**For complete Jekyll configuration details and server management, see [.github/agents/fullstack.md](../.github/agents/fullstack.md).**
+
+## When to Use This Guide
+
+**Read this file when**:
+
+- Creating new Jekyll plugins
+- Modifying existing generators, filters, or tags
+- Working with Ruby code in `_plugins/` directory
+- Adding custom Liquid functionality
+- Processing content during Jekyll build
+
+**Related Documentation**:
+
+- Jekyll server management → [.github/agents/fullstack.md](../.github/agents/fullstack.md)
+- Testing plugins → [spec/AGENTS.md](../spec/AGENTS.md)
+- Liquid templates → [.github/agents/fullstack.md](../.github/agents/fullstack.md)
+
 ## Tech Stack
 
 - **Ruby**: 3.2+
-- **Jekyll**: 4.3+
-- **Testing Framework**: RSpec
-- **Key Dependencies**: Time zone libraries, HTML/XML processors
+- **Jekyll**: 4.4+
+- **Testing Framework**: RSpec 3.13+
+- **Key Dependencies**: Time zone libraries (tzinfo), HTML/XML processors
 
 ## Plugin Types
 
@@ -57,6 +80,7 @@ _plugins/
 **Output**: In-memory Jekyll pages (no files written to disk)
 
 **Key Features**:
+
 - Configuration-driven page generation
 - Uses `Jekyll::PageWithoutAFile` for runtime page creation
 - Comprehensive error handling
@@ -70,10 +94,10 @@ _plugins/
 
 ```ruby
 # Convert to Unix epoch timestamp
-{{ post.date | to_epoch }}
+{{ item.date | to_epoch }}
 
 # Convert with Europe/Brussels timezone
-{{ post.date | date_to_epoch }}
+{{ item.date | date_to_epoch }}
 
 # Get current timestamp
 {{ '' | now_epoch }}
@@ -82,10 +106,10 @@ _plugins/
 {{ site.documents | with_dates }}
 
 # Sort by date (newest first)
-{{ site.posts | sort_by_date }}
+{{ site.blogs | sort_by_date }}
 
 # Limit with same-day grouping (collection-aware)
-{{ site.posts | limit_with_same_day: 10 }}
+{{ site.blogs | limit_with_same_day: 10 }}
 ```
 
 **limit_with_same_day Filter**: Applies server-side content limiting with collection-aware rule plus 7-day recency filter:
@@ -106,10 +130,11 @@ _plugins/
 
 ```ruby
 # Extract and normalize tags from frontmatter
-{{ post.tags | extract_tags }}
+{{ item.tags | extract_tags }}
 ```
 
 **Features**:
+
 - Tag normalization (lowercase, hyphenated)
 - Duplicate removal
 - Validation and sanitization
@@ -139,6 +164,51 @@ _plugins/
 ```
 
 **Output**: Responsive iframe with 16:9 aspect ratio container.
+
+### sitemap_generator.rb
+
+**Purpose**: Generate `sitemap.xml` and `robots.txt` after Jekyll builds the site.
+
+**How It Works**:
+
+- Uses Jekyll's `:post_write` hook to run AFTER Jekyll finishes writing all files
+- Generates `sitemap.xml` with URLs for all pages (excludes collection documents)
+- Generates `robots.txt` pointing to the sitemap
+- Files persist after build because hook runs after Jekyll's write phase
+
+**What Gets Included**:
+
+- ✅ Page files (section indexes, collection pages, custom pages)
+- ❌ Collection documents (individual posts, videos, news items, etc.)
+- ❌ Files with extensions: `.xml`, `.json`, `.txt`, `.pdf`
+- ❌ `/404.html` page
+- ❌ Any page with `sitemap: false` in frontmatter
+
+**Features**:
+
+- XML escapes special characters in URLs (`&`, `<`, `>`, `"`, `'`)
+- Deduplicates URLs automatically
+- Respects `baseurl` configuration
+- Logs generation progress and file sizes
+
+**Technical Architecture**:
+
+Uses Jekyll::Hooks instead of Generator class because:
+
+- Generators run during build time and files may get cleaned up
+- `:post_write` hook runs AFTER Jekyll completes writing, ensuring file persistence
+- No StaticFile registration needed (files are written directly to `_site/`)
+
+**Manual Exclusion**:
+
+Add `sitemap: false` to frontmatter of any page you want to exclude:
+
+```yaml
+---
+title: Private Page
+sitemap: false
+---
+```
 
 ## Ruby Development Standards
 
@@ -199,11 +269,13 @@ Liquid::Template.register_tag('your_tag', Jekyll::YourTag)
 **Keep Templates Simple**: Liquid templates should focus on rendering, not complex logic.
 
 **Preferred Architecture Order**:
+
 1. **Plugins**: Complex data processing, page generation, data aggregation
 2. **Filters**: Data transformation and formatting operations  
 3. **Liquid Templates**: Simple rendering logic only
 
 **Benefits**:
+
 - **Performance**: Ruby plugins are faster than complex Liquid logic
 - **Maintainability**: Centralized logic in dedicated plugin files
 - **Testability**: Plugins can be unit tested independently
@@ -246,11 +318,11 @@ Liquid::Template.register_tag('your_tag', Jekyll::YourTag)
 When data is explicitly passed to included files:
 
 ```liquid
-{%- include posts.html posts=limited_posts -%}
-{%- include filters.html posts=posts collection_type=page.collection -%}
+{%- include blogs.html blogs=limited_blogs -%}
+{%- include filters.html blogs=blogs collection_type=page.collection -%}
 ```
 
-Access in includes using the `include.` prefix: `include.posts`, `include.collection_type`
+Access in includes using the `include.` prefix: `include.blogs`, `include.collection_type`
 
 ### Formatting Requirements
 
@@ -330,7 +402,7 @@ Use **RSpec** for all Jekyll plugin testing. For complete testing patterns, test
 ### Test File Location
 
 ```text
-spec/_plugins/
+spec/plugins/
 └── [plugin_name]_spec.rb
 ```
 
@@ -419,7 +491,7 @@ def generate(site)
   sections_data = site.data['sections']
   
   # Access collections
-  posts = site.collections['posts']
+  blogs = site.collections['blogs']
   
   # Get all documents
   all_docs = site.documents
@@ -467,14 +539,14 @@ bundle exec rspec --format documentation
 
 | Filter | Purpose | Usage |
 |--------|---------|-------|
-| `to_epoch` | Convert date to Unix timestamp | `{{ post.date \| to_epoch }}` |
-| `date_to_epoch` | Convert date to epoch (Brussels timezone) | `{{ post.date \| date_to_epoch }}` |
+| `to_epoch` | Convert date to Unix timestamp | `{{ item.date \| to_epoch }}` |
+| `date_to_epoch` | Convert date to epoch (Brussels timezone) | `{{ item.date \| date_to_epoch }}` |
 | `now_epoch` | Get current timestamp | `{{ '' \| now_epoch }}` |
 | `normalize_date_format` | Fix timezone format issues | `{{ raw_date \| normalize_date_format }}` |
 | `normalize_to_midnight` | Normalize time to midnight | `{{ item.date \| normalize_to_midnight }}` |
 | `with_dates` | Filter items with valid dates | `{{ site.documents \| with_dates }}` |
-| `sort_by_date` | Sort items by date | `{{ site.posts \| sort_by_date }}` |
-| `limit_with_same_day` | Apply "N + same-day" rule per collection | `{{ posts \| limit_with_same_day }}` |
+| `sort_by_date` | Sort items by date | `{{ site.blogs \| sort_by_date }}` |
+| `limit_with_same_day` | Apply "N + same-day" rule per collection | `{{ blogs \| limit_with_same_day }}` |
 
 ### String Filters (from string_filters.rb)
 

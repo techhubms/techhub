@@ -7,11 +7,12 @@ Describe "Convert-RssToMarkdown" {
         . "$PSScriptRoot/Initialize-BeforeAll.ps1"
 
         $script:TestScriptsPath = Join-Path $script:TempPath "scripts"
+        $script:TestContentProcessingPath = Join-Path $script:TestScriptsPath "content-processing"
         $script:TestDataPath = Join-Path $script:TestScriptsPath "data"
-        $script:TestOutputDir = Join-Path $script:TempPath "_posts"
+        $script:TestOutputDir = Join-Path $script:TempPath "_blogs"
         $script:TestCommunityOutputDir = Join-Path $script:TempPath "_community"
         $script:TestAiResultsDir = Join-Path $script:TestScriptsPath "ai-results"
-        $script:TestTemplatesPath = Join-Path $script:TestScriptsPath "templates"
+        $script:TestTemplatesPath = Join-Path $script:TestContentProcessingPath "templates"
         $script:TestSkippedEntriesPath = Join-Path $script:TestDataPath "skipped-entries.json"
         $script:TestProcessedEntriesPath = Join-Path $script:TestDataPath "processed-entries.json"
         
@@ -125,14 +126,14 @@ Describe "Convert-RssToMarkdown" {
             }
         )
         
-        $script:postsTestItems = @(
+        $script:blogsTestItems = @(
             [PSCustomObject]@{
-                Title           = "Posts Article"
-                Link            = "https://example.com/posts-article"
+                Title           = "Blogs Article"
+                Link            = "https://example.com/blogs-article"
                 PubDate         = [DateTime]::Parse("2025-01-01T12:00:00Z")
-                Description     = "This is a posts article. " + ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. " * 10)
-                Author          = "Posts Author"
-                Tags            = @("Posts", "Testing")
+                Description     = "This is a blogs article. " + ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. " * 10)
+                Author          = "Blogs Author"
+                Tags            = @("Blogs", "Testing")
                 OutputDir       = $script:TestOutputDir
                 FeedName        = "Test Feed"
                 FeedUrl         = "https://example.com/feed"
@@ -183,6 +184,7 @@ youtube_id: {{YOUTUBE_ID}}
         # Recreate directory structure (Initialize-BeforeEach.ps1 removes TestSourceRoot)
         New-Item -Path $script:TempPath -ItemType Directory -Force | Out-Null
         New-Item -Path $script:TestScriptsPath -ItemType Directory -Force | Out-Null
+        New-Item -Path $script:TestContentProcessingPath -ItemType Directory -Force | Out-Null
         New-Item -Path $script:TestDataPath -ItemType Directory -Force | Out-Null
         New-Item -Path $script:TestOutputDir -ItemType Directory -Force | Out-Null
         New-Item -Path $script:TestAiResultsDir -ItemType Directory -Force | Out-Null
@@ -196,7 +198,7 @@ youtube_id: {{YOUTUBE_ID}}
         Set-Content -Path $script:TestProcessedEntriesPath -Value "[]"
         
         # Create collection directories and clear any existing files
-        $collectionDirs = @("_posts", "_community", "_news", "_videos", "_events", "_roundups")
+        $collectionDirs = @("_blogs", "_community", "_news", "_videos", "_events", "_roundups")
         foreach ($dir in $collectionDirs) {
             $fullPath = Join-Path $script:TempPath $dir
             New-Item -Path $fullPath -ItemType Directory -Force | Out-Null
@@ -943,7 +945,7 @@ This has an unquoted canonical URL.
             # Create a feed with a different URL for the unquoted test
             $testFeedDataUnquoted = [PSCustomObject]@{
                 FeedName        = "Test Feed"
-                OutputDir       = "_posts"
+                OutputDir       = "_blogs"
                 URL             = "https://example.com/feed.xml"
                 FeedLevelAuthor = "Test Feed Author"
                 Items           = @(
@@ -954,7 +956,7 @@ This has an unquoted canonical URL.
                         Description = "This is a test article for unquoted test. " + ("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " * 5) # Make longer than 500 chars to avoid HTTP fetch
                         Author      = "Test Author"
                         Tags        = @("AI", "Testing")
-                        OutputDir   = "_posts"
+                        OutputDir   = "_blogs"
                     }
                 )
             }
@@ -1170,7 +1172,7 @@ Content
                     Description     = "This is a short description." # Only 30 chars - but should work fine
                     Author          = "Test Author"
                     Tags            = @("AI", "Testing")
-                    OutputDir       = Join-Path $script:TempPath "_posts"
+                    OutputDir       = Join-Path $script:TempPath "_blogs"
                     FeedName        = "Test Feed"
                     FeedUrl         = "https://example.com/feed.xml"
                     EnhancedContent = "Test enhanced content for processing"
@@ -1307,7 +1309,7 @@ Content
                     Description     = "This is an article that will cause AI processing to fail."
                     Author          = "Test Author"
                     Tags            = @("AI", "Testing")
-                    OutputDir       = Join-Path $script:TempPath "_posts"
+                    OutputDir       = Join-Path $script:TempPath "_blogs"
                     FeedName        = "Test Feed"
                     FeedUrl         = "https://example.com/feed.xml"
                     EnhancedContent = "Test enhanced content for error processing"

@@ -1,7 +1,7 @@
 {
   "Title": "How to improve my GitHub Copilot results?",
   "FeedName": "Harald Binkle's blog",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "Tags": [],
   "ProcessedDate": "2025-08-05 17:17:08",
   "Description": "Tips and strategies to improve GitHub Copilot results in your projects, including instruction files and chatmode files for large projects.",

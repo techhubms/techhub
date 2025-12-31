@@ -126,7 +126,7 @@ test.describe('Filter Count Accuracy Tests', () => {
 
       // Get total content vs visible content to understand limiting
       const totalContentItems = await page.evaluate(() => {
-        return document.querySelectorAll('.navigation-post-square').length;
+        return document.querySelectorAll('.navigation-item-square').length;
       });
 
       const visibleContentItems = await getVisiblePostCount(page);
@@ -385,7 +385,7 @@ test.describe('Filter Count Accuracy Tests', () => {
 
     // Helper to capture collection filter counts
     async function captureCollectionFilterCounts() {
-      const collectionFilters = page.locator('.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="posts"], .tag-filter-btn[data-tag="videos"], .tag-filter-btn[data-tag="community"]');
+      const collectionFilters = page.locator('.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="blogs"], .tag-filter-btn[data-tag="videos"], .tag-filter-btn[data-tag="community"]');
       const counts = {};
       const filterCount = await collectionFilters.count();
 

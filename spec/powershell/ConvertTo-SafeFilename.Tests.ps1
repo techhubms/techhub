@@ -173,7 +173,7 @@ Describe "ConvertTo-SafeFilename" {
     }
     
     Context "Real-World Examples" {
-        It "Should handle typical blog post title" {
+        It "Should handle typical blogs title" {
             $result = ConvertTo-SafeFilename -Title "How to Use GitHub Copilot: A Complete Guide"
             $result | Should -Be "How-to-Use-GitHub-Copilot-A-Complete-Guide"
         }

@@ -1,6 +1,87 @@
-# Filtering System Implementation Guidelines
+# Filtering System
 
-This document provides detailed implementation guidelines for the date and tag filtering system. For basic concepts and terminology, see [Site Terminology](terminology.md). For date handling and timezone configuration, see [Date and Timezone Processing](datetime-processing.md).
+This document explains how the Tech Hub filtering system works to help users discover content.
+
+## Filtering System Overview
+
+The Tech Hub uses multiple filtering mechanisms that work together to help users find relevant content:
+
+### Date Filters
+
+**What it does**: Client-side filtering that narrows content by publication date ranges.
+
+**Purpose**: Helps users find recent content or content from specific time periods.
+
+**How it works**:
+- Filter items by date ranges (e.g., "Last 30 days", "Last 6 months")
+- Dynamically update displayed content without page reload
+- Combine with other filters for refined searches
+
+**Implementation**: JavaScript-based filtering using date metadata from item front matter.
+
+### Section Tag Filters
+
+**What it does**: Client-side tag filtering on the root index page that allows users to filter by main site sections.
+
+**Purpose**: Enables users to focus on content from specific topical areas (AI vs GitHub Copilot).
+
+**How it works**:
+- Filter items using normalized section tags ("ai", "github copilot")
+- Available only on the main index page (/)
+- Uses the same tag matching logic as all other filters
+- Dynamic content updates based on selected section tags
+- Implements subset matching for tag-based filtering
+
+**Implementation**: JavaScript-based using pre-calculated tag relationships from server-side generation.
+
+### Collection Tag Filters
+
+**What it does**: Client-side tag filtering on section index pages that filters by content type.
+
+**Purpose**: Enables users to focus on specific content formats (News, Videos, Community) within a section.
+
+**How it works**:
+- Filter items using normalized collection tags ("news", "blogs", "videos")
+- Available only on section index pages (/ai, /github-copilot)
+- Uses the same tag matching logic as all other filters
+- Each collection type corresponds to a normalized tag
+- Dynamic content updates based on selected collection tags
+
+**Implementation**: JavaScript-based using pre-calculated tag relationships from server-side generation.
+
+### Content Tag Filters
+
+**What it does**: Client-side tag filtering on collection pages that filters by keywords and topics.
+
+**Purpose**: Enables users to find content related to specific technologies, concepts, or themes.
+
+**How it works**:
+- Filter items using normalized content tags from front matter
+- Support multiple tag selection for intersection filtering (AND logic)
+- Available only on individual collection pages
+- Uses the same tag matching logic as all other filters
+- Implements subset matching for tag-based content discovery
+
+**Implementation**: JavaScript-based using pre-calculated tag relationships from server-side generation.
+
+### Text Search Filter
+
+**What it does**: Client-side real-time text search functionality.
+
+**Purpose**: Enables users to quickly find content by searching across titles, descriptions, metadata, and tags using free-form text input.
+
+**How it works**:
+- Real-time filtering as user types with debounced input (300ms delay)
+- Searches across multiple content areas: titles, descriptions, author info, and tags
+- Case-insensitive and partial word matching
+- Works alongside date and tag filters using AND logic
+- URL parameter persistence for bookmarking search results
+- Dedicated clear button for immediate search reset
+- Keyboard shortcuts (Escape key) for quick clearing
+
+**Implementation**: JavaScript-based using pre-indexed content strings generated during page load.
+
+**Integration**: Text search enhances the filtering system by allowing users to combine structured filtering (dates, tags) with unstructured search (keywords).
 
 ## Server-Side Content Limiting: "20 + Same-Day" Rule
 
@@ -10,8 +91,8 @@ This document provides detailed implementation guidelines for the date and tag f
 
 ### What It Does
 
-1. **Load exactly 20 posts** from the sorted content (newest first)
-2. **Plus any additional posts from the same day** as the 20th post
+1. **Load exactly 20 items** from the sorted content (newest first)
+2. **Plus any additional items from the same day** as the 20th item
 3. **Ensures complete daily coverage** so users never miss content from "today"
 4. **Applied server-side during Jekyll build** before any client-side filtering
 
@@ -28,14 +109,14 @@ This document provides detailed implementation guidelines for the date and tag f
 **Example Scenario**:
 
 ```text
-Post 1-19: Various dates
-Post 20: July 15, 2025
-Post 21: July 15, 2025  ← Included (same day as 20th)
-Post 22: July 15, 2025  ← Included (same day as 20th)
-Post 23: July 14, 2025  ← NOT included (different day)
+Item 1-19: Various dates
+Item 20: July 15, 2025
+Item 21: July 15, 2025  ← Included (same day as 20th)
+Item 22: July 15, 2025  ← Included (same day as 20th)
+Item 23: July 14, 2025  ← NOT included (different day)
 ```
 
-**Result**: Page shows 22 posts (20 + 2 same-day posts), ensuring complete July 15th coverage.
+**Result**: Page shows 22 items (20 + 2 same-day items), ensuring complete July 15th coverage.
 
 ### Why This Rule Exists
 
@@ -110,10 +191,10 @@ Post 23: July 14, 2025  ← NOT included (different day)
 Current Date: July 20, 2025
 Cutoff Date: July 13, 2025 (7 days ago)
 
-Post from July 21, 2025  ← Included (recent)
-Post from July 14, 2025  ← Included (within 7 days)
-Post from July 12, 2025  ← Excluded (older than 7 days)
-Post from July 10, 2025  ← Excluded (older than 7 days)
+Item from July 21, 2025  ← Included (recent)
+Item from July 14, 2025  ← Included (within 7 days)
+Item from July 12, 2025  ← Excluded (older than 7 days)
+Item from July 10, 2025  ← Excluded (older than 7 days)
 ```
 
 **Benefits**:
@@ -151,7 +232,7 @@ The filtering system operates with three types of filters that work together to 
 The filtering system now uses a unified tag-based approach where all filter types (sections, collections, and content tags) are implemented as normalized tags with subset matching:
 
 - **Sections as Tags**: "AI" and "GitHub Copilot" sections are treated as tags
-- **Collections as Tags**: "News", "Posts", "Videos", etc. are treated as tags  
+- **Collections as Tags**: "News", "Blogs", "Videos", etc. are treated as tags  
 - **Content Tags**: Traditional content tags like "Azure", "Visual Studio", etc.
 
 **Subset Matching Logic**: Selecting a tag shows content with:
@@ -185,8 +266,8 @@ The text search functionality provides real-time content filtering based on user
 
 **Search Scope**: Text search indexes and searches across multiple content areas:
 
-- **Post titles**: Full title text content
-- **Post descriptions**: Meta descriptions and excerpts  
+- **Item titles**: Full title text content
+- **Item descriptions**: Meta descriptions and excerpts  
 - **Author and meta information**: Author names, publication dates, and metadata
 - **Tags and categories**: All associated tags and category data
 
@@ -205,7 +286,7 @@ The text search functionality provides real-time content filtering based on user
 ```javascript
 // Pre-extracted content for fast text search
 const content = titleText + ' ' + descriptionText + ' ' + metaText + ' ' + tagData;
-cachedPost.content = content.toLowerCase().trim();
+cachedItem.content = content.toLowerCase().trim();
 ```
 
 **Search Processing**: The `passesTextSearch()` function handles real-time filtering:
@@ -214,7 +295,7 @@ cachedPost.content = content.toLowerCase().trim();
 function passesTextSearch(cachedPost) {
     if (!window.textSearchQuery) return true;
     const query = window.textSearchQuery.toLowerCase();
-    return cachedPost.content.includes(query);
+    return cachedItem.content.includes(query);
 }
 ```
 
@@ -570,16 +651,16 @@ The Tech Hub implements three distinct filtering modes based on page hierarchy, 
 
 - **URLs**: '/ai' and '/github-copilot' (section index pages)
 - **Date Filters**: "Last 3 days", "Last 30 days", etc.
-- **Collection Tag Filters**: Filter by content types within the section (News, Posts, Videos, Community, etc.) - implemented as tags
+- **Collection Tag Filters**: Filter by content types within the section (News, Blogs, Videos, Community, etc.) - implemented as tags
 - **Data Source**: `site.data.sections` configuration for collections within each section
 - **Filtering Logic**: Uses normalized tag matching on collection tags
 - **Behavior**: Shows mixed content from multiple collections within the section, allowing users to filter by content type
-- **Implementation**: Filters by collection type tags (news, posts, videos, community, etc.) within the current section
+- **Implementation**: Filters by collection type tags (news, blogs, videos, community, etc.) within the current section
 - **Expected Behavior**: Shows both date filters and collection tag filters when sufficient content diversity exists across collections
 
 ### Collection Pages: Date + Content Tag Filters
 
-- **URLs**: '/ai/news.html', '/github-copilot/posts.html', etc. (individual collection pages)
+- **URLs**: '/ai/news.html', '/github-copilot/blogs.html', etc. (individual collection pages)
 - **Date Filters**: "Last 3 days", "Last 30 days", etc.
 - **Content Tag Filters**: Filter by content tags (AI, Azure, Visual Studio, etc.) - traditional content tags
 - **Data Source**: Pre-calculated tag relationships from `generate_all_filters` filter
@@ -782,11 +863,11 @@ tags: ["GitHub Copilot", "AI", "Visual Studio Code", "Development Tools"]
 
 **Tag Source Locations**:
 
-- `_posts/`: Blog posts with tags in frontmatter
+- `_blogs/`: Blogs with tags in frontmatter
 - `_community/`: Magazines, community discussions and Q&A posts
 - `_news/`: News articles and announcements
 - `_videos/`: Video content with descriptive tags
-- Other collections: Events, roundups
+- Other collections: Roundups
 
 ### Stage 2: PowerShell Preprocessing
 
@@ -839,9 +920,9 @@ Tag data is processed dynamically by the `tag_filters.rb` plugin, which provides
    - Coordinates overall page structure for section index pages
    - Filters content by section category using `site.documents | where: "categories", section_data.category`
    - Applies "20 + Same-Day" limiting rule via `limit_with_same_day` filter
-   - Delegates to `posts.html` for content display and filtering
+   - Delegates to `items.html` for content display and filtering
 
-2. **Content Display and Filter Coordination**: `_includes/posts.html`
+2. **Content Display and Filter Coordination**: `_includes/items.html`
    - Receives items from parent templates
    - Sorts and processes content items
    - Calculates oldest item date for filter generation
@@ -870,7 +951,7 @@ Tag data is processed dynamically by the `tag_filters.rb` plugin, which provides
 **Key Liquid Filters Used**:
 
 ```liquid
-{%- assign limited_posts = posts | limit_with_same_day -%}
+{%- assign limited_blogs = posts | limit_with_same_day -%}
 {%- assign filter_results = items | generate_all_filters: index_tag_mode, site.data.sections, section, category, collection, site.tag_filter -%}
 {%- assign tag_filter_data = filter_results.tag_filter_data -%}
 {%- assign tag_relationships = filter_results.tag_relationships -%}

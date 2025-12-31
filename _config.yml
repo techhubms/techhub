@@ -11,18 +11,24 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-seo-tag
-  - jekyll-sitemap
 
-# Define all additional collections (the posts collection is default)
+# Disable jekyll-feed (included by minima theme)
+disable:
+  - jekyll-feed
+
+# Collections directory - all collections are stored in /collections
+collections_dir: collections
+
+# Define all additional collections (the default posts collection is not used)
 collections:
+  blogs:
+    output: false
   news:
-    output: true
+    output: false
   videos:
     output: true    
   community:
-    output: true       
-  events:
-    output: true 
+    output: false
   roundups: # Special one that isn't shown in a specific section but rather on the homepage
     output: true
 
@@ -98,6 +104,8 @@ exclude:
   - "LICENSE*"
   - "AGENTS.md"
   - "**/AGENTS.md"
+  - "**/*-guidelines.md"
+  - "CODEOWNERS"
   
   # Scripts and configuration
   - "*.ps1"
@@ -106,21 +114,6 @@ exclude:
   
   # Other unwanted files
   - "*.log"
-
-# Performance-oriented defaults
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      comments: false # Disable comments for faster loading
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-      comments: false
 
 minima:
   date_format: "%Y-%m-%d"   
@@ -132,9 +125,9 @@ liquid:
   strict_variables: false # Performance optimization - avoid build failures on undefined vars
 
 # Jekyll performance optimizations
-future: true      # Do process future-dated posts
-show_drafts: false # Don't process draft posts
-unpublished: false # Don't process unpublished posts
+future: true      # Do process future-dated content
+show_drafts: false # Don't process draft content
+unpublished: false # Don't process unpublished content
 safe: false        # Allow plugins for better performance
 incremental: false # Disable incremental builds for consistency
 profile: false     # Disable profiling unless debugging

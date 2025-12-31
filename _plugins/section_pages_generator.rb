@@ -39,17 +39,11 @@ module Jekyll
     private
 
     def create_section_index_page(site, section_data)
-      # Create a new Jekyll page using PageWithoutAFile
-      page = Jekyll::PageWithoutAFile.new(site, site.source, section_data['section'], 'index.md')
+      # Create a new Jekyll page using PageWithoutAFile at root level
+      page = Jekyll::PageWithoutAFile.new(site, site.source, '', "#{section_data['section']}.html")
       
       # Determine RSS feed URL based on section
-      rss_feed_url = if section_data['section'] == 'all'
-        '/rss/feed.xml'
-      elsif section_data['section'] == 'github-copilot'
-        '/rss/github-copilot.xml'
-      else
-        "/rss/#{section_data['section']}.xml"
-      end
+      rss_feed_url = "/#{section_data['section']}/feed.xml"
       
       # Set page data (front matter)
       page.data['layout'] = 'home'
@@ -58,6 +52,7 @@ module Jekyll
       page.data['title'] = section_data['title']
       page.data['description'] = section_data['description']
       page.data['rss_feed'] = rss_feed_url
+      page.data['permalink'] = "/#{section_data['section']}/"
       
       # Set page content
       page.content = generate_section_index_content(section_data)
@@ -81,6 +76,7 @@ module Jekyll
       page.data['title'] = page_data['title']
       page.data['description'] = page_data['description']
       page.data['index_tag_mode'] = 'tags'
+      page.data['permalink'] = "/#{section_data['section']}/#{filename}"
       
       # Set page content
       page.content = generate_collection_page_content(section_data, page_data)
@@ -129,7 +125,7 @@ module Jekyll
           {%- else -%}
             {% include filters.html items=items index_tag_mode="collections" section=page.section %}
           {%- endif -%}
-          {% include posts.html section=page.section items=items %}
+          {% include items.html section=page.section items=items %}
         </div>
       CONTENT
     end
@@ -143,12 +139,10 @@ module Jekyll
         {%- if page.category != "All" -%}
           {%- assign items = items | where_exp: "item", "item.categories contains page.category" -%}
         {%- endif -%}
-        {%- if page.collection != "events" -%}
-          {%- assign items = items | where_exp: "item", "item.date <= site.time" -%}
-        {%- endif -%}
+        {%- assign items = items | where_exp: "item", "item.date <= site.time" -%}
 
         {% include filters.html items=items index_tag_mode="tags" section=page.section %}
-        {% include posts.html section=page.section items=items %}
+        {% include items.html section=page.section items=items %}
       CONTENT
     end
   end

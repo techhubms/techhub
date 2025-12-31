@@ -17,9 +17,8 @@ function Get-CollectionPriorityOrder {
 
     return @{
         "_news" = 10
-        "_posts" = 20
+        "_blogs" = 20
         "_videos" = 30
-        "_events" = 40
         "_community" = 90
         "_roundups" = 100
     }

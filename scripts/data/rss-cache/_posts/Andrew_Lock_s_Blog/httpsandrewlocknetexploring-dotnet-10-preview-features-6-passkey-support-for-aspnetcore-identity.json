@@ -4,7 +4,7 @@
     "ASP.NET Core",
     "Security"
   ],
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedLevelAuthor": "Andrew Lock | .NET Escapades",
   "ProcessedDate": "2025-08-05 14:29:46",
   "FeedUrl": "https://andrewlock.net/rss.xml",

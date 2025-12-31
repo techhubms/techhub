@@ -16,7 +16,7 @@ You are helping to add new RSS feeds to the site's automated content processing 
 RSS feeds are configured in `scripts/data/rss-feeds.json`. Each feed entry contains:
 
 - **name**: The name of the feed source (e.g., "The GitHub Blog", "Microsoft DevBlog")
-- **outputDir**: The target directory for processed articles (e.g., "_news", "_posts", "_videos")
+- **outputDir**: The target directory for processed articles (e.g., "_news", "_blogs", "_videos")
 - **url**: The RSS feed URL
 
 ## Valid Output Directories

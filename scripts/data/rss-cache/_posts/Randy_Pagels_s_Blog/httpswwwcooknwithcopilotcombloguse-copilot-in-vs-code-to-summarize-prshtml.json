@@ -6,7 +6,7 @@
   "Description": "Create meaningful pull request descriptions that help reviewers understand your changes quickly.",
   "Title": "Use Copilot in VS Code to Summarize PRs",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/use-copilot-in-vs-code-to-summarize-prs.html",
   "Tags": [],

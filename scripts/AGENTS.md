@@ -1,8 +1,29 @@
 # PowerShell Development Agent
 
+> **AI CONTEXT**: This is a **LEAF** context file for the `scripts/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
+> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+
+> ⚠️ **CRITICAL TESTING RULE**: After making ANY changes to files in `scripts/`, you MUST run the PowerShell test suite by executing `./scripts/run-powershell-tests.ps1` to validate your changes.
+
 ## Overview
 
 You are a PowerShell development specialist working with the Tech Hub's automation scripts. These scripts handle RSS feed processing, content transformation, AI integration, infrastructure deployment, and testing automation.
+
+## When to Use This Guide
+
+**Read this file when**:
+
+- Writing or modifying PowerShell scripts in `scripts/` directory
+- Creating automation for content processing
+- Working with RSS feeds or AI integration
+- Implementing build or deployment automation
+- Debugging PowerShell-based workflows
+
+**Related Documentation**:
+
+- Testing PowerShell scripts → [spec/AGENTS.md](../spec/AGENTS.md)
+- Jekyll integration → [.github/agents/fullstack.md](../.github/agents/fullstack.md)
+- Content management → [collections/AGENTS.md](../collections/AGENTS.md)
 
 ## Tech Stack
 
@@ -10,6 +31,8 @@ You are a PowerShell development specialist working with the Tech Hub's automati
 - **Testing Framework**: Pester v5
 - **Key Modules**: HtmlToMarkdown, Az (Azure), Playwright
 - **AI Integration**: Azure AI Foundry
+- **Ruby**: 3.2+ (Jekyll dependencies)
+- **Node.js**: 22+ (development tooling)
 
 ## Directory Structure
 
@@ -22,7 +45,6 @@ scripts/
 ├── run-javascript-tests.ps1 # Jest JavaScript tests
 ├── run-plugin-tests.ps1     # RSpec Ruby plugin tests
 ├── run-powershell-tests.ps1 # Pester PowerShell tests
-├── Deploy-Infrastructure.ps1 # Azure Static Web App deployment
 ├── data/                    # Script data files
 │   ├── rss-feeds.json       # RSS feed configuration
 │   ├── processed-entries.json
@@ -79,6 +101,85 @@ Write-Host "Value is \"\$variable\""  # Wrong! Backslashes don't work
 
 # ❌ Dotted notation without subexpression
 $variable = "a $object.with.dottednotation value"  # Wrong! Only gets $object
+```
+
+## Jekyll Management Scripts
+
+### jekyll-start.ps1
+
+Starts Jekyll development server in the background with intelligent process detection.
+
+**Parameters:**
+
+- **`-ForceStop`** (switch): Force restart even if Jekyll is already running (default: false)
+- **`-ForceClean`** (switch): Clean Jekyll cache (_site/) before starting
+- **`-BuildInsteadOfServe`** (switch): Build site without starting server (for debugging)
+- **`-VerboseOutput`** (switch): Show detailed build output
+
+**Behavior:**
+
+- **Default** (no flags): Checks if Jekyll is running, exits with success if already running
+- **With -ForceStop**: Stops and restarts Jekyll even if already running
+- **Background Process**: Uses bash/nohup to run Jekyll as background process
+- **PID Tracking**: Saves process ID to `.tmp/jekyll-pid.txt`
+- **Logging**: Captures output to `.tmp/jekyll-log.txt`
+
+**Examples:**
+
+```powershell
+# Start Jekyll (exits if already running)
+pwsh ./scripts/jekyll-start.ps1
+
+# Force restart even if running
+pwsh ./scripts/jekyll-start.ps1 -ForceStop
+
+# Clean rebuild
+pwsh ./scripts/jekyll-start.ps1 -ForceClean
+
+# Build only (no server)
+pwsh ./scripts/jekyll-start.ps1 -BuildInsteadOfServe
+```
+
+### jekyll-stop.ps1
+
+Gracefully stops Jekyll server using multiple detection methods.
+
+**Detection Methods** (in order):
+
+1. PID file (`.tmp/jekyll-pid.txt`)
+2. Process search by command line pattern
+3. Port 4000 netstat scanning
+
+**Examples:**
+
+```powershell
+# Stop Jekyll server
+pwsh ./scripts/jekyll-stop.ps1
+```
+
+### jekyll-helpers.ps1
+
+Shared helper functions used by Jekyll scripts.
+
+**Functions:**
+
+- **`Get-JekyllPaths`**: Returns hashtable with .tmp dir, log file, and PID file paths
+- **`Test-JekyllRunning`**: Multi-method detection (PID → HTTP → netstat), with optional cleanup
+- **`Get-JekyllPidFromPort`**: Finds PID using netstat (fallback method)
+- **`Clear-JekyllFiles`**: Removes log and/or PID files
+- **`Stop-Jekyll -ProcessId`**: Stops Jekyll process by PID
+
+**Usage:**
+
+```powershell
+# Dot-source the helpers
+. (Join-Path $PSScriptRoot "jekyll-helpers.ps1")
+
+# Check if Jekyll is running
+$status = Test-JekyllRunning -Cleanup
+if ($status.IsRunning) {
+    Write-Host "Jekyll is running (Method: $($status.Method), PID: $($status.Pid))"
+}
 ```
 
 ## Script Standards
@@ -163,9 +264,15 @@ catch {
 - Multi-step iteration with validation
 - Combines content from multiple sources
 
+**detect-repository-content-issues.ps1**
+
+- Validates markdown content across collections
+- Checks for duplicates and similarity
+- Verifies frontmatter structure
+
 ### Infrastructure
 
-**Deploy-Infrastructure.ps1**
+**infra/Deploy-Infrastructure.ps1**
 
 - Azure infrastructure deployment via Bicep
 - Three modes: validate, whatif, deploy
@@ -173,6 +280,8 @@ catch {
 - GitHub Actions compatible
 
 ### Testing
+
+**Script-Specific Testing**:
 
 **run-powershell-tests.ps1**
 
@@ -202,6 +311,8 @@ catch {
 
 - Orchestrates all test suites
 - Comprehensive validation
+
+**For complete testing strategy, patterns, and best practices, see [spec/AGENTS.md](../spec/AGENTS.md).**
 
 ## PowerShell Testing Standards
 

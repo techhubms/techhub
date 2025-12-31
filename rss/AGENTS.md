@@ -1,8 +1,27 @@
 # RSS Feed Management Agent
 
+> **AI CONTEXT**: This is a **LEAF** context file for the `rss/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
+> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+
 ## Overview
 
 You are an RSS feed management specialist for the Tech Hub. This directory contains all RSS feed XML files that Jekyll uses to generate syndication feeds for different sections of the site.
+
+## When to Use This Guide
+
+**Read this file when**:
+
+- Creating new RSS feed files
+- Modifying existing feed templates
+- Debugging feed validation errors
+- Adding section-specific feeds
+- Understanding feed structure and requirements
+
+**Related Documentation**:
+
+- Jekyll/Liquid patterns → [.github/agents/fullstack.md](../.github/agents/fullstack.md)
+- Content structure → [collections/AGENTS.md](../collections/AGENTS.md)
+- Testing → [spec/AGENTS.md](../spec/AGENTS.md)
 
 ## Tech Stack
 
@@ -39,22 +58,22 @@ layout: null
     <title>{{ site.title }} - Section Name</title>
     <description>{{ site.description }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ site.url }}{{ site.baseurl }}/rss/section.xml" 
+    <atom:link href="{{ site.url }}{{ site.baseurl }}/section/feed.xml" 
                rel="self" 
                type="application/rss+xml"/>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     
-    {% for post in site.posts limit:20 %}
-    {% if post.tags contains 'section-tag' %}
+    {% for item in site.blogs limit:20 %}
+    {% if item.tags contains 'section-tag' %}
     <item>
-      <title>{{ post.title | xml_escape }}</title>
-      <description>{{ post.excerpt | xml_escape }}</description>
-      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-      <link>{{ site.url }}{{ post.url }}</link>
-      <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-      {% for tag in post.tags %}
+      <title>{{ item.title | xml_escape }}</title>
+      <description>{{ item.excerpt | xml_escape }}</description>
+      <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
+      <link>{{ site.url }}{{ item.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ item.url }}</guid>
+      {% for tag in item.tags %}
       <category>{{ tag | xml_escape }}</category>
       {% endfor %}
     </item>
@@ -77,9 +96,9 @@ layout: null
 Filter items by section tags:
 
 ```liquid
-{% for post in site.posts limit:20 %}
-{% if post.tags contains 'ai' %}
-  <!-- Include this post -->
+{% for item in site.blogs limit:20 %}
+{% if item.tags contains 'ai' %}
+  <!-- Include this item -->
 {% endif %}
 {% endfor %}
 ```
@@ -89,8 +108,8 @@ Filter items by section tags:
 **Always escape user content** to prevent XML errors:
 
 ```liquid
-<title>{{ post.title | xml_escape }}</title>
-<description>{{ post.excerpt | xml_escape }}</description>
+<title>{{ item.title | xml_escape }}</title>
+<description>{{ item.excerpt | xml_escape }}</description>
 <category>{{ tag | xml_escape }}</category>
 ```
 
@@ -99,7 +118,7 @@ Filter items by section tags:
 Use RFC 822 date format for RSS compatibility:
 
 ```liquid
-<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+<pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
 ```
 
 ### URLs
@@ -107,8 +126,8 @@ Use RFC 822 date format for RSS compatibility:
 **Always use absolute URLs** in RSS feeds:
 
 ```liquid
-<link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
-<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+<link>{{ site.url }}{{ site.baseurl }}{{ item.url }}</link>
+<guid isPermaLink="true">{{ site.url }}{{ item.url }}</guid>
 ```
 
 ## Feed Types
@@ -146,8 +165,9 @@ Use RFC 822 date format for RSS compatibility:
 ./scripts/jekyll-start.ps1
 
 # Access feeds at:
-# http://localhost:4000/rss/feed.xml
-# http://localhost:4000/rss/ai.xml
+# http://localhost:4000/feed.xml (Everything)
+# http://localhost:4000/ai/feed.xml
+# http://localhost:4000/github-copilot/feed.xml
 # etc.
 ```
 
@@ -205,10 +225,10 @@ Use [W3C Feed Validator](https://validator.w3.org/feed/):
 
 ```liquid
 <!-- ✅ CORRECT: Limit items -->
-{% for post in site.posts limit:20 %}
+{% for post in site.blogs limit:20 %}
 
 <!-- ❌ WRONG: No limit (thousands of items!) -->
-{% for post in site.posts %}
+{% for post in site.blogs %}
 ```
 
 ### Caching
@@ -237,7 +257,7 @@ Add feed links to site `<head>`:
 ```html
 <link rel="alternate" type="application/rss+xml" 
       title="RSS Feed" 
-      href="{{ site.url }}/rss/feed.xml" />
+      href="{{ site.url }}/feed.xml" />
 ```
 
 ### Maintenance

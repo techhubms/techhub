@@ -128,8 +128,8 @@ test.describe('Server-Side Requirements - Critical Foundation Tests', () => {
 
       // Get content analysis
       const contentAnalysis = await page.evaluate(() => {
-        const allItems = document.querySelectorAll('.navigation-post-square');
-        const visibleItems = document.querySelectorAll('.navigation-post-square:not([style*="display: none"])');
+        const allItems = document.querySelectorAll('.navigation-item-square');
+        const visibleItems = document.querySelectorAll('.navigation-item-square:not([style*="display: none"])');
 
         // Analyze dates of visible items
         const visibleDates = Array.from(visibleItems).map(item => {
@@ -180,9 +180,10 @@ test.describe('Server-Side Requirements - Critical Foundation Tests', () => {
   // Test 5: Page Structure Requirements for Filter Types
   test('should have correct filter types available per page type', async ({ page }) => {
     const pageTypes = [
-      { url: '/', name: 'Root Index', expectedFilters: [] }, // Homepage doesn't have filters in current design
-      { url: TEST_URLS.sectionIndexes.find(p => p.section === 'ai').url, name: 'AI Section Index', expectedFilters: ['date', 'collection'] },
-      { url: TEST_URLS.sectionIndexes.find(p => p.section === 'github-copilot').url, name: 'GitHub Copilot Section Index', expectedFilters: ['date', 'collection'] },
+      { url: '/', name: 'Homepage', expectedFilters: [] }, // Homepage doesn't have filters
+      { url: '/all/', name: 'Everything Section', expectedFilters: ['date', 'collection'] },
+      { url: TEST_URLS.sectionIndexes.find(p => p.section === 'ai').url, name: 'AI Section Index', expectedFilters: [] }, // Section indexes don't have filters
+      { url: TEST_URLS.sectionIndexes.find(p => p.section === 'github-copilot').url, name: 'GitHub Copilot Section Index', expectedFilters: [] }, // Section indexes don't have filters
       { url: '/ai/news.html', name: 'AI News Collection', expectedFilters: ['date', 'tag'] }
     ];
 
@@ -197,19 +198,19 @@ test.describe('Server-Side Requirements - Critical Foundation Tests', () => {
         return {
           dateFilters: document.querySelectorAll('.tag-filter-btn[data-tag*="day"], .tag-filter-btn[data-tag*="last"], .tag-filter-btn[data-tag*="month"]').length,
           sectionFilters: document.querySelectorAll('.tag-filter-btn[data-tag="ai"], .tag-filter-btn[data-tag="github copilot"]').length,
-          collectionFilters: document.querySelectorAll('.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="posts"], .tag-filter-btn[data-tag="videos"], .tag-filter-btn[data-tag="community"]').length,
-          tagFilters: document.querySelectorAll('.tag-filter-btn[data-tag]:not([data-tag*="last"]):not([data-tag*="day"]):not([data-tag*="month"]):not([data-tag="ai"]):not([data-tag="github copilot"]):not([data-tag="news"]):not([data-tag="posts"]):not([data-tag="videos"]):not([data-tag="community"])').length,
+          collectionFilters: document.querySelectorAll('.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="blogs"], .tag-filter-btn[data-tag="videos"], .tag-filter-btn[data-tag="community"]').length,
+          tagFilters: document.querySelectorAll('.tag-filter-btn[data-tag]:not([data-tag*="last"]):not([data-tag*="day"]):not([data-tag*="month"]):not([data-tag="ai"]):not([data-tag="github copilot"]):not([data-tag="news"]):not([data-tag="blogs"]):not([data-tag="videos"]):not([data-tag="community"])').length,
           totalFilters: document.querySelectorAll('.tag-filter-btn[data-tag]').length
         };
       });
 
       console.log(`📊 ${pageType.name} filter analysis:`, filterAnalysis);
 
-      // Special handling for homepage which doesn't have filters
-      if (pageType.url === '/') {
-        console.log(`ℹ️ Homepage (${pageType.name}) does not have filtering - this is expected behavior`);
+      // Special handling for pages without filters
+      if (pageType.expectedFilters.length === 0) {
+        console.log(`ℹ️ ${pageType.name} does not have filtering - this is expected behavior`);
         expect(filterAnalysis.totalFilters).toBe(0);
-        console.log('✅ No filters on homepage as expected');
+        console.log(`✅ No filters on ${pageType.name} as expected`);
         continue;
       }
 

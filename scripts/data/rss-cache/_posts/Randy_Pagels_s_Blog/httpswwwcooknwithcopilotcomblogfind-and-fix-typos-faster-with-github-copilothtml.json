@@ -6,7 +6,7 @@
   "Description": "Typos can be sneaky. A missing letter in a variable name, can cause real headaches.",
   "Title": "Find and Fix Typos Faster with GitHub Copilot",
   "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
-  "OutputDir": "_posts",
+  "OutputDir": "_blogs",
   "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
   "Link": "https://www.cooknwithcopilot.com/blog/find-and-fix-typos-faster-with-github-copilot.html",
   "Tags": [],
