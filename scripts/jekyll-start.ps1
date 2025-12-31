@@ -97,6 +97,11 @@ try {
         $logFile = $paths.LogFile
         $pidFile = $paths.PidFile
         
+        # Ensure .tmp directory exists
+        if (-not (Test-Path $paths.TmpDir)) {
+            New-Item -ItemType Directory -Path $paths.TmpDir -Force | Out-Null
+        }
+        
         # Start Jekyll server in background with output redirected to log file
         Write-Host "Starting Jekyll server in background..." -ForegroundColor Cyan
         Write-Host "Log file: $logFile" -ForegroundColor Gray
@@ -106,9 +111,14 @@ try {
         $allArgs = $jekyllArgs -join " "
         $command = "bundle exec jekyll $allArgs"
         
+        # Ensure parent directories exist for log and PID files
+        $logDir = Split-Path $logFile -Parent
+        if (-not (Test-Path $logDir)) {
+            New-Item -ItemType Directory -Path $logDir -Force | Out-Null
+        }
+        
         # Start Jekyll as a detached process using bash, redirect output and save PID
-        # Using bash -c with subshell to properly capture PID and redirect output
-        $bashCommand = "bash -c 'nohup $command > `"$logFile`" 2>&1 & echo `$!' > `"$pidFile`""
+        $bashCommand = "nohup $command > '$logFile' 2>&1 & echo `$! > '$pidFile'"
         bash -c $bashCommand
         
         # Give it a moment to start and read PID
