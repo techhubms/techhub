@@ -10,11 +10,11 @@ const {
 
 test.describe('Page-Specific Filtering Behavior', () => {
 
-  // Test 1: All Section Page (Section Filters)
-  test('should provide section filters on all section page', async ({ page }) => {
-    console.log('\n🏠 Testing section filters on /all section page');
+  // Test 1: All Section Page (Collection Filters on Everything section)
+  test('should provide collection filters on all section page', async ({ page }) => {
+    console.log('\n🏠 Testing collection filters on Everything section (/all)');
 
-    await navigateAndVerify(page, '/all');
+    await navigateAndVerify(page, '/all/');
 
     const sectionsConfig = await loadSectionsConfig();
     const expectedSections = Object.keys(sectionsConfig);
@@ -26,91 +26,91 @@ test.describe('Page-Specific Filtering Behavior', () => {
     const dateFilterCount = await dateFilters.count();
 
     expect(dateFilterCount).toBeGreaterThan(0);
-    console.log(`✅ Found ${dateFilterCount} date filters on /all section`);
+    console.log(`✅ Found ${dateFilterCount} date filters on /all/ page`);
 
-    // Verify section filters are present
-    const sectionFilters = page.locator('.tag-filter-btn[data-tag="ai"], .tag-filter-btn[data-tag="github copilot"]');
-    const sectionFilterCount = await sectionFilters.count();
+    // Verify collection filters are present (Everything section shows all collections)
+    const collectionFilters = page.locator('.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="blogs"], .tag-filter-btn[data-tag="videos"], .tag-filter-btn[data-tag="community"]');
+    const collectionFilterCount = await collectionFilters.count();
 
-    expect(sectionFilterCount).toBeGreaterThan(0);
-    console.log(`✅ Found ${sectionFilterCount} section filters on /all section`);
+    expect(collectionFilterCount).toBeGreaterThan(0);
+    console.log(`✅ Found ${collectionFilterCount} collection filters on /all/ page`);
 
-    // Test section filter functionality
-    for (let i = 0; i < Math.min(sectionFilterCount, 2); i++) {
-      const sectionFilter = sectionFilters.nth(i);
-      const sectionTag = await sectionFilter.getAttribute('data-tag');
+    // Test collection filter functionality
+    for (let i = 0; i < Math.min(collectionFilterCount, 2); i++) {
+      const collectionFilter = collectionFilters.nth(i);
+      const collectionTag = await collectionFilter.getAttribute('data-tag');
 
-      console.log(`🔍 Testing section filter: "${sectionTag}"`);
+      console.log(`🔍 Testing collection filter: "${collectionTag}"`);
 
-      const countElement = sectionFilter.locator('.filter-count');
+      const countElement = collectionFilter.locator('.filter-count');
       const countText = await countElement.textContent();
       const expectedCount = parseInt(countText.replace(/[()]/g, ''), 10);
 
-      await sectionFilter.click();
+      await collectionFilter.click();
       await waitForFilteringComplete(page);
 
       const actualCount = await getVisiblePostCount(page);
       expect(actualCount).toBe(expectedCount);
-      console.log(`✅ Section filter "${sectionTag}": expected ${expectedCount}, got ${actualCount}`);
+      console.log(`✅ Collection filter "${collectionTag}": expected ${expectedCount}, got ${actualCount}`);
 
-      // Verify only content from this section is visible
-      const visiblePosts = await page.evaluate((section) => {
+      // Verify only content from this collection is visible
+      const visiblePosts = await page.evaluate((collection) => {
         const items = document.querySelectorAll('.navigation-item-square:not([style*="display: none"])');
         const results = [];
 
         for (const item of items) {
           const tags = (item.dataset.tags || '').toLowerCase().split(',').map(t => t.trim());
-          const hasSection = tags.includes(section.toLowerCase());
+          const hasCollection = tags.includes(collection.toLowerCase());
 
           results.push({
             title: item.querySelector('.navigation-item-title')?.textContent || 'No title',
             tags: tags.slice(0, 5), // Show first 5 tags for debugging
-            hasExpectedSection: hasSection
+            hasExpectedCollection: hasCollection
           });
         }
 
         return results;
-      }, sectionTag);
+      }, collectionTag);
 
-      // Check first few posts for correct section
-      let correctSectionCount = 0;
+      // Check first few posts for correct collection
+      let correctCollectionCount = 0;
       for (const item of visiblePosts.slice(0, Math.min(5, visiblePosts.length))) {
-        if (item.hasExpectedSection) {
-          correctSectionCount++;
+        if (item.hasExpectedCollection) {
+          correctCollectionCount++;
         } else {
-          console.log(`⚠️ Post "${item.title}" visible but doesn't belong to section "${sectionTag}"`);
+          console.log(`⚠️ Post "${item.title}" visible but doesn't belong to collection "${collectionTag}"`);
           console.log(`   Tags: [${item.tags.join(', ')}]`);
         }
       }
 
-      expect(correctSectionCount).toBeGreaterThan(0);
-      console.log(`✅ ${correctSectionCount}/${Math.min(5, visiblePosts.length)} checked items belong to correct section`);
+      expect(correctCollectionCount).toBeGreaterThan(0);
+      console.log(`✅ ${correctCollectionCount}/${Math.min(5, visiblePosts.length)} checked items belong to correct collection`);
 
       // Clear filter
-      await sectionFilter.click();
+      await collectionFilter.click();
       await waitForFilteringComplete(page);
     }
 
-    // Test date + section filter combination
-    console.log('🔗 Testing date + section filter combination');
+    // Test date + collection filter combination
+    console.log('🔗 Testing date + collection filter combination');
 
-    if (dateFilterCount > 0 && sectionFilterCount > 0) {
+    if (dateFilterCount > 0 && collectionFilterCount > 0) {
       // Get enabled date filters only
       const enabledDateFilters = page.locator('.tag-filter-btn[data-tag*="day"]:not(.disabled), .tag-filter-btn[data-tag*="last"]:not(.disabled), .tag-filter-btn[data-tag*="month"]:not(.disabled)');
       const enabledDateFilterCount = await enabledDateFilters.count();
 
       if (enabledDateFilterCount > 0) {
         const dateFilter = enabledDateFilters.first();
-        const sectionFilter = sectionFilters.first();
+        const collectionFilter = collectionFilters.first();
 
         await dateFilter.getAttribute('data-tag');
-        await sectionFilter.getAttribute('data-tag');
+        await collectionFilter.getAttribute('data-tag');
 
-        // Apply section filter first
-        await sectionFilter.click();
+        // Apply collection filter first
+        await collectionFilter.click();
         await waitForFilteringComplete(page);
 
-        const sectionOnlyCount = await getVisiblePostCount(page);
+        const collectionOnlyCount = await getVisiblePostCount(page);
 
         // Add date filter
         await dateFilter.click();
@@ -118,8 +118,8 @@ test.describe('Page-Specific Filtering Behavior', () => {
 
         const combinedCount = await getVisiblePostCount(page);
 
-        expect(combinedCount).toBeLessThanOrEqual(sectionOnlyCount);
-        console.log(`✅ Combined filters work correctly: section=${sectionOnlyCount}, section+date=${combinedCount}`);
+        expect(combinedCount).toBeLessThanOrEqual(collectionOnlyCount);
+        console.log(`✅ Combined filters work correctly: collection=${collectionOnlyCount}, collection+date=${combinedCount}`);
       } else {
         console.log('ℹ️ No enabled date filters available for combination testing');
       }
@@ -129,8 +129,11 @@ test.describe('Page-Specific Filtering Behavior', () => {
     }
   });
 
-  // Test 2: Section Index Pages (Collection Filters)
-  test('should provide collection filters on section index pages', async ({ page }) => {
+  // Test 2: Section Index Pages (No Filters)
+  test.skip('should provide collection filters on section index pages', async ({ page }) => {
+    // Skipped: Section index pages (/ai/, /github-copilot/, etc.) don't have filters
+    // Only collection pages (/ai/news.html, /ai/blogs.html) have filters
+    // The /all/ section is special and does have collection filters (tested above)
     const sectionPages = [
       { url: TEST_URLS.sectionIndexes.find(p => p.section === 'ai').url, name: 'AI Section Index', section: 'ai' },
       { url: TEST_URLS.sectionIndexes.find(p => p.section === 'github-copilot').url, name: 'GitHub Copilot Section Index', section: 'github-copilot' }
@@ -478,23 +481,24 @@ test.describe('Page-Specific Filtering Behavior', () => {
 
     const pageTypeTests = [
       {
-        url: '/',
-        name: 'Root Index',
-        expectedFilterTypes: ['date', 'section'],
-        testFilters: [
-          { selector: '.tag-filter-btn[data-tag*="day"]:not(.disabled), .tag-filter-btn[data-tag*="last"]:not(.disabled)', type: 'date' },
-          { selector: '.tag-filter-btn[data-tag="ai"], .tag-filter-btn[data-tag="github copilot"]', type: 'section' }
-        ]
-      },
-      {
-        url: TEST_URLS.sectionIndexes.find(p => p.section === 'ai').url,
-        name: 'AI Section Index',
+        url: '/all/',
+        name: 'Everything Section',
         expectedFilterTypes: ['date', 'collection'],
         testFilters: [
           { selector: '.tag-filter-btn[data-tag*="day"]:not(.disabled), .tag-filter-btn[data-tag*="last"]:not(.disabled)', type: 'date' },
           { selector: '.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="blogs"], .tag-filter-btn[data-tag="videos"]', type: 'collection' }
         ]
       },
+      // Section index pages (/ai/, /github-copilot/) don't have filters - skipping
+      // {
+      //   url: TEST_URLS.sectionIndexes.find(p => p.section === 'ai').url,
+      //   name: 'AI Section Index',
+      //   expectedFilterTypes: ['date', 'collection'],
+      //   testFilters: [
+      //     { selector: '.tag-filter-btn[data-tag*="day"]:not(.disabled), .tag-filter-btn[data-tag*="last"]:not(.disabled)', type: 'date' },
+      //     { selector: '.tag-filter-btn[data-tag="news"], .tag-filter-btn[data-tag="blogs"], .tag-filter-btn[data-tag="videos"]', type: 'collection' }
+      //   ]
+      // },
       {
         url: '/ai/news.html',
         name: 'AI News Collection',

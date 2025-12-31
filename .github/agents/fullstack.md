@@ -119,65 +119,165 @@ mcp_context7_get-library-docs(context7CompatibleLibraryID: "/jekyll/jekyll", top
 
 ### Jekyll Server Management
 
-**CRITICAL Terminal Management - READ THIS FIRST**:
+### ⚠️ CRITICAL: ALWAYS Use `isBackground: false` for Jekyll Start Script
 
-⚠️ **NEVER EVER run any command in a terminal where Jekyll is starting or running!**
+**EVERY TIME you start Jekyll, you MUST use `isBackground: false` and WAIT for the script to complete:**
 
-**THE ONLY CORRECT WORKFLOW**:
+```javascript
+// ✅ CORRECT - Wait for jekyll-start.ps1 to complete its polling
+run_in_terminal({
+  command: "./scripts/jekyll-start.ps1",
+  explanation: "Starting Jekyll server and waiting for readiness",
+  isBackground: false  // ← REQUIRED! Script has built-in 3-minute polling
+})
+```
 
-1. **Start Jekyll** in current terminal with `isBackground: true`:
+```javascript
+// ❌ WRONG - Will cause script to run in background and may interrupt Jekyll
+run_in_terminal({
+  command: "./scripts/jekyll-start.ps1",
+  explanation: "Starting Jekyll",
+  isBackground: true  // ← WRONG! Script needs to run to completion
+})
+```
+
+**Why `isBackground: false` is required:**
+- The `jekyll-start.ps1` script has built-in polling (up to 3 minutes)
+- Jekyll itself runs in the background via `nohup` (managed by the script)
+- The script polls for HTTP 200 response to confirm Jekyll is ready
+- Using `isBackground: true` prevents the polling loop from completing
+- You MUST wait for the script to finish before doing anything else
+
+**CRITICAL Script Behavior - READ THIS FIRST**:
+
+⚠️ **ALWAYS wait for jekyll-start.ps1 to complete before running any other commands!**
+
+**THE CORRECT WORKFLOW**:
+
+1. **Start Jekyll** with `isBackground: false` and WAIT for completion:
+   ```javascript
+   run_in_terminal({
+     command: "./scripts/jekyll-start.ps1",
+     explanation: "Starting Jekyll server and waiting for readiness",
+     isBackground: false  // ← REQUIRED! Must wait for polling to complete
+   })
    ```
-   run_in_terminal(command: "pwsh ./scripts/jekyll-start.ps1", isBackground: true)
-   ```
-2. **IMMEDIATELY STOP using that terminal** - Jekyll is now starting in the background
-3. **ALL subsequent commands** MUST be in a DIFFERENT terminal:
-   ```
-   run_in_terminal(command: "your-next-command", isBackground: false)
-   ```
-   This creates a NEW terminal automatically
-4. **Never go back to the Jekyll terminal** until you need to stop Jekyll
 
-**What NOT to do** (these will interrupt Jekyll):
-- ❌ Running `run_in_terminal` commands without specifying a new terminal after starting Jekyll
-- ❌ Running commands in the same PowerShell session where Jekyll is running
-- ❌ Checking Jekyll output by running commands in its terminal
-- ❌ Using `get_terminal_output` on the Jekyll terminal (this is OK, but don't run NEW commands there)
+2. **Script handles everything**:
+   - Starts Jekyll in background via `nohup`
+   - Polls for up to 3 minutes checking process health and HTTP 200
+   - Exits with code 0 when ready or code 1 on failure
+   - Shows progress dots and elapsed time
 
-**How to check Jekyll status**:
-- ✅ Use `get_terminal_output(id: "jekyll-terminal-id")` to READ output (doesn't interrupt)
-- ❌ Don't run Sleep commands or other commands in the Jekyll terminal
+3. **After script completes successfully**, Jekyll is ready and you can:
+   ```javascript
+   run_in_terminal({
+     command: "curl http://localhost:4000",
+     explanation: "Verify server is responding",
+     isBackground: false
+   })
+   ```
+
+**What NOT to do**:
+- ❌ Using `isBackground: true` when calling jekyll-start.ps1
+- ❌ Running other commands before jekyll-start.ps1 completes
+- ❌ Interrupting the script while it's polling (Ctrl-C)
+
+**What TO do**:
+- ✅ Always use `isBackground: false` when calling jekyll-start.ps1
+- ✅ Wait for the script to exit (code 0 = success, code 1 = failure)
+- ✅ The script will show progress and tell you when Jekyll is ready
+- ✅ Jekyll runs in background via nohup - managed by the script
 
 **Starting Jekyll**:
 
-```powershell
-# STEP 1: Start Jekyll in background (this terminal is now RESERVED for Jekyll)
-pwsh ./scripts/jekyll-start.ps1
+```javascript
+// ✅ CORRECT - Wait for script to complete
+run_in_terminal({
+  command: "./scripts/jekyll-start.ps1",
+  explanation: "Starting Jekyll server",
+  isBackground: false  // ← Script runs to completion, Jekyll in background
+})
 
-# STEP 2: All other commands go in NEW terminals automatically created by run_in_terminal
-
-# Start/restart (auto-stops existing servers)
-pwsh ./scripts/jekyll-start.ps1
-
-# Force clean for when site structure has changed or strange issues occur, removes _site/ folder
-pwsh ./scripts/jekyll-start.ps1 -ForceClean
-
-# Debug with verbose output
-pwsh ./scripts/jekyll-start.ps1 -VerboseOutput
-
-# Build only (fastest debugging - NO server)
-pwsh ./scripts/jekyll-start.ps1 -BuildInsteadOfServe
-
-# Stop server
-pwsh ./scripts/jekyll-stop.ps1
+// After script exits with code 0, Jekyll is ready
+run_in_terminal({
+  command: "curl http://localhost:4000",
+  explanation: "Verify server is responding",
+  isBackground: false
+})
 ```
 
-**Workflow Example for AI Agents**:
+**PowerShell Script Options:**
 
-1. Start Jekyll in background terminal: `run_in_terminal` with `isBackground: true`
-2. Open new terminal for commands: Use separate `run_in_terminal` calls
-3. Wait for Jekyll to finish starting (check background terminal output)
-4. Execute debugging/testing commands in another terminal, possibly the one you were working in but NOT in the Jekyll terminal
-5. Never touch the Jekyll terminal until you need to stop it
+```powershell
+# Start Jekyll (exits if already running)
+./scripts/jekyll-start.ps1
+
+# Force restart even if already running
+./scripts/jekyll-start.ps1 -ForceStop
+
+# Force clean for when site structure has changed or strange issues occur, removes _site/ folder
+./scripts/jekyll-start.ps1 -ForceClean
+
+# Debug with verbose output
+./scripts/jekyll-start.ps1 -VerboseOutput
+
+# Build only (fastest debugging - NO server)
+./scripts/jekyll-start.ps1 -BuildInsteadOfServe
+
+# Stop server
+./scripts/jekyll-stop.ps1
+```
+
+**Jekyll Start Behavior:**
+
+- **Default** (no flags): Checks if Jekyll is running, exits immediately if already running, otherwise starts and polls for readiness (up to 3 minutes)
+- **-ForceStop**: Stops and restarts Jekyll even if already running, then polls for readiness
+- **-ForceClean**: Cleans Jekyll cache (_site/) before starting, then polls for readiness
+- **-BuildInsteadOfServe**: Builds site without starting server (for debugging, no polling)
+- **-VerboseOutput**: Shows detailed build output during polling
+- **Script Exit Codes**: 0 = Jekyll ready and accessible, 1 = failure or timeout
+
+**Jekyll Helper Functions** (shared via `jekyll-helpers.ps1`):
+
+- `Test-JekyllRunning`: Multi-method detection (PID file → HTTP → netstat)
+- `Get-JekyllPaths`: Returns paths for .tmp, log, and PID files
+- `Clear-JekyllFiles`: Cleans log and/or PID files
+- `Stop-Jekyll`: Stops Jekyll process by PID
+- `Get-JekyllPidFromPort`: Finds PID using netstat (fallback)
+
+**Complete Workflow Example:**
+
+```javascript
+// STEP 1: Start Jekyll and WAIT for it to become ready
+run_in_terminal({
+  command: "./scripts/jekyll-start.ps1",
+  explanation: "Starting Jekyll server and waiting for readiness",
+  isBackground: false  // MUST wait for completion
+})
+// Script polls for up to 3 minutes and exits when ready
+
+// STEP 2: If exit code is 0, Jekyll is ready - run tests
+run_in_terminal({
+  command: "./scripts/run-e2e-tests.ps1",
+  explanation: "Running E2E tests",
+  isBackground: false
+})
+
+// STEP 3: When done, stop Jekyll
+run_in_terminal({
+  command: "./scripts/jekyll-stop.ps1",
+  explanation: "Stopping Jekyll server",
+  isBackground: false
+})
+```
+
+**Script Output During Polling:**
+- Progress dots every 2 seconds: `.....`
+- Status messages every 10 seconds: `Still waiting... (20/180s)`
+- Success message: `✅ Jekyll server is ready and accessible!`
+- Failure message: `❌ Jekyll process has terminated unexpectedly` or timeout
+
 
 ### Testing Commands
 
@@ -328,16 +428,24 @@ bundle exec rspec
 
 **How to Monitor Rebuild Progress:**
 
-1. Watch the terminal where Jekyll server is running
-2. Look for messages like:
-   ```
-   Regenerating: 1 file(s) changed at 2025-01-23 14:30:45
-                 _includes/header.html
-   ```
-3. Wait for completion message:
-   ```
-   ...done in 62.345678 seconds.
-   ```
+```javascript
+// Check Jekyll terminal output (does NOT interrupt the server)
+get_terminal_output({ id: "jekyll-terminal-id" })
+
+// Look for these messages:
+// 1. "Regenerating: 1 file(s) changed at 2025-01-23 14:30:45"
+// 2. "...done in 62.345678 seconds."
+// 3. Still running (no exit code) = Jekyll is healthy
+// 4. "Exit Code: 1" = Jekyll crashed, needs restart
+```
+
+**Example Terminal Output:**
+
+```
+Regenerating: 1 file(s) changed at 2025-01-23 14:30:45
+              _includes/header.html
+                    ...done in 62.345678 seconds.
+```
 
 **Common Rebuild Triggers:**
 

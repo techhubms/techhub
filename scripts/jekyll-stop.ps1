@@ -8,6 +8,9 @@ $ErrorActionPreference = "Stop"
 $ProgressPreference = 'SilentlyContinue'
 Set-StrictMode -Version Latest
 
+# Load shared Jekyll helper functions
+. (Join-Path $PSScriptRoot "jekyll-helpers.ps1")
+
 # Validate that no unknown parameters were passed
 $boundParameters = $PSBoundParameters.Keys
 $validParameters = @()  # No parameters currently supported
@@ -21,9 +24,32 @@ if ($unknownParameters) {
 
 Write-Host "Stopping existing Jekyll processes..." -ForegroundColor Yellow
 
+# Check if Jekyll is running using shared detection
+$jekyllStatus = Test-JekyllRunning -Cleanup
+
+if ($jekyllStatus.IsRunning) {
+    Write-Host "Found Jekyll running (Method: $($jekyllStatus.Method))" -ForegroundColor Cyan
+    
+    if ($jekyllStatus.Pid) {
+        # Stop using the PID we found
+        $stopped = Stop-Jekyll -ProcessId $jekyllStatus.Pid
+        if ($stopped) {
+            # Clean up PID file
+            Clear-JekyllFiles -PidOnly
+            Write-Host "✅ Jekyll server stopped successfully" -ForegroundColor Green
+            exit 0
+        } else {
+            Write-Host "⚠️  Could not stop Jekyll via PID" -ForegroundColor Yellow
+        }
+    }
+}
+
+# Fallback: Try to find Jekyll processes by command line pattern
+Write-Host "Checking for Jekyll processes..." -ForegroundColor Yellow
+
 $ProcessesFound = $false
 
-# First, try to find Jekyll processes - search for jekyll pattern
+# Search for jekyll pattern in process list
 $jekyllProcesses = Get-Process | Where-Object { $_.CommandLine -like '*jekyll serve*' } | Select-Object -Property ProcessName, Id
 
 if ($jekyllProcesses) {

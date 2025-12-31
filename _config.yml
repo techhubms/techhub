@@ -102,6 +102,7 @@ exclude:
   - "AGENTS.md"
   - "**/AGENTS.md"
   - "**/*-guidelines.md"
+  - "CODEOWNERS"
   
   # Scripts and configuration
   - "*.ps1"

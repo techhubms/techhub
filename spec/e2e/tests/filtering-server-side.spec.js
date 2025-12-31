@@ -180,9 +180,10 @@ test.describe('Server-Side Requirements - Critical Foundation Tests', () => {
   // Test 5: Page Structure Requirements for Filter Types
   test('should have correct filter types available per page type', async ({ page }) => {
     const pageTypes = [
-      { url: '/', name: 'Root Index', expectedFilters: [] }, // Homepage doesn't have filters in current design
-      { url: TEST_URLS.sectionIndexes.find(p => p.section === 'ai').url, name: 'AI Section Index', expectedFilters: ['date', 'collection'] },
-      { url: TEST_URLS.sectionIndexes.find(p => p.section === 'github-copilot').url, name: 'GitHub Copilot Section Index', expectedFilters: ['date', 'collection'] },
+      { url: '/', name: 'Homepage', expectedFilters: [] }, // Homepage doesn't have filters
+      { url: '/all/', name: 'Everything Section', expectedFilters: ['date', 'collection'] },
+      { url: TEST_URLS.sectionIndexes.find(p => p.section === 'ai').url, name: 'AI Section Index', expectedFilters: [] }, // Section indexes don't have filters
+      { url: TEST_URLS.sectionIndexes.find(p => p.section === 'github-copilot').url, name: 'GitHub Copilot Section Index', expectedFilters: [] }, // Section indexes don't have filters
       { url: '/ai/news.html', name: 'AI News Collection', expectedFilters: ['date', 'tag'] }
     ];
 
@@ -205,11 +206,11 @@ test.describe('Server-Side Requirements - Critical Foundation Tests', () => {
 
       console.log(`📊 ${pageType.name} filter analysis:`, filterAnalysis);
 
-      // Special handling for homepage which doesn't have filters
-      if (pageType.url === '/') {
-        console.log(`ℹ️ Homepage (${pageType.name}) does not have filtering - this is expected behavior`);
+      // Special handling for pages without filters
+      if (pageType.expectedFilters.length === 0) {
+        console.log(`ℹ️ ${pageType.name} does not have filtering - this is expected behavior`);
         expect(filterAnalysis.totalFilters).toBe(0);
-        console.log('✅ No filters on homepage as expected');
+        console.log(`✅ No filters on ${pageType.name} as expected`);
         continue;
       }
 

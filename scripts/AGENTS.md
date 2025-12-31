@@ -103,6 +103,85 @@ Write-Host "Value is \"\$variable\""  # Wrong! Backslashes don't work
 $variable = "a $object.with.dottednotation value"  # Wrong! Only gets $object
 ```
 
+## Jekyll Management Scripts
+
+### jekyll-start.ps1
+
+Starts Jekyll development server in the background with intelligent process detection.
+
+**Parameters:**
+
+- **`-ForceStop`** (switch): Force restart even if Jekyll is already running (default: false)
+- **`-ForceClean`** (switch): Clean Jekyll cache (_site/) before starting
+- **`-BuildInsteadOfServe`** (switch): Build site without starting server (for debugging)
+- **`-VerboseOutput`** (switch): Show detailed build output
+
+**Behavior:**
+
+- **Default** (no flags): Checks if Jekyll is running, exits with success if already running
+- **With -ForceStop**: Stops and restarts Jekyll even if already running
+- **Background Process**: Uses bash/nohup to run Jekyll as background process
+- **PID Tracking**: Saves process ID to `.tmp/jekyll-pid.txt`
+- **Logging**: Captures output to `.tmp/jekyll-log.txt`
+
+**Examples:**
+
+```powershell
+# Start Jekyll (exits if already running)
+pwsh ./scripts/jekyll-start.ps1
+
+# Force restart even if running
+pwsh ./scripts/jekyll-start.ps1 -ForceStop
+
+# Clean rebuild
+pwsh ./scripts/jekyll-start.ps1 -ForceClean
+
+# Build only (no server)
+pwsh ./scripts/jekyll-start.ps1 -BuildInsteadOfServe
+```
+
+### jekyll-stop.ps1
+
+Gracefully stops Jekyll server using multiple detection methods.
+
+**Detection Methods** (in order):
+
+1. PID file (`.tmp/jekyll-pid.txt`)
+2. Process search by command line pattern
+3. Port 4000 netstat scanning
+
+**Examples:**
+
+```powershell
+# Stop Jekyll server
+pwsh ./scripts/jekyll-stop.ps1
+```
+
+### jekyll-helpers.ps1
+
+Shared helper functions used by Jekyll scripts.
+
+**Functions:**
+
+- **`Get-JekyllPaths`**: Returns hashtable with .tmp dir, log file, and PID file paths
+- **`Test-JekyllRunning`**: Multi-method detection (PID → HTTP → netstat), with optional cleanup
+- **`Get-JekyllPidFromPort`**: Finds PID using netstat (fallback method)
+- **`Clear-JekyllFiles`**: Removes log and/or PID files
+- **`Stop-Jekyll -ProcessId`**: Stops Jekyll process by PID
+
+**Usage:**
+
+```powershell
+# Dot-source the helpers
+. (Join-Path $PSScriptRoot "jekyll-helpers.ps1")
+
+# Check if Jekyll is running
+$status = Test-JekyllRunning -Cleanup
+if ($status.IsRunning) {
+    Write-Host "Jekyll is running (Method: $($status.Method), PID: $($status.Pid))"
+}
+```
+
 ## Script Standards
 
 ### Parameter Definitions

@@ -9,13 +9,16 @@ param(
     [switch]$UI,
     [string]$Grep = "",
     [string]$TestFile = "",
-    [int]$MaxFailures = 999,
+    [int]$MaxFailures = 10,
     [switch]$Verbose
 )
 
 $ErrorActionPreference = "Stop"
 $ProgressPreference = 'SilentlyContinue'
 Set-StrictMode -Version Latest
+
+# Load shared Jekyll helper functions
+. (Join-Path $PSScriptRoot "jekyll-helpers.ps1")
 
 # Detect environment and configure accordingly
 function Get-Environment {
@@ -132,36 +135,6 @@ function Write-ColoredOutput {
     Write-Host "$Color$Message$Reset"
 }
 
-function Test-JekyllRunning {
-    try {
-        # Cross-platform port checking
-        if ($script:environment -eq "Windows") {
-            # Windows: use netstat
-            $result = netstat -an | Select-String ":4000.*LISTENING"
-            return $null -ne $result
-        } else {
-            # Linux/macOS: use netstat or ss
-            if (Get-Command ss -ErrorAction SilentlyContinue) {
-                $result = ss -tlnp 2>/dev/null | grep ":4000"
-                return $null -ne $result
-            } else {
-                $result = netstat -tlnp 2>/dev/null | grep ":4000"
-                return $null -ne $result
-            }
-        }
-    }
-    catch {
-        # Fallback: try to make a simple HTTP request
-        try {
-            $response = Invoke-WebRequest -Uri "http://localhost:4000" -TimeoutSec 2 -ErrorAction SilentlyContinue
-            return $response.StatusCode -eq 200
-        }
-        catch {
-            return $false
-        }
-    }
-}
-
 function Test-JekyllDependencies {
     # Check if bundler is available
     try {
@@ -241,7 +214,7 @@ function Start-Jekyll {
     
     Write-ColoredOutput "Waiting for Jekyll server to start (timeout: ${timeout}s)..." $Yellow
     
-    while (-not (Test-JekyllRunning) -and $elapsed -lt $timeout) {
+    while (-not (Test-JekyllRunning -Cleanup).IsRunning -and $elapsed -lt $timeout) {
         Start-Sleep -Seconds 2
         $elapsed += 2
         Write-Host "." -NoNewline
@@ -255,8 +228,12 @@ function Start-Jekyll {
     
     Write-Host ""
     
-    if (Test-JekyllRunning) {
-        Write-ColoredOutput "✅ Jekyll server is running on port 4000" $Green
+    $jekyllStatus = Test-JekyllRunning -Cleanup
+    if ($jekyllStatus.IsRunning) {
+        Write-ColoredOutput "✅ Jekyll server is running on port 4000 (Method: $($jekyllStatus.Method))" $Green
+        if ($jekyllStatus.Pid) {
+            Write-ColoredOutput "   PID: $($jekyllStatus.Pid)" $Yellow
+        }
         return $true
     }
     else {
@@ -522,19 +499,20 @@ function Invoke-EndToEndTestsRunner {
             Write-ColoredOutput "✅ Browser environment ready for testing" $Green
         }
         
-        # Check if Jekyll is running
+        # Check if Jekyll is running via HTTP
         Write-ColoredOutput "🔍 Checking Jekyll server status..." $Yellow
-        if (-not (Test-JekyllRunning)) {
-            Write-ColoredOutput "🚀 Jekyll server is not running. Starting it now..." $Yellow
-            
-            if (-not (Start-Jekyll)) {
-                Write-ColoredOutput "❌ Cannot proceed without Jekyll server. Exiting." $Red
-                Write-ColoredOutput "💡 Try starting Jekyll manually: ./jekyll-start.ps1" $Yellow
-                exit 1
-            }
+        $jekyllStatus = Test-JekyllRunning -Cleanup
+        if (-not $jekyllStatus.IsRunning) {
+            Write-ColoredOutput "❌ Jekyll server is not running" $Red
+            Write-ColoredOutput "💡 Please start Jekyll manually first: ./scripts/jekyll-start.ps1" $Yellow
+            Write-ColoredOutput "💡 Wait for the server to become accessible, then run E2E tests" $Yellow
+            exit 1
         }
         else {
-            Write-ColoredOutput "✅ Jekyll server is already running on port 4000" $Green
+            Write-ColoredOutput "✅ Jekyll server is already running and accessible at http://localhost:4000 (Method: $($jekyllStatus.Method))" $Green
+            if ($jekyllStatus.Pid) {
+                Write-ColoredOutput "   PID: $($jekyllStatus.Pid)" $Yellow
+            }
         }
         
         # Build test arguments
