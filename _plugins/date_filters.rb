@@ -59,8 +59,8 @@ module Jekyll
       # Filter out items without dates first
       dated_items = with_dates(items)
       
-      # Filter out items older than 7 days
-      cutoff_date = DateUtils.now_epoch() - (7 * 24 * 60 * 60) # 7 days ago in seconds
+      # Filter out items older than 30 days
+      cutoff_date = DateUtils.now_epoch() - (30 * 24 * 60 * 60) # 30 days ago in seconds
       recent_items = dated_items.select do |item|
         item_epoch = DateUtils.date_to_epoch(DateUtils.extract_date(item))
         item_epoch >= cutoff_date
